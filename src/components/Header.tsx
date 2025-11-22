@@ -6,12 +6,12 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navigation = [
-    { name: "Adoucissement de l'eau", href: "#solutions" },
-    { name: "Filtration d'eau", href: "#solutions" },
-    { name: "Solutions d'eau potable", href: "#solutions" },
-    { name: "Fontaines d'eau", href: "#solutions" },
-    { name: "Eau de puits", href: "#solutions" },
-    { name: "Support", href: "#contact" },
+    { name: "Accueil", href: "/" },
+    { name: "À propos", href: "/about" },
+    { name: "Services", href: "/services" },
+    { name: "Test d'eau", href: "/water-testing" },
+    { name: "FAQ", href: "/faq" },
+    { name: "Contact", href: "/contact" },
   ];
 
   return (
