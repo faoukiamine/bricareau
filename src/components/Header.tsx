@@ -21,7 +21,11 @@ const Header = () => {
         <div className="container mx-auto px-4 py-2">
           <div className="flex items-center justify-between text-sm text-muted-foreground">
             <div className="flex items-center gap-6">
-              <span className="text-xs">Résidentiel | Entreprise | Commercial & Industriel</span>
+              <a href="/" className="hover:text-primary transition-colors">Résidentiel</a>
+              <span className="text-muted-foreground/50">|</span>
+              <a href="/entreprises" className="hover:text-primary transition-colors">Entreprise</a>
+              <span className="text-muted-foreground/50">|</span>
+              <a href="/commercial-industriel" className="hover:text-primary transition-colors">Commercial & Industriel</a>
             </div>
             <div className="flex items-center gap-4">
               <a href="tel:18552649328" className="flex items-center gap-2 hover:text-primary transition-colors">
