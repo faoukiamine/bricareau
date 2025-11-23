@@ -11,7 +11,8 @@ const Header = () => {
     { name: "Services", href: "/services" },
     { name: "Test d'eau", href: "/water-testing" },
     { name: "FAQ", href: "/faq" },
-    { name: "Contact", href: "/contact" },
+    { name: "Contact Résidentiel", href: "/contact-residentiel" },
+    { name: "Contact Entreprises", href: "/contact-entreprises" },
   ];
 
   return (
