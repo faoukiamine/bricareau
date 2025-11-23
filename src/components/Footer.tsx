@@ -23,17 +23,17 @@ const Footer = () => {
             <h3 className="font-semibold text-lg mb-4 text-background">Nos Services</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="#" className="text-background/70 hover:text-background transition-colors">
+                <a href="/" className="text-background/70 hover:text-background transition-colors">
                   Traitement d'eau Résidentiel
                 </a>
               </li>
               <li>
-                <a href="#" className="text-background/70 hover:text-background transition-colors">
+                <a href="/entreprises" className="text-background/70 hover:text-background transition-colors">
                   Traitement d'eau Entreprises & Bureaux
                 </a>
               </li>
               <li>
-                <a href="#" className="text-background/70 hover:text-background transition-colors">
+                <a href="/commercial-industriel" className="text-background/70 hover:text-background transition-colors">
                   Traitement d'eau Commercial & Industriel
                 </a>
               </li>

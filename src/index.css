@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Mobile-first responsive breakpoints */
+/* Mobile: 320px - 767px (default) */
+/* Tablet: 768px - 1023px (md:) */
+/* Desktop: 1024px+ (lg:) */
+
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
 All colors MUST be HSL.
 */
