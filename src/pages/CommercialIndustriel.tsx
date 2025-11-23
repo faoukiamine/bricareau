@@ -1,4 +1,4 @@
-import { Phone, Award, DollarSign, CheckCircle2 } from "lucide-react";
+import { Phone, Award, DollarSign, CheckCircle2, Mail, MapPin } from "lucide-react";
 import heroImage from "@/assets/hero-commercial.jpg";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Testimonials from "@/components/Testimonials";
@@ -86,8 +86,14 @@ const CommercialIndustriel = () => {
                   <Phone className="h-3 w-3" />
                   <span>1 855 264 9328</span>
                 </a>
-                <NavLink to="/contact">Contactez-nous</NavLink>
-                <NavLink to="/about">Localisation</NavLink>
+                <a href="#contact" className="flex items-center gap-2 hover:text-primary transition-colors">
+                  <Mail className="h-3 w-3" />
+                  <span>Contactez-nous</span>
+                </a>
+                <a href="#localisation" className="flex items-center gap-2 hover:text-primary transition-colors">
+                  <MapPin className="h-3 w-3" />
+                  <span>Localisation</span>
+                </a>
               </div>
             </div>
           </div>

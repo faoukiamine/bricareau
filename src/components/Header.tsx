@@ -11,8 +11,6 @@ const Header = () => {
     { name: "Services", href: "/services" },
     { name: "Test d'eau", href: "/water-testing" },
     { name: "FAQ", href: "/faq" },
-    { name: "Contact Résidentiel", href: "/contact-residentiel" },
-    { name: "Contact Entreprises", href: "/contact-entreprises" },
   ];
 
   return (
@@ -33,7 +31,7 @@ const Header = () => {
                 <Phone className="h-3 w-3" />
                 <span>1 855 264 9328</span>
               </a>
-              <a href="#contact" className="flex items-center gap-2 hover:text-primary transition-colors">
+              <a href="/contact-residentiel" className="flex items-center gap-2 hover:text-primary transition-colors">
                 <Mail className="h-3 w-3" />
                 <span>Contactez-nous</span>
               </a>
@@ -108,7 +106,7 @@ const Header = () => {
                 <span>1 855 264 9328</span>
               </a>
               <a
-                href="#contact"
+                href="/contact-residentiel"
                 className="flex items-center gap-2 px-4 py-2 text-sm text-muted-foreground hover:text-primary"
               >
                 <Mail className="h-4 w-4" />
