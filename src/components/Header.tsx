@@ -1,6 +1,11 @@
 import { useState } from "react";
 import { Menu, X, Phone, Mail, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,7 +19,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border">
+    <header className="fixed top-0 left-0 right-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border shadow-sm">
       {/* Top bar - hidden on mobile */}
       <div className="hidden md:block border-b border-border bg-secondary/30">
         <div className="container mx-auto px-4 py-2">
@@ -70,52 +75,71 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* Mobile menu button */}
-          <Button
-            variant="ghost"
-            size="icon"
-            className="lg:hidden"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label="Toggle menu"
-          >
-            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </Button>
+          {/* Mobile menu */}
+          <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
+            <SheetTrigger asChild>
+              <Button
+                variant="ghost"
+                size="icon"
+                className="lg:hidden"
+                aria-label="Toggle menu"
+              >
+                <Menu className="h-6 w-6" />
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="right" className="w-full sm:w-96 p-0">
+              <div className="flex flex-col h-full bg-background">
+                {/* Mobile menu header */}
+                <div className="flex items-center justify-between p-4 border-b border-border">
+                  <a href="/" className="flex items-center">
+                    <div className="flex items-center gap-2">
+                      <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+                        <span className="text-primary-foreground font-bold text-lg">B</span>
+                      </div>
+                      <span className="font-bold text-xl text-foreground">Bricareau</span>
+                    </div>
+                  </a>
+                </div>
+
+                {/* Mobile navigation */}
+                <nav className="flex flex-col p-6 space-y-1 overflow-y-auto">
+                  {navigation.map((item) => (
+                    <a
+                      key={item.name}
+                      href={item.href}
+                      className="px-4 py-3 text-base font-medium text-foreground hover:text-primary hover:bg-secondary/50 rounded-lg transition-all duration-200"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {item.name}
+                    </a>
+                  ))}
+                  
+                  {/* Mobile contact section */}
+                  <div className="border-t border-border mt-4 pt-4 space-y-3">
+                    <a
+                      href="tel:18552649328"
+                      className="flex items-center gap-3 px-4 py-3 text-sm text-muted-foreground hover:text-primary hover:bg-secondary/50 rounded-lg transition-all duration-200"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      <Phone className="h-5 w-5" />
+                      <span>1 855 264 9328</span>
+                    </a>
+                    <a
+                      href="/contact-residentiel"
+                      className="flex items-center gap-3 px-4 py-3 text-sm text-muted-foreground hover:text-primary hover:bg-secondary/50 rounded-lg transition-all duration-200"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      <Mail className="h-5 w-5" />
+                      <span>Contactez-nous</span>
+                    </a>
+                  </div>
+                </nav>
+              </div>
+            </SheetContent>
+          </Sheet>
         </div>
       </div>
 
-      {/* Mobile menu */}
-      {isMenuOpen && (
-        <div className="lg:hidden border-t border-border bg-background">
-          <nav className="container mx-auto px-4 py-4 flex flex-col gap-2">
-            {navigation.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="px-4 py-3 text-sm font-medium text-foreground hover:text-primary hover:bg-secondary/50 rounded-md transition-colors"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {item.name}
-              </a>
-            ))}
-            <div className="border-t border-border mt-2 pt-2 space-y-2">
-              <a
-                href="tel:18552649328"
-                className="flex items-center gap-2 px-4 py-2 text-sm text-muted-foreground hover:text-primary"
-              >
-                <Phone className="h-4 w-4" />
-                <span>1 855 264 9328</span>
-              </a>
-              <a
-                href="/contact-residentiel"
-                className="flex items-center gap-2 px-4 py-2 text-sm text-muted-foreground hover:text-primary"
-              >
-                <Mail className="h-4 w-4" />
-                <span>Contactez-nous</span>
-              </a>
-            </div>
-          </nav>
-        </div>
-      )}
     </header>
   );
 };
