@@ -1,4 +1,4 @@
-import { Phone, CheckCircle, Leaf, Users, Mail, MapPin } from "lucide-react";
+import { Phone, CheckCircle, Leaf, Users } from "lucide-react";
 import heroImage from "@/assets/hero-entreprises.jpg";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Testimonials from "@/components/Testimonials";
@@ -62,20 +62,14 @@ const Entreprises = () => {
                 <span className="text-primary font-medium">Entreprise</span>
                 <NavLink to="/commercial-industriel">Commercial & Industriel</NavLink>
               </div>
-            <div className="flex items-center gap-4">
-              <a href="tel:18552649328" className="flex items-center gap-2 hover:text-primary transition-colors">
-                <Phone className="h-3 w-3" />
-                <span>1 855 264 9328</span>
-              </a>
-              <a href="/contact-residentiel" className="flex items-center gap-2 hover:text-primary transition-colors">
-                <Mail className="h-3 w-3" />
-                <span>Contactez-nous</span>
-              </a>
-              <a href="#localisation" className="flex items-center gap-2 hover:text-primary transition-colors">
-                <MapPin className="h-3 w-3" />
-                <span>Localisation</span>
-              </a>
-            </div>
+              <div className="flex items-center gap-4">
+                <a href="tel:18552649328" className="flex items-center gap-2 hover:text-primary transition-colors">
+                  <Phone className="h-3 w-3" />
+                  <span>1 855 264 9328</span>
+                </a>
+                <NavLink to="/contact">Contactez-nous</NavLink>
+                <NavLink to="/about">Localisation</NavLink>
+              </div>
             </div>
           </div>
         </div>
@@ -259,7 +253,7 @@ const Entreprises = () => {
                 Nous vous offrons un test d'eau ainsi qu'une consultation à votre domicile.
               </p>
               <a
-                href="/contact-entreprises"
+                href="/contact"
                 className="inline-flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground font-medium rounded-md hover:bg-primary/90 transition-colors"
               >
                 Contactez-nous
