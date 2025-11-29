@@ -1,38 +1,66 @@
 import { useState } from "react";
-import { Menu, X, Phone, MapPin, ChevronDown } from "lucide-react";
+import { Menu, X, Phone, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { NavLink } from "@/components/NavLink";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
+import { cn } from "@/lib/utils";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   const mainNavigation = [
     { name: "Accueil", href: "/" },
     { 
       name: "Adoucissement de l'eau", 
       href: "/services#adoucissement",
-      hasDropdown: false
+      items: [
+        { name: "Adoucisseurs résidentiels", href: "/services#adoucissement" },
+        { name: "Adoucisseurs commerciaux", href: "/services#adoucissement-commercial" },
+        { name: "Sel et accessoires", href: "/services#accessoires" },
+      ]
     },
     { 
       name: "Filtration d'eau", 
       href: "/services#filtration",
-      hasDropdown: false
+      items: [
+        { name: "Filtres à eau résidentiels", href: "/services#filtration" },
+        { name: "Filtres commerciaux", href: "/services#filtration-commercial" },
+        { name: "Cartouches de rechange", href: "/services#cartouches" },
+      ]
     },
     { 
       name: "Solutions d'eau potable", 
       href: "/services#potable",
-      hasDropdown: false
+      items: [
+        { name: "Osmose inverse", href: "/services#osmose" },
+        { name: "Systèmes sous évier", href: "/services#sous-evier" },
+        { name: "Purificateurs UV", href: "/services#uv" },
+      ]
     },
     { 
       name: "Fontaines d'eau", 
       href: "/services#fontaines",
-      hasDropdown: false
+      items: [
+        { name: "Fontaines de bureau", href: "/services#fontaines-bureau" },
+        { name: "Fontaines commerciales", href: "/services#fontaines-commercial" },
+        { name: "Service et entretien", href: "/services#entretien" },
+      ]
     },
     { 
       name: "Eau de puits", 
       href: "/services#puits",
-      hasDropdown: false
+      items: [
+        { name: "Analyse d'eau", href: "/services#analyse" },
+        { name: "Traitement de puits", href: "/services#traitement-puits" },
+        { name: "Désinfection", href: "/services#desinfection" },
+      ]
     },
     { name: "Ressources", href: "/faq" },
     { name: "Support", href: "/about" },
@@ -104,24 +132,59 @@ const Header = () => {
             </NavLink>
 
             {/* Desktop navigation */}
-            <nav className="hidden lg:flex items-center gap-1">
-              {mainNavigation.map((item) => (
-                <NavLink
-                  key={item.name}
-                  to={item.href}
-                  className="px-4 py-2 text-sm font-medium text-foreground hover:text-primary transition-colors rounded-md hover:bg-secondary/50"
-                >
-                  {item.name}
-                </NavLink>
-              ))}
-              <Button 
-                size="sm"
-                className="ml-2 bg-primary hover:bg-primary/90 text-primary-foreground rounded-full"
-                asChild
-              >
-                <NavLink to="/contact-residentiel">Contactez-nous</NavLink>
-              </Button>
-            </nav>
+            <NavigationMenu className="hidden lg:flex">
+              <NavigationMenuList>
+                {mainNavigation.map((item) => (
+                  <NavigationMenuItem key={item.name}>
+                    {item.items ? (
+                      <>
+                        <NavigationMenuTrigger className="px-4 py-2 text-sm font-medium bg-transparent hover:bg-secondary/50">
+                          {item.name}
+                        </NavigationMenuTrigger>
+                        <NavigationMenuContent>
+                          <ul className="grid w-[280px] gap-1 p-3 bg-background">
+                            {item.items.map((subItem) => (
+                              <li key={subItem.name}>
+                                <NavigationMenuLink asChild>
+                                  <NavLink
+                                    to={subItem.href}
+                                    className={cn(
+                                      "block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors",
+                                      "hover:bg-secondary/80 hover:text-primary focus:bg-secondary focus:text-primary",
+                                      "text-sm font-medium text-foreground"
+                                    )}
+                                  >
+                                    {subItem.name}
+                                  </NavLink>
+                                </NavigationMenuLink>
+                              </li>
+                            ))}
+                          </ul>
+                        </NavigationMenuContent>
+                      </>
+                    ) : (
+                      <NavigationMenuLink asChild>
+                        <NavLink
+                          to={item.href}
+                          className="px-4 py-2 text-sm font-medium text-foreground hover:text-primary transition-colors rounded-md hover:bg-secondary/50 inline-flex items-center justify-center whitespace-nowrap"
+                        >
+                          {item.name}
+                        </NavLink>
+                      </NavigationMenuLink>
+                    )}
+                  </NavigationMenuItem>
+                ))}
+                <NavigationMenuItem>
+                  <Button 
+                    size="sm"
+                    className="ml-2 bg-primary hover:bg-primary/90 text-primary-foreground rounded-full"
+                    asChild
+                  >
+                    <NavLink to="/contact-residentiel">Contactez-nous</NavLink>
+                  </Button>
+                </NavigationMenuItem>
+              </NavigationMenuList>
+            </NavigationMenu>
 
             {/* Mobile menu button */}
             <Button
@@ -142,14 +205,29 @@ const Header = () => {
         <div className="lg:hidden border-t border-border bg-background shadow-lg">
           <nav className="container mx-auto px-4 py-4 flex flex-col gap-2">
             {mainNavigation.map((item) => (
-              <NavLink
-                key={item.name}
-                to={item.href}
-                className="px-4 py-3 text-sm font-medium text-foreground hover:text-primary hover:bg-secondary rounded-md transition-colors"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {item.name}
-              </NavLink>
+              <div key={item.name}>
+                <NavLink
+                  to={item.href}
+                  className="block px-4 py-3 text-sm font-medium text-foreground hover:text-primary hover:bg-secondary rounded-md transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.name}
+                </NavLink>
+                {item.items && (
+                  <div className="ml-4 mt-1 space-y-1">
+                    {item.items.map((subItem) => (
+                      <NavLink
+                        key={subItem.name}
+                        to={subItem.href}
+                        className="block px-4 py-2 text-xs text-muted-foreground hover:text-primary transition-colors"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        {subItem.name}
+                      </NavLink>
+                    ))}
+                  </div>
+                )}
+              </div>
             ))}
             <div className="border-t border-border mt-2 pt-4 space-y-3">
               <div className="px-4 space-y-2">
