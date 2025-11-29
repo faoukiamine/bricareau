@@ -1,17 +1,20 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import heroImage from "@/assets/hero-image.jpg";
 
 const Hero = () => {
   return (
     <section className="relative w-full min-h-[500px] md:min-h-[600px] lg:min-h-[700px] flex items-center overflow-hidden">
-      {/* Background image with overlay */}
+      {/* Background video with overlay */}
       <div className="absolute inset-0 z-0">
-        <img
-          src={heroImage}
-          alt="Famille heureuse buvant de l'eau propre"
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
           className="w-full h-full object-cover"
-        />
+        >
+          <source src="https://bricareau.com/wp-content/uploads/2025/03/7505283-uhd_3840_2160_30fps.mp4" type="video/mp4" />
+        </video>
         <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/70 to-background/30" />
       </div>
 
@@ -23,14 +26,14 @@ const Hero = () => {
             <br />
             <span className="text-primary">Protégez votre famille</span>
           </h1>
-          
+
           <p className="text-base md:text-lg lg:text-xl text-foreground/90 leading-relaxed max-w-xl">
-            Assurez-vous que l'eau de votre maison a une belle apparence, une bonne odeur et un bon goût, 
+            Assurez-vous que l'eau de votre maison a une belle apparence, une bonne odeur et un bon goût,
             qu'elle provienne d'un système municipal ou d'un puits privé.
           </p>
-          
+
           <p className="text-sm md:text-base text-foreground/80">
-            Plus que <span className="font-semibold text-primary">20000 foyers canadiens</span> ont confié 
+            Plus que <span className="font-semibold text-primary">20000 foyers canadiens</span> ont confié
             le traitement d'eau de leurs foyers à Bricareau.
           </p>
 

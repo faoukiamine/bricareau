@@ -145,7 +145,7 @@ const Header = () => {
                   <NavigationMenuItem key={item.name}>
                     {item.items ? (
                       <>
-                        <NavigationMenuTrigger className="h-20 rounded-none border-b-2 border-transparent bg-transparent px-3 py-2 text-[15px] font-semibold text-foreground/80 hover:bg-transparent hover:text-primary focus:bg-transparent active:bg-transparent data-[active]:bg-transparent data-[state=open]:border-primary data-[state=open]:bg-transparent data-[state=open]:text-primary">
+                        <NavigationMenuTrigger className="h-20 rounded-none border-b-2 border-transparent bg-transparent px-3 py-2 text-[15px] font-semibold text-foreground/80 hover:bg-transparent hover:text-primary focus:bg-transparent focus:text-primary active:bg-transparent active:text-primary data-[active]:bg-transparent data-[state=open]:border-primary data-[state=open]:bg-transparent data-[state=open]:text-primary">
                           {item.name}
                         </NavigationMenuTrigger>
                         <NavigationMenuContent>
