@@ -12,6 +12,12 @@ import WaterTestingPage from "./pages/WaterTestingPage";
 import FAQ from "./pages/FAQ";
 import Entreprises from "./pages/Entreprises";
 import CommercialIndustriel from "./pages/CommercialIndustriel";
+import Solutions from "./pages/Solutions";
+import Adoucisseurs from "./pages/Adoucisseurs";
+import ConditionneursSansSel from "./pages/ConditionneursSansSel";
+import OsmoseFiltration from "./pages/OsmoseFiltration";
+import EauDure from "./pages/EauDure";
+import EauDePuits from "./pages/EauDePuits";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -26,6 +32,12 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/solutions" element={<Solutions />} />
+          <Route path="/adoucisseurs" element={<Adoucisseurs />} />
+          <Route path="/conditionneurs-sans-sel" element={<ConditionneursSansSel />} />
+          <Route path="/osmose-filtration" element={<OsmoseFiltration />} />
+          <Route path="/eau-dure" element={<EauDure />} />
+          <Route path="/eau-de-puits" element={<EauDePuits />} />
           <Route path="/contact-residentiel" element={<ContactResidentiel />} />
           <Route path="/contact-entreprises" element={<ContactEntreprises />} />
           <Route path="/water-testing" element={<WaterTestingPage />} />
