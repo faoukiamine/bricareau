@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { Menu, X, Phone, MapPin, Droplets, Filter, GlassWater, Waves, Search, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { NavLink } from "@/components/NavLink";
+import { NavLink, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 
 const Header = () => {
@@ -10,6 +10,7 @@ const Header = () => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [activeMegamenu, setActiveMegamenu] = useState<string | null>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const location = useLocation();
 
   // Close menus on outside click
   useEffect(() => {
@@ -151,6 +152,17 @@ const Header = () => {
               ))}
             </nav>
 
+            {/* Mobile Logo */}
+            <div className="lg:hidden flex items-center">
+              <NavLink to="/" className="flex items-center">
+                <img
+                  src="/logo.png"
+                  alt="Bricareau"
+                  className="h-8 w-auto object-contain"
+                />
+              </NavLink>
+            </div>
+
             {/* Right: Utilities */}
             <div className="hidden lg:flex items-center gap-4 ml-auto">
               {/* Phone */}
@@ -172,14 +184,25 @@ const Header = () => {
               </Button>
             </div>
 
-            {/* Mobile Menu Button */}
-            <button
-              className="lg:hidden p-2 ml-auto"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              aria-label="Toggle menu"
-            >
-              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-            </button>
+            {/* Mobile: Icon Row */}
+            <div className="lg:hidden flex items-center gap-4 ml-auto">
+              <button className="p-2" aria-label="Search">
+                <Search className="h-5 w-5 text-gray-700" />
+              </button>
+              <a href="tel:18552649328" className="p-2" aria-label="Phone">
+                <Phone className="h-5 w-5 text-gray-700" />
+              </a>
+              <a href="#localisation" className="p-2" aria-label="Location">
+                <MapPin className="h-5 w-5 text-gray-700" />
+              </a>
+              <button
+                className="p-2"
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                aria-label="Toggle menu"
+              >
+                {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -319,78 +342,123 @@ const Header = () => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="lg:hidden fixed inset-0 top-[104px] bg-white z-40 overflow-y-auto animate-in slide-in-from-left duration-300">
-          <nav className="container mx-auto px-4 py-6 space-y-2">
-            {/* Primary Menu Items */}
-            {primaryMenuItems.map((item) => (
-              <div key={item.name} className="border-b border-gray-100 pb-2">
-                <NavLink
-                  to={item.href}
-                  className="block py-3 text-base font-semibold text-gray-800"
-                  onClick={() => setIsMenuOpen(false)}
+        <div className="lg:hidden fixed inset-0 top-[104px] bg-white z-40 overflow-y-auto">
+          <div className="flex flex-col h-full">
+            {/* Main Content Area */}
+            <div className="flex-1 overflow-y-auto">
+              {/* CTA Button */}
+              <div className="px-4 pt-6 pb-4">
+                <Button
+                  size="lg"
+                  className="w-full bg-[#0052ff] hover:bg-[#0052ff]/90 text-white rounded-full font-semibold"
+                  asChild
                 >
-                  {item.name}
-                </NavLink>
+                  <a href="#localisation" className="flex items-center justify-center gap-2">
+                    <MapPin className="h-5 w-5" />
+                    <span>Trouver un emplacement près de moi</span>
+                  </a>
+                </Button>
               </div>
-            ))}
 
-            {/* Product Menu Items */}
-            <div className="pt-4">
-              <p className="text-xs text-gray-500 font-medium mb-3">L'eau que vous aimez:</p>
-              {productMenuItems.map((item) => (
-                <div key={item.name} className="border-b border-gray-100 pb-2">
-                  {item.dropdown ? (
-                    <div>
-                      <button
-                        onClick={() => handleDropdownToggle(`mobile-${item.name}`)}
-                        className="flex items-center justify-between w-full py-3 text-base font-semibold text-gray-800"
+              {/* Product Menu - Accordion Style */}
+              <div className="border-t border-gray-200">
+                {productMenuItems.map((item) => (
+                  <div key={item.name} className="border-b border-gray-200">
+                    {item.dropdown || item.hasMegamenu ? (
+                      <div>
+                        <button
+                          onClick={() => handleDropdownToggle(`mobile-${item.name}`)}
+                          className="flex items-center justify-between w-full px-4 py-4 text-left"
+                        >
+                          <span className="text-base font-semibold text-gray-900">{item.name}</span>
+                          <ChevronDown
+                            className={cn(
+                              "h-5 w-5 text-gray-500 transition-transform",
+                              activeDropdown === `mobile-${item.name}` && "rotate-180"
+                            )}
+                          />
+                        </button>
+                        {activeDropdown === `mobile-${item.name}` && item.dropdown && (
+                          <div className="bg-gray-50 px-4 pb-4">
+                            {item.dropdown.map((subItem) => (
+                              <NavLink
+                                key={subItem.name}
+                                to={subItem.href}
+                                className="block py-2.5 text-sm text-gray-700 hover:text-[#0052ff]"
+                                onClick={() => setIsMenuOpen(false)}
+                              >
+                                {subItem.name}
+                              </NavLink>
+                            ))}
+                          </div>
+                        )}
+                        {activeDropdown === `mobile-${item.name}` && item.hasMegamenu && item.megamenuCards && (
+                          <div className="bg-gray-50 px-4 pb-4">
+                            {item.megamenuCards.map((card, idx) => (
+                              <NavLink
+                                key={idx}
+                                to={card.href}
+                                className="block py-2.5 text-sm text-gray-700 hover:text-[#0052ff]"
+                                onClick={() => setIsMenuOpen(false)}
+                              >
+                                {card.title}
+                              </NavLink>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    ) : (
+                      <NavLink
+                        to={item.href}
+                        className="flex items-center justify-between w-full px-4 py-4"
+                        onClick={() => setIsMenuOpen(false)}
                       >
-                        {item.name}
-                        <ChevronDown className={cn("h-5 w-5 transition-transform", activeDropdown === `mobile-${item.name}` && "rotate-180")} />
-                      </button>
-                      {activeDropdown === `mobile-${item.name}` && (
-                        <div className="pl-4 space-y-1 pb-2">
-                          {item.dropdown.map((subItem) => (
-                            <NavLink
-                              key={subItem.name}
-                              to={subItem.href}
-                              className="block py-2 text-sm text-gray-600"
-                              onClick={() => setIsMenuOpen(false)}
-                            >
-                              {subItem.name}
-                            </NavLink>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                  ) : (
+                        <span className="text-base font-semibold text-gray-900">{item.name}</span>
+                        <ChevronDown className="h-5 w-5 text-gray-500 -rotate-90" />
+                      </NavLink>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Bottom Navigation Bar */}
+            <div className="border-t border-gray-200 bg-white">
+              {/* Primary Menu Items */}
+              <div className="flex items-center justify-center gap-1 px-4 py-4 border-b border-gray-200">
+                {primaryMenuItems.map((item, index) => (
+                  <div key={item.name} className="flex items-center">
                     <NavLink
                       to={item.href}
-                      className="block py-3 text-base font-semibold text-gray-800"
+                      className={({ isActive }) => cn(
+                        "text-sm font-medium px-3 py-1 transition-colors",
+                        isActive
+                          ? "text-[#0052ff] border-b-2 border-[#0052ff]"
+                          : "text-gray-700 hover:text-[#0052ff]"
+                      )}
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {item.name}
                     </NavLink>
-                  )}
-                </div>
-              ))}
-            </div>
+                    {index < primaryMenuItems.length - 1 && (
+                      <span className="text-gray-300">|</span>
+                    )}
+                  </div>
+                ))}
+              </div>
 
-            {/* Mobile Utilities */}
-            <div className="pt-6 space-y-4">
-              <a href="tel:18552649328" className="flex items-center gap-2 text-[#0052ff] font-semibold">
-                <Phone className="h-5 w-5" />
-                <span>1-855-264-9328</span>
-              </a>
-              <Button
-                size="lg"
-                className="w-full bg-[#0052ff] hover:bg-[#0052ff]/90 text-white rounded-full font-semibold"
-                asChild
-              >
-                <a href="#localisation">Trouver un emplacement près de moi</a>
-              </Button>
+              {/* Phone Link */}
+              <div className="px-4 py-4">
+                <a
+                  href="tel:18552649328"
+                  className="flex items-center justify-center gap-2 text-[#0052ff] font-semibold"
+                >
+                  <Phone className="h-5 w-5" />
+                  <span>Appeler 1-855-264-9328</span>
+                </a>
+              </div>
             </div>
-          </nav>
+          </div>
         </div>
       )}
     </header>
