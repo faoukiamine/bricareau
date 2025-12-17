@@ -42,7 +42,6 @@ const Header = () => {
     { name: "Résidentiel", href: "/" },
     { name: "Entreprises", href: "/entreprises" },
     { name: "Commercial", href: "/commercial-industriel" },
-    { name: "Découvrir Bricareau", href: "/about" },
   ];
 
   const productMenuItems = [
@@ -82,30 +81,185 @@ const Header = () => {
         link: "/services"
       }
     },
-    { name: "Filtration d'eau", href: "/filtration" },
-    { name: "Fontaines à glace et eau", href: "/fontaines" },
-    { name: "Eau de puits", href: "/eau-de-puits" },
+    {
+      name: "Filtration d'eau",
+      href: "/filtration",
+      hasMegamenu: true,
+      megamenuCards: [
+        {
+          icon: Filter,
+          title: "Filtres à eau potable",
+          description: "Profitez d'une eau pure et saine directement de votre robinet avec nos systèmes de filtration avancés.",
+          href: "/filtration"
+        },
+        {
+          icon: Droplets,
+          title: "Systèmes sous évier",
+          description: "Solutions compactes et efficaces pour une filtration optimale directement sous votre évier.",
+          href: "/filtration/sous-evier"
+        },
+        {
+          icon: GlassWater,
+          title: "Filtres pour toute la maison",
+          description: "Protection complète de votre maison avec une filtration centralisée pour toute l'eau.",
+          href: "/filtration/maison-complete"
+        },
+        {
+          icon: Waves,
+          title: "Cartouches de remplacement",
+          description: "Maintenez la performance optimale de vos systèmes avec nos cartouches de qualité.",
+          href: "/filtration/cartouches"
+        },
+      ],
+      promo: {
+        title: "Eau pure pour toute la famille",
+        image: "https://images.unsplash.com/photo-1548839140-29a749e1cf4d?q=80&w=600&auto=format&fit=crop",
+        link: "/filtration"
+      }
+    },
+    {
+      name: "Fontaines à glace et eau",
+      href: "/fontaines",
+      hasMegamenu: true,
+      megamenuCards: [
+        {
+          icon: GlassWater,
+          title: "Fontaines d'eau froide",
+          description: "Eau fraîche et filtrée à la demande pour votre bureau ou votre maison.",
+          href: "/fontaines/eau-froide"
+        },
+        {
+          icon: Droplets,
+          title: "Distributeurs de glace",
+          description: "Glace propre et abondante pour toutes vos occasions et besoins quotidiens.",
+          href: "/fontaines/glace"
+        },
+        {
+          icon: Waves,
+          title: "Fontaines combinées",
+          description: "Solutions tout-en-un offrant eau froide, chaude et glace dans un seul appareil.",
+          href: "/fontaines/combinees"
+        },
+        {
+          icon: Filter,
+          title: "Entretien et service",
+          description: "Service professionnel pour maintenir vos fontaines en parfait état de fonctionnement.",
+          href: "/fontaines/entretien"
+        },
+      ],
+      promo: {
+        title: "Solutions hydratation pour entreprises",
+        image: "https://images.unsplash.com/photo-1563227812-0ea4c22e6cc8?q=80&w=600&auto=format&fit=crop",
+        link: "/fontaines"
+      }
+    },
+    {
+      name: "Eau de puits",
+      href: "/eau-de-puits",
+      hasMegamenu: true,
+      megamenuCards: [
+        {
+          icon: Droplets,
+          title: "Analyse de l'eau",
+          description: "Tests complets pour identifier les contaminants et problèmes de qualité de votre eau de puits.",
+          href: "/eau-de-puits/analyse"
+        },
+        {
+          icon: Filter,
+          title: "Systèmes de traitement",
+          description: "Solutions personnalisées pour traiter les problèmes spécifiques de votre eau de puits.",
+          href: "/eau-de-puits/traitement"
+        },
+        {
+          icon: Waves,
+          title: "Pompes et réservoirs",
+          description: "Équipement fiable pour l'extraction et le stockage de votre eau de puits.",
+          href: "/eau-de-puits/pompes"
+        },
+        {
+          icon: GlassWater,
+          title: "Désinfection UV",
+          description: "Éliminez les bactéries et virus avec nos systèmes de désinfection ultraviolette.",
+          href: "/eau-de-puits/uv"
+        },
+      ],
+      promo: {
+        title: "Eau de puits saine et sûre",
+        image: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?q=80&w=600&auto=format&fit=crop",
+        link: "/eau-de-puits"
+      }
+    },
     {
       name: "Ressources",
       href: "/faq",
-      dropdown: [
-        { name: "FAQ", href: "/faq" },
-        { name: "Blog", href: "/blog" },
-        { name: "Guides", href: "/guides" },
-        { name: "Vidéos", href: "/videos" },
-        { name: "Témoignages", href: "/temoignages" },
-      ]
+      hasMegamenu: true,
+      megamenuCards: [
+        {
+          icon: Filter,
+          title: "FAQ",
+          description: "Trouvez rapidement des réponses aux questions les plus fréquemment posées sur nos produits.",
+          href: "/faq"
+        },
+        {
+          icon: Droplets,
+          title: "Blog",
+          description: "Conseils, actualités et informations sur le traitement de l'eau et nos solutions.",
+          href: "/blog"
+        },
+        {
+          icon: GlassWater,
+          title: "Guides",
+          description: "Guides détaillés pour vous aider à choisir et entretenir vos systèmes de traitement d'eau.",
+          href: "/guides"
+        },
+        {
+          icon: Waves,
+          title: "Vidéos",
+          description: "Tutoriels vidéo et démonstrations de nos produits et services.",
+          href: "/videos"
+        },
+      ],
+      promo: {
+        title: "Centre d'apprentissage",
+        image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?q=80&w=600&auto=format&fit=crop",
+        link: "/ressources"
+      }
     },
     {
       name: "Support",
       href: "/contact",
-      dropdown: [
-        { name: "Contact", href: "/contact" },
-        { name: "Service", href: "/service" },
-        { name: "Garantie", href: "/garantie" },
-        { name: "Pièces", href: "/pieces" },
-        { name: "Manuels", href: "/manuels" },
-      ]
+      hasMegamenu: true,
+      megamenuCards: [
+        {
+          icon: Phone,
+          title: "Contact",
+          description: "Contactez notre équipe d'experts pour toute question ou demande d'information.",
+          href: "/contact"
+        },
+        {
+          icon: Filter,
+          title: "Service",
+          description: "Planifiez un entretien ou une réparation avec nos techniciens certifiés.",
+          href: "/service"
+        },
+        {
+          icon: Droplets,
+          title: "Garantie",
+          description: "Informations sur nos garanties et protection de vos investissements.",
+          href: "/garantie"
+        },
+        {
+          icon: GlassWater,
+          title: "Pièces",
+          description: "Commandez des pièces de rechange originales pour vos équipements.",
+          href: "/pieces"
+        },
+      ],
+      promo: {
+        title: "Nous sommes là pour vous aider",
+        image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=600&auto=format&fit=crop",
+        link: "/contact"
+      }
     },
   ];
 
@@ -217,36 +371,20 @@ const Header = () => {
               {productMenuItems.map((item) => (
                 <div key={item.name} className="relative">
                   <button
-                    onMouseEnter={() => item.hasMegamenu ? handleMegamenuToggle(item.name) : item.dropdown ? handleDropdownToggle(item.name) : null}
-                    onClick={() => !item.hasMegamenu && !item.dropdown && (window.location.href = item.href)}
+                    onMouseEnter={() => item.hasMegamenu ? handleMegamenuToggle(item.name) : null}
+                    onClick={() => !item.hasMegamenu && (window.location.href = item.href)}
                     className={cn(
                       "text-sm font-semibold transition-colors relative h-16 flex items-center",
                       "hover:text-[#0052ff]",
-                      activeMegamenu === item.name || activeDropdown === item.name
+                      activeMegamenu === item.name
                         ? "text-[#0052ff] border-b-2 border-[#0052ff]"
                         : "text-gray-700"
                     )}
-                    aria-haspopup={item.hasMegamenu || item.dropdown ? "true" : undefined}
-                    aria-expanded={activeMegamenu === item.name || activeDropdown === item.name}
+                    aria-haspopup={item.hasMegamenu ? "true" : undefined}
+                    aria-expanded={activeMegamenu === item.name}
                   >
                     {item.name}
                   </button>
-
-                  {/* Simple Dropdown */}
-                  {item.dropdown && !item.hasMegamenu && activeDropdown === item.name && (
-                    <div className="absolute top-full left-0 mt-0 w-56 bg-white rounded-lg shadow-lg border border-gray-100 py-2 z-50">
-                      {item.dropdown.map((subItem) => (
-                        <NavLink
-                          key={subItem.name}
-                          to={subItem.href}
-                          className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 transition-colors"
-                          onClick={() => setActiveDropdown(null)}
-                        >
-                          {subItem.name}
-                        </NavLink>
-                      ))}
-                    </div>
-                  )}
                 </div>
               ))}
             </nav>
@@ -264,75 +402,78 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Megamenu for Water Softening */}
-      {activeMegamenu === "Adoucissement d'eau" && productMenuItems[0].hasMegamenu && (
-        <div
-          className="absolute top-full left-0 w-full bg-slate-50 border-t border-gray-200 shadow-xl z-40"
-          onMouseLeave={() => setActiveMegamenu(null)}
-        >
-          <div className="container mx-auto px-6 py-12">
-            <div className="grid grid-cols-12 gap-6">
-              {/* Cards Section */}
-              <div className="col-span-9 grid grid-cols-4 gap-6">
-                {productMenuItems[0].megamenuCards?.map((card, index) => {
-                  const Icon = card.icon;
-                  return (
-                    <NavLink
-                      key={index}
-                      to={card.href}
-                      className="flex flex-col items-start gap-3 p-5 rounded-lg bg-white hover:bg-slate-50 transition-colors group border border-slate-100 shadow-sm"
-                      onClick={() => setActiveMegamenu(null)}
-                    >
-                      <div className="w-12 h-12 rounded-lg bg-[#DBEAFE] flex items-center justify-center">
-                        <Icon className="h-6 w-6 text-[#0052ff] stroke-[1.5]" />
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-[15px] text-slate-900 group-hover:text-[#0052ff] mb-1.5 transition-colors">
-                          {card.title}
-                        </h4>
-                        <p className="text-[13px] text-slate-600 leading-relaxed">
-                          {card.description}
-                        </p>
-                      </div>
-                    </NavLink>
-                  );
-                })}
-              </div>
-
-              {/* Promo Card */}
-              {productMenuItems[0].promo && (
-                <div className="col-span-3">
-                  <div className="h-full rounded-xl overflow-hidden shadow-md bg-white">
-                    <div className="relative h-32">
-                      <img
-                        src={productMenuItems[0].promo.image}
-                        alt={productMenuItems[0].promo.title}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <div className="bg-[#0052ff] p-6 text-white">
-                      <h3 className="text-lg font-bold mb-3 leading-tight">
-                        {productMenuItems[0].promo.title}
-                      </h3>
-                      <a
-                        href={productMenuItems[0].promo.link}
-                        className="inline-flex items-center gap-2 text-sm font-semibold hover:underline"
+      {/* Megamenus */}
+      {productMenuItems.map((menuItem) => (
+        menuItem.hasMegamenu && activeMegamenu === menuItem.name && (
+          <div
+            key={menuItem.name}
+            className="absolute top-full left-0 w-full bg-slate-50 border-t border-gray-200 shadow-xl z-40"
+            onMouseLeave={() => setActiveMegamenu(null)}
+          >
+            <div className="container mx-auto px-4 md:px-6 py-8 md:py-12">
+              <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
+                {/* Cards Section */}
+                <div className="md:col-span-9 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+                  {menuItem.megamenuCards?.map((card, index) => {
+                    const Icon = card.icon;
+                    return (
+                      <NavLink
+                        key={index}
+                        to={card.href}
+                        className="flex flex-col items-start gap-3 p-5 rounded-lg bg-white hover:bg-slate-50 transition-colors group border border-slate-100 shadow-sm"
+                        onClick={() => setActiveMegamenu(null)}
                       >
-                        En savoir plus
-                        <ChevronDown className="h-4 w-4 -rotate-90" />
-                      </a>
+                        <div className="w-12 h-12 rounded-lg bg-[#DBEAFE] flex items-center justify-center">
+                          <Icon className="h-6 w-6 text-[#0052ff] stroke-[1.5]" />
+                        </div>
+                        <div>
+                          <h4 className="font-semibold text-[15px] text-slate-900 group-hover:text-[#0052ff] mb-1.5 transition-colors">
+                            {card.title}
+                          </h4>
+                          <p className="text-[13px] text-slate-600 leading-relaxed">
+                            {card.description}
+                          </p>
+                        </div>
+                      </NavLink>
+                    );
+                  })}
+                </div>
+
+                {/* Promo Card */}
+                {menuItem.promo && (
+                  <div className="md:col-span-3">
+                    <div className="h-full rounded-xl overflow-hidden shadow-md bg-white">
+                      <div className="relative h-32">
+                        <img
+                          src={menuItem.promo.image}
+                          alt={menuItem.promo.title}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      <div className="bg-[#0052ff] p-6 text-white">
+                        <h3 className="text-lg font-bold mb-3 leading-tight">
+                          {menuItem.promo.title}
+                        </h3>
+                        <a
+                          href={menuItem.promo.link}
+                          className="inline-flex items-center gap-2 text-sm font-semibold hover:underline"
+                        >
+                          En savoir plus
+                          <ChevronDown className="h-4 w-4 -rotate-90" />
+                        </a>
+                      </div>
                     </div>
                   </div>
-                </div>
-              )}
+                )}
+              </div>
             </div>
           </div>
-        </div>
-      )}
+        )
+      ))}
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="lg:hidden fixed inset-0 top-[104px] bg-white z-40 overflow-y-auto">
+        <div className="lg:hidden fixed inset-0 top-12 bg-white z-40 overflow-y-auto">
           <div className="flex flex-col h-full">
             {/* Main Content Area */}
             <div className="flex-1 overflow-y-auto">
@@ -344,8 +485,7 @@ const Header = () => {
                   asChild
                 >
                   <a href="#localisation" className="flex items-center justify-center gap-2">
-                    <MapPin className="h-5 w-5" />
-                    <span>Trouver un emplacement près de moi</span>
+                    <span>Contactez-nous</span>
                   </a>
                 </Button>
               </div>
@@ -354,7 +494,7 @@ const Header = () => {
               <div className="border-t border-gray-200">
                 {productMenuItems.map((item) => (
                   <div key={item.name} className="border-b border-gray-200">
-                    {item.dropdown || item.hasMegamenu ? (
+                    {item.hasMegamenu ? (
                       <div>
                         <button
                           onClick={() => handleDropdownToggle(`mobile-${item.name}`)}
@@ -368,21 +508,7 @@ const Header = () => {
                             )}
                           />
                         </button>
-                        {activeDropdown === `mobile-${item.name}` && item.dropdown && (
-                          <div className="bg-gray-50 px-4 pb-4">
-                            {item.dropdown.map((subItem) => (
-                              <NavLink
-                                key={subItem.name}
-                                to={subItem.href}
-                                className="block py-2.5 text-sm text-gray-700 hover:text-[#0052ff]"
-                                onClick={() => setIsMenuOpen(false)}
-                              >
-                                {subItem.name}
-                              </NavLink>
-                            ))}
-                          </div>
-                        )}
-                        {activeDropdown === `mobile-${item.name}` && item.hasMegamenu && item.megamenuCards && (
+                        {activeDropdown === `mobile-${item.name}` && item.megamenuCards && (
                           <div className="bg-gray-50 px-4 pb-4">
                             {item.megamenuCards.map((card, idx) => (
                               <NavLink
