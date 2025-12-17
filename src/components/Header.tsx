@@ -130,37 +130,29 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Upper Navigation Bar */}
-      <div className="border-b border-gray-200 shadow-sm">
+      {/* Upper Navigation Bar - Primary Menu + Utilities */}
+      <div className="border-b border-gray-200 bg-white">
         <div className="container mx-auto px-6">
-          <div className="flex h-16 items-center justify-between gap-8">
-            {/* Left: Logo + Tagline */}
-            <div className="flex items-center gap-3">
-              <NavLink to="/" className="flex items-center">
-                <img
-                  src="/logo.png"
-                  alt="Bricareau"
-                  className="h-10 w-auto object-contain"
-                />
-              </NavLink>
-              <span className="hidden lg:inline text-sm text-gray-500">L'eau que vous aimez.</span>
-            </div>
-
-            {/* Center: Primary Menu (Desktop) */}
-            <nav className="hidden lg:flex items-center gap-8" role="navigation">
-              {primaryMenuItems.map((item) => (
-                <NavLink
-                  key={item.name}
-                  to={item.href}
-                  className="text-sm font-medium text-gray-800 hover:text-[#0052ff] transition-colors"
-                >
-                  {item.name}
-                </NavLink>
+          <div className="flex h-12 items-center justify-between">
+            {/* Left: Primary Menu (Desktop) */}
+            <nav className="hidden lg:flex items-center gap-1" role="navigation">
+              {primaryMenuItems.map((item, index) => (
+                <div key={item.name} className="flex items-center">
+                  <NavLink
+                    to={item.href}
+                    className="text-sm font-medium text-gray-800 hover:text-[#0052ff] transition-colors px-3"
+                  >
+                    {item.name}
+                  </NavLink>
+                  {index < primaryMenuItems.length - 1 && (
+                    <span className="text-gray-300">|</span>
+                  )}
+                </div>
               ))}
             </nav>
 
             {/* Right: Utilities */}
-            <div className="hidden lg:flex items-center gap-4">
+            <div className="hidden lg:flex items-center gap-4 ml-auto">
               {/* Phone */}
               <a href="tel:18552649328" className="flex items-center gap-1.5 text-sm text-gray-700 hover:text-[#0052ff] transition-colors">
                 <Phone className="h-4 w-4" />
@@ -182,7 +174,7 @@ const Header = () => {
 
             {/* Mobile Menu Button */}
             <button
-              className="lg:hidden p-2"
+              className="lg:hidden p-2 ml-auto"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label="Toggle menu"
             >
@@ -192,23 +184,34 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Lower Navigation Bar (Product Menu) */}
-      <div className="hidden lg:block border-b border-gray-200 bg-white">
+      {/* Lower Navigation Bar - Logo + Product Menu + Search */}
+      <div className="hidden lg:block border-b border-gray-200 bg-white shadow-sm">
         <div className="container mx-auto px-6">
-          <div className="flex h-12 items-center justify-between">
-            {/* Left: Product Menu */}
-            <div className="flex items-center gap-6">
-              <span className="text-xs text-gray-500 font-medium">L'eau que vous aimez:</span>
+          <div className="flex h-16 items-center gap-8">
+            {/* Left: Logo */}
+            <div className="flex items-center flex-shrink-0">
+              <NavLink to="/" className="flex items-center">
+                <img
+                  src="/logo.png"
+                  alt="Bricareau"
+                  className="h-10 w-auto object-contain"
+                />
+              </NavLink>
+            </div>
+
+            {/* Center: Product Menu */}
+            <nav className="flex items-center gap-6 flex-1 justify-center">
               {productMenuItems.map((item) => (
                 <div key={item.name} className="relative">
                   <button
                     onMouseEnter={() => item.hasMegamenu ? handleMegamenuToggle(item.name) : item.dropdown ? handleDropdownToggle(item.name) : null}
                     onClick={() => !item.hasMegamenu && !item.dropdown && (window.location.href = item.href)}
                     className={cn(
-                      "text-sm font-semibold transition-colors relative pb-3",
-                      item.name === "Adoucissement d'eau"
+                      "text-sm font-semibold transition-colors relative h-16 flex items-center",
+                      "hover:text-[#0052ff]",
+                      activeMegamenu === item.name || activeDropdown === item.name
                         ? "text-[#0052ff] border-b-2 border-[#0052ff]"
-                        : "text-gray-700 hover:text-[#0052ff]"
+                        : "text-gray-700"
                     )}
                     aria-haspopup={item.hasMegamenu || item.dropdown ? "true" : undefined}
                     aria-expanded={activeMegamenu === item.name || activeDropdown === item.name}
@@ -218,7 +221,7 @@ const Header = () => {
 
                   {/* Simple Dropdown */}
                   {item.dropdown && !item.hasMegamenu && activeDropdown === item.name && (
-                    <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg border border-gray-100 py-2 z-50">
+                    <div className="absolute top-full left-0 mt-0 w-56 bg-white rounded-lg shadow-lg border border-gray-100 py-2 z-50">
                       {item.dropdown.map((subItem) => (
                         <NavLink
                           key={subItem.name}
@@ -233,10 +236,10 @@ const Header = () => {
                   )}
                 </div>
               ))}
-            </div>
+            </nav>
 
             {/* Right: Search */}
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 flex-shrink-0">
               <Search className="h-4 w-4 text-gray-500" />
               <Input
                 type="search"
