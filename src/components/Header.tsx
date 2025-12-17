@@ -121,15 +121,6 @@ const Header = () => {
 
   return (
     <header className="sticky top-0 z-50 w-full bg-white font-sans" ref={dropdownRef}>
-      {/* Top Green Banner */}
-      <div className="bg-emerald-400 text-emerald-950">
-        <div className="container mx-auto px-4 py-2.5 text-center">
-          <a href="/water-testing" className="inline-flex items-center gap-2 text-sm font-semibold hover:underline">
-            <span>Commencez avec une consultation d'eau gratuite</span>
-            <ChevronDown className="h-4 w-4 -rotate-90" />
-          </a>
-        </div>
-      </div>
 
       {/* Upper Navigation Bar - Primary Menu + Utilities */}
       <div className="border-b border-gray-200 bg-white">
@@ -177,9 +168,8 @@ const Header = () => {
                 className="bg-[#0052ff] hover:bg-[#0052ff]/90 text-white rounded-full px-5 font-semibold"
                 asChild
               >
-                <a href="#localisation" className="flex items-center gap-2">
-                  <MapPin className="h-4 w-4" />
-                  <span>Trouver un emplacement</span>
+                <a href="/contact" className="flex items-center gap-2">
+                  <span>Contactez-nous</span>
                 </a>
               </Button>
             </div>
