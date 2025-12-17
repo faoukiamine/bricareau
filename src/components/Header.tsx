@@ -407,30 +407,30 @@ const Header = () => {
         menuItem.hasMegamenu && activeMegamenu === menuItem.name && (
           <div
             key={menuItem.name}
-            className="absolute top-full left-0 w-full bg-slate-50 border-t border-gray-200 shadow-xl z-40"
+            className="absolute top-full left-0 w-full bg-white border-t border-gray-100 shadow-lg z-40"
             onMouseLeave={() => setActiveMegamenu(null)}
           >
-            <div className="container mx-auto px-4 md:px-6 py-8 md:py-12">
-              <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
-                {/* Cards Section */}
-                <div className="md:col-span-9 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+            <div className="container mx-auto px-6 py-10">
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                {/* Left: Product Cards (2x2 grid) */}
+                <div className="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-5">
                   {menuItem.megamenuCards?.map((card, index) => {
                     const Icon = card.icon;
                     return (
                       <NavLink
                         key={index}
                         to={card.href}
-                        className="flex flex-col items-start gap-3 p-5 rounded-lg bg-white hover:bg-slate-50 transition-colors group border border-slate-100 shadow-sm"
+                        className="flex items-start gap-4 p-4 rounded-lg hover:bg-gray-50 transition-colors group"
                         onClick={() => setActiveMegamenu(null)}
                       >
-                        <div className="w-12 h-12 rounded-lg bg-[#DBEAFE] flex items-center justify-center">
-                          <Icon className="h-6 w-6 text-[#0052ff] stroke-[1.5]" />
+                        <div className="flex-shrink-0 mt-0.5">
+                          <Icon className="h-10 w-10 text-[#60A5FA] stroke-[1.5]" />
                         </div>
-                        <div>
-                          <h4 className="font-semibold text-[15px] text-slate-900 group-hover:text-[#0052ff] mb-1.5 transition-colors">
+                        <div className="flex-1">
+                          <h4 className="font-bold text-base text-gray-900 group-hover:text-[#0052ff] mb-1.5 transition-colors leading-tight">
                             {card.title}
                           </h4>
-                          <p className="text-[13px] text-slate-600 leading-relaxed">
+                          <p className="text-sm text-gray-600 leading-relaxed">
                             {card.description}
                           </p>
                         </div>
@@ -439,24 +439,24 @@ const Header = () => {
                   })}
                 </div>
 
-                {/* Promo Card */}
+                {/* Right: Promotional Card */}
                 {menuItem.promo && (
-                  <div className="md:col-span-3">
-                    <div className="h-full rounded-xl overflow-hidden shadow-md bg-white">
-                      <div className="relative h-32">
+                  <div className="lg:col-span-1">
+                    <div className="rounded-xl overflow-hidden shadow-md bg-white h-full flex flex-col">
+                      <div className="relative h-40 flex-shrink-0">
                         <img
                           src={menuItem.promo.image}
                           alt={menuItem.promo.title}
                           className="w-full h-full object-cover"
                         />
                       </div>
-                      <div className="bg-[#0052ff] p-6 text-white">
-                        <h3 className="text-lg font-bold mb-3 leading-tight">
+                      <div className="bg-[#0052ff] p-6 flex-1 flex flex-col justify-center">
+                        <h3 className="text-lg font-bold mb-4 leading-tight text-white">
                           {menuItem.promo.title}
                         </h3>
                         <a
                           href={menuItem.promo.link}
-                          className="inline-flex items-center gap-2 text-sm font-semibold hover:underline"
+                          className="inline-flex items-center gap-2 text-sm font-semibold text-white hover:underline"
                         >
                           En savoir plus
                           <ChevronDown className="h-4 w-4 -rotate-90" />
@@ -484,7 +484,7 @@ const Header = () => {
                   className="w-full bg-[#0052ff] hover:bg-[#0052ff]/90 text-white rounded-full font-semibold"
                   asChild
                 >
-                  <a href="#localisation" className="flex items-center justify-center gap-2">
+                  <a href="/contact" className="flex items-center justify-center gap-2">
                     <span>Contactez-nous</span>
                   </a>
                 </Button>
