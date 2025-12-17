@@ -1,9 +1,14 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import Solutions from "@/components/Solutions";
-import WaterProblems from "@/components/WaterProblems";
-import Testimonials from "@/components/Testimonials";
-import WaterTesting from "@/components/WaterTesting";
+import GrabYourLook from "@/components/GrabYourLook";
+import ProductShowcase from "@/components/ProductShowcase";
+import IdealCulliganCTA from "@/components/IdealCulliganCTA";
+import BetterWaterStats from "@/components/BetterWaterStats";
+import QualityService from "@/components/QualityService";
+import DiscoverExpert from "@/components/DiscoverExpert";
+import EverythingYouNeed from "@/components/EverythingYouNeed";
+import NewEraStats from "@/components/NewEraStats";
+import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -12,10 +17,15 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
-        <Solutions />
-        <WaterProblems />
-        <Testimonials />
-        <WaterTesting />
+        <GrabYourLook />
+        <ProductShowcase />
+        <IdealCulliganCTA />
+        <BetterWaterStats />
+        <QualityService />
+        <DiscoverExpert />
+        <EverythingYouNeed />
+        <NewEraStats />
+        <FinalCTA />
       </main>
       <Footer />
     </div>

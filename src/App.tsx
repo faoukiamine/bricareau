@@ -8,6 +8,7 @@ import About from "./pages/About";
 import Services from "./pages/Services";
 import ContactResidentiel from "./pages/ContactResidentiel";
 import ContactEntreprises from "./pages/ContactEntreprises";
+import Contact from "./pages/Contact";
 import WaterTestingPage from "./pages/WaterTestingPage";
 import FAQ from "./pages/FAQ";
 import Entreprises from "./pages/Entreprises";
@@ -18,6 +19,16 @@ import ConditionneursSansSel from "./pages/ConditionneursSansSel";
 import OsmoseFiltration from "./pages/OsmoseFiltration";
 import EauDure from "./pages/EauDure";
 import EauDePuits from "./pages/EauDePuits";
+import Filtration from "./pages/Filtration";
+import Fontaines from "./pages/Fontaines";
+import Blog from "./pages/Blog";
+import Guides from "./pages/Guides";
+import Videos from "./pages/Videos";
+import Temoignages from "./pages/Temoignages";
+import Service from "./pages/Service";
+import Garantie from "./pages/Garantie";
+import Pieces from "./pages/Pieces";
+import Manuels from "./pages/Manuels";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -38,8 +49,19 @@ const App = () => (
           <Route path="/osmose-filtration" element={<OsmoseFiltration />} />
           <Route path="/eau-dure" element={<EauDure />} />
           <Route path="/eau-de-puits" element={<EauDePuits />} />
+          <Route path="/filtration" element={<Filtration />} />
+          <Route path="/fontaines" element={<Fontaines />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/guides" element={<Guides />} />
+          <Route path="/videos" element={<Videos />} />
+          <Route path="/temoignages" element={<Temoignages />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/contact-residentiel" element={<ContactResidentiel />} />
           <Route path="/contact-entreprises" element={<ContactEntreprises />} />
+          <Route path="/service" element={<Service />} />
+          <Route path="/garantie" element={<Garantie />} />
+          <Route path="/pieces" element={<Pieces />} />
+          <Route path="/manuels" element={<Manuels />} />
           <Route path="/water-testing" element={<WaterTestingPage />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/entreprises" element={<Entreprises />} />

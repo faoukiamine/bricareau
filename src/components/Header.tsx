@@ -1,331 +1,396 @@
-import { useState } from "react";
-import { Menu, X, Phone, MapPin, Droplets, Filter, GlassWater, Waves, Search, ArrowRight, ChevronDown } from "lucide-react";
+import { useState, useEffect, useRef } from "react";
+import { Menu, X, Phone, MapPin, Droplets, Filter, GlassWater, Waves, Search, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { NavLink } from "@/components/NavLink";
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu";
-import { cn } from "@/lib/utils";
 import { Input } from "@/components/ui/input";
+import { NavLink } from "@/components/NavLink";
+import { cn } from "@/lib/utils";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [activeMegamenu, setActiveMegamenu] = useState<string | null>(null);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
-  const mainNavigation = [
-    {
-      name: "Water Softening",
-      href: "/services#adoucissement",
-      items: [
-        {
-          name: "Water Softeners",
-          description: "Reduce buildup on sinks and showers, and enjoy smoother hair and skin with soft water.",
-          href: "/services#adoucissement",
-          icon: Droplets
-        },
-        {
-          name: "Salt Delivery",
-          description: "Get regular salt deliveries that fit your schedule for hassle-free refills you can count on.",
-          href: "/services#accessoires",
-          icon: Waves
-        },
-        {
-          name: "Portable Exchange",
-          description: "Enjoy soft water at seasonal properties and in brine-restricted areas with no extra utility costs.",
-          href: "/services#adoucissement-commercial",
-          icon: Filter
-        },
-        {
-          name: "Salt-Free Conditioners",
-          description: "Reduce buildup with zero water waste, perfect for those in brine-restricted areas.",
-          href: "/services#adoucissement",
-          icon: GlassWater
-        },
-      ],
-      promo: {
-        title: "Find the Right Solution for Your Home",
-        image: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=600&auto=format&fit=crop",
-        link: "/quiz"
+  // Close menus on outside click
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setActiveDropdown(null);
+        setActiveMegamenu(null);
       }
-    },
-    {
-      name: "Water Filtration",
-      href: "/services#filtration",
-      items: [
-        { name: "Whole House Filtration", description: "Filter water throughout your entire home.", href: "/services#filtration", icon: Filter },
-        { name: "Reverse Osmosis", description: "Advanced filtration for the purest drinking water.", href: "/services#osmose", icon: Droplets },
-      ],
-      promo: {
-        title: "Cleaner Water for Your Family",
-        image: "https://images.unsplash.com/photo-1521424159246-e4a66f267e4b?q=80&w=600&auto=format&fit=crop",
-        link: "/services#filtration"
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  // Close menus on Escape key
+  useEffect(() => {
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setActiveDropdown(null);
+        setActiveMegamenu(null);
       }
-    },
-    { name: "Ice & Water Dispensers", href: "/services#fontaines" },
-    { name: "Well Water", href: "/services#puits" },
-    { name: "Resources", href: "/faq" },
-    { name: "Support", href: "/about" },
+    };
+
+    document.addEventListener("keydown", handleEscape);
+    return () => document.removeEventListener("keydown", handleEscape);
+  }, []);
+
+  const primaryMenuItems = [
+    { name: "Résidentiel", href: "/" },
+    { name: "Entreprises", href: "/entreprises" },
+    { name: "Commercial", href: "/commercial-industriel" },
+    { name: "Découvrir Bricareau", href: "/about" },
   ];
 
+  const productMenuItems = [
+    {
+      name: "Adoucissement d'eau",
+      href: "/adoucisseurs",
+      hasMegamenu: true,
+      megamenuCards: [
+        {
+          icon: Droplets,
+          title: "Adoucisseurs d'eau",
+          description: "Réduisez l'accumulation sur les éviers et les douches, et profitez de cheveux et d'une peau plus doux.",
+          href: "/adoucisseurs"
+        },
+        {
+          icon: Filter,
+          title: "Échange portable",
+          description: "Profitez d'eau douce dans les propriétés saisonnières et les zones à restriction de saumure.",
+          href: "/services"
+        },
+        {
+          icon: Waves,
+          title: "Livraison de sel",
+          description: "Obtenez des livraisons régulières de sel qui correspondent à votre horaire pour des recharges sans tracas.",
+          href: "/pieces"
+        },
+        {
+          icon: GlassWater,
+          title: "Conditionneurs sans sel",
+          description: "Réduisez l'accumulation sans gaspillage d'eau, parfait pour les zones à restriction de saumure.",
+          href: "/conditionneurs-sans-sel"
+        },
+      ],
+      promo: {
+        title: "Trouvez la bonne solution pour votre maison",
+        image: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=600&auto=format&fit=crop",
+        link: "/services"
+      }
+    },
+    { name: "Filtration d'eau", href: "/filtration" },
+    { name: "Fontaines à glace et eau", href: "/fontaines" },
+    { name: "Eau de puits", href: "/eau-de-puits" },
+    {
+      name: "Ressources",
+      href: "/faq",
+      dropdown: [
+        { name: "FAQ", href: "/faq" },
+        { name: "Blog", href: "/blog" },
+        { name: "Guides", href: "/guides" },
+        { name: "Vidéos", href: "/videos" },
+        { name: "Témoignages", href: "/temoignages" },
+      ]
+    },
+    {
+      name: "Support",
+      href: "/contact",
+      dropdown: [
+        { name: "Contact", href: "/contact" },
+        { name: "Service", href: "/service" },
+        { name: "Garantie", href: "/garantie" },
+        { name: "Pièces", href: "/pieces" },
+        { name: "Manuels", href: "/manuels" },
+      ]
+    },
+  ];
+
+  const handleDropdownToggle = (itemName: string) => {
+    setActiveDropdown(activeDropdown === itemName ? null : itemName);
+    setActiveMegamenu(null);
+  };
+
+  const handleMegamenuToggle = (itemName: string) => {
+    setActiveMegamenu(activeMegamenu === itemName ? null : itemName);
+    setActiveDropdown(null);
+  };
+
   return (
-    <header className="sticky top-0 z-50 w-full bg-background shadow-sm font-sans">
-      {/* Top banner - Culligan style */}
-      <div className="bg-emerald-300 text-emerald-950">
-        <div className="container mx-auto px-4 py-2.5 text-center flex justify-center items-center gap-2 cursor-pointer hover:underline">
-          <p className="text-sm font-semibold">
-            Get Started with a Free Water Consultation
-          </p>
-          <ArrowRight className="h-4 w-4" />
+    <header className="sticky top-0 z-50 w-full bg-white font-sans" ref={dropdownRef}>
+      {/* Top Green Banner */}
+      <div className="bg-emerald-400 text-emerald-950">
+        <div className="container mx-auto px-4 py-2.5 text-center">
+          <a href="/water-testing" className="inline-flex items-center gap-2 text-sm font-semibold hover:underline">
+            <span>Commencez avec une consultation d'eau gratuite</span>
+            <ChevronDown className="h-4 w-4 -rotate-90" />
+          </a>
         </div>
       </div>
 
-      {/* Secondary bar */}
-      <div className="hidden lg:block border-b border-border bg-background">
-        <div className="container mx-auto px-4 py-2">
-          <div className="flex items-center justify-between text-sm">
-            <div className="flex items-center gap-6">
-              <NavLink to="/" className="hover:text-primary transition-colors font-semibold text-foreground">
-                Residential
+      {/* Upper Navigation Bar */}
+      <div className="border-b border-gray-200 shadow-sm">
+        <div className="container mx-auto px-6">
+          <div className="flex h-16 items-center justify-between gap-8">
+            {/* Left: Logo + Tagline */}
+            <div className="flex items-center gap-3">
+              <NavLink to="/" className="flex items-center">
+                <img
+                  src="/logo.png"
+                  alt="Bricareau"
+                  className="h-10 w-auto object-contain"
+                />
               </NavLink>
-              <span className="text-muted-foreground/30">|</span>
-              <NavLink to="/entreprises" className="hover:text-primary transition-colors font-medium text-muted-foreground">
-                Workplace
-              </NavLink>
-              <span className="text-muted-foreground/30">|</span>
-              <NavLink to="/commercial-industriel" className="hover:text-primary transition-colors font-medium text-muted-foreground">
-                Commercial
-              </NavLink>
-              <span className="text-muted-foreground/30">|</span>
-              <a href="#" className="flex items-center gap-1 hover:text-primary transition-colors font-medium text-muted-foreground">
-                <ArrowRight className="h-3 w-3 -rotate-45" />
-                Discover Bricareau
-              </a>
+              <span className="hidden lg:inline text-sm text-gray-500">L'eau que vous aimez.</span>
             </div>
-            <div className="flex items-center gap-6 text-muted-foreground">
-              <a href="tel:18883150392" className="flex items-center gap-2 hover:text-primary transition-colors">
+
+            {/* Center: Primary Menu (Desktop) */}
+            <nav className="hidden lg:flex items-center gap-8" role="navigation">
+              {primaryMenuItems.map((item) => (
+                <NavLink
+                  key={item.name}
+                  to={item.href}
+                  className="text-sm font-medium text-gray-800 hover:text-[#0052ff] transition-colors"
+                >
+                  {item.name}
+                </NavLink>
+              ))}
+            </nav>
+
+            {/* Right: Utilities */}
+            <div className="hidden lg:flex items-center gap-4">
+              {/* Phone */}
+              <a href="tel:18552649328" className="flex items-center gap-1.5 text-sm text-gray-700 hover:text-[#0052ff] transition-colors">
                 <Phone className="h-4 w-4" />
-                <span className="font-medium">1-855-264-9328</span>
+                <span>1-855-264-9328</span>
               </a>
+
+              {/* CTA Button */}
               <Button
                 size="sm"
-                className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-6 font-semibold"
+                className="bg-[#0052ff] hover:bg-[#0052ff]/90 text-white rounded-full px-5 font-semibold"
                 asChild
               >
                 <a href="#localisation" className="flex items-center gap-2">
                   <MapPin className="h-4 w-4" />
-                  <span>Find a Location Near Me</span>
+                  <span>Trouver un emplacement</span>
                 </a>
               </Button>
             </div>
-          </div>
-        </div>
-      </div>
 
-      {/* Main navigation */}
-      <div className="border-b border-border bg-white">
-        <div className="container mx-auto px-4">
-          <div className="flex h-20 items-center justify-between gap-8">
-            {/* Logo */}
-            <NavLink to="/" className="flex items-center group shrink-0">
-              <img
-                src="/logo.png"
-                alt="Bricareau"
-                className="h-12 w-auto object-contain"
-              />
-            </NavLink>
-
-            {/* Desktop navigation */}
-            <NavigationMenu className="hidden lg:flex flex-1 justify-start" viewportClassName="w-full left-0 absolute top-full border-t border-border bg-white shadow-lg">
-              <NavigationMenuList className="gap-1">
-                {mainNavigation.map((item) => (
-                  <NavigationMenuItem key={item.name}>
-                    {item.items ? (
-                      <>
-                        <NavigationMenuTrigger className="h-20 rounded-none border-b-2 border-transparent bg-transparent px-3 py-2 text-[15px] font-semibold text-foreground/80 hover:bg-transparent hover:text-primary focus:bg-transparent focus:text-primary active:bg-transparent active:text-primary data-[active]:bg-transparent data-[state=open]:border-primary data-[state=open]:bg-transparent data-[state=open]:text-primary">
-                          {item.name}
-                        </NavigationMenuTrigger>
-                        <NavigationMenuContent>
-                          <div className="w-screen max-w-[100vw] bg-white border-t shadow-lg">
-                            <div className="container mx-auto py-12 px-4">
-                              <div className="grid grid-cols-12 gap-8">
-                                {/* Left side - Cards (8 cols) */}
-                                <div className="col-span-12 lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-6">
-                                  {item.items.map((subItem) => (
-                                    <NavLink
-                                      key={subItem.name}
-                                      to={subItem.href}
-                                      className="flex items-start gap-5 p-6 rounded-xl bg-slate-50 hover:bg-slate-100 transition-colors group"
-                                    >
-                                      <div className="shrink-0">
-                                        {subItem.icon && <subItem.icon className="h-10 w-10 text-primary stroke-[1.2]" />}
-                                      </div>
-                                      <div>
-                                        <h4 className="font-semibold text-base text-foreground group-hover:text-primary mb-2">{subItem.name}</h4>
-                                        <p className="text-sm text-muted-foreground leading-relaxed">{subItem.description}</p>
-                                      </div>
-                                    </NavLink>
-                                  ))}
-                                </div>
-
-                                {/* Right side - Promo (4 cols) */}
-                                {item.promo && (
-                                  <div className="col-span-12 lg:col-span-4 flex">
-                                    <div className="flex w-full rounded-2xl overflow-hidden shadow-sm">
-                                      {/* Image Side */}
-                                      <div className="w-2/5 relative">
-                                        <img
-                                          src={item.promo.image}
-                                          alt={item.promo.title}
-                                          className="absolute inset-0 w-full h-full object-cover"
-                                        />
-                                      </div>
-                                      {/* Content Side */}
-                                      <div className="w-3/5 bg-[#2563EB] p-8 flex flex-col justify-center items-start text-white">
-                                        <h3 className="text-2xl font-bold mb-6 leading-tight">
-                                          {item.promo.title}
-                                        </h3>
-                                        <Button variant="link" className="text-white p-0 h-auto font-semibold hover:no-underline group/btn text-base">
-                                          Read More <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover/btn:translate-x-1" />
-                                        </Button>
-                                      </div>
-                                    </div>
-                                  </div>
-                                )}
-                              </div>
-                            </div>
-                          </div>
-                        </NavigationMenuContent>
-                      </>
-                    ) : (
-                      <NavigationMenuLink asChild>
-                        <NavLink
-                          to={item.href}
-                          className="px-3 py-2 text-[15px] font-semibold text-foreground/80 hover:text-primary transition-colors h-20 inline-flex items-center border-b-2 border-transparent hover:border-primary"
-                        >
-                          {item.name}
-                        </NavLink>
-                      </NavigationMenuLink>
-                    )}
-                  </NavigationMenuItem>
-                ))}
-              </NavigationMenuList>
-            </NavigationMenu>
-
-            {/* Search Bar */}
-            <div className="hidden lg:flex items-center relative w-64">
-              <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-              <Input
-                type="search"
-                placeholder="Search"
-                className="pl-9 bg-slate-100 border-none rounded-full focus-visible:ring-1 focus-visible:ring-primary"
-              />
-            </div>
-
-            {/* Mobile menu button */}
-            <Button
-              variant="ghost"
-              size="icon"
-              className="lg:hidden"
+            {/* Mobile Menu Button */}
+            <button
+              className="lg:hidden p-2"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label="Toggle menu"
             >
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-            </Button>
+            </button>
           </div>
         </div>
       </div>
 
-      {/* Mobile menu */}
-      {isMenuOpen && (
-        <div className="lg:hidden fixed inset-0 top-[115px] bg-background z-40 overflow-y-auto pb-20 animate-in slide-in-from-top-5 duration-200">
-          <nav className="container mx-auto px-4 py-4 flex flex-col gap-2">
-            {mainNavigation.map((item) => (
-              <div key={item.name} className="border-b border-border/50 last:border-none">
-                {item.items ? (
-                  <MobileMenuItem item={item} setIsMenuOpen={setIsMenuOpen} />
-                ) : (
-                  <NavLink
-                    to={item.href}
-                    className="block py-4 text-lg font-semibold text-foreground hover:text-primary transition-colors"
-                    onClick={() => setIsMenuOpen(false)}
+      {/* Lower Navigation Bar (Product Menu) */}
+      <div className="hidden lg:block border-b border-gray-200 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="flex h-12 items-center justify-between">
+            {/* Left: Product Menu */}
+            <div className="flex items-center gap-6">
+              <span className="text-xs text-gray-500 font-medium">L'eau que vous aimez:</span>
+              {productMenuItems.map((item) => (
+                <div key={item.name} className="relative">
+                  <button
+                    onMouseEnter={() => item.hasMegamenu ? handleMegamenuToggle(item.name) : item.dropdown ? handleDropdownToggle(item.name) : null}
+                    onClick={() => !item.hasMegamenu && !item.dropdown && (window.location.href = item.href)}
+                    className={cn(
+                      "text-sm font-semibold transition-colors relative pb-3",
+                      item.name === "Adoucissement d'eau"
+                        ? "text-[#0052ff] border-b-2 border-[#0052ff]"
+                        : "text-gray-700 hover:text-[#0052ff]"
+                    )}
+                    aria-haspopup={item.hasMegamenu || item.dropdown ? "true" : undefined}
+                    aria-expanded={activeMegamenu === item.name || activeDropdown === item.name}
                   >
                     {item.name}
-                  </NavLink>
-                )}
+                  </button>
+
+                  {/* Simple Dropdown */}
+                  {item.dropdown && !item.hasMegamenu && activeDropdown === item.name && (
+                    <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg border border-gray-100 py-2 z-50">
+                      {item.dropdown.map((subItem) => (
+                        <NavLink
+                          key={subItem.name}
+                          to={subItem.href}
+                          className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 transition-colors"
+                          onClick={() => setActiveDropdown(null)}
+                        >
+                          {subItem.name}
+                        </NavLink>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+
+            {/* Right: Search */}
+            <div className="flex items-center gap-2">
+              <Search className="h-4 w-4 text-gray-500" />
+              <Input
+                type="search"
+                placeholder="Rechercher"
+                className="w-48 h-8 text-sm border-gray-300 focus-visible:ring-[#0052ff]"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Megamenu for Water Softening */}
+      {activeMegamenu === "Adoucissement d'eau" && productMenuItems[0].hasMegamenu && (
+        <div
+          className="absolute top-full left-0 w-full bg-slate-50 border-t border-gray-200 shadow-xl z-40"
+          onMouseLeave={() => setActiveMegamenu(null)}
+        >
+          <div className="container mx-auto px-6 py-12">
+            <div className="grid grid-cols-12 gap-6">
+              {/* Cards Section */}
+              <div className="col-span-9 grid grid-cols-4 gap-6">
+                {productMenuItems[0].megamenuCards?.map((card, index) => {
+                  const Icon = card.icon;
+                  return (
+                    <NavLink
+                      key={index}
+                      to={card.href}
+                      className="flex flex-col items-start gap-3 p-5 rounded-lg bg-white hover:bg-slate-50 transition-colors group border border-slate-100 shadow-sm"
+                      onClick={() => setActiveMegamenu(null)}
+                    >
+                      <div className="w-12 h-12 rounded-lg bg-[#DBEAFE] flex items-center justify-center">
+                        <Icon className="h-6 w-6 text-[#0052ff] stroke-[1.5]" />
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-[15px] text-slate-900 group-hover:text-[#0052ff] mb-1.5 transition-colors">
+                          {card.title}
+                        </h4>
+                        <p className="text-[13px] text-slate-600 leading-relaxed">
+                          {card.description}
+                        </p>
+                      </div>
+                    </NavLink>
+                  );
+                })}
+              </div>
+
+              {/* Promo Card */}
+              {productMenuItems[0].promo && (
+                <div className="col-span-3">
+                  <div className="h-full rounded-xl overflow-hidden shadow-md bg-white">
+                    <div className="relative h-32">
+                      <img
+                        src={productMenuItems[0].promo.image}
+                        alt={productMenuItems[0].promo.title}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div className="bg-[#0052ff] p-6 text-white">
+                      <h3 className="text-lg font-bold mb-3 leading-tight">
+                        {productMenuItems[0].promo.title}
+                      </h3>
+                      <a
+                        href={productMenuItems[0].promo.link}
+                        className="inline-flex items-center gap-2 text-sm font-semibold hover:underline"
+                      >
+                        En savoir plus
+                        <ChevronDown className="h-4 w-4 -rotate-90" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Mobile Menu */}
+      {isMenuOpen && (
+        <div className="lg:hidden fixed inset-0 top-[104px] bg-white z-40 overflow-y-auto animate-in slide-in-from-left duration-300">
+          <nav className="container mx-auto px-4 py-6 space-y-2">
+            {/* Primary Menu Items */}
+            {primaryMenuItems.map((item) => (
+              <div key={item.name} className="border-b border-gray-100 pb-2">
+                <NavLink
+                  to={item.href}
+                  className="block py-3 text-base font-semibold text-gray-800"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.name}
+                </NavLink>
               </div>
             ))}
 
-            <div className="mt-6 space-y-4 bg-slate-50 -mx-4 px-4 py-6">
-              <div className="grid grid-cols-2 gap-4">
-                <NavLink to="/" className="text-sm font-medium text-foreground hover:text-primary">Residential</NavLink>
-                <NavLink to="/entreprises" className="text-sm font-medium text-foreground hover:text-primary">Workplace</NavLink>
-                <NavLink to="/commercial-industriel" className="text-sm font-medium text-foreground hover:text-primary">Commercial</NavLink>
-              </div>
+            {/* Product Menu Items */}
+            <div className="pt-4">
+              <p className="text-xs text-gray-500 font-medium mb-3">L'eau que vous aimez:</p>
+              {productMenuItems.map((item) => (
+                <div key={item.name} className="border-b border-gray-100 pb-2">
+                  {item.dropdown ? (
+                    <div>
+                      <button
+                        onClick={() => handleDropdownToggle(`mobile-${item.name}`)}
+                        className="flex items-center justify-between w-full py-3 text-base font-semibold text-gray-800"
+                      >
+                        {item.name}
+                        <ChevronDown className={cn("h-5 w-5 transition-transform", activeDropdown === `mobile-${item.name}` && "rotate-180")} />
+                      </button>
+                      {activeDropdown === `mobile-${item.name}` && (
+                        <div className="pl-4 space-y-1 pb-2">
+                          {item.dropdown.map((subItem) => (
+                            <NavLink
+                              key={subItem.name}
+                              to={subItem.href}
+                              className="block py-2 text-sm text-gray-600"
+                              onClick={() => setIsMenuOpen(false)}
+                            >
+                              {subItem.name}
+                            </NavLink>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    <NavLink
+                      to={item.href}
+                      className="block py-3 text-base font-semibold text-gray-800"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {item.name}
+                    </NavLink>
+                  )}
+                </div>
+              ))}
+            </div>
 
+            {/* Mobile Utilities */}
+            <div className="pt-6 space-y-4">
+              <a href="tel:18552649328" className="flex items-center gap-2 text-[#0052ff] font-semibold">
+                <Phone className="h-5 w-5" />
+                <span>1-855-264-9328</span>
+              </a>
               <Button
                 size="lg"
-                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground rounded-full font-semibold"
+                className="w-full bg-[#0052ff] hover:bg-[#0052ff]/90 text-white rounded-full font-semibold"
                 asChild
               >
-                <a href="#localisation">
-                  Find a Location Near Me
-                </a>
+                <a href="#localisation">Trouver un emplacement près de moi</a>
               </Button>
-
-              <a href="tel:18883150392" className="flex items-center justify-center gap-2 py-2 font-semibold text-primary">
-                <Phone className="h-5 w-5" />
-                <span>1-888-315-0392</span>
-              </a>
             </div>
           </nav>
         </div>
       )}
     </header>
-  );
-};
-
-const MobileMenuItem = ({ item, setIsMenuOpen }: { item: any, setIsMenuOpen: (open: boolean) => void }) => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  return (
-    <div className="py-2">
-      <button
-        onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center justify-between w-full py-2 text-lg font-semibold text-foreground hover:text-primary transition-colors"
-      >
-        {item.name}
-        <ChevronDown className={cn("h-5 w-5 transition-transform duration-200", isOpen ? "rotate-180" : "")} />
-      </button>
-      <div
-        className={cn(
-          "grid transition-all duration-200 ease-in-out overflow-hidden",
-          isOpen ? "grid-rows-[1fr] opacity-100 mt-2 mb-4" : "grid-rows-[0fr] opacity-0"
-        )}
-      >
-        <div className="min-h-0 pl-4 space-y-4">
-          {item.items.map((subItem: any) => (
-            <NavLink
-              key={subItem.name}
-              to={subItem.href}
-              className="flex items-start gap-3 group"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              {subItem.icon && <subItem.icon className="h-5 w-5 text-primary shrink-0 mt-0.5" />}
-              <div>
-                <div className="font-medium text-foreground group-hover:text-primary">{subItem.name}</div>
-                {subItem.description && (
-                  <p className="text-xs text-muted-foreground mt-0.5 line-clamp-2">{subItem.description}</p>
-                )}
-              </div>
-            </NavLink>
-          ))}
-        </div>
-      </div>
-    </div>
   );
 };
 
