@@ -3,7 +3,7 @@ import heroImage from "@/assets/hero-commercial.jpg";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Testimonials from "@/components/Testimonials";
 import Footer from "@/components/Footer";
-import { NavLink } from "@/components/NavLink";
+import Header from "@/components/Header";
 
 const CommercialIndustriel = () => {
   const solutions = [
@@ -71,52 +71,20 @@ const CommercialIndustriel = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Header with Commercial & Industriel Navigation */}
-      <header className="sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border">
-        <div className="hidden md:block border-b border-border bg-secondary/30">
-          <div className="container mx-auto px-4 py-2">
-            <div className="flex items-center justify-between text-sm text-muted-foreground">
-              <div className="flex items-center gap-6">
-                <NavLink to="/">Résidentiel</NavLink>
-                <NavLink to="/entreprises">Entreprise</NavLink>
-                <span className="text-primary font-medium">Commercial & Industriel</span>
-              </div>
-              <div className="flex items-center gap-4">
-                <a href="tel:18552649328" className="flex items-center gap-2 hover:text-primary transition-colors">
-                  <Phone className="h-3 w-3" />
-                  <span>1 855 264 9328</span>
-                </a>
-                <NavLink to="/contact">Contactez-nous</NavLink>
-                <NavLink to="/about">Localisation</NavLink>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="container mx-auto px-4">
-          <div className="flex h-16 md:h-20 items-center justify-between">
-            <a href="/" className="flex items-center gap-2">
-              <div className="w-10 h-10 md:w-12 md:h-12 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-lg md:text-xl">B</span>
-              </div>
-              <span className="font-bold text-xl md:text-2xl text-foreground">Bricareau</span>
-            </a>
-          </div>
-        </div>
-      </header>
+      <Header />
 
       <main>
         {/* Hero Section */}
         <section className="relative min-h-[500px] md:min-h-[600px] flex items-center">
           <div className="absolute inset-0">
-            <img 
-              src={heroImage} 
-              alt="Installation industrielle de traitement d'eau" 
+            <img
+              src={heroImage}
+              alt="Installation industrielle de traitement d'eau"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-transparent" />
           </div>
-          
+
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-2xl space-y-6">
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
@@ -211,7 +179,7 @@ const CommercialIndustriel = () => {
                 Découvrez la meilleure solution de traitement de l'eau pour votre industrie.
               </h2>
               <p className="text-base md:text-lg text-muted-foreground">
-                Nous vous accompagnons dans le développement d'un système d'équipements de traitement de l'eau sur mesure et personnalisé. 
+                Nous vous accompagnons dans le développement d'un système d'équipements de traitement de l'eau sur mesure et personnalisé.
                 Nous sommes présents avant, pendant et après votre projet de traitement de l'eau.
               </p>
               <a
@@ -234,13 +202,13 @@ const CommercialIndustriel = () => {
               Marchés que nous servons
             </h2>
             <p className="text-center text-muted-foreground mb-12 max-w-3xl mx-auto">
-              Nous nous engageons à fournir des solutions innovantes en matière de traitement des eaux qui répondent aux besoins 
-              uniques de divers marchés. Notre expertise et nos technologies de pointe nous permettent de servir un large éventail 
+              Nous nous engageons à fournir des solutions innovantes en matière de traitement des eaux qui répondent aux besoins
+              uniques de divers marchés. Notre expertise et nos technologies de pointe nous permettent de servir un large éventail
               d'industries, garantissant une gestion efficace et durable des eaux.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
               {markets.map((market, index) => (
-                <div 
+                <div
                   key={index}
                   className="bg-background p-6 rounded-lg text-center hover:shadow-md transition-shadow"
                 >
@@ -259,8 +227,8 @@ const CommercialIndustriel = () => {
                 Testez la qualité de votre eau est essentiel pour garantir que votre entreprise répond aux exigences de l'industrie.
               </h2>
               <p className="text-base md:text-lg text-muted-foreground">
-                Les services de tests en laboratoire jouent un rôle essentiel dans la gestion des eaux, offrant des analyses 
-                essentielles pour identifier les solutions de traitement les plus efficaces. Nous pouvons déterminer avec précision 
+                Les services de tests en laboratoire jouent un rôle essentiel dans la gestion des eaux, offrant des analyses
+                essentielles pour identifier les solutions de traitement les plus efficaces. Nous pouvons déterminer avec précision
                 la composition de l'eau et recommander les processus de traitement les plus adaptés aux exigences spécifiques.
               </p>
               <a
@@ -294,7 +262,7 @@ const CommercialIndustriel = () => {
           </div>
         </section>
       </main>
-      
+
       <Footer />
     </div>
   );

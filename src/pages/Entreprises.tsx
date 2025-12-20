@@ -3,7 +3,7 @@ import heroImage from "@/assets/hero-entreprises.jpg";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Testimonials from "@/components/Testimonials";
 import Footer from "@/components/Footer";
-import { NavLink } from "@/components/NavLink";
+import Header from "@/components/Header";
 
 const Entreprises = () => {
   const solutions = [
@@ -52,52 +52,20 @@ const Entreprises = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Header with Entreprises Navigation */}
-      <header className="sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border">
-        <div className="hidden md:block border-b border-border bg-secondary/30">
-          <div className="container mx-auto px-4 py-2">
-            <div className="flex items-center justify-between text-sm text-muted-foreground">
-              <div className="flex items-center gap-6">
-                <NavLink to="/">Résidentiel</NavLink>
-                <span className="text-primary font-medium">Entreprise</span>
-                <NavLink to="/commercial-industriel">Commercial & Industriel</NavLink>
-              </div>
-              <div className="flex items-center gap-4">
-                <a href="tel:18552649328" className="flex items-center gap-2 hover:text-primary transition-colors">
-                  <Phone className="h-3 w-3" />
-                  <span>1 855 264 9328</span>
-                </a>
-                <NavLink to="/contact">Contactez-nous</NavLink>
-                <NavLink to="/about">Localisation</NavLink>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="container mx-auto px-4">
-          <div className="flex h-16 md:h-20 items-center justify-between">
-            <a href="/" className="flex items-center gap-2">
-              <div className="w-10 h-10 md:w-12 md:h-12 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-lg md:text-xl">B</span>
-              </div>
-              <span className="font-bold text-xl md:text-2xl text-foreground">Bricareau</span>
-            </a>
-          </div>
-        </div>
-      </header>
+      <Header />
 
       <main>
         {/* Hero Section */}
         <section className="relative min-h-[500px] md:min-h-[600px] flex items-center">
           <div className="absolute inset-0">
-            <img 
-              src={heroImage} 
-              alt="Environnement professionnel avec eau pure" 
+            <img
+              src={heroImage}
+              alt="Environnement professionnel avec eau pure"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-transparent" />
           </div>
-          
+
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-2xl space-y-6">
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
@@ -153,7 +121,7 @@ const Entreprises = () => {
               Pourquoi plus de 10 000 entreprises choisissent Bricareau?
             </h2>
             <p className="text-center text-muted-foreground mb-12 max-w-3xl mx-auto">
-              Bricareau offre des solutions sur mesure pour fournir une eau plus fraîche et plus savoureuse dans votre espace de travail. 
+              Bricareau offre des solutions sur mesure pour fournir une eau plus fraîche et plus savoureuse dans votre espace de travail.
               Que ce soit dans la cuisine ou à la salle de réunion, nos systèmes peuvent être installés là où vos employés nécessitent une eau de haute qualité.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -183,7 +151,7 @@ const Entreprises = () => {
                 Contribuez à la protection de notre écosystème
               </h3>
               <p className="text-base md:text-lg text-muted-foreground">
-                Équipez votre entreprise d'un refroidisseur d'eau spécialement conçu pour les espaces exigeants et 
+                Équipez votre entreprise d'un refroidisseur d'eau spécialement conçu pour les espaces exigeants et
                 diminuez l'empreinte carbone de votre entreprise grâce à nos fontaines d'eau purifiée sans bouteilles.
               </p>
             </div>
@@ -200,13 +168,13 @@ const Entreprises = () => {
               Nos secteurs d'activités
             </h2>
             <p className="text-center text-muted-foreground mb-12 max-w-3xl mx-auto">
-              Nous nous engageons à fournir des solutions innovantes en matière de traitement des eaux qui répondent aux besoins 
-              uniques de divers marchés. Notre expertise et nos technologies de pointe nous permettent de servir un large éventail 
+              Nous nous engageons à fournir des solutions innovantes en matière de traitement des eaux qui répondent aux besoins
+              uniques de divers marchés. Notre expertise et nos technologies de pointe nous permettent de servir un large éventail
               de secteurs d'activités, garantissant une gestion efficace et durable des eaux.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
               {sectors.map((sector, index) => (
-                <div 
+                <div
                   key={index}
                   className="bg-background p-6 rounded-lg text-center hover:shadow-md transition-shadow"
                 >
@@ -228,7 +196,7 @@ const Entreprises = () => {
                 l'eau de votre maison
               </h3>
               <p className="text-base md:text-lg text-muted-foreground">
-                Bricareau vous garantit la meilleure d'eau pour toute la maison. Nous vous proposons des solutions innovantes 
+                Bricareau vous garantit la meilleure d'eau pour toute la maison. Nous vous proposons des solutions innovantes
                 en fonction de vos besoins: Adoucisseurs d'eau, Filtre d'eau ou stations d'eau potable par exemple.
               </p>
               <a
@@ -249,7 +217,7 @@ const Entreprises = () => {
                 Planifiez votre consultation sur l'eau
               </h2>
               <p className="text-base md:text-lg text-muted-foreground">
-                Nos spécialistes en eau sont prêts à vous assister dans la recherche de la solution adéquate à votre problème d'eau. 
+                Nos spécialistes en eau sont prêts à vous assister dans la recherche de la solution adéquate à votre problème d'eau.
                 Nous vous offrons un test d'eau ainsi qu'une consultation à votre domicile.
               </p>
               <a
@@ -262,7 +230,7 @@ const Entreprises = () => {
           </div>
         </section>
       </main>
-      
+
       <Footer />
     </div>
   );
