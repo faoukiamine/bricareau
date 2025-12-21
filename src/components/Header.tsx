@@ -459,11 +459,6 @@ const Header = () => {
       {/* Full-Width Expandable Search Panel */}
       {isSearchFocused && (
         <>
-          {/* Dimmed Overlay - Desktop only */}
-          <div
-            className="hidden lg:block fixed inset-0 bg-black/20 z-40 animate-in fade-in duration-200"
-            onClick={handleSearchClose}
-          />
 
           {/* Search Panel */}
           <div
