@@ -472,9 +472,9 @@ const Header = () => {
           >
 
             <div className="container mx-auto px-4 md:px-6 md:py-8">
-              {/* Centered Search Box */}
-              <div className="max-w-2xl mx-auto mb-6 md:mb-8 lg:mt-0">
-                <div className="relative">
+              {/* Search Box with Close Button */}
+              <div className="max-w-2xl mx-auto mb-6 md:mb-8 lg:mt-0 flex items-center gap-4">
+                <div className="relative flex-1">
                   <Search className="absolute left-3 md:left-4 top-1/2 -translate-y-1/2 h-4 md:h-5 w-4 md:w-5 text-gray-500 pointer-events-none" />
                   <Input
                     type="search"
@@ -485,6 +485,14 @@ const Header = () => {
                     autoFocus
                   />
                 </div>
+                {/* Close Button */}
+                <button
+                  onClick={handleSearchClose}
+                  className="p-2 hover:bg-gray-100 rounded-full transition-colors flex-shrink-0"
+                  aria-label="Close search"
+                >
+                  <X className="h-6 w-6 text-gray-600" />
+                </button>
               </div>
 
               {/* Popular Search Terms */}
