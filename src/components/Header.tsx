@@ -349,7 +349,7 @@ const Header = () => {
 
               {/* Localisation */}
               <a
-                href="https://www.google.com/maps/place/BRICAREAU+WATER+SPECIALIST/@45.5005535,-73.6423534,19z/"
+                href="https://www.google.com/maps/place//@45.5005535,-73.6423534,211m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-gray-700 hover:text-[#0052ff] transition-colors group"
@@ -380,7 +380,7 @@ const Header = () => {
               <a href="tel:18552649328" className="p-2" aria-label="Phone">
                 <Phone className="h-5 w-5 text-gray-700" />
               </a>
-              <a href="#localisation" className="p-2" aria-label="Location">
+              <a href="https://www.google.com/maps/place//@45.5005535,-73.6423534,211m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D" className="p-2" aria-label="Location">
                 <MapPin className="h-5 w-5 text-gray-700" />
               </a>
               <button
@@ -467,18 +467,10 @@ const Header = () => {
             ref={searchRef}
             className="absolute top-full left-0 right-0 bg-white border-b border-gray-200 shadow-lg z-50 animate-in slide-in-from-top duration-200 max-h-[calc(100vh-80px)] overflow-y-auto"
           >
-            {/* Close button - Top right on mobile, hidden on desktop */}
-            <button
-              onClick={handleSearchClose}
-              className="lg:hidden absolute top-4 right-4 p-2 hover:bg-gray-100 rounded-full transition-colors z-10"
-              aria-label="Close search"
-            >
-              <X className="h-6 w-6 text-gray-700" />
-            </button>
 
-            <div className="container mx-auto px-4 md:px-6 py-6 md:py-8">
+            <div className="container mx-auto px-4 md:px-6 md:py-8">
               {/* Centered Search Box */}
-              <div className="max-w-2xl mx-auto mb-6 md:mb-8 mt-12 lg:mt-0">
+              <div className="max-w-2xl mx-auto mb-6 md:mb-8 lg:mt-0">
                 <div className="relative">
                   <Search className="absolute left-3 md:left-4 top-1/2 -translate-y-1/2 h-4 md:h-5 w-4 md:w-5 text-gray-500 pointer-events-none" />
                   <Input
