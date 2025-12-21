@@ -29,6 +29,7 @@ import Service from "./pages/Service";
 import Garantie from "./pages/Garantie";
 import Pieces from "./pages/Pieces";
 import Manuels from "./pages/Manuels";
+import Promotions from "./pages/Promotions";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -66,6 +67,7 @@ const App = () => (
           <Route path="/faq" element={<FAQ />} />
           <Route path="/entreprises" element={<Entreprises />} />
           <Route path="/commercial-industriel" element={<CommercialIndustriel />} />
+          <Route path="/promotions" element={<Promotions />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

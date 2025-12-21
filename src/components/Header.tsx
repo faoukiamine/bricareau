@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { Menu, X, Phone, MapPin, Droplets, Filter, GlassWater, Waves, Search, ChevronDown } from "lucide-react";
+import { Menu, X, Phone, MapPin, Droplets, Filter, GlassWater, Waves, Search, ChevronDown, Mail, Tag } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { NavLink, useLocation } from "react-router-dom";
@@ -309,23 +309,44 @@ const Header = () => {
             </div>
 
             {/* Right: Utilities */}
-            <div className="hidden lg:flex items-center gap-4 ml-auto">
+            <div className="hidden lg:flex items-center gap-6 ml-auto">
               {/* Phone */}
-              <a href="tel:18552649328" className="flex items-center gap-1.5 text-sm text-gray-700 hover:text-[#0052ff] transition-colors">
-                <Phone className="h-4 w-4" />
-                <span>1-855-264-9328</span>
+              <a
+                href="tel:18552649328"
+                className="flex items-center gap-2 text-gray-700 hover:text-[#0052ff] transition-colors group"
+              >
+                <Phone className="h-5 w-5" />
+                <span className="text-sm font-medium">Appelez-nous</span>
               </a>
 
-              {/* CTA Button */}
-              <Button
-                size="sm"
-                className="bg-[#0052ff] hover:bg-[#0052ff]/90 text-white rounded-full px-5 font-semibold"
-                asChild
+              {/* Contact */}
+              <a
+                href="/contact"
+                className="flex items-center gap-2 text-gray-700 hover:text-[#0052ff] transition-colors group"
               >
-                <a href="/contact" className="flex items-center gap-2">
-                  <span>Contactez-nous</span>
-                </a>
-              </Button>
+                <Mail className="h-5 w-5" />
+                <span className="text-sm font-medium">Contactez-nous</span>
+              </a>
+
+              {/* Localisation */}
+              <a
+                href="https://www.google.com/maps/place/BRICAREAU+WATER+SPECIALIST/@45.5005535,-73.6423534,19z/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-gray-700 hover:text-[#0052ff] transition-colors group"
+              >
+                <MapPin className="h-5 w-5" />
+                <span className="text-sm font-medium">Localisation</span>
+              </a>
+
+              {/* Promotions */}
+              <a
+                href="/promotions"
+                className="flex items-center gap-2 text-gray-700 hover:text-[#0052ff] transition-colors group"
+              >
+                <Tag className="h-5 w-5" />
+                <span className="text-sm font-medium">Promotions</span>
+              </a>
             </div>
 
             {/* Mobile: Icon Row */}
