@@ -416,6 +416,7 @@ const Header = () => {
                 <div key={item.name} className="relative">
                   <button
                     onMouseEnter={() => item.hasMegamenu ? handleMegamenuToggle(item.name) : null}
+                    onMouseLeave={() => item.hasMegamenu ? setActiveMegamenu(null) : null}
                     onClick={() => !item.hasMegamenu && (window.location.href = item.href)}
                     className={cn(
                       "text-sm font-semibold transition-colors relative h-16 flex items-center",
