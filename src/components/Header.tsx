@@ -322,7 +322,7 @@ const Header = () => {
                 <img
                   src="/logo.png"
                   alt="Bricareau"
-                  className="h-8 w-auto object-contain"
+                  className="h-12 w-auto object-contain"
                 />
               </NavLink>
             </div>
@@ -373,7 +373,10 @@ const Header = () => {
               <button
                 className="p-2"
                 aria-label="Search"
-                onClick={() => setIsSearchFocused(true)}
+                onClick={() => {
+                  setIsSearchFocused(true);
+                  setIsMenuOpen(false);
+                }}
               >
                 <Search className="h-5 w-5 text-gray-700" />
               </button>
@@ -405,7 +408,7 @@ const Header = () => {
                 <img
                   src="/logo.png"
                   alt="Bricareau"
-                  className="h-10 w-auto object-contain"
+                  className="h-14 w-auto object-contain"
                 />
               </NavLink>
             </div>
