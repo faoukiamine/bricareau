@@ -15,6 +15,7 @@ const Header = () => {
   const dropdownRef = useRef<HTMLDivElement>(null);
   const searchRef = useRef<HTMLDivElement>(null);
   const searchInputRef = useRef<HTMLInputElement>(null);
+  const mobileSearchButtonRef = useRef<HTMLButtonElement>(null);
   const location = useLocation();
 
   // Close menus on outside click
@@ -24,7 +25,11 @@ const Header = () => {
         setActiveDropdown(null);
         setActiveMegamenu(null);
       }
-      if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
+      // Check if click is outside search panel, compact search input, AND mobile search button
+      const clickedOutsidePanel = searchRef.current && !searchRef.current.contains(event.target as Node);
+      const clickedOutsideInput = searchInputRef.current && !searchInputRef.current.contains(event.target as Node);
+      const clickedOutsideMobileButton = mobileSearchButtonRef.current && !mobileSearchButtonRef.current.contains(event.target as Node);
+      if (clickedOutsidePanel && clickedOutsideInput && clickedOutsideMobileButton) {
         setIsSearchFocused(false);
       }
     };
@@ -301,7 +306,7 @@ const Header = () => {
       {/* Upper Navigation Bar - Primary Menu + Utilities */}
       <div className="border-b border-gray-200 bg-white">
         <div className="container mx-auto px-6">
-          <div className="flex h-12 items-center justify-between">
+          <div className="flex h-16 lg:h-12 items-center justify-between">
             {/* Left: Primary Menu (Desktop) */}
             <nav className="hidden lg:flex items-center gap-1" role="navigation">
               {primaryMenuItems.map((item, index) => (
@@ -374,6 +379,7 @@ const Header = () => {
             {/* Mobile: Icon Row */}
             <div className="lg:hidden flex items-center gap-4 ml-auto">
               <button
+                ref={mobileSearchButtonRef}
                 className="p-2"
                 aria-label="Search"
                 onClick={() => {
@@ -470,7 +476,7 @@ const Header = () => {
           {/* Search Panel */}
           <div
             ref={searchRef}
-            className="absolute top-full left-0 right-0 bg-white border-b border-gray-200 shadow-lg z-50 animate-in slide-in-from-top duration-200 max-h-[calc(100vh-80px)] overflow-y-auto"
+            className="absolute top-full left-0 right-0 bg-white border-b border-gray-200 shadow-lg z-50 lg:animate-in lg:slide-in-from-top lg:duration-200 max-h-[calc(100vh-80px)] overflow-y-auto"
           >
 
             <div className="container mx-auto px-4 md:px-6 md:py-8">
