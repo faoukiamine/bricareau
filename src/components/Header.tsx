@@ -10,6 +10,7 @@ const Header = () => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [activeMegamenu, setActiveMegamenu] = useState<string | null>(null);
   const [isSearchFocused, setIsSearchFocused] = useState(false);
+  const [isSearchClosing, setIsSearchClosing] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const dropdownRef = useRef<HTMLDivElement>(null);
   const searchRef = useRef<HTMLDivElement>(null);
@@ -279,6 +280,8 @@ const Header = () => {
   const handleMegamenuToggle = (itemName: string) => {
     setActiveMegamenu(activeMegamenu === itemName ? null : itemName);
     setActiveDropdown(null);
+    setIsSearchFocused(false);
+    setIsSearchClosing(false);
   };
 
   const handleSearchClose = () => {
@@ -376,6 +379,7 @@ const Header = () => {
                 onClick={() => {
                   setIsSearchFocused(true);
                   setIsMenuOpen(false);
+                  setActiveMegamenu(null);
                 }}
               >
                 <Search className="h-5 w-5 text-gray-700" />
@@ -448,7 +452,10 @@ const Header = () => {
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="w-64 h-9 pl-10 pr-4 text-sm border-gray-300 rounded-full focus-visible:ring-2 focus-visible:ring-[#0052ff] focus-visible:border-[#0052ff] [&::-webkit-search-cancel-button]:hidden [&::-webkit-search-decoration]:hidden"
-                  onFocus={() => setIsSearchFocused(true)}
+                  onFocus={() => {
+                    setIsSearchFocused(true);
+                    setActiveMegamenu(null);
+                  }}
                 />
               </div>
             </div>
