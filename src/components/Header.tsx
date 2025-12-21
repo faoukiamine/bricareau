@@ -9,7 +9,11 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [activeMegamenu, setActiveMegamenu] = useState<string | null>(null);
+  const [isSearchFocused, setIsSearchFocused] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const searchRef = useRef<HTMLDivElement>(null);
+  const searchInputRef = useRef<HTMLInputElement>(null);
   const location = useLocation();
 
   // Close menus on outside click
@@ -18,6 +22,9 @@ const Header = () => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
         setActiveDropdown(null);
         setActiveMegamenu(null);
+      }
+      if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
+        setIsSearchFocused(false);
       }
     };
 
@@ -31,6 +38,7 @@ const Header = () => {
       if (event.key === "Escape") {
         setActiveDropdown(null);
         setActiveMegamenu(null);
+        setIsSearchFocused(false);
       }
     };
 
@@ -273,6 +281,17 @@ const Header = () => {
     setActiveDropdown(null);
   };
 
+  const handleSearchClose = () => {
+    setIsSearchFocused(false);
+    setSearchQuery("");
+  };
+
+  const handlePopularSearchClick = (term: string) => {
+    setSearchQuery(term);
+    // Here you would typically trigger a search or navigation
+    console.log("Searching for:", term);
+  };
+
   return (
     <header className="sticky top-0 z-50 w-full bg-white font-sans" ref={dropdownRef}>
 
@@ -351,7 +370,11 @@ const Header = () => {
 
             {/* Mobile: Icon Row */}
             <div className="lg:hidden flex items-center gap-4 ml-auto">
-              <button className="p-2" aria-label="Search">
+              <button
+                className="p-2"
+                aria-label="Search"
+                onClick={() => setIsSearchFocused(true)}
+              >
                 <Search className="h-5 w-5 text-gray-700" />
               </button>
               <a href="tel:18552649328" className="p-2" aria-label="Phone">
@@ -412,16 +435,91 @@ const Header = () => {
 
             {/* Right: Search */}
             <div className="flex items-center gap-2 flex-shrink-0">
-              <Search className="h-4 w-4 text-gray-500" />
-              <Input
-                type="search"
-                placeholder="Rechercher"
-                className="w-48 h-8 text-sm border-gray-300 focus-visible:ring-[#0052ff]"
-              />
+              <div className="relative">
+                <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-500 pointer-events-none z-10" />
+                <Input
+                  ref={searchInputRef}
+                  type="search"
+                  placeholder="Recherche"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-64 h-9 pl-10 pr-4 text-sm border-gray-300 rounded-full focus-visible:ring-2 focus-visible:ring-[#0052ff] focus-visible:border-[#0052ff] [&::-webkit-search-cancel-button]:hidden [&::-webkit-search-decoration]:hidden"
+                  onFocus={() => setIsSearchFocused(true)}
+                />
+              </div>
             </div>
           </div>
         </div>
       </div>
+
+      {/* Full-Width Expandable Search Panel */}
+      {isSearchFocused && (
+        <>
+          {/* Dimmed Overlay - Desktop only */}
+          <div
+            className="hidden lg:block fixed inset-0 bg-black/20 z-40 animate-in fade-in duration-200"
+            onClick={handleSearchClose}
+          />
+
+          {/* Search Panel */}
+          <div
+            ref={searchRef}
+            className="absolute top-full left-0 right-0 bg-white border-b border-gray-200 shadow-lg z-50 animate-in slide-in-from-top duration-200 max-h-[calc(100vh-80px)] overflow-y-auto"
+          >
+            {/* Close button - Top right on mobile, hidden on desktop */}
+            <button
+              onClick={handleSearchClose}
+              className="lg:hidden absolute top-4 right-4 p-2 hover:bg-gray-100 rounded-full transition-colors z-10"
+              aria-label="Close search"
+            >
+              <X className="h-6 w-6 text-gray-700" />
+            </button>
+
+            <div className="container mx-auto px-4 md:px-6 py-6 md:py-8">
+              {/* Centered Search Box */}
+              <div className="max-w-2xl mx-auto mb-6 md:mb-8 mt-12 lg:mt-0">
+                <div className="relative">
+                  <Search className="absolute left-3 md:left-4 top-1/2 -translate-y-1/2 h-4 md:h-5 w-4 md:w-5 text-gray-500 pointer-events-none" />
+                  <Input
+                    type="search"
+                    placeholder="Rechercher sur Bricareau.com"
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    className="w-full h-11 md:h-12 pl-10 md:pl-12 pr-4 text-sm md:text-base border-gray-300 rounded-full focus-visible:ring-2 focus-visible:ring-[#0052ff] focus-visible:border-[#0052ff] shadow-sm [&::-webkit-search-cancel-button]:hidden [&::-webkit-search-decoration]:hidden"
+                    autoFocus
+                  />
+                </div>
+              </div>
+
+              {/* Popular Search Terms */}
+              <div className="max-w-2xl mx-auto">
+                <h4 className="text-sm font-semibold text-gray-900 mb-3">Recherches populaires</h4>
+                <div className="flex flex-wrap gap-2">
+                  {[
+                    "adoucisseur d'eau",
+                    "filtration",
+                    "eau de puits",
+                    "fontaines",
+                    "osmose inverse",
+                    "conditionneurs sans sel",
+                    "analyse d'eau",
+                    "service"
+                  ].map((term, index) => (
+                    <button
+                      key={index}
+                      onClick={() => handlePopularSearchClick(term)}
+                      className="px-3 md:px-4 py-1.5 md:py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 text-xs md:text-sm rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-[#0052ff] focus:ring-offset-2"
+                      tabIndex={0}
+                    >
+                      {term}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </>
+      )}
 
       {/* Megamenus */}
       {productMenuItems.map((menuItem) => (
