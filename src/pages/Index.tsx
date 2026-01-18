@@ -3,8 +3,9 @@ import Hero from "@/components/Hero";
 import ProductShowcase from "@/components/ProductShowcase";
 import IdealCulliganCTA from "@/components/IdealCulliganCTA";
 import BetterWaterStats from "@/components/BetterWaterStats";
-import QualityService from "@/components/QualityService";
 import DiscoverExpert from "@/components/DiscoverExpert";
+import Testimonials from "@/components/Testimonials";
+import MarketExploration from "@/components/MarketExploration";
 import EverythingYouNeed from "@/components/EverythingYouNeed";
 import NewEraStats from "@/components/NewEraStats";
 import FinalCTA from "@/components/FinalCTA";
@@ -19,8 +20,9 @@ const Index = () => {
         <ProductShowcase />
         <IdealCulliganCTA />
         <BetterWaterStats />
-        <QualityService />
         <DiscoverExpert />
+        <Testimonials />
+        <MarketExploration />
         <EverythingYouNeed />
         <NewEraStats />
         <FinalCTA />

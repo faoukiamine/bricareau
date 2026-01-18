@@ -1,42 +1,49 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight } from "lucide-react";
 
+import adoucisseursImg from "@/assets/Adoucisseurs d'eau.webp";
+import solutionsPotableImg from "@/assets/Solutions d'eau potable.webp";
+import filtresSpecialisesImg from "@/assets/Filtres d'eau spécialisés.webp";
+import fontainesImg from "@/assets/Fontaines d'eau.webp";
+import filtrationPuitsImg from "@/assets/Filtration-eau-de-puits.webp";
+import uvImg from "@/assets/Systèmes de désinfection UV.webp";
+
 const products = [
     {
         name: "Adoucisseurs d'eau",
-        description: "Réduisez l'accumulation sur les éviers et les douches",
-        image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=600&auto=format&fit=crop",
+        description: "Réduisez l'accumulation sur les éviers et les douches.",
+        image: adoucisseursImg,
         link: "/adoucisseurs"
     },
     {
-        name: "Filtres de douche",
-        description: "Profitez de cheveux et d'une peau plus doux",
-        image: "https://images.unsplash.com/photo-1620626011761-996317b8d101?q=80&w=600&auto=format&fit=crop",
-        link: "/services#filtration"
+        name: "Solutions d'eau potable",
+        description: "Profitez d'une eau pure et saine directement au robinet.",
+        image: solutionsPotableImg,
+        link: "/filtration"
     },
     {
-        name: "Filtration maison complète",
-        description: "Filtrez l'eau dans toute votre maison",
-        image: "https://images.unsplash.com/photo-1585421514738-01798e348b17?q=80&w=600&auto=format&fit=crop",
-        link: "/services#filtration"
+        name: "Filtres d'eau spécialisés",
+        description: "Solutions ciblées pour des besoins de filtration spécifiques.",
+        image: filtresSpecialisesImg,
+        link: "/filtration"
     },
     {
-        name: "Livraison de sel",
-        description: "Livraisons régulières selon votre horaire",
-        image: "https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?q=80&w=600&auto=format&fit=crop",
-        link: "/services#accessoires"
+        name: "Fontaines d'eau",
+        description: "Eau fraîche et filtrée pour le bureau ou la maison.",
+        image: fontainesImg,
+        link: "/fontaines"
     },
     {
-        name: "Échange portable",
-        description: "Eau douce pour propriétés saisonnières",
-        image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=600&auto=format&fit=crop",
-        link: "/services#adoucissement"
+        name: "Filtration eau de puits",
+        description: "Traitement complet pour une eau de puits sûre.",
+        image: filtrationPuitsImg,
+        link: "/eau-de-puits"
     },
     {
-        name: "Conditionneurs sans sel",
-        description: "Réduisez l'accumulation sans gaspillage d'eau",
-        image: "https://images.unsplash.com/photo-1563207153-f403bf289096?q=80&w=600&auto=format&fit=crop",
-        link: "/conditionneurs-sans-sel"
+        name: "Systèmes de désinfection UV",
+        description: "Éliminez les bactéries et virus sans produits chimiques.",
+        image: uvImg,
+        link: "/eau-de-puits/uv"
     }
 ];
 
@@ -47,7 +54,7 @@ const ProductShowcase = () => {
                 {/* Section header */}
                 <div className="text-center mb-12 md:mb-16">
                     <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-                        L'adoucissement d'eau est un incontournable de la maison
+                        Nos solutions de traitement d'eau résidentielles
                     </h2>
                 </div>
 
@@ -59,11 +66,11 @@ const ProductShowcase = () => {
                             className="group overflow-hidden border-border hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
                         >
                             {/* Product image */}
-                            <div className="relative h-64 overflow-hidden bg-slate-100">
+                            <div className="relative h-80 overflow-hidden bg-white p-6">
                                 <img
                                     src={product.image}
                                     alt={product.name}
-                                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                                 />
                             </div>
 
