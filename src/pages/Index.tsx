@@ -6,9 +6,6 @@ import BetterWaterStats from "@/components/BetterWaterStats";
 import DiscoverExpert from "@/components/DiscoverExpert";
 import Testimonials from "@/components/Testimonials";
 import MarketExploration from "@/components/MarketExploration";
-import EverythingYouNeed from "@/components/EverythingYouNeed";
-import NewEraStats from "@/components/NewEraStats";
-import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -23,9 +20,6 @@ const Index = () => {
         <DiscoverExpert />
         <Testimonials />
         <MarketExploration />
-        <EverythingYouNeed />
-        <NewEraStats />
-        <FinalCTA />
       </main>
       <Footer />
     </div>

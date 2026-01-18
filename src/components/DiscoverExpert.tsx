@@ -4,7 +4,7 @@ import guideExpertImg from "@/assets/guide-expert-traitement-eau.webp";
 
 const DiscoverExpert = () => {
     return (
-        <section className="py-16 md:py-20 lg:py-24 bg-white">
+        <section className="py-16 md:py-18 lg:py-24 bg-white">
             <div className="container mx-auto px-4">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     {/* Left side - Content */}
