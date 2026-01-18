@@ -23,15 +23,30 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative w-full min-h-[600px] lg:min-h-[700px] flex items-center overflow-hidden">
+    <section className="relative w-full min-h-[600px] lg:h-screen flex items-center overflow-hidden">
       {/* Background image with overlay */}
-      <div className="absolute inset-0 z-0">
-        <img
-          src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?q=80&w=2069&auto=format&fit=crop"
-          alt="Water specialist"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-transparent" />
+      {/* Background video with overlay */}
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        <iframe
+          src="https://player.vimeo.com/video/1155585523?background=1&autoplay=1&loop=1&byline=0&title=0"
+          style={{
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            width: '105vw',
+            height: '105vh',
+            minHeight: '56.25vw',
+            minWidth: '177.77vh',
+            transform: 'translate(-50%, -50%)',
+            objectFit: 'cover'
+          }}
+          frameBorder="0"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowFullScreen
+          title="Hero Video"
+          className="pointer-events-none"
+        ></iframe>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-transparent z-10" />
       </div>
 
       {/* Content */}
@@ -60,69 +75,6 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Right side - Booking form card */}
-          <div className="lg:ml-auto w-full max-w-md">
-            <Card className="shadow-2xl border-none">
-              <CardHeader className="pb-4">
-                <CardTitle className="text-2xl font-bold text-center">
-                  Réservez votre test d'eau gratuit
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                {/* Location input */}
-                <div className="space-y-2">
-                  <label className="text-sm font-medium text-foreground">
-                    Votre localisation
-                  </label>
-                  <div className="relative">
-                    <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
-                    <Input
-                      type="text"
-                      placeholder="Entrez votre code postal"
-                      value={location}
-                      onChange={(e) => setLocation(e.target.value)}
-                      className="pl-10 pr-24 h-12 text-base"
-                    />
-                    <Button
-                      type="button"
-                      variant="link"
-                      size="sm"
-                      onClick={handleGetLocation}
-                      className="absolute right-2 top-1/2 -translate-y-1/2 text-[#2563EB] hover:text-[#2563EB]/80 font-medium"
-                    >
-                      Utiliser ma position
-                    </Button>
-                  </div>
-                </div>
-
-                {/* Date picker */}
-                <div className="space-y-2">
-                  <label className="text-sm font-medium text-foreground">
-                    Date et heure préférées
-                  </label>
-                  <div className="relative">
-                    <Calendar className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
-                    <Input
-                      type="datetime-local"
-                      className="pl-10 h-12 text-base"
-                    />
-                  </div>
-                </div>
-
-                {/* Submit button */}
-                <Button
-                  size="lg"
-                  className="w-full bg-[#2563EB] hover:bg-[#2563EB]/90 text-white font-semibold h-12 text-base"
-                >
-                  Planifiez mon test d'eau gratuit
-                </Button>
-
-                <p className="text-xs text-center text-muted-foreground">
-                  Aucune obligation • Consultation gratuite • Service rapide
-                </p>
-              </CardContent>
-            </Card>
-          </div>
         </div>
       </div>
     </section>

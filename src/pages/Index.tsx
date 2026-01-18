@@ -1,6 +1,5 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import GrabYourLook from "@/components/GrabYourLook";
 import ProductShowcase from "@/components/ProductShowcase";
 import IdealCulliganCTA from "@/components/IdealCulliganCTA";
 import BetterWaterStats from "@/components/BetterWaterStats";
@@ -17,7 +16,6 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
-        <GrabYourLook />
         <ProductShowcase />
         <IdealCulliganCTA />
         <BetterWaterStats />

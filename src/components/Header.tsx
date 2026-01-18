@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { Menu, X, Phone, MapPin, Droplets, Filter, GlassWater, Waves, Search, ChevronDown, Mail, Tag } from "lucide-react";
+import { Menu, X, Phone, MapPin, Droplets, Filter, GlassWater, Waves, Search, ChevronDown, Mail, Tag, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { NavLink, useLocation } from "react-router-dom";
@@ -17,6 +17,7 @@ const Header = () => {
   const searchInputRef = useRef<HTMLInputElement>(null);
   const mobileSearchButtonRef = useRef<HTMLButtonElement>(null);
   const location = useLocation();
+  const closeTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   // Close menus on outside click
   useEffect(() => {
@@ -277,16 +278,26 @@ const Header = () => {
     },
   ];
 
-  const handleDropdownToggle = (itemName: string) => {
-    setActiveDropdown(activeDropdown === itemName ? null : itemName);
-    setActiveMegamenu(null);
-  };
-
-  const handleMegamenuToggle = (itemName: string) => {
-    setActiveMegamenu(activeMegamenu === itemName ? null : itemName);
+  const handleMenuEnter = (itemName: string) => {
+    if (closeTimeoutRef.current) {
+      clearTimeout(closeTimeoutRef.current);
+      closeTimeoutRef.current = null;
+    }
+    setActiveMegamenu(itemName);
     setActiveDropdown(null);
     setIsSearchFocused(false);
     setIsSearchClosing(false);
+  };
+
+  const handleMenuLeave = () => {
+    closeTimeoutRef.current = setTimeout(() => {
+      setActiveMegamenu(null);
+    }, 150);
+  };
+
+  const handleDropdownToggle = (itemName: string) => {
+    setActiveDropdown(activeDropdown === itemName ? null : itemName);
+    setActiveMegamenu(null);
   };
 
   const handleSearchClose = () => {
@@ -302,6 +313,17 @@ const Header = () => {
 
   return (
     <header className="sticky top-0 z-50 w-full bg-white font-sans" ref={dropdownRef}>
+
+      {/* Top Information Bar */}
+      <a
+        href="/consultation"
+        className="block w-full bg-[hsl(var(--top-banner))] text-white hover:bg-[hsl(var(--top-banner))]/90 transition-colors text-center py-2"
+      >
+        <div className="container mx-auto px-6 flex items-center justify-center gap-2">
+          <span className="text-sm font-bold">Get Started with a Water Consultation</span>
+          <ArrowRight className="h-4 w-4" />
+        </div>
+      </a>
 
       {/* Upper Navigation Bar - Primary Menu + Utilities */}
       <div className="border-b border-gray-200 bg-white">
@@ -357,7 +379,7 @@ const Header = () => {
 
               {/* Localisation */}
               <a
-                href="https://www.google.com/maps/place//@45.5005535,-73.6423534,211m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D"
+                href="https://maps.app.goo.gl/ewNmyCJ2QVgSkAMw8"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-gray-700 hover:text-[#0052ff] transition-colors group"
@@ -428,8 +450,8 @@ const Header = () => {
               {productMenuItems.map((item) => (
                 <div key={item.name} className="relative">
                   <button
-                    onMouseEnter={() => item.hasMegamenu ? handleMegamenuToggle(item.name) : null}
-                    onMouseLeave={() => item.hasMegamenu ? setActiveMegamenu(null) : null}
+                    onMouseEnter={() => item.hasMegamenu ? handleMenuEnter(item.name) : null}
+                    onMouseLeave={() => item.hasMegamenu ? handleMenuLeave() : null}
                     onClick={() => !item.hasMegamenu && (window.location.href = item.href)}
                     className={cn(
                       "text-sm font-semibold transition-colors relative h-16 flex items-center",
@@ -539,7 +561,8 @@ const Header = () => {
           <div
             key={menuItem.name}
             className="absolute top-full left-0 w-full bg-white border-t border-gray-100 shadow-lg z-40"
-            onMouseLeave={() => setActiveMegamenu(null)}
+            onMouseEnter={() => handleMenuEnter(menuItem.name)}
+            onMouseLeave={() => handleMenuLeave()}
           >
             <div className="container mx-auto px-6 py-10">
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
