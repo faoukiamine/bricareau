@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { Menu, X, Phone, MapPin, Droplets, Filter, GlassWater, Waves, Search, ChevronDown, Mail, Tag, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { cn } from "@/lib/utils";
 
 const Header = () => {
@@ -17,6 +17,7 @@ const Header = () => {
   const searchInputRef = useRef<HTMLInputElement>(null);
   const mobileSearchButtonRef = useRef<HTMLButtonElement>(null);
   const location = useLocation();
+  const navigate = useNavigate();
   const closeTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   // Close menus on outside click
@@ -452,7 +453,14 @@ const Header = () => {
                   <button
                     onMouseEnter={() => item.hasMegamenu ? handleMenuEnter(item.name) : null}
                     onMouseLeave={() => item.hasMegamenu ? handleMenuLeave() : null}
-                    onClick={() => !item.hasMegamenu && (window.location.href = item.href)}
+                    onClick={() => {
+                      if (!item.hasMegamenu) {
+                        navigate(item.href);
+                      } else {
+                        // Even if it has a megamenu, we want the parent click to navigate
+                        navigate(item.href);
+                      }
+                    }}
                     className={cn(
                       "text-sm font-semibold transition-colors relative h-16 flex items-center",
                       "hover:text-[#0052ff]",
@@ -650,18 +658,31 @@ const Header = () => {
                   <div key={item.name} className="border-b border-gray-200">
                     {item.hasMegamenu ? (
                       <div>
-                        <button
-                          onClick={() => handleDropdownToggle(`mobile-${item.name}`)}
-                          className="flex items-center justify-between w-full px-4 py-4 text-left"
-                        >
-                          <span className="text-base font-semibold text-gray-900">{item.name}</span>
-                          <ChevronDown
-                            className={cn(
-                              "h-5 w-5 text-gray-500 transition-transform",
-                              activeDropdown === `mobile-${item.name}` && "rotate-180"
-                            )}
-                          />
-                        </button>
+                        <div className="flex items-center justify-between w-full">
+                          <NavLink
+                            to={item.href}
+                            className="flex-1 px-4 py-4 text-left text-base font-semibold text-gray-900"
+                            onClick={() => setIsMenuOpen(false)}
+                          >
+                            {item.name}
+                          </NavLink>
+                          <button
+                            onClick={(e) => {
+                              e.preventDefault();
+                              e.stopPropagation();
+                              handleDropdownToggle(`mobile-${item.name}`);
+                            }}
+                            className="p-4 focus:outline-none"
+                            aria-label="Toggle dropdown"
+                          >
+                            <ChevronDown
+                              className={cn(
+                                "h-5 w-5 text-gray-500 transition-transform",
+                                activeDropdown === `mobile-${item.name}` && "rotate-180"
+                              )}
+                            />
+                          </button>
+                        </div>
                         {activeDropdown === `mobile-${item.name}` && item.megamenuCards && (
                           <div className="bg-gray-50 px-4 pb-4">
                             {item.megamenuCards.map((card, idx) => (

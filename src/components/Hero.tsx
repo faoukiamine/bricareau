@@ -1,51 +1,22 @@
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { MapPin, Calendar } from "lucide-react";
-import { useState } from "react";
+import heroVideo from "../assets/hero-uhd_3840_2160_30fps.mp4";
 
 const Hero = () => {
-  const [location, setLocation] = useState("");
-
-  const handleGetLocation = () => {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-        (position) => {
-          // In a real app, you'd reverse geocode these coordinates
-          setLocation(`${position.coords.latitude.toFixed(2)}, ${position.coords.longitude.toFixed(2)}`);
-        },
-        (error) => {
-          console.error("Error getting location:", error);
-          setLocation("Location access denied");
-        }
-      );
-    }
-  };
 
   return (
     <section className="relative w-full min-h-[600px] lg:h-screen flex items-center overflow-hidden">
       {/* Background image with overlay */}
       {/* Background video with overlay */}
       <div className="absolute inset-0 z-0 overflow-hidden">
-        <iframe
-          src="https://player.vimeo.com/video/1155585523?background=1&autoplay=1&loop=1&byline=0&title=0"
-          style={{
-            position: 'absolute',
-            top: '50%',
-            left: '50%',
-            width: '105vw',
-            height: '105vh',
-            minHeight: '56.25vw',
-            minWidth: '177.77vh',
-            transform: 'translate(-50%, -50%)',
-            objectFit: 'cover'
-          }}
-          frameBorder="0"
-          allow="autoplay; fullscreen; picture-in-picture"
-          allowFullScreen
-          title="Hero Video"
-          className="pointer-events-none"
-        ></iframe>
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute top-1/2 left-[51%] min-w-[105%] min-h-[105%] object-[25%_center] md:object-center object-cover -translate-x-1/2 -translate-y-1/2"
+        >
+          <source src={heroVideo} type="video/mp4" />
+        </video>
         <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-transparent z-10" />
       </div>
 
