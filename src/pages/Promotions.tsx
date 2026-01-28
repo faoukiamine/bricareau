@@ -194,7 +194,7 @@ const Promotions = () => {
                                 <Button
                                     size="lg"
                                     variant="outline"
-                                    className="border-white text-white hover:bg-white/10 rounded-full px-8"
+                                    className="border-white text-white bg-transparent hover:bg-white/10 rounded-full px-8"
                                     asChild
                                 >
                                     <a href="tel:18552649328">Appelez le 1-855-264-9328</a>

@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import guideExpertImg from "@/assets/guide-expert-traitement-eau.webp";
+import guideExpertImg from "@/assets/discover_expert.jpg";
 
 const DiscoverExpert = () => {
     return (
@@ -49,7 +49,7 @@ const DiscoverExpert = () => {
                     <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                         <img
                             src={guideExpertImg}
-                            alt="Personne profitant d'un bain relaxant"
+                            alt="Femme profitant d'un bain moussant relaxant"
                             className="w-full h-[500px] object-cover"
                         />
                     </div>

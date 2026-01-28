@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { Menu, X, Phone, MapPin, Droplets, Filter, GlassWater, Waves, Search, ChevronDown, Mail, Tag, ArrowRight } from "lucide-react";
+import { Menu, X, Phone, MapPin, Droplets, Filter, GlassWater, Waves, Search, ChevronDown, Mail, Tag, ArrowRight, CupSoda, Caravan, Sprout, Leaf, House, Snowflake } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
@@ -69,27 +69,29 @@ const Header = () => {
         {
           icon: Droplets,
           title: "Adoucisseurs d'eau",
-          description: "Réduisez l'accumulation sur les éviers et les douches, et profitez de cheveux et d'une peau plus doux.",
+          description: "Traitez le problème de l’eau dure, un problème courant pour les propriétaires de puits et obtenez l’eau la plus douce que vous méritez.",
           href: "/adoucisseurs"
         },
         {
-          icon: Filter,
-          title: "Échange portable",
-          description: "Profitez d'eau douce dans les propriétés saisonnières et les zones à restriction de saumure.",
-          href: "/services"
+          icon: Leaf,
+          title: "Conditionneurs d'eau sans sel",
+          description: "Réduisez l'accumulation sans gaspillage d'eau, parfait pour les zones à restriction de saumure.",
+          href: "/conditionneurs-sans-sel"
         },
         {
-          icon: Waves,
+          icon: Caravan,
+          title: "Adoucisseurs d'eau Mobiles",
+          description: "Traitez le problème de l’eau dure, un problème courant pour les propriétaires de puits et obtenez l’eau la plus douce que vous méritez.",
+          href: "/services"
+        },
+
+        {
+          icon: House,
           title: "Livraison de sel",
           description: "Obtenez des livraisons régulières de sel qui correspondent à votre horaire pour des recharges sans tracas.",
           href: "/pieces"
         },
-        {
-          icon: GlassWater,
-          title: "Conditionneurs sans sel",
-          description: "Réduisez l'accumulation sans gaspillage d'eau, parfait pour les zones à restriction de saumure.",
-          href: "/conditionneurs-sans-sel"
-        },
+
       ],
       promo: {
         title: "Trouvez la bonne solution pour votre maison",
@@ -103,28 +105,28 @@ const Header = () => {
       hasMegamenu: true,
       megamenuCards: [
         {
-          icon: Filter,
-          title: "Filtres à eau potable",
-          description: "Profitez d'une eau pure et saine directement de votre robinet avec nos systèmes de filtration avancés.",
-          href: "/filtration"
-        },
-        {
-          icon: Droplets,
-          title: "Systèmes sous évier",
-          description: "Solutions compactes et efficaces pour une filtration optimale directement sous votre évier.",
-          href: "/filtration/sous-evier"
-        },
-        {
           icon: GlassWater,
-          title: "Filtres pour toute la maison",
+          title: "Filtres d'eau pour toute la maison",
           description: "Protection complète de votre maison avec une filtration centralisée pour toute l'eau.",
           href: "/filtration/maison-complete"
         },
         {
+          icon: Filter,
+          title: "Stations d'eau potable",
+          description: "Profitez d'une eau pure et saine directement de votre robinet avec nos systèmes de filtration avancés.",
+          href: "/filtration/stations-eau-potable"
+        },
+        {
+          icon: Droplets,
+          title: "Systèmes de filtration d'eau sous-évier",
+          description: "Solutions compactes et efficaces pour une filtration optimale directement sous votre évier.",
+          href: "/filtration/sous-evier"
+        },
+        {
           icon: Waves,
-          title: "Cartouches de remplacement",
+          title: "Cartouches filtrantes de remplacement",
           description: "Maintenez la performance optimale de vos systèmes avec nos cartouches de qualité.",
-          href: "/filtration/cartouches"
+          href: "/filtration/cartouches-filtrantes"
         },
       ],
       promo: {
@@ -134,34 +136,35 @@ const Header = () => {
       }
     },
     {
-      name: "Fontaines à glace et eau",
+      name: "Fontaines d'eau & Machines à glace",
       href: "/fontaines",
       hasMegamenu: true,
       megamenuCards: [
+      {
+          icon: Waves,
+          title: "Distributeurs d'eau de comptoir",
+          description: "Solutions tout-en-un offrant eau froide, chaude et glace dans un seul appareil.",
+          href: "/distributeurs-eau-comptoir"
+        },
         {
           icon: GlassWater,
-          title: "Fontaines d'eau froide",
+          title: "Refroidisseurs d'eau sans bouteille",
           description: "Eau fraîche et filtrée à la demande pour votre bureau ou votre maison.",
-          href: "/fontaines/eau-froide"
+          href: "/refroidisseurs"
         },
         {
-          icon: Droplets,
-          title: "Distributeurs de glace",
-          description: "Glace propre et abondante pour toutes vos occasions et besoins quotidiens.",
-          href: "/fontaines/glace"
-        },
-        {
-          icon: Waves,
-          title: "Fontaines combinées",
+          icon: CupSoda,
+          title: "Distributeurs d'eau gazeuse",
           description: "Solutions tout-en-un offrant eau froide, chaude et glace dans un seul appareil.",
-          href: "/fontaines/combinees"
+          href: "/distributeurs-eau-gazeuse"
         },
         {
-          icon: Filter,
-          title: "Entretien et service",
-          description: "Service professionnel pour maintenir vos fontaines en parfait état de fonctionnement.",
-          href: "/fontaines/entretien"
+          icon: Snowflake,
+          title: "Machines à glaçons",
+          description: "Glace propre et abondante pour toutes vos occasions et besoins quotidiens.",
+          href: "/machines-a-glace"
         },
+        
       ],
       promo: {
         title: "Solutions hydratation pour entreprises",
@@ -178,24 +181,26 @@ const Header = () => {
           icon: Droplets,
           title: "Analyse de l'eau",
           description: "Tests complets pour identifier les contaminants et problèmes de qualité de votre eau de puits.",
-          href: "/eau-de-puits/analyse"
+          href: "/water-testing"
         },
         {
           icon: Filter,
-          title: "Systèmes de traitement",
-          description: "Solutions personnalisées pour traiter les problèmes spécifiques de votre eau de puits.",
+          title: "Systèmes de filtration d'eau spécialisés",
+          description: "Nos systèmes de filtration d’eau spécialisés pour toute la maison est la solution abordable et durable pour obtenir une eau de meilleure qualité à chaque robinet de votre maison.",
           href: "/eau-de-puits/traitement"
         },
         {
-          icon: Waves,
-          title: "Pompes et réservoirs",
-          description: "Équipement fiable pour l'extraction et le stockage de votre eau de puits.",
-          href: "/eau-de-puits/pompes"
+          icon: Filter,
+          title: "Adoucisseurs d'eau",
+          description: "Dites adieu aux problèmes de calcaire ! Nos adoucisseurs d’eau traitent durablement l’eau contre ses méfaits pour vous faire bénéficier d’une eau douce toute l’année.",
+          href: "/eau-de-puits/adoucisseurs"
         },
         {
           icon: GlassWater,
-          title: "Désinfection UV",
-          description: "Éliminez les bactéries et virus avec nos systèmes de désinfection ultraviolette.",
+          title: "Systèmes de désinfection UV",
+          description: "Les systèmes de désinfection de l’eau à rayons ultraviolet stérilisent l’approvisionnement en eau de votre maison contre les micro-organismes nuisibles, les bactéries, les moisissures et les virus.",
+
+
           href: "/eau-de-puits/uv"
         },
       ],

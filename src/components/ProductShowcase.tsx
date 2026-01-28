@@ -11,37 +11,37 @@ import uvImg from "@/assets/Systèmes de désinfection UV.webp";
 const products = [
     {
         name: "Adoucisseurs d'eau",
-        description: "Réduisez l'accumulation sur les éviers et les douches.",
+        description: "Notre adoucisseur d'eau offrira à votre famille une grande quantité d'eau propre et douce à volonté.",
         image: adoucisseursImg,
         link: "/adoucisseurs"
     },
     {
         name: "Solutions d'eau potable",
-        description: "Profitez d'une eau pure et saine directement au robinet.",
+        description: "Profitez d'une eau plus propre avec notre système de purification d'eau à osmose inverse à 6 étapes.",
         image: solutionsPotableImg,
         link: "/filtration"
     },
     {
         name: "Filtres d'eau spécialisés",
-        description: "Solutions ciblées pour des besoins de filtration spécifiques.",
+        description: "Nos filtres sont brillamment conçus pour résoudre vos problèmes spécifiques en matière d'eau.",
         image: filtresSpecialisesImg,
         link: "/filtration"
     },
     {
         name: "Fontaines d'eau",
-        description: "Eau fraîche et filtrée pour le bureau ou la maison.",
+        description: "Pratiques et économiques afin que vous puissiez profiter d’une eau fraîche au meilleur goût.",
         image: fontainesImg,
         link: "/fontaines"
     },
     {
         name: "Filtration eau de puits",
-        description: "Traitement complet pour une eau de puits sûre.",
+        description: "Nos systèmes de filtration aident à fournir une eau de qualité en provenance d'un puits artésien ou de surface.",
         image: filtrationPuitsImg,
         link: "/eau-de-puits"
     },
     {
         name: "Systèmes de désinfection UV",
-        description: "Éliminez les bactéries et virus sans produits chimiques.",
+        description: "Utilisés pour la stérilisation contre les bactéries, les virus, les coliformes, l'E.Coli, le Cryptosporidium,...",
         image: uvImg,
         link: "/eau-de-puits/uv"
     }
@@ -54,7 +54,7 @@ const ProductShowcase = () => {
                 {/* Section header */}
                 <div className="text-center mb-12 md:mb-16">
                     <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-                        Nos solutions de traitement d'eau résidentielles
+                        Solutions d'adoucissement et de filtration de l'eau
                     </h2>
                 </div>
 

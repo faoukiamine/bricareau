@@ -85,8 +85,8 @@ const EauDePuits = () => {
                   <span className="text-primary">de puits</span>
                 </h1>
                 <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                  Propriétaire d'un puits privé ? Nous comprenons les défis uniques que pose l'eau souterraine. 
-                  Du fer au soufre, en passant par les bactéries et les sédiments, nous avons les solutions 
+                  Propriétaire d'un puits privé ? Nous comprenons les défis uniques que pose l'eau souterraine.
+                  Du fer au soufre, en passant par les bactéries et les sédiments, nous avons les solutions
                   pour vous offrir une eau saine et de qualité.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
@@ -122,7 +122,7 @@ const EauDePuits = () => {
                 Problèmes courants de l'eau de puits
               </h2>
               <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                Chaque puits est unique. Voici les contaminants les plus fréquemment rencontrés 
+                Chaque puits est unique. Voici les contaminants les plus fréquemment rencontrés
                 et nos solutions pour les traiter.
               </p>
             </div>
@@ -159,7 +159,7 @@ const EauDePuits = () => {
                 Notre processus en 4 étapes
               </h2>
               <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                De l'analyse à l'installation, nous vous accompagnons à chaque étape 
+                De l'analyse à l'installation, nous vous accompagnons à chaque étape
                 pour garantir une eau de qualité.
               </p>
             </div>
@@ -197,9 +197,9 @@ const EauDePuits = () => {
                 />
                 <div>
                   <p className="text-lg text-foreground italic mb-4">
-                    "Très satisfait du service de Bricareau Water Specialist. Toute la famille est contente, 
-                    le système de filtration d'eau installé nous a procuré une bonne eau claire transparente 
-                    sans l'odeur des œufs pourris. Je vous recommande les produits et le service de Bricareau 
+                    "Très satisfait du service de Bricareau Water Specialist. Toute la famille est contente,
+                    le système de filtration d'eau installé nous a procuré une bonne eau claire transparente
+                    sans l'odeur des œufs pourris. Je vous recommande les produits et le service de Bricareau
                     si vous souhaitez avoir la tranquillité d'esprit, le bon service et la meilleure qualité d'eau."
                   </p>
                   <p className="font-semibold text-foreground">Christian Lareau</p>
@@ -248,7 +248,7 @@ const EauDePuits = () => {
                   Vous avez un puits ?
                 </h3>
                 <p className="text-white/80 mb-6">
-                  Faites analyser votre eau gratuitement par nos experts. 
+                  Faites analyser votre eau gratuitement par nos experts.
                   Nous vous proposerons la solution la plus adaptée à votre situation.
                 </p>
                 <Button
@@ -273,7 +273,7 @@ const EauDePuits = () => {
               Besoin d'aide avec votre eau de puits ?
             </h2>
             <p className="text-primary-foreground/80 text-lg mb-8 max-w-2xl mx-auto">
-              Nos spécialistes de l'eau de puits sont là pour vous aider à résoudre 
+              Nos spécialistes de l'eau de puits sont là pour vous aider à résoudre
               tous vos problèmes de qualité d'eau.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -290,7 +290,7 @@ const EauDePuits = () => {
               <Button
                 size="lg"
                 variant="outline"
-                className="rounded-full px-8 border-white text-white hover:bg-white/10"
+                className="rounded-full px-8 border-white text-white bg-transparent hover:bg-white/10"
                 asChild
               >
                 <a href="tel:18552649328">

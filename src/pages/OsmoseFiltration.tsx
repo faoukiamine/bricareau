@@ -87,8 +87,8 @@ const OsmoseFiltration = () => {
                   <span className="text-primary">Filtration</span>
                 </h1>
                 <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                  Profitez d'une eau pure et délicieuse directement de votre robinet. 
-                  Nos systèmes d'osmose inverse et de filtration éliminent les contaminants, 
+                  Profitez d'une eau pure et délicieuse directement de votre robinet.
+                  Nos systèmes d'osmose inverse et de filtration éliminent les contaminants,
                   métaux lourds, chlore et autres impuretés pour une eau de qualité supérieure.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
@@ -124,7 +124,7 @@ const OsmoseFiltration = () => {
                 Qu'élimine l'osmose inverse ?
               </h2>
               <p className="text-muted-foreground text-lg">
-                L'osmose inverse est l'une des méthodes de filtration les plus efficaces, 
+                L'osmose inverse est l'une des méthodes de filtration les plus efficaces,
                 capable d'éliminer jusqu'à 99% des contaminants présents dans l'eau.
               </p>
             </div>
@@ -227,8 +227,8 @@ const OsmoseFiltration = () => {
                 />
                 <div>
                   <p className="text-lg text-foreground italic mb-4">
-                    "Excellent service! Ils m'ont installé un système d'osmose inverse depuis à peu près 2 ans. 
-                    J'ai testé mon eau et elle fonctionne toujours parfaitement. Ils l'ont également connecté 
+                    "Excellent service! Ils m'ont installé un système d'osmose inverse depuis à peu près 2 ans.
+                    J'ai testé mon eau et elle fonctionne toujours parfaitement. Ils l'ont également connecté
                     à mon réfrigérateur! Je ne peux pas vivre sans ça maintenant."
                   </p>
                   <p className="font-semibold text-foreground">Mariam Chejai</p>
@@ -252,7 +252,7 @@ const OsmoseFiltration = () => {
               Prêt à profiter d'une eau plus pure ?
             </h2>
             <p className="text-primary-foreground/80 text-lg mb-8 max-w-2xl mx-auto">
-              Contactez-nous pour une analyse gratuite de votre eau et découvrez 
+              Contactez-nous pour une analyse gratuite de votre eau et découvrez
               le système de filtration idéal pour votre maison.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -269,7 +269,7 @@ const OsmoseFiltration = () => {
               <Button
                 size="lg"
                 variant="outline"
-                className="rounded-full px-8 border-white text-white hover:bg-white/10"
+                className="rounded-full px-8 border-white text-white bg-transparent hover:bg-white/10"
                 asChild
               >
                 <a href="tel:18552649328">

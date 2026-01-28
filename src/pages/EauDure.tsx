@@ -105,8 +105,8 @@ const EauDure = () => {
                 <span className="text-primary">Comprendre le problème</span>
               </h1>
               <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                L'eau dure contient une concentration élevée de minéraux dissous, principalement 
-                du calcium et du magnésium. Découvrez ses effets sur votre maison, votre santé 
+                L'eau dure contient une concentration élevée de minéraux dissous, principalement
+                du calcium et du magnésium. Découvrez ses effets sur votre maison, votre santé
                 et vos équipements, ainsi que les solutions pour y remédier.
               </p>
               <Button size="lg" className="rounded-full px-8" asChild>
@@ -128,12 +128,12 @@ const EauDure = () => {
                   Qu'est-ce que l'eau dure ?
                 </h2>
                 <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-                  L'eau dure est une eau qui contient une quantité élevée de minéraux dissous, 
-                  principalement du calcium (Ca) et du magnésium (Mg). Ces minéraux sont naturellement 
+                  L'eau dure est une eau qui contient une quantité élevée de minéraux dissous,
+                  principalement du calcium (Ca) et du magnésium (Mg). Ces minéraux sont naturellement
                   présents dans le sol et se dissolvent dans l'eau souterraine.
                 </p>
                 <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-                  La dureté de l'eau se mesure en parties par million (ppm) ou en degrés français (°f). 
+                  La dureté de l'eau se mesure en parties par million (ppm) ou en degrés français (°f).
                   Une eau est considérée comme dure à partir de 15°f ou 150 ppm.
                 </p>
                 <div className="bg-amber-50 border border-amber-200 rounded-xl p-6">
@@ -142,7 +142,7 @@ const EauDure = () => {
                     Le saviez-vous ?
                   </h3>
                   <p className="text-muted-foreground">
-                    Au Canada, environ 80% des foyers ont une eau dure ou très dure, 
+                    Au Canada, environ 80% des foyers ont une eau dure ou très dure,
                     ce qui peut causer des problèmes significatifs à long terme.
                   </p>
                 </div>
@@ -275,7 +275,7 @@ const EauDure = () => {
               Vous êtes préoccupé par la qualité de votre eau ?
             </h2>
             <p className="text-primary-foreground/80 text-lg mb-8 max-w-2xl mx-auto">
-              Faites analyser votre eau gratuitement par nos experts et découvrez 
+              Faites analyser votre eau gratuitement par nos experts et découvrez
               la solution adaptée à vos besoins.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -292,7 +292,7 @@ const EauDure = () => {
               <Button
                 size="lg"
                 variant="outline"
-                className="rounded-full px-8 border-white text-white hover:bg-white/10"
+                className="rounded-full px-8 border-white text-white bg-transparent hover:bg-white/10"
                 asChild
               >
                 <a href="tel:18552649328">
