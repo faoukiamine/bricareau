@@ -63,7 +63,7 @@ const Header = () => {
   const productMenuItems = [
     {
       name: "Adoucissement d'eau",
-      href: "/adoucisseurs",
+      href: "/adoucisseur-eau-residentiel",
       hasMegamenu: true,
       megamenuCards: [
         {
