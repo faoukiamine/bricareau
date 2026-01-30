@@ -7,12 +7,6 @@ import { cn } from "@/lib/utils";
 
 const testimonials = [
     {
-        content: "Le système d'osmose inverse nous fournit l'eau au meilleur goût que nous ayons jamais bue. Plus besoin d'acheter d'eau en bouteille ! Cela nous permet de faire des économies et de préserver l'environnement.",
-        author: "David Thompson",
-        location: "Seattle, WA",
-        rating: 5
-    },
-    {
         content: "Bricareau avait le produit que nous cherchions et le service a été très rapide! Le technicien est très passionné par son travail et m'a fait part de son savoir et de conseils. Je suis très satisfaite du service et nous pouvons maintenant boire de l'eau en toute confiance",
         author: "Naomie Fontaine",
         location: "Montreal, QC",

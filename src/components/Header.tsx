@@ -80,9 +80,9 @@ const Header = () => {
         },
         {
           icon: Caravan,
-          title: "Adoucisseurs d'eau Mobiles",
+          title: "Adoucisseurs d'eau portables",
           description: "Traitez le problème de l’eau dure, un problème courant pour les propriétaires de puits et obtenez l’eau la plus douce que vous méritez.",
-          href: "/services"
+          href: "/Adoucisseurs-portables"
         },
 
         {
@@ -140,7 +140,7 @@ const Header = () => {
       href: "/fontaines",
       hasMegamenu: true,
       megamenuCards: [
-      {
+        {
           icon: Waves,
           title: "Distributeurs d'eau de comptoir",
           description: "Solutions tout-en-un offrant eau froide, chaude et glace dans un seul appareil.",
@@ -164,7 +164,7 @@ const Header = () => {
           description: "Glace propre et abondante pour toutes vos occasions et besoins quotidiens.",
           href: "/machines-a-glace"
         },
-        
+
       ],
       promo: {
         title: "Solutions hydratation pour entreprises",
