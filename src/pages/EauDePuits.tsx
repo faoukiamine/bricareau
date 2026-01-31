@@ -335,7 +335,7 @@ const EauDePuits = () => {
         <section className="bg-white py-24">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">Découvrez les produits associés</h2>
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">Découvrez nos solutions de traitement de l'eau de puits</h2>
               <p className="text-gray-500 text-lg max-w-2xl mx-auto">
                 Optimisez votre expérience de traitement d'eau avec nos solutions complémentaires.
               </p>
@@ -346,32 +346,38 @@ const EauDePuits = () => {
                 {
                   name: "Filtres d'eau spécialisés",
                   desc: "Élimine les particules et impuretés pour protéger votre système.",
-                  img: specializedFiltersImg
+                  img: specializedFiltersImg,
+                  link: "/specialises-filtration-eau"
                 },
                 {
                   name: "Adoucisseurs d'eau",
                   desc: "Pour une eau de boisson d'une pureté exceptionnelle directement au robinet.",
-                  img: waterSoftenerImg
+                  img: waterSoftenerImg,
+                  link: "/adoucisseur-eau-residentiel"
                 },
                 {
                   name: "Stations d'eau potable",
                   desc: "Élimine 99.9% des bactéries et virus pour une sécurité totale.",
-                  img: drinkingWaterImg
+                  img: drinkingWaterImg,
+                  link: "/osmose-filtration"
                 },
                 {
                   name: "Systèmes de stérilisation UV",
                   desc: "Élimine 99.9% des bactéries et virus pour une sécurité totale.",
-                  img: uvSystemImg
+                  img: uvSystemImg,
+                  link: "#"
                 }
               ].map((prod, i) => (
                 <div key={i} className="group cursor-pointer">
-                  <div className="bg-gray-100 aspect-square rounded-xl mb-6 overflow-hidden flex items-center justify-center">
-                    <img src={prod.img} alt={prod.name} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
-                  </div>
-                  <h3 className="text-2xl font-bold mb-2 text-gray-900">{prod.name}</h3>
-                  <p className="text-gray-600 mb-4">{prod.desc}</p>
-                  <NavLink to="#" className="text-[#0066FF] font-bold flex items-center gap-2 group-hover:translate-x-1 transition-all">
-                    En savoir plus <ChevronRight className="h-4 w-4" />
+                  <NavLink to={prod.link}>
+                    <div className="bg-gray-100 aspect-square rounded-xl mb-6 overflow-hidden flex items-center justify-center">
+                      <img src={prod.img} alt={prod.name} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                    </div>
+                    <h3 className="text-2xl font-bold mb-2 text-gray-900">{prod.name}</h3>
+                    <p className="text-gray-600 mb-4">{prod.desc}</p>
+                    <div className="text-[#0066FF] font-bold flex items-center gap-2 group-hover:translate-x-1 transition-all">
+                      En savoir plus <ChevronRight className="h-4 w-4" />
+                    </div>
                   </NavLink>
                 </div>
               ))}
@@ -452,7 +458,7 @@ const EauDePuits = () => {
                 asChild
               >
                 <NavLink to="/contact-residentiel">
-                  Demander un devis gratuit
+                  Demandez une soumission
                 </NavLink>
               </Button>
               <Button
@@ -513,7 +519,7 @@ const EauDePuits = () => {
         <section className="py-24 bg-gray-50">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold mb-16 underline decoration-blue-600 underline-offset-8">
-              Ressources et informations
+              Ressources
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
