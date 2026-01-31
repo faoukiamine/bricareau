@@ -385,7 +385,7 @@ const Header = () => {
 
               {/* Localisation */}
               <a
-                href="https://maps.app.goo.gl/ewNmyCJ2QVgSkAMw8"
+                href="https://www.google.com/maps/place/BRICAREAU+WATER+SPECIALIST/@45.5005535,-73.6423534,211m/data=!3m2!1e3!5s0x4cc919c4436a5a3f:0x5bb245a9935b5ece!4m6!3m5!1s0x4cc9229b28364297:0xd763dce82ea51a5f!8m2!3d45.5005535!4d-73.6423534!16s%2Fg%2F1pv5wd45p?entry=tts&g_ep=EgoyMDI2MDExMy4wIPu8ASoASAFQAw%3D%3D&skid=dc936ed0-8357-4347-8629-14786f46d771"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-gray-700 hover:text-[#0052ff] transition-colors group"

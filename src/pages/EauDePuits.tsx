@@ -4,9 +4,19 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Droplets, Check, ChevronRight } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import heroPuits from "@/assets/blog-10-copyright.jpg";
+import uvSystemImg from "@/assets/Systèmes de désinfection UV.webp";
+import waterSoftenerImg from "@/assets/Adoucisseurs d'eau.webp";
+import drinkingWaterImg from "@/assets/Solutions d'eau potable.webp";
+import specializedFiltersImg from "@/assets/Filtres d'eau spécialisés.webp";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 interface Problem {
   title: string;
@@ -17,36 +27,36 @@ interface Problem {
 
 const problems: Problem[] = [
   {
-    title: "TACHES DE ROUILLE",
+    title: "Eau avec taches de rouille",
     image: "https://images.unsplash.com/photo-1584622781564-1d987f7333c1?q=80&w=800&auto=format&fit=crop",
     desc: "Les taches rougeâtres ou orangées sur vos éviers, baignoires et vêtements sont souvent le signe d'une forte concentration de fer dans votre eau de puits.",
-    isLabelTitle: true
+    isLabelTitle: true,
   },
   {
-    title: "ODEURS DÉSAGRÉABLES",
+    title: "Eau avec odeur d'œufs pourris",
     image: "https://images.unsplash.com/photo-1620063994347-19ee3700b0f9?q=80&w=800&auto=format&fit=crop",
-    desc: "Une odeur d'œufs pourris (soufre) ou de moisissure peut rendre votre eau impropre à la consommation et désagréable pour la douche."
+    desc: "Une odeur d'œufs pourris (soufre) ou de moisissure peut rendre votre eau impropre à la consommation et désagréable pour la douche.",
   },
   {
-    title: "MAUVAIS GOÛT",
+    title: "Eau avec mauvais goût",
     image: "https://images.unsplash.com/photo-1533488734260-23a9cfac27ae?q=80&w=800&auto=format&fit=crop",
-    desc: "Un goût métallique, terreux ou de chlore gâche le plaisir de boire votre eau et peut altérer le goût de vos aliments et de votre café."
+    desc: "Un goût métallique, terreux ou de chlore gâche le plaisir de boire votre eau et peut altérer le goût de vos aliments et de votre café.",
   },
   {
-    title: "EAU TROUBLE",
+    title: "Eau trouble ou turbide",
     image: "https://images.unsplash.com/photo-1626244794212-32a22538965a?q=80&w=800&auto=format&fit=crop",
-    desc: "La présence de sable, d'argile ou de matières organiques rend l'eau trouble et peut endommager vos appareils ainsi que votre tuyauterie."
+    desc: "La présence de sable, d'argile ou de matières organiques rend l'eau trouble et peut endommager vos appareils ainsi que votre tuyauterie.",
   },
   {
-    title: "EAU JAUNÂTRE",
+    title: "Eau jaunâtre",
     image: "https://images.unsplash.com/photo-1634710156948-43f11463e27a?q=80&w=800&auto=format&fit=crop",
-    desc: "Une teinte jaune ou brune est souvent causée par des tanins organiques ou des nitrates, indiquant une infiltration de matières de surface."
+    desc: "Une teinte jaune ou brune est souvent causée par des tanins organiques ou des nitrates, indiquant une infiltration de matières de surface.",
   },
   {
-    title: "CORROSION DU SYSTÈME",
+    title: "Eau corrosive",
     image: "https://images.unsplash.com/photo-1542366885-3be992823864?q=80&w=800&auto=format&fit=crop",
-    desc: "Des dépôts verts ou bleus sur vos tuyaux et robinets indiquent une eau acide qui ronge vos canalisations, menant à des fuites éventuelles."
-  }
+    desc: "Des dépôts verts ou bleus sur vos tuyaux et robinets indiquent une eau acide qui ronge vos canalisations, menant à des fuites éventuelles.",
+  },
 ];
 
 interface ProcessStep {
@@ -65,7 +75,7 @@ const processSteps: ProcessStep[] = [
     desc: "Nous effectuons un test approfondi de votre eau de puits pour identifier tous les contaminants présents.",
     color: "bg-orange-400",
     borderColor: "border-orange-400",
-    textColor: "text-orange-400"
+    textColor: "text-orange-400",
   },
   {
     step: 2,
@@ -73,7 +83,7 @@ const processSteps: ProcessStep[] = [
     desc: "Nos experts analysent les résultats et conçoivent une solution sur mesure pour vos besoins spécifiques.",
     color: "bg-blue-400",
     borderColor: "border-blue-400",
-    textColor: "text-blue-400"
+    textColor: "text-blue-400",
   },
   {
     step: 3,
@@ -81,7 +91,7 @@ const processSteps: ProcessStep[] = [
     desc: "Notre équipe installe le système de traitement adapté avec le plus grand soin et professionnalisme.",
     color: "bg-rose-400",
     borderColor: "border-rose-400",
-    textColor: "text-rose-400"
+    textColor: "text-rose-400",
   },
   {
     step: 4,
@@ -89,10 +99,9 @@ const processSteps: ProcessStep[] = [
     desc: "Nous assurons un suivi régulier et l'entretien de votre système pour garantir une eau de qualité continue.",
     color: "bg-emerald-400",
     borderColor: "border-emerald-400",
-    textColor: "text-emerald-400"
-  }
+    textColor: "text-emerald-400",
+  },
 ];
-
 
 const EauDePuits = () => {
   return (
@@ -124,15 +133,22 @@ const EauDePuits = () => {
                 et de qualité supérieure.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-10 h-14 text-lg font-bold" asChild>
+                <Button
+                  size="lg"
+                  className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-10 h-14 text-lg font-bold"
+                  asChild
+                >
                   <NavLink to="/water-testing">
-                    Planifier une consultation gratuite
+                    Planifiez une consultation gratuite
                   </NavLink>
                 </Button>
-                <Button size="lg" variant="outline" className="bg-white/10 hover:bg-white/20 text-white border-white rounded-full px-10 h-14 text-lg font-bold backdrop-blur-sm" asChild>
-                  <a href="tel:18552649328">
-                    Appelez le 1-855-264-9328
-                  </a>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="bg-white/10 hover:bg-white/20 text-white border-white rounded-full px-10 h-14 text-lg font-bold backdrop-blur-sm"
+                  asChild
+                >
+                  <a href="tel:18552649328">Appelez le 1-855-264-9328</a>
                 </Button>
               </div>
             </div>
@@ -148,13 +164,21 @@ const EauDePuits = () => {
               </h2>
               <div className="w-24 h-1.5 bg-blue-600 mx-auto rounded-full mb-8" />
               <p className="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
-                De nombreux facteurs influent sur la qualité de l’eau de votre puits, comme l’emplacement, la pollution et les éléments présents dans le sol. Du suivi intelligent des contaminants aux filtres personnalisés, Bricareau propose des systèmes de filtration d’eau pour l’eau de puits qui peuvent cibler vos problèmes particuliers et répondre aux besoins de votre maison.
+                De nombreux facteurs influent sur la qualité de l’eau de votre
+                puits, comme l’emplacement, la pollution et les éléments
+                présents dans le sol. Du suivi intelligent des contaminants aux
+                filtres personnalisés, Bricareau propose des systèmes de
+                filtration d’eau pour l’eau de puits qui peuvent cibler vos
+                problèmes particuliers et répondre aux besoins de votre maison.
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {problems.map((problem, index) => (
-                <div key={index} className="group h-[400px] [perspective:1000px] cursor-pointer">
+                <div
+                  key={index}
+                  className="group h-[400px] [perspective:1000px] cursor-pointer"
+                >
                   <div className="relative h-full w-full transition-all duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
                     {/* Front Side */}
                     <div className="absolute inset-0 h-full w-full rounded-2xl overflow-hidden [backface-visibility:hidden] shadow-lg border border-gray-100">
@@ -166,7 +190,7 @@ const EauDePuits = () => {
                       <div className="absolute inset-0 bg-transparent flex flex-col justify-center items-center">
                         {problem.isLabelTitle ? (
                           <div className="bg-[#0060B9] text-white px-2 py-1 font-bold text-center leading-tight shadow-md">
-                            {problem.title.split(' ').map((word, i) => (
+                            {problem.title.split(" ").map((word, i) => (
                               <div key={i}>{word}</div>
                             ))}
                           </div>
@@ -186,7 +210,9 @@ const EauDePuits = () => {
                       <div className="w-16 h-16 rounded-full bg-blue-600/20 flex items-center justify-center mb-6">
                         <Droplets className="h-8 w-8 text-blue-400" />
                       </div>
-                      <h3 className="text-xl font-bold mb-4 uppercase tracking-wider">{problem.title}</h3>
+                      <h3 className="text-xl font-bold mb-4 uppercase tracking-wider">
+                        {problem.title}
+                      </h3>
                       <p className="text-blue-50/90 leading-relaxed text-sm md:text-base italic">
                         "{problem.desc}"
                       </p>
@@ -226,8 +252,12 @@ const EauDePuits = () => {
                       <div className="w-2 h-2 rounded-full bg-blue-400" />
                       <div className="w-2 h-2 rounded-full bg-rose-400" />
                     </div>
-                    <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest leading-none mb-1">Bricareau</span>
-                    <span className="text-sm font-black text-gray-900 uppercase">Processus</span>
+                    <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest leading-none mb-1">
+                      Bricareau
+                    </span>
+                    <span className="text-sm font-black text-gray-900 uppercase">
+                      Processus
+                    </span>
                   </div>
 
                   {/* Connecting Dots and Lines */}
@@ -241,21 +271,34 @@ const EauDePuits = () => {
                 <div className="hidden lg:block absolute -left-10 top-10 bottom-10 w-[2px] bg-dashed border-l-2 border-dashed border-gray-200" />
 
                 {processSteps.map((item, idx) => (
-                  <div key={idx} className="group relative flex flex-col md:flex-row items-center gap-6 md:gap-0">
+                  <div
+                    key={idx}
+                    className="group relative flex flex-col md:flex-row items-center gap-6 md:gap-0"
+                  >
                     {/* Circle Number */}
-                    <div className={`relative z-10 w-24 h-24 md:w-32 md:h-32 shrink-0 rounded-full bg-white shadow-xl border-4 ${item.borderColor} flex items-center justify-center transition-transform group-hover:scale-105 duration-300`}>
-                      <span className={`text-5xl md:text-6xl font-black ${item.textColor} italic opacity-20 absolute`}>
+                    <div
+                      className={`relative z-10 w-24 h-24 md:w-32 md:h-32 shrink-0 rounded-full bg-white shadow-xl border-4 ${item.borderColor} flex items-center justify-center transition-transform group-hover:scale-105 duration-300`}
+                    >
+                      <span
+                        className={`text-5xl md:text-6xl font-black ${item.textColor} italic opacity-20 absolute`}
+                      >
                         {item.step}
                       </span>
-                      <span className={`text-4xl md:text-5xl font-black ${item.textColor} relative`}>
+                      <span
+                        className={`text-4xl md:text-5xl font-black ${item.textColor} relative`}
+                      >
                         {item.step}
                       </span>
                       {/* Connection Dot */}
-                      <div className={`hidden md:block absolute -left-2 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full ${item.color} border-4 border-white`} />
+                      <div
+                        className={`hidden md:block absolute -left-2 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full ${item.color} border-4 border-white`}
+                      />
                     </div>
 
                     {/* Text Card */}
-                    <div className={`flex-grow bg-white p-8 md:pl-16 md:pr-12 rounded-3xl md:rounded-r-full md:rounded-l-none border-t border-r border-b border-gray-100 shadow-sm md:-ml-8 relative`}>
+                    <div
+                      className={`flex-grow bg-white p-8 md:pl-16 md:pr-12 rounded-3xl md:rounded-r-full md:rounded-l-none border-t border-r border-b border-gray-100 shadow-sm md:-ml-8 relative`}
+                    >
                       <h3 className="text-xl font-bold text-gray-900 mb-2 uppercase tracking-tight">
                         {item.title}
                       </h3>
@@ -264,11 +307,56 @@ const EauDePuits = () => {
                       </p>
 
                       {/* Color Bar (Desktop end pill) */}
-                      <div className={`hidden md:block absolute right-4 top-1/2 -translate-y-1/2 w-1.5 h-12 rounded-full ${item.color}`} />
+                      <div
+                        className={`hidden md:block absolute right-4 top-1/2 -translate-y-1/2 w-1.5 h-12 rounded-full ${item.color}`}
+                      />
                     </div>
                   </div>
                 ))}
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* 6. SECTION PRODUITS ASSOCIÉS */}
+        <section className="bg-white py-24">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">Découvrez les produits associés</h2>
+              <p className="text-gray-500 text-lg max-w-2xl mx-auto">
+                Optimisez votre expérience de traitement d'eau avec nos solutions complémentaires.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+              {[
+                {
+                  name: "Filtres d'eau spécialisés",
+                  desc: "Élimine les particules et impuretés pour protéger votre système.",
+                  img: specializedFiltersImg
+                },
+                {
+                  name: "Adoucisseurs d'eau",
+                  desc: "Pour une eau de boisson d'une pureté exceptionnelle directement au robinet.",
+                  img: waterSoftenerImg
+                },
+                {
+                  name: "Système de stérilisation UV",
+                  desc: "Élimine 99.9% des bactéries et virus pour une sécurité totale.",
+                  img: uvSystemImg
+                }
+              ].map((prod, i) => (
+                <div key={i} className="group cursor-pointer">
+                  <div className="bg-gray-100 aspect-square rounded-xl mb-6 overflow-hidden flex items-center justify-center">
+                    <img src={prod.img} alt={prod.name} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-2 text-gray-900">{prod.name}</h3>
+                  <p className="text-gray-600 mb-4">{prod.desc}</p>
+                  <NavLink to="#" className="text-[#0066FF] font-bold flex items-center gap-2 group-hover:translate-x-1 transition-all">
+                    En savoir plus <ChevronRight className="h-4 w-4" />
+                  </NavLink>
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -292,7 +380,7 @@ const EauDePuits = () => {
                     "Équipement de qualité professionnelle",
                     "Installation par des techniciens certifiés",
                     "Service après-vente et entretien régulier",
-                    "Garantie sur les pièces et la main-d'œuvre"
+                    "Garantie sur les pièces et la main-d'œuvre",
                   ].map((item, index) => (
                     <li key={index} className="flex items-start gap-3">
                       <div className="w-6 h-6 rounded-full bg-accent/20 flex items-center justify-center shrink-0 mt-0.5">
@@ -304,12 +392,10 @@ const EauDePuits = () => {
                 </ul>
               </div>
               <div className="bg-emerald-600 rounded-2xl p-8 text-white">
-                <h3 className="text-2xl font-bold mb-4">
-                  Vous avez un puits ?
-                </h3>
+                <h3 className="text-2xl font-bold mb-4">Vous avez un puits ?</h3>
                 <p className="text-white/80 mb-6">
-                  Faites analyser votre eau par nos experts.
-                  Nous vous proposerons la solution la plus adaptée à votre situation.
+                  Faites analyser votre eau par nos experts. Nous vous
+                  proposerons la solution la plus adaptée à votre situation.
                 </p>
                 <Button
                   size="lg"
@@ -333,8 +419,8 @@ const EauDePuits = () => {
               Besoin d'aide avec votre eau de puits ?
             </h2>
             <p className="text-primary-foreground/80 text-lg mb-8 max-w-2xl mx-auto">
-              Nos spécialistes de l'eau de puits sont là pour vous aider à résoudre
-              tous vos problèmes de qualité d'eau.
+              Nos spécialistes de l'eau de puits sont là pour vous aider à
+              résoudre tous vos problèmes de qualité d'eau.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
@@ -353,10 +439,97 @@ const EauDePuits = () => {
                 className="rounded-full px-8 border-white text-white bg-transparent hover:bg-white/10"
                 asChild
               >
-                <a href="tel:18552649328">
-                  Appelez le 1-855-264-9328
-                </a>
+                <a href="tel:18552649328">Appelez le 1-855-264-9328</a>
               </Button>
+            </div>
+          </div>
+        </section>
+
+        {/* 10. FAQ Section */}
+        <section className="py-24 bg-white">
+          <div className="container mx-auto px-4 max-w-4xl">
+            <h2 className="text-3xl font-bold mb-12 text-center underline decoration-blue-600 underline-offset-8">
+              FAQ sur l'eau de puits
+            </h2>
+            <Accordion type="single" collapsible className="w-full">
+              {[
+                {
+                  q: "Pourquoi l'eau de mon puits a-t-elle une odeur d'œufs pourris ?",
+                  a: "Cette odeur est généralement causée par le gaz sulfure d'hydrogène. Bricareau propose des systèmes de filtration spécialisés pour éliminer efficacement cette odeur et rendre votre eau fraîche.",
+                },
+                {
+                  q: "Le fer dans l'eau de puits est-il dangereux ?",
+                  a: "Bien que le fer ne soit généralement pas dangereux pour la santé, il cause des taches tenaces sur les éviers et le linge, et peut donner un goût métallique désagréable.",
+                },
+                {
+                  q: "À quelle fréquence devrais-je faire tester mon eau de puits ?",
+                  a: "Nous recommandons une analyse complète au moins une fois par an ou dès que vous remarquez un changement de goût, d'odeur ou de clarté.",
+                },
+                {
+                  q: "Quelles solutions proposez-vous pour les bactéries ?",
+                  a: "Nous installons des systèmes de désinfection par rayons ultraviolets (UV) ou par chloration contrôlée pour éliminer 99,9% des contaminants biologiques.",
+                },
+              ].map((item, idx) => (
+                <AccordionItem
+                  key={idx}
+                  value={`item-${idx}`}
+                  className="border-b-gray-200"
+                >
+                  <AccordionTrigger className="text-left font-bold text-lg hover:no-underline py-6">
+                    {item.q}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-gray-600 text-lg leading-relaxed pb-6 text-left">
+                    {item.a}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
+        </section>
+
+        {/* 11. Articles Section */}
+        <section className="py-24 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold mb-16 underline decoration-blue-600 underline-offset-8">
+              Guides, ressources et informations
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {[
+                {
+                  title: "Comprendre les minéraux de votre puits",
+                  img: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop",
+                },
+                {
+                  title: "L'importance de la filtration UV",
+                  img: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=800&auto=format&fit=crop",
+                },
+                {
+                  title: "Entretien de votre système Bricareau",
+                  img: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=800&auto=format&fit=crop",
+                },
+              ].map((art, i) => (
+                <div
+                  key={i}
+                  className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer group"
+                >
+                  <div className="h-56 overflow-hidden">
+                    <img
+                      src={art.img}
+                      alt={art.title}
+                      className="w-full h-full object-cover transition-transform group-hover:scale-110"
+                    />
+                  </div>
+                  <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors">
+                    <h4 className="text-xl font-bold mb-4">{art.title}</h4>
+                    <NavLink
+                      to="#"
+                      className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-xs tracking-widest"
+                    >
+                      EN SAVOIR PLUS <ChevronRight className="h-4 w-4" />
+                    </NavLink>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -370,7 +543,8 @@ const EauDePuits = () => {
                   Planifiez une consultation gratuite sur l'eau
                 </h2>
                 <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                  Remplissez le formulaire ci-dessous pour organiser une visite d'un de nos experts de l'eau.
+                  Remplissez le formulaire ci-dessous pour organiser une visite
+                  d'un de nos experts de l'eau.
                 </p>
               </div>
 
@@ -379,52 +553,111 @@ const EauDePuits = () => {
                   {/* Progress */}
                   <div className="flex items-center gap-8 mb-12 overflow-x-auto pb-4 border-b border-gray-100">
                     <div className="flex items-center gap-2 text-blue-600 font-bold whitespace-nowrap">
-                      <span className="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center">1</span>
+                      <span className="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center">
+                        1
+                      </span>
                       VOS INFOS
                     </div>
                     <div className="flex items-center gap-2 text-gray-300 font-bold whitespace-nowrap">
-                      <span className="w-10 h-10 rounded-full bg-gray-200 text-white flex items-center justify-center">2</span>
+                      <span className="w-10 h-10 rounded-full bg-gray-200 text-white flex items-center justify-center">
+                        2
+                      </span>
                       VOTRE DISPONIBILITÉ
                     </div>
                     <div className="flex items-center gap-2 text-gray-300 font-bold whitespace-nowrap">
-                      <span className="w-10 h-10 rounded-full bg-gray-200 text-white flex items-center justify-center">3</span>
+                      <span className="w-10 h-10 rounded-full bg-gray-200 text-white flex items-center justify-center">
+                        3
+                      </span>
                       CONFIRMATION
                     </div>
                   </div>
 
                   <form className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div className="space-y-3 text-left">
-                      <Label htmlFor="fname" className="font-bold flex gap-1">Prénom*</Label>
-                      <Input id="fname" className="h-14 bg-gray-50 border-none rounded-sm" placeholder="Jean" />
+                      <Label htmlFor="fname" className="font-bold flex gap-1">
+                        Prénom*
+                      </Label>
+                      <Input
+                        id="fname"
+                        className="h-14 bg-gray-50 border-none rounded-sm"
+                        placeholder="Jean"
+                      />
                     </div>
                     <div className="space-y-3 text-left">
-                      <Label htmlFor="lname" className="font-bold flex gap-1">Nom*</Label>
-                      <Input id="lname" className="h-14 bg-gray-50 border-none rounded-sm" placeholder="Dupont" />
+                      <Label htmlFor="lname" className="font-bold flex gap-1">
+                        Nom*
+                      </Label>
+                      <Input
+                        id="lname"
+                        className="h-14 bg-gray-50 border-none rounded-sm"
+                        placeholder="Dupont"
+                      />
                     </div>
                     <div className="space-y-3 text-left">
-                      <Label htmlFor="email" className="font-bold flex gap-1">Courriel*</Label>
-                      <Input id="email" type="email" className="h-14 bg-gray-50 border-none rounded-sm" placeholder="jean@exemple.com" />
+                      <Label htmlFor="email" className="font-bold flex gap-1">
+                        Courriel*
+                      </Label>
+                      <Input
+                        id="email"
+                        type="email"
+                        className="h-14 bg-gray-50 border-none rounded-sm"
+                        placeholder="jean@exemple.com"
+                      />
                     </div>
                     <div className="space-y-3 text-left">
-                      <Label htmlFor="phone" className="font-bold flex gap-1">Téléphone*</Label>
-                      <Input id="phone" type="tel" className="h-14 bg-gray-50 border-none rounded-sm" placeholder="(514) 000-0000" />
+                      <Label htmlFor="phone" className="font-bold flex gap-1">
+                        Téléphone*
+                      </Label>
+                      <Input
+                        id="phone"
+                        type="tel"
+                        className="h-14 bg-gray-50 border-none rounded-sm"
+                        placeholder="(514) 000-0000"
+                      />
                     </div>
                     <div className="md:col-span-2 space-y-3 text-left">
-                      <Label htmlFor="address" className="font-bold flex gap-1">Adresse*</Label>
-                      <Input id="address" className="h-14 bg-gray-50 border-none rounded-sm" placeholder="123 rue de l'Eau" />
+                      <Label htmlFor="address" className="font-bold flex gap-1">
+                        Adresse*
+                      </Label>
+                      <Input
+                        id="address"
+                        className="h-14 bg-gray-50 border-none rounded-sm"
+                        placeholder="123 rue de l'Eau"
+                      />
                     </div>
                     <div className="md:col-span-2 grid grid-cols-1 md:grid-cols-3 gap-8">
                       <div className="space-y-3 text-left">
-                        <Label htmlFor="city" className="font-bold flex gap-1">Ville*</Label>
-                        <Input id="city" className="h-14 bg-gray-50 border-none rounded-sm" placeholder="Montréal" />
+                        <Label htmlFor="city" className="font-bold flex gap-1">
+                          Ville*
+                        </Label>
+                        <Input
+                          id="city"
+                          className="h-14 bg-gray-50 border-none rounded-sm"
+                          placeholder="Montréal"
+                        />
                       </div>
                       <div className="space-y-3 text-left">
-                        <Label htmlFor="province" className="font-bold flex gap-1">Province*</Label>
-                        <Input id="province" className="h-14 bg-gray-50 border-none rounded-sm" placeholder="Québec" />
+                        <Label
+                          htmlFor="province"
+                          className="font-bold flex gap-1"
+                        >
+                          Province*
+                        </Label>
+                        <Input
+                          id="province"
+                          className="h-14 bg-gray-50 border-none rounded-sm"
+                          placeholder="Québec"
+                        />
                       </div>
                       <div className="space-y-3 text-left">
-                        <Label htmlFor="zip" className="font-bold flex gap-1">Code Postal*</Label>
-                        <Input id="zip" className="h-14 bg-gray-50 border-none rounded-sm" placeholder="H1A 1A1" />
+                        <Label htmlFor="zip" className="font-bold flex gap-1">
+                          Code Postal*
+                        </Label>
+                        <Input
+                          id="zip"
+                          className="h-14 bg-gray-50 border-none rounded-sm"
+                          placeholder="H1A 1A1"
+                        />
                       </div>
                     </div>
                     <div className="md:col-span-2 text-left">
@@ -432,7 +665,10 @@ const EauDePuits = () => {
                         Continuer
                       </Button>
                       <p className="mt-4 text-[10px] text-gray-400 max-w-lg">
-                        En soumettant ce formulaire, vous acceptez nos conditions d'utilisation et notre politique de confidentialité. Un spécialiste Bricareau vous contactera sous peu.
+                        En soumettant ce formulaire, vous acceptez nos
+                        conditions d'utilisation et notre politique de
+                        confidentialité. Un spécialiste Bricareau vous
+                        contactera sous peu.
                       </p>
                     </div>
                   </form>

@@ -91,15 +91,15 @@ const AdoucisseurEauResidentiel = () => {
                                 Profitez d'une solution sur mesure pour une eau de qualité
                             </h1>
                             <p className="text-lg md:text-xl opacity-95 mb-8 max-w-xl leading-relaxed">
-                                Modernisez votre maison avec les technologies Culligan et redécouvrez le plaisir d'une eau douce,
+                                Modernisez votre maison avec les technologies Bricareau et redécouvrez le plaisir d'une eau douce,
                                 plus saine pour vous et vos installations.
                             </p>
                             <div className="flex gap-4">
-                                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 text-lg font-bold">
-                                    Démarrer ici
+                                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 text-lg font-bold" asChild>
+                                    <NavLink to="/contact-residentiel">Démarrer ici</NavLink>
                                 </Button>
-                                <Button size="lg" variant="outline" className="bg-white/10 hover:bg-white/20 text-white border-white rounded-full px-8 h-14 text-lg font-bold backdrop-blur-sm">
-                                    Voir les produits
+                                <Button size="lg" variant="outline" className="bg-white/10 hover:bg-white/20 text-white border-white rounded-full px-8 h-14 text-lg font-bold backdrop-blur-sm" asChild>
+                                    <NavLink to="/produits">Voir les produits</NavLink>
                                 </Button>
                             </div>
                         </div>

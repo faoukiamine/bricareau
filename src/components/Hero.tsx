@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { NavLink } from "@/components/NavLink";
 import heroVideo from "../assets/hero-uhd_3840_2160_30fps.mp4";
 
 const Hero = () => {
@@ -35,30 +36,15 @@ const Hero = () => {
             <p className="text-lg md:text-xl text-white/90 leading-relaxed max-w-xl">
               Plus que 20000 foyers canadiens ont confié le traitement d’eau de leurs foyers à Bricareau.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Button
-                size="lg"
-                className="bg-[#2563EB] hover:bg-[#2563EB]/90 text-white shadow-lg hover:shadow-xl transition-all font-semibold"
-                asChild
-              >
-                <a href="#solutions">
-                  Explorez nos solutions
-                </a>
+            <div className="flex gap-4 pt-4">
+              <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 text-lg font-bold" asChild>
+                <NavLink to="/contact-residentiel">Explorez nos solutions</NavLink>
               </Button>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-0.02 pt-0.02">
-              <Button
-                size="lg"
-                className="bg-[#2563EB] hover:bg-[#2563EB]/90 text-white shadow-lg hover:shadow-xl transition-all font-semibold"
-                asChild
-              >
-                <a href="#solutions">
-                  Planifiez une consultation avec un expert
-                </a>
+              <Button size="lg" variant="outline" className="bg-white/10 hover:bg-white/20 text-white border-white rounded-full px-8 h-14 text-lg font-bold backdrop-blur-sm" asChild>
+                <NavLink to="/adoucissement">Planifiez une consultation</NavLink>
               </Button>
             </div>
           </div>
-
         </div>
       </div>
     </section>
