@@ -4,7 +4,7 @@ import heroVideo from "../assets/hero-uhd_3840_2160_30fps.mp4";
 const Hero = () => {
 
   return (
-    <section className="relative w-full min-h-[600px] lg:h-screen flex items-center overflow-hidden">
+    <section className="relative w-full h-[750px] flex items-center overflow-hidden">
       {/* Background image with overlay */}
       {/* Background video with overlay */}
       <div className="absolute inset-0 z-0 overflow-hidden">
@@ -32,7 +32,7 @@ const Hero = () => {
             <p className="text-lg md:text-xl text-white/90 leading-relaxed max-w-xl">
               Assurez-vous que l’eau de votre maison a une belle apparence, une bonne odeur et un bon goût, qu’elle provienne d’un système municipal ou d’un puits privé.
             </p>
-<p className="text-lg md:text-xl text-white/90 leading-relaxed max-w-xl">
+            <p className="text-lg md:text-xl text-white/90 leading-relaxed max-w-xl">
               Plus que 20000 foyers canadiens ont confié le traitement d’eau de leurs foyers à Bricareau.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
@@ -53,7 +53,7 @@ const Hero = () => {
                 asChild
               >
                 <a href="#solutions">
-                  Planifiez une consultation avec un expert 
+                  Planifiez une consultation avec un expert
                 </a>
               </Button>
             </div>

@@ -1,7 +1,9 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import TestimonialsSection from "@/components/TestimonialsSection";
 import { Button } from "@/components/ui/button";
 import heroGirl from "@/assets/cute-little-girl-washing-hands.jpg";
+import sereneLite from "@/assets/Système+de+filtration+Serene+Lite.webp";
 import {
   Leaf,
   Star,
@@ -90,7 +92,7 @@ const ConditionneursSansSel = () => {
 
       <main>
         {/* Hero Section */}
-        <section className="relative h-[600px] flex items-center overflow-hidden">
+        <section className="relative h-[750px] flex items-center overflow-hidden">
           <div className="absolute inset-0 z-0">
             <img
               src={heroGirl}
@@ -124,7 +126,7 @@ const ConditionneursSansSel = () => {
           <div className="container mx-auto px-4">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Pourquoi choisir un conditionneur sans sel Bricareau ?
+                Pourquoi choisir un conditionneur d'eau sans sel ?
               </h2>
               <div className="w-20 h-1 bg-blue-500 mx-auto" />
             </div>
@@ -179,9 +181,9 @@ const ConditionneursSansSel = () => {
               <div className="lg:w-1/2">
                 <div className="bg-gray-100 rounded-2xl p-8 flex items-center justify-center min-h-[500px]">
                   <img
-                    src="https://images.unsplash.com/photo-1585704032915-c3400ca1f963?q=80&w=800&auto=format&fit=crop"
-                    alt="Conditionneur d'eau"
-                    className="max-h-[450px] object-contain drop-shadow-2xl"
+                    src={sereneLite}
+                    alt="Conditionneur d'eau Serene Lite"
+                    className="max-h-[650px] object-contain drop-shadow-2xl"
                   />
                 </div>
               </div>
@@ -190,58 +192,7 @@ const ConditionneursSansSel = () => {
         </section>
 
         {/* Testimonials Section */}
-        <section className="py-24 bg-gray-50/50">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-5xl font-light text-[#1a1a1a]">
-                Eau savoureuse. <span className="font-bold">Service professionnel.</span>
-              </h2>
-            </div>
-
-            <div className="max-w-5xl mx-auto">
-              {/* Testimonial Card */}
-              <div className="bg-white rounded-[32px] p-8 md:p-16 shadow-[0_20px_50px_rgba(0,0,0,0.05)] relative mb-12">
-                <div className="mb-8">
-                  <Quote className="h-12 w-12 text-[#60A5FA] fill-[#60A5FA] rotate-180" />
-                </div>
-
-                <p className="text-lg md:text-xl text-gray-600 italic leading-relaxed mb-12">
-                  « Bricareau avait le produit que nous cherchions et le service a été très rapide! »
-                </p>
-
-                <div className="flex flex-col md:flex-row justify-between items-end md:items-center gap-6">
-                  <div>
-                    <h4 className="text-xl font-bold text-[#1a1a1a]">JP Babin</h4>
-                    <span className="text-gray-400">Montreal, QC</span>
-                  </div>
-
-                  <div className="flex gap-1">
-                    {[1, 2, 3, 4, 5].map(s => (
-                      <Star key={s} className="h-6 w-6 fill-[#FBBF24] text-[#FBBF24]" />
-                    ))}
-                  </div>
-                </div>
-              </div>
-
-              {/* Navigation */}
-              <div className="flex items-center justify-center gap-8">
-                <button className="p-2 text-gray-300 hover:text-blue-600 transition-colors">
-                  <ChevronLeft className="h-6 w-6" />
-                </button>
-
-                <div className="flex gap-2 items-center">
-                  <div className="w-8 h-2 bg-blue-400 rounded-full" />
-                  <div className="w-2 h-2 bg-gray-200 rounded-full" />
-                  <div className="w-2 h-2 bg-gray-200 rounded-full" />
-                </div>
-
-                <button className="p-2 text-gray-300 hover:text-blue-600 transition-colors">
-                  <ChevronRight className="h-6 w-6" />
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
+        <TestimonialsSection />
 
         {/* Link CTA Section */}
         <section className="py-16 bg-white border-y border-gray-100">

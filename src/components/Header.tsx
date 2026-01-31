@@ -76,7 +76,7 @@ const Header = () => {
           icon: Leaf,
           title: "Conditionneurs d'eau sans sel",
           description: "Réduisez l'accumulation sans gaspillage d'eau, parfait pour les zones à restriction de saumure.",
-          href: "/conditionneurs-sans-sel"
+          href: "/conditionneurs-sans-sel",
         },
         {
           icon: Caravan,

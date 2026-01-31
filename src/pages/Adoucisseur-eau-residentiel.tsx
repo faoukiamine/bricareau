@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import TestimonialsSection from "@/components/TestimonialsSection";
 import { Button } from "@/components/ui/button";
 import heroBath from "@/assets/close-up-handsom-man-taking-bath.jpg";
 import {
@@ -165,29 +166,7 @@ const AdoucisseurEauResidentiel = () => {
                 </section>
 
                 {/* Testimonials Grid Section */}
-                <section className="py-24 bg-white">
-                    <div className="container mx-auto px-4 text-center">
-                        <h2 className="text-3xl md:text-5xl font-bold mb-16">Commentaires sur l'adoucisseur-d'eau Culligan</h2>
-                        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-left">
-                            {reviews.map((r, i) => (
-                                <div key={i} className="bg-gray-50 p-8 rounded-2xl flex flex-col">
-                                    <div className="flex gap-1 mb-4">
-                                        {[1, 2, 3, 4, 5].map(s => <Star key={s} className="h-4 w-4 fill-blue-600 text-blue-600" />)}
-                                    </div>
-                                    <p className="text-gray-600 italic mb-8 flex-grow leading-relaxed">"{r.text}"</p>
-                                    <div>
-                                        <h4 className="font-bold">{r.name}</h4>
-                                        <span className="text-xs text-gray-400">{r.date}</span>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                        <div className="mt-12 flex items-center justify-center gap-4">
-                            <div className="w-10 h-1 bg-blue-600 rounded-full" />
-                            <div className="w-20 h-1 bg-gray-200 rounded-full" />
-                        </div>
-                    </div>
-                </section>
+                <TestimonialsSection />
 
                 {/* Content Section: Plus qu'un adoucisseur */}
                 <section className="py-24 bg-gray-50">

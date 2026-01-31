@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import TestimonialsSection from "@/components/TestimonialsSection";
 import { Button } from "@/components/ui/button";
 import heroBath from "@/assets/teenager-taking-shower-reduce-hangover-effect.jpg";
 import kitchenImg from "@/assets/18036672_SIE_2720_1530_21_04_30_SIE_CRM_Dishwasher_Hand_Taking_Out_Wine_Glass_Basket_Motiv_11_0017.webp";
@@ -242,35 +243,7 @@ const Adoucissement = () => {
                 </section>
 
                 {/* 6. Testimonials */}
-                <section className="py-24 bg-gray-50 text-center">
-                    <div className="container mx-auto px-4">
-                        <h2 className="text-3xl md:text-5xl font-bold mb-16">Qualité adaptée, service inégalable.</h2>
-                        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-left">
-                            {[
-                                "Excellent produit et équipe très pro.",
-                                "Service client au top, je recommande.",
-                                "Quelle différence sur ma peau !",
-                                "Enfin plus de calcaire sur les robinets."
-                            ].map((text, i) => (
-                                <div key={i} className="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
-                                    <div className="flex gap-1 mb-4">
-                                        {[1, 2, 3, 4, 5].map(s => <Star key={s} className="h-4 w-4 fill-blue-600 text-blue-600" />)}
-                                    </div>
-                                    <p className="text-gray-600 italic mb-8">"{text}"</p>
-                                    <div className="flex items-center justify-between text-xs text-gray-400">
-                                        <span className="font-bold text-gray-900">Client Bricareau</span>
-                                        <span>Il y a 2 mois</span>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                        <div className="mt-12 flex justify-center gap-4">
-                            <div className="w-12 h-1 bg-blue-600 rounded-full" />
-                            <div className="w-4 h-1 bg-gray-200 rounded-full" />
-                            <div className="w-4 h-1 bg-gray-200 rounded-full" />
-                        </div>
-                    </div>
-                </section>
+                <TestimonialsSection />
 
                 {/* 7. Water Test Section */}
                 <section className="py-24 bg-white">

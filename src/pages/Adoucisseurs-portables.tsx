@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import TestimonialsSection from "@/components/TestimonialsSection";
 import {
     Phone,
     ArrowRight,
@@ -166,49 +167,7 @@ const AdoucisseursPortables = () => {
             </section>
 
             {/* 5. SECTION TÉMOIGNAGES/AVIS */}
-            <section className="bg-[#F5F5F5] py-24">
-                <div className="container mx-auto px-4">
-                    <div className="text-center mb-16">
-                        <h2 className="text-4xl font-bold mb-4 text-gray-900">avis sur la livraison d'adoucisseurs d'eau</h2>
-                        <div className="flex justify-center gap-1">
-                            {[...Array(5)].map((_, i) => (
-                                <Star key={i} className="h-5 w-5 fill-[#0066FF] text-[#0066FF]" />
-                            ))}
-                        </div>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        {[
-                            {
-                                quote: "Service incroyable",
-                                text: "Plus besoin de m'inquiéter pour mon eau. La livraison est toujours à l'heure et l'eau est parfaite.",
-                                name: "Marie L."
-                            },
-                            {
-                                quote: "Facile et efficace",
-                                text: "L'échange se fait en quelques minutes. C'est la solution idéale pour notre appartement.",
-                                name: "Jean D."
-                            },
-                            {
-                                quote: "Qualité supérieure",
-                                text: "On sent vraiment la différence sur la peau et les cheveux. Finis les dépôts de calcaire !",
-                                name: "Sophie R."
-                            }
-                        ].map((review, i) => (
-                            <div key={i} className="bg-white p-8 rounded-xl border border-gray-100 shadow-sm flex flex-col">
-                                <div className="flex gap-0.5 mb-4">
-                                    {[...Array(5)].map((_, i) => (
-                                        <Star key={i} className="h-4 w-4 fill-[#0066FF] text-[#0066FF]" />
-                                    ))}
-                                </div>
-                                <h4 className="text-xl font-bold mb-3 italic">"{review.quote}"</h4>
-                                <p className="text-gray-600 mb-6 flex-grow leading-relaxed">{review.text}</p>
-                                <div className="font-bold text-gray-900 uppercase text-sm tracking-widest">{review.name}</div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
+            <TestimonialsSection />
 
             {/* 6. SECTION PRODUITS ASSOCIÉS */}
             <section className="bg-white py-24">

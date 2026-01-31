@@ -13,7 +13,7 @@ const products = [
         name: "Adoucisseurs d'eau",
         description: "Notre adoucisseur d'eau offrira à votre famille une grande quantité d'eau propre et douce à volonté.",
         image: adoucisseursImg,
-        link: "/adoucisseurs"
+        link: "/adoucissement"
     },
     {
         name: "Solutions d'eau potable",
