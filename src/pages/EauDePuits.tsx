@@ -1,13 +1,19 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Droplets, Check, ChevronRight } from "lucide-react";
+import { ArrowRight, Droplets, Check, ChevronRight, CheckCircle2, X } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import heroPuits from "@/assets/blog-10-copyright.jpg";
 import uvSystemImg from "@/assets/Systèmes de désinfection UV.webp";
 import waterSoftenerImg from "@/assets/Adoucisseurs d'eau.webp";
 import drinkingWaterImg from "@/assets/Solutions d'eau potable.webp";
 import specializedFiltersImg from "@/assets/Filtres d'eau spécialisés.webp";
+import rouilleThumb from "@/assets/rouille_thumb.jpg";
+import rottenEggsThumb from "@/assets/Water_Smells_Like_Rotten_Eggs_1400x.webp";
+import waterTasteThumb from "@/assets/water-taste.jpg";
+import turbideWaterThumb from "@/assets/Turbide-Water.webp";
+import taninWaterThumb from "@/assets/problemes-deau-tanin.jpg";
+import corrosiveWaterThumb from "@/assets/Corrosive-Water.webp";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -28,33 +34,32 @@ interface Problem {
 const problems: Problem[] = [
   {
     title: "Eau avec taches de rouille",
-    image: "https://images.unsplash.com/photo-1584622781564-1d987f7333c1?q=80&w=800&auto=format&fit=crop",
+    image: rouilleThumb,
     desc: "Les taches rougeâtres ou orangées sur vos éviers, baignoires et vêtements sont souvent le signe d'une forte concentration de fer dans votre eau de puits.",
-    isLabelTitle: true,
   },
   {
     title: "Eau avec odeur d'œufs pourris",
-    image: "https://images.unsplash.com/photo-1620063994347-19ee3700b0f9?q=80&w=800&auto=format&fit=crop",
+    image: rottenEggsThumb,
     desc: "Une odeur d'œufs pourris (soufre) ou de moisissure peut rendre votre eau impropre à la consommation et désagréable pour la douche.",
   },
   {
     title: "Eau avec mauvais goût",
-    image: "https://images.unsplash.com/photo-1533488734260-23a9cfac27ae?q=80&w=800&auto=format&fit=crop",
+    image: waterTasteThumb,
     desc: "Un goût métallique, terreux ou de chlore gâche le plaisir de boire votre eau et peut altérer le goût de vos aliments et de votre café.",
   },
   {
     title: "Eau trouble ou turbide",
-    image: "https://images.unsplash.com/photo-1626244794212-32a22538965a?q=80&w=800&auto=format&fit=crop",
+    image: turbideWaterThumb,
     desc: "La présence de sable, d'argile ou de matières organiques rend l'eau trouble et peut endommager vos appareils ainsi que votre tuyauterie.",
   },
   {
     title: "Eau jaunâtre",
-    image: "https://images.unsplash.com/photo-1634710156948-43f11463e27a?q=80&w=800&auto=format&fit=crop",
+    image: taninWaterThumb,
     desc: "Une teinte jaune ou brune est souvent causée par des tanins organiques ou des nitrates, indiquant une infiltration de matières de surface.",
   },
   {
     title: "Eau corrosive",
-    image: "https://images.unsplash.com/photo-1542366885-3be992823864?q=80&w=800&auto=format&fit=crop",
+    image: corrosiveWaterThumb,
     desc: "Des dépôts verts ou bleus sur vos tuyaux et robinets indiquent une eau acide qui ronge vos canalisations, menant à des fuites éventuelles.",
   },
 ];
@@ -101,6 +106,14 @@ const processSteps: ProcessStep[] = [
     borderColor: "border-emerald-400",
     textColor: "text-emerald-400",
   },
+];
+
+const comparisonData = [
+  { feature: "Technologie High Efficiency", high: true, selectPlus: true, connect: true, select: false, medallist: false },
+  { feature: "Contrôle à distance (App)", high: true, selectPlus: false, connect: true, select: false, medallist: false },
+  { feature: "Protection du chlore intégrée", high: "Option", selectPlus: false, connect: false, select: false, medallist: false },
+  { feature: "Alertes de sel faible", high: true, selectPlus: true, connect: true, select: true, medallist: false },
+  { feature: "Diagnostic à distance", high: true, selectPlus: false, connect: true, select: false, medallist: false },
 ];
 
 const EauDePuits = () => {
@@ -341,7 +354,12 @@ const EauDePuits = () => {
                   img: waterSoftenerImg
                 },
                 {
-                  name: "Système de stérilisation UV",
+                  name: "Stations d'eau potable",
+                  desc: "Élimine 99.9% des bactéries et virus pour une sécurité totale.",
+                  img: drinkingWaterImg
+                },
+                {
+                  name: "Systèmes de stérilisation UV",
                   desc: "Élimine 99.9% des bactéries et virus pour une sécurité totale.",
                   img: uvSystemImg
                 }
@@ -364,50 +382,54 @@ const EauDePuits = () => {
         {/* Testimonial Slider */}
         <TestimonialsSection />
 
-        {/* Why Choose Us */}
-        <section className="py-16 md:py-24 bg-slate-50">
+        {/* Comparison Table Section */}
+        <section className="py-24 bg-gray-50">
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
-                  Pourquoi choisir Bricareau pour votre puits ?
-                </h2>
-                <ul className="space-y-4">
-                  {[
-                    "Plus de 20 ans d'expérience avec les puits privés",
-                    "Analyse d'eau complète",
-                    "Solutions personnalisées à chaque situation",
-                    "Équipement de qualité professionnelle",
-                    "Installation par des techniciens certifiés",
-                    "Service après-vente et entretien régulier",
-                    "Garantie sur les pièces et la main-d'œuvre",
-                  ].map((item, index) => (
-                    <li key={index} className="flex items-start gap-3">
-                      <div className="w-6 h-6 rounded-full bg-accent/20 flex items-center justify-center shrink-0 mt-0.5">
-                        <Check className="h-4 w-4 text-accent" />
-                      </div>
-                      <span className="text-foreground">{item}</span>
-                    </li>
+            <h2 className="text-3xl md:text-5xl font-bold mb-16 text-center">Comparez les systèmes de traitement de l'eau de puits</h2>
+            <div className="overflow-x-auto">
+              <table className="w-full min-w-[1000px] border-collapse bg-white rounded-2xl overflow-hidden shadow-sm">
+                <thead>
+                  <tr className="bg-gray-100">
+                    <th className="p-8 text-left text-gray-400 font-medium uppercase tracking-wider">Modèles</th>
+                    {[
+                      { name: "Systèmes spécialisés de filtration d'eau", img: specializedFiltersImg },
+                      { name: "Adoucisseurs d'eau", img: waterSoftenerImg },
+                      { name: "Systèmes d'osmose inverse", img: drinkingWaterImg },
+                      { name: "Systèmes de désinfection UV", img: uvSystemImg }
+                    ].map((m, i) => (
+                      <th key={i} className="p-4 text-center text-gray-900 font-bold text-sm">
+                        <div className="flex flex-col items-center gap-2">
+                          <img
+                            src={m.img}
+                            alt={m.name}
+                            className="w-[150px] h-[120px] object-contain mx-auto mix-blend-multiply"
+                          />
+                          <span className="max-w-[150px] inline-block">{m.name}</span>
+                        </div>
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-gray-100">
+                  {comparisonData.map((row, i) => (
+                    <tr key={i} className="hover:bg-gray-50 transition-colors">
+                      <td className="p-8 font-medium text-gray-700">{row.feature}</td>
+                      <td className="p-8 text-center">
+                        {typeof row.high === 'string' ? row.high : (row.high ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : <X className="h-6 w-6 text-gray-300 mx-auto" />)}
+                      </td>
+                      <td className="p-8 text-center">
+                        {row.selectPlus ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : <X className="h-6 w-6 text-gray-300 mx-auto" />}
+                      </td>
+                      <td className="p-8 text-center">
+                        {row.connect ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : <X className="h-6 w-6 text-gray-300 mx-auto" />}
+                      </td>
+                      <td className="p-8 text-center">
+                        {row.select ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : <X className="h-6 w-6 text-gray-300 mx-auto" />}
+                      </td>
+                    </tr>
                   ))}
-                </ul>
-              </div>
-              <div className="bg-emerald-600 rounded-2xl p-8 text-white">
-                <h3 className="text-2xl font-bold mb-4">Vous avez un puits ?</h3>
-                <p className="text-white/80 mb-6">
-                  Faites analyser votre eau par nos experts. Nous vous
-                  proposerons la solution la plus adaptée à votre situation.
-                </p>
-                <Button
-                  size="lg"
-                  className="w-full rounded-full bg-white text-emerald-600 hover:bg-white/90"
-                  asChild
-                >
-                  <NavLink to="/water-testing">
-                    Testez votre eau de puits
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </NavLink>
-                </Button>
-              </div>
+                </tbody>
+              </table>
             </div>
           </div>
         </section>
@@ -491,7 +513,7 @@ const EauDePuits = () => {
         <section className="py-24 bg-gray-50">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold mb-16 underline decoration-blue-600 underline-offset-8">
-              Guides, ressources et informations
+              Ressources et informations
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[

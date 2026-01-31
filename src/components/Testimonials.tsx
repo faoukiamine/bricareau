@@ -3,6 +3,7 @@ import Autoplay from "embla-carousel-autoplay";
 import { Star, Quote, ChevronLeft, ChevronRight } from "lucide-react";
 import { useCallback, useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
+import { type EmblaCarouselType } from "embla-carousel";
 
 const testimonials = [
   {
@@ -50,7 +51,7 @@ const Testimonials = () => {
     if (emblaApi) emblaApi.scrollNext();
   }, [emblaApi]);
 
-  const onSelect = useCallback((emblaApi: any) => {
+  const onSelect = useCallback((emblaApi: EmblaCarouselType) => {
     setCanScrollPrev(emblaApi.canScrollPrev());
     setCanScrollNext(emblaApi.canScrollNext());
   }, []);
