@@ -18,7 +18,9 @@ import {
     ChevronRight
 } from 'lucide-react';
 import { Button } from "@/components/ui/button";
+import heroPortables from "@/assets/sub-category-dryer.webp";
 import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 
 const AdoucisseursPortables = () => {
@@ -27,12 +29,15 @@ const AdoucisseursPortables = () => {
             <Header />
 
             {/* 2. SECTION HÉRO */}
-            <section className="relative h-[600px] flex items-center overflow-hidden">
+            <section className="relative h-[750px] flex items-center overflow-hidden">
                 {/* Background Image - Lifestyle */}
                 <div className="absolute inset-0 bg-gray-900">
                     <div
-                        className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&q=80')] bg-cover bg-center scale-105"
-                        style={{ filter: 'brightness(0.6)' }}
+                        className="absolute inset-0 bg-cover bg-center scale-105"
+                        style={{
+                            backgroundImage: `url(${heroPortables})`,
+                            filter: 'brightness(0.6)'
+                        }}
                     ></div>
                 </div>
 
@@ -270,64 +275,86 @@ const AdoucisseursPortables = () => {
                 </div>
             </section>
 
-            {/* 8. FORMULAIRE DE CONTACT */}
-            <section className="bg-[#F5F5F5] py-24">
-                <div className="container mx-auto px-4 flex flex-col lg:flex-row gap-16">
-                    <div className="lg:w-1/2 flex flex-col justify-center">
-                        <h2 className="text-4xl md:text-5xl font-bold text-[#001B3D] mb-6 leading-tight">Contactez-nous pour commencer dès aujourd'hui</h2>
-                        <p className="text-xl text-gray-500 leading-relaxed font-medium capitalize">
-                            Nos experts sont prêts à vous aider à trouver la solution de traitement d'eau parfaite pour vos besoins.
-                        </p>
-                    </div>
+            {/* 12. Consultation Form Section */}
+            <section className="py-24 bg-white border-t border-gray-100">
+                <div className="container mx-auto px-4">
+                    <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-20">
+                        <div className="lg:w-1/3 text-left">
+                            <h2 className="text-3xl md:text-5xl font-bold mb-8 leading-tight italic">
+                                Planifiez une consultation gratuite sur l'eau
+                            </h2>
+                            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                                Remplissez le formulaire ci-dessous pour organiser une visite d'un de nos experts de l'eau.
+                            </p>
+                        </div>
 
-                    <div className="lg:w-1/2">
-                        <div className="bg-white p-8 md:p-12 rounded-2xl shadow-xl border border-white">
-                            <h3 className="text-2xl font-bold text-[#001B3D] mb-8">Saisissez vos informations</h3>
-                            <form className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                                <div className="space-y-2">
-                                    <label className="text-sm font-bold text-gray-700 uppercase">Prénom</label>
-                                    <Input placeholder="Votre prénom" className="h-12 rounded-lg border-gray-200 focus:ring-[#0066FF]" />
+                        <div className="lg:w-2/3">
+                            <div className="bg-white rounded-3xl p-10 border border-gray-100 shadow-2xl">
+                                {/* Progress */}
+                                <div className="flex items-center gap-8 mb-12 overflow-x-auto pb-4 border-b border-gray-100">
+                                    <div className="flex items-center gap-2 text-blue-600 font-bold whitespace-nowrap">
+                                        <span className="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center">1</span>
+                                        VOS INFOS
+                                    </div>
+                                    <div className="flex items-center gap-2 text-gray-300 font-bold whitespace-nowrap">
+                                        <span className="w-10 h-10 rounded-full bg-gray-200 text-white flex items-center justify-center">2</span>
+                                        VOTRE DISPONIBILITÉ
+                                    </div>
+                                    <div className="flex items-center gap-2 text-gray-300 font-bold whitespace-nowrap">
+                                        <span className="w-10 h-10 rounded-full bg-gray-200 text-white flex items-center justify-center">3</span>
+                                        CONFIRMATION
+                                    </div>
                                 </div>
-                                <div className="space-y-2">
-                                    <label className="text-sm font-bold text-gray-700 uppercase">Nom de famille</label>
-                                    <Input placeholder="Votre nom" className="h-12 rounded-lg border-gray-200 focus:ring-[#0066FF]" />
-                                </div>
-                                <div className="space-y-2 sm:col-span-2">
-                                    <label className="text-sm font-bold text-gray-700 uppercase">Adresse courriel</label>
-                                    <Input type="email" placeholder="votre@email.com" className="h-12 rounded-lg border-gray-200 focus:ring-[#0066FF]" />
-                                </div>
-                                <div className="space-y-2">
-                                    <label className="text-sm font-bold text-gray-700 uppercase">Numéro de téléphone</label>
-                                    <Input type="tel" placeholder="(514) 000-0000" className="h-12 rounded-lg border-gray-200 focus:ring-[#0066FF]" />
-                                </div>
-                                <div className="space-y-2">
-                                    <label className="text-sm font-bold text-gray-700 uppercase">Code postal</label>
-                                    <Input placeholder="A1A 1A1" className="h-12 rounded-lg border-gray-200 focus:ring-[#0066FF]" />
-                                </div>
-                                <div className="space-y-2 sm:col-span-2">
-                                    <label className="text-sm font-bold text-gray-700 uppercase">Commentaires</label>
-                                    <Textarea placeholder="Comment pouvons-nous vous aider ?" className="min-h-[120px] rounded-lg border-gray-200 focus:ring-[#0066FF] p-4" />
-                                </div>
-                                <Button className="sm:col-span-2 h-14 bg-[#0066FF] hover:bg-[#0052cc] text-white text-lg font-bold rounded-full shadow-lg transition-all hover:scale-[1.02] mt-4">
-                                    Soumettre
-                                </Button>
-                            </form>
+
+                                <form className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                    <div className="space-y-3 text-left">
+                                        <Label htmlFor="fname" className="font-bold flex gap-1">Prénom*</Label>
+                                        <Input id="fname" className="h-14 bg-gray-50 border-none rounded-sm" placeholder="Jean" />
+                                    </div>
+                                    <div className="space-y-3 text-left">
+                                        <Label htmlFor="lname" className="font-bold flex gap-1">Nom*</Label>
+                                        <Input id="lname" className="h-14 bg-gray-50 border-none rounded-sm" placeholder="Dupont" />
+                                    </div>
+                                    <div className="space-y-3 text-left">
+                                        <Label htmlFor="email" className="font-bold flex gap-1">Courriel*</Label>
+                                        <Input id="email" type="email" className="h-14 bg-gray-50 border-none rounded-sm" placeholder="jean@exemple.com" />
+                                    </div>
+                                    <div className="space-y-3 text-left">
+                                        <Label htmlFor="phone" className="font-bold flex gap-1">Téléphone*</Label>
+                                        <Input id="phone" type="tel" className="h-14 bg-gray-50 border-none rounded-sm" placeholder="(514) 000-0000" />
+                                    </div>
+                                    <div className="md:col-span-2 space-y-3 text-left">
+                                        <Label htmlFor="address" className="font-bold flex gap-1">Adresse*</Label>
+                                        <Input id="address" className="h-14 bg-gray-50 border-none rounded-sm" placeholder="123 rue de l'Eau" />
+                                    </div>
+                                    <div className="md:col-span-2 grid grid-cols-1 md:grid-cols-3 gap-8">
+                                        <div className="space-y-3 text-left">
+                                            <Label htmlFor="city" className="font-bold flex gap-1">Ville*</Label>
+                                            <Input id="city" className="h-14 bg-gray-50 border-none rounded-sm" placeholder="Montréal" />
+                                        </div>
+                                        <div className="space-y-3 text-left">
+                                            <Label htmlFor="province" className="font-bold flex gap-1">Province*</Label>
+                                            <Input id="province" className="h-14 bg-gray-50 border-none rounded-sm" placeholder="Québec" />
+                                        </div>
+                                        <div className="space-y-3 text-left">
+                                            <Label htmlFor="zip" className="font-bold flex gap-1">Code Postal*</Label>
+                                            <Input id="zip" className="h-14 bg-gray-50 border-none rounded-sm" placeholder="H1A 1A1" />
+                                        </div>
+                                    </div>
+                                    <div className="md:col-span-2 text-left">
+                                        <Button className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-16 h-14 text-xl font-bold w-full md:w-auto">
+                                            Continuer
+                                        </Button>
+                                        <p className="mt-4 text-[10px] text-gray-400 max-w-lg">
+                                            En soumettant ce formulaire, vous acceptez nos conditions d'utilisation et notre politique de confidentialité. Un spécialiste Bricareau vous contactera sous peu.
+                                        </p>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
-
-            {/* Floating Action Buttons */}
-            <div className="fixed right-6 bottom-6 flex flex-col gap-4 z-50">
-                <button className="bg-[#0066FF] text-white w-14 h-14 rounded-full shadow-xl hover:scale-110 transition-all flex items-center justify-center group relative" title="Appelez-nous">
-                    <Phone className="h-6 w-6" />
-                    <span className="absolute right-full mr-4 bg-[#001B3D] text-white py-2 px-4 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap font-bold text-sm">1-800-123-4567</span>
-                </button>
-                <button className="bg-[#00D4AA] text-white w-14 h-14 rounded-full shadow-xl hover:scale-110 transition-all flex items-center justify-center group relative" title="Message">
-                    <MessageSquare className="h-6 w-6" />
-                    <span className="absolute right-full mr-4 bg-[#001B3D] text-white py-2 px-4 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap font-bold text-sm">Discutez avec nous</span>
-                </button>
-            </div>
 
             <Footer />
         </div>

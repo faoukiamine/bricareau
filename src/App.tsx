@@ -14,7 +14,7 @@ import FAQ from "./pages/FAQ";
 import Entreprises from "./pages/Entreprises";
 import CommercialIndustriel from "./pages/CommercialIndustriel";
 import Solutions from "./pages/Solutions";
-import Adoucisseurs from "./pages/Adoucisseurs";
+import Adoucisseurs from "./pages/Adoucissement";
 import AdoucisseurEauResidentiel from "./pages/Adoucisseur-eau-residentiel";
 import ConditionneursSansSel from "./pages/ConditionneursSansSel";
 import OsmoseFiltration from "./pages/OsmoseFiltration";
@@ -46,7 +46,7 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/adoucisseurs-portables" element={<Services />} />
           <Route path="/solutions" element={<Solutions />} />
-          <Route path="/adoucisseurs" element={<Adoucisseurs />} />
+          <Route path="/adoucissement" element={<Adoucisseurs />} />
           <Route path="/adoucisseur-eau-residentiel" element={<AdoucisseurEauResidentiel />} />
           <Route path="/conditionneurs-sans-sel" element={<ConditionneursSansSel />} />
           <Route path="/osmose-filtration" element={<OsmoseFiltration />} />

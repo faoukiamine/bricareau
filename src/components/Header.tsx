@@ -63,14 +63,14 @@ const Header = () => {
   const productMenuItems = [
     {
       name: "Adoucissement d'eau",
-      href: "/adoucisseur-eau-residentiel",
+      href: "/adoucissement",
       hasMegamenu: true,
       megamenuCards: [
         {
           icon: Droplets,
           title: "Adoucisseurs d'eau",
           description: "Traitez le problème de l’eau dure, un problème courant pour les propriétaires de puits et obtenez l’eau la plus douce que vous méritez.",
-          href: "/adoucisseurs"
+          href: "/adoucisseur-eau-residentiel",
         },
         {
           icon: Leaf,
@@ -82,7 +82,7 @@ const Header = () => {
           icon: Caravan,
           title: "Adoucisseurs d'eau portables",
           description: "Traitez le problème de l’eau dure, un problème courant pour les propriétaires de puits et obtenez l’eau la plus douce que vous méritez.",
-          href: "/Adoucisseurs-portables"
+          href: "/adoucisseurs-portables"
         },
 
         {

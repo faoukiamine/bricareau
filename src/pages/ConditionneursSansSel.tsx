@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
+import heroGirl from "@/assets/cute-little-girl-washing-hands.jpg";
 import {
   Leaf,
   Star,
@@ -92,8 +93,8 @@ const ConditionneursSansSel = () => {
         <section className="relative h-[600px] flex items-center overflow-hidden">
           <div className="absolute inset-0 z-0">
             <img
-              src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=2000&auto=format&fit=crop"
-              alt="Famille en cuisine"
+              src={heroGirl}
+              alt="Petite fille se lavant les mains avec l'eau douce"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-black/40 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
@@ -352,72 +353,75 @@ const ConditionneursSansSel = () => {
         {/* Consultation Form Section */}
         <section className="py-24 bg-white border-t border-gray-100">
           <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-16">
-              <div className="lg:w-1/3">
-                <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                  Planifiez votre consultation gratuite sur l'eau
+            <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-20">
+              <div className="lg:w-1/3 text-left">
+                <h2 className="text-3xl md:text-5xl font-bold mb-8 leading-tight italic">
+                  Planifiez une consultation gratuite sur l'eau
                 </h2>
-                <p className="text-gray-600 mb-8 leading-relaxed">
-                  Remplissez le formulaire ci-contre et un de nos experts vous contactera
-                  sous peu pour organiser une visite et analyser votre eau gratuitement.
+                <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                  Remplissez le formulaire ci-dessous pour organiser une visite d'un de nos experts de l'eau.
                 </p>
-                <div className="space-y-6">
-                  <div className="flex items-center gap-4">
-                    <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center">
-                      <Clock className="h-5 w-5 text-blue-600" />
-                    </div>
-                    <span className="font-medium text-gray-700 font-bold">Moins de 10 minutes</span>
-                  </div>
-                  <div className="flex items-center gap-4">
-                    <div className="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center">
-                      <Sparkles className="h-5 w-5 text-green-600" />
-                    </div>
-                    <span className="font-medium text-gray-700 font-bold">100% Gratuit & Sans engagement</span>
-                  </div>
-                </div>
               </div>
 
               <div className="lg:w-2/3">
-                <div className="bg-gray-50 rounded-2xl p-8 border border-gray-100">
-                  <div className="flex items-center gap-8 mb-8 overflow-x-auto pb-4">
+                <div className="bg-white rounded-3xl p-10 border border-gray-100 shadow-2xl">
+                  {/* Progress */}
+                  <div className="flex items-center gap-8 mb-12 overflow-x-auto pb-4 border-b border-gray-100">
                     <div className="flex items-center gap-2 text-blue-600 font-bold whitespace-nowrap">
-                      <span className="w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center text-sm">1</span>
+                      <span className="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center">1</span>
                       VOS INFOS
                     </div>
-                    <div className="flex items-center gap-2 text-gray-400 font-bold whitespace-nowrap">
-                      <span className="w-8 h-8 rounded-full bg-gray-200 text-white flex items-center justify-center text-sm">2</span>
+                    <div className="flex items-center gap-2 text-gray-300 font-bold whitespace-nowrap">
+                      <span className="w-10 h-10 rounded-full bg-gray-200 text-white flex items-center justify-center">2</span>
                       VOTRE DISPONIBILITÉ
                     </div>
-                    <div className="flex items-center gap-2 text-gray-400 font-bold whitespace-nowrap">
-                      <span className="w-8 h-8 rounded-full bg-gray-200 text-white flex items-center justify-center text-sm">3</span>
+                    <div className="flex items-center gap-2 text-gray-300 font-bold whitespace-nowrap">
+                      <span className="w-10 h-10 rounded-full bg-gray-200 text-white flex items-center justify-center">3</span>
                       CONFIRMATION
                     </div>
                   </div>
 
-                  <form className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="space-y-2">
-                      <Label htmlFor="fname">Prénom*</Label>
-                      <Input id="fname" className="h-12 bg-white" placeholder="Jean" />
+                  <form className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div className="space-y-3 text-left">
+                      <Label htmlFor="fname" className="font-bold flex gap-1">Prénom*</Label>
+                      <Input id="fname" className="h-14 bg-gray-50 border-none rounded-sm" placeholder="Jean" />
                     </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="lname">Nom*</Label>
-                      <Input id="lname" className="h-12 bg-white" placeholder="Dupont" />
+                    <div className="space-y-3 text-left">
+                      <Label htmlFor="lname" className="font-bold flex gap-1">Nom*</Label>
+                      <Input id="lname" className="h-14 bg-gray-50 border-none rounded-sm" placeholder="Dupont" />
                     </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="email">Email*</Label>
-                      <Input id="email" type="email" className="h-12 bg-white" placeholder="jean@exemple.com" />
+                    <div className="space-y-3 text-left">
+                      <Label htmlFor="email" className="font-bold flex gap-1">Courriel*</Label>
+                      <Input id="email" type="email" className="h-14 bg-gray-50 border-none rounded-sm" placeholder="jean@exemple.com" />
                     </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="zip">Code Postal*</Label>
-                      <Input id="zip" className="h-12 bg-white" placeholder="H1A 1A1" />
+                    <div className="space-y-3 text-left">
+                      <Label htmlFor="phone" className="font-bold flex gap-1">Téléphone*</Label>
+                      <Input id="phone" type="tel" className="h-14 bg-gray-50 border-none rounded-sm" placeholder="(514) 000-0000" />
                     </div>
-                    <div className="md:col-span-2">
-                      <Button className="w-full md:w-auto bg-blue-600 hover:bg-blue-700 text-white rounded-full px-12 h-14 text-lg font-bold">
-                        Étape suivante
+                    <div className="md:col-span-2 space-y-3 text-left">
+                      <Label htmlFor="address" className="font-bold flex gap-1">Adresse*</Label>
+                      <Input id="address" className="h-14 bg-gray-50 border-none rounded-sm" placeholder="123 rue de l'Eau" />
+                    </div>
+                    <div className="md:col-span-2 grid grid-cols-1 md:grid-cols-3 gap-8">
+                      <div className="space-y-3 text-left">
+                        <Label htmlFor="city" className="font-bold flex gap-1">Ville*</Label>
+                        <Input id="city" className="h-14 bg-gray-50 border-none rounded-sm" placeholder="Montréal" />
+                      </div>
+                      <div className="space-y-3 text-left">
+                        <Label htmlFor="province" className="font-bold flex gap-1">Province*</Label>
+                        <Input id="province" className="h-14 bg-gray-50 border-none rounded-sm" placeholder="Québec" />
+                      </div>
+                      <div className="space-y-3 text-left">
+                        <Label htmlFor="zip" className="font-bold flex gap-1">Code Postal*</Label>
+                        <Input id="zip" className="h-14 bg-gray-50 border-none rounded-sm" placeholder="H1A 1A1" />
+                      </div>
+                    </div>
+                    <div className="md:col-span-2 text-left">
+                      <Button className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-16 h-14 text-xl font-bold w-full md:w-auto">
+                        Continuer
                       </Button>
-                      <p className="mt-4 text-xs text-gray-400 text-center md:text-left">
-                        En soumettant ce formulaire, vous acceptez nos conditions d'utilisation
-                        et notre politique de confidentialité.
+                      <p className="mt-4 text-[10px] text-gray-400 max-w-lg">
+                        En soumettant ce formulaire, vous acceptez nos conditions d'utilisation et notre politique de confidentialité. Un spécialiste Bricareau vous contactera sous peu.
                       </p>
                     </div>
                   </form>
