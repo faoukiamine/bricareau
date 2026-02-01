@@ -10,6 +10,9 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
+import heroProblem from "@/assets/problem_hero_bg.jpg";
+import { Phone } from "lucide-react";
+
 const effects = [
   {
     icon: Home,
@@ -50,7 +53,7 @@ const faqs = [
   },
   {
     question: "Quelles sont les conséquences d'une eau dure sur la peau?",
-    answer: "L'eau dure, qui contient du calcaire, forme avec le savon des sels insolubles, appelés « savon calcaire ». Ce savon calcaire se dépose sur la peau et les cheveux. De nombreuses personnes ressentent alors une sensation de tension sur la peau et se plaignent d'avoir les cheveux ternes et épointés. Avec de l'eau douce, la peau est nettement plus douce et soyeuse, les cheveux plus brillants et souples."
+    answer: "L'eau dure, qui contient du calcaire, forme avec le savon des sels insolubles, appelés « savon calcaire ». Ce savon calcaire se dépose sur la peau et les cheveux. De nombreuses personnes ressentent alors une sensation de tension sur la peau et se plaignent d'avoir les cheveux ternes et épointés. Avec de l'eau douce, la peau est nettement plus douce et soyeuse, les cheveux plus brillantes et souples."
   },
   {
     question: "Pourquoi l'eau dure génère-t-elle plus de travail à la maison?",
@@ -89,32 +92,45 @@ const solutions = [
 
 const EauDure = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background text-slate-900">
       <Header />
       <main>
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-amber-50 via-background to-primary/5 py-16 md:py-24 overflow-hidden">
-          <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto text-center">
-              <div className="inline-flex items-center gap-2 bg-amber-100 rounded-full px-4 py-2 mb-6">
-                <AlertTriangle className="h-5 w-5 text-amber-600" />
-                <span className="text-sm font-medium text-amber-700">Guide éducatif</span>
-              </div>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-                Eau dure & Calcaire :{" "}
-                <span className="text-primary">Comprendre le problème</span>
+        <section className="relative h-[800px] flex items-start overflow-hidden pt-[220px]">
+          <div className="absolute inset-0 z-0">
+            <img
+              src={heroProblem}
+              alt="Problèmes de calcaire"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-black/40 lg:bg-gradient-to-r lg:from-black/70 lg:to-transparent" />
+          </div>
+
+          <div className="container mx-auto px-4 relative z-10">
+            <div className="max-w-3xl text-white">
+              <span className="text-sm font-bold uppercase tracking-widest text-amber-400 mb-4 block">
+                COMPRENDRE LE PROBLÈME
+              </span>
+              <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-6 leading-tight drop-shadow-md">
+                Eau dure & Calcaire
               </h1>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                L'eau dure contient une concentration élevée de minéraux dissous, principalement
-                du calcium et du magnésium. Découvrez ses effets sur votre maison, votre santé
-                et vos équipements, ainsi que les solutions pour y remédier.
+              <p className="text-lg md:text-xl font-medium opacity-95 mb-8 max-w-xl drop-shadow-sm">
+                Découvrez ses effets sur votre maison, votre santé et vos équipements,
+                ainsi que les solutions durables pour y remédier définitivement.
               </p>
-              <Button size="lg" className="rounded-full px-8" asChild>
-                <NavLink to="/water-testing">
-                  Tester la dureté de mon eau
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </NavLink>
-              </Button>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-10 h-14 text-lg font-bold" asChild>
+                  <NavLink to="/water-testing">
+                    Tester la dureté de mon eau
+                  </NavLink>
+                </Button>
+                <Button size="lg" variant="outline" className="bg-white/10 hover:bg-white/20 text-white border-white rounded-full px-10 h-14 text-lg font-bold backdrop-blur-sm shadow-lg" asChild>
+                  <a href="tel:18552649328" className="flex items-center gap-2">
+                    <Phone className="h-5 w-5" />
+                    1-855-264-9328
+                  </a>
+                </Button>
+              </div>
             </div>
           </div>
         </section>

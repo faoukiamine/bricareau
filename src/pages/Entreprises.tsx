@@ -57,7 +57,7 @@ const Entreprises = () => {
 
       <main>
         {/* Hero Section */}
-        <section className="relative h-[800px] flex items-start overflow-hidden pt-[220px]">
+        <section className="relative h-[800px] flex items-start overflow-hidden pt-[120px]">
           <div className="absolute inset-0 z-0">
             <img
               src={heroImage}
@@ -67,7 +67,7 @@ const Entreprises = () => {
             <div className="absolute inset-0 bg-black/30 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
           </div>
 
-          <div className="container mx-auto px-4 relative z-10">
+          <div className="container mx-auto px-4 relative z-10 pt-[100px]">
             <div className="max-w-3xl text-white">
               <span className="text-sm font-bold uppercase tracking-widest text-[#60A5FA] mb-4 block">
                 SOLUTIONS POUR ENTREPRISES

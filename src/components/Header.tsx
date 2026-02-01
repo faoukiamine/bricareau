@@ -152,7 +152,7 @@ const Header = () => {
           icon: Droplets,
           title: "Systèmes de filtration d'eau sous-évier",
           description: "Solutions compactes et efficaces pour une filtration optimale directement sous votre évier.",
-          href: "/osmose-filtration"
+          href: "/Systemes-de-filtration-deau-sous-evier"
         },
         {
           icon: Waves,
@@ -231,7 +231,7 @@ const Header = () => {
           icon: GlassWater,
           title: "Systèmes de désinfection UV",
           description: "Les systèmes de désinfection de l’eau à rayons ultraviolet stérilisent l’approvisionnement en eau de votre maison contre les micro-organismes nuisibles.",
-          href: "/eau-de-puits"
+          href: "/Systemes-de-desinfection-UV"
         },
       ],
       promo: {
@@ -348,7 +348,7 @@ const Header = () => {
   };
 
   // Check if we are on a page that should have a transparent header
-  const isTransparentPage = ["/", "/adoucisseurs-portables", "/adoucissement", "/adoucisseur-eau-residentiel", "/eau-de-puits", "/specialises-filtration-eau", "/conditionneurs-sans-sel", "/entreprises", "/commercial-industriel"].includes(location.pathname);
+  const isTransparentPage = ["/", "/adoucisseurs-portables", "/adoucissement", "/adoucisseur-eau-residentiel", "/eau-de-puits", "/specialises-filtration-eau", "/conditionneurs-sans-sel", "/entreprises", "/commercial-industriel", "/osmose-filtration", "/eau-dure", "/filtration", "/fontaines", "/Systemes-de-filtration-deau-sous-evier", "/Systemes-de-desinfection-UV"].includes(location.pathname);
   const isHeaderTransparent = isTransparentPage && !isScrolled && !isMenuOpen;
 
   return (
@@ -367,7 +367,7 @@ const Header = () => {
           )}
         >
           <div className="container mx-auto px-6 flex items-center justify-center gap-2">
-            <span className="text-sm font-bold">Get Started with a Water Consultation</span>
+            <span className="text-sm font-bold">Obtenez une consultation gratuite sur votre eau</span>
             <ArrowRight className="h-4 w-4" />
           </div>
         </a>

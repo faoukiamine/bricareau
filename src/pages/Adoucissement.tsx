@@ -39,7 +39,7 @@ const Adoucissement = () => {
             <Header />
             <main>
                 {/* 1. Hero Section */}
-                <section className="relative h-[800px] flex items-start overflow-hidden pt-[220px]">
+                <section className="relative h-[850px] flex items-start overflow-hidden pt-[220px]">
                     <div className="absolute inset-0 z-0">
                         <img
                             src={heroBath}

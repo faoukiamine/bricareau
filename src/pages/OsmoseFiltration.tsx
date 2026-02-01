@@ -1,8 +1,10 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Filter, Droplets, Shield, Beaker, Heart, Leaf, Check } from "lucide-react";
+import { ArrowRight, Filter, Droplets, Shield, Beaker, Heart, Leaf, Check, Phone } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
+
+import heroDrink from "@/assets/boire-eau-robinet.jpg";
 
 const contaminants = [
   "Chlore et chloramines",
@@ -70,47 +72,44 @@ const systems = [
 
 const OsmoseFiltration = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background text-slate-900">
       <Header />
       <main>
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-primary/10 via-background to-accent/5 py-16 md:py-24 overflow-hidden">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <div className="inline-flex items-center gap-2 bg-primary/10 rounded-full px-4 py-2 mb-6">
-                  <Filter className="h-5 w-5 text-primary" />
-                  <span className="text-sm font-medium text-primary">Eau pure et saine</span>
-                </div>
-                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-                  Osmose inverse &{" "}
-                  <span className="text-primary">Filtration</span>
-                </h1>
-                <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                  Profitez d'une eau pure et délicieuse directement de votre robinet.
-                  Nos systèmes d'osmose inverse et de filtration éliminent les contaminants,
-                  métaux lourds, chlore et autres impuretés pour une eau de qualité supérieure.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Button size="lg" className="rounded-full px-8" asChild>
-                    <NavLink to="/contact-residentiel">
-                      Demander une consultation
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </NavLink>
-                  </Button>
-                  <Button size="lg" variant="outline" className="rounded-full px-8" asChild>
-                    <a href="tel:18552649328">
-                      Appelez le 1-855-264-9328
-                    </a>
-                  </Button>
-                </div>
-              </div>
-              <div className="relative">
-                <img
-                  src="https://images.unsplash.com/photo-1548839140-29a749e1cf4d?q=80&w=800&auto=format&fit=crop"
-                  alt="Eau pure filtrée"
-                  className="rounded-2xl shadow-2xl"
-                />
+        <section className="relative h-[800px] flex items-start overflow-hidden pt-[220px]">
+          <div className="absolute inset-0 z-0">
+            <img
+              src={heroDrink}
+              alt="Femme buvant de l'eau pure"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-black/20 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
+          </div>
+
+          <div className="container mx-auto px-4 relative z-10">
+            <div className="max-w-2xl text-white">
+              <span className="text-sm font-bold uppercase tracking-widest text-[#60A5FA] mb-4 block">
+                PURETÉ INÉGALÉE
+              </span>
+              <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-6 leading-tight drop-shadow-md">
+                Osmose inverse <br /> & Filtration
+              </h1>
+              <p className="text-lg md:text-xl font-medium opacity-95 mb-8 max-w-xl drop-shadow-sm">
+                Profitez d'une eau pure et délicieuse directement de votre robinet.
+                Nos systèmes éliminent 99% des contaminants pour une tranquillité d'esprit totale.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-10 h-14 text-lg font-bold" asChild>
+                  <NavLink to="/contact-residentiel">
+                    Demander une consultation
+                  </NavLink>
+                </Button>
+                <Button size="lg" variant="outline" className="bg-white/10 hover:bg-white/20 text-white border-white rounded-full px-10 h-14 text-lg font-bold backdrop-blur-sm shadow-lg" asChild>
+                  <a href="tel:18552649328" className="flex items-center gap-2">
+                    <Phone className="h-5 w-5" />
+                    1-855-264-9328
+                  </a>
+                </Button>
               </div>
             </div>
           </div>

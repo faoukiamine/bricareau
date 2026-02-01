@@ -127,74 +127,112 @@ const EauDePuits = () => {
           </div>
         </section>
 
-        {/* Problems Grid */}
-        <section className="py-24 bg-white">
+        {/* Problems Grid - Redesigned Staggered Layout */}
+        <section className="py-32 bg-[#F8F9FA] overflow-hidden">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-5xl font-bold text-[#001B3D] mb-6">
-                Problèmes courants de l'eau de puits
+            {/* Title Header - Above Grid */}
+            <div className="mb-4 max-w-4xl">
+              <span className="text-blue-600 text-xs font-bold uppercase tracking-[0.3em] mb-6 block">
+                ANALYSE TECHNIQUE
+              </span>
+              <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold text-slate-900 leading-[1.1] tracking-tighter mb-8">
+                Problèmes courants <br /> de l'eau de puits.
               </h2>
-              <div className="w-24 h-1.5 bg-blue-600 mx-auto rounded-full mb-8" />
-              <p className="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
-                De nombreux facteurs influent sur la qualité de l’eau de votre
-                puits, comme l’emplacement, la pollution et les éléments
-                présents dans le sol. Du suivi intelligent des contaminants aux
-                filtres personnalisés, Bricareau propose des systèmes de
-                filtration d’eau pour l’eau de puits qui peuvent cibler vos
-                problèmes particuliers et répondre aux besoins de votre maison.
+              <p className="text-slate-500 text-xl leading-relaxed font-medium max-w-2xl">
+                Identifiez les signes d'une contamination ou d'un déséquilibre chimique dans votre eau.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {problems.map((problem, index) => (
-                <div
-                  key={index}
-                  className="group h-[400px] [perspective:1000px] cursor-pointer"
-                >
-                  <div className="relative h-full w-full transition-all duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-                    {/* Front Side */}
-                    <div className="absolute inset-0 h-full w-full rounded-2xl overflow-hidden [backface-visibility:hidden] shadow-lg border border-gray-100">
-                      <img
-                        src={problem.image}
-                        alt={problem.title}
-                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-                      />
-                      <div className="absolute inset-0 bg-transparent flex flex-col justify-center items-center">
-                        {problem.isLabelTitle ? (
-                          <div className="bg-[#0060B9] text-white px-2 py-1 font-bold text-center leading-tight shadow-md">
-                            {problem.title.split(" ").map((word, i) => (
-                              <div key={i}>{word}</div>
-                            ))}
-                          </div>
-                        ) : (
-                          <div className="bg-gradient-to-t from-black/80 via-black/20 to-transparent absolute inset-0 flex flex-col justify-end p-8">
-                            <h3 className="text-2xl font-bold text-white mb-2 transform transition-transform duration-500 group-hover:-translate-y-2 uppercase">
-                              {problem.title}
-                            </h3>
-                            <div className="w-12 h-1 bg-blue-500 rounded-full" />
-                          </div>
-                        )}
-                      </div>
-                    </div>
-
-                    {/* Back Side */}
-                    <div className="absolute inset-0 h-full w-full rounded-2xl bg-[#001B3D] p-10 text-white [transform:rotateY(180deg)] [backface-visibility:hidden] flex flex-col justify-center items-center text-center shadow-xl">
-                      <div className="w-16 h-16 rounded-full bg-blue-600/20 flex items-center justify-center mb-6">
-                        <Droplets className="h-8 w-8 text-blue-400" />
-                      </div>
-                      <h3 className="text-xl font-bold mb-4 uppercase tracking-wider">
-                        {problem.title}
-                      </h3>
-                      <p className="text-blue-50/90 leading-relaxed text-sm md:text-base italic">
-                        "{problem.desc}"
-                      </p>
-                      <div className="mt-8 flex items-center gap-2 text-blue-400 text-sm font-bold">
-                        EN SAVOIR PLUS <ChevronRight className="h-4 w-4" />
+            {/* Layout Grid */}
+            <div className="relative">
+              {/* Desktop Staggered Grid (XL+) */}
+              <div className="hidden xl:grid grid-cols-4 gap-8 min-h-[900px]">
+                {/* Column 1 */}
+                <div className="pt-[300px]">
+                  <div className="group cursor-pointer transition-all duration-500">
+                    <div className="relative h-[320px] rounded-[2.5rem] overflow-hidden bg-slate-200 shadow-2xl shadow-slate-200/50 transition-all duration-700 group-hover:scale-[1.03] group-hover:-translate-y-2">
+                      <img src={problems[0].image} alt={problems[0].title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
+                      <div className="absolute inset-0 bg-black/20 group-hover:bg-black/60 transition-colors duration-500" />
+                      <div className="absolute inset-0 p-8 flex flex-col justify-end text-white text-left">
+                        <span className="text-[10px] font-black uppercase tracking-[0.4em] mb-4 opacity-70 group-hover:opacity-100 transition-opacity">PROBLÈME 1</span>
+                        <h3 className="text-xl font-bold leading-tight group-hover:mb-4 transition-all duration-500">{problems[0].title}</h3>
+                        <p className="text-xs opacity-0 h-0 group-hover:opacity-100 group-hover:h-auto transition-all duration-500 leading-relaxed font-medium">{problems[0].desc}</p>
                       </div>
                     </div>
                   </div>
                 </div>
-              ))}
+
+                {/* Column 2 */}
+                <div className="pt-[110px] flex flex-col gap-16">
+                  {[1, 2].map((idx) => (
+                    <div key={idx} className="group cursor-pointer transition-all duration-500">
+                      <div className="relative h-[320px] rounded-[2.5rem] overflow-hidden bg-slate-200 shadow-2xl shadow-slate-200/50 transition-all duration-700 group-hover:scale-[1.03] group-hover:-translate-y-2">
+                        <img src={problems[idx].image} alt={problems[idx].title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
+                        <div className="absolute inset-0 bg-black/20 group-hover:bg-black/60 transition-colors duration-500" />
+                        <div className="absolute inset-0 p-8 flex flex-col justify-end text-white text-left">
+                          <span className="text-[10px] font-black uppercase tracking-[0.4em] mb-4 opacity-70 group-hover:opacity-100 transition-opacity">PROBLÈME {idx + 1}</span>
+                          <h3 className="text-xl font-bold leading-tight group-hover:mb-4 transition-all duration-500">{problems[idx].title}</h3>
+                          <p className="text-xs opacity-0 h-0 group-hover:opacity-100 group-hover:h-auto transition-all duration-500 leading-relaxed font-medium">{problems[idx].desc}</p>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Column 3 */}
+                <div className="pt-[0px] flex flex-col gap-16">
+                  {[3, 4].map((idx) => (
+                    <div key={idx} className="group cursor-pointer transition-all duration-500">
+                      <div className="relative h-[320px] rounded-[2.5rem] overflow-hidden bg-slate-200 shadow-2xl shadow-slate-200/50 transition-all duration-700 group-hover:scale-[1.03] group-hover:-translate-y-2">
+                        <img src={problems[idx].image} alt={problems[idx].title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
+                        <div className="absolute inset-0 bg-black/20 group-hover:bg-black/60 transition-colors duration-500" />
+                        <div className="absolute inset-0 p-8 flex flex-col justify-end text-white text-left">
+                          <span className="text-[10px] font-black uppercase tracking-[0.4em] mb-4 opacity-70 group-hover:opacity-100 transition-opacity">PROBLÈME {idx + 1}</span>
+                          <h3 className="text-xl font-bold leading-tight group-hover:mb-4 transition-all duration-500">{problems[idx].title}</h3>
+                          <p className="text-xs opacity-0 h-0 group-hover:opacity-100 group-hover:h-auto transition-all duration-500 leading-relaxed font-medium">{problems[idx].desc}</p>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Column 4 */}
+                <div className="pt-[260px]">
+                  <div className="group cursor-pointer transition-all duration-500">
+                    <div className="relative h-[320px] rounded-[2.5rem] overflow-hidden bg-slate-200 shadow-2xl shadow-slate-200/50 transition-all duration-700 group-hover:scale-[1.03] group-hover:-translate-y-2">
+                      <img src={problems[5].image} alt={problems[5].title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
+                      <div className="absolute inset-0 bg-black/20 group-hover:bg-black/60 transition-colors duration-500" />
+                      <div className="absolute inset-0 p-8 flex flex-col justify-end text-white text-left">
+                        <span className="text-[10px] font-black uppercase tracking-[0.4em] mb-4 opacity-70 group-hover:opacity-100 transition-opacity">PROBLÈME 6</span>
+                        <h3 className="text-xl font-bold leading-tight group-hover:mb-4 transition-all duration-500">{problems[5].title}</h3>
+                        <p className="text-xs opacity-0 h-0 group-hover:opacity-100 group-hover:h-auto transition-all duration-500 leading-relaxed font-medium">{problems[5].desc}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Tablet/Mobile Responsive Grid */}
+              <div className="xl:hidden grid grid-cols-1 md:grid-cols-2 gap-8">
+                {problems.map((problem, index) => (
+                  <div key={index} className="group cursor-pointer">
+                    <div className="relative h-[400px] rounded-[2rem] overflow-hidden bg-slate-200 shadow-xl shadow-slate-200/30">
+                      <img
+                        src={problem.image}
+                        alt={problem.title}
+                        className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-8 flex flex-col justify-end text-white">
+                        <span className="text-[10px] font-black uppercase tracking-[0.4em] mb-3 opacity-80">
+                          PROBLÈME {index + 1}
+                        </span>
+                        <h3 className="text-2xl font-bold mb-4">{problem.title}</h3>
+                        <p className="text-sm leading-relaxed opacity-90">{problem.desc}</p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>
@@ -297,7 +335,9 @@ const EauDePuits = () => {
         <section className="bg-white py-24">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">Découvrez nos solutions de traitement de l'eau de puits</h2>
+              <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold text-slate-900 leading-[1.1] tracking-tighter mb-8">
+                Découvrez nos solutions <br />de traitement de l'eau de puits.
+              </h2>
               <p className="text-gray-500 text-lg max-w-2xl mx-auto">
                 Optimisez votre expérience de traitement d'eau avec nos solutions complémentaires.
               </p>
@@ -353,12 +393,14 @@ const EauDePuits = () => {
         {/* Comparison Table Section */}
         <section className="py-24 bg-gray-50">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl md:text-5xl font-bold mb-16 text-center">Comparez les systèmes de traitement de l'eau de puits</h2>
+            <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold text-slate-900 leading-[1.1] tracking-tighter mb-8">
+                Comparez nos solutions <br />de traitement de l'eau de puits.
+              </h2>
             <div className="overflow-x-auto">
               <table className="w-full min-w-[1000px] border-collapse bg-white rounded-2xl overflow-hidden shadow-sm">
                 <thead>
                   <tr className="bg-gray-100">
-                    <th className="p-8 text-left text-gray-400 font-medium uppercase tracking-wider">Modèles</th>
+                    <th className="p-8 text-left text-gray-400 font-medium uppercase tracking-wider">Solutions</th>
                     {[
                       { name: "Systèmes spécialisés de filtration d'eau", img: specializedFiltersImg },
                       { name: "Adoucisseurs d'eau", img: waterSoftenerImg },
@@ -438,9 +480,9 @@ const EauDePuits = () => {
         {/* 10. FAQ Section */}
         <section className="py-24 bg-white">
           <div className="container mx-auto px-4 max-w-4xl">
-            <h2 className="text-3xl font-bold mb-12 text-center underline decoration-blue-600 underline-offset-8">
-              FAQ sur l'eau de puits
-            </h2>
+             <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold text-slate-900 leading-[1.1] tracking-tighter mb-8">
+                FAQ sur nos solutions <br />de traitement de l'eau de puits.
+              </h2>
             <Accordion type="single" collapsible className="w-full">
               {[
                 {

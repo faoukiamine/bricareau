@@ -32,6 +32,8 @@ import Pieces from "./pages/Pieces";
 import Manuels from "./pages/Manuels";
 import Promotions from "./pages/Promotions";
 import SpecializedFiltration from "./pages/SpecializedFiltration";
+import FiltrationSousEvier from "./pages/Systemes-de-filtration-deau-sous-evier";
+import DesinfectionUV from "./pages/Systemes-de-desinfection-UV";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -55,6 +57,8 @@ const App = () => (
           <Route path="/eau-de-puits" element={<EauDePuits />} />
           <Route path="/filtration" element={<Filtration />} />
           <Route path="/specialises-filtration-eau" element={<SpecializedFiltration />} />
+          <Route path="/Systemes-de-filtration-deau-sous-evier" element={<FiltrationSousEvier />} />
+          <Route path="/Systemes-de-desinfection-UV" element={<DesinfectionUV />} />
           <Route path="/fontaines" element={<Fontaines />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/guides" element={<Guides />} />
