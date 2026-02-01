@@ -43,9 +43,6 @@ const Hero = () => {
               <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 text-lg font-bold" asChild>
                 <NavLink to="/contact-residentiel">Explorez nos solutions</NavLink>
               </Button>
-              <Button size="lg" variant="outline" className="bg-white/10 hover:bg-white/20 text-white border-white rounded-full px-8 h-14 text-lg font-bold backdrop-blur-sm" asChild>
-                <NavLink to="/adoucissement">Planifiez une consultation</NavLink>
-              </Button>
             </div>
           </div>
         </div>
