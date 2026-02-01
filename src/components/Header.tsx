@@ -81,7 +81,7 @@ const Header = () => {
         {
           icon: Caravan,
           title: "Adoucisseurs d'eau portables",
-          description: "Traitez le problème de l’eau dure, un problème courant pour les propriétaires de puits et obtenez l’eau la plus douce que vous méritez.",
+          description: "La solution flexible pour une eau douce sans installation permanente. Idéal pour les VR et résidences secondaires.",
           href: "/adoucisseurs-portables"
         },
 
@@ -108,25 +108,25 @@ const Header = () => {
           icon: GlassWater,
           title: "Filtres d'eau pour toute la maison",
           description: "Protection complète de votre maison avec une filtration centralisée pour toute l'eau.",
-          href: "/filtration/maison-complete"
+          href: "/filtration"
         },
         {
           icon: Filter,
           title: "Stations d'eau potable",
           description: "Profitez d'une eau pure et saine directement de votre robinet avec nos systèmes de filtration avancés.",
-          href: "/filtration/stations-eau-potable"
+          href: "/osmose-filtration"
         },
         {
           icon: Droplets,
           title: "Systèmes de filtration d'eau sous-évier",
           description: "Solutions compactes et efficaces pour une filtration optimale directement sous votre évier.",
-          href: "/filtration/sous-evier"
+          href: "/osmose-filtration"
         },
         {
           icon: Waves,
           title: "Cartouches filtrantes de remplacement",
           description: "Maintenez la performance optimale de vos systèmes avec nos cartouches de qualité.",
-          href: "/filtration/cartouches-filtrantes"
+          href: "/pieces"
         },
       ],
       promo: {
@@ -179,7 +179,7 @@ const Header = () => {
       megamenuCards: [
         {
           icon: Droplets,
-          title: "Analyse de l'eau",
+          title: "Analyses & Tests d'eau",
           description: "Tests complets pour identifier les contaminants et problèmes de qualité de votre eau de puits.",
           href: "/water-testing"
         },
@@ -191,17 +191,15 @@ const Header = () => {
         },
         {
           icon: Filter,
-          title: "Adoucisseurs d'eau",
+          title: "Adoucisseurs d'eau de puits",
           description: "Dites adieu aux problèmes de calcaire ! Nos adoucisseurs d’eau traitent durablement l’eau contre ses méfaits pour vous faire bénéficier d’une eau douce toute l’année.",
-          href: "/eau-de-puits/adoucisseurs"
+          href: "/adoucisseur-eau-residentiel"
         },
         {
           icon: GlassWater,
           title: "Systèmes de désinfection UV",
-          description: "Les systèmes de désinfection de l’eau à rayons ultraviolet stérilisent l’approvisionnement en eau de votre maison contre les micro-organismes nuisibles, les bactéries, les moisissures et les virus.",
-
-
-          href: "/eau-de-puits/uv"
+          description: "Les systèmes de désinfection de l’eau à rayons ultraviolet stérilisent l’approvisionnement en eau de votre maison contre les micro-organismes nuisibles.",
+          href: "/eau-de-puits"
         },
       ],
       promo: {

@@ -9,7 +9,7 @@ import { Label } from "@/components/ui/label";
 import TestimonialsSection from "@/components/TestimonialsSection";
 
 // Assets
-import heroImg from "@/assets/blog-10-copyright.jpg";
+import heroImg from "@/assets/csm_visuel1_920x630_0_09518aee48.jpg";
 import specializedFiltersImg from "@/assets/Filtres d'eau spécialisés.webp";
 import ironCleerImg from "@/assets/Filtration-eau-de-puits.webp";
 import uvSystemImg from "@/assets/Systèmes de désinfection UV.webp";
