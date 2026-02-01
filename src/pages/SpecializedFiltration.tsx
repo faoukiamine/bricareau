@@ -44,7 +44,7 @@ const SpecializedFiltration = () => {
             <Header />
             <main>
                 {/* Hero Section */}
-                <section className="relative h-[750px] flex items-center overflow-hidden">
+                <section className="relative h-[800px] flex items-start overflow-hidden pt-[220px]">
                     <div className="absolute inset-0 z-0">
                         <img
                             src={heroImg}
@@ -63,11 +63,11 @@ const SpecializedFiltration = () => {
                                 Systèmes de filtration d'eau de puits <br />pour une eau sans pareille
                             </h1>
                             <p className="text-lg md:text-xl font-medium opacity-90 mb-8 max-w-xl drop-shadow-sm">
-                                L'eau des puits privés n'étant pas réglementée par le gouvernement fédéral, 
-                                la qualité et la sécurité de l'eau sont la responsabilité du propriétaire - 
-                                et les problèmes potentiels ne sont pas toujours évidents. Les tests d'eau 
-                                à domicile avec Culligan sont un excellent point de départ. Nos systèmes de 
-                                filtration d'eau de puits vous offrent une eau plus propre et plus sûre et 
+                                L'eau des puits privés n'étant pas réglementée par le gouvernement fédéral,
+                                la qualité et la sécurité de l'eau sont la responsabilité du propriétaire -
+                                et les problèmes potentiels ne sont pas toujours évidents. Les tests d'eau
+                                à domicile avec Culligan sont un excellent point de départ. Nos systèmes de
+                                filtration d'eau de puits vous offrent une eau plus propre et plus sûre et
                                 une tranquillité d'esprit du matin au soir.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4">

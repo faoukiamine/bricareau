@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import Testimonials from "@/components/Testimonials";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import { Button } from "@/components/ui/button";
 
 const CommercialIndustriel = () => {
   const solutions = [
@@ -75,38 +76,46 @@ const CommercialIndustriel = () => {
 
       <main>
         {/* Hero Section */}
-        <section className="relative min-h-[500px] md:min-h-[600px] flex items-center">
-          <div className="absolute inset-0">
+        <section className="relative h-[800px] flex items-start overflow-hidden pt-[220px]">
+          <div className="absolute inset-0 z-0">
             <img
               src={heroImage}
               alt="Installation industrielle de traitement d'eau"
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-transparent" />
+            <div className="absolute inset-0 bg-black/30 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
           </div>
 
           <div className="container mx-auto px-4 relative z-10">
-            <div className="max-w-2xl space-y-6">
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
-                Bricareau, votre partenaire de confiance en matière de traitement de l'eau
+            <div className="max-w-2xl text-white">
+              <span className="text-sm font-bold uppercase tracking-widest text-[#60A5FA] mb-4 block">
+                TRAITEMENT D'EAU INDUSTRIEL
+              </span>
+              <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-6 leading-tight drop-shadow-md">
+                Bricareau, votre partenaire de confiance
               </h1>
-              <p className="text-lg md:text-xl text-muted-foreground">
-                Notre mission est de vous offrir une tranquillité d'esprit dans vos projets de traitement de l'eau.
+              <p className="text-lg md:text-xl font-medium opacity-90 mb-8 max-w-xl drop-shadow-sm">
+                Notre mission est de vous offrir une tranquillité d'esprit dans vos projets de traitement de l'eau les plus exigeants.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <a
-                  href="#solutions"
-                  className="inline-flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground font-medium rounded-md hover:bg-primary/90 transition-colors"
+                <Button
+                  size="lg"
+                  className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-10 h-14 text-lg font-bold"
+                  asChild
                 >
-                  Explorez nos solutions
-                </a>
-                <a
-                  href="tel:18552649328"
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-secondary text-secondary-foreground font-medium rounded-md hover:bg-secondary/80 transition-colors"
+                  <a href="#solutions">Explorez nos solutions</a>
+                </Button>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="bg-white/10 hover:bg-white/20 text-white border-white rounded-full px-10 h-14 text-lg font-bold backdrop-blur-sm"
+                  asChild
                 >
-                  <Phone className="h-4 w-4" />
-                  Appelez le 1-855-264-9328
-                </a>
+                  <a href="tel:18552649328" className="flex items-center gap-2">
+                    <Phone className="h-5 w-5" />
+                    1-855-264-9328
+                  </a>
+                </Button>
               </div>
             </div>
           </div>

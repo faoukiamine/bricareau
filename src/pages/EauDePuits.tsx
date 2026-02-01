@@ -14,6 +14,7 @@ import waterTasteThumb from "@/assets/water-taste.jpg";
 import turbideWaterThumb from "@/assets/Turbide-Water.webp";
 import taninWaterThumb from "@/assets/problemes-deau-tanin.jpg";
 import corrosiveWaterThumb from "@/assets/Corrosive-Water.webp";
+import waterTestBg from "@/assets/Enercare_JP_Day_2_Kitchen_Faucet_498-2048x1365.jpg";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -64,49 +65,7 @@ const problems: Problem[] = [
   },
 ];
 
-interface ProcessStep {
-  step: number;
-  title: string;
-  desc: string;
-  color: string;
-  borderColor: string;
-  textColor: string;
-}
 
-const processSteps: ProcessStep[] = [
-  {
-    step: 1,
-    title: "Analyse complète de l'eau",
-    desc: "Nous effectuons un test approfondi de votre eau de puits pour identifier tous les contaminants présents.",
-    color: "bg-orange-400",
-    borderColor: "border-orange-400",
-    textColor: "text-orange-400",
-  },
-  {
-    step: 2,
-    title: "Diagnostic personnalisé",
-    desc: "Nos experts analysent les résultats et conçoivent une solution sur mesure pour vos besoins spécifiques.",
-    color: "bg-blue-400",
-    borderColor: "border-blue-400",
-    textColor: "text-blue-400",
-  },
-  {
-    step: 3,
-    title: "Installation professionnelle",
-    desc: "Notre équipe installe le système de traitement adapté avec le plus grand soin et professionnalisme.",
-    color: "bg-rose-400",
-    borderColor: "border-rose-400",
-    textColor: "text-rose-400",
-  },
-  {
-    step: 4,
-    title: "Suivi et entretien",
-    desc: "Nous assurons un suivi régulier et l'entretien de votre système pour garantir une eau de qualité continue.",
-    color: "bg-emerald-400",
-    borderColor: "border-emerald-400",
-    textColor: "text-emerald-400",
-  },
-];
 
 const comparisonData = [
   { feature: "Technologie High Efficiency", high: true, selectPlus: true, connect: true, select: false, medallist: false },
@@ -122,7 +81,7 @@ const EauDePuits = () => {
       <Header />
       <main>
         {/* Hero Section */}
-        <section className="relative h-[750px] flex items-center overflow-hidden">
+        <section className="relative h-[800px] flex items-start overflow-hidden pt-[220px]">
           <div className="absolute inset-0 z-0">
             <img
               src={heroPuits}
@@ -240,93 +199,96 @@ const EauDePuits = () => {
           </div>
         </section>
 
-        {/* Process Section */}
-        <section className="py-20 bg-white relative overflow-hidden">
+        {/* 4. SECTION PROCESSUS - Minimalist 4-Step Design */}
+        <section className="bg-white py-32 border-t border-gray-50">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-20">
-              <h2 className="text-3xl md:text-5xl font-bold text-[#001B3D] mb-6">
-                Notre processus en 4 étapes
-              </h2>
-              <div className="w-24 h-1.5 bg-blue-600 mx-auto rounded-full" />
+            {/* Header Layout */}
+            <div className="mb-24">
+              <span className="text-[#888] text-xs font-bold uppercase tracking-[0.3em] mb-6 block">
+                NOTRE FONCTIONNEMENT
+              </span>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-end">
+                <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold text-black leading-[1] tracking-tighter">
+                  Un service simple <br />& sans souci.
+                </h2>
+                <p className="text-[#666] text-xl leading-relaxed max-w-xl lg:ml-auto">
+                  De l'analyse initiale à l'installation certifiée, nous gérons chaque étape technique pour vous garantir une eau de puits parfaitement saine.
+                </p>
+              </div>
             </div>
 
-            <div className="relative max-w-6xl mx-auto">
-              {/* Central Hub (Visible on desktop) */}
-              <div className="hidden lg:block absolute left-0 top-1/2 -translate-y-1/2 w-72 h-72">
-                <div className="relative w-full h-full flex items-center justify-center">
-                  {/* Outer segments */}
-                  <div className="absolute inset-0 rounded-full border-[12px] border-gray-100" />
-                  <div className="absolute inset-0 rounded-full border-[12px] border-t-orange-400 border-r-blue-400 border-b-rose-400 border-l-emerald-400 rotate-45" />
-
-                  {/* Center Label */}
-                  <div className="z-10 bg-white p-8 rounded-full shadow-xl border border-gray-50 flex flex-col items-center justify-center text-center">
-                    <div className="flex gap-1 mb-2">
-                      <div className="w-2 h-2 rounded-full bg-orange-400" />
-                      <div className="w-2 h-2 rounded-full bg-blue-400" />
-                      <div className="w-2 h-2 rounded-full bg-rose-400" />
+            {/* 4-Step Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+              {[
+                {
+                  title: "Analyse d'eau",
+                  desc: "Nous effectuons un test approfondi en laboratoire pour identifier les contaminants spécifiques à votre puits."
+                },
+                {
+                  title: "Diagnostic Global",
+                  desc: "Nos experts conçoivent une solution de filtration sur mesure adaptée à la chimie unique de votre eau."
+                },
+                {
+                  title: "Installation Experte",
+                  desc: "Nos techniciens certifiés installent vos systèmes avec une précision professionnelle pour une performance durable."
+                },
+                {
+                  title: "Suivi de Qualité",
+                  desc: "Nous assurons des tests de suivi et un entretien régulier pour garantir la sécurité continue de votre foyer."
+                }
+              ].map((step, idx) => (
+                <div key={idx} className="flex flex-col animate-in fade-in slide-in-from-bottom duration-700" style={{ animationDelay: `${idx * 100}ms` }}>
+                  {/* Circle Indicator with Number */}
+                  <div className="relative mb-8">
+                    <div className="w-24 h-24 rounded-full bg-[#E5E5E5] flex items-center justify-center">
                     </div>
-                    <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest leading-none mb-1">
-                      Bricareau
-                    </span>
-                    <span className="text-sm font-black text-gray-900 uppercase">
-                      Processus
-                    </span>
+                    <div className="absolute -top-2 -left-2 w-10 h-10 rounded-full bg-black text-white flex items-center justify-center text-sm font-bold">
+                      {idx + 1}
+                    </div>
                   </div>
 
-                  {/* Connecting Dots and Lines */}
-                  <div className="absolute left-full top-1/2 w-20 h-[1px] bg-dashed border-t-2 border-dashed border-gray-200 -translate-y-1/2" />
+                  <h3 className="text-2xl font-bold mb-4 text-black tracking-tight">{step.title}</h3>
+                  <p className="text-[#888] text-lg leading-relaxed">
+                    {step.desc}
+                  </p>
                 </div>
-              </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-              {/* Steps List */}
-              <div className="lg:ml-80 space-y-8 relative">
-                {/* Visual Connection Line (Desktop) */}
-                <div className="hidden lg:block absolute -left-10 top-10 bottom-10 w-[2px] bg-dashed border-l-2 border-dashed border-gray-200" />
+        {/* 5. SECTION TESTS D'EAU - Full Background with Overlaid Content Box */}
+        <section className="relative min-h-[700px] flex items-center overflow-hidden">
+          {/* Background Image */}
+          <div className="absolute inset-0 z-0">
+            <img
+              src={waterTestBg}
+              alt="Test d'eau en laboratoire"
+              className="w-full h-full object-cover"
+            />
+            {/* Subtle overlay to ensure the white box pops and the image isn't too distracting */}
+            <div className="absolute inset-0 bg-black/10" />
+          </div>
 
-                {processSteps.map((item, idx) => (
-                  <div
-                    key={idx}
-                    className="group relative flex flex-col md:flex-row items-center gap-6 md:gap-0"
-                  >
-                    {/* Circle Number */}
-                    <div
-                      className={`relative z-10 w-24 h-24 md:w-32 md:h-32 shrink-0 rounded-full bg-white shadow-xl border-4 ${item.borderColor} flex items-center justify-center transition-transform group-hover:scale-105 duration-300`}
-                    >
-                      <span
-                        className={`text-5xl md:text-6xl font-black ${item.textColor} italic opacity-20 absolute`}
-                      >
-                        {item.step}
-                      </span>
-                      <span
-                        className={`text-4xl md:text-5xl font-black ${item.textColor} relative`}
-                      >
-                        {item.step}
-                      </span>
-                      {/* Connection Dot */}
-                      <div
-                        className={`hidden md:block absolute -left-2 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full ${item.color} border-4 border-white`}
-                      />
-                    </div>
-
-                    {/* Text Card */}
-                    <div
-                      className={`flex-grow bg-white p-8 md:pl-16 md:pr-12 rounded-3xl md:rounded-r-full md:rounded-l-none border-t border-r border-b border-gray-100 shadow-sm md:-ml-8 relative`}
-                    >
-                      <h3 className="text-xl font-bold text-gray-900 mb-2 uppercase tracking-tight">
-                        {item.title}
-                      </h3>
-                      <p className="text-gray-500 leading-relaxed max-w-xl">
-                        {item.desc}
-                      </p>
-
-                      {/* Color Bar (Desktop end pill) */}
-                      <div
-                        className={`hidden md:block absolute right-4 top-1/2 -translate-y-1/2 w-1.5 h-12 rounded-full ${item.color}`}
-                      />
-                    </div>
-                  </div>
-                ))}
-              </div>
+          <div className="container mx-auto px-4 relative z-10 flex justify-start">
+            <div className="max-w-2xl bg-white p-10 md:p-20 shadow-2xl animate-in fade-in slide-in-from-left duration-1000">
+              <span className="text-[#888] text-xs font-bold uppercase tracking-[0.3em] mb-10 block">
+                ANALYSE PROFESSIONNELLE
+              </span>
+              <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold text-black leading-[1.05] tracking-tighter mb-10">
+                Des tests d'eau précis <br />
+                pour votre sécurité.
+              </h2>
+              <p className="text-[#666] text-xl leading-relaxed mb-14 max-w-lg">
+                Ne devinez pas la qualité de votre eau. Nos analyses approfondies identifient les bactéries, les minéraux et les contaminants chimiques pour vous offrir une tranquillité d'esprit totale.
+              </p>
+              <Button
+                size="lg"
+                className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-10 h-14 text-lg font-bold transition-all shadow-lg"
+                asChild
+              >
+                <NavLink to="/water-testing">En savoir plus</NavLink>
+              </Button>
             </div>
           </div>
         </section>

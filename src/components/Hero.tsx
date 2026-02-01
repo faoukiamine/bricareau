@@ -5,7 +5,7 @@ import heroVideo from "../assets/hero-uhd_3840_2160_30fps.mp4";
 const Hero = () => {
 
   return (
-    <section className="relative w-full h-[750px] flex items-center overflow-hidden">
+    <section className="relative w-full h-[800px] flex items-start overflow-hidden pt-[220px]">
       {/* Background image with overlay */}
       {/* Background video with overlay */}
       <div className="absolute inset-0 z-0 overflow-hidden">

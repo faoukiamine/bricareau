@@ -38,7 +38,7 @@ const AdoucisseursPortables = () => {
             <Header />
 
             {/* 2. SECTION HÉRO */}
-            <section className="relative h-[750px] flex items-center pt-24 pb-48 overflow-hidden">
+            <section className="relative h-[800px] flex items-start pt-[220px] overflow-hidden">
                 {/* Background Image & Overlays */}
                 <div className="absolute inset-0 z-0">
                     <img
@@ -135,51 +135,61 @@ const AdoucisseursPortables = () => {
                 </div>
             </section>
 
-            {/* 4. SECTION "QUE FAUT-IL ATTENDRE" */}
-            <section className="bg-white py-24">
+            {/* 4. SECTION PROCESSUS - Minimalist 4-Step Design */}
+            <section className="bg-white py-32 border-t border-gray-50">
                 <div className="container mx-auto px-4">
-                    <div className="text-center mb-16">
-                        <h2 className="text-4xl font-bold text-gray-900 mb-4">Que faut-il attendre</h2>
-                        <div className="w-20 h-1.5 bg-[#00D4AA] mx-auto rounded-full"></div>
+                    {/* Header Layout */}
+                    <div className="mb-24">
+                        <span className="text-[#888] text-xs font-bold uppercase tracking-[0.3em] mb-6 block">
+                            NOTRE FONCTIONNEMENT
+                        </span>
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-end">
+                            <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold text-black leading-[1] tracking-tighter">
+                                Un service simple <br />& sans souci.
+                            </h2>
+                            <p className="text-[#666] text-xl leading-relaxed max-w-xl lg:ml-auto">
+                                De l'installation initiale à la livraison régulière de sel, nous gérons chaque détail technique pour vous garantir une eau parfaite en permanence.
+                            </p>
+                        </div>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    {/* 4-Step Grid */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
                         {[
                             {
-                                icon: CheckCircle2,
-                                title: 'Commodité',
-                                desc: 'Nous gérons tout le travail. Pas de sel à porter, pas d\'entretien à effectuer par vous-même.'
+                                title: "Analyse d'eau",
+                                desc: "Nous commençons par un test complet pour calibrer votre adoucisseur portable selon vos besoins spécifiques."
                             },
                             {
-                                icon: ShieldCheck,
-                                title: 'Rentabilité',
-                                desc: 'Économisez sur les réparations et le remplacement prématuré des appareils ménagers dû à l\'eau dure.'
+                                title: "Installation Rapide",
+                                desc: "Nos techniciens installent votre système portatif en quelques minutes, sans travaux lourds ni plomberie complexe."
                             },
                             {
-                                icon: Droplets,
-                                title: 'Économies d\'eau',
-                                desc: 'Nos systèmes optimisés réduisent le gaspillage d\'eau lors des cycles de régénération.'
+                                title: "Cycles d'Échange",
+                                desc: "Recevez des unités fraîchement régénérées selon un calendrier simplifié qui s'adapte à votre consommation réelle."
                             },
                             {
-                                icon: Waves,
-                                title: 'Conformité communicative',
-                                desc: 'Des solutions respectueuses de l\'environnement conformes aux réglementations locales.'
+                                title: "Suivi & Support",
+                                desc: "Une assistance continue et des vérifications de routine pour s'assurer que votre eau reste d'une qualité irréprochable."
                             }
-                        ].map((item, i) => {
-                            const Icon = item.icon;
-                            return (
-                                <div
-                                    key={i}
-                                    className="bg-[#F5F5F5] p-10 rounded-xl border border-transparent hover:border-gray-200 hover:shadow-md transition-all group"
-                                >
-                                    <Icon className="h-10 w-10 text-[#0066FF] mb-6" />
-                                    <h3 className="text-2xl font-bold mb-4 text-gray-900">{item.title}</h3>
-                                    <p className="text-gray-600 text-lg leading-relaxed">
-                                        {item.desc}
-                                    </p>
+                        ].map((step, idx) => (
+                            <div key={idx} className="flex flex-col animate-in fade-in slide-in-from-bottom duration-700" style={{ animationDelay: `${idx * 100}ms` }}>
+                                {/* Circle Indicator with Number */}
+                                <div className="relative mb-8">
+                                    <div className="w-24 h-24 rounded-full bg-[#E5E5E5] flex items-center justify-center">
+                                        {/* You can add a subtle icon here if wanted, or leave it minimal as in image */}
+                                    </div>
+                                    <div className="absolute -top-2 -left-2 w-10 h-10 rounded-full bg-black text-white flex items-center justify-center text-sm font-bold">
+                                        {idx + 1}
+                                    </div>
                                 </div>
-                            );
-                        })}
+
+                                <h3 className="text-2xl font-bold mb-4 text-black tracking-tight">{step.title}</h3>
+                                <p className="text-[#888] text-lg leading-relaxed">
+                                    {step.desc}
+                                </p>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </section>

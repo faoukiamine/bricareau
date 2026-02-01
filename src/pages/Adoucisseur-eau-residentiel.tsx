@@ -22,6 +22,7 @@ import {
     X
 } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
+import waterTestBg from "@/assets/Enercare_JP_Day_2_Kitchen_Faucet_498-2048x1365.jpg";
 import {
     Accordion,
     AccordionContent,
@@ -72,7 +73,7 @@ const AdoucisseurEauResidentiel = () => {
 
             <main>
                 {/* Hero Section */}
-                <section className="relative h-[750px] flex items-center overflow-hidden">
+                <section className="relative h-[800px] flex items-start overflow-hidden pt-[220px]">
                     <div className="absolute inset-0 z-0">
                         <img
                             src={heroBath}
@@ -204,26 +205,38 @@ const AdoucisseurEauResidentiel = () => {
                     </div>
                 </section>
 
-                {/* CTA: Analyse d'eau */}
-                <section className="py-24 bg-white overflow-hidden">
-                    <div className="container mx-auto px-4">
-                        <div className="bg-[#001A4D] rounded-[40px] overflow-hidden flex flex-col md:flex-row items-center">
-                            <div className="md:w-1/2 h-[400px]">
-                                <img
-                                    src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=1200&auto=format&fit=crop"
-                                    alt="Analyse d'eau"
-                                    className="w-full h-full object-cover"
-                                />
-                            </div>
-                            <div className="md:w-1/2 p-12 lg:p-20 text-white">
-                                <h2 className="text-3xl md:text-5xl font-bold mb-8">Comment analyser votre eau</h2>
-                                <p className="text-lg opacity-80 mb-8 max-w-md">
-                                    Commencez dès aujourd'hui par un test gratuit à domicile pour identifier le système idéal.
-                                </p>
-                                <Button className="bg-blue-600 text-white rounded-full px-12 h-14 text-lg">
-                                    Planifiez l'analyse de votre eau
-                                </Button>
-                            </div>
+                {/* 5. SECTION TESTS D'EAU - Full Background with Overlaid Content Box */}
+                <section className="relative min-h-[700px] flex items-center overflow-hidden">
+                    {/* Background Image */}
+                    <div className="absolute inset-0 z-0">
+                        <img
+                            src={waterTestBg}
+                            alt="Test d'eau en laboratoire"
+                            className="w-full h-full object-cover"
+                        />
+                        {/* Subtle overlay to ensure the white box pops and the image isn't too distracting */}
+                        <div className="absolute inset-0 bg-black/10" />
+                    </div>
+
+                    <div className="container mx-auto px-4 relative z-10 flex justify-start">
+                        <div className="max-w-2xl bg-white p-10 md:p-20 shadow-2xl animate-in fade-in slide-in-from-left duration-1000">
+                            <span className="text-[#888] text-xs font-bold uppercase tracking-[0.3em] mb-10 block">
+                                ANALYSE PROFESSIONNELLE
+                            </span>
+                            <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold text-black leading-[1.05] tracking-tighter mb-10">
+                                Des tests d'eau précis <br />
+                                pour votre sécurité.
+                            </h2>
+                            <p className="text-[#666] text-xl leading-relaxed mb-14 max-w-lg">
+                                Ne devinez pas la qualité de votre eau. Nos analyses approfondies identifient les bactéries, les minéraux et les contaminants chimiques pour vous offrir une tranquillité d'esprit totale.
+                            </p>
+                            <Button
+                                size="lg"
+                                className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-10 h-14 text-lg font-bold transition-all shadow-lg"
+                                asChild
+                            >
+                                <NavLink to="/water-testing">En savoir plus</NavLink>
+                            </Button>
                         </div>
                     </div>
                 </section>

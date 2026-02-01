@@ -92,7 +92,7 @@ const ConditionneursSansSel = () => {
 
       <main>
         {/* Hero Section */}
-        <section className="relative h-[750px] flex items-center overflow-hidden">
+        <section className="relative h-[800px] flex items-start overflow-hidden pt-[220px]">
           <div className="absolute inset-0 z-0">
             <img
               src={heroGirl}
@@ -104,17 +104,17 @@ const ConditionneursSansSel = () => {
 
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-2xl text-white">
-              <span className="inline-block px-3 py-1 bg-blue-600 text-xs font-bold uppercase tracking-wider rounded-sm mb-4">
-                Nouveau chez Bricareau
+              <span className="text-sm font-bold uppercase tracking-widest text-[#60A5FA] mb-4 block">
+                NOUVEAU CHEZ BRICAREAU
               </span>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                Une solution simple et sans sel contre l'eau dure
+              <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-6 leading-tight drop-shadow-md">
+                Une solution simple <br /> et sans sel
               </h1>
-              <p className="text-lg md:text-xl opacity-90 mb-8 max-w-xl">
+              <p className="text-lg md:text-xl font-medium opacity-90 mb-8 max-w-xl drop-shadow-sm">
                 Protégez votre plomberie et profitez d'une eau plus saine grâce à notre technologie
                 de conditionnement avancée, sans sel et sans entretien.
               </p>
-              <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 text-lg">
+              <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-10 h-14 text-lg font-bold">
                 Demander une consultation gratuite
               </Button>
             </div>
