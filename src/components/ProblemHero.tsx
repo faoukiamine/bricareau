@@ -20,7 +20,10 @@ const ProblemHero = () => {
                             Problèmes d'eau
                         </span>
 
-                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 leading-[1.05] tracking-tighter mb-10 text-balance">
+                        <h1
+                            className="text-[40px] leading-[40px] font-semibold text-slate-900 mb-10 text-balance"
+                            style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                        >
                             Épargnez-vous les <br className="hidden md:block" /> maux de tête.
                         </h1>
 

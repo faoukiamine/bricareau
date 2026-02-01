@@ -26,7 +26,10 @@ const Hero = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left side - Hero text */}
           <div className="space-y-6 text-white">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+            <h1
+              className="text-[40px] leading-[40px] font-semibold"
+              style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+            >
               Protégez votre eau, protégez votre famille
             </h1>
 
