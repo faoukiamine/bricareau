@@ -219,7 +219,7 @@ const Header = () => {
           icon: Filter,
           title: "Systèmes de filtration d'eau spécialisés",
           description: "Nos systèmes de filtration d’eau spécialisés pour toute la maison est la solution abordable et durable pour obtenir une eau de meilleure qualité à chaque robinet de votre maison.",
-          href: "/specialises-filtration-eau"
+          href: "/Filtres-deau-specialises"
         },
         {
           icon: Filter,

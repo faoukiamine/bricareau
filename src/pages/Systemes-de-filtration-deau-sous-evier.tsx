@@ -35,7 +35,7 @@ import waterSoftenerImg from "@/assets/Adoucisseurs d'eau.webp";
 import uvSystemImg from "@/assets/Systèmes de désinfection UV.webp";
 import waterTestBg from "@/assets/water_test_bg.png";
 
-const OsmoseFiltration = () => {
+const FiltrationSousEvier = () => {
     const comparisonData = [
         { feature: "Filtration en 5 étapes", elite: true, plus: true, essential: true, serene: false },
         { feature: "Élimination des métaux lourds", elite: true, plus: true, essential: true, serene: true },
@@ -467,4 +467,4 @@ const OsmoseFiltration = () => {
     );
 };
 
-export default OsmoseFiltration;
+export default FiltrationSousEvier;

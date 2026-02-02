@@ -31,7 +31,7 @@ import Garantie from "./pages/Garantie";
 import Pieces from "./pages/Pieces";
 import Manuels from "./pages/Manuels";
 import Promotions from "./pages/Promotions";
-import SpecializedFiltration from "./pages/SpecializedFiltration";
+import SpecializedFiltration from "./pages/Filtres-deau-specialises";
 import FiltrationSousEvier from "./pages/Systemes-de-filtration-deau-sous-evier";
 import DesinfectionUV from "./pages/Systemes-de-desinfection-UV";
 import NotFound from "./pages/NotFound";
