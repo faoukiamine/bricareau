@@ -17,7 +17,7 @@ import Solutions from "./pages/Solutions";
 import Adoucisseurs from "./pages/Adoucissement";
 import AdoucisseurEauResidentiel from "./pages/Adoucisseur-eau-residentiel";
 import ConditionneursSansSel from "./pages/ConditionneursSansSel";
-import OsmoseFiltration from "./pages/OsmoseFiltration";
+import OsmoseFiltration from "./pages/Systeme-de-filtration-deau-potable";
 import EauDure from "./pages/EauDure";
 import EauDePuits from "./pages/EauDePuits";
 import Filtration from "./pages/Filtration";

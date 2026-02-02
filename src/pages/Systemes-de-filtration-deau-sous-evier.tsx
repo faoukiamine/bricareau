@@ -1,216 +1,284 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Check, ChevronRight, Shield, Award, PenTool, Sprout, CheckCircle2, X, Search, Settings, Zap, Droplets, Filter } from "lucide-react";
+import {
+    ArrowRight,
+    Check,
+    Phone,
+    CheckCircle2,
+    X,
+    ChevronRight,
+    GlassWater,
+    CircleDollarSign,
+    Trash2,
+    Wrench,
+    ShieldCheck,
+    Droplets,
+    Zap
+} from "lucide-react";
 import { NavLink } from "@/components/NavLink";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import {
+    Accordion,
+    AccordionContent,
+    AccordionItem,
+    AccordionTrigger,
+} from "@/components/ui/accordion";
 import TestimonialsSection from "@/components/TestimonialsSection";
 
-// Assets
-import heroImg from "@/assets/csm_visuel1_920x630_0_09518aee48.jpg";
-import specializedFiltersImg from "@/assets/Filtres d'eau spécialisés.webp";
-import ironCleerImg from "@/assets/Filtration-eau-de-puits.webp";
-import uvSystemImg from "@/assets/Systèmes de désinfection UV.webp";
-import technicianImg from "@/assets/discover_expert.jpg";
-import waterSoftenerImg from "@/assets/Adoucisseurs d'eau.webp";
+import heroDrink from "@/assets/boire-eau-robinet.jpg";
 import drinkingWaterImg from "@/assets/Solutions d'eau potable.webp";
+import sereneLiteImg from "@/assets/Système+de+filtration+Serene+Lite.webp";
+import specializedFiltersImg from "@/assets/Filtres d'eau spécialisés.webp";
+import waterSoftenerImg from "@/assets/Adoucisseurs d'eau.webp";
+import uvSystemImg from "@/assets/Systèmes de désinfection UV.webp";
+import waterTestBg from "@/assets/water_test_bg.png";
 
-const FiltrationSousEvier = () => {
-    const categories = [
-        "Tous les produits",
-        "Adoucisseurs d'eau",
-        "Systèmes de filtration",
-        "Solutions d'eau potable",
-        "Solutions spécialisées",
-        "Commercial & Industriel"
-    ];
-
-    const products = [
-        { name: "Culligan HE® Water Softener", desc: "Le système le plus efficace au monde.", img: waterSoftenerImg, cat: "Adoucisseurs" },
-        { name: "Culligan HE® Municipal", desc: "Conçu pour l'eau municipale traitée au chlore.", img: waterSoftenerImg, cat: "Adoucisseurs" },
-        { name: "Culligan Select Plus®", desc: "Fiabilité et performance abordable.", img: waterSoftenerImg, cat: "Adoucisseurs" },
-        { name: "Culligan Iron-Cleer®", desc: "Élimine le fer et le soufre sans produits chimiques.", img: ironCleerImg, cat: "Solutions spécialisées" },
-        { name: "Culligan Sulfur-Cleer®", desc: "Élimine les odeurs d'œufs pourris.", img: specializedFiltersImg, cat: "Solutions spécialisées" },
-        { name: "Culligan High Efficiency (HE) Filter", desc: "Filtration haute performance personnalisable.", img: specializedFiltersImg, cat: "Systèmes de filtration" },
-        { name: "Aquasential™ RO", desc: "Eau potable de qualité supérieure.", img: drinkingWaterImg, cat: "Solutions d'eau potable" },
-        { name: "Culligan Gold Series", desc: "Performance durable et éprouvée.", img: waterSoftenerImg, cat: "Adoucisseurs" },
-        { name: "Système de désinfection UV", desc: "Protection contre les virus et bactéries.", img: uvSystemImg, cat: "Solutions spécialisées" },
+const OsmoseFiltration = () => {
+    const comparisonData = [
+        { feature: "Filtration en 5 étapes", elite: true, plus: true, essential: true, serene: false },
+        { feature: "Élimination des métaux lourds", elite: true, plus: true, essential: true, serene: true },
+        { feature: "Membrane d'osmose inverse", elite: true, plus: true, essential: true, serene: false },
+        { feature: "Reminéralisation alcaline", elite: true, plus: "Option", essential: false, serene: false },
+        { feature: "Débit rapide (75 GPD)", elite: true, plus: true, essential: false, serene: false },
+        { feature: "Compact (Sans réservoir)", elite: false, plus: false, essential: false, serene: true },
+        { feature: "Garantie prolongée", elite: true, plus: true, essential: true, serene: true },
     ];
 
     return (
-        <div className="min-h-screen bg-white font-sans text-slate-900">
+        <div className="min-h-screen bg-background text-slate-900 font-sans">
             <Header />
             <main>
-                {/* Hero Section */}
+                {/* Hero Section - UNCHANGED */}
                 <section className="relative h-[800px] flex items-start overflow-hidden pt-[220px]">
                     <div className="absolute inset-0 z-0">
                         <img
-                            src={heroImg}
-                            alt="Propriété avec puits"
+                            src={heroDrink}
+                            alt="Femme buvant de l'eau pure"
                             className="w-full h-full object-cover"
                         />
-                        <div className="absolute inset-0 bg-black/30 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
+                        <div className="absolute inset-0 bg-black/20 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
                     </div>
 
                     <div className="container mx-auto px-4 relative z-10">
                         <div className="max-w-2xl text-white">
                             <span className="text-sm font-bold uppercase tracking-widest text-[#60A5FA] mb-4 block">
-                                SOLUTIONS POUR PUITS PRIVÉS
+                                PURETÉ INÉGALÉE
                             </span>
                             <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-6 leading-tight drop-shadow-md">
-                                Systèmes de filtration d'eau de puits <br />pour une eau sans pareille
+                                Osmose inverse <br /> & Filtration
                             </h1>
-                            <p className="text-lg md:text-xl font-medium opacity-90 mb-8 max-w-xl drop-shadow-sm">
-                                L'eau des puits privés n'étant pas réglementée par le gouvernement fédéral,
-                                la qualité et la sécurité de l'eau sont la responsabilité du propriétaire -
-                                et les problèmes potentiels ne sont pas toujours évidents. Les tests d'eau
-                                à domicile avec Culligan sont un excellent point de départ. Nos systèmes de
-                                filtration d'eau de puits vous offrent une eau plus propre et plus sûre et
-                                une tranquillité d'esprit du matin au soir.
+                            <p className="text-lg md:text-xl font-medium opacity-95 mb-8 max-w-xl drop-shadow-sm">
+                                Profitez d'une eau pure et délicieuse directement de votre robinet.
+                                Nos systèmes éliminent 99% des contaminants pour une tranquillité d'esprit totale.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4">
-                                <Button
-                                    size="lg"
-                                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-10 h-14 text-lg font-bold"
-                                    asChild
-                                >
-                                    <NavLink to="/water-testing">
-                                        Planifiez une consultation gratuite
+                                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-10 h-14 text-lg font-bold" asChild>
+                                    <NavLink to="/contact">
+                                        Demandez une analyse d'eau
                                     </NavLink>
                                 </Button>
-                                <Button
-                                    size="lg"
-                                    variant="outline"
-                                    className="bg-white/10 hover:bg-white/20 text-white border-white rounded-full px-10 h-14 text-lg font-bold backdrop-blur-sm"
-                                    asChild
-                                >
-                                    <a href="tel:18552649328">Appelez le 1-855-264-9328</a>
+                                <Button size="lg" variant="outline" className="bg-white/10 hover:bg-white/20 text-white border-white rounded-full px-10 h-14 text-lg font-bold backdrop-blur-sm shadow-lg" asChild>
+                                    <a href="tel:18552649328" className="flex items-center gap-2">
+                                        <Phone className="h-5 w-5" />
+                                        1-855-264-9328
+                                    </a>
                                 </Button>
                             </div>
                         </div>
                     </div>
                 </section>
 
-                {/* Benefits Blue Bar */}
-                <section className="bg-[#001B3D] py-16 text-white border-b border-blue-800">
-                    <div className="container mx-auto px-4">
-                        <div className="grid grid-cols-2 md:grid-cols-4 gap-12 max-w-5xl mx-auto">
+                {/* 2. Pourquoi choisir - Dark Section */}
+                <section className="py-24 bg-[#0A192F] text-white">
+                    <div className="container mx-auto px-6">
+                        <div className="text-center mb-16">
+                            <h2 className="text-3xl md:text-5xl font-bold tracking-tighter mb-4">
+                                Pourquoi choisir nos systèmes d'osmose inverse ?
+                            </h2>
+                            <p className="text-slate-400 max-w-2xl mx-auto text-lg">
+                                Une technologie de pointe pour une eau d'une pureté exceptionnelle, sans compromis.
+                            </p>
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
                             {[
-                                { icon: Settings, title: "Analyse gratuite", desc: "Expertise à domicile" },
-                                { icon: Shield, title: "Solutions Culligan", desc: "Le leader mondial" },
-                                { icon: Zap, title: "Service expert", desc: "Installation certifiée" },
-                                { icon: Award, title: "Meilleure garantie", desc: "Tranquillité d'esprit" }
-                            ].map((b, i) => (
-                                <div key={i} className="flex flex-col items-center text-center space-y-4 group">
-                                    <div className="w-16 h-16 rounded-full bg-blue-600/20 flex items-center justify-center group-hover:scale-110 transition-transform">
-                                        <b.icon className="h-8 w-8 text-blue-400" />
+                                { icon: ShieldCheck, title: "Sécurité maximale", desc: "Élimine 99% des virus, bactéries et contaminants chimiques." },
+                                { icon: Droplets, title: "Goût incomparable", desc: "Retrouvez le vrai goût de l'eau, limpide et rafraîchissante." },
+                                { icon: Zap, title: "Performance durable", desc: "Des membranes de haute qualité pour une efficacité constante." }
+                            ].map((item, i) => (
+                                <div key={i} className="flex flex-col items-center group">
+                                    <div className="w-20 h-20 rounded-2xl bg-white/10 flex items-center justify-center mb-8 transition-all group-hover:scale-110 group-hover:bg-blue-600">
+                                        <item.icon className="h-10 w-10 text-blue-400 group-hover:text-white" />
                                     </div>
-                                    <div>
-                                        <h3 className="font-bold text-lg mb-1">{b.title}</h3>
-                                        <p className="text-sm text-blue-200/60 font-medium">{b.desc}</p>
-                                    </div>
+                                    <h3 className="text-2xl font-bold mb-4 tracking-tight">{item.title}</h3>
+                                    <p className="text-slate-400 leading-relaxed">{item.desc}</p>
                                 </div>
                             ))}
                         </div>
                     </div>
                 </section>
 
-                {/* Product Catalog Section */}
+                {/* 3. Systèmes d'osmose inverse - Product Grid */}
                 <section className="py-24 bg-white">
-                    <div className="container mx-auto px-4">
-                        <h2 className="text-4xl font-bold text-center mb-16 text-slate-900">Nos systèmes de filtration</h2>
+                    <div className="container mx-auto px-6">
+                        <div className="text-left mb-16">
+                            <h2 className="text-4xl md:text-6xl font-bold text-slate-900 tracking-tighter mb-4">
+                                Systèmes d'osmose inverse pour la maison
+                            </h2>
+                            <div className="w-24 h-1 bg-blue-600"></div>
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                            {[
+                                { name: "Bricareau Elite RO", desc: "Le summum de la filtration avec reminéralisation alcaline incluse.", img: drinkingWaterImg },
+                                { name: "Bricareau Plus RO", desc: "Performance exceptionnelle pour les familles actives.", img: drinkingWaterImg },
+                                { name: "Bricareau Essential", desc: "La pureté accessible sans compromis sur la qualité.", img: drinkingWaterImg },
+                                { name: "Serene Lite", desc: "Design compact et installation ultra-rapide.", img: sereneLiteImg }
+                            ].map((product, i) => (
+                                <div key={i} className="group cursor-pointer">
+                                    <div className="bg-slate-50 aspect-square rounded-3xl mb-6 overflow-hidden flex items-center justify-center p-8 transition-all group-hover:shadow-xl group-hover:bg-white group-hover:-translate-y-2">
+                                        <img src={product.img} alt={product.name} className="w-full h-full object-contain mix-blend-multiply transition-transform duration-500 group-hover:scale-110" />
+                                    </div>
+                                    <h3 className="text-xl font-bold mb-2 group-hover:text-blue-600 transition-colors uppercase tracking-tight">{product.name}</h3>
+                                    <p className="text-slate-500 text-sm leading-relaxed mb-4">{product.desc}</p>
+                                    <NavLink to="#" className="text-blue-600 font-bold flex items-center gap-2 text-sm tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-all">
+                                        EN SAVOIR PLUS <ChevronRight className="h-4 w-4" />
+                                    </NavLink>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
 
-                        <div className="flex flex-col lg:flex-row gap-12">
-                            {/* Sidebar Filters */}
-                            <aside className="lg:w-1/4 space-y-8">
-                                <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100">
-                                    <h3 className="font-bold text-xl mb-6 flex items-center gap-2">
-                                        <Search className="h-5 w-5 text-blue-600" />
-                                        Filtrer par
-                                    </h3>
-                                    <div className="space-y-4">
-                                        {categories.map((c, i) => (
-                                            <div key={i} className="flex items-center gap-3 cursor-pointer group">
-                                                <div className="w-5 h-5 rounded border border-slate-300 group-hover:border-blue-500 transition-colors" />
-                                                <span className="text-slate-600 group-hover:text-blue-600 font-medium transition-colors">{c}</span>
-                                            </div>
-                                        ))}
+                {/* 4. Avantages - Icon Grid with links */}
+                <section className="py-24 bg-slate-50">
+                    <div className="container mx-auto px-6">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                            {[
+                                { icon: GlassWater, title: "Eau pure 24/7", desc: "Plus besoin de bouteilles.", link: "#" },
+                                { icon: CircleDollarSign, title: "Économies", desc: "Réduisez vos dépenses annuelles.", link: "#" },
+                                { icon: Trash2, title: "Zéro déchet", desc: "Protégez l'environnement.", link: "#" },
+                                { icon: Wrench, title: "Entretien", desc: "Suivi professionnel inclus.", link: "#" }
+                            ].map((item, i) => (
+                                <div key={i} className="flex flex-col items-start text-left">
+                                    <item.icon className="h-10 w-10 text-blue-600 mb-6" />
+                                    <h3 className="text-xl font-bold mb-3">{item.title}</h3>
+                                    <p className="text-slate-500 mb-6 leading-relaxed">{item.desc}</p>
+                                    <NavLink to={item.link} className="text-blue-600 font-bold flex items-center gap-2 text-sm group">
+                                        En découvrir plus <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                                    </NavLink>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+                {/* 5. Intro Content (Image Right) */}
+                <section className="py-24 bg-white overflow-hidden">
+                    <div className="container mx-auto px-6 text-left">
+                        <div className="flex flex-col lg:flex-row items-center gap-20">
+                            <div className="lg:w-1/2">
+                                <h2 className="text-4xl md:text-6xl font-bold text-slate-900 leading-[1.1] tracking-tighter mb-8">
+                                    Une eau de qualité <br /> restaurant à la maison.
+                                </h2>
+                                <p className="text-lg text-slate-500 font-medium mb-10 leading-relaxed">
+                                    Saviez-vous que la plupart des grands restaurants et cafés utilisent l'osmose inverse pour servir leur eau et préparer leur café ? Bricareau apporte cette même technologie professionnelle directement sous votre évier.
+                                </p>
+                                <div className="grid grid-cols-2 gap-8 mb-10">
+                                    <div className="flex flex-col gap-2">
+                                        <span className="text-4xl font-bold text-blue-600">99%</span>
+                                        <span className="text-sm font-bold text-slate-400 uppercase tracking-widest">Pureté atteinte</span>
+                                    </div>
+                                    <div className="flex flex-col gap-2">
+                                        <span className="text-4xl font-bold text-blue-600">24h</span>
+                                        <span className="text-sm font-bold text-slate-400 uppercase tracking-widest">Disponibilité</span>
                                     </div>
                                 </div>
-                                <div className="bg-blue-600 rounded-3xl p-8 text-white shadow-xl shadow-blue-200">
-                                    <h4 className="font-bold text-lg mb-4">Besoin d'aide ?</h4>
-                                    <p className="text-blue-100 text-sm mb-6">Nos experts vous guident vers la solution idéale.</p>
-                                    <Button variant="outline" className="w-full rounded-full border-white text-white hover:bg-white hover:text-blue-600 font-bold">
-                                        Analyse d'eau
-                                    </Button>
+                                <Button className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-10 h-14 text-lg font-bold flex items-center gap-2 group">
+                                    Explorer nos systèmes <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                                </Button>
+                            </div>
+                            <div className="lg:w-1/2 relative">
+                                <div className="aspect-video rounded-[3rem] overflow-hidden shadow-2xl relative z-10 group">
+                                    <img src={drinkingWaterImg} alt="Cuisine moderne" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                                 </div>
-                            </aside>
-
-                            {/* Product Grid */}
-                            <div className="lg:w-3/4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                                {products.map((p, i) => (
-                                    <div key={i} className="bg-white border border-slate-100 rounded-[2rem] p-8 shadow-sm hover:shadow-xl transition-all duration-500 group">
-                                        <div className="relative aspect-square mb-6 overflow-hidden flex items-center justify-center bg-slate-50 rounded-2xl">
-                                            <img src={p.img} alt={p.name} className="w-4/5 h-4/5 object-contain group-hover:scale-110 transition-transform duration-700 mix-blend-multiply" />
-                                            <div className="absolute top-4 right-4 bg-white px-3 py-1 rounded-full text-[10px] font-bold text-blue-600 uppercase tracking-widest shadow-sm">
-                                                {p.cat}
-                                            </div>
-                                        </div>
-                                        <h3 className="text-lg font-bold mb-2 group-hover:text-blue-600 transition-colors leading-tight">{p.name}</h3>
-                                        <p className="text-slate-500 text-sm mb-6 h-10 overflow-hidden">{p.desc}</p>
-                                        <div className="flex items-center justify-between border-t border-slate-100 pt-6 mt-auto">
-                                            <NavLink to="#" className="text-blue-600 font-bold text-xs flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-                                                En savoir plus <ChevronRight className="h-4 w-4" />
-                                            </NavLink>
-                                            <Button size="sm" variant="ghost" className="text-slate-400 hover:text-blue-600 font-bold text-xs p-0">
-                                                Voir produit
-                                            </Button>
-                                        </div>
-                                    </div>
-                                ))}
+                                <div className="absolute -top-10 -right-10 w-2/3 h-2/3 bg-blue-50 rounded-[3rem] -z-10" />
                             </div>
                         </div>
                     </div>
                 </section>
 
-                {/* Feature Comparison Table */}
-                <section className="py-24 bg-slate-50 relative overflow-hidden">
-                    <div className="absolute top-0 right-0 w-96 h-96 bg-blue-100 rounded-full blur-3xl opacity-20 -mr-48 -mt-48" />
-                    <div className="container mx-auto px-4 max-w-5xl relative z-10">
-                        <div className="text-center mb-16">
-                            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 tracking-tight">Comment se comparent les systèmes ?</h2>
-                            <p className="text-slate-500 max-w-2xl mx-auto">Comparez les fonctionnalités clés de nos meilleures solutions.</p>
+                {/* 6. Expertise Section (Blue Box Design) */}
+                <section className="py-24 bg-slate-50">
+                    <div className="container mx-auto px-6">
+                        <div className="flex flex-col lg:flex-row items-stretch gap-0 rounded-[3rem] overflow-hidden shadow-2xl">
+                            <div className="lg:w-1/2 relative min-h-[400px]">
+                                <img src={waterTestBg} alt="Analyse d'eau" className="absolute inset-0 w-full h-full object-cover" />
+                                <div className="absolute inset-0 bg-blue-900/10" />
+                            </div>
+                            <div className="lg:w-1/2 bg-blue-600 text-white p-12 lg:p-20 flex flex-col justify-center items-start text-left">
+                                <span className="text-white/80 text-xs font-black uppercase tracking-[0.3em] mb-8 block">
+                                    ANALYSE ET CONSEIL
+                                </span>
+                                <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-8">
+                                    Ne devinez pas, <br /> testez votre eau.
+                                </h2>
+                                <p className="text-white/90 text-lg font-medium mb-12 leading-relaxed">
+                                    Chaque foyer est différent. Nos experts effectuent une analyse gratuite sur place pour identifier les contaminants spécifiques à votre résidence et vous recommander la solution optimale.
+                                </p>
+                                <Button className="bg-white text-blue-600 hover:bg-blue-50 rounded-full px-12 h-16 text-xl font-bold shadow-xl">
+                                    Prendre rendez-vous
+                                </Button>
+                            </div>
                         </div>
-                        <div className="bg-white rounded-[3rem] shadow-2xl p-1 md:p-12 border border-slate-100 overflow-x-auto">
-                            <table className="w-full min-w-[700px] border-collapse">
+                    </div>
+                </section>
+
+                {/* 7. Comparison Table */}
+                <section className="py-24 bg-white">
+                    <div className="container mx-auto px-4">
+                        <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold text-slate-900 leading-[1.1] tracking-tighter mb-16 text-center">
+                            Comparez nos solutions <br />de filtration d'eau potable.
+                        </h2>
+                        <div className="overflow-x-auto">
+                            <table className="w-full min-w-[1000px] border-collapse bg-white rounded-2xl overflow-hidden shadow-sm">
                                 <thead>
-                                    <tr>
-                                        <th className="p-6 text-left text-xs font-black text-slate-300 uppercase tracking-widest">Fonctionnalités</th>
-                                        <th className="p-6 text-center">
-                                            <div className="flex flex-col items-center">
-                                                <img src={waterSoftenerImg} className="h-24 w-24 object-contain mix-blend-multiply mb-3" alt="HE Softener" />
-                                                <span className="font-bold text-slate-900 leading-tight">Culligan HE®<br />Water Softener</span>
-                                            </div>
-                                        </th>
-                                        <th className="p-6 text-center">
-                                            <div className="flex flex-col items-center">
-                                                <img src={ironCleerImg} className="h-24 w-24 object-contain mix-blend-multiply mb-3" alt="Iron-Cleer" />
-                                                <span className="font-bold text-slate-900 leading-tight">Culligan<br />Iron-Cleer®</span>
-                                            </div>
-                                        </th>
+                                    <tr className="bg-gray-100">
+                                        <th className="p-8 text-left text-gray-400 font-medium uppercase tracking-wider">Solutions</th>
+                                        {[
+                                            { name: "Elite RO", img: drinkingWaterImg },
+                                            { name: "Plus RO", img: drinkingWaterImg },
+                                            { name: "Essential", img: drinkingWaterImg },
+                                            { name: "Serene Lite", img: sereneLiteImg }
+                                        ].map((m, i) => (
+                                            <th key={i} className="p-4 text-center text-gray-900 font-bold text-sm">
+                                                <div className="flex flex-col items-center gap-2">
+                                                    <img
+                                                        src={m.img}
+                                                        alt={m.name}
+                                                        className="w-[120px] h-[100px] object-contain mx-auto mix-blend-multiply"
+                                                    />
+                                                    <span className="max-w-[100px] inline-block uppercase tracking-wider text-[10px]">{m.name}</span>
+                                                </div>
+                                            </th>
+                                        ))}
                                     </tr>
                                 </thead>
-                                <tbody>
-                                    {[
-                                        "Consommation efficace", "Connectivité Bluetooth", "Alertes de sel", "Filtration sédiments", "Élimination fer"
-                                    ].map((feature, i) => (
-                                        <tr key={i} className="border-t border-slate-50 group hover:bg-slate-50/50 transition-colors">
-                                            <td className="p-6 font-bold text-slate-700">{feature}</td>
-                                            <td className="p-6 text-center"><CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /></td>
-                                            <td className="p-6 text-center">
-                                                {i === 1 || i === 2 ? <X className="h-6 w-6 text-slate-200 mx-auto" strokeWidth={1} /> : <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" />}
+                                <tbody className="divide-y divide-gray-100">
+                                    {comparisonData.map((row, i) => (
+                                        <tr key={i} className="hover:bg-gray-50 transition-colors">
+                                            <td className="p-8 font-medium text-gray-700">{row.feature}</td>
+                                            <td className="p-8 text-center">
+                                                {typeof row.elite === 'string' ? <span className="text-blue-600 font-bold bg-blue-50 px-3 py-1 rounded-full text-[10px]">{row.elite}</span> : (row.elite ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : <X className="h-6 w-6 text-gray-300 mx-auto" />)}
+                                            </td>
+                                            <td className="p-8 text-center">
+                                                {typeof row.plus === 'string' ? <span className="text-blue-600 font-bold bg-blue-50 px-3 py-1 rounded-full text-[10px]">{row.plus}</span> : (row.plus ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : <X className="h-6 w-6 text-gray-300 mx-auto" />)}
+                                            </td>
+                                            <td className="p-8 text-center">
+                                                {row.essential ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : <X className="h-6 w-6 text-gray-300 mx-auto" />}
+                                            </td>
+                                            <td className="p-8 text-center">
+                                                {row.serene ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : <X className="h-6 w-6 text-gray-300 mx-auto" />}
                                             </td>
                                         </tr>
                                     ))}
@@ -220,79 +288,41 @@ const FiltrationSousEvier = () => {
                     </div>
                 </section>
 
-                {/* 3 Solutions Blocks */}
-                <section className="py-24 bg-white">
-                    <div className="container mx-auto px-4 max-w-6xl">
+                {/* 8. Testimonials Section */}
+                <TestimonialsSection />
+
+                {/* 9. FAQ Section */}
+                <section className="py-24 bg-white border-t border-slate-100">
+                    <div className="container mx-auto px-6 max-w-4xl text-left">
                         <div className="text-center mb-16">
-                            <h2 className="text-3xl font-bold">Trouvez l'eau parfaite pour votre foyer</h2>
+                            <span className="text-blue-600 text-[10px] font-black uppercase tracking-[0.5em] mb-4 block">
+                                POUR VOUS ÉCLAIRER
+                            </span>
+                            <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold text-slate-900 leading-[1.1] tracking-tighter">
+                                Vos questions.
+                            </h2>
                         </div>
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+                        <Accordion type="single" collapsible className="w-full">
                             {[
-                                { title: "Adoucissement", desc: "Pour une peau plus douce et protéger vos tuyaux.", icon: Droplets, color: "bg-blue-600" },
-                                { title: "Filtration", desc: "Élimine les impuretés pour toute la maison.", icon: Filter, color: "bg-slate-900" },
-                                { title: "Eau Potable", desc: "La pureté d'une source à votre robinet.", icon: Shield, color: "bg-blue-400" }
-                            ].map((s, i) => (
-                                <div key={i} className="flex flex-col items-center text-center p-10 rounded-[3rem] bg-slate-50 hover:bg-white hover:shadow-2xl hover:scale-105 transition-all duration-500 cursor-pointer group">
-                                    <div className={`w-20 h-20 rounded-[2rem] ${s.color} flex items-center justify-center mb-8 rotate-3 group-hover:rotate-12 transition-transform shadow-lg`}>
-                                        <s.icon className="h-10 w-10 text-white" />
-                                    </div>
-                                    <h3 className="text-2xl font-bold mb-4">{s.title}</h3>
-                                    <p className="text-slate-500 leading-relaxed mb-8">{s.desc}</p>
-                                    <NavLink to="#" className="text-blue-600 font-bold border-b-2 border-blue-100 hover:border-blue-600 transition-colors pb-1">
-                                        Découvrir les produits
-                                    </NavLink>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </section>
-
-                {/* Trusted Service Section */}
-                <section className="py-24 bg-slate-900 text-white overflow-hidden relative">
-                    <div className="absolute top-0 left-0 w-1/2 h-full bg-blue-600 -translate-x-full lg:translate-x-0 skew-x-12 opacity-10" />
-                    <div className="container mx-auto px-4 relative z-10">
-                        <div className="flex flex-col lg:flex-row items-center gap-20">
-                            <div className="lg:w-1/2">
-                                <h2 className="text-4xl md:text-6xl font-black mb-8 leading-none tracking-tighter">Installation certifiée Bricareau</h2>
-                                <p className="text-xl text-blue-100/70 mb-10 leading-relaxed max-w-xl">
-                                    Nos techniciens sont formés selon les normes les plus strictes de l'industrie pour vous garantir un service impeccable.
-                                </p>
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pb-12">
-                                    {["Analyse initiale", "Pose méticuleuse", "Mise en service", "Suivi régulier"].map((step, i) => (
-                                        <div key={i} className="flex items-center gap-3">
-                                            <div className="flex-shrink-0 w-8 h-8 rounded-full border border-blue-500/30 flex items-center justify-center font-bold text-blue-400">
-                                                {i + 1}
-                                            </div>
-                                            <span className="font-bold text-lg">{step}</span>
-                                        </div>
-                                    ))}
-                                </div>
-                                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-12 h-16 text-lg font-bold">
-                                    Prendre rendez-vous
-                                </Button>
-                            </div>
-                            <div className="lg:w-1/2 relative">
-                                <div className="relative z-10 rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white/5">
-                                    <img src={technicianImg} alt="Technicien" className="w-full h-auto" />
-                                </div>
-                                <div className="absolute -top-12 -right-12 w-64 h-64 bg-blue-600 rounded-full blur-[120px] opacity-40" />
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                {/* FAQ Section */}
-                <section className="py-24 bg-white">
-                    <div className="container mx-auto px-4 max-w-4xl">
-                        <h2 className="text-3xl md:text-4xl font-bold mb-16 text-center text-slate-900">Questions fréquentes</h2>
-                        <Accordion type="single" collapsible className="w-full space-y-4">
-                            {[
-                                { q: "Est-ce que Culligan peut traiter mon eau de puits ?", a: "Oui, nous sommes spécialisés dans le traitement des eaux de puits complexes : fer, soufre, manganèse et tanins." },
-                                { q: "Quelles sont les garanties ?", a: "Culligan offre des garanties limitées à vie sur certains composants et des garanties complètes sur le service." },
-                                { q: "L'analyse d'eau à domicile est-elle vraiment gratuite ?", a: "Absolument. Nos experts viennent chez vous, testent votre eau et vous expliquent les résultats sans aucun engagement." }
+                                {
+                                    q: "Comment fonctionne réellement l'osmose inverse ?",
+                                    a: "C'est un processus qui force l'eau à traverser une membrane semi-perméable ultra-fine. Cette membrane est si dense qu'elle ne laisse passer pratiquement que les molécules d'eau, retenant les polluants, les métaux lourds et les microbes qui sont ensuite évacués vers le drain.",
+                                },
+                                {
+                                    q: "L'osmose inverse gaspille-t-elle beaucoup d'eau ?",
+                                    a: "Historiquement, les systèmes étaient moins efficaces. Aujourd'hui, nos modèles haute performance réduisent considérablement le ratio d'évacuation. De plus, les économies réalisées en n'achetant plus d'eau embouteillée compensent largement cette consommation minime.",
+                                },
+                                {
+                                    q: "L'eau osmosée est-elle 'morte' car déminéralisée ?",
+                                    a: "L'osmose élimine en effet les minéraux (bons et mauvais). C'est pourquoi nos modèles Elite et Plus incluent une étape de reminéralisation à la fin du cycle pour réintroduire du calcium et du magnésium essentiels, équilibrant le pH pour une eau alcaline et saine.",
+                                },
+                                {
+                                    q: "Quelle est la durée de vie des filtres ?",
+                                    a: "Les pré-filtres et post-filtres se changent généralement tous les 6 à 12 mois. La membrane d'osmose inverse, elle, peut durer de 2 à 4 ans selon la qualité de l'eau d'entrée et l'entretien régulier du système.",
+                                },
                             ].map((item, idx) => (
-                                <AccordionItem key={idx} value={`item-${idx}`} className="border border-slate-100 rounded-[2rem] px-8 bg-slate-50/30 overflow-hidden">
-                                    <AccordionTrigger className="text-left font-bold text-lg hover:no-underline py-8 text-slate-800">
+                                <AccordionItem key={idx} value={`item-${idx}`} className="border-b-slate-100 px-4">
+                                    <AccordionTrigger className="text-left font-bold text-xl hover:no-underline py-8 text-slate-800">
                                         {item.q}
                                     </AccordionTrigger>
                                     <AccordionContent className="text-slate-500 text-lg leading-relaxed pb-8">
@@ -304,23 +334,44 @@ const FiltrationSousEvier = () => {
                     </div>
                 </section>
 
-                {/* Articles Section */}
+                {/* 10. Resources Section */}
                 <section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-4">
-                        <h2 className="text-3xl font-bold mb-16 underline decoration-blue-600 underline-offset-8">Ressources</h2>
+                        <h2 className="text-3xl font-bold mb-16 underline decoration-blue-600 underline-offset-8 text-left">
+                            Ressources
+                        </h2>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {[
-                                { title: "Comment choisir son adoucisseur", img: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop" },
-                                { title: "L'importance de l'eau adoucie", img: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=800&auto=format&fit=crop" },
-                                { title: "Entretien de votre système Culligan", img: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=800&auto=format&fit=crop" }
+                                {
+                                    title: "Eau municipale vs Osmose inverse",
+                                    img: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=800&auto=format&fit=crop",
+                                },
+                                {
+                                    title: "Le guide complet de l'eau alcaline",
+                                    img: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=800&auto=format&fit=crop",
+                                },
+                                {
+                                    title: "Maintenance préventive de votre osmoseur",
+                                    img: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop",
+                                },
                             ].map((art, i) => (
-                                <div key={i} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer group">
+                                <div
+                                    key={i}
+                                    className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer group"
+                                >
                                     <div className="h-56 overflow-hidden">
-                                        <img src={art.img} alt={art.title} className="w-full h-full object-cover transition-transform group-hover:scale-110" />
+                                        <img
+                                            src={art.img}
+                                            alt={art.title}
+                                            className="w-full h-full object-cover transition-transform group-hover:scale-110"
+                                        />
                                     </div>
                                     <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors">
                                         <h4 className="text-xl font-bold mb-4">{art.title}</h4>
-                                        <NavLink to="#" className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-xs tracking-widest">
+                                        <NavLink
+                                            to="#"
+                                            className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-xs tracking-widest"
+                                        >
                                             EN SAVOIR PLUS <ChevronRight className="h-4 w-4" />
                                         </NavLink>
                                     </div>
@@ -330,7 +381,7 @@ const FiltrationSousEvier = () => {
                     </div>
                 </section>
 
-                {/* Consultation Form Section */}
+                {/* 11. Consultation Form Section */}
                 <section className="py-24 bg-white border-t border-gray-100">
                     <div className="container mx-auto px-4">
                         <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-20">
@@ -416,4 +467,4 @@ const FiltrationSousEvier = () => {
     );
 };
 
-export default FiltrationSousEvier;
+export default OsmoseFiltration;
