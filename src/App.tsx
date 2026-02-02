@@ -34,6 +34,8 @@ import Promotions from "./pages/Promotions";
 import SpecializedFiltration from "./pages/Filtres-deau.tsx";
 import FiltrationSousEvier from "./pages/Systemes-de-filtration-deau-sous-evier";
 import DesinfectionUV from "./pages/Systemes-de-desinfection-UV";
+import FiltreEauHauteEfficacite from "./pages/Filtre-eau-haute-efficacite";
+import RO6 from "./pages/RO-6";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -59,6 +61,8 @@ const App = () => (
           <Route path="/Filtres-deau" element={<SpecializedFiltration />} />
           <Route path="/Systemes-de-filtration-deau-sous-evier" element={<FiltrationSousEvier />} />
           <Route path="/Systemes-de-desinfection-UV" element={<DesinfectionUV />} />
+          <Route path="/filtre-eau-haute-efficacite" element={<FiltreEauHauteEfficacite />} />
+          <Route path="/ro-6" element={<RO6 />} />
           <Route path="/fontaines" element={<Fontaines />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/guides" element={<Guides />} />

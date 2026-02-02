@@ -130,7 +130,7 @@ const FiltrationSousEvier = () => {
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                             {[
-                                { name: "Bricareau Elite RO", desc: "Le summum de la filtration avec reminéralisation alcaline incluse.", img: drinkingWaterImg },
+                                { name: "Bricareau Elite RO", desc: "Le summum de la filtration avec reminéralisation alcaline incluse.", path: "/ro-6", img: drinkingWaterImg },
                                 { name: "Bricareau Plus RO", desc: "Performance exceptionnelle pour les familles actives.", img: drinkingWaterImg },
                                 { name: "Bricareau Essential", desc: "La pureté accessible sans compromis sur la qualité.", img: drinkingWaterImg },
                                 { name: "Serene Lite", desc: "Design compact et installation ultra-rapide.", img: sereneLiteImg }
@@ -141,7 +141,7 @@ const FiltrationSousEvier = () => {
                                     </div>
                                     <h3 className="text-xl font-bold mb-2 group-hover:text-blue-600 transition-colors uppercase tracking-tight">{product.name}</h3>
                                     <p className="text-slate-500 text-sm leading-relaxed mb-4">{product.desc}</p>
-                                    <NavLink to="#" className="text-blue-600 font-bold flex items-center gap-2 text-sm tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-all">
+                                    <NavLink to={product.path || "/contact"} className="text-blue-600 font-bold flex items-center gap-2 text-sm tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-all">
                                         EN SAVOIR PLUS <ChevronRight className="h-4 w-4" />
                                     </NavLink>
                                 </div>

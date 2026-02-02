@@ -33,9 +33,9 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
 const products = [
-    { name: "Culligan High Efficiency", desc: "Notre système le plus avancé et économe.", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
-    { name: "Culligan HE Connect", desc: "Contrôlez votre eau via votre smartphone.", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
-    { name: "Culligan HE Municipal", desc: "Élimine le chlore et adoucit l'eau.", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
+    { name: "Culligan High Efficiency", desc: "Notre système le plus avancé et économe.", path: "/filtre-eau-haute-efficacite", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
+    { name: "Culligan HE Connect", desc: "Contrôlez votre eau via votre smartphone.", path: "/filtre-eau-haute-efficacite", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
+    { name: "Culligan HE Municipal", desc: "Élimine le chlore et adoucit l'eau.", path: "/filtre-eau-haute-efficacite", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
     { name: "Culligan Select Plus", desc: "Performance fiable pour toute la famille.", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
     { name: "Culligan Select Plus Connect", desc: "Connectivité intelligente et grand confort.", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
     { name: "Culligan Medallist Series", desc: "Design compact, efficacité maximale.", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
@@ -148,8 +148,10 @@ const AdoucisseurEauResidentiel = () => {
                                     </div>
                                     <h3 className="text-xl font-bold mb-4">{p.name}</h3>
                                     <p className="text-gray-500 mb-6 flex-grow">{p.desc}</p>
-                                    <Button variant="link" className="text-blue-600 font-bold p-0 group">
-                                        EN SAVOIR PLUS <ChevronRight className="h-4 w-4 ml-1 transition-transform group-hover:translate-x-1" />
+                                    <Button variant="link" className="text-blue-600 font-bold p-0 group" asChild>
+                                        <NavLink to={p.path || "/adoucisseurs"}>
+                                            EN SAVOIR PLUS <ChevronRight className="h-4 w-4 ml-1 transition-transform group-hover:translate-x-1" />
+                                        </NavLink>
                                     </Button>
                                 </div>
                             ))}
