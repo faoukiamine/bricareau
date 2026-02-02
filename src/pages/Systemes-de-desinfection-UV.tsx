@@ -28,7 +28,7 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 
 import heroImg from "@/assets/close-up-handsom-man-taking-bath.jpg";
 import uvSystemImg from "@/assets/Systèmes de désinfection UV.webp";
-import waterTestBg from "@/assets/water_test_bg.png";
+import waterTestBg from "@/assets/Finishes_website_700x700_px_Flex_Gunmetal_20.jpg";
 
 const DesinfectionUV = () => {
     const comparisonData = [

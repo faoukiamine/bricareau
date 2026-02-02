@@ -1,166 +1,260 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, ChevronRight, CheckCircle2, Droplets, Filter, Shield, Zap, GlassWater, Waves, Snowflake, CupSoda } from "lucide-react";
+import { NavLink } from "react-router-dom";
 
-const FAQ = () => {
-  const faqs = [
+const categories = [
     {
-      category: "Général",
-      questions: [
-        {
-          q: "Pourquoi devrais-je traiter mon eau ?",
-          a: "Le traitement de l'eau élimine les contaminants, améliore le goût, protège vos appareils ménagers et assure la santé de votre famille. Même l'eau municipale peut contenir du chlore, des métaux lourds et d'autres substances indésirables."
-        },
-        {
-          q: "Quelle est la différence entre un adoucisseur et un filtre ?",
-          a: "Un adoucisseur élimine le calcaire et le magnésium pour protéger vos appareils. Un filtre enlève les contaminants comme le chlore, les métaux lourds et les impuretés pour améliorer la qualité de l'eau potable. Les deux sont souvent complémentaires."
-        },
-        {
-          q: "Combien coûte l'installation d'un système de traitement d'eau ?",
-          a: "Le coût varie selon le type de système et votre situation. Contactez-nous pour une évaluation gratuite et un devis personnalisé adapté à vos besoins spécifiques."
-        }
-      ]
+        title: "Eau de Puits",
+        id: "eau-de-puits",
+        products: [
+            {
+                title: "Analyses & Tests d'eau",
+                desc: "Détection précise des contaminants pour une eau de puits sécuritaire.",
+                image: "https://images.unsplash.com/photo-1548839140-29a749e1cf4d?q=80&w=800&auto=format&fit=crop",
+                href: "/water-testing"
+            },
+            {
+                title: "Filtration spécialisée",
+                desc: "Éliminez le fer, le soufre et le manganèse efficacement.",
+                image: "https://images.unsplash.com/photo-1581244277943-fe4a9c777189?q=80&w=800&auto=format&fit=crop",
+                href: "/Filtres-deau"
+            },
+            {
+                title: "Désinfection UV",
+                desc: "Stérilisation instantanée contre les bactéries et micro-organismes.",
+                image: "https://images.unsplash.com/photo-1594411133519-2189874cb3d1?q=80&w=800&auto=format&fit=crop",
+                href: "/Systemes-de-desinfection-UV"
+            }
+        ]
     },
     {
-      category: "Installation et Maintenance",
-      questions: [
-        {
-          q: "Combien de temps prend l'installation ?",
-          a: "La plupart des installations résidentielles se font en 2-4 heures. Pour les systèmes commerciaux ou industriels, le délai peut varier selon la complexité du projet."
-        },
-        {
-          q: "À quelle fréquence dois-je entretenir mon système ?",
-          a: "Les adoucisseurs nécessitent un ajout de sel régulier. Les filtres doivent être changés tous les 6-12 mois selon l'utilisation. Nous offrons des plans d'entretien pour vous faciliter la tâche."
-        },
-        {
-          q: "Offrez-vous un service de maintenance ?",
-          a: "Oui ! Nous proposons des contrats d'entretien avec visites préventives, remplacement des filtres et support prioritaire pour garantir le bon fonctionnement de votre système."
-        }
-      ]
+        title: "Adoucissement d'eau",
+        id: "adoucissement",
+        products: [
+            {
+                title: "Adoucisseurs Résidentiels",
+                desc: "La référence pour une eau douce et la protection de vos appareils.",
+                image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop",
+                href: "/adoucisseur-eau-residentiel"
+            },
+            {
+                title: "Conditionneurs sans sel",
+                desc: "Réduction du tartre sans sel ni rejet d'eau.",
+                image: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=800&auto=format&fit=crop",
+                href: "/conditionneurs-sans-sel"
+            },
+            {
+                title: "Livraison de sel",
+                desc: "Service de livraison à domicile pour votre tranquillité.",
+                image: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=800&auto=format&fit=crop",
+                href: "/pieces"
+            }
+        ]
     },
     {
-      category: "Qualité de l'eau",
-      questions: [
-        {
-          q: "Comment savoir si mon eau a besoin d'être traitée ?",
-          a: "Des signes comme un goût désagréable, une odeur, des taches sur les appareils, une peau sèche ou des vêtements ternes indiquent un problème. Nous offrons des tests d'eau gratuits pour une analyse précise."
-        },
-        {
-          q: "L'eau traitée est-elle sûre pour boire ?",
-          a: "Absolument ! Nos systèmes sont certifiés et améliorent la qualité de votre eau en éliminant les contaminants. L'eau devient plus pure et plus saine pour toute votre famille."
-        },
-        {
-          q: "Peut-on traiter l'eau de puits ?",
-          a: "Oui, nous sommes spécialisés dans le traitement d'eau de puits. Nous analysons votre eau et recommandons le système adapté pour éliminer les contaminants spécifiques à votre source."
-        }
-      ]
+        title: "Eau de boisson & Filtration",
+        id: "eau-de-boisson",
+        products: [
+            {
+                title: "Osmose Inverse",
+                desc: "Eau pure de qualité bouteille directement à votre robinet.",
+                image: "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?q=80&w=800&auto=format&fit=crop",
+                href: "/osmose-filtration"
+            },
+            {
+                title: "Filtration sous-évier",
+                desc: "Solutions compactes pour une eau filtrée délicieuse.",
+                image: "https://images.unsplash.com/photo-1517646288020-f4ca67909930?q=80&w=800&auto=format&fit=crop",
+                href: "/Systemes-de-filtration-deau-sous-evier"
+            },
+            {
+                title: "Filtration toute la maison",
+                desc: "Protection globale contre le chlore et les sédiments.",
+                image: "https://images.unsplash.com/photo-1548839140-29a749e1cf4d?q=80&w=800&auto=format&fit=crop",
+                href: "/filtration"
+            }
+        ]
     },
     {
-      category: "Produits",
-      questions: [
-        {
-          q: "Quelle est la durée de vie d'un système de traitement d'eau ?",
-          a: "Avec un entretien approprié, nos systèmes durent 10-15 ans ou plus. Les composants comme les filtres et les résines doivent être remplacés régulièrement selon les recommandations du fabricant."
-        },
-        {
-          q: "Les systèmes consomment-ils beaucoup d'électricité ?",
-          a: "Non, la plupart de nos systèmes sont très économes en énergie. Certains modèles n'utilisent même pas d'électricité et fonctionnent avec la pression de l'eau."
-        },
-        {
-          q: "Offrez-vous des garanties ?",
-          a: "Oui, tous nos systèmes sont couverts par des garanties manufacturier. Nous offrons également des garanties d'installation et de satisfaction client."
-        }
-      ]
+        title: "Filtres spécialisés",
+        id: "filtres-specialises",
+        products: [
+            {
+                title: "Filtres à charbon actif",
+                desc: "Élimination des goûts et odeurs désagréables de chlore.",
+                image: "https://images.unsplash.com/photo-1581244277943-fe4a9c777189?q=80&w=800&auto=format&fit=crop",
+                href: "/filtration"
+            },
+            {
+                title: "Filtres à sédiments",
+                desc: "Élimine le sable, le limon et les particules en suspension.",
+                image: "https://images.unsplash.com/photo-1517646288020-f4ca67909930?q=80&w=800&auto=format&fit=crop",
+                href: "/filtration"
+            },
+            {
+                title: "Traitement du fer",
+                desc: "Systèmes robustes pour éliminer les taches de rouille.",
+                image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop",
+                href: "/Filtres-deau"
+            }
+        ]
+    },
+    {
+        title: "Solutions Commerciales",
+        id: "commercial",
+        products: [
+            {
+                title: "Distributeurs d'eau",
+                desc: "Solutions d'hydratation élégantes pour bureaux et entreprises.",
+                image: "https://images.unsplash.com/photo-1563227812-0ea4c22e6cc8?q=80&w=800&auto=format&fit=crop",
+                href: "/fontaines"
+            },
+            {
+                title: "Filtration Commerciale",
+                desc: "Systèmes haute capacité pour les besoins industriels.",
+                image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800&auto=format&fit=crop",
+                href: "/commercial-industriel"
+            },
+            {
+                title: "Service de maintenance",
+                desc: "Support technique professionnel pour vos installations.",
+                image: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=800&auto=format&fit=crop",
+                href: "/service"
+            }
+        ]
     }
-  ];
+];
 
-  return (
-    <div className="min-h-screen bg-background">
-      <Header />
-      <main>
-        {/* Hero Section */}
-        <section className="py-12 md:py-20 lg:py-24 bg-gradient-to-b from-primary/5 to-background">
-          <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto text-center space-y-6">
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
-                Questions Fréquentes
-              </h1>
-              <p className="text-lg md:text-xl text-muted-foreground">
-                Trouvez les réponses à vos questions sur le traitement d'eau
-              </p>
-            </div>
-          </div>
-        </section>
+const SpecializedFiltration = () => {
+    return (
+        <div className="min-h-screen bg-slate-50">
+            <Header />
 
-        {/* FAQ Section */}
-        <section className="py-12 md:py-16">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto space-y-12">
-              {faqs.map((category, categoryIndex) => (
-                <div key={categoryIndex} className="space-y-6">
-                  <h2 className="text-2xl md:text-3xl font-bold text-foreground">
-                    {category.category}
-                  </h2>
-                  <Accordion type="single" collapsible className="space-y-4">
-                    {category.questions.map((faq, faqIndex) => (
-                      <AccordionItem
-                        key={faqIndex}
-                        value={`${categoryIndex}-${faqIndex}`}
-                        className="bg-card border border-border rounded-lg px-6"
-                      >
-                        <AccordionTrigger className="text-left hover:no-underline">
-                          <span className="font-semibold text-foreground pr-4">
-                            {faq.q}
-                          </span>
-                        </AccordionTrigger>
-                        <AccordionContent className="text-muted-foreground pt-2 pb-4">
-                          {faq.a}
-                        </AccordionContent>
-                      </AccordionItem>
-                    ))}
-                  </Accordion>
+            <main>
+                {/* Hero Section - Following the design in the image */}
+                <section className="relative bg-[#001529] pt-[180px] pb-24 text-white overflow-hidden">
+                    <div className="absolute top-0 right-0 w-1/2 h-full opacity-20 hidden lg:block">
+                        <img
+                            src="https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=1200&auto=format&fit=crop"
+                            alt="Background decoration"
+                            className="w-full h-full object-cover"
+                        />
+                    </div>
+                    <div className="container mx-auto px-6 relative z-10">
+                        <div className="max-w-3xl">
+                            <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                                Solutions spécialisées en filtration d'eau
+                            </h1>
+                            <p className="text-xl opacity-90 mb-10 leading-relaxed text-blue-100/80 max-w-2xl">
+                                Découvrez notre gamme complète de systèmes de traitement d'eau conçus pour répondre à tous vos besoins, de la maison au commerce.
+                            </p>
+                            <div className="flex flex-wrap gap-4">
+                                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 font-bold h-14" asChild>
+                                    <a href="/contact">Démarrer une analyse gratuite</a>
+                                </Button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Quick Navigation / Categories Icons */}
+                <div className="bg-white border-b sticky top-[64px] z-30 hidden md:block shadow-sm">
+                    <div className="container mx-auto px-6 overflow-x-auto">
+                        <div className="flex justify-center gap-12 py-6">
+                            {categories.map((cat) => (
+                                <a
+                                    key={cat.id}
+                                    href={`#${cat.id}`}
+                                    className="flex items-center gap-2 text-sm font-bold text-gray-500 hover:text-blue-600 transition-colors whitespace-nowrap"
+                                >
+                                    <span className="w-2 h-2 rounded-full bg-blue-600"></span>
+                                    {cat.title}
+                                </a>
+                            ))}
+                        </div>
+                    </div>
                 </div>
-              ))}
-            </div>
-          </div>
-        </section>
 
-        {/* Contact CTA */}
-        <section className="py-12 md:py-16 bg-primary/5">
-          <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto text-center space-y-6">
-              <h2 className="text-2xl md:text-3xl font-bold text-foreground">
-                Vous n'avez pas trouvé votre réponse ?
-              </h2>
-              <p className="text-base md:text-lg text-muted-foreground">
-                Notre équipe d'experts est disponible pour répondre à toutes vos questions
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="tel:18552649328"
-                  className="inline-flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground font-medium rounded-md hover:bg-primary/90 transition-colors"
-                >
-                  Appelez-nous : 1 855 264 9328
-                </a>
-                <a
-                  href="/contact"
-                  className="inline-flex items-center justify-center px-6 py-3 bg-secondary text-secondary-foreground font-medium rounded-md hover:bg-secondary/80 transition-colors"
-                >
-                  Contactez-nous
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
-      <Footer />
-    </div>
-  );
+                {/* Category Sections */}
+                {categories.map((cat, idx) => (
+                    <section key={cat.id} id={cat.id} className={`py-24 ${idx % 2 === 0 ? 'bg-white' : 'bg-slate-50'}`}>
+                        <div className="container mx-auto px-6">
+                            <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+                                <div>
+                                    <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">{cat.title}</h2>
+                                    <div className="h-1.5 w-24 bg-blue-600 rounded-full"></div>
+                                </div>
+                                <Button variant="link" className="text-blue-600 font-bold p-0 group" asChild>
+                                    <NavLink to={cat.products[0].href} className="flex items-center">
+                                        Voir toutes les options <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                                    </NavLink>
+                                </Button>
+                            </div>
+
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                                {cat.products.map((product, pIdx) => (
+                                    <NavLink
+                                        key={pIdx}
+                                        to={product.href}
+                                        className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-slate-100 flex flex-col h-full"
+                                    >
+                                        <div className="relative h-64 overflow-hidden">
+                                            <img
+                                                src={product.image}
+                                                alt={product.title}
+                                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                            />
+                                            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                                        </div>
+                                        <div className="p-8 flex flex-col flex-1">
+                                            <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
+                                                {product.title}
+                                            </h3>
+                                            <p className="text-slate-600 mb-6 flex-1 leading-relaxed">
+                                                {product.desc}
+                                            </p>
+                                            <div className="flex items-center text-blue-600 font-bold text-sm uppercase tracking-wider group/btn">
+                                                Explorer <ChevronRight className="ml-1 h-4 w-4 transition-transform group-hover/btn:translate-x-1" />
+                                            </div>
+                                        </div>
+                                    </NavLink>
+                                ))}
+                            </div>
+                        </div>
+                    </section>
+                ))}
+
+                {/* Final Call to Action */}
+                <section className="py-24 bg-blue-600 text-white relative overflow-hidden">
+                    <div className="absolute top-0 left-0 w-full h-full opacity-10">
+                        <Waves className="absolute -bottom-10 -left-10 w-96 h-96 text-white" />
+                        <Droplets className="absolute -top-10 -right-10 w-64 h-64 text-white" />
+                    </div>
+                    <div className="container mx-auto px-6 relative z-10 text-center">
+                        <h2 className="text-3xl md:text-5xl font-bold mb-8 italic">
+                            Prêt à transformer la qualité de votre eau ?
+                        </h2>
+                        <p className="text-xl opacity-90 mb-12 max-w-2xl mx-auto leading-relaxed">
+                            Nos experts sont disponibles pour une consultation personnalisée et gratuite à votre domicile ou entreprise.
+                        </p>
+                        <div className="flex flex-col sm:flex-row gap-6 justify-center">
+                            <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50 rounded-full px-12 h-16 text-lg font-bold shadow-lg" asChild>
+                                <a href="/contact">Planifier ma visite</a>
+                            </Button>
+                            <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white/10 rounded-full px-12 h-16 text-lg font-bold" asChild>
+                                <a href="tel:18552649328">1 (855) 264-9328</a>
+                            </Button>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <Footer />
+        </div>
+    );
 };
 
-export default FAQ;
+export default SpecializedFiltration;
+  
