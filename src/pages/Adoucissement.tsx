@@ -245,24 +245,30 @@ const Adoucissement = () => {
                 {/* 6. Testimonials */}
                 <TestimonialsSection />
 
-                {/* 7. Water Test Section */}
-                <section className="py-24 bg-white">
+                {/* 7. Water Test Section (Refactored Design) */}
+                <section className="py-20 bg-white">
                     <div className="container mx-auto px-4">
-                        <div className="bg-[#00153D] rounded-[40px] overflow-hidden flex flex-col md:flex-row items-center">
-                            <div className="md:w-1/2 h-[450px]">
+                        <div className="flex flex-col lg:flex-row items-stretch gap-0 rounded-[3rem] overflow-hidden shadow-2xl">
+                            <div className="lg:w-1/2 relative min-h-[400px]">
                                 <img
                                     src="https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=1200&auto=format&fit=crop"
-                                    alt="Analyse d'eau"
-                                    className="w-full h-full object-cover"
+                                    alt="Expert d'eau"
+                                    className="absolute inset-0 w-full h-full object-cover"
                                 />
+                                <div className="absolute inset-0 bg-blue-900/10" />
                             </div>
-                            <div className="md:w-1/2 p-12 lg:p-20 text-white">
-                                <h2 className="text-3xl md:text-5xl font-bold mb-8 italic">Comment analyser votre eau</h2>
-                                <p className="text-lg opacity-80 mb-8 leading-relaxed">
-                                    Planifiez une analyse d'eau gratuite à domicile pour comprendre ce qu'il y a dans votre eau.
+                            <div className="lg:w-1/2 bg-blue-600 text-white p-12 lg:p-20 flex flex-col justify-center items-start text-left">
+                                <span className="text-white/80 text-xs font-black uppercase tracking-[0.3em] mb-8 block">
+                                    ANALYSE PROFESSIONNELLE
+                                </span>
+                                <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-8">
+                                    Comment analyser <br /> votre eau ?
+                                </h2>
+                                <p className="text-white/90 text-lg font-medium mb-12 leading-relaxed">
+                                    Planifiez une analyse d'eau gratuite à domicile pour comprendre ce qu'il y a dans votre eau. Nos experts utilisent des outils de pointe pour vous donner un résultat immédiat et précis.
                                 </p>
-                                <Button className="bg-white text-blue-900 hover:bg-gray-100 rounded-full px-10 h-14 text-lg font-bold">
-                                    Réserver une analyse
+                                <Button className="bg-white text-blue-600 hover:bg-blue-50 rounded-full px-12 h-16 text-xl font-bold shadow-xl transition-all hover:scale-105" asChild>
+                                    <NavLink to="/water-testing">Réserver une analyse</NavLink>
                                 </Button>
                             </div>
                         </div>
@@ -366,7 +372,7 @@ const Adoucissement = () => {
                 {/* 11. Articles Section */}
                 <section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-4">
-                        <h2 className="text-3xl font-bold mb-16 underline decoration-blue-600 underline-offset-8">Guides, ressources et informations</h2>
+                        <h2 className="text-3xl font-bold mb-16 underline decoration-blue-600 underline-offset-8">Ressources</h2>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {[
                                 { title: "Comment choisir son adoucisseur", img: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop" },

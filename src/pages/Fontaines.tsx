@@ -1,57 +1,27 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Snowflake, Droplets, Building2, Home, Phone } from "lucide-react";
+import TestimonialsSection from "@/components/TestimonialsSection";
+import {
+    Snowflake,
+    Droplets,
+    Building2,
+    Phone,
+    Zap,
+    Coffee,
+    ChevronRight,
+    ArrowRight,
+    Star,
+    ChevronLeft,
+    Coins,
+    Clock,
+    Layout,
+    ShieldCheck
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { NavLink } from "@/components/NavLink";
 import heroFountains from "@/assets/Fontaines d'eau.webp";
 
 const Fontaines = () => {
-    const fountainTypes = [
-        {
-            icon: Snowflake,
-            title: "Fontaines à glace",
-            description: "Eau fraîche et glace à volonté",
-            features: [
-                "Production de glace continue",
-                "Eau filtrée et refroidie",
-                "Capacité ajustable",
-                "Hygiénique et pratique"
-            ]
-        },
-        {
-            icon: Droplets,
-            title: "Fontaines d'eau",
-            description: "Eau pure à température ambiante ou froide",
-            features: [
-                "Filtration intégrée",
-                "Sans bouteille",
-                "Économique",
-                "Écologique"
-            ]
-        },
-        {
-            icon: Building2,
-            title: "Solutions commerciales",
-            description: "Pour bureaux, restaurants et commerces",
-            features: [
-                "Haute capacité",
-                "Design professionnel",
-                "Maintenance incluse",
-                "Installation rapide"
-            ]
-        },
-        {
-            icon: Home,
-            title: "Solutions résidentielles",
-            description: "Parfait pour votre maison",
-            features: [
-                "Compact et élégant",
-                "Facile d'utilisation",
-                "Économie d'espace",
-                "Installation simple"
-            ]
-        }
-    ];
-
     return (
         <div className="min-h-screen bg-background text-slate-900">
             <Header />
@@ -94,96 +64,141 @@ const Fontaines = () => {
                     </div>
                 </section>
 
-                {/* Fountain Types */}
-                <section className="py-20 md:py-24">
-                    <div className="container mx-auto px-4">
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
-                            {fountainTypes.map((fountain, index) => (
-                                <div
-                                    key={index}
-                                    className="bg-card border border-border rounded-xl p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-                                >
-                                    <div className="w-16 h-16 rounded-2xl bg-cyan-100 flex items-center justify-center mb-6">
-                                        <fountain.icon className="h-8 w-8 text-cyan-600" />
+                {/* Section 1: Solutions professionnelles */}
+                <section className="py-24 bg-[#0A192F] text-white">
+                    <div className="container mx-auto px-6 text-center">
+                        <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight">
+                            Solutions professionnelles pour l'eau. À votre service.
+                        </h2>
+                        <p className="text-slate-400 max-w-4xl mx-auto text-lg mb-16 leading-relaxed">
+                            Culligan Ottawa-Gatineau est votre source locale pour les meilleures solutions d'eau destinées aux entreprises.
+                            Que vous soyez un petit bureau ou une grande installation industrielle, nous avons l'expertise pour répondre à vos besoins.
+                        </p>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                            {[
+                                { title: "Fontaines d'eau sans bouteille", desc: "Eau fraîche et pure sans les tracas de livraison.", icon: Droplets },
+                                { title: "Machines à glaçons", desc: "Production haute performance pour tous commerces.", icon: Snowflake },
+                                { title: "Stations de purification d'eau", desc: "Filtration avancée pour une pureté absolue.", icon: Zap },
+                                { title: "Cafetières à filtre", desc: "Le café parfait commence par une eau parfaite.", icon: Coffee }
+                            ].map((item, i) => (
+                                <div key={i} className="bg-white text-slate-900 rounded-2xl p-8 flex flex-col items-center transition-all hover:shadow-2xl hover:-translate-y-2">
+                                    <div className="w-full aspect-square bg-slate-100 rounded-xl mb-6 flex items-center justify-center">
+                                        <item.icon className="w-16 h-16 text-blue-600 opacity-20" />
                                     </div>
-                                    <h3 className="text-xl font-bold text-foreground mb-4">
-                                        {fountain.title}
-                                    </h3>
-                                    <p className="text-muted-foreground mb-6 leading-relaxed">
-                                        {fountain.description}
-                                    </p>
-                                    <ul className="space-y-3">
-                                        {fountain.features.map((feature, idx) => (
-                                            <li key={idx} className="flex items-start gap-3 text-sm text-muted-foreground">
-                                                <span className="text-cyan-600 mt-1 font-bold">✓</span>
-                                                <span>{feature}</span>
-                                            </li>
-                                        ))}
-                                    </ul>
+                                    <h3 className="text-xl font-bold mb-4">{item.title}</h3>
+                                    <p className="text-slate-500 text-sm mb-6 flex-grow">{item.desc}</p>
+                                    <Button variant="link" className="text-blue-600 font-bold p-0 group">
+                                        EN SAVOIR PLUS <ChevronRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" />
+                                    </Button>
                                 </div>
                             ))}
                         </div>
                     </div>
                 </section>
 
-                {/* Benefits Section */}
-                <section className="py-20 md:py-24 bg-slate-50">
-                    <div className="container mx-auto px-4">
-                        <div className="max-w-4xl mx-auto">
-                            <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-slate-900">
-                                L'excellence dans chaque goutte
-                            </h2>
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                                <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 text-center">
-                                    <h3 className="font-bold text-xl mb-4 text-cyan-600">Économique</h3>
-                                    <p className="text-muted-foreground">
-                                        Éliminez définitivement les coûts exorbitants d'eau embouteillée et de livraison.
-                                    </p>
+                {/* Section 4: Testimonials */}
+                <TestimonialsSection />
+
+                {/* Section 5: Hydratez-vous */}
+                <section className="py-24 bg-white">
+                    <div className="container mx-auto px-6 text-center">
+                        <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-8 tracking-tight">
+                            Hydratez-vous comme jamais auparavant.
+                        </h2>
+                        <p className="text-slate-500 max-w-3xl mx-auto text-lg mb-16">
+                            Nos services d'eau commerciale offrent une fiabilité sans précédent et une qualité constante pour garantir
+                            que vos employés restent hydratés et productifs.
+                        </p>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+                            {[
+                                { title: "Économisez de l'argent", desc: "Supprimez les coûts de livraison et de stockage des bouteilles.", icon: Coins },
+                                { title: "Gagnez du temps", desc: "Finies les commandes récurrentes et les factures multiples.", icon: Clock },
+                                { title: "Économie pratique", desc: "Bénéficiez d'une facturation simplifiée et d'un service prévisible.", icon: Layout }
+                            ].map((item, i) => (
+                                <div key={i} className="flex flex-col items-center">
+                                    <div className="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center mb-6">
+                                        <item.icon className="w-8 h-8 text-blue-600" />
+                                    </div>
+                                    <h3 className="text-xl font-bold text-slate-900 mb-4">{item.title}</h3>
+                                    <p className="text-slate-500 leading-relaxed">{item.desc}</p>
                                 </div>
-                                <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 text-center">
-                                    <h3 className="font-bold text-xl mb-4 text-cyan-600">Écologique</h3>
-                                    <p className="text-muted-foreground">
-                                        Réduisez drastiquement vos déchets plastiques et votre empreinte carbone.
-                                    </p>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+                {/* Section 6: Installation Facile (Mosaic) */}
+                <section className="py-24 bg-slate-50">
+                    <div className="container mx-auto px-6">
+                        <div className="max-w-6xl mx-auto">
+                            <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-4">Installation. Facile.</h2>
+                            <p className="text-slate-500 text-lg mb-16">Un processus fluide de la consultation à la mise en service.</p>
+                            <div className="flex flex-col lg:flex-row gap-12">
+                                <div className="lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div className="bg-blue-600 text-white p-8 rounded-2xl flex flex-col justify-between min-h-[240px]">
+                                        <h3 className="text-2xl font-bold italic underline decoration-white/30 underline-offset-8">Analyse d'eau gratuite</h3>
+                                        <p className="opacity-80">Nous testons votre eau pour recommander le système parfait.</p>
+                                    </div>
+                                    <div className="bg-[#22C38E] text-white p-8 rounded-2xl flex flex-col justify-between min-h-[240px]">
+                                        <h3 className="text-2xl font-bold italic underline decoration-white/30 underline-offset-8">Filtration sur mesure</h3>
+                                        <p className="opacity-80">Un système adapté précisément à vos niveaux de contaminants.</p>
+                                    </div>
+                                    <div className="bg-white text-slate-900 p-8 rounded-2xl flex flex-col justify-between border border-slate-200 min-h-[240px]">
+                                        <h3 className="text-2xl font-bold italic underline decoration-blue-600/30 underline-offset-8">Installation sans tracas</h3>
+                                        <p className="text-slate-500">Nos techniciens certifiés s'occupent de tout de A à Z.</p>
+                                    </div>
+                                    <div className="bg-[#1A2A4D] text-white p-8 rounded-2xl flex flex-col justify-between min-h-[240px]">
+                                        <h3 className="text-2xl font-bold italic underline decoration-white/30 underline-offset-8">Service d'entretien</h3>
+                                        <p className="opacity-80">Maintenance préventive incluse pour une tranquillité totale.</p>
+                                    </div>
                                 </div>
-                                <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 text-center">
-                                    <h3 className="font-bold text-xl mb-4 text-cyan-600">Pratique</h3>
-                                    <p className="text-muted-foreground">
-                                        Accès immédiat à une eau pure et glacée 24/7, sans effort ni encombrement.
-                                    </p>
+                                <div className="lg:w-1/2 rounded-[3rem] overflow-hidden shadow-2xl bg-white flex items-center justify-center p-12">
+                                    <img
+                                        src="/src/assets/Fontaines d'eau.webp"
+                                        alt="Modern office cooler"
+                                        className="max-h-[600px] object-contain"
+                                    />
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
 
-                {/* CTA Section */}
-                <section className="py-20 md:py-24">
-                    <div className="container mx-auto px-4">
-                        <div className="max-w-3xl mx-auto text-center space-y-8">
-                            <h2 className="text-3xl md:text-4xl font-bold text-foreground leading-tight">
-                                Intéressé par une fontaine ?
-                            </h2>
-                            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-                                Contactez nos experts pour découvrir la solution de fontaine parfaite adaptée à votre consommation.
-                            </p>
-                            <div className="flex flex-col sm:flex-row gap-6 justify-center pt-4">
-                                <Button
-                                    size="lg"
-                                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-12 h-16 text-lg font-bold shadow-lg"
-                                    asChild
-                                >
-                                    <a href="tel:18552649328">1 855 264 9328</a>
-                                </Button>
-                                <Button
-                                    size="lg"
-                                    variant="outline"
-                                    className="rounded-full px-12 h-16 text-lg font-bold border-blue-600 text-blue-600 hover:bg-blue-50"
-                                    asChild
-                                >
-                                    <a href="/contact">Demander un devis</a>
-                                </Button>
-                            </div>
+                {/* Section 7: L'eau que vous voulez */}
+                <section className="py-24 bg-[#0A192F] text-white">
+                    <div className="container mx-auto px-6 text-center">
+                        <h2 className="text-3xl md:text-5xl font-bold mb-16 tracking-tight">
+                            L'eau que vous voulez. Comme vous la voulez.
+                        </h2>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                            {[
+                                { title: "Température souhaitée", desc: "Froide, chaude ou à température ambiante, c'est vous qui choisissez.", icon: Zap },
+                                { title: "Carbonatation sur demande", desc: "Profitez d'eau pétillante fraîchement gazéifiée à tout moment.", icon: Snowflake },
+                                { title: "Soins experts", desc: "Plus de 85 ans d'expertise au service de votre bureau.", icon: Building2 },
+                                { title: "Garantie à vie", desc: "La meilleure garantie de l'industrie pour votre tranquillité d'esprit.", icon: ShieldCheck }
+                            ].map((item, i) => (
+                                <div key={i} className="bg-white/5 border border-white/10 p-10 rounded-3xl flex flex-col items-start text-left hover:bg-white/10 transition-colors group">
+                                    <item.icon className="w-10 h-10 text-blue-400 mb-6 transition-transform group-hover:scale-110" />
+                                    <h3 className="text-xl font-bold mb-4">{item.title}</h3>
+                                    <p className="text-slate-400 text-sm leading-relaxed">{item.desc}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+                {/* Section 8: CTA Pre-footer */}
+                <section className="py-24 bg-slate-100 border-t border-slate-200">
+                    <div className="container mx-auto px-6 text-center">
+                        <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 tracking-tight">Prêts à aimer votre eau ?</h2>
+                        <p className="text-slate-500 text-lg mb-12">Contactez-nous aujourd'hui pour voir comment Culligan peut transformer votre bureau.</p>
+                        <div className="flex flex-col sm:flex-row gap-6 justify-center">
+                            <Button className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-12 h-16 text-xl font-bold shadow-xl">
+                                Demander un rappel
+                            </Button>
+                            <Button variant="outline" className="bg-white border-blue-600 text-blue-600 hover:bg-blue-50 rounded-full px-12 h-16 text-xl font-bold shadow-sm">
+                                Planifier un test d'eau
+                            </Button>
                         </div>
                     </div>
                 </section>

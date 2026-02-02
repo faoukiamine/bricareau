@@ -142,20 +142,26 @@ const WaterTestingPage = () => {
           </div>
         </section>
 
-        {/* Section 4: Chaque analyse d'eau */}
-        <section className="py-24 bg-slate-50">
+        {/* Section 4: Comment analyser votre eau (Refactored Design) */}
+        <section className="py-24 bg-white">
           <div className="container mx-auto px-6">
-            <div className="flex flex-col lg:flex-row items-center gap-20">
-              <div className="lg:w-1/2">
+            <div className="flex flex-col lg:flex-row items-stretch gap-0 rounded-[3rem] overflow-hidden shadow-2xl">
+              <div className="lg:w-1/2 relative min-h-[400px]">
                 <img
                   src="/src/assets/Scientist istesting water.webp"
-                  alt="Scientist analyzing water"
-                  className="rounded-[40px] shadow-2xl"
+                  alt="Analyse d'eau professionnelle"
+                  className="absolute inset-0 w-full h-full object-cover"
                 />
+                <div className="absolute inset-0 bg-blue-900/10" />
               </div>
-              <div className="lg:w-1/2">
-                <h2 className="text-4xl font-bold mb-10 italic">Chaque analyse d'eau :</h2>
-                <div className="space-y-6">
+              <div className="lg:w-1/2 bg-blue-600 text-white p-12 lg:p-20 flex flex-col justify-center items-start text-left">
+                <span className="text-white/80 text-xs font-black uppercase tracking-[0.3em] mb-8 block">
+                  ANALYSE CERTIFIÉE
+                </span>
+                <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-8">
+                  Comment analyser <br /> votre eau ?
+                </h2>
+                <div className="space-y-6 mb-12">
                   {[
                     "Une visite à domicile par un expert certifié",
                     "Test précis de la dureté de l'eau",
@@ -165,13 +171,16 @@ const WaterTestingPage = () => {
                     "Interprétation immédiate de vos résultats"
                   ].map((txt, i) => (
                     <div key={i} className="flex gap-4 items-center">
-                      <div className="shrink-0 w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center">
-                        <Check className="h-5 w-5 text-white" />
+                      <div className="shrink-0 w-6 h-6 rounded-full bg-white/20 flex items-center justify-center border border-white/30">
+                        <Check className="h-4 w-4 text-white" />
                       </div>
-                      <p className="text-lg font-medium text-gray-700">{txt}</p>
+                      <p className="text-lg font-medium text-white/90">{txt}</p>
                     </div>
                   ))}
                 </div>
+                <Button className="bg-white text-blue-600 hover:bg-blue-50 rounded-full px-12 h-16 text-xl font-bold shadow-xl transition-all hover:scale-105" asChild>
+                  <a href="#consultation">Réserver mon analyse</a>
+                </Button>
               </div>
             </div>
           </div>

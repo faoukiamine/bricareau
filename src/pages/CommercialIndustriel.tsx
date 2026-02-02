@@ -1,5 +1,5 @@
 import { Phone, Award, DollarSign, CheckCircle2 } from "lucide-react";
-import heroImage from "@/assets/hero-commercial.JPG";
+import heroImage from "@/assets/1451506551.JPG";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Testimonials from "@/components/Testimonials";
 import Footer from "@/components/Footer";
