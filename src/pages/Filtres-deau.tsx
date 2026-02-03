@@ -2,7 +2,7 @@
 import Footer from "@/components/Footer";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import { Button } from "@/components/ui/button";
-import heroBath from "@/assets/close-up-handsom-man-taking-bath.jpg";
+import heroBath from "@/assets/kid-playing-bathtub.jpg";
 import {
     ArrowRight,
     Droplets,

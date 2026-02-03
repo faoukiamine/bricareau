@@ -2,9 +2,10 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import { Button } from "@/components/ui/button";
-import heroBath from "@/assets/teenager-taking-shower-reduce-hangover-effect.jpg";
+import heroBath from "@/assets/kid-playing-bathtub.jpg";
 import kitchenImg from "@/assets/18036672_SIE_2720_1530_21_04_30_SIE_CRM_Dishwasher_Hand_Taking_Out_Wine_Glass_Basket_Motiv_11_0017.webp";
-import kitchenkidImg from "@/assets/5846952.jpg";
+import untitledImg from "@/assets/Untitled23.png";
+import mceclip0Img from "@/assets/mceclip0.png";
 import {
     ArrowRight,
     Droplets,
@@ -61,7 +62,7 @@ const Adoucissement = () => {
                                 Une eau douce, <span className="font-normal">meilleure pour vous et votre maison</span>
                             </h1>
                             <p className="font-light text-[20px] leading-[28px] text-white/95 mb-8 max-w-xl">
-                                Une solution pour toute la famille. Protégez votre plomberie et profitez d'une peau plus saine.
+                                Une solution pour toute la famille. L'eau dure agresse l'épiderme et rend les cheveux ternes. Redécouvrez le plaisir d'un bain hydratant.
                             </p>
                             <Button
                                 size="lg"
@@ -136,23 +137,22 @@ const Adoucissement = () => {
                             </div>
                             <div className="lg:w-1/2">
                                 <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
-                                    Lave-vaisselle sans traces
+                                    La technologie au service de votre eau.
                                 </h2>
                                 <p className="font-light text-[20px] leading-[28px] text-gray-600 mb-8">
-                                    L'eau adoucie empêche les taches de calcaire sur vos verres et votre vaisselle.
-                                    Dites adieu au rinçage manuel et profitez d'une brillance étincelante dès la sortie de la machine.
+                                    Découvrez nos adoucisseurs au sel de dernière génération : intelligents, économes en eau et conçus pour durer. Une eau douce, traitée avec précision pour votre confort total.
                                 </p>
-                                <NavLink to="#" className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-3 rounded-full transition-colors">
-                                    Voir comment
+                                <NavLink to="/adoucisseur-eau-residentiel" className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-3 rounded-full transition-colors">
+                                    Découvrir nos adoucisseurs d'eau
                                 </NavLink>
                             </div>
                         </div>
 
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-left">
                             {[
-                                { title: "Efficacité énergétique", desc: "Les chauffe-eau fonctionnent plus efficacement sans accumulation de tartre." },
-                                { title: "Moins de savon", desc: "L'eau douce nécessite jusqu'à 50% moins de détergent pour le même résultat." },
-                                { title: "Vie du linge", desc: "Vos vêtements restent neufs plus longtemps et les couleurs ne ternissent pas." }
+                                { title: "Économies réelles", desc: "Réduisez vos dépenses. Économisez jusqu'à 30% sur vos produits d'entretien et réduisez drastiquement vos factures d'énergie." },
+                                { title: "Douceur infinie", desc: "Une peau et des cheveux sublimés. Retrouvez la souplesse naturelle de votre peau et l'éclat de vos cheveux dès la première douche" },
+                                { title: "Protection totale", desc: "Préservez vos installations. Dites adieu aux pannes d'électroménager et aux traces de tartre sur votre robinetterie." }
                             ].map((item, i) => (
                                 <div key={i}>
                                     <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
@@ -171,34 +171,33 @@ const Adoucissement = () => {
                         <div className="flex flex-col lg:flex-row items-center gap-16 mb-20">
                             <div className="lg:w-1/2">
                                 <img
-                                    src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=1200&auto=format&fit=crop"
+                                    src={untitledImg}
                                     alt="Femme se lavant les mains"
                                     className="rounded-2xl shadow-xl w-full"
                                 />
                             </div>
                             <div className="lg:w-1/2 text-left">
                                 <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
-                                    Une santé d'eau saine pour toute votre maison
+                                    Zéro sel. Zéro électricité. Zéro souci.
                                 </h2>
                                 <p className="font-light text-[20px] leading-[28px] text-gray-600 mb-8">
-                                    L'eau adoucie n'est pas seulement bénéfique pour vos appareils, elle est essentielle
-                                    pour le bien-être de votre famille au quotidien.
+                                    Le secret d'un linge éclatant et d'une vaisselle sans traces. Sans l'ajout de sel, votre eau devient votre meilleure alliée beauté et ménage.
                                 </p>
-                                <Button className="bg-blue-600 text-white rounded-full px-12 h-14 text-lg font-bold">
-                                    Démarrer ici
+                                <Button className="bg-blue-600 text-white rounded-full px-12 h-14 text-lg font-bold" asChild>
+                                    <NavLink to="/conditionneurs-sans-sel">Découvrir nos conditionneurs d'eau sans sel</NavLink>
                                 </Button>
                             </div>
                         </div>
 
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-left">
                             {[
-                                { title: "Peau plus saine", desc: "L'eau douce prévient la sécheresse cutanée et les irritations." },
-                                { title: "Nettoyage facile", desc: "Moins de calcaire signifie moins de frottage dans la salle de bain." },
-                                { title: "Plus d'espace", desc: "Réduisez le nombre de produits de nettoyage stockés sous l'évier." }
+                                { title: "100% Écologique", desc: "Contrairement aux systèmes au sel, vous ne rejetez aucune saumure dans l'environnement et ne consommez pas d'eau pour la régénération." },
+                                { title: "Zéro Contrainte", desc: "Oubliez les sacs de sel. Profitez d'une protection permanente sans électricité, sans réglages et sans maintenance mensuelle. Installez-le, oubliez-le." },
+                                { title: "Eau Préservée", desc: "Gardez les bons minéraux. Le calcaire est neutralisé mais le calcium et le magnésium restent dans l'eau. Une eau saine pour votre santé et celle de votre famille." }
                             ].map((item, i) => (
                                 <div key={i}>
                                     <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
-                                        <span className="text-blue-600 font-bold italic">0{i + 4}</span> {item.title}
+                                        <span className="text-blue-600 font-bold italic">0{i + 1}</span> {item.title}
                                     </h3>
                                     <p className="text-gray-500 leading-relaxed">{item.desc}</p>
                                 </div>
@@ -213,30 +212,29 @@ const Adoucissement = () => {
                         <div className="flex flex-col lg:flex-row-reverse items-center gap-16 mb-20">
                             <div className="lg:w-1/2">
                                 <img
-                                    src={kitchenkidImg}
+                                    src={mceclip0Img}
                                     alt="Cuisine moderne avec eau adoucie"
                                     className="rounded-2xl shadow-xl w-full"
                                 />
                             </div>
                             <div className="lg:w-1/2">
                                 <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-left">
-                                    Lave-vaisselle sans traces
+                                    La douceur sans frontières : l'eau douce vous suit partout.
                                 </h2>
                                 <p className="font-light text-[20px] leading-[28px] text-gray-600 mb-8">
-                                    L'eau adoucie empêche les taches de calcaire sur vos verres et votre vaisselle.
-                                    Dites adieu au rinçage manuel et profitez d'une brillance étincelante dès la sortie de la machine.
+                                    Ne laissez plus l’eau dure des campings ou des ports abîmer vos cheveux et vos équipements. Profitez d'une eau de qualité domestique dans votre VR, votre bateau ou votre chalet avec notre adoucisseur ultra-compact.
                                 </p>
-                                <NavLink to="#" className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-3 rounded-full transition-colors">
-                                    Voir comment
+                                <NavLink to="/adoucisseurs-portables" className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-3 rounded-full transition-colors">
+                                    Découvrir nos adoucisseurs d'eau portables
                                 </NavLink>
                             </div>
                         </div>
 
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-left">
                             {[
-                                { title: "Efficacité énergétique", desc: "Les chauffe-eau fonctionnent plus efficacement sans accumulation de tartre." },
-                                { title: "Moins de savon", desc: "L'eau douce nécessite jusqu'à 50% moins de détergent pour le même résultat." },
-                                { title: "Vie du linge", desc: "Vos vêtements restent neufs plus longtemps et les couleurs ne ternissent pas." }
+                                { title: "Ultra-Compact & Léger", desc: "Conçu pour les petits espaces. Sa taille réduite lui permet de se glisser dans n'importe quel compartiment de rangement sans alourdir votre véhicule." },
+                                { title: "Plug & Play", desc: "Aucun outil requis. Se branche directement sur votre tuyau d'arrosage ou votre arrivée d'eau standard. Une mise en service instantanée, sans plombier." },
+                                { title: "Protection Mobile", desc: "Sauvez vos équipements. Protégez la tuyauterie de votre VR et votre chauffe-eau contre les eaux dures variables des terrains de camping." }
                             ].map((item, i) => (
                                 <div key={i}>
                                     <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
@@ -249,76 +247,10 @@ const Adoucissement = () => {
                     </div>
                 </section>
 
-                {/* 6. Testimonials */}
-                <TestimonialsSection />
-
-                {/* 7. Water Test Section (Refactored Design) */}
-                <section className="py-20 bg-white">
-                    <div className="container mx-auto px-4">
-                        <div className="flex flex-col lg:flex-row items-stretch gap-0 rounded-[3rem] overflow-hidden shadow-2xl">
-                            <div className="lg:w-1/2 relative min-h-[400px] bg-black overflow-hidden">
-                                <iframe
-                                    src="https://player.vimeo.com/video/1155585885?autoplay=1&loop=1&muted=1&background=1"
-                                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[177.78%] h-[177.78%] min-w-full min-h-full pointer-events-none"
-                                    frameBorder="0"
-                                    allow="autoplay; fullscreen; picture-in-picture"
-                                    allowFullScreen
-                                    title="Analyse d'eau"
-                                ></iframe>
-                                <div className="absolute inset-0 bg-blue-900/10 pointer-events-none" />
-                            </div>
-                            <div className="lg:w-1/2 bg-blue-600 text-white p-12 lg:p-20 flex flex-col justify-center items-start text-left">
-                                <span className="text-white/80 text-xs font-black uppercase tracking-[0.3em] mb-8 block">
-                                    ANALYSE PROFESSIONNELLE
-                                </span>
-                                <h2 className="text-[32px] md:text-[48px] font-normal text-white mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
-                                    Comment analyser <br /> votre eau ?
-                                </h2>
-                                <p className="font-light text-[20px] leading-[28px] text-white/90 mb-12">
-                                    Planifiez une analyse d'eau gratuite à domicile pour comprendre ce qu'il y a dans votre eau. Nos experts utilisent des outils de pointe pour vous donner un résultat immédiat et précis.
-                                </p>
-                                <Button className="bg-white text-blue-600 hover:bg-blue-50 rounded-full px-12 h-16 text-xl font-bold shadow-xl transition-all hover:scale-105" asChild>
-                                    <NavLink to="/water-testing">Réserver une analyse</NavLink>
-                                </Button>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                {/* 8. Quick Links */}
-                <section className="py-16 bg-white border-y border-gray-100">
-                    <div className="container mx-auto px-4">
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-                            <div className="flex flex-col md:flex-row gap-6 items-center border-b md:border-b-0 md:border-r border-gray-100 pb-8 md:pb-0 md:pr-12">
-                                <div className="w-20 h-20 bg-blue-50 rounded-full flex items-center justify-center shrink-0">
-                                    <Play className="h-8 w-8 text-blue-600 fill-blue-600" />
-                                </div>
-                                <div className="text-center md:text-left">
-                                    <h3 className="text-2xl font-bold mb-4">Vous avez besoin d'autre chose ?</h3>
-                                    <NavLink to="/water-testing" className="text-blue-600 font-bold flex items-center gap-2 group justify-center md:justify-start">
-                                        ANALYSER L'EAU <ChevronRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
-                                    </NavLink>
-                                </div>
-                            </div>
-                            <div className="flex flex-col md:flex-row gap-6 items-center">
-                                <div className="w-20 h-20 bg-blue-50 rounded-full flex items-center justify-center shrink-0">
-                                    <Sparkles className="h-8 w-8 text-blue-600" />
-                                </div>
-                                <div className="text-center md:text-left">
-                                    <h3 className="text-2xl font-bold mb-4">Découvrez nos solutions</h3>
-                                    <NavLink to="/adoucisseurs-portables" className="text-blue-600 font-bold flex items-center gap-2 group justify-center md:justify-start">
-                                        ADOUCISSEURS PORTABLES <ChevronRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
-                                    </NavLink>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
                 {/* 9. Comparison Table */}
                 <section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-4">
-                        <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-16 leading-[1.2] md:leading-[48px] tracking-tighter text-center">Compare Water Softening Systems</h2>
+                        <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-16 leading-[1.2] md:leading-[48px] tracking-tighter text-center">Comparer nos systèmes d'adoucissement d'eau</h2>
                         <div className="overflow-x-auto">
                             <table className="w-full min-w-[800px] border-collapse bg-white rounded-2xl overflow-hidden shadow-sm">
                                 <thead>
@@ -355,6 +287,42 @@ const Adoucissement = () => {
                     </div>
                 </section>
 
+                {/* 6. Testimonials */}
+                <TestimonialsSection />
+
+                {/* 7. Water Test Section (Refactored Design) */}
+                <section className="py-20 bg-white">
+                    <div className="container mx-auto px-4">
+                        <div className="flex flex-col lg:flex-row items-stretch gap-0 rounded-[3rem] overflow-hidden shadow-2xl">
+                            <div className="lg:w-1/2 relative min-h-[400px] bg-black overflow-hidden">
+                                <iframe
+                                    src="https://player.vimeo.com/video/1155585885?autoplay=1&loop=1&muted=1&background=1"
+                                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[177.78%] h-[177.78%] min-w-full min-h-full pointer-events-none"
+                                    frameBorder="0"
+                                    allow="autoplay; fullscreen; picture-in-picture"
+                                    allowFullScreen
+                                    title="Analyse d'eau"
+                                ></iframe>
+                                <div className="absolute inset-0 bg-blue-900/10 pointer-events-none" />
+                            </div>
+                            <div className="lg:w-1/2 bg-blue-600 text-white p-12 lg:p-20 flex flex-col justify-center items-start text-left">
+                                <span className="text-white/80 text-xs font-black uppercase tracking-[0.3em] mb-8 block">
+                                    ANALYSE PROFESSIONNELLE
+                                </span>
+                                <h2 className="text-[32px] md:text-[48px] font-normal text-white mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
+                                    L'excellence commence par une eau parfaite.
+                                </h2>
+                                <p className="font-light text-[20px] leading-[28px] text-white/90 mb-12">
+                                    Le luxe, c'est de ne pas avoir à se soucier de la qualité de ce que l'on consomme. Offrez-vous la sérénité d'une eau analysée par des experts, pour une maison où tout brille, sans effort et sans compromis.
+                                </p>
+                                <Button className="bg-white text-blue-600 hover:bg-blue-50 rounded-full px-12 h-16 text-xl font-bold shadow-xl transition-all hover:scale-105" asChild>
+                                    <NavLink to="/water-testing">Réserver une analyse</NavLink>
+                                </Button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
                 {/* 10. FAQ Section */}
                 <section className="py-24 bg-white">
                     <div className="container mx-auto px-4 max-w-4xl">
@@ -385,7 +353,7 @@ const Adoucissement = () => {
                         <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-16 text-slate-900 leading-[1.2] md:leading-[48px] tracking-tighter">Ressources</h2>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {[
-                                { title: "Comment choisir son adoucisseur", img: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop" },
+                                { title: "Comment choisir son adoucisseur", img: untitledImg },
                                 { title: "L'importance de l'eau adoucie", img: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=800&auto=format&fit=crop" },
                                 { title: "Entretien de votre système Culligan", img: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=800&auto=format&fit=crop" }
                             ].map((art, i) => (
