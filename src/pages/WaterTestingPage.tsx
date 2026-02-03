@@ -52,14 +52,21 @@ const WaterTestingPage = () => {
               <span className="inline-block px-4 py-1 bg-blue-600 text-sm font-bold uppercase tracking-wider rounded-full mb-6">
                 Appelez-nous : 1 855 264 9328
               </span>
-              <h1 className="text-[32px] md:text-[48px] font-normal text-white mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-left">
-                Planifiez un test <br />
-                d'eau gratuit
+              <h1
+                className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-white"
+                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+              >
+                Planifiez un test <span className="font-normal">d'eau gratuit</span>
               </h1>
-              <p className="text-xl opacity-90 mb-10 leading-relaxed max-w-xl">
+              <p className="font-light text-[20px] leading-[28px] text-white/95 mb-10 max-w-xl">
                 Que vous souhaitiez tester votre eau de puits ou explorer l'eau municipale, obtenez une analyse d'eau gratuite et en personne d'un expert.
               </p>
-              <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-10 h-16 text-xl font-bold shadow-xl transition-all hover:scale-105" asChild>
+              <Button
+                size="lg"
+                className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14"
+                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                asChild
+              >
                 <a href="#consultation">Planifier un test d'eau</a>
               </Button>
             </div>

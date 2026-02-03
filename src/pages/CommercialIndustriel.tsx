@@ -91,16 +91,20 @@ const CommercialIndustriel = () => {
               <span className="text-sm font-bold uppercase tracking-widest text-[#60A5FA] mb-4 block">
                 TRAITEMENT D'EAU INDUSTRIEL
               </span>
-              <h1 className="text-[32px] md:text-[48px] font-normal mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-white drop-shadow-md">
-                Bricareau, votre partenaire de confiance
+              <h1
+                className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-white"
+                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+              >
+                Bricareau, votre partenaire <span className="font-normal">de confiance</span>
               </h1>
-              <p className="text-lg md:text-xl font-medium opacity-90 mb-8 max-w-xl drop-shadow-sm">
+              <p className="font-light text-[20px] leading-[28px] text-white/95 mb-8 max-w-xl">
                 Notre mission est de vous offrir une tranquillité d'esprit dans vos projets de traitement de l'eau les plus exigeants.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button
                   size="lg"
-                  className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-10 h-14 text-lg font-bold"
+                  className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14"
+                  style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                   asChild
                 >
                   <a href="#solutions">Explorez nos solutions</a>
@@ -108,7 +112,8 @@ const CommercialIndustriel = () => {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="bg-white/10 hover:bg-white/20 text-white border-white rounded-full px-10 h-14 text-lg font-bold backdrop-blur-sm"
+                  className="bg-white/10 hover:bg-white/20 text-white border-white rounded-full px-8 h-14 backdrop-blur-sm shadow-lg"
+                  style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                   asChild
                 >
                   <a href="tel:18552649328" className="flex items-center gap-2">

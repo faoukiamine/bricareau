@@ -96,10 +96,13 @@ const EauDePuits = () => {
               <span className="text-sm font-bold uppercase tracking-widest text-[#60A5FA] mb-4 block">
                 SOLUTIONS POUR PUITS PRIVÉS
               </span>
-              <h1 className="text-[32px] md:text-[48px] font-normal mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-white drop-shadow-md">
-                Traitement de l'eau <br /> de puits
+              <h1
+                className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-white"
+                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+              >
+                Traitement de l'eau <span className="font-normal">de puits</span>
               </h1>
-              <p className="font-light text-[20px] leading-[28px] text-white/90 mb-8 max-w-xl drop-shadow-sm">
+              <p className="font-light text-[20px] leading-[28px] text-white/90 mb-8 max-w-xl">
                 Propriétaire d'un puits privé ? Nous comprenons vos défis.
                 Du fer au soufre, nous avons les solutions pour une eau saine
                 et de qualité supérieure.
@@ -107,7 +110,8 @@ const EauDePuits = () => {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button
                   size="lg"
-                  className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-10 h-14 text-lg font-bold"
+                  className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14"
+                  style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                   asChild
                 >
                   <NavLink to="/water-testing">
@@ -333,14 +337,16 @@ const EauDePuits = () => {
 
         {/* 6. SECTION PRODUITS ASSOCIÉS */}
         <section className="bg-white py-24">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal text-slate-900 mb-8 leading-[1.1] tracking-tighter">
-                Découvrez nos solutions <br />de traitement de l'eau de puits.
+          <div className="container mx-auto px-6">
+            <div className="text-left mb-16">
+              <h2
+                className="text-slate-900 tracking-tighter mb-8 text-left"
+                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+              >
+                <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Découvrez nos solutions</span>
+                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">de traitement de l'eau de puits</span>
               </h2>
-              <p className="text-gray-500 text-lg max-w-2xl mx-auto">
-                Optimisez votre expérience de traitement d'eau avec nos solutions complémentaires.
-              </p>
+              <div className="w-24 h-1 bg-blue-600"></div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12">

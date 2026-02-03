@@ -66,20 +66,34 @@ const FiltrationSousEvier = () => {
                             <span className="text-sm font-bold uppercase tracking-widest text-[#60A5FA] mb-4 block">
                                 PURETÉ INÉGALÉE
                             </span>
-                            <h1 className="text-[32px] md:text-[48px] font-normal mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-white drop-shadow-md">
-                                Osmose inverse <br /> & Filtration
+                            <h1
+                                className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-white"
+                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                            >
+                                Osmose inverse <span className="font-normal">& Filtration</span>
                             </h1>
-                            <p className="font-light text-[20px] leading-[28px] text-white/90 mb-8 max-w-xl drop-shadow-sm">
+                            <p className="font-light text-[20px] leading-[28px] text-white/90 mb-8 max-w-xl">
                                 Profitez d'une eau pure et délicieuse directement de votre robinet.
                                 Nos systèmes éliminent 99% des contaminants pour une tranquillité d'esprit totale.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4">
-                                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-10 h-14 text-lg font-bold" asChild>
+                                <Button
+                                    size="lg"
+                                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14"
+                                    style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                    asChild
+                                >
                                     <NavLink to="/contact">
                                         Demandez une analyse d'eau
                                     </NavLink>
                                 </Button>
-                                <Button size="lg" variant="outline" className="bg-white/10 hover:bg-white/20 text-white border-white rounded-full px-10 h-14 text-lg font-bold backdrop-blur-sm shadow-lg" asChild>
+                                <Button
+                                    size="lg"
+                                    variant="outline"
+                                    className="bg-white/10 hover:bg-white/20 text-white border-white rounded-full px-8 h-14 backdrop-blur-sm shadow-lg"
+                                    style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                    asChild
+                                >
                                     <a href="tel:18552649328" className="flex items-center gap-2">
                                         <Phone className="h-5 w-5" />
                                         1-855-264-9328
@@ -123,8 +137,12 @@ const FiltrationSousEvier = () => {
                 <section className="py-24 bg-white">
                     <div className="container mx-auto px-6">
                         <div className="text-left mb-16">
-                            <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
-                                Systèmes d'osmose inverse <br />pour la maison
+                            <h2
+                                className="text-slate-900 tracking-tighter mb-8 text-left"
+                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                            >
+                                <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Nos systèmes de filtration</span>
+                                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">d'eau sous évier</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>

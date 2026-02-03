@@ -36,12 +36,6 @@ const products = [
     { name: "Culligan High Efficiency", desc: "Notre système le plus avancé et économe.", path: "/filtre-eau-haute-efficacite", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
     { name: "Culligan HE Connect", desc: "Contrôlez votre eau via votre smartphone.", path: "/filtre-eau-haute-efficacite", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
     { name: "Culligan HE Municipal", desc: "Élimine le chlore et adoucit l'eau.", path: "/filtre-eau-haute-efficacite", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
-    { name: "Culligan Select Plus", desc: "Performance fiable pour toute la famille.", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
-    { name: "Culligan Select Plus Connect", desc: "Connectivité intelligente et grand confort.", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
-    { name: "Culligan Medallist Series", desc: "Design compact, efficacité maximale.", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
-    { name: "Culligan Gold Series", desc: "La référence de l'eau adoucie.", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
-    { name: "Culligan Outdoor HE", desc: "Solution robuste pour l'extérieur.", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
-    { name: "Culligan Iron-Cleer", desc: "Spécialisé pour l'eau contenant du fer.", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
 ];
 
 const reviews = [
@@ -88,15 +82,23 @@ const AdoucisseurEauResidentiel = () => {
                             <span className="inline-block px-3 py-1 bg-blue-600 text-xs font-bold uppercase tracking-wider rounded-sm mb-4">
                                 Solutions Résidentielles
                             </span>
-                            <h1 className="text-[32px] md:text-[48px] font-normal mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-white drop-shadow-md text-left">
-                                Profitez d'une solution sur mesure pour une eau de qualité
+                            <h1
+                                className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-white"
+                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                            >
+                                Profitez d'une solution sur mesure <span className="font-normal">pour une eau de qualité</span>
                             </h1>
-                            <p className="font-light text-[20px] leading-[28px] text-white/90 mb-8 max-w-xl">
+                            <p className="font-light text-[20px] leading-[28px] text-white/95 mb-8 max-w-xl">
                                 Modernisez votre maison avec les technologies Bricareau et redécouvrez le plaisir d'une eau douce,
                                 plus saine pour vous et vos installations.
                             </p>
                             <div className="flex gap-4">
-                                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 text-lg font-bold" asChild>
+                                <Button
+                                    size="lg"
+                                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14"
+                                    style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                    asChild
+                                >
                                     <NavLink to="/contact-residentiel">Démarrer ici</NavLink>
                                 </Button>
                                 <Button size="lg" variant="outline" className="bg-white/10 hover:bg-white/20 text-white border-white rounded-full px-8 h-14 text-lg font-bold backdrop-blur-sm" asChild>
@@ -138,13 +140,19 @@ const AdoucisseurEauResidentiel = () => {
 
                 {/* Product Grid Section */}
                 <section className="py-24 bg-gray-50">
-                    <div className="container mx-auto px-4 text-center">
-                        <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-16 leading-[1.2] md:leading-[48px] tracking-tighter">
-                            Adoucisseur d'eau résidentiel Culligan
-                        </h2>
+                    <div className="container mx-auto px-6">
+                        <div className="text-left mb-16">
+                            <h2
+                                className="text-[32px] md:text-[60px] font-light text-slate-900 mb-8 leading-[1.1] md:leading-[60px] tracking-tighter text-left"
+                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                            >
+                                Nos adoucisseurs d'eau <br /><span className="font-normal">résidentiels</span>
+                            </h2>
+                            <div className="w-24 h-1 bg-blue-600"></div>
+                        </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {products.map((p, i) => (
-                                <div key={i} className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center transition-all hover:shadow-md hover:-translate-y-1">
+                                <div key={i} className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-start text-left transition-all hover:shadow-md hover:-translate-y-1">
                                     <div className="h-48 mb-8 flex items-center justify-center">
                                         <img src={p.image} alt={p.name} className="max-h-full object-contain" />
                                     </div>
@@ -158,13 +166,16 @@ const AdoucisseurEauResidentiel = () => {
                                 </div>
                             ))}
                         </div>
-                        <div className="mt-16">
+                        <div className="mt-16 text-center">
                             <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
                                 Vous ne savez pas quel système choisir ? Nos experts peuvent vous aider à trouver la solution
                                 parfaite pour votre foyer.
                             </p>
-                            <Button className="bg-blue-600 text-white rounded-full px-12 h-14 text-lg">
-                                Trouver un expert Culligan
+                            <Button
+                                className="bg-blue-600 text-white rounded-full px-12 h-14"
+                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                            >
+                                Parlez avec un expert
                             </Button>
                         </div>
                     </div>
@@ -178,7 +189,13 @@ const AdoucisseurEauResidentiel = () => {
                     <div className="container mx-auto px-4">
                         <div className="flex flex-col lg:flex-row items-center gap-20">
                             <div className="lg:w-1/2">
-                                <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">C'est plus qu'un adoucisseur d'eau</h2>
+                                <h2
+                                    className="text-slate-900 tracking-tighter mb-8"
+                                    style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                >
+                                    <span className="text-[32px] md:text-[60px] font-light leading-[1.2] md:leading-[60px] block">C'est plus qu'un</span>
+                                    <span className="text-[32px] md:text-[60px] font-normal leading-[1.2] md:leading-[60px] block">adoucisseur d'eau</span>
+                                </h2>
                                 <p className="text-lg text-gray-600 mb-12">
                                     Il s'agit d'une solution complète pour toute la maison. Nos systèmes sont conçus pour
                                     offrir une performance intelligente et une efficacité sans précédent.
@@ -236,7 +253,8 @@ const AdoucisseurEauResidentiel = () => {
                             </p>
                             <Button
                                 size="lg"
-                                className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-10 h-14 text-lg font-bold transition-all shadow-lg"
+                                className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-10 h-14 transition-all shadow-lg"
+                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                                 asChild
                             >
                                 <NavLink to="/water-testing">En savoir plus</NavLink>
@@ -248,7 +266,13 @@ const AdoucisseurEauResidentiel = () => {
                 {/* Comparison Table Section */}
                 <section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-4">
-                        <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-16 leading-[1.2] md:leading-[48px] tracking-tighter text-center">Comparaison des adoucisseurs d'eau</h2>
+                        <h2
+                            className="text-slate-900 tracking-tighter mb-16 text-center"
+                            style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                        >
+                            <span className="text-[32px] md:text-[60px] font-light leading-[1.2] md:leading-[60px] block">Comparaison des</span>
+                            <span className="text-[32px] md:text-[60px] font-normal leading-[1.2] md:leading-[60px] block">adoucisseurs d'eau</span>
+                        </h2>
                         <div className="overflow-x-auto">
                             <table className="w-full min-w-[1000px] border-collapse bg-white rounded-2xl overflow-hidden shadow-sm">
                                 <thead>
@@ -336,7 +360,13 @@ const AdoucisseurEauResidentiel = () => {
                 {/* FAQ Section */}
                 <section className="py-24 bg-white">
                     <div className="container mx-auto px-4 max-w-4xl">
-                        <h2 className="text-3xl font-bold mb-12 text-center underline decoration-blue-600 underline-offset-8">FAQ sur les adoucisseurs d'eau</h2>
+                        <h2
+                            className="text-slate-900 tracking-tighter mb-12 text-center"
+                            style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                        >
+                            <span className="text-[32px] md:text-[60px] font-light leading-[1.2] md:leading-[60px] block">FAQ sur les</span>
+                            <span className="text-[32px] md:text-[60px] font-normal leading-[1.2] md:leading-[60px] block">adoucisseurs d'eau</span>
+                        </h2>
                         <Accordion type="single" collapsible className="w-full">
                             {faqItems.map((item, idx) => (
                                 <AccordionItem key={idx} value={`item-${idx}`} className="border-b-gray-200">
@@ -355,7 +385,13 @@ const AdoucisseurEauResidentiel = () => {
                 {/* Articles Section */}
                 <section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-4 text-center">
-                        <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-16 leading-[1.2] md:leading-[48px] tracking-tighter">Articles et ressources</h2>
+                        <h2
+                            className="text-slate-900 tracking-tighter mb-16 text-center"
+                            style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                        >
+                            <span className="text-[32px] md:text-[60px] font-light leading-[1.2] md:leading-[60px] block">Articles et</span>
+                            <span className="text-[32px] md:text-[60px] font-normal leading-[1.2] md:leading-[60px] block">ressources</span>
+                        </h2>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {[
                                 { title: "Comment choisir son adoucisseur", img: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop" },
@@ -383,8 +419,12 @@ const AdoucisseurEauResidentiel = () => {
                     <div className="container mx-auto px-4">
                         <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-20">
                             <div className="lg:w-1/3 text-left">
-                                <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter italic">
-                                    Planifiez une consultation gratuite sur l'eau
+                                <h2
+                                    className="text-slate-900 tracking-tighter mb-8 italic text-left"
+                                    style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                >
+                                    <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Planifiez une consultation</span>
+                                    <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">gratuite sur l'eau</span>
                                 </h2>
                                 <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                                     Remplissez le formulaire ci-dessous pour organiser une visite d'un de nos experts de l'eau.
@@ -445,7 +485,10 @@ const AdoucisseurEauResidentiel = () => {
                                             </div>
                                         </div>
                                         <div className="md:col-span-2 text-left">
-                                            <Button className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-16 h-14 text-xl font-bold w-full md:w-auto">
+                                            <Button
+                                                className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-16 h-14 w-full md:w-auto"
+                                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                            >
                                                 Continuer
                                             </Button>
                                             <p className="mt-4 text-[10px] text-gray-400 max-w-lg">

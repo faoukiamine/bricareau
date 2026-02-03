@@ -54,13 +54,20 @@ const Adoucissement = () => {
                             <span className="text-sm font-bold uppercase tracking-widest text-blue-600 mb-4 block">
                                 ADOUCISSEURS D'EAU
                             </span>
-                            <h1 className="text-[32px] md:text-[48px] font-normal mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-white drop-shadow-md text-left">
-                                Une eau douce,<br />meilleure pour vous et votre maison
+                            <h1
+                                className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-white"
+                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                            >
+                                Une eau douce, <span className="font-normal">meilleure pour vous et votre maison</span>
                             </h1>
-                            <p className="font-light text-[20px] leading-[28px] text-white/95 mb-8 max-w-xl drop-shadow-sm">
+                            <p className="font-light text-[20px] leading-[28px] text-white/95 mb-8 max-w-xl">
                                 Une solution pour toute la famille. Protégez votre plomberie et profitez d'une peau plus saine.
                             </p>
-                            <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-10 h-14 text-lg font-bold">
+                            <Button
+                                size="lg"
+                                className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14"
+                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                            >
                                 Démarrer ici
                             </Button>
                         </div>

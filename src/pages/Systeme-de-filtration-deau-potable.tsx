@@ -37,13 +37,13 @@ import waterTestBg from "@/assets/water_test_bg.png";
 
 const OsmoseFiltration = () => {
   const comparisonData = [
-    { feature: "Filtration en 5 étapes", elite: true, plus: true, essential: true, serene: false },
-    { feature: "Élimination des métaux lourds", elite: true, plus: true, essential: true, serene: true },
-    { feature: "Membrane d'osmose inverse", elite: true, plus: true, essential: true, serene: false },
-    { feature: "Reminéralisation alcaline", elite: true, plus: "Option", essential: false, serene: false },
-    { feature: "Débit rapide (75 GPD)", elite: true, plus: true, essential: false, serene: false },
-    { feature: "Compact (Sans réservoir)", elite: false, plus: false, essential: false, serene: true },
-    { feature: "Garantie prolongée", elite: true, plus: true, essential: true, serene: true },
+    { feature: "Filtration en 5 étapes", elite: true, plus: true, essential: true },
+    { feature: "Élimination des métaux lourds", elite: true, plus: true, essential: true },
+    { feature: "Membrane d'osmose inverse", elite: true, plus: true, essential: true },
+    { feature: "Reminéralisation alcaline", elite: true, plus: "Option", essential: false },
+    { feature: "Débit rapide (75 GPD)", elite: true, plus: true, essential: false },
+    { feature: "Compact (Sans réservoir)", elite: false, plus: false, essential: false },
+    { feature: "Garantie prolongée", elite: true, plus: true, essential: true },
   ];
 
   return (
@@ -66,20 +66,34 @@ const OsmoseFiltration = () => {
               <span className="text-sm font-bold uppercase tracking-widest text-[#60A5FA] mb-4 block">
                 PURETÉ INÉGALÉE
               </span>
-              <h1 className="text-[32px] md:text-[48px] font-normal mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-white drop-shadow-md text-left">
-                Osmose inverse <br /> & Filtration
+              <h1
+                className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-white"
+                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+              >
+                La différence que vous pouvez voir <br /> <span className="font-normal">sentir et goûter</span>
               </h1>
-              <p className="text-lg md:text-xl font-medium opacity-95 mb-8 max-w-xl drop-shadow-sm">
+              <p className="font-light text-[20px] leading-[28px] text-white/95 mb-8 max-w-xl">
                 Profitez d'une eau pure et délicieuse directement de votre robinet.
                 Nos systèmes éliminent 99% des contaminants pour une tranquillité d'esprit totale.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-10 h-14 text-lg font-bold" asChild>
+                <Button
+                  size="lg"
+                  className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14"
+                  style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                  asChild
+                >
                   <NavLink to="/contact">
-                    Demandez une analyse d'eau
+                    Découvrir nos systèmes
                   </NavLink>
                 </Button>
-                <Button size="lg" variant="outline" className="bg-white/10 hover:bg-white/20 text-white border-white rounded-full px-10 h-14 text-lg font-bold backdrop-blur-sm shadow-lg" asChild>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="bg-white/10 hover:bg-white/20 text-white border-white rounded-full px-8 h-14 backdrop-blur-sm shadow-lg"
+                  style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                  asChild
+                >
                   <a href="tel:18552649328" className="flex items-center gap-2">
                     <Phone className="h-5 w-5" />
                     1-855-264-9328
@@ -123,17 +137,20 @@ const OsmoseFiltration = () => {
         <section className="py-24 bg-white">
           <div className="container mx-auto px-6">
             <div className="text-left mb-16">
-              <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-left">
-                Systèmes d'osmose inverse <br />pour la maison
+              <h2
+                className="text-slate-900 tracking-tighter mb-8 text-left"
+                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+              >
+                <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Nos systèmes de purification</span>
+                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">d'eau par osmose inverse</span>
               </h2>
               <div className="w-24 h-1 bg-blue-600"></div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 { name: "Bricareau Elite RO", desc: "Le summum de la filtration avec reminéralisation alcaline incluse.", img: drinkingWaterImg },
                 { name: "Bricareau Plus RO", desc: "Performance exceptionnelle pour les familles actives.", img: drinkingWaterImg },
                 { name: "Bricareau Essential", desc: "La pureté accessible sans compromis sur la qualité.", img: drinkingWaterImg },
-                { name: "Serene Lite", desc: "Design compact et installation ultra-rapide.", img: sereneLiteImg }
               ].map((product, i) => (
                 <div key={i} className="group cursor-pointer">
                   <div className="bg-slate-50 aspect-square rounded-3xl mb-6 overflow-hidden flex items-center justify-center p-8 transition-all group-hover:shadow-xl group-hover:bg-white group-hover:-translate-y-2">
@@ -237,8 +254,12 @@ const OsmoseFiltration = () => {
         {/* 7. Comparison Table */}
         <section className="py-24 bg-white">
           <div className="container mx-auto px-4">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal text-slate-900 mb-16 text-center leading-[1.1] tracking-tighter">
-              Comparez nos solutions <br />de filtration d'eau potable.
+            <h2
+              className="text-slate-900 tracking-tighter mb-16 text-center"
+              style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+            >
+              <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Comparez nos solutions</span>
+              <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">de filtration d'eau potable</span>
             </h2>
             <div className="overflow-x-auto">
               <table className="w-full min-w-[1000px] border-collapse bg-white rounded-2xl overflow-hidden shadow-sm">
@@ -249,7 +270,6 @@ const OsmoseFiltration = () => {
                       { name: "Elite RO", img: drinkingWaterImg },
                       { name: "Plus RO", img: drinkingWaterImg },
                       { name: "Essential", img: drinkingWaterImg },
-                      { name: "Serene Lite", img: sereneLiteImg }
                     ].map((m, i) => (
                       <th key={i} className="p-4 text-center text-gray-900 font-bold text-sm">
                         <div className="flex flex-col items-center gap-2">
@@ -276,9 +296,6 @@ const OsmoseFiltration = () => {
                       </td>
                       <td className="p-8 text-center">
                         {row.essential ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : <X className="h-6 w-6 text-gray-300 mx-auto" />}
-                      </td>
-                      <td className="p-8 text-center">
-                        {row.serene ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : <X className="h-6 w-6 text-gray-300 mx-auto" />}
                       </td>
                     </tr>
                   ))}

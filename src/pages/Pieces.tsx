@@ -44,10 +44,13 @@ const Pieces = () => {
                     <div className="container mx-auto px-4">
                         <div className="max-w-3xl mx-auto text-center space-y-6">
                             <Package className="h-16 w-16 text-[#0052ff] mx-auto" />
-                            <h1 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
-                                Pièces de Remplacement
+                            <h1
+                                className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-foreground"
+                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                            >
+                                Pièces de <span className="font-normal">Remplacement</span>
                             </h1>
-                            <p className="text-lg md:text-xl text-muted-foreground">
+                            <p className="font-light text-[20px] leading-[28px] text-muted-foreground">
                                 Trouvez toutes les pièces dont vous avez besoin pour vos équipements
                             </p>
                         </div>

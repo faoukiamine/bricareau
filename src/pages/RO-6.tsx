@@ -57,13 +57,21 @@ const RO6 = () => {
                                 <span className="text-blue-600 font-bold uppercase tracking-widest text-sm mb-4 block">
                                     SYSTÈME D'OSMOSE INVERSE
                                 </span>
-                                <h1 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-left">
-                                    Aquasential® <br /> Osmose Inverse
+                                <h1
+                                    className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-foreground"
+                                    style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                >
+                                    Aquasential® <span className="font-normal">Osmose Inverse</span>
                                 </h1>
                                 <p className="font-light text-[20px] leading-[28px] text-slate-600 mb-8">
                                     Découvrez le système de filtration d'eau potable le plus intelligent au monde. Éliminez jusqu'à 99 % des contaminants pour une eau pure et délicieuse directement de votre robinet.
                                 </p>
-                                <Button className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-10 h-16 text-xl font-bold mb-12 shadow-xl transition-all hover:scale-105" asChild>
+                                <Button
+                                    size="lg"
+                                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 mb-12"
+                                    style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                    asChild
+                                >
                                     <NavLink to="/contact">Démarrer ici</NavLink>
                                 </Button>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 border-t border-slate-100 pt-8">

@@ -61,20 +61,34 @@ const Filtration = () => {
                             <span className="text-sm font-bold uppercase tracking-widest text-[#60A5FA] mb-4 block">
                                 SOLUTIONS DE FILTRATION
                             </span>
-                            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-6 leading-tight drop-shadow-md">
-                                Systèmes de <br /> Filtration d'eau
+                            <h1
+                                className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-white"
+                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                            >
+                                Systèmes de <span className="font-normal">Filtration d'eau</span>
                             </h1>
-                            <p className="text-lg md:text-xl font-medium opacity-95 mb-8 max-w-xl drop-shadow-sm">
+                            <p className="font-light text-[20px] leading-[28px] text-white/95 mb-8 max-w-xl">
                                 Améliorez la qualité de votre eau au quotidien avec nos solutions de filtration avancées.
                                 Fini le chlore, le calcaire et les impuretés.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4">
-                                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-10 h-14 text-lg font-bold" asChild>
+                                <Button
+                                    size="lg"
+                                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14"
+                                    style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                    asChild
+                                >
                                     <NavLink to="/contact">
                                         Demandez une analyse d'eau
                                     </NavLink>
                                 </Button>
-                                <Button size="lg" variant="outline" className="bg-white/10 hover:bg-white/20 text-white border-white rounded-full px-10 h-14 text-lg font-bold backdrop-blur-sm shadow-lg" asChild>
+                                <Button
+                                    size="lg"
+                                    variant="outline"
+                                    className="bg-white/10 hover:bg-white/20 text-white border-white rounded-full px-8 h-14 backdrop-blur-sm shadow-lg"
+                                    style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                    asChild
+                                >
                                     <a href="tel:18552649328" className="flex items-center gap-2">
                                         <Phone className="h-5 w-5" />
                                         1-855-264-9328

@@ -107,14 +107,21 @@ const ConditionneursSansSel = () => {
               <span className="text-sm font-bold uppercase tracking-widest text-[#60A5FA] mb-4 block">
                 NOUVEAU CHEZ BRICAREAU
               </span>
-              <h1 className="text-[32px] md:text-[48px] font-normal mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-white drop-shadow-md text-left">
-                Une solution simple <br /> et sans sel
+              <h1
+                className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-white"
+                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+              >
+                Une solution simple <span className="font-normal">et sans sel</span>
               </h1>
-              <p className="text-lg md:text-xl font-medium opacity-90 mb-8 max-w-xl drop-shadow-sm">
+              <p className="font-light text-[20px] leading-[28px] text-white/95 mb-8 max-w-xl">
                 Protégez votre plomberie et profitez d'une eau plus saine grâce à notre technologie
                 de conditionnement avancée, sans sel et sans entretien.
               </p>
-              <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-10 h-14 text-lg font-bold">
+              <Button
+                size="lg"
+                className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14"
+                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+              >
                 Demander une consultation gratuite
               </Button>
             </div>

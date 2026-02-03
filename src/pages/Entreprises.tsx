@@ -72,16 +72,20 @@ const Entreprises = () => {
               <span className="text-sm font-bold uppercase tracking-widest text-[#60A5FA] mb-4 block">
                 SOLUTIONS POUR ENTREPRISES
               </span>
-              <h1 className="text-[32px] md:text-[48px] font-normal mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-white drop-shadow-md">
-                Une eau pure au quotidien
+              <h1
+                className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-white"
+                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+              >
+                Une eau pure <span className="font-normal">au quotidien</span>
               </h1>
-              <p className="text-lg md:text-xl font-medium opacity-90 mb-8 max-w-xl drop-shadow-sm">
+              <p className="font-light text-[20px] leading-[28px] text-white/95 mb-8 max-w-xl">
                 Vos collaborateurs apprécieront la nouvelle façon d'avoir de l'eau fraîche dans votre entreprise !
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button
                   size="lg"
-                  className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-10 h-14 text-lg font-bold"
+                  className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14"
+                  style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                   asChild
                 >
                   <a href="#solutions">Explorez nos solutions d'eau</a>
@@ -89,7 +93,8 @@ const Entreprises = () => {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="bg-white/10 hover:bg-white/20 text-white border-white rounded-full px-10 h-14 text-lg font-bold backdrop-blur-sm"
+                  className="bg-white/10 hover:bg-white/20 text-white border-white rounded-full px-8 h-14 backdrop-blur-sm"
+                  style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                   asChild
                 >
                   <a href="tel:18552649328" className="flex items-center gap-2">
