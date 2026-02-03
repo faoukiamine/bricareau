@@ -16,7 +16,7 @@ const ProblemHero = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
                     {/* Left Content - Typography focused */}
                     <div className="flex flex-col max-w-2xl animate-in fade-in slide-in-from-left duration-1000">
-                        <span className="text-blue-600 text-[10px] font-black uppercase tracking-[0.5em] mb-8 block">
+                        <span className="text-sm font-bold uppercase tracking-widest text-blue-600 mb-4 block">
                             Problèmes d'eau
                         </span>
 
@@ -24,11 +24,11 @@ const ProblemHero = () => {
                             className="text-slate-900 mb-10 tracking-tighter"
                             style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                         >
-                            <span className="text-[32px] md:text-[60px] font-light leading-[1.2] md:leading-[60px] block">Épargnez-vous les</span>
-                            <span className="text-[32px] md:text-[60px] font-normal leading-[1.2] md:leading-[60px] block">maux de tête.</span>
+                            <span className="text-[40px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Épargnez-vous les</span>
+                            <span className="text-[40px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">maux de tête.</span>
                         </h1>
 
-                        <p className="text-xl text-slate-500 leading-relaxed mb-12 max-w-lg font-medium">
+                        <p className="font-light text-[20px] leading-[28px] text-slate-600 mb-12 max-w-xl">
                             Vous vous inquiétez de la qualité de votre eau potable, du calcaire sur votre pomme de douche, des tâches de rouille dans votre baignoire ou d’une odeur des œufs pourris lorsque vous prenez votre douche ?
                         </p>
 
@@ -40,7 +40,7 @@ const ProblemHero = () => {
                                 asChild
                             >
                                 <a href="/consultation" className="flex items-center gap-2">
-                                    Céduler une consultation
+                                    Cédulez une consultation gratuite
                                     <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
                                 </a>
                             </Button>

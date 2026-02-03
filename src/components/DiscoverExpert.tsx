@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import guideExpertImg from "@/assets/discover_expert.jpg";
+import guideExpertImg from "@/assets/40-AdobeStock_365603381.jpeg";
 
 const DiscoverExpert = () => {
     return (
@@ -14,38 +14,18 @@ const DiscoverExpert = () => {
                             style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                         >
                             <span className="text-[32px] md:text-[60px] font-light leading-[1.2] md:leading-[60px] block">Découvrez les options</span>
-                            <span className="text-[32px] md:text-[60px] font-normal leading-[1.2] md:leading-[60px] block">de traitement d'experts</span>
+                            <span className="text-[32px] md:text-[60px] font-normal leading-[1.2] md:leading-[60px] block">de traitement de nos spécialistes</span>
                         </h2>
                         <p className="text-lg text-muted-foreground leading-relaxed">
                             Nos spécialistes de l'eau vous guident vers la solution parfaite pour votre maison.
                             Profitez d'une eau plus pure, plus douce et meilleure pour votre santé.
                         </p>
-                        <div className="space-y-4">
-                            <div className="flex items-start gap-3">
-                                <div className="w-2 h-2 rounded-full bg-[#2563EB] mt-2" />
-                                <p className="text-base text-foreground">
-                                    Analyse complète de la qualité de votre eau
-                                </p>
-                            </div>
-                            <div className="flex items-start gap-3">
-                                <div className="w-2 h-2 rounded-full bg-[#2563EB] mt-2" />
-                                <p className="text-base text-foreground">
-                                    Recommandations personnalisées par nos experts
-                                </p>
-                            </div>
-                            <div className="flex items-start gap-3">
-                                <div className="w-2 h-2 rounded-full bg-[#2563EB] mt-2" />
-                                <p className="text-base text-foreground">
-                                    Installation professionnelle et garantie complète
-                                </p>
-                            </div>
-                        </div>
                         <Button
                             size="lg"
                             className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 group"
                             style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                         >
-                            En savoir plus
+                            Répondre à notre Quiz
                             <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                         </Button>
                     </div>

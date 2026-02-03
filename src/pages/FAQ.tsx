@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ChevronRight, CheckCircle2, Droplets, Filter, Shield, Zap, GlassWater, Waves, Snowflake, CupSoda } from "lucide-react";
 import { NavLink } from "react-router-dom";
+import residentialWaterSoftenerImg from "@/assets/residential-water-softener.png";
 
 const categories = [
     {
@@ -42,7 +43,7 @@ const categories = [
             {
                 title: "Conditionneurs sans sel",
                 desc: "Réduction du tartre sans sel ni rejet d'eau.",
-                image: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=800&auto=format&fit=crop",
+                image: residentialWaterSoftenerImg,
                 href: "/conditionneurs-sans-sel"
             },
             {
@@ -135,12 +136,15 @@ const SpecializedFiltration = () => {
             <main>
                 {/* Hero Section - Following the design in the image */}
                 <section className="relative bg-[#001529] pt-[180px] pb-24 text-white overflow-hidden">
-                    <div className="absolute top-0 right-0 w-1/2 h-full opacity-20 hidden lg:block">
-                        <img
-                            src="https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=1200&auto=format&fit=crop"
-                            alt="Background decoration"
-                            className="w-full h-full object-cover"
-                        />
+                    <div className="absolute top-0 right-0 w-1/2 h-full opacity-20 hidden lg:block bg-black overflow-hidden">
+                        <iframe
+                            src="https://player.vimeo.com/video/1155585885?autoplay=1&loop=1&muted=1&background=1"
+                            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[177.78%] h-[177.78%] min-w-full min-h-full pointer-events-none"
+                            frameBorder="0"
+                            allow="autoplay; fullscreen; picture-in-picture"
+                            allowFullScreen
+                            title="Background video"
+                        ></iframe>
                     </div>
                     <div className="container mx-auto px-6 relative z-10">
                         <div className="max-w-3xl">
@@ -257,4 +261,3 @@ const SpecializedFiltration = () => {
 };
 
 export default SpecializedFiltration;
-  

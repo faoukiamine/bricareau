@@ -218,8 +218,15 @@ const AdoucisseurEauResidentiel = () => {
                                     ))}
                                 </div>
                             </div>
-                            <div className="lg:w-1/2">
-                                <img src="https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=1200&auto=format&fit=crop" alt="Cuisine propre" className="rounded-[40px] shadow-2xl" />
+                            <div className="lg:w-1/2 relative min-h-[400px] bg-black rounded-[40px] overflow-hidden shadow-2xl">
+                                <iframe
+                                    src="https://player.vimeo.com/video/1155585885?autoplay=1&loop=1&muted=1&background=1"
+                                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[177.78%] h-[177.78%] min-w-full min-h-full pointer-events-none"
+                                    frameBorder="0"
+                                    allow="autoplay; fullscreen; picture-in-picture"
+                                    allowFullScreen
+                                    title="Cuisine propre"
+                                ></iframe>
                             </div>
                         </div>
                     </div>

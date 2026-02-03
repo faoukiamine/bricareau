@@ -23,6 +23,7 @@ import {
 } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import waterTestBg from "@/assets/Enercare_JP_Day_2_Kitchen_Faucet_498-2048x1365.jpg";
+import residentialWaterSoftenerImg from "@/assets/residential-water-softener.png";
 import {
     Accordion,
     AccordionContent,
@@ -86,11 +87,10 @@ const AdoucisseurEauResidentiel = () => {
                                 className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-white"
                                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                             >
-                                Profitez d'une solution sur mesure <span className="font-normal">pour une eau de qualité</span>
+                                Un bien-être sans égal <span className="font-normal">au quotidien</span>
                             </h1>
                             <p className="font-light text-[20px] leading-[28px] text-white/95 mb-8 max-w-xl">
-                                Modernisez votre maison avec les technologies Bricareau et redécouvrez le plaisir d'une eau douce,
-                                plus saine pour vous et vos installations.
+                                Bricareau vous offre une eau douce, source de bien-être et de confort.
                             </p>
                             <div className="flex gap-4">
                                 <Button
@@ -99,10 +99,7 @@ const AdoucisseurEauResidentiel = () => {
                                     style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                                     asChild
                                 >
-                                    <NavLink to="/contact-residentiel">Démarrer ici</NavLink>
-                                </Button>
-                                <Button size="lg" variant="outline" className="bg-white/10 hover:bg-white/20 text-white border-white rounded-full px-8 h-14 text-lg font-bold backdrop-blur-sm" asChild>
-                                    <NavLink to="/produits">Voir les produits</NavLink>
+                                    <NavLink to="/contact-residentiel">Explorez nos adoucisseurs d'eau</NavLink>
                                 </Button>
                             </div>
                         </div>
@@ -220,7 +217,11 @@ const AdoucisseurEauResidentiel = () => {
                                 </div>
                             </div>
                             <div className="lg:w-1/2">
-                                <img src="https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=1200&auto=format&fit=crop" alt="Cuisine propre" className="rounded-[40px] shadow-2xl" />
+                                <img
+                                    src={residentialWaterSoftenerImg}
+                                    alt="Adoucisseur d'eau résidentiel"
+                                    className="w-full max-w-md mx-auto mix-blend-multiply"
+                                />
                             </div>
                         </div>
                     </div>
@@ -395,7 +396,7 @@ const AdoucisseurEauResidentiel = () => {
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {[
                                 { title: "Comment choisir son adoucisseur", img: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop" },
-                                { title: "L'importance de l'eau adoucie", img: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=800&auto=format&fit=crop" },
+                                { title: "L'importance de l'eau adoucie", img: residentialWaterSoftenerImg },
                                 { title: "Entretien de votre système Culligan", img: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=800&auto=format&fit=crop" }
                             ].map((art, i) => (
                                 <div key={i} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer group">

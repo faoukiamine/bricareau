@@ -256,13 +256,16 @@ const Adoucissement = () => {
                 <section className="py-20 bg-white">
                     <div className="container mx-auto px-4">
                         <div className="flex flex-col lg:flex-row items-stretch gap-0 rounded-[3rem] overflow-hidden shadow-2xl">
-                            <div className="lg:w-1/2 relative min-h-[400px]">
-                                <img
-                                    src="https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=1200&auto=format&fit=crop"
-                                    alt="Expert d'eau"
-                                    className="absolute inset-0 w-full h-full object-cover"
-                                />
-                                <div className="absolute inset-0 bg-blue-900/10" />
+                            <div className="lg:w-1/2 relative min-h-[400px] bg-black overflow-hidden">
+                                <iframe
+                                    src="https://player.vimeo.com/video/1155585885?autoplay=1&loop=1&muted=1&background=1"
+                                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[177.78%] h-[177.78%] min-w-full min-h-full pointer-events-none"
+                                    frameBorder="0"
+                                    allow="autoplay; fullscreen; picture-in-picture"
+                                    allowFullScreen
+                                    title="Analyse d'eau"
+                                ></iframe>
+                                <div className="absolute inset-0 bg-blue-900/10 pointer-events-none" />
                             </div>
                             <div className="lg:w-1/2 bg-blue-600 text-white p-12 lg:p-20 flex flex-col justify-center items-start text-left">
                                 <span className="text-white/80 text-xs font-black uppercase tracking-[0.3em] mb-8 block">
