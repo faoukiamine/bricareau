@@ -9,8 +9,12 @@ const DiscoverExpert = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     {/* Left side - Content */}
                     <div className="space-y-6">
-                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight">
-                            Découvrez les options de traitement d'experts
+                        <h2
+                            className="text-foreground tracking-tighter"
+                            style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                        >
+                            <span className="text-[32px] md:text-[60px] font-light leading-[1.2] md:leading-[60px] block">Découvrez les options</span>
+                            <span className="text-[32px] md:text-[60px] font-normal leading-[1.2] md:leading-[60px] block">de traitement d'experts</span>
                         </h2>
                         <p className="text-lg text-muted-foreground leading-relaxed">
                             Nos spécialistes de l'eau vous guident vers la solution parfaite pour votre maison.
@@ -38,7 +42,8 @@ const DiscoverExpert = () => {
                         </div>
                         <Button
                             size="lg"
-                            className="bg-[#2563EB] hover:bg-[#2563EB]/90 text-white font-semibold group"
+                            className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 group"
+                            style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                         >
                             En savoir plus
                             <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />

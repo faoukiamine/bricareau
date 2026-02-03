@@ -91,7 +91,7 @@ const CommercialIndustriel = () => {
               <span className="text-sm font-bold uppercase tracking-widest text-[#60A5FA] mb-4 block">
                 TRAITEMENT D'EAU INDUSTRIEL
               </span>
-              <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-6 leading-tight drop-shadow-md">
+              <h1 className="text-[32px] md:text-[48px] font-normal mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-white drop-shadow-md">
                 Bricareau, votre partenaire de confiance
               </h1>
               <p className="text-lg md:text-xl font-medium opacity-90 mb-8 max-w-xl drop-shadow-sm">
@@ -124,7 +124,7 @@ const CommercialIndustriel = () => {
         {/* Solutions Section */}
         <section id="solutions" className="py-12 md:py-16">
           <div className="container mx-auto px-4">
-            <h2 className="text-2xl md:text-3xl font-bold text-center text-foreground mb-12">
+            <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-16 text-center leading-[1.2] md:leading-[48px] tracking-tighter">
               Nos solutions de traitement d'eau industrielles
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
@@ -145,7 +145,7 @@ const CommercialIndustriel = () => {
         {/* Why Choose Us */}
         <section className="py-12 md:py-16 bg-secondary/30">
           <div className="container mx-auto px-4">
-            <h2 className="text-2xl md:text-3xl font-bold text-center text-foreground mb-12">
+            <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-16 text-center leading-[1.2] md:leading-[48px] tracking-tighter">
               Pourquoi nous choisir?
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -184,7 +184,7 @@ const CommercialIndustriel = () => {
         <section className="py-12 md:py-16 bg-primary/5">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center space-y-6">
-              <h2 className="text-2xl md:text-3xl font-bold text-foreground">
+              <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
                 Découvrez la meilleure solution de traitement de l'eau pour votre industrie.
               </h2>
               <p className="text-base md:text-lg text-muted-foreground">
@@ -207,7 +207,7 @@ const CommercialIndustriel = () => {
         {/* Markets Section */}
         <section className="py-12 md:py-16 bg-secondary/30">
           <div className="container mx-auto px-4">
-            <h2 className="text-2xl md:text-3xl font-bold text-center text-foreground mb-4">
+            <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-center">
               Marchés que nous servons
             </h2>
             <p className="text-center text-muted-foreground mb-12 max-w-3xl mx-auto">
@@ -232,8 +232,8 @@ const CommercialIndustriel = () => {
         <section className="py-12 md:py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center space-y-6">
-              <h2 className="text-2xl md:text-3xl font-bold text-foreground">
-                Testez la qualité de votre eau est essentiel pour garantir que votre entreprise répond aux exigences de l'industrie.
+              <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
+                Tester la qualité de votre eau est essentiel pour votre entreprise.
               </h2>
               <p className="text-base md:text-lg text-muted-foreground">
                 Les services de tests en laboratoire jouent un rôle essentiel dans la gestion des eaux, offrant des analyses
@@ -254,8 +254,8 @@ const CommercialIndustriel = () => {
         <section className="py-12 md:py-16 bg-primary/5">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center space-y-6">
-              <h2 className="text-2xl md:text-3xl font-bold text-foreground">
-                Vous avez besoin d'aide?
+              <h2 className="text-[32px] md:text-[48px] font-normal text-white mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
+                Améliorez votre eau aujourd'hui
               </h2>
               <p className="text-base md:text-lg text-muted-foreground">
                 Contactez nos experts dès aujourd'hui et trouvez des solutions à vos problèmes de traitement des eaux.

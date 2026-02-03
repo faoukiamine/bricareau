@@ -60,7 +60,7 @@ const DesinfectionUV = () => {
                             <span className="text-sm font-bold uppercase tracking-widest text-[#60A5FA] mb-4 block">
                                 PROTECTION MICROBIOLOGIQUE
                             </span>
-                            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-6 leading-tight drop-shadow-md">
+                            <h1 className="text-[32px] md:text-[48px] font-normal mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-white drop-shadow-md">
                                 Désinfection UV <br /> Haute Performance
                             </h1>
                             <p className="text-lg md:text-xl font-medium opacity-95 mb-8 max-w-xl drop-shadow-sm">
@@ -87,7 +87,7 @@ const DesinfectionUV = () => {
                 <section className="py-24 bg-[#0A192F] text-white">
                     <div className="container mx-auto px-6">
                         <div className="text-center mb-16">
-                            <h2 className="text-3xl md:text-5xl font-bold tracking-tighter mb-4">
+                            <h2 className="text-[32px] md:text-[48px] font-normal text-white mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-center">
                                 Pourquoi choisir la désinfection UV ?
                             </h2>
                             <p className="text-slate-400 max-w-2xl mx-auto text-lg">
@@ -116,8 +116,8 @@ const DesinfectionUV = () => {
                 <section className="py-24 bg-white">
                     <div className="container mx-auto px-6">
                         <div className="text-left mb-16">
-                            <h2 className="text-4xl md:text-6xl font-bold text-slate-900 tracking-tighter mb-4">
-                                Nos systèmes de désinfection UV
+                            <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-left">
+                                Nos systèmes de <br />désinfection UV
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
@@ -177,7 +177,7 @@ const DesinfectionUV = () => {
                                 <span className="text-white/80 text-xs font-black uppercase tracking-[0.3em] mb-8 block">
                                     ANALYSE MICROBIENNE
                                 </span>
-                                <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-8">
+                                <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal text-white mb-8 leading-[1.1] tracking-tighter text-left">
                                     Votre eau est-elle <br /> vraiment sécuritaire ?
                                 </h2>
                                 <p className="text-white/90 text-lg font-medium mb-12 leading-relaxed">
@@ -194,7 +194,7 @@ const DesinfectionUV = () => {
                 {/* 6. Comparison Table */}
                 <section className="py-24 bg-white border-t border-slate-50">
                     <div className="container mx-auto px-4">
-                        <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold text-slate-900 leading-[1.1] tracking-tighter mb-16 text-center">
+                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal text-slate-900 mb-8 leading-[1.1] tracking-tighter text-center">
                             Comparez nos systèmes UV.
                         </h2>
                         <div className="overflow-x-auto">
@@ -231,8 +231,8 @@ const DesinfectionUV = () => {
                 <section className="py-24 bg-white border-t border-slate-100">
                     <div className="container mx-auto px-6 max-w-4xl text-left">
                         <div className="text-center mb-16">
-                            <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold text-slate-900 leading-[1.1] tracking-tighter">
-                                Questions UV.
+                            <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-center">
+                                Questions fréquentes
                             </h2>
                         </div>
                         <Accordion type="single" collapsible className="w-full">
@@ -268,7 +268,7 @@ const DesinfectionUV = () => {
                     <div className="container mx-auto px-4">
                         <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-20">
                             <div className="lg:w-1/3 text-left">
-                                <h2 className="text-3xl md:text-5xl font-bold mb-8 leading-tight italic">
+                                <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal text-slate-900 mb-8 leading-[1.1] tracking-tighter italic text-left">
                                     Protégez votre foyer dès aujourd'hui
                                 </h2>
                                 <p className="text-lg text-gray-600 mb-8 leading-relaxed">

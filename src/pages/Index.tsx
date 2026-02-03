@@ -22,7 +22,6 @@ const Index = () => {
         <BetterWaterStats />
         <DiscoverExpert />
         <TestimonialsSection />
-        <MarketExploration />
       </main>
       <Footer />
     </div>

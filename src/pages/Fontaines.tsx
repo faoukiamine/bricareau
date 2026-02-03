@@ -42,10 +42,10 @@ const Fontaines = () => {
                             <span className="text-sm font-bold uppercase tracking-widest text-cyan-400 mb-4 block">
                                 FRAÎCHEUR ILLIMITÉE
                             </span>
-                            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-6 leading-tight drop-shadow-md">
+                            <h1 className="text-[32px] md:text-[48px] font-normal mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-white drop-shadow-md">
                                 Fontaines à <br /> Glace et Eau
                             </h1>
-                            <p className="text-lg md:text-xl font-medium opacity-95 mb-8 max-w-xl drop-shadow-sm">
+                            <p className="font-light text-[20px] leading-[28px] text-white/95 mb-8 max-w-xl drop-shadow-sm">
                                 Profitez d'une source inépuisable d'eau fraîche et de glace à portée de main,
                                 que ce soit pour votre domicile ou votre espace professionnel.
                             </p>
@@ -67,10 +67,10 @@ const Fontaines = () => {
                 {/* Section 1: Solutions professionnelles */}
                 <section className="py-24 bg-[#0A192F] text-white">
                     <div className="container mx-auto px-6 text-center">
-                        <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight">
-                            Solutions professionnelles pour l'eau. À votre service.
+                        <h2 className="text-[32px] md:text-[48px] font-normal text-white mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
+                            Solutions professionnelles <br />pour l'eau. À votre service.
                         </h2>
-                        <p className="text-slate-400 max-w-4xl mx-auto text-lg mb-16 leading-relaxed">
+                        <p className="font-light text-[20px] leading-[28px] text-white/70 max-w-4xl mx-auto mb-16">
                             Culligan Ottawa-Gatineau est votre source locale pour les meilleures solutions d'eau destinées aux entreprises.
                             Que vous soyez un petit bureau ou une grande installation industrielle, nous avons l'expertise pour répondre à vos besoins.
                         </p>
@@ -86,7 +86,7 @@ const Fontaines = () => {
                                         <item.icon className="w-16 h-16 text-blue-600 opacity-20" />
                                     </div>
                                     <h3 className="text-xl font-bold mb-4">{item.title}</h3>
-                                    <p className="text-slate-500 text-sm mb-6 flex-grow">{item.desc}</p>
+                                    <p className="font-light text-[18px] leading-[24px] text-slate-500 mb-6 flex-grow">{item.desc}</p>
                                     <Button variant="link" className="text-blue-600 font-bold p-0 group">
                                         EN SAVOIR PLUS <ChevronRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" />
                                     </Button>
@@ -102,8 +102,8 @@ const Fontaines = () => {
                 {/* Section 5: Hydratez-vous */}
                 <section className="py-24 bg-white">
                     <div className="container mx-auto px-6 text-center">
-                        <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-8 tracking-tight">
-                            Hydratez-vous comme jamais auparavant.
+                        <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
+                            Hydratez-vous comme <br />jamais auparavant.
                         </h2>
                         <p className="text-slate-500 max-w-3xl mx-auto text-lg mb-16">
                             Nos services d'eau commerciale offrent une fiabilité sans précédent et une qualité constante pour garantir
@@ -131,7 +131,7 @@ const Fontaines = () => {
                 <section className="py-24 bg-slate-50">
                     <div className="container mx-auto px-6">
                         <div className="max-w-6xl mx-auto">
-                            <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-4">Installation. Facile.</h2>
+                            <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">Installation. Facile.</h2>
                             <p className="text-slate-500 text-lg mb-16">Un processus fluide de la consultation à la mise en service.</p>
                             <div className="flex flex-col lg:flex-row gap-12">
                                 <div className="lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -167,8 +167,8 @@ const Fontaines = () => {
                 {/* Section 7: L'eau que vous voulez */}
                 <section className="py-24 bg-[#0A192F] text-white">
                     <div className="container mx-auto px-6 text-center">
-                        <h2 className="text-3xl md:text-5xl font-bold mb-16 tracking-tight">
-                            L'eau que vous voulez. Comme vous la voulez.
+                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal text-white mb-16 leading-[1.1] tracking-tighter">
+                            L'eau que vous voulez. <br />Comme vous la voulez.
                         </h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                             {[
@@ -190,7 +190,7 @@ const Fontaines = () => {
                 {/* Section 8: CTA Pre-footer */}
                 <section className="py-24 bg-slate-100 border-t border-slate-200">
                     <div className="container mx-auto px-6 text-center">
-                        <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 tracking-tight">Prêts à aimer votre eau ?</h2>
+                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal text-slate-900 mb-8 leading-[1.1] tracking-tighter">Prêts à aimer votre eau ?</h2>
                         <p className="text-slate-500 text-lg mb-12">Contactez-nous aujourd'hui pour voir comment Culligan peut transformer votre bureau.</p>
                         <div className="flex flex-col sm:flex-row gap-6 justify-center">
                             <Button className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-12 h-16 text-xl font-bold shadow-xl">

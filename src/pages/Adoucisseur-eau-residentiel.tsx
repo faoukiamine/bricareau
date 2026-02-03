@@ -88,10 +88,10 @@ const AdoucisseurEauResidentiel = () => {
                             <span className="inline-block px-3 py-1 bg-blue-600 text-xs font-bold uppercase tracking-wider rounded-sm mb-4">
                                 Solutions Résidentielles
                             </span>
-                            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-6 leading-tight">
+                            <h1 className="text-[32px] md:text-[48px] font-normal mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-white drop-shadow-md text-left">
                                 Profitez d'une solution sur mesure pour une eau de qualité
                             </h1>
-                            <p className="text-lg md:text-xl opacity-95 mb-8 max-w-xl leading-relaxed">
+                            <p className="font-light text-[20px] leading-[28px] text-white/90 mb-8 max-w-xl">
                                 Modernisez votre maison avec les technologies Bricareau et redécouvrez le plaisir d'une eau douce,
                                 plus saine pour vous et vos installations.
                             </p>
@@ -116,21 +116,21 @@ const AdoucisseurEauResidentiel = () => {
                                     <Droplets className="h-8 w-8 text-blue-400" />
                                 </div>
                                 <h3 className="text-xl font-bold mb-3">Eau de qualité supérieure</h3>
-                                <p className="opacity-70">Une douceur incomparable pour votre peau et vos cheveux.</p>
+                                <p className="font-light text-[20px] leading-[28px] text-white/80">Une douceur incomparable pour votre peau et vos cheveux.</p>
                             </div>
                             <div className="flex flex-col items-center">
                                 <div className="w-16 h-16 rounded-full border border-blue-400 flex items-center justify-center mb-6">
                                     <Shield className="h-8 w-8 text-blue-400" />
                                 </div>
                                 <h3 className="text-xl font-bold mb-3">Protection des appareils</h3>
-                                <p className="opacity-70">Prolongez la durée de vie de votre plomberie et électroménagers.</p>
+                                <p className="font-light text-[20px] leading-[28px] text-white/80">Prolongez la durée de vie de votre plomberie et électroménagers.</p>
                             </div>
                             <div className="flex flex-col items-center">
                                 <div className="w-16 h-16 rounded-full border border-blue-400 flex items-center justify-center mb-6">
                                     <TrendingDown className="h-8 w-8 text-blue-400" />
                                 </div>
                                 <h3 className="text-xl font-bold mb-3">Économies garanties</h3>
-                                <p className="opacity-70">Réduisez vos factures d'énergie et vos dépenses en produits d'entretien.</p>
+                                <p className="font-light text-[20px] leading-[28px] text-white/80">Réduisez vos factures d'énergie et vos dépenses en produits d'entretien.</p>
                             </div>
                         </div>
                     </div>
@@ -139,7 +139,9 @@ const AdoucisseurEauResidentiel = () => {
                 {/* Product Grid Section */}
                 <section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-4 text-center">
-                        <h2 className="text-3xl md:text-5xl font-bold mb-16">Adoucisseur d'eau résidentiel Culligan</h2>
+                        <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-16 leading-[1.2] md:leading-[48px] tracking-tighter">
+                            Adoucisseur d'eau résidentiel Culligan
+                        </h2>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {products.map((p, i) => (
                                 <div key={i} className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center transition-all hover:shadow-md hover:-translate-y-1">
@@ -147,7 +149,7 @@ const AdoucisseurEauResidentiel = () => {
                                         <img src={p.image} alt={p.name} className="max-h-full object-contain" />
                                     </div>
                                     <h3 className="text-xl font-bold mb-4">{p.name}</h3>
-                                    <p className="text-gray-500 mb-6 flex-grow">{p.desc}</p>
+                                    <p className="font-light text-[18px] leading-[24px] text-slate-500 mb-6 flex-grow">{p.desc}</p>
                                     <Button variant="link" className="text-blue-600 font-bold p-0 group" asChild>
                                         <NavLink to={p.path || "/adoucisseurs"}>
                                             EN SAVOIR PLUS <ChevronRight className="h-4 w-4 ml-1 transition-transform group-hover:translate-x-1" />
@@ -176,7 +178,7 @@ const AdoucisseurEauResidentiel = () => {
                     <div className="container mx-auto px-4">
                         <div className="flex flex-col lg:flex-row items-center gap-20">
                             <div className="lg:w-1/2">
-                                <h2 className="text-3xl md:text-5xl font-bold mb-8 leading-tight">C'est plus qu'un adoucisseur d'eau</h2>
+                                <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">C'est plus qu'un adoucisseur d'eau</h2>
                                 <p className="text-lg text-gray-600 mb-12">
                                     Il s'agit d'une solution complète pour toute la maison. Nos systèmes sont conçus pour
                                     offrir une performance intelligente et une efficacité sans précédent.
@@ -225,7 +227,7 @@ const AdoucisseurEauResidentiel = () => {
                             <span className="text-[#888] text-xs font-bold uppercase tracking-[0.3em] mb-10 block">
                                 ANALYSE PROFESSIONNELLE
                             </span>
-                            <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold text-black leading-[1.05] tracking-tighter mb-10">
+                            <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
                                 Des tests d'eau précis <br />
                                 pour votre sécurité.
                             </h2>
@@ -246,7 +248,7 @@ const AdoucisseurEauResidentiel = () => {
                 {/* Comparison Table Section */}
                 <section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-4">
-                        <h2 className="text-3xl md:text-5xl font-bold mb-16 text-center">Comparaison des adoucisseurs d'eau</h2>
+                        <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-16 leading-[1.2] md:leading-[48px] tracking-tighter text-center">Comparaison des adoucisseurs d'eau</h2>
                         <div className="overflow-x-auto">
                             <table className="w-full min-w-[1000px] border-collapse bg-white rounded-2xl overflow-hidden shadow-sm">
                                 <thead>
@@ -292,7 +294,7 @@ const AdoucisseurEauResidentiel = () => {
                                 <img src="https://images.unsplash.com/photo-1595152772835-2196740b6ca0?q=80&w=1200&auto=format&fit=crop" alt="Famille heureuse" className="rounded-[40px] shadow-2xl" />
                             </div>
                             <div className="lg:w-1/2">
-                                <h2 className="text-3xl md:text-5xl font-bold mb-8 leading-tight">Pourquoi opter pour un adoucisseur Culligan ?</h2>
+                                <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">Pourquoi opter pour un adoucisseur Culligan ?</h2>
                                 <div className="space-y-6">
                                     {[
                                         "Une eau douce instantanément dans toute la maison.",
@@ -319,7 +321,7 @@ const AdoucisseurEauResidentiel = () => {
                 {/* Video / Video Section Thumbnail */}
                 <section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-4 text-center">
-                        <h2 className="text-3xl d:text-5xl font-bold mb-16">L'adoucisseur que vous devez avoir</h2>
+                        <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-16 leading-[1.2] md:leading-[48px] tracking-tighter">L'adoucisseur que vous devez avoir</h2>
                         <div className="max-w-4xl mx-auto relative rounded-[40px] overflow-hidden group cursor-pointer shadow-2xl">
                             <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=1600&auto=format&fit=crop" alt="Video Placeholder" className="w-full aspect-video object-cover transition-transform group-hover:scale-105 duration-700" />
                             <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors flex items-center justify-center">
@@ -353,7 +355,7 @@ const AdoucisseurEauResidentiel = () => {
                 {/* Articles Section */}
                 <section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-4 text-center">
-                        <h2 className="text-3xl font-bold mb-16">Articles et ressources</h2>
+                        <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-16 leading-[1.2] md:leading-[48px] tracking-tighter">Articles et ressources</h2>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {[
                                 { title: "Comment choisir son adoucisseur", img: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop" },
@@ -381,7 +383,7 @@ const AdoucisseurEauResidentiel = () => {
                     <div className="container mx-auto px-4">
                         <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-20">
                             <div className="lg:w-1/3 text-left">
-                                <h2 className="text-3xl md:text-5xl font-bold mb-8 leading-tight italic">
+                                <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter italic">
                                     Planifiez une consultation gratuite sur l'eau
                                 </h2>
                                 <p className="text-lg text-gray-600 mb-8 leading-relaxed">

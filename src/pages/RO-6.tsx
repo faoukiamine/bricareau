@@ -57,10 +57,10 @@ const RO6 = () => {
                                 <span className="text-blue-600 font-bold uppercase tracking-widest text-sm mb-4 block">
                                     SYSTÈME D'OSMOSE INVERSE
                                 </span>
-                                <h1 className="text-4xl md:text-6xl font-black text-slate-900 mb-6 leading-tight">
+                                <h1 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-left">
                                     Aquasential® <br /> Osmose Inverse
                                 </h1>
-                                <p className="text-xl text-slate-500 mb-8 leading-relaxed">
+                                <p className="font-light text-[20px] leading-[28px] text-slate-600 mb-8">
                                     Découvrez le système de filtration d'eau potable le plus intelligent au monde. Éliminez jusqu'à 99 % des contaminants pour une eau pure et délicieuse directement de votre robinet.
                                 </p>
                                 <Button className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-10 h-16 text-xl font-bold mb-12 shadow-xl transition-all hover:scale-105" asChild>
@@ -96,7 +96,7 @@ const RO6 = () => {
                     <div className="container mx-auto px-6">
                         <div className="flex flex-col lg:flex-row items-center gap-16">
                             <div className="lg:w-1/2 order-2 lg:order-1 text-left">
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-8 leading-tight">
+                                <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-left">
                                     La technologie de pointe au service de votre santé
                                 </h2>
                                 <div className="space-y-6">
@@ -105,7 +105,7 @@ const RO6 = () => {
                                             <div className="w-2 h-8 bg-blue-600 rounded-full" />
                                             Système modulaire évolutif
                                         </h3>
-                                        <p className="text-slate-500 leading-relaxed text-left">
+                                        <p className="font-light text-[20px] leading-[28px] text-slate-600 text-left">
                                             Le système Aquasential peut être configuré pour répondre précisément aux besoins spécifiques de votre eau, avec des options pour l'alcalinité, la reminéralisation et plus encore.
                                         </p>
                                     </div>
@@ -114,7 +114,7 @@ const RO6 = () => {
                                             <div className="w-2 h-8 bg-blue-600 rounded-full" />
                                             Design compact et élégant
                                         </h3>
-                                        <p className="text-slate-500 leading-relaxed text-left">
+                                        <p className="font-light text-[20px] leading-[28px] text-slate-600 text-left">
                                             Conçu pour s'intégrer discrètement sous votre évier sans sacrifier l'espace de stockage précieux, tout en offrant une performance de qualité industrielle.
                                         </p>
                                     </div>
@@ -134,7 +134,7 @@ const RO6 = () => {
                 {/* 3. Benefit Grids */}
                 <section className="py-24 bg-white">
                     <div className="container mx-auto px-6 text-center">
-                        <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-16 tracking-tight">
+                        <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-16 tracking-tighter leading-[1.2] md:leading-[48px]">
                             Une eau pure pour chaque moment
                         </h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -160,7 +160,7 @@ const RO6 = () => {
                 <section className="py-24 bg-slate-900 text-white">
                     <div className="container mx-auto px-6">
                         <div className="max-w-4xl mx-auto text-center">
-                            <h2 className="text-3xl md:text-5xl font-bold mb-16 italic">Installation et entretien par nos experts</h2>
+                            <h2 className="text-[32px] md:text-[48px] font-normal mb-16 italic text-white leading-[1.2] md:leading-[48px] tracking-tighter">Installation et entretien par nos experts</h2>
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
                                 <div className="flex flex-col items-center">
                                     <div className="w-16 h-16 rounded-full border border-blue-500 flex items-center justify-center mb-6 text-blue-500 font-bold text-2xl italic">1</div>
@@ -186,7 +186,7 @@ const RO6 = () => {
                 <section className="py-16 bg-blue-600 text-white">
                     <div className="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8">
                         <div>
-                            <h2 className="text-3xl font-bold mb-2">Prêt à goûter la différence ?</h2>
+                            <h2 className="text-[32px] md:text-[48px] font-normal text-white mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">Prêt à goûter la différence ?</h2>
                             <p className="text-blue-100 text-lg">Rejoignez des millions de familles satisfaites par Culligan.</p>
                         </div>
                         <Button className="bg-white text-blue-600 hover:bg-slate-100 rounded-full px-12 h-16 text-xl font-bold shadow-lg">
@@ -198,7 +198,7 @@ const RO6 = () => {
                 {/* 6. Comparison Table */}
                 <section className="py-24 bg-white">
                     <div className="container mx-auto px-6">
-                        <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-16 text-center underline decoration-blue-600 underline-offset-8">
+                        <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-16 text-center leading-[1.2] md:leading-[48px] tracking-tighter">
                             Comment Culligan se compare
                         </h2>
                         <div className="overflow-x-auto rounded-3xl border border-slate-100 shadow-xl overflow-hidden">
@@ -239,10 +239,10 @@ const RO6 = () => {
                     <div className="container mx-auto px-6">
                         <div className="bg-white rounded-[3rem] shadow-2xl flex flex-col lg:flex-row items-center overflow-hidden">
                             <div className="lg:w-1/2 p-12 lg:p-24 text-left">
-                                <h2 className="text-3xl md:text-5xl font-black text-slate-900 mb-8 leading-[1.1]">
+                                <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-left">
                                     Parlez à l'un de nos experts de l'eau.
                                 </h2>
-                                <p className="text-slate-500 text-xl leading-relaxed mb-12">
+                                <p className="font-light text-[20px] leading-[28px] text-slate-600 mb-12">
                                     Plus de 85 ans d'expérience pour vous aider à trouver la solution parfaite pour votre foyer. Simple, gratuit et sans pression.
                                 </p>
                                 <Button className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-12 h-16 text-xl font-bold shadow-xl transition-all hover:scale-105" asChild>
@@ -263,7 +263,7 @@ const RO6 = () => {
                 {/* 10. FAQ Section */}
                 <section className="py-24 bg-white">
                     <div className="container mx-auto px-6 max-w-4xl">
-                        <h2 className="text-3xl md:text-5xl font-bold mb-16 text-center text-slate-900 tracking-tighter">
+                        <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 text-center leading-[1.2] md:leading-[48px] tracking-tighter">
                             Questions fréquentes
                         </h2>
                         <Accordion type="single" collapsible className="w-full">
@@ -277,7 +277,7 @@ const RO6 = () => {
                                     <AccordionTrigger className="px-8 py-6 hover:bg-slate-50/50 hover:no-underline text-left font-bold text-lg text-slate-800">
                                         {item.q}
                                     </AccordionTrigger>
-                                    <AccordionContent className="px-8 pb-6 text-slate-500 text-lg leading-relaxed text-left">
+                                    <AccordionContent className="px-8 pb-6 font-light text-[20px] leading-[28px] text-slate-600 text-left">
                                         {item.a}
                                     </AccordionContent>
                                 </AccordionItem>

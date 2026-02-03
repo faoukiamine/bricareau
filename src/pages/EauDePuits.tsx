@@ -96,10 +96,10 @@ const EauDePuits = () => {
               <span className="text-sm font-bold uppercase tracking-widest text-[#60A5FA] mb-4 block">
                 SOLUTIONS POUR PUITS PRIVÉS
               </span>
-              <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-6 leading-tight drop-shadow-md">
+              <h1 className="text-[32px] md:text-[48px] font-normal mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-white drop-shadow-md">
                 Traitement de l'eau <br /> de puits
               </h1>
-              <p className="text-lg md:text-xl font-medium opacity-90 mb-8 max-w-xl drop-shadow-sm">
+              <p className="font-light text-[20px] leading-[28px] text-white/90 mb-8 max-w-xl drop-shadow-sm">
                 Propriétaire d'un puits privé ? Nous comprenons vos défis.
                 Du fer au soufre, nous avons les solutions pour une eau saine
                 et de qualité supérieure.
@@ -135,10 +135,10 @@ const EauDePuits = () => {
               <span className="text-blue-600 text-xs font-bold uppercase tracking-[0.3em] mb-6 block">
                 ANALYSE TECHNIQUE
               </span>
-              <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold text-slate-900 leading-[1.1] tracking-tighter mb-8">
+              <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
                 Problèmes courants <br /> de l'eau de puits.
               </h2>
-              <p className="text-slate-500 text-xl leading-relaxed font-medium max-w-2xl">
+              <p className="font-light text-[20px] leading-[28px] text-slate-600 max-w-2xl">
                 Identifiez les signes d'une contamination ou d'un déséquilibre chimique dans votre eau.
               </p>
             </div>
@@ -246,10 +246,10 @@ const EauDePuits = () => {
                 NOTRE FONCTIONNEMENT
               </span>
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-end">
-                <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold text-black leading-[1] tracking-tighter">
+                <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
                   Un service simple <br />& sans souci.
                 </h2>
-                <p className="text-[#666] text-xl leading-relaxed max-w-xl lg:ml-auto">
+                <p className="font-light text-[20px] leading-[28px] text-slate-600 max-w-xl lg:ml-auto">
                   De l'analyse initiale à l'installation certifiée, nous gérons chaque étape technique pour vous garantir une eau de puits parfaitement saine.
                 </p>
               </div>
@@ -286,7 +286,7 @@ const EauDePuits = () => {
                   </div>
 
                   <h3 className="text-2xl font-bold mb-4 text-black tracking-tight">{step.title}</h3>
-                  <p className="text-[#888] text-lg leading-relaxed">
+                  <p className="font-light text-[20px] leading-[28px] text-slate-600">
                     {step.desc}
                   </p>
                 </div>
@@ -313,11 +313,11 @@ const EauDePuits = () => {
               <span className="text-[#888] text-xs font-bold uppercase tracking-[0.3em] mb-10 block">
                 ANALYSE PROFESSIONNELLE
               </span>
-              <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold text-black leading-[1.05] tracking-tighter mb-10">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal text-slate-900 mb-8 leading-[1.1] tracking-tighter">
                 Des tests d'eau précis <br />
                 pour votre sécurité.
               </h2>
-              <p className="text-[#666] text-xl leading-relaxed mb-14 max-w-lg">
+              <p className="font-light text-[20px] leading-[28px] text-slate-600 mb-14 max-w-lg">
                 Ne devinez pas la qualité de votre eau. Nos analyses approfondies identifient les bactéries, les minéraux et les contaminants chimiques pour vous offrir une tranquillité d'esprit totale.
               </p>
               <Button
@@ -335,7 +335,7 @@ const EauDePuits = () => {
         <section className="bg-white py-24">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold text-slate-900 leading-[1.1] tracking-tighter mb-8">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal text-slate-900 mb-8 leading-[1.1] tracking-tighter">
                 Découvrez nos solutions <br />de traitement de l'eau de puits.
               </h2>
               <p className="text-gray-500 text-lg max-w-2xl mx-auto">
@@ -393,9 +393,9 @@ const EauDePuits = () => {
         {/* Comparison Table Section */}
         <section className="py-24 bg-gray-50">
           <div className="container mx-auto px-4">
-            <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold text-slate-900 leading-[1.1] tracking-tighter mb-8">
-                Comparez nos solutions <br />de traitement de l'eau de puits.
-              </h2>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal text-slate-900 mb-8 leading-[1.1] tracking-tighter">
+              Comparez nos solutions <br />de traitement de l'eau de puits.
+            </h2>
             <div className="overflow-x-auto">
               <table className="w-full min-w-[1000px] border-collapse bg-white rounded-2xl overflow-hidden shadow-sm">
                 <thead>
@@ -480,9 +480,9 @@ const EauDePuits = () => {
         {/* 10. FAQ Section */}
         <section className="py-24 bg-white">
           <div className="container mx-auto px-4 max-w-4xl">
-             <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold text-slate-900 leading-[1.1] tracking-tighter mb-8">
-                FAQ sur nos solutions <br />de traitement de l'eau de puits.
-              </h2>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal text-slate-900 mb-8 leading-[1.1] tracking-tighter">
+              FAQ sur nos solutions <br />de traitement de l'eau de puits.
+            </h2>
             <Accordion type="single" collapsible className="w-full">
               {[
                 {
@@ -510,7 +510,7 @@ const EauDePuits = () => {
                   <AccordionTrigger className="text-left font-bold text-lg hover:no-underline py-6">
                     {item.q}
                   </AccordionTrigger>
-                  <AccordionContent className="text-gray-600 text-lg leading-relaxed pb-6 text-left">
+                  <AccordionContent className="font-light text-[20px] leading-[28px] text-gray-600 pb-6 text-left">
                     {item.a}
                   </AccordionContent>
                 </AccordionItem>
@@ -522,7 +522,7 @@ const EauDePuits = () => {
         {/* 11. Articles Section */}
         <section className="py-24 bg-gray-50">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold mb-16 underline decoration-blue-600 underline-offset-8">
+            <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-16 text-center leading-[1.2] md:leading-[48px] tracking-tighter">
               Ressources
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -571,10 +571,10 @@ const EauDePuits = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-20">
               <div className="lg:w-1/3 text-left">
-                <h2 className="text-3xl md:text-5xl font-bold mb-8 leading-tight italic">
+                <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal text-slate-900 mb-8 leading-[1.1] tracking-tighter italic">
                   Planifiez une consultation gratuite sur l'eau
                 </h2>
-                <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                <p className="font-light text-[20px] leading-[28px] text-gray-600 mb-8">
                   Remplissez le formulaire ci-dessous pour organiser une visite
                   d'un de nos experts de l'eau.
                 </p>

@@ -27,21 +27,26 @@ const Hero = () => {
           {/* Left side - Hero text */}
           <div className="space-y-6 text-white">
             <h1
-              className="text-[40px] leading-[40px] font-semibold"
+              className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light"
               style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
             >
-              Protégez votre eau, protégez votre famille
+              Protégez votre eau, <span className="font-normal">protégez votre famille</span>
             </h1>
 
-            <p className="text-lg md:text-xl text-white/90 leading-relaxed max-w-xl">
+            <p className="font-light text-[20px] leading-[28px] text-white/95 max-w-xl">
               Assurez-vous que l’eau de votre maison a une belle apparence, une bonne odeur et un bon goût, qu’elle provienne d’un système municipal ou d’un puits privé.
             </p>
-            <p className="text-lg md:text-xl text-white/90 leading-relaxed max-w-xl">
+            <p className="font-light text-[20px] leading-[28px] text-white/95 max-w-xl">
               Plus que 20000 foyers canadiens ont confié le traitement d’eau de leurs foyers à Bricareau.
             </p>
             <div className="flex gap-4 pt-4">
-              <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 text-lg font-bold" asChild>
-                <NavLink to="/contact-residentiel">Explorez nos solutions</NavLink>
+              <Button
+                size="lg"
+                className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14"
+                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                asChild
+              >
+                <a href="#solutions-title">Explorez nos solutions</a>
               </Button>
             </div>
           </div>

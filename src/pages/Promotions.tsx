@@ -98,7 +98,7 @@ const Promotions = () => {
                                 <Tag className="h-5 w-5 text-[#0052ff]" />
                                 <span className="text-sm font-medium text-[#0052ff]">Offres Spéciales</span>
                             </div>
-                            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
+                            <h1 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
                                 Nos Promotions en Cours
                             </h1>
                             <p className="text-lg md:text-xl text-muted-foreground">
@@ -176,7 +176,7 @@ const Promotions = () => {
                 <section className="py-12 md:py-16 bg-gradient-to-r from-[#0052ff] to-blue-600">
                     <div className="container mx-auto px-4">
                         <div className="max-w-3xl mx-auto text-center space-y-6">
-                            <h2 className="text-2xl md:text-3xl font-bold text-white">
+                            <h2 className="text-[32px] md:text-[48px] font-normal text-white mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
                                 Besoin d'aide pour choisir ?
                             </h2>
                             <p className="text-base md:text-lg text-white/90">

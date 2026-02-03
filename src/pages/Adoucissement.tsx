@@ -54,10 +54,10 @@ const Adoucissement = () => {
                             <span className="text-sm font-bold uppercase tracking-widest text-blue-600 mb-4 block">
                                 ADOUCISSEURS D'EAU
                             </span>
-                            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-6 leading-tight text-white drop-shadow-md">
+                            <h1 className="text-[32px] md:text-[48px] font-normal mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-white drop-shadow-md text-left">
                                 Une eau douce,<br />meilleure pour vous et votre maison
                             </h1>
-                            <p className="text-lg md:text-xl font-medium text-white mb-8 max-w-xl drop-shadow-sm">
+                            <p className="font-light text-[20px] leading-[28px] text-white/95 mb-8 max-w-xl drop-shadow-sm">
                                 Une solution pour toute la famille. Protégez votre plomberie et profitez d'une peau plus saine.
                             </p>
                             <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-10 h-14 text-lg font-bold">
@@ -79,10 +79,10 @@ const Adoucissement = () => {
                                 />
                             </div>
                             <div className="md:w-1/2">
-                                <h2 className="text-3xl md:text-5xl font-bold mb-8 leading-tight">
+                                <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
                                     Éliminez les coûts, économisez l'énergie et simplifiez vos tâches
                                 </h2>
-                                <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                                <p className="font-light text-[20px] leading-[28px] text-gray-600 mb-8">
                                     Nos adoucisseurs d'eau haute technologie réduisent le calcaire, prolongent la vie de
                                     vos appareils et rendent le nettoyage plus facile que jamais.
                                 </p>
@@ -97,7 +97,7 @@ const Adoucissement = () => {
                 {/* 3. Benefits Bar */}
                 <section className="py-12 bg-[#00153D] text-white">
                     <div className="container mx-auto px-4">
-                        <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">Avantages de l'adoucissement de l'eau</h2>
+                        <h2 className="text-[32px] md:text-[48px] font-normal text-center mb-16 text-white leading-[1.2] md:leading-[48px] tracking-tighter">Avantages de l'adoucissement <br />de l'eau</h2>
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                             {[
                                 { icon: Heart, text: "Peau & Cheveux doux" },
@@ -128,10 +128,10 @@ const Adoucissement = () => {
                                 />
                             </div>
                             <div className="lg:w-1/2">
-                                <h2 className="text-3xl md:text-5xl font-bold mb-8 leading-tight">
+                                <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
                                     Lave-vaisselle sans traces
                                 </h2>
-                                <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                                <p className="font-light text-[20px] leading-[28px] text-gray-600 mb-8">
                                     L'eau adoucie empêche les taches de calcaire sur vos verres et votre vaisselle.
                                     Dites adieu au rinçage manuel et profitez d'une brillance étincelante dès la sortie de la machine.
                                 </p>
@@ -170,10 +170,10 @@ const Adoucissement = () => {
                                 />
                             </div>
                             <div className="lg:w-1/2 text-left">
-                                <h2 className="text-3xl md:text-5xl font-bold mb-8 leading-tight">
+                                <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
                                     Une santé d'eau saine pour toute votre maison
                                 </h2>
-                                <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                                <p className="font-light text-[20px] leading-[28px] text-gray-600 mb-8">
                                     L'eau adoucie n'est pas seulement bénéfique pour vos appareils, elle est essentielle
                                     pour le bien-être de votre famille au quotidien.
                                 </p>
@@ -212,10 +212,10 @@ const Adoucissement = () => {
                                 />
                             </div>
                             <div className="lg:w-1/2">
-                                <h2 className="text-3xl md:text-5xl font-bold mb-8 leading-tight">
+                                <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-left">
                                     Lave-vaisselle sans traces
                                 </h2>
-                                <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                                <p className="font-light text-[20px] leading-[28px] text-gray-600 mb-8">
                                     L'eau adoucie empêche les taches de calcaire sur vos verres et votre vaisselle.
                                     Dites adieu au rinçage manuel et profitez d'une brillance étincelante dès la sortie de la machine.
                                 </p>
@@ -261,10 +261,10 @@ const Adoucissement = () => {
                                 <span className="text-white/80 text-xs font-black uppercase tracking-[0.3em] mb-8 block">
                                     ANALYSE PROFESSIONNELLE
                                 </span>
-                                <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-8">
+                                <h2 className="text-[32px] md:text-[48px] font-normal text-white mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
                                     Comment analyser <br /> votre eau ?
                                 </h2>
-                                <p className="text-white/90 text-lg font-medium mb-12 leading-relaxed">
+                                <p className="font-light text-[20px] leading-[28px] text-white/90 mb-12">
                                     Planifiez une analyse d'eau gratuite à domicile pour comprendre ce qu'il y a dans votre eau. Nos experts utilisent des outils de pointe pour vous donner un résultat immédiat et précis.
                                 </p>
                                 <Button className="bg-white text-blue-600 hover:bg-blue-50 rounded-full px-12 h-16 text-xl font-bold shadow-xl transition-all hover:scale-105" asChild>
@@ -308,7 +308,7 @@ const Adoucissement = () => {
                 {/* 9. Comparison Table */}
                 <section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-4">
-                        <h2 className="text-3xl md:text-5xl font-bold mb-16 text-center">Compare Water Softening Systems</h2>
+                        <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-16 leading-[1.2] md:leading-[48px] tracking-tighter text-center">Compare Water Softening Systems</h2>
                         <div className="overflow-x-auto">
                             <table className="w-full min-w-[800px] border-collapse bg-white rounded-2xl overflow-hidden shadow-sm">
                                 <thead>
@@ -348,7 +348,7 @@ const Adoucissement = () => {
                 {/* 10. FAQ Section */}
                 <section className="py-24 bg-white">
                     <div className="container mx-auto px-4 max-w-4xl">
-                        <h2 className="text-3xl font-bold mb-12 text-center underline decoration-blue-600 underline-offset-8">FAQ sur les adoucisseurs d'eau</h2>
+                        <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-12 text-center text-slate-900 leading-[1.2] md:leading-[48px] tracking-tighter">FAQ sur les adoucisseurs d'eau</h2>
                         <Accordion type="single" collapsible className="w-full">
                             {[
                                 { q: "Quels sont les avantages d'un adoucisseur d'eau ?", a: "Un adoucisseur élimine le calcaire, protège vos appareils, adoucit votre peau et vos cheveux, et vous fait économiser sur les produits de nettoyage." },
@@ -360,7 +360,7 @@ const Adoucissement = () => {
                                     <AccordionTrigger className="text-left font-bold text-lg hover:no-underline py-6">
                                         {item.q}
                                     </AccordionTrigger>
-                                    <AccordionContent className="text-gray-600 text-lg leading-relaxed pb-6 text-left">
+                                    <AccordionContent className="font-light text-[20px] leading-[28px] text-gray-600 pb-6 text-left">
                                         {item.a}
                                     </AccordionContent>
                                 </AccordionItem>
@@ -372,7 +372,7 @@ const Adoucissement = () => {
                 {/* 11. Articles Section */}
                 <section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-4">
-                        <h2 className="text-3xl font-bold mb-16 underline decoration-blue-600 underline-offset-8">Ressources</h2>
+                        <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-16 text-slate-900 leading-[1.2] md:leading-[48px] tracking-tighter">Ressources</h2>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {[
                                 { title: "Comment choisir son adoucisseur", img: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop" },
@@ -400,10 +400,10 @@ const Adoucissement = () => {
                     <div className="container mx-auto px-4">
                         <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-20">
                             <div className="lg:w-1/3 text-left">
-                                <h2 className="text-3xl md:text-5xl font-bold mb-8 leading-tight italic">
+                                <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter italic">
                                     Planifiez une consultation gratuite sur l'eau
                                 </h2>
-                                <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                                <p className="font-light text-[20px] leading-[28px] text-gray-600 mb-8">
                                     Remplissez le formulaire ci-dessous pour organiser une visite d'un de nos experts de l'eau.
                                 </p>
                             </div>

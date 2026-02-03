@@ -107,7 +107,7 @@ const ConditionneursSansSel = () => {
               <span className="text-sm font-bold uppercase tracking-widest text-[#60A5FA] mb-4 block">
                 NOUVEAU CHEZ BRICAREAU
               </span>
-              <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-6 leading-tight drop-shadow-md">
+              <h1 className="text-[32px] md:text-[48px] font-normal mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-white drop-shadow-md text-left">
                 Une solution simple <br /> et sans sel
               </h1>
               <p className="text-lg md:text-xl font-medium opacity-90 mb-8 max-w-xl drop-shadow-sm">
@@ -125,8 +125,8 @@ const ConditionneursSansSel = () => {
         <section className="py-20 bg-[#00153D] text-white">
           <div className="container mx-auto px-4">
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Pourquoi choisir un conditionneur d'eau sans sel ?
+              <h2 className="text-[32px] md:text-[48px] font-normal text-white mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-center">
+                Pourquoi choisir un conditionneur <br />d'eau sans sel ?
               </h2>
               <div className="w-20 h-1 bg-blue-500 mx-auto" />
             </div>
@@ -152,8 +152,8 @@ const ConditionneursSansSel = () => {
           <div className="container mx-auto px-4">
             <div className="flex flex-col lg:flex-row items-center gap-16">
               <div className="lg:w-1/2">
-                <h2 className="text-3xl md:text-4xl font-bold mb-8 leading-tight">
-                  Avantages d'un conditionneur d'eau sans sel
+                <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-left">
+                  Une protection maximale <br /> pour votre plomberie
                 </h2>
                 <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                   Le conditionneur d'eau sans sel de Bricareau est une alternative efficace et écologique
@@ -221,8 +221,8 @@ const ConditionneursSansSel = () => {
                 />
               </div>
               <div className="lg:w-1/2">
-                <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
-                  Ne remettez jamais en question la qualité de votre eau
+                <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-left">
+                  Ne remettez jamais en question <br />la qualité de votre eau
                 </h2>
                 <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                   Notre expertise nous permet de vous proposer des solutions sur mesure.
@@ -249,7 +249,9 @@ const ConditionneursSansSel = () => {
         {/* FAQ Section */}
         <section className="py-24 bg-white">
           <div className="container mx-auto px-4 max-w-4xl">
-            <h2 className="text-3xl font-bold mb-12 text-center">FAQ sur les adoucisseurs d'eau sans sel</h2>
+            <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-16 text-center leading-[1.2] md:leading-[48px] tracking-tighter">
+              FAQ sur les conditionneurs
+            </h2>
             <Accordion type="single" collapsible className="w-full">
               {faqs.map((faq, idx) => (
                 <AccordionItem key={idx} value={`item-${idx}`} className="border-b-gray-200">
@@ -270,7 +272,7 @@ const ConditionneursSansSel = () => {
           <div className="container mx-auto px-4">
             <div className="flex justify-between items-end mb-12">
               <div>
-                <h2 className="text-3xl font-bold mb-4">Articles et ressources</h2>
+                <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-left">Articles et ressources</h2>
                 <p className="text-gray-500">Tout ce que vous devez savoir sur le traitement de l'eau.</p>
               </div>
               <Button variant="outline" className="hidden md:flex rounded-full border-blue-600 text-blue-600">
@@ -306,7 +308,7 @@ const ConditionneursSansSel = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-20">
               <div className="lg:w-1/3 text-left">
-                <h2 className="text-3xl md:text-5xl font-bold mb-8 leading-tight italic">
+                <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter italic text-left">
                   Planifiez une consultation gratuite sur l'eau
                 </h2>
                 <p className="text-lg text-gray-600 mb-8 leading-relaxed">

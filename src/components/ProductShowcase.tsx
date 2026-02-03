@@ -19,13 +19,13 @@ const products = [
         name: "Solutions d'eau potable",
         description: "Profitez d'une eau plus propre avec notre système de purification d'eau à osmose inverse à 6 étapes.",
         image: solutionsPotableImg,
-        link: "/filtration"
+        link: "/osmose-filtration"
     },
     {
         name: "Filtres d'eau spécialisés",
         description: "Nos filtres sont brillamment conçus pour résoudre vos problèmes spécifiques en matière d'eau.",
         image: filtresSpecialisesImg,
-        link: "/filtration"
+        link: "/filtres-deau"
     },
     {
         name: "Fontaines d'eau",
@@ -49,12 +49,17 @@ const products = [
 
 const ProductShowcase = () => {
     return (
-        <section className="py-16 md:py-20 lg:py-24 bg-white">
+        <section id="solutions" className="py-16 md:py-20 lg:py-24 bg-white">
             <div className="container mx-auto px-4">
                 {/* Section header */}
                 <div className="text-center mb-12 md:mb-16">
-                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-                        Solutions d'adoucissement et de filtration de l'eau
+                    <h2
+                        id="solutions-title"
+                        className="text-slate-900 tracking-tighter scroll-mt-[120px]"
+                        style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                    >
+                        <span className="text-[32px] md:text-[60px] font-light leading-[1.2] md:leading-[60px] block">Solutions d'adoucissement</span>
+                        <span className="text-[32px] md:text-[60px] font-medium leading-[1.2] md:leading-[60px] block">et de filtration de l'eau</span>
                     </h2>
                 </div>
 
@@ -76,15 +81,22 @@ const ProductShowcase = () => {
 
                             {/* Product info */}
                             <CardContent className="p-6 space-y-3">
-                                <h3 className="text-xl font-bold text-foreground">
+                                <h3
+                                    className="text-[20px] leading-[28px] font-semibold text-foreground"
+                                    style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                >
                                     {product.name}
                                 </h3>
-                                <p className="text-sm text-muted-foreground leading-relaxed">
+                                <p
+                                    className="text-[16px] leading-[24px] font-light text-muted-foreground"
+                                    style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                >
                                     {product.description}
                                 </p>
                                 <a
                                     href={product.link}
-                                    className="inline-flex items-center gap-2 text-[#2563EB] font-semibold hover:gap-3 transition-all group/link"
+                                    className="inline-flex items-center gap-2 text-[#2563EB] font-medium text-[16px] leading-[24px] hover:gap-3 transition-all group/link"
+                                    style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                                 >
                                     <span>En savoir plus</span>
                                     <ArrowRight className="h-4 w-4" />

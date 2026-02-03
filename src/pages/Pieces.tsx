@@ -44,7 +44,7 @@ const Pieces = () => {
                     <div className="container mx-auto px-4">
                         <div className="max-w-3xl mx-auto text-center space-y-6">
                             <Package className="h-16 w-16 text-[#0052ff] mx-auto" />
-                            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
+                            <h1 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
                                 Pièces de Remplacement
                             </h1>
                             <p className="text-lg md:text-xl text-muted-foreground">
@@ -99,8 +99,8 @@ const Pieces = () => {
                                                 ${item.price}
                                             </span>
                                             <span className={`text-xs px-2 py-1 rounded ${item.stock === "En stock"
-                                                    ? "bg-green-100 text-green-700"
-                                                    : "bg-orange-100 text-orange-700"
+                                                ? "bg-green-100 text-green-700"
+                                                : "bg-orange-100 text-orange-700"
                                                 }`}>
                                                 {item.stock}
                                             </span>
@@ -123,7 +123,7 @@ const Pieces = () => {
                 <section className="py-12 md:py-16 bg-slate-50">
                     <div className="container mx-auto px-4">
                         <div className="max-w-4xl mx-auto">
-                            <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">
+                            <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-center">
                                 Besoin d'aide pour trouver la bonne pièce ?
                             </h2>
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

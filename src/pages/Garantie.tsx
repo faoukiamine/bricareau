@@ -49,7 +49,7 @@ const Garantie = () => {
                     <div className="container mx-auto px-4">
                         <div className="max-w-3xl mx-auto text-center space-y-6">
                             <Shield className="h-16 w-16 text-[#0052ff] mx-auto" />
-                            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
+                            <h1 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
                                 Garanties et Protection
                             </h1>
                             <p className="text-lg md:text-xl text-muted-foreground">
@@ -105,7 +105,7 @@ const Garantie = () => {
                         <div className="max-w-4xl mx-auto">
                             <div className="text-center mb-8">
                                 <FileText className="h-12 w-12 text-[#0052ff] mx-auto mb-4" />
-                                <h2 className="text-2xl md:text-3xl font-bold mb-4">
+                                <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-center">
                                     Enregistrement de garantie
                                 </h2>
                                 <p className="text-muted-foreground">
@@ -173,7 +173,7 @@ const Garantie = () => {
                 <section className="py-12 md:py-16">
                     <div className="container mx-auto px-4">
                         <div className="max-w-3xl mx-auto">
-                            <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">
+                            <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-center">
                                 Questions fréquentes sur la garantie
                             </h2>
                             <div className="space-y-4">
@@ -210,7 +210,7 @@ const Garantie = () => {
                 <section className="py-12 md:py-16 bg-slate-50">
                     <div className="container mx-auto px-4">
                         <div className="max-w-3xl mx-auto text-center space-y-6">
-                            <h2 className="text-2xl md:text-3xl font-bold text-foreground">
+                            <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-center">
                                 Questions sur votre garantie ?
                             </h2>
                             <p className="text-base md:text-lg text-muted-foreground">

@@ -50,10 +50,14 @@ const QualityService = () => {
             <div className="container mx-auto px-4">
                 {/* Section header */}
                 <div className="text-center mb-12 md:mb-16">
-                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-                        Qualité inégalée, service imbattable
+                    <h2
+                        className="text-foreground tracking-tighter"
+                        style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                    >
+                        <span className="text-[32px] md:text-[60px] font-light leading-[1.2] md:leading-[60px] block">Qualité inégalée.</span>
+                        <span className="text-[32px] md:text-[60px] font-normal leading-[1.2] md:leading-[60px] block">Service inoubliable.</span>
                     </h2>
-                    <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
+                    <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
                         Nous nous engageons à fournir les meilleures solutions de traitement d'eau avec un service exceptionnel
                     </p>
                 </div>

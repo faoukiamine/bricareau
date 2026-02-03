@@ -63,8 +63,12 @@ const TestimonialsSection = () => {
         <section className="py-20 bg-white overflow-hidden relative">
             <div className="container mx-auto px-4 max-w-6xl">
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-4xl lg:text-[2.5rem] text-[#1F2937] font-light">
-                        Qualité inégalée. <span className="font-bold">Service inoubliable.</span>
+                    <h2
+                        className="text-foreground tracking-tighter"
+                        style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                    >
+                        <span className="text-[32px] md:text-[60px] font-light leading-[1.2] md:leading-[60px] block">Qualité inégalée.</span>
+                        <span className="text-[32px] md:text-[60px] font-normal leading-[1.2] md:leading-[60px] block">Service inoubliable.</span>
                     </h2>
                 </div>
 

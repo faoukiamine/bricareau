@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -113,5 +117,9 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+  }
+
+  p {
+    @apply font-light text-[20px] leading-[28px];
   }
 }

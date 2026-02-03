@@ -111,7 +111,7 @@ const EauDure = () => {
               <span className="text-sm font-bold uppercase tracking-widest text-amber-400 mb-4 block">
                 COMPRENDRE LE PROBLÈME
               </span>
-              <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-6 leading-tight drop-shadow-md">
+              <h1 className="text-[32px] md:text-[48px] font-normal mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-white drop-shadow-md">
                 Eau dure & Calcaire
               </h1>
               <p className="text-lg md:text-xl font-medium opacity-95 mb-8 max-w-xl drop-shadow-sm">
@@ -140,7 +140,7 @@ const EauDure = () => {
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
+                <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
                   Qu'est-ce que l'eau dure ?
                 </h2>
                 <p className="text-muted-foreground text-lg leading-relaxed mb-6">
@@ -189,8 +189,8 @@ const EauDure = () => {
         <section className="py-16 md:py-24 bg-slate-50">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
-                Les effets du calcaire sur votre quotidien
+              <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-16 text-center leading-[1.2] md:leading-[48px] tracking-tighter">
+                Les effets sur votre foyer
               </h2>
               <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
                 Le calcaire s'accumule progressivement et cause des problèmes coûteux.
@@ -226,7 +226,7 @@ const EauDure = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto">
               <div className="text-center mb-12">
-                <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+                <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal text-slate-900 mb-8 leading-[1.1] tracking-tighter text-center">
                   Questions fréquentes sur l'eau dure
                 </h2>
               </div>
@@ -254,7 +254,7 @@ const EauDure = () => {
         <section className="py-16 md:py-24 bg-gradient-to-br from-primary/5 to-accent/5">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal text-slate-900 mb-8 leading-[1.1] tracking-tighter text-center">
                 Nos solutions contre l'eau dure
               </h2>
               <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
@@ -287,7 +287,7 @@ const EauDure = () => {
         {/* CTA Section */}
         <section className="bg-primary py-16 md:py-20">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-2xl md:text-3xl font-bold text-primary-foreground mb-4">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal text-white mb-8 leading-[1.1] tracking-tighter text-center">
               Vous êtes préoccupé par la qualité de votre eau ?
             </h2>
             <p className="text-primary-foreground/80 text-lg mb-8 max-w-2xl mx-auto">

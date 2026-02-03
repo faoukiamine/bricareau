@@ -54,7 +54,7 @@ const AdoucisseursPortables = () => {
                         <span className="text-[#60A5FA] text-sm font-bold uppercase tracking-[0.3em] mb-6 block animate-in fade-in slide-in-from-bottom duration-700">
                             FLEXIBILITÉ & QUALITÉ
                         </span>
-                        <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-normal leading-[1.1] mb-8 tracking-tighter animate-in fade-in slide-in-from-bottom duration-700 drop-shadow-2xl">
+                        <h1 className="text-white text-[32px] md:text-[48px] font-normal mb-8 leading-[1.2] md:leading-[48px] tracking-tighter animate-in fade-in slide-in-from-bottom duration-700 drop-shadow-2xl">
                             Profitez d’une eau douce <br />
                             où que vous alliez !
                         </h1>
@@ -80,7 +80,7 @@ const AdoucisseursPortables = () => {
                         </span>
                         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
                             <div className="lg:col-span-5 animate-in fade-in slide-in-from-bottom duration-700">
-                                <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-black leading-[1.1] tracking-tighter">
+                                <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 leading-[1.2] md:leading-[48px] tracking-tighter text-left">
                                     Une eau de qualité,<br />
                                     partout avec vous.
                                 </h2>
@@ -144,7 +144,7 @@ const AdoucisseursPortables = () => {
                             NOTRE FONCTIONNEMENT
                         </span>
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-end">
-                            <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold text-black leading-[1] tracking-tighter">
+                            <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 leading-[1.2] md:leading-[48px] tracking-tighter text-left">
                                 Un service simple <br />& sans souci.
                             </h2>
                             <p className="text-[#666] text-xl leading-relaxed max-w-xl lg:ml-auto">
@@ -201,7 +201,7 @@ const AdoucisseursPortables = () => {
             <section className="bg-white py-24">
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-16">
-                        <h2 className="text-4xl font-bold text-gray-900 mb-4">Découvrez les produits associés</h2>
+                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal text-slate-900 mb-8 leading-[1.1] tracking-tighter">Découvrez les produits associés</h2>
                         <p className="text-gray-500 text-lg max-w-2xl mx-auto">
                             Optimisez votre expérience de traitement d'eau avec nos solutions complémentaires.
                         </p>
@@ -247,7 +247,7 @@ const AdoucisseursPortables = () => {
                         <img src={missionImg} alt="Engagement" className="w-full h-auto" />
                     </div>
                     <div className="lg:w-1/2">
-                        <h2 className="text-4xl md:text-5xl font-bold text-[#001B3D] mb-8 leading-tight">
+                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal text-[#001B3D] mb-8 leading-[1.1] tracking-tighter text-left">
                             L'eau est notre mission
                         </h2>
                         <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
@@ -267,7 +267,7 @@ const AdoucisseursPortables = () => {
                 <div className="container mx-auto px-4">
                     <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-20">
                         <div className="lg:w-1/3 text-left">
-                            <h2 className="text-3xl md:text-5xl font-bold mb-8 leading-tight italic">
+                            <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter italic text-left">
                                 Planifiez une consultation gratuite sur l'eau
                             </h2>
                             <p className="text-lg text-gray-600 mb-8 leading-relaxed">

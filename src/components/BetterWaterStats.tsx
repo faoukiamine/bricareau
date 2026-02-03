@@ -29,8 +29,12 @@ const BetterWaterStats = () => {
             <div className="container mx-auto px-4">
                 {/* Section header */}
                 <div className="text-center mb-12 md:mb-16">
-                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
-                        Une meilleure eau, garantie
+                    <h2
+                        className="text-white tracking-tighter"
+                        style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                    >
+                        <span className="text-[32px] md:text-[60px] font-light leading-[1.2] md:leading-[60px] block">Une meilleure eau,</span>
+                        <span className="text-[32px] md:text-[60px] font-normal leading-[1.2] md:leading-[60px] block">garantie</span>
                     </h2>
                 </div>
 

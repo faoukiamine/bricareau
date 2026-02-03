@@ -52,7 +52,7 @@ const WaterTestingPage = () => {
               <span className="inline-block px-4 py-1 bg-blue-600 text-sm font-bold uppercase tracking-wider rounded-full mb-6">
                 Appelez-nous : 1 855 264 9328
               </span>
-              <h1 className="text-4xl md:text-6xl font-black mb-8 leading-[1.1]">
+              <h1 className="text-[32px] md:text-[48px] font-normal text-white mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-left">
                 Planifiez un test <br />
                 d'eau gratuit
               </h1>
@@ -72,7 +72,7 @@ const WaterTestingPage = () => {
             <div className="flex flex-col lg:flex-row gap-16 items-center">
               <div className="lg:w-1/2">
                 <h2 className="text-blue-400 font-bold uppercase tracking-widest text-sm mb-4">Pourquoi une analyse d'eau ?</h2>
-                <h3 className="text-4xl md:text-5xl font-bold mb-8">Voici ce que vous pourriez découvrir dans votre eau</h3>
+                <h2 className="text-[32px] md:text-[48px] font-normal text-white mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-left">Voici ce que vous pourriez découvrir dans votre eau</h2>
                 <p className="text-xl text-blue-100/80 leading-relaxed mb-10">
                   Même si votre eau semble propre, elle peut contenir des minéraux invisibles et des impuretés qui nuisent à votre maison et à votre santé. Un test d'eau à domicile est la première étape pour obtenir l'eau que vous méritez.
                 </p>
@@ -120,8 +120,8 @@ const WaterTestingPage = () => {
         {/* Section 3: Quand faut-il faire analyser l'eau */}
         <section className="py-24 bg-white">
           <div className="container mx-auto px-6 text-center">
-            <h2 className="text-3xl md:text-5xl font-bold mb-16 max-w-3xl mx-auto">
-              Quand faut-il faire analyser l'eau de votre maison ?
+            <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-16 max-w-4xl mx-auto leading-[1.2] md:leading-[48px] tracking-tighter">
+              Quand faut-il faire analyser l'eau <br />de votre maison ?
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
               {[
@@ -158,7 +158,7 @@ const WaterTestingPage = () => {
                 <span className="text-white/80 text-xs font-black uppercase tracking-[0.3em] mb-8 block">
                   ANALYSE CERTIFIÉE
                 </span>
-                <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-8">
+                <h2 className="text-[32px] md:text-[48px] font-normal text-white mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-left">
                   Comment analyser <br /> votre eau ?
                 </h2>
                 <div className="space-y-6 mb-12">
@@ -191,8 +191,8 @@ const WaterTestingPage = () => {
           <div className="container mx-auto px-6">
             <div className="flex flex-col lg:flex-row items-center gap-20">
               <div className="lg:w-1/2">
-                <h2 className="text-4xl md:text-5xl font-bold mb-12">
-                  Voici pourquoi choisir Bricareau pour votre analyse d'eau à domicile
+                <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-left">
+                  Pourquoi choisir Bricareau pour <br />votre analyse d'eau à domicile ?
                 </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                   {[
@@ -226,7 +226,7 @@ const WaterTestingPage = () => {
         {/* Section 7: Comment améliorer la qualité de l'eau */}
         <section className="py-24 bg-white">
           <div className="container mx-auto px-6 text-center">
-            <h2 className="text-3xl font-bold mb-16">Comment améliorer la qualité de l'eau</h2>
+            <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-16 text-center leading-[1.2] md:leading-[48px] tracking-tighter">Comment améliorer la qualité de l'eau</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
                 { title: "Adoucisseurs d'eau", desc: "Pour une eau douce et protégée partout dans la maison.", img: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png", href: "/adoucisseur-eau-residentiel" },
@@ -251,7 +251,8 @@ const WaterTestingPage = () => {
         {/* Section 8: FAQ */}
         <section className="py-24 bg-slate-50">
           <div className="container mx-auto px-6 max-w-4xl">
-            <h2 className="text-3xl font-bold mb-12 text-center">FAQ sur les tests de qualité de l'eau</h2>
+            <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-16 text-center leading-[1.2] md:leading-[48px] tracking-tighter">
+              FAQ sur les tests <br />de qualité de l'eau</h2>
             <Accordion type="single" collapsible className="w-full">
               {[
                 { q: "Combien de temps dure l'analyse à domicile ?", a: "En moyenne, une analyse complète prend entre 45 et 60 minutes selon la complexité de votre installation." },
@@ -277,7 +278,7 @@ const WaterTestingPage = () => {
           <div className="container mx-auto px-6">
             <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-20">
               <div className="lg:w-1/3 text-left">
-                <h2 className="text-4xl md:text-5xl font-bold mb-8 leading-tight italic">
+                <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter italic">
                   Réserver votre consultation gratuite d'une heure
                 </h2>
                 <p className="text-xl text-gray-600 mb-8 leading-relaxed">

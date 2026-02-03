@@ -34,7 +34,7 @@ const About = () => {
         <section className="py-12 md:py-20 lg:py-24 bg-gradient-to-b from-primary/5 to-background">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center space-y-6">
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
+              <h1 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
                 À propos de Bricareau
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground">
@@ -49,25 +49,25 @@ const About = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto space-y-8">
               <div className="text-center space-y-4">
-                <h2 className="text-2xl md:text-3xl font-bold text-foreground">
+                <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-center">
                   Notre Mission
                 </h2>
                 <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-                  Chez Bricareau, notre mission est de protéger la santé et le bien-être de votre famille 
-                  en fournissant des solutions de traitement d'eau de qualité supérieure. Nous croyons que 
+                  Chez Bricareau, notre mission est de protéger la santé et le bien-être de votre famille
+                  en fournissant des solutions de traitement d'eau de qualité supérieure. Nous croyons que
                   chaque foyer canadien mérite un accès à une eau propre, pure et saine.
                 </p>
               </div>
 
               <div className="prose prose-lg max-w-none space-y-4 text-muted-foreground">
                 <p>
-                  Depuis notre création, nous avons aidé plus de 20 000 foyers à travers le Canada à 
-                  améliorer la qualité de leur eau. Notre expertise couvre tous les aspects du traitement 
+                  Depuis notre création, nous avons aidé plus de 20 000 foyers à travers le Canada à
+                  améliorer la qualité de leur eau. Notre expertise couvre tous les aspects du traitement
                   d'eau, du résidentiel au commercial et industriel.
                 </p>
                 <p>
-                  Nous sommes fiers d'offrir des produits certifiés, une installation professionnelle et 
-                  un service client exceptionnel. Notre équipe d'experts est toujours disponible pour vous 
+                  Nous sommes fiers d'offrir des produits certifiés, une installation professionnelle et
+                  un service client exceptionnel. Notre équipe d'experts est toujours disponible pour vous
                   conseiller et vous accompagner dans le choix de la solution parfaite pour vos besoins.
                 </p>
               </div>
@@ -79,7 +79,7 @@ const About = () => {
         <section className="py-12 md:py-16 bg-secondary/30">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <h2 className="text-2xl md:text-3xl font-bold text-center text-foreground mb-12">
+              <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-16 text-center leading-[1.2] md:leading-[48px] tracking-tighter">
                 Nos Valeurs
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -106,16 +106,16 @@ const About = () => {
         <section className="py-12 md:py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center space-y-6">
-              <h2 className="text-2xl md:text-3xl font-bold text-foreground">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal text-slate-900 mb-16 text-center leading-[1.1] tracking-tighter">
                 Notre Équipe
               </h2>
               <p className="text-base md:text-lg text-muted-foreground">
-                Notre équipe de professionnels certifiés possède une expertise approfondie en traitement 
-                d'eau. Formés aux dernières technologies et normes de l'industrie, nos techniciens sont 
+                Notre équipe de professionnels certifiés possède une expertise approfondie en traitement
+                d'eau. Formés aux dernières technologies et normes de l'industrie, nos techniciens sont
                 dévoués à vous offrir le meilleur service possible.
               </p>
               <p className="text-base md:text-lg text-muted-foreground">
-                Chaque membre de notre équipe partage la même passion : garantir que votre eau soit de 
+                Chaque membre de notre équipe partage la même passion : garantir que votre eau soit de
                 la plus haute qualité pour protéger votre santé et celle de votre famille.
               </p>
             </div>

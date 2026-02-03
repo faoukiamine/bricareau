@@ -14,7 +14,7 @@ const Contact = () => {
         <section className="py-12 md:py-20 lg:py-24 bg-gradient-to-b from-primary/5 to-background">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center space-y-6">
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
+              <h1 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
                 Contactez-nous
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground">
@@ -31,11 +31,11 @@ const Contact = () => {
               {/* Contact Information */}
               <div className="space-y-8">
                 <div>
-                  <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
+                  <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
                     Informations de contact
                   </h2>
                   <p className="text-muted-foreground mb-8">
-                    N'hésitez pas à nous contacter par téléphone, email ou en remplissant 
+                    N'hésitez pas à nous contacter par téléphone, email ou en remplissant
                     le formulaire. Nous vous répondrons dans les plus brefs délais.
                   </p>
                 </div>
@@ -95,7 +95,7 @@ const Contact = () => {
 
               {/* Contact Form */}
               <div className="bg-card border border-border rounded-lg p-6 md:p-8">
-                <h2 className="text-2xl font-bold text-foreground mb-6">
+                <h2 className="text-[28px] md:text-[40px] font-normal text-slate-900 mb-6 leading-[1.1] tracking-tighter">
                   Envoyez-nous un message
                 </h2>
                 <form className="space-y-6">

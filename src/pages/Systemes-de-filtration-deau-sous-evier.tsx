@@ -66,10 +66,10 @@ const FiltrationSousEvier = () => {
                             <span className="text-sm font-bold uppercase tracking-widest text-[#60A5FA] mb-4 block">
                                 PURETÉ INÉGALÉE
                             </span>
-                            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-6 leading-tight drop-shadow-md">
+                            <h1 className="text-[32px] md:text-[48px] font-normal mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-white drop-shadow-md">
                                 Osmose inverse <br /> & Filtration
                             </h1>
-                            <p className="text-lg md:text-xl font-medium opacity-95 mb-8 max-w-xl drop-shadow-sm">
+                            <p className="font-light text-[20px] leading-[28px] text-white/90 mb-8 max-w-xl drop-shadow-sm">
                                 Profitez d'une eau pure et délicieuse directement de votre robinet.
                                 Nos systèmes éliminent 99% des contaminants pour une tranquillité d'esprit totale.
                             </p>
@@ -94,11 +94,11 @@ const FiltrationSousEvier = () => {
                 <section className="py-24 bg-[#0A192F] text-white">
                     <div className="container mx-auto px-6">
                         <div className="text-center mb-16">
-                            <h2 className="text-3xl md:text-5xl font-bold tracking-tighter mb-4">
-                                Pourquoi choisir nos systèmes d'osmose inverse ?
+                            <h2 className="text-[32px] md:text-[48px] font-normal text-white mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
+                                Pourquoi choisir nos systèmes <br />d'osmose inverse ?
                             </h2>
-                            <p className="text-slate-400 max-w-2xl mx-auto text-lg">
-                                Une technologie de pointe pour une eau d'une pureté exceptionnelle, sans compromis.
+                            <p className="font-light text-[20px] leading-[28px] text-white/70 max-w-2xl mx-auto">
+                                Profitez d'une eau d'une pureté exceptionnelle pour votre boisson et votre cuisine.
                             </p>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
@@ -112,7 +112,7 @@ const FiltrationSousEvier = () => {
                                         <item.icon className="h-10 w-10 text-blue-400 group-hover:text-white" />
                                     </div>
                                     <h3 className="text-2xl font-bold mb-4 tracking-tight">{item.title}</h3>
-                                    <p className="text-slate-400 leading-relaxed">{item.desc}</p>
+                                    <p className="font-light text-[20px] leading-[28px] text-white/60">{item.desc}</p>
                                 </div>
                             ))}
                         </div>
@@ -123,8 +123,8 @@ const FiltrationSousEvier = () => {
                 <section className="py-24 bg-white">
                     <div className="container mx-auto px-6">
                         <div className="text-left mb-16">
-                            <h2 className="text-4xl md:text-6xl font-bold text-slate-900 tracking-tighter mb-4">
-                                Systèmes d'osmose inverse pour la maison
+                            <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
+                                Systèmes d'osmose inverse <br />pour la maison
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
@@ -140,7 +140,7 @@ const FiltrationSousEvier = () => {
                                         <img src={product.img} alt={product.name} className="w-full h-full object-contain mix-blend-multiply transition-transform duration-500 group-hover:scale-110" />
                                     </div>
                                     <h3 className="text-xl font-bold mb-2 group-hover:text-blue-600 transition-colors uppercase tracking-tight">{product.name}</h3>
-                                    <p className="text-slate-500 text-sm leading-relaxed mb-4">{product.desc}</p>
+                                    <p className="font-light text-[20px] leading-[28px] text-slate-500 mb-4">{product.desc}</p>
                                     <NavLink to={product.path || "/contact"} className="text-blue-600 font-bold flex items-center gap-2 text-sm tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-all">
                                         EN SAVOIR PLUS <ChevronRight className="h-4 w-4" />
                                     </NavLink>
@@ -178,7 +178,7 @@ const FiltrationSousEvier = () => {
                     <div className="container mx-auto px-6 text-left">
                         <div className="flex flex-col lg:flex-row items-center gap-20">
                             <div className="lg:w-1/2">
-                                <h2 className="text-4xl md:text-6xl font-bold text-slate-900 leading-[1.1] tracking-tighter mb-8">
+                                <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
                                     Une eau de qualité <br /> restaurant à la maison.
                                 </h2>
                                 <p className="text-lg text-slate-500 font-medium mb-10 leading-relaxed">
@@ -220,7 +220,7 @@ const FiltrationSousEvier = () => {
                                 <span className="text-white/80 text-xs font-black uppercase tracking-[0.3em] mb-8 block">
                                     ANALYSE ET CONSEIL
                                 </span>
-                                <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-8">
+                                <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal text-white mb-8 leading-[1.1] tracking-tighter">
                                     Ne devinez pas, <br /> testez votre eau.
                                 </h2>
                                 <p className="text-white/90 text-lg font-medium mb-12 leading-relaxed">
@@ -237,7 +237,7 @@ const FiltrationSousEvier = () => {
                 {/* 7. Comparison Table */}
                 <section className="py-24 bg-white">
                     <div className="container mx-auto px-4">
-                        <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold text-slate-900 leading-[1.1] tracking-tighter mb-16 text-center">
+                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal text-slate-900 mb-16 text-center leading-[1.1] tracking-tighter">
                             Comparez nos solutions <br />de filtration d'eau potable.
                         </h2>
                         <div className="overflow-x-auto">
@@ -298,8 +298,8 @@ const FiltrationSousEvier = () => {
                             <span className="text-blue-600 text-[10px] font-black uppercase tracking-[0.5em] mb-4 block">
                                 POUR VOUS ÉCLAIRER
                             </span>
-                            <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold text-slate-900 leading-[1.1] tracking-tighter">
-                                Vos questions.
+                            <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-center">
+                                Questions fréquentes
                             </h2>
                         </div>
                         <Accordion type="single" collapsible className="w-full">
@@ -337,7 +337,7 @@ const FiltrationSousEvier = () => {
                 {/* 10. Resources Section */}
                 <section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-4">
-                        <h2 className="text-3xl font-bold mb-16 underline decoration-blue-600 underline-offset-8 text-left">
+                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal text-slate-900 mb-16 leading-[1.1] tracking-tighter">
                             Ressources
                         </h2>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -386,7 +386,7 @@ const FiltrationSousEvier = () => {
                     <div className="container mx-auto px-4">
                         <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-20">
                             <div className="lg:w-1/3 text-left">
-                                <h2 className="text-3xl md:text-5xl font-bold mb-8 leading-tight italic">
+                                <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter italic">
                                     Planifiez une consultation gratuite sur l'eau
                                 </h2>
                                 <p className="text-lg text-gray-600 mb-8 leading-relaxed">

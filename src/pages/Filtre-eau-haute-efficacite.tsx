@@ -55,10 +55,10 @@ const FiltreEauHauteEfficacite = () => {
                                 <span className="text-blue-600 font-bold uppercase tracking-widest text-sm mb-4 block">
                                     SYSTÈME DE FILTRATION D'EAU
                                 </span>
-                                <h1 className="text-4xl md:text-6xl font-black text-slate-900 mb-6 leading-tight">
+                                <h1 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
                                     Culligan High Efficiency (HE)
                                 </h1>
-                                <p className="text-xl text-slate-500 mb-8 leading-relaxed">
+                                <p className="font-light text-[20px] leading-[28px] text-slate-600 mb-8">
                                     L'adoucisseur et filtre d'eau le plus efficace au monde. Profitez d'une eau d'une pureté absolue tout en réalisant des économies d'eau et de sel inégalées.
                                 </p>
                                 <Button className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-10 h-16 text-xl font-bold mb-12 shadow-xl transition-all hover:scale-105" asChild>
@@ -103,7 +103,7 @@ const FiltreEauHauteEfficacite = () => {
                     <div className="container mx-auto px-6">
                         <div className="flex flex-col lg:flex-row items-center gap-16">
                             <div className="lg:w-1/2 order-2 lg:order-1">
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-8 leading-tight">
+                                <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
                                     Exclusivités technologiques de Culligan
                                 </h2>
                                 <div className="space-y-8">
@@ -112,7 +112,7 @@ const FiltreEauHauteEfficacite = () => {
                                             <div className="w-2 h-8 bg-blue-600 rounded-full" />
                                             Aqua-Sensor® Digital
                                         </h3>
-                                        <p className="text-slate-500 leading-relaxed">
+                                        <p className="font-light text-[20px] leading-[28px] text-slate-600">
                                             Le cerveau de votre système. Contrairement aux systèmes basés sur le temps, notre capteur breveté ajuste la régénération en fonction de l'utilisation réelle et de la dureté de l'eau.
                                         </p>
                                     </div>
@@ -121,7 +121,7 @@ const FiltreEauHauteEfficacite = () => {
                                             <div className="w-2 h-8 bg-blue-600 rounded-full" />
                                             Culligan Connect App
                                         </h3>
-                                        <p className="text-slate-500 leading-relaxed">
+                                        <p className="font-light text-[20px] leading-[28px] text-slate-600">
                                             Une tranquillité d'esprit totale. Suivez votre consommation, recevez des alertes de fuite ou de niveau de sel bas directement sur votre téléphone.
                                         </p>
                                     </div>
@@ -141,10 +141,10 @@ const FiltreEauHauteEfficacite = () => {
                 {/* 3. Filtration Intelligente (Benefits) */}
                 <section className="py-24 bg-white">
                     <div className="container mx-auto px-6 text-center">
-                        <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 tracking-tight">
+                        <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
                             Filtration intelligente qui améliore votre vie au quotidien
                         </h2>
-                        <p className="text-slate-500 text-lg mb-16 max-w-3xl mx-auto">
+                        <p className="font-light text-[20px] leading-[28px] text-slate-600 mb-16 max-w-3xl mx-auto">
                             Plus qu'un simple filtre, c'est une protection complète pour votre santé et votre maison.
                         </p>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -170,7 +170,7 @@ const FiltreEauHauteEfficacite = () => {
                 <section className="py-16 bg-blue-600 text-white">
                     <div className="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8">
                         <div>
-                            <h2 className="text-3xl md:text-4xl font-bold mb-2">Prêt pour une meilleure eau ?</h2>
+                            <h2 className="text-[32px] md:text-[48px] font-normal text-white mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">Prêt pour une meilleure eau ?</h2>
                             <p className="text-blue-100 text-lg font-medium">Découvrez pourquoi Culligan est le leader mondial de l'eau.</p>
                         </div>
                         <Button className="bg-white text-blue-600 hover:bg-slate-100 rounded-full px-12 h-16 text-xl font-bold shadow-lg transition-transform hover:scale-105">
@@ -193,8 +193,8 @@ const FiltreEauHauteEfficacite = () => {
                                 </div>
                             </div>
                             <div className="lg:w-1/2 text-left">
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-8 leading-tight">
-                                    Une eau de confiance pour toute la famille
+                                <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
+                                    Le choix intelligent <br /> pour votre maison.
                                 </h2>
                                 <div className="space-y-6">
                                     {[
@@ -222,7 +222,7 @@ const FiltreEauHauteEfficacite = () => {
                 {/* 6. Service Plan Section */}
                 <section className="py-24 bg-slate-50">
                     <div className="container mx-auto px-6 text-center">
-                        <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-16">
+                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal text-slate-900 mb-16 leading-[1.1] tracking-tighter">
                             Plan d'entretien et tranquillité d'esprit
                         </h2>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
@@ -246,7 +246,7 @@ const FiltreEauHauteEfficacite = () => {
                 {/* 7. Comparison Table */}
                 <section className="py-24 bg-white">
                     <div className="container mx-auto px-6">
-                        <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-16 text-center underline decoration-blue-600 underline-offset-8">
+                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal text-slate-900 mb-16 text-center leading-[1.1] tracking-tighter">
                             Pourquoi choisir le Culligan HE ?
                         </h2>
                         <div className="overflow-x-auto rounded-[3rem] border border-slate-100 shadow-xl bg-white">
@@ -287,8 +287,8 @@ const FiltreEauHauteEfficacite = () => {
                 <section className="py-24 bg-slate-50">
                     <div className="container mx-auto px-6">
                         <div className="max-w-4xl mx-auto text-center">
-                            <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-8">Installation. Tranquille.</h2>
-                            <p className="text-slate-500 text-lg mb-16 leading-relaxed">
+                            <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal text-slate-900 mb-8 leading-[1.1] tracking-tighter">Installation. Tranquille.</h2>
+                            <p className="font-light text-[20px] leading-[28px] text-slate-600 mb-16">
                                 Nos techniciens certifiés Culligan ne se contentent pas d'installer votre système. Ils s'assurent qu'il fonctionne à son plein potentiel pour des années de service fiable.
                             </p>
                             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -312,7 +312,7 @@ const FiltreEauHauteEfficacite = () => {
                 {/* 9. FAQ Section */}
                 <section className="py-24 bg-white">
                     <div className="container mx-auto px-6 max-w-4xl">
-                        <h2 className="text-3xl md:text-5xl font-bold mb-16 text-center text-slate-900 tracking-tighter">
+                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal mb-16 text-center text-slate-900 leading-[1.1] tracking-tighter">
                             Questions fréquemment posées
                         </h2>
                         <Accordion type="single" collapsible className="w-full">
@@ -326,7 +326,7 @@ const FiltreEauHauteEfficacite = () => {
                                     <AccordionTrigger className="px-8 py-6 hover:bg-slate-50/50 hover:no-underline text-left font-bold text-lg text-slate-800">
                                         {item.q}
                                     </AccordionTrigger>
-                                    <AccordionContent className="px-8 pb-6 text-slate-500 text-lg leading-relaxed">
+                                    <AccordionContent className="px-8 pb-6 font-light text-[20px] leading-[28px] text-slate-600">
                                         {item.a}
                                     </AccordionContent>
                                 </AccordionItem>
@@ -343,10 +343,10 @@ const FiltreEauHauteEfficacite = () => {
                     <div className="container mx-auto px-6">
                         <div className="bg-white rounded-[4rem] shadow-2xl flex flex-col lg:flex-row items-center overflow-hidden">
                             <div className="lg:w-1/2 p-12 lg:p-24 text-left">
-                                <h2 className="text-3xl md:text-5xl font-black text-slate-900 mb-8 leading-[1.1]">
+                                <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal text-slate-900 mb-8 leading-[1.1] tracking-tighter">
                                     Offrez-vous le confort que vous méritez.
                                 </h2>
-                                <p className="text-slate-500 text-xl leading-relaxed mb-12">
+                                <p className="font-light text-[20px] leading-[28px] text-slate-600 mb-12">
                                     Plus de 11 millions de familles font confiance à Culligan. Rejoignez-les dès aujourd'hui et transformez votre quotidien.
                                 </p>
                                 <Button className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-12 h-16 text-xl font-bold shadow-xl transition-all hover:scale-105" asChild>
@@ -367,7 +367,7 @@ const FiltreEauHauteEfficacite = () => {
                 {/* 12. Related Products */}
                 <section className="py-24 bg-white border-t border-slate-100">
                     <div className="container mx-auto px-6">
-                        <h2 className="text-3xl font-bold text-slate-900 mb-16 text-center">Découvrez d'autres solutions</h2>
+                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal text-slate-900 mb-8 text-center leading-[1.1] tracking-tighter">Découvrez d'autres solutions</h2>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {[
                                 { title: "Osmose Inverse Culligan", desc: "La pureté ultime pour votre eau de boisson.", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },

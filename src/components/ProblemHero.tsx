@@ -21,10 +21,11 @@ const ProblemHero = () => {
                         </span>
 
                         <h1
-                            className="text-[40px] leading-[40px] font-semibold text-slate-900 mb-10 text-balance"
+                            className="text-slate-900 mb-10 tracking-tighter"
                             style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                         >
-                            Épargnez-vous les <br className="hidden md:block" /> maux de tête.
+                            <span className="text-[32px] md:text-[60px] font-light leading-[1.2] md:leading-[60px] block">Épargnez-vous les</span>
+                            <span className="text-[32px] md:text-[60px] font-normal leading-[1.2] md:leading-[60px] block">maux de tête.</span>
                         </h1>
 
                         <p className="text-xl text-slate-500 leading-relaxed mb-12 max-w-lg font-medium">
@@ -34,7 +35,8 @@ const ProblemHero = () => {
                         <div>
                             <Button
                                 size="lg"
-                                className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 text-lg font-bold transition-all group"
+                                className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 transition-all group"
+                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                                 asChild
                             >
                                 <a href="/consultation" className="flex items-center gap-2">
