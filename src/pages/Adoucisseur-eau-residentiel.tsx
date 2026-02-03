@@ -187,38 +187,8 @@ const AdoucisseurEauResidentiel = () => {
                     </div>
                 </section>
 
-                {/* Testimonials Grid Section */}
-                <TestimonialsSection />
-
-                {/* 5. Expertise Section (Blue Box Design) */}
-                <section className="py-24 bg-white">
-                    <div className="container mx-auto px-6">
-                        <div className="flex flex-col lg:flex-row items-stretch gap-0 rounded-[3rem] overflow-hidden shadow-2xl">
-                            <div className="lg:w-1/2 relative min-h-[400px]">
-                                <img src={waterTestBg} alt="Analyse d'eau" className="absolute inset-0 w-full h-full object-cover" />
-                                <div className="absolute inset-0 bg-blue-900/10" />
-                            </div>
-                            <div className="lg:w-1/2 bg-blue-600 text-white p-12 lg:p-20 flex flex-col justify-center items-start text-left">
-                                <span className="text-white/80 text-xs font-black uppercase tracking-[0.3em] mb-8 block">
-                                    ANALYSE PROFESSIONNELLE
-                                </span>
-                                <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal text-white mb-8 leading-[1.1] tracking-tighter text-left">
-                                    Des tests d'eau précis <br />
-                                    pour votre sécurité.
-                                </h2>
-                                <p className="text-white/90 text-lg font-medium mb-12 leading-relaxed">
-                                    Ne devinez pas la qualité de votre eau. Nos analyses approfondies identifient les bactéries, les minéraux et les contaminants chimiques pour vous offrir une tranquillité d'esprit totale.
-                                </p>
-                                <Button className="bg-white text-blue-600 hover:bg-blue-50 rounded-full px-12 h-16 text-xl font-bold shadow-xl" asChild>
-                                    <NavLink to="/water-testing">En savoir plus</NavLink>
-                                </Button>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
                 {/* Comparison Table Section */}
-                <section className="py-24 bg-gray-50">
+                <section className="py-24 bg-white border-t border-gray-100">
                     <div className="container mx-auto px-4">
                         <h2
                             className="text-slate-900 tracking-tighter mb-16 text-center"
@@ -263,6 +233,37 @@ const AdoucisseurEauResidentiel = () => {
                         </div>
                     </div>
                 </section>
+
+                {/* Testimonials Grid Section */}
+                <TestimonialsSection />
+
+                {/* 5. Expertise Section (Blue Box Design) */}
+                <section className="py-24 bg-white">
+                    <div className="container mx-auto px-6">
+                        <div className="flex flex-col lg:flex-row items-stretch gap-0 rounded-[3rem] overflow-hidden shadow-2xl">
+                            <div className="lg:w-1/2 relative min-h-[400px]">
+                                <img src={waterTestBg} alt="Analyse d'eau" className="absolute inset-0 w-full h-full object-cover" />
+                                <div className="absolute inset-0 bg-blue-900/10" />
+                            </div>
+                            <div className="lg:w-1/2 bg-blue-600 text-white p-12 lg:p-20 flex flex-col justify-center items-start text-left">
+                                <span className="text-white/80 text-xs font-black uppercase tracking-[0.3em] mb-8 block">
+                                    ANALYSE PROFESSIONNELLE
+                                </span>
+                                <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal text-white mb-8 leading-[1.1] tracking-tighter text-left">
+                                    Des tests d'eau précis <br />
+                                    pour votre sécurité.
+                                </h2>
+                                <p className="text-white/90 text-lg font-medium mb-12 leading-relaxed">
+                                    Ne devinez pas la qualité de votre eau. Nos analyses approfondies identifient les bactéries, les minéraux et les contaminants chimiques pour vous offrir une tranquillité d'esprit totale.
+                                </p>
+                                <Button className="bg-white text-blue-600 hover:bg-blue-50 rounded-full px-12 h-16 text-xl font-bold shadow-xl" asChild>
+                                    <NavLink to="/water-testing">En savoir plus</NavLink>
+                                </Button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
 
                 {/* Content Section: Pourquoi opter */}
                 <section className="py-24 bg-white">
@@ -336,15 +337,11 @@ const AdoucisseurEauResidentiel = () => {
                     </div>
                 </section>
 
-                {/* Articles Section */}
+                {/* Articles Section (Matching Resources design from Filtration.tsx) */}
                 <section className="py-24 bg-gray-50">
-                    <div className="container mx-auto px-4 text-center">
-                        <h2
-                            className="text-slate-900 tracking-tighter mb-16 text-center"
-                            style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
-                        >
-                            <span className="text-[32px] md:text-[60px] font-light leading-[1.2] md:leading-[60px] block">Articles et</span>
-                            <span className="text-[32px] md:text-[60px] font-normal leading-[1.2] md:leading-[60px] block">ressources</span>
+                    <div className="container mx-auto px-4 text-left">
+                        <h2 className="text-3xl font-bold mb-16 underline decoration-blue-600 underline-offset-8">
+                            Ressources
                         </h2>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {[
@@ -356,11 +353,14 @@ const AdoucisseurEauResidentiel = () => {
                                     <div className="h-56 overflow-hidden">
                                         <img src={art.img} alt={art.title} className="w-full h-full object-cover transition-transform group-hover:scale-110" />
                                     </div>
-                                    <div className="p-8 text-left">
+                                    <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors">
                                         <h4 className="text-xl font-bold mb-4">{art.title}</h4>
-                                        <Button variant="link" className="p-0 text-blue-600 font-bold group-hover:underline">
-                                            LIRE L'ARTICLE <ChevronRight className="h-4 w-4 ml-1" />
-                                        </Button>
+                                        <NavLink
+                                            to="#"
+                                            className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-xs tracking-widest uppercase"
+                                        >
+                                            EN SAVOIR PLUS <ChevronRight className="h-4 w-4" />
+                                        </NavLink>
                                     </div>
                                 </div>
                             ))}
