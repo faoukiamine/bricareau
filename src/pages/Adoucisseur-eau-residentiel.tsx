@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import { Button } from "@/components/ui/button";
-import heroBath from "@/assets/kid-playing-bathtub.jpg";
+import heroBath from "@/assets/woman-and-kid-drink-glass-water.jpg";
 import {
     ArrowRight,
     Droplets,
@@ -73,7 +73,7 @@ const AdoucisseurEauResidentiel = () => {
 
             <main>
                 {/* Hero Section */}
-                <section className="relative h-[800px] flex items-start overflow-hidden pt-[220px]">
+                <section className="relative h-[850px] flex items-start overflow-hidden pt-[220px]">
                     <div className="absolute inset-0 z-0">
                         <img
                             src={heroBath}
@@ -85,14 +85,11 @@ const AdoucisseurEauResidentiel = () => {
 
                     <div className="container mx-auto px-4 relative z-10">
                         <div className="max-w-2xl text-white">
-                            <span className="inline-block px-3 py-1 bg-blue-600 text-xs font-bold uppercase tracking-wider rounded-sm mb-4">
-                                Solutions Résidentielles
-                            </span>
                             <h1
                                 className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-white"
                                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                             >
-                                Un bien-être sans égal <span className="font-normal">au quotidien</span>
+                                Un bien-être sans égal <span className="font-normal"><br />au quotidien</span>
                             </h1>
                             <p className="font-light text-[20px] leading-[28px] text-white/95 mb-8 max-w-xl">
                                 Bricareau vous offre une eau douce, source de bien-être et de confort.

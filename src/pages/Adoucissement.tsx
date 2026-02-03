@@ -165,51 +165,10 @@ const Adoucissement = () => {
                     </div>
                 </section>
 
-                {/* 5. Health Section */}
-                <section className="py-24 bg-white text-center">
-                    <div className="container mx-auto px-4">
-                        <div className="flex flex-col lg:flex-row items-center gap-16 mb-20">
-                            <div className="lg:w-1/2">
-                                <img
-                                    src={untitledImg}
-                                    alt="Femme se lavant les mains"
-                                    className="rounded-2xl shadow-xl w-full"
-                                />
-                            </div>
-                            <div className="lg:w-1/2 text-left">
-                                <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
-                                    Zéro sel. Zéro électricité. Zéro souci.
-                                </h2>
-                                <p className="font-light text-[20px] leading-[28px] text-gray-600 mb-8">
-                                    Le secret d'un linge éclatant et d'une vaisselle sans traces. Sans l'ajout de sel, votre eau devient votre meilleure alliée beauté et ménage.
-                                </p>
-                                <Button className="bg-blue-600 text-white rounded-full px-12 h-14 text-lg font-bold" asChild>
-                                    <NavLink to="/conditionneurs-sans-sel">Découvrir nos conditionneurs d'eau sans sel</NavLink>
-                                </Button>
-                            </div>
-                        </div>
-
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-left">
-                            {[
-                                { title: "100% Écologique", desc: "Contrairement aux systèmes au sel, vous ne rejetez aucune saumure dans l'environnement et ne consommez pas d'eau pour la régénération." },
-                                { title: "Zéro Contrainte", desc: "Oubliez les sacs de sel. Profitez d'une protection permanente sans électricité, sans réglages et sans maintenance mensuelle. Installez-le, oubliez-le." },
-                                { title: "Eau Préservée", desc: "Gardez les bons minéraux. Le calcaire est neutralisé mais le calcium et le magnésium restent dans l'eau. Une eau saine pour votre santé et celle de votre famille." }
-                            ].map((item, i) => (
-                                <div key={i}>
-                                    <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
-                                        <span className="text-blue-600 font-bold italic">0{i + 1}</span> {item.title}
-                                    </h3>
-                                    <p className="text-gray-500 leading-relaxed">{item.desc}</p>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </section>
-
                 {/* 6. Kitchen Section */}
                 <section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-4">
-                        <div className="flex flex-col lg:flex-row-reverse items-center gap-16 mb-20">
+                        <div className="flex flex-col lg:flex-row items-center gap-16 mb-20">
                             <div className="lg:w-1/2">
                                 <img
                                     src={mceclip0Img}
@@ -235,6 +194,47 @@ const Adoucissement = () => {
                                 { title: "Ultra-Compact & Léger", desc: "Conçu pour les petits espaces. Sa taille réduite lui permet de se glisser dans n'importe quel compartiment de rangement sans alourdir votre véhicule." },
                                 { title: "Plug & Play", desc: "Aucun outil requis. Se branche directement sur votre tuyau d'arrosage ou votre arrivée d'eau standard. Une mise en service instantanée, sans plombier." },
                                 { title: "Protection Mobile", desc: "Sauvez vos équipements. Protégez la tuyauterie de votre VR et votre chauffe-eau contre les eaux dures variables des terrains de camping." }
+                            ].map((item, i) => (
+                                <div key={i}>
+                                    <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
+                                        <span className="text-blue-600 font-bold italic">0{i + 1}</span> {item.title}
+                                    </h3>
+                                    <p className="text-gray-500 leading-relaxed">{item.desc}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+                {/* 5. Health Section */}
+                <section className="py-24 bg-white text-center">
+                    <div className="container mx-auto px-4">
+                        <div className="flex flex-col lg:flex-row-reverse items-center gap-16 mb-20">
+                            <div className="lg:w-1/2">
+                                <img
+                                    src={untitledImg}
+                                    alt="Femme se lavant les mains"
+                                    className="rounded-2xl shadow-xl w-full"
+                                />
+                            </div>
+                            <div className="lg:w-1/2 text-left">
+                                <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
+                                    Zéro sel. Zéro électricité. Zéro souci.
+                                </h2>
+                                <p className="font-light text-[20px] leading-[28px] text-gray-600 mb-8">
+                                    Le secret d'un linge éclatant et d'une vaisselle sans traces. Sans l'ajout de sel, votre eau devient votre meilleure alliée beauté et ménage.
+                                </p>
+                                <Button className="bg-blue-600 text-white rounded-full px-12 h-14 text-lg font-bold" asChild>
+                                    <NavLink to="/conditionneurs-sans-sel">Découvrir nos conditionneurs d'eau sans sel</NavLink>
+                                </Button>
+                            </div>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-left">
+                            {[
+                                { title: "100% Écologique", desc: "Contrairement aux systèmes au sel, vous ne rejetez aucune saumure dans l'environnement et ne consommez pas d'eau pour la régénération." },
+                                { title: "Zéro Contrainte", desc: "Oubliez les sacs de sel. Profitez d'une protection permanente sans électricité, sans réglages et sans maintenance mensuelle. Installez-le, oubliez-le." },
+                                { title: "Eau Préservée", desc: "Gardez les bons minéraux. Le calcaire est neutralisé mais le calcium et le magnésium restent dans l'eau. Une eau saine pour votre santé et celle de votre famille." }
                             ].map((item, i) => (
                                 <div key={i}>
                                     <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
