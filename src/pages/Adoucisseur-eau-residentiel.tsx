@@ -190,39 +190,29 @@ const AdoucisseurEauResidentiel = () => {
                 {/* Testimonials Grid Section */}
                 <TestimonialsSection />
 
-                {/* 5. SECTION TESTS D'EAU - Full Background with Overlaid Content Box */}
-                <section className="relative min-h-[700px] flex items-center overflow-hidden">
-                    {/* Background Image */}
-                    <div className="absolute inset-0 z-0">
-                        <img
-                            src={waterTestBg}
-                            alt="Test d'eau en laboratoire"
-                            className="w-full h-full object-cover"
-                        />
-                        {/* Subtle overlay to ensure the white box pops and the image isn't too distracting */}
-                        <div className="absolute inset-0 bg-black/10" />
-                    </div>
-
-                    <div className="container mx-auto px-4 relative z-10 flex justify-start">
-                        <div className="max-w-2xl bg-white p-10 md:p-20 shadow-2xl animate-in fade-in slide-in-from-left duration-1000">
-                            <span className="text-[#888] text-xs font-bold uppercase tracking-[0.3em] mb-10 block">
-                                ANALYSE PROFESSIONNELLE
-                            </span>
-                            <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
-                                Des tests d'eau précis <br />
-                                pour votre sécurité.
-                            </h2>
-                            <p className="text-[#666] text-xl leading-relaxed mb-14 max-w-lg">
-                                Ne devinez pas la qualité de votre eau. Nos analyses approfondies identifient les bactéries, les minéraux et les contaminants chimiques pour vous offrir une tranquillité d'esprit totale.
-                            </p>
-                            <Button
-                                size="lg"
-                                className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-10 h-14 transition-all shadow-lg"
-                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
-                                asChild
-                            >
-                                <NavLink to="/water-testing">En savoir plus</NavLink>
-                            </Button>
+                {/* 5. Expertise Section (Blue Box Design) */}
+                <section className="py-24 bg-white">
+                    <div className="container mx-auto px-6">
+                        <div className="flex flex-col lg:flex-row items-stretch gap-0 rounded-[3rem] overflow-hidden shadow-2xl">
+                            <div className="lg:w-1/2 relative min-h-[400px]">
+                                <img src={waterTestBg} alt="Analyse d'eau" className="absolute inset-0 w-full h-full object-cover" />
+                                <div className="absolute inset-0 bg-blue-900/10" />
+                            </div>
+                            <div className="lg:w-1/2 bg-blue-600 text-white p-12 lg:p-20 flex flex-col justify-center items-start text-left">
+                                <span className="text-white/80 text-xs font-black uppercase tracking-[0.3em] mb-8 block">
+                                    ANALYSE PROFESSIONNELLE
+                                </span>
+                                <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal text-white mb-8 leading-[1.1] tracking-tighter text-left">
+                                    Des tests d'eau précis <br />
+                                    pour votre sécurité.
+                                </h2>
+                                <p className="text-white/90 text-lg font-medium mb-12 leading-relaxed">
+                                    Ne devinez pas la qualité de votre eau. Nos analyses approfondies identifient les bactéries, les minéraux et les contaminants chimiques pour vous offrir une tranquillité d'esprit totale.
+                                </p>
+                                <Button className="bg-white text-blue-600 hover:bg-blue-50 rounded-full px-12 h-16 text-xl font-bold shadow-xl" asChild>
+                                    <NavLink to="/water-testing">En savoir plus</NavLink>
+                                </Button>
+                            </div>
                         </div>
                     </div>
                 </section>
