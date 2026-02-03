@@ -13,7 +13,10 @@ import {
     Zap,
     ZapOff,
     Activity,
-    ShieldAlert
+    ShieldAlert,
+    BatteryLow,
+    CupSoda,
+    HeartHandshake
 } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import { Input } from "@/components/ui/input";
@@ -35,12 +38,12 @@ import waterTestBg from "@/assets/Finishes_website_700x700_px_Flex_Gunmetal_20.j
 
 const DesinfectionUV = () => {
     const comparisonData = [
-        { feature: "Élimination 99.99% des virus", premium: true, standard: true },
-        { feature: "Destruction des bactéries", premium: true, standard: true },
-        { feature: "Neutralisation des kystes", premium: true, standard: true },
-        { feature: "Alarme de remplacement de lampe", premium: true, standard: "Option" },
-        { feature: "Capteur d'intensité UV", premium: true, standard: false },
-        { feature: "Garantie à vie sur la chambre", premium: true, standard: true },
+        { feature: "Élimination 99.99% des virus", VH410F20: true, VH200F10: true, Arros15IHS10: true },
+        { feature: "Destruction des bactéries", VH410F20: true, VH200F10: true, Arros15IHS10: true },
+        { feature: "Neutralisation des kystes", VH410F20: true, VH200F10: true, Arros15IHS10: true },
+        { feature: "Alarme de remplacement de lampe", VH410F20: true, VH200F10: true, Arros15IHS10: true },
+        { feature: "Capteur d'intensité UV", VH410F20: true, VH200F10: true, Arros15IHS10: true },
+        { feature: "Garantie à vie sur la chambre", VH410F20: true, VH200F10: true, Arros15IHS10: true },
     ];
 
     return (
@@ -114,9 +117,10 @@ const DesinfectionUV = () => {
                                 { icon: ShieldCheck, title: "Sans produits chimiques", desc: "Aucun goût ni odeur de chlore ajouté à votre eau." },
                                 { icon: Zap, title: "Action instantanée", desc: "L'eau est désinfectée dès qu'elle traverse le débit." },
                                 { icon: Activity, title: "Efficacité prouvée", desc: "Détruit l'ADN des micro-organismes nocifs." },
-                                { icon: ShieldCheck, title: "Sécurité 100%", desc: "Protection permanente 24h/24 contre les bactéries." },
-                                { icon: ZapOff, title: "Faible énergie", desc: "Consomme autant qu'une ampoule standard." },
+                                { icon: HeartHandshake, title: "Sécurité 100%", desc: "Protection permanente 24h/24 contre les bactéries." },
+                                { icon: CupSoda, title: "Goût préservé", desc: "L'eau garde ses propriétés organoleptiques." },
                                 { icon: Droplets, title: "Eau cristalline", desc: "Conserve les minéraux essentiels de votre eau." },
+                                { icon: BatteryLow, title: "Faible énergie", desc: "Consomme autant qu'une ampoule standard." },
                                 { icon: ShieldAlert, title: "Zéro risque", desc: "Pas de stockage de produits chimiques dangereux." }
                             ].map((item, i) => (
                                 <div key={i} className="flex flex-col items-center group">
@@ -172,8 +176,9 @@ const DesinfectionUV = () => {
                                 <thead>
                                     <tr className="bg-gray-100">
                                         <th className="p-8 text-left text-gray-400 font-medium uppercase tracking-wider">Fonctionnalités</th>
-                                        <th className="p-8 text-center text-gray-900 font-bold">Standard</th>
-                                        <th className="p-8 text-center text-blue-600 font-bold bg-blue-50/50">UV Pro Series</th>
+                                        <th className="p-8 text-center text-gray-900 font-bold">VH200-F10</th>
+                                        <th className="p-8 text-center text-blue-600 font-bold bg-blue-50/50">VH410-F20</th>
+                                        <th className="p-8 text-center text-blue-600 font-bold bg-blue-50/50">Arros 15-IHS10</th>
                                     </tr>
                                 </thead>
                                 <tbody className="divide-y divide-gray-100">
@@ -204,7 +209,7 @@ const DesinfectionUV = () => {
                             </div>
                             <div className="lg:w-1/2 bg-blue-600 text-white p-12 lg:p-20 flex flex-col justify-center items-start text-left">
                                 <span className="text-white/80 text-xs font-black uppercase tracking-[0.3em] mb-8 block">
-                                    ANALYSE MICROBIENNE
+                                    ANALYSE MICROBIOLOGIQUE
                                 </span>
                                 <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal text-white mb-8 leading-[1.1] tracking-tighter text-left">
                                     Votre eau est-elle <br /> vraiment sécuritaire ?

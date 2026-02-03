@@ -74,7 +74,7 @@ const OsmoseFiltration = () => {
               </h1>
               <p className="font-light text-[20px] leading-[28px] text-white/95 mb-8 max-w-xl">
                 Profitez d'une eau pure et délicieuse directement de votre robinet.
-                Nos systèmes éliminent 99% des contaminants pour une tranquillité d'esprit totale.
+                Nos purificateurs d'eau d'osmose inverse éliminent 99% des contaminants pour une tranquillité d'esprit totale.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button
@@ -104,29 +104,33 @@ const OsmoseFiltration = () => {
           </div>
         </section>
 
-        {/* 2. Pourquoi choisir - Dark Section */}
-        <section className="py-24 bg-[#0A192F] text-white">
+        {/* 2. Pourquoi choisir - Blue Section (Merged with Avantages) */}
+        <section className="py-24 bg-blue-600 text-white">
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-[32px] md:text-[48px] font-normal text-white mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-center">
                 Pourquoi choisir nos systèmes <br />d'osmose inverse ?
               </h2>
-              <p className="text-slate-400 max-w-2xl mx-auto text-lg">
-                Une technologie de pointe pour une eau d'une pureté exceptionnelle, sans compromis.
+              <p className="text-blue-100 max-w-2xl mx-auto text-lg">
+                Une technologie de pointe pour une eau d'une pureté exceptionnelle tout en offrant une protection permanente pour votre foyer.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 text-center">
               {[
                 { icon: ShieldCheck, title: "Sécurité maximale", desc: "Élimine 99% des virus, bactéries et contaminants chimiques." },
                 { icon: Droplets, title: "Goût incomparable", desc: "Retrouvez le vrai goût de l'eau, limpide et rafraîchissante." },
-                { icon: Zap, title: "Performance durable", desc: "Des membranes de haute qualité pour une efficacité constante." }
+                { icon: Zap, title: "Performance durable", desc: "Des membranes de haute qualité pour une efficacité constante." },
+                { icon: GlassWater, title: "Eau pure 24/7", desc: "Accès instantané à une eau de qualité restaurant." },
+                { icon: CircleDollarSign, title: "Économies", desc: "Éliminez l'achat de bouteilles d'eau plastique." },
+                { icon: Trash2, title: "Zéro déchet", desc: "Réduisez drastiquement votre empreinte écologique." },
+                { icon: Wrench, title: "Entretien pro", desc: "Suivi et remplacement des filtres géré par nos experts." }
               ].map((item, i) => (
                 <div key={i} className="flex flex-col items-center group">
-                  <div className="w-20 h-20 rounded-2xl bg-white/10 flex items-center justify-center mb-8 transition-all group-hover:scale-110 group-hover:bg-blue-600">
-                    <item.icon className="h-10 w-10 text-blue-400 group-hover:text-white" />
+                  <div className="w-20 h-20 rounded-2xl bg-white flex items-center justify-center mb-8 transition-all group-hover:scale-110 group-hover:bg-white/10">
+                    <item.icon className="h-10 w-10 text-blue-600 group-hover:text-white" />
                   </div>
                   <h3 className="text-2xl font-bold mb-4 tracking-tight">{item.title}</h3>
-                  <p className="text-slate-400 leading-relaxed">{item.desc}</p>
+                  <p className="text-blue-100 leading-relaxed">{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -160,29 +164,6 @@ const OsmoseFiltration = () => {
                   <p className="text-slate-500 text-sm leading-relaxed mb-4">{product.desc}</p>
                   <NavLink to="#" className="text-blue-600 font-bold flex items-center gap-2 text-sm tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-all">
                     EN SAVOIR PLUS <ChevronRight className="h-4 w-4" />
-                  </NavLink>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* 4. Avantages - Icon Grid with links */}
-        <section className="py-24 bg-slate-50">
-          <div className="container mx-auto px-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-              {[
-                { icon: GlassWater, title: "Eau pure 24/7", desc: "Plus besoin de bouteilles.", link: "#" },
-                { icon: CircleDollarSign, title: "Économies", desc: "Réduisez vos dépenses annuelles.", link: "#" },
-                { icon: Trash2, title: "Zéro déchet", desc: "Protégez l'environnement.", link: "#" },
-                { icon: Wrench, title: "Entretien", desc: "Suivi professionnel inclus.", link: "#" }
-              ].map((item, i) => (
-                <div key={i} className="flex flex-col items-start text-left">
-                  <item.icon className="h-10 w-10 text-blue-600 mb-6" />
-                  <h3 className="text-xl font-bold mb-3">{item.title}</h3>
-                  <p className="text-slate-500 mb-6 leading-relaxed">{item.desc}</p>
-                  <NavLink to={item.link} className="text-blue-600 font-bold flex items-center gap-2 text-sm group">
-                    En découvrir plus <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                   </NavLink>
                 </div>
               ))}

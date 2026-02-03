@@ -111,7 +111,7 @@ const ConditionneursSansSel = () => {
                 className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-white"
                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
               >
-                Une solution simple <span className="font-normal">et sans sel</span>
+                Lutter contre le calcaire ? <span className="font-normal">Il y a une autre solution...</span>
               </h1>
               <p className="font-light text-[20px] leading-[28px] text-white/95 mb-8 max-w-xl">
                 Protégez votre plomberie et profitez d'une eau plus saine grâce à notre technologie

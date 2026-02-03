@@ -19,7 +19,12 @@ import {
     ChevronLeft,
     Play,
     Check,
-    X
+    X,
+    ShieldCheck,
+    Medal,
+    Trophy,
+    Award,
+    HandCoins
 } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import waterTestBg from "@/assets/Enercare_JP_Day_2_Kitchen_Faucet_498-2048x1365.jpg";
@@ -97,46 +102,50 @@ const AdoucisseurEauResidentiel = () => {
                                     size="lg"
                                     className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14"
                                     style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
-                                    asChild
+                                    onClick={() => document.getElementById('nos-adoucisseurs')?.scrollIntoView({ behavior: 'smooth' })}
                                 >
-                                    <NavLink to="/contact-residentiel">Explorez nos adoucisseurs d'eau</NavLink>
+                                    Explorez nos adoucisseurs d'eau
                                 </Button>
                             </div>
                         </div>
                     </div>
                 </section>
 
-                {/* Benefits Icons Bar */}
-                <section className="py-16 bg-[#001A4D] text-white">
-                    <div className="container mx-auto px-4">
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
-                            <div className="flex flex-col items-center">
-                                <div className="w-16 h-16 rounded-full border border-blue-400 flex items-center justify-center mb-6">
-                                    <Droplets className="h-8 w-8 text-blue-400" />
+                {/* 2. Pourquoi choisir - Blue Section (Merged with Plus qu'un adoucisseur) */}
+                <section className="py-24 bg-blue-600 text-white text-center">
+                    <div className="container mx-auto px-6 text-center">
+                        <div className="text-center mb-16">
+                            <h2 className="text-[32px] md:text-[48px] font-normal text-white mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-center">
+                                Pourquoi choisir nos <br />adoucisseurs d'eau résidentiels ?
+                            </h2>
+                            <p className="text-blue-100 max-w-2xl mx-auto text-lg">
+                                Plus qu'un simple appareil, c'est une solution complète pour la qualité de l'eau et le confort de toute votre famille.
+                            </p>
+                        </div>
+                        <div className="flex flex-wrap justify-center gap-x-12 gap-y-16">
+                            {[
+                                { icon: Droplets, title: "Qualité supérieure", desc: "Une douceur incomparable pour votre peau et vos cheveux dès la première douche." },
+                                { icon: Shield, title: "Protection totale", desc: "Prolongez la durée de vie de votre plomberie et de vos électroménagers coûteux." },
+                                { icon: HandCoins, title: "Économies garanties", desc: "Réduisez vos factures d'énergie et vos dépenses en savons et détergents de 50%." },
+                                { icon: Sparkles, title: "Vaisselle étincelante", desc: "Éliminez les taches de calcaire et le voile blanc sur vos verres et plats." },
+                                { icon: Shirt, title: "Linge plus doux", desc: "Des vêtements qui restent éclatants et souples plus longtemps, sans adoucissants." },
+                                { icon: Zap, title: "Efficacité HE", desc: "Une technologie haute efficacité qui consomme moins de sel et d'eau." },
+                                { icon: Award, title: "Expertise Bricareau", desc: "Installation certifiée et service après-vente pour une tranquillité d'esprit totale." }
+                            ].map((item, id) => (
+                                <div key={id} className="flex flex-col items-center group w-full sm:w-[calc(50%-3rem)] lg:w-[calc(25%-3rem)]">
+                                    <div className="w-20 h-20 rounded-2xl bg-white flex items-center justify-center mb-8 transition-all group-hover:scale-110 group-hover:bg-white/10">
+                                        <item.icon className="h-10 w-10 text-blue-600 group-hover:text-white" />
+                                    </div>
+                                    <h4 className="text-2xl font-bold mb-4 tracking-tight">{item.title}</h4>
+                                    <p className="text-blue-100 leading-relaxed">{item.desc}</p>
                                 </div>
-                                <h3 className="text-xl font-bold mb-3">Eau de qualité supérieure</h3>
-                                <p className="font-light text-[20px] leading-[28px] text-white/80">Une douceur incomparable pour votre peau et vos cheveux.</p>
-                            </div>
-                            <div className="flex flex-col items-center">
-                                <div className="w-16 h-16 rounded-full border border-blue-400 flex items-center justify-center mb-6">
-                                    <Shield className="h-8 w-8 text-blue-400" />
-                                </div>
-                                <h3 className="text-xl font-bold mb-3">Protection des appareils</h3>
-                                <p className="font-light text-[20px] leading-[28px] text-white/80">Prolongez la durée de vie de votre plomberie et électroménagers.</p>
-                            </div>
-                            <div className="flex flex-col items-center">
-                                <div className="w-16 h-16 rounded-full border border-blue-400 flex items-center justify-center mb-6">
-                                    <TrendingDown className="h-8 w-8 text-blue-400" />
-                                </div>
-                                <h3 className="text-xl font-bold mb-3">Économies garanties</h3>
-                                <p className="font-light text-[20px] leading-[28px] text-white/80">Réduisez vos factures d'énergie et vos dépenses en produits d'entretien.</p>
-                            </div>
+                            ))}
                         </div>
                     </div>
                 </section>
 
                 {/* Product Grid Section */}
-                <section className="py-24 bg-gray-50">
+                <section id="nos-adoucisseurs" className="py-24 bg-gray-50">
                     <div className="container mx-auto px-6">
                         <div className="text-left mb-16">
                             <h2
@@ -180,52 +189,6 @@ const AdoucisseurEauResidentiel = () => {
 
                 {/* Testimonials Grid Section */}
                 <TestimonialsSection />
-
-                {/* Content Section: Plus qu'un adoucisseur */}
-                <section className="py-24 bg-gray-50">
-                    <div className="container mx-auto px-4">
-                        <div className="flex flex-col lg:flex-row items-center gap-20">
-                            <div className="lg:w-1/2">
-                                <h2
-                                    className="text-slate-900 tracking-tighter mb-8"
-                                    style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
-                                >
-                                    <span className="text-[32px] md:text-[60px] font-light leading-[1.2] md:leading-[60px] block">C'est plus qu'un</span>
-                                    <span className="text-[32px] md:text-[60px] font-normal leading-[1.2] md:leading-[60px] block">adoucisseur d'eau</span>
-                                </h2>
-                                <p className="text-lg text-gray-600 mb-12">
-                                    Il s'agit d'une solution complète pour toute la maison. Nos systèmes sont conçus pour
-                                    offrir une performance intelligente et une efficacité sans précédent.
-                                </p>
-                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                                    {[
-                                        { icon: Sparkles, title: "Vaisselle sans traces", body: "Plus besoin de rincer à la main." },
-                                        { icon: Shirt, title: "Linge plus doux", body: "Utilisez moins de détergent." },
-                                        { icon: TrendingDown, title: "Coûts réduits", body: "Économisez sur l'énergie." },
-                                        { icon: Zap, title: "Efficacité HE", body: "Consomme moins de sel et d'eau." }
-                                    ].map((item, id) => (
-                                        <div key={id} className="flex gap-4">
-                                            <div className="w-12 h-12 rounded-lg bg-blue-100 flex items-center justify-center shrink-0">
-                                                <item.icon className="h-6 w-6 text-blue-600" />
-                                            </div>
-                                            <div>
-                                                <h4 className="font-bold mb-1">{item.title}</h4>
-                                                <p className="text-sm text-gray-500">{item.body}</p>
-                                            </div>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-                            <div className="lg:w-1/2">
-                                <img
-                                    src={residentialWaterSoftenerImg}
-                                    alt="Adoucisseur d'eau résidentiel"
-                                    className="w-full max-w-md mx-auto mix-blend-multiply"
-                                />
-                            </div>
-                        </div>
-                    </div>
-                </section>
 
                 {/* 5. SECTION TESTS D'EAU - Full Background with Overlaid Content Box */}
                 <section className="relative min-h-[700px] flex items-center overflow-hidden">
