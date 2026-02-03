@@ -15,6 +15,10 @@ import turbideWaterThumb from "@/assets/Turbide-Water.webp";
 import taninWaterThumb from "@/assets/problemes-deau-tanin.jpg";
 import corrosiveWaterThumb from "@/assets/Corrosive-Water.webp";
 import waterTestBg from "@/assets/Enercare_JP_Day_2_Kitchen_Faucet_498-2048x1365.jpg";
+import process1 from "@/assets/Scientist istesting water.webp";
+import process2 from "@/assets/section-image-and-content-23.jpg";
+import process3 from "@/assets/SERVICES.jpg";
+import process4 from "@/assets/pexels-latronico-1560546.jpg";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -94,18 +98,16 @@ const EauDePuits = () => {
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-2xl text-white">
               <span className="text-sm font-bold uppercase tracking-widest text-[#60A5FA] mb-4 block">
-                SOLUTIONS POUR PUITS PRIVÉS
+                SOLUTIONS D'EAU POUR PUITS PRIVÉS
               </span>
               <h1
                 className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-white"
                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
               >
-                Traitement de l'eau <span className="font-normal">de puits</span>
+                Votre puits est un trésor. <span className="font-normal">Offrez-lui la pureté qu'il mérite</span>
               </h1>
               <p className="font-light text-[20px] leading-[28px] text-white/90 mb-8 max-w-xl">
-                Propriétaire d'un puits privé ? Nous comprenons vos défis.
-                Du fer au soufre, nous avons les solutions pour une eau saine
-                et de qualité supérieure.
+                Ne laissez plus le fer, le soufre ou les bactéries gâcher la richesse de votre puits. Transformez votre eau brute en une ressource cristalline, saine et parfaitement équilibrée pour toute votre famille.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button
@@ -136,10 +138,12 @@ const EauDePuits = () => {
           <div className="container mx-auto px-4">
             {/* Title Header - Above Grid */}
             <div className="mb-4 max-w-4xl">
-              <span className="text-blue-600 text-xs font-bold uppercase tracking-[0.3em] mb-6 block">
+              <span className="text-sm font-bold uppercase tracking-widest text-[#60A5FA] mb-4 block">
                 ANALYSE TECHNIQUE
               </span>
-              <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
+              <h2 className="text-[32px] md:text-[48px] font-light text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter"
+                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+              >
                 Problèmes courants <br /> de l'eau de puits.
               </h2>
               <p className="font-light text-[20px] leading-[28px] text-slate-600 max-w-2xl">
@@ -246,15 +250,17 @@ const EauDePuits = () => {
           <div className="container mx-auto px-4">
             {/* Header Layout */}
             <div className="mb-24">
-              <span className="text-[#888] text-xs font-bold uppercase tracking-[0.3em] mb-6 block">
+              <span className="text-sm font-bold uppercase tracking-widest text-[#60A5FA] mb-4 block">
                 NOTRE FONCTIONNEMENT
               </span>
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-end">
-                <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
+                <h2 className="text-[32px] md:text-[48px] font-light text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter"
+                  style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                >
                   Un service simple <br />& sans souci.
                 </h2>
                 <p className="font-light text-[20px] leading-[28px] text-slate-600 max-w-xl lg:ml-auto">
-                  De l'analyse initiale à l'installation certifiée, nous gérons chaque étape technique pour vous garantir une eau de puits parfaitement saine.
+                  Confiez-nous la gestion de votre eau de puits. De l'expertise initiale à l'installation finale, nous nous occupons de tout pour vous garantir une eau saine, sans compromis.
                 </p>
               </div>
             </div>
@@ -264,27 +270,32 @@ const EauDePuits = () => {
               {[
                 {
                   title: "Analyse d'eau",
-                  desc: "Nous effectuons un test approfondi en laboratoire pour identifier les contaminants spécifiques à votre puits."
+                  desc: "Nous effectuons un test approfondi en laboratoire pour identifier les contaminants spécifiques à votre puits.",
+                  img: process1
                 },
                 {
                   title: "Diagnostic Global",
-                  desc: "Nos experts conçoivent une solution de filtration sur mesure adaptée à la chimie unique de votre eau."
+                  desc: "Nos experts conçoivent une solution de filtration sur mesure adaptée à la chimie unique de votre eau.",
+                  img: process2
                 },
                 {
                   title: "Installation Experte",
-                  desc: "Nos techniciens certifiés installent vos systèmes avec une précision professionnelle pour une performance durable."
+                  desc: "Nos techniciens certifiés installent vos systèmes avec une précision professionnelle pour une performance durable.",
+                  img: process3
                 },
                 {
                   title: "Suivi de Qualité",
-                  desc: "Nous assurons des tests de suivi et un entretien régulier pour garantir la sécurité continue de votre foyer."
+                  desc: "Nous assurons des tests de suivi et un entretien régulier pour garantir la sécurité continue de votre foyer.",
+                  img: process4
                 }
               ].map((step, idx) => (
                 <div key={idx} className="flex flex-col animate-in fade-in slide-in-from-bottom duration-700" style={{ animationDelay: `${idx * 100}ms` }}>
                   {/* Circle Indicator with Number */}
                   <div className="relative mb-8">
-                    <div className="w-24 h-24 rounded-full bg-[#E5E5E5] flex items-center justify-center">
+                    <div className="w-24 h-24 rounded-full bg-[#E5E5E5] flex items-center justify-center overflow-hidden border-4 border-white shadow-lg">
+                      <img src={step.img} alt={step.title} className="w-full h-full object-cover" />
                     </div>
-                    <div className="absolute -top-2 -left-2 w-10 h-10 rounded-full bg-black text-white flex items-center justify-center text-sm font-bold">
+                    <div className="absolute top-0 left-0 w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center text-xs font-bold border-2 border-white shadow-md">
                       {idx + 1}
                     </div>
                   </div>
@@ -299,38 +310,31 @@ const EauDePuits = () => {
           </div>
         </section>
 
-        {/* 5. SECTION TESTS D'EAU - Full Background with Overlaid Content Box */}
-        <section className="relative min-h-[700px] flex items-center overflow-hidden">
-          {/* Background Image */}
-          <div className="absolute inset-0 z-0">
-            <img
-              src={waterTestBg}
-              alt="Test d'eau en laboratoire"
-              className="w-full h-full object-cover"
-            />
-            {/* Subtle overlay to ensure the white box pops and the image isn't too distracting */}
-            <div className="absolute inset-0 bg-black/10" />
-          </div>
-
-          <div className="container mx-auto px-4 relative z-10 flex justify-start">
-            <div className="max-w-2xl bg-white p-10 md:p-20 shadow-2xl animate-in fade-in slide-in-from-left duration-1000">
-              <span className="text-[#888] text-xs font-bold uppercase tracking-[0.3em] mb-10 block">
-                ANALYSE PROFESSIONNELLE
-              </span>
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal text-slate-900 mb-8 leading-[1.1] tracking-tighter">
-                Des tests d'eau précis <br />
-                pour votre sécurité.
-              </h2>
-              <p className="font-light text-[20px] leading-[28px] text-slate-600 mb-14 max-w-lg">
-                Ne devinez pas la qualité de votre eau. Nos analyses approfondies identifient les bactéries, les minéraux et les contaminants chimiques pour vous offrir une tranquillité d'esprit totale.
-              </p>
-              <Button
-                size="lg"
-                className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-10 h-14 text-lg font-bold transition-all shadow-lg"
-                asChild
-              >
-                <NavLink to="/water-testing">En savoir plus</NavLink>
-              </Button>
+        {/* 5. SECTION TESTS D'EAU - Blue Box Design */}
+        <section className="py-24 bg-white">
+          <div className="container mx-auto px-6">
+            <div className="flex flex-col lg:flex-row items-stretch gap-0 rounded-[3rem] overflow-hidden shadow-2xl">
+              <div className="lg:w-1/2 relative min-h-[400px]">
+                <img src={waterTestBg} alt="Analyse d'eau" className="absolute inset-0 w-full h-full object-cover" />
+                <div className="absolute inset-0 bg-blue-900/10" />
+              </div>
+              <div className="lg:w-1/2 bg-blue-600 text-white p-12 lg:p-20 flex flex-col justify-center items-start text-left">
+                <span className="text-white/80 text-sm font-bold uppercase tracking-widest mb-8 block">
+                  ANALYSE D'EAU PROFESSIONNELLE
+                </span>
+                <h2 className="text-[32px] md:text-[48px] font-light text-white mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-left"
+                  style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                >
+                  Des tests d'eau précis <br />
+                  <span className="font-bold">pour votre sécurité.</span>
+                </h2>
+                <p className="font-light text-[20px] leading-[28px] text-white/90 mb-12">
+                  Ne prenez aucun risque avec la santé de votre foyer. Nos tests de précision révèlent les polluants et contaminants invisibles, vous garantissant ainsi une eau parfaitement saine et une sérénité absolue.
+                </p>
+                <Button className="bg-white text-blue-600 hover:bg-blue-50 rounded-full px-12 h-16 text-xl font-bold shadow-xl" asChild>
+                  <NavLink to="/water-testing">En savoir plus</NavLink>
+                </Button>
+              </div>
             </div>
           </div>
         </section>
@@ -399,7 +403,9 @@ const EauDePuits = () => {
         {/* Comparison Table Section */}
         <section className="py-24 bg-gray-50">
           <div className="container mx-auto px-4">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal text-slate-900 mb-8 leading-[1.1] tracking-tighter">
+            <h2 className="text-[32px] md:text-[48px] font-light text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter"
+              style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+            >
               Comparez nos solutions <br />de traitement de l'eau de puits.
             </h2>
             <div className="overflow-x-auto">
@@ -457,20 +463,9 @@ const EauDePuits = () => {
               Besoin d'aide avec votre eau de puits ?
             </h2>
             <p className="text-primary-foreground/80 text-lg mb-8 max-w-2xl mx-auto">
-              Nos spécialistes de l'eau de puits sont là pour vous aider à
-              résoudre tous vos problèmes de qualité d'eau.
+              Discutez avec un expert en un clic. Disponible par téléphone ou à domicile selon vos préférences.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                size="lg"
-                variant="secondary"
-                className="rounded-full px-8 bg-white text-primary hover:bg-white/90"
-                asChild
-              >
-                <NavLink to="/contact-residentiel">
-                  Demandez une soumission
-                </NavLink>
-              </Button>
               <Button
                 size="lg"
                 variant="outline"
@@ -486,7 +481,9 @@ const EauDePuits = () => {
         {/* 10. FAQ Section */}
         <section className="py-24 bg-white">
           <div className="container mx-auto px-4 max-w-4xl">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal text-slate-900 mb-8 leading-[1.1] tracking-tighter">
+            <h2 className="text-[32px] md:text-[48px] font-light text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter"
+              style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+            >
               FAQ sur nos solutions <br />de traitement de l'eau de puits.
             </h2>
             <Accordion type="single" collapsible className="w-full">
@@ -528,7 +525,9 @@ const EauDePuits = () => {
         {/* 11. Articles Section */}
         <section className="py-24 bg-gray-50">
           <div className="container mx-auto px-4">
-            <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-16 text-center leading-[1.2] md:leading-[48px] tracking-tighter">
+            <h2 className="text-[32px] md:text-[48px] font-light text-slate-900 mb-16 text-center leading-[1.2] md:leading-[48px] tracking-tighter"
+              style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+            >
               Ressources
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
