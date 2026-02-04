@@ -80,21 +80,9 @@ const DesinfectionUV = () => {
                                     size="lg"
                                     className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14"
                                     style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
-                                    asChild
+                                    onClick={() => document.getElementById('systemes-uv')?.scrollIntoView({ behavior: 'smooth' })}
                                 >
-                                    <NavLink to="/contact">
-                                        Explorez nos systèmes UV
-                                    </NavLink>
-                                </Button>
-                                <Button
-                                    size="lg"
-                                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14"
-                                    style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
-                                    asChild
-                                >
-                                    <NavLink to="/contact">
-                                        Demandez une analyse d'eau
-                                    </NavLink>
+                                    Explorez nos systèmes UV
                                 </Button>
                             </div>
                         </div>
@@ -136,7 +124,7 @@ const DesinfectionUV = () => {
                 </section>
 
                 {/* 3. Systèmes UV - Product Grid */}
-                <section className="py-24 bg-white">
+                <section id="systemes-uv" className="py-24 bg-white">
                     <div className="container mx-auto px-6">
                         <div className="text-left mb-16">
                             <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-left">
@@ -214,7 +202,7 @@ const DesinfectionUV = () => {
                                 <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal text-white mb-8 leading-[1.1] tracking-tighter text-left">
                                     Votre eau est-elle <br /> vraiment sécuritaire ?
                                 </h2>
-                                <p className="text-white/90 text-lg font-medium mb-12 leading-relaxed">
+                                <p className="text-white/90 leading-relaxed mb-12 text-justify">
                                     Contrairement aux minéraux, les bactéries et virus ne se voient pas et n'ont pas de goût. Une analyse microbiologique est le seul moyen de garantir la potabilité de votre eau, surtout pour les puits privés.
                                 </p>
                                 <Button className="bg-white text-blue-600 hover:bg-blue-50 rounded-full px-12 h-16 text-xl font-bold shadow-xl">
@@ -264,7 +252,49 @@ const DesinfectionUV = () => {
                     </div>
                 </section>
 
-                {/* 9. Consultation Form Section */}
+                {/* 9. Resources Section */}
+                <section className="py-24 bg-gray-50">
+                    <div className="container mx-auto px-4">
+                        <div className="text-left mb-16">
+                            <h2
+                                className="text-slate-900 tracking-tighter mb-8 text-left"
+                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                            >                                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">Ressources</span>
+                            </h2>
+                            <div className="w-24 h-1 bg-blue-600"></div>
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                            {[
+                                {
+                                    title: "Comment fonctionne la désinfection UV ?",
+                                    img: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=800&auto=format&fit=crop"
+                                },
+                                {
+                                    title: "UV vs Chlore : Le comparatif santé",
+                                    img: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=800&auto=format&fit=crop"
+                                },
+                                {
+                                    title: "Maintenir votre lampe UV efficace",
+                                    img: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop"
+                                }
+                            ].map((art, i) => (
+                                <div key={i} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer group">
+                                    <div className="h-56 overflow-hidden">
+                                        <img src={art.img} alt={art.title} className="w-full h-full object-cover transition-transform group-hover:scale-110" />
+                                    </div>
+                                    <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors">
+                                        <h4 className="text-xl font-bold mb-4">{art.title}</h4>
+                                        <NavLink to="#" className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-xs tracking-widest">
+                                            EN SAVOIR PLUS <ChevronRight className="h-4 w-4" />
+                                        </NavLink>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+                {/* 10. Consultation Form Section */}
                 <section className="py-24 bg-white border-t border-gray-100">
                     <div className="container mx-auto px-4">
                         <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-20">
@@ -344,6 +374,8 @@ const DesinfectionUV = () => {
                         </div>
                     </div>
                 </section>
+
+
             </main>
             <Footer />
         </div>

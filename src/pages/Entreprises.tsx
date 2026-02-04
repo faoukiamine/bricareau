@@ -58,12 +58,14 @@ const Entreprises = () => {
       <main>
         {/* Hero Section */}
         <section className="relative h-[800px] flex items-start overflow-hidden pt-[120px]">
-          <div className="absolute inset-0 z-0">
-            <img
-              src={heroImage}
-              alt="Environnement professionnel avec eau pure"
-              className="w-full h-full object-cover"
-            />
+          <div className="absolute inset-0 z-0 overflow-hidden">
+            <iframe
+              src="https://player.vimeo.com/video/1155585825?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1"
+              className="absolute top-1/2 left-1/2 w-[100vw] h-[56.25vw] min-h-[100vh] min-w-[177.77vh] -translate-x-1/2 -translate-y-1/2"
+              frameBorder="0"
+              allow="autoplay; fullscreen"
+              allowFullScreen
+            ></iframe>
             <div className="absolute inset-0 bg-black/30 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
           </div>
 
