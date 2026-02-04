@@ -245,6 +245,56 @@ const Filtration = () => {
                     </div>
                 </section>
 
+                {/* 5. Elite Protection Section - Custom Design from Image */}
+                <section className="py-24 bg-[#F8F9FA]">
+                    <div className="container mx-auto px-6">
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                            {/* Left Side: Overlapping Images */}
+                            <div className="relative h-[500px] md:h-[600px]">
+                                {/* Main Image (Larger) */}
+                                <div className="absolute top-0 left-0 w-4/5 h-[85%] rounded-[2rem] overflow-hidden shadow-2xl z-10 transition-transform duration-500 hover:scale-[1.02]">
+                                    <img
+                                        src={showerWaterImg}
+                                        alt="Système UV Protection"
+                                        className="w-full h-full object-cover"
+                                    />
+                                </div>
+                                {/* Overlapping Image (Smaller) */}
+                                <div className="absolute bottom-0 right-0 w-1/2 h-1/2 rounded-[2rem] overflow-hidden shadow-2xl z-20 border-[12px] border-[#F8F9FA] transition-transform duration-500 hover:scale-110">
+                                    <img
+                                        src={specializedFiltersImg}
+                                        alt="Filtres spécialisés"
+                                        className="w-full h-full object-cover"
+                                    />
+                                </div>
+                            </div>
+
+                            {/* Right Side: Content */}
+                            <div className="flex flex-col items-start text-left lg:pl-10">
+                                <span className="text-slate-400 text-xs font-bold uppercase tracking-[0.3em] mb-6">
+                                    NOTRE ENGAGEMENT
+                                </span>
+                                <h2 className="text-[40px] md:text-[56px] font-bold text-slate-900 leading-[1.1] tracking-tighter mb-8">
+                                    Analyse & Expertise : <br />
+                                    Votre eau sous <br />
+                                    la loupe.
+                                </h2>
+                                <p className="text-slate-500 text-lg leading-relaxed mb-10 max-w-lg">
+                                    La qualité de l'eau n'est pas une question de hasard. Nos experts analysent chaque paramètre pour vous proposer la solution de filtration la plus adaptée à la composition unique de votre eau municipale ou de puits.
+                                </p>
+                                <div className="flex flex-wrap items-center gap-8">
+                                    <Button className="bg-black hover:bg-slate-800 text-white rounded-full px-10 h-14 text-sm font-bold uppercase tracking-widest transition-all">
+                                        En savoir plus
+                                    </Button>
+                                    <NavLink to="/contact" className="text-slate-900 font-bold flex items-center gap-2 group text-sm uppercase tracking-widest">
+                                        En savoir plus <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                                    </NavLink>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
                 {/* 6. Expertise / Trust Section (Wide Image) */}
                 <section className="relative min-h-[600px] flex items-center overflow-hidden">
                     <div className="absolute inset-0 z-0">
