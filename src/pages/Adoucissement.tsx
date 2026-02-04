@@ -36,7 +36,7 @@ import { Label } from "@/components/ui/label";
 
 const Adoucissement = () => {
     return (
-        <div className="min-h-screen bg-white font-sans text-[#1a1a1a]">
+        <div className="min-h-screen bg-background font-sans text-slate-900">
             <Header />
             <main>
                 {/* 1. Hero Section */}
@@ -51,7 +51,7 @@ const Adoucissement = () => {
                     </div>
 
                     <div className="container mx-auto px-4 relative z-10">
-                        <div className="max-w-2xl">
+                        <div className="max-w-2xl text-white">
                             <span className="text-sm font-bold uppercase tracking-widest text-blue-600 mb-4 block">
                                 ADOUCISSEURS D'EAU
                             </span>
@@ -75,22 +75,21 @@ const Adoucissement = () => {
                     </div>
                 </section>
 
-                {/* 2. Product Intro Section */}
                 <section className="py-24 bg-white">
                     <div className="container mx-auto px-4">
-                        <div className="flex flex-col md:flex-row items-center gap-16">
-                            <div className="md:w-1/2">
+                        <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+                            <div className="lg:w-1/2">
                                 <img
                                     src="https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png"
                                     alt="Adoucisseur"
                                     className="w-full max-w-md mx-auto"
                                 />
                             </div>
-                            <div className="md:w-1/2">
+                            <div className="lg:w-1/2">
                                 <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
                                     Éliminez les coûts, économisez l'énergie et simplifiez vos tâches
                                 </h2>
-                                <p className="font-light text-[20px] leading-[28px] text-gray-600 mb-8">
+                                <p className="font-light text-[20px] leading-[28px] text-gray-600 mb-8 max-w-xl">
                                     Nos adoucisseurs d'eau haute technologie réduisent le calcaire, prolongent la vie de
                                     vos appareils et rendent le nettoyage plus facile que jamais.
                                 </p>
@@ -102,11 +101,10 @@ const Adoucissement = () => {
                     </div>
                 </section>
 
-                {/* 3. Benefits Bar */}
-                <section className="py-12 bg-[#00153D] text-white">
-                    <div className="container mx-auto px-4">
+                <section className="py-20 bg-[#00153D] text-white">
+                    <div className="container mx-auto px-6">
                         <h2 className="text-[32px] md:text-[48px] font-normal text-center mb-16 text-white leading-[1.2] md:leading-[48px] tracking-tighter">Avantages de l'adoucissement <br />de l'eau</h2>
-                        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-12 text-center lg:px-20">
                             {[
                                 { icon: Heart, text: "Peau & Cheveux doux" },
                                 { icon: Shield, text: "Protection Plomberie" },
@@ -124,10 +122,9 @@ const Adoucissement = () => {
                     </div>
                 </section>
 
-                {/* 4. Kitchen / Dishwasher Section */}
                 <section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-4">
-                        <div className="flex flex-col lg:flex-row-reverse items-center gap-16 mb-20">
+                        <div className="flex flex-col lg:flex-row-reverse items-center gap-16 lg:gap-24 mb-20">
                             <div className="lg:w-1/2">
                                 <img
                                     src={kitchenImg}
@@ -165,10 +162,9 @@ const Adoucissement = () => {
                     </div>
                 </section>
 
-                {/* 6. Kitchen Section */}
                 <section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-4">
-                        <div className="flex flex-col lg:flex-row items-center gap-16 mb-20">
+                        <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24 mb-20">
                             <div className="lg:w-1/2">
                                 <img
                                     src={mceclip0Img}
@@ -206,10 +202,9 @@ const Adoucissement = () => {
                     </div>
                 </section>
 
-                {/* 5. Health Section */}
-                <section className="py-24 bg-white text-center">
+                <section className="py-24 bg-white">
                     <div className="container mx-auto px-4">
-                        <div className="flex flex-col lg:flex-row-reverse items-center gap-16 mb-20">
+                        <div className="flex flex-col lg:flex-row-reverse items-center gap-16 lg:gap-24 mb-20">
                             <div className="lg:w-1/2">
                                 <img
                                     src={untitledImg}
@@ -247,10 +242,9 @@ const Adoucissement = () => {
                     </div>
                 </section>
 
-                {/* 9. Comparison Table */}
                 <section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-4">
-                        <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-16 leading-[1.2] md:leading-[48px] tracking-tighter text-center">Comparer nos systèmes d'adoucissement d'eau</h2>
+                        <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold text-slate-900 mb-16 leading-[1.1] tracking-tighter text-center">Comparer nos systèmes d'adoucissement d'eau</h2>
                         <div className="overflow-x-auto">
                             <table className="w-full min-w-[800px] border-collapse bg-white rounded-2xl overflow-hidden shadow-sm">
                                 <thead>
@@ -325,8 +319,8 @@ const Adoucissement = () => {
 
                 {/* 10. FAQ Section */}
                 <section className="py-24 bg-white">
-                    <div className="container mx-auto px-4 max-w-4xl">
-                        <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-12 text-center text-slate-900 leading-[1.2] md:leading-[48px] tracking-tighter">FAQ sur les adoucisseurs d'eau</h2>
+                    <div className="container mx-auto px-6 max-w-4xl">
+                        <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold text-slate-900 mb-12 text-center leading-[1.1] tracking-tighter">FAQ sur les adoucisseurs d'eau</h2>
                         <Accordion type="single" collapsible className="w-full">
                             {[
                                 { q: "Quels sont les avantages d'un adoucisseur d'eau ?", a: "Un adoucisseur élimine le calcaire, protège vos appareils, adoucit votre peau et vos cheveux, et vous fait économiser sur les produits de nettoyage." },
@@ -347,10 +341,9 @@ const Adoucissement = () => {
                     </div>
                 </section>
 
-                {/* 11. Articles Section */}
                 <section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-4">
-                            <div className="text-left mb-16">
+                        <div className="text-left mb-16">
                             <h2
                                 className="text-slate-900 tracking-tighter mb-8 text-left"
                                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
@@ -380,7 +373,6 @@ const Adoucissement = () => {
                     </div>
                 </section>
 
-                {/* 12. Consultation Form Section */}
                 <section className="py-24 bg-white border-t border-gray-100">
                     <div className="container mx-auto px-4">
                         <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-20">

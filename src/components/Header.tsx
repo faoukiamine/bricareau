@@ -366,7 +366,7 @@ const Header = () => {
             isHeaderTransparent ? "bg-transparent border-b border-white/10" : "bg-[hsl(var(--top-banner))] hover:bg-[hsl(var(--top-banner))]/90"
           )}
         >
-          <div className="container mx-auto px-6 flex items-center justify-center gap-2">
+          <div className="container mx-auto px-4 md:px-6 flex items-center justify-center gap-2">
             <span className="text-sm font-bold">Obtenez une consultation gratuite sur votre eau</span>
             <ArrowRight className="h-4 w-4" />
           </div>
@@ -377,7 +377,7 @@ const Header = () => {
           "transition-all duration-300 border-b",
           isHeaderTransparent ? "border-white/10 bg-transparent" : "border-gray-200 bg-white"
         )}>
-          <div className="container mx-auto px-6">
+          <div className="container mx-auto px-4 md:px-6">
             <div className="flex h-16 lg:h-12 items-center justify-between">
               {/* Left: Primary Menu (Desktop) */}
               <nav className="hidden lg:flex items-center gap-1" role="navigation">
@@ -500,7 +500,7 @@ const Header = () => {
           "hidden lg:block border-b transition-all duration-300",
           isHeaderTransparent ? "border-white/20 bg-transparent" : "border-gray-200 bg-white shadow-sm"
         )}>
-          <div className="container mx-auto px-6">
+          <div className="container mx-auto px-4 md:px-6">
             <div className="flex h-16 items-center gap-8">
               {/* Left: Logo */}
               <div className="flex items-center flex-shrink-0">
@@ -641,7 +641,7 @@ const Header = () => {
               onMouseEnter={() => handleMenuEnter(menuItem.name)}
               onMouseLeave={() => handleMenuLeave()}
             >
-              <div className="container mx-auto px-6 py-10">
+              <div className="container mx-auto px-4 md:px-6 py-10">
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                   {/* Left: Product Cards (2x2 grid) */}
                   <div className="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-5">
