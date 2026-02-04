@@ -80,13 +80,13 @@ const AdoucisseurEauResidentiel = () => {
                             alt="Homme prenant un bain d'eau douce"
                             className="w-full h-full object-cover"
                         />
-                        <div className="absolute inset-0 bg-black/30 lg:bg-gradient-to-r lg:from-black/50 lg:to-transparent" />
+                        <div className="absolute inset-0 bg-black/40 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
                     </div>
 
                     <div className="container mx-auto px-4 relative z-10">
                         <div className="max-w-2xl text-white">
-                            <span className="inline-block px-3 py-1 bg-blue-600 text-xs font-bold uppercase tracking-wider rounded-sm mb-4">
-                                Solutions Résidentielles
+                            <span className="text-sm font-bold uppercase tracking-widest text-[#60A5FA] mb-4 block">
+                                SOLUTIONS DE FILTRATION
                             </span>
                             <h1
                                 className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-white"
@@ -377,9 +377,15 @@ const AdoucisseurEauResidentiel = () => {
 
                 {/* Articles Section */}
                 <section className="py-24 bg-gray-50">
-                    <div className="container mx-auto px-4 text-center">
-                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal text-slate-900 mb-8 text-center leading-[1.1] tracking-tighter">Articles et ressources</h2>
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div className="container mx-auto px-4">
+                       <div className="text-left mb-16">
+                            <h2
+                                className="text-slate-900 tracking-tighter mb-8 text-left"
+                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                            >                                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">Ressources</span>
+                            </h2>
+                            <div className="w-24 h-1 bg-blue-600"></div>
+                        </div>                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {[
                                 { title: "Comment choisir son adoucisseur", img: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop" },
                                 { title: "L'importance de l'eau adoucie", img: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=800&auto=format&fit=crop" },
@@ -389,11 +395,11 @@ const AdoucisseurEauResidentiel = () => {
                                     <div className="h-56 overflow-hidden">
                                         <img src={art.img} alt={art.title} className="w-full h-full object-cover transition-transform group-hover:scale-110" />
                                     </div>
-                                    <div className="p-8 text-left">
+                                    <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors">
                                         <h4 className="text-xl font-bold mb-4">{art.title}</h4>
-                                        <Button variant="link" className="p-0 text-blue-600 font-bold group-hover:underline">
-                                            LIRE L'ARTICLE <ChevronRight className="h-4 w-4 ml-1" />
-                                        </Button>
+                                        <NavLink to="#" className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-xs tracking-widest">
+                                            EN SAVOIR PLUS <ChevronRight className="h-4 w-4" />
+                                        </NavLink>
                                     </div>
                                 </div>
                             ))}

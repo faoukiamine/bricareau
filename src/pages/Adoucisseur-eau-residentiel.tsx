@@ -73,7 +73,7 @@ const AdoucisseurEauResidentiel = () => {
 
             <main>
                 {/* Hero Section */}
-                <section className="relative h-[850px] flex items-start overflow-hidden pt-[220px]">
+                <section className="relative h-[800px] flex items-start overflow-hidden pt-[220px]">
                     <div className="absolute inset-0 z-0">
                         <img
                             src={heroBath}
@@ -337,9 +337,14 @@ const AdoucisseurEauResidentiel = () => {
                 {/* Articles Section (Matching Resources design from Filtration.tsx) */}
                 <section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-4 text-left">
-                        <h2 className="text-3xl font-bold mb-16 underline decoration-blue-600 underline-offset-8">
-                            Ressources
-                        </h2>
+                        <div className="text-left mb-16">
+                            <h2
+                                className="text-slate-900 tracking-tighter mb-8 text-left"
+                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                            >                                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">Ressources</span>
+                            </h2>
+                            <div className="w-24 h-1 bg-blue-600"></div>
+                        </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {[
                                 { title: "Comment choisir son adoucisseur", img: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop" },

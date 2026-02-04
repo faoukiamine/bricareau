@@ -70,7 +70,7 @@ const FiltrationSousEvier = () => {
                                 className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-white"
                                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                             >
-                                Osmose inverse <span className="font-normal">& Filtration</span>
+                                Buvez en toute confiance, <span className="font-normal">sans jamais porter une seule bouteille.</span>
                             </h1>
                             <p className="font-light text-[20px] leading-[28px] text-white/90 mb-8 max-w-xl">
                                 Profitez d'une eau pure et délicieuse directement de votre robinet.
@@ -84,7 +84,7 @@ const FiltrationSousEvier = () => {
                                     asChild
                                 >
                                     <NavLink to="/contact">
-                                        Demandez une analyse d'eau
+                                        Explorez nos systèmes de filtration
                                     </NavLink>
                                 </Button>
                                 <Button
@@ -104,29 +104,33 @@ const FiltrationSousEvier = () => {
                     </div>
                 </section>
 
-                {/* 2. Pourquoi choisir - Dark Section */}
-                <section className="py-24 bg-[#0A192F] text-white">
+                {/* 2. Pourquoi choisir - Blue Section (Merged with Avantages) */}
+                <section className="py-24 bg-blue-600 text-white">
                     <div className="container mx-auto px-6">
                         <div className="text-center mb-16">
                             <h2 className="text-[32px] md:text-[48px] font-normal text-white mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
-                                Pourquoi choisir nos systèmes <br />d'osmose inverse ?
+                                Pourquoi installer l'un de nos systèmes <br />de filtration d'eau sous l'évier de votre cuisine?
                             </h2>
-                            <p className="font-light text-[20px] leading-[28px] text-white/70 max-w-2xl mx-auto">
-                                Profitez d'une eau d'une pureté exceptionnelle pour votre boisson et votre cuisine.
+                            <p className="text-blue-100 max-w-2xl mx-auto text-lg leading-relaxed">
+                                Profitez d'une eau d'une pureté exceptionnelle pour votre boisson et votre cuisine tout en simplifiant votre quotidien.
                             </p>
                         </div>
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+                        <div className="flex flex-wrap justify-center gap-x-12 gap-y-16 text-center">
                             {[
-                                { icon: ShieldCheck, title: "Sécurité maximale", desc: "Élimine 99% des virus, bactéries et contaminants chimiques." },
-                                { icon: Droplets, title: "Goût incomparable", desc: "Retrouvez le vrai goût de l'eau, limpide et rafraîchissante." },
-                                { icon: Zap, title: "Performance durable", desc: "Des membranes de haute qualité pour une efficacité constante." }
+                                { icon: ShieldCheck, title: "Goût Incomparable", desc: "Sublimez vos saveurs. Idéal pour un café riche en arômes et des légumes qui gardent leurs nutriments sans le goût du chlore." },
+                                { icon: Droplets, title: "Éco-Responsable", desc: "Dites adieu au plastique. Une seule cartouche remplace des milliers de bouteilles à usage unique. Un geste fort pour la planète." },
+                                { icon: Zap, title: "Discrétion Totale", desc: "Compact et invisible. S'installe discrètement sous votre comptoir sans encombrer votre espace de travail." },
+                                { icon: GlassWater, title: "Eau pure 24/7", desc: "Plus besoin de bouteilles. Accès instantané à une eau de qualité restaurant directement à votre robinet." },
+                                { icon: CircleDollarSign, title: "Économies", desc: "Réduisez vos dépenses annuelles en éliminant définitivement l'achat d'eau embouteillée." },
+                                { icon: Trash2, title: "Zéro déchet", desc: "Protégez l'environnement en limitant drastiquement la production de déchets plastiques dans votre foyer." },
+                                { icon: Wrench, title: "Entretien Suivi", desc: "Tranquillité d'esprit totale. Notre équipe assure le suivi et le remplacement périodique de vos filtres." }
                             ].map((item, i) => (
-                                <div key={i} className="flex flex-col items-center group">
-                                    <div className="w-20 h-20 rounded-2xl bg-white/10 flex items-center justify-center mb-8 transition-all group-hover:scale-110 group-hover:bg-blue-600">
-                                        <item.icon className="h-10 w-10 text-blue-400 group-hover:text-white" />
+                                <div key={i} className="flex flex-col items-center group w-full sm:w-[calc(50%-3rem)] lg:w-[calc(25%-3rem)]">
+                                    <div className="w-20 h-20 rounded-2xl bg-white flex items-center justify-center mb-8 transition-all group-hover:scale-110 group-hover:bg-white/10">
+                                        <item.icon className="h-10 w-10 text-blue-600 group-hover:text-white" />
                                     </div>
                                     <h3 className="text-2xl font-bold mb-4 tracking-tight">{item.title}</h3>
-                                    <p className="font-light text-[20px] leading-[28px] text-white/60">{item.desc}</p>
+                                    <p className="text-blue-100 leading-relaxed font-light">{item.desc}</p>
                                 </div>
                             ))}
                         </div>
@@ -168,30 +172,8 @@ const FiltrationSousEvier = () => {
                     </div>
                 </section>
 
-                {/* 4. Avantages - Icon Grid with links */}
-                <section className="py-24 bg-slate-50">
-                    <div className="container mx-auto px-6">
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-                            {[
-                                { icon: GlassWater, title: "Eau pure 24/7", desc: "Plus besoin de bouteilles.", link: "#" },
-                                { icon: CircleDollarSign, title: "Économies", desc: "Réduisez vos dépenses annuelles.", link: "#" },
-                                { icon: Trash2, title: "Zéro déchet", desc: "Protégez l'environnement.", link: "#" },
-                                { icon: Wrench, title: "Entretien", desc: "Suivi professionnel inclus.", link: "#" }
-                            ].map((item, i) => (
-                                <div key={i} className="flex flex-col items-start text-left">
-                                    <item.icon className="h-10 w-10 text-blue-600 mb-6" />
-                                    <h3 className="text-xl font-bold mb-3">{item.title}</h3>
-                                    <p className="text-slate-500 mb-6 leading-relaxed">{item.desc}</p>
-                                    <NavLink to={item.link} className="text-blue-600 font-bold flex items-center gap-2 text-sm group">
-                                        En découvrir plus <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                                    </NavLink>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </section>
 
-                {/* 5. Intro Content (Image Right) */}
+                {/* 4. Intro Content (Image Right) */}
                 <section className="py-24 bg-white overflow-hidden">
                     <div className="container mx-auto px-6 text-left">
                         <div className="flex flex-col lg:flex-row items-center gap-20">
@@ -226,7 +208,7 @@ const FiltrationSousEvier = () => {
                     </div>
                 </section>
 
-                {/* 6. Expertise Section (Blue Box Design) */}
+                {/* 5. Expertise Section (Blue Box Design) */}
                 <section className="py-24 bg-slate-50">
                     <div className="container mx-auto px-6">
                         <div className="flex flex-col lg:flex-row items-stretch gap-0 rounded-[3rem] overflow-hidden shadow-2xl">
@@ -252,7 +234,7 @@ const FiltrationSousEvier = () => {
                     </div>
                 </section>
 
-                {/* 7. Comparison Table */}
+                {/* 6. Comparison Table */}
                 <section className="py-24 bg-white">
                     <div className="container mx-auto px-4">
                         <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal text-slate-900 mb-16 text-center leading-[1.1] tracking-tighter">
@@ -306,10 +288,10 @@ const FiltrationSousEvier = () => {
                     </div>
                 </section>
 
-                {/* 8. Testimonials Section */}
+                {/* 7. Testimonials Section */}
                 <TestimonialsSection />
 
-                {/* 9. FAQ Section */}
+                {/* 8. FAQ Section */}
                 <section className="py-24 bg-white border-t border-slate-100">
                     <div className="container mx-auto px-6 max-w-4xl text-left">
                         <div className="text-center mb-16">
@@ -352,12 +334,17 @@ const FiltrationSousEvier = () => {
                     </div>
                 </section>
 
-                {/* 10. Resources Section */}
+                {/* 9. Resources Section */}
                 <section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-4">
-                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal text-slate-900 mb-16 leading-[1.1] tracking-tighter">
-                            Ressources
-                        </h2>
+                       <div className="text-left mb-16">
+                            <h2
+                                className="text-slate-900 tracking-tighter mb-8 text-left"
+                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                            >                                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">Ressources</span>
+                            </h2>
+                            <div className="w-24 h-1 bg-blue-600"></div>
+                        </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {[
                                 {
@@ -399,7 +386,7 @@ const FiltrationSousEvier = () => {
                     </div>
                 </section>
 
-                {/* 11. Consultation Form Section */}
+                {/* 10. Consultation Form Section */}
                 <section className="py-24 bg-white border-t border-gray-100">
                     <div className="container mx-auto px-4">
                         <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-20">

@@ -38,19 +38,20 @@ const WaterTestingPage = () => {
       <Header />
       <main>
         {/* Hero Section */}
-        <section className="relative h-[800px] flex items-center overflow-hidden">
+        <section className="relative h-[800px] flex items-start overflow-hidden pt-[220px]">
           <div className="absolute inset-0 z-0">
             <img
               src={heroTesting}
               alt="Expert testing water quality"
               className="w-full h-full object-cover"
             />
+            <div className="absolute inset-0 bg-black/40 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
           </div>
 
           <div className="container mx-auto px-6 relative z-10">
             <div className="max-w-2xl text-white">
-              <span className="inline-block px-4 py-1 bg-blue-600 text-sm font-bold uppercase tracking-wider rounded-full mb-6">
-                Appelez-nous : 1 855 264 9328
+              <span className="text-sm font-bold uppercase tracking-widest text-[#60A5FA] mb-4 block">
+                ANALYSE D'EAU GRATUITE
               </span>
               <h1
                 className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-white"
@@ -58,17 +59,30 @@ const WaterTestingPage = () => {
               >
                 Planifiez un test <span className="font-normal">d'eau gratuit</span>
               </h1>
-              <p className="font-light text-[20px] leading-[28px] text-white/95 mb-10 max-w-xl">
+              <p className="font-light text-[20px] leading-[28px] text-white/95 mb-8 max-w-xl">
                 Que vous souhaitiez tester votre eau de puits ou explorer l'eau municipale, obtenez une analyse d'eau gratuite et en personne d'un expert.
               </p>
-              <Button
-                size="lg"
-                className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14"
-                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
-                asChild
-              >
-                <a href="#consultation">Planifier un test d'eau</a>
-              </Button>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button
+                  size="lg"
+                  className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14"
+                  style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                  asChild
+                >
+                  <a href="#consultation">Planifier un test d'eau</a>
+                </Button>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="bg-white/10 hover:bg-white/20 text-white border-white rounded-full px-8 h-14 backdrop-blur-sm shadow-lg flex items-center gap-2"
+                  style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                  asChild
+                >
+                  <a href="tel:18552649328">
+                    1-855-264-9328
+                  </a>
+                </Button>
+              </div>
             </div>
           </div>
         </section>

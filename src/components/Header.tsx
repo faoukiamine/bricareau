@@ -348,7 +348,7 @@ const Header = () => {
   };
 
   // Check if we are on a page that should have a transparent header
-  const isTransparentPage = ["/", "/adoucisseurs-portables", "/adoucissement", "/adoucisseur-eau-residentiel", "/eau-de-puits", "/specialises-filtration-eau", "/conditionneurs-sans-sel", "/entreprises", "/commercial-industriel", "/osmose-filtration", "/eau-dure", "/filtration", "/fontaines", "/Systemes-de-filtration-deau-sous-evier", "/Systemes-de-desinfection-UV"].includes(location.pathname);
+  const isTransparentPage = ["/", "/adoucisseurs-portables", "/adoucissement", "/adoucisseur-eau-residentiel", "/eau-de-puits", "/specialises-filtration-eau", "/conditionneurs-sans-sel", "/entreprises", "/commercial-industriel", "/osmose-filtration", "/eau-dure", "/filtration", "/fontaines", "/Systemes-de-filtration-deau-sous-evier", "/Systemes-de-desinfection-UV", "/water-testing", "/Filtres-deau"].includes(location.pathname);
   const isHeaderTransparent = isTransparentPage && !isScrolled && !isMenuOpen;
 
   return (

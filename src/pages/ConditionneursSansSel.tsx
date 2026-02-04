@@ -277,15 +277,7 @@ const ConditionneursSansSel = () => {
         {/* Articles Section */}
         <section className="py-24 bg-gray-50">
           <div className="container mx-auto px-4">
-            <div className="flex justify-between items-end mb-12">
-              <div>
-                <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-left">Articles et ressources</h2>
-                <p className="text-gray-500">Tout ce que vous devez savoir sur le traitement de l'eau.</p>
-              </div>
-              <Button variant="outline" className="hidden md:flex rounded-full border-blue-600 text-blue-600">
-                Voir tout le blog
-              </Button>
-            </div>
+            <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-16 text-slate-900 leading-[1.2] md:leading-[48px] tracking-tighter">Ressources</h2>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {resources.map((res, idx) => (

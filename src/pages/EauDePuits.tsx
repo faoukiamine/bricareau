@@ -85,7 +85,7 @@ const EauDePuits = () => {
       <Header />
       <main>
         {/* Hero Section */}
-        <section className="relative h-[850px] flex items-start overflow-hidden pt-[220px]">
+        <section className="relative h-[800px] flex items-start overflow-hidden pt-[220px]">
           <div className="absolute inset-0 z-0">
             <img
               src={heroPuits}
@@ -525,12 +525,14 @@ const EauDePuits = () => {
         {/* 11. Articles Section */}
         <section className="py-24 bg-gray-50">
           <div className="container mx-auto px-4">
-            <h2 className="text-[32px] md:text-[48px] font-light text-slate-900 mb-16 text-center leading-[1.2] md:leading-[48px] tracking-tighter"
-              style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
-            >
-              Ressources
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                       <div className="text-left mb-16">
+                            <h2
+                                className="text-slate-900 tracking-tighter mb-8 text-left"
+                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                            >                                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">Ressources</span>
+                            </h2>
+                            <div className="w-24 h-1 bg-blue-600"></div>
+                        </div>            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
                 {
                   title: "Comprendre les minéraux de votre puits",
