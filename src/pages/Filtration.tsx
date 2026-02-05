@@ -6,9 +6,9 @@ import {
     X,
     Wrench,
     GlassWater,
-    CircleDollarSign,
-    Trash2,
-    Phone
+    HandCoins,
+    Recycle,
+    Phone,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { NavLink } from "@/components/NavLink";
@@ -16,8 +16,8 @@ import heroFiltration from "@/assets/woman-and-kid-drink-glass-water.jpg";
 import drinkingWaterImg from "@/assets/Solutions d'eau potable.webp";
 import specializedFiltersImg from "@/assets/Filtres d'eau spécialisés.webp";
 import waterSoftenerImg from "@/assets/Adoucisseurs d'eau.webp";
-import showerWaterImg from "@/assets/Shower-water.jpg";
-import uvSystemImg from "@/assets/Systèmes de désinfection UV.webp";
+import teenagerShowerImg from "@/assets/teenager-taking-shower-reduce-hangover-effect.jpg";
+import undersinkSystemImg from "@/assets/Triple Stage Filter.jpg";
 import africanGirlImg from "@/assets/african-girl-stands-kitchen-drinks-water.jpg";
 import glassOfWaterImg from "@/assets/glass-of-water.jpeg";
 
@@ -114,8 +114,8 @@ const Filtration = () => {
                         <div className="flex flex-wrap justify-center gap-x-12 gap-y-16">
                             {[
                                 { icon: GlassWater, title: "Goût exceptionnel", desc: "Élimine 99% du chlore et des mauvaises odeurs pour une eau pure au robinet." },
-                                { icon: CircleDollarSign, title: "Économies réelles", desc: "Réduisez vos dépenses en éliminant définitivement l'achat d'eau embouteillée." },
-                                { icon: Trash2, title: "Éco-responsable", desc: "Contribuez à la protection de l'environnement en réduisant les déchets plastiques." },
+                                { icon: HandCoins, title: "Économies réelles", desc: "Réduisez vos dépenses en éliminant définitivement l'achat d'eau embouteillée." },
+                                { icon: Recycle, title: "Éco-responsable", desc: "Contribuez à la protection de l'environnement en réduisant les déchets plastiques." },
                                 { icon: Wrench, title: "Entretien facile", desc: "Des systèmes conçus pour une maintenance simple et des changements de filtres rapides." }
                             ].map((benefit, i) => (
                                 <div key={i} className="flex flex-col items-center group w-full sm:w-[calc(50%-3rem)] lg:w-[calc(25%-3rem)]">
@@ -130,7 +130,61 @@ const Filtration = () => {
                     </div>
                 </section>
 
-                {/* 2. Intro Section (Design matching Kitchen Section from Adoucissement.tsx) */}
+
+                {/* 2. Feature Section 2 (Whole House - Design matching Adoucissement) */}
+                <section className="py-24 bg-white">
+                    <div className="container mx-auto px-4">
+                        <div className="flex flex-col lg:flex-row items-center gap-20 mb-20">
+                            {/* Left Side: Overlapping Images */}
+                            <div className="lg:w-1/2 relative h-[500px] md:h-[600px]">
+                                {/* Main Image (Larger) */}
+                                <div className="absolute top-0 right-0 w-4/5 h-[85%] rounded-[2rem] overflow-hidden shadow-2xl z-10 transition-transform duration-500 hover:scale-[1.02]">
+                                    <img
+                                        src={teenagerShowerImg}
+                                        alt="Eau filtrée sous la douche"
+                                        className="w-full h-full object-cover"
+                                    />
+                                </div>
+                                {/* Overlapping Image (Smaller) */}
+                                <div className="absolute bottom-0 left-0 w-1/2 h-1/2 rounded-[2rem] overflow-hidden shadow-2xl z-20 border-[12px] border-white transition-transform duration-500 hover:scale-110">
+                                    <img
+                                        src={specializedFiltersImg}
+                                        alt="Filtration centrale"
+                                        className="w-full h-full object-cover"
+                                    />
+                                </div>
+                            </div>
+                            <div className="lg:w-1/2 text-left">
+                                <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
+                                    Redécouvrez le luxe d'une eau filtrée cristalline à chaque jet de douche.
+                                </h2>
+                                <p className="font-light text-[20px] leading-[28px] text-gray-600 mb-8">
+                                    Protégez vos appareils ménagers, votre tuyauterie et votre peau. Nos systèmes de filtration centrale traitent chaque goutte d'eau qui entre dans votre foyer pour une tranquillité d'esprit totale.
+                                </p>
+                                <Button className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-10 h-14 text-lg font-bold" asChild>
+                                    <NavLink to="/contact">Découvrez nos filtres d'eau spécialisés</NavLink>
+                                </Button>
+                            </div>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-left">
+                            {[
+                                { title: "Défense Plomberie", desc: "Dites adieu au chlore résiduel et aux sédiments qui corrodent vos précieux appareils et obstruent votre robinetterie de luxe." },
+                                { title: "Clarté de l'Eau", desc: "Réduisez drastiquement la turbidité pour une eau limpide à chaque robinet, protégeant ainsi l'éclat de vos sanitaires et de votre linge." },
+                                { title: "Performance Longue Durée", desc: "Une technologie haute fidélité offrant une filtration efficace pendant 5 à 7 ans sans aucun entretien lourd ou changement fréquent." }
+                            ].map((item, i) => (
+                                <div key={i}>
+                                    <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
+                                        <span className="text-blue-600 font-bold italic">0{i + 1}</span> {item.title}
+                                    </h3>
+                                    <p className="text-gray-500 leading-relaxed">{item.desc}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+                {/* 3. Intro Section (Design matching Kitchen Section from Adoucissement.tsx) */}
                 <section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-4">
                         <div className="flex flex-col lg:flex-row-reverse items-center gap-20 mb-20">
@@ -170,7 +224,7 @@ const Filtration = () => {
                             {[
                                 { title: "Pureté Absolue", desc: "Élimine 99% des contaminants, métaux lourds et micro-plastiques pour une sécurité totale de toute la famille." },
                                 { title: "Éco-Conscient", desc: "Réduisez drastiquement votre empreinte carbone en éliminant définitivement les bouteilles d'eau jetables de votre foyer." },
-                                { title: "Saveurs Révélées", desc: "Sublimez le goût de vos boissons et petits plats avec une eau pure, sans chlore ni impuretés pour une cuisine d'exception." }
+                                { title: "Saveurs Révélées", desc: "Sublimez le goût de vos boissons and petits plats avec une eau pure, sans chlore ni impuretés pour une cuisine d'exception." }
                             ].map((item, i) => (
                                 <div key={i}>
                                     <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
@@ -184,7 +238,7 @@ const Filtration = () => {
                 </section>
 
 
-                {/* 3. Feature Section 1 (Under Sink - Design matching Adoucissement) */}
+                {/* 4. Feature Section 1 (Under Sink - Design matching Adoucissement) */}
                 <section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-4">
                         <div className="flex flex-col lg:flex-row items-center gap-20 mb-20">
@@ -201,7 +255,7 @@ const Filtration = () => {
                                 {/* Overlapping Image (Smaller) */}
                                 <div className="absolute bottom-0 right-0 w-1/2 h-1/2 rounded-[2rem] overflow-hidden shadow-2xl z-20 border-[12px] border-gray-50 transition-transform duration-500 hover:scale-110">
                                     <img
-                                        src={specializedFiltersImg}
+                                        src={undersinkSystemImg}
                                         alt="Osmose inverse"
                                         className="w-full h-full object-cover"
                                     />
@@ -237,76 +291,12 @@ const Filtration = () => {
                     </div>
                 </section>
 
-                {/* 4. Feature Section 2 (Whole House - Design matching Adoucissement) */}
-                <section className="py-24 bg-white">
-                    <div className="container mx-auto px-4">
-                        <div className="flex flex-col lg:flex-row-reverse items-center gap-20 mb-20">
-                            {/* Left Side: Overlapping Images */}
-                            <div className="lg:w-1/2 relative h-[500px] md:h-[600px]">
-                                {/* Main Image (Larger) */}
-                                <div className="absolute top-0 right-0 w-4/5 h-[85%] rounded-[2rem] overflow-hidden shadow-2xl z-10 transition-transform duration-500 hover:scale-[1.02]">
-                                    <img
-                                        src={showerWaterImg}
-                                        alt="Eau filtrée sous la douche"
-                                        className="w-full h-full object-cover"
-                                    />
-                                </div>
-                                {/* Overlapping Image (Smaller) */}
-                                <div className="absolute bottom-0 left-0 w-1/2 h-1/2 rounded-[2rem] overflow-hidden shadow-2xl z-20 border-[12px] border-white transition-transform duration-500 hover:scale-110">
-                                    <img
-                                        src={uvSystemImg}
-                                        alt="Filtration centrale"
-                                        className="w-full h-full object-cover"
-                                    />
-                                </div>
-                            </div>
-                            <div className="lg:w-1/2 text-left">
-                                <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
-                                    Redécouvrez le luxe d'une eau filtrée cristalline à chaque jet de douche.
-                                </h2>
-                                <p className="font-light text-[20px] leading-[28px] text-gray-600 mb-8">
-                                    Protégez vos appareils ménagers, votre tuyauterie et votre peau. Nos systèmes de filtration centrale traitent chaque goutte d'eau qui entre dans votre foyer pour une tranquillité d'esprit totale.
-                                </p>
-                                <Button className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-10 h-14 text-lg font-bold" asChild>
-                                    <NavLink to="/contact">Découvrez nos filtres d'eau spécialisés</NavLink>
-                                </Button>
-                            </div>
-                        </div>
-
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-left">
-                            {[
-                                { title: "Défense Plomberie", desc: "Dites adieu au chlore résiduel et aux sédiments qui corrodent vos précieux appareils et obstruent votre robinetterie de luxe." },
-                                { title: "Clarté de l'Eau", desc: "Réduisez drastiquement la turbidité pour une eau limpide à chaque robinet, protégeant ainsi l'éclat de vos sanitaires et de votre linge." },
-                                { title: "Performance Longue Durée", desc: "Une technologie haute fidélité offrant une filtration efficace pendant 5 à 7 ans sans aucun entretien lourd ou changement fréquent." }
-                            ].map((item, i) => (
-                                <div key={i}>
-                                    <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
-                                        <span className="text-blue-600 font-bold italic">0{i + 1}</span> {item.title}
-                                    </h3>
-                                    <p className="text-gray-500 leading-relaxed">{item.desc}</p>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </section>
-
                 {/* 5. Elite Protection Section - Custom Design from Image */}
                 <section className="py-24 bg-[#F8F9FA]">
                     <div className="container mx-auto px-6">
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-                            {/* Left Side: Overlapping Images */}
-                            <div className="relative h-[500px] md:h-[600px]">
-                                {/* Main Image (Larger) */}
-                                <div className="absolute top-0 left-0 w-4/5 h-[85%] rounded-[2rem] overflow-hidden shadow-2xl z-10 transition-transform duration-500 hover:scale-[1.02]">
-                                    <img
-                                        src={showerWaterImg}
-                                        alt="Système UV Protection"
-                                        className="w-full h-full object-cover"
-                                    />
-                                </div>
-                            </div>
-                            {/* Right Side: Content */}
-                            <div className="flex flex-col items-start text-left lg:pl-10">
+                            {/* Left Side: Content */}
+                            <div className="flex flex-col items-start text-left lg:pr-10">
                                 <span className="text-slate-400 text-xs font-bold uppercase tracking-[0.3em] mb-6">
                                     NOTRE ENGAGEMENT
                                 </span>
@@ -322,6 +312,17 @@ const Filtration = () => {
                                     <Button className="bg-black hover:bg-slate-800 text-white rounded-full px-10 h-14 text-sm font-bold uppercase tracking-widest transition-all">
                                         En savoir plus
                                     </Button>
+                                </div>
+                            </div>
+                            {/* Right Side: Overlapping Images */}
+                            <div className="relative h-[500px] md:h-[600px]">
+                                {/* Main Image (Larger) */}
+                                <div className="absolute top-0 left-0 w-4/5 h-[85%] rounded-[2rem] overflow-hidden shadow-2xl z-10 transition-transform duration-500 hover:scale-[1.02]">
+                                    <img
+                                        src={teenagerShowerImg}
+                                        alt="Système UV Protection"
+                                        className="w-full h-full object-cover"
+                                    />
                                 </div>
                             </div>
                         </div>
