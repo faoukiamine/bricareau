@@ -261,39 +261,6 @@ const AdoucisseurEauResidentiel = () => {
                     </div>
                 </section>
 
-
-                {/* Content Section: Pourquoi opter */}
-                <section className="py-24 bg-white">
-                    <div className="container mx-auto px-4">
-                        <div className="flex flex-col lg:flex-row items-center gap-20">
-                            <div className="lg:w-1/2">
-                                <img src="https://images.unsplash.com/photo-1595152772835-2196740b6ca0?q=80&w=1200&auto=format&fit=crop" alt="Famille heureuse" className="rounded-[40px] shadow-2xl" />
-                            </div>
-                            <div className="lg:w-1/2">
-                                <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">Pourquoi opter pour un adoucisseur Culligan ?</h2>
-                                <div className="space-y-6">
-                                    {[
-                                        "Une eau douce instantanément dans toute la maison.",
-                                        "Une technologie de pointe (HE) pour des économies durables.",
-                                        "Un service d'installation et d'entretien professionnel.",
-                                        "Une garantie locale et un support client réactif."
-                                    ].map((txt, i) => (
-                                        <div key={i} className="flex gap-4 items-start">
-                                            <div className="mt-1 w-6 h-6 rounded-full bg-green-500 flex items-center justify-center shrink-0">
-                                                <Check className="h-4 w-4 text-white" />
-                                            </div>
-                                            <p className="text-lg text-gray-700">{txt}</p>
-                                        </div>
-                                    ))}
-                                </div>
-                                <Button className="mt-12 bg-blue-600 text-white rounded-full px-12 h-14 text-lg">
-                                    Découvrez nos nouveautés
-                                </Button>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
                 {/* Video / Video Section Thumbnail */}
                 <section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-4 text-center">
@@ -311,26 +278,32 @@ const AdoucisseurEauResidentiel = () => {
 
                 {/* FAQ Section */}
                 <section className="py-24 bg-white">
-                    <div className="container mx-auto px-4 max-w-4xl">
-                        <h2
-                            className="text-slate-900 tracking-tighter mb-12 text-center"
-                            style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
-                        >
-                            <span className="text-[32px] md:text-[60px] font-light leading-[1.2] md:leading-[60px] block">FAQ sur les</span>
-                            <span className="text-[32px] md:text-[60px] font-normal leading-[1.2] md:leading-[60px] block">adoucisseurs d'eau</span>
-                        </h2>
-                        <Accordion type="single" collapsible className="w-full">
-                            {faqItems.map((item, idx) => (
-                                <AccordionItem key={idx} value={`item-${idx}`} className="border-b-gray-200">
-                                    <AccordionTrigger className="text-left font-bold text-lg hover:no-underline py-6">
-                                        {item.q}
-                                    </AccordionTrigger>
-                                    <AccordionContent className="text-gray-600 text-lg leading-relaxed pb-6 text-left">
-                                        {item.a}
-                                    </AccordionContent>
-                                </AccordionItem>
-                            ))}
-                        </Accordion>
+                    <div className="container mx-auto px-4">
+                        <div className="text-left mb-16">
+                            <h2
+                                className="text-slate-900 tracking-tighter mb-8 text-left"
+                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                            >
+                                <span className="text-[32px] md:text-[60px] font-light leading-[1.2] md:leading-[60px] block text-slate-800">FAQ sur les</span>
+                                <span className="text-[32px] md:text-[60px] font-normal leading-[1.2] md:leading-[60px] block">adoucisseurs d'eau</span>
+                            </h2>
+                            <div className="w-24 h-1 bg-blue-600"></div>
+                        </div>
+
+                        <div className="max-w-4xl mx-auto">
+                            <Accordion type="single" collapsible className="w-full">
+                                {faqItems.map((item, idx) => (
+                                    <AccordionItem key={idx} value={`item-${idx}`} className="border-b-gray-200">
+                                        <AccordionTrigger className="text-left font-bold text-lg hover:no-underline py-6">
+                                            {item.q}
+                                        </AccordionTrigger>
+                                        <AccordionContent className="text-gray-600 text-lg leading-relaxed pb-6 text-left">
+                                            {item.a}
+                                        </AccordionContent>
+                                    </AccordionItem>
+                                ))}
+                            </Accordion>
+                        </div>
                     </div>
                 </section>
 

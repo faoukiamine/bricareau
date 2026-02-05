@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Droplets, Check, ChevronRight, CheckCircle2, X } from "lucide-react";
+import { Check, ChevronRight, CheckCircle2, X } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import heroPuits from "@/assets/blog-10-copyright.jpg";
 import uvSystemImg from "@/assets/Systèmes de désinfection UV.webp";
@@ -480,59 +480,66 @@ const EauDePuits = () => {
 
         {/* 10. FAQ Section */}
         <section className="py-24 bg-white">
-          <div className="container mx-auto px-4 max-w-4xl">
-            <h2 className="text-[32px] md:text-[48px] font-light text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter"
-              style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
-            >
-              FAQ sur nos solutions <br />de traitement de l'eau de puits.
-            </h2>
-            <Accordion type="single" collapsible className="w-full">
-              {[
-                {
-                  q: "Pourquoi l'eau de mon puits a-t-elle une odeur d'œufs pourris ?",
-                  a: "Cette odeur est généralement causée par le gaz sulfure d'hydrogène. Bricareau propose des systèmes de filtration spécialisés pour éliminer efficacement cette odeur et rendre votre eau fraîche.",
-                },
-                {
-                  q: "Le fer dans l'eau de puits est-il dangereux ?",
-                  a: "Bien que le fer ne soit généralement pas dangereux pour la santé, il cause des taches tenaces sur les éviers et le linge, et peut donner un goût métallique désagréable.",
-                },
-                {
-                  q: "À quelle fréquence devrais-je faire tester mon eau de puits ?",
-                  a: "Nous recommandons une analyse complète au moins une fois par an ou dès que vous remarquez un changement de goût, d'odeur ou de clarté.",
-                },
-                {
-                  q: "Quelles solutions proposez-vous pour les bactéries ?",
-                  a: "Nous installons des systèmes de désinfection par rayons ultraviolets (UV) ou par chloration contrôlée pour éliminer 99,9% des contaminants biologiques.",
-                },
-              ].map((item, idx) => (
-                <AccordionItem
-                  key={idx}
-                  value={`item-${idx}`}
-                  className="border-b-gray-200"
-                >
-                  <AccordionTrigger className="text-left font-bold text-lg hover:no-underline py-6">
-                    {item.q}
-                  </AccordionTrigger>
-                  <AccordionContent className="font-light text-[20px] leading-[28px] text-gray-600 pb-6 text-left">
-                    {item.a}
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
+          <div className="container mx-auto px-4">
+            <div className="text-left mb-16">
+              <h2
+                className="text-slate-900 tracking-tighter mb-8 text-left"
+                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+              >
+                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">FAQ</span>
+              </h2>
+              <div className="w-24 h-1 bg-blue-600"></div>
+            </div>
+
+            <div className="max-w-4xl mx-auto">
+              <Accordion type="single" collapsible className="w-full">
+                {[
+                  {
+                    q: "Pourquoi l'eau de mon puits a-t-elle une odeur d'œufs pourris ?",
+                    a: "Cette odeur est généralement causée par le gaz sulfure d'hydrogène. Bricareau propose des systèmes de filtration spécialisés pour éliminer efficacement cette odeur et rendre votre eau fraîche.",
+                  },
+                  {
+                    q: "Le fer dans l'eau de puits est-il dangereux ?",
+                    a: "Bien que le fer ne soit généralement pas dangereux pour la santé, il cause des taches tenaces sur les éviers et le linge, et peut donner un goût métallique désagréable.",
+                  },
+                  {
+                    q: "À quelle fréquence devrais-je faire tester mon eau de puits ?",
+                    a: "Nous recommandons une analyse complète au moins une fois par an ou dès que vous remarquez un changement de goût, d'odeur ou de clarté.",
+                  },
+                  {
+                    q: "Quelles solutions proposez-vous pour les bactéries ?",
+                    a: "Nous installons des systèmes de désinfection par rayons ultraviolets (UV) ou par chloration contrôlée pour éliminer 99,9% des contaminants biologiques.",
+                  },
+                ].map((item, idx) => (
+                  <AccordionItem
+                    key={idx}
+                    value={`item-${idx}`}
+                    className="border-b-gray-200"
+                  >
+                    <AccordionTrigger className="text-left font-bold text-lg hover:no-underline py-6">
+                      {item.q}
+                    </AccordionTrigger>
+                    <AccordionContent className="font-light text-[20px] leading-[28px] text-gray-600 pb-6 text-left">
+                      {item.a}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </div>
           </div>
         </section>
 
         {/* 11. Articles Section */}
         <section className="py-24 bg-gray-50">
           <div className="container mx-auto px-4">
-                       <div className="text-left mb-16">
-                            <h2
-                                className="text-slate-900 tracking-tighter mb-8 text-left"
-                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
-                            >                                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">Ressources</span>
-                            </h2>
-                            <div className="w-24 h-1 bg-blue-600"></div>
-                        </div>            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-left mb-16">
+              <h2
+                className="text-slate-900 tracking-tighter mb-8 text-left"
+                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+              >                                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">Ressources</span>
+              </h2>
+              <div className="w-24 h-1 bg-blue-600"></div>
+            </div>            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
                 {
                   title: "Comprendre les minéraux de votre puits",
