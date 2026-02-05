@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
-const IdealCulliganCTA = () => {
+const IdealBricareauCTA = () => {
     return (
         <section className="bg-[#2563EB] py-16 md:py-20">
             <div className="container mx-auto px-4">
@@ -30,4 +30,4 @@ const IdealCulliganCTA = () => {
     );
 };
 
-export default IdealCulliganCTA;
+export default IdealBricareauCTA;

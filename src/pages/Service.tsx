@@ -61,7 +61,7 @@ const Service = () => {
                                 <div className="relative w-[300px] md:w-[400px] h-[400px] md:h-[550px] bg-slate-100 rounded-sm overflow-hidden shadow-2xl">
                                     <img
                                         src={technicianImg}
-                                        alt="Technicien Culligan"
+                                        alt="Technicien Bricareau"
                                         className="w-full h-full object-cover grayscale-[0.2]"
                                     />
                                 </div>
@@ -143,7 +143,7 @@ const Service = () => {
                                     Planifiez votre service en quelques clics.
                                 </h2>
                                 <p className="font-light text-[20px] leading-[28px] text-slate-600/80">
-                                    Votre expert possède les connaissances et le savoir-faire nécessaires pour entretenir et réparer tout système de traitement d'eau disponible sur le marché – même s'il ne s'agit pas d'un adoucisseur ou d'un système de filtration Culligan – et vous garantir une eau de la meilleure qualité possible. Renseignez-vous sur nos contrats d'entretien Culligan pour bénéficier des services, réparations et maintenances les plus prestigieux et fiables pour votre système de traitement d'eau.
+                                    Votre expert possède les connaissances et le savoir-faire nécessaires pour entretenir et réparer tout système de traitement d'eau disponible sur le marché – même s'il ne s'agit pas d'un adoucisseur ou d'un système de filtration Bricareau – et vous garantir une eau de la meilleure qualité possible. Renseignez-vous sur nos contrats d'entretien Bricareau pour bénéficier des services, réparations et maintenances les plus prestigieux et fiables pour votre système de traitement d'eau.
                                 </p>
                             </div>
 

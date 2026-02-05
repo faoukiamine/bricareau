@@ -1,4 +1,4 @@
-ï»¿import Header from "@/components/Header";
+import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import { Button } from "@/components/ui/button";
@@ -33,37 +33,37 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
 const products = [
-    { name: "Culligan High Efficiency", desc: "Notre systÃ¨me le plus avancÃ© et Ã©conome.", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
-    { name: "Culligan HE Connect", desc: "ContrÃ´lez votre eau via votre smartphone.", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
-    { name: "Culligan HE Municipal", desc: "Ã‰limine le chlore et adoucit l'eau.", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
-    { name: "Culligan Select Plus", desc: "Performance fiable pour toute la famille.", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
-    { name: "Culligan Select Plus Connect", desc: "ConnectivitÃ© intelligente et grand confort.", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
-    { name: "Culligan Medallist Series", desc: "Design compact, efficacitÃ© maximale.", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
-    { name: "Culligan Gold Series", desc: "La rÃ©fÃ©rence de l'eau adoucie.", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
-    { name: "Culligan Outdoor HE", desc: "Solution robuste pour l'extÃ©rieur.", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
-    { name: "Culligan Iron-Cleer", desc: "SpÃ©cialisÃ© pour l'eau contenant du fer.", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
+    { name: "Bricareau High Efficiency", desc: "Notre système le plus avancé et économe.", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
+    { name: "Bricareau HE Connect", desc: "Contrôlez votre eau via votre smartphone.", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
+    { name: "Bricareau HE Municipal", desc: "Élimine le chlore et adoucit l'eau.", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
+    { name: "Bricareau Select Plus", desc: "Performance fiable pour toute la famille.", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
+    { name: "Bricareau Select Plus Connect", desc: "Connectivité intelligente et grand confort.", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
+    { name: "Bricareau Medallist Series", desc: "Design compact, efficacité maximale.", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
+    { name: "Bricareau Gold Series", desc: "La référence de l'eau adoucie.", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
+    { name: "Bricareau Outdoor HE", desc: "Solution robuste pour l'extérieur.", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
+    { name: "Bricareau Iron-Cleer", desc: "Spécialisé pour l'eau contenant du fer.", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
 ];
 
 const reviews = [
-    { name: "Pierre L.", rating: 5, text: "Excellent service. L'installation a Ã©tÃ© rapide et les rÃ©sultats sont au rendez-vous. Plus de calcaire !", date: "Il y a 2 mois" },
-    { name: "Marie C.", rating: 5, text: "Enfin une douche qui ne m'irrite plus la peau. TrÃ¨s satisfaite de mon adoucisseur Culligan.", date: "Il y a 3 mois" },
-    { name: "Robert D.", rating: 4, text: "Bon produit, technicien trÃ¨s professionnel. Je recommande vivement.", date: "Il y a 1 mois" },
-    { name: "Sophie T.", rating: 5, text: "Une eau de qualitÃ© partout dans la maison. Le service client de Bricareau est top.", date: "Il y a 2 semaines" },
+    { name: "Pierre L.", rating: 5, text: "Excellent service. L'installation a été rapide et les résultats sont au rendez-vous. Plus de calcaire !", date: "Il y a 2 mois" },
+    { name: "Marie C.", rating: 5, text: "Enfin une douche qui ne m'irrite plus la peau. Très satisfaite de mon adoucisseur Bricareau.", date: "Il y a 3 mois" },
+    { name: "Robert D.", rating: 4, text: "Bon produit, technicien très professionnel. Je recommande vivement.", date: "Il y a 1 mois" },
+    { name: "Sophie T.", rating: 5, text: "Une eau de qualité partout dans la maison. Le service client de Bricareau est top.", date: "Il y a 2 semaines" },
 ];
 
 const faqItems = [
-    { q: "Quels sont les avantages d'un adoucisseur d'eau ?", a: "Un adoucisseur Ã©limine le calcaire, protÃ¨ge vos appareils, adoucit votre peau et vos cheveux, et vous fait Ã©conomiser sur les produits de nettoyage." },
-    { q: "Comment fonctionne un adoucisseur Culligan ?", a: "Il utilise un processus d'Ã©change d'ions pour remplacer les minÃ©raux de duretÃ© (calcium et magnÃ©sium) par des ions sodium doux." },
-    { q: "Ã€ quelle frÃ©quence faut-il entretenir l'appareil ?", a: "Nous recommandons un entretien annuel pour garantir des performances optimales et prolonger la vie du systÃ¨me." },
-    { q: "Quelle quantitÃ© de sel consomme l'adoucisseur ?", a: "Cela dÃ©pend de votre consommation d'eau et de la duretÃ© de celle-ci. Nos systÃ¨mes HE sont parmi les plus Ã©conomes du marchÃ©." },
+    { q: "Quels sont les avantages d'un adoucisseur d'eau ?", a: "Un adoucisseur élimine le calcaire, protège vos appareils, adoucit votre peau et vos cheveux, et vous fait économiser sur les produits de nettoyage." },
+    { q: "Comment fonctionne un adoucisseur Bricareau ?", a: "Il utilise un processus d'échange d'ions pour remplacer les minéraux de dureté (calcium et magnésium) par des ions sodium doux." },
+    { q: "À quelle fréquence faut-il entretenir l'appareil ?", a: "Nous recommandons un entretien annuel pour garantir des performances optimales et prolonger la vie du système." },
+    { q: "Quelle quantité de sel consomme l'adoucisseur ?", a: "Cela dépend de votre consommation d'eau et de la dureté de celle-ci. Nos systèmes HE sont parmi les plus économes du marché." },
 ];
 
 const comparisonData = [
     { feature: "Technologie High Efficiency", high: true, selectPlus: true, connect: true, select: false, medallist: false },
-    { feature: "ContrÃ´le Ã  distance (App)", high: true, selectPlus: false, connect: true, select: false, medallist: false },
-    { feature: "Protection du chlore intÃ©grÃ©e", high: "Option", selectPlus: false, connect: false, select: false, medallist: false },
+    { feature: "Contrôle à distance (App)", high: true, selectPlus: false, connect: true, select: false, medallist: false },
+    { feature: "Protection du chlore intégrée", high: "Option", selectPlus: false, connect: false, select: false, medallist: false },
     { feature: "Alertes de sel faible", high: true, selectPlus: true, connect: true, select: true, medallist: false },
-    { feature: "Diagnostic Ã  distance", high: true, selectPlus: false, connect: true, select: false, medallist: false },
+    { feature: "Diagnostic à distance", high: true, selectPlus: false, connect: true, select: false, medallist: false },
 ];
 
 const AdoucisseurEauResidentiel = () => {
@@ -92,10 +92,10 @@ const AdoucisseurEauResidentiel = () => {
                                 className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-white"
                                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                             >
-                                Profitez d'une solution sur mesure <span className="font-normal">pour une eau de qualitÃ©</span>
+                                Profitez d'une solution sur mesure <span className="font-normal">pour une eau de qualité</span>
                             </h1>
                             <p className="font-light text-[20px] leading-[28px] text-white/95 mb-8 max-w-xl">
-                                Modernisez votre maison avec les technologies Bricareau et redÃ©couvrez le plaisir d'une eau douce,
+                                Modernisez votre maison avec les technologies Bricareau et redécouvrez le plaisir d'une eau douce,
                                 plus saine pour vous et vos installations.
                             </p>
                             <div className="flex gap-4">
@@ -105,7 +105,7 @@ const AdoucisseurEauResidentiel = () => {
                                     style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                                     asChild
                                 >
-                                    <NavLink to="/contact-residentiel">DÃ©marrer ici</NavLink>
+                                    <NavLink to="/contact-residentiel">Démarrer ici</NavLink>
                                 </Button>
                                 <Button size="lg" variant="outline" className="bg-white/10 hover:bg-white/20 text-white border-white rounded-full px-8 h-14 text-lg font-bold backdrop-blur-sm" asChild>
                                     <NavLink to="/produits">Voir les produits</NavLink>
@@ -123,7 +123,7 @@ const AdoucisseurEauResidentiel = () => {
                                 <div className="w-16 h-16 rounded-full border border-blue-400 flex items-center justify-center mb-6">
                                     <Droplets className="h-8 w-8 text-blue-400" />
                                 </div>
-                                <h3 className="text-xl font-bold mb-3">Eau de qualitÃ© supÃ©rieure</h3>
+                                <h3 className="text-xl font-bold mb-3">Eau de qualité supérieure</h3>
                                 <p className="opacity-70">Une douceur incomparable pour votre peau et vos cheveux.</p>
                             </div>
                             <div className="flex flex-col items-center">
@@ -131,14 +131,14 @@ const AdoucisseurEauResidentiel = () => {
                                     <Shield className="h-8 w-8 text-blue-400" />
                                 </div>
                                 <h3 className="text-xl font-bold mb-3">Protection des appareils</h3>
-                                <p className="opacity-70">Prolongez la durÃ©e de vie de votre plomberie et Ã©lectromÃ©nagers.</p>
+                                <p className="opacity-70">Prolongez la durée de vie de votre plomberie et électroménagers.</p>
                             </div>
                             <div className="flex flex-col items-center">
                                 <div className="w-16 h-16 rounded-full border border-blue-400 flex items-center justify-center mb-6">
                                     <TrendingDown className="h-8 w-8 text-blue-400" />
                                 </div>
-                                <h3 className="text-xl font-bold mb-3">Ã‰conomies garanties</h3>
-                                <p className="opacity-70">RÃ©duisez vos factures d'Ã©nergie et vos dÃ©penses en produits d'entretien.</p>
+                                <h3 className="text-xl font-bold mb-3">Économies garanties</h3>
+                                <p className="opacity-70">Réduisez vos factures d'énergie et vos dépenses en produits d'entretien.</p>
                             </div>
                         </div>
                     </div>
@@ -153,7 +153,7 @@ const AdoucisseurEauResidentiel = () => {
                                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                             >
                                 <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Nos filtres d'eau</span>
-                                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">spÃ©cialisÃ©s pour votre rÃ©sidence</span>
+                                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">spécialisés pour votre résidence</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
@@ -173,7 +173,7 @@ const AdoucisseurEauResidentiel = () => {
                         </div>
                         <div className="mt-16 text-center">
                             <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-                                Vous ne savez pas quel systÃ¨me choisir ? Nos experts peuvent vous aider Ã  trouver la solution
+                                Vous ne savez pas quel système choisir ? Nos experts peuvent vous aider à trouver la solution
                                 parfaite pour votre foyer.
                             </p>
                             <Button
@@ -196,15 +196,15 @@ const AdoucisseurEauResidentiel = () => {
                             <div className="lg:w-1/2">
                                 <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal text-slate-900 mb-8 leading-[1.1] tracking-tighter text-left">C'est plus qu'un adoucisseur d'eau</h2>
                                 <p className="text-lg text-gray-600 mb-12">
-                                    Il s'agit d'une solution complÃ¨te pour toute la maison. Nos systÃ¨mes sont conÃ§us pour
-                                    offrir une performance intelligente et une efficacitÃ© sans prÃ©cÃ©dent.
+                                    Il s'agit d'une solution complète pour toute la maison. Nos systèmes sont conçus pour
+                                    offrir une performance intelligente et une efficacité sans précédent.
                                 </p>
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                                     {[
-                                        { icon: Sparkles, title: "Vaisselle sans traces", body: "Plus besoin de rincer Ã  la main." },
-                                        { icon: Shirt, title: "Linge plus doux", body: "Utilisez moins de dÃ©tergent." },
-                                        { icon: TrendingDown, title: "CoÃ»ts rÃ©duits", body: "Ã‰conomisez sur l'Ã©nergie." },
-                                        { icon: Zap, title: "EfficacitÃ© HE", body: "Consomme moins de sel et d'eau." }
+                                        { icon: Sparkles, title: "Vaisselle sans traces", body: "Plus besoin de rincer à la main." },
+                                        { icon: Shirt, title: "Linge plus doux", body: "Utilisez moins de détergent." },
+                                        { icon: TrendingDown, title: "Coûts réduits", body: "Économisez sur l'énergie." },
+                                        { icon: Zap, title: "Efficacité HE", body: "Consomme moins de sel et d'eau." }
                                     ].map((item, id) => (
                                         <div key={id} className="flex gap-4">
                                             <div className="w-12 h-12 rounded-lg bg-blue-100 flex items-center justify-center shrink-0">
@@ -251,11 +251,11 @@ const AdoucisseurEauResidentiel = () => {
                                 ANALYSE PROFESSIONNELLE
                             </span>
                             <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-left">
-                                Des tests d'eau prÃ©cis <br />
-                                pour votre sÃ©curitÃ©.
+                                Des tests d'eau précis <br />
+                                pour votre sécurité.
                             </h2>
                             <p className="text-[#666] text-xl leading-relaxed mb-14 max-w-lg">
-                                Ne devinez pas la qualitÃ© de votre eau. Nos analyses approfondies identifient les bactÃ©ries, les minÃ©raux et les contaminants chimiques pour vous offrir une tranquillitÃ© d'esprit totale.
+                                Ne devinez pas la qualité de votre eau. Nos analyses approfondies identifient les bactéries, les minéraux et les contaminants chimiques pour vous offrir une tranquillité d'esprit totale.
                             </p>
                             <Button
                                 size="lg"
@@ -276,7 +276,7 @@ const AdoucisseurEauResidentiel = () => {
                             <table className="w-full min-w-[1000px] border-collapse bg-white rounded-2xl overflow-hidden shadow-sm">
                                 <thead>
                                     <tr className="bg-gray-100">
-                                        <th className="p-8 text-left text-gray-400 font-medium uppercase tracking-wider">ModÃ¨les</th>
+                                        <th className="p-8 text-left text-gray-400 font-medium uppercase tracking-wider">Modèles</th>
                                         {["High Tech", "Select Plus", "Connect", "Select", "Medallist"].map(m => (
                                             <th key={m} className="p-8 text-center text-gray-900 font-bold text-xl">{m}</th>
                                         ))}
@@ -317,13 +317,13 @@ const AdoucisseurEauResidentiel = () => {
                                 <img src="https://images.unsplash.com/photo-1595152772835-2196740b6ca0?q=80&w=1200&auto=format&fit=crop" alt="Famille heureuse" className="rounded-[40px] shadow-2xl" />
                             </div>
                             <div className="lg:w-1/2">
-                                <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal text-slate-900 mb-8 leading-[1.1] tracking-tighter text-left">Pourquoi opter pour un adoucisseur Culligan ?</h2>
+                                <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal text-slate-900 mb-8 leading-[1.1] tracking-tighter text-left">Pourquoi opter pour un adoucisseur Bricareau ?</h2>
                                 <div className="space-y-6">
                                     {[
-                                        "Une eau douce instantanÃ©ment dans toute la maison.",
-                                        "Une technologie de pointe (HE) pour des Ã©conomies durables.",
+                                        "Une eau douce instantanément dans toute la maison.",
+                                        "Une technologie de pointe (HE) pour des économies durables.",
                                         "Un service d'installation et d'entretien professionnel.",
-                                        "Une garantie locale et un support client rÃ©actif."
+                                        "Une garantie locale et un support client réactif."
                                     ].map((txt, i) => (
                                         <div key={i} className="flex gap-4 items-start">
                                             <div className="mt-1 w-6 h-6 rounded-full bg-green-500 flex items-center justify-center shrink-0">
@@ -334,7 +334,7 @@ const AdoucisseurEauResidentiel = () => {
                                     ))}
                                 </div>
                                 <Button className="mt-12 bg-blue-600 text-white rounded-full px-12 h-14 text-lg">
-                                    DÃ©couvrez nos nouveautÃ©s
+                                    Découvrez nos nouveautés
                                 </Button>
                             </div>
                         </div>
@@ -389,7 +389,7 @@ const AdoucisseurEauResidentiel = () => {
                             {[
                                 { title: "Comment choisir son adoucisseur", img: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop" },
                                 { title: "L'importance de l'eau adoucie", img: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=800&auto=format&fit=crop" },
-                                { title: "Entretien de votre systÃ¨me Culligan", img: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=800&auto=format&fit=crop" }
+                                { title: "Entretien de votre système Bricareau", img: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=800&auto=format&fit=crop" }
                             ].map((art, i) => (
                                 <div key={i} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer group">
                                     <div className="h-56 overflow-hidden">
@@ -430,7 +430,7 @@ const AdoucisseurEauResidentiel = () => {
                                         </div>
                                         <div className="flex items-center gap-2 text-gray-300 font-bold whitespace-nowrap">
                                             <span className="w-10 h-10 rounded-full bg-gray-200 text-white flex items-center justify-center">2</span>
-                                            VOTRE DISPONIBILITÃ‰
+                                            VOTRE DISPONIBILITÉ
                                         </div>
                                         <div className="flex items-center gap-2 text-gray-300 font-bold whitespace-nowrap">
                                             <span className="w-10 h-10 rounded-full bg-gray-200 text-white flex items-center justify-center">3</span>
@@ -440,7 +440,7 @@ const AdoucisseurEauResidentiel = () => {
 
                                     <form className="grid grid-cols-1 md:grid-cols-2 gap-8">
                                         <div className="space-y-3 text-left">
-                                            <Label htmlFor="fname" className="font-bold flex gap-1">PrÃ©nom*</Label>
+                                            <Label htmlFor="fname" className="font-bold flex gap-1">Prénom*</Label>
                                             <Input id="fname" className="h-14 bg-gray-50 border-none rounded-sm" placeholder="Jean" />
                                         </div>
                                         <div className="space-y-3 text-left">
@@ -452,7 +452,7 @@ const AdoucisseurEauResidentiel = () => {
                                             <Input id="email" type="email" className="h-14 bg-gray-50 border-none rounded-sm" placeholder="jean@exemple.com" />
                                         </div>
                                         <div className="space-y-3 text-left">
-                                            <Label htmlFor="phone" className="font-bold flex gap-1">TÃ©lÃ©phone*</Label>
+                                            <Label htmlFor="phone" className="font-bold flex gap-1">Téléphone*</Label>
                                             <Input id="phone" type="tel" className="h-14 bg-gray-50 border-none rounded-sm" placeholder="(514) 000-0000" />
                                         </div>
                                         <div className="md:col-span-2 space-y-3 text-left">
@@ -462,11 +462,11 @@ const AdoucisseurEauResidentiel = () => {
                                         <div className="md:col-span-2 grid grid-cols-1 md:grid-cols-3 gap-8">
                                             <div className="space-y-3 text-left">
                                                 <Label htmlFor="city" className="font-bold flex gap-1">Ville*</Label>
-                                                <Input id="city" className="h-14 bg-gray-50 border-none rounded-sm" placeholder="MontrÃ©al" />
+                                                <Input id="city" className="h-14 bg-gray-50 border-none rounded-sm" placeholder="Montréal" />
                                             </div>
                                             <div className="space-y-3 text-left">
                                                 <Label htmlFor="province" className="font-bold flex gap-1">Province*</Label>
-                                                <Input id="province" className="h-14 bg-gray-50 border-none rounded-sm" placeholder="QuÃ©bec" />
+                                                <Input id="province" className="h-14 bg-gray-50 border-none rounded-sm" placeholder="Québec" />
                                             </div>
                                             <div className="space-y-3 text-left">
                                                 <Label htmlFor="zip" className="font-bold flex gap-1">Code Postal*</Label>
@@ -478,7 +478,7 @@ const AdoucisseurEauResidentiel = () => {
                                                 Continuer
                                             </Button>
                                             <p className="mt-4 text-[10px] text-gray-400 max-w-lg">
-                                                En soumettant ce formulaire, vous acceptez nos conditions d'utilisation et notre politique de confidentialitÃ©. Un spÃ©cialiste Bricareau vous contactera sous peu.
+                                                En soumettant ce formulaire, vous acceptez nos conditions d'utilisation et notre politique de confidentialité. Un spécialiste Bricareau vous contactera sous peu.
                                             </p>
                                         </div>
                                     </form>

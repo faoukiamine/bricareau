@@ -195,7 +195,7 @@ const RO6 = () => {
                     <div className="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8">
                         <div>
                             <h2 className="text-[32px] md:text-[48px] font-normal text-white mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">Prêt à goûter la différence ?</h2>
-                            <p className="text-blue-100 text-lg">Rejoignez des millions de familles satisfaites par Culligan.</p>
+                            <p className="text-blue-100 text-lg">Rejoignez des millions de familles satisfaites par Bricareau.</p>
                         </div>
                         <Button className="bg-white text-blue-600 hover:bg-slate-100 rounded-full px-12 h-16 text-xl font-bold shadow-lg">
                             Démarrer ici
@@ -207,7 +207,7 @@ const RO6 = () => {
                 <section className="py-24 bg-white">
                     <div className="container mx-auto px-6">
                         <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-16 text-center leading-[1.2] md:leading-[48px] tracking-tighter">
-                            Comment Culligan se compare
+                            Comment Bricareau se compare
                         </h2>
                         <div className="overflow-x-auto rounded-3xl border border-slate-100 shadow-xl overflow-hidden">
                             <table className="w-full min-w-[800px]">
@@ -260,7 +260,7 @@ const RO6 = () => {
                             <div className="lg:w-1/2 self-stretch">
                                 <img
                                     src="/src/assets/discover_expert.jpg"
-                                    alt="Expert Culligan en consultation"
+                                    alt="Expert Bricareau en consultation"
                                     className="w-full h-full object-cover min-h-[400px]"
                                 />
                             </div>

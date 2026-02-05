@@ -303,7 +303,7 @@ const WaterTestingPage = () => {
                   Réserver votre consultation gratuite d'une heure
                 </h2>
                 <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                  C'est simple, rapide et sans engagement. Un expert Culligan viendra chez vous pour une analyse complète de votre eau.
+                  C'est simple, rapide et sans engagement. Un expert Bricareau viendra chez vous pour une analyse complète de votre eau.
                 </p>
                 <div className="space-y-4">
                   <div className="flex items-center gap-4 text-blue-600 font-bold">

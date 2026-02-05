@@ -14,7 +14,7 @@ import waterTasteThumb from "@/assets/water-taste.jpg";
 import turbideWaterThumb from "@/assets/Turbide-Water.webp";
 import taninWaterThumb from "@/assets/problemes-deau-tanin.jpg";
 import corrosiveWaterThumb from "@/assets/Corrosive-Water.webp";
-import waterTestBg from "@/assets/test-laboratoire-diligence-inspection-750x500.jpg";
+import waterTestBg from "@/assets/Enercare_JP_Day_2_Kitchen_Faucet_498-2048x1365.jpg";
 import process1 from "@/assets/Scientist istesting water.webp";
 import process2 from "@/assets/section-image-and-content-23.jpg";
 import process3 from "@/assets/SERVICES.jpg";
@@ -328,7 +328,7 @@ const EauDePuits = () => {
                   Des tests d'eau précis <br />
                   <span className="font-bold">pour votre sécurité.</span>
                 </h2>
-                <p className="font-light text-[20px] leading-[28px] text-white/90 mb-12 text-justify">
+                <p className="font-light text-[20px] leading-[28px] text-white/90 mb-12">
                   Ne prenez aucun risque avec la santé de votre foyer. Nos tests de précision révèlent les polluants et contaminants invisibles, vous garantissant ainsi une eau parfaitement saine et une sérénité absolue.
                 </p>
                 <Button className="bg-white text-blue-600 hover:bg-blue-50 rounded-full px-12 h-16 text-xl font-bold shadow-xl" asChild>

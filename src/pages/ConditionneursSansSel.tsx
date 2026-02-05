@@ -49,7 +49,7 @@ const faqs = [
     answer: "Le système transforme les minéraux de dureté en cristaux microscopiques stables qui flottent dans l'eau au lieu de se fixer sur vos tuyaux et robinets."
   },
   {
-    question: "Quelle est la différence avec un adoucisseur Culligan ?",
+    question: "Quelle est la différence avec un adoucisseur Bricareau ?",
     answer: "Contrairement à l'adoucisseur classique, le conditionneur ne nécessite aucun sel, ne consomme pas d'eau pour le nettoyage et conserve les minéraux bénéfiques."
   },
   {

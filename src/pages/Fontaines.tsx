@@ -71,7 +71,7 @@ const Fontaines = () => {
                             Solutions professionnelles <br />pour l'eau. À votre service.
                         </h2>
                         <p className="font-light text-[20px] leading-[28px] text-white/70 max-w-4xl mx-auto mb-16">
-                            Culligan Ottawa-Gatineau est votre source locale pour les meilleures solutions d'eau destinées aux entreprises.
+                            Bricareau Ottawa-Gatineau est votre source locale pour les meilleures solutions d'eau destinées aux entreprises.
                             Que vous soyez un petit bureau ou une grande installation industrielle, nous avons l'expertise pour répondre à vos besoins.
                         </p>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -191,7 +191,7 @@ const Fontaines = () => {
                 <section className="py-24 bg-slate-100 border-t border-slate-200">
                     <div className="container mx-auto px-6 text-center">
                         <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal text-slate-900 mb-8 leading-[1.1] tracking-tighter">Prêts à aimer votre eau ?</h2>
-                        <p className="text-slate-500 text-lg mb-12">Contactez-nous aujourd'hui pour voir comment Culligan peut transformer votre bureau.</p>
+                        <p className="text-slate-500 text-lg mb-12">Contactez-nous aujourd'hui pour voir comment Bricareau peut transformer votre bureau.</p>
                         <div className="flex flex-col sm:flex-row gap-6 justify-center">
                             <Button className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-12 h-16 text-xl font-bold shadow-xl">
                                 Demander un rappel

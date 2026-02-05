@@ -14,10 +14,10 @@ import { Button } from "@/components/ui/button";
 import { NavLink } from "@/components/NavLink";
 import heroFiltration from "@/assets/woman-and-kid-drink-glass-water.jpg";
 import drinkingWaterImg from "@/assets/Solutions d'eau potable.webp";
-import specializedFiltersImg from "@/assets/5e9e4e01e48a5.jpg";
+import specializedFiltersImg from "@/assets/Filtres d'eau spécialisés.webp";
 import waterSoftenerImg from "@/assets/Adoucisseurs d'eau.webp";
 import showerWaterImg from "@/assets/Shower-water.jpg";
-import uvSystemImg from "@/assets/Filtres d'eau spécialisés.webp";
+import uvSystemImg from "@/assets/Systèmes de désinfection UV.webp";
 import africanGirlImg from "@/assets/african-girl-stands-kitchen-drinks-water.jpg";
 import glassOfWaterImg from "@/assets/glass-of-water.jpeg";
 

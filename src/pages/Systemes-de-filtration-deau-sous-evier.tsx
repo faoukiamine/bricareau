@@ -28,22 +28,21 @@ import {
 import TestimonialsSection from "@/components/TestimonialsSection";
 
 import heroDrink from "@/assets/boire-eau-robinet.jpg";
-import drinkingWaterImg from "@/assets/Solutions d'eau potable.webp";
+import eliteROImg from "@/assets/Triple Stage Filter.jpg";
+import plusROImg from "@/assets/Double Stage Filter.jpg";
+import essentialImg from "@/assets/Single Stage Filter.jpg";
 import sereneLiteImg from "@/assets/Système+de+filtration+Serene+Lite.webp";
-import specializedFiltersImg from "@/assets/Filtres d'eau spécialisés.webp";
-import waterSoftenerImg from "@/assets/Adoucisseurs d'eau.webp";
-import uvSystemImg from "@/assets/Systèmes de désinfection UV.webp";
-import waterTestBg from "@/assets/water_test_bg.png";
+import waterTestBg from "@/assets/water-taste.jpg";
 
 const FiltrationSousEvier = () => {
     const comparisonData = [
-        { feature: "Filtration en 5 étapes", elite: true, plus: true, essential: true, serene: false },
-        { feature: "Élimination des métaux lourds", elite: true, plus: true, essential: true, serene: true },
-        { feature: "Membrane d'osmose inverse", elite: true, plus: true, essential: true, serene: false },
-        { feature: "Reminéralisation alcaline", elite: true, plus: "Option", essential: false, serene: false },
-        { feature: "Débit rapide (75 GPD)", elite: true, plus: true, essential: false, serene: false },
-        { feature: "Compact (Sans réservoir)", elite: false, plus: false, essential: false, serene: true },
-        { feature: "Garantie prolongée", elite: true, plus: true, essential: true, serene: true },
+        { feature: "Filtration en 5 étapes", elite: true, plus: true, essential: true },
+        { feature: "Élimination des métaux lourds", elite: true, plus: true, essential: true },
+        { feature: "Membrane d'osmose inverse", elite: true, plus: true, essential: true },
+        { feature: "Reminéralisation alcaline", elite: true, plus: "Option", essential: false },
+        { feature: "Débit rapide (75 GPD)", elite: true, plus: true, essential: false },
+        { feature: "Compact (Sans réservoir)", elite: false, plus: false, essential: false },
+        { feature: "Garantie prolongée", elite: true, plus: true, essential: true },
     ];
 
     return (
@@ -150,12 +149,12 @@ const FiltrationSousEvier = () => {
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-6xl mx-auto">
                             {[
-                                { name: "Bricareau Elite RO", desc: "Le summum de la filtration avec reminéralisation alcaline incluse.", path: "/ro-6", img: drinkingWaterImg },
-                                { name: "Bricareau Plus RO", desc: "Performance exceptionnelle pour les familles actives.", img: drinkingWaterImg },
-                                { name: "Bricareau Essential", desc: "La pureté accessible sans compromis sur la qualité.", img: drinkingWaterImg },
-                                { name: "Serene Lite", desc: "Design compact et installation ultra-rapide.", img: sereneLiteImg }
+                                { name: "Bricareau Essential", desc: "La pureté accessible sans compromis sur la qualité.", img: essentialImg },
+                                { name: "Bricareau Plus RO", desc: "Performance exceptionnelle pour les familles actives.", img: plusROImg },
+                                { name: "Bricareau Elite RO", desc: "Le summum de la filtration avec reminéralisation alcaline incluse.", path: "/ro-6", img: eliteROImg },
+
                             ].map((product, i) => (
                                 <div key={i} className="group cursor-pointer">
                                     <div className="bg-slate-50 aspect-square rounded-3xl mb-6 overflow-hidden flex items-center justify-center p-8 transition-all group-hover:shadow-xl group-hover:bg-white group-hover:-translate-y-2">
@@ -168,42 +167,6 @@ const FiltrationSousEvier = () => {
                                     </NavLink>
                                 </div>
                             ))}
-                        </div>
-                    </div>
-                </section>
-
-
-                {/* 4. Intro Content (Image Right) */}
-                <section className="py-24 bg-white overflow-hidden">
-                    <div className="container mx-auto px-6 text-left">
-                        <div className="flex flex-col lg:flex-row items-center gap-20">
-                            <div className="lg:w-1/2">
-                                <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
-                                    Une eau de qualité <br /> restaurant à la maison.
-                                </h2>
-                                <p className="text-lg text-slate-500 font-medium mb-10 leading-relaxed">
-                                    Saviez-vous que la plupart des grands restaurants et cafés utilisent l'osmose inverse pour servir leur eau et préparer leur café ? Bricareau apporte cette même technologie professionnelle directement sous votre évier.
-                                </p>
-                                <div className="grid grid-cols-2 gap-8 mb-10">
-                                    <div className="flex flex-col gap-2">
-                                        <span className="text-4xl font-bold text-blue-600">99%</span>
-                                        <span className="text-sm font-bold text-slate-400 uppercase tracking-widest">Pureté atteinte</span>
-                                    </div>
-                                    <div className="flex flex-col gap-2">
-                                        <span className="text-4xl font-bold text-blue-600">24h</span>
-                                        <span className="text-sm font-bold text-slate-400 uppercase tracking-widest">Disponibilité</span>
-                                    </div>
-                                </div>
-                                <Button className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-10 h-14 text-lg font-bold flex items-center gap-2 group">
-                                    Explorer nos systèmes <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                                </Button>
-                            </div>
-                            <div className="lg:w-1/2 relative">
-                                <div className="aspect-video rounded-[3rem] overflow-hidden shadow-2xl relative z-10 group">
-                                    <img src={drinkingWaterImg} alt="Cuisine moderne" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                                </div>
-                                <div className="absolute -top-10 -right-10 w-2/3 h-2/3 bg-blue-50 rounded-[3rem] -z-10" />
-                            </div>
                         </div>
                     </div>
                 </section>
@@ -226,8 +189,8 @@ const FiltrationSousEvier = () => {
                                 <p className="text-white/90 text-lg font-medium mb-12 leading-relaxed">
                                     Chaque foyer est différent. Nos experts effectuent une analyse gratuite sur place pour identifier les contaminants spécifiques à votre résidence et vous recommander la solution optimale.
                                 </p>
-                                <Button className="bg-white text-blue-600 hover:bg-blue-50 rounded-full px-12 h-16 text-xl font-bold shadow-xl">
-                                    Prendre rendez-vous
+                                <Button className="bg-white text-blue-600 hover:bg-blue-50 rounded-full px-12 h-16 text-xl font-bold shadow-xl" asChild>
+                                    <NavLink to="/contact">Prendre rendez-vous</NavLink>
                                 </Button>
                             </div>
                         </div>
@@ -246,10 +209,10 @@ const FiltrationSousEvier = () => {
                                     <tr className="bg-gray-100">
                                         <th className="p-8 text-left text-gray-400 font-medium uppercase tracking-wider">Solutions</th>
                                         {[
-                                            { name: "Elite RO", img: drinkingWaterImg },
-                                            { name: "Plus RO", img: drinkingWaterImg },
-                                            { name: "Essential", img: drinkingWaterImg },
-                                            { name: "Serene Lite", img: sereneLiteImg }
+                                            { name: "Essential", img: essentialImg },
+                                            { name: "Plus RO", img: plusROImg },
+                                            { name: "Elite RO", img: eliteROImg },
+
                                         ].map((m, i) => (
                                             <th key={i} className="p-4 text-center text-gray-900 font-bold text-sm">
                                                 <div className="flex flex-col items-center gap-2">
@@ -276,9 +239,6 @@ const FiltrationSousEvier = () => {
                                             </td>
                                             <td className="p-8 text-center">
                                                 {row.essential ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : <X className="h-6 w-6 text-gray-300 mx-auto" />}
-                                            </td>
-                                            <td className="p-8 text-center">
-                                                {row.serene ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : <X className="h-6 w-6 text-gray-300 mx-auto" />}
                                             </td>
                                         </tr>
                                     ))}
@@ -337,7 +297,7 @@ const FiltrationSousEvier = () => {
                 {/* 9. Resources Section */}
                 <section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-4">
-                       <div className="text-left mb-16">
+                        <div className="text-left mb-16">
                             <h2
                                 className="text-slate-900 tracking-tighter mb-8 text-left"
                                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}

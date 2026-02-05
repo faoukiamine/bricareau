@@ -250,8 +250,8 @@ const Adoucissement = () => {
                                 <thead>
                                     <tr className="bg-gray-100">
                                         <th className="p-8 text-left text-gray-400 font-medium uppercase tracking-widest text-xs">MODELLES</th>
-                                        <th className="p-8 text-center text-gray-900 font-bold text-xl">Culligan HE</th>
-                                        <th className="p-8 text-center text-gray-900 font-bold text-xl text-gray-400 font-normal italic">Culligan Medallist</th>
+                                        <th className="p-8 text-center text-gray-900 font-bold text-xl">Bricareau HE</th>
+                                        <th className="p-8 text-center text-gray-900 font-bold text-xl text-gray-400 font-normal italic">Bricareau Medallist</th>
                                     </tr>
                                 </thead>
                                 <tbody className="divide-y divide-gray-100">
@@ -324,7 +324,7 @@ const Adoucissement = () => {
                         <Accordion type="single" collapsible className="w-full">
                             {[
                                 { q: "Quels sont les avantages d'un adoucisseur d'eau ?", a: "Un adoucisseur élimine le calcaire, protège vos appareils, adoucit votre peau et vos cheveux, et vous fait économiser sur les produits de nettoyage." },
-                                { q: "Comment fonctionne un adoucisseur Culligan ?", a: "Il utilise un processus d'échange d'ions pour remplacer les minéraux de dureté (calcium et magnésium) par des ions sodium doux." },
+                                { q: "Comment fonctionne un adoucisseur Bricareau ?", a: "Il utilise un processus d'échange d'ions pour remplacer les minéraux de dureté (calcium et magnésium) par des ions sodium doux." },
                                 { q: "À quelle fréquence faut-il entretenir l'appareil ?", a: "Nous recommandons un entretien annuel pour garantir des performances optimales et prolonger la vie du système." },
                                 { q: "Quelle quantité de sel consomme l'adoucisseur ?", a: "Cela dépend de votre consommation d'eau et de la dureté de celle-ci. Nos systèmes HE sont parmi les plus économes du marché." }
                             ].map((item, idx) => (
@@ -355,7 +355,7 @@ const Adoucissement = () => {
                             {[
                                 { title: "Comment choisir son adoucisseur", img: untitledImg },
                                 { title: "L'importance de l'eau adoucie", img: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=800&auto=format&fit=crop" },
-                                { title: "Entretien de votre système Culligan", img: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=800&auto=format&fit=crop" }
+                                { title: "Entretien de votre système Bricareau", img: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=800&auto=format&fit=crop" }
                             ].map((art, i) => (
                                 <div key={i} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer group">
                                     <div className="h-56 overflow-hidden">
