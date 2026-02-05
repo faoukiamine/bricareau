@@ -4,17 +4,12 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import { Button } from "@/components/ui/button";
 import heroGirl from "@/assets/cute-little-girl-washing-hands.jpg";
 import sereneLite from "@/assets/Système+de+filtration+Serene+Lite.webp";
+import conditionneurImg from "@/assets/Gemini_Generated_Image_edgz5sedgz5sedgz.png";
 import {
   Leaf,
-  Star,
   ChevronRight,
-  ChevronLeft,
   TestTube,
-  CheckCircle2,
-  Clock,
-  Sparkles,
-  Home,
-  Quote
+  Home
 } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import {
@@ -122,7 +117,7 @@ const ConditionneursSansSel = () => {
                 className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14"
                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
               >
-                Demander une consultation gratuite
+                Demandez une consultation gratuite
               </Button>
             </div>
           </div>
@@ -188,8 +183,8 @@ const ConditionneursSansSel = () => {
               <div className="lg:w-1/2">
                 <div className="bg-gray-100 rounded-2xl p-8 flex items-center justify-center min-h-[500px]">
                   <img
-                    src={sereneLite}
-                    alt="Conditionneur d'eau Serene Lite"
+                    src={conditionneurImg}
+                    alt="Conditionneur d'eau professionnel"
                     className="max-h-[650px] object-contain drop-shadow-2xl"
                   />
                 </div>
@@ -201,76 +196,55 @@ const ConditionneursSansSel = () => {
         {/* Testimonials Section */}
         <TestimonialsSection />
 
-        {/* Link CTA Section */}
-        <section className="py-16 bg-white border-y border-gray-100">
+        {/* CTA Section */}
+        <section className="bg-primary py-16 md:py-20">
           <div className="container mx-auto px-4 text-center">
-            <h3 className="text-2xl font-bold mb-8">C'est pas ça dont vous avez besoin ?</h3>
-            <div className="flex flex-wrap justify-center gap-8">
-              <NavLink to="/water-testing" className="flex items-center gap-2 text-blue-600 font-bold hover:underline">
-                ANALYZER L'EAU <ChevronRight className="h-4 w-4" />
-              </NavLink>
-              <NavLink to="/adoucisseurs" className="flex items-center gap-2 text-blue-600 font-bold hover:underline">
-                CHOISIR UN AUTRE SYSTÈME <ChevronRight className="h-4 w-4" />
-              </NavLink>
-            </div>
-          </div>
-        </section>
-
-        {/* Quality Section */}
-        <section className="py-24 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="flex flex-col lg:flex-row items-center gap-16">
-              <div className="lg:w-1/2">
-                <img
-                  src="https://images.unsplash.com/photo-1548839140-29a749e1cf4d?q=80&w=1200&auto=format&fit=crop"
-                  alt="Analyse d'eau professionnelle"
-                  className="rounded-2xl shadow-xl"
-                />
-              </div>
-              <div className="lg:w-1/2">
-                <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-left">
-                  Ne remettez jamais en question <br />la qualité de votre eau
-                </h2>
-                <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                  Notre expertise nous permet de vous proposer des solutions sur mesure.
-                  En commençant par une analyse rigoureuse de votre eau, nous identifions
-                  précisément vos besoins pour garantir une satisfaction totale.
-                </p>
-                <ul className="space-y-4">
-                  {[
-                    "Analyse gratuite et sans engagement",
-                    "Installation professionnelle certifiée",
-                    "Support client local et réactif"
-                  ].map((item, idx) => (
-                    <li key={idx} className="flex items-center gap-3">
-                      <CheckCircle2 className="h-6 w-6 text-green-500" />
-                      <span className="font-medium">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+            <h2 className="text-2xl md:text-3xl font-bold text-primary-foreground mb-4">
+              Besoin d'aide avec votre eau ?
+            </h2>
+            <p className="text-primary-foreground/80 text-lg mb-8 max-w-2xl mx-auto">
+              Discutez avec un expert en un clic. Disponible par téléphone ou à domicile selon vos préférences.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button
+                size="lg"
+                variant="outline"
+                className="rounded-full px-8 border-white text-white bg-transparent hover:bg-white/10"
+                asChild
+              >
+                <a href="tel:18552649328">Appelez le 1-855-264-9328</a>
+              </Button>
             </div>
           </div>
         </section>
 
         {/* FAQ Section */}
         <section className="py-24 bg-white">
-          <div className="container mx-auto px-4 max-w-4xl">
-            <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-16 text-center leading-[1.2] md:leading-[48px] tracking-tighter">
-              FAQ sur les conditionneurs
-            </h2>
-            <Accordion type="single" collapsible className="w-full">
-              {faqs.map((faq, idx) => (
-                <AccordionItem key={idx} value={`item-${idx}`} className="border-b-gray-200">
-                  <AccordionTrigger className="text-left font-bold text-lg hover:no-underline py-6">
-                    {faq.question}
-                  </AccordionTrigger>
-                  <AccordionContent className="text-gray-600 text-lg leading-relaxed pb-6">
-                    {faq.answer}
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
+          <div className="container mx-auto px-4">
+            <div className="text-left mb-16">
+              <h2
+                className="text-slate-900 tracking-tighter mb-8 text-left"
+                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+              >
+                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">FAQ sur les conditionneurs <br /> d'eau sans sel</span>
+              </h2>
+              <div className="w-24 h-1 bg-blue-600"></div>
+            </div>
+
+            <div className="max-w-4xl mx-auto">
+              <Accordion type="single" collapsible className="w-full">
+                {faqs.map((faq, idx) => (
+                  <AccordionItem key={idx} value={`item-${idx}`} className="border-b-gray-200">
+                    <AccordionTrigger className="text-left font-bold text-lg hover:no-underline py-6">
+                      {faq.question}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-gray-600 text-lg leading-relaxed pb-6">
+                      {faq.answer}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </div>
           </div>
         </section>
 

@@ -1,8 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import {
-    ArrowRight,
-    Check,
     ChevronRight,
     CheckCircle2,
     X,
@@ -14,13 +12,14 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { NavLink } from "@/components/NavLink";
-import heroFiltration from "@/assets/Enercare_JP_Day_2_Kitchen_Faucet_498-2048x1365.jpg";
+import heroFiltration from "@/assets/woman-and-kid-drink-glass-water.jpg";
 import drinkingWaterImg from "@/assets/Solutions d'eau potable.webp";
-import specializedFiltersImg from "@/assets/Filtres d'eau spécialisés.webp";
+import specializedFiltersImg from "@/assets/5e9e4e01e48a5.jpg";
 import waterSoftenerImg from "@/assets/Adoucisseurs d'eau.webp";
 import showerWaterImg from "@/assets/Shower-water.jpg";
-import uvSystemImg from "@/assets/Systèmes de désinfection UV.webp";
-import waterTestBg from "@/assets/Enercare_JP_Day_2_Kitchen_Faucet_498-2048x1365.jpg";
+import uvSystemImg from "@/assets/Filtres d'eau spécialisés.webp";
+import africanGirlImg from "@/assets/african-girl-stands-kitchen-drinks-water.jpg";
+import glassOfWaterImg from "@/assets/glass-of-water.jpeg";
 
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -66,11 +65,12 @@ const Filtration = () => {
                                 className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-white"
                                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                             >
-                                Systèmes de <span className="font-normal">Filtration d'eau</span>
+                                Systèmes de <span className="font-normal">Filtration d'eau,</span>
+                                <br />
+                                conçus pour <span className="font-normal">votre bien-être.</span>
                             </h1>
                             <p className="font-light text-[20px] leading-[28px] text-white/95 mb-8 max-w-xl">
-                                Améliorez la qualité de votre eau au quotidien avec nos solutions de filtration avancées.
-                                Fini le chlore, le calcaire et les impuretés.
+                                Ne laissez plus le doute couler de votre robinet. Nos systèmes de filtration d'eau avancés agissent comme un bouclier invisible contre les contaminants, vous garantissant une eau d'une pureté irréprochable pour boire, cuisiner et grandir en toute confiance.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4">
                                 <Button
@@ -80,7 +80,7 @@ const Filtration = () => {
                                     asChild
                                 >
                                     <NavLink to="/contact">
-                                        Demandez une analyse d'eau
+                                        Obtenez une consultation
                                     </NavLink>
                                 </Button>
                                 <Button
@@ -100,16 +100,58 @@ const Filtration = () => {
                     </div>
                 </section>
 
-                {/* 1. Intro Section (Design matching Kitchen Section from Adoucissement.tsx) */}
+                {/* 1. Dark Benefits Section */}
+                <section className="py-24 bg-blue-600 text-white text-center">
+                    <div className="container mx-auto px-6 text-center">
+                        <div className="text-center mb-16">
+                            <h2 className="text-[32px] md:text-[48px] font-normal text-white mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-center">
+                                Pourquoi choisir nos <br />systèmes de filtration d'eau ?
+                            </h2>
+                            <p className="text-blue-100 max-w-2xl mx-auto text-lg">
+                                Plus qu'une simple filtration, c'est une protection avancée pour votre santé et un confort durable pour votre foyer.
+                            </p>
+                        </div>
+                        <div className="flex flex-wrap justify-center gap-x-12 gap-y-16">
+                            {[
+                                { icon: GlassWater, title: "Goût exceptionnel", desc: "Élimine 99% du chlore et des mauvaises odeurs pour une eau pure au robinet." },
+                                { icon: CircleDollarSign, title: "Économies réelles", desc: "Réduisez vos dépenses en éliminant définitivement l'achat d'eau embouteillée." },
+                                { icon: Trash2, title: "Éco-responsable", desc: "Contribuez à la protection de l'environnement en réduisant les déchets plastiques." },
+                                { icon: Wrench, title: "Entretien facile", desc: "Des systèmes conçus pour une maintenance simple et des changements de filtres rapides." }
+                            ].map((benefit, i) => (
+                                <div key={i} className="flex flex-col items-center group w-full sm:w-[calc(50%-3rem)] lg:w-[calc(25%-3rem)]">
+                                    <div className="w-20 h-20 rounded-2xl bg-white flex items-center justify-center mb-8 transition-all group-hover:scale-110 group-hover:bg-white/10">
+                                        <benefit.icon className="h-10 w-10 text-blue-600 group-hover:text-white" />
+                                    </div>
+                                    <h4 className="text-2xl font-bold mb-4 tracking-tight">{benefit.title}</h4>
+                                    <p className="text-blue-100 leading-relaxed">{benefit.desc}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+                {/* 2. Intro Section (Design matching Kitchen Section from Adoucissement.tsx) */}
                 <section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-4">
-                        <div className="flex flex-col lg:flex-row-reverse items-center gap-16 mb-20">
-                            <div className="lg:w-1/2">
-                                <img
-                                    src={drinkingWaterImg}
-                                    alt="Systèmes de filtration d'eau potable"
-                                    className="rounded-2xl shadow-xl w-full"
-                                />
+                        <div className="flex flex-col lg:flex-row-reverse items-center gap-20 mb-20">
+                            {/* Left Side: Overlapping Images */}
+                            <div className="lg:w-1/2 relative h-[500px] md:h-[600px]">
+                                {/* Main Image (Larger) */}
+                                <div className="absolute top-0 right-0 w-4/5 h-[85%] rounded-[2rem] overflow-hidden shadow-2xl z-10 transition-transform duration-500 hover:scale-[1.02]">
+                                    <img
+                                        src={glassOfWaterImg}
+                                        alt="Systèmes de filtration d'eau potable"
+                                        className="w-full h-full object-cover"
+                                    />
+                                </div>
+                                {/* Overlapping Image (Smaller) */}
+                                <div className="absolute bottom-0 left-0 w-1/2 h-1/2 rounded-[2rem] overflow-hidden shadow-2xl z-20 border-[12px] border-gray-50 transition-transform duration-500 hover:scale-110">
+                                    <img
+                                        src={drinkingWaterImg}
+                                        alt="Eau pure"
+                                        className="w-full h-full object-cover"
+                                    />
+                                </div>
                             </div>
                             <div className="lg:w-1/2 text-left">
                                 <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
@@ -141,38 +183,29 @@ const Filtration = () => {
                     </div>
                 </section>
 
-                {/* 2. Dark Benefits Section */}
-                <section className="py-20 bg-[#0A192F] text-white">
-                    <div className="container mx-auto px-6">
-                        <div className="grid grid-cols-2 md:grid-cols-4 gap-12 text-center lg:px-20">
-                            {[
-                                { icon: GlassWater, title: "Goût exceptionnel", desc: "Élimine le chlore et les odeurs" },
-                                { icon: CircleDollarSign, title: "Économies réelles", desc: "Plus besoin d'eau embouteillée" },
-                                { icon: Trash2, title: "Éco-responsable", desc: "Réduit les déchets plastiques" },
-                                { icon: Wrench, title: "Entretien facile", desc: "Changement de filtre simplifié" }
-                            ].map((benefit, i) => (
-                                <div key={i} className="flex flex-col items-center group">
-                                    <div className="w-16 h-16 rounded-2xl bg-white/10 flex items-center justify-center mb-6 transition-all group-hover:scale-110 group-hover:bg-blue-600">
-                                        <benefit.icon className="h-8 w-8 text-blue-400 group-hover:text-white" />
-                                    </div>
-                                    <h3 className="text-lg font-bold mb-2 tracking-tight">{benefit.title}</h3>
-                                    <p className="text-slate-400 text-sm">{benefit.desc}</p>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </section>
 
                 {/* 3. Feature Section 1 (Under Sink - Design matching Adoucissement) */}
                 <section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-4">
-                        <div className="flex flex-col lg:flex-row items-center gap-16 mb-20">
-                            <div className="lg:w-1/2">
-                                <img
-                                    src={specializedFiltersImg}
-                                    alt="Systèmes de filtration sous l'évier"
-                                    className="rounded-2xl shadow-xl w-full"
-                                />
+                        <div className="flex flex-col lg:flex-row items-center gap-20 mb-20">
+                            {/* Left Side: Overlapping Images */}
+                            <div className="lg:w-1/2 relative h-[500px] md:h-[600px]">
+                                {/* Main Image (Larger) */}
+                                <div className="absolute top-0 left-0 w-4/5 h-[85%] rounded-[2rem] overflow-hidden shadow-2xl z-10 transition-transform duration-500 hover:scale-[1.02]">
+                                    <img
+                                        src={africanGirlImg}
+                                        alt="Fille buvant de l'eau pure"
+                                        className="w-full h-full object-cover"
+                                    />
+                                </div>
+                                {/* Overlapping Image (Smaller) */}
+                                <div className="absolute bottom-0 right-0 w-1/2 h-1/2 rounded-[2rem] overflow-hidden shadow-2xl z-20 border-[12px] border-gray-50 transition-transform duration-500 hover:scale-110">
+                                    <img
+                                        src={specializedFiltersImg}
+                                        alt="Osmose inverse"
+                                        className="w-full h-full object-cover"
+                                    />
+                                </div>
                             </div>
                             <div className="lg:w-1/2 text-left">
                                 <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
@@ -207,13 +240,25 @@ const Filtration = () => {
                 {/* 4. Feature Section 2 (Whole House - Design matching Adoucissement) */}
                 <section className="py-24 bg-white">
                     <div className="container mx-auto px-4">
-                        <div className="flex flex-col lg:flex-row-reverse items-center gap-16 mb-20">
-                            <div className="lg:w-1/2">
-                                <img
-                                    src={showerWaterImg}
-                                    alt="Eau filtrée sous la douche"
-                                    className="rounded-2xl shadow-xl w-full"
-                                />
+                        <div className="flex flex-col lg:flex-row-reverse items-center gap-20 mb-20">
+                            {/* Left Side: Overlapping Images */}
+                            <div className="lg:w-1/2 relative h-[500px] md:h-[600px]">
+                                {/* Main Image (Larger) */}
+                                <div className="absolute top-0 right-0 w-4/5 h-[85%] rounded-[2rem] overflow-hidden shadow-2xl z-10 transition-transform duration-500 hover:scale-[1.02]">
+                                    <img
+                                        src={showerWaterImg}
+                                        alt="Eau filtrée sous la douche"
+                                        className="w-full h-full object-cover"
+                                    />
+                                </div>
+                                {/* Overlapping Image (Smaller) */}
+                                <div className="absolute bottom-0 left-0 w-1/2 h-1/2 rounded-[2rem] overflow-hidden shadow-2xl z-20 border-[12px] border-white transition-transform duration-500 hover:scale-110">
+                                    <img
+                                        src={uvSystemImg}
+                                        alt="Filtration centrale"
+                                        className="w-full h-full object-cover"
+                                    />
+                                </div>
                             </div>
                             <div className="lg:w-1/2 text-left">
                                 <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
@@ -259,16 +304,7 @@ const Filtration = () => {
                                         className="w-full h-full object-cover"
                                     />
                                 </div>
-                                {/* Overlapping Image (Smaller) */}
-                                <div className="absolute bottom-0 right-0 w-1/2 h-1/2 rounded-[2rem] overflow-hidden shadow-2xl z-20 border-[12px] border-[#F8F9FA] transition-transform duration-500 hover:scale-110">
-                                    <img
-                                        src={specializedFiltersImg}
-                                        alt="Filtres spécialisés"
-                                        className="w-full h-full object-cover"
-                                    />
-                                </div>
                             </div>
-
                             {/* Right Side: Content */}
                             <div className="flex flex-col items-start text-left lg:pl-10">
                                 <span className="text-slate-400 text-xs font-bold uppercase tracking-[0.3em] mb-6">
@@ -286,35 +322,8 @@ const Filtration = () => {
                                     <Button className="bg-black hover:bg-slate-800 text-white rounded-full px-10 h-14 text-sm font-bold uppercase tracking-widest transition-all">
                                         En savoir plus
                                     </Button>
-                                    <NavLink to="/contact" className="text-slate-900 font-bold flex items-center gap-2 group text-sm uppercase tracking-widest">
-                                        En savoir plus <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                                    </NavLink>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </section>
-
-                {/* 6. Expertise / Trust Section (Wide Image) */}
-                <section className="relative min-h-[600px] flex items-center overflow-hidden">
-                    <div className="absolute inset-0 z-0">
-                        <img src={waterTestBg} alt="Expert Bricareau" className="w-full h-full object-cover" />
-                        <div className="absolute inset-0 bg-black/20" />
-                    </div>
-                    <div className="container mx-auto px-6 relative z-10">
-                        <div className="max-w-xl bg-white/95 backdrop-blur-md p-12 lg:p-16 rounded-[3rem] shadow-2xl animate-in fade-in slide-in-from-left duration-1000">
-                            <span className="text-blue-600 text-xs font-black uppercase tracking-[0.3em] mb-8 block">
-                                NOTRE EXPERTISE
-                            </span>
-                            <h2 className="text-4xl md:text-6xl font-bold text-slate-900 leading-[1.05] tracking-tighter mb-8">
-                                Conçus pour votre bien-être.
-                            </h2>
-                            <p className="text-lg text-slate-600 font-medium mb-10 leading-relaxed italic">
-                                "Nos solutions sont conçues pour améliorer votre quotidien, une goutte d'eau à la fois. Nous allions technologie et expertise pour votre tranquillité."
-                            </p>
-                            <Button className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-10 h-14 text-lg font-bold shadow-xl shadow-blue-600/20">
-                                Demander une analyse d'eau
-                            </Button>
                         </div>
                     </div>
                 </section>

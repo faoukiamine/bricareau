@@ -134,10 +134,10 @@ const Adoucissement = () => {
                             </div>
                             <div className="lg:w-1/2">
                                 <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
-                                    La technologie au service de votre eau.
+                                    L'éclat d'une vaisselle protégée, la douceur d'une eau maîtrisée.
                                 </h2>
                                 <p className="font-light text-[20px] leading-[28px] text-gray-600 mb-8">
-                                    Découvrez nos adoucisseurs au sel de dernière génération : intelligents, économes en eau et conçus pour durer. Une eau douce, traitée avec précision pour votre confort total.
+                                    Offrez à votre foyer le luxe d'une eau sans calcaire. Nos adoucisseurs de pointe éliminent le tartre à la source, garantissant non seulement une vaisselle étincelante sans aucune trace, mais aussi une protection durable de vos appareils électroménagers et de votre plomberie. Redécouvrez la brillance et la douceur dans chaque recoin de votre maison.
                                 </p>
                                 <NavLink to="/adoucisseur-eau-residentiel" className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-3 rounded-full transition-colors">
                                     Découvrir nos adoucisseurs d'eau
