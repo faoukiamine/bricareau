@@ -52,10 +52,66 @@ const reviews = [
 ];
 
 const faqItems = [
-    { q: "Quels sont les avantages d'un adoucisseur d'eau ?", a: "Un adoucisseur élimine le calcaire, protège vos appareils, adoucit votre peau et vos cheveux, et vous fait économiser sur les produits de nettoyage." },
-    { q: "Comment fonctionne un adoucisseur Bricareau ?", a: "Il utilise un processus d'échange d'ions pour remplacer les minéraux de dureté (calcium et magnésium) par des ions sodium doux." },
-    { q: "À quelle fréquence faut-il entretenir l'appareil ?", a: "Nous recommandons un entretien annuel pour garantir des performances optimales et prolonger la vie du système." },
-    { q: "Quelle quantité de sel consomme l'adoucisseur ?", a: "Cela dépend de votre consommation d'eau et de la dureté de celle-ci. Nos systèmes HE sont parmi les plus économes du marché." },
+    {
+        q: "Pourquoi un adoucisseur est-il presque essentiel pour l'eau de puits ?",
+        a: "L'eau souterraine est naturellement riche en minéraux comme le calcium et le magnésium. Sans adoucisseur, cette dureté élevée provoque une accumulation rapide de calcaire qui endommage vos tuyaux, votre chauffe-eau et vos appareils ménagers."
+    },
+    {
+        q: "L'adoucisseur peut-il éliminer le fer présent dans mon eau de puits ?",
+        a: "Oui, nos adoucisseurs spécialisés peuvent éliminer de petites quantités de fer dissous (fer clair). Cependant, pour des concentrations élevées ou du fer oxydé, nous recommandons un filtre à fer dédié en amont pour protéger le système."
+    },
+    {
+        q: "Quelle est la différence entre un adoucisseur municipal et un modèle pour puits ?",
+        a: "Les modèles pour puits sont conçus pour gérer des niveaux de dureté beaucoup plus variables et souvent plus élevés, ainsi que la présence fréquente de fer et de manganèse, ce que les modèles municipaux (orientés chlore) ne traitent pas."
+    },
+    {
+        q: "Comment l'adoucisseur gère-t-il les sédiments ou le sable du puits ?",
+        a: "L'adoucisseur n'est pas un filtre à sédiments. Pour l'eau de puits, il est impératif d'installer un pré-filtre à sédiments (5 à 20 microns) avant l'adoucisseur pour éviter que les particules n'obstruent la vanne de contrôle et les résines."
+    },
+    {
+        q: "Est-ce que l'adoucisseur rend l'eau de mon puits potable ?",
+        a: "Non, l'adoucisseur améliore la qualité esthétique et physico-chimique de l'eau (calcaire, fer). Pour la potabilité microbiologique (bactéries), vous devez impérativement installer un système de désinfection UV."
+    },
+    {
+        q: "À quelle fréquence faut-il vérifier le sel pour une eau de puits ?",
+        a: "Étant donné que l'eau de puits est souvent plus dure, la consommation de sel peut être plus élevée. Nous recommandons de vérifier le bac à sel une fois par mois et de le maintenir au moins au tiers de sa capacité."
+    },
+    {
+        q: "Quel type de sel est recommandé pour les propriétaires de puits ?",
+        a: "Nous recommandons fortement l'utilisation de pastilles de sel de haute pureté avec additif 'anti-fer' (Iron Fighter). Cela aide à nettoyer les résines et prévient l'encrassement dû au fer ferreux."
+    },
+    {
+        q: "Un adoucisseur peut-il éliminer l'odeur d'œufs pourris ?",
+        a: "Non. Cette odeur est causée par le gaz sulfure d'hydrogène. Bien que l'adoucisseur puisse capter une infime partie du soufre, un filtre à charbon ou un système d'oxydation à l'air est nécessaire pour éliminer totalement cette odeur."
+    },
+    {
+        q: "L'eau de puits réduit-elle la durée de vie de l'adoucisseur ?",
+        a: "Si l'eau est très chargée en fer ou en sédiments sans prétraitement, les résines peuvent s'épuiser plus vite. Avec un entretien annuel et une configuration adéquate par nos experts, nos systèmes durent de 15 à 20 ans."
+    },
+    {
+        q: "Pourquoi mon eau de puits est-elle encore jaunâtre après l'adoucisseur ?",
+        a: "Si la dureté est éliminée mais que l'eau reste jaune, il s'agit probablement de tanins (matières organiques). Un adoucisseur standard ne traite pas les tanins; un système d'échange d'anions spécifique est requis."
+    },
+    {
+        q: "Est-ce que l'adoucisseur peut être installé dans un puits ou à l'extérieur ?",
+        a: "Non, l'unité de contrôle électronique et le bac à sel doivent être protégés du gel et des intempéries. L'installation idéale se fait dans un sous-sol, un garage chauffé ou un placard technique isolé."
+    },
+    {
+        q: "Combien d'eau utilise la régénération d'un adoucisseur Bricareau ?",
+        a: "Nos modèles High Efficiency calculent la consommation exacte et utilisent entre 30 et 60 gallons par cycle de régénération, soit moins que ce qu'une personne consomme par jour, optimisant ainsi votre puits."
+    },
+    {
+        q: "Le rejet de sel est-il dangereux pour ma fosse septique ?",
+        a: "Les études démontrent que le rejet de saumure d'un adoucisseur moderne n'endommage pas les fosses septiques. Au contraire, le calcium rejeté peut parfois aider à maintenir la porosité du champ d'épuration."
+    },
+    {
+        q: "Faut-il ajuster la pression de ma pompe de puits pour l'adoucisseur ?",
+        a: "Nos systèmes fonctionnent avec la pression standard des réservoirs de puits (souvent 30-50 psi ou 40-60 psi). Aucun ajustement majeur n'est requis tant que votre pompe fournit un débit constant."
+    },
+    {
+        q: "Quelle garantie Bricareau offre-t-elle pour les applications d'eau de puits ?",
+        a: "Nous offrons la même garantie premium : 10 ans sur la bouteille de résine et la tête de contrôle, ce qui témoigne de la confiance que nous avons dans la robustesse de nos équipements face aux eaux difficiles."
+    }
 ];
 
 const comparisonData = [

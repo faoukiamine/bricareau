@@ -200,9 +200,16 @@ const FiltrationSousEvier = () => {
                 {/* 6. Comparison Table */}
                 <section className="py-24 bg-white">
                     <div className="container mx-auto px-4">
-                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal text-slate-900 mb-16 text-center leading-[1.1] tracking-tighter">
-                            Comparez nos solutions <br />de filtration d'eau potable.
-                        </h2>
+                        <div className="text-left mb-16">
+                            <h2
+                                className="text-slate-900 tracking-tighter mb-8 text-left"
+                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                            >
+                                <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Comparez nos solutions</span>
+                                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">de filtration d'eau potable.</span>
+                            </h2>
+                            <div className="w-24 h-1 bg-blue-600"></div>
+                        </div>
                         <div className="overflow-x-auto">
                             <table className="w-full min-w-[1000px] border-collapse bg-white rounded-2xl overflow-hidden shadow-sm">
                                 <thead>
@@ -253,44 +260,92 @@ const FiltrationSousEvier = () => {
 
                 {/* 8. FAQ Section */}
                 <section className="py-24 bg-white border-t border-slate-100">
-                    <div className="container mx-auto px-6 max-w-4xl text-left">
-                        <div className="text-center mb-16">
-                            <span className="text-blue-600 text-[10px] font-black uppercase tracking-[0.5em] mb-4 block">
-                                POUR VOUS ÉCLAIRER
-                            </span>
-                            <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-center">
-                                Questions fréquentes
+                    <div className="container mx-auto px-4 text-left">
+                        <div className="text-left mb-16">
+                            <h2
+                                className="text-slate-900 tracking-tighter mb-8 text-left"
+                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                            >
+                                <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Pour vous éclairer</span>
+                                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">Questions fréquentes</span>
                             </h2>
+                            <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
-                        <Accordion type="single" collapsible className="w-full">
-                            {[
-                                {
-                                    q: "Comment fonctionne réellement l'osmose inverse ?",
-                                    a: "C'est un processus qui force l'eau à traverser une membrane semi-perméable ultra-fine. Cette membrane est si dense qu'elle ne laisse passer pratiquement que les molécules d'eau, retenant les polluants, les métaux lourds et les microbes qui sont ensuite évacués vers le drain.",
-                                },
-                                {
-                                    q: "L'osmose inverse gaspille-t-elle beaucoup d'eau ?",
-                                    a: "Historiquement, les systèmes étaient moins efficaces. Aujourd'hui, nos modèles haute performance réduisent considérablement le ratio d'évacuation. De plus, les économies réalisées en n'achetant plus d'eau embouteillée compensent largement cette consommation minime.",
-                                },
-                                {
-                                    q: "L'eau osmosée est-elle 'morte' car déminéralisée ?",
-                                    a: "L'osmose élimine en effet les minéraux (bons et mauvais). C'est pourquoi nos modèles Elite et Plus incluent une étape de reminéralisation à la fin du cycle pour réintroduire du calcium et du magnésium essentiels, équilibrant le pH pour une eau alcaline et saine.",
-                                },
-                                {
-                                    q: "Quelle est la durée de vie des filtres ?",
-                                    a: "Les pré-filtres et post-filtres se changent généralement tous les 6 à 12 mois. La membrane d'osmose inverse, elle, peut durer de 2 à 4 ans selon la qualité de l'eau d'entrée et l'entretien régulier du système.",
-                                },
-                            ].map((item, idx) => (
-                                <AccordionItem key={idx} value={`item-${idx}`} className="border-b-slate-100 px-4">
-                                    <AccordionTrigger className="text-left font-bold text-xl hover:no-underline py-8 text-slate-800">
-                                        {item.q}
-                                    </AccordionTrigger>
-                                    <AccordionContent className="text-slate-500 text-lg leading-relaxed pb-8">
-                                        {item.a}
-                                    </AccordionContent>
-                                </AccordionItem>
-                            ))}
-                        </Accordion>
+                        <div className="max-w-4xl mx-auto">
+                            <Accordion type="single" collapsible className="w-full">
+                                {[
+                                    {
+                                        q: "Quels sont les avantages d'un système de filtration sous l'évier ?",
+                                        a: "Il offre une eau de qualité embouteillée directement à votre robinet, élimine le goût et l'odeur de chlore, retire les métaux lourds et réduit drastiquement vos dépenses ainsi que votre empreinte plastique.",
+                                    },
+                                    {
+                                        q: "Quels problèmes d'eau ce système peut-il résoudre ?",
+                                        a: "Il est particulièrement efficace contre le chlore, les sédiments, le plomb, le mercure, les résidus de pesticides, et les microplastiques, garantissant une eau saine pour boire et cuisiner.",
+                                    },
+                                    {
+                                        q: "Quelle est la différence entre un filtre standard et l'osmose inverse ?",
+                                        a: "Un filtre standard réduit principalement le chlore et les sédiments. L'osmose inverse va plus loin en éliminant jusqu'à 99 % de tous les contaminants dissous grâce à une membrane semi-perméable ultra-fine.",
+                                    },
+                                    {
+                                        q: "À quelle fréquence faut-il remplacer les filtres ?",
+                                        a: "Pour une performance optimale, les cartouches de pré-filtration et de post-filtration doivent être changées tous les 6 à 12 mois. La membrane d'osmose inverse peut durer de 2 à 4 ans.",
+                                    },
+                                    {
+                                        q: "Le système prend-il beaucoup de place sous l'évier ?",
+                                        a: "Nos systèmes modernes sont très compacts. Ils occupent généralement moins de 25 % de l'espace de votre armoire sous l'évier, vous laissant de la place pour vos autres articles ménagers.",
+                                    },
+                                    {
+                                        q: "Puis-je l'utiliser pour mon réfrigérateur et ma machine à glaçons ?",
+                                        a: "Absolument ! Nous pouvons raccorder votre système de filtration à votre frigo pour que vous profitiez d'une eau fraîche et de glaçons cristallins, sans aucun goût indésirable.",
+                                    },
+                                    {
+                                        q: "L'installation nécessite-t-elle de percer mon comptoir ?",
+                                        a: "Nous installons généralement un robinet dédié élégant. Si vous avez déjà un trou pour un distributeur de savon, nous pouvons l'utiliser. Sinon, nos techniciens effectuent un perçage précis et propre.",
+                                    },
+                                    {
+                                        q: "Est-ce que l'eau osmosée est trop acide ?",
+                                        a: "L'osmose peut légèrement abaisser le pH. C'est pourquoi nos modèles Elite et Plus incluent une cartouche de reminéralisation qui rééquilibre le pH et redonne à l'eau un goût frais et naturel.",
+                                    },
+                                    {
+                                        q: "Le système de filtration est-il bruyant ?",
+                                        a: "Non, les systèmes de filtration sous évier sont presque totalement silencieux. Vous pourriez entendre un léger murmure d'eau uniquement pendant le cycle de remplissage du réservoir.",
+                                    },
+                                    {
+                                        q: "L'osmose inverse 'gaspille'-t-elle de l'eau ?",
+                                        a: "Les systèmes modernes sont très efficaces. L'eau utilisée pour rincer la membrane est nécessaire pour maintenir la pureté. Ce coût est dérisoire comparé à l'achat d'eau en bouteille.",
+                                    },
+                                    {
+                                        q: "L'entretien est-il compliqué à faire soi-même ?",
+                                        a: "Bien que certains clients le fassent, Bricareau offre un service de maintenance professionnelle pour garantir l'étanchéité, la désinfection du système et une performance constante année après année.",
+                                    },
+                                    {
+                                        q: "Est-ce efficace contre les PFAS et les résidus de médicaments ?",
+                                        a: "Oui, la technologie d'osmose inverse combinée au charbon actif est l'une des méthodes les plus reconnues pour réduire les PFAS ('produits chimiques éternels') et les contaminants émergents.",
+                                    },
+                                    {
+                                        q: "Le système fonctionne-t-il sans électricité ?",
+                                        a: "La majorité de nos systèmes fonctionnent uniquement avec la pression d'eau de votre résidence. Seuls certains modèles haute capacité nécessitent une petite pompe de surpression électrique.",
+                                    },
+                                    {
+                                        q: "Quelle est la garantie offerte par Bricareau ?",
+                                        a: "Nous offrons une protection complète incluant 10 ans sur les composantes structurelles et un support technique prioritaire pour tous nos clients installés.",
+                                    },
+                                    {
+                                        q: "Pourquoi choisir Bricareau plutôt qu'un pichet filtrant ?",
+                                        a: "Contrairement aux pichets qui ont une capacité limitée et une filtration superficielle, nos systèmes offrent un débit constant et une filtration de niveau industriel beaucoup plus profonde et durable.",
+                                    },
+                                ].map((item, idx) => (
+                                    <AccordionItem key={idx} value={`item-${idx}`} className="border-b-slate-100 px-4">
+                                        <AccordionTrigger className="text-left font-bold text-xl hover:no-underline py-8 text-slate-800">
+                                            {item.q}
+                                        </AccordionTrigger>
+                                        <AccordionContent className="text-slate-500 text-lg leading-relaxed pb-8">
+                                            {item.a}
+                                        </AccordionContent>
+                                    </AccordionItem>
+                                ))}
+                            </Accordion>
+                        </div>
                     </div>
                 </section>
 

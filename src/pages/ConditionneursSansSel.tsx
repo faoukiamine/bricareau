@@ -42,23 +42,63 @@ const whyChoose = [
 const faqs = [
   {
     question: "Qu'est-ce qu'un conditionneur d'eau sans sel ?",
-    answer: "Un conditionneur d'eau sans sel utilise une technologie de cristallisation ou de séquestration pour empêcher le calcaire d'adhérer aux surfaces, sans retirer les minéraux ni ajouter de sel."
+    answer: "Contrairement à l'adoucisseur, le conditionneur ne retire pas les minéraux. Il utilise une technologie de cristallisation assistée par modèle (TAC) pour transformer les minéraux de dureté en cristaux microscopiques inactifs qui ne peuvent plus adhérer aux surfaces."
   },
   {
-    question: "Comment fonctionne un conditionneur d'eau sans sel ?",
-    answer: "Le système transforme les minéraux de dureté en cristaux microscopiques stables qui flottent dans l'eau au lieu de se fixer sur vos tuyaux et robinets."
+    question: "Quelle est la principale différence avec un adoucisseur avec sel ?",
+    answer: "L'adoucisseur remplace le calcium par du sodium (échange d'ions), ce qui rend l'eau 'glissante'. Le conditionneur conserve les minéraux mais neutralise leur pouvoir incrustant. Il n'utilise ni sel, ni électricité, et ne rejette pas d'eau."
   },
   {
-    question: "Quelle est la différence avec un adoucisseur Bricareau ?",
-    answer: "Contrairement à l'adoucisseur classique, le conditionneur ne nécessite aucun sel, ne consomme pas d'eau pour le nettoyage et conserve les minéraux bénéfiques."
+    question: "Quels sont les avantages écologiques de ce système ?",
+    answer: "C'est la solution la plus verte : zéro rejet de saumure dans les nappes phréatiques, zéro consommation d'eau pour le nettoyage, et aucune électricité requise. C'est idéal pour les zones soumises à des restrictions environnementales."
   },
   {
-    question: "Quelle est la meilleure option pour moi ?",
-    answer: "Le choix dépend du niveau de dureté de votre eau et de vos préférences écologiques. Une analyse d'eau gratuite peut vous aider à décider."
+    question: "Est-ce que l'eau procure la même sensation de 'douceur' ?",
+    answer: "Non. Comme les minéraux sont toujours présents, vous n'aurez pas la sensation glissante ou savonneuse typique de l'eau adoucie au sel. Cependant, l'eau sera beaucoup moins agressive pour votre peau et vos cheveux que l'eau dure brute."
   },
   {
-    question: "Pourquoi choisir un conditionneur d'eau plutôt qu'un adoucissement classique ?",
-    answer: "C'est une option zéro entretien, sans électricité et écologique, idéale pour les résidences avec des restrictions de rejet de saumure."
+    question: "Le calcaire va-t-il disparaître de ma bouilloire ou de ma douche ?",
+    answer: "Le conditionneur prévient l'accumulation de calcaire dur à l'intérieur de votre plomberie et de votre chauffe-eau. En surface (verre, chrome), vous pourriez voir une légère poussière blanche facile à essuyer, car le calcaire ne peut plus s'incruster solidement."
+  },
+  {
+    question: "Est-ce efficace contre une eau extrêmement dure ?",
+    answer: "Les conditionneurs sont excellents pour une dureté modérée à élevée. Pour une eau extrêmement dure (plus de 25-30 grains), un adoucisseur traditionnel à sel reste souvent la solution la plus recommandée pour un confort optimal."
+  },
+  {
+    question: "Quels problèmes le conditionneur résout-il en priorité ?",
+    answer: "Il protège efficacement vos investissements : chauffe-eau, lave-vaisselle, et tuyauterie. Il élimine le tartre existant au fil du temps et empêche la formation de nouveaux dépôts calcaires corrosifs."
+  },
+  {
+    question: "Y a-t-il un entretien régulier à prévoir ?",
+    answer: "C'est l'un des plus grands avantages : aucun sel à porter, aucune programmation à vérifier. Seul le média filtrant interne doit être remplacé, généralement tous les 3 à 5 ans selon votre consommation d'eau."
+  },
+  {
+    question: "L'eau traitée est-elle meilleure pour la santé ?",
+    answer: "Oui, car elle conserve le calcium et le magnésium naturels dont votre corps a besoin, sans ajouter de sodium (sel). C'est l'option préférée de ceux qui suivent un régime pauvre en sel ou qui aiment le goût naturel de l'eau minérale."
+  },
+  {
+    question: "Puis-je l'installer sur une eau de puits ?",
+    answer: "Oui, mais une analyse préalable est nécessaire. Le fer, le manganèse ou le cuivre peuvent empoisonner le média TAC. Si votre eau de puits contient ces métaux, des filtres de prétraitement seront nécessaires."
+  },
+  {
+    question: "Est-ce que le système réduit la pression d'eau ?",
+    answer: "Absolument pas. Nos systèmes sont conçus pour offrir un débit élevé avec une perte de pression négligeable, garantissant que vous ne sentirez aucune différence sous la douche."
+  },
+  {
+    question: "Faut-il une prise électrique à proximité ?",
+    answer: "Non. Le système fonctionne uniquement avec la pression de l'eau entrante. C'est une solution passive qui ne tombera jamais en panne à cause d'un problème électronique ou d'une panne de courant."
+  },
+  {
+    question: "Est-ce que cela élimine les taches sur la vaisselle ?",
+    answer: "Il réduit considérablement les résidus incrustés. Les traces résiduelles sur les verres sont transformées en une fine poudre de minéraux neutralisés qui s'enlève d'un simple coup de linge, contrairement au tartre dur."
+  },
+  {
+    question: "Quelle est la durée de vie du réservoir ?",
+    answer: "Le réservoir robuste Bricareau est conçu pour durer plus de 20 ans. Seul le média actif à l'intérieur est considéré comme un consommable à long terme."
+  },
+  {
+    question: "Quelle est la garantie offerte par Bricareau ?",
+    answer: "Nous offrons une garantie de satisfaction ainsi qu'une protection de 10 ans sur le réservoir et les composants structurels, assortie de notre service après-vente légendaire."
   }
 ];
 
@@ -226,7 +266,8 @@ const ConditionneursSansSel = () => {
                 className="text-slate-900 tracking-tighter mb-8 text-left"
                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
               >
-                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">FAQ sur les conditionneurs <br /> d'eau sans sel</span>
+                <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block text-[#60A5FA] uppercase text-sm font-bold tracking-[0.3em] mb-4">Pour vous éclairer</span>
+                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">Questions fréquentes sur les conditionneurs</span>
               </h2>
               <div className="w-24 h-1 bg-blue-600"></div>
             </div>
@@ -256,7 +297,8 @@ const ConditionneursSansSel = () => {
                 className="text-slate-900 tracking-tighter mb-8 text-left"
                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
               >
-                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">Ressources</span>
+                <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Ressources &</span>
+                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">Articles conseils</span>
               </h2>
               <div className="w-24 h-1 bg-blue-600"></div>
             </div>
