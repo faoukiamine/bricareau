@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import { Button } from "@/components/ui/button";
-import heroBath from "@/assets/kid-playing-bathtub.jpg";
+import heroBath from "@/assets/young-nude-woman-taking-relaxing-foamy-bath.jpg";
 import kitchenImg from "@/assets/18036672_SIE_2720_1530_21_04_30_SIE_CRM_Dishwasher_Hand_Taking_Out_Wine_Glass_Basket_Motiv_11_0017.webp";
 import untitledImg from "@/assets/Untitled23.png";
 import mceclip0Img from "@/assets/mceclip0.png";
@@ -23,7 +23,9 @@ import {
     X,
     Sparkles,
     Clock,
-    Home
+    Home,
+    Award,
+    HandCoins
 } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import {
@@ -70,53 +72,34 @@ const Adoucissement = () => {
                                 className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14"
                                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                             >
-                                Démarrer ici
+                                Planifiez une consultation gratuite sur l'eau
                             </Button>
                         </div>
                     </div>
                 </section>
 
-                <section className="py-24 bg-white">
-                    <div className="container mx-auto px-4">
-                        <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
-                            <div className="lg:w-1/2">
-                                <img
-                                    src="https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png"
-                                    alt="Adoucisseur"
-                                    className="w-full max-w-md mx-auto"
-                                />
-                            </div>
-                            <div className="lg:w-1/2">
-                                <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
-                                    Éliminez les coûts, économisez l'énergie et simplifiez vos tâches
-                                </h2>
-                                <p className="font-light text-[20px] leading-[28px] text-gray-600 mb-8 max-w-xl">
-                                    Nos adoucisseurs d'eau haute technologie réduisent le calcaire, prolongent la vie de
-                                    vos appareils et rendent le nettoyage plus facile que jamais.
-                                </p>
-                                <NavLink to="/contact-residentiel" className="text-blue-600 font-bold flex items-center gap-2 group">
-                                    EN SAVOIR PLUS <ChevronRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
-                                </NavLink>
-                            </div>
+                {/* 2. Pourquoi choisir - Blue Section (Merged with Plus qu'un adoucisseur) */}
+                <section className="py-24 bg-blue-600 text-white text-center">
+                    <div className="container mx-auto px-6 text-center">
+                        <div className="text-center mb-16">
+                            <h2 className="text-[32px] md:text-[48px] font-normal text-white mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-center">
+                                Les avantages de l'adoucissement d'eau
+                            </h2>
                         </div>
-                    </div>
-                </section>
-
-                <section className="py-20 bg-[#00153D] text-white">
-                    <div className="container mx-auto px-6">
-                        <h2 className="text-[32px] md:text-[48px] font-normal text-center mb-16 text-white leading-[1.2] md:leading-[48px] tracking-tighter">Avantages de l'adoucissement <br />de l'eau</h2>
-                        <div className="grid grid-cols-2 md:grid-cols-4 gap-12 text-center lg:px-20">
+                        <div className="flex flex-wrap justify-center gap-x-12 gap-y-16">
                             {[
-                                { icon: Heart, text: "Peau & Cheveux doux" },
-                                { icon: Shield, text: "Protection Plomberie" },
-                                { icon: Shirt, text: "Linge soyeux" },
-                                { icon: TrendingDown, text: "Économies d'énergie" }
-                            ].map((item, i) => (
-                                <div key={i} className="flex flex-col items-center">
-                                    <div className="w-12 h-12 rounded-full border border-blue-400 flex items-center justify-center mb-4">
-                                        <item.icon className="h-6 w-6 text-blue-400" />
+                                { icon: Droplets, title: "Qualité supérieure", desc: "Une douceur incomparable pour votre peau et vos cheveux dès la première douche." },
+                                { icon: Shield, title: "Protection totale", desc: "Prolongez la durée de vie de votre plomberie et de vos électroménagers coûteux." },
+                                { icon: Shirt, title: "Linge plus doux", desc: "Des vêtements qui restent éclatants et souples plus longtemps, sans adoucissants." },
+                                { icon: HandCoins, title: "Économies garanties", desc: "Réduisez vos factures d'énergie et vos dépenses en savons et détergents de 50%." },
+
+                            ].map((item, id) => (
+                                <div key={id} className="flex flex-col items-center group w-full sm:w-[calc(50%-3rem)] lg:w-[calc(25%-3rem)]">
+                                    <div className="w-20 h-20 rounded-2xl bg-white flex items-center justify-center mb-8 transition-all group-hover:scale-110 group-hover:bg-white/10">
+                                        <item.icon className="h-10 w-10 text-blue-600 group-hover:text-white" />
                                     </div>
-                                    <span className="font-medium">{item.text}</span>
+                                    <h4 className="text-2xl font-bold mb-4 tracking-tight">{item.title}</h4>
+                                    <p className="text-blue-100 leading-relaxed">{item.desc}</p>
                                 </div>
                             ))}
                         </div>
@@ -243,49 +226,10 @@ const Adoucissement = () => {
                     </div>
                 </section>
 
-                <section className="py-24 bg-gray-50">
-                    <div className="container mx-auto px-4">
-                        <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold text-slate-900 mb-16 leading-[1.1] tracking-tighter text-center">Comparer nos systèmes d'adoucissement d'eau</h2>
-                        <div className="overflow-x-auto">
-                            <table className="w-full min-w-[800px] border-collapse bg-white rounded-2xl overflow-hidden shadow-sm">
-                                <thead>
-                                    <tr className="bg-gray-100">
-                                        <th className="p-8 text-left text-gray-400 font-medium uppercase tracking-widest text-xs">MODELLES</th>
-                                        <th className="p-8 text-center text-gray-900 font-bold text-xl">Bricareau HE</th>
-                                        <th className="p-8 text-center text-gray-900 font-bold text-xl text-gray-400 font-normal italic">Bricareau Medallist</th>
-                                    </tr>
-                                </thead>
-                                <tbody className="divide-y divide-gray-100">
-                                    {[
-                                        { f: "Technologie High Efficiency", h: true, m: true },
-                                        { f: "Aqua-Sensor®", h: true, m: true },
-                                        { f: "AccuSoft® Microprocessor", h: true, m: true },
-                                        { f: "Dial-a-Softness®", h: true, m: true },
-                                        { f: "Connectivité App", h: true, m: false },
-                                        { f: "Débit ultra-rapide", h: true, m: false },
-                                        { f: "Détection de sel", h: "Option", m: false },
-                                        { f: "Installation extérieure", h: "Option", m: true }
-                                    ].map((row, i) => (
-                                        <tr key={i} className="hover:bg-gray-50 transition-colors">
-                                            <td className="p-8 font-medium text-gray-700">{row.f}</td>
-                                            <td className="p-8 text-center">
-                                                {typeof row.h === 'string' ? row.h : (row.h ? <Check className="h-6 w-6 text-blue-600 mx-auto" /> : <X className="h-6 w-6 text-gray-300 mx-auto" />)}
-                                            </td>
-                                            <td className="p-8 text-center">
-                                                {typeof row.m === 'string' ? row.m : (row.m ? <Check className="h-6 w-6 text-blue-600 mx-auto" /> : <X className="h-6 w-6 text-gray-300 mx-auto" />)}
-                                            </td>
-                                        </tr>
-                                    ))}
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </section>
-
                 {/* 6. Testimonials */}
                 <TestimonialsSection />
 
-                {/* 7. Water Test Section (Refactored Design) */}
+                {/* 7. Water Test Section */}
                 <section className="py-20 bg-white">
                     <div className="container mx-auto px-4">
                         <div className="flex flex-col lg:flex-row items-stretch gap-0 rounded-[3rem] overflow-hidden shadow-2xl">
@@ -299,7 +243,7 @@ const Adoucissement = () => {
                             </div>
                             <div className="lg:w-1/2 bg-blue-600 text-white p-12 lg:p-20 flex flex-col justify-center items-start text-left">
                                 <span className="text-white/80 text-xs font-black uppercase tracking-[0.3em] mb-8 block">
-                                    ANALYSE PROFESSIONNELLE
+                                    Qualité de l'eau
                                 </span>
                                 <h2 className="text-[32px] md:text-[48px] font-normal text-white mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
                                     L'excellence commence par une eau parfaite.
@@ -308,7 +252,7 @@ const Adoucissement = () => {
                                     Le luxe, c'est de ne pas avoir à se soucier de la qualité de ce que l'on consomme. Offrez-vous la sérénité d'une eau analysée par des experts, pour une maison où tout brille, sans effort et sans compromis.
                                 </p>
                                 <Button className="bg-white text-blue-600 hover:bg-blue-50 rounded-full px-12 h-16 text-xl font-bold shadow-xl transition-all hover:scale-105" asChild>
-                                    <NavLink to="/water-testing">Demandez une analyse</NavLink>
+                                    <NavLink to="/water-testing">Demandez une analyse d'eau</NavLink>
                                 </Button>
                             </div>
                         </div>
@@ -317,25 +261,34 @@ const Adoucissement = () => {
 
                 {/* 10. FAQ Section */}
                 <section className="py-24 bg-white">
-                    <div className="container mx-auto px-6 max-w-4xl">
-                        <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold text-slate-900 mb-12 text-center leading-[1.1] tracking-tighter">FAQ sur les adoucisseurs d'eau</h2>
-                        <Accordion type="single" collapsible className="w-full">
-                            {[
-                                { q: "Quels sont les avantages d'un adoucisseur d'eau ?", a: "Un adoucisseur élimine le calcaire, protège vos appareils, adoucit votre peau et vos cheveux, et vous fait économiser sur les produits de nettoyage." },
-                                { q: "Comment fonctionne un adoucisseur Bricareau ?", a: "Il utilise un processus d'échange d'ions pour remplacer les minéraux de dureté (calcium et magnésium) par des ions sodium doux." },
-                                { q: "À quelle fréquence faut-il entretenir l'appareil ?", a: "Nous recommandons un entretien annuel pour garantir des performances optimales et prolonger la vie du système." },
-                                { q: "Quelle quantité de sel consomme l'adoucisseur ?", a: "Cela dépend de votre consommation d'eau et de la dureté de celle-ci. Nos systèmes HE sont parmi les plus économes du marché." }
-                            ].map((item, idx) => (
-                                <AccordionItem key={idx} value={`item-${idx}`} className="border-b-gray-200">
-                                    <AccordionTrigger className="text-left font-bold text-lg hover:no-underline py-6">
-                                        {item.q}
-                                    </AccordionTrigger>
-                                    <AccordionContent className="font-light text-[20px] leading-[28px] text-gray-600 pb-6 text-left">
-                                        {item.a}
-                                    </AccordionContent>
-                                </AccordionItem>
-                            ))}
-                        </Accordion>
+                    <div className="container mx-auto px-4">
+                        <div className="text-left mb-16">
+                            <h2
+                                className="text-slate-900 tracking-tighter mb-8 text-left"
+                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                            >                                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">FAQ sur l'adoucissement de l'eau</span>
+                            </h2>
+                            <div className="w-24 h-1 bg-blue-600"></div>
+                        </div>
+                        <div className="max-w-4xl mx-auto">
+                            <Accordion type="single" collapsible className="w-full">
+                                {[
+                                    { q: "Quels sont les avantages d'un adoucisseur d'eau ?", a: "Un adoucisseur élimine le calcaire, protège vos appareils, adoucit votre peau et vos cheveux, et vous fait économiser sur les produits de nettoyage." },
+                                    { q: "Comment fonctionne un adoucisseur Bricareau ?", a: "Il utilise un processus d'échange d'ions pour remplacer les minéraux de dureté (calcium et magnésium) par des ions sodium doux." },
+                                    { q: "À quelle fréquence faut-il entretenir l'appareil ?", a: "Nous recommandons un entretien annuel pour garantir des performances optimales et prolonger la vie du système." },
+                                    { q: "Quelle quantité de sel consomme l'adoucisseur ?", a: "Cela dépend de votre consommation d'eau et de la dureté de celle-ci. Nos systèmes HE sont parmi les plus économes du marché." }
+                                ].map((item, idx) => (
+                                    <AccordionItem key={idx} value={`item-${idx}`} className="border-b-gray-200">
+                                        <AccordionTrigger className="text-left font-bold text-lg hover:no-underline py-6">
+                                            {item.q}
+                                        </AccordionTrigger>
+                                        <AccordionContent className="font-light text-[20px] leading-[28px] text-gray-600 pb-6 text-left">
+                                            {item.a}
+                                        </AccordionContent>
+                                    </AccordionItem>
+                                ))}
+                            </Accordion>
+                        </div>
                     </div>
                 </section>
 

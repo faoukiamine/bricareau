@@ -225,7 +225,7 @@ const Header = () => {
           icon: Filter,
           title: "Adoucisseurs d'eau de puits",
           description: "Dites adieu aux problèmes de calcaire ! Nos adoucisseurs d’eau traitent durablement l’eau contre ses méfaits pour vous faire bénéficier d’une eau douce toute l’année.",
-          href: "/adoucisseur-eau-residentiel"
+          href: "/adoucisseurs-eau-de-puits"
         },
         {
           icon: GlassWater,
@@ -348,7 +348,7 @@ const Header = () => {
   };
 
   // Check if we are on a page that should have a transparent header
-  const isTransparentPage = ["/", "/adoucisseurs-portables", "/adoucissement", "/adoucisseur-eau-residentiel", "/eau-de-puits", "/specialises-filtration-eau", "/conditionneurs-sans-sel", "/entreprises", "/commercial-industriel", "/osmose-filtration", "/eau-dure", "/filtration", "/fontaines", "/Systemes-de-filtration-deau-sous-evier", "/Systemes-de-desinfection-UV", "/water-testing", "/Filtres-deau"].includes(location.pathname);
+  const isTransparentPage = ["/", "/adoucisseurs-portables", "/adoucissement", "/adoucisseur-eau-residentiel", "/eau-de-puits", "/specialises-filtration-eau", "/conditionneurs-sans-sel", "/entreprises", "/commercial-industriel", "/osmose-filtration", "/eau-dure", "/filtration", "/fontaines", "/Systemes-de-filtration-deau-sous-evier", "/Systemes-de-desinfection-UV", "/water-testing", "/Filtres-deau", "/adoucisseurs-eau-de-puits"].includes(location.pathname);
   const isHeaderTransparent = isTransparentPage && !isScrolled && !isMenuOpen;
 
   return (
@@ -480,7 +480,7 @@ const Header = () => {
                 <a href="tel:18552649328" className="p-2" aria-label="Phone">
                   <Phone className={cn("h-5 w-5", isHeaderTransparent ? "text-white" : "text-gray-700")} />
                 </a>
-                <a href="https://www.google.com/maps/place//@45.5005535,-73.6423534,211m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D" className="p-2" aria-label="Location">
+                <a href="https://www.google.com/maps/place/BRICAREAU+WATER+SPECIALIST/@45.5005535,-73.6423534,211m/data=!3m2!1e3!5s0x4cc919c4436a5a3f:0x5bb245a9935b5ece!4m6!3m5!1s0x4cc9229b28364297:0xd763dce82ea51a5f!8m2!3d45.5005535!4d-73.6423534!16s%2Fg%2F1pv5wd45p?entry=tts&g_ep=EgoyMDI2MDExMy4wIPu8ASoASAFQAw%3D%3D&skid=dc936ed0-8357-4347-8629-14786f46d771" className="p-2" aria-label="Location" target="_blank" rel="noopener noreferrer">
                   <MapPin className={cn("h-5 w-5", isHeaderTransparent ? "text-white" : "text-gray-700")} />
                 </a>
                 <button

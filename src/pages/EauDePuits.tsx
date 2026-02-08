@@ -362,10 +362,10 @@ const EauDePuits = () => {
                   link: "/specialises-filtration-eau"
                 },
                 {
-                  name: "Adoucisseurs d'eau",
-                  desc: "Pour une eau de boisson d'une pureté exceptionnelle directement au robinet.",
+                  name: "Adoucisseurs d'eau de puits",
+                  desc: "Dites adieu aux problèmes de calcaire ! Nos adoucisseurs d'eau traitent durablement l'eau pour vous faire bénéficier d'une eau douce toute l'année.",
                   img: waterSoftenerImg,
-                  link: "/adoucisseur-eau-residentiel"
+                  link: "/adoucisseurs-eau-de-puits"
                 },
                 {
                   name: "Stations d'eau potable",
@@ -403,11 +403,16 @@ const EauDePuits = () => {
         {/* Comparison Table Section */}
         <section className="py-24 bg-gray-50">
           <div className="container mx-auto px-4">
-            <h2 className="text-[32px] md:text-[48px] font-light text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter"
-              style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
-            >
-              Comparez nos solutions <br />de traitement de l'eau de puits.
-            </h2>
+            <div className="text-left mb-16">
+              <h2
+                className="text-slate-900 tracking-tighter mb-8 text-left"
+                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+              >
+                <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Comparez nos solutions</span>
+                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">de traitement de l'eau de puits</span>
+              </h2>
+              <div className="w-24 h-1 bg-blue-600"></div>
+            </div>
             <div className="overflow-x-auto">
               <table className="w-full min-w-[1000px] border-collapse bg-white rounded-2xl overflow-hidden shadow-sm">
                 <thead>
@@ -485,8 +490,7 @@ const EauDePuits = () => {
               <h2
                 className="text-slate-900 tracking-tighter mb-8 text-left"
                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
-              >
-                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">FAQ</span>
+              >                                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">FAQ</span>
               </h2>
               <div className="w-24 h-1 bg-blue-600"></div>
             </div>

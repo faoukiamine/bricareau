@@ -3,6 +3,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ScrollToTop from "./components/ScrollToTop";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Services from "./pages/Adoucisseurs-portables";
@@ -16,6 +17,7 @@ import CommercialIndustriel from "./pages/CommercialIndustriel";
 import Solutions from "./pages/Solutions";
 import Adoucisseurs from "./pages/Adoucissement";
 import AdoucisseurEauResidentiel from "./pages/Adoucisseur-eau-residentiel";
+import AdoucisseursEauDePuits from "./pages/Adoucisseurs-eau-de-puits";
 import ConditionneursSansSel from "./pages/ConditionneursSansSel";
 import OsmoseFiltration from "./pages/Systeme-de-filtration-deau-potable";
 import EauDure from "./pages/EauDure";
@@ -46,6 +48,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
@@ -53,6 +56,7 @@ const App = () => (
           <Route path="/solutions" element={<Solutions />} />
           <Route path="/adoucissement" element={<Adoucisseurs />} />
           <Route path="/adoucisseur-eau-residentiel" element={<AdoucisseurEauResidentiel />} />
+          <Route path="/adoucisseurs-eau-de-puits" element={<AdoucisseursEauDePuits />} />
           <Route path="/conditionneurs-sans-sel" element={<ConditionneursSansSel />} />
           <Route path="/osmose-filtration" element={<OsmoseFiltration />} />
           <Route path="/eau-dure" element={<EauDure />} />

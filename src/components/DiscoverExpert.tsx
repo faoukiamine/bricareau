@@ -8,7 +8,7 @@ const DiscoverExpert = () => {
             <div className="container mx-auto px-4">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     {/* Left side - Content */}
-                    <div className="space-y-6">
+                    <div className="space-y-6 order-2 lg:order-1">
                         <h2
                             className="text-foreground tracking-tighter"
                             style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
@@ -31,7 +31,7 @@ const DiscoverExpert = () => {
                     </div>
 
                     {/* Right side - Image */}
-                    <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                    <div className="relative rounded-2xl overflow-hidden shadow-2xl order-1 lg:order-2">
                         <img
                             src={guideExpertImg}
                             alt="Femme profitant d'un bain moussant relaxant"

@@ -93,8 +93,12 @@ const DesinfectionUV = () => {
                 <section className="py-24 bg-blue-600 text-white">
                     <div className="container mx-auto px-6">
                         <div className="text-center mb-16">
-                            <h2 className="text-[32px] md:text-[48px] font-normal text-white mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-center">
-                                Pourquoi choisir la désinfection UV ?
+                            <h2
+                                className="text-[32px] md:text-[60px] font-normal text-white mb-8 leading-[1.1] md:leading-[60px] tracking-tighter text-center"
+                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                            >
+                                <span className="font-light block">Pourquoi choisir la</span>
+                                <span className="font-normal block">désinfection UV ?</span>
                             </h2>
                             <p className="text-blue-100 max-w-2xl mx-auto text-lg">
                                 La méthode la plus efficace et la plus écologique pour désinfecter votre eau potable tout en offrant une protection permanente.
@@ -127,8 +131,12 @@ const DesinfectionUV = () => {
                 <section id="systemes-uv" className="py-24 bg-white">
                     <div className="container mx-auto px-6">
                         <div className="text-left mb-16">
-                            <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-left">
-                                Nos systèmes de <br />désinfection UV
+                            <h2
+                                className="text-slate-900 tracking-tighter mb-8 text-left"
+                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                            >
+                                <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Nos systèmes de</span>
+                                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">désinfection UV</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
@@ -156,9 +164,16 @@ const DesinfectionUV = () => {
                 {/* 5. Comparison Table */}
                 <section className="py-24 bg-white border-t border-slate-50">
                     <div className="container mx-auto px-4">
-                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal text-slate-900 mb-8 leading-[1.1] tracking-tighter text-center">
-                            Comparez nos systèmes UV.
-                        </h2>
+                        <div className="text-left mb-16">
+                            <h2
+                                className="text-slate-900 tracking-tighter mb-8 text-left"
+                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                            >
+                                <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Comparez nos</span>
+                                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">systèmes UV</span>
+                            </h2>
+                            <div className="w-24 h-1 bg-blue-600"></div>
+                        </div>
                         <div className="overflow-x-auto">
                             <table className="w-full min-w-[800px] border-collapse bg-white rounded-2xl overflow-hidden shadow-sm">
                                 <thead>
@@ -174,10 +189,13 @@ const DesinfectionUV = () => {
                                         <tr key={i} className="hover:bg-gray-50 transition-colors">
                                             <td className="p-8 font-medium text-gray-700">{row.feature}</td>
                                             <td className="p-8 text-center">
-                                                {typeof row.standard === 'string' ? <span className="text-slate-500 font-bold">{row.standard}</span> : (row.standard ? <CheckCircle2 className="h-6 w-6 text-slate-400 mx-auto" /> : <X className="h-6 w-6 text-gray-200 mx-auto" />)}
+                                                {typeof row.VH200F10 === 'string' ? <span className="text-slate-500 font-bold">{row.VH200F10}</span> : (row.VH200F10 ? <CheckCircle2 className="h-6 w-6 text-slate-400 mx-auto" /> : <X className="h-6 w-6 text-gray-200 mx-auto" />)}
                                             </td>
                                             <td className="p-8 text-center bg-blue-50/20">
-                                                {row.premium ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : <X className="h-6 w-6 text-gray-300 mx-auto" />}
+                                                {typeof row.VH410F20 === 'string' ? <span className="text-blue-600 font-bold">{row.VH410F20}</span> : (row.VH410F20 ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : <X className="h-6 w-6 text-gray-300 mx-auto" />)}
+                                            </td>
+                                            <td className="p-8 text-center bg-blue-50/20">
+                                                {typeof row.Arros15IHS10 === 'string' ? <span className="text-blue-600 font-bold">{row.Arros15IHS10}</span> : (row.Arros15IHS10 ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : <X className="h-6 w-6 text-gray-300 mx-auto" />)}
                                             </td>
                                         </tr>
                                     ))}
@@ -199,8 +217,12 @@ const DesinfectionUV = () => {
                                 <span className="text-white/80 text-xs font-black uppercase tracking-[0.3em] mb-8 block">
                                     ANALYSE MICROBIOLOGIQUE
                                 </span>
-                                <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal text-white mb-8 leading-[1.1] tracking-tighter text-left">
-                                    Votre eau est-elle <br /> vraiment sécuritaire ?
+                                <h2
+                                    className="text-slate-900 tracking-tighter mb-8 text-left"
+                                    style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                >
+                                    <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block text-white">Votre eau est-elle</span>
+                                    <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block text-white">vraiment sécuritaire ?</span>
                                 </h2>
                                 <p className="text-white/90 leading-relaxed mb-12 text-justify">
                                     Contrairement aux minéraux, les bactéries et virus ne se voient pas et n'ont pas de goût. Une analyse microbiologique est le seul moyen de garantir la potabilité de votre eau, surtout pour les puits privés.
@@ -218,37 +240,43 @@ const DesinfectionUV = () => {
 
                 {/* 8. FAQ Section */}
                 <section className="py-24 bg-white border-t border-slate-100">
-                    <div className="container mx-auto px-6 max-w-4xl text-left">
-                        <div className="text-center mb-16">
-                            <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-center">
-                                Questions fréquentes
+                    <div className="container mx-auto px-4 text-left">
+                        <div className="text-left mb-16">
+                            <h2
+                                className="text-slate-900 tracking-tighter mb-8 text-left"
+                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                            >
+                                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">FAQ</span>
                             </h2>
+                            <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
-                        <Accordion type="single" collapsible className="w-full">
-                            {[
-                                {
-                                    q: "Pourquoi ai-je besoin d'un système UV si j'ai un adoucisseur ?",
-                                    a: "Un adoucisseur élimine les minéraux (calcaire), mais n'élimine pas les bactéries ou les virus. Le système UV est la protection finale qui assure que l'eau que vous buvez ne contient aucun micro-organisme vivant.",
-                                },
-                                {
-                                    q: "À quelle fréquence faut-il changer la lampe ?",
-                                    a: "La lampe UV doit être remplacée tous les 12 mois (environ 9000 heures de fonctionnement). Même si elle s'allume encore, son intensité germicide diminue avec le temps.",
-                                },
-                                {
-                                    q: "Le système fonctionne-t-il lors d'une panne de courant ?",
-                                    a: "Non, la lampe UV a besoin d'électricité pour fonctionner. En cas de panne prolongée, il est recommandé de faire bouillir l'eau jusqu'à ce que le système redémarre et que les conduites soient rincées.",
-                                },
-                            ].map((item, idx) => (
-                                <AccordionItem key={idx} value={`item-${idx}`} className="border-b-slate-100 px-4">
-                                    <AccordionTrigger className="text-left font-bold text-xl hover:no-underline py-8 text-slate-800">
-                                        {item.q}
-                                    </AccordionTrigger>
-                                    <AccordionContent className="text-slate-500 text-lg leading-relaxed pb-8">
-                                        {item.a}
-                                    </AccordionContent>
-                                </AccordionItem>
-                            ))}
-                        </Accordion>
+                        <div className="max-w-4xl mx-auto">
+                            <Accordion type="single" collapsible className="w-full">
+                                {[
+                                    {
+                                        q: "Pourquoi ai-je besoin d'un système UV si j'ai un adoucisseur ?",
+                                        a: "Un adoucisseur élimine les minéraux (calcaire), mais n'élimine pas les bactéries ou les virus. Le système UV est la protection finale qui assure que l'eau que vous buvez ne contient aucun micro-organisme vivant.",
+                                    },
+                                    {
+                                        q: "À quelle fréquence faut-il changer la lampe ?",
+                                        a: "La lampe UV doit être remplacée tous les 12 mois (environ 9000 heures de fonctionnement). Même si elle s'allume encore, son intensité germicide diminue avec le temps.",
+                                    },
+                                    {
+                                        q: "Le système fonctionne-t-il lors d'une panne de courant ?",
+                                        a: "Non, la lampe UV a besoin d'électricité pour fonctionner. En cas de panne prolongée, il est recommandé de faire bouillir l'eau jusqu'à ce que le système redémarre et que les conduites soient rincées.",
+                                    },
+                                ].map((item, idx) => (
+                                    <AccordionItem key={idx} value={`item-${idx}`} className="border-b-slate-100 px-4">
+                                        <AccordionTrigger className="text-left font-bold text-xl hover:no-underline py-8 text-slate-800">
+                                            {item.q}
+                                        </AccordionTrigger>
+                                        <AccordionContent className="text-slate-500 text-lg leading-relaxed pb-8">
+                                            {item.a}
+                                        </AccordionContent>
+                                    </AccordionItem>
+                                ))}
+                            </Accordion>
+                        </div>
                     </div>
                 </section>
 
@@ -259,7 +287,8 @@ const DesinfectionUV = () => {
                             <h2
                                 className="text-slate-900 tracking-tighter mb-8 text-left"
                                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
-                            >                                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">Ressources</span>
+                            >
+                                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">Ressources</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
@@ -299,8 +328,12 @@ const DesinfectionUV = () => {
                     <div className="container mx-auto px-4">
                         <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-20">
                             <div className="lg:w-1/3 text-left">
-                                <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter italic">
-                                    Protégez votre foyer dès aujourd'hui
+                                <h2
+                                    className="text-slate-900 tracking-tighter mb-8 italic text-left"
+                                    style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                >
+                                    <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Protégez votre</span>
+                                    <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">foyer dès aujourd'hui</span>
                                 </h2>
                                 <p className="font-light text-[20px] leading-[28px] text-gray-600 mb-8">
                                     Remplissez le formulaire ci-dessous pour organiser une visite d'un de nos experts de l'eau et évaluer vos besoins en désinfection microbiologique.

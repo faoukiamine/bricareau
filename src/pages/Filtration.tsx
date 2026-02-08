@@ -136,7 +136,7 @@ const Filtration = () => {
                     <div className="container mx-auto px-4">
                         <div className="flex flex-col lg:flex-row items-center gap-20 mb-20">
                             {/* Left Side: Overlapping Images */}
-                            <div className="lg:w-1/2 relative h-[500px] md:h-[600px]">
+                            <div className="w-full lg:w-1/2 relative h-[350px] md:h-[500px] lg:h-[600px]">
                                 {/* Main Image (Larger) */}
                                 <div className="absolute top-0 right-0 w-4/5 h-[85%] rounded-[2rem] overflow-hidden shadow-2xl z-10 transition-transform duration-500 hover:scale-[1.02]">
                                     <img
@@ -189,7 +189,7 @@ const Filtration = () => {
                     <div className="container mx-auto px-4">
                         <div className="flex flex-col lg:flex-row-reverse items-center gap-20 mb-20">
                             {/* Left Side: Overlapping Images */}
-                            <div className="lg:w-1/2 relative h-[500px] md:h-[600px]">
+                            <div className="w-full lg:w-1/2 relative h-[350px] md:h-[500px] lg:h-[600px]">
                                 {/* Main Image (Larger) */}
                                 <div className="absolute top-0 right-0 w-4/5 h-[85%] rounded-[2rem] overflow-hidden shadow-2xl z-10 transition-transform duration-500 hover:scale-[1.02]">
                                     <img
@@ -243,7 +243,7 @@ const Filtration = () => {
                     <div className="container mx-auto px-4">
                         <div className="flex flex-col lg:flex-row items-center gap-20 mb-20">
                             {/* Left Side: Overlapping Images */}
-                            <div className="lg:w-1/2 relative h-[500px] md:h-[600px]">
+                            <div className="w-full lg:w-1/2 relative h-[350px] md:h-[500px] lg:h-[600px]">
                                 {/* Main Image (Larger) */}
                                 <div className="absolute top-0 left-0 w-4/5 h-[85%] rounded-[2rem] overflow-hidden shadow-2xl z-10 transition-transform duration-500 hover:scale-[1.02]">
                                     <img
@@ -296,7 +296,7 @@ const Filtration = () => {
                     <div className="container mx-auto px-6">
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
                             {/* Left Side: Content */}
-                            <div className="flex flex-col items-start text-left lg:pr-10">
+                            <div className="flex flex-col items-start text-left lg:pr-10 order-2 lg:order-1">
                                 <span className="text-slate-400 text-xs font-bold uppercase tracking-[0.3em] mb-6">
                                     NOTRE ENGAGEMENT
                                 </span>
@@ -315,7 +315,7 @@ const Filtration = () => {
                                 </div>
                             </div>
                             {/* Right Side: Overlapping Images */}
-                            <div className="relative h-[500px] md:h-[600px]">
+                            <div className="relative h-[500px] md:h-[600px] order-1 lg:order-2">
                                 {/* Main Image (Larger) */}
                                 <div className="absolute top-0 left-0 w-4/5 h-[85%] rounded-[2rem] overflow-hidden shadow-2xl z-10 transition-transform duration-500 hover:scale-[1.02]">
                                     <img
@@ -384,48 +384,50 @@ const Filtration = () => {
 
                 {/* 10. FAQ Section */}
                 <section className="py-24 bg-white">
-                    <div className="container mx-auto px-6 max-w-4xl">
-                        <div className="text-center mb-16">
-                            <span className="text-blue-600 text-[10px] font-black uppercase tracking-[0.5em] mb-4 block">
-                                POUR VOUS ÉCLAIRER
-                            </span>
-                            <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold text-slate-900 leading-[1.1] tracking-tighter">
-                                Vos questions.
+                    <div className="container mx-auto px-4">
+                        <div className="text-left mb-16">
+                            <h2
+                                className="text-slate-900 tracking-tighter mb-8 text-left"
+                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                            >                                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">FAQ sur les filtres<br /> d'eau</span>
                             </h2>
+                            <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
-                        <Accordion type="single" collapsible className="w-full">
-                            {[
-                                {
-                                    q: "Comment fonctionne l'osmose inverse ?",
-                                    a: "L'osmose inverse pousse l'eau à travers une membrane semi-perméable microscopique pour éliminer les impuretés dissoutes, le chlore et les minéraux lourds, produisant une eau d'une pureté exceptionnelle.",
-                                },
-                                {
-                                    q: "Quelle est la différence entre un adoucisseur et un filtre ?",
-                                    a: "Un adoucisseur élimine spécifiquement le calcaire (calcium et magnésium), tandis qu'un système de filtration élimine les contaminants, le chlore, les odeurs et les sédiments pour améliorer la qualité de l'eau.",
-                                },
-                                {
-                                    q: "À quelle fréquence faut-il changer les filtres ?",
-                                    a: "Pour un système sous-évier, les cartouches classiques se changent aux 6-12 mois. La membrane d'osmose inverse peut durer 2 à 3 ans selon l'utilisation.",
-                                },
-                                {
-                                    q: "Puis-je boire de l'eau filtrée sans danger ?",
-                                    a: "Absolument. Nos systèmes sont certifiés pour transformer l'eau du robinet en une eau de boisson plus sûre, débarrassée des contaminants courants.",
-                                },
-                            ].map((item, idx) => (
-                                <AccordionItem key={idx} value={`item-${idx}`} className="border-b-slate-100 px-4">
-                                    <AccordionTrigger className="text-left font-bold text-xl hover:no-underline py-8 text-slate-800">
-                                        {item.q}
-                                    </AccordionTrigger>
-                                    <AccordionContent className="text-slate-500 text-lg leading-relaxed pb-8">
-                                        {item.a}
-                                    </AccordionContent>
-                                </AccordionItem>
-                            ))}
-                        </Accordion>
+                        <div className="max-w-4xl mx-auto">
+                            <Accordion type="single" collapsible className="w-full">
+                                {[
+                                    {
+                                        q: "Comment fonctionne l'osmose inverse ?",
+                                        a: "L'osmose inverse pousse l'eau à travers une membrane semi-perméable microscopique pour éliminer les impuretés dissoutes, le chlore et les minéraux lourds, produisant une eau d'une pureté exceptionnelle.",
+                                    },
+                                    {
+                                        q: "Quelle est la différence entre un adoucisseur et un filtre ?",
+                                        a: "Un adoucisseur élimine spécifiquement le calcaire (calcium et magnésium), tandis qu'un système de filtration élimine les contaminants, le chlore, les odeurs et les sédiments pour améliorer la qualité de l'eau.",
+                                    },
+                                    {
+                                        q: "À quelle fréquence faut-il changer les filtres ?",
+                                        a: "Pour un système sous-évier, les cartouches classiques se changent aux 6-12 mois. La membrane d'osmose inverse peut durer 2 à 3 ans selon l'utilisation.",
+                                    },
+                                    {
+                                        q: "Puis-je boire de l'eau filtrée sans danger ?",
+                                        a: "Absolument. Nos systèmes sont certifiés pour transformer l'eau du robinet en une eau de boisson plus sûre, débarrassée des contaminants courants.",
+                                    },
+                                ].map((item, idx) => (
+                                    <AccordionItem key={idx} value={`item-${idx}`} className="border-b-slate-100 px-4">
+                                        <AccordionTrigger className="text-left font-bold text-xl hover:no-underline py-8 text-slate-800">
+                                            {item.q}
+                                        </AccordionTrigger>
+                                        <AccordionContent className="text-slate-500 text-lg leading-relaxed pb-8">
+                                            {item.a}
+                                        </AccordionContent>
+                                    </AccordionItem>
+                                ))}
+                            </Accordion>
+                        </div>
                     </div>
                 </section>
 
-                {/* 5. Discover More / Articles Section (Matching Resources design from EauDePuits) */}
+                {/* 5. Ressources Section */}
                 <section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">

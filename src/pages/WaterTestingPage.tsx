@@ -31,6 +31,11 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
 import heroTesting from "@/assets/6666f4137364e2dd1bf86a0a_EauTrouble.webp";
+import specializedFiltersImg from "@/assets/Filtres d'eau spécialisés.webp";
+import watersofterImg from "@/assets/Adoucisseurs d'eau.webp";
+import drinkingwatersofterImg from "@/assets/Solutions d'eau potable.webp";
+import scientistTestingImg from "@/assets/Scientist istesting water.webp";
+import heroImageImg from "@/assets/hero-image.jpg";
 
 const WaterTestingPage = () => {
   return (
@@ -93,7 +98,13 @@ const WaterTestingPage = () => {
             <div className="flex flex-col lg:flex-row gap-16 items-center">
               <div className="lg:w-1/2">
                 <h2 className="text-blue-400 font-bold uppercase tracking-widest text-sm mb-4">Pourquoi une analyse d'eau ?</h2>
-                <h2 className="text-[32px] md:text-[48px] font-normal text-white mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-left">Voici ce que vous pourriez découvrir dans votre eau</h2>
+                <h2
+                  className="text-slate-900 tracking-tighter mb-8 text-left"
+                  style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                >
+                  <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block text-white">Voici ce que vous pourriez</span>
+                  <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block text-white">découvrir dans votre eau</span>
+                </h2>
                 <p className="text-xl text-blue-100/80 leading-relaxed mb-10">
                   Même si votre eau semble propre, elle peut contenir des minéraux invisibles et des impuretés qui nuisent à votre maison et à votre santé. Un test d'eau à domicile est la première étape pour obtenir l'eau que vous méritez.
                 </p>
@@ -141,9 +152,16 @@ const WaterTestingPage = () => {
         {/* Section 3: Quand faut-il faire analyser l'eau */}
         <section className="py-24 bg-white">
           <div className="container mx-auto px-6 text-center">
-            <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-16 max-w-4xl mx-auto leading-[1.2] md:leading-[48px] tracking-tighter">
-              Quand faut-il faire analyser l'eau <br />de votre maison ?
-            </h2>
+            <div className="text-center mb-16">
+              <h2
+                className="text-slate-900 tracking-tighter mb-8 text-center"
+                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+              >
+                <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Quand faut-il faire analyser</span>
+                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">l'eau de votre maison ?</span>
+              </h2>
+              <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
+            </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
               {[
                 { icon: Home, title: "Après un emménagement", desc: "Testez votre eau dès que vous emménagez dans une nouvelle maison." },
@@ -163,58 +181,21 @@ const WaterTestingPage = () => {
           </div>
         </section>
 
-        {/* Section 4: Comment analyser votre eau (Refactored Design) */}
-        <section className="py-24 bg-white">
-          <div className="container mx-auto px-6">
-            <div className="flex flex-col lg:flex-row items-stretch gap-0 rounded-[3rem] overflow-hidden shadow-2xl">
-              <div className="lg:w-1/2 relative min-h-[400px]">
-                <img
-                  src="/src/assets/Scientist istesting water.webp"
-                  alt="Analyse d'eau professionnelle"
-                  className="absolute inset-0 w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-blue-900/10" />
-              </div>
-              <div className="lg:w-1/2 bg-blue-600 text-white p-12 lg:p-20 flex flex-col justify-center items-start text-left">
-                <span className="text-white/80 text-xs font-black uppercase tracking-[0.3em] mb-8 block">
-                  ANALYSE CERTIFIÉE
-                </span>
-                <h2 className="text-[32px] md:text-[48px] font-normal text-white mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-left">
-                  Comment analyser <br /> votre eau ?
-                </h2>
-                <div className="space-y-6 mb-12">
-                  {[
-                    "Une visite à domicile par un expert certifié",
-                    "Test précis de la dureté de l'eau",
-                    "Analyse des TDS (Total Dissolved Solids)",
-                    "Mesure du pH et de l'alcalinité",
-                    "Détection du fer, du soufre et du manganèse",
-                    "Interprétation immédiate de vos résultats"
-                  ].map((txt, i) => (
-                    <div key={i} className="flex gap-4 items-center">
-                      <div className="shrink-0 w-6 h-6 rounded-full bg-white/20 flex items-center justify-center border border-white/30">
-                        <Check className="h-4 w-4 text-white" />
-                      </div>
-                      <p className="text-lg font-medium text-white/90">{txt}</p>
-                    </div>
-                  ))}
-                </div>
-                <Button className="bg-white text-blue-600 hover:bg-blue-50 rounded-full px-12 h-16 text-xl font-bold shadow-xl transition-all hover:scale-105" asChild>
-                  <a href="#consultation">Réserver mon analyse</a>
-                </Button>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Section 5: Pourquoi choisir Bricareau */}
         <section className="py-24 bg-white overflow-hidden">
           <div className="container mx-auto px-6">
             <div className="flex flex-col lg:flex-row items-center gap-20">
               <div className="lg:w-1/2">
-                <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-left">
-                  Pourquoi choisir Bricareau pour <br />votre analyse d'eau à domicile ?
-                </h2>
+                <div className="text-left mb-16">
+                  <h2
+                    className="text-slate-900 tracking-tighter mb-8 text-left"
+                    style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                  >
+                    <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Pourquoi choisir Bricareau</span>
+                    <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">pour votre analyse d'eau ?</span>
+                  </h2>
+                  <div className="w-24 h-1 bg-blue-600"></div>
+                </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                   {[
                     { title: "Expertise locale", desc: "Nos techniciens connaissent parfaitement l'eau de votre région." },
@@ -231,7 +212,7 @@ const WaterTestingPage = () => {
               </div>
               <div className="lg:w-1/2 relative">
                 <img
-                  src="/src/assets/hero-image.jpg"
+                  src={heroImageImg}
                   alt="Expert explaining results"
                   className="rounded-[40px] shadow-2xl relative z-10"
                 />
@@ -247,12 +228,21 @@ const WaterTestingPage = () => {
         {/* Section 7: Comment améliorer la qualité de l'eau */}
         <section className="py-24 bg-white">
           <div className="container mx-auto px-6 text-center">
-            <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-16 text-center leading-[1.2] md:leading-[48px] tracking-tighter">Comment améliorer la qualité de l'eau</h2>
+            <div className="text-center mb-16">
+              <h2
+                className="text-slate-900 tracking-tighter mb-8 text-center"
+                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+              >
+                <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Comment améliorer la</span>
+                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">qualité de l'eau</span>
+              </h2>
+              <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
+            </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
-                { title: "Adoucisseurs d'eau", desc: "Pour une eau douce et protégée partout dans la maison.", img: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png", href: "/adoucisseur-eau-residentiel" },
-                { title: "Systèmes de filtration", desc: "Une eau de boisson pure et délicieuse à chaque robinet.", img: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png", href: "/filtration" },
-                { title: "Filtration complète", desc: "Une protection globale contre les contaminants et impuretés.", img: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png", href: "/filtration" }
+                { title: "Systèmes de filtration", desc: "Une eau de boisson pure et délicieuse à chaque robinet.", img: specializedFiltersImg, href: "/filtration" },
+                { title: "Adoucisseurs d'eau", desc: "Pour une eau douce et protégée partout dans la maison.", img: watersofterImg, href: "/adoucisseur-eau-residentiel" },
+                { title: "Filtration complète", desc: "Une protection globale contre les contaminants et impuretés.", img: drinkingwatersofterImg, href: "/filtration" }
               ].map((prod, i) => (
                 <NavLink key={i} to={prod.href} className="group bg-slate-50 p-8 rounded-3xl border border-slate-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
                   <div className="h-48 mb-8 flex items-center justify-center">
@@ -271,26 +261,35 @@ const WaterTestingPage = () => {
 
         {/* Section 8: FAQ */}
         <section className="py-24 bg-slate-50">
-          <div className="container mx-auto px-6 max-w-4xl">
-            <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-16 text-center leading-[1.2] md:leading-[48px] tracking-tighter">
-              FAQ sur les tests <br />de qualité de l'eau</h2>
-            <Accordion type="single" collapsible className="w-full">
-              {[
-                { q: "Combien de temps dure l'analyse à domicile ?", a: "En moyenne, une analyse complète prend entre 45 et 60 minutes selon la complexité de votre installation." },
-                { q: "Est-ce vraiment gratuit ?", a: "Oui, l'analyse d'eau initiale effectuée par nos techniciens à domicile est totalement gratuite et sans engagement de votre part." },
-                { q: "Dois-je être présent lors du test ?", a: "Oui, nous recommandons votre présence pour pouvoir vous expliquer les résultats en temps réel et répondre à vos questions." },
-                { q: "Que se passe-t-il après le test ?", a: "L'expert vous remet un rapport détaillé et, si nécessaire, vous propose des solutions adaptées pour corriger les problèmes identifiés." }
-              ].map((item, idx) => (
-                <AccordionItem key={idx} value={`item-${idx}`} className="bg-white mb-4 rounded-xl border-none shadow-sm overflow-hidden">
-                  <AccordionTrigger className="px-8 py-5 text-left font-bold hover:no-underline">
-                    {item.q}
-                  </AccordionTrigger>
-                  <AccordionContent className="px-8 pb-5 text-gray-600">
-                    {item.a}
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
+          <div className="container mx-auto px-6">
+            <div className="text-left mb-16">
+              <h2
+                className="text-slate-900 tracking-tighter mb-8 text-left"
+                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+              >
+                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block text-slate-900">FAQ</span>
+              </h2>
+              <div className="w-24 h-1 bg-blue-600"></div>
+            </div>
+            <div className="max-w-4xl mx-auto">
+              <Accordion type="single" collapsible className="w-full">
+                {[
+                  { q: "Combien de temps dure l'analyse à domicile ?", a: "En moyenne, une analyse complète prend entre 45 et 60 minutes selon la complexité de votre installation." },
+                  { q: "Est-ce vraiment gratuit ?", a: "Oui, l'analyse d'eau initiale effectuée par nos techniciens à domicile est totalement gratuite et sans engagement de votre part." },
+                  { q: "Dois-je être présent lors du test ?", a: "Oui, nous recommandons votre présence pour pouvoir vous expliquer les résultats en temps réel et répondre à vos questions." },
+                  { q: "Que se passe-t-il après le test ?", a: "L'expert vous remet un rapport détaillé et, si nécessaire, vous propose des solutions adaptées pour corriger les problèmes identifiés." }
+                ].map((item, idx) => (
+                  <AccordionItem key={idx} value={`item-${idx}`} className="bg-white mb-4 rounded-xl border-none shadow-sm overflow-hidden">
+                    <AccordionTrigger className="px-8 py-5 text-left font-bold hover:no-underline">
+                      {item.q}
+                    </AccordionTrigger>
+                    <AccordionContent className="px-8 pb-5 text-gray-600">
+                      {item.a}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </div>
           </div>
         </section>
 
@@ -299,8 +298,12 @@ const WaterTestingPage = () => {
           <div className="container mx-auto px-6">
             <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-20">
               <div className="lg:w-1/3 text-left">
-                <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter italic">
-                  Réserver votre consultation gratuite d'une heure
+                <h2
+                  className="text-slate-900 tracking-tighter mb-8 italic text-left"
+                  style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                >
+                  <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Réserver votre</span>
+                  <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">consultation gratuite</span>
                 </h2>
                 <p className="text-xl text-gray-600 mb-8 leading-relaxed">
                   C'est simple, rapide et sans engagement. Un expert Bricareau viendra chez vous pour une analyse complète de votre eau.
