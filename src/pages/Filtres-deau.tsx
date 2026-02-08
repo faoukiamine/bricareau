@@ -13,7 +13,8 @@ import {
     TrendingDown,
     Play,
     Check,
-    X
+    X,
+    Phone
 } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import waterTestBg from "@/assets/Enercare_JP_Day_2_Kitchen_Faucet_498-2048x1365.jpg";
@@ -65,7 +66,7 @@ const comparisonData = [
 
 const FiltresDeau = () => {
     return (
-        <div className="min-h-screen bg-white">
+        <div className="min-h-screen bg-background text-slate-900 font-sans">
             <Header />
 
             <main>
@@ -94,17 +95,26 @@ const FiltresDeau = () => {
                             <p className="font-light text-[20px] leading-[28px] text-white/95 mb-8 max-w-xl">
                                 Nos filtres haute performance éliminent fer, odeurs et sédiments pour protéger vos installations et garantir une eau saine à chaque robinet.
                             </p>
-                            <div className="flex gap-4">
+                            <div className="flex flex-col sm:flex-row gap-4">
                                 <Button
                                     size="lg"
-                                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14"
+                                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 transition-all duration-300 hover:scale-105 shadow-lg"
                                     style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                                     asChild
                                 >
-                                    <NavLink to="/contact-residentiel">Démarrer ici</NavLink>
+                                    <a href="#specialized-filters">Explorez nos filtres d'eau</a>
                                 </Button>
-                                <Button size="lg" variant="outline" className="bg-white/10 hover:bg-white/20 text-white border-white rounded-full px-8 h-14 text-lg font-bold backdrop-blur-sm" asChild>
-                                    <NavLink to="/produits">Voir les produits</NavLink>
+                                <Button
+                                    size="lg"
+                                    variant="outline"
+                                    className="bg-white/10 hover:bg-white/20 text-white border-white rounded-full px-8 h-14 backdrop-blur-sm shadow-lg flex items-center gap-2"
+                                    style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                    asChild
+                                >
+                                    <a href="tel:18552649328">
+                                        <Phone className="h-5 w-5" />
+                                        1-855-264-9328
+                                    </a>
                                 </Button>
                             </div>
                         </div>
@@ -141,7 +151,7 @@ const FiltresDeau = () => {
                 </section>
 
                 {/* Product Grid Section */}
-                <section className="py-24 bg-gray-50">
+                <section id="specialized-filters" className="py-24 bg-gray-50 scroll-mt-20">
                     <div className="container mx-auto px-6">
                         <div className="text-left mb-16">
                             <h2
