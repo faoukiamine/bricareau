@@ -260,10 +260,46 @@ const WaterTestingPage = () => {
             <div className="max-w-4xl mx-auto">
               <Accordion type="single" collapsible className="w-full">
                 {[
-                  { q: "Combien de temps dure l'analyse à domicile ?", a: "En moyenne, une analyse complète prend entre 45 et 60 minutes selon la complexité de votre installation." },
-                  { q: "Est-ce vraiment gratuit ?", a: "Oui, l'analyse d'eau initiale effectuée par nos techniciens à domicile est totalement gratuite et sans engagement de votre part." },
-                  { q: "Dois-je être présent lors du test ?", a: "Oui, nous recommandons votre présence pour pouvoir vous expliquer les résultats en temps réel et répondre à vos questions." },
-                  { q: "Que se passe-t-il après le test ?", a: "L'expert vous remet un rapport détaillé et, si nécessaire, vous propose des solutions adaptées pour corriger les problèmes identifiés." }
+                  {
+                    q: "Qu'est-ce qu'une analyse physico-chimique de l'eau ?",
+                    a: "Une analyse physico-chimique mesure les paramètres non vivants tels que la dureté, le pH, le fer, le manganèse, les nitrates et les solides dissous. Cela permet d'évaluer l'esthétique de l'eau et son impact sur votre tuyauterie."
+                  },
+                  {
+                    q: "Qu'est-ce qu'une analyse microbiologique ?",
+                    a: "Cette analyse recherche la présence d'organismes vivants comme les bactéries coliformes et E. coli. Ces micro-organismes peuvent causer des problèmes de santé immédiats et leur absence est essentielle pour qu'une eau soit déclarée potable."
+                  },
+                  {
+                    q: "Pourquoi tester l'eau si elle semble claire et inodore ?",
+                    a: "Plusieurs contaminants dangereux comme l'arsenic, le plomb ou les nitrates sont incolores, inodores et sans goût. Seule une analyse professionnelle en laboratoire peut confirmer la sécurité réelle de votre eau."
+                  },
+                  {
+                    q: "À quelle fréquence devrais-je faire analyser mon eau de puits ?",
+                    a: "Santé Québec recommande d'analyser la qualité microbiologique de votre eau de puits au moins deux fois par an (printemps et automne) et d'effectuer une analyse physico-chimique complète tous les deux ans."
+                  },
+                  {
+                    q: "Quels sont les paramètres les plus critiques à surveiller au Québec ?",
+                    a: "Pour les puits résidentiels, les priorités sont les bactéries, les nitrates, le fer, le manganèse, la dureté et, dans certaines régions, l'arsenic et le radon."
+                  },
+                  {
+                    q: "Comment dois-je prélever l'échantillon pour le laboratoire ?",
+                    a: "Pour un test microbiologique, vous devez utiliser un flacon stérile fourni par le laboratoire et suivre une procédure de désinfection du robinet rigoureuse pour éviter de fausser les résultats."
+                  },
+                  {
+                    q: "Quelle est la différence entre un test à domicile et une analyse en laboratoire ?",
+                    a: "Le test à domicile permet d'obtenir des résultats instantanés sur les minéraux et la dureté. L'analyse en laboratoire accrédité est nécessaire pour certifier la potabilité microbiologique et détecter les contaminants chimiques complexes."
+                  },
+                  {
+                    q: "Que signifie la présence de coliformes totaux dans mon rapport ?",
+                    a: "Cela indique que votre puits est vulnérable aux infiltrations d'eau de surface. Bien que tous les coliformes ne soient pas pathogènes, leur présence suggère qu'un traitement de désinfection est nécessaire."
+                  },
+                  {
+                    q: "Un pH acide peut-il endommager ma résidence ?",
+                    a: "Absolument. Un pH inférieur à 6,5 est considéré comme corrosif. Il peut attaquer vos tuyaux de cuivre, provoquant des fuites 'trous d'épingle' et libérant des métaux lourds dans votre eau de boisson."
+                  },
+                  {
+                    q: "Que faire si les résultats indiquent une eau non potable ?",
+                    a: "Pas de panique. Nos experts analyseront votre rapport et vous recommanderont le système approprié (UV pour les bactéries, adoucisseur pour la dureté ou filtre spécialisé) pour rendre votre eau parfaitement sûre."
+                  }
                 ].map((item, idx) => (
                   <AccordionItem key={idx} value={`item-${idx}`} className="bg-white mb-4 rounded-xl border-none shadow-sm overflow-hidden">
                     <AccordionTrigger className="px-8 py-5 text-left font-bold hover:no-underline">

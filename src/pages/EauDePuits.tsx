@@ -500,19 +500,63 @@ const EauDePuits = () => {
                 {[
                   {
                     q: "Pourquoi l'eau de mon puits a-t-elle une odeur d'œufs pourris ?",
-                    a: "Cette odeur est généralement causée par le gaz sulfure d'hydrogène. Bricareau propose des systèmes de filtration spécialisés pour éliminer efficacement cette odeur et rendre votre eau fraîche.",
+                    a: "Cette odeur est causée par le gaz sulfure d'hydrogène. Bricareau installe des systèmes d'oxydation ou des filtres au charbon spécialisés qui éliminent totalement cette odeur pour une eau fraîche et inodore.",
                   },
                   {
                     q: "Le fer dans l'eau de puits est-il dangereux ?",
-                    a: "Bien que le fer ne soit généralement pas dangereux pour la santé, il cause des taches tenaces sur les éviers et le linge, et peut donner un goût métallique désagréable.",
+                    a: "Le fer n'est pas nocif pour la santé, mais il cause des taches de rouille tenaces, obstrue la tuyauterie et donne un goût métallique. Nos filtres à fer haute performance éliminent ces désagréments sans produits chimiques.",
                   },
                   {
                     q: "À quelle fréquence devrais-je faire tester mon eau de puits ?",
-                    a: "Nous recommandons une analyse complète au moins une fois par an ou dès que vous remarquez un changement de goût, d'odeur ou de clarté.",
+                    a: "Il est fortement recommandé de tester votre eau au moins une fois par an pour les bactéries et les nitrates, et tous les deux ans pour les paramètres physico-chimiques profonds.",
                   },
                   {
-                    q: "Quelles solutions proposez-vous pour les bactéries ?",
-                    a: "Nous installons des systèmes de désinfection par rayons ultraviolets (UV) ou par chloration contrôlée pour éliminer 99,9% des contaminants biologiques.",
+                    q: "Quelles sont les solutions pour éliminer les bactéries ?",
+                    a: "La solution la plus fiable est la désinfection par rayons ultraviolets (UV). Elle détruit 99,9 % des virus et bactéries (comme E. coli) sans altérer le goût ou la composition chimique de votre eau.",
+                  },
+                  {
+                    q: "Pourquoi y a-t-il des taches bleues ou vertes sur ma robinetterie ?",
+                    a: "Cela indique une eau acide (pH bas) qui corrode vos tuyaux de cuivre. Un neutraliseur de pH est essentiel pour protéger votre plomberie et éviter des fuites coûteuses à long terme.",
+                  },
+                  {
+                    q: "Un adoucisseur d'eau peut-il éliminer tout le fer ?",
+                    a: "Un adoucisseur élimine le fer 'clair' (dissous), mais pour le fer 'rouge' (oxydé) ou de fortes concentrations, un filtre à fer dédié est nécessaire en amont pour éviter d'endommager les résines de l'adoucisseur.",
+                  },
+                  {
+                    q: "Qu'est-ce que le manganèse et comment s'en débarrasser ?",
+                    a: "Le manganèse cause des taches noires et des dépôts huileux. Nos systèmes de filtration spécialisés utilisent des médias oxydants qui capturent le manganèse efficacement, laissant votre eau limpide.",
+                  },
+                  {
+                    q: "Pourquoi mon eau de puits est-elle trouble ou sableuse ?",
+                    a: "C'est souvent dû à des sédiments ou de la turbidité. Un filtre à sédiments ou un système de filtration multimédia à l'entrée principale clarifiera l'eau et protégera tous vos appareils ménagers.",
+                  },
+                  {
+                    q: "Si mon eau semble claire, ai-je quand même besoin d'un filtre ?",
+                    a: "Oui, car de nombreux contaminants comme le plomb, l'arsenic, les nitrates ou les bactéries sont invisibles, sans goût et sans odeur. Seule une analyse d'eau peut confirmer sa pureté réelle.",
+                  },
+                  {
+                    q: "Quelle est la durée de vie d'un système de traitement d'eau de puits ?",
+                    a: "Avec un entretien régulier, nos systèmes Bricareau ont une durée de vie moyenne de 15 à 25 ans. Nos composantes sont sélectionnées pour leur robustesse face aux eaux de puits les plus difficiles.",
+                  },
+                  {
+                    q: "Quels sont les avantages d'un système pour toute la maison ?",
+                    a: "Vous protégez toute votre tuyauterie, prolongez la vie de vos électroménagers (chauffe-eau, lave-vaisselle), et profitez d'une eau pure à chaque robinet, pour boire, cuisiner et vous doucher.",
+                  },
+                  {
+                    q: "Le traitement de l'eau affecte-t-il la pression dans la maison ?",
+                    a: "Nos experts dimensionnent votre système en fonction de votre débit maximal pour assurer une filtration optimale sans perte de pression perceptible, même lors d'utilisations simultanées.",
+                  },
+                  {
+                    q: "L'eau de puits est-elle naturellement dure ?",
+                    a: "Dans la majorité des cas, oui. En circulant dans le sol, l'eau dissout le calcium et le magnésium. Un adoucisseur est souvent la base de tout traitement pour éviter l'accumulation de calcaire.",
+                  },
+                  {
+                    q: "Pouvez-vous éliminer les tanins (eau jaunâtre) ?",
+                    a: "Oui, les tanins proviennent de matières organiques en décomposition dans le sol. Nous utilisons des systèmes d'échange d'anions spécifiques qui retirent cette coloration 'thé' de votre eau.",
+                  },
+                  {
+                    q: "Quelle est la différence entre un filtre à sédiments et un charbon ?",
+                    a: "Le filtre à sédiments retire les particules physiques (sable, terre), tandis que le charbon activé retire les produits chimiques, les goûts et les odeurs par adsorption moléculaire.",
                   },
                 ].map((item, idx) => (
                   <AccordionItem

@@ -405,13 +405,57 @@ const Filtration = () => {
                                         a: "Un adoucisseur élimine spécifiquement le calcaire (calcium et magnésium), tandis qu'un système de filtration élimine les contaminants, le chlore, les odeurs et les sédiments pour améliorer la qualité de l'eau.",
                                     },
                                     {
-                                        q: "À quelle fréquence faut-il changer les filtres ?",
-                                        a: "Pour un système sous-évier, les cartouches classiques se changent aux 6-12 mois. La membrane d'osmose inverse peut durer 2 à 3 ans selon l'utilisation.",
+                                        q: "À quelle fréquence faut-il changer les filtres sous l'évier ?",
+                                        a: "Pour un système sous-évier, les cartouches classiques se changent généralement tous les 6 à 12 mois. La membrane d'osmose inverse peut durer 2 à 3 ans selon la qualité de votre eau d'entrée.",
                                     },
                                     {
-                                        q: "Puis-je boire de l'eau filtrée sans danger ?",
-                                        a: "Absolument. Nos systèmes sont certifiés pour transformer l'eau du robinet en une eau de boisson plus sûre, débarrassée des contaminants courants.",
+                                        q: "Les filtres sous-évier éliminent-ils les bactéries ?",
+                                        a: "Les systèmes d'osmose inverse et certains filtres spécialisés à ultrafiltration sont extrêmement efficaces contre les particules microscopiques, mais pour une protection bactériologique totale, nous recommandons un système UV en complément.",
                                     },
+                                    {
+                                        q: "Est-ce que l'installation d'un filtre sous-évier réduit la pression d'eau ?",
+                                        a: "Nos systèmes modernes sont conçus pour minimiser l'impact sur la pression. Les systèmes d'osmose inverse utilisent souvent un réservoir de stockage pour garantir un débit constant à votre robinet dédié.",
+                                    },
+                                    {
+                                        q: "Pourquoi choisir un filtre spécialisé pour le fer ou le soufre ?",
+                                        a: "Les filtres standards ne peuvent pas traiter les fortes concentrations de fer (taches jaunes/rouges) ou de soufre (odeur d'œufs pourris). Nos filtres spécialisés utilisent des médias spécifiques pour neutraliser ces problèmes à la source.",
+                                    },
+                                    {
+                                        q: "Peut-on brancher un filtre sous-évier sur le frigo ?",
+                                        a: "Absolument. Il est très courant de raccorder la sortie de votre système de filtration à votre distributeur d'eau de frigo et à votre machine à glaçons pour une glace cristalline.",
+                                    },
+                                    {
+                                        q: "Quelle place prend un système de filtration sous l'évier ?",
+                                        a: "Nos systèmes compacts occupent généralement moins de 25% de l'espace sous l'évier, laissant amplement de place pour vos articles ménagers habituels.",
+                                    },
+                                    {
+                                        q: "L'eau filtrée est-elle meilleure pour cuisiner ?",
+                                        a: "Oui, l'élimination du chlore et des impuretés rehausse considérablement les saveurs naturelles de vos aliments, du café et du thé, tout en évitant les dépôts de calcaire dans vos cafetières et bouilloires.",
+                                    },
+                                    {
+                                        q: "Est-ce que le système de filtration fait du bruit ?",
+                                        a: "Non, les systèmes de filtration sont totalement silencieux. Seule la régénération de certains filtres centraux peut faire un léger bruit de circulation d'eau, généralement programmé la nuit.",
+                                    },
+                                    {
+                                        q: "Les filtres éliminent-ils le plomb et les métaux lourds ?",
+                                        a: "Oui, nos systèmes d'osmose inverse et nos cartouches spécialisées sont certifiés pour réduire drastiquement le plomb, le cuivre et les autres métaux lourds souvent présents dans les vieilles tuyauteries.",
+                                    },
+                                    {
+                                        q: "Comment savoir quel filtre spécialisé choisir ?",
+                                        a: "La meilleure façon est de procéder à une analyse d'eau. Selon que vous ayez du fer, du manganèse, des tanins ou du chlore, nos experts vous recommanderont le média filtrant approprié.",
+                                    },
+                                    {
+                                        q: "Quelle est la garantie sur les systèmes de filtration Bricareau ?",
+                                        a: "Nous offrons des garanties complètes allant jusqu'à 10 ans sur la structure des réservoirs et des garanties solides sur les composants de contrôle et les robinetteries.",
+                                    },
+                                    {
+                                        q: "Un filtre sous-évier nécessite-t-il de l'électricité ?",
+                                        a: "La plupart des systèmes de filtration standard et d'osmose inverse fonctionnent uniquement avec la pression de l'eau. Seuls certains modèles haute performance avec pompe de surpression nécessitent une prise électrique.",
+                                    },
+                                    {
+                                        q: "Est-ce que je peux installer le système moi-même ?",
+                                        a: "Bien que cela soit possible pour les bricoleurs, nous recommandons une installation par nos techniciens certifiés pour garantir l'étanchéité parfaite et la validation de votre garantie Bricareau.",
+                                    }
                                 ].map((item, idx) => (
                                     <AccordionItem key={idx} value={`item-${idx}`} className="border-b-slate-100 px-4">
                                         <AccordionTrigger className="text-left font-bold text-xl hover:no-underline py-8 text-slate-800">

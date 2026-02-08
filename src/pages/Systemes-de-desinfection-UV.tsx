@@ -254,17 +254,65 @@ const DesinfectionUV = () => {
                             <Accordion type="single" collapsible className="w-full">
                                 {[
                                     {
+                                        q: "Qu'est-ce qu'un système de désinfection UV ?",
+                                        a: "C'est un dispositif qui utilise la lumière ultraviolette (UV-C) pour neutraliser les micro-organismes nocifs dans l'eau. En pénétrant l'ADN des bactéries et virus, les rayons UV les empêchent de se reproduire et de causer des maladies.",
+                                    },
+                                    {
+                                        q: "Contre quels types de contaminants les UV sont-ils efficaces ?",
+                                        a: "Les systèmes UV éliminent 99,99 % des micro-organismes, y compris les bactéries comme E. coli, les virus, et les parasites résistants au chlore comme Giardia et Cryptosporidium.",
+                                    },
+                                    {
+                                        q: "L'eau de puits nécessite-t-elle toujours un système UV ?",
+                                        a: "Les puits sont vulnérables aux infiltrations de surface après de fortes pluies ou la fonte des neiges. Un système UV offre une barrière de sécurité permanente contre les variations soudaines de la qualité microbiologique de votre eau.",
+                                    },
+                                    {
+                                        q: "Quels sont les avantages des UV par rapport au chlore ?",
+                                        a: "Les UV ne nécessitent aucun produit chimique, ne changent pas le goût ou l'odeur de l'eau, et ne créent pas de sous-produits toxiques. C'est la méthode de désinfection la plus écologique et la plus saine.",
+                                    },
+                                    {
                                         q: "Pourquoi ai-je besoin d'un système UV si j'ai un adoucisseur ?",
                                         a: "Un adoucisseur élimine les minéraux (calcaire), mais n'élimine pas les bactéries ou les virus. Le système UV est la protection finale qui assure que l'eau que vous buvez ne contient aucun micro-organisme vivant.",
                                     },
                                     {
-                                        q: "À quelle fréquence faut-il changer la lampe ?",
-                                        a: "La lampe UV doit être remplacée tous les 12 mois (environ 9000 heures de fonctionnement). Même si elle s'allume encore, son intensité germicide diminue avec le temps.",
+                                        q: "À quelle fréquence faut-il changer la lampe UV ?",
+                                        a: "La lampe UV doit être remplacée tous les 12 mois (environ 9 000 heures). Même si elle s'allume encore, son intensité germicide diminue drastiquement après un an et ne garantit plus la désinfection.",
                                     },
                                     {
-                                        q: "Le système fonctionne-t-il lors d'une panne de courant ?",
-                                        a: "Non, la lampe UV a besoin d'électricité pour fonctionner. En cas de panne prolongée, il est recommandé de faire bouillir l'eau jusqu'à ce que le système redémarre et que les conduites soient rincées.",
+                                        q: "Qu'est-ce que le fourreau de quartz et comment l'entretenir ?",
+                                        a: "Le fourreau de quartz est le tube transparent qui protège la lampe de l'eau. Il doit être nettoyé régulièrement pour rester limpide. S'il est entartré ou opaque (à cause du calcaire), les rayons UV ne peuvent plus traverser pour désinfecter l'eau.",
                                     },
+                                    {
+                                        q: "Une filtration préalable est-elle nécessaire avant l'UV ?",
+                                        a: "Oui, il est crucial d'installer un filtre à sédiments de 5 microns en amont. Les particules en suspension peuvent créer des zones d'ombre où les bactéries se 'cachent' du rayonnement UV.",
+                                    },
+                                    {
+                                        q: "Le système UV fonctionne-t-il lors d'une panne de courant ?",
+                                        a: "Non, la lampe s'éteint sans électricité. En cas de panne, il ne faut pas consommer l'eau ou alors il faut la faire bouillir. Nos systèmes sont souvent équipés d'alarmes pour avertir de l'arrêt de la lampe.",
+                                    },
+                                    {
+                                        q: "L'UV consomme-t-il beaucoup d'électricité ?",
+                                        a: "Non, un système résidentiel standard consomme à peu près autant d'énergie qu'une ampoule de 40 à 60 watts. C'est une solution très économique pour une protection 24h/24.",
+                                    },
+                                    {
+                                        q: "Peut-on installer un système UV sur l'entrée d'eau de la ville ?",
+                                        a: "Bien que l'eau municipale soit traitée, de vieilles infrastructures ou des bris d'aqueduc peuvent introduire des bactéries. Un système UV domestique sert d'assurance supplémentaire pour votre tranquillité d'esprit.",
+                                    },
+                                    {
+                                        q: "Comment savoir si mon système UV fonctionne correctement ?",
+                                        a: "Nos contrôleurs intelligents affichent le nombre de jours restants avant le changement de lampe et émettent une alarme sonore et visuelle en cas de défaillance de la lampe ou du système.",
+                                    },
+                                    {
+                                        q: "La chaleur de la lampe affecte-t-elle l'eau ?",
+                                        a: "Si l'eau ne circule pas pendant plusieurs heures, l'eau à l'intérieur de la chambre d'acier inoxydable peut devenir tiède. Il suffit de laisser couler l'eau quelques secondes pour retrouver une eau fraîche.",
+                                    },
+                                    {
+                                        q: "Quelle est la garantie sur les systèmes UV Bricareau ?",
+                                        a: "Nos systèmes sont couverts par une garantie robuste sur la chambre de traitement en acier inoxydable (souvent 10 ans) et sur les composantes électriques et électroniques.",
+                                    },
+                                    {
+                                        q: "Dois-je faire tester mon eau après l'installation ?",
+                                        a: "Oui, nous recommandons toujours un test bactériologique professionnel après l'installation et une désinfection initiale de la tuyauterie pour confirmer que tout le réseau domestique est sain.",
+                                    }
                                 ].map((item, idx) => (
                                     <AccordionItem key={idx} value={`item-${idx}`} className="border-b-slate-100 px-4">
                                         <AccordionTrigger className="text-left font-bold text-xl hover:no-underline py-8 text-slate-800">
