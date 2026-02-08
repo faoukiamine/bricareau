@@ -18,7 +18,11 @@ import {
   GlassWater,
   MapPin,
   Zap,
-  Thermometer
+  Thermometer,
+  Heart,
+  Sparkles,
+  FileText,
+  ShieldCheck
 } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import {
@@ -34,8 +38,13 @@ import heroTesting from "@/assets/6666f4137364e2dd1bf86a0a_EauTrouble.webp";
 import specializedFiltersImg from "@/assets/Filtres d'eau spécialisés.webp";
 import watersofterImg from "@/assets/Adoucisseurs d'eau.webp";
 import drinkingwatersofterImg from "@/assets/Solutions d'eau potable.webp";
-import scientistTestingImg from "@/assets/Scientist istesting water.webp";
 import heroImageImg from "@/assets/hero-image.jpg";
+import waterProblemImg from "@/assets/Corrosive-Water.webp";
+import smellImg from "@/assets/Water_Smells_Like_Rotten_Eggs_1400x.webp";
+import stainImg from "@/assets/rouille_thumb.jpg";
+import plumbingImg from "@/assets/detartrage-chauffe-eau-electrique.jpg";
+import movingTipsImg from "@/assets/astuces-emmenagement-maison.jpg";
+import clothesStainsImg from "@/assets/302731406_443870381116589_3770801709209607894_n.jpg";
 
 const WaterTestingPage = () => {
   return (
@@ -62,10 +71,11 @@ const WaterTestingPage = () => {
                 className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-white"
                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
               >
-                Planifiez un test <span className="font-normal">d'eau gratuit</span>
+                Vous désirez faire analyser <br />
+                <span className="font-normal">votre eau résidentielle?</span>
               </h1>
               <p className="font-light text-[20px] leading-[28px] text-white/95 mb-8 max-w-xl">
-                Que vous souhaitiez tester votre eau de puits ou explorer l'eau municipale, obtenez une analyse d'eau gratuite et en personne d'un expert.
+                Pour vos analyses annuelles, une transaction hypothécaire ou encore parce que vous avez un souci avec la qualité de votre eau, bricareau est là pour vous!
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button
@@ -92,67 +102,61 @@ const WaterTestingPage = () => {
           </div>
         </section>
 
-        {/* Section 2: Pourquoi une analyse d'eau (Dark Blue) */}
-        <section className="py-24 bg-[#001A4D] text-white">
+        <section className="py-24 bg-blue-600 text-white">
           <div className="container mx-auto px-6">
-            <div className="flex flex-col lg:flex-row gap-16 items-center">
-              <div className="lg:w-1/2">
-                <h2 className="text-blue-400 font-bold uppercase tracking-widest text-sm mb-4">Pourquoi une analyse d'eau ?</h2>
-                <h2
-                  className="text-slate-900 tracking-tighter mb-8 text-left"
-                  style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
-                >
-                  <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block text-white">Voici ce que vous pourriez</span>
-                  <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block text-white">découvrir dans votre eau</span>
-                </h2>
-                <p className="text-xl text-blue-100/80 leading-relaxed mb-10">
-                  Même si votre eau semble propre, elle peut contenir des minéraux invisibles et des impuretés qui nuisent à votre maison et à votre santé. Un test d'eau à domicile est la première étape pour obtenir l'eau que vous méritez.
-                </p>
-                <Button variant="link" className="text-blue-400 p-0 font-bold text-lg hover:no-underline flex items-center group">
-                  En savoir plus sur nos analyses <ChevronRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-                </Button>
-              </div>
+            <div className="mb-16">
+              <h2 className="text-blue-100 font-bold uppercase tracking-widest text-sm mb-4">Pourquoi une analyse d'eau ?</h2>
+              <h2
+                className="text-slate-900 tracking-tighter mb-8 text-left"
+                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+              >
+                <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block text-white">Voici ce que vous pourriez</span>
+                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block text-white">découvrir dans votre eau</span>
+              </h2>
+              <p className="text-xl text-blue-50/90 leading-relaxed max-w-4xl">
+                Même si votre eau semble propre, elle peut contenir des minéraux invisibles et des impuretés qui nuisent à votre maison et à votre santé. Un test d'eau à domicile est la première étape pour obtenir l'eau que vous méritez.
+              </p>
+            </div>
 
-              <div className="lg:w-1/2 w-full flex flex-col gap-4">
-                <div className="bg-blue-600 p-8 rounded-2xl flex items-center justify-between group hover:bg-blue-500 transition-colors">
-                  <div className="flex items-center gap-6">
-                    <Droplet className="h-10 w-10 text-white" />
-                    <div>
-                      <h4 className="text-xl font-bold">Eau dure</h4>
-                      <p className="text-blue-100/70">Minéraux comme le calcium et le magnésium</p>
-                    </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {[
+                {
+                  icon: Heart,
+                  title: "Santé et bien-être",
+                  desc: "Détectez les contaminants invisibles qui peuvent nuire à votre santé et à votre famille."
+                },
+                {
+                  icon: Home,
+                  title: "Protection de votre maison",
+                  desc: "Limitez les dégâts et bris pouvant être causés par certains contaminants de l’eau."
+                },
+                {
+                  icon: Sparkles,
+                  title: "Tranquillité d’esprit",
+                  desc: "Avec un rapport professionnel, vous aurez tout en main pour choisir le bon système."
+                },
+                {
+                  icon: FileText,
+                  title: "Conformité aux normes",
+                  desc: "Ayez en main les documents légaux requis pour une transaction hypothécaire."
+                }
+              ].map((item, id) => (
+                <div key={id} className="bg-[#001A4D] border border-white/5 p-8 rounded-[2rem] flex flex-col h-full group hover:bg-[#00266b] hover:scale-[1.02] transition-all duration-300 shadow-xl">
+                  <div className="w-16 h-16 rounded-2xl bg-blue-600/20 flex items-center justify-center mb-6 group-hover:bg-blue-600/40 transition-colors">
+                    <item.icon className="h-8 w-8 text-blue-400" />
                   </div>
-                  <ChevronRight className="h-8 w-8 text-white/30" />
+                  <h4 className="text-xl font-bold mb-4 text-white">{item.title}</h4>
+                  <p className="text-blue-100/70 text-sm leading-relaxed">{item.desc}</p>
                 </div>
-                <div className="bg-white p-8 rounded-2xl flex items-center justify-between group hover:bg-gray-50 transition-colors">
-                  <div className="flex items-center gap-6">
-                    <Zap className="h-10 w-10 text-blue-600" />
-                    <div className="text-gray-900">
-                      <h4 className="text-xl font-bold">Chlore</h4>
-                      <p className="text-gray-500">Goût et odeur de chlore souvent présents</p>
-                    </div>
-                  </div>
-                  <ChevronRight className="h-8 w-8 text-gray-200" />
-                </div>
-                <div className="bg-[#22C38E] p-8 rounded-2xl flex items-center justify-between group hover:bg-[#1faa7c] transition-colors">
-                  <div className="flex items-center gap-6">
-                    <Shield className="h-10 w-10 text-white" />
-                    <div>
-                      <h4 className="text-xl font-bold">Contaminants</h4>
-                      <p className="text-white/70">Impuretés, fer, nitrates et particules</p>
-                    </div>
-                  </div>
-                  <ChevronRight className="h-8 w-8 text-white/30" />
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* Section 3: Quand faut-il faire analyser l'eau */}
-        <section className="py-24 bg-white">
-          <div className="container mx-auto px-6 text-center">
-            <div className="text-center mb-16">
+        {/* Section 3: Quand faut-il faire analyser l'eau (Modern Visual Grid) */}
+        <section className="py-24 bg-slate-50">
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-20">
               <h2
                 className="text-slate-900 tracking-tighter mb-8 text-center"
                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
@@ -162,62 +166,44 @@ const WaterTestingPage = () => {
               </h2>
               <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
-                { icon: Home, title: "Après un emménagement", desc: "Testez votre eau dès que vous emménagez dans une nouvelle maison." },
-                { icon: Search, title: "Modification du goût/odeur", desc: "Si votre eau a un goût métallique ou une odeur d'œufs pourris." },
-                { icon: Droplet, title: "Taches sur les vêtements", desc: "Des taches blanches ou rouges indiquent souvent des minéraux." },
-                { icon: Wrench, title: "Problèmes de plomberie", desc: "L'accumulation de calcaire peut réduire l'efficacité de vos appareils." }
+                {
+                  title: "Nouvel emménagement",
+                  desc: "Testez votre eau dès que vous emménagez dans une nouvelle propriété pour votre sécurité.",
+                  img: movingTipsImg
+                },
+                {
+                  title: "Goût ou odeur suspecte",
+                  desc: "Si votre eau a un goût métallique ou une odeur d'œufs pourris inhabituelle.",
+                  img: smellImg
+                },
+                {
+                  title: "Taches sur les vêtements",
+                  desc: "Des taches blanches ou rouge-orange indiquent souvent des minéraux en excès.",
+                  img: clothesStainsImg
+                },
+                {
+                  title: "Problèmes de plomberie",
+                  desc: "L'accumulation de calcaire réduit considérablement l'efficacité de vos équipements.",
+                  img: plumbingImg
+                }
               ].map((item, idx) => (
-                <div key={idx} className="flex flex-col items-center text-center group">
-                  <div className="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors">
-                    <item.icon className="h-8 w-8 text-blue-600 group-hover:text-white" />
+                <div key={idx} className="group relative h-[450px] rounded-[2.5rem] overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+                  <img src={item.img} alt={item.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
+                  <div className="absolute inset-x-0 bottom-0 p-8">
+                    <div className="w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center mb-6 transform -translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                      <ChevronRight className="text-white h-6 w-6" />
+                    </div>
+                    <h4 className="text-2xl font-bold text-white mb-4 leading-tight min-h-[64px] flex items-end">{item.title}</h4>
+                    <p className="text-white/80 text-sm leading-relaxed line-clamp-3 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 delay-100">
+                      {item.desc}
+                    </p>
                   </div>
-                  <h4 className="text-xl font-bold mb-4">{item.title}</h4>
-                  <p className="text-gray-600 leading-relaxed">{item.desc}</p>
                 </div>
               ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Section 5: Pourquoi choisir Bricareau */}
-        <section className="py-24 bg-white overflow-hidden">
-          <div className="container mx-auto px-6">
-            <div className="flex flex-col lg:flex-row items-center gap-20">
-              <div className="lg:w-1/2">
-                <div className="text-left mb-16">
-                  <h2
-                    className="text-slate-900 tracking-tighter mb-8 text-left"
-                    style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
-                  >
-                    <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Pourquoi choisir Bricareau</span>
-                    <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">pour votre analyse d'eau ?</span>
-                  </h2>
-                  <div className="w-24 h-1 bg-blue-600"></div>
-                </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                  {[
-                    { title: "Expertise locale", desc: "Nos techniciens connaissent parfaitement l'eau de votre région." },
-                    { title: "Analyse gratuite", desc: "Aucun frais caché pour le test initial effectué chez vous." },
-                    { title: "Solutions sur mesure", desc: "Des recommandations techniques adaptées à vos besoins réels." },
-                    { title: "Service professionnel", desc: "Une installation certifiée et un support après-vente complet." }
-                  ].map((item, idx) => (
-                    <div key={idx} className="p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:border-blue-200 transition-colors">
-                      <h4 className="text-lg font-bold mb-2 text-blue-600">{item.title}</h4>
-                      <p className="text-gray-600 text-sm">{item.desc}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              <div className="lg:w-1/2 relative">
-                <img
-                  src={heroImageImg}
-                  alt="Expert explaining results"
-                  className="rounded-[40px] shadow-2xl relative z-10"
-                />
-                <div className="absolute -bottom-10 -right-10 w-64 h-64 bg-blue-100 rounded-full blur-3xl opacity-50 z-0"></div>
-              </div>
             </div>
           </div>
         </section>
@@ -394,7 +380,7 @@ const WaterTestingPage = () => {
 
       </main>
       <Footer />
-    </div>
+    </div >
   );
 };
 
