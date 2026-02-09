@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
@@ -15,7 +15,7 @@ import {
     FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { format, addDays, setHours, setMinutes } from "date-fns";
+import { format, addDays, setHours, setMinutes, startOfDay, endOfDay } from "date-fns";
 import { fr } from "date-fns/locale";
 import { Loader2, CheckCircle2, ChevronLeft, ChevronRight, Calendar as CalendarIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -41,7 +41,8 @@ const formSchema = z.object({
 });
 
 const TIME_SLOTS = [
-    "09:00", "10:00", "11:00", "13:00", "14:00", "15:00", "16:00"
+    "09:00", "09:30", "10:00", "10:30", "11:00", "11:30",
+    "12:00", "14:00", "14:30", "15:30", "15:30", "16:00"
 ];
 
 const ConsultationFormSection = ({ id }: { id?: string }) => {
@@ -62,6 +63,31 @@ const ConsultationFormSection = ({ id }: { id?: string }) => {
             code_postal: "",
         },
     });
+
+    const [bookedSlots, setBookedSlots] = useState<string[]>([]);
+    const selectedDate = form.watch("appointment_date");
+
+    useEffect(() => {
+        const fetchBookedSlots = async () => {
+            if (!selectedDate) return;
+
+            const start = startOfDay(selectedDate).toISOString();
+            const end = endOfDay(selectedDate).toISOString();
+
+            const { data, error } = await supabase
+                .from("consultations")
+                .select("appointment_time")
+                .gte("appointment_time", start)
+                .lte("appointment_time", end);
+
+            if (data) {
+                const booked = data.map((item) => format(new Date(item.appointment_time), "HH:mm"));
+                setBookedSlots(booked);
+            }
+        };
+
+        fetchBookedSlots();
+    }, [selectedDate]);
 
     const [isNavigating, setIsNavigating] = useState(false);
 
@@ -292,7 +318,7 @@ const ConsultationFormSection = ({ id }: { id?: string }) => {
                                                             selected={field.value}
                                                             onSelect={field.onChange}
                                                             disabled={(date) =>
-                                                                date < new Date() || date > addDays(new Date(), 7)
+                                                                date < new Date() || date > addDays(new Date(), 7) || date.getDay() === 0
                                                             }
                                                             locale={fr}
                                                             className="rounded-md border shadow-sm p-3 w-full flex justify-center bg-white"
@@ -316,23 +342,33 @@ const ConsultationFormSection = ({ id }: { id?: string }) => {
                                                     <FormItem>
                                                         <FormLabel className="font-bold mb-2">Choisir une heure</FormLabel>
                                                         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-2 gap-3">
-                                                            {TIME_SLOTS.map((time) => (
-                                                                <div key={time}>
-                                                                    <input
-                                                                        type="radio"
-                                                                        id={`time-${time}`}
-                                                                        className="peer sr-only"
-                                                                        {...form.register("appointment_time")}
-                                                                        value={time}
-                                                                    />
-                                                                    <label
-                                                                        htmlFor={`time-${time}`}
-                                                                        className="flex items-center justify-center px-4 py-3 bg-white border border-gray-200 rounded-lg cursor-pointer hover:bg-gray-50 peer-checked:bg-blue-50 peer-checked:border-blue-600 peer-checked:text-blue-600 transition-all font-medium text-sm"
-                                                                    >
-                                                                        {time}
-                                                                    </label>
-                                                                </div>
-                                                            ))}
+                                                            {TIME_SLOTS.map((time) => {
+                                                                const isBooked = bookedSlots.includes(time);
+                                                                return (
+                                                                    <div key={time}>
+                                                                        <input
+                                                                            type="radio"
+                                                                            id={`time-${time}`}
+                                                                            className="peer sr-only"
+                                                                            {...form.register("appointment_time")}
+                                                                            value={time}
+                                                                            disabled={isBooked}
+                                                                        />
+                                                                        <label
+                                                                            htmlFor={`time-${time}`}
+                                                                            className={cn(
+                                                                                "flex items-center justify-center px-4 py-3 border rounded-lg cursor-pointer transition-all font-medium text-sm",
+                                                                                isBooked
+                                                                                    ? "bg-gray-100 text-gray-400 border-gray-200 cursor-not-allowed decoration-slice"
+                                                                                    : "bg-white border-gray-200 hover:bg-gray-50 peer-checked:bg-blue-50 peer-checked:border-blue-600 peer-checked:text-blue-600"
+                                                                            )}
+                                                                        >
+                                                                            {time}
+                                                                            {isBooked && <span className="sr-only">(Indisponible)</span>}
+                                                                        </label>
+                                                                    </div>
+                                                                )
+                                                            })}
                                                         </div>
                                                         <FormMessage />
                                                     </FormItem>
