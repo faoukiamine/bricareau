@@ -183,7 +183,7 @@ const ConsultationFormSection = ({ id }: { id?: string }) => {
             <div className="container mx-auto px-4">
                 <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-20">
                     {/* Left Side Content */}
-                    <div className="lg:w-1/3 text-left">
+                    <div className="w-full text-left">
                         <h2
                             className="text-slate-900 tracking-tighter mb-8 italic text-left"
                             style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
@@ -197,7 +197,7 @@ const ConsultationFormSection = ({ id }: { id?: string }) => {
                     </div>
 
                     {/* Right Side Form */}
-                    <div className="lg:w-2/3">
+                    <div className="w-full">
                         <div className="bg-white rounded-3xl p-6 md:p-10 border border-gray-100 shadow-2xl">
                             {/* Progress Steps */}
                             <div className="flex items-center gap-4 md:gap-8 mb-8 overflow-x-auto pb-4 border-b border-gray-100 no-scrollbar">
@@ -452,7 +452,7 @@ const ConsultationFormSection = ({ id }: { id?: string }) => {
                                                         Envoi en cours...
                                                     </>
                                                 ) : (
-                                                    "Confirmer le rendez-vous"
+                                                    "Confirmer RDV"
                                                 )}
                                             </Button>
                                         )}
