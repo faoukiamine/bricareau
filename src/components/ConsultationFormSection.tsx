@@ -140,6 +140,21 @@ const ConsultationFormSection = ({ id }: { id?: string }) => {
 
             if (error) throw error;
 
+            try {
+                const { error: fnError } = await supabase.functions.invoke('send-consultation-confirmation', {
+                    body: {
+                        ...values,
+                        appointment_time: appointmentDateTime.toISOString(),
+                    },
+                });
+
+                if (fnError) {
+                    console.error("Failed to send confirmation email:", fnError);
+                }
+            } catch (fnErr) {
+                console.error("Exception calling edge function:", fnErr);
+            }
+
             toast.success("Demande de consultation envoyée avec succès!");
             setIsSuccess(true);
         } catch (error) {
