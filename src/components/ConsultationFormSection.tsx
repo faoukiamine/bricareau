@@ -2,8 +2,8 @@ const ConsultationFormSection = () => {
     return (
         <section className="py-24 bg-white border-t border-gray-100">
             <div className="container mx-auto px-4">
-                <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-20">
-                    <div className="lg:w-1/3 text-left">
+                <div className="max-w-6xl mx-auto flex flex-col">
+                    <div className="w-full text-left">
                         <h2
                             className="text-slate-900 tracking-tighter mb-8 italic text-left"
                             style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
@@ -16,7 +16,7 @@ const ConsultationFormSection = () => {
                         </p>
                     </div>
 
-                    <div className="lg:w-2/3">
+                    <div className="w-full">
                         <div className="bg-white rounded-3xl p-1 md:p-10 border border-gray-100 shadow-2xl h-[800px] md:h-[700px] overflow-hidden">
                             <div className="w-full h-full">
                                 <iframe
