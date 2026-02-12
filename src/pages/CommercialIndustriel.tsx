@@ -53,10 +53,10 @@ const CommercialIndustriel = () => {
   ];
 
   const guarantees = [
-    "Une eau de meilleure qualité, C'est 100% garantie",
+    "Une eau de meilleure qualité, c'est 100% garanti",
     "Des soins incomparables - Service gants blancs et entretien sans tracas",
     "Tranquillité d'esprit - Nous nous soucions de votre eau pour que vous n'ayez pas à le faire",
-    "Solutions durables - Ils sont aussi bons pour la planète que pour vous",
+    "Solutions durables - Elles sont aussi bonnes pour la planète que pour vous",
     "Pour tous, partout - Une meilleure eau à la maison, au travail et en déplacement"
   ];
 
@@ -259,7 +259,7 @@ const CommercialIndustriel = () => {
         <section className="py-12 md:py-16 bg-primary/5">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center space-y-6">
-              <h2 className="text-[32px] md:text-[48px] font-normal text-white mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
+              <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
                 Améliorez votre eau aujourd'hui
               </h2>
               <p className="text-base md:text-lg text-muted-foreground">

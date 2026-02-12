@@ -37,7 +37,7 @@ const Hero = () => {
               Assurez-vous que l’eau de votre maison a une belle apparence, une bonne odeur et un bon goût, qu’elle provienne d’un système municipal ou d’un puits privé.
             </p>
             <p className="font-light text-[20px] leading-[28px] text-white/95 max-w-xl">
-              Plus que 20000 foyers canadiens ont confié le traitement d’eau de leurs foyers à Bricareau.
+              Plus de 20 000 foyers canadiens ont confié le traitement d’eau de leurs foyers à Bricareau.
             </p>
             <div className="flex gap-4 pt-4">
               <Button
@@ -46,7 +46,7 @@ const Hero = () => {
                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                 asChild
               >
-                <a href="#solutions-title">Explorez nos solutions</a>
+                <a href="#solutions-title">Explorer nos solutions</a>
               </Button>
             </div>
           </div>

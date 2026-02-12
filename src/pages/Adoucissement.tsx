@@ -78,7 +78,7 @@ const Adoucissement = () => {
                     </div>
                 </section>
 
-                {/* 2. Pourquoi choisir - Blue Section (Merged with Plus qu'un adoucisseur) */}
+                {/* 2. Why choose our water softeners Section */}
                 <section className="py-24 bg-blue-600 text-white text-center">
                     <div className="container mx-auto px-6 text-center">
                         <div className="text-center mb-16">
@@ -105,7 +105,7 @@ const Adoucissement = () => {
                         </div>
                     </div>
                 </section>
-
+                {/* 3. Water Softeners Section */}
                 <section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-4">
                         <div className="flex flex-col lg:flex-row-reverse items-center gap-16 lg:gap-24 mb-20">
@@ -146,6 +146,7 @@ const Adoucissement = () => {
                     </div>
                 </section>
 
+                {/* 4. PortableWater Softeners Section */}
                 <section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-4">
                         <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24 mb-20">
@@ -186,6 +187,7 @@ const Adoucissement = () => {
                     </div>
                 </section>
 
+                {/* 5. Water Conditionners without salt Section */}
                 <section className="py-24 bg-white">
                     <div className="container mx-auto px-4">
                         <div className="flex flex-col lg:flex-row-reverse items-center gap-16 lg:gap-24 mb-20">
@@ -229,7 +231,7 @@ const Adoucissement = () => {
                 {/* 6. Testimonials */}
                 <TestimonialsSection />
 
-                {/* 7. Water Test Section */}
+                {/* 7. Water Testing Section */}
                 <section className="py-20 bg-white">
                     <div className="container mx-auto px-4">
                         <div className="flex flex-col lg:flex-row items-stretch gap-0 rounded-[3rem] overflow-hidden shadow-2xl">
@@ -252,21 +254,21 @@ const Adoucissement = () => {
                                     Le luxe, c'est de ne pas avoir à se soucier de la qualité de ce que l'on consomme. Offrez-vous la sérénité d'une eau analysée par des experts, pour une maison où tout brille, sans effort et sans compromis.
                                 </p>
                                 <Button className="bg-white text-blue-600 hover:bg-blue-50 rounded-full px-12 h-16 text-xl font-bold shadow-xl transition-all hover:scale-105" asChild>
-                                    <NavLink to="/water-testing">Demandez une analyse d'eau</NavLink>
+                                    <NavLink to="/water-testing">Demander une analyse d'eau</NavLink>
                                 </Button>
                             </div>
                         </div>
                     </div>
                 </section>
 
-                {/* 10. FAQ Section */}
+                {/* 8. FAQ Section */}
                 <section className="py-24 bg-white">
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
                             <h2
                                 className="text-slate-900 tracking-tighter mb-8 text-left"
                                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
-                            >                                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">FAQ sur l'adoucissement de l'eau</span>
+                            >                                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">FAQ </span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
@@ -287,7 +289,7 @@ const Adoucissement = () => {
                                     { q: "Qu'est-ce que la régénération de l'adoucisseur ?", a: "La régénération est le cycle de nettoyage automatique où l'appareil utilise une solution de saumure pour rincer les minéraux accumulés sur les résines, les rendant prêtes à adoucir l'eau à nouveau." },
                                     { q: "L'adoucisseur nécessite-t-il un entretien professionnel ?", a: "Nous recommandons une vérification annuelle par l'un de nos techniciens pour optimiser les réglages, nettoyer les composants internes et garantir que votre eau reste de qualité supérieure." },
                                     { q: "L'eau adoucie est-elle meilleure pour les vêtements ?", a: "Oui, les minéraux de dureté rendent les fibres textiles rêches et ternes. L'eau adoucie permet de garder vos vêtements plus souples, plus éclatants et plus durables." },
-                                    { q: "Quelle la garantie offerte par Bricareau ?", a: "Bricareau offre l'une des garanties les plus solides du marché, couvrant la bouteille de résine, la tête de contrôle et les composants internes pour votre tranquillité d'esprit totale." }
+                                    { q: "Quelle est la garantie offerte par Bricareau ?", a: "Bricareau offre l'une des garanties les plus solides du marché, couvrant la bouteille de résine, la tête de contrôle et les composants internes pour votre tranquillité d'esprit totale." }
                                 ].map((item, idx) => (
                                     <AccordionItem key={idx} value={`item-${idx}`} className="border-b-gray-200">
                                         <AccordionTrigger className="text-left font-bold text-lg hover:no-underline py-6">
@@ -303,6 +305,7 @@ const Adoucissement = () => {
                     </div>
                 </section>
 
+                {/* 9. Ressources Section */}
                 <section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
@@ -335,12 +338,13 @@ const Adoucissement = () => {
                     </div>
                 </section>
 
+                {/* 10. Contact Section */}
                 <section className="py-24 bg-white border-t border-gray-100">
                     <div className="container mx-auto px-4">
                         <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-20">
                             <div className="lg:w-1/3 text-left">
                                 <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter italic">
-                                    Planifiez une consultation gratuite sur l'eau
+                                    Planifier une consultation gratuite sur l'eau
                                 </h2>
                                 <p className="font-light text-[20px] leading-[28px] text-gray-600 mb-8">
                                     Remplissez le formulaire ci-dessous pour organiser une visite d'un de nos experts de l'eau.

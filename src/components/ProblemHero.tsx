@@ -64,7 +64,7 @@ const ProblemHero = () => {
                         </h1>
 
                         <p className="font-light text-[20px] leading-[28px] text-slate-600 mb-12 max-w-xl">
-                            Vous vous inquiétez de la qualité de votre eau potable, du calcaire sur votre pomme de douche, des tâches de rouille dans votre baignoire ou d’une odeur des œufs pourris lorsque vous prenez votre douche ?
+                            Vous vous inquiétez de la qualité de votre eau potable, du calcaire sur votre pomme de douche, des taches de rouille dans votre baignoire ou d’une odeur des œufs pourris lorsque vous prenez votre douche ?
                         </p>
 
                         <div>
@@ -75,7 +75,7 @@ const ProblemHero = () => {
                                 asChild
                             >
                                 <a href="/consultation" className="flex items-center gap-2">
-                                    Cédulez une consultation gratuite
+                                    Planifier une consultation gratuite
                                     <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
                                 </a>
                             </Button>

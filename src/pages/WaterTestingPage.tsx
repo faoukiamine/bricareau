@@ -211,7 +211,7 @@ const WaterTestingPage = () => {
         {/* Section 6: Testimonials */}
         <TestimonialsSection />
 
-        {/* Section 7: Comment améliorer la qualité de l'eau */}
+        {/* Section 7: Water Testing plans*/}
         <section className="py-24 bg-white">
           <div className="container mx-auto px-6 text-center">
             <div className="text-center mb-16">
@@ -219,24 +219,22 @@ const WaterTestingPage = () => {
                 className="text-slate-900 tracking-tighter mb-8 text-center"
                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
               >
-                <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Comment améliorer la</span>
-                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">qualité de l'eau</span>
+                <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Nos trousses d'analyse</span>
+                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">de la qualité de l'eau</span>
               </h2>
               <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
-                { title: "Systèmes de filtration", desc: "Une eau de boisson pure et délicieuse à chaque robinet.", img: specializedFiltersImg, href: "/filtration" },
-                { title: "Adoucisseurs d'eau", desc: "Pour une eau douce et protégée partout dans la maison.", img: watersofterImg, href: "/adoucisseur-eau-residentiel" },
-                { title: "Filtration complète", desc: "Une protection globale contre les contaminants et impuretés.", img: drinkingwatersofterImg, href: "/filtration" }
+                { title: "1. Analyse d'eau microbiologique", desc: "Une eau de boisson pure et délicieuse à chaque robinet.", href: "/filtration" },
+                { title: "2. Analyse d'eau physico-chimique Type I", desc: "Pour une eau douce et protégée partout dans la maison.", href: "/adoucisseur-eau-residentiel" },
+                { title: "3. Analyse d'eau physico-chimique Type II", desc: "Une protection globale contre les contaminants et impuretés.", href: "/filtration" },
+                { title: "4. Analyse d'eau physico-chimique globale", desc: "Une protection globale contre les contaminants et impuretés.", href: "/filtration" }
               ].map((prod, i) => (
-                <NavLink key={i} to={prod.href} className="group bg-slate-50 p-8 rounded-3xl border border-slate-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
-                  <div className="h-48 mb-8 flex items-center justify-center">
-                    <img src={prod.img} alt={prod.title} className="max-h-full object-contain group-hover:scale-110 transition-transform" />
-                  </div>
-                  <h4 className="text-xl font-bold mb-4">{prod.title}</h4>
-                  <p className="text-gray-500 mb-6">{prod.desc}</p>
-                  <Button variant="link" className="text-blue-600 font-bold p-0">
+                <NavLink key={i} to={prod.href} className="group bg-[#001A4D] p-8 rounded-[2rem] border border-white/5 hover:bg-[#00266b] hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col h-full shadow-xl">
+                  <h4 className="text-xl font-bold mb-4 text-white">{prod.title}</h4>
+                  <p className="text-blue-100/70 text-sm leading-relaxed mb-6 flex-grow">{prod.desc}</p>
+                  <Button variant="link" className="text-blue-400 font-bold p-0 group-hover:text-blue-300 transition-colors w-fit">
                     Découvrir <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </NavLink>
@@ -245,15 +243,14 @@ const WaterTestingPage = () => {
           </div>
         </section>
 
-        {/* Section 8: FAQ */}
-        <section className="py-24 bg-slate-50">
-          <div className="container mx-auto px-6">
+        <section className="py-24 bg-white border-t border-slate-100">
+          <div className="container mx-auto px-4 text-left">
             <div className="text-left mb-16">
               <h2
                 className="text-slate-900 tracking-tighter mb-8 text-left"
                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
               >
-                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block text-slate-900">FAQ</span>
+                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">FAQ</span>
               </h2>
               <div className="w-24 h-1 bg-blue-600"></div>
             </div>
@@ -301,11 +298,15 @@ const WaterTestingPage = () => {
                     a: "Pas de panique. Nos experts analyseront votre rapport et vous recommanderont le système approprié (UV pour les bactéries, adoucisseur pour la dureté ou filtre spécialisé) pour rendre votre eau parfaitement sûre."
                   }
                 ].map((item, idx) => (
-                  <AccordionItem key={idx} value={`item-${idx}`} className="bg-white mb-4 rounded-xl border-none shadow-sm overflow-hidden">
-                    <AccordionTrigger className="px-8 py-5 text-left font-bold hover:no-underline">
+                  <AccordionItem
+                    key={idx}
+                    value={`item-${idx}`}
+                    className="border-b-gray-200"
+                  >
+                    <AccordionTrigger className="text-left font-bold text-lg hover:no-underline py-6">
                       {item.q}
                     </AccordionTrigger>
-                    <AccordionContent className="px-8 pb-5 text-gray-600">
+                    <AccordionContent className="font-light text-[20px] leading-[28px] text-gray-600 pb-6 text-left">
                       {item.a}
                     </AccordionContent>
                   </AccordionItem>
@@ -315,51 +316,33 @@ const WaterTestingPage = () => {
           </div>
         </section>
 
-        {/* Section 9: Consultation Form */}
-        <section id="consultation" className="py-24 bg-white scroll-mt-20">
-          <div className="container mx-auto px-6">
+        {/* 10. Contact Section */}
+        <section className="py-24 bg-white border-t border-gray-100">
+          <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-20">
               <div className="lg:w-1/3 text-left">
-                <h2
-                  className="text-slate-900 tracking-tighter mb-8 italic text-left"
-                  style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
-                >
-                  <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Réserver votre</span>
-                  <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">consultation gratuite</span>
+                <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter italic">
+                  Planifier une consultation gratuite sur l'eau
                 </h2>
-                <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                  C'est simple, rapide et sans engagement. Un expert Bricareau viendra chez vous pour une analyse complète de votre eau.
+                <p className="font-light text-[20px] leading-[28px] text-gray-600 mb-8">
+                  Remplissez le formulaire ci-dessous pour organiser une visite d'un de nos experts de l'eau.
                 </p>
-                <div className="space-y-4">
-                  <div className="flex items-center gap-4 text-blue-600 font-bold">
-                    <CheckCircle2 className="h-6 w-6" />
-                    <span>Analyse certifiée</span>
-                  </div>
-                  <div className="flex items-center gap-4 text-blue-600 font-bold">
-                    <CheckCircle2 className="h-6 w-6" />
-                    <span>Diagnostic complet</span>
-                  </div>
-                  <div className="flex items-center gap-4 text-blue-600 font-bold">
-                    <CheckCircle2 className="h-6 w-6" />
-                    <span>Sans engagement</span>
-                  </div>
-                </div>
               </div>
 
               <div className="lg:w-2/3">
-                <div className="bg-white rounded-3xl p-10 border border-slate-100 shadow-2xl">
+                <div className="bg-white rounded-3xl p-10 border border-gray-100 shadow-2xl">
                   {/* Progress */}
-                  <div className="flex items-center gap-8 mb-12 overflow-x-auto pb-4 border-b border-slate-100">
+                  <div className="flex items-center gap-8 mb-12 overflow-x-auto pb-4 border-b border-gray-100">
                     <div className="flex items-center gap-2 text-blue-600 font-bold whitespace-nowrap">
                       <span className="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center">1</span>
                       VOS INFOS
                     </div>
-                    <div className="flex items-center gap-2 text-slate-300 font-bold whitespace-nowrap">
-                      <span className="w-10 h-10 rounded-full bg-slate-200 text-white flex items-center justify-center">2</span>
+                    <div className="flex items-center gap-2 text-gray-300 font-bold whitespace-nowrap">
+                      <span className="w-10 h-10 rounded-full bg-gray-200 text-white flex items-center justify-center">2</span>
                       VOTRE DISPONIBILITÉ
                     </div>
-                    <div className="flex items-center gap-2 text-slate-300 font-bold whitespace-nowrap">
-                      <span className="w-10 h-10 rounded-full bg-slate-200 text-white flex items-center justify-center">3</span>
+                    <div className="flex items-center gap-2 text-gray-300 font-bold whitespace-nowrap">
+                      <span className="w-10 h-10 rounded-full bg-gray-200 text-white flex items-center justify-center">3</span>
                       CONFIRMATION
                     </div>
                   </div>
@@ -400,7 +383,7 @@ const WaterTestingPage = () => {
                       </div>
                     </div>
                     <div className="md:col-span-2 text-left">
-                      <Button className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-16 h-14 text-xl font-bold w-full md:w-auto transition-transform hover:scale-105 shadow-lg shadow-blue-200">
+                      <Button className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-16 h-14 text-xl font-bold w-full md:w-auto">
                         Continuer
                       </Button>
                       <p className="mt-4 text-[10px] text-gray-400 max-w-lg">
@@ -413,10 +396,9 @@ const WaterTestingPage = () => {
             </div>
           </div>
         </section>
-
       </main>
       <Footer />
-    </div >
+    </div>
   );
 };
 

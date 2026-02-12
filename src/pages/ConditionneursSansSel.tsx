@@ -209,7 +209,7 @@ const ConditionneursSansSel = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                   {[
                     { c: "01", t: "Économies", d: "Réduit les coûts d'entretien et prolonge la vie des appareils." },
-                    { c: "02", t: "Installation", d: "S'installe facilement on l'arrivée d'eau principale." },
+                    { c: "02", t: "Installation", d: "S'installe facilement sur l'arrivée d'eau principale." },
                     { c: "03", t: "Qualité", d: "Conserve l'eau potable et riche en minéraux naturels." }
                   ].map((item, idx) => (
                     <div key={idx} className="border-t border-gray-200 pt-6">

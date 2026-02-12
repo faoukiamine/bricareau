@@ -50,7 +50,7 @@ const DesinfectionUV = () => {
         <div className="min-h-screen bg-background text-slate-900 font-sans">
             <Header />
             <main>
-                {/* Hero Section */}
+                {/* 1.Hero Section */}
                 <section className="relative h-[800px] flex items-start overflow-hidden pt-[220px]">
                     <div className="absolute inset-0 z-0">
                         <img
@@ -72,7 +72,7 @@ const DesinfectionUV = () => {
                             >
                                 La désinfection UV <span className="font-normal"><br />Zéro produit chimique, 100% de protection</span>
                             </h1>
-                            <p className="font-light text-[20px] leading-[28px] text-white/95 mb-8 max-w-xl">
+                            <p className="font-light text-[20px] leading-[28px] text-white/95 mb-8 max-w-xl text-justify">
                                 Éliminez 99,99% des virus, bactéries et kystes sans ajouter de produits chimiques à votre eau. Une protection invisible pour une sécurité totale.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4">
@@ -82,14 +82,14 @@ const DesinfectionUV = () => {
                                     style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                                     onClick={() => document.getElementById('systemes-uv')?.scrollIntoView({ behavior: 'smooth' })}
                                 >
-                                    Explorez nos systèmes UV
+                                    Explorer nos systèmes UV
                                 </Button>
                             </div>
                         </div>
                     </div>
                 </section>
 
-                {/* 2. Pourquoi choisir - Blue Section (Merged with Avantages) */}
+                {/* 2. Why choose UV disinfection? */}
                 <section className="py-24 bg-blue-600 text-white">
                     <div className="container mx-auto px-6">
                         <div className="text-center mb-16">
@@ -127,7 +127,7 @@ const DesinfectionUV = () => {
                     </div>
                 </section>
 
-                {/* 3. Systèmes UV - Product Grid */}
+                {/* 3. UV Systems - Product Grid */}
                 <section id="systemes-uv" className="py-24 bg-white">
                     <div className="container mx-auto px-6">
                         <div className="text-left mb-16">
@@ -179,7 +179,7 @@ const DesinfectionUV = () => {
                                 <thead>
                                     <tr className="bg-gray-100">
                                         <th className="p-8 text-left text-gray-400 font-medium uppercase tracking-wider">Fonctionnalités</th>
-                                        <th className="p-8 text-center text-gray-900 font-bold">VH200-F10</th>
+                                        <th className="p-8 text-center text-blue-600 font-bold">VH200-F10</th>
                                         <th className="p-8 text-center text-blue-600 font-bold bg-blue-50/50">VH410-F20</th>
                                         <th className="p-8 text-center text-blue-600 font-bold bg-blue-50/50">Arros 15-IHS10</th>
                                     </tr>
@@ -189,7 +189,7 @@ const DesinfectionUV = () => {
                                         <tr key={i} className="hover:bg-gray-50 transition-colors">
                                             <td className="p-8 font-medium text-gray-700">{row.feature}</td>
                                             <td className="p-8 text-center">
-                                                {typeof row.VH200F10 === 'string' ? <span className="text-slate-500 font-bold">{row.VH200F10}</span> : (row.VH200F10 ? <CheckCircle2 className="h-6 w-6 text-slate-400 mx-auto" /> : <X className="h-6 w-6 text-gray-200 mx-auto" />)}
+                                                {typeof row.VH200F10 === 'string' ? <span className="text-blue-600 font-bold">{row.VH200F10}</span> : (row.VH200F10 ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : <X className="h-6 w-6 text-gray-300 mx-auto" />)}
                                             </td>
                                             <td className="p-8 text-center bg-blue-50/20">
                                                 {typeof row.VH410F20 === 'string' ? <span className="text-blue-600 font-bold">{row.VH410F20}</span> : (row.VH410F20 ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : <X className="h-6 w-6 text-gray-300 mx-auto" />)}
@@ -205,7 +205,7 @@ const DesinfectionUV = () => {
                     </div>
                 </section>
 
-                {/* 6. Expertise Section (Blue Box Design) */}
+                {/* 6. Water Testing Section */}
                 <section className="py-24 bg-white">
                     <div className="container mx-auto px-6">
                         <div className="flex flex-col lg:flex-row items-stretch gap-0 rounded-[3rem] overflow-hidden shadow-2xl">
@@ -227,8 +227,8 @@ const DesinfectionUV = () => {
                                 <p className="text-white/90 leading-relaxed mb-12 text-justify">
                                     Contrairement aux minéraux, les bactéries et virus ne se voient pas et n'ont pas de goût. Une analyse microbiologique est le seul moyen de garantir la potabilité de votre eau, surtout pour les puits privés.
                                 </p>
-                                <Button className="bg-white text-blue-600 hover:bg-blue-50 rounded-full px-12 h-16 text-xl font-bold shadow-xl">
-                                    Testez mon eau
+                                <Button className="bg-white text-blue-600 hover:bg-blue-50 rounded-full px-12 h-16 text-xl font-bold shadow-xl" asChild>
+                                    <NavLink to="/water-testing">Tester mon eau</NavLink>
                                 </Button>
                             </div>
                         </div>
@@ -371,7 +371,7 @@ const DesinfectionUV = () => {
                     </div>
                 </section>
 
-                {/* 10. Consultation Form Section */}
+                {/* 10. Contact Form Section */}
                 <section className="py-24 bg-white border-t border-gray-100">
                     <div className="container mx-auto px-4">
                         <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-20">

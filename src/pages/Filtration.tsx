@@ -33,19 +33,19 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 
 const Filtration = () => {
     const comparisonData = [
-        { feature: "Filtration du chlore", ro: true, whole: true, basic: false },
-        { feature: "Élimination des métaux lourds", ro: true, whole: "Option", basic: false },
-        { feature: "Élimination des bactéries (UV)", ro: "Option", whole: "Option", basic: false },
-        { feature: "Eau alcaline", ro: "Option", whole: false, basic: false },
-        { feature: "Installation sous évier", ro: true, whole: false, basic: true },
-        { feature: "Protection de la tuyauterie", ro: false, whole: true, basic: false },
+        { feature: "Spectre d'épuration", whole: true, ro: true, basic: false },
+        { feature: "Élimination des métaux lourds", whole: true, ro: "Option", basic: false },
+        { feature: "Élimination des bactéries (UV)", whole: false, ro: "Option", basic: false },
+        { feature: "Eau alcaline", whole: "Option", ro: false, basic: false },
+        { feature: "Installation sous évier", whole: true, ro: false, basic: true },
+        { feature: "Protection de la tuyauterie", whole: false, ro: true, basic: false },
     ];
 
     return (
         <div className="min-h-screen bg-background text-slate-900 font-sans">
             <Header />
             <main>
-                {/* Hero Section */}
+                {/* 1.Hero Section */}
                 <section className="relative h-[800px] flex items-start overflow-hidden pt-[220px]">
                     <div className="absolute inset-0 z-0">
                         <img
@@ -80,7 +80,7 @@ const Filtration = () => {
                                     asChild
                                 >
                                     <NavLink to="/contact">
-                                        Obtenez une consultation
+                                        Obtenir une consultation
                                     </NavLink>
                                 </Button>
                                 <Button
@@ -100,7 +100,7 @@ const Filtration = () => {
                     </div>
                 </section>
 
-                {/* 1. Dark Benefits Section */}
+                {/* 2. Benefits Section */}
                 <section className="py-24 bg-blue-600 text-white text-center">
                     <div className="container mx-auto px-6 text-center">
                         <div className="text-center mb-16">
@@ -131,7 +131,7 @@ const Filtration = () => {
                 </section>
 
 
-                {/* 2. Feature Section 2 (Whole House - Design matching Adoucissement) */}
+                {/* 3. Whole House Water Filter Section */}
                 <section className="py-24 bg-white">
                     <div className="container mx-auto px-4">
                         <div className="flex flex-col lg:flex-row items-center gap-20 mb-20">
@@ -162,7 +162,7 @@ const Filtration = () => {
                                     Protégez vos appareils ménagers, votre tuyauterie et votre peau. Nos systèmes de filtration centrale traitent chaque goutte d'eau qui entre dans votre foyer pour une tranquillité d'esprit totale.
                                 </p>
                                 <Button className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-10 h-14 text-lg font-bold" asChild>
-                                    <NavLink to="/contact">Découvrez nos filtres d'eau spécialisés</NavLink>
+                                    <NavLink to="/contact">Découvrir nos filtres d'eau spécialisés</NavLink>
                                 </Button>
                             </div>
                         </div>
@@ -184,7 +184,7 @@ const Filtration = () => {
                     </div>
                 </section>
 
-                {/* 3. Intro Section (Design matching Kitchen Section from Adoucissement.tsx) */}
+                {/* 4. Reverse Osmosis Water Filtration Section */}
                 <section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-4">
                         <div className="flex flex-col lg:flex-row-reverse items-center gap-20 mb-20">
@@ -215,7 +215,7 @@ const Filtration = () => {
                                     Découvrez comment notre système d'osmose inverse libère votre quotidien du goût de chlore et de la corvée des bouteilles plastique. Profitez d'une eau légère, d'une clarté de diamant, idéale pour une hydratation saine et une cuisine riche en saveurs.
                                 </p>
                                 <Button className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-10 h-14 text-lg font-bold" asChild>
-                                    <NavLink to="/systeme-de-filtration-deau-potable">En savoir plus sur nos systèmes</NavLink>
+                                    <NavLink to="/systeme-de-filtration-deau-potable">Découvrir nos systèmes d'osmose inverse</NavLink>
                                 </Button>
                             </div>
                         </div>
@@ -224,7 +224,7 @@ const Filtration = () => {
                             {[
                                 { title: "Pureté Absolue", desc: "Élimine 99% des contaminants, métaux lourds et micro-plastiques pour une sécurité totale de toute la famille." },
                                 { title: "Éco-Conscient", desc: "Réduisez drastiquement votre empreinte carbone en éliminant définitivement les bouteilles d'eau jetables de votre foyer." },
-                                { title: "Saveurs Révélées", desc: "Sublimez le goût de vos boissons and petits plats avec une eau pure, sans chlore ni impuretés pour une cuisine d'exception." }
+                                { title: "Saveurs Révélées", desc: "Sublimez le goût de vos boissons et petits plats avec une eau pure, sans chlore ni impuretés pour une cuisine d'exception." }
                             ].map((item, i) => (
                                 <div key={i}>
                                     <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
@@ -238,7 +238,7 @@ const Filtration = () => {
                 </section>
 
 
-                {/* 4. Feature Section 1 (Under Sink - Design matching Adoucissement) */}
+                {/* 5. Under Sink Water Filtration Systems Section */}
                 <section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-4">
                         <div className="flex flex-col lg:flex-row items-center gap-20 mb-20">
@@ -269,7 +269,7 @@ const Filtration = () => {
                                     Éliminez jusqu'à 99% des pathogènes, du plomb et du fluorure. L'osmose inverse Bricareau est la solution ultime pour une eau de boisson de qualité restaurant directement chez vous.
                                 </p>
                                 <Button className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-10 h-14 text-lg font-bold" asChild>
-                                    <NavLink to="/systemes-de-filtration-deau-sous-evier">Explorer l'osmose inverse</NavLink>
+                                    <NavLink to="/systemes-de-filtration-deau-sous-evier">Explorer nos systèmes de filtration sous l'évier</NavLink>
                                 </Button>
                             </div>
                         </div>
@@ -291,17 +291,16 @@ const Filtration = () => {
                     </div>
                 </section>
 
-                {/* 5. Elite Protection Section - Custom Design from Image */}
+                {/* 6. Water Testing Section */}
                 <section className="py-24 bg-[#F8F9FA]">
                     <div className="container mx-auto px-6">
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
                             {/* Left Side: Content */}
                             <div className="flex flex-col items-start text-left lg:pr-10 order-2 lg:order-1">
                                 <span className="text-slate-400 text-xs font-bold uppercase tracking-[0.3em] mb-6">
-                                    NOTRE ENGAGEMENT
+                                    Qualité d'eau
                                 </span>
-                                <h2 className="text-[40px] md:text-[56px] font-bold text-slate-900 leading-[1.1] tracking-tighter mb-8">
-                                    Analyse & Expertise : <br />
+                                <h2 className="text-[32px] md:text-[48px] font-normal text-blue-600 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
                                     Votre eau sous <br />
                                     la loupe.
                                 </h2>
@@ -309,8 +308,8 @@ const Filtration = () => {
                                     La qualité de l'eau n'est pas une question de hasard. Nos experts analysent chaque paramètre pour vous proposer la solution de filtration la plus adaptée à la composition unique de votre eau municipale ou de puits.
                                 </p>
                                 <div className="flex flex-wrap items-center gap-8">
-                                    <Button className="bg-black hover:bg-slate-800 text-white rounded-full px-10 h-14 text-sm font-bold uppercase tracking-widest transition-all">
-                                        En savoir plus
+                                    <Button className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-10 h-14 text-lg font-bold" asChild>
+                                        <NavLink to="/water-testing">En savoir plus</NavLink>
                                     </Button>
                                 </div>
                             </div>
@@ -329,24 +328,31 @@ const Filtration = () => {
                     </div>
                 </section>
 
-                {/* 6.5 Testimonials Section */}
+                {/* 7. Testimonials Section */}
                 <TestimonialsSection />
 
-                {/* 7. Comparison Table - Matching EauDePuits Design */}
+                {/* 8. Comparison Table */}
                 <section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-4">
-                        <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold text-slate-900 leading-[1.1] tracking-tighter mb-8 text-center">
-                            Comparez nos solutions <br />de filtration d'eau de qualité.
-                        </h2>
+                        <div className="text-left mb-16">
+                            <h2
+                                className="text-slate-900 tracking-tighter mb-8 text-left"
+                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                            >
+                                <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Comparez nos solutions</span>
+                                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">de filtration d'eau de qualité.</span>
+                            </h2>
+                            <div className="w-24 h-1 bg-blue-600"></div>
+                        </div>
                         <div className="overflow-x-auto">
                             <table className="w-full min-w-[1000px] border-collapse bg-white rounded-2xl overflow-hidden shadow-sm">
                                 <thead>
                                     <tr className="bg-gray-100">
                                         <th className="p-8 text-left text-gray-400 font-medium uppercase tracking-wider">Solutions</th>
                                         {[
-                                            { name: "Osmose Inverse (Eau potable)", img: drinkingWaterImg },
-                                            { name: "Système de filtration centrale", img: waterSoftenerImg },
-                                            { name: "Filtres spécialisés (Sédiments)", img: specializedFiltersImg }
+                                            { name: "Filtres spécialisés (Sédiments)", img: specializedFiltersImg },
+                                            { name: "Stations d'eau potable", img: drinkingWaterImg },
+                                            { name: "Systèmes de filtration sous l'évier", img: undersinkSystemImg }
                                         ].map((m, i) => (
                                             <th key={i} className="p-4 text-center text-gray-900 font-bold text-sm">
                                                 <div className="flex flex-col items-center gap-2">
@@ -382,14 +388,15 @@ const Filtration = () => {
                     </div>
                 </section>
 
-                {/* 10. FAQ Section */}
+                {/* 9. FAQ Section */}
                 <section className="py-24 bg-white">
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
                             <h2
                                 className="text-slate-900 tracking-tighter mb-8 text-left"
                                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
-                            >                                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">FAQ sur les filtres<br /> d'eau</span>
+                            >
+                                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">FAQ</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
@@ -471,14 +478,15 @@ const Filtration = () => {
                     </div>
                 </section>
 
-                {/* 5. Ressources Section */}
+                {/* 10. Ressources Section */}
                 <section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
                             <h2
                                 className="text-slate-900 tracking-tighter mb-8 text-left"
                                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
-                            >                                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">Ressources</span>
+                            >
+                                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">Ressources</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -522,7 +530,7 @@ const Filtration = () => {
                     </div>
                 </section>
 
-                {/* 11. Consultation Form Section (Adopted from Adoucissement.tsx) */}
+                {/* 11. Consultation Form Section */}
                 <section className="py-24 bg-white border-t border-gray-100">
                     <div className="container mx-auto px-4">
                         <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-20">

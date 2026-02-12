@@ -84,7 +84,7 @@ const EauDePuits = () => {
     <div className="min-h-screen bg-background">
       <Header />
       <main>
-        {/* Hero Section */}
+        {/* 1.Hero Section */}
         <section className="relative h-[800px] flex items-start overflow-hidden pt-[220px]">
           <div className="absolute inset-0 z-0">
             <img
@@ -133,7 +133,7 @@ const EauDePuits = () => {
           </div>
         </section>
 
-        {/* Problems Grid - Redesigned Staggered Layout */}
+        {/* 2. Well Water Problems section */}
         <section className="py-32 bg-[#F8F9FA] overflow-hidden">
           <div className="container mx-auto px-4">
             {/* Title Header - Above Grid */}
@@ -245,7 +245,7 @@ const EauDePuits = () => {
           </div>
         </section>
 
-        {/* 4. SECTION PROCESSUS - Minimalist 4-Step Design */}
+        {/* 4. Processus Section - Minimalist 4-Step Design */}
         <section className="bg-white py-32 border-t border-gray-50">
           <div className="container mx-auto px-4">
             {/* Header Layout */}
@@ -310,7 +310,7 @@ const EauDePuits = () => {
           </div>
         </section>
 
-        {/* 5. SECTION TESTS D'EAU - Blue Box Design */}
+        {/* 5. Water Testing Section*/}
         <section className="py-24 bg-white">
           <div className="container mx-auto px-6">
             <div className="flex flex-col lg:flex-row items-stretch gap-0 rounded-[3rem] overflow-hidden shadow-2xl">
@@ -339,7 +339,7 @@ const EauDePuits = () => {
           </div>
         </section>
 
-        {/* 6. SECTION PRODUITS ASSOCIÉS */}
+        {/* 6. Associated products Section */}
         <section className="bg-white py-24">
           <div className="container mx-auto px-6">
             <div className="text-left mb-16">
@@ -397,10 +397,10 @@ const EauDePuits = () => {
           </div>
         </section>
 
-        {/* Testimonial Slider */}
+        {/* 7. Testimonial Slider */}
         <TestimonialsSection />
 
-        {/* Comparison Table Section */}
+        {/* 8. Comparison Table Section */}
         <section className="py-24 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="text-left mb-16">
@@ -461,7 +461,7 @@ const EauDePuits = () => {
           </div>
         </section>
 
-        {/* CTA Section */}
+        {/* 9.CTA Section */}
         <section className="bg-primary py-16 md:py-20">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-2xl md:text-3xl font-bold text-primary-foreground mb-4">
@@ -577,7 +577,7 @@ const EauDePuits = () => {
           </div>
         </section>
 
-        {/* 11. Articles Section */}
+        {/* 11. RessourcesSection */}
         <section className="py-24 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="text-left mb-16">
@@ -628,7 +628,7 @@ const EauDePuits = () => {
           </div>
         </section>
 
-        {/* 12. Consultation Form Section */}
+        {/* 12. Contact Form Section */}
         <section className="py-24 bg-white border-t border-gray-100">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-20">
