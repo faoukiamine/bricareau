@@ -146,7 +146,7 @@ const Adoucissement = () => {
                     </div>
                 </section>
 
-                {/* 4. PortableWater Softeners Section */}
+                {/* 4. Portable Water Softeners Section */}
                 <section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-4">
                         <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24 mb-20">
@@ -305,7 +305,7 @@ const Adoucissement = () => {
                     </div>
                 </section>
 
-                {/* 9. Ressources Section */}
+                {/* 9. Resources Section */}
                 <section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
