@@ -33,7 +33,7 @@ import Garantie from "./pages/Garantie";
 import Pieces from "./pages/Pieces";
 import Manuels from "./pages/Manuels";
 import Promotions from "./pages/Promotions";
-import SpecializedFiltration from "./pages/Filtres-deau.tsx";
+import SpecializedFiltration from "./pages/Filtres-deau-de-puits.tsx";
 import FiltrationSousEvier from "./pages/Systemes-de-filtration-deau-sous-evier";
 import DesinfectionUV from "./pages/Systemes-de-desinfection-UV";
 import FiltreEauHauteEfficacite from "./pages/Filtre-eau-haute-efficacite";
