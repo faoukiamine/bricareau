@@ -318,7 +318,7 @@ const WaterTestingPage = () => {
         </section>
 
         {/* 6 Contact Section */}
-        <section className="py-24 bg-white border-t border-gray-100">
+        <section id="consultation" className="py-24 bg-white border-t border-gray-100">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-20">
               <div className="lg:w-1/3 text-left">
@@ -326,7 +326,7 @@ const WaterTestingPage = () => {
                   Planifier une consultation gratuite sur l'eau
                 </h2>
                 <p className="font-light text-[20px] leading-[28px] text-gray-600 mb-8">
-                  Remplissez le formulaire ci-dessous pour organiser une visite d'un de nos experts de l'eau.
+                  Remplissez le formulaire ci-dessous pour organiser une consultation téléphonique avec l'un de nos experts.
                 </p>
               </div>
 

@@ -80,6 +80,15 @@ const DesinfectionUV = () => {
                                     size="lg"
                                     className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14"
                                     style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                    asChild
+                                >
+                                    <a href="#consultation">Planifier une consultation gratuite</a>
+                                </Button>
+                                <Button
+                                    size="lg"
+                                    variant="outline"
+                                    className="bg-white/10 hover:bg-white/20 text-white border-white rounded-full px-8 h-14 backdrop-blur-sm shadow-lg flex items-center gap-2"
+                                    style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                                     onClick={() => document.getElementById('systemes-uv')?.scrollIntoView({ behavior: 'smooth' })}
                                 >
                                     Découvrir nos systèmes UV
@@ -355,15 +364,17 @@ const DesinfectionUV = () => {
                                     img: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop"
                                 }
                             ].map((art, i) => (
-                                <div key={i} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer group">
+                                <div key={i} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer group flex flex-col h-full border border-gray-100">
                                     <div className="h-56 overflow-hidden">
                                         <img src={art.img} alt={art.title} className="w-full h-full object-cover transition-transform group-hover:scale-110" />
                                     </div>
-                                    <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors">
-                                        <h4 className="text-xl font-bold mb-4">{art.title}</h4>
-                                        <NavLink to="#" className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-xs tracking-widest">
-                                            EN SAVOIR PLUS <ChevronRight className="h-4 w-4" />
-                                        </NavLink>
+                                    <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
+                                        <h4 className="text-xl font-bold mb-4 group-hover:text-blue-600 transition-colors uppercase tracking-tight">{art.title}</h4>
+                                        <div className="mt-auto">
+                                            <NavLink to="#" className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-xs tracking-widest uppercase">
+                                                EN SAVOIR PLUS <ChevronRight className="h-4 w-4" />
+                                            </NavLink>
+                                        </div>
                                     </div>
                                 </div>
                             ))}
@@ -372,7 +383,7 @@ const DesinfectionUV = () => {
                 </section>
 
                 {/* 10. Contact Form Section */}
-                <section className="py-24 bg-white border-t border-gray-100">
+                <section id="consultation" className="py-24 bg-white border-t border-gray-100">
                     <div className="container mx-auto px-4">
                         <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-20">
                             <div className="lg:w-1/3 text-left">
@@ -384,7 +395,7 @@ const DesinfectionUV = () => {
                                     <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">foyer dès aujourd'hui</span>
                                 </h2>
                                 <p className="font-light text-[20px] leading-[28px] text-gray-600 mb-8">
-                                    Remplissez le formulaire ci-dessous pour organiser une visite d'un de nos experts de l'eau et évaluer vos besoins en désinfection microbiologique.
+                                    Remplissez le formulaire ci-dessous pour organiser une consultation téléphonique avec l'un de nos experts.
                                 </p>
                             </div>
 

@@ -1,4 +1,4 @@
-import { Phone, Award, DollarSign, CheckCircle2 } from "lucide-react";
+import { Phone, Award, DollarSign, CheckCircle2, ChevronRight } from "lucide-react";
 import heroImage from "@/assets/1451506551.JPG";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Testimonials from "@/components/Testimonials";
@@ -134,14 +134,13 @@ const CommercialIndustriel = () => {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
               {solutions.map((solution, index) => (
-                <Card key={index} className="hover:shadow-lg transition-shadow">
-                  <CardHeader>
-                    <CardTitle className="text-lg">{solution.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <CardDescription>{solution.description}</CardDescription>
-                  </CardContent>
-                </Card>
+                <div key={index} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer group flex flex-col h-full border border-gray-100 p-8">
+                  <h3 className="text-xl font-bold mb-4 group-hover:text-blue-600 transition-colors uppercase tracking-tight">{solution.title}</h3>
+                  <p className="text-slate-500 text-sm leading-relaxed mb-6 flex-grow">{solution.description}</p>
+                  <div className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-xs tracking-widest uppercase mt-auto">
+                    EN SAVOIR PLUS <ChevronRight className="h-4 w-4" />
+                  </div>
+                </div>
               ))}
             </div>
           </div>

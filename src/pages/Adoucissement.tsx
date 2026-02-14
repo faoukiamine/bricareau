@@ -71,8 +71,9 @@ const Adoucissement = () => {
                                 size="lg"
                                 className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14"
                                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                asChild
                             >
-                                Planifiez une consultation gratuite sur l'eau
+                                <a href="#consultation">Planifier une consultation gratuite</a>
                             </Button>
                         </div>
                     </div>
@@ -322,15 +323,17 @@ const Adoucissement = () => {
                                 { title: "L'importance de l'eau adoucie", img: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=800&auto=format&fit=crop" },
                                 { title: "Entretien de votre système Bricareau", img: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=800&auto=format&fit=crop" }
                             ].map((art, i) => (
-                                <div key={i} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer group">
+                                <div key={i} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer group flex flex-col h-full border border-gray-100">
                                     <div className="h-56 overflow-hidden">
                                         <img src={art.img} alt={art.title} className="w-full h-full object-cover transition-transform group-hover:scale-110" />
                                     </div>
-                                    <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors">
-                                        <h4 className="text-xl font-bold mb-4">{art.title}</h4>
-                                        <NavLink to="#" className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-xs tracking-widest">
-                                            EN SAVOIR PLUS <ChevronRight className="h-4 w-4" />
-                                        </NavLink>
+                                    <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
+                                        <h4 className="text-xl font-bold mb-4 group-hover:text-blue-600 transition-colors uppercase tracking-tight">{art.title}</h4>
+                                        <div className="mt-auto">
+                                            <NavLink to="#" className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-xs tracking-widest uppercase">
+                                                EN SAVOIR PLUS <ChevronRight className="h-4 w-4" />
+                                            </NavLink>
+                                        </div>
                                     </div>
                                 </div>
                             ))}
@@ -339,7 +342,7 @@ const Adoucissement = () => {
                 </section>
 
                 {/* Consultation Form Section */}
-                <ConsultationFormSection />
+                <ConsultationFormSection id="consultation" />
             </main>
             <Footer />
         </div>

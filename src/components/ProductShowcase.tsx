@@ -66,43 +66,43 @@ const ProductShowcase = () => {
                 {/* Product grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                     {products.map((product, index) => (
-                        <Card
+                        <div
                             key={index}
-                            className="group overflow-hidden border-border hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                            className="group bg-white rounded-3xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full cursor-pointer"
+                            onClick={() => window.location.href = product.link}
                         >
                             {/* Product image */}
-                            <div className="relative h-80 overflow-hidden bg-white p-6">
+                            <div className="relative h-80 overflow-hidden bg-slate-50 flex items-center justify-center p-12">
                                 <img
                                     src={product.image}
                                     alt={product.name}
-                                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                                    className="max-h-full object-contain group-hover:scale-110 transition-transform duration-700 mix-blend-multiply drop-shadow-xl"
                                 />
                             </div>
 
                             {/* Product info */}
-                            <CardContent className="p-6 space-y-3">
+                            <div className="p-8 space-y-4 flex flex-col flex-grow border-t-2 border-transparent group-hover:border-blue-600 transition-colors">
                                 <h3
-                                    className="text-[20px] leading-[28px] font-semibold text-foreground"
+                                    className="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors uppercase tracking-tight"
                                     style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                                 >
                                     {product.name}
                                 </h3>
                                 <p
-                                    className="text-[16px] leading-[24px] font-light text-muted-foreground"
+                                    className="text-slate-500 font-light leading-relaxed flex-grow"
                                     style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                                 >
                                     {product.description}
                                 </p>
-                                <a
-                                    href={product.link}
-                                    className="inline-flex items-center gap-2 text-[#2563EB] font-medium text-[16px] leading-[24px] hover:gap-3 transition-all group/link"
+                                <div
+                                    className="inline-flex items-center gap-2 text-blue-600 font-bold text-xs tracking-widest uppercase mt-4 group-hover:underline"
                                     style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                                 >
-                                    <span>En savoir plus</span>
-                                    <ArrowRight className="h-4 w-4" />
-                                </a>
-                            </CardContent>
-                        </Card>
+                                    <span>EN SAVOIR PLUS</span>
+                                    <ArrowRight className="h-4 w-4 transform group-hover:translate-x-1 transition-transform" />
+                                </div>
+                            </div>
+                        </div>
                     ))}
                 </div>
             </div>

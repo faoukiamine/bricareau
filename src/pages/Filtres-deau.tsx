@@ -219,17 +219,29 @@ const FiltresDeau = () => {
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                             {products.map((p, i) => (
-                                <div key={i} className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center transition-all hover:shadow-md hover:-translate-y-1">
-                                    <div className="h-48 mb-8 flex items-center justify-center">
-                                        <img src={p.image} alt={p.name} className="max-h-full object-contain" />
+                                <div
+                                    key={i}
+                                    className="group bg-white rounded-3xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full cursor-pointer"
+                                    onClick={() => window.location.href = "/contact"}
+                                >
+                                    <div className="bg-slate-50 aspect-square overflow-hidden flex items-center justify-center p-12">
+                                        <img
+                                            src={p.image}
+                                            alt={p.name}
+                                            className="w-full h-full object-contain mix-blend-multiply transition-transform duration-700 group-hover:scale-110 drop-shadow-xl"
+                                        />
                                     </div>
-                                    <h3 className="text-xl font-bold mb-4">{p.name}</h3>
-                                    <p className="text-gray-500 mb-6 flex-grow">{p.desc}</p>
-                                    <Button variant="link" className="text-blue-600 font-bold p-0 group">
-                                        EN SAVOIR PLUS <ChevronRight className="h-4 w-4 ml-1 transition-transform group-hover:translate-x-1" />
-                                    </Button>
+                                    <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
+                                        <h3 className="text-xl font-bold mb-4 group-hover:text-blue-600 transition-colors uppercase tracking-tight">{p.name}</h3>
+                                        <p className="text-slate-500 text-sm leading-relaxed mb-6 flex-grow">{p.desc}</p>
+                                        <div className="mt-auto">
+                                            <div className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-xs tracking-widest uppercase">
+                                                EN SAVOIR PLUS <ChevronRight className="h-4 w-4 transform group-hover:translate-x-1 transition-transform" />
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             ))}
                         </div>
@@ -398,15 +410,28 @@ const FiltresDeau = () => {
                                 { title: "L'importance de l'eau adoucie", img: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=800&auto=format&fit=crop" },
                                 { title: "Entretien de votre système Bricareau", img: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=800&auto=format&fit=crop" }
                             ].map((art, i) => (
-                                <div key={i} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer group">
+                                <div
+                                    key={i}
+                                    className="group bg-white rounded-3xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full cursor-pointer"
+                                    onClick={() => window.location.href = "#"}
+                                >
                                     <div className="h-56 overflow-hidden">
-                                        <img src={art.img} alt={art.title} className="w-full h-full object-cover transition-transform group-hover:scale-110" />
+                                        <img
+                                            src={art.img}
+                                            alt={art.title}
+                                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                        />
                                     </div>
-                                    <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors">
-                                        <h4 className="text-xl font-bold mb-4">{art.title}</h4>
-                                        <NavLink to="#" className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-xs tracking-widest">
-                                            EN SAVOIR PLUS <ChevronRight className="h-4 w-4" />
-                                        </NavLink>
+                                    <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
+                                        <h4 className="text-xl font-bold mb-4 group-hover:text-blue-600 transition-colors uppercase tracking-tight">{art.title}</h4>
+                                        <div className="mt-auto">
+                                            <NavLink
+                                                to="#"
+                                                className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-xs tracking-widest uppercase"
+                                            >
+                                                EN SAVOIR PLUS <ChevronRight className="h-4 w-4 transform group-hover:translate-x-1 transition-transform" />
+                                            </NavLink>
+                                        </div>
                                     </div>
                                 </div>
                             ))}
@@ -415,7 +440,7 @@ const FiltresDeau = () => {
                 </section>
 
                 {/* Consultation Form Section */}
-                <section className="py-24 bg-white border-t border-gray-100">
+                <section id="consultation" className="py-24 bg-white border-t border-gray-100">
                     <div className="container mx-auto px-4">
                         <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-20">
                             <div className="lg:w-1/3 text-left">
@@ -427,7 +452,7 @@ const FiltresDeau = () => {
                                     <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">consultation gratuite</span>
                                 </h2>
                                 <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                                    Remplissez le formulaire ci-dessous pour organiser une visite d'un de nos experts de l'eau.
+                                    Remplissez le formulaire ci-dessous pour organiser une consultation téléphonique avec l'un de nos experts.
                                 </p>
                             </div>
 

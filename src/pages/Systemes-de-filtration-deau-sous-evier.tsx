@@ -149,22 +149,37 @@ const FiltrationSousEvier = () => {
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-6xl mx-auto">
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                             {[
                                 { name: "Bricareau Essential", desc: "La pureté accessible sans compromis sur la qualité.", img: essentialImg },
                                 { name: "Bricareau Plus RO", desc: "Performance exceptionnelle pour les familles actives.", img: plusROImg },
                                 { name: "Bricareau Elite RO", desc: "Le summum de la filtration avec reminéralisation alcaline incluse.", path: "/ro-6", img: eliteROImg },
 
                             ].map((product, i) => (
-                                <div key={i} className="group cursor-pointer">
-                                    <div className="bg-slate-50 aspect-square rounded-3xl mb-6 overflow-hidden flex items-center justify-center p-8 transition-all group-hover:shadow-xl group-hover:bg-white group-hover:-translate-y-2">
-                                        <img src={product.img} alt={product.name} className="w-full h-full object-contain mix-blend-multiply transition-transform duration-500 group-hover:scale-110" />
+                                <div
+                                    key={i}
+                                    className="group bg-white rounded-3xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full cursor-pointer"
+                                    onClick={() => window.location.href = product.path || "/contact"}
+                                >
+                                    <div className="bg-slate-50 aspect-square overflow-hidden flex items-center justify-center p-12">
+                                        <img
+                                            src={product.img}
+                                            alt={product.name}
+                                            className="w-full h-full object-contain mix-blend-multiply transition-transform duration-700 group-hover:scale-110 drop-shadow-xl"
+                                        />
                                     </div>
-                                    <h3 className="text-xl font-bold mb-2 group-hover:text-blue-600 transition-colors uppercase tracking-tight">{product.name}</h3>
-                                    <p className="font-light text-[20px] leading-[28px] text-slate-500 mb-4">{product.desc}</p>
-                                    <NavLink to={product.path || "/contact"} className="text-blue-600 font-bold flex items-center gap-2 text-sm tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-all">
-                                        EN SAVOIR PLUS <ChevronRight className="h-4 w-4" />
-                                    </NavLink>
+                                    <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
+                                        <h3 className="text-xl font-bold mb-4 group-hover:text-blue-600 transition-colors uppercase tracking-tight">{product.name}</h3>
+                                        <p className="text-slate-500 text-sm leading-relaxed mb-6 flex-grow">{product.desc}</p>
+                                        <div className="mt-auto">
+                                            <NavLink
+                                                to={product.path || "/contact"}
+                                                className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-xs tracking-widest uppercase"
+                                            >
+                                                EN SAVOIR PLUS <ChevronRight className="h-4 w-4 transform group-hover:translate-x-1 transition-transform" />
+                                            </NavLink>
+                                        </div>
+                                    </div>
                                 </div>
                             ))}
                         </div>
@@ -190,7 +205,7 @@ const FiltrationSousEvier = () => {
                                     Chaque foyer est différent. Nos experts effectuent une analyse gratuite sur place pour identifier les contaminants spécifiques à votre résidence et vous recommander la solution optimale.
                                 </p>
                                 <Button className="bg-white text-blue-600 hover:bg-blue-50 rounded-full px-12 h-16 text-xl font-bold shadow-xl" asChild>
-                                    <NavLink to="/contact">Prendre rendez-vous</NavLink>
+                                    <a href="#consultation">Prendre rendez-vous</a>
                                 </Button>
                             </div>
                         </div>
@@ -377,23 +392,26 @@ const FiltrationSousEvier = () => {
                             ].map((art, i) => (
                                 <div
                                     key={i}
-                                    className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer group"
+                                    className="group bg-white rounded-3xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full cursor-pointer"
+                                    onClick={() => window.location.href = "#"}
                                 >
                                     <div className="h-56 overflow-hidden">
                                         <img
                                             src={art.img}
                                             alt={art.title}
-                                            className="w-full h-full object-cover transition-transform group-hover:scale-110"
+                                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                                         />
                                     </div>
-                                    <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors">
-                                        <h4 className="text-xl font-bold mb-4">{art.title}</h4>
-                                        <NavLink
-                                            to="#"
-                                            className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-xs tracking-widest"
-                                        >
-                                            EN SAVOIR PLUS <ChevronRight className="h-4 w-4" />
-                                        </NavLink>
+                                    <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
+                                        <h4 className="text-xl font-bold mb-4 group-hover:text-blue-600 transition-colors uppercase tracking-tight">{art.title}</h4>
+                                        <div className="mt-auto">
+                                            <NavLink
+                                                to="#"
+                                                className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-xs tracking-widest uppercase"
+                                            >
+                                                EN SAVOIR PLUS <ChevronRight className="h-4 w-4 transform group-hover:translate-x-1 transition-transform" />
+                                            </NavLink>
+                                        </div>
                                     </div>
                                 </div>
                             ))}
@@ -402,7 +420,7 @@ const FiltrationSousEvier = () => {
                 </section>
 
                 {/* 10. Consultation Form Section */}
-                <ConsultationFormSection />
+                <ConsultationFormSection id="consultation" />
             </main>
             <Footer />
         </div>

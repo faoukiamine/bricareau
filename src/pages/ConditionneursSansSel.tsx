@@ -156,8 +156,9 @@ const ConditionneursSansSel = () => {
                 size="lg"
                 className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14"
                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                asChild
               >
-                Demandez une consultation gratuite
+                <a href="#consultation">Planifier une consultation gratuite</a>
               </Button>
             </div>
           </div>
@@ -305,19 +306,19 @@ const ConditionneursSansSel = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {resources.map((res, idx) => (
-                <div key={idx} className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group cursor-pointer">
+                <div key={idx} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer group flex flex-col h-full border border-gray-100">
                   <div className="h-56 overflow-hidden">
                     <img
                       src={res.image}
                       alt={res.title}
-                      className="w-full h-full object-cover transition-transform group-hover:scale-105"
+                      className="w-full h-full object-cover transition-transform group-hover:scale-110"
                     />
                   </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold mb-3 group-hover:text-blue-600 transition-colors">{res.title}</h3>
-                    <p className="text-gray-500 text-sm mb-4">{res.description}</p>
-                    <div className="flex items-center text-blue-600 font-bold text-sm">
-                      EN SAVOIR PLUS <ChevronRight className="h-4 w-4 ml-1" />
+                  <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
+                    <h3 className="text-xl font-bold mb-4 group-hover:text-blue-600 transition-colors">{res.title}</h3>
+                    <p className="text-slate-500 text-sm leading-relaxed mb-6 flex-grow">{res.description}</p>
+                    <div className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-xs tracking-widest uppercase">
+                      EN SAVOIR PLUS <ChevronRight className="h-4 w-4" />
                     </div>
                   </div>
                 </div>
@@ -327,7 +328,7 @@ const ConditionneursSansSel = () => {
         </section>
 
         {/* 8. Consultation Form Section */}
-        <ConsultationFormSection />
+        <ConsultationFormSection id="consultation" />
       </main>
 
       <Footer />

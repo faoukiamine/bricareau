@@ -378,19 +378,28 @@ const FiltreEauHauteEfficacite = () => {
                         <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal text-slate-900 mb-8 text-center leading-[1.1] tracking-tighter">Découvrez d'autres solutions</h2>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {[
-                                { title: "Osmose Inverse Bricareau", desc: "La pureté ultime pour votre eau de boisson.", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
-                                { title: "Désinfection UV", desc: "Protection totale contre les bactéries.", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
-                                { title: "Solutions Industrielles", desc: "L'expertise Bricareau pour votre entreprise.", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" }
+                                { title: "Osmose Inverse Bricareau", desc: "La pureté ultime pour votre eau de boisson.", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png", link: "/systeme-de-filtration-deau-potable" },
+                                { title: "Désinfection UV", desc: "Protection totale contre les bactéries.", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png", link: "/systemes-de-desinfection-uv" },
+                                { title: "Solutions Industrielles", desc: "L'expertise Bricareau pour votre entreprise.", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png", link: "/entreprises" }
                             ].map((prod, i) => (
-                                <div key={i} className="group cursor-pointer">
-                                    <div className="bg-slate-50 rounded-[2rem] p-12 mb-8 flex items-center justify-center transition-transform group-hover:scale-105 transition-all duration-500">
-                                        <img src={prod.image} alt={prod.title} className="max-h-56 object-contain drop-shadow-lg" />
+                                <div key={i} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer group flex flex-col h-full border border-gray-100">
+                                    <div className="bg-slate-50 aspect-square overflow-hidden flex items-center justify-center p-8">
+                                        <img
+                                            src={prod.image}
+                                            alt={prod.title}
+                                            className="w-full h-full object-contain mix-blend-multiply transition-transform duration-500 group-hover:scale-110"
+                                        />
                                     </div>
-                                    <h3 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">{prod.title}</h3>
-                                    <p className="text-slate-500 text-sm mb-6">{prod.desc}</p>
-                                    <Button variant="link" className="p-0 text-blue-600 font-bold group-hover:underline">
-                                        DÉCOUVRIR <ChevronRight className="w-4 h-4 ml-1" />
-                                    </Button>
+                                    <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
+                                        <h3 className="text-xl font-bold mb-2 group-hover:text-blue-600 transition-colors uppercase tracking-tight">{prod.title}</h3>
+                                        <p className="text-slate-500 text-sm leading-relaxed mb-6 flex-grow">{prod.desc}</p>
+                                        <NavLink
+                                            to={prod.link || "#"}
+                                            className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-xs tracking-widest uppercase"
+                                        >
+                                            EN SAVOIR PLUS <ChevronRight className="h-4 w-4" />
+                                        </NavLink>
+                                    </div>
                                 </div>
                             ))}
                         </div>

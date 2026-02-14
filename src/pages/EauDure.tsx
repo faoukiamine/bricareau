@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Droplets, AlertTriangle, Home, Heart, Zap, Wrench, Check } from "lucide-react";
+import { ArrowRight, Droplets, AlertTriangle, Home, Heart, Zap, Wrench, Check, ChevronRight } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import {
   Accordion,
@@ -275,24 +275,20 @@ const EauDure = () => {
                 Découvrez les différentes options pour traiter votre eau dure et protéger votre maison.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {solutions.map((solution, index) => (
-                <NavLink
-                  key={index}
-                  to={solution.link}
-                  className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all hover:-translate-y-1 group"
-                >
-                  <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
-                    {solution.title}
-                  </h3>
-                  <p className="text-muted-foreground mb-4">
-                    {solution.description}
-                  </p>
-                  <span className="inline-flex items-center text-primary font-medium">
-                    En savoir plus
-                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                  </span>
-                </NavLink>
+                <div key={index} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer group flex flex-col h-full border border-gray-100">
+                  <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
+                    <h3 className="text-xl font-bold mb-4 group-hover:text-blue-600 transition-colors uppercase tracking-tight">{solution.title}</h3>
+                    <p className="text-slate-500 text-sm leading-relaxed mb-6 flex-grow">{solution.description}</p>
+                    <NavLink
+                      to={solution.link}
+                      className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-xs tracking-widest uppercase"
+                    >
+                      EN SAVOIR PLUS <ChevronRight className="h-4 w-4" />
+                    </NavLink>
+                  </div>
+                </div>
               ))}
             </div>
           </div>

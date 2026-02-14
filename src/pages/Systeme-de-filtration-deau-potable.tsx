@@ -33,7 +33,7 @@ import sereneLiteImg from "@/assets/Système+de+filtration+Serene+Lite.webp";
 import specializedFiltersImg from "@/assets/Filtres d'eau spécialisés.webp";
 import waterSoftenerImg from "@/assets/Adoucisseurs d'eau.webp";
 import uvSystemImg from "@/assets/Systèmes de désinfection UV.webp";
-import waterTestBg from "@/assets/water_test_bg.png";
+import waterTestingImg from "@/assets/pexels-gabby-k-7114630.jpg";
 
 const OsmoseFiltration = () => {
   const comparisonData = [
@@ -84,7 +84,7 @@ const OsmoseFiltration = () => {
                   asChild
                 >
                   <NavLink to="/contact">
-                    Découvrir nos systèmes
+                    Découvrir nos systèmes d'osmose inverse
                   </NavLink>
                 </Button>
                 <Button
@@ -152,19 +152,34 @@ const OsmoseFiltration = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
-                { name: "Bricareau Elite RO", desc: "Le summum de la filtration avec reminéralisation alcaline incluse.", img: drinkingWaterImg },
+                { name: "Bricareau Elite RO", desc: "Le summum de la filtration avec reminéralisation alcaline incluse.", img: drinkingWaterImg, path: "/ro-6" },
                 { name: "Bricareau Plus RO", desc: "Performance exceptionnelle pour les familles actives.", img: drinkingWaterImg },
                 { name: "Bricareau Essential", desc: "La pureté accessible sans compromis sur la qualité.", img: drinkingWaterImg },
               ].map((product, i) => (
-                <div key={i} className="group cursor-pointer">
-                  <div className="bg-slate-50 aspect-square rounded-3xl mb-6 overflow-hidden flex items-center justify-center p-8 transition-all group-hover:shadow-xl group-hover:bg-white group-hover:-translate-y-2">
-                    <img src={product.img} alt={product.name} className="w-full h-full object-contain mix-blend-multiply transition-transform duration-500 group-hover:scale-110" />
+                <div
+                  key={i}
+                  className="group bg-white rounded-3xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full cursor-pointer"
+                  onClick={() => window.location.href = product.path || "/contact"}
+                >
+                  <div className="bg-slate-50 aspect-square overflow-hidden flex items-center justify-center p-12">
+                    <img
+                      src={product.img}
+                      alt={product.name}
+                      className="w-full h-full object-contain mix-blend-multiply transition-transform duration-700 group-hover:scale-110 drop-shadow-xl"
+                    />
                   </div>
-                  <h3 className="text-xl font-bold mb-2 group-hover:text-blue-600 transition-colors uppercase tracking-tight">{product.name}</h3>
-                  <p className="text-slate-500 text-sm leading-relaxed mb-4">{product.desc}</p>
-                  <NavLink to="#" className="text-blue-600 font-bold flex items-center gap-2 text-sm tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-all">
-                    EN SAVOIR PLUS <ChevronRight className="h-4 w-4" />
-                  </NavLink>
+                  <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
+                    <h3 className="text-xl font-bold mb-4 group-hover:text-blue-600 transition-colors uppercase tracking-tight">{product.name}</h3>
+                    <p className="text-slate-500 text-sm leading-relaxed mb-6 flex-grow">{product.desc}</p>
+                    <div className="mt-auto">
+                      <NavLink
+                        to={product.path || "/contact"}
+                        className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-xs tracking-widest uppercase"
+                      >
+                        EN SAVOIR PLUS <ChevronRight className="h-4 w-4 transform group-hover:translate-x-1 transition-transform" />
+                      </NavLink>
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>
@@ -211,7 +226,7 @@ const OsmoseFiltration = () => {
           <div className="container mx-auto px-6">
             <div className="flex flex-col lg:flex-row items-stretch gap-0 rounded-[3rem] overflow-hidden shadow-2xl">
               <div className="lg:w-1/2 relative min-h-[400px]">
-                <img src={waterTestBg} alt="Analyse d'eau" className="absolute inset-0 w-full h-full object-cover" />
+                <img src={waterTestingImg} alt="Analyse d'eau" className="absolute inset-0 w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-blue-900/10" />
               </div>
               <div className="lg:w-1/2 bg-blue-600 text-white p-12 lg:p-20 flex flex-col justify-center items-start text-left">
@@ -224,8 +239,8 @@ const OsmoseFiltration = () => {
                 <p className="text-white/90 text-lg font-medium mb-12 leading-relaxed">
                   Chaque foyer est différent. Nos experts effectuent une analyse gratuite sur place pour identifier les contaminants spécifiques à votre résidence et vous recommander la solution optimale.
                 </p>
-                <Button className="bg-white text-blue-600 hover:bg-blue-50 rounded-full px-12 h-16 text-xl font-bold shadow-xl">
-                  Prendre rendez-vous
+                <Button className="bg-white text-blue-600 hover:bg-blue-50 rounded-full px-12 h-16 text-xl font-bold shadow-xl" asChild>
+                  <a href="#consultation">Prendre un rendez-vous</a>
                 </Button>
               </div>
             </div>
@@ -303,20 +318,64 @@ const OsmoseFiltration = () => {
             <Accordion type="single" collapsible className="w-full">
               {[
                 {
-                  q: "Comment fonctionne réellement l'osmose inverse ?",
-                  a: "C'est un processus qui force l'eau à traverser une membrane semi-perméable ultra-fine. Cette membrane est si dense qu'elle ne laisse passer pratiquement que les molécules d'eau, retenant les polluants, les métaux lourds et les microbes qui sont ensuite évacués vers le drain.",
+                  q: "Qu'est-ce qu'un système d'osmose inverse sous évier ?",
+                  a: "C'est un système de purification d'eau compact installé directement sous votre évier de cuisine. Il utilise une technologie de filtration à plusieurs étapes, incluant une membrane semi-perméable, pour fournir une eau d'une pureté exceptionnelle directement à un robinet dédié.",
                 },
                 {
-                  q: "L'osmose inverse gaspille-t-elle beaucoup d'eau ?",
-                  a: "Historiquement, les systèmes étaient moins efficaces. Aujourd'hui, nos modèles haute performance réduisent considérablement le ratio d'évacuation. De plus, les économies réalisées en n'achetant plus d'eau embouteillée compensent largement cette consommation minime.",
+                  q: "Quels sont les principaux avantages d'un système d'osmose inverse ?",
+                  a: "Le principal avantage est la suppression de 99 % des contaminants (plomb, chlore, fluorure, arsenic, nitrates, etc.). Cela améliore considérablement le goût, l'odeur et la sécurité de votre eau pour boire et cuisiner, tout en éliminant le besoin d'acheter de l'eau en bouteille.",
                 },
                 {
-                  q: "L'eau osmosée est-elle 'morte' car déminéralisée ?",
-                  a: "L'osmose élimine en effet les minéraux (bons et mauvais). C'est pourquoi nos modèles Elite et Plus incluent une étape de reminéralisation à la fin du cycle pour réintroduire du calcium et du magnésium essentiels, équilibrant le pH pour une eau alcaline et saine.",
+                  q: "Est-ce difficile à installer sous un évier de cuisine ?",
+                  a: "Bien que l'installation puisse être réalisée par un bon bricoleur, nous recommandons une installation professionnelle par nos techniciens certifiés Bricareau. Cela garantit une étanchéité parfaite, un raccordement conforme au drain et une pression optimale du réservoir.",
                 },
                 {
-                  q: "Quelle est la durée de vie des filtres ?",
-                  a: "Les pré-filtres et post-filtres se changent généralement tous les 6 à 12 mois. La membrane d'osmose inverse, elle, peut durer de 2 à 4 ans selon la qualité de l'eau d'entrée et l'entretien régulier du système.",
+                  q: "Combien de place le système prend-il dans mon armoire ?",
+                  a: "Nos systèmes modernes sont conçus pour être compacts. L'unité de filtration mesure généralement environ 15-18 pouces de hauteur, et le réservoir de stockage occupe une place similaire à celle d'un grand panier à pharmacie. Il reste généralement assez d'espace pour vos produits ménagers.",
+                },
+                {
+                  q: "L'osmose inverse élimine-t-elle les minéraux essentiels ?",
+                  a: "L'osmose inverse est si efficace qu'elle retire presque tout, y compris les minéraux. C'est pourquoi nos systèmes haut de gamme incluent une cartouche de reminéralisation qui réintroduit du calcium et du magnésium, équilibrant le pH pour une eau alcaline plus saine.",
+                },
+                {
+                  q: "Est-ce que le système nécessite un robinet séparé ?",
+                  a: "Oui, la plupart des installations incluent un petit robinet design dédié à l'eau purifiée. Cela permet de préserver vos filtres en utilisant l'eau standard pour la vaisselle et l'eau osmosée uniquement pour la consommation et la cuisson. Des robinets '3-en-1' sont aussi disponibles en option.",
+                },
+                {
+                  q: "À quelle fréquence faut-il remplacer les filtres ?",
+                  a: "Les pré-filtres (sédiments et charbon) doivent généralement être changés tous les 6 à 12 mois pour protéger la membrane. La membrane d'osmose inverse elle-même dure généralement entre 2 et 4 ans, selon votre consommation et la dureté de votre eau.",
+                },
+                {
+                  q: "Peut-on connecter le système à un réfrigérateur ou une machine à glaçons ?",
+                  a: "Absolument ! Nous pouvons installer une ligne de dérivation pour alimenter votre réfrigérateur en eau osmosée. Vous obtiendrez ainsi des glaçons cristallins et de l'eau fraîche purifiée directement de votre distributeur de porte.",
+                },
+                {
+                  q: "L'eau osmosée est-elle meilleure que l'eau en bouteille ?",
+                  a: "Dans la majorité des cas, oui. L'eau osmosée à domicile est souvent plus fraîche et subit moins de risques de contamination par le plastique des bouteilles. De plus, c'est une solution beaucoup plus écologique et économique à long terme.",
+                },
+                {
+                  q: "Quelle est la différence entre un filtre à charbon simple et l'osmose inverse ?",
+                  a: "Un filtre à charbon simple réduit principalement le goût de chlore et les odeurs. L'osmose inverse va beaucoup plus loin en éliminant les solides dissous, les métaux lourds, les virus et les bactéries que le charbon seul ne peut pas arrêter.",
+                },
+                {
+                  q: "Le système fait-il du bruit pendant son fonctionnement ?",
+                  a: "Le système est pratiquement silencieux. Vous pourriez entendre un léger sifflement ou un gargouillis très discret pendant qu'il remplit le réservoir ou évacue les impuretés, mais cela s'arrête dès que le réservoir est plein.",
+                },
+                {
+                  q: "Comment savoir si mes filtres doivent être changés ?",
+                  a: "Une baisse notable du débit au robinet dédié ou un changement subtil du goût sont des indicateurs. Chez Bricareau, nous proposons également des tests de conductivité (TDS) lors de nos visites d'entretien pour mesurer précisément l'efficacité de la membrane.",
+                },
+                {
+                  q: "L'osmose inverse retire-t-elle le calcaire ?",
+                  a: "Oui, elle est extrêmement efficace pour retirer les minéraux de dureté (calcium/magnésium). Cependant, si votre eau est extrêmement dure, nous recommandons un adoucisseur en amont pour éviter que la membrane de l'osmose ne s'encrasse trop rapidement.",
+                },
+                {
+                  q: "Est-ce que le système gaspille beaucoup d'eau ?",
+                  a: "L'osmose inverse nécessite un flux d'eau pour rincer les impuretés de la membrane (eau de rejet). Nos systèmes récents sont optimisés pour être très efficaces, avec des ratios de rejet très bas comparés aux anciens modèles des années 90.",
+                },
+                {
+                  q: "Quelle est la durée de vie globale du système ?",
+                  a: "Avec un entretien régulier et des changements de filtres planifiés, un système d'osmose inverse de qualité Bricareau peut facilement durer 15 à 20 ans. C'est un investissement durable pour la santé de votre famille.",
                 },
               ].map((item, idx) => (
                 <AccordionItem key={idx} value={`item-${idx}`} className="border-b-slate-100 px-4">
@@ -360,23 +419,26 @@ const OsmoseFiltration = () => {
               ].map((art, i) => (
                 <div
                   key={i}
-                  className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer group"
+                  className="group bg-white rounded-3xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full cursor-pointer"
+                  onClick={() => window.location.href = "#"}
                 >
                   <div className="h-56 overflow-hidden">
                     <img
                       src={art.img}
                       alt={art.title}
-                      className="w-full h-full object-cover transition-transform group-hover:scale-110"
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />
                   </div>
-                  <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors">
-                    <h4 className="text-xl font-bold mb-4">{art.title}</h4>
-                    <NavLink
-                      to="#"
-                      className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-xs tracking-widest"
-                    >
-                      EN SAVOIR PLUS <ChevronRight className="h-4 w-4" />
-                    </NavLink>
+                  <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
+                    <h4 className="text-xl font-bold mb-4 group-hover:text-blue-600 transition-colors uppercase tracking-tight">{art.title}</h4>
+                    <div className="mt-auto">
+                      <NavLink
+                        to="#"
+                        className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-xs tracking-widest uppercase"
+                      >
+                        EN SAVOIR PLUS <ChevronRight className="h-4 w-4 transform group-hover:translate-x-1 transition-transform" />
+                      </NavLink>
+                    </div>
                   </div>
                 </div>
               ))}
@@ -385,7 +447,7 @@ const OsmoseFiltration = () => {
         </section>
 
         {/* 11. Consultation Form Section */}
-        <ConsultationFormSection />
+        <ConsultationFormSection id="consultation" />
       </main >
       <Footer />
     </div >

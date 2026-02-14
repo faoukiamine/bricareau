@@ -79,9 +79,9 @@ const Filtration = () => {
                                     style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                                     asChild
                                 >
-                                    <NavLink to="/contact">
-                                        Obtenir une consultation
-                                    </NavLink>
+                                    <a href="#consultation">
+                                        Planifier une consultation gratuite
+                                    </a>
                                 </Button>
                                 <Button
                                     size="lg"
@@ -506,23 +506,26 @@ const Filtration = () => {
                             ].map((art, i) => (
                                 <div
                                     key={i}
-                                    className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer group"
+                                    className="group bg-white rounded-3xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full cursor-pointer"
+                                    onClick={() => window.location.href = "#"}
                                 >
                                     <div className="h-56 overflow-hidden">
                                         <img
                                             src={art.img}
                                             alt={art.title}
-                                            className="w-full h-full object-cover transition-transform group-hover:scale-110"
+                                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                                         />
                                     </div>
-                                    <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors">
-                                        <h4 className="text-xl font-bold mb-4">{art.title}</h4>
-                                        <NavLink
-                                            to="#"
-                                            className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-xs tracking-widest"
-                                        >
-                                            EN SAVOIR PLUS <ChevronRight className="h-4 w-4" />
-                                        </NavLink>
+                                    <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
+                                        <h4 className="text-xl font-bold mb-4 group-hover:text-blue-600 transition-colors uppercase tracking-tight">{art.title}</h4>
+                                        <div className="mt-auto">
+                                            <NavLink
+                                                to="#"
+                                                className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-xs tracking-widest uppercase"
+                                            >
+                                                EN SAVOIR PLUS <ChevronRight className="h-4 w-4 transform group-hover:translate-x-1 transition-transform" />
+                                            </NavLink>
+                                        </div>
                                     </div>
                                 </div>
                             ))}
@@ -531,7 +534,7 @@ const Filtration = () => {
                 </section>
 
                 {/* 11. Consultation Form Section (Adopted from Adoucissement.tsx) */}
-                <ConsultationFormSection />
+                <ConsultationFormSection id="consultation" />
             </main>
             <Footer />
         </div>

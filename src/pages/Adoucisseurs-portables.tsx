@@ -206,33 +206,45 @@ const AdoucisseursPortables = () => {
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {[
                             {
                                 name: "Adoucisseurs d'eau ",
                                 desc: "Pour une eau de boisson d'une pureté exceptionnelle directement au robinet.",
-                                img: waterSoftenerImg
+                                img: waterSoftenerImg,
+                                link: "/adoucisseur-eau-residentiel"
                             },
                             {
                                 name: "Stations d'eau potable",
                                 desc: "Pour une eau de boisson d'une pureté exceptionnelle directement au robinet.",
-                                img: drinkingWaterImg
+                                img: drinkingWaterImg,
+                                link: "/systeme-de-filtration-deau-potable"
                             },
                             {
                                 name: "Système de stérilisation UV",
                                 desc: "Élimine 99.9% des bactéries et virus pour une sécurité totale.",
-                                img: uvSystemImg
+                                img: uvSystemImg,
+                                link: "/systemes-de-desinfection-uv"
                             }
                         ].map((prod, i) => (
-                            <div key={i} className="group cursor-pointer">
-                                <div className="bg-gray-100 aspect-square rounded-xl mb-6 overflow-hidden flex items-center justify-center">
-                                    <img src={prod.img} alt={prod.name} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                            <div key={i} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer group flex flex-col h-full border border-gray-100">
+                                <div className="bg-slate-50 aspect-square overflow-hidden flex items-center justify-center p-8">
+                                    <img
+                                        src={prod.img}
+                                        alt={prod.name}
+                                        className="w-full h-full object-contain mix-blend-multiply transition-transform duration-500 group-hover:scale-110"
+                                    />
                                 </div>
-                                <h3 className="text-2xl font-bold mb-2 text-gray-900">{prod.name}</h3>
-                                <p className="text-gray-600 mb-4">{prod.desc}</p>
-                                <a href="#" className="text-[#0066FF] font-bold flex items-center gap-2 group-hover:translate-x-1 transition-all">
-                                    En savoir plus <ChevronRight className="h-4 w-4" />
-                                </a>
+                                <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
+                                    <h3 className="text-xl font-bold mb-2 group-hover:text-blue-600 transition-colors uppercase tracking-tight">{prod.name}</h3>
+                                    <p className="text-slate-500 text-sm leading-relaxed mb-6 flex-grow">{prod.desc}</p>
+                                    <NavLink
+                                        to={prod.link || "#"}
+                                        className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-xs tracking-widest uppercase"
+                                    >
+                                        EN SAVOIR PLUS <ChevronRight className="h-4 w-4" />
+                                    </NavLink>
+                                </div>
                             </div>
                         ))}
                     </div>
@@ -262,7 +274,7 @@ const AdoucisseursPortables = () => {
             </section>
 
             {/* 7. Consultation Form Section */}
-            <ConsultationFormSection />
+            <ConsultationFormSection id="consultation" />
 
             <Footer />
         </div>
