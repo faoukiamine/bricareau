@@ -27,7 +27,7 @@ import {
     HandCoins
 } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
-import waterTestBg from "@/assets/Enercare_JP_Day_2_Kitchen_Faucet_498-2048x1365.jpg";
+import waterTestingImg from "@/assets/2147800429.jpg";
 import residentialWaterSoftenerImg from "@/assets/residential-water-softener.png";
 import {
     Accordion,
@@ -147,7 +147,7 @@ const AdoucisseursEauDePuits = () => {
                             >
                                 Un bien-être sans égal <span className="font-normal"><br />au quotidien</span>
                             </h1>
-                            <p className="font-light text-[20px] leading-[28px] text-white/95 mb-8 max-w-xl">
+                            <p className="text-lg font-light leading-relaxed text-white/95 mb-8 max-w-xl text-justify">
                                 Bricareau vous offre une eau douce, source de bien-être et de confort.
                             </p>
                             <div className="flex gap-4">
@@ -192,7 +192,7 @@ const AdoucisseursEauDePuits = () => {
                                         <item.icon className="h-10 w-10 text-blue-600 group-hover:text-white" />
                                     </div>
                                     <h4 className="text-2xl font-bold mb-4 tracking-tight">{item.title}</h4>
-                                    <p className="text-blue-100 leading-relaxed">{item.desc}</p>
+                                    <p className="text-lg font-light leading-relaxed text-blue-100 text-justify">{item.desc}</p>
                                 </div>
                             ))}
                         </div>
@@ -227,7 +227,7 @@ const AdoucisseursEauDePuits = () => {
                                     </div>
                                     <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
                                         <h3 className="text-xl font-bold mb-4 group-hover:text-blue-600 transition-colors uppercase tracking-tight">{p.name}</h3>
-                                        <p className="font-light text-[18px] leading-[24px] text-slate-500 mb-6 flex-grow">{p.desc}</p>
+                                        <p className="text-lg font-light leading-relaxed text-slate-500 mb-6 flex-grow text-justify">{p.desc}</p>
                                         <div className="mt-auto">
                                             <NavLink
                                                 to={p.path || "/adoucisseurs"}
@@ -241,7 +241,7 @@ const AdoucisseursEauDePuits = () => {
                             ))}
                         </div>
                         <div className="mt-16 text-center">
-                            <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
+                            <p className="text-lg font-light leading-relaxed text-gray-600 mb-8 max-w-2xl mx-auto text-justify">
                                 Vous ne savez pas quel système choisir ? Nos experts peuvent vous aider à trouver la solution
                                 parfaite pour votre foyer.
                             </p>
@@ -271,7 +271,7 @@ const AdoucisseursEauDePuits = () => {
                             <table className="w-full min-w-[1000px] border-collapse bg-white rounded-2xl overflow-hidden shadow-sm">
                                 <thead>
                                     <tr className="bg-gray-100">
-                                        <th className="p-8 text-left text-gray-400 font-medium uppercase tracking-wider">Modèles</th>
+                                        <th className="p-8 text-left text-gray-400 font-light uppercase tracking-wider">Modèles</th>
                                         {["High Tech", "Select Plus", "Connect", "Select", "Medallist"].map(m => (
                                             <th key={m} className="p-8 text-center text-gray-900 font-bold text-xl">{m}</th>
                                         ))}
@@ -280,7 +280,7 @@ const AdoucisseursEauDePuits = () => {
                                 <tbody className="divide-y divide-gray-100">
                                     {comparisonData.map((row, i) => (
                                         <tr key={i} className="hover:bg-gray-50 transition-colors">
-                                            <td className="p-8 font-medium text-gray-700">{row.feature}</td>
+                                            <td className="p-8 font-light text-gray-700">{row.feature}</td>
                                             <td className="p-8 text-center">
                                                 {typeof row.high === 'string' ? row.high : (row.high ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : <X className="h-6 w-6 text-gray-300 mx-auto" />)}
                                             </td>
@@ -312,7 +312,7 @@ const AdoucisseursEauDePuits = () => {
                     <div className="container mx-auto px-6">
                         <div className="flex flex-col lg:flex-row items-stretch gap-0 rounded-[3rem] overflow-hidden shadow-2xl">
                             <div className="lg:w-1/2 relative min-h-[400px]">
-                                <img src={waterTestBg} alt="Analyse d'eau" className="absolute inset-0 w-full h-full object-cover" />
+                                <img src={waterTestingImg} alt="Analyse d'eau" className="absolute inset-0 w-full h-full object-cover" />
                                 <div className="absolute inset-0 bg-blue-900/10" />
                             </div>
                             <div className="lg:w-1/2 bg-blue-600 text-white p-12 lg:p-20 flex flex-col justify-center items-start text-left">
@@ -327,7 +327,7 @@ const AdoucisseursEauDePuits = () => {
                                     <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">pour votre sécurité.</span>
                                 </h2>
                                 <div className="w-24 h-1 bg-white mb-10"></div>
-                                <p className="text-white/90 text-lg font-medium mb-12 leading-relaxed">
+                                <p className="text-white/90 text-lg font-light mb-12 leading-relaxed text-justify">
                                     Ne devinez pas la qualité de votre eau. Nos analyses approfondies identifient les bactéries, les minéraux et les contaminants chimiques pour vous offrir une tranquillité d'esprit totale.
                                 </p>
                                 <Button className="bg-white text-blue-600 hover:bg-blue-50 rounded-full px-12 h-16 text-xl font-bold shadow-xl" asChild>
@@ -382,7 +382,7 @@ const AdoucisseursEauDePuits = () => {
                                         <AccordionTrigger className="text-left font-bold text-lg hover:no-underline py-6">
                                             {item.q}
                                         </AccordionTrigger>
-                                        <AccordionContent className="text-gray-600 text-lg leading-relaxed pb-6 text-left">
+                                        <AccordionContent className="text-lg font-light leading-relaxed text-gray-600 pb-6 text-justify">
                                             {item.a}
                                         </AccordionContent>
                                     </AccordionItem>
@@ -444,7 +444,7 @@ const AdoucisseursEauDePuits = () => {
                                     <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">consultation gratuite</span>
                                 </h2>
                                 <div className="w-24 h-1 bg-blue-600 mb-8"></div>
-                                <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                                <p className="text-lg font-light leading-relaxed text-gray-600 mb-8 text-justify">
                                     Remplissez le formulaire ci-dessous pour organiser une consultation téléphonique avec l'un de nos experts.
                                 </p>
                             </div>

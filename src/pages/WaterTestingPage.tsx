@@ -74,7 +74,7 @@ const WaterTestingPage = () => {
                 Vous désirez faire analyser <br />
                 <span className="font-normal">votre eau résidentielle?</span>
               </h1>
-              <p className="font-light text-[20px] leading-[28px] text-white/95 mb-8 max-w-xl">
+              <p className="text-lg font-medium leading-relaxed text-white/95 mb-8 max-w-xl text-justify">
                 Pour vos analyses annuelles, une transaction hypothécaire ou encore parce que vous avez un souci avec la qualité de votre eau, bricareau est là pour vous!
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -114,7 +114,7 @@ const WaterTestingPage = () => {
                 <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block text-white">Voici ce que vous pourriez</span>
                 <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block text-white">découvrir dans votre eau</span>
               </h2>
-              <p className="text-xl text-blue-50/90 leading-relaxed max-w-4xl">
+              <p className="text-lg font-medium leading-relaxed text-blue-50/90 max-w-4xl text-justify">
                 Même si votre eau semble propre, elle peut contenir des minéraux invisibles et des impuretés qui nuisent à votre maison et à votre santé. Un test d'eau à domicile est la première étape pour obtenir l'eau que vous méritez.
               </p>
             </div>
@@ -147,7 +147,7 @@ const WaterTestingPage = () => {
                     <item.icon className="h-8 w-8 text-blue-400" />
                   </div>
                   <h4 className="text-xl font-bold mb-4 text-white">{item.title}</h4>
-                  <p className="text-blue-100/70 text-sm leading-relaxed">{item.desc}</p>
+                  <p className="text-lg font-medium leading-relaxed text-blue-100/70 text-justify">{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -199,7 +199,7 @@ const WaterTestingPage = () => {
                       <ChevronRight className="text-white h-6 w-6" />
                     </div>
                     <h4 className="text-2xl font-bold text-white mb-4 leading-tight min-h-[64px] flex items-end">{item.title}</h4>
-                    <p className="text-white/80 text-sm leading-relaxed line-clamp-3 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 delay-100">
+                    <p className="text-lg font-medium leading-relaxed text-white/80 line-clamp-3 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 delay-100 text-justify">
                       {item.desc}
                     </p>
                   </div>
@@ -234,7 +234,7 @@ const WaterTestingPage = () => {
               ].map((prod, i) => (
                 <NavLink key={i} to={prod.href} className="group bg-[#001A4D] p-8 rounded-[2rem] border border-white/5 hover:bg-[#00266b] hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col h-full shadow-xl">
                   <h4 className="text-xl font-bold mb-4 text-white">{prod.title}</h4>
-                  <p className="text-blue-100/70 text-sm leading-relaxed mb-6 flex-grow">{prod.desc}</p>
+                  <p className="text-lg font-medium leading-relaxed text-blue-100/70 mb-6 flex-grow text-justify">{prod.desc}</p>
                   <Button variant="link" className="text-blue-400 font-bold p-0 group-hover:text-blue-300 transition-colors w-fit">
                     Découvrir <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
@@ -307,7 +307,7 @@ const WaterTestingPage = () => {
                     <AccordionTrigger className="text-left font-bold text-lg hover:no-underline py-6">
                       {item.q}
                     </AccordionTrigger>
-                    <AccordionContent className="font-light text-[20px] leading-[28px] text-gray-600 pb-6 text-left">
+                    <AccordionContent className="text-lg font-medium leading-relaxed text-gray-600 pb-6 text-justify">
                       {item.a}
                     </AccordionContent>
                   </AccordionItem>
@@ -325,7 +325,7 @@ const WaterTestingPage = () => {
                 <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter italic">
                   Planifier une consultation gratuite sur l'eau
                 </h2>
-                <p className="font-light text-[20px] leading-[28px] text-gray-600 mb-8">
+                <p className="text-lg font-medium leading-relaxed text-gray-600 mb-8 text-justify">
                   Remplissez le formulaire ci-dessous pour organiser une consultation téléphonique avec l'un de nos experts.
                 </p>
               </div>

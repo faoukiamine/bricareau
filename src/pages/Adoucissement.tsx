@@ -64,8 +64,8 @@ const Adoucissement = () => {
                             >
                                 Une eau douce, <span className="font-normal">meilleure pour vous et votre maison</span>
                             </h1>
-                            <p className="font-light text-[20px] leading-[28px] text-white/95 mb-8 max-w-xl">
-                                Une solution pour toute la famille. L'eau dure agresse l'épiderme et rend les cheveux ternes. Redécouvrez le plaisir d'un bain hydratant.
+                            <p className="text-lg font-light leading-relaxed text-white/95 mb-8 max-w-xl text-justify">
+                                Redécouvrez le confort d'une eau soyeuse protégeant votre peau et vos appareils. Alliez économies durables et bien-être absolu au quotidien.
                             </p>
                             <Button
                                 size="lg"
@@ -100,7 +100,7 @@ const Adoucissement = () => {
                                         <item.icon className="h-10 w-10 text-blue-600 group-hover:text-white" />
                                     </div>
                                     <h4 className="text-2xl font-bold mb-4 tracking-tight">{item.title}</h4>
-                                    <p className="text-blue-100 leading-relaxed">{item.desc}</p>
+                                    <p className="text-lg font-light leading-relaxed text-blue-100 text-justify">{item.desc}</p>
                                 </div>
                             ))}
                         </div>
@@ -121,7 +121,7 @@ const Adoucissement = () => {
                                 <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
                                     L'éclat d'une vaisselle protégée, la douceur d'une eau maîtrisée.
                                 </h2>
-                                <p className="font-light text-[20px] leading-[28px] text-gray-600 mb-8">
+                                <p className="text-lg font-light leading-relaxed text-gray-600 mb-8 text-justify">
                                     Offrez à votre foyer le luxe d'une eau sans calcaire. Nos adoucisseurs de pointe éliminent le tartre à la source, garantissant non seulement une vaisselle étincelante sans aucune trace, mais aussi une protection durable de vos appareils électroménagers et de votre plomberie. Redécouvrez la brillance et la douceur dans chaque recoin de votre maison.
                                 </p>
                                 <NavLink to="/adoucisseur-eau-residentiel" className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-3 rounded-full transition-colors">
@@ -140,7 +140,7 @@ const Adoucissement = () => {
                                     <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
                                         <span className="text-blue-600 font-bold italic">0{i + 1}</span> {item.title}
                                     </h3>
-                                    <p className="text-gray-500 leading-relaxed">{item.desc}</p>
+                                    <p className="text-lg font-light leading-relaxed text-gray-500 text-justify">{item.desc}</p>
                                 </div>
                             ))}
                         </div>
@@ -162,7 +162,7 @@ const Adoucissement = () => {
                                 <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-left">
                                     La douceur sans frontières : l'eau douce vous suit partout.
                                 </h2>
-                                <p className="font-light text-[20px] leading-[28px] text-gray-600 mb-8">
+                                <p className="text-lg font-light leading-relaxed text-gray-600 mb-8 text-justify">
                                     Ne laissez plus l’eau dure des campings ou des ports abîmer vos cheveux et vos équipements. Profitez d'une eau de qualité domestique dans votre VR, votre bateau ou votre chalet avec notre adoucisseur ultra-compact.
                                 </p>
                                 <NavLink to="/adoucisseurs-portables" className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-3 rounded-full transition-colors">
@@ -181,7 +181,7 @@ const Adoucissement = () => {
                                     <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
                                         <span className="text-blue-600 font-bold italic">0{i + 1}</span> {item.title}
                                     </h3>
-                                    <p className="text-gray-500 leading-relaxed">{item.desc}</p>
+                                    <p className="text-lg font-light leading-relaxed text-gray-500 text-justify">{item.desc}</p>
                                 </div>
                             ))}
                         </div>
@@ -203,7 +203,7 @@ const Adoucissement = () => {
                                 <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
                                     Zéro sel. Zéro électricité. Zéro souci.
                                 </h2>
-                                <p className="font-light text-[20px] leading-[28px] text-gray-600 mb-8">
+                                <p className="text-lg font-light leading-relaxed text-gray-600 mb-8 text-justify">
                                     Le secret d'un linge éclatant et d'une vaisselle sans traces. Sans l'ajout de sel, votre eau devient votre meilleure alliée beauté et ménage.
                                 </p>
                                 <Button className="bg-blue-600 text-white rounded-full px-12 h-14 text-lg font-bold" asChild>
@@ -222,7 +222,7 @@ const Adoucissement = () => {
                                     <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
                                         <span className="text-blue-600 font-bold italic">0{i + 1}</span> {item.title}
                                     </h3>
-                                    <p className="text-gray-500 leading-relaxed">{item.desc}</p>
+                                    <p className="text-lg font-light leading-relaxed text-gray-500 text-justify">{item.desc}</p>
                                 </div>
                             ))}
                         </div>
@@ -251,7 +251,7 @@ const Adoucissement = () => {
                                 <h2 className="text-[32px] md:text-[48px] font-normal text-white mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
                                     L'excellence commence par une eau parfaite.
                                 </h2>
-                                <p className="font-light text-[20px] leading-[28px] text-white/90 mb-12">
+                                <p className="text-lg font-light leading-relaxed text-white/90 mb-12 text-justify">
                                     Le luxe, c'est de ne pas avoir à se soucier de la qualité de ce que l'on consomme. Offrez-vous la sérénité d'une eau analysée par des experts, pour une maison où tout brille, sans effort et sans compromis.
                                 </p>
                                 <Button className="bg-white text-blue-600 hover:bg-blue-50 rounded-full px-12 h-16 text-xl font-bold shadow-xl transition-all hover:scale-105" asChild>
@@ -296,7 +296,7 @@ const Adoucissement = () => {
                                         <AccordionTrigger className="text-left font-bold text-lg hover:no-underline py-6">
                                             {item.q}
                                         </AccordionTrigger>
-                                        <AccordionContent className="font-light text-[20px] leading-[28px] text-gray-600 pb-6 text-left">
+                                        <AccordionContent className="text-lg font-light leading-relaxed text-gray-600 pb-6 text-justify">
                                             {item.a}
                                         </AccordionContent>
                                     </AccordionItem>

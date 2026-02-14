@@ -57,7 +57,7 @@ const AdoucisseursPortables = () => {
                             Profitez d’une eau douce <br />
                             où que vous alliez !
                         </h1>
-                        <p className="text-gray-200 text-xl md:text-2xl mb-12 max-w-2xl leading-relaxed animate-in fade-in slide-in-from-bottom duration-700 delay-100 drop-shadow-lg">
+                        <p className="text-lg font-medium leading-relaxed text-gray-200 mb-12 max-w-2xl text-justify drop-shadow-lg animate-in fade-in slide-in-from-bottom duration-700 delay-100">
                             La solution flexible pour une eau douce sans installation permanente. Qualité professionnelle livrée chez vous, sans tracas.
                         </p>
                         <div className="animate-in fade-in slide-in-from-bottom duration-700 delay-200">
@@ -85,7 +85,7 @@ const AdoucisseursPortables = () => {
                                 </h2>
                             </div>
                             <div className="lg:col-span-4 animate-in fade-in slide-in-from-bottom duration-700 delay-100">
-                                <p className="text-[#666] text-lg leading-relaxed pt-2">
+                                <p className="text-lg font-medium leading-relaxed text-[#666] text-justify pt-2">
                                     Nos adoucisseurs d'eau portables offrent une flexibilité et une protection contre le calcaire idéales pour les modes de vie mobiles (camping-cars, bateaux) ou les petits espaces. Ils permettent d'éliminer les minéraux responsables de la dureté de l'eau, comme le calcium et le magnésium, sans nécessiter d'installation permanente complexe.
                                 </p>
                             </div>
@@ -113,7 +113,7 @@ const AdoucisseursPortables = () => {
                         ].map((benefit, idx) => (
                             <div key={idx} className="bg-white border border-gray-100 p-12 flex flex-col h-full shadow-[0_15px_40px_-15px_rgba(0,0,0,0.05)] hover:shadow-[0_25px_50px_-12px_rgba(0,0,0,0.1)] transition-all duration-500 group group animate-in fade-in slide-in-from-bottom duration-700" style={{ animationDelay: `${idx * 150}ms` }}>
                                 <h3 className="text-3xl font-bold mb-6 text-black tracking-tight">{benefit.title}</h3>
-                                <p className="text-[#888] mb-10 leading-relaxed text-lg">
+                                <p className="text-lg font-medium leading-relaxed text-[#888] mb-10 text-justify">
                                     {benefit.desc}
                                 </p>
 
@@ -146,7 +146,7 @@ const AdoucisseursPortables = () => {
                             <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 leading-[1.2] md:leading-[48px] tracking-tighter text-left">
                                 Un service simple <br />& sans souci.
                             </h2>
-                            <p className="text-[#666] text-xl leading-relaxed max-w-xl lg:ml-auto">
+                            <p className="text-lg font-medium leading-relaxed text-[#666] max-w-xl lg:ml-auto text-justify">
                                 De l'installation initiale à la livraison régulière de sel, nous gérons chaque détail technique pour vous garantir une eau parfaite en permanence.
                             </p>
                         </div>
@@ -184,7 +184,7 @@ const AdoucisseursPortables = () => {
                                 </div>
 
                                 <h3 className="text-2xl font-bold mb-4 text-black tracking-tight">{step.title}</h3>
-                                <p className="text-[#888] text-lg leading-relaxed">
+                                <p className="text-lg font-medium leading-relaxed text-[#888] text-justify">
                                     {step.desc}
                                 </p>
                             </div>
@@ -201,7 +201,7 @@ const AdoucisseursPortables = () => {
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-16">
                         <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal text-slate-900 mb-8 leading-[1.1] tracking-tighter">Découvrez les produits associés</h2>
-                        <p className="text-gray-500 text-lg max-w-2xl mx-auto">
+                        <p className="text-lg font-medium leading-relaxed text-gray-500 max-w-2xl mx-auto text-justify">
                             Optimisez votre expérience de traitement d'eau avec nos solutions complémentaires.
                         </p>
                     </div>
@@ -237,7 +237,7 @@ const AdoucisseursPortables = () => {
                                 </div>
                                 <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
                                     <h3 className="text-xl font-bold mb-2 group-hover:text-blue-600 transition-colors uppercase tracking-tight">{prod.name}</h3>
-                                    <p className="text-slate-500 text-sm leading-relaxed mb-6 flex-grow">{prod.desc}</p>
+                                    <p className="text-lg font-medium leading-relaxed text-slate-500 text-sm mb-6 flex-grow text-justify">{prod.desc}</p>
                                     <NavLink
                                         to={prod.link || "#"}
                                         className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-xs tracking-widest uppercase"
@@ -261,7 +261,7 @@ const AdoucisseursPortables = () => {
                         <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal text-[#001B3D] mb-8 leading-[1.1] tracking-tighter text-left">
                             L'eau est notre mission
                         </h2>
-                        <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
+                        <div className="space-y-6 text-lg font-medium leading-relaxed text-gray-600 text-justify">
                             <p>
                                 Nous nous engageons à fournir non seulement le meilleur équipement de traitement d'eau, mais aussi un service après-vente irréprochable. Notre expertise locale nous permet de comprendre les défis spécifiques de votre région.
                             </p>

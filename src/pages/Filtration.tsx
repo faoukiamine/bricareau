@@ -69,7 +69,7 @@ const Filtration = () => {
                                 <br />
                                 conçus pour <span className="font-normal">votre bien-être.</span>
                             </h1>
-                            <p className="font-light text-[20px] leading-[28px] text-white/95 mb-8 max-w-xl">
+                            <p className="text-lg font-light leading-relaxed text-white/95 mb-8 max-w-xl text-justify">
                                 Ne laissez plus le doute couler de votre robinet. Nos systèmes de filtration d'eau avancés agissent comme un bouclier invisible contre les contaminants, vous garantissant une eau d'une pureté irréprochable pour boire, cuisiner et grandir en toute confiance.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4">
@@ -107,7 +107,7 @@ const Filtration = () => {
                             <h2 className="text-[32px] md:text-[48px] font-normal text-white mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-center">
                                 Pourquoi choisir nos <br />systèmes de filtration d'eau ?
                             </h2>
-                            <p className="text-blue-100 max-w-2xl mx-auto text-lg">
+                            <p className="text-lg font-light leading-relaxed text-blue-100 max-w-2xl mx-auto text-justify">
                                 Plus qu'une simple filtration, c'est une protection avancée pour votre santé et un confort durable pour votre foyer.
                             </p>
                         </div>
@@ -123,7 +123,7 @@ const Filtration = () => {
                                         <benefit.icon className="h-10 w-10 text-blue-600 group-hover:text-white" />
                                     </div>
                                     <h4 className="text-2xl font-bold mb-4 tracking-tight">{benefit.title}</h4>
-                                    <p className="text-blue-100 leading-relaxed">{benefit.desc}</p>
+                                    <p className="text-lg font-light leading-relaxed text-blue-100 text-justify">{benefit.desc}</p>
                                 </div>
                             ))}
                         </div>
@@ -158,7 +158,7 @@ const Filtration = () => {
                                 <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
                                     Redécouvrez le luxe d'une eau filtrée cristalline à chaque jet de douche.
                                 </h2>
-                                <p className="font-light text-[20px] leading-[28px] text-gray-600 mb-8">
+                                <p className="text-lg font-light leading-relaxed text-gray-600 mb-8 text-justify">
                                     Protégez vos appareils ménagers, votre tuyauterie et votre peau. Nos systèmes de filtration centrale traitent chaque goutte d'eau qui entre dans votre foyer pour une tranquillité d'esprit totale.
                                 </p>
                                 <Button className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-10 h-14 text-lg font-bold" asChild>
@@ -177,7 +177,7 @@ const Filtration = () => {
                                     <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
                                         <span className="text-blue-600 font-bold italic">0{i + 1}</span> {item.title}
                                     </h3>
-                                    <p className="text-gray-500 leading-relaxed">{item.desc}</p>
+                                    <p className="text-lg font-light leading-relaxed text-gray-500 text-justify">{item.desc}</p>
                                 </div>
                             ))}
                         </div>
@@ -211,7 +211,7 @@ const Filtration = () => {
                                 <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
                                     Votre source d'eau cristalline, <br /> à volonté et sans compromis.
                                 </h2>
-                                <p className="font-light text-[20px] leading-[28px] text-gray-600 mb-8">
+                                <p className="text-lg font-light leading-relaxed text-gray-600 mb-8 text-justify">
                                     Découvrez comment notre système d'osmose inverse libère votre quotidien du goût de chlore et de la corvée des bouteilles plastique. Profitez d'une eau légère, d'une clarté de diamant, idéale pour une hydratation saine et une cuisine riche en saveurs.
                                 </p>
                                 <Button className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-10 h-14 text-lg font-bold" asChild>
@@ -230,7 +230,7 @@ const Filtration = () => {
                                     <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
                                         <span className="text-blue-600 font-bold italic">0{i + 1}</span> {item.title}
                                     </h3>
-                                    <p className="text-gray-500 leading-relaxed">{item.desc}</p>
+                                    <p className="text-lg font-light leading-relaxed text-gray-500 text-justify">{item.desc}</p>
                                 </div>
                             ))}
                         </div>
@@ -265,7 +265,7 @@ const Filtration = () => {
                                 <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
                                     Systèmes de filtration d'eau <br />sous l'évier
                                 </h2>
-                                <p className="font-light text-[20px] leading-[28px] text-gray-600 mb-8">
+                                <p className="text-lg font-light leading-relaxed text-gray-600 mb-8 text-justify">
                                     Éliminez jusqu'à 99% des pathogènes, du plomb et du fluorure. L'osmose inverse Bricareau est la solution ultime pour une eau de boisson de qualité restaurant directement chez vous.
                                 </p>
                                 <Button className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-10 h-14 text-lg font-bold" asChild>
@@ -284,7 +284,7 @@ const Filtration = () => {
                                     <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
                                         <span className="text-blue-600 font-bold italic">0{i + 1}</span> {item.title}
                                     </h3>
-                                    <p className="text-gray-500 leading-relaxed">{item.desc}</p>
+                                    <p className="text-lg font-light leading-relaxed text-gray-500 text-justify">{item.desc}</p>
                                 </div>
                             ))}
                         </div>
@@ -304,8 +304,8 @@ const Filtration = () => {
                                     Votre eau sous <br />
                                     la loupe.
                                 </h2>
-                                <p className="text-slate-500 text-lg leading-relaxed mb-10 max-w-lg">
-                                    La qualité de l'eau n'est pas une question de hasard. Nos experts analysent chaque paramètre pour vous proposer la solution de filtration la plus adaptée à la composition unique de votre eau municipale ou de puits.
+                                <p className="text-lg font-light leading-relaxed text-slate-500 mb-10 max-w-lg text-justify">
+                                    Ne devinez pas la qualité de votre eau. Nos analyses approfondies identifient les bactéries, les minéraux et les contaminants chimiques pour vous offrir une tranquillité d'esprit totale.
                                 </p>
                                 <div className="flex flex-wrap items-center gap-8">
                                     <Button className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-10 h-14 text-lg font-bold" asChild>
@@ -348,7 +348,7 @@ const Filtration = () => {
                             <table className="w-full min-w-[1000px] border-collapse bg-white rounded-2xl overflow-hidden shadow-sm">
                                 <thead>
                                     <tr className="bg-gray-100">
-                                        <th className="p-8 text-left text-gray-400 font-medium uppercase tracking-wider">Solutions</th>
+                                        <th className="p-8 text-left text-gray-400 font-light uppercase tracking-wider">Solutions</th>
                                         {[
                                             { name: "Filtres spécialisés (Sédiments)", img: specializedFiltersImg },
                                             { name: "Stations d'eau potable", img: drinkingWaterImg },
@@ -370,7 +370,7 @@ const Filtration = () => {
                                 <tbody className="divide-y divide-gray-100">
                                     {comparisonData.map((row, i) => (
                                         <tr key={i} className="hover:bg-gray-50 transition-colors">
-                                            <td className="p-8 font-medium text-gray-700">{row.feature}</td>
+                                            <td className="p-8 font-light text-gray-700">{row.feature}</td>
                                             <td className="p-8 text-center">
                                                 {typeof row.ro === 'string' ? <span className="text-blue-600 font-bold bg-blue-50 px-3 py-1 rounded-full text-[10px]">{row.ro}</span> : (row.ro ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : <X className="h-6 w-6 text-gray-300 mx-auto" />)}
                                             </td>
@@ -468,7 +468,7 @@ const Filtration = () => {
                                         <AccordionTrigger className="text-left font-bold text-xl hover:no-underline py-8 text-slate-800">
                                             {item.q}
                                         </AccordionTrigger>
-                                        <AccordionContent className="text-slate-500 text-lg leading-relaxed pb-8">
+                                        <AccordionContent className="text-lg font-light leading-relaxed text-slate-500 pb-8 text-justify">
                                             {item.a}
                                         </AccordionContent>
                                     </AccordionItem>

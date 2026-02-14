@@ -32,7 +32,7 @@ import eliteROImg from "@/assets/Triple Stage Filter.jpg";
 import plusROImg from "@/assets/Double Stage Filter.jpg";
 import essentialImg from "@/assets/Single Stage Filter.jpg";
 import sereneLiteImg from "@/assets/Système+de+filtration+Serene+Lite.webp";
-import waterTestBg from "@/assets/water-taste.jpg";
+import waterTestingImg from "@/assets/2147800429.jpg";
 
 const FiltrationSousEvier = () => {
     const comparisonData = [
@@ -71,8 +71,8 @@ const FiltrationSousEvier = () => {
                             >
                                 Buvez en toute confiance, <span className="font-normal">sans jamais porter une seule bouteille.</span>
                             </h1>
-                            <p className="font-light text-[20px] leading-[28px] text-white/90 mb-8 max-w-xl">
-                                Profitez d'une eau pure et délicieuse directement de votre robinet.
+                            <p className="text-lg font-light leading-relaxed text-white/90 mb-8 max-w-xl text-justify">
+                                Un système compact et discret qui révolutionne la qualité de l'eau à chaque jet de votre robinet.
                                 Nos systèmes éliminent 99% des contaminants pour une tranquillité d'esprit totale.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4">
@@ -110,7 +110,7 @@ const FiltrationSousEvier = () => {
                             <h2 className="text-[32px] md:text-[48px] font-normal text-white mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
                                 Pourquoi installer l'un de nos systèmes <br />de filtration d'eau sous l'évier de votre cuisine?
                             </h2>
-                            <p className="text-blue-100 max-w-2xl mx-auto text-lg leading-relaxed">
+                            <p className="text-lg font-light leading-relaxed text-blue-100 max-w-2xl mx-auto text-justify">
                                 Profitez d'une eau d'une pureté exceptionnelle pour votre boisson et votre cuisine tout en simplifiant votre quotidien.
                             </p>
                         </div>
@@ -129,7 +129,7 @@ const FiltrationSousEvier = () => {
                                         <item.icon className="h-10 w-10 text-blue-600 group-hover:text-white" />
                                     </div>
                                     <h3 className="text-2xl font-bold mb-4 tracking-tight">{item.title}</h3>
-                                    <p className="text-blue-100 leading-relaxed font-light">{item.desc}</p>
+                                    <p className="text-lg font-light leading-relaxed text-blue-100 text-justify">{item.desc}</p>
                                 </div>
                             ))}
                         </div>
@@ -170,7 +170,7 @@ const FiltrationSousEvier = () => {
                                     </div>
                                     <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
                                         <h3 className="text-xl font-bold mb-4 group-hover:text-blue-600 transition-colors uppercase tracking-tight">{product.name}</h3>
-                                        <p className="text-slate-500 text-sm leading-relaxed mb-6 flex-grow">{product.desc}</p>
+                                        <p className="text-lg font-light leading-relaxed text-slate-500 mb-6 flex-grow text-justify">{product.desc}</p>
                                         <div className="mt-auto">
                                             <NavLink
                                                 to={product.path || "/contact"}
@@ -191,7 +191,7 @@ const FiltrationSousEvier = () => {
                     <div className="container mx-auto px-6">
                         <div className="flex flex-col lg:flex-row items-stretch gap-0 rounded-[3rem] overflow-hidden shadow-2xl">
                             <div className="lg:w-1/2 relative min-h-[400px]">
-                                <img src={waterTestBg} alt="Analyse d'eau" className="absolute inset-0 w-full h-full object-cover" />
+                                <img src={waterTestingImg} alt="Analyse d'eau" className="absolute inset-0 w-full h-full object-cover" />
                                 <div className="absolute inset-0 bg-blue-900/10" />
                             </div>
                             <div className="lg:w-1/2 bg-blue-600 text-white p-12 lg:p-20 flex flex-col justify-center items-start text-left">
@@ -201,7 +201,7 @@ const FiltrationSousEvier = () => {
                                 <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal text-white mb-8 leading-[1.1] tracking-tighter">
                                     Ne devinez pas, <br /> testez votre eau.
                                 </h2>
-                                <p className="text-white/90 text-lg font-medium mb-12 leading-relaxed">
+                                <p className="text-white/90 text-lg font-light mb-12 leading-relaxed text-justify">
                                     Chaque foyer est différent. Nos experts effectuent une analyse gratuite sur place pour identifier les contaminants spécifiques à votre résidence et vous recommander la solution optimale.
                                 </p>
                                 <Button className="bg-white text-blue-600 hover:bg-blue-50 rounded-full px-12 h-16 text-xl font-bold shadow-xl" asChild>
@@ -229,7 +229,7 @@ const FiltrationSousEvier = () => {
                             <table className="w-full min-w-[1000px] border-collapse bg-white rounded-2xl overflow-hidden shadow-sm">
                                 <thead>
                                     <tr className="bg-gray-100">
-                                        <th className="p-8 text-left text-gray-400 font-medium uppercase tracking-wider">Solutions</th>
+                                        <th className="p-8 text-left text-gray-400 font-light uppercase tracking-wider">Solutions</th>
                                         {[
                                             { name: "Essential", img: essentialImg },
                                             { name: "Plus RO", img: plusROImg },
@@ -252,7 +252,7 @@ const FiltrationSousEvier = () => {
                                 <tbody className="divide-y divide-gray-100">
                                     {comparisonData.map((row, i) => (
                                         <tr key={i} className="hover:bg-gray-50 transition-colors">
-                                            <td className="p-8 font-medium text-gray-700">{row.feature}</td>
+                                            <td className="p-8 font-light text-gray-700">{row.feature}</td>
                                             <td className="p-8 text-center">
                                                 {typeof row.elite === 'string' ? <span className="text-blue-600 font-bold bg-blue-50 px-3 py-1 rounded-full text-[10px]">{row.elite}</span> : (row.elite ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : <X className="h-6 w-6 text-gray-300 mx-auto" />)}
                                             </td>
@@ -354,7 +354,7 @@ const FiltrationSousEvier = () => {
                                         <AccordionTrigger className="text-left font-bold text-xl hover:no-underline py-8 text-slate-800">
                                             {item.q}
                                         </AccordionTrigger>
-                                        <AccordionContent className="text-slate-500 text-lg leading-relaxed pb-8">
+                                        <AccordionContent className="text-lg font-light leading-relaxed text-slate-500 pb-8 text-justify">
                                             {item.a}
                                         </AccordionContent>
                                     </AccordionItem>

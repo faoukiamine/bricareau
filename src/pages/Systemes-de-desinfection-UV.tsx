@@ -34,7 +34,7 @@ import uvSystemImg from "@/assets/Systèmes de désinfection UV.webp";
 import uvSystemImg2 from "@/assets/VH200-F10-265x300.jpg";
 import uvSystemImg3 from "@/assets/VH410-F20-200x300.jpg";
 import uvSystemImg4 from "@/assets/500x500_V-Arros-15-IHS-10_straight-1-300x300.jpg";
-import waterTestBg from "@/assets/Finishes_website_700x700_px_Flex_Gunmetal_20.jpg";
+import waterTestingImg from "@/assets/2147800429.jpg";
 
 const DesinfectionUV = () => {
     const comparisonData = [
@@ -109,8 +109,8 @@ const DesinfectionUV = () => {
                                 <span className="font-light block">Pourquoi choisir la</span>
                                 <span className="font-normal block">désinfection UV ?</span>
                             </h2>
-                            <p className="text-blue-100 max-w-2xl mx-auto text-lg">
-                                La méthode la plus efficace et la plus écologique pour désinfecter votre eau potable tout en offrant une protection permanente.
+                            <p className="text-lg font-medium leading-relaxed text-blue-100 max-w-2xl mx-auto text-justify">
+                                Profitez d'une tranquillité d'esprit totale avec une technologie qui élimine 99,99% des pathogènes sans ajout de produits chimiques.
                             </p>
                         </div>
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 text-center">
@@ -123,13 +123,13 @@ const DesinfectionUV = () => {
                                 { icon: Droplets, title: "Eau cristalline", desc: "Conserve les minéraux essentiels de votre eau." },
                                 { icon: BatteryLow, title: "Faible énergie", desc: "Consomme autant qu'une ampoule standard." },
                                 { icon: ShieldAlert, title: "Zéro risque", desc: "Pas de stockage de produits chimiques dangereux." }
-                            ].map((item, i) => (
+                            ].map((benefit, i) => (
                                 <div key={i} className="flex flex-col items-center group">
                                     <div className="w-20 h-20 rounded-2xl bg-white flex items-center justify-center mb-8 transition-all group-hover:scale-110 group-hover:bg-white/10">
-                                        <item.icon className="h-10 w-10 text-blue-600 group-hover:text-white" />
+                                        <benefit.icon className="h-10 w-10 text-blue-600 group-hover:text-white" />
                                     </div>
-                                    <h3 className="text-2xl font-bold mb-4 tracking-tight">{item.title}</h3>
-                                    <p className="text-blue-100 leading-relaxed">{item.desc}</p>
+                                    <h3 className="text-2xl font-bold mb-4 tracking-tight">{benefit.title}</h3>
+                                    <p className="text-lg font-medium leading-relaxed text-blue-100 text-justify">{benefit.desc}</p>
                                 </div>
                             ))}
                         </div>
@@ -154,13 +154,13 @@ const DesinfectionUV = () => {
                                 { name: "VH200-F10", desc: "Préfiltration UV intégrée pour toute la maison\nIdéal pour : bactéries, turbidité/opacité.\nDébit : 9 gpm.", img: uvSystemImg2 },
                                 { name: "VH410-F20", desc: "Préfiltration UV intégrée pour toute la maison\nIdéal pour : bactéries, turbidité/eau trouble.\nDébit : 18 gpm.", img: uvSystemImg3 },
                                 { name: "Arros 15-IHS10", desc: "Système de traitement d'eau UV pour toute la maison\nIdéal pour : bactéries, turbidité/opacité.\nDébit : 15 gpm (56,8 l/min) 3,41 m³/h.", img: uvSystemImg4 }
-                            ].map((product, i) => (
+                            ].map((prod, i) => (
                                 <div key={i} className="group cursor-pointer">
                                     <div className="bg-slate-50 aspect-video rounded-3xl mb-6 overflow-hidden flex items-center justify-center p-8 transition-all group-hover:shadow-xl group-hover:bg-white group-hover:-translate-y-2">
-                                        <img src={product.img} alt={product.name} className="w-full h-full object-contain mix-blend-multiply transition-transform duration-500 group-hover:scale-110" />
+                                        <img src={prod.img} alt={prod.name} className="w-full h-full object-contain mix-blend-multiply transition-transform duration-500 group-hover:scale-110" />
                                     </div>
-                                    <h3 className="text-xl font-bold mb-2 group-hover:text-blue-600 transition-colors uppercase tracking-tight">{product.name}</h3>
-                                    <p className="text-slate-500 text-sm leading-relaxed mb-4 whitespace-pre-line">{product.desc}</p>
+                                    <h3 className="text-xl font-bold mb-2 group-hover:text-blue-600 transition-colors uppercase tracking-tight">{prod.name}</h3>
+                                    <p className="text-lg font-medium leading-relaxed text-slate-500 mb-6 flex-grow text-justify">{prod.desc}</p>
                                     <NavLink to="#" className="text-blue-600 font-bold flex items-center gap-2 text-sm tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-all">
                                         EN SAVOIR PLUS <ChevronRight className="h-4 w-4" />
                                     </NavLink>
@@ -219,7 +219,7 @@ const DesinfectionUV = () => {
                     <div className="container mx-auto px-6">
                         <div className="flex flex-col lg:flex-row items-stretch gap-0 rounded-[3rem] overflow-hidden shadow-2xl">
                             <div className="lg:w-1/2 relative min-h-[400px]">
-                                <img src={waterTestBg} alt="Analyse d'eau" className="absolute inset-0 w-full h-full object-cover" />
+                                <img src={waterTestingImg} alt="Analyse d'eau" className="absolute inset-0 w-full h-full object-cover" />
                                 <div className="absolute inset-0 bg-blue-900/10" />
                             </div>
                             <div className="lg:w-1/2 bg-blue-600 text-white p-12 lg:p-20 flex flex-col justify-center items-start text-left">
@@ -233,8 +233,8 @@ const DesinfectionUV = () => {
                                     <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block text-white">Votre eau est-elle</span>
                                     <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block text-white">vraiment sécuritaire ?</span>
                                 </h2>
-                                <p className="text-white/90 leading-relaxed mb-12 text-justify">
-                                    Contrairement aux minéraux, les bactéries et virus ne se voient pas et n'ont pas de goût. Une analyse microbiologique est le seul moyen de garantir la potabilité de votre eau, surtout pour les puits privés.
+                                <p className="text-lg font-medium leading-relaxed text-white/90 mb-12 text-justify">
+                                    Ne devinez pas la qualité de votre eau. Nos analyses approfondies identifient les bactéries, les minéraux et les contaminants chimiques pour vous offrir une tranquillité d'esprit totale.
                                 </p>
                                 <Button className="bg-white text-blue-600 hover:bg-blue-50 rounded-full px-12 h-16 text-xl font-bold shadow-xl" asChild>
                                     <NavLink to="/water-testing">Tester mon eau</NavLink>
@@ -327,7 +327,7 @@ const DesinfectionUV = () => {
                                         <AccordionTrigger className="text-left font-bold text-xl hover:no-underline py-8 text-slate-800">
                                             {item.q}
                                         </AccordionTrigger>
-                                        <AccordionContent className="text-slate-500 text-lg leading-relaxed pb-8">
+                                        <AccordionContent className="text-lg font-medium leading-relaxed text-slate-500 pb-8 text-justify">
                                             {item.a}
                                         </AccordionContent>
                                     </AccordionItem>
@@ -394,7 +394,7 @@ const DesinfectionUV = () => {
                                     <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Protégez votre</span>
                                     <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">foyer dès aujourd'hui</span>
                                 </h2>
-                                <p className="font-light text-[20px] leading-[28px] text-gray-600 mb-8">
+                                <p className="font-light text-[20px] leading-[28px] text-gray-600 mb-8 text-justify">
                                     Remplissez le formulaire ci-dessous pour organiser une consultation téléphonique avec l'un de nos experts.
                                 </p>
                             </div>

@@ -63,7 +63,7 @@ const ProblemHero = () => {
                             <span className="text-[40px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">maux de tête.</span>
                         </h1>
 
-                        <p className="font-light text-[20px] leading-[28px] text-slate-600 mb-12 max-w-xl">
+                        <p className="text-lg font-medium leading-relaxed text-slate-600 mb-12 max-w-xl text-justify">
                             Vous vous inquiétez de la qualité de votre eau potable, du calcaire sur votre pomme de douche, des taches de rouille dans votre baignoire ou d’une odeur des œufs pourris lorsque vous prenez votre douche ?
                         </p>
 

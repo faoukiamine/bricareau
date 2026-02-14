@@ -194,7 +194,7 @@ const ConsultationFormSection = ({ id }: { id?: string }) => {
     }
 
     return (
-        <section id={id} className="py-24 bg-white border-t border-gray-100">
+        <section id={id} className="py-24 bg-white border-t border-gray-100 scroll-mt-24">
             <div className="container mx-auto px-4">
                 <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-20">
                     {/* Left Side Content */}

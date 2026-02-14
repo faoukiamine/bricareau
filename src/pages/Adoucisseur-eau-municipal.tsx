@@ -13,6 +13,7 @@ import {
     Sparkles,
     Shield,
     Zap,
+    Wifi,
     Shirt,
     TrendingDown,
     Quote,
@@ -27,7 +28,7 @@ import {
     HandCoins
 } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
-import waterTestBg from "@/assets/Enercare_JP_Day_2_Kitchen_Faucet_498-2048x1365.jpg";
+import waterTestingImg from "@/assets/2147800429.jpg";
 import residentialWaterSoftenerImg from "@/assets/residential-water-softener.png";
 import {
     Accordion,
@@ -43,11 +44,42 @@ const products = [
 ];
 
 const comparisonData = [
-    { feature: "Technologie High Efficiency", Sentinel: true, Sérénité: true, Infiniti: true },
-    { feature: "Contrôle à distance (App)", Sentinel: true, Sérénité: false, Infiniti: true },
-    { feature: "Protection du chlore intégrée", Sentinel: "Option", Sérénité: false, Infiniti: false },
-    { feature: "Alertes de sel faible", Sentinel: true, Sérénité: true, Infiniti: true },
-    { feature: "Diagnostic à distance", Sentinel: true, Sérénité: false, Infiniti: true },
+    {
+        feature: "Principe de Déclenchement",
+        Sérénité: "Se régénère à intervalles de temps fixes (ex: tous les 3 jours).",
+        Sentinel: "Se régénère selon le volume d'eau réellement consommé.",
+        Infiniti: "Alterne entre deux bouteilles dès que l'une est saturée."
+    },
+    {
+        feature: "Disponibilité d'Eau Douce",
+        Sérénité: "Interrompue pendant la régénération (souvent la nuit).",
+        Sentinel: "Interrompue pendant la régénération (souvent la nuit).",
+        Infiniti: "Permanente (24h/24) sans aucune interruption."
+    },
+    {
+        feature: "Efficacité (Sel & Eau)",
+        Sérénité: "Moyenne (consomme même si peu d'eau a été utilisée).",
+        Sentinel: "Optimale (ne se régénère que si nécessaire).",
+        Infiniti: "Maximale (utilise la résine à 100% de sa capacité)."
+    },
+    {
+        feature: "Profil Utilisateur Idéal",
+        Sérénité: "Consommation d'eau très stable et prévisible.",
+        Sentinel: "Familles avec variations de consommation (invités, saisons).",
+        Infiniti: "Grosses consommations ou besoins critiques (gîtes, grandes familles)."
+    },
+    {
+        feature: "Complexité Technique",
+        Sérénité: "Simple et très robuste.",
+        Sentinel: "Électronique avancée avec capteur de débit.",
+        Infiniti: "Système double nécessitant plus d'espace."
+    },
+    {
+        feature: "Investissement Initial",
+        Sérénité: "Économique.",
+        Sentinel: "Intermédiaire.",
+        Infiniti: "Plus élevé."
+    },
 ];
 
 const faqItems = [
@@ -77,20 +109,20 @@ const AdoucisseurEauResidentiel = () => {
                     <div className="container mx-auto px-4 relative z-10">
                         <div className="max-w-2xl text-white">
                             <h1
-                                className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-white"
+                                className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-white text-justify"
                                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                             >
                                 Un bien-être sans égal <span className="font-normal"><br />au quotidien</span>
                             </h1>
-                            <p className="font-light text-[20px] leading-[28px] text-white/95 mb-8 max-w-xl">
-                                Bricareau vous offre une eau douce, source de bien-être et de confort.
+                            <p className="text-lg font-light leading-relaxed text-white/95 mb-8 max-w-xl text-justify">
+                                Redécouvrez le confort d'une eau soyeuse protégeant votre peau et vos appareils. Alliez économies durables et bien-être absolu au quotidien.
                             </p>
                             <div className="flex gap-4">
                                 <Button
                                     size="lg"
                                     className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14"
                                     style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
-                                    onClick={() => document.getElementById('consultation-form')?.scrollIntoView({ behavior: 'smooth' })}
+                                    onClick={() => document.getElementById('consultation')?.scrollIntoView({ behavior: 'smooth' })}
                                 >
                                     <a href="#consultation">Planifier une consultation gratuite</a>
                                 </Button>
@@ -106,18 +138,19 @@ const AdoucisseurEauResidentiel = () => {
                             <h2 className="text-[32px] md:text-[48px] font-normal text-white mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-center">
                                 Pourquoi choisir nos <br />adoucisseurs d'eau résidentiels ?
                             </h2>
-                            <p className="text-blue-100 max-w-2xl mx-auto text-lg">
+                            <p className="text-lg font-light leading-relaxed text-blue-100 max-w-2xl mx-auto text-justify">
                                 Plus qu'un simple appareil, c'est une solution complète pour la qualité de l'eau et le confort de toute votre famille.
                             </p>
                         </div>
                         <div className="flex flex-wrap justify-center gap-x-12 gap-y-16">
                             {[
                                 { icon: Droplets, title: "Qualité supérieure", desc: "Une douceur incomparable pour votre peau et vos cheveux dès la première douche." },
+                                { icon: Shirt, title: "Linge plus doux", desc: "Des vêtements qui restent éclatants et souples plus longtemps, sans adoucissants." },
+                                { icon: Sparkles, title: "Vaisselle étincelante", desc: "Éliminez les taches de calcaire et le voile blanc sur vos verres et plats." },
                                 { icon: Shield, title: "Protection totale", desc: "Prolongez la durée de vie de votre plomberie et de vos électroménagers coûteux." },
                                 { icon: HandCoins, title: "Économies garanties", desc: "Réduisez vos factures d'énergie et vos dépenses en savons et détergents de 50%." },
-                                { icon: Sparkles, title: "Vaisselle étincelante", desc: "Éliminez les taches de calcaire et le voile blanc sur vos verres et plats." },
-                                { icon: Shirt, title: "Linge plus doux", desc: "Des vêtements qui restent éclatants et souples plus longtemps, sans adoucissants." },
                                 { icon: Zap, title: "Efficacité HE", desc: "Une technologie haute efficacité qui consomme moins de sel et d'eau." },
+                                { icon: Wifi, title: "Régénération adaptée", desc: "Nous avons la technologie exacte pour votre profil." },
                                 { icon: Award, title: "Expertise Bricareau", desc: "Installation certifiée et service après-vente pour une tranquillité d'esprit totale." }
                             ].map((item, id) => (
                                 <div key={id} className="flex flex-col items-center group w-full sm:w-[calc(50%-3rem)] lg:w-[calc(25%-3rem)]">
@@ -125,7 +158,7 @@ const AdoucisseurEauResidentiel = () => {
                                         <item.icon className="h-10 w-10 text-blue-600 group-hover:text-white" />
                                     </div>
                                     <h4 className="text-2xl font-bold mb-4 tracking-tight">{item.title}</h4>
-                                    <p className="text-blue-100 leading-relaxed">{item.desc}</p>
+                                    <p className="text-lg font-light leading-relaxed text-blue-100 text-justify">{item.desc}</p>
                                 </div>
                             ))}
                         </div>
@@ -163,7 +196,7 @@ const AdoucisseurEauResidentiel = () => {
                                                 </>
                                             ) : p.name}
                                         </h3>
-                                        <p className="text-slate-500 text-sm leading-relaxed mb-6 flex-grow">{p.desc}</p>
+                                        <p className="text-lg font-light leading-relaxed text-slate-500 mb-6 flex-grow text-justify">{p.desc}</p>
                                         <NavLink
                                             to={p.path || "/adoucisseurs"}
                                             className="text-blue-600 font-bold flex items-center justify-center gap-2 group-hover:underline text-xs tracking-widest uppercase"
@@ -175,13 +208,14 @@ const AdoucisseurEauResidentiel = () => {
                             ))}
                         </div>
                         <div className="mt-16 text-center">
-                            <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
+                            <p className="text-lg font-light leading-relaxed text-gray-600 mb-8 max-w-2xl mx-auto text-justify">
                                 Vous ne savez pas quel système choisir ? Nos experts peuvent vous aider à trouver la solution
                                 parfaite pour votre foyer.
                             </p>
                             <Button
                                 className="bg-blue-600 text-white rounded-full px-12 h-14"
                                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                onClick={() => document.getElementById('consultation')?.scrollIntoView({ behavior: 'smooth' })}
                             >
                                 Parlez avec un expert
                             </Button>
@@ -205,19 +239,26 @@ const AdoucisseurEauResidentiel = () => {
                             <table className="w-full min-w-[1000px] border-collapse bg-white rounded-2xl overflow-hidden shadow-sm">
                                 <thead>
                                     <tr className="bg-gray-100">
-                                        <th className="p-8 text-left text-gray-400 font-medium uppercase tracking-wider">Modèles</th>
-                                        {["Sentinel", "Serenite", "Infiniti"].map(m => (
-                                            <th key={m} className="p-8 text-center text-gray-900 font-bold text-xl">{m}</th>
+                                        <th className="p-8 text-left text-gray-400 font-light uppercase tracking-wider w-1/4">Critères d'Analyse</th>
+                                        {[
+                                            { name: "Sérénité", sub: "(Calendrier)" },
+                                            { name: "Sentinel", sub: "(Volumétrique / Meter)" },
+                                            { name: "Infiniti", sub: "(Duplex Alterné)" }
+                                        ].map(m => (
+                                            <th key={m.name} className="p-8 text-center text-gray-900 font-bold">
+                                                <div className="text-xl">{m.name}</div>
+                                                <div className="text-sm font-normal text-gray-500">{m.sub}</div>
+                                            </th>
                                         ))}
                                     </tr>
                                 </thead>
                                 <tbody className="divide-y divide-gray-100">
                                     {comparisonData.map((row, i) => (
                                         <tr key={i} className="hover:bg-gray-50 transition-colors">
-                                            <td className="p-8 font-medium text-gray-700">{row.feature}</td>
-                                            {["Sentinel", "Sérénité", "Infiniti"].map((model) => (
-                                                <td key={model} className="p-8 text-center">
-                                                    {typeof (row as any)[model] === 'string' ? (row as any)[model] : ((row as any)[model] ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : <X className="h-6 w-6 text-gray-300 mx-auto" />)}
+                                            <td className="p-8 font-bold text-slate-900 border-r border-gray-100 bg-gray-50/30">{row.feature}</td>
+                                            {["Sérénité", "Sentinel", "Infiniti"].map((model) => (
+                                                <td key={model} className="p-8 text-center text-lg font-light leading-relaxed text-gray-600 text-justify">
+                                                    {(row as any)[model]}
                                                 </td>
                                             ))}
                                         </tr>
@@ -236,18 +277,18 @@ const AdoucisseurEauResidentiel = () => {
                     <div className="container mx-auto px-6">
                         <div className="flex flex-col lg:flex-row items-stretch gap-0 rounded-[3rem] overflow-hidden shadow-2xl">
                             <div className="lg:w-1/2 relative min-h-[400px]">
-                                <img src={waterTestBg} alt="Analyse d'eau" className="absolute inset-0 w-full h-full object-cover" />
+                                <img src={waterTestingImg} alt="Analyse d'eau" className="absolute inset-0 w-full h-full object-cover" />
                                 <div className="absolute inset-0 bg-blue-900/10" />
                             </div>
                             <div className="lg:w-1/2 bg-blue-600 text-white p-12 lg:p-20 flex flex-col justify-center items-start text-left">
                                 <span className="text-white/80 text-xs font-black uppercase tracking-[0.3em] mb-8 block">
-                                    ANALYSE PROFESSIONNELLE
+                                    ANALYSE d'eau PROFESSIONNELLE
                                 </span>
                                 <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal text-white mb-8 leading-[1.1] tracking-tighter text-left">
                                     Des tests d'eau précis <br />
                                     pour votre sécurité.
                                 </h2>
-                                <p className="text-white/90 text-lg font-medium mb-12 leading-relaxed">
+                                <p className="text-lg font-light leading-relaxed text-white/90 mb-12 text-justify">
                                     Ne devinez pas la qualité de votre eau. Nos analyses approfondies identifient les bactéries, les minéraux et les contaminants chimiques pour vous offrir une tranquillité d'esprit totale.
                                 </p>
                                 <Button className="bg-white text-blue-600 hover:bg-blue-50 rounded-full px-12 h-16 text-xl font-bold shadow-xl" asChild>
@@ -292,7 +333,7 @@ const AdoucisseurEauResidentiel = () => {
                                         <AccordionTrigger className="text-left font-bold text-lg hover:no-underline py-6">
                                             {item.q}
                                         </AccordionTrigger>
-                                        <AccordionContent className="text-gray-600 text-lg leading-relaxed pb-6 text-left">
+                                        <AccordionContent className="text-lg font-light leading-relaxed text-gray-600 pb-6 text-justify">
                                             {item.a}
                                         </AccordionContent>
                                     </AccordionItem>

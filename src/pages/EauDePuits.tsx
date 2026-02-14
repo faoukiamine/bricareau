@@ -14,7 +14,7 @@ import waterTasteThumb from "@/assets/water-taste.jpg";
 import turbideWaterThumb from "@/assets/Turbide-Water.webp";
 import taninWaterThumb from "@/assets/problemes-deau-tanin.jpg";
 import corrosiveWaterThumb from "@/assets/Corrosive-Water.webp";
-import waterTestBg from "@/assets/Enercare_JP_Day_2_Kitchen_Faucet_498-2048x1365.jpg";
+import waterTestingImg from "@/assets/2147800429.jpg";
 import process1 from "@/assets/Scientist istesting water.webp";
 import process2 from "@/assets/section-image-and-content-23.jpg";
 import process3 from "@/assets/SERVICES.jpg";
@@ -106,7 +106,7 @@ const EauDePuits = () => {
               >
                 Votre puits est un trésor. <span className="font-normal">Offrez-lui la pureté qu'il mérite</span>
               </h1>
-              <p className="font-light text-[20px] leading-[28px] text-white/90 mb-8 max-w-xl">
+              <p className="text-lg font-light leading-relaxed text-white/90 mb-8 max-w-xl text-justify">
                 Ne laissez plus le fer, le soufre ou les bactéries gâcher la richesse de votre puits. Transformez votre eau brute en une ressource cristalline, saine et parfaitement équilibrée pour toute votre famille.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -146,8 +146,8 @@ const EauDePuits = () => {
               >
                 Problèmes courants <br /> de l'eau de puits.
               </h2>
-              <p className="font-light text-[20px] leading-[28px] text-slate-600 max-w-2xl">
-                Identifiez les signes d'une contamination ou d'un déséquilibre chimique dans votre eau.
+              <p className="text-lg font-light leading-relaxed text-slate-500 mb-12 max-w-2xl text-justify">
+                L'eau de votre puits est vivante et changeante. Une analyse rigoureuse est la première étape pour garantir la sécurité de votre foyer et la longévité de vos installations.
               </p>
             </div>
 
@@ -164,7 +164,7 @@ const EauDePuits = () => {
                       <div className="absolute inset-0 p-8 flex flex-col justify-end text-white text-left">
                         <span className="text-[10px] font-black uppercase tracking-[0.4em] mb-4 opacity-70 group-hover:opacity-100 transition-opacity">PROBLÈME 1</span>
                         <h3 className="text-xl font-bold leading-tight group-hover:mb-4 transition-all duration-500">{problems[0].title}</h3>
-                        <p className="text-xs opacity-0 h-0 group-hover:opacity-100 group-hover:h-auto transition-all duration-500 leading-relaxed font-medium">{problems[0].desc}</p>
+                        <p className="text-xs opacity-0 h-0 group-hover:opacity-100 group-hover:h-auto transition-all duration-500 leading-relaxed font-light text-justify">{problems[0].desc}</p>
                       </div>
                     </div>
                   </div>
@@ -180,7 +180,7 @@ const EauDePuits = () => {
                         <div className="absolute inset-0 p-8 flex flex-col justify-end text-white text-left">
                           <span className="text-[10px] font-black uppercase tracking-[0.4em] mb-4 opacity-70 group-hover:opacity-100 transition-opacity">PROBLÈME {idx + 1}</span>
                           <h3 className="text-xl font-bold leading-tight group-hover:mb-4 transition-all duration-500">{problems[idx].title}</h3>
-                          <p className="text-xs opacity-0 h-0 group-hover:opacity-100 group-hover:h-auto transition-all duration-500 leading-relaxed font-medium">{problems[idx].desc}</p>
+                          <p className="text-xs opacity-0 h-0 group-hover:opacity-100 group-hover:h-auto transition-all duration-500 leading-relaxed font-light text-justify">{problems[idx].desc}</p>
                         </div>
                       </div>
                     </div>
@@ -197,7 +197,7 @@ const EauDePuits = () => {
                         <div className="absolute inset-0 p-8 flex flex-col justify-end text-white text-left">
                           <span className="text-[10px] font-black uppercase tracking-[0.4em] mb-4 opacity-70 group-hover:opacity-100 transition-opacity">PROBLÈME {idx + 1}</span>
                           <h3 className="text-xl font-bold leading-tight group-hover:mb-4 transition-all duration-500">{problems[idx].title}</h3>
-                          <p className="text-xs opacity-0 h-0 group-hover:opacity-100 group-hover:h-auto transition-all duration-500 leading-relaxed font-medium">{problems[idx].desc}</p>
+                          <p className="text-xs opacity-0 h-0 group-hover:opacity-100 group-hover:h-auto transition-all duration-500 leading-relaxed font-light text-justify">{problems[idx].desc}</p>
                         </div>
                       </div>
                     </div>
@@ -213,7 +213,7 @@ const EauDePuits = () => {
                       <div className="absolute inset-0 p-8 flex flex-col justify-end text-white text-left">
                         <span className="text-[10px] font-black uppercase tracking-[0.4em] mb-4 opacity-70 group-hover:opacity-100 transition-opacity">PROBLÈME 6</span>
                         <h3 className="text-xl font-bold leading-tight group-hover:mb-4 transition-all duration-500">{problems[5].title}</h3>
-                        <p className="text-xs opacity-0 h-0 group-hover:opacity-100 group-hover:h-auto transition-all duration-500 leading-relaxed font-medium">{problems[5].desc}</p>
+                        <p className="text-xs opacity-0 h-0 group-hover:opacity-100 group-hover:h-auto transition-all duration-500 leading-relaxed font-light text-justify">{problems[5].desc}</p>
                       </div>
                     </div>
                   </div>
@@ -235,7 +235,7 @@ const EauDePuits = () => {
                           PROBLÈME {index + 1}
                         </span>
                         <h3 className="text-2xl font-bold mb-4">{problem.title}</h3>
-                        <p className="text-sm leading-relaxed opacity-90">{problem.desc}</p>
+                        <p className="text-lg font-light leading-relaxed text-blue-100 text-justify">{problem.desc}</p>
                       </div>
                     </div>
                   </div>
@@ -259,7 +259,7 @@ const EauDePuits = () => {
                 >
                   Un service simple <br />& sans souci.
                 </h2>
-                <p className="font-light text-[20px] leading-[28px] text-slate-600 max-w-xl lg:ml-auto">
+                <p className="text-lg font-light leading-relaxed text-slate-600 max-w-xl lg:ml-auto text-justify">
                   Confiez-nous la gestion de votre eau de puits. De l'expertise initiale à l'installation finale, nous nous occupons de tout pour vous garantir une eau saine, sans compromis.
                 </p>
               </div>
@@ -301,7 +301,7 @@ const EauDePuits = () => {
                   </div>
 
                   <h3 className="text-2xl font-bold mb-4 text-black tracking-tight">{step.title}</h3>
-                  <p className="font-light text-[20px] leading-[28px] text-slate-600">
+                  <p className="text-lg font-light leading-relaxed text-slate-600 text-justify">
                     {step.desc}
                   </p>
                 </div>
@@ -315,7 +315,7 @@ const EauDePuits = () => {
           <div className="container mx-auto px-6">
             <div className="flex flex-col lg:flex-row items-stretch gap-0 rounded-[3rem] overflow-hidden shadow-2xl">
               <div className="lg:w-1/2 relative min-h-[400px]">
-                <img src={waterTestBg} alt="Analyse d'eau" className="absolute inset-0 w-full h-full object-cover" />
+                <img src={waterTestingImg} alt="Analyse d'eau" className="absolute inset-0 w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-blue-900/10" />
               </div>
               <div className="lg:w-1/2 bg-blue-600 text-white p-12 lg:p-20 flex flex-col justify-center items-start text-left">
@@ -328,7 +328,7 @@ const EauDePuits = () => {
                   Des tests d'eau précis <br />
                   <span className="font-bold">pour votre sécurité.</span>
                 </h2>
-                <p className="font-light text-[20px] leading-[28px] text-white/90 mb-12">
+                <p className="text-lg font-light leading-relaxed text-white/90 mb-12 text-justify">
                   Ne prenez aucun risque avec la santé de votre foyer. Nos tests de précision révèlent les polluants et contaminants invisibles, vous garantissant ainsi une eau parfaitement saine et une sérénité absolue.
                 </p>
                 <Button className="bg-white text-blue-600 hover:bg-blue-50 rounded-full px-12 h-16 text-xl font-bold shadow-xl" asChild>
@@ -394,7 +394,7 @@ const EauDePuits = () => {
                   </div>
                   <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
                     <h3 className="text-xl font-bold mb-4 group-hover:text-blue-600 transition-colors uppercase tracking-tight">{prod.name}</h3>
-                    <p className="text-slate-500 text-sm leading-relaxed mb-6 flex-grow">{prod.desc}</p>
+                    <p className="text-lg font-light leading-relaxed text-slate-500 mb-6 flex-grow text-justify">{prod.desc}</p>
                     <div className="mt-auto">
                       <NavLink
                         to={prod.link || "#"}
@@ -430,7 +430,7 @@ const EauDePuits = () => {
               <table className="w-full min-w-[1000px] border-collapse bg-white rounded-2xl overflow-hidden shadow-sm">
                 <thead>
                   <tr className="bg-gray-100">
-                    <th className="p-8 text-left text-gray-400 font-medium uppercase tracking-wider">Solutions</th>
+                    <th className="p-8 text-left text-gray-400 font-light uppercase tracking-wider">Solutions</th>
                     {[
                       { name: "Systèmes spécialisés de filtration d'eau", img: specializedFiltersImg },
                       { name: "Adoucisseurs d'eau", img: waterSoftenerImg },
@@ -453,7 +453,7 @@ const EauDePuits = () => {
                 <tbody className="divide-y divide-gray-100">
                   {comparisonData.map((row, i) => (
                     <tr key={i} className="hover:bg-gray-50 transition-colors">
-                      <td className="p-8 font-medium text-gray-700">{row.feature}</td>
+                      <td className="p-8 font-light text-gray-700">{row.feature}</td>
                       <td className="p-8 text-center">
                         {typeof row.high === 'string' ? row.high : (row.high ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : <X className="h-6 w-6 text-gray-300 mx-auto" />)}
                       </td>
@@ -480,7 +480,7 @@ const EauDePuits = () => {
             <h2 className="text-2xl md:text-3xl font-bold text-primary-foreground mb-4">
               Besoin d'aide avec votre eau de puits ?
             </h2>
-            <p className="text-primary-foreground/80 text-lg mb-8 max-w-2xl mx-auto">
+            <p className="text-primary-foreground/80 text-lg mb-8 max-w-2xl mx-auto text-justify">
               Discutez avec un expert en un clic. Disponible par téléphone ou à domicile selon vos préférences.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -580,7 +580,7 @@ const EauDePuits = () => {
                     <AccordionTrigger className="text-left font-bold text-lg hover:no-underline py-6">
                       {item.q}
                     </AccordionTrigger>
-                    <AccordionContent className="font-light text-[20px] leading-[28px] text-gray-600 pb-6 text-left">
+                    <AccordionContent className="text-slate-200 text-lg font-light leading-relaxed pb-8 text-justify">
                       {item.a}
                     </AccordionContent>
                   </AccordionItem>
