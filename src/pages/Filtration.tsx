@@ -122,7 +122,7 @@ const Filtration = () => {
                                     <div className="w-20 h-20 rounded-2xl bg-white flex items-center justify-center mb-8 transition-all group-hover:scale-110 group-hover:bg-white/10">
                                         <benefit.icon className="h-10 w-10 text-blue-600 group-hover:text-white" />
                                     </div>
-                                    <h4 className="text-2xl font-bold mb-4 tracking-tight">{benefit.title}</h4>
+                                    <h4 className="text-2xl font-medium mb-4 tracking-tight">{benefit.title}</h4>
                                     <p className="text-lg font-light leading-relaxed text-blue-100 text-justify">{benefit.desc}</p>
                                 </div>
                             ))}

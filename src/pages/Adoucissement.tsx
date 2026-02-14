@@ -254,9 +254,9 @@ const Adoucissement = () => {
                                 <p className="text-lg font-light leading-relaxed text-white/90 mb-12 text-justify">
                                     Le luxe, c'est de ne pas avoir à se soucier de la qualité de ce que l'on consomme. Offrez-vous la sérénité d'une eau analysée par des experts, pour une maison où tout brille, sans effort et sans compromis.
                                 </p>
-                                <Button className="bg-white text-blue-600 hover:bg-blue-50 rounded-full px-12 h-16 text-xl font-bold shadow-xl transition-all hover:scale-105" asChild>
-                                    <NavLink to="/water-testing">Demander une analyse d'eau</NavLink>
-                                </Button>
+                                <NavLink to="/water-testing" className="inline-block bg-white hover:bg-blue-50 text-blue-600 font-bold px-8 py-3 rounded-full transition-colors">
+                                    Demander une analyse d'eau
+                                </NavLink>
                             </div>
                         </div>
                     </div>
@@ -319,9 +319,9 @@ const Adoucissement = () => {
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {[
-                                { title: "Comment choisir son adoucisseur", img: untitledImg },
-                                { title: "L'importance de l'eau adoucie", img: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=800&auto=format&fit=crop" },
-                                { title: "Entretien de votre système Bricareau", img: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=800&auto=format&fit=crop" }
+                                { title: "Comment choisir son adoucisseur", img: untitledImg, link: "/comment-choisir-un-adoucisseur-deau" },
+                                { title: "L'importance de l'eau adoucie", img: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=800&auto=format&fit=crop", link: "#" },
+                                { title: "Entretien de votre système Bricareau", img: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=800&auto=format&fit=crop", link: "#" }
                             ].map((art, i) => (
                                 <div key={i} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer group flex flex-col h-full border border-gray-100">
                                     <div className="h-56 overflow-hidden">
@@ -330,7 +330,7 @@ const Adoucissement = () => {
                                     <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
                                         <h4 className="text-xl font-bold mb-4 group-hover:text-blue-600 transition-colors uppercase tracking-tight">{art.title}</h4>
                                         <div className="mt-auto">
-                                            <NavLink to="#" className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-xs tracking-widest uppercase">
+                                            <NavLink to={art.link} className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-xs tracking-widest uppercase">
                                                 EN SAVOIR PLUS <ChevronRight className="h-4 w-4" />
                                             </NavLink>
                                         </div>

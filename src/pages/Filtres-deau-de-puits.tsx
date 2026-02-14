@@ -30,15 +30,15 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
 const products = [
-    { name: "Bricareau HE Connect", desc: "Spécialisé pour l'eau contenant des sédiments.", image: specializedFiltersImg },
-    { name: "Bricareau Medallist Series", desc: "Spécialisé pour l'eau acide.", image: specializedFiltersImg },
-    { name: "Bricareau HE Municipal", desc: "Spécialisé pour l'eau contenant du chlore.", image: specializedFiltersImg },
-    { name: "Bricareau Iron-Cleer", desc: "Spécialisé pour l'eau contenant du fer.", image: specializedFiltersImg },
-    { name: "Bricareau Gold Series", desc: "Spécialisé pour l'eau contenant du fer et du manganèse.", image: specializedFiltersImg },
-    { name: "Bricareau Outdoor HE", desc: "Spécialisé pour l'eau contenant du sulfure d'hydrogène.", image: specializedFiltersImg },
-    { name: "Bricareau Select Plus", desc: "Spécialisé pour l'eau contenant de l'arsenic.", image: specializedFiltersImg },
-    { name: "Bricareau Select Plus Connect", desc: "Spécialisé pour l'eau contenant du tanin.", image: watersofterImg },
-    { name: "Bricareau High Efficiency", desc: "Spécialisé pour l'eau contenant beaucoup de sels dissous.", image: drinkingwatersofterImg },
+    { name: "Filtre d'eau Vortex", desc: "Spécialisé pour l'eau contenant des sédiments.", image: specializedFiltersImg },
+    { name: "Filtre d'eau Zen-pH", desc: "Spécialisé pour l'eau acide.", image: specializedFiltersImg },
+    { name: "Filtre d'eau ChlorStop", desc: "Spécialisé pour l'eau contenant du chlore.", image: specializedFiltersImg },
+    { name: "Filtre d'eau Iron Shield", desc: "Spécialisé pour l'eau contenant du fer.", image: specializedFiltersImg },
+    { name: "Filtre d'eau Oxy-pure", desc: "Spécialisé pour l'eau contenant du fer et du manganèse.", image: specializedFiltersImg },
+    { name: "Filtre d'eau Sulphur Shield", desc: "Spécialisé pour l'eau contenant du sulfure d'hydrogène.", image: specializedFiltersImg },
+    { name: "Filtre d'eau Zéro-As", desc: "Spécialisé pour l'eau contenant de l'arsenic.", image: specializedFiltersImg },
+    { name: "Filtre d'eau Tann-Ex", desc: "Spécialisé pour l'eau contenant du tanin.", image: watersofterImg },
+    { name: "Système d'osmose inverse Sérénité Pure", desc: "Spécialisé pour l'eau contenant beaucoup de sels dissous.", image: drinkingwatersofterImg },
 
 ];
 
@@ -196,7 +196,7 @@ const FiltresDeau = () => {
                                     <div className="w-20 h-20 rounded-2xl bg-white flex items-center justify-center mb-8 transition-all group-hover:scale-110 group-hover:bg-white/10">
                                         <item.icon className="h-10 w-10 text-blue-600 group-hover:text-white" />
                                     </div>
-                                    <h4 className="text-2xl font-bold mb-4 tracking-tight">{item.title}</h4>
+                                    <h4 className="text-2xl font-medium mb-4 tracking-tight">{item.title}</h4>
                                     <p className="text-blue-100 leading-relaxed">{item.desc}</p>
                                 </div>
                             ))}
