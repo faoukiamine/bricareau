@@ -36,7 +36,7 @@ const AdoucisseursPortables = () => {
         <div className="min-h-screen font-sans text-gray-900 bg-white selection:bg-[#0066FF] selection:text-white" style={{ '--top-banner': '168 100% 42%' } as React.CSSProperties}>
             <Header />
 
-            {/* 2. SECTION HÉRO */}
+            {/* 1. Section Hero */}
             <section className="relative h-[800px] flex items-start pt-[220px] overflow-hidden">
                 {/* Background Image & Overlays */}
                 <div className="absolute inset-0 z-0">
@@ -69,7 +69,7 @@ const AdoucisseursPortables = () => {
                 </div>
             </section>
 
-            {/* 3. SECTION BÉNÉFICES - Minimalist Grid Design */}
+            {/* 2. Sections Benefits */}
             <section className="py-32 bg-[#f9f9f9]">
                 <div className="container mx-auto px-4">
                     {/* Header Section */}
@@ -134,7 +134,7 @@ const AdoucisseursPortables = () => {
                 </div>
             </section>
 
-            {/* 4. SECTION PROCESSUS - Minimalist 4-Step Design */}
+            {/* 3. Section Processus */}
             <section className="bg-white py-32 border-t border-gray-50">
                 <div className="container mx-auto px-4">
                     {/* Header Layout */}
@@ -193,10 +193,10 @@ const AdoucisseursPortables = () => {
                 </div>
             </section>
 
-            {/* 5. SECTION TÉMOIGNAGES/AVIS */}
+            {/* 4. Section Testimonials */}
             <TestimonialsSection />
 
-            {/* 6. SECTION PRODUITS ASSOCIÉS */}
+            {/* 5. Section Associated Products */}
             <section className="bg-white py-24">
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-16">
@@ -239,7 +239,7 @@ const AdoucisseursPortables = () => {
                 </div>
             </section>
 
-            {/* 7. SECTION ENGAGEMENT */}
+            {/* 6. Section Engagement */}
             <section className="bg-white py-24">
                 <div className="container mx-auto flex flex-col lg:flex-row items-center gap-16">
                     <div className="lg:w-1/2 rounded-2xl overflow-hidden shadow-2xl">
@@ -261,7 +261,7 @@ const AdoucisseursPortables = () => {
                 </div>
             </section>
 
-            {/* 12. Consultation Form Section */}
+            {/* 7. Consultation Form Section */}
             <ConsultationFormSection />
 
             <Footer />

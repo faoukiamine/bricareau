@@ -51,7 +51,7 @@ const WaterTestingPage = () => {
     <div className="min-h-screen bg-white">
       <Header />
       <main>
-        {/* Hero Section */}
+        {/* 1.Hero Section */}
         <section className="relative h-[800px] flex items-start overflow-hidden pt-[220px]">
           <div className="absolute inset-0 z-0">
             <img
@@ -102,6 +102,7 @@ const WaterTestingPage = () => {
           </div>
         </section>
 
+        {/* 2. Why test your water Section */}
         <section className="py-24 bg-blue-600 text-white">
           <div className="container mx-auto px-6">
             <div className="mb-16">
@@ -153,7 +154,7 @@ const WaterTestingPage = () => {
           </div>
         </section>
 
-        {/* Section 3: Quand faut-il faire analyser l'eau (Modern Visual Grid) */}
+        {/* 3. When you should test your water Section*/}
         <section className="py-24 bg-slate-50">
           <div className="container mx-auto px-6">
             <div className="text-center mb-20">
@@ -208,10 +209,10 @@ const WaterTestingPage = () => {
           </div>
         </section>
 
-        {/* Section 6: Testimonials */}
+        {/* 4. Testimonials Section */}
         <TestimonialsSection />
 
-        {/* Section 7: Water Testing plans*/}
+        {/* 5. Water Testing plans Section*/}
         <section className="py-24 bg-white">
           <div className="container mx-auto px-6 text-center">
             <div className="text-center mb-16">
@@ -316,7 +317,7 @@ const WaterTestingPage = () => {
           </div>
         </section>
 
-        {/* 10. Contact Section */}
+        {/* 6 Contact Section */}
         <section className="py-24 bg-white border-t border-gray-100">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-20">

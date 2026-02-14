@@ -82,7 +82,7 @@ const DesinfectionUV = () => {
                                     style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                                     onClick={() => document.getElementById('systemes-uv')?.scrollIntoView({ behavior: 'smooth' })}
                                 >
-                                    Explorer nos systèmes UV
+                                    Découvrir nos systèmes UV
                                 </Button>
                             </div>
                         </div>

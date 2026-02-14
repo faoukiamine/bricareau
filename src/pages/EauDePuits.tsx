@@ -245,7 +245,7 @@ const EauDePuits = () => {
           </div>
         </section>
 
-        {/* 4. Processus Section - Minimalist 4-Step Design */}
+        {/* 4. Processus Section */}
         <section className="bg-white py-32 border-t border-gray-50">
           <div className="container mx-auto px-4">
             {/* Header Layout */}
@@ -577,7 +577,7 @@ const EauDePuits = () => {
           </div>
         </section>
 
-        {/* 11. RessourcesSection */}
+        {/* 11. Resources Section */}
         <section className="py-24 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="text-left mb-16">

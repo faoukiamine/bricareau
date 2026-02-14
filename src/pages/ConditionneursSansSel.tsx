@@ -126,7 +126,7 @@ const ConditionneursSansSel = () => {
       <Header />
 
       <main>
-        {/* Hero Section */}
+        {/* 1.Hero Section */}
         <section className="relative h-[800px] flex items-start overflow-hidden pt-[220px]">
           <div className="absolute inset-0 z-0">
             <img
@@ -163,7 +163,7 @@ const ConditionneursSansSel = () => {
           </div>
         </section>
 
-        {/* Why Choose Section */}
+        {/* 2. Why Choose Section */}
         <section className="py-20 bg-[#00153D] text-white">
           <div className="container mx-auto px-4">
             <div className="text-center max-w-3xl mx-auto mb-16">
@@ -189,7 +189,7 @@ const ConditionneursSansSel = () => {
           </div>
         </section>
 
-        {/* Product Details Section */}
+        {/* 3. Product Details Section */}
         <section className="py-24">
           <div className="container mx-auto px-4">
             <div className="flex flex-col lg:flex-row items-center gap-16">
@@ -233,10 +233,10 @@ const ConditionneursSansSel = () => {
           </div>
         </section>
 
-        {/* Testimonials Section */}
+        {/* 4. Testimonials Section */}
         <TestimonialsSection />
 
-        {/* CTA Section */}
+        {/* 5. CTA Section */}
         <section className="bg-primary py-16 md:py-20">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-2xl md:text-3xl font-bold text-primary-foreground mb-4">
@@ -258,7 +258,7 @@ const ConditionneursSansSel = () => {
           </div>
         </section>
 
-        {/* FAQ Section */}
+        {/* 6. FAQ Section */}
         <section className="py-24 bg-white">
           <div className="container mx-auto px-4">
             <div className="text-left mb-16">
@@ -289,7 +289,7 @@ const ConditionneursSansSel = () => {
           </div>
         </section>
 
-        {/* Articles Section */}
+        {/* 7. Resources Section */}
         <section className="py-24 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="text-left mb-16">
@@ -326,7 +326,7 @@ const ConditionneursSansSel = () => {
           </div>
         </section>
 
-        {/* Consultation Form Section */}
+        {/* 8. Consultation Form Section */}
         <ConsultationFormSection />
       </main>
 

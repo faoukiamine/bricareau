@@ -128,7 +128,7 @@ const AdoucisseursEauDePuits = () => {
             <Header />
 
             <main>
-                {/* Hero Section */}
+                {/* 1.Hero Section */}
                 <section className="relative h-[800px] flex items-start overflow-hidden pt-[220px]">
                     <div className="absolute inset-0 z-0">
                         <img
@@ -164,7 +164,7 @@ const AdoucisseursEauDePuits = () => {
                     </div>
                 </section>
 
-                {/* 2. Pourquoi choisir - Blue Section (Merged with Plus qu'un adoucisseur) */}
+                {/* 2. Why choose our water softeners */}
                 <section className="py-24 bg-blue-600 text-white text-center">
                     <div className="container mx-auto px-6 text-center">
                         <div className="text-left mb-16">
@@ -199,7 +199,7 @@ const AdoucisseursEauDePuits = () => {
                     </div>
                 </section>
 
-                {/* Product Grid Section */}
+                {/* 3.Product Grid Section */}
                 <section id="nos-adoucisseurs" className="py-24 bg-gray-50">
                     <div className="container mx-auto px-6">
                         <div className="text-left mb-16">
@@ -242,7 +242,7 @@ const AdoucisseursEauDePuits = () => {
                     </div>
                 </section>
 
-                {/* Comparison Table Section */}
+                {/* 4.Comparison Table Section */}
                 <section className="py-24 bg-white border-t border-gray-100">
                     <div className="container mx-auto px-6">
                         <div className="text-left mb-16">
@@ -291,10 +291,10 @@ const AdoucisseursEauDePuits = () => {
                     </div>
                 </section>
 
-                {/* Testimonials Grid Section */}
+                {/* 5.Testimonials Grid Section */}
                 <TestimonialsSection />
 
-                {/* 5. Expertise Section (Blue Box Design) */}
+                {/* 6. Water Testing Section */}
                 <section className="py-24 bg-white">
                     <div className="container mx-auto px-6">
                         <div className="flex flex-col lg:flex-row items-stretch gap-0 rounded-[3rem] overflow-hidden shadow-2xl">
@@ -325,7 +325,7 @@ const AdoucisseursEauDePuits = () => {
                     </div>
                 </section>
 
-                {/* Video / Video Section Thumbnail */}
+                {/* 7.Video / Video Section Thumbnail */}
                 <section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-6 text-center">
                         <div className="text-left mb-16">
@@ -349,7 +349,7 @@ const AdoucisseursEauDePuits = () => {
                     </div>
                 </section>
 
-                {/* FAQ Section */}
+                {/* 8.FAQ Section */}
                 <section className="py-24 bg-white">
                     <div className="container mx-auto px-6">
                         <div className="text-left mb-16">
@@ -379,7 +379,7 @@ const AdoucisseursEauDePuits = () => {
                     </div>
                 </section>
 
-                {/* Articles Section (Matching Resources design from Filtration.tsx) */}
+                {/* 9.Resources Section */}
                 <section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-6 text-left">
                         <div className="text-left mb-16">
@@ -416,7 +416,7 @@ const AdoucisseursEauDePuits = () => {
                     </div>
                 </section>
 
-                {/* Consultation Form Section */}
+                {/* 10.Consultation Form Section */}
                 <section className="py-24 bg-white border-t border-gray-100">
                     <div className="container mx-auto px-6">
                         <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-20">
@@ -430,7 +430,7 @@ const AdoucisseursEauDePuits = () => {
                                 </h2>
                                 <div className="w-24 h-1 bg-blue-600 mb-8"></div>
                                 <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                                    Remplissez le formulaire ci-dessous pour organiser une visite d'un de nos experts de l'eau.
+                                    Remplissez le formulaire ci-dessous pour organiser une consultation téléphonique avec l'un de nos experts.
                                 </p>
                             </div>
 
