@@ -7,12 +7,10 @@ import {
     Droplets,
     ChevronRight,
     CheckCircle2,
-    Sparkles,
     Shield,
     Zap,
     TrendingDown,
     Play,
-    Check,
     X,
     Phone
 } from "lucide-react";
@@ -140,7 +138,7 @@ const FiltresDeau = () => {
                     <div className="container mx-auto px-4 relative z-10">
                         <div className="max-w-2xl text-white">
                             <span className="text-sm font-bold uppercase tracking-widest text-[#60A5FA] mb-4 block">
-                                SOLUTIONS DE FILTRATION
+                                SOLUTIONS DE FILTRATION d'eau de puits
                             </span>
                             <h1
                                 className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-white"
@@ -188,13 +186,13 @@ const FiltresDeau = () => {
                                 Plus qu'un simple système de filtration, c'est une protection avancée pour votre santé et un confort durable pour toute votre famille.
                             </p>
                         </div>
-                        <div className="flex flex-wrap justify-center gap-x-12 gap-y-16">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
                             {[
-                                { icon: Droplets, title: "Qualité supérieure", desc: "Une douceur incomparable pour votre peau et vos cheveux dès la première douche." },
-                                { icon: Shield, title: "Protection totale", desc: "Prolongez la durée de vie de votre plomberie et de vos électroménagers coûteux." },
-                                { icon: TrendingDown, title: "Économies réelles", desc: "Réduisez vos factures d'énergie et vos dépenses en produits d'entretien de façon drastique." }
+                                { icon: Droplets, title: "Eau cristalline", desc: "Éliminez les sédiments et la turbidité pour une eau d'une clarté professionnelle partout chez vous." },
+                                { icon: Shield, title: "Protection totale", desc: "Empêchez le fer et les minéraux corrosifs de tacher vos éviers et de détruire votre plomberie." },
+                                { icon: TrendingDown, title: "Zéro odeur", desc: "Dites adieu aux odeurs d'œufs pourris (soufre) et au goût de chlore pour une eau fraîche." }
                             ].map((item, id) => (
-                                <div key={id} className="flex flex-col items-center group w-full sm:w-[calc(50%-3rem)] lg:w-[calc(33%-3rem)]">
+                                <div key={id} className="flex flex-col items-center group text-center">
                                     <div className="w-20 h-20 rounded-2xl bg-white flex items-center justify-center mb-8 transition-all group-hover:scale-110 group-hover:bg-white/10">
                                         <item.icon className="h-10 w-10 text-blue-600 group-hover:text-white" />
                                     </div>
@@ -406,9 +404,9 @@ const FiltresDeau = () => {
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {[
-                                { title: "Comment choisir son adoucisseur", img: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop" },
-                                { title: "L'importance de l'eau adoucie", img: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=800&auto=format&fit=crop" },
-                                { title: "Entretien de votre système Bricareau", img: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=800&auto=format&fit=crop" }
+                                { title: "Comment traiter le fer dans l'eau", img: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop" },
+                                { title: "Éliminer l'odeur de soufre", img: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=800&auto=format&fit=crop" },
+                                { title: "Guide sur l'eau acide et le pH", img: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=800&auto=format&fit=crop" }
                             ].map((art, i) => (
                                 <div
                                     key={i}

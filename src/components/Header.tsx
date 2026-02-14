@@ -140,7 +140,7 @@ const Header = () => {
           icon: GlassWater,
           title: "Filtres d'eau pour toute la maison",
           description: "Protection complète de votre maison avec une filtration centralisée pour toute l'eau.",
-          href: "/Filtres-deau-de-puits"
+          href: "/Filtres-deau"
         },
         {
           icon: Filter,
@@ -219,7 +219,7 @@ const Header = () => {
           icon: Filter,
           title: "Systèmes de filtration d'eau spécialisés",
           description: "Nos systèmes de filtration d’eau spécialisés pour toute la maison est la solution abordable et durable pour obtenir une eau de meilleure qualité à chaque robinet de votre maison.",
-          href: "/Filtres-deau-de-puits"
+          href: "/Filtres-deau"
         },
         {
           icon: Filter,

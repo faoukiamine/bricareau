@@ -37,31 +37,24 @@ import {
 } from "@/components/ui/accordion";
 import ConsultationFormSection from "@/components/ConsultationFormSection";
 const products = [
-    { name: "Bricareau High Efficiency", desc: "Notre système le plus avancé et économe.", path: "/filtre-eau-haute-efficacite", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
-    { name: "Bricareau HE Connect", desc: "Contrôlez votre eau via votre smartphone.", path: "/filtre-eau-haute-efficacite", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
-    { name: "Bricareau HE Municipal", desc: "Élimine le chlore et adoucit l'eau.", path: "/filtre-eau-haute-efficacite", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
-];
-
-const reviews = [
-    { name: "Pierre L.", rating: 5, text: "Excellent service. L'installation a été rapide et les résultats sont au rendez-vous. Plus de calcaire !", date: "Il y a 2 mois" },
-    { name: "Marie C.", rating: 5, text: "Enfin une douche qui ne m'irrite plus la peau. Très satisfaite de mon adoucisseur Bricareau.", date: "Il y a 3 mois" },
-    { name: "Robert D.", rating: 4, text: "Bon produit, technicien très professionnel. Je recommande vivement.", date: "Il y a 1 mois" },
-    { name: "Sophie T.", rating: 5, text: "Une eau de qualité partout dans la maison. Le service client de Bricareau est top.", date: "Il y a 2 semaines" },
-];
-
-const faqItems = [
-    { q: "Quels sont les avantages d'un adoucisseur d'eau ?", a: "Un adoucisseur élimine le calcaire, protège vos appareils, adoucit votre peau et vos cheveux, et vous fait économiser sur les produits de nettoyage." },
-    { q: "Comment fonctionne un adoucisseur Bricareau ?", a: "Il utilise un processus d'échange d'ions pour remplacer les minéraux de dureté (calcium et magnésium) par des ions sodium doux." },
-    { q: "À quelle fréquence faut-il entretenir l'appareil ?", a: "Nous recommandons un entretien annuel pour garantir des performances optimales et prolonger la vie du système." },
-    { q: "Quelle quantité de sel consomme l'adoucisseur ?", a: "Cela dépend de votre consommation d'eau et de la dureté de celle-ci. Nos systèmes HE sont parmi les plus économes du marché." },
+    { name: "Adoucisseur d'eau de la série SENTINELLE", desc: "Le rythme parfait d'une eau toujours douce.", path: "/filtre-eau-haute-efficacite", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
+    { name: "Adoucisseur d'eau de la série SÉRÉNITÉ", desc: "La paix durable pour votre maison et votre confort.", path: "/filtre-eau-haute-efficacite", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
+    { name: "Adoucisseur d'eau de la série INFINITI", desc: "Une douceur constante, à chaque goutte, à chaque seconde.", path: "/filtre-eau-haute-efficacite", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
 ];
 
 const comparisonData = [
-    { feature: "Technologie High Efficiency", high: true, selectPlus: true, connect: true, select: false, medallist: false },
-    { feature: "Contrôle à distance (App)", high: true, selectPlus: false, connect: true, select: false, medallist: false },
-    { feature: "Protection du chlore intégrée", high: "Option", selectPlus: false, connect: false, select: false, medallist: false },
-    { feature: "Alertes de sel faible", high: true, selectPlus: true, connect: true, select: true, medallist: false },
-    { feature: "Diagnostic à distance", high: true, selectPlus: false, connect: true, select: false, medallist: false },
+    { feature: "Technologie High Efficiency", Sentinel: true, Sérénité: true, Infiniti: true },
+    { feature: "Contrôle à distance (App)", Sentinel: true, Sérénité: false, Infiniti: true },
+    { feature: "Protection du chlore intégrée", Sentinel: "Option", Sérénité: false, Infiniti: false },
+    { feature: "Alertes de sel faible", Sentinel: true, Sérénité: true, Infiniti: true },
+    { feature: "Diagnostic à distance", Sentinel: true, Sérénité: false, Infiniti: true },
+];
+
+const faqItems = [
+    { q: "Quelle est la différence entre un adoucisseur municipal et un adoucisseur de puits ?", a: "Un adoucisseur municipal est souvent équipé de charbon actif pour éliminer le chlore et les odeurs de l'eau traitée par la ville, en plus d'éliminer le calcaire." },
+    { q: "Pourquoi adoucir l'eau de la ville ?", a: "Bien que traitée, l'eau municipale reste souvent dure. L'adoucissement protège vos appareils, réduit les taches de calcaire et est plus doux pour votre peau et vos cheveux." },
+    { q: "L'entretien est-il différent ?", a: "Le fonctionnement de base est le même, mais les modèles municipaux avec charbon nécessitent parfois un remplacement périodique du média filtrant pour maintenir l'élimination optimale du chlore." },
+    { q: "Puis-je boire l'eau adoucie ?", a: "Oui, la quantité de sodium ajoutée pendant le processus est minime. Cependant, pour les régimes très stricts en sodium, une station d'eau potable par osmose inverse est recommandée." },
 ];
 
 const AdoucisseurEauResidentiel = () => {
@@ -161,12 +154,19 @@ const AdoucisseurEauResidentiel = () => {
                                             className="w-full h-full object-contain mix-blend-multiply transition-transform duration-500 group-hover:scale-110"
                                         />
                                     </div>
-                                    <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
-                                        <h3 className="text-xl font-bold mb-2 group-hover:text-blue-600 transition-colors uppercase tracking-tight">{p.name}</h3>
+                                    <div className="p-8 text-center border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow items-center">
+                                        <h3 className="text-xl font-bold mb-2 group-hover:text-blue-600 transition-colors uppercase tracking-tight">
+                                            {p.name.includes("Adoucisseur d'eau") ? (
+                                                <>
+                                                    Adoucisseur d'eau <br />
+                                                    {p.name.split("Adoucisseur d'eau")[1].trim()}
+                                                </>
+                                            ) : p.name}
+                                        </h3>
                                         <p className="text-slate-500 text-sm leading-relaxed mb-6 flex-grow">{p.desc}</p>
                                         <NavLink
                                             to={p.path || "/adoucisseurs"}
-                                            className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-xs tracking-widest uppercase"
+                                            className="text-blue-600 font-bold flex items-center justify-center gap-2 group-hover:underline text-xs tracking-widest uppercase"
                                         >
                                             EN SAVOIR PLUS <ChevronRight className="h-4 w-4" />
                                         </NavLink>
@@ -192,19 +192,21 @@ const AdoucisseurEauResidentiel = () => {
                 {/* 4.Comparison Table Section */}
                 <section className="py-24 bg-white border-t border-gray-100">
                     <div className="container mx-auto px-4">
-                        <h2
-                            className="text-slate-900 tracking-tighter mb-16 text-center"
-                            style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
-                        >
-                            <span className="text-[32px] md:text-[60px] font-light leading-[1.2] md:leading-[60px] block">Comparaison des</span>
-                            <span className="text-[32px] md:text-[60px] font-normal leading-[1.2] md:leading-[60px] block">adoucisseurs d'eau</span>
-                        </h2>
+                        <div className="text-left mb-16">
+                            <h2
+                                className="text-[32px] md:text-[60px] font-light text-slate-900 mb-8 leading-[1.1] md:leading-[60px] tracking-tighter text-left"
+                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                            >
+                                Comparez nos <br /><span className="font-normal">adoucisseurs d'eau</span>
+                            </h2>
+                            <div className="w-24 h-1 bg-blue-600"></div>
+                        </div>
                         <div className="overflow-x-auto">
                             <table className="w-full min-w-[1000px] border-collapse bg-white rounded-2xl overflow-hidden shadow-sm">
                                 <thead>
                                     <tr className="bg-gray-100">
                                         <th className="p-8 text-left text-gray-400 font-medium uppercase tracking-wider">Modèles</th>
-                                        {["High Tech", "Select Plus", "Connect", "Select", "Medallist"].map(m => (
+                                        {["Sentinel", "Serenite", "Infiniti"].map(m => (
                                             <th key={m} className="p-8 text-center text-gray-900 font-bold text-xl">{m}</th>
                                         ))}
                                     </tr>
@@ -213,21 +215,11 @@ const AdoucisseurEauResidentiel = () => {
                                     {comparisonData.map((row, i) => (
                                         <tr key={i} className="hover:bg-gray-50 transition-colors">
                                             <td className="p-8 font-medium text-gray-700">{row.feature}</td>
-                                            <td className="p-8 text-center">
-                                                {typeof row.high === 'string' ? row.high : (row.high ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : <X className="h-6 w-6 text-gray-300 mx-auto" />)}
-                                            </td>
-                                            <td className="p-8 text-center">
-                                                {row.selectPlus ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : <X className="h-6 w-6 text-gray-300 mx-auto" />}
-                                            </td>
-                                            <td className="p-8 text-center">
-                                                {row.connect ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : <X className="h-6 w-6 text-gray-300 mx-auto" />}
-                                            </td>
-                                            <td className="p-8 text-center">
-                                                {row.select ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : <X className="h-6 w-6 text-gray-300 mx-auto" />}
-                                            </td>
-                                            <td className="p-8 text-center">
-                                                {row.medallist ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : <X className="h-6 w-6 text-gray-300 mx-auto" />}
-                                            </td>
+                                            {["Sentinel", "Sérénité", "Infiniti"].map((model) => (
+                                                <td key={model} className="p-8 text-center">
+                                                    {typeof (row as any)[model] === 'string' ? (row as any)[model] : ((row as any)[model] ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : <X className="h-6 w-6 text-gray-300 mx-auto" />)}
+                                                </td>
+                                            ))}
                                         </tr>
                                     ))}
                                 </tbody>

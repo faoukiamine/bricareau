@@ -16,7 +16,7 @@ import Entreprises from "./pages/Entreprises";
 import CommercialIndustriel from "./pages/CommercialIndustriel";
 import Solutions from "./pages/Solutions";
 import Adoucisseurs from "./pages/Adoucissement";
-import AdoucisseurEauResidentiel from "./pages/Adoucisseur-eau-residentiel";
+import AdoucisseurEauResidentiel from "./pages/Adoucisseur-eau-municipal.tsx";
 import AdoucisseursEauDePuits from "./pages/Adoucisseurs-eau-de-puits";
 import ConditionneursSansSel from "./pages/ConditionneursSansSel";
 import OsmoseFiltration from "./pages/Systeme-de-filtration-deau-potable";
