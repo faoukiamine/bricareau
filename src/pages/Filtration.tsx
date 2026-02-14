@@ -161,9 +161,9 @@ const Filtration = () => {
                                 <p className="text-lg font-light leading-relaxed text-gray-600 mb-8 text-justify">
                                     Protégez vos appareils ménagers, votre tuyauterie et votre peau. Nos systèmes de filtration centrale traitent chaque goutte d'eau qui entre dans votre foyer pour une tranquillité d'esprit totale.
                                 </p>
-                                <Button className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-10 h-14 text-lg font-bold" asChild>
-                                    <NavLink to="/contact">Découvrir nos filtres d'eau spécialisés</NavLink>
-                                </Button>
+                                <NavLink to="/contact" className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-3 rounded-full transition-colors">
+                                    Découvrir nos filtres d'eau spécialisés
+                                </NavLink>
                             </div>
                         </div>
 
@@ -214,9 +214,9 @@ const Filtration = () => {
                                 <p className="text-lg font-light leading-relaxed text-gray-600 mb-8 text-justify">
                                     Découvrez comment notre système d'osmose inverse libère votre quotidien du goût de chlore et de la corvée des bouteilles plastique. Profitez d'une eau légère, d'une clarté de diamant, idéale pour une hydratation saine et une cuisine riche en saveurs.
                                 </p>
-                                <Button className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-10 h-14 text-lg font-bold" asChild>
-                                    <NavLink to="/systeme-de-filtration-deau-potable">Découvrir nos systèmes d'osmose inverse</NavLink>
-                                </Button>
+                                <NavLink to="/systemes-de-filtration-deau-sous-evier" className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-3 rounded-full transition-colors">
+                                    Découvrir nos systèmes sous-évier
+                                </NavLink>
                             </div>
                         </div>
 
@@ -226,7 +226,7 @@ const Filtration = () => {
                                 { title: "Éco-Conscient", desc: "Réduisez drastiquement votre empreinte carbone en éliminant définitivement les bouteilles d'eau jetables de votre foyer." },
                                 { title: "Saveurs Révélées", desc: "Sublimez le goût de vos boissons et petits plats avec une eau pure, sans chlore ni impuretés pour une cuisine d'exception." }
                             ].map((item, i) => (
-                                <div key={i}>
+                                <div key={i} className="group">
                                     <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
                                         <span className="text-blue-600 font-bold italic">0{i + 1}</span> {item.title}
                                     </h3>
@@ -268,9 +268,9 @@ const Filtration = () => {
                                 <p className="text-lg font-light leading-relaxed text-gray-600 mb-8 text-justify">
                                     Éliminez jusqu'à 99% des pathogènes, du plomb et du fluorure. L'osmose inverse Bricareau est la solution ultime pour une eau de boisson de qualité restaurant directement chez vous.
                                 </p>
-                                <Button className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-10 h-14 text-lg font-bold" asChild>
-                                    <NavLink to="/systemes-de-filtration-deau-sous-evier">Explorer nos systèmes de filtration sous l'évier</NavLink>
-                                </Button>
+                                <NavLink to="/systemes-de-filtration-deau-sous-evier" className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-3 rounded-full transition-colors">
+                                    Explorer nos systèmes de filtration sous l'évier
+                                </NavLink>
                             </div>
                         </div>
 
@@ -280,7 +280,7 @@ const Filtration = () => {
                                 { title: "Design Intelligent", desc: "Un réservoir ultra-compact conçu pour maximiser votre espace de rangement tout en offrant une réserve d'eau constante." },
                                 { title: "Finition de Luxe", desc: "Inclut une sélection de robinets au design contemporain qui s'intègrent parfaitement à l'esthétique de votre cuisine moderne." }
                             ].map((item, i) => (
-                                <div key={i}>
+                                <div key={i} className="group">
                                     <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
                                         <span className="text-blue-600 font-bold italic">0{i + 1}</span> {item.title}
                                     </h3>
@@ -308,9 +308,9 @@ const Filtration = () => {
                                     Ne devinez pas la qualité de votre eau. Nos analyses approfondies identifient les bactéries, les minéraux et les contaminants chimiques pour vous offrir une tranquillité d'esprit totale.
                                 </p>
                                 <div className="flex flex-wrap items-center gap-8">
-                                    <Button className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-10 h-14 text-lg font-bold" asChild>
-                                        <NavLink to="/water-testing">En savoir plus</NavLink>
-                                    </Button>
+                                    <NavLink to="/water-testing" className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-3 rounded-full transition-colors">
+                                        Demander une analyse d'eau
+                                    </NavLink>
                                 </div>
                             </div>
                             {/* Right Side: Overlapping Images */}
@@ -465,10 +465,10 @@ const Filtration = () => {
                                     }
                                 ].map((item, idx) => (
                                     <AccordionItem key={idx} value={`item-${idx}`} className="border-b-slate-100 px-4">
-                                        <AccordionTrigger className="text-left font-bold text-xl hover:no-underline py-8 text-slate-800">
+                                        <AccordionTrigger className="text-left text-base font-medium leading-6 hover:no-underline py-8 text-slate-800" style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}>
                                             {item.q}
                                         </AccordionTrigger>
-                                        <AccordionContent className="text-lg font-light leading-relaxed text-slate-500 pb-8 text-justify">
+                                        <AccordionContent className="text-base font-light leading-6 text-slate-500 pb-8 text-justify" style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}>
                                             {item.a}
                                         </AccordionContent>
                                     </AccordionItem>

@@ -577,10 +577,10 @@ const EauDePuits = () => {
                     value={`item-${idx}`}
                     className="border-b-gray-200"
                   >
-                    <AccordionTrigger className="text-left font-bold text-lg hover:no-underline py-6">
+                    <AccordionTrigger className="text-left text-base font-medium leading-6 hover:no-underline py-6" style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}>
                       {item.q}
                     </AccordionTrigger>
-                    <AccordionContent className="text-slate-200 text-lg font-light leading-relaxed pb-8 text-justify">
+                    <AccordionContent className="text-base font-light leading-6 text-slate-200 pb-8 text-justify" style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}>
                       {item.a}
                     </AccordionContent>
                   </AccordionItem>

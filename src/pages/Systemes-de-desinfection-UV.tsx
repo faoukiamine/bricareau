@@ -109,7 +109,7 @@ const DesinfectionUV = () => {
                                 <span className="font-light block">Pourquoi choisir la</span>
                                 <span className="font-normal block">désinfection UV ?</span>
                             </h2>
-                            <p className="text-lg font-medium leading-relaxed text-blue-100 max-w-2xl mx-auto text-justify">
+                            <p className="text-lg font-light leading-relaxed text-blue-100 max-w-2xl mx-auto text-justify">
                                 Profitez d'une tranquillité d'esprit totale avec une technologie qui élimine 99,99% des pathogènes sans ajout de produits chimiques.
                             </p>
                         </div>
@@ -129,7 +129,7 @@ const DesinfectionUV = () => {
                                         <benefit.icon className="h-10 w-10 text-blue-600 group-hover:text-white" />
                                     </div>
                                     <h3 className="text-2xl font-bold mb-4 tracking-tight">{benefit.title}</h3>
-                                    <p className="text-lg font-medium leading-relaxed text-blue-100 text-justify">{benefit.desc}</p>
+                                    <p className="text-lg font-light leading-relaxed text-blue-100 text-justify">{benefit.desc}</p>
                                 </div>
                             ))}
                         </div>
@@ -160,7 +160,7 @@ const DesinfectionUV = () => {
                                         <img src={prod.img} alt={prod.name} className="w-full h-full object-contain mix-blend-multiply transition-transform duration-500 group-hover:scale-110" />
                                     </div>
                                     <h3 className="text-xl font-bold mb-2 group-hover:text-blue-600 transition-colors uppercase tracking-tight">{prod.name}</h3>
-                                    <p className="text-lg font-medium leading-relaxed text-slate-500 mb-6 flex-grow text-justify">{prod.desc}</p>
+                                    <p className="text-lg font-light leading-relaxed text-slate-500 mb-6 flex-grow text-justify">{prod.desc}</p>
                                     <NavLink to="#" className="text-blue-600 font-bold flex items-center gap-2 text-sm tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-all">
                                         EN SAVOIR PLUS <ChevronRight className="h-4 w-4" />
                                     </NavLink>
@@ -187,7 +187,7 @@ const DesinfectionUV = () => {
                             <table className="w-full min-w-[800px] border-collapse bg-white rounded-2xl overflow-hidden shadow-sm">
                                 <thead>
                                     <tr className="bg-gray-100">
-                                        <th className="p-8 text-left text-gray-400 font-medium uppercase tracking-wider">Fonctionnalités</th>
+                                        <th className="p-8 text-left text-gray-400 font-light uppercase tracking-wider">Fonctionnalités</th>
                                         <th className="p-8 text-center text-blue-600 font-bold">VH200-F10</th>
                                         <th className="p-8 text-center text-blue-600 font-bold bg-blue-50/50">VH410-F20</th>
                                         <th className="p-8 text-center text-blue-600 font-bold bg-blue-50/50">Arros 15-IHS10</th>
@@ -196,7 +196,7 @@ const DesinfectionUV = () => {
                                 <tbody className="divide-y divide-gray-100">
                                     {comparisonData.map((row, i) => (
                                         <tr key={i} className="hover:bg-gray-50 transition-colors">
-                                            <td className="p-8 font-medium text-gray-700">{row.feature}</td>
+                                            <td className="p-8 font-light text-gray-700">{row.feature}</td>
                                             <td className="p-8 text-center">
                                                 {typeof row.VH200F10 === 'string' ? <span className="text-blue-600 font-bold">{row.VH200F10}</span> : (row.VH200F10 ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : <X className="h-6 w-6 text-gray-300 mx-auto" />)}
                                             </td>
@@ -233,7 +233,7 @@ const DesinfectionUV = () => {
                                     <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block text-white">Votre eau est-elle</span>
                                     <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block text-white">vraiment sécuritaire ?</span>
                                 </h2>
-                                <p className="text-lg font-medium leading-relaxed text-white/90 mb-12 text-justify">
+                                <p className="text-lg font-light leading-relaxed text-white/90 mb-12 text-justify">
                                     Ne devinez pas la qualité de votre eau. Nos analyses approfondies identifient les bactéries, les minéraux et les contaminants chimiques pour vous offrir une tranquillité d'esprit totale.
                                 </p>
                                 <Button className="bg-white text-blue-600 hover:bg-blue-50 rounded-full px-12 h-16 text-xl font-bold shadow-xl" asChild>
@@ -324,10 +324,10 @@ const DesinfectionUV = () => {
                                     }
                                 ].map((item, idx) => (
                                     <AccordionItem key={idx} value={`item-${idx}`} className="border-b-slate-100 px-4">
-                                        <AccordionTrigger className="text-left font-bold text-xl hover:no-underline py-8 text-slate-800">
+                                        <AccordionTrigger className="text-left text-base font-medium leading-6 hover:no-underline py-8 text-slate-800" style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}>
                                             {item.q}
                                         </AccordionTrigger>
-                                        <AccordionContent className="text-lg font-medium leading-relaxed text-slate-500 pb-8 text-justify">
+                                        <AccordionContent className="text-base font-light leading-6 text-slate-500 pb-8 text-justify" style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}>
                                             {item.a}
                                         </AccordionContent>
                                     </AccordionItem>

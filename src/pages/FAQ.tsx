@@ -155,9 +155,9 @@ const SpecializedFiltration = () => {
                                 Découvrez notre gamme complète de systèmes de traitement d'eau conçus pour répondre à tous vos besoins, de la maison au commerce.
                             </p>
                             <div className="flex flex-wrap gap-4">
-                                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 font-bold h-14" asChild>
-                                    <a href="/contact">Démarrer une analyse gratuite</a>
-                                </Button>
+                                <NavLink to="/contact" className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-3 rounded-full transition-colors">
+                                    Démarrer une analyse gratuite
+                                </NavLink>
                             </div>
                         </div>
                     </div>

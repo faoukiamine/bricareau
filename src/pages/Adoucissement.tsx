@@ -4,9 +4,9 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import { Button } from "@/components/ui/button";
 import heroBath from "@/assets/young-nude-woman-taking-relaxing-foamy-bath.jpg";
 import kitchenImg from "@/assets/18036672_SIE_2720_1530_21_04_30_SIE_CRM_Dishwasher_Hand_Taking_Out_Wine_Glass_Basket_Motiv_11_0017.webp";
-import untitledImg from "@/assets/Untitled23.png";
+import untitledImg from "@/assets/avantages conditionneurs sans sel.jpg";
 import mceclip0Img from "@/assets/mceclip0.png";
-import bathroomImg from "@/assets/contemporary-bathroom-elements.jpg";
+import bathroomImg from "@/assets/2705.jpg";
 import {
     ArrowRight,
     Droplets,
@@ -99,7 +99,7 @@ const Adoucissement = () => {
                                     <div className="w-20 h-20 rounded-2xl bg-white flex items-center justify-center mb-8 transition-all group-hover:scale-110 group-hover:bg-white/10">
                                         <item.icon className="h-10 w-10 text-blue-600 group-hover:text-white" />
                                     </div>
-                                    <h4 className="text-2xl font-bold mb-4 tracking-tight">{item.title}</h4>
+                                    <h4 className="text-2xl font-medium mb-4 tracking-tight">{item.title}</h4>
                                     <p className="text-lg font-light leading-relaxed text-blue-100 text-justify">{item.desc}</p>
                                 </div>
                             ))}
@@ -114,7 +114,7 @@ const Adoucissement = () => {
                                 <img
                                     src={kitchenImg}
                                     alt="Cuisine moderne avec eau adoucie"
-                                    className="rounded-2xl shadow-xl w-full"
+                                    className="rounded-2xl shadow-xl w-full h-[400px] object-cover"
                                 />
                             </div>
                             <div className="lg:w-1/2">
@@ -155,7 +155,7 @@ const Adoucissement = () => {
                                 <img
                                     src={mceclip0Img}
                                     alt="Cuisine moderne avec eau adoucie"
-                                    className="rounded-2xl shadow-xl w-full"
+                                    className="rounded-2xl shadow-xl w-full h-[400px] object-cover"
                                 />
                             </div>
                             <div className="lg:w-1/2">
@@ -196,7 +196,7 @@ const Adoucissement = () => {
                                 <img
                                     src={untitledImg}
                                     alt="Femme se lavant les mains"
-                                    className="rounded-2xl shadow-xl w-full"
+                                    className="rounded-2xl shadow-xl w-full h-[400px] object-cover"
                                 />
                             </div>
                             <div className="lg:w-1/2 text-left">
@@ -206,9 +206,9 @@ const Adoucissement = () => {
                                 <p className="text-lg font-light leading-relaxed text-gray-600 mb-8 text-justify">
                                     Le secret d'un linge éclatant et d'une vaisselle sans traces. Sans l'ajout de sel, votre eau devient votre meilleure alliée beauté et ménage.
                                 </p>
-                                <Button className="bg-blue-600 text-white rounded-full px-12 h-14 text-lg font-bold" asChild>
-                                    <NavLink to="/conditionneurs-sans-sel">Découvrir nos conditionneurs d'eau sans sel</NavLink>
-                                </Button>
+                                <NavLink to="/conditionneurs-sans-sel" className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-3 rounded-full transition-colors">
+                                    Découvrir nos conditionneurs d'eau sans sel
+                                </NavLink>
                             </div>
                         </div>
 
@@ -239,7 +239,7 @@ const Adoucissement = () => {
                             <div className="lg:w-1/2 relative min-h-[400px] overflow-hidden">
                                 <img
                                     src={bathroomImg}
-                                    alt="Éléments de salle de bain contemporaine"
+                                    alt="Analyse de la qualité de l'eau"
                                     className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                                 />
                                 <div className="absolute inset-0 bg-blue-900/10 pointer-events-none" />
@@ -293,10 +293,10 @@ const Adoucissement = () => {
                                     { q: "Quelle est la garantie offerte par Bricareau ?", a: "Bricareau offre l'une des garanties les plus solides du marché, couvrant la bouteille de résine, la tête de contrôle et les composants internes pour votre tranquillité d'esprit totale." }
                                 ].map((item, idx) => (
                                     <AccordionItem key={idx} value={`item-${idx}`} className="border-b-gray-200">
-                                        <AccordionTrigger className="text-left font-bold text-lg hover:no-underline py-6">
+                                        <AccordionTrigger className="text-left text-base font-medium leading-6 hover:no-underline py-6" style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}>
                                             {item.q}
                                         </AccordionTrigger>
-                                        <AccordionContent className="text-lg font-light leading-relaxed text-gray-600 pb-6 text-justify">
+                                        <AccordionContent className="text-base font-light leading-6 text-gray-600 pb-6 text-justify" style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}>
                                             {item.a}
                                         </AccordionContent>
                                     </AccordionItem>

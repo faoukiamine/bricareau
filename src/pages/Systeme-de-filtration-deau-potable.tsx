@@ -72,7 +72,7 @@ const OsmoseFiltration = () => {
               >
                 La différence que vous pouvez voir <br /> <span className="font-normal">sentir et goûter</span>
               </h1>
-              <p className="text-lg font-medium leading-relaxed text-white/95 mb-8 max-w-xl text-justify">
+              <p className="text-lg font-light leading-relaxed text-white/95 mb-8 max-w-xl text-justify">
                 Profitez d'une eau pure et délicieuse directement de votre robinet.
                 Nos purificateurs d'eau d'osmose inverse éliminent 99% des contaminants pour une tranquillité d'esprit totale.
               </p>
@@ -111,7 +111,7 @@ const OsmoseFiltration = () => {
               <h2 className="text-[32px] md:text-[48px] font-normal text-white mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-center">
                 Pourquoi choisir nos systèmes <br />d'osmose inverse ?
               </h2>
-              <p className="text-lg font-medium leading-relaxed text-blue-100 max-w-2xl mx-auto text-justify">
+              <p className="text-lg font-light leading-relaxed text-blue-100 max-w-2xl mx-auto text-justify">
                 Une technologie de pointe pour une eau d'une pureté exceptionnelle tout en offrant une protection permanente pour votre foyer.
               </p>
             </div>
@@ -130,7 +130,7 @@ const OsmoseFiltration = () => {
                     <item.icon className="h-10 w-10 text-blue-600 group-hover:text-white" />
                   </div>
                   <h3 className="text-2xl font-bold mb-4 tracking-tight">{item.title}</h3>
-                  <p className="text-lg font-medium leading-relaxed text-blue-100 text-justify">{item.desc}</p>
+                  <p className="text-lg font-light leading-relaxed text-blue-100 text-justify">{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -170,7 +170,7 @@ const OsmoseFiltration = () => {
                   </div>
                   <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
                     <h3 className="text-xl font-bold mb-4 group-hover:text-blue-600 transition-colors uppercase tracking-tight">{product.name}</h3>
-                    <p className="text-lg font-medium leading-relaxed text-slate-500 text-sm mb-6 flex-grow text-justify">{product.desc}</p>
+                    <p className="text-lg font-light leading-relaxed text-slate-500 text-sm mb-6 flex-grow text-justify">{product.desc}</p>
                     <div className="mt-auto">
                       <NavLink
                         to={product.path || "/contact"}
@@ -194,7 +194,7 @@ const OsmoseFiltration = () => {
                 <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal text-slate-900 mb-8 leading-[1.1] tracking-tighter text-left">
                   Une eau de qualité <br /> restaurant à la maison.
                 </h2>
-                <p className="text-lg font-medium leading-relaxed text-slate-500 mb-10 text-justify">
+                <p className="text-lg font-light leading-relaxed text-slate-500 mb-10 text-justify">
                   Saviez-vous que la plupart des grands restaurants et cafés utilisent l'osmose inverse pour servir leur eau et préparer leur café ? Bricareau apporte cette même technologie professionnelle directement sous votre évier.
                 </p>
                 <div className="grid grid-cols-2 gap-8 mb-10">
@@ -236,7 +236,7 @@ const OsmoseFiltration = () => {
                 <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal text-white mb-8 leading-[1.1] tracking-tighter text-left">
                   Ne devinez pas, <br /> testez votre eau.
                 </h2>
-                <p className="text-lg font-medium leading-relaxed text-white/90 mb-12 text-justify">
+                <p className="text-lg font-light leading-relaxed text-white/90 mb-12 text-justify">
                   Ne devinez pas la qualité de votre eau. Nos analyses approfondies identifient les bactéries, les minéraux et les contaminants chimiques pour vous offrir une tranquillité d'esprit totale.
                 </p>
                 <Button className="bg-white text-blue-600 hover:bg-blue-50 rounded-full px-12 h-16 text-xl font-bold shadow-xl" asChild>
@@ -261,7 +261,7 @@ const OsmoseFiltration = () => {
               <table className="w-full min-w-[1000px] border-collapse bg-white rounded-2xl overflow-hidden shadow-sm">
                 <thead>
                   <tr className="bg-gray-100">
-                    <th className="p-8 text-left text-gray-400 font-medium uppercase tracking-wider">Solutions</th>
+                    <th className="p-8 text-left text-gray-400 font-light uppercase tracking-wider">Solutions</th>
                     {[
                       { name: "Elite RO", img: drinkingWaterImg },
                       { name: "Plus RO", img: drinkingWaterImg },
@@ -283,7 +283,7 @@ const OsmoseFiltration = () => {
                 <tbody className="divide-y divide-gray-100">
                   {comparisonData.map((row, i) => (
                     <tr key={i} className="hover:bg-gray-50 transition-colors">
-                      <td className="p-8 font-medium text-gray-700">{row.feature}</td>
+                      <td className="p-8 font-light text-gray-700">{row.feature}</td>
                       <td className="p-8 text-center">
                         {typeof row.elite === 'string' ? <span className="text-blue-600 font-bold bg-blue-50 px-3 py-1 rounded-full text-[10px]">{row.elite}</span> : (row.elite ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : <X className="h-6 w-6 text-gray-300 mx-auto" />)}
                       </td>
@@ -379,10 +379,10 @@ const OsmoseFiltration = () => {
                 },
               ].map((item, idx) => (
                 <AccordionItem key={idx} value={`item-${idx}`} className="border-b-slate-100 px-4">
-                  <AccordionTrigger className="text-left font-bold text-xl hover:no-underline py-8 text-slate-800">
+                  <AccordionTrigger className="text-left text-base font-medium leading-6 hover:no-underline py-8 text-slate-800" style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}>
                     {item.q}
                   </AccordionTrigger>
-                  <AccordionContent className="text-lg font-medium leading-relaxed text-slate-500 pb-8 text-justify">
+                  <AccordionContent className="text-base font-light leading-6 text-slate-500 pb-8 text-justify" style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}>
                     {item.a}
                   </AccordionContent>
                 </AccordionItem>

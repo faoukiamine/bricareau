@@ -100,7 +100,7 @@ const AdoucisseurEauResidentiel = () => {
                     <div className="absolute inset-0 z-0">
                         <img
                             src={heroBath}
-                            alt="Homme prenant un bain d'eau douce"
+                            alt="femme prenant un bain d'eau douce"
                             className="w-full h-full object-cover"
                         />
                         <div className="absolute inset-0 bg-black/30 lg:bg-gradient-to-r lg:from-black/50 lg:to-transparent" />
@@ -330,10 +330,10 @@ const AdoucisseurEauResidentiel = () => {
                             <Accordion type="single" collapsible className="w-full">
                                 {faqItems.map((item, idx) => (
                                     <AccordionItem key={idx} value={`item-${idx}`} className="border-b-gray-200">
-                                        <AccordionTrigger className="text-left font-bold text-lg hover:no-underline py-6">
+                                        <AccordionTrigger className="text-left text-base font-medium leading-6 hover:no-underline py-6" style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}>
                                             {item.q}
                                         </AccordionTrigger>
-                                        <AccordionContent className="text-lg font-light leading-relaxed text-gray-600 pb-6 text-justify">
+                                        <AccordionContent className="text-base font-light leading-6 text-gray-600 pb-6 text-justify" style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}>
                                             {item.a}
                                         </AccordionContent>
                                     </AccordionItem>

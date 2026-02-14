@@ -16,7 +16,7 @@ const DiscoverExpert = () => {
                             <span className="text-[32px] md:text-[60px] font-light leading-[1.2] md:leading-[60px] block">Découvrez les options</span>
                             <span className="text-[32px] md:text-[60px] font-normal leading-[1.2] md:leading-[60px] block">de traitement de nos spécialistes</span>
                         </h2>
-                        <p className="text-lg font-medium leading-relaxed text-muted-foreground text-justify">
+                        <p className="text-lg font-light leading-relaxed text-muted-foreground text-justify">
                             Nos spécialistes de l'eau vous guident vers la solution parfaite pour votre maison.
                             Profitez d'une eau plus pure, plus douce et meilleure pour votre santé.
                         </p>
