@@ -15,6 +15,7 @@ import {
     Phone
 } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
+import { useNavigate } from "react-router-dom";
 import waterTestBg from "@/assets/Enercare_JP_Day_2_Kitchen_Faucet_498-2048x1365.jpg";
 import bathroomImg from "@/assets/contemporary-bathroom-elements.jpg";
 import specializedFiltersImg from "@/assets/Filtres d'eau spécialisés.webp";
@@ -111,7 +112,8 @@ const comparisonData = [
     { feature: "Diagnostic à distance", high: true, selectPlus: false, connect: true, select: false, medallist: false },
 ];
 
-const FiltresDeau = () => {
+const FiltresTouteMaison = () => {
+    const navigate = useNavigate();
     return (
         <div className="min-h-screen bg-white text-slate-900 font-sans">
             <Header />
@@ -214,7 +216,7 @@ const FiltresDeau = () => {
                                 <div
                                     key={i}
                                     className="group bg-white rounded-3xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full cursor-pointer"
-                                    onClick={() => window.location.href = "/contact"}
+                                    onClick={() => navigate("/contact")}
                                 >
                                     <div className="bg-slate-50 aspect-square overflow-hidden flex items-center justify-center p-12">
                                         <img
@@ -421,7 +423,7 @@ const FiltresDeau = () => {
                                 <div
                                     key={i}
                                     className="group bg-white rounded-3xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full cursor-pointer"
-                                    onClick={() => window.location.href = "#"}
+                                    onClick={() => navigate("#")}
                                 >
                                     <div className="h-56 overflow-hidden">
                                         <img
@@ -538,4 +540,4 @@ const FiltresDeau = () => {
     );
 };
 
-export default FiltresDeau;
+export default FiltresTouteMaison;

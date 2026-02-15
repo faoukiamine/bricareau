@@ -360,7 +360,11 @@ const Header = () => {
     "/systemes-de-desinfection-uv",
     "/water-testing",
     "/filtres-deau",
-    "/adoucisseurs-eau-de-puits"
+    "/adoucisseurs-eau-de-puits",
+    "/systeme-de-filtration-deau-potable",
+    "/filtres-deau-pour-toute-la-maison",
+    "/filtre-eau-haute-efficacite",
+    "/ro-6"
   ];
   const isTransparentPage = transparentPaths.includes(location.pathname.toLowerCase());
   const isHeaderTransparent = isTransparentPage && !isScrolled && !isMenuOpen;

@@ -17,6 +17,7 @@ import {
     Zap
 } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
+import { useNavigate } from "react-router-dom";
 
 import {
     Accordion,
@@ -35,6 +36,7 @@ import sereneLiteImg from "@/assets/Système+de+filtration+Serene+Lite.webp";
 import waterTestingImg from "@/assets/2147800429.jpg";
 
 const FiltrationSousEvier = () => {
+    const navigate = useNavigate();
     const comparisonData = [
         { feature: "Filtration en 5 étapes", elite: true, plus: true, essential: true },
         { feature: "Élimination des métaux lourds", elite: true, plus: true, essential: true },
@@ -159,7 +161,7 @@ const FiltrationSousEvier = () => {
                                 <div
                                     key={i}
                                     className="group bg-white rounded-3xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full cursor-pointer"
-                                    onClick={() => window.location.href = product.path || "/contact"}
+                                    onClick={() => navigate(product.path || "/contact")}
                                 >
                                     <div className="bg-slate-50 aspect-square overflow-hidden flex items-center justify-center p-12">
                                         <img
@@ -393,7 +395,7 @@ const FiltrationSousEvier = () => {
                                 <div
                                     key={i}
                                     className="group bg-white rounded-3xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full cursor-pointer"
-                                    onClick={() => window.location.href = "#"}
+                                    onClick={() => navigate("#")}
                                 >
                                     <div className="h-56 overflow-hidden">
                                         <img

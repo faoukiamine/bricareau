@@ -15,6 +15,7 @@ import {
     Phone
 } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
+import { useNavigate } from "react-router-dom";
 import waterTestBg from "@/assets/Enercare_JP_Day_2_Kitchen_Faucet_498-2048x1365.jpg";
 import bathroomImg from "@/assets/contemporary-bathroom-elements.jpg";
 import specializedFiltersImg from "@/assets/Filtres d'eau spécialisés.webp";
@@ -118,7 +119,8 @@ const comparisonData = [
     { feature: "Diagnostic à distance", high: true, selectPlus: false, connect: true, select: false, medallist: false },
 ];
 
-const FiltresDeau = () => {
+const FiltresPuits = () => {
+    const navigate = useNavigate();
     return (
         <div className="min-h-screen bg-background text-slate-900 font-sans">
             <Header />
@@ -222,7 +224,7 @@ const FiltresDeau = () => {
                                 <div
                                     key={i}
                                     className="group bg-white rounded-3xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full cursor-pointer"
-                                    onClick={() => window.location.href = "/contact"}
+                                    onClick={() => navigate("/contact")}
                                 >
                                     <div className="bg-slate-50 aspect-square overflow-hidden flex items-center justify-center p-12">
                                         <img
@@ -243,52 +245,9 @@ const FiltresDeau = () => {
                                 </div>
                             ))}
                         </div>
-                        <div className="mt-16 text-center">
-                            <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-                                Vous ne savez pas quel système choisir ? Nos experts peuvent vous aider à trouver la solution
-                                parfaite pour votre foyer.
-                            </p>
-                            <Button
-                                className="bg-blue-600 text-white rounded-full px-12 h-14"
-                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
-                            >
-                                Parlez avec un expert
-                            </Button>
-                        </div>
                     </div>
                 </section>
 
-                {/* Testimonials Grid Section */}
-                <TestimonialsSection />
-                {/* 7. Water Test Section */}
-                <section className="py-20 bg-white">
-                    <div className="container mx-auto px-4">
-                        <div className="flex flex-col lg:flex-row items-stretch gap-0 rounded-[3rem] overflow-hidden shadow-2xl">
-                            <div className="lg:w-1/2 relative min-h-[400px] overflow-hidden">
-                                <img
-                                    src={bathroomImg}
-                                    alt="Éléments de salle de bain contemporaine"
-                                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-105"
-                                />
-                                <div className="absolute inset-0 bg-blue-900/10 pointer-events-none" />
-                            </div>
-                            <div className="lg:w-1/2 bg-blue-600 text-white p-12 lg:p-20 flex flex-col justify-center items-start text-left">
-                                <span className="text-white/80 text-xs font-black uppercase tracking-[0.3em] mb-8 block">
-                                    Qualité de l'eau
-                                </span>
-                                <h2 className="text-[32px] md:text-[48px] font-normal text-white mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
-                                    L'excellence commence par une eau parfaite.
-                                </h2>
-                                <p className="font-light text-[20px] leading-[28px] text-white/90 mb-12">
-                                    Le luxe, c'est de ne pas avoir à se soucier de la qualité de ce que l'on consomme. Offrez-vous la sérénité d'une eau analysée par des experts, pour une maison où tout brille, sans effort et sans compromis.
-                                </p>
-                                <Button className="bg-white text-blue-600 hover:bg-blue-50 rounded-full px-12 h-16 text-xl font-bold shadow-xl transition-all hover:scale-105" asChild>
-                                    <NavLink to="/water-testing">Demandez une analyse d'eau</NavLink>
-                                </Button>
-                            </div>
-                        </div>
-                    </div>
-                </section>
                 {/* Comparison Table Section */}
                 <section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-4">
@@ -338,27 +297,61 @@ const FiltresDeau = () => {
                         </div>
                     </div>
                 </section>
+
+                {/* 7. Water Test Section */}
+                <section className="py-20 bg-white">
+                    <div className="container mx-auto px-4">
+                        <div className="flex flex-col lg:flex-row items-stretch gap-0 rounded-[3rem] overflow-hidden shadow-2xl">
+                            <div className="lg:w-1/2 relative min-h-[400px] overflow-hidden">
+                                <img
+                                    src={bathroomImg}
+                                    alt="Éléments de salle de bain contemporaine"
+                                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                                />
+                                <div className="absolute inset-0 bg-blue-900/10 pointer-events-none" />
+                            </div>
+                            <div className="lg:w-1/2 bg-blue-600 text-white p-12 lg:p-20 flex flex-col justify-center items-start text-left">
+                                <span className="text-white/80 text-xs font-black uppercase tracking-[0.3em] mb-8 block">
+                                    Qualité de l'eau
+                                </span>
+                                <h2 className="text-[32px] md:text-[48px] font-normal text-white mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
+                                    L'excellence commence par une eau parfaite.
+                                </h2>
+                                <p className="font-light text-[20px] leading-[28px] text-white/90 mb-12">
+                                    Le luxe, c'est de ne pas avoir à se soucier de la qualité de ce que l'on consomme. Offrez-vous la sérénité d'une eau analysée par des experts, pour une maison où tout brille, sans effort et sans compromis.
+                                </p>
+                                <Button className="bg-white text-blue-600 hover:bg-blue-50 rounded-full px-12 h-16 text-xl font-bold shadow-xl transition-all hover:scale-105" asChild>
+                                    <NavLink to="/water-testing">Demandez une analyse d'eau</NavLink>
+                                </Button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Testimonials Grid Section */}
+                <TestimonialsSection />
+
                 {/* 5. CTA Section */}
-        <section className="bg-primary py-16 md:py-20">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-2xl md:text-3xl font-bold text-primary-foreground mb-4">
-              Besoin d'aide avec votre eau ?
-            </h2>
-            <p className="text-primary-foreground/80 text-lg mb-8 max-w-2xl mx-auto">
-              Discutez avec un expert en un clic. Disponible par téléphone ou à domicile selon vos préférences.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                size="lg"
-                variant="outline"
-                className="rounded-full px-8 border-white text-white bg-transparent hover:bg-white/10"
-                asChild
-              >
-                <a href="tel:18552649328">Appelez le 1-855-264-9328</a>
-              </Button>
-            </div>
-          </div>
-        </section>
+                <section className="bg-primary py-16 md:py-20">
+                    <div className="container mx-auto px-4 text-center">
+                        <h2 className="text-2xl md:text-3xl font-bold text-primary-foreground mb-4">
+                            Besoin d'aide avec votre eau ?
+                        </h2>
+                        <p className="text-primary-foreground/80 text-lg mb-8 max-w-2xl mx-auto">
+                            Discutez avec un expert en un clic. Disponible par téléphone ou à domicile selon vos préférences.
+                        </p>
+                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                            <Button
+                                size="lg"
+                                variant="outline"
+                                className="rounded-full px-8 border-white text-white bg-transparent hover:bg-white/10"
+                                asChild
+                            >
+                                <a href="tel:18552649328">Appelez le 1-855-264-9328</a>
+                            </Button>
+                        </div>
+                    </div>
+                </section>
                 {/* Video / Video Section Thumbnail */}
                 <section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-4 text-center">
@@ -400,7 +393,7 @@ const FiltresDeau = () => {
                             <Accordion type="single" collapsible className="w-full">
                                 {faqItems.map((item, idx) => (
                                     <AccordionItem key={idx} value={`item-${idx}`} className="border-b-gray-200">
-                                        <AccordionTrigger className="text-left font-bold text-lg hover:no-underline py-6">
+                                        <AccordionTrigger className="text-left font-medium text-lg hover:no-underline py-6">
                                             {item.q}
                                         </AccordionTrigger>
                                         <AccordionContent className="text-gray-600 text-lg leading-relaxed pb-6 text-left">
@@ -433,7 +426,7 @@ const FiltresDeau = () => {
                                 <div
                                     key={i}
                                     className="group bg-white rounded-3xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full cursor-pointer"
-                                    onClick={() => window.location.href = "#"}
+                                    onClick={() => navigate("#")}
                                 >
                                     <div className="h-56 overflow-hidden">
                                         <img
@@ -550,4 +543,4 @@ const FiltresDeau = () => {
     );
 };
 
-export default FiltresDeau;
+export default FiltresPuits;
