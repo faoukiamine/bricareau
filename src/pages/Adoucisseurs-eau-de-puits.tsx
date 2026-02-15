@@ -341,7 +341,7 @@ const AdoucisseursEauDePuits = () => {
                                     Ne devinez pas la qualité de votre eau. Nos analyses approfondies identifient les bactéries, les minéraux et les contaminants chimiques pour vous offrir une tranquillité d'esprit totale.
                                 </p>
                                 <Button className="bg-white text-blue-600 hover:bg-blue-50 rounded-full px-12 h-16 text-xl font-bold shadow-xl" asChild>
-                                    <NavLink to="/water-testing">En savoir plus</NavLink>
+                                    <NavLink to="/tests-eau">En savoir plus</NavLink>
                                 </Button>
                             </div>
                         </div>

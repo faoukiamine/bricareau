@@ -380,7 +380,7 @@ const EauDePuits = () => {
                     style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                     asChild
                   >
-                    <a href="/water-testing">En savoir plus</a>
+                    <a href="/tests-eau">En savoir plus</a>
                   </Button>
                 </div>
               </div>

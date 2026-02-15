@@ -321,7 +321,7 @@ const FiltresPuits = () => {
                                     Le luxe, c'est de ne pas avoir à se soucier de la qualité de ce que l'on consomme. Offrez-vous la sérénité d'une eau analysée par des experts, pour une maison où tout brille, sans effort et sans compromis.
                                 </p>
                                 <Button className="bg-white text-blue-600 hover:bg-blue-50 rounded-full px-12 h-16 text-xl font-bold shadow-xl transition-all hover:scale-105" asChild>
-                                    <NavLink to="/water-testing">Demandez une analyse d'eau</NavLink>
+                                    <NavLink to="/tests-eau">Demandez une analyse d'eau</NavLink>
                                 </Button>
                             </div>
                         </div>

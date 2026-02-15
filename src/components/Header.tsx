@@ -207,7 +207,7 @@ const Header = () => {
           icon: Droplets,
           title: "Analyses & Tests d'eau",
           description: "Tests complets pour identifier les contaminants et problèmes de qualité de votre eau de puits.",
-          href: "/water-testing"
+          href: "/tests-eau"
         },
         {
           icon: Filter,
@@ -358,7 +358,7 @@ const Header = () => {
     "/fontaines",
     "/systemes-de-filtration-deau-sous-evier",
     "/systemes-de-desinfection-uv",
-    "/water-testing",
+    "/tests-eau",
     "/filtres-deau",
     "/adoucisseurs-eau-de-puits",
     "/systeme-de-filtration-deau-potable",

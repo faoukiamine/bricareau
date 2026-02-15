@@ -272,7 +272,7 @@ const Adoucissement = () => {
                                 <p className="text-lg font-light leading-relaxed text-white/90 mb-12 text-justify">
                                     Le luxe, c'est de ne pas avoir à se soucier de la qualité de ce que l'on consomme. Offrez-vous la sérénité d'une eau analysée par des experts, pour une maison où tout brille, sans effort et sans compromis.
                                 </p>
-                                <NavLink to="/water-testing" className="inline-block bg-white hover:bg-blue-50 text-blue-600 font-bold px-8 py-3 rounded-full transition-colors">
+                                <NavLink to="/tests-eau" className="inline-block bg-white hover:bg-blue-50 text-blue-600 font-bold px-8 py-3 rounded-full transition-colors">
                                     Demander une analyse d'eau
                                 </NavLink>
                             </div>

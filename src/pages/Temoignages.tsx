@@ -137,7 +137,7 @@ const Temoignages = () => {
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                 <a
-                                    href="/water-testing"
+                                    href="/tests-eau"
                                     className="inline-flex items-center justify-center px-6 py-3 bg-[#0052ff] text-white font-medium rounded-full hover:bg-[#0052ff]/90 transition-colors"
                                 >
                                     Analyse d'eau gratuite

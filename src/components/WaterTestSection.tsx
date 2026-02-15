@@ -37,7 +37,7 @@ const WaterTestSection = () => {
                         className="bg-[#009EE2] hover:bg-[#008CC9] text-white px-8 py-6 rounded-md font-semibold text-sm transition-all shadow-md hover:shadow-lg"
                         asChild
                     >
-                        <a href="/water-testing" className="flex items-center gap-2">
+                        <a href="/tests-eau" className="flex items-center gap-2">
                             Testez votre eau aujourd'hui !
                             <ArrowRight className="h-4 w-4" />
                         </a>

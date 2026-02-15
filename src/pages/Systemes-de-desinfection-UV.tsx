@@ -241,7 +241,7 @@ const DesinfectionUV = () => {
                                     Ne devinez pas la qualité de votre eau. Nos analyses approfondies identifient les bactéries, les minéraux et les contaminants chimiques pour vous offrir une tranquillité d'esprit totale.
                                 </p>
                                 <Button className="bg-white text-blue-600 hover:bg-blue-50 rounded-full px-12 h-16 text-xl font-bold shadow-xl" asChild>
-                                    <NavLink to="/water-testing">Tester mon eau</NavLink>
+                                    <NavLink to="/tests-eau">Tester mon eau</NavLink>
                                 </Button>
                             </div>
                         </div>

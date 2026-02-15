@@ -14,7 +14,7 @@ const categories = [
                 title: "Analyses & Tests d'eau",
                 desc: "Détection précise des contaminants pour une eau de puits sécuritaire.",
                 image: "https://images.unsplash.com/photo-1548839140-29a749e1cf4d?q=80&w=800&auto=format&fit=crop",
-                href: "/water-testing"
+                href: "/tests-eau"
             },
             {
                 title: "Filtration spécialisée",

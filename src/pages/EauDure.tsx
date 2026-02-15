@@ -128,7 +128,7 @@ const EauDure = () => {
                   style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                   asChild
                 >
-                  <NavLink to="/water-testing">
+                  <NavLink to="/tests-eau">
                     Tester la dureté de mon eau
                   </NavLink>
                 </Button>
@@ -311,7 +311,7 @@ const EauDure = () => {
                 className="rounded-full px-8 bg-white text-primary hover:bg-white/90"
                 asChild
               >
-                <NavLink to="/water-testing">
+                <NavLink to="/tests-eau">
                   Tester mon eau gratuitement
                 </NavLink>
               </Button>

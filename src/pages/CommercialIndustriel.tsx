@@ -245,7 +245,7 @@ const CommercialIndustriel = () => {
                 la composition de l'eau et recommander les processus de traitement les plus adaptés aux exigences spécifiques.
               </p>
               <a
-                href="/water-testing"
+                href="/tests-eau"
                 className="inline-flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground font-medium rounded-md hover:bg-primary/90 transition-colors"
               >
                 Testez votre eau aujourd'hui !

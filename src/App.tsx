@@ -10,7 +10,7 @@ import Services from "./pages/Adoucisseurs-portables";
 import ContactResidentiel from "./pages/ContactResidentiel";
 import ContactEntreprises from "./pages/ContactEntreprises";
 import Contact from "./pages/Contact";
-import WaterTestingPage from "./pages/Tests-deau.tsx";
+import TestsEau from "./pages/Tests-Eau.tsx";
 import FAQ from "./pages/FAQ";
 import Entreprises from "./pages/Entreprises";
 import CommercialIndustriel from "./pages/CommercialIndustriel";
@@ -83,7 +83,7 @@ const App = () => (
           <Route path="/garantie" element={<Garantie />} />
           <Route path="/pieces" element={<Pieces />} />
           <Route path="/manuels" element={<Manuels />} />
-          <Route path="/water-testing" element={<WaterTestingPage />} />
+          <Route path="/tests-eau" element={<TestsEau />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/entreprises" element={<Entreprises />} />
           <Route path="/commercial-industriel" element={<CommercialIndustriel />} />

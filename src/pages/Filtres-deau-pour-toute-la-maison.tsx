@@ -318,7 +318,7 @@ const FiltresTouteMaison = () => {
                                     style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                                     asChild
                                 >
-                                    <NavLink to="/water-testing">Demander une analyse d'eau</NavLink>
+                                    <NavLink to="/tests-eau">Demander une analyse d'eau</NavLink>
                                 </Button>
                             </div>
                         </div>

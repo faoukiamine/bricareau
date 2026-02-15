@@ -355,7 +355,7 @@ const Filtration = () => {
                                         style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                                         asChild
                                     >
-                                        <a href="/water-testing">Demander une analyse d'eau</a>
+                                        <a href="/tests-eau">Demander une analyse d'eau</a>
                                     </Button>
                                 </div>
                             </div>
