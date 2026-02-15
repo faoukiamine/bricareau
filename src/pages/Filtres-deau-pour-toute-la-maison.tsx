@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import { Button } from "@/components/ui/button";
-import heroFilter from "@/assets/person-is-holding-a-glass-of-water-from-a-faucet.jpeg";
+import heroFilter from "@/assets/12605.jpg";
 import {
     Droplets,
     ChevronRight,

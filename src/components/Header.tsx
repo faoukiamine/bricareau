@@ -377,18 +377,19 @@ const Header = () => {
       )} ref={headerRef}>
 
         {/* Top Information Bar */}
-        <a
+        {/* Top Information Bar (Hidden) */}
+        {/* <a
           href="/consultation"
           className={cn(
             "block w-full transition-colors text-center py-2",
-            isHeaderTransparent ? "bg-transparent border-b border-white/10" : "bg-[hsl(var(--top-banner))] hover:bg-[hsl(var(--top-banner))]/90"
+            isHeaderTransparent ? "bg-transparent border-b border-white/10" : "bg-blue-600 hover:bg-blue-700"
           )}
         >
-          <div className="container mx-auto px-4 md:px-6 flex items-center justify-center gap-2">
+          <div className="container mx-auto px-4 md:px-6 flex items-center justify-center gap-2 text-white">
             <span className="text-sm font-bold">Obtenez une consultation gratuite sur votre eau</span>
             <ArrowRight className="h-4 w-4" />
           </div>
-        </a>
+        </a> */}
 
         {/* Upper Navigation Bar - Primary Menu + Utilities */}
         <div className={cn(

@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import { Button } from "@/components/ui/button";
-import heroBath from "@/assets/woman-and-kid-drink-glass-water.jpg";
+import heroBath from "@/assets/sub-category-dryer.webp";
 import {
     ArrowRight,
     Droplets,

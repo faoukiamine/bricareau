@@ -28,7 +28,7 @@ import {
 import ConsultationFormSection from "@/components/ConsultationFormSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 
-import heroDrink from "@/assets/boire-eau-robinet.jpg";
+import heroDrink from "@/assets/hero-image.jpg";
 import eliteROImg from "@/assets/Triple Stage Filter.jpg";
 import plusROImg from "@/assets/Double Stage Filter.jpg";
 import essentialImg from "@/assets/Single Stage Filter.jpg";
