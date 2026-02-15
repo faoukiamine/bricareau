@@ -130,7 +130,7 @@ const FiltrationSousEvier = () => {
                                     <div className="w-20 h-20 rounded-2xl bg-white flex items-center justify-center mb-8 transition-all group-hover:scale-110 group-hover:bg-white/10">
                                         <item.icon className="h-10 w-10 text-blue-600 group-hover:text-white" />
                                     </div>
-                                    <h3 className="text-2xl font-bold mb-4 tracking-tight">{item.title}</h3>
+                                    <h3 className="text-2xl font-medium mb-4 tracking-tight">{item.title}</h3>
                                     <p className="text-lg font-light leading-relaxed text-blue-100 text-justify">{item.desc}</p>
                                 </div>
                             ))}

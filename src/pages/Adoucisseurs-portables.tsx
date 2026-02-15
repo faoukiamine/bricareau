@@ -58,11 +58,18 @@ const AdoucisseursPortables = () => {
                             où que vous alliez !
                         </h1>
                         <p className="text-lg font-light leading-relaxed text-gray-200 mb-12 max-w-2xl text-justify drop-shadow-lg animate-in fade-in slide-in-from-bottom duration-700 delay-100">
-                            La solution flexible pour une eau douce sans installation permanente. Qualité professionnelle livrée chez vous, sans tracas.
+                            La solution flexible pour une eau douce sans installation <br />permanente. Qualité professionnelle livrée chez vous, sans tracas.
                         </p>
-                        <div className="animate-in fade-in slide-in-from-bottom duration-700 delay-200">
-                            <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white h-14 px-16 rounded-full text-xl font-bold transition-all shadow-xl" asChild>
-                                <NavLink to="/water-testing">En savoir plus</NavLink>
+                        <div className="flex flex-col sm:flex-row gap-4">
+                            <Button
+                                size="lg"
+                                className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14"
+                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                asChild
+                            >
+                                <a href="#consultation">
+                                    Planifier une consultation gratuite
+                                </a>
                             </Button>
                         </div>
                     </div>

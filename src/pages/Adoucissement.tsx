@@ -7,6 +7,7 @@ import kitchenImg from "@/assets/18036672_SIE_2720_1530_21_04_30_SIE_CRM_Dishwas
 import untitledImg from "@/assets/avantages conditionneurs sans sel.jpg";
 import mceclip0Img from "@/assets/mceclip0.png";
 import bathroomImg from "@/assets/2705.jpg";
+import waterTestGemini from "@/assets/Gemini_Generated_Image_rk3i02rk3i02rk3i.png";
 import {
     ArrowRight,
     Droplets,
@@ -25,7 +26,8 @@ import {
     Clock,
     Home,
     Award,
-    HandCoins
+    HandCoins,
+    Phone
 } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import {
@@ -67,14 +69,30 @@ const Adoucissement = () => {
                             <p className="text-lg font-light leading-relaxed text-white/95 mb-8 max-w-xl text-justify">
                                 Redécouvrez le confort d'une eau soyeuse protégeant votre peau et vos appareils. Alliez économies durables et bien-être absolu au quotidien.
                             </p>
-                            <Button
-                                size="lg"
-                                className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14"
-                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
-                                asChild
-                            >
-                                <a href="#consultation">Planifier une consultation gratuite</a>
-                            </Button>
+                            <div className="flex flex-col sm:flex-row gap-4">
+                                <Button
+                                    size="lg"
+                                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14"
+                                    style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                    asChild
+                                >
+                                    <a href="#consultation">
+                                        Planifier une consultation gratuite
+                                    </a>
+                                </Button>
+                                <Button
+                                    size="lg"
+                                    variant="outline"
+                                    className="bg-white/10 hover:bg-white/20 text-white border-white rounded-full px-8 h-14 backdrop-blur-sm shadow-lg"
+                                    style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                    asChild
+                                >
+                                    <a href="tel:18552649328" className="flex items-center gap-2">
+                                        <Phone className="h-5 w-5" />
+                                        1-855-264-9328
+                                    </a>
+                                </Button>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -238,7 +256,7 @@ const Adoucissement = () => {
                         <div className="flex flex-col lg:flex-row items-stretch gap-0 rounded-[3rem] overflow-hidden shadow-2xl">
                             <div className="lg:w-1/2 relative min-h-[400px] overflow-hidden">
                                 <img
-                                    src={bathroomImg}
+                                    src={waterTestGemini}
                                     alt="Analyse de la qualité de l'eau"
                                     className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                                 />

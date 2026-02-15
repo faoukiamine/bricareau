@@ -152,7 +152,7 @@ const Header = () => {
           icon: Waves,
           title: "Cartouches filtrantes de remplacement",
           description: "Maintenez la performance optimale de vos systèmes avec nos cartouches de qualité.",
-          href: "/pieces"
+          href: "/filtres-de-remplacement"
         },
       ],
       promo: {

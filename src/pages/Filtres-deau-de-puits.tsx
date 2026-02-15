@@ -406,7 +406,7 @@ const FiltresPuits = () => {
                     </div>
                 </section>
 
-                {/* Articles Section */}
+                {/* Resources Section */}
                 <section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">

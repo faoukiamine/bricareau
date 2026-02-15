@@ -43,21 +43,34 @@ const Fontaines = () => {
                                 FRAÎCHEUR ILLIMITÉE
                             </span>
                             <h1 className="text-[32px] md:text-[48px] font-normal mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-white drop-shadow-md">
-                                Fontaines à <br /> Glace et Eau
+                                Fontaines à eau <br /> & Machines à glace
                             </h1>
                             <p className="font-light text-[20px] leading-[28px] text-white/95 mb-8 max-w-xl drop-shadow-sm">
                                 Profitez d'une source inépuisable d'eau fraîche et de glace à portée de main,
                                 que ce soit pour votre domicile ou votre espace professionnel.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4">
-                                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-10 h-14 text-lg font-bold" asChild>
+                                <Button
+                                    size="lg"
+                                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14"
+                                    style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                    asChild
+                                >
+                                    <a href="#consultation">
+                                        Planifier une consultation gratuite
+                                    </a>
+                                </Button>
+                                <Button
+                                    size="lg"
+                                    variant="outline"
+                                    className="bg-white/10 hover:bg-white/20 text-white border-white rounded-full px-8 h-14 backdrop-blur-sm shadow-lg"
+                                    style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                    asChild
+                                >
                                     <a href="tel:18552649328" className="flex items-center gap-2">
                                         <Phone className="h-5 w-5" />
                                         1-855-264-9328
                                     </a>
-                                </Button>
-                                <Button size="lg" variant="outline" className="bg-white/10 hover:bg-white/20 text-white border-white rounded-full px-10 h-14 text-lg font-bold backdrop-blur-sm shadow-lg" asChild>
-                                    <a href="/contact">Demander un devis</a>
                                 </Button>
                             </div>
                         </div>
@@ -154,7 +167,7 @@ const Fontaines = () => {
                                 </div>
                                 <div className="lg:w-1/2 rounded-[3rem] overflow-hidden shadow-2xl bg-white flex items-center justify-center p-12">
                                     <img
-                                        src="/src/assets/Fontaines d'eau.webp"
+                                        src={heroFountains}
                                         alt="Modern office cooler"
                                         className="max-h-[600px] object-contain"
                                     />

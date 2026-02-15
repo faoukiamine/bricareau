@@ -40,6 +40,7 @@ import DesinfectionUV from "./pages/Systemes-de-desinfection-UV";
 import FiltreEauHauteEfficacite from "./pages/Filtre-eau-haute-efficacite";
 import RO6 from "./pages/RO-6";
 import CommentChoisirAdoucisseur from "./pages/Comment-choisir-un-adoucisseur-deau";
+import FiltresDeRemplacement from "./pages/Filtres-de-remplacement";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -88,6 +89,7 @@ const App = () => (
           <Route path="/commercial-industriel" element={<CommercialIndustriel />} />
           <Route path="/promotions" element={<Promotions />} />
           <Route path="/comment-choisir-un-adoucisseur-deau" element={<CommentChoisirAdoucisseur />} />
+          <Route path="/filtres-de-remplacement" element={<FiltresDeRemplacement />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

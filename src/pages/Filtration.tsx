@@ -12,7 +12,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { NavLink } from "@/components/NavLink";
-import heroFiltration from "@/assets/woman-and-kid-drink-glass-water.jpg";
+import heroFiltration from "@/assets/Gemini_Generated_Image_ct1u02ct1u02ct1u.png";
 import drinkingWaterImg from "@/assets/Solutions d'eau potable.webp";
 import specializedFiltersImg from "@/assets/Filtres d'eau spécialisés.webp";
 import waterSoftenerImg from "@/assets/Adoucisseurs d'eau.webp";
@@ -161,7 +161,7 @@ const Filtration = () => {
                                 <p className="text-lg font-light leading-relaxed text-gray-600 mb-8 text-justify">
                                     Protégez vos appareils ménagers, votre tuyauterie et votre peau. Nos systèmes de filtration centrale traitent chaque goutte d'eau qui entre dans votre foyer pour une tranquillité d'esprit totale.
                                 </p>
-                                <NavLink to="/contact" className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-3 rounded-full transition-colors">
+                                <NavLink to="/Filtres-deau-pour-toute-la-maison" className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-3 rounded-full transition-colors">
                                     Découvrir nos filtres d'eau spécialisés
                                 </NavLink>
                             </div>
@@ -214,8 +214,8 @@ const Filtration = () => {
                                 <p className="text-lg font-light leading-relaxed text-gray-600 mb-8 text-justify">
                                     Découvrez comment notre système d'osmose inverse libère votre quotidien du goût de chlore et de la corvée des bouteilles plastique. Profitez d'une eau légère, d'une clarté de diamant, idéale pour une hydratation saine et une cuisine riche en saveurs.
                                 </p>
-                                <NavLink to="/systemes-de-filtration-deau-sous-evier" className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-3 rounded-full transition-colors">
-                                    Découvrir nos systèmes sous-évier
+                                <NavLink to="/systeme-de-filtration-deau-potable" className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-3 rounded-full transition-colors">
+                                    Découvrir nos systèmes d'osmose inverse
                                 </NavLink>
                             </div>
                         </div>
@@ -268,7 +268,7 @@ const Filtration = () => {
                                 <p className="text-lg font-light leading-relaxed text-gray-600 mb-8 text-justify">
                                     Éliminez jusqu'à 99% des pathogènes, du plomb et du fluorure. L'osmose inverse Bricareau est la solution ultime pour une eau de boisson de qualité restaurant directement chez vous.
                                 </p>
-                                <NavLink to="/systemes-de-filtration-deau-sous-evier" className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-3 rounded-full transition-colors">
+                                <NavLink to="/Systemes-de-filtration-deau-sous-evier" className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-3 rounded-full transition-colors">
                                     Explorer nos systèmes de filtration sous l'évier
                                 </NavLink>
                             </div>

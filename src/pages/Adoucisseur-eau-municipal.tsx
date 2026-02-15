@@ -83,10 +83,21 @@ const comparisonData = [
 ];
 
 const faqItems = [
-    { q: "Quelle est la différence entre un adoucisseur municipal et un adoucisseur de puits ?", a: "Un adoucisseur municipal est souvent équipé de charbon actif pour éliminer le chlore et les odeurs de l'eau traitée par la ville, en plus d'éliminer le calcaire." },
-    { q: "Pourquoi adoucir l'eau de la ville ?", a: "Bien que traitée, l'eau municipale reste souvent dure. L'adoucissement protège vos appareils, réduit les taches de calcaire et est plus doux pour votre peau et vos cheveux." },
-    { q: "L'entretien est-il différent ?", a: "Le fonctionnement de base est le même, mais les modèles municipaux avec charbon nécessitent parfois un remplacement périodique du média filtrant pour maintenir l'élimination optimale du chlore." },
-    { q: "Puis-je boire l'eau adoucie ?", a: "Oui, la quantité de sodium ajoutée pendant le processus est minime. Cependant, pour les régimes très stricts en sodium, une station d'eau potable par osmose inverse est recommandée." },
+    { q: "Pourquoi installer un adoucisseur si l'eau est déjà traitée par la municipalité ?", a: "L'eau municipale est traitée pour être potable, pas pour être douce. Elle contient souvent beaucoup de calcaire qui endommage vos appareils, ternit votre robinetterie et assèche votre peau." },
+    { q: "L'eau adoucie a-t-elle un goût salé ?", a: "Non. La quantité de sodium échangée contre le calcaire est minime et indétectable au goût pour la majorité des gens. C'est bien moins de sel que dans une simple tranche de pain blanc." },
+    { q: "Est-ce que l'adoucisseur enlève le chlore de l'eau de ville ?", a: "Un adoucisseur standard enlève uniquement le calcaire. Pour le chlore, nous recommandons nos modèles hybrides (comme la série Sérénité avec charbon) qui filtrent aussi le chlore et les mauvaises odeurs." },
+    { q: "Combien de sel un adoucisseur consomme-t-il par an ?", a: "Cela dépend de votre consommation d'eau et de la dureté initiale, mais en moyenne pour une famille de 4 personnes, nos modèles haute efficacité consomment environ 6 à 8 sacs de sel par an." },
+    { q: "L'adoucisseur augmente-t-il ma facture d'eau ?", a: "Très peu. La régénération utilise un volume d'eau négligeable par rapport à votre consommation totale. En revanche, il protège votre chauffe-eau et le rend plus efficace, réduisant votre facture énergétique." },
+    { q: "Puis-je boire l'eau adoucie ?", a: "Oui, elle est parfaitement potable. Cependant, pour les personnes suivant un régime strict sans sel ou pour le goût le plus pur (thé, café), nous recommandons d'ajouter un système d'osmose inverse sous l'évier." },
+    { q: "Puis-je installer l'adoucisseur moi-même ?", a: "Bien que possible pour un bricoleur averti, nous recommandons fortement une installation professionnelle pour garantir le bon réglage de la dureté, l'étanchéité et le respect des normes de plomberie locales." },
+    { q: "Quelle est la durée de vie d'un adoucisseur d'eau Bricareau ?", a: "Avec un entretien minimal, nos systèmes sont conçus pour durer de 15 à 20 ans. La résine de haute qualité à l'intérieur peut durer plus de 15 ans avant de nécessiter un remplacement." },
+    { q: "L'adoucisseur fait-il du bruit ?", a: "Il fonctionne silencieusement la plupart du temps. Vous n'entendrez un léger bruit d'eau que pendant la régénération, qui est programmée généralement la nuit (par exemple à 2h du matin) pour ne pas vous déranger." },
+    { q: "Est-ce que l'eau adoucie est bonne pour les plantes ?", a: "Il est préférable d'arroser les plantes intérieures avec de l'eau non adoucie car le sodium peut s'accumuler dans le terreau. Nous installons souvent un robinet de dérivation pour l'arrosage extérieur." },
+    { q: "Que se passe-t-il en cas de panne de courant ?", a: "Nos vannes électroniques conservent leur programmation en mémoire pendant 48 heures ou plus. Une fois le courant rétabli, l'adoucisseur reprend son cycle normal sans perdre vos réglages." },
+    { q: "Dois-je utiliser un type de sel spécifique ?", a: "Nous recommandons du sel en pastilles de haute pureté pour éviter les résidus insolubles dans le bac. Certains sels contiennent aussi des nettoyants à résine pour maintenir l'efficacité du système." },
+    { q: "Comment savoir si mon adoucisseur fonctionne correctement ?", a: "Vous remarquerez immédiatement la différence : votre savon moussera beaucoup plus, votre peau sera plus douce après la douche et il n'y aura plus de nouvelles traces de calcaire sur vos parois de douche." },
+    { q: "Un adoucisseur est-il compatible avec une fosse septique ?", a: "Oui, tout à fait. Les eaux de régénération rejetées sont sans danger et n'affectent pas le fonctionnement biologique d'une fosse septique standard correctement dimensionnée." },
+    { q: "Est-ce que l'adoucisseur réduit la pression d'eau ?", a: "Non. Nos systèmes sont conçus 'High Flow' (haut débit) pour ne causer aucune perte de pression perceptible dans votre maison, même lorsque vous prenez une douche et utilisez la laveuse en même temps." },
 ];
 
 const AdoucisseurEauResidentiel = () => {
@@ -207,19 +218,6 @@ const AdoucisseurEauResidentiel = () => {
                                 </div>
                             ))}
                         </div>
-                        <div className="mt-16 text-center">
-                            <p className="text-lg font-light leading-relaxed text-gray-600 mb-8 max-w-2xl mx-auto text-justify">
-                                Vous ne savez pas quel système choisir ? Nos experts peuvent vous aider à trouver la solution
-                                parfaite pour votre foyer.
-                            </p>
-                            <Button
-                                className="bg-blue-600 text-white rounded-full px-12 h-14"
-                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
-                                onClick={() => document.getElementById('consultation')?.scrollIntoView({ behavior: 'smooth' })}
-                            >
-                                Parlez avec un expert
-                            </Button>
-                        </div>
                     </div>
                 </section>
 
@@ -241,14 +239,12 @@ const AdoucisseurEauResidentiel = () => {
                                     <tr className="bg-gray-100">
                                         <th className="p-8 text-left text-gray-400 font-light uppercase tracking-wider w-1/4">Critères d'Analyse</th>
                                         {[
-                                            { name: "Sérénité", sub: "(Calendrier)" },
-                                            { name: "Sentinel", sub: "(Volumétrique / Meter)" },
-                                            { name: "Infiniti", sub: "(Duplex Alterné)" }
+                                            { name: "Sérénité" },
+                                            { name: "Sentinel" },
+                                            { name: "Infiniti" }
                                         ].map(m => (
                                             <th key={m.name} className="p-8 text-center text-gray-900 font-bold">
-                                                <div className="text-xl">{m.name}</div>
-                                                <div className="text-sm font-normal text-gray-500">{m.sub}</div>
-                                            </th>
+                                                <div className="text-xl">{m.name}</div>                                            </th>
                                         ))}
                                     </tr>
                                 </thead>

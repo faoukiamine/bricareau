@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Check, ChevronRight, CheckCircle2, X } from "lucide-react";
+import { Check, ChevronRight, CheckCircle2, X, Phone } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import heroPuits from "@/assets/blog-10-copyright.jpg";
 import uvSystemImg from "@/assets/Systèmes de désinfection UV.webp";
@@ -15,11 +15,12 @@ import turbideWaterThumb from "@/assets/Turbide-Water.webp";
 import taninWaterThumb from "@/assets/problemes-deau-tanin.jpg";
 import corrosiveWaterThumb from "@/assets/Corrosive-Water.webp";
 import waterTestingImg from "@/assets/2147800429.jpg";
-import process1 from "@/assets/Scientist istesting water.webp";
+import process1 from "@/assets/2148563485.jpg";
 import process2 from "@/assets/section-image-and-content-23.jpg";
 import process3 from "@/assets/SERVICES.jpg";
-import process4 from "@/assets/pexels-latronico-1560546.jpg";
+import process4 from "@/assets/unnamed (2).jpg";
 import TestimonialsSection from "@/components/TestimonialsSection";
+import labTestImg from "@/assets/test-laboratoire-diligence-inspection-750x500.jpg";
 
 import {
   Accordion,
@@ -116,21 +117,26 @@ const EauDePuits = () => {
                   style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                   asChild
                 >
-                  <NavLink to="/water-testing">
-                    Planifiez une consultation gratuite
-                  </NavLink>
+                  <a href="#consultation">
+                    Planifier une consultation gratuite
+                  </a>
                 </Button>
                 <Button
                   size="lg"
                   variant="outline"
-                  className="bg-white/10 hover:bg-white/20 text-white border-white rounded-full px-10 h-14 text-lg font-bold backdrop-blur-sm"
+                  className="bg-white/10 hover:bg-white/20 text-white border-white rounded-full px-8 h-14 backdrop-blur-sm shadow-lg"
+                  style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                   asChild
                 >
-                  <a href="tel:18552649328">Appelez le 1-855-264-9328</a>
+                  <a href="tel:18552649328" className="flex items-center gap-2">
+                    <Phone className="h-5 w-5" />
+                    1-855-264-9328
+                  </a>
                 </Button>
               </div>
             </div>
           </div>
+
         </section>
 
         {/* 2. Well Water Problems section */}
@@ -138,9 +144,6 @@ const EauDePuits = () => {
           <div className="container mx-auto px-4">
             {/* Title Header - Above Grid */}
             <div className="mb-4 max-w-4xl">
-              <span className="text-sm font-bold uppercase tracking-widest text-[#60A5FA] mb-4 block">
-                ANALYSE TECHNIQUE
-              </span>
               <h2 className="text-[32px] md:text-[48px] font-light text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter"
                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
               >
@@ -300,7 +303,7 @@ const EauDePuits = () => {
                     </div>
                   </div>
 
-                  <h3 className="text-2xl font-bold mb-4 text-black tracking-tight">{step.title}</h3>
+                  <h3 className="text-2xl font-medium mb-4 text-black tracking-tight">{step.title}</h3>
                   <p className="text-lg font-light leading-relaxed text-slate-600 text-justify">
                     {step.desc}
                   </p>
@@ -310,30 +313,69 @@ const EauDePuits = () => {
           </div>
         </section>
 
-        {/* 5. Water Testing Section*/}
-        <section className="py-24 bg-white">
+
+        <section className="py-24 bg-blue-600">
           <div className="container mx-auto px-6">
-            <div className="flex flex-col lg:flex-row items-stretch gap-0 rounded-[3rem] overflow-hidden shadow-2xl">
-              <div className="lg:w-1/2 relative min-h-[400px]">
-                <img src={waterTestingImg} alt="Analyse d'eau" className="absolute inset-0 w-full h-full object-cover" />
-                <div className="absolute inset-0 bg-blue-900/10" />
+            <div className="flex flex-col lg:flex-row items-center gap-16">
+              {/* Left Column: Images Composition */}
+              <div className="w-full lg:w-1/2 relative min-h-[500px] lg:min-h-[600px]">
+                {/* Main Large Image (Back Left) */}
+                <div className="absolute top-0 left-0 w-4/5 h-4/5 rounded-[2rem] overflow-hidden shadow-2xl z-10">
+                  <img
+                    src={waterTestingImg}
+                    alt="Analyse d'eau principale"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black/10"></div>
+                </div>
+
+                {/* Vertical Image (Front Right) */}
+                <div className="absolute top-[10%] right-0 w-[35%] h-[55%] rounded-[1.5rem] overflow-hidden shadow-2xl z-20 border-[6px] border-white">
+                  <img
+                    src={process1}
+                    alt="Scientifique analysant l'eau"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+
+                {/* Horizontal Image (Front Bottom) */}
+                <div className="absolute bottom-[5%] left-[10%] w-[55%] h-[28%] rounded-[1.5rem] overflow-hidden shadow-2xl z-30 border-[6px] border-white">
+                  <img
+                    src={labTestImg}
+                    alt="Résultats d'analyse"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
               </div>
-              <div className="lg:w-1/2 bg-blue-600 text-white p-12 lg:p-20 flex flex-col justify-center items-start text-left">
-                <span className="text-white/80 text-sm font-bold uppercase tracking-widest mb-8 block">
+
+              {/* Right Column: Content */}
+              <div className="w-full lg:w-1/2 lg:pl-12">
+                <span className="text-white/80 font-bold uppercase tracking-widest text-sm mb-4 block">
                   Contrôle de la Qualité D'EAU
                 </span>
-                <h2 className="text-[32px] md:text-[48px] font-light text-white mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-left"
-                  style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                <h2
+                  className="text-[40px] md:text-[52px] font-bold text-white mb-6 leading-[1.1] tracking-tighter"
+                  style={{
+                    fontFamily:
+                      'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                  }}
                 >
                   Des tests d'eau précis <br />
-                  <span className="font-bold">pour votre sécurité.</span>
+                  pour votre sécurité.
                 </h2>
-                <p className="text-lg font-light leading-relaxed text-white/90 mb-12 text-justify">
+                <p className="text-lg text-white/90 mb-8 leading-relaxed text-left text-justify">
                   Ne prenez aucun risque avec la santé de votre foyer. Nos tests de précision révèlent les polluants et contaminants invisibles, vous garantissant ainsi une eau parfaitement saine et une sérénité absolue.
                 </p>
-                <Button className="bg-white text-blue-600 hover:bg-blue-50 rounded-full px-12 h-16 text-xl font-bold shadow-xl" asChild>
-                  <NavLink to="/water-testing">En savoir plus</NavLink>
-                </Button>
+                <div className="flex flex-wrap gap-6 items-center">
+                  <Button
+                    size="lg"
+                    className="bg-white hover:bg-blue-50 text-blue-600 rounded-full px-8 h-14"
+                    style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                    asChild
+                  >
+                    <a href="/water-testing">En savoir plus</a>
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
@@ -371,7 +413,7 @@ const EauDePuits = () => {
                   name: "Stations d'eau potable",
                   desc: "Élimine 99.9% des bactéries et virus pour une sécurité totale.",
                   img: drinkingWaterImg,
-                  link: "/osmose-filtration"
+                  link: "/systeme-de-filtration-deau-potable"
                 },
                 {
                   name: "Systèmes de stérilisation UV",
@@ -393,7 +435,7 @@ const EauDePuits = () => {
                     />
                   </div>
                   <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
-                    <h3 className="text-xl font-bold mb-4 group-hover:text-blue-600 transition-colors uppercase tracking-tight">{prod.name}</h3>
+                    <h3 className="text-xl font-bold mb-4 group-hover:text-blue-600 transition-colors tracking-tight">{prod.name}</h3>
                     <p className="text-lg font-light leading-relaxed text-slate-500 mb-6 flex-grow text-justify">{prod.desc}</p>
                     <div className="mt-auto">
                       <NavLink
@@ -600,7 +642,8 @@ const EauDePuits = () => {
               >                                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">Ressources</span>
               </h2>
               <div className="w-24 h-1 bg-blue-600"></div>
-            </div>            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
                 {
                   title: "Comprendre les minéraux de votre puits",
@@ -645,7 +688,7 @@ const EauDePuits = () => {
         <ConsultationFormSection id="consultation" />
       </main>
       <Footer />
-    </div>
+    </div >
   );
 };
 
