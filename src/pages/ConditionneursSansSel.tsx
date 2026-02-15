@@ -263,15 +263,15 @@ const ConditionneursSansSel = () => {
         <section className="py-24 bg-white">
           <div className="container mx-auto px-4">
             <div className="text-left mb-16">
-              <h2
-                className="text-slate-900 tracking-tighter mb-8 text-left"
-                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
-              >
-                <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block text-[#60A5FA] uppercase text-sm font-bold tracking-[0.3em] mb-4">Pour vous éclairer</span>
-                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">Questions fréquentes sur les conditionneurs</span>
-              </h2>
-              <div className="w-24 h-1 bg-blue-600"></div>
-            </div>
+                            <h2
+                                className="text-slate-900 tracking-tighter mb-8 text-left"
+                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                            >
+                                <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Pour vous éclairer</span>
+                                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">Questions fréquentes</span>
+                            </h2>
+                            <div className="w-24 h-1 bg-blue-600"></div>
+                        </div>
 
             <div className="max-w-4xl mx-auto">
               <Accordion type="single" collapsible className="w-full">
@@ -298,8 +298,7 @@ const ConditionneursSansSel = () => {
                 className="text-slate-900 tracking-tighter mb-8 text-left"
                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
               >
-                <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Ressources &</span>
-                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">Articles conseils</span>
+                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">Ressources</span>
               </h2>
               <div className="w-24 h-1 bg-blue-600"></div>
             </div>

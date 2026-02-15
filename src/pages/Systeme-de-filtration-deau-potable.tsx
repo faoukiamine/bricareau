@@ -29,6 +29,8 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 
 import heroDrink from "@/assets/boire-eau-robinet.jpg";
 import drinkingWaterImg from "@/assets/Solutions d'eau potable.webp";
+import vectapureROImg from "@/assets/V3604RO.jpg";
+import freezelifeROImg from "@/assets/PX500_2.webp";
 import sereneLiteImg from "@/assets/Système+de+filtration+Serene+Lite.webp";
 import specializedFiltersImg from "@/assets/Filtres d'eau spécialisés.webp";
 import waterSoftenerImg from "@/assets/Adoucisseurs d'eau.webp";
@@ -104,7 +106,7 @@ const OsmoseFiltration = () => {
           </div>
         </section>
 
-        {/* 2. Pourquoi choisir - Blue Section (Merged with Avantages) */}
+        {/* 2. Pourquoi choisir - Blue Section */}
         <section className="py-24 bg-blue-600 text-white">
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
@@ -129,7 +131,7 @@ const OsmoseFiltration = () => {
                   <div className="w-20 h-20 rounded-2xl bg-white flex items-center justify-center mb-8 transition-all group-hover:scale-110 group-hover:bg-white/10">
                     <item.icon className="h-10 w-10 text-blue-600 group-hover:text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold mb-4 tracking-tight">{item.title}</h3>
+                  <h3 className="text-2xl font-medium mb-4 tracking-tight">{item.title}</h3>
                   <p className="text-lg font-light leading-relaxed text-blue-100 text-justify">{item.desc}</p>
                 </div>
               ))}
@@ -152,9 +154,9 @@ const OsmoseFiltration = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
-                { name: "Bricareau Elite RO", desc: "Le summum de la filtration avec reminéralisation alcaline incluse.", img: drinkingWaterImg, path: "/ro-6" },
-                { name: "Bricareau Plus RO", desc: "Performance exceptionnelle pour les familles actives.", img: drinkingWaterImg },
-                { name: "Bricareau Essential", desc: "La pureté accessible sans compromis sur la qualité.", img: drinkingWaterImg },
+                { name: "Systeme d'osmose inverse de la série Vectapure", desc: "La pureté accessible sans compromis sur la qualité.", img: vectapureROImg },
+                { name: "Systeme d'osmose inverse de la série Essentiel", desc: "Le summum de la filtration avec reminéralisation alcaline incluse.", img: drinkingWaterImg, path: "/ro-6" },
+                { name: "Systeme d'osmose inverse de la série Sérénité", desc: "Performance exceptionnelle pour les familles actives.", img: freezelifeROImg },
               ].map((product, i) => (
                 <div
                   key={i}
@@ -186,86 +188,28 @@ const OsmoseFiltration = () => {
           </div>
         </section>
 
-        {/* 5. Intro Content (Image Right) */}
-        <section className="py-24 bg-white overflow-hidden">
-          <div className="container mx-auto px-6 text-left">
-            <div className="flex flex-col lg:flex-row items-center gap-20">
-              <div className="lg:w-1/2">
-                <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal text-slate-900 mb-8 leading-[1.1] tracking-tighter text-left">
-                  Une eau de qualité <br /> restaurant à la maison.
-                </h2>
-                <p className="text-lg font-light leading-relaxed text-slate-500 mb-10 text-justify">
-                  Saviez-vous que la plupart des grands restaurants et cafés utilisent l'osmose inverse pour servir leur eau et préparer leur café ? Bricareau apporte cette même technologie professionnelle directement sous votre évier.
-                </p>
-                <div className="grid grid-cols-2 gap-8 mb-10">
-                  <div className="flex flex-col gap-2">
-                    <span className="text-4xl font-bold text-blue-600">99%</span>
-                    <span className="text-sm font-bold text-slate-400 uppercase tracking-widest">Pureté atteinte</span>
-                  </div>
-                  <div className="flex flex-col gap-2">
-                    <span className="text-4xl font-bold text-blue-600">24h</span>
-                    <span className="text-sm font-bold text-slate-400 uppercase tracking-widest">Disponibilité</span>
-                  </div>
-                </div>
-                <Button className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-10 h-14 text-lg font-bold flex items-center gap-2 group">
-                  Explorer nos systèmes <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                </Button>
-              </div>
-              <div className="lg:w-1/2 relative">
-                <div className="aspect-video rounded-[3rem] overflow-hidden shadow-2xl relative z-10 group">
-                  <img src={drinkingWaterImg} alt="Cuisine moderne" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                </div>
-                <div className="absolute -top-10 -right-10 w-2/3 h-2/3 bg-blue-50 rounded-[3rem] -z-10" />
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* 6. Expertise Section (Blue Box Design) */}
-        <section className="py-24 bg-slate-50">
-          <div className="container mx-auto px-6">
-            <div className="flex flex-col lg:flex-row items-stretch gap-0 rounded-[3rem] overflow-hidden shadow-2xl">
-              <div className="lg:w-1/2 relative min-h-[400px]">
-                <img src={waterTestingImg} alt="Analyse d'eau" className="absolute inset-0 w-full h-full object-cover" />
-                <div className="absolute inset-0 bg-blue-900/10" />
-              </div>
-              <div className="lg:w-1/2 bg-blue-600 text-white p-12 lg:p-20 flex flex-col justify-center items-start text-left">
-                <span className="text-white/80 text-xs font-black uppercase tracking-[0.3em] mb-8 block">
-                  ANALYSE ET CONSEIL
-                </span>
-                <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal text-white mb-8 leading-[1.1] tracking-tighter text-left">
-                  Ne devinez pas, <br /> testez votre eau.
-                </h2>
-                <p className="text-lg font-light leading-relaxed text-white/90 mb-12 text-justify">
-                  Ne devinez pas la qualité de votre eau. Nos analyses approfondies identifient les bactéries, les minéraux et les contaminants chimiques pour vous offrir une tranquillité d'esprit totale.
-                </p>
-                <Button className="bg-white text-blue-600 hover:bg-blue-50 rounded-full px-12 h-16 text-xl font-bold shadow-xl" asChild>
-                  <a href="#consultation">Prendre un rendez-vous</a>
-                </Button>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* 7. Comparison Table */}
+        {/* 6. Comparison Table */}
         <section className="py-24 bg-white">
           <div className="container mx-auto px-4">
-            <h2
-              className="text-slate-900 tracking-tighter mb-16 text-center"
-              style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
-            >
-              <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Comparez nos solutions</span>
-              <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">de filtration d'eau potable</span>
-            </h2>
+            <div className="text-left mb-16">
+              <h2
+                className="text-slate-900 tracking-tighter mb-8 text-left"
+                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+              >
+                <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Comparez nos solutions</span>
+                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">de filtration d'eau potable</span>
+              </h2>
+              <div className="w-24 h-1 bg-blue-600"></div>
+            </div>
             <div className="overflow-x-auto">
               <table className="w-full min-w-[1000px] border-collapse bg-white rounded-2xl overflow-hidden shadow-sm">
                 <thead>
                   <tr className="bg-gray-100">
                     <th className="p-8 text-left text-gray-400 font-light uppercase tracking-wider">Solutions</th>
                     {[
-                      { name: "Elite RO", img: drinkingWaterImg },
-                      { name: "Plus RO", img: drinkingWaterImg },
+                      { name: "Vectapure", img: vectapureROImg },
                       { name: "Essential", img: drinkingWaterImg },
+                      { name: "Sérénité", img: freezelifeROImg },
                     ].map((m, i) => (
                       <th key={i} className="p-4 text-center text-gray-900 font-bold text-sm">
                         <div className="flex flex-col items-center gap-2">
@@ -301,20 +245,54 @@ const OsmoseFiltration = () => {
           </div>
         </section>
 
+        {/* 7. Water Testing */}
+        <section className="py-24 bg-slate-50">
+          <div className="container mx-auto px-6">
+            <div className="flex flex-col lg:flex-row items-stretch gap-0 rounded-[3rem] overflow-hidden shadow-2xl">
+              <div className="lg:w-1/2 relative min-h-[400px]">
+                <img src={waterTestingImg} alt="Analyse d'eau" className="absolute inset-0 w-full h-full object-cover" />
+                <div className="absolute inset-0 bg-blue-900/10" />
+              </div>
+              <div className="lg:w-1/2 bg-blue-600 text-white p-12 lg:p-20 flex flex-col justify-center items-start text-left">
+                <span className="text-white/80 text-xs font-black uppercase tracking-[0.3em] mb-8 block">
+                  ANALYSE ET CONSEILS
+                </span>
+                <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal text-white mb-8 leading-[1.1] tracking-tighter text-left">
+                  Ne devinez pas, <br /> testez votre eau.
+                </h2>
+                <p className="text-lg font-light leading-relaxed text-white/90 mb-12 text-justify">
+                  Ne devinez pas la qualité de votre eau. Nos analyses approfondies identifient les bactéries, les minéraux et les contaminants chimiques pour vous offrir une tranquillité d'esprit totale.
+                </p>
+                <Button
+                  size="lg"
+                  className="bg-white hover:bg-blue-50 text-blue-600 rounded-full px-8 h-14"
+                  style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                  asChild
+                >
+                  <a href="#consultation">Prendre un rendez-vous</a>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* 8. Testimonials Section */}
         <TestimonialsSection />
 
         {/* 9. FAQ Section */}
         <section className="py-24 bg-white border-t border-slate-100">
-          <div className="container mx-auto px-6 max-w-4xl text-left">
-            <div className="text-center mb-16">
-              <span className="text-blue-600 text-[10px] font-black uppercase tracking-[0.5em] mb-4 block">
-                POUR VOUS ÉCLAIRER
-              </span>
-              <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-center">
-                Questions fréquentes
-              </h2>
-            </div>
+          <div className="container mx-auto px-6 max-w-4xl">
+            <div className="text-left mb-16">
+                            <h2
+                                className="text-slate-900 tracking-tighter mb-8 text-left"
+                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                            >
+                                <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Pour vous éclairer</span>
+                                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">Questions fréquentes</span>
+                            </h2>
+                            <div className="w-24 h-1 bg-blue-600"></div>
+                        </div>
+
             <Accordion type="single" collapsible className="w-full">
               {[
                 {
