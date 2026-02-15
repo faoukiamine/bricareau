@@ -432,4 +432,4 @@ const OsmoseFiltration = () => {
   );
 };
 
-export default OsmoseFiltration;
+export default StationEauPotable;

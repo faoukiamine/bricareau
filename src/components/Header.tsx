@@ -140,7 +140,7 @@ const Header = () => {
           icon: Filter,
           title: "Stations d'eau potable",
           description: "Profitez d'une eau pure et saine directement de votre robinet avec nos systèmes de filtration avancés.",
-          href: "/osmose-filtration"
+          href: "/systeme-de-filtration-deau-potable"
         },
         {
           icon: Droplets,

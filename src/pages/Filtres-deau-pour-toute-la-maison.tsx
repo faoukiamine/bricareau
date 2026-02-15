@@ -113,7 +113,7 @@ const comparisonData = [
 
 const FiltresDeau = () => {
     return (
-        <div className="min-h-screen bg-background text-slate-900 font-sans">
+        <div className="min-h-screen bg-white text-slate-900 font-sans">
             <Header />
 
             <main>

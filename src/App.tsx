@@ -10,7 +10,7 @@ import Services from "./pages/Adoucisseurs-portables";
 import ContactResidentiel from "./pages/ContactResidentiel";
 import ContactEntreprises from "./pages/ContactEntreprises";
 import Contact from "./pages/Contact";
-import WaterTestingPage from "./pages/WaterTestingPage";
+import WaterTestingPage from "./pages/Tests-deau.tsx";
 import FAQ from "./pages/FAQ";
 import Entreprises from "./pages/Entreprises";
 import CommercialIndustriel from "./pages/CommercialIndustriel";
@@ -19,7 +19,7 @@ import Adoucisseurs from "./pages/Adoucissement";
 import AdoucisseurEauResidentiel from "./pages/Adoucisseur-eau-municipal.tsx";
 import AdoucisseursEauDePuits from "./pages/Adoucisseurs-eau-de-puits";
 import ConditionneursSansSel from "./pages/ConditionneursSansSel";
-import OsmoseFiltration from "./pages/Systeme-de-filtration-deau-potable";
+import StationEauPotable from "./pages/Systeme-de-filtration-deau-potable.tsx";
 import EauDure from "./pages/EauDure";
 import EauDePuits from "./pages/EauDePuits";
 import Filtration from "./pages/Filtration";
@@ -60,7 +60,7 @@ const App = () => (
           <Route path="/adoucisseur-eau-residentiel" element={<AdoucisseurEauResidentiel />} />
           <Route path="/adoucisseurs-eau-de-puits" element={<AdoucisseursEauDePuits />} />
           <Route path="/conditionneurs-sans-sel" element={<ConditionneursSansSel />} />
-          <Route path="/osmose-filtration" element={<OsmoseFiltration />} />
+          <Route path="/systeme-de-filtration-deau-potable" element={<StationEauPotable />} />
           <Route path="/eau-dure" element={<EauDure />} />
           <Route path="/eau-de-puits" element={<EauDePuits />} />
           <Route path="/filtration" element={<Filtration />} />
