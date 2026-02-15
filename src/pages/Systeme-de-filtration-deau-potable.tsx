@@ -63,11 +63,12 @@ const StationEauPotable = () => {
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-black/20 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-white via-white/10 to-transparent" />
           </div>
 
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-2xl text-white">
-              <span className="text-sm font-bold uppercase tracking-widest text-[#60A5FA] mb-4 block">
+              <span className="text-sm font-bold uppercase tracking-widest text-blue-600 mb-4 block">
                 PURETÉ INÉGALÉE
               </span>
               <h1
@@ -87,9 +88,9 @@ const StationEauPotable = () => {
                   style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                   asChild
                 >
-                  <NavLink to="/contact">
+                  <a href="#purification-systems">
                     Découvrir nos systèmes d'osmose inverse
-                  </NavLink>
+                  </a>
                 </Button>
                 <Button
                   size="lg"
@@ -142,7 +143,7 @@ const StationEauPotable = () => {
         </section>
 
         {/* 3. Systèmes d'osmose inverse - Product Grid */}
-        <section className="py-24 bg-white">
+        <section id="purification-systems" className="py-24 bg-white">
           <div className="container mx-auto px-6">
             <div className="text-left mb-16">
               <h2

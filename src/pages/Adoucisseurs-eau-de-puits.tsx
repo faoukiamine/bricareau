@@ -137,6 +137,7 @@ const AdoucisseursEauDePuits = () => {
                             className="w-full h-full object-cover"
                         />
                         <div className="absolute inset-0 bg-black/30 lg:bg-gradient-to-r lg:from-black/50 lg:to-transparent" />
+                        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-white via-white/10 to-transparent" />
                     </div>
 
                     <div className="container mx-auto px-4 relative z-10">
@@ -293,26 +294,26 @@ const AdoucisseursEauDePuits = () => {
                 </section>
 
                 {/* 5. CTA Section */}
-        <section className="bg-primary py-16 md:py-20">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-2xl md:text-3xl font-bold text-primary-foreground mb-4">
-              Besoin d'aide avec votre eau ?
-            </h2>
-            <p className="text-primary-foreground/80 text-lg mb-8 max-w-2xl mx-auto">
-              Discutez avec un expert en un clic. Disponible par téléphone ou à domicile selon vos préférences.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                size="lg"
-                variant="outline"
-                className="rounded-full px-8 border-white text-white bg-transparent hover:bg-white/10"
-                asChild
-              >
-                <a href="tel:18552649328">Appelez le 1-855-264-9328</a>
-              </Button>
-            </div>
-          </div>
-        </section>
+                <section className="bg-primary py-16 md:py-20">
+                    <div className="container mx-auto px-4 text-center">
+                        <h2 className="text-2xl md:text-3xl font-bold text-primary-foreground mb-4">
+                            Besoin d'aide avec votre eau ?
+                        </h2>
+                        <p className="text-primary-foreground/80 text-lg mb-8 max-w-2xl mx-auto">
+                            Discutez avec un expert en un clic. Disponible par téléphone ou à domicile selon vos préférences.
+                        </p>
+                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                            <Button
+                                size="lg"
+                                variant="outline"
+                                className="rounded-full px-8 border-white text-white bg-transparent hover:bg-white/10"
+                                asChild
+                            >
+                                <a href="tel:18552649328">Appelez le 1-855-264-9328</a>
+                            </Button>
+                        </div>
+                    </div>
+                </section>
 
                 {/* 5.Testimonials Grid Section */}
                 <TestimonialsSection />

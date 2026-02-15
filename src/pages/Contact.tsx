@@ -14,7 +14,10 @@ const Contact = () => {
         <section className="py-12 md:py-20 lg:py-24 bg-gradient-to-b from-primary/5 to-background">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center space-y-6">
-              <h1 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
+              <h1
+                className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter"
+                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"', fontStyle: 'normal' }}
+              >
                 Contactez-nous
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground">
@@ -31,7 +34,10 @@ const Contact = () => {
               {/* Contact Information */}
               <div className="space-y-8">
                 <div>
-                  <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
+                  <h2
+                    className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter"
+                    style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"', fontStyle: 'normal' }}
+                  >
                     Informations de contact
                   </h2>
                   <p className="text-muted-foreground mb-8">
@@ -55,24 +61,13 @@ const Contact = () => {
 
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Mail className="h-6 w-6 text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-foreground mb-1">Email</h3>
-                      <a href="mailto:info@bricareau.com" className="text-muted-foreground hover:text-primary transition-colors">
-                        info@bricareau.com
-                      </a>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
                       <MapPin className="h-6 w-6 text-primary" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-foreground mb-1">Adresse</h3>
                       <p className="text-muted-foreground">
-                        Service disponible partout au Canada
+                        4180 Avenue de Courtrai Suite 100
+                        Montréal, QC H3S 1C3
                       </p>
                     </div>
                   </div>
@@ -84,9 +79,8 @@ const Contact = () => {
                     <div>
                       <h3 className="font-semibold text-foreground mb-1">Heures d'ouverture</h3>
                       <div className="text-muted-foreground space-y-1">
-                        <p>Lundi - Vendredi: 8h00 - 18h00</p>
-                        <p>Samedi: 9h00 - 17h00</p>
-                        <p>Dimanche: Sur rendez-vous</p>
+                        <p>Lundi - Vendredi: 8h30 - 17h00</p>
+                        <p>Sur rendez-vous</p>
                       </div>
                     </div>
                   </div>
@@ -95,7 +89,10 @@ const Contact = () => {
 
               {/* Contact Form */}
               <div className="bg-card border border-border rounded-lg p-6 md:p-8">
-                <h2 className="text-[28px] md:text-[40px] font-normal text-slate-900 mb-6 leading-[1.1] tracking-tighter">
+                <h2
+                  className="text-[28px] md:text-[40px] font-normal text-slate-900 mb-6 leading-[1.1] tracking-tighter"
+                  style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"', fontStyle: 'normal' }}
+                >
                   Envoyez-nous un message
                 </h2>
                 <form className="space-y-6">
@@ -146,7 +143,12 @@ const Contact = () => {
                     />
                   </div>
 
-                  <Button type="submit" className="w-full" size="lg">
+                  <Button
+                    type="submit"
+                    className="w-full"
+                    size="lg"
+                    style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"', fontStyle: 'normal' }}
+                  >
                     Envoyer le message
                   </Button>
                 </form>

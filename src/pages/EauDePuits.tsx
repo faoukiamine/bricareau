@@ -101,6 +101,7 @@ const EauDePuits = () => {
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-black/30 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-white via-white/10 to-transparent" />
           </div>
 
           <div className="container mx-auto px-4 relative z-10">

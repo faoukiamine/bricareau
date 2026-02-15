@@ -57,12 +57,13 @@ const Filtration = () => {
                             className="w-full h-full object-cover"
                         />
                         <div className="absolute inset-0 bg-black/40 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
+                        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-white via-white/10 to-transparent" />
                     </div>
 
                     <div className="container mx-auto px-4 relative z-10">
                         <div className="max-w-2xl text-white">
-                            <span className="text-sm font-bold uppercase tracking-widest text-[#60A5FA] mb-4 block">
-                                SOLUTIONS DE FILTRATION
+                            <span className="text-sm font-bold uppercase tracking-widest text-blue-600 mb-4 block">
+                                SOLUTIONS DE FILTRATION D'EAU
                             </span>
                             <h1
                                 className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-white"

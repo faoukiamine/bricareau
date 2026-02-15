@@ -60,11 +60,12 @@ const FiltrationSousEvier = () => {
                             className="w-full h-full object-cover"
                         />
                         <div className="absolute inset-0 bg-black/20 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
+                        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-white via-white/10 to-transparent" />
                     </div>
 
                     <div className="container mx-auto px-4 relative z-10">
                         <div className="max-w-2xl text-white">
-                            <span className="text-sm font-bold uppercase tracking-widest text-[#60A5FA] mb-4 block">
+                            <span className="text-sm font-bold uppercase tracking-widest text-blue-600 mb-4 block">
                                 PURETÉ INÉGALÉE
                             </span>
                             <h1
@@ -84,9 +85,9 @@ const FiltrationSousEvier = () => {
                                     style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                                     asChild
                                 >
-                                    <NavLink to="/contact">
+                                    <a href="#systemes-filtration">
                                         Explorez nos systèmes de filtration
-                                    </NavLink>
+                                    </a>
                                 </Button>
                                 <Button
                                     size="lg"
@@ -139,7 +140,7 @@ const FiltrationSousEvier = () => {
                 </section>
 
                 {/* 3. Systèmes d'osmose inverse - Product Grid */}
-                <section className="py-24 bg-white">
+                <section id="systemes-filtration" className="py-24 bg-white">
                     <div className="container mx-auto px-6">
                         <div className="text-left mb-16">
                             <h2
@@ -188,8 +189,7 @@ const FiltrationSousEvier = () => {
                     </div>
                 </section>
 
-                {/* 5. Expertise Section (Blue Box Design) */}
-                {/* 5. Expertise Section (Blue Box Design) */}
+                {/* 5. Water TestingSection */}
                 <section className="py-24 bg-blue-600">
                     <div className="container mx-auto px-6">
                         <div className="flex flex-col lg:flex-row items-center gap-16">
@@ -199,7 +199,7 @@ const FiltrationSousEvier = () => {
                             </div>
                             <div className="lg:w-1/2 text-white flex flex-col justify-center items-start text-left">
                                 <span className="text-white/80 text-xs font-black uppercase tracking-[0.3em] mb-8 block">
-                                    ANALYSE ET CONSEIL
+                                    ANALYSES D'EAU ET CONSEILS
                                 </span>
                                 <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal text-white mb-8 leading-[1.1] tracking-tighter">
                                     Ne devinez pas, <br /> testez votre eau.
