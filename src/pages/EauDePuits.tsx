@@ -424,7 +424,7 @@ const EauDePuits = () => {
                     link: "/adoucisseurs-eau-de-puits"
                   },
                   {
-                    name: <span>Stations d'eau <br /> potable</span>,
+                    name: "Stations d'eau\npotable",
                     desc: "Une eau de qualité supérieure à l'évier. L'osmose inverse élimine polluants, sodium et nitrates pour une hydratation pure, saine et au goût parfait.",
                     img: drinkingWaterImg,
                     link: "/systeme-de-filtration-deau-potable"
@@ -449,7 +449,7 @@ const EauDePuits = () => {
                         />
                       </div>
                       <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
-                        <h3 className="text-xl font-bold mb-4 group-hover:text-blue-600 transition-colors tracking-tight text-center w-[55%] mx-auto">{prod.name}</h3>
+                        <h3 className="text-xl font-bold mb-4 group-hover:text-blue-600 transition-colors tracking-tight text-center w-[55%] mx-auto whitespace-pre-line">{prod.name}</h3>
                         <p className="text-lg font-light leading-relaxed text-slate-500 mb-6 flex-grow text-justify">{prod.desc}</p>
                         <div className="mt-auto">
                           <NavLink

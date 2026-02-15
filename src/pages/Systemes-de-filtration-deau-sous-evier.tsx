@@ -189,14 +189,15 @@ const FiltrationSousEvier = () => {
                 </section>
 
                 {/* 5. Expertise Section (Blue Box Design) */}
-                <section className="py-24 bg-slate-50">
+                {/* 5. Expertise Section (Blue Box Design) */}
+                <section className="py-24 bg-blue-600">
                     <div className="container mx-auto px-6">
-                        <div className="flex flex-col lg:flex-row items-stretch gap-0 rounded-[3rem] overflow-hidden shadow-2xl">
-                            <div className="lg:w-1/2 relative min-h-[400px]">
+                        <div className="flex flex-col lg:flex-row items-center gap-16">
+                            <div className="lg:w-1/2 relative min-h-[400px] h-[500px] lg:h-[600px] rounded-[3rem] overflow-hidden shadow-2xl">
                                 <img src={waterTestingImg} alt="Analyse d'eau" className="absolute inset-0 w-full h-full object-cover" />
                                 <div className="absolute inset-0 bg-blue-900/10" />
                             </div>
-                            <div className="lg:w-1/2 bg-blue-600 text-white p-12 lg:p-20 flex flex-col justify-center items-start text-left">
+                            <div className="lg:w-1/2 text-white flex flex-col justify-center items-start text-left">
                                 <span className="text-white/80 text-xs font-black uppercase tracking-[0.3em] mb-8 block">
                                     ANALYSE ET CONSEIL
                                 </span>
@@ -204,9 +205,14 @@ const FiltrationSousEvier = () => {
                                     Ne devinez pas, <br /> testez votre eau.
                                 </h2>
                                 <p className="text-white/90 text-lg font-light mb-12 leading-relaxed text-justify">
-                                    Chaque foyer est différent. Nos experts effectuent une analyse gratuite sur place pour identifier les contaminants spécifiques à votre résidence et vous recommander la solution optimale.
+                                    Chaque foyer est différent. Nos experts effectuent des analyses d'eau pour identifier les contaminants spécifiques à votre résidence et vous recommander la solution optimale.
                                 </p>
-                                <Button className="bg-white text-blue-600 hover:bg-blue-50 rounded-full px-12 h-16 text-xl font-bold shadow-xl" asChild>
+                                <Button
+                                    size="lg"
+                                    className="bg-white text-blue-600 hover:bg-blue-50 rounded-full px-8 h-14"
+                                    style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                    asChild
+                                >
                                     <a href="#consultation">Prendre rendez-vous</a>
                                 </Button>
                             </div>

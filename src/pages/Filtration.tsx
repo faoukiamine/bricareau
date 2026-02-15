@@ -20,9 +20,9 @@ import teenagerShowerImg from "@/assets/teenager-taking-shower-reduce-hangover-e
 import undersinkSystemImg from "@/assets/Triple Stage Filter.jpg";
 import africanGirlImg from "@/assets/african-girl-stands-kitchen-drinks-water.jpg";
 import glassOfWaterImg from "@/assets/glass-of-water.jpeg";
-import waterTestingImg from "@/assets/2147800429.jpg";
-import process1 from "@/assets/2148563485.jpg";
-import labTestImg from "@/assets/test-laboratoire-diligence-inspection-750x500.jpg";
+import waterTestingImg from "@/assets/Scientist istesting water.webp";
+import process1 from "@/assets/2149228790.jpg";
+import labTestImg from "@/assets/2149239334.jpg";
 
 
 import {
