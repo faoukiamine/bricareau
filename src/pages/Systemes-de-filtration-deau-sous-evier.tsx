@@ -169,7 +169,7 @@ const FiltrationSousEvier = () => {
                                         />
                                     </div>
                                     <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
-                                        <h3 className="text-xl font-bold mb-4 group-hover:text-blue-600 transition-colors uppercase tracking-tight">{product.name}</h3>
+                                        <h3 className="text-xl font-bold mb-4 group-hover:text-blue-600 transition-colors tracking-tight">{product.name}</h3>
                                         <p className="text-lg font-light leading-relaxed text-slate-500 mb-6 flex-grow text-justify">{product.desc}</p>
                                         <div className="mt-auto">
                                             <NavLink

@@ -34,6 +34,7 @@ import Pieces from "./pages/Pieces";
 import Manuels from "./pages/Manuels";
 import Promotions from "./pages/Promotions";
 import SpecializedFiltration from "./pages/Filtres-deau-de-puits.tsx";
+import FiltresPourTouteLaMaison from "./pages/Filtres-deau-pour-toute-la-maison";
 import FiltrationSousEvier from "./pages/Systemes-de-filtration-deau-sous-evier";
 import DesinfectionUV from "./pages/Systemes-de-desinfection-UV";
 import FiltreEauHauteEfficacite from "./pages/Filtre-eau-haute-efficacite";
@@ -64,6 +65,7 @@ const App = () => (
           <Route path="/eau-de-puits" element={<EauDePuits />} />
           <Route path="/filtration" element={<Filtration />} />
           <Route path="/Filtres-deau" element={<SpecializedFiltration />} />
+          <Route path="/Filtres-deau-pour-toute-la-maison" element={<FiltresPourTouteLaMaison />} />
           <Route path="/Systemes-de-filtration-deau-sous-evier" element={<FiltrationSousEvier />} />
           <Route path="/Systemes-de-desinfection-UV" element={<DesinfectionUV />} />
           <Route path="/filtre-eau-haute-efficacite" element={<FiltreEauHauteEfficacite />} />

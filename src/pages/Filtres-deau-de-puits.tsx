@@ -232,7 +232,7 @@ const FiltresDeau = () => {
                                         />
                                     </div>
                                     <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
-                                        <h3 className="text-xl font-bold mb-4 group-hover:text-blue-600 transition-colors uppercase tracking-tight">{p.name}</h3>
+                                        <h3 className="text-xl font-bold mb-4 group-hover:text-blue-600 transition-colors tracking-tight">{p.name}</h3>
                                         <p className="text-slate-500 text-sm leading-relaxed mb-6 flex-grow">{p.desc}</p>
                                         <div className="mt-auto">
                                             <div className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-xs tracking-widest uppercase">
@@ -338,6 +338,27 @@ const FiltresDeau = () => {
                         </div>
                     </div>
                 </section>
+                {/* 5. CTA Section */}
+        <section className="bg-primary py-16 md:py-20">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-2xl md:text-3xl font-bold text-primary-foreground mb-4">
+              Besoin d'aide avec votre eau ?
+            </h2>
+            <p className="text-primary-foreground/80 text-lg mb-8 max-w-2xl mx-auto">
+              Discutez avec un expert en un clic. Disponible par téléphone ou à domicile selon vos préférences.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button
+                size="lg"
+                variant="outline"
+                className="rounded-full px-8 border-white text-white bg-transparent hover:bg-white/10"
+                asChild
+              >
+                <a href="tel:18552649328">Appelez le 1-855-264-9328</a>
+              </Button>
+            </div>
+          </div>
+        </section>
                 {/* Video / Video Section Thumbnail */}
                 <section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-4 text-center">

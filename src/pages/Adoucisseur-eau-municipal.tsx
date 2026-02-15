@@ -38,9 +38,9 @@ import {
 } from "@/components/ui/accordion";
 import ConsultationFormSection from "@/components/ConsultationFormSection";
 const products = [
-    { name: "Adoucisseur d'eau de la série SENTINELLE", desc: "Le rythme parfait d'une eau toujours douce.", path: "/filtre-eau-haute-efficacite", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
-    { name: "Adoucisseur d'eau de la série SÉRÉNITÉ", desc: "La paix durable pour votre maison et votre confort.", path: "/filtre-eau-haute-efficacite", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
-    { name: "Adoucisseur d'eau de la série INFINITI", desc: "Une douceur constante, à chaque goutte, à chaque seconde.", path: "/filtre-eau-haute-efficacite", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
+    { name: "Adoucisseur d'eau de la série Sentinelle", desc: "Le rythme parfait d'une eau toujours douce.", path: "/filtre-eau-haute-efficacite", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
+    { name: "Adoucisseur d'eau de la série Sérénité", desc: "La paix durable pour votre maison et votre confort.", path: "/filtre-eau-haute-efficacite", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
+    { name: "Adoucisseur d'eau de la série Infiniti", desc: "Une douceur constante, à chaque goutte, à chaque seconde.", path: "/filtre-eau-haute-efficacite", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
 ];
 
 const comparisonData = [
@@ -157,7 +157,7 @@ const AdoucisseurEauResidentiel = () => {
                                     <div className="w-20 h-20 rounded-2xl bg-white flex items-center justify-center mb-8 transition-all group-hover:scale-110 group-hover:bg-white/10">
                                         <item.icon className="h-10 w-10 text-blue-600 group-hover:text-white" />
                                     </div>
-                                    <h4 className="text-2xl font-bold mb-4 tracking-tight">{item.title}</h4>
+                                    <h4 className="text-2xl font-medium mb-4 tracking-tight">{item.title}</h4>
                                     <p className="text-lg font-light leading-relaxed text-blue-100 text-justify">{item.desc}</p>
                                 </div>
                             ))}
@@ -188,7 +188,7 @@ const AdoucisseurEauResidentiel = () => {
                                         />
                                     </div>
                                     <div className="p-8 text-center border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow items-center">
-                                        <h3 className="text-xl font-bold mb-2 group-hover:text-blue-600 transition-colors uppercase tracking-tight">
+                                        <h3 className="text-xl font-bold mb-2 group-hover:text-blue-600 transition-colors tracking-tight">
                                             {p.name.includes("Adoucisseur d'eau") ? (
                                                 <>
                                                     Adoucisseur d'eau <br />

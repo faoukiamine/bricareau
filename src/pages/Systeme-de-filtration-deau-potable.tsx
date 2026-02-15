@@ -154,9 +154,9 @@ const OsmoseFiltration = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
-                { name: "Systeme d'osmose inverse de la série Vectapure", desc: "La pureté accessible sans compromis sur la qualité.", img: vectapureROImg },
-                { name: "Systeme d'osmose inverse de la série Essentiel", desc: "Le summum de la filtration avec reminéralisation alcaline incluse.", img: drinkingWaterImg, path: "/ro-6" },
-                { name: "Systeme d'osmose inverse de la série Sérénité", desc: "Performance exceptionnelle pour les familles actives.", img: freezelifeROImg },
+                { name: "Système d'osmose inverse de la série Vectapure", desc: "La pureté accessible sans compromis sur la qualité.", img: vectapureROImg },
+                { name: "Système d'osmose inverse de la série Essentiel", desc: "Le summum de la filtration avec reminéralisation alcaline incluse.", img: drinkingWaterImg, path: "/ro-6" },
+                { name: "Système d'osmose inverse de la série Sérénité", desc: "Performance exceptionnelle pour les familles actives.", img: freezelifeROImg },
               ].map((product, i) => (
                 <div
                   key={i}
@@ -171,7 +171,7 @@ const OsmoseFiltration = () => {
                     />
                   </div>
                   <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
-                    <h3 className="text-xl font-bold mb-4 group-hover:text-blue-600 transition-colors uppercase tracking-tight">{product.name}</h3>
+                    <h3 className="text-xl font-bold mb-4 group-hover:text-blue-600 transition-colors tracking-tight">{product.name}</h3>
                     <p className="text-lg font-light leading-relaxed text-slate-500 text-sm mb-6 flex-grow text-justify">{product.desc}</p>
                     <div className="mt-auto">
                       <NavLink
@@ -283,15 +283,15 @@ const OsmoseFiltration = () => {
         <section className="py-24 bg-white border-t border-slate-100">
           <div className="container mx-auto px-6 max-w-4xl">
             <div className="text-left mb-16">
-                            <h2
-                                className="text-slate-900 tracking-tighter mb-8 text-left"
-                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
-                            >
-                                <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Pour vous éclairer</span>
-                                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">Questions fréquentes</span>
-                            </h2>
-                            <div className="w-24 h-1 bg-blue-600"></div>
-                        </div>
+              <h2
+                className="text-slate-900 tracking-tighter mb-8 text-left"
+                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+              >
+                <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Pour vous éclairer</span>
+                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">Questions fréquentes</span>
+              </h2>
+              <div className="w-24 h-1 bg-blue-600"></div>
+            </div>
 
             <Accordion type="single" collapsible className="w-full">
               {[

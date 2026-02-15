@@ -191,7 +191,7 @@ const AdoucisseursEauDePuits = () => {
                                     <div className="w-20 h-20 rounded-2xl bg-white flex items-center justify-center mb-8 transition-all group-hover:scale-110 group-hover:bg-white/10">
                                         <item.icon className="h-10 w-10 text-blue-600 group-hover:text-white" />
                                     </div>
-                                    <h4 className="text-2xl font-bold mb-4 tracking-tight">{item.title}</h4>
+                                    <h4 className="text-2xl font-medium mb-4 tracking-tight">{item.title}</h4>
                                     <p className="text-lg font-light leading-relaxed text-blue-100 text-justify">{item.desc}</p>
                                 </div>
                             ))}
@@ -226,7 +226,7 @@ const AdoucisseursEauDePuits = () => {
                                         />
                                     </div>
                                     <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
-                                        <h3 className="text-xl font-bold mb-4 group-hover:text-blue-600 transition-colors uppercase tracking-tight">{p.name}</h3>
+                                        <h3 className="text-xl font-bold mb-4 group-hover:text-blue-600 transition-colors tracking-tight">{p.name}</h3>
                                         <p className="text-lg font-light leading-relaxed text-slate-500 mb-6 flex-grow text-justify">{p.desc}</p>
                                         <div className="mt-auto">
                                             <NavLink
@@ -239,18 +239,6 @@ const AdoucisseursEauDePuits = () => {
                                     </div>
                                 </div>
                             ))}
-                        </div>
-                        <div className="mt-16 text-center">
-                            <p className="text-lg font-light leading-relaxed text-gray-600 mb-8 max-w-2xl mx-auto text-justify">
-                                Vous ne savez pas quel système choisir ? Nos experts peuvent vous aider à trouver la solution
-                                parfaite pour votre foyer.
-                            </p>
-                            <Button
-                                className="bg-blue-600 text-white rounded-full px-12 h-14"
-                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
-                            >
-                                Parlez avec un expert
-                            </Button>
                         </div>
                     </div>
                 </section>
@@ -303,6 +291,28 @@ const AdoucisseursEauDePuits = () => {
                         </div>
                     </div>
                 </section>
+
+                {/* 5. CTA Section */}
+        <section className="bg-primary py-16 md:py-20">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-2xl md:text-3xl font-bold text-primary-foreground mb-4">
+              Besoin d'aide avec votre eau ?
+            </h2>
+            <p className="text-primary-foreground/80 text-lg mb-8 max-w-2xl mx-auto">
+              Discutez avec un expert en un clic. Disponible par téléphone ou à domicile selon vos préférences.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button
+                size="lg"
+                variant="outline"
+                className="rounded-full px-8 border-white text-white bg-transparent hover:bg-white/10"
+                asChild
+              >
+                <a href="tel:18552649328">Appelez le 1-855-264-9328</a>
+              </Button>
+            </div>
+          </div>
+        </section>
 
                 {/* 5.Testimonials Grid Section */}
                 <TestimonialsSection />

@@ -117,12 +117,6 @@ const Header = () => {
           href: "/adoucisseurs-portables"
         },
 
-        {
-          icon: House,
-          title: "Livraison de sel",
-          description: "Obtenez des livraisons régulières de sel qui correspondent à votre horaire pour des recharges sans tracas.",
-          href: "/pieces"
-        },
 
       ],
       promo: {
@@ -140,7 +134,7 @@ const Header = () => {
           icon: GlassWater,
           title: "Filtres d'eau pour toute la maison",
           description: "Protection complète de votre maison avec une filtration centralisée pour toute l'eau.",
-          href: "/Filtres-deau"
+          href: "/Filtres-deau-pour-toute-la-maison"
         },
         {
           icon: Filter,
@@ -657,7 +651,7 @@ const Header = () => {
           menuItem.hasMegamenu && activeMegamenu === menuItem.name && (
             <div
               key={menuItem.name}
-              className="absolute top-full left-0 w-full bg-white border-t border-gray-100 shadow-lg z-40"
+              className="absolute top-full left-0 w-full bg-white/25 backdrop-blur-md border-t border-gray-100 shadow-lg z-40"
               onMouseEnter={() => handleMenuEnter(menuItem.name)}
               onMouseLeave={() => handleMenuLeave()}
             >

@@ -146,7 +146,7 @@ const ConditionneursSansSel = () => {
                 className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-white"
                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
               >
-                Lutter contre le calcaire ? <span className="font-normal">Il y a une autre solution...</span>
+                Lutter contre le calcaire ? <span className="font-normal"><br />Il y a une autre solution...</span>
               </h1>
               <p className="font-light text-[20px] leading-[28px] text-white/95 mb-8 max-w-xl">
                 Protégez votre plomberie et profitez d'une eau plus saine grâce à notre technologie
@@ -165,20 +165,20 @@ const ConditionneursSansSel = () => {
         </section>
 
         {/* 2. Why Choose Section */}
-        <section className="py-20 bg-[#00153D] text-white">
+        <section className="py-20 bg-blue-600 text-white">
           <div className="container mx-auto px-4">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-[32px] md:text-[48px] font-normal text-white mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-center">
                 Pourquoi choisir un conditionneur <br />d'eau sans sel ?
               </h2>
-              <div className="w-20 h-1 bg-blue-500 mx-auto" />
+              <div className="w-20 h-1 bg-white mx-auto" />
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
               {whyChoose.map((item, idx) => (
                 <div key={idx} className="flex flex-col items-center">
-                  <div className="w-16 h-16 rounded-full border-2 border-blue-400 flex items-center justify-center mb-6">
-                    <item.icon className="h-8 w-8 text-blue-400" />
+                  <div className="w-16 h-16 rounded-full border-2 border-white flex items-center justify-center mb-6">
+                    <item.icon className="h-8 w-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold mb-4">{item.title}</h3>
                   <p className="opacity-70 leading-relaxed">
@@ -263,21 +263,21 @@ const ConditionneursSansSel = () => {
         <section className="py-24 bg-white">
           <div className="container mx-auto px-4">
             <div className="text-left mb-16">
-                            <h2
-                                className="text-slate-900 tracking-tighter mb-8 text-left"
-                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
-                            >
-                                <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Pour vous éclairer</span>
-                                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">Questions fréquentes</span>
-                            </h2>
-                            <div className="w-24 h-1 bg-blue-600"></div>
-                        </div>
+              <h2
+                className="text-slate-900 tracking-tighter mb-8 text-left"
+                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+              >
+                <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Pour vous éclairer</span>
+                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">Questions fréquentes</span>
+              </h2>
+              <div className="w-24 h-1 bg-blue-600"></div>
+            </div>
 
             <div className="max-w-4xl mx-auto">
               <Accordion type="single" collapsible className="w-full">
                 {faqs.map((faq, idx) => (
                   <AccordionItem key={idx} value={`item-${idx}`} className="border-b-gray-200">
-                    <AccordionTrigger className="text-left font-bold text-lg hover:no-underline py-6">
+                    <AccordionTrigger className="text-left font-medium text-lg hover:no-underline py-6">
                       {faq.question}
                     </AccordionTrigger>
                     <AccordionContent className="text-gray-600 text-lg leading-relaxed pb-6">

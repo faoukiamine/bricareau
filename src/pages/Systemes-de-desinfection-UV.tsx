@@ -128,7 +128,7 @@ const DesinfectionUV = () => {
                                     <div className="w-20 h-20 rounded-2xl bg-white flex items-center justify-center mb-8 transition-all group-hover:scale-110 group-hover:bg-white/10">
                                         <benefit.icon className="h-10 w-10 text-blue-600 group-hover:text-white" />
                                     </div>
-                                    <h3 className="text-2xl font-bold mb-4 tracking-tight">{benefit.title}</h3>
+                                    <h3 className="text-2xl font-medium mb-4 tracking-tight">{benefit.title}</h3>
                                     <p className="text-lg font-light leading-relaxed text-blue-100 text-justify">{benefit.desc}</p>
                                 </div>
                             ))}
@@ -149,21 +149,25 @@ const DesinfectionUV = () => {
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 text-left">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                             {[
                                 { name: "VH200-F10", desc: "Préfiltration UV intégrée pour toute la maison\nIdéal pour : bactéries, turbidité/opacité.\nDébit : 9 gpm.", img: uvSystemImg2 },
                                 { name: "VH410-F20", desc: "Préfiltration UV intégrée pour toute la maison\nIdéal pour : bactéries, turbidité/eau trouble.\nDébit : 18 gpm.", img: uvSystemImg3 },
-                                { name: "Arros 15-IHS10", desc: "Système de traitement d'eau UV pour toute la maison\nIdéal pour : bactéries, turbidité/opacité.\nDébit : 15 gpm (56,8 l/min) 3,41 m³/h.", img: uvSystemImg4 }
+                                { name: "Arros 15-IHS10", desc: "Système de traitement d'eau UV pour toute la maison\nIdéal pour : bactéries, turbidité/opacité.\nDébit : 15 gpm.", img: uvSystemImg4 }
                             ].map((prod, i) => (
-                                <div key={i} className="group cursor-pointer">
-                                    <div className="bg-slate-50 aspect-video rounded-3xl mb-6 overflow-hidden flex items-center justify-center p-8 transition-all group-hover:shadow-xl group-hover:bg-white group-hover:-translate-y-2">
-                                        <img src={prod.img} alt={prod.name} className="w-full h-full object-contain mix-blend-multiply transition-transform duration-500 group-hover:scale-110" />
+                                <div key={i} className="bg-white rounded-3xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full cursor-pointer group">
+                                    <div className="bg-slate-50 aspect-square overflow-hidden flex items-center justify-center p-12">
+                                        <img src={prod.img} alt={prod.name} className="w-full h-full object-contain mix-blend-multiply transition-transform duration-700 group-hover:scale-110 drop-shadow-xl" />
                                     </div>
-                                    <h3 className="text-xl font-bold mb-2 group-hover:text-blue-600 transition-colors uppercase tracking-tight">{prod.name}</h3>
-                                    <p className="text-lg font-light leading-relaxed text-slate-500 mb-6 flex-grow text-justify">{prod.desc}</p>
-                                    <NavLink to="#" className="text-blue-600 font-bold flex items-center gap-2 text-sm tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-all">
-                                        EN SAVOIR PLUS <ChevronRight className="h-4 w-4" />
-                                    </NavLink>
+                                    <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
+                                        <h3 className="text-xl font-bold mb-4 group-hover:text-blue-600 transition-colors tracking-tight">{prod.name}</h3>
+                                        <p className="text-lg font-light leading-relaxed text-slate-500 mb-6 flex-grow text-justify">{prod.desc}</p>
+                                        <div className="mt-auto">
+                                            <NavLink to="#" className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-xs tracking-widest uppercase">
+                                                EN SAVOIR PLUS <ChevronRight className="h-4 w-4 transform group-hover:translate-x-1 transition-transform" />
+                                            </NavLink>
+                                        </div>
+                                    </div>
                                 </div>
                             ))}
                         </div>
@@ -250,7 +254,7 @@ const DesinfectionUV = () => {
                 {/* 8. FAQ Section */}
                 <section className="py-24 bg-white border-t border-slate-100">
                     <div className="container mx-auto px-4 text-left">
-                       <div className="text-left mb-16">
+                        <div className="text-left mb-16">
                             <h2
                                 className="text-slate-900 tracking-tighter mb-8 text-left"
                                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
