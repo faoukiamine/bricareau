@@ -20,6 +20,9 @@ import teenagerShowerImg from "@/assets/teenager-taking-shower-reduce-hangover-e
 import undersinkSystemImg from "@/assets/Triple Stage Filter.jpg";
 import africanGirlImg from "@/assets/african-girl-stands-kitchen-drinks-water.jpg";
 import glassOfWaterImg from "@/assets/glass-of-water.jpeg";
+import waterTestingImg from "@/assets/2147800429.jpg";
+import process1 from "@/assets/2148563485.jpg";
+import labTestImg from "@/assets/test-laboratoire-diligence-inspection-750x500.jpg";
 
 
 import {
@@ -292,36 +295,68 @@ const Filtration = () => {
                 </section>
 
                 {/* 6. Water Testing Section */}
-                <section className="py-24 bg-[#F8F9FA]">
+                {/* 6. Water Testing Section */}
+                <section className="py-24 bg-blue-600">
                     <div className="container mx-auto px-6">
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-                            {/* Left Side: Content */}
-                            <div className="flex flex-col items-start text-left lg:pr-10 order-2 lg:order-1">
-                                <span className="text-slate-400 text-xs font-bold uppercase tracking-[0.3em] mb-6">
+                        <div className="flex flex-col lg:flex-row items-center gap-16">
+                            {/* Left Column: Images Composition */}
+                            <div className="w-full lg:w-1/2 relative min-h-[500px] lg:min-h-[600px]">
+                                {/* Main Large Image (Back Left) */}
+                                <div className="absolute top-0 left-0 w-4/5 h-4/5 rounded-[2rem] overflow-hidden shadow-2xl z-10">
+                                    <img
+                                        src={waterTestingImg}
+                                        alt="Analyse d'eau principale"
+                                        className="w-full h-full object-cover"
+                                    />
+                                    <div className="absolute inset-0 bg-black/10"></div>
+                                </div>
+
+                                {/* Vertical Image (Front Right) */}
+                                <div className="absolute top-[10%] right-0 w-[35%] h-[55%] rounded-[1.5rem] overflow-hidden shadow-2xl z-20 border-[6px] border-white">
+                                    <img
+                                        src={process1}
+                                        alt="Scientifique analysant l'eau"
+                                        className="w-full h-full object-cover"
+                                    />
+                                </div>
+
+                                {/* Horizontal Image (Front Bottom) */}
+                                <div className="absolute bottom-[5%] left-[10%] w-[55%] h-[28%] rounded-[1.5rem] overflow-hidden shadow-2xl z-30 border-[6px] border-white">
+                                    <img
+                                        src={labTestImg}
+                                        alt="Résultats d'analyse"
+                                        className="w-full h-full object-cover"
+                                    />
+                                </div>
+                            </div>
+
+                            {/* Right Column: Content */}
+                            <div className="w-full lg:w-1/2 lg:pl-12">
+                                <span className="text-white/80 font-bold uppercase tracking-widest text-sm mb-4 block">
                                     Qualité d'eau
                                 </span>
-                                <h2 className="text-[32px] md:text-[48px] font-normal text-blue-600 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
+                                <h2
+                                    className="text-[40px] md:text-[52px] font-bold text-white mb-6 leading-[1.1] tracking-tighter"
+                                    style={{
+                                        fontFamily:
+                                            'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                    }}
+                                >
                                     Votre eau sous <br />
                                     la loupe.
                                 </h2>
-                                <p className="text-lg font-light leading-relaxed text-slate-500 mb-10 max-w-lg text-justify">
+                                <p className="text-lg text-white/90 mb-8 leading-relaxed text-left text-justify">
                                     Ne devinez pas la qualité de votre eau. Nos analyses approfondies identifient les bactéries, les minéraux et les contaminants chimiques pour vous offrir une tranquillité d'esprit totale.
                                 </p>
-                                <div className="flex flex-wrap items-center gap-8">
-                                    <NavLink to="/water-testing" className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-3 rounded-full transition-colors">
-                                        Demander une analyse d'eau
-                                    </NavLink>
-                                </div>
-                            </div>
-                            {/* Right Side: Overlapping Images */}
-                            <div className="relative h-[500px] md:h-[600px] order-1 lg:order-2">
-                                {/* Main Image (Larger) */}
-                                <div className="absolute top-0 left-0 w-4/5 h-[85%] rounded-[2rem] overflow-hidden shadow-2xl z-10 transition-transform duration-500 hover:scale-[1.02]">
-                                    <img
-                                        src={teenagerShowerImg}
-                                        alt="Système UV Protection"
-                                        className="w-full h-full object-cover"
-                                    />
+                                <div className="flex flex-wrap gap-6 items-center">
+                                    <Button
+                                        size="lg"
+                                        className="bg-white hover:bg-blue-50 text-blue-600 rounded-full px-8 h-14"
+                                        style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                        asChild
+                                    >
+                                        <a href="/water-testing">Demander une analyse d'eau</a>
+                                    </Button>
                                 </div>
                             </div>
                         </div>

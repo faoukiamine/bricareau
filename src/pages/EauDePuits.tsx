@@ -28,6 +28,13 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import ConsultationFormSection from "@/components/ConsultationFormSection";
 
 interface Problem {
@@ -98,14 +105,14 @@ const EauDePuits = () => {
 
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-2xl text-white">
-              <span className="text-sm font-bold uppercase tracking-widest text-[#60A5FA] mb-4 block">
+              <span className="text-sm font-bold uppercase tracking-widest text-blue-600 mb-4 block">
                 SOLUTIONS D'EAU POUR PUITS PRIVÉS
               </span>
               <h1
                 className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-white"
                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
               >
-                Votre puits est un trésor. <span className="font-normal">Offrez-lui la pureté qu'il mérite</span>
+                Votre puits est un trésor. <span className="font-normal">Offrez-lui la pureté qu'il mérite.</span>
               </h1>
               <p className="text-lg font-light leading-relaxed text-white/90 mb-8 max-w-xl text-justify">
                 Ne laissez plus le fer, le soufre ou les bactéries gâcher la richesse de votre puits. Transformez votre eau brute en une ressource cristalline, saine et parfaitement équilibrée pour toute votre famille.
@@ -253,7 +260,7 @@ const EauDePuits = () => {
           <div className="container mx-auto px-4">
             {/* Header Layout */}
             <div className="mb-24">
-              <span className="text-sm font-bold uppercase tracking-widest text-[#60A5FA] mb-4 block">
+              <span className="text-sm font-bold uppercase tracking-widest text-blue-600 mb-4 block">
                 NOTRE FONCTIONNEMENT
               </span>
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-end">
@@ -395,60 +402,73 @@ const EauDePuits = () => {
               <div className="w-24 h-1 bg-blue-600"></div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {[
-                {
-                  name: "Filtres d'eau spécialisés",
-                  desc: "Élimine les particules et impuretés pour protéger votre système.",
-                  img: specializedFiltersImg,
-                  link: "/filtres-deau"
-                },
-                {
-                  name: "Adoucisseurs d'eau de puits",
-                  desc: "Dites adieu aux problèmes de calcaire ! Nos adoucisseurs d'eau traitent durablement l'eau pour vous faire bénéficier d'une eau douce toute l'année.",
-                  img: waterSoftenerImg,
-                  link: "/adoucisseurs-eau-de-puits"
-                },
-                {
-                  name: "Stations d'eau potable",
-                  desc: "Élimine 99.9% des bactéries et virus pour une sécurité totale.",
-                  img: drinkingWaterImg,
-                  link: "/systeme-de-filtration-deau-potable"
-                },
-                {
-                  name: "Systèmes de stérilisation UV",
-                  desc: "Élimine 99.9% des bactéries et virus pour une sécurité totale.",
-                  img: uvSystemImg,
-                  link: "/Systemes-de-desinfection-UV"
-                }
-              ].map((prod, i) => (
-                <div
-                  key={i}
-                  className="group bg-white rounded-3xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full cursor-pointer"
-                  onClick={() => window.location.href = prod.link || "/contact"}
-                >
-                  <div className="bg-slate-50 aspect-square overflow-hidden flex items-center justify-center p-8">
-                    <img
-                      src={prod.img}
-                      alt={prod.name}
-                      className="w-full h-full object-contain mix-blend-multiply transition-transform duration-700 group-hover:scale-110 drop-shadow-xl"
-                    />
-                  </div>
-                  <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
-                    <h3 className="text-xl font-bold mb-4 group-hover:text-blue-600 transition-colors tracking-tight">{prod.name}</h3>
-                    <p className="text-lg font-light leading-relaxed text-slate-500 mb-6 flex-grow text-justify">{prod.desc}</p>
-                    <div className="mt-auto">
-                      <NavLink
-                        to={prod.link || "#"}
-                        className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-xs tracking-widest uppercase"
-                      >
-                        EN SAVOIR PLUS <ChevronRight className="h-4 w-4 transform group-hover:translate-x-1 transition-transform" />
-                      </NavLink>
+            <Carousel
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              className="w-full"
+            >
+              <CarouselContent className="-ml-4">
+                {[
+                  {
+                    name: "Filtres d'eau spécialisés",
+                    desc: "Éliminez sédiments et particules indésirables. Cette protection préserve vos tuyaux et appareils pour une eau claire et sans impuretés visibles.",
+                    img: specializedFiltersImg,
+                    link: "/filtres-deau"
+                  },
+                  {
+                    name: "Adoucisseurs d'eau de puits",
+                    desc: "Stop au calcaire et à la rouille. Une eau douce qui respecte votre peau, protège votre plomberie et garantit une vaisselle éclatante jour après jour.",
+                    img: waterSoftenerImg,
+                    link: "/adoucisseurs-eau-de-puits"
+                  },
+                  {
+                    name: <span>Stations d'eau <br /> potable</span>,
+                    desc: "Une eau de qualité supérieure à l'évier. L'osmose inverse élimine polluants, sodium et nitrates pour une hydratation pure, saine et au goût parfait.",
+                    img: drinkingWaterImg,
+                    link: "/systeme-de-filtration-deau-potable"
+                  },
+                  {
+                    name: "Systèmes de stérilisation UV",
+                    desc: "Sécurité totale sans produits chimiques. La technologie UV neutralise 99,99% des bactéries pour une eau potable saine et une tranquillité d'esprit absolue.",
+                    img: uvSystemImg,
+                    link: "/Systemes-de-desinfection-UV"
+                  }
+                ].map((prod, i) => (
+                  <CarouselItem key={i} className="pl-4 md:basis-1/2 lg:basis-1/3">
+                    <div
+                      className="group bg-white rounded-3xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full cursor-pointer"
+                      onClick={() => window.location.href = prod.link || "/contact"}
+                    >
+                      <div className="bg-slate-50 aspect-square overflow-hidden flex items-center justify-center p-6">
+                        <img
+                          src={prod.img}
+                          alt={prod.name}
+                          className="w-full h-full object-contain mix-blend-multiply transition-transform duration-700 group-hover:scale-110 drop-shadow-xl"
+                        />
+                      </div>
+                      <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
+                        <h3 className="text-xl font-bold mb-4 group-hover:text-blue-600 transition-colors tracking-tight text-center w-[55%] mx-auto">{prod.name}</h3>
+                        <p className="text-lg font-light leading-relaxed text-slate-500 mb-6 flex-grow text-justify">{prod.desc}</p>
+                        <div className="mt-auto">
+                          <NavLink
+                            to={prod.link || "#"}
+                            className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-xs tracking-widest uppercase"
+                          >
+                            EN SAVOIR PLUS <ChevronRight className="h-4 w-4 transform group-hover:translate-x-1 transition-transform" />
+                          </NavLink>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
-              ))}
-            </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <div className="flex justify-end gap-2 mt-8">
+                <CarouselPrevious className="relative static translate-y-0 translate-x-0 bg-blue-600 text-white hover:bg-blue-700 border-none" />
+                <CarouselNext className="relative static translate-y-0 translate-x-0 bg-blue-600 text-white hover:bg-blue-700 border-none" />
+              </div>
+            </Carousel>
           </div>
         </section>
 
