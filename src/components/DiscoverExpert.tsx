@@ -13,12 +13,11 @@ const DiscoverExpert = () => {
                             className="text-foreground tracking-tighter"
                             style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                         >
-                            <span className="text-[32px] md:text-[60px] font-light leading-[1.2] md:leading-[60px] block">Découvrez les options</span>
-                            <span className="text-[32px] md:text-[60px] font-normal leading-[1.2] md:leading-[60px] block">de traitement de nos spécialistes</span>
+                            <span className="text-[32px] md:text-[60px] font-light leading-[1.2] md:leading-[60px] block">Votre solution d'eau personnalisée</span>
+                            <span className="text-[32px] md:text-[60px] font-normal leading-[1.2] md:leading-[60px] block">en moins de 60 secondes.</span>
                         </h2>
                         <p className="text-lg font-light leading-relaxed text-muted-foreground text-justify">
-                            Nos spécialistes de l'eau vous guident vers la solution parfaite pour votre maison.
-                            Profitez d'une eau plus pure, plus douce et meilleure pour votre santé.
+                            Ne laissez plus le hasard décider de la qualité de votre eau. Que vous soyez sur l’aqueduc municipal ou propriétaire d’un puits, notre outil intelligent analyse vos besoins spécifiques pour identifier la solution de filtration idéale. Obtenez une recommandation d’expert adaptée à votre foyer et redécouvrez le plaisir d'une eau d'une pureté irréprochable.
                         </p>
                         <Button
                             size="lg"
