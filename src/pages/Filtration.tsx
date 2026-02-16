@@ -69,9 +69,8 @@ const Filtration = () => {
                                 className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-white"
                                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                             >
-                                Systèmes de <span className="font-normal">Filtration d'eau,</span>
-                                <br />
-                                conçus pour <span className="font-normal">votre bien-être.</span>
+                                <span className="font-bold">Systèmes de Filtration d'eau,</span>
+                                 <span className="font-bold">conçus pour votre bien-être.</span>
                             </h1>
                             <p className="text-lg font-light leading-relaxed text-white/95 mb-8 max-w-xl text-justify">
                                 Ne laissez plus le doute couler de votre robinet. Nos systèmes de filtration d'eau avancés agissent comme un bouclier invisible contre les contaminants, vous garantissant une eau d'une pureté irréprochable pour boire, cuisiner et grandir en toute confiance.
