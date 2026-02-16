@@ -29,6 +29,7 @@ import {
 import { NavLink } from "@/components/NavLink";
 import waterTestingImg from "@/assets/2147800429.jpg";
 import residentialWaterSoftenerImg from "@/assets/residential-water-softener.png";
+import waterSoftenerImg from "@/assets/Adoucisseurs d'eau.webp";
 import {
     Accordion,
     AccordionContent,
@@ -40,9 +41,9 @@ import { Label } from "@/components/ui/label";
 import ConsultationFormSection from "@/components/ConsultationFormSection";
 
 const products = [
-    { name: "Bricareau High Efficiency", desc: "Notre système le plus avancé et économe.", path: "/filtre-eau-haute-efficacite", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
-    { name: "Bricareau HE Connect", desc: "Contrôlez votre eau via votre smartphone.", path: "/filtre-eau-haute-efficacite", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
-    { name: "Bricareau HE Municipal", desc: "Élimine le chlore et adoucit l'eau.", path: "/filtre-eau-haute-efficacite", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
+    { name: "Adoucisseur d'eau de la série Sentinelle", desc: "Le rythme parfait d'une eau toujours douce.", path: "/adoucisseur-eau-municipal", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
+    { name: "Adoucisseur d'eau de la série Sérénité", desc: "La paix durable pour votre maison et votre confort.", path: "/adoucisseur-eau-municipal", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
+    { name: "Adoucisseur d'eau de la série Infiniti", desc: "Une douceur constante, à chaque goutte, à chaque seconde.", path: "/adoucisseur-eau-municipal", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
 ];
 
 const reviews = [
@@ -116,11 +117,42 @@ const faqItems = [
 ];
 
 const comparisonData = [
-    { feature: "Technologie High Efficiency", high: true, selectPlus: true, connect: true, select: false, medallist: false },
-    { feature: "Contrôle à distance (App)", high: true, selectPlus: false, connect: true, select: false, medallist: false },
-    { feature: "Protection du chlore intégrée", high: "Option", selectPlus: false, connect: false, select: false, medallist: false },
-    { feature: "Alertes de sel faible", high: true, selectPlus: true, connect: true, select: true, medallist: false },
-    { feature: "Diagnostic à distance", high: true, selectPlus: false, connect: true, select: false, medallist: false },
+    {
+        feature: "Principe de Déclenchement",
+        Sérénité: "Se régénère à intervalles de temps fixes (ex: tous les 3 jours).",
+        Sentinel: "Se régénère selon le volume d'eau réellement consommé.",
+        Infiniti: "Alterne entre deux bouteilles dès que l'une est saturée."
+    },
+    {
+        feature: "Disponibilité d'Eau Douce",
+        Sérénité: "Interrompue pendant la régénération (souvent la nuit).",
+        Sentinel: "Interrompue pendant la régénération (souvent la nuit).",
+        Infiniti: "Permanente (24h/24) sans aucune interruption."
+    },
+    {
+        feature: "Efficacité (Sel & Eau)",
+        Sérénité: "Moyenne (consomme même si peu d'eau a été utilisée).",
+        Sentinel: "Optimale (ne se régénère que si nécessaire).",
+        Infiniti: "Maximale (utilise la résine à 100% de sa capacité)."
+    },
+    {
+        feature: "Profil Utilisateur Idéal",
+        Sérénité: "Consommation d'eau très stable et prévisible.",
+        Sentinel: "Familles avec variations de consommation (invités, saisons).",
+        Infiniti: "Grosses consommations ou besoins critiques (gîtes, grandes familles)."
+    },
+    {
+        feature: "Complexité Technique",
+        Sérénité: "Simple et très robuste.",
+        Sentinel: "Électronique avancée avec capteur de débit.",
+        Infiniti: "Système double nécessitant plus d'espace."
+    },
+    {
+        feature: "Investissement Initial",
+        Sérénité: "Économique.",
+        Sentinel: "Intermédiaire.",
+        Infiniti: "Plus élevé."
+    },
 ];
 
 const AdoucisseursEauDePuits = () => {
@@ -247,13 +279,13 @@ const AdoucisseursEauDePuits = () => {
 
                 {/* 4.Comparison Table Section */}
                 <section className="py-24 bg-white border-t border-gray-100">
-                    <div className="container mx-auto px-6">
+                    <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
                             <h2
-                                className="text-slate-900 tracking-tighter mb-8 text-left"
+                                className="text-[32px] md:text-[60px] font-light text-slate-900 mb-8 leading-[1.1] md:leading-[60px] tracking-tighter text-left"
                                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                             >
-                                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">Comparaison des adoucisseurs<br />de l'eau de puits</span>
+                                Comparez nos <br /><span className="font-normal">adoucisseurs d'eau</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
@@ -261,31 +293,38 @@ const AdoucisseursEauDePuits = () => {
                             <table className="w-full min-w-[1000px] border-collapse bg-white rounded-2xl overflow-hidden shadow-sm">
                                 <thead>
                                     <tr className="bg-gray-100">
-                                        <th className="p-8 text-left text-gray-400 font-light uppercase tracking-wider">Modèles</th>
-                                        {["High Tech", "Select Plus", "Connect", "Select", "Medallist"].map(m => (
-                                            <th key={m} className="p-8 text-center text-gray-900 font-bold text-xl">{m}</th>
+                                        <th className="p-8 text-left text-gray-400 font-light uppercase tracking-wider w-1/4">Modèle</th>
+                                        {[
+                                            { name: "Sérénité", img: waterSoftenerImg },
+                                            { name: "Sentinel", img: waterSoftenerImg },
+                                            { name: "Infiniti", img: waterSoftenerImg }
+                                        ].map(m => (
+                                            <th key={m.name} className="p-4 text-center text-gray-900 font-bold border-l border-white/50 first:border-l-0">
+                                                <div className="flex flex-col items-center">
+                                                    <div className="h-[100px] w-full flex items-center justify-center mb-4">
+                                                        <img
+                                                            src={m.img}
+                                                            alt={m.name}
+                                                            className="max-h-full max-w-full object-contain mix-blend-multiply"
+                                                        />
+                                                    </div>
+                                                    <div className="text-[13px] leading-tight uppercase tracking-wider min-h-[32px] flex items-center justify-center px-1">
+                                                        {m.name}
+                                                    </div>
+                                                </div>
+                                            </th>
                                         ))}
                                     </tr>
                                 </thead>
                                 <tbody className="divide-y divide-gray-100">
                                     {comparisonData.map((row, i) => (
                                         <tr key={i} className="hover:bg-gray-50 transition-colors">
-                                            <td className="p-8 font-light text-gray-700">{row.feature}</td>
-                                            <td className="p-8 text-center">
-                                                {typeof row.high === 'string' ? row.high : (row.high ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : <X className="h-6 w-6 text-gray-300 mx-auto" />)}
-                                            </td>
-                                            <td className="p-8 text-center">
-                                                {row.selectPlus ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : <X className="h-6 w-6 text-gray-300 mx-auto" />}
-                                            </td>
-                                            <td className="p-8 text-center">
-                                                {row.connect ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : <X className="h-6 w-6 text-gray-300 mx-auto" />}
-                                            </td>
-                                            <td className="p-8 text-center">
-                                                {row.select ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : <X className="h-6 w-6 text-gray-300 mx-auto" />}
-                                            </td>
-                                            <td className="p-8 text-center">
-                                                {row.medallist ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : <X className="h-6 w-6 text-gray-300 mx-auto" />}
-                                            </td>
+                                            <td className="p-8 font-bold text-slate-900 border-r border-gray-100 bg-gray-50/30">{row.feature}</td>
+                                            {["Sérénité", "Sentinel", "Infiniti"].map((model) => (
+                                                <td key={model} className="p-8 text-center text-lg font-light leading-relaxed text-gray-600 text-justify">
+                                                    {(row as any)[model]}
+                                                </td>
+                                            ))}
                                         </tr>
                                     ))}
                                 </tbody>
@@ -308,12 +347,12 @@ const AdoucisseursEauDePuits = () => {
 
                     <div className="container mx-auto px-4 relative z-10">
                         <div className="max-w-2xl text-white">
-                            <h1
+                            <h2
                                 className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-white"
                                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                             >
                                 Des tests d'eau précis <span className="font-bold"><br />pour une tranquillité d'esprit totale.</span>
-                            </h1>
+                            </h2>
                             <p className="text-lg font-light leading-relaxed text-white/95 mb-8 max-w-xl text-justify">
                                 Ne devinez pas la qualité de votre eau. Nos analyses approfondies identifient les bactéries, les minéraux et les contaminants chimiques pour vous offrir une tranquillité d'esprit totale.
                             </p>

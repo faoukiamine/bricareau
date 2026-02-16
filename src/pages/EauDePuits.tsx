@@ -18,7 +18,7 @@ import waterTestingImg from "@/assets/2147800429.jpg";
 import waterTesting1Img from "@/assets/Gemini_Generated_Image_48dg6b48dg6b48dg.png";
 import process1 from "@/assets/2148563485.jpg";
 import process2 from "@/assets/section-image-and-content-23.jpg";
-import process3 from "@/assets/SERVICES.jpg";
+import process3 from "@/assets/service bricareau.webp";
 import process4 from "@/assets/unnamed (2).jpg";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import labTestImg from "@/assets/test-laboratoire-diligence-inspection-750x500.jpg";
@@ -323,11 +323,11 @@ const EauDePuits = () => {
         </section>
 
         {/* 7.Water Testing Section */}
-        <section className="relative h-[800px] flex items-start overflow-hidden pt-[220px]">
+        <section className="relative h-[650px] flex items-start overflow-hidden pt-[180px]">
           <div className="absolute inset-0 z-0">
             <img
               src={labTestImg}
-              alt="Homme prenant un bain d'eau douce"
+              alt="Analyse de l'eau en laboratoire"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-blue-900/40 lg:bg-gradient-to-r lg:from-blue-900/90 lg:to-blue-600/20 mix-blend-multiply" />

@@ -139,14 +139,14 @@ const ConditionneursSansSel = () => {
 
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-2xl text-white">
-              <span className="text-sm font-bold uppercase tracking-widest text-[#60A5FA] mb-4 block">
+              <span className="text-sm font-bold uppercase tracking-widest mb-4 block animate-color-pulse">
                 NOUVEAU CHEZ BRICAREAU
               </span>
               <h1
                 className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-white"
                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
               >
-                Lutter contre le calcaire ? <span className="font-normal"><br />Il y a une autre solution...</span>
+                Lutter contre le calcaire ? <span className="font-bold"><br />Il y a une autre solution...</span>
               </h1>
               <p className="font-light text-[20px] leading-[28px] text-white/95 mb-8 max-w-xl">
                 Protégez votre plomberie et profitez d'une eau plus saine grâce à notre technologie

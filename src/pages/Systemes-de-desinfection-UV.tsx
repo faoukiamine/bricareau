@@ -187,13 +187,26 @@ const DesinfectionUV = () => {
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
                         <div className="overflow-x-auto">
-                            <table className="w-full min-w-[800px] border-collapse bg-white rounded-2xl overflow-hidden shadow-sm">
+                            <table className="w-full min-w-[1000px] border-collapse bg-white rounded-2xl overflow-hidden shadow-sm">
                                 <thead>
                                     <tr className="bg-gray-100">
-                                        <th className="p-8 text-left text-gray-400 font-light uppercase tracking-wider">Fonctionnalités</th>
-                                        <th className="p-8 text-center text-blue-600 font-bold">VH200-F10</th>
-                                        <th className="p-8 text-center text-blue-600 font-bold bg-blue-50/50">VH410-F20</th>
-                                        <th className="p-8 text-center text-blue-600 font-bold bg-blue-50/50">Arros 15-IHS10</th>
+                                        <th className="p-8 text-left text-gray-400 font-light uppercase tracking-wider w-1/4">Modèle</th>
+                                        {[
+                                            { name: "VH200-F10", img: uvSystemImg2 },
+                                            { name: "VH410-F20", img: uvSystemImg3 },
+                                            { name: "Arros 15-IHS10", img: uvSystemImg4 }
+                                        ].map(m => (
+                                            <th key={m.name} className="p-4 text-center text-gray-900 font-bold">
+                                                <div className="flex flex-col items-center gap-2">
+                                                    <img
+                                                        src={m.img}
+                                                        alt={m.name}
+                                                        className="w-[120px] h-[100px] object-contain mx-auto mix-blend-multiply"
+                                                    />
+                                                    <div className="text-[14px]">{m.name}</div>
+                                                </div>
+                                            </th>
+                                        ))}
                                     </tr>
                                 </thead>
                                 <tbody className="divide-y divide-gray-100">
@@ -218,11 +231,11 @@ const DesinfectionUV = () => {
                 </section>
 
                 {/* 7.Water Testing Section */}
-                <section className="relative h-[800px] flex items-start overflow-hidden pt-[220px]">
+                <section className="relative h-[650px] flex items-start overflow-hidden pt-[180px]">
                     <div className="absolute inset-0 z-0">
                         <img
                             src={waterTestingImg}
-                            alt="Homme prenant un bain d'eau douce"
+                            alt="Analyse de l'eau en laboratoire"
                             className="w-full h-full object-cover"
                         />
                         <div className="absolute inset-0 bg-black/30 lg:bg-gradient-to-r lg:from-black/50 lg:to-transparent" />
@@ -233,12 +246,12 @@ const DesinfectionUV = () => {
                             <span className="text-white/80 text-xs font-black uppercase tracking-[0.3em] mb-8 block">
                                 ANALYSE MICROBIOLOGIQUE
                             </span>
-                            <h1
+                            <h2
                                 className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-white"
                                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                             >
                                 Votre eau est-elle <span className="font-bold"><br />vraiment sécuritaire ?</span>
-                            </h1>
+                            </h2>
                             <p className="text-lg font-light leading-relaxed text-white/95 mb-8 max-w-xl text-justify">
                                 Ne devinez pas la qualité de votre eau. Nos analyses approfondies identifient les bactéries, les minéraux et les contaminants chimiques pour vous offrir une tranquillité d'esprit totale.
                             </p>
@@ -247,7 +260,7 @@ const DesinfectionUV = () => {
                                     size="lg"
                                     className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14"
                                     style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
-                                    onClick={() => document.getElementById('nos-adoucisseurs')?.scrollIntoView({ behavior: 'smooth' })}
+                                    asChild
                                 >
                                     <a href="/tests-eau">Demander une analyse d'eau</a>
                                 </Button>

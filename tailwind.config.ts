@@ -85,10 +85,25 @@ export default {
             height: "0",
           },
         },
+        pulse: {
+          "0%, 100%": { opacity: "1" },
+          "50%": { opacity: ".5" },
+        },
+        "color-pulse": {
+          "0%, 100%": { color: "#ffffff" },
+          "50%": { color: "#2563EB" },
+        },
+        "scroll-y": {
+          "0%": { transform: "translateY(0)" },
+          "100%": { transform: "translateY(-50%)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "pulse-fast": "pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+        "color-pulse": "color-pulse 1s ease-in-out infinite",
+        "scroll-y": "scroll-y 30s linear infinite",
       },
     },
   },

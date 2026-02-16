@@ -386,7 +386,7 @@ const Filtration = () => {
                                     <tr className="bg-gray-100">
                                         <th className="p-8 text-left text-gray-400 font-light uppercase tracking-wider">Solutions</th>
                                         {[
-                                            { name: "Filtres spécialisés (Sédiments)", img: specializedFiltersImg },
+                                            { name: "Filtres spécialisés", img: specializedFiltersImg },
                                             { name: "Stations d'eau potable", img: drinkingWaterImg },
                                             { name: "Systèmes de filtration sous l'évier", img: undersinkSystemImg }
                                         ].map((m, i) => (
@@ -397,7 +397,7 @@ const Filtration = () => {
                                                         alt={m.name}
                                                         className="w-[150px] h-[120px] object-contain mx-auto mix-blend-multiply"
                                                     />
-                                                    <span className="max-w-[150px] inline-block uppercase tracking-wider text-[10px]">{m.name}</span>
+                                                    <div className="text-[14px]">{m.name}</div>
                                                 </div>
                                             </th>
                                         ))}

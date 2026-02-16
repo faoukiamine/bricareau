@@ -45,12 +45,6 @@ const products = [
     { name: "Filtre d'eau Zéro-As", desc: "Spécialisé pour l'eau contenant de l'arsenic.", image: specializedFiltersImg },
     { name: "Filtre d'eau Tann-Ex", desc: "Spécialisé pour l'eau contenant du tanin.", image: watersofterImg },
     { name: "Système d'osmose inverse Sérénité Pure", desc: "Spécialisé pour l'eau contenant beaucoup de sels dissous.", image: drinkingwatersofterImg },
-
-];
-
-const reviews = [
-    { name: "Robert D.", rating: 4, text: "Bon produit, technicien très professionnel. Je recommande vivement.", date: "Il y a 1 mois" },
-    { name: "Sophie T.", rating: 5, text: "Une eau de qualité partout dans la maison. Le service client de Bricareau est top.", date: "Il y a 2 semaines" },
 ];
 
 const faqItems = [
@@ -117,11 +111,11 @@ const faqItems = [
 ];
 
 const comparisonData = [
-    { feature: "Technologie High Efficiency", high: true, selectPlus: true, connect: true, select: false, medallist: false },
-    { feature: "Contrôle à distance (App)", high: true, selectPlus: false, connect: true, select: false, medallist: false },
-    { feature: "Protection du chlore intégrée", high: "Option", selectPlus: false, connect: false, select: false, medallist: false },
-    { feature: "Alertes de sel faible", high: true, selectPlus: true, connect: true, select: true, medallist: false },
-    { feature: "Diagnostic à distance", high: true, selectPlus: false, connect: true, select: false, medallist: false },
+    { feature: "Technologie High Efficiency", Vortex: true, ZenPH: true, ChlorStop: true, IronShield: false, OxyPure: true, SulphurShield: true, ZeroAs: true, TannEx: true, SerenitePure: true },
+    { feature: "Contrôle à distance (App)", Vortex: true, ZenPH: true, ChlorStop: true, IronShield: false, OxyPure: false, SulphurShield: false, ZeroAs: true, TannEx: true, SerenitePure: true },
+    { feature: "Protection du chlore intégrée", Vortex: "Option", ZenPH: true, ChlorStop: true, IronShield: false, OxyPure: false, SulphurShield: false, ZeroAs: false, TannEx: false, SerenitePure: true },
+    { feature: "Alertes de sel faible", Vortex: true, ZenPH: true, ChlorStop: true, IronShield: false, OxyPure: true, SulphurShield: true, ZeroAs: true, TannEx: true, SerenitePure: true },
+    { feature: "Diagnostic à distance", Vortex: true, ZenPH: true, ChlorStop: true, IronShield: false, OxyPure: true, SulphurShield: true, ZeroAs: true, TannEx: true, SerenitePure: true },
 ];
 
 const FiltresPuits = () => {
@@ -268,12 +262,35 @@ const FiltresPuits = () => {
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
                         <div className="overflow-x-auto">
-                            <table className="w-full min-w-[1000px] border-collapse bg-white rounded-2xl overflow-hidden shadow-sm">
+                            <table className="w-full min-w-[1600px] border-collapse bg-white rounded-2xl overflow-hidden shadow-sm">
                                 <thead>
                                     <tr className="bg-gray-100">
-                                        <th className="p-8 text-left text-gray-400 font-medium uppercase tracking-wider">Modèles</th>
-                                        {["High Tech", "Select Plus", "Connect", "Select", "Medallist"].map(m => (
-                                            <th key={m} className="p-8 text-center text-gray-900 font-bold text-xl">{m}</th>
+                                        <th className="p-8 text-left text-gray-400 font-medium uppercase tracking-wider w-[280px]">Modèles</th>
+                                        {[
+                                            { key: "Vortex", name: "Vortex", img: specializedFiltersImg },
+                                            { key: "ZenPH", name: "Zen-pH", img: specializedFiltersImg },
+                                            { key: "ChlorStop", name: "ChlorStop", img: specializedFiltersImg },
+                                            { key: "IronShield", name: "Iron Shield", img: specializedFiltersImg },
+                                            { key: "OxyPure", name: "Oxy-pure", img: specializedFiltersImg },
+                                            { key: "SulphurShield", name: "Sulphur Shield", img: specializedFiltersImg },
+                                            { key: "ZeroAs", name: "Zéro-As", img: specializedFiltersImg },
+                                            { key: "TannEx", name: "Tann-Ex", img: watersofterImg },
+                                            { key: "SerenitePure", name: "Sérénité Pure", img: drinkingwatersofterImg }
+                                        ].map(m => (
+                                            <th key={m.key} className="p-4 text-center text-gray-900 font-bold border-l border-white/50 first:border-l-0">
+                                                <div className="flex flex-col items-center">
+                                                    <div className="h-[100px] w-full flex items-center justify-center mb-4">
+                                                        <img
+                                                            src={m.img}
+                                                            alt={m.name}
+                                                            className="max-h-full max-w-full object-contain mix-blend-multiply"
+                                                        />
+                                                    </div>
+                                                    <div className="text-[13px] leading-tight uppercase tracking-wider min-h-[32px] flex items-center justify-center px-1">
+                                                        {m.name}
+                                                    </div>
+                                                </div>
+                                            </th>
                                         ))}
                                     </tr>
                                 </thead>
@@ -281,21 +298,15 @@ const FiltresPuits = () => {
                                     {comparisonData.map((row, i) => (
                                         <tr key={i} className="hover:bg-gray-50 transition-colors">
                                             <td className="p-8 font-medium text-gray-700">{row.feature}</td>
-                                            <td className="p-8 text-center">
-                                                {typeof row.high === 'string' ? row.high : (row.high ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : <X className="h-6 w-6 text-gray-300 mx-auto" />)}
-                                            </td>
-                                            <td className="p-8 text-center">
-                                                {row.selectPlus ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : <X className="h-6 w-6 text-gray-300 mx-auto" />}
-                                            </td>
-                                            <td className="p-8 text-center">
-                                                {row.connect ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : <X className="h-6 w-6 text-gray-300 mx-auto" />}
-                                            </td>
-                                            <td className="p-8 text-center">
-                                                {row.select ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : <X className="h-6 w-6 text-gray-300 mx-auto" />}
-                                            </td>
-                                            <td className="p-8 text-center">
-                                                {row.medallist ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : <X className="h-6 w-6 text-gray-300 mx-auto" />}
-                                            </td>
+                                            {["Vortex", "ZenPH", "ChlorStop", "IronShield", "OxyPure", "SulphurShield", "ZeroAs", "TannEx", "SerenitePure"].map((key) => (
+                                                <td key={key} className="p-8 text-center">
+                                                    {typeof (row as any)[key] === 'string' ? (
+                                                        <span className="text-blue-600 font-bold text-[10px] bg-blue-50 px-3 py-1 rounded-full">{(row as any)[key]}</span>
+                                                    ) : (
+                                                        (row as any)[key] ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : <X className="h-6 w-6 text-gray-300 mx-auto" />
+                                                    )}
+                                                </td>
+                                            ))}
                                         </tr>
                                     ))}
                                 </tbody>
@@ -305,11 +316,11 @@ const FiltresPuits = () => {
                 </section>
 
                 {/* 7.Water Testing Section */}
-                <section className="relative h-[800px] flex items-start overflow-hidden pt-[220px]">
+                <section className="relative h-[650px] flex items-start overflow-hidden pt-[180px]">
                     <div className="absolute inset-0 z-0">
                         <img
                             src={waterTestingImg}
-                            alt="Homme prenant un bain d'eau douce"
+                            alt="Analyse de l'eau en laboratoire"
                             className="w-full h-full object-cover"
                         />
                         <div className="absolute inset-0 bg-blue-900/40 lg:bg-gradient-to-r lg:from-blue-900/90 lg:to-blue-600/20 mix-blend-multiply" />
@@ -320,13 +331,13 @@ const FiltresPuits = () => {
                             <span className="text-white/80 font-bold uppercase tracking-widest text-sm mb-4 block">
                                 Contrôle de la Qualité D'EAU
                             </span>
-                            <h1
+                            <h2
                                 className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-white"
                                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                             >
                                 L'excellence commence<br />
                                 par <span className="font-bold">une eau parfaite.</span>
-                            </h1>
+                            </h2>
                             <p className="text-lg font-light leading-relaxed text-white/95 mb-8 max-w-xl text-justify">
                                 Le luxe, c'est de ne pas avoir à se soucier de la qualité de ce que l'on consomme. Offrez-vous la sérénité d'une eau analysée par des experts, pour une maison où tout brille, sans effort et sans compromis.
                             </p>
@@ -335,7 +346,7 @@ const FiltresPuits = () => {
                                     size="lg"
                                     className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14"
                                     style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
-                                    onClick={() => document.getElementById('nos-adoucisseurs')?.scrollIntoView({ behavior: 'smooth' })}
+                                    asChild
                                 >
                                     <a href="/tests-eau">Demander une analyse d'eau</a>
                                 </Button>

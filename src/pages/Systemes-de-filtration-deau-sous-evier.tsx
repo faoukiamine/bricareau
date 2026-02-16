@@ -242,16 +242,15 @@ const FiltrationSousEvier = () => {
                                             { name: "Essential", img: essentialImg },
                                             { name: "Plus RO", img: plusROImg },
                                             { name: "Elite RO", img: eliteROImg },
-
                                         ].map((m, i) => (
-                                            <th key={i} className="p-4 text-center text-gray-900 font-bold text-sm">
+                                            <th key={i} className="p-4 text-center text-gray-900 font-bold">
                                                 <div className="flex flex-col items-center gap-2">
                                                     <img
                                                         src={m.img}
                                                         alt={m.name}
                                                         className="w-[120px] h-[100px] object-contain mx-auto mix-blend-multiply"
                                                     />
-                                                    <span className="max-w-[100px] inline-block uppercase tracking-wider text-[10px]">{m.name}</span>
+                                                    <div className="text-[14px]">{m.name}</div>
                                                 </div>
                                             </th>
                                         ))}
@@ -262,18 +261,57 @@ const FiltrationSousEvier = () => {
                                         <tr key={i} className="hover:bg-gray-50 transition-colors">
                                             <td className="p-8 font-light text-gray-700">{row.feature}</td>
                                             <td className="p-8 text-center">
-                                                {typeof row.elite === 'string' ? <span className="text-blue-600 font-bold bg-blue-50 px-3 py-1 rounded-full text-[10px]">{row.elite}</span> : (row.elite ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : <X className="h-6 w-6 text-gray-300 mx-auto" />)}
+                                                {row.essential ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : <X className="h-6 w-6 text-gray-300 mx-auto" />}
                                             </td>
                                             <td className="p-8 text-center">
                                                 {typeof row.plus === 'string' ? <span className="text-blue-600 font-bold bg-blue-50 px-3 py-1 rounded-full text-[10px]">{row.plus}</span> : (row.plus ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : <X className="h-6 w-6 text-gray-300 mx-auto" />)}
                                             </td>
                                             <td className="p-8 text-center">
-                                                {row.essential ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : <X className="h-6 w-6 text-gray-300 mx-auto" />}
+                                                {typeof row.elite === 'string' ? <span className="text-blue-600 font-bold bg-blue-50 px-3 py-1 rounded-full text-[10px]">{row.elite}</span> : (row.elite ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : <X className="h-6 w-6 text-gray-300 mx-auto" />)}
                                             </td>
                                         </tr>
                                     ))}
                                 </tbody>
                             </table>
+                        </div>
+                    </div>
+                </section>
+
+                {/* 7.Water Testing Section */}
+                <section className="relative h-[650px] flex items-start overflow-hidden pt-[180px]">
+                    <div className="absolute inset-0 z-0">
+                        <img
+                            src={waterTestingImg}
+                            alt="Analyse de l'eau en laboratoire"
+                            className="w-full h-full object-cover"
+                        />
+                        <div className="absolute inset-0 bg-black/30 lg:bg-gradient-to-r lg:from-black/50 lg:to-transparent" />
+                        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-white via-white/10 to-transparent" />
+                    </div>
+                    <div className="container mx-auto px-4 relative z-10">
+                        <div className="max-w-2xl text-white">
+                            <span className="text-white/80 text-xs font-black uppercase tracking-[0.3em] mb-8 block">
+                                ANALYSE PROFESSIONNELLE
+                            </span>
+                            <h2
+                                className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-white"
+                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                            >
+                                Des tests d'eau précis <span className="font-bold"><br />pour une tranquillité totale.</span>
+                            </h2>
+                            <p className="text-lg font-light leading-relaxed text-white/95 mb-8 max-w-xl text-justify">
+                                Ne devinez pas la qualité de votre eau. Nos analyses approfondies identifient les bactéries, les minéraux et les contaminants chimiques pour vous offrir une tranquillité d'esprit totale.
+                            </p>
+                            <div className="flex gap-4">
+                                <Button
+                                    size="lg"
+                                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14"
+                                    style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                    asChild
+                                >
+                                    <a href="/tests-eau">Demander une analyse d'eau</a>
+                                </Button>
+                            </div>
                         </div>
                     </div>
                 </section>
