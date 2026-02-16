@@ -24,9 +24,12 @@ const DiscoverExpert = () => {
                             size="lg"
                             className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 group"
                             style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                            asChild
                         >
-                            Répondre à notre Quiz
-                            <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                            <a href="/diagnostic">
+                                Diagnostiquer mon Eau
+                                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform inline-block" />
+                            </a>
                         </Button>
                     </div>
 

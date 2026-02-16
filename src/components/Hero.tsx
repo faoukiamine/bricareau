@@ -37,11 +37,20 @@ const Hero = () => {
             <div className="flex gap-4 pt-4">
               <Button
                 size="lg"
-                className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14"
+                className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200"
                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                 asChild
               >
                 <a href="#solutions-title">Explorer nos solutions</a>
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-white text-white bg-transparent hover:bg-white/10 rounded-full px-8 h-14"
+                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                asChild
+              >
+                <a href="/diagnostic">Diagnostiquer mon eau</a>
               </Button>
             </div>
           </div>
