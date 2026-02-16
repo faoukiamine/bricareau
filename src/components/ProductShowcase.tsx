@@ -83,19 +83,19 @@ const ProductShowcase = () => {
                             {/* Product info */}
                             <div className="p-8 space-y-4 flex flex-col flex-grow border-t-2 border-transparent group-hover:border-blue-600 transition-colors">
                                 <h3
-                                    className="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors uppercase tracking-tight"
+                                    className="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors tracking-tight"
                                     style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                                 >
                                     {product.name}
                                 </h3>
                                 <p
-                                    className="text-slate-500 font-light leading-relaxed flex-grow"
+                                    className="text-slate-500 font-light leading-relaxed flex-grow text-justify"
                                     style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                                 >
                                     {product.description}
                                 </p>
                                 <div
-                                    className="inline-flex items-center gap-2 text-blue-600 font-bold text-xs tracking-widest uppercase mt-4 group-hover:underline"
+                                    className="inline-flex items-center gap-2 text-blue-600 font-bold text-xs tracking-widest uppercase mt-4 group-hover:underline self-end"
                                     style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                                 >
                                     <span>EN SAVOIR PLUS</span>

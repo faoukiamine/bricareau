@@ -10,17 +10,13 @@ import {
     Shield,
     Zap,
     TrendingDown,
-    Play,
     X,
     Phone
 } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import { useNavigate } from "react-router-dom";
-import waterTestBg from "@/assets/Enercare_JP_Day_2_Kitchen_Faucet_498-2048x1365.jpg";
-import bathroomImg from "@/assets/contemporary-bathroom-elements.jpg";
+import waterTestingImg from "@/assets/3756051.jpg";
 import specializedFiltersImg from "@/assets/Filtres d'eau spécialisés.webp";
-import watersofterImg from "@/assets/Adoucisseurs d'eau.webp";
-import drinkingwatersofterImg from "@/assets/Solutions d'eau potable.webp";
 import {
     Accordion,
     AccordionContent,
@@ -134,16 +130,17 @@ const FiltresTouteMaison = () => {
                     <div className="container mx-auto px-4 relative z-10">
                         <div className="max-w-2xl text-white">
                             <span className="text-sm font-bold uppercase tracking-widest text-blue-600 mb-4 block">
-                                SOLUTIONS DE FILTRATION d'eau pour toute la maison
+                                SOLUTIONS DE FILTRATION D'EAU POUR TOUTE LA MAISON
                             </span>
                             <h1
                                 className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-bold mb-8 tracking-tighter text-white"
                                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                             >
-                                Une eau d'exception, <span className="font-normal">dans chaque robinet</span>
+                                <span className="font-bold">Une eau d'exception, <br /></span> <span className="font-normal text-white/90">dans chaque robinet</span>
                             </h1>
                             <p className="font-light text-[20px] leading-[28px] text-white/95 mb-8 max-w-xl text-justify">
-                                Offrez à votre famille la protection ultime avec nos systèmes de filtration haute performance pour toute la maison. De la cuisine à la salle de bain, profitez d'une eau cristalline, débarrassée des sédiments et du chlore, pour une santé préservée et des installations durablement protégées.                            </p>
+                                Offrez à votre famille la protection ultime avec nos systèmes de filtration haute performance pour toute la maison. De la cuisine à la salle de bain, profitez d'une eau cristalline, débarrassée des sédiments et du chlore, pour une santé préservée et des installations durablement protégées.
+                            </p>
                             <div className="flex flex-col sm:flex-row gap-4">
                                 <Button
                                     size="lg"
@@ -291,35 +288,40 @@ const FiltresTouteMaison = () => {
                     </div>
                 </section>
 
-                {/* 7. Water Test Section */}
-                <section className="py-20 bg-white">
-                    <div className="container mx-auto px-4">
-                        <div className="flex flex-col lg:flex-row items-stretch gap-0 rounded-[3rem] overflow-hidden shadow-2xl">
-                            <div className="lg:w-1/2 relative min-h-[400px] overflow-hidden">
-                                <img
-                                    src={bathroomImg}
-                                    alt="Éléments de salle de bain contemporaine"
-                                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-105"
-                                />
-                                <div className="absolute inset-0 bg-blue-900/10 pointer-events-none" />
-                            </div>
-                            <div className="lg:w-1/2 bg-blue-600 text-white p-12 lg:p-20 flex flex-col justify-center items-start text-left">
-                                <span className="text-white/80 text-xs font-black uppercase tracking-[0.3em] mb-8 block">
-                                    Qualité de l'eau
-                                </span>
-                                <h2 className="text-[32px] md:text-[48px] font-normal text-white mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
-                                    L'excellence commence par une eau parfaite.
-                                </h2>
-                                <p className="font-light text-[20px] leading-[28px] text-white/90 mb-12">
-                                    Le luxe, c'est de ne pas avoir à se soucier de la qualité de ce que l'on consomme. Offrez-vous la sérénité d'une eau analysée par des experts, pour une maison où tout brille, sans effort et sans compromis.
-                                </p>
+                {/* 7.Water Testing Section */}
+                <section className="relative h-[650px] flex items-start overflow-hidden pt-[180px]">
+                    <div className="absolute inset-0 z-0">
+                        <img
+                            src={waterTestingImg}
+                            alt="Analyse de l'eau en laboratoire"
+                            className="w-full h-full object-cover"
+                        />
+                        <div className="absolute inset-0 bg-blue-900/40 lg:bg-gradient-to-r lg:from-blue-900/90 lg:to-blue-600/20 mix-blend-multiply" />
+                        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-white via-white/10 to-transparent" />
+                    </div>
+                    <div className="container mx-auto px-4 relative z-10">
+                        <div className="max-w-2xl text-white">
+                            <span className="text-white/80 font-bold uppercase tracking-widest text-sm mb-4 block">
+                                Contrôle de la Qualité D'EAU
+                            </span>
+                            <h2
+                                className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-white"
+                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                            >
+                                L'excellence commence<br />
+                                par <span className="font-bold">une eau parfaite.</span>
+                            </h2>
+                            <p className="text-lg font-light leading-relaxed text-white/95 mb-8 max-w-xl text-justify">
+                                Le luxe, c'est de ne pas avoir à se soucier de la qualité de ce que l'on consomme. Offrez-vous la sérénité d'une eau analysée par des experts, pour une maison où tout brille, sans effort et sans compromis.
+                            </p>
+                            <div className="flex gap-4">
                                 <Button
                                     size="lg"
-                                    className="bg-white text-blue-600 hover:bg-blue-50 rounded-full px-8 h-14 transition-all duration-300 hover:scale-105 shadow-lg"
+                                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14"
                                     style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                                     asChild
                                 >
-                                    <NavLink to="/tests-eau">Demander une analyse d'eau</NavLink>
+                                    <a href="/tests-eau">Demander une analyse d'eau</a>
                                 </Button>
                             </div>
                         </div>
@@ -347,29 +349,6 @@ const FiltresTouteMaison = () => {
                             >
                                 <a href="tel:18552649328">Appelez le 1-855-264-9328</a>
                             </Button>
-                        </div>
-                    </div>
-                </section>
-                {/* Video / Video Section Thumbnail */}
-                <section className="py-24 bg-gray-50">
-                    <div className="container mx-auto px-4 text-center">
-                        <div className="text-left mb-16">
-                            <h2
-                                className="text-slate-900 tracking-tighter mb-8 text-left"
-                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
-                            >
-                                <span className="text-[40px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Le filtre d'eau </span>
-                                <span className="text-[40px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">que vous devez avoir</span>
-                            </h2>
-                            <div className="w-24 h-1 bg-blue-600"></div>
-                        </div>
-                        <div className="max-w-4xl mx-auto relative rounded-[40px] overflow-hidden group cursor-pointer shadow-2xl">
-                            <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=1600&auto=format&fit=crop" alt="Video Placeholder" className="w-full aspect-video object-cover transition-transform group-hover:scale-105 duration-700" />
-                            <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors flex items-center justify-center">
-                                <div className="w-24 h-24 rounded-full bg-blue-600/90 text-white flex items-center justify-center transition-transform group-hover:scale-110">
-                                    <Play className="h-10 w-10 fill-white" />
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </section>
