@@ -200,7 +200,7 @@ const ConsultationFormSection = ({ id }: { id?: string }) => {
                     {/* Left Side Content */}
                     <div className="w-full text-left">
                         <h2
-                            className="text-slate-900 tracking-tighter mb-8 italic text-left"
+                            className="text-slate-900 tracking-tighter mb-8 text-left"
                             style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                         >
                             <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Planifiez une consultation</span>

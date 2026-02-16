@@ -1,23 +1,17 @@
+import heroImage from "@/assets/Gemini_Generated_Image_ct1u02ct1u02ct1u.png";
 import { Button } from "@/components/ui/button";
-import { NavLink } from "@/components/NavLink";
-import heroVideo from "../assets/hero-uhd_3840_2160_30fps.mp4";
 
 const Hero = () => {
 
   return (
     <section className="relative w-full h-[800px] flex items-start overflow-hidden pt-[220px]">
       {/* Background image with overlay */}
-      {/* Background video with overlay */}
       <div className="absolute inset-0 z-0 overflow-hidden">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute top-1/2 left-[51%] min-w-[105%] min-h-[105%] object-[25%_center] md:object-center object-cover -translate-x-1/2 -translate-y-1/2"
-        >
-          <source src={heroVideo} type="video/mp4" />
-        </video>
+        <img
+          src={heroImage}
+          alt="Hero background"
+          className="w-full h-full object-cover"
+        />
         <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-transparent z-10" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-white via-white/10 to-transparent z-10" />
       </div>
@@ -28,7 +22,7 @@ const Hero = () => {
           {/* Left side - Hero text */}
           <div className="space-y-6 text-white">
             <h1
-              className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light"
+              className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-bold"
               style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
             >
               Protégez votre eau, <span className="font-normal">protégez votre famille</span>

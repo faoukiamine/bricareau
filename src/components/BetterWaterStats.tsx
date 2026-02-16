@@ -33,7 +33,7 @@ const BetterWaterStats = () => {
                         className="text-white tracking-tighter"
                         style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                     >
-                        <span className="text-[32px] md:text-[60px] font-light leading-[1.2] md:leading-[60px] block">La promesse d'une eau saine,</span>
+                        <span className="text-[32px] md:text-[60px] font-bold leading-[1.2] md:leading-[60px] block">La promesse d'une eau saine,</span>
                         <span className="text-[32px] md:text-[60px] font-normal leading-[1.2] md:leading-[60px] block">de notre première rencontre à votre confort absolu.</span>
                     </h2>
                 </div>
@@ -53,7 +53,7 @@ const BetterWaterStats = () => {
                                     </div>
                                 </div>
                                 <div className="space-y-3">
-                                    <h3 className="text-xl md:text-2xl font-bold text-white">
+                                    <h3 className="text-xl md:text-2xl font-medium text-white">
                                         {stat.title}
                                     </h3>
                                     <p className="text-sm md:text-base text-white/80 leading-relaxed font-light">

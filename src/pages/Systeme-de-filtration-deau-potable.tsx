@@ -36,7 +36,7 @@ import sereneLiteImg from "@/assets/Système+de+filtration+Serene+Lite.webp";
 import specializedFiltersImg from "@/assets/Filtres d'eau spécialisés.webp";
 import waterSoftenerImg from "@/assets/Adoucisseurs d'eau.webp";
 import uvSystemImg from "@/assets/Systèmes de désinfection UV.webp";
-import waterTestingImg from "@/assets/pexels-gabby-k-7114630.jpg";
+import waterTestingImg from "@/assets/test-laboratoire-diligence-inspection-750x500.jpg";
 
 const StationEauPotable = () => {
   const navigate = useNavigate();
@@ -75,7 +75,7 @@ const StationEauPotable = () => {
                 className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-white"
                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
               >
-                La différence que vous pouvez voir <br /> <span className="font-normal">sentir et goûter</span>
+                La différence que vous pouvez <span className="font-bold">voir, sentir</span> <br /> <span className="font-bold">et goûter</span>
               </h1>
               <p className="text-lg font-light leading-relaxed text-white/95 mb-8 max-w-xl text-justify">
                 Profitez d'une eau pure et délicieuse directement de votre robinet.

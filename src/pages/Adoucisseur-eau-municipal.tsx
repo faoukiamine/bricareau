@@ -28,7 +28,7 @@ import {
     HandCoins
 } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
-import waterTestingImg from "@/assets/2147800429.jpg";
+import waterTestingImg from "@/assets/test-laboratoire-diligence-inspection-750x500.jpg";
 import residentialWaterSoftenerImg from "@/assets/residential-water-softener.png";
 import {
     Accordion,
@@ -120,13 +120,13 @@ const AdoucisseurEauResidentiel = () => {
                     <div className="container mx-auto px-4 relative z-10">
                         <div className="max-w-2xl text-white">
                             <h1
-                                className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-white text-justify"
+                                className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-bold mb-8 tracking-tighter text-white text-justify"
                                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                             >
-                                Un bien-être sans égal <span className="font-normal"><br />au quotidien</span>
+                                Une douceur qui se sent, <br /> <span className="font-normal">un confort qui se vit.</span>
                             </h1>
                             <p className="text-lg font-light leading-relaxed text-white/95 mb-8 max-w-xl text-justify">
-                                Redécouvrez le confort d'une eau soyeuse protégeant votre peau et vos appareils. Alliez économies durables et bien-être absolu au quotidien.
+                                Redécouvrez le confort d'une eau soyeuse protégeant votre peau et vos appareils électroménagers. Alliez économies durables et bien-être absolu au quotidien.
                             </p>
                             <div className="flex gap-4">
                                 <Button

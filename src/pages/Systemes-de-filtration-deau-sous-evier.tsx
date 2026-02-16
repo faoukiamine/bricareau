@@ -33,7 +33,7 @@ import eliteROImg from "@/assets/Triple Stage Filter.jpg";
 import plusROImg from "@/assets/Double Stage Filter.jpg";
 import essentialImg from "@/assets/Single Stage Filter.jpg";
 import sereneLiteImg from "@/assets/Système+de+filtration+Serene+Lite.webp";
-import waterTestingImg from "@/assets/2147800429.jpg";
+import waterTestingImg from "@/assets/test-laboratoire-diligence-inspection-750x500.jpg";
 
 const FiltrationSousEvier = () => {
     const navigate = useNavigate();
@@ -72,7 +72,7 @@ const FiltrationSousEvier = () => {
                                 className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-white"
                                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                             >
-                                Buvez en toute confiance, <span className="font-normal">sans jamais porter une seule bouteille.</span>
+                                Buvez en toute confiance, <span className="font-bold">sans jamais porter une seule bouteille.</span>
                             </h1>
                             <p className="text-lg font-light leading-relaxed text-white/90 mb-8 max-w-xl text-justify">
                                 Un système compact et discret qui révolutionne la qualité de l'eau à chaque jet de votre robinet.

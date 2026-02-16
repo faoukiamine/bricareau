@@ -12,7 +12,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { NavLink } from "@/components/NavLink";
-import heroFiltration from "@/assets/Gemini_Generated_Image_ct1u02ct1u02ct1u.png";
+import heroFiltration from "@/assets/5846952.jpg";
 import drinkingWaterImg from "@/assets/Solutions d'eau potable.webp";
 import specializedFiltersImg from "@/assets/Filtres d'eau spécialisés.webp";
 import waterSoftenerImg from "@/assets/Adoucisseurs d'eau.webp";

@@ -19,8 +19,6 @@ import {
     HeartHandshake
 } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import {
     Accordion,
     AccordionContent,
@@ -28,13 +26,14 @@ import {
     AccordionTrigger,
 } from "@/components/ui/accordion";
 import TestimonialsSection from "@/components/TestimonialsSection";
+import ConsultationFormSection from "@/components/ConsultationFormSection";
 
 import heroImg from "@/assets/african-girl-stands-kitchen-drinks-water.jpg";
 import uvSystemImg from "@/assets/Systèmes de désinfection UV.webp";
 import uvSystemImg2 from "@/assets/VH200-F10-265x300.jpg";
 import uvSystemImg3 from "@/assets/VH410-F20-200x300.jpg";
 import uvSystemImg4 from "@/assets/500x500_V-Arros-15-IHS-10_straight-1-300x300.jpg";
-import waterTestingImg from "@/assets/2147800429.jpg";
+import waterTestingImg from "@/assets/test-laboratoire-diligence-inspection-750x500.jpg";
 
 const DesinfectionUV = () => {
     const comparisonData = [
@@ -42,7 +41,7 @@ const DesinfectionUV = () => {
         { feature: "Destruction des bactéries", VH410F20: true, VH200F10: true, Arros15IHS10: true },
         { feature: "Neutralisation des kystes", VH410F20: true, VH200F10: true, Arros15IHS10: true },
         { feature: "Alarme de remplacement de lampe", VH410F20: true, VH200F10: true, Arros15IHS10: true },
-        { feature: "Capteur d'intensité UV", VH410F20: true, VH200F10: true, Arros15IHS10: true },
+        { feature: "Capteur d'intensité UV", VH410F20: false, VH200F10: false, Arros15IHS10: true },
         { feature: "Garantie à vie sur la chambre", VH410F20: true, VH200F10: true, Arros15IHS10: true },
     ];
 
@@ -70,7 +69,7 @@ const DesinfectionUV = () => {
                                 className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-white"
                                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                             >
-                                La désinfection UV <span className="font-normal"><br />Zéro produit chimique, 100% de protection</span>
+                                La désinfection UV <span className="font-bold"><br />Zéro produit chimique, 100% de protection</span>
                             </h1>
                             <p className="font-light text-[20px] leading-[28px] text-white/95 mb-8 max-w-xl text-justify">
                                 Éliminez 99,99% des virus, bactéries et kystes sans ajouter de produits chimiques à votre eau. Une protection invisible pour une sécurité totale.
@@ -218,30 +217,39 @@ const DesinfectionUV = () => {
                     </div>
                 </section>
 
-                {/* 6. Water Testing Section */}
-                <section className="py-24 bg-white">
-                    <div className="container mx-auto px-6">
-                        <div className="flex flex-col lg:flex-row items-stretch gap-0 rounded-[3rem] overflow-hidden shadow-2xl">
-                            <div className="lg:w-1/2 relative min-h-[400px]">
-                                <img src={waterTestingImg} alt="Analyse d'eau" className="absolute inset-0 w-full h-full object-cover" />
-                                <div className="absolute inset-0 bg-blue-900/10" />
-                            </div>
-                            <div className="lg:w-1/2 bg-blue-600 text-white p-12 lg:p-20 flex flex-col justify-center items-start text-left">
-                                <span className="text-white/80 text-xs font-black uppercase tracking-[0.3em] mb-8 block">
-                                    ANALYSE MICROBIOLOGIQUE
-                                </span>
-                                <h2
-                                    className="text-slate-900 tracking-tighter mb-8 text-left"
+                {/* 7.Water Testing Section */}
+                <section className="relative h-[800px] flex items-start overflow-hidden pt-[220px]">
+                    <div className="absolute inset-0 z-0">
+                        <img
+                            src={waterTestingImg}
+                            alt="Homme prenant un bain d'eau douce"
+                            className="w-full h-full object-cover"
+                        />
+                        <div className="absolute inset-0 bg-black/30 lg:bg-gradient-to-r lg:from-black/50 lg:to-transparent" />
+                        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-white via-white/10 to-transparent" />
+                    </div>
+                    <div className="container mx-auto px-4 relative z-10">
+                        <div className="max-w-2xl text-white">
+                            <span className="text-white/80 text-xs font-black uppercase tracking-[0.3em] mb-8 block">
+                                ANALYSE MICROBIOLOGIQUE
+                            </span>
+                            <h1
+                                className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-white"
+                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                            >
+                                Votre eau est-elle <span className="font-bold"><br />vraiment sécuritaire ?</span>
+                            </h1>
+                            <p className="text-lg font-light leading-relaxed text-white/95 mb-8 max-w-xl text-justify">
+                                Ne devinez pas la qualité de votre eau. Nos analyses approfondies identifient les bactéries, les minéraux et les contaminants chimiques pour vous offrir une tranquillité d'esprit totale.
+                            </p>
+                            <div className="flex gap-4">
+                                <Button
+                                    size="lg"
+                                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14"
                                     style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                    onClick={() => document.getElementById('nos-adoucisseurs')?.scrollIntoView({ behavior: 'smooth' })}
                                 >
-                                    <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block text-white">Votre eau est-elle</span>
-                                    <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block text-white">vraiment sécuritaire ?</span>
-                                </h2>
-                                <p className="text-lg font-light leading-relaxed text-white/90 mb-12 text-justify">
-                                    Ne devinez pas la qualité de votre eau. Nos analyses approfondies identifient les bactéries, les minéraux et les contaminants chimiques pour vous offrir une tranquillité d'esprit totale.
-                                </p>
-                                <Button className="bg-white text-blue-600 hover:bg-blue-50 rounded-full px-12 h-16 text-xl font-bold shadow-xl" asChild>
-                                    <NavLink to="/tests-eau">Tester mon eau</NavLink>
+                                    <a href="/tests-eau">Demander une analyse d'eau</a>
                                 </Button>
                             </div>
                         </div>
@@ -388,89 +396,7 @@ const DesinfectionUV = () => {
                 </section>
 
                 {/* 10. Contact Form Section */}
-                <section id="consultation" className="py-24 bg-white border-t border-gray-100">
-                    <div className="container mx-auto px-4">
-                        <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-20">
-                            <div className="lg:w-1/3 text-left">
-                                <h2
-                                    className="text-slate-900 tracking-tighter mb-8 italic text-left"
-                                    style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
-                                >
-                                    <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Protégez votre</span>
-                                    <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">foyer dès aujourd'hui</span>
-                                </h2>
-                                <p className="font-light text-[20px] leading-[28px] text-gray-600 mb-8 text-justify">
-                                    Remplissez le formulaire ci-dessous pour organiser une consultation téléphonique avec l'un de nos experts.
-                                </p>
-                            </div>
-
-                            <div className="lg:w-2/3">
-                                <div className="bg-white rounded-3xl p-10 border border-gray-100 shadow-2xl">
-                                    {/* Progress */}
-                                    <div className="flex items-center gap-8 mb-12 overflow-x-auto pb-4 border-b border-gray-100">
-                                        <div className="flex items-center gap-2 text-blue-600 font-bold whitespace-nowrap">
-                                            <span className="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center">1</span>
-                                            VOS INFOS
-                                        </div>
-                                        <div className="flex items-center gap-2 text-gray-300 font-bold whitespace-nowrap">
-                                            <span className="w-10 h-10 rounded-full bg-gray-200 text-white flex items-center justify-center">2</span>
-                                            VOTRE DISPONIBILITÉ
-                                        </div>
-                                        <div className="flex items-center gap-2 text-gray-300 font-bold whitespace-nowrap">
-                                            <span className="w-10 h-10 rounded-full bg-gray-200 text-white flex items-center justify-center">3</span>
-                                            CONFIRMATION
-                                        </div>
-                                    </div>
-
-                                    <form className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                                        <div className="space-y-3 text-left">
-                                            <Label htmlFor="fname" className="font-bold flex gap-1">Prénom*</Label>
-                                            <Input id="fname" className="h-14 bg-gray-50 border-none rounded-sm" placeholder="Jean" />
-                                        </div>
-                                        <div className="space-y-3 text-left">
-                                            <Label htmlFor="lname" className="font-bold flex gap-1">Nom*</Label>
-                                            <Input id="lname" className="h-14 bg-gray-50 border-none rounded-sm" placeholder="Dupont" />
-                                        </div>
-                                        <div className="space-y-3 text-left">
-                                            <Label htmlFor="email" className="font-bold flex gap-1">Courriel*</Label>
-                                            <Input id="email" type="email" className="h-14 bg-gray-50 border-none rounded-sm" placeholder="jean@exemple.com" />
-                                        </div>
-                                        <div className="space-y-3 text-left">
-                                            <Label htmlFor="phone" className="font-bold flex gap-1">Téléphone*</Label>
-                                            <Input id="phone" type="tel" className="h-14 bg-gray-50 border-none rounded-sm" placeholder="(514) 000-0000" />
-                                        </div>
-                                        <div className="md:col-span-2 space-y-3 text-left">
-                                            <Label htmlFor="address" className="font-bold flex gap-1">Adresse*</Label>
-                                            <Input id="address" className="h-14 bg-gray-50 border-none rounded-sm" placeholder="123 rue de l'Eau" />
-                                        </div>
-                                        <div className="md:col-span-2 grid grid-cols-1 md:grid-cols-3 gap-8">
-                                            <div className="space-y-3 text-left">
-                                                <Label htmlFor="city" className="font-bold flex gap-1">Ville*</Label>
-                                                <Input id="city" className="h-14 bg-gray-50 border-none rounded-sm" placeholder="Montréal" />
-                                            </div>
-                                            <div className="space-y-3 text-left">
-                                                <Label htmlFor="province" className="font-bold flex gap-1">Province*</Label>
-                                                <Input id="province" className="h-14 bg-gray-50 border-none rounded-sm" placeholder="Québec" />
-                                            </div>
-                                            <div className="space-y-3 text-left">
-                                                <Label htmlFor="zip" className="font-bold flex gap-1">Code Postal*</Label>
-                                                <Input id="zip" className="h-14 bg-gray-50 border-none rounded-sm" placeholder="H1A 1A1" />
-                                            </div>
-                                        </div>
-                                        <div className="md:col-span-2 text-left">
-                                            <Button className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-16 h-14 text-xl font-bold w-full md:w-auto">
-                                                Continuer
-                                            </Button>
-                                            <p className="mt-4 text-[10px] text-gray-400 max-w-lg">
-                                                En soumettant ce formulaire, vous acceptez nos conditions d'utilisation et notre politique de confidentialité. Un spécialiste Bricareau vous contactera sous peu.
-                                            </p>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                <ConsultationFormSection id="consultation" />
 
 
             </main>

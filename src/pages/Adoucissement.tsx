@@ -8,6 +8,9 @@ import untitledImg from "@/assets/avantages conditionneurs sans sel.jpg";
 import mceclip0Img from "@/assets/mceclip0.png";
 import bathroomImg from "@/assets/2705.jpg";
 import waterTestGemini from "@/assets/Gemini_Generated_Image_rk3i02rk3i02rk3i.png";
+import waterTestingImg from "@/assets/2147800429.jpg";
+import process1 from "@/assets/2148563485.jpg";
+import labTestImg from "@/assets/test-laboratoire-diligence-inspection-750x500.jpg";
 import {
     ArrowRight,
     Droplets,
@@ -61,7 +64,7 @@ const Adoucissement = () => {
                                 ADOUCISSEURS D'EAU
                             </span>
                             <h1
-                                className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-white"
+                                className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-bold mb-8 tracking-tighter text-white"
                                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                             >
                                 Une eau douce, <span className="font-normal">meilleure pour vous et votre maison</span>
@@ -251,30 +254,68 @@ const Adoucissement = () => {
                 <TestimonialsSection />
 
                 {/* 7. Water Testing Section */}
-                <section className="py-20 bg-white">
-                    <div className="container mx-auto px-4">
-                        <div className="flex flex-col lg:flex-row items-stretch gap-0 rounded-[3rem] overflow-hidden shadow-2xl">
-                            <div className="lg:w-1/2 relative min-h-[400px] overflow-hidden">
-                                <img
-                                    src={waterTestGemini}
-                                    alt="Analyse de la qualité de l'eau"
-                                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-105"
-                                />
-                                <div className="absolute inset-0 bg-blue-900/10 pointer-events-none" />
+                <section className="py-24 bg-blue-600">
+                    <div className="container mx-auto px-6">
+                        <div className="flex flex-col lg:flex-row items-center gap-16">
+                            {/* Left Column: Images Composition */}
+                            <div className="w-full lg:w-1/2 relative min-h-[500px] lg:min-h-[600px]">
+                                {/* Main Large Image (Back Left) */}
+                                <div className="absolute top-0 left-0 w-4/5 h-4/5 rounded-[2rem] overflow-hidden shadow-2xl z-10">
+                                    <img
+                                        src={waterTestGemini}
+                                        alt="Analyse d'eau principale"
+                                        className="w-full h-full object-cover"
+                                    />
+                                    <div className="absolute inset-0 bg-black/10"></div>
+                                </div>
+
+                                {/* Vertical Image (Front Right) */}
+                                <div className="absolute top-[10%] right-0 w-[35%] h-[55%] rounded-[1.5rem] overflow-hidden shadow-2xl z-20 border-[6px] border-white">
+                                    <img
+                                        src={process1}
+                                        alt="Scientifique analysant l'eau"
+                                        className="w-full h-full object-cover"
+                                    />
+                                </div>
+
+                                {/* Horizontal Image (Front Bottom) */}
+                                <div className="absolute bottom-[5%] left-[10%] w-[55%] h-[28%] rounded-[1.5rem] overflow-hidden shadow-2xl z-30 border-[6px] border-white">
+                                    <img
+                                        src={labTestImg}
+                                        alt="Résultats d'analyse"
+                                        className="w-full h-full object-cover"
+                                    />
+                                </div>
                             </div>
-                            <div className="lg:w-1/2 bg-blue-600 text-white p-12 lg:p-20 flex flex-col justify-center items-start text-left">
-                                <span className="text-white/80 text-xs font-black uppercase tracking-[0.3em] mb-8 block">
-                                    Qualité de l'eau
+
+                            {/* Right Column: Content */}
+                            <div className="w-full lg:w-1/2 lg:pl-12">
+                                <span className="text-white/80 font-bold uppercase tracking-widest text-sm mb-4 block">
+                                    Contrôle de la Qualité D'EAU
                                 </span>
-                                <h2 className="text-[32px] md:text-[48px] font-normal text-white mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
-                                    L'excellence commence par une eau parfaite.
+                                <h2
+                                    className="text-[40px] md:text-[52px] font-bold text-white mb-6 leading-[1.1] tracking-tighter"
+                                    style={{
+                                        fontFamily:
+                                            'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                    }}
+                                >
+                                    L'excellence commence<br />
+                                    par une eau parfaite.
                                 </h2>
-                                <p className="text-lg font-light leading-relaxed text-white/90 mb-12 text-justify">
+                                <p className="text-lg text-white/90 mb-8 leading-relaxed text-left text-justify">
                                     Le luxe, c'est de ne pas avoir à se soucier de la qualité de ce que l'on consomme. Offrez-vous la sérénité d'une eau analysée par des experts, pour une maison où tout brille, sans effort et sans compromis.
                                 </p>
-                                <NavLink to="/tests-eau" className="inline-block bg-white hover:bg-blue-50 text-blue-600 font-bold px-8 py-3 rounded-full transition-colors">
-                                    Demander une analyse d'eau
-                                </NavLink>
+                                <div className="flex flex-wrap gap-6 items-center">
+                                    <Button
+                                        size="lg"
+                                        className="bg-white hover:bg-blue-50 text-blue-600 rounded-full px-8 h-14"
+                                        style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                        asChild
+                                    >
+                                        <a href="/tests-eau">Demander une analyse d'eau</a>
+                                    </Button>
+                                </div>
                             </div>
                         </div>
                     </div>
