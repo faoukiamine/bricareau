@@ -6,17 +6,17 @@ const DiscoverExpert = () => {
     return (
         <section className="py-16 md:py-18 lg:py-24 bg-white">
             <div className="container mx-auto px-4">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                     {/* Left side - Content */}
-                    <div className="space-y-6 order-2 lg:order-1">
+                    <div className="space-y-6 order-2 md:order-1">
                         <h2
                             className="text-foreground tracking-tighter"
                             style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                         >
-                            <span className="text-[32px] md:text-[60px] font-light leading-[1.2] md:leading-[60px] block">Votre solution d'eau personnalisée</span>
-                            <span className="text-[32px] md:text-[60px] font-normal leading-[1.2] md:leading-[60px] block">en moins de 60 secondes.</span>
+                            <span className="text-[32px] md:text-[42px] lg:text-[60px] font-light leading-tight lg:leading-[60px] block">Votre solution d'eau personnalisée</span>
+                            <span className="text-[32px] md:text-[42px] lg:text-[60px] font-normal leading-tight lg:leading-[60px] block">en moins de 60 secondes.</span>
                         </h2>
-                        <p className="text-lg font-light leading-relaxed text-muted-foreground text-justify">
+                        <p className="text-lg font-light leading-relaxed text-muted-foreground text-left md:text-justify px-2 md:px-0">
                             Ne laissez plus le hasard décider de la qualité de votre eau. Que vous soyez sur l’aqueduc municipal ou propriétaire d’un puits, notre outil intelligent analyse vos besoins spécifiques pour identifier la solution de filtration idéale. Obtenez une recommandation d’expert adaptée à votre foyer et redécouvrez le plaisir d'une eau d'une pureté irréprochable.
                         </p>
                         <Button
@@ -33,11 +33,11 @@ const DiscoverExpert = () => {
                     </div>
 
                     {/* Right side - Image */}
-                    <div className="relative rounded-2xl overflow-hidden shadow-2xl order-1 lg:order-2">
+                    <div className="relative rounded-2xl overflow-hidden shadow-2xl order-1 md:order-2">
                         <img
                             src={guideExpertImg}
                             alt="Femme profitant d'un bain moussant relaxant"
-                            className="w-full h-[500px] object-cover"
+                            className="w-full h-[350px] md:h-[500px] object-cover"
                         />
                     </div>
                 </div>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
@@ -111,6 +111,10 @@ const WaterDiagnosticQuiz = () => {
     });
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [isSubmitting, setIsSubmitting] = useState(false);
+
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, [step, isSubmitted]);
 
     const handleSourceChange = (value: string) => {
         setFormData({ ...formData, source: value });
@@ -319,7 +323,7 @@ const WaterDiagnosticQuiz = () => {
                                 )}
                             </div>
                             <span className={cn(
-                                "text-sm sm:text-base font-bold transition-colors",
+                                "hidden sm:block text-[10px] md:text-sm lg:text-base font-bold transition-colors",
                                 step >= 1 ? "text-slate-900" : "text-slate-400"
                             )}>Votre situation</span>
                         </div>
@@ -337,7 +341,7 @@ const WaterDiagnosticQuiz = () => {
                                 )}
                             </div>
                             <span className={cn(
-                                "text-sm sm:text-base font-bold transition-colors",
+                                "hidden sm:block text-[10px] md:text-sm lg:text-base font-bold transition-colors",
                                 step >= 2 ? "text-slate-900" : "text-slate-400"
                             )}>Vos symptômes</span>
                         </div>
@@ -355,7 +359,7 @@ const WaterDiagnosticQuiz = () => {
                                 )}
                             </div>
                             <span className={cn(
-                                "text-sm sm:text-base font-bold transition-colors",
+                                "hidden sm:block text-[10px] md:text-sm lg:text-base font-bold transition-colors",
                                 step === 3 || isSubmitted ? "text-slate-900" : "text-slate-400"
                             )}>Nos recommandations</span>
                         </div>
@@ -426,7 +430,7 @@ const WaterDiagnosticQuiz = () => {
                                         <RadioGroup
                                             value={formData.residenceType}
                                             onValueChange={(val) => setFormData({ ...formData, residenceType: val })}
-                                            className="grid grid-cols-1 md:grid-cols-3 gap-4"
+                                            className="grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-4"
                                         >
                                             {[
                                                 "Condo",
@@ -442,7 +446,7 @@ const WaterDiagnosticQuiz = () => {
                                                     <Label
                                                         htmlFor={`res-${option}`}
                                                         className={cn(
-                                                            "flex items-center gap-4 p-6 rounded-2xl border-2 cursor-pointer transition-all hover:bg-slate-50 peer-data-[state=checked]:border-blue-600 peer-data-[state=checked]:bg-blue-50/50 peer-data-[state=checked]:shadow-md h-full",
+                                                            "flex items-center gap-3 md:gap-4 p-4 md:p-6 rounded-2xl border-2 cursor-pointer transition-all hover:bg-slate-50 peer-data-[state=checked]:border-blue-600 peer-data-[state=checked]:bg-blue-50/50 peer-data-[state=checked]:shadow-md h-full",
                                                             formData.residenceType === option ? "border-blue-600 bg-blue-50/50" : "border-slate-100"
                                                         )}
                                                     >
@@ -465,7 +469,7 @@ const WaterDiagnosticQuiz = () => {
                                         <RadioGroup
                                             value={formData.source}
                                             onValueChange={handleSourceChange}
-                                            className="grid grid-cols-1 md:grid-cols-3 gap-4"
+                                            className="grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-4"
                                         >
                                             {[
                                                 "Municipal",
@@ -523,6 +527,7 @@ const WaterDiagnosticQuiz = () => {
 
                                     <div className="pt-6 flex justify-center">
                                         <Button
+                                            type="button"
                                             disabled={!formData.source || !formData.household || !formData.occupancy || !formData.residenceType}
                                             className="h-16 bg-blue-600 hover:bg-blue-700 text-white rounded-full text-xl font-bold w-full max-w-md shadow-xl shadow-blue-100 transition-all hover:scale-[1.02] disabled:opacity-50 disabled:grayscale"
                                             onClick={() => setStep(2)}
@@ -571,9 +576,17 @@ const WaterDiagnosticQuiz = () => {
                                         </div>
                                     ))}
 
-                                    <div className="pt-8 flex flex-col items-center gap-4">
+                                    <div className="pt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+                                        <button
+                                            type="button"
+                                            className="text-slate-400 hover:text-blue-600 font-bold px-8 py-4 transition-colors order-2 sm:order-1"
+                                            onClick={() => setStep(1)}
+                                        >
+                                            Retour
+                                        </button>
                                         <Button
-                                            className="h-16 bg-blue-600 hover:bg-blue-700 text-white rounded-full text-xl font-bold w-full max-w-md shadow-xl shadow-blue-100 transition-all hover:scale-[1.02]"
+                                            type="button"
+                                            className="h-16 bg-blue-600 hover:bg-blue-700 text-white rounded-full text-xl font-bold w-full max-w-md shadow-xl shadow-blue-100 transition-all hover:scale-[1.02] order-1 sm:order-2"
                                             onClick={() => setStep(3)}
                                         >
                                             Suivant <ArrowRight className="ml-3 w-6 h-6" />
@@ -639,22 +652,32 @@ const WaterDiagnosticQuiz = () => {
                                         </div>
                                     </div>
 
-                                    <Button
-                                        type="submit"
-                                        disabled={isSubmitting}
-                                        className="h-16 bg-blue-600 hover:bg-blue-700 text-white rounded-2xl text-xl font-bold w-full shadow-xl shadow-blue-100 transition-all hover:scale-[1.02] mt-4"
-                                    >
-                                        {isSubmitting ? (
-                                            <>
-                                                <Loader2 className="mr-3 w-6 h-6 animate-spin" />
-                                                Envoi en cours...
-                                            </>
-                                        ) : (
-                                            <>
-                                                Obtenir mes résultats <Sparkles className="ml-3 w-6 h-6" />
-                                            </>
-                                        )}
-                                    </Button>
+                                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-4">
+                                        <button
+                                            type="button"
+                                            className="text-slate-400 hover:text-blue-600 font-bold px-8 py-4 transition-colors order-2 sm:order-1"
+                                            onClick={() => setStep(2)}
+                                        >
+                                            Précédent
+                                        </button>
+                                        <Button
+                                            type="submit"
+                                            disabled={isSubmitting}
+                                            className="h-16 bg-blue-600 hover:bg-blue-700 text-white rounded-2xl text-xl font-bold w-full shadow-xl shadow-blue-100 transition-all hover:scale-[1.02] order-1 sm:order-2"
+                                        >
+                                            {isSubmitting ? (
+                                                <>
+                                                    <Loader2 className="mr-3 w-6 h-6 animate-spin" />
+                                                    Envoi en cours...
+                                                </>
+                                            ) : (
+                                                <>
+                                                    Obtenir ma prescription d'eau
+                                                    <ArrowRight className="ml-3 w-6 h-6" />
+                                                </>
+                                            )}
+                                        </Button>
+                                    </div>
                                 </form>
                             )}
 
