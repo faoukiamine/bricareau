@@ -49,17 +49,20 @@ const Adoucissement = () => {
             <Header />
             <main>
                 {/* 1. Hero Section */}
-                <section className="relative h-[800px] flex items-center overflow-hidden">
+                <section className="relative h-[850px] flex items-center overflow-hidden -mt-[104px] pt-[104px]">
                     <div className="absolute inset-0 z-0">
                         <img
                             src={heroBath}
                             alt="Homme prenant son bain"
                             className="w-full h-full object-cover"
                         />
-                        <div className="absolute inset-0 bg-black/20 lg:bg-gradient-to-r lg:from-white/40 lg:to-transparent" />
+                        <div className="absolute inset-0 bg-black/40 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
+                        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-white via-white/10 to-transparent" />
+                        {/* Brightening Start 1/3 Right */}
+                        <div className="absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white/90 via-white/40 to-transparent" />
                     </div>
 
-                    <div className="container mx-auto px-4 relative z-10">
+                    <div className="container mx-auto px-6 relative z-10">
                         <div className="max-w-2xl text-white">
                             <span className="text-sm font-bold uppercase tracking-widest text-blue-600 mb-4 block">
                                 ADOUCISSEURS D'EAU
@@ -99,6 +102,22 @@ const Adoucissement = () => {
                             </div>
                         </div>
                     </div>
+                    {/* Wave Separator Bottom - Transition to Blue Section */}
+                    <div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-[0] z-20 pointer-events-none">
+                        <svg
+                            className="relative block w-full h-[80px] md:h-[150px]"
+                            data-name="Layer 1"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 1200 120"
+                            preserveAspectRatio="none"
+                        >
+                            <path
+                                d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                                fill="#2563EB"
+                                transform="rotate(180 600 60)"
+                            ></path>
+                        </svg>
+                    </div>
                 </section>
 
                 {/* 2. Why choose our water softeners Section */}
@@ -128,125 +147,218 @@ const Adoucissement = () => {
                         </div>
                     </div>
                 </section>
-                {/* 3. Water Softeners Section */}
-                <section className="py-24 bg-gray-50">
-                    <div className="container mx-auto px-4">
-                        <div className="flex flex-col lg:flex-row-reverse items-center gap-16 lg:gap-24 mb-20">
-                            <div className="lg:w-1/2">
-                                <img
-                                    src={kitchenImg}
-                                    alt="Cuisine moderne avec eau adoucie"
-                                    className="rounded-2xl shadow-xl w-full h-[400px] object-cover"
-                                />
+                {/* 3. Water Softeners Section - NEW DESIGN */}
+                <section className="py-24 bg-white relative overflow-hidden">
+                    <div className="container mx-auto px-6">
+                        <div className="flex flex-col lg:flex-row items-start gap-16">
+                            {/* Left Side: Image with Video Button */}
+                            <div className="w-full lg:w-1/2 relative sticky top-24">
+                                <div className="rounded-[2.5rem] overflow-hidden shadow-2xl relative h-[600px] w-full group">
+                                    <img
+                                        src={kitchenImg}
+                                        alt="Cuisine moderne avec eau adoucie"
+                                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                    />
+                                    <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors duration-500" />
+
+                                    {/* Play Button Card */}
+                                    <div className="absolute bottom-10 left-10 bg-blue-600/90 backdrop-blur-md rounded-2xl p-4 pr-8 flex items-center gap-4 shadow-xl cursor-pointer hover:bg-blue-700 transition-all hover:scale-105 active:scale-95 group/btn border border-white/20">
+                                        <div className="bg-white rounded-full p-3 shadow-lg group-hover/btn:shadow-xl transition-shadow relative">
+                                            <div className="absolute inset-0 rounded-full bg-blue-200 animate-ping opacity-20"></div>
+                                            <Play className="h-6 w-6 text-blue-600 fill-blue-600 ml-1 relative z-10" />
+                                        </div>
+                                        <div>
+                                            <span className="font-bold text-white text-lg block">Voir la vidéo</span>
+                                            <span className="text-blue-100 text-xs font-light">Découvrir l'expérience</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div className="lg:w-1/2">
-                                <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
+
+                            {/* Right Side: Content */}
+                            <div className="w-full lg:w-1/2 pt-4">
+                                <span className="text-sm font-bold uppercase tracking-widest text-blue-600 mb-4 block flex items-center gap-2">
+                                    <span className="w-8 h-[2px] bg-blue-600 inline-block"></span>
+                                    ADOUCISSEURS D'EAU RÉSIDENTIELS
+                                </span>
+                                <h2 className="text-[32px] md:text-[48px] font-bold text-slate-900 mb-6 leading-[1.1] tracking-tighter">
                                     L'éclat d'une vaisselle protégée, la douceur d'une eau maîtrisée.
                                 </h2>
-                                <p className="text-lg font-light leading-relaxed text-gray-600 mb-8 text-justify">
+                                <p className="text-lg font-light leading-relaxed text-gray-600 mb-12 text-justify">
                                     Offrez à votre foyer le luxe d'une eau sans calcaire. Nos adoucisseurs de pointe éliminent le tartre à la source, garantissant non seulement une vaisselle étincelante sans aucune trace, mais aussi une protection durable de vos appareils électroménagers et de votre plomberie. Redécouvrez la brillance et la douceur dans chaque recoin de votre maison.
                                 </p>
-                                <NavLink to="/adoucisseur-eau-residentiel" className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-3 rounded-full transition-colors">
-                                    Découvrir nos adoucisseurs d'eau
-                                </NavLink>
-                            </div>
-                        </div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-left">
-                            {[
-                                { title: "Économies réelles", desc: "Réduisez vos dépenses. Économisez jusqu'à 30% sur vos produits d'entretien et réduisez drastiquement vos factures d'énergie." },
-                                { title: "Douceur infinie", desc: "Une peau et des cheveux sublimés. Retrouvez la souplesse naturelle de votre peau et l'éclat de vos cheveux dès la première douche" },
-                                { title: "Protection totale", desc: "Préservez vos installations. Dites adieu aux pannes d'électroménager et aux traces de tartre sur votre robinetterie." }
-                            ].map((item, i) => (
-                                <div key={i}>
-                                    <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
-                                        <span className="text-blue-600 font-bold italic">0{i + 1}</span> {item.title}
-                                    </h3>
-                                    <p className="text-lg font-light leading-relaxed text-gray-500 text-justify">{item.desc}</p>
+                                <div className="space-y-12">
+                                    {[
+                                        { title: "Économies réelles", desc: "Réduisez vos dépenses. Économisez jusqu'à 30% sur vos produits d'entretien et réduisez drastiquement vos factures d'énergie." },
+                                        { title: "Douceur infinie", desc: "Une peau et des cheveux sublimés. Retrouvez la souplesse naturelle de votre peau et l'éclat de vos cheveux dès la première douche." },
+                                        { title: "Protection totale", desc: "Préservez vos installations. Dites adieu aux pannes d'électroménager et aux traces de tartre sur votre robinetterie." }
+                                    ].map((item, i) => (
+                                        <div key={i} className="group/item">
+                                            <h3 className="text-xl font-bold mb-4 text-blue-600 flex items-center gap-3">
+                                                <span className="text-2xl opacity-50">0{i + 1}.</span> {item.title}
+                                            </h3>
+                                            <div className="pl-6 border-l-2 border-blue-600/20 group-hover/item:border-blue-600 transition-colors duration-500 ml-2">
+                                                <p className="text-base text-gray-500 leading-relaxed text-justify">
+                                                    {item.desc}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    ))}
                                 </div>
-                            ))}
+
+                                <div className="mt-14 pt-8 border-t border-gray-100">
+                                    <NavLink to="/adoucisseur-eau-residentiel">
+                                        <Button className="rounded-full bg-blue-600 hover:bg-blue-700 text-white px-8 h-14 text-base shadow-lg transition-all duration-300 w-full sm:w-auto hover:shadow-blue-200">
+                                            Découvrir nos adoucisseurs d'eau <ChevronRight className="ml-2 h-5 w-5" />
+                                        </Button>
+                                    </NavLink>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
 
-                {/* 4. Portable Water Softeners Section */}
-                <section className="py-24 bg-gray-50">
-                    <div className="container mx-auto px-4">
-                        <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24 mb-20">
-                            <div className="lg:w-1/2">
-                                <img
-                                    src={mceclip0Img}
-                                    alt="Cuisine moderne avec eau adoucie"
-                                    className="rounded-2xl shadow-xl w-full h-[400px] object-cover"
-                                />
+                {/* 4. Portable Water Softeners Section - NEW DESIGN */}
+                <section className="py-24 bg-gray-50 relative overflow-hidden">
+                    <div className="container mx-auto px-6">
+                        <div className="flex flex-col lg:flex-row-reverse items-start gap-16">
+                            {/* Right Side (visually): Image with Video Button */}
+                            <div className="w-full lg:w-1/2 relative sticky top-24">
+                                <div className="rounded-[2.5rem] overflow-hidden shadow-2xl relative h-[600px] w-full group">
+                                    <img
+                                        src={mceclip0Img}
+                                        alt="Adoucisseur portable en action"
+                                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                    />
+                                    <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors duration-500" />
+
+                                    {/* Play Button Card */}
+                                    <div className="absolute bottom-10 right-10 bg-blue-600/90 backdrop-blur-md rounded-2xl p-4 pl-8 flex items-center gap-4 shadow-xl cursor-pointer hover:bg-blue-700 transition-all hover:scale-105 active:scale-95 group/btn border border-white/20 flex-row-reverse">
+                                        <div className="bg-white rounded-full p-3 shadow-lg group-hover/btn:shadow-xl transition-shadow relative">
+                                            <div className="absolute inset-0 rounded-full bg-blue-200 animate-ping opacity-20"></div>
+                                            <Play className="h-6 w-6 text-blue-600 fill-blue-600 ml-1 relative z-10" />
+                                        </div>
+                                        <div className="text-right">
+                                            <span className="font-bold text-white text-lg block">Voir la vidéo</span>
+                                            <span className="text-blue-100 text-xs font-light">Découvrir l'expérience</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div className="lg:w-1/2">
-                                <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-left">
+
+                            {/* Left Side (visually): Content */}
+                            <div className="w-full lg:w-1/2 pt-4">
+                                <span className="text-sm font-bold uppercase tracking-widest text-blue-600 mb-4 block flex items-center gap-2">
+                                    <span className="w-8 h-[2px] bg-blue-600 inline-block"></span>
+                                    SOLUTION MOBILE
+                                </span>
+                                <h2 className="text-[32px] md:text-[48px] font-bold text-slate-900 mb-6 leading-[1.1] tracking-tighter">
                                     La douceur sans frontières : l'eau douce vous suit partout.
                                 </h2>
-                                <p className="text-lg font-light leading-relaxed text-gray-600 mb-8 text-justify">
+                                <p className="text-lg font-light leading-relaxed text-gray-600 mb-12 text-justify">
                                     Ne laissez plus l’eau dure des campings ou des ports abîmer vos cheveux et vos équipements. Profitez d'une eau de qualité domestique dans votre VR, votre bateau ou votre chalet avec notre adoucisseur ultra-compact.
                                 </p>
-                                <NavLink to="/adoucisseurs-portables" className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-3 rounded-full transition-colors">
-                                    Découvrir nos adoucisseurs d'eau portables
-                                </NavLink>
-                            </div>
-                        </div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-left">
-                            {[
-                                { title: "Ultra-Compact & Léger", desc: "Conçu pour les petits espaces. Sa taille réduite lui permet de se glisser dans n'importe quel compartiment de rangement sans alourdir votre véhicule." },
-                                { title: "Plug & Play", desc: "Aucun outil requis. Se branche directement sur votre tuyau d'arrosage ou votre arrivée d'eau standard. Une mise en service instantanée, sans plombier." },
-                                { title: "Protection Mobile", desc: "Sauvez vos équipements. Protégez la tuyauterie de votre VR et votre chauffe-eau contre les eaux dures variables des terrains de camping." }
-                            ].map((item, i) => (
-                                <div key={i}>
-                                    <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
-                                        <span className="text-blue-600 font-bold italic">0{i + 1}</span> {item.title}
-                                    </h3>
-                                    <p className="text-lg font-light leading-relaxed text-gray-500 text-justify">{item.desc}</p>
+                                <div className="space-y-12">
+                                    {[
+                                        { title: "Ultra-Compact & Léger", desc: "Conçu pour les petits espaces. Sa taille réduite lui permet de se glisser dans n'importe quel compartiment de rangement sans alourdir votre véhicule." },
+                                        { title: "Plug & Play", desc: "Aucun outil requis. Se branche directement sur votre tuyau d'arrosage ou votre arrivée d'eau standard. Une mise en service instantanée, sans plombier." },
+                                        { title: "Protection Mobile", desc: "Sauvez vos équipements. Protégez la tuyauterie de votre VR et votre chauffe-eau contre les eaux dures variables des terrains de camping." }
+                                    ].map((item, i) => (
+                                        <div key={i} className="group/item">
+                                            <h3 className="text-xl font-bold mb-4 text-blue-600 flex items-center gap-3">
+                                                <span className="text-2xl opacity-50">0{i + 1}.</span> {item.title}
+                                            </h3>
+                                            <div className="pl-6 border-l-2 border-blue-600/20 group-hover/item:border-blue-600 transition-colors duration-500 ml-2">
+                                                <p className="text-base text-gray-500 leading-relaxed text-justify">
+                                                    {item.desc}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    ))}
                                 </div>
-                            ))}
+
+                                <div className="mt-14 pt-8 border-t border-gray-200">
+                                    <NavLink to="/adoucisseurs-portables">
+                                        <Button className="rounded-full bg-blue-600 hover:bg-blue-700 text-white px-8 h-14 text-base shadow-lg transition-all duration-300 w-full sm:w-auto hover:shadow-blue-200">
+                                            Découvrir nos adoucisseurs portables <ChevronRight className="ml-2 h-5 w-5" />
+                                        </Button>
+                                    </NavLink>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
 
-                {/* 5. Water Conditionners without salt Section */}
-                <section className="py-24 bg-white">
-                    <div className="container mx-auto px-4">
-                        <div className="flex flex-col lg:flex-row-reverse items-center gap-16 lg:gap-24 mb-20">
-                            <div className="lg:w-1/2">
-                                <img
-                                    src={untitledImg}
-                                    alt="Femme se lavant les mains"
-                                    className="rounded-2xl shadow-xl w-full h-[400px] object-cover"
-                                />
+                {/* 5. Water Conditionners without salt Section - NEW DESIGN */}
+                <section className="py-24 bg-white relative overflow-hidden">
+                    <div className="container mx-auto px-6">
+                        <div className="flex flex-col lg:flex-row items-start gap-16">
+                            {/* Left Side: Image with Video Button */}
+                            <div className="w-full lg:w-1/2 relative sticky top-24">
+                                <div className="rounded-[2.5rem] overflow-hidden shadow-2xl relative h-[600px] w-full group">
+                                    <img
+                                        src={untitledImg}
+                                        alt="Femme se lavant les mains"
+                                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                    />
+                                    <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors duration-500" />
+
+                                    {/* Play Button Card */}
+                                    <div className="absolute bottom-10 left-10 bg-blue-600/90 backdrop-blur-md rounded-2xl p-4 pr-8 flex items-center gap-4 shadow-xl cursor-pointer hover:bg-blue-700 transition-all hover:scale-105 active:scale-95 group/btn border border-white/20">
+                                        <div className="bg-white rounded-full p-3 shadow-lg group-hover/btn:shadow-xl transition-shadow relative">
+                                            <div className="absolute inset-0 rounded-full bg-blue-200 animate-ping opacity-20"></div>
+                                            <Play className="h-6 w-6 text-blue-600 fill-blue-600 ml-1 relative z-10" />
+                                        </div>
+                                        <div>
+                                            <span className="font-bold text-white text-lg block">Voir la vidéo</span>
+                                            <span className="text-blue-100 text-xs font-light">Découvrir l'expérience</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div className="lg:w-1/2 text-left">
-                                <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
+
+                            {/* Right Side: Content */}
+                            <div className="w-full lg:w-1/2 pt-4">
+                                <span className="text-sm font-bold uppercase tracking-widest text-blue-600 mb-4 block flex items-center gap-2">
+                                    <span className="w-8 h-[2px] bg-blue-600 inline-block"></span>
+                                    ALTERNATIVE ÉCOLOGIQUE
+                                </span>
+                                <h2 className="text-[32px] md:text-[48px] font-bold text-slate-900 mb-6 leading-[1.1] tracking-tighter">
                                     Zéro sel. Zéro électricité. Zéro souci.
                                 </h2>
-                                <p className="text-lg font-light leading-relaxed text-gray-600 mb-8 text-justify">
+                                <p className="text-lg font-light leading-relaxed text-gray-600 mb-12 text-justify">
                                     Le secret d'un linge éclatant et d'une vaisselle sans traces. Sans l'ajout de sel, votre eau devient votre meilleure alliée beauté et ménage.
                                 </p>
-                                <NavLink to="/conditionneurs-sans-sel" className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-3 rounded-full transition-colors">
-                                    Découvrir nos conditionneurs d'eau sans sel
-                                </NavLink>
-                            </div>
-                        </div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-left">
-                            {[
-                                { title: "100% Écologique", desc: "Contrairement aux systèmes au sel, vous ne rejetez aucune saumure dans l'environnement et ne consommez pas d'eau pour la régénération." },
-                                { title: "Zéro Contrainte", desc: "Oubliez les sacs de sel. Profitez d'une protection permanente sans électricité, sans réglages et sans maintenance mensuelle. Installez-le, oubliez-le." },
-                                { title: "Eau Préservée", desc: "Gardez les bons minéraux. Le calcaire est neutralisé mais le calcium et le magnésium restent dans l'eau. Une eau saine pour votre santé et celle de votre famille." }
-                            ].map((item, i) => (
-                                <div key={i}>
-                                    <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
-                                        <span className="text-blue-600 font-bold italic">0{i + 1}</span> {item.title}
-                                    </h3>
-                                    <p className="text-lg font-light leading-relaxed text-gray-500 text-justify">{item.desc}</p>
+                                <div className="space-y-12">
+                                    {[
+                                        { title: "100% Écologique", desc: "Contrairement aux systèmes au sel, vous ne rejetez aucune saumure dans l'environnement et ne consommez pas d'eau pour la régénération." },
+                                        { title: "Zéro Contrainte", desc: "Oubliez les sacs de sel. Profitez d'une protection permanente sans électricité, sans réglages et sans maintenance mensuelle. Installez-le, oubliez-le." },
+                                        { title: "Eau Préservée", desc: "Gardez les bons minéraux. Le calcaire est neutralisé mais le calcium et le magnésium restent dans l'eau. Une eau saine pour votre santé et celle de votre famille." }
+                                    ].map((item, i) => (
+                                        <div key={i} className="group/item">
+                                            <h3 className="text-xl font-bold mb-4 text-blue-600 flex items-center gap-3">
+                                                <span className="text-2xl opacity-50">0{i + 1}.</span> {item.title}
+                                            </h3>
+                                            <div className="pl-6 border-l-2 border-blue-600/20 group-hover/item:border-blue-600 transition-colors duration-500 ml-2">
+                                                <p className="text-base text-gray-500 leading-relaxed text-justify">
+                                                    {item.desc}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    ))}
                                 </div>
-                            ))}
+
+                                <div className="mt-14 pt-8 border-t border-gray-100">
+                                    <NavLink to="/conditionneurs-sans-sel">
+                                        <Button className="rounded-full bg-blue-600 hover:bg-blue-700 text-white px-8 h-14 text-base shadow-lg transition-all duration-300 w-full sm:w-auto hover:shadow-blue-200">
+                                            Découvrir nos conditionneurs sans sel <ChevronRight className="ml-2 h-5 w-5" />
+                                        </Button>
+                                    </NavLink>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>

@@ -50,7 +50,7 @@ const Filtration = () => {
             <Header />
             <main>
                 {/* 1.Hero Section */}
-                <section className="relative h-[800px] flex items-center overflow-hidden">
+                <section className="relative h-[850px] flex items-center overflow-hidden -mt-[104px] pt-[104px]">
                     <div className="absolute inset-0 z-0">
                         <img
                             src={heroFiltration}
@@ -59,9 +59,11 @@ const Filtration = () => {
                         />
                         <div className="absolute inset-0 bg-black/40 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
                         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-white via-white/10 to-transparent" />
+                        {/* Brightening Start 1/3 Right */}
+                        <div className="absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white/90 via-white/40 to-transparent" />
                     </div>
 
-                    <div className="container mx-auto px-4 relative z-10">
+                    <div className="container mx-auto px-6 relative z-10">
                         <div className="max-w-2xl text-white">
                             <span className="text-sm font-bold uppercase tracking-widest text-blue-600 mb-4 block">
                                 SOLUTIONS DE FILTRATION D'EAU
@@ -101,6 +103,22 @@ const Filtration = () => {
                                 </Button>
                             </div>
                         </div>
+                    </div>
+                    {/* Wave Separator Bottom - Transition to Blue Section */}
+                    <div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-[0] z-20 pointer-events-none">
+                        <svg
+                            className="relative block w-full h-[80px] md:h-[150px]"
+                            data-name="Layer 1"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 1200 120"
+                            preserveAspectRatio="none"
+                        >
+                            <path
+                                d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                                fill="#2563EB"
+                                transform="rotate(180 600 60)"
+                            ></path>
+                        </svg>
                     </div>
                 </section>
 
@@ -165,9 +183,9 @@ const Filtration = () => {
 
                             {/* Right Side: Content */}
                             <div className="w-full lg:w-1/2 pt-4">
-                                <span className="text-sm font-bold uppercase tracking-widest text-emerald-500 mb-4 block flex items-center gap-2">
-                                    <span className="w-8 h-[2px] bg-emerald-500 inline-block"></span>
-                                    NOTRE EXPERTISE
+                                <span className="text-sm font-bold uppercase tracking-widest text-blue-600 mb-4 block flex items-center gap-2">
+                                    <span className="w-8 h-[2px] bg-blue-600 inline-block"></span>
+                                    Eau filtrée pour toute la maison
                                 </span>
                                 <h2 className="text-[32px] md:text-[48px] font-bold text-slate-900 mb-6 leading-[1.1] tracking-tighter">
                                     Redécouvrez le luxe d'une eau filtrée cristalline.
@@ -183,10 +201,10 @@ const Filtration = () => {
                                         { title: "Performance Longue Durée", desc: "Une technologie haute fidélité offrant une filtration efficace pendant 5 à 7 ans sans aucun entretien lourd ou changement fréquent." }
                                     ].map((item, i) => (
                                         <div key={i} className="group/item">
-                                            <h3 className="text-xl font-bold mb-4 text-emerald-600 flex items-center gap-3">
+                                            <h3 className="text-xl font-bold mb-4 text-blue-600 flex items-center gap-3">
                                                 <span className="text-2xl opacity-50">0{i + 1}.</span> {item.title}
                                             </h3>
-                                            <div className="pl-6 border-l-2 border-emerald-500/20 group-hover/item:border-emerald-500 transition-colors duration-500 ml-2">
+                                            <div className="pl-6 border-l-2 border-blue-600/20 group-hover/item:border-blue-600 transition-colors duration-500 ml-2">
                                                 <p className="text-base text-gray-500 leading-relaxed text-justify">
                                                     {item.desc}
                                                 </p>
@@ -237,8 +255,8 @@ const Filtration = () => {
 
                             {/* Left Side (visually): Content */}
                             <div className="w-full lg:w-1/2 pt-4">
-                                <span className="text-sm font-bold uppercase tracking-widest text-emerald-500 mb-4 block flex items-center gap-2">
-                                    <span className="w-8 h-[2px] bg-emerald-500 inline-block"></span>
+                                <span className="text-sm font-bold uppercase tracking-widest text-blue-600 mb-4 block flex items-center gap-2">
+                                    <span className="w-8 h-[2px] bg-blue-600 inline-block"></span>
                                     EAU PURE À VOLONTÉ
                                 </span>
                                 <h2 className="text-[32px] md:text-[48px] font-bold text-slate-900 mb-6 leading-[1.1] tracking-tighter">
@@ -255,10 +273,10 @@ const Filtration = () => {
                                         { title: "Saveurs Révélées", desc: "Sublimez le goût de vos boissons et petits plats avec une eau pure, sans chlore ni impuretés pour une cuisine d'exception." }
                                     ].map((item, i) => (
                                         <div key={i} className="group/item">
-                                            <h3 className="text-xl font-bold mb-4 text-emerald-600 flex items-center gap-3">
+                                            <h3 className="text-xl font-bold mb-4 text-blue-600 flex items-center gap-3">
                                                 <span className="text-2xl opacity-50">0{i + 1}.</span> {item.title}
                                             </h3>
-                                            <div className="pl-6 border-l-2 border-emerald-500/20 group-hover/item:border-emerald-500 transition-colors duration-500 ml-2">
+                                            <div className="pl-6 border-l-2 border-blue-600/20 group-hover/item:border-blue-600 transition-colors duration-500 ml-2">
                                                 <p className="text-base text-gray-500 leading-relaxed text-justify">
                                                     {item.desc}
                                                 </p>
@@ -310,8 +328,8 @@ const Filtration = () => {
 
                             {/* Right Side: Content */}
                             <div className="w-full lg:w-1/2 pt-4">
-                                <span className="text-sm font-bold uppercase tracking-widest text-emerald-500 mb-4 block flex items-center gap-2">
-                                    <span className="w-8 h-[2px] bg-emerald-500 inline-block"></span>
+                                <span className="text-sm font-bold uppercase tracking-widest text-blue-600 mb-4 block flex items-center gap-2">
+                                    <span className="w-8 h-[2px] bg-blue-600 inline-block"></span>
                                     COMPACT & PUISSANT
                                 </span>
                                 <h2 className="text-[32px] md:text-[48px] font-bold text-slate-900 mb-6 leading-[1.1] tracking-tighter">
@@ -328,10 +346,10 @@ const Filtration = () => {
                                         { title: "Finition de Luxe", desc: "Inclut une sélection de robinets au design contemporain qui s'intègrent parfaitement à l'esthétique de votre cuisine moderne." }
                                     ].map((item, i) => (
                                         <div key={i} className="group/item">
-                                            <h3 className="text-xl font-bold mb-4 text-emerald-600 flex items-center gap-3">
+                                            <h3 className="text-xl font-bold mb-4 text-blue-600 flex items-center gap-3">
                                                 <span className="text-2xl opacity-50">0{i + 1}.</span> {item.title}
                                             </h3>
-                                            <div className="pl-6 border-l-2 border-emerald-500/20 group-hover/item:border-emerald-500 transition-colors duration-500 ml-2">
+                                            <div className="pl-6 border-l-2 border-blue-600/20 group-hover/item:border-blue-600 transition-colors duration-500 ml-2">
                                                 <p className="text-base text-gray-500 leading-relaxed text-justify">
                                                     {item.desc}
                                                 </p>

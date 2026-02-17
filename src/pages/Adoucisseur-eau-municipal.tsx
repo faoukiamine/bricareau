@@ -18,7 +18,7 @@ import {
 } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import { useNavigate } from "react-router-dom";
-import waterTestingImg from "@/assets/test-laboratoire-diligence-inspection-750x500.jpg";
+import waterTestingImg from "@/assets/water-test.jpg";
 import residentialWaterSoftenerImg from "@/assets/residential-water-softener.png";
 import waterSoftenerImg from "@/assets/Adoucisseurs d'eau.webp";
 import {
@@ -98,39 +98,71 @@ const AdoucisseurEauMunicipal = () => {
             <Header />
 
             <main>
-                {/* 1.Hero Section */}
-                <section className="relative h-[800px] flex items-center overflow-hidden">
+                {/* 1.Hero Section - DESIGN FROM TESTS-EAU */}
+                <section className="relative h-[850px] flex items-center overflow-hidden -mt-[104px] pt-[104px]">
                     <div className="absolute inset-0 z-0">
                         <img
                             src={heroBath}
-                            alt="femme prenant un bain d'eau douce"
+                            alt="Femme prenant un bain d'eau douce"
                             className="w-full h-full object-cover"
                         />
-                        <div className="absolute inset-0 bg-black/30 lg:bg-gradient-to-r lg:from-black/50 lg:to-transparent" />
+                        <div className="absolute inset-0 bg-black/40 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
+                        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-white via-white/10 to-transparent" />
+                        {/* Brightening Start 1/3 Right */}
+                        <div className="absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white/90 via-white/40 to-transparent" />
                     </div>
 
-                    <div className="container mx-auto px-4 relative z-10">
+                    <div className="container mx-auto px-6 relative z-10">
                         <div className="max-w-2xl text-white">
+                            <span className="text-sm font-bold uppercase tracking-widest text-blue-600 mb-4 block">
+                                ADOUCISSEUR D'EAU MUNICIPALE
+                            </span>
                             <h1
-                                className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-white text-justify"
-                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-white"
+                                style={{
+                                    fontFamily:
+                                        'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                }}
                             >
-                                <span className="font-bold">Une douceur qui se sent,</span> <br /> <span className="font-bold">un confort qui se vit.</span>
+                                <span className="font-bold">Une douceur qui se sent,</span> <br />
+                                <span className="font-bold">un confort qui se vit.</span>
                             </h1>
+
                             <p className="text-lg font-light leading-relaxed text-white/95 mb-8 max-w-xl text-justify">
                                 Redécouvrez le confort d'une eau soyeuse protégeant votre peau et vos appareils électroménagers. Alliez économies durables et bien-être absolu au quotidien.
                             </p>
-                            <div className="flex gap-4">
+
+                            <div className="flex flex-col sm:flex-row gap-4">
                                 <Button
                                     size="lg"
                                     className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200"
-                                    style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                    style={{
+                                        fontFamily:
+                                            'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                    }}
                                     asChild
                                 >
                                     <a href="#consultation">Planifiez une consultation gratuite</a>
                                 </Button>
                             </div>
                         </div>
+                    </div>
+
+                    {/* Wave Separator Bottom - Transition to Blue Section */}
+                    <div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-[0] z-20 pointer-events-none">
+                        <svg
+                            className="relative block w-full h-[80px] md:h-[150px]"
+                            data-name="Layer 1"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 1200 120"
+                            preserveAspectRatio="none"
+                        >
+                            <path
+                                d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                                fill="#2563EB"
+                                transform="rotate(180 600 60)"
+                            ></path>
+                        </svg>
                     </div>
                 </section>
 
