@@ -61,7 +61,7 @@ const TestsEauPage = () => {
               className="w-full h-full object-cover"
             />
             {/* <div className="absolute inset-0 bg-black/40 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" /> */}
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-white via-white/10 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-b from-gray-900/90 via-gray-900/50 to-transparent" />
           </div>
 
           <div className="container mx-auto px-6 relative z-10">
