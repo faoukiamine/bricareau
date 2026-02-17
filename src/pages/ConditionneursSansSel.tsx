@@ -146,7 +146,7 @@ const ConditionneursSansSel = () => {
                 className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-white"
                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
               >
-                Lutter contre le calcaire ? <span className="font-bold"><br />Il y a une autre solution...</span>
+                <span className="font-bold">Lutter contre le calcaire ?</span> <span className="font-bold"><br />Il y a une autre solution...</span>
               </h1>
               <p className="font-light text-[20px] leading-[28px] text-white/95 mb-8 max-w-xl">
                 Protégez votre plomberie et profitez d'une eau plus saine grâce à notre technologie
@@ -154,11 +154,11 @@ const ConditionneursSansSel = () => {
               </p>
               <Button
                 size="lg"
-                className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14"
+                className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200"
                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                 asChild
               >
-                <a href="#consultation">Planifier une consultation gratuite</a>
+                <a href="#consultation">Planifiez une consultation gratuite</a>
               </Button>
             </div>
           </div>
@@ -314,10 +314,10 @@ const ConditionneursSansSel = () => {
                     />
                   </div>
                   <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
-                    <h3 className="text-xl font-bold mb-4 group-hover:text-blue-600 transition-colors">{res.title}</h3>
+                    <h3 className="text-xl font-medium mb-4 group-hover:text-blue-600 transition-colors">{res.title}</h3>
                     <p className="text-slate-500 text-sm leading-relaxed mb-6 flex-grow">{res.description}</p>
-                    <div className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-xs tracking-widest uppercase">
-                      EN SAVOIR PLUS <ChevronRight className="h-4 w-4" />
+                    <div className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-sm">
+                      Lire <ChevronRight className="h-4 w-4" />
                     </div>
                   </div>
                 </div>

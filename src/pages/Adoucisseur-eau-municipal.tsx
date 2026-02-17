@@ -4,6 +4,7 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import { Button } from "@/components/ui/button";
 import heroBath from "@/assets/sub-category-dryer.webp";
 import {
+    ArrowRight,
     Droplets,
     ChevronRight,
     CheckCircle2,
@@ -16,6 +17,7 @@ import {
     HandCoins
 } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
+import { useNavigate } from "react-router-dom";
 import waterTestingImg from "@/assets/test-laboratoire-diligence-inspection-750x500.jpg";
 import residentialWaterSoftenerImg from "@/assets/residential-water-softener.png";
 import waterSoftenerImg from "@/assets/Adoucisseurs d'eau.webp";
@@ -90,13 +92,14 @@ const faqItems = [
 ];
 
 const AdoucisseurEauMunicipal = () => {
+    const navigate = useNavigate();
     return (
         <div className="min-h-screen bg-white">
             <Header />
 
             <main>
                 {/* 1.Hero Section */}
-                <section className="relative h-[800px] flex items-start overflow-hidden pt-[220px]">
+                <section className="relative h-[800px] flex items-center overflow-hidden">
                     <div className="absolute inset-0 z-0">
                         <img
                             src={heroBath}
@@ -109,10 +112,10 @@ const AdoucisseurEauMunicipal = () => {
                     <div className="container mx-auto px-4 relative z-10">
                         <div className="max-w-2xl text-white">
                             <h1
-                                className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-bold mb-8 tracking-tighter text-white text-justify"
+                                className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-white text-justify"
                                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                             >
-                                Une douceur qui se sent, <br /> <span className="font-normal">un confort qui se vit.</span>
+                                <span className="font-bold">Une douceur qui se sent,</span> <br /> <span className="font-bold">un confort qui se vit.</span>
                             </h1>
                             <p className="text-lg font-light leading-relaxed text-white/95 mb-8 max-w-xl text-justify">
                                 Redécouvrez le confort d'une eau soyeuse protégeant votre peau et vos appareils électroménagers. Alliez économies durables et bien-être absolu au quotidien.
@@ -120,11 +123,11 @@ const AdoucisseurEauMunicipal = () => {
                             <div className="flex gap-4">
                                 <Button
                                     size="lg"
-                                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14"
+                                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200"
                                     style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                                     asChild
                                 >
-                                    <a href="#consultation">Planifier une consultation gratuite</a>
+                                    <a href="#consultation">Planifiez une consultation gratuite</a>
                                 </Button>
                             </div>
                         </div>
@@ -177,32 +180,40 @@ const AdoucisseurEauMunicipal = () => {
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto">
                             {products.map((p, i) => (
-                                <div key={i} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer group flex flex-col h-full">
-                                    <div className="bg-slate-50 aspect-square overflow-hidden flex items-center justify-center p-8">
+                                <div
+                                    key={i}
+                                    className="group bg-white rounded-3xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full cursor-pointer"
+                                    onClick={() => navigate(p.path || "/adoucisseurs")}
+                                >
+                                    <div className="relative h-80 overflow-hidden bg-slate-50 flex items-center justify-center p-12">
                                         <img
                                             src={p.image}
                                             alt={p.name}
-                                            className="w-full h-full object-contain mix-blend-multiply transition-transform duration-500 group-hover:scale-110"
+                                            className="max-h-full object-contain group-hover:scale-110 transition-transform duration-700 mix-blend-multiply"
                                         />
                                     </div>
-                                    <div className="p-8 text-center border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow items-center">
-                                        <h3 className="text-xl font-bold mb-2 group-hover:text-blue-600 transition-colors tracking-tight">
-                                            {p.name.includes("Adoucisseur d'eau") ? (
-                                                <>
-                                                    Adoucisseur d'eau <br />
-                                                    {p.name.split("Adoucisseur d'eau")[1].trim()}
-                                                </>
-                                            ) : p.name}
-                                        </h3>
-                                        <p className="text-lg font-light leading-relaxed text-slate-500 mb-6 flex-grow text-justify">{p.desc}</p>
-                                        <NavLink
-                                            to={p.path || "/adoucisseurs"}
-                                            className="text-blue-600 font-bold flex items-center justify-center gap-2 group-hover:underline text-xs tracking-widest uppercase"
+                                    <div className="p-8 space-y-4 flex flex-col flex-grow border-t-2 border-transparent group-hover:border-blue-600 transition-colors">
+                                        <h3
+                                            className="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors tracking-tight text-center"
+                                            style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                                         >
-                                            EN SAVOIR PLUS <ChevronRight className="h-4 w-4" />
-                                        </NavLink>
+                                            {p.name}
+                                        </h3>
+                                        <p
+                                            className="text-slate-500 font-light leading-relaxed flex-grow text-justify"
+                                            style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                        >
+                                            {p.desc}
+                                        </p>
+                                        <div
+                                            className="inline-flex items-center gap-2 text-blue-600 font-bold text-xs tracking-widest uppercase mt-4 group-hover:underline self-end"
+                                            style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                        >
+                                            <span></span>
+                                            <ArrowRight className="h-6 w-6 transform group-hover:translate-x-1 transition-transform" />
+                                        </div>
                                     </div>
                                 </div>
                             ))}
@@ -228,8 +239,8 @@ const AdoucisseurEauMunicipal = () => {
                                     <tr className="bg-gray-100">
                                         <th className="p-8 text-left text-gray-400 font-light uppercase tracking-wider w-1/4">Modèle</th>
                                         {[
-                                            { name: "Sérénité", img: waterSoftenerImg },
                                             { name: "Sentinel", img: waterSoftenerImg },
+                                            { name: "Sérénité", img: waterSoftenerImg },
                                             { name: "Infiniti", img: waterSoftenerImg }
                                         ].map(m => (
                                             <th key={m.name} className="p-4 text-center text-gray-900 font-bold">
@@ -266,7 +277,7 @@ const AdoucisseurEauMunicipal = () => {
                 <TestimonialsSection />
 
                 {/* 6.Water Testing Section */}
-                <section className="relative h-[650px] flex items-start overflow-hidden pt-[180px]">
+                <section className="relative h-[650px] flex items-center overflow-hidden">
                     <div className="absolute inset-0 z-0">
                         <img
                             src={waterTestingImg}
@@ -295,7 +306,7 @@ const AdoucisseurEauMunicipal = () => {
                                     style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                                     asChild
                                 >
-                                    <a href="/tests-eau">Demander une analyse d'eau</a>
+                                    <a href="/tests-eau">Demandez une analyse d'eau</a>
                                 </Button>
                             </div>
                         </div>
@@ -355,12 +366,12 @@ const AdoucisseurEauMunicipal = () => {
                                         <img src={art.img} alt={art.title} className="w-full h-full object-cover transition-transform group-hover:scale-110" />
                                     </div>
                                     <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors">
-                                        <h4 className="text-xl font-bold mb-4">{art.title}</h4>
+                                        <h4 className="text-xl font-medium mb-4">{art.title}</h4>
                                         <NavLink
                                             to="#"
-                                            className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-xs tracking-widest uppercase"
+                                            className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-sm"
                                         >
-                                            EN SAVOIR PLUS <ChevronRight className="h-4 w-4" />
+                                            Lire <ChevronRight className="h-4 w-4" />
                                         </NavLink>
                                     </div>
                                 </div>

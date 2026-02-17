@@ -203,8 +203,8 @@ const ConsultationFormSection = ({ id }: { id?: string }) => {
                             className="text-slate-900 tracking-tighter mb-8 text-left"
                             style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                         >
-                            <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Planifiez une consultation</span>
-                            <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">gratuite sur l'eau</span>
+                            <span className="text-[32px] md:text-[60px] font-bold leading-[1.1] md:leading-[60px] block">Planifiez une consultation</span>
+                            <span className="text-[32px] md:text-[60px] font-bold leading-[1.1] md:leading-[60px] block">gratuite sur l'eau</span>
                         </h2>
                         <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                             Remplissez le formulaire ci-dessous pour organiser une consultation téléphonique avec l'un de nos experts.

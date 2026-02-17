@@ -76,14 +76,14 @@ const ProductShowcase = () => {
                                 <img
                                     src={product.image}
                                     alt={product.name}
-                                    className="max-h-full object-contain group-hover:scale-110 transition-transform duration-700 mix-blend-multiply drop-shadow-xl"
+                                    className="max-h-full object-contain group-hover:scale-110 transition-transform duration-700 mix-blend-multiply"
                                 />
                             </div>
 
                             {/* Product info */}
                             <div className="p-8 space-y-4 flex flex-col flex-grow border-t-2 border-transparent group-hover:border-blue-600 transition-colors">
                                 <h3
-                                    className="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors tracking-tight"
+                                    className="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors tracking-tight text-center"
                                     style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                                 >
                                     {product.name}
@@ -98,8 +98,8 @@ const ProductShowcase = () => {
                                     className="inline-flex items-center gap-2 text-blue-600 font-bold text-xs tracking-widest uppercase mt-4 group-hover:underline self-end"
                                     style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                                 >
-                                    <span>EN SAVOIR PLUS</span>
-                                    <ArrowRight className="h-4 w-4 transform group-hover:translate-x-1 transition-transform" />
+                                    <span></span>
+                                    <ArrowRight className="h-6 w-6 transform group-hover:translate-x-1 transition-transform" />
                                 </div>
                             </div>
                         </div>

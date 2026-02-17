@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Check, ChevronRight, CheckCircle2, X, Phone } from "lucide-react";
+import { ArrowRight, Check, ChevronRight, CheckCircle2, X, Phone } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import heroPuits from "@/assets/blog-10-copyright.jpg";
 import uvSystemImg from "@/assets/Systèmes de désinfection UV.webp";
@@ -21,7 +21,7 @@ import process2 from "@/assets/section-image-and-content-23.jpg";
 import process3 from "@/assets/service bricareau.webp";
 import process4 from "@/assets/unnamed (2).jpg";
 import TestimonialsSection from "@/components/TestimonialsSection";
-import labTestImg from "@/assets/test-laboratoire-diligence-inspection-750x500.jpg";
+import labTestImg from "@/assets/istockphoto-506610454-612x612-1.jpg";
 
 import {
   Accordion,
@@ -94,7 +94,7 @@ const EauDePuits = () => {
       <Header />
       <main>
         {/* 1.Hero Section */}
-        <section className="relative h-[800px] flex items-start overflow-hidden pt-[220px]">
+        <section className="relative h-[800px] flex items-center overflow-hidden">
           <div className="absolute inset-0 z-0">
             <img
               src={heroPuits}
@@ -114,7 +114,7 @@ const EauDePuits = () => {
                 className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-white"
                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
               >
-                <span className="font-bold">Votre puits est un trésor.</span> <span className="font-normal">Offrez-lui la pureté qu'il mérite.</span>
+                <span className="font-bold">Votre puits est un trésor.</span> <span className="font-bold">Offrez-lui la pureté qu'il mérite.</span>
               </h1>
               <p className="text-lg font-light leading-relaxed text-white/90 mb-8 max-w-xl text-justify">
                 Ne laissez plus le fer, le soufre ou les bactéries gâcher la richesse de votre puits. Transformez votre eau brute en une ressource cristalline, saine et parfaitement équilibrée pour toute votre famille.
@@ -122,12 +122,12 @@ const EauDePuits = () => {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button
                   size="lg"
-                  className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14"
+                  className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200"
                   style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                   asChild
                 >
                   <a href="#consultation">
-                    Planifier une consultation gratuite
+                    Planifiez une consultation gratuite
                   </a>
                 </Button>
                 <Button
@@ -323,7 +323,7 @@ const EauDePuits = () => {
         </section>
 
         {/* 7.Water Testing Section */}
-        <section className="relative h-[650px] flex items-start overflow-hidden pt-[180px]">
+        <section className="relative h-[650px] flex items-center overflow-hidden">
           <div className="absolute inset-0 z-0">
             <img
               src={labTestImg}
@@ -342,12 +342,11 @@ const EauDePuits = () => {
                 className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-white"
                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
               >
-                <span className="font-bold">Des tests d'eau précis</span><br />
-                pour votre sécurité.
+                <span className="font-bold">Dites adieu au fer,</span><br />
+                au soufre et au calcaire.
               </h1>
               <p className="text-lg font-light leading-relaxed text-white/95 mb-8 max-w-xl text-justify">
-                Ne prenez aucun risque avec la santé de votre foyer. Nos tests de précision révèlent les polluants et contaminants invisibles, vous garantissant ainsi une eau parfaitement saine et une sérénité absolue.
-              </p>
+                Un puits performant commence par une analyse rigoureuse. Identifiez les contaminants invisibles et protégez durablement votre santé et vos installations.              </p>
               <div className="flex gap-4">
                 <Button
                   size="lg"
@@ -355,7 +354,7 @@ const EauDePuits = () => {
                   style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                   onClick={() => document.getElementById('nos-adoucisseurs')?.scrollIntoView({ behavior: 'smooth' })}
                 >
-                  <a href="/tests-eau">Demander une analyse d'eau</a>
+                  <a href="/tests-eau">Réserver une analyse d'eau</a>
                 </Button>
               </div>
             </div>
@@ -415,23 +414,32 @@ const EauDePuits = () => {
                       className="group bg-white rounded-3xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full cursor-pointer"
                       onClick={() => window.location.href = prod.link || "/contact"}
                     >
-                      <div className="bg-slate-50 aspect-square overflow-hidden flex items-center justify-center p-6">
+                      <div className="relative h-80 overflow-hidden bg-slate-50 flex items-center justify-center p-12">
                         <img
                           src={prod.img}
                           alt={prod.name}
-                          className="w-full h-full object-contain mix-blend-multiply transition-transform duration-700 group-hover:scale-110 drop-shadow-xl"
+                          className="max-h-full object-contain group-hover:scale-110 transition-transform duration-700 mix-blend-multiply"
                         />
                       </div>
-                      <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
-                        <h3 className="text-xl font-bold mb-4 group-hover:text-blue-600 transition-colors tracking-tight text-center w-[55%] mx-auto whitespace-pre-line">{prod.name}</h3>
-                        <p className="text-lg font-light leading-relaxed text-slate-500 mb-6 flex-grow text-justify">{prod.desc}</p>
-                        <div className="mt-auto">
-                          <NavLink
-                            to={prod.link || "#"}
-                            className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-xs tracking-widest uppercase"
-                          >
-                            EN SAVOIR PLUS <ChevronRight className="h-4 w-4 transform group-hover:translate-x-1 transition-transform" />
-                          </NavLink>
+                      <div className="p-8 space-y-4 flex flex-col flex-grow border-t-2 border-transparent group-hover:border-blue-600 transition-colors">
+                        <h3
+                          className="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors tracking-tight text-center"
+                          style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                        >
+                          {prod.name}
+                        </h3>
+                        <p
+                          className="text-slate-500 font-light leading-relaxed flex-grow text-justify"
+                          style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                        >
+                          {prod.desc}
+                        </p>
+                        <div
+                          className="inline-flex items-center gap-2 text-blue-600 font-bold text-xs tracking-widest uppercase mt-4 group-hover:underline self-end"
+                          style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                        >
+                          <span></span>
+                          <ArrowRight className="h-6 w-6 transform group-hover:translate-x-1 transition-transform" />
                         </div>
                       </div>
                     </div>
@@ -517,7 +525,7 @@ const EauDePuits = () => {
               Besoin d'aide avec votre eau de puits ?
             </h2>
             <p className="text-primary-foreground/80 text-lg mb-8 max-w-2xl mx-auto text-justify">
-              Discutez avec un expert en un clic. Disponible par téléphone ou à domicile selon vos préférences.
+              Le fer, le soufre et le calcaire ne sont pas une fatalité. Protégez votre plomberie et retrouvez le plaisir d'une eau inodore et cristalline grâce à nos solutions spécialisées de filtration d'eau.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
@@ -526,7 +534,7 @@ const EauDePuits = () => {
                 className="rounded-full px-8 border-white text-white bg-transparent hover:bg-white/10"
                 asChild
               >
-                <a href="tel:18552649328">Appelez le 1-855-264-9328</a>
+                <a href="tel:18552649328">Parler avec un spécialiste d'eau au 1-855-264-9328</a>
               </Button>
             </div>
           </div>
@@ -664,12 +672,12 @@ const EauDePuits = () => {
                     />
                   </div>
                   <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors">
-                    <h4 className="text-xl font-bold mb-4">{art.title}</h4>
+                    <h4 className="text-xl font-medium mb-4">{art.title}</h4>
                     <NavLink
                       to="#"
-                      className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-xs tracking-widest"
+                      className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-sm"
                     >
-                      EN SAVOIR PLUS <ChevronRight className="h-4 w-4" />
+                      Lire <ChevronRight className="h-4 w-4" />
                     </NavLink>
                   </div>
                 </div>

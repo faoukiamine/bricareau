@@ -20,7 +20,7 @@ import teenagerShowerImg from "@/assets/teenager-taking-shower-reduce-hangover-e
 import undersinkSystemImg from "@/assets/Triple Stage Filter.jpg";
 import africanGirlImg from "@/assets/african-girl-stands-kitchen-drinks-water.jpg";
 import glassOfWaterImg from "@/assets/glass-of-water.jpeg";
-import waterTestingImg from "@/assets/Scientist istesting water.webp";
+import waterTestingImg from "@/assets/legionella-monitoring.webp";
 import process1 from "@/assets/2149228790.jpg";
 import labTestImg from "@/assets/2149239334.jpg";
 
@@ -49,7 +49,7 @@ const Filtration = () => {
             <Header />
             <main>
                 {/* 1.Hero Section */}
-                <section className="relative h-[800px] flex items-start overflow-hidden pt-[220px]">
+                <section className="relative h-[800px] flex items-center overflow-hidden">
                     <div className="absolute inset-0 z-0">
                         <img
                             src={heroFiltration}
@@ -70,7 +70,7 @@ const Filtration = () => {
                                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                             >
                                 <span className="font-bold">Systèmes de Filtration d'eau,</span>
-                                 <span className="font-bold">conçus pour votre bien-être.</span>
+                                <span className="font-bold"> conçus pour votre bien-être.</span>
                             </h1>
                             <p className="text-lg font-light leading-relaxed text-white/95 mb-8 max-w-xl text-justify">
                                 Ne laissez plus le doute couler de votre robinet. Nos systèmes de filtration d'eau avancés agissent comme un bouclier invisible contre les contaminants, vous garantissant une eau d'une pureté irréprochable pour boire, cuisiner et grandir en toute confiance.
@@ -78,12 +78,12 @@ const Filtration = () => {
                             <div className="flex flex-col sm:flex-row gap-4">
                                 <Button
                                     size="lg"
-                                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14"
+                                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200"
                                     style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                                     asChild
                                 >
                                     <a href="#consultation">
-                                        Planifier une consultation gratuite
+                                        Planifiez une consultation gratuite
                                     </a>
                                 </Button>
                                 <Button
@@ -295,7 +295,7 @@ const Filtration = () => {
                 </section>
 
                 {/* 6. Water Testing Section */}
-                                {/* 7.Water Testing Section */}
+                {/* 7.Water Testing Section */}
                 <section className="relative h-[650px] flex items-start overflow-hidden pt-[180px]">
                     <div className="absolute inset-0 z-0">
                         <img
@@ -303,7 +303,7 @@ const Filtration = () => {
                             alt="Analyse de l'eau en laboratoire"
                             className="w-full h-full object-cover"
                         />
-                        <div className="absolute inset-0 bg-blue-900/40 lg:bg-gradient-to-r lg:from-blue-900/90 lg:to-blue-600/20 mix-blend-multiply" />
+                        <div className="absolute inset-0 bg-blue-950/60 lg:bg-gradient-to-r lg:from-blue-950/95 lg:to-blue-900/40 mix-blend-multiply" />
                         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-white via-white/10 to-transparent" />
                     </div>
                     <div className="container mx-auto px-4 relative z-10">
@@ -318,7 +318,7 @@ const Filtration = () => {
                                 <span className="font-bold">Votre eau sous la loupe.</span>
                             </h2>
                             <p className="text-lg font-light leading-relaxed text-white/95 mb-8 max-w-xl text-justify">
-                            Ne devinez pas la qualité de votre eau. Nos analyses approfondies identifient les bactéries, les minéraux et les contaminants chimiques pour vous offrir une tranquillité d'esprit totale.                            </p>
+                                Ne devinez pas la qualité de votre eau. Nos analyses approfondies identifient les bactéries, les minéraux et les contaminants chimiques pour vous offrir une tranquillité d'esprit totale.                            </p>
                             <div className="flex gap-4">
                                 <Button
                                     size="lg"
@@ -326,7 +326,7 @@ const Filtration = () => {
                                     style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                                     asChild
                                 >
-                                    <a href="/tests-eau">Demander une analyse d'eau</a>
+                                    <a href="/tests-eau">Demandez une analyse d'eau</a>
                                 </Button>
                             </div>
                         </div>
@@ -523,13 +523,13 @@ const Filtration = () => {
                                         />
                                     </div>
                                     <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
-                                        <h4 className="text-xl font-bold mb-4 group-hover:text-blue-600 transition-colors uppercase tracking-tight">{art.title}</h4>
+                                        <h4 className="text-xl font-medium mb-4 group-hover:text-blue-600 transition-colors tracking-tight">{art.title}</h4>
                                         <div className="mt-auto">
                                             <NavLink
                                                 to="#"
-                                                className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-xs tracking-widest uppercase"
+                                                className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-sm"
                                             >
-                                                EN SAVOIR PLUS <ChevronRight className="h-4 w-4 transform group-hover:translate-x-1 transition-transform" />
+                                                Lire <ChevronRight className="h-4 w-4 transform group-hover:translate-x-1 transition-transform" />
                                             </NavLink>
                                         </div>
                                     </div>

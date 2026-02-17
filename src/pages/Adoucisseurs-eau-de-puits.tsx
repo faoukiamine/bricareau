@@ -179,7 +179,7 @@ const AdoucisseursEauDePuits = () => {
                                 className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-white"
                                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                             >
-                                <span className="font-bold">Un bien-être sans égal</span> <span className="font-normal"><br />au quotidien</span>
+                                <span className="font-bold">Un bien-être sans égal</span> <span className="font-bold"><br />au quotidien</span>
                             </h1>
                             <p className="text-lg font-light leading-relaxed text-white/95 mb-8 max-w-xl text-justify">
                                 Bricareau vous offre une eau douce, source de bien-être et de confort.
@@ -187,11 +187,11 @@ const AdoucisseursEauDePuits = () => {
                             <div className="flex gap-4">
                                 <Button
                                     size="lg"
-                                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14"
+                                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200"
                                     style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                                     onClick={() => document.getElementById('nos-adoucisseurs')?.scrollIntoView({ behavior: 'smooth' })}
                                 >
-                                    <a href="#consultation">Planifier une consultation gratuite</a>
+                                    <a href="#consultation">Planifiez une consultation gratuite</a>
                                 </Button>
                             </div>
                         </div>
@@ -245,30 +245,39 @@ const AdoucisseursEauDePuits = () => {
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto">
                             {products.map((p, i) => (
                                 <div
                                     key={i}
                                     className="group bg-white rounded-3xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full cursor-pointer"
                                     onClick={() => window.location.href = p.path || "/adoucisseurs"}
                                 >
-                                    <div className="bg-slate-50 aspect-square overflow-hidden flex items-center justify-center p-12">
+                                    <div className="relative h-80 overflow-hidden bg-slate-50 flex items-center justify-center p-12">
                                         <img
                                             src={p.image}
                                             alt={p.name}
-                                            className="w-full h-full object-contain mix-blend-multiply transition-transform duration-700 group-hover:scale-110 drop-shadow-xl"
+                                            className="max-h-full object-contain group-hover:scale-110 transition-transform duration-700 mix-blend-multiply"
                                         />
                                     </div>
-                                    <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
-                                        <h3 className="text-xl font-bold mb-4 group-hover:text-blue-600 transition-colors tracking-tight">{p.name}</h3>
-                                        <p className="text-lg font-light leading-relaxed text-slate-500 mb-6 flex-grow text-justify">{p.desc}</p>
-                                        <div className="mt-auto">
-                                            <NavLink
-                                                to={p.path || "/adoucisseurs"}
-                                                className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-xs tracking-widest uppercase"
-                                            >
-                                                EN SAVOIR PLUS <ChevronRight className="h-4 w-4 transform group-hover:translate-x-1 transition-transform" />
-                                            </NavLink>
+                                    <div className="p-8 space-y-4 flex flex-col flex-grow border-t-2 border-transparent group-hover:border-blue-600 transition-colors">
+                                        <h3
+                                            className="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors tracking-tight text-center"
+                                            style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                        >
+                                            {p.name}
+                                        </h3>
+                                        <p
+                                            className="text-slate-500 font-light leading-relaxed flex-grow text-justify"
+                                            style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                        >
+                                            {p.desc}
+                                        </p>
+                                        <div
+                                            className="inline-flex items-center gap-2 text-blue-600 font-bold text-xs tracking-widest uppercase mt-4 group-hover:underline self-end"
+                                            style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                        >
+                                            <span></span>
+                                            <ArrowRight className="h-6 w-6 transform group-hover:translate-x-1 transition-transform" />
                                         </div>
                                     </div>
                                 </div>
@@ -334,7 +343,7 @@ const AdoucisseursEauDePuits = () => {
                 </section>
 
                 {/* 7.Water Testing Section */}
-                <section className="relative h-[800px] flex items-start overflow-hidden pt-[220px]">
+                <section className="relative h-[650px] flex items-center overflow-hidden">
                     <div className="absolute inset-0 z-0">
                         <img
                             src={waterTestingImg}
@@ -363,7 +372,7 @@ const AdoucisseursEauDePuits = () => {
                                     style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                                     onClick={() => document.getElementById('nos-adoucisseurs')?.scrollIntoView({ behavior: 'smooth' })}
                                 >
-                                    <a href="/tests-eau">Demander une analyse d'eau</a>
+                                    <a href="/tests-eau">Demandez une analyse d'eau</a>
                                 </Button>
                             </div>
                         </div>
@@ -449,13 +458,13 @@ const AdoucisseursEauDePuits = () => {
                                         <img src={art.img} alt={art.title} className="w-full h-full object-cover transition-transform group-hover:scale-110" />
                                     </div>
                                     <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
-                                        <h4 className="text-xl font-bold mb-4 group-hover:text-blue-600 transition-colors uppercase tracking-tight">{art.title}</h4>
+                                        <h4 className="text-xl font-medium mb-4 group-hover:text-blue-600 transition-colors tracking-tight">{art.title}</h4>
                                         <div className="mt-auto">
                                             <NavLink
                                                 to="#"
-                                                className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-xs tracking-widest uppercase"
+                                                className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-sm"
                                             >
-                                                EN SAVOIR PLUS <ChevronRight className="h-4 w-4" />
+                                                Lire <ChevronRight className="h-4 w-4" />
                                             </NavLink>
                                         </div>
                                     </div>

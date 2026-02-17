@@ -11,6 +11,7 @@ import waterTestGemini from "@/assets/Gemini_Generated_Image_rk3i02rk3i02rk3i.pn
 import waterTestingImg from "@/assets/2147800429.jpg";
 import process1 from "@/assets/2148563485.jpg";
 import labTestImg from "@/assets/test-laboratoire-diligence-inspection-750x500.jpg";
+import waterTestingBg from "@/assets/undersink_filtration_header.jpg";
 import {
     ArrowRight,
     Droplets,
@@ -48,7 +49,7 @@ const Adoucissement = () => {
             <Header />
             <main>
                 {/* 1. Hero Section */}
-                <section className="relative h-[800px] flex items-start overflow-hidden pt-[220px]">
+                <section className="relative h-[800px] flex items-center overflow-hidden">
                     <div className="absolute inset-0 z-0">
                         <img
                             src={heroBath}
@@ -64,10 +65,10 @@ const Adoucissement = () => {
                                 ADOUCISSEURS D'EAU
                             </span>
                             <h1
-                                className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-bold mb-8 tracking-tighter text-white"
+                                className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-white"
                                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                             >
-                                Une eau douce, <span className="font-normal">meilleure pour vous et votre maison</span>
+                                <span className="font-bold text-white">Une eau douce,</span> <span className="font-bold">meilleure pour vous et votre maison.</span>
                             </h1>
                             <p className="text-lg font-light leading-relaxed text-white/95 mb-8 max-w-xl text-justify">
                                 Redécouvrez le confort d'une eau soyeuse protégeant votre peau et vos appareils. Alliez économies durables et bien-être absolu au quotidien.
@@ -75,12 +76,12 @@ const Adoucissement = () => {
                             <div className="flex flex-col sm:flex-row gap-4">
                                 <Button
                                     size="lg"
-                                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14"
+                                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200"
                                     style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                                     asChild
                                 >
                                     <a href="#consultation">
-                                        Planifier une consultation gratuite
+                                        Planifiez une consultation gratuite
                                     </a>
                                 </Button>
                                 <Button
@@ -254,68 +255,43 @@ const Adoucissement = () => {
                 <TestimonialsSection />
 
                 {/* 7. Water Testing Section */}
-                <section className="py-24 bg-blue-600">
-                    <div className="container mx-auto px-6">
-                        <div className="flex flex-col lg:flex-row items-center gap-16">
-                            {/* Left Column: Images Composition */}
-                            <div className="w-full lg:w-1/2 relative min-h-[500px] lg:min-h-[600px]">
-                                {/* Main Large Image (Back Left) */}
-                                <div className="absolute top-0 left-0 w-4/5 h-4/5 rounded-[2rem] overflow-hidden shadow-2xl z-10">
-                                    <img
-                                        src={waterTestGemini}
-                                        alt="Analyse d'eau principale"
-                                        className="w-full h-full object-cover"
-                                    />
-                                    <div className="absolute inset-0 bg-black/10"></div>
-                                </div>
-
-                                {/* Vertical Image (Front Right) */}
-                                <div className="absolute top-[10%] right-0 w-[35%] h-[55%] rounded-[1.5rem] overflow-hidden shadow-2xl z-20 border-[6px] border-white">
-                                    <img
-                                        src={process1}
-                                        alt="Scientifique analysant l'eau"
-                                        className="w-full h-full object-cover"
-                                    />
-                                </div>
-
-                                {/* Horizontal Image (Front Bottom) */}
-                                <div className="absolute bottom-[5%] left-[10%] w-[55%] h-[28%] rounded-[1.5rem] overflow-hidden shadow-2xl z-30 border-[6px] border-white">
-                                    <img
-                                        src={labTestImg}
-                                        alt="Résultats d'analyse"
-                                        className="w-full h-full object-cover"
-                                    />
-                                </div>
-                            </div>
-
-                            {/* Right Column: Content */}
-                            <div className="w-full lg:w-1/2 lg:pl-12">
-                                <span className="text-white/80 font-bold uppercase tracking-widest text-sm mb-4 block">
-                                    Contrôle de la Qualité D'EAU
-                                </span>
-                                <h2
-                                    className="text-[40px] md:text-[52px] font-bold text-white mb-6 leading-[1.1] tracking-tighter"
-                                    style={{
-                                        fontFamily:
-                                            'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                    }}
+                <section className="relative h-[650px] flex items-center overflow-hidden">
+                    <div className="absolute inset-0 z-0">
+                        <img
+                            src={waterTestingBg}
+                            alt="Analyse de l'eau"
+                            className="w-full h-full object-cover"
+                        />
+                        <div className="absolute inset-0 bg-blue-900/40 lg:bg-gradient-to-r lg:from-blue-900/90 lg:to-blue-600/20 mix-blend-multiply" />
+                        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-white via-white/10 to-transparent" />
+                    </div>
+                    <div className="container mx-auto px-6 relative z-10">
+                        <div className="max-w-2xl text-white">
+                            <span className="text-white/80 font-bold uppercase tracking-widest text-sm mb-4 block">
+                                Contrôle de la Qualité D'EAU
+                            </span>
+                            <h2
+                                className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-white"
+                                style={{
+                                    fontFamily:
+                                        'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                }}
+                            >
+                                <span className="font-bold">L’essence d’une vie saine</span><br />
+                                coule de votre robinet.
+                            </h2>
+                            <p className="text-lg font-light leading-relaxed text-white/95 mb-8 max-w-xl text-justify">
+                                Entre le chlore, les métaux lourds et les sédiments, votre eau cache souvent des secrets. Ne laissez plus le doute couler de votre robinet. Demandez votre test d'eau dès aujourd'hui et obtenez un portrait clair de votre eau ainsi que des solutions adaptées à votre foyer.
+                            </p>
+                            <div className="flex gap-4">
+                                <Button
+                                    size="lg"
+                                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14"
+                                    style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                    asChild
                                 >
-                                    L'excellence commence<br />
-                                    par une eau parfaite.
-                                </h2>
-                                <p className="text-lg text-white/90 mb-8 leading-relaxed text-left text-justify">
-                                    Le luxe, c'est de ne pas avoir à se soucier de la qualité de ce que l'on consomme. Offrez-vous la sérénité d'une eau analysée par des experts, pour une maison où tout brille, sans effort et sans compromis.
-                                </p>
-                                <div className="flex flex-wrap gap-6 items-center">
-                                    <Button
-                                        size="lg"
-                                        className="bg-white hover:bg-blue-50 text-blue-600 rounded-full px-8 h-14"
-                                        style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
-                                        asChild
-                                    >
-                                        <a href="/tests-eau">Demander une analyse d'eau</a>
-                                    </Button>
-                                </div>
+                                    <a href="/tests-eau">Demandez une analyse d'eau</a>
+                                </Button>
                             </div>
                         </div>
                     </div>
@@ -387,10 +363,10 @@ const Adoucissement = () => {
                                         <img src={art.img} alt={art.title} className="w-full h-full object-cover transition-transform group-hover:scale-110" />
                                     </div>
                                     <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
-                                        <h4 className="text-xl font-bold mb-4 group-hover:text-blue-600 transition-colors uppercase tracking-tight">{art.title}</h4>
+                                        <h4 className="text-xl font-medium mb-4 group-hover:text-blue-600 transition-colors tracking-tight">{art.title}</h4>
                                         <div className="mt-auto">
-                                            <NavLink to={art.link} className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-xs tracking-widest uppercase">
-                                                EN SAVOIR PLUS <ChevronRight className="h-4 w-4" />
+                                            <NavLink to={art.link} className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-sm">
+                                                Lire <ChevronRight className="h-4 w-4" />
                                             </NavLink>
                                         </div>
                                     </div>

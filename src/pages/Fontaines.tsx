@@ -27,7 +27,7 @@ const Fontaines = () => {
             <Header />
             <main>
                 {/* Hero Section */}
-                <section className="relative h-[800px] flex items-start overflow-hidden pt-[220px]">
+                <section className="relative h-[800px] flex items-center overflow-hidden">
                     <div className="absolute inset-0 z-0">
                         <img
                             src={heroFountains}
@@ -52,12 +52,12 @@ const Fontaines = () => {
                             <div className="flex flex-col sm:flex-row gap-4">
                                 <Button
                                     size="lg"
-                                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14"
+                                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200"
                                     style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                                     asChild
                                 >
                                     <a href="#consultation">
-                                        Planifier une consultation gratuite
+                                        Planifiez une consultation gratuite
                                     </a>
                                 </Button>
                                 <Button
@@ -98,10 +98,10 @@ const Fontaines = () => {
                                     <div className="w-full aspect-square bg-slate-100 rounded-xl mb-6 flex items-center justify-center">
                                         <item.icon className="w-16 h-16 text-blue-600 opacity-20" />
                                     </div>
-                                    <h3 className="text-xl font-bold mb-4">{item.title}</h3>
+                                    <h3 className="text-xl font-medium mb-4">{item.title}</h3>
                                     <p className="font-light text-[18px] leading-[24px] text-slate-500 mb-6 flex-grow">{item.desc}</p>
                                     <Button variant="link" className="text-blue-600 font-bold p-0 group">
-                                        EN SAVOIR PLUS <ChevronRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" />
+                                        Lire <ChevronRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" />
                                     </Button>
                                 </div>
                             ))}
@@ -192,7 +192,7 @@ const Fontaines = () => {
                             ].map((item, i) => (
                                 <div key={i} className="bg-white/5 border border-white/10 p-10 rounded-3xl flex flex-col items-start text-left hover:bg-white/10 transition-colors group">
                                     <item.icon className="w-10 h-10 text-blue-400 mb-6 transition-transform group-hover:scale-110" />
-                                    <h3 className="text-xl font-bold mb-4">{item.title}</h3>
+                                    <h3 className="text-xl font-medium mb-4">{item.title}</h3>
                                     <p className="text-slate-400 text-sm leading-relaxed">{item.desc}</p>
                                 </div>
                             ))}

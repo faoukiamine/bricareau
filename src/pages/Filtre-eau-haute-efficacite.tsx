@@ -391,13 +391,13 @@ const FiltreEauHauteEfficacite = () => {
                                         />
                                     </div>
                                     <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
-                                        <h3 className="text-xl font-bold mb-2 group-hover:text-blue-600 transition-colors uppercase tracking-tight">{prod.title}</h3>
+                                        <h3 className="text-xl font-medium mb-2 group-hover:text-blue-600 transition-colors tracking-tight">{prod.title}</h3>
                                         <p className="text-lg font-light leading-relaxed text-slate-500 text-sm mb-6 flex-grow text-justify">{prod.desc}</p>
                                         <NavLink
                                             to={prod.link || "#"}
-                                            className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-xs tracking-widest uppercase"
+                                            className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-sm"
                                         >
-                                            EN SAVOIR PLUS <ChevronRight className="h-4 w-4" />
+                                            Lire <ChevronRight className="h-4 w-4" />
                                         </NavLink>
                                     </div>
                                 </div>

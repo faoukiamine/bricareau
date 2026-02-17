@@ -5,6 +5,7 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import { Button } from "@/components/ui/button";
 import heroFilter from "@/assets/person-is-holding-a-glass-of-water-from-a-faucet.jpeg";
 import {
+    ArrowRight,
     Droplets,
     ChevronRight,
     CheckCircle2,
@@ -37,7 +38,7 @@ import { Label } from "@/components/ui/label";
 
 const products = [
     { name: "Filtre d'eau Vortex", desc: "Spécialisé pour l'eau contenant des sédiments.", image: specializedFiltersImg },
-    { name: "Filtre d'eau Zen-pH", desc: "Spécialisé pour l'eau acide.", image: specializedFiltersImg },
+    { name: "Filtre d'eau Zen-pH", desc: "Spécialisé pour neutraliser l'eau acide.", image: specializedFiltersImg },
     { name: "Filtre d'eau ChlorStop", desc: "Spécialisé pour l'eau contenant du chlore.", image: specializedFiltersImg },
     { name: "Filtre d'eau Iron Shield", desc: "Spécialisé pour l'eau contenant du fer.", image: specializedFiltersImg },
     { name: "Filtre d'eau Oxy-pure", desc: "Spécialisé pour l'eau contenant du fer et du manganèse.", image: specializedFiltersImg },
@@ -146,15 +147,15 @@ const FiltresPuits = () => {
                                 className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-white"
                                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                             >
-                                Profitez d'une solution sur mesure pour <span className="font-bold">une eau filtrée sans compromis</span>
+                                <span className="font-bold">Profitez d'une solution sur mesure pour</span> <span className="font-bold">une eau filtrée sans compromis</span>
                             </h1>
                             <p className="font-light text-[20px] leading-[28px] text-white/95 mb-8 max-w-xl">
-                                Nos filtres haute performance éliminent fer, odeurs et sédiments pour protéger vos installations et garantir une eau saine à chaque robinet.
+                                Nos filtres haute performance éliminent fer, odeurs des oeufs-pourris, manganèse et sédiments pour protéger vos installations et garantir une eau saine à chaque robinet.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4">
                                 <Button
                                     size="lg"
-                                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 transition-all duration-300 hover:scale-105 shadow-lg"
+                                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200"
                                     style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                                     asChild
                                 >
@@ -226,20 +227,32 @@ const FiltresPuits = () => {
                                     className="group bg-white rounded-3xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full cursor-pointer"
                                     onClick={() => navigate("/contact")}
                                 >
-                                    <div className="bg-slate-50 aspect-square overflow-hidden flex items-center justify-center p-12">
+                                    <div className="relative h-80 overflow-hidden bg-slate-50 flex items-center justify-center p-12">
                                         <img
                                             src={p.image}
                                             alt={p.name}
-                                            className="w-full h-full object-contain mix-blend-multiply transition-transform duration-700 group-hover:scale-110 drop-shadow-xl"
+                                            className="max-h-full object-contain group-hover:scale-110 transition-transform duration-700 mix-blend-multiply"
                                         />
                                     </div>
-                                    <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
-                                        <h3 className="text-xl font-bold mb-4 group-hover:text-blue-600 transition-colors tracking-tight">{p.name}</h3>
-                                        <p className="text-slate-500 text-sm leading-relaxed mb-6 flex-grow">{p.desc}</p>
-                                        <div className="mt-auto">
-                                            <div className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-xs tracking-widest uppercase">
-                                                EN SAVOIR PLUS <ChevronRight className="h-4 w-4 transform group-hover:translate-x-1 transition-transform" />
-                                            </div>
+                                    <div className="p-8 space-y-4 flex flex-col flex-grow border-t-2 border-transparent group-hover:border-blue-600 transition-colors">
+                                        <h3
+                                            className="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors tracking-tight text-center"
+                                            style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                        >
+                                            {p.name}
+                                        </h3>
+                                        <p
+                                            className="text-slate-500 font-light leading-relaxed flex-grow text-justify"
+                                            style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                        >
+                                            {p.desc}
+                                        </p>
+                                        <div
+                                            className="inline-flex items-center gap-2 text-blue-600 font-bold text-xs tracking-widest uppercase mt-4 group-hover:underline self-end"
+                                            style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                        >
+                                            <span></span>
+                                            <ArrowRight className="h-6 w-6 transform group-hover:translate-x-1 transition-transform" />
                                         </div>
                                     </div>
                                 </div>
@@ -316,7 +329,7 @@ const FiltresPuits = () => {
                 </section>
 
                 {/* 7.Water Testing Section */}
-                <section className="relative h-[650px] flex items-start overflow-hidden pt-[180px]">
+                <section className="relative h-[650px] flex items-center overflow-hidden">
                     <div className="absolute inset-0 z-0">
                         <img
                             src={waterTestingImg}
@@ -348,7 +361,7 @@ const FiltresPuits = () => {
                                     style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                                     asChild
                                 >
-                                    <a href="/tests-eau">Demander une analyse d'eau</a>
+                                    <a href="/tests-eau">Demandez une analyse d'eau</a>
                                 </Button>
                             </div>
                         </div>
@@ -440,13 +453,13 @@ const FiltresPuits = () => {
                                         />
                                     </div>
                                     <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
-                                        <h4 className="text-xl font-bold mb-4 group-hover:text-blue-600 transition-colors uppercase tracking-tight">{art.title}</h4>
+                                        <h4 className="text-xl font-medium mb-4 group-hover:text-blue-600 transition-colors tracking-tight">{art.title}</h4>
                                         <div className="mt-auto">
                                             <NavLink
                                                 to="#"
-                                                className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-xs tracking-widest uppercase"
+                                                className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-sm"
                                             >
-                                                EN SAVOIR PLUS <ChevronRight className="h-4 w-4 transform group-hover:translate-x-1 transition-transform" />
+                                                Lire <ChevronRight className="h-4 w-4 transform group-hover:translate-x-1 transition-transform" />
                                             </NavLink>
                                         </div>
                                     </div>

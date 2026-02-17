@@ -279,13 +279,13 @@ const EauDure = () => {
               {solutions.map((solution, index) => (
                 <div key={index} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer group flex flex-col h-full border border-gray-100">
                   <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
-                    <h3 className="text-xl font-bold mb-4 group-hover:text-blue-600 transition-colors uppercase tracking-tight">{solution.title}</h3>
+                    <h3 className="text-xl font-medium mb-4 group-hover:text-blue-600 transition-colors tracking-tight">{solution.title}</h3>
                     <p className="text-slate-500 text-sm leading-relaxed mb-6 flex-grow">{solution.description}</p>
                     <NavLink
                       to={solution.link}
-                      className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-xs tracking-widest uppercase"
+                      className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-sm"
                     >
-                      EN SAVOIR PLUS <ChevronRight className="h-4 w-4" />
+                      Lire <ChevronRight className="h-4 w-4" />
                     </NavLink>
                   </div>
                 </div>

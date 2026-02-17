@@ -94,7 +94,7 @@ const ProblemHero = () => {
                                 asChild
                             >
                                 <a href="/consultation" className="flex items-center gap-2">
-                                    Planifier une consultation gratuite
+                                    Planifiez une consultation gratuite
                                     <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
                                 </a>
                             </Button>

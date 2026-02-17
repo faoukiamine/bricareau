@@ -11,7 +11,6 @@ import {
     ShieldCheck,
     Droplets,
     Zap,
-    ZapOff,
     Activity,
     ShieldAlert,
     BatteryLow,
@@ -29,11 +28,10 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import ConsultationFormSection from "@/components/ConsultationFormSection";
 
 import heroImg from "@/assets/african-girl-stands-kitchen-drinks-water.jpg";
-import uvSystemImg from "@/assets/Systèmes de désinfection UV.webp";
 import uvSystemImg2 from "@/assets/VH200-F10-265x300.jpg";
 import uvSystemImg3 from "@/assets/VH410-F20-200x300.jpg";
 import uvSystemImg4 from "@/assets/500x500_V-Arros-15-IHS-10_straight-1-300x300.jpg";
-import waterTestingImg from "@/assets/test-laboratoire-diligence-inspection-750x500.jpg";
+import waterTestingImg from "@/assets/Legionella-Monitoring.webp";
 
 const DesinfectionUV = () => {
     const comparisonData = [
@@ -50,7 +48,7 @@ const DesinfectionUV = () => {
             <Header />
             <main>
                 {/* 1.Hero Section */}
-                <section className="relative h-[800px] flex items-start overflow-hidden pt-[220px]">
+                <section className="relative h-[800px] flex items-center overflow-hidden">
                     <div className="absolute inset-0 z-0">
                         <img
                             src={heroImg}
@@ -62,14 +60,14 @@ const DesinfectionUV = () => {
 
                     <div className="container mx-auto px-4 relative z-10">
                         <div className="max-w-2xl text-white">
-                            <span className="text-sm font-bold uppercase tracking-widest text-[#60A5FA] mb-4 block">
+                            <span className="text-sm font-bold uppercase tracking-widest text-blue-600 mb-4 block">
                                 PROTECTION MICROBIOLOGIQUE
                             </span>
                             <h1
                                 className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-white"
                                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                             >
-                                La désinfection UV <span className="font-bold"><br />Zéro produit chimique, 100% de protection</span>
+                                <span className="font-bold">La désinfection UV</span> <span className="font-bold"><br />Zéro produit chimique, 100% de protection</span>
                             </h1>
                             <p className="font-light text-[20px] leading-[28px] text-white/95 mb-8 max-w-xl text-justify">
                                 Éliminez 99,99% des virus, bactéries et kystes sans ajouter de produits chimiques à votre eau. Une protection invisible pour une sécurité totale.
@@ -77,11 +75,11 @@ const DesinfectionUV = () => {
                             <div className="flex flex-col sm:flex-row gap-4">
                                 <Button
                                     size="lg"
-                                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14"
+                                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200"
                                     style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                                     asChild
                                 >
-                                    <a href="#consultation">Planifier une consultation gratuite</a>
+                                    <a href="#consultation">Planifiez une consultation gratuite</a>
                                 </Button>
                                 <Button
                                     size="lg"
@@ -146,25 +144,49 @@ const DesinfectionUV = () => {
                                 <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Nos systèmes de</span>
                                 <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">désinfection UV</span>
                             </h2>
-                            <div className="w-24 h-1 bg-blue-600"></div>
+                            <div className="w-24 h-1 bg-blue-600 mb-12"></div>
+
+                            <p className="text-lg font-light leading-relaxed text-slate-600 text-justify max-w-7xl mx-auto" style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}>
+                                La technologie UV est le choix idéal pour les consommateurs qui cherchent à se protéger contre les contaminants microbiologiques, notamment les bactéries (E.coli, coliformes fécaux, etc.), les virus et les protozoaires (cryptosporidium, giardia, etc.) qui peuvent être résistants au chlore. Contrairement aux traitements chimiques, les UV ne modifient pas le goût, l’odeur ou la composition physico-chimique de l’eau. Nos dispositifs UV mis en place sur le point d’entrée (POE) est installé avant que l’eau ne soit distribuée dans les foyers, au niveau de la conduite d’alimentation principale, avant qu’elle ne circule dans l’ensemble du réseau domestique.
+                            </p>
                         </div>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto">
                             {[
                                 { name: "VH200-F10", desc: "Préfiltration UV intégrée pour toute la maison\nIdéal pour : bactéries, turbidité/opacité.\nDébit : 9 gpm.", img: uvSystemImg2 },
                                 { name: "VH410-F20", desc: "Préfiltration UV intégrée pour toute la maison\nIdéal pour : bactéries, turbidité/eau trouble.\nDébit : 18 gpm.", img: uvSystemImg3 },
                                 { name: "Arros 15-IHS10", desc: "Système de traitement d'eau UV pour toute la maison\nIdéal pour : bactéries, turbidité/opacité.\nDébit : 15 gpm.", img: uvSystemImg4 }
                             ].map((prod, i) => (
-                                <div key={i} className="bg-white rounded-3xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full cursor-pointer group">
-                                    <div className="bg-slate-50 aspect-square overflow-hidden flex items-center justify-center p-12">
-                                        <img src={prod.img} alt={prod.name} className="w-full h-full object-contain mix-blend-multiply transition-transform duration-700 group-hover:scale-110 drop-shadow-xl" />
+                                <div
+                                    key={i}
+                                    className="group bg-white rounded-3xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full cursor-pointer"
+                                    onClick={() => window.location.href = "/contact"}
+                                >
+                                    <div className="relative h-80 overflow-hidden bg-slate-50 flex items-center justify-center p-12">
+                                        <img
+                                            src={prod.img}
+                                            alt={prod.name}
+                                            className="max-h-full object-contain group-hover:scale-110 transition-transform duration-700 mix-blend-multiply"
+                                        />
                                     </div>
-                                    <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
-                                        <h3 className="text-xl font-bold mb-4 group-hover:text-blue-600 transition-colors tracking-tight">{prod.name}</h3>
-                                        <p className="text-lg font-light leading-relaxed text-slate-500 mb-6 flex-grow text-justify">{prod.desc}</p>
-                                        <div className="mt-auto">
-                                            <NavLink to="#" className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-xs tracking-widest uppercase">
-                                                EN SAVOIR PLUS <ChevronRight className="h-4 w-4 transform group-hover:translate-x-1 transition-transform" />
-                                            </NavLink>
+                                    <div className="p-8 space-y-4 flex flex-col flex-grow border-t-2 border-transparent group-hover:border-blue-600 transition-colors">
+                                        <h3
+                                            className="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors tracking-tight text-center"
+                                            style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                        >
+                                            {prod.name}
+                                        </h3>
+                                        <p
+                                            className="text-slate-500 font-light leading-relaxed flex-grow text-justify whitespace-pre-line"
+                                            style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                        >
+                                            {prod.desc}
+                                        </p>
+                                        <div
+                                            className="inline-flex items-center gap-2 text-blue-600 font-bold text-xs tracking-widest uppercase mt-4 group-hover:underline self-end"
+                                            style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                        >
+                                            <span></span>
+                                            <ArrowRight className="h-6 w-6 transform group-hover:translate-x-1 transition-transform" />
                                         </div>
                                     </div>
                                 </div>
@@ -231,7 +253,7 @@ const DesinfectionUV = () => {
                 </section>
 
                 {/* 7.Water Testing Section */}
-                <section className="relative h-[650px] flex items-start overflow-hidden pt-[180px]">
+                <section className="relative h-[650px] flex items-center overflow-hidden">
                     <div className="absolute inset-0 z-0">
                         <img
                             src={waterTestingImg}
@@ -250,7 +272,7 @@ const DesinfectionUV = () => {
                                 className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-white"
                                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                             >
-                                Votre eau est-elle <span className="font-bold"><br />vraiment sécuritaire ?</span>
+                                Votre eau de puits est-elle <span className="font-bold"><br />vraiment sécuritaire ?</span>
                             </h2>
                             <p className="text-lg font-light leading-relaxed text-white/95 mb-8 max-w-xl text-justify">
                                 Ne devinez pas la qualité de votre eau. Nos analyses approfondies identifient les bactéries, les minéraux et les contaminants chimiques pour vous offrir une tranquillité d'esprit totale.
@@ -262,7 +284,7 @@ const DesinfectionUV = () => {
                                     style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                                     asChild
                                 >
-                                    <a href="/tests-eau">Demander une analyse d'eau</a>
+                                    <a href="/tests-eau">Demandez une analyse d'eau</a>
                                 </Button>
                             </div>
                         </div>
@@ -395,10 +417,10 @@ const DesinfectionUV = () => {
                                         <img src={art.img} alt={art.title} className="w-full h-full object-cover transition-transform group-hover:scale-110" />
                                     </div>
                                     <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
-                                        <h4 className="text-xl font-bold mb-4 group-hover:text-blue-600 transition-colors uppercase tracking-tight">{art.title}</h4>
+                                        <h4 className="text-xl font-medium mb-4 group-hover:text-blue-600 transition-colors tracking-tight">{art.title}</h4>
                                         <div className="mt-auto">
-                                            <NavLink to="#" className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-xs tracking-widest uppercase">
-                                                EN SAVOIR PLUS <ChevronRight className="h-4 w-4" />
+                                            <NavLink to="#" className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-sm">
+                                                Lire <ChevronRight className="h-4 w-4" />
                                             </NavLink>
                                         </div>
                                     </div>

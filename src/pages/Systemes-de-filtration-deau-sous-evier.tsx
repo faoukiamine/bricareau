@@ -33,7 +33,7 @@ import eliteROImg from "@/assets/Triple Stage Filter.jpg";
 import plusROImg from "@/assets/Double Stage Filter.jpg";
 import essentialImg from "@/assets/Single Stage Filter.jpg";
 import sereneLiteImg from "@/assets/Système+de+filtration+Serene+Lite.webp";
-import waterTestingImg from "@/assets/test-laboratoire-diligence-inspection-750x500.jpg";
+import waterTestingImg from "@/assets/undersink_filtration_header.jpg";
 
 const FiltrationSousEvier = () => {
     const navigate = useNavigate();
@@ -72,7 +72,7 @@ const FiltrationSousEvier = () => {
                                 className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-white"
                                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                             >
-                                Buvez en toute confiance, <span className="font-bold">sans jamais porter une seule bouteille.</span>
+                                <span className="font-bold">Buvez en toute confiance,</span> <span className="font-bold">sans jamais porter une seule bouteille.</span>
                             </h1>
                             <p className="text-lg font-light leading-relaxed text-white/90 mb-8 max-w-xl text-justify">
                                 Un système compact et discret qui révolutionne la qualité de l'eau à chaque jet de votre robinet.
@@ -81,7 +81,7 @@ const FiltrationSousEvier = () => {
                             <div className="flex flex-col sm:flex-row gap-4">
                                 <Button
                                     size="lg"
-                                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14"
+                                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200"
                                     style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                                     asChild
                                 >
@@ -152,70 +152,47 @@ const FiltrationSousEvier = () => {
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto">
                             {[
                                 { name: "Bricareau Essential", desc: "La pureté accessible sans compromis sur la qualité.", img: essentialImg },
                                 { name: "Bricareau Plus RO", desc: "Performance exceptionnelle pour les familles actives.", img: plusROImg },
                                 { name: "Bricareau Elite RO", desc: "Le summum de la filtration avec reminéralisation alcaline incluse.", path: "/ro-6", img: eliteROImg },
-
                             ].map((product, i) => (
                                 <div
                                     key={i}
                                     className="group bg-white rounded-3xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full cursor-pointer"
                                     onClick={() => navigate(product.path || "/contact")}
                                 >
-                                    <div className="bg-slate-50 aspect-square overflow-hidden flex items-center justify-center p-12">
+                                    <div className="relative h-80 overflow-hidden bg-slate-50 flex items-center justify-center p-12">
                                         <img
                                             src={product.img}
                                             alt={product.name}
-                                            className="w-full h-full object-contain mix-blend-multiply transition-transform duration-700 group-hover:scale-110 drop-shadow-xl"
+                                            className="max-h-full object-contain group-hover:scale-110 transition-transform duration-700 mix-blend-multiply"
                                         />
                                     </div>
-                                    <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
-                                        <h3 className="text-xl font-bold mb-4 group-hover:text-blue-600 transition-colors tracking-tight">{product.name}</h3>
-                                        <p className="text-lg font-light leading-relaxed text-slate-500 mb-6 flex-grow text-justify">{product.desc}</p>
-                                        <div className="mt-auto">
-                                            <NavLink
-                                                to={product.path || "/contact"}
-                                                className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-xs tracking-widest uppercase"
-                                            >
-                                                EN SAVOIR PLUS <ChevronRight className="h-4 w-4 transform group-hover:translate-x-1 transition-transform" />
-                                            </NavLink>
+                                    <div className="p-8 space-y-4 flex flex-col flex-grow border-t-2 border-transparent group-hover:border-blue-600 transition-colors">
+                                        <h3
+                                            className="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors tracking-tight text-center"
+                                            style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                        >
+                                            {product.name}
+                                        </h3>
+                                        <p
+                                            className="text-slate-500 font-light leading-relaxed flex-grow text-justify"
+                                            style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                        >
+                                            {product.desc}
+                                        </p>
+                                        <div
+                                            className="inline-flex items-center gap-2 text-blue-600 font-bold text-xs tracking-widest uppercase mt-4 group-hover:underline self-end"
+                                            style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                        >
+                                            <span></span>
+                                            <ArrowRight className="h-6 w-6 transform group-hover:translate-x-1 transition-transform" />
                                         </div>
                                     </div>
                                 </div>
                             ))}
-                        </div>
-                    </div>
-                </section>
-
-                {/* 5. Water TestingSection */}
-                <section className="py-24 bg-blue-600">
-                    <div className="container mx-auto px-6">
-                        <div className="flex flex-col lg:flex-row items-center gap-16">
-                            <div className="lg:w-1/2 relative min-h-[400px] h-[500px] lg:h-[600px] rounded-[3rem] overflow-hidden shadow-2xl">
-                                <img src={waterTestingImg} alt="Analyse d'eau" className="absolute inset-0 w-full h-full object-cover" />
-                                <div className="absolute inset-0 bg-blue-900/10" />
-                            </div>
-                            <div className="lg:w-1/2 text-white flex flex-col justify-center items-start text-left">
-                                <span className="text-white/80 text-xs font-black uppercase tracking-[0.3em] mb-8 block">
-                                    ANALYSES D'EAU ET CONSEILS
-                                </span>
-                                <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal text-white mb-8 leading-[1.1] tracking-tighter">
-                                    Ne devinez pas, <br /> testez votre eau.
-                                </h2>
-                                <p className="text-white/90 text-lg font-light mb-12 leading-relaxed text-justify">
-                                    Chaque foyer est différent. Nos experts effectuent des analyses d'eau pour identifier les contaminants spécifiques à votre résidence et vous recommander la solution optimale.
-                                </p>
-                                <Button
-                                    size="lg"
-                                    className="bg-white text-blue-600 hover:bg-blue-50 rounded-full px-8 h-14"
-                                    style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
-                                    asChild
-                                >
-                                    <a href="#consultation">Prendre rendez-vous</a>
-                                </Button>
-                            </div>
                         </div>
                     </div>
                 </section>
@@ -278,7 +255,7 @@ const FiltrationSousEvier = () => {
                 </section>
 
                 {/* 7.Water Testing Section */}
-                <section className="relative h-[650px] flex items-start overflow-hidden pt-[180px]">
+                <section className="relative h-[650px] flex items-center overflow-hidden">
                     <div className="absolute inset-0 z-0">
                         <img
                             src={waterTestingImg}
@@ -297,19 +274,18 @@ const FiltrationSousEvier = () => {
                                 className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-white"
                                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                             >
-                                Des tests d'eau précis <span className="font-bold"><br />pour une tranquillité totale.</span>
+                                Identifiez l'invisible, <span className="font-bold"><br />maîtrisez votre pureté.</span>
                             </h2>
                             <p className="text-lg font-light leading-relaxed text-white/95 mb-8 max-w-xl text-justify">
-                                Ne devinez pas la qualité de votre eau. Nos analyses approfondies identifient les bactéries, les minéraux et les contaminants chimiques pour vous offrir une tranquillité d'esprit totale.
-                            </p>
+                                Ne laissez plus le doute couler de votre robinet. Nos tests d'eau révèlent la composition réelle de votre eau pour vous offrir une solution de filtration sur mesure, garantissant santé et sérénité à toute votre famille.                            </p>
                             <div className="flex gap-4">
                                 <Button
                                     size="lg"
-                                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14"
+                                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200"
                                     style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                                     asChild
                                 >
-                                    <a href="/tests-eau">Demander une analyse d'eau</a>
+                                    <a href="/tests-eau">Demandez une analyse d'eau</a>
                                 </Button>
                             </div>
                         </div>
@@ -449,13 +425,13 @@ const FiltrationSousEvier = () => {
                                         />
                                     </div>
                                     <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
-                                        <h4 className="text-xl font-bold mb-4 group-hover:text-blue-600 transition-colors uppercase tracking-tight">{art.title}</h4>
+                                        <h4 className="text-xl font-medium mb-4 group-hover:text-blue-600 transition-colors tracking-tight">{art.title}</h4>
                                         <div className="mt-auto">
                                             <NavLink
                                                 to="#"
-                                                className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-xs tracking-widest uppercase"
+                                                className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-sm"
                                             >
-                                                EN SAVOIR PLUS <ChevronRight className="h-4 w-4 transform group-hover:translate-x-1 transition-transform" />
+                                                Lire <ChevronRight className="h-4 w-4 transform group-hover:translate-x-1 transition-transform" />
                                             </NavLink>
                                         </div>
                                     </div>

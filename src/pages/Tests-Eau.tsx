@@ -70,11 +70,11 @@ const TestsEauPage = () => {
                 ANALYSE D'EAU
               </span>
               <h1
-                className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-white"
+                className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-bold mb-8 tracking-tighter text-white"
                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
               >
                 Vous désirez faire analyser <br />
-                <span className="font-normal">votre eau résidentielle?</span>
+                <span className="font-bold">votre eau résidentielle?</span>
               </h1>
               <p className="text-lg font-light leading-relaxed text-white/95 mb-8 max-w-xl text-justify">
                 Pour vos analyses annuelles, une transaction hypothécaire ou encore parce que vous avez un souci avec la qualité de votre eau, bricareau est là pour vous!
@@ -82,11 +82,11 @@ const TestsEauPage = () => {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button
                   size="lg"
-                  className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14"
+                  className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200"
                   style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                   asChild
                 >
-                  <a href="#consultation">Planifier un test d'eau</a>
+                  <a href="#consultation">Planifiez un test d'eau</a>
                 </Button>
                 <Button
                   size="lg"
@@ -148,7 +148,7 @@ const TestsEauPage = () => {
                   <div className="w-16 h-16 rounded-2xl bg-blue-600/20 flex items-center justify-center mb-6 group-hover:bg-blue-600/40 transition-colors">
                     <item.icon className="h-8 w-8 text-blue-400" />
                   </div>
-                  <h4 className="text-xl font-bold mb-4 text-white">{item.title}</h4>
+                  <h4 className="text-xl font-medium mb-4 text-white">{item.title}</h4>
                   <p className="text-lg font-light leading-relaxed text-blue-100/70 text-justify">{item.desc}</p>
                 </div>
               ))}
@@ -235,7 +235,7 @@ const TestsEauPage = () => {
                 { title: "4. Analyse d'eau physico-chimique globale", desc: "Une protection globale contre les contaminants et impuretés.", href: "/filtration" }
               ].map((prod, i) => (
                 <NavLink key={i} to={prod.href} className="group bg-[#001A4D] p-8 rounded-[2rem] border border-white/5 hover:bg-[#00266b] hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col h-full shadow-xl">
-                  <h4 className="text-xl font-bold mb-4 text-white">{prod.title}</h4>
+                  <h4 className="text-xl font-medium mb-4 text-white">{prod.title}</h4>
                   <p className="text-lg font-light leading-relaxed text-blue-100/70 mb-6 flex-grow text-justify">{prod.desc}</p>
                   <Button variant="link" className="text-blue-400 font-bold p-0 group-hover:text-blue-300 transition-colors w-fit">
                     Découvrir <ArrowRight className="ml-2 h-4 w-4" />
