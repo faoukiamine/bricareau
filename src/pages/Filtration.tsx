@@ -16,15 +16,11 @@ import { NavLink } from "@/components/NavLink";
 import heroFiltration from "@/assets/5846952.jpg";
 import drinkingWaterImg from "@/assets/Solutions d'eau potable.webp";
 import specializedFiltersImg from "@/assets/Filtres d'eau spécialisés.webp";
-import waterSoftenerImg from "@/assets/Adoucisseurs d'eau.webp";
 import teenagerShowerImg from "@/assets/teenager-taking-shower-reduce-hangover-effect.jpg";
 import undersinkSystemImg from "@/assets/Triple Stage Filter.jpg";
 import africanGirlImg from "@/assets/african-girl-stands-kitchen-drinks-water.jpg";
 import glassOfWaterImg from "@/assets/glass-of-water.jpeg";
-import waterTestingImg from "@/assets/legionella-monitoring.webp";
-import process1 from "@/assets/2149228790.jpg";
-import labTestImg from "@/assets/2149239334.jpg";
-
+import waterTestingImg from "@/assets/Legionella-Monitoring.webp";
 
 import {
     Accordion,
