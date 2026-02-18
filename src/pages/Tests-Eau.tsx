@@ -24,7 +24,8 @@ import {
   Sparkles,
   FileText,
   ShieldCheck,
-  ChevronLeft
+  ChevronLeft,
+  MessageCircle
 } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import {
@@ -36,6 +37,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import ConsultationFormSection from "@/components/ConsultationFormSection";
+import WaterTestFormSection from "@/components/WaterTestFormSection";
 
 import heroTesting from "@/assets/6666f4137364e2dd1bf86a0a_EauTrouble.webp";
 import specializedFiltersImg from "@/assets/Filtres d'eau spécialisés.webp";
@@ -58,6 +60,34 @@ const TestsEauPage = () => {
     setExpandedId(expandedId === id ? null : id);
   };
 
+  const [activeService, setActiveService] = useState(0);
+
+  const services = [
+    {
+      title: "Nouvel emménagement",
+      icon: MessageCircle,
+      img: movingTipsImg,
+      desc: "Assurez la sécurité de votre famille dès votre arrivée en testant la qualité de l'eau de votre nouvelle maison."
+    },
+    {
+      title: "Goût ou odeur suspecte",
+      icon: ShieldCheck,
+      img: smellImg,
+      desc: "Une eau malodorante ou au goût étrange peut indiquer une contamination. Identifions la cause ensemble."
+    },
+    {
+      title: "Taches sur les vêtements",
+      icon: FileText,
+      img: clothesStainsImg,
+      desc: "Le fer et le manganèse peuvent tacher vos vêtements. Une analyse révélera la solution adaptée pour protéger votre linge."
+    },
+    {
+      title: "Problèmes de plomberie",
+      icon: FileText,
+      img: plumbingImg,
+      desc: "Le calcaire obstrue vos tuyaux et réduit la durée de vie de vos appareils. Protégez votre investissement."
+    }
+  ];
   return (
     <div className="min-h-screen bg-white">
       <Header />
@@ -100,7 +130,7 @@ const TestsEauPage = () => {
                   style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                   asChild
                 >
-                  <a href="#consultation">
+                  <a href="#water-test">
                     Planifiez un test d'eau
                   </a>
                 </Button>
@@ -123,7 +153,7 @@ const TestsEauPage = () => {
           {/* Wave Separator Bottom - Transition to Dark Blue */}
           <div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-[0] z-20 pointer-events-none">
             <svg
-              className="relative block w-full h-[80px] md:h-[150px]"
+              className="relative block w-full h-[50px] md:h-[80px]"
               data-name="Layer 1"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 1200 120"
@@ -194,63 +224,78 @@ const TestsEauPage = () => {
           </div>
         </section >
 
-        {/* 3. When you should test your water Section*/}
-        < section className="py-24 bg-slate-50" >
+        {/* 3.When you should test your water Section */}
+        <section className="py-24 bg-white">
           <div className="container mx-auto px-6">
-            <div className="text-center mb-20">
-              <h2
-                className="text-slate-900 tracking-tighter mb-8 text-center"
-                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
-              >
-                <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Quand faut-il faire analyser</span>
-                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">l'eau de votre maison ?</span>
-              </h2>
-              <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
-            </div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
+              {/* Title Section (Row 1, Left) */}
+              <div className="lg:col-start-1 lg:row-start-1 flex flex-col justify-center">
+                <h2
+                  className="text-slate-900 tracking-tighter mb-8"
+                  style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                >
+                  <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Quand faut-il faire analyser</span>
+                  <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">l'eau de votre maison ?</span>
+                </h2>
+                <div className="w-24 h-1 bg-blue-600"></div>
+              </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {[
-                {
-                  title: "Nouvel emménagement",
-                  desc: "Testez votre eau dès que vous emménagez dans une nouvelle propriété pour votre sécurité.",
-                  img: movingTipsImg
-                },
-                {
-                  title: "Goût ou odeur suspecte",
-                  desc: "Si votre eau a un goût métallique ou une odeur d'œufs pourris inhabituelle.",
-                  img: smellImg
-                },
-                {
-                  title: "Taches sur les vêtements",
-                  desc: "Des taches blanches ou rouge-orange indiquent souvent des minéraux en excès.",
-                  img: clothesStainsImg
-                },
-                {
-                  title: "Problèmes de plomberie",
-                  desc: "L'accumulation de calcaire réduit considérablement l'efficacité de vos équipements.",
-                  img: plumbingImg
-                }
-              ].map((item, idx) => (
-                <div key={idx} className="group relative h-[450px] rounded-[2.5rem] overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
-                  <img src={item.img} alt={item.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
-                  <div className="absolute inset-x-0 bottom-0 p-8">
-                    <div className="w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center mb-6 transform -translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
-                      <ChevronRight className="text-white h-6 w-6" />
+              {/* Services List (Row 2, Left) */}
+              <div className="lg:col-start-1 lg:row-start-2 space-y-2">
+                {services.map((item, idx) => (
+                  <div
+                    key={idx}
+                    onClick={() => setActiveService(idx)}
+                    onMouseEnter={() => setActiveService(idx)}
+                    className={`group cursor-pointer py-6 px-4 -mx-4 rounded-lg transition-all duration-300 ${activeService === idx ? 'bg-blue-50/50' : 'hover:bg-gray-50'}`}
+                  >
+                    <div className="flex flex-col">
+                      <div className="flex items-center gap-4">
+                        <span className="text-2xl md:text-3xl font-bold text-blue-600/50 group-hover:text-blue-600 transition-colors duration-300">
+                          {String(idx + 1).padStart(2, '0')}.
+                        </span>
+                        <span
+                          className={`text-[20px] font-bold transition-colors duration-300 ${activeService === idx ? 'text-blue-600' : 'text-slate-900 group-hover:text-blue-600'}`}
+                          style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                        >
+                          {item.title}
+                        </span>
+                      </div>
+                      <div className={`grid transition-all duration-500 ease-in-out ${activeService === idx ? 'grid-rows-[1fr] opacity-100 mt-4' : 'grid-rows-[0fr] opacity-0 mt-0'}`}>
+                        <div className="overflow-hidden">
+                          <div className="pl-4 ml-3 border-l-2 border-blue-200">
+                            <p className="text-slate-600 leading-relaxed max-w-lg">
+                              {item.desc}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <h4 className="text-2xl font-bold text-white mb-4 leading-tight min-h-[64px] flex items-end">{item.title}</h4>
-                    <p className="text-lg font-light leading-relaxed text-white/80 line-clamp-3 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 delay-100 text-justify">
-                      {item.desc}
-                    </p>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
+
+              {/* Right Image Display (Row 2, Right) */}
+              <div className="lg:col-start-2 lg:row-start-2 relative rounded-[2.5rem] overflow-hidden shadow-2xl h-[400px] lg:h-full w-full">
+                {services.map((service, idx) => (
+                  <div
+                    key={idx}
+                    className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${activeService === idx ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}
+                  >
+                    <img
+                      src={service.img}
+                      alt={service.title}
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-[2000ms]"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
-        </section >
-
+        </section>
         {/* 5. Water Testing plans Section*/}
-        < section className="py-24 bg-white" >
+        <section className="py-24 bg-white">
           <div className="container mx-auto px-6 text-center">
             <div className="text-center mb-16">
               <h2
@@ -383,6 +428,7 @@ const TestsEauPage = () => {
           </div>
         </section >
 
+
         <section className="py-24 bg-white border-t border-slate-100">
           <div className="container mx-auto px-4 text-left">
             <div className="text-left mb-16">
@@ -457,9 +503,8 @@ const TestsEauPage = () => {
           </div>
         </section>
 
-        {/* 6 Contact Section */}
-        <ConsultationFormSection id="consultation" />
-
+       {/* 6. Schedule a Water Test Section */}
+        <WaterTestFormSection id="water-test" />
 
       </main >
       <Footer />

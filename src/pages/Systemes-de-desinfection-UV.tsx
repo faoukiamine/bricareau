@@ -99,7 +99,7 @@ const DesinfectionUV = () => {
                     {/* Wave Separator Bottom - Transition to Blue Section */}
                     <div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-[0] z-20 pointer-events-none">
                         <svg
-                            className="relative block w-full h-[80px] md:h-[150px]"
+                            className="relative block w-full h-[50px] md:h-[80px]"
                             data-name="Layer 1"
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 1200 120"

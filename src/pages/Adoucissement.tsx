@@ -65,7 +65,7 @@ const Adoucissement = () => {
                     <div className="container mx-auto px-6 relative z-10">
                         <div className="max-w-2xl text-white">
                             <span className="text-sm font-bold uppercase tracking-widest text-blue-600 mb-4 block">
-                                ADOUCISSEURS D'EAU municipaux
+                                ADOUCISSEURS D'EAU 
                             </span>
                             <h1
                                 className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-white"
@@ -105,7 +105,7 @@ const Adoucissement = () => {
                     {/* Wave Separator Bottom - Transition to Blue Section */}
                     <div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-[0] z-20 pointer-events-none">
                         <svg
-                            className="relative block w-full h-[80px] md:h-[150px]"
+                            className="relative block w-full h-[50px] md:h-[80px]"
                             data-name="Layer 1"
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 1200 120"
