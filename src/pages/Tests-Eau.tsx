@@ -234,8 +234,8 @@ const TestsEauPage = () => {
                   className="text-slate-900 tracking-tighter mb-8"
                   style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                 >
-                  <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Quand faut-il faire analyser</span>
-                  <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">l'eau de votre maison ?</span>
+                  <span className="text-[28px] md:text-[48px] font-light leading-[1.1] md:leading-[1.1] block">Quand faut-il faire analyser</span>
+                  <span className="text-[28px] md:text-[48px] font-normal leading-[1.1] md:leading-[1.1] block">l'eau de votre maison ?</span>
                 </h2>
                 <div className="w-24 h-1 bg-blue-600"></div>
               </div>
@@ -297,15 +297,15 @@ const TestsEauPage = () => {
         {/* 5. Water Testing plans Section*/}
         <section className="py-24 bg-white">
           <div className="container mx-auto px-6 text-center">
-            <div className="text-center mb-16">
+            <div className="text-left mb-16">
               <h2
-                className="text-slate-900 tracking-tighter mb-8 text-center"
+                className="text-slate-900 tracking-tighter mb-8 text-left"
                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
               >
-                <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Nos trousses d'analyse</span>
-                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">de la qualité de l'eau</span>
+                <span className="text-[28px] md:text-[48px] font-light leading-[1.1] md:leading-[1.1] block">Quelle trousse d'analyse d'eau</span>
+                <span className="text-[28px] md:text-[48px] font-normal leading-[1.1] md:leading-[1.1] block">choisir?</span>
               </h2>
-              <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
+              <div className="w-24 h-1 bg-blue-600"></div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
@@ -400,12 +400,12 @@ const TestsEauPage = () => {
                   ]
                 }
               ].map((prod, i) => (
-                <div key={i} className={`group bg-[#001A4D] p-8 rounded-[2rem] border border-white/5 hover:bg-[#00266b] hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col h-full shadow-xl ${expandedId === i ? 'row-span-2' : ''}`}>
+                <div key={i} className={`group bg-blue-400 p-8 rounded-[2rem] border border-white/20 hover:bg-blue-500 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col h-full shadow-xl ${expandedId === i ? 'row-span-2' : ''}`}>
                   <h4 className="text-xl font-medium mb-4 text-white">{prod.title}</h4>
-                  <p className="text-lg font-light leading-relaxed text-blue-100/70 mb-6 flex-grow text-justify">{prod.desc}</p>
+                  <p className="text-lg font-light leading-relaxed text-white/90 mb-6 flex-grow text-justify">{prod.desc}</p>
 
                   <div className={`overflow-hidden transition-all duration-500 ease-in-out ${expandedId === i ? 'max-h-[500px] opacity-100 mb-6' : 'max-h-0 opacity-0'}`}>
-                    <ul className={`text-sm font-light text-blue-200 text-left border-t border-white/10 pt-4 list-disc pl-5 space-y-1 ${i === 0 ? '' : 'grid grid-cols-2 gap-x-4'}`}>
+                    <ul className={`text-sm font-light text-white/80 text-left border-t border-white/20 pt-4 list-disc pl-5 space-y-1 ${i === 0 ? '' : 'grid grid-cols-2 gap-x-4'}`}>
                       {prod.details.map((detail, idx) => (
                         <li key={idx}>{detail}</li>
                       ))}
@@ -414,7 +414,7 @@ const TestsEauPage = () => {
 
                   <Button
                     variant="link"
-                    className="text-blue-400 font-bold p-0 group-hover:text-blue-300 transition-colors w-fit mt-auto self-end"
+                    className="text-white font-bold p-0 group-hover:text-blue-100 transition-colors w-fit mt-auto self-end"
                     onClick={(e) => {
                       e.preventDefault();
                       toggleExpand(i);
@@ -503,7 +503,7 @@ const TestsEauPage = () => {
           </div>
         </section>
 
-       {/* 6. Schedule a Water Test Section */}
+        {/* 6. Schedule a Water Test Section */}
         <WaterTestFormSection id="water-test" />
 
       </main >

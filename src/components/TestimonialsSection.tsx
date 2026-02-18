@@ -81,9 +81,7 @@ const TestimonialsSection = () => {
                                     <div className="bg-white p-10 md:p-14 rounded-[2rem] shadow-[0_10px_40px_-15px_rgba(0,0,0,0.1)] border border-gray-50 flex flex-col items-start text-left relative transition-all duration-300">
                                         {/* Quote Icon */}
                                         <div className="text-[#3FA9F5] mb-8">
-                                            <svg width="48" height="36" viewBox="0 0 48 36" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M0 24V12C0 5.37258 5.37258 0 12 0H16V12H12V24H16V36H12C5.37258 36 0 30.6274 0 24ZM32 24V12C32 5.37258 37.3726 0 44 0H48V12H44V24H48V36H44C37.3726 36 32 30.6274 32 24Z" />
-                                            </svg>
+                                            <Quote className="w-12 h-12 md:w-14 md:h-14" strokeWidth={1} />
                                         </div>
 
                                         {/* Quote Content */}

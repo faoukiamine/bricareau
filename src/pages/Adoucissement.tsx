@@ -65,7 +65,7 @@ const Adoucissement = () => {
                     <div className="container mx-auto px-6 relative z-10">
                         <div className="max-w-2xl text-white">
                             <span className="text-sm font-bold uppercase tracking-widest text-blue-600 mb-4 block">
-                                ADOUCISSEURS D'EAU 
+                                ADOUCISSEURS D'EAU
                             </span>
                             <h1
                                 className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-white"

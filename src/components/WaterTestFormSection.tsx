@@ -379,6 +379,11 @@ const WaterTestFormSection = ({ id }: { id?: string }) => {
                                                                             >
                                                                                 <FormControl>
                                                                                     <Checkbox
+                                                                                        disabled={
+                                                                                            item.id === "bilan-complet"
+                                                                                                ? field.value?.some((id: string) => ["microbiologique", "physico-chimique-type-1", "physico-chimique-type-2"].includes(id))
+                                                                                                : field.value?.includes("bilan-complet")
+                                                                                        }
                                                                                         checked={field.value?.includes(item.id)}
                                                                                         onCheckedChange={(checked) => {
                                                                                             return checked
