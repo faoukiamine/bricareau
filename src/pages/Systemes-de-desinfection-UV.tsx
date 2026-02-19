@@ -195,7 +195,7 @@ const DesinfectionUV = () => {
                                             {prod.name}
                                         </h3>
                                         <p
-                                            className="text-slate-500 font-light leading-relaxed flex-grow text-justify whitespace-pre-line"
+                                            className="text-slate-500 font-light leading-[24px] flex-grow text-justify whitespace-pre-line text-[18px]"
                                             style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                                         >
                                             {prod.desc}

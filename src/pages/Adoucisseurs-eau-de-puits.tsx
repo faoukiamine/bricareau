@@ -41,18 +41,10 @@ import { Label } from "@/components/ui/label";
 import ConsultationFormSection from "@/components/ConsultationFormSection";
 
 const products = [
-    { name: "Adoucisseur d'eau de la série Sentinelle", desc: "Le rythme parfait d'une eau toujours douce.", path: "/adoucisseur-eau-municipal", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
-    { name: "Adoucisseur d'eau de la série Sérénité", desc: "La paix durable pour votre maison et votre confort.", path: "/adoucisseur-eau-municipal", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
-    { name: "Adoucisseur d'eau de la série Infiniti", desc: "Une douceur constante, à chaque goutte, à chaque seconde.", path: "/adoucisseur-eau-municipal", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
+    { name: "Adoucisseur d'eau de la série Sentinelle HE", displayName: <>Adoucisseur d'eau de la série<br />Sentinelle HE</>, desc: "Le rythme parfait d'une eau toujours douce.", path: "/adoucisseur-eau-municipal", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
+    { name: "Adoucisseur d'eau de la série Sérénité HE", displayName: <>Adoucisseur d'eau de la série<br />Sérénité HE</>, desc: "La paix durable pour votre maison et votre confort.", path: "/adoucisseur-eau-municipal", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
+    { name: "Adoucisseur d'eau de la série Infiniti HE", displayName: <>Adoucisseur d'eau de la série<br />Infiniti HE</>, desc: "Une douceur constante, à chaque goutte, à chaque seconde.", path: "/adoucisseur-eau-municipal", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
 ];
-
-const reviews = [
-    { name: "Pierre L.", rating: 5, text: "Excellent service. L'installation a été rapide et les résultats sont au rendez-vous. Plus de calcaire !", date: "Il y a 2 mois" },
-    { name: "Marie C.", rating: 5, text: "Enfin une douche qui ne m'irrite plus la peau. Très satisfaite de mon adoucisseur Bricareau.", date: "Il y a 3 mois" },
-    { name: "Robert D.", rating: 4, text: "Bon produit, technicien très professionnel. Je recommande vivement.", date: "Il y a 1 mois" },
-    { name: "Sophie T.", rating: 5, text: "Une eau de qualité partout dans la maison. Le service client de Bricareau est top.", date: "Il y a 2 semaines" },
-];
-
 const faqItems = [
     {
         q: "Pourquoi un adoucisseur est-il presque essentiel pour l'eau de puits ?",
@@ -191,9 +183,9 @@ const AdoucisseursEauDePuits = () => {
                                     size="lg"
                                     className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200"
                                     style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
-                                    onClick={() => document.getElementById('nos-adoucisseurs')?.scrollIntoView({ behavior: 'smooth' })}
+                                    asChild
                                 >
-                                    <a href="#consultation">Planifiez une consultation gratuite</a>
+                                    <a href="/tests-eau#water-test">Réservez une analyse d'eau</a>
                                 </Button>
                             </div>
                         </div>
@@ -232,11 +224,12 @@ const AdoucisseursEauDePuits = () => {
                         <div className="flex flex-wrap justify-center gap-x-12 gap-y-16">
                             {[
                                 { icon: Droplets, title: "Qualité supérieure", desc: "Une douceur incomparable pour votre peau et vos cheveux dès la première douche." },
+                                { icon: Sparkles, title: "Vaisselle étincelante", desc: "Éliminez les taches de calcaire et le voile blanc sur vos verres et plats sans effort." },
+                                { icon: Shirt, title: "Linge plus doux", desc: "Des vêtements qui restent éclatants et souples plus longtemps, sans adoucissants." },
                                 { icon: Shield, title: "Protection totale", desc: "Prolongez la durée de vie de votre plomberie et de vos électroménagers coûteux." },
                                 { icon: HandCoins, title: "Économies garanties", desc: "Réduisez vos factures d'énergie et vos dépenses en savons et détergents de 50%." },
-                                { icon: Sparkles, title: "Vaisselle étincelante", desc: "Éliminez les taches de calcaire et le voile blanc sur vos verres et plats." },
-                                { icon: Shirt, title: "Linge plus doux", desc: "Des vêtements qui restent éclatants et souples plus longtemps, sans adoucissants." },
-                                { icon: Zap, title: "Efficacité HE", desc: "Une technologie haute efficacité qui consomme moins de sel et d'eau." },
+                                { icon: Zap, title: "Efficacité HE", desc: "Une technologie haute efficacité qui consomme moins de sel et d'eau lors des régénérations." },
+                                { icon: Zap, title: "Protection Éco-Durable", desc: "Préservez l'environnement et vos installations septiques en diminuant le rejet de produits chimiques." },
                                 { icon: Award, title: "Expertise Bricareau", desc: "Installation certifiée et service après-vente pour une tranquillité d'esprit totale." }
                             ].map((item, id) => (
                                 <div key={id} className="flex flex-col items-center group w-full sm:w-[calc(50%-3rem)] lg:w-[calc(25%-3rem)]">
@@ -259,9 +252,12 @@ const AdoucisseursEauDePuits = () => {
                                 className="text-[32px] md:text-[60px] font-light text-slate-900 mb-8 leading-[1.1] md:leading-[60px] tracking-tighter text-left"
                                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                             >
-                                Nos adoucisseurs d'eau <br /><span className="font-normal">résidentiels</span>
+                                Nos adoucisseurs d'eau <br /><span className="font-normal">résidentiels - Eau de puits</span>
                             </h2>
-                            <div className="w-24 h-1 bg-blue-600"></div>
+                            <div className="w-24 h-1 bg-blue-600 mb-8"></div>
+                            <p className="text-lg font-light leading-relaxed text-gray-600 max-w-7xl mx-auto text-justify mb-8">
+                                Découvrez notre gamme exclusive d'adoucisseurs d'eau pour puits, spécialement conçue pour traiter les eaux souterraines les plus complexes. Nos systèmes haute efficacité (HE) éliminent efficacement la dureté, le fer et le manganèse, garantissant une eau pure et douce pour toute votre maison. Grâce à une technologie de régénération intelligente, nos solutions durables protègent vos installations tout en réduisant votre consommation de sel et d'eau. Offrez à votre famille le confort d'une eau de qualité supérieure, débarrassée des impuretés et des problèmes de calcaire typiques des puits artésiens ou de surface.
+                            </p>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto">
                             {products.map((p, i) => (
@@ -282,10 +278,10 @@ const AdoucisseursEauDePuits = () => {
                                             className="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors tracking-tight text-center"
                                             style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                                         >
-                                            {p.name}
+                                            {p.displayName || p.name}
                                         </h3>
                                         <p
-                                            className="text-slate-500 font-light leading-relaxed flex-grow text-justify"
+                                            className="text-slate-500 font-light leading-[24px] flex-grow text-justify text-[18px]"
                                             style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                                         >
                                             {p.desc}
@@ -322,9 +318,9 @@ const AdoucisseursEauDePuits = () => {
                                     <tr className="bg-gray-100">
                                         <th className="p-8 text-left text-gray-400 font-light uppercase tracking-wider w-1/4">Modèle</th>
                                         {[
-                                            { name: "Sérénité", img: waterSoftenerImg },
-                                            { name: "Sentinel", img: waterSoftenerImg },
-                                            { name: "Infiniti", img: waterSoftenerImg }
+                                            { name: "Sérénité HE", img: waterSoftenerImg },
+                                            { name: "Sentinel HE", img: waterSoftenerImg },
+                                            { name: "Infiniti HE", img: waterSoftenerImg }
                                         ].map(m => (
                                             <th key={m.name} className="p-4 text-center text-gray-900 font-bold border-l border-white/50 first:border-l-0">
                                                 <div className="flex flex-col items-center">

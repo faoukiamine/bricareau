@@ -43,7 +43,7 @@ const Hero = () => {
                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                 asChild
               >
-                <a href="#consultation-gratuite">Planifiez une consultation gratuite</a>
+                <a href="/adoucissement#consultation">Planifiez une consultation gratuite</a>
               </Button>
               <Button
                 size="lg"

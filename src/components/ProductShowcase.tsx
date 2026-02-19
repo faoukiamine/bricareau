@@ -19,7 +19,7 @@ const products = [
         name: "Solutions d'eau potable",
         description: "Profitez d'une eau plus propre avec notre système de purification d'eau à osmose inverse à 6 étapes.",
         image: solutionsPotableImg,
-        link: "/osmose-filtration"
+        link: "/systeme-de-filtration-deau-potable"
     },
     {
         name: "Filtres d'eau spécialisés",

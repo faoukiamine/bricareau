@@ -27,7 +27,7 @@ import heroPortables from "@/assets/sub-category-dryer.webp";
 import heroBg from "@/assets/csm_visuel1_920x630_0_09518aee48.jpg";
 import waterSoftenerImg from "@/assets/Adoucisseurs d'eau.webp";
 import drinkingWaterImg from "@/assets/Solutions d'eau potable.webp";
-import uvSystemImg from "@/assets/Systèmes de désinfection UV.webp";
+import specialFiltersImg from "@/assets/Filtres d'eau spécialisés.webp";
 import missionImg from "@/assets/boire-eau-robinet.jpg";
 
 
@@ -264,21 +264,21 @@ const AdoucisseursPortables = () => {
                         {[
                             {
                                 name: "Adoucisseurs d'eau",
-                                desc: "Pour une eau de boisson d'une pureté exceptionnelle directement au robinet.",
+                                desc: "Éliminez le calcaire pour une peau douce, un linge éclatant et une protection durable de vos installations.",
                                 img: waterSoftenerImg,
                                 link: "/adoucisseur-eau-residentiel"
                             },
                             {
                                 name: "Stations d'eau potable",
-                                desc: "Pour une eau de boisson d'une pureté exceptionnelle directement au robinet.",
+                                desc: "Une eau de qualité minérale directement à votre évier, pour une hydratation pure et sans déchets plastiques.",
                                 img: drinkingWaterImg,
                                 link: "/systeme-de-filtration-deau-potable"
                             },
                             {
-                                name: "Système de stérilisation UV",
-                                desc: "Élimine 99.9% des bactéries et virus pour une sécurité totale.",
-                                img: uvSystemImg,
-                                link: "/systemes-de-desinfection-uv"
+                                name: "Systèmes de filtration d'eau spécialisés",
+                                desc: "Nos filtres spécialisés sont conçus pour cibler et éliminer efficacement les contaminants spécifiques de votre eau.",
+                                img: specialFiltersImg,
+                                link: "/Filtres-deau-pour-toute-la-maison"
                             }
                         ].map((prod, i) => (
                             <div
@@ -316,28 +316,6 @@ const AdoucisseursPortables = () => {
                                 </div>
                             </div>
                         ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* 6. Section Engagement */}
-            <section className="bg-white py-24">
-                <div className="container mx-auto flex flex-col lg:flex-row items-center gap-16">
-                    <div className="lg:w-1/2 rounded-2xl overflow-hidden shadow-2xl">
-                        <img src={missionImg} alt="Engagement" className="w-full h-auto" />
-                    </div>
-                    <div className="lg:w-1/2">
-                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal text-[#001B3D] mb-8 leading-[1.1] tracking-tighter text-left">
-                            L'eau est notre mission
-                        </h2>
-                        <div className="space-y-6 text-lg font-light leading-relaxed text-gray-600 text-justify">
-                            <p>
-                                Nous nous engageons à fournir non seulement le meilleur équipement de traitement d'eau, mais aussi un service après-vente irréprochable. Notre expertise locale nous permet de comprendre les défis spécifiques de votre région.
-                            </p>
-                            <p>
-                                Chaque membre de notre équipe est formé pour vous offrir une consultation personnalisée et des solutions durables qui respectent votre budget et l'environnement.
-                            </p>
-                        </div>
                     </div>
                 </div>
             </section>
