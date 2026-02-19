@@ -182,31 +182,38 @@ const ConditionneursSansSel = () => {
             >
               <path
                 d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-                fill="#2563EB"
+                fill="#F8FAFC"
                 transform="rotate(180 600 60)"
               ></path>
             </svg>
           </div>
         </section>
 
-        {/* 2. Why Choose Section */}
-        <section className="py-20 bg-blue-600 text-white">
-          <div className="container mx-auto px-4">
-            <div className="text-center max-w-3xl mx-auto mb-16">
-              <h2 className="text-[32px] md:text-[48px] font-normal text-white mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-center">
+        {/* 2. Why Choose Section - Ultra Modern */}
+        <section className="py-24 bg-slate-50 relative">
+          <div className="container mx-auto px-4 relative z-10">
+            <div className="text-center max-w-3xl mx-auto mb-20">
+              <span className="text-blue-600 font-bold tracking-widest text-xs uppercase mb-4 block">
+                Prévention du tartre
+              </span>
+              <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[48px] tracking-tight">
                 Pourquoi choisir un conditionneur <br />d'eau sans sel ?
               </h2>
-              <div className="w-20 h-1 bg-white mx-auto" />
+              <div className="w-24 h-1.5 bg-blue-600 mx-auto rounded-full opacity-20" />
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {whyChoose.map((item, idx) => (
-                <div key={idx} className="flex flex-col items-center">
-                  <div className="w-16 h-16 rounded-full border-2 border-white flex items-center justify-center mb-6">
-                    <item.icon className="h-8 w-8 text-white" />
+                <div key={idx} className="group relative bg-white rounded-[2.5rem] p-10 shadow-[0_20px_50px_rgba(8,_112,_184,_0.07)] hover:shadow-[0_20px_50px_rgba(8,_112,_184,_0.14)] transition-all duration-500 hover:-translate-y-2 border border-slate-100 hover:border-blue-100">
+                  <div className="w-16 h-16 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center mb-8 group-hover:bg-blue-600 group-hover:text-white transition-all duration-500 shadow-sm group-hover:shadow-blue-600/30 group-hover:rotate-3">
+                    <item.icon className="h-8 w-8 transition-transform duration-500" />
                   </div>
-                  <h3 className="text-xl font-bold mb-4">{item.title}</h3>
-                  <p className="opacity-70 leading-relaxed">
+
+                  <h3 className="text-2xl font-bold text-slate-900 mb-4 group-hover:text-blue-600 transition-colors duration-300">
+                    {item.title}
+                  </h3>
+
+                  <p className="text-slate-500 text-lg leading-relaxed font-light text-justify group-hover:text-slate-600 transition-colors duration-300">
                     {item.description}
                   </p>
                 </div>

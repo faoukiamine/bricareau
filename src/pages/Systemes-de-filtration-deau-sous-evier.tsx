@@ -168,13 +168,16 @@ const FiltrationSousEvier = () => {
                                 <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Nos systèmes de filtration</span>
                                 <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">d'eau sous évier</span>
                             </h2>
-                            <div className="w-24 h-1 bg-blue-600"></div>
+                            <div className="w-24 h-1 bg-blue-600 mb-8"></div>
+                            <p className="text-lg font-light leading-relaxed text-slate-600 mb-16 max-w-7xl mx-auto text-justify">
+                                Nos systèmes de filtration d'eau sous évier représentent la solution ultime pour transformer votre cuisine en une source de pureté inépuisable. Conçus pour s'intégrer discrètement sous votre comptoir, ces systèmes utilisent des technologies de pointe pour éliminer jusqu'à 99 % des contaminants, incluant le chlore, le plomb et les sédiments. Contrairement aux pichets filtrants, ils offrent un débit constant et une filtration beaucoup plus rigoureuse, garantissant une eau de boisson cristalline et un goût irréprochable pour vos cafés et vos repas. Avec un entretien simplifié, vous reprenez le contrôle total sur la qualité de l’eau que votre famille consomme au quotidien.
+                            </p>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto">
                             {[
-                                { name: "Bricareau Essential", desc: "La pureté accessible sans compromis sur la qualité.", img: essentialImg },
-                                { name: "Bricareau Plus RO", desc: "Performance exceptionnelle pour les familles actives.", img: plusROImg },
-                                { name: "Bricareau Elite RO", desc: "Le summum de la filtration avec reminéralisation alcaline incluse.", path: "/ro-6", img: eliteROImg },
+                                { name: "Cristal Pro I", desc: "La première ligne de défense pour votre eau. Ce filtre à sédiments haute performance élimine efficacement le sable, la rouille et les particules en suspension, en clarifiant instantanément votre eau, jour après jour, en toute simplicité.", img: essentialImg },
+                                { name: "Cristal Pro II", desc: "La combinaison parfaite pour une eau saine. Ce système duo associe la filtration des sédiments à un filtre charbon actif premium, éliminant non seulement les particules mais aussi le chlore, les COV et les goûts désagréables.", img: plusROImg },
+                                { name: "Cristal Pro III", desc: "La technologie d'ultrafiltration avancée. Ce système offre une purification microscopique supérieure, filtrant virus, bactéries et kystes tout en conservant les minéraux bénéfiques pour une eau d'une pureté absolue, rafraîchissante et inégalée.", path: "/ro-6", img: eliteROImg },
                             ].map((product, i) => (
                                 <div
                                     key={i}
@@ -234,9 +237,9 @@ const FiltrationSousEvier = () => {
                                     <tr className="bg-gray-100">
                                         <th className="p-8 text-left text-gray-400 font-light uppercase tracking-wider">Solutions</th>
                                         {[
-                                            { name: "Essential", img: essentialImg },
-                                            { name: "Plus RO", img: plusROImg },
-                                            { name: "Elite RO", img: eliteROImg },
+                                            { name: "Cristal Pro I", img: essentialImg },
+                                            { name: "Cristal Pro II", img: plusROImg },
+                                            { name: "Cristal Pro III", img: eliteROImg },
                                         ].map((m, i) => (
                                             <th key={i} className="p-4 text-center text-gray-900 font-bold">
                                                 <div className="flex flex-col items-center gap-2">
