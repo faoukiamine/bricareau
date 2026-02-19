@@ -33,12 +33,21 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 
 const Filtration = () => {
     const comparisonData = [
-        { feature: "Spectre d'épuration", whole: true, ro: true, basic: false },
-        { feature: "Élimination des métaux lourds", whole: true, ro: "Option", basic: false },
-        { feature: "Élimination des bactéries (UV)", whole: false, ro: "Option", basic: false },
-        { feature: "Eau alcaline", whole: "Option", ro: false, basic: false },
-        { feature: "Installation sous évier", whole: true, ro: false, basic: true },
-        { feature: "Protection de la tuyauterie", whole: false, ro: true, basic: false },
+        { feature: "Élimine les sédiments, le chlore et les mauvaises odeurs de toute l'eau.", whole: true, basic: true },
+{ feature: "Filtration Toute la Maison (Point d'entrée)", whole: true, basic: false },
+        { feature: "Protège toute la plomberie et les électroménagers de la maison.", whole: true, basic: false },
+        { feature: "Réduit l'absorption de chlore par la peau et les poumons (vapeur).", whole: true, basic: false },
+        { feature: "Filtration d'eau au Point d'utilisation", whole: false, basic: true },
+        { feature: "Uniquement au robinet dédié (généralement cuisine).", whole: false, basic: true },
+        { feature: "Fournit une eau de boisson d'une pureté de 99%.", whole: false, basic: true },
+        { feature: "Élimine les métaux lourds, plomb, nitrates et résidus chimiques.", whole: false, basic: true },
+        { feature: " Rinçage automatique", whole: true, basic: false },
+        { feature: "Eau filtrée pour toutes les sorties d'eau.", whole: true, basic: false },
+        { feature: "Aucun impact sur la pression d'eau de la maison.", whole: true, basic: false },
+        { feature: "Changement périodique des filtres et de la membrane.", whole: false, basic: true },
+        { feature: "Goût exceptionnel pour le café, le thé et la cuisson.", whole: false, basic: true },
+        { feature: "Débit contrôlé pour une filtration ultra-fine.", whole: false, basic: true },
+
     ];
 
     return (
@@ -366,7 +375,6 @@ const Filtration = () => {
                     </div>
                 </section>
 
-                {/* 6. Water Testing Section */}
                 {/* 7.Water Testing Section */}
                 <section className="relative h-[650px] flex items-start overflow-hidden pt-[180px]">
                     <div className="absolute inset-0 z-0">
@@ -394,7 +402,7 @@ const Filtration = () => {
                             <div className="flex gap-4">
                                 <Button
                                     size="lg"
-                                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14"
+                                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200"
                                     style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                                     asChild
                                 >
@@ -427,8 +435,7 @@ const Filtration = () => {
                                     <tr className="bg-gray-100">
                                         <th className="p-8 text-left text-gray-400 font-light uppercase tracking-wider">Solutions</th>
                                         {[
-                                            { name: "Filtres spécialisés", img: specializedFiltersImg },
-                                            { name: "Stations d'eau potable", img: drinkingWaterImg },
+                                            { name: "Filtres d'eau spécialisés", img: specializedFiltersImg },
                                             { name: "Systèmes de filtration sous l'évier", img: undersinkSystemImg }
                                         ].map((m, i) => (
                                             <th key={i} className="p-4 text-center text-gray-900 font-bold text-sm">
@@ -449,13 +456,10 @@ const Filtration = () => {
                                         <tr key={i} className="hover:bg-gray-50 transition-colors">
                                             <td className="p-8 font-light text-gray-700">{row.feature}</td>
                                             <td className="p-8 text-center">
-                                                {typeof row.ro === 'string' ? <span className="text-blue-600 font-bold bg-blue-50 px-3 py-1 rounded-full text-[10px]">{row.ro}</span> : (row.ro ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : <X className="h-6 w-6 text-gray-300 mx-auto" />)}
+                                                {typeof row.whole === 'string' ? <span className="text-blue-600 font-bold bg-blue-50 px-3 py-1 rounded-full text-[10px]">{row.whole}</span> : (row.whole ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : null)}
                                             </td>
                                             <td className="p-8 text-center">
-                                                {typeof row.whole === 'string' ? <span className="text-blue-600 font-bold bg-blue-50 px-3 py-1 rounded-full text-[10px]">{row.whole}</span> : (row.whole ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : <X className="h-6 w-6 text-gray-300 mx-auto" />)}
-                                            </td>
-                                            <td className="p-8 text-center">
-                                                {row.basic ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : <X className="h-6 w-6 text-gray-300 mx-auto" />}
+                                                {row.basic ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : null}
                                             </td>
                                         </tr>
                                     ))}
