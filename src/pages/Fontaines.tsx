@@ -20,6 +20,8 @@ import {
 import { Button } from "@/components/ui/button";
 import { NavLink } from "@/components/NavLink";
 import heroFountains from "@/assets/Fontaines d'eau.webp";
+import solutionsEauImg from "@/assets/Solutions d'eau potable.webp";
+import fontaineAutoportanteImg from "@/assets/Refroidisseur+d'eau+autoportant+à+eau+chaude,+froide+et+à+température+ambiante.webp";
 
 const Fontaines = () => {
     return (
@@ -103,24 +105,28 @@ const Fontaines = () => {
                             Solutions professionnelles <br />pour l'eau. À votre service.
                         </h2>
                         <p className="font-light text-[20px] leading-[28px] text-white/70 max-w-4xl mx-auto mb-16">
-                            Bricareau Ottawa-Gatineau est votre source locale pour les meilleures solutions d'eau destinées aux entreprises.
+                            Bricareau est à votre service pour les meilleures solutions d'eau destinées aux entreprises.
                             Que vous soyez un petit bureau ou une grande installation industrielle, nous avons l'expertise pour répondre à vos besoins.
                         </p>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mx-auto max-w-7xl">
                             {[
-                                { title: "Fontaines d'eau sans bouteille", desc: "Eau fraîche et pure sans les tracas de livraison.", icon: Droplets },
-                                { title: "Machines à glaçons", desc: "Production haute performance pour tous commerces.", icon: Snowflake },
-                                { title: "Stations de purification d'eau", desc: "Filtration avancée pour une pureté absolue.", icon: Zap },
-                                { title: "Cafetières à filtre", desc: "Le café parfait commence par une eau parfaite.", icon: Coffee }
+                                { title: "Distributeurs d'eau de comptoir", desc: "Une solution compacte offrant une eau filtrée de qualité supérieure directement sur votre comptoir, sans encombrement.", img: fontaineAutoportanteImg },
+                                { title: "Fontaines d'eau sans bouteille", desc: "Eau fraîche et purifiée en continu, sans la corvée des bouteilles. Hydratation illimitée pour votre famille.", img: fontaineAutoportanteImg },
+                                { title: "Machines à glaçons", desc: "Machines robustes produisant une glace pure et abondante pour satisfaire vos besoins en toute circonstance, sans aucune interruption.", icon: Snowflake },
+                                { title: "Stations de purification d'eau", desc: "Technologie avancée éliminant les contaminants pour une eau cristalline d'une pureté absolue et un goût parfait.", img: solutionsEauImg },
                             ].map((item, i) => (
                                 <div key={i} className="bg-white text-slate-900 rounded-2xl p-8 flex flex-col items-center transition-all hover:shadow-2xl hover:-translate-y-2">
-                                    <div className="w-full aspect-square bg-slate-100 rounded-xl mb-6 flex items-center justify-center">
-                                        <item.icon className="w-16 h-16 text-blue-600 opacity-20" />
+                                    <div className="w-full aspect-square bg-slate-100 rounded-xl mb-6 flex items-center justify-center p-4">
+                                        {item.img ? (
+                                            <img src={item.img} alt={item.title} className="w-full h-full object-contain mix-blend-multiply" />
+                                        ) : (
+                                            item.icon && <item.icon className="w-16 h-16 text-blue-600 opacity-20" />
+                                        )}
                                     </div>
                                     <h3 className="text-xl font-medium mb-4">{item.title}</h3>
                                     <p className="font-light text-[18px] leading-[24px] text-slate-500 mb-6 flex-grow">{item.desc}</p>
-                                    <Button variant="link" className="text-blue-600 font-bold p-0 group">
-                                        Lire <ChevronRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" />
+                                    <Button variant="link" className="text-blue-600 font-bold p-0 group self-end">
+                                        <ArrowRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" />
                                     </Button>
                                 </div>
                             ))}

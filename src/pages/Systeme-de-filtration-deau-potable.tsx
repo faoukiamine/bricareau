@@ -60,7 +60,7 @@ const StationEauPotable = () => {
             <img
               src={heroDrink}
               alt="Femme buvant de l'eau pure"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover object-[center_35%]"
             />
             <div className="absolute inset-0 bg-black/40 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-white via-white/10 to-transparent" />
