@@ -190,7 +190,7 @@ const Filtration = () => {
                                     Protégez vos appareils ménagers, votre tuyauterie et votre peau. Nos systèmes de filtration centrale traitent chaque goutte d'eau qui entre dans votre foyer pour une tranquillité d'esprit totale.
                                 </p>
 
-                                <div className="space-y-12">
+                                <div className="space-y-3">
                                     {[
                                         { title: "Défense Plomberie", desc: "Dites adieu au chlore résiduel et aux sédiments qui corrodent vos précieux appareils et obstruent votre robinetterie de luxe." },
                                         { title: "Clarté de l'Eau", desc: "Réduisez drastiquement la turbidité pour une eau limpide à chaque robinet, protégeant ainsi l'éclat de vos sanitaires et de votre linge." },
@@ -262,7 +262,7 @@ const Filtration = () => {
                                     Découvrez comment notre système d'osmose inverse libère votre quotidien du goût de chlore et de la corvée des bouteilles plastique. Profitez d'une eau légère, d'une clarté de diamant, idéale pour une hydratation saine et une cuisine riche en saveurs.
                                 </p>
 
-                                <div className="space-y-12">
+                                <div className="space-y-3">
                                     {[
                                         { title: "Pureté Absolue", desc: "Élimine 99% des contaminants, métaux lourds et micro-plastiques pour une sécurité totale de toute la famille." },
                                         { title: "Éco-Conscient", desc: "Réduisez drastiquement votre empreinte carbone en éliminant définitivement les bouteilles d'eau jetables de votre foyer." },
@@ -284,7 +284,7 @@ const Filtration = () => {
                                 <div className="mt-14 pt-8 border-t border-gray-200">
                                     <NavLink to="/systeme-de-filtration-deau-potable">
                                         <Button className="rounded-full bg-blue-600 hover:bg-blue-700 text-white px-8 h-14 text-base shadow-lg transition-all duration-300 w-full sm:w-auto hover:shadow-blue-200">
-                                            Découvrir nos osmoseurs <ChevronRight className="ml-2 h-5 w-5" />
+                                            Découvrir nos systèmes d'osmose inverse <ChevronRight className="ml-2 h-5 w-5" />
                                         </Button>
                                     </NavLink>
                                 </div>
@@ -335,7 +335,7 @@ const Filtration = () => {
                                     Éliminez jusqu'à 99% des pathogènes, du plomb et du fluorure. L'osmose inverse Bricareau est la solution ultime pour une eau de boisson de qualité restaurant directement chez vous.
                                 </p>
 
-                                <div className="space-y-12">
+                                <div className="space-y-3">
                                     {[
                                         { title: "Filtration d'Élite", desc: "Un processus rigoureux en 5 étapes qui neutralise les métaux lourds, le micro-plastique et les sédiments invisibles à l'œil nu." },
                                         { title: "Design Intelligent", desc: "Un réservoir ultra-compact conçu pour maximiser votre espace de rangement tout en offrant une réserve d'eau constante." },
@@ -357,7 +357,7 @@ const Filtration = () => {
                                 <div className="mt-14 pt-8 border-t border-gray-100">
                                     <NavLink to="/Systemes-de-filtration-deau-sous-evier">
                                         <Button className="rounded-full bg-blue-600 hover:bg-blue-700 text-white px-8 h-14 text-base shadow-lg transition-all duration-300 w-full sm:w-auto hover:shadow-blue-200">
-                                            Explorez la gamme sous-évier <ChevronRight className="ml-2 h-5 w-5" />
+                                            Découvrir nos filtres d'eau sous-évier <ChevronRight className="ml-2 h-5 w-5" />
                                         </Button>
                                     </NavLink>
                                 </div>

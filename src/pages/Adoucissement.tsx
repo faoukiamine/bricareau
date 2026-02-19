@@ -12,6 +12,9 @@ import waterTestingImg from "@/assets/2147800429.jpg";
 import process1 from "@/assets/2148563485.jpg";
 import labTestImg from "@/assets/test-laboratoire-diligence-inspection-750x500.jpg";
 import waterTestingBg from "@/assets/undersink_filtration_header.jpg";
+import specializedFiltersImg from "@/assets/Filtres d'eau spécialisés.webp";
+import drinkingWaterImg from "@/assets/Solutions d'eau potable.webp";
+import undersinkSystemImg from "@/assets/Système+de+filtration+Serene+Lite.webp";
 import {
     ArrowRight,
     Droplets,
@@ -365,6 +368,75 @@ const Adoucissement = () => {
 
                 {/* 6. Testimonials */}
                 <TestimonialsSection />
+
+
+                {/* 7. Comparison Table */}
+                <section className="py-24 bg-gray-50">
+                    <div className="container mx-auto px-4">
+                        <div className="text-left mb-16">
+                            <h2
+                                className="text-slate-900 tracking-tighter mb-8 text-left"
+                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                            >
+                                <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Comparez nos solutions</span>
+                                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">d'adoucissement d'eau.</span>
+                            </h2>
+                            <div className="w-24 h-1 bg-blue-600"></div>
+                        </div>
+                        <div className="overflow-x-auto">
+                            <table className="w-full min-w-[1000px] border-collapse bg-white rounded-2xl overflow-hidden shadow-sm">
+                                <thead>
+                                    <tr className="bg-gray-100">
+                                        <th className="p-8 text-left text-gray-400 font-light uppercase tracking-wider">Solutions</th>
+                                        {[
+                                            { name: "Adoucisseurs d'eau", img: specializedFiltersImg },
+                                            { name: "Conditionneurs d'eau sans sel", img: drinkingWaterImg },
+                                        ].map((m, i) => (
+                                            <th key={i} className="p-4 text-center text-gray-900 font-bold text-sm">
+                                                <div className="flex flex-col items-center gap-2">
+                                                    <img
+                                                        src={m.img}
+                                                        alt={m.name}
+                                                        className="w-[150px] h-[120px] object-contain mx-auto mix-blend-multiply"
+                                                    />
+                                                    <div className="text-[14px]">{m.name}</div>
+                                                </div>
+                                            </th>
+                                        ))}
+                                    </tr>
+                                </thead>
+                                <tbody className="divide-y divide-gray-100">
+                                    {[
+                                        { feature: "Élimine physiquement le calcium et le magnésium.", specialized: true, station: false },
+                                        { feature: "Peau et cheveux extrêmement doux (fini le tiraillement).", specialized: true, station: false },
+                                        { feature: "Nécessite l'ajout régulier de sacs de sel.", specialized: true, station: false },
+                                        { feature: "Consomme de l'eau et de l'électricité pour ses cycles.", specialized: true, station: false },
+                                        { feature: "Rejet de saumure (sel) dans les eaux usées.", specialized: true, station: false },
+                                        { feature: "Ajoute une petite quantité de sodium à l'eau.", specialized: true, station: false },
+                                        { feature: "Protection totale contre l'accumulation de tartre.", specialized: true, station: true },
+                                        { feature: "Prévient l'entartrage des éléments chauffants.", specialized: true, station: true },
+                                        { feature: "Neutralise le calcaire pour l'empêcher de coller.", specialized: false, station: true },
+                                        { feature: "Sensation naturelle de l'eau (minéraux préservés).", specialized: false, station: true },
+                                        { feature: "Aucun sel ni produit chimique à manipuler.", specialized: false, station: true },
+                                        { feature: "Zéro rejet d'eau et fonctionne sans électricité.", specialized: false, station: true },
+                                        { feature: "100% Écologique et sans danger pour les fosses septiques.", specialized: false, station: true },
+                                        { feature: "Sans sodium, idéal pour les régimes spécifiques.", specialized: false, station: true }
+                                    ].map((row, i) => (
+                                        <tr key={i} className="hover:bg-gray-50 transition-colors">
+                                            <td className="p-8 font-light text-gray-700">{row.feature}</td>
+                                            <td className="p-8 text-center">
+                                                {typeof row.specialized === 'string' ? <span className="text-blue-600 font-bold bg-blue-50 px-3 py-1 rounded-full text-[10px]">{row.specialized}</span> : (row.specialized ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : null)}
+                                            </td>
+                                            <td className="p-8 text-center">
+                                                {typeof row.station === 'string' ? <span className="text-blue-600 font-bold bg-blue-50 px-3 py-1 rounded-full text-[10px]">{row.station}</span> : (row.station ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : null)}
+                                            </td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
 
                 {/* 7. Water Testing Section */}
                 <section className="relative h-[650px] flex items-center overflow-hidden">
