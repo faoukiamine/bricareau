@@ -142,11 +142,8 @@ const StationEauPotable = () => {
               {[
                 { icon: ShieldCheck, title: "Sécurité maximale", desc: "Élimine 99% des virus, bactéries et contaminants chimiques." },
                 { icon: Droplets, title: "Goût incomparable", desc: "Retrouvez le vrai goût de l'eau, limpide et rafraîchissante." },
-                { icon: Zap, title: "Performance durable", desc: "Des membranes de haute qualité pour une efficacité constante." },
-                { icon: GlassWater, title: "Eau pure 24/7", desc: "Accès instantané à une eau de qualité restaurant." },
+                { icon: GlassWater, title: "Eau pure 24/7", desc: "Accès instantané à une eau de meilleure qualité." },
                 { icon: CircleDollarSign, title: "Économies", desc: "Éliminez l'achat de bouteilles d'eau plastique." },
-                { icon: Trash2, title: "Zéro déchet", desc: "Réduisez drastiquement votre empreinte écologique." },
-                { icon: Wrench, title: "Entretien pro", desc: "Suivi et remplacement des filtres géré par nos experts." }
               ].map((item, i) => (
                 <div key={i} className="flex flex-col items-center group">
                   <div className="w-20 h-20 rounded-2xl bg-white flex items-center justify-center mb-8 transition-all group-hover:scale-110 group-hover:bg-white/10">

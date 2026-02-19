@@ -140,10 +140,7 @@ const FiltrationSousEvier = () => {
                                 { icon: ShieldCheck, title: "Goût Incomparable", desc: "Sublimez vos saveurs. Idéal pour un café riche en arômes et des légumes qui gardent leurs nutriments sans le goût du chlore." },
                                 { icon: Droplets, title: "Éco-Responsable", desc: "Dites adieu au plastique. Une seule cartouche remplace des milliers de bouteilles à usage unique. Un geste fort pour la planète." },
                                 { icon: Zap, title: "Discrétion Totale", desc: "Compact et invisible. S'installe discrètement sous votre comptoir sans encombrer votre espace de travail." },
-                                { icon: GlassWater, title: "Eau pure 24/7", desc: "Plus besoin de bouteilles. Accès instantané à une eau de qualité restaurant directement à votre robinet." },
                                 { icon: CircleDollarSign, title: "Économies", desc: "Réduisez vos dépenses annuelles en éliminant définitivement l'achat d'eau embouteillée." },
-                                { icon: Trash2, title: "Zéro déchet", desc: "Protégez l'environnement en limitant drastiquement la production de déchets plastiques dans votre foyer." },
-                                { icon: Wrench, title: "Entretien Suivi", desc: "Tranquillité d'esprit totale. Notre équipe assure le suivi et le remplacement périodique de vos filtres." }
                             ].map((item, i) => (
                                 <div key={i} className="flex flex-col items-center group w-full sm:w-[calc(50%-3rem)] lg:w-[calc(25%-3rem)]">
                                     <div className="w-20 h-20 rounded-2xl bg-white flex items-center justify-center mb-8 transition-all group-hover:scale-110 group-hover:bg-white/10">
