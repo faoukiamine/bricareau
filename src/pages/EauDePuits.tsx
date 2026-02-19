@@ -290,24 +290,22 @@ const EauDePuits = () => {
                   {/* Content */}
                   <div className="absolute inset-0 p-8 flex flex-col justify-end">
                     {/* Number Badge */}
-                    <div className="absolute top-8 left-8 w-12 h-12 rounded-full border border-white/30 flex items-center justify-center backdrop-blur-md bg-white/10 group-hover:bg-blue-600 group-hover:border-blue-600 transition-colors duration-500">
+                    <div className="absolute top-8 left-8 w-12 h-12 rounded-full border border-white/30 flex items-center justify-center bg-transparent group-hover:bg-blue-600 group-hover:border-blue-600 transition-colors duration-500">
                       <span className="text-white font-bold">{idx + 1}</span>
                     </div>
 
                     {/* Text Container */}
                     <div className="translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                      <h3 className="text-2xl md:text-3xl font-bold text-white mb-2 whitespace-nowrap">
+                      <h3 className="text-xl font-medium text-white mb-2 whitespace-nowrap">
                         {step.title}
                       </h3>
 
                       {/* Short Desc (Always Visible or Hidden on Expand?) - Let's use visible for context */}
                       <div className="overflow-hidden max-h-0 opacity-0 group-hover:max-h-[200px] group-hover:opacity-100 transition-all duration-700 delay-100">
-                        <p className="text-white/90 font-light leading-relaxed mt-4 text-justify pr-4 border-l-2 border-blue-500 pl-4">
+                        <p className="text-lg text-white/90 font-light leading-relaxed mt-4 text-justify pr-4 border-l-2 border-blue-500 pl-4">
                           {step.fullDesc}
                         </p>
-                        <button className="mt-6 px-6 py-2 bg-white/10 hover:bg-white/20 backdrop-blur-md rounded-full text-sm font-medium text-white transition-colors border border-white/20">
-                          En savoir plus
-                        </button>
+
                       </div>
 
                       {/* Mobile Fallback: visible description on small screens if flex doesn't work well?

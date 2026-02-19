@@ -9,7 +9,13 @@ import {
   Leaf,
   ChevronRight,
   TestTube,
-  Home
+  Home,
+  ArrowRight,
+  Heart,
+  ShieldCheck,
+  HeartPulse,
+  Sprout,
+  Sparkles
 } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import {
@@ -23,19 +29,19 @@ import ConsultationFormSection from "@/components/ConsultationFormSection";
 
 const whyChoose = [
   {
-    icon: Home,
-    title: "Maison plus propre",
-    description: "Des surfaces étincelantes et des cheveux plus soyeux sans les résidus de calcaire."
+    icon: HeartPulse,
+    title: "Zéro sodium",
+    description: "Les adoucisseurs à échange d'ions remplacent les minéraux sains par du sodium, ce qui peut impacter votre santé. Notre technologie cristallise le calcaire sans jamais ajouter de sel, offrant une eau parfaite pour les régimes pauvres en sodium et sans arrière-goût salé."
   },
   {
-    icon: TestTube,
-    title: "D'eau plus douce",
-    description: "Une sensation de douceur sur la peau et une protection accrue pour vos appareils."
+    icon: Sprout,
+    title: "Zéro rejet d'eau",
+    description: "Contrairement aux adoucisseurs traditionnels, notre système ne gaspille aucune goutte d'eau pour se régénérer. Il élimine totalement les rejets de saumure polluante, préservant ainsi l'équilibre biologique de vos fosses septiques et protégeant durablement les écosystèmes locaux et les nappes phréatiques."
   },
   {
-    icon: Leaf,
-    title: "Respectueux de l'environnement",
-    description: "Pas de rejet de sel dans l'environnement et aucune consommation d'eau supplémentaire."
+    icon: Sparkles,
+    title: "Zéro tartre",
+    description: "Notre solution neutralise le calcaire avant qu'il ne s'incruste, formant une barrière protectrice dans toute votre plomberie. Vous prolongez considérablement la durée de vie de vos chauffe-eaux et électroménagers, tout en maintenant leur rendement énergétique optimal et en évitant les panes coûteuses."
   }
 ];
 
@@ -209,45 +215,67 @@ const ConditionneursSansSel = () => {
           </div>
         </section>
 
-        {/* 3. Product Details Section */}
-        <section className="py-24">
-          <div className="container mx-auto px-4">
-            <div className="flex flex-col lg:flex-row items-center gap-16">
-              <div className="lg:w-1/2">
-                <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-left">
-                  Une protection maximale <br /> pour votre plomberie
-                </h2>
-                <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                  Le conditionneur d'eau sans sel de Bricareau est une alternative efficace et écologique
-                  à l'adoucisseur traditionnel. Il protège vos tuyaux et appareils sans ajouter de sel
-                  ni rejeter d'eau, idéal pour les foyers soucieux de leur empreinte écologique.
-                </p>
-                <Button className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 mb-12">
-                  Voir toutes les options
-                </Button>
+        {/* 3. Product Details Section - Ultra Modern */}
+        <section className="py-24 relative overflow-hidden bg-gradient-to-br from-white to-blue-50/30">
+          <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-100/40 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
 
+          <div className="container mx-auto px-4 relative z-10">
+            <div className="flex flex-col lg:flex-row items-center gap-20">
+
+              {/* Text Content */}
+              <div className="lg:w-1/2">
+                <div className="mb-12">
+                  <span className="text-blue-600 font-bold tracking-widest text-xs uppercase mb-4 block">Innovation Durable</span>
+                  <h2
+                    className="text-[32px] md:text-[34px] font-bold text-slate-900 mb-8 leading-[1.1] tracking-tight"
+                    style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                  >
+                    Choisissez une protection 100% écologique et préservez les minéraux essentiels de votre eau.
+                  </h2>
+                  <p className="text-lg text-slate-600 mb-10 leading-relaxed font-light max-w-lg">
+                    Le conditionneur d'eau sans sel de Bricareau est une alternative efficace et écologique
+                    à l'adoucisseur traditionnel. Il protège votre maison du calcaire sans jamais avoir à soulever un sac de sel. Une solution durable, autonome et efficace.
+                  </p>
+
+                  <Button className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-10 py-7 text-lg transition-all duration-300 shadow-xl shadow-blue-600/20 hover:shadow-blue-600/40 group">
+                    <span className="mr-2">Voir toutes les options</span>
+                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                </div>
+
+                {/* Features Grid - Modern Cards */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                   {[
                     { c: "01", t: "Économies", d: "Réduit les coûts d'entretien et prolonge la vie des appareils." },
                     { c: "02", t: "Installation", d: "S'installe facilement sur l'arrivée d'eau principale." },
                     { c: "03", t: "Qualité", d: "Conserve l'eau potable et riche en minéraux naturels." }
                   ].map((item, idx) => (
-                    <div key={idx} className="border-t border-gray-200 pt-6">
-                      <span className="text-blue-600 font-bold mb-2 block">{item.c}</span>
-                      <h4 className="font-bold mb-2">{item.t}</h4>
-                      <p className="text-sm text-gray-500">{item.d}</p>
+                    <div key={idx} className="group relative pt-8 pb-6 px-6 bg-white rounded-[2rem] shadow-sm border border-blue-200 hover:border-blue-300 hover:shadow-xl hover:shadow-blue-900/5 transition-all duration-500 hover:-translate-y-1">
+                      <span className="absolute top-4 right-6 text-4xl font-black text-slate-100 group-hover:text-blue-50 transition-colors duration-500 select-none">
+                        {item.c}
+                      </span>
+                      <h4 className="text-xl font-bold text-slate-900 mb-3 relative z-10">{item.t}</h4>
+                      <p className="text-sm text-slate-500 font-light leading-relaxed relative z-10 text-justify">
+                        {item.d}
+                      </p>
                     </div>
                   ))}
                 </div>
               </div>
-              <div className="lg:w-1/2">
-                <div className="bg-gray-100 rounded-2xl p-8 flex items-center justify-center min-h-[500px]">
+
+              {/* Image Content */}
+              <div className="lg:w-1/2 relative">
+                <div className="relative z-10 animate-in fade-in zoom-in duration-1000">
+                  <div className="absolute inset-0 bg-blue-500/5 rounded-full blur-3xl transform scale-90"></div>
                   <img
                     src={conditionneurImg}
                     alt="Conditionneur d'eau professionnel"
-                    className="max-h-[650px] object-contain drop-shadow-2xl"
+                    className="relative w-full max-w-[500px] mx-auto drop-shadow-2xl hover:scale-105 transition-transform duration-700 ease-out"
                   />
                 </div>
+                {/* Decorative Elements */}
+                <div className="absolute -bottom-12 -right-12 w-32 h-32 bg-yellow-400/20 rounded-full blur-2xl"></div>
+                <div className="absolute top-1/2 left-0 w-24 h-24 bg-blue-400/20 rounded-full blur-2xl"></div>
               </div>
             </div>
           </div>

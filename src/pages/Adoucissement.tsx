@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import heroBath from "@/assets/young-nude-woman-taking-relaxing-foamy-bath.jpg";
 import kitchenImg from "@/assets/18036672_SIE_2720_1530_21_04_30_SIE_CRM_Dishwasher_Hand_Taking_Out_Wine_Glass_Basket_Motiv_11_0017.webp";
 import untitledImg from "@/assets/avantages conditionneurs sans sel.jpg";
-import mceclip0Img from "@/assets/mceclip0.png";
+import mobileSoftenerImg from "@/assets/9-optimized.webp";
 import bathroomImg from "@/assets/2705.jpg";
 import waterTestGemini from "@/assets/Gemini_Generated_Image_rk3i02rk3i02rk3i.png";
 import waterTestingImg from "@/assets/2147800429.jpg";
@@ -227,7 +227,7 @@ const Adoucissement = () => {
                             <div className="w-full lg:w-1/2 relative sticky top-24">
                                 <div className="rounded-[2.5rem] overflow-hidden shadow-2xl relative h-[600px] w-full group">
                                     <img
-                                        src={mceclip0Img}
+                                        src={mobileSoftenerImg}
                                         alt="Adoucisseur portable en action"
                                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                     />

@@ -9,7 +9,7 @@ import {
   Shield,
   CheckCircle2,
   Clock,
-  Home,
+  HousePlus,
   Search,
   Wrench,
   Star,
@@ -25,7 +25,8 @@ import {
   FileText,
   ShieldCheck,
   ChevronLeft,
-  MessageCircle
+  MessageCircle,
+  Armchair
 } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import {
@@ -171,58 +172,106 @@ const TestsEauPage = () => {
 
 
 
-        {/* 2. Why test your water Section (Dark Blue Background) */}
-        < section className="pt-24 pb-32 bg-[#001533] text-white relative z-10 -mt-2" >
-          <div className="container mx-auto px-6">
-            <div className="mb-20 text-center">
-              <h2
-                className="text-white tracking-tighter mb-8"
-                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
-              >
-                <span className="text-[32px] md:text-[50px] font-bold leading-[1.1] md:leading-[1.1] block">Voici ce que vous pourriez</span>
-                <span className="text-[32px] md:text-[50px] font-bold leading-[1.1] md:leading-[1.1] block text-blue-400">découvrir dans votre eau</span>
-              </h2>
-              <p className="text-lg font-light leading-relaxed text-blue-100/70 max-w-2xl mx-auto">
-                Même si votre eau semble propre, elle peut contenir des minéraux invisibles et des impuretés qui nuisent à votre maison et à votre santé.
-              </p>
-            </div>
+        {/* 2. Why test your water Section (Dark Blue Background) - Editorial Split Layout */}
+        <section className="py-32 bg-[#001533] text-white relative z-10 -mt-2 overflow-hidden">
+          {/* Subtle Background Pattern */}
+          <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#4f46e5_1px,transparent_1px)] [background-size:24px_24px]"></div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {[
-                {
-                  icon: Heart,
-                  title: "Santé et bien-être",
-                  desc: "Détectez les contaminants invisibles qui peuvent nuire à votre santé et à votre famille."
-                },
-                {
-                  icon: Home,
-                  title: "Protection Maison",
-                  desc: "Limitez les dégâts et bris pouvant être causés par certains contaminants de l’eau."
-                },
-                {
-                  icon: Sparkles,
-                  title: "Tranquillité d’esprit",
-                  desc: "Avec un rapport professionnel, vous aurez tout en main pour choisir le bon système."
-                },
-                {
-                  icon: FileText,
-                  title: "Conformité Normes",
-                  desc: "Ayez en main les documents légaux requis pour une transaction hypothécaire."
-                }
-              ].map((item, id) => (
-                <div key={id} className="flex items-start space-x-4 text-left group hover:translate-y-[-4px] transition-transform duration-300">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-blue-600 transition-colors duration-300">
-                    <item.icon className="h-6 w-6 text-white" />
+          <div className="container mx-auto px-6 relative z-10">
+            <div className="flex flex-col lg:flex-row gap-16 lg:gap-24">
+
+              {/* Left Column: Sticky Title */}
+              <div className="lg:w-1/3 lg:sticky lg:top-32 h-fit">
+                <span className="inline-block py-1 px-3 rounded-full bg-blue-900/50 text-blue-400 text-xs font-bold uppercase tracking-widest mb-6 border border-blue-800">
+                  POURQUOI TESTER ?
+                </span>
+                <h2
+                  className="text-white tracking-tighter mb-8"
+                  style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                >
+                  <span className="text-[36px] md:text-[50px] font-bold leading-[1.05] block mb-2">Découvrez</span>
+                  <span className="text-[36px] md:text-[50px] font-light leading-[1.05] block text-blue-200">l'invisible.</span>
+                </h2>
+                <p className="text-lg font-light leading-relaxed text-blue-100/60 text-justify border-l-2 border-blue-900 pl-6">
+                  L'eau claire cache parfois des secrets. Minéraux, bactéries ou contaminants chimiques : une analyse est la seule façon de savoir ce que vous buvez réellement.
+                </p>
+              </div>
+
+              {/* Right Column: 2x2 Grid */}
+              <div className="lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-6">
+                {[
+                  {
+                    icon: (
+                      <svg viewBox="0 0 24 24" fill="none" className="w-full h-full text-white" stroke="currentColor" strokeWidth="1.5">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="m14.479 19.374-.971.939a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5a5.2 5.2 0 0 1-.219 1.49" />
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M15 15h6" />
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M18 12v6" />
+                      </svg>
+                    ),
+                    title: "Santé et bien-être",
+                    desc: "Protégez votre famille des contaminants invisibles qui peuvent avoir des effets à long terme.",
+                    gradient: "from-blue-600 to-sky-400"
+                  },
+                  {
+                    icon: (
+                      <svg viewBox="0 0 24 24" fill="none" className="w-full h-full text-white" stroke="currentColor" strokeWidth="1.5">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M12.35 21H5a2 2 0 0 1-2-2v-9a2 2 0 0 1 .71-1.53l7-6a2 2 0 0 1 2.58 0l7 6A2 2 0 0 1 21 10v2.35" />
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M14.8 12.4A1 1 0 0 0 14 12h-4a1 1 0 0 0-1 1v8" />
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M15 18h6" />
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M18 15v6" />
+                      </svg>
+                    ),
+                    title: "Protection Maison",
+                    desc: "Prévenez la corrosion de la tuyauterie et prolongez la vie de vos appareils ménagers.",
+                    gradient: "from-sky-500 to-cyan-400"
+                  },
+                  {
+                    icon: (
+                      <svg viewBox="0 0 24 24" fill="none" className="w-full h-full text-white" stroke="currentColor" strokeWidth="1.5">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M22 11v1a10 10 0 1 1-9-10" />
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M8 14s1.5 2 4 2 4-2 4-2" />
+                        <line x1="9" x2="9.01" y1="9" y2="9" strokeLinecap="round" strokeLinejoin="round" />
+                        <line x1="15" x2="15.01" y1="9" y2="9" strokeLinecap="round" strokeLinejoin="round" />
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M16 5h6" />
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M19 2v6" />
+                      </svg>
+                    ),
+                    title: "Tranquillité d’esprit",
+                    desc: "Obtenez des réponses claires et certifiées pour ne plus douter de la qualité de votre eau.",
+                    gradient: "from-cyan-500 to-blue-400"
+                  },
+                  {
+                    icon: (
+                      <svg viewBox="0 0 24 24" fill="none" className="w-full h-full text-white" stroke="currentColor" strokeWidth="1.5">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M21 10.656V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h12.344" />
+                        <path strokeLinecap="round" strokeLinejoin="round" d="m9 11 3 3L22 4" />
+                      </svg>
+                    ),
+                    title: "Conformité & Valeur",
+                    desc: "Essentiel pour la vente d'une propriété et pour respecter les normes hypothécaires.",
+                    gradient: "from-blue-500 to-indigo-500"
+                  }
+                ].map((item, id) => (
+                  <div
+                    key={id}
+                    className="group bg-slate-900/50 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-3xl p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-blue-900/20"
+                  >
+                    <div className="w-12 h-12 rounded-xl bg-blue-500/20 flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform duration-500 border border-blue-500/30">
+                      <div className="h-6 w-6 text-blue-200">
+                        {item.icon}
+                      </div>
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
+                    <p className="text-base text-slate-400 leading-relaxed group-hover:text-slate-300 transition-colors">
+                      {item.desc}
+                    </p>
                   </div>
-                  <div>
-                    <h4 className="text-lg font-bold text-white mb-2">{item.title}</h4>
-                    <p className="text-sm font-light leading-relaxed text-blue-100/70">{item.desc}</p>
-                  </div>
-                </div>
-              ))}
+                ))}
+              </div>
+
             </div>
           </div>
-        </section >
+        </section>
 
         {/* 3.When you should test your water Section */}
         <section className="py-24 bg-white">
