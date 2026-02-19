@@ -10,7 +10,7 @@ const DiscoverExpert = () => {
             <div className="absolute bottom-[-10%] left-[-10%] w-[400px] h-[400px] bg-indigo-50/40 rounded-full blur-3xl -z-10 pointer-events-none" />
 
             <div className="container mx-auto px-6">
-                <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+                <div className="flex flex-col-reverse lg:flex-row items-center gap-16 lg:gap-24">
 
                     {/* Left Side: Content */}
                     <div className="lg:w-1/2 space-y-10">

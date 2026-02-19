@@ -179,12 +179,6 @@ const Header = () => {
           href: "/refroidisseurs"
         },
         {
-          icon: CupSoda,
-          title: "Distributeurs d'eau gazeuse",
-          description: "Solutions tout-en-un offrant eau froide, chaude et glace dans un seul appareil.",
-          href: "/distributeurs-eau-gazeuse"
-        },
-        {
           icon: Snowflake,
           title: "Machines à glaçons",
           description: "Glace propre et abondante pour toutes vos occasions et besoins quotidiens.",
@@ -670,11 +664,11 @@ const Header = () => {
                         <NavLink
                           key={index}
                           to={card.href}
-                          className="flex items-start gap-4 p-4 rounded-lg hover:bg-gray-50 transition-colors group"
+                          className="flex items-start gap-4 p-4 rounded-lg hover:bg-transparent transition-colors group"
                           onClick={() => setActiveMegamenu(null)}
                         >
                           <div className="flex-shrink-0 mt-0.5">
-                            <Icon className="h-10 w-10 text-[#60A5FA] stroke-[1.5]" />
+                            <Icon className="h-10 w-10 text-[#60A5FA] stroke-[1.5] group-hover:text-white transition-colors" />
                           </div>
                           <div className="flex-1">
                             <h4 className="font-bold text-base text-gray-900 group-hover:text-[#0052ff] mb-1.5 transition-colors leading-tight">
