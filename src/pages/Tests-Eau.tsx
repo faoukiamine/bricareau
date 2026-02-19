@@ -247,7 +247,7 @@ const TestsEauPage = () => {
                     key={idx}
                     onClick={() => setActiveService(idx)}
                     onMouseEnter={() => setActiveService(idx)}
-                    className={`group cursor-pointer py-6 px-4 -mx-4 rounded-lg transition-all duration-300 ${activeService === idx ? 'bg-blue-50/50' : 'hover:bg-gray-50'}`}
+                    className={`group cursor-pointer py-4 px-4 -mx-4 rounded-lg transition-all duration-300 ${activeService === idx ? 'bg-blue-50/50' : 'hover:bg-gray-50'}`}
                   >
                     <div className="flex flex-col">
                       <div className="flex items-center gap-4">
@@ -294,25 +294,35 @@ const TestsEauPage = () => {
             </div>
           </div>
         </section>
-        {/* 5. Water Testing plans Section*/}
-        <section className="py-24 bg-white">
-          <div className="container mx-auto px-6 text-center">
-            <div className="text-left mb-16">
-              <h2
-                className="text-slate-900 tracking-tighter mb-8 text-left"
+        {/* 5. Water Testing plans Section - Modern Cards Layout */}
+        <section className="py-24 bg-slate-50 relative">
+          <div className="container mx-auto px-6">
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <span className="text-sm font-bold uppercase tracking-widest text-blue-600 mb-4 block flex items-center justify-center gap-2">
+                <span className="w-8 h-[2px] bg-blue-600 inline-block"></span>
+                NOS SOLUTIONS D'ANALYSE DE LA QUALITÉ D'EAU
+              </span>
+              <h2 className="text-slate-900 tracking-tighter mb-8"
                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
               >
-                <span className="text-[28px] md:text-[48px] font-light leading-[1.1] md:leading-[1.1] block">Quelle trousse d'analyse d'eau</span>
-                <span className="text-[28px] md:text-[48px] font-normal leading-[1.1] md:leading-[1.1] block">choisir?</span>
+                <span className="text-[28px] md:text-[48px] font-light leading-[1.1] md:leading-[1.1] block">Quelle trousse d'analyse</span>
+                <span className="text-[28px] md:text-[48px] font-normal leading-[1.1] md:leading-[1.1] block">choisir pour votre eau ?</span>
               </h2>
-              <div className="w-24 h-1 bg-blue-600"></div>
+              <p className="text-lg text-slate-600 font-light max-w-2xl mx-auto">
+                Des solutions adaptées à vos besoins, de la vérification bactérienne de base au bilan complet pour une tranquillité d'esprit totale.
+              </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 lg:gap-8">
               {[
                 {
-                  title: "1. Analyse d'eau microbiologique",
-                  desc: "Analyse en dénombrement incluant:",
-                  href: "#",
+                  title: "Test Micro-biologique",
+                  subtitle: "Sécurité de base",
+                  desc: "L'essentiel pour vérifier l'absence de bactéries nocives.",
+                  featured: false,
+                  color: "bg-emerald-50 text-emerald-700",
+                  borderColor: "border-emerald-100",
+                  btnColor: "bg-emerald-600 hover:bg-emerald-700",
                   details: [
                     "Coliformes totaux",
                     "Colonies atypiques",
@@ -321,112 +331,102 @@ const TestsEauPage = () => {
                   ]
                 },
                 {
-                  title: "2. Analyse d'eau physico-chimique Type I",
-                  desc: "Analyse des minéraux et paramètres physico-chimiques causant des problèmes au niveau de l'esthétisme de l'eau (cerne dans les toilettes, eau dure, dépôts, eau trouble, odeur, goût, etc.).",
-                  href: "#",
+                  title: "Test Physico-chimique type I",
+                  subtitle: "Esthétique de l'eau",
+                  desc: "Idéal pour identifier les causes de taches, d'odeurs et de saveurs.",
+                  featured: false,
+                  color: "bg-blue-50 text-blue-700",
+                  borderColor: "border-blue-100",
+                  btnColor: "bg-blue-600 hover:bg-blue-700",
                   details: [
-                    "Alcalinité",
-                    "Calcium",
-                    "Chlorure",
-                    "Conductivité",
-                    "Couleur",
-                    "Dureté",
-                    "Fer",
-                    "Magnésium",
-                    "Manganèse",
-                    "pH",
-                    "Sodium",
-                    "Tannin-Lignine",
-                    "Turbidité"
+                    "Alcalinité", "Calcium", "Chlorure", "Conductivité",
+                    "Couleur", "Dureté", "Fer", "Magnésium",
+                    "Manganèse", "pH", "Sodium", "Tannin-Lignine", "Turbidité"
                   ]
                 },
                 {
-                  title: "3. Analyse d'eau physico-chimique Type II",
-                  desc: "Paramètres physico-chimiques et métaux lourds, pouvant se retrouver dans l'eau naturellement. Ils sont inodores et incolores, mais peuvent causer des problèmes de santé, si ingérés à long terme.",
-                  href: "#",
+                  title: "Test Physico-chimique type II",
+                  subtitle: "Santé",
+                  desc: "Détecte les métaux lourds et contaminants invisibles dangereux.",
+                  featured: false,
+                  color: "bg-indigo-50 text-indigo-700",
+                  borderColor: "border-indigo-100",
+                  btnColor: "bg-indigo-600 hover:bg-indigo-700",
                   details: [
-                    "Fluorures",
-                    "Nitrites-nitrates",
-                    "Sulfates",
-                    "Antimoine",
-                    "Arsenic",
-                    "Baryum",
-                    "Bore",
-                    "Cadmium",
-                    "Chrome",
-                    "Cuivre",
-                    "Manganèse",
-                    "Plomb",
-                    "Sélénium",
-                    "Uranium",
+                    "Fluorures", "Nitrites-nitrates", "Sulfates", "Antimoine",
+                    "Arsenic", "Baryum", "Bore", "Cadmium",
+                    "Chrome", "Cuivre", "Plomb", "Sélénium", "Uranium"
                   ]
                 },
                 {
-                  title: "4. Bilan complet",
-                  desc: "Une protection globale contre les contaminants et impuretés.",
-                  href: "#",
+                  title: "Bilan Complet",
+                  subtitle: "La protection totale",
+                  desc: "L'analyse la plus exhaustive pour une paix d'esprit absolue.",
+                  featured: true,
+                  color: "bg-slate-900 text-white",
+                  borderColor: "border-slate-800",
+                  btnColor: "bg-white text-slate-900 hover:bg-blue-50",
                   details: [
-                    "Coliformes Tot.",
-                    "Colonies atyp.",
-                    "E.coli",
-                    "Entérocoques",
-                    "Alcalinité",
-                    "Calcium",
-                    "Chlorure",
-                    "Conductivité",
-                    "Couleur",
-                    "Dureté",
-                    "Fer",
-                    "Magnésium",
-                    "Manganèse",
-                    "pH",
-                    "Sodium",
-                    "Tannin-Lignine",
-                    "Turbidité",
-                    "Fluorures",
-                    "Nitrites-nitrates",
-                    "Sulfates",
-                    "Antimoine",
-                    "Arsenic",
-                    "Baryum",
-                    "Bore",
-                    "Cadmium",
-                    "Chrome",
-                    "Cuivre",
-                    "Manganèse",
-                    "Plomb",
-                    "Sélénium",
-                    "Uranium",
+                    "Analyses Microbiologiques",
+                    "Paramètres Esthétiques",
+                    "Métaux Lourds",
+                    "Contaminants Santé",
+                    "+ Tous les paramètres précédents"
                   ]
                 }
-              ].map((prod, i) => (
-                <div key={i} className={`group bg-blue-400 p-8 rounded-[2rem] border border-white/20 hover:bg-blue-500 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col h-full shadow-xl ${expandedId === i ? 'row-span-2' : ''}`}>
-                  <h4 className="text-xl font-medium mb-4 text-white">{prod.title}</h4>
-                  <p className="text-lg font-light leading-relaxed text-white/90 mb-6 flex-grow text-justify">{prod.desc}</p>
+              ].map((plan, idx) => (
+                <div
+                  key={idx}
+                  className={`relative flex flex-col rounded-[2rem] p-8 transition-all duration-300 hover:translate-y-[-8px] border-2 ${plan.featured ? 'bg-slate-900 shadow-2xl scale-105 border-slate-900 ring-4 ring-blue-600/20 z-10' : 'bg-white shadow-xl hover:shadow-2xl border-slate-100'}`}
+                >
+                  {plan.featured && (
+                    <div className="absolute -top-5 left-1/2 -translate-x-1/2 bg-blue-600 text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg tracking-wider uppercase">
+                      Recommandé
+                    </div>
+                  )}
 
-                  <div className={`overflow-hidden transition-all duration-500 ease-in-out ${expandedId === i ? 'max-h-[500px] opacity-100 mb-6' : 'max-h-0 opacity-0'}`}>
-                    <ul className={`text-sm font-light text-white/80 text-left border-t border-white/20 pt-4 list-disc pl-5 space-y-1 ${i === 0 ? '' : 'grid grid-cols-2 gap-x-4'}`}>
-                      {prod.details.map((detail, idx) => (
-                        <li key={idx}>{detail}</li>
-                      ))}
-                    </ul>
+                  <div className="mb-6">
+                    <span className={`text-xs font-bold uppercase tracking-widest mb-2 block ${plan.featured ? 'text-blue-400' : 'text-slate-500'}`}>
+                      {plan.subtitle}
+                    </span>
+                    <h3 className={`text-2xl font-bold mb-4 ${plan.featured ? 'text-white' : 'text-blue-600'}`}>
+                      {plan.title}
+                    </h3>
+                    <p className={`text-sm leading-relaxed ${plan.featured ? 'text-slate-400' : 'text-slate-600'}`}>
+                      {plan.desc}
+                    </p>
                   </div>
 
-                  <Button
-                    variant="link"
-                    className="text-white font-bold p-0 group-hover:text-blue-100 transition-colors w-fit mt-auto self-end"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      toggleExpand(i);
-                    }}
-                  >
-                    {expandedId === i ? '' : ''} <ChevronRight className={`h-6 w-6 transition-transform duration-300 ${expandedId === i ? 'rotate-90' : ''}`} />
-                  </Button>
+                  <div className={`flex-grow space-y-3 mb-8 ${plan.featured ? 'text-slate-300' : 'text-slate-600'}`}>
+                    {plan.details.map((item, i) => (
+                      <div key={i} className="flex items-start gap-3">
+                        <CheckCircle2 className={`w-5 h-5 flex-shrink-0 ${plan.featured ? 'text-blue-400' : 'text-blue-600'}`} />
+                        <span className="text-sm font-medium">{item}</span>
+                      </div>
+                    ))}
+
+                    {plan.featured && (
+                      <div className="text-xs text-blue-400 pl-8 italic pt-2">Analyse 360° pour l'eau de puits</div>
+                    )}
+                  </div>
                 </div>
               ))}
             </div>
+
+            <div className="mt-16 text-center">
+              <Button
+                size="lg"
+                className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200 animate-heartbeat"
+                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                asChild
+              >
+                <a href="#water-test">
+                  Planifiez un test d'eau
+                </a>
+              </Button>
+            </div>
           </div>
-        </section >
+        </section>
 
 
         <section className="py-24 bg-white border-t border-slate-100">

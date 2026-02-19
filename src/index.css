@@ -123,3 +123,16 @@ All colors MUST be HSL.
     @apply font-light text-[20px] leading-[28px];
   }
 }
+
+@layer utilities {
+  @keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    15% { transform: scale(1.1); }
+    30% { transform: scale(1); }
+    45% { transform: scale(1.1); }
+    60% { transform: scale(1); }
+  }
+  .animate-heartbeat {
+    animation: heartbeat 2s ease-in-out infinite;
+  }
+}
