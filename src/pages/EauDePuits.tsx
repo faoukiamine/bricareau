@@ -16,12 +16,15 @@ import taninWaterThumb from "@/assets/problemes-deau-tanin.jpg";
 import corrosiveWaterThumb from "@/assets/Corrosive-Water.webp";
 import waterTestingImg from "@/assets/2147800429.jpg";
 import waterTesting1Img from "@/assets/Gemini_Generated_Image_48dg6b48dg6b48dg.png";
-import process1 from "@/assets/2148563485.jpg";
+import process1 from "@/assets/work-life-balance-in-science.jpg";
 import process2 from "@/assets/section-image-and-content-23.jpg";
-import process3 from "@/assets/service bricareau.webp";
+import process3 from "@/assets/SERVICES.jpg";
 import process4 from "@/assets/unnamed (2).jpg";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import labTestImg from "@/assets/istockphoto-506610454-612x612-1.jpg";
+import eauDureThumb from "@/assets/9e9f1b18-7b69-4af1-9e3d-322775a1ec72.jpg";
+import rouilleThumbUpdated from "@/assets/5a4674e7-575d-4cd9-b1f2-32522f8a7072.jpg";
+import mauvaisGoutThumb from "@/assets/blog3-1.jpg";
 
 import {
   Accordion,
@@ -47,19 +50,24 @@ interface Problem {
 
 const problems: Problem[] = [
   {
+    title: "Eau dure",
+    image: eauDureThumb,
+    desc: "Une eau riche en calcium et magnésium laisse des dépôts calcaires tenaces, ternit votre vaisselle et assèche votre peau ainsi que vos cheveux.",
+  },
+  {
+    title: "Eau avec mauvais goût",
+    image: mauvaisGoutThumb,
+    desc: "Un goût métallique, terreux ou de chlore gâche le plaisir de boire votre eau et peut altérer le goût de vos aliments et de votre café.",
+  },
+  {
     title: "Eau avec taches de rouille",
-    image: rouilleThumb,
+    image: rouilleThumbUpdated,
     desc: "Les taches rougeâtres ou orangées sur vos éviers, baignoires et vêtements sont souvent le signe d'une forte concentration de fer dans votre eau de puits.",
   },
   {
     title: "Eau avec odeur d'œufs pourris",
     image: rottenEggsThumb,
     desc: "Une odeur d'œufs pourris (soufre) ou de moisissure peut rendre votre eau impropre à la consommation et désagréable pour la douche.",
-  },
-  {
-    title: "Eau avec mauvais goût",
-    image: waterTasteThumb,
-    desc: "Un goût métallique, terreux ou de chlore gâche le plaisir de boire votre eau et peut altérer le goût de vos aliments et de votre café.",
   },
   {
     title: "Eau trouble ou turbide",
@@ -148,7 +156,7 @@ const EauDePuits = () => {
             </div>
           </div>
 
-          {/* Wave Separator Bottom - Transition to Light Gray Section */}
+          {/* Wave Separator Bottom - Transition to Blue Section */}
           <div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-[0] z-20 pointer-events-none">
             <svg
               className="relative block w-full h-[50px] md:h-[80px]"
@@ -159,7 +167,7 @@ const EauDePuits = () => {
             >
               <path
                 d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-                fill="#F8F9FA"
+                fill="#ffffffff"
                 transform="rotate(180 600 60)"
               ></path>
             </svg>
@@ -167,173 +175,148 @@ const EauDePuits = () => {
         </section>
 
         {/* 2. Well Water Problems section */}
-        <section className="py-32 bg-[#F8F9FA] overflow-hidden">
+        <section className="bg-white py-0 h-[900px] flex flex-col justify-center overflow-hidden">
           <div className="container mx-auto px-4">
-            {/* Title Header - Above Grid */}
-            <div className="mb-4 max-w-4xl">
-              <h2 className="text-[32px] md:text-[48px] font-light text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter"
+            <div className="text-center mb-12">
+              <h2
+                className="text-slate-900 tracking-tighter mb-8"
                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
               >
-                Problèmes courants <br /> de l'eau de puits.
+                <span className="text-[32px] md:text-[50px] font-bold leading-[1.1] md:leading-[1.1] block">Problèmes courants</span>
+                <span className="text-[32px] md:text-[50px] font-bold leading-[1.1] md:leading-[1.1] block text-blue-600">de l'eau de puits</span>
               </h2>
-              <p className="text-lg font-light leading-relaxed text-slate-500 mb-12 max-w-2xl text-justify">
+              <p className="text-lg font-light leading-relaxed text-slate-500 mt-6 max-w-2xl mx-auto">
                 L'eau de votre puits est vivante et changeante. Une analyse rigoureuse est la première étape pour garantir la sécurité de votre foyer et la longévité de vos installations.
               </p>
             </div>
 
-            {/* Layout Grid */}
-            <div className="relative">
-              {/* Desktop Staggered Grid (XL+) */}
-              <div className="hidden xl:grid grid-cols-4 gap-8 min-h-[900px]">
-                {/* Column 1 */}
-                <div className="pt-[300px]">
-                  <div className="group cursor-pointer transition-all duration-500">
-                    <div className="relative h-[320px] rounded-[2.5rem] overflow-hidden bg-slate-200 shadow-2xl shadow-slate-200/50 transition-all duration-700 group-hover:scale-[1.03] group-hover:-translate-y-2">
-                      <img src={problems[0].image} alt={problems[0].title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
-                      <div className="absolute inset-0 bg-black/20 group-hover:bg-black/60 transition-colors duration-500" />
-                      <div className="absolute inset-0 p-8 flex flex-col justify-end text-white text-left">
-                        <span className="text-[10px] font-black uppercase tracking-[0.4em] mb-4 opacity-70 group-hover:opacity-100 transition-opacity">PROBLÈME 1</span>
-                        <h3 className="text-xl font-bold leading-tight group-hover:mb-4 transition-all duration-500">{problems[0].title}</h3>
-                        <p className="text-xs opacity-0 h-0 group-hover:opacity-100 group-hover:h-auto transition-all duration-500 leading-relaxed font-light text-justify">{problems[0].desc}</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Column 2 */}
-                <div className="pt-[110px] flex flex-col gap-16">
-                  {[1, 2].map((idx) => (
-                    <div key={idx} className="group cursor-pointer transition-all duration-500">
-                      <div className="relative h-[320px] rounded-[2.5rem] overflow-hidden bg-slate-200 shadow-2xl shadow-slate-200/50 transition-all duration-700 group-hover:scale-[1.03] group-hover:-translate-y-2">
-                        <img src={problems[idx].image} alt={problems[idx].title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
-                        <div className="absolute inset-0 bg-black/20 group-hover:bg-black/60 transition-colors duration-500" />
+            <Carousel
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              className="w-full"
+            >
+              <CarouselContent className="-ml-4">
+                {problems.map((problem, idx) => (
+                  <CarouselItem key={idx} className="pl-4 md:basis-1/2 lg:basis-1/3">
+                    <div className="group cursor-pointer h-full pb-8">
+                      <div className="relative h-[400px] rounded-[2rem] overflow-hidden bg-slate-900 shadow-xl transition-all duration-700 group-hover:scale-[1.02] border border-slate-100">
+                        <img src={problem.image} alt={problem.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-70 group-hover:opacity-100" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent transition-colors duration-500" />
                         <div className="absolute inset-0 p-8 flex flex-col justify-end text-white text-left">
-                          <span className="text-[10px] font-black uppercase tracking-[0.4em] mb-4 opacity-70 group-hover:opacity-100 transition-opacity">PROBLÈME {idx + 1}</span>
-                          <h3 className="text-xl font-bold leading-tight group-hover:mb-4 transition-all duration-500">{problems[idx].title}</h3>
-                          <p className="text-xs opacity-0 h-0 group-hover:opacity-100 group-hover:h-auto transition-all duration-500 leading-relaxed font-light text-justify">{problems[idx].desc}</p>
+                          <span className="text-[10px] font-black uppercase tracking-[0.4em] mb-4 opacity-70 group-hover:opacity-100 transition-opacity text-blue-400">PROBLÈME {idx + 1}</span>
+                          <h3 className="text-2xl font-bold leading-tight mb-2 group-hover:mb-4 transition-all duration-500">{problem.title}</h3>
+                          <p className="text-sm opacity-0 h-0 group-hover:opacity-100 group-hover:h-auto transition-all duration-500 leading-relaxed font-light text-justify text-gray-300">{problem.desc}</p>
                         </div>
                       </div>
                     </div>
-                  ))}
-                </div>
-
-                {/* Column 3 */}
-                <div className="pt-[0px] flex flex-col gap-16">
-                  {[3, 4].map((idx) => (
-                    <div key={idx} className="group cursor-pointer transition-all duration-500">
-                      <div className="relative h-[320px] rounded-[2.5rem] overflow-hidden bg-slate-200 shadow-2xl shadow-slate-200/50 transition-all duration-700 group-hover:scale-[1.03] group-hover:-translate-y-2">
-                        <img src={problems[idx].image} alt={problems[idx].title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
-                        <div className="absolute inset-0 bg-black/20 group-hover:bg-black/60 transition-colors duration-500" />
-                        <div className="absolute inset-0 p-8 flex flex-col justify-end text-white text-left">
-                          <span className="text-[10px] font-black uppercase tracking-[0.4em] mb-4 opacity-70 group-hover:opacity-100 transition-opacity">PROBLÈME {idx + 1}</span>
-                          <h3 className="text-xl font-bold leading-tight group-hover:mb-4 transition-all duration-500">{problems[idx].title}</h3>
-                          <p className="text-xs opacity-0 h-0 group-hover:opacity-100 group-hover:h-auto transition-all duration-500 leading-relaxed font-light text-justify">{problems[idx].desc}</p>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Column 4 */}
-                <div className="pt-[260px]">
-                  <div className="group cursor-pointer transition-all duration-500">
-                    <div className="relative h-[320px] rounded-[2.5rem] overflow-hidden bg-slate-200 shadow-2xl shadow-slate-200/50 transition-all duration-700 group-hover:scale-[1.03] group-hover:-translate-y-2">
-                      <img src={problems[5].image} alt={problems[5].title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
-                      <div className="absolute inset-0 bg-black/20 group-hover:bg-black/60 transition-colors duration-500" />
-                      <div className="absolute inset-0 p-8 flex flex-col justify-end text-white text-left">
-                        <span className="text-[10px] font-black uppercase tracking-[0.4em] mb-4 opacity-70 group-hover:opacity-100 transition-opacity">PROBLÈME 6</span>
-                        <h3 className="text-xl font-bold leading-tight group-hover:mb-4 transition-all duration-500">{problems[5].title}</h3>
-                        <p className="text-xs opacity-0 h-0 group-hover:opacity-100 group-hover:h-auto transition-all duration-500 leading-relaxed font-light text-justify">{problems[5].desc}</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Tablet/Mobile Responsive Grid */}
-              <div className="xl:hidden grid grid-cols-1 md:grid-cols-2 gap-8">
-                {problems.map((problem, index) => (
-                  <div key={index} className="group cursor-pointer">
-                    <div className="relative h-[400px] rounded-[2rem] overflow-hidden bg-slate-200 shadow-xl shadow-slate-200/30">
-                      <img
-                        src={problem.image}
-                        alt={problem.title}
-                        className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-8 flex flex-col justify-end text-white">
-                        <span className="text-[10px] font-black uppercase tracking-[0.4em] mb-3 opacity-80">
-                          PROBLÈME {index + 1}
-                        </span>
-                        <h3 className="text-2xl font-bold mb-4">{problem.title}</h3>
-                        <p className="text-lg font-light leading-relaxed text-blue-100 text-justify">{problem.desc}</p>
-                      </div>
-                    </div>
-                  </div>
+                  </CarouselItem>
                 ))}
+              </CarouselContent>
+              <div className="flex justify-end gap-2 mt-8 pr-4">
+                <CarouselPrevious className="relative static translate-y-0 translate-x-0 bg-blue-600 text-white hover:bg-blue-700 border-none w-12 h-12" />
+                <CarouselNext className="relative static translate-y-0 translate-x-0 bg-blue-600 text-white hover:bg-blue-700 border-none w-12 h-12" />
               </div>
-            </div>
+            </Carousel>
           </div>
         </section>
 
-        {/* 4. Processus Section */}
-        <section className="bg-white py-32 border-t border-gray-50">
+        {/* 4. Processus Section - Expanding Gallery Layout */}
+        <section className="bg-white py-32 border-t border-gray-50 overflow-hidden">
           <div className="container mx-auto px-4">
-            {/* Header Layout */}
-            <div className="mb-24">
-              <span className="text-sm font-bold uppercase tracking-widest text-blue-600 mb-4 block">
-                NOTRE FONCTIONNEMENT
-              </span>
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-end">
-                <h2 className="text-[32px] md:text-[48px] font-light text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter"
+            {/* Header - Split Layout */}
+            <div className="flex flex-col lg:flex-row justify-between items-end gap-12 mb-24">
+              <div className="max-w-3xl">
+                <span className="text-sm font-bold uppercase tracking-widest text-blue-600 mb-4 block flex items-center gap-2">
+                  <span className="w-8 h-[2px] bg-blue-600 inline-block"></span>
+                  NOTRE FONCTIONNEMENT
+                </span>
+                <h2 className="text-[32px] md:text-[48px] font-bold text-slate-900 leading-[1.1] tracking-tighter"
                   style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                 >
                   Un service simple <br />& sans souci.
                 </h2>
-                <p className="text-lg font-light leading-relaxed text-slate-600 max-w-xl lg:ml-auto text-justify">
+              </div>
+              <div className="max-w-xl">
+                <p className="text-lg font-light leading-relaxed text-slate-600 text-justify pb-2">
                   Confiez-nous la gestion de votre eau de puits. De l'expertise initiale à l'installation finale, nous nous occupons de tout pour vous garantir une eau saine, sans compromis.
                 </p>
               </div>
             </div>
 
-            {/* 4-Step Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+            {/* Steps Container - Expanding Flex Gallery */}
+            <div className="flex flex-col lg:flex-row gap-4 h-auto lg:h-[600px]">
               {[
                 {
                   title: "Analyse d'eau",
-                  desc: "Nous effectuons un test approfondi en laboratoire pour identifier les contaminants spécifiques à votre puits.",
+                  desc: "Test approfondi en laboratoire pour identifier les contaminants.",
+                  fullDesc: "Nous effectuons un test approfondi en laboratoire pour identifier les contaminants spécifiques à votre puits. Une compréhension précise est la clé d'une solution durable.",
                   img: process1
                 },
                 {
                   title: "Diagnostic Global",
-                  desc: "Nos experts conçoivent une solution de filtration sur mesure adaptée à la chimie unique de votre eau.",
+                  desc: "Solution sur mesure adaptée à la chimie de votre eau.",
+                  fullDesc: "Nos experts conçoivent une solution de filtration sur mesure adaptée à la chimie unique de votre eau. Chaque système est pensé pour votre consommation réelle.",
                   img: process2
                 },
                 {
                   title: "Installation Experte",
-                  desc: "Nos techniciens certifiés installent vos systèmes avec une précision professionnelle pour une performance durable.",
+                  desc: "Installation précise par nos techniciens certifiés.",
+                  fullDesc: "Nos techniciens certifiés installent vos systèmes avec une précision professionnelle pour une performance durable. Nous respectons votre espace et les normes les plus strictes.",
                   img: process3
                 },
                 {
                   title: "Suivi de Qualité",
-                  desc: "Nous assurons des tests de suivi et un entretien régulier pour garantir la sécurité continue de votre foyer.",
+                  desc: "Tests de suivi et entretien pour votre sécurité.",
+                  fullDesc: "Nous assurons des tests de suivi et un entretien régulier pour garantir la sécurité continue de votre foyer. Votre tranquillité d'esprit est notre priorité.",
                   img: process4
                 }
               ].map((step, idx) => (
-                <div key={idx} className="flex flex-col animate-in fade-in slide-in-from-bottom duration-700" style={{ animationDelay: `${idx * 100}ms` }}>
-                  {/* Circle Indicator with Number */}
-                  <div className="relative mb-8">
-                    <div className="w-24 h-24 rounded-full bg-[#E5E5E5] flex items-center justify-center overflow-hidden border-4 border-white shadow-lg">
-                      <img src={step.img} alt={step.title} className="w-full h-full object-cover" />
+                <div
+                  key={idx}
+                  className="group relative flex-1 hover:flex-[3] transition-all duration-700 ease-in-out cursor-pointer overflow-hidden rounded-[2rem] min-h-[400px] lg:min-h-0"
+                >
+                  {/* Background Image */}
+                  <img
+                    src={step.img}
+                    alt={step.title}
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                  />
+
+                  {/* Overlay Gradient */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500" />
+
+                  {/* Content */}
+                  <div className="absolute inset-0 p-8 flex flex-col justify-end">
+                    {/* Number Badge */}
+                    <div className="absolute top-8 left-8 w-12 h-12 rounded-full border border-white/30 flex items-center justify-center backdrop-blur-md bg-white/10 group-hover:bg-blue-600 group-hover:border-blue-600 transition-colors duration-500">
+                      <span className="text-white font-bold">{idx + 1}</span>
                     </div>
-                    <div className="absolute top-0 left-0 w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center text-xs font-bold border-2 border-white shadow-md">
-                      {idx + 1}
+
+                    {/* Text Container */}
+                    <div className="translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                      <h3 className="text-2xl md:text-3xl font-bold text-white mb-2 whitespace-nowrap">
+                        {step.title}
+                      </h3>
+
+                      {/* Short Desc (Always Visible or Hidden on Expand?) - Let's use visible for context */}
+                      <div className="overflow-hidden max-h-0 opacity-0 group-hover:max-h-[200px] group-hover:opacity-100 transition-all duration-700 delay-100">
+                        <p className="text-white/90 font-light leading-relaxed mt-4 text-justify pr-4 border-l-2 border-blue-500 pl-4">
+                          {step.fullDesc}
+                        </p>
+                        <button className="mt-6 px-6 py-2 bg-white/10 hover:bg-white/20 backdrop-blur-md rounded-full text-sm font-medium text-white transition-colors border border-white/20">
+                          En savoir plus
+                        </button>
+                      </div>
+
+                      {/* Mobile Fallback: visible description on small screens if flex doesn't work well?
+                          Use standard hidden logic. On mobile, flex-col means they are distinct blocks. 
+                          Hover might not work well on touch. 
+                          Let's assume default is 'collapsed' state visually, but readable title.
+                      */}
                     </div>
                   </div>
-
-                  <h3 className="text-2xl font-medium mb-4 text-black tracking-tight">{step.title}</h3>
-                  <p className="text-lg font-light leading-relaxed text-slate-600 text-justify">
-                    {step.desc}
-                  </p>
                 </div>
               ))}
             </div>
