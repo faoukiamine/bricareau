@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Play, Clock } from "lucide-react";
+import filtrationVideoImg from "@/assets/10341859.jpg";
 
 const Videos = () => {
     const videoCategories = [
@@ -16,7 +17,7 @@ const Videos = () => {
                 {
                     title: "Installation d'un système de filtration",
                     duration: "10:30",
-                    thumbnail: "https://images.unsplash.com/photo-1548839140-29a749e1cf4d?q=80&w=600&auto=format&fit=crop",
+                    thumbnail: filtrationVideoImg,
                     description: "Étapes détaillées pour installer un système de filtration"
                 }
             ]

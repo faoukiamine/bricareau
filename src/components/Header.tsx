@@ -4,6 +4,11 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { cn } from "@/lib/utils";
+import promoImage from "@/assets/10341859.jpg";
+import promoImage2 from "@/assets/close-up-handsom-man-taking-bath.jpg";
+import promoImage3 from "@/assets/woman-and-kid-drink-glass-water.jpg";
+import promoImage4 from "@/assets/undersink_filtration_header.jpg";
+
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -120,9 +125,9 @@ const Header = () => {
 
       ],
       promo: {
-        title: "Trouvez la bonne solution pour votre maison",
-        image: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=600&auto=format&fit=crop",
-        link: "/services"
+        title: "Une eau parfaite commencence par une analyse rigoureuse.",
+        image: promoImage2,
+        link: "/test-eau"
       }
     },
     {
@@ -156,9 +161,9 @@ const Header = () => {
         },
       ],
       promo: {
-        title: "Eau pure pour toute la famille",
-        image: "https://images.unsplash.com/photo-1548839140-29a749e1cf4d?q=80&w=600&auto=format&fit=crop",
-        link: "/filtration"
+        title: "Protégez votre famille des contaminants invisibles qui peuvent avoir des effets à long terme",
+        image: promoImage3,
+        link: "/test-eau"
       }
     },
     {
@@ -187,9 +192,9 @@ const Header = () => {
 
       ],
       promo: {
-        title: "Solutions hydratation pour entreprises",
-        image: "https://images.unsplash.com/photo-1563227812-0ea4c22e6cc8?q=80&w=600&auto=format&fit=crop",
-        link: "/fontaines"
+        title: "Profitez d'une eau pure et revitalisante au quotidien",
+        image: promoImage,
+        link: "/systeme-de-filtration-deau-potable"
       }
     },
     {
@@ -223,9 +228,9 @@ const Header = () => {
         },
       ],
       promo: {
-        title: "Eau de puits saine et sûre",
-        image: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?q=80&w=600&auto=format&fit=crop",
-        link: "/eau-de-puits"
+        title: "Des tests d'eau précis pour une tranquillité d'esprit totale.",
+        image: promoImage4,
+        link: "/tests-eau"
       }
     },
     {

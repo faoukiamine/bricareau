@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import { Tag, Clock, CheckCircle, ArrowRight, Percent } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import filtrationPromoImg from "@/assets/10341859.jpg";
 
 const Promotions = () => {
     const promotions = [
@@ -25,7 +26,7 @@ const Promotions = () => {
             discount: "20%",
             validUntil: "15 avril 2025",
             category: "Résidentiel",
-            image: "https://images.unsplash.com/photo-1548839140-29a749e1cf4d?q=80&w=600&auto=format&fit=crop",
+            image: filtrationPromoImg,
             features: [
                 "Filtration complète de l'eau",
                 "Cartouches de remplacement incluses",

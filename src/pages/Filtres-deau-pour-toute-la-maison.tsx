@@ -102,11 +102,13 @@ const faqItems = [
 ];
 
 const comparisonData = [
-    { feature: "Technologie High Efficiency", high: true, selectPlus: true, connect: true, select: false, medallist: false },
-    { feature: "Contrôle à distance (App)", high: true, selectPlus: false, connect: true, select: false, medallist: false },
-    { feature: "Protection du chlore intégrée", high: "Option", selectPlus: false, connect: false, select: false, medallist: false },
-    { feature: "Alertes de sel faible", high: true, selectPlus: true, connect: true, select: true, medallist: false },
-    { feature: "Diagnostic à distance", high: true, selectPlus: false, connect: true, select: false, medallist: false },
+    { feature: "Filtration Toute la Maison (Point d'entrée)", vortex: true, chlorstop: true, ironshield: true },
+    { feature: "Élimination des sédiments et turbidité", vortex: true, chlorstop: "Partielle", ironshield: true },
+    { feature: "Élimination du chlore et des odeurs", vortex: false, chlorstop: true, ironshield: false },
+    { feature: "Élimination du fer et manganèse", vortex: false, chlorstop: false, ironshield: true },
+    { feature: "Amélioration du goût de l'eau", vortex: "Mineure", chlorstop: true, ironshield: true },
+    { feature: "Protection de la plomberie et robinetterie", vortex: true, chlorstop: true, ironshield: true },
+    { feature: "Fonctionnement avec électricité", vortex: true, chlorstop: true, ironshield: true },
 ];
 
 const FiltresTouteMaison = () => {
@@ -226,7 +228,13 @@ const FiltresTouteMaison = () => {
                                 <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Nos filtres d'eau</span>
                                 <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">spécialisés pour votre résidence</span>
                             </h2>
-                            <div className="w-24 h-1 bg-blue-600"></div>
+                            <div className="w-24 h-1 bg-blue-600 mb-8"></div>
+                            <p
+                                className="text-lg font-light leading-relaxed text-slate-600 mb-8 text-justify"
+                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                            >
+                                Nos filtres d’eau spécialisés pour toute la maison sont méticuleusement conçus pour offrir une protection robuste et ciblée contre les contaminants spécifiques que l’on retrouve fréquemment dans les réseaux de distribution municipaux. En intégrant des technologies de pointe telles que nos séries Vortex, ChlorStop et Iron Shield, nous garantissons l'élimination efficace des sédiments, du chlore et des métaux lourds qui peuvent altérer le goût, l'odeur et la qualité globale de votre eau quotidienne. Chaque solution est installée au point d’entrée de votre résidence pour assurer une pureté cristalline constante dans tous vos robinets, tout en prolongeant durablement la durée de vie de votre plomberie et de vos précieux électroménagers. Choisir un système Bricareau, c'est opter pour une expertise reconnue qui transforme votre eau municipale en une ressource revitalisante, saine et parfaitement équilibrée pour l'ensemble de votre foyer. Profitez dès aujourd'hui d'une tranquillité d'esprit absolue grâce à une filtration sur-mesure, fiable et performante, répondant aux standards les plus élevés d'excellence et de confort.
+                            </p>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                             {products.map((p, i) => (
@@ -286,30 +294,33 @@ const FiltresTouteMaison = () => {
                             <table className="w-full min-w-[1000px] border-collapse bg-white rounded-2xl overflow-hidden shadow-sm">
                                 <thead>
                                     <tr className="bg-gray-100">
-                                        <th className="p-8 text-left text-gray-400 font-medium uppercase tracking-wider">Modèles</th>
-                                        {["High Tech", "Select Plus", "Connect", "Select", "Medallist"].map(m => (
-                                            <th key={m} className="p-8 text-center text-gray-900 font-bold text-xl">{m}</th>
+                                        <th className="p-8 text-left text-gray-400 font-light uppercase tracking-wider">Solutions</th>
+                                        {products.map((m, i) => (
+                                            <th key={i} className="p-4 text-center text-gray-900 font-bold text-sm">
+                                                <div className="flex flex-col items-center gap-2">
+                                                    <img
+                                                        src={m.image}
+                                                        alt={m.name}
+                                                        className="w-[150px] h-[120px] object-contain mx-auto mix-blend-multiply"
+                                                    />
+                                                    <div className="text-[14px] uppercase tracking-wider">{m.name.replace("Filtre d'eau ", "")}</div>
+                                                </div>
+                                            </th>
                                         ))}
                                     </tr>
                                 </thead>
                                 <tbody className="divide-y divide-gray-100">
                                     {comparisonData.map((row, i) => (
                                         <tr key={i} className="hover:bg-gray-50 transition-colors">
-                                            <td className="p-8 font-medium text-gray-700">{row.feature}</td>
-                                            <td className="p-8 text-center">
-                                                {typeof row.high === 'string' ? row.high : (row.high ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : <X className="h-6 w-6 text-gray-300 mx-auto" />)}
+                                            <td className="p-8 font-light text-gray-700">{row.feature}</td>
+                                            <td className="p-8 text-center text-sm">
+                                                {typeof (row as any).vortex === 'string' ? <span className="text-blue-600 font-bold bg-blue-50 px-3 py-1 rounded-full text-[10px] whitespace-nowrap">{(row as any).vortex}</span> : ((row as any).vortex ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : null)}
                                             </td>
-                                            <td className="p-8 text-center">
-                                                {row.selectPlus ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : <X className="h-6 w-6 text-gray-300 mx-auto" />}
+                                            <td className="p-8 text-center text-sm">
+                                                {typeof (row as any).chlorstop === 'string' ? <span className="text-blue-600 font-bold bg-blue-50 px-3 py-1 rounded-full text-[10px] whitespace-nowrap">{(row as any).chlorstop}</span> : ((row as any).chlorstop ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : null)}
                                             </td>
-                                            <td className="p-8 text-center">
-                                                {row.connect ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : <X className="h-6 w-6 text-gray-300 mx-auto" />}
-                                            </td>
-                                            <td className="p-8 text-center">
-                                                {row.select ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : <X className="h-6 w-6 text-gray-300 mx-auto" />}
-                                            </td>
-                                            <td className="p-8 text-center">
-                                                {row.medallist ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : <X className="h-6 w-6 text-gray-300 mx-auto" />}
+                                            <td className="p-8 text-center text-sm">
+                                                {typeof (row as any).ironshield === 'string' ? <span className="text-blue-600 font-bold bg-blue-50 px-3 py-1 rounded-full text-[10px] whitespace-nowrap">{(row as any).ironshield}</span> : ((row as any).ironshield ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : null)}
                                             </td>
                                         </tr>
                                     ))}

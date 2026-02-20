@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Calendar, User, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import filtrationBlogImg from "@/assets/10341859.jpg";
 
 const Blog = () => {
     const blogPosts = [
@@ -19,7 +20,7 @@ const Blog = () => {
             date: "10 décembre 2024",
             author: "Équipe Bricareau",
             category: "Guides",
-            image: "https://images.unsplash.com/photo-1548839140-29a749e1cf4d?q=80&w=600&auto=format&fit=crop"
+            image: filtrationBlogImg
         },
         {
             title: "L'importance de l'analyse d'eau pour votre santé",

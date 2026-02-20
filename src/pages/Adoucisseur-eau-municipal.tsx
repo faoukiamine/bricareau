@@ -206,7 +206,13 @@ const AdoucisseurEauMunicipal = () => {
                             >
                                 Nos adoucisseurs d'eau <br /><span className="font-normal">résidentiels</span>
                             </h2>
-                            <div className="w-24 h-1 bg-blue-600"></div>
+                            <div className="w-24 h-1 bg-blue-600 mb-8"></div>
+                            <p
+                                className="text-lg font-light leading-relaxed text-slate-600 mb-8 text-justify"
+                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                            >
+                                Nos adoucisseurs d'eau pour eau municipale sont spécialement conçus pour contrer les effets néfastes du calcaire tout en s'adaptant parfaitement aux spécificités des réseaux de distribution urbains. Nos solutions de pointe — les séries Sentinelle, Sérénité et Infiniti — offrent une technologie de régénération intelligente qui optimise votre consommation d'eau et de sel selon votre usage réel au quotidien. Que vous recherchiez une efficacité énergétique maximale, une protection accrue de votre plomberie ou une douceur incomparable pour votre peau et vos cheveux, nos systèmes garantissent une performance durable et une fiabilité exceptionnelle. Investir dans un adoucisseur Bricareau, c'est choisir de prolonger la vie de vos appareils électroménagers tout en réalisant des économies substantielles sur vos produits d'entretien et vos factures énergétiques. Découvrez une nouvelle dimension de confort domestique grâce à une eau parfaitement balancée, pure et saine pour l'ensemble de votre foyer.
+                            </p>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto">
                             {products.map((p, i) => (

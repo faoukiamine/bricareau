@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Droplets, Waves, Filter, Beaker } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
+import filtrationImage from "@/assets/10341859.jpg";
 
 const solutions = [
   {
@@ -51,7 +52,7 @@ const solutions = [
     ],
     icon: Filter,
     link: "/osmose-filtration",
-    image: "https://images.unsplash.com/photo-1548839140-29a749e1cf4d?q=80&w=800&auto=format&fit=crop"
+    image: filtrationImage
   },
   {
     id: "puits",
@@ -99,9 +100,8 @@ const Solutions = () => {
                 <div
                   key={solution.id}
                   id={solution.id}
-                  className={`grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center ${
-                    index % 2 === 1 ? "lg:flex-row-reverse" : ""
-                  }`}
+                  className={`grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center ${index % 2 === 1 ? "lg:flex-row-reverse" : ""
+                    }`}
                 >
                   {/* Image */}
                   <div className={`${index % 2 === 1 ? "lg:order-2" : ""}`}>

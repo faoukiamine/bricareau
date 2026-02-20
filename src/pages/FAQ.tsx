@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, ChevronRight, CheckCircle2, Droplets, Filter, Shield, Zap, GlassWater, Waves, Snowflake, CupSoda } from "lucide-react";
 import { NavLink } from "react-router-dom";
 import residentialWaterSoftenerImg from "@/assets/residential-water-softener.png";
+import analysisImg from "@/assets/10341859.jpg";
 
 const categories = [
     {
@@ -13,7 +14,7 @@ const categories = [
             {
                 title: "Analyses & Tests d'eau",
                 desc: "Détection précise des contaminants pour une eau de puits sécuritaire.",
-                image: "https://images.unsplash.com/photo-1548839140-29a749e1cf4d?q=80&w=800&auto=format&fit=crop",
+                image: analysisImg,
                 href: "/tests-eau"
             },
             {
@@ -73,7 +74,7 @@ const categories = [
             {
                 title: "Filtration toute la maison",
                 desc: "Protection globale contre le chlore et les sédiments.",
-                image: "https://images.unsplash.com/photo-1548839140-29a749e1cf4d?q=80&w=800&auto=format&fit=crop",
+                image: analysisImg,
                 href: "/filtration"
             }
         ]
