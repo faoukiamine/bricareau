@@ -48,21 +48,16 @@ const Filtration = () => {
     }, []);
 
     const comparisonData = [
-        { feature: "Élimine les sédiments, le chlore et les mauvaises odeurs de toute l'eau.", whole: true, basic: true },
-        { feature: "Filtration Toute la Maison (Point d'entrée)", whole: true, basic: false },
-        { feature: "Protège toute la plomberie et les électroménagers de la maison.", whole: true, basic: false },
-        { feature: "Réduit l'absorption de chlore par la peau et les poumons (vapeur).", whole: true, basic: false },
-        { feature: "Filtration d'eau au Point d'utilisation", whole: false, basic: true },
-        { feature: "Uniquement au robinet dédié (généralement cuisine).", whole: false, basic: true },
-        { feature: "Fournit une eau de boisson d'une pureté de 99%.", whole: false, basic: true },
-        { feature: "Élimine les métaux lourds, plomb, nitrates et résidus chimiques.", whole: false, basic: true },
-        { feature: " Rinçage automatique", whole: true, basic: false },
-        { feature: "Eau filtrée pour toutes les sorties d'eau.", whole: true, basic: false },
-        { feature: "Aucun impact sur la pression d'eau de la maison.", whole: true, basic: false },
-        { feature: "Changement périodique des filtres et de la membrane.", whole: false, basic: true },
-        { feature: "Goût exceptionnel pour le café, le thé et la cuisson.", whole: false, basic: true },
-        { feature: "Débit contrôlé pour une filtration ultra-fine.", whole: false, basic: true },
-
+        { feature: "Installation", whole: "Point d'entrée", basic: "Sous l'évier" },
+        { feature: "Portée de filtration", whole: "Toute la maison", basic: "Point d'utilisation" },
+        { feature: "Élimine sédiments, chlore et odeurs", whole: true, basic: true },
+        { feature: "Traitement spécialisé (Fer, Soufre, Manganèse)", whole: true, basic: false },
+        { feature: "Élimination plomb, arsenic et métaux lourds", whole: false, basic: true },
+        { feature: "Pureté de l'eau (99% sans contaminants)", whole: false, basic: true },
+        { feature: "Rinçage et entretien du média", whole: "Automatique", basic: "Manuel (Cartouches)" },
+        { feature: "Changement de membrane périodique", whole: false, basic: true },
+        { feature: "Goût d'une eau embouteillée premium", whole: true, basic: "Supérieur" },
+        { feature: "Emplacement courant", whole: "Salle mécanique", basic: "Cuisine" },
     ];
 
     return (
@@ -468,10 +463,10 @@ const Filtration = () => {
                                         <tr key={i} className="hover:bg-gray-50 transition-colors">
                                             <td className="p-8 font-light text-gray-700">{row.feature}</td>
                                             <td className="p-8 text-center">
-                                                {typeof row.whole === 'string' ? <span className="text-blue-600 font-bold bg-blue-50 px-3 py-1 rounded-full text-[10px]">{row.whole}</span> : (row.whole ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : null)}
+                                                {typeof row.whole === 'string' ? <span className="text-blue-600 font-bold bg-blue-50 px-4 py-1.5 rounded-full text-[10px] uppercase">{row.whole}</span> : (row.whole ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : null)}
                                             </td>
                                             <td className="p-8 text-center">
-                                                {row.basic ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : null}
+                                                {typeof row.basic === 'string' ? <span className="text-blue-600 font-bold bg-blue-50 px-4 py-1.5 rounded-full text-[10px] uppercase">{row.basic}</span> : (row.basic ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : null)}
                                             </td>
                                         </tr>
                                     ))}
