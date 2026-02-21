@@ -74,7 +74,7 @@ const Filtration = () => {
                     <div className="absolute inset-0 z-0">
                         <img
                             src={heroFiltration}
-                            alt="Système de filtration d'eau résidentiel haute performance par Bricareau"
+                            alt="Système de filtration d'eau résidentiel haute performance Bricareau Canada - Eau pure et santé"
                             className="w-full h-full object-cover"
                         />
                         <div className="absolute inset-0 bg-black/40 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
@@ -179,7 +179,7 @@ const Filtration = () => {
                                 <div className="rounded-[2.5rem] overflow-hidden shadow-2xl relative h-[600px] w-full group">
                                     <img
                                         src={teenagerShowerImg}
-                                        alt="Eau filtrée pour toute la maison"
+                                        alt="Douche sous eau filtrée Bricareau - Protection de la peau et des cheveux contre le chlore"
                                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                     />
                                     <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors duration-500" />
@@ -251,7 +251,7 @@ const Filtration = () => {
                                 <div className="rounded-[2.5rem] overflow-hidden shadow-2xl relative h-[600px] w-full group">
                                     <img
                                         src={glassOfWaterImg}
-                                        alt="Systèmes de filtration d'eau potable"
+                                        alt="Verre d'eau pure provenant d'un système d'osmose inverse Bricareau - Élimination du goût de chlore"
                                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                     />
                                     <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors duration-500" />
@@ -324,7 +324,7 @@ const Filtration = () => {
                                 <div className="rounded-[2.5rem] overflow-hidden shadow-2xl relative h-[600px] w-full group">
                                     <img
                                         src={africanGirlImg}
-                                        alt="Fille buvant de l'eau pure"
+                                        alt="Enfant buvant de l'eau saine filtrée sous l'évier Bricareau - Sécurité alimentaire et santé"
                                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                     />
                                     <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors duration-500" />
@@ -392,7 +392,7 @@ const Filtration = () => {
                     <div className="absolute inset-0 z-0">
                         <img
                             src={waterTestingImg}
-                            alt="Analyse de l'eau en laboratoire"
+                            alt="Analyse d'eau en laboratoire pour détection de contaminants - Service expert Bricareau"
                             className="w-full h-full object-cover"
                         />
                         <div className="absolute inset-0 bg-blue-950/60 lg:bg-gradient-to-r lg:from-blue-950/95 lg:to-blue-900/40 mix-blend-multiply" />
@@ -454,7 +454,7 @@ const Filtration = () => {
                                                 <div className="flex flex-col items-center gap-2">
                                                     <img
                                                         src={m.img}
-                                                        alt={m.name}
+                                                        alt={`${m.name} - Solution de filtration d'eau Bricareau pour maison et cuisine`}
                                                         className="w-[150px] h-[120px] object-contain mx-auto mix-blend-multiply"
                                                     />
                                                     <div className="text-[14px]">{m.name}</div>
@@ -606,7 +606,7 @@ const Filtration = () => {
                                     <div className="h-56 overflow-hidden">
                                         <img
                                             src={art.img}
-                                            alt={art.title}
+                                            alt={`${art.title} - Guide pratique Bricareau pour une meilleure qualité d'eau`}
                                             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                                         />
                                     </div>

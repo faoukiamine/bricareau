@@ -71,7 +71,7 @@ const Adoucissement = () => {
                     <div className="absolute inset-0 z-0">
                         <img
                             src={heroBath}
-                            alt="Confort d'une eau douce lors d'un bain relaxant"
+                            alt="Confort d'une eau douce et soyeuse Québec - Bain relaxant sans calcaire Bricareau"
                             className="w-full h-full object-cover object-[center_35%]"
                         />
                         <div className="absolute inset-0 bg-black/40 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
@@ -172,7 +172,7 @@ const Adoucissement = () => {
                                 <div className="rounded-[2.5rem] overflow-hidden shadow-2xl relative h-[600px] w-full group">
                                     <img
                                         src={kitchenImg}
-                                        alt="Cuisine moderne avec eau adoucie"
+                                        alt="Cuisine moderne protégée par un adoucisseur d'eau résidentiel Bricareau - Vaisselle sans taches"
                                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                     />
                                     <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors duration-500" />
@@ -244,7 +244,7 @@ const Adoucissement = () => {
                                 <div className="rounded-[2.5rem] overflow-hidden shadow-2xl relative h-[600px] w-full group">
                                     <img
                                         src={mobileSoftenerImg}
-                                        alt="Adoucisseur portable en action"
+                                        alt="Adoucisseur d'eau portable pour VR et bateau - Solution mobile Bricareau contre l'eau dure"
                                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                     />
                                     <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors duration-500" />
@@ -316,7 +316,7 @@ const Adoucissement = () => {
                                 <div className="rounded-[2.5rem] overflow-hidden shadow-2xl relative h-[600px] w-full group">
                                     <img
                                         src={untitledImg}
-                                        alt="Femme se lavant les mains"
+                                        alt="Conditionneur d'eau sans sel écologique Bricareau - Protection contre le tartre sans saumure"
                                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                     />
                                     <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors duration-500" />
@@ -409,7 +409,7 @@ const Adoucissement = () => {
                                                 <div className="flex flex-col items-center gap-2">
                                                     <img
                                                         src={m.img}
-                                                        alt={m.name}
+                                                        alt={`${m.name} - Système de traitement d'eau haute performance Bricareau`}
                                                         className="w-[150px] h-[120px] object-contain mx-auto mix-blend-multiply"
                                                     />
                                                     <div className="text-[14px]">{m.name}</div>
@@ -452,7 +452,7 @@ const Adoucissement = () => {
                     <div className="absolute inset-0 z-0">
                         <img
                             src={waterTestingBg}
-                            alt="Analyse de l'eau"
+                            alt="Analyse d'eau à domicile et test de dureté - Diagnostic expert Bricareau"
                             className="w-full h-full object-cover"
                         />
                         <div className="absolute inset-0 bg-blue-900/40 lg:bg-gradient-to-r lg:from-blue-900/90 lg:to-blue-600/20 mix-blend-multiply" />
@@ -553,7 +553,7 @@ const Adoucissement = () => {
                             ].map((art, i) => (
                                 <div key={i} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer group flex flex-col h-full border border-gray-100">
                                     <div className="h-56 overflow-hidden">
-                                        <img src={art.img} alt={art.title} className="w-full h-full object-cover transition-transform group-hover:scale-110" />
+                                        <img src={art.img} alt={`${art.title} - Guide conseil en adoucissement d'eau Bricareau`} className="w-full h-full object-cover transition-transform group-hover:scale-110" />
                                     </div>
                                     <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
                                         <h4 className="text-xl font-medium mb-4 group-hover:text-blue-600 transition-colors tracking-tight">{art.title}</h4>

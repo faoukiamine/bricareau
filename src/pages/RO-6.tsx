@@ -44,11 +44,11 @@ const RO6 = () => {
                             <div className="lg:w-1/2 flex flex-col items-center">
                                 <img
                                     src={productImage}
-                                    alt="Aquasential Reverse Osmosis System"
+                                    alt="Système d'osmose inverse Aquasential Bricareau - Filtration d'eau potable ultra-pure sous évier"
                                     className="max-h-[500px] object-contain drop-shadow-2xl"
                                 />
                                 <div className="mt-8 flex gap-4 opacity-50">
-                                    <div className="w-12 h-12 border border-slate-200 rounded p-1"><img src={productImage} className="w-full h-full object-contain" /></div>
+                                    <div className="w-12 h-12 border border-slate-200 rounded p-1"><img src={productImage} alt="Icône du système d'osmose inverse Aquasential HE Bricareau" className="w-full h-full object-contain" /></div>
                                     <div className="w-12 h-12 border border-slate-200 rounded p-1 opacity-50"><Filter className="w-full h-full p-2" /></div>
                                     <div className="w-12 h-12 border border-slate-200 rounded p-1 opacity-50"><Settings className="w-full h-full p-2" /></div>
                                 </div>
@@ -131,7 +131,7 @@ const RO6 = () => {
                             <div className="lg:w-1/2 order-1 lg:order-2">
                                 <img
                                     src={productImage}
-                                    alt="Aquasential RO Details"
+                                    alt="Détails technologiques du système Aquasential RO pour une eau cristalline"
                                     className="w-full max-w-md mx-auto"
                                 />
                             </div>
@@ -260,7 +260,7 @@ const RO6 = () => {
                             <div className="lg:w-1/2 self-stretch">
                                 <img
                                     src="/src/assets/discover_expert.jpg"
-                                    alt="Expert Bricareau en consultation"
+                                    alt="Expert Bricareau lors d'une consultation personnalisée pour traitement d'eau à domicile"
                                     className="w-full h-full object-cover min-h-[400px]"
                                 />
                             </div>

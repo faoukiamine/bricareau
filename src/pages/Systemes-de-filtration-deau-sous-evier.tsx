@@ -73,7 +73,7 @@ const FiltrationSousEvier = () => {
                     <div className="absolute inset-0 z-0">
                         <img
                             src={heroDrink}
-                            alt="Femme buvant de l'eau pure"
+                            alt="Femme appréciant un verre d'eau fraîchement filtrée au robinet - Système Bricareau"
                             className="w-full h-full object-cover"
                         />
                         <div className="absolute inset-0 bg-black/40 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
@@ -197,7 +197,7 @@ const FiltrationSousEvier = () => {
                                     <div className="relative h-80 overflow-hidden bg-slate-50 flex items-center justify-center p-12">
                                         <img
                                             src={product.img}
-                                            alt={product.name}
+                                            alt={`${product.name} - Système de filtration d'eau sous évier haute performance Bricareau`}
                                             className="max-h-full object-contain group-hover:scale-110 transition-transform duration-700 mix-blend-multiply"
                                         />
                                     </div>
@@ -255,7 +255,7 @@ const FiltrationSousEvier = () => {
                                                 <div className="flex flex-col items-center gap-2">
                                                     <img
                                                         src={m.img}
-                                                        alt={m.name}
+                                                        alt={`Filtre d'eau ${m.name} - Technologie d'ultrafiltration Bricareau`}
                                                         className="w-[120px] h-[100px] object-contain mx-auto mix-blend-multiply"
                                                     />
                                                     <div className="text-[14px]">{m.name}</div>
@@ -290,7 +290,7 @@ const FiltrationSousEvier = () => {
                     <div className="absolute inset-0 z-0">
                         <img
                             src={waterTestingImg}
-                            alt="Analyse de l'eau en laboratoire"
+                            alt="Analyse professionnelle de la qualité d'eau sous évier pour une filtration sur mesure - Bricareau"
                             className="w-full h-full object-cover"
                         />
                         <div className="absolute inset-0 bg-black/30 lg:bg-gradient-to-r lg:from-black/50 lg:to-transparent" />
@@ -451,7 +451,7 @@ const FiltrationSousEvier = () => {
                                     <div className="h-56 overflow-hidden">
                                         <img
                                             src={art.img}
-                                            alt={art.title}
+                                            alt={`${art.title} - Guide expert Bricareau sur la filtration sous évier`}
                                             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                                         />
                                     </div>

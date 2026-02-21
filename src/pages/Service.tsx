@@ -61,7 +61,7 @@ const Service = () => {
                                 <div className="relative w-[300px] md:w-[400px] h-[400px] md:h-[550px] bg-slate-100 rounded-sm overflow-hidden shadow-2xl">
                                     <img
                                         src={technicianImg}
-                                        alt="Technicien Bricareau"
+                                        alt="Technicien expert Bricareau effectuant la maintenance d'un système de traitement d'eau"
                                         className="w-full h-full object-cover grayscale-[0.2]"
                                     />
                                 </div>
@@ -70,7 +70,7 @@ const Service = () => {
                                     <div className="w-full h-full overflow-hidden">
                                         <img
                                             src={waterTestImg}
-                                            alt="Test d'eau"
+                                            alt="Test de qualité d'eau à domicile pour détecter calcaire et contaminants"
                                             className="w-full h-full object-cover"
                                         />
                                     </div>
@@ -122,7 +122,7 @@ const Service = () => {
                                     </div>
                                     <div className="lg:w-1/2 w-full">
                                         <div className="aspect-[16/11] bg-slate-200 rounded-[2.5rem] overflow-hidden shadow-2xl transition-transform hover:scale-[1.02] duration-500">
-                                            <img src={feature.img} className="w-full h-full object-cover" alt={feature.title} />
+                                            <img src={feature.img} className="w-full h-full object-cover" alt={`${feature.title} - Expertise Bricareau en traitement d'eau`} />
                                         </div>
                                     </div>
                                 </div>

@@ -138,7 +138,7 @@ const FiltresTouteMaison = () => {
                     <div className="absolute inset-0 z-0">
                         <img
                             src={heroFilter}
-                            alt="Personne tenant un verre d'eau fraîche"
+                            alt="Verre d'eau pure et cristalline filtrée par un système Bricareau pour toute la maison"
                             className="w-full h-full object-cover"
                         />
                         <div className="absolute inset-0 bg-black/40 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
@@ -259,7 +259,7 @@ const FiltresTouteMaison = () => {
                                     <div className="relative h-80 overflow-hidden bg-slate-50 flex items-center justify-center p-12">
                                         <img
                                             src={p.image}
-                                            alt={p.name}
+                                            alt={`${p.name} - Filtre d'eau spécialisé Bricareau pour résidence`}
                                             className="w-full h-full object-contain mix-blend-multiply transition-transform duration-700 group-hover:scale-110"
                                         />
                                     </div>
@@ -313,7 +313,7 @@ const FiltresTouteMaison = () => {
                                                 <div className="flex flex-col items-center gap-2">
                                                     <img
                                                         src={m.image}
-                                                        alt={m.name}
+                                                        alt={`Modèle ${m.name} - Système de filtration haute performance Bricareau`}
                                                         className="w-[150px] h-[120px] object-contain mx-auto mix-blend-multiply"
                                                     />
                                                     <div className="text-[14px] uppercase tracking-wider">{m.name.replace("Filtre d'eau ", "")}</div>
@@ -348,7 +348,7 @@ const FiltresTouteMaison = () => {
                     <div className="absolute inset-0 z-0">
                         <img
                             src={waterTestingImg}
-                            alt="Analyse de l'eau en laboratoire"
+                            alt="Prélèvement et analyse d'eau municipale à domicile - Expertise Bricareau"
                             className="w-full h-full object-cover"
                         />
                         <div className="absolute inset-0 bg-blue-900/40 lg:bg-gradient-to-r lg:from-blue-900/90 lg:to-blue-600/20 mix-blend-multiply" />
@@ -463,7 +463,7 @@ const FiltresTouteMaison = () => {
                                     <div className="h-56 overflow-hidden">
                                         <img
                                             src={art.img}
-                                            alt={art.title}
+                                            alt={`${art.title} - Guide expert Bricareau en traitement d'eau`}
                                             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                                         />
                                     </div>

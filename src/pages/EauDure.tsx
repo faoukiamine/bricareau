@@ -100,7 +100,7 @@ const EauDure = () => {
           <div className="absolute inset-0 z-0">
             <img
               src={heroProblem}
-              alt="Problèmes de calcaire"
+              alt="Problèmes de calcaire et accumulation de tartre sur la robinetterie - Analyse Bricareau"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-black/40 lg:bg-gradient-to-r lg:from-black/70 lg:to-transparent" />

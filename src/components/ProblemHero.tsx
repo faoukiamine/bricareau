@@ -106,7 +106,7 @@ const ProblemHero = () => {
                         <div className="lg:w-1/2 relative h-[300px] lg:h-auto overflow-hidden">
                             <img
                                 src={activeProblem.img}
-                                alt={activeProblem.title}
+                                alt={`${activeProblem.title} - Problème de qualité d'eau identifié par Bricareau`}
                                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-110"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent lg:bg-gradient-to-r lg:from-transparent lg:to-black/60 opacity-60" />

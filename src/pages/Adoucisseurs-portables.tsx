@@ -56,7 +56,7 @@ const AdoucisseursPortables = () => {
                 <div className="absolute inset-0 z-0">
                     <img
                         src={heroBg}
-                        alt="Service de livraison d'adoucisseurs d'eau portables par Bricareau"
+                        alt="Service d'échange et livraison d'adoucisseurs d'eau portables Bricareau au Québec et Canada"
                         className="w-full h-full object-cover"
                     />
                     <div className="absolute inset-0 bg-black/40 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
@@ -300,7 +300,7 @@ const AdoucisseursPortables = () => {
                                 <div className="relative h-80 overflow-hidden bg-slate-50 flex items-center justify-center p-12">
                                     <img
                                         src={prod.img}
-                                        alt={prod.name}
+                                        alt={`${prod.name} - Solution Bricareau pour une eau pure et sans calcaire partout`}
                                         className="max-h-full object-contain group-hover:scale-110 transition-transform duration-700 mix-blend-multiply"
                                     />
                                 </div>

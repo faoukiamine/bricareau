@@ -12,7 +12,7 @@ const Footer = () => {
             <div className="flex items-center gap-2">
               <img
                 src="/logo.png"
-                alt="Bricareau"
+                alt="Bricareau Water Specialist - Spécialiste du traitement d'eau au Canada"
                 className="h-10 w-auto brightness-0 invert"
               />
             </div>

@@ -196,7 +196,7 @@ const DesinfectionUV = () => {
                                     <div className="relative h-80 overflow-hidden bg-slate-50 flex items-center justify-center p-12">
                                         <img
                                             src={prod.img}
-                                            alt={prod.name}
+                                            alt={`${prod.name} - Système de désinfection UV Bricareau pour toute la maison`}
                                             className="max-h-full object-contain group-hover:scale-110 transition-transform duration-700 mix-blend-multiply"
                                         />
                                     </div>
@@ -254,7 +254,7 @@ const DesinfectionUV = () => {
                                                 <div className="flex flex-col items-center gap-2">
                                                     <img
                                                         src={m.img}
-                                                        alt={m.name}
+                                                        alt={`Modèle ${m.name} - Stérilisateur d'eau UV haute performance Bricareau`}
                                                         className="w-[120px] h-[100px] object-contain mx-auto mix-blend-multiply"
                                                     />
                                                     <div className="text-[14px]">{m.name}</div>
@@ -289,7 +289,7 @@ const DesinfectionUV = () => {
                     <div className="absolute inset-0 z-0">
                         <img
                             src={waterTestingImg}
-                            alt="Analyse de l'eau en laboratoire"
+                            alt="Analyse microbiologique de l'eau de puits pour détecter les bactéries - Expertise Bricareau"
                             className="w-full h-full object-cover"
                         />
                         <div className="absolute inset-0 bg-black/30 lg:bg-gradient-to-r lg:from-black/50 lg:to-transparent" />
@@ -446,7 +446,7 @@ const DesinfectionUV = () => {
                             ].map((art, i) => (
                                 <div key={i} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer group flex flex-col h-full border border-gray-100">
                                     <div className="h-56 overflow-hidden">
-                                        <img src={art.img} alt={art.title} className="w-full h-full object-cover transition-transform group-hover:scale-110" />
+                                        <img src={art.img} alt={`${art.title} - Guide expert Bricareau sur la désinfection UV`} className="w-full h-full object-cover transition-transform group-hover:scale-110" />
                                     </div>
                                     <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
                                         <h4 className="text-xl font-medium mb-4 group-hover:text-blue-600 transition-colors tracking-tight">{art.title}</h4>

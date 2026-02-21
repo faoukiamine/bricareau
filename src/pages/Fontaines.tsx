@@ -33,7 +33,7 @@ const Fontaines = () => {
                     <div className="absolute inset-0 z-0">
                         <img
                             src={heroFountains}
-                            alt="Fontaines à eau modernes"
+                            alt="Fontaines d'eau modernes et bureautiques - Solutions Bricareau pour entreprises et résidences"
                             className="w-full h-full object-cover"
                         />
                         <div className="absolute inset-0 bg-black/40 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
@@ -118,7 +118,7 @@ const Fontaines = () => {
                                 <div key={i} className="bg-white text-slate-900 rounded-2xl p-8 flex flex-col items-center transition-all hover:shadow-2xl hover:-translate-y-2">
                                     <div className="w-full aspect-square bg-slate-100 rounded-xl mb-6 flex items-center justify-center p-4">
                                         {item.img ? (
-                                            <img src={item.img} alt={item.title} className="w-full h-full object-contain mix-blend-multiply" />
+                                            <img src={item.img} alt={`${item.title} - Solution d'hydratation professionnelle Bricareau`} className="w-full h-full object-contain mix-blend-multiply" />
                                         ) : (
                                             item.icon && <item.icon className="w-16 h-16 text-blue-600 opacity-20" />
                                         )}
@@ -193,7 +193,7 @@ const Fontaines = () => {
                                 <div className="lg:w-1/2 rounded-[3rem] overflow-hidden shadow-2xl bg-white flex items-center justify-center p-12">
                                     <img
                                         src={heroFountains}
-                                        alt="Modern office cooler"
+                                        alt="Refroidisseur d'eau moderne pour bureau avec système de filtration intégré Bricareau"
                                         className="max-h-[600px] object-contain"
                                     />
                                 </div>

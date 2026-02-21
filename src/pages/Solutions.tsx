@@ -108,7 +108,7 @@ const Solutions = () => {
                     <div className="relative rounded-2xl overflow-hidden shadow-xl aspect-[4/3]">
                       <img
                         src={solution.image}
-                        alt={solution.title}
+                        alt={`${solution.title} - Solution de traitement d'eau Bricareau`}
                         className="w-full h-full object-cover"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent" />

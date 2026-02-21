@@ -124,7 +124,7 @@ const Promotions = () => {
                                     <div className="relative h-48 overflow-hidden">
                                         <img
                                             src={promo.image}
-                                            alt={promo.title}
+                                            alt={`${promo.title} - Offre exclusive Bricareau`}
                                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                                         />
                                         <div className="absolute top-4 right-4">

@@ -77,7 +77,7 @@ const StationEauPotable = () => {
           <div className="absolute inset-0 z-0">
             <img
               src={heroDrink}
-              alt="Femme buvant de l'eau pure"
+              alt="Enfant buvant une eau cristalline directement du robinet filtré par Bricareau"
               className="w-full h-full object-cover object-[center_35%]"
             />
             <div className="absolute inset-0 bg-black/40 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
@@ -205,7 +205,7 @@ const StationEauPotable = () => {
                   <div className="relative h-80 overflow-hidden bg-slate-50 flex items-center justify-center p-12">
                     <img
                       src={product.img}
-                      alt={product.name}
+                      alt={`${product.name} - Système de purification d'eau par osmose inverse Bricareau`}
                       className="max-h-full object-contain group-hover:scale-110 transition-transform duration-700 mix-blend-multiply"
                     />
                   </div>
@@ -263,7 +263,7 @@ const StationEauPotable = () => {
                         <div className="flex flex-col items-center gap-2">
                           <img
                             src={m.img}
-                            alt={m.name}
+                            alt={`Purificateur d'eau ${m.name} - Technologie d'osmose inverse Bricareau`}
                             className="w-[120px] h-[100px] object-contain mx-auto mix-blend-multiply"
                           />
                           <span className="max-w-[100px] inline-block uppercase tracking-wider text-[10px]">{m.name}</span>
@@ -297,7 +297,7 @@ const StationEauPotable = () => {
           <div className="absolute inset-0 z-0">
             <img
               src={waterTestingImg}
-              alt="Analyse de l'eau en laboratoire"
+              alt="Test de qualité d'eau à domicile pour détecter les contaminants - Expertise Bricareau"
               className="w-full h-full object-cover object-center"
             />
             <div className="absolute inset-0 bg-black/30 lg:bg-gradient-to-r lg:from-black/50 lg:to-transparent" />
@@ -455,7 +455,7 @@ const StationEauPotable = () => {
                   <div className="h-56 overflow-hidden">
                     <img
                       src={art.img}
-                      alt={art.title}
+                      alt={`${art.title} - Guide expert Bricareau sur la filtration d'eau potable`}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />
                   </div>

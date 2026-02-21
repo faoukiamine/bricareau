@@ -152,7 +152,7 @@ const ConditionneursSansSel = () => {
           <div className="absolute inset-0 z-0">
             <img
               src={heroGirl}
-              alt="Efficacité d'un conditionneur d'eau sans sel pour une eau saine et douce"
+              alt="Petite fille se lavant les mains dans une eau traitée sans sel - Conditionneur d'eau écologique Bricareau"
               className="w-full h-full object-cover object-[center_35%]"
             />
             <div className="absolute inset-0 bg-black/40 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
@@ -291,7 +291,7 @@ const ConditionneursSansSel = () => {
                   <div className="absolute inset-0 bg-blue-500/5 rounded-full blur-3xl transform scale-90"></div>
                   <img
                     src={conditionneurImg}
-                    alt="Conditionneur d'eau professionnel"
+                    alt="Conditionneur d'eau sans sel professionnel Bricareau - Système anti-tartre haute performance"
                     className="relative w-full max-w-[500px] mx-auto drop-shadow-2xl hover:scale-105 transition-transform duration-700 ease-out"
                   />
                 </div>
@@ -378,7 +378,7 @@ const ConditionneursSansSel = () => {
                   <div className="h-56 overflow-hidden">
                     <img
                       src={res.image}
-                      alt={res.title}
+                      alt={`${res.title} - Expertise Bricareau en traitement d'eau sans sel`}
                       className="w-full h-full object-cover transition-transform group-hover:scale-110"
                     />
                   </div>

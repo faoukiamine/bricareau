@@ -9,7 +9,7 @@ const Hero = () => {
       <div className="absolute inset-0 z-0 overflow-hidden">
         <img
           src={heroImage}
-          alt="Hero background"
+          alt="Solutions expertes en traitement d'eau résidentiel Bricareau pour une eau pure et saine"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/40 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent z-10" />

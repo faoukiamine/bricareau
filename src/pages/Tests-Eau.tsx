@@ -106,7 +106,7 @@ const TestsEauPage = () => {
           <div className="absolute inset-0 z-0">
             <img
               src={newHeroImg}
-              alt="Analyse d'eau professionnelle à Montréal, Rive-Sud et Rive-Nord par Bricareau"
+              alt="Analyse d'eau professionnelle à Montréal, Rive-Sud et Rive-Nord par Bricareau - Expert en qualité d'eau"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-black/40 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
@@ -338,7 +338,7 @@ const TestsEauPage = () => {
                   >
                     <img
                       src={service.img}
-                      alt={service.title}
+                      alt={`${service.title} - Raison de faire tester votre eau par Bricareau`}
                       className="w-full h-full object-cover hover:scale-105 transition-transform duration-[2000ms]"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />

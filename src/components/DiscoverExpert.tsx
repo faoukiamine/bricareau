@@ -72,7 +72,7 @@ const DiscoverExpert = () => {
                         <div className="relative rounded-[3rem] overflow-hidden shadow-2xl transform rotate-1 hover:rotate-0 transition-transform duration-700 bg-white border-4 border-white">
                             <img
                                 src={guideExpertImg}
-                                alt="Expert Bricareau en analyse d'eau"
+                                alt="Expert Bricareau effectuant une analyse d'eau à domicile pour un diagnostic personnalisé"
                                 className="w-full h-[500px] md:h-[600px] object-cover"
                             />
                             {/* Glassmorphism Badge */}

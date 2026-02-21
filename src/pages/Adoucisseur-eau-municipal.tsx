@@ -118,7 +118,7 @@ const AdoucisseurEauMunicipal = () => {
                     <div className="absolute inset-0 z-0">
                         <img
                             src={heroBath}
-                            alt="Efficacité d'un adoucisseur d'eau résidentiel pour une eau municipale sans calcaire"
+                            alt="Bain relaxant dans une eau douce - Adoucisseur d'eau municipal Bricareau contre le calcaire"
                             className="w-full h-full object-cover object-[center_35%]"
                         />
                         <div className="absolute inset-0 bg-black/40 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
@@ -236,7 +236,7 @@ const AdoucisseurEauMunicipal = () => {
                                     <div className="relative h-80 overflow-hidden bg-slate-50 flex items-center justify-center p-12">
                                         <img
                                             src={p.image}
-                                            alt={p.name}
+                                            alt={`${p.name} - Adoucisseur d'eau résidentiel haute performance Bricareau`}
                                             className="max-h-full object-contain group-hover:scale-110 transition-transform duration-700 mix-blend-multiply"
                                         />
                                     </div>
@@ -293,7 +293,7 @@ const AdoucisseurEauMunicipal = () => {
                                                 <div className="flex flex-col items-center gap-2">
                                                     <img
                                                         src={m.img}
-                                                        alt={m.name}
+                                                        alt={`Modèle ${m.name} - Système d'adoucissement d'eau municipal Bricareau`}
                                                         className="w-[120px] h-[100px] object-contain mx-auto mix-blend-multiply"
                                                     />
                                                     <div className="text-[14px]">{m.name}</div>
@@ -327,7 +327,7 @@ const AdoucisseurEauMunicipal = () => {
                     <div className="absolute inset-0 z-0">
                         <img
                             src={waterTestingImg}
-                            alt="Analyse de l'eau en laboratoire"
+                            alt="Analyse d'eau à domicile pour détecter le calcaire et le chlore - Service Bricareau"
                             className="w-full h-full object-cover"
                         />
                         <div className="absolute inset-0 bg-black/30 lg:bg-gradient-to-r lg:from-black/50 lg:to-transparent" />
@@ -409,7 +409,7 @@ const AdoucisseurEauMunicipal = () => {
                             ].map((art, i) => (
                                 <div key={i} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer group">
                                     <div className="h-56 overflow-hidden">
-                                        <img src={art.img} alt={art.title} className="w-full h-full object-cover transition-transform group-hover:scale-110" />
+                                        <img src={art.img} alt={`${art.title} - Expertise Bricareau en traitement d'eau municipale`} className="w-full h-full object-cover transition-transform group-hover:scale-110" />
                                     </div>
                                     <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors">
                                         <h4 className="text-xl font-medium mb-4">{art.title}</h4>

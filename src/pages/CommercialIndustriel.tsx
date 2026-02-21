@@ -80,7 +80,7 @@ const CommercialIndustriel = () => {
           <div className="absolute inset-0 z-0">
             <img
               src={heroImage}
-              alt="Installation industrielle de traitement d'eau"
+              alt="Installation industrielle de traitement d'eau et osmose inverse commerciale Bricareau"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-black/40 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />

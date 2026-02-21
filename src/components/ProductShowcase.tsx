@@ -75,7 +75,7 @@ const ProductShowcase = () => {
                             <div className="relative h-80 overflow-hidden bg-slate-50 flex items-center justify-center p-12">
                                 <img
                                     src={product.image}
-                                    alt={product.name}
+                                    alt={`${product.name} - Solution Bricareau`}
                                     className="max-h-full object-contain group-hover:scale-110 transition-transform duration-700 mix-blend-multiply"
                                 />
                             </div>

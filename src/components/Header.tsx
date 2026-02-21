@@ -422,7 +422,7 @@ const Header = () => {
                 <NavLink to="/" className="flex items-center">
                   <img
                     src="/logo.png"
-                    alt="Bricareau"
+                    alt="Bricareau Water Specialist - Traitement d'eau résidentiel au Canada"
                     className="h-12 w-auto object-contain"
                   />
                 </NavLink>
@@ -525,7 +525,7 @@ const Header = () => {
                 <NavLink to="/" className="flex items-center">
                   <img
                     src="/logo.png"
-                    alt="Bricareau"
+                    alt="Bricareau Water Specialist - Expert en adoucissement et filtration d'eau"
                     className="h-14 w-auto object-contain"
                   />
                 </NavLink>
@@ -695,7 +695,7 @@ const Header = () => {
                         <div className="relative h-40 flex-shrink-0">
                           <img
                             src={menuItem.promo.image}
-                            alt={menuItem.promo.title}
+                            alt={menuItem.promo.title || "Promotion Bricareau"}
                             className="w-full h-full object-cover"
                           />
                         </div>

@@ -11,7 +11,7 @@ const Diagnostic = () => {
             <main className="flex-grow pt-[100px] relative overflow-hidden">
                 {/* Visual Background Elements */}
                 <div className="absolute top-0 left-0 w-full h-[500px] z-0 opacity-10 pointer-events-none">
-                    <img src={problemBg} alt="" className="w-full h-full object-cover grayscale" />
+                    <img src={problemBg} alt="Diagnostic interactif de la qualité de l'eau Bricareau - Analyse et solutions personnalisées" className="w-full h-full object-cover grayscale" />
                 </div>
                 <div className="absolute top-[20%] right-[-10%] w-[500px] h-[500px] bg-blue-100/50 rounded-full blur-[100px] z-0 pointer-events-none animate-pulse" />
                 <div className="absolute bottom-[10%] left-[-5%] w-[400px] h-[400px] bg-cyan-50/50 rounded-full blur-[120px] z-0 pointer-events-none" />

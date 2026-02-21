@@ -173,7 +173,7 @@ const AdoucisseursEauDePuits = () => {
                     <div className="absolute inset-0 z-0">
                         <img
                             src={heroBath}
-                            alt="Efficacité d'un adoucisseur d'eau spécialisé pour les puits privés - Bricareau"
+                            alt="Bain d'enfant dans une eau de puits douce et saine - Adoucisseur d'eau Bricareau"
                             className="w-full h-full object-cover"
                         />
                         <div className="absolute inset-0 bg-black/40 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
@@ -284,7 +284,7 @@ const AdoucisseursEauDePuits = () => {
                                     <div className="relative h-80 overflow-hidden bg-slate-50 flex items-center justify-center p-12">
                                         <img
                                             src={p.image}
-                                            alt={p.name}
+                                            alt={`${p.name} - Adoucisseur d'eau spécialisé pour traiter le fer des puits Bricareau`}
                                             className="max-h-full object-contain group-hover:scale-110 transition-transform duration-700 mix-blend-multiply"
                                         />
                                     </div>
@@ -342,7 +342,7 @@ const AdoucisseursEauDePuits = () => {
                                                     <div className="h-[100px] w-full flex items-center justify-center mb-4">
                                                         <img
                                                             src={m.img}
-                                                            alt={m.name}
+                                                            alt={`Modèle ${m.name} - Système de filtration d'eau de puits haute efficacité Bricareau`}
                                                             className="max-h-full max-w-full object-contain mix-blend-multiply"
                                                         />
                                                     </div>
@@ -376,7 +376,7 @@ const AdoucisseursEauDePuits = () => {
                     <div className="absolute inset-0 z-0">
                         <img
                             src={waterTestingImg}
-                            alt="Homme prenant un bain d'eau douce"
+                            alt="Test de dureté et analyse de fer pour eau de puits résidentielle - Expertise Bricareau"
                             className="w-full h-full object-cover"
                         />
                         <div className="absolute inset-0 bg-black/30 lg:bg-gradient-to-r lg:from-black/50 lg:to-transparent" />
@@ -484,7 +484,7 @@ const AdoucisseursEauDePuits = () => {
                             ].map((art, i) => (
                                 <div key={i} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer group flex flex-col h-full border border-gray-100">
                                     <div className="h-56 overflow-hidden">
-                                        <img src={art.img} alt={art.title} className="w-full h-full object-cover transition-transform group-hover:scale-110" />
+                                        <img src={art.img} alt={`${art.title} - Expertise Bricareau en traitement d'eau de puits`} className="w-full h-full object-cover transition-transform group-hover:scale-110" />
                                     </div>
                                     <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
                                         <h4 className="text-xl font-medium mb-4 group-hover:text-blue-600 transition-colors tracking-tight">{art.title}</h4>

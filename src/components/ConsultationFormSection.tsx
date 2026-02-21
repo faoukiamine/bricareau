@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
@@ -66,6 +66,15 @@ const ConsultationFormSection = ({ id }: { id?: string }) => {
 
     const [bookedSlots, setBookedSlots] = useState<string[]>([]);
     const selectedDate = form.watch("appointment_date");
+    const formRef = useRef<HTMLDivElement>(null);
+
+    const scrollToForm = () => {
+        if (formRef.current) {
+            const yOffset = -120; // Accounts for sticky header
+            const y = formRef.current.getBoundingClientRect().top + window.pageYOffset + yOffset;
+            window.scrollTo({ top: y, behavior: 'smooth' });
+        }
+    };
 
     useEffect(() => {
         const fetchBookedSlots = async () => {
@@ -105,6 +114,7 @@ const ConsultationFormSection = ({ id }: { id?: string }) => {
         if (isValid) {
             setIsNavigating(true);
             setStep((prev) => Math.min(prev + 1, 3));
+            scrollToForm();
             setTimeout(() => setIsNavigating(false), 400); // Matches animation duration + buffer
         }
     };
@@ -113,6 +123,7 @@ const ConsultationFormSection = ({ id }: { id?: string }) => {
         if (isNavigating) return;
         setIsNavigating(true);
         setStep((prev) => Math.max(prev - 1, 1));
+        scrollToForm();
         setTimeout(() => setIsNavigating(false), 400);
     };
 
@@ -212,7 +223,7 @@ const ConsultationFormSection = ({ id }: { id?: string }) => {
                     </div>
 
                     {/* Right Side Form */}
-                    <div className="w-full">
+                    <div className="w-full" ref={formRef}>
                         <div className="bg-white rounded-3xl p-6 md:p-10 border border-gray-100 shadow-2xl">
                             {/* Progress Steps */}
                             <div className="flex items-center gap-4 md:gap-8 mb-8 overflow-x-auto pb-4 border-b border-gray-100 no-scrollbar">
@@ -356,7 +367,7 @@ const ConsultationFormSection = ({ id }: { id?: string }) => {
                                                 <FormField control={form.control} name="appointment_time" render={({ field }) => (
                                                     <FormItem>
                                                         <FormLabel className="font-bold mb-2">Choisir une heure</FormLabel>
-                                                        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-2 gap-3">
+                                                        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-3 gap-3">
                                                             {TIME_SLOTS.map((time) => {
                                                                 const isBooked = bookedSlots.includes(time);
                                                                 return (

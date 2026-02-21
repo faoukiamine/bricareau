@@ -124,7 +124,7 @@ const EauDePuits = () => {
           <div className="absolute inset-0 z-0">
             <img
               src={heroPuits}
-              alt="Système de traitement d'eau de puits résidentiel pour une eau pure au Canada"
+              alt="Installation professionnelle de traitement d'eau de puits résidentiel par Bricareau au Québec"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-black/40 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
@@ -220,7 +220,7 @@ const EauDePuits = () => {
                   <CarouselItem key={idx} className="pl-4 md:basis-1/2 lg:basis-1/3">
                     <div className="group cursor-pointer h-full pb-8">
                       <div className="relative h-[400px] rounded-[2rem] overflow-hidden bg-slate-900 shadow-xl transition-all duration-700 group-hover:scale-[1.02] border border-slate-100">
-                        <img src={problem.image} alt={problem.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-70 group-hover:opacity-100" />
+                        <img src={problem.image} alt={`${problem.title} - Problème commun de qualité d'eau de puits traité par Bricareau`} className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-70 group-hover:opacity-100" />
                         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent transition-colors duration-500" />
                         <div className="absolute inset-0 p-8 flex flex-col justify-end text-white text-left">
                           <span className="text-[10px] font-black uppercase tracking-[0.4em] mb-4 opacity-70 group-hover:opacity-100 transition-opacity text-blue-400">PROBLÈME {idx + 1}</span>
@@ -298,7 +298,7 @@ const EauDePuits = () => {
                   {/* Background Image */}
                   <img
                     src={step.img}
-                    alt={step.title}
+                    alt={`${step.title} - Étape du service d'expertise en eau de puits Bricareau`}
                     className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
                   />
 
@@ -344,7 +344,7 @@ const EauDePuits = () => {
           <div className="absolute inset-0 z-0">
             <img
               src={labTestImg}
-              alt="Analyse de l'eau en laboratoire"
+              alt="Analyse d'eau de puits en laboratoire certifié pour détecter bactéries et minéraux"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-blue-900/40 lg:bg-gradient-to-r lg:from-blue-900/90 lg:to-blue-600/20 mix-blend-multiply" />
@@ -440,7 +440,7 @@ const EauDePuits = () => {
                       <div className="relative h-80 overflow-hidden bg-slate-50 flex items-center justify-center p-12">
                         <img
                           src={prod.img}
-                          alt={prod.name}
+                          alt={`${prod.name} - Solution Bricareau pour une eau de puits sécuritaire`}
                           className="max-h-full object-contain group-hover:scale-110 transition-transform duration-700 mix-blend-multiply"
                         />
                       </div>
@@ -509,7 +509,7 @@ const EauDePuits = () => {
                         <div className="flex flex-col items-center gap-2">
                           <img
                             src={m.img}
-                            alt={m.name}
+                            alt={`Comparaison ${m.name} - Système de traitement pour puits privés`}
                             className="w-[150px] h-[120px] object-contain mx-auto mix-blend-multiply"
                           />
                           <span className="max-w-[150px] inline-block">{m.name}</span>
@@ -693,7 +693,7 @@ const EauDePuits = () => {
                   <div className="h-56 overflow-hidden">
                     <img
                       src={art.img}
-                      alt={art.title}
+                      alt={`${art.title} - Guide expert Bricareau sur l'eau de puits`}
                       className="w-full h-full object-cover transition-transform group-hover:scale-110"
                     />
                   </div>

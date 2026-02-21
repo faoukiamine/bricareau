@@ -148,7 +148,7 @@ const FiltresPuits = () => {
                     <div className="absolute inset-0 z-0">
                         <img
                             src={heroFilter}
-                            alt="Efficacité d'un système de filtration d'eau de puits résidentiel par Bricareau"
+                            alt="Filtration eau de puits Québec - Traitement du fer, soufre et manganèse résidentiel Bricareau"
                             className="w-full h-full object-cover"
                         />
                         <div className="absolute inset-0 bg-black/40 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
@@ -266,7 +266,7 @@ const FiltresPuits = () => {
                                     <div className="relative h-80 overflow-hidden bg-slate-50 flex items-center justify-center p-12">
                                         <img
                                             src={p.image}
-                                            alt={p.name}
+                                            alt={`${p.name} - Système de filtration spécialisé Bricareau pour éliminer le fer et les odeurs`}
                                             className="max-h-full object-contain group-hover:scale-110 transition-transform duration-700 mix-blend-multiply"
                                         />
                                     </div>
@@ -331,7 +331,7 @@ const FiltresPuits = () => {
                                                     <div className="h-[100px] w-full flex items-center justify-center mb-4">
                                                         <img
                                                             src={m.img}
-                                                            alt={m.name}
+                                                            alt={`Modèle ${m.name} - Filtre d'eau de puits haute performance Bricareau`}
                                                             className="max-h-full max-w-full object-contain mix-blend-multiply"
                                                         />
                                                     </div>
@@ -369,7 +369,7 @@ const FiltresPuits = () => {
                     <div className="absolute inset-0 z-0">
                         <img
                             src={waterTestingImg}
-                            alt="Analyse de l'eau en laboratoire"
+                            alt="Analyse d'eau de puits en laboratoire - Test de fer, soufre, pH et bactéries Bricareau"
                             className="w-full h-full object-cover"
                         />
                         <div className="absolute inset-0 bg-blue-900/40 lg:bg-gradient-to-r lg:from-blue-900/90 lg:to-blue-600/20 mix-blend-multiply" />
@@ -484,7 +484,7 @@ const FiltresPuits = () => {
                                     <div className="h-56 overflow-hidden">
                                         <img
                                             src={art.img}
-                                            alt={art.title}
+                                            alt={`${art.title} - Guide expert en traitement d'eau Bricareau`}
                                             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                                         />
                                     </div>
