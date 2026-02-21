@@ -16,6 +16,7 @@ import {
 } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import { useNavigate } from "react-router-dom";
+import React, { useEffect } from "react";
 import waterTestingImg from "@/assets/3756051.jpg";
 import specializedFiltersImg from "@/assets/Filtres d'eau spécialisés.webp";
 import {
@@ -113,6 +114,20 @@ const comparisonData = [
 
 const FiltresTouteMaison = () => {
     const navigate = useNavigate();
+
+    useEffect(() => {
+        document.title = "Filtres d'eau pour toute la maison | Filtration Point d'Entrée | Bricareau";
+        const metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc) {
+            metaDesc.setAttribute("content", "Protégez toute votre plomberie avec nos filtres d'eau pour toute la maison. Solutions efficaces contre le chlore, les sédiments et le fer au Canada.");
+        }
+
+        // OG Tags
+        const ogTitle = document.querySelector('meta[property="og:title"]');
+        if (ogTitle) ogTitle.setAttribute("content", "Filtres d'eau pour toute la maison - Protection intégrale | Bricareau");
+        const ogDesc = document.querySelector('meta[property="og:description"]');
+        if (ogDesc) ogDesc.setAttribute("content", "Une eau filtrée à chaque robinet. Découvrez nos systèmes Vortex, ChlorStop et Iron Shield.");
+    }, []);
     return (
         <div className="min-h-screen bg-white text-slate-900 font-sans">
             <Header />
@@ -134,17 +149,15 @@ const FiltresTouteMaison = () => {
 
                     <div className="container mx-auto px-6 relative z-10">
                         <div className="max-w-2xl text-white">
-                            <span className="text-sm font-bold uppercase tracking-widest text-blue-600 mb-4 block">
-                                SOLUTIONS DE FILTRATION D'EAU POUR TOUTE LA MAISON
-                            </span>
                             <h1
-                                className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-bold mb-8 tracking-tighter text-white"
+                                className="text-[32px] md:text-[48px] leading-[32px] md:leading-[48px] font-light mb-8 tracking-tighter text-white"
                                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                             >
-                                <span className="font-bold">Une eau d'exception, <br /></span> <span className="font-bold text-white">dans chaque robinet</span>
+                                <span className="font-bold text-blue-400">Filtres d'eau toute la maison</span> <br />
+                                <span className="font-bold text-white">Protection intégrale au point d'entrée.</span>
                             </h1>
-                            <p className="font-light text-[20px] leading-[28px] text-white/95 mb-8 max-w-xl text-justify">
-                                Offrez à votre famille la protection ultime avec nos systèmes de filtration haute performance pour toute la maison. De la cuisine à la salle de bain, profitez d'une eau cristalline, débarrassée des sédiments et du chlore, pour une santé préservée et des installations durablement protégées.
+                            <p className="text-lg font-light leading-relaxed text-white/95 mb-8 max-w-xl text-justify">
+                                Éliminez le chlore, le fer et les sédiments de chaque goutte d'eau qui entre dans votre propriété. Nos systèmes de filtration intégrés protègent votre santé, votre peau et vos appareils électroménagers.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4">
                                 <Button

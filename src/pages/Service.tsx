@@ -32,7 +32,7 @@ const Service = () => {
                                 <span className="text-blue-600 font-bold uppercase tracking-[0.3em] text-[10px] mb-6 block">
                                     EXPERTISE LOCALE
                                 </span>
-                                <h1 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
+                                <h1 className="text-[32px] md:text-[48px] leading-[32px] md:leading-[48px] font-normal text-slate-900 mb-8 tracking-tighter">
                                     Faites confiance à Bricareau pour tout ce qui concerne l'eau.
                                 </h1>
 

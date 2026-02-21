@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import TestimonialsSection from "@/components/TestimonialsSection";
@@ -32,6 +32,20 @@ import missionImg from "@/assets/boire-eau-robinet.jpg";
 
 
 const AdoucisseursPortables = () => {
+    useEffect(() => {
+        document.title = "Adoucisseur d'eau portable | Service d'Échange et Livraison | Bricareau";
+        const metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc) {
+            metaDesc.setAttribute("content", "La solution flexible pour une eau douce partout au Canada : l'adoucisseur d'eau portable par échange. Pas d'installation permanente, livraison rapide à domicile.");
+        }
+
+        // OG Tags
+        const ogTitle = document.querySelector('meta[property="og:title"]');
+        if (ogTitle) ogTitle.setAttribute("content", "Adoucisseur d'eau portable et Service d'échange | Bricareau");
+        const ogDesc = document.querySelector('meta[property="og:description"]');
+        if (ogDesc) ogDesc.setAttribute("content", "Profitez d’une eau douce sans installation permanente avec notre service d'échange d'adoucisseurs portables.");
+    }, []);
+
     return (
         <div className="min-h-screen font-sans text-gray-900 bg-white selection:bg-[#0066FF] selection:text-white" style={{ '--top-banner': '168 100% 42%' } as React.CSSProperties}>
             <Header />
@@ -42,7 +56,7 @@ const AdoucisseursPortables = () => {
                 <div className="absolute inset-0 z-0">
                     <img
                         src={heroBg}
-                        alt="Eau pure"
+                        alt="Service de livraison d'adoucisseurs d'eau portables par Bricareau"
                         className="w-full h-full object-cover"
                     />
                     <div className="absolute inset-0 bg-black/40 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
@@ -53,15 +67,12 @@ const AdoucisseursPortables = () => {
 
                 <div className="container mx-auto px-6 relative z-10 text-center md:text-left">
                     <div className="max-w-4xl">
-                        <span className="text-[#60A5FA] text-sm font-bold uppercase tracking-[0.3em] mb-6 block animate-in fade-in slide-in-from-bottom duration-700">
-                            FLEXIBILITÉ & QUALITÉ
-                        </span>
-                        <h1 className="text-white text-[32px] md:text-[48px] font-bold mb-8 leading-[1.2] md:leading-[48px] tracking-tighter animate-in fade-in slide-in-from-bottom duration-700 drop-shadow-2xl">
-                            Profitez d’une eau douce <br />
-                            où que vous alliez !
+                        <h1 className="text-white text-[32px] md:text-[48px] leading-[32px] md:leading-[48px] font-bold mb-8 tracking-tighter animate-in fade-in slide-in-from-bottom duration-700 drop-shadow-2xl">
+                            <span className="text-blue-400">Adoucisseur d'eau portable</span> <br />
+                            Une eau douce où que vous soyez !
                         </h1>
                         <p className="text-lg font-light leading-relaxed text-gray-200 mb-12 max-w-2xl text-justify drop-shadow-lg animate-in fade-in slide-in-from-bottom duration-700 delay-100">
-                            La solution flexible pour une eau douce sans installation <br />permanente. Qualité professionnelle livrée chez vous, sans tracas.
+                            La solution d'adoucissement flexible pour votre résidence ou commerce sans installation permanente. Profitez de notre service d'échange d'adoucisseur portable avec livraison directement chez vous.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4">
                             <Button

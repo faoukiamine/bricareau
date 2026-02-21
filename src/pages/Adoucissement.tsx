@@ -36,6 +36,8 @@ import {
     HandCoins,
     Phone
 } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+import React, { useEffect } from "react";
 import { NavLink } from "@/components/NavLink";
 import {
     Accordion,
@@ -47,6 +49,19 @@ import ConsultationFormSection from "@/components/ConsultationFormSection";
 
 
 const Adoucissement = () => {
+    useEffect(() => {
+        document.title = "Adoucisseur d'eau | Élimination du Calcaire | Bricareau Canada";
+        const metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc) {
+            metaDesc.setAttribute("content", "Dites adieu au calcaire avec nos adoucisseurs d'eau haute performance. Protégez votre plomberie et profitez d'une peau plus douce avec Bricareau.");
+        }
+
+        // OG Tags
+        const ogTitle = document.querySelector('meta[property="og:title"]');
+        if (ogTitle) ogTitle.setAttribute("content", "Adoucisseurs d'eau et Conditionneurs sans sel | Bricareau");
+        const ogDesc = document.querySelector('meta[property="og:description"]');
+        if (ogDesc) ogDesc.setAttribute("content", "Transformez votre eau dure en une eau soyeuse. Découvrez nos solutions d'adoucissement résidentiel.");
+    }, []);
     return (
         <div className="min-h-screen bg-background font-sans text-slate-900">
             <Header />
@@ -56,7 +71,7 @@ const Adoucissement = () => {
                     <div className="absolute inset-0 z-0">
                         <img
                             src={heroBath}
-                            alt="Homme prenant son bain"
+                            alt="Confort d'une eau douce lors d'un bain relaxant"
                             className="w-full h-full object-cover object-[center_35%]"
                         />
                         <div className="absolute inset-0 bg-black/40 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
@@ -67,17 +82,15 @@ const Adoucissement = () => {
 
                     <div className="container mx-auto px-6 relative z-10">
                         <div className="max-w-2xl text-white">
-                            <span className="text-sm font-bold uppercase tracking-widest text-blue-600 mb-4 block">
-                                ADOUCISSEURS D'EAU
-                            </span>
                             <h1
-                                className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-white"
+                                className="text-[32px] md:text-[48px] leading-[32px] md:leading-[48px] font-light mb-8 tracking-tighter text-white"
                                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                             >
-                                <span className="font-bold text-white">Une eau douce,</span> <span className="font-bold">meilleure pour vous et votre maison.</span>
+                                <span className="font-bold text-blue-400">Adoucisseurs d'eau</span> <br />
+                                <span className="font-bold text-white">Éliminez le calcaire et l'eau dure.</span>
                             </h1>
                             <p className="text-lg font-light leading-relaxed text-white/95 mb-8 max-w-xl text-justify">
-                                Redécouvrez le confort d'une eau soyeuse protégeant votre peau et vos appareils. Alliez économies durables et bien-être absolu au quotidien.
+                                Redécouvrez le confort d'une eau soyeuse protégeant votre peau, vos cheveux et vos appareils électroménagers. Alliez économies durables et bien-être absolu avec nos solutions de traitement d'eau.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4">
                                 <Button
@@ -389,8 +402,8 @@ const Adoucissement = () => {
                                     <tr className="bg-gray-100">
                                         <th className="p-8 text-left text-gray-400 font-light uppercase tracking-wider">Solutions</th>
                                         {[
-                                            { name: "Adoucisseurs d'eau", img: specializedFiltersImg },
-                                            { name: "Conditionneurs d'eau sans sel", img: drinkingWaterImg },
+                                            { name: "Adoucisseur au Sel", img: specializedFiltersImg },
+                                            { name: "Conditionneur sans Sel", img: drinkingWaterImg },
                                         ].map((m, i) => (
                                             <th key={i} className="p-4 text-center text-gray-900 font-bold text-sm">
                                                 <div className="flex flex-col items-center gap-2">
@@ -407,20 +420,16 @@ const Adoucissement = () => {
                                 </thead>
                                 <tbody className="divide-y divide-gray-100">
                                     {[
-                                        { feature: "Élimine physiquement le calcium et le magnésium.", specialized: true, station: false },
-                                        { feature: "Peau et cheveux extrêmement doux (fini le tiraillement).", specialized: true, station: false },
-                                        { feature: "Nécessite l'ajout régulier de sacs de sel.", specialized: true, station: false },
-                                        { feature: "Consomme de l'eau et de l'électricité pour ses cycles.", specialized: true, station: false },
-                                        { feature: "Rejet de saumure (sel) dans les eaux usées.", specialized: true, station: false },
-                                        { feature: "Ajoute une petite quantité de sodium à l'eau.", specialized: true, station: false },
-                                        { feature: "Protection totale contre l'accumulation de tartre.", specialized: true, station: true },
-                                        { feature: "Prévient l'entartrage des éléments chauffants.", specialized: true, station: true },
-                                        { feature: "Neutralise le calcaire pour l'empêcher de coller.", specialized: false, station: true },
-                                        { feature: "Sensation naturelle de l'eau (minéraux préservés).", specialized: false, station: true },
-                                        { feature: "Aucun sel ni produit chimique à manipuler.", specialized: false, station: true },
-                                        { feature: "Zéro rejet d'eau et fonctionne sans électricité.", specialized: false, station: true },
-                                        { feature: "100% Écologique et sans danger pour les fosses septiques.", specialized: false, station: true },
-                                        { feature: "Sans sodium, idéal pour les régimes spécifiques.", specialized: false, station: true }
+                                        { feature: "Technologie de traitement", specialized: "Échange Ionique", station: "Temp-A-Cure (TAC)" },
+                                        { feature: "Action sur les minéraux", specialized: "Élimination Physique", station: "Neutralisation" },
+                                        { feature: "Sacs de sel à manipuler", specialized: "Oui (Mensuel)", station: "Non (Jamais)" },
+                                        { feature: "Gaspillage d'eau", specialized: "Régénération", station: "0% Gaspillage" },
+                                        { feature: "Énergie & Électricité", specialized: "Nécessaire", station: "Sans électricité" },
+                                        { feature: "Sensation sur la peau", specialized: "Soyeuse / Glissante", station: "Naturelle" },
+                                        { feature: "Impact Environnemental", specialized: "Rejet de saumure", station: "100% Écologique" },
+                                        { feature: "Minéraux de santé (Ca/Mg)", specialized: "Retirés", station: "Préservés" },
+                                        { feature: "Protection contre le tartre", specialized: "Totale", station: "Excellente" },
+                                        { feature: "Espace d'installation", specialized: "Moyen", station: "Compact" }
                                     ].map((row, i) => (
                                         <tr key={i} className="hover:bg-gray-50 transition-colors">
                                             <td className="p-8 font-light text-gray-700">{row.feature}</td>

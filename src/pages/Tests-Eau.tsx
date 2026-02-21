@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import TestimonialsSection from "@/components/TestimonialsSection";
@@ -55,11 +55,19 @@ import scientistImg from "@/assets/Scientist istesting water.webp";
 import newHeroImg from "@/assets/r0_0_4896_3264_w1200_h678_fmax.jpg";
 
 const TestsEauPage = () => {
-  const [expandedId, setExpandedId] = useState<number | null>(null);
+  useEffect(() => {
+    document.title = "Test d'eau et Analyse d'eau | Montréal, Rive-Sud & Rive-Nord | Bricareau";
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+      metaDesc.setAttribute("content", "Besoin d'un test d'eau à Montréal, sur la Rive-Sud ou la Rive-Nord ? Analyse d'eau complète et précise pour puits et réseaux municipaux par les experts de Bricareau.");
+    }
 
-  const toggleExpand = (id: number) => {
-    setExpandedId(expandedId === id ? null : id);
-  };
+    // OG Tags
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) ogTitle.setAttribute("content", "Analyse d'eau professionnelle | Grand Montréal & Environs | Bricareau");
+    const ogDesc = document.querySelector('meta[property="og:description"]');
+    if (ogDesc) ogDesc.setAttribute("content", "Service complet de tests d'eau pour le Grand Montréal. Résultats certifiés et solutions sur mesure pour votre résidence.");
+  }, []);
 
   const [activeService, setActiveService] = useState(0);
 
@@ -98,7 +106,7 @@ const TestsEauPage = () => {
           <div className="absolute inset-0 z-0">
             <img
               src={newHeroImg}
-              alt="Expert Bricareau"
+              alt="Analyse d'eau professionnelle à Montréal, Rive-Sud et Rive-Nord par Bricareau"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-black/40 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
@@ -109,19 +117,16 @@ const TestsEauPage = () => {
 
           <div className="container mx-auto px-6 relative z-10">
             <div className="max-w-2xl text-white">
-              <span className="text-sm font-bold uppercase tracking-widest text-blue-600 mb-4 block">
-                TESTS & ANALYSES D'EAU
-              </span>
               <h1
-                className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-white"
+                className="text-[32px] md:text-[48px] leading-[32px] md:leading-[48px] font-light mb-8 tracking-tighter text-white"
                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
               >
-                <span className="font-bold">Vous désirez faire analyser</span> <br />
-                <span className="font-bold">votre eau résidentielle?</span>
+                <span className="sr-only">Montréal • Rive-Sud • Rive-Nord</span>
+                <span className="font-bold">Analyse d'eau professionnelle <br />& Tests de laboratoire</span>
               </h1>
 
               <p className="text-lg font-light leading-relaxed text-white/95 mb-8 max-w-xl text-justify">
-                Pour vos analyses annuelles, une transaction hypothécaire ou encore parce que vous avez un souci avec la qualité de votre eau, bricareau est là pour vous!
+                Besoin d'une analyse d'eau dans la région métropolitaine ? Que ce soit pour une vérification annuelle, une transaction hypothécaire ou un souci de qualité, Bricareau offre des tests complets de laboratoire partout dans le Grand Montréal, Laval et les couronnes.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">

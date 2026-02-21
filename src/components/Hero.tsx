@@ -24,7 +24,7 @@ const Hero = () => {
           {/* Left side - Hero text */}
           <div className="space-y-6 text-white">
             <h1
-              className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-white"
+              className="text-[32px] md:text-[48px] leading-[32px] md:leading-[48px] font-light mb-8 tracking-tighter text-white"
               style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
             >
               <span className="font-bold">Protégez votre eau,</span> <span className="font-bold">protégez votre famille</span>

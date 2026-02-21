@@ -1,3 +1,4 @@
+import React, { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import {
@@ -32,9 +33,23 @@ import ConsultationFormSection from "@/components/ConsultationFormSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 
 const Filtration = () => {
+    useEffect(() => {
+        document.title = "Filtration d'eau résidentielle | Solutions Pureté & Santé | Bricareau";
+        const metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc) {
+            metaDesc.setAttribute("content", "Découvrez nos systèmes de filtration d'eau pour toute la maison. Éliminez les contaminants, améliorez le goût et protégez votre santé avec Bricareau au Canada.");
+        }
+
+        // OG Tags
+        const ogTitle = document.querySelector('meta[property="og:title"]');
+        if (ogTitle) ogTitle.setAttribute("content", "Systèmes de Filtration d'eau Résidentielle | Bricareau");
+        const ogDesc = document.querySelector('meta[property="og:description"]');
+        if (ogDesc) ogDesc.setAttribute("content", "Une eau pure à chaque robinet. Investissez dans la santé de votre famille avec nos solutions de filtration avancées.");
+    }, []);
+
     const comparisonData = [
         { feature: "Élimine les sédiments, le chlore et les mauvaises odeurs de toute l'eau.", whole: true, basic: true },
-{ feature: "Filtration Toute la Maison (Point d'entrée)", whole: true, basic: false },
+        { feature: "Filtration Toute la Maison (Point d'entrée)", whole: true, basic: false },
         { feature: "Protège toute la plomberie et les électroménagers de la maison.", whole: true, basic: false },
         { feature: "Réduit l'absorption de chlore par la peau et les poumons (vapeur).", whole: true, basic: false },
         { feature: "Filtration d'eau au Point d'utilisation", whole: false, basic: true },
@@ -59,7 +74,7 @@ const Filtration = () => {
                     <div className="absolute inset-0 z-0">
                         <img
                             src={heroFiltration}
-                            alt="Robinet de cuisine avec filtration"
+                            alt="Système de filtration d'eau résidentiel haute performance par Bricareau"
                             className="w-full h-full object-cover"
                         />
                         <div className="absolute inset-0 bg-black/40 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
@@ -70,18 +85,15 @@ const Filtration = () => {
 
                     <div className="container mx-auto px-6 relative z-10">
                         <div className="max-w-2xl text-white">
-                            <span className="text-sm font-bold uppercase tracking-widest text-blue-600 mb-4 block">
-                                SOLUTIONS DE FILTRATION D'EAU
-                            </span>
                             <h1
-                                className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-white"
+                                className="text-[32px] md:text-[48px] leading-[32px] md:leading-[48px] font-light mb-8 tracking-tighter text-white"
                                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                             >
-                                <span className="font-bold">Systèmes de filtration d'eau,</span>
-                                <span className="font-bold"> conçus pour votre bien-être.</span>
+                                <span className="font-bold text-blue-400">Filtration d'eau résidentielle</span> <br />
+                                <span className="font-bold text-white">L'excellence pour votre santé.</span>
                             </h1>
                             <p className="text-lg font-light leading-relaxed text-white/95 mb-8 max-w-xl text-justify">
-                                Ne laissez plus le doute couler de votre robinet. Nos systèmes de filtration d'eau avancés agissent comme un bouclier invisible contre les contaminants, vous garantissant une eau d'une pureté irréprochable pour boire, cuisiner et grandir en toute confiance.
+                                Ne laissez plus les contaminants couler de vos robinets. Nos systèmes de filtration d'eau avancés constituent un bouclier durable pour votre maison, vous garantissant une eau d'une pureté irréprochable pour toute votre famille au Canada.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4">
                                 <Button

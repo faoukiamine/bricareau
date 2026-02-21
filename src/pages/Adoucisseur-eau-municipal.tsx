@@ -18,6 +18,7 @@ import {
 } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import { useNavigate } from "react-router-dom";
+import React, { useEffect } from "react";
 import waterTestingImg from "@/assets/water-test.jpg";
 import residentialWaterSoftenerImg from "@/assets/residential-water-softener.png";
 import waterSoftenerImg from "@/assets/Adoucisseurs d'eau.webp";
@@ -93,6 +94,20 @@ const faqItems = [
 
 const AdoucisseurEauMunicipal = () => {
     const navigate = useNavigate();
+
+    useEffect(() => {
+        document.title = "Adoucisseur d'eau résidentiel | Solutions pour l'eau municipale | Bricareau";
+        const metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc) {
+            metaDesc.setAttribute("content", "Éliminez le calcaire de votre eau de ville. Nos adoucisseurs résidentiels Sentinelle, Sérénité et Infiniti protègent votre maison et votre confort au Canada.");
+        }
+
+        // OG Tags
+        const ogTitle = document.querySelector('meta[property="og:title"]');
+        if (ogTitle) ogTitle.setAttribute("content", "Adoucisseur d'eau résidentiel pour eau municipale | Bricareau");
+        const ogDesc = document.querySelector('meta[property="og:description"]');
+        if (ogDesc) ogDesc.setAttribute("content", "Des solutions intelligentes pour une eau sans calcaire 24h/24. Découvrez nos adoucisseurs Sentinelle et Infiniti.");
+    }, []);
     return (
         <div className="min-h-screen bg-white">
             <Header />
@@ -103,7 +118,7 @@ const AdoucisseurEauMunicipal = () => {
                     <div className="absolute inset-0 z-0">
                         <img
                             src={heroBath}
-                            alt="Femme prenant un bain d'eau douce"
+                            alt="Efficacité d'un adoucisseur d'eau résidentiel pour une eau municipale sans calcaire"
                             className="w-full h-full object-cover object-[center_35%]"
                         />
                         <div className="absolute inset-0 bg-black/40 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
@@ -114,11 +129,8 @@ const AdoucisseurEauMunicipal = () => {
 
                     <div className="container mx-auto px-6 relative z-10">
                         <div className="max-w-2xl text-white">
-                            <span className="text-sm font-bold uppercase tracking-widest text-blue-600 mb-4 block">
-                                ADOUCISSEUR D'EAU MUNICIPALE
-                            </span>
                             <h1
-                                className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-white"
+                                className="text-[32px] md:text-[48px] leading-[32px] md:leading-[48px] font-light mb-8 tracking-tighter text-white"
                                 style={{
                                     fontFamily:
                                         'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
@@ -129,7 +141,7 @@ const AdoucisseurEauMunicipal = () => {
                             </h1>
 
                             <p className="text-lg font-light leading-relaxed text-white/95 mb-8 max-w-xl text-justify">
-                                Redécouvrez le confort d'une eau soyeuse protégeant votre peau et vos appareils électroménagers. Alliez économies durables et bien-être absolu au quotidien.
+                                Protégez votre confort et vos installations avec nos adoucisseurs d'eau intelligents conçus spécifiquement pour les eaux de ville. Éliminez définitivement l'eau dure et prolongez la vie de vos électroménagers.
                             </p>
 
                             <div className="flex flex-col sm:flex-row gap-4">

@@ -18,6 +18,7 @@ import {
 } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import { useNavigate } from "react-router-dom";
+import React, { useEffect } from "react";
 
 import {
   Accordion,
@@ -40,14 +41,31 @@ import waterTestingImg from "@/assets/leaky-faucet-with-dripping-water-drop-cons
 
 const StationEauPotable = () => {
   const navigate = useNavigate();
+
+  useEffect(() => {
+    document.title = "Systèmes d'osmose inverse | Purificateur d'eau potable | Bricareau";
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+      metaDesc.setAttribute("content", "Optimisez la qualité de votre eau avec nos systèmes d'osmose inverse à 4, 5 et 6 étapes. Éliminez 99% des contaminants pour une eau pure et alcaline à domicile.");
+    }
+
+    // OG Tags
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) ogTitle.setAttribute("content", "Systèmes d'osmose inverse et purification d'eau | Bricareau");
+    const ogDesc = document.querySelector('meta[property="og:description"]');
+    if (ogDesc) ogDesc.setAttribute("content", "Découvrez la pureté absolue avec nos stations d'osmose inverse Cristal Pro et Sérénité.");
+  }, []);
+
   const comparisonData = [
-    { feature: "Filtration en 5 étapes", elite: true, plus: true, essential: true },
-    { feature: "Élimination des métaux lourds", elite: true, plus: true, essential: true },
-    { feature: "Membrane d'osmose inverse", elite: true, plus: true, essential: true },
-    { feature: "Reminéralisation alcaline", elite: true, plus: "Option", essential: false },
-    { feature: "Débit rapide (75 GPD)", elite: true, plus: true, essential: false },
-    { feature: "Compact (Sans réservoir)", elite: false, plus: false, essential: false },
-    { feature: "Garantie prolongée", elite: true, plus: true, essential: true },
+    { feature: "Installation sous l'évier (Point d'usage)", stage4: true, stage6: true, stage5: true },
+    { feature: "Nombre d'étapes de filtration", stage4: "4 Étapes", stage6: "6 Étapes", stage5: "5 Étapes" },
+    { feature: "Production journalière", stage4: "75 GPD", stage6: "75 GPD", stage5: "600 GPD" },
+    { feature: "Élimination sédiments et chlore", stage4: true, stage6: true, stage5: true },
+    { feature: "Membrane d'osmose inverse (99%)", stage4: true, stage6: true, stage5: true },
+    { feature: "Double pré-filtration au charbon", stage4: false, stage6: true, stage5: true },
+    { feature: "Filtre de polissage final", stage4: true, stage6: true, stage5: true },
+    { feature: "Cartouche de reminéralisation", stage4: "Option", stage6: true, stage5: "Option" },
+    { feature: "Équilibrage du pH (Alcalin)", stage4: "Option", stage6: true, stage5: "Option" },
   ];
 
   return (
@@ -70,18 +88,15 @@ const StationEauPotable = () => {
 
           <div className="container mx-auto px-6 relative z-10">
             <div className="max-w-2xl text-white">
-              <span className="text-sm font-bold uppercase tracking-widest text-blue-600 mb-4 block">
-                Pureté cristalline
-              </span>
               <h1
-                className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-white"
+                className="text-[32px] md:text-[48px] leading-[32px] md:leading-[48px] font-light mb-8 tracking-tighter text-white"
                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
               >
-                <span className="font-bold">La différence que vous pouvez voir, sentir</span> <span className="font-bold">et goûter.</span>
+                <span className="font-bold text-blue-400">Systèmes d'osmose inverse</span> <br />
+                <span className="font-bold">La pureté absolue à votre robinet.</span>
               </h1>
               <p className="text-lg font-light leading-relaxed text-white/95 mb-8 max-w-xl text-justify">
-                Profitez d'une eau pure et délicieuse directement de votre robinet.
-                Nos purificateurs d'eau d'osmose inverse éliminent 99% des contaminants pour une tranquillité d'esprit totale.
+                Transformez votre eau municipale en une source de pureté cristalline. Nos purificateurs d'eau par osmose inverse éliminent 99% des contaminants, du plomb au chlore, pour une eau fraîche, saine et alcaline.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button
@@ -240,9 +255,9 @@ const StationEauPotable = () => {
                   <tr className="bg-gray-100">
                     <th className="p-8 text-left text-gray-400 font-light uppercase tracking-wider">Solutions</th>
                     {[
-                      { name: "Vectapure", img: vectapureROImg },
-                      { name: "Essential", img: drinkingWaterImg },
-                      { name: "Sérénité", img: freezelifeROImg },
+                      { name: "Série Vectapure", img: vectapureROImg },
+                      { name: "Série Sérénité", img: freezelifeROImg },
+                      { name: "Série Essentiel", img: drinkingWaterImg },
                     ].map((m, i) => (
                       <th key={i} className="p-4 text-center text-gray-900 font-bold text-sm">
                         <div className="flex flex-col items-center gap-2">
@@ -258,17 +273,17 @@ const StationEauPotable = () => {
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-gray-100">
-                  {comparisonData.map((row, i) => (
+                  {comparisonData.map((row: any, i) => (
                     <tr key={i} className="hover:bg-gray-50 transition-colors">
                       <td className="p-8 font-light text-gray-700">{row.feature}</td>
-                      <td className="p-8 text-center">
-                        {typeof row.elite === 'string' ? <span className="text-blue-600 font-bold bg-blue-50 px-3 py-1 rounded-full text-[10px]">{row.elite}</span> : (row.elite ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : <X className="h-6 w-6 text-gray-300 mx-auto" />)}
+                      <td className="p-8 text-center text-sm">
+                        {typeof row.stage4 === 'string' ? <span className="text-blue-600 font-bold bg-blue-50 px-3 py-1 rounded-full text-[10px] whitespace-nowrap">{row.stage4}</span> : (row.stage4 ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : null)}
                       </td>
-                      <td className="p-8 text-center">
-                        {typeof row.plus === 'string' ? <span className="text-blue-600 font-bold bg-blue-50 px-3 py-1 rounded-full text-[10px]">{row.plus}</span> : (row.plus ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : <X className="h-6 w-6 text-gray-300 mx-auto" />)}
+                      <td className="p-8 text-center text-sm">
+                        {typeof row.stage5 === 'string' ? <span className="text-blue-600 font-bold bg-blue-50 px-3 py-1 rounded-full text-[10px] whitespace-nowrap">{row.stage5}</span> : (row.stage5 ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : null)}
                       </td>
-                      <td className="p-8 text-center">
-                        {row.essential ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : <X className="h-6 w-6 text-gray-300 mx-auto" />}
+                      <td className="p-8 text-center text-sm">
+                        {typeof row.stage6 === 'string' ? <span className="text-blue-600 font-bold bg-blue-50 px-3 py-1 rounded-full text-[10px] whitespace-nowrap">{row.stage6}</span> : (row.stage6 ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : null)}
                       </td>
                     </tr>
                   ))}

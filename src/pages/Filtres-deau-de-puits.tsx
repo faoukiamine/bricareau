@@ -1,3 +1,4 @@
+import React, { useEffect } from 'react';
 import Header from "@/components/Header";
 import ConsultationFormSection from "@/components/ConsultationFormSection";
 import Footer from "@/components/Footer";
@@ -13,7 +14,6 @@ import {
     Zap,
     TrendingDown,
     Play,
-    X,
     Phone
 } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
@@ -112,14 +112,31 @@ const faqItems = [
 ];
 
 const comparisonData = [
-    { feature: "Technologie High Efficiency", Vortex: true, ZenPH: true, ChlorStop: true, IronShield: false, OxyPure: true, SulphurShield: true, ZeroAs: true, TannEx: true, SerenitePure: true },
-    { feature: "Contrôle à distance (App)", Vortex: true, ZenPH: true, ChlorStop: true, IronShield: false, OxyPure: false, SulphurShield: false, ZeroAs: true, TannEx: true, SerenitePure: true },
-    { feature: "Protection du chlore intégrée", Vortex: "Option", ZenPH: true, ChlorStop: true, IronShield: false, OxyPure: false, SulphurShield: false, ZeroAs: false, TannEx: false, SerenitePure: true },
-    { feature: "Alertes de sel faible", Vortex: true, ZenPH: true, ChlorStop: true, IronShield: false, OxyPure: true, SulphurShield: true, ZeroAs: true, TannEx: true, SerenitePure: true },
-    { feature: "Diagnostic à distance", Vortex: true, ZenPH: true, ChlorStop: true, IronShield: false, OxyPure: true, SulphurShield: true, ZeroAs: true, TannEx: true, SerenitePure: true },
-];
+    { feature: "Élimination du Fer (Taches rouille)", Vortex: false, ZenPH: false, ChlorStop: false, IronShield: "Maximale", OxyPure: "Maximale", SulphurShield: "Partielle", ZeroAs: false, TannEx: false, SerenitePure: "Totale" },
+    { feature: "Odeur de Soufre (Œufs pourris)", Vortex: false, ZenPH: false, ChlorStop: false, IronShield: "Moyenne", OxyPure: "Moyenne", SulphurShield: "Maximale", ZeroAs: false, TannEx: false, SerenitePure: "Partielle" },
+    { feature: "Manganèse (Taches noires)", Vortex: false, ZenPH: false, ChlorStop: false, IronShield: "Partielle", OxyPure: "Maximale", SulphurShield: "Partielle", ZeroAs: false, TannEx: false, SerenitePure: "Totale" },
+    { feature: "Acidité (Correction pH / Eau bleue)", Vortex: false, ZenPH: "Maximale", ChlorStop: false, IronShield: false, OxyPure: false, SulphurShield: false, ZeroAs: false, TannEx: false, SerenitePure: false },
+    { feature: "Sédiments, Sable & Turbidité", Vortex: "Totale", ZenPH: "Partielle", ChlorStop: "Partielle", IronShield: "Partielle", OxyPure: "Partielle", SulphurShield: "Partielle", ZeroAs: "Partielle", TannEx: "Partielle", SerenitePure: "Totale" },
+    { feature: "Arsenic & Métaux Lourds", Vortex: false, ZenPH: false, ChlorStop: false, IronShield: false, OxyPure: false, SulphurShield: false, ZeroAs: "Maximale", TannEx: false, SerenitePure: "Totale" },
+    { feature: "Tanins & Coloration (Eau de thé)", Vortex: false, ZenPH: false, ChlorStop: false, IronShield: false, OxyPure: false, SulphurShield: false, ZeroAs: false, TannEx: "Maximale", SerenitePure: "Partielle" },
+    { feature: "Goût & Odeur de Chlore", Vortex: false, ZenPH: false, ChlorStop: "Maximale", IronShield: false, OxyPure: false, SulphurShield: false, ZeroAs: false, TannEx: false, SerenitePure: "Totale" },
+    { feature: "Entretien / Maintenance", Vortex: "Minimal", ZenPH: "Moyen", ChlorStop: "Bas", IronShield: "Bas", OxyPure: "Moyen", SulphurShield: "Bas", ZeroAs: "Moyen", TannEx: "Moyen", SerenitePure: "Élevé" },];
 
 const FiltresPuits = () => {
+    useEffect(() => {
+        document.title = "Filtres d'eau de puits | Traitement Fer, Soufre & Manganèse | Bricareau";
+        const metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc) {
+            metaDesc.setAttribute("content", "Éliminez les polluants de votre eau de puits : fer, odeurs de soufre, manganèse et pH acide. Solutions de filtration résidentielle expertes au Canada par Bricareau.");
+        }
+
+        // OG Tags
+        const ogTitle = document.querySelector('meta[property="og:title"]');
+        if (ogTitle) ogTitle.setAttribute("content", "Filtres d'eau de puits spécialisés - Pureté & Protection | Bricareau");
+        const ogDesc = document.querySelector('meta[property="og:description"]');
+        if (ogDesc) ogDesc.setAttribute("content", "Solutions avancées pour traiter le fer, le soufre et les impuretés de votre eau de puits. Protégez votre santé et votre maison.");
+    }, []);
+
     const navigate = useNavigate();
     return (
         <div className="min-h-screen bg-background text-slate-900 font-sans">
@@ -131,7 +148,7 @@ const FiltresPuits = () => {
                     <div className="absolute inset-0 z-0">
                         <img
                             src={heroFilter}
-                            alt="Personne tenant un verre d'eau fraîche"
+                            alt="Efficacité d'un système de filtration d'eau de puits résidentiel par Bricareau"
                             className="w-full h-full object-cover"
                         />
                         <div className="absolute inset-0 bg-black/40 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
@@ -142,17 +159,15 @@ const FiltresPuits = () => {
 
                     <div className="container mx-auto px-6 relative z-10">
                         <div className="max-w-2xl text-white">
-                            <span className="text-sm font-bold uppercase tracking-widest text-blue-600 mb-4 block">
-                                SOLUTIONS DE FILTRATION d'eau de puits
-                            </span>
                             <h1
-                                className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-white"
+                                className="text-[32px] md:text-[48px] leading-[32px] md:leading-[48px] font-light mb-8 tracking-tighter text-white"
                                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                             >
-                                <span className="font-bold">Profitez d'une solution sur mesure pour</span> <span className="font-bold">une eau filtrée sans compromis</span>
+                                <span className="font-bold text-blue-400">Filtres d'eau de puits</span> <br />
+                                <span className="font-bold text-white">pour une eau filtrée sans compromis.</span>
                             </h1>
-                            <p className="font-light text-[20px] leading-[28px] text-white/95 mb-8 max-w-xl">
-                                Nos filtres haute performance éliminent fer, odeurs des oeufs-pourris, manganèse et sédiments pour protéger vos installations et garantir une eau saine à chaque robinet.
+                            <p className="font-light text-[20px] leading-[28px] text-white/95 mb-8 max-w-xl text-justify">
+                                Nos solutions spécialisées traitent efficacement le fer, le soufre (odeurs d'œufs pourris), le manganèse et l'acidité. Protégez votre plomberie et profitez d'une eau saine et limpide partout dans votre maison.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4">
                                 <Button
@@ -237,6 +252,9 @@ const FiltresPuits = () => {
                                 <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">spécialisés pour votre résidence</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
+                            <p className="mt-8 text-lg font-light leading-relaxed text-slate-600 text-justify w-full">
+                                Découvrez notre gamme complète de filtres spécialisés, conçus pour répondre aux défis uniques des puits privés artésiens ou de surface. Que vous fassiez face à des taches de fer tenaces, des odeurs de soufre incommodantes, une eau acide corrosive ou la présence de contaminants invisibles comme l'arsenic, nos systèmes offrent une solution ciblée et performante. Chaque unité est dotée d'une technologie de pointe pour assurer une filtration maximale tout en préservant l'intégrité de votre plomberie et de vos appareils électroménagers. En investissant dans l'une de nos solutions Vortex, Iron Shield, Zen-pH, ou autres, vous choisissez une tranquillité d'esprit durable et une qualité d'eau irréprochable pour toute votre famille. Nos experts vous accompagnent dans le diagnostic et l'installation pour garantir que chaque goutte d'eau qui coule de votre robinet soit pure, sûre et limpide.
+                            </p>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                             {products.map((p, i) => (
@@ -334,7 +352,7 @@ const FiltresPuits = () => {
                                                     {typeof (row as any)[key] === 'string' ? (
                                                         <span className="text-blue-600 font-bold text-[10px] bg-blue-50 px-3 py-1 rounded-full">{(row as any)[key]}</span>
                                                     ) : (
-                                                        (row as any)[key] ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : <X className="h-6 w-6 text-gray-300 mx-auto" />
+                                                        (row as any)[key] ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : null
                                                     )}
                                                 </td>
                                             ))}

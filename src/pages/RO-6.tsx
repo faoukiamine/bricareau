@@ -58,7 +58,7 @@ const RO6 = () => {
                                     SYSTÈME D'OSMOSE INVERSE
                                 </span>
                                 <h1
-                                    className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-foreground"
+                                    className="text-[32px] md:text-[48px] leading-[32px] md:leading-[48px] font-light mb-8 tracking-tighter text-foreground"
                                     style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                                 >
                                     Aquasential® <span className="font-normal">Osmose Inverse</span>

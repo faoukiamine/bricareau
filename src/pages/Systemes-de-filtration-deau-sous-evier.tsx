@@ -18,6 +18,7 @@ import {
 } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import { useNavigate } from "react-router-dom";
+import React, { useEffect } from "react";
 
 import {
     Accordion,
@@ -37,14 +38,30 @@ import waterTestingImg from "@/assets/undersink_filtration_header.jpg";
 
 const FiltrationSousEvier = () => {
     const navigate = useNavigate();
+
+    useEffect(() => {
+        document.title = "Systèmes de filtration d'eau sous évier | Bricareau - Pureté Maximale";
+        const metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc) {
+            metaDesc.setAttribute("content", "Découvrez nos systèmes de filtration d'eau sous évier Cristal Pro. Filtration performante, ultrafiltration et goût exceptionnel pour votre cuisine au Canada.");
+        }
+
+        // OG Tags
+        const ogTitle = document.querySelector('meta[property="og:title"]');
+        if (ogTitle) ogTitle.setAttribute("content", "Systèmes de filtration d'eau sous évier | Bricareau");
+        const ogDesc = document.querySelector('meta[property="og:description"]');
+        if (ogDesc) ogDesc.setAttribute("content", "Profitez d'une eau potable pure directement de votre robinet avec nos systèmes d'ultrafiltration Cristal Pro.");
+    }, []);
+
     const comparisonData = [
-        { feature: "Filtration en 5 étapes", elite: true, plus: true, essential: true },
-        { feature: "Élimination des métaux lourds", elite: true, plus: true, essential: true },
-        { feature: "Membrane d'osmose inverse", elite: true, plus: true, essential: true },
-        { feature: "Reminéralisation alcaline", elite: true, plus: "Option", essential: false },
-        { feature: "Débit rapide (75 GPD)", elite: true, plus: true, essential: false },
-        { feature: "Compact (Sans réservoir)", elite: false, plus: false, essential: false },
-        { feature: "Garantie prolongée", elite: true, plus: true, essential: true },
+        { feature: "Nombre d'étapes de filtration", elite: "3 Étapes", plus: "2 Étapes", essential: "1 Étape" },
+        { feature: "Élimination des sédiments (sable, terre et rouille)", elite: true, plus: true, essential: true },
+        { feature: "Élimination du chlore (Goût/Odeur)", elite: true, plus: true, essential: false },
+        { feature: "Retrait des COV et pesticides", elite: true, plus: true, essential: false },
+        { feature: "Membrane d'ultrafiltration (0.01 µm)", elite: true, plus: false, essential: false },
+        { feature: "Élimination 99.9% bactéries/virus", elite: true, plus: false, essential: false },
+        { feature: "Préservation des minéraux naturels", elite: true, plus: true, essential: true },
+        { feature: "Aucun rejet d'eau au drain", elite: true, plus: true, essential: true },
     ];
 
     return (
@@ -67,18 +84,14 @@ const FiltrationSousEvier = () => {
 
                     <div className="container mx-auto px-6 relative z-10">
                         <div className="max-w-2xl text-white">
-                            <span className="text-sm font-bold uppercase tracking-widest text-blue-600 mb-4 block">
-                                PURETÉ INÉGALÉE
-                            </span>
                             <h1
-                                className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-white"
+                                className="text-[32px] md:text-[48px] leading-[32px] md:leading-[48px] font-light mb-8 tracking-tighter text-white"
                                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                             >
-                                <span className="font-bold">Buvez en toute confiance,</span> <span className="font-bold">sans jamais porter une seule bouteille.</span>
+                                <span className="font-bold text-blue-400">Systèmes de filtration d'eau sous évier,</span><span className="font-bold "> de la pureté et de la fraîcheur à chaque goutte.</span>
                             </h1>
                             <p className="text-lg font-light leading-relaxed text-white/90 mb-8 max-w-xl text-justify">
-                                Un système compact et discret qui révolutionne la qualité de l'eau à chaque jet de votre robinet.
-                                Nos systèmes éliminent 99% des contaminants pour une tranquillité d'esprit totale.
+                                Profitez d'une eau potable d'une qualité exceptionnelle directement de votre robinet. Nos systèmes de filtration sous comptoir et d'ultrafiltration éliminent 99% des contaminants pour la santé de votre famille.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4">
                                 <Button
@@ -137,10 +150,10 @@ const FiltrationSousEvier = () => {
                         </div>
                         <div className="flex flex-wrap justify-center gap-x-12 gap-y-16 text-center">
                             {[
-                                { icon: ShieldCheck, title: "Goût Incomparable", desc: "Sublimez vos saveurs. Idéal pour un café riche en arômes et des légumes qui gardent leurs nutriments sans le goût du chlore." },
-                                { icon: Droplets, title: "Éco-Responsable", desc: "Dites adieu au plastique. Une seule cartouche remplace des milliers de bouteilles à usage unique. Un geste fort pour la planète." },
-                                { icon: Zap, title: "Discrétion Totale", desc: "Compact et invisible. S'installe discrètement sous votre comptoir sans encombrer votre espace de travail." },
-                                { icon: CircleDollarSign, title: "Économies", desc: "Réduisez vos dépenses annuelles en éliminant définitivement l'achat d'eau embouteillée." },
+                                { icon: ShieldCheck, title: "Goût Incomparable", desc: "Sublimez vos saveurs quotidiennes. Idéal pour un café aux arômes riches et des légumes qui conservent leurs nutriments sans le goût désagréable du chlore." },
+                                { icon: Droplets, title: "Éco-Responsable", desc: "Dites adieu au plastique. Une seule cartouche remplace des milliers de bouteilles à usage unique, offrant un geste concret et puissant pour la planète." },
+                                { icon: Zap, title: "Discrétion Totale", desc: "Une solution compacte et invisible. S'installe discrètement sous votre comptoir de cuisine sans encombrer votre plan de travail ou votre espace de rangement." },
+                                { icon: CircleDollarSign, title: "Économies", desc: "Rentabilisez vite votre investissement. Réduisez vos dépenses annuelles en éliminant définitivement l'achat coûteux d'eau embouteillée pour tout votre foyer." },
                             ].map((item, i) => (
                                 <div key={i} className="flex flex-col items-center group w-full sm:w-[calc(50%-3rem)] lg:w-[calc(25%-3rem)]">
                                     <div className="w-20 h-20 rounded-2xl bg-white flex items-center justify-center mb-8 transition-all group-hover:scale-110 group-hover:bg-white/10">
@@ -252,17 +265,17 @@ const FiltrationSousEvier = () => {
                                     </tr>
                                 </thead>
                                 <tbody className="divide-y divide-gray-100">
-                                    {comparisonData.map((row, i) => (
+                                    {comparisonData.map((row: any, i) => (
                                         <tr key={i} className="hover:bg-gray-50 transition-colors">
                                             <td className="p-8 font-light text-gray-700">{row.feature}</td>
-                                            <td className="p-8 text-center">
-                                                {row.essential ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : <X className="h-6 w-6 text-gray-300 mx-auto" />}
+                                            <td className="p-8 text-center text-sm">
+                                                {typeof row.essential === 'string' ? <span className="text-blue-600 font-bold bg-blue-50 px-3 py-1 rounded-full text-[10px] whitespace-nowrap">{row.essential}</span> : (row.essential ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : null)}
                                             </td>
-                                            <td className="p-8 text-center">
-                                                {typeof row.plus === 'string' ? <span className="text-blue-600 font-bold bg-blue-50 px-3 py-1 rounded-full text-[10px]">{row.plus}</span> : (row.plus ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : <X className="h-6 w-6 text-gray-300 mx-auto" />)}
+                                            <td className="p-8 text-center text-sm">
+                                                {typeof row.plus === 'string' ? <span className="text-blue-600 font-bold bg-blue-50 px-3 py-1 rounded-full text-[10px] whitespace-nowrap">{row.plus}</span> : (row.plus ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : null)}
                                             </td>
-                                            <td className="p-8 text-center">
-                                                {typeof row.elite === 'string' ? <span className="text-blue-600 font-bold bg-blue-50 px-3 py-1 rounded-full text-[10px]">{row.elite}</span> : (row.elite ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : <X className="h-6 w-6 text-gray-300 mx-auto" />)}
+                                            <td className="p-8 text-center text-sm">
+                                                {typeof row.elite === 'string' ? <span className="text-blue-600 font-bold bg-blue-50 px-3 py-1 rounded-full text-[10px] whitespace-nowrap">{row.elite}</span> : (row.elite ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : null)}
                                             </td>
                                         </tr>
                                     ))}

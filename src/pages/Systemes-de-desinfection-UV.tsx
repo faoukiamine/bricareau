@@ -1,3 +1,4 @@
+import React, { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -34,6 +35,20 @@ import uvSystemImg4 from "@/assets/500x500_V-Arros-15-IHS-10_straight-1-300x300.
 import waterTestingImg from "@/assets/Legionella-Monitoring.webp";
 
 const DesinfectionUV = () => {
+    useEffect(() => {
+        document.title = "Systèmes de désinfection UV | Stérilisateur d'eau | Bricareau";
+        const metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc) {
+            metaDesc.setAttribute("content", "Éliminez 99,99% des bactéries et virus de votre eau avec nos systèmes de désinfection UV haute performance. Protection microbiologique sans produits chimiques au Canada.");
+        }
+
+        // OG Tags
+        const ogTitle = document.querySelector('meta[property="og:title"]');
+        if (ogTitle) ogTitle.setAttribute("content", "Désinfection UV et Stérilisation d'eau | Bricareau");
+        const ogDesc = document.querySelector('meta[property="og:description"]');
+        if (ogDesc) ogDesc.setAttribute("content", "Protection maximale contre les micro-organismes nocifs. Une eau potable sécuritaire pour toute la famille.");
+    }, []);
+
     const comparisonData = [
         { feature: "Élimination 99.99% des virus", VH410F20: true, VH200F10: true, Arros15IHS10: true },
         { feature: "Destruction des bactéries", VH410F20: true, VH200F10: true, Arros15IHS10: true },
@@ -52,7 +67,7 @@ const DesinfectionUV = () => {
                     <div className="absolute inset-0 z-0">
                         <img
                             src={heroImg}
-                            alt="Eau pure par désinfection UV"
+                            alt="Efficacité d'un système de désinfection UV pour une eau potable sans bactéries par Bricareau"
                             className="w-full h-full object-cover object-[center_35%]"
                         />
                         <div className="absolute inset-0 bg-black/40 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
@@ -63,17 +78,15 @@ const DesinfectionUV = () => {
 
                     <div className="container mx-auto px-6 relative z-10">
                         <div className="max-w-2xl text-white">
-                            <span className="text-sm font-bold uppercase tracking-widest text-blue-600 mb-4 block">
-                                PROTECTION MICROBIOLOGIQUE
-                            </span>
                             <h1
-                                className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-white"
+                                className="text-[32px] md:text-[48px] leading-[32px] md:leading-[48px] font-light mb-8 tracking-tighter text-white"
                                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                             >
-                                <span className="font-bold">La désinfection UV</span> <span className="font-bold"><br />Zéro produit chimique, 100% de protection</span>
+                                <span className="font-bold text-blue-400">Systèmes de désinfection UV</span> <br />
+                                <span className="font-bold text-white">Zéro produit chimique, 100% de protection.</span>
                             </h1>
                             <p className="font-light text-[20px] leading-[28px] text-white/95 mb-8 max-w-xl text-justify">
-                                Éliminez 99,99% des virus, bactéries et kystes sans ajouter de produits chimiques à votre eau. Une protection invisible pour une sécurité totale.
+                                Éliminez 99,99% des bactéries, virus et kystes de votre eau de puits ou municipale sans aucun additif chimique. Assurez une pureté microbiologique totale pour la sécurité de votre famille à chaque robinet.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4">
                                 <Button

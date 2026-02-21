@@ -47,7 +47,7 @@ const Fontaines = () => {
                             <span className="text-sm font-bold uppercase tracking-widest text-cyan-400 mb-4 block">
                                 FRAÎCHEUR ILLIMITÉE
                             </span>
-                            <h1 className="text-[32px] md:text-[48px] font-normal mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-white drop-shadow-md">
+                            <h1 className="text-[32px] md:text-[48px] leading-[32px] md:leading-[48px] font-normal mb-8 tracking-tighter text-white drop-shadow-md">
                                 Fontaines à eau <br /> & Machines à glace
                             </h1>
                             <p className="font-light text-[20px] leading-[28px] text-white/95 mb-8 max-w-xl drop-shadow-sm">

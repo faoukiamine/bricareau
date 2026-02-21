@@ -1,3 +1,4 @@
+import React, { useEffect } from 'react';
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import TestimonialsSection from "@/components/TestimonialsSection";
@@ -148,6 +149,20 @@ const comparisonData = [
 ];
 
 const AdoucisseursEauDePuits = () => {
+    useEffect(() => {
+        document.title = "Adoucisseur d'eau de puits | Protection Fer & Calcaire | Bricareau";
+        const metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc) {
+            metaDesc.setAttribute("content", "Protégez votre maison et vos appareils avec nos adoucisseurs d'eau spécialisés pour les puits privés. Élimination efficace du fer et du calcaire au Canada.");
+        }
+
+        // OG Tags
+        const ogTitle = document.querySelector('meta[property="og:title"]');
+        if (ogTitle) ogTitle.setAttribute("content", "Adoucisseur d'eau de puits - Performance & Fiabilité | Bricareau");
+        const ogDesc = document.querySelector('meta[property="og:description"]');
+        if (ogDesc) ogDesc.setAttribute("content", "Découvrez nos solutions d'adoucissement robustes pour traiter l'eau dure et le fer de votre puits.");
+    }, []);
+
     return (
         <div className="min-h-screen bg-white">
             <Header />
@@ -158,7 +173,7 @@ const AdoucisseursEauDePuits = () => {
                     <div className="absolute inset-0 z-0">
                         <img
                             src={heroBath}
-                            alt="Homme prenant un bain d'eau douce"
+                            alt="Efficacité d'un adoucisseur d'eau spécialisé pour les puits privés - Bricareau"
                             className="w-full h-full object-cover"
                         />
                         <div className="absolute inset-0 bg-black/40 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
@@ -170,13 +185,13 @@ const AdoucisseursEauDePuits = () => {
                     <div className="container mx-auto px-6 relative z-10">
                         <div className="max-w-2xl text-white">
                             <h1
-                                className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-white"
+                                className="text-[32px] md:text-[48px] leading-[32px] md:leading-[48px] font-light mb-8 tracking-tighter text-white"
                                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                             >
-                                <span className="font-bold">Un bien-être sans égal</span> <span className="font-bold"><br />au quotidien</span>
+                                <span className="font-bold text-blue-400">Adoucisseur d'eau de puits</span> <span className="font-bold text-white"> <br />une protection experte contre le fer et le calcaire.</span>
                             </h1>
                             <p className="text-lg font-light leading-relaxed text-white/95 mb-8 max-w-xl text-justify">
-                                Bricareau vous offre une eau douce, source de bien-être et de confort.
+                                Profitez d'une eau soyeuse et douce, même avec un puits privé. Nos adoucisseurs haute performance neutralisent la dureté extrême et les traces de fer pour préserver votre santé et vos installations.
                             </p>
                             <div className="flex gap-4">
                                 <Button

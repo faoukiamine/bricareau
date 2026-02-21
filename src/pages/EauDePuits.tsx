@@ -1,3 +1,4 @@
+import React, { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -89,14 +90,31 @@ const problems: Problem[] = [
 
 
 const comparisonData = [
-  { feature: "Technologie High Efficiency", high: true, selectPlus: true, connect: true, select: false, medallist: false },
-  { feature: "Contrôle à distance (App)", high: true, selectPlus: false, connect: true, select: false, medallist: false },
-  { feature: "Protection du chlore intégrée", high: "Option", selectPlus: false, connect: false, select: false, medallist: false },
-  { feature: "Alertes de sel faible", high: true, selectPlus: true, connect: true, select: true, medallist: false },
-  { feature: "Diagnostic à distance", high: true, selectPlus: false, connect: true, select: false, medallist: false },
+  { feature: "Solutions au Point d'entrée (Toute la maison)", filters: true, softeners: true, osmose: false, uv: true },
+  { feature: "Solutions au Point d'usage", filters: false, softeners: false, osmose: true, uv: false },
+  { feature: "Élimination des sédiments et de la turbidité", filters: true, softeners: "Partielle", osmose: true, uv: false },
+  { feature: "Traitement du calcaire et de la dureté", filters: false, softeners: true, osmose: "Option", uv: false },
+  { feature: "Élimination du fer et du manganèse", filters: true, softeners: true, osmose: false, uv: false },
+  { feature: "Neutralisation des bactéries et virus", filters: false, softeners: false, osmose: true, uv: true },
+  { feature: "Élimination du soufre (odeur d'oeufs pourris)", filters: true, softeners: false, osmose: false, uv: false },
+  { feature: "Filtration des polluants chimiques", filters: "Option", softeners: false, osmose: true, uv: false },
 ];
 
 const EauDePuits = () => {
+  useEffect(() => {
+    document.title = "Traitement d'eau de puits | Solution Eau de Puits | Bricareau Canada";
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+      metaDesc.setAttribute("content", "Solutions expertes pour l'eau de puits au Canada. Élimination du fer, soufre, bactéries et sédiments. Analyse d'eau et systèmes de filtration haute performance.");
+    }
+
+    // OG Tags
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) ogTitle.setAttribute("content", "Traitement d'eau de puits - Solutions complètes | Bricareau");
+    const ogDesc = document.querySelector('meta[property="og:description"]');
+    if (ogDesc) ogDesc.setAttribute("content", "Protégez votre santé et vos installations avec nos systèmes de filtration spécialisés pour puits privés.");
+  }, []);
+
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -106,7 +124,7 @@ const EauDePuits = () => {
           <div className="absolute inset-0 z-0">
             <img
               src={heroPuits}
-              alt="Propriété avec puits"
+              alt="Système de traitement d'eau de puits résidentiel pour une eau pure au Canada"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-black/40 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
@@ -118,16 +136,16 @@ const EauDePuits = () => {
           <div className="container mx-auto px-6 relative z-10">
             <div className="max-w-2xl text-white">
               <span className="text-sm font-bold uppercase tracking-widest text-blue-600 mb-4 block">
-                SOLUTIONS D'EAU POUR PUITS PRIVÉS
+                SOLUTIONS DE TRAITEMENT D'EAU POUR PUITS PRIVÉS
               </span>
               <h1
-                className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-white"
+                className="text-[32px] md:text-[48px] leading-[32px] md:leading-[48px] font-light mb-8 tracking-tighter text-white"
                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
               >
-                <span className="font-bold">Votre puits est un trésor.</span> <span className="font-bold">Offrez-lui la pureté qu'il mérite.</span>
+                <span className="font-bold text-blue-400">Votre puits est un trésor.</span> <span className="font-bold"> <br />Offrez-lui la pureté qu'il mérite.</span>
               </h1>
               <p className="text-lg font-light leading-relaxed text-white/90 mb-8 max-w-xl text-justify">
-                Ne laissez plus le fer, le soufre ou les bactéries gâcher la richesse de votre puits. Transformez votre eau brute en une ressource cristalline, saine et parfaitement équilibrée pour toute votre famille.
+                Protégez votre santé et vos installations avec nos solutions expertes pour puits privés. Éliminez le fer, le soufre, le calcaire et les bactéries pour une eau cristalline et sécuritaire partout dans votre maison.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button
@@ -371,7 +389,13 @@ const EauDePuits = () => {
                 <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Découvrez nos solutions</span>
                 <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">de traitement de l'eau de puits</span>
               </h2>
-              <div className="w-24 h-1 bg-blue-600"></div>
+              <div className="w-24 h-1 bg-blue-600 mb-8"></div>
+              <p
+                className="text-lg font-light leading-relaxed text-slate-600 mb-8 text-justify"
+                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+              >
+                Nos solutions spécialisées pour l'eau de puits sont conçues pour transformer une eau brute et imprévisible en une source de pureté irréprochable au sein de votre foyer. Nous proposons une gamme complète incluant nos filtres spécialisés contre les différents contaminants, nos adoucisseurs de pointe éliminant le fer et le calcaire, ainsi que nos stations d'eau potable par osmose inverse pour une hydratation saine. Pour une sécurité microbiologique absolue, nos systèmes de stérilisation UV neutralisent efficacement les bactéries sans aucun ajout chimique. Chaque produit est sélectionné pour sa robustesse et sa capacité à répondre aux défis uniques posés par les eaux souterraines, vous garantissant ainsi une performance durable et une tranquillité d'esprit totale au quotidien. Faites confiance à l'expertise de Bricareau pour protéger votre santé et préserver l'intégrité de vos installations grâce à une filtration sur mesure, fiable et adaptée à vos besoins spécifiques.
+              </p>
             </div>
 
             <Carousel
@@ -467,18 +491,19 @@ const EauDePuits = () => {
                 <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Comparez nos solutions</span>
                 <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">de traitement de l'eau de puits</span>
               </h2>
-              <div className="w-24 h-1 bg-blue-600"></div>
+              <div className="w-24 h-1 bg-blue-600 mb-8"></div>
             </div>
+
             <div className="overflow-x-auto">
               <table className="w-full min-w-[1000px] border-collapse bg-white rounded-2xl overflow-hidden shadow-sm">
                 <thead>
                   <tr className="bg-gray-100">
                     <th className="p-8 text-left text-gray-400 font-light uppercase tracking-wider">Solutions</th>
                     {[
-                      { name: "Systèmes spécialisés de filtration d'eau", img: specializedFiltersImg },
-                      { name: "Adoucisseurs d'eau", img: waterSoftenerImg },
-                      { name: "Systèmes d'osmose inverse", img: drinkingWaterImg },
-                      { name: "Systèmes de désinfection UV", img: uvSystemImg }
+                      { name: "Filtres spécialisés", img: specializedFiltersImg },
+                      { name: "Adoucisseurs", img: waterSoftenerImg },
+                      { name: "Osmose inverse", img: drinkingWaterImg },
+                      { name: "Stérilisation UV", img: uvSystemImg }
                     ].map((m, i) => (
                       <th key={i} className="p-4 text-center text-gray-900 font-bold text-sm">
                         <div className="flex flex-col items-center gap-2">
@@ -494,20 +519,20 @@ const EauDePuits = () => {
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-gray-100">
-                  {comparisonData.map((row, i) => (
+                  {comparisonData.map((row: any, i) => (
                     <tr key={i} className="hover:bg-gray-50 transition-colors">
                       <td className="p-8 font-light text-gray-700">{row.feature}</td>
-                      <td className="p-8 text-center">
-                        {typeof row.high === 'string' ? row.high : (row.high ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : <X className="h-6 w-6 text-gray-300 mx-auto" />)}
+                      <td className="p-8 text-center text-sm">
+                        {typeof row.filters === 'string' ? <span className="text-blue-600 font-bold bg-blue-50 px-3 py-1 rounded-full text-[10px] whitespace-nowrap">{row.filters}</span> : (row.filters ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : null)}
                       </td>
-                      <td className="p-8 text-center">
-                        {row.selectPlus ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : <X className="h-6 w-6 text-gray-300 mx-auto" />}
+                      <td className="p-8 text-center text-sm">
+                        {typeof row.softeners === 'string' ? <span className="text-blue-600 font-bold bg-blue-50 px-3 py-1 rounded-full text-[10px] whitespace-nowrap">{row.softeners}</span> : (row.softeners ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : null)}
                       </td>
-                      <td className="p-8 text-center">
-                        {row.connect ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : <X className="h-6 w-6 text-gray-300 mx-auto" />}
+                      <td className="p-8 text-center text-sm">
+                        {typeof row.osmose === 'string' ? <span className="text-blue-600 font-bold bg-blue-50 px-3 py-1 rounded-full text-[10px] whitespace-nowrap">{row.osmose}</span> : (row.osmose ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : null)}
                       </td>
-                      <td className="p-8 text-center">
-                        {row.select ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : <X className="h-6 w-6 text-gray-300 mx-auto" />}
+                      <td className="p-8 text-center text-sm">
+                        {typeof row.uv === 'string' ? <span className="text-blue-600 font-bold bg-blue-50 px-3 py-1 rounded-full text-[10px] whitespace-nowrap">{row.uv}</span> : (row.uv ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : null)}
                       </td>
                     </tr>
                   ))}
@@ -546,9 +571,10 @@ const EauDePuits = () => {
               <h2
                 className="text-slate-900 tracking-tighter mb-8 text-left"
                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
-              >                                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">FAQ</span>
+              >
+                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">FAQ</span>
               </h2>
-              <div className="w-24 h-1 bg-blue-600"></div>
+              <div className="w-24 h-1 bg-blue-600 mb-8"></div>
             </div>
 
             <div className="max-w-4xl mx-auto">
@@ -640,9 +666,10 @@ const EauDePuits = () => {
               <h2
                 className="text-slate-900 tracking-tighter mb-8 text-left"
                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
-              >                                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">Ressources</span>
+              >
+                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">Ressources</span>
               </h2>
-              <div className="w-24 h-1 bg-blue-600"></div>
+              <div className="w-24 h-1 bg-blue-600 mb-8"></div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
@@ -689,7 +716,7 @@ const EauDePuits = () => {
         <ConsultationFormSection id="consultation" />
       </main>
       <Footer />
-    </div >
+    </div>
   );
 };
 

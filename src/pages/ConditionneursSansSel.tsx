@@ -1,3 +1,4 @@
+import React, { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import TestimonialsSection from "@/components/TestimonialsSection";
@@ -127,6 +128,20 @@ const resources = [
 ];
 
 const ConditionneursSansSel = () => {
+  useEffect(() => {
+    document.title = "Conditionneur d'eau sans sel | Anti-tartre Écologique | Bricareau";
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+      metaDesc.setAttribute("content", "Protégez votre maison du calcaire sans sel ni saumure. Découvrez nos conditionneurs d'eau écologiques TAC pour une eau saine, sans tartre et sans rejet.");
+    }
+
+    // OG Tags
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) ogTitle.setAttribute("content", "Conditionneur d'eau sans sel - Solution Anti-tartre | Bricareau");
+    const ogDesc = document.querySelector('meta[property="og:description"]');
+    if (ogDesc) ogDesc.setAttribute("content", "La technologie verte pour neutraliser le calcaire. Zéro sel, zéro électricité, protection maximale.");
+  }, []);
+
   return (
     <div className="min-h-screen bg-white">
       <Header />
@@ -137,7 +152,7 @@ const ConditionneursSansSel = () => {
           <div className="absolute inset-0 z-0">
             <img
               src={heroGirl}
-              alt="Petite fille se lavant les mains avec l'eau douce"
+              alt="Efficacité d'un conditionneur d'eau sans sel pour une eau saine et douce"
               className="w-full h-full object-cover object-[center_35%]"
             />
             <div className="absolute inset-0 bg-black/40 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
@@ -152,14 +167,14 @@ const ConditionneursSansSel = () => {
                 NOUVEAU CHEZ BRICAREAU
               </span>
               <h1
-                className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-white"
+                className="text-[32px] md:text-[48px] leading-[32px] md:leading-[48px] font-light mb-8 tracking-tighter text-white"
                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
               >
-                <span className="font-bold">Lutter contre le calcaire ?</span> <span className="font-bold"><br />Il y a une autre solution...</span>
+                <span className="font-bold text-blue-400">Conditionneur d'eau sans sel</span> <br />
+                <span className="font-bold">L'anti-tartre écologique par excellence.</span>
               </h1>
-              <p className="font-light text-[20px] leading-[28px] text-white/95 mb-8 max-w-xl">
-                Protégez votre plomberie et profitez d'une eau plus saine grâce à notre technologie
-                de conditionnement avancée, sans sel et sans entretien.
+              <p className="text-lg font-light leading-relaxed text-white/95 mb-8 max-w-xl text-justify">
+                Neutralisez le calcaire sans sel, sans électricité et sans gaspillage d'eau. Notre technologie avancée TAC protège votre plomberie tout en préservant les minéraux essentiels à votre santé.
               </p>
               <Button
                 size="lg"

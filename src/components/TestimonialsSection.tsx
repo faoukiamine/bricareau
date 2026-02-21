@@ -73,12 +73,12 @@ const TestimonialsSection = () => {
                 </div>
 
                 {/* Carousel Container */}
-                <div className="relative max-w-5xl mx-auto px-4">
+                <div className="relative max-w-5xl mx-auto px-0 md:px-4">
                     <div className="overflow-hidden" ref={emblaRef}>
                         <div className="flex">
                             {testimonials.map((item, index) => (
-                                <div key={index} className="flex-[0_0_100%] min-w-0 px-4">
-                                    <div className="bg-white p-10 md:p-14 rounded-[2rem] shadow-[0_10px_40px_-15px_rgba(0,0,0,0.1)] border border-gray-50 flex flex-col items-start text-left relative transition-all duration-300">
+                                <div key={index} className="flex-[0_0_100%] min-w-0 px-2 md:px-4">
+                                    <div className="bg-white p-6 md:p-14 rounded-[2rem] shadow-[0_10px_40px_-15px_rgba(0,0,0,0.1)] border border-gray-50 flex flex-col items-start text-left relative transition-all duration-300">
                                         {/* Quote Icon */}
                                         <div className="text-[#3FA9F5] mb-8">
                                             <Quote className="w-12 h-12 md:w-14 md:h-14" strokeWidth={1} />
