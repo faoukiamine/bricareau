@@ -4,6 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
+import ChatWidget from "./components/ChatWidget";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Services from "./pages/Adoucisseurs-portables";
@@ -42,6 +43,7 @@ import RO6 from "./pages/RO-6";
 import CommentChoisirAdoucisseur from "./pages/Comment-choisir-un-adoucisseur-deau";
 import FiltresDeRemplacement from "./pages/Filtres-de-remplacement";
 import Diagnostic from "./pages/Diagnostic";
+import OperatorDashboard from "./pages/OperatorDashboard";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -53,6 +55,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <ScrollToTop />
+        <ChatWidget />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
@@ -92,6 +95,7 @@ const App = () => (
           <Route path="/comment-choisir-un-adoucisseur-deau" element={<CommentChoisirAdoucisseur />} />
           <Route path="/filtres-de-remplacement" element={<FiltresDeRemplacement />} />
           <Route path="/diagnostic" element={<Diagnostic />} />
+          <Route path="/operator" element={<OperatorDashboard />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
