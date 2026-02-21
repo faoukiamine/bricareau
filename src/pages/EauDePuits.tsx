@@ -558,7 +558,7 @@ const EauDePuits = () => {
                 className="rounded-full px-8 border-white text-white bg-transparent hover:bg-white/10"
                 asChild
               >
-                <a href="tel:18552649328">Parler avec un spécialiste d'eau au 1-855-264-9328</a>
+                <a href="tel:18552649328">Parlez avec un spécialiste d'eau au 1-855-264-9328</a>
               </Button>
             </div>
           </div>

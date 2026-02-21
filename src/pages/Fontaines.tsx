@@ -22,6 +22,9 @@ import { NavLink } from "@/components/NavLink";
 import heroFountains from "@/assets/Fontaines d'eau.webp";
 import solutionsEauImg from "@/assets/Solutions d'eau potable.webp";
 import fontaineAutoportanteImg from "@/assets/Refroidisseur+d'eau+autoportant+à+eau+chaude,+froide+et+à+température+ambiante.webp";
+import countertopFountainImg from "@/assets/A9.jpg";
+import bottlelessFountainImg from "@/assets/A13.jpg";
+import iceMachineImg from "@/assets/Machine+à+glaçons+de+comptoir+auto-nettoyante+de+26+lb+R.W.FLAME-78609293.webp";
 
 const Fontaines = () => {
     return (
@@ -110,18 +113,14 @@ const Fontaines = () => {
                         </p>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mx-auto max-w-7xl">
                             {[
-                                { title: "Distributeurs d'eau de comptoir", desc: "Une solution compacte offrant une eau filtrée de qualité supérieure directement sur votre comptoir, sans encombrement.", img: fontaineAutoportanteImg },
-                                { title: "Fontaines d'eau sans bouteille", desc: "Eau fraîche et purifiée en continu, sans la corvée des bouteilles. Hydratation illimitée pour votre famille.", img: fontaineAutoportanteImg },
-                                { title: "Machines à glaçons", desc: "Machines robustes produisant une glace pure et abondante pour satisfaire vos besoins en toute circonstance, sans aucune interruption.", icon: Snowflake },
+                                { title: "Distributeurs d'eau de comptoir", desc: "Une solution compacte offrant une eau filtrée de qualité supérieure directement sur votre comptoir, sans encombrement.", img: countertopFountainImg },
+                                { title: "Fontaines d'eau sans bouteille", desc: "Eau fraîche et purifiée en continu, sans la corvée des bouteilles. Hydratation illimitée pour votre famille.", img: bottlelessFountainImg },
+                                { title: "Machines à glaçons", desc: "Machines robustes produisant une glace pure et abondante pour satisfaire vos besoins en toute circonstance, sans aucune interruption.", img: iceMachineImg },
                                 { title: "Stations de purification d'eau", desc: "Technologie avancée éliminant les contaminants pour une eau cristalline d'une pureté absolue et un goût parfait.", img: solutionsEauImg },
                             ].map((item, i) => (
                                 <div key={i} className="bg-white text-slate-900 rounded-2xl p-8 flex flex-col items-center transition-all hover:shadow-2xl hover:-translate-y-2">
                                     <div className="w-full aspect-square bg-slate-100 rounded-xl mb-6 flex items-center justify-center p-4">
-                                        {item.img ? (
-                                            <img src={item.img} alt={`${item.title} - Solution d'hydratation professionnelle Bricareau`} className="w-full h-full object-contain mix-blend-multiply" />
-                                        ) : (
-                                            item.icon && <item.icon className="w-16 h-16 text-blue-600 opacity-20" />
-                                        )}
+                                        <img src={item.img} alt={`${item.title} - Solution d'hydratation professionnelle Bricareau`} className="w-full h-full object-contain mix-blend-multiply" />
                                     </div>
                                     <h3 className="text-xl font-medium mb-4">{item.title}</h3>
                                     <p className="font-light text-[18px] leading-[24px] text-slate-500 mb-6 flex-grow">{item.desc}</p>
