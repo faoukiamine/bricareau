@@ -168,7 +168,7 @@ const TestsEauPage = () => {
             >
               <path
                 d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-                fill="#001533"
+                fill="#2563EB"
                 transform="rotate(180 600 60)"
               ></path>
             </svg>
@@ -178,17 +178,17 @@ const TestsEauPage = () => {
 
 
 
-        {/* 2. Why test your water Section (Dark Blue Background) - Editorial Split Layout */}
-        <section className="py-32 bg-[#001533] text-white relative z-10 -mt-2 overflow-hidden">
+        {/* 2. Why test your water Section (Blue Background) - Editorial Split Layout */}
+        <section className="py-32 bg-blue-600 text-white relative z-10 -mt-2 overflow-hidden">
           {/* Subtle Background Pattern */}
-          <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#4f46e5_1px,transparent_1px)] [background-size:24px_24px]"></div>
+          <div className="absolute inset-0 opacity-10 bg-[radial-gradient(white_1px,transparent_1px)] [background-size:24px_24px]"></div>
 
           <div className="container mx-auto px-6 relative z-10">
             <div className="flex flex-col lg:flex-row gap-16 lg:gap-24">
 
               {/* Left Column: Sticky Title */}
               <div className="lg:w-1/3 lg:sticky lg:top-32 h-fit">
-                <span className="inline-block py-1 px-3 rounded-full bg-blue-900/50 text-blue-400 text-xs font-bold uppercase tracking-widest mb-6 border border-blue-800">
+                <span className="inline-block py-1 px-3 rounded-full bg-white/10 text-white text-xs font-bold uppercase tracking-widest mb-6 border border-white/20">
                   POURQUOI TESTER ?
                 </span>
                 <h2
@@ -196,9 +196,9 @@ const TestsEauPage = () => {
                   style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                 >
                   <span className="text-[36px] md:text-[50px] font-bold leading-[1.05] block mb-2">Découvrez</span>
-                  <span className="text-[36px] md:text-[50px] font-light leading-[1.05] block text-blue-200">l'invisible.</span>
+                  <span className="text-[36px] md:text-[50px] font-light leading-[1.05] block text-blue-100">l'invisible.</span>
                 </h2>
-                <p className="text-lg font-light leading-relaxed text-blue-100/60 text-justify border-l-2 border-blue-900 pl-6">
+                <p className="text-lg font-light leading-relaxed text-white/80 text-justify border-l-2 border-white/20 pl-6">
                   L'eau claire cache parfois des secrets. Minéraux, bactéries ou contaminants chimiques : une analyse est la seule façon de savoir ce que vous buvez réellement.
                 </p>
               </div>
@@ -260,15 +260,15 @@ const TestsEauPage = () => {
                 ].map((item, id) => (
                   <div
                     key={id}
-                    className="group bg-slate-900/50 hover:bg-slate-800/80 border border-slate-800 hover:border-slate-700 rounded-3xl p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-blue-900/20"
+                    className="group bg-white/10 hover:bg-white/20 border border-white/10 hover:border-white/20 rounded-3xl p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-blue-900/20 backdrop-blur-sm"
                   >
-                    <div className="w-12 h-12 rounded-xl bg-blue-500/20 flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform duration-500 border border-blue-500/30">
-                      <div className="h-6 w-6 text-blue-200">
+                    <div className="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform duration-500 border border-white/30">
+                      <div className="h-6 w-6 text-white">
                         {item.icon}
                       </div>
                     </div>
                     <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
-                    <p className="text-base text-slate-400 leading-relaxed group-hover:text-slate-300 transition-colors">
+                    <p className="text-base text-blue-50 leading-relaxed group-hover:text-white transition-colors">
                       {item.desc}
                     </p>
                   </div>
