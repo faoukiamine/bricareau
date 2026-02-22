@@ -37,20 +37,43 @@ import waterTestingImg from "@/assets/Legionella-Monitoring.webp";
 const DesinfectionUV = () => {
     const [showAllFaqs, setShowAllFaqs] = React.useState(false);
     useEffect(() => {
-        document.title = "Systèmes de désinfection UV | Stérilisateur d'eau | Bricareau";
+        document.title = "Désinfection UV : Éliminez 99,99% des bactéries et virus";
         const metaDesc = document.querySelector('meta[name="description"]');
         if (metaDesc) {
-            metaDesc.setAttribute("content", "Éliminez 99,99% des bactéries et virus de votre eau avec nos systèmes de désinfection UV haute performance. Protection microbiologique sans produits chimiques au Canada.");
+            metaDesc.setAttribute("content", "Protection maximale contre les bactéries et virus. Nos systèmes UV éliminent 99,99% des micro-organismes sans produits chimiques.");
         }
 
         // OG Tags
         const ogTitle = document.querySelector('meta[property="og:title"]');
-        if (ogTitle) ogTitle.setAttribute("content", "Désinfection UV et Stérilisation d'eau | Bricareau");
+        if (ogTitle) ogTitle.setAttribute("content", "Désinfection UV : Sécurité microbiologique | Bricareau");
         const ogDesc = document.querySelector('meta[property="og:description"]');
-        if (ogDesc) ogDesc.setAttribute("content", "Protection maximale contre les micro-organismes nocifs. Une eau potable sécuritaire pour toute la famille.");
+        if (ogDesc) ogDesc.setAttribute("content", "Une eau potable sécuritaire pour toute votre famille. Découvrez nos solutions de stérilisation UV haute performance.");
     }, []);
 
+
+    const uvTestimonials = [
+        {
+            content: "Après avoir trouvé des bactéries dans notre eau de puits, nous avons installé un système UV Bricareau. Les tests suivants étaient parfaits. Grande tranquillité d'esprit.",
+            author: "Martin S.",
+            location: "Bromont, QC",
+            rating: 5
+        },
+        {
+            content: "Système très fiable et facile d'entretien. L'alarme nous prévient quand changer la lampe, c'est rassurant. Je me sens en sécurité en buvant mon eau.",
+            author: "Valérie G.",
+            location: "Granby, QC",
+            rating: 5
+        },
+        {
+            content: "Excellent produit. Plus de soucis de contamination microbiologique. L'installation a été faite de manière très professionnelle.",
+            author: "Hervé B.",
+            location: "Magog, QC",
+            rating: 5
+        }
+    ];
+
     const comparisonData = [
+
         { feature: "Élimination 99.99% des virus", VH410F20: true, VH200F10: true, Arros15IHS10: true },
         { feature: "Destruction des bactéries", VH410F20: true, VH200F10: true, Arros15IHS10: true },
         { feature: "Neutralisation des kystes", VH410F20: true, VH200F10: true, Arros15IHS10: true },
@@ -325,7 +348,16 @@ const DesinfectionUV = () => {
                 </section>
 
                 {/* 7. Testimonials Section */}
-                <TestimonialsSection />
+                <TestimonialsSection
+                    testimonials={uvTestimonials}
+                    title={
+                        <>
+                            <span className="text-[32px] md:text-[60px] font-light leading-[1.2] md:leading-[60px] block">Une eau saine.</span>
+                            <span className="text-[32px] md:text-[60px] font-normal leading-[1.2] md:leading-[60px] block">Une sécurité UV.</span>
+                        </>
+                    }
+                />
+
 
                 {/* 8. FAQ Section */}
                 <section className="py-24 bg-white border-t border-slate-100">

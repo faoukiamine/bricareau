@@ -35,18 +35,19 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 const Filtration = () => {
     const [showAllFaqs, setShowAllFaqs] = React.useState(false);
     useEffect(() => {
-        document.title = "Filtration d'eau résidentielle | Solutions Pureté & Santé | Bricareau";
+        document.title = "Filtration d'eau : Une pureté maximale pour votre maison";
         const metaDesc = document.querySelector('meta[name="description"]');
         if (metaDesc) {
-            metaDesc.setAttribute("content", "Découvrez nos systèmes de filtration d'eau pour toute la maison. Éliminez les contaminants, améliorez le goût et protégez votre santé avec Bricareau au Canada.");
+            metaDesc.setAttribute("content", "Découvrez nos systèmes de filtration d'eau pour toute la maison. Éliminez les contaminants et améliorez le goût de votre eau avec Bricareau.");
         }
 
         // OG Tags
         const ogTitle = document.querySelector('meta[property="og:title"]');
-        if (ogTitle) ogTitle.setAttribute("content", "Systèmes de Filtration d'eau Résidentielle | Bricareau");
+        if (ogTitle) ogTitle.setAttribute("content", "Filtration d'eau : Pureté maximale | Bricareau");
         const ogDesc = document.querySelector('meta[property="og:description"]');
         if (ogDesc) ogDesc.setAttribute("content", "Une eau pure à chaque robinet. Investissez dans la santé de votre famille avec nos solutions de filtration avancées.");
     }, []);
+
 
     const comparisonData = [
         { feature: "Installation", whole: "Point d'entrée", basic: "Sous l'évier" },
@@ -60,6 +61,28 @@ const Filtration = () => {
         { feature: "Goût d'une eau embouteillée premium", whole: true, basic: "Supérieur" },
         { feature: "Emplacement courant", whole: "Salle mécanique", basic: "Cuisine" },
     ];
+
+    const filtrationTestimonials = [
+        {
+            content: "Depuis l'installation du système de filtration pour toute la maison, le goût de l'eau est incroyable. Plus besoin d'acheter de bouteilles d'eau !",
+            author: "Marc-André L.",
+            location: "Sherbrooke, QC",
+            rating: 5
+        },
+        {
+            content: "L'odeur de chlore a complètement disparu. Ma peau et mes cheveux sont beaucoup moins secs après la douche.",
+            author: "Catherine D.",
+            location: "Terrebonne, QC",
+            rating: 5
+        },
+        {
+            content: "Service impeccable. Les filtres sous l'évier sont compacts et l'eau est tellement pure. Je recommande Bricareau sans hésitation.",
+            author: "Robert G.",
+            location: "Gatineau, QC",
+            rating: 5
+        }
+    ];
+
 
     return (
         <div className="min-h-screen bg-background text-slate-900 font-sans">
@@ -422,7 +445,15 @@ const Filtration = () => {
                 </section>
 
                 {/* 7. Testimonials Section */}
-                <TestimonialsSection />
+                <TestimonialsSection
+                    testimonials={filtrationTestimonials}
+                    title={
+                        <>
+                            <span className="text-[32px] md:text-[60px] font-light leading-[1.2] md:leading-[60px] block">Une eau plus pure.</span>
+                            <span className="text-[32px] md:text-[60px] font-normal leading-[1.2] md:leading-[60px] block">Une santé protégée.</span>
+                        </>
+                    }
+                />
 
                 {/* 8. Comparison Table */}
                 <section className="py-24 bg-gray-50">

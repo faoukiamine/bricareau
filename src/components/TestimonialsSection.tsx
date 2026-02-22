@@ -5,7 +5,15 @@ import { Star, Quote, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState, useCallback, useEffect } from "react";
 import { cn } from "@/lib/utils";
 
-const testimonials = [
+
+export interface Testimonial {
+    content: string;
+    author: string;
+    location: string;
+    rating: number;
+}
+
+const defaultTestimonials: Testimonial[] = [
     {
         content: "Bricareau avait le produit que nous cherchions et le service a été très rapide! Le technicien est très passionné par son travail et m'a fait part de son savoir et de conseils. Je suis très satisfaite du service et nous pouvons maintenant boire de l'eau en toute confiance",
         author: "Naomie Fontaine",
@@ -26,7 +34,20 @@ const testimonials = [
     }
 ];
 
-const TestimonialsSection = () => {
+interface TestimonialsSectionProps {
+    testimonials?: Testimonial[];
+    title?: React.ReactNode;
+}
+
+const TestimonialsSection = ({
+    testimonials = defaultTestimonials,
+    title = (
+        <>
+            <span className="text-[32px] md:text-[60px] font-light leading-[1.2] md:leading-[60px] block">Qualité inégalée.</span>
+            <span className="text-[32px] md:text-[60px] font-normal leading-[1.2] md:leading-[60px] block">Service inoubliable.</span>
+        </>
+    )
+}: TestimonialsSectionProps) => {
     const [emblaRef, emblaApi] = useEmblaCarousel({
         loop: true,
         align: "start",
@@ -67,8 +88,7 @@ const TestimonialsSection = () => {
                         className="text-foreground tracking-tighter"
                         style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                     >
-                        <span className="text-[32px] md:text-[60px] font-light leading-[1.2] md:leading-[60px] block">Qualité inégalée.</span>
-                        <span className="text-[32px] md:text-[60px] font-normal leading-[1.2] md:leading-[60px] block">Service inoubliable.</span>
+                        {title}
                     </h2>
                 </div>
 
@@ -101,7 +121,7 @@ const TestimonialsSection = () => {
                                             </div>
 
                                             <div className="flex gap-1.5">
-                                                {[1, 2, 3, 4, 5].map((s) => (
+                                                {Array.from({ length: item.rating }).map((_, s) => (
                                                     <Star key={s} className="h-5 w-5 fill-[#FBBF24] text-[#FBBF24]" />
                                                 ))}
                                             </div>
@@ -153,3 +173,4 @@ const TestimonialsSection = () => {
 };
 
 export default TestimonialsSection;
+

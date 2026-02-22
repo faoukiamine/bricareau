@@ -100,21 +100,44 @@ const comparisonData = [
   { feature: "Filtration des polluants chimiques", filters: "Option", softeners: false, osmose: true, uv: false },
 ];
 
+const puitsTestimonials = [
+  {
+    content: "Nous avions une forte odeur d'œufs pourris dans notre eau de puits. Grâce à leur système de filtration, l'eau est maintenant claire et sans aucune odeur. Un vrai soulagement !",
+    author: "Jean-Pierre M.",
+    location: "Saint-Jérôme, QC",
+    rating: 5
+  },
+  {
+    content: "Les taches de rouille dans nos éviers ont disparu. Le test d'eau était précis et la solution proposée parfaitement adaptée à notre problème de fer.",
+    author: "Sylvie L.",
+    location: "Mirabel, QC",
+    rating: 5
+  },
+  {
+    content: "Excellent service pour notre eau de puits. Ils connaissent vraiment leur sujet. On se sent en sécurité de boire notre eau maintenant.",
+    author: "Benoit R.",
+    location: "Drummondville, QC",
+    rating: 5
+  }
+];
+
 const EauDePuits = () => {
+
   const [showAllFaqs, setShowAllFaqs] = React.useState(false);
   useEffect(() => {
-    document.title = "Traitement d'eau de puits | Solution Eau de Puits | Bricareau Canada";
+    document.title = "Eau de puits : Solutions de traitement et filtration";
     const metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) {
-      metaDesc.setAttribute("content", "Solutions expertes pour l'eau de puits au Canada. Élimination du fer, soufre, bactéries et sédiments. Analyse d'eau et systèmes de filtration haute performance.");
+      metaDesc.setAttribute("content", "Solutions expertes pour l'eau de puits : fer, soufre et bactéries. Profitez d'une eau pure avec nos systèmes de filtration haute performance.");
     }
 
     // OG Tags
     const ogTitle = document.querySelector('meta[property="og:title"]');
-    if (ogTitle) ogTitle.setAttribute("content", "Traitement d'eau de puits - Solutions complètes | Bricareau");
+    if (ogTitle) ogTitle.setAttribute("content", "Eau de puits : Traitement et Purification | Bricareau");
     const ogDesc = document.querySelector('meta[property="og:description"]');
-    if (ogDesc) ogDesc.setAttribute("content", "Protégez votre santé et vos installations avec nos systèmes de filtration spécialisés pour puits privés.");
+    if (ogDesc) ogDesc.setAttribute("content", "Protégez votre santé avec nos systèmes de filtration spécialisés pour puits privés. Expertise et fiabilité.");
   }, []);
+
 
   return (
     <div className="min-h-screen bg-background">
@@ -479,7 +502,16 @@ const EauDePuits = () => {
         </section>
 
         {/* 7. Testimonial Slider */}
-        <TestimonialsSection />
+        <TestimonialsSection
+          testimonials={puitsTestimonials}
+          title={
+            <>
+              <span className="text-[32px] md:text-[60px] font-light leading-[1.2] md:leading-[60px] block">Une eau saine.</span>
+              <span className="text-[32px] md:text-[60px] font-normal leading-[1.2] md:leading-[60px] block">Un puits protégé.</span>
+            </>
+          }
+        />
+
 
         {/* 8. Comparison Table Section */}
         <section className="py-24 bg-gray-50">

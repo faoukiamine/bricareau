@@ -4,8 +4,10 @@ import Footer from "@/components/Footer";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import { Button } from "@/components/ui/button";
 import heroBath from "@/assets/kid-playing-bathtub.jpg";
+import heroDesktop from "@/assets/hero-image.jpg";
 import {
     ArrowRight,
+
     Droplets,
     Star,
     ChevronRight,
@@ -41,7 +43,29 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import ConsultationFormSection from "@/components/ConsultationFormSection";
 
+const adoucisseursPuitsTestimonials = [
+    {
+        content: "L'eau de notre puits était si dure qu'elle bouchait nos robinets. Depuis l'installation de l'adoucisseur Sentinelle, tout est parfait. Plus de calcaire !",
+        author: "Mathieu V.",
+        location: "Saint-Eustache, QC",
+        rating: 5
+    },
+    {
+        content: "On voyait la différence dès le premier jour. Le fer a aussi été réduit et l'eau n'a plus cet aspect jaunâtre. Excellent service technique.",
+        author: "Isabelle J.",
+        location: "Blainville, QC",
+        rating: 5
+    },
+    {
+        content: "Très satisfait de notre achat. L'équipe a pris le temps d'analyser notre eau avant de nous conseiller le bon modèle. On gagne en confort et en tranquillité.",
+        author: "Gabriel M.",
+        location: "Mascouche, QC",
+        rating: 5
+    }
+];
+
 const products = [
+
     { name: "Adoucisseur d'eau de la série Sentinelle HE", displayName: <>Adoucisseur d'eau de la série<br />Sentinelle HE</>, desc: "Le rythme parfait d'une eau toujours douce.", path: "/adoucisseur-eau-municipal", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
     { name: "Adoucisseur d'eau de la série Sérénité HE", displayName: <>Adoucisseur d'eau de la série<br />Sérénité HE</>, desc: "La paix durable pour votre maison et votre confort.", path: "/adoucisseur-eau-municipal", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
     { name: "Adoucisseur d'eau de la série Infiniti HE", displayName: <>Adoucisseur d'eau de la série<br />Infiniti HE</>, desc: "Une douceur constante, à chaque goutte, à chaque seconde.", path: "/adoucisseur-eau-municipal", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
@@ -151,18 +175,19 @@ const comparisonData = [
 const AdoucisseursEauDePuits = () => {
     const [showAllFaqs, setShowAllFaqs] = React.useState(false);
     useEffect(() => {
-        document.title = "Adoucisseur d'eau de puits | Protection Fer & Calcaire | Bricareau";
+        document.title = "Adoucisseur d'eau de puits : Protection fer et calcaire";
         const metaDesc = document.querySelector('meta[name="description"]');
         if (metaDesc) {
-            metaDesc.setAttribute("content", "Protégez votre maison et vos appareils avec nos adoucisseurs d'eau spécialisés pour les puits privés. Élimination efficace du fer et du calcaire au Canada.");
+            metaDesc.setAttribute("content", "Protégez votre maison et vos appareils avec nos adoucisseurs d'eau spécialisés pour puits privés. Élimination efficace du fer et du calcaire.");
         }
 
         // OG Tags
         const ogTitle = document.querySelector('meta[property="og:title"]');
-        if (ogTitle) ogTitle.setAttribute("content", "Adoucisseur d'eau de puits - Performance & Fiabilité | Bricareau");
+        if (ogTitle) ogTitle.setAttribute("content", "Adoucisseur de puits : Fer et Calcaire | Bricareau");
         const ogDesc = document.querySelector('meta[property="og:description"]');
-        if (ogDesc) ogDesc.setAttribute("content", "Découvrez nos solutions d'adoucissement robustes pour traiter l'eau dure et le fer de votre puits.");
+        if (ogDesc) ogDesc.setAttribute("content", "Solutions d'adoucissement robustes pour traiter l'eau dure et le fer de votre puits. Performance et fiabilité garanties.");
     }, []);
+
 
     return (
         <div className="min-h-screen bg-white">
@@ -172,16 +197,20 @@ const AdoucisseursEauDePuits = () => {
                 {/* 1.Hero Section */}
                 <section className="relative h-[850px] flex items-center overflow-hidden -mt-[104px] pt-[104px]">
                     <div className="absolute inset-0 z-0">
-                        <img
-                            src={heroBath}
-                            alt="Bain d'enfant dans une eau de puits douce et saine - Adoucisseur d'eau Bricareau"
-                            className="w-full h-full object-cover"
-                        />
+                        <picture>
+                            <source media="(max-width: 768px)" srcSet={heroBath} />
+                            <img
+                                src={heroDesktop}
+                                alt="Bain d'enfant dans une eau de puits douce et saine - Adoucisseur d'eau Bricareau"
+                                className="w-full h-full object-cover"
+                            />
+                        </picture>
                         <div className="absolute inset-0 bg-black/40 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
                         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-white via-white/10 to-transparent" />
                         {/* Brightening Start 1/3 Right */}
                         <div className="absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white/90 via-white/40 to-transparent" />
                     </div>
+
 
                     <div className="container mx-auto px-6 relative z-10">
                         <div className="max-w-2xl text-white">
@@ -410,7 +439,16 @@ const AdoucisseursEauDePuits = () => {
                 </section>
 
                 {/* 6.Testimonials Grid Section */}
-                <TestimonialsSection />
+                <TestimonialsSection
+                    testimonials={adoucisseursPuitsTestimonials}
+                    title={
+                        <>
+                            <span className="text-[32px] md:text-[60px] font-light leading-[1.2] md:leading-[60px] block">Une expertise puits.</span>
+                            <span className="text-[32px] md:text-[60px] font-normal leading-[1.2] md:leading-[60px] block">Une satisfaction totale.</span>
+                        </>
+                    }
+                />
+
 
                 {/* 5. CTA Section */}
                 <section className="bg-primary py-16 md:py-20">

@@ -41,20 +41,43 @@ const FiltrationSousEvier = () => {
     const [showAllFaqs, setShowAllFaqs] = React.useState(false);
 
     useEffect(() => {
-        document.title = "Systèmes de filtration d'eau sous évier | Bricareau - Pureté Maximale";
+        document.title = "Filtration sous évier : Eau pure directement au robinet";
         const metaDesc = document.querySelector('meta[name="description"]');
         if (metaDesc) {
-            metaDesc.setAttribute("content", "Découvrez nos systèmes de filtration d'eau sous évier Cristal Pro. Filtration performante, ultrafiltration et goût exceptionnel pour votre cuisine au Canada.");
+            metaDesc.setAttribute("content", "Découvrez nos systèmes de filtration sous évier. Une eau potable pure, sans chlore et au goût parfait directement de votre robinet.");
         }
 
         // OG Tags
         const ogTitle = document.querySelector('meta[property="og:title"]');
-        if (ogTitle) ogTitle.setAttribute("content", "Systèmes de filtration d'eau sous évier | Bricareau");
+        if (ogTitle) ogTitle.setAttribute("content", "Filtration sous évier : Pureté et Confort | Bricareau");
         const ogDesc = document.querySelector('meta[property="og:description"]');
-        if (ogDesc) ogDesc.setAttribute("content", "Profitez d'une eau potable pure directement de votre robinet avec nos systèmes d'ultrafiltration Cristal Pro.");
+        if (ogDesc) ogDesc.setAttribute("content", "Profitez d'une eau saine et délicieuse avec nos solutions d'ultrafiltration Cristal Pro. Gain d'espace et performance.");
     }, []);
 
+
+    const sousEvierTestimonials = [
+        {
+            content: "L'eau de mon robinet a maintenant le même goût que l'eau embouteillée premium. Le système sous l'évier est très discret et efficace.",
+            author: "André C.",
+            location: "Mont-Royal, QC",
+            rating: 5
+        },
+        {
+            content: "Installation facile et service client au top. Je peux enfin boire l'eau du robinet sans cette horrible odeur de chlore.",
+            author: "Sophie T.",
+            location: "Outremont, QC",
+            rating: 5
+        },
+        {
+            content: "Un excellent investissement. Mes enfants boivent beaucoup plus d'eau depuis que nous avons installé le Cristal Pro. Le goût est incomparable.",
+            author: "Dominic P.",
+            location: "Westmount, QC",
+            rating: 5
+        }
+    ];
+
     const comparisonData = [
+
         { feature: "Nombre d'étapes de filtration", elite: "3 Étapes", plus: "2 Étapes", essential: "1 Étape" },
         { feature: "Élimination des sédiments (sable, terre et rouille)", elite: true, plus: true, essential: true },
         { feature: "Élimination du chlore (Goût/Odeur)", elite: true, plus: true, essential: false },
@@ -325,7 +348,16 @@ const FiltrationSousEvier = () => {
                 </section>
 
                 {/* 7. Testimonials Section */}
-                <TestimonialsSection />
+                <TestimonialsSection
+                    testimonials={sousEvierTestimonials}
+                    title={
+                        <>
+                            <span className="text-[32px] md:text-[60px] font-light leading-[1.2] md:leading-[60px] block">Une eau gourmande.</span>
+                            <span className="text-[32px] md:text-[60px] font-normal leading-[1.2] md:leading-[60px] block">Un robinet réinventé.</span>
+                        </>
+                    }
+                />
+
 
                 {/* 8. FAQ Section */}
                 <section className="py-24 bg-white border-t border-slate-100">

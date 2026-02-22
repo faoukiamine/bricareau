@@ -128,18 +128,19 @@ const resources = [
 ];
 
 const ConditionneursSansSel = () => {
+  const [showAllFaqs, setShowAllFaqs] = React.useState(false);
   useEffect(() => {
-    document.title = "Conditionneur d'eau sans sel | Anti-tartre Écologique | Bricareau";
+    document.title = "Conditionneur d'eau sans sel | L'anti-tartre écologique";
     const metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) {
-      metaDesc.setAttribute("content", "Protégez votre maison du calcaire sans sel ni saumure. Découvrez nos conditionneurs d'eau écologiques TAC pour une eau saine, sans tartre et sans rejet.");
+      metaDesc.setAttribute("content", "Éliminez le calcaire sans sel ni électricité. Découvrez nos conditionneurs d'eau écologiques TAC pour une maison sans tartre et une eau pure.");
     }
 
     // OG Tags
     const ogTitle = document.querySelector('meta[property="og:title"]');
-    if (ogTitle) ogTitle.setAttribute("content", "Conditionneur d'eau sans sel - Solution Anti-tartre | Bricareau");
+    if (ogTitle) ogTitle.setAttribute("content", "Conditionneur d'eau sans sel | Anti-tartre Écologique");
     const ogDesc = document.querySelector('meta[property="og:description"]');
-    if (ogDesc) ogDesc.setAttribute("content", "La technologie verte pour neutraliser le calcaire. Zéro sel, zéro électricité, protection maximale.");
+    if (ogDesc) ogDesc.setAttribute("content", "La technologie verte pour neutraliser le calcaire. Zéro sel, zéro électricité, protection maximale pour votre plomberie.");
   }, []);
 
   return (
@@ -344,20 +345,30 @@ const ConditionneursSansSel = () => {
 
             <div className="max-w-4xl mx-auto">
               <Accordion type="single" collapsible className="w-full">
-                {faqs.map((faq, idx) => (
-                  <AccordionItem key={idx} value={`item-${idx}`} className="border-b-gray-200">
-                    <AccordionTrigger className="text-left font-medium text-lg hover:no-underline py-6">
+                {faqs.slice(0, showAllFaqs ? undefined : 6).map((faq, idx) => (
+                  <AccordionItem key={idx} value={`item-${idx}`} className="border-b-slate-100 px-4">
+                    <AccordionTrigger className="text-left text-base font-medium leading-6 hover:no-underline py-8 text-slate-800" style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}>
                       {faq.question}
                     </AccordionTrigger>
-                    <AccordionContent className="text-gray-600 text-lg leading-relaxed pb-6">
+                    <AccordionContent className="text-base font-light leading-6 text-slate-500 pb-8 text-justify" style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}>
                       {faq.answer}
                     </AccordionContent>
                   </AccordionItem>
                 ))}
               </Accordion>
+              <div className="mt-12 text-center">
+                <Button
+                  onClick={() => setShowAllFaqs(!showAllFaqs)}
+                  className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-12 h-14 shadow-lg shadow-blue-200"
+                  style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                >
+                  {showAllFaqs ? "Voir moins" : "Voir plus de questions"}
+                </Button>
+              </div>
             </div>
           </div>
         </section>
+
 
         {/* 7. Resources Section */}
         <section className="py-24 bg-gray-50">

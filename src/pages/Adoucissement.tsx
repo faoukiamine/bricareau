@@ -49,19 +49,41 @@ import ConsultationFormSection from "@/components/ConsultationFormSection";
 
 
 const Adoucissement = () => {
+    const adoucissementTestimonials = [
+        {
+            content: "Fini les traces de calcaire sur mes parois de douche ! Ma peau est beaucoup plus douce et j'utilise beaucoup moins de savon.",
+            author: "Lucie P.",
+            location: "Laval, QC",
+            rating: 5
+        },
+        {
+            content: "Notre chauffe-eau fonctionne mieux et nos vêtements sont plus éclatants. L'investissement dans cet adoucisseur en valait vraiment la peine.",
+            author: "Stéphane B.",
+            location: "Longueuil, QC",
+            rating: 5
+        },
+        {
+            content: "Une équipe très professionnelle. L'installation a été rapide et propre. L'eau douce change vraiment le quotidien.",
+            author: "Marie-Claude S.",
+            location: "Brossard, QC",
+            rating: 5
+        }
+    ];
+
     const [showAllFaqs, setShowAllFaqs] = React.useState(false);
+
     useEffect(() => {
-        document.title = "Adoucisseur d'eau | Élimination du Calcaire | Bricareau Canada";
+        document.title = "Adoucisseur d'eau : Adieu le calcaire et l'eau dure";
         const metaDesc = document.querySelector('meta[name="description"]');
         if (metaDesc) {
-            metaDesc.setAttribute("content", "Dites adieu au calcaire avec nos adoucisseurs d'eau haute performance. Protégez votre plomberie et profitez d'une peau plus douce avec Bricareau.");
+            metaDesc.setAttribute("content", "Dites adieu au calcaire avec nos adoucisseurs d'eau haute performance. Profitez d'une peau plus douce et protégez vos appareils.");
         }
 
         // OG Tags
         const ogTitle = document.querySelector('meta[property="og:title"]');
-        if (ogTitle) ogTitle.setAttribute("content", "Adoucisseurs d'eau et Conditionneurs sans sel | Bricareau");
+        if (ogTitle) ogTitle.setAttribute("content", "Adoucisseur d'eau : Éliminez le calcaire | Bricareau");
         const ogDesc = document.querySelector('meta[property="og:description"]');
-        if (ogDesc) ogDesc.setAttribute("content", "Transformez votre eau dure en une eau soyeuse. Découvrez nos solutions d'adoucissement résidentiel.");
+        if (ogDesc) ogDesc.setAttribute("content", "Une eau soyeuse pour toute la maison. Découvrez nos solutions d'adoucissement haute performance.");
     }, []);
     return (
         <div className="min-h-screen bg-background font-sans text-slate-900">
@@ -381,7 +403,16 @@ const Adoucissement = () => {
                 </section>
 
                 {/* 6. Testimonials */}
-                <TestimonialsSection />
+                <TestimonialsSection
+                    testimonials={adoucissementTestimonials}
+                    title={
+                        <>
+                            <span className="text-[32px] md:text-[60px] font-light leading-[1.2] md:leading-[60px] block">Une eau soyeuse.</span>
+                            <span className="text-[32px] md:text-[60px] font-normal leading-[1.2] md:leading-[60px] block">Un confort absolu.</span>
+                        </>
+                    }
+                />
+
 
 
                 {/* 7. Comparison Table */}
