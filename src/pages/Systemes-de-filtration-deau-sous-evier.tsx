@@ -38,6 +38,7 @@ import waterTestingImg from "@/assets/undersink_filtration_header.jpg";
 
 const FiltrationSousEvier = () => {
     const navigate = useNavigate();
+    const [showAllFaqs, setShowAllFaqs] = React.useState(false);
 
     useEffect(() => {
         document.title = "Systèmes de filtration d'eau sous évier | Bricareau - Pureté Maximale";
@@ -402,7 +403,7 @@ const FiltrationSousEvier = () => {
                                         q: "Pourquoi choisir Bricareau plutôt qu'un pichet filtrant ?",
                                         a: "Contrairement aux pichets qui ont une capacité limitée et une filtration superficielle, nos systèmes offrent un débit constant et une filtration de niveau industriel beaucoup plus profonde et durable.",
                                     },
-                                ].map((item, idx) => (
+                                ].slice(0, showAllFaqs ? undefined : 6).map((item, idx) => (
                                     <AccordionItem key={idx} value={`item-${idx}`} className="border-b-slate-100 px-4">
                                         <AccordionTrigger className="text-left text-base font-medium leading-6 hover:no-underline py-8 text-slate-800" style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}>
                                             {item.q}
@@ -413,6 +414,14 @@ const FiltrationSousEvier = () => {
                                     </AccordionItem>
                                 ))}
                             </Accordion>
+                            <div className="mt-12 text-center">
+                                <Button
+                                    onClick={() => setShowAllFaqs(!showAllFaqs)}
+                                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-12 h-14 shadow-lg shadow-blue-200"
+                                >
+                                    {showAllFaqs ? "Voir moins de questions" : "Voir toutes les questions"}
+                                </Button>
+                            </div>
                         </div>
                     </div>
                 </section>

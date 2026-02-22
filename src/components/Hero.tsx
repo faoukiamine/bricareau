@@ -36,10 +36,10 @@ const Hero = () => {
             <p className="text-lg font-light leading-relaxed text-white/95 max-w-xl text-justify">
               Plus de 20 000 foyers canadiens ont confié le traitement d’eau de leurs foyers à Bricareau.
             </p>
-            <div className="flex gap-4 pt-4">
+            <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Button
                 size="lg"
-                className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200"
+                className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200 w-full sm:w-auto"
                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                 asChild
               >
@@ -47,7 +47,7 @@ const Hero = () => {
               </Button>
               <Button
                 size="lg"
-                className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200"
+                className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200 w-full sm:w-auto"
                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                 asChild
               >

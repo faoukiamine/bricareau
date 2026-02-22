@@ -41,6 +41,7 @@ import waterTestingImg from "@/assets/leaky-faucet-with-dripping-water-drop-cons
 
 const StationEauPotable = () => {
   const navigate = useNavigate();
+  const [showAllFaqs, setShowAllFaqs] = React.useState(false);
 
   useEffect(() => {
     document.title = "Systèmes d'osmose inverse | Purificateur d'eau potable | Bricareau";
@@ -407,7 +408,7 @@ const StationEauPotable = () => {
                   q: "Quelle est la durée de vie globale du système ?",
                   a: "Avec un entretien régulier et des changements de filtres planifiés, un système d'osmose inverse de qualité Bricareau peut facilement durer 15 à 20 ans. C'est un investissement durable pour la santé de votre famille.",
                 },
-              ].map((item, idx) => (
+              ].slice(0, showAllFaqs ? undefined : 6).map((item, idx) => (
                 <AccordionItem key={idx} value={`item-${idx}`} className="border-b-slate-100 px-4">
                   <AccordionTrigger className="text-left text-base font-medium leading-6 hover:no-underline py-8 text-slate-800" style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}>
                     {item.q}
@@ -418,6 +419,14 @@ const StationEauPotable = () => {
                 </AccordionItem>
               ))}
             </Accordion>
+            <div className="mt-12 text-center">
+              <Button
+                onClick={() => setShowAllFaqs(!showAllFaqs)}
+                className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-12 h-14 shadow-lg shadow-blue-200"
+              >
+                {showAllFaqs ? "Voir moins de questions" : "Voir toutes les questions"}
+              </Button>
+            </div>
           </div>
         </section>
 

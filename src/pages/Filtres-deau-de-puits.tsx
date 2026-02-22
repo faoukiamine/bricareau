@@ -123,6 +123,7 @@ const comparisonData = [
     { feature: "Entretien / Maintenance", Vortex: "Minimal", ZenPH: "Moyen", ChlorStop: "Bas", IronShield: "Bas", OxyPure: "Moyen", SulphurShield: "Bas", ZeroAs: "Moyen", TannEx: "Moyen", SerenitePure: "Élevé" },];
 
 const FiltresPuits = () => {
+    const [showAllFaqs, setShowAllFaqs] = React.useState(false);
     useEffect(() => {
         document.title = "Filtres d'eau de puits | Traitement Fer, Soufre & Manganèse | Bricareau";
         const metaDesc = document.querySelector('meta[name="description"]');
@@ -444,7 +445,7 @@ const FiltresPuits = () => {
                         </div>
                         <div className="max-w-4xl mx-auto">
                             <Accordion type="single" collapsible className="w-full">
-                                {faqItems.map((item, idx) => (
+                                {faqItems.slice(0, showAllFaqs ? undefined : 6).map((item, idx) => (
                                     <AccordionItem key={idx} value={`item-${idx}`} className="border-b-gray-200">
                                         <AccordionTrigger className="text-left font-medium text-lg hover:no-underline py-6">
                                             {item.q}
@@ -455,6 +456,14 @@ const FiltresPuits = () => {
                                     </AccordionItem>
                                 ))}
                             </Accordion>
+                            <div className="mt-12 text-center">
+                                <Button
+                                    onClick={() => setShowAllFaqs(!showAllFaqs)}
+                                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-12 h-14 shadow-lg shadow-blue-200"
+                                >
+                                    {showAllFaqs ? "Voir moins de questions" : "Voir toutes les questions"}
+                                </Button>
+                            </div>
                         </div>
                     </div>
                 </section>

@@ -33,6 +33,7 @@ import ConsultationFormSection from "@/components/ConsultationFormSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 
 const Filtration = () => {
+    const [showAllFaqs, setShowAllFaqs] = React.useState(false);
     useEffect(() => {
         document.title = "Filtration d'eau résidentielle | Solutions Pureté & Santé | Bricareau";
         const metaDesc = document.querySelector('meta[name="description"]');
@@ -170,8 +171,8 @@ const Filtration = () => {
                     <div className="container mx-auto px-6">
                         <div className="flex flex-col lg:flex-row items-start gap-16">
                             {/* Left Side: Image with Video Button */}
-                            <div className="w-full lg:w-1/2 relative sticky top-24">
-                                <div className="rounded-[2.5rem] overflow-hidden shadow-2xl relative h-[600px] w-full group">
+                            <div className="w-full lg:w-1/2 lg:sticky lg:top-24 mb-12 lg:mb-0">
+                                <div className="rounded-[2.5rem] overflow-hidden shadow-2xl relative h-[300px] sm:h-[400px] lg:h-[600px] w-full group">
                                     <img
                                         src={teenagerShowerImg}
                                         alt="Douche sous eau filtrée Bricareau - Protection de la peau et des cheveux contre le chlore"
@@ -194,7 +195,7 @@ const Filtration = () => {
                             </div>
 
                             {/* Right Side: Content */}
-                            <div className="w-full lg:w-1/2 pt-4">
+                            <div className="w-full lg:w-1/2 pt-12 lg:pt-4 relative z-10">
                                 <span className="text-sm font-bold uppercase tracking-widest text-blue-600 mb-4 block flex items-center gap-2">
                                     <span className="w-8 h-[2px] bg-blue-600 inline-block"></span>
                                     Eau filtrée pour toute la maison
@@ -242,8 +243,8 @@ const Filtration = () => {
                     <div className="container mx-auto px-6">
                         <div className="flex flex-col lg:flex-row-reverse items-start gap-16">
                             {/* Right Side (visually): Image with Video Button */}
-                            <div className="w-full lg:w-1/2 relative sticky top-24">
-                                <div className="rounded-[2.5rem] overflow-hidden shadow-2xl relative h-[600px] w-full group">
+                            <div className="w-full lg:w-1/2 lg:sticky lg:top-24 mb-12 lg:mb-0">
+                                <div className="rounded-[2.5rem] overflow-hidden shadow-2xl relative h-[300px] sm:h-[400px] lg:h-[600px] w-full group">
                                     <img
                                         src={glassOfWaterImg}
                                         alt="Verre d'eau pure provenant d'un système d'osmose inverse Bricareau - Élimination du goût de chlore"
@@ -266,7 +267,7 @@ const Filtration = () => {
                             </div>
 
                             {/* Left Side (visually): Content */}
-                            <div className="w-full lg:w-1/2 pt-4">
+                            <div className="w-full lg:w-1/2 pt-12 lg:pt-4 relative z-10">
                                 <span className="text-sm font-bold uppercase tracking-widest text-blue-600 mb-4 block flex items-center gap-2">
                                     <span className="w-8 h-[2px] bg-blue-600 inline-block"></span>
                                     EAU PURE À VOLONTÉ
@@ -315,8 +316,8 @@ const Filtration = () => {
                     <div className="container mx-auto px-6">
                         <div className="flex flex-col lg:flex-row items-start gap-16">
                             {/* Left Side: Image with Video Button */}
-                            <div className="w-full lg:w-1/2 relative sticky top-24">
-                                <div className="rounded-[2.5rem] overflow-hidden shadow-2xl relative h-[600px] w-full group">
+                            <div className="w-full lg:w-1/2 lg:sticky lg:top-24 mb-12 lg:mb-0">
+                                <div className="rounded-[2.5rem] overflow-hidden shadow-2xl relative h-[300px] sm:h-[400px] lg:h-[600px] w-full group">
                                     <img
                                         src={africanGirlImg}
                                         alt="Enfant buvant de l'eau saine filtrée sous l'évier Bricareau - Sécurité alimentaire et santé"
@@ -339,7 +340,7 @@ const Filtration = () => {
                             </div>
 
                             {/* Right Side: Content */}
-                            <div className="w-full lg:w-1/2 pt-4">
+                            <div className="w-full lg:w-1/2 pt-12 lg:pt-4 relative z-10">
                                 <span className="text-sm font-bold uppercase tracking-widest text-blue-600 mb-4 block flex items-center gap-2">
                                     <span className="w-8 h-[2px] bg-blue-600 inline-block"></span>
                                     COMPACT & PUISSANT
@@ -383,7 +384,7 @@ const Filtration = () => {
                 </section>
 
                 {/* 7.Water Testing Section */}
-                <section className="relative h-[650px] flex items-start overflow-hidden pt-[180px]">
+                <section className="relative h-[650px] flex items-center overflow-hidden">
                     <div className="absolute inset-0 z-0">
                         <img
                             src={waterTestingImg}
@@ -552,7 +553,7 @@ const Filtration = () => {
                                         q: "Est-ce que je peux installer le système moi-même ?",
                                         a: "Bien que cela soit possible pour les bricoleurs, nous recommandons une installation par nos techniciens certifiés pour garantir l'étanchéité parfaite et la validation de votre garantie Bricareau.",
                                     }
-                                ].map((item, idx) => (
+                                ].slice(0, showAllFaqs ? undefined : 6).map((item, idx) => (
                                     <AccordionItem key={idx} value={`item-${idx}`} className="border-b-slate-100 px-4">
                                         <AccordionTrigger className="text-left text-base font-medium leading-6 hover:no-underline py-8 text-slate-800" style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}>
                                             {item.q}
@@ -563,6 +564,14 @@ const Filtration = () => {
                                     </AccordionItem>
                                 ))}
                             </Accordion>
+                            <div className="mt-12 text-center">
+                                <Button
+                                    onClick={() => setShowAllFaqs(!showAllFaqs)}
+                                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-12 h-14 shadow-lg shadow-blue-200"
+                                >
+                                    {showAllFaqs ? "Voir moins de questions" : "Voir toutes les questions"}
+                                </Button>
+                            </div>
                         </div>
                     </div>
                 </section>

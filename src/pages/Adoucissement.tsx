@@ -49,6 +49,7 @@ import ConsultationFormSection from "@/components/ConsultationFormSection";
 
 
 const Adoucissement = () => {
+    const [showAllFaqs, setShowAllFaqs] = React.useState(false);
     useEffect(() => {
         document.title = "Adoucisseur d'eau | Élimination du Calcaire | Bricareau Canada";
         const metaDesc = document.querySelector('meta[name="description"]');
@@ -168,8 +169,8 @@ const Adoucissement = () => {
                     <div className="container mx-auto px-6">
                         <div className="flex flex-col lg:flex-row items-start gap-16">
                             {/* Left Side: Image with Video Button */}
-                            <div className="w-full lg:w-1/2 relative sticky top-24">
-                                <div className="rounded-[2.5rem] overflow-hidden shadow-2xl relative h-[600px] w-full group">
+                            <div className="w-full lg:w-1/2 lg:sticky lg:top-24 mb-12 lg:mb-0">
+                                <div className="rounded-[2.5rem] overflow-hidden shadow-2xl relative h-[300px] sm:h-[400px] lg:h-[600px] w-full group">
                                     <img
                                         src={kitchenImg}
                                         alt="Cuisine moderne protégée par un adoucisseur d'eau résidentiel Bricareau - Vaisselle sans taches"
@@ -192,7 +193,7 @@ const Adoucissement = () => {
                             </div>
 
                             {/* Right Side: Content */}
-                            <div className="w-full lg:w-1/2 pt-4">
+                            <div className="w-full lg:w-1/2 pt-12 lg:pt-4 relative z-10">
                                 <span className="text-sm font-bold uppercase tracking-widest text-blue-600 mb-4 block flex items-center gap-2">
                                     <span className="w-8 h-[2px] bg-blue-600 inline-block"></span>
                                     ADOUCISSEURS D'EAU RÉSIDENTIELS
@@ -240,8 +241,8 @@ const Adoucissement = () => {
                     <div className="container mx-auto px-6">
                         <div className="flex flex-col lg:flex-row-reverse items-start gap-16">
                             {/* Right Side (visually): Image with Video Button */}
-                            <div className="w-full lg:w-1/2 relative sticky top-24">
-                                <div className="rounded-[2.5rem] overflow-hidden shadow-2xl relative h-[600px] w-full group">
+                            <div className="w-full lg:w-1/2 lg:sticky lg:top-24 mb-12 lg:mb-0">
+                                <div className="rounded-[2.5rem] overflow-hidden shadow-2xl relative h-[300px] sm:h-[400px] lg:h-[600px] w-full group">
                                     <img
                                         src={mobileSoftenerImg}
                                         alt="Adoucisseur d'eau portable pour VR et bateau - Solution mobile Bricareau contre l'eau dure"
@@ -264,7 +265,7 @@ const Adoucissement = () => {
                             </div>
 
                             {/* Left Side (visually): Content */}
-                            <div className="w-full lg:w-1/2 pt-4">
+                            <div className="w-full lg:w-1/2 pt-12 lg:pt-4 relative z-10">
                                 <span className="text-sm font-bold uppercase tracking-widest text-blue-600 mb-4 block flex items-center gap-2">
                                     <span className="w-8 h-[2px] bg-blue-600 inline-block"></span>
                                     SOLUTION MOBILE
@@ -312,8 +313,8 @@ const Adoucissement = () => {
                     <div className="container mx-auto px-6">
                         <div className="flex flex-col lg:flex-row items-start gap-16">
                             {/* Left Side: Image with Video Button */}
-                            <div className="w-full lg:w-1/2 relative sticky top-24">
-                                <div className="rounded-[2.5rem] overflow-hidden shadow-2xl relative h-[600px] w-full group">
+                            <div className="w-full lg:w-1/2 lg:sticky lg:top-24 mb-12 lg:mb-0">
+                                <div className="rounded-[2.5rem] overflow-hidden shadow-2xl relative h-[300px] sm:h-[400px] lg:h-[600px] w-full group">
                                     <img
                                         src={untitledImg}
                                         alt="Conditionneur d'eau sans sel écologique Bricareau - Protection contre le tartre sans saumure"
@@ -336,7 +337,7 @@ const Adoucissement = () => {
                             </div>
 
                             {/* Right Side: Content */}
-                            <div className="w-full lg:w-1/2 pt-4">
+                            <div className="w-full lg:w-1/2 pt-12 lg:pt-4 relative z-10">
                                 <span className="text-sm font-bold uppercase tracking-widest text-blue-600 mb-4 block flex items-center gap-2">
                                     <span className="w-8 h-[2px] bg-blue-600 inline-block"></span>
                                     ALTERNATIVE ÉCOLOGIQUE
@@ -519,7 +520,7 @@ const Adoucissement = () => {
                                     { q: "L'adoucisseur nécessite-t-il un entretien professionnel ?", a: "Nous recommandons une vérification annuelle par l'un de nos techniciens pour optimiser les réglages, nettoyer les composants internes et garantir que votre eau reste de qualité supérieure." },
                                     { q: "L'eau adoucie est-elle meilleure pour les vêtements ?", a: "Oui, les minéraux de dureté rendent les fibres textiles rêches et ternes. L'eau adoucie permet de garder vos vêtements plus souples, plus éclatants et plus durables." },
                                     { q: "Quelle est la garantie offerte par Bricareau ?", a: "Bricareau offre l'une des garanties les plus solides du marché, couvrant la bouteille de résine, la tête de contrôle et les composants internes pour votre tranquillité d'esprit totale." }
-                                ].map((item, idx) => (
+                                ].slice(0, showAllFaqs ? undefined : 6).map((item, idx) => (
                                     <AccordionItem key={idx} value={`item-${idx}`} className="border-b-gray-200">
                                         <AccordionTrigger className="text-left text-base font-medium leading-6 hover:no-underline py-6" style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}>
                                             {item.q}
@@ -530,6 +531,14 @@ const Adoucissement = () => {
                                     </AccordionItem>
                                 ))}
                             </Accordion>
+                            <div className="mt-12 text-center">
+                                <Button
+                                    onClick={() => setShowAllFaqs(!showAllFaqs)}
+                                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-12 h-14 shadow-lg shadow-blue-200"
+                                >
+                                    {showAllFaqs ? "Voir moins de questions" : "Voir toutes les questions"}
+                                </Button>
+                            </div>
                         </div>
                     </div>
                 </section>

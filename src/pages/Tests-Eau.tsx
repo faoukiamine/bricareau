@@ -55,6 +55,7 @@ import scientistImg from "@/assets/Scientist istesting water.webp";
 import newHeroImg from "@/assets/r0_0_4896_3264_w1200_h678_fmax.jpg";
 
 const TestsEauPage = () => {
+  const [showAllFaqs, setShowAllFaqs] = useState(false);
   useEffect(() => {
     document.title = "Test d'eau et Analyse d'eau | Montréal, Rive-Sud & Rive-Nord | Bricareau";
     const metaDesc = document.querySelector('meta[name="description"]');
@@ -538,7 +539,7 @@ const TestsEauPage = () => {
                     q: "Que faire si les résultats indiquent une eau non potable ?",
                     a: "Pas de panique. Nos experts analyseront votre rapport et vous recommanderont le système approprié (UV pour les bactéries, adoucisseur pour la dureté ou filtre spécialisé) pour rendre votre eau parfaitement sûre."
                   }
-                ].map((item, idx) => (
+                ].slice(0, showAllFaqs ? undefined : 6).map((item, idx) => (
                   <AccordionItem
                     key={idx}
                     value={`item-${idx}`}
@@ -553,6 +554,14 @@ const TestsEauPage = () => {
                   </AccordionItem>
                 ))}
               </Accordion>
+              <div className="mt-12 text-center">
+                <Button
+                  onClick={() => setShowAllFaqs(!showAllFaqs)}
+                  className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-12 h-14 shadow-lg shadow-blue-200"
+                >
+                  {showAllFaqs ? "Voir moins de questions" : "Voir toutes les questions"}
+                </Button>
+              </div>
             </div>
           </div>
         </section>

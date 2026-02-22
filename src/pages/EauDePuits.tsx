@@ -101,6 +101,7 @@ const comparisonData = [
 ];
 
 const EauDePuits = () => {
+  const [showAllFaqs, setShowAllFaqs] = React.useState(false);
   useEffect(() => {
     document.title = "Traitement d'eau de puits | Solution Eau de Puits | Bricareau Canada";
     const metaDesc = document.querySelector('meta[name="description"]');
@@ -558,7 +559,7 @@ const EauDePuits = () => {
                 className="rounded-full px-8 border-white text-white bg-transparent hover:bg-white/10"
                 asChild
               >
-                <a href="tel:18552649328">Parlez avec un spécialiste d'eau au 1-855-264-9328</a>
+                <a href="tel:18552649328">Parlez avec un spécialiste au 1-855-264-9328</a>
               </Button>
             </div>
           </div>
@@ -640,7 +641,7 @@ const EauDePuits = () => {
                     q: "Quelle est la différence entre un filtre à sédiments et un charbon ?",
                     a: "Le filtre à sédiments retire les particules physiques (sable, terre), tandis que le charbon activé retire les produits chimiques, les goûts et les odeurs par adsorption moléculaire.",
                   },
-                ].map((item, idx) => (
+                ].slice(0, showAllFaqs ? undefined : 6).map((item, idx) => (
                   <AccordionItem
                     key={idx}
                     value={`item-${idx}`}
@@ -655,6 +656,14 @@ const EauDePuits = () => {
                   </AccordionItem>
                 ))}
               </Accordion>
+              <div className="mt-12 text-center">
+                <Button
+                  onClick={() => setShowAllFaqs(!showAllFaqs)}
+                  className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-12 h-14 shadow-lg shadow-blue-200"
+                >
+                  {showAllFaqs ? "Voir moins de questions" : "Voir toutes les questions"}
+                </Button>
+              </div>
             </div>
           </div>
         </section>

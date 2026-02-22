@@ -1,3 +1,4 @@
+import React, { useEffect } from 'react';
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import TestimonialsSection from "@/components/TestimonialsSection";
@@ -28,6 +29,7 @@ import {
 } from "@/components/ui/accordion";
 
 const FiltreEauHauteEfficacite = () => {
+    const [showAllFaqs, setShowAllFaqs] = React.useState(false);
     const productImage = "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png";
 
     return (
@@ -329,7 +331,7 @@ const FiltreEauHauteEfficacite = () => {
                                 { q: "L'application mobile est-elle payante ?", a: "L'application Bricareau Connect est incluse avec tous les modèles HE Connect. Elle vous permet de suivre votre consommation et de recevoir des alertes sans frais supplémentaires." },
                                 { q: "À quelle fréquence faut-il remplacer les filtres ?", a: "Cela dépend de la qualité de votre eau d'entrée. En moyenne, un entretien annuel est recommandé pour vérifier les résines et remplacer les pré-filtres si nécessaire." },
                                 { q: "Le système HE filtre-t-il aussi le chlore ?", a: "Oui, nous pouvons configurer votre système HE avec des médias filtrants spécifiques pour éliminer le chlore, les goûts et les odeurs, en plus d'adoucir l'eau." }
-                            ].map((item, id) => (
+                            ].slice(0, showAllFaqs ? undefined : 6).map((item, id) => (
                                 <AccordionItem key={id} value={`faq-${id}`} className="border-b-slate-100 last:border-0 mb-4 rounded-2xl overflow-hidden border">
                                     <AccordionTrigger className="px-8 py-6 hover:bg-slate-50/50 hover:no-underline text-left text-base font-medium leading-6 text-slate-800" style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}>
                                         {item.q}
@@ -340,6 +342,14 @@ const FiltreEauHauteEfficacite = () => {
                                 </AccordionItem>
                             ))}
                         </Accordion>
+                        <div className="mt-12 text-center">
+                            <Button
+                                onClick={() => setShowAllFaqs(!showAllFaqs)}
+                                className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-12 h-14 shadow-lg shadow-blue-200"
+                            >
+                                {showAllFaqs ? "Voir moins de questions" : "Voir toutes les questions"}
+                            </Button>
+                        </div>
                     </div>
                 </section>
 
