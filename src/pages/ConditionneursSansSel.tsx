@@ -305,7 +305,7 @@ const ConditionneursSansSel = () => {
         </section>
 
         {/* 4. Testimonials Section */}
-        <TestimonialsSection />
+        <TestimonialsSection filterProduct="/conditionneurs-sans-sel" />
 
         {/* 5. CTA Section */}
         <section className="bg-primary py-16 md:py-20">

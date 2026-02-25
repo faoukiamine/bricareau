@@ -259,7 +259,7 @@ const AdoucisseursPortables = () => {
             </section>
 
             {/* 4. Section Testimonials */}
-            <TestimonialsSection />
+            <TestimonialsSection filterProduct="/adoucisseurs-portables" />
 
             {/* 5. Section Associated Products */}
             <section className="bg-white py-24">

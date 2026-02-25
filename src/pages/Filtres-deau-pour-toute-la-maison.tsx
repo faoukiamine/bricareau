@@ -102,7 +102,14 @@ const faqItems = [
     }
 ];
 
-const comparisonData = [
+interface ComparisonItem {
+    feature: string;
+    vortex: boolean | string;
+    chlorstop: boolean | string;
+    ironshield: boolean | string;
+}
+
+const comparisonData: ComparisonItem[] = [
     { feature: "Filtration Toute la Maison (Point d'entrée)", vortex: true, chlorstop: true, ironshield: true },
     { feature: "Élimination des sédiments et turbidité", vortex: true, chlorstop: "Partielle", ironshield: true },
     { feature: "Élimination du chlore et des odeurs", vortex: false, chlorstop: true, ironshield: false },
@@ -328,13 +335,13 @@ const FiltresTouteMaison = () => {
                                         <tr key={i} className="hover:bg-gray-50 transition-colors">
                                             <td className="p-8 font-light text-gray-700">{row.feature}</td>
                                             <td className="p-8 text-center text-sm">
-                                                {typeof (row as any).vortex === 'string' ? <span className="text-blue-600 font-bold bg-blue-50 px-3 py-1 rounded-full text-[10px] whitespace-nowrap">{(row as any).vortex}</span> : ((row as any).vortex ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : null)}
+                                                {typeof row.vortex === 'string' ? <span className="text-blue-600 font-bold bg-blue-50 px-3 py-1 rounded-full text-[10px] whitespace-nowrap">{row.vortex}</span> : (row.vortex ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : null)}
                                             </td>
                                             <td className="p-8 text-center text-sm">
-                                                {typeof (row as any).chlorstop === 'string' ? <span className="text-blue-600 font-bold bg-blue-50 px-3 py-1 rounded-full text-[10px] whitespace-nowrap">{(row as any).chlorstop}</span> : ((row as any).chlorstop ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : null)}
+                                                {typeof row.chlorstop === 'string' ? <span className="text-blue-600 font-bold bg-blue-50 px-3 py-1 rounded-full text-[10px] whitespace-nowrap">{row.chlorstop}</span> : (row.chlorstop ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : null)}
                                             </td>
                                             <td className="p-8 text-center text-sm">
-                                                {typeof (row as any).ironshield === 'string' ? <span className="text-blue-600 font-bold bg-blue-50 px-3 py-1 rounded-full text-[10px] whitespace-nowrap">{(row as any).ironshield}</span> : ((row as any).ironshield ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : null)}
+                                                {typeof row.ironshield === 'string' ? <span className="text-blue-600 font-bold bg-blue-50 px-3 py-1 rounded-full text-[10px] whitespace-nowrap">{row.ironshield}</span> : (row.ironshield ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : null)}
                                             </td>
                                         </tr>
                                     ))}
@@ -385,7 +392,7 @@ const FiltresTouteMaison = () => {
                 </section>
 
                 {/* Testimonials Grid Section */}
-                <TestimonialsSection />
+                <TestimonialsSection filterProduct="/Filtres-deau-pour-toute-la-maison" />
 
                 {/* 5. CTA Section */}
                 <section className="bg-primary py-16 md:py-20">

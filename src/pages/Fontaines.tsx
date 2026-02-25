@@ -39,6 +39,13 @@ import countertopFountainImg from "@/assets/A9.jpg";
 import bottlelessFountainImg from "@/assets/A13.jpg";
 import iceMachineImg from "@/assets/Machine+à+glaçons+de+comptoir+auto-nettoyante+de+26+lb+R.W.FLAME-78609293.webp";
 
+interface SolutionItem {
+    title: string;
+    desc: string;
+    img: string;
+    features: string[];
+}
+
 const ImpactCalculator = () => {
     const [adults, setAdults] = useState(2);
     const [children, setChildren] = useState(1);
@@ -126,7 +133,7 @@ const ImpactCalculator = () => {
     );
 };
 
-const SolutionCard = ({ item }: { item: any }) => {
+const SolutionCard = ({ item }: { item: SolutionItem }) => {
     const [showSpecs, setShowSpecs] = useState(false);
 
     useEffect(() => {
@@ -394,7 +401,7 @@ const Fontaines = () => {
                 </section>
 
                 {/* Section 4: Testimonials */}
-                <TestimonialsSection />
+                <TestimonialsSection filterProduct="/fontaines" />
 
                 {/* Section 7: Mission Éco-Responsable Bricareau */}
                 <section className="py-32 bg-white relative overflow-hidden">

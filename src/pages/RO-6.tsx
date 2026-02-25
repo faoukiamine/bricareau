@@ -295,7 +295,7 @@ const RO6 = () => {
                 </section>
 
                 {/* 11. Testimonials */}
-                <TestimonialsSection />
+                <TestimonialsSection filterProduct="/ro-6" />
             </main>
 
             <Footer />

@@ -35,7 +35,14 @@ const products = [
     { name: "Adoucisseur d'eau de la série Infiniti", desc: "Une douceur constante, à chaque goutte, à chaque seconde.", path: "/filtre-eau-haute-efficacite", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
 ];
 
-const comparisonData = [
+interface ComparisonItem {
+    feature: string;
+    Sérénité: string;
+    Sentinel: string;
+    Infiniti: string;
+}
+
+const comparisonData: ComparisonItem[] = [
     {
         feature: "Principe de Déclenchement",
         Sérénité: "Se régénère à intervalles de temps fixes (ex: tous les 3 jours).",
@@ -309,7 +316,7 @@ const AdoucisseurEauMunicipal = () => {
                                             <td className="p-8 font-bold text-slate-900 border-r border-gray-100 bg-gray-50/30">{row.feature}</td>
                                             {["Sérénité", "Sentinel", "Infiniti"].map((model) => (
                                                 <td key={model} className="p-8 text-center text-lg font-light leading-relaxed text-gray-600 text-justify">
-                                                    {(row as any)[model]}
+                                                    {row[model as keyof ComparisonItem]}
                                                 </td>
                                             ))}
                                         </tr>
@@ -321,7 +328,15 @@ const AdoucisseurEauMunicipal = () => {
                 </section>
 
                 {/* 5.Testimonials Grid Section */}
-                <TestimonialsSection />
+                <TestimonialsSection
+                    filterProduct="/adoucisseur-eau-residentiel"
+                    title={
+                        <>
+                            <span className="text-[32px] md:text-[60px] font-light leading-[1.2] md:leading-[60px] block text-slate-900">Une eau soyeuse.</span>
+                            <span className="text-[32px] md:text-[60px] font-normal leading-[1.2] md:leading-[60px] block text-blue-600">Un confort absolu.</span>
+                        </>
+                    }
+                />
 
                 {/* 6.Water Testing Section */}
                 <section className="relative h-[650px] flex items-center overflow-hidden">

@@ -6,41 +6,17 @@ import { useState, useCallback, useEffect } from "react";
 import { cn } from "@/lib/utils";
 
 
-export interface Testimonial {
-    content: string;
-    author: string;
-    location: string;
-    rating: number;
-}
-
-const defaultTestimonials: Testimonial[] = [
-    {
-        content: "Bricareau avait le produit que nous cherchions et le service a été très rapide! Le technicien est très passionné par son travail et m'a fait part de son savoir et de conseils. Je suis très satisfaite du service et nous pouvons maintenant boire de l'eau en toute confiance",
-        author: "Naomie Fontaine",
-        location: "Montreal, QC",
-        rating: 5
-    },
-    {
-        content: "Le technicien était extra-ordinaire et donne un excellent service à la clientèle. Pour ce qui est du produit vous devez utiliser cette eau si fraîche et bonne pour la santé autant pour vous et les membres de votre famille.",
-        author: "Sylvie Thibeau",
-        location: "Laval, QC",
-        rating: 5
-    },
-    {
-        content: "Je recommande fortement. On m'a très bien conseillé sur le bon produit pour mes besoins. Offre complète de produits. Service courtois, professionnel et rapide.",
-        author: "Jean-François B.",
-        location: "Longueuil, QC",
-        rating: 5
-    }
-];
+import { allTestimonials, getTestimonialsByProduct, type Testimonial } from "@/data/testimonials";
 
 interface TestimonialsSectionProps {
     testimonials?: Testimonial[];
     title?: React.ReactNode;
+    filterProduct?: string;
 }
 
 const TestimonialsSection = ({
-    testimonials = defaultTestimonials,
+    testimonials,
+    filterProduct,
     title = (
         <>
             <span className="text-[32px] md:text-[60px] font-light leading-[1.2] md:leading-[60px] block">Qualité inégalée.</span>
@@ -48,6 +24,16 @@ const TestimonialsSection = ({
         </>
     )
 }: TestimonialsSectionProps) => {
+    // If testimonials are provided directly, use them. 
+    // If a filterProduct is provided, get filtered testimonials.
+    // Otherwise, use all testimonials as default.
+    const displayTestimonials = testimonials ||
+        (filterProduct ? getTestimonialsByProduct(filterProduct) : allTestimonials);
+
+    // If no testimonials found for filtered product, fallback to all (or common ones)
+    const finalTestimonials = displayTestimonials.length > 0 ? displayTestimonials : allTestimonials;
+
+
     const [emblaRef, emblaApi] = useEmblaCarousel({
         loop: true,
         align: "start",
@@ -96,7 +82,7 @@ const TestimonialsSection = ({
                 <div className="relative max-w-5xl mx-auto px-0 md:px-4">
                     <div className="overflow-hidden" ref={emblaRef}>
                         <div className="flex">
-                            {testimonials.map((item, index) => (
+                            {finalTestimonials.map((item, index) => (
                                 <div key={index} className="flex-[0_0_100%] min-w-0 px-2 md:px-4">
                                     <div className="bg-white p-6 md:p-14 rounded-[2rem] shadow-[0_10px_40px_-15px_rgba(0,0,0,0.1)] border border-gray-50 flex flex-col items-start text-left relative transition-all duration-300">
                                         {/* Quote Icon */}
@@ -106,18 +92,16 @@ const TestimonialsSection = ({
 
                                         {/* Quote Content */}
                                         <p className="text-[#4B5563] text-lg md:text-xl leading-relaxed mb-12 font-normal italic">
-                                            « {item.content} »
+                                            « {item.text} »
                                         </p>
 
                                         {/* Bottom Row: Author & Stars */}
                                         <div className="w-full flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
                                             <div className="space-y-1">
                                                 <h4 className="font-bold text-lg text-gray-900 leading-tight">
-                                                    {item.author}
+                                                    {item.name}
                                                 </h4>
-                                                <p className="text-sm text-gray-400 font-medium tracking-wide">
-                                                    {item.location}
-                                                </p>
+
                                             </div>
 
                                             <div className="flex gap-1.5">
@@ -130,6 +114,7 @@ const TestimonialsSection = ({
                                 </div>
                             ))}
                         </div>
+
                     </div>
                 </div>
 

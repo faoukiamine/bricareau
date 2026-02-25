@@ -57,7 +57,14 @@ const StationEauPotable = () => {
     if (ogDesc) ogDesc.setAttribute("content", "Découvrez la pureté absolue avec nos stations d'osmose inverse Cristal Pro et Sérénité.");
   }, []);
 
-  const comparisonData = [
+  interface ComparisonItem {
+    feature: string;
+    stage4: boolean | string;
+    stage6: boolean | string;
+    stage5: boolean | string;
+  }
+
+  const comparisonData: ComparisonItem[] = [
     { feature: "Installation sous l'évier (Point d'usage)", stage4: true, stage6: true, stage5: true },
     { feature: "Nombre d'étapes de filtration", stage4: "4 Étapes", stage6: "6 Étapes", stage5: "5 Étapes" },
     { feature: "Production journalière", stage4: "75 GPD", stage6: "75 GPD", stage5: "600 GPD" },
@@ -275,7 +282,7 @@ const StationEauPotable = () => {
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-gray-100">
-                  {comparisonData.map((row: any, i) => (
+                  {comparisonData.map((row, i) => (
                     <tr key={i} className="hover:bg-gray-50 transition-colors">
                       <td className="p-8 font-light text-gray-700">{row.feature}</td>
                       <td className="p-8 text-center text-sm">
@@ -331,7 +338,15 @@ const StationEauPotable = () => {
         </section>
 
         {/* 8. Testimonials Section */}
-        <TestimonialsSection />
+        <TestimonialsSection
+          filterProduct="/systeme-de-filtration-deau-potable"
+          title={
+            <>
+              <span className="text-[32px] md:text-[60px] font-light leading-[1.2] md:leading-[60px] block">Une eau vive.</span>
+              <span className="text-[32px] md:text-[60px] font-normal leading-[1.2] md:leading-[60px] block text-blue-600">Une pureté redécouverte.</span>
+            </>
+          }
+        />
 
         {/* 9. FAQ Section */}
         <section className="py-24 bg-white border-t border-slate-100">

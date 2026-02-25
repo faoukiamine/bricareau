@@ -49,28 +49,8 @@ import ConsultationFormSection from "@/components/ConsultationFormSection";
 
 
 const Adoucissement = () => {
-    const adoucissementTestimonials = [
-        {
-            content: "Fini les traces de calcaire sur mes parois de douche ! Ma peau est beaucoup plus douce et j'utilise beaucoup moins de savon.",
-            author: "Lucie P.",
-            location: "Laval, QC",
-            rating: 5
-        },
-        {
-            content: "Notre chauffe-eau fonctionne mieux et nos vêtements sont plus éclatants. L'investissement dans cet adoucisseur en valait vraiment la peine.",
-            author: "Stéphane B.",
-            location: "Longueuil, QC",
-            rating: 5
-        },
-        {
-            content: "Une équipe très professionnelle. L'installation a été rapide et propre. L'eau douce change vraiment le quotidien.",
-            author: "Marie-Claude S.",
-            location: "Brossard, QC",
-            rating: 5
-        }
-    ];
-
     const [showAllFaqs, setShowAllFaqs] = React.useState(false);
+
 
     useEffect(() => {
         document.title = "Adoucisseur d'eau : Adieu le calcaire et l'eau dure";
@@ -404,7 +384,7 @@ const Adoucissement = () => {
 
                 {/* 6. Testimonials */}
                 <TestimonialsSection
-                    testimonials={adoucissementTestimonials}
+                    filterProduct="/adoucissement"
                     title={
                         <>
                             <span className="text-[32px] md:text-[60px] font-light leading-[1.2] md:leading-[60px] block">Une eau soyeuse.</span>
@@ -412,6 +392,7 @@ const Adoucissement = () => {
                         </>
                     }
                 />
+
 
 
 

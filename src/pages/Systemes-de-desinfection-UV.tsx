@@ -51,28 +51,8 @@ const DesinfectionUV = () => {
     }, []);
 
 
-    const uvTestimonials = [
-        {
-            content: "Après avoir trouvé des bactéries dans notre eau de puits, nous avons installé un système UV Bricareau. Les tests suivants étaient parfaits. Grande tranquillité d'esprit.",
-            author: "Martin S.",
-            location: "Bromont, QC",
-            rating: 5
-        },
-        {
-            content: "Système très fiable et facile d'entretien. L'alarme nous prévient quand changer la lampe, c'est rassurant. Je me sens en sécurité en buvant mon eau.",
-            author: "Valérie G.",
-            location: "Granby, QC",
-            rating: 5
-        },
-        {
-            content: "Excellent produit. Plus de soucis de contamination microbiologique. L'installation a été faite de manière très professionnelle.",
-            author: "Hervé B.",
-            location: "Magog, QC",
-            rating: 5
-        }
-    ];
-
     const comparisonData = [
+
 
         { feature: "Élimination 99.99% des virus", VH410F20: true, VH200F10: true, Arros15IHS10: true },
         { feature: "Destruction des bactéries", VH410F20: true, VH200F10: true, Arros15IHS10: true },
@@ -350,14 +330,15 @@ const DesinfectionUV = () => {
 
                 {/* 7. Testimonials Section */}
                 <TestimonialsSection
-                    testimonials={uvTestimonials}
+                    filterProduct="/Systemes-de-desinfection-UV"
                     title={
                         <>
                             <span className="text-[32px] md:text-[60px] font-light leading-[1.2] md:leading-[60px] block">Une eau saine.</span>
-                            <span className="text-[32px] md:text-[60px] font-normal leading-[1.2] md:leading-[60px] block">Une sécurité UV.</span>
+                            <span className="text-[32px] md:text-[60px] font-normal leading-[1.2] md:leading-[60px] block text-blue-600">Une sécurité UV.</span>
                         </>
                     }
                 />
+
 
 
                 {/* 8. FAQ Section */}

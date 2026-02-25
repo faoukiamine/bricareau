@@ -3,18 +3,13 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import {
     ArrowRight,
-    Check,
     Phone,
     CheckCircle2,
-    X,
     ChevronRight,
-    GlassWater,
-    CircleDollarSign,
-    Trash2,
-    Wrench,
     ShieldCheck,
     Droplets,
-    Zap
+    Zap,
+    CircleDollarSign
 } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import { useNavigate } from "react-router-dom";
@@ -33,7 +28,6 @@ import heroDrink from "@/assets/hero-image.jpg";
 import eliteROImg from "@/assets/Triple Stage Filter.jpg";
 import plusROImg from "@/assets/Double Stage Filter.jpg";
 import essentialImg from "@/assets/Single Stage Filter.jpg";
-import sereneLiteImg from "@/assets/Système+de+filtration+Serene+Lite.webp";
 import waterTestingImg from "@/assets/undersink_filtration_header.jpg";
 
 const FiltrationSousEvier = () => {
@@ -54,30 +48,14 @@ const FiltrationSousEvier = () => {
         if (ogDesc) ogDesc.setAttribute("content", "Profitez d'une eau saine et délicieuse avec nos solutions d'ultrafiltration Cristal Pro. Gain d'espace et performance.");
     }, []);
 
+    interface ComparisonItem {
+        feature: string;
+        elite: boolean | string;
+        plus: boolean | string;
+        essential: boolean | string;
+    }
 
-    const sousEvierTestimonials = [
-        {
-            content: "L'eau de mon robinet a maintenant le même goût que l'eau embouteillée premium. Le système sous l'évier est très discret et efficace.",
-            author: "André C.",
-            location: "Mont-Royal, QC",
-            rating: 5
-        },
-        {
-            content: "Installation facile et service client au top. Je peux enfin boire l'eau du robinet sans cette horrible odeur de chlore.",
-            author: "Sophie T.",
-            location: "Outremont, QC",
-            rating: 5
-        },
-        {
-            content: "Un excellent investissement. Mes enfants boivent beaucoup plus d'eau depuis que nous avons installé le Cristal Pro. Le goût est incomparable.",
-            author: "Dominic P.",
-            location: "Westmount, QC",
-            rating: 5
-        }
-    ];
-
-    const comparisonData = [
-
+    const comparisonData: ComparisonItem[] = [
         { feature: "Nombre d'étapes de filtration", elite: "3 Étapes", plus: "2 Étapes", essential: "1 Étape" },
         { feature: "Élimination des sédiments (sable, terre et rouille)", elite: true, plus: true, essential: true },
         { feature: "Élimination du chlore (Goût/Odeur)", elite: true, plus: true, essential: false },
@@ -92,7 +70,7 @@ const FiltrationSousEvier = () => {
         <div className="min-h-screen bg-background text-slate-900 font-sans">
             <Header />
             <main>
-                {/* Hero Section - UNCHANGED */}
+                {/* Hero Section */}
                 <section className="relative h-[850px] flex items-center overflow-hidden -mt-[104px] pt-[104px]">
                     <div className="absolute inset-0 z-0">
                         <img
@@ -102,7 +80,6 @@ const FiltrationSousEvier = () => {
                         />
                         <div className="absolute inset-0 bg-black/40 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
                         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-white via-white/10 to-transparent" />
-                        {/* Brightening Start 1/3 Right */}
                         <div className="absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white/90 via-white/40 to-transparent" />
                     </div>
 
@@ -143,7 +120,6 @@ const FiltrationSousEvier = () => {
                             </div>
                         </div>
                     </div>
-                    {/* Wave Separator Bottom - Transition to Blue Section */}
                     <div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-[0] z-20 pointer-events-none">
                         <svg
                             className="relative block w-full h-[50px] md:h-[80px]"
@@ -161,7 +137,7 @@ const FiltrationSousEvier = () => {
                     </div>
                 </section>
 
-                {/* 2. Pourquoi choisir - Blue Section (Merged with Avantages) */}
+                {/* 2. Pourquoi choisir */}
                 <section className="py-24 bg-blue-600 text-white">
                     <div className="container mx-auto px-6">
                         <div className="text-center mb-16">
@@ -191,7 +167,7 @@ const FiltrationSousEvier = () => {
                     </div>
                 </section>
 
-                {/* 3. Systèmes d'osmose inverse - Product Grid */}
+                {/* 3. Product Grid */}
                 <section id="systemes-filtration" className="py-24 bg-white">
                     <div className="container mx-auto px-6">
                         <div className="text-left mb-16">
@@ -211,12 +187,12 @@ const FiltrationSousEvier = () => {
                             {[
                                 { name: "Cristal Pro I", desc: "La première ligne de défense pour votre eau. Ce filtre à sédiments haute performance élimine efficacement le sable, la rouille et les particules en suspension, en clarifiant instantanément votre eau, jour après jour, en toute simplicité.", img: essentialImg },
                                 { name: "Cristal Pro II", desc: "La combinaison parfaite pour une eau saine. Ce système duo associe la filtration des sédiments à un filtre charbon actif premium, éliminant non seulement les particules mais aussi le chlore, les COV et les goûts désagréables.", img: plusROImg },
-                                { name: "Cristal Pro III", desc: "La technologie d'ultrafiltration avancée. Ce système offre une purification microscopique supérieure, filtrant virus, bactéries et kystes tout en conservant les minéraux bénéfiques pour une eau d'une pureté absolue, rafraîchissante et inégalée.", path: "/ro-6", img: eliteROImg },
+                                { name: "Cristal Pro III", desc: "La technologie d'ultrafiltration avancée. Ce système offre une purification microscopique supérieure, filtrant virus, bactéries et kystes tout en conservant les minéraux bénéfiques pour une eau d'une pureté absolue, rafraîchissante et inégalée.", img: eliteROImg },
                             ].map((product, i) => (
                                 <div
                                     key={i}
                                     className="group bg-white rounded-3xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full cursor-pointer"
-                                    onClick={() => navigate(product.path || "/contact")}
+                                    onClick={() => navigate("/contact")}
                                 >
                                     <div className="relative h-80 overflow-hidden bg-slate-50 flex items-center justify-center p-12">
                                         <img
@@ -242,7 +218,6 @@ const FiltrationSousEvier = () => {
                                             className="inline-flex items-center gap-2 text-blue-600 font-bold text-xs tracking-widest uppercase mt-4 group-hover:underline self-end"
                                             style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                                         >
-                                            <span></span>
                                             <ArrowRight className="h-6 w-6 transform group-hover:translate-x-1 transition-transform" />
                                         </div>
                                     </div>
@@ -289,7 +264,7 @@ const FiltrationSousEvier = () => {
                                     </tr>
                                 </thead>
                                 <tbody className="divide-y divide-gray-100">
-                                    {comparisonData.map((row: any, i) => (
+                                    {comparisonData.map((row, i) => (
                                         <tr key={i} className="hover:bg-gray-50 transition-colors">
                                             <td className="p-8 font-light text-gray-700">{row.feature}</td>
                                             <td className="p-8 text-center text-sm">
@@ -349,7 +324,7 @@ const FiltrationSousEvier = () => {
 
                 {/* 7. Testimonials Section */}
                 <TestimonialsSection
-                    testimonials={sousEvierTestimonials}
+                    filterProduct="/Systemes-de-filtration-deau-sous-evier"
                     title={
                         <>
                             <span className="text-[32px] md:text-[60px] font-light leading-[1.2] md:leading-[60px] block">Une eau gourmande.</span>
@@ -357,7 +332,6 @@ const FiltrationSousEvier = () => {
                         </>
                     }
                 />
-
 
                 {/* 8. FAQ Section */}
                 <section className="py-24 bg-white border-t border-slate-100">
@@ -399,42 +373,6 @@ const FiltrationSousEvier = () => {
                                         q: "Puis-je l'utiliser pour mon réfrigérateur et ma machine à glaçons ?",
                                         a: "Absolument ! Nous pouvons raccorder votre système de filtration à votre frigo pour que vous profitiez d'une eau fraîche et de glaçons cristallins, sans aucun goût indésirable.",
                                     },
-                                    {
-                                        q: "L'installation nécessite-t-elle de percer mon comptoir ?",
-                                        a: "Nous installons généralement un robinet dédié élégant. Si vous avez déjà un trou pour un distributeur de savon, nous pouvons l'utiliser. Sinon, nos techniciens effectuent un perçage précis et propre.",
-                                    },
-                                    {
-                                        q: "Est-ce que l'eau osmosée est trop acide ?",
-                                        a: "L'osmose peut légèrement abaisser le pH. C'est pourquoi nos modèles Elite et Plus incluent une cartouche de reminéralisation qui rééquilibre le pH et redonne à l'eau un goût frais et naturel.",
-                                    },
-                                    {
-                                        q: "Le système de filtration est-il bruyant ?",
-                                        a: "Non, les systèmes de filtration sous évier sont presque totalement silencieux. Vous pourriez entendre un léger murmure d'eau uniquement pendant le cycle de remplissage du réservoir.",
-                                    },
-                                    {
-                                        q: "L'osmose inverse 'gaspille'-t-elle de l'eau ?",
-                                        a: "Les systèmes modernes sont très efficaces. L'eau utilisée pour rincer la membrane est nécessaire pour maintenir la pureté. Ce coût est dérisoire comparé à l'achat d'eau en bouteille.",
-                                    },
-                                    {
-                                        q: "L'entretien est-il compliqué à faire soi-même ?",
-                                        a: "Bien que certains clients le fassent, Bricareau offre un service de maintenance professionnelle pour garantir l'étanchéité, la désinfection du système et une performance constante année après année.",
-                                    },
-                                    {
-                                        q: "Est-ce efficace contre les PFAS et les résidus de médicaments ?",
-                                        a: "Oui, la technologie d'osmose inverse combinée au charbon actif est l'une des méthodes les plus reconnues pour réduire les PFAS ('produits chimiques éternels') et les contaminants émergents.",
-                                    },
-                                    {
-                                        q: "Le système fonctionne-t-il sans électricité ?",
-                                        a: "La majorité de nos systèmes fonctionnent uniquement avec la pression d'eau de votre résidence. Seuls certains modèles haute capacité nécessitent une petite pompe de surpression électrique.",
-                                    },
-                                    {
-                                        q: "Quelle est la garantie offerte par Bricareau ?",
-                                        a: "Nous offrons une protection complète incluant 10 ans sur les composantes structurelles et un support technique prioritaire pour tous nos clients installés.",
-                                    },
-                                    {
-                                        q: "Pourquoi choisir Bricareau plutôt qu'un pichet filtrant ?",
-                                        a: "Contrairement aux pichets qui ont une capacité limitée et une filtration superficielle, nos systèmes offrent un débit constant et une filtration de niveau industriel beaucoup plus profonde et durable.",
-                                    },
                                 ].slice(0, showAllFaqs ? undefined : 6).map((item, idx) => (
                                     <AccordionItem key={idx} value={`item-${idx}`} className="border-b-slate-100 px-4">
                                         <AccordionTrigger className="text-left text-base font-medium leading-6 hover:no-underline py-8 text-slate-800" style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}>
@@ -458,7 +396,7 @@ const FiltrationSousEvier = () => {
                     </div>
                 </section>
 
-                {/* 9. Resources Section */}
+                {/* Resources Section */}
                 <section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
@@ -513,7 +451,6 @@ const FiltrationSousEvier = () => {
                     </div>
                 </section>
 
-                {/* 10. Consultation Form Section */}
                 <ConsultationFormSection id="consultation" />
             </main>
             <Footer />

@@ -62,29 +62,8 @@ const Filtration = () => {
         { feature: "Emplacement courant", whole: "Salle mécanique", basic: "Cuisine" },
     ];
 
-    const filtrationTestimonials = [
-        {
-            content: "Depuis l'installation du système de filtration pour toute la maison, le goût de l'eau est incroyable. Plus besoin d'acheter de bouteilles d'eau !",
-            author: "Marc-André L.",
-            location: "Sherbrooke, QC",
-            rating: 5
-        },
-        {
-            content: "L'odeur de chlore a complètement disparu. Ma peau et mes cheveux sont beaucoup moins secs après la douche.",
-            author: "Catherine D.",
-            location: "Terrebonne, QC",
-            rating: 5
-        },
-        {
-            content: "Service impeccable. Les filtres sous l'évier sont compacts et l'eau est tellement pure. Je recommande Bricareau sans hésitation.",
-            author: "Robert G.",
-            location: "Gatineau, QC",
-            rating: 5
-        }
-    ];
-
-
     return (
+
         <div className="min-h-screen bg-background text-slate-900 font-sans">
             <Header />
             <main>
@@ -446,14 +425,15 @@ const Filtration = () => {
 
                 {/* 7. Testimonials Section */}
                 <TestimonialsSection
-                    testimonials={filtrationTestimonials}
+                    filterProduct="/filtration"
                     title={
                         <>
-                            <span className="text-[32px] md:text-[60px] font-light leading-[1.2] md:leading-[60px] block">Une eau plus pure.</span>
-                            <span className="text-[32px] md:text-[60px] font-normal leading-[1.2] md:leading-[60px] block">Une santé protégée.</span>
+                            <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block tracking-tighter">Une eau plus pure.</span>
+                            <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block text-blue-600 tracking-tighter">Une santé protégée.</span>
                         </>
                     }
                 />
+
 
                 {/* 8. Comparison Table */}
                 <section className="py-24 bg-gray-50">

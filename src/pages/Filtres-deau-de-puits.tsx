@@ -111,7 +111,20 @@ const faqItems = [
     }
 ];
 
-const comparisonData = [
+interface ComparisonItem {
+    feature: string;
+    Vortex: boolean | string;
+    ZenPH: boolean | string;
+    ChlorStop: boolean | string;
+    IronShield: boolean | string;
+    OxyPure: boolean | string;
+    SulphurShield: boolean | string;
+    ZeroAs: boolean | string;
+    TannEx: boolean | string;
+    SerenitePure: boolean | string;
+}
+
+const comparisonData: ComparisonItem[] = [
     { feature: "Élimination du Fer (Taches rouille)", Vortex: false, ZenPH: false, ChlorStop: false, IronShield: "Maximale", OxyPure: "Maximale", SulphurShield: "Partielle", ZeroAs: false, TannEx: false, SerenitePure: "Totale" },
     { feature: "Odeur de Soufre (Œufs pourris)", Vortex: false, ZenPH: false, ChlorStop: false, IronShield: "Moyenne", OxyPure: "Moyenne", SulphurShield: "Maximale", ZeroAs: false, TannEx: false, SerenitePure: "Partielle" },
     { feature: "Manganèse (Taches noires)", Vortex: false, ZenPH: false, ChlorStop: false, IronShield: "Partielle", OxyPure: "Maximale", SulphurShield: "Partielle", ZeroAs: false, TannEx: false, SerenitePure: "Totale" },
@@ -350,10 +363,10 @@ const FiltresPuits = () => {
                                             <td className="p-8 font-medium text-gray-700">{row.feature}</td>
                                             {["Vortex", "ZenPH", "ChlorStop", "IronShield", "OxyPure", "SulphurShield", "ZeroAs", "TannEx", "SerenitePure"].map((key) => (
                                                 <td key={key} className="p-8 text-center">
-                                                    {typeof (row as any)[key] === 'string' ? (
-                                                        <span className="text-blue-600 font-bold text-[10px] bg-blue-50 px-3 py-1 rounded-full">{(row as any)[key]}</span>
+                                                    {typeof row[key as keyof ComparisonItem] === 'string' ? (
+                                                        <span className="text-blue-600 font-bold text-[10px] bg-blue-50 px-3 py-1 rounded-full">{row[key as keyof ComparisonItem]}</span>
                                                     ) : (
-                                                        (row as any)[key] ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : null
+                                                        row[key as keyof ComparisonItem] ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : null
                                                     )}
                                                 </td>
                                             ))}
@@ -406,7 +419,15 @@ const FiltresPuits = () => {
                 </section>
 
                 {/* Testimonials Grid Section */}
-                <TestimonialsSection />
+                <TestimonialsSection
+                    filterProduct="/Filtres-deau"
+                    title={
+                        <>
+                            <span className="text-[32px] md:text-[60px] font-light leading-[1.2] md:leading-[60px] block">Une expertise puits.</span>
+                            <span className="text-[32px] md:text-[60px] font-normal leading-[1.2] md:leading-[60px] block text-blue-600">Une satisfaction totale.</span>
+                        </>
+                    }
+                />
 
                 {/* 5. CTA Section */}
                 <section className="bg-primary py-16 md:py-20">

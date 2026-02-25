@@ -354,7 +354,7 @@ const FiltreEauHauteEfficacite = () => {
                 </section>
 
                 {/* 10. Reviews & Testimonials */}
-                <TestimonialsSection />
+                <TestimonialsSection filterProduct="/filtre-eau-haute-efficacite" />
 
                 {/* 11. Consultation Promo */}
                 <section className="py-24 bg-slate-100 overflow-hidden">

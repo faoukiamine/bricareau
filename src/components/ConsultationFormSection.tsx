@@ -103,7 +103,7 @@ const ConsultationFormSection = ({ id }: { id?: string }) => {
     const nextStep = async () => {
         if (isNavigating) return;
 
-        let fieldsToValidate: any[] = [];
+        let fieldsToValidate: (keyof z.infer<typeof formSchema>)[] = [];
         if (step === 1) {
             fieldsToValidate = ["prenom", "nom", "email", "phone", "address", "ville", "province", "code_postal"];
         } else if (step === 2) {

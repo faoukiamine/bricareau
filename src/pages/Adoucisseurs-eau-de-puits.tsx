@@ -43,26 +43,6 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import ConsultationFormSection from "@/components/ConsultationFormSection";
 
-const adoucisseursPuitsTestimonials = [
-    {
-        content: "L'eau de notre puits était si dure qu'elle bouchait nos robinets. Depuis l'installation de l'adoucisseur Sentinelle, tout est parfait. Plus de calcaire !",
-        author: "Mathieu V.",
-        location: "Saint-Eustache, QC",
-        rating: 5
-    },
-    {
-        content: "On voyait la différence dès le premier jour. Le fer a aussi été réduit et l'eau n'a plus cet aspect jaunâtre. Excellent service technique.",
-        author: "Isabelle J.",
-        location: "Blainville, QC",
-        rating: 5
-    },
-    {
-        content: "Très satisfait de notre achat. L'équipe a pris le temps d'analyser notre eau avant de nous conseiller le bon modèle. On gagne en confort et en tranquillité.",
-        author: "Gabriel M.",
-        location: "Mascouche, QC",
-        rating: 5
-    }
-];
 
 const products = [
 
@@ -133,7 +113,14 @@ const faqItems = [
     }
 ];
 
-const comparisonData = [
+interface ComparisonItem {
+    feature: string;
+    Sérénité: string;
+    Sentinel: string;
+    Infiniti: string;
+}
+
+const comparisonData: ComparisonItem[] = [
     {
         feature: "Principe de Déclenchement",
         Sérénité: "Se régénère à intervalles de temps fixes (ex: tous les 3 jours).",
@@ -390,7 +377,7 @@ const AdoucisseursEauDePuits = () => {
                                             <td className="p-8 font-bold text-slate-900 border-r border-gray-100 bg-gray-50/30">{row.feature}</td>
                                             {["Sérénité", "Sentinel", "Infiniti"].map((model) => (
                                                 <td key={model} className="p-8 text-center text-lg font-light leading-relaxed text-gray-600 text-justify">
-                                                    {(row as any)[model]}
+                                                    {row[model as keyof ComparisonItem]}
                                                 </td>
                                             ))}
                                         </tr>
@@ -440,7 +427,7 @@ const AdoucisseursEauDePuits = () => {
 
                 {/* 6.Testimonials Grid Section */}
                 <TestimonialsSection
-                    testimonials={adoucisseursPuitsTestimonials}
+                    filterProduct="/adoucisseurs-eau-de-puits"
                     title={
                         <>
                             <span className="text-[32px] md:text-[60px] font-light leading-[1.2] md:leading-[60px] block">Une expertise puits.</span>
@@ -448,6 +435,7 @@ const AdoucisseursEauDePuits = () => {
                         </>
                     }
                 />
+
 
 
                 {/* 5. CTA Section */}

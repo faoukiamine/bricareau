@@ -50,7 +50,7 @@ const ChatWidget = () => {
 
         // Simulate bot thinking
         setTimeout(() => {
-            let botResponse: Message = {
+            const botResponse: Message = {
                 id: (Date.now() + 1).toString(),
                 type: "bot",
                 text: "Merci pour votre message. Un de nos experts en traitement d'eau va vous répondre dans quelques instants. En attendant, saviez-vous que nous offrons des analyses d'eau gratuites ?",

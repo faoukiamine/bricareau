@@ -89,7 +89,15 @@ const problems: Problem[] = [
 
 
 
-const comparisonData = [
+interface ComparisonItem {
+  feature: string;
+  filters: boolean | string;
+  softeners: boolean | string;
+  osmose: boolean | string;
+  uv: boolean | string;
+}
+
+const comparisonData: ComparisonItem[] = [
   { feature: "Solutions au Point d'entrée (Toute la maison)", filters: true, softeners: true, osmose: false, uv: true },
   { feature: "Solutions au Point d'usage", filters: false, softeners: false, osmose: true, uv: false },
   { feature: "Élimination des sédiments et de la turbidité", filters: true, softeners: "Partielle", osmose: true, uv: false },
@@ -100,28 +108,8 @@ const comparisonData = [
   { feature: "Filtration des polluants chimiques", filters: "Option", softeners: false, osmose: true, uv: false },
 ];
 
-const puitsTestimonials = [
-  {
-    content: "Nous avions une forte odeur d'œufs pourris dans notre eau de puits. Grâce à leur système de filtration, l'eau est maintenant claire et sans aucune odeur. Un vrai soulagement !",
-    author: "Jean-Pierre M.",
-    location: "Saint-Jérôme, QC",
-    rating: 5
-  },
-  {
-    content: "Les taches de rouille dans nos éviers ont disparu. Le test d'eau était précis et la solution proposée parfaitement adaptée à notre problème de fer.",
-    author: "Sylvie L.",
-    location: "Mirabel, QC",
-    rating: 5
-  },
-  {
-    content: "Excellent service pour notre eau de puits. Ils connaissent vraiment leur sujet. On se sent en sécurité de boire notre eau maintenant.",
-    author: "Benoit R.",
-    location: "Drummondville, QC",
-    rating: 5
-  }
-];
-
 const EauDePuits = () => {
+
 
   const [showAllFaqs, setShowAllFaqs] = React.useState(false);
   useEffect(() => {
@@ -501,16 +489,17 @@ const EauDePuits = () => {
           </div>
         </section>
 
-        {/* 7. Testimonial Slider */}
+        {/* 7. Testimonials Section */}
         <TestimonialsSection
-          testimonials={puitsTestimonials}
+          filterProduct="/eau-de-puits"
           title={
             <>
-              <span className="text-[32px] md:text-[60px] font-light leading-[1.2] md:leading-[60px] block">Une eau saine.</span>
-              <span className="text-[32px] md:text-[60px] font-normal leading-[1.2] md:leading-[60px] block">Un puits protégé.</span>
+              <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block tracking-tighter text-slate-900">Une eau saine.</span>
+              <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block text-blue-600 tracking-tighter">Un puits protégé.</span>
             </>
           }
         />
+
 
 
         {/* 8. Comparison Table Section */}
@@ -552,7 +541,7 @@ const EauDePuits = () => {
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-gray-100">
-                  {comparisonData.map((row: any, i) => (
+                  {comparisonData.map((row, i) => (
                     <tr key={i} className="hover:bg-gray-50 transition-colors">
                       <td className="p-8 font-light text-gray-700">{row.feature}</td>
                       <td className="p-8 text-center text-sm">
