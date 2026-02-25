@@ -58,17 +58,16 @@ const StationEauPotable = () => {
   }, []);
 
   const comparisonData = [
-    { feature: "Installation sous l'évier (Point d'usage)", stage4: true, stage5: true, stage6: true },
-    { feature: "Nombre d'étapes de filtration", stage4: "4 Étapes", stage5: "6 Étapes", stage6: "5 Étapes" },
-    { feature: "Production journalière", stage4: "75 GPD", stage5: "75 GPD", stage6: "600 GPD" },
-    { feature: "Élimination sédiments et chlore", stage4: true, stage5: true, stage6: true },
-    { feature: "Membrane d'osmose inverse (99%)", stage4: true, stage5: true, stage6: true },
-    { feature: "Double pré-filtration au charbon", stage4: false, stage5: true, stage6: true },
-    { feature: "Filtre de polissage final", stage4: true, stage5: true, stage6: true },
-    { feature: "Cartouche de reminéralisation", stage4: "Option", stage5: true, stage6: "Option" },
-    { feature: "Équilibrage du pH (Alcalin)", stage4: "Option", stage5: true, stage6: "Option" },
+    { feature: "Installation sous l'évier (Point d'usage)", stage4: true, stage6: true, stage5: true },
+    { feature: "Nombre d'étapes de filtration", stage4: "4 Étapes", stage6: "6 Étapes", stage5: "5 Étapes" },
+    { feature: "Production journalière", stage4: "75 GPD", stage6: "75 GPD", stage5: "600 GPD" },
+    { feature: "Élimination sédiments et chlore", stage4: true, stage6: true, stage5: true },
+    { feature: "Membrane d'osmose inverse (99%)", stage4: true, stage6: true, stage5: true },
+    { feature: "Double pré-filtration au charbon", stage4: false, stage6: true, stage5: true },
+    { feature: "Filtre de polissage final", stage4: true, stage6: true, stage5: true },
+    { feature: "Cartouche de reminéralisation", stage4: "Option", stage6: true, stage5: "Option" },
+    { feature: "Équilibrage du pH (Alcalin)", stage4: "Option", stage6: true, stage5: "Option" },
   ];
-
 
   return (
     <div className="min-h-screen bg-background text-slate-900 font-sans">

@@ -7,12 +7,22 @@ import filtrationBlogImg from "@/assets/10341859.jpg";
 const Blog = () => {
     const blogPosts = [
         {
+            title: "La Désinfection UV : Impératif Sanitaire pour l'Eau de Puits",
+            excerpt: "Analyse approfondie de la barrière microbiologique ultraviolette : enjeux sanitaires, principes de biophysique et protocoles d'ingénierie résidentielle.",
+            date: "25 février 2025",
+            author: "Équipe Bricareau",
+            category: "Expertise",
+            image: "https://images.unsplash.com/photo-1581093458791-9d42e3c5e2e9?q=80&w=600&auto=format&fit=crop",
+            path: "/blog/lampe-uv-eau-de-puits"
+        },
+        {
             title: "Les avantages d'un adoucisseur d'eau pour votre maison",
             excerpt: "Découvrez comment un adoucisseur d'eau peut améliorer votre quotidien et protéger vos appareils électroménagers.",
             date: "15 décembre 2024",
             author: "Équipe Bricareau",
             category: "Conseils",
-            image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=600&auto=format&fit=crop"
+            image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=600&auto=format&fit=crop",
+            path: "/blog/adoucisseur-maison"
         },
         {
             title: "Comment choisir le bon système de filtration d'eau",
@@ -20,39 +30,8 @@ const Blog = () => {
             date: "10 décembre 2024",
             author: "Équipe Bricareau",
             category: "Guides",
-            image: filtrationBlogImg
-        },
-        {
-            title: "L'importance de l'analyse d'eau pour votre santé",
-            excerpt: "Pourquoi tester votre eau régulièrement est essentiel pour la santé de votre famille.",
-            date: "5 décembre 2024",
-            author: "Équipe Bricareau",
-            category: "Santé",
-            image: "https://images.unsplash.com/photo-1581093458791-9d42e3c5e2e9?q=80&w=600&auto=format&fit=crop"
-        },
-        {
-            title: "Entretien de votre adoucisseur : nos meilleurs conseils",
-            excerpt: "Astuces pratiques pour maintenir votre adoucisseur d'eau en parfait état de fonctionnement.",
-            date: "1 décembre 2024",
-            author: "Équipe Bricareau",
-            category: "Entretien",
-            image: "https://images.unsplash.com/photo-1607400201889-565b1ee75f8e?q=80&w=600&auto=format&fit=crop"
-        },
-        {
-            title: "Eau de puits : ce que vous devez savoir",
-            excerpt: "Tout ce qu'il faut savoir sur le traitement et l'entretien de l'eau de puits.",
-            date: "25 novembre 2024",
-            author: "Équipe Bricareau",
-            category: "Conseils",
-            image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=600&auto=format&fit=crop"
-        },
-        {
-            title: "Les solutions écologiques pour traiter votre eau",
-            excerpt: "Découvrez nos systèmes de traitement d'eau respectueux de l'environnement.",
-            date: "20 novembre 2024",
-            author: "Équipe Bricareau",
-            category: "Écologie",
-            image: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=600&auto=format&fit=crop"
+            image: filtrationBlogImg,
+            path: "/blog/choisir-filtration"
         }
     ];
 
@@ -81,7 +60,7 @@ const Blog = () => {
                             {blogPosts.map((post, index) => (
                                 <article
                                     key={index}
-                                    className="bg-card border border-border rounded-lg overflow-hidden hover:shadow-lg transition-shadow group"
+                                    className="bg-card border border-border rounded-lg overflow-hidden hover:shadow-lg transition-shadow group flex flex-col"
                                 >
                                     <div className="relative h-48 overflow-hidden">
                                         <img
@@ -95,7 +74,7 @@ const Blog = () => {
                                             </span>
                                         </div>
                                     </div>
-                                    <div className="p-6">
+                                    <div className="p-6 flex flex-col flex-grow">
                                         <div className="flex items-center gap-4 text-xs text-muted-foreground mb-3">
                                             <span className="flex items-center gap-1">
                                                 <Calendar className="h-3 w-3" />
@@ -109,15 +88,18 @@ const Blog = () => {
                                         <h3 className="text-lg font-bold text-foreground mb-2 group-hover:text-[#0052ff] transition-colors">
                                             {post.title}
                                         </h3>
-                                        <p className="text-sm text-muted-foreground mb-4">
+                                        <p className="text-sm text-muted-foreground mb-4 flex-grow">
                                             {post.excerpt}
                                         </p>
                                         <Button
                                             variant="link"
-                                            className="p-0 h-auto text-[#0052ff] hover:text-[#0052ff]/80"
+                                            className="p-0 h-auto text-[#0052ff] hover:text-[#0052ff]/80 self-start"
+                                            asChild
                                         >
-                                            Lire la suite
-                                            <ArrowRight className="ml-2 h-4 w-4" />
+                                            <a href={post.path}>
+                                                Lire la suite
+                                                <ArrowRight className="ml-2 h-4 w-4" />
+                                            </a>
                                         </Button>
                                     </div>
                                 </article>
@@ -125,6 +107,7 @@ const Blog = () => {
                         </div>
                     </div>
                 </section>
+
 
                 {/* Newsletter CTA */}
                 <section className="py-12 md:py-16 bg-slate-50">

@@ -44,7 +44,9 @@ import CommentChoisirAdoucisseur from "./pages/Comment-choisir-un-adoucisseur-de
 import FiltresDeRemplacement from "./pages/Filtres-de-remplacement";
 import Diagnostic from "./pages/Diagnostic";
 import OperatorDashboard from "./pages/OperatorDashboard";
+import PourquoiLaLampeUV from "./pages/Blog pages/Pourquoi-la-lampe-UV-est-elle-indispensable-pour-votre-eau-de-puits";
 import NotFound from "./pages/NotFound";
+
 
 const queryClient = new QueryClient();
 
@@ -93,7 +95,9 @@ const App = () => (
           <Route path="/commercial-industriel" element={<CommercialIndustriel />} />
           <Route path="/promotions" element={<Promotions />} />
           <Route path="/comment-choisir-un-adoucisseur-deau" element={<CommentChoisirAdoucisseur />} />
+          <Route path="/blog/lampe-uv-eau-de-puits" element={<PourquoiLaLampeUV />} />
           <Route path="/filtres-de-remplacement" element={<FiltresDeRemplacement />} />
+
           <Route path="/diagnostic" element={<Diagnostic />} />
           <Route path="/operator" element={<OperatorDashboard />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

@@ -5,68 +5,65 @@ import { Star, Quote } from "lucide-react";
 const Temoignages = () => {
     const testimonials = [
         {
-            name: "Marie Tremblay",
-            location: "Montréal, QC",
+            name: "Marc-André L.",
             rating: 5,
-            text: "Excellent service! L'installation de notre adoucisseur d'eau a été rapide et professionnelle. La différence est incroyable - notre peau est plus douce et nos appareils fonctionnent mieux.",
-            product: "Adoucisseur d'eau résidentiel"
+            text: "Service exceptionnel. Connaissent vraiment leur domaine. Solution trouvée pour mon eau de puits là où d'autres ont échoué.",
+            product: "Eau de puits"
         },
         {
-            name: "Jean Dubois",
-            location: "Québec, QC",
+            name: "Karine R.",
             rating: 5,
-            text: "Nous avons installé un système de filtration il y a 6 mois et nous ne pourrions pas être plus satisfaits. L'eau a un goût excellent et le service après-vente est impeccable.",
-            product: "Système de filtration"
+            text: "Entreprise fiable et honnête. Pas de vente de pression, juste de bons conseils adaptés à mes besoins.",
+            product: "Eau de puits"
         },
         {
-            name: "Sophie Martin",
-            location: "Laval, QC",
+            name: "Alain S.",
             rating: 5,
-            text: "Le personnel de Bricareau est très compétent et courtois. Ils ont pris le temps de bien expliquer le fonctionnement de notre système et répondre à toutes nos questions.",
-            product: "Adoucisseur sans sel"
+            text: "Excellent service après-vente. Réponse rapide à une question technique après l'installation.",
+            product: "Eau de puits"
         },
         {
-            name: "Pierre Gagnon",
-            location: "Sherbrooke, QC",
+            name: "Hélène B.",
             rating: 5,
-            text: "Après avoir eu des problèmes avec notre eau de puits, Bricareau nous a proposé une solution parfaite. L'équipe est professionnelle et le service est exceptionnel.",
-            product: "Traitement eau de puits"
+            text: "Service humain et honnête. On ne se sent pas comme un simple numéro.",
+            product: "Eau de puits"
         },
         {
-            name: "Isabelle Roy",
-            location: "Trois-Rivières, QC",
+            name: "Robert G.",
             rating: 5,
-            text: "Je recommande fortement Bricareau! Leur équipe a installé notre fontaine d'eau au bureau et tout le monde en est ravi. Plus besoin d'acheter de l'eau embouteillée!",
-            product: "Fontaine d'eau commerciale"
+            text: "Très satisfait de l'expertise pour mon problème de fer dans l'eau de mon puits.",
+            product: "Eau de puits, Systèmes de filtration d'eau spécialisés"
         },
         {
-            name: "Marc Leblanc",
-            location: "Gatineau, QC",
+            name: "Jonathan H.",
             rating: 5,
-            text: "Service impeccable du début à la fin. L'analyse d'eau gratuite nous a permis de choisir le bon système. Très satisfait de notre investissement!",
-            product: "Système de filtration UV"
+            text: "Experts en traitement d'eau. Ils ont résolu mon problème de manganèse rapidement.",
+            product: "Eau de puits, Systèmes de filtration d'eau spécialisés"
         },
         {
-            name: "Caroline Bouchard",
-            location: "Longueuil, QC",
+            name: "Chantal R.",
             rating: 5,
-            text: "L'entretien annuel est toujours fait dans les temps et les techniciens sont très professionnels. C'est rassurant de savoir que notre système est bien entretenu.",
-            product: "Adoucisseur d'eau"
+            text: "Je suis ravie du service. Mon eau est maintenant douce et sans odeur.",
+            product: "Eau de puits, Systèmes de filtration d'eau spécialisés"
         },
         {
-            name: "Daniel Côté",
-            location: "Saguenay, QC",
+            name: "Caroline M.",
             rating: 5,
-            text: "Excellent rapport qualité-prix. Notre facture d'électricité a même diminué depuis l'installation de l'adoucisseur. Je recommande à tous mes amis!",
-            product: "Adoucisseur haute efficacité"
+            text: "Enfin une solution durable pour notre eau de puits. Service impeccable.",
+            product: "Systèmes de filtration d'eau spécialisés"
         },
         {
-            name: "Nathalie Fortin",
-            location: "Drummondville, QC",
+            name: "Philippe R.",
             rating: 5,
-            text: "Le service à la clientèle est remarquable. Ils ont répondu rapidement à toutes nos questions et l'installation s'est déroulée sans problème.",
-            product: "Système complet résidentiel"
-        }
+            text: "Expertise pointue sur les problèmes de tanins. Problème réglé efficacement.",
+            product: "Systèmes de filtration d'eau spécialisés"
+        },
+        {
+            name: "Éric V.",
+            rating: 5,
+            text: "Système de traitement du fer très efficace. Ma plomberie ne tache plus.",
+            product: "Systèmes de filtration d'eau spécialisés"
+        },
     ];
 
     return (
@@ -116,7 +113,6 @@ const Temoignages = () => {
                                     </p>
                                     <div className="border-t border-border pt-4">
                                         <p className="font-semibold text-foreground">{testimonial.name}</p>
-                                        <p className="text-xs text-muted-foreground">{testimonial.location}</p>
                                         <p className="text-xs text-[#0052ff] mt-1">{testimonial.product}</p>
                                     </div>
                                 </div>
