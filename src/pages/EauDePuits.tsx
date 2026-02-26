@@ -494,8 +494,8 @@ const EauDePuits = () => {
           filterProduct="/eau-de-puits"
           title={
             <>
-              <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block tracking-tighter text-slate-900">Une eau saine.</span>
-              <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block text-blue-600 tracking-tighter">Un puits protégé.</span>
+              <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block tracking-tighter text-slate-900">La solution là </span>
+              <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block text-blue-600 tracking-tighter">où d'autres ont échoué.</span>
             </>
           }
         />

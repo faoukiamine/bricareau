@@ -430,8 +430,8 @@ const AdoucisseursEauDePuits = () => {
                     filterProduct="/adoucisseurs-eau-de-puits"
                     title={
                         <>
-                            <span className="text-[32px] md:text-[60px] font-light leading-[1.2] md:leading-[60px] block">Une expertise puits.</span>
-                            <span className="text-[32px] md:text-[60px] font-normal leading-[1.2] md:leading-[60px] block">Une satisfaction totale.</span>
+                            <span className="text-[32px] md:text-[60px] font-light leading-[1.2] md:leading-[60px] block">Là où le calcaire dictait sa loi,</span>
+                            <span className="text-[32px] md:text-[60px] font-normal leading-[1.2] md:leading-[60px] block">nos clients ont repris le contrôle.</span>
                         </>
                     }
                 />

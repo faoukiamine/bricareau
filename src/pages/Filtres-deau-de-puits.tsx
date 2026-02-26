@@ -423,8 +423,8 @@ const FiltresPuits = () => {
                     filterProduct="/Filtres-deau"
                     title={
                         <>
-                            <span className="text-[32px] md:text-[60px] font-light leading-[1.2] md:leading-[60px] block">Une expertise puits.</span>
-                            <span className="text-[32px] md:text-[60px] font-normal leading-[1.2] md:leading-[60px] block text-blue-600">Une satisfaction totale.</span>
+                            <span className="text-[32px] md:text-[60px] font-light leading-[1.2] md:leading-[60px] block">Buvez l'eau de votre puits sans crainte</span>
+                            <span className="text-[32px] md:text-[60px] font-normal leading-[1.2] md:leading-[60px] block text-blue-600"> Ils ont fait le saut avec nous.</span>
                         </>
                     }
                 />

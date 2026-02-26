@@ -428,8 +428,8 @@ const Filtration = () => {
                     filterProduct="/filtration"
                     title={
                         <>
-                            <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block tracking-tighter">Une eau plus pure.</span>
-                            <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block text-blue-600 tracking-tighter">Une santé protégée.</span>
+                            <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block tracking-tighter">Honnêteté et passion</span>
+                            <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block text-blue-600 tracking-tighter">la signature Bricareau vue par vous.</span>
                         </>
                     }
                 />
@@ -587,7 +587,7 @@ const Filtration = () => {
                     </div>
                 </section>
 
-                {/* 10. Ressources Section */}
+                {/* 10. Resources Section */}
                 <section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">

@@ -113,7 +113,7 @@ const DesinfectionUV = () => {
                             </div>
                         </div>
                     </div>
-                    {/* Wave Separator Bottom - Transition to Blue Section */}
+                    {/* 2.Wave Separator Bottom - Transition to Blue Section */}
                     <div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-[0] z-20 pointer-events-none">
                         <svg
                             className="relative block w-full h-[50px] md:h-[80px]"
@@ -131,7 +131,7 @@ const DesinfectionUV = () => {
                     </div>
                 </section>
 
-                {/* 2. Why choose UV disinfection? */}
+                {/* 3. Why choose UV disinfection? */}
                 <section className="py-24 bg-blue-600 text-white">
                     <div className="container mx-auto px-6">
                         <div className="text-center mb-16">
@@ -169,7 +169,7 @@ const DesinfectionUV = () => {
                     </div>
                 </section>
 
-                {/* 3. UV Systems - Product Grid */}
+                {/* 4. UV Systems - Product Grid */}
                 <section id="systemes-uv" className="py-24 bg-white">
                     <div className="container mx-auto px-6">
                         <div className="text-left mb-16">
@@ -289,7 +289,7 @@ const DesinfectionUV = () => {
                     </div>
                 </section>
 
-                {/* 7.Water Testing Section */}
+                {/* 6.Water Testing Section */}
                 <section className="relative h-[650px] flex items-center overflow-hidden">
                     <div className="absolute inset-0 z-0">
                         <img
@@ -333,8 +333,7 @@ const DesinfectionUV = () => {
                     filterProduct="/Systemes-de-desinfection-UV"
                     title={
                         <>
-                            <span className="text-[32px] md:text-[60px] font-light leading-[1.2] md:leading-[60px] block">Une eau saine.</span>
-                            <span className="text-[32px] md:text-[60px] font-normal leading-[1.2] md:leading-[60px] block text-blue-600">Une sécurité UV.</span>
+                            <span className="text-[32px] md:text-[60px] font-light leading-[1.2] md:leading-[60px] block">Zéro bactérie, 100 % sérénité</span>
                         </>
                     }
                 />
