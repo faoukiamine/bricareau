@@ -392,7 +392,14 @@ const FiltresTouteMaison = () => {
                 </section>
 
                 {/* Testimonials Grid Section */}
-                <TestimonialsSection filterProduct="/Filtres-deau-pour-toute-la-maison" />
+                <TestimonialsSection filterProduct="/Filtres-deau-pour-toute-la-maison" 
+                    title={
+                        <>
+                        <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block tracking-tighter text-slate-900">Fini le chlore et d'autres contaminants, </span>
+                        <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block text-blue-600 tracking-tighter">la métamorphose de votre quotidien vue par nos clients.</span>
+                        </>
+                    }
+                />
 
                 {/* 5. CTA Section */}
                 <section className="bg-primary py-16 md:py-20">
