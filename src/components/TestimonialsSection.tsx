@@ -12,11 +12,13 @@ interface TestimonialsSectionProps {
     testimonials?: Testimonial[];
     title?: React.ReactNode;
     filterProduct?: string;
+    limit?: number;
 }
 
 const TestimonialsSection = ({
     testimonials,
     filterProduct,
+    limit,
     title = (
         <>
             <span className="text-[32px] md:text-[60px] font-light leading-[1.2] md:leading-[60px] block">Qualité inégalée.</span>
@@ -31,7 +33,12 @@ const TestimonialsSection = ({
         (filterProduct ? getTestimonialsByProduct(filterProduct) : allTestimonials);
 
     // If no testimonials found for filtered product, fallback to all (or common ones)
-    const finalTestimonials = displayTestimonials.length > 0 ? displayTestimonials : allTestimonials;
+    let finalTestimonials = displayTestimonials.length > 0 ? displayTestimonials : allTestimonials;
+
+    // Apply limit if provided
+    if (limit && limit > 0) {
+        finalTestimonials = finalTestimonials.slice(0, limit);
+    }
 
 
     const [emblaRef, emblaApi] = useEmblaCarousel({

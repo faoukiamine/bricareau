@@ -22,6 +22,7 @@ const Index = () => {
         <BetterWaterStats />
         <TestimonialsSection
           filterProduct="/"
+          limit={6}
           title={
             <>
               <span className="text-[32px] md:text-[60px] font-light leading-[1.2] md:leading-[60px] block">Votre confiance.</span>

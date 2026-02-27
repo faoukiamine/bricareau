@@ -327,8 +327,8 @@ const FiltrationSousEvier = () => {
                     filterProduct="/Systemes-de-filtration-deau-sous-evier"
                     title={
                         <>
-                            <span className="text-[32px] md:text-[60px] font-light leading-[1.2] md:leading-[60px] block">Une eau gourmande.</span>
-                            <span className="text-[32px] md:text-[60px] font-normal leading-[1.2] md:leading-[60px] block">Un robinet réinventé.</span>
+                            <span className="text-[32px] md:text-[60px] font-light leading-[1.2] md:leading-[60px] block">Adieu les bouteilles plastiques</span>
+                            <span className="text-[32px] md:text-[60px] font-normal leading-[1.2] md:leading-[60px] block"> Ils ont enfin retrouvé la liberté au robinet</span>
                         </>
                     }
                 />

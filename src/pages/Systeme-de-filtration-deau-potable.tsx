@@ -342,8 +342,8 @@ const StationEauPotable = () => {
           filterProduct="/systeme-de-filtration-deau-potable"
           title={
             <>
-              <span className="text-[32px] md:text-[60px] font-light leading-[1.2] md:leading-[60px] block">Une eau vive.</span>
-              <span className="text-[32px] md:text-[60px] font-normal leading-[1.2] md:leading-[60px] block text-blue-600">Une pureté redécouverte.</span>
+              <span className="text-[32px] md:text-[60px] font-light leading-[1.2] md:leading-[60px] block">L'eau de source,</span>
+              <span className="text-[32px] md:text-[60px] font-normal leading-[1.2] md:leading-[60px] block text-blue-600">directement à votre robinet.</span>
             </>
           }
         />
