@@ -1,8 +1,8 @@
 
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import ProblemHero from "@/components/ProblemHero";
 import ProductShowcase from "@/components/ProductShowcase";
+import ExpertTrustSection from "@/components/ExpertTrustSection";
 
 import BetterWaterStats from "@/components/BetterWaterStats";
 import DiscoverExpert from "@/components/DiscoverExpert";
@@ -17,7 +17,7 @@ const Index = () => {
       <main>
         <Hero />
         <ProductShowcase />
-        <ProblemHero />
+        <ExpertTrustSection />
 
         <BetterWaterStats />
         <TestimonialsSection

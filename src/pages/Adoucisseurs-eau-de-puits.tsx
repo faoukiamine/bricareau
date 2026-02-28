@@ -30,6 +30,7 @@ import {
     HandCoins
 } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
+import { useNavigate } from "react-router-dom";
 import waterTestingImg from "@/assets/2147800429.jpg";
 import residentialWaterSoftenerImg from "@/assets/residential-water-softener.png";
 import waterSoftenerImg from "@/assets/Adoucisseurs d'eau.webp";
@@ -161,6 +162,7 @@ const comparisonData: ComparisonItem[] = [
 
 const AdoucisseursEauDePuits = () => {
     const [showAllFaqs, setShowAllFaqs] = React.useState(false);
+    const navigate = useNavigate();
     useEffect(() => {
         document.title = "Adoucisseur d'eau de puits : Protection fer et calcaire";
         const metaDesc = document.querySelector('meta[name="description"]');
@@ -513,19 +515,25 @@ const AdoucisseursEauDePuits = () => {
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {[
-                                { title: "Comment choisir son adoucisseur", img: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop" },
-                                { title: "L'importance de l'eau adoucie", img: residentialWaterSoftenerImg },
-                                { title: "Entretien de votre système Bricareau", img: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=800&auto=format&fit=crop" }
+                                { title: "Comment choisir son adoucisseur d'eau ?", img: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop", link: "/comment-choisir-un-adoucisseur-deau" },
+                                { title: "5 signes que vous avez besoin d'un adoucisseur", img: residentialWaterSoftenerImg, link: "/5-signes-besoin-adoucisseur-eau" },
+                                { title: "Impact du calcaire sur vos électroménagers", img: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=800&auto=format&fit=crop", link: "/calcaire-duree-vie-electromenagers" }
                             ].map((art, i) => (
-                                <div key={i} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer group flex flex-col h-full border border-gray-100">
+                                <div
+                                    key={i}
+                                    className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer group flex flex-col h-full border border-gray-100"
+                                    onClick={() => navigate(art.link)}
+                                >
                                     <div className="h-56 overflow-hidden">
                                         <img src={art.img} alt={`${art.title} - Expertise Bricareau en traitement d'eau de puits`} className="w-full h-full object-cover transition-transform group-hover:scale-110" />
                                     </div>
                                     <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
-                                        <h4 className="text-xl font-medium mb-4 group-hover:text-blue-600 transition-colors tracking-tight">{art.title}</h4>
+                                        <NavLink to={art.link}>
+                                            <h4 className="text-xl font-medium mb-4 group-hover:text-blue-600 transition-colors tracking-tight">{art.title}</h4>
+                                        </NavLink>
                                         <div className="mt-auto">
                                             <NavLink
-                                                to="#"
+                                                to={art.link}
                                                 className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-sm"
                                             >
                                                 Lire <ChevronRight className="h-4 w-4" />

@@ -401,7 +401,7 @@ const Fontaines = () => {
                 </section>
 
                 {/* Section 4: Testimonials */}
-                <TestimonialsSection filterProduct="/fontaines" />
+                <TestimonialsSection filterProduct="/fontaines" limit={6} />
 
                 {/* Section 7: Mission Éco-Responsable Bricareau */}
                 <section className="py-32 bg-white relative overflow-hidden">

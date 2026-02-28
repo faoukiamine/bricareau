@@ -502,14 +502,14 @@ const FiltresPuits = () => {
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {[
-                                { title: "Comment traiter le fer dans l'eau", img: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop" },
-                                { title: "Éliminer l'odeur de soufre", img: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=800&auto=format&fit=crop" },
-                                { title: "Guide sur l'eau acide et le pH", img: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=800&auto=format&fit=crop" }
+                                { title: "Taches orange dans l'évier : Le guide complet pour éliminer le fer de votre eau", path: "/taches-orange-dans-levier-eliminer-le-fer", img: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop" },
+                                { title: "Pourquoi mon eau sent l'odeur des œufs pourris ?", path: "/pourquoi-mon-eau-sent-l-odeur-des-oeufs-pourris", img: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=800&auto=format&fit=crop" },
+                                { title: "Guide sur l'eau acide et le pH", path: "#", img: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=800&auto=format&fit=crop" }
                             ].map((art, i) => (
                                 <div
                                     key={i}
                                     className="group bg-white rounded-3xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full cursor-pointer"
-                                    onClick={() => navigate("#")}
+                                    onClick={() => navigate(art.path)}
                                 >
                                     <div className="h-56 overflow-hidden">
                                         <img
@@ -522,7 +522,7 @@ const FiltresPuits = () => {
                                         <h4 className="text-xl font-medium mb-4 group-hover:text-blue-600 transition-colors tracking-tight">{art.title}</h4>
                                         <div className="mt-auto">
                                             <NavLink
-                                                to="#"
+                                                to={art.path}
                                                 className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-sm"
                                             >
                                                 Lire <ChevronRight className="h-4 w-4 transform group-hover:translate-x-1 transition-transform" />

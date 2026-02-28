@@ -456,17 +456,17 @@ const DesinfectionUV = () => {
                                 {
                                     title: "Comment fonctionne la désinfection UV ?",
                                     img: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=800&auto=format&fit=crop",
-                                    path: "/blog/lampe-uv-eau-de-puits"
+                                    path: "/comment-fonctionne-la-desinfection-uv"
                                 },
                                 {
-                                    title: "UV vs Chlore : Le comparatif santé",
-                                    img: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=800&auto=format&fit=crop",
-                                    path: "/blog/lampe-uv-eau-de-puits"
-                                },
-                                {
-                                    title: "Maintenir votre lampe UV efficace",
+                                    title: "Guide : Éliminer le fer de votre eau",
                                     img: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop",
-                                    path: "/blog/lampe-uv-eau-de-puits"
+                                    path: "/taches-orange-dans-levier-eliminer-le-fer"
+                                },
+                                {
+                                    title: "Pourquoi l'eau sent les œufs pourris ?",
+                                    img: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=800&auto=format&fit=crop",
+                                    path: "/pourquoi-mon-eau-sent-l-odeur-des-oeufs-pourris"
                                 }
                             ].map((art, i) => (
                                 <div

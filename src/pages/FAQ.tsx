@@ -8,122 +8,122 @@ import analysisImg from "@/assets/10341859.jpg";
 
 const categories = [
     {
-        title: "Eau de Puits",
-        id: "eau-de-puits",
-        products: [
-            {
-                title: "Analyses & Tests d'eau",
-                desc: "Détection précise des contaminants pour une eau de puits sécuritaire.",
-                image: analysisImg,
-                href: "/tests-eau"
-            },
-            {
-                title: "Filtration spécialisée",
-                desc: "Éliminez le fer, le soufre et le manganèse efficacement.",
-                image: "https://images.unsplash.com/photo-1581244277943-fe4a9c777189?q=80&w=800&auto=format&fit=crop",
-                href: "/Filtres-deau"
-            },
-            {
-                title: "Désinfection UV",
-                desc: "Stérilisation instantanée contre les bactéries et micro-organismes.",
-                image: "https://images.unsplash.com/photo-1594411133519-2189874cb3d1?q=80&w=800&auto=format&fit=crop",
-                href: "/Systemes-de-desinfection-UV"
-            }
-        ]
-    },
-    {
-        title: "Adoucissement d'eau",
+        title: "Adoucissement de l'eau",
         id: "adoucissement",
         products: [
             {
-                title: "Adoucisseurs Résidentiels",
-                desc: "La référence pour une eau douce et la protection de vos appareils.",
+                title: "Fonctionnement : Le Guide",
+                desc: "Démystifier la technologie de l'échange d'ions et la science de l'adoucissement.",
+                image: "https://images.unsplash.com/photo-1594411133519-2189874cb3d1?q=80&w=2000&auto=format&fit=crop",
+                href: "/qu-est-ce-qu-un-adoucisseur-eau-fonctionnement"
+            },
+            {
+                title: "Dureté : Le Seuil Critique",
+                desc: "À partir de quel niveau de calcaire un adoucisseur devient-il rentable ?",
+                image: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=2000&auto=format&fit=crop",
+                href: "/niveau-durete-eau-besoin-adoucisseur"
+            },
+            {
+                title: "Mesurer sa dureté soi-même",
+                desc: "Guide pratique des méthodes de test à la maison pour quantifier le calcaire.",
+                image: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=2000&auto=format&fit=crop",
+                href: "/comment-mesurer-durete-eau-maison"
+            },
+            {
+                title: "Les Signes de Besoin Absolu",
+                desc: "Quand votre maison appelle à l'aide : les symptômes d'une eau trop agressive.",
+                image: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=2000&auto=format&fit=crop",
+                href: "/les-signes-absolument-besoin-adoucisseur-eau"
+            },
+            {
+                title: "Sel vs Sans Sel : La Vérité",
+                desc: "Débat technique final : quel système retire réellement le calcaire de votre eau ?",
+                image: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=2000&auto=format&fit=crop",
+                href: "/adoucisseur-eau-sel-vs-sans-sel-efficacite"
+            },
+            {
+                title: "5 signes indéniables",
+                desc: "Découvrez les signes alarmants qui indiquent que votre eau est trop dure.",
                 image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop",
-                href: "/adoucisseur-eau-residentiel"
-            },
-            {
-                title: "Conditionneurs sans sel",
-                desc: "Réduction du tartre sans sel ni rejet d'eau.",
-                image: residentialWaterSoftenerImg,
-                href: "/conditionneurs-sans-sel"
-            },
-            {
-                title: "Livraison de sel",
-                desc: "Service de livraison à domicile pour votre tranquillité.",
-                image: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=800&auto=format&fit=crop",
-                href: "/pieces"
+                href: "/5-signes-besoin-adoucisseur-eau"
             }
         ]
     },
     {
-        title: "Eau de boisson & Filtration",
+        title: "Eau de boisson & Santé",
         id: "eau-de-boisson",
         products: [
             {
-                title: "Osmose Inverse",
-                desc: "Eau pure de qualité bouteille directement à votre robinet.",
-                image: "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?q=80&w=800&auto=format&fit=crop",
-                href: "/osmose-filtration"
+                title: "Osmose Inverse : Meilleur choix ?",
+                desc: "Pourquoi l'osmose inverse est la référence absolue pour une famille en santé.",
+                image: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=2000&auto=format&fit=crop",
+                href: "/osmose-inverse-domicile-meilleur-systeme-famille"
             },
             {
-                title: "Filtration sous-évier",
-                desc: "Solutions compactes pour une eau filtrée délicieuse.",
-                image: "https://images.unsplash.com/photo-1517646288020-f4ca67909930?q=80&w=800&auto=format&fit=crop",
-                href: "/Systemes-de-filtration-deau-sous-evier"
+                title: "Sous Évier vs Toute la Maison",
+                desc: "Où placer votre ligne de défense ? Analyse comparative des architectures.",
+                image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=2000&auto=format&fit=crop",
+                href: "/filtre-evier-vs-maison-entiere-choisir"
             },
             {
-                title: "Filtration toute la maison",
-                desc: "Protection globale contre le chlore et les sédiments.",
-                image: analysisImg,
-                href: "/filtration"
+                title: "Charbon Actif & Ses Limites",
+                desc: "Ce qu'il capture avec brio et les dangers invisibles qu'il laisse traverser.",
+                image: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=2000&auto=format&fit=crop",
+                href: "/filtre-charbon-actif-capacite-limites"
+            },
+            {
+                title: "3 vs 5 Étapes : Comparaison",
+                desc: "Quelle architecture multicouche est nécessaire pour garantir votre santé ?",
+                image: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=2000&auto=format&fit=crop",
+                href: "/filtration-3vs5-etapes-sante-difference"
+            },
+            {
+                title: "Filtre Douche : Peau & Cheveux",
+                desc: "Pourquoi filtrer l'eau de votre douche est le fondement de vos soins de beauté.",
+                image: "https://images.unsplash.com/photo-1559599101-f09722fb4948?q=80&w=2000&auto=format&fit=crop",
+                href: "/filtre-douche-bienfaits-peau-cheveux"
+            },
+            {
+                title: "Filtre Appartement (Sans Travaux)",
+                desc: "Solutions de haute performance pour locataires, portables et sans plomberie.",
+                image: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=2000&auto=format&fit=crop",
+                href: "/filtre-eau-appartement-sans-plomberie"
+            },
+            {
+                title: "PFAS : Polluants éternels",
+                desc: "Ce que vous devez savoir sur les PFAS et comment les éliminer de votre eau.",
+                image: "https://images.unsplash.com/photo-1517646288020-f4ca67909930?q=80&w=2000&auto=format&fit=crop",
+                href: "/pfas-eau-robinet-elimination"
             }
         ]
     },
     {
-        title: "Filtres spécialisés",
-        id: "filtres-specialises",
+        title: "Eau de Puits & Problèmes Spécialisés",
+        id: "eau-de-puits",
         products: [
             {
-                title: "Filtres à charbon actif",
-                desc: "Élimination des goûts et odeurs désagréables de chlore.",
-                image: "https://images.unsplash.com/photo-1581244277943-fe4a9c777189?q=80&w=800&auto=format&fit=crop",
-                href: "/filtration"
+                title: "Traitement UV : Solution Naturelle",
+                desc: "Éliminer 99,99% des bactéries sans chimie grâce au pouvoir de la lumière.",
+                image: "https://images.unsplash.com/photo-1542332213-31f87348057f?q=80&w=2000&auto=format&fit=crop",
+                href: "/systeme-traitement-uv-solution-naturelle-bacteries"
             },
             {
-                title: "Filtres à sédiments",
-                desc: "Élimine le sable, le limon et les particules en suspension.",
-                image: "https://images.unsplash.com/photo-1517646288020-f4ca67909930?q=80&w=800&auto=format&fit=crop",
-                href: "/filtration"
+                title: "Bactéries E. coli : Guide Urgence",
+                desc: "Réagir face à une contamination fécale et installer une protection UV.",
+                image: "https://images.unsplash.com/photo-1594411133519-2189874cb3d1?q=80&w=2000&auto=format&fit=crop",
+                href: "/bacteries-e-coli-eau-puits-causes-solutions"
             },
             {
-                title: "Traitement du fer",
-                desc: "Systèmes robustes pour éliminer les taches de rouille.",
-                image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop",
-                href: "/Filtres-deau"
-            }
-        ]
-    },
-    {
-        title: "Solutions Commerciales",
-        id: "commercial",
-        products: [
-            {
-                title: "Distributeurs d'eau",
-                desc: "Solutions d'hydratation élégantes pour bureaux et entreprises.",
-                image: "https://images.unsplash.com/photo-1563227812-0ea4c22e6cc8?q=80&w=800&auto=format&fit=crop",
-                href: "/fontaines"
+                title: "Fer & Manganèse (Taches)",
+                desc: "Éliminer définitivement les taches orange (fer) et noires (manganèse).",
+                image: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=800&auto=format&fit=crop",
+                href: "/manganese-fer-eau-brune-remedes"
             },
             {
-                title: "Filtration Commerciale",
-                desc: "Systèmes haute capacité pour les besoins industriels.",
-                image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800&auto=format&fit=crop",
-                href: "/commercial-industriel"
-            },
-            {
-                title: "Service de maintenance",
-                desc: "Support technique professionnel pour vos installations.",
-                image: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=800&auto=format&fit=crop",
-                href: "/service"
+                title: "Arsenic dans l'eau potable",
+                desc: "Zones à risque, effets sur la santé et filtration efficace certifiée.",
+                image: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=2000&auto=format&fit=crop",
+                href: "/arsenic-eau-potable-risques-filtration"
             }
         ]
     }

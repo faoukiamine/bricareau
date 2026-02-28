@@ -348,9 +348,8 @@ const StationEauPotable = () => {
           }
         />
 
-        {/* 9. FAQ Section */}
         <section className="py-24 bg-white border-t border-slate-100">
-          <div className="container mx-auto px-6 max-w-4xl">
+          <div className="container mx-auto px-6">
             <div className="text-left mb-16">
               <h2
                 className="text-slate-900 tracking-tighter mb-8 text-left"
@@ -362,86 +361,88 @@ const StationEauPotable = () => {
               <div className="w-24 h-1 bg-blue-600"></div>
             </div>
 
-            <Accordion type="single" collapsible className="w-full">
-              {[
-                {
-                  q: "Qu'est-ce qu'un système d'osmose inverse sous évier ?",
-                  a: "C'est un système de purification d'eau compact installé directement sous votre évier de cuisine. Il utilise une technologie de filtration à plusieurs étapes, incluant une membrane semi-perméable, pour fournir une eau d'une pureté exceptionnelle directement à un robinet dédié.",
-                },
-                {
-                  q: "Quels sont les principaux avantages d'un système d'osmose inverse ?",
-                  a: "Le principal avantage est la suppression de 99 % des contaminants (plomb, chlore, fluorure, arsenic, nitrates, etc.). Cela améliore considérablement le goût, l'odeur et la sécurité de votre eau pour boire et cuisiner, tout en éliminant le besoin d'acheter de l'eau en bouteille.",
-                },
-                {
-                  q: "Est-ce difficile à installer sous un évier de cuisine ?",
-                  a: "Bien que l'installation puisse être réalisée par un bon bricoleur, nous recommandons une installation professionnelle par nos techniciens certifiés Bricareau. Cela garantit une étanchéité parfaite, un raccordement conforme au drain et une pression optimale du réservoir.",
-                },
-                {
-                  q: "Combien de place le système prend-il dans mon armoire ?",
-                  a: "Nos systèmes modernes sont conçus pour être compacts. L'unité de filtration mesure généralement environ 15-18 pouces de hauteur, et le réservoir de stockage occupe une place similaire à celle d'un grand panier à pharmacie. Il reste généralement assez d'espace pour vos produits ménagers.",
-                },
-                {
-                  q: "L'osmose inverse élimine-t-elle les minéraux essentiels ?",
-                  a: "L'osmose inverse est si efficace qu'elle retire presque tout, y compris les minéraux. C'est pourquoi nos systèmes haut de gamme incluent une cartouche de reminéralisation qui réintroduit du calcium et du magnésium, équilibrant le pH pour une eau alcaline plus saine.",
-                },
-                {
-                  q: "Est-ce que le système nécessite un robinet séparé ?",
-                  a: "Oui, la plupart des installations incluent un petit robinet design dédié à l'eau purifiée. Cela permet de préserver vos filtres en utilisant l'eau standard pour la vaisselle et l'eau osmosée uniquement pour la consommation et la cuisson. Des robinets '3-en-1' sont aussi disponibles en option.",
-                },
-                {
-                  q: "À quelle fréquence faut-il remplacer les filtres ?",
-                  a: "Les pré-filtres (sédiments et charbon) doivent généralement être changés tous les 6 à 12 mois pour protéger la membrane. La membrane d'osmose inverse elle-même dure généralement entre 2 et 4 ans, selon votre consommation et la dureté de votre eau.",
-                },
-                {
-                  q: "Peut-on connecter le système à un réfrigérateur ou une machine à glaçons ?",
-                  a: "Absolument ! Nous pouvons installer une ligne de dérivation pour alimenter votre réfrigérateur en eau osmosée. Vous obtiendrez ainsi des glaçons cristallins et de l'eau fraîche purifiée directement de votre distributeur de porte.",
-                },
-                {
-                  q: "L'eau osmosée est-elle meilleure que l'eau en bouteille ?",
-                  a: "Dans la majorité des cas, oui. L'eau osmosée à domicile est souvent plus fraîche et subit moins de risques de contamination par le plastique des bouteilles. De plus, c'est une solution beaucoup plus écologique et économique à long terme.",
-                },
-                {
-                  q: "Quelle est la différence entre un filtre à charbon simple et l'osmose inverse ?",
-                  a: "Un filtre à charbon simple réduit principalement le goût de chlore et les odeurs. L'osmose inverse va beaucoup plus loin en éliminant les solides dissous, les métaux lourds, les virus et les bactéries que le charbon seul ne peut pas arrêter.",
-                },
-                {
-                  q: "Le système fait-il du bruit pendant son fonctionnement ?",
-                  a: "Le système est pratiquement silencieux. Vous pourriez entendre un léger sifflement ou un gargouillis très discret pendant qu'il remplit le réservoir ou évacue les impuretés, mais cela s'arrête dès que le réservoir est plein.",
-                },
-                {
-                  q: "Comment savoir si mes filtres doivent être changés ?",
-                  a: "Une baisse notable du débit au robinet dédié ou un changement subtil du goût sont des indicateurs. Chez Bricareau, nous proposons également des tests de conductivité (TDS) lors de nos visites d'entretien pour mesurer précisément l'efficacité de la membrane.",
-                },
-                {
-                  q: "L'osmose inverse retire-t-elle le calcaire ?",
-                  a: "Oui, elle est extrêmement efficace pour retirer les minéraux de dureté (calcium/magnésium). Cependant, si votre eau est extrêmement dure, nous recommandons un adoucisseur en amont pour éviter que la membrane de l'osmose ne s'encrasse trop rapidement.",
-                },
-                {
-                  q: "Est-ce que le système gaspille beaucoup d'eau ?",
-                  a: "L'osmose inverse nécessite un flux d'eau pour rincer les impuretés de la membrane (eau de rejet). Nos systèmes récents sont optimisés pour être très efficaces, avec des ratios de rejet très bas comparés aux anciens modèles des années 90.",
-                },
-                {
-                  q: "Quelle est la durée de vie globale du système ?",
-                  a: "Avec un entretien régulier et des changements de filtres planifiés, un système d'osmose inverse de qualité Bricareau peut facilement durer 15 à 20 ans. C'est un investissement durable pour la santé de votre famille.",
-                },
-              ].slice(0, showAllFaqs ? undefined : 6).map((item, idx) => (
-                <AccordionItem key={idx} value={`item-${idx}`} className="border-b-slate-100 px-4">
-                  <AccordionTrigger className="text-left text-base font-medium leading-6 hover:no-underline py-8 text-slate-800" style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}>
-                    {item.q}
-                  </AccordionTrigger>
-                  <AccordionContent className="text-base font-light leading-6 text-slate-500 pb-8 text-justify" style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}>
-                    {item.a}
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
-            <div className="mt-12 text-center">
-              <Button
-                onClick={() => setShowAllFaqs(!showAllFaqs)}
-                className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-12 h-14 shadow-lg shadow-blue-200"
-              >
-                {showAllFaqs ? "Voir moins de questions" : "Voir toutes les questions"}
-              </Button>
+            <div className="max-w-4xl mx-auto">
+              <Accordion type="single" collapsible className="w-full">
+                {[
+                  {
+                    q: "Qu'est-ce qu'un système d'osmose inverse sous évier ?",
+                    a: "C'est un système de purification d'eau compact installé directement sous votre évier de cuisine. Il utilise une technologie de filtration à plusieurs étapes, incluant une membrane semi-perméable, pour fournir une eau d'une pureté exceptionnelle directement à un robinet dédié.",
+                  },
+                  {
+                    q: "Quels sont les principaux avantages d'un système d'osmose inverse ?",
+                    a: "Le principal avantage est la suppression de 99 % des contaminants (plomb, chlore, fluorure, arsenic, nitrates, etc.). Cela améliore considérablement le goût, l'odeur et la sécurité de votre eau pour boire et cuisiner, tout en éliminant le besoin d'acheter de l'eau en bouteille.",
+                  },
+                  {
+                    q: "Est-ce difficile à installer sous un évier de cuisine ?",
+                    a: "Bien que l'installation puisse être réalisée par un bon bricoleur, nous recommandons une installation professionnelle par nos techniciens certifiés Bricareau. Cela garantit une étanchéité parfaite, un raccordement conforme au drain et une pression optimale du réservoir.",
+                  },
+                  {
+                    q: "Combien de place le système prend-il dans mon armoire ?",
+                    a: "Nos systèmes modernes sont conçus pour être compacts. L'unité de filtration mesure généralement environ 15-18 pouces de hauteur, et le réservoir de stockage occupe une place similaire à celle d'un grand panier à pharmacie. Il reste généralement assez d'espace pour vos produits ménagers.",
+                  },
+                  {
+                    q: "L'osmose inverse élimine-t-elle les minéraux essentiels ?",
+                    a: "L'osmose inverse est si efficace qu'elle retire presque tout, y compris les minéraux. C'est pourquoi nos systèmes haut de gamme incluent une cartouche de reminéralisation qui réintroduit du calcium et du magnésium, équilibrant le pH pour une eau alcaline plus saine.",
+                  },
+                  {
+                    q: "Est-ce que le système nécessite un robinet séparé ?",
+                    a: "Oui, la plupart des installations incluent un petit robinet design dédié à l'eau purifiée. Cela permet de préserver vos filtres en utilisant l'eau standard pour la vaisselle et l'eau osmosée uniquement pour la consommation et la cuisson. Des robinets '3-en-1' sont aussi disponibles en option.",
+                  },
+                  {
+                    q: "À quelle fréquence faut-il remplacer les filtres ?",
+                    a: "Les pré-filtres (sédiments et charbon) doivent généralement être changés tous les 6 à 12 mois pour protéger la membrane. La membrane d'osmose inverse elle-même dure généralement entre 2 et 4 ans, selon votre consommation et la dureté de votre eau.",
+                  },
+                  {
+                    q: "Peut-on connecter le système à un réfrigérateur ou une machine à glaçons ?",
+                    a: "Absolument ! Nous pouvons installer une ligne de dérivation pour alimenter votre réfrigérateur en eau osmosée. Vous obtiendrez ainsi des glaçons cristallins et de l'eau fraîche purifiée directement de votre distributeur de porte.",
+                  },
+                  {
+                    q: "L'eau osmosée est-elle meilleure que l'eau en bouteille ?",
+                    a: "Dans la majorité des cas, oui. L'eau osmosée à domicile est souvent plus fraîche et subit moins de risques de contamination par le plastique des bouteilles. De plus, c'est une solution beaucoup plus écologique et économique à long terme.",
+                  },
+                  {
+                    q: "Quelle est la différence entre un filtre à charbon simple et l'osmose inverse ?",
+                    a: "Un filtre à charbon simple réduit principalement le goût de chlore et les odeurs. L'osmose inverse va beaucoup plus loin en éliminant les solides dissous, les métaux lourds, les virus et les bactéries que le charbon seul ne peut pas arrêter.",
+                  },
+                  {
+                    q: "Le système fait-il du bruit pendant son fonctionnement ?",
+                    a: "Le système est pratiquement silencieux. Vous pourriez entendre un léger sifflement ou un gargouillis très discret pendant qu'il remplit le réservoir ou évacue les impuretés, mais cela s'arrête dès que le réservoir est plein.",
+                  },
+                  {
+                    q: "Comment savoir si mes filtres doivent être changés ?",
+                    a: "Une baisse notable du débit au robinet dédié ou un changement subtil du goût sont des indicateurs. Chez Bricareau, nous proposons également des tests de conductivité (TDS) lors de nos visites d'entretien pour mesurer précisément l'efficacité de la membrane.",
+                  },
+                  {
+                    q: "L'osmose inverse retire-t-elle le calcaire ?",
+                    a: "Oui, elle est extrêmement efficace pour retirer les minéraux de dureté (calcium/magnésium). Cependant, si votre eau est extrêmement dure, nous recommandons un adoucisseur en amont pour éviter que la membrane de l'osmose ne s'encrasse trop rapidement.",
+                  },
+                  {
+                    q: "Est-ce que le système gaspille beaucoup d'eau ?",
+                    a: "L'osmose inverse nécessite un flux d'eau pour rincer les impuretés de la membrane (eau de rejet). Nos systèmes récents sont optimisés pour être très efficaces, avec des ratios de rejet très bas comparés aux anciens modèles des années 90.",
+                  },
+                  {
+                    q: "Quelle est la durée de vie globale du système ?",
+                    a: "Avec un entretien régulier et des changements de filtres planifiés, un système d'osmose inverse de qualité Bricareau peut facilement durer 15 à 20 ans. C'est un investissement durable pour la santé de votre famille.",
+                  },
+                ].slice(0, showAllFaqs ? undefined : 6).map((item, idx) => (
+                  <AccordionItem key={idx} value={`item-${idx}`} className="border-b-slate-100 px-4">
+                    <AccordionTrigger className="text-left text-base font-medium leading-6 hover:no-underline py-8 text-slate-800" style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}>
+                      {item.q}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-base font-light leading-6 text-slate-500 pb-8 text-justify" style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}>
+                      {item.a}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+              <div className="mt-12 text-center">
+                <Button
+                  onClick={() => setShowAllFaqs(!showAllFaqs)}
+                  className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-12 h-14 shadow-lg shadow-blue-200"
+                >
+                  {showAllFaqs ? "Voir moins de questions" : "Voir toutes les questions"}
+                </Button>
+              </div>
             </div>
           </div>
         </section>

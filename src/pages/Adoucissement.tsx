@@ -50,6 +50,7 @@ import ConsultationFormSection from "@/components/ConsultationFormSection";
 
 const Adoucissement = () => {
     const [showAllFaqs, setShowAllFaqs] = React.useState(false);
+    const navigate = useNavigate();
 
 
     useEffect(() => {
@@ -568,16 +569,22 @@ const Adoucissement = () => {
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {[
-                                { title: "Comment choisir son adoucisseur", img: untitledImg, link: "/comment-choisir-un-adoucisseur-deau" },
-                                { title: "L'importance de l'eau adoucie", img: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=800&auto=format&fit=crop", link: "#" },
-                                { title: "Entretien de votre système Bricareau", img: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=800&auto=format&fit=crop", link: "#" }
+                                { title: "Comment choisir son adoucisseur d'eau ?", img: untitledImg, link: "/comment-choisir-un-adoucisseur-deau" },
+                                { title: "5 signes que vous avez besoin d'un adoucisseur", img: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=800&auto=format&fit=crop", link: "/5-signes-besoin-adoucisseur-eau" },
+                                { title: "Impact du calcaire sur vos électroménagers", img: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=800&auto=format&fit=crop", link: "/calcaire-duree-vie-electromenagers" }
                             ].map((art, i) => (
-                                <div key={i} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer group flex flex-col h-full border border-gray-100">
+                                <div
+                                    key={i}
+                                    className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer group flex flex-col h-full border border-gray-100"
+                                    onClick={() => navigate(art.link)}
+                                >
                                     <div className="h-56 overflow-hidden">
                                         <img src={art.img} alt={`${art.title} - Guide conseil en adoucissement d'eau Bricareau`} className="w-full h-full object-cover transition-transform group-hover:scale-110" />
                                     </div>
                                     <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
-                                        <h4 className="text-xl font-medium mb-4 group-hover:text-blue-600 transition-colors tracking-tight">{art.title}</h4>
+                                        <NavLink to={art.link}>
+                                            <h4 className="text-xl font-medium mb-4 group-hover:text-blue-600 transition-colors tracking-tight">{art.title}</h4>
+                                        </NavLink>
                                         <div className="mt-auto">
                                             <NavLink to={art.link} className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-sm">
                                                 Lire <ChevronRight className="h-4 w-4" />
