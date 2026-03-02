@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import { Button } from "@/components/ui/button";
-import heroBath from "@/assets/young-nude-woman-taking-relaxing-foamy-bath.jpg";
+import heroBath from "@/assets/young-nude-woman-taking-relaxing-foamy-bath.jpeg";
 import kitchenImg from "@/assets/18036672_SIE_2720_1530_21_04_30_SIE_CRM_Dishwasher_Hand_Taking_Out_Wine_Glass_Basket_Motiv_11_0017.webp";
 import untitledImg from "@/assets/avantages conditionneurs sans sel.jpg";
 import mobileSoftenerImg from "@/assets/9-optimized.webp";

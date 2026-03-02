@@ -1,7 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { ShieldCheck, Award, Microscope, ArrowRight } from "lucide-react";
-import expertImg from "@/assets/394.jpg";
+import expertImg from "@/assets/water testing.jpeg";
 
 const ExpertTrustSection = () => {
     return (
