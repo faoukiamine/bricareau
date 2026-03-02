@@ -679,7 +679,7 @@ const Header = () => {
                             <h4 className="font-bold text-base text-gray-900 group-hover:text-[#0052ff] mb-1.5 transition-colors leading-tight">
                               {card.title}
                             </h4>
-                            <p className="text-sm text-gray-600 leading-relaxed">
+                            <p className="text-sm text-gray-600 leading-snug">
                               {card.description}
                             </p>
                           </div>

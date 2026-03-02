@@ -48,7 +48,7 @@ const BetterWaterStats = () => {
                             <span className="text-[36px] md:text-[56px] font-light leading-[1] text-blue-400 block mt-2">de notre rencontre à votre confort.</span>
                         </h2>
                         <div className="w-20 h-1.5 bg-blue-600 mb-8 rounded-full" />
-                        <p className="text-xl text-slate-400 font-light leading-relaxed max-w-md text-justify">
+                        <p className="text-xl text-slate-400 font-light leading-snug max-w-md text-justify">
                             Parce que la santé de votre foyer ne supporte aucune approximation, nous avons bâti un protocole rigoureux qui garantit une pureté absolue à chaque étape.
                         </p>
                     </div>
@@ -81,7 +81,7 @@ const BetterWaterStats = () => {
                                         <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors tracking-tight">
                                             {item.title}
                                         </h3>
-                                        <p className="text-lg text-slate-400 font-light leading-relaxed max-w-xl text-justify">
+                                        <p className="text-lg text-slate-400 font-light leading-snug max-w-xl text-justify">
                                             {item.desc}
                                         </p>
                                     </div>

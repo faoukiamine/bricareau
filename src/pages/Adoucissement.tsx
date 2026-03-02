@@ -161,7 +161,7 @@ const Adoucissement = () => {
                                         <item.icon className="h-10 w-10 text-blue-600 group-hover:text-white" />
                                     </div>
                                     <h4 className="text-2xl font-medium mb-4 tracking-tight">{item.title}</h4>
-                                    <p className="text-lg font-light leading-relaxed text-blue-100 text-justify">{item.desc}</p>
+                                    <p className="text-lg font-light leading-snug text-blue-100 text-justify">{item.desc}</p>
                                 </div>
                             ))}
                         </div>
@@ -204,7 +204,7 @@ const Adoucissement = () => {
                                 <h2 className="text-[32px] md:text-[48px] font-bold text-slate-900 mb-6 leading-[1.1] tracking-tighter">
                                     L'éclat d'une vaisselle protégée, la douceur d'une eau maîtrisée.
                                 </h2>
-                                <p className="text-lg font-light leading-relaxed text-gray-600 mb-12 text-justify">
+                                <p className="text-lg font-light leading-snug text-gray-600 mb-12 text-justify">
                                     Offrez à votre foyer le luxe d'une eau sans calcaire. Nos adoucisseurs de pointe éliminent le tartre à la source, garantissant non seulement une vaisselle étincelante sans aucune trace, mais aussi une protection durable de vos appareils électroménagers et de votre plomberie. Redécouvrez la brillance et la douceur dans chaque recoin de votre maison.
                                 </p>
 
@@ -219,7 +219,7 @@ const Adoucissement = () => {
                                                 <span className="text-2xl opacity-50">0{i + 1}.</span> {item.title}
                                             </h3>
                                             <div className="pl-6 border-l-2 border-blue-600/20 group-hover/item:border-blue-600 transition-colors duration-500 ml-2">
-                                                <p className="text-base text-gray-500 leading-relaxed text-justify">
+                                                <p className="text-base text-gray-500 leading-snug text-justify">
                                                     {item.desc}
                                                 </p>
                                             </div>
@@ -276,7 +276,7 @@ const Adoucissement = () => {
                                 <h2 className="text-[32px] md:text-[48px] font-bold text-slate-900 mb-6 leading-[1.1] tracking-tighter">
                                     La douceur sans frontières : l'eau douce vous suit partout.
                                 </h2>
-                                <p className="text-lg font-light leading-relaxed text-gray-600 mb-12 text-justify">
+                                <p className="text-lg font-light leading-snug text-gray-600 mb-12 text-justify">
                                     Ne laissez plus l’eau dure des campings ou des ports abîmer vos cheveux et vos équipements. Profitez d'une eau de qualité domestique dans votre VR, votre bateau ou votre chalet avec notre adoucisseur ultra-compact.
                                 </p>
 
@@ -291,7 +291,7 @@ const Adoucissement = () => {
                                                 <span className="text-2xl opacity-50">0{i + 1}.</span> {item.title}
                                             </h3>
                                             <div className="pl-6 border-l-2 border-blue-600/20 group-hover/item:border-blue-600 transition-colors duration-500 ml-2">
-                                                <p className="text-base text-gray-500 leading-relaxed text-justify">
+                                                <p className="text-base text-gray-500 leading-snug text-justify">
                                                     {item.desc}
                                                 </p>
                                             </div>
@@ -348,7 +348,7 @@ const Adoucissement = () => {
                                 <h2 className="text-[32px] md:text-[48px] font-bold text-slate-900 mb-6 leading-[1.1] tracking-tighter">
                                     Zéro sel. Zéro électricité. Zéro souci.
                                 </h2>
-                                <p className="text-lg font-light leading-relaxed text-gray-600 mb-12 text-justify">
+                                <p className="text-lg font-light leading-snug text-gray-600 mb-12 text-justify">
                                     Le secret d'un linge éclatant et d'une vaisselle sans traces. Sans l'ajout de sel, votre eau devient votre meilleure alliée beauté et ménage.
                                 </p>
 
@@ -363,7 +363,7 @@ const Adoucissement = () => {
                                                 <span className="text-2xl opacity-50">0{i + 1}.</span> {item.title}
                                             </h3>
                                             <div className="pl-6 border-l-2 border-blue-600/20 group-hover/item:border-blue-600 transition-colors duration-500 ml-2">
-                                                <p className="text-base text-gray-500 leading-relaxed text-justify">
+                                                <p className="text-base text-gray-500 leading-snug text-justify">
                                                     {item.desc}
                                                 </p>
                                             </div>

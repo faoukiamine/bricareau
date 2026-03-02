@@ -90,7 +90,7 @@ const ProductShowcase = () => {
                                     {product.name}
                                 </h3>
                                 <p
-                                    className="text-slate-500 font-light leading-relaxed flex-grow text-justify"
+                                    className="text-slate-500 font-light leading-snug flex-grow text-justify"
                                     style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                                 >
                                     {product.description}

@@ -35,7 +35,7 @@ const CalcaireElectromenagers = () => {
                             <h1 className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text-justify max-w-xl mx-auto">
                                 <span className="font-bold">Comment le calcaire réduit la</span> <span className="text-blue-400 font-bold">durée de vie</span> de vos électroménagers ?
                             </h1>
-                            <p className="text-[20px] leading-[28px] text-slate-300 font-light mb-10 text-justify max-w-xl mx-auto">
+                            <p className="text-[20px] leading-snug text-slate-300 font-light mb-10 text-justify max-w-xl mx-auto">
                                 Analyser l'impact technologique et économique des eaux minéralisées sur les composants critiques de vos appareils ménagers haut de gamme.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -56,7 +56,7 @@ const CalcaireElectromenagers = () => {
                 <article className="py-20 lg:py-32">
                     <div className="container mx-auto px-4">
                         <div className="max-w-4xl mx-auto">
-                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 leading-relaxed text-justify font-light">
+                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 leading-snug text-justify font-light">
                                 <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-blue-600 pl-8 italic">
                                     Derrière chaque panneau de commande élégant et chaque promesse de haute efficacité de vos appareils ménagers modernes se cache une fragilité insidieuse : leur sensibilité à la chimie de l'eau. Dans un environnement aux eaux calcaires, un électroménager certifié pour durer quinze ans peut voir sa vie abrégée de moitié, tout en consommant une énergie excessive lors de son agonie technologique.
                                 </p>

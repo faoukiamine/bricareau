@@ -268,7 +268,7 @@ const TestsEauPage = () => {
                       </div>
                     </div>
                     <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
-                    <p className="text-base text-blue-50 leading-relaxed group-hover:text-white transition-colors">
+                    <p className="text-base text-blue-50 leading-snug group-hover:text-white transition-colors">
                       {item.desc}
                     </p>
                   </div>
@@ -319,7 +319,7 @@ const TestsEauPage = () => {
                       <div className={`grid transition-all duration-500 ease-in-out ${activeService === idx ? 'grid-rows-[1fr] opacity-100 mt-4' : 'grid-rows-[0fr] opacity-0 mt-0'}`}>
                         <div className="overflow-hidden">
                           <div className="pl-4 ml-3 border-l-2 border-blue-200">
-                            <p className="text-slate-600 leading-relaxed max-w-lg">
+                            <p className="text-slate-600 leading-snug max-w-lg">
                               {item.desc}
                             </p>
                           </div>
@@ -447,7 +447,7 @@ const TestsEauPage = () => {
                     <h3 className={`text-2xl font-bold mb-4 ${plan.featured ? 'text-white' : 'text-blue-600'}`}>
                       {plan.title}
                     </h3>
-                    <p className={`text-sm leading-relaxed ${plan.featured ? 'text-slate-400' : 'text-slate-600'}`}>
+                    <p className={`text-sm leading-snug ${plan.featured ? 'text-slate-400' : 'text-slate-600'}`}>
                       {plan.desc}
                     </p>
                   </div>

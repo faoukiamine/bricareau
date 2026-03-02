@@ -144,7 +144,7 @@ const FiltrationSousEvier = () => {
                             <h2 className="text-[32px] md:text-[48px] font-normal text-white mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
                                 Pourquoi installer l'un de nos systèmes <br />de filtration d'eau sous l'évier de votre cuisine?
                             </h2>
-                            <p className="text-lg font-light leading-relaxed text-blue-100 max-w-2xl mx-auto text-justify">
+                            <p className="text-lg font-light leading-snug text-blue-100 max-w-2xl mx-auto text-justify">
                                 Profitez d'une eau d'une pureté exceptionnelle pour votre boisson et votre cuisine tout en simplifiant votre quotidien.
                             </p>
                         </div>
@@ -160,7 +160,7 @@ const FiltrationSousEvier = () => {
                                         <item.icon className="h-10 w-10 text-blue-600 group-hover:text-white" />
                                     </div>
                                     <h3 className="text-2xl font-medium mb-4 tracking-tight">{item.title}</h3>
-                                    <p className="text-lg font-light leading-relaxed text-blue-100 text-justify">{item.desc}</p>
+                                    <p className="text-lg font-light leading-snug text-blue-100 text-justify">{item.desc}</p>
                                 </div>
                             ))}
                         </div>
@@ -179,7 +179,7 @@ const FiltrationSousEvier = () => {
                                 <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">d'eau sous évier</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600 mb-8"></div>
-                            <p className="text-lg font-light leading-relaxed text-slate-600 mb-16 max-w-7xl mx-auto text-justify">
+                            <p className="text-lg font-light leading-snug text-slate-600 mb-16 max-w-7xl mx-auto text-justify">
                                 Nos systèmes de filtration d'eau sous évier représentent la solution ultime pour transformer votre cuisine en une source de pureté inépuisable. Conçus pour s'intégrer discrètement sous votre comptoir, ces systèmes utilisent des technologies de pointe pour éliminer jusqu'à 99 % des contaminants, incluant le chlore, le plomb et les sédiments. Contrairement aux pichets filtrants, ils offrent un débit constant et une filtration beaucoup plus rigoureuse, garantissant une eau de boisson cristalline et un goût irréprochable pour vos cafés et vos repas. Avec un entretien simplifié, vous reprenez le contrôle total sur la qualité de l’eau que votre famille consomme au quotidien.
                             </p>
                         </div>
@@ -209,7 +209,7 @@ const FiltrationSousEvier = () => {
                                             {product.name}
                                         </h3>
                                         <p
-                                            className="text-slate-500 font-light leading-relaxed flex-grow text-justify"
+                                            className="text-slate-500 font-light leading-snug flex-grow text-justify"
                                             style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                                         >
                                             {product.desc}

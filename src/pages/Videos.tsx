@@ -70,7 +70,7 @@ const Videos = () => {
                             <h1 className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-foreground text-justify max-w-xl mx-auto">
                                 <span className="font-bold text-foreground">Bibliothèque Vidéo</span>
                             </h1>
-                            <p className="text-[20px] leading-[28px] text-muted-foreground font-light text-justify max-w-xl mx-auto">
+                            <p className="text-[20px] leading-snug text-muted-foreground font-light text-justify max-w-xl mx-auto">
                                 Tutoriels et guides vidéo pour vous accompagner
                             </p>
                         </div>

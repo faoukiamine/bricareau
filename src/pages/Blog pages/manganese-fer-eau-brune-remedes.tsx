@@ -14,7 +14,7 @@ const ManganeseFerEauBrune = () => {
     }, []);
 
     return (
-        <div className="min-h-screen bg-white font-sans text-slate-900 leading-relaxed font-light">
+        <div className="min-h-screen bg-white font-sans text-slate-900 leading-snug font-light">
             <Header />
             <main className="pt-20">
                 {/* Hero Section */}
@@ -33,7 +33,7 @@ const ManganeseFerEauBrune = () => {
                         <h1 className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text-justify max-w-xl mx-auto">
                             <span className="font-bold">Eau</span> <span className="text-amber-500 font-bold">brune ou tachée</span> ?
                         </h1>
-                        <p className="text-[20px] leading-[28px] text-slate-300 font-light mb-10 text-justify max-w-xl mx-auto italic">
+                        <p className="text-[20px] leading-snug text-slate-300 font-light mb-10 text-justify max-w-xl mx-auto italic">
                             Démystifier le duo manganèse et fer : comprendre les causes géologiques des taches orange et noires et restaurer définitivement la clarté de votre eau.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -53,7 +53,7 @@ const ManganeseFerEauBrune = () => {
                 <article className="py-20 lg:py-32">
                     <div className="container mx-auto px-4">
                         <div className="max-w-4xl mx-auto">
-                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 leading-relaxed text-justify">
+                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 leading-snug text-justify">
                                 <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-amber-600 pl-8 italic">
                                     Rien n'est plus frustrant pour un propriétaire de puits que de constater une eau jaune, orange ou dotée de sédiments noirs. En plus d'avoir un goût métallique désagréable, cette situation ruine les lavabos, les douches et le linge blanc.
                                 </p>
@@ -110,7 +110,7 @@ const ManganeseFerEauBrune = () => {
                                         <Wrench className="w-96 h-96" />
                                     </div>
                                     <h3 className="text-3xl md:text-5xl font-bold mb-10 tracking-tighter italic">Protégez vos électroménagers.</h3>
-                                    <p className="text-xl text-blue-100 opacity-90 mb-12 max-w-2xl mx-auto font-light leading-relaxed">
+                                    <p className="text-xl text-blue-100 opacity-90 mb-12 max-w-2xl mx-auto font-light leading-snug">
                                         Un système de filtration de fer Bricareau agit comme une assurance-vie pour votre laveuse, votre lave-vaisselle et votre chauffe-eau. Ne laissez pas les minéraux détruire vos investissements.
                                     </p>
                                     <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -145,7 +145,7 @@ const ManganeseFerEauBrune = () => {
                                         <Sparkles className="h-10 w-10 text-amber-700 animate-pulse" />
                                         Audit de Clarté Bricareau
                                     </h3>
-                                    <p className="text-xl text-amber-900 opacity-90 mb-10 font-light leading-relaxed text-justify max-w-3xl">
+                                    <p className="text-xl text-amber-900 opacity-90 mb-10 font-light leading-snug text-justify max-w-3xl">
                                         Assez des chemises blanches qui sortent jaunies ? Nos techniciens effectuent des tests de fer ferreux sur place et recommandent le système au rendement garanti pour votre situation spécifique.
                                     </p>
                                     <Button size="lg" className="bg-amber-600 hover:bg-amber-700 text-white rounded-full px-12 h-16 font-bold shadow-lg" asChild>
@@ -153,7 +153,7 @@ const ManganeseFerEauBrune = () => {
                                     </Button>
                                 </div>
 
-                                <div className="mt-20 text-slate-400 text-sm border-t border-slate-100 pt-8 italic leading-relaxed flex items-center gap-4">
+                                <div className="mt-20 text-slate-400 text-sm border-t border-slate-100 pt-8 italic leading-snug flex items-center gap-4">
                                     <Info className="h-10 w-10 text-amber-600 shrink-0" />
                                     <p>
                                         * Note de l'expert : Un pH faible (eau acide) rend le traitement du fer beaucoup plus difficile. Nous testons toujours votre pH avant de suggérer une technologie d'oxydation pour garantir votre satisfaction.

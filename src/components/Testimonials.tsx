@@ -80,7 +80,7 @@ const Testimonials = () => {
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="flex-[0_0_100%] min-w-0 px-4">
                   <div className="flex flex-col items-center text-center space-y-6">
-                    <p className="text-xl md:text-2xl text-gray-700 leading-relaxed max-w-2xl font-medium">
+                    <p className="text-xl md:text-2xl text-gray-700 leading-snug max-w-2xl font-medium">
                       "{testimonial.content}"
                     </p>
 

@@ -105,7 +105,7 @@ const Manuels = () => {
                             <h1 className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-foreground text-justify max-w-xl mx-auto">
                                 <span className="font-bold">Manuels et Documentation</span>
                             </h1>
-                            <p className="text-[20px] leading-[28px] text-muted-foreground font-light text-justify max-w-xl mx-auto">
+                            <p className="text-[20px] leading-snug text-muted-foreground font-light text-justify max-w-xl mx-auto">
                                 Téléchargez les manuels d'utilisation et guides d'installation pour vos équipements
                             </p>
                         </div>

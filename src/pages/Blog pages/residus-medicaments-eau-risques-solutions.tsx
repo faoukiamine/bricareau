@@ -14,7 +14,7 @@ const ResidusMedicamentsEau = () => {
     }, []);
 
     return (
-        <div className="min-h-screen bg-white font-sans text-slate-900 leading-relaxed font-light">
+        <div className="min-h-screen bg-white font-sans text-slate-900 leading-snug font-light">
             <Header />
             <main className="pt-20">
                 {/* Hero Section */}
@@ -33,7 +33,7 @@ const ResidusMedicamentsEau = () => {
                         <h1 className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text-justify max-w-xl mx-auto">
                             <span className="font-bold">Médicaments dans</span> <span className="text-indigo-400 font-bold italic">votre eau</span>
                         </h1>
-                        <p className="text-[20px] leading-[28px] text-slate-300 font-light mb-10 text-justify max-w-xl mx-auto italic">
+                        <p className="text-[20px] leading-snug text-slate-300 font-light mb-10 text-justify max-w-xl mx-auto italic">
                             Décrypter la présence silencieuse d'antibiotiques, hormones et psychotropes dans l'eau du robinet : comprendre les enjeux et instaurer une barrière technologique.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -53,7 +53,7 @@ const ResidusMedicamentsEau = () => {
                 <article className="py-20 lg:py-32 bg-white">
                     <div className="container mx-auto px-4">
                         <div className="max-w-4xl mx-auto">
-                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 text-justify leading-relaxed">
+                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 text-justify leading-snug">
                                 <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-indigo-600 pl-8 italic">
                                     Une pharmacie invisible coule-t-elle à votre robinet ? La question, bien que troublante, occupe une place de plus en plus centrale dans les débats de santé publique environnementale au Canada.
                                 </p>
@@ -94,14 +94,14 @@ const ResidusMedicamentsEau = () => {
                                     <div className="p-8 bg-slate-50 border border-slate-100 rounded-2xl group hover:shadow-xl transition-all">
                                         <Activity className="w-12 h-12 text-indigo-600 mb-6 group-hover:scale-110 transition-transform" />
                                         <h4 className="text-xl font-bold mb-4 tracking-tight">Perturbation Endocrinienne</h4>
-                                        <p className="text-slate-600 text-sm leading-relaxed text-justify">
+                                        <p className="text-slate-600 text-sm leading-snug text-justify">
                                             Les oestrogènes synthétiques (provenant des pilules contraceptives) sont extraordinairement puissants biologiquement. Ils peuvent interférer avec la reproduction et le développement foetal même à des doses ultra-faibles.
                                         </p>
                                     </div>
                                     <div className="p-8 bg-slate-50 border border-slate-100 rounded-2xl group hover:shadow-xl transition-all">
                                         <ShieldCheck className="w-12 h-12 text-indigo-600 mb-6 group-hover:scale-110 transition-transform" />
                                         <h4 className="text-xl font-bold mb-4 tracking-tight">Antibiorésistance accrue</h4>
-                                        <p className="text-slate-600 text-sm leading-relaxed text-justify">
+                                        <p className="text-slate-600 text-sm leading-snug text-justify">
                                             L'exposition chronique à des traces d'antibiotiques dans l'eau favorise l'émergence de "super-bactéries" résistantes aux traitements médicaux, un enjeu de santé mondiale critique du XXIe siècle.
                                         </p>
                                     </div>
@@ -129,7 +129,7 @@ const ResidusMedicamentsEau = () => {
                                             <Sparkles className="w-24 h-24 text-indigo-400 group-hover:rotate-12 transition-transform" />
                                         </div>
                                         <h4 className="text-2xl font-bold mb-6 tracking-tight">L'Osmose Inverse (Certification NSF 58)</h4>
-                                        <p className="text-indigo-100 text-[16px] text-justify leading-relaxed">
+                                        <p className="text-indigo-100 text-[16px] text-justify leading-snug">
                                             La membrane osmotique est l'arme fatale contre les micropolluants. Sa porosité moléculaire est si fine qu'elle rejette 99 % des principes actifs pharmaceutiques, garantissant une pureté inégalée pour la boisson.
                                         </p>
                                     </div>
@@ -138,7 +138,7 @@ const ResidusMedicamentsEau = () => {
                                             <Stethoscope className="w-24 h-24 text-indigo-900 group-hover:rotate-12 transition-transform" />
                                         </div>
                                         <h4 className="text-2xl font-bold mb-6 tracking-tight text-indigo-900">Charbon Actif de Haute Densité</h4>
-                                        <p className="text-slate-600 text-[16px] text-justify leading-relaxed">
+                                        <p className="text-slate-600 text-[16px] text-justify leading-snug">
                                             L'adsorption chimique sur charbon actif compressé est capable de capturer la majorité des molécules organiques complexes. C'est une barrière protectrice robuste et économique pour toute la maison.
                                         </p>
                                     </div>
@@ -149,7 +149,7 @@ const ResidusMedicamentsEau = () => {
                                         <HeartPulse className="w-80 h-80 text-white" />
                                     </div>
                                     <h3 className="text-4xl md:text-5xl font-bold mb-10 tracking-tighter italic">Protégez votre équilibre biologique.</h3>
-                                    <p className="text-xl text-indigo-200 opacity-80 mb-12 max-w-3xl mx-auto font-light leading-relaxed">
+                                    <p className="text-xl text-indigo-200 opacity-80 mb-12 max-w-3xl mx-auto font-light leading-snug">
                                         Ne laissez plus l'incertitude pharmaceutique planer sur votre santé quotidienne. Demandez dès aujourd'hui un diagnostic expert pour purifier l'eau de votre foyer.
                                     </p>
                                     <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -159,7 +159,7 @@ const ResidusMedicamentsEau = () => {
                                     </div>
                                 </div>
 
-                                <div className="mt-20 text-slate-400 text-sm border-t border-slate-100 pt-8 italic leading-relaxed flex items-center gap-4">
+                                <div className="mt-20 text-slate-400 text-sm border-t border-slate-100 pt-8 italic leading-snug flex items-center gap-4">
                                     <Info className="h-10 w-10 text-indigo-600 shrink-0" />
                                     <p>
                                         * Note de transparence : Bien que les niveaux de résidus pharmaceutiques ne fassent pas actuellement l'objet de réglementations contraignantes au Canada, le principe de précaution incite de plus en plus de foyers à adopter la filtration domestique sélective.

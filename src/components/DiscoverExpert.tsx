@@ -22,7 +22,7 @@ const DiscoverExpert = () => {
                                 <span className="text-[40px] md:text-[56px] font-light leading-[1.1] block">Votre solution d'eau</span>
                                 <span className="text-[40px] md:text-[56px] font-bold leading-[1.1] text-blue-600 block">personnalisée en quelques clics.</span>
                             </h2>
-                            <p className="text-xl text-slate-600 font-light leading-relaxed max-w-lg">
+                            <p className="text-xl text-slate-600 font-light leading-snug max-w-lg">
                                 Quelques étapes suffisent pour transformer l'eau de votre foyer. Identifiez vos priorités et découvrez instantanément le système Bricareau adapté à votre réalité.
                             </p>
                         </div>

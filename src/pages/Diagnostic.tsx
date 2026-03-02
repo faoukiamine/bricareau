@@ -27,7 +27,7 @@ const Diagnostic = () => {
                         >
                             <span className="font-bold text-slate-900">Découvrez la solution parfaite pour votre eau</span>
                         </h1>
-                        <p className="text-[20px] leading-[28px] text-slate-500 font-light text-justify max-w-xl mx-auto">
+                        <p className="text-[20px] leading-snug text-slate-500 font-light text-justify max-w-xl mx-auto">
                             Répondez à quelques questions rapides pour obtenir une recommandation personnalisée basée sur vos besoins spécifiques et la provenance de votre eau.
                         </p>
                     </div>

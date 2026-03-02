@@ -39,7 +39,7 @@ const FonctionnementDesinfectionUV = () => {
                             <h1 className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text-justify max-w-xl mx-auto">
                                 <span className="font-bold text-white">Comment fonctionne</span> la <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-300 font-bold">désinfection UV</span> ?
                             </h1>
-                            <p className="text-[20px] leading-[28px] text-slate-300 font-light mb-12 text-justify max-w-xl mx-auto">
+                            <p className="text-[20px] leading-snug text-slate-300 font-light mb-12 text-justify max-w-xl mx-auto">
                                 Explorez la technologie ultraviolette : une barrière de protection biophysique invisible mais infaillible pour garantir la sécurité microbiologique de votre consommation d'eau.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -60,7 +60,7 @@ const FonctionnementDesinfectionUV = () => {
                 <article className="py-24 lg:py-32">
                     <div className="container mx-auto px-4">
                         <div className="max-w-4xl mx-auto">
-                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 leading-relaxed text-justify">
+                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 leading-snug text-justify">
                                 <p className="lead text-2xl font-light text-slate-900 mb-16 border-l-4 border-blue-600 pl-8 italic">
                                     La désinfection par rayons ultraviolets (UV) représente l'une des avancées les plus significatives de l'ingénierie environnementale contemporaine. Sans ajout de chlore ni altération chimique, elle offre une protection absolue contre les agents pathogènes les plus résistants.
                                 </p>
@@ -132,7 +132,7 @@ const FonctionnementDesinfectionUV = () => {
                                     <div className="absolute bottom-12 left-12 right-12 text-white">
                                         <ShieldCheck className="h-16 w-16 mb-6 text-blue-400" />
                                         <h3 className="text-3xl font-bold mb-4 italic text-white">Protection sans Compromis</h3>
-                                        <p className="text-xl text-blue-100 font-light max-w-2xl leading-relaxed">
+                                        <p className="text-xl text-blue-100 font-light max-w-2xl leading-snug">
                                             Les virus comme l'Hépatite A et les bactéries comme E. coli sont neutralisés à 99,99 % en une fraction de seconde.
                                         </p>
                                     </div>
@@ -195,7 +195,7 @@ const FonctionnementDesinfectionUV = () => {
                                 <div className="mt-32 p-12 bg-gradient-to-br from-indigo-900 to-blue-800 rounded-[3rem] text-white text-center shadow-2xl relative overflow-hidden">
                                     <div className="absolute top-0 right-0 w-64 h-64 bg-blue-400/10 rounded-full -mr-32 -mt-32 blur-3xl" />
                                     <h3 className="text-4xl font-bold mb-8 italic text-white">Protégez votre santé dès aujourd'hui</h3>
-                                    <p className="text-xl mb-12 opacity-90 max-w-3xl mx-auto font-light leading-relaxed">
+                                    <p className="text-xl mb-12 opacity-90 max-w-3xl mx-auto font-light leading-snug">
                                         Ne laissez plus la place au doute concernant la qualité microbiologique de votre eau. Une étude personnalisée de vos besoins est la première étape vers une sécurité totale.
                                     </p>
                                     <div className="flex flex-col sm:flex-row gap-8 justify-center items-center">

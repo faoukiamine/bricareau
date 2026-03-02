@@ -231,7 +231,7 @@ const FiltresTouteMaison = () => {
                                         <item.icon className="h-10 w-10 text-blue-600 group-hover:text-white" />
                                     </div>
                                     <h4 className="text-2xl font-medium mb-4 tracking-tight">{item.title}</h4>
-                                    <p className="text-blue-100 leading-relaxed">{item.desc}</p>
+                                    <p className="text-blue-100 leading-snug">{item.desc}</p>
                                 </div>
                             ))}
                         </div>
@@ -279,7 +279,7 @@ const FiltresTouteMaison = () => {
                                             {p.name}
                                         </h3>
                                         <p
-                                            className="text-slate-500 font-light leading-relaxed flex-grow text-justify"
+                                            className="text-slate-500 font-light leading-snug flex-grow text-justify"
                                             style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                                         >
                                             {p.desc}
@@ -443,7 +443,7 @@ const FiltresTouteMaison = () => {
                                         <AccordionTrigger className="text-left font-medium text-lg hover:no-underline py-6">
                                             {item.q}
                                         </AccordionTrigger>
-                                        <AccordionContent className="text-gray-600 text-lg leading-relaxed pb-6 text-left">
+                                        <AccordionContent className="text-gray-600 text-lg leading-snug pb-6 text-left">
                                             {item.a}
                                         </AccordionContent>
                                     </AccordionItem>

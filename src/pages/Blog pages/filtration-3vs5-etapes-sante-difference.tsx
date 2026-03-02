@@ -14,7 +14,7 @@ const Filtration3vs5EtapesSante = () => {
     }, []);
 
     return (
-        <div className="min-h-screen bg-white font-sans text-slate-900 leading-relaxed font-light text-justify">
+        <div className="min-h-screen bg-white font-sans text-slate-900 leading-snug font-light text-justify">
             <Header />
             <main className="pt-20">
                 {/* Hero Section */}
@@ -33,7 +33,7 @@ const Filtration3vs5EtapesSante = () => {
                         <h1 className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text-justify max-w-xl mx-auto">
                             <span className="font-bold">Filtration</span> <span className="text-blue-400 italic text-3xl md:text-5xl font-bold">3</span> <span className="font-bold">vs</span> <span className="text-blue-400 italic text-3xl md:text-5xl font-bold">5</span> <span className="font-bold">étapes</span>
                         </h1>
-                        <p className="text-[20px] leading-[28px] text-slate-300 font-light mb-10 text-justify max-w-xl mx-auto italic">
+                        <p className="text-[20px] leading-snug text-slate-300 font-light mb-10 text-justify max-w-xl mx-auto italic">
                             Plus de protection signifie-t-il plus de santé ? Analyse chirurgicale des couches de sécurité nécessaires pour garantir une pureté d'eau de qualité hospitalière à votre domicile.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -53,7 +53,7 @@ const Filtration3vs5EtapesSante = () => {
                 <article className="py-20 lg:py-32 bg-white">
                     <div className="container mx-auto px-4">
                         <div className="max-w-4xl mx-auto">
-                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 leading-relaxed">
+                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 leading-snug">
                                 <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-blue-600 pl-8 italic">
                                     Dans l'univers de la purification d'eau, le nombre d'étapes de filtration n'est pas qu'un argument de marketing ; c'est une architecture de sécurité.
                                 </p>
@@ -102,14 +102,14 @@ const Filtration3vs5EtapesSante = () => {
                                     <div className="bg-slate-50 p-8 rounded-2xl border border-slate-100">
                                         <BadgeCheck className="w-10 h-10 text-blue-600 mb-4" />
                                         <h4 className="text-xl font-bold mb-4 tracking-tight">Protection Neurotoxique</h4>
-                                        <p className="text-slate-600 text-sm italic leading-relaxed">
+                                        <p className="text-slate-600 text-sm italic leading-snug">
                                             Un 5 étapes retire le fluorure et le plomb, deux neurotoxines documentées, ce qu'un système 3 étapes ne peut pratiquement pas faire à long terme.
                                         </p>
                                     </div>
                                     <div className="bg-slate-50 p-8 rounded-2xl border border-slate-100">
                                         <ShieldCheck className="w-10 h-10 text-blue-600 mb-4" />
                                         <h4 className="text-xl font-bold mb-4 tracking-tight">Barrière Biologique</h4>
-                                        <p className="text-slate-600 text-sm italic leading-relaxed">
+                                        <p className="text-slate-600 text-sm italic leading-snug">
                                             La membrane d'un 5 étapes est si fine qu'elle est physiquement impossible à traverser pour une bactérie ou un kyste pathogène.
                                         </p>
                                     </div>
@@ -125,7 +125,7 @@ const Filtration3vs5EtapesSante = () => {
                                         <ShieldCheck className="w-96 h-96" />
                                     </div>
                                     <h3 className="text-3xl md:text-5xl font-bold mb-10 tracking-tighter italic">Pourquoi se contenter du minimum ?</h3>
-                                    <p className="text-xl text-blue-100 opacity-90 mb-12 max-w-2xl mx-auto font-light leading-relaxed">
+                                    <p className="text-xl text-blue-100 opacity-90 mb-12 max-w-2xl mx-auto font-light leading-snug">
                                         Votre santé commence par la pureté de votre eau. Optez pour le système qui ne laisse aucune menace au hasard.
                                     </p>
                                     <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -135,7 +135,7 @@ const Filtration3vs5EtapesSante = () => {
                                     </div>
                                 </div>
 
-                                <div className="mt-20 text-slate-400 text-sm border-t border-slate-100 pt-8 italic leading-relaxed flex items-start gap-4">
+                                <div className="mt-20 text-slate-400 text-sm border-t border-slate-100 pt-8 italic leading-snug flex items-start gap-4">
                                     <Info className="h-6 w-6 text-blue-600 shrink-0 mt-1" />
                                     <p>
                                         Rappel pour la famille : Les économies faites sur l'achat d'un système à 3 étapes peuvent coûter cher en santé si vous vivez dans une zone avec du plomb dans les conduites ou beaucoup de nitrates agricoles. Le diagnostic Bricareau est là pour vous guider.

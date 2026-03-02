@@ -14,7 +14,7 @@ const OsmoseInverseMeilleurSysteme = () => {
     }, []);
 
     return (
-        <div className="min-h-screen bg-white font-sans text-slate-900 leading-relaxed font-light text-justify">
+        <div className="min-h-screen bg-white font-sans text-slate-900 leading-snug font-light text-justify">
             <Header />
             <main className="pt-20">
                 {/* Hero Section */}
@@ -33,7 +33,7 @@ const OsmoseInverseMeilleurSysteme = () => {
                         <h1 className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text-justify max-w-xl mx-auto">
                             <span className="font-bold">Osmose inverse :</span> <span className="text-blue-400 font-bold italic">Le meilleur système ?</span>
                         </h1>
-                        <p className="text-[20px] leading-[28px] text-slate-300 font-light mb-10 text-justify max-w-xl mx-auto italic">
+                        <p className="text-[20px] leading-snug text-slate-300 font-light mb-10 text-justify max-w-xl mx-auto italic">
                             Démystifier la technologie de filtration la plus avancée au monde : pourquoi l'osmose inverse est devenue le standard de référence pour la sécurité de l'eau potable résidentielle.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -53,7 +53,7 @@ const OsmoseInverseMeilleurSysteme = () => {
                 <article className="py-20 lg:py-32">
                     <div className="container mx-auto px-4">
                         <div className="max-w-4xl mx-auto">
-                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 leading-relaxed">
+                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 leading-snug">
                                 <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-blue-600 pl-8 italic">
                                     À une époque où la qualité des sources d'eau municipales et de puits est de plus en plus remise en question, l'osmose inverse (RO) s'impose comme la solution de barrière totale. Mais est-ce vraiment le choix optimal pour votre famille ?
                                 </p>
@@ -93,14 +93,14 @@ const OsmoseInverseMeilleurSysteme = () => {
                                     <div className="bg-slate-50 p-8 rounded-2xl border border-slate-100">
                                         <ShieldCheck className="w-12 h-12 text-blue-600 mb-6" />
                                         <h4 className="text-xl font-bold mb-4 tracking-tight">Barrière Totale</h4>
-                                        <p className="text-slate-600 text-sm italic leading-relaxed">
+                                        <p className="text-slate-600 text-sm italic leading-snug">
                                             Contrairement au charbon seul qui ne traite que le goût et l'odeur (chlore), l'osmose inverse traite les métaux lourds (plomb, mercure), les nitrates, le fluor et même les polluants "éternels" comme les PFAS.
                                         </p>
                                     </div>
                                     <div className="bg-slate-50 p-8 rounded-2xl border border-slate-100">
                                         <HeartPulse className="w-12 h-12 text-blue-600 mb-6" />
                                         <h4 className="text-xl font-bold mb-4 tracking-tight">Sécurité des plus vulnérables</h4>
-                                        <p className="text-slate-600 text-sm italic leading-relaxed">
+                                        <p className="text-slate-600 text-sm italic leading-snug">
                                             Pour les nourrissons (préparation des biberons) et les personnes dont le système immunitaire est affaibli, l'absence garantie de contaminants biologiques et chimiques est un impératif de santé non négociable.
                                         </p>
                                     </div>
@@ -128,7 +128,7 @@ const OsmoseInverseMeilleurSysteme = () => {
                                         <BadgeCheck className="w-96 h-96" />
                                     </div>
                                     <h3 className="text-3xl md:text-5xl font-bold mb-10 tracking-tighter italic">L'excellence au service de votre famille.</h3>
-                                    <p className="text-xl text-blue-100 opacity-90 mb-12 max-w-2xl mx-auto font-light leading-relaxed">
+                                    <p className="text-xl text-blue-100 opacity-90 mb-12 max-w-2xl mx-auto font-light leading-snug">
                                         Ne laissez plus le hasard décider de la pureté de votre eau. Optez pour la technologie utilisée par les plus grands laboratoires pour protéger votre foyer.
                                     </p>
                                     <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -138,7 +138,7 @@ const OsmoseInverseMeilleurSysteme = () => {
                                     </div>
                                 </div>
 
-                                <div className="mt-20 text-slate-400 text-sm border-t border-slate-100 pt-8 italic leading-relaxed flex items-start gap-4">
+                                <div className="mt-20 text-slate-400 text-sm border-t border-slate-100 pt-8 italic leading-snug flex items-start gap-4">
                                     <Info className="h-6 w-6 text-blue-600 shrink-0 mt-1" />
                                     <p>
                                         Rappel d'expert : Un système d'osmose inverse nécessite un changement régulier des filtres (annuel) pour conserver ses performances maximales et protéger la membrane. Bricareau offre un service de rappel d'entretien pour votre tranquillité.

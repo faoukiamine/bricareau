@@ -144,7 +144,7 @@ const Filtration = () => {
                             <h2 className="text-[32px] md:text-[48px] font-normal text-white mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-center">
                                 Pourquoi choisir nos <br />systèmes de filtration d'eau ?
                             </h2>
-                            <p className="text-lg font-light leading-relaxed text-blue-100 max-w-2xl mx-auto text-justify">
+                            <p className="text-lg font-light leading-snug text-blue-100 max-w-2xl mx-auto text-justify">
                                 Plus qu'une simple filtration, c'est une protection avancée pour votre santé et un confort durable pour votre foyer.
                             </p>
                         </div>
@@ -160,7 +160,7 @@ const Filtration = () => {
                                         <benefit.icon className="h-10 w-10 text-blue-600 group-hover:text-white" />
                                     </div>
                                     <h4 className="text-2xl font-medium mb-4 tracking-tight">{benefit.title}</h4>
-                                    <p className="text-lg font-light leading-relaxed text-blue-100 text-justify">{benefit.desc}</p>
+                                    <p className="text-lg font-light leading-snug text-blue-100 text-justify">{benefit.desc}</p>
                                 </div>
                             ))}
                         </div>
@@ -205,7 +205,7 @@ const Filtration = () => {
                                 <h2 className="text-[32px] md:text-[48px] font-bold text-slate-900 mb-6 leading-[1.1] tracking-tighter">
                                     Redécouvrez le luxe d'une eau filtrée cristalline.
                                 </h2>
-                                <p className="text-lg font-light leading-relaxed text-gray-600 mb-12 text-justify">
+                                <p className="text-lg font-light leading-snug text-gray-600 mb-12 text-justify">
                                     Protégez vos appareils ménagers, votre tuyauterie et votre peau. Nos systèmes de filtration centrale traitent chaque goutte d'eau qui entre dans votre foyer pour une tranquillité d'esprit totale.
                                 </p>
 
@@ -220,7 +220,7 @@ const Filtration = () => {
                                                 <span className="text-2xl opacity-50">0{i + 1}.</span> {item.title}
                                             </h3>
                                             <div className="pl-6 border-l-2 border-blue-600/20 group-hover/item:border-blue-600 transition-colors duration-500 ml-2">
-                                                <p className="text-base text-gray-500 leading-relaxed text-justify">
+                                                <p className="text-base text-gray-500 leading-snug text-justify">
                                                     {item.desc}
                                                 </p>
                                             </div>
@@ -277,7 +277,7 @@ const Filtration = () => {
                                 <h2 className="text-[32px] md:text-[48px] font-bold text-slate-900 mb-6 leading-[1.1] tracking-tighter">
                                     Votre source d'eau cristalline, <br />sans compromis.
                                 </h2>
-                                <p className="text-lg font-light leading-relaxed text-gray-600 mb-12 text-justify">
+                                <p className="text-lg font-light leading-snug text-gray-600 mb-12 text-justify">
                                     Découvrez comment notre système d'osmose inverse libère votre quotidien du goût de chlore et de la corvée des bouteilles plastique. Profitez d'une eau légère, d'une clarté de diamant, idéale pour une hydratation saine et une cuisine riche en saveurs.
                                 </p>
 
@@ -292,7 +292,7 @@ const Filtration = () => {
                                                 <span className="text-2xl opacity-50">0{i + 1}.</span> {item.title}
                                             </h3>
                                             <div className="pl-6 border-l-2 border-blue-600/20 group-hover/item:border-blue-600 transition-colors duration-500 ml-2">
-                                                <p className="text-base text-gray-500 leading-relaxed text-justify">
+                                                <p className="text-base text-gray-500 leading-snug text-justify">
                                                     {item.desc}
                                                 </p>
                                             </div>
@@ -350,7 +350,7 @@ const Filtration = () => {
                                 <h2 className="text-[32px] md:text-[48px] font-bold text-slate-900 mb-6 leading-[1.1] tracking-tighter">
                                     Systèmes de filtration d'eau <br />sous l'évier
                                 </h2>
-                                <p className="text-lg font-light leading-relaxed text-gray-600 mb-12 text-justify">
+                                <p className="text-lg font-light leading-snug text-gray-600 mb-12 text-justify">
                                     Éliminez jusqu'à 99% des pathogènes, du plomb et du fluorure. L'osmose inverse Bricareau est la solution ultime pour une eau de boisson de qualité restaurant directement chez vous.
                                 </p>
 
@@ -365,7 +365,7 @@ const Filtration = () => {
                                                 <span className="text-2xl opacity-50">0{i + 1}.</span> {item.title}
                                             </h3>
                                             <div className="pl-6 border-l-2 border-blue-600/20 group-hover/item:border-blue-600 transition-colors duration-500 ml-2">
-                                                <p className="text-base text-gray-500 leading-relaxed text-justify">
+                                                <p className="text-base text-gray-500 leading-snug text-justify">
                                                     {item.desc}
                                                 </p>
                                             </div>

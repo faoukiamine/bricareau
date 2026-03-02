@@ -16,7 +16,7 @@ const Footer = () => {
                 className="h-10 w-auto brightness-0 invert"
               />
             </div>
-            <p className="text-sm text-white/80 leading-relaxed">
+            <p className="text-sm text-white/80 leading-snug">
               Spécialiste du traitement d'eau au Canada depuis plus de 20 ans.
               Votre partenaire de confiance pour une eau de qualité supérieure.
             </p>

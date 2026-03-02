@@ -171,7 +171,7 @@ const OperatorDashboard = () => {
                                         >
                                             <div
                                                 className={cn(
-                                                    "p-4 rounded-2xl text-sm shadow-sm leading-relaxed",
+                                                    "p-4 rounded-2xl text-sm shadow-sm leading-snug",
                                                     msg.sender === "operator"
                                                         ? "bg-blue-600 text-white rounded-tr-none"
                                                         : "bg-white text-gray-800 rounded-tl-none border border-gray-100"
@@ -272,7 +272,7 @@ const OperatorDashboard = () => {
                                 <BadgeCheck className="w-5 h-5" />
                                 Notes Expert
                             </h3>
-                            <p className="text-xs text-blue-100 leading-relaxed italic mb-6">
+                            <p className="text-xs text-blue-100 leading-snug italic mb-6">
                                 "Client potentiel pour un système complet. Intéressé par la filtration du calcaire pour toute la maison."
                             </p>
                             <Button className="w-full bg-white/20 hover:bg-white/30 text-white border-none rounded-xl">

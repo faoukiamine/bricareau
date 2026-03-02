@@ -157,7 +157,7 @@ const RO6 = () => {
                                         <benefit.icon className="w-8 h-8 text-blue-600" />
                                     </div>
                                     <h3 className="text-xl font-bold text-slate-900 mb-4">{benefit.title}</h3>
-                                    <p className="text-slate-500 leading-relaxed text-sm">{benefit.desc}</p>
+                                    <p className="text-slate-500 leading-snug text-sm">{benefit.desc}</p>
                                 </div>
                             ))}
                         </div>
@@ -285,7 +285,7 @@ const RO6 = () => {
                                     <AccordionTrigger className="px-8 py-6 hover:bg-slate-50/50 hover:no-underline text-left font-bold text-lg text-slate-800">
                                         {item.q}
                                     </AccordionTrigger>
-                                    <AccordionContent className="px-8 pb-6 font-light text-[20px] leading-[28px] text-slate-600 text-left">
+                                    <AccordionContent className="px-8 pb-6 font-light text-[20px] leading-snug text-slate-600 text-left">
                                         {item.a}
                                     </AccordionContent>
                                 </AccordionItem>

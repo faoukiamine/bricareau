@@ -55,7 +55,7 @@ const Guides = () => {
                             <h1 className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-foreground text-justify max-w-xl mx-auto">
                                 <span className="font-bold">Guides et Documentation</span>
                             </h1>
-                            <p className="text-[20px] leading-[28px] text-muted-foreground font-light text-justify max-w-xl mx-auto">
+                            <p className="text-[20px] leading-snug text-muted-foreground font-light text-justify max-w-xl mx-auto">
                                 Ressources complètes pour vous aider à tirer le meilleur parti de vos systèmes de traitement d'eau
                             </p>
                         </div>

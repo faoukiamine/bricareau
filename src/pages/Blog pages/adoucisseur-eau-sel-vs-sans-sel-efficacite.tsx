@@ -14,7 +14,7 @@ const AdoucisseurSelVsSansSelEfficacite = () => {
     }, []);
 
     return (
-        <div className="min-h-screen bg-white font-sans text-slate-900 leading-relaxed font-light text-justify text-[16px]">
+        <div className="min-h-screen bg-white font-sans text-slate-900 leading-snug font-light text-justify text-[16px]">
             <Header />
             <main className="pt-20">
                 {/* Hero Section */}
@@ -33,7 +33,7 @@ const AdoucisseurSelVsSansSelEfficacite = () => {
                         <h1 className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text-justify max-w-xl mx-auto">
                             <span className="font-bold">Adoucisseur à sel</span> <span className="text-blue-400 font-bold">vs</span> <span className="font-bold">Sans sel</span>
                         </h1>
-                        <p className="text-[20px] leading-[28px] text-slate-300 font-light mb-10 text-justify max-w-xl mx-auto italic">
+                        <p className="text-[20px] leading-snug text-slate-300 font-light mb-10 text-justify max-w-xl mx-auto italic">
                             La grande vérité sur l'adoucissement de l'eau : entre marketing agressif et réalités scientifiques, lequel protège réellement votre foyer contre le calcaire destructeur ?
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -53,7 +53,7 @@ const AdoucisseurSelVsSansSelEfficacite = () => {
                 <article className="py-20 lg:py-32 bg-white">
                     <div className="container mx-auto px-4">
                         <div className="max-w-4xl mx-auto">
-                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 leading-relaxed">
+                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 leading-snug">
                                 <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-blue-600 pl-8 italic">
                                     Il existe une confusion majeure sur le marché québécois entre "adoucissement" et "conditionnement". L'un retire le problème, l'autre tente de le distraire.
                                 </p>
@@ -102,14 +102,14 @@ const AdoucisseurSelVsSansSelEfficacite = () => {
                                     <div className="bg-slate-50 p-8 rounded-2xl border border-slate-100">
                                         <ShieldAlert className="w-10 h-10 text-red-600 mb-4" />
                                         <h4 className="text-xl font-bold mb-4 tracking-tight">Le Piège du Marketing</h4>
-                                        <p className="text-slate-600 text-sm italic leading-relaxed text-justify">
+                                        <p className="text-slate-600 text-sm italic leading-snug text-justify">
                                             De nombreux fabricants vendent ces systèmes comme des "adoucisseurs" pour profiter du terme, alors qu'ils ne modifient pas la dureté de l'eau. Soyez vigilants.
                                         </p>
                                     </div>
                                     <div className="bg-slate-50 p-8 rounded-2xl border border-slate-100">
                                         <BadgeInfo className="w-10 h-10 text-blue-600 mb-4" />
                                         <h4 className="text-xl font-bold mb-4 tracking-tight">Usage Recommandé</h4>
-                                        <p className="text-slate-600 text-sm italic leading-relaxed text-justify">
+                                        <p className="text-slate-600 text-sm italic leading-snug text-justify">
                                             Un système sans sel peut être utile pour limiter l'entartrage dans les copropriétés où l'installation d'un drain est impossible, mais il ne résoudra pas les problèmes de peau sèche.
                                         </p>
                                     </div>
@@ -155,7 +155,7 @@ const AdoucisseurSelVsSansSelEfficacite = () => {
                                         <BadgeCheck className="w-96 h-96" />
                                     </div>
                                     <h3 className="text-3xl md:text-5xl font-bold mb-10 tracking-tighter italic">Ne faites aucun compromis sur votre confort.</h3>
-                                    <p className="text-xl text-blue-100 opacity-90 mb-12 max-w-2xl mx-auto font-light leading-relaxed">
+                                    <p className="text-xl text-blue-100 opacity-90 mb-12 max-w-2xl mx-auto font-light leading-snug">
                                         Si vous exigez une eau vraiment pure et soyeuse, le choix est clair. Laissez nos experts vous montrer la différence réelle d'un système à sel Signature.
                                     </p>
                                     <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -165,7 +165,7 @@ const AdoucisseurSelVsSansSelEfficacite = () => {
                                     </div>
                                 </div>
 
-                                <div className="mt-20 text-slate-400 text-sm border-t border-slate-100 pt-8 italic leading-relaxed flex items-start gap-4">
+                                <div className="mt-20 text-slate-400 text-sm border-t border-slate-100 pt-8 italic leading-snug flex items-start gap-4">
                                     <Info className="h-6 w-6 text-blue-600 shrink-0 mt-1" />
                                     <p>
                                         Rappel technique : Pour ceux qui s'inquiètent de la consommation de sodium, l'utilisation de chlorure de potassium dans un adoucisseur classique permet d'obtenir tous les avantages de l'eau douce sans ajouter de sodium à l'eau.

@@ -27,7 +27,7 @@ const WaterTestSection = () => {
                         VOUS ÊTES PRÉOCCUPÉS PAR LA QUALITÉ DE VOTRE EAU ?
                     </h2>
 
-                    <p className="text-sm md:text-base text-gray-800 leading-relaxed mb-8 max-w-md font-medium">
+                    <p className="text-sm md:text-base text-gray-800 leading-snug mb-8 max-w-md font-medium">
                         Procurez-vous notre kit de test d'eau et renvoyez-le-nous ! Nous réaliserons
                         des analyses d'eau approfondies et vous recommanderons des solutions selon
                         la composition de votre eau.

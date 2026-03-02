@@ -720,7 +720,7 @@ const WaterDiagnosticQuiz = () => {
                                                 </span>
                                             </div>
                                             <h3 className="text-xl font-bold text-slate-900 mb-2 leading-tight">{rec.title}</h3>
-                                            <p className="text-sm text-slate-600 mb-6 leading-relaxed">
+                                            <p className="text-sm text-slate-600 mb-6 leading-snug">
                                                 {rec.desc}
                                             </p>
                                         </div>

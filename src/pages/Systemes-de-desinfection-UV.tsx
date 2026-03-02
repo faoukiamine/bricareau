@@ -89,7 +89,7 @@ const DesinfectionUV = () => {
                                 <span className="font-bold text-white">Systèmes de désinfection UV</span> <br />
                                 <span className="font-bold text-white">Zéro produit chimique, 100% de protection.</span>
                             </h1>
-                            <p className="font-light text-[20px] leading-[28px] text-white/95 mb-8 max-w-xl text-justify">
+                            <p className="font-light text-[20px] leading-snug text-white/95 mb-8 max-w-xl text-justify">
                                 Éliminez 99,99% des bactéries, virus et kystes de votre eau de puits ou municipale sans aucun additif chimique. Assurez une pureté microbiologique totale pour la sécurité de votre famille à chaque robinet.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4">
@@ -142,7 +142,7 @@ const DesinfectionUV = () => {
                                 <span className="font-light block">Pourquoi choisir la</span>
                                 <span className="font-normal block">désinfection UV ?</span>
                             </h2>
-                            <p className="text-lg font-light leading-relaxed text-blue-100 max-w-2xl mx-auto text-justify">
+                            <p className="text-lg font-light leading-snug text-blue-100 max-w-2xl mx-auto text-justify">
                                 Profitez d'une tranquillité d'esprit totale avec une technologie qui élimine 99,99% des pathogènes sans ajout de produits chimiques.
                             </p>
                         </div>
@@ -162,7 +162,7 @@ const DesinfectionUV = () => {
                                         <benefit.icon className="h-10 w-10 text-blue-600 group-hover:text-white" />
                                     </div>
                                     <h3 className="text-2xl font-medium mb-4 tracking-tight">{benefit.title}</h3>
-                                    <p className="text-lg font-light leading-relaxed text-blue-100 text-justify">{benefit.desc}</p>
+                                    <p className="text-lg font-light leading-snug text-blue-100 text-justify">{benefit.desc}</p>
                                 </div>
                             ))}
                         </div>
@@ -182,7 +182,7 @@ const DesinfectionUV = () => {
                             </h2>
                             <div className="w-24 h-1 bg-blue-600 mb-12"></div>
 
-                            <p className="text-lg font-light leading-relaxed text-slate-600 text-justify max-w-7xl mx-auto" style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}>
+                            <p className="text-lg font-light leading-snug text-slate-600 text-justify max-w-7xl mx-auto" style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}>
                                 La technologie UV est le choix idéal pour les consommateurs qui cherchent à se protéger contre les contaminants microbiologiques, notamment les bactéries (E.coli, coliformes fécaux, etc.), les virus et les protozoaires (cryptosporidium, giardia, etc.) qui peuvent être résistants au chlore. Contrairement aux traitements chimiques, les UV ne modifient pas le goût, l’odeur ou la composition physico-chimique de l’eau. Nos dispositifs UV mis en place sur le point d’entrée (POE) est installé avant que l’eau ne soit distribuée dans les foyers, au niveau de la conduite d’alimentation principale, avant qu’elle ne circule dans l’ensemble du réseau domestique.
                             </p>
                         </div>
@@ -212,7 +212,7 @@ const DesinfectionUV = () => {
                                             {prod.name}
                                         </h3>
                                         <p
-                                            className="text-slate-500 font-light leading-[24px] flex-grow text-justify whitespace-pre-line text-[18px]"
+                                            className="text-slate-500 font-light leading-snug flex-grow text-justify whitespace-pre-line text-[18px]"
                                             style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                                         >
                                             {prod.desc}
@@ -311,7 +311,7 @@ const DesinfectionUV = () => {
                             >
                                 Votre eau de puits est-elle <span className="font-bold"><br />vraiment sécuritaire ?</span>
                             </h2>
-                            <p className="text-lg font-light leading-relaxed text-white/95 mb-8 max-w-xl text-justify">
+                            <p className="text-lg font-light leading-snug text-white/95 mb-8 max-w-xl text-justify">
                                 Ne devinez pas la qualité de votre eau. Nos analyses approfondies identifient les bactéries, les minéraux et les contaminants chimiques pour vous offrir une tranquillité d'esprit totale.
                             </p>
                             <div className="flex gap-4">

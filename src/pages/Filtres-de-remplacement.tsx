@@ -88,7 +88,7 @@ const Pieces = () => {
                             >
                                 <span className="font-bold">Pièces de Remplacement</span>
                             </h1>
-                            <p className="text-[20px] leading-[28px] text-muted-foreground font-light text-justify max-w-xl mx-auto">
+                            <p className="text-[20px] leading-snug text-muted-foreground font-light text-justify max-w-xl mx-auto">
                                 Trouvez toutes les pièces dont vous avez besoin pour vos équipements
                             </p>
                         </div>

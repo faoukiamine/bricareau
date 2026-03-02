@@ -84,7 +84,7 @@ const Solutions = () => {
               <h1 className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-foreground text-justify max-w-xl mx-auto">
                 <span className="font-bold">Nos Solutions de Traitement d'Eau</span>
               </h1>
-              <p className="text-[20px] leading-[28px] text-muted-foreground font-light text-justify max-w-xl mx-auto">
+              <p className="text-[20px] leading-snug text-muted-foreground font-light text-justify max-w-xl mx-auto">
                 Découvrez notre gamme complète de solutions pour améliorer la qualité de votre eau.
                 Que vous ayez besoin d'adoucir, filtrer ou purifier, nous avons la solution adaptée à vos besoins.
               </p>
@@ -126,7 +126,7 @@ const Solutions = () => {
                       </h2>
                     </div>
 
-                    <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+                    <p className="text-muted-foreground text-lg leading-snug mb-6">
                       {solution.description}
                     </p>
 

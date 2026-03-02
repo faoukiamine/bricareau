@@ -30,7 +30,7 @@ const WaterProblems = () => {
             </h3>
           </div>
 
-          <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto leading-snug">
             Vous vous inquiétez de la qualité de votre eau potable, de tâches de rouille dans votre baignoire 
             ou d'une odeur des œufs pourris lorsque vous prenez votre douche ?
           </p>

@@ -14,7 +14,7 @@ const FiltreEauAppartementSansPlomberie = () => {
     }, []);
 
     return (
-        <div className="min-h-screen bg-white font-sans text-slate-900 leading-relaxed font-light text-justify">
+        <div className="min-h-screen bg-white font-sans text-slate-900 leading-snug font-light text-justify">
             <Header />
             <main className="pt-20">
                 {/* Hero Section */}
@@ -26,7 +26,7 @@ const FiltreEauAppartementSansPlomberie = () => {
                         <h1 className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-slate-900 text-justify max-w-xl mx-auto">
                             <span className="font-bold">Filtre</span> <span className="text-blue-600 font-bold">appartement</span> : <br className="hidden md:block" /> <span className="font-bold">Zéro travaux.</span>
                         </h1>
-                        <p className="text-[20px] leading-[28px] text-slate-600 font-light mb-10 text-justify max-w-xl mx-auto italic">
+                        <p className="text-[20px] leading-snug text-slate-600 font-light mb-10 text-justify max-w-xl mx-auto italic">
                             Locataires au Québec : découvrez comment obtenir une eau de pureté cristalline sans modifier la plomberie de votre propriétaire et sans risquer votre dépôt de garantie.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -48,7 +48,7 @@ const FiltreEauAppartementSansPlomberie = () => {
                 <article className="py-20 lg:py-32 bg-white">
                     <div className="container mx-auto px-4">
                         <div className="max-w-4xl mx-auto">
-                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 leading-relaxed">
+                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 leading-snug">
                                 <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-blue-600 pl-8 italic">
                                     Vivre en appartement n'est pas une excuse pour tolérer le goût du chlore ou les traces de plomb. Pour les locataires, la filtration de l'eau nécessite une approche différente : la portabilité et la réversibilité.
                                 </p>
@@ -98,14 +98,14 @@ const FiltreEauAppartementSansPlomberie = () => {
                                     <div className="bg-slate-900 text-white p-8 rounded-2xl border border-slate-800">
                                         <Wrench className="w-10 h-10 text-blue-400 mb-4" />
                                         <h4 className="text-xl font-bold mb-4 tracking-tight text-blue-300 italic">Zéro Outil</h4>
-                                        <p className="text-slate-300 text-sm italic leading-relaxed text-justify opacity-80">
+                                        <p className="text-slate-300 text-sm italic leading-snug text-justify opacity-80">
                                             Nos solutions de comptoir sont prêtes à l'emploi en moins de 2 minutes après déballage. Branchez, Versez, Buvez.
                                         </p>
                                     </div>
                                     <div className="bg-slate-900 text-white p-8 rounded-2xl border border-slate-800">
                                         <Key className="w-10 h-10 text-blue-400 mb-4" />
                                         <h4 className="text-xl font-bold mb-4 tracking-tight text-blue-300 italic">100% Amovible</h4>
-                                        <p className="text-slate-300 text-sm italic leading-relaxed text-justify opacity-80">
+                                        <p className="text-slate-300 text-sm italic leading-snug text-justify opacity-80">
                                             Au moment du départ, remettez simplement le robinet original. Le propriétaire ne verra jamais la différence, mais votre enfant aura bu une eau exempte de neurotoxines.
                                         </p>
                                     </div>
@@ -121,7 +121,7 @@ const FiltreEauAppartementSansPlomberie = () => {
                                         <Building2 className="w-96 h-96" />
                                     </div>
                                     <h3 className="text-3xl md:text-5xl font-bold mb-10 tracking-tighter italic">Transformez votre appartement dès aujourd'hui.</h3>
-                                    <p className="text-xl text-blue-100 opacity-90 mb-12 max-w-2xl mx-auto font-light leading-relaxed">
+                                    <p className="text-xl text-blue-100 opacity-90 mb-12 max-w-2xl mx-auto font-light leading-snug">
                                         Vivre en condo ou en appartement n'est plus un frein à votre santé. Nos experts Bricareau ont conçu des solutions spécifiques pour la vie urbaine.
                                     </p>
                                     <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -131,7 +131,7 @@ const FiltreEauAppartementSansPlomberie = () => {
                                     </div>
                                 </div>
 
-                                <div className="mt-20 text-slate-400 text-sm border-t border-slate-100 pt-8 italic leading-relaxed flex items-start gap-4">
+                                <div className="mt-20 text-slate-400 text-sm border-t border-slate-100 pt-8 italic leading-snug flex items-start gap-4">
                                     <Info className="h-6 w-6 text-blue-600 shrink-0 mt-1" />
                                     <p>
                                         Rappel d'expert : Même sans travaux permanents, la maintenance régulière des filtres est indispensable pour garantir l'efficacité bactériostatique de votre système.

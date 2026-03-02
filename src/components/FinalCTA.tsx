@@ -16,7 +16,7 @@ const FinalCTA = () => {
                             <p className="text-xl md:text-2xl font-semibold text-foreground">
                                 Litres d'eau économisés
                             </p>
-                            <p className="text-base text-muted-foreground leading-relaxed">
+                            <p className="text-base text-muted-foreground leading-snug">
                                 Nos systèmes efficaces permettent d'économiser des millions de litres d'eau chaque année
                             </p>
                         </div>
@@ -28,7 +28,7 @@ const FinalCTA = () => {
                             <p className="text-xl md:text-2xl font-semibold text-foreground">
                                 Réduction des coûts
                             </p>
-                            <p className="text-base text-muted-foreground leading-relaxed">
+                            <p className="text-base text-muted-foreground leading-snug">
                                 Économisez sur vos factures d'eau et d'énergie avec nos solutions efficaces
                             </p>
                         </div>
@@ -40,7 +40,7 @@ const FinalCTA = () => {
                             <h3 className="text-3xl md:text-4xl font-bold text-white leading-tight">
                                 Prêt à améliorer la qualité de votre eau ?
                             </h3>
-                            <p className="text-lg text-white/90 leading-relaxed">
+                            <p className="text-lg text-white/90 leading-snug">
                                 Commencez dès aujourd'hui avec une consultation gratuite et découvrez comment nous pouvons transformer votre eau.
                             </p>
                             <Button

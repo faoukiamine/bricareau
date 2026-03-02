@@ -98,7 +98,7 @@ const TestimonialsSection = ({
                                         </div>
 
                                         {/* Quote Content */}
-                                        <p className="text-[#4B5563] text-lg md:text-xl leading-relaxed mb-12 font-normal italic">
+                                        <p className="text-[#4B5563] text-lg md:text-xl leading-snug mb-12 font-normal italic">
                                             « {item.text} »
                                         </p>
 

@@ -122,7 +122,7 @@ const FiltreEauHauteEfficacite = () => {
                                             <div className="w-2 h-8 bg-blue-600 rounded-full" />
                                             Aqua-Sensor® Digital
                                         </h3>
-                                        <p className="text-lg font-light leading-relaxed text-slate-600 text-justify">
+                                        <p className="text-lg font-light leading-snug text-slate-600 text-justify">
                                             Le cerveau de votre système. Contrairement aux systèmes basés sur le temps, notre capteur breveté ajuste la régénération en fonction de l'utilisation réelle et de la dureté de l'eau.
                                         </p>
                                     </div>
@@ -131,7 +131,7 @@ const FiltreEauHauteEfficacite = () => {
                                             <div className="w-2 h-8 bg-blue-600 rounded-full" />
                                             Bricareau Connect App
                                         </h3>
-                                        <p className="text-lg font-light leading-relaxed text-slate-600 text-justify">
+                                        <p className="text-lg font-light leading-snug text-slate-600 text-justify">
                                             Une tranquillité d'esprit totale. Suivez votre consommation, recevez des alertes de fuite ou de niveau de sel bas directement sur votre téléphone.
                                         </p>
                                     </div>
@@ -154,7 +154,7 @@ const FiltreEauHauteEfficacite = () => {
                         <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
                             Filtration intelligente qui améliore votre vie au quotidien
                         </h2>
-                        <p className="text-lg font-light leading-relaxed text-slate-600 mb-16 max-w-3xl mx-auto text-justify">
+                        <p className="text-lg font-light leading-snug text-slate-600 mb-16 max-w-3xl mx-auto text-justify">
                             Plus qu'un simple filtre, c'est une protection complète pour votre santé et votre maison.
                         </p>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -169,7 +169,7 @@ const FiltreEauHauteEfficacite = () => {
                                         <benefit.icon className="w-10 h-10 text-blue-600" />
                                     </div>
                                     <h3 className="text-xl font-bold text-slate-900 mb-4">{benefit.title}</h3>
-                                    <p className="text-lg font-light leading-relaxed text-slate-500 text-sm text-justify">{benefit.desc}</p>
+                                    <p className="text-lg font-light leading-snug text-slate-500 text-sm text-justify">{benefit.desc}</p>
                                 </div>
                             ))}
                         </div>
@@ -246,7 +246,7 @@ const FiltreEauHauteEfficacite = () => {
                                         <plan.icon className="w-8 h-8 text-blue-600" />
                                     </div>
                                     <h3 className="text-xl font-bold text-slate-900 mb-4">{plan.title}</h3>
-                                    <p className="text-lg font-light leading-relaxed text-slate-500 text-sm text-justify">{plan.desc}</p>
+                                    <p className="text-lg font-light leading-snug text-slate-500 text-sm text-justify">{plan.desc}</p>
                                 </div>
                             ))}
                         </div>
@@ -311,7 +311,7 @@ const FiltreEauHauteEfficacite = () => {
                                     <div key={i} className="flex flex-col items-center">
                                         <div className="text-4xl font-black text-blue-100 mb-4 italic">0{i + 1}</div>
                                         <h4 className="font-bold text-slate-900 mb-2">{step.title}</h4>
-                                        <p className="text-xs text-slate-400 leading-relaxed font-light uppercase tracking-wider">{step.desc}</p>
+                                        <p className="text-xs text-slate-400 leading-snug font-light uppercase tracking-wider">{step.desc}</p>
                                     </div>
                                 ))}
                             </div>
@@ -402,7 +402,7 @@ const FiltreEauHauteEfficacite = () => {
                                     </div>
                                     <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
                                         <h3 className="text-xl font-medium mb-2 group-hover:text-blue-600 transition-colors tracking-tight">{prod.title}</h3>
-                                        <p className="text-lg font-light leading-relaxed text-slate-500 text-sm mb-6 flex-grow text-justify">{prod.desc}</p>
+                                        <p className="text-lg font-light leading-snug text-slate-500 text-sm mb-6 flex-grow text-justify">{prod.desc}</p>
                                         <NavLink
                                             to={prod.link || "#"}
                                             className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-sm"

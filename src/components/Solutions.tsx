@@ -66,7 +66,7 @@ const Solutions = () => {
                   <CardTitle className="text-xl md:text-2xl">{solution.title}</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                  <CardDescription className="text-sm md:text-base leading-relaxed">
+                  <CardDescription className="text-sm md:text-base leading-snug">
                     {solution.description}
                   </CardDescription>
                   <Button

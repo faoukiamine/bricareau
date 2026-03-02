@@ -14,7 +14,7 @@ const NitratesEauDanger = () => {
     }, []);
 
     return (
-        <div className="min-h-screen bg-white font-sans text-slate-900 leading-relaxed font-light">
+        <div className="min-h-screen bg-white font-sans text-slate-900 leading-snug font-light">
             <Header />
             <main className="pt-20">
                 {/* Hero Section */}
@@ -33,7 +33,7 @@ const NitratesEauDanger = () => {
                         <h1 className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text-justify max-w-xl mx-auto">
                             <span className="font-bold">Nitrates dans l'eau :</span> <span className="text-blue-400 font-bold">Le danger invisible</span>
                         </h1>
-                        <p className="text-[20px] leading-[28px] text-slate-300 font-light mb-10 text-justify max-w-xl mx-auto italic">
+                        <p className="text-[20px] leading-snug text-slate-300 font-light mb-10 text-justify max-w-xl mx-auto italic">
                             Protéger les plus vulnérables contre le syndrome du bébé bleu : guide expert sur la détection et l'élimination des nitrates en zone rurale et agricole.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -53,7 +53,7 @@ const NitratesEauDanger = () => {
                 <article className="py-20 lg:py-32">
                     <div className="container mx-auto px-4">
                         <div className="max-w-4xl mx-auto">
-                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 leading-relaxed text-justify">
+                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 leading-snug text-justify">
                                 <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-blue-600 pl-8 italic">
                                     Dans les régions agricoles du Québec et de l'Ontario, les nitrates constituent l'une des sources de contamination les plus fréquentes et les plus pernicieuses des eaux souterraines. Incolores, inodores et sans saveur, ils s'infiltrent silencieusement dans les puits, posant un risque critique pour la santé des nourrissons et des femmes enceintes.
                                 </p>
@@ -97,14 +97,14 @@ const NitratesEauDanger = () => {
                                     <div className="bg-red-50 p-8 rounded-2xl border border-red-100">
                                         <Baby className="w-12 h-12 text-red-600 mb-6" />
                                         <h4 className="text-xl font-bold mb-4 tracking-tight">Cibles Vulnérables</h4>
-                                        <p className="text-slate-600 text-sm italic leading-relaxed">
+                                        <p className="text-slate-600 text-sm italic leading-snug">
                                             Les nourrissons alimentés par du lait maternisé préparé avec de l'eau de puits non filtrée sont les plus exposés. Les femmes enceintes sont également à risque en raison d'une demande accrue en oxygène.
                                         </p>
                                     </div>
                                     <div className="bg-amber-50 p-8 rounded-2xl border border-amber-100">
                                         <AlertTriangle className="w-12 h-12 text-amber-600 mb-6" />
                                         <h4 className="text-xl font-bold mb-4 tracking-tight">Signes de Danger</h4>
-                                        <p className="text-slate-600 text-sm italic leading-relaxed">
+                                        <p className="text-slate-600 text-sm italic leading-snug">
                                             Une coloration bleue/violacée de la peau (cyanose), particulièrement autour des lèvres, des mains et des pieds, associée à une détresse respiratoire, constitue une urgence médicale absolue.
                                         </p>
                                     </div>
@@ -149,7 +149,7 @@ const NitratesEauDanger = () => {
                                         <ShieldCheck className="w-96 h-96" />
                                     </div>
                                     <h3 className="text-3xl md:text-5xl font-bold mb-10 tracking-tighter italic">Aucun compromis sur la vie.</h3>
-                                    <p className="text-xl text-blue-100 opacity-90 mb-12 max-w-2xl mx-auto font-light leading-relaxed">
+                                    <p className="text-xl text-blue-100 opacity-90 mb-12 max-w-2xl mx-auto font-light leading-snug">
                                         L'incertitude n'a pas sa place au moment de préparer le repas de votre nouveau-né. Laissez nos experts diagnostiquer votre puits et installer la protection certifiée dont vous avez besoin.
                                     </p>
                                     <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -159,7 +159,7 @@ const NitratesEauDanger = () => {
                                     </div>
                                 </div>
 
-                                <div className="mt-20 text-slate-400 text-sm border-t border-slate-100 pt-8 italic leading-relaxed flex items-start gap-4">
+                                <div className="mt-20 text-slate-400 text-sm border-t border-slate-100 pt-8 italic leading-snug flex items-start gap-4">
                                     <Info className="h-6 w-6 text-blue-600 shrink-0 mt-1" />
                                     <p>
                                         Note importante : Un système d'osmose inverse nécessite un entretien rigoureux des pré-filtres et du post-filtre pour maintenir son taux de rejet nominal contre les nitrates. Un audit annuel est recommandé.

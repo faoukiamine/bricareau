@@ -147,7 +147,7 @@ const ImpactCalculator = () => {
                     </div>
 
                     <div className="pt-2">
-                        <p className="text-[9px] text-slate-400 text-center font-medium leading-relaxed italic">
+                        <p className="text-[9px] text-slate-400 text-center font-medium leading-snug italic">
                             Éliminez le plastique, valorisez votre santé.
                         </p>
                     </div>

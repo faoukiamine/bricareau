@@ -52,7 +52,7 @@ const Garantie = () => {
                             <h1 className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-slate-900 text-justify max-w-xl mx-auto">
                                 <span className="font-bold">Garanties et Protection</span>
                             </h1>
-                            <p className="text-[20px] leading-[28px] text-muted-foreground font-light text-justify max-w-xl mx-auto">
+                            <p className="text-[20px] leading-snug text-muted-foreground font-light text-justify max-w-xl mx-auto">
                                 Votre investissement est protégé par nos garanties complètes
                             </p>
                         </div>

@@ -44,7 +44,7 @@ const ExpertTrustSection = () => {
                                 <span className="font-bold">Votre eau mérite un expert, </span>
                                 <span className="font-light text-blue-600 italic">pas un doute.</span>
                             </h2>
-                            <p className="text-xl text-slate-600 font-light leading-relaxed max-w-xl text-justify">
+                            <p className="text-xl text-slate-600 font-light leading-snug max-w-xl text-justify">
                                 Ne laissez pas l'incertitude couler de votre robinet. Chez Bricareau, nous transformons chaque analyse en une certitude scientifique pour la santé de votre foyer.
                             </p>
                         </div>

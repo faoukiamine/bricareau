@@ -157,7 +157,7 @@ const StationEauPotable = () => {
               <h2 className="text-[32px] md:text-[48px] font-normal text-white mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-center">
                 Pourquoi choisir nos systèmes <br />d'osmose inverse ?
               </h2>
-              <p className="text-lg font-light leading-relaxed text-blue-100 max-w-2xl mx-auto text-justify">
+              <p className="text-lg font-light leading-snug text-blue-100 max-w-2xl mx-auto text-justify">
                 Une technologie de pointe pour une eau d'une pureté exceptionnelle tout en offrant une protection permanente pour votre foyer.
               </p>
             </div>
@@ -173,7 +173,7 @@ const StationEauPotable = () => {
                     <item.icon className="h-10 w-10 text-blue-600 group-hover:text-white" />
                   </div>
                   <h3 className="text-2xl font-medium mb-4 tracking-tight">{item.title}</h3>
-                  <p className="text-lg font-light leading-relaxed text-blue-100 text-justify">{item.desc}</p>
+                  <p className="text-lg font-light leading-snug text-blue-100 text-justify">{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -193,7 +193,7 @@ const StationEauPotable = () => {
               </h2>
               <div className="w-24 h-1 bg-blue-600 mb-8"></div>
               <p
-                className="text-lg font-light leading-relaxed text-slate-600 mb-8 text-justify"
+                className="text-lg font-light leading-snug text-slate-600 mb-8 text-justify"
                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
               >
                 Nos systèmes d'osmose inverse représentent le summum de la technologie moderne permettant de transformer votre eau municipale ou de puits en une source de pureté exceptionnelle. Conçus pour s'intégrer discrètement sous votre évier, nos trois modèles phares — Vectapure, Essentiel et Sérénité — répondent avec précision à toutes vos exigences, allant de la filtration haute performance à la reminéralisation alcaline pour une eau plus saine. Chaque système a été rigoureusement testé et sélectionné pour sa fiabilité exemplaire et sa capacité inégalée à éliminer jusqu'à 99% des contaminants invisibles, vous offrant ainsi une tranquillité d'esprit absolue et un goût incomparable au quotidien. Choisir l'un de nos purificateurs, c'est investir durablement dans la santé de vos proches tout en réalisant des économies significatives sur l'achat d'eau en bouteille plastique. Profitez dès maintenant d'un accès illimité à une eau parfaitement purifiée, revitalisante et rafraîchissante, directement depuis le confort de votre cuisine.
@@ -225,7 +225,7 @@ const StationEauPotable = () => {
                       {product.name}
                     </h3>
                     <p
-                      className="text-slate-500 font-light leading-relaxed flex-grow text-justify"
+                      className="text-slate-500 font-light leading-snug flex-grow text-justify"
                       style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                     >
                       {product.desc}

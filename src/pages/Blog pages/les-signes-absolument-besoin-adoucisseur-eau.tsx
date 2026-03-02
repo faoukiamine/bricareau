@@ -14,7 +14,7 @@ const SignesBesoinAbsoluAdoucisseur = () => {
     }, []);
 
     return (
-        <div className="min-h-screen bg-white font-sans text-slate-900 leading-relaxed font-light text-justify text-[16px]">
+        <div className="min-h-screen bg-white font-sans text-slate-900 leading-snug font-light text-justify text-[16px]">
             <Header />
             <main className="pt-20">
                 {/* Hero Section */}
@@ -34,7 +34,7 @@ const SignesBesoinAbsoluAdoucisseur = () => {
                         <h1 className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text-justify max-w-xl mx-auto">
                             <span className="text-red-400 font-bold">Signes alarmants :</span><br /> <span className="font-bold">Votre maison appelle à l'aide.</span>
                         </h1>
-                        <p className="text-[20px] leading-[28px] text-slate-100 font-light mb-10 text-justify max-w-xl mx-auto italic">
+                        <p className="text-[20px] leading-snug text-slate-100 font-light mb-10 text-justify max-w-xl mx-auto italic">
                             L'eau dure n'est pas une fatalité, c'est une dégradation active et coûteuse. Apprenez à lire les symptômes d'une eau agressive avant qu'elle ne condamne votre plomberie.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -54,7 +54,7 @@ const SignesBesoinAbsoluAdoucisseur = () => {
                 <article className="py-20 lg:py-32 bg-white">
                     <div className="container mx-auto px-4">
                         <div className="max-w-4xl mx-auto">
-                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 leading-relaxed">
+                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 leading-snug">
                                 <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-red-600 pl-8 italic">
                                     Si vous attendez qu'une conduite explose ou qu'un chauffe-eau tombe en panne totale, il sera déjà trop tard. Votre maison vous envoie des signaux discrets mais indiscutables.
                                 </p>
@@ -83,7 +83,7 @@ const SignesBesoinAbsoluAdoucisseur = () => {
                                     </div>
                                     <div className="relative z-10">
                                         <h3 className="text-2xl font-bold text-red-900 mb-4 tracking-tight">Perte de pression</h3>
-                                        <p className="text-slate-600 text-[18px] leading-relaxed">
+                                        <p className="text-slate-600 text-[18px] leading-snug">
                                             Si vous remarquez que la pression d'eau chaude diminue alors que l'eau froide reste puissante, votre chauffe-eau ou vos conduites sont en train de <strong>s'asphyxier de calcaire</strong>.
                                         </p>
                                     </div>
@@ -101,14 +101,14 @@ const SignesBesoinAbsoluAdoucisseur = () => {
                                     <div className="bg-slate-50 p-8 rounded-2xl border border-slate-100">
                                         <Droplets className="w-10 h-10 text-red-600 mb-4" />
                                         <h4 className="text-xl font-bold mb-4 tracking-tight text-red-900 italic">Peau Atopique</h4>
-                                        <p className="text-slate-600 text-sm font-medium leading-relaxed text-justify opacity-80">
+                                        <p className="text-slate-600 text-sm font-medium leading-snug text-justify opacity-80">
                                             Pour les enfants souffrant d'eczéma, l'eau dure est un déclencheur environnemental majeur qu'un adoucisseur peut éliminer instantanément.
                                         </p>
                                     </div>
                                     <div className="bg-slate-50 p-8 rounded-2xl border border-slate-100">
                                         <Zap className="w-10 h-10 text-red-600 mb-4" />
                                         <h4 className="text-xl font-bold mb-4 tracking-tight text-red-900 italic">Cheveux Eternels</h4>
-                                        <p className="text-slate-600 text-sm font-medium leading-relaxed text-justify opacity-80">
+                                        <p className="text-slate-600 text-sm font-medium leading-snug text-justify opacity-80">
                                             Un investissement dans un adoucisseur Signature se rentabilise aussi par la réduction drastique du budget produits capillaires de luxe.
                                         </p>
                                     </div>
@@ -124,7 +124,7 @@ const SignesBesoinAbsoluAdoucisseur = () => {
                                         <AlertTriangle className="w-96 h-96" />
                                     </div>
                                     <h3 className="text-3xl md:text-5xl font-bold mb-10 tracking-tighter italic text-red-300">Ne laissez pas le calcaire gagner.</h3>
-                                    <p className="text-xl text-slate-300 opacity-90 mb-12 max-w-2xl mx-auto font-light leading-relaxed">
+                                    <p className="text-xl text-slate-300 opacity-90 mb-12 max-w-2xl mx-auto font-light leading-snug">
                                         Une eau dure non traitée diminue la valeur de revente de votre maison en dégradant son infrastructure interne. Protégez votre capital dès aujourd'hui.
                                     </p>
                                     <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -134,7 +134,7 @@ const SignesBesoinAbsoluAdoucisseur = () => {
                                     </div>
                                 </div>
 
-                                <div className="mt-20 text-slate-400 text-sm border-t border-slate-100 pt-8 italic leading-relaxed flex items-start gap-4">
+                                <div className="mt-20 text-slate-400 text-sm border-t border-slate-100 pt-8 italic leading-snug flex items-start gap-4">
                                     <Info className="h-6 w-6 text-red-600 shrink-0 mt-1" />
                                     <p>
                                         Rappel d'expert : Au Québec, un adoucisseur bien calibré augmente la durée de vie moyenne de vos appareils de 20 à 45 %. C'est une assurance contre l'obsolescence programmée provoquée par le tartre.

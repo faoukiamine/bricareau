@@ -272,7 +272,7 @@ const AdoucisseursEauDePuits = () => {
                                         <item.icon className="h-10 w-10 text-blue-600 group-hover:text-white" />
                                     </div>
                                     <h4 className="text-2xl font-medium mb-4 tracking-tight">{item.title}</h4>
-                                    <p className="text-lg font-light leading-relaxed text-blue-100 text-justify">{item.desc}</p>
+                                    <p className="text-lg font-light leading-snug text-blue-100 text-justify">{item.desc}</p>
                                 </div>
                             ))}
                         </div>
@@ -379,7 +379,7 @@ const AdoucisseursEauDePuits = () => {
                                         <tr key={i} className="hover:bg-gray-50 transition-colors">
                                             <td className="p-8 font-bold text-slate-900 border-r border-gray-100 bg-gray-50/30">{row.feature}</td>
                                             {["Sérénité", "Sentinel", "Infiniti"].map((model) => (
-                                                <td key={model} className="p-8 text-center text-lg font-light leading-relaxed text-gray-600 text-justify">
+                                                <td key={model} className="p-8 text-center text-lg font-light leading-snug text-gray-600 text-justify">
                                                     {row[model as keyof ComparisonItem]}
                                                 </td>
                                             ))}

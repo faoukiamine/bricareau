@@ -54,7 +54,7 @@ const EverythingYouNeed = () => {
                                 <h3 className="text-xl font-bold text-foreground">
                                     {feature.title}
                                 </h3>
-                                <p className="text-sm text-muted-foreground leading-relaxed">
+                                <p className="text-sm text-muted-foreground leading-snug">
                                     {feature.description}
                                 </p>
                             </div>

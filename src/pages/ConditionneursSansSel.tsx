@@ -229,7 +229,7 @@ const ConditionneursSansSel = () => {
                     {item.title}
                   </h3>
 
-                  <p className="text-slate-500 text-lg leading-relaxed font-light text-justify group-hover:text-slate-600 transition-colors duration-300">
+                  <p className="text-slate-500 text-lg leading-snug font-light text-justify group-hover:text-slate-600 transition-colors duration-300">
                     {item.description}
                   </p>
                 </div>
@@ -255,7 +255,7 @@ const ConditionneursSansSel = () => {
                   >
                     Choisissez une protection 100% écologique et préservez les minéraux essentiels de votre eau.
                   </h2>
-                  <p className="text-lg text-slate-600 mb-10 leading-relaxed font-light max-w-lg">
+                  <p className="text-lg text-slate-600 mb-10 leading-snug font-light max-w-lg">
                     Le conditionneur d'eau sans sel de Bricareau est une alternative efficace et écologique
                     à l'adoucisseur traditionnel. Il protège votre maison du calcaire sans jamais avoir à soulever un sac de sel. Une solution durable, autonome et efficace.
                   </p>
@@ -278,7 +278,7 @@ const ConditionneursSansSel = () => {
                         {item.c}
                       </span>
                       <h4 className="text-xl font-bold text-slate-900 mb-3 relative z-10">{item.t}</h4>
-                      <p className="text-sm text-slate-500 font-light leading-relaxed relative z-10 text-justify">
+                      <p className="text-sm text-slate-500 font-light leading-snug relative z-10 text-justify">
                         {item.d}
                       </p>
                     </div>
@@ -403,7 +403,7 @@ const ConditionneursSansSel = () => {
                   </div>
                   <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
                     <h3 className="text-xl font-medium mb-4 group-hover:text-blue-600 transition-colors">{res.title}</h3>
-                    <p className="text-slate-500 text-sm leading-relaxed mb-6 flex-grow">{res.description}</p>
+                    <p className="text-slate-500 text-sm leading-snug mb-6 flex-grow">{res.description}</p>
                     <div className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-sm">
                       Lire <ChevronRight className="h-4 w-4" />
                     </div>

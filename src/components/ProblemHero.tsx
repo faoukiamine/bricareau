@@ -124,7 +124,7 @@ const ProblemHero = () => {
                             <div className="space-y-6 relative z-10 mb-8">
                                 <div>
                                     <span className="text-xs font-bold text-red-500 uppercase tracking-wide mb-1 block">Le Problème</span>
-                                    <p className="text-lg text-slate-600 leading-relaxed">
+                                    <p className="text-lg text-slate-600 leading-snug">
                                         {activeProblem.desc}
                                     </p>
                                 </div>

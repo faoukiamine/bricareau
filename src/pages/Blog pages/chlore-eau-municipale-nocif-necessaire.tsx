@@ -14,7 +14,7 @@ const ChloreEauMunicipale = () => {
     }, []);
 
     return (
-        <div className="min-h-screen bg-white font-sans text-slate-900 leading-relaxed font-light">
+        <div className="min-h-screen bg-white font-sans text-slate-900 leading-snug font-light">
             <Header />
             <main className="pt-20">
                 {/* Hero Section */}
@@ -33,7 +33,7 @@ const ChloreEauMunicipale = () => {
                         <h1 className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text-justify max-w-xl mx-auto">
                             <span className="font-bold">Chlore dans l'eau</span> : <span className="text-sky-400 font-bold">Nécessaire ou Nocif ?</span>
                         </h1>
-                        <p className="text-[20px] leading-[28px] text-slate-300 font-light mb-10 text-justify max-w-xl mx-auto italic">
+                        <p className="text-[20px] leading-snug text-slate-300 font-light mb-10 text-justify max-w-xl mx-auto italic">
                             Éclaircir le dilemme de la désinfection : pourquoi le chlore sauve des vies tout en posant de nouveaux défis chimiques à votre foyer.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -53,7 +53,7 @@ const ChloreEauMunicipale = () => {
                 <article className="py-20 lg:py-32">
                     <div className="container mx-auto px-4">
                         <div className="max-w-4xl mx-auto">
-                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 text-justify leading-relaxed">
+                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 text-justify leading-snug">
                                 <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-sky-600 pl-8 italic">
                                     Le chlore est souvent qualifié de « miracle de la santé publique ». Depuis son introduction massive au début du XXe siècle, il a pratiquement éradiqué des maladies mortelles comme le choléra et la typhoïde au Canada. Cependant, cette sécurité sanitaire a un prix : une signature chimique persistante dans votre verre et des sous-produits toxiques.
                                 </p>
@@ -104,14 +104,14 @@ const ChloreEauMunicipale = () => {
                                     <div className="p-8 bg-slate-50 border border-slate-100 rounded-2xl group hover:shadow-xl transition-all">
                                         <Thermometer className="w-12 h-12 text-sky-600 mb-6 group-hover:scale-110 transition-transform" />
                                         <h4 className="text-xl font-bold mb-4 tracking-tight">Inhalation sous la douche</h4>
-                                        <p className="text-slate-600 text-sm leading-relaxed text-justify">
+                                        <p className="text-slate-600 text-sm leading-snug text-justify">
                                             Dans une douche chaude, le chlore se transforme en gaz. On estime que l'on absorbe autant de chlore par inhalation et par les pores de la peau durant une douche de 10 minutes que si l'on buvait 2 litres d'eau du robinet.
                                         </p>
                                     </div>
                                     <div className="p-8 bg-slate-50 border border-slate-100 rounded-2xl group hover:shadow-xl transition-all">
                                         <GlassWater className="w-12 h-12 text-sky-600 mb-6 group-hover:scale-110 transition-transform" />
                                         <h4 className="text-xl font-bold mb-4 tracking-tight">Altération des saveurs</h4>
-                                        <p className="text-slate-600 text-sm leading-relaxed text-justify">
+                                        <p className="text-slate-600 text-sm leading-snug text-justify">
                                             Le chlore dénature les arômes du café, du thé et des aliments cuits à l'eau. Retirer le chlore, c'est redécouvrir le vrai goût de votre cuisine.
                                         </p>
                                     </div>
@@ -137,7 +137,7 @@ const ChloreEauMunicipale = () => {
                                         <Sparkles className="w-96 h-96 text-white" />
                                     </div>
                                     <h3 className="text-4xl md:text-5xl font-bold mb-10 tracking-tighter italic">Redécouvrez la douceur de l'eau.</h3>
-                                    <p className="text-xl text-sky-200 opacity-80 mb-12 max-w-3xl mx-auto font-light leading-relaxed">
+                                    <p className="text-xl text-sky-200 opacity-80 mb-12 max-w-3xl mx-auto font-light leading-snug">
                                         Ne laissez plus les produits de désinfection agresser votre santé et celle de vos enfants. Demandez dès aujourd'hui un diagnostic chlore professionnel.
                                     </p>
                                     <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -147,7 +147,7 @@ const ChloreEauMunicipale = () => {
                                     </div>
                                 </div>
 
-                                <div className="mt-20 text-slate-400 text-sm border-t border-slate-100 pt-8 italic leading-relaxed flex items-center gap-4">
+                                <div className="mt-20 text-slate-400 text-sm border-t border-slate-100 pt-8 italic leading-snug flex items-center gap-4">
                                     <Info className="h-10 w-10 text-sky-600 shrink-0" />
                                     <p>
                                         * Note de transparence : Bricareau reconnaît l'importance vitale de la chloration municipale. Nos solutions ne visent pas à remettre en cause ce service, mais à offrir aux foyers une eau de qualité supérieure débarrassée de ses agents de transport chimiques.

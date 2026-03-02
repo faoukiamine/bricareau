@@ -15,7 +15,7 @@ const Temoignages = () => {
                             <h1 className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-foreground text-justify max-w-xl mx-auto">
                                 <span className="font-bold">Témoignages Clients</span>
                             </h1>
-                            <p className="text-[20px] leading-[28px] text-muted-foreground font-light text-justify max-w-xl mx-auto">
+                            <p className="text-[20px] leading-snug text-muted-foreground font-light text-justify max-w-xl mx-auto">
                                 Découvrez ce que nos clients disent de leur expérience avec Bricareau.
                             </p>
                             <div className="flex items-center justify-center gap-2">

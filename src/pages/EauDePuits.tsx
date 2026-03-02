@@ -215,7 +215,7 @@ const EauDePuits = () => {
                 <span className="text-[32px] md:text-[50px] font-bold leading-[1.1] md:leading-[1.1] block">Problèmes courants</span>
                 <span className="text-[32px] md:text-[50px] font-bold leading-[1.1] md:leading-[1.1] block text-blue-600">de l'eau de puits</span>
               </h2>
-              <p className="text-lg font-light leading-relaxed text-slate-500 mt-6 max-w-2xl mx-auto">
+              <p className="text-lg font-light leading-snug text-slate-500 mt-6 max-w-2xl mx-auto">
                 L'eau de votre puits est vivante et changeante. Une analyse rigoureuse est la première étape pour garantir la sécurité de votre foyer et la longévité de vos installations.
               </p>
             </div>
@@ -237,7 +237,7 @@ const EauDePuits = () => {
                         <div className="absolute inset-0 p-8 flex flex-col justify-end text-white text-left">
                           <span className="text-[10px] font-black uppercase tracking-[0.4em] mb-4 opacity-70 group-hover:opacity-100 transition-opacity text-blue-400">PROBLÈME {idx + 1}</span>
                           <h3 className="text-2xl font-bold leading-tight mb-2 group-hover:mb-4 transition-all duration-500">{problem.title}</h3>
-                          <p className="text-sm opacity-0 h-0 group-hover:opacity-100 group-hover:h-auto transition-all duration-500 leading-relaxed font-light text-justify text-gray-300">{problem.desc}</p>
+                          <p className="text-sm opacity-0 h-0 group-hover:opacity-100 group-hover:h-auto transition-all duration-500 leading-snug font-light text-justify text-gray-300">{problem.desc}</p>
                         </div>
                       </div>
                     </div>
@@ -269,7 +269,7 @@ const EauDePuits = () => {
                 </h2>
               </div>
               <div className="max-w-xl">
-                <p className="text-lg font-light leading-relaxed text-slate-600 text-justify pb-2">
+                <p className="text-lg font-light leading-snug text-slate-600 text-justify pb-2">
                   Confiez-nous la gestion de votre eau de puits. De l'expertise initiale à l'installation finale, nous nous occupons de tout pour vous garantir une eau saine, sans compromis.
                 </p>
               </div>
@@ -332,7 +332,7 @@ const EauDePuits = () => {
 
                       {/* Short Desc (Always Visible or Hidden on Expand?) - Let's use visible for context */}
                       <div className="overflow-hidden max-h-0 opacity-0 group-hover:max-h-[200px] group-hover:opacity-100 transition-all duration-700 delay-100">
-                        <p className="text-lg text-white/90 font-light leading-relaxed mt-4 text-justify pr-4 border-l-2 border-blue-500 pl-4">
+                        <p className="text-lg text-white/90 font-light leading-snug mt-4 text-justify pr-4 border-l-2 border-blue-500 pl-4">
                           {step.fullDesc}
                         </p>
 
@@ -374,7 +374,7 @@ const EauDePuits = () => {
                 <span className="font-bold">Dites adieu au fer,</span><br />
                 au soufre et au calcaire.
               </h1>
-              <p className="text-lg font-light leading-relaxed text-white/95 mb-8 max-w-xl text-justify">
+              <p className="text-lg font-light leading-snug text-white/95 mb-8 max-w-xl text-justify">
                 Un puits performant commence par une analyse rigoureuse. Identifiez les contaminants invisibles et protégez durablement votre santé et vos installations.              </p>
               <div className="flex gap-4">
                 <Button
@@ -403,7 +403,7 @@ const EauDePuits = () => {
               </h2>
               <div className="w-24 h-1 bg-blue-600 mb-8"></div>
               <p
-                className="text-lg font-light leading-relaxed text-slate-600 mb-8 text-justify"
+                className="text-lg font-light leading-snug text-slate-600 mb-8 text-justify"
                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
               >
                 Nos solutions spécialisées pour l'eau de puits sont conçues pour transformer une eau brute et imprévisible en une source de pureté irréprochable au sein de votre foyer. Nous proposons une gamme complète incluant nos filtres spécialisés contre les différents contaminants, nos adoucisseurs de pointe éliminant le fer et le calcaire, ainsi que nos stations d'eau potable par osmose inverse pour une hydratation saine. Pour une sécurité microbiologique absolue, nos systèmes de stérilisation UV neutralisent efficacement les bactéries sans aucun ajout chimique. Chaque produit est sélectionné pour sa robustesse et sa capacité à répondre aux défis uniques posés par les eaux souterraines, vous garantissant ainsi une performance durable et une tranquillité d'esprit totale au quotidien. Faites confiance à l'expertise de Bricareau pour protéger votre santé et préserver l'intégrité de vos installations grâce à une filtration sur mesure, fiable et adaptée à vos besoins spécifiques.
@@ -464,7 +464,7 @@ const EauDePuits = () => {
                           {prod.name}
                         </h3>
                         <p
-                          className="text-slate-500 font-light leading-relaxed flex-grow text-justify"
+                          className="text-slate-500 font-light leading-snug flex-grow text-justify"
                           style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                         >
                           {prod.desc}

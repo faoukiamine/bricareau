@@ -193,7 +193,7 @@ const AdoucisseurEauMunicipal = () => {
                             <h2 className="text-[32px] md:text-[48px] font-normal text-white mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-center">
                                 Pourquoi choisir nos <br />adoucisseurs d'eau résidentiels ?
                             </h2>
-                            <p className="text-lg font-light leading-relaxed text-blue-100 max-w-2xl mx-auto text-justify">
+                            <p className="text-lg font-light leading-snug text-blue-100 max-w-2xl mx-auto text-justify">
                                 Plus qu'un simple appareil, c'est une solution complète pour la qualité de l'eau et le confort de toute votre famille.
                             </p>
                         </div>
@@ -209,7 +209,7 @@ const AdoucisseurEauMunicipal = () => {
                                         <item.icon className="h-10 w-10 text-blue-600 group-hover:text-white" />
                                     </div>
                                     <h4 className="text-2xl font-medium mb-4 tracking-tight">{item.title}</h4>
-                                    <p className="text-lg font-light leading-relaxed text-blue-100 text-justify">{item.desc}</p>
+                                    <p className="text-lg font-light leading-snug text-blue-100 text-justify">{item.desc}</p>
                                 </div>
                             ))}
                         </div>
@@ -228,7 +228,7 @@ const AdoucisseurEauMunicipal = () => {
                             </h2>
                             <div className="w-24 h-1 bg-blue-600 mb-8"></div>
                             <p
-                                className="text-lg font-light leading-relaxed text-slate-600 mb-8 text-justify"
+                                className="text-lg font-light leading-snug text-slate-600 mb-8 text-justify"
                                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                             >
                                 Nos adoucisseurs d'eau pour eau municipale sont spécialement conçus pour contrer les effets néfastes du calcaire tout en s'adaptant parfaitement aux spécificités des réseaux de distribution urbains. Nos solutions de pointe — les séries Sentinelle, Sérénité et Infiniti — offrent une technologie de régénération intelligente qui optimise votre consommation d'eau et de sel selon votre usage réel au quotidien. Que vous recherchiez une efficacité énergétique maximale, une protection accrue de votre plomberie ou une douceur incomparable pour votre peau et vos cheveux, nos systèmes garantissent une performance durable et une fiabilité exceptionnelle. Investir dans un adoucisseur Bricareau, c'est choisir de prolonger la vie de vos appareils électroménagers tout en réalisant des économies substantielles sur vos produits d'entretien et vos factures énergétiques. Découvrez une nouvelle dimension de confort domestique grâce à une eau parfaitement balancée, pure et saine pour l'ensemble de votre foyer.
@@ -256,7 +256,7 @@ const AdoucisseurEauMunicipal = () => {
                                             {p.name}
                                         </h3>
                                         <p
-                                            className="text-slate-500 font-light leading-relaxed flex-grow text-justify"
+                                            className="text-slate-500 font-light leading-snug flex-grow text-justify"
                                             style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                                         >
                                             {p.desc}
@@ -315,7 +315,7 @@ const AdoucisseurEauMunicipal = () => {
                                         <tr key={i} className="hover:bg-gray-50 transition-colors">
                                             <td className="p-8 font-bold text-slate-900 border-r border-gray-100 bg-gray-50/30">{row.feature}</td>
                                             {["Sérénité", "Sentinel", "Infiniti"].map((model) => (
-                                                <td key={model} className="p-8 text-center text-lg font-light leading-relaxed text-gray-600 text-justify">
+                                                <td key={model} className="p-8 text-center text-lg font-light leading-snug text-gray-600 text-justify">
                                                     {row[model as keyof ComparisonItem]}
                                                 </td>
                                             ))}

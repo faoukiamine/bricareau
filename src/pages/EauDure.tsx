@@ -154,12 +154,12 @@ const EauDure = () => {
                 <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
                   Qu'est-ce que l'eau dure ?
                 </h2>
-                <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+                <p className="text-muted-foreground text-lg leading-snug mb-6">
                   L'eau dure est une eau qui contient une quantité élevée de minéraux dissous,
                   principalement du calcium (Ca) et du magnésium (Mg). Ces minéraux sont naturellement
                   présents dans le sol et se dissolvent dans l'eau souterraine.
                 </p>
-                <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+                <p className="text-muted-foreground text-lg leading-snug mb-6">
                   La dureté de l'eau se mesure en parties par million (ppm) ou en degrés français (°f).
                   Une eau est considérée comme dure à partir de 15°f ou 150 ppm.
                 </p>
@@ -221,7 +221,7 @@ const EauDure = () => {
                       <h3 className="text-xl font-bold text-foreground mb-3">
                         {effect.title}
                       </h3>
-                      <p className="text-muted-foreground leading-relaxed">
+                      <p className="text-muted-foreground leading-snug">
                         {effect.description}
                       </p>
                     </div>
@@ -277,7 +277,7 @@ const EauDure = () => {
                 <div key={index} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer group flex flex-col h-full border border-gray-100">
                   <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
                     <h3 className="text-xl font-medium mb-4 group-hover:text-blue-600 transition-colors tracking-tight">{solution.title}</h3>
-                    <p className="text-slate-500 text-sm leading-relaxed mb-6 flex-grow">{solution.description}</p>
+                    <p className="text-slate-500 text-sm leading-snug mb-6 flex-grow">{solution.description}</p>
                     <NavLink
                       to={solution.link}
                       className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-sm"

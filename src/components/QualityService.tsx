@@ -57,7 +57,7 @@ const QualityService = () => {
                         <span className="text-[32px] md:text-[60px] font-light leading-[1.2] md:leading-[60px] block">Qualité inégalée.</span>
                         <span className="text-[32px] md:text-[60px] font-normal leading-[1.2] md:leading-[60px] block">Service inoubliable.</span>
                     </h2>
-                    <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+                    <p className="text-lg text-muted-foreground leading-snug max-w-3xl mx-auto">
                         Nous nous engageons à fournir les meilleures solutions de traitement d'eau avec un service exceptionnel
                     </p>
                 </div>
@@ -78,7 +78,7 @@ const QualityService = () => {
                                     <h3 className="text-2xl font-bold text-foreground">
                                         {feature.title}
                                     </h3>
-                                    <p className="text-base text-muted-foreground leading-relaxed">
+                                    <p className="text-base text-muted-foreground leading-snug">
                                         {feature.description}
                                     </p>
                                     <ul className="space-y-2 pt-2">

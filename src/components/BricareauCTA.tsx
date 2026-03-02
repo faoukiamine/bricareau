@@ -13,7 +13,7 @@ const IdealBricareauCTA = () => {
                         <span className="text-[32px] md:text-[60px] font-light leading-[1.2] md:leading-[60px] block">La solution idéale Bricareau</span>
                         <span className="text-[32px] md:text-[60px] font-normal leading-[1.2] md:leading-[60px] block">pour votre maison</span>
                     </h2>
-                    <p className="text-lg md:text-xl text-white/90 leading-relaxed">
+                    <p className="text-lg md:text-xl text-white/90 leading-snug">
                         Découvrez comment nos systèmes de traitement d'eau peuvent transformer votre quotidien
                     </p>
                     <Button

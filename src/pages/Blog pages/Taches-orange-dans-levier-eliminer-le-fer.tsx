@@ -33,7 +33,7 @@ const TachesOrangeDansLevier = () => {
                             <h1 className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text-justify max-w-xl mx-auto">
                                 <span className="font-bold">Taches orange dans l'évier</span> : Le <span className="text-blue-400 font-bold">guide complet</span> pour éliminer le fer
                             </h1>
-                            <p className="text-[20px] leading-[28px] text-slate-300 font-light mb-10 text-justify max-w-xl mx-auto">
+                            <p className="text-[20px] leading-snug text-slate-300 font-light mb-10 text-justify max-w-xl mx-auto">
                                 Comprendre l'origine des dépôts ferreux et explorer les solutions de traitement avancées pour une eau parfaitement limpide et des sanitaires éclatants.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -54,7 +54,7 @@ const TachesOrangeDansLevier = () => {
                 <article className="py-20 lg:py-32">
                     <div className="container mx-auto px-4">
                         <div className="max-w-4xl mx-auto">
-                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 leading-relaxed text-justify">
+                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 leading-snug text-justify">
                                 <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-blue-600 pl-8 italic">
                                     Rien ne défigure plus une salle de bain de luxe ou une cuisine moderne que l'apparition de traînées orangeâtres au fond de l'évier ou de la baignoire. Ces taches de "rouille", persistantes et difficiles à nettoyer, sont le signe indéniable d'une concentration excessive de fer dans votre approvisionnement en eau.
                                 </p>

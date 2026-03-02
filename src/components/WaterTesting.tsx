@@ -19,7 +19,7 @@ const WaterTesting = () => {
             </h3>
           </div>
 
-          <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto leading-snug">
             Procurez-vous notre kit de test d'eau et renvoyez-le-nous ! Nous réaliserons des analyses 
             d'eau approfondies et vous recommanderons des solutions selon la composition de votre eau.
           </p>

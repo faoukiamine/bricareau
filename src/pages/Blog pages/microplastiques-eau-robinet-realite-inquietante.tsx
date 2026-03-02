@@ -14,7 +14,7 @@ const MicroplastiquesEauRobinet = () => {
     }, []);
 
     return (
-        <div className="min-h-screen bg-white font-sans text-slate-900 leading-relaxed font-light">
+        <div className="min-h-screen bg-white font-sans text-slate-900 leading-snug font-light">
             <Header />
             <main className="pt-20">
                 {/* Hero Section */}
@@ -33,7 +33,7 @@ const MicroplastiquesEauRobinet = () => {
                         <h1 className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text-justify max-w-xl mx-auto">
                             <span className="font-bold">Microplastiques :</span> <span className="text-blue-400 font-bold italic">Réalité ou Mythe ?</span>
                         </h1>
-                        <p className="text-[20px] leading-[28px] text-slate-300 font-light mb-10 text-justify max-w-xl mx-auto italic">
+                        <p className="text-[20px] leading-snug text-slate-300 font-light mb-10 text-justify max-w-xl mx-auto italic">
                             Une immersion dans la pollution particulaire moderne : comprendre les menaces nanométriques et reprendre le contrôle sur l'eau de votre robinet.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -53,7 +53,7 @@ const MicroplastiquesEauRobinet = () => {
                 <article className="py-20 lg:py-32 bg-white">
                     <div className="container mx-auto px-4">
                         <div className="max-w-4xl mx-auto">
-                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 text-justify leading-relaxed">
+                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 text-justify leading-snug">
                                 <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-blue-600 pl-8 italic">
                                     Imaginez boire l'équivalent d'une carte de crédit en plastique chaque semaine. Ce chiffre, souvent cité par les organisations de santé environnementale, illustre l'ampleur d'une menace invisible : la contamination par les microplastiques.
                                 </p>
@@ -81,7 +81,7 @@ const MicroplastiquesEauRobinet = () => {
                                         <Microscope className="w-80 h-80 text-blue-400" />
                                     </div>
                                     <h3 className="text-3xl md:text-4xl font-bold mb-8 italic tracking-tighter">L'Invisible devient mesurable</h3>
-                                    <p className="text-xl text-slate-300 opacity-90 mb-12 font-light leading-relaxed max-w-2xl text-justify">
+                                    <p className="text-xl text-slate-300 opacity-90 mb-12 font-light leading-snug max-w-2xl text-justify">
                                         Une étude de l'université du Minnesota a révélé que 83 % des échantillons d'eau du robinet prélevés dans le monde contenaient des fibres de plastique. Le Canada ne fait pas exception à cette règle systémique.
                                     </p>
                                     <div className="flex flex-col sm:flex-row gap-6">
@@ -109,14 +109,14 @@ const MicroplastiquesEauRobinet = () => {
                                     <div className="p-8 bg-blue-50 border border-blue-100 rounded-2xl group hover:shadow-xl transition-all">
                                         <ShieldAlert className="w-12 h-12 text-blue-600 mb-6 group-hover:rotate-12 transition-transform" />
                                         <h4 className="text-xl font-bold mb-4 tracking-tight">Le « Cheval de Troie »</h4>
-                                        <p className="text-slate-600 text-sm leading-relaxed text-justify">
+                                        <p className="text-slate-600 text-sm leading-snug text-justify">
                                             Les microplastiques sont poreux. Ils absorbent les toxines environnantes (Pesticides, PFAS, Métaux Lourds) dans l'eau et les transportent directement dans notre système digestif, augmentant la biodisponibilité de ces poisons.
                                         </p>
                                     </div>
                                     <div className="p-8 bg-blue-50 border border-blue-100 rounded-2xl group hover:shadow-xl transition-all">
                                         <HeartPulse className="w-12 h-12 text-blue-600 mb-6 group-hover:rotate-12 transition-transform" />
                                         <h4 className="text-xl font-bold mb-4 tracking-tight">Déséquilibre Endocrinien</h4>
-                                        <p className="text-slate-600 text-sm leading-relaxed text-justify">
+                                        <p className="text-slate-600 text-sm leading-snug text-justify">
                                             De nombreux plastiques contiennent des additifs tels que les phtalates ou le bisphénol A (BPA), connus pour être des perturbateurs hormonaux interférant avec la reproduction et le développement.
                                         </p>
                                     </div>
@@ -142,7 +142,7 @@ const MicroplastiquesEauRobinet = () => {
                                         <Search className="h-10 w-10 text-blue-600" />
                                         Diagnostic Expert Bricareau
                                     </h3>
-                                    <p className="text-xl text-slate-600 opacity-90 mb-10 font-light leading-relaxed text-justify max-w-3xl">
+                                    <p className="text-xl text-slate-600 opacity-90 mb-10 font-light leading-snug text-justify max-w-3xl">
                                         Votre foyer mérite une eau libre de tout résidu synthétique. Profitez d'une consultation gratuite pour cartographier les risques de votre quartier et installer la barrière de protection adaptée à vos besoins.
                                     </p>
                                     <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-12 h-16 font-bold shadow-lg" asChild>
@@ -150,7 +150,7 @@ const MicroplastiquesEauRobinet = () => {
                                     </Button>
                                 </div>
 
-                                <div className="mt-20 text-slate-400 text-sm border-t border-slate-100 pt-8 italic leading-relaxed flex items-center gap-4">
+                                <div className="mt-20 text-slate-400 text-sm border-t border-slate-100 pt-8 italic leading-snug flex items-center gap-4">
                                     <Info className="h-10 w-10 text-blue-600 shrink-0" />
                                     <p>
                                         * Note de sagesse : Utiliser un filtre à domicile est l'acte de protection le plus direct que vous puissiez poser aujourd'hui pour contrer l'omniprésence du plastique dans nos écosystèmes modernes.

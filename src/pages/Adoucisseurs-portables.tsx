@@ -175,7 +175,7 @@ const AdoucisseursPortables = () => {
                                                     {item.subtitle}
                                                 </span>
                                             </div>
-                                            <p className="text-slate-600 font-light leading-relaxed mb-6 text-justify">
+                                            <p className="text-slate-600 font-light leading-snug mb-6 text-justify">
                                                 {item.desc}
                                             </p>
                                             <div className="flex flex-wrap gap-3">
@@ -208,7 +208,7 @@ const AdoucisseursPortables = () => {
                         <h2 className="text-[32px] md:text-[48px] font-bold text-white leading-[1.1] tracking-tighter mb-6">
                             Un service simple <br />& sans souci.
                         </h2>
-                        <p className="text-lg font-light leading-relaxed text-blue-100 max-w-xl mx-auto">
+                        <p className="text-lg font-light leading-snug text-blue-100 max-w-xl mx-auto">
                             De l'installation initiale à la livraison régulière de sel, nous gérons chaque détail technique pour vous garantir une eau parfaite en permanence.
                         </p>
                     </div>
@@ -249,7 +249,7 @@ const AdoucisseursPortables = () => {
                                 <h3 className="text-xl font-bold text-white mb-4">
                                     {step.title}
                                 </h3>
-                                <p className="text-blue-100 font-light leading-relaxed text-sm text-justify">
+                                <p className="text-blue-100 font-light leading-snug text-sm text-justify">
                                     {step.desc}
                                 </p>
                             </div>
@@ -274,7 +274,7 @@ const AdoucisseursPortables = () => {
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-16">
                         <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal text-slate-900 mb-8 leading-[1.1] tracking-tighter">Découvrez les produits associés</h2>
-                        <p className="text-lg font-light leading-relaxed text-gray-500 max-w-2xl mx-auto text-justify">
+                        <p className="text-lg font-light leading-snug text-gray-500 max-w-2xl mx-auto text-justify">
                             Optimisez votre expérience de traitement d'eau avec nos solutions complémentaires.
                         </p>
                     </div>
@@ -320,7 +320,7 @@ const AdoucisseursPortables = () => {
                                         {prod.name}
                                     </h3>
                                     <p
-                                        className="text-slate-500 font-light leading-relaxed flex-grow text-justify"
+                                        className="text-slate-500 font-light leading-snug flex-grow text-justify"
                                         style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                                     >
                                         {prod.desc}

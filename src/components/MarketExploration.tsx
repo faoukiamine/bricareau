@@ -33,7 +33,7 @@ const MarketExploration = () => {
                                 <Building2 className="h-8 w-8 text-white" />
                             </div>
                             <h3 className="text-2xl md:text-3xl font-bold mb-3">Workplace Water Solutions</h3>
-                            <p className="text-white/90 text-lg mb-6 leading-relaxed max-w-md">
+                            <p className="text-white/90 text-lg mb-6 leading-snug max-w-md">
                                 Hydration solutions delivering safer and sustainable water for a wide range of sectors.
                             </p>
                             <div
@@ -62,7 +62,7 @@ const MarketExploration = () => {
                                 <Factory className="h-8 w-8 text-white" />
                             </div>
                             <h3 className="text-2xl md:text-3xl font-bold mb-3">Commercial & Industrial Solutions</h3>
-                            <p className="text-white/90 text-lg mb-6 leading-relaxed max-w-md">
+                            <p className="text-white/90 text-lg mb-6 leading-snug max-w-md">
                                 Water treatment solutions for a range of commercial and industrial water applications.
                             </p>
                             <div

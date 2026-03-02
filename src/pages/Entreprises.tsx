@@ -116,7 +116,7 @@ const Entreprises = () => {
               {solutions.map((solution, index) => (
                 <div key={index} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer group flex flex-col h-full border border-gray-100 p-8">
                   <h3 className="text-xl font-medium mb-4 group-hover:text-blue-600 transition-colors tracking-tight">{solution.title}</h3>
-                  <p className="text-slate-500 text-sm leading-relaxed mb-6 flex-grow">{solution.description}</p>
+                  <p className="text-slate-500 text-sm leading-snug mb-6 flex-grow">{solution.description}</p>
                   <div className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-sm mt-auto">
                     Lire <ChevronRight className="h-4 w-4" />
                   </div>

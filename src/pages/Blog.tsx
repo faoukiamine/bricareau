@@ -152,7 +152,7 @@ const SpecializedFiltration = () => {
                             <h1 className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text-justify max-w-xl">
                                 <span className="font-bold text-white">Solutions spécialisées en filtration d'eau</span>
                             </h1>
-                            <p className="text-[20px] leading-[28px] opacity-90 mb-10 text-blue-100/80 max-w-xl text-justify font-light">
+                            <p className="text-[20px] leading-snug opacity-90 mb-10 text-blue-100/80 max-w-xl text-justify font-light">
                                 Découvrez notre gamme complète de systèmes de traitement d'eau conçus pour répondre à tous vos besoins, de la maison au commerce.
                             </p>
                             <div className="flex flex-wrap gap-4">
@@ -217,7 +217,7 @@ const SpecializedFiltration = () => {
                                             <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
                                                 {product.title}
                                             </h3>
-                                            <p className="text-slate-600 mb-6 flex-1 leading-relaxed">
+                                            <p className="text-slate-600 mb-6 flex-1 leading-snug">
                                                 {product.desc}
                                             </p>
                                             <div className="flex items-center text-blue-600 font-bold text-sm uppercase tracking-wider group/btn">
@@ -241,7 +241,7 @@ const SpecializedFiltration = () => {
                         <h2 className="text-3xl md:text-5xl font-bold mb-8 italic">
                             Prêt à transformer la qualité de votre eau ?
                         </h2>
-                        <p className="text-xl opacity-90 mb-12 max-w-2xl mx-auto leading-relaxed">
+                        <p className="text-xl opacity-90 mb-12 max-w-2xl mx-auto leading-snug">
                             Nos experts sont disponibles pour une consultation personnalisée et gratuite à votre domicile ou entreprise.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-6 justify-center">

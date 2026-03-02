@@ -217,7 +217,7 @@ const ConsultationFormSection = ({ id }: { id?: string }) => {
                             <span className="text-[32px] md:text-[60px] font-bold leading-[1.1] md:leading-[60px] block">Planifiez une consultation</span>
                             <span className="text-[32px] md:text-[60px] font-bold leading-[1.1] md:leading-[60px] block">gratuite sur l'eau</span>
                         </h2>
-                        <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                        <p className="text-lg text-gray-600 mb-8 leading-snug">
                             Remplissez le formulaire ci-dessous pour organiser une consultation téléphonique avec l'un de nos experts.
                         </p>
                     </div>

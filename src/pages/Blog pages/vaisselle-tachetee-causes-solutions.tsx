@@ -35,7 +35,7 @@ const VaisselleTachetee = () => {
                             <h1 className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text-justify max-w-xl mx-auto">
                                 <span className="font-bold">Pourquoi votre vaisselle sort-elle toujours</span> <span className="text-blue-400 font-bold italic">tachetée</span> <span className="font-bold">?</span>
                             </h1>
-                            <p className="text-[20px] leading-[28px] text-slate-300 font-light mb-10 text-justify max-w-xl mx-auto italic">
+                            <p className="text-[20px] leading-snug text-slate-300 font-light mb-10 text-justify max-w-xl mx-auto italic">
                                 Explorer la science des résidus minéraux et comment transformer votre rituel de nettoyage pour obtenir une transparence cristalline absolue.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -56,7 +56,7 @@ const VaisselleTachetee = () => {
                 <article className="py-20 lg:py-32">
                     <div className="container mx-auto px-4">
                         <div className="max-w-4xl mx-auto">
-                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 leading-relaxed text-justify font-light">
+                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 leading-snug text-justify font-light">
                                 <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-blue-600 pl-8 italic">
                                     Il n'y a rien de plus décourageant que de dresser une table élégante pour des convives et de s'apercevoir, à la lumière des bougies, que les verres à vin sont recouverts d'un voile terne ou de petites taches circulaires opaques. Ce phénomène, loin d'être un signe de négligence ménagère, est la signature indubitable d'un affrontement chimique silencieux dans votre lave-vaisselle : celui de l'eau dure contre votre vaisselle.
                                 </p>
@@ -121,7 +121,7 @@ const VaisselleTachetee = () => {
 
                                 <div className="mt-24 p-12 bg-blue-600 rounded-[3rem] text-white text-center shadow-2xl relative overflow-hidden">
                                     <h3 className="text-4xl font-bold mb-6 italic">Le luxe d'une vaisselle cristalline</h3>
-                                    <p className="text-xl mb-12 opacity-90 max-w-3xl mx-auto font-light leading-relaxed">
+                                    <p className="text-xl mb-12 opacity-90 max-w-3xl mx-auto font-light leading-snug">
                                         Ne laissez plus l'eau dure ternir vos moments de convivialité. Offrez à votre maison la pureté qu'elle mérite avec les systèmes Signature de Bricareau.
                                     </p>
                                     <div className="flex flex-col sm:flex-row gap-8 justify-center items-center">

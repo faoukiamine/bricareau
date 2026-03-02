@@ -14,7 +14,7 @@ const TraitementUVBacteriaNaturel = () => {
     }, []);
 
     return (
-        <div className="min-h-screen bg-white font-sans text-slate-900 leading-relaxed font-light text-justify">
+        <div className="min-h-screen bg-white font-sans text-slate-900 leading-snug font-light text-justify">
             <Header />
             <main className="pt-20">
                 {/* Hero Section */}
@@ -33,7 +33,7 @@ const TraitementUVBacteriaNaturel = () => {
                         <h1 className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text-justify max-w-xl mx-auto">
                             <span className="font-bold">Le pouvoir de</span> <span className="text-blue-300 font-bold italic">la lumière</span> <span className="font-bold">UV</span>
                         </h1>
-                        <p className="text-[20px] leading-[28px] text-slate-100 font-light mb-10 text-justify max-w-xl mx-auto italic text-center">
+                        <p className="text-[20px] leading-snug text-slate-100 font-light mb-10 text-justify max-w-xl mx-auto italic text-center">
                             Comment une technologie inspirée du soleil permet d'éradiquer 99,99 % des micro-organismes sans altérer la chimie de votre eau : une barrière invisible contre les bactéries.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -53,7 +53,7 @@ const TraitementUVBacteriaNaturel = () => {
                 <article className="py-20 lg:py-32 bg-white">
                     <div className="container mx-auto px-4">
                         <div className="max-w-4xl mx-auto">
-                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 leading-relaxed">
+                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 leading-snug">
                                 <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-blue-600 pl-8 italic">
                                     Imaginez pouvoir désinfecter votre eau sans chlore, sans odeur chimique et sans danger pour vos reins. C'est la promesse tenue de la technologie UV-C.
                                 </p>
@@ -96,19 +96,19 @@ const TraitementUVBacteriaNaturel = () => {
                                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 my-16">
                                     <div className="p-8 bg-slate-50 border border-slate-100 rounded-2xl">
                                         <h4 className="text-xl font-bold mb-4 tracking-tight">Zéro Chimie</h4>
-                                        <p className="text-slate-600 text-[13px] italic leading-relaxed text-justify">
+                                        <p className="text-slate-600 text-[13px] italic leading-snug text-justify">
                                             Aucun résidu chimique dans l'eau. Le goût et l'odeur originels de l'eau sont préservés à 100%. Idéal pour les peaux ultra-sensibles.
                                         </p>
                                     </div>
                                     <div className="p-8 bg-slate-50 border border-slate-100 rounded-2xl">
                                         <h4 className="text-xl font-bold mb-4 tracking-tight">Protection continue</h4>
-                                        <p className="text-slate-600 text-[13px] italic leading-relaxed text-justify">
+                                        <p className="text-slate-600 text-[13px] italic leading-snug text-justify">
                                             Dès que l'eau circule, elle est stérilisée. Pas de temps de stockage ou de réaction nécessaire, contrairement au chlore.
                                         </p>
                                     </div>
                                     <div className="p-8 bg-slate-50 border border-slate-100 rounded-2xl">
                                         <h4 className="text-xl font-bold mb-4 tracking-tight">Énergie Propre</h4>
-                                        <p className="text-slate-600 text-[13px] italic leading-relaxed text-justify">
+                                        <p className="text-slate-600 text-[13px] italic leading-snug text-justify">
                                             Une lampe UV moderne consomme à peine plus d'énergie qu'une simple ampoule domestique (40 à 60 Watts).
                                         </p>
                                     </div>
@@ -124,7 +124,7 @@ const TraitementUVBacteriaNaturel = () => {
                                         <BadgeCheck className="w-96 h-96" />
                                     </div>
                                     <h3 className="text-3xl md:text-5xl font-bold mb-10 tracking-tighter italic">L'avenir de la stérilisation domestique.</h3>
-                                    <p className="text-xl text-blue-100 opacity-90 mb-12 max-w-2xl mx-auto font-light leading-relaxed">
+                                    <p className="text-xl text-blue-100 opacity-90 mb-12 max-w-2xl mx-auto font-light leading-snug">
                                         Protégez la santé de vos proches avec la puissance cristalline de la lumière ultraviolette. Installez une barrière physique impénétrable autour de votre foyer.
                                     </p>
                                     <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -134,7 +134,7 @@ const TraitementUVBacteriaNaturel = () => {
                                     </div>
                                 </div>
 
-                                <div className="mt-20 text-slate-400 text-sm border-t border-slate-100 pt-8 italic leading-relaxed flex items-start gap-4">
+                                <div className="mt-20 text-slate-400 text-sm border-t border-slate-100 pt-8 italic leading-snug flex items-start gap-4">
                                     <Info className="h-6 w-6 text-blue-600 shrink-0 mt-1" />
                                     <p>
                                         Rappel technique critique : L'eau doit être 100% limpide avant d'entrer dans l'UV (dureté basse, pas de fer, turbidité nulle). Si l'eau est trouble, la bactérie peut "se cacher" derrière une particule et ne pas recevoir la dose fatale de lumière (effet d'ombrage). C'est pourquoi un système UV est toujours précédé d'un filtre à sédiments.
