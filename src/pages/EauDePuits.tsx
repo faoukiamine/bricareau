@@ -151,12 +151,12 @@ const EauDePuits = () => {
                 SOLUTIONS DE TRAITEMENT D'EAU POUR PUITS PRIVÉS
               </span>
               <h1
-                className="text-[32px] md:text-[48px] leading-[32px] md:leading-[48px] font-light mb-8 tracking-tighter text-white"
+                className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text-justify max-w-xl"
                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
               >
-                <span className="font-bold text-blue-400">Votre puits est un trésor.</span> <span className="font-bold"> <br />Offrez-lui la pureté qu'il mérite.</span>
+                <span className="font-bold text-white">Votre puits est un trésor.</span> <span className="font-bold"> <br />Offrez-lui la pureté qu'il mérite.</span>
               </h1>
-              <p className="text-lg font-light leading-relaxed text-white/90 mb-8 max-w-xl text-justify">
+              <p className="text-lg font-light leading-snug text-white/90 mb-8 max-w-xl text-justify">
                 Protégez votre santé et vos installations avec nos solutions expertes pour puits privés. Éliminez le fer, le soufre, le calcaire et les bactéries pour une eau cristalline et sécuritaire partout dans votre maison.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">

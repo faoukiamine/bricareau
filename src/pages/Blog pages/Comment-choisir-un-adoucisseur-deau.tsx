@@ -9,10 +9,10 @@ const CommentChoisirAdoucisseur = () => {
                 {/* Hero Section */}
                 <section className="py-16 bg-gradient-to-br from-blue-600 to-blue-800">
                     <div className="container mx-auto px-4">
-                        <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 text-center">
-                            Comment choisir un adoucisseur d'eau ?
+                        <h1 className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text-justify max-w-xl mx-auto">
+                            <span className="font-bold">Comment choisir</span> un adoucisseur d'eau ?
                         </h1>
-                        <p className="text-xl text-blue-100 text-center max-w-3xl mx-auto">
+                        <p className="text-[20px] leading-[28px] text-blue-100 font-light text-justify max-w-xl mx-auto">
                             Un guide complet pour vous aider à sélectionner l'adoucisseur d'eau parfaitement adapté à vos besoins
                         </p>
                     </div>

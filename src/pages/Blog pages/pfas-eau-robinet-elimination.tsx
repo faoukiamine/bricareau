@@ -31,10 +31,10 @@ const PFASEauRobinet = () => {
                             <span className="inline-block px-4 py-1 rounded-full bg-blue-600/20 border border-blue-400/30 text-blue-400 text-sm font-bold mb-6 tracking-widest uppercase">
                                 Dossier Spécial Santé & Environnement
                             </span>
-                            <h1 className="text-4xl md:text-7xl font-bold mb-8 leading-tight tracking-tighter">
-                                PFAS dans l'eau du robinet : <span className="text-blue-400">ce que vous devez savoir</span>
+                            <h1 className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text-justify max-w-xl mx-auto">
+                                <span className="font-bold">PFAS dans l'eau du robinet :</span> <span className="text-blue-400 font-bold italic">ce que vous devez savoir</span>
                             </h1>
-                            <p className="text-xl md:text-2xl text-slate-300 font-light mb-10 leading-relaxed max-w-3xl mx-auto">
+                            <p className="text-[20px] leading-[28px] text-slate-300 font-light mb-10 text-justify max-w-xl mx-auto italic">
                                 Comprendre les "polluants éternels", leurs impacts sur votre santé et les technologies de pointe indispensables pour les éliminer définitivement de votre foyer.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">

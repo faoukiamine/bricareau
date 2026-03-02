@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Phone, ShieldCheck, BadgeCheck, Microscope, Waves, Droplets, Info, Zap, Sparkles, Filter, CheckCircle2, FlaskConical, MicroscopeIcon, Search, Microscope2, FlaskConicalIcon, FlaskRound } from "lucide-react";
+import { Phone, ShieldCheck, BadgeCheck, Microscope, Waves, Droplets, Info, Zap, Sparkles, Filter, CheckCircle2, FlaskConical, MicroscopeIcon, Search, FlaskConicalIcon, FlaskRound } from "lucide-react";
 
 const FiltreCharbonActifLimites = () => {
     useEffect(() => {
@@ -30,10 +30,10 @@ const FiltreCharbonActifLimites = () => {
                         <span className="inline-block px-4 py-1 rounded-full bg-slate-600/20 border border-slate-400/30 text-slate-400 text-sm font-bold mb-6 tracking-widest uppercase">
                             Adsorption & Science Moléculaire
                         </span>
-                        <h1 className="text-4xl md:text-7xl font-bold mb-8 leading-tight tracking-tighter">
-                            Filtre au charbon actif : <span className="text-blue-400">La vérité.</span>
+                        <h1 className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text-justify max-w-xl mx-auto">
+                            <span className="font-bold">Filtre au charbon actif</span> : <span className="text-blue-400 font-bold">La vérité.</span>
                         </h1>
-                        <p className="text-xl md:text-2xl text-slate-300 font-light mb-10 leading-relaxed max-w-4xl mx-auto italic text-center">
+                        <p className="text-[20px] leading-[28px] text-slate-300 font-light mb-10 text-justify max-w-xl mx-auto italic">
                             Démystifier le média filtrant le plus répandu au monde : ce qu'il capture avec brio et les dangers invisibles qu'il laisse impunément traverser vers votre verre d'eau.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -36,10 +36,10 @@ const FonctionnementDesinfectionUV = () => {
                                 <Zap className="h-4 w-4 text-blue-400" />
                                 <span className="text-sm font-semibold tracking-wider uppercase">Guide Scientifique</span>
                             </div>
-                            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-[1.1] tracking-tighter">
-                                Comment fonctionne la <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-300">désinfection UV</span> ?
+                            <h1 className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text-justify max-w-xl mx-auto">
+                                <span className="font-bold text-white">Comment fonctionne</span> la <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-300 font-bold">désinfection UV</span> ?
                             </h1>
-                            <p className="text-xl md:text-2xl text-slate-300 font-light mb-12 leading-relaxed text-justify">
+                            <p className="text-[20px] leading-[28px] text-slate-300 font-light mb-12 text-justify max-w-xl mx-auto">
                                 Explorez la technologie ultraviolette : une barrière de protection biophysique invisible mais infaillible pour garantir la sécurité microbiologique de votre consommation d'eau.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-6 justify-center">

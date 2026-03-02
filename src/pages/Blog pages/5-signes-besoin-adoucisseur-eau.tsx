@@ -32,10 +32,10 @@ const SignesBesoinAdoucisseur = () => {
                                 <AlertTriangle className="h-4 w-4 text-blue-400" />
                                 <span className="text-sm font-semibold tracking-wider uppercase">Diagnostic Résidentiel</span>
                             </div>
-                            <h1 className="text-4xl md:text-6xl font-bold mb-8 leading-tight tracking-tighter">
-                                5 signes indéniables que votre maison a besoin d'un <span className="text-blue-400">adoucisseur d'eau</span>
+                            <h1 className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text-justify max-w-xl mx-auto">
+                                <span className="font-bold">5 signes indéniables</span> que votre maison a besoin d'un <span className="text-blue-400 whitespace-nowrap">adoucisseur d'eau</span>
                             </h1>
-                            <p className="text-xl md:text-2xl text-slate-300 font-light mb-10 leading-relaxed text-justify">
+                            <p className="text-[20px] leading-[28px] text-slate-300 font-light mb-10 text-justify max-w-xl mx-auto">
                                 L'eau dure est un fléau silencieux qui dégrade votre confort et vos infrastructures. Apprenez à identifier les symptômes avant que les dommages ne deviennent irréversibles.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">

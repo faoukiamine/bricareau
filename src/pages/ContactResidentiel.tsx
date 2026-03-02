@@ -41,16 +41,16 @@ const ContactResidentiel = () => {
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <Header />
-      
+
       <main className="flex-1">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-primary/10 via-background to-secondary/10 py-16 md:py-24">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-                Contactez-nous pour des solutions de traitement d'eau résidentiel
+              <h1 className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-foreground text-justify max-w-xl mx-auto">
+                <span className="font-bold">Contactez-nous pour des solutions de traitement d'eau résidentiel</span>
               </h1>
-              <p className="text-lg md:text-xl text-muted-foreground">
+              <p className="text-[20px] leading-snug text-muted-foreground font-light text-justify max-w-xl mx-auto">
                 Vous souhaitez une eau plus fraîche et plus savoureuse à votre domicile ? Remplissez le formulaire pour être contacté par notre expert et obtenir des solutions d'eau adaptées à vos besoins spécifiques.
               </p>
             </div>
@@ -139,7 +139,7 @@ const ContactResidentiel = () => {
                   <Checkbox
                     id="marketing"
                     checked={formData.acceptMarketing}
-                    onCheckedChange={(checked) => 
+                    onCheckedChange={(checked) =>
                       setFormData({ ...formData, acceptMarketing: checked as boolean })
                     }
                   />

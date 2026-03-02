@@ -45,12 +45,12 @@ const Pieces = () => {
                         <div className="max-w-3xl mx-auto text-center space-y-6">
                             <Package className="h-16 w-16 text-[#0052ff] mx-auto" />
                             <h1
-                                className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-foreground"
+                                className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-foreground text-justify max-w-xl mx-auto"
                                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                             >
-                                Pièces de <span className="font-normal">Remplacement</span>
+                                <span className="font-bold">Pièces de Remplacement</span>
                             </h1>
-                            <p className="font-light text-[20px] leading-[28px] text-muted-foreground">
+                            <p className="text-[20px] leading-[28px] text-muted-foreground font-light text-justify max-w-xl mx-auto">
                                 Trouvez toutes les pièces dont vous avez besoin pour vos équipements
                             </p>
                         </div>

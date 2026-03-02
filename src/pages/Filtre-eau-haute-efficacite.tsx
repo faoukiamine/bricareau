@@ -58,12 +58,12 @@ const FiltreEauHauteEfficacite = () => {
                                     SYSTÈME DE FILTRATION D'EAU
                                 </span>
                                 <h1
-                                    className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-foreground"
+                                    className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-foreground text-justify max-w-xl"
                                     style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                                 >
                                     Bricareau High <span className="font-normal">Efficiency (HE)</span>
                                 </h1>
-                                <p className="text-lg font-light leading-relaxed text-slate-600 mb-8 text-justify">
+                                <p className="text-lg font-light leading-snug text-slate-600 mb-8 text-justify">
                                     L'adoucisseur et filtre d'eau le plus efficace au monde. Profitez d'une eau d'une pureté absolue tout en réalisant des économies d'eau et de sel inégalées.
                                 </p>
                                 <Button
@@ -298,7 +298,7 @@ const FiltreEauHauteEfficacite = () => {
                     <div className="container mx-auto px-6">
                         <div className="max-w-4xl mx-auto text-center">
                             <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal text-slate-900 mb-8 leading-[1.1] tracking-tighter">Installation. Tranquille.</h2>
-                            <p className="text-lg font-light leading-relaxed text-slate-600 mb-16 text-justify">
+                            <p className="text-lg font-light leading-snug text-slate-600 mb-16 text-justify">
                                 Nos techniciens certifiés Bricareau ne se contentent pas d'installer votre système. Ils s'assurent qu'il fonctionne à son plein potentiel pour des années de service fiable.
                             </p>
                             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -364,7 +364,7 @@ const FiltreEauHauteEfficacite = () => {
                                 <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal text-slate-900 mb-8 leading-[1.1] tracking-tighter">
                                     Offrez-vous le confort que vous méritez.
                                 </h2>
-                                <p className="text-lg font-light leading-relaxed text-slate-600 mb-12 text-justify">
+                                <p className="text-lg font-light leading-snug text-slate-600 mb-12 text-justify">
                                     Plus de 11 millions de familles font confiance à Bricareau. Rejoignez-les dès aujourd'hui et transformez votre quotidien.
                                 </p>
                                 <Button className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-12 h-16 text-xl font-bold shadow-xl transition-all hover:scale-105" asChild>

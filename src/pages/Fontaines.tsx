@@ -244,17 +244,14 @@ const Fontaines = () => {
 
                     <div className="container mx-auto px-6 relative z-10">
                         <div className="max-w-2xl text-white">
-                            <span className="text-sm font-bold uppercase tracking-widest text-cyan-400 mb-4 block">
-                                FRAÎCHEUR ILLIMITÉE
-                            </span>
                             <h1
-                                className="text-[32px] md:text-[48px] leading-[32px] md:leading-[48px] font-light mb-8 tracking-tighter text-white"
+                                className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text-justify max-w-xl"
                                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                             >
-                                <span className="font-bold text-blue-400">Fontaines d'eau pure</span> <br />
+                                <span className="font-bold text-white">Fontaines d'eau pure</span> <br />
                                 <span className="font-bold text-white">& machines à glaçons d'élite</span>
                             </h1>
-                            <p className="font-light text-[20px] leading-[28px] text-white/95 mb-8 max-w-xl drop-shadow-sm">
+                            <p className="font-light text-[20px] leading-snug text-white/95 mb-8 max-w-xl drop-shadow-sm text-justify">
                                 Offrez à votre famille le luxe d'une eau pure et d'une glace cristalline à volonté.
                                 Une source inépuisable de fraîcheur et de santé, directement au cœur de votre foyer.
                             </p>
@@ -308,7 +305,7 @@ const Fontaines = () => {
                         <h2 className="text-[32px] md:text-[48px] font-normal text-white mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
                             L'hydratation pure à la maison. <br />L'eau fraîche à la portée de vos mains.
                         </h2>
-                        <p className="font-light text-[20px] leading-[28px] text-white/70 max-w-4xl mx-auto mb-16">
+                        <p className="font-light text-[20px] leading-snug text-white/70 max-w-4xl mx-auto mb-16">
                             Bricareau redéfinit votre expérience d'hydratation quotidienne avec des solutions d'eau fraîche haut de gamme.
                             Offrez à votre famille le luxe d'une eau d'une pureté exceptionnelle, toujours à la température idéale.
                         </p>
@@ -367,7 +364,7 @@ const Fontaines = () => {
                                     </div>
                                     <h3 className="text-[42px] font-bold text-white mb-3 tracking-tighter leading-none">Art de Vivre</h3>
                                     <div className="w-20 h-1.5 bg-blue-500 rounded-full mb-6" />
-                                    <p className="text-white/80 text-xl font-light max-w-lg leading-relaxed">
+                                    <p className="text-white/80 text-xl font-light max-w-lg leading-snug">
                                         Une pureté incomparable qui s'intègre harmonieusement à votre quotidien. Découvrez l'équilibre parfait entre esthétique et santé.
                                     </p>
                                 </div>
@@ -425,7 +422,16 @@ const Fontaines = () => {
                 </section>
 
                 {/* Section 4: Testimonials */}
-                <TestimonialsSection filterProduct="/fontaines" limit={6} />
+                <TestimonialsSection
+                    filterProduct="/fontaines"
+                    limit={6}
+                    title={
+                        <>
+                            <span className="text-[32px] md:text-[60px] font-light leading-[1.2] md:leading-[60px] block">L’eau que vous méritez,</span>
+                            <span className="text-[32px] md:text-[60px] font-normal leading-[1.2] md:leading-[60px] block text-blue-600">le service que vous n'oublierez pas.</span>
+                        </>
+                    }
+                />
 
                 {/* Section 7: Mission Éco-Responsable Bricareau */}
                 <section className="py-32 bg-white relative overflow-hidden">
@@ -452,7 +458,7 @@ const Fontaines = () => {
                                         ].map((text, i) => (
                                             <li key={i} className="flex items-start gap-4 group">
                                                 <div className="mt-2.5 w-1.5 h-1.5 rounded-full bg-blue-600 shrink-0 group-hover:scale-150 transition-transform" />
-                                                <p className="text-slate-600 text-lg font-light leading-relaxed">
+                                                <p className="text-slate-600 text-lg font-light leading-snug">
                                                     {text}
                                                 </p>
                                             </li>
@@ -466,7 +472,7 @@ const Fontaines = () => {
                                         <h3 className="text-blue-600 text-lg font-bold tracking-[0.1em] uppercase">
                                             Les solutions Bricareau pour traiter l'eau de boisson :
                                         </h3>
-                                        <p className="text-slate-600 text-lg font-light leading-relaxed">
+                                        <p className="text-slate-600 text-lg font-light leading-snug">
                                             Les gammes Bricareau ont été développées pour offrir une eau fraîche, délicieuse et saine, aussi bien pour les professionnels que pour le particulier :
                                         </p>
                                     </div>
@@ -515,7 +521,7 @@ const Fontaines = () => {
                             <h2 className="text-4xl md:text-6xl font-bold text-white mb-8 leading-[1.1] tracking-tighter text-balance">
                                 Sublimez votre art de vivre <br />avec l'excellence de l'eau pure.
                             </h2>
-                            <p className="text-white/60 text-xl md:text-2xl font-light mb-16 max-w-2xl mx-auto">
+                            <p className="text-white/60 text-xl md:text-2xl font-light mb-16 max-w-2xl mx-auto leading-snug">
                                 Rejoignez le club familles Bricareau et profitez d'une source d'eau digne d'un palace, sans sortir de chez vous.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-8 justify-center items-center">

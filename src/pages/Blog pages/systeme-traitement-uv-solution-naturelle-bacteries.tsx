@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Phone, ShieldCheck, BadgeCheck, Microscope, Waves, Droplets, Info, Zap, Sparkles, Filter, CheckCircle2, FlaskConical, MicroscopeIcon, Search, Microscope2, ZapIcon, Lightbulb, Sun, HeartPulse } from "lucide-react";
+import { Phone, ShieldCheck, BadgeCheck, Microscope, Waves, Droplets, Info, Zap, Sparkles, Filter, CheckCircle2, FlaskConical, MicroscopeIcon, Search, ZapIcon, Lightbulb, Sun, HeartPulse } from "lucide-react";
 
 const TraitementUVBacteriaNaturel = () => {
     useEffect(() => {
@@ -30,10 +30,10 @@ const TraitementUVBacteriaNaturel = () => {
                         <span className="inline-block px-4 py-1 rounded-full bg-blue-400/20 border border-blue-300/30 text-blue-300 text-sm font-bold mb-6 tracking-widest uppercase">
                             Stérilisation Photonique & Bio-Protection
                         </span>
-                        <h1 className="text-4xl md:text-7xl font-bold mb-8 leading-tight tracking-tighter">
-                            Le pouvoir de <span className="text-blue-300 italic">la lumière</span> UV
+                        <h1 className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text-justify max-w-xl mx-auto">
+                            <span className="font-bold">Le pouvoir de</span> <span className="text-blue-300 font-bold italic">la lumière</span> <span className="font-bold">UV</span>
                         </h1>
-                        <p className="text-xl md:text-2xl text-slate-100 font-light mb-10 leading-relaxed max-w-4xl mx-auto italic text-center">
+                        <p className="text-[20px] leading-[28px] text-slate-100 font-light mb-10 text-justify max-w-xl mx-auto italic text-center">
                             Comment une technologie inspirée du soleil permet d'éradiquer 99,99 % des micro-organismes sans altérer la chimie de votre eau : une barrière invisible contre les bactéries.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ClipboardCheck, Activity, CheckCircle2 } from "lucide-react";
-import guideExpertImg from "@/assets/11.jpg";
+import guideExpertImg from "@/assets/11.webp";
 
 const DiscoverExpert = () => {
     return (

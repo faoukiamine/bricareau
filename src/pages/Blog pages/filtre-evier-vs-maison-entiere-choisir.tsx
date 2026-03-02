@@ -30,10 +30,10 @@ const FiltreEvierVsMaisonEntiere = () => {
                         <span className="inline-block px-4 py-1 rounded-full bg-blue-600/20 border border-blue-400/30 text-blue-400 text-sm font-bold mb-6 tracking-widest uppercase">
                             Architecture De Filtration & Confort
                         </span>
-                        <h1 className="text-4xl md:text-7xl font-bold mb-8 leading-tight tracking-tighter">
-                            Filtre sous l'évier <span className="text-blue-400">vs</span> Maison entière
+                        <h1 className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text-justify max-w-xl mx-auto">
+                            <span className="font-bold">Filtre sous l'évier</span> <span className="text-blue-400 font-bold">vs</span> <span className="font-bold">Maison entière</span>
                         </h1>
-                        <p className="text-xl md:text-2xl text-slate-300 font-light mb-10 leading-relaxed max-w-4xl mx-auto italic text-center">
+                        <p className="text-[20px] leading-[28px] text-slate-300 font-light mb-10 text-justify max-w-xl mx-auto italic">
                             Dilemme de conception : devez-vous purifier uniquement ce que vous buvez ou chaque goutte d'eau de votre foyer ? Analyse complète des avantages, des coûts et des bénéfices réels.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">

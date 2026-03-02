@@ -86,12 +86,12 @@ const FiltrationSousEvier = () => {
                     <div className="container mx-auto px-6 relative z-10">
                         <div className="max-w-2xl text-white">
                             <h1
-                                className="text-[32px] md:text-[48px] leading-[32px] md:leading-[48px] font-light mb-8 tracking-tighter text-white"
+                                className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text-justify max-w-xl"
                                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                             >
-                                <span className="font-bold text-blue-400">Systèmes de filtration d'eau sous évier,</span><span className="font-bold "> de la pureté et de la fraîcheur à chaque goutte.</span>
+                                <span className="font-bold">Systèmes de filtration d'eau sous évier, de la pureté et de la fraîcheur à chaque goutte.</span>
                             </h1>
-                            <p className="text-lg font-light leading-relaxed text-white/90 mb-8 max-w-xl text-justify">
+                            <p className="text-lg font-light leading-snug text-white/90 mb-8 max-w-xl text-justify">
                                 Profitez d'une eau potable d'une qualité exceptionnelle directement de votre robinet. Nos systèmes de filtration sous comptoir et d'ultrafiltration éliminent 99% des contaminants pour la santé de votre famille.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4">
@@ -306,7 +306,7 @@ const FiltrationSousEvier = () => {
                             >
                                 Identifiez l'invisible, <span className="font-bold"><br />maîtrisez votre pureté.</span>
                             </h2>
-                            <p className="text-lg font-light leading-relaxed text-white/95 mb-8 max-w-xl text-justify">
+                            <p className="text-lg font-light leading-snug text-white/95 mb-8 max-w-xl text-justify">
                                 Ne laissez plus le doute couler de votre robinet. Nos tests d'eau révèlent la composition réelle de votre eau pour vous offrir une solution de filtration sur mesure, garantissant santé et sérénité à toute votre famille.                            </p>
                             <div className="flex gap-4">
                                 <Button

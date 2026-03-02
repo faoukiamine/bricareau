@@ -174,13 +174,13 @@ const FiltresPuits = () => {
                     <div className="container mx-auto px-6 relative z-10">
                         <div className="max-w-2xl text-white">
                             <h1
-                                className="text-[32px] md:text-[48px] leading-[32px] md:leading-[48px] font-light mb-8 tracking-tighter text-white"
+                                className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text-justify max-w-xl"
                                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                             >
-                                <span className="font-bold text-blue-400">Filtres d'eau de puits</span> <br />
+                                <span className="font-bold text-white">Filtres d'eau de puits</span> <br />
                                 <span className="font-bold text-white">pour une eau filtrée sans compromis.</span>
                             </h1>
-                            <p className="font-light text-[20px] leading-[28px] text-white/95 mb-8 max-w-xl text-justify">
+                            <p className="font-light text-[20px] leading-snug text-white/95 mb-8 max-w-xl text-justify">
                                 Nos solutions spécialisées traitent efficacement le fer, le soufre (odeurs d'œufs pourris), le manganèse et l'acidité. Protégez votre plomberie et profitez d'une eau saine et limpide partout dans votre maison.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4">
@@ -266,7 +266,7 @@ const FiltresPuits = () => {
                                 <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">spécialisés pour votre résidence</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
-                            <p className="mt-8 text-lg font-light leading-relaxed text-slate-600 text-justify w-full">
+                            <p className="mt-8 text-lg font-light leading-snug text-slate-600 text-justify w-full">
                                 Découvrez notre gamme complète de filtres spécialisés, conçus pour répondre aux défis uniques des puits privés artésiens ou de surface. Que vous fassiez face à des taches de fer tenaces, des odeurs de soufre incommodantes, une eau acide corrosive ou la présence de contaminants invisibles comme l'arsenic, nos systèmes offrent une solution ciblée et performante. Chaque unité est dotée d'une technologie de pointe pour assurer une filtration maximale tout en préservant l'intégrité de votre plomberie et de vos appareils électroménagers. En investissant dans l'une de nos solutions Vortex, Iron Shield, Zen-pH, ou autres, vous choisissez une tranquillité d'esprit durable et une qualité d'eau irréprochable pour toute votre famille. Nos experts vous accompagnent dans le diagnostic et l'installation pour garantir que chaque goutte d'eau qui coule de votre robinet soit pure, sûre et limpide.
                             </p>
                         </div>
@@ -401,7 +401,7 @@ const FiltresPuits = () => {
                                 L'excellence commence<br />
                                 par <span className="font-bold">une eau parfaite.</span>
                             </h2>
-                            <p className="text-lg font-light leading-relaxed text-white/95 mb-8 max-w-xl text-justify">
+                            <p className="text-lg font-light leading-snug text-white/95 mb-8 max-w-xl text-justify">
                                 Le luxe, c'est de ne pas avoir à se soucier de la qualité de ce que l'on consomme. Offrez-vous la sérénité d'une eau analysée par des experts, pour une maison où tout brille, sans effort et sans compromis.
                             </p>
                             <div className="flex gap-4">

@@ -204,12 +204,13 @@ const AdoucisseursEauDePuits = () => {
                     <div className="container mx-auto px-6 relative z-10">
                         <div className="max-w-2xl text-white">
                             <h1
-                                className="text-[32px] md:text-[48px] leading-[32px] md:leading-[48px] font-light mb-8 tracking-tighter text-white"
+                                className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text-justify max-w-xl"
                                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                             >
-                                <span className="font-bold text-blue-400">Adoucisseur d'eau de puits</span> <span className="font-bold text-white"> <br />une protection experte contre le fer et le calcaire.</span>
+                                <span className="font-bold text-white">Adoucisseur d'eau de puits</span> <br />
+                                <span className="font-bold text-white">une protection experte contre le fer et le calcaire.</span>
                             </h1>
-                            <p className="text-lg font-light leading-relaxed text-white/95 mb-8 max-w-xl text-justify">
+                            <p className="text-lg font-light leading-snug text-white/95 mb-8 max-w-xl text-justify">
                                 Profitez d'une eau soyeuse et douce, même avec un puits privé. Nos adoucisseurs haute performance neutralisent la dureté extrême et les traces de fer pour préserver votre santé et vos installations.
                             </p>
                             <div className="flex gap-4">
@@ -289,7 +290,7 @@ const AdoucisseursEauDePuits = () => {
                                 Nos adoucisseurs d'eau <br /><span className="font-normal">résidentiels - Eau de puits</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600 mb-8"></div>
-                            <p className="text-lg font-light leading-relaxed text-gray-600 max-w-7xl mx-auto text-justify mb-8">
+                            <p className="text-lg font-light leading-snug text-gray-600 max-w-7xl mx-auto text-justify mb-8">
                                 Découvrez notre gamme exclusive d'adoucisseurs d'eau pour puits, spécialement conçue pour traiter les eaux souterraines les plus complexes. Nos systèmes haute efficacité (HE) éliminent efficacement la dureté, le fer et le manganèse, garantissant une eau pure et douce pour toute votre maison. Grâce à une technologie de régénération intelligente, nos solutions durables protègent vos installations tout en réduisant votre consommation de sel et d'eau. Offrez à votre famille le confort d'une eau de qualité supérieure, débarrassée des impuretés et des problèmes de calcaire typiques des puits artésiens ou de surface.
                             </p>
                         </div>
@@ -410,7 +411,7 @@ const AdoucisseursEauDePuits = () => {
                             >
                                 Des tests d'eau précis <span className="font-bold"><br />pour une tranquillité d'esprit totale.</span>
                             </h2>
-                            <p className="text-lg font-light leading-relaxed text-white/95 mb-8 max-w-xl text-justify">
+                            <p className="text-lg font-light leading-snug text-white/95 mb-8 max-w-xl text-justify">
                                 Ne devinez pas la qualité de votre eau. Nos analyses approfondies identifient les bactéries, les minéraux et les contaminants chimiques pour vous offrir une tranquillité d'esprit totale.
                             </p>
                             <div className="flex gap-4">

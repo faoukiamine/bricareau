@@ -30,10 +30,10 @@ const EauDureVsDouce = () => {
                         <span className="inline-block px-4 py-1 rounded-full bg-white/10 border border-white/20 text-white text-sm font-bold mb-6 tracking-widest uppercase backdrop-blur-sm">
                             Guide Pratique de la Maison
                         </span>
-                        <h1 className="text-4xl md:text-7xl font-bold mb-8 leading-tight tracking-tighter">
-                            Eau dure <span className="text-blue-400">vs</span> Eau douce
+                        <h1 className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text-justify max-w-xl mx-auto">
+                            <span className="font-bold">Eau dure</span> <span className="text-blue-400 font-bold">vs</span> <span className="font-bold">Eau douce</span>
                         </h1>
-                        <p className="text-xl md:text-2xl text-slate-300 font-light mb-10 leading-relaxed max-w-3xl mx-auto italic">
+                        <p className="text-[20px] leading-[28px] text-slate-300 font-light mb-10 text-justify max-w-xl mx-auto italic">
                             Élucider le mystère du calcaire, protéger votre foyer et transformer votre bien-être quotidien par une eau parfaitement équilibrée.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">

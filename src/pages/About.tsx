@@ -34,10 +34,10 @@ const About = () => {
         <section className="py-12 md:py-20 lg:py-24 bg-gradient-to-b from-primary/5 to-background">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center space-y-6">
-              <h1 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
+              <h1 className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-slate-900 text-justify max-w-xl mx-auto">
                 À propos de Bricareau
               </h1>
-              <p className="text-lg md:text-xl text-muted-foreground">
+              <p className="text-lg md:text-xl text-muted-foreground leading-snug">
                 Votre partenaire de confiance pour une eau pure et saine depuis plus de 20 ans
               </p>
             </div>
@@ -52,7 +52,7 @@ const About = () => {
                 <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-center">
                   Notre Mission
                 </h2>
-                <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+                <p className="text-base md:text-lg text-muted-foreground leading-snug">
                   Chez Bricareau, notre mission est de protéger la santé et le bien-être de votre famille
                   en fournissant des solutions de traitement d'eau de qualité supérieure. Nous croyons que
                   chaque foyer canadien mérite un accès à une eau propre, pure et saine.
@@ -109,12 +109,12 @@ const About = () => {
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal text-slate-900 mb-16 text-center leading-[1.1] tracking-tighter">
                 Notre Équipe
               </h2>
-              <p className="text-base md:text-lg text-muted-foreground">
+              <p className="text-base md:text-lg text-muted-foreground leading-snug">
                 Notre équipe de professionnels certifiés possède une expertise approfondie en traitement
                 d'eau. Formés aux dernières technologies et normes de l'industrie, nos techniciens sont
                 dévoués à vous offrir le meilleur service possible.
               </p>
-              <p className="text-base md:text-lg text-muted-foreground">
+              <p className="text-base md:text-lg text-muted-foreground leading-snug">
                 Chaque membre de notre équipe partage la même passion : garantir que votre eau soit de
                 la plus haute qualité pour protéger votre santé et celle de votre famille.
               </p>

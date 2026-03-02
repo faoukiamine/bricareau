@@ -30,10 +30,10 @@ const FiltreDouchePeauCheveux = () => {
                         <span className="inline-block px-4 py-1 rounded-full bg-teal-600/20 border border-teal-400/30 text-teal-400 text-sm font-bold mb-6 tracking-widest uppercase">
                             Dermatologie Aquatique & Soins Capillaires
                         </span>
-                        <h1 className="text-4xl md:text-7xl font-bold mb-8 leading-tight tracking-tighter">
-                            Filtre de douche : <span className="text-teal-400 italic font-medium">Beauté & Santé</span>
+                        <h1 className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text-justify max-w-xl mx-auto">
+                            <span className="font-bold">Filtre de douche</span> : <span className="text-teal-400 italic font-medium font-bold">Beauté & Santé</span>
                         </h1>
-                        <p className="text-xl md:text-2xl text-slate-300 font-light mb-10 leading-relaxed max-w-4xl mx-auto italic text-center">
+                        <p className="text-[20px] leading-[28px] text-slate-300 font-light mb-10 text-justify max-w-xl mx-auto italic">
                             Pourquoi votre peau est-elle sèche et vos cheveux ternes ? La réponse se trouve peut-être dans votre pommeau de douche. Découvrez l'effet dévastateur du chlore vaporisé sur votre corps.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">

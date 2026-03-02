@@ -84,13 +84,13 @@ const Filtration = () => {
                     <div className="container mx-auto px-6 relative z-10">
                         <div className="max-w-2xl text-white">
                             <h1
-                                className="text-[32px] md:text-[48px] leading-[32px] md:leading-[48px] font-light mb-8 tracking-tighter text-white"
+                                className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text-justify max-w-xl"
                                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                             >
-                                <span className="font-bold text-blue-400">Filtration d'eau résidentielle</span> <br />
-                                <span className="font-bold text-white">L'excellence pour votre santé.</span>
+                                <span className="font-bold">Filtration d'eau résidentielle</span> <br />
+                                <span className="font-bold">L'excellence pour votre santé.</span>
                             </h1>
-                            <p className="text-lg font-light leading-relaxed text-white/95 mb-8 max-w-xl text-justify">
+                            <p className="text-lg font-light leading-snug text-white/95 mb-8 max-w-xl text-justify">
                                 Ne laissez plus les contaminants couler de vos robinets. Nos systèmes de filtration d'eau avancés constituent un bouclier durable pour votre maison, vous garantissant une eau d'une pureté irréprochable pour toute votre famille au Canada.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4">
@@ -407,7 +407,7 @@ const Filtration = () => {
                             >
                                 <span className="font-bold">Votre eau sous la loupe.</span>
                             </h2>
-                            <p className="text-lg font-light leading-relaxed text-white/95 mb-8 max-w-xl text-justify">
+                            <p className="text-lg font-light leading-snug text-white/95 mb-8 max-w-xl text-justify">
                                 Ne devinez pas la qualité de votre eau. Nos analyses approfondies identifient les bactéries, les minéraux et les contaminants chimiques pour vous offrir une tranquillité d'esprit totale.                            </p>
                             <div className="flex gap-4">
                                 <Button

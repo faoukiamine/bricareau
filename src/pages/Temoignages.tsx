@@ -12,10 +12,10 @@ const Temoignages = () => {
                 <section className="py-12 md:py-20 lg:py-24 bg-gradient-to-b from-blue-50 to-background">
                     <div className="container mx-auto px-4">
                         <div className="max-w-3xl mx-auto text-center space-y-6">
-                            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground tracking-tighter">
-                                Témoignages Clients
+                            <h1 className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-foreground text-justify max-w-xl mx-auto">
+                                <span className="font-bold">Témoignages Clients</span>
                             </h1>
-                            <p className="text-lg md:text-xl text-muted-foreground font-light">
+                            <p className="text-[20px] leading-[28px] text-muted-foreground font-light text-justify max-w-xl mx-auto">
                                 Découvrez ce que nos clients disent de leur expérience avec Bricareau.
                             </p>
                             <div className="flex items-center justify-center gap-2">

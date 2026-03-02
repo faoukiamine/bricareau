@@ -97,13 +97,13 @@ const StationEauPotable = () => {
           <div className="container mx-auto px-6 relative z-10">
             <div className="max-w-2xl text-white">
               <h1
-                className="text-[32px] md:text-[48px] leading-[32px] md:leading-[48px] font-light mb-8 tracking-tighter text-white"
+                className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text-justify max-w-xl"
                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
               >
-                <span className="font-bold text-blue-400">Systèmes d'osmose inverse</span> <br />
-                <span className="font-bold">La pureté absolue à votre robinet.</span>
+                <span className="font-bold text-white">Systèmes d'osmose inverse</span> <br />
+                <span className="font-bold text-white">La pureté absolue à votre robinet.</span>
               </h1>
-              <p className="text-lg font-light leading-relaxed text-white/95 mb-8 max-w-xl text-justify">
+              <p className="text-lg font-light leading-snug text-white/95 mb-8 max-w-xl text-justify">
                 Transformez votre eau municipale en une source de pureté cristalline. Nos purificateurs d'eau par osmose inverse éliminent 99% des contaminants, du plomb au chlore, pour une eau fraîche, saine et alcaline.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -321,7 +321,7 @@ const StationEauPotable = () => {
               >
                 La vérité dans <span className="font-bold"><br />chaque goutte.</span>
               </h2>
-              <p className="text-lg font-light leading-relaxed text-white/95 mb-8 max-w-xl text-justify">
+              <p className="text-lg font-light leading-snug text-white/95 mb-8 max-w-xl text-justify">
                 Pourquoi deviner quand vous pouvez vérifier ? Un test d'eau simple pour une protection durable de votre foyer.              </p>
               <div className="flex gap-4">
                 <Button

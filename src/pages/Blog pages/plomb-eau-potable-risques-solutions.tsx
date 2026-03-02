@@ -30,10 +30,10 @@ const PlombEauPotable = () => {
                         <span className="inline-block px-4 py-1 rounded-full bg-red-600/20 border border-red-400/30 text-red-500 text-sm font-bold mb-6 tracking-widest uppercase">
                             Santé Publique : Dossier Urgent
                         </span>
-                        <h1 className="text-4xl md:text-7xl font-bold mb-8 leading-tight tracking-tighter">
-                            Le plomb dans <span className="text-blue-400">l'eau potable</span>
+                        <h1 className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text-justify max-w-xl mx-auto">
+                            <span className="font-bold">Le plomb dans</span> <span className="text-blue-400 font-bold">l'eau potable</span>
                         </h1>
-                        <p className="text-xl md:text-2xl text-slate-300 font-light mb-10 leading-relaxed max-w-4xl mx-auto italic">
+                        <p className="text-[20px] leading-[28px] text-slate-300 font-light mb-10 text-justify max-w-xl mx-auto italic">
                             Risques neurologiques, tests de détection précis et solutions technologiques haute performance : tout ce que vous devez savoir pour éliminer ce poison invisible de votre foyer.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">

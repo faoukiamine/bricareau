@@ -32,10 +32,10 @@ const VaisselleTachetee = () => {
                                 <Sparkles className="h-4 w-4 text-blue-400" />
                                 <span className="text-sm font-semibold tracking-wider uppercase">Art de Vivre & Propreté</span>
                             </div>
-                            <h1 className="text-4xl md:text-6xl font-bold mb-8 leading-tight tracking-tighter">
-                                Pourquoi votre vaisselle sort-elle toujours <span className="text-blue-400">tachetée</span> ?
+                            <h1 className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text-justify max-w-xl mx-auto">
+                                <span className="font-bold">Pourquoi votre vaisselle sort-elle toujours</span> <span className="text-blue-400 font-bold italic">tachetée</span> <span className="font-bold">?</span>
                             </h1>
-                            <p className="text-xl md:text-2xl text-slate-300 font-light mb-10 leading-relaxed text-justify">
+                            <p className="text-[20px] leading-[28px] text-slate-300 font-light mb-10 text-justify max-w-xl mx-auto italic">
                                 Explorer la science des résidus minéraux et comment transformer votre rituel de nettoyage pour obtenir une transparence cristalline absolue.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">

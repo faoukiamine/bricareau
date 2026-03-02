@@ -30,10 +30,10 @@ const PourquoiEauSentOeufsPourris = () => {
                     </div>
                     <div className="container mx-auto px-4 relative z-10">
                         <div className="max-w-4xl mx-auto text-center">
-                            <h1 className="text-4xl md:text-6xl font-bold mb-8 leading-tight tracking-tighter">
-                                Pourquoi mon eau sent-elle l'odeur des <span className="text-blue-400">œufs pourris</span> ?
+                            <h1 className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text-justify max-w-xl mx-auto">
+                                <span className="font-bold">Pourquoi mon eau</span> sent-elle l'odeur des <span className="text-blue-400 font-bold">œufs pourris</span> ?
                             </h1>
-                            <p className="text-xl md:text-2xl text-slate-300 font-light mb-10 leading-relaxed text-justify">
+                            <p className="text-[20px] leading-[28px] text-slate-300 font-light mb-10 text-justify max-w-xl mx-auto">
                                 Un guide exhaustif sur l'hydrogène sulfuré, les causes de cette nuisance olfactive et les solutions technologiques de pointe pour retrouver une eau d'une pureté absolue.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">

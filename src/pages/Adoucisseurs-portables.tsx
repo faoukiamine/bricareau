@@ -67,12 +67,12 @@ const AdoucisseursPortables = () => {
 
                 <div className="container mx-auto px-6 relative z-10 text-center md:text-left">
                     <div className="max-w-4xl">
-                        <h1 className="text-white text-[32px] md:text-[48px] leading-[32px] md:leading-[48px] font-bold mb-8 tracking-tighter animate-in fade-in slide-in-from-bottom duration-700 drop-shadow-2xl">
-                            <span className="text-blue-400">Adoucisseur d'eau portable</span> <br />
-                            Une eau douce où que vous soyez !
+                        <h1 className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text-justify max-w-xl animate-in fade-in slide-in-from-bottom duration-700 drop-shadow-2xl">
+                            <span className="font-bold text-white">Adoucisseur d'eau portable</span> <br />
+                            <span className="font-bold">Une eau douce où que vous soyez !</span>
                         </h1>
-                        <p className="text-lg font-light leading-relaxed text-gray-200 mb-12 max-w-2xl text-justify drop-shadow-lg animate-in fade-in slide-in-from-bottom duration-700 delay-100">
-                            La solution d'adoucissement flexible pour votre résidence ou commerce sans installation permanente. Profitez de notre service d'échange d'adoucisseur portable avec livraison directement chez vous.
+                        <p className="text-lg font-light leading-snug text-gray-200 mb-12 max-w-2xl text-justify drop-shadow-lg animate-in fade-in slide-in-from-bottom duration-700 delay-100">
+                            La solution d'adoucissement flexible pour votre résidence ou commerce sans installation permanence. Profitez de notre service d'échange d'adoucisseur portable avec livraison directement chez vous.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4">
                             <Button
@@ -123,7 +123,7 @@ const AdoucisseursPortables = () => {
                                 Une eau parfaite,<br />
                                 <span className="text-blue-600">kilomètre après kilomètre.</span>
                             </h2>
-                            <p className="text-lg text-slate-600 font-light leading-relaxed mb-8 text-justify">
+                            <p className="text-lg text-slate-600 font-light leading-snug mb-8 text-justify">
                                 Que vous soyez au camping, au quai ou dans un chalet, ne laissez pas la qualité de l'eau gâcher votre confort. Nos solutions portables vous suivent partout.
                             </p>
 
@@ -259,7 +259,15 @@ const AdoucisseursPortables = () => {
             </section>
 
             {/* 4. Section Testimonials */}
-            <TestimonialsSection filterProduct="/adoucisseurs-portables" />
+            <TestimonialsSection
+                filterProduct="/adoucisseurs-portables"
+                title={
+                    <>
+                        <span className="text-[32px] md:text-[60px] font-light leading-[1.2] md:leading-[60px] block">L’eau pure comme standard.</span>
+                        <span className="text-[32px] md:text-[60px] font-normal leading-[1.2] md:leading-[60px] block text-blue-600">Le service comme signature.</span>
+                    </>
+                }
+            />
 
             {/* 5. Section Associated Products */}
             <section className="bg-white py-24">

@@ -24,16 +24,15 @@ const Hero = () => {
           {/* Left side - Hero text */}
           <div className="space-y-6 text-white">
             <h1
-              className="text-[32px] md:text-[48px] leading-[32px] md:leading-[48px] font-light mb-8 tracking-tighter text-white"
+              className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text-justify max-w-xl"
               style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
             >
-              <span className="font-bold">L’eau saine que </span> <span className="font-bold">votre famille mérite.</span>
+              <span className="font-bold">L’eau saine que votre famille mérite.</span>
             </h1>
 
-            <p className="text-lg font-light leading-relaxed text-white/95 max-w-xl text-justify">
+            <p className="text-lg font-light leading-snug text-white/95 max-w-xl text-justify">
               Assurez-vous que l’eau de votre maison a une belle apparence, une bonne odeur et un bon goût, qu’elle provienne d’un système municipal ou d’un puits privé.
-            </p>
-            <p className="text-lg font-light leading-relaxed text-white/95 max-w-xl text-justify">
+              <br />
               Plus de 20 000 foyers canadiens ont confié le traitement d’eau de leurs foyers à Bricareau.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4">

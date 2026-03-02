@@ -81,10 +81,10 @@ const Solutions = () => {
         <section className="bg-gradient-to-br from-primary/5 via-background to-accent/5 py-16 md:py-24">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-                Nos Solutions de Traitement d'Eau
+              <h1 className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-foreground text-justify max-w-xl mx-auto">
+                <span className="font-bold">Nos Solutions de Traitement d'Eau</span>
               </h1>
-              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+              <p className="text-[20px] leading-[28px] text-muted-foreground font-light text-justify max-w-xl mx-auto">
                 Découvrez notre gamme complète de solutions pour améliorer la qualité de votre eau.
                 Que vous ayez besoin d'adoucir, filtrer ou purifier, nous avons la solution adaptée à vos besoins.
               </p>

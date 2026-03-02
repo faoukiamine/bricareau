@@ -71,16 +71,13 @@ const Entreprises = () => {
 
           <div className="container mx-auto px-4 relative z-10 pt-[100px]">
             <div className="max-w-3xl text-white">
-              <span className="text-sm font-bold uppercase tracking-widest text-[#60A5FA] mb-4 block">
-                SOLUTIONS POUR ENTREPRISES
-              </span>
               <h1
-                className="text-[32px] md:text-[48px] leading-[32px] md:leading-[48px] font-light mb-8 tracking-tighter text-white"
+                className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text-justify max-w-xl"
                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
               >
-                Une eau pure <span className="font-bold">au quotidien</span>
+                <span className="font-bold text-white">Une eau pure au quotidien</span>
               </h1>
-              <p className="font-light text-[20px] leading-[28px] text-white/95 mb-8 max-w-xl">
+              <p className="font-light text-[20px] leading-snug text-white/95 mb-8 max-w-xl text-justify">
                 Vos collaborateurs apprécieront la nouvelle façon d'avoir de l'eau fraîche dans votre entreprise !
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -135,7 +132,7 @@ const Entreprises = () => {
             <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 text-center leading-[1.2] md:leading-[48px] tracking-tighter max-w-4xl mx-auto">
               Pourquoi plus de 10 000 entreprises choisissent Bricareau?
             </h2>
-            <p className="text-center text-muted-foreground mb-12 max-w-3xl mx-auto">
+            <p className="text-center text-muted-foreground mb-12 max-w-3xl mx-auto leading-snug">
               Bricareau offre des solutions sur mesure pour fournir une eau plus fraîche et plus savoureuse dans votre espace de travail.
               Que ce soit dans la cuisine ou à la salle de réunion, nos systèmes peuvent être installés là où vos employés nécessitent une eau de haute qualité.
             </p>
@@ -165,7 +162,7 @@ const Entreprises = () => {
               <h3 className="text-xl md:text-2xl font-semibold text-primary">
                 Contribuez à la protection de notre écosystème
               </h3>
-              <p className="text-base md:text-lg text-muted-foreground">
+              <p className="text-base md:text-lg text-muted-foreground leading-snug">
                 Équipez votre entreprise d'un refroidisseur d'eau spécialement conçu pour les espaces exigeants et
                 diminuez l'empreinte carbone de votre entreprise grâce à nos fontaines d'eau purifiée sans bouteilles.
               </p>
@@ -210,7 +207,7 @@ const Entreprises = () => {
               <h3 className="text-xl font-semibold text-primary">
                 l'eau de votre maison
               </h3>
-              <p className="text-base md:text-lg text-muted-foreground">
+              <p className="text-base md:text-lg text-muted-foreground leading-snug">
                 Bricareau vous garantit la meilleure d'eau pour toute la maison. Nous vous proposons des solutions innovantes
                 en fonction de vos besoins: Adoucisseurs d'eau, Filtre d'eau ou stations d'eau potable par exemple.
               </p>
@@ -231,7 +228,7 @@ const Entreprises = () => {
               <h2 className="text-[32px] md:text-[48px] font-bold text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
                 Planifiez votre consultation sur l'eau
               </h2>
-              <p className="text-base md:text-lg text-muted-foreground">
+              <p className="text-base md:text-lg text-muted-foreground leading-snug">
                 Nos spécialistes en eau sont prêts à vous assister dans la recherche de la solution adéquate à votre problème d'eau.
                 Nous vous offrons un test d'eau ainsi qu'une consultation à votre domicile.
               </p>

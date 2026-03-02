@@ -32,10 +32,10 @@ const CalcaireElectromenagers = () => {
                                 <ShieldAlert className="h-4 w-4 text-blue-400" />
                                 <span className="text-sm font-semibold tracking-wider uppercase">Expertise Technique</span>
                             </div>
-                            <h1 className="text-4xl md:text-6xl font-bold mb-8 leading-tight tracking-tighter">
-                                Comment le calcaire réduit la <span className="text-blue-400">durée de vie</span> de vos électroménagers ?
+                            <h1 className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text-justify max-w-xl mx-auto">
+                                <span className="font-bold">Comment le calcaire réduit la</span> <span className="text-blue-400 font-bold">durée de vie</span> de vos électroménagers ?
                             </h1>
-                            <p className="text-xl md:text-2xl text-slate-300 font-light mb-10 leading-relaxed text-justify">
+                            <p className="text-[20px] leading-[28px] text-slate-300 font-light mb-10 text-justify max-w-xl mx-auto">
                                 Analyser l'impact technologique et économique des eaux minéralisées sur les composants critiques de vos appareils ménagers haut de gamme.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">

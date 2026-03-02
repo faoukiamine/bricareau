@@ -58,12 +58,12 @@ const RO6 = () => {
                                     SYSTÈME D'OSMOSE INVERSE
                                 </span>
                                 <h1
-                                    className="text-[32px] md:text-[48px] leading-[32px] md:leading-[48px] font-light mb-8 tracking-tighter text-foreground"
+                                    className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-foreground text-justify max-w-xl"
                                     style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                                 >
                                     Aquasential® <span className="font-normal">Osmose Inverse</span>
                                 </h1>
-                                <p className="font-light text-[20px] leading-[28px] text-slate-600 mb-8">
+                                <p className="font-light text-[20px] leading-snug text-slate-600 mb-8">
                                     Découvrez le système de filtration d'eau potable le plus intelligent au monde. Éliminez jusqu'à 99 % des contaminants pour une eau pure et délicieuse directement de votre robinet.
                                 </p>
                                 <Button
@@ -113,7 +113,7 @@ const RO6 = () => {
                                             <div className="w-2 h-8 bg-blue-600 rounded-full" />
                                             Système modulaire évolutif
                                         </h3>
-                                        <p className="font-light text-[20px] leading-[28px] text-slate-600 text-left">
+                                        <p className="font-light text-[20px] leading-snug text-slate-600 text-left">
                                             Le système Aquasential peut être configuré pour répondre précisément aux besoins spécifiques de votre eau, avec des options pour l'alcalinité, la reminéralisation et plus encore.
                                         </p>
                                     </div>
@@ -122,7 +122,7 @@ const RO6 = () => {
                                             <div className="w-2 h-8 bg-blue-600 rounded-full" />
                                             Design compact et élégant
                                         </h3>
-                                        <p className="font-light text-[20px] leading-[28px] text-slate-600 text-left">
+                                        <p className="font-light text-[20px] leading-snug text-slate-600 text-left">
                                             Conçu pour s'intégrer discrètement sous votre évier sans sacrifier l'espace de stockage précieux, tout en offrant une performance de qualité industrielle.
                                         </p>
                                     </div>
@@ -250,7 +250,7 @@ const RO6 = () => {
                                 <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-left">
                                     Parlez à l'un de nos experts de l'eau.
                                 </h2>
-                                <p className="font-light text-[20px] leading-[28px] text-slate-600 mb-12">
+                                <p className="font-light text-[20px] leading-snug text-slate-600 mb-12">
                                     Plus de 85 ans d'expérience pour vous aider à trouver la solution parfaite pour votre foyer. Simple, gratuit et sans pression.
                                 </p>
                                 <Button className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-12 h-16 text-xl font-bold shadow-xl transition-all hover:scale-105" asChild>

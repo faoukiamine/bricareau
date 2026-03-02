@@ -108,16 +108,13 @@ const EauDure = () => {
 
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-3xl text-white">
-              <span className="text-sm font-bold uppercase tracking-widest text-amber-400 mb-4 block">
-                COMPRENDRE LE PROBLÈME
-              </span>
               <h1
-                className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-white"
+                className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text-justify max-w-xl"
                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
               >
-                Eau dure <span className="font-normal">& Calcaire</span>
+                <span className="font-bold">Eau dure & Calcaire</span>
               </h1>
-              <p className="font-light text-[20px] leading-[28px] text-white/95 mb-8 max-w-xl">
+              <p className="font-light text-[20px] leading-snug text-white/95 mb-8 max-w-xl text-justify">
                 Découvrez ses effets sur votre maison, votre santé et vos équipements,
                 ainsi que les solutions durables pour y remédier définitivement.
               </p>

@@ -158,13 +158,13 @@ const FiltresTouteMaison = () => {
                     <div className="container mx-auto px-6 relative z-10">
                         <div className="max-w-2xl text-white">
                             <h1
-                                className="text-[32px] md:text-[48px] leading-[32px] md:leading-[48px] font-light mb-8 tracking-tighter text-white"
+                                className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text-justify max-w-xl"
                                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                             >
-                                <span className="font-bold text-blue-400">Filtres d'eau toute la maison</span> <br />
+                                <span className="font-bold text-white">Filtres d'eau toute la maison</span> <br />
                                 <span className="font-bold text-white">Protection intégrale au point d'entrée.</span>
                             </h1>
-                            <p className="text-lg font-light leading-relaxed text-white/95 mb-8 max-w-xl text-justify">
+                            <p className="text-lg font-light leading-snug text-white/95 mb-8 max-w-xl text-justify">
                                 Éliminez le chlore, le fer et les sédiments de chaque goutte d'eau qui entre dans votre propriété. Nos systèmes de filtration intégrés protègent votre santé, votre peau et vos appareils électroménagers.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4">
@@ -251,7 +251,7 @@ const FiltresTouteMaison = () => {
                             </h2>
                             <div className="w-24 h-1 bg-blue-600 mb-8"></div>
                             <p
-                                className="text-lg font-light leading-relaxed text-slate-600 mb-8 text-justify"
+                                className="text-lg font-light leading-snug text-slate-600 mb-8 text-justify"
                                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                             >
                                 Nos filtres d’eau spécialisés pour toute la maison sont méticuleusement conçus pour offrir une protection robuste et ciblée contre les contaminants spécifiques que l’on retrouve fréquemment dans les réseaux de distribution municipaux. En intégrant des technologies de pointe telles que nos séries Vortex, ChlorStop et Iron Shield, nous garantissons l'élimination efficace des sédiments, du chlore et des métaux lourds qui peuvent altérer le goût, l'odeur et la qualité globale de votre eau quotidienne. Chaque solution est installée au point d’entrée de votre résidence pour assurer une pureté cristalline constante dans tous vos robinets, tout en prolongeant durablement la durée de vie de votre plomberie et de vos précieux électroménagers. Choisir un système Bricareau, c'est opter pour une expertise reconnue qui transforme votre eau municipale en une ressource revitalisante, saine et parfaitement équilibrée pour l'ensemble de votre foyer. Profitez dès aujourd'hui d'une tranquillité d'esprit absolue grâce à une filtration sur-mesure, fiable et performante, répondant aux standards les plus élevés d'excellence et de confort.
@@ -374,7 +374,7 @@ const FiltresTouteMaison = () => {
                                 L'excellence commence<br />
                                 par <span className="font-bold">une eau parfaite.</span>
                             </h2>
-                            <p className="text-lg font-light leading-relaxed text-white/95 mb-8 max-w-xl text-justify">
+                            <p className="text-lg font-light leading-snug text-white/95 mb-8 max-w-xl text-justify">
                                 Le luxe, c'est de ne pas avoir à se soucier de la qualité de ce que l'on consomme. Offrez-vous la sérénité d'une eau analysée par des experts, pour une maison où tout brille, sans effort et sans compromis.
                             </p>
                             <div className="flex gap-4">
@@ -392,11 +392,11 @@ const FiltresTouteMaison = () => {
                 </section>
 
                 {/* Testimonials Grid Section */}
-                <TestimonialsSection filterProduct="/Filtres-deau-pour-toute-la-maison" 
+                <TestimonialsSection filterProduct="/Filtres-deau-pour-toute-la-maison"
                     title={
                         <>
-                        <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block tracking-tighter text-slate-900">Fini le chlore et d'autres contaminants, </span>
-                        <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block text-blue-600 tracking-tighter">la métamorphose de votre quotidien vue par nos clients.</span>
+                            <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block tracking-tighter text-slate-900">Fini le chlore et d'autres contaminants, </span>
+                            <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block text-blue-600 tracking-tighter">la métamorphose de votre quotidien vue par nos clients.</span>
                         </>
                     }
                 />

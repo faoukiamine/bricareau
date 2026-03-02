@@ -31,10 +31,10 @@ const SignesBesoinAbsoluAdoucisseur = () => {
                             <ShieldAlert className="h-5 w-5 text-red-400" />
                             <span className="text-sm font-bold tracking-widest uppercase">Alerte Infrastructure & Santé</span>
                         </div>
-                        <h1 className="text-4xl md:text-7xl font-bold mb-8 leading-tight tracking-tighter">
-                            <span className="text-red-400">Signes alarmants :</span><br />Votre maison appelle à l'aide.
+                        <h1 className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text-justify max-w-xl mx-auto">
+                            <span className="text-red-400 font-bold">Signes alarmants :</span><br /> <span className="font-bold">Votre maison appelle à l'aide.</span>
                         </h1>
-                        <p className="text-xl md:text-2xl text-slate-100 font-light mb-10 leading-relaxed max-w-4xl mx-auto italic text-center">
+                        <p className="text-[20px] leading-[28px] text-slate-100 font-light mb-10 text-justify max-w-xl mx-auto italic">
                             L'eau dure n'est pas une fatalité, c'est une dégradation active et coûteuse. Apprenez à lire les symptômes d'une eau agressive avant qu'elle ne condamne votre plomberie.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">

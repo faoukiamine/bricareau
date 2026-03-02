@@ -91,16 +91,13 @@ const CommercialIndustriel = () => {
 
           <div className="container mx-auto px-6 relative z-10">
             <div className="max-w-2xl text-white">
-              <span className="text-sm font-bold uppercase tracking-widest text-[#60A5FA] mb-4 block">
-                TRAITEMENT D'EAU INDUSTRIEL
-              </span>
               <h1
-                className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-white"
+                className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text-justify max-w-xl"
                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
               >
-                Bricareau, votre partenaire <span className="font-normal">de confiance</span>
+                <span className="font-bold text-white">Bricareau, votre partenaire de confiance</span>
               </h1>
-              <p className="font-light text-[20px] leading-[28px] text-white/95 mb-8 max-w-xl">
+              <p className="font-light text-[20px] leading-snug text-white/95 mb-8 max-w-xl text-justify">
                 Notre mission est de vous offrir une tranquillité d'esprit dans vos projets de traitement de l'eau les plus exigeants.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -210,7 +207,7 @@ const CommercialIndustriel = () => {
               <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
                 Découvrez la meilleure solution de traitement de l'eau pour votre industrie.
               </h2>
-              <p className="text-base md:text-lg text-muted-foreground">
+              <p className="text-base md:text-lg text-muted-foreground leading-snug">
                 Nous vous accompagnons dans le développement d'un système d'équipements de traitement de l'eau sur mesure et personnalisé.
                 Nous sommes présents avant, pendant et après votre projet de traitement de l'eau.
               </p>
@@ -258,7 +255,7 @@ const CommercialIndustriel = () => {
               <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
                 Tester la qualité de votre eau est essentiel pour votre entreprise.
               </h2>
-              <p className="text-base md:text-lg text-muted-foreground">
+              <p className="text-base md:text-lg text-muted-foreground leading-snug">
                 Les services de tests en laboratoire jouent un rôle essentiel dans la gestion des eaux, offrant des analyses
                 essentielles pour identifier les solutions de traitement les plus efficaces. Nous pouvons déterminer avec précision
                 la composition de l'eau et recommander les processus de traitement les plus adaptés aux exigences spécifiques.
@@ -280,7 +277,7 @@ const CommercialIndustriel = () => {
               <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
                 Améliorez votre eau aujourd'hui
               </h2>
-              <p className="text-base md:text-lg text-muted-foreground">
+              <p className="text-base md:text-lg text-muted-foreground leading-snug">
                 Contactez nos experts dès aujourd'hui et trouvez des solutions à vos problèmes de traitement des eaux.
               </p>
               <a

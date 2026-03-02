@@ -119,14 +119,14 @@ const TestsEauPage = () => {
           <div className="container mx-auto px-6 relative z-10">
             <div className="max-w-2xl text-white">
               <h1
-                className="text-[32px] md:text-[48px] leading-[32px] md:leading-[48px] font-light mb-8 tracking-tighter text-white"
+                className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text-justify max-w-xl"
                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
               >
                 <span className="sr-only">Montréal • Rive-Sud • Rive-Nord</span>
                 <span className="font-bold">Analyse d'eau professionnelle <br />& Tests de laboratoire</span>
               </h1>
 
-              <p className="text-lg font-light leading-relaxed text-white/95 mb-8 max-w-xl text-justify">
+              <p className="text-lg font-light leading-snug text-white/95 mb-8 max-w-xl text-justify">
                 Besoin d'une analyse d'eau dans la région métropolitaine ? Que ce soit pour une vérification annuelle, une transaction hypothécaire ou un souci de qualité, Bricareau offre des tests complets de laboratoire partout dans le Grand Montréal, Laval et les couronnes.
               </p>
 
@@ -198,7 +198,7 @@ const TestsEauPage = () => {
                   <span className="text-[36px] md:text-[50px] font-bold leading-[1.05] block mb-2">Découvrez</span>
                   <span className="text-[36px] md:text-[50px] font-light leading-[1.05] block text-blue-100">l'invisible.</span>
                 </h2>
-                <p className="text-lg font-light leading-relaxed text-white/80 text-justify border-l-2 border-white/20 pl-6">
+                <p className="text-lg font-light leading-snug text-white/80 text-justify border-l-2 border-white/20 pl-6">
                   L'eau claire cache parfois des secrets. Minéraux, bactéries ou contaminants chimiques : une analyse est la seule façon de savoir ce que vous buvez réellement.
                 </p>
               </div>

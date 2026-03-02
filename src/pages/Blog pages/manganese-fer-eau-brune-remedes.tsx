@@ -30,10 +30,10 @@ const ManganeseFerEauBrune = () => {
                         <span className="inline-block px-4 py-1 rounded-full bg-amber-600/20 border border-amber-400/30 text-amber-500 text-sm font-bold mb-6 tracking-widest uppercase">
                             Maintenance Et Solutions Eau De Puits
                         </span>
-                        <h1 className="text-4xl md:text-7xl font-bold mb-8 leading-tight tracking-tighter">
-                            Eau <span className="text-amber-500">brune ou tachée</span> ?
+                        <h1 className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text-justify max-w-xl mx-auto">
+                            <span className="font-bold">Eau</span> <span className="text-amber-500 font-bold">brune ou tachée</span> ?
                         </h1>
-                        <p className="text-xl md:text-2xl text-slate-300 font-light mb-10 leading-relaxed max-w-4xl mx-auto italic">
+                        <p className="text-[20px] leading-[28px] text-slate-300 font-light mb-10 text-justify max-w-xl mx-auto italic">
                             Démystifier le duo manganèse et fer : comprendre les causes géologiques des taches orange et noires et restaurer définitivement la clarté de votre eau.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">

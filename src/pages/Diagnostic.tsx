@@ -22,12 +22,12 @@ const Diagnostic = () => {
                             OUTIL D'ANALYSE INTELLIGENT
                         </span>
                         <h1
-                            className="text-4xl md:text-6xl font-light text-slate-900 tracking-tighter leading-tight mb-6"
+                            className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-slate-900 text-justify max-w-xl mx-auto"
                             style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                         >
-                            Découvrez la solution <span className="font-bold">parfaite pour votre eau</span>
+                            <span className="font-bold text-slate-900">Découvrez la solution parfaite pour votre eau</span>
                         </h1>
-                        <p className="text-xl text-slate-500 font-light max-w-2xl mx-auto">
+                        <p className="text-[20px] leading-[28px] text-slate-500 font-light text-justify max-w-xl mx-auto">
                             Répondez à quelques questions rapides pour obtenir une recommandation personnalisée basée sur vos besoins spécifiques et la provenance de votre eau.
                         </p>
                     </div>

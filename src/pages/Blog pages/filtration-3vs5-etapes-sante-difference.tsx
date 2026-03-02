@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Phone, ShieldCheck, BadgeCheck, Microscope, Waves, Droplets, Info, Zap, Sparkles, Filter, CheckCircle2, FlaskConical, Layout, Search, Scale, Activity, Pill, Microscope2, FlaskConicalIcon } from "lucide-react";
+import { Phone, ShieldCheck, BadgeCheck, Microscope, Waves, Droplets, Info, Zap, Sparkles, Filter, CheckCircle2, FlaskConical, Layout, Search, Scale, Activity, Pill, FlaskConicalIcon } from "lucide-react";
 
 const Filtration3vs5EtapesSante = () => {
     useEffect(() => {
@@ -30,10 +30,10 @@ const Filtration3vs5EtapesSante = () => {
                         <span className="inline-block px-4 py-1 rounded-full bg-blue-600/20 border border-blue-400/30 text-blue-400 text-sm font-bold mb-6 tracking-widest uppercase">
                             Ingénierie De Santé & Multicouches
                         </span>
-                        <h1 className="text-4xl md:text-7xl font-bold mb-8 leading-tight tracking-tighter">
-                            Filtration <span className="text-blue-400 italic text-5xl md:text-8xl">3</span> vs <span className="text-blue-400 italic text-5xl md:text-8xl">5</span> étapes
+                        <h1 className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text-justify max-w-xl mx-auto">
+                            <span className="font-bold">Filtration</span> <span className="text-blue-400 italic text-3xl md:text-5xl font-bold">3</span> <span className="font-bold">vs</span> <span className="text-blue-400 italic text-3xl md:text-5xl font-bold">5</span> <span className="font-bold">étapes</span>
                         </h1>
-                        <p className="text-xl md:text-2xl text-slate-300 font-light mb-10 leading-relaxed max-w-4xl mx-auto italic text-center">
+                        <p className="text-[20px] leading-[28px] text-slate-300 font-light mb-10 text-justify max-w-xl mx-auto italic">
                             Plus de protection signifie-t-il plus de santé ? Analyse chirurgicale des couches de sécurité nécessaires pour garantir une pureté d'eau de qualité hospitalière à votre domicile.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">

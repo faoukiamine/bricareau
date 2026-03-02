@@ -102,10 +102,10 @@ const Manuels = () => {
                     <div className="container mx-auto px-4">
                         <div className="max-w-3xl mx-auto text-center space-y-6">
                             <BookOpen className="h-16 w-16 text-[#0052ff] mx-auto" />
-                            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
-                                Manuels et Documentation
+                            <h1 className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-foreground text-justify max-w-xl mx-auto">
+                                <span className="font-bold">Manuels et Documentation</span>
                             </h1>
-                            <p className="text-lg md:text-xl text-muted-foreground">
+                            <p className="text-[20px] leading-[28px] text-muted-foreground font-light text-justify max-w-xl mx-auto">
                                 Téléchargez les manuels d'utilisation et guides d'installation pour vos équipements
                             </p>
                         </div>

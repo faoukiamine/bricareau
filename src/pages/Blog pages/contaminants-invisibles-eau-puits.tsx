@@ -30,10 +30,10 @@ const ContaminantsInvisiblesPuits = () => {
                         <span className="inline-block px-4 py-1 rounded-full bg-teal-600/20 border border-teal-400/30 text-teal-300 text-sm font-bold mb-6 tracking-widest uppercase">
                             Sécurité Des Eaux Souterraines
                         </span>
-                        <h1 className="text-4xl md:text-7xl font-bold mb-8 leading-tight tracking-tighter">
-                            Contaminants <span className="text-teal-400">invisibles</span> dans votre puits
+                        <h1 className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text-justify max-w-xl mx-auto">
+                            <span className="font-bold text-white">Contaminants</span> <span className="text-teal-400 font-bold">invisibles</span> <span className="font-bold text-white">dans votre puits</span>
                         </h1>
-                        <p className="text-xl md:text-2xl text-slate-200 font-light mb-10 leading-relaxed max-w-4xl mx-auto italic">
+                        <p className="text-[20px] leading-[28px] text-slate-200 font-light mb-10 text-justify max-w-xl mx-auto italic">
                             Par-delà la limpidité, découvrez les menaces biologiques et chimiques silencieuses qui exigent une vigilance professionnelle rigoureuse.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">

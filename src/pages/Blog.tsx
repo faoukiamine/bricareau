@@ -149,10 +149,10 @@ const SpecializedFiltration = () => {
                     </div>
                     <div className="container mx-auto px-6 relative z-10">
                         <div className="max-w-3xl">
-                            <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-                                Solutions spécialisées en filtration d'eau
+                            <h1 className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text-justify max-w-xl">
+                                <span className="font-bold text-white">Solutions spécialisées en filtration d'eau</span>
                             </h1>
-                            <p className="text-xl opacity-90 mb-10 leading-relaxed text-blue-100/80 max-w-2xl">
+                            <p className="text-[20px] leading-[28px] opacity-90 mb-10 text-blue-100/80 max-w-xl text-justify font-light">
                                 Découvrez notre gamme complète de systèmes de traitement d'eau conçus pour répondre à tous vos besoins, de la maison au commerce.
                             </p>
                             <div className="flex flex-wrap gap-4">

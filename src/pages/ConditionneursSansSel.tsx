@@ -168,13 +168,13 @@ const ConditionneursSansSel = () => {
                 NOUVEAU CHEZ BRICAREAU
               </span>
               <h1
-                className="text-[32px] md:text-[48px] leading-[32px] md:leading-[48px] font-light mb-8 tracking-tighter text-white"
+                className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text-justify max-w-xl"
                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
               >
-                <span className="font-bold text-blue-400">Conditionneur d'eau sans sel</span> <br />
-                <span className="font-bold">L'anti-tartre écologique par excellence.</span>
+                <span className="font-bold">Conditionneur d'eau sans sel</span> <br />
+                <span className="font-bold text-white">L'anti-tartre écologique par excellence.</span>
               </h1>
-              <p className="text-lg font-light leading-relaxed text-white/95 mb-8 max-w-xl text-justify">
+              <p className="text-lg font-light leading-snug text-white/95 mb-8 max-w-xl text-justify">
                 Neutralisez le calcaire sans sel, sans électricité et sans gaspillage d'eau. Notre technologie avancée TAC protège votre plomberie tout en préservant les minéraux essentiels à votre santé.
               </p>
               <Button
@@ -305,7 +305,15 @@ const ConditionneursSansSel = () => {
         </section>
 
         {/* 4. Testimonials Section */}
-        <TestimonialsSection filterProduct="/conditionneurs-sans-sel" />
+        <TestimonialsSection
+          filterProduct="/conditionneurs-sans-sel"
+          title={
+            <>
+              <span className="text-[32px] md:text-[60px] font-light leading-[1.2] md:leading-[60px] block">Le standard pro,</span>
+              <span className="text-[32px] md:text-[60px] font-normal leading-[1.2] md:leading-[60px] block">l’honnêteté en prime.</span>
+            </>
+          }
+        />
 
         {/* 5. CTA Section */}
         <section className="bg-primary py-16 md:py-20">
