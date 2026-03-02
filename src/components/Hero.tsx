@@ -27,7 +27,7 @@ const Hero = () => {
               className="text-[32px] md:text-[48px] leading-[32px] md:leading-[48px] font-light mb-8 tracking-tighter text-white"
               style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
             >
-              <span className="font-bold">Protégez votre eau,</span> <span className="font-bold">protégez votre famille</span>
+              <span className="font-bold">L’eau saine que </span> <span className="font-bold">votre famille mérite.</span>
             </h1>
 
             <p className="text-lg font-light leading-relaxed text-white/95 max-w-xl text-justify">
@@ -44,14 +44,6 @@ const Hero = () => {
                 asChild
               >
                 <a href="/adoucissement#consultation">Planifiez une consultation gratuite</a>
-              </Button>
-              <Button
-                size="lg"
-                className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200 w-full sm:w-auto"
-                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
-                asChild
-              >
-                <a href="/tests-eau#water-test">Réservez une analyse d'eau</a>
               </Button>
             </div>
           </div>

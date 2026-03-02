@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { ShieldCheck, Award, Microscope, ArrowRight } from "lucide-react";
+import { ArrowRight, Gem, Eye } from "lucide-react";
 import expertImg from "@/assets/water testing.jpeg";
 
 const ExpertTrustSection = () => {
@@ -21,10 +21,16 @@ const ExpertTrustSection = () => {
                                 className="w-full h-[500px] md:h-[600px] object-cover transition-transform duration-1000 group-hover:scale-105"
                             />
                             {/* Floating Stats Overlay */}
-                            <div className="absolute top-10 left-10 bg-white/90 backdrop-blur-md p-6 rounded-3xl shadow-xl border border-white/50 max-w-[200px]">
-                                <div className="text-3xl font-bold text-blue-600 mb-1">25+</div>
-                                <div className="text-sm font-semibold text-slate-900 leading-tight">Années d'expertise cumulée à votre service</div>
+                            <div className="absolute top-10 right-10 bg-white/90 backdrop-blur-md p-6 rounded-3xl shadow-xl border border-white/50 max-w-[200px]">
+                                <div className="text-3xl font-bold text-blue-600 mb-1">+25 ans</div>
+                                <div className="text-sm font-semibold text-slate-900 leading-tight">d'expertise cumulée à votre service</div>
                             </div>
+                            {/* Decorative floating dots */}
+                        <div className="absolute top-10 left-10 grid grid-cols-3 gap-2 opacity-20">
+                            {[...Array(9)].map((_, i) => (
+                                <div key={i} className="w-2 h-2 rounded-full bg-blue-600" />
+                            ))}
+                        </div>
                         </div>
                     </div>
 
@@ -43,24 +49,7 @@ const ExpertTrustSection = () => {
                             </p>
                         </div>
 
-                        {/* Feature Grid */}
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 pt-8 border-t border-slate-100">
-                            <div className="space-y-4">
-                                <div className="w-12 h-12 rounded-2xl bg-blue-600 flex items-center justify-center text-white shadow-lg shadow-blue-200">
-                                    <Award className="w-6 h-6" />
-                                </div>
-                                <h4 className="text-lg font-bold text-slate-900 leading-tight">Certification <br />Rigoureuse</h4>
-                                <p className="text-sm text-slate-500 font-light leading-relaxed">Nos techniciens sont formés aux dernières normes environnementales et sanitaires.</p>
-                            </div>
-
-                            <div className="space-y-4">
-                                <div className="w-12 h-12 rounded-2xl bg-slate-100 flex items-center justify-center text-blue-600">
-                                    <Microscope className="w-6 h-6" />
-                                </div>
-                                <h4 className="text-lg font-bold text-slate-900 leading-tight">Analyse d'eau <br />Sans Compromis</h4>
-                                <p className="text-sm text-slate-500 font-light leading-relaxed">Chaque échantillon est traité avec une précision moléculaire pour détecter l'invisible.</p>
-                            </div>
-                        </div>
+            
 
                         <div className="pt-6">
                             <Button

@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ClipboardCheck, Activity, CheckCircle2 } from "lucide-react";
-import guideExpertImg from "@/assets/40-AdobeStock_365603381.jpeg";
+import guideExpertImg from "@/assets/11.jpg";
 
 const DiscoverExpert = () => {
     return (
@@ -15,9 +15,6 @@ const DiscoverExpert = () => {
                     {/* Left Side: Content */}
                     <div className="lg:w-1/2 space-y-10">
                         <div className="space-y-6">
-                            <span className="inline-block px-4 py-1.5 rounded-full bg-blue-100 text-blue-700 text-xs font-bold tracking-widest uppercase">
-                                Outil Intelligent
-                            </span>
                             <h2
                                 className="text-slate-900 tracking-tighter"
                                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
@@ -26,30 +23,8 @@ const DiscoverExpert = () => {
                                 <span className="text-[40px] md:text-[56px] font-bold leading-[1.1] text-blue-600 block">personnalisée en quelques clics.</span>
                             </h2>
                             <p className="text-xl text-slate-600 font-light leading-relaxed max-w-lg">
-                                Parce que chaque maison est unique, notre outil de recommandation analyse vos besoins en temps réel. Obtenez un diagnostic précis et des solutions adaptées en moins de 2 minutes.
+                                Quelques étapes suffisent pour transformer l'eau de votre foyer. Identifiez vos priorités et découvrez instantanément le système Bricareau adapté à votre réalité.
                             </p>
-                        </div>
-
-                        {/* Visual Steps */}
-                        <div className="grid grid-cols-3 gap-6 pt-8 border-t border-slate-200/60">
-                            <div className="flex flex-col gap-3">
-                                <div className="w-12 h-12 rounded-2xl bg-white shadow-sm border border-slate-100 flex items-center justify-center text-blue-600">
-                                    <ClipboardCheck className="w-6 h-6" />
-                                </div>
-                                <span className="text-sm font-semibold text-slate-900">1. Répondez</span>
-                            </div>
-                            <div className="flex flex-col gap-3">
-                                <div className="w-12 h-12 rounded-2xl bg-white shadow-sm border border-slate-100 flex items-center justify-center text-blue-600">
-                                    <Activity className="w-6 h-6" />
-                                </div>
-                                <span className="text-sm font-semibold text-slate-900">2. Analysez</span>
-                            </div>
-                            <div className="flex flex-col gap-3">
-                                <div className="w-12 h-12 rounded-2xl bg-white shadow-sm border border-slate-100 flex items-center justify-center text-blue-600">
-                                    <CheckCircle2 className="w-6 h-6" />
-                                </div>
-                                <span className="text-sm font-semibold text-slate-900">3. Découvrez</span>
-                            </div>
                         </div>
 
                         <div className="pt-4">
@@ -60,7 +35,7 @@ const DiscoverExpert = () => {
                                 asChild
                             >
                                 <a href="/diagnostic" className="flex items-center justify-center gap-3">
-                                    Diagnostiquer mon Eau
+                                    Diagnostic gratuit en 1 min
                                     <ArrowRight className="w-5 h-5" />
                                 </a>
                             </Button>
@@ -69,11 +44,11 @@ const DiscoverExpert = () => {
 
                     {/* Right Side: Image with Floating Elements */}
                     <div className="lg:w-1/2 relative w-full">
-                        <div className="relative rounded-[3rem] overflow-hidden shadow-2xl transform rotate-1 hover:rotate-0 transition-transform duration-700 bg-white border-4 border-white">
+                        <div className="relative rounded-[3rem] overflow-hidden shadow-2xl transform rotate-1 hover:rotate-0 transition-transform duration-700">
                             <img
                                 src={guideExpertImg}
                                 alt="Expert Bricareau effectuant une analyse d'eau à domicile pour un diagnostic personnalisé"
-                                className="w-full h-[500px] md:h-[600px] object-cover"
+                                className="w-full h-[500px] md:h-[600px] object-cover object-top"
                             />
                             {/* Glassmorphism Badge */}
                             <div className="absolute bottom-8 left-8 right-8 md:right-auto md:w-80 bg-white/90 backdrop-blur-xl p-6 rounded-3xl shadow-lg border border-white/50">
@@ -87,7 +62,7 @@ const DiscoverExpert = () => {
                                     </div>
                                     <div className="flex-1">
                                         <div className="text-sm font-bold text-slate-900">Rejoint par +1000 foyers</div>
-                                        <div className="text-xs text-slate-500">Cette semaine</div>
+                                        <div className="text-xs text-slate-500">Ce mois-ci</div>
                                     </div>
                                 </div>
                             </div>

@@ -29,7 +29,7 @@ const BetterWaterStats = () => {
     ];
 
     return (
-        <section className="py-24 md:py-32 bg-[#020617] relative overflow-hidden">
+        <section className="py-16 md:py-24 bg-[#020617] relative overflow-hidden">
             {/* Background elements */}
             <div className="absolute top-0 left-0 w-full h-[800px] bg-gradient-to-b from-blue-600/10 to-transparent pointer-events-none opacity-50" />
             <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-10 pointer-events-none" />
@@ -43,22 +43,22 @@ const BetterWaterStats = () => {
                             <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse" />
                             L'Excellence Bricareau
                         </div>
-                        <h2 className="text-white tracking-tighter mb-8">
-                            <span className="text-[40px] md:text-[64px] font-bold leading-[1] block text-white">La promesse d'une eau saine,</span>
-                            <span className="text-[40px] md:text-[64px] font-light leading-[1] text-blue-400 block mt-4">de notre rencontre à votre confort.</span>
+                        <h2 className="text-white tracking-tighter mb-6">
+                            <span className="text-[36px] md:text-[56px] font-bold leading-[1] block text-white">La promesse d'une eau saine,</span>
+                            <span className="text-[36px] md:text-[56px] font-light leading-[1] text-blue-400 block mt-2">de notre rencontre à votre confort.</span>
                         </h2>
-                        <div className="w-20 h-1.5 bg-blue-600 mb-10 rounded-full" />
+                        <div className="w-20 h-1.5 bg-blue-600 mb-8 rounded-full" />
                         <p className="text-xl text-slate-400 font-light leading-relaxed max-w-md text-justify">
                             Parce que la santé de votre foyer ne supporte aucune approximation, nous avons bâti un protocole rigoureux qui garantit une pureté absolue à chaque étape.
                         </p>
                     </div>
 
                     {/* Right Scrolling Column */}
-                    <div className="lg:col-span-7 space-y-6 md:space-y-8">
+                    <div className="lg:col-span-7 space-y-4 md:space-y-6">
                         {steps.map((item, i) => (
                             <div
                                 key={i}
-                                className="group relative bg-white/[0.02] backdrop-blur-sm border border-white/5 p-8 md:p-12 rounded-[2.5rem] hover:bg-white/[0.05] hover:border-blue-500/30 transition-all duration-700 shadow-2xl"
+                                className="group relative bg-white/[0.02] backdrop-blur-sm border border-white/5 p-6 md:p-8 rounded-[2.5rem] hover:bg-white/[0.05] hover:border-blue-500/30 transition-all duration-700 shadow-2xl"
                             >
                                 {/* Background step number */}
                                 <div className="absolute top-12 right-12 text-7xl md:text-9xl font-black text-white/[0.02] group-hover:text-blue-500/[0.03] transition-colors pointer-events-none select-none">

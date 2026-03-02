@@ -4,11 +4,17 @@ import { ArrowRight } from "lucide-react";
 import adoucisseursImg from "@/assets/Adoucisseurs d'eau.webp";
 import solutionsPotableImg from "@/assets/Solutions d'eau potable.webp";
 import filtresSpecialisesImg from "@/assets/Filtres d'eau spécialisés.webp";
-import fontainesImg from "@/assets/Fontaines d'eau.webp";
+import fontainesImg from "@/assets/A13.jpg";
 import filtrationPuitsImg from "@/assets/Filtration-eau-de-puits.webp";
 import uvImg from "@/assets/Systèmes de désinfection UV.webp";
 
 const products = [
+    {
+        name: "Filtres d'eau spécialisés",
+        description: "Nos filtres sont brillamment conçus pour résoudre vos problèmes spécifiques en matière d'eau.",
+        image: filtresSpecialisesImg,
+        link: "/filtres-deau"
+    },
     {
         name: "Adoucisseurs d'eau",
         description: "Notre adoucisseur d'eau offrira à votre famille une grande quantité d'eau propre et douce à volonté.",
@@ -21,12 +27,7 @@ const products = [
         image: solutionsPotableImg,
         link: "/systeme-de-filtration-deau-potable"
     },
-    {
-        name: "Filtres d'eau spécialisés",
-        description: "Nos filtres sont brillamment conçus pour résoudre vos problèmes spécifiques en matière d'eau.",
-        image: filtresSpecialisesImg,
-        link: "/filtres-deau"
-    },
+
     {
         name: "Fontaines d'eau",
         description: "Pratiques et économiques afin que vous puissiez profiter d’une eau fraîche au meilleur goût.",

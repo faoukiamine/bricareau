@@ -61,48 +61,56 @@ const ImpactCalculator = () => {
     const moneySaved = Math.round(bottlesSaved * costPerBottle);
 
     return (
-        <div className="group relative bg-white/80 backdrop-blur-2xl p-6 rounded-[2.5rem] shadow-[0_15px_40px_rgba(0,0,0,0.04)] hover:shadow-[0_30px_60px_rgba(0,0,0,0.08)] transition-all duration-700 h-full border border-white">
-            {/* Soft Ambient Glows (Light Mode) */}
-            <div className="absolute -top-12 -right-12 w-48 h-48 bg-blue-500/5 blur-[80px] rounded-full" />
-            <div className="absolute -bottom-12 -left-12 w-48 h-48 bg-emerald-500/5 blur-[80px] rounded-full" />
+        <div className="relative group bg-white p-8 rounded-[3rem] shadow-[0_20px_50px_rgba(0,0,0,0.05)] border border-slate-100 h-full flex flex-col overflow-hidden">
+            {/* Soft background glow */}
+            <div className="absolute top-0 right-0 w-64 h-64 bg-blue-50/50 rounded-full -mr-20 -mt-20 blur-3xl opacity-60" />
 
             <div className="relative z-10 flex flex-col h-full">
-                {/* Header - More Compact */}
-                <div className="flex items-center gap-3 mb-6">
-                    <div className="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center shadow-inner group-hover:bg-blue-600 transition-all duration-500">
-                        <Leaf className="w-5 h-5 text-blue-600 group-hover:text-white transition-colors" />
+                {/* Header */}
+                <div className="flex items-center gap-4 mb-8">
+                    <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center text-white shadow-lg shadow-blue-200">
+                        <Leaf className="w-6 h-6" />
                     </div>
                     <div>
-                        <h3 className="text-lg font-bold text-slate-900 tracking-tight leading-none mb-0.5">Impact Futur</h3>
-                        <p className="text-slate-400 text-[8px] uppercase font-black tracking-[0.2em] leading-none">Éco-Simulateur</p>
+                        <h3 className="text-xl font-bold text-slate-900 tracking-tight leading-none mb-1.5">Eco-Bilan</h3>
+                        <p className="text-blue-500 text-[10px] font-black uppercase tracking-widest leading-none">Simulateur d'économie</p>
                     </div>
                 </div>
 
-                {/* Main Inputs - More Compact */}
-                <div className="space-y-3 mb-6">
-                    <div className="flex gap-3">
+                {/* Simulation Inputs */}
+                <div className="space-y-4 mb-8">
+                    <div className="grid grid-cols-2 gap-4">
                         {[
                             { label: "Adultes", value: adults, setter: setAdults },
                             { label: "Enfants", value: children, setter: setChildren }
                         ].map((input, idx) => (
-                            <div key={idx} className="flex-1 bg-slate-50/50 rounded-2xl p-3 border border-slate-100 hover:border-blue-200 transition-all text-center">
-                                <p className="text-[8px] font-black text-slate-400 uppercase tracking-widest mb-2">{input.label}</p>
-                                <div className="flex items-center justify-between gap-1">
-                                    <button onClick={() => input.setter(Math.max(0, input.value - 1))} className="w-7 h-7 rounded-full bg-white shadow-sm flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all text-slate-400"><Minus className="w-3.5 h-3.5" /></button>
-                                    <span className="text-lg font-black text-slate-900">{input.value}</span>
-                                    <button onClick={() => input.setter(Math.min(10, input.value + 1))} className="w-7 h-7 rounded-full bg-white shadow-sm flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all text-slate-400"><Plus className="w-3.5 h-3.5" /></button>
+                            <div key={idx} className="bg-slate-50/50 rounded-[2rem] p-4 border border-slate-100/80">
+                                <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest text-center mb-3">{input.label}</p>
+                                <div className="flex items-center justify-between bg-white rounded-2xl p-1 shadow-sm border border-slate-100">
+                                    <button
+                                        onClick={() => input.setter(Math.max(0, input.value - 1))}
+                                        className="w-8 h-8 rounded-xl hover:bg-slate-50 flex items-center justify-center text-slate-400 hover:text-blue-600 transition-colors active:scale-90"
+                                    >
+                                        <Minus className="w-4 h-4" />
+                                    </button>
+                                    <span className="text-xl font-bold text-slate-900">{input.value}</span>
+                                    <button
+                                        onClick={() => input.setter(Math.min(10, input.value + 1))}
+                                        className="w-8 h-8 rounded-xl hover:bg-slate-50 flex items-center justify-center text-slate-400 hover:text-blue-600 transition-colors active:scale-90"
+                                    >
+                                        <Plus className="w-4 h-4" />
+                                    </button>
                                 </div>
                             </div>
                         ))}
                     </div>
 
-                    {/* Time Selector - More Compact */}
-                    <div className="flex p-0.5 bg-slate-100/50 rounded-xl border border-slate-200/50">
+                    <div className="flex p-1 bg-slate-100/50 rounded-2xl border border-slate-200/50">
                         {[1, 5, 10].map((y) => (
                             <button
                                 key={y}
                                 onClick={() => setTimeframe(y)}
-                                className={`flex-1 py-1.5 text-[9px] font-black rounded-lg transition-all ${timeframe === y ? 'bg-white text-blue-600 shadow-sm' : 'text-slate-400 hover:text-slate-600'}`}
+                                className={`flex-1 py-2.5 text-xs font-bold rounded-xl transition-all duration-300 ${timeframe === y ? 'bg-white text-blue-600 shadow-sm transform scale-[1.02]' : 'text-slate-400 hover:text-slate-600'}`}
                             >
                                 {y} {y === 1 ? 'AN' : 'ANS'}
                             </button>
@@ -110,22 +118,38 @@ const ImpactCalculator = () => {
                     </div>
                 </div>
 
-                {/* Projection Cards - Significantly More Compact */}
-                <div className="grid grid-cols-1 gap-3 mt-auto">
-                    <div className="bg-emerald-50/50 p-4 rounded-2xl border border-emerald-100 group/stat transition-all hover:bg-emerald-50 flex items-center justify-between">
+                {/* Dynamic Results */}
+                <div className="mt-auto space-y-3">
+                    <div className="relative overflow-hidden p-6 rounded-[2.5rem] bg-emerald-50/50 border border-emerald-100 flex items-center justify-between group/res">
                         <div>
-                            <p className="text-emerald-600/60 text-[8px] font-black uppercase tracking-[0.2em] mb-0.5">Plastique Évité</p>
-                            <span className="text-2xl font-black text-slate-900 tracking-tighter">{bottlesSaved.toLocaleString()}</span>
+                            <span className="text-[10px] font-black text-emerald-600 uppercase tracking-widest block mb-1">Plastique Évité</span>
+                            <div className="flex items-baseline gap-2">
+                                <span className="text-4xl font-black text-slate-900 tracking-tighter tabular-nums">{bottlesSaved.toLocaleString()}</span>
+                                <span className="text-emerald-600/60 text-[10px] font-bold uppercase">Unités</span>
+                            </div>
                         </div>
-                        <span className="text-emerald-600 font-bold text-[9px] uppercase bg-emerald-100/50 px-2 py-1 rounded-lg">Unités</span>
+                        <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center shadow-sm border border-emerald-50/50 group-hover/res:scale-110 transition-transform">
+                            <Recycle className="w-6 h-6 text-emerald-500" />
+                        </div>
                     </div>
 
-                    <div className="bg-blue-50/50 p-4 rounded-2xl border border-blue-100 group/stat transition-all hover:bg-blue-50 flex items-center justify-between">
+                    <div className="relative overflow-hidden p-6 rounded-[2.5rem] bg-blue-50/50 border border-blue-100 flex items-center justify-between group/res">
                         <div>
-                            <p className="text-blue-600/60 text-[8px] font-black uppercase tracking-[0.2em] mb-0.5">Économies</p>
-                            <span className="text-2xl font-black text-slate-900 tracking-tighter">{moneySaved.toLocaleString()} $</span>
+                            <span className="text-[10px] font-black text-blue-600 uppercase tracking-widest block mb-1">Économies Nettes</span>
+                            <div className="flex items-baseline gap-1">
+                                <span className="text-4xl font-black text-slate-900 tracking-tighter tabular-nums">{moneySaved.toLocaleString()}</span>
+                                <span className="text-blue-600 font-bold text-2xl tracking-tighter">$</span>
+                            </div>
                         </div>
-                        <span className="text-blue-600 font-bold text-[9px] uppercase bg-blue-100/50 px-2 py-1 rounded-lg tracking-wider">Cumulés</span>
+                        <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center shadow-sm border border-blue-50/50 group-hover/res:scale-110 transition-transform">
+                            <PiggyBank className="w-6 h-6 text-blue-500" />
+                        </div>
+                    </div>
+
+                    <div className="pt-2">
+                        <p className="text-[9px] text-slate-400 text-center font-medium leading-relaxed italic">
+                            Éliminez le plastique, valorisez votre santé.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -291,19 +315,19 @@ const Fontaines = () => {
                         <div className="flex flex-wrap justify-center gap-8 mx-auto max-w-7xl">
                             {[
                                 {
-                                    title: "Distributeurs d'eau de comptoir",
+                                    title: "Distributeur d'eau de comptoir",
                                     desc: "Une solution compacte offrant une eau filtrée de qualité supérieure directement sur votre comptoir, sans encombrement.",
                                     img: countertopFountainImg,
                                     features: ["Sortie d'eau chaude, froide et tiède", "Boutons tactiles électroniques", "Comprend le premier jeu de filtres et le kit d'installation", "Homologué UL", "Double filtration certifiée NSF", "Garantie d'un an"]
                                 },
                                 {
-                                    title: "Fontaines d'eau sans bouteille",
+                                    title: "Fontaine d'eau sans bouteille",
                                     desc: "Eau fraîche et purifiée en continu, sans la corvée des bouteilles. Hydratation illimitée pour votre famille.",
                                     img: bottlelessFountainImg,
                                     features: ["Sortie d'eau chaude, froide et tiède", "Boutons tactiles électroniques", "Comprend le premier jeu de filtres et le kit d'installation", "Homologué UL", "Double filtration certifiée NSF", "Garantie d'un an"]
                                 },
                                 {
-                                    title: "Machines à glaçons",
+                                    title: "Machine à glaçons",
                                     desc: "Machines robustes produisant une glace pure et abondante pour satisfaire vos besoins en toute circonstance, sans aucune interruption.",
                                     img: iceMachineImg,
                                     features: ["Production 26lb/jour", "Auto-nettoyante", "Indicateur de niveau", "Glaçons cristallins"]
