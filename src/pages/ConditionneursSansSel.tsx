@@ -6,6 +6,8 @@ import { Button } from "@/components/ui/button";
 import heroGirl from "@/assets/cute-little-girl-washing-hands.jpg";
 import sereneLite from "@/assets/Système+de+filtration+Serene+Lite.webp";
 import conditionneurImg from "@/assets/Gemini_Generated_Image_edgz5sedgz5sedgz.png";
+import testStripImg from "@/assets/Using-a-strip-test-for-water-quality.webp";
+import applianceDamageImg from "@/assets/tarte-chauffe-eau.jpg";
 import {
   Leaf,
   ChevronRight,
@@ -398,12 +400,12 @@ const ConditionneursSansSel = () => {
                 },
                 {
                   title: "Comment le calcaire réduit la durée de vie de vos électroménagers ?",
-                  img: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=800&auto=format&fit=crop",
+                  img: applianceDamageImg,
                   link: "/calcaire-duree-vie-electromenagers",
                 },
                 {
                   title: "Comment tester la dureté de son eau à la maison ?",
-                  img: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop",
+                  img: testStripImg,
                   link: "/comment-mesurer-durete-eau-maison",
                 },
               ].map((art, i) => (

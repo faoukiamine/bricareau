@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import discoverExpertImg from "@/assets/discover_expert.jpg";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import { Button } from "@/components/ui/button";
 import {
@@ -259,7 +260,7 @@ const RO6 = () => {
                             </div>
                             <div className="lg:w-1/2 self-stretch">
                                 <img
-                                    src="/src/assets/discover_expert.jpg"
+                                    src={discoverExpertImg}
                                     alt="Expert Bricareau lors d'une consultation personnalisée pour traitement d'eau à domicile"
                                     className="w-full h-full object-cover min-h-[400px]"
                                 />

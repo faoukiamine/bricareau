@@ -129,7 +129,7 @@ const categories = [
     }
 ];
 
-const SpecializedFiltration = () => {
+const FAQ = () => {
     return (
         <div className="min-h-screen bg-slate-50">
             <Header />
@@ -150,10 +150,10 @@ const SpecializedFiltration = () => {
                     <div className="container mx-auto px-6 relative z-10">
                         <div className="max-w-3xl">
                             <h1 className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text-justify max-w-xl">
-                                <span className="font-bold text-white">Solutions spécialisées en filtration d'eau</span>
+                                <span className="font-bold text-white">Questions fréquemment posées (FAQ)</span>
                             </h1>
                             <p className="text-[20px] leading-snug opacity-90 mb-10 text-blue-100/80 max-w-xl text-justify font-light">
-                                Découvrez notre gamme complète de systèmes de traitement d'eau conçus pour répondre à tous vos besoins, de la maison au commerce.
+                                Trouvez les réponses aux questions les plus courantes sur nos produits et services.
                             </p>
                             <div className="flex flex-wrap gap-4">
                                 <NavLink to="/contact" className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-3 rounded-full transition-colors">
@@ -261,4 +261,4 @@ const SpecializedFiltration = () => {
     );
 };
 
-export default SpecializedFiltration;
+export default FAQ;

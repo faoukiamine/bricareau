@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import drinkWaterImg from "@/assets/boire-eau-robinet.jpg";
+import bathWomanImg from "@/assets/young-nude-woman-taking-relaxing-foamy-bath.jpg";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import { Button } from "@/components/ui/button";
 import {
@@ -196,7 +198,7 @@ const FiltreEauHauteEfficacite = () => {
                             <div className="lg:w-1/2">
                                 <div className="rounded-[3rem] overflow-hidden shadow-2xl">
                                     <img
-                                        src="/src/assets/boire-eau-robinet.jpg"
+                                        src={drinkWaterImg}
                                         alt="Enfant buvant une eau pure et saine filtrée par un système Bricareau HE"
                                         className="w-full h-full object-cover aspect-[4/3]"
                                     />
@@ -373,7 +375,7 @@ const FiltreEauHauteEfficacite = () => {
                             </div>
                             <div className="lg:w-1/2 self-stretch">
                                 <img
-                                    src="/src/assets/young-nude-woman-taking-relaxing-foamy-bath.jpg"
+                                    src={bathWomanImg}
                                     alt="Détente dans un bain moussant d'eau douce traitée par un adoucisseur Bricareau"
                                     className="w-full h-full object-cover min-h-[400px]"
                                 />

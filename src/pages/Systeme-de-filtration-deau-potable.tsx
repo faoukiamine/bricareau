@@ -38,6 +38,9 @@ import specializedFiltersImg from "@/assets/Filtres d'eau spécialisés.webp";
 import waterSoftenerImg from "@/assets/Adoucisseurs d'eau.webp";
 import uvSystemImg from "@/assets/Systèmes de désinfection UV.webp";
 import waterTestingImg from "@/assets/leaky-faucet-with-dripping-water-drop-conservation-concept.jpg";
+import fluorideImg from "@/assets/2147807855.jpg";
+import microplasticsImg from "@/assets/2148214464.jpg";
+import pfasImg from "@/assets/PFAS.jpg.jpg";
 
 const StationEauPotable = () => {
   const navigate = useNavigate();
@@ -462,17 +465,17 @@ const StationEauPotable = () => {
               {[
                 {
                   title: "Fluor dans l'eau : Bienfait ou Danger ?",
-                  img: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=800&auto=format&fit=crop",
+                  img: fluorideImg,
                   link: "/fluor-eau-bienfait-danger",
                 },
                 {
                   title: "Microplastiques dans l'eau du robinet : mythe ou réalité inquiétante ?",
-                  img: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=800&auto=format&fit=crop",
+                  img: microplasticsImg,
                   link: "/microplastiques-eau-robinet-realite-inquietante",
                 },
                 {
                   title: "PFAS dans l'eau du robinet : ce que vous devez savoir et comment les éliminer",
-                  img: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop",
+                  img: pfasImg,
                   link: "/pfas-eau-robinet-elimination",
                 },
               ].map((art, i) => (

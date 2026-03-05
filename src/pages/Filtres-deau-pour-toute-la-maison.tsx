@@ -19,6 +19,9 @@ import { useNavigate } from "react-router-dom";
 import React, { useEffect } from "react";
 import waterTestingImg from "@/assets/3756051.jpg";
 import specializedFiltersImg from "@/assets/Filtres d'eau spécialisés.webp";
+import ironSinkImg from "@/assets/Tutorial_Cleaning_Fragranite_Sink.avif";
+import turbidWaterImg from "@/assets/eau trouble turbide.avif";
+import carbonFilterImg from "@/assets/waterdrop-carafe-in-use.webp";
 import {
     Accordion,
     AccordionContent,
@@ -472,9 +475,9 @@ const FiltresTouteMaison = () => {
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {[
-                                { title: "Taches orange dans l'évier : Le guide complet pour éliminer le fer", img: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop", link: "/taches-orange-dans-levier-eliminer-le-fer" },
-                                { title: "Filtre au charbon actif : que filtre-t-il vraiment et quelles sont ses limites ?", img: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=800&auto=format&fit=crop", link: "/filtre-charbon-actif-capacite-limites" },
-                                { title: "Eau turbide (trouble) : d'où ça vient et quoi faire pour la clarifier", img: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=800&auto=format&fit=crop", link: "/eau-turbide-trouble-causes-clarification" }
+                                { title: "Taches orange dans l'évier : Le guide complet pour éliminer le fer", img: ironSinkImg, link: "/taches-orange-dans-levier-eliminer-le-fer" },
+                                { title: "Filtre au charbon actif : que filtre-t-il vraiment et quelles sont ses limites ?", img: carbonFilterImg, link: "/filtre-charbon-actif-capacite-limites" },
+                                { title: "Eau turbide (trouble) : d'où ça vient et quoi faire pour la clarifier", img: turbidWaterImg, link: "/eau-turbide-trouble-causes-clarification" }
                             ].map((art, i) => (
                                 <div
                                     key={i}

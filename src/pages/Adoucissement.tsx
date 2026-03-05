@@ -4,7 +4,7 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import { Button } from "@/components/ui/button";
 import heroBath from "@/assets/young-nude-woman-taking-relaxing-foamy-bath.jpeg";
 import kitchenImg from "@/assets/18036672_SIE_2720_1530_21_04_30_SIE_CRM_Dishwasher_Hand_Taking_Out_Wine_Glass_Basket_Motiv_11_0017.webp";
-import untitledImg from "@/assets/avantages conditionneurs sans sel.jpg";
+import untitledImg from "@/assets/2151469364.jpg";
 import mobileSoftenerImg from "@/assets/9-optimized.webp";
 import bathroomImg from "@/assets/2705.jpg";
 import waterTestGemini from "@/assets/Gemini_Generated_Image_rk3i02rk3i02rk3i.png";
@@ -15,6 +15,8 @@ import waterTestingBg from "@/assets/undersink_filtration_header.jpg";
 import specializedFiltersImg from "@/assets/Filtres d'eau spécialisés.webp";
 import drinkingWaterImg from "@/assets/Solutions d'eau potable.webp";
 import undersinkSystemImg from "@/assets/Système+de+filtration+Serene+Lite.webp";
+import hardWaterSignsImg from "@/assets/Signs+of+hard+water+in+your+home-640w.webp";
+import hardWaterImg from "@/assets/58279.jpg";
 import {
     ArrowRight,
     Droplets,
@@ -570,8 +572,8 @@ const Adoucissement = () => {
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {[
                                 { title: "Comment choisir votre adoucisseur d'eau ?", img: untitledImg, link: "/comment-choisir-un-adoucisseur-deau" },
-                                { title: "5 signes que vous avez besoin d'un adoucisseur", img: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=800&auto=format&fit=crop", link: "/5-signes-besoin-adoucisseur-eau" },
-                                { title: "Impact du calcaire sur vos électroménagers", img: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=800&auto=format&fit=crop", link: "/calcaire-duree-vie-electromenagers" }
+                                { title: "5 signes que vous avez besoin d'un adoucisseur", img: hardWaterSignsImg, link: "/5-signes-besoin-adoucisseur-eau" },
+                                { title: "Impact du calcaire sur vos électroménagers", img: hardWaterImg, link: "/calcaire-duree-vie-electromenagers" }
                             ].map((art, i) => (
                                 <div
                                     key={i}
@@ -579,7 +581,11 @@ const Adoucissement = () => {
                                     onClick={() => navigate(art.link)}
                                 >
                                     <div className="h-56 overflow-hidden">
-                                        <img src={art.img} alt={`${art.title} - Guide conseil en adoucissement d'eau Bricareau`} className="w-full h-full object-cover transition-transform group-hover:scale-110" />
+                                        <img
+                                            src={art.img}
+                                            alt={`${art.title} - Guide conseil en adoucissement d'eau Bricareau`}
+                                            className={`w-full h-full transition-transform duration-700 group-hover:scale-110 ${art.title === "Comment choisir votre adoucisseur d'eau ?" ? "object-contain" : "object-cover"}`}
+                                        />
                                     </div>
                                     <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
                                         <NavLink to={art.link}>
