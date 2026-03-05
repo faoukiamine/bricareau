@@ -177,7 +177,7 @@ const FiltresPuits = () => {
                     <div className="container mx-auto px-6 relative z-10">
                         <div className="max-w-2xl text-white">
                             <h1
-                                className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text-justify max-w-xl"
+                                className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white max-w-xl"
                                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                             >
                                 <span className="font-bold text-white">Filtres d'eau de puits</span> <br />
