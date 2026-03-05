@@ -29,6 +29,9 @@ import eliteROImg from "@/assets/Triple Stage Filter.jpg";
 import plusROImg from "@/assets/Double Stage Filter.jpg";
 import essentialImg from "@/assets/Single Stage Filter.jpg";
 import waterTestingImg from "@/assets/undersink_filtration_header.jpg";
+import multiStageFilterImg from "@/assets/RO undersink system.jpg";
+import medsInWaterImg from "@/assets/eau_medicaments.png";
+import undersinkVsWholeHouseImg from "@/assets/2148947324.jpg";
 
 const FiltrationSousEvier = () => {
     const navigate = useNavigate();
@@ -411,17 +414,17 @@ const FiltrationSousEvier = () => {
                             {[
                                 {
                                     title: "Filtre à eau sous l'évier vs système maison entière : lequel choisir ?",
-                                    img: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=800&auto=format&fit=crop",
+                                    img: undersinkVsWholeHouseImg,
                                     link: "/filtre-evier-vs-maison-entiere-choisir",
                                 },
                                 {
                                     title: "Système de filtration en 3 étapes vs 5 étapes : quelle différence pour votre santé ?",
-                                    img: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=800&auto=format&fit=crop",
+                                    img: multiStageFilterImg,
                                     link: "/filtration-3vs5-etapes-sante-difference",
                                 },
                                 {
                                     title: "Résidus de médicaments dans l'eau : à quel point faut-il s'inquiéter ?",
-                                    img: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop",
+                                    img: medsInWaterImg,
                                     link: "/residus-medicaments-eau-risques-solutions",
                                 },
                             ].map((art, i) => (

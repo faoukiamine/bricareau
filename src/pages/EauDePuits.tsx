@@ -26,6 +26,8 @@ import labTestImg from "@/assets/506610454-612x612-1.jpg";
 import eauDureThumb from "@/assets/9e9f1b18-7b69-4af1-9e3d-322775a1ec72.jpg";
 import rouilleThumbUpdated from "@/assets/5a4674e7-575d-4cd9-b1f2-32522f8a7072.jpg";
 import mauvaisGoutThumb from "@/assets/blog3-1.jpg";
+import coliformBacteriaImg from "@/assets/coliform_bacteria.jpg";
+import dishwasherScaleImg from "@/assets/lave vaisselle entartrée avec du calcaire.jpeg";
 
 import {
   Accordion,
@@ -710,12 +712,12 @@ const EauDePuits = () => {
                 },
                 {
                   title: "Comment le calcaire réduit la durée de vie de vos électroménagers ?",
-                  img: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=800&auto=format&fit=crop",
+                  img: dishwasherScaleImg,
                   link: "/calcaire-duree-vie-electromenagers",
                 },
                 {
                   title: "Bactéries E. coli dans votre puits",
-                  img: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop",
+                  img: coliformBacteriaImg,
                   link: "/bacteries-e-coli-eau-puits-causes-solutions",
                 },
               ].map((art, i) => (
