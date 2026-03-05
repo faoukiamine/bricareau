@@ -75,7 +75,7 @@ const Footer = () => {
               </li>
               <li>
                 <a href="/tests-eau" className="text-white/80 hover:text-white transition-colors">
-                  Test d'eau gratuit
+                  Tests d'eau
                 </a>
               </li>
               <li>

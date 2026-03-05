@@ -228,9 +228,9 @@ const ConsultationFormSection = ({ id }: { id?: string }) => {
                             {/* Progress Steps */}
                             <div className="flex items-center gap-4 md:gap-8 mb-8 overflow-x-auto pb-4 border-b border-gray-100 no-scrollbar">
                                 {[
-                                    { id: 1, label: "VOS INFOS" },
-                                    { id: 2, label: "DISPONIBILITÉ" },
-                                    { id: 3, label: "CONFIRMATION" }
+                                    { id: 1, label: "Vos informations" },
+                                    { id: 2, label: "Disponibilité" },
+                                    { id: 3, label: "Confirmation" }
                                 ].map((s) => (
                                     <div key={s.id} className={cn(
                                         "flex items-center gap-2 font-bold whitespace-nowrap transition-colors",
@@ -257,7 +257,7 @@ const ConsultationFormSection = ({ id }: { id?: string }) => {
                                                 <FormItem>
                                                     <FormLabel className="font-bold">Prénom*</FormLabel>
                                                     <FormControl>
-                                                        <Input className="h-12 bg-gray-50 border-none" placeholder="Jean" {...field} />
+                                                        <Input className="h-12 bg-gray-50 border-none" placeholder=" " {...field} />
                                                     </FormControl>
                                                     <FormMessage />
                                                 </FormItem>
@@ -266,7 +266,7 @@ const ConsultationFormSection = ({ id }: { id?: string }) => {
                                                 <FormItem>
                                                     <FormLabel className="font-bold">Nom*</FormLabel>
                                                     <FormControl>
-                                                        <Input className="h-12 bg-gray-50 border-none" placeholder="Dupont" {...field} />
+                                                        <Input className="h-12 bg-gray-50 border-none" placeholder=" " {...field} />
                                                     </FormControl>
                                                     <FormMessage />
                                                 </FormItem>
@@ -275,7 +275,7 @@ const ConsultationFormSection = ({ id }: { id?: string }) => {
                                                 <FormItem>
                                                     <FormLabel className="font-bold">Courriel*</FormLabel>
                                                     <FormControl>
-                                                        <Input type="email" className="h-12 bg-gray-50 border-none" placeholder="jean@exemple.com" {...field} />
+                                                        <Input type="email" className="h-12 bg-gray-50 border-none" placeholder=" " {...field} />
                                                     </FormControl>
                                                     <FormMessage />
                                                 </FormItem>
@@ -284,7 +284,7 @@ const ConsultationFormSection = ({ id }: { id?: string }) => {
                                                 <FormItem>
                                                     <FormLabel className="font-bold">Téléphone*</FormLabel>
                                                     <FormControl>
-                                                        <Input type="tel" className="h-12 bg-gray-50 border-none" placeholder="(514) 000-0000" {...field} />
+                                                        <Input type="tel" className="h-12 bg-gray-50 border-none" placeholder=" " {...field} />
                                                     </FormControl>
                                                     <FormMessage />
                                                 </FormItem>
@@ -294,7 +294,7 @@ const ConsultationFormSection = ({ id }: { id?: string }) => {
                                                     <FormItem>
                                                         <FormLabel className="font-bold">Adresse*</FormLabel>
                                                         <FormControl>
-                                                            <Input className="h-12 bg-gray-50 border-none" placeholder="123 rue de l'Eau" {...field} />
+                                                            <Input className="h-12 bg-gray-50 border-none" placeholder=" " {...field} />
                                                         </FormControl>
                                                         <FormMessage />
                                                     </FormItem>
@@ -305,7 +305,7 @@ const ConsultationFormSection = ({ id }: { id?: string }) => {
                                                     <FormItem>
                                                         <FormLabel className="font-bold">Ville*</FormLabel>
                                                         <FormControl>
-                                                            <Input className="h-12 bg-gray-50 border-none" placeholder="Montréal" {...field} />
+                                                            <Input className="h-12 bg-gray-50 border-none" placeholder=" " {...field} />
                                                         </FormControl>
                                                         <FormMessage />
                                                     </FormItem>
@@ -314,7 +314,7 @@ const ConsultationFormSection = ({ id }: { id?: string }) => {
                                                     <FormItem>
                                                         <FormLabel className="font-bold">Province*</FormLabel>
                                                         <FormControl>
-                                                            <Input className="h-12 bg-gray-50 border-none" placeholder="Québec" {...field} />
+                                                            <Input className="h-12 bg-gray-50 border-none" placeholder=" " {...field} />
                                                         </FormControl>
                                                         <FormMessage />
                                                     </FormItem>
@@ -323,7 +323,7 @@ const ConsultationFormSection = ({ id }: { id?: string }) => {
                                                     <FormItem>
                                                         <FormLabel className="font-bold">Code Postal*</FormLabel>
                                                         <FormControl>
-                                                            <Input className="h-12 bg-gray-50 border-none" placeholder="H1A 1A1" {...field} />
+                                                            <Input className="h-12 bg-gray-50 border-none" placeholder=" " {...field} />
                                                         </FormControl>
                                                         <FormMessage />
                                                     </FormItem>

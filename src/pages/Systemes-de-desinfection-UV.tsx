@@ -36,6 +36,9 @@ import waterTestingImg from "@/assets/Legionella-Monitoring.webp";
 import waterTasteImg from "@/assets/water-taste.jpg";
 import uvLightImg from "@/assets/Lumière UV.jpg";
 import ironRemovalImg from "@/assets/546.jpg";
+import waterSoftenerImg from "@/assets/Adoucisseurs d'eau.webp";
+import drinkingWaterImg from "@/assets/Solutions d'eau potable.webp";
+import specialFiltersImg from "@/assets/Filtres d'eau spécialisés.webp";
 
 const DesinfectionUV = () => {
     const [showAllFaqs, setShowAllFaqs] = React.useState(false);
@@ -340,7 +343,76 @@ const DesinfectionUV = () => {
                         </>
                     }
                 />
+                {/* 5. Section Associated Products */}
+            <section className="bg-white py-24">
+                <div className="container mx-auto px-4">
+                    <div className="text-center mb-16">
+                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal text-slate-900 mb-8 leading-[1.1] tracking-tighter">Découvrez les produits associés</h2>
+                        <p className="text-lg font-light leading-snug text-gray-500 max-w-2xl mx-auto text-justify">
+                            Optimisez votre expérience de traitement d'eau avec nos solutions complémentaires.
+                        </p>
+                    </div>
 
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        {[
+                            {
+                                name: "Systèmes de filtration d'eau spécialisés",
+                                desc: "Nos filtres spécialisés sont conçus pour cibler et éliminer efficacement les contaminants spécifiques de votre eau de puits.",
+                                img: specialFiltersImg,
+                                link: "/Filtres-deau"
+                            },
+                            {
+                                name: "Adoucisseurs d'eau",
+                                desc: "Éliminez le calcaire pour une peau douce, un linge éclatant et une protection durable de vos installations.",
+                                img: waterSoftenerImg,
+                                link: "/adoucisseurs-eau-de-puits"
+                            },
+                            {
+                                name: "Stations d'eau potable",
+                                desc: "Une eau de qualité minérale directement à votre évier, pour une hydratation pure et sans déchets plastiques.",
+                                img: drinkingWaterImg,
+                                link: "/systeme-de-filtration-deau-potable"
+                            }
+
+                        ].map((prod, i) => (
+                            <div
+                                key={i}
+                                className="group bg-white rounded-3xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full cursor-pointer"
+                                onClick={() => window.location.href = prod.link}
+                            >
+                                <div className="relative h-80 overflow-hidden bg-slate-50 flex items-center justify-center p-12">
+                                    <img
+                                        src={prod.img}
+                                        alt={`${prod.name} - Solution Bricareau pour une eau pure et sans calcaire partout`}
+                                        className="max-h-full object-contain group-hover:scale-110 transition-transform duration-700 mix-blend-multiply"
+                                    />
+                                </div>
+                                <div className="p-8 space-y-4 flex flex-col flex-grow border-t-2 border-transparent group-hover:border-blue-600 transition-colors">
+                                    <h3
+                                        className="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors tracking-tight text-center"
+                                        style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                    >
+                                        {prod.name}
+                                    </h3>
+                                    <p
+                                        className="text-[18px] leading-[25px] text-slate-500 font-light flex-grow text-justify"
+                                        style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                    >
+                                        {prod.desc}
+                                    </p>
+                                    <div
+                                        className="inline-flex items-center gap-2 text-blue-600 font-bold text-xs tracking-widest uppercase mt-4 group-hover:underline self-end"
+                                        style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                    >
+                                        <span></span>
+                                        <ArrowRight className="h-6 w-6 transform group-hover:translate-x-1 transition-transform" />
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
 
 
                 {/* 8. FAQ Section */}

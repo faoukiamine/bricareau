@@ -34,6 +34,9 @@ import { useNavigate } from "react-router-dom";
 import waterTestingImg from "@/assets/2147800429.jpg";
 import residentialWaterSoftenerImg from "@/assets/residential-water-softener.png";
 import waterSoftenerImg from "@/assets/Adoucisseurs d'eau.webp";
+import specialFiltersImg from "@/assets/Filtres d'eau spécialisés.webp";
+import uvSystemImg2 from "@/assets/VH200-F10-265x300.jpg";
+import drinkingWaterImg from "@/assets/Solutions d'eau potable.webp";
 import {
     Accordion,
     AccordionContent,
@@ -439,7 +442,76 @@ const AdoucisseursEauDePuits = () => {
                     }
                 />
 
-
+                {/* 5. Section Associated Products */}
+                <section className="bg-white py-24">
+                         <div className="container mx-auto px-4">
+                                    <div className="text-center mb-16">
+                                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal text-slate-900 mb-8 leading-[1.1] tracking-tighter">Découvrez les produits associés</h2>
+                                        <p className="text-lg font-light leading-snug text-gray-500 max-w-2xl mx-auto text-justify">
+                                            Optimisez votre expérience de traitement d'eau avec nos solutions complémentaires.
+                                        </p>
+                                    </div>
+                
+                                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                                        {[
+                                            {
+                                name: "Systèmes de filtration d'eau spécialisés",
+                                desc: "Nos filtres spécialisés sont conçus pour cibler et éliminer efficacement les contaminants spécifiques de votre eau de puits.",
+                                img: specialFiltersImg,
+                                link: "/Filtres-deau"
+                            },
+                                            {
+                                                name: "Systèmes de désinfection UV",
+                                                desc: "Utilisés pour la stérilisation contre les bactéries, les virus, les coliformes, l'E.Coli, le Cryptosporidium,...",
+                                                img: uvSystemImg2,
+                                                link: "/systemes-de-desinfection-UV"
+                                            },
+                                            {
+                                                name: "Stations d'eau potable",
+                                                desc: "Une eau de qualité minérale directement à votre évier, pour une hydratation pure et sans déchets plastiques.",
+                                                img: drinkingWaterImg,
+                                                link: "/systeme-de-filtration-deau-potable"
+                                            }
+                
+                                        ].map((prod, i) => (
+                                            <div
+                                                key={i}
+                                                className="group bg-white rounded-3xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full cursor-pointer"
+                                                onClick={() => window.location.href = prod.link}
+                                            >
+                                                <div className="relative h-80 overflow-hidden bg-slate-50 flex items-center justify-center p-12">
+                                                    <img
+                                                        src={prod.img}
+                                                        alt={`${prod.name} - Solution Bricareau pour une eau pure et sans calcaire partout`}
+                                                        className="max-h-full object-contain group-hover:scale-110 transition-transform duration-700 mix-blend-multiply"
+                                                    />
+                                                </div>
+                                                <div className="p-8 space-y-4 flex flex-col flex-grow border-t-2 border-transparent group-hover:border-blue-600 transition-colors">
+                                                    <h3
+                                                        className="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors tracking-tight text-center"
+                                                        style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                                    >
+                                                        {prod.name}
+                                                    </h3>
+                                                    <p
+                                                        className="text-[18px] leading-[25px] text-slate-500 font-light flex-grow text-justify"
+                                                        style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                                    >
+                                                        {prod.desc}
+                                                    </p>
+                                                    <div
+                                                        className="inline-flex items-center gap-2 text-blue-600 font-bold text-xs tracking-widest uppercase mt-4 group-hover:underline self-end"
+                                                        style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                                    >
+                                                        <span></span>
+                                                        <ArrowRight className="h-6 w-6 transform group-hover:translate-x-1 transition-transform" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            </section>
 
                 {/* 5. CTA Section */}
                 <section className="bg-primary py-16 md:py-20">
