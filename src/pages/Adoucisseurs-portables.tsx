@@ -24,7 +24,7 @@ import { Button } from "@/components/ui/button";
 import { NavLink } from "@/components/NavLink";
 import ConsultationFormSection from "@/components/ConsultationFormSection";
 import heroPortables from "@/assets/sub-category-dryer.webp";
-import heroBg from "@/assets/csm_visuel1_920x630_0_09518aee48.jpg";
+import heroBg from "@/assets/unnamed (4).jpg";
 import waterSoftenerImg from "@/assets/Adoucisseurs d'eau.webp";
 import drinkingWaterImg from "@/assets/Solutions d'eau potable.webp";
 import specialFiltersImg from "@/assets/Filtres d'eau spécialisés.webp";
@@ -57,7 +57,7 @@ const AdoucisseursPortables = () => {
                     <img
                         src={heroBg}
                         alt="Service d'échange et livraison d'adoucisseurs d'eau portables Bricareau au Québec et Canada"
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover object-[center_30%]"
                     />
                     <div className="absolute inset-0 bg-black/40 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-white via-white/10 to-transparent" />
@@ -320,7 +320,7 @@ const AdoucisseursPortables = () => {
                                         {prod.name}
                                     </h3>
                                     <p
-                                        className="text-slate-500 font-light leading-snug flex-grow text-justify"
+                                        className="text-[18px] leading-[25px] text-slate-500 font-light flex-grow text-justify"
                                         style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                                     >
                                         {prod.desc}

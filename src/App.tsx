@@ -76,6 +76,7 @@ import NiveauDureteBesoin from "./pages/Blog pages/niveau-durete-eau-besoin-adou
 import MesurerDureteMaison from "./pages/Blog pages/comment-mesurer-durete-eau-maison";
 import SignesBesoinAbsoluAdoucisseur from "./pages/Blog pages/les-signes-absolument-besoin-adoucisseur-eau";
 import AdoucisseurSelVsSansSelEfficacite from "./pages/Blog pages/adoucisseur-eau-sel-vs-sans-sel-efficacite";
+import RadonEtUraniumPuitsPrives from "./pages/Blog pages/radon-et-uranium-dans-les-puits-prives";
 
 import NotFound from "./pages/NotFound";
 
@@ -159,6 +160,7 @@ const App = () => (
           <Route path="/comment-mesurer-durete-eau-maison" element={<MesurerDureteMaison />} />
           <Route path="/les-signes-absolument-besoin-adoucisseur-eau" element={<SignesBesoinAbsoluAdoucisseur />} />
           <Route path="/adoucisseur-eau-sel-vs-sans-sel-efficacite" element={<AdoucisseurSelVsSansSelEfficacite />} />
+          <Route path="/radon-et-uranium-dans-les-puits-prives" element={<RadonEtUraniumPuitsPrives />} />
 
           <Route path="/filtres-de-remplacement" element={<FiltresDeRemplacement />} />
 

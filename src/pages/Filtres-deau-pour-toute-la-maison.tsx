@@ -158,12 +158,10 @@ const FiltresTouteMaison = () => {
                     <div className="container mx-auto px-6 relative z-10">
                         <div className="max-w-2xl text-white">
                             <h1
-                                className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text-justify max-w-xl"
+                                className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white max-w-xl"
                                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                             >
-                                <span className="font-bold text-white">Filtres d'eau toute la maison</span> <br />
-                                <span className="font-bold text-white">Protection intégrale au point d'entrée.</span>
-                            </h1>
+                                <span className="font-bold text-white">Filtres d'eau pour toute la maison, une protection intégrale au point d'entrée.</span>                           </h1>
                             <p className="text-lg font-light leading-snug text-white/95 mb-8 max-w-xl text-justify">
                                 Éliminez le chlore, le fer et les sédiments de chaque goutte d'eau qui entre dans votre propriété. Nos systèmes de filtration intégrés protègent votre santé, votre peau et vos appareils électroménagers.
                             </p>
@@ -279,7 +277,7 @@ const FiltresTouteMaison = () => {
                                             {p.name}
                                         </h3>
                                         <p
-                                            className="text-slate-500 font-light leading-snug flex-grow text-justify"
+                                            className="text-[18px] leading-[25px] text-slate-500 font-light flex-grow text-justify"
                                             style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                                         >
                                             {p.desc}
@@ -474,14 +472,14 @@ const FiltresTouteMaison = () => {
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {[
-                                { title: "Comment traiter le fer dans l'eau", img: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop" },
-                                { title: "Éliminer l'odeur de soufre", img: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=800&auto=format&fit=crop" },
-                                { title: "Guide sur l'eau acide et le pH", img: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=800&auto=format&fit=crop" }
+                                { title: "Taches orange dans l'évier : Le guide complet pour éliminer le fer", img: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop", link: "/taches-orange-dans-levier-eliminer-le-fer" },
+                                { title: "Filtre au charbon actif : que filtre-t-il vraiment et quelles sont ses limites ?", img: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=800&auto=format&fit=crop", link: "/filtre-charbon-actif-capacite-limites" },
+                                { title: "Eau turbide (trouble) : d'où ça vient et quoi faire pour la clarifier", img: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=800&auto=format&fit=crop", link: "/eau-turbide-trouble-causes-clarification" }
                             ].map((art, i) => (
                                 <div
                                     key={i}
                                     className="group bg-white rounded-3xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full cursor-pointer"
-                                    onClick={() => navigate("#")}
+                                    onClick={() => navigate(art.link || "#")}
                                 >
                                     <div className="h-56 overflow-hidden">
                                         <img
@@ -494,7 +492,7 @@ const FiltresTouteMaison = () => {
                                         <h4 className="text-xl font-medium mb-4 group-hover:text-blue-600 transition-colors tracking-tight">{art.title}</h4>
                                         <div className="mt-auto">
                                             <NavLink
-                                                to="#"
+                                                to={art.link || "#"}
                                                 className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-sm"
                                             >
                                                 Lire <ChevronRight className="h-4 w-4 transform group-hover:translate-x-1 transition-transform" />

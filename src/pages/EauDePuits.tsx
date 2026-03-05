@@ -690,58 +690,60 @@ const EauDePuits = () => {
         </section>
 
         {/* 11. Resources Section */}
-        <section className="py-24 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="text-left mb-16">
-              <h2
-                className="text-slate-900 tracking-tighter mb-8 text-left"
-                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
-              >
-                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">Ressources</span>
-              </h2>
-              <div className="w-24 h-1 bg-blue-600 mb-8"></div>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {[
-                {
-                  title: "Comprendre les minéraux de votre puits",
-                  img: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop",
-                },
-                {
-                  title: "L'importance de la filtration UV",
-                  img: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=800&auto=format&fit=crop",
-                },
-                {
-                  title: "Entretien de votre système Bricareau",
-                  img: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=800&auto=format&fit=crop",
-                },
-              ].map((art, i) => (
-                <div
-                  key={i}
-                  className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer group"
-                >
-                  <div className="h-56 overflow-hidden">
-                    <img
-                      src={art.img}
-                      alt={`${art.title} - Guide expert Bricareau sur l'eau de puits`}
-                      className="w-full h-full object-cover transition-transform group-hover:scale-110"
-                    />
-                  </div>
-                  <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors">
-                    <h4 className="text-xl font-medium mb-4">{art.title}</h4>
-                    <NavLink
-                      to="#"
-                      className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-sm"
-                    >
-                      Lire <ChevronRight className="h-4 w-4" />
-                    </NavLink>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
+        
+                  <section className="py-24 bg-gray-50">
+                           <div className="container mx-auto px-4">
+                             <div className="text-left mb-16">
+                               <h2
+                                 className="text-slate-900 tracking-tighter mb-8 text-left"
+                                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                               >                                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">Ressources</span>
+                               </h2>
+                               <div className="w-24 h-1 bg-blue-600"></div>
+                             </div>
+                             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                               {[
+                                 {
+                                   title: "Contaminants invisibles dans votre puits",
+                                   img: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=800&auto=format&fit=crop",
+                                   link: "/contaminants-invisibles-eau-puits",
+                                 },
+                                 {
+                                   title: "Comment le calcaire réduit la durée de vie de vos électroménagers ?",
+                                   img: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=800&auto=format&fit=crop",
+                                   link: "/calcaire-duree-vie-electromenagers",
+                                 },
+                                 {
+                                   title: "Bactéries E. coli dans votre puits",
+                                   img: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop",
+                                   link: "/bacteries-e-coli-eau-puits-causes-solutions",
+                                 },
+                               ].map((art, i) => (
+                                 <NavLink
+                                   key={i}
+                                   to={art.link || "#"}
+                                   className="group bg-white rounded-3xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full block cursor-pointer"
+                                 >
+                                   <div className="h-56 overflow-hidden">
+                                     <img
+                                       src={art.img}
+                                       alt={`${art.title} - Guide expert Bricareau`}
+                                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                     />
+                                   </div>
+                                   <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
+                                     <h4 className="text-xl font-medium mb-4 group-hover:text-blue-600 transition-colors tracking-tight">{art.title}</h4>
+                                     <div className="mt-auto">
+                                       <span className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-sm">
+                                         Lire <ChevronRight className="h-4 w-4 transform group-hover:translate-x-1 transition-transform" />
+                                       </span>
+                                     </div>
+                                   </div>
+                                 </NavLink>
+                               ))}
+                             </div>
+                           </div>
+                         </section>
         {/* 12. Consultation Form Section */}
         <ConsultationFormSection id="consultation" />
       </main>

@@ -502,9 +502,9 @@ const FiltresPuits = () => {
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {[
-                                { title: "Taches orange dans l'évier : Le guide complet pour éliminer le fer de votre eau", path: "/taches-orange-dans-levier-eliminer-le-fer", img: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop" },
+                                { title: "Radon et uranium dans les puits privés : risques réels et solutions efficaces", path: "/radon-et-uranium-dans-les-puits-prives", img: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop" },
                                 { title: "Pourquoi mon eau sent l'odeur des œufs pourris ?", path: "/pourquoi-mon-eau-sent-l-odeur-des-oeufs-pourris", img: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=800&auto=format&fit=crop" },
-                                { title: "Guide sur l'eau acide et le pH", path: "#", img: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=800&auto=format&fit=crop" }
+                                { title: "Manganèse, fer et eau brune : les remèdes", path: "/manganese-fer-eau-brune-remedes", img: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=800&auto=format&fit=crop" }
                             ].map((art, i) => (
                                 <div
                                     key={i}

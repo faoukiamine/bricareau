@@ -127,7 +127,7 @@ const Header = () => {
       promo: {
         title: "Une eau parfaite commencence par une analyse rigoureuse.",
         image: promoImage2,
-        link: "/test-eau"
+        link: "/tests-eau"
       }
     },
     {
@@ -163,7 +163,7 @@ const Header = () => {
       promo: {
         title: "Protégez votre famille des contaminants invisibles qui peuvent avoir des effets à long terme",
         image: promoImage3,
-        link: "/test-eau"
+        link: "/tests-eau"
       }
     },
     {

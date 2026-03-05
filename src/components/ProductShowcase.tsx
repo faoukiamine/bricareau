@@ -59,8 +59,8 @@ const ProductShowcase = () => {
                         className="text-slate-900 tracking-tighter scroll-mt-[120px]"
                         style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                     >
-                        <span className="text-[32px] md:text-[60px] font-light leading-[1.2] md:leading-[60px] block">Solutions d'adoucissement</span>
-                        <span className="text-[32px] md:text-[60px] font-medium leading-[1.2] md:leading-[60px] block">et de filtration de l'eau</span>
+                        <span className="text-[32px] md:text-[60px] font-light leading-[1.2] md:leading-[60px] block">Solutions résidentielles</span>
+                        <span className="text-[32px] md:text-[60px] font-medium leading-[1.2] md:leading-[60px] block">de traitement de l'eau</span>
                     </h2>
                 </div>
 
@@ -90,7 +90,7 @@ const ProductShowcase = () => {
                                     {product.name}
                                 </h3>
                                 <p
-                                    className="text-slate-500 font-light leading-snug flex-grow text-justify"
+                                    className="text-[18px] leading-[25px] text-slate-500 font-light flex-grow text-justify"
                                     style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                                 >
                                     {product.description}

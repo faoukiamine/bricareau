@@ -385,30 +385,49 @@ const ConditionneursSansSel = () => {
               <h2
                 className="text-slate-900 tracking-tighter mb-8 text-left"
                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
-              >
-                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">Ressources</span>
+              >                                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">Ressources</span>
               </h2>
               <div className="w-24 h-1 bg-blue-600"></div>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {resources.map((res, idx) => (
-                <div key={idx} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer group flex flex-col h-full border border-gray-100">
+              {[
+                {
+                  title: "Adoucisseur à sel vs sans sel : Lequel est vraiment efficace ?",
+                  img: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=800&auto=format&fit=crop",
+                  link: "/adoucisseur-eau-sel-vs-sans-sel-efficacite",
+                },
+                {
+                  title: "Comment le calcaire réduit la durée de vie de vos électroménagers ?",
+                  img: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=800&auto=format&fit=crop",
+                  link: "/calcaire-duree-vie-electromenagers",
+                },
+                {
+                  title: "Comment tester la dureté de son eau à la maison ?",
+                  img: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop",
+                  link: "/comment-mesurer-durete-eau-maison",
+                },
+              ].map((art, i) => (
+                <NavLink
+                  key={i}
+                  to={art.link || "#"}
+                  className="group bg-white rounded-3xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full block cursor-pointer"
+                >
                   <div className="h-56 overflow-hidden">
                     <img
-                      src={res.image}
-                      alt={`${res.title} - Expertise Bricareau en traitement d'eau sans sel`}
-                      className="w-full h-full object-cover transition-transform group-hover:scale-110"
+                      src={art.img}
+                      alt={`${art.title} - Guide expert Bricareau`}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />
                   </div>
                   <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
-                    <h3 className="text-xl font-medium mb-4 group-hover:text-blue-600 transition-colors">{res.title}</h3>
-                    <p className="text-slate-500 text-sm leading-snug mb-6 flex-grow">{res.description}</p>
-                    <div className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-sm">
-                      Lire <ChevronRight className="h-4 w-4" />
+                    <h4 className="text-xl font-medium mb-4 group-hover:text-blue-600 transition-colors tracking-tight">{art.title}</h4>
+                    <div className="mt-auto">
+                      <span className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-sm">
+                        Lire <ChevronRight className="h-4 w-4 transform group-hover:translate-x-1 transition-transform" />
+                      </span>
                     </div>
                   </div>
-                </div>
+                </NavLink>
               ))}
             </div>
           </div>

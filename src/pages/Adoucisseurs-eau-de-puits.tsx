@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import { Button } from "@/components/ui/button";
 import heroBath from "@/assets/kid-playing-bathtub.jpg";
-import heroDesktop from "@/assets/hero-image.jpg";
+import heroDesktop from "@/assets/family-preparing-dinner-together.jpg";
 import {
     ArrowRight,
 
@@ -184,14 +184,14 @@ const AdoucisseursEauDePuits = () => {
 
             <main>
                 {/* 1.Hero Section */}
-                <section className="relative h-[850px] flex items-center overflow-hidden -mt-[104px] pt-[104px]">
+                <section className="relative h-[750px] md:h-[800px] flex items-center overflow-hidden -mt-[104px] pt-[104px]">
                     <div className="absolute inset-0 z-0">
                         <picture>
                             <source media="(max-width: 768px)" srcSet={heroBath} />
                             <img
                                 src={heroDesktop}
                                 alt="Bain d'enfant dans une eau de puits douce et saine - Adoucisseur d'eau Bricareau"
-                                className="w-full h-full object-cover"
+                                className="w-full h-full object-cover object-[center_30%]"
                             />
                         </picture>
                         <div className="absolute inset-0 bg-black/40 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
@@ -516,7 +516,7 @@ const AdoucisseursEauDePuits = () => {
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {[
-                                { title: "Comment choisir son adoucisseur d'eau ?", img: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop", link: "/comment-choisir-un-adoucisseur-deau" },
+                                { title: "Comment choisir votre adoucisseur d'eau ?", img: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop", link: "/comment-choisir-un-adoucisseur-deau" },
                                 { title: "5 signes que vous avez besoin d'un adoucisseur", img: residentialWaterSoftenerImg, link: "/5-signes-besoin-adoucisseur-eau" },
                                 { title: "Impact du calcaire sur vos électroménagers", img: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=800&auto=format&fit=crop", link: "/calcaire-duree-vie-electromenagers" }
                             ].map((art, i) => (

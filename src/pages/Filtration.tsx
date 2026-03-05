@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { NavLink } from "@/components/NavLink";
-import heroFiltration from "@/assets/5846952.jpg";
+import heroFiltration from "@/assets/2149890905.jpg";
 import drinkingWaterImg from "@/assets/Solutions d'eau potable.webp";
 import specializedFiltersImg from "@/assets/Filtres d'eau spécialisés.webp";
 import teenagerShowerImg from "@/assets/teenager-taking-shower-reduce-hangover-effect.jpg";
@@ -601,22 +601,25 @@ const Filtration = () => {
                         </div>                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {[
                                 {
-                                    title: "Comment choisir son filtre ?",
+                                    title: "Filtre sous évier ou maison entière : comment choisir ?",
                                     img: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=800&auto=format&fit=crop",
+                                    link: "/filtre-evier-vs-maison-entiere-choisir"
                                 },
                                 {
-                                    title: "Les bénéfices pour la santé",
+                                    title: "L'osmose inverse : le guide ultime pour votre famille",
                                     img: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=800&auto=format&fit=crop",
+                                    link: "/osmose-inverse-domicile-meilleur-systeme-famille"
                                 },
                                 {
-                                    title: "Guide de l'osmose inverse",
+                                    title: "PFAS et contaminants : comment protéger votre eau",
                                     img: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop",
+                                    link: "/pfas-eau-robinet-elimination"
                                 },
                             ].map((art, i) => (
-                                <div
+                                <NavLink
                                     key={i}
+                                    to={art.link}
                                     className="group bg-white rounded-3xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full cursor-pointer"
-                                    onClick={() => window.location.href = "#"}
                                 >
                                     <div className="h-56 overflow-hidden">
                                         <img
@@ -628,15 +631,12 @@ const Filtration = () => {
                                     <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
                                         <h4 className="text-xl font-medium mb-4 group-hover:text-blue-600 transition-colors tracking-tight">{art.title}</h4>
                                         <div className="mt-auto">
-                                            <NavLink
-                                                to="#"
-                                                className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-sm"
-                                            >
+                                            <span className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-sm">
                                                 Lire <ChevronRight className="h-4 w-4 transform group-hover:translate-x-1 transition-transform" />
-                                            </NavLink>
+                                            </span>
                                         </div>
                                     </div>
-                                </div>
+                                </NavLink>
                             ))}
                         </div>
                     </div>

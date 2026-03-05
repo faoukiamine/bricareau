@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useEffect } from "react";
 import eauOdeurImg from "@/assets/eau-odeur-oeufs-pourris.png";
-import filtrationSystemImg from "@/assets/systeme-filtration-soufre.png";
+import filtrationSystemImg from "@/assets/Filtration-eau-de-puits.webp";
 import { Button } from "@/components/ui/button";
 import { Phone, ArrowRight } from "lucide-react";
 

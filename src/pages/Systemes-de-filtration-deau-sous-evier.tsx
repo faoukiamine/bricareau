@@ -410,22 +410,25 @@ const FiltrationSousEvier = () => {
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {[
                                 {
-                                    title: "Eau municipale vs Osmose inverse",
+                                    title: "Filtre à eau sous l'évier vs système maison entière : lequel choisir ?",
                                     img: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=800&auto=format&fit=crop",
+                                    link: "/filtre-evier-vs-maison-entiere-choisir",
                                 },
                                 {
-                                    title: "Le guide complet de l'eau alcaline",
+                                    title: "Système de filtration en 3 étapes vs 5 étapes : quelle différence pour votre santé ?",
                                     img: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=800&auto=format&fit=crop",
+                                    link: "/filtration-3vs5-etapes-sante-difference",
                                 },
                                 {
-                                    title: "Maintenance préventive de votre osmoseur",
+                                    title: "Résidus de médicaments dans l'eau : à quel point faut-il s'inquiéter ?",
                                     img: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop",
+                                    link: "/residus-medicaments-eau-risques-solutions",
                                 },
                             ].map((art, i) => (
-                                <div
+                                <NavLink
                                     key={i}
-                                    className="group bg-white rounded-3xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full cursor-pointer"
-                                    onClick={() => navigate("#")}
+                                    to={art.link || "#"}
+                                    className="group bg-white rounded-3xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full block cursor-pointer"
                                 >
                                     <div className="h-56 overflow-hidden">
                                         <img
@@ -437,15 +440,12 @@ const FiltrationSousEvier = () => {
                                     <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
                                         <h4 className="text-xl font-medium mb-4 group-hover:text-blue-600 transition-colors tracking-tight">{art.title}</h4>
                                         <div className="mt-auto">
-                                            <NavLink
-                                                to="#"
-                                                className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-sm"
-                                            >
+                                            <span className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-sm">
                                                 Lire <ChevronRight className="h-4 w-4 transform group-hover:translate-x-1 transition-transform" />
-                                            </NavLink>
+                                            </span>
                                         </div>
                                     </div>
-                                </div>
+                                </NavLink>
                             ))}
                         </div>
                     </div>

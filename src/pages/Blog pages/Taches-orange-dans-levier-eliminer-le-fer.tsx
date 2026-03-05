@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useEffect } from "react";
 import tachesOrangeImg from "@/assets/taches-orange-evier.png";
-import filtrationFerImg from "@/assets/systeme-filtration-fer.png";
+import filtrationFerImg from "@/assets/Filtration-eau-de-puits.webp";
 import { Button } from "@/components/ui/button";
 import { Phone, ArrowRight, CheckCircle2 } from "lucide-react";
 

@@ -81,7 +81,7 @@ const BetterWaterStats = () => {
                                         <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors tracking-tight">
                                             {item.title}
                                         </h3>
-                                        <p className="text-lg text-slate-400 font-light leading-snug max-w-xl text-justify">
+                                        <p className="text-[18px] leading-[25px] text-slate-400 font-light max-w-xl text-justify">
                                             {item.desc}
                                         </p>
                                     </div>

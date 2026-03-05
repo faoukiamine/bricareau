@@ -569,7 +569,7 @@ const Adoucissement = () => {
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {[
-                                { title: "Comment choisir son adoucisseur d'eau ?", img: untitledImg, link: "/comment-choisir-un-adoucisseur-deau" },
+                                { title: "Comment choisir votre adoucisseur d'eau ?", img: untitledImg, link: "/comment-choisir-un-adoucisseur-deau" },
                                 { title: "5 signes que vous avez besoin d'un adoucisseur", img: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=800&auto=format&fit=crop", link: "/5-signes-besoin-adoucisseur-eau" },
                                 { title: "Impact du calcaire sur vos électroménagers", img: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=800&auto=format&fit=crop", link: "/calcaire-duree-vie-electromenagers" }
                             ].map((art, i) => (
