@@ -167,37 +167,6 @@ const Header = () => {
       }
     },
     {
-      name: "Fontaines d'eau & Machines à glace",
-      href: "/fontaines",
-      hasMegamenu: true,
-      megamenuCards: [
-        {
-          icon: Waves,
-          title: "Distributeurs d'eau de comptoir",
-          description: "Solutions tout-en-un offrant eau froide, chaude et glace dans un seul appareil.",
-          href: "/distributeurs-eau-comptoir"
-        },
-        {
-          icon: GlassWater,
-          title: "Refroidisseurs d'eau sans bouteille",
-          description: "Eau fraîche et filtrée à la demande pour votre bureau ou votre maison.",
-          href: "/refroidisseurs"
-        },
-        {
-          icon: Snowflake,
-          title: "Machines à glaçons",
-          description: "Glace propre et abondante pour toutes vos occasions et besoins quotidiens.",
-          href: "/machines-a-glace"
-        },
-
-      ],
-      promo: {
-        title: "Profitez d'une eau pure et revitalisante au quotidien",
-        image: promoImage,
-        link: "/systeme-de-filtration-deau-potable"
-      }
-    },
-    {
       name: "Eau de puits",
       href: "/eau-de-puits",
       hasMegamenu: true,
@@ -231,6 +200,37 @@ const Header = () => {
         title: "Des tests d'eau précis pour une tranquillité d'esprit totale.",
         image: promoImage4,
         link: "/tests-eau"
+      }
+    },
+    {
+      name: "Fontaines d'eau",
+      href: "/fontaines",
+      hasMegamenu: true,
+      megamenuCards: [
+        {
+          icon: Waves,
+          title: "Distributeurs d'eau de comptoir",
+          description: "Solutions tout-en-un offrant eau froide, chaude et glace dans un seul appareil.",
+          href: "/distributeurs-eau-comptoir"
+        },
+        {
+          icon: GlassWater,
+          title: "Refroidisseurs d'eau sans bouteille",
+          description: "Eau fraîche et filtrée à la demande pour votre bureau ou votre maison.",
+          href: "/refroidisseurs"
+        },
+        {
+          icon: Snowflake,
+          title: "Machines à glaçons",
+          description: "Glace propre et abondante pour toutes vos occasions et besoins quotidiens.",
+          href: "/machines-a-glace"
+        },
+
+      ],
+      promo: {
+        title: "Profitez d'une eau pure et revitalisante au quotidien",
+        image: promoImage,
+        link: "/systeme-de-filtration-deau-potable"
       }
     },
     {
