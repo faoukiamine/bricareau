@@ -1,6 +1,5 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
+import BlogLayout from "@/components/BlogLayout";
 import { Button } from "@/components/ui/button";
 import { Phone, ShieldAlert, Microscope, Waves, Droplets, Info, FlaskConical, MicroscopeIcon as Microscope2, Search, Zap, Crosshair, Sparkles } from "lucide-react";
 
@@ -13,48 +12,36 @@ const ContaminantsInvisiblesPuits = () => {
         }
     }, []);
 
-    return (
-        <div className="min-h-screen bg-slate-50 font-sans text-slate-800 leading-relaxed font-light">
-            <Header />
-            <main className="pt-20">
-                {/* Hero Section */}
-                <section className="relative py-24 bg-teal-900 text-white overflow-hidden">
-                    <div className="absolute inset-0 opacity-20">
-                        <img
-                            src="https://images.unsplash.com/photo-1594411133519-2189874cb3d1?q=80&w=2000&auto=format&fit=crop"
-                            alt="Vue aérienne d'un puits en forêt"
-                            className="w-full h-full object-cover"
-                        />
-                    </div>
-                    <div className="container mx-auto px-4 relative z-10 text-center">
-                        <span className="inline-block px-4 py-1 rounded-full bg-teal-600/20 border border-teal-400/30 text-teal-300 text-sm font-bold mb-6 tracking-widest uppercase">
-                            Sécurité Des Eaux Souterraines
-                        </span>
-                        <h1 className="text-4xl md:text-7xl font-bold mb-8 leading-tight tracking-tighter">
-                            Contaminants <span className="text-teal-400">invisibles</span> dans votre puits
-                        </h1>
-                        <p className="text-xl md:text-2xl text-slate-200 font-light mb-10 leading-relaxed max-w-4xl mx-auto italic">
-                            Par-delà la limpidité, découvrez les menaces biologiques et chimiques silencieuses qui exigent une vigilance professionnelle rigoureuse.
-                        </p>
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-10 h-16 font-bold" asChild>
-                                <a href="/tests-eau">Expertise d'eau de puits immédiate</a>
-                            </Button>
-                            <Button size="lg" variant="outline" className="text-white border-white bg-white/10 hover:bg-white/20 rounded-full px-10 h-16 font-bold backdrop-blur-sm" asChild>
-                                <a href="tel:18552649328" className="flex items-center gap-2">
-                                    <Phone className="h-5 w-5" /> 1-855-264-9328
-                                </a>
-                            </Button>
-                        </div>
-                    </div>
-                </section>
+    const tocItems = [
+        {
+                "id": "section-1",
+                "title": "La menace biologique : Bactéries et Virus"
+        },
+        {
+                "id": "section-2",
+                "title": "Nitrates et Nitrites : Le danger pour les nourrissons"
+        },
+        {
+                "id": "section-3",
+                "title": "Radon : Le gaz radioactif indétectable"
+        },
+        {
+                "id": "section-4",
+                "title": "Arsenic et Uranium : Les minéraux de profondeur"
+        },
+        {
+                "id": "section-5",
+                "title": "Fréquence des tests : Votre protocole de sécurité"
+        }
+];
 
-                {/* Article Intro Content */}
-                <article className="py-20 lg:py-32 bg-white">
-                    <div className="container mx-auto px-4">
-                        <div className="max-w-4xl mx-auto">
-                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 text-justify leading-relaxed">
-                                <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-teal-600 pl-8 italic">
+    return (
+        <BlogLayout 
+            title="Contaminants invisibles dans votre puits" 
+            headerImage={"https://images.unsplash.com/photo-1594411133519-2189874cb3d1?q=80&w=2000&auto=format&fit=crop"}
+            tocItems={tocItems}
+        >
+            <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-teal-600 pl-8 italic">
                                     La limpidité de l'eau est une illusion de pureté. Si une eau trouble ou malodorante signale immédiatement un problème, statistiquement, les menaces les plus graves pour votre santé sont totalement imperceptibles : sans odeur, sans goût et d'une transparence parfaite.
                                 </p>
 
@@ -64,7 +51,7 @@ const ContaminantsInvisiblesPuits = () => {
                                     </p>
                                 </div>
 
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">1. La menace biologique : Bactéries et Virus</h2>
+                                <h2 id="section-1" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">1. La menace biologique : Bactéries et Virus</h2>
                                 <p>
                                     C'est le risque le plus immédiat et le plus fréquent. L'infiltration d'eaux de surface, le ruissellement après une fonte des neiges massive ou un défaut au niveau du couvert du puits peut introduire des microorganismes pathogènes.
                                 </p>
@@ -89,7 +76,7 @@ const ContaminantsInvisiblesPuits = () => {
                                     </div>
                                 </div>
 
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">2. Nitrates et Nitrites : Le danger pour les nourrissons</h2>
+                                <h2 id="section-2" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">2. Nitrates et Nitrites : Le danger pour les nourrissons</h2>
                                 <p>
                                     Particulièrement présents dans les zones agricoles, les nitrates s'infiltrent lentement vers les nappes phréatiques suite à l'épandage de fertilisants ou de lisiers. Ils sont totalement incolores et insipides.
                                 </p>
@@ -97,7 +84,7 @@ const ContaminantsInvisiblesPuits = () => {
                                     Une teneur élevée en nitrates peut causer la <strong>méthémoglobinémie</strong> (syndrome du bébé bleu), une condition grave qui empêche le sang des nourrissons de transporter l'oxygène. Les femmes enceintes et les bébés de moins de six mois sont les populations les plus vulnérables. Seule une osmose inverse peut éliminer efficacement ces sels minéraux complexes.
                                 </p>
 
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">3. Radon : Le gaz radioactif indétectable</h2>
+                                <h2 id="section-3" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">3. Radon : Le gaz radioactif indétectable</h2>
                                 <p>
                                     Le radon est un gaz radioactif noble issu de la désintégration de l'uranium présent naturellement dans le roc canadien. S'il est bien connu pour s'accumuler dans les sous-sols, il peut également se dissoudre dans l'eau souterraine.
                                 </p>
@@ -122,7 +109,7 @@ const ContaminantsInvisiblesPuits = () => {
                                     </div>
                                 </div>
 
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">4. Arsenic et Uranium : Les minéraux de profondeur</h2>
+                                <h2 id="section-4" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">4. Arsenic et Uranium : Les minéraux de profondeur</h2>
                                 <p>
                                     Ces métaux lourds proviennent directement de la roche-mère. L'arsenic, par exemple, est un cancérigène humain reconnu par l'OMS (Groupe 1). Sa présence dans le bouclier canadien est une réalité géologique courante.
                                 </p>
@@ -130,7 +117,7 @@ const ContaminantsInvisiblesPuits = () => {
                                     Parce que l'arsenic n'altère ni la clarté ni le goût, des personnes ont bu des doses toxiques pendant des années sans le savoir. Une analyse de laboratoire certifiée est l'unique bouclier contre ces risques géogéniques silencieux.
                                 </p>
 
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">5. Fréquence des tests : Votre protocole de sécurité</h2>
+                                <h2 id="section-5" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">5. Fréquence des tests : Votre protocole de sécurité</h2>
                                 <p>
                                     Bricareau recommande un protocole de surveillance strict pour garantir l'intégrité de votre eau potable :
                                 </p>
@@ -158,19 +145,8 @@ const ContaminantsInvisiblesPuits = () => {
                                         * Avertissement : Les informations ci-dessus ne remplacent pas les directives locales de santé publique. Pour tout puits contaminé, cessez la consommation et contactez immédiatement un technicien spécialisé.
                                     </p>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-            </main>
-            <Footer />
-        </div>
+        </BlogLayout>
     );
 };
-
-// Simple wrapper icon to avoid import issues
-const MicroscopeIcon = ({ className }: { className?: string }) => (
-    <div className={className}><Microscope2 /></div>
-);
 
 export default ContaminantsInvisiblesPuits;

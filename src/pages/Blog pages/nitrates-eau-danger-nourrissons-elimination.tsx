@@ -1,6 +1,5 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
+import BlogLayout from "@/components/BlogLayout";
 import { Button } from "@/components/ui/button";
 import { Phone, ShieldAlert, BadgeCheck, Microscope, Waves, Droplets, ArrowRight, ShieldCheck, HeartPulse, Baby, Info, Zap, FlaskConical, AlertTriangle } from "lucide-react";
 
@@ -13,48 +12,32 @@ const NitratesEauDanger = () => {
         }
     }, []);
 
-    return (
-        <div className="min-h-screen bg-white font-sans text-slate-900 leading-relaxed font-light">
-            <Header />
-            <main className="pt-20">
-                {/* Hero Section */}
-                <section className="relative py-24 bg-blue-950 text-white overflow-hidden">
-                    <div className="absolute inset-0 opacity-20">
-                        <img
-                            src="https://images.unsplash.com/photo-1594411133519-2189874cb3d1?q=80&w=2000&auto=format&fit=crop"
-                            alt="Eau pure et sécurité familiale"
-                            className="w-full h-full object-cover"
-                        />
-                    </div>
-                    <div className="container mx-auto px-4 relative z-10 text-center">
-                        <span className="inline-block px-4 py-1 rounded-full bg-blue-600/20 border border-blue-400/30 text-blue-400 text-sm font-bold mb-6 tracking-widest uppercase">
-                            Santé Infantile & Qualité de l'Eau
-                        </span>
-                        <h1 className="text-4xl md:text-7xl font-bold mb-8 leading-tight tracking-tighter">
-                            Nitrates dans l'eau : <span className="text-blue-400">Le danger invisible</span>
-                        </h1>
-                        <p className="text-xl md:text-2xl text-slate-300 font-light mb-10 leading-relaxed max-w-4xl mx-auto italic">
-                            Protéger les plus vulnérables contre le syndrome du bébé bleu : guide expert sur la détection et l'élimination des nitrates en zone rurale et agricole.
-                        </p>
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-10 h-16 font-bold" asChild>
-                                <a href="/tests-eau">Réserver un test de nitrates</a>
-                            </Button>
-                            <Button size="lg" variant="outline" className="text-white border-white bg-white/10 hover:bg-white/20 rounded-full px-10 h-16 font-bold backdrop-blur-sm" asChild>
-                                <a href="tel:18552649328" className="flex items-center gap-2">
-                                    <Phone className="h-5 w-5" /> 1-855-264-9328
-                                </a>
-                            </Button>
-                        </div>
-                    </div>
-                </section>
+    const tocItems = [
+        {
+                "id": "section-1",
+                "title": "Origines : D'où viennent ces nitrates ?"
+        },
+        {
+                "id": "section-2",
+                "title": "L'Urgence Médicale : Le Syndrome du Bébé Bleu"
+        },
+        {
+                "id": "section-3",
+                "title": "Détection : Comment savoir si votre eau est contaminée ?"
+        },
+        {
+                "id": "section-4",
+                "title": "Solutions d'élimination : La technologie à votre service"
+        }
+];
 
-                {/* Article Content */}
-                <article className="py-20 lg:py-32">
-                    <div className="container mx-auto px-4">
-                        <div className="max-w-4xl mx-auto">
-                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 leading-relaxed text-justify">
-                                <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-blue-600 pl-8 italic">
+    return (
+        <BlogLayout 
+            title="Nitrates dans l'eau : Le danger invisible" 
+            headerImage={"https://images.unsplash.com/photo-1594411133519-2189874cb3d1?q=80&w=2000&auto=format&fit=crop"}
+            tocItems={tocItems}
+        >
+            <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-blue-600 pl-8 italic">
                                     Dans les régions agricoles du Québec et de l'Ontario, les nitrates constituent l'une des sources de contamination les plus fréquentes et les plus pernicieuses des eaux souterraines. Incolores, inodores et sans saveur, ils s'infiltrent silencieusement dans les puits, posant un risque critique pour la santé des nourrissons et des femmes enceintes.
                                 </p>
 
@@ -64,7 +47,7 @@ const NitratesEauDanger = () => {
                                     </p>
                                 </div>
 
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">1. Origines : D'où viennent ces nitrates ?</h2>
+                                <h2 id="section-1" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">1. Origines : D'où viennent ces nitrates ?</h2>
                                 <p>
                                     Les nitrates (NO₃) sont des composés azotés qui existent naturellement dans l'environnement, mais leur concentration dans l'eau potable est massivement amplifiée par l'activité humaine.
                                 </p>
@@ -86,7 +69,7 @@ const NitratesEauDanger = () => {
                                     </div>
                                 </div>
 
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">2. L'Urgence Médicale : Le Syndrome du Bébé Bleu</h2>
+                                <h2 id="section-2" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">2. L'Urgence Médicale : Le Syndrome du Bébé Bleu</h2>
                                 <p>
                                     Le danger le plus grave associé aux nitrates est la <strong>méthémoglobinémie</strong>, plus connue sous le nom de « syndrome du bébé bleu ».
                                 </p>
@@ -110,7 +93,7 @@ const NitratesEauDanger = () => {
                                     </div>
                                 </div>
 
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">3. Détection : Comment savoir si votre eau est contaminée ?</h2>
+                                <h2 id="section-3" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">3. Détection : Comment savoir si votre eau est contaminée ?</h2>
                                 <p>
                                     Puisque les nitrates ne modifient ni l'aspect ni le goût de l'eau, seule une <strong>analyse de laboratoire rigoureuse</strong> peut confirmer leur présence.
                                 </p>
@@ -118,7 +101,7 @@ const NitratesEauDanger = () => {
                                     Bricareau recommande une analyse initiale complète pour tout nouveau puits, suivie d'une vérification annuelle, de préférence au printemps ou après de fortes pluies, périodes de ruissellement agricole intense. Il est crucial d'utiliser des contenants stériles et de transporter les échantillons rapidement au laboratoire pour éviter toute dégradation chimique qui fausserait les résultats.
                                 </p>
 
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">4. Solutions d'élimination : La technologie à votre service</h2>
+                                <h2 id="section-4" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">4. Solutions d'élimination : La technologie à votre service</h2>
                                 <p>
                                     Il est important de noter que <strong>faire bouillir l'eau ne retire pas les nitrates</strong>. Au contraire, l'ébullition fait s'évaporer l'eau pure, ce qui concentre davantage les nitrates restants, aggravant ainsi le risque. Deux types de technologies résidentielles sont certifiées pour l'élimination des nitrates :
                                 </p>
@@ -165,13 +148,7 @@ const NitratesEauDanger = () => {
                                         Note importante : Un système d'osmose inverse nécessite un entretien rigoureux des pré-filtres et du post-filtre pour maintenir son taux de rejet nominal contre les nitrates. Un audit annuel est recommandé.
                                     </p>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-            </main>
-            <Footer />
-        </div>
+        </BlogLayout>
     );
 };
 

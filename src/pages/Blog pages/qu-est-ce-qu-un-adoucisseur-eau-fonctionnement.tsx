@@ -1,6 +1,5 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
+import BlogLayout from "@/components/BlogLayout";
 import { Button } from "@/components/ui/button";
 import { Phone, ShieldCheck, BadgeCheck, Microscope, Waves, Droplets, Info, Zap, Sparkles, Filter, CheckCircle2, Home, Layout, Search, Sparkle, Hammer, Wrench, Settings, Activity, FlaskConical, Scale } from "lucide-react";
 
@@ -13,48 +12,28 @@ const QuEstCeQuUnAdoucisseurEau = () => {
         }
     }, []);
 
-    return (
-        <div className="min-h-screen bg-white font-sans text-slate-900 leading-relaxed font-light text-justify text-[16px]">
-            <Header />
-            <main className="pt-20">
-                {/* Hero Section */}
-                <section className="relative py-24 bg-blue-950 text-white overflow-hidden text-center">
-                    <div className="absolute inset-0 opacity-20">
-                        <img
-                            src="https://images.unsplash.com/photo-1594411133519-2189874cb3d1?q=80&w=2000&auto=format&fit=crop"
-                            alt="Abstraction de billes de résine d'adoucisseur"
-                            className="w-full h-full object-cover grayscale"
-                        />
-                    </div>
-                    <div className="container mx-auto px-4 relative z-10 text-center">
-                        <span className="inline-block px-4 py-1 rounded-full bg-blue-600/20 border border-blue-400/30 text-blue-400 text-sm font-bold mb-6 tracking-widest uppercase">
-                            Génie Aquatique & Technologies Ioniques
-                        </span>
-                        <h1 className="text-4xl md:text-7xl font-bold mb-8 leading-tight tracking-tighter">
-                            L'Adoucisseur d'eau : <span className="text-blue-400">Le Guide de A à Z</span>
-                        </h1>
-                        <p className="text-xl md:text-2xl text-slate-300 font-light mb-10 leading-relaxed max-w-4xl mx-auto italic text-center">
-                            Démystifier la technologie qui protège votre maison contre le calcaire : de la science atomique de l'échange d'ions jusqu'aux bénéfices quotidiens sur votre budget et votre confort.
-                        </p>
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-10 h-16 font-bold" asChild>
-                                <a href="/adoucissement">Voir nos adoucisseurs haute efficacité</a>
-                            </Button>
-                            <Button size="lg" variant="outline" className="text-white border-white bg-white/10 hover:bg-white/20 rounded-full px-10 h-16 font-bold backdrop-blur-sm" asChild>
-                                <a href="tel:18552649328" className="flex items-center gap-2">
-                                    <Phone className="h-5 w-5" /> 1-855-264-9328
-                                </a>
-                            </Button>
-                        </div>
-                    </div>
-                </section>
+    const tocItems = [
+        {
+                "id": "section-1",
+                "title": "La Science de l'Échange d'Ions"
+        },
+        {
+                "id": "section-2",
+                "title": "Anatomie de l'appareil"
+        },
+        {
+                "id": "section-3",
+                "title": "Pourquoi avez-vous besoin d'un adoucisseur ?"
+        }
+];
 
-                {/* Article Intro Content */}
-                <article className="py-20 lg:py-32 bg-white">
-                    <div className="container mx-auto px-4">
-                        <div className="max-w-4xl mx-auto">
-                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 leading-relaxed">
-                                <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-blue-600 pl-8 italic">
+    return (
+        <BlogLayout 
+            title="L'Adoucisseur d'eau : Le Guide de A à Z" 
+            headerImage={"https://images.unsplash.com/photo-1594411133519-2189874cb3d1?q=80&w=2000&auto=format&fit=crop"}
+            tocItems={tocItems}
+        >
+            <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-blue-600 pl-8 italic">
                                     Souvent perçu comme une simple boîte noire dans le sous-sol, l'adoucisseur d'eau est une merveille d'ingénierie chimique qui préserve la valeur de votre actif le plus précieux : votre foyer.
                                 </p>
 
@@ -64,7 +43,7 @@ const QuEstCeQuUnAdoucisseurEau = () => {
                                     </p>
                                 </div>
 
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">1. La Science de l'Échange d'Ions</h2>
+                                <h2 id="section-1" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">1. La Science de l'Échange d'Ions</h2>
                                 <p>
                                     Le cœur d'un adoucisseur est son réservoir de résine. Imaginez des millions de petites billes de plastique dont la surface est chargée négativement, retenant des ions sodium (sel) ou potassium.
                                 </p>
@@ -86,7 +65,7 @@ const QuEstCeQuUnAdoucisseurEau = () => {
                                     </div>
                                 </div>
 
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">2. Anatomie de l'appareil</h2>
+                                <h2 id="section-2" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">2. Anatomie de l'appareil</h2>
                                 <p>
                                     Un adoucisseur moderne se compose de trois éléments critiques qui travaillent en parfaite harmonie :
                                 </p>
@@ -111,7 +90,7 @@ const QuEstCeQuUnAdoucisseurEau = () => {
                                     </div>
                                 </div>
 
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">3. Pourquoi avez-vous besoin d'un adoucisseur ?</h2>
+                                <h2 id="section-3" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">3. Pourquoi avez-vous besoin d'un adoucisseur ?</h2>
                                 <p>
                                     Les bénéfices d'une eau douce touchent chaque aspect de la gestion de votre foyer :
                                 </p>
@@ -143,13 +122,7 @@ const QuEstCeQuUnAdoucisseurEau = () => {
                                         Note pour les propriétaires consciencieux : Un adoucisseur d'eau de qualité supérieure, bien entretenu, est un actif qui valorise votre propriété lors d'une éventuelle revente, certifiant une plomberie saine.
                                     </p>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-            </main>
-            <Footer />
-        </div>
+        </BlogLayout>
     );
 };
 

@@ -1,6 +1,5 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
+import BlogLayout from "@/components/BlogLayout";
 import { Button } from "@/components/ui/button";
 import { Phone, ShieldAlert, BadgeCheck, Microscope, Waves, Droplets, Info, Search, AlertCircle, ShieldCheck, HeartPulse, Scale, FlaskConical, Zap, Wrench, Home, Sparkles, Filter, ShieldHalf, Thermometer, GlassWater } from "lucide-react";
 
@@ -13,48 +12,28 @@ const ChloreEauMunicipale = () => {
         }
     }, []);
 
-    return (
-        <div className="min-h-screen bg-white font-sans text-slate-900 leading-relaxed font-light">
-            <Header />
-            <main className="pt-20">
-                {/* Hero Section */}
-                <section className="relative py-24 bg-sky-900 text-white overflow-hidden">
-                    <div className="absolute inset-0 opacity-20">
-                        <img
-                            src="https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=2000&auto=format&fit=crop"
-                            alt="Verre d'eau limpide"
-                            className="w-full h-full object-cover grayscale"
-                        />
-                    </div>
-                    <div className="container mx-auto px-4 relative z-10 text-center">
-                        <span className="inline-block px-4 py-1 rounded-full bg-sky-600/20 border border-sky-400/30 text-sky-400 text-sm font-bold mb-6 tracking-widest uppercase">
-                            Traitement Municipal : Enjeux De Santé
-                        </span>
-                        <h1 className="text-4xl md:text-7xl font-bold mb-8 leading-tight tracking-tighter">
-                            Chlore dans l'eau : <span className="text-sky-400">Nécessaire ou Nocif ?</span>
-                        </h1>
-                        <p className="text-xl md:text-2xl text-slate-300 font-light mb-10 leading-relaxed max-w-4xl mx-auto italic">
-                            Éclaircir le dilemme de la désinfection : pourquoi le chlore sauve des vies tout en posant de nouveaux défis chimiques à votre foyer.
-                        </p>
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-10 h-16 font-bold" asChild>
-                                <a href="/filtration">Filtrer le chlore de toute ma maison</a>
-                            </Button>
-                            <Button size="lg" variant="outline" className="text-white border-white bg-white/10 hover:bg-white/20 rounded-full px-10 h-16 font-bold backdrop-blur-sm" asChild>
-                                <a href="tel:18552649328" className="flex items-center gap-2">
-                                    <Phone className="h-5 w-5" /> 1-855-264-9328
-                                </a>
-                            </Button>
-                        </div>
-                    </div>
-                </section>
+    const tocItems = [
+        {
+                "id": "section-1",
+                "title": "Pourquoi le chlore est-il indispensable au réseau ?"
+        },
+        {
+                "id": "section-2",
+                "title": "Les RISQUES : Sous-produits et irritation"
+        },
+        {
+                "id": "section-3",
+                "title": "Solutions : Comment retirer le chlore efficacement ?"
+        }
+];
 
-                {/* Article Intro Body */}
-                <article className="py-20 lg:py-32">
-                    <div className="container mx-auto px-4">
-                        <div className="max-w-4xl mx-auto">
-                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 text-justify leading-relaxed">
-                                <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-sky-600 pl-8 italic">
+    return (
+        <BlogLayout 
+            title="Chlore dans l'eau : Nécessaire ou Nocif ?" 
+            headerImage={"https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=2000&auto=format&fit=crop"}
+            tocItems={tocItems}
+        >
+            <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-sky-600 pl-8 italic">
                                     Le chlore est souvent qualifié de « miracle de la santé publique ». Depuis son introduction massive au début du XXe siècle, il a pratiquement éradiqué des maladies mortelles comme le choléra et la typhoïde au Canada. Cependant, cette sécurité sanitaire a un prix : une signature chimique persistante dans votre verre et des sous-produits toxiques.
                                 </p>
 
@@ -64,7 +43,7 @@ const ChloreEauMunicipale = () => {
                                     </p>
                                 </div>
 
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">1. Pourquoi le chlore est-il indispensable au réseau ?</h2>
+                                <h2 id="section-1" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">1. Pourquoi le chlore est-il indispensable au réseau ?</h2>
                                 <p>
                                     Le chlore (et ses dérivés comme la chloramine) est utilisé par les villes pour deux raisons fondamentales :
                                 </p>
@@ -85,7 +64,7 @@ const ChloreEauMunicipale = () => {
                                     </div>
                                 </div>
 
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">2. Les RISQUES : Sous-produits et irritation</h2>
+                                <h2 id="section-2" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">2. Les RISQUES : Sous-produits et irritation</h2>
                                 <p>
                                     Le problème majeur du chlore n'est pas tant le chlore lui-même, mais ce qu'il crée en réagissant avec les matières organiques résiduelles dans l'eau.
                                 </p>
@@ -117,7 +96,7 @@ const ChloreEauMunicipale = () => {
                                     </div>
                                 </div>
 
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">3. Solutions : Comment retirer le chlore efficacement ?</h2>
+                                <h2 id="section-3" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">3. Solutions : Comment retirer le chlore efficacement ?</h2>
                                 <p>
                                     Le chlore est heureusement facile à éliminer avec la bonne technologie. Le <strong>charbon actif</strong> est le média de choix absolu pour cette tâche.
                                 </p>
@@ -153,13 +132,7 @@ const ChloreEauMunicipale = () => {
                                         * Note de transparence : Bricareau reconnaît l'importance vitale de la chloration municipale. Nos solutions ne visent pas à remettre en cause ce service, mais à offrir aux foyers une eau de qualité supérieure débarrassée de ses agents de transport chimiques.
                                     </p>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-            </main>
-            <Footer />
-        </div>
+        </BlogLayout>
     );
 };
 

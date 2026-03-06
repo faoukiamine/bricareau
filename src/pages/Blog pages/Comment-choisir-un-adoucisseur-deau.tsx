@@ -1,32 +1,54 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import React, { useEffect } from "react";
+import BlogLayout from "@/components/BlogLayout";
+
 
 const CommentChoisirAdoucisseur = () => {
-    return (
-        <div className="min-h-screen bg-white">
-            <Header />
-            <main className="pt-20">
-                {/* Hero Section */}
-                <section className="py-16 bg-gradient-to-br from-blue-600 to-blue-800">
-                    <div className="container mx-auto px-4">
-                        <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 text-center">
-                            Comment choisir un adoucisseur d'eau ?
-                        </h1>
-                        <p className="text-xl text-blue-100 text-center max-w-3xl mx-auto">
-                            Un guide complet pour vous aider à sélectionner l'adoucisseur d'eau parfaitement adapté à vos besoins
-                        </p>
-                    </div>
-                </section>
+    useEffect(() => {
+        
+    }, []);
 
-                {/* Article Content */}
-                <article className="py-16">
-                    <div className="container mx-auto px-4 max-w-4xl">
-                        <div className="prose prose-lg max-w-none">
-                            <p className="text-lg leading-relaxed text-gray-700 mb-6">
+    const tocItems = [
+        {
+                "id": "section-1",
+                "title": "Comprendre la dureté de votre eau"
+        },
+        {
+                "id": "section-2",
+                "title": "Calculer vos besoins en capacité"
+        },
+        {
+                "id": "section-3",
+                "title": "Les différents types d'adoucisseurs"
+        },
+        {
+                "id": "section-4",
+                "title": "Les fonctionnalités à considérer"
+        },
+        {
+                "id": "section-5",
+                "title": "Considérations d'installation"
+        },
+        {
+                "id": "section-6",
+                "title": "Budget et garanties"
+        },
+        {
+                "id": "section-7",
+                "title": "Conclusion"
+        }
+];
+
+    return (
+        <BlogLayout 
+            title="Comment choisir un adoucisseur d'eau ?" 
+            headerImage={""}
+            tocItems={tocItems}
+        >
+            <p className="text-lg leading-relaxed text-gray-700 mb-6">
                                 L'eau dure est un problème courant dans de nombreuses régions du Canada. Elle laisse des traces blanches sur la vaisselle, rend le linge rêche et provoque l'accumulation de tartre dans vos appareils ménagers. Un adoucisseur d'eau peut transformer radicalement votre quotidien, mais face à la multitude de modèles disponibles, comment faire le bon choix ? Voici un guide complet pour vous aider à sélectionner l'adoucisseur d'eau parfaitement adapté à vos besoins.
                             </p>
 
-                            <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Comprendre la dureté de votre eau</h2>
+                            <h2 id="section-1" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">Comprendre la dureté de votre eau</h2>
                             <p className="text-lg leading-relaxed text-gray-700 mb-6">
                                 Avant même de penser à acheter un adoucisseur, il est essentiel de connaître le niveau de dureté de votre eau. Cette mesure, exprimée en grains par gallon (GPG) ou en parties par million (PPM), déterminera la capacité nécessaire de votre système.
                             </p>
@@ -34,7 +56,7 @@ const CommentChoisirAdoucisseur = () => {
                                 Une eau est considérée comme dure lorsqu'elle dépasse 7 GPG. Au Québec et dans certaines régions de l'Ontario, les niveaux peuvent atteindre 15 à 20 GPG, voire plus. Vous pouvez obtenir cette information auprès de votre municipalité ou faire analyser votre eau par un professionnel. Cette analyse vous donnera également des informations précieuses sur d'autres contaminants potentiels comme le fer, le manganèse ou les bactéries.
                             </p>
 
-                            <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Calculer vos besoins en capacité</h2>
+                            <h2 id="section-2" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">Calculer vos besoins en capacité</h2>
                             <p className="text-lg leading-relaxed text-gray-700 mb-6">
                                 La capacité d'un adoucisseur s'exprime en grains de dureté qu'il peut éliminer entre deux régénérations. Pour déterminer vos besoins, multipliez le nombre de personnes dans votre foyer par 75 gallons (consommation moyenne quotidienne par personne), puis multipliez ce résultat par le niveau de dureté de votre eau.
                             </p>
@@ -42,7 +64,7 @@ const CommentChoisirAdoucisseur = () => {
                                 Par exemple, pour une famille de quatre personnes avec une eau à 15 GPG : 4 × 75 × 15 = 4 500 grains par jour. Pour une semaine sans régénération, vous auriez besoin d'un système d'au moins 31 500 grains. Cependant, il est recommandé de prévoir une marge de sécurité de 20 à 30 % pour tenir compte des variations de consommation.
                             </p>
 
-                            <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Les différents types d'adoucisseurs</h2>
+                            <h2 id="section-3" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">Les différents types d'adoucisseurs</h2>
 
                             <h3 className="text-2xl font-bold text-gray-800 mt-8 mb-4">Adoucisseurs à sel traditionnels</h3>
                             <p className="text-lg leading-relaxed text-gray-700 mb-4">
@@ -67,7 +89,7 @@ const CommentChoisirAdoucisseur = () => {
                                 Idéaux pour les VR, bateaux ou chalets, ces modèles compacts offrent une solution mobile pour profiter d'une eau douce partout.
                             </p>
 
-                            <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Les fonctionnalités à considérer</h2>
+                            <h2 id="section-4" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">Les fonctionnalités à considérer</h2>
 
                             <h3 className="text-2xl font-bold text-gray-800 mt-8 mb-4">Système de régénération</h3>
                             <p className="text-lg leading-relaxed text-gray-700 mb-4">
@@ -98,7 +120,7 @@ const CommentChoisirAdoucisseur = () => {
                                 Les adoucisseurs certifiés WQA (Water Quality Association) garantissent une efficacité optimale. Recherchez des modèles qui utilisent moins d'eau lors de la régénération et qui fonctionnent avec une faible consommation électrique.
                             </p>
 
-                            <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Considérations d'installation</h2>
+                            <h2 id="section-5" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">Considérations d'installation</h2>
 
                             <h3 className="text-2xl font-bold text-gray-800 mt-8 mb-4">Espace disponible</h3>
                             <p className="text-lg leading-relaxed text-gray-700 mb-6">
@@ -121,7 +143,7 @@ const CommentChoisirAdoucisseur = () => {
                                 Un système de bypass est essentiel pour permettre l'entretien sans couper l'eau de toute la maison. Bien que certains bricoleurs expérimentés puissent installer leur adoucisseur, faire appel à un professionnel certifié garantit une installation conforme aux codes du bâtiment et optimise les performances du système.
                             </p>
 
-                            <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Budget et garanties</h2>
+                            <h2 id="section-6" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">Budget et garanties</h2>
                             <p className="text-lg leading-relaxed text-gray-700 mb-6">
                                 Les prix varient considérablement, de 1800 $ pour un modèle basique à plus de 3 000 $ pour un système haut de gamme avec fonctionnalités intelligentes. N'oubliez pas de considérer les coûts d'exploitation : sel (environ 50-100 $/an), électricité et entretien.
                             </p>
@@ -134,16 +156,11 @@ const CommentChoisirAdoucisseur = () => {
                                 <li>1 an sur les pièces et la main-d'œuvre</li>
                             </ul>
 
-                            <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Conclusion</h2>
+                            <h2 id="section-7" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">Conclusion</h2>
                             <p className="text-lg leading-relaxed text-gray-700 mb-6">
                                 Choisir un adoucisseur d'eau est un investissement important qui améliorera significativement votre qualité de vie. En évaluant correctement la dureté de votre eau, en calculant vos besoins réels et en comparant les fonctionnalités disponibles, vous trouverez le système parfait pour votre foyer. N'hésitez pas à consulter un spécialiste du traitement de l'eau qui pourra analyser votre situation spécifique et vous recommander la solution la plus adaptée. Avec le bon adoucisseur, vous profiterez d'une eau douce, d'appareils protégés et d'économies substantielles pendant de nombreuses années.
                             </p>
-                        </div>
-                    </div>
-                </article>
-            </main>
-            <Footer />
-        </div>
+        </BlogLayout>
     );
 };
 

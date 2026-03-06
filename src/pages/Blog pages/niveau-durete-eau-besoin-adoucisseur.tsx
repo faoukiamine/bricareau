@@ -1,6 +1,5 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
+import BlogLayout from "@/components/BlogLayout";
 import { Button } from "@/components/ui/button";
 import { Phone, ShieldCheck, BadgeCheck, Microscope, Waves, Droplets, Info, Zap, Sparkles, Filter, CheckCircle2, Home, Layout, Search, Sparkle, Hammer, Wrench, Settings, Activity, FlaskConical, Scale, Thermometer } from "lucide-react";
 
@@ -13,48 +12,28 @@ const NiveauDureteAdoucisseurBesoin = () => {
         }
     }, []);
 
-    return (
-        <div className="min-h-screen bg-white font-sans text-slate-900 leading-relaxed font-light text-justify text-[16px]">
-            <Header />
-            <main className="pt-20">
-                {/* Hero Section */}
-                <section className="relative py-24 bg-slate-900 text-white overflow-hidden text-center shadow-lg">
-                    <div className="absolute inset-0 opacity-20 transform scale-110">
-                        <img
-                            src="https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=2000&auto=format&fit=crop"
-                            alt="Abstraction de calcaire et d'eau cristalline"
-                            className="w-full h-full object-cover grayscale"
-                        />
-                    </div>
-                    <div className="container mx-auto px-4 relative z-10 text-center">
-                        <span className="inline-block px-4 py-1 rounded-full bg-blue-600/20 border border-blue-400/30 text-blue-400 text-sm font-bold mb-6 tracking-widest uppercase">
-                            Métrologie Aquatique & Échelle de Santé
-                        </span>
-                        <h1 className="text-4xl md:text-7xl font-bold mb-8 leading-tight tracking-tighter">
-                            Dureté de l'eau : <span className="text-blue-400 italic">Le seuil critique.</span>
-                        </h1>
-                        <p className="text-xl md:text-2xl text-slate-300 font-light mb-10 leading-relaxed max-w-4xl mx-auto italic text-center">
-                            À partir de quel grain de dureté le calcaire commence-t-il à dévorer silencieusement votre plomberie et votre budget énergétique ? L'analyse technique Bricareau sur votre zone de confort.
-                        </p>
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-10 h-16 font-bold" asChild>
-                                <a href="/adoucisseur-eau-residentiel">Nos solutions d'adoucissement</a>
-                            </Button>
-                            <Button size="lg" variant="outline" className="text-white border-white bg-white/10 hover:bg-white/20 rounded-full px-10 h-16 font-bold backdrop-blur-sm" asChild>
-                                <a href="tel:18552649328" className="flex items-center gap-2">
-                                    <Phone className="h-5 w-5" /> 1-855-264-9328
-                                </a>
-                            </Button>
-                        </div>
-                    </div>
-                </section>
+    const tocItems = [
+        {
+                "id": "section-1",
+                "title": "L'Échelle de Dureté Standardisée"
+        },
+        {
+                "id": "section-2",
+                "title": "Le \"Seuil de Rentabilité\" : La Règle des 7 Grains"
+        },
+        {
+                "id": "section-3",
+                "title": "Quand même un niveau \"moyen\" pose problème"
+        }
+];
 
-                {/* Article Intro Content */}
-                <article className="py-20 lg:py-32 bg-white">
-                    <div className="container mx-auto px-4">
-                        <div className="max-w-4xl mx-auto">
-                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 leading-relaxed">
-                                <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-blue-600 pl-8 italic">
+    return (
+        <BlogLayout 
+            title="Dureté de l'eau : Le seuil critique." 
+            headerImage={"https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=2000&auto=format&fit=crop"}
+            tocItems={tocItems}
+        >
+            <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-blue-600 pl-8 italic">
                                     L'eau dure n'est pas "sale" au sens microbiologique, mais au sens technique. Elle porte en elle une menace silencieuse pour l'économie de votre foyer.
                                 </p>
 
@@ -64,7 +43,7 @@ const NiveauDureteAdoucisseurBesoin = () => {
                                     </p>
                                 </div>
 
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">1. L'Échelle de Dureté Standardisée</h2>
+                                <h2 id="section-1" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">1. L'Échelle de Dureté Standardisée</h2>
                                 <p>
                                     L'eau dure contient une forte concentration de minéraux dissous, principalement du calcium et du magnésium. Voici comment les experts classifient la dureté de votre eau :
                                 </p>
@@ -113,7 +92,7 @@ const NiveauDureteAdoucisseurBesoin = () => {
                                     </table>
                                 </div>
 
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">2. Le "Seuil de Rentabilité" : La Règle des 7 Grains</h2>
+                                <h2 id="section-2" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">2. Le "Seuil de Rentabilité" : La Règle des 7 Grains</h2>
                                 <p>
                                     La majorité des experts en gestion de l'eau, dont l'équipe de Bricareau, s'accorde pour dire que dès que votre eau dépasse le seuil de <strong>7 grains par gallon (120 mg/L)</strong>, l'installation d'un adoucisseur d'eau devient une décision financièrement rentable.
                                 </p>
@@ -133,7 +112,7 @@ const NiveauDureteAdoucisseurBesoin = () => {
                                     </div>
                                 </div>
 
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">3. Quand même un niveau "moyen" pose problème</h2>
+                                <h2 id="section-3" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">3. Quand même un niveau "moyen" pose problème</h2>
                                 <p>
                                     Même entre 3 et 7 grains, l'eau dure peut être une nuisance majeure si vous possédez :
                                 </p>
@@ -165,13 +144,7 @@ const NiveauDureteAdoucisseurBesoin = () => {
                                         Note pour les nouvelles constructions : Installer un adoucisseur dès l'entrée en possession de votre maison est la meilleure garantie pour conserver votre plomberie et vos verres dans un état "neuf" indéfiniment.
                                     </p>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-            </main>
-            <Footer />
-        </div>
+        </BlogLayout>
     );
 };
 

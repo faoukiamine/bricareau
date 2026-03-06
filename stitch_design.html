@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Interactive Media | Bricareau</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec5b13",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221610",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-slate-800 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+<div class="max-w-[1280px] mx-auto flex h-16 items-center justify-between px-6 lg:px-10">
+<div class="flex items-center gap-10">
+<div class="flex items-center gap-3">
+<div class="bg-primary p-1.5 rounded-lg text-white">
+<span class="material-symbols-outlined !text-2xl">grid_view</span>
+</div>
+<h2 class="text-xl font-bold tracking-tight">Bricareau</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-sm font-semibold text-primary transition-colors" href="#">Articles</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Products</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">About</a>
+</nav>
+</div>
+<div class="flex flex-1 justify-end items-center gap-6">
+<div class="hidden lg:flex items-center bg-slate-200/50 dark:bg-slate-800/50 rounded-xl px-3 py-1.5 w-64">
+<span class="material-symbols-outlined text-slate-500 text-xl">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-full placeholder:text-slate-500" placeholder="Search experiences..." type="text"/>
+</div>
+<div class="flex items-center gap-3">
+<button class="flex items-center justify-center rounded-xl h-10 w-10 bg-slate-200/50 dark:bg-slate-800/50 hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined">person</span>
+</button>
+<button class="flex items-center justify-center rounded-xl h-10 w-10 bg-slate-200/50 dark:bg-slate-800/50 hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined">shopping_bag</span>
+</button>
+<div class="h-10 w-10 rounded-full bg-primary/20 overflow-hidden border-2 border-primary/30">
+<img class="w-full h-full object-cover" data-alt="User profile avatar portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByMYBP9yaulmMnbZmcjrZrsRgjLc_Te-W04B4tF9npEBD_Bm54dZipqQilGFf5UrAvxNiTXYxqTj259CA-Wcd3soBYCaAIceSADhS254aHdly9vWmXMYiiSeL9DwfPKIW0KVh-bJElM2x82wXwp4CKZWdnaTtQCeNh6FrllmeCqXtRYJEn51b276F4kqI3xUXvmH1cEWE5twftFywoHJ5HhyQebrdkEgA3ed_3KS0653QswtwiQhPiLXu3ntH8PAaGhjPBhTvp1W8"/>
+</div>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-[1280px] mx-auto px-6 lg:px-10 py-8">
+<!-- Breadcrumbs -->
+<nav class="flex items-center gap-2 mb-8 text-sm font-medium text-slate-500 dark:text-slate-400">
+<a class="hover:text-primary" href="#">Home</a>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+<a class="hover:text-primary" href="#">Articles</a>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+<span class="text-slate-900 dark:text-slate-100">Interactive Media Detail</span>
+</nav>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Article Content Area -->
+<article class="lg:col-span-8">
+<!-- Hero Section -->
+<div class="relative rounded-3xl overflow-hidden mb-10 group">
+<div class="aspect-[21/9] w-full bg-slate-200 dark:bg-slate-800">
+<div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent z-10"></div>
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="High tech interactive digital display installation" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9Ci5TUK7LKYzb7kaA0RMfJQX87rIt714ocE6cg6i3ap4XS7UJAivwsQ2wjKQBFyPeuwKagk817UU2VI0UpckXKCAe3mB9b6p2gV9udGjHkGLh0AcvZaqQwUvhja2_ar3xH1n-Kx772s3VNhgKY_j535BjkkITGilNXTZWw5PEQaV6svzT4jJgiKVZhUZyKNYZCYqb3M4LqGJ19cKqrBK6HwRbcvB_UDTACNu_66RYyPkp6Mn7Vh7SNQOWYB_FJbFlymkN8Luz57A"/>
+</div>
+<div class="absolute bottom-0 left-0 p-8 lg:p-12 z-20">
+<span class="inline-block px-3 py-1 bg-primary text-white text-xs font-bold rounded-full mb-4 uppercase tracking-widest">Innovation</span>
+<h1 class="text-4xl lg:text-5xl font-black text-white leading-tight mb-4">The Future of Interactive Media at Bricareau</h1>
+<p class="text-slate-200 text-lg max-w-2xl">Exploring how modern technology reshapes user engagement through interactive hardware and software.</p>
+</div>
+</div>
+<!-- Meta Info -->
+<div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-6 mb-10">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">edit_note</span>
+</div>
+<div>
+<p class="font-bold text-slate-900 dark:text-slate-100">Written by Sarah J. Miller</p>
+<p class="text-sm text-slate-500 dark:text-slate-400">Oct 24, 2023 • 12 min read</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined">share</span>
+</button>
+<button class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined">bookmark</span>
+</button>
+</div>
+</div>
+<!-- Article Body -->
+<div class="prose prose-slate dark:prose-invert max-w-none space-y-6 text-slate-700 dark:text-slate-300 leading-relaxed text-lg">
+<p class="text-xl font-medium text-slate-900 dark:text-slate-100 leading-relaxed">
+                        Interactive media is no longer just a buzzword; it's the bridge between static content and meaningful human connection. At Bricareau, we are redefining how audiences interact with digital ecosystems.
+                    </p>
+<p>
+                        The shift toward interactive hardware has been accelerated by the demand for more tactile, responsive environments. From multi-touch installations to gesture-based controls, the physical interface is evolving to be invisible yet omnipresent.
+                    </p>
+<div class="my-10 grid grid-cols-2 gap-4">
+<div class="rounded-2xl overflow-hidden h-64">
+<img class="w-full h-full object-cover" data-alt="Interactive glass surface with digital UI" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlVEnCChy7HUy_UvgfPU3K-YSzUO28zlP6fH8AOPYZCfon95Pv-1-ogCh9VpEVDvxTs_nnMtdOgrdbvlhLL6L0qfA2Gh6rtwWKmv4eNLXj5Ruy2CJ_AvbH2ze010MduKZXM-W9-rvuQPmYKqw7fCcjcSlyjtorLlMzldgcQJ0DF8Z0Tx0NaHPjRxzzl95tDLp0s_fm7TJhuRsqWQGprErNEWB7jxRkYtUclalr65D4jz1ZmObGNXtnOFr01fR8sxV9GL1FJtMe7H0"/>
+</div>
+<div class="rounded-2xl overflow-hidden h-64">
+<img class="w-full h-full object-cover" data-alt="Motion sensor hardware unit macro" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkWf3WVS-gy0vQqXlpmxyL_F2oF7Q510kLIlYfEOUgGoAlSpV7bBbJNyc6OkOPIy7XKjEmj5uUY0jMXSIeyiVGekpMKnw5dvmL9AkgPbCwJR7-P46eDhai6-hmmqbiN3Q6rK2MDxo79QnuxTqvao6HYw1WMxMmG0lX6YyoS9Xw5Iqm-t1WiIpf1WLGOJUSOM8JsIcMcLXM0pEz-8sDcOAuNxzLAzIL8DpD14NpE3LAGk5_wxE-3DpyP3ZBJ3tj4rv3SycxrVSsX5c"/>
+</div>
+</div>
+<h3 class="text-2xl font-bold text-slate-900 dark:text-slate-100 pt-4">Hardware Meets Intuition</h3>
+<p>
+                        The core of our latest research focuses on "Latency-Free Engagement." When a user interacts with a digital surface, the response must be subconscious. Our proprietary 'Pulse' sensors reduce input lag to under 2ms, creating an organic feel that mimics physical reality.
+                    </p>
+<div class="bg-primary/5 dark:bg-primary/10 border-l-4 border-primary p-8 my-10 rounded-r-xl">
+<p class="italic text-xl text-slate-800 dark:text-slate-200">
+                            "The ultimate goal of interactive media is to make the technology disappear, leaving only the experience behind."
+                        </p>
+<p class="mt-4 font-bold text-primary">— Dr. Aris Thorne, Lead Researcher</p>
+</div>
+<p>
+                        We've integrated these technologies into several of our upcoming product lines. By combining high-refresh tactile feedback with spatial audio, we are crafting environments that don't just show information, but live and breathe with the user.
+                    </p>
+</div>
+</article>
+<!-- Sidebar / Product Spotlights -->
+<aside class="lg:col-span-4 space-y-10">
+<!-- Related Products Section -->
+<div class="bg-white dark:bg-slate-900/50 p-6 rounded-2xl border border-slate-200 dark:border-slate-800">
+<h3 class="text-lg font-bold mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">shopping_cart</span>
+                        Featured Products
+                    </h3>
+<div class="space-y-6">
+<!-- Product Card 1 -->
+<div class="flex gap-4 group cursor-pointer">
+<div class="w-24 h-24 shrink-0 rounded-xl bg-slate-100 dark:bg-slate-800 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform" data-alt="Compact interactive touch controller" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZpP4wYD8s9Di2E7THwF1B22xZyIM5dSJko6zOgdAoY5Xs9XG9kQCTHaVtYYeBNbZm7NF1ChD4zW0iNGZVh-SnKHRINvMghyJ7_UH74khXVu1sn1RFDpIrzURb7U2j6CDCfVVo1UP9_iHLu8eaeZZp9rYD160b-AvM5vOUI0l5fxkX1ZF9oyHU4_OCHOXv7Em0GxDEvwor1xgWcamW2xFZNGZ_u8hPKWGzdOVTU9AgWtCFqDBVmv9jhhbp0DYEdmTSCmxTc_oFi5Y"/>
+</div>
+<div>
+<h4 class="font-bold text-sm group-hover:text-primary transition-colors">Bricareau Pulse S1</h4>
+<p class="text-xs text-slate-500 mb-2">Haptic Feedback Module</p>
+<p class="text-primary font-bold">$299.00</p>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="flex gap-4 group cursor-pointer">
+<div class="w-24 h-24 shrink-0 rounded-xl bg-slate-100 dark:bg-slate-800 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform" data-alt="Transparent OLED display panel" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCN85fllAmCZUBaknqtmYRuuo6pr3Jq9LGmSQJxNT0kNnq1xtkPTullNI29hPh86qw82SNb8qQ7NMfDia9SUEwRMFJmtjDNJnvurpio_kvjHEzQUL7OGWAiXq_9NrmdrJLdevwBrqqmOBqgLT-xe_M2BCoqslAmhBL-G3haXnvfMCTarlvAv0-xVhmjxIsvlqWYLNBIfNWvHA4sMz45xB0A_uF4VPqZ_BRteFOj0bHdO0rDtV_JcrVGvWVJWPKFB6qjfy_2Ed34c54"/>
+</div>
+<div>
+<h4 class="font-bold text-sm group-hover:text-primary transition-colors">Lumina View G2</h4>
+<p class="text-xs text-slate-500 mb-2">Transparent Interactive Glass</p>
+<p class="text-primary font-bold">$1,450.00</p>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="flex gap-4 group cursor-pointer">
+<div class="w-24 h-24 shrink-0 rounded-xl bg-slate-100 dark:bg-slate-800 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform" data-alt="Spatial audio speaker array" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSDjNQQjCgV2sFJHbuWRf7y82Td5ERl3n0L9n55Hm_BFhbev-wb7YR2j-GXulQMPuSr2z65ZJEkRoRPyW4l-5SIiyb96Q0ikx35T4HfVl3o3shIUqNWGLSkxb4W7iBYCN8IK-n6IKPRpsii-4ObEmkJ7CLp_fU9dABTlDA5aa5LtKJFj6-bWOuAk2MQ2K44EuLvYS10jQuip5uVqRcAmBFKt2cK0VoBapS5CLJNhxTrcbAKjiR0jRCzTMfvMIqFbgc_wgN8YI6Q9E"/>
+</div>
+<div>
+<h4 class="font-bold text-sm group-hover:text-primary transition-colors">Sonic Field X</h4>
+<p class="text-xs text-slate-500 mb-2">3D Spatial Audio Array</p>
+<p class="text-primary font-bold">$580.00</p>
+</div>
+</div>
+</div>
+<button class="w-full mt-8 py-3 bg-primary text-white font-bold rounded-xl hover:bg-primary/90 transition-colors">
+                        Shop All Products
+                    </button>
+</div>
+<!-- Newsletter / Interactive Call to Action -->
+<div class="bg-primary p-8 rounded-2xl text-white relative overflow-hidden">
+<div class="relative z-10">
+<h3 class="text-xl font-bold mb-2">Get the latest insights</h3>
+<p class="text-white/80 text-sm mb-6">Stay ahead of the curve with our monthly digest on interactive tech.</p>
+<div class="space-y-3">
+<input class="w-full bg-white/10 border-white/20 rounded-xl text-sm placeholder:text-white/50 focus:ring-white/30 focus:border-white/30" placeholder="Your email address" type="email"/>
+<button class="w-full bg-white text-primary font-bold py-3 rounded-xl hover:bg-slate-100 transition-colors">
+                                Subscribe Now
+                            </button>
+</div>
+</div>
+<!-- Decorative element -->
+<span class="material-symbols-outlined absolute -bottom-6 -right-6 !text-9xl opacity-10 rotate-12">mail</span>
+</div>
+<!-- Upcoming Events -->
+<div class="border border-slate-200 dark:border-slate-800 p-6 rounded-2xl">
+<h3 class="text-lg font-bold mb-4">Upcoming Webinars</h3>
+<div class="space-y-4">
+<div class="p-4 bg-slate-100 dark:bg-slate-800/50 rounded-xl border border-transparent hover:border-primary/30 transition-all cursor-pointer">
+<p class="text-xs font-bold text-primary mb-1">NOV 12</p>
+<h4 class="font-bold text-sm">Designing for Spatial OS</h4>
+<p class="text-xs text-slate-500 mt-1">Hosted by Marcus Chen</p>
+</div>
+<div class="p-4 bg-slate-100 dark:bg-slate-800/50 rounded-xl border border-transparent hover:border-primary/30 transition-all cursor-pointer">
+<p class="text-xs font-bold text-primary mb-1">DEC 05</p>
+<h4 class="font-bold text-sm">The Haptic Revolution</h4>
+<p class="text-xs text-slate-500 mt-1">Live Q&amp;A Session</p>
+</div>
+</div>
+</div>
+</aside>
+</div>
+<!-- More Like This Section -->
+<section class="mt-20 pt-10 border-t border-slate-200 dark:border-slate-800">
+<h2 class="text-2xl font-black mb-8 uppercase tracking-tight">Continue Reading</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="group cursor-pointer">
+<div class="aspect-video rounded-2xl bg-slate-200 dark:bg-slate-800 mb-4 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Cyberpunk city digital artwork" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoKP4JwpYFwO0w__yKHo9K34gUHxMP8Jmkw6i7n3VOtEjvkICBB8XXKPJBw4sZxSC__WjbvA6PephMr0HWvavpDoWpnwogeR2DUlOOFzBTbbe_jQ9hm0dt_pJbRtxOc5Ns_0EApVZHaEvQ8hI7cpA64i1LGBUnfxb-6I1SAohj9WkqJ1DvQnaUEab2tGMiLEXR6-5fAQWKeaiXGaxI7i3ZDbO2u7XCKIu6aW6cIU-OEcxM56uXKwreOYEoIy1ZrVnY5j-QEduYbtw"/>
+</div>
+<span class="text-xs font-bold text-primary uppercase">Tech Trends</span>
+<h3 class="text-lg font-bold mt-2 group-hover:text-primary transition-colors">Designing for the Metaverse 2.0</h3>
+<p class="text-slate-500 text-sm mt-2 line-clamp-2">How virtual spaces are becoming indistinguishable from physical office environments.</p>
+</div>
+<div class="group cursor-pointer">
+<div class="aspect-video rounded-2xl bg-slate-200 dark:bg-slate-800 mb-4 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Abstract neural network visualization" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4PhDyJk8YDAAXwnNe2nqOGPf5dCWN96gWHI5eJAKD0ttkNEdSXI_r0j2zkKXn862xqA4XBuIi8A1D9uoSeT1S6f_4qA4N_dFBTVDJJ2SU_VC5iCv8bCUrw52LXByVqqB2_J5NxvxmUgTq3pXqPfzXR-jMg3dqyhp0L4ZKYuls2nchvkZmhWhf5TxNRnLu2FQ0Fi7MgXl1-kLY8yQwGgKQax4vorhwsMkCGFabnUu3x18PZj3ANFR2xgmAbxpGOZPtgh3lrcNMWSA"/>
+</div>
+<span class="text-xs font-bold text-primary uppercase">Software</span>
+<h3 class="text-lg font-bold mt-2 group-hover:text-primary transition-colors">AI Driven User Interfaces</h3>
+<p class="text-slate-500 text-sm mt-2 line-clamp-2">Machine learning is now predicting user clicks before they even happen.</p>
+</div>
+<div class="group cursor-pointer">
+<div class="aspect-video rounded-2xl bg-slate-200 dark:bg-slate-800 mb-4 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Minimalist modern product packaging" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgrjG13ftOae-uwyruivhaBnXwyNs2OBUYYWpfuWbUgPKib27bUW78aFBGkxa04LQ75Mcx79jfIdQEY2QQAfkhAxMrghnl3dVYA72qQ2cLgDumVpTEAdy_zjb96o9Ptw_CA-WH5f1NXCEmwzIOgdhjDud7qi1I6tyChFW91B6nnjCfs8GY8p7b50zqjj-HxkUHfYmvRshZ0C8S03fS9wHt3fu32cVJmVGJpX0Qtrrn-XxZykTD1pSPLTYsFmKSUv57A9n54XLkp54"/>
+</div>
+<span class="text-xs font-bold text-primary uppercase">Case Study</span>
+<h3 class="text-lg font-bold mt-2 group-hover:text-primary transition-colors">Sustainable Tech Packaging</h3>
+<p class="text-slate-500 text-sm mt-2 line-clamp-2">Our journey to zero-waste packaging for the entire hardware lineup.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="mt-20 py-12 border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/20">
+<div class="max-w-[1280px] mx-auto px-6 lg:px-10">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+<div class="flex items-center gap-3">
+<div class="bg-primary p-1.5 rounded-lg text-white">
+<span class="material-symbols-outlined !text-xl">grid_view</span>
+</div>
+<h2 class="text-lg font-bold">Bricareau</h2>
+</div>
+<div class="flex flex-wrap gap-8 text-sm font-medium text-slate-500 dark:text-slate-400">
+<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-primary transition-colors" href="#">Cookie Policy</a>
+<a class="hover:text-primary transition-colors" href="#">Global Offices</a>
+</div>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">public</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">alternate_email</span>
+</a>
+</div>
+</div>
+<div class="mt-12 pt-8 border-t border-slate-200 dark:border-slate-800 text-center text-sm text-slate-500">
+                © 2023 Bricareau Industries. All rights reserved. 
+            </div>
+</div>
+</footer>
+</body></html>

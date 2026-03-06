@@ -363,7 +363,40 @@ const Header = () => {
     "/systeme-de-filtration-deau-potable",
     "/filtres-deau-pour-toute-la-maison",
     "/filtre-eau-haute-efficacite",
-    "/ro-6"
+    "/ro-6",
+    "/5-signes-besoin-adoucisseur-eau",
+    "/pourquoi-mon-eau-sent-l-odeur-des-oeufs-pourris",
+    "/taches-orange-dans-levier-eliminer-le-fer",
+    "/comment-fonctionne-la-desinfection-uv",
+    "/calcaire-duree-vie-electromenagers",
+    "/vaisselle-tachetee-causes-solutions",
+    "/pfas-eau-robinet-elimination",
+    "/eau-dure-vs-eau-douce",
+    "/plomb-eau-potable-risques-solutions",
+    "/fluor-eau-bienfait-danger",
+    "/contaminants-invisibles-eau-puits",
+    "/arsenic-eau-potable-risques-filtration",
+    "/nitrates-eau-danger-nourrissons-elimination",
+    "/microplastiques-eau-robinet-realite-inquietante",
+    "/residus-medicaments-eau-risques-solutions",
+    "/manganese-fer-eau-brune-remedes",
+    "/chlore-eau-municipale-nocif-necessaire",
+    "/bacteries-e-coli-eau-puits-causes-solutions",
+    "/eau-turbide-trouble-causes-clarification",
+    "/osmose-inverse-domicile-meilleur-systeme-famille",
+    "/filtre-evier-vs-maison-entiere-choisir",
+    "/filtre-charbon-actif-capacite-limites",
+    "/systeme-traitement-uv-solution-naturelle-bacteries",
+    "/filtration-3vs5-etapes-sante-difference",
+    "/filtre-douche-bienfaits-peau-cheveux",
+    "/filtre-eau-appartement-sans-plomberie",
+    "/qu-est-ce-qu-un-adoucisseur-eau-fonctionnement",
+    "/niveau-durete-eau-besoin-adoucisseur",
+    "/comment-mesurer-durete-eau-maison",
+    "/les-signes-absolument-besoin-adoucisseur-eau",
+    "/adoucisseur-eau-sel-vs-sans-sel-efficacite",
+    "/radon-et-uranium-dans-les-puits-prives",
+    "/comment-choisir-un-adoucisseur-deau"
   ];
   const isTransparentPage = transparentPaths.includes(location.pathname.toLowerCase());
   const isHeaderTransparent = isTransparentPage && !isScrolled && !isMenuOpen;
@@ -655,7 +688,12 @@ const Header = () => {
           menuItem.hasMegamenu && activeMegamenu === menuItem.name && (
             <div
               key={menuItem.name}
-              className="absolute top-full left-0 w-full bg-white/25 backdrop-blur-md border-t border-gray-100 shadow-lg z-40"
+              className={cn(
+                "absolute top-full left-0 w-full transition-all duration-300 z-40",
+                isHeaderTransparent
+                  ? "bg-white/10 backdrop-blur-2xl border-t border-white/10"
+                  : "bg-white/95 backdrop-blur-md border-t border-gray-100 shadow-xl"
+              )}
               onMouseEnter={() => handleMenuEnter(menuItem.name)}
               onMouseLeave={() => handleMenuLeave()}
             >
@@ -669,17 +707,26 @@ const Header = () => {
                         <NavLink
                           key={index}
                           to={card.href}
-                          className="flex items-start gap-4 p-4 rounded-lg hover:bg-transparent transition-colors group"
+                          className="flex items-start gap-4 p-4 rounded-xl hover:bg-white/10 transition-all group"
                           onClick={() => setActiveMegamenu(null)}
                         >
                           <div className="flex-shrink-0 mt-0.5">
-                            <Icon className="h-10 w-10 text-[#60A5FA] stroke-[1.5] group-hover:text-white transition-colors" />
+                            <Icon className={cn(
+                              "h-10 w-10 stroke-[1.5] transition-colors",
+                              isHeaderTransparent ? "text-blue-200 group-hover:text-white" : "text-[#60A5FA] group-hover:text-[#0052ff]"
+                            )} />
                           </div>
                           <div className="flex-1">
-                            <h4 className="font-bold text-base text-gray-900 group-hover:text-[#0052ff] mb-1.5 transition-colors leading-tight">
+                            <h4 className={cn(
+                              "font-bold text-base mb-1.5 transition-colors leading-tight",
+                              isHeaderTransparent ? "text-white group-hover:text-blue-200" : "text-gray-900 group-hover:text-[#0052ff]"
+                            )}>
                               {card.title}
                             </h4>
-                            <p className="text-sm text-gray-600 leading-snug">
+                            <p className={cn(
+                              "text-sm leading-snug transition-colors",
+                              isHeaderTransparent ? "text-blue-50/70 group-hover:text-white" : "text-gray-600"
+                            )}>
                               {card.description}
                             </p>
                           </div>
@@ -691,15 +738,22 @@ const Header = () => {
                   {/* Right: Promotional Card */}
                   {menuItem.promo && (
                     <div className="lg:col-span-1">
-                      <div className="rounded-xl overflow-hidden shadow-md bg-white h-full flex flex-col">
+                      <div className={cn(
+                        "rounded-xl overflow-hidden shadow-md h-full flex flex-col transition-all",
+                        isHeaderTransparent ? "bg-white/5 border border-white/10" : "bg-white"
+                      )}>
                         <div className="relative h-40 flex-shrink-0">
                           <img
                             src={menuItem.promo.image}
                             alt={menuItem.promo.title || "Promotion Bricareau"}
                             className="w-full h-full object-cover"
                           />
+                          {isHeaderTransparent && <div className="absolute inset-0 bg-black/20" />}
                         </div>
-                        <div className="bg-[#0052ff] p-6 flex-1 flex flex-col justify-center">
+                        <div className={cn(
+                          "p-6 flex-1 flex flex-col justify-center",
+                          isHeaderTransparent ? "bg-white/5" : "bg-[#0052ff]"
+                        )}>
                           <h3 className="text-lg font-bold mb-4 leading-tight text-white">
                             {menuItem.promo.title}
                           </h3>

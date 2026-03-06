@@ -1,6 +1,5 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
+import BlogLayout from "@/components/BlogLayout";
 import { Button } from "@/components/ui/button";
 import { Phone, ShieldCheck, BadgeCheck, Microscope, Waves, Droplets, ArrowRight, HeartPulse, Info, Zap, Sparkles, Filter, Home, Layout, Search, Sparkle, Hammer } from "lucide-react";
 
@@ -13,46 +12,32 @@ const FiltreEvierVsMaisonEntiere = () => {
         }
     }, []);
 
-    return (
-        <div className="min-h-screen bg-white font-sans text-slate-900 leading-relaxed font-light text-justify">
-            <Header />
-            <main className="pt-20">
-                {/* Hero Section */}
-                <section className="relative py-24 bg-slate-900 text-white overflow-hidden">
-                    <div className="absolute inset-0 opacity-20">
-                        <img
-                            src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=2000&auto=format&fit=crop"
-                            alt="Cuisine moderne avec robinetterie design"
-                            className="w-full h-full object-cover"
-                        />
-                    </div>
-                    <div className="container mx-auto px-4 relative z-10 text-center">
-                        <span className="inline-block px-4 py-1 rounded-full bg-blue-600/20 border border-blue-400/30 text-blue-400 text-sm font-bold mb-6 tracking-widest uppercase">
-                            Architecture De Filtration & Confort
-                        </span>
-                        <h1 className="text-4xl md:text-7xl font-bold mb-8 leading-tight tracking-tighter">
-                            Filtre sous l'évier <span className="text-blue-400">vs</span> Maison entière
-                        </h1>
-                        <p className="text-xl md:text-2xl text-slate-300 font-light mb-10 leading-relaxed max-w-4xl mx-auto italic text-center">
-                            Dilemme de conception : devez-vous purifier uniquement ce que vous buvez ou chaque goutte d'eau de votre foyer ? Analyse complète des avantages, des coûts et des bénéfices réels.
-                        </p>
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-10 h-16 font-bold" asChild>
-                                <a href="/Filtres-deau-pour-toute-la-maison">Systèmes toute la maison</a>
-                            </Button>
-                            <Button size="lg" variant="outline" className="text-white border-white bg-white/10 hover:bg-white/20 rounded-full px-10 h-16 font-bold backdrop-blur-sm" asChild>
-                                <a href="/Systemes-de-filtration-deau-sous-evier">Filtres sous l'évier</a>
-                            </Button>
-                        </div>
-                    </div>
-                </section>
+    const tocItems = [
+        {
+                "id": "section-1",
+                "title": "La Filtration sous l'évier (Point d'Usage)"
+        },
+        {
+                "id": "section-2",
+                "title": "La Filtration Toute la Maison (Point d'Entrée)"
+        },
+        {
+                "id": "section-3",
+                "title": "Comparaison Technique : Fiche de Score"
+        },
+        {
+                "id": "section-4",
+                "title": "La Synergie Bricareau : Pourquoi choisir les deux ?"
+        }
+];
 
-                {/* Article Intro Content */}
-                <article className="py-20 lg:py-32 bg-white">
-                    <div className="container mx-auto px-4">
-                        <div className="max-w-4xl mx-auto">
-                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 leading-relaxed">
-                                <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-blue-600 pl-8 italic">
+    return (
+        <BlogLayout 
+            title="Filtre sous l'évier vs Maison entière" 
+            headerImage={"https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=2000&auto=format&fit=crop"}
+            tocItems={tocItems}
+        >
+            <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-blue-600 pl-8 italic">
                                     Une question récurrente chez les nouveaux propriétaires est de savoir où placer la ligne de défense de leur eau. Isoler la purification à un seul point ou traiter le débit total de la résidence ?
                                 </p>
 
@@ -62,7 +47,7 @@ const FiltreEvierVsMaisonEntiere = () => {
                                     </p>
                                 </div>
 
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">1. La Filtration sous l'évier (Point d'Usage)</h2>
+                                <h2 id="section-1" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">1. La Filtration sous l'évier (Point d'Usage)</h2>
                                 <p>
                                     C'est la solution de précision. Le système se concentre exclusivement sur un point unique, généralement le robinet de la cuisine et le distributeur d'eau du réfrigérateur.
                                 </p>
@@ -84,7 +69,7 @@ const FiltreEvierVsMaisonEntiere = () => {
                                     </div>
                                 </div>
 
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">2. La Filtration Toute la Maison (Point d'Entrée)</h2>
+                                <h2 id="section-2" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">2. La Filtration Toute la Maison (Point d'Entrée)</h2>
                                 <p>
                                     Ici, on traite l'eau dès qu'elle entre dans le bâtiment, avant même qu'elle ne se divise vers le chauffe-eau ou les salles de bain.
                                 </p>
@@ -104,7 +89,7 @@ const FiltreEvierVsMaisonEntiere = () => {
                                     </p>
                                 </div>
 
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">3. Comparaison Technique : Fiche de Score</h2>
+                                <h2 id="section-3" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">3. Comparaison Technique : Fiche de Score</h2>
                                 <div className="overflow-x-auto my-12">
                                     <table className="w-full border-collapse border border-slate-200">
                                         <thead>
@@ -139,7 +124,7 @@ const FiltreEvierVsMaisonEntiere = () => {
                                     </table>
                                 </div>
 
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">4. La Synergie Bricareau : Pourquoi choisir les deux ?</h2>
+                                <h2 id="section-4" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">4. La Synergie Bricareau : Pourquoi choisir les deux ?</h2>
                                 <p>
                                     Pour une protection sans compromis, la recommandation ultime des experts Bricareau est la combinaison des deux :
                                 </p>
@@ -166,13 +151,7 @@ const FiltreEvierVsMaisonEntiere = () => {
                                         Note pour les propriétaires de puits : Pour vous, la filtration Toute la Maison n'est pas une option, mais une nécessité pour protéger votre pompe et votre chauffe-eau des sédiments minéraux.
                                     </p>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-            </main>
-            <Footer />
-        </div>
+        </BlogLayout>
     );
 };
 

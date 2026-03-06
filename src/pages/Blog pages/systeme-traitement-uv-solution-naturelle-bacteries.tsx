@@ -1,6 +1,5 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
+import BlogLayout from "@/components/BlogLayout";
 import { Button } from "@/components/ui/button";
 import { Phone, ShieldCheck, BadgeCheck, Microscope, Waves, Droplets, Info, Zap, Sparkles, Filter, CheckCircle2, FlaskConical, MicroscopeIcon, Search, Microscope2, ZapIcon, Lightbulb, Sun, HeartPulse } from "lucide-react";
 
@@ -13,48 +12,28 @@ const TraitementUVBacteriaNaturel = () => {
         }
     }, []);
 
-    return (
-        <div className="min-h-screen bg-white font-sans text-slate-900 leading-relaxed font-light text-justify">
-            <Header />
-            <main className="pt-20">
-                {/* Hero Section */}
-                <section className="relative py-24 bg-blue-900 text-white overflow-hidden text-center">
-                    <div className="absolute inset-0 opacity-30">
-                        <img
-                            src="https://images.unsplash.com/photo-1542332213-31f87348057f?q=80&w=2000&auto=format&fit=crop"
-                            alt="Abstraction de lumière ultraviolette"
-                            className="w-full h-full object-cover"
-                        />
-                    </div>
-                    <div className="container mx-auto px-4 relative z-10 text-center">
-                        <span className="inline-block px-4 py-1 rounded-full bg-blue-400/20 border border-blue-300/30 text-blue-300 text-sm font-bold mb-6 tracking-widest uppercase">
-                            Stérilisation Photonique & Bio-Protection
-                        </span>
-                        <h1 className="text-4xl md:text-7xl font-bold mb-8 leading-tight tracking-tighter">
-                            Le pouvoir de <span className="text-blue-300 italic">la lumière</span> UV
-                        </h1>
-                        <p className="text-xl md:text-2xl text-slate-100 font-light mb-10 leading-relaxed max-w-4xl mx-auto italic text-center">
-                            Comment une technologie inspirée du soleil permet d'éradiquer 99,99 % des micro-organismes sans altérer la chimie de votre eau : une barrière invisible contre les bactéries.
-                        </p>
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <Button size="lg" className="bg-white text-blue-900 hover:bg-blue-50 rounded-full px-10 h-16 font-bold" asChild>
-                                <a href="/Systemes-de-desinfection-UV">Découvrir nos systèmes UV Expert</a>
-                            </Button>
-                            <Button size="lg" variant="outline" className="text-white border-white bg-white/10 hover:bg-white/20 rounded-full px-10 h-16 font-bold backdrop-blur-sm" asChild>
-                                <a href="tel:18552649328" className="flex items-center gap-2">
-                                    <Phone className="h-5 w-5" /> 1-855-264-9328
-                                </a>
-                            </Button>
-                        </div>
-                    </div>
-                </section>
+    const tocItems = [
+        {
+                "id": "section-1",
+                "title": "La Neutralisation Photonique : Comment ça marche ?"
+        },
+        {
+                "id": "section-2",
+                "title": "Les 3 Avantages \"Naturels\" de l'UV"
+        },
+        {
+                "id": "section-3",
+                "title": "Quand le système UV est-il obligatoire ?"
+        }
+];
 
-                {/* Article Intro Content */}
-                <article className="py-20 lg:py-32 bg-white">
-                    <div className="container mx-auto px-4">
-                        <div className="max-w-4xl mx-auto">
-                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 leading-relaxed">
-                                <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-blue-600 pl-8 italic">
+    return (
+        <BlogLayout 
+            title="Le pouvoir de la lumière UV" 
+            headerImage={"https://images.unsplash.com/photo-1542332213-31f87348057f?q=80&w=2000&auto=format&fit=crop"}
+            tocItems={tocItems}
+        >
+            <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-blue-600 pl-8 italic">
                                     Imaginez pouvoir désinfecter votre eau sans chlore, sans odeur chimique et sans danger pour vos reins. C'est la promesse tenue de la technologie UV-C.
                                 </p>
 
@@ -64,7 +43,7 @@ const TraitementUVBacteriaNaturel = () => {
                                     </p>
                                 </div>
 
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">1. La Neutralisation Photonique : Comment ça marche ?</h2>
+                                <h2 id="section-1" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">1. La Neutralisation Photonique : Comment ça marche ?</h2>
                                 <p>
                                     Le système UV n'ajoute rien à l'eau et ne lui retire aucun minéral. Le secret réside dans l'exposition intense au rayonnement UV-C (254 nanomètres).
                                 </p>
@@ -89,7 +68,7 @@ const TraitementUVBacteriaNaturel = () => {
                                     </div>
                                 </div>
 
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">2. Les 3 Avantages "Naturels" de l'UV</h2>
+                                <h2 id="section-2" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">2. Les 3 Avantages "Naturels" de l'UV</h2>
                                 <p>
                                     Le passage à la technologie UV change non seulement la qualité de l'eau, mais aussi le mode de vie du foyer.
                                 </p>
@@ -114,7 +93,7 @@ const TraitementUVBacteriaNaturel = () => {
                                     </div>
                                 </div>
 
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">3. Quand le système UV est-il obligatoire ?</h2>
+                                <h2 id="section-3" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">3. Quand le système UV est-il obligatoire ?</h2>
                                 <p>
                                     Pour les résidences alimentées par un puits, une source de surface ou une citerne, le système UV n'est pas une simple recommandation ; c'est votre <strong>seule assurance</strong> d'une eau bactériologiquement sûre en tout temps. Les infiltrations de surface après de fortes pluies ou la fonte des neiges peuvent contaminer un puits sain du jour au lendemain. Le système UV agit comme un gardien permanent, neutralisant tout intrus biologique avant qu'il n'atteigne votre verre d'eau.
                                 </p>
@@ -140,13 +119,7 @@ const TraitementUVBacteriaNaturel = () => {
                                         Rappel technique critique : L'eau doit être 100% limpide avant d'entrer dans l'UV (dureté basse, pas de fer, turbidité nulle). Si l'eau est trouble, la bactérie peut "se cacher" derrière une particule et ne pas recevoir la dose fatale de lumière (effet d'ombrage). C'est pourquoi un système UV est toujours précédé d'un filtre à sédiments.
                                     </p>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-            </main>
-            <Footer />
-        </div>
+        </BlogLayout>
     );
 };
 

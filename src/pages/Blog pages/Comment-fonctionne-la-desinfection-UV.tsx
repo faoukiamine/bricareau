@@ -1,6 +1,5 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
+import BlogLayout from "@/components/BlogLayout";
 import uvImage from "@/assets/lampe-uv-fonctionnement.png";
 import microImage from "@/assets/purete-microbiologique.png";
 import { Button } from "@/components/ui/button";
@@ -15,57 +14,48 @@ const FonctionnementDesinfectionUV = () => {
         }
     }, []);
 
+    const tocItems = [
+        {
+                "id": "section-1",
+                "title": "La science derrière la lumière : Le spectre UV-C"
+        },
+        {
+                "id": "section-2",
+                "title": "Anatomie d'un système UV Bricareau"
+        },
+        {
+                "id": "section-3",
+                "title": "Pourquoi choisir les UV plutôt que le chlore ?"
+        },
+        {
+                "id": "section-4",
+                "title": "La Notion de Dose UV"
+        },
+        {
+                "id": "section-5",
+                "title": "Conditions essentielles pour une désinfection réussie"
+        },
+        {
+                "id": "section-6",
+                "title": "Maintenance et Longévité"
+        },
+        {
+                "id": "section-7",
+                "title": "Conclusion"
+        }
+];
+
     return (
-        <div className="min-h-screen bg-white font-sans">
-            <Header />
-            <main className="pt-20">
-                {/* Hero Section */}
-                <section className="relative py-24 bg-gradient-to-r from-blue-900 via-indigo-950 to-slate-900 text-white overflow-hidden">
-                    <div className="absolute inset-0 opacity-30">
-                        <img
-                            src={uvImage}
-                            alt="Technologie de désinfection UV de l'eau"
-                            className="w-full h-full object-cover"
-                        />
-                    </div>
-                    <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(96,165,250,0.1),transparent_70%)]" />
-
-                    <div className="container mx-auto px-4 relative z-10">
-                        <div className="max-w-4xl mx-auto text-center">
-                            <div className="inline-flex items-center gap-2 bg-blue-500/20 backdrop-blur-sm border border-blue-400/30 px-4 py-2 rounded-full mb-8">
-                                <Zap className="h-4 w-4 text-blue-400" />
-                                <span className="text-sm font-semibold tracking-wider uppercase">Guide Scientifique</span>
-                            </div>
-                            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-[1.1] tracking-tighter">
-                                Comment fonctionne la <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-300">désinfection UV</span> ?
-                            </h1>
-                            <p className="text-xl md:text-2xl text-slate-300 font-light mb-12 leading-relaxed text-justify">
-                                Explorez la technologie ultraviolette : une barrière de protection biophysique invisible mais infaillible pour garantir la sécurité microbiologique de votre consommation d'eau.
-                            </p>
-                            <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-10 h-16 text-lg font-bold shadow-lg shadow-blue-900/40" asChild>
-                                    <a href="/Systemes-de-desinfection-UV">Nos systèmes UV</a>
-                                </Button>
-                                <Button size="lg" variant="outline" className="text-white border-white/30 bg-white/5 hover:bg-white/10 rounded-full px-10 h-16 backdrop-blur-sm border" asChild>
-                                    <a href="tel:18552649328" className="flex items-center gap-2">
-                                        <Phone className="h-5 w-5" /> 1-855-264-9328
-                                    </a>
-                                </Button>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                {/* Main Content */}
-                <article className="py-24 lg:py-32">
-                    <div className="container mx-auto px-4">
-                        <div className="max-w-4xl mx-auto">
-                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 leading-relaxed text-justify">
-                                <p className="lead text-2xl font-light text-slate-900 mb-16 border-l-4 border-blue-600 pl-8 italic">
+        <BlogLayout 
+            title="Comment fonctionne la désinfection UV ?" 
+            headerImage={uvImage}
+            tocItems={tocItems}
+        >
+            <p className="lead text-2xl font-light text-slate-900 mb-16 border-l-4 border-blue-600 pl-8 italic">
                                     La désinfection par rayons ultraviolets (UV) représente l'une des avancées les plus significatives de l'ingénierie environnementale contemporaine. Sans ajout de chlore ni altération chimique, elle offre une protection absolue contre les agents pathogènes les plus résistants.
                                 </p>
 
-                                <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mt-20 mb-8 tracking-tight italic">La science derrière la lumière : Le spectre UV-C</h2>
+                                <h2 id="section-1" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">La science derrière la lumière : Le spectre UV-C</h2>
                                 <p>
                                     Le spectre de la lumière ultraviolette se divise en plusieurs catégories : UV-A, UV-B et UV-C. C'est cette dernière catégorie, située entre 200 et 280 nanomètres (nm), qui possède les propriétés germicides nécessaires au traitement de l'eau.
                                 </p>
@@ -83,7 +73,7 @@ const FonctionnementDesinfectionUV = () => {
                                     </p>
                                 </div>
 
-                                <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">Anatomie d'un système UV Bricareau</h2>
+                                <h2 id="section-2" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">Anatomie d'un système UV Bricareau</h2>
                                 <p>
                                     Un système de désinfection UV résidentiel est une pièce d'ingénierie de haute précision composée de quatre éléments fondamentaux :
                                 </p>
@@ -138,7 +128,7 @@ const FonctionnementDesinfectionUV = () => {
                                     </div>
                                 </div>
 
-                                <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">Pourquoi choisir les UV plutôt que le chlore ?</h2>
+                                <h2 id="section-3" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">Pourquoi choisir les UV plutôt que le chlore ?</h2>
                                 <p>
                                     Pendant des décennies, la chloration a été la norme. Cependant, pour l'usage résidentiel, les UV présentent des avantages insurmontables :
                                 </p>
@@ -157,7 +147,7 @@ const FonctionnementDesinfectionUV = () => {
                                     </div>
                                 </div>
 
-                                <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">La Notion de Dose UV</h2>
+                                <h2 id="section-4" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">La Notion de Dose UV</h2>
                                 <p>
                                     L'efficacité de la désinfection dépend de la "dose UV", exprimée en millijoules par centimètre carré (mJ/cm²). La formule est simple :
                                     **Dose = Intensité de la lampe x Temps de contact**.
@@ -166,7 +156,7 @@ const FonctionnementDesinfectionUV = () => {
                                     Les normes de santé exigent généralement une dose minimale de 30 à 40 mJ/cm² pour garantir une sécurité potable. Chez Bricareau, nos systèmes sont dimensionnés pour maintenir cette dose même au débit maximum autorisé par votre plomberie.
                                 </p>
 
-                                <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">Conditions essentielles pour une désinfection réussie</h2>
+                                <h2 id="section-5" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">Conditions essentielles pour une désinfection réussie</h2>
                                 <p>
                                     La lumière UV doit pouvoir "voir" les bactéries pour les inactiver. Si l'eau est trouble ou contient trop de minéraux, ces derniers peuvent agir comme un bouclier (phénomène de *shadowing*).
                                 </p>
@@ -179,12 +169,12 @@ const FonctionnementDesinfectionUV = () => {
                                     <li>Un traitement du fer et du manganèse (ces métaux tachent le quartz et absorbent les UV).</li>
                                 </ol>
 
-                                <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mt-20 mb-8 tracking-tight text-center italic">Maintenance et Longévité</h2>
+                                <h2 id="section-6" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">Maintenance et Longévité</h2>
                                 <p>
                                     Une lampe UV a une durée de vie efficace d'environ 9 000 heures, soit environ un an d'utilisation continue. Passé ce délai, même si la lampe produit encore de la lumière visible (le halo bleu que vous pouvez voir à travers le viseur), elle ne produit plus assez de rayons UV-C germicides. Le remplacement annuel est impératif pour votre sécurité alimentaire.
                                 </p>
 
-                                <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">Conclusion</h2>
+                                <h2 id="section-7" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">Conclusion</h2>
                                 <p>
                                     Le système UV est l'assurance-vie de votre eau de puits. C'est une technologie silencieuse, écologique et incroyablement fiable qui transforme une source d'eau potentiellement vulnérable en un approvisionnement d'une pureté comparable aux meilleures eaux embouteillées.
                                 </p>
@@ -210,13 +200,7 @@ const FonctionnementDesinfectionUV = () => {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-            </main>
-            <Footer />
-        </div>
+        </BlogLayout>
     );
 };
 

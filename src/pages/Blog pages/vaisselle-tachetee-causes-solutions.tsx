@@ -1,6 +1,5 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
+import BlogLayout from "@/components/BlogLayout";
 import { Button } from "@/components/ui/button";
 import { Phone, ArrowRight, CheckCircle2, FlaskConical, GlassWater, Sparkles, Sun } from "lucide-react";
 
@@ -13,55 +12,40 @@ const VaisselleTachetee = () => {
         }
     }, []);
 
-    return (
-        <div className="min-h-screen bg-white font-sans">
-            <Header />
-            <main className="pt-20">
-                {/* Hero Section */}
-                <section className="relative py-24 bg-slate-900 text-white overflow-hidden">
-                    <div className="absolute inset-0 opacity-20">
-                        <img
-                            src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=1600&auto=format&fit=crop"
-                            alt="Vaisselle étincelante et pureté de l'eau"
-                            className="w-full h-full object-cover"
-                        />
-                    </div>
-                    <div className="container mx-auto px-4 relative z-10">
-                        <div className="max-w-4xl mx-auto text-center">
-                            <div className="inline-flex items-center gap-2 bg-blue-500/20 backdrop-blur-sm border border-blue-400/30 px-4 py-2 rounded-full mb-8">
-                                <Sparkles className="h-4 w-4 text-blue-400" />
-                                <span className="text-sm font-semibold tracking-wider uppercase">Art de Vivre & Propreté</span>
-                            </div>
-                            <h1 className="text-4xl md:text-6xl font-bold mb-8 leading-tight tracking-tighter">
-                                Pourquoi votre vaisselle sort-elle toujours <span className="text-blue-400">tachetée</span> ?
-                            </h1>
-                            <p className="text-xl md:text-2xl text-slate-300 font-light mb-10 leading-relaxed text-justify">
-                                Explorer la science des résidus minéraux et comment transformer votre rituel de nettoyage pour obtenir une transparence cristalline absolue.
-                            </p>
-                            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 font-bold" asChild>
-                                    <a href="/tests-eau">Réserver mon analyse d'eau</a>
-                                </Button>
-                                <Button size="lg" variant="outline" className="text-white border-white bg-white/10 hover:bg-white/20 rounded-full px-8 h-14 backdrop-blur-sm shadow-xl" asChild>
-                                    <a href="tel:18552649328" className="flex items-center gap-2">
-                                        <Phone className="h-5 w-5" /> 1-855-264-9328
-                                    </a>
-                                </Button>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+    const tocItems = [
+        {
+                "id": "section-1",
+                "title": "Le coupable invisible : Le calcaire dissous"
+        },
+        {
+                "id": "section-2",
+                "title": "Pourquoi les solutions domestiques échouent-elles ?"
+        },
+        {
+                "id": "section-3",
+                "title": "La solution Bricareau : Un changement physique, pas chimique"
+        },
+        {
+                "id": "section-4",
+                "title": "Un impact au-delà de l'esthétique"
+        },
+        {
+                "id": "section-5",
+                "title": "Conclusion"
+        }
+];
 
-                {/* Article Content */}
-                <article className="py-20 lg:py-32">
-                    <div className="container mx-auto px-4">
-                        <div className="max-w-4xl mx-auto">
-                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 leading-relaxed text-justify font-light">
-                                <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-blue-600 pl-8 italic">
+    return (
+        <BlogLayout 
+            title="Pourquoi votre vaisselle sort-elle toujours tachetée ?" 
+            headerImage={"https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=1600&auto=format&fit=crop"}
+            tocItems={tocItems}
+        >
+            <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-blue-600 pl-8 italic">
                                     Il n'y a rien de plus décourageant que de dresser une table élégante pour des convives et de s'apercevoir, à la lumière des bougies, que les verres à vin sont recouverts d'un voile terne ou de petites taches circulaires opaques. Ce phénomène, loin d'être un signe de négligence ménagère, est la signature indubitable d'un affrontement chimique silencieux dans votre lave-vaisselle : celui de l'eau dure contre votre vaisselle.
                                 </p>
 
-                                <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mt-16 mb-8 tracking-tight">Le coupable invisible : Le calcaire dissous</h2>
+                                <h2 id="section-1" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">Le coupable invisible : Le calcaire dissous</h2>
                                 <p>
                                     Le problème commence au niveau moléculaire. L'eau dure contient des concentrations élevées de calcium et de magnésium. Lorsque l'eau est chauffée à l'intérieur de votre lave-vaisselle, une partie de ces minéraux se "précipite", passant d'un état dissous à un état solide microscopique.
                                 </p>
@@ -81,7 +65,7 @@ const VaisselleTachetee = () => {
                                     </div>
                                 </div>
 
-                                <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mt-16 mb-8 tracking-tight">Pourquoi les solutions domestiques échouent-elles ?</h2>
+                                <h2 id="section-2" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">Pourquoi les solutions domestiques échouent-elles ?</h2>
                                 <p>
                                     Face à la vaisselle tachetée, le premier réflexe est souvent d'augmenter la dose de détergent ou d'ajouter du vinaigre. Malheureusement, ces solutions sont souvent contre-productives :
                                 </p>
@@ -91,7 +75,7 @@ const VaisselleTachetee = () => {
                                     <li><strong>Les agents de rinçage :</strong> Ils aident l'eau à "glisser" sur les surfaces, mais ne peuvent pas compenser une dureté de l'eau élevée. Ils ne font que masquer superficiellement le problème.</li>
                                 </ul>
 
-                                <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mt-16 mb-8 tracking-tight italic">La solution Bricareau : Un changement physique, pas chimique</h2>
+                                <h2 id="section-3" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">La solution Bricareau : Un changement physique, pas chimique</h2>
                                 <p>
                                     La seule façon d'obtenir une vaisselle réellement étincelante sans efforts supplémentaires est de traiter l'eau avant qu'elle n'entre dans l'appareil. Un adoucisseur d'eau Bricareau utilise le principe de l'échange ionique pour remplacer les ions calcium et magnésium par des ions sodium ou potassium.
                                 </p>
@@ -114,7 +98,7 @@ const VaisselleTachetee = () => {
                                     </div>
                                 </div>
 
-                                <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mt-16 mb-8 tracking-tight">Un impact au-delà de l'esthétique</h2>
+                                <h2 id="section-4" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">Un impact au-delà de l'esthétique</h2>
                                 <p>
                                     Avoir une vaisselle propre n'est pas qu'une question de vanité. Les résidus de calcaire et de film savonneux peuvent abriter des bactéries microscopiques à leur surface. En assurant un rinçage parfait, vous garantissez un environnement plus hygiénique pour vos repas familiaux. De plus, vous protégez les composants internes de votre lave-vaisselle (pompes, buses, éléments chauffants) contre l'entartrage.
                                 </p>
@@ -134,17 +118,11 @@ const VaisselleTachetee = () => {
                                     </div>
                                 </div>
 
-                                <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mt-16 mb-8 tracking-tight">Conclusion</h2>
+                                <h2 id="section-5" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">Conclusion</h2>
                                 <p>
                                     La vaisselle tachetée est le symptôme visible d'un problème invisible. En choisissant l'adoucissement de l'eau, vous restaurez non seulement la beauté de votre verrerie, mais vous optimisez également l'efficacité globale de votre cuisine. C'est l'un des changements les plus gratifiants et immédiats que vous puissiez apporter à votre environnement domestique.
                                 </p>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-            </main>
-            <Footer />
-        </div>
+        </BlogLayout>
     );
 };
 

@@ -1,6 +1,5 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
+import BlogLayout from "@/components/BlogLayout";
 import { Button } from "@/components/ui/button";
 import { Phone, ArrowRight, CheckCircle2, AlertTriangle, Droplets, Sparkles, ThermometerSun, ShieldAlert, BadgeAlert, Info, Zap, Scale, Settings } from "lucide-react";
 
@@ -13,49 +12,28 @@ const SignesBesoinAbsoluAdoucisseur = () => {
         }
     }, []);
 
-    return (
-        <div className="min-h-screen bg-white font-sans text-slate-900 leading-relaxed font-light text-justify text-[16px]">
-            <Header />
-            <main className="pt-20">
-                {/* Hero Section */}
-                <section className="relative py-24 bg-red-950 text-white overflow-hidden text-center shadow-2xl">
-                    <div className="absolute inset-0 opacity-30 transform scale-110">
-                        <img
-                            src="https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=2000&auto=format&fit=crop"
-                            alt="Abstraction de tuyauterie corrodée par le calcaire"
-                            className="w-full h-full object-cover"
-                        />
-                    </div>
-                    <div className="container mx-auto px-4 relative z-10 text-center">
-                        <div className="inline-flex items-center gap-2 bg-red-500/20 backdrop-blur-sm border border-red-400/30 px-6 py-2 rounded-full mb-8">
-                            <ShieldAlert className="h-5 w-5 text-red-400" />
-                            <span className="text-sm font-bold tracking-widest uppercase">Alerte Infrastructure & Santé</span>
-                        </div>
-                        <h1 className="text-4xl md:text-7xl font-bold mb-8 leading-tight tracking-tighter">
-                            <span className="text-red-400">Signes alarmants :</span><br />Votre maison appelle à l'aide.
-                        </h1>
-                        <p className="text-xl md:text-2xl text-slate-100 font-light mb-10 leading-relaxed max-w-4xl mx-auto italic text-center">
-                            L'eau dure n'est pas une fatalité, c'est une dégradation active et coûteuse. Apprenez à lire les symptômes d'une eau agressive avant qu'elle ne condamne votre plomberie.
-                        </p>
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white rounded-full px-10 h-16 font-bold shadow-xl transition-all" asChild>
-                                <a href="/adoucissement">Agir avec un système Signature</a>
-                            </Button>
-                            <Button size="lg" variant="outline" className="text-white border-white bg-white/10 hover:bg-white/20 rounded-full px-10 h-16 font-bold backdrop-blur-sm" asChild>
-                                <a href="tel:18552649328" className="flex items-center gap-2">
-                                    <Phone className="h-5 w-5" /> 1-855-264-9328
-                                </a>
-                            </Button>
-                        </div>
-                    </div>
-                </section>
+    const tocItems = [
+        {
+                "id": "section-1",
+                "title": "Le \"Ciment Blanc\" sur votre Robinetterie"
+        },
+        {
+                "id": "section-2",
+                "title": "Crise Dermatologique et Capillaire Chronique"
+        },
+        {
+                "id": "section-3",
+                "title": "Le Déclin de la Vaisselle et du Linge"
+        }
+];
 
-                {/* Article Intro Content */}
-                <article className="py-20 lg:py-32 bg-white">
-                    <div className="container mx-auto px-4">
-                        <div className="max-w-4xl mx-auto">
-                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 leading-relaxed">
-                                <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-red-600 pl-8 italic">
+    return (
+        <BlogLayout 
+            title="Signes alarmants :Votre maison appelle à l'aide." 
+            headerImage={"https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=2000&auto=format&fit=crop"}
+            tocItems={tocItems}
+        >
+            <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-red-600 pl-8 italic">
                                     Si vous attendez qu'une conduite explose ou qu'un chauffe-eau tombe en panne totale, il sera déjà trop tard. Votre maison vous envoie des signaux discrets mais indiscutables.
                                 </p>
 
@@ -65,7 +43,7 @@ const SignesBesoinAbsoluAdoucisseur = () => {
                                     </p>
                                 </div>
 
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">1. Le "Ciment Blanc" sur votre Robinetterie</h2>
+                                <h2 id="section-1" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">1. Le "Ciment Blanc" sur votre Robinetterie</h2>
                                 <p>
                                     C'est le symptôme le plus classique, mais lorsqu'il devient "absolu", vous ne parvenez plus à l'enlever avec des produits ménagers classiques.
                                 </p>
@@ -89,7 +67,7 @@ const SignesBesoinAbsoluAdoucisseur = () => {
                                     </div>
                                 </div>
 
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">2. Crise Dermatologique et Capillaire Chronique</h2>
+                                <h2 id="section-2" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">2. Crise Dermatologique et Capillaire Chronique</h2>
                                 <p>
                                     N'ignorez pas les signaux envoyés par votre corps. L'eau dure est un ennemi déclaré de la barrière cutanée.
                                 </p>
@@ -114,7 +92,7 @@ const SignesBesoinAbsoluAdoucisseur = () => {
                                     </div>
                                 </div>
 
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">3. Le Déclin de la Vaisselle et du Linge</h2>
+                                <h2 id="section-3" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">3. Le Déclin de la Vaisselle et du Linge</h2>
                                 <p>
                                     Regardez vos verres à la lumière. Sont-ils "propres" mais ternes ? Couverts de cercles blanchâtres ? C'est le calcaire qui cuit sur la surface lors du cycle de séchage du lave-vaisselle. Pour votre linge, le signe absolu est la raideur des serviettes de bain et des draps, ainsi qu'une perte de couleur prématurée (blancs qui deviennent gris/jaunes).
                                 </p>
@@ -140,13 +118,7 @@ const SignesBesoinAbsoluAdoucisseur = () => {
                                         Rappel d'expert : Au Québec, un adoucisseur bien calibré augmente la durée de vie moyenne de vos appareils de 20 à 45 %. C'est une assurance contre l'obsolescence programmée provoquée par le tartre.
                                     </p>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-            </main>
-            <Footer />
-        </div>
+        </BlogLayout>
     );
 };
 

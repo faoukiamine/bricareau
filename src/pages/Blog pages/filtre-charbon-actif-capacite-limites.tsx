@@ -1,6 +1,5 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
+import BlogLayout from "@/components/BlogLayout";
 import { Button } from "@/components/ui/button";
 import { Phone, ShieldCheck, BadgeCheck, Microscope, Waves, Droplets, Info, Zap, Sparkles, Filter, CheckCircle2, FlaskConical, MicroscopeIcon, Search, Microscope2, FlaskConicalIcon, FlaskRound } from "lucide-react";
 
@@ -13,48 +12,28 @@ const FiltreCharbonActifLimites = () => {
         }
     }, []);
 
-    return (
-        <div className="min-h-screen bg-white font-sans text-slate-900 leading-relaxed font-light text-justify">
-            <Header />
-            <main className="pt-20">
-                {/* Hero Section */}
-                <section className="relative py-24 bg-slate-950 text-white overflow-hidden text-center">
-                    <div className="absolute inset-0 opacity-20">
-                        <img
-                            src="https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=2000&auto=format&fit=crop"
-                            alt="Abstraction de charbon actif"
-                            className="w-full h-full object-cover grayscale"
-                        />
-                    </div>
-                    <div className="container mx-auto px-4 relative z-10">
-                        <span className="inline-block px-4 py-1 rounded-full bg-slate-600/20 border border-slate-400/30 text-slate-400 text-sm font-bold mb-6 tracking-widest uppercase">
-                            Adsorption & Science Moléculaire
-                        </span>
-                        <h1 className="text-4xl md:text-7xl font-bold mb-8 leading-tight tracking-tighter">
-                            Filtre au charbon actif : <span className="text-blue-400">La vérité.</span>
-                        </h1>
-                        <p className="text-xl md:text-2xl text-slate-300 font-light mb-10 leading-relaxed max-w-4xl mx-auto italic text-center">
-                            Démystifier le média filtrant le plus répandu au monde : ce qu'il capture avec brio et les dangers invisibles qu'il laisse impunément traverser vers votre verre d'eau.
-                        </p>
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-10 h-16 font-bold" asChild>
-                                <a href="/Systemes-de-filtration-deau-sous-evier">Voir nos filtres haute densité</a>
-                            </Button>
-                            <Button size="lg" variant="outline" className="text-white border-white bg-white/10 hover:bg-white/20 rounded-full px-10 h-16 font-bold backdrop-blur-sm" asChild>
-                                <a href="tel:18552649328" className="flex items-center gap-2">
-                                    <Phone className="h-5 w-5" /> 1-855-264-9328
-                                </a>
-                            </Button>
-                        </div>
-                    </div>
-                </section>
+    const tocItems = [
+        {
+                "id": "section-1",
+                "title": "Le miracle de l'Adsorption"
+        },
+        {
+                "id": "section-2",
+                "title": "Ce qu'il NE filtre PAS : Les Limites Critiques"
+        },
+        {
+                "id": "section-3",
+                "title": "Charbon Granulaire vs Bloc de Charbon"
+        }
+];
 
-                {/* Article Content Intro */}
-                <article className="py-20 lg:py-32 bg-white">
-                    <div className="container mx-auto px-4">
-                        <div className="max-w-4xl mx-auto">
-                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 leading-relaxed">
-                                <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-blue-600 pl-8 italic">
+    return (
+        <BlogLayout 
+            title="Filtre au charbon actif : La vérité." 
+            headerImage={"https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=2000&auto=format&fit=crop"}
+            tocItems={tocItems}
+        >
+            <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-blue-600 pl-8 italic">
                                     Il est partout : dans les carafes filtrantes, les réfrigérateurs et les masques à gaz. Le charbon actif est le "maître du goût", mais est-il suffisant pour garantir la sécurité de votre foyer au Québec ?
                                 </p>
 
@@ -64,7 +43,7 @@ const FiltreCharbonActifLimites = () => {
                                     </p>
                                 </div>
 
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">1. Le miracle de l'Adsorption</h2>
+                                <h2 id="section-1" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">1. Le miracle de l'Adsorption</h2>
                                 <p>
                                     Contrairement à un filtre à sédiments (qui agit comme un tamis), le charbon actif utilise l'<strong>adsorption</strong>. Les molécules de gaz ou de pollution organique adhèrent aux pores microscopiques du charbon par les forces de Van der Waals.
                                 </p>
@@ -85,7 +64,7 @@ const FiltreCharbonActifLimites = () => {
                                     </div>
                                 </div>
 
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-20 mb-8 tracking-tight text-red-700 underline decoration-red-200">2. Ce qu'il NE filtre PAS : Les Limites Critiques</h2>
+                                <h2 id="section-2" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">2. Ce qu'il NE filtre PAS : Les Limites Critiques</h2>
                                 <p>
                                     Une erreur fatale pour de nombreux consommateurs est de croire qu'un simple filtre à charbon purifie l'eau de tout danger. Voici ce que le charbon actif ne peut tout simplement pas capturer efficacement :
                                 </p>
@@ -104,7 +83,7 @@ const FiltreCharbonActifLimites = () => {
                                     </div>
                                 </div>
 
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">3. Charbon Granulaire vs Bloc de Charbon</h2>
+                                <h2 id="section-3" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">3. Charbon Granulaire vs Bloc de Charbon</h2>
                                 <p>
                                     La forme compte. Chez Bricareau, nous privilégions le <strong>Carbon Block</strong> (charbon compressé à haute densité). Pourquoi ? Le charbon granulaire laisse l'eau se frayer des chemins préférentiels (canalisations), laissant passer d'importantes quantités de contaminants. Un bloc compressé force chaque goutte d'eau à traverser une structure dense et uniforme, maximisant le temps de contact et l'efficacité de l'adsorption.
                                 </p>
@@ -130,13 +109,7 @@ const FiltreCharbonActifLimites = () => {
                                         Note technique : En raison de l'accumulation de matière organique, un filtre au charbon doit être remplacé au minimum tous les 12 mois, quelle que soit la quantité d'eau filtrée, pour prévenir le phénomène de "percée" chimique.
                                     </p>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-            </main>
-            <Footer />
-        </div>
+        </BlogLayout>
     );
 };
 

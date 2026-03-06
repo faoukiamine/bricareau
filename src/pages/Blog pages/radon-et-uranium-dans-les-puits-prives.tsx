@@ -1,6 +1,5 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
+import BlogLayout from "@/components/BlogLayout";
 import { Button } from "@/components/ui/button";
 import { Phone, ShieldAlert, Activity, Droplets, InfoIcon, ShieldCheck, MicroscopeIcon, AlertTriangle, Wind, Zap, FlaskConical, Target, CheckCircle2 } from "lucide-react";
 
@@ -13,49 +12,32 @@ const RadonEtUraniumPuitsPrives = () => {
         }
     }, []);
 
+    const tocItems = [
+        {
+                "id": "section-1",
+                "title": "D'où viennent l'uranium et le radon ?"
+        },
+        {
+                "id": "section-2",
+                "title": "Évaluation des risques pour la santé"
+        },
+        {
+                "id": "section-3",
+                "title": "Le processus de dépistage et d'analyse"
+        },
+        {
+                "id": "section-4",
+                "title": "Solutions d'ingénierie et Technologies de filtration"
+        }
+];
+
     return (
-        <div className="min-h-screen bg-white font-sans text-slate-900 leading-snug font-light text-justify text-[16px]">
-            <Header />
-            <main className="pt-20">
-                {/* Hero Section */}
-                <section className="relative py-24 bg-slate-900 text-white overflow-hidden text-center shadow-lg">
-                    <div className="absolute inset-0 opacity-20 transform scale-105">
-                        <img
-                            src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=2000&auto=format&fit=crop"
-                            alt="Abstraction représentant l'analyse de l'eau"
-                            className="w-full h-full object-cover grayscale mix-blend-overlay"
-                        />
-                    </div>
-                    <div className="container mx-auto px-4 relative z-10 text-center">
-                        <span className="inline-block px-4 py-1 rounded-full bg-red-600/20 border border-red-400/30 text-red-400 text-sm font-bold mb-6 tracking-widest uppercase mt-8">
-                            Dossier Spécial : Contaminants Invisibles
-                        </span>
-                        <h1 className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text-center sm:text-justify max-w-4xl mx-auto">
-                            <span className="font-bold">Radon et uranium</span> dans les puits privés : <span className="text-red-400 font-bold">risques réels</span> et solutions efficaces
-                        </h1>
-                        <p className="text-[20px] leading-snug text-slate-300 font-light mb-10 text-center sm:text-justify max-w-2xl mx-auto italic">
-                            Inodores, incolores et sans saveur, le radon et l'uranium sont des contaminants radioactifs naturellement présents dans les sols québécois. Découvrez l'impact de ces éléments sur votre santé et comment sécuriser votre approvisionnement en eau.
-                        </p>
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white rounded-full px-10 h-16 font-bold shadow-lg transition-transform active:scale-95" asChild>
-                                <a href="/tests-eau">Réserver une analyse d'eau</a>
-                            </Button>
-                            <Button size="lg" variant="outline" className="text-white border-white bg-white/10 hover:bg-white/20 rounded-full px-10 h-16 font-bold backdrop-blur-sm shadow-xl" asChild>
-                                <a href="tel:18552649328" className="flex items-center gap-2">
-                                    <Phone className="h-5 w-5" /> 1-855-264-9328
-                                </a>
-                            </Button>
-                        </div>
-                    </div>
-                </section>
-
-                {/* Article Content */}
-                <article className="py-20 lg:py-32 bg-slate-50">
-                    <div className="container mx-auto px-4">
-                        <div className="max-w-4xl mx-auto">
-                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 leading-relaxed">
-
-                                <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-red-600 pl-8 italic">
+        <BlogLayout 
+            title="Radon et uranium dans les puits privés : risques réels et solutions efficaces" 
+            headerImage={"https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=2000&auto=format&fit=crop"}
+            tocItems={tocItems}
+        >
+            <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-red-600 pl-8 italic">
                                     Contrairement au fer ou au soufre qui altèrent le goût et l'odeur de l'eau, le radon et l'uranium se cachent dans l'ombre. Leur présence silencieuse dans les puits artésiens est une préoccupation majeure de santé publique régionale, nécessitant une vigilance accrue des propriétaires.
                                 </p>
 
@@ -69,7 +51,7 @@ const RadonEtUraniumPuitsPrives = () => {
                                 </div>
 
                                 {/* Section 1: Origine */}
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">1. D'où viennent l'uranium et le radon ?</h2>
+                                <h2 id="section-1" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">1. D'où viennent l'uranium et le radon ?</h2>
                                 <p>
                                     Le radon et l'uranium ne sont pas le résultat d'une pollution industrielle. Ce sont des éléments qui existent sur Terre depuis sa formation.
                                 </p>
@@ -99,7 +81,7 @@ const RadonEtUraniumPuitsPrives = () => {
                                 </ul>
 
                                 {/* Section 2: Risques Santé */}
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">2. Évaluation des risques pour la santé</h2>
+                                <h2 id="section-2" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">2. Évaluation des risques pour la santé</h2>
 
                                 <div className="bg-red-50 border border-red-100 rounded-3xl p-10 mb-12">
                                     <h3 className="text-2xl font-bold text-red-900 mb-6 flex items-center gap-3">
@@ -131,7 +113,7 @@ const RadonEtUraniumPuitsPrives = () => {
                                 </p>
 
                                 {/* Section 3: Diagnostic */}
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">3. Le processus de dépistage et d'analyse</h2>
+                                <h2 id="section-3" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">3. Le processus de dépistage et d'analyse</h2>
                                 <p>
                                     Parce qu'ils ne modifient ni l'aspect ni le goût de l'eau, les tests en laboratoire accrédité sont le seul moyen de confirmer leur présence.
                                 </p>
@@ -154,7 +136,7 @@ const RadonEtUraniumPuitsPrives = () => {
                                 </p>
 
                                 {/* Section 4: Solutions Technologiques */}
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">4. Solutions d'ingénierie et Technologies de filtration</h2>
+                                <h2 id="section-4" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">4. Solutions d'ingénierie et Technologies de filtration</h2>
                                 <p>
                                     La bonne nouvelle est que la science de l'hydrologie domestique a développé des méthodes hautement efficaces pour retirer ces éléments dangereux. Voici comment les experts Bricareau procèdent pour sécuriser une résidence.
                                 </p>
@@ -220,14 +202,7 @@ const RadonEtUraniumPuitsPrives = () => {
                                         </div>
                                     </div>
                                 </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </article>
-            </main>
-            <Footer />
-        </div>
+        </BlogLayout>
     );
 };
 

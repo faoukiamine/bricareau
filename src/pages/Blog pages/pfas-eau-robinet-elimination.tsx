@@ -1,6 +1,5 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
+import BlogLayout from "@/components/BlogLayout";
 import { Button } from "@/components/ui/button";
 import { Phone, ShieldAlert, BadgeCheck, Microscope, Waves, Droplets, ArrowRight } from "lucide-react";
 
@@ -13,50 +12,36 @@ const PFASEauRobinet = () => {
         }
     }, []);
 
-    return (
-        <div className="min-h-screen bg-white font-sans text-slate-900">
-            <Header />
-            <main className="pt-20">
-                {/* Hero Section */}
-                <section className="relative py-24 bg-slate-900 text-white overflow-hidden">
-                    <div className="absolute inset-0 opacity-20">
-                        <img
-                            src="https://images.unsplash.com/photo-1517646288020-f4ca67909930?q=80&w=2000&auto=format&fit=crop"
-                            alt="Analyse de la qualité de l'eau du robinet"
-                            className="w-full h-full object-cover"
-                        />
-                    </div>
-                    <div className="container mx-auto px-4 relative z-10">
-                        <div className="max-w-4xl mx-auto text-center">
-                            <span className="inline-block px-4 py-1 rounded-full bg-blue-600/20 border border-blue-400/30 text-blue-400 text-sm font-bold mb-6 tracking-widest uppercase">
-                                Dossier Spécial Santé & Environnement
-                            </span>
-                            <h1 className="text-4xl md:text-7xl font-bold mb-8 leading-tight tracking-tighter">
-                                PFAS dans l'eau du robinet : <span className="text-blue-400">ce que vous devez savoir</span>
-                            </h1>
-                            <p className="text-xl md:text-2xl text-slate-300 font-light mb-10 leading-relaxed max-w-3xl mx-auto">
-                                Comprendre les "polluants éternels", leurs impacts sur votre santé et les technologies de pointe indispensables pour les éliminer définitivement de votre foyer.
-                            </p>
-                            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-10 h-16 text-lg font-bold transition-all hover:scale-105" asChild>
-                                    <a href="/contact">Analyse d'eau professionnelle</a>
-                                </Button>
-                                <Button size="lg" variant="outline" className="text-white border-white bg-white/10 hover:bg-white/20 rounded-full px-10 h-16 text-lg font-bold backdrop-blur-sm transition-all hover:scale-105" asChild>
-                                    <a href="tel:18552649328" className="flex items-center gap-2">
-                                        <Phone className="h-5 w-5" /> 1-855-264-9328
-                                    </a>
-                                </Button>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+    const tocItems = [
+        {
+                "id": "section-1",
+                "title": "Que sont exactement les PFAS ?"
+        },
+        {
+                "id": "section-2",
+                "title": "Les risques pour la santé humaine"
+        },
+        {
+                "id": "section-3",
+                "title": "Pourquoi l'eau du robinet est-elle particulièrement à risque ?"
+        },
+        {
+                "id": "section-4",
+                "title": "Comment éliminer efficacement les PFAS ?"
+        },
+        {
+                "id": "section-5",
+                "title": "L'importance d'un entretien rigoureux"
+        }
+];
 
-                {/* Article Intro */}
-                <article className="py-20 lg:py-32">
-                    <div className="container mx-auto px-4">
-                        <div className="max-w-4xl mx-auto">
-                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 leading-relaxed text-justify">
-                                <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-blue-600 pl-8 italic">
+    return (
+        <BlogLayout 
+            title="PFAS dans l'eau du robinet : ce que vous devez savoir" 
+            headerImage={"https://images.unsplash.com/photo-1517646288020-f4ca67909930?q=80&w=2000&auto=format&fit=crop"}
+            tocItems={tocItems}
+        >
+            <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-blue-600 pl-8 italic">
                                     Ils sont partout, invisibles et quasiment indestructibles. Les PFAS, surnommés « polluants éternels », se sont immiscés dans notre environnement et, plus inquiétant encore, dans notre eau potable. Face à cette menace émergente, l'ignorance n'est plus une option.
                                 </p>
 
@@ -69,7 +54,7 @@ const PFASEauRobinet = () => {
                                     </p>
                                 </div>
 
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">1. Que sont exactement les PFAS ?</h2>
+                                <h2 id="section-1" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">1. Que sont exactement les PFAS ?</h2>
                                 <p>
                                     Les PFAS constituent une vaste famille de plus de 4 700 composés chimiques synthétiques. Leur caractéristique commune réside dans une chaîne d'atomes de carbone où certains atomes d'hydrogène ont été remplacés par du fluor. La liaison carbone-fluor est l'une des liaisons les plus solides de la chimie organique, ce qui confère à ces molécules une stabilité exceptionnelle.
                                 </p>
@@ -105,7 +90,7 @@ const PFASEauRobinet = () => {
                                     </ul>
                                 </div>
 
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">2. Les risques pour la santé humaine</h2>
+                                <h2 id="section-2" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">2. Les risques pour la santé humaine</h2>
                                 <p>
                                     Le problème majeur des PFAS ne réside pas seulement dans leur persistance environnementale, mais dans leur capacité à se <strong>bioaccumuler</strong> dans le corps humain. Une fois ingérés par l'eau ou la nourriture, ils restent dans le sang et les organes pendant des années avant d'être éliminés.
                                 </p>
@@ -123,7 +108,7 @@ const PFASEauRobinet = () => {
                                     L'aspect le plus sournois des PFAS est que les effets ne sont pas immédiats. Il s'agit d'une toxicité lente, cumulative, qui peut se manifester après des décennies d'exposition à de « faibles » doses quotidiennes via l'eau du robinet. C'est pourquoi les seuils de sécurité recommandés ne cessent d'être revus à la baisse par les autorités sanitaires.
                                 </p>
 
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">3. Pourquoi l'eau du robinet est-elle particulièrement à risque ?</h2>
+                                <h2 id="section-3" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">3. Pourquoi l'eau du robinet est-elle particulièrement à risque ?</h2>
                                 <p>
                                     Les usines de traitement des eaux municipales traditionnelles ont été conçues pour éliminer les sédiments, les bactéries, les virus et certains polluants classiques comme le chlore. Elles ne sont pas équipées, pour la plupart, de technologies capables de capturer des molécules aussi petites et stables que les PFAS.
                                 </p>
@@ -148,7 +133,7 @@ const PFASEauRobinet = () => {
                                     </div>
                                 </div>
 
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">4. Comment éliminer efficacement les PFAS ?</h2>
+                                <h2 id="section-4" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">4. Comment éliminer efficacement les PFAS ?</h2>
                                 <p>
                                     La bonne nouvelle est que la science du traitement de l'eau a fait des bonds de géant. Il existe aujourd'hui des technologies domestiques capables de réduire les concentrations de PFAS à des niveaux quasi indétectables. Cependant, toutes les filtrations ne se valent pas.
                                 </p>
@@ -169,7 +154,7 @@ const PFASEauRobinet = () => {
                                     Il est crucial de noter que les filtres de type « pichet » basiques sont souvent insuffisants pour une élimination complète et durable des PFAS. Des systèmes montés sous évier ou pour toute la maison sont nécessaires pour garantir une efficacité constante.
                                 </p>
 
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">5. L'importance d'un entretien rigoureux</h2>
+                                <h2 id="section-5" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">5. L'importance d'un entretien rigoureux</h2>
                                 <p>
                                     Installer un système de filtration est la première étape, mais son efficacité à long terme dépend entièrement de son entretien. Un filtre saturé ne peut plus capturer de nouveaux polluants et peut même en relâcher si le média n'est pas remplacé à temps.
                                 </p>
@@ -197,15 +182,7 @@ const PFASEauRobinet = () => {
                                         Avertissement : Les informations contenues dans cet article sont basées sur les connaissances scientifiques actuelles et les directives de santé publique. Bien que les solutions de filtration domestiques soient hautement efficaces, des analyses régulières sont recommandées pour valider la performance de tout système de traitement d'eau.
                                     </p>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-
-                {/* Related Articles or Products section could go here */}
-            </main>
-            <Footer />
-        </div>
+        </BlogLayout>
     );
 };
 

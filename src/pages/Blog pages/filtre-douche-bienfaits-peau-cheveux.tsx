@@ -1,6 +1,5 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
+import BlogLayout from "@/components/BlogLayout";
 import { Button } from "@/components/ui/button";
 import { Phone, ShieldCheck, BadgeCheck, Microscope, Waves, Droplets, Info, Zap, Sparkles, Filter, CheckCircle2, FlaskConical, ShowerHead, HeartPulse, User, SparkleIcon, Sparkle } from "lucide-react";
 
@@ -13,48 +12,28 @@ const FiltreDouchePeauCheveux = () => {
         }
     }, []);
 
-    return (
-        <div className="min-h-screen bg-white font-sans text-slate-900 leading-relaxed font-light text-justify">
-            <Header />
-            <main className="pt-20">
-                {/* Hero Section */}
-                <section className="relative py-24 bg-teal-950 text-white overflow-hidden text-center">
-                    <div className="absolute inset-0 opacity-20">
-                        <img
-                            src="https://images.unsplash.com/photo-1559599101-f09722fb4948?q=80&w=2000&auto=format&fit=crop"
-                            alt="Femme profitant d'une douche revigorante"
-                            className="w-full h-full object-cover"
-                        />
-                    </div>
-                    <div className="container mx-auto px-4 relative z-10 text-center">
-                        <span className="inline-block px-4 py-1 rounded-full bg-teal-600/20 border border-teal-400/30 text-teal-400 text-sm font-bold mb-6 tracking-widest uppercase">
-                            Dermatologie Aquatique & Soins Capillaires
-                        </span>
-                        <h1 className="text-4xl md:text-7xl font-bold mb-8 leading-tight tracking-tighter">
-                            Filtre de douche : <span className="text-teal-400 italic font-medium">Beauté & Santé</span>
-                        </h1>
-                        <p className="text-xl md:text-2xl text-slate-300 font-light mb-10 leading-relaxed max-w-4xl mx-auto italic text-center">
-                            Pourquoi votre peau est-elle sèche et vos cheveux ternes ? La réponse se trouve peut-être dans votre pommeau de douche. Découvrez l'effet dévastateur du chlore vaporisé sur votre corps.
-                        </p>
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <Button size="lg" className="bg-teal-600 hover:bg-teal-700 text-white rounded-full px-10 h-16 font-bold" asChild>
-                                <a href="/Filtres-deau-pour-toute-la-maison">Protection toute la maison</a>
-                            </Button>
-                            <Button size="lg" variant="outline" className="text-white border-white bg-white/10 hover:bg-white/20 rounded-full px-10 h-16 font-bold backdrop-blur-sm" asChild>
-                                <a href="tel:18552649328" className="flex items-center gap-2">
-                                    <Phone className="h-5 w-5" /> 1-855-264-9328
-                                </a>
-                            </Button>
-                        </div>
-                    </div>
-                </section>
+    const tocItems = [
+        {
+                "id": "section-1",
+                "title": "Le Chlore : L'agresseur invisible"
+        },
+        {
+                "id": "section-2",
+                "title": "Technologie KDF vs Charbon Actif"
+        },
+        {
+                "id": "section-3",
+                "title": "Solution Individuelle vs Solution Globale"
+        }
+];
 
-                {/* Article Intro Content */}
-                <article className="py-20 lg:py-32 bg-white">
-                    <div className="container mx-auto px-4">
-                        <div className="max-w-4xl mx-auto">
-                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 leading-relaxed">
-                                <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-teal-600 pl-8 italic">
+    return (
+        <BlogLayout 
+            title="Filtre de douche : Beauté & Santé" 
+            headerImage={"https://images.unsplash.com/photo-1559599101-f09722fb4948?q=80&w=2000&auto=format&fit=crop"}
+            tocItems={tocItems}
+        >
+            <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-teal-600 pl-8 italic">
                                     Nous dépensons des fortunes en crèmes hydratantes et en revitalisants de luxe, tout en nous lavant chaque jour dans une eau agressive et chlorée. C'est un paradoxe esthétique et sanitaire majeur.
                                 </p>
 
@@ -64,7 +43,7 @@ const FiltreDouchePeauCheveux = () => {
                                     </p>
                                 </div>
 
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">1. Le Chlore : L'agresseur invisible</h2>
+                                <h2 id="section-1" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">1. Le Chlore : L'agresseur invisible</h2>
                                 <p>
                                     Les municipalités au Québec utilisent le chlore pour tuer les bactéries. C'est efficace pour le transport dans les tuyaux, mais c'est un agent oxydant puissant qui agit sur nos tissus biologiques :
                                 </p>
@@ -86,7 +65,7 @@ const FiltreDouchePeauCheveux = () => {
                                     </div>
                                 </div>
 
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">2. Technologie KDF vs Charbon Actif</h2>
+                                <h2 id="section-2" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">2. Technologie KDF vs Charbon Actif</h2>
                                 <p>
                                     Filtrer une douche est techniquement plus difficile que filtrer l'eau de boisson à cause du débit élevé et de la température de l'eau.
                                 </p>
@@ -111,7 +90,7 @@ const FiltreDouchePeauCheveux = () => {
                                     </div>
                                 </div>
 
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">3. Solution Individuelle vs Solution Globale</h2>
+                                <h2 id="section-3" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">3. Solution Individuelle vs Solution Globale</h2>
                                 <p>
                                     Alors que le petit filtre dévissable pour pommeau peut être utile pour les locataires, l'option la plus efficace reste la filtration <strong>Maison Entière au Charbon Actif Haute-Densité</strong>. En traitant l'eau à l'entrée, vous purifiez non seulement votre douche, mais aussi l'eau de vos bains, de vos lavabos et même de votre laveuse, protégeant ainsi vos vêtements.
                                 </p>
@@ -137,13 +116,7 @@ const FiltreDouchePeauCheveux = () => {
                                         Rappel pour les parents : Les enfants et les bébés ont une peau beaucoup plus fine et perméable que les adultes. Filtrer l'eau de leur bain est une étape cruciale pour prévenir le développement précoce d'allergies cutanées.
                                     </p>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-            </main>
-            <Footer />
-        </div>
+        </BlogLayout>
     );
 };
 

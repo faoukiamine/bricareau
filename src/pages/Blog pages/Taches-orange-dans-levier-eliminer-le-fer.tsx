@@ -1,6 +1,5 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
+import BlogLayout from "@/components/BlogLayout";
 import tachesOrangeImg from "@/assets/taches-orange-evier.png";
 import filtrationFerImg from "@/assets/systeme-filtration-fer.png";
 import { Button } from "@/components/ui/button";
@@ -15,51 +14,48 @@ const TachesOrangeDansLevier = () => {
         }
     }, []);
 
-    return (
-        <div className="min-h-screen bg-white font-sans">
-            <Header />
-            <main className="pt-20">
-                {/* Hero Section */}
-                <section className="relative py-24 bg-slate-900 text-white overflow-hidden">
-                    <div className="absolute inset-0 opacity-20">
-                        <img
-                            src={tachesOrangeImg}
-                            alt="Problème de taches orange de fer dans l'eau"
-                            className="w-full h-full object-cover"
-                        />
-                    </div>
-                    <div className="container mx-auto px-4 relative z-10">
-                        <div className="max-w-4xl mx-auto text-center">
-                            <h1 className="text-4xl md:text-6xl font-bold mb-8 leading-tight tracking-tighter">
-                                Taches orange dans l'évier : Le <span className="text-blue-400">guide complet</span> pour éliminer le fer
-                            </h1>
-                            <p className="text-xl md:text-2xl text-slate-300 font-light mb-10 leading-relaxed text-justify">
-                                Comprendre l'origine des dépôts ferreux et explorer les solutions de traitement avancées pour une eau parfaitement limpide et des sanitaires éclatants.
-                            </p>
-                            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14" asChild>
-                                    <a href="/tests-eau">Réserver une analyse d'eau</a>
-                                </Button>
-                                <Button size="lg" variant="outline" className="text-white border-white bg-white/10 hover:bg-white/20 rounded-full px-8 h-14 backdrop-blur-sm" asChild>
-                                    <a href="tel:18552649328" className="flex items-center gap-2">
-                                        <Phone className="h-5 w-5" /> 1-855-264-9328
-                                    </a>
-                                </Button>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+    const tocItems = [
+        {
+                "id": "section-1",
+                "title": "Le fer dans l'eau : Une complexité invisible"
+        },
+        {
+                "id": "section-2",
+                "title": "Les causes de la présence de fer"
+        },
+        {
+                "id": "section-3",
+                "title": "Les conséquences : Un impact global sur votre foyer"
+        },
+        {
+                "id": "section-4",
+                "title": "Comment traiter le fer efficacement ?"
+        },
+        {
+                "id": "section-5",
+                "title": "Tableau comparatif des méthodes de traitement"
+        },
+        {
+                "id": "section-6",
+                "title": "Maintenance : La clé de la performance"
+        },
+        {
+                "id": "section-7",
+                "title": "Conclusion : Libérez votre foyer du fer"
+        }
+];
 
-                {/* Main Article Content */}
-                <article className="py-20 lg:py-32">
-                    <div className="container mx-auto px-4">
-                        <div className="max-w-4xl mx-auto">
-                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 leading-relaxed text-justify">
-                                <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-blue-600 pl-8 italic">
+    return (
+        <BlogLayout 
+            title="Taches orange dans l'évier : Le guide complet pour éliminer le fer" 
+            headerImage={tachesOrangeImg}
+            tocItems={tocItems}
+        >
+            <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-blue-600 pl-8 italic">
                                     Rien ne défigure plus une salle de bain de luxe ou une cuisine moderne que l'apparition de traînées orangeâtres au fond de l'évier ou de la baignoire. Ces taches de "rouille", persistantes et difficiles à nettoyer, sont le signe indéniable d'une concentration excessive de fer dans votre approvisionnement en eau.
                                 </p>
 
-                                <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mt-16 mb-8 tracking-tight">Le fer dans l'eau : Une complexité invisible</h2>
+                                <h2 id="section-1" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">Le fer dans l'eau : Une complexité invisible</h2>
                                 <p>
                                     Le fer est l'un des minéraux les plus abondants de la croûte terrestre. Il n'est donc pas surprenant de le retrouver fréquemment dans les eaux de puits, mais sa présence peut prendre plusieurs formes, chacune exigeant une approche de traitement spécifique. Contrairement à une idée reçue, l'eau peut paraître parfaitement claire au sortir du robinet tout en étant chargée de fer "invisible".
                                 </p>
@@ -83,7 +79,7 @@ const TachesOrangeDansLevier = () => {
                                     </div>
                                 </div>
 
-                                <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mt-16 mb-8 tracking-tight">Les causes de la présence de fer</h2>
+                                <h2 id="section-2" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">Les causes de la présence de fer</h2>
                                 <p>
                                     Pourquoi votre voisin possède-t-il une eau parfaite alors que la vôtre tache tout sur son passage ? La réponse réside souvent dans la géologie locale ou l'état de vos infrastructures.
                                 </p>
@@ -100,7 +96,7 @@ const TachesOrangeDansLevier = () => {
                                     Moins connues mais tout aussi problématiques, les bactéries ferrugineuses ne sont pas dangereuses pour la santé mais se nourrissent de fer pour se multiplier. Elles créent une texture gélatineuse et filamenteuse dans les réservoirs de toilette et peuvent obstruer les crépines des robinets, tout en exacerbant les problèmes d'odeur et de taches.
                                 </p>
 
-                                <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mt-16 mb-8 tracking-tight">Les conséquences : Un impact global sur votre foyer</h2>
+                                <h2 id="section-3" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">Les conséquences : Un impact global sur votre foyer</h2>
                                 <p>
                                     Le fer ne se contente pas de laisser des traces esthétiques ; il s'attaque à la longévité de votre patrimoine domestique.
                                 </p>
@@ -119,7 +115,7 @@ const TachesOrangeDansLevier = () => {
                                     </div>
                                 </div>
 
-                                <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mt-16 mb-8 tracking-tight">Comment traiter le fer efficacement ?</h2>
+                                <h2 id="section-4" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">Comment traiter le fer efficacement ?</h2>
                                 <p>
                                     Éliminer le fer nécessite une technologie adaptée au type de fer présent. Une erreur courante consiste à installer un adoucisseur d'eau standard pour traiter de fortes concentrations de fer, ce qui sature rapidement la résine et réduit la durée de vie de l'appareil.
                                 </p>
@@ -145,7 +141,7 @@ const TachesOrangeDansLevier = () => {
                                     Pour les eaux qui présentent à la fois une dureté élevée et des niveaux modérés de fer, Bricareau propose des adoucisseurs équipés de résines à haute affinité pour le fer. Ces systèmes sont paramétrés avec des cycles de nettoyage spécifiques garantissant que le fer est correctement expulsé lors de la régénération.
                                 </p>
 
-                                <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mt-16 mb-8 tracking-tight">Tableau comparatif des méthodes de traitement</h2>
+                                <h2 id="section-5" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">Tableau comparatif des méthodes de traitement</h2>
                                 <div className="overflow-x-auto my-12">
                                     <table className="w-full border-collapse border border-slate-200">
                                         <thead>
@@ -179,7 +175,7 @@ const TachesOrangeDansLevier = () => {
                                     </table>
                                 </div>
 
-                                <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mt-16 mb-8 tracking-tight">Maintenance : La clé de la performance</h2>
+                                <h2 id="section-6" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">Maintenance : La clé de la performance</h2>
                                 <p>
                                     Même le meilleur système de filtration nécessite un suivi professionnel pour opérer à 100% sur le long terme. Les dépôts de fer peuvent, avec le temps, encrasser les vannes de contrôle.
                                 </p>
@@ -197,7 +193,7 @@ const TachesOrangeDansLevier = () => {
                                     </li>
                                 </ul>
 
-                                <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mt-16 mb-8 tracking-tight">Conclusion : Libérez votre foyer du fer</h2>
+                                <h2 id="section-7" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">Conclusion : Libérez votre foyer du fer</h2>
                                 <p>
                                     Vivre avec des taches orange n'est pas une fatalité liée à votre région ou à votre puits. C'est un défi technique pour lequel Bricareau possède les outils et l'expertise nécessaires. En éliminant le fer à la source, vous protégez non seulement vos investissements (plomberie, électroménagers) mais vous retrouvez également le plaisir d'une eau saine et limpide pour toute votre famille.
                                 </p>
@@ -220,13 +216,7 @@ const TachesOrangeDansLevier = () => {
                                         </a>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-            </main>
-            <Footer />
-        </div>
+        </BlogLayout>
     );
 };
 

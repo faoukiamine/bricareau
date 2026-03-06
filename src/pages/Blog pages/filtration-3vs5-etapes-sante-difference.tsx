@@ -1,6 +1,5 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
+import BlogLayout from "@/components/BlogLayout";
 import { Button } from "@/components/ui/button";
 import { Phone, ShieldCheck, BadgeCheck, Microscope, Waves, Droplets, Info, Zap, Sparkles, Filter, CheckCircle2, FlaskConical, Layout, Search, Scale, Activity, Pill, Microscope2, FlaskConicalIcon } from "lucide-react";
 
@@ -13,48 +12,28 @@ const Filtration3vs5EtapesSante = () => {
         }
     }, []);
 
-    return (
-        <div className="min-h-screen bg-white font-sans text-slate-900 leading-relaxed font-light text-justify">
-            <Header />
-            <main className="pt-20">
-                {/* Hero Section */}
-                <section className="relative py-24 bg-slate-900 text-white overflow-hidden text-center">
-                    <div className="absolute inset-0 opacity-20">
-                        <img
-                            src="https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=2000&auto=format&fit=crop"
-                            alt="Abstraction de couches de filtration"
-                            className="w-full h-full object-cover"
-                        />
-                    </div>
-                    <div className="container mx-auto px-4 relative z-10 text-center">
-                        <span className="inline-block px-4 py-1 rounded-full bg-blue-600/20 border border-blue-400/30 text-blue-400 text-sm font-bold mb-6 tracking-widest uppercase">
-                            Ingénierie De Santé & Multicouches
-                        </span>
-                        <h1 className="text-4xl md:text-7xl font-bold mb-8 leading-tight tracking-tighter">
-                            Filtration <span className="text-blue-400 italic text-5xl md:text-8xl">3</span> vs <span className="text-blue-400 italic text-5xl md:text-8xl">5</span> étapes
-                        </h1>
-                        <p className="text-xl md:text-2xl text-slate-300 font-light mb-10 leading-relaxed max-w-4xl mx-auto italic text-center">
-                            Plus de protection signifie-t-il plus de santé ? Analyse chirurgicale des couches de sécurité nécessaires pour garantir une pureté d'eau de qualité hospitalière à votre domicile.
-                        </p>
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-10 h-16 font-bold" asChild>
-                                <a href="/ro-6">Découvrir le système RO-6</a>
-                            </Button>
-                            <Button size="lg" variant="outline" className="text-white border-white bg-white/10 hover:bg-white/20 rounded-full px-10 h-16 font-bold backdrop-blur-sm" asChild>
-                                <a href="tel:18552649328" className="flex items-center gap-2">
-                                    <Phone className="h-5 w-5" /> 1-855-264-9328
-                                </a>
-                            </Button>
-                        </div>
-                    </div>
-                </section>
+    const tocItems = [
+        {
+                "id": "section-1",
+                "title": "L'architecture à 3 étapes : Le Basic Utile"
+        },
+        {
+                "id": "section-2",
+                "title": "L'architecture à 5 étapes : L'étalon-or (Osmose Inverse)"
+        },
+        {
+                "id": "section-3",
+                "title": "L'importance de l'étape 6 : La Reminéralisation"
+        }
+];
 
-                {/* Article Intro Content */}
-                <article className="py-20 lg:py-32 bg-white">
-                    <div className="container mx-auto px-4">
-                        <div className="max-w-4xl mx-auto">
-                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 leading-relaxed">
-                                <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-blue-600 pl-8 italic">
+    return (
+        <BlogLayout 
+            title="Filtration 3 vs 5 étapes" 
+            headerImage={"https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=2000&auto=format&fit=crop"}
+            tocItems={tocItems}
+        >
+            <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-blue-600 pl-8 italic">
                                     Dans l'univers de la purification d'eau, le nombre d'étapes de filtration n'est pas qu'un argument de marketing ; c'est une architecture de sécurité.
                                 </p>
 
@@ -64,7 +43,7 @@ const Filtration3vs5EtapesSante = () => {
                                     </p>
                                 </div>
 
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">1. L'architecture à 3 étapes : Le Basic Utile</h2>
+                                <h2 id="section-1" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">1. L'architecture à 3 étapes : Le Basic Utile</h2>
                                 <p>
                                     Un système à 3 étapes est le standard d'entrée de gamme pour améliorer le goût et l'odeur de l'eau municipale.
                                 </p>
@@ -87,7 +66,7 @@ const Filtration3vs5EtapesSante = () => {
                                     </div>
                                 </div>
 
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-20 mb-8 tracking-tight text-blue-800">2. L'architecture à 5 étapes : L'étalon-or (Osmose Inverse)</h2>
+                                <h2 id="section-2" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">2. L'architecture à 5 étapes : L'étalon-or (Osmose Inverse)</h2>
                                 <p>
                                     Un système à 5 étapes (comme nos osmoses inverses) ajoute deux barrières critiques qui changent radicalement la chimie de votre eau.
                                 </p>
@@ -115,7 +94,7 @@ const Filtration3vs5EtapesSante = () => {
                                     </div>
                                 </div>
 
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">3. L'importance de l'étape 6 : La Reminéralisation</h2>
+                                <h2 id="section-3" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">3. L'importance de l'étape 6 : La Reminéralisation</h2>
                                 <p>
                                     Bien qu'un système 5 étapes soit techniquement "pur", l'absence de minéraux peut rendre l'eau acide. Chez Bricareau, nous recommandons le système <strong>RO-6</strong> (6 étapes) qui réintroduit des traces équilibrées de calcium et de magnésium naturels. Cela augmente le pH, améliore l'hydratation cellulaire et rend l'eau savoureuse, saine et alcaline.
                                 </p>
@@ -141,13 +120,7 @@ const Filtration3vs5EtapesSante = () => {
                                         Rappel pour la famille : Les économies faites sur l'achat d'un système à 3 étapes peuvent coûter cher en santé si vous vivez dans une zone avec du plomb dans les conduites ou beaucoup de nitrates agricoles. Le diagnostic Bricareau est là pour vous guider.
                                     </p>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-            </main>
-            <Footer />
-        </div>
+        </BlogLayout>
     );
 };
 

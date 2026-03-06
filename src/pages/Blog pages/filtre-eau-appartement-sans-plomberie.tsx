@@ -1,6 +1,5 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
+import BlogLayout from "@/components/BlogLayout";
 import { Button } from "@/components/ui/button";
 import { Phone, ShieldCheck, BadgeCheck, Microscope, Waves, Droplets, Info, Zap, Sparkles, Filter, CheckCircle2, Home, Layout, Search, Sparkle, Hammer, Wrench, Building2, Key } from "lucide-react";
 
@@ -13,43 +12,32 @@ const FiltreEauAppartementSansPlomberie = () => {
         }
     }, []);
 
-    return (
-        <div className="min-h-screen bg-white font-sans text-slate-900 leading-relaxed font-light text-justify">
-            <Header />
-            <main className="pt-20">
-                {/* Hero Section */}
-                <section className="relative py-24 bg-slate-100 border-b border-slate-200 overflow-hidden text-center">
-                    <div className="container mx-auto px-4 relative z-10 text-center">
-                        <span className="inline-block px-4 py-1 rounded-full bg-blue-600/10 border border-blue-400/20 text-blue-600 text-sm font-bold mb-6 tracking-widest uppercase">
-                            Vie Urbaine & Indépendance Aquatique
-                        </span>
-                        <h1 className="text-4xl md:text-7xl font-bold mb-8 leading-tight tracking-tighter text-slate-900">
-                            Filtre <span className="text-blue-600">appartement</span> : <br className="hidden md:block" /> Zéro travaux.
-                        </h1>
-                        <p className="text-xl md:text-2xl text-slate-600 font-light mb-10 leading-relaxed max-w-4xl mx-auto italic text-center">
-                            Locataires au Québec : découvrez comment obtenir une eau de pureté cristalline sans modifier la plomberie de votre propriétaire et sans risquer votre dépôt de garantie.
-                        </p>
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-10 h-16 font-bold shadow-lg" asChild>
-                                <a href="/Systemes-de-filtration-deau-sous-evier">Voir nos systèmes clipsables</a>
-                            </Button>
-                            <Button size="lg" variant="outline" className="text-slate-900 border-slate-300 hover:bg-slate-50 rounded-full px-10 h-16 font-bold backdrop-blur-sm" asChild>
-                                <a href="tel:18552649328" className="flex items-center gap-2">
-                                    <Phone className="h-5 w-5" /> 1-855-264-9328
-                                </a>
-                            </Button>
-                        </div>
-                    </div>
-                    {/* Background decoration elements */}
-                    <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-blue-100/50 rounded-full blur-3xl p-10 opacity-60"></div>
-                </section>
+    const tocItems = [
+        {
+                "id": "section-1",
+                "title": "Pourquoi filtrer en appartement ?"
+        },
+        {
+                "id": "section-2",
+                "title": "Option 1 : Filtration sous-évier sans perçage"
+        },
+        {
+                "id": "section-3",
+                "title": "Option 2 : Systèmes de comptoir (Osmose Inverse portative)"
+        },
+        {
+                "id": "section-4",
+                "title": "La protection de douche : Le luxe du locataire"
+        }
+];
 
-                {/* Article Intro Content */}
-                <article className="py-20 lg:py-32 bg-white">
-                    <div className="container mx-auto px-4">
-                        <div className="max-w-4xl mx-auto">
-                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 leading-relaxed">
-                                <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-blue-600 pl-8 italic">
+    return (
+        <BlogLayout 
+            title="Filtre appartement : Zéro travaux." 
+            headerImage={""}
+            tocItems={tocItems}
+        >
+            <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-blue-600 pl-8 italic">
                                     Vivre en appartement n'est pas une excuse pour tolérer le goût du chlore ou les traces de plomb. Pour les locataires, la filtration de l'eau nécessite une approche différente : la portabilité et la réversibilité.
                                 </p>
 
@@ -59,7 +47,7 @@ const FiltreEauAppartementSansPlomberie = () => {
                                     </p>
                                 </div>
 
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">1. Pourquoi filtrer en appartement ?</h2>
+                                <h2 id="section-1" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">1. Pourquoi filtrer en appartement ?</h2>
                                 <p>
                                     Même si l'eau municipale est traitée, elle doit traverser des kilomètres de tuyaux parfois centenaires. Le goût de chlore omniprésent est la plainte numéro un des locataires, suivi de près par la présence de sédiments (eau brune lors de travaux) et l'inquiétude concernant les vieilles entrées de plomb dans certains quartiers historiques.
                                 </p>
@@ -76,7 +64,7 @@ const FiltreEauAppartementSansPlomberie = () => {
                                     </div>
                                 </div>
 
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">2. Option 1 : Filtration sous-évier sans perçage</h2>
+                                <h2 id="section-2" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">2. Option 1 : Filtration sous-évier sans perçage</h2>
                                 <p>
                                     Contrairement aux idées reçues, vous pouvez installer un système multi-étapes sophistiqué sous votre évier d'appartement sans endommager les pièces originales.
                                 </p>
@@ -86,7 +74,7 @@ const FiltreEauAppartementSansPlomberie = () => {
                                     <li><strong>Technologies :</strong> Ultrafiltration ou Charbon Bloc compressé à haute densité.</li>
                                 </ul>
 
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">3. Option 2 : Systèmes de comptoir (Osmose Inverse portative)</h2>
+                                <h2 id="section-3" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">3. Option 2 : Systèmes de comptoir (Osmose Inverse portative)</h2>
                                 <p>
                                     C'est la quintessence de la filtration locative. Ces unités élégantes ne nécessitent <strong>aucun branchement</strong> à la plomberie. Vous les posez simplement sur votre comptoir de cuisine, vous remplissez le réservoir d'eau, et le système s'occupe de la purification osmotique internement.
                                 </p>
@@ -111,7 +99,7 @@ const FiltreEauAppartementSansPlomberie = () => {
                                     </div>
                                 </div>
 
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">4. La protection de douche : Le luxe du locataire</h2>
+                                <h2 id="section-4" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">4. La protection de douche : Le luxe du locataire</h2>
                                 <p>
                                     Ne négligez pas votre salle de bain. Le chlore des municipalités dessèche violemment la peau urbaine. Un filtre de douche à visser directement entre le bras de douche et le pommeau est une modification de 30 secondes qui apporte un confort instantané, évitant l'eczéma et la chute de cheveux prématurée.
                                 </p>
@@ -137,13 +125,7 @@ const FiltreEauAppartementSansPlomberie = () => {
                                         Rappel d'expert : Même sans travaux permanents, la maintenance régulière des filtres est indispensable pour garantir l'efficacité bactériostatique de votre système.
                                     </p>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-            </main>
-            <Footer />
-        </div>
+        </BlogLayout>
     );
 };
 

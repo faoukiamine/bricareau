@@ -1,6 +1,5 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
+import BlogLayout from "@/components/BlogLayout";
 import { Button } from "@/components/ui/button";
 import { Phone, ShieldAlert, BadgeCheck, Microscope, Waves, Droplets, Info, Search, AlertCircle, ShieldCheck, HeartPulse, Scale, FlaskConical, Pill, Activity, Stethoscope, Sparkles } from "lucide-react";
 
@@ -13,48 +12,32 @@ const ResidusMedicamentsEau = () => {
         }
     }, []);
 
-    return (
-        <div className="min-h-screen bg-white font-sans text-slate-900 leading-relaxed font-light">
-            <Header />
-            <main className="pt-20">
-                {/* Hero Section */}
-                <section className="relative py-24 bg-indigo-950 text-white overflow-hidden">
-                    <div className="absolute inset-0 opacity-20">
-                        <img
-                            src="https://images.unsplash.com/photo-1576091160550-2173bdb999ef?q=80&w=2000&auto=format&fit=crop"
-                            alt="Abstraction de molécules pharmaceutiques"
-                            className="w-full h-full object-cover grayscale"
-                        />
-                    </div>
-                    <div className="container mx-auto px-4 relative z-10 text-center">
-                        <span className="inline-block px-4 py-1 rounded-full bg-indigo-600/20 border border-indigo-400/30 text-indigo-400 text-sm font-bold mb-6 tracking-widest uppercase">
-                            Pharmacopée Aquatique : Rapport Indépendant
-                        </span>
-                        <h1 className="text-4xl md:text-7xl font-bold mb-8 leading-tight tracking-tighter">
-                            Médicaments dans <span className="text-indigo-400">votre eau</span>
-                        </h1>
-                        <p className="text-xl md:text-2xl text-slate-300 font-light mb-10 leading-relaxed max-w-4xl mx-auto italic">
-                            Décrypter la présence silencieuse d'antibiotiques, hormones et psychotropes dans l'eau du robinet : comprendre les enjeux et instaurer une barrière technologique.
-                        </p>
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <Button size="lg" className="bg-indigo-600 hover:bg-indigo-700 text-white rounded-full px-10 h-16 font-bold" asChild>
-                                <a href="/osmose-filtration">Découvrir l'assainissement total</a>
-                            </Button>
-                            <Button size="lg" variant="outline" className="text-white border-white bg-white/10 hover:bg-white/20 rounded-full px-10 h-16 font-bold backdrop-blur-sm" asChild>
-                                <a href="tel:18552649328" className="flex items-center gap-2">
-                                    <Phone className="h-5 w-5" /> 1-855-264-9328
-                                </a>
-                            </Button>
-                        </div>
-                    </div>
-                </section>
+    const tocItems = [
+        {
+                "id": "section-1",
+                "title": "Le cycle des médicaments dans l'eau"
+        },
+        {
+                "id": "section-2",
+                "title": "Conséquences biologiques : À quel point faut-il s'inquiéter ?"
+        },
+        {
+                "id": "section-3",
+                "title": "Molécules fréquentes dans le réseau municipal"
+        },
+        {
+                "id": "section-4",
+                "title": "Solutions technologiques d'élimination"
+        }
+];
 
-                {/* Article Content Intro */}
-                <article className="py-20 lg:py-32 bg-white">
-                    <div className="container mx-auto px-4">
-                        <div className="max-w-4xl mx-auto">
-                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 text-justify leading-relaxed">
-                                <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-indigo-600 pl-8 italic">
+    return (
+        <BlogLayout 
+            title="Médicaments dans votre eau" 
+            headerImage={"https://images.unsplash.com/photo-1576091160550-2173bdb999ef?q=80&w=2000&auto=format&fit=crop"}
+            tocItems={tocItems}
+        >
+            <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-indigo-600 pl-8 italic">
                                     Une pharmacie invisible coule-t-elle à votre robinet ? La question, bien que troublante, occupe une place de plus en plus centrale dans les débats de santé publique environnementale au Canada.
                                 </p>
 
@@ -64,7 +47,7 @@ const ResidusMedicamentsEau = () => {
                                     </p>
                                 </div>
 
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">1. Le cycle des médicaments dans l'eau</h2>
+                                <h2 id="section-1" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">1. Le cycle des médicaments dans l'eau</h2>
                                 <p>
                                     La contamination de l'eau par des résidus pharmaceutiques suit un cycle complexe mais prévisible. Les médicaments pénètrent l'environnement par trois voies majeures :
                                 </p>
@@ -86,7 +69,7 @@ const ResidusMedicamentsEau = () => {
                                     </div>
                                 </div>
 
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">2. Conséquences biologiques : À quel point faut-il s'inquiéter ?</h2>
+                                <h2 id="section-2" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">2. Conséquences biologiques : À quel point faut-il s'inquiéter ?</h2>
                                 <p>
                                     La science médicale met en évidence plusieurs risques associés à l'ingestion involontaire de médicaments par l'eau potable.
                                 </p>
@@ -107,7 +90,7 @@ const ResidusMedicamentsEau = () => {
                                     </div>
                                 </div>
 
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">3. Molécules fréquentes dans le réseau municipal</h2>
+                                <h2 id="section-3" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">3. Molécules fréquentes dans le réseau municipal</h2>
                                 <p>
                                     Les analyses indépendantes menées dans les grandes villes du Québec (Montréal, Québec, Laval) détectent régulièrement les substances suivantes :
                                 </p>
@@ -118,7 +101,7 @@ const ResidusMedicamentsEau = () => {
                                     <li><strong>Ethinylestradiol :</strong> Un oestrogène de synthèse hautement bioactif.</li>
                                 </ul>
 
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">4. Solutions technologiques d'élimination</h2>
+                                <h2 id="section-4" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">4. Solutions technologiques d'élimination</h2>
                                 <p>
                                     Bonne nouvelle : si les infrastructures municipales peinent à traiter ces molécules, les technologies résidentielles pointues offrent une protection quasi totale.
                                 </p>
@@ -165,13 +148,7 @@ const ResidusMedicamentsEau = () => {
                                         * Note de transparence : Bien que les niveaux de résidus pharmaceutiques ne fassent pas actuellement l'objet de réglementations contraignantes au Canada, le principe de précaution incite de plus en plus de foyers à adopter la filtration domestique sélective.
                                     </p>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-            </main>
-            <Footer />
-        </div>
+        </BlogLayout>
     );
 };
 

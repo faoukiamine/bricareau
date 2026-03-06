@@ -1,6 +1,5 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
+import BlogLayout from "@/components/BlogLayout";
 import { Button } from "@/components/ui/button";
 import { Phone, ShieldAlert, Microscope, Waves, Droplets, Info, FlaskConical, MicroscopeIcon as Microscope2, Search, Zap, Crosshair, Sparkles, AlertTriangle, ShieldCheck } from "lucide-react";
 
@@ -13,48 +12,32 @@ const ArsenicEauPotable = () => {
         }
     }, []);
 
-    return (
-        <div className="min-h-screen bg-white font-sans text-slate-900 leading-relaxed font-light">
-            <Header />
-            <main className="pt-20">
-                {/* Hero Section */}
-                <section className="relative py-24 bg-red-950 text-white overflow-hidden">
-                    <div className="absolute inset-0 opacity-20">
-                        <img
-                            src="https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=2000&auto=format&fit=crop"
-                            alt="Structure géologique de la roche"
-                            className="w-full h-full object-cover grayscale"
-                        />
-                    </div>
-                    <div className="container mx-auto px-4 relative z-10 text-center">
-                        <span className="inline-block px-4 py-1 rounded-full bg-red-600/20 border border-red-400/30 text-red-500 text-sm font-bold mb-6 tracking-widest uppercase">
-                            Dossier Toxicologie Environnementale
-                        </span>
-                        <h1 className="text-4xl md:text-7xl font-bold mb-8 leading-tight tracking-tighter">
-                            Arsenic dans l'eau : <span className="text-red-500">Un poison géologique invisible</span>
-                        </h1>
-                        <p className="text-xl md:text-2xl text-slate-300 font-light mb-10 leading-relaxed max-w-4xl mx-auto italic">
-                            Risques de cancer, zones de prévalence au Québec et technologies de filtration certifiées NSF pour une sécurisation totale de votre eau de puits.
-                        </p>
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white rounded-full px-10 h-16 font-bold shadow-xl shadow-red-900/40" asChild>
-                                <a href="/contact">Tester l'arsenic dans mon eau</a>
-                            </Button>
-                            <Button size="lg" variant="outline" className="text-white border-white bg-white/10 hover:bg-white/20 rounded-full px-10 h-16 font-bold backdrop-blur-sm shadow-lg shadow-black/20 transition-transform active:scale-95" asChild>
-                                <a href="tel:18552649328" className="flex items-center gap-2">
-                                    <Phone className="h-5 w-5" /> 1-855-264-9328
-                                </a>
-                            </Button>
-                        </div>
-                    </div>
-                </section>
+    const tocItems = [
+        {
+                "id": "section-1",
+                "title": "L'arsenic : Un polluant naturel complexe"
+        },
+        {
+                "id": "section-2",
+                "title": "Cartographie des zones à risque au Québec"
+        },
+        {
+                "id": "section-3",
+                "title": "SOLUTIONS : Comment purifier votre eau ?"
+        },
+        {
+                "id": "section-4",
+                "title": "Audit et Maintenance Bricareau"
+        }
+];
 
-                {/* Article Intro Content */}
-                <article className="py-20 lg:py-32">
-                    <div className="container mx-auto px-4">
-                        <div className="max-w-4xl mx-auto">
-                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 text-justify leading-relaxed">
-                                <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-red-600 pl-8 italic">
+    return (
+        <BlogLayout 
+            title="Arsenic dans l'eau : Un poison géologique invisible" 
+            headerImage={"https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=2000&auto=format&fit=crop"}
+            tocItems={tocItems}
+        >
+            <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-red-600 pl-8 italic">
                                     L'arsenic est l'un des contaminants les plus redoutables de l'eau potable domestique. Sans couleur, sans odeur et sans saveur, sa présence ne peut être suspectée par le consommateur, même à des concentrations léthales à long terme. Sa dangerosité est telle que l'OMS le classe parmi les dix substances chimiques les plus préoccupantes pour la santé publique.
                                 </p>
 
@@ -64,7 +47,7 @@ const ArsenicEauPotable = () => {
                                     </p>
                                 </div>
 
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">1. L'arsenic : Un polluant naturel complexe</h2>
+                                <h2 id="section-1" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">1. L'arsenic : Un polluant naturel complexe</h2>
                                 <p>
                                     L'arsenic est un élément chimique présent dans la croûte terrestre. Dans l'eau de puits, il se présente sous deux formes chimiques principales : <strong>Arsenic III</strong> (Arsénite) et <strong>Arsenic V</strong> (Arséniate).
                                 </p>
@@ -87,7 +70,7 @@ const ArsenicEauPotable = () => {
                                     </div>
                                 </div>
 
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">2. Cartographie des zones à risque au Québec</h2>
+                                <h2 id="section-2" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">2. Cartographie des zones à risque au Québec</h2>
                                 <p>
                                     Bien que l'arsenic puisse être présent n'importe où, certaines formations géologiques du Québec présentent une prévalence anormalement élevée :
                                 </p>
@@ -101,7 +84,7 @@ const ArsenicEauPotable = () => {
                                     * Important : L'absence d'arsenic dans le puits de votre voisin ne garantit en rien sa non-présence dans le vôtre. La structure des failles souterraines est capricieuse.
                                 </p>
 
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">3. SOLUTIONS : Comment purifier votre eau ?</h2>
+                                <h2 id="section-3" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">3. SOLUTIONS : Comment purifier votre eau ?</h2>
                                 <p>
                                     Le traitement de l'arsenic demande une expertise technique pointue. Santé Canada recommande une Concentration Maximale Acceptable (CMA) de <strong>0,010 mg/L (10 microgrammes/litre)</strong>, mais de nombreux experts plaident pour un seuil encore plus bas (0,005 mg/L) par simple précaution.
                                 </p>
@@ -127,7 +110,7 @@ const ArsenicEauPotable = () => {
                                     </div>
                                 </div>
 
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">4. Audit et Maintenance Bricareau</h2>
+                                <h2 id="section-4" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">4. Audit et Maintenance Bricareau</h2>
                                 <p>
                                     Un système de traitement contre l'arsenic n'est pas un équipement qu'on installe et qu'on oublie. L'arsenic est un contaminant « à risque de percée ». Une fois le média saturé, l'arsenic traverse le filtre sans aucun changement dans le goût de l'eau.
                                 </p>
@@ -165,13 +148,7 @@ const ArsenicEauPotable = () => {
                                         Note Scientifique : L'élimination de l'arsenic est sensible au pH de l'eau. Une analyse complète des paramètres chimiques (dureté, fer, pH) est indispensable avant de sélectionner l'équipement de filtration approprié.
                                     </p>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-            </main>
-            <Footer />
-        </div>
+        </BlogLayout>
     );
 };
 

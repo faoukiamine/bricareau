@@ -1,6 +1,5 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
+import BlogLayout from "@/components/BlogLayout";
 import { Button } from "@/components/ui/button";
 import { Phone, ShieldCheck, BadgeCheck, Microscope, Waves, Droplets, Info, Zap, Sparkles, Filter, CheckCircle2, Home, Layout, Search, Sparkle, Hammer, Wrench, Settings, Activity, FlaskConical, Scale, Thermometer, MicroscopeIcon, Pipette } from "lucide-react";
 
@@ -13,48 +12,28 @@ const MesurerDureteEauMaison = () => {
         }
     }, []);
 
-    return (
-        <div className="min-h-screen bg-white font-sans text-slate-900 leading-relaxed font-light text-justify text-[16px]">
-            <Header />
-            <main className="pt-20">
-                {/* Hero Section */}
-                <section className="relative py-24 bg-blue-900 text-white overflow-hidden text-center shadow-lg">
-                    <div className="absolute inset-0 opacity-20 transform scale-110">
-                        <img
-                            src="https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=2000&auto=format&fit=crop"
-                            alt="Abstraction de gouttes d'eau et de mesures"
-                            className="w-full h-full object-cover grayscale"
-                        />
-                    </div>
-                    <div className="container mx-auto px-4 relative z-10 text-center">
-                        <span className="inline-block px-4 py-1 rounded-full bg-blue-400/20 border border-blue-300/30 text-blue-300 text-sm font-bold mb-6 tracking-widest uppercase">
-                            Analytique & Science de l'Eau
-                        </span>
-                        <h1 className="text-4xl md:text-7xl font-bold mb-8 leading-tight tracking-tighter">
-                            Mesurer la dureté : <span className="text-blue-300">Le guide pratique.</span>
-                        </h1>
-                        <p className="text-xl md:text-2xl text-slate-100 font-light mb-10 leading-relaxed max-w-4xl mx-auto italic text-center">
-                            Devenez l'expert de votre propre robinet. Apprenez les méthodes pour quantifier le calcaire présent dans votre eau et comprendre enfin pourquoi vos verres sont tachetés.
-                        </p>
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <Button size="lg" className="bg-white text-blue-900 hover:bg-blue-50 rounded-full px-10 h-16 font-bold" asChild>
-                                <a href="/tests-eau">Réserver un test professionnel gratuit</a>
-                            </Button>
-                            <Button size="lg" variant="outline" className="text-white border-white bg-white/10 hover:bg-white/20 rounded-full px-10 h-16 font-bold backdrop-blur-sm" asChild>
-                                <a href="tel:18552649328" className="flex items-center gap-2">
-                                    <Phone className="h-5 w-5" /> 1-855-264-9328
-                                </a>
-                            </Button>
-                        </div>
-                    </div>
-                </section>
+    const tocItems = [
+        {
+                "id": "section-1",
+                "title": "La méthode \"Test du Savon\" (Indication Rapide)"
+        },
+        {
+                "id": "section-2",
+                "title": "Bandelettes Réactives vs Kits de Titrage"
+        },
+        {
+                "id": "section-3",
+                "title": "L'importance de tester l'eau brute ET l'eau après traitement"
+        }
+];
 
-                {/* Article Intro Content */}
-                <article className="py-20 lg:py-32 bg-white">
-                    <div className="container mx-auto px-4">
-                        <div className="max-w-4xl mx-auto">
-                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 leading-relaxed">
-                                <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-blue-600 pl-8 italic">
+    return (
+        <BlogLayout 
+            title="Mesurer la dureté : Le guide pratique." 
+            headerImage={"https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=2000&auto=format&fit=crop"}
+            tocItems={tocItems}
+        >
+            <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-blue-600 pl-8 italic">
                                     Connaître la dureté de son eau est la première étape vers une gestion intelligente de son foyer. C'est l'information clé qui détermine le réglage de votre futur adoucisseur.
                                 </p>
 
@@ -64,7 +43,7 @@ const MesurerDureteEauMaison = () => {
                                     </p>
                                 </div>
 
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">1. La méthode "Test du Savon" (Indication Rapide)</h2>
+                                <h2 id="section-1" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">1. La méthode "Test du Savon" (Indication Rapide)</h2>
                                 <p>
                                     C'est le test le plus simple et le plus ancien. Prenez une bouteille d'eau vide, remplissez-la à moitié avec de l'eau froide du robinet et ajoutez 10 gouttes de liquide vaisselle doux. Secouez vigoureusement.
                                 </p>
@@ -85,7 +64,7 @@ const MesurerDureteEauMaison = () => {
                                     </div>
                                 </div>
 
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">2. Bandelettes Réactives vs Kits de Titrage</h2>
+                                <h2 id="section-2" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">2. Bandelettes Réactives vs Kits de Titrage</h2>
                                 <p>
                                     Pour obtenir un résultat chiffré, vous pouvez acheter des kits de test dans le commerce :
                                 </p>
@@ -104,7 +83,7 @@ const MesurerDureteEauMaison = () => {
                                     </div>
                                 </div>
 
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">3. L'importance de tester l'eau brute ET l'eau après traitement</h2>
+                                <h2 id="section-3" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">3. L'importance de tester l'eau brute ET l'eau après traitement</h2>
                                 <p>
                                     Si vous possédez déjà un adoucisseur d'eau et que vous continuez à voir des signes de calcaire, faites le test sur un robinet d'eau non adoucie (souvent le robinet extérieur) et comparez avec l'eau de votre cuisine. Si le résultat est le même, votre adoucisseur ne fonctionne plus ou nécessite une régénération manuelle immédiate.
                                 </p>
@@ -130,13 +109,7 @@ const MesurerDureteEauMaison = () => {
                                         Rappel pour les propriétaires de puits : Pour vous, tester la dureté ne suffit pas. L'analyse doit inclure le fer et le manganèse, car ces minéraux peuvent encrasser irrémédiablement la résine de votre adoucisseur si le système n'est pas conçu pour les traiter.
                                     </p>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-            </main>
-            <Footer />
-        </div>
+        </BlogLayout>
     );
 };
 

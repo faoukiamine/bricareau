@@ -1,6 +1,5 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
+import BlogLayout from "@/components/BlogLayout";
 import { Button } from "@/components/ui/button";
 import { Phone, ShieldAlert, BadgeCheck, Microscope, Waves, Droplets, Info, Search, AlertCircle, ShieldCheck, HeartPulse, Scale, FlaskConical, Zap, Wrench, Home, Sparkles, Filter, ShieldHalf, Thermometer, GlassWater, MicroscopeIcon as Microscope2, AlertTriangle, Crosshair, ZapIcon, Lightbulb, Snowflake, Mountain } from "lucide-react";
 
@@ -13,48 +12,28 @@ const EauTurbideTrouble = () => {
         }
     }, []);
 
-    return (
-        <div className="min-h-screen bg-white font-sans text-slate-900 leading-relaxed font-light">
-            <Header />
-            <main className="pt-20">
-                {/* Hero Section */}
-                <section className="relative py-24 bg-blue-50 text-slate-900 overflow-hidden">
-                    <div className="absolute inset-0 opacity-10">
-                        <img
-                            src="https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=2000&auto=format&fit=crop"
-                            alt="Abstraction de vagues d'eau"
-                            className="w-full h-full object-cover"
-                        />
-                    </div>
-                    <div className="container mx-auto px-4 relative z-10 text-center">
-                        <span className="inline-block px-4 py-1 rounded-full bg-blue-600/10 border border-blue-400/30 text-blue-600 text-sm font-bold mb-6 tracking-widest uppercase">
-                            Expertise Clarté & Pureté De L'eau
-                        </span>
-                        <h1 className="text-4xl md:text-7xl font-bold mb-8 leading-tight tracking-tighter text-blue-950">
-                            Eau <span className="text-blue-600">turbide</span> ou trouble ?
-                        </h1>
-                        <p className="text-xl md:text-2xl text-slate-600 font-light mb-10 leading-relaxed max-w-4xl mx-auto italic">
-                            Retrouver la transparence d'une eau de source : comprendre les causes de l'aspect laiteux ou boueux et maîtriser les technologies de clarification par sédimentation.
-                        </p>
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-10 h-16 font-bold shadow-lg shadow-blue-950/20" asChild>
-                                <a href="/contact">Clarifier mon eau de puits</a>
-                            </Button>
-                            <Button size="lg" variant="outline" className="text-blue-900 border-blue-900 bg-white/50 hover:bg-white rounded-full px-10 h-16 font-bold backdrop-blur-sm shadow-inner transition-all" asChild>
-                                <a href="tel:18552649328" className="flex items-center gap-2">
-                                    <Phone className="h-5 w-5" /> 1-855-264-9328
-                                </a>
-                            </Button>
-                        </div>
-                    </div>
-                </section>
+    const tocItems = [
+        {
+                "id": "section-1",
+                "title": "Diagnostiquer votre turbidité"
+        },
+        {
+                "id": "section-2",
+                "title": "Pourquoi l'eau trouble est-elle dangereuse ?"
+        },
+        {
+                "id": "section-3",
+                "title": "Solutions : Comment clarifier l'eau ?"
+        }
+];
 
-                {/* Article Intro Body */}
-                <article className="py-20 lg:py-32 bg-white">
-                    <div className="container mx-auto px-4">
-                        <div className="max-w-4xl mx-auto">
-                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 text-justify leading-relaxed">
-                                <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-blue-600 pl-8 italic">
+    return (
+        <BlogLayout 
+            title="Eau turbide ou trouble ?" 
+            headerImage={"https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=2000&auto=format&fit=crop"}
+            tocItems={tocItems}
+        >
+            <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-blue-600 pl-8 italic">
                                     La turbidité est le premier indicateur, souvent alarmant, d'une dégradation de la qualité de votre eau. Qu'elle soit « laiteuse » dès le robinet ou qu'elle présente des dépôts de sable au fond du verre, une eau trouble n'est pas seulement un désagrément esthétique ; c'est un symptôme de dysfonctionnement de votre puits ou de votre réseau municipal.
                                 </p>
 
@@ -64,7 +43,7 @@ const EauTurbideTrouble = () => {
                                     </p>
                                 </div>
 
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">1. Diagnostiquer votre turbidité</h2>
+                                <h2 id="section-1" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">1. Diagnostiquer votre turbidité</h2>
                                 <p>
                                     Toutes les eaux troubles ne se ressemblent pas. Observez l'apparence et le comportement de l'eau au repos :
                                 </p>
@@ -90,7 +69,7 @@ const EauTurbideTrouble = () => {
                                     </div>
                                 </div>
 
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">2. Pourquoi l'eau trouble est-elle dangereuse ?</h2>
+                                <h2 id="section-2" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">2. Pourquoi l'eau trouble est-elle dangereuse ?</h2>
                                 <p>
                                     Si l'on peut vivre avec une eau imparfaite visuellement, la turbidité pose trois problèmes techniques et sanitaires majeurs :
                                 </p>
@@ -100,7 +79,7 @@ const EauTurbideTrouble = () => {
                                     <li><strong>Coloration persistante (Tannins) :</strong> Dans certains cas, l'aspect trouble jaunâtre provient de matières organiques décomposées (tannins). Ces molécules ne se déposent jamais et nécessitent une approche chimique spécifique.</li>
                                 </ul>
 
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">3. Solutions : Comment clarifier l'eau ?</h2>
+                                <h2 id="section-3" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">3. Solutions : Comment clarifier l'eau ?</h2>
                                 <p>
                                     Le choix du système de clarification dépend de la taille des particules incriminées, mesurée en <strong>microns</strong> (un micron = un millième de millimètre).
                                 </p>
@@ -162,13 +141,7 @@ const EauTurbideTrouble = () => {
                                         * Note de sagesse : Pour protéger l'investissement que représente votre adoucisseur d'eau ou votre osmoseur, un pré-filtre de sédiments est toujours indispensable pour éviter l'encrassement des composantes internes sensibles.
                                     </p>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-            </main>
-            <Footer />
-        </div>
+        </BlogLayout>
     );
 };
 

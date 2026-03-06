@@ -1,6 +1,5 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
+import BlogLayout from "@/components/BlogLayout";
 import { Button } from "@/components/ui/button";
 import { Phone, ShieldAlert, BadgeCheck, Microscope, Waves, Droplets, Info, Search, AlertCircle, ShieldCheck, HeartPulse, Scale, FlaskConical, Zap, Wrench, Home, Sparkles, Filter } from "lucide-react";
 
@@ -13,48 +12,32 @@ const ManganeseFerEauBrune = () => {
         }
     }, []);
 
-    return (
-        <div className="min-h-screen bg-white font-sans text-slate-900 leading-relaxed font-light">
-            <Header />
-            <main className="pt-20">
-                {/* Hero Section */}
-                <section className="relative py-24 bg-amber-950 text-white overflow-hidden">
-                    <div className="absolute inset-0 opacity-20">
-                        <img
-                            src="https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=2000&auto=format&fit=crop"
-                            alt="Eau de puits brune s'écoulant d'un robinet"
-                            className="w-full h-full object-cover grayscale"
-                        />
-                    </div>
-                    <div className="container mx-auto px-4 relative z-10 text-center">
-                        <span className="inline-block px-4 py-1 rounded-full bg-amber-600/20 border border-amber-400/30 text-amber-500 text-sm font-bold mb-6 tracking-widest uppercase">
-                            Maintenance Et Solutions Eau De Puits
-                        </span>
-                        <h1 className="text-4xl md:text-7xl font-bold mb-8 leading-tight tracking-tighter">
-                            Eau <span className="text-amber-500">brune ou tachée</span> ?
-                        </h1>
-                        <p className="text-xl md:text-2xl text-slate-300 font-light mb-10 leading-relaxed max-w-4xl mx-auto italic">
-                            Démystifier le duo manganèse et fer : comprendre les causes géologiques des taches orange et noires et restaurer définitivement la clarté de votre eau.
-                        </p>
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <Button size="lg" className="bg-amber-600 hover:bg-amber-700 text-white rounded-full px-10 h-16 font-bold" asChild>
-                                <a href="/contact">Demander un test de fer & manganèse</a>
-                            </Button>
-                            <Button size="lg" variant="outline" className="text-white border-white bg-white/10 hover:bg-white/20 rounded-full px-10 h-16 font-bold backdrop-blur-sm" asChild>
-                                <a href="tel:18552649328" className="flex items-center gap-2">
-                                    <Phone className="h-5 w-5" /> 1-855-264-9328
-                                </a>
-                            </Button>
-                        </div>
-                    </div>
-                </section>
+    const tocItems = [
+        {
+                "id": "section-1",
+                "title": "Identifier l'ennemi : Fer vs Manganèse"
+        },
+        {
+                "id": "section-2",
+                "title": "Pourquoi votre eau jaunit-elle ? (Science des Aquifères)"
+        },
+        {
+                "id": "section-3",
+                "title": "L'Impact sur votre foyer : Des coûts cachés"
+        },
+        {
+                "id": "section-4",
+                "title": "Solutions technologiques : Quelle filtration choisir ?"
+        }
+];
 
-                {/* Article Intro Body */}
-                <article className="py-20 lg:py-32">
-                    <div className="container mx-auto px-4">
-                        <div className="max-w-4xl mx-auto">
-                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 leading-relaxed text-justify">
-                                <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-amber-600 pl-8 italic">
+    return (
+        <BlogLayout 
+            title="Eau brune ou tachée ?" 
+            headerImage={"https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=2000&auto=format&fit=crop"}
+            tocItems={tocItems}
+        >
+            <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-amber-600 pl-8 italic">
                                     Rien n'est plus frustrant pour un propriétaire de puits que de constater une eau jaune, orange ou dotée de sédiments noirs. En plus d'avoir un goût métallique désagréable, cette situation ruine les lavabos, les douches et le linge blanc.
                                 </p>
 
@@ -64,7 +47,7 @@ const ManganeseFerEauBrune = () => {
                                     </p>
                                 </div>
 
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">1. Identifier l'ennemi : Fer vs Manganèse</h2>
+                                <h2 id="section-1" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">1. Identifier l'ennemi : Fer vs Manganèse</h2>
                                 <p>
                                     Bien que souvent trouvés ensemble, ces deux minéraux ont des signatures distinctes que tout propriétaire devrait savoir reconnaître.
                                 </p>
@@ -90,7 +73,7 @@ const ManganeseFerEauBrune = () => {
                                     </div>
                                 </div>
 
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">2. Pourquoi votre eau jaunit-elle ? (Science des Aquifères)</h2>
+                                <h2 id="section-2" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">2. Pourquoi votre eau jaunit-elle ? (Science des Aquifères)</h2>
                                 <p>
                                     L'eau souterraine est naturellement pauvre en oxygène. Dans cet état « réduit », les minéraux de fer et de manganèse présents dans le sol et les roches se dissolvent dans l'eau et deviennent invisibles.
                                 </p>
@@ -98,7 +81,7 @@ const ManganeseFerEauBrune = () => {
                                     C'est au moment où l'eau entre en contact avec l'air (l'oxygène) dans votre plomberie ou votre verre que ces minéraux <strong>s'oxydent</strong>. Ils se transforment alors en particules solides. C'est le même principe que la rouille sur un métal : vos tuyaux ne rouillent pas de l'intérieur, c'est l'eau elle-même qui « rouille » devant vos yeux.
                                 </p>
 
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">3. L'Impact sur votre foyer : Des coûts cachés</h2>
+                                <h2 id="section-3" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">3. L'Impact sur votre foyer : Des coûts cachés</h2>
                                 <ul className="list-disc pl-8 space-y-4 mb-8">
                                     <li><strong>Entartrage des tuyaux :</strong> Considérez ces minéraux comme du cholestérol pour votre plomberie. Ils s'accumulent et réduisent la pression d'eau au fil des ans.</li>
                                     <li><strong>Destruction du chauffe-eau :</strong> Les sédiments de fer s'accumulent au fond du réservoir, surchauffant l'unité et provoquant des fuites prématurées.</li>
@@ -120,7 +103,7 @@ const ManganeseFerEauBrune = () => {
                                     </div>
                                 </div>
 
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">4. Solutions technologiques : Quelle filtration choisir ?</h2>
+                                <h2 id="section-4" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">4. Solutions technologiques : Quelle filtration choisir ?</h2>
                                 <p>
                                     Éliminer le fer et le manganèse demande une approche rigoureuse basée sur votre analyse d'eau. Les solutions varient selon le type de fer (dissous ou particulaire) et les autres paramètres comme le pH.
                                 </p>
@@ -159,13 +142,7 @@ const ManganeseFerEauBrune = () => {
                                         * Note de l'expert : Un pH faible (eau acide) rend le traitement du fer beaucoup plus difficile. Nous testons toujours votre pH avant de suggérer une technologie d'oxydation pour garantir votre satisfaction.
                                     </p>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-            </main>
-            <Footer />
-        </div>
+        </BlogLayout>
     );
 };
 

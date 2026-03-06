@@ -1,6 +1,5 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
+import BlogLayout from "@/components/BlogLayout";
 import { Button } from "@/components/ui/button";
 import { Phone, Microscope, ShieldAlert, BadgeCheck, Sparkles, Droplets, Info, Search, AlertCircle, ShieldCheck, HeartPulse, Scale, FlaskConical } from "lucide-react";
 
@@ -13,48 +12,32 @@ const MicroplastiquesEauRobinet = () => {
         }
     }, []);
 
-    return (
-        <div className="min-h-screen bg-white font-sans text-slate-900 leading-relaxed font-light">
-            <Header />
-            <main className="pt-20">
-                {/* Hero Section */}
-                <section className="relative py-24 bg-slate-900 text-white overflow-hidden">
-                    <div className="absolute inset-0 opacity-20">
-                        <img
-                            src="https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=2000&auto=format&fit=crop"
-                            alt="Abstraction de particules de plastique dans l'eau"
-                            className="w-full h-full object-cover grayscale"
-                        />
-                    </div>
-                    <div className="container mx-auto px-4 relative z-10 text-center">
-                        <span className="inline-block px-4 py-1 rounded-full bg-blue-600/20 border border-blue-400/30 text-blue-400 text-sm font-bold mb-6 tracking-widest uppercase">
-                            Science Environnementale : État des Lieux
-                        </span>
-                        <h1 className="text-4xl md:text-7xl font-bold mb-8 leading-tight tracking-tighter">
-                            Microplastiques : <span className="text-blue-400">Réalité ou Mythe ?</span>
-                        </h1>
-                        <p className="text-xl md:text-2xl text-slate-300 font-light mb-10 leading-relaxed max-w-4xl mx-auto italic">
-                            Une immersion dans la pollution particulaire moderne : comprendre les menaces nanométriques et reprendre le contrôle sur l'eau de votre robinet.
-                        </p>
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-10 h-16 font-bold" asChild>
-                                <a href="/osmose-filtration">Détecter et filtrer les microplastiques</a>
-                            </Button>
-                            <Button size="lg" variant="outline" className="text-white border-white bg-white/10 hover:bg-white/20 rounded-full px-10 h-16 font-bold backdrop-blur-sm" asChild>
-                                <a href="tel:18552649328" className="flex items-center gap-2">
-                                    <Phone className="h-5 w-5" /> 1-855-264-9328
-                                </a>
-                            </Button>
-                        </div>
-                    </div>
-                </section>
+    const tocItems = [
+        {
+                "id": "section-1",
+                "title": "Que sont réellement les microplastiques ?"
+        },
+        {
+                "id": "section-2",
+                "title": "Origines : Comment le plastique atteint votre robinet ?"
+        },
+        {
+                "id": "section-3",
+                "title": "Toxicité : À quel point faut-il s'inquiéter ?"
+        },
+        {
+                "id": "section-4",
+                "title": "Solutions : Éliminer les microplastiques à domicile"
+        }
+];
 
-                {/* Article Intro Content */}
-                <article className="py-20 lg:py-32 bg-white">
-                    <div className="container mx-auto px-4">
-                        <div className="max-w-4xl mx-auto">
-                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 text-justify leading-relaxed">
-                                <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-blue-600 pl-8 italic">
+    return (
+        <BlogLayout 
+            title="Microplastiques : Réalité ou Mythe ?" 
+            headerImage={"https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=2000&auto=format&fit=crop"}
+            tocItems={tocItems}
+        >
+            <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-blue-600 pl-8 italic">
                                     Imaginez boire l'équivalent d'une carte de crédit en plastique chaque semaine. Ce chiffre, souvent cité par les organisations de santé environnementale, illustre l'ampleur d'une menace invisible : la contamination par les microplastiques.
                                 </p>
 
@@ -64,7 +47,7 @@ const MicroplastiquesEauRobinet = () => {
                                     </p>
                                 </div>
 
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">1. Que sont réellement les microplastiques ?</h2>
+                                <h2 id="section-1" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">1. Que sont réellement les microplastiques ?</h2>
                                 <p>
                                     Sur le plan scientifique, un <strong>microplastique</strong> est défini comme une particule solide de matière plastique mesurant moins de 5 millimètres. Toutefois, l'inquiétude se porte désormais sur les <strong>nanoplastiques</strong>, si infimes (moins de 1 micromètre) qu'ils peuvent franchir les barrières cellulaires humaines.
                                 </p>
@@ -91,7 +74,7 @@ const MicroplastiquesEauRobinet = () => {
                                     </div>
                                 </div>
 
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">2. Origines : Comment le plastique atteint votre robinet ?</h2>
+                                <h2 id="section-2" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">2. Origines : Comment le plastique atteint votre robinet ?</h2>
                                 <p>
                                     Contrairement à certains contaminants qui proviennent de sources ponctuelles (comme les pesticides), le plastique est omniprésent.
                                 </p>
@@ -101,7 +84,7 @@ const MicroplastiquesEauRobinet = () => {
                                     <li><strong>Décomposition des infrastructures :</strong> Ironiquement, certains joints et revêtements des réseaux de distribution d'eau potable eux-mêmes peuvent vieillir et relâcher des particules plastiques.</li>
                                 </ul>
 
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">3. Toxicité : À quel point faut-il s'inquiéter ?</h2>
+                                <h2 id="section-3" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">3. Toxicité : À quel point faut-il s'inquiéter ?</h2>
                                 <p>
                                     La science médicale sur l'effet à long terme des microplastiques est encore à ses débuts, mais les inquiétudes se divisent en deux axes : la toxicité physique et la toxicité chimique.
                                 </p>
@@ -122,7 +105,7 @@ const MicroplastiquesEauRobinet = () => {
                                     </div>
                                 </div>
 
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">4. Solutions : Éliminer les microplastiques à domicile</h2>
+                                <h2 id="section-4" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">4. Solutions : Éliminer les microplastiques à domicile</h2>
                                 <p>
                                     Bonne nouvelle : les technologies de filtration modernes sont extrêmement efficaces pour stopper ces particules, à condition d'utiliser les bons équipements.
                                 </p>
@@ -156,13 +139,7 @@ const MicroplastiquesEauRobinet = () => {
                                         * Note de sagesse : Utiliser un filtre à domicile est l'acte de protection le plus direct que vous puissiez poser aujourd'hui pour contrer l'omniprésence du plastique dans nos écosystèmes modernes.
                                     </p>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-            </main>
-            <Footer />
-        </div>
+        </BlogLayout>
     );
 };
 

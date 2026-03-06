@@ -1,6 +1,5 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
+import BlogLayout from "@/components/BlogLayout";
 import { Button } from "@/components/ui/button";
 import { Phone, ShieldCheck, BadgeCheck, Microscope, Waves, Droplets, ArrowRight, HeartPulse, Info, Zap, Sparkles, Filter, CheckCircle2, FlaskConical, Scale } from "lucide-react";
 
@@ -13,48 +12,32 @@ const OsmoseInverseMeilleurSysteme = () => {
         }
     }, []);
 
-    return (
-        <div className="min-h-screen bg-white font-sans text-slate-900 leading-relaxed font-light text-justify">
-            <Header />
-            <main className="pt-20">
-                {/* Hero Section */}
-                <section className="relative py-24 bg-blue-950 text-white overflow-hidden">
-                    <div className="absolute inset-0 opacity-20">
-                        <img
-                            src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2000&auto=format&fit=crop"
-                            alt="Famille heureuse buvant de l'eau pure"
-                            className="w-full h-full object-cover"
-                        />
-                    </div>
-                    <div className="container mx-auto px-4 relative z-10 text-center">
-                        <span className="inline-block px-4 py-1 rounded-full bg-blue-600/20 border border-blue-400/30 text-blue-400 text-sm font-bold mb-6 tracking-widest uppercase">
-                            Contrôle de Pureté & Santé Familiale
-                        </span>
-                        <h1 className="text-4xl md:text-7xl font-bold mb-8 leading-tight tracking-tighter">
-                            Osmose inverse : <span className="text-blue-400">Le meilleur système ?</span>
-                        </h1>
-                        <p className="text-xl md:text-2xl text-slate-300 font-light mb-10 leading-relaxed max-w-4xl mx-auto italic text-center">
-                            Démystifier la technologie de filtration la plus avancée au monde : pourquoi l'osmose inverse est devenue le standard de référence pour la sécurité de l'eau potable résidentielle.
-                        </p>
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-10 h-16 font-bold" asChild>
-                                <a href="/ro-6">Explorer nos systèmes RO-6</a>
-                            </Button>
-                            <Button size="lg" variant="outline" className="text-white border-white bg-white/10 hover:bg-white/20 rounded-full px-10 h-16 font-bold backdrop-blur-sm" asChild>
-                                <a href="tel:18552649328" className="flex items-center gap-2">
-                                    <Phone className="h-5 w-5" /> 1-855-264-9328
-                                </a>
-                            </Button>
-                        </div>
-                    </div>
-                </section>
+    const tocItems = [
+        {
+                "id": "section-1",
+                "title": "Qu'est-ce que l'osmose inverse ? (La Science)"
+        },
+        {
+                "id": "section-2",
+                "title": "Pourquoi est-ce le meilleur choix pour votre famille ?"
+        },
+        {
+                "id": "section-3",
+                "title": "Le goût : La différence cristalline"
+        },
+        {
+                "id": "section-4",
+                "title": "Mythes et Réalités : Ce qu'il faut savoir"
+        }
+];
 
-                {/* Article Content */}
-                <article className="py-20 lg:py-32">
-                    <div className="container mx-auto px-4">
-                        <div className="max-w-4xl mx-auto">
-                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 leading-relaxed">
-                                <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-blue-600 pl-8 italic">
+    return (
+        <BlogLayout 
+            title="Osmose inverse : Le meilleur système ?" 
+            headerImage={"https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2000&auto=format&fit=crop"}
+            tocItems={tocItems}
+        >
+            <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-blue-600 pl-8 italic">
                                     À une époque où la qualité des sources d'eau municipales et de puits est de plus en plus remise en question, l'osmose inverse (RO) s'impose comme la solution de barrière totale. Mais est-ce vraiment le choix optimal pour votre famille ?
                                 </p>
 
@@ -64,7 +47,7 @@ const OsmoseInverseMeilleurSysteme = () => {
                                     </p>
                                 </div>
 
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">1. Qu'est-ce que l'osmose inverse ? (La Science)</h2>
+                                <h2 id="section-1" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">1. Qu'est-ce que l'osmose inverse ? (La Science)</h2>
                                 <p>
                                     Pour comprendre l'osmose "inverse", il faut d'abord comprendre l'osmose naturelle. Dans la nature, l'eau se déplace d'une solution moins concentrée vers une solution plus concentrée à travers une membrane semi-perméable.
                                 </p>
@@ -84,7 +67,7 @@ const OsmoseInverseMeilleurSysteme = () => {
                                     </div>
                                 </div>
 
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">2. Pourquoi est-ce le meilleur choix pour votre famille ?</h2>
+                                <h2 id="section-2" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">2. Pourquoi est-ce le meilleur choix pour votre famille ?</h2>
                                 <p>
                                     Le choix d'un système de filtration ne doit pas être basé uniquement sur le prix, mais sur la capacité de protection. Voici pourquoi l'osmose inverse l'emporte sur les autres méthodes :
                                 </p>
@@ -106,7 +89,7 @@ const OsmoseInverseMeilleurSysteme = () => {
                                     </div>
                                 </div>
 
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">3. Le goût : La différence cristalline</h2>
+                                <h2 id="section-3" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">3. Le goût : La différence cristalline</h2>
                                 <p>
                                     L'un des commentaires les plus fréquents des utilisateurs d'osmose inverse Bricareau est : "Je ne savais pas que l'eau pouvait avoir un goût aussi pur".
                                 </p>
@@ -114,7 +97,7 @@ const OsmoseInverseMeilleurSysteme = () => {
                                     En retirant les minéraux inorganiques lourds et les produits de désinfection municipaux, l'eau retrouve sa légèreté naturelle. Cela transforme non seulement l'eau que vous buvez, mais aussi la qualité de votre café, de votre thé et de vos aliments cuisinés à l'eau. Pour les familles, cela encourage souvent une hydratation accrue des enfants, délaissant ainsi les boissons sucrées.
                                 </p>
 
-                                <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-20 mb-8 tracking-tight">4. Mythes et Réalités : Ce qu'il faut savoir</h2>
+                                <h2 id="section-4" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">4. Mythes et Réalités : Ce qu'il faut savoir</h2>
                                 <p>
                                     Certains détracteurs mentionnent le rejet d'eau ou le retrait des "bons" minéraux. Clarifions ces points :
                                 </p>
@@ -144,13 +127,7 @@ const OsmoseInverseMeilleurSysteme = () => {
                                         Rappel d'expert : Un système d'osmose inverse nécessite un changement régulier des filtres (annuel) pour conserver ses performances maximales et protéger la membrane. Bricareau offre un service de rappel d'entretien pour votre tranquillité.
                                     </p>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-            </main>
-            <Footer />
-        </div>
+        </BlogLayout>
     );
 };
 
