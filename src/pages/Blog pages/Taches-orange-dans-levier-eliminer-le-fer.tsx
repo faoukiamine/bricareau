@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useEffect } from "react";
 import tachesOrangeImg from "@/assets/taches-orange-evier.png";
-import filtrationFerImg from "@/assets/Filtration-eau-de-puits.webp";
+import filtrationFerImg from "@/assets/systeme-filtration-fer.png";
 import { Button } from "@/components/ui/button";
 import { Phone, ArrowRight, CheckCircle2 } from "lucide-react";
 
@@ -30,10 +30,10 @@ const TachesOrangeDansLevier = () => {
                     </div>
                     <div className="container mx-auto px-4 relative z-10">
                         <div className="max-w-4xl mx-auto text-center">
-                            <h1 className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text-justify max-w-xl mx-auto">
-                                <span className="font-bold">Taches orange dans l'évier</span> : Le <span className="text-blue-400 font-bold">guide complet</span> pour éliminer le fer
+                            <h1 className="text-4xl md:text-6xl font-bold mb-8 leading-tight tracking-tighter">
+                                Taches orange dans l'évier : Le <span className="text-blue-400">guide complet</span> pour éliminer le fer
                             </h1>
-                            <p className="text-[20px] leading-snug text-slate-300 font-light mb-10 text-justify max-w-xl mx-auto">
+                            <p className="text-xl md:text-2xl text-slate-300 font-light mb-10 leading-relaxed text-justify">
                                 Comprendre l'origine des dépôts ferreux et explorer les solutions de traitement avancées pour une eau parfaitement limpide et des sanitaires éclatants.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -54,7 +54,7 @@ const TachesOrangeDansLevier = () => {
                 <article className="py-20 lg:py-32">
                     <div className="container mx-auto px-4">
                         <div className="max-w-4xl mx-auto">
-                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 leading-snug text-justify">
+                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 leading-relaxed text-justify">
                                 <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-blue-600 pl-8 italic">
                                     Rien ne défigure plus une salle de bain de luxe ou une cuisine moderne que l'apparition de traînées orangeâtres au fond de l'évier ou de la baignoire. Ces taches de "rouille", persistantes et difficiles à nettoyer, sont le signe indéniable d'une concentration excessive de fer dans votre approvisionnement en eau.
                                 </p>

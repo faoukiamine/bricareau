@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Phone, ShieldCheck, BadgeCheck, Microscope, Waves, Droplets, Info, Zap, Sparkles, Filter, CheckCircle2, FlaskConical, MicroscopeIcon, Search, FlaskConicalIcon, FlaskRound } from "lucide-react";
+import { Phone, ShieldCheck, BadgeCheck, Microscope, Waves, Droplets, Info, Zap, Sparkles, Filter, CheckCircle2, FlaskConical, MicroscopeIcon, Search, Microscope2, FlaskConicalIcon, FlaskRound } from "lucide-react";
 
 const FiltreCharbonActifLimites = () => {
     useEffect(() => {
@@ -14,7 +14,7 @@ const FiltreCharbonActifLimites = () => {
     }, []);
 
     return (
-        <div className="min-h-screen bg-white font-sans text-slate-900 leading-snug font-light text-justify">
+        <div className="min-h-screen bg-white font-sans text-slate-900 leading-relaxed font-light text-justify">
             <Header />
             <main className="pt-20">
                 {/* Hero Section */}
@@ -30,10 +30,10 @@ const FiltreCharbonActifLimites = () => {
                         <span className="inline-block px-4 py-1 rounded-full bg-slate-600/20 border border-slate-400/30 text-slate-400 text-sm font-bold mb-6 tracking-widest uppercase">
                             Adsorption & Science Moléculaire
                         </span>
-                        <h1 className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text-justify max-w-xl mx-auto">
-                            <span className="font-bold">Filtre au charbon actif</span> : <span className="text-blue-400 font-bold">La vérité.</span>
+                        <h1 className="text-4xl md:text-7xl font-bold mb-8 leading-tight tracking-tighter">
+                            Filtre au charbon actif : <span className="text-blue-400">La vérité.</span>
                         </h1>
-                        <p className="text-[20px] leading-snug text-slate-300 font-light mb-10 text-justify max-w-xl mx-auto italic">
+                        <p className="text-xl md:text-2xl text-slate-300 font-light mb-10 leading-relaxed max-w-4xl mx-auto italic text-center">
                             Démystifier le média filtrant le plus répandu au monde : ce qu'il capture avec brio et les dangers invisibles qu'il laisse impunément traverser vers votre verre d'eau.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -53,7 +53,7 @@ const FiltreCharbonActifLimites = () => {
                 <article className="py-20 lg:py-32 bg-white">
                     <div className="container mx-auto px-4">
                         <div className="max-w-4xl mx-auto">
-                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 leading-snug">
+                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 leading-relaxed">
                                 <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-blue-600 pl-8 italic">
                                     Il est partout : dans les carafes filtrantes, les réfrigérateurs et les masques à gaz. Le charbon actif est le "maître du goût", mais est-il suffisant pour garantir la sécurité de votre foyer au Québec ?
                                 </p>
@@ -92,13 +92,13 @@ const FiltreCharbonActifLimites = () => {
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-16">
                                     <div className="bg-slate-50 p-8 rounded-2xl border border-slate-100">
                                         <h4 className="text-xl font-bold mb-4 tracking-tight">Minéraux Dissous (TDS)</h4>
-                                        <p className="text-slate-600 text-sm leading-snug text-justify italic">
+                                        <p className="text-slate-600 text-sm leading-relaxed text-justify italic">
                                             Le charbon ne traite pas le calcium (calcaire), l'arsenic, le plomb, le fluor, les nitrates ou les sulfates dissous. Ces substances traversent ses pores sans aucun ralentissement.
                                         </p>
                                     </div>
                                     <div className="bg-slate-50 p-8 rounded-2xl border border-slate-100">
                                         <h4 className="text-xl font-bold mb-4 tracking-tight">Menaces Biologiques</h4>
-                                        <p className="text-slate-600 text-sm leading-snug text-justify italic">
+                                        <p className="text-slate-600 text-sm leading-relaxed text-justify italic">
                                             Les bactéries, virus et kystes ne sont généralement pas éliminés par le charbon actif seul. Pire encore, si le filtre n'est pas changé périodiquement, le charbon peut devenir un nid de culture bactérienne.
                                         </p>
                                     </div>
@@ -114,7 +114,7 @@ const FiltreCharbonActifLimites = () => {
                                         <BadgeCheck className="w-80 h-80" />
                                     </div>
                                     <h3 className="text-3xl md:text-5xl font-bold mb-10 tracking-tighter italic">L'intelligence technologique pour votre purification.</h3>
-                                    <p className="text-xl text-slate-300 opacity-90 mb-12 max-w-2xl mx-auto font-light leading-snug">
+                                    <p className="text-xl text-slate-300 opacity-90 mb-12 max-w-2xl mx-auto font-light leading-relaxed">
                                         Ne demandez pas trop à un simple filtre. Apprenez à intégrer le charbon actif dans une architecture de filtration multi-étapes pour une protection réelle et totale.
                                     </p>
                                     <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -124,7 +124,7 @@ const FiltreCharbonActifLimites = () => {
                                     </div>
                                 </div>
 
-                                <div className="mt-20 text-slate-400 text-sm border-t border-slate-100 pt-8 italic leading-snug flex items-start gap-4">
+                                <div className="mt-20 text-slate-400 text-sm border-t border-slate-100 pt-8 italic leading-relaxed flex items-start gap-4">
                                     <Info className="h-6 w-6 text-blue-600 shrink-0 mt-1" />
                                     <p>
                                         Note technique : En raison de l'accumulation de matière organique, un filtre au charbon doit être remplacé au minimum tous les 12 mois, quelle que soit la quantité d'eau filtrée, pour prévenir le phénomène de "percée" chimique.

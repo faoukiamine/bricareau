@@ -14,7 +14,7 @@ const FiltreDouchePeauCheveux = () => {
     }, []);
 
     return (
-        <div className="min-h-screen bg-white font-sans text-slate-900 leading-snug font-light text-justify">
+        <div className="min-h-screen bg-white font-sans text-slate-900 leading-relaxed font-light text-justify">
             <Header />
             <main className="pt-20">
                 {/* Hero Section */}
@@ -30,10 +30,10 @@ const FiltreDouchePeauCheveux = () => {
                         <span className="inline-block px-4 py-1 rounded-full bg-teal-600/20 border border-teal-400/30 text-teal-400 text-sm font-bold mb-6 tracking-widest uppercase">
                             Dermatologie Aquatique & Soins Capillaires
                         </span>
-                        <h1 className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text-justify max-w-xl mx-auto">
-                            <span className="font-bold">Filtre de douche</span> : <span className="text-teal-400 italic font-medium font-bold">Beauté & Santé</span>
+                        <h1 className="text-4xl md:text-7xl font-bold mb-8 leading-tight tracking-tighter">
+                            Filtre de douche : <span className="text-teal-400 italic font-medium">Beauté & Santé</span>
                         </h1>
-                        <p className="text-[20px] leading-snug text-slate-300 font-light mb-10 text-justify max-w-xl mx-auto italic">
+                        <p className="text-xl md:text-2xl text-slate-300 font-light mb-10 leading-relaxed max-w-4xl mx-auto italic text-center">
                             Pourquoi votre peau est-elle sèche et vos cheveux ternes ? La réponse se trouve peut-être dans votre pommeau de douche. Découvrez l'effet dévastateur du chlore vaporisé sur votre corps.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -53,7 +53,7 @@ const FiltreDouchePeauCheveux = () => {
                 <article className="py-20 lg:py-32 bg-white">
                     <div className="container mx-auto px-4">
                         <div className="max-w-4xl mx-auto">
-                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 leading-snug">
+                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 leading-relaxed">
                                 <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-teal-600 pl-8 italic">
                                     Nous dépensons des fortunes en crèmes hydratantes et en revitalisants de luxe, tout en nous lavant chaque jour dans une eau agressive et chlorée. C'est un paradoxe esthétique et sanitaire majeur.
                                 </p>
@@ -98,14 +98,14 @@ const FiltreDouchePeauCheveux = () => {
                                     <div className="bg-slate-50 p-8 rounded-2xl border border-slate-100">
                                         <User className="w-10 h-10 text-teal-600 mb-4" />
                                         <h4 className="text-xl font-bold mb-4 tracking-tight">Bienfaits pour la Peau</h4>
-                                        <p className="text-slate-600 text-sm italic leading-snug text-justify">
+                                        <p className="text-slate-600 text-sm italic leading-relaxed text-justify">
                                             Sensation immédiate de douceur, réduction spectaculaire des démangeaisons post-douche et diminution de l'inflammation cutanée (acné, rougeurs).
                                         </p>
                                     </div>
                                     <div className="bg-slate-50 p-8 rounded-2xl border border-slate-100">
                                         <Sparkle className="w-10 h-10 text-teal-600 mb-4" />
                                         <h4 className="text-xl font-bold mb-4 tracking-tight">Éclat des Cheveux</h4>
-                                        <p className="text-slate-600 text-sm italic leading-snug text-justify">
+                                        <p className="text-slate-600 text-sm italic leading-relaxed text-justify">
                                             Équilibre du pH du cuir chevelu, cheveux plus malléables, brillants et couleurs qui durent beaucoup plus longtemps sans virer au "cuivré".
                                         </p>
                                     </div>
@@ -121,7 +121,7 @@ const FiltreDouchePeauCheveux = () => {
                                         <Sparkles className="w-80 h-80" />
                                     </div>
                                     <h3 className="text-3xl md:text-5xl font-bold mb-10 tracking-tighter italic">Réinventez votre rituel de douche.</h3>
-                                    <p className="text-xl text-teal-100 opacity-90 mb-12 max-w-2xl mx-auto font-light leading-snug">
+                                    <p className="text-xl text-teal-100 opacity-90 mb-12 max-w-2xl mx-auto font-light leading-relaxed">
                                         Laissez votre peau respirer et offrez à vos cheveux la pureté qu'ils méritent. Un investissement simple pour une beauté durable.
                                     </p>
                                     <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -131,7 +131,7 @@ const FiltreDouchePeauCheveux = () => {
                                     </div>
                                 </div>
 
-                                <div className="mt-20 text-slate-400 text-sm border-t border-slate-100 pt-8 italic leading-snug flex items-start gap-4">
+                                <div className="mt-20 text-slate-400 text-sm border-t border-slate-100 pt-8 italic leading-relaxed flex items-start gap-4">
                                     <Info className="h-6 w-6 text-teal-600 shrink-0 mt-1" />
                                     <p>
                                         Rappel pour les parents : Les enfants et les bébés ont une peau beaucoup plus fine et perméable que les adultes. Filtrer l'eau de leur bain est une étape cruciale pour prévenir le développement précoce d'allergies cutanées.

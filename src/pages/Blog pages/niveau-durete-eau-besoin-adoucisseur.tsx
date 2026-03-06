@@ -14,7 +14,7 @@ const NiveauDureteAdoucisseurBesoin = () => {
     }, []);
 
     return (
-        <div className="min-h-screen bg-white font-sans text-slate-900 leading-snug font-light text-justify text-[16px]">
+        <div className="min-h-screen bg-white font-sans text-slate-900 leading-relaxed font-light text-justify text-[16px]">
             <Header />
             <main className="pt-20">
                 {/* Hero Section */}
@@ -30,10 +30,10 @@ const NiveauDureteAdoucisseurBesoin = () => {
                         <span className="inline-block px-4 py-1 rounded-full bg-blue-600/20 border border-blue-400/30 text-blue-400 text-sm font-bold mb-6 tracking-widest uppercase">
                             Métrologie Aquatique & Échelle de Santé
                         </span>
-                        <h1 className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text-justify max-w-xl mx-auto">
-                            <span className="font-bold">Dureté de l'eau :</span> <span className="text-blue-400 font-bold italic">Le seuil critique.</span>
+                        <h1 className="text-4xl md:text-7xl font-bold mb-8 leading-tight tracking-tighter">
+                            Dureté de l'eau : <span className="text-blue-400 italic">Le seuil critique.</span>
                         </h1>
-                        <p className="text-[20px] leading-snug text-slate-300 font-light mb-10 text-justify max-w-xl mx-auto italic">
+                        <p className="text-xl md:text-2xl text-slate-300 font-light mb-10 leading-relaxed max-w-4xl mx-auto italic text-center">
                             À partir de quel grain de dureté le calcaire commence-t-il à dévorer silencieusement votre plomberie et votre budget énergétique ? L'analyse technique Bricareau sur votre zone de confort.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -53,7 +53,7 @@ const NiveauDureteAdoucisseurBesoin = () => {
                 <article className="py-20 lg:py-32 bg-white">
                     <div className="container mx-auto px-4">
                         <div className="max-w-4xl mx-auto">
-                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 leading-snug">
+                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 leading-relaxed">
                                 <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-blue-600 pl-8 italic">
                                     L'eau dure n'est pas "sale" au sens microbiologique, mais au sens technique. Elle porte en elle une menace silencieuse pour l'économie de votre foyer.
                                 </p>
@@ -149,7 +149,7 @@ const NiveauDureteAdoucisseurBesoin = () => {
                                         <BadgeCheck className="w-96 h-96" />
                                     </div>
                                     <h3 className="text-3xl md:text-5xl font-bold mb-10 tracking-tighter italic">Situez votre eau sur l'échelle de pureté.</h3>
-                                    <p className="text-xl text-blue-100 opacity-90 mb-12 max-w-2xl mx-auto font-light leading-snug">
+                                    <p className="text-xl text-blue-100 opacity-90 mb-12 max-w-2xl mx-auto font-light leading-relaxed">
                                         Ne laissez pas l'eau dure ronger votre foyer. Un simple test peut vous faire économiser des milliers de dollars en réparations futures.
                                     </p>
                                     <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -159,7 +159,7 @@ const NiveauDureteAdoucisseurBesoin = () => {
                                     </div>
                                 </div>
 
-                                <div className="mt-20 text-slate-400 text-sm border-t border-slate-100 pt-8 italic leading-snug flex items-start gap-4">
+                                <div className="mt-20 text-slate-400 text-sm border-t border-slate-100 pt-8 italic leading-relaxed flex items-start gap-4">
                                     <Info className="h-6 w-6 text-blue-600 shrink-0 mt-1" />
                                     <p>
                                         Note pour les nouvelles constructions : Installer un adoucisseur dès l'entrée en possession de votre maison est la meilleure garantie pour conserver votre plomberie et vos verres dans un état "neuf" indéfiniment.

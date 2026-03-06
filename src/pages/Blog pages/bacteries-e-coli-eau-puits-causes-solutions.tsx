@@ -14,7 +14,7 @@ const BacteriesEColiPuits = () => {
     }, []);
 
     return (
-        <div className="min-h-screen bg-white font-sans text-slate-800 leading-snug font-light">
+        <div className="min-h-screen bg-white font-sans text-slate-800 leading-relaxed font-light">
             <Header />
             <main className="pt-20">
                 {/* Hero Section */}
@@ -30,10 +30,10 @@ const BacteriesEColiPuits = () => {
                         <span className="inline-block px-4 py-1 rounded-full bg-red-600/20 border border-red-400/30 text-red-500 text-sm font-bold mb-6 tracking-widest uppercase animate-pulse">
                             Alerte Microbiologique : Protocole D'urgence
                         </span>
-                        <h1 className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text-justify max-w-xl mx-auto">
-                            <span className="font-bold">Bactéries E. coli</span> dans <span className="text-red-600 font-bold">votre puits</span>
+                        <h1 className="text-4xl md:text-7xl font-bold mb-8 leading-tight tracking-tighter">
+                            Bactéries E. coli dans <span className="text-red-600">votre puits</span>
                         </h1>
-                        <p className="text-[20px] leading-snug text-slate-300 font-light mb-10 text-justify max-w-xl mx-auto italic">
+                        <p className="text-xl md:text-2xl text-slate-300 font-light mb-10 leading-relaxed max-w-4xl mx-auto italic">
                             Réagir face à la contamination fécale : comprendre les risques d'infection grave et sécuriser votre foyer grâce à la stérilisation ultraviolette professionnelle.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -53,7 +53,7 @@ const BacteriesEColiPuits = () => {
                 <article className="py-20 lg:py-32">
                     <div className="container mx-auto px-4">
                         <div className="max-w-4xl mx-auto">
-                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 text-justify leading-snug">
+                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 text-justify leading-relaxed">
                                 <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-red-600 pl-8 italic">
                                     Rien ne provoque une inquiétude plus immédiate qu'un rapport de laboratoire affichant « présence détectée » pour les bactéries E. coli. C'est l'indicateur le plus limpide d'une contamination fécale et d'un danger sanitaire imminent pour toute la famille.
                                 </p>
@@ -111,7 +111,7 @@ const BacteriesEColiPuits = () => {
                                             <Zap className="w-24 h-24 text-blue-400" />
                                         </div>
                                         <h4 className="text-xl font-bold mb-4 tracking-tight">Stérilisation UV (Bouclier Infaillible)</h4>
-                                        <p className="text-slate-300 text-sm leading-snug text-justify">
+                                        <p className="text-slate-300 text-sm leading-relaxed text-justify">
                                             Un réacteur ultraviolet (UV) certifié bombarde l'eau de radiation photonique qui détruit l'ADN de 99,99% des bactéries et virus instantanément. C'est la seule solution passive fiable pour une sécurité 24h/24.
                                         </p>
                                     </div>
@@ -120,7 +120,7 @@ const BacteriesEColiPuits = () => {
                                             <Crosshair className="w-24 h-24 text-red-600" />
                                         </div>
                                         <h4 className="text-xl font-bold mb-4 tracking-tight text-slate-900">Chloration-Choc (Mesure corrective)</h4>
-                                        <p className="text-slate-600 text-sm leading-snug text-justify">
+                                        <p className="text-slate-600 text-sm leading-relaxed text-justify">
                                             Désinfecter l'entièreté de la plomberie et du puits avec une dose massive de chlore. Cette opération tue les bactéries présentes mais n'offre aucune protection contre les ré-infiltrations futures.
                                         </p>
                                     </div>
@@ -141,7 +141,7 @@ const BacteriesEColiPuits = () => {
                                         <BadgeCheck className="w-80 h-80 text-white" />
                                     </div>
                                     <h3 className="text-4xl md:text-5xl font-bold mb-10 tracking-tighter italic">L'E. coli n'a aucune chance contre nos UV.</h3>
-                                    <p className="text-xl text-red-100 opacity-80 mb-12 max-w-3xl mx-auto font-light leading-snug">
+                                    <p className="text-xl text-red-100 opacity-80 mb-12 max-w-3xl mx-auto font-light leading-relaxed">
                                         Votre foyer mérite une sécurité biologique absolue. Ne laissez plus la chance décider de la santé de vos enfants. Demandez dès aujourd'hui un diagnostic microbiologique expert.
                                     </p>
                                     <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -151,7 +151,7 @@ const BacteriesEColiPuits = () => {
                                     </div>
                                 </div>
 
-                                <div className="mt-20 text-slate-400 text-sm border-t border-slate-100 pt-8 italic leading-snug flex items-center gap-4">
+                                <div className="mt-20 text-slate-400 text-sm border-t border-slate-100 pt-8 italic leading-relaxed flex items-center gap-4">
                                     <Info className="h-10 w-10 text-red-600 shrink-0" />
                                     <p>
                                         * Note de sécurité : Pour tout puits ayant testé positif à l'E. coli, Bricareau recommande fortement une désinfection-choc du puits effectuée par un professionnel certifié après l'installation d'un système de traitement permanent.

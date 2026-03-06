@@ -14,7 +14,7 @@ const FluorEauBienfaitDanger = () => {
     }, []);
 
     return (
-        <div className="min-h-screen bg-white font-sans text-slate-900 leading-snug font-light">
+        <div className="min-h-screen bg-white font-sans text-slate-900 leading-relaxed font-light">
             <Header />
             <main className="pt-20">
                 {/* Hero Section */}
@@ -30,10 +30,10 @@ const FluorEauBienfaitDanger = () => {
                         <span className="inline-block px-4 py-1 rounded-full bg-teal-600/20 border border-teal-400/30 text-teal-400 text-sm font-bold mb-6 tracking-widest uppercase">
                             Science Et Société : Étude Approfondie
                         </span>
-                        <h1 className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text-justify max-w-xl mx-auto">
-                            <span className="font-bold">Fluor dans l'eau</span> : <span className="text-teal-400 font-bold">Bienfait ou Danger ?</span>
+                        <h1 className="text-4xl md:text-7xl font-bold mb-8 leading-tight tracking-tighter">
+                            Fluor dans l'eau : <span className="text-teal-400">Bienfait ou Danger ?</span>
                         </h1>
-                        <p className="text-[20px] leading-snug text-slate-300 font-light mb-10 text-justify max-w-xl mx-auto italic">
+                        <p className="text-xl md:text-2xl text-slate-300 font-light mb-10 leading-relaxed max-w-4xl mx-auto italic">
                             Décoder le débat scientifique, comprendre la neurotoxicité émergente et maîtriser votre exposition grâce aux technologies de filtration sélectives.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -53,7 +53,7 @@ const FluorEauBienfaitDanger = () => {
                 <article className="py-20 lg:py-32">
                     <div className="container mx-auto px-4">
                         <div className="max-w-4xl mx-auto">
-                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 leading-snug text-justify">
+                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 leading-relaxed text-justify">
                                 <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-teal-600 pl-8 italic">
                                     Sujet de controverse depuis plus de 60 ans, la fluoration de l'eau potable reste l'une des mesures de santé publique les plus débattues. Présenté comme une victoire monumentale contre la carie dentaire, le fluor fait aujourd'hui face à une réévaluation scientifique rigoureuse quant à ses effets systémiques sur le développement neurologique et endocrinien.
                                 </p>
@@ -107,7 +107,7 @@ const FluorEauBienfaitDanger = () => {
                                 </p>
 
                                 <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mt-20 mb-8 tracking-tight text-center">3. Comment filtrer efficacement le fluor ?</h2>
-                                <p className="text-center leading-snug">
+                                <p className="text-center leading-relaxed">
                                     Tous les filtres à eau ne retirent pas le fluor. Ce polluant est particulièrement complexe à éliminer en raison de sa charge électronique et de sa petite taille moléculaire.
                                 </p>
 
@@ -147,7 +147,7 @@ const FluorEauBienfaitDanger = () => {
                                         <Microscope className="w-80 h-80" />
                                     </div>
                                     <h3 className="text-4xl md:text-5xl font-bold mb-10 tracking-tighter italic">Reprenez le pouvoir sur votre eau.</h3>
-                                    <p className="text-xl text-teal-100 opacity-80 mb-12 max-w-3xl mx-auto font-light leading-snug">
+                                    <p className="text-xl text-teal-100 opacity-80 mb-12 max-w-3xl mx-auto font-light leading-relaxed">
                                         Que vous privilégiez les bénéfices dentaires ou que vous souhaitiez minimiser votre exposition chimique, nos experts vous conseillent sur les meilleures technologies pour atteindre vos objectifs de santé.
                                     </p>
                                     <div className="flex flex-col sm:flex-row gap-6 justify-center">

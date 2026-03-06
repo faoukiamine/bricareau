@@ -14,7 +14,7 @@ const PlombEauPotable = () => {
     }, []);
 
     return (
-        <div className="min-h-screen bg-white font-sans text-slate-900 leading-snug font-light">
+        <div className="min-h-screen bg-white font-sans text-slate-900 leading-relaxed font-light">
             <Header />
             <main className="pt-20">
                 {/* Hero Section */}
@@ -30,10 +30,10 @@ const PlombEauPotable = () => {
                         <span className="inline-block px-4 py-1 rounded-full bg-red-600/20 border border-red-400/30 text-red-500 text-sm font-bold mb-6 tracking-widest uppercase">
                             Santé Publique : Dossier Urgent
                         </span>
-                        <h1 className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text-justify max-w-xl mx-auto">
-                            <span className="font-bold">Le plomb dans</span> <span className="text-blue-400 font-bold">l'eau potable</span>
+                        <h1 className="text-4xl md:text-7xl font-bold mb-8 leading-tight tracking-tighter">
+                            Le plomb dans <span className="text-blue-400">l'eau potable</span>
                         </h1>
-                        <p className="text-[20px] leading-snug text-slate-300 font-light mb-10 text-justify max-w-xl mx-auto italic">
+                        <p className="text-xl md:text-2xl text-slate-300 font-light mb-10 leading-relaxed max-w-4xl mx-auto italic">
                             Risques neurologiques, tests de détection précis et solutions technologiques haute performance : tout ce que vous devez savoir pour éliminer ce poison invisible de votre foyer.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -53,7 +53,7 @@ const PlombEauPotable = () => {
                 <article className="py-20 lg:py-32">
                     <div className="container mx-auto px-4">
                         <div className="max-w-4xl mx-auto">
-                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 leading-snug text-justify">
+                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 leading-relaxed text-justify">
                                 <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-red-600 pl-8 italic">
                                     Le plomb est un poison séculaire insidieux. Incolore, inodore et sans goût, sa présence dans l'eau de votre robinet ne peut être détectée par nos sens. Pourtant, l'impact d'une exposition prolongée, même à des doses infinitésimales, peut avoir des conséquences irréversibles sur la santé, particulièrement celle des enfants et des femmes enceintes.
                                 </p>
@@ -101,14 +101,14 @@ const PlombEauPotable = () => {
                                     <div className="bg-red-50 p-8 rounded-2xl border border-red-100">
                                         <HeartPulse className="w-12 h-12 text-red-600 mb-6" />
                                         <h4 className="text-xl font-bold mb-4 tracking-tight">Neurotoxicité sévère</h4>
-                                        <p className="text-slate-600 text-sm leading-snug text-justify">
+                                        <p className="text-slate-600 text-sm leading-relaxed text-justify">
                                             Le plomb remplace le calcium vital dans les signaux cérébraux, provoquant des dommages neurologiques permanents avant même l'apparition de symptômes physiques.
                                         </p>
                                     </div>
                                     <div className="bg-blue-50 p-8 rounded-2xl border border-blue-100">
                                         <ShieldCheck className="w-12 h-12 text-blue-600 mb-6" />
                                         <h4 className="text-xl font-bold mb-4 tracking-tight">Une norme plus stricte</h4>
-                                        <p className="text-slate-600 text-sm leading-snug text-justify">
+                                        <p className="text-slate-600 text-sm leading-relaxed text-justify">
                                             Santé Canada a récemment abaissé la Concentration Maximale Acceptable (CMA) de 0,010 mg/L à 0,005 mg/L, reflétant l'urgence de protéger la population.
                                         </p>
                                     </div>
@@ -142,7 +142,7 @@ const PlombEauPotable = () => {
                                         <BadgeCheck className="w-64 h-64" />
                                     </div>
                                     <h3 className="text-3xl md:text-4xl font-bold mb-8 italic tracking-tighter">Votre sécurité ne peut plus attendre.</h3>
-                                    <p className="text-xl text-blue-100 opacity-80 mb-12 font-light text-justify max-w-2xl leading-snug">
+                                    <p className="text-xl text-blue-100 opacity-80 mb-12 font-light text-justify max-w-2xl leading-relaxed">
                                         Pourquoi continuer à douter de chaque verre d'eau que vous servez à vos enfants ? Demandez une expertise Bricareau aujourd'hui et transformez votre robinet en source de santé inviolable.
                                     </p>
                                     <div className="flex flex-col sm:flex-row gap-6">
@@ -152,7 +152,7 @@ const PlombEauPotable = () => {
                                     </div>
                                 </div>
 
-                                <div className="mt-20 text-slate-400 text-sm border-t border-slate-100 pt-8 italic leading-snug">
+                                <div className="mt-20 text-slate-400 text-sm border-t border-slate-100 pt-8 italic leading-relaxed">
                                     <p>
                                         * Note importante : Si vous soupçonnez la présence de plomb, évitez d'utiliser l'eau chaude du robinet pour boire ou cuisiner, car la chaleur dissout le plomb beaucoup plus rapidement des tuyaux et soudures internes.
                                     </p>

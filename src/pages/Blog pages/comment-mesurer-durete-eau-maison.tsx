@@ -14,7 +14,7 @@ const MesurerDureteEauMaison = () => {
     }, []);
 
     return (
-        <div className="min-h-screen bg-white font-sans text-slate-900 leading-snug font-light text-justify text-[16px]">
+        <div className="min-h-screen bg-white font-sans text-slate-900 leading-relaxed font-light text-justify text-[16px]">
             <Header />
             <main className="pt-20">
                 {/* Hero Section */}
@@ -30,10 +30,10 @@ const MesurerDureteEauMaison = () => {
                         <span className="inline-block px-4 py-1 rounded-full bg-blue-400/20 border border-blue-300/30 text-blue-300 text-sm font-bold mb-6 tracking-widest uppercase">
                             Analytique & Science de l'Eau
                         </span>
-                        <h1 className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text-justify max-w-xl mx-auto">
-                            <span className="font-bold">Mesurer la dureté</span> : <span className="text-blue-300 font-bold">Le guide pratique.</span>
+                        <h1 className="text-4xl md:text-7xl font-bold mb-8 leading-tight tracking-tighter">
+                            Mesurer la dureté : <span className="text-blue-300">Le guide pratique.</span>
                         </h1>
-                        <p className="text-[20px] leading-snug text-slate-100 font-light mb-10 text-justify max-w-xl mx-auto italic">
+                        <p className="text-xl md:text-2xl text-slate-100 font-light mb-10 leading-relaxed max-w-4xl mx-auto italic text-center">
                             Devenez l'expert de votre propre robinet. Apprenez les méthodes pour quantifier le calcaire présent dans votre eau et comprendre enfin pourquoi vos verres sont tachetés.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -53,7 +53,7 @@ const MesurerDureteEauMaison = () => {
                 <article className="py-20 lg:py-32 bg-white">
                     <div className="container mx-auto px-4">
                         <div className="max-w-4xl mx-auto">
-                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 leading-snug">
+                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 leading-relaxed">
                                 <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-blue-600 pl-8 italic">
                                     Connaître la dureté de son eau est la première étape vers une gestion intelligente de son foyer. C'est l'information clé qui détermine le réglage de votre futur adoucisseur.
                                 </p>
@@ -92,13 +92,13 @@ const MesurerDureteEauMaison = () => {
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-16">
                                     <div className="p-8 bg-slate-50 border border-slate-100 rounded-2xl">
                                         <h4 className="text-xl font-bold mb-4 tracking-tight">Bandelettes (Précision Moyenne)</h4>
-                                        <p className="text-slate-600 text-[13px] italic leading-snug text-justify">
+                                        <p className="text-slate-600 text-[13px] italic leading-relaxed text-justify">
                                             Vous trempez une bandelette dans l'eau et comparez la couleur à une échelle sur l'emballage. C'est rapide et économique pour un premier diagnostic général de dureté totale.
                                         </p>
                                     </div>
                                     <div className="p-8 bg-slate-50 border border-slate-100 rounded-2xl">
                                         <h4 className="text-xl font-bold mb-4 tracking-tight">Kit à Gouttes (Titrage - Haute Précision)</h4>
-                                        <p className="text-slate-600 text-[13px] italic leading-snug text-justify">
+                                        <p className="text-slate-600 text-[13px] italic leading-relaxed text-justify">
                                             C'est la méthode utilisée par les installateurs Bricareau. Vous ajoutez un réactif goutte à goutte dans un échantillon d'eau jusqu'à ce que la couleur change radicalement. Chaque goutte représente 1 grain de dureté.
                                         </p>
                                     </div>
@@ -114,7 +114,7 @@ const MesurerDureteEauMaison = () => {
                                         <BadgeCheck className="w-96 h-96" />
                                     </div>
                                     <h3 className="text-3xl md:text-5xl font-bold mb-10 tracking-tighter italic">Laissez l'expert s'en charger.</h3>
-                                    <p className="text-xl text-blue-100 opacity-90 mb-12 max-w-2xl mx-auto font-light leading-snug">
+                                    <p className="text-xl text-blue-100 opacity-90 mb-12 max-w-2xl mx-auto font-light leading-relaxed">
                                         Tester la dureté ne prend que quelques minutes. Savoir interpréter le résultat pour choisir le bon équipement demande de l'expérience.
                                     </p>
                                     <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -124,7 +124,7 @@ const MesurerDureteEauMaison = () => {
                                     </div>
                                 </div>
 
-                                <div className="mt-20 text-slate-400 text-sm border-t border-slate-100 pt-8 italic leading-snug flex items-start gap-4">
+                                <div className="mt-20 text-slate-400 text-sm border-t border-slate-100 pt-8 italic leading-relaxed flex items-start gap-4">
                                     <Info className="h-6 w-6 text-blue-600 shrink-0 mt-1" />
                                     <p>
                                         Rappel pour les propriétaires de puits : Pour vous, tester la dureté ne suffit pas. L'analyse doit inclure le fer et le manganèse, car ces minéraux peuvent encrasser irrémédiablement la résine de votre adoucisseur si le système n'est pas conçu pour les traiter.

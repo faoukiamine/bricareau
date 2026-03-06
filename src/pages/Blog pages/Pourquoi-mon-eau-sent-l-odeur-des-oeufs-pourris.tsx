@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useEffect } from "react";
 import eauOdeurImg from "@/assets/eau-odeur-oeufs-pourris.png";
-import filtrationSystemImg from "@/assets/Filtration-eau-de-puits.webp";
+import filtrationSystemImg from "@/assets/systeme-filtration-soufre.png";
 import { Button } from "@/components/ui/button";
 import { Phone, ArrowRight } from "lucide-react";
 
@@ -30,10 +30,10 @@ const PourquoiEauSentOeufsPourris = () => {
                     </div>
                     <div className="container mx-auto px-4 relative z-10">
                         <div className="max-w-4xl mx-auto text-center">
-                            <h1 className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text-justify max-w-xl mx-auto">
-                                <span className="font-bold">Pourquoi mon eau</span> sent-elle l'odeur des <span className="text-blue-400 font-bold">œufs pourris</span> ?
+                            <h1 className="text-4xl md:text-6xl font-bold mb-8 leading-tight tracking-tighter">
+                                Pourquoi mon eau sent-elle l'odeur des <span className="text-blue-400">œufs pourris</span> ?
                             </h1>
-                            <p className="text-[20px] leading-snug text-slate-300 font-light mb-10 text-justify max-w-xl mx-auto">
+                            <p className="text-xl md:text-2xl text-slate-300 font-light mb-10 leading-relaxed text-justify">
                                 Un guide exhaustif sur l'hydrogène sulfuré, les causes de cette nuisance olfactive et les solutions technologiques de pointe pour retrouver une eau d'une pureté absolue.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -54,7 +54,7 @@ const PourquoiEauSentOeufsPourris = () => {
                 <article className="py-20 lg:py-32">
                     <div className="container mx-auto px-4">
                         <div className="max-w-4xl mx-auto">
-                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 leading-snug text-justify">
+                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 leading-relaxed text-justify">
                                 <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-blue-600 pl-8 italic">
                                     L'expérience est aussi brutale que désagréable : vous ouvrez votre robinet pour vous verser un verre d'eau ou prendre une douche, et une odeur nauséabonde d'œufs pourris envahit instantanément la pièce. Cette nuisance, bien qu'extrêmement commune, soulève immédiatement des inquiétudes légitimes quant à la sécurité de votre approvisionnement en eau.
                                 </p>

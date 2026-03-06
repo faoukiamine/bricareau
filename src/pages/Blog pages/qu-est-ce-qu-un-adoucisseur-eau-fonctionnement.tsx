@@ -14,7 +14,7 @@ const QuEstCeQuUnAdoucisseurEau = () => {
     }, []);
 
     return (
-        <div className="min-h-screen bg-white font-sans text-slate-900 leading-snug font-light text-justify text-[16px]">
+        <div className="min-h-screen bg-white font-sans text-slate-900 leading-relaxed font-light text-justify text-[16px]">
             <Header />
             <main className="pt-20">
                 {/* Hero Section */}
@@ -30,10 +30,10 @@ const QuEstCeQuUnAdoucisseurEau = () => {
                         <span className="inline-block px-4 py-1 rounded-full bg-blue-600/20 border border-blue-400/30 text-blue-400 text-sm font-bold mb-6 tracking-widest uppercase">
                             Génie Aquatique & Technologies Ioniques
                         </span>
-                        <h1 className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text-justify max-w-xl mx-auto">
-                            <span className="font-bold">L'Adoucisseur d'eau :</span> <span className="text-blue-400 font-bold italic">Le Guide de A à Z</span>
+                        <h1 className="text-4xl md:text-7xl font-bold mb-8 leading-tight tracking-tighter">
+                            L'Adoucisseur d'eau : <span className="text-blue-400">Le Guide de A à Z</span>
                         </h1>
-                        <p className="text-[20px] leading-snug text-slate-300 font-light mb-10 text-justify max-w-xl mx-auto italic">
+                        <p className="text-xl md:text-2xl text-slate-300 font-light mb-10 leading-relaxed max-w-4xl mx-auto italic text-center">
                             Démystifier la technologie qui protège votre maison contre le calcaire : de la science atomique de l'échange d'ions jusqu'aux bénéfices quotidiens sur votre budget et votre confort.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -53,7 +53,7 @@ const QuEstCeQuUnAdoucisseurEau = () => {
                 <article className="py-20 lg:py-32 bg-white">
                     <div className="container mx-auto px-4">
                         <div className="max-w-4xl mx-auto">
-                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 leading-snug">
+                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 leading-relaxed">
                                 <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-blue-600 pl-8 italic">
                                     Souvent perçu comme une simple boîte noire dans le sous-sol, l'adoucisseur d'eau est une merveille d'ingénierie chimique qui préserve la valeur de votre actif le plus précieux : votre foyer.
                                 </p>
@@ -93,19 +93,19 @@ const QuEstCeQuUnAdoucisseurEau = () => {
                                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 my-16">
                                     <div className="p-8 bg-slate-50 border border-slate-100 rounded-2xl">
                                         <h4 className="text-xl font-bold mb-4 tracking-tight">La Vanne de Contrôle</h4>
-                                        <p className="text-slate-600 text-[14px] leading-snug text-justify italic font-medium">
+                                        <p className="text-slate-600 text-[14px] leading-relaxed text-justify italic font-medium">
                                             Le cerveau numérique du système. Elle calcule votre consommation réelle et décide du moment exact de la régénération pour économiser l'eau et le sel.
                                         </p>
                                     </div>
                                     <div className="p-8 bg-slate-50 border border-slate-100 rounded-2xl">
                                         <h4 className="text-xl font-bold mb-4 tracking-tight">La Bouteille de Résine</h4>
-                                        <p className="text-slate-600 text-[14px] leading-snug text-justify italic font-medium">
+                                        <p className="text-slate-600 text-[14px] leading-relaxed text-justify italic font-medium">
                                             Le réservoir où s'effectue le miracle chimique. Chez Bricareau, nous utilisons de la résine de haute capacité alimentaire pour une longévité de 15 ans et plus.
                                         </p>
                                     </div>
                                     <div className="p-8 bg-slate-50 border border-slate-100 rounded-2xl">
                                         <h4 className="text-xl font-bold mb-4 tracking-tight">Le Bac à Sel (Saumur)</h4>
-                                        <p className="text-slate-600 text-[14px] leading-snug text-justify italic font-medium">
+                                        <p className="text-slate-600 text-[14px] leading-relaxed text-justify italic font-medium">
                                             Le réservoir de stockage du sel. C'est le seul composant qui nécessite votre attention occasionnelle (ajout de sacs de sel).
                                         </p>
                                     </div>
@@ -127,7 +127,7 @@ const QuEstCeQuUnAdoucisseurEau = () => {
                                         <BadgeCheck className="w-96 h-96" />
                                     </div>
                                     <h3 className="text-3xl md:text-5xl font-bold mb-10 tracking-tighter italic">Investissez dans la longévité de votre foyer.</h3>
-                                    <p className="text-xl text-blue-100 opacity-90 mb-12 max-w-2xl mx-auto font-light leading-snug">
+                                    <p className="text-xl text-blue-100 opacity-90 mb-12 max-w-2xl mx-auto font-light leading-relaxed">
                                         L'adoucissement de l'eau est la décision budgétaire la plus rentable que vous puissiez prendre pour votre habitation.
                                     </p>
                                     <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -137,7 +137,7 @@ const QuEstCeQuUnAdoucisseurEau = () => {
                                     </div>
                                 </div>
 
-                                <div className="mt-20 text-slate-400 text-sm border-t border-slate-100 pt-8 italic leading-snug flex items-start gap-4">
+                                <div className="mt-20 text-slate-400 text-sm border-t border-slate-100 pt-8 italic leading-relaxed flex items-start gap-4">
                                     <Info className="h-6 w-6 text-blue-600 shrink-0 mt-1" />
                                     <p>
                                         Note pour les propriétaires consciencieux : Un adoucisseur d'eau de qualité supérieure, bien entretenu, est un actif qui valorise votre propriété lors d'une éventuelle revente, certifiant une plomberie saine.

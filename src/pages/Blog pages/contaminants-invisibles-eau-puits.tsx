@@ -14,7 +14,7 @@ const ContaminantsInvisiblesPuits = () => {
     }, []);
 
     return (
-        <div className="min-h-screen bg-slate-50 font-sans text-slate-800 leading-snug font-light">
+        <div className="min-h-screen bg-slate-50 font-sans text-slate-800 leading-relaxed font-light">
             <Header />
             <main className="pt-20">
                 {/* Hero Section */}
@@ -30,10 +30,10 @@ const ContaminantsInvisiblesPuits = () => {
                         <span className="inline-block px-4 py-1 rounded-full bg-teal-600/20 border border-teal-400/30 text-teal-300 text-sm font-bold mb-6 tracking-widest uppercase">
                             Sécurité Des Eaux Souterraines
                         </span>
-                        <h1 className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text-justify max-w-xl mx-auto">
-                            <span className="font-bold text-white">Contaminants</span> <span className="text-teal-400 font-bold">invisibles</span> <span className="font-bold text-white">dans votre puits</span>
+                        <h1 className="text-4xl md:text-7xl font-bold mb-8 leading-tight tracking-tighter">
+                            Contaminants <span className="text-teal-400">invisibles</span> dans votre puits
                         </h1>
-                        <p className="text-[20px] leading-snug text-slate-200 font-light mb-10 text-justify max-w-xl mx-auto italic">
+                        <p className="text-xl md:text-2xl text-slate-200 font-light mb-10 leading-relaxed max-w-4xl mx-auto italic">
                             Par-delà la limpidité, découvrez les menaces biologiques et chimiques silencieuses qui exigent une vigilance professionnelle rigoureuse.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -53,7 +53,7 @@ const ContaminantsInvisiblesPuits = () => {
                 <article className="py-20 lg:py-32 bg-white">
                     <div className="container mx-auto px-4">
                         <div className="max-w-4xl mx-auto">
-                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 text-justify leading-snug">
+                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 text-justify leading-relaxed">
                                 <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-teal-600 pl-8 italic">
                                     La limpidité de l'eau est une illusion de pureté. Si une eau trouble ou malodorante signale immédiatement un problème, statistiquement, les menaces les plus graves pour votre santé sont totalement imperceptibles : sans odeur, sans goût et d'une transparence parfaite.
                                 </p>
@@ -79,7 +79,7 @@ const ContaminantsInvisiblesPuits = () => {
                                         <Zap className="w-48 h-48 text-blue-400" />
                                     </div>
                                     <h3 className="text-3xl md:text-4xl font-bold mb-8 italic tracking-tighter">La Stérilisation UV : Le bouclier ultime</h3>
-                                    <p className="text-xl text-slate-300 opacity-80 mb-10 font-light leading-snug max-w-2xl text-justify">
+                                    <p className="text-xl text-slate-300 opacity-80 mb-10 font-light leading-relaxed max-w-2xl text-justify">
                                         Ne laissez pas la chance décider de la sécurité de votre famille. Un système de désinfection ultraviolette (UV) professionnel éradique 99,99% des pathogènes instantanément.
                                     </p>
                                     <div className="flex flex-col sm:flex-row gap-6">
@@ -145,7 +145,7 @@ const ContaminantsInvisiblesPuits = () => {
                                         <Crosshair className="h-10 w-10 animate-pulse text-teal-600" />
                                         Diagnostic Expert Bricareau
                                     </h3>
-                                    <p className="text-xl text-teal-800 opacity-90 mb-10 font-light leading-snug text-justify max-w-3xl">
+                                    <p className="text-xl text-teal-800 opacity-90 mb-10 font-light leading-relaxed text-justify max-w-3xl">
                                         Ne laissez plus l'incertitude planer sur la santé de votre famille. Profitez d'une expertise professionnelle pour cartographier les risques invisibles de votre puits et installer la barrière de protection appropriée.
                                     </p>
                                     <Button size="lg" className="bg-teal-700 hover:bg-teal-800 text-white rounded-full px-12 h-16 font-bold shadow-lg" asChild>
@@ -153,7 +153,7 @@ const ContaminantsInvisiblesPuits = () => {
                                     </Button>
                                 </div>
 
-                                <div className="mt-20 text-slate-400 text-sm border-t border-slate-100 pt-8 italic leading-snug">
+                                <div className="mt-20 text-slate-400 text-sm border-t border-slate-100 pt-8 italic leading-relaxed">
                                     <p>
                                         * Avertissement : Les informations ci-dessus ne remplacent pas les directives locales de santé publique. Pour tout puits contaminé, cessez la consommation et contactez immédiatement un technicien spécialisé.
                                     </p>

@@ -31,10 +31,10 @@ const PFASEauRobinet = () => {
                             <span className="inline-block px-4 py-1 rounded-full bg-blue-600/20 border border-blue-400/30 text-blue-400 text-sm font-bold mb-6 tracking-widest uppercase">
                                 Dossier Spécial Santé & Environnement
                             </span>
-                            <h1 className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text-justify max-w-xl mx-auto">
-                                <span className="font-bold">PFAS dans l'eau du robinet :</span> <span className="text-blue-400 font-bold italic">ce que vous devez savoir</span>
+                            <h1 className="text-4xl md:text-7xl font-bold mb-8 leading-tight tracking-tighter">
+                                PFAS dans l'eau du robinet : <span className="text-blue-400">ce que vous devez savoir</span>
                             </h1>
-                            <p className="text-[20px] leading-snug text-slate-300 font-light mb-10 text-justify max-w-xl mx-auto italic">
+                            <p className="text-xl md:text-2xl text-slate-300 font-light mb-10 leading-relaxed max-w-3xl mx-auto">
                                 Comprendre les "polluants éternels", leurs impacts sur votre santé et les technologies de pointe indispensables pour les éliminer définitivement de votre foyer.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -55,7 +55,7 @@ const PFASEauRobinet = () => {
                 <article className="py-20 lg:py-32">
                     <div className="container mx-auto px-4">
                         <div className="max-w-4xl mx-auto">
-                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 leading-snug text-justify">
+                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 leading-relaxed text-justify">
                                 <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-blue-600 pl-8 italic">
                                     Ils sont partout, invisibles et quasiment indestructibles. Les PFAS, surnommés « polluants éternels », se sont immiscés dans notre environnement et, plus inquiétant encore, dans notre eau potable. Face à cette menace émergente, l'ignorance n'est plus une option.
                                 </p>
@@ -135,14 +135,14 @@ const PFASEauRobinet = () => {
                                     <div className="bg-slate-50 p-8 rounded-2xl border border-slate-100">
                                         <Microscope className="w-12 h-12 text-blue-600 mb-6" />
                                         <h4 className="text-xl font-bold mb-4 tracking-tight">Analyse de laboratoire</h4>
-                                        <p className="text-slate-600 text-sm leading-snug">
+                                        <p className="text-slate-600 text-sm leading-relaxed">
                                             Seules des analyses de laboratoire très poussées (chromatographie liquide couplée à la spectrométrie de masse) peuvent détecter les PFAS dans l'eau. Un test d'eau standard n'est pas suffisant.
                                         </p>
                                     </div>
                                     <div className="bg-slate-50 p-8 rounded-2xl border border-slate-100">
                                         <Droplets className="w-12 h-12 text-blue-600 mb-6" />
                                         <h4 className="text-xl font-bold mb-4 tracking-tight">L'eau de puits n'est pas épargnée</h4>
-                                        <p className="text-slate-600 text-sm leading-snug">
+                                        <p className="text-slate-600 text-sm leading-relaxed">
                                             L'eau souterraine peut être contaminée par des PFAS provenant de mousses anti-incendie utilisées à proximité (aéroports, casernes) ou de boues d'épuration épandues sur les champs.
                                         </p>
                                     </div>

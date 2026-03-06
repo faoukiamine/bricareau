@@ -14,7 +14,7 @@ const EauDureVsDouce = () => {
     }, []);
 
     return (
-        <div className="min-h-screen bg-white font-sans text-slate-900 leading-snug">
+        <div className="min-h-screen bg-white font-sans text-slate-900 leading-relaxed">
             <Header />
             <main className="pt-20">
                 {/* Hero Section */}
@@ -30,10 +30,10 @@ const EauDureVsDouce = () => {
                         <span className="inline-block px-4 py-1 rounded-full bg-white/10 border border-white/20 text-white text-sm font-bold mb-6 tracking-widest uppercase backdrop-blur-sm">
                             Guide Pratique de la Maison
                         </span>
-                        <h1 className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text-justify max-w-xl mx-auto">
-                            <span className="font-bold">Eau dure</span> <span className="text-blue-400 font-bold">vs</span> <span className="font-bold">Eau douce</span>
+                        <h1 className="text-4xl md:text-7xl font-bold mb-8 leading-tight tracking-tighter">
+                            Eau dure <span className="text-blue-400">vs</span> Eau douce
                         </h1>
-                        <p className="text-[20px] leading-snug text-slate-300 font-light mb-10 text-justify max-w-xl mx-auto italic">
+                        <p className="text-xl md:text-2xl text-slate-300 font-light mb-10 leading-relaxed max-w-3xl mx-auto italic">
                             Élucider le mystère du calcaire, protéger votre foyer et transformer votre bien-être quotidien par une eau parfaitement équilibrée.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -115,7 +115,7 @@ const EauDureVsDouce = () => {
                                             </div>
                                             <h4>Dépôts blanchâtres sur la robinetterie</h4>
                                         </div>
-                                        <p className="text-slate-600 text-[16px] leading-snug">
+                                        <p className="text-slate-600 text-[16px] leading-relaxed">
                                             Ce voile calcaire ou ces croûtes blanches autour des aérateurs et des bases de robinets sont le résultat direct de l'évaporation de l'eau dure.
                                         </p>
                                     </div>
@@ -126,7 +126,7 @@ const EauDureVsDouce = () => {
                                             </div>
                                             <h4>Peau sèche et cheveux ternes</h4>
                                         </div>
-                                        <p className="text-slate-600 text-[16px] leading-snug">
+                                        <p className="text-slate-600 text-[16px] leading-relaxed">
                                             Les minéraux réagissent avec le savon pour former un résidu insoluble (savon calcaire) qui se dépose sur la peau, causant démangeaisons, rougeurs et perte d'éclat capillaire.
                                         </p>
                                     </div>
@@ -137,7 +137,7 @@ const EauDureVsDouce = () => {
                                             </div>
                                             <h4>Factures d'énergie en hausse</h4>
                                         </div>
-                                        <p className="text-slate-600 text-[16px] leading-snug">
+                                        <p className="text-slate-600 text-[16px] leading-relaxed">
                                             Un seul millimètre de calcaire sur l'élément chauffant de votre réservoir d'eau chaude peut augmenter votre consommation électrique de 10 à 15 % par an.
                                         </p>
                                     </div>
@@ -148,7 +148,7 @@ const EauDureVsDouce = () => {
                                             </div>
                                             <h4>Appareils électroménagers fatigués</h4>
                                         </div>
-                                        <p className="text-slate-600 text-[16px] leading-snug">
+                                        <p className="text-slate-600 text-[16px] leading-relaxed">
                                             Le calcaire obstrue les pompes, les valves et les tuyaux internes de vos lave-vaisselle et laveuses, provoquant des pannes prématurées coûteuses.
                                         </p>
                                     </div>
@@ -173,7 +173,7 @@ const EauDureVsDouce = () => {
                                         <Sparkles className="w-48 h-48" />
                                     </div>
                                     <h3 className="text-3xl md:text-5xl font-bold mb-8 italic tracking-tighter">Prêt pour la transformation ?</h3>
-                                    <p className="text-xl text-blue-100 opacity-80 mb-12 font-light leading-snug max-w-2xl text-justify">
+                                    <p className="text-xl text-blue-100 opacity-80 mb-12 font-light leading-relaxed max-w-2xl text-justify">
                                         Un adoucisseur d'eau Bricareau est un investissement qui s'autofinance par les économies d'énergie et de produits d'entretien, tout en protégeant vos électroménagers pour les 20 prochaines années.
                                     </p>
                                     <div className="flex flex-col sm:flex-row gap-6">
@@ -196,7 +196,7 @@ const EauDureVsDouce = () => {
                                         <AlertCircle className="w-6 h-6 text-blue-600" />
                                         Le Conseil de l'Expert
                                     </h3>
-                                    <p className="text-slate-600 leading-snug italic text-justify">
+                                    <p className="text-slate-600 leading-relaxed italic text-justify">
                                         « Ne vous contentez pas de solutions temporaires comme les filtres magnétiques ou électroniques passifs qui ne retirent pas physiquement les minéraux dureté. Pour une protection réelle de votre chauffe-eau et une peau réellement plus douce, seul l'échange d'ions offre un résultat garanti et mesurable. »
                                     </p>
                                 </div>

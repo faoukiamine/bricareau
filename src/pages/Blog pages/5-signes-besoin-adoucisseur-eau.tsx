@@ -32,10 +32,10 @@ const SignesBesoinAdoucisseur = () => {
                                 <AlertTriangle className="h-4 w-4 text-blue-400" />
                                 <span className="text-sm font-semibold tracking-wider uppercase">Diagnostic Résidentiel</span>
                             </div>
-                            <h1 className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text-justify max-w-xl mx-auto">
-                                <span className="font-bold">5 signes indéniables</span> que votre maison a besoin d'un <span className="text-blue-400 whitespace-nowrap">adoucisseur d'eau</span>
+                            <h1 className="text-4xl md:text-6xl font-bold mb-8 leading-tight tracking-tighter">
+                                5 signes indéniables que votre maison a besoin d'un <span className="text-blue-400">adoucisseur d'eau</span>
                             </h1>
-                            <p className="text-[20px] leading-snug text-slate-300 font-light mb-10 text-justify max-w-xl mx-auto">
+                            <p className="text-xl md:text-2xl text-slate-300 font-light mb-10 leading-relaxed text-justify">
                                 L'eau dure est un fléau silencieux qui dégrade votre confort et vos infrastructures. Apprenez à identifier les symptômes avant que les dommages ne deviennent irréversibles.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -56,7 +56,7 @@ const SignesBesoinAdoucisseur = () => {
                 <article className="py-20 lg:py-32">
                     <div className="container mx-auto px-4">
                         <div className="max-w-4xl mx-auto">
-                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 leading-snug text-justify font-light">
+                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 leading-relaxed text-justify font-light">
                                 <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-blue-600 pl-8 italic">
                                     L'eau est le fluide vital de votre foyer, circulant invisiblement derrière vos murs et alimentant chaque aspect de votre vie quotidienne. Pourtant, lorsque cette eau est chargée de minéraux tels que le calcium et le magnésium, elle devient une force érosive qui s'attaque à l'esthétique de vos sanitaires, à la santé de votre peau et à la longévité de vos investissements les plus coûteux.
                                 </p>
@@ -154,7 +154,7 @@ const SignesBesoinAdoucisseur = () => {
                                 <div className="my-24 bg-blue-600 rounded-[3rem] p-12 text-white shadow-2xl relative overflow-hidden">
                                     <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -mr-32 -mt-32 blur-3xl" />
                                     <h3 className="text-3xl font-bold mb-6 italic">L'élégance de la solution Bricareau</h3>
-                                    <p className="text-xl font-light mb-10 leading-snug text-blue-50">
+                                    <p className="text-xl font-light mb-10 leading-relaxed text-blue-50">
                                         Ne laissez pas l'eau dure dicter l'état de votre maison. Nos systèmes d'adoucissement de série Signature sont conçus pour s'intégrer discrètement à votre résidence tout en offrant une performance inégalée. C'est l'investissement le plus rentable pour préserver la valeur de votre patrimoine immobilier.
                                     </p>
                                     <div className="flex flex-col sm:flex-row gap-6 items-center">

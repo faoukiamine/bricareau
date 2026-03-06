@@ -14,7 +14,7 @@ const EauTurbideTrouble = () => {
     }, []);
 
     return (
-        <div className="min-h-screen bg-white font-sans text-slate-900 leading-snug font-light">
+        <div className="min-h-screen bg-white font-sans text-slate-900 leading-relaxed font-light">
             <Header />
             <main className="pt-20">
                 {/* Hero Section */}
@@ -30,10 +30,10 @@ const EauTurbideTrouble = () => {
                         <span className="inline-block px-4 py-1 rounded-full bg-blue-600/10 border border-blue-400/30 text-blue-600 text-sm font-bold mb-6 tracking-widest uppercase">
                             Expertise Clarté & Pureté De L'eau
                         </span>
-                        <h1 className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-blue-950 text-justify max-w-xl mx-auto">
-                            <span className="font-bold">Eau</span> <span className="text-blue-600 font-bold">turbide</span> <span className="font-bold">ou trouble ?</span>
+                        <h1 className="text-4xl md:text-7xl font-bold mb-8 leading-tight tracking-tighter text-blue-950">
+                            Eau <span className="text-blue-600">turbide</span> ou trouble ?
                         </h1>
-                        <p className="text-[20px] leading-snug text-slate-600 font-light mb-10 text-justify max-w-xl mx-auto italic">
+                        <p className="text-xl md:text-2xl text-slate-600 font-light mb-10 leading-relaxed max-w-4xl mx-auto italic">
                             Retrouver la transparence d'une eau de source : comprendre les causes de l'aspect laiteux ou boueux et maîtriser les technologies de clarification par sédimentation.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -53,7 +53,7 @@ const EauTurbideTrouble = () => {
                 <article className="py-20 lg:py-32 bg-white">
                     <div className="container mx-auto px-4">
                         <div className="max-w-4xl mx-auto">
-                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 text-justify leading-snug">
+                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 text-justify leading-relaxed">
                                 <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-blue-600 pl-8 italic">
                                     La turbidité est le premier indicateur, souvent alarmant, d'une dégradation de la qualité de votre eau. Qu'elle soit « laiteuse » dès le robinet ou qu'elle présente des dépôts de sable au fond du verre, une eau trouble n'est pas seulement un désagrément esthétique ; c'est un symptôme de dysfonctionnement de votre puits ou de votre réseau municipal.
                                 </p>
@@ -112,7 +112,7 @@ const EauTurbideTrouble = () => {
                                         </div>
                                         <div>
                                             <h4 className="text-2xl font-bold text-slate-900 mb-4 tracking-tight">Filtration de Sédiments à cartouche</h4>
-                                            <p className="text-slate-600 text-sm leading-snug text-justify">
+                                            <p className="text-slate-600 text-sm leading-relaxed text-justify">
                                                 Pour la turbidité légère à modérée. Un filtre de haute capacité (Big Blue) avec une cartouche plissée ou bobinée retient physiquement les particules de sable et de terre dès l'entrée de l'eau dans la maison. Economique et facile d'entretien.
                                             </p>
                                         </div>
@@ -123,7 +123,7 @@ const EauTurbideTrouble = () => {
                                         </div>
                                         <div>
                                             <h4 className="text-2xl font-bold mb-4 tracking-tight">Filtre Multimédia Automatique</h4>
-                                            <p className="text-slate-300 text-sm leading-snug text-justify">
+                                            <p className="text-slate-300 text-sm leading-relaxed text-justify">
                                                 Pour les problèmes de turbidité chroniques ou massifs. Ce système remplit de sable, de verre concassé ou d'anthracite, filtre l'eau à travers plusieurs couches de densités différentes. Il s'autonettoie (backwash) périodiquement, éliminant les particules accumulées sans intervention humaine.
                                             </p>
                                         </div>
@@ -134,7 +134,7 @@ const EauTurbideTrouble = () => {
                                         </div>
                                         <div>
                                             <h4 className="text-2xl font-bold text-blue-900 mb-4 tracking-tight">L'Ultrafiltration (0,02 micron)</h4>
-                                            <p className="text-blue-900/70 text-sm leading-snug text-justify">
+                                            <p className="text-blue-900/70 text-sm leading-relaxed text-justify">
                                                 La technologie de clarification ultime. Une membrane d'ultrafiltration bloque non seulement la turbidité, mais virtuellement toutes les bactéries connues. C'est la solution choisie pour les eaux de surface (lacs, rivières) qui présentent une turbidité fluctuante.
                                             </p>
                                         </div>
@@ -146,7 +146,7 @@ const EauTurbideTrouble = () => {
                                         <Sparkles className="w-80 h-80 text-white" />
                                     </div>
                                     <h3 className="text-4xl md:text-5xl font-bold mb-10 tracking-tighter italic">Voyez la clarté, respirez la pureté.</h3>
-                                    <p className="text-xl text-blue-200 opacity-80 mb-12 max-w-3xl mx-auto font-light leading-snug">
+                                    <p className="text-xl text-blue-200 opacity-80 mb-12 max-w-3xl mx-auto font-light leading-relaxed">
                                         Ne tolérez plus une eau qui ne ressemble pas à de l'eau. Demandez dès aujourd'hui un diagnostic de turbidité et retrouvez la joie d'un foyer où l'eau brille à nouveau.
                                     </p>
                                     <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -156,7 +156,7 @@ const EauTurbideTrouble = () => {
                                     </div>
                                 </div>
 
-                                <div className="mt-20 text-slate-400 text-sm border-t border-slate-100 pt-8 italic leading-snug flex items-center gap-4">
+                                <div className="mt-20 text-slate-400 text-sm border-t border-slate-100 pt-8 italic leading-relaxed flex items-center gap-4">
                                     <Info className="h-10 w-10 text-blue-600 shrink-0" />
                                     <p>
                                         * Note de sagesse : Pour protéger l'investissement que représente votre adoucisseur d'eau ou votre osmoseur, un pré-filtre de sédiments est toujours indispensable pour éviter l'encrassement des composantes internes sensibles.

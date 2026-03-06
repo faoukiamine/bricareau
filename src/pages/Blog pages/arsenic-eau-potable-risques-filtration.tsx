@@ -14,7 +14,7 @@ const ArsenicEauPotable = () => {
     }, []);
 
     return (
-        <div className="min-h-screen bg-white font-sans text-slate-900 leading-snug font-light">
+        <div className="min-h-screen bg-white font-sans text-slate-900 leading-relaxed font-light">
             <Header />
             <main className="pt-20">
                 {/* Hero Section */}
@@ -30,10 +30,10 @@ const ArsenicEauPotable = () => {
                         <span className="inline-block px-4 py-1 rounded-full bg-red-600/20 border border-red-400/30 text-red-500 text-sm font-bold mb-6 tracking-widest uppercase">
                             Dossier Toxicologie Environnementale
                         </span>
-                        <h1 className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text-justify max-w-xl mx-auto">
-                            <span className="font-bold">Arsenic dans l'eau</span> : <span className="text-red-500 font-bold">Un poison géologique invisible</span>
+                        <h1 className="text-4xl md:text-7xl font-bold mb-8 leading-tight tracking-tighter">
+                            Arsenic dans l'eau : <span className="text-red-500">Un poison géologique invisible</span>
                         </h1>
-                        <p className="text-[20px] leading-snug text-slate-300 font-light mb-10 text-justify max-w-xl mx-auto italic">
+                        <p className="text-xl md:text-2xl text-slate-300 font-light mb-10 leading-relaxed max-w-4xl mx-auto italic">
                             Risques de cancer, zones de prévalence au Québec et technologies de filtration certifiées NSF pour une sécurisation totale de votre eau de puits.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -53,7 +53,7 @@ const ArsenicEauPotable = () => {
                 <article className="py-20 lg:py-32">
                     <div className="container mx-auto px-4">
                         <div className="max-w-4xl mx-auto">
-                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 text-justify leading-snug">
+                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 text-justify leading-relaxed">
                                 <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-red-600 pl-8 italic">
                                     L'arsenic est l'un des contaminants les plus redoutables de l'eau potable domestique. Sans couleur, sans odeur et sans saveur, sa présence ne peut être suspectée par le consommateur, même à des concentrations léthales à long terme. Sa dangerosité est telle que l'OMS le classe parmi les dix substances chimiques les plus préoccupantes pour la santé publique.
                                 </p>
@@ -112,7 +112,7 @@ const ArsenicEauPotable = () => {
                                             <Droplets className="w-24 h-24 text-blue-400 group-hover:scale-110 transition-transform" />
                                         </div>
                                         <h4 className="text-2xl font-bold mb-6 tracking-tight">L'Osmose Inverse (NSF 58)</h4>
-                                        <p className="text-slate-300 text-[16px] text-justify leading-snug">
+                                        <p className="text-slate-300 text-[16px] text-justify leading-relaxed">
                                             Installée sous l'évier, l'osmose inverse est la barrière résidentielle la plus fiable. Sa membrane moléculaire rejette l'arséniate avec une efficacité de 98-99 %. Idéal pour l'eau de boisson et la cuisson.
                                         </p>
                                     </div>
@@ -121,7 +121,7 @@ const ArsenicEauPotable = () => {
                                             <Sparkles className="w-24 h-24 text-slate-900 group-hover:rotate-12 transition-transform" />
                                         </div>
                                         <h4 className="text-2xl font-bold mb-6 tracking-tight text-slate-900">Médias Adsorbants Spécialisés</h4>
-                                        <p className="text-slate-600 text-[16px] text-justify leading-snug">
+                                        <p className="text-slate-600 text-[16px] text-justify leading-relaxed">
                                             Des médias à base d'oxyde de titane ou de fer ferrique agissent comme des aimants chimiques pour l'arsenic. Utilisés pour traiter toute l'entrée d'eau, ils sont particulièrement efficaces contre les fortes concentrations.
                                         </p>
                                     </div>
@@ -146,7 +146,7 @@ const ArsenicEauPotable = () => {
                                         <ShieldCheck className="w-96 h-96" />
                                     </div>
                                     <h3 className="text-3xl md:text-5xl font-bold mb-10 tracking-tighter italic">Éliminez le doute, protégez votre sang.</h3>
-                                    <p className="text-xl text-red-100 opacity-90 mb-12 font-light leading-snug max-w-3xl text-justify">
+                                    <p className="text-xl text-red-100 opacity-90 mb-12 font-light leading-relaxed max-w-3xl text-justify">
                                         L'arsenic est un ennemi invisible mais mortellement patient. Ne jouez pas avec la santé neurologique et physiologique de vos enfants. Demandez dès aujourd'hui un diagnostic de laboratoire par l'équipe Bricareau.
                                     </p>
                                     <div className="flex flex-col sm:flex-row gap-6">
@@ -159,7 +159,7 @@ const ArsenicEauPotable = () => {
                                     </div>
                                 </div>
 
-                                <div className="mt-20 text-slate-400 text-sm border-t border-slate-100 pt-8 italic leading-snug flex items-start gap-4">
+                                <div className="mt-20 text-slate-400 text-sm border-t border-slate-100 pt-8 italic leading-relaxed flex items-start gap-4">
                                     <Info className="h-6 w-6 text-red-600 shrink-0 mt-1" />
                                     <p>
                                         Note Scientifique : L'élimination de l'arsenic est sensible au pH de l'eau. Une analyse complète des paramètres chimiques (dureté, fer, pH) est indispensable avant de sélectionner l'équipement de filtration approprié.

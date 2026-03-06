@@ -14,7 +14,7 @@ const FiltreEvierVsMaisonEntiere = () => {
     }, []);
 
     return (
-        <div className="min-h-screen bg-white font-sans text-slate-900 leading-snug font-light text-justify">
+        <div className="min-h-screen bg-white font-sans text-slate-900 leading-relaxed font-light text-justify">
             <Header />
             <main className="pt-20">
                 {/* Hero Section */}
@@ -30,10 +30,10 @@ const FiltreEvierVsMaisonEntiere = () => {
                         <span className="inline-block px-4 py-1 rounded-full bg-blue-600/20 border border-blue-400/30 text-blue-400 text-sm font-bold mb-6 tracking-widest uppercase">
                             Architecture De Filtration & Confort
                         </span>
-                        <h1 className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text-justify max-w-xl mx-auto">
-                            <span className="font-bold">Filtre sous l'évier</span> <span className="text-blue-400 font-bold">vs</span> <span className="font-bold">Maison entière</span>
+                        <h1 className="text-4xl md:text-7xl font-bold mb-8 leading-tight tracking-tighter">
+                            Filtre sous l'évier <span className="text-blue-400">vs</span> Maison entière
                         </h1>
-                        <p className="text-[20px] leading-snug text-slate-300 font-light mb-10 text-justify max-w-xl mx-auto italic">
+                        <p className="text-xl md:text-2xl text-slate-300 font-light mb-10 leading-relaxed max-w-4xl mx-auto italic text-center">
                             Dilemme de conception : devez-vous purifier uniquement ce que vous buvez ou chaque goutte d'eau de votre foyer ? Analyse complète des avantages, des coûts et des bénéfices réels.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -51,7 +51,7 @@ const FiltreEvierVsMaisonEntiere = () => {
                 <article className="py-20 lg:py-32 bg-white">
                     <div className="container mx-auto px-4">
                         <div className="max-w-4xl mx-auto">
-                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 leading-snug">
+                            <div className="prose prose-lg md:prose-xl max-w-none text-slate-700 leading-relaxed">
                                 <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-blue-600 pl-8 italic">
                                     Une question récurrente chez les nouveaux propriétaires est de savoir où placer la ligne de défense de leur eau. Isoler la purification à un seul point ou traiter le débit total de la résidence ?
                                 </p>
@@ -99,7 +99,7 @@ const FiltreEvierVsMaisonEntiere = () => {
                                         <Home className="w-96 h-96" />
                                     </div>
                                     <h3 className="text-3xl md:text-5xl font-bold mb-10 tracking-tighter italic">L'approche "Bouclier Total".</h3>
-                                    <p className="text-xl text-blue-300 opacity-90 mb-12 max-w-3xl font-light leading-snug">
+                                    <p className="text-xl text-blue-300 opacity-90 mb-12 max-w-3xl font-light leading-relaxed">
                                         Vivre sans chlore dans la douche est une révélation pour la peau sèche et l'asthme, tout en évitant l'inhalation de sous-produits de désinfection (THM) sous forme de vapeur chaude.
                                     </p>
                                 </div>
@@ -152,7 +152,7 @@ const FiltreEvierVsMaisonEntiere = () => {
                                         <Search className="h-10 w-10 text-blue-600" />
                                         Le Diagnostic Sur Mesure
                                     </h3>
-                                    <p className="text-xl text-blue-900 opacity-90 mb-10 font-light leading-snug text-justify max-w-3xl">
+                                    <p className="text-xl text-blue-900 opacity-90 mb-10 font-light leading-relaxed text-justify max-w-3xl">
                                         Ne devinez pas vos besoins. Laissez un expert Bricareau analyser vos points de sortie d'eau pour déterminer l'architecture la plus efficace pour votre santé et votre budget.
                                     </p>
                                     <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-12 h-16 font-bold shadow-lg" asChild>
@@ -160,7 +160,7 @@ const FiltreEvierVsMaisonEntiere = () => {
                                     </Button>
                                 </div>
 
-                                <div className="mt-20 text-slate-400 text-sm border-t border-slate-100 pt-8 italic leading-snug flex items-center gap-4">
+                                <div className="mt-20 text-slate-400 text-sm border-t border-slate-100 pt-8 italic leading-relaxed flex items-center gap-4">
                                     <Info className="h-10 w-10 text-blue-600 shrink-0" />
                                     <p>
                                         Note pour les propriétaires de puits : Pour vous, la filtration Toute la Maison n'est pas une option, mais une nécessité pour protéger votre pompe et votre chauffe-eau des sédiments minéraux.
