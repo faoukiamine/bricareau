@@ -167,7 +167,7 @@ const Header = () => {
       }
     },
     {
-      name: "Eau de puits",
+      name: "Traitement de l'eau de puits",
       href: "/eau-de-puits",
       hasMegamenu: true,
       megamenuCards: [
@@ -203,7 +203,7 @@ const Header = () => {
       }
     },
     {
-      name: "Fontaines d'eau",
+      name: "Fontaines & distributeurs d'eau",
       href: "/fontaines",
       hasMegamenu: true,
       megamenuCards: [

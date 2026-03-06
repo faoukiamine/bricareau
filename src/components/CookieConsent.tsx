@@ -30,49 +30,46 @@ const CookieConsent = () => {
     if (!isVisible) return null;
 
     return (
-        <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-in fade-in duration-300">
+        <div className="fixed bottom-0 right-0 sm:bottom-4 sm:right-4 z-[9999] p-4 w-full sm:max-w-[800px] animate-in slide-in-from-right-full sm:slide-in-from-bottom-8 duration-700">
             <div
                 className={cn(
-                    "bg-white dark:bg-card w-full max-w-lg rounded-2xl shadow-2xl overflow-hidden border border-border animate-in zoom-in-95 slide-in-from-bottom-4 duration-500",
-                    "p-6 md:p-8 relative"
+                    "bg-white/95 dark:bg-card/95 backdrop-blur-md w-full rounded-2xl shadow-2xl overflow-hidden border border-border/50 p-5 md:p-6 relative",
+                    "hover:shadow-primary/5 transition-shadow duration-500"
                 )}
             >
-                <div className="flex flex-col items-center text-center space-y-4">
-                    <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-2">
-                        <ShieldCheck className="w-8 h-8 text-primary" />
+                <div className="flex flex-col md:flex-row items-center md:items-start gap-5">
+                    <div className="hidden md:flex w-12 h-12 bg-primary/10 rounded-full items-center justify-center shrink-0">
+                        <ShieldCheck className="w-6 h-6 text-primary" />
                     </div>
 
-                    <h2 className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white leading-tight">
-                        Le respect de votre vie privée est important
-                    </h2>
+                    <div className="flex-1 text-center md:text-left space-y-2">
+                        <h2 className="text-xl font-bold text-slate-900 dark:text-white leading-tight flex items-center justify-center md:justify-start gap-2">
+                            <ShieldCheck className="w-5 h-5 text-primary md:hidden" />
+                            Confidentialité
+                        </h2>
 
-                    <p className="text-slate-600 dark:text-slate-300 text-lg leading-relaxed">
-                        Nous et nos partenaires de confiance utilisons des témoins pour vous offrir une expérience de magasinage personnalisée et pour améliorer continuellement notre site Web.
-                    </p>
+                        <p className="text-slate-600 dark:text-slate-300 text-[15px] leading-relaxed max-w-2xl">
+                            Nous utilisons des témoins pour vous offrir une expérience de magasinage personnalisée et pour améliorer continuellement notre site Web. {' '}
+                            <a
+                                href="/politique-de-confidentialite"
+                                className="text-primary hover:underline font-medium inline-block"
+                            >
+                                En savoir plus
+                            </a>.
+                        </p>
+                    </div>
 
-                    <p className="text-sm text-slate-500 dark:text-slate-400">
-                        Pour plus d'informations ou pour gérer vos préférences, veuillez consulter notre{' '}
-                        <a
-                            href="/politique-de-confidentialite"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-primary hover:underline font-medium"
-                        >
-                            politique de confidentialité
-                        </a>.
-                    </p>
-
-                    <div className="flex flex-col sm:flex-row gap-3 w-full pt-4">
+                    <div className="flex flex-row md:flex-col lg:flex-row gap-2 w-full md:w-auto shrink-0 self-center">
                         <Button
                             onClick={handleAccept}
-                            className="flex-1 bg-primary hover:bg-primary/90 text-white py-6 text-lg rounded-xl transition-all hover:scale-[1.02] active:scale-[0.98]"
+                            className="flex-1 md:w-32 bg-primary hover:bg-primary/90 text-white h-11 text-sm font-semibold rounded-lg transition-all"
                         >
                             J’accepte
                         </Button>
                         <Button
                             variant="outline"
                             onClick={handleDecline}
-                            className="flex-1 border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-900 py-6 text-lg rounded-xl transition-all"
+                            className="flex-1 md:w-32 border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-900 h-11 text-sm font-semibold rounded-lg transition-all"
                         >
                             Je refuse
                         </Button>
@@ -81,10 +78,10 @@ const CookieConsent = () => {
 
                 <button
                     onClick={() => setIsVisible(false)}
-                    className="absolute top-4 right-4 p-2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors"
+                    className="absolute top-2 right-2 p-1 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors"
                     aria-label="Fermer"
                 >
-                    <X className="w-5 h-5" />
+                    <X className="w-4 h-4" />
                 </button>
             </div>
         </div>
