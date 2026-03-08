@@ -7,7 +7,6 @@ import ScrollToTop from "./components/ScrollToTop";
 import ChatWidget from "./components/ChatWidget";
 import CookieConsent from "./components/CookieConsent";
 import Index from "./pages/Index";
-import About from "./pages/About";
 import Services from "./pages/Adoucisseurs-portables";
 import ContactResidentiel from "./pages/ContactResidentiel";
 import ContactEntreprises from "./pages/ContactEntreprises";
@@ -22,7 +21,6 @@ import AdoucisseurEauResidentiel from "./pages/Adoucisseur-eau-municipal";
 import AdoucisseursEauDePuits from "./pages/Adoucisseurs-eau-de-puits";
 import ConditionneursSansSel from "./pages/ConditionneursSansSel";
 import StationEauPotable from "./pages/Systeme-de-filtration-deau-potable";
-import EauDure from "./pages/EauDure";
 import EauDePuits from "./pages/EauDePuits";
 import Filtration from "./pages/Filtration";
 import Fontaines from "./pages/Fontaines";
@@ -95,7 +93,6 @@ const App = () => (
         <CookieConsent />
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/about" element={<About />} />
           <Route path="/adoucisseurs-portables" element={<Services />} />
           <Route path="/solutions" element={<Solutions />} />
           <Route path="/adoucissement" element={<Adoucisseurs />} />
@@ -103,7 +100,6 @@ const App = () => (
           <Route path="/adoucisseurs-eau-de-puits" element={<AdoucisseursEauDePuits />} />
           <Route path="/conditionneurs-sans-sel" element={<ConditionneursSansSel />} />
           <Route path="/systeme-de-filtration-deau-potable" element={<StationEauPotable />} />
-          <Route path="/eau-dure" element={<EauDure />} />
           <Route path="/eau-de-puits" element={<EauDePuits />} />
           <Route path="/filtration" element={<Filtration />} />
           <Route path="/Filtres-deau" element={<SpecializedFiltration />} />

@@ -1,11 +1,10 @@
 import React, { useEffect } from "react";
 import BlogLayout from "@/components/BlogLayout";
-import { Button } from "@/components/ui/button";
-import { Phone, ShieldAlert, BadgeCheck, Microscope, Waves, Droplets, Info, Search, AlertCircle, ShieldCheck, HeartPulse, Scale, FlaskConical, Zap, Wrench, Home, Sparkles, Filter, ShieldHalf, Thermometer, GlassWater, MicroscopeIcon as Microscope2, AlertTriangle, Crosshair, ZapIcon } from "lucide-react";
+import bacteriesEColiImg from "@/assets/coliform_bacteria.jpg";
 
 const BacteriesEColiPuits = () => {
     useEffect(() => {
-        document.title = "Bactéries E. coli dans l'eau de puits : Guide d'urgence | Bricareau";
+        document.title = "Bactéries E. coli dans l'eau de puits : Causes et Solutions | Bricareau";
         const metaDesc = document.querySelector('meta[name="description"]');
         if (metaDesc) {
             metaDesc.setAttribute("content", "Votre test d'eau révèle des bactéries E. coli ou coliformes ? Découvrez les causes de contamination fécale et les solutions immédiates de désinfection par UV.");
@@ -14,132 +13,164 @@ const BacteriesEColiPuits = () => {
 
     const tocItems = [
         {
-                "id": "section-1",
-                "title": "Décoderle danger : Escherichia coli (E. coli)"
+            "id": "section-1",
+            "title": "Qu'est-ce que l'E. coli et comment est-elle arrivée là ?"
         },
         {
-                "id": "section-2",
-                "title": "Pourquoi votre puits est-il contaminé ?"
+            "id": "section-2",
+            "title": "Les risques pour la santé"
         },
         {
-                "id": "section-3",
-                "title": "Protocole Immédiat : L'Avis d'Ébullition"
+            "id": "section-3",
+            "title": "Analyse d'eau : Quand et comment tester ?"
         },
         {
-                "id": "section-4",
-                "title": "Sécuriser votre avenir : Investir dans la protection"
+            "id": "section-4",
+            "title": "Votre test est positif : Les 3 étapes d'urgence"
+        },
+        {
+            "id": "section-5",
+            "title": "Les solutions permanentes"
+        },
+        {
+            "id": "section-6",
+            "title": "Prévention : Protéger votre puits"
+        },
+        {
+            "id": "section-7",
+            "title": "Conclusion"
         }
-];
+    ];
 
     return (
-        <BlogLayout 
-            title="Bactéries E. coli dans votre puits" 
-            headerImage={"https://images.unsplash.com/photo-1594411133519-2189874cb3d1?q=80&w=2000&auto=format&fit=crop"}
+        <BlogLayout
+            title="Bactéries E. coli dans l'eau de puits : causes et solutions"
+            headerImage={bacteriesEColiImg}
             tocItems={tocItems}
         >
-            <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-red-600 pl-8 italic">
-                                    Rien ne provoque une inquiétude plus immédiate qu'un rapport de laboratoire affichant « présence détectée » pour les bactéries E. coli. C'est l'indicateur le plus limpide d'une contamination fécale et d'un danger sanitaire imminent pour toute la famille.
-                                </p>
+            <p className="text-lg leading-relaxed text-gray-700 mb-6 text-justify">
+                Pour des milliers de familles québécoises, posséder un puits artésien ou un puits de surface est synonyme d'indépendance et de pureté. On imagine une eau filtrée par les profondeurs du bouclier canadien, fraîche et intouchable. Pourtant, chaque année, des centaines d'avis de « bouillir l'eau » sont émis dans les zones rurales du Québec, de la Beauce aux Laurentides.
+            </p>
+            <p className="text-lg leading-relaxed text-gray-700 mb-6 text-justify">
+                Le coupable ? La bactérie <strong>Escherichia coli (E. coli)</strong>.
+            </p>
+            <p className="text-lg leading-relaxed text-gray-700 mb-6 text-justify">
+                Sa présence dans votre eau n'est pas seulement un désagrément technique : c'est un signal d'alarme environnemental et sanitaire. Que faire si votre dernier rapport d'analyse indique une contamination ? Comment protéger vos enfants et vos aînés ? Et surtout, comment s'assurer que cela ne se reproduise plus jamais ?
+            </p>
+            <p className="text-lg leading-relaxed text-gray-700 mb-6 text-justify">
+                Voici tout ce que vous devez savoir pour reprendre le contrôle de votre eau.
+            </p>
 
-                                <div className="space-y-8">
-                                    <p>
-                                        Chaque année au Québec et au Canada, des centaines de propriétaires de puits artésiens et de surface font face à cette réalité microbiologique. Une infiltration après une fonte des neiges, un puits de surface mal protégé ou une installation septique défaillante peuvent transformer votre source d'eau en réservoir de pathogènes. Face à l'E. coli, le temps n'est pas à l'observation, mais à l'action. Ce guide Bricareau détaille le protocole d'urgence absolu et les solutions technologiques permanentes pour éradiquer la menace.
-                                    </p>
-                                </div>
+            <h2 id="section-1" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">Qu'est-ce que l'E. coli et comment est-elle arrivée là ?</h2>
+            <p className="text-lg leading-relaxed text-gray-700 mb-6 text-justify">
+                E. coli est une bactérie qui vit normalement dans les intestins des humains et des animaux à sang chaud. En soi, la plupart des souches sont inoffensives, mais leur présence dans un puits est ce qu'on appelle un « indicateur de contamination fécale ».
+            </p>
 
-                                <h2 id="section-1" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">1. Décoderle danger : Escherichia coli (E. coli)</h2>
-                                <p>
-                                    Toutes les bactéries ne sont pas dangereuses, mais l'<strong>E. coli</strong> est spéciale. Il s'agit d'une bactérie vivant exclusivement dans les intestins des humains et des animaux à sang chaud. Sa présence dans votre eau potable est la <strong>preuve irréfutable</strong> que des déjections (animales ou humaines) ont trouvé un chemin direct vers votre puits.
-                                </p>
-                                <p>
-                                    Contrairement aux coliformes totaux (qui peuvent provenir du sol ou de la végétation), l'E. coli indique une source fécale et la présence probable d'autres agents pathogènes encore plus résistants comme des virus ou des parasites (Giardia et Cryptosporidium).
-                                </p>
+            <h3 className="text-2xl font-bold text-gray-800 mt-8 mb-4">Le chemin de la contamination</h3>
+            <p className="text-lg leading-relaxed text-gray-700 mb-4 text-justify">
+                Si E. coli est dans votre puits, cela signifie que des matières fécales (humaines ou animales) ont trouvé un chemin jusqu'à votre source d'eau potable. Au Québec, les causes les plus fréquentes sont :
+            </p>
+            <ul className="list-disc pl-6 mb-6 text-lg text-gray-700 space-y-2">
+                <li><strong>Le ruissellement de surface :</strong> Lors de la fonte des neiges ou de pluies torrentielles (de plus en plus fréquentes avec les changements climatiques), l'eau lave les champs fertilisés au fumier ou les excréments d'animaux sauvages et s'infiltre dans un puits mal scellé.</li>
+                <li><strong>Une fosse septique défectueuse :</strong> Si votre système de traitement des eaux usées (ou celui d'un voisin) est trop vieux ou brisé, les eaux vannes peuvent contaminer la nappe phréatique.</li>
+                <li><strong>Une mauvaise étanchéité du puits :</strong> Un couvercle fissuré, un tubage (casing) rouillé ou un scellement inadéquat au niveau du sol (collerette de bentonite absente) permet aux bactéries d'entrer directement.</li>
+            </ul>
 
-                                <div className="my-16 bg-red-50 border border-red-100 rounded-3xl p-10 flex flex-col md:flex-row gap-12 items-center relative overflow-hidden group shadow-sm">
-                                    <div className="absolute top-0 right-0 p-8 opacity-5 -rotate-12 group-hover:rotate-12 transition-transform duration-700">
-                                        <AlertTriangle className="w-48 h-48 text-red-900" />
-                                    </div>
-                                    <div className="flex-1">
-                                        <h3 className="text-2xl font-bold text-red-950 mb-6 underline decoration-red-600/30 underline-offset-8">ALERTE MÉDICALE</h3>
-                                        <p className="text-slate-700 italic">
-                                            « L'ingestion d'eau contaminée par l'E. coli peut provoquer des crampes abdominales sévères, des vomissements et des diarrhées sanglantes. Chez les populations fragiles (enfants et aînés), certaines souches peuvent entraîner le syndrome hémolytique-urémique (SHU), une insuffisance rénale mortelle. »
-                                        </p>
-                                    </div>
-                                </div>
+            <h2 id="section-2" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">Les risques pour la santé : Pourquoi faut-il prendre cela au sérieux ?</h2>
+            <p className="text-lg leading-relaxed text-gray-700 mb-6 text-justify">
+                Au Québec, les autorités de santé publique sont catégoriques : la présence d'une seule bactérie E. coli dans 100 ml d'eau rend celle-ci impropre à la consommation.
+            </p>
 
-                                <h2 id="section-2" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">2. Pourquoi votre puits est-il contaminé ?</h2>
-                                <p>
-                                    La contamination n'arrive jamais par hasard. Voici les vecteurs d'infiltration les plus communs :
-                                </p>
-                                <ul className="list-disc pl-8 space-y-4 mb-8">
-                                    <li><strong>Défaut de scellement (Couvercle) :</strong> Un couvercle de puits non hermétique ou mal situé (sous le niveau du sol) permet aux eaux de ruissellement, chargées de déjections animales, de tomber directement dans l'aquifère.</li>
-                                    <li><strong>Proximité du système septique :</strong> Une fosse septique ou un champ d'épuration défectueux peut rejeter des pathogènes qui migrent à travers les failles du sol jusqu'à la pompe du puits.</li>
-                                    <li><strong>Ruissellement printanier massif :</strong> La fonte rapide des neiges sature le sol et entraîne les bactéries de surface (provenant des forêts ou des fermes voisines) vers les fissures de la roche-mère.</li>
-                                    <li><strong>Canalisation endommagée :</strong> Un tuyau de puits artésien fissuré en profondeur peut laisser entrer l'eau contaminée provenant des couches superficielles du sol.</li>
-                                </ul>
+            <h3 className="text-2xl font-bold text-gray-800 mt-8 mb-4">Les symptômes</h3>
+            <p className="text-lg leading-relaxed text-gray-700 mb-4 text-justify">
+                L'ingestion d'eau contaminée peut provoquer une gastro-entérite sévère :
+            </p>
+            <ul className="list-disc pl-6 mb-6 text-lg text-gray-700 space-y-2">
+                <li>Crampes abdominales violentes.</li>
+                <li>Diarrhée (souvent aqueuse ou sanglante).</li>
+                <li>Nausées et vomissements.</li>
+                <li>Fièvre légère.</li>
+            </ul>
+            <p className="text-lg leading-relaxed text-gray-700 mb-6 text-justify">
+                Pour la majorité des adultes en bonne santé, les symptômes disparaissent en une semaine. Cependant, pour les jeunes enfants, les personnes âgées et les personnes immunodéprimées, cela peut dégénérer en syndrome hémolytique et urémique (SHU), une complication grave pouvant mener à une insuffisance rénale.
+            </p>
 
-                                <h2 id="section-3" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">3. Protocole Immédiat : L'Avis d'Ébullition</h2>
-                                <p>
-                                    Dès réception d'un résultat positif, vous devez instaurer les mesures suivantes :
-                                </p>
-                                <ul className="list-disc pl-8 space-y-4 mb-8">
-                                    <li><strong>Ébullition obligatoire :</strong> Faire bouillir l'eau à gros bouillons pendant au moins 1 minute avant de l'utiliser pour boire, cuisiner ou se brosser les dents.</li>
-                                    <li><strong>Douche prudente :</strong> L'eau peut être utilisée pour se laver, à condition de ne pas l'ingérer et qu'aucune plaie ouverte ne soit exposée. Laver les nourrissons uniquement avec de l'eau bouillie refroidie ou en bouteille.</li>
-                                    <li><strong>Lavage de la vaisselle :</strong> Utiliser de l'eau bouillie (ou ajouter quelques gouttes de chlore non parfumé dans l'eau de rinçage).</li>
-                                </ul>
+            <h2 id="section-3" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">Analyse d'eau : Quand et comment tester ?</h2>
+            <p className="text-lg leading-relaxed text-gray-700 mb-6 text-justify">
+                Contrairement aux villes, le gouvernement du Québec ne teste pas l'eau des puits privés. C'est la responsabilité du propriétaire.
+            </p>
 
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-16">
-                                    <div className="p-8 bg-slate-900 text-white rounded-2xl group relative overflow-hidden shadow-2xl">
-                                        <div className="absolute top-0 right-0 p-8 opacity-15 rotate-45 group-hover:rotate-12 transition-transform duration-500">
-                                            <Zap className="w-24 h-24 text-blue-400" />
-                                        </div>
-                                        <h4 className="text-xl font-bold mb-4 tracking-tight">Stérilisation UV (Bouclier Infaillible)</h4>
-                                        <p className="text-slate-300 text-sm leading-relaxed text-justify">
-                                            Un réacteur ultraviolet (UV) certifié bombarde l'eau de radiation photonique qui détruit l'ADN de 99,99% des bactéries et virus instantanément. C'est la seule solution passive fiable pour une sécurité 24h/24.
-                                        </p>
-                                    </div>
-                                    <div className="p-8 bg-slate-50 border border-slate-100 rounded-2xl group relative overflow-hidden shadow-sm">
-                                        <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:-rotate-12 transition-transform duration-500">
-                                            <Crosshair className="w-24 h-24 text-red-600" />
-                                        </div>
-                                        <h4 className="text-xl font-bold mb-4 tracking-tight text-slate-900">Chloration-Choc (Mesure corrective)</h4>
-                                        <p className="text-slate-600 text-sm leading-relaxed text-justify">
-                                            Désinfecter l'entièreté de la plomberie et du puits avec une dose massive de chlore. Cette opération tue les bactéries présentes mais n'offre aucune protection contre les ré-infiltrations futures.
-                                        </p>
-                                    </div>
-                                </div>
+            <h3 className="text-2xl font-bold text-gray-800 mt-8 mb-4">Les fréquences recommandées par le MELCCFP :</h3>
+            <ul className="list-disc pl-6 mb-6 text-lg text-gray-700 space-y-2">
+                <li><strong>Deux fois par année :</strong> Idéalement au printemps (après la fonte) et à l'automne (période de pluies abondantes).</li>
+                <li><strong>Après des travaux :</strong> Si vous avez fait réparer votre pompe ou creuser le sol à proximité.</li>
+                <li><strong>Si vous notez un changement :</strong> Une odeur, un goût différent ou une turbidité (eau trouble) soudaine.</li>
+            </ul>
 
-                                <h2 id="section-4" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">4. Sécuriser votre avenir : Investir dans la protection</h2>
-                                <p>
-                                    Une contamination bactérienne ponctuelle peut devenir chronique. Plutôt que de vivre dans la peur de chaque test d'eau, Bricareau installe des systèmes de protection à barrières multiples :
-                                </p>
-                                <ul className="list-disc pl-8 space-y-4 mb-8">
-                                    <li><strong>Filtration de sédiments fine (5 microns) :</strong> Pour que les bactéries n'aient aucune particule derrière laquelle se cacher lors du traitement.</li>
-                                    <li><strong>Stérilisateur UV de haute intensité :</strong> Configuré selon votre débit de pointe pour garantir une dose de radiation mortelle pour l'E. coli.</li>
-                                    <li><strong>Soupape de sécurité solénoïde :</strong> Bloque automatiquement l'entrée d'eau en cas de panne de la lampe UV.</li>
-                                </ul>
+            <h3 className="text-2xl font-bold text-gray-800 mt-8 mb-4">Comment procéder ?</h3>
+            <p className="text-lg leading-relaxed text-gray-700 mb-6 text-justify">
+                Ne vous fiez pas aux tests de quincaillerie pour les bactéries. Vous devez récupérer une bouteille stérile auprès d'un laboratoire accrédité par le ministère de l'Environnement. Suivez les consignes de prélèvement à la lettre (se laver les mains, ne pas toucher l'intérieur du bouchon) et rapportez l'échantillon au laboratoire dans les 24 heures en le gardant au frais.
+            </p>
 
-                                <div className="mt-20 p-10 md:p-20 bg-red-900 text-white rounded-[4rem] text-center shadow-2xl relative overflow-hidden group">
-                                    <div className="absolute top-0 right-0 p-12 opacity-5 scale-150 rotate-45 group-hover:rotate-0 transition-transform duration-[4s]">
-                                        <BadgeCheck className="w-80 h-80 text-white" />
-                                    </div>
-                                    <h3 className="text-4xl md:text-5xl font-bold mb-10 tracking-tighter italic">L'E. coli n'a aucune chance contre nos UV.</h3>
-                                    <p className="text-xl text-red-100 opacity-80 mb-12 max-w-3xl mx-auto font-light leading-relaxed">
-                                        Votre foyer mérite une sécurité biologique absolue. Ne laissez plus la chance décider de la santé de vos enfants. Demandez dès aujourd'hui un diagnostic microbiologique expert.
-                                    </p>
-                                    <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                                        <Button size="lg" className="bg-white text-red-600 hover:bg-slate-100 rounded-full px-12 h-18 text-xl font-bold shadow-xl transition-all" asChild>
-                                            <a href="/contact">Analyser mon eau et installer un système UV</a>
-                                        </Button>
-                                    </div>
-                                </div>
+            <h2 id="section-4" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">Votre test est positif : Les 3 étapes d'urgence</h2>
+            <p className="text-lg leading-relaxed text-gray-700 mb-6 text-justify">
+                Si le laboratoire vous appelle pour confirmer la présence d'E. coli, ne paniquez pas, mais agissez immédiatement.
+            </p>
 
-                                <div className="mt-20 text-slate-400 text-sm border-t border-slate-100 pt-8 italic leading-relaxed flex items-center gap-4">
-                                    <Info className="h-10 w-10 text-red-600 shrink-0" />
-                                    <p>
-                                        * Note de sécurité : Pour tout puits ayant testé positif à l'E. coli, Bricareau recommande fortement une désinfection-choc du puits effectuée par un professionnel certifié après l'installation d'un système de traitement permanent.
-                                    </p>
-                                </div>
+            <h3 className="text-2xl font-bold text-gray-800 mt-8 mb-4">Étape 1 : L'avis de bouillir l'eau</h3>
+            <p className="text-lg leading-relaxed text-gray-700 mb-6 text-justify">
+                Portez l'eau à une ébullition à gros bouillons pendant au moins une minute complète. Cela tue instantanément les bactéries. Utilisez cette eau pour boire, brosser les dents, laver les fruits et légumes et préparer les biberons. Pour la douche, l'eau est sécuritaire tant que vous ne l'avalez pas (attention aux jeunes enfants).
+            </p>
+
+            <h3 className="text-2xl font-bold text-gray-800 mt-8 mb-4">Étape 2 : La désinfection par chloration-choc</h3>
+            <p className="text-lg leading-relaxed text-gray-700 mb-4 text-justify">
+                C'est le traitement classique pour "stériliser" votre puits.
+            </p>
+            <ul className="list-disc pl-6 mb-6 text-lg text-gray-700 space-y-2">
+                <li>On introduit une quantité précise de chlore (souvent de l'eau de Javel sans parfum) dans le puits.</li>
+                <li>On fait circuler l'eau dans tous les robinets de la maison jusqu'à sentir l'odeur de chlore.</li>
+                <li>On laisse reposer 12 à 24 heures sans utiliser l'eau.</li>
+                <li>On rince le système en laissant couler l'eau (par le boyau d'arrosage, pas dans la fosse septique pour ne pas tuer les "bonnes" bactéries de celle-ci) jusqu'à ce que l'odeur disparaisse.</li>
+            </ul>
+
+            <h3 className="text-2xl font-bold text-gray-800 mt-8 mb-4">Étape 3 : Le test de suivi</h3>
+            <p className="text-lg leading-relaxed text-gray-700 mb-6 text-justify">
+                Attendez une semaine après la disparition de l'odeur de chlore pour refaire un test d'eau. Si E. coli est toujours présent, votre puits a un problème structurel ou une source de contamination permanente.
+            </p>
+
+            <h2 id="section-5" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">Les solutions permanentes : En finir avec la contamination</h2>
+            <p className="text-lg leading-relaxed text-gray-700 mb-6 text-justify">
+                Si votre puits est vulnérable, la chloration ne sera qu'un pansement. Vous avez besoin d'une barrière de protection continue.
+            </p>
+
+            <h3 className="text-2xl font-bold text-gray-800 mt-8 mb-4">Le système de purification par rayons UV (La solution favorite au Québec)</h3>
+            <p className="text-lg leading-relaxed text-gray-700 mb-4 text-justify">
+                C'est le "gardien" de votre maison. L'eau passe dans une chambre en acier inoxydable où elle est exposée à une lumière ultraviolette intense qui détruit l'ADN des bactéries, les rendant inoffensives.
+            </p>
+            <ul className="list-disc pl-6 mb-6 text-lg text-gray-700 space-y-2">
+                <li><strong>Avantage :</strong> Pas de produits chimiques, pas de goût de chlore.</li>
+                <li><strong>Condition :</strong> L'eau doit être claire (pas de fer ni de turbidité) pour que les rayons UV puissent pénétrer. Un pré-filtre est donc obligatoire.</li>
+            </ul>
+
+            <h3 className="text-2xl font-bold text-gray-800 mt-8 mb-4">La chloration automatique</h3>
+            <p className="text-lg leading-relaxed text-gray-700 mb-6 text-justify">
+                Une pompe doseuse injecte une petite quantité de chlore chaque fois que la pompe du puits s'active. C'est très efficace mais nécessite un entretien régulier et un filtre au charbon pour retirer le goût de chlore au robinet.
+            </p>
+
+            <h2 id="section-6" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">Prévention : Protéger votre puits contre le climat québécois</h2>
+            <p className="text-lg leading-relaxed text-gray-700 mb-4 text-justify">
+                Au Québec, la configuration du terrain est cruciale.
+            </p>
+            <ul className="list-disc pl-6 mb-6 text-lg text-gray-700 space-y-2">
+                <li><strong>La pente :</strong> Le sol autour de votre puits doit former un monticule pour que l'eau de pluie s'éloigne du puits plutôt que de s'y accumuler.</li>
+                <li><strong>Le couvercle :</strong> Assurez-vous d'avoir un couvercle de puits scellé et muni d'un évent avec grillage fin (pour empêcher les insectes d'y entrer).</li>
+                <li><strong>La zone de protection :</strong> Ne stockez pas de fumier, de pesticides ou de sel de déglaçage à moins de 30 mètres de votre puits.</li>
+            </ul>
+
+            <h2 id="section-7" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">Conclusion</h2>
+            <p className="text-lg leading-relaxed text-gray-700 mb-6 text-justify">
+                Détecter des E. coli dans son puits est une expérience stressante, mais c'est aussi l'opportunité de sécuriser votre approvisionnement pour les années à venir. En tant que propriétaire québécois, la vigilance est votre meilleure alliée. Un test régulier coûte environ 50 $ à 100 $, un investissement minime pour la tranquillité d'esprit de savoir que chaque verre d'eau que vous servez à votre famille est pur.
+            </p>
         </BlogLayout>
     );
 };

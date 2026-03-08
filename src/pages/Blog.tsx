@@ -5,6 +5,7 @@ import { ArrowRight, ChevronRight, CheckCircle2, Droplets, Filter, Shield, Zap, 
 import { NavLink } from "react-router-dom";
 import residentialWaterSoftenerImg from "@/assets/residential-water-softener.png";
 import analysisImg from "@/assets/10341859.jpg";
+import bacteriesEColiImg from "@/assets/coliform_bacteria.jpg";
 
 const categories = [
     {
@@ -110,7 +111,7 @@ const categories = [
             {
                 title: "Bactéries E. coli : Guide Urgence",
                 desc: "Réagir face à une contamination fécale et installer une protection UV.",
-                image: "https://images.unsplash.com/photo-1594411133519-2189874cb3d1?q=80&w=2000&auto=format&fit=crop",
+                image: bacteriesEColiImg,
                 href: "/bacteries-e-coli-eau-puits-causes-solutions"
             },
             {

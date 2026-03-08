@@ -164,7 +164,7 @@ const FiltresPuits = () => {
             <Header />
 
             <main>
-                {/* Hero Section */}
+                {/* 1. Hero Section */}
                 <section className="relative h-[850px] flex items-center overflow-hidden -mt-[104px] pt-[104px]">
                     <div className="absolute inset-0 z-0">
                         <img
@@ -214,7 +214,7 @@ const FiltresPuits = () => {
                             </div>
                         </div>
                     </div>
-                    {/* Wave Separator Bottom - Transition to Blue Section */}
+                    {/* 2. Wave Separator Bottom - Transition to Blue Section */}
                     <div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-[0] z-20 pointer-events-none">
                         <svg
                             className="relative block w-full h-[50px] md:h-[80px]"
@@ -232,7 +232,7 @@ const FiltresPuits = () => {
                     </div>
                 </section>
 
-                {/* Pourquoi choisir - Blue Section */}
+                {/* 3. Pourquoi choisir - Blue Section */}
                 <section className="py-24 bg-blue-600 text-white text-center">
                     <div className="container mx-auto px-6 text-center">
                         <div className="text-center mb-16">
@@ -261,7 +261,7 @@ const FiltresPuits = () => {
                     </div>
                 </section>
 
-                {/* Product Grid Section */}
+                {/* 4. Product Grid Section */}
                 <section id="specialized-filters" className="py-24 bg-gray-50 scroll-mt-20">
                     <div className="container mx-auto px-6">
                         <div className="text-left mb-16">
@@ -318,7 +318,7 @@ const FiltresPuits = () => {
                     </div>
                 </section>
 
-                {/* Comparison Table Section */}
+                {/* 5. Comparison Table Section */}
                 <section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
@@ -385,7 +385,7 @@ const FiltresPuits = () => {
                     </div>
                 </section>
 
-                {/* 7.Water Testing Section */}
+                {/* 6. Water Testing Section */}
                 <section className="relative h-[650px] flex items-center overflow-hidden">
                     <div className="absolute inset-0 z-0">
                         <img
@@ -425,7 +425,7 @@ const FiltresPuits = () => {
                     </div>
                 </section>
 
-                {/* Testimonials Grid Section */}
+                {/* 7. Testimonials Grid Section */}
                 <TestimonialsSection
                     filterProduct="/Filtres-deau"
                     title={
@@ -436,7 +436,7 @@ const FiltresPuits = () => {
                     }
                 />
 
-                {/* 5. Section Associated Products */}
+                {/* 8. Section Associated Products */}
                             <section className="bg-white py-24">
                                 <div className="container mx-auto px-4">
                                     <div className="text-center mb-16">
@@ -507,7 +507,7 @@ const FiltresPuits = () => {
                                 </div>
                             </section>
 
-                {/* 5. CTA Section */}
+                {/* 9. CTA Section */}
                 <section className="bg-primary py-16 md:py-20">
                     <div className="container mx-auto px-4 text-center">
                         <h2 className="text-2xl md:text-3xl font-bold text-primary-foreground mb-4">
@@ -529,7 +529,7 @@ const FiltresPuits = () => {
                     </div>
                 </section>
 
-                {/* FAQ Section */}
+                {/* 10. FAQ Section */}
                 <section className="py-24 bg-white">
                     <div className="container mx-auto px-6">
                         <div className="text-left mb-16">
@@ -567,7 +567,7 @@ const FiltresPuits = () => {
                     </div>
                 </section>
 
-                {/* Resources Section */}
+                {/* 11. Resources Section */}
                 <section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
@@ -613,7 +613,7 @@ const FiltresPuits = () => {
                     </div>
                 </section>
 
-                {/* Consultation Form Section */}
+                {/* 12. Consultation Form Section */}
                 <ConsultationFormSection id="consultation" />
             </main>
 

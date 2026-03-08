@@ -1,205 +1,66 @@
 import React, { useEffect } from "react";
 import BlogLayout from "@/components/BlogLayout";
 import uvImage from "@/assets/lampe-uv-fonctionnement.png";
-import microImage from "@/assets/purete-microbiologique.png";
-import { Button } from "@/components/ui/button";
-import { Phone, ArrowRight, ShieldCheck, Zap, Waves } from "lucide-react";
 
 const FonctionnementDesinfectionUV = () => {
     useEffect(() => {
         document.title = "Comment fonctionne la désinfection UV ? | Guide complet | Bricareau";
         const metaDesc = document.querySelector('meta[name="description"]');
         if (metaDesc) {
-            metaDesc.setAttribute("content", "Comprendre la science de la désinfection UV pour l'eau. Guide complet sur les rayons ultraviolets, la neutralisation des bactéries et la protection de votre eau de puits.");
+            metaDesc.setAttribute("content", "Comprendre la science de la désinfection UV pour l'eau. Guide complet sur les rayons ultraviolets, la neutralisation des bactéries et la protection de votre eau potable au Québec.");
         }
     }, []);
 
     const tocItems = [
-        {
-                "id": "section-1",
-                "title": "La science derrière la lumière : Le spectre UV-C"
-        },
-        {
-                "id": "section-2",
-                "title": "Anatomie d'un système UV Bricareau"
-        },
-        {
-                "id": "section-3",
-                "title": "Pourquoi choisir les UV plutôt que le chlore ?"
-        },
-        {
-                "id": "section-4",
-                "title": "La Notion de Dose UV"
-        },
-        {
-                "id": "section-5",
-                "title": "Conditions essentielles pour une désinfection réussie"
-        },
-        {
-                "id": "section-6",
-                "title": "Maintenance et Longévité"
-        },
-        {
-                "id": "section-7",
-                "title": "Conclusion"
-        }
-];
+        { id: "section-1", title: "Une solution efficace et écologique" },
+        { id: "section-2", title: "Le fonctionnement d'un système UV" },
+        { id: "section-3", title: "Une efficacité prouvée contre les pathogènes" },
+        { id: "section-4", title: "Conditions optimales et entretien" },
+        { id: "section-5", title: "Un choix écologique et durable" },
+        { id: "section-6", title: "Investir dans la fiabilité de votre eau" }
+    ];
 
     return (
-        <BlogLayout 
-            title="Comment fonctionne la désinfection UV ?" 
+        <BlogLayout
+            title="Comment fonctionne la désinfection UV ?"
             headerImage={uvImage}
             tocItems={tocItems}
         >
-            <p className="lead text-2xl font-light text-slate-900 mb-16 border-l-4 border-blue-600 pl-8 italic">
-                                    La désinfection par rayons ultraviolets (UV) représente l'une des avancées les plus significatives de l'ingénierie environnementale contemporaine. Sans ajout de chlore ni altération chimique, elle offre une protection absolue contre les agents pathogènes les plus résistants.
-                                </p>
+            {/* Section 1 */}
+            <h2 id="section-1" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">Une solution efficace et écologique</h2>
+            <p className="text-lg leading-relaxed text-gray-700 mb-6 text-justify">
+                La désinfection par ultraviolet (UV) est aujourd'hui l'une des solutions les plus efficaces, écologiques et sécuritaires pour garantir une eau potable de qualité au Québec. Contrairement aux méthodes chimiques, elle ne nécessite aucun ajout de chlore, de sel ou d'agent désinfectant, ce qui en fait une technologie respectueuse à la fois de l'environnement et de la santé. Très prisée pour le traitement de l'eau des puits résidentiels, elle neutralise rapidement les bactéries, virus et micro-organismes pathogènes qui peuvent compromettre la qualité de l'eau, tout en préservant son goût et sa composition naturelle. Cette approche moderne apporte une tranquillité d'esprit aux familles souhaitant consommer une eau pure et fiable au quotidien.
+            </p>
 
-                                <h2 id="section-1" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">La science derrière la lumière : Le spectre UV-C</h2>
-                                <p>
-                                    Le spectre de la lumière ultraviolette se divise en plusieurs catégories : UV-A, UV-B et UV-C. C'est cette dernière catégorie, située entre 200 et 280 nanomètres (nm), qui possède les propriétés germicides nécessaires au traitement de l'eau.
-                                </p>
-                                <p>
-                                    La longueur d'onde optimale pour la désinfection est de 254 nm. À cette fréquence précise, l'énergie lumineuse pénètre la paroi cellulaire des micro-organismes (bactéries, virus, protozoaires) et est absorbée directement par leur matériel génétique (ADN et ARN).
-                                </p>
+            {/* Section 2 */}
+            <h2 id="section-2" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">Le fonctionnement d'un système UV</h2>
+            <p className="text-lg leading-relaxed text-gray-700 mb-6 text-justify">
+                Le fonctionnement d'un système UV repose sur un principe simple : la lumière ultraviolette, émise à une longueur d'onde précise (généralement autour de 254 nanomètres), agit directement sur l'ADN des micro-organismes. En pénétrant leurs cellules, cette lumière empêche leur reproduction et les rend inoffensifs. L'eau traverse une chambre en acier inoxydable dans laquelle se trouve une lampe UV protégée par un manchon de quartz transparent. En quelques fractions de seconde, tous les agents microbiens présents sont exposés au rayonnement ultraviolet et détruits avant que l'eau ne soit distribuée dans la maison. Il s'agit d'une méthode instantanée et sans résidus, parfaitement adaptée pour le traitement complet des installations domestiques.
+            </p>
 
-                                <div className="my-20 p-10 bg-slate-50 rounded-[2.5rem] border border-slate-100 shadow-inner">
-                                    <h3 className="text-2xl font-bold text-slate-900 mb-6">Le mécanisme d'inactivation</h3>
-                                    <p>
-                                        Contrairement aux désinfectants chimiques qui "tuent" l'organisme par oxydation, les UV agissent par **inactivation génétique**. L'absorption des rayons provoque une rupture des liaisons moléculaires dans l'ADN, créant des "dimères de pyrimidine".
-                                    </p>
-                                    <p className="mt-4">
-                                        Ce dommage structurel rend le micro-organisme incapable de se répliquer. Un agent pathogène qui ne peut pas se reproduire est considéré comme mort d'un point de vue épidémiologique, car il ne peut plus causer d'infection ou de maladie dans le corps humain.
-                                    </p>
-                                </div>
+            {/* Section 3 */}
+            <h2 id="section-3" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">Une efficacité prouvée contre les pathogènes</h2>
+            <p className="text-lg leading-relaxed text-gray-700 mb-6 text-justify">
+                La grande force du système UV réside dans sa capacité à éliminer efficacement la majorité des pathogènes connus, notamment les bactéries comme E. coli, la salmonelle ou encore la giardia, souvent responsables de troubles gastro-intestinaux. Elle est particulièrement recommandée pour les résidences alimentées par un puits, où la qualité de l'eau peut fluctuer selon les saisons et les conditions du terrain. Contrairement au chlore, la désinfection UV ne génère ni goût ni odeur désagréable, et elle n'altère pas la minéralité naturelle de l'eau. Cela en fait une solution idéale pour les foyers souhaitant combiner sécurité sanitaire et confort gustatif. De plus, elle s'intègre facilement à d'autres systèmes de filtration, comme les filtres à sédiments ou au charbon actif, pour offrir une protection complète.
+            </p>
 
-                                <h2 id="section-2" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">Anatomie d'un système UV Bricareau</h2>
-                                <p>
-                                    Un système de désinfection UV résidentiel est une pièce d'ingénierie de haute précision composée de quatre éléments fondamentaux :
-                                </p>
-                                <ul className="space-y-6 my-10">
-                                    <li className="flex gap-4">
-                                        <div className="h-8 w-8 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0 mt-1">
-                                            <span className="text-blue-600 font-bold">1</span>
-                                        </div>
-                                        <div>
-                                            <h4 className="font-bold text-xl text-slate-900 mb-1">La lampe UV germicide</h4>
-                                            <p>C'est le cœur du système. Elle contient des vapeurs de mercure qui, lorsqu'elles sont excitées par un courant électrique, génèrent la lumière UV-C à 254 nm.</p>
-                                        </div>
-                                    </li>
-                                    <li className="flex gap-4">
-                                        <div className="h-8 w-8 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0 mt-1">
-                                            <span className="text-blue-600 font-bold">2</span>
-                                        </div>
-                                        <div>
-                                            <h4 className="font-bold text-xl text-slate-900 mb-1">Le manchon de quartz</h4>
-                                            <p>La lampe est protégée par un tube en quartz pur. Pourquoi le quartz ? Parce que le verre ordinaire bloque les rayons UV-C, alors que le quartz laisse passer plus de 90 % de l'énergie germicide tout en isolant la lampe thermiquement de l'eau froide.</p>
-                                        </div>
-                                    </li>
-                                    <li className="flex gap-4">
-                                        <div className="h-8 w-8 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0 mt-1">
-                                            <span className="text-blue-600 font-bold">3</span>
-                                        </div>
-                                        <div>
-                                            <h4 className="font-bold text-xl text-slate-900 mb-1">La chambre de réaction</h4>
-                                            <p>Généralement construite en acier inoxydable 304 ou 316 poli, elle confine l'eau pendant son exposition. Sa finition miroir permet de réfléchir les rayons UV à l'intérieur, maximisant la dose reçue par chaque goutte d'eau.</p>
-                                        </div>
-                                    </li>
-                                    <li className="flex gap-4">
-                                        <div className="h-8 w-8 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0 mt-1">
-                                            <span className="text-blue-600 font-bold">4</span>
-                                        </div>
-                                        <div>
-                                            <h4 className="font-bold text-xl text-slate-900 mb-1">Le ballast intelligent</h4>
-                                            <p>Il régule la tension de la lampe et surveille son état. Les systèmes Bricareau incluent des alarmes sonores et visuelles pour vous avertir s'il est temps de remplacer la lampe ou si la désinfection n'est plus optimale.</p>
-                                        </div>
-                                    </li>
-                                </ul>
+            {/* Section 4 */}
+            <h2 id="section-4" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">Conditions optimales et entretien</h2>
+            <p className="text-lg leading-relaxed text-gray-700 mb-6 text-justify">
+                Cependant, pour fonctionner de manière optimale, l'eau doit d'abord être claire et exempte de particules en suspension. Les sédiments, le fer ou le manganèse peuvent réduire la transmission de la lumière UV et diminuer son efficacité. C'est pourquoi un système UV s'accompagne presque toujours d'un préfiltrage, assurant que la lumière atteigne pleinement les micro-organismes à traiter. L'entretien est simple : il suffit généralement de remplacer la lampe une fois par an et de nettoyer périodiquement le manchon de quartz. Ces gestes d'entretien garantissent une performance constante et une désinfection uniforme, avec une consommation électrique minimale équivalente à celle d'une simple ampoule domestique.
+            </p>
 
-                                <div className="relative my-24 rounded-[3rem] overflow-hidden shadow-2xl">
-                                    <img src={microImage} alt="Pureté microbiologique garantie" className="w-full h-[500px] object-cover" />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-blue-900/80 to-transparent" />
-                                    <div className="absolute bottom-12 left-12 right-12 text-white">
-                                        <ShieldCheck className="h-16 w-16 mb-6 text-blue-400" />
-                                        <h3 className="text-3xl font-bold mb-4 italic text-white">Protection sans Compromis</h3>
-                                        <p className="text-xl text-blue-100 font-light max-w-2xl leading-relaxed">
-                                            Les virus comme l'Hépatite A et les bactéries comme E. coli sont neutralisés à 99,99 % en une fraction de seconde.
-                                        </p>
-                                    </div>
-                                </div>
+            {/* Section 5 */}
+            <h2 id="section-5" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">Un choix écologique et durable</h2>
+            <p className="text-lg leading-relaxed text-gray-700 mb-6 text-justify">
+                Sur le plan écologique, la désinfection UV représente une technologie propre et durable. Elle ne produit aucun sous-produit chimique, ne rejette rien dans l'environnement et ne modifie pas l'équilibre biologique de l'eau. Elle consomme très peu d'énergie et ne nécessite aucun additif, ce qui en fait une solution responsable par rapport aux traitements chimiques traditionnels. De plus, les systèmes de désinfection UV modernes sont conçus pour durer : ils utilisent des matériaux résistants à la corrosion et une technologie de contrôle automatique qui assure un fonctionnement continu et sécuritaire. Plusieurs modèles sont même dotés d'indicateurs lumineux ou d'alarmes pour signaler la fin de vie de la lampe, garantissant une eau toujours désinfectée.
+            </p>
 
-                                <h2 id="section-3" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">Pourquoi choisir les UV plutôt que le chlore ?</h2>
-                                <p>
-                                    Pendant des décennies, la chloration a été la norme. Cependant, pour l'usage résidentiel, les UV présentent des avantages insurmontables :
-                                </p>
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-12">
-                                    <div className="p-8 bg-blue-50 border border-blue-100 rounded-3xl">
-                                        <h4 className="font-bold text-xl text-blue-900 mb-4 flex items-center gap-2">
-                                            <Waves className="h-5 w-5 text-blue-600" /> Intégrité de l'eau
-                                        </h4>
-                                        <p className="text-slate-700 text-sm">Les UV ne modifient ni le goût, ni l'odeur, ni le pH de l'eau. Vous buvez une eau physiquement pure, sans les sous-produits toxiques de la chloration (trihalométhanes).</p>
-                                    </div>
-                                    <div className="p-8 bg-blue-50 border border-blue-100 rounded-3xl">
-                                        <h4 className="font-bold text-xl text-blue-900 mb-4 flex items-center gap-2">
-                                            <ShieldCheck className="h-5 w-5 text-blue-600" /> Efficacité Totale
-                                        </h4>
-                                        <p className="text-slate-700 text-sm">Certains parasites comme *Cryptosporidium* et *Giardia* sont extrêmement résistants au chlore mais sont instantanément inactivés par les rayons UV.</p>
-                                    </div>
-                                </div>
-
-                                <h2 id="section-4" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">La Notion de Dose UV</h2>
-                                <p>
-                                    L'efficacité de la désinfection dépend de la "dose UV", exprimée en millijoules par centimètre carré (mJ/cm²). La formule est simple :
-                                    **Dose = Intensité de la lampe x Temps de contact**.
-                                </p>
-                                <p>
-                                    Les normes de santé exigent généralement une dose minimale de 30 à 40 mJ/cm² pour garantir une sécurité potable. Chez Bricareau, nos systèmes sont dimensionnés pour maintenir cette dose même au débit maximum autorisé par votre plomberie.
-                                </p>
-
-                                <h2 id="section-5" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">Conditions essentielles pour une désinfection réussie</h2>
-                                <p>
-                                    La lumière UV doit pouvoir "voir" les bactéries pour les inactiver. Si l'eau est trouble ou contient trop de minéraux, ces derniers peuvent agir comme un bouclier (phénomène de *shadowing*).
-                                </p>
-                                <p>
-                                    C'est pourquoi un système UV doit **toujours** être précédé de :
-                                </p>
-                                <ol className="list-decimal pl-8 my-10 space-y-4 font-semibold text-slate-900">
-                                    <li>Une filtration de sédiments (5 microns ou moins) pour éliminer les particules physiques.</li>
-                                    <li>Un adoucisseur d'eau si votre eau est dure (le calcaire encrasse le manchon de quartz).</li>
-                                    <li>Un traitement du fer et du manganèse (ces métaux tachent le quartz et absorbent les UV).</li>
-                                </ol>
-
-                                <h2 id="section-6" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">Maintenance et Longévité</h2>
-                                <p>
-                                    Une lampe UV a une durée de vie efficace d'environ 9 000 heures, soit environ un an d'utilisation continue. Passé ce délai, même si la lampe produit encore de la lumière visible (le halo bleu que vous pouvez voir à travers le viseur), elle ne produit plus assez de rayons UV-C germicides. Le remplacement annuel est impératif pour votre sécurité alimentaire.
-                                </p>
-
-                                <h2 id="section-7" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">Conclusion</h2>
-                                <p>
-                                    Le système UV est l'assurance-vie de votre eau de puits. C'est une technologie silencieuse, écologique et incroyablement fiable qui transforme une source d'eau potentiellement vulnérable en un approvisionnement d'une pureté comparable aux meilleures eaux embouteillées.
-                                </p>
-                                <p>
-                                    Chez Bricareau, nous ne nous contentons pas d'installer une lampe ; nous concevons une barrière de protection complète adaptée à la chimie spécifique de votre eau.
-                                </p>
-
-                                <div className="mt-32 p-12 bg-gradient-to-br from-indigo-900 to-blue-800 rounded-[3rem] text-white text-center shadow-2xl relative overflow-hidden">
-                                    <div className="absolute top-0 right-0 w-64 h-64 bg-blue-400/10 rounded-full -mr-32 -mt-32 blur-3xl" />
-                                    <h3 className="text-4xl font-bold mb-8 italic text-white">Protégez votre santé dès aujourd'hui</h3>
-                                    <p className="text-xl mb-12 opacity-90 max-w-3xl mx-auto font-light leading-relaxed">
-                                        Ne laissez plus la place au doute concernant la qualité microbiologique de votre eau. Une étude personnalisée de vos besoins est la première étape vers une sécurité totale.
-                                    </p>
-                                    <div className="flex flex-col sm:flex-row gap-8 justify-center items-center">
-                                        <Button size="lg" className="bg-white text-blue-900 hover:bg-blue-50 rounded-full px-12 h-20 text-xl font-bold shadow-xl transition-all hover:scale-105" asChild>
-                                            <a href="/contact">Demander une étude personnalisée</a>
-                                        </Button>
-                                        <div className="flex flex-col items-start">
-                                            <span className="text-blue-200 text-sm uppercase tracking-widest mb-1">Expert conseil</span>
-                                            <a href="tel:18552649328" className="text-3xl font-bold hover:text-blue-300 transition-colors">
-                                                1-855-264-9328
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
+            {/* Section 6 */}
+            <h2 id="section-6" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">Investir dans la fiabilité de votre eau</h2>
+            <p className="text-lg leading-relaxed text-gray-700 mb-6 text-justify">
+                Pour les particuliers québécois, adopter un système UV, c'est investir dans la fiabilité et la sécurité de l'eau potable à long terme. Que l'eau provienne d'un puits artésien, d'un puits de surface ou d'une source alternative, cette technologie assure une barrière constante contre les bactéries et virus sans ajout de produits chimiques. En la combinant à un système de filtration adapté, on obtient une eau pure, claire et douce, directement au robinet. Les professionnels du traitement d'eau offrent un accompagnement complet : diagnostic, installation, entretien et remplacement annuel des lampes. En choisissant la désinfection UV, vous optez pour une solution moderne, économique et respectueuse de votre santé comme de l'environnement — un choix intelligent pour profiter d'une eau véritablement propre, jour après jour.
+            </p>
         </BlogLayout>
     );
 };

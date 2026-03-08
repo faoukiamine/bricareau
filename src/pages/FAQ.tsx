@@ -135,7 +135,7 @@ const FAQ = () => {
             <Header />
 
             <main>
-                {/* Hero Section - Following the design in the image */}
+                {/* 1. Hero Section - Following the design in the image */}
                 <section className="relative bg-[#001529] pt-[180px] pb-24 text-white overflow-hidden">
                     <div className="absolute top-0 right-0 w-1/2 h-full opacity-20 hidden lg:block bg-black overflow-hidden">
                         <iframe
@@ -164,7 +164,7 @@ const FAQ = () => {
                     </div>
                 </section>
 
-                {/* Quick Navigation / Categories Icons */}
+                {/* 2. Quick Navigation / Categories Icons */}
                 <div className="bg-white border-b sticky top-[64px] z-30 hidden md:block shadow-sm">
                     <div className="container mx-auto px-6 overflow-x-auto">
                         <div className="flex justify-center gap-12 py-6">
@@ -182,7 +182,7 @@ const FAQ = () => {
                     </div>
                 </div>
 
-                {/* Category Sections */}
+                {/* 3. Category Sections */}
                 {categories.map((cat, idx) => (
                     <section key={cat.id} id={cat.id} className={`py-24 ${idx % 2 === 0 ? 'bg-white' : 'bg-slate-50'}`}>
                         <div className="container mx-auto px-6">
@@ -231,7 +231,7 @@ const FAQ = () => {
                     </section>
                 ))}
 
-                {/* Final Call to Action */}
+                {/* 4. Final Call to Action */}
                 <section className="py-24 bg-blue-600 text-white relative overflow-hidden">
                     <div className="absolute top-0 left-0 w-full h-full opacity-10">
                         <Waves className="absolute -bottom-10 -left-10 w-96 h-96 text-white" />

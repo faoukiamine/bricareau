@@ -124,7 +124,7 @@ const Adoucissement = () => {
                             </div>
                         </div>
                     </div>
-                    {/* Wave Separator Bottom - Transition to Blue Section */}
+                    {/* 2. Wave Separator Bottom - Transition to Blue Section */}
                     <div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-[0] z-20 pointer-events-none">
                         <svg
                             className="relative block w-full h-[50px] md:h-[80px]"
@@ -142,7 +142,7 @@ const Adoucissement = () => {
                     </div>
                 </section>
 
-                {/* 2. Why choose our water softeners Section */}
+                {/* 3. Why choose our water softeners Section */}
                 <section className="py-24 bg-blue-600 text-white text-center">
                     <div className="container mx-auto px-6 text-center">
                         <div className="text-center mb-16">
@@ -169,7 +169,7 @@ const Adoucissement = () => {
                         </div>
                     </div>
                 </section>
-                {/* 3. Water Softeners Section - NEW DESIGN */}
+                {/* 4. Water Softeners Section */}
                 <section className="py-24 bg-white relative overflow-hidden">
                     <div className="container mx-auto px-6">
                         <div className="flex flex-col lg:flex-row items-start gap-16">
@@ -241,7 +241,7 @@ const Adoucissement = () => {
                     </div>
                 </section>
 
-                {/* 4. Portable Water Softeners Section - NEW DESIGN */}
+                {/* 5. Portable Water Softeners Section */}
                 <section className="py-24 bg-gray-50 relative overflow-hidden">
                     <div className="container mx-auto px-6">
                         <div className="flex flex-col lg:flex-row-reverse items-start gap-16">
@@ -313,7 +313,7 @@ const Adoucissement = () => {
                     </div>
                 </section>
 
-                {/* 5. Water Conditionners without salt Section - NEW DESIGN */}
+                {/* 6. Water Conditionners without salt Section */}
                 <section className="py-24 bg-white relative overflow-hidden">
                     <div className="container mx-auto px-6">
                         <div className="flex flex-col lg:flex-row items-start gap-16">
@@ -385,7 +385,7 @@ const Adoucissement = () => {
                     </div>
                 </section>
 
-                {/* 6. Testimonials */}
+                {/* 7. Testimonials */}
                 <TestimonialsSection
                     filterProduct="/adoucissement"
                     title={
@@ -399,7 +399,7 @@ const Adoucissement = () => {
 
 
 
-                {/* 7. Comparison Table */}
+                {/* 8. Comparison Table */}
                 <section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
@@ -463,7 +463,7 @@ const Adoucissement = () => {
                     </div>
                 </section>
 
-                {/* 7. Water Testing Section */}
+                {/* 9. Water Testing Section */}
                 <section className="relative h-[650px] flex items-center overflow-hidden">
                     <div className="absolute inset-0 z-0">
                         <img
@@ -506,7 +506,7 @@ const Adoucissement = () => {
                     </div>
                 </section>
 
-                {/* 8. FAQ Section */}
+                {/* 10. FAQ Section */}
                 <section className="py-24 bg-white">
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
@@ -558,7 +558,7 @@ const Adoucissement = () => {
                     </div>
                 </section>
 
-                {/* 9. Resources Section */}
+                {/* 11. Resources Section */}
                 <section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
@@ -603,7 +603,7 @@ const Adoucissement = () => {
                     </div>
                 </section>
 
-                {/* Consultation Form Section */}
+                {/* 12.Consultation Form Section */}
                 <ConsultationFormSection id="consultation" />
             </main>
             <Footer />

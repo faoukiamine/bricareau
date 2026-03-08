@@ -73,7 +73,7 @@ const FiltrationSousEvier = () => {
         <div className="min-h-screen bg-background text-slate-900 font-sans">
             <Header />
             <main>
-                {/* Hero Section */}
+                {/* 1.Hero Section */}
                 <section className="relative h-[850px] flex items-center overflow-hidden -mt-[104px] pt-[104px]">
                     <div className="absolute inset-0 z-0">
                         <img
@@ -230,7 +230,7 @@ const FiltrationSousEvier = () => {
                     </div>
                 </section>
 
-                {/* 6. Comparison Table */}
+                {/* 4. Comparison Table */}
                 <section className="py-24 bg-white">
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
@@ -287,7 +287,7 @@ const FiltrationSousEvier = () => {
                     </div>
                 </section>
 
-                {/* 7.Water Testing Section */}
+                {/* 5.Water Testing Section */}
                 <section className="relative h-[650px] flex items-center overflow-hidden">
                     <div className="absolute inset-0 z-0">
                         <img
@@ -325,7 +325,7 @@ const FiltrationSousEvier = () => {
                     </div>
                 </section>
 
-                {/* 7. Testimonials Section */}
+                {/* 6. Testimonials Section */}
                 <TestimonialsSection
                     filterProduct="/Systemes-de-filtration-deau-sous-evier"
                     title={
@@ -336,7 +336,7 @@ const FiltrationSousEvier = () => {
                     }
                 />
 
-                {/* 8. FAQ Section */}
+                {/* 7. FAQ Section */}
                 <section className="py-24 bg-white border-t border-slate-100">
                     <div className="container mx-auto px-4 text-left">
                         <div className="text-left mb-16">
@@ -399,7 +399,7 @@ const FiltrationSousEvier = () => {
                     </div>
                 </section>
 
-                {/* Resources Section */}
+                {/* 8. Resources Section */}
                 <section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
@@ -454,6 +454,7 @@ const FiltrationSousEvier = () => {
                     </div>
                 </section>
 
+                {/* 9. Consultation Form Section */}
                 <ConsultationFormSection id="consultation" />
             </main>
             <Footer />

@@ -133,7 +133,7 @@ const EauDePuits = () => {
     <div className="min-h-screen bg-background">
       <Header />
       <main>
-        {/* 1.Hero Section */}
+        {/* 1. Hero Section */}
         <section className="relative h-[850px] flex items-center overflow-hidden -mt-[104px] pt-[104px]">
           <div className="absolute inset-0 z-0">
             <img
@@ -188,7 +188,7 @@ const EauDePuits = () => {
             </div>
           </div>
 
-          {/* Wave Separator Bottom - Transition to Blue Section */}
+          {/* 2. Wave Separator Bottom - Transition to Blue Section */}
           <div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-[0] z-20 pointer-events-none">
             <svg
               className="relative block w-full h-[50px] md:h-[80px]"
@@ -206,7 +206,7 @@ const EauDePuits = () => {
           </div>
         </section>
 
-        {/* 2. Well Water Problems section */}
+        {/* 3. Well Water Problems section */}
         <section className="bg-white py-0 h-[900px] flex flex-col justify-center overflow-hidden">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
@@ -353,7 +353,7 @@ const EauDePuits = () => {
           </div>
         </section>
 
-        {/* 7.Water Testing Section */}
+        {/* 5.Water Testing Section */}
         <section className="relative h-[650px] flex items-center overflow-hidden">
           <div className="absolute inset-0 z-0">
             <img
@@ -566,7 +566,7 @@ const EauDePuits = () => {
           </div>
         </section>
 
-        {/* 9.CTA Section */}
+        {/* 9. CTA Section */}
         <section className="bg-primary py-16 md:py-20">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-2xl md:text-3xl font-bold text-primary-foreground mb-4">

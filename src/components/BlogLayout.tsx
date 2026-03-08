@@ -142,45 +142,116 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({ title, headerImage, children, t
             <Header />
 
             <div className="flex-grow">
-                {/* Header Image */}
-                <div className="w-full h-[60vh] lg:h-[70vh] min-h-[500px] relative -mt-[104px]">
-                    <img
-                        src={headerImage}
-                        alt={title}
-                        className="w-full h-full object-cover"
-                    />
-                    <div className="absolute inset-0 bg-black/40 lg:bg-gradient-to-b lg:from-black/70 lg:via-black/30 lg:to-transparent z-10" />
-                </div>
+                {/* Hero Section - Split Layout */}
+                <div className="w-full min-h-[450px] md:min-h-[700px] relative -mt-[104px] flex overflow-hidden bg-[#1a3a5c]">
+                    {/* Background image - right side */}
+                    <div className="absolute right-0 top-0 z-[1] hidden h-full w-3/5 lg:block">
+                        <img
+                            src={headerImage}
+                            alt={title}
+                            className="w-full h-full object-cover"
+                        />
+                    </div>
 
-                {/* Main Content Card (overlapping) */}
-                <main className="container mx-auto px-4 md:px-6 -mt-40 relative z-10">
-                    <article className="bg-white px-8 py-16 md:px-12 lg:px-16 md:py-24 shadow-sm rounded-t-lg lg:rounded-t-none">
-                        {/* Header of article */}
-                        <div className="flex flex-col items-center text-center mb-16 max-w-3xl mx-auto">
-                            <span className="inline-block px-5 py-2 bg-black text-white text-[11px] font-bold tracking-[0.2em] uppercase rounded-full mb-8">
-                                Guide Expert
-                            </span>
+                    {/* SVG overlay with exact NSF-style curved shapes + gradients */}
+                    <div className="absolute inset-0 z-[2] hidden lg:block">
+                        <svg
+                            className="w-full h-full"
+                            viewBox="0 0 640 290"
+                            preserveAspectRatio="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <defs>
+                                {/* Gradient for main panel: dark to medium green */}
+                                <linearGradient id="gradPanel" x1="0" y1="0" x2="1" y2="1">
+                                    <stop offset="0%" stopColor="#0c2340" />
+                                    <stop offset="50%" stopColor="#1a3a5c" />
+                                    <stop offset="100%" stopColor="#2563a0" />
+                                </linearGradient>
+                                {/* Gradient for petal: medium to light blue */}
+                                <linearGradient id="gradPetal" x1="0" y1="0" x2="1" y2="1">
+                                    <stop offset="0%" stopColor="#1a3a5c" />
+                                    <stop offset="100%" stopColor="#3b82c4" />
+                                </linearGradient>
+                                {/* Gradient for top accent */}
+                                <linearGradient id="gradAccent" x1="0" y1="0" x2="1" y2="1">
+                                    <stop offset="0%" stopColor="#163050" />
+                                    <stop offset="100%" stopColor="#0c2340" />
+                                </linearGradient>
+                                {/* Gradient for corner accents */}
+                                <linearGradient id="gradCorner" x1="0" y1="0" x2="0" y2="1">
+                                    <stop offset="0%" stopColor="#1a3a5c" />
+                                    <stop offset="100%" stopColor="#3b82c4" stopOpacity="0.4" />
+                                </linearGradient>
+                            </defs>
 
-                            <h1
-                                className="text-4xl md:text-5xl lg:text-6xl font-black text-black leading-[1.1] tracking-tight mb-8"
-                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif' }}
-                            >
-                                {title}
-                            </h1>
+                            {/* Main green panel with concave right edge */}
+                            <path
+                                d="M269.7 85.95C260.8 58.45 254.75 29.7 251.75 0H0v290.5h287.25c-23.65-32.95-37.6-73.35-37.6-117 0-31.4 7.2-61.1 20.05-87.55Z"
+                                fill="url(#gradPanel)"
+                            />
+                            {/* Overlapping petal/leaf shape */}
+                            <path
+                                d="M269.7 85.95c-12.85 26.45-20.05 56.15-20.05 87.55 0 43.65 13.95 84.05 37.6 117h128.2C347.85 239.45 296.3 168.3 269.7 85.95Z"
+                                fill="url(#gradPetal)"
+                            />
+                            {/* Top curved accent */}
+                            <path
+                                d="M349.35 0h-97.6c3 29.7 9.05 58.45 17.95 85.95C287.15 50 315 20.05 349.35 0Z"
+                                fill="url(#gradAccent)"
+                            />
+                            {/* Corner accent top-right */}
+                            <path
+                                d="M640 107.15V0h-88.45c40.9 23.85 72.55 61.8 88.45 107.15Z"
+                                fill="url(#gradCorner)"
+                                opacity="0.4"
+                            />
+                            {/* Corner accent bottom-right */}
+                            <path
+                                d="M640 290.5v-50.65c-6.4 18.2-15.3 35.25-26.35 50.65H640Z"
+                                fill="url(#gradCorner)"
+                                opacity="0.3"
+                            />
+                        </svg>
+                    </div>
 
-                            <div className="flex items-center justify-center flex-wrap gap-4 text-[11px] text-gray-400 uppercase tracking-[0.1em]">
-                                <span>Mars 20 — 2026</span>
-                                <span className="w-px h-3 bg-gray-300"></span>
-                                <span>Par Bricareau</span>
-                                <span className="w-px h-3 bg-gray-300"></span>
-                                <span>No Comments</span>
+                    {/* Mobile fallback: full green background */}
+                    <div className="absolute inset-0 bg-[#1a3a5c] lg:hidden" />
+                    <div className="lg:hidden absolute bottom-0 left-0 right-0 h-[200px]">
+                        <img
+                            src={headerImage}
+                            alt={title}
+                            className="w-full h-full object-cover"
+                        />
+                    </div>
+
+                    <div className="absolute inset-0 z-10 flex items-center">
+                        <div className="container mx-auto px-4 md:px-6">
+                            <div className="max-w-xl">
+                                <h1
+                                    className="text-3xl md:text-4xl lg:text-[2.8rem] font-bold italic text-white leading-tight mb-6 tracking-tight"
+                                    style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif' }}
+                                >
+                                    {title}
+                                </h1>
+                                <div className="flex items-center flex-wrap gap-4 text-[11px] text-white/50 uppercase tracking-[0.15em]">
+                                    <span>Mars 20 — 2026</span>
+                                    <span className="w-px h-3 bg-white/25"></span>
+                                    <span>Par Bricareau</span>
+                                </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+
+                {/* Main Content Card */}
+                <main className="container mx-auto px-4 md:px-6 relative z-10">
+                    <article className="bg-white px-8 py-16 md:px-12 lg:px-16 md:py-24 shadow-sm">
 
                         {/* Article Grid Container */}
                         <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
                             {/* Article Body */}
-                            <div className="w-full lg:w-3/4 text-[15px] leading-relaxed text-gray-500 font-light space-y-8" style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif' }}>
+                            <div className="w-full lg:w-3/4 text-[15px] leading-relaxed text-gray-500 font-light space-y-8 text-justify" style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif' }}>
                                 {children}
                             </div>
 

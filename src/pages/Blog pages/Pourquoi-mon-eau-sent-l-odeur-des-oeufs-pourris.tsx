@@ -1,24 +1,27 @@
 import React, { useEffect } from "react";
 import BlogLayout from "@/components/BlogLayout";
 import eauOdeurImg from "@/assets/eau-odeur-oeufs-pourris.png";
-import { ArrowRight, Phone } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
 const PourquoiEauSentOeufsPourris = () => {
     useEffect(() => {
         document.title = "Pourquoi mon eau sent l'odeur des œufs pourris ? | Bricareau";
         const metaDesc = document.querySelector('meta[name="description"]');
         if (metaDesc) {
-            metaDesc.setAttribute("content", "Comprenez les causes de l'odeur de soufre dans votre eau et découvrez les solutions efficaces pour l'éliminer. Guide d'expert par Bricareau.");
+            metaDesc.setAttribute("content", "Comprenez les causes de l'odeur de soufre dans votre eau et découvrez les solutions efficaces pour l'éliminer. Guide complet par Bricareau.");
         }
     }, []);
 
     const tocItems = [
-        { id: "origine-odeur", title: "L'origine de l'odeur de soufre" },
-        { id: "gaz-h2s", title: "Le responsable : Le gaz H2S" },
-        { id: "risques-sante", title: "Les risques pour la santé et la maison" },
-        { id: "solutions", title: "Solutions de traitement efficaces" },
-        { id: "maintenance", title: "L'importance de la maintenance" }
+        { id: "section-1", title: "Pourquoi mon eau sent-elle les œufs pourris ?" },
+        { id: "section-2", title: "L'origine de cette odeur désagréable" },
+        { id: "section-3", title: "Identifier la véritable cause" },
+        { id: "section-4", title: "Le rôle du chauffe-eau" },
+        { id: "section-5", title: "Quand le problème vient du puits" },
+        { id: "section-6", title: "Les risques d'ignorer le problème" },
+        { id: "section-7", title: "Comment résoudre le problème durablement" },
+        { id: "section-8", title: "Prévenir le retour de l'odeur" },
+        { id: "section-9", title: "Quand faire appel à un professionnel ?" },
+        { id: "section-10", title: "Une eau saine… et sans odeur !" }
     ];
 
     return (
@@ -27,87 +30,131 @@ const PourquoiEauSentOeufsPourris = () => {
             headerImage={eauOdeurImg}
             tocItems={tocItems}
         >
-            <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-amber-600 pl-8 italic">
-                L'odeur désagréable de soufre, souvent comparée à celle des œufs pourris, est l'un des problèmes les plus fréquents mais aussi les plus dérangeants rencontrés dans les systèmes de puits artésiens.
+            {/* Section 1 */}
+            <h2 id="section-1" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">1. Pourquoi mon eau sent-elle les œufs pourris ?</h2>
+            <p className="text-lg leading-relaxed text-gray-700 mb-6 text-justify">
+                Il n'y a rien de plus désagréable que d'ouvrir le robinet et de sentir cette odeur typique d'œufs pourris. Si vous vivez au Québec et que votre eau dégage cette senteur, sachez que vous n'êtes pas seul. Ce phénomène est assez courant dans les régions où l'eau provient de puits, mais il peut aussi toucher les réseaux municipaux. Chez <strong>Bricareau</strong>, on rencontre ce problème chaque semaine chez nos clients, et heureusement, il existe des solutions simples et efficaces pour y remédier.
             </p>
 
-            <div className="space-y-16">
-                <section id="origine-odeur">
-                    <h2 className="text-3xl font-bold text-slate-900 mb-6">L'origine de l'odeur de soufre</h2>
-                    <p className="text-lg text-slate-600 mb-6">
-                        Cette odeur provient généralement du sulfate ou du gaz de soufre hydrogéné. Elle peut se manifester uniquement dans l'eau chaude ou à la fois dans l'eau froide et l'eau chaude, ce qui aide à diagnostiquer la source du problème.
-                    </p>
-                </section>
+            {/* Section 2 */}
+            <h2 id="section-2" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">2. L'origine de cette odeur désagréable</h2>
+            <p className="text-lg leading-relaxed text-gray-700 mb-6 text-justify">
+                L'odeur d'œuf pourri dans l'eau provient le plus souvent du <strong>sulfure d'hydrogène (H₂S)</strong>, un gaz produit par des bactéries anaérobies qui se développent dans des environnements pauvres en oxygène. Ces micro-organismes transforment les sulfates naturellement présents dans l'eau en sulfures, donnant cette odeur caractéristique.
+            </p>
+            <p className="text-lg leading-relaxed text-gray-700 mb-4 text-justify">
+                Selon la source d'eau, deux scénarios sont possibles :
+            </p>
+            <ul className="list-disc pl-6 mb-6 text-lg text-gray-700 space-y-2">
+                <li>Si l'odeur se trouve <strong>uniquement dans l'eau chaude</strong>, le problème vient souvent du <strong>chauffe-eau</strong>.</li>
+                <li>Si l'odeur est présente dans <strong>toute l'installation</strong>, elle provient plutôt de la <strong>source d'eau elle-même</strong> (puits, nappe phréatique, réseau vétuste, etc.).</li>
+            </ul>
 
-                <section id="gaz-h2s">
-                    <h2 className="text-3xl font-bold text-slate-900 mb-6">Le responsable : Le gaz H2S</h2>
-                    <p className="text-lg text-slate-600 mb-8">
-                        Le sulfure d'hydrogène (H2S) est un gaz incolore qui se dissout facilement dans l'eau. Il est produit par la décomposition de matières organiques ou par l'activité de bactéries réductrices de soufre.
-                    </p>
-                </section>
+            {/* Section 3 */}
+            <h2 id="section-3" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">3. Identifier la véritable cause du problème</h2>
+            <p className="text-lg leading-relaxed text-gray-700 mb-4 text-justify">
+                Avant d'agir, il est essentiel de diagnostiquer correctement la source du gaz sulfuré. Voici un protocole en trois étapes :
+            </p>
+            <ul className="list-disc pl-6 mb-6 text-lg text-gray-700 space-y-2">
+                <li><strong>Identifier l'origine :</strong> On compare l'eau froide et l'eau chaude pour déterminer si le chauffe-eau est en cause.</li>
+                <li><strong>Effectuer un test de sulfures :</strong> Une analyse d'eau rapide permet de mesurer le taux de H₂S et de détecter la présence de bactéries sulfato-réductrices.</li>
+                <li><strong>Inspecter le système de plomberie :</strong> Certains matériaux ou anodes internes peuvent accélérer la production de sulfures.</li>
+            </ul>
+            <p className="text-lg leading-relaxed text-gray-700 mb-6 text-justify">
+                Cette méthode simple assure un diagnostic fiable et évite de remplacer inutilement un appareil ou un traitement inefficace.
+            </p>
 
-                <section id="risques-sante">
-                    <h2 className="text-3xl font-bold text-slate-900 mb-6">Les risques pour la santé et la maison</h2>
-                    <p className="text-lg text-slate-600 mb-6">
-                        Bien que généralement sans danger immédiat pour la santé aux niveaux habituels, l'H2S est très corrosif. Il peut noircir l'argenterie et endommager les pièces en cuivre et en laiton dans votre plomberie.
-                    </p>
-                </section>
+            {/* Section 4 */}
+            <h2 id="section-4" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">4. Le rôle du chauffe-eau dans la formation d'odeurs</h2>
+            <p className="text-lg leading-relaxed text-gray-700 mb-6 text-justify">
+                Le chauffe-eau électrique ou au gaz peut parfois devenir une mini-usine à odeurs. À cause de la chaleur et du manque d'oxygène, des bactéries peuvent s'y développer. Le métal de l'anode, souvent en <strong>magnésium</strong>, réagit avec les sulfates dissous dans l'eau pour créer du sulfure d'hydrogène.
+            </p>
+            <p className="text-lg leading-relaxed text-gray-700 mb-6 text-justify">
+                Une solution rapide consiste à <strong>remplacer l'anode de magnésium par une anode en aluminium-zinc</strong>. Cette simple modification réduit drastiquement la formation de sulfures sans altérer la qualité ni la durabilité du chauffe-eau. Dans les cas plus sévères, un <strong>nettoyage désinfectant et la vidange complète du réservoir</strong> peuvent être nécessaires.
+            </p>
 
-                <section id="solutions">
-                    <h2 className="text-3xl font-bold text-slate-900 mb-6">Solutions de traitement efficaces</h2>
-                    <div className="space-y-4">
-                        <div className="flex gap-4 p-6 bg-slate-50 rounded-xl border border-slate-100">
-                            <ArrowRight className="h-6 w-6 text-amber-600 shrink-0" />
-                            <div>
-                                <h4 className="font-bold text-slate-900 mb-1">Aération de l'eau</h4>
-                                <p className="text-slate-600">L'injection d'air est souvent la méthode la plus naturelle et la plus efficace pour dissiper les gaz.</p>
-                            </div>
-                        </div>
-                        <div className="flex gap-4 p-6 bg-slate-50 rounded-xl border border-slate-100">
-                            <ArrowRight className="h-6 w-6 text-amber-600 shrink-0" />
-                            <div>
-                                <h4 className="font-bold text-slate-900 mb-1">Filtration au charbon actif</h4>
-                                <p className="text-slate-600">Pour les faibles concentrations, des filtres spécialisés peuvent adsorber les molécules d'odeur.</p>
-                            </div>
-                        </div>
-                        <div className="flex gap-4 p-6 bg-slate-50 rounded-xl border border-slate-100">
-                            <ArrowRight className="h-6 w-6 text-amber-600 shrink-0" />
-                            <div>
-                                <h4 className="font-bold text-slate-900 mb-1">Systèmes d'oxydation</h4>
-                                <p className="text-slate-600">Pour les cas sévères, des systèmes d'injection d'oxygène ou de peroxyde transforment le gaz en solides filtrables.</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+            {/* Section 5 */}
+            <h2 id="section-5" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">5. Quand le problème vient du puits</h2>
+            <p className="text-lg leading-relaxed text-gray-700 mb-6 text-justify">
+                Si vous êtes propriétaire d'un puits privé, l'odeur d'œuf pourri peut venir directement de la <strong>source souterraine</strong>. Dans ce cas, le sulfure d'hydrogène se forme naturellement à cause de réactions chimiques entre les minéraux et la matière organique présente dans le sol.
+            </p>
+            <p className="text-lg leading-relaxed text-gray-700 mb-4 text-justify">
+                Voici les solutions les plus courantes :
+            </p>
+            <ul className="list-disc pl-6 mb-6 text-lg text-gray-700 space-y-2">
+                <li><strong>Aération de l'eau :</strong> L'ajout d'un système d'aération dissipe le gaz sulfuré avant qu'il n'entre dans le réseau domestique.</li>
+                <li><strong>Filtration au charbon activé :</strong> Ce procédé retient efficacement les gaz et les impuretés responsables de l'odeur.</li>
+                <li><strong>Osmose inversée ou traitement au chlore :</strong> Ces méthodes plus avancées éliminent à la fois les bactéries et les sulfures présents.</li>
+            </ul>
+            <p className="text-lg leading-relaxed text-gray-700 mb-6 text-justify">
+                Nos experts peuvent analyser votre eau gratuitement et recommander la technologie la mieux adaptée à votre situation, que vous soyez en zone rurale ou semi-urbaine.
+            </p>
 
-                <section id="maintenance">
-                    <h2 className="text-3xl font-bold text-slate-900 mb-6">L'importance de la maintenance</h2>
-                    <p className="text-lg text-slate-600">
-                        Un système négligé peut voir le retour de l'odeur. Un entretien régulier de l'anode de votre chauffe-eau et le nettoyage des filtres sont essentiels pour une eau qui sent bon toute l'année.
-                    </p>
-                </section>
-            </div>
+            {/* Section 6 */}
+            <h2 id="section-6" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">6. Les risques d'ignorer le problème</h2>
+            <p className="text-lg leading-relaxed text-gray-700 mb-6 text-justify">
+                Si l'odeur d'œuf pourri n'est pas systématiquement dangereuse pour la santé, elle reste un <strong>indicateur d'une eau déséquilibrée</strong>. Le sulfure d'hydrogène peut endommager la tuyauterie, corroder le métal et tacher la vaisselle, les tissus ou les appareils ménagers.
+            </p>
+            <p className="text-lg leading-relaxed text-gray-700 mb-6 text-justify">
+                De plus, une forte concentration de sulfures peut masquer la présence d'autres contaminants. Ignorer cette situation, c'est donc <strong>prendre le risque de détériorer votre installation</strong> et d'altérer la qualité de votre eau potable.
+            </p>
 
-            <div className="mt-24 p-12 bg-amber-900 text-white rounded-[3rem] relative overflow-hidden shadow-2xl">
-                <div className="absolute bottom-0 right-0 opacity-10 scale-150 translate-x-10 translate-y-10">
-                    <ArrowRight className="w-64 h-64" />
-                </div>
-                <div className="relative z-10">
-                    <h3 className="text-3xl md:text-5xl font-bold mb-8 tracking-tighter">Retrouvez la fraîcheur de votre eau</h3>
-                    <p className="text-xl text-amber-100 opacity-90 mb-10 font-light leading-relaxed max-w-2xl">
-                        Ne supportez plus cette odeur un jour de plus. Nos techniciens certifiés peuvent diagnostiquer la source exacte du soufre dans votre maison.
-                    </p>
-                    <div className="flex flex-col sm:flex-row gap-6">
-                        <Button size="lg" className="bg-amber-600 hover:bg-amber-700 text-white rounded-full px-12 h-16 text-lg font-bold shadow-xl transition-all" asChild>
-                            <a href="/contact">Demander un diagnostic</a>
-                        </Button>
-                        <a href="tel:18552649328" className="flex items-center gap-4 text-3xl font-bold hover:text-amber-300 transition-colors">
-                            <Phone className="h-8 w-8" />
-                            1-855-264-9328
-                        </a>
-                    </div>
-                </div>
-            </div>
+            {/* Section 7 */}
+            <h2 id="section-7" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">7. Comment résoudre le problème durablement</h2>
+            <p className="text-lg leading-relaxed text-gray-700 mb-4 text-justify">
+                Un bon traitement commence par une <strong>analyse complète et personnalisée</strong>. Une équipe spécialisée se déplace pour prélever des échantillons, identifier les causes précises et recommander la solution adaptée à vos besoins et à votre budget.
+            </p>
+            <p className="text-lg leading-relaxed text-gray-700 mb-4 text-justify">
+                Les traitements courants comprennent :
+            </p>
+            <ul className="list-disc pl-6 mb-6 text-lg text-gray-700 space-y-2">
+                <li>Des <strong>systèmes d'aération</strong> sur mesure pour neutraliser les gaz sulfurés.</li>
+                <li>Des <strong>filtres catalytiques ou au charbon actif</strong> pour purifier l'eau à la source.</li>
+                <li>Des <strong>désinfections par injection de chlore ou de peroxyde</strong> pour éliminer les bactéries responsables.</li>
+                <li>Un <strong>entretien régulier</strong> pour éviter le retour des odeurs et assurer la performance du système.</li>
+            </ul>
+            <p className="text-lg leading-relaxed text-gray-700 mb-6 text-justify">
+                Chaque installation est garantie et accompagnée d'un suivi technique après mise en service.
+            </p>
+
+            {/* Section 8 */}
+            <h2 id="section-8" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">8. Prévenir le retour de l'odeur d'œuf pourri</h2>
+            <p className="text-lg leading-relaxed text-gray-700 mb-4 text-justify">
+                Une fois l'eau traitée, il est important d'adopter de bons réflexes pour éviter le retour du problème :
+            </p>
+            <ul className="list-disc pl-6 mb-6 text-lg text-gray-700 space-y-2">
+                <li>Faire <strong>analyser l'eau une fois par an</strong>, surtout si vous utilisez un puits.</li>
+                <li>Entretenir régulièrement votre <strong>chauffe-eau et vos équipements de filtration</strong>.</li>
+                <li>Éviter l'utilisation de produits chimiques non adaptés qui peuvent perturber l'équilibre biologique de votre système.</li>
+            </ul>
+            <p className="text-lg leading-relaxed text-gray-700 mb-6 text-justify">
+                Des plans d'entretien personnalisés permettent de vous libérer de ces tâches techniques et de garantir une eau toujours propre, claire et sans odeur.
+            </p>
+
+            {/* Section 9 */}
+            <h2 id="section-9" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">9. Quand faut-il faire appel à un professionnel ?</h2>
+            <p className="text-lg leading-relaxed text-gray-700 mb-4 text-justify">
+                Il peut être tentant d'essayer des solutions maison (vinaigre, désinfectants, nettoyages ponctuels), mais sans diagnostic précis, ces tentatives restent souvent temporaires.
+            </p>
+            <p className="text-lg leading-relaxed text-gray-700 mb-4 text-justify">
+                Faites appel à un professionnel dès que :
+            </p>
+            <ul className="list-disc pl-6 mb-6 text-lg text-gray-700 space-y-2">
+                <li>L'odeur est persistante même après plusieurs nettoyages.</li>
+                <li>L'eau a un goût métallique ou piquant.</li>
+                <li>Vous remarquez des taches ou dépôts sur vos robinets ou appareils.</li>
+            </ul>
+            <p className="text-lg leading-relaxed text-gray-700 mb-6 text-justify">
+                Les techniciens certifiés sont équipés pour intervenir rapidement et disposent des outils nécessaires pour <strong>rétablir la qualité de votre eau dès la première visite</strong>.
+            </p>
+
+            {/* Section 10 */}
+            <h2 id="section-10" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">10. Une eau saine… et sans odeur !</h2>
+            <p className="text-lg leading-relaxed text-gray-700 mb-6 text-justify">
+                Une eau qui sent l'œuf pourri n'est jamais une fatalité. En identifiant rapidement la cause et en appliquant le bon traitement, vous pouvez retrouver une eau agréable, sécuritaire et inodore.
+            </p>
+            <p className="text-lg leading-relaxed text-gray-700 mb-6 text-justify">
+                Contactez-nous dès aujourd'hui pour obtenir <strong>une consultation gratuite</strong> et découvrir la solution la mieux adaptée à votre maison. Une eau claire, propre et sans odeur — c'est ce que nous vous promettons.
+            </p>
         </BlogLayout>
     );
 };

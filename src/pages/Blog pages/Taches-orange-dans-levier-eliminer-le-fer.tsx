@@ -1,221 +1,188 @@
 import React, { useEffect } from "react";
 import BlogLayout from "@/components/BlogLayout";
 import tachesOrangeImg from "@/assets/taches-orange-evier.png";
-import filtrationFerImg from "@/assets/systeme-filtration-fer.png";
-import { Button } from "@/components/ui/button";
-import { Phone, ArrowRight, CheckCircle2 } from "lucide-react";
 
 const TachesOrangeDansLevier = () => {
     useEffect(() => {
         document.title = "Taches orange dans l'évier : Le guide complet pour éliminer le fer de votre eau | Bricareau";
         const metaDesc = document.querySelector('meta[name="description"]');
         if (metaDesc) {
-            metaDesc.setAttribute("content", "Découvrez comment éliminer définitivement les taches orange de votre évier. Guide expert sur le fer dans l'eau : causes, tests et solutions de filtration professionnelles.");
+            metaDesc.setAttribute("content", "Découvrez comment éliminer définitivement les taches orange de votre évier. Guide expert sur le fer dans l'eau : causes, tests et solutions de filtration professionnelles au Québec.");
         }
     }, []);
 
     const tocItems = [
         {
-                "id": "section-1",
-                "title": "Le fer dans l'eau : Une complexité invisible"
+            "id": "section-1",
+            "title": "Comprendre l'origine des taches de fer"
         },
         {
-                "id": "section-2",
-                "title": "Les causes de la présence de fer"
+            "id": "section-2",
+            "title": "Pourquoi le problème est si courant au Québec"
         },
         {
-                "id": "section-3",
-                "title": "Les conséquences : Un impact global sur votre foyer"
+            "id": "section-3",
+            "title": "Les signes révélateurs d'une eau ferreuse"
         },
         {
-                "id": "section-4",
-                "title": "Comment traiter le fer efficacement ?"
+            "id": "section-4",
+            "title": "Faire analyser son eau"
         },
         {
-                "id": "section-5",
-                "title": "Tableau comparatif des méthodes de traitement"
+            "id": "section-5",
+            "title": "Les solutions pour éliminer le fer"
         },
         {
-                "id": "section-6",
-                "title": "Maintenance : La clé de la performance"
+            "id": "section-6",
+            "title": "Entretien et prévention"
         },
         {
-                "id": "section-7",
-                "title": "Conclusion : Libérez votre foyer du fer"
+            "id": "section-7",
+            "title": "Astuce pour nettoyer les taches existantes"
+        },
+        {
+            "id": "section-8",
+            "title": "L'importance de faire appel à un professionnel"
+        },
+        {
+            "id": "section-9",
+            "title": "Conclusion"
         }
-];
+    ];
 
     return (
-        <BlogLayout 
-            title="Taches orange dans l'évier : Le guide complet pour éliminer le fer" 
+        <BlogLayout
+            title="Taches orange dans l'évier : Le guide complet pour éliminer le fer"
             headerImage={tachesOrangeImg}
             tocItems={tocItems}
         >
-            <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-blue-600 pl-8 italic">
-                                    Rien ne défigure plus une salle de bain de luxe ou une cuisine moderne que l'apparition de traînées orangeâtres au fond de l'évier ou de la baignoire. Ces taches de "rouille", persistantes et difficiles à nettoyer, sont le signe indéniable d'une concentration excessive de fer dans votre approvisionnement en eau.
-                                </p>
+            {/* Introduction */}
+            <p className="text-lg leading-relaxed text-gray-700 mb-6 text-justify">
+                Vous avez remarqué des taches orange ou brunâtres dans votre évier, votre baignoire ou autour de vos robinets ? Ces marques tenaces sont souvent le signe d'un excès de fer dans l'eau. Bien que ce problème soit courant dans plusieurs régions du Québec, surtout en milieu rural où l'eau provient d'un puits privé, il n'en demeure pas moins frustrant et inesthétique. Heureusement, il existe des solutions efficaces et durables pour y remédier. Ce guide complet vous aidera à comprendre les causes de ce phénomène et les meilleures façons d'y mettre fin.
+            </p>
 
-                                <h2 id="section-1" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">Le fer dans l'eau : Une complexité invisible</h2>
-                                <p>
-                                    Le fer est l'un des minéraux les plus abondants de la croûte terrestre. Il n'est donc pas surprenant de le retrouver fréquemment dans les eaux de puits, mais sa présence peut prendre plusieurs formes, chacune exigeant une approche de traitement spécifique. Contrairement à une idée reçue, l'eau peut paraître parfaitement claire au sortir du robinet tout en étant chargée de fer "invisible".
-                                </p>
-                                <p>
-                                    Il est crucial de distinguer les deux types de fer les plus courants rencontrés dans les résidences :
-                                </p>
-                                <ul className="space-y-4 my-8">
-                                    <li><strong>Le fer ferreux (fer de l'eau claire) :</strong> L'eau est limpide lors du remplissage d'un verre, mais après quelques minutes d'exposition à l'oxygène de l'air, le fer s'oxyde et des particules orange se forment. C'est ce fer qui crée les taches les plus tenaces par oxydation lente.</li>
-                                    <li><strong>Le fer ferrique (fer de l'eau rouge) :</strong> Le fer est déjà oxydé avant d'atteindre votre robinet. L'eau sort avec une teinte jaunâtre ou rougeâtre, car elle contient des particules solides en suspension.</li>
-                                </ul>
+            {/* Section 1 */}
+            <h2 id="section-1" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">Comprendre l'origine des taches de fer</h2>
+            <p className="text-lg leading-relaxed text-gray-700 mb-6 text-justify">
+                Le fer est un élément naturellement présent dans le sol et les roches. Lorsque l'eau souterraine circule à travers ces couches géologiques, elle dissout une partie du fer, ce qui explique sa présence dans de nombreux puits résidentiels. En soi, le fer n'est pas nocif pour la santé aux concentrations typiques retrouvées dans l'eau potable, mais il provoque plusieurs désagréments domestiques.
+            </p>
+            <p className="text-lg leading-relaxed text-gray-700 mb-4 text-justify">
+                Il existe deux formes principales de fer dans l'eau :
+            </p>
+            <ul className="list-disc pl-6 mb-6 text-lg text-gray-700 space-y-2">
+                <li><strong>Le fer ferreux (Fe2+)</strong>, dissous et invisible à l'œil nu. L'eau semble claire au robinet, mais le fer s'oxyde en contact avec l'air et forme des dépôts orangés.</li>
+                <li><strong>Le fer ferrique (Fe3+)</strong>, déjà oxydé. Il est visible sous forme de particules solides, donnant à l'eau un aspect trouble ou brunâtre.</li>
+            </ul>
+            <p className="text-lg leading-relaxed text-gray-700 mb-6 text-justify">
+                Ces deux types de fer entraînent des taches sur la porcelaine, la vaisselle et les tissus, tout en laissant un goût métallique désagréable à l'eau.
+            </p>
 
-                                <div className="my-16 bg-blue-50 rounded-3xl p-8 md:p-12 border border-blue-100 shadow-sm overflow-hidden flex flex-col md:flex-row gap-12 items-center">
-                                    <div className="flex-1">
-                                        <h3 className="text-2xl font-bold text-blue-900 mb-6">Le saviez-vous ?</h3>
-                                        <p className="text-blue-800 text-lg">
-                                            Même une concentration de fer aussi basse que 0,3 milligramme par litre (mg/L) est suffisante pour provoquer des taches visibles sur vos sanitaires et altérer la saveur de vos boissons préférées, comme le café ou le thé.
-                                        </p>
-                                    </div>
-                                    <div className="w-full md:w-1/3 h-48 rounded-2xl overflow-hidden shadow-inner">
-                                        <img src={tachesOrangeImg} alt="Détails des taches de fer" className="w-full h-full object-cover" />
-                                    </div>
-                                </div>
+            {/* Section 2 */}
+            <h2 id="section-2" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">Pourquoi le problème est si courant au Québec</h2>
+            <p className="text-lg leading-relaxed text-gray-700 mb-6 text-justify">
+                De nombreuses régions du Québec comptent sur des nappes phréatiques riches en minéraux. Dans la province, plusieurs résidences — notamment en Montérégie, en Estrie, au Saguenay—Lac-Saint-Jean ou encore dans Lanaudière — sont alimentées par des puits privés. Ces puits n'ont pas toujours de système de traitement adapté, ce qui permet au fer et au manganèse (autre métal souvent associé) de s'accumuler.
+            </p>
+            <p className="text-lg leading-relaxed text-gray-700 mb-6 text-justify">
+                Les municipalités utilisant de l'eau de surface ont parfois moins de problèmes de fer, car l'eau est déjà oxygénée et traitée avant distribution. Cependant, même en ville, des conduites en acier peuvent relâcher des particules de rouille qui finissent dans les robinets.
+            </p>
 
-                                <h2 id="section-2" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">Les causes de la présence de fer</h2>
-                                <p>
-                                    Pourquoi votre voisin possède-t-il une eau parfaite alors que la vôtre tache tout sur son passage ? La réponse réside souvent dans la géologie locale ou l'état de vos infrastructures.
-                                </p>
-                                <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">1. La géologie des aquifères</h3>
-                                <p>
-                                    Au Québec, de nombreuses régions possèdent des sols riches en fer et en manganèse. L'eau de pluie, en s'infiltrant dans le sol, devient légèrement acide par absorption de dioxyde de carbone. Cette acidité lui permet de dissoudre les minéraux ferreux des roches environnantes. Une fois dans l'aquifère, le fer reste en solution jusqu'à ce qu'il soit pompé vers votre maison.
-                                </p>
-                                <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">2. Corrosion des anciennes tuyauteries</h3>
-                                <p>
-                                    Dans les maisons plus anciennes ou les réseaux de distribution municipaux vieillissants, le fer peut provenir de la corrosion interne des tuyaux en fonte ou en acier galvanisé. Ce type de fer est généralement ferrique (particules visibles) et peut varier en intensité selon le débit d'eau ou les travaux sur le réseau.
-                                </p>
-                                <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">3. Bactéries ferrugineuses</h3>
-                                <p>
-                                    Moins connues mais tout aussi problématiques, les bactéries ferrugineuses ne sont pas dangereuses pour la santé mais se nourrissent de fer pour se multiplier. Elles créent une texture gélatineuse et filamenteuse dans les réservoirs de toilette et peuvent obstruer les crépines des robinets, tout en exacerbant les problèmes d'odeur et de taches.
-                                </p>
+            {/* Section 3 */}
+            <h2 id="section-3" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">Les signes révélateurs d'une eau ferreuse</h2>
+            <p className="text-lg leading-relaxed text-gray-700 mb-4 text-justify">
+                Avant de songer à corriger le problème, il est essentiel d'en confirmer la cause. Voici quelques signes typiques :
+            </p>
+            <ul className="list-disc pl-6 mb-6 text-lg text-gray-700 space-y-2">
+                <li>Taches orange ou brunâtres sur les lavabos, baignoires et cuvettes.</li>
+                <li>Dépôts durs semblables à de la rouille sur la robinetterie.</li>
+                <li>Eau au goût métallique ou au léger goût de sang.</li>
+                <li>Linge blanc qui jaunit après le lavage.</li>
+                <li>Accumulation de boue ferrique dans le chauffe-eau ou la pompe à pression.</li>
+            </ul>
+            <p className="text-lg leading-relaxed text-gray-700 mb-6 text-justify">
+                Ces indices indiquent qu'il est temps d'analyser votre eau pour mesurer la concentration de fer.
+            </p>
 
-                                <h2 id="section-3" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">Les conséquences : Un impact global sur votre foyer</h2>
-                                <p>
-                                    Le fer ne se contente pas de laisser des traces esthétiques ; il s'attaque à la longévité de votre patrimoine domestique.
-                                </p>
-                                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 my-12">
-                                    <div className="p-6 bg-slate-50 rounded-2xl border border-slate-100">
-                                        <h4 className="font-bold text-xl mb-3 text-blue-600">Patrimoine Textil</h4>
-                                        <p className="text-sm">Le fer jaunit le linge blanc et ternit les couleurs. Les particules se logent dans les fibres, rendant les taches impossibles à retirer avec un simple détergent.</p>
-                                    </div>
-                                    <div className="p-6 bg-slate-50 rounded-2xl border border-slate-100">
-                                        <h4 className="font-bold text-xl mb-3 text-blue-600">Plomberie & Appareils</h4>
-                                        <p className="text-sm">L'accumulation de fer réduit le diamètre utile de vos tuyaux et endommage les valves des lave-vaisselle et laveuses, menant à des bris coûteux.</p>
-                                    </div>
-                                    <div className="p-6 bg-slate-50 rounded-2xl border border-slate-100">
-                                        <h4 className="font-bold text-xl mb-3 text-blue-600">Qualité Culinaire</h4>
-                                        <p className="text-sm">Le fer donne un goût métallique prononcé à l'eau et noircit les légumes cuits à l'eau, affectant la présentation et la saveur des plats.</p>
-                                    </div>
-                                </div>
+            {/* Section 4 */}
+            <h2 id="section-4" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">Faire analyser son eau : une étape cruciale</h2>
+            <p className="text-lg leading-relaxed text-gray-700 mb-6 text-justify">
+                Un test d'eau effectué par un laboratoire certifié au Québec permet de connaître non seulement la concentration de fer, mais aussi le pH, la dureté et la présence d'autres minéraux comme le manganèse ou le soufre. Ces paramètres influencent le choix du bon système de traitement.
+            </p>
+            <p className="text-lg leading-relaxed text-gray-700 mb-6 text-justify">
+                La norme québécoise recommande une teneur maximale en fer d'environ <strong>0,3 mg/L</strong> pour éviter les taches et le goût indésirable. Si votre test révèle une valeur supérieure, un traitement spécifique s'impose.
+            </p>
 
-                                <h2 id="section-4" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">Comment traiter le fer efficacement ?</h2>
-                                <p>
-                                    Éliminer le fer nécessite une technologie adaptée au type de fer présent. Une erreur courante consiste à installer un adoucisseur d'eau standard pour traiter de fortes concentrations de fer, ce qui sature rapidement la résine et réduit la durée de vie de l'appareil.
-                                </p>
+            {/* Section 5 */}
+            <h2 id="section-5" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">Les solutions pour éliminer le fer dans l'eau</h2>
+            <p className="text-lg leading-relaxed text-gray-700 mb-6 text-justify">
+                Il n'existe pas de solution universelle, car chaque situation d'eau est unique. Voici les principales technologies utilisées au Québec.
+            </p>
 
-                                <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">L'Oxydation par Injection d'Air (AIO) : La solution Bricareau</h3>
-                                <p>
-                                    La méthode la plus propre et la plus efficace consiste à "forcer" l'oxydation du fer avant qu'il n'atteigne vos tuyaux. Notre système **Iron Shield** utilise une chambre d'air comprimé pour oxyder instantanément le fer dissous en particules solides, qui sont ensuite capturées par un média catalytique haute performance. Ce système ne nécessite aucun produit chimique et se nettoie automatiquement.
-                                </p>
+            <h3 className="text-2xl font-bold text-gray-800 mt-8 mb-4">1. Les adoucisseurs d'eau (échange d'ions)</h3>
+            <p className="text-lg leading-relaxed text-gray-700 mb-6 text-justify">
+                Idéals si le fer est présent sous forme ferreuse et en faible concentration (moins de 2 mg/L). En remplaçant les ions calcium, magnésium et fer par du sodium, l'adoucisseur retient ces éléments sur une résine spéciale. Cependant, pour des niveaux élevés ou du fer ferrique, cette méthode devient inefficace et risque d'encrasser la résine.
+            </p>
 
-                                <section className="my-20 relative rounded-[3rem] overflow-hidden">
-                                    <img src={filtrationFerImg} alt="Installation professionnelle Bricareau" className="w-full h-[500px] object-cover" />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent" />
-                                    <div className="absolute bottom-10 left-10 right-10 text-white">
-                                        <h3 className="text-3xl font-bold mb-4">Ingénierie de Précision</h3>
-                                        <p className="text-lg text-slate-200 max-w-2xl">
-                                            Chaque système est calibré précisément selon les résultats de votre analyse d'eau pour garantir une suppression totale du fer.
-                                        </p>
-                                    </div>
-                                </section>
+            <h3 className="text-2xl font-bold text-gray-800 mt-8 mb-4">2. Les filtres à oxydation (aération, Greensand ou Birm)</h3>
+            <p className="text-lg leading-relaxed text-gray-700 mb-6 text-justify">
+                Ces systèmes transforment le fer dissous en particules solides avant de les filtrer. Ils requièrent souvent l'ajout d'un agent oxydant comme du chlore, du permanganate de potassium ou simplement de l'air injecté. Ces dispositifs sont très efficaces au Québec, particulièrement dans les zones rurales.
+            </p>
 
-                                <h3 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Les résines d'échange ionique spécialisées</h3>
-                                <p>
-                                    Pour les eaux qui présentent à la fois une dureté élevée et des niveaux modérés de fer, Bricareau propose des adoucisseurs équipés de résines à haute affinité pour le fer. Ces systèmes sont paramétrés avec des cycles de nettoyage spécifiques garantissant que le fer est correctement expulsé lors de la régénération.
-                                </p>
+            <h3 className="text-2xl font-bold text-gray-800 mt-8 mb-4">3. Les systèmes de filtration catalytique</h3>
+            <p className="text-lg leading-relaxed text-gray-700 mb-6 text-justify">
+                Basés sur des médias comme le Filox ou le Katalox Light, ils combinent oxydation et filtration dans un même appareil. Leur durabilité et leur efficacité à traiter des concentrations élevées en font un choix populaire pour les exploitations agricoles et les résidences avec puits artésiens.
+            </p>
 
-                                <h2 id="section-5" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">Tableau comparatif des méthodes de traitement</h2>
-                                <div className="overflow-x-auto my-12">
-                                    <table className="w-full border-collapse border border-slate-200">
-                                        <thead>
-                                            <tr className="bg-slate-100">
-                                                <th className="border border-slate-200 p-4 font-bold text-slate-900 text-left">Technologie</th>
-                                                <th className="border border-slate-200 p-4 font-bold text-slate-900 text-left">Efficacité Fer</th>
-                                                <th className="border border-slate-200 p-4 font-bold text-slate-900 text-left">Produits Chimiques</th>
-                                                <th className="border border-slate-200 p-4 font-bold text-slate-900 text-left">Avantages</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td className="border border-slate-200 p-4">Injection d'Air (AIO)</td>
-                                                <td className="border border-slate-200 p-4 text-green-600 font-bold">Maximale</td>
-                                                <td className="border border-slate-200 p-4">Aucun</td>
-                                                <td className="border border-slate-200 p-4">Écologique, sans entretien manuel</td>
-                                            </tr>
-                                            <tr>
-                                                <td className="border border-slate-200 p-4">Filtre au Manganèse</td>
-                                                <td className="border border-slate-200 p-4">Haute</td>
-                                                <td className="border border-slate-200 p-4">Permanganate</td>
-                                                <td className="border border-slate-200 p-4">Efficace sur fer et manganèse</td>
-                                            </tr>
-                                            <tr>
-                                                <td className="border border-slate-200 p-4">Adoucisseur Spécialisé</td>
-                                                <td className="border border-slate-200 p-4">Moyenne</td>
-                                                <td className="border border-slate-200 p-4">Sel</td>
-                                                <td className="border border-slate-200 p-4">Traite dureté et fer simultanément</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
+            <h3 className="text-2xl font-bold text-gray-800 mt-8 mb-4">4. L'osmose inverse</h3>
+            <p className="text-lg leading-relaxed text-gray-700 mb-6 text-justify">
+                Utilisée surtout pour la consommation et la cuisine, cette technologie permet d'éliminer presque tous les contaminants, y compris le fer dissous. Elle est toutefois mieux adaptée à un point d'utilisation (robinet de cuisine) qu'à l'ensemble de la maison.
+            </p>
 
-                                <h2 id="section-6" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">Maintenance : La clé de la performance</h2>
-                                <p>
-                                    Même le meilleur système de filtration nécessite un suivi professionnel pour opérer à 100% sur le long terme. Les dépôts de fer peuvent, avec le temps, encrasser les vannes de contrôle.
-                                </p>
-                                <p>
-                                    C'est pourquoi Bricareau inclut dans ses solutions :
-                                </p>
-                                <ul className="space-y-4 my-8">
-                                    <li className="flex gap-4">
-                                        <ArrowRight className="h-6 w-6 text-blue-600 mt-1 flex-shrink-0" />
-                                        <p><strong>Nettoyant pour résine :</strong> Des solutions formulées pour dissoudre les accumulations de fer tenaces lors des cycles de nettoyage.</p>
-                                    </li>
-                                    <li className="flex gap-4">
-                                        <ArrowRight className="h-6 w-6 text-blue-600 mt-1 flex-shrink-0" />
-                                        <p><strong>Vérification annuelle :</strong> Un technicien certifié inspecte les injecteurs et ajuste le système selon l'évolution de la qualité de votre puits.</p>
-                                    </li>
-                                </ul>
+            {/* Section 6 */}
+            <h2 id="section-6" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">Entretien et prévention</h2>
+            <p className="text-lg leading-relaxed text-gray-700 mb-4 text-justify">
+                Même après l'installation d'un système de traitement, un entretien régulier demeure essentiel.
+            </p>
+            <ul className="list-disc pl-6 mb-6 text-lg text-gray-700 space-y-2">
+                <li>Régénérez la résine de l'adoucisseur selon les recommandations du fabricant.</li>
+                <li>Nettoyez les filtres ou remplacez le média filtrant au besoin.</li>
+                <li>Surveillez la pression de l'eau pour éviter que les dépôts de fer s'accumulent dans les canalisations.</li>
+                <li>Faites analyser votre eau une fois par an pour vérifier la performance du traitement.</li>
+            </ul>
+            <p className="text-lg leading-relaxed text-gray-700 mb-6 text-justify">
+                Un entretien préventif évite bien des réparations coûteuses et prolonge la durée de vie de votre système.
+            </p>
 
-                                <h2 id="section-7" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">Conclusion : Libérez votre foyer du fer</h2>
-                                <p>
-                                    Vivre avec des taches orange n'est pas une fatalité liée à votre région ou à votre puits. C'est un défi technique pour lequel Bricareau possède les outils et l'expertise nécessaires. En éliminant le fer à la source, vous protégez non seulement vos investissements (plomberie, électroménagers) mais vous retrouvez également le plaisir d'une eau saine et limpide pour toute votre famille.
-                                </p>
-                                <p>
-                                    Ne laissez pas le fer déprécier votre maison et compliquer votre quotidien. Une simple analyse d'eau suffit pour ouvrir la porte à une solution durable.
-                                </p>
+            {/* Section 7 */}
+            <h2 id="section-7" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">Astuce pour nettoyer les taches existantes</h2>
+            <p className="text-lg leading-relaxed text-gray-700 mb-4 text-justify">
+                En attendant d'éliminer le fer à la source, il est possible de nettoyer les taches déjà présentes :
+            </p>
+            <ul className="list-disc pl-6 mb-6 text-lg text-gray-700 space-y-2">
+                <li>Utilisez un mélange de vinaigre blanc et de bicarbonate de soude, laissez agir quelques minutes, puis frottez doucement.</li>
+                <li>Évitez les produits contenant du chlore sur la porcelaine, car ils peuvent accentuer la coloration.</li>
+                <li>Pour les taches tenaces, des nettoyants acides doux formulés pour enlever la rouille peuvent être utilisés, mais toujours avec des gants et une bonne ventilation.</li>
+            </ul>
+            <p className="text-lg leading-relaxed text-gray-700 mb-6 text-justify">
+                Ces méthodes constituent des solutions temporaires en attendant un traitement d'eau adéquat.
+            </p>
 
-                                <div className="mt-20 p-10 bg-blue-600 rounded-[2rem] text-white text-center shadow-xl">
-                                    <h3 className="text-3xl font-bold mb-6">Prêt pour une eau sans taches ?</h3>
-                                    <p className="text-xl mb-10 opacity-90 max-w-2xl mx-auto font-light">
-                                        Contactez nos experts aujourd'hui pour une analyse gratuite et découvrez la tranquillité d'esprit Bricareau.
-                                    </p>
-                                    <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                                        <Button size="lg" className="bg-white text-blue-600 hover:bg-slate-100 rounded-full px-10 h-16 text-lg font-bold" asChild>
-                                            <a href="/tests-eau">Réserver mon analyse gratuite</a>
-                                        </Button>
-                                        <p className="font-bold text-xl">OU</p>
-                                        <a href="tel:18552649328" className="text-2xl font-bold hover:underline underline-offset-8">
-                                            1-855-264-9328
-                                        </a>
-                                    </div>
-                                </div>
+            {/* Section 8 */}
+            <h2 id="section-8" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">L'importance de faire appel à un professionnel</h2>
+            <p className="text-lg leading-relaxed text-gray-700 mb-6 text-justify">
+                Chaque source d'eau est différente. Un spécialiste en traitement d'eau saura évaluer la composition chimique de votre eau et recommander le système adapté à vos besoins précis. Les entrepreneurs qualifiés au Québec connaissent bien les particularités régionales des nappes phréatiques et peuvent vous offrir une installation conforme aux normes locales.
+            </p>
+            <p className="text-lg leading-relaxed text-gray-700 mb-6 text-justify">
+                Faire appel à un professionnel certifié, c'est garantir une eau claire, sans taches ni goût métallique, tout en protégeant vos installations et vos appareils ménagers.
+            </p>
+
+            {/* Section 9 */}
+            <h2 id="section-9" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">Conclusion</h2>
+            <p className="text-lg leading-relaxed text-gray-700 mb-6 text-justify">
+                Les taches orange dans l'évier ne sont pas une fatalité. Elles révèlent simplement la présence de fer — un problème courant mais tout à fait maîtrisable grâce à un diagnostic précis et à un traitement adéquat. En investissant dans un système de purification fiable, vous éviterez des heures de nettoyage et prolongerez la durée de vos équipements.
+            </p>
+            <p className="text-lg leading-relaxed text-gray-700 mb-6 text-justify">
+                Notre mission : vous offrir une eau limpide, sans taches ni odeur, pour un confort durable jour après jour.
+            </p>
         </BlogLayout>
     );
 };

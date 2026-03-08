@@ -72,7 +72,7 @@ const DesinfectionUV = () => {
         <div className="min-h-screen bg-background text-slate-900 font-sans">
             <Header />
             <main>
-                {/* 1.Hero Section */}
+                {/* 1. Hero Section */}
                 <section className="relative h-[850px] flex items-center overflow-hidden -mt-[104px] pt-[104px]">
                     <div className="absolute inset-0 z-0">
                         <img
@@ -119,7 +119,7 @@ const DesinfectionUV = () => {
                             </div>
                         </div>
                     </div>
-                    {/* 2.Wave Separator Bottom - Transition to Blue Section */}
+                    {/* 2. Wave Separator Bottom - Transition to Blue Section */}
                     <div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-[0] z-20 pointer-events-none">
                         <svg
                             className="relative block w-full h-[50px] md:h-[80px]"
@@ -343,7 +343,7 @@ const DesinfectionUV = () => {
                         </>
                     }
                 />
-                {/* 5. Section Associated Products */}
+                {/* 8. Section Associated Products */}
             <section className="bg-white py-24">
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-16">
@@ -415,7 +415,7 @@ const DesinfectionUV = () => {
             </section>
 
 
-                {/* 8. FAQ Section */}
+                {/* 9. FAQ Section */}
                 <section className="py-24 bg-white border-t border-slate-100">
                     <div className="container mx-auto px-4 text-left">
                         <div className="text-left mb-16">
@@ -514,7 +514,7 @@ const DesinfectionUV = () => {
                     </div>
                 </section>
 
-                {/* 9. Resources Section */}
+                {/* 10. Resources Section */}
                 <section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
@@ -567,7 +567,7 @@ const DesinfectionUV = () => {
                     </div>
                 </section>
 
-                {/* 10. Contact Form Section */}
+                {/* 11. Contact Form Section */}
                 <ConsultationFormSection id="consultation" />
 
 

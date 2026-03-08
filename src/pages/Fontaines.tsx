@@ -228,7 +228,7 @@ const Fontaines = () => {
         <div className="min-h-screen bg-white">
             <Header />
             <main>
-                {/* Hero Section */}
+                {/* 1. Hero Section */}
                 <section className="relative h-[850px] flex items-center overflow-hidden -mt-[104px] pt-[104px]">
                     <div className="absolute inset-0 z-0">
                         <img
@@ -281,7 +281,7 @@ const Fontaines = () => {
                             </div>
                         </div>
                     </div>
-                    {/* Wave Separator Bottom - Transition to Dark Blue Section */}
+                    {/* 2. Wave Separator Bottom - Transition to Dark Blue Section */}
                     <div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-[0] z-20 pointer-events-none">
                         <svg
                             className="relative block w-full h-[50px] md:h-[80px]"
@@ -299,7 +299,7 @@ const Fontaines = () => {
                     </div>
                 </section>
 
-                {/* Section 1: Solutions professionnelles */}
+                {/* 3. Section 1: Solutions professionnelles */}
                 <section className="py-24 bg-blue-600 text-white">
                     <div className="container mx-auto px-6 text-center">
                         <h2 className="text-[32px] md:text-[48px] font-normal text-white mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
@@ -336,7 +336,7 @@ const Fontaines = () => {
                     </div>
                 </section>
 
-                {/* Section 6: Impact & Technologie - BENTO GRID */}
+                {/* 4. Impact & Technologie Section- BENTO GRID */}
                 <section className="py-32 bg-slate-50 relative overflow-hidden">
                     <div className="container mx-auto px-6">
                         <div className="text-center max-w-5xl mx-auto mb-20">
@@ -421,7 +421,7 @@ const Fontaines = () => {
                     </div>
                 </section>
 
-                {/* Section 4: Testimonials */}
+                {/* 5. Testimonials Section */}
                 <TestimonialsSection
                     filterProduct="/fontaines"
                     limit={6}
@@ -433,7 +433,7 @@ const Fontaines = () => {
                     }
                 />
 
-                {/* Section 7: Mission Éco-Responsable Bricareau */}
+                {/* 6. Mission Éco-Responsable Bricareau Section*/}
                 <section className="py-32 bg-white relative overflow-hidden">
                     <div className="container mx-auto px-6">
                         <div className="max-w-6xl mx-auto">
@@ -513,7 +513,7 @@ const Fontaines = () => {
                     </div>
                 </section>
 
-                {/* Section 8: CTA Pre-footer - VERSION RÉSIDENTIELLE LUXE */}
+                {/* 7. CTA Pre-footer - VERSION RÉSIDENTIELLE LUXE Section */}
                 <section className="py-32 bg-blue-600 relative overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-br from-blue-700/40 via-transparent to-transparent opacity-50" />
                     <div className="container mx-auto px-6 relative z-10 text-center">

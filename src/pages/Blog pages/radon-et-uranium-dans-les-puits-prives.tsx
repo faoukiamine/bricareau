@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import BlogLayout from "@/components/BlogLayout";
-import { Button } from "@/components/ui/button";
-import { Phone, ShieldAlert, Activity, Droplets, InfoIcon, ShieldCheck, MicroscopeIcon, AlertTriangle, Wind, Zap, FlaskConical, Target, CheckCircle2 } from "lucide-react";
+import radonImg from "@/assets/radon.jpg";
 
 const RadonEtUraniumPuitsPrives = () => {
     useEffect(() => {
@@ -14,194 +13,222 @@ const RadonEtUraniumPuitsPrives = () => {
 
     const tocItems = [
         {
-                "id": "section-1",
-                "title": "D'où viennent l'uranium et le radon ?"
+            "id": "section-1",
+            "title": "Uranium dans l'eau des puits privés"
         },
         {
-                "id": "section-2",
-                "title": "Évaluation des risques pour la santé"
+            "id": "section-2",
+            "title": "Radon dissous dans l'eau des puits privés"
         },
         {
-                "id": "section-3",
-                "title": "Le processus de dépistage et d'analyse"
+            "id": "section-3",
+            "title": "Analyses et interprétation des résultats"
         },
         {
-                "id": "section-4",
-                "title": "Solutions d'ingénierie et Technologies de filtration"
+            "id": "section-4",
+            "title": "Traitement de l'uranium dans l'eau"
+        },
+        {
+            "id": "section-5",
+            "title": "Traitement du radon dissous dans l'eau"
+        },
+        {
+            "id": "section-6",
+            "title": "Démarche recommandée"
         }
-];
+    ];
 
     return (
-        <BlogLayout 
-            title="Radon et uranium dans les puits privés : risques réels et solutions efficaces" 
-            headerImage={"https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=2000&auto=format&fit=crop"}
+        <BlogLayout
+            title="Radon et uranium dans les puits privés : risques réels et solutions efficaces"
+            headerImage={radonImg}
             tocItems={tocItems}
         >
-            <p className="lead text-2xl font-light text-slate-900 mb-12 border-l-4 border-red-600 pl-8 italic">
-                                    Contrairement au fer ou au soufre qui altèrent le goût et l'odeur de l'eau, le radon et l'uranium se cachent dans l'ombre. Leur présence silencieuse dans les puits artésiens est une préoccupation majeure de santé publique régionale, nécessitant une vigilance accrue des propriétaires.
-                                </p>
+            {/* Introduction */}
+            <p className="text-lg leading-relaxed text-gray-700 mb-6 text-justify">
+                Au Québec, un grand nombre de résidences sont alimentées par des puits privés forés dans le roc ou captant des nappes souterraines peu profondes. Cette ressource offre une autonomie appréciable, mais elle expose parfois les occupants à certains contaminants d'origine naturelle, dont l'uranium et le radon dissous. Issus de la radioactivité naturelle du sous-sol, ces éléments peuvent atteindre des concentrations non négligeables dans l'eau de puits, sans modifier son aspect, son odeur ni son goût.
+            </p>
+            <p className="text-lg leading-relaxed text-gray-700 mb-6 text-justify">
+                Comprendre les risques associés à la présence d'uranium et de radon dans l'eau de puits privés, ainsi que les solutions de traitement disponibles, est donc essentiel pour tout propriétaire soucieux de la qualité de son eau de consommation. Le présent texte propose un survol clair et nuancé de ces enjeux, en se concentrant exclusivement sur l'eau des puits privés : origine de la contamination, effets sur la santé, méthodes d'analyse et options de traitement efficaces.
+            </p>
 
-                                <div className="space-y-8">
-                                    <p>
-                                        Vivre à la campagne ou en périphérie urbaine offre de nombreux avantages, mais dépendre d’un puits privé implique une grande responsabilité : celle de s’assurer que l’eau puisée est propre à la consommation. Si les tests bactériens (comme E. coli) sont bien ancrés dans les habitudes, deux menaces bien plus insidieuses sont souvent négligées : <strong>le radon et l’uranium</strong>.
-                                    </p>
-                                    <p>
-                                        Ces éléments radioactifs d'origine naturelle proviennent de la dégradation de la roche mère. Lorsqu'ils s'infiltrent dans les nappes phréatiques, ils se retrouvent pompés directement dans nos maisons. Ce guide exhaustif Bricareau est conçu pour démystifier la présence de ces contaminants, évaluer leurs risques avec objectivité et détailler les technologies approuvées pour les éradiquer.
-                                    </p>
-                                </div>
+            {/* Section 1 */}
+            <h2 id="section-1" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">1. Uranium dans l'eau des puits privés</h2>
 
-                                {/* Section 1: Origine */}
-                                <h2 id="section-1" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">1. D'où viennent l'uranium et le radon ?</h2>
-                                <p>
-                                    Le radon et l'uranium ne sont pas le résultat d'une pollution industrielle. Ce sont des éléments qui existent sur Terre depuis sa formation.
-                                </p>
-                                <ul className="list-none space-y-6 my-10">
-                                    <li className="flex gap-4 items-start">
-                                        <div className="h-10 w-10 shrink-0 bg-blue-100 flex items-center justify-center rounded-full mt-1">
-                                            <Target className="h-5 w-5 text-blue-600" />
-                                        </div>
-                                        <div>
-                                            <strong className="text-xl text-slate-900 block mb-2">L'Uranium (U)</strong>
-                                            <p className="text-slate-600">
-                                                C'est un métal lourd radioactif présent naturellement dans certaines formations géologiques, particulièrement dans le Bouclier canadien. Au fil du temps, l'eau souterraine dissout de minuscules quantités de ce métal rocheux, l'entraînant dans les aquifères. Il est soluble dans l'eau et ne s'évapore pas.
-                                            </p>
-                                        </div>
-                                    </li>
-                                    <li className="flex gap-4 items-start">
-                                        <div className="h-10 w-10 shrink-0 bg-red-100 flex items-center justify-center rounded-full mt-1">
-                                            <Wind className="h-5 w-5 text-red-600" />
-                                        </div>
-                                        <div>
-                                            <strong className="text-xl text-slate-900 block mb-2">Le Radon (Rn)</strong>
-                                            <p className="text-slate-600">
-                                                Le radon est un gaz noble radioactif. Il est en réalité créé par la désintégration de l'uranium et du radium présents dans le sol. Parce qu'il s'agit d'un gaz, il peut s'infiltrer dans les maisons par les fissures des fondations, mais il se dissout également dans l'eau souterraine sous pression.
-                                            </p>
-                                        </div>
-                                    </li>
-                                </ul>
+            <h3 className="text-2xl font-bold text-gray-800 mt-8 mb-4">1.1 Origine et variabilité</h3>
+            <p className="text-lg leading-relaxed text-gray-700 mb-6 text-justify">
+                L'uranium est un métal lourd naturellement présent dans de nombreuses formations rocheuses. Dans certaines régions, particulièrement là où le socle rocheux est granitique ou enrichi en minéraux uranifères, l'eau souterraine qui circule dans ces roches peut se charger progressivement en uranium. La solubilisation dépend de plusieurs paramètres, notamment le pH, le degré d'oxygénation de l'eau et la présence de carbonates ou d'autres ions qui favorisent sa mise en solution.
+            </p>
+            <p className="text-lg leading-relaxed text-gray-700 mb-6 text-justify">
+                Dans un puits privé, cette présence n'a rien d'anormal au sens industriel du terme : il s'agit d'une contamination d'origine géologique. Deux puits voisins peuvent cependant afficher des teneurs très différentes, parce qu'ils ne captent pas les mêmes fractures ou horizons rocheux. Cette variabilité rend impossible toute généralisation à partir du puits du voisin; seule une analyse individuelle de l'eau permet de connaître la concentration réelle en uranium.
+            </p>
 
-                                {/* Section 2: Risques Santé */}
-                                <h2 id="section-2" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">2. Évaluation des risques pour la santé</h2>
+            <h3 className="text-2xl font-bold text-gray-800 mt-8 mb-4">1.2 Enjeux pour la santé</h3>
+            <p className="text-lg leading-relaxed text-gray-700 mb-6 text-justify">
+                À des niveaux rencontrés dans l'eau potable, le risque associé à l'uranium est d'abord de nature chimique. En tant que métal lourd, il peut exercer un effet toxique sur les reins lorsqu'il est ingéré à des concentrations élevées, de façon prolongée. Les dommages potentiels touchent principalement les structures responsables de la filtration sanguine et de l'excrétion des déchets.
+            </p>
+            <p className="text-lg leading-relaxed text-gray-700 mb-6 text-justify">
+                L'uranium dissous n'a ni goût ni odeur particuliers. Une eau qui semble «bonne» à la consommation peut donc contenir une teneur trop élevée. C'est pourquoi des valeurs maximales recommandées ont été établies pour l'eau potable. Lorsque ces seuils sont dépassés, il est prudent de ne pas consommer l'eau sur le long terme sans mettre en place un traitement approprié ou une autre source d'approvisionnement pour la boisson et la préparation des aliments.
+            </p>
 
-                                <div className="bg-red-50 border border-red-100 rounded-3xl p-10 mb-12">
-                                    <h3 className="text-2xl font-bold text-red-900 mb-6 flex items-center gap-3">
-                                        <AlertTriangle className="h-8 w-8" />
-                                        Le danger de l'inhalation vs ingestion
-                                    </h3>
-                                    <div className="grid md:grid-cols-2 gap-8">
-                                        <div>
-                                            <h4 className="font-bold text-red-800 text-lg mb-3">La toxicité de l'Uranium</h4>
-                                            <p className="text-red-950/80 leading-snug">
-                                                Bien qu'il soit radioactif, le danger principal de l'uranium dans l'eau potable pèse sur vos <strong>reins</strong>. Sa toxicité chimique est de loin supérieure à sa toxicité radiologique. Une exposition prolongée (ingestion par l'eau bue ou utilisée pour cuisiner) peut causer des lésions rénales chroniques irréversibles.
-                                            </p>
-                                        </div>
-                                        <div>
-                                            <h4 className="font-bold text-red-800 text-lg mb-3">Le piège volatil du Radon</h4>
-                                            <p className="text-red-950/80 leading-snug">
-                                                Boire de l'eau contenant du radon présente un risque faible (cancer de l'estomac). Le vrai danger survient lorsque <strong>le gaz s'échappe de l'eau</strong>. Lors d'une douche chaude, d'une lessive ou de la vaisselle, le radon est relâché dans l'air de la maison et inhalé. Il est la deuxième cause de cancer du poumon après le tabagisme.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
+            {/* Section 2 */}
+            <h2 id="section-2" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">2. Radon dissous dans l'eau des puits privés</h2>
 
-                                <p>
-                                    Santé Canada a établi des recommandations strictes (Concentrations Maximales Acceptables - CMA) :
-                                    <ul className="list-disc pl-8 mt-4 space-y-2">
-                                        <li><strong>Uranium :</strong> Le maximum autorisé est de 0,02 milligramme par litre (20 µg/L).</li>
-                                        <li><strong>Radon dans l'air :</strong> 200 Becquerels par mètre cube (Bq/m³). (L'eau contribue au radon de l'air de la maison).</li>
-                                    </ul>
-                                </p>
+            <h3 className="text-2xl font-bold text-gray-800 mt-8 mb-4">2.1 Origine géologique</h3>
+            <p className="text-lg leading-relaxed text-gray-700 mb-6 text-justify">
+                Le radon est un gaz radioactif incolore et inodore, produit par la désintégration naturelle de l'uranium présent dans le sol et la roche. Si l'on pense d'abord au radon comme à un problème d'air intérieur, il peut également se dissoudre dans l'eau souterraine, surtout lorsque les nappes circulent dans des zones de roches fracturées riches en uranium. Les puits forés dans le roc sont ainsi plus susceptibles de contenir du radon dissous que certains puits peu profonds captant des eaux de surface filtrées par les sols.
+            </p>
+            <p className="text-lg leading-relaxed text-gray-700 mb-6 text-justify">
+                La concentration de radon dans l'eau varie énormément d'un puits à l'autre, même à courte distance. Elle dépend de la teneur en uranium du substratum, du temps de contact entre l'eau et la roche et de la dynamique d'écoulement locale. Là encore, aucune observation visuelle ne permet de soupçonner la présence de radon : seule une mesure en laboratoire fournit une information fiable.
+            </p>
 
-                                {/* Section 3: Diagnostic */}
-                                <h2 id="section-3" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">3. Le processus de dépistage et d'analyse</h2>
-                                <p>
-                                    Parce qu'ils ne modifient ni l'aspect ni le goût de l'eau, les tests en laboratoire accrédité sont le seul moyen de confirmer leur présence.
-                                </p>
-                                <div className="flex flex-col md:flex-row gap-8 my-10">
-                                    <div className="flex-1 bg-white p-8 rounded-[2rem] border border-slate-200 shadow-sm relative overflow-hidden">
-                                        <div className="absolute top-0 right-0 p-6 opacity-5">
-                                            <FlaskConical className="h-32 w-32" />
-                                        </div>
-                                        <h3 className="text-xl font-bold text-slate-800 mb-4 z-10 relative">Quand faut-il tester ?</h3>
-                                        <ul className="space-y-3 text-slate-600 relative z-10">
-                                            <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-blue-500 shrink-0 mt-0.5" /> Lors de l'achat d'une propriété avec puits privé.</li>
-                                            <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-blue-500 shrink-0 mt-0.5" /> Si le puits est foré dans du substrat rocheux.</li>
-                                            <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-blue-500 shrink-0 mt-0.5" /> Une fois tous les 5 ans en prévention de routine.</li>
-                                            <li className="flex items-start gap-2"><CheckCircle2 className="h-5 w-5 text-blue-500 shrink-0 mt-0.5" /> S'il y a eu des secousses sismiques ou du dynamitage à proximité.</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <p>
-                                    Pour le radon, il est fortement conseillé de réaliser deux tests distincts : un test de l'air ambiant au niveau le plus bas de la maison (sous-sol), et un test de l'eau. Souvent, traiter l'eau fortement chargée en radon résout également une part significative du problème de radon dans l'air intérieur.
-                                </p>
+            <h3 className="text-2xl font-bold text-gray-800 mt-8 mb-4">2.2 Aspects sanitaires</h3>
+            <p className="text-lg leading-relaxed text-gray-700 mb-6 text-justify">
+                Dans l'eau, le radon ne modifie ni le goût, ni l'odeur, ni l'apparence. Le risque principal lié au radon demeure celui d'une exposition par inhalation lorsqu'il passe de l'eau à l'air, par exemple lors de l'utilisation d'eau chaude sous la douche ou au robinet. Cependant, même si ce texte se concentre sur la présence en eau, il est important de comprendre que des concentrations très élevées de radon dissous peuvent contribuer de manière significative à la charge totale de radon dans l'environnement résidentiel.
+            </p>
+            <p className="text-lg leading-relaxed text-gray-700 mb-6 text-justify">
+                Les mesures de radon dissous dans l'eau sont généralement exprimées en becquerels par litre. Selon les valeurs obtenues et les lignes directrices en vigueur, il peut être recommandé de mettre en place un traitement spécifique afin de réduire cette contribution et de limiter les risques associés.
+            </p>
 
-                                {/* Section 4: Solutions Technologiques */}
-                                <h2 id="section-4" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">4. Solutions d'ingénierie et Technologies de filtration</h2>
-                                <p>
-                                    La bonne nouvelle est que la science de l'hydrologie domestique a développé des méthodes hautement efficaces pour retirer ces éléments dangereux. Voici comment les experts Bricareau procèdent pour sécuriser une résidence.
-                                </p>
+            {/* Section 3 */}
+            <h2 id="section-3" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">3. Analyses et interprétation des résultats</h2>
 
-                                <h3 className="text-2xl font-bold text-slate-800 mt-12 mb-6">Traitement de l'Uranium</h3>
-                                <div className="space-y-6">
-                                    <div className="flex gap-6 items-start">
-                                        <div className="bg-slate-900 text-white rounded-xl p-4 shrink-0">
-                                            <Droplets className="h-8 w-8" />
-                                        </div>
-                                        <div>
-                                            <h4 className="text-xl font-bold mb-2">L'Osmose Inverse (Point d'utilisation)</h4>
-                                            <p className="text-slate-600 leading-snug">
-                                                Si l'uranium est le seul problème et que le but est d'avoir de l'eau potable saine (pour boire et cuisiner), un système d'osmose inverse installé sous l'évier est la référence absolue. Sa membrane semi-perméable ultra-fine rejette plus de 90-95% des atomes d'uranium lourds vers le drain.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div className="flex gap-6 items-start">
-                                        <div className="bg-slate-900 text-white rounded-xl p-4 shrink-0">
-                                            <Activity className="h-8 w-8" />
-                                        </div>
-                                        <div>
-                                            <h4 className="text-xl font-bold mb-2">L'Échange Anionique (Maison entière)</h4>
-                                            <p className="text-slate-600 leading-snug">
-                                                Si les niveaux sont très élevés ou si l'on souhaite traiter l'eau de toute la résidence, les systèmes à résine échangeuse d'anions représentent la solution de pointe. Ressemblant à un adoucisseur d'eau, ce filtre utilise une résine spéciale qui attire l'uranium chargé négativement et le remplace par un ion chlorure.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
+            <h3 className="text-2xl font-bold text-gray-800 mt-8 mb-4">3.1 Pourquoi et comment analyser son eau</h3>
+            <p className="text-lg leading-relaxed text-gray-700 mb-4 text-justify">
+                Pour un propriétaire de puits privé, la première démarche consiste à faire analyser l'eau par un laboratoire qualifié. L'échantillonnage doit respecter des protocoles stricts, surtout pour le radon, afin de préserver l'intégrité de l'échantillon jusqu'à la mesure. Pour l'uranium, une analyse des métaux dissous suffira; pour le radon, des flacons et un mode de prélèvement particuliers sont requis.
+            </p>
+            <p className="text-lg leading-relaxed text-gray-700 mb-4 text-justify">
+                L'intérêt de ces analyses est double :
+            </p>
+            <ul className="list-disc pl-6 mb-6 text-lg text-gray-700 space-y-2">
+                <li>Vérifier la conformité de l'eau par rapport aux valeurs de référence pour la consommation.</li>
+                <li>Disposer d'une base objective pour décider si un traitement est nécessaire, et, le cas échéant, quel type de technologie privilégier.</li>
+            </ul>
 
-                                <h3 className="text-2xl font-bold text-slate-800 mt-16 mb-6">L'Éradication du Radon</h3>
-                                <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-xl my-8">
-                                    <h4 className="text-xl font-bold text-slate-900 mb-4 flex items-center gap-3">
-                                        <Wind className="h-6 w-6 text-blue-600" />
-                                        L'Aération (Aérostripping)
-                                    </h4>
-                                    <p className="text-slate-600 mb-6 font-medium">L'approche la plus performante pour désamorcer le radon de l'eau avant son entrée dans vos tuyaux.</p>
-                                    <p className="text-slate-600 leading-snug">
-                                        L'aération est la méthode approuvée par le gouvernement (EPA/Santé Canada) pour enlever jusqu'à 99% du radon. Le système injecte de grandes quantités d'air ambiant dans la colonne d'eau de manière agitée. Le radon, gaz très volatil, est "arraché" (stripping) de l'eau et s'échappe dans l'air contenu dans la chambre de traitement. Cet air vicié est ensuite évacué de manière sécuritaire par un tuyau (évent) dirigé vers l'extérieur du toit de la maison. L'eau redescend pure et saine.
-                                    </p>
-                                </div>
-                                <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm my-8">
-                                    <h4 className="text-xl font-bold text-slate-900 mb-4">Le Filtre au Charbon Actif (Pour de faibles niveaux)</h4>
-                                    <p className="text-slate-600 leading-snug">
-                                        Pour des concentrations légères, un immense réservoir de charbon actif de qualité catalytique peut capturer le radon de l'eau par adsorption. Toutefois, Bricareau met en garde : ce charbon accumule la radioactivité avec le temps. Le réservoir lui-même devient une source de rayonnement gamma et nécessite une disposition extrêmement contrôlée lorsqu'il est saturé. Il s'agit d'une solution de dernier recours ou pour des taux minimes.
-                                    </p>
-                                </div>
+            <h3 className="text-2xl font-bold text-gray-800 mt-8 mb-4">3.2 Comparaison avec les valeurs de référence</h3>
+            <p className="text-lg leading-relaxed text-gray-700 mb-6 text-justify">
+                Les résultats doivent être interprétés à la lumière des recommandations établies pour l'eau potable. Si la concentration d'uranium dépasse la valeur maximale recommandée, une solution doit être envisagée pour réduire cette teneur ou pour limiter l'usage de l'eau concernée à des fins non alimentaires. Pour le radon dissous, des seuils indicatifs permettent d'évaluer s'il constitue un enjeu significatif, notamment en tenant compte des habitudes d'utilisation de l'eau (fréquence des douches, volume d'eau chaude utilisé, etc.).
+            </p>
+            <p className="text-lg leading-relaxed text-gray-700 mb-6 text-justify">
+                En cas de dépassement ou de valeur jugée préoccupante, il est fortement conseillé de consulter un professionnel du traitement de l'eau. Ce dernier pourra proposer des options adaptées au contexte, en tenant compte des autres paramètres de qualité de l'eau (fer, manganèse, turbidité, dureté, contaminants microbiologiques, etc.).
+            </p>
 
-                                {/* Section 5: Conclusion & CTA */}
-                                <div className="mt-24 p-12 bg-blue-900 text-white rounded-[3rem] relative overflow-hidden shadow-2xl">
-                                    <div className="absolute bottom-0 right-0 opacity-10 scale-150 translate-x-10 translate-y-10">
-                                        <ShieldCheck className="w-64 h-64" />
-                                    </div>
-                                    <div className="relative z-10">
-                                        <h3 className="text-3xl md:text-5xl font-bold mb-8 tracking-tighter w-full lg:w-3/4">La tranquillité d'esprit commence par le savoir.</h3>
-                                        <p className="text-xl text-blue-100 opacity-95 mb-10 font-light leading-relaxed max-w-2xl">
-                                            Ne laissez pas l'invisibilité de ces contaminants vous rassurer faussement. Un test est simple, abordable, et sauve des vies. Chez Bricareau, nos ingénieurs en traitement des eaux conçoivent des stratégies de filtration multi-barrières qui éliminent le radon et l'uranium tout en respectant la chimie délicate de votre puits.
-                                        </p>
-                                        <div className="flex flex-col sm:flex-row gap-6">
-                                            <Button size="lg" className="bg-blue-500 hover:bg-blue-400 text-white rounded-full px-12 h-16 text-lg font-bold shadow-xl transition-all" asChild>
-                                                <a href="/contact">Parler à un spécialiste certifié</a>
-                                            </Button>
-                                        </div>
-                                    </div>
-                                </div>
+            {/* Section 4 */}
+            <h2 id="section-4" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">4. Méthodes de traitement de l'uranium dans l'eau</h2>
+            <p className="text-lg leading-relaxed text-gray-700 mb-6 text-justify">
+                Lorsque l'uranium dépasse les concentrations recommandées, plusieurs technologies éprouvées permettent d'en réduire la présence dans l'eau de puits.
+            </p>
+
+            <h3 className="text-2xl font-bold text-gray-800 mt-8 mb-4">4.1 Résines échangeuses d'ions</h3>
+            <p className="text-lg leading-relaxed text-gray-700 mb-4 text-justify">
+                <strong>Principe :</strong> l'eau traverse une colonne remplie de résine échangeuse d'ions. Les ions d'uranium se fixent sur la résine et sont remplacés par d'autres ions (souvent sodium, calcium ou hydrogène) présents sur le média.
+            </p>
+            <p className="text-lg leading-relaxed text-gray-700 mb-4 text-justify">
+                <strong>Caractéristiques :</strong>
+            </p>
+            <ul className="list-disc pl-6 mb-6 text-lg text-gray-700 space-y-2">
+                <li>Peut être installée à l'entrée de la maison pour traiter toute l'eau ou au point d'utilisation (sous l'évier de la cuisine) pour l'eau destinée à la boisson et à la préparation des aliments.</li>
+                <li>Offre une réduction significative de l'uranium dissous lorsque le système est bien dimensionné.</li>
+                <li>Nécessite des cycles de régénération avec une solution de régénérant, ainsi qu'une gestion adéquate des rejets.</li>
+            </ul>
+            <p className="text-lg leading-relaxed text-gray-700 mb-4 text-justify">
+                <strong>Points de vigilance :</strong>
+            </p>
+            <ul className="list-disc pl-6 mb-6 text-lg text-gray-700 space-y-2">
+                <li>Le dimensionnement doit tenir compte de la concentration d'uranium, du débit d'eau et de la consommation quotidienne.</li>
+                <li>La résine doit être choisie en fonction de sa sélectivité pour l'uranium et de la qualité globale de l'eau.</li>
+                <li>Des analyses de contrôle périodiques sont nécessaires pour vérifier que la résine n'est pas saturée et que l'eau traitée reste conforme.</li>
+            </ul>
+
+            <h3 className="text-2xl font-bold text-gray-800 mt-8 mb-4">4.2 Osmose inverse</h3>
+            <p className="text-lg leading-relaxed text-gray-700 mb-4 text-justify">
+                <strong>Principe :</strong> l'eau est poussée sous pression à travers une membrane semi‑perméable qui retient la majorité des sels dissous, dont l'uranium. L'eau purifiée est recueillie d'un côté de la membrane, tandis que l'eau concentrée en contaminants est rejetée.
+            </p>
+            <p className="text-lg leading-relaxed text-gray-700 mb-4 text-justify">
+                <strong>Caractéristiques :</strong>
+            </p>
+            <ul className="list-disc pl-6 mb-6 text-lg text-gray-700 space-y-2">
+                <li>Souvent installée au point d'utilisation, notamment sous l'évier de cuisine, pour traiter l'eau de boisson.</li>
+                <li>Capable de réduire de manière importante la concentration d'uranium, surtout si combinée à des pré‑filtres adaptés.</li>
+            </ul>
+            <p className="text-lg leading-relaxed text-gray-700 mb-4 text-justify">
+                <strong>Limites et entretien :</strong>
+            </p>
+            <ul className="list-disc pl-6 mb-6 text-lg text-gray-700 space-y-2">
+                <li>Débit limité, bien adapté aux besoins de consommation directe mais rarement destiné à l'ensemble du réseau domestique.</li>
+                <li>Rejet d'une fraction de l'eau (concentrat), qui doit être évacuée vers un drain.</li>
+                <li>Nécessite le remplacement périodique des cartouches et de la membrane, selon les recommandations du fabricant.</li>
+            </ul>
+
+            <h3 className="text-2xl font-bold text-gray-800 mt-8 mb-4">4.3 Autres approches complémentaires</h3>
+            <p className="text-lg leading-relaxed text-gray-700 mb-6 text-justify">
+                Dans certains cas, des médias adsorbants spécifiques, basés sur des composés capables de capter l'uranium, peuvent être utilisés en complément ou en alternative. Le choix de ces médias et leur position dans la chaîne de traitement dépendent fortement de la chimie de l'eau. Un ajustement de pH peut également être envisagé pour optimiser la forme chimique de l'uranium et améliorer l'efficacité du traitement.
+            </p>
+            <p className="text-lg leading-relaxed text-gray-700 mb-6 text-justify">
+                Quelle que soit la technologie retenue, il est essentiel de confirmer l'efficacité par des analyses après l'installation, puis à intervalle régulier.
+            </p>
+
+            {/* Section 5 */}
+            <h2 id="section-5" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">5. Méthodes de traitement du radon dissous dans l'eau</h2>
+            <p className="text-lg leading-relaxed text-gray-700 mb-6 text-justify">
+                Pour le radon présent dans l'eau de puits, les méthodes de traitement reposent principalement sur le dégazage, c'est‑à‑dire la capacité à faire passer le radon de la phase aqueuse à la phase gazeuse de manière contrôlée et sécuritaire.
+            </p>
+
+            <h3 className="text-2xl font-bold text-gray-800 mt-8 mb-4">5.1 Systèmes d'aération</h3>
+            <p className="text-lg leading-relaxed text-gray-700 mb-4 text-justify">
+                <strong>Principe général :</strong> mettre l'eau en contact intime avec l'air afin de permettre au radon de s'en échapper, puis évacuer l'air chargé en radon vers l'extérieur.
+            </p>
+            <p className="text-lg leading-relaxed text-gray-700 mb-4 text-justify">
+                <strong>Configurations courantes :</strong>
+            </p>
+            <ul className="list-disc pl-6 mb-6 text-lg text-gray-700 space-y-2">
+                <li><strong>Aération par pulvérisation :</strong> l'eau est pulvérisée en fines gouttelettes dans une cuve ventilée, ce qui maximise la surface de contact eau‑air et favorise le dégazage.</li>
+                <li><strong>Aération par barbotage :</strong> de l'air est injecté à la base d'une colonne d'eau sous forme de bulles; en remontant, ces bulles emportent le radon vers la phase gazeuse, ensuite évacuée à l'extérieur.</li>
+                <li><strong>Tours de dégazage :</strong> l'eau s'écoule de haut en bas sur un garnissage tandis qu'un flux d'air circule en sens inverse, optimisant le transfert du radon vers l'air.</li>
+            </ul>
+            <p className="text-lg leading-relaxed text-gray-700 mb-4 text-justify">
+                <strong>Avantages :</strong>
+            </p>
+            <ul className="list-disc pl-6 mb-6 text-lg text-gray-700 space-y-2">
+                <li>Bien conçus, ces systèmes peuvent réduire fortement la concentration de radon dissous.</li>
+                <li>Ils sont généralement installés à l'entrée de la maison et traitent ainsi toute l'eau provenant du puits.</li>
+            </ul>
+            <p className="text-lg leading-relaxed text-gray-700 mb-4 text-justify">
+                <strong>Contraintes :</strong>
+            </p>
+            <ul className="list-disc pl-6 mb-6 text-lg text-gray-700 space-y-2">
+                <li>Nécessitent un ventilateur, une alimentation électrique et un conduit de rejet d'air à l'extérieur, positionné de façon sécuritaire.</li>
+                <li>Demandent un entretien mécanique minimal (ventilateur, nettoyage périodique de la cuve ou de la colonne).</li>
+            </ul>
+
+            <h3 className="text-2xl font-bold text-gray-800 mt-8 mb-4">5.2 Filtres au charbon actif en granulés (GAC)</h3>
+            <p className="text-lg leading-relaxed text-gray-700 mb-4 text-justify">
+                <strong>Principe :</strong> l'eau traverse un lit de charbon actif en granulés qui adsorbe le radon et certains produits associés.
+            </p>
+            <p className="text-lg leading-relaxed text-gray-700 mb-4 text-justify">
+                <strong>Prudence :</strong>
+            </p>
+            <ul className="list-disc pl-6 mb-6 text-lg text-gray-700 space-y-2">
+                <li>Même si cette méthode peut être efficace pour des concentrations modestes et des débits limités, le charbon peut accumuler des produits radioactifs au fil du temps, ce qui pose des questions de gestion et d'élimination du média usé.</li>
+                <li>Pour des concentrations élevées de radon et pour un usage résidentiel continu, les systèmes d'aération sont généralement préférés, précisément pour éviter cette accumulation.</li>
+            </ul>
+
+            {/* Section 6 */}
+            <h2 id="section-6" className="text-2xl md:text-3xl font-bold text-black mt-16 mb-6 tracking-tight scroll-mt-24">6. Démarche recommandée pour les propriétaires de puits privés</h2>
+            <p className="text-lg leading-relaxed text-gray-700 mb-4 text-justify">
+                Pour gérer efficacement la présence d'uranium et de radon dans l'eau de puits privés, une démarche structurée s'impose :
+            </p>
+            <ul className="list-disc pl-6 mb-6 text-lg text-gray-700 space-y-2">
+                <li><strong>Analyser l'eau de son propre puits :</strong> mesurer l'uranium et, si le contexte s'y prête, le radon dissous, en utilisant les services d'un laboratoire accrédité.</li>
+                <li><strong>Comparer les résultats aux valeurs de référence :</strong> déterminer si les concentrations mesurées nécessitent une intervention.</li>
+                <li><strong>Consulter un professionnel du traitement de l'eau :</strong> choisir la technologie appropriée (résine, osmose inverse, aération, etc.) en fonction des résultats, de la configuration de la maison et des autres paramètres de qualité de l'eau.</li>
+                <li><strong>Installer et dimensionner correctement le système :</strong> s'assurer que le débit, la capacité et l'emplacement répondent aux besoins réels du foyer.</li>
+                <li><strong>Effectuer des analyses de suivi :</strong> vérifier régulièrement l'efficacité du traitement et la stabilité des concentrations dans le temps.</li>
+            </ul>
+
+            <p className="text-lg leading-relaxed text-gray-700 mb-6 text-justify">
+                En résumé, la présence d'uranium et de radon dans l'eau des puits privés au Québec est un phénomène naturel étroitement lié à la géologie locale. L'enjeu pour les propriétaires n'est pas de céder à l'inquiétude, mais de mesurer, comprendre et, au besoin, traiter ces contaminants à l'aide de solutions techniques fiables et éprouvées, afin de garantir une eau de consommation sûre pour tous les occupants de la résidence.
+            </p>
         </BlogLayout>
     );
 };

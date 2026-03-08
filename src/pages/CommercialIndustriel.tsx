@@ -75,7 +75,7 @@ const CommercialIndustriel = () => {
       <Header />
 
       <main>
-        {/* Hero Section */}
+        {/* 1. Hero Section */}
         <section className="relative h-[850px] flex items-center overflow-hidden -mt-[104px] pt-[104px]">
           <div className="absolute inset-0 z-0">
             <img
@@ -124,7 +124,7 @@ const CommercialIndustriel = () => {
               </div>
             </div>
           </div>
-          {/* Wave Separator Bottom - Transition to White Section */}
+          {/* 2.Wave Separator Bottom - Transition to White Section */}
           <div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-[0] z-20 pointer-events-none">
             <svg
               className="relative block w-full h-[80px] md:h-[150px]"
@@ -142,7 +142,7 @@ const CommercialIndustriel = () => {
           </div>
         </section>
 
-        {/* Solutions Section */}
+        {/* 3. Solutions Section */}
         <section id="solutions" className="py-12 md:py-16">
           <div className="container mx-auto px-4">
             <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-16 text-center leading-[1.2] md:leading-[48px] tracking-tighter">
@@ -162,7 +162,7 @@ const CommercialIndustriel = () => {
           </div>
         </section>
 
-        {/* Why Choose Us */}
+        {/* 4. Why Choose Us */}
         <section className="py-12 md:py-16 bg-secondary/30">
           <div className="container mx-auto px-4">
             <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-16 text-center leading-[1.2] md:leading-[48px] tracking-tighter">
@@ -184,7 +184,7 @@ const CommercialIndustriel = () => {
           </div>
         </section>
 
-        {/* Guarantees */}
+        {/* 5. Guarantees */}
         <section className="py-12 md:py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
@@ -200,7 +200,7 @@ const CommercialIndustriel = () => {
           </div>
         </section>
 
-        {/* CTA Banner */}
+        {/* 6. CTA Banner */}
         <section className="py-12 md:py-16 bg-primary/5">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center space-y-6">
@@ -221,10 +221,10 @@ const CommercialIndustriel = () => {
           </div>
         </section>
 
-        {/* Testimonials */}
+        {/* 7. Testimonials */}
         <Testimonials />
 
-        {/* Markets Section */}
+        {/* 8. Markets Section */}
         <section className="py-12 md:py-16 bg-secondary/30">
           <div className="container mx-auto px-4">
             <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-center">
@@ -248,7 +248,7 @@ const CommercialIndustriel = () => {
           </div>
         </section>
 
-        {/* Water Testing */}
+        {/* 9. Water Testing */}
         <section className="py-12 md:py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center space-y-6">
@@ -270,7 +270,7 @@ const CommercialIndustriel = () => {
           </div>
         </section>
 
-        {/* Final CTA */}
+        {/* 10. Final CTA */}
         <section className="py-12 md:py-16 bg-primary/5">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center space-y-6">

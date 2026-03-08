@@ -10,7 +10,7 @@ const Contact = () => {
     <div className="min-h-screen bg-background">
       <Header />
       <main>
-        {/* Hero Section */}
+        {/* 1. Hero Section */}
         <section className="py-12 md:py-20 lg:py-24 bg-gradient-to-b from-primary/5 to-background">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center space-y-6">
@@ -27,7 +27,7 @@ const Contact = () => {
           </div>
         </section>
 
-        {/* Contact Info & Form */}
+        {/* 2. Contact Info & Form */}
         <section className="py-12 md:py-16">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
@@ -87,7 +87,7 @@ const Contact = () => {
                 </div>
               </div>
 
-              {/* Contact Form */}
+              {/* 3. Contact Form */}
               <div className="bg-card border border-border rounded-lg p-6 md:p-8">
                 <h2
                   className="text-[28px] md:text-[40px] font-normal text-slate-900 mb-6 leading-[1.1] tracking-tighter"

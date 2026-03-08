@@ -186,7 +186,7 @@ const AdoucisseursEauDePuits = () => {
             <Header />
 
             <main>
-                {/* 1.Hero Section */}
+                {/* 1. Hero Section */}
                 <section className="relative h-[750px] md:h-[800px] flex items-center overflow-hidden -mt-[104px] pt-[104px]">
                     <div className="absolute inset-0 z-0">
                         <picture>
@@ -228,7 +228,7 @@ const AdoucisseursEauDePuits = () => {
                             </div>
                         </div>
                     </div>
-                    {/* Wave Separator Bottom - Transition to Blue Section */}
+                    {/* 2.Wave Separator Bottom - Transition to Blue Section */}
                     <div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-[0] z-20 pointer-events-none">
                         <svg
                             className="relative block w-full h-[50px] md:h-[80px]"
@@ -246,7 +246,7 @@ const AdoucisseursEauDePuits = () => {
                     </div>
                 </section>
 
-                {/* 2. Why choose our water softeners */}
+                {/* 3. Why choose our water softeners */}
                 <section className="py-24 bg-blue-600 text-white text-center">
                     <div className="container mx-auto px-6 text-center">
                         <div className="text-left mb-16">
@@ -282,7 +282,7 @@ const AdoucisseursEauDePuits = () => {
                     </div>
                 </section>
 
-                {/* 3.Product Grid Section */}
+                {/* 4. Product Grid Section */}
                 <section id="nos-adoucisseurs" className="py-24 bg-gray-50">
                     <div className="container mx-auto px-6">
                         <div className="text-left mb-16">
@@ -338,7 +338,7 @@ const AdoucisseursEauDePuits = () => {
                     </div>
                 </section>
 
-                {/* 4.Comparison Table Section */}
+                {/* 5. Comparison Table Section */}
                 <section className="py-24 bg-white border-t border-gray-100">
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
@@ -394,7 +394,7 @@ const AdoucisseursEauDePuits = () => {
                     </div>
                 </section>
 
-                {/* 7.Water Testing Section */}
+                {/* 6. Water Testing Section */}
                 <section className="relative h-[650px] flex items-center overflow-hidden">
                     <div className="absolute inset-0 z-0">
                         <img
@@ -431,7 +431,7 @@ const AdoucisseursEauDePuits = () => {
                     </div>
                 </section>
 
-                {/* 6.Testimonials Grid Section */}
+                {/* 7.Testimonials Grid Section */}
                 <TestimonialsSection
                     filterProduct="/adoucisseurs-eau-de-puits"
                     title={
@@ -442,7 +442,7 @@ const AdoucisseursEauDePuits = () => {
                     }
                 />
 
-                {/* 5. Section Associated Products */}
+                {/* 8. Section Associated Products */}
                 <section className="bg-white py-24">
                          <div className="container mx-auto px-4">
                                     <div className="text-center mb-16">
@@ -513,7 +513,7 @@ const AdoucisseursEauDePuits = () => {
                                 </div>
                             </section>
 
-                {/* 5. CTA Section */}
+                {/* 9. CTA Section */}
                 <section className="bg-primary py-16 md:py-20">
                     <div className="container mx-auto px-4 text-center">
                         <h2 className="text-2xl md:text-3xl font-bold text-primary-foreground mb-4">
@@ -535,7 +535,7 @@ const AdoucisseursEauDePuits = () => {
                     </div>
                 </section>
 
-                {/* 8.FAQ Section */}
+                {/* 10. FAQ Section */}
                 <section className="py-24 bg-white">
                     <div className="container mx-auto px-6">
                         <div className="text-left mb-16">
@@ -574,7 +574,7 @@ const AdoucisseursEauDePuits = () => {
                     </div>
                 </section>
 
-                {/* 9.Resources Section */}
+                {/* 11.Resources Section */}
                 <section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-6 text-left">
                         <div className="text-left mb-16">
@@ -619,7 +619,7 @@ const AdoucisseursEauDePuits = () => {
                     </div>
                 </section>
 
-                {/* 10.Consultation Form Section */}
+                {/* 12. Consultation Form Section */}
                 <ConsultationFormSection id="consultation" />
             </main>
 

@@ -67,7 +67,7 @@ const Filtration = () => {
         <div className="min-h-screen bg-background text-slate-900 font-sans">
             <Header />
             <main>
-                {/* 1.Hero Section */}
+                {/* 1. Hero Section */}
                 <section className="relative h-[850px] flex items-center overflow-hidden -mt-[104px] pt-[104px]">
                     <div className="absolute inset-0 z-0">
                         <img
@@ -119,7 +119,7 @@ const Filtration = () => {
                             </div>
                         </div>
                     </div>
-                    {/* Wave Separator Bottom - Transition to Blue Section */}
+                    {/* 2.Wave Separator Bottom - Transition to Blue Section */}
                     <div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-[0] z-20 pointer-events-none">
                         <svg
                             className="relative block w-full h-[50px] md:h-[80px]"
@@ -137,7 +137,7 @@ const Filtration = () => {
                     </div>
                 </section>
 
-                {/* 2. Benefits Section */}
+                {/* 3. Benefits Section */}
                 <section className="py-24 bg-blue-600 text-white text-center">
                     <div className="container mx-auto px-6 text-center">
                         <div className="text-center mb-16">
@@ -168,7 +168,7 @@ const Filtration = () => {
                 </section>
 
 
-                {/* 3. Whole House Water Filter Section - PRO EXCELLENCE */}
+                {/* 4. Whole House Water Filter Section - PRO EXCELLENCE */}
                 <section className="py-24 bg-white relative overflow-hidden">
                     <div className="container mx-auto px-6">
                         <div className="flex flex-col lg:flex-row items-start gap-16">
@@ -240,7 +240,7 @@ const Filtration = () => {
                     </div>
                 </section>
 
-                {/* 4. Reverse Osmosis Water Filtration Section - STYLE MATCHED */}
+                {/* 5. Reverse Osmosis Water Filtration Section - STYLE MATCHED */}
                 <section className="py-24 bg-gray-50 relative overflow-hidden">
                     <div className="container mx-auto px-6">
                         <div className="flex flex-col lg:flex-row-reverse items-start gap-16">
@@ -313,7 +313,7 @@ const Filtration = () => {
                 </section>
 
 
-                {/* 5. Under Sink Water Filtration Systems Section - STYLE MATCHED */}
+                {/* 6. Under Sink Water Filtration Systems Section - STYLE MATCHED */}
                 <section className="py-24 bg-white relative overflow-hidden">
                     <div className="container mx-auto px-6">
                         <div className="flex flex-col lg:flex-row items-start gap-16">
@@ -423,7 +423,7 @@ const Filtration = () => {
                     </div>
                 </section>
 
-                {/* 7. Testimonials Section */}
+                {/* 8. Testimonials Section */}
                 <TestimonialsSection
                     filterProduct="/filtration"
                     title={
@@ -435,7 +435,7 @@ const Filtration = () => {
                 />
 
 
-                {/* 8. Comparison Table */}
+                {/* 9. Comparison Table */}
                 <section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
@@ -488,7 +488,7 @@ const Filtration = () => {
                     </div>
                 </section>
 
-                {/* 9. FAQ Section */}
+                {/* 10. FAQ Section */}
                 <section className="py-24 bg-white">
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
@@ -587,7 +587,7 @@ const Filtration = () => {
                     </div>
                 </section>
 
-                {/* 10. Resources Section */}
+                {/* 11. Resources Section */}
                 <section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
@@ -642,7 +642,7 @@ const Filtration = () => {
                     </div>
                 </section>
 
-                {/* 11. Consultation Form Section (Adopted from Adoucissement.tsx) */}
+                {/* 12. Consultation Form Section (Adopted from Adoucissement.tsx) */}
                 <ConsultationFormSection id="consultation" />
             </main>
             <Footer />

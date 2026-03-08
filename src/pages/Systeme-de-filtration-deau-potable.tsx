@@ -83,7 +83,7 @@ const StationEauPotable = () => {
     <div className="min-h-screen bg-background text-slate-900 font-sans">
       <Header />
       <main>
-        {/* Hero Section - UNCHANGED */}
+        {/* 1. Hero Section - UNCHANGED */}
         <section className="relative h-[850px] flex items-center overflow-hidden -mt-[104px] pt-[104px]">
           <div className="absolute inset-0 z-0">
             <img
@@ -135,7 +135,7 @@ const StationEauPotable = () => {
               </div>
             </div>
           </div>
-          {/* Wave Separator Bottom - Transition to Blue Section */}
+          {/* 2. Wave Separator Bottom - Transition to Blue Section */}
           <div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-[0] z-20 pointer-events-none">
             <svg
               className="relative block w-full h-[50px] md:h-[80px]"
@@ -153,7 +153,7 @@ const StationEauPotable = () => {
           </div>
         </section>
 
-        {/* 2. Pourquoi choisir - Blue Section */}
+        {/* 3. Pourquoi choisir - Blue Section */}
         <section className="py-24 bg-blue-600 text-white">
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
@@ -183,7 +183,7 @@ const StationEauPotable = () => {
           </div>
         </section>
 
-        {/* 3. Systèmes d'osmose inverse - Product Grid */}
+        {/* 4. Systèmes d'osmose inverse - Product Grid */}
         <section id="purification-systems" className="py-24 bg-white">
           <div className="container mx-auto px-6">
             <div className="text-left mb-16">
@@ -247,7 +247,7 @@ const StationEauPotable = () => {
           </div>
         </section>
 
-        {/* 6. Comparison Table */}
+        {/* 5. Comparison Table */}
         <section className="py-24 bg-white">
           <div className="container mx-auto px-4">
             <div className="text-left mb-16">
@@ -304,7 +304,7 @@ const StationEauPotable = () => {
             </div>
           </div>
         </section>
-        {/* 7.Water Testing Section */}
+        {/* 6. Water Testing Section */}
         <section className="relative h-[650px] flex items-center overflow-hidden">
           <div className="absolute inset-0 z-0">
             <img
@@ -340,7 +340,7 @@ const StationEauPotable = () => {
           </div>
         </section>
 
-        {/* 8. Testimonials Section */}
+        {/* 7. Testimonials Section */}
         <TestimonialsSection
           filterProduct="/systeme-de-filtration-deau-potable"
           title={
@@ -450,7 +450,7 @@ const StationEauPotable = () => {
           </div>
         </section>
 
-        {/* 10. Resources Section */}
+        {/* 8. Resources Section */}
         <section className="py-24 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="text-left mb-16">
@@ -508,7 +508,7 @@ const StationEauPotable = () => {
           </div>
         </section>
 
-        {/* 11. Consultation Form Section */}
+        {/* 9. Consultation Form Section */}
         <ConsultationFormSection id="consultation" />
       </main >
       <Footer />

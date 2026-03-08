@@ -102,7 +102,7 @@ const TestsEauPage = () => {
     <div className="min-h-screen bg-white">
       <Header />
       <main>
-        {/* 1.Hero Section */}
+        {/* 1. Hero Section */}
         <section className="relative h-[850px] flex items-center overflow-hidden -mt-[104px] pt-[104px]">
           <div className="absolute inset-0 z-0">
             <img
@@ -157,7 +157,7 @@ const TestsEauPage = () => {
             </div>
           </div>
 
-          {/* Wave Separator Bottom - Transition to Dark Blue */}
+          {/* 2. Wave Separator Bottom - Transition to Dark Blue */}
           <div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-[0] z-20 pointer-events-none">
             <svg
               className="relative block w-full h-[50px] md:h-[80px]"
@@ -178,7 +178,7 @@ const TestsEauPage = () => {
 
 
 
-        {/* 2. Why test your water Section (Blue Background) - Editorial Split Layout */}
+        {/* 3. Why test your water Section (Blue Background) - Editorial Split Layout */}
         <section className="py-32 bg-blue-600 text-white relative z-10 -mt-2 overflow-hidden">
           {/* Subtle Background Pattern */}
           <div className="absolute inset-0 opacity-10 bg-[radial-gradient(white_1px,transparent_1px)] [background-size:24px_24px]"></div>
@@ -279,7 +279,7 @@ const TestsEauPage = () => {
           </div>
         </section>
 
-        {/* 3.When you should test your water Section */}
+        {/* 4. When you should test your water Section */}
         <section className="py-24 bg-white">
           <div className="container mx-auto px-6">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
@@ -349,7 +349,7 @@ const TestsEauPage = () => {
             </div>
           </div>
         </section>
-        {/* 5. Water Testing plans Section - Modern Cards Layout */}
+        {/* 5. Water Testing plans Section */}
         <section className="py-24 bg-slate-50 relative">
           <div className="container mx-auto px-6">
             <div className="text-center max-w-3xl mx-auto mb-16">
@@ -484,6 +484,7 @@ const TestsEauPage = () => {
         </section>
 
 
+        {/* 6. FAQ Section */}
         <section className="py-24 bg-white border-t border-slate-100">
           <div className="container mx-auto px-4 text-left">
             <div className="text-left mb-16">
@@ -566,7 +567,7 @@ const TestsEauPage = () => {
           </div>
         </section>
 
-        {/* 6. Schedule a Water Test Section */}
+        {/* 7. Schedule a Water Test Section */}
         <WaterTestFormSection id="water-test" />
 
       </main >

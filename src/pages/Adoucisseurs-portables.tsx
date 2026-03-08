@@ -88,7 +88,7 @@ const AdoucisseursPortables = () => {
                         </div>
                     </div>
                 </div>
-                {/* Wave Separator Bottom - Transition to Light Gray Section */}
+                {/* 2. Wave Separator Bottom - Transition to Light Gray Section */}
                 <div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-[0] z-20 pointer-events-none">
                     <svg
                         className="relative block w-full h-[50px] md:h-[80px]"
@@ -106,7 +106,7 @@ const AdoucisseursPortables = () => {
                 </div>
             </section>
 
-            {/* 2. Sections Benefits - Sticky Split Layout */}
+            {/* 3. Sections Benefits - Sticky Split Layout */}
             <section className="py-24 bg-gray-50 relative">
                 <div className="container mx-auto px-6">
                     <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-start">
@@ -196,7 +196,7 @@ const AdoucisseursPortables = () => {
                 </div>
             </section>
 
-            {/* 3. Section Processus - Modern Connected Steps (Blue Theme) */}
+            {/* 4. Section Processus - Modern Connected Steps (Blue Theme) */}
             <section className="bg-gradient-to-br from-blue-600 to-blue-800 py-32 relative overflow-hidden text-white">
                 <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
                 <div className="container mx-auto px-4 relative z-10">
@@ -258,7 +258,7 @@ const AdoucisseursPortables = () => {
                 </div>
             </section>
 
-            {/* 4. Section Testimonials */}
+            {/* 5. Section Testimonials */}
             <TestimonialsSection
                 filterProduct="/adoucisseurs-portables"
                 title={
@@ -269,7 +269,7 @@ const AdoucisseursPortables = () => {
                 }
             />
 
-            {/* 5. Section Associated Products */}
+            {/* 6. Section Associated Products */}
             <section className="bg-white py-24">
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-16">

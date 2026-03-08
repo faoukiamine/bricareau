@@ -22,6 +22,7 @@ import { cn } from "@/lib/utils";
 import { supabase } from "@/lib/supabase";
 import { toast } from "sonner";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { Checkbox } from "@/components/ui/checkbox";
 
 const formSchema = z.object({
     prenom: z.string().min(2, "Le prénom doit contenir au moins 2 caractères"),
@@ -37,6 +38,9 @@ const formSchema = z.object({
     }),
     appointment_time: z.string({
         required_error: "Veuillez choisir une heure",
+    }),
+    consent: z.boolean().refine(val => val === true, {
+        message: "Champs Obligatoire",
     }),
 });
 
@@ -61,6 +65,7 @@ const ConsultationFormSection = ({ id }: { id?: string }) => {
             ville: "",
             province: "",
             code_postal: "",
+            consent: false,
         },
     });
 
@@ -105,7 +110,7 @@ const ConsultationFormSection = ({ id }: { id?: string }) => {
 
         let fieldsToValidate: (keyof z.infer<typeof formSchema>)[] = [];
         if (step === 1) {
-            fieldsToValidate = ["prenom", "nom", "email", "phone", "address", "ville", "province", "code_postal"];
+            fieldsToValidate = ["prenom", "nom", "email", "phone", "address", "ville", "province", "code_postal", "consent"];
         } else if (step === 2) {
             fieldsToValidate = ["appointment_date", "appointment_time"];
         }
@@ -326,6 +331,25 @@ const ConsultationFormSection = ({ id }: { id?: string }) => {
                                                             <Input className="h-12 bg-gray-50 border-none" placeholder=" " {...field} />
                                                         </FormControl>
                                                         <FormMessage />
+                                                    </FormItem>
+                                                )} />
+                                            </div>
+                                            <div className="md:col-span-2">
+                                                <FormField control={form.control} name="consent" render={({ field }) => (
+                                                    <FormItem className="flex flex-row items-start space-x-3 space-y-0 p-4 bg-gray-50 rounded-xl border border-gray-100">
+                                                        <FormControl>
+                                                            <Checkbox
+                                                                checked={field.value}
+                                                                onCheckedChange={field.onChange}
+                                                            />
+                                                        </FormControl>
+                                                        <div className="space-y-1 leading-none">
+                                                            <FormLabel className="text-xs text-gray-600 font-normal leading-relaxed cursor-pointer text-justify block">
+                                                                Je souhaite recevoir les prochaines communications de Bricareau. (Vous pouvez vous désabonner à tout moment.)<br />
+                                                                En cochant cette case ou en utilisant le site web Bricareau.com, vous reconnaissez avoir lu les Conditions générales et la Politique de confidentialité, les comprendre et accepter d'y être lié.*
+                                                            </FormLabel>
+                                                            <FormMessage />
+                                                        </div>
                                                     </FormItem>
                                                 )} />
                                             </div>
