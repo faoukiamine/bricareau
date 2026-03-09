@@ -413,19 +413,19 @@ const FiltrationSousEvier = () => {
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {[
                                 {
-                                    title: "Filtre à eau sous l'évier vs système maison entière : lequel choisir ?",
+                                    title: "Adoucisseur sans sel vs avec sel : la vérité technique",
                                     img: undersinkVsWholeHouseImg,
-                                    link: "/filtre-evier-vs-maison-entiere-choisir",
+                                    link: "/adoucisseur-sans-sel-vs-avec-sel-verite-technique",
                                 },
                                 {
-                                    title: "Système de filtration en 3 étapes vs 5 étapes : quelle différence pour votre santé ?",
+                                    title: "Comment régler la dureté de votre adoucisseur ?",
                                     img: multiStageFilterImg,
-                                    link: "/filtration-3vs5-etapes-sante-difference",
+                                    link: "/comment-regler-durete-adoucisseur-eau",
                                 },
                                 {
-                                    title: "Résidus de médicaments dans l'eau : à quel point faut-il s'inquiéter ?",
+                                    title: "Adoucisseur d'eau portable pour VR",
                                     img: medsInWaterImg,
-                                    link: "/residus-medicaments-eau-risques-solutions",
+                                    link: "/adoucisseur-deau-portable-pour-vr",
                                 },
                             ].map((art, i) => (
                                 <NavLink

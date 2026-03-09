@@ -464,19 +464,19 @@ const StationEauPotable = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
                 {
-                  title: "Fluor dans l'eau : Bienfait ou Danger ?",
+                  title: "Adoucisseur sans sel vs avec sel : la vérité technique",
                   img: fluorideImg,
-                  link: "/fluor-eau-bienfait-danger",
+                  link: "/adoucisseur-sans-sel-vs-avec-sel-verite-technique",
                 },
                 {
-                  title: "Microplastiques dans l'eau du robinet : mythe ou réalité inquiétante ?",
+                  title: "Comment régler la dureté de votre adoucisseur ?",
                   img: microplasticsImg,
-                  link: "/microplastiques-eau-robinet-realite-inquietante",
+                  link: "/comment-regler-durete-adoucisseur-eau",
                 },
                 {
-                  title: "PFAS dans l'eau du robinet : ce que vous devez savoir et comment les éliminer",
+                  title: "Adoucisseur d'eau et fosse septique : compatible ou non ?",
                   img: pfasImg,
-                  link: "/pfas-eau-robinet-elimination",
+                  link: "/adoucisseur-deau-et-fosse-septique-mythes-et-realites",
                 },
               ].map((art, i) => (
                 <div

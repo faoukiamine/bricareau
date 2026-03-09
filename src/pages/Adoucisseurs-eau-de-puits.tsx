@@ -444,74 +444,74 @@ const AdoucisseursEauDePuits = () => {
 
                 {/* 8. Section Associated Products */}
                 <section className="bg-white py-24">
-                         <div className="container mx-auto px-4">
-                                    <div className="text-center mb-16">
-                                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal text-slate-900 mb-8 leading-[1.1] tracking-tighter">Découvrez les produits associés</h2>
-                                        <p className="text-lg font-light leading-snug text-gray-500 max-w-2xl mx-auto text-justify">
-                                            Optimisez votre expérience de traitement d'eau avec nos solutions complémentaires.
-                                        </p>
+                    <div className="container mx-auto px-4">
+                        <div className="text-center mb-16">
+                            <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal text-slate-900 mb-8 leading-[1.1] tracking-tighter">Découvrez les produits associés</h2>
+                            <p className="text-lg font-light leading-snug text-gray-500 max-w-2xl mx-auto text-justify">
+                                Optimisez votre expérience de traitement d'eau avec nos solutions complémentaires.
+                            </p>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                            {[
+                                {
+                                    name: "Systèmes de filtration d'eau spécialisés",
+                                    desc: "Nos filtres spécialisés sont conçus pour cibler et éliminer efficacement les contaminants spécifiques de votre eau de puits.",
+                                    img: specialFiltersImg,
+                                    link: "/Filtres-deau"
+                                },
+                                {
+                                    name: "Systèmes de désinfection UV",
+                                    desc: "Utilisés pour la stérilisation contre les bactéries, les virus, les coliformes, l'E.Coli, le Cryptosporidium,...",
+                                    img: uvSystemImg2,
+                                    link: "/systemes-de-desinfection-UV"
+                                },
+                                {
+                                    name: "Stations d'eau potable",
+                                    desc: "Une eau de qualité minérale directement à votre évier, pour une hydratation pure et sans déchets plastiques.",
+                                    img: drinkingWaterImg,
+                                    link: "/systeme-de-filtration-deau-potable"
+                                }
+
+                            ].map((prod, i) => (
+                                <div
+                                    key={i}
+                                    className="group bg-white rounded-3xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full cursor-pointer"
+                                    onClick={() => window.location.href = prod.link}
+                                >
+                                    <div className="relative h-80 overflow-hidden bg-slate-50 flex items-center justify-center p-12">
+                                        <img
+                                            src={prod.img}
+                                            alt={`${prod.name} - Solution Bricareau pour une eau pure et sans calcaire partout`}
+                                            className="max-h-full object-contain group-hover:scale-110 transition-transform duration-700 mix-blend-multiply"
+                                        />
                                     </div>
-                
-                                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                                        {[
-                                            {
-                                name: "Systèmes de filtration d'eau spécialisés",
-                                desc: "Nos filtres spécialisés sont conçus pour cibler et éliminer efficacement les contaminants spécifiques de votre eau de puits.",
-                                img: specialFiltersImg,
-                                link: "/Filtres-deau"
-                            },
-                                            {
-                                                name: "Systèmes de désinfection UV",
-                                                desc: "Utilisés pour la stérilisation contre les bactéries, les virus, les coliformes, l'E.Coli, le Cryptosporidium,...",
-                                                img: uvSystemImg2,
-                                                link: "/systemes-de-desinfection-UV"
-                                            },
-                                            {
-                                                name: "Stations d'eau potable",
-                                                desc: "Une eau de qualité minérale directement à votre évier, pour une hydratation pure et sans déchets plastiques.",
-                                                img: drinkingWaterImg,
-                                                link: "/systeme-de-filtration-deau-potable"
-                                            }
-                
-                                        ].map((prod, i) => (
-                                            <div
-                                                key={i}
-                                                className="group bg-white rounded-3xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full cursor-pointer"
-                                                onClick={() => window.location.href = prod.link}
-                                            >
-                                                <div className="relative h-80 overflow-hidden bg-slate-50 flex items-center justify-center p-12">
-                                                    <img
-                                                        src={prod.img}
-                                                        alt={`${prod.name} - Solution Bricareau pour une eau pure et sans calcaire partout`}
-                                                        className="max-h-full object-contain group-hover:scale-110 transition-transform duration-700 mix-blend-multiply"
-                                                    />
-                                                </div>
-                                                <div className="p-8 space-y-4 flex flex-col flex-grow border-t-2 border-transparent group-hover:border-blue-600 transition-colors">
-                                                    <h3
-                                                        className="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors tracking-tight text-center"
-                                                        style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
-                                                    >
-                                                        {prod.name}
-                                                    </h3>
-                                                    <p
-                                                        className="text-[18px] leading-[25px] text-slate-500 font-light flex-grow text-justify"
-                                                        style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
-                                                    >
-                                                        {prod.desc}
-                                                    </p>
-                                                    <div
-                                                        className="inline-flex items-center gap-2 text-blue-600 font-bold text-xs tracking-widest uppercase mt-4 group-hover:underline self-end"
-                                                        style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
-                                                    >
-                                                        <span></span>
-                                                        <ArrowRight className="h-6 w-6 transform group-hover:translate-x-1 transition-transform" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        ))}
+                                    <div className="p-8 space-y-4 flex flex-col flex-grow border-t-2 border-transparent group-hover:border-blue-600 transition-colors">
+                                        <h3
+                                            className="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors tracking-tight text-center"
+                                            style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                        >
+                                            {prod.name}
+                                        </h3>
+                                        <p
+                                            className="text-[18px] leading-[25px] text-slate-500 font-light flex-grow text-justify"
+                                            style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                        >
+                                            {prod.desc}
+                                        </p>
+                                        <div
+                                            className="inline-flex items-center gap-2 text-blue-600 font-bold text-xs tracking-widest uppercase mt-4 group-hover:underline self-end"
+                                            style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                        >
+                                            <span></span>
+                                            <ArrowRight className="h-6 w-6 transform group-hover:translate-x-1 transition-transform" />
+                                        </div>
                                     </div>
                                 </div>
-                            </section>
+                            ))}
+                        </div>
+                    </div>
+                </section>
 
                 {/* 9. CTA Section */}
                 <section className="bg-primary py-16 md:py-20">
@@ -588,9 +588,9 @@ const AdoucisseursEauDePuits = () => {
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {[
-                                { title: "Comment choisir votre adoucisseur d'eau ?", img: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop", link: "/comment-choisir-un-adoucisseur-deau" },
-                                { title: "5 signes que vous avez besoin d'un adoucisseur", img: residentialWaterSoftenerImg, link: "/5-signes-besoin-adoucisseur-eau" },
-                                { title: "Impact du calcaire sur vos électroménagers", img: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=800&auto=format&fit=crop", link: "/calcaire-duree-vie-electromenagers" }
+                                { title: "Adoucisseur sans sel vs avec sel : la vérité technique", img: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop", link: "/adoucisseur-sans-sel-vs-avec-sel-verite-technique" },
+                                { title: "Comment régler la dureté de votre adoucisseur ?", img: residentialWaterSoftenerImg, link: "/comment-regler-durete-adoucisseur-eau" },
+                                { title: "Adoucisseur d'eau et fosse septique : compatible ou non ?", img: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=800&auto=format&fit=crop", link: "/adoucisseur-deau-et-fosse-septique-mythes-et-realites" }
                             ].map((art, i) => (
                                 <div
                                     key={i}

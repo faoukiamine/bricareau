@@ -475,9 +475,9 @@ const FiltresTouteMaison = () => {
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {[
-                                { title: "Taches orange dans l'évier : Le guide complet pour éliminer le fer", img: ironSinkImg, link: "/taches-orange-dans-levier-eliminer-le-fer" },
-                                { title: "Filtre au charbon actif : que filtre-t-il vraiment et quelles sont ses limites ?", img: carbonFilterImg, link: "/filtre-charbon-actif-capacite-limites" },
-                                { title: "Eau turbide (trouble) : d'où ça vient et quoi faire pour la clarifier", img: turbidWaterImg, link: "/eau-turbide-trouble-causes-clarification" }
+                                { title: "Adoucisseur sans sel vs avec sel : la vérité technique", img: ironSinkImg, link: "/adoucisseur-sans-sel-vs-avec-sel-verite-technique" },
+                                { title: "Comment régler la dureté de votre adoucisseur ?", img: carbonFilterImg, link: "/comment-regler-durete-adoucisseur-eau" },
+                                { title: "Adoucisseur d'eau portable pour VR", img: turbidWaterImg, link: "/adoucisseur-deau-portable-pour-vr" }
                             ].map((art, i) => (
                                 <div
                                     key={i}

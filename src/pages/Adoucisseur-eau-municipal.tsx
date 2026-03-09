@@ -427,9 +427,9 @@ const AdoucisseurEauMunicipal = () => {
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {[
-                                { title: "Comment choisir son adoucisseur d'eau ?", img: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop", link: "/comment-choisir-un-adoucisseur-deau" },
-                                { title: "5 signes que vous avez besoin d'un adoucisseur", img: residentialWaterSoftenerImg, link: "/5-signes-besoin-adoucisseur-eau" },
-                                { title: "Impact du calcaire sur vos électroménagers", img: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=800&auto=format&fit=crop", link: "/calcaire-duree-vie-electromenagers" }
+                                { title: "Adoucisseur sans sel vs avec sel : la vérité technique", img: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop", link: "/adoucisseur-sans-sel-vs-avec-sel-verite-technique" },
+                                { title: "Comment régler la dureté de votre adoucisseur ?", img: residentialWaterSoftenerImg, link: "/comment-regler-durete-adoucisseur-eau" },
+                                { title: "Adoucisseur d'eau et fosse septique : compatible ou non ?", img: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=800&auto=format&fit=crop", link: "/adoucisseur-deau-et-fosse-septique-mythes-et-realites" }
                             ].map((art, i) => (
                                 <div
                                     key={i}

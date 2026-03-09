@@ -1,134 +1,9 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, ChevronRight, CheckCircle2, Droplets, Filter, Shield, Zap, GlassWater, Waves, Snowflake, CupSoda } from "lucide-react";
+import { ArrowRight, ChevronRight, Droplets, Waves } from "lucide-react";
 import { NavLink } from "react-router-dom";
-import residentialWaterSoftenerImg from "@/assets/residential-water-softener.png";
-import analysisImg from "@/assets/10341859.jpg";
-import bacteriesEColiImg from "@/assets/coliform_bacteria.jpg";
-
-const categories = [
-    {
-        title: "Adoucissement de l'eau",
-        id: "adoucissement",
-        products: [
-            {
-                title: "Fonctionnement : Le Guide",
-                desc: "Démystifier la technologie de l'échange d'ions et la science de l'adoucissement.",
-                image: "https://images.unsplash.com/photo-1594411133519-2189874cb3d1?q=80&w=2000&auto=format&fit=crop",
-                href: "/qu-est-ce-qu-un-adoucisseur-eau-fonctionnement"
-            },
-            {
-                title: "Dureté : Le Seuil Critique",
-                desc: "À partir de quel niveau de calcaire un adoucisseur devient-il rentable ?",
-                image: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=2000&auto=format&fit=crop",
-                href: "/niveau-durete-eau-besoin-adoucisseur"
-            },
-            {
-                title: "Mesurer sa dureté soi-même",
-                desc: "Guide pratique des méthodes de test à la maison pour quantifier le calcaire.",
-                image: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=2000&auto=format&fit=crop",
-                href: "/comment-mesurer-durete-eau-maison"
-            },
-            {
-                title: "Les Signes de Besoin Absolu",
-                desc: "Quand votre maison appelle à l'aide : les symptômes d'une eau trop agressive.",
-                image: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=2000&auto=format&fit=crop",
-                href: "/les-signes-absolument-besoin-adoucisseur-eau"
-            },
-            {
-                title: "Sel vs Sans Sel : La Vérité",
-                desc: "Débat technique final : quel système retire réellement le calcaire de votre eau ?",
-                image: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=2000&auto=format&fit=crop",
-                href: "/adoucisseur-eau-sel-vs-sans-sel-efficacite"
-            },
-            {
-                title: "5 signes indéniables",
-                desc: "Découvrez les signes alarmants qui indiquent que votre eau est trop dure.",
-                image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop",
-                href: "/5-signes-besoin-adoucisseur-eau"
-            }
-        ]
-    },
-    {
-        title: "Eau de boisson & Santé",
-        id: "eau-de-boisson",
-        products: [
-            {
-                title: "Osmose Inverse : Meilleur choix ?",
-                desc: "Pourquoi l'osmose inverse est la référence absolue pour une famille en santé.",
-                image: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=2000&auto=format&fit=crop",
-                href: "/osmose-inverse-domicile-meilleur-systeme-famille"
-            },
-            {
-                title: "Sous Évier vs Toute la Maison",
-                desc: "Où placer votre ligne de défense ? Analyse comparative des architectures.",
-                image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=2000&auto=format&fit=crop",
-                href: "/filtre-evier-vs-maison-entiere-choisir"
-            },
-            {
-                title: "Charbon Actif & Ses Limites",
-                desc: "Ce qu'il capture avec brio et les dangers invisibles qu'il laisse traverser.",
-                image: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=2000&auto=format&fit=crop",
-                href: "/filtre-charbon-actif-capacite-limites"
-            },
-            {
-                title: "3 vs 5 Étapes : Comparaison",
-                desc: "Quelle architecture multicouche est nécessaire pour garantir votre santé ?",
-                image: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=2000&auto=format&fit=crop",
-                href: "/filtration-3vs5-etapes-sante-difference"
-            },
-            {
-                title: "Filtre Douche : Peau & Cheveux",
-                desc: "Pourquoi filtrer l'eau de votre douche est le fondement de vos soins de beauté.",
-                image: "https://images.unsplash.com/photo-1559599101-f09722fb4948?q=80&w=2000&auto=format&fit=crop",
-                href: "/filtre-douche-bienfaits-peau-cheveux"
-            },
-            {
-                title: "Filtre Appartement (Sans Travaux)",
-                desc: "Solutions de haute performance pour locataires, portables et sans plomberie.",
-                image: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=2000&auto=format&fit=crop",
-                href: "/filtre-eau-appartement-sans-plomberie"
-            },
-            {
-                title: "PFAS : Polluants éternels",
-                desc: "Ce que vous devez savoir sur les PFAS et comment les éliminer de votre eau.",
-                image: "https://images.unsplash.com/photo-1517646288020-f4ca67909930?q=80&w=2000&auto=format&fit=crop",
-                href: "/pfas-eau-robinet-elimination"
-            }
-        ]
-    },
-    {
-        title: "Eau de Puits & Problèmes Spécialisés",
-        id: "eau-de-puits",
-        products: [
-            {
-                title: "Traitement UV : Solution Naturelle",
-                desc: "Éliminer 99,99% des bactéries sans chimie grâce au pouvoir de la lumière.",
-                image: "https://images.unsplash.com/photo-1542332213-31f87348057f?q=80&w=2000&auto=format&fit=crop",
-                href: "/systeme-traitement-uv-solution-naturelle-bacteries"
-            },
-            {
-                title: "Bactéries E. coli : Guide Urgence",
-                desc: "Réagir face à une contamination fécale et installer une protection UV.",
-                image: bacteriesEColiImg,
-                href: "/bacteries-e-coli-eau-puits-causes-solutions"
-            },
-            {
-                title: "Fer & Manganèse (Taches)",
-                desc: "Éliminer définitivement les taches orange (fer) et noires (manganèse).",
-                image: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=800&auto=format&fit=crop",
-                href: "/manganese-fer-eau-brune-remedes"
-            },
-            {
-                title: "Arsenic dans l'eau potable",
-                desc: "Zones à risque, effets sur la santé et filtration efficace certifiée.",
-                image: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=2000&auto=format&fit=crop",
-                href: "/arsenic-eau-potable-risques-filtration"
-            }
-        ]
-    }
-];
+import { categories } from "@/data/blogCategories";
 
 const Blog = () => {
     return (
@@ -192,15 +67,17 @@ const Blog = () => {
                                     <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">{cat.title}</h2>
                                     <div className="h-1.5 w-24 bg-blue-600 rounded-full"></div>
                                 </div>
-                                <Button variant="link" className="text-blue-600 font-bold p-0 group" asChild>
-                                    <NavLink to={cat.products[0].href} className="flex items-center">
-                                        Voir toutes les options <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-                                    </NavLink>
-                                </Button>
+                                {cat.products.length > 3 && (
+                                    <Button variant="link" className="text-blue-600 font-bold p-0 group" asChild>
+                                        <NavLink to={`/blog/categorie/${cat.id}`} className="flex items-center">
+                                            Voir plus d'articles <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                                        </NavLink>
+                                    </Button>
+                                )}
                             </div>
 
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                                {cat.products.map((product, pIdx) => (
+                                {cat.products.slice(0, 3).map((product, pIdx) => (
                                     <NavLink
                                         key={pIdx}
                                         to={product.href}

@@ -12,118 +12,34 @@ const categories = [
         id: "adoucissement",
         products: [
             {
-                title: "Fonctionnement : Le Guide",
-                desc: "Démystifier la technologie de l'échange d'ions et la science de l'adoucissement.",
-                image: "https://images.unsplash.com/photo-1594411133519-2189874cb3d1?q=80&w=2000&auto=format&fit=crop",
-                href: "/qu-est-ce-qu-un-adoucisseur-eau-fonctionnement"
-            },
-            {
-                title: "Dureté : Le Seuil Critique",
-                desc: "À partir de quel niveau de calcaire un adoucisseur devient-il rentable ?",
-                image: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=2000&auto=format&fit=crop",
-                href: "/niveau-durete-eau-besoin-adoucisseur"
-            },
-            {
-                title: "Mesurer sa dureté soi-même",
-                desc: "Guide pratique des méthodes de test à la maison pour quantifier le calcaire.",
-                image: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=2000&auto=format&fit=crop",
-                href: "/comment-mesurer-durete-eau-maison"
-            },
-            {
-                title: "Les Signes de Besoin Absolu",
-                desc: "Quand votre maison appelle à l'aide : les symptômes d'une eau trop agressive.",
-                image: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=2000&auto=format&fit=crop",
-                href: "/les-signes-absolument-besoin-adoucisseur-eau"
-            },
-            {
-                title: "Sel vs Sans Sel : La Vérité",
+                title: "Sel vs Sans Sel : La Vérité Technique",
                 desc: "Débat technique final : quel système retire réellement le calcaire de votre eau ?",
                 image: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=2000&auto=format&fit=crop",
-                href: "/adoucisseur-eau-sel-vs-sans-sel-efficacite"
+                href: "/adoucisseur-sans-sel-vs-avec-sel-verite-technique"
             },
             {
-                title: "5 signes indéniables",
-                desc: "Découvrez les signes alarmants qui indiquent que votre eau est trop dure.",
-                image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop",
-                href: "/5-signes-besoin-adoucisseur-eau"
-            }
-        ]
-    },
-    {
-        title: "Eau de boisson & Santé",
-        id: "eau-de-boisson",
-        products: [
-            {
-                title: "Osmose Inverse : Meilleur choix ?",
-                desc: "Pourquoi l'osmose inverse est la référence absolue pour une famille en santé.",
+                title: "Comment régler la dureté de votre adoucisseur ?",
+                desc: "Guide pratique pour ajuster le réglage de dureté de votre adoucisseur d'eau.",
                 image: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=2000&auto=format&fit=crop",
-                href: "/osmose-inverse-domicile-meilleur-systeme-famille"
+                href: "/comment-regler-durete-adoucisseur-eau"
             },
             {
-                title: "Sous Évier vs Toute la Maison",
-                desc: "Où placer votre ligne de défense ? Analyse comparative des architectures.",
-                image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=2000&auto=format&fit=crop",
-                href: "/filtre-evier-vs-maison-entiere-choisir"
-            },
-            {
-                title: "Charbon Actif & Ses Limites",
-                desc: "Ce qu'il capture avec brio et les dangers invisibles qu'il laisse traverser.",
-                image: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=2000&auto=format&fit=crop",
-                href: "/filtre-charbon-actif-capacite-limites"
-            },
-            {
-                title: "3 vs 5 Étapes : Comparaison",
-                desc: "Quelle architecture multicouche est nécessaire pour garantir votre santé ?",
-                image: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=2000&auto=format&fit=crop",
-                href: "/filtration-3vs5-etapes-sante-difference"
-            },
-            {
-                title: "Filtre Douche : Peau & Cheveux",
-                desc: "Pourquoi filtrer l'eau de votre douche est le fondement de vos soins de beauté.",
-                image: "https://images.unsplash.com/photo-1559599101-f09722fb4948?q=80&w=2000&auto=format&fit=crop",
-                href: "/filtre-douche-bienfaits-peau-cheveux"
-            },
-            {
-                title: "Filtre Appartement (Sans Travaux)",
-                desc: "Solutions de haute performance pour locataires, portables et sans plomberie.",
-                image: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=2000&auto=format&fit=crop",
-                href: "/filtre-eau-appartement-sans-plomberie"
-            },
-            {
-                title: "PFAS : Polluants éternels",
-                desc: "Ce que vous devez savoir sur les PFAS et comment les éliminer de votre eau.",
-                image: "https://images.unsplash.com/photo-1517646288020-f4ca67909930?q=80&w=2000&auto=format&fit=crop",
-                href: "/pfas-eau-robinet-elimination"
-            }
-        ]
-    },
-    {
-        title: "Eau de Puits & Problèmes Spécialisés",
-        id: "eau-de-puits",
-        products: [
-            {
-                title: "Traitement UV : Solution Naturelle",
-                desc: "Éliminer 99,99% des bactéries sans chimie grâce au pouvoir de la lumière.",
-                image: "https://images.unsplash.com/photo-1542332213-31f87348057f?q=80&w=2000&auto=format&fit=crop",
-                href: "/systeme-traitement-uv-solution-naturelle-bacteries"
-            },
-            {
-                title: "Bactéries E. coli : Guide Urgence",
-                desc: "Réagir face à une contamination fécale et installer une protection UV.",
+                title: "Adoucisseur d'eau et fosse septique",
+                desc: "Démystifier les mythes et réalités sur la compatibilité avec votre fosse septique.",
                 image: "https://images.unsplash.com/photo-1594411133519-2189874cb3d1?q=80&w=2000&auto=format&fit=crop",
-                href: "/bacteries-e-coli-eau-puits-causes-solutions"
-            },
+                href: "/adoucisseur-deau-et-fosse-septique-mythes-et-realites"
+            }
+        ]
+    },
+    {
+        title: "Vie nomade & VR",
+        id: "vie-nomade",
+        products: [
             {
-                title: "Fer & Manganèse (Taches)",
-                desc: "Éliminer définitivement les taches orange (fer) et noires (manganèse).",
-                image: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=800&auto=format&fit=crop",
-                href: "/manganese-fer-eau-brune-remedes"
-            },
-            {
-                title: "Arsenic dans l'eau potable",
-                desc: "Zones à risque, effets sur la santé et filtration efficace certifiée.",
-                image: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=2000&auto=format&fit=crop",
-                href: "/arsenic-eau-potable-risques-filtration"
+                title: "Adoucisseur d'eau portable pour VR",
+                desc: "Solutions portables et compactes pour profiter d'une eau douce en camping-car.",
+                image: "https://images.unsplash.com/photo-1559599101-f09722fb4948?q=80&w=2000&auto=format&fit=crop",
+                href: "/adoucisseur-deau-portable-pour-vr"
             }
         ]
     }

@@ -13,34 +13,28 @@ interface BlogLayoutProps {
 
 const relatedArticles = [
     {
-        title: "Fonctionnement : Le Guide",
+        title: "Adoucisseur sans sel vs avec sel : la vérité technique",
+        category: "Adoucissement de l'eau",
+        image: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=2000&auto=format&fit=crop",
+        link: "/adoucisseur-sans-sel-vs-avec-sel-verite-technique"
+    },
+    {
+        title: "Comment régler la dureté de votre adoucisseur ?",
+        category: "Adoucissement de l'eau",
+        image: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=2000&auto=format&fit=crop",
+        link: "/comment-regler-durete-adoucisseur-eau"
+    },
+    {
+        title: "Adoucisseur d'eau et fosse septique : compatible ou non ?",
         category: "Adoucissement de l'eau",
         image: "https://images.unsplash.com/photo-1594411133519-2189874cb3d1?q=80&w=2000&auto=format&fit=crop",
-        link: "/qu-est-ce-qu-un-adoucisseur-eau-fonctionnement"
+        link: "/adoucisseur-deau-et-fosse-septique-mythes-et-realites"
     },
     {
-        title: "Dureté : Le Seuil Critique",
-        category: "Adoucissement de l'eau",
-        image: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=2000&auto=format&fit=crop",
-        link: "/niveau-durete-eau-besoin-adoucisseur"
-    },
-    {
-        title: "Mesurer sa dureté soi-même",
-        category: "Adoucissement de l'eau",
-        image: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=2000&auto=format&fit=crop",
-        link: "/comment-mesurer-durete-eau-maison"
-    },
-    {
-        title: "Les Signes de Besoin Absolu",
-        category: "Adoucissement de l'eau",
-        image: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=2000&auto=format&fit=crop",
-        link: "/les-signes-absolument-besoin-adoucisseur-eau"
-    },
-    {
-        title: "Sel vs Sans Sel : La Vérité",
-        category: "Adoucissement de l'eau",
-        image: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=2000&auto=format&fit=crop",
-        link: "/adoucisseur-eau-sel-vs-sans-sel-efficacite"
+        title: "Adoucisseur d'eau portable pour VR",
+        category: "Vie nomade",
+        image: "https://images.unsplash.com/photo-1559599101-f09722fb4948?q=80&w=2000&auto=format&fit=crop",
+        link: "/adoucisseur-deau-portable-pour-vr"
     }
 ];
 

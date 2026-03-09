@@ -394,19 +394,19 @@ const ConditionneursSansSel = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
                 {
-                  title: "Adoucisseur à sel vs sans sel : Lequel est vraiment efficace ?",
+                  title: "Adoucisseur sans sel vs avec sel : La vérité technique",
                   img: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=800&auto=format&fit=crop",
-                  link: "/adoucisseur-eau-sel-vs-sans-sel-efficacite",
+                  link: "/adoucisseur-sans-sel-vs-avec-sel-verite-technique",
                 },
                 {
-                  title: "Comment le calcaire réduit la durée de vie de vos électroménagers ?",
+                  title: "Adoucisseur d'eau et fosse septique : compatible ou non ?",
                   img: applianceDamageImg,
-                  link: "/calcaire-duree-vie-electromenagers",
+                  link: "/adoucisseur-deau-et-fosse-septique-mythes-et-realites",
                 },
                 {
-                  title: "Comment tester la dureté de son eau à la maison ?",
+                  title: "Comment régler la dureté de votre adoucisseur d'eau ?",
                   img: testStripImg,
-                  link: "/comment-mesurer-durete-eau-maison",
+                  link: "/comment-regler-durete-adoucisseur-eau",
                 },
               ].map((art, i) => (
                 <NavLink

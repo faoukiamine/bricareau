@@ -571,9 +571,9 @@ const Adoucissement = () => {
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {[
-                                { title: "Comment choisir votre adoucisseur d'eau ?", img: untitledImg, link: "/comment-choisir-un-adoucisseur-deau" },
-                                { title: "5 signes que vous avez besoin d'un adoucisseur", img: hardWaterSignsImg, link: "/5-signes-besoin-adoucisseur-eau" },
-                                { title: "Impact du calcaire sur vos électroménagers", img: hardWaterImg, link: "/calcaire-duree-vie-electromenagers" }
+                                { title: "Adoucisseur sans sel vs avec sel : la vérité technique", img: untitledImg, link: "/adoucisseur-sans-sel-vs-avec-sel-verite-technique" },
+                                { title: "Comment régler la dureté de votre adoucisseur ?", img: hardWaterSignsImg, link: "/comment-regler-durete-adoucisseur-eau" },
+                                { title: "Adoucisseur d'eau et fosse septique : compatible ou non ?", img: hardWaterImg, link: "/adoucisseur-deau-et-fosse-septique-mythes-et-realites" }
                             ].map((art, i) => (
                                 <div
                                     key={i}

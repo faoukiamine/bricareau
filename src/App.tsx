@@ -25,6 +25,13 @@ import EauDePuits from "./pages/EauDePuits";
 import Filtration from "./pages/Filtration";
 import Fontaines from "./pages/Fontaines";
 import Blog from "./pages/Blog";
+import BlogCategory from "./pages/BlogCategory";
+import HivernisationProtegerFiltresDuGel from "./pages/Blog pages/Hivernisation-comment-proteger-vos-filtres-du-gel";
+import PourquoiEauBacSelSale from "./pages/Blog pages/Pourquoi-leau-de-votre-bac-a-sel-est-elle-sale";
+import QuelSelChoisirPastillesOuCristaux from "./pages/Blog pages/Quel-sel-choisir-pour-votre-adoucisseur-pastilles-ou-cristaux";
+import AquariumEauOsmoseePoissons from "./pages/Blog pages/Aquarium-pourquoi-leau-osmosee-est-vitale-pour-vos-poissons";
+import VraiCoutEauEmbouteillee from "./pages/Blog pages/Le-vrai-cout-de-leau-embouteillee-calculez-vos-economies";
+import EauBebesBouillirEauFiltree from "./pages/Blog pages/Eau-et-bebes-faut-il-faire-bouillir-leau-filtree";
 import Guides from "./pages/Guides";
 import Videos from "./pages/Videos";
 import Temoignages from "./pages/Temoignages";
@@ -39,43 +46,21 @@ import FiltrationSousEvier from "./pages/Systemes-de-filtration-deau-sous-evier"
 import DesinfectionUV from "./pages/Systemes-de-desinfection-UV";
 import FiltreEauHauteEfficacite from "./pages/Filtre-eau-haute-efficacite";
 import RO6 from "./pages/RO-6";
-import CommentChoisirAdoucisseur from "./pages/Blog pages/Comment-choisir-un-adoucisseur-deau";
+
 import FiltresDeRemplacement from "./pages/Filtres-de-remplacement";
 import Diagnostic from "./pages/Diagnostic";
 import OperatorDashboard from "./pages/OperatorDashboard";
 // import PourquoiLaLampeUV from "./pages/Blog pages/Pourquoi-la-lampe-UV-est-elle-indispensable-pour-votre-eau-de-puits";
-import PourquoiEauSentOeufsPourris from "./pages/Blog pages/Pourquoi-mon-eau-sent-l-odeur-des-oeufs-pourris";
-import TachesOrangeDansLevier from "./pages/Blog pages/Taches-orange-dans-levier-eliminer-le-fer";
-import FonctionnementUV from "./pages/Blog pages/Comment-fonctionne-la-desinfection-UV";
-import SignesBesoinAdoucisseur from "./pages/Blog pages/5-signes-besoin-adoucisseur-eau";
-import CalcaireElectromenagers from "./pages/Blog pages/calcaire-duree-vie-electromenagers";
-import VaisselleTachetee from "./pages/Blog pages/vaisselle-tachetee-causes-solutions";
-import PFASEauRobinet from "./pages/Blog pages/pfas-eau-robinet-elimination";
-import EauDureVsDouce from "./pages/Blog pages/eau-dure-vs-eau-douce";
-import PlombEauPotable from "./pages/Blog pages/plomb-eau-potable-risques-solutions";
-import FluorEauBienfaitDanger from "./pages/Blog pages/fluor-eau-bienfait-danger";
-import ContaminantsInvisiblesPuits from "./pages/Blog pages/contaminants-invisibles-eau-puits";
-import ArsenicEauPotable from "./pages/Blog pages/arsenic-eau-potable-risques-filtration";
-import NitratesEauDanger from "./pages/Blog pages/nitrates-eau-danger-nourrissons-elimination";
-import MicroplastiquesEauRobinet from "./pages/Blog pages/microplastiques-eau-robinet-realite-inquietante";
-import ResidusMedicamentsEau from "./pages/Blog pages/residus-medicaments-eau-risques-solutions";
-import ManganeseFerEauBrune from "./pages/Blog pages/manganese-fer-eau-brune-remedes";
-import ChloreEauMunicipale from "./pages/Blog pages/chlore-eau-municipale-nocif-necessaire";
-import BacteriesEColiPuits from "./pages/Blog pages/bacteries-e-coli-eau-puits-causes-solutions";
-import EauTurbideTrouble from "./pages/Blog pages/eau-turbide-trouble-causes-clarification";
-import OsmoseInverseFamille from "./pages/Blog pages/osmose-inverse-domicile-meilleur-systeme-famille";
-import FiltreEvierVsMaisonEntiere from "./pages/Blog pages/filtre-evier-vs-maison-entiere-choisir";
-import FiltreCharbonActifLimites from "./pages/Blog pages/filtre-charbon-actif-capacite-limites";
-import TraitementUVNaturel from "./pages/Blog pages/systeme-traitement-uv-solution-naturelle-bacteries";
-import Filtration3vs5Etapes from "./pages/Blog pages/filtration-3vs5-etapes-sante-difference";
-import FiltreDoucheBienfaits from "./pages/Blog pages/filtre-douche-bienfaits-peau-cheveux";
-import FiltreEauAppartement from "./pages/Blog pages/filtre-eau-appartement-sans-plomberie";
-import QuEstCeQuUnAdoucisseur from "./pages/Blog pages/qu-est-ce-qu-un-adoucisseur-eau-fonctionnement";
-import NiveauDureteBesoin from "./pages/Blog pages/niveau-durete-eau-besoin-adoucisseur";
-import MesurerDureteMaison from "./pages/Blog pages/comment-mesurer-durete-eau-maison";
-import SignesBesoinAbsoluAdoucisseur from "./pages/Blog pages/les-signes-absolument-besoin-adoucisseur-eau";
-import AdoucisseurSelVsSansSelEfficacite from "./pages/Blog pages/adoucisseur-eau-sel-vs-sans-sel-efficacite";
-import RadonEtUraniumPuitsPrives from "./pages/Blog pages/radon-et-uranium-dans-les-puits-prives";
+import TraitementUVNaturel from "./pages/Blog pages/Adoucisseur-deau- et-fosse-septique--Mythes-et-réalités";
+import FiltreDoucheBienfaits from "./pages/Blog pages/Adoucisseur-deau-portable-pour-VR";
+import NiveauDureteBesoin from "./pages/Blog pages/Adoucisseur avec sel ou sans sel";
+import MesurerDureteMaison from "./pages/Blog pages/Comment régler la dureté de votre adoucisseur ";
+import CommentAdoucisseurReduitFacture from "./pages/Blog pages/Comment-un-adoucisseur-reduit-votre-facture-delectricite";
+import ConsommationEauAdoucisseurEcologique from "./pages/Blog pages/Consommation-deau-un-adoucisseur-est-il-ecologique";
+import EffetsCachesEauDureElectromenagers from "./pages/Blog pages/Eau-dure-les-effets-caches-sur-vos-electromenagers";
+import EstCeSecuritaireBoireEauAdoucie from "./pages/Blog pages/Est-ce-securitaire-de-boire-de-leau-adoucie";
+import GoutDeChlorePourquoiLaVilleEnAjouteAutant from "./pages/Blog pages/Gout-de-chlore-pourquoi-la-ville-en-ajoute-autant";
+
 
 import NotFound from "./pages/NotFound";
 
@@ -110,6 +95,13 @@ const App = () => (
           <Route path="/ro-6" element={<RO6 />} />
           <Route path="/fontaines" element={<Fontaines />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/categorie/:categoryId" element={<BlogCategory />} />
+          <Route path="/hivernisation-comment-proteger-vos-filtres-du-gel" element={<HivernisationProtegerFiltresDuGel />} />
+          <Route path="/pourquoi-leau-de-votre-bac-a-sel-est-elle-sale" element={<PourquoiEauBacSelSale />} />
+          <Route path="/quel-sel-choisir-pour-votre-adoucisseur-pastilles-ou-cristaux" element={<QuelSelChoisirPastillesOuCristaux />} />
+          <Route path="/aquarium-pourquoi-leau-osmosee-est-vitale-pour-vos-poissons" element={<AquariumEauOsmoseePoissons />} />
+          <Route path="/le-vrai-cout-de-leau-embouteillee-calculez-vos-economies" element={<VraiCoutEauEmbouteillee />} />
+          <Route path="/eau-et-bebes-faut-il-faire-bouillir-leau-filtree" element={<EauBebesBouillirEauFiltree />} />
           <Route path="/guides" element={<Guides />} />
           <Route path="/videos" element={<Videos />} />
           <Route path="/temoignages" element={<Temoignages />} />
@@ -125,40 +117,18 @@ const App = () => (
           <Route path="/entreprises" element={<Entreprises />} />
           <Route path="/commercial-industriel" element={<CommercialIndustriel />} />
           <Route path="/promotions" element={<Promotions />} />
-          <Route path="/comment-choisir-un-adoucisseur-deau" element={<CommentChoisirAdoucisseur />} />
-          {/* <Route path="/blog/lampe-uv-eau-de-puits" element={<PourquoiLaLampeUV />} /> */}
-          <Route path="/pourquoi-mon-eau-sent-l-odeur-des-oeufs-pourris" element={<PourquoiEauSentOeufsPourris />} />
-          <Route path="/taches-orange-dans-levier-eliminer-le-fer" element={<TachesOrangeDansLevier />} />
-          <Route path="/comment-fonctionne-la-desinfection-uv" element={<FonctionnementUV />} />
-          <Route path="/5-signes-besoin-adoucisseur-eau" element={<SignesBesoinAdoucisseur />} />
-          <Route path="/calcaire-duree-vie-electromenagers" element={<CalcaireElectromenagers />} />
-          <Route path="/vaisselle-tachetee-causes-solutions" element={<VaisselleTachetee />} />
-          <Route path="/pfas-eau-robinet-elimination" element={<PFASEauRobinet />} />
-          <Route path="/eau-dure-vs-eau-douce" element={<EauDureVsDouce />} />
-          <Route path="/plomb-eau-potable-risques-solutions" element={<PlombEauPotable />} />
-          <Route path="/fluor-eau-bienfait-danger" element={<FluorEauBienfaitDanger />} />
-          <Route path="/contaminants-invisibles-eau-puits" element={<ContaminantsInvisiblesPuits />} />
-          <Route path="/arsenic-eau-potable-risques-filtration" element={<ArsenicEauPotable />} />
-          <Route path="/nitrates-eau-danger-nourrissons-elimination" element={<NitratesEauDanger />} />
-          <Route path="/microplastiques-eau-robinet-realite-inquietante" element={<MicroplastiquesEauRobinet />} />
-          <Route path="/residus-medicaments-eau-risques-solutions" element={<ResidusMedicamentsEau />} />
-          <Route path="/manganese-fer-eau-brune-remedes" element={<ManganeseFerEauBrune />} />
-          <Route path="/chlore-eau-municipale-nocif-necessaire" element={<ChloreEauMunicipale />} />
-          <Route path="/bacteries-e-coli-eau-puits-causes-solutions" element={<BacteriesEColiPuits />} />
-          <Route path="/eau-turbide-trouble-causes-clarification" element={<EauTurbideTrouble />} />
-          <Route path="/osmose-inverse-domicile-meilleur-systeme-famille" element={<OsmoseInverseFamille />} />
-          <Route path="/filtre-evier-vs-maison-entiere-choisir" element={<FiltreEvierVsMaisonEntiere />} />
-          <Route path="/filtre-charbon-actif-capacite-limites" element={<FiltreCharbonActifLimites />} />
-          <Route path="/systeme-traitement-uv-solution-naturelle-bacteries" element={<TraitementUVNaturel />} />
-          <Route path="/filtration-3vs5-etapes-sante-difference" element={<Filtration3vs5Etapes />} />
-          <Route path="/filtre-douche-bienfaits-peau-cheveux" element={<FiltreDoucheBienfaits />} />
-          <Route path="/filtre-eau-appartement-sans-plomberie" element={<FiltreEauAppartement />} />
-          <Route path="/qu-est-ce-qu-un-adoucisseur-eau-fonctionnement" element={<QuEstCeQuUnAdoucisseur />} />
-          <Route path="/niveau-durete-eau-besoin-adoucisseur" element={<NiveauDureteBesoin />} />
-          <Route path="/comment-mesurer-durete-eau-maison" element={<MesurerDureteMaison />} />
-          <Route path="/les-signes-absolument-besoin-adoucisseur-eau" element={<SignesBesoinAbsoluAdoucisseur />} />
-          <Route path="/adoucisseur-eau-sel-vs-sans-sel-efficacite" element={<AdoucisseurSelVsSansSelEfficacite />} />
-          <Route path="/radon-et-uranium-dans-les-puits-prives" element={<RadonEtUraniumPuitsPrives />} />
+
+          {/* Blog Routes */}
+          <Route path="/adoucisseur-deau-et-fosse-septique-mythes-et-realites" element={<TraitementUVNaturel />} />
+          <Route path="/adoucisseur-deau-portable-pour-vr" element={<FiltreDoucheBienfaits />} />
+          <Route path="/adoucisseur-sans-sel-vs-avec-sel-verite-technique" element={<NiveauDureteBesoin />} />
+          <Route path="/comment-regler-durete-adoucisseur-eau" element={<MesurerDureteMaison />} />
+          <Route path="/comment-un-adoucisseur-reduit-votre-facture-delectricite" element={<CommentAdoucisseurReduitFacture />} />
+          <Route path="/consommation-deau-un-adoucisseur-est-il-ecologique" element={<ConsommationEauAdoucisseurEcologique />} />
+          <Route path="/eau-dure-les-effets-caches-sur-vos-electromenagers" element={<EffetsCachesEauDureElectromenagers />} />
+          <Route path="/est-ce-securitaire-de-boire-de-leau-adoucie" element={<EstCeSecuritaireBoireEauAdoucie />} />
+          <Route path="/gout-de-chlore-pourquoi-la-ville-en-ajoute-autant" element={<GoutDeChlorePourquoiLaVilleEnAjouteAutant />} />
+
 
           <Route path="/filtres-de-remplacement" element={<FiltresDeRemplacement />} />
 

@@ -706,19 +706,19 @@ const EauDePuits = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
                 {
-                  title: "Contaminants invisibles dans votre puits",
+                  title: "Adoucisseur avec sel ou sans sel : la vérité technique",
                   img: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=800&auto=format&fit=crop",
-                  link: "/contaminants-invisibles-eau-puits",
+                  link: "/adoucisseur-sans-sel-vs-avec-sel-verite-technique",
                 },
                 {
-                  title: "Comment le calcaire réduit la durée de vie de vos électroménagers ?",
+                  title: "Comment régler la dureté de votre adoucisseur d'eau ?",
                   img: dishwasherScaleImg,
-                  link: "/calcaire-duree-vie-electromenagers",
+                  link: "/comment-regler-durete-adoucisseur-eau",
                 },
                 {
-                  title: "Bactéries E. coli dans votre puits",
+                  title: "Adoucisseur d'eau et fosse septique : compatible ou non ?",
                   img: coliformBacteriaImg,
-                  link: "/bacteries-e-coli-eau-puits-causes-solutions",
+                  link: "/adoucisseur-deau-et-fosse-septique-mythes-et-realites",
                 },
               ].map((art, i) => (
                 <NavLink
