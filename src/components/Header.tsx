@@ -389,7 +389,8 @@ const Header = () => {
     "/comment-savoir-si-votre-lampe-uv-fonctionne-encore",
     "/les-risques-de-ne-pas-changer-sa-lampe-uv-apres-12-mois",
     "/quelle-frequence-dentretien-pour-un-systeme-uv-domestique",
-    "/bacteries-dans-le-puits-les-etapes-de-desinfection-choc"
+    "/bacteries-dans-le-puits-les-etapes-de-desinfection-choc",
+    "/consultation"
   ];
   const isTransparentPage = transparentPaths.includes(location.pathname.toLowerCase());
   const isHeaderTransparent = isTransparentPage && !isScrolled && !isMenuOpen;

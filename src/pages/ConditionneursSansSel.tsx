@@ -185,7 +185,7 @@ const ConditionneursSansSel = () => {
                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                 asChild
               >
-                <a href="#consultation">Planifiez une consultation gratuite</a>
+                <NavLink to="/consultation">Planifiez une consultation gratuite</NavLink>
               </Button>
             </div>
           </div>

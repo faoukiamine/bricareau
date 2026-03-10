@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import { Button } from "@/components/ui/button";
-import heroBath from "@/assets/young-nude-woman-taking-relaxing-foamy-bath.jpeg";
+import heroBath from "@/assets/40-AdobeStock_365603381.jpeg";
 import kitchenImg from "@/assets/18036672_SIE_2720_1530_21_04_30_SIE_CRM_Dishwasher_Hand_Taking_Out_Wine_Glass_Basket_Motiv_11_0017.webp";
 import untitledImg from "@/assets/2151469364.jpg";
 import mobileSoftenerImg from "@/assets/9-optimized.webp";
@@ -50,7 +50,7 @@ import {
 import ConsultationFormSection from "@/components/ConsultationFormSection";
 
 
-const Adoucissement = () => {
+const PageConsultation = () => {
     const [showAllFaqs, setShowAllFaqs] = React.useState(false);
     const navigate = useNavigate();
 
@@ -89,43 +89,18 @@ const Adoucissement = () => {
                     <div className="container mx-auto px-6 relative z-10">
                         <div className="max-w-2xl text-white">
                             <h1
-                                className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text-justify max-w-xl"
+                                className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text max-w-xl"
                                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                             >
-                                <span className="font-bold text-white">Adoucisseurs d'eau</span> <br />
-                                <span className="font-bold text-white">Éliminez le calcaire et l'eau dure.</span>
+                                <span className="font-bold text-white">Planifiez une consultation gratuite sur l'eau</span> <br />
                             </h1>
                             <p className="text-lg font-light leading-snug text-white/95 mb-8 max-w-xl text-justify">
-                                Redécouvrez le confort d'une eau soyeuse protégeant votre peau, vos cheveux et vos appareils électroménagers. Alliez économies durables et bien-être absolu avec nos solutions de traitement d'eau.
+                                Remplissez le formulaire pour organiser une consultation téléphonique avec l'un de nos experts.
                             </p>
-                            <div className="flex flex-col sm:flex-row gap-4">
-                                <Button
-                                    size="lg"
-                                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200"
-                                    style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
-                                    asChild
-                                >
-                                    <a href="#consultation">
-                                        Planifiez une consultation gratuite
-                                    </a>
-                                </Button>
-                                <Button
-                                    size="lg"
-                                    variant="outline"
-                                    className="bg-white/10 hover:bg-white/20 text-white border-white rounded-full px-8 h-14 backdrop-blur-sm shadow-lg"
-                                    style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
-                                    asChild
-                                >
-                                    <a href="tel:18552649328" className="flex items-center gap-2">
-                                        <Phone className="h-5 w-5" />
-                                        1-855-264-9328
-                                    </a>
-                                </Button>
-                            </div>
                         </div>
                     </div>
                 </section>
-            
+
                 {/* 2.Consultation Form Section */}
                 <ConsultationFormSection id="consultation" />
             </main>
@@ -134,3 +109,4 @@ const Adoucissement = () => {
     );
 };
 
+export default PageConsultation;

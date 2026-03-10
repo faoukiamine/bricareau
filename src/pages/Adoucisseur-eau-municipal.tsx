@@ -162,7 +162,7 @@ const AdoucisseurEauMunicipal = () => {
                                     }}
                                     asChild
                                 >
-                                    <a href="#consultation">Planifiez une consultation gratuite</a>
+                                    <NavLink to="/consultation">Planifiez une consultation gratuite</NavLink>
                                 </Button>
                             </div>
                         </div>

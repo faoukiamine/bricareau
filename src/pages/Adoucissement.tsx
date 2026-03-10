@@ -17,7 +17,7 @@ import drinkingWaterImg from "@/assets/Solutions d'eau potable.webp";
 import undersinkSystemImg from "@/assets/Système+de+filtration+Serene+Lite.webp";
 import hardWaterSignsImg from "@/assets/Signs+of+hard+water+in+your+home-640w.webp";
 import hardWaterImg from "@/assets/58279.jpg";
-import Consultation from "/pages/page-consultation";
+
 import {
     ArrowRight,
     Droplets,
@@ -99,13 +99,6 @@ const Adoucissement = () => {
                             <p className="text-lg font-light leading-snug text-white/95 mb-8 max-w-xl text-justify">
                                 Redécouvrez le confort d'une eau soyeuse protégeant votre peau, vos cheveux et vos appareils électroménagers. Alliez économies durables et bien-être absolu avec nos solutions de traitement d'eau.
                             </p>
-                            <div className="mt-14 pt-8 border-t border-gray-100">
-                                <NavLink to="/page-consultation">
-                                    <Button className="rounded-full bg-blue-600 hover:bg-blue-700 text-white px-8 h-14 text-base shadow-lg transition-all duration-300 w-full sm:w-auto hover:shadow-blue-200">
-                                        Découvrir nos adoucisseurs d'eau <ChevronRight className="ml-2 h-5 w-5" />
-                                    </Button>
-                                </NavLink>
-                            </div>
                             <div className="flex flex-col sm:flex-row gap-4">
                                 <Button
                                     size="lg"
@@ -113,9 +106,9 @@ const Adoucissement = () => {
                                     style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                                     asChild
                                 >
-                                    <a href="/consultation">
+                                    <NavLink to="/consultation">
                                         Planifiez une consultation gratuite
-                                    </a>
+                                    </NavLink>
                                 </Button>
                                 <Button
                                     size="lg"

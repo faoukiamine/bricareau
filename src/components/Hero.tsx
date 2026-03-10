@@ -1,5 +1,6 @@
 import heroImage from "@/assets/Gemini_Generated_Image_ct1u02ct1u02ct1u.png";
 import { Button } from "@/components/ui/button";
+import { NavLink } from "@/components/NavLink";
 
 const Hero = () => {
 
@@ -42,7 +43,7 @@ const Hero = () => {
                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                 asChild
               >
-                <a href="/adoucissement#consultation">Planifiez une consultation gratuite</a>
+                <NavLink to="/consultation">Planifiez une consultation gratuite</NavLink>
               </Button>
             </div>
           </div>

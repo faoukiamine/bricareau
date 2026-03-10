@@ -262,9 +262,9 @@ const Fontaines = () => {
                                     style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                                     asChild
                                 >
-                                    <a href="#consultation">
+                                    <NavLink to="/consultation">
                                         Planifiez une consultation gratuite
-                                    </a>
+                                    </NavLink>
                                 </Button>
                                 <Button
                                     size="lg"

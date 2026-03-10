@@ -45,8 +45,8 @@ const formSchema = z.object({
 });
 
 const TIME_SLOTS = [
-    "09:00", "09:30", "10:00", "10:30", "11:00", "11:30",
-    "13:00", "13:30", "14:00", "14:30", "15:00", "15:30", "16:00", "16:30", "17:00", "17:30", "18:00"
+    "09:00", "10:00", "11:00", "12:00", "13:00",
+    "14:00", "15:00", "16:00", "17:00", "18:00"
 ];
 
 const ConsultationFormSection = ({ id }: { id?: string }) => {
@@ -212,20 +212,7 @@ const ConsultationFormSection = ({ id }: { id?: string }) => {
     return (
         <section id={id} className="py-24 bg-white border-t border-gray-100 scroll-mt-24">
             <div className="container mx-auto px-4">
-                <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-20">
-                    {/* Left Side Content */}
-                    <div className="w-full text-left">
-                        <h2
-                            className="text-slate-900 tracking-tighter mb-8 text-left"
-                            style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
-                        >
-                            <span className="text-[32px] md:text-[60px] font-bold leading-[1.1] md:leading-[60px] block">Planifiez une consultation</span>
-                            <span className="text-[32px] md:text-[60px] font-bold leading-[1.1] md:leading-[60px] block">gratuite sur l'eau</span>
-                        </h2>
-                        <p className="text-lg text-gray-600 mb-8 leading-snug">
-                            Remplissez le formulaire pour organiser une consultation téléphonique avec l'un de nos experts.
-                        </p>
-                    </div>
+                <div className="max-w-3xl mx-auto flex flex-col lg:flex-row gap-20">
 
                     {/* Right Side Form */}
                     <div className="w-full" ref={formRef}>
@@ -234,7 +221,7 @@ const ConsultationFormSection = ({ id }: { id?: string }) => {
                             <div className="flex items-center gap-4 md:gap-8 mb-8 overflow-x-auto pb-4 border-b border-gray-100 no-scrollbar">
                                 {[
                                     { id: 1, label: "Vos informations" },
-                                    { id: 2, label: "Disponibilité" },
+                                    { id: 2, label: "Votre disponibilité" },
                                     { id: 3, label: "Confirmation" }
                                 ].map((s) => (
                                     <div key={s.id} className={cn(
