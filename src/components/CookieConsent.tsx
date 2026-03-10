@@ -45,7 +45,7 @@ const CookieConsent = () => {
                     <div className="flex-1 text-center md:text-left space-y-2">
                         <h2 className="text-xl font-bold text-slate-900 dark:text-white leading-tight flex items-center justify-center md:justify-start gap-2">
                             <ShieldCheck className="w-5 h-5 text-primary md:hidden" />
-                            Confidentialité
+                            Nous respectons votre vie privée
                         </h2>
 
                         <p className="text-slate-600 dark:text-slate-300 text-[15px] leading-relaxed max-w-2xl">
