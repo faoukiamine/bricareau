@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import BlogLayout from "@/components/BlogLayout";
-import heroImg from "@/assets/problem_hero_bg.jpg";
+import heroImg from "@/assets/13828.jpg";
 
 const HivernisationProtegerFiltresDuGel = () => {
     useEffect(() => {

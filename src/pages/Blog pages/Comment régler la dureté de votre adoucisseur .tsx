@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import BlogLayout from "@/components/BlogLayout";
-import softenerImg from "@/assets/residential-water-softener.png";
+import softenerImg from "@/assets/2149186343.jpg";
 
 const MesurerDureteMaison = () => {
     useEffect(() => {

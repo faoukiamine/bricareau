@@ -50,9 +50,9 @@ import ConsultationFormSection from "@/components/ConsultationFormSection";
 
 const products = [
 
-    { name: "Adoucisseur d'eau de la série Sentinelle HE", displayName: <>Adoucisseur d'eau de la série<br />Sentinelle HE</>, desc: "Le rythme parfait d'une eau toujours douce.", path: "/adoucisseur-eau-municipal", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
-    { name: "Adoucisseur d'eau de la série Sérénité HE", displayName: <>Adoucisseur d'eau de la série<br />Sérénité HE</>, desc: "La paix durable pour votre maison et votre confort.", path: "/adoucisseur-eau-municipal", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
-    { name: "Adoucisseur d'eau de la série Infiniti HE", displayName: <>Adoucisseur d'eau de la série<br />Infiniti HE</>, desc: "Une douceur constante, à chaque goutte, à chaque seconde.", path: "/adoucisseur-eau-municipal", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
+    { name: "Adoucisseur d'eau de la série Sentinelle HE", displayName: <>Adoucisseur d'eau de la série<br />Sentinelle HE</>, desc: "Le rythme parfait d'une eau toujours douce.", path: "/contact", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
+    { name: "Adoucisseur d'eau de la série Sérénité HE", displayName: <>Adoucisseur d'eau de la série<br />Sérénité HE</>, desc: "La paix durable pour votre maison et votre confort.", path: "/contact", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
+    { name: "Adoucisseur d'eau de la série Infiniti HE", displayName: <>Adoucisseur d'eau de la série<br />Infiniti HE</>, desc: "Une douceur constante, à chaque goutte, à chaque seconde.", path: "/contact", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
 ];
 const faqItems = [
     {

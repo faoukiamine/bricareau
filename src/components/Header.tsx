@@ -378,7 +378,18 @@ const Header = () => {
     "/quel-sel-choisir-pour-votre-adoucisseur-pastilles-ou-cristaux",
     "/aquarium-pourquoi-leau-osmosee-est-vitale-pour-vos-poissons",
     "/le-vrai-cout-de-leau-embouteillee-calculez-vos-economies",
-    "/eau-et-bebes-faut-il-faire-bouillir-leau-filtree"
+    "/eau-et-bebes-faut-il-faire-bouillir-leau-filtree",
+    "/filtre-sous-evier-lalternative-simple-aux-pichets-filtrants",
+    "/le-fluor-dans-leau-faut-il-le-filtrer",
+    "/le-plomb-dans-les-vieilles-maisons-comment-se-proteger",
+    "/pourquoi-meme-leau-de-ville-a-besoin-detre-filtree",
+    "/pourquoi-une-eau-pure-change-le-gout-du-cafe",
+    "/pourquoi-leau-pure-ameliore-vos-patisseries",
+    "/vivre-en-condo-les-solutions-de-filtration-compactes",
+    "/comment-savoir-si-votre-lampe-uv-fonctionne-encore",
+    "/les-risques-de-ne-pas-changer-sa-lampe-uv-apres-12-mois",
+    "/quelle-frequence-dentretien-pour-un-systeme-uv-domestique",
+    "/bacteries-dans-le-puits-les-etapes-de-desinfection-choc"
   ];
   const isTransparentPage = transparentPaths.includes(location.pathname.toLowerCase());
   const isHeaderTransparent = isTransparentPage && !isScrolled && !isMenuOpen;

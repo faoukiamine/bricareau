@@ -28,7 +28,9 @@ import rouilleThumbUpdated from "@/assets/5a4674e7-575d-4cd9-b1f2-32522f8a7072.j
 import mauvaisGoutThumb from "@/assets/blog3-1.jpg";
 import coliformBacteriaImg from "@/assets/coliform_bacteria.jpg";
 import dishwasherScaleImg from "@/assets/lave vaisselle entartrée avec du calcaire.jpeg";
-
+import womanbathImg from "@/assets/2149186343.jpg";
+import fosseSeptiqueImg from "@/assets/Cover-Image.webp";
+import puitsImg from "@/assets/mother-teaching-her-children-cook-home.jpg";
 import {
   Accordion,
   AccordionContent,
@@ -707,17 +709,17 @@ const EauDePuits = () => {
               {[
                 {
                   title: "Adoucisseur avec sel ou sans sel : la vérité technique",
-                  img: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=800&auto=format&fit=crop",
+                  img: puitsImg,
                   link: "/adoucisseur-sans-sel-vs-avec-sel-verite-technique",
                 },
                 {
                   title: "Comment régler la dureté de votre adoucisseur d'eau ?",
-                  img: dishwasherScaleImg,
+                  img: womanbathImg,
                   link: "/comment-regler-durete-adoucisseur-eau",
                 },
                 {
                   title: "Adoucisseur d'eau et fosse septique : compatible ou non ?",
-                  img: coliformBacteriaImg,
+                  img: fosseSeptiqueImg,
                   link: "/adoucisseur-deau-et-fosse-septique-mythes-et-realites",
                 },
               ].map((art, i) => (

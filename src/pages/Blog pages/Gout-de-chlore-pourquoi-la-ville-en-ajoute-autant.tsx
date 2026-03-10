@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import BlogLayout from "@/components/BlogLayout";
-import heroImg from "@/assets/eau trouble turbide.avif";
+import heroImg from "@/assets/blog3-1.jpg";
 
 const GoutDeChlorePourquoiLaVilleEnAjouteAutant = () => {
     useEffect(() => {

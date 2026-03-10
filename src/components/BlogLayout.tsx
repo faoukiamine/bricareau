@@ -3,6 +3,7 @@ import { Facebook, Twitter, Linkedin, ChevronLeft, ChevronRight, Waves, Droplets
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { categories } from "@/data/blogCategories";
 
 interface BlogLayoutProps {
     title: string;
@@ -11,34 +12,9 @@ interface BlogLayoutProps {
     tocItems?: { id: string; title: string }[];
 }
 
-const relatedArticles = [
-    {
-        title: "Adoucisseur sans sel vs avec sel : la vérité technique",
-        category: "Adoucissement de l'eau",
-        image: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=2000&auto=format&fit=crop",
-        link: "/adoucisseur-sans-sel-vs-avec-sel-verite-technique"
-    },
-    {
-        title: "Comment régler la dureté de votre adoucisseur ?",
-        category: "Adoucissement de l'eau",
-        image: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=2000&auto=format&fit=crop",
-        link: "/comment-regler-durete-adoucisseur-eau"
-    },
-    {
-        title: "Adoucisseur d'eau et fosse septique : compatible ou non ?",
-        category: "Adoucissement de l'eau",
-        image: "https://images.unsplash.com/photo-1594411133519-2189874cb3d1?q=80&w=2000&auto=format&fit=crop",
-        link: "/adoucisseur-deau-et-fosse-septique-mythes-et-realites"
-    },
-    {
-        title: "Adoucisseur d'eau portable pour VR",
-        category: "Vie nomade",
-        image: "https://images.unsplash.com/photo-1559599101-f09722fb4948?q=80&w=2000&auto=format&fit=crop",
-        link: "/adoucisseur-deau-portable-pour-vr"
-    }
-];
+// This will be replaced by dynamic logic inside BlogLayout
 
-const RelatedArticlesCarousel = () => {
+const RelatedArticlesCarousel = ({ articles }: { articles: Array<{ href: string; image: string; title: string }> }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [itemsPerSlide, setItemsPerSlide] = useState(3);
 
@@ -53,7 +29,7 @@ const RelatedArticlesCarousel = () => {
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
-    const totalSlides = Math.ceil(relatedArticles.length / itemsPerSlide);
+    const totalSlides = Math.ceil(articles.length / itemsPerSlide);
 
     return (
         <div className="mt-8 mb-16 w-full">
@@ -67,12 +43,12 @@ const RelatedArticlesCarousel = () => {
                 >
                     {Array.from({ length: totalSlides }).map((_, slideIdx) => (
                         <div key={slideIdx} className="min-w-full grid gap-4 lg:gap-8" style={{ gridTemplateColumns: `repeat(${itemsPerSlide}, minmax(0, 1fr))` }}>
-                            {relatedArticles.slice(slideIdx * itemsPerSlide, slideIdx * itemsPerSlide + itemsPerSlide).map((article, idx) => (
+                            {articles.slice(slideIdx * itemsPerSlide, slideIdx * itemsPerSlide + itemsPerSlide).map((article, idx) => (
                                 <article
                                     key={idx}
                                     className="block bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer group flex flex-col h-full border border-gray-100"
                                 >
-                                    <a href={article.link} className="flex flex-col h-full">
+                                    <a href={article.href} className="flex flex-col h-full">
                                         <div className="h-56 overflow-hidden">
                                             <img
                                                 src={article.image}
@@ -130,6 +106,30 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({ title, headerImage, children, t
 
         return () => headings.forEach(h => observer.unobserve(h));
     }, []);
+
+    // Find the category of the current article
+    const currentCategory = categories.find(cat =>
+        cat.products.some(p => p.title === title)
+    );
+
+    // Filter articles from the same category, excluding the current one
+    let recommendedArticles = [];
+    if (currentCategory) {
+        recommendedArticles = currentCategory.products
+            .filter(p => p.title !== title)
+            .sort(() => 0.5 - Math.random()) // Shuffle
+            .slice(0, 3);
+    }
+
+    // Fallback if not enough articles in the same category
+    if (recommendedArticles.length < 3) {
+        const otherArticles = categories
+            .flatMap(cat => cat.products)
+            .filter(p => p.title !== title && !recommendedArticles.find(r => r.title === p.title))
+            .sort(() => 0.5 - Math.random())
+            .slice(0, 3 - recommendedArticles.length);
+        recommendedArticles = [...recommendedArticles, ...otherArticles];
+    }
 
     return (
         <div className="min-h-screen bg-[#f5f5f5] flex flex-col">
@@ -329,7 +329,7 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({ title, headerImage, children, t
                     </article>
 
                     {/* Related Articles Carousel beneath card */}
-                    <RelatedArticlesCarousel />
+                    <RelatedArticlesCarousel articles={recommendedArticles} />
                 </main>
 
             </div>

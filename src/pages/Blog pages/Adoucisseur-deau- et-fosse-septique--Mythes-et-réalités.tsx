@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import BlogLayout from "@/components/BlogLayout";
-import adoucisseurImg from "@/assets/Adoucisseurs d'eau.webp";
+import adoucisseurImg from "@/assets/Cover-Image.webp";
 
 const TraitementUVBacteriaNaturel = () => {
     useEffect(() => {

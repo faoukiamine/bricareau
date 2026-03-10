@@ -30,9 +30,9 @@ import {
 } from "@/components/ui/accordion";
 import ConsultationFormSection from "@/components/ConsultationFormSection";
 const products = [
-    { name: "Adoucisseur d'eau de la série \n Sentinelle", desc: "Le rythme parfait d'une eau toujours douce.", path: "/filtre-eau-haute-efficacite", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
-    { name: "Adoucisseur d'eau de la série \n Sérénité", desc: "La paix durable pour votre maison et votre confort.", path: "/filtre-eau-haute-efficacite", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
-    { name: "Adoucisseur d'eau de la série \n Infiniti", desc: "Une douceur constante, à chaque goutte, à chaque seconde.", path: "/filtre-eau-haute-efficacite", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
+    { name: "Adoucisseur d'eau de la série \n Sentinelle", desc: "Le rythme parfait d'une eau toujours douce.", path: "/contact", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
+    { name: "Adoucisseur d'eau de la série \n Sérénité", desc: "La paix durable pour votre maison et votre confort.", path: "/contact", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
+    { name: "Adoucisseur d'eau de la série \n Infiniti", desc: "Une douceur constante, à chaque goutte, à chaque seconde.", path: "/contact", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
 ];
 
 interface ComparisonItem {

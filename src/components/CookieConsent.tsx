@@ -49,7 +49,7 @@ const CookieConsent = () => {
                         </h2>
 
                         <p className="text-slate-600 dark:text-slate-300 text-[15px] leading-relaxed max-w-2xl">
-                            Nous utilisons des témoins pour vous offrir une expérience de magasinage personnalisée et pour améliorer continuellement notre site Web. {' '}
+                            Nous utilisons des témoins pour améliorer votre expérience de navigation, diffuser des publicités ou des contenus personalisés et analyser notre trafic. En cliquant sur Tout accepter, vous consentez a l'utilisation de nos témoins.{' '}
                             <a
                                 href="/politique-de-confidentialite"
                                 className="text-primary hover:underline font-medium inline-block"
@@ -60,18 +60,24 @@ const CookieConsent = () => {
                     </div>
 
                     <div className="flex flex-row md:flex-col lg:flex-row gap-2 w-full md:w-auto shrink-0 self-center">
-                        <Button
+                         <Button
+                            onClick={handleAccept}
+                            className="flex-1 md:w-32 bg-primary hover:bg-primary/90 text-white h-11 text-sm font-semibold rounded-lg transition-all"
+                        >   
+                        Personnaliser
+                        </Button>
+                            <Button
                             onClick={handleAccept}
                             className="flex-1 md:w-32 bg-primary hover:bg-primary/90 text-white h-11 text-sm font-semibold rounded-lg transition-all"
                         >
-                            J’accepte
+                            Acccepter tout
                         </Button>
                         <Button
                             variant="outline"
                             onClick={handleDecline}
                             className="flex-1 md:w-32 border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-900 h-11 text-sm font-semibold rounded-lg transition-all"
                         >
-                            Je refuse
+                            Refuser tout
                         </Button>
                     </div>
                 </div>

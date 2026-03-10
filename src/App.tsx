@@ -32,6 +32,27 @@ import QuelSelChoisirPastillesOuCristaux from "./pages/Blog pages/Quel-sel-chois
 import AquariumEauOsmoseePoissons from "./pages/Blog pages/Aquarium-pourquoi-leau-osmosee-est-vitale-pour-vos-poissons";
 import VraiCoutEauEmbouteillee from "./pages/Blog pages/Le-vrai-cout-de-leau-embouteillee-calculez-vos-economies";
 import EauBebesBouillirEauFiltree from "./pages/Blog pages/Eau-et-bebes-faut-il-faire-bouillir-leau-filtree";
+import FiltreSousEvierPichetAlternative from "./pages/Blog pages/Filtre-sous-evier-lalternative-simple-aux-pichets-filtrants";
+import FluorDansEauFiltrer from "./pages/Blog pages/Le-fluor-dans-leau-faut-il-le-filtrer";
+import PlombVieillesMaisonsProteger from "./pages/Blog pages/Le-plomb-dans-les-vieilles-maisons-comment-se-proteger";
+import EauDeVilleBesoinFiltration from "./pages/Blog pages/Pourquoi-meme-leau-de-ville-a-besoin-detre-filtree";
+import EauPureGoutCafe from "./pages/Blog pages/Pourquoi-une-eau-pure-change-le-gout-du-cafe";
+import EauPurePatisseries from "./pages/Blog pages/Pourquoi-leau-pure-ameliore-vos-patisseries";
+import VivreCondoFiltrationCompacte from "./pages/Blog pages/Vivre-en-condo-les-solutions-de-filtration-compactes";
+import CommentSavoirSiVotreLampeUVFonctionneEncore from "./pages/Blog pages/Comment-savoir-si-votre-lampe-uv-fonctionne-encore";
+import RisquesLampeUV12Mois from "./pages/Blog pages/Les-risques-de-ne-pas-changer-sa-lampe-UV-apres-12-mois";
+import FrequenceEntretienSystemeUV from "./pages/Blog pages/Quelle-frequence-dentretien-pour-un-systeme-UV-domestique";
+import BacteriesPuitsDesinfectionChoc from "./pages/Blog pages/Bacteries-dans-le-puits-les-etapes-de-desinfection-choc";
+import FerFerreuxVsFerFerrique from "./pages/Blog pages/Fer-ferreux-vs-Fer-ferrique-Quelle-difference-pour-le-filtre";
+import FiltreCartoucheVsContreCourant from "./pages/Blog pages/Filtre-a-cartouche-vs-Filtre-a-lavage-a-contre-courant";
+import InjectionDAirFiltrerFer from "./pages/Blog pages/Injection-dair-Comment-filtrer-le-fer-sans-produits-chimiques";
+import NitratesEauPuitsDangersSolutions from "./pages/Blog pages/Les-nitrates-dans-leau-de-puits-dangers-et-solutions";
+import OsmoseInverseSante from "./pages/Blog pages/Osmose-inverse-et-sante-quelle-qualite-deau-obtenez-vous";
+import OsmoseInverseContaminantsInvisibles from "./pages/Blog pages/Comment-losmose-inverse-protege-votre-famille-des-contaminants-invisibles";
+import EauPuitsOsmoseInverse from "./pages/Blog pages/Eau-du-puits-au-quebec-quand-installer-un-systeme-dosmose-inverse";
+import OsmoseInverseEau100Pure from "./pages/Blog pages/Osmose-inverse-la-technologie-derriere-une-eau-100-pure";
+import EauEmbouteilleeDangers from "./pages/Blog pages/Eau-embouteillee-les-dangers-meconnus-pour-votre-sante-au-quotidien";
+import EauEmbouteilleeImpacts from "./pages/Blog pages/Eau-embouteillee-quels-impacts-sur-la-sante-et-la-planete";
 import Guides from "./pages/Guides";
 import Videos from "./pages/Videos";
 import Temoignages from "./pages/Temoignages";
@@ -45,7 +66,8 @@ import FiltresPourTouteLaMaison from "./pages/Filtres-deau-pour-toute-la-maison"
 import FiltrationSousEvier from "./pages/Systemes-de-filtration-deau-sous-evier";
 import DesinfectionUV from "./pages/Systemes-de-desinfection-UV";
 import FiltreEauHauteEfficacite from "./pages/Filtre-eau-haute-efficacite";
-import RO6 from "./pages/RO-6";
+import Consultation from "./pages/page-consultation";
+// import RO6 from "./pages/RO-6";
 
 import FiltresDeRemplacement from "./pages/Filtres-de-remplacement";
 import Diagnostic from "./pages/Diagnostic";
@@ -92,7 +114,7 @@ const App = () => (
           <Route path="/Systemes-de-filtration-deau-sous-evier" element={<FiltrationSousEvier />} />
           <Route path="/Systemes-de-desinfection-UV" element={<DesinfectionUV />} />
           <Route path="/filtre-eau-haute-efficacite" element={<FiltreEauHauteEfficacite />} />
-          <Route path="/ro-6" element={<RO6 />} />
+          {/* <Route path="/ro-6" element={<RO6 />} /> */}
           <Route path="/fontaines" element={<Fontaines />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/categorie/:categoryId" element={<BlogCategory />} />
@@ -102,6 +124,27 @@ const App = () => (
           <Route path="/aquarium-pourquoi-leau-osmosee-est-vitale-pour-vos-poissons" element={<AquariumEauOsmoseePoissons />} />
           <Route path="/le-vrai-cout-de-leau-embouteillee-calculez-vos-economies" element={<VraiCoutEauEmbouteillee />} />
           <Route path="/eau-et-bebes-faut-il-faire-bouillir-leau-filtree" element={<EauBebesBouillirEauFiltree />} />
+          <Route path="/filtre-sous-evier-lalternative-simple-aux-pichets-filtrants" element={<FiltreSousEvierPichetAlternative />} />
+          <Route path="/le-fluor-dans-leau-faut-il-le-filtrer" element={<FluorDansEauFiltrer />} />
+          <Route path="/le-plomb-dans-les-vieilles-maisons-comment-se-proteger" element={<PlombVieillesMaisonsProteger />} />
+          <Route path="/pourquoi-meme-leau-de-ville-a-besoin-detre-filtree" element={<EauDeVilleBesoinFiltration />} />
+          <Route path="/pourquoi-une-eau-pure-change-le-gout-du-cafe" element={<EauPureGoutCafe />} />
+          <Route path="/pourquoi-leau-pure-ameliore-vos-patisseries" element={<EauPurePatisseries />} />
+          <Route path="/vivre-en-condo-les-solutions-de-filtration-compactes" element={<VivreCondoFiltrationCompacte />} />
+          <Route path="/comment-savoir-si-votre-lampe-uv-fonctionne-encore" element={<CommentSavoirSiVotreLampeUVFonctionneEncore />} />
+          <Route path="/les-risques-de-ne-pas-changer-sa-lampe-uv-apres-12-mois" element={<RisquesLampeUV12Mois />} />
+          <Route path="/quelle-frequence-dentretien-pour-un-systeme-uv-domestique" element={<FrequenceEntretienSystemeUV />} />
+          <Route path="/bacteries-dans-le-puits-les-etapes-de-desinfection-choc" element={<BacteriesPuitsDesinfectionChoc />} />
+          <Route path="/fer-ferreux-vs-fer-ferrique-quelle-difference-pour-le-filtre" element={<FerFerreuxVsFerFerrique />} />
+          <Route path="/filtre-a-cartouche-vs-filtre-a-lavage-a-contre-courant" element={<FiltreCartoucheVsContreCourant />} />
+          <Route path="/injection-dair-comment-filtrer-le-fer-sans-produits-chimiques" element={<InjectionDAirFiltrerFer />} />
+          <Route path="/les-nitrates-dans-leau-de-puits-dangers-et-solutions" element={<NitratesEauPuitsDangersSolutions />} />
+          <Route path="/osmose-inverse-et-sante-quelle-qualite-deau-obtenez-vous" element={<OsmoseInverseSante />} />
+          <Route path="/comment-losmose-inverse-protege-votre-famille-des-contaminants-invisibles" element={<OsmoseInverseContaminantsInvisibles />} />
+          <Route path="/eau-du-puits-au-quebec-quand-installer-un-systeme-dosmose-inverse" element={<EauPuitsOsmoseInverse />} />
+          <Route path="/osmose-inverse-la-technologie-derriere-une-eau-100-pure" element={<OsmoseInverseEau100Pure />} />
+          <Route path="/eau-embouteillee-les-dangers-meconnus-pour-votre-sante-au-quotidien" element={<EauEmbouteilleeDangers />} />
+          <Route path="/eau-embouteillee-quels-impacts-sur-la-sante-et-la-planete" element={<EauEmbouteilleeImpacts />} />
           <Route path="/guides" element={<Guides />} />
           <Route path="/videos" element={<Videos />} />
           <Route path="/temoignages" element={<Temoignages />} />
