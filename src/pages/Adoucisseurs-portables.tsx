@@ -339,9 +339,6 @@ const AdoucisseursPortables = () => {
                 </div>
             </section>
 
-            {/* 7. Consultation Form Section */}
-            <ConsultationFormSection id="consultation" />
-
             <Footer />
         </div>
     );

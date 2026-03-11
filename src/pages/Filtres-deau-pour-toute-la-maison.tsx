@@ -508,8 +508,6 @@ const FiltresTouteMaison = () => {
                     </div>
                 </section>
 
-                {/* 11. Consultation Form Section */}
-                <ConsultationFormSection id="consultation" />
             </main>
 
             <Footer />

@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { NavLink } from "react-router-dom";
 
 const Contact = () => {
   return (
@@ -15,147 +16,92 @@ const Contact = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center space-y-6">
               <h1
-                className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-slate-900 text-justify max-w-xl mx-auto"
-                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"', fontStyle: 'normal' }}
+                className="mb-8 text-center max-w-xl mx-auto"
+                style={{ fontFamily: 'Speedee, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif', fontStyle: 'normal', fontWeight: 700, color: 'rgb(41, 41, 41)', fontSize: '54px', lineHeight: '56px' }}
               >
-                <span className="font-bold">Contactez-nous</span>
+                Contactez-nous
               </h1>
-              <p className="text-lg md:text-xl text-muted-foreground">
-                Notre équipe est à votre disposition pour répondre à toutes vos questions
-              </p>
+              <div className="mb-12 flex justify-center">
+                <p className="text-lg md:text-xl text-slate-700 max-w-4xl font-light leading-relaxed text-center">
+                  Vous recherchez des informations sur nos produits, planifier une analyse d'eau ou vous souhaitez simplement nous contacter ? Notre équipe se fera un plaisir de vous aider à trouver les réponses.
+                </p>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* 2. Contact Info & Form */}
-        <section className="py-12 md:py-16">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-              {/* Contact Information */}
-              <div className="space-y-8">
-                <div>
-                  <h2
-                    className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter"
-                    style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"', fontStyle: 'normal' }}
-                  >
-                    Informations de contact
-                  </h2>
-                  <p className="text-muted-foreground mb-8">
-                    N'hésitez pas à nous contacter par téléphone, email ou en remplissant
-                    le formulaire. Nous vous répondrons dans les plus brefs délais.
-                  </p>
+        {/* 1.5 Navigation Cards Section */}
+        <section className="py-16 md:py-24 bg-white">
+          <div className="container mx-auto px-4 md:px-6 max-w-6xl">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 gap-y-12">
+              {/* Card 1 */}
+              <div className="flex flex-col h-full bg-white group cursor-pointer">
+                <div className="overflow-hidden mb-6 rounded-sm w-[574px] h-[384px] max-w-full">
+                  <img src="/images/FAQ.jpg" alt="Foire aux questions" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
-
-                <div className="space-y-6">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Phone className="h-6 w-6 text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-foreground mb-1">Téléphone</h3>
-                      <a href="tel:18552649328" className="text-muted-foreground hover:text-primary transition-colors">
-                        1 855 264 9328
-                      </a>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <MapPin className="h-6 w-6 text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-foreground mb-1">Adresse</h3>
-                      <p className="text-muted-foreground">
-                        4180 Avenue de Courtrai Suite 100
-                        Montréal, QC H3S 1C3
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Clock className="h-6 w-6 text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-foreground mb-1">Heures d'ouverture</h3>
-                      <div className="text-muted-foreground space-y-1">
-                        <p>Lundi - Vendredi: 8h30 - 17h00</p>
-                        <p>Sur rendez-vous</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* 3. Contact Form */}
-              <div className="bg-card border border-border rounded-lg p-6 md:p-8">
-                <h2
-                  className="text-[28px] md:text-[40px] font-normal text-slate-900 mb-6 leading-[1.1] tracking-tighter"
-                  style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"', fontStyle: 'normal' }}
+                <h3
+                  className="mb-4"
+                  style={{ fontFamily: 'Speedee, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif', fontStyle: 'normal', fontWeight: 400, color: 'rgb(41, 41, 41)', fontSize: '36px', lineHeight: '40px' }}
                 >
-                  Envoyez-nous un message
-                </h2>
-                <form className="space-y-6">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div>
-                      <label htmlFor="firstName" className="block text-sm font-medium text-foreground mb-2">
-                        Prénom
-                      </label>
-                      <Input id="firstName" placeholder="Votre prénom" />
-                    </div>
-                    <div>
-                      <label htmlFor="lastName" className="block text-sm font-medium text-foreground mb-2">
-                        Nom
-                      </label>
-                      <Input id="lastName" placeholder="Votre nom" />
-                    </div>
-                  </div>
+                  Foire aux questions
+                </h3>
+                <p
+                  className="mb-6 flex-grow"
+                  style={{ fontFamily: 'Speedee, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif', fontStyle: 'normal', fontWeight: 400, color: 'rgb(41, 41, 41)', fontSize: '16px', lineHeight: '24px' }}
+                >
+                  Vous n'avez pas envie de nous contacter, ou vous pensez que nous avons déjà répondu à votre question ? Consultez notre FAQ exhaustive.
+                </p>
+                <Button className="w-fit bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 h-12 rounded-full" asChild>
+                  <NavLink to="/faq">Consultez la FAQ</NavLink>
+                </Button>
+              </div>
 
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
-                      Email
-                    </label>
-                    <Input id="email" type="email" placeholder="votre@email.com" />
-                  </div>
+              {/* Card 2 */}
+              <div className="flex flex-col h-full bg-white group cursor-pointer">
+                <div className="overflow-hidden mb-6 rounded-sm w-[574px] h-[384px] max-w-full">
+                  <img src="/images/40-AdobeStock_365603381.jpeg" alt="Consultation gratuite" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                </div>
+                <h3
+                  className="mb-4"
+                  style={{ fontFamily: 'Speedee, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif', fontStyle: 'normal', fontWeight: 400, color: 'rgb(41, 41, 41)', fontSize: '36px', lineHeight: '40px' }}
+                >
+                  Demande de consultation
+                </h3>
+                <p
+                  className="mb-6 flex-grow"
+                  style={{ fontFamily: 'Speedee, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif', fontStyle: 'normal', fontWeight: 400, color: 'rgb(41, 41, 41)', fontSize: '16px', lineHeight: '24px' }}
+                >
+                  Pour planifier une consultation gratuite, discuter de l'installation d'un nouveau système ou obtenir une soumission, nos experts sont là.
+                </p>
+                <Button className="w-fit bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 h-12 rounded-full" asChild>
+                  <NavLink to="/consultation">Planifiez une consultation</NavLink>
+                </Button>
+              </div>
 
-                  <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
-                      Téléphone
-                    </label>
-                    <Input id="phone" type="tel" placeholder="(xxx) xxx-xxxx" />
-                  </div>
-
-                  <div>
-                    <label htmlFor="subject" className="block text-sm font-medium text-foreground mb-2">
-                      Sujet
-                    </label>
-                    <Input id="subject" placeholder="Comment pouvons-nous vous aider ?" />
-                  </div>
-
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
-                      Message
-                    </label>
-                    <Textarea
-                      id="message"
-                      placeholder="Décrivez votre besoin..."
-                      className="min-h-[150px]"
-                    />
-                  </div>
-
-                  <Button
-                    type="submit"
-                    className="w-full"
-                    size="lg"
-                    style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"', fontStyle: 'normal' }}
-                  >
-                    Envoyer le message
-                  </Button>
-                </form>
+              <div className="flex flex-col h-full bg-white group cursor-pointer">
+                <div className="overflow-hidden mb-6 rounded-sm w-[574px] h-[384px] max-w-full">
+                  <img src="/images/SERVICES.jpg" alt="Support client & Entretien" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                </div>
+                <h3
+                  className="mb-4"
+                  style={{ fontFamily: 'Speedee, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif', fontStyle: 'normal', fontWeight: 400, color: 'rgb(41, 41, 41)', fontSize: '36px', lineHeight: '40px' }}
+                >
+                  Support client & Entretien
+                </h3>
+                <p
+                  className="mb-6 flex-grow"
+                  style={{ fontFamily: 'Speedee, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif', fontStyle: 'normal', fontWeight: 400, color: 'rgb(41, 41, 41)', fontSize: '16px', lineHeight: '24px' }}
+                >
+                  Si vous êtes déjà client Bricareau et que vous avez besoin d'aide avec votre système ou pour planifier un entretien de routine.
+                </p>
+                <Button className="w-fit bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 h-12 rounded-full" asChild>
+                  <NavLink to="/contact-form">Contactez-nous</NavLink>
+                </Button>
               </div>
             </div>
           </div>
         </section>
+
       </main>
       <Footer />
     </div>

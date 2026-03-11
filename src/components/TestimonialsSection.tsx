@@ -11,14 +11,17 @@ import { allTestimonials, getTestimonialsByProduct, type Testimonial } from "@/d
 interface TestimonialsSectionProps {
     testimonials?: Testimonial[];
     title?: React.ReactNode;
+    subtitle?: string;
     filterProduct?: string;
     limit?: number;
+    maxReviews?: number;
 }
 
 const TestimonialsSection = ({
     testimonials,
     filterProduct,
     limit,
+    maxReviews,
     title = (
         <>
             <span className="text-[32px] md:text-[60px] font-light leading-[1.2] md:leading-[60px] block">Qualité inégalée.</span>
@@ -40,6 +43,9 @@ const TestimonialsSection = ({
         finalTestimonials = finalTestimonials.slice(0, limit);
     }
 
+    if (maxReviews && maxReviews > 0) {
+        finalTestimonials = finalTestimonials.slice(0, maxReviews);
+    }
 
     const [emblaRef, emblaApi] = useEmblaCarousel({
         loop: true,

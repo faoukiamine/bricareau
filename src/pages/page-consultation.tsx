@@ -2,108 +2,194 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import { Button } from "@/components/ui/button";
-import heroBath from "@/assets/40-AdobeStock_365603381.jpeg";
-import kitchenImg from "@/assets/18036672_SIE_2720_1530_21_04_30_SIE_CRM_Dishwasher_Hand_Taking_Out_Wine_Glass_Basket_Motiv_11_0017.webp";
-import untitledImg from "@/assets/2151469364.jpg";
-import mobileSoftenerImg from "@/assets/9-optimized.webp";
-import bathroomImg from "@/assets/2705.jpg";
-import waterTestGemini from "@/assets/Gemini_Generated_Image_rk3i02rk3i02rk3i.png";
-import waterTestingImg from "@/assets/2147800429.jpg";
-import process1 from "@/assets/2148563485.jpg";
-import labTestImg from "@/assets/test-laboratoire-diligence-inspection-750x500.jpg";
-import waterTestingBg from "@/assets/undersink_filtration_header.jpg";
-import specializedFiltersImg from "@/assets/Filtres d'eau spécialisés.webp";
-import drinkingWaterImg from "@/assets/Solutions d'eau potable.webp";
-import undersinkSystemImg from "@/assets/Système+de+filtration+Serene+Lite.webp";
-import hardWaterSignsImg from "@/assets/Signs+of+hard+water+in+your+home-640w.webp";
-import hardWaterImg from "@/assets/58279.jpg";
 import {
-    ArrowRight,
-    Droplets,
-    Heart,
-    Shield,
-    TrendingDown,
-    Shirt,
-    Zap,
-    Check,
     CheckCircle2,
-    ChevronRight,
-    Star,
-    Play,
-    X,
     Sparkles,
-    Clock,
-    Home,
     Award,
-    HandCoins,
-    Phone
+    Star,
+    Phone,
+    ChevronDown
 } from "lucide-react";
-import { useNavigate } from "react-router-dom";
-import React, { useEffect } from "react";
-import { NavLink } from "@/components/NavLink";
+import React, { useEffect, useState } from "react";
+import ConsultationFormSection from "@/components/ConsultationFormSection";
 import {
     Accordion,
     AccordionContent,
     AccordionItem,
     AccordionTrigger,
 } from "@/components/ui/accordion";
-import ConsultationFormSection from "@/components/ConsultationFormSection";
 
 
 const PageConsultation = () => {
-    const [showAllFaqs, setShowAllFaqs] = React.useState(false);
-    const navigate = useNavigate();
-
+    const [showAllFaqs, setShowAllFaqs] = useState(false);
 
     useEffect(() => {
-        document.title = "Adoucisseur d'eau : Adieu le calcaire et l'eau dure";
+        document.title = "Planifiez une consultation gratuite | Bricareau";
         const metaDesc = document.querySelector('meta[name="description"]');
         if (metaDesc) {
-            metaDesc.setAttribute("content", "Dites adieu au calcaire avec nos adoucisseurs d'eau haute performance. Profitez d'une peau plus douce et protégez vos appareils.");
+            metaDesc.setAttribute("content", "Discutez avec nos experts et planifiez une consultation téléphonique sans engagement pour analyser votre eau et trouver la meilleure solution de traitement.");
         }
 
         // OG Tags
         const ogTitle = document.querySelector('meta[property="og:title"]');
-        if (ogTitle) ogTitle.setAttribute("content", "Adoucisseur d'eau : Éliminez le calcaire | Bricareau");
+        if (ogTitle) ogTitle.setAttribute("content", "Consultation Gratuite sur l'eau | Bricareau");
         const ogDesc = document.querySelector('meta[property="og:description"]');
-        if (ogDesc) ogDesc.setAttribute("content", "Une eau soyeuse pour toute la maison. Découvrez nos solutions d'adoucissement haute performance.");
+        if (ogDesc) ogDesc.setAttribute("content", "Recevez une évaluation personnalisée de vos besoins en traitement d'eau par un expert certifié Bricareau.");
     }, []);
-    return (
-        <div className="min-h-screen bg-background font-sans text-slate-900">
-            <Header />
-            <main>
-                {/* 1. Hero Section */}
-                <section className="relative h-[850px] flex items-center overflow-hidden -mt-[104px] pt-[104px]">
-                    <div className="absolute inset-0 z-0">
-                        <img
-                            src={heroBath}
-                            alt="Confort d'une eau douce et soyeuse Québec - Bain relaxant sans calcaire Bricareau"
-                            className="w-full h-full object-cover object-[center_35%]"
-                        />
-                        <div className="absolute inset-0 bg-black/40 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
-                        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-white via-white/10 to-transparent" />
-                        {/* Brightening Start 1/3 Right */}
-                        <div className="absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white/90 via-white/40 to-transparent" />
-                    </div>
 
-                    <div className="container mx-auto px-6 relative z-10">
-                        <div className="max-w-2xl text-white">
+    return (
+        <div className="min-h-screen bg-slate-50 font-sans text-slate-900">
+            <Header />
+            <main className="pt-32 pb-24">
+                <div className="container mx-auto px-4 lg:px-6">
+                    <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-center">
+
+                        {/* Left Column: Sales Pitch */}
+                        <div className="lg:w-5/12 xl:w-1/2 flex flex-col justify-center">
+                            <span className="text-blue-600 font-bold tracking-widest text-xs uppercase mb-4 block animate-in fade-in slide-in-from-bottom duration-500">
+                                Consultation Sans Frais
+                            </span>
                             <h1
-                                className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text max-w-xl"
+                                className="text-[32px] md:text-[48px] font-bold text-slate-900 mb-6 leading-[1.1] tracking-tight animate-in fade-in slide-in-from-bottom duration-700"
                                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                             >
-                                <span className="font-bold text-white">Planifiez une consultation gratuite sur l'eau</span> <br />
+                                Prenez le contrôle de <br className="hidden md:block" />
+                                <span className="text-blue-600">la qualité de votre eau.</span>
                             </h1>
-                            <p className="text-lg font-light leading-snug text-white/95 mb-8 max-w-xl text-justify">
-                                Remplissez le formulaire pour organiser une consultation téléphonique avec l'un de nos experts.
+                            <p className="text-lg text-slate-600 mb-10 leading-snug font-light text-justify animate-in fade-in slide-in-from-bottom duration-700 delay-100">
+                                Organisez un appel téléphonique gratuit avec l'un de nos experts. Nous analyserons vos besoins, répondrons à vos questions et vous guiderons vers la meilleure solution d'adoucissement ou de filtration, sans aucune vente à pression.
                             </p>
+
+                            <div className="space-y-6 mb-12 animate-in fade-in slide-in-from-bottom duration-700 delay-200">
+                                {[
+                                    { icon: CheckCircle2, title: "Évaluation sur mesure", desc: "Solutions personnalisées pour votre domicile." },
+                                    { icon: Sparkles, title: "Zéro pression", desc: "Conseils impartiaux, aucune obligation d'achat." },
+                                    { icon: Award, title: "Expertise garantie", desc: "Des techniciens certifiés à votre écoute." }
+                                ].map((feature, idx) => (
+                                    <div key={idx} className="flex gap-4 items-start">
+                                        <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center shrink-0">
+                                            <feature.icon className="w-6 h-6 text-blue-600" />
+                                        </div>
+                                        <div>
+                                            <h3 className="text-xl font-bold text-slate-900 mb-1">{feature.title}</h3>
+                                            <p className="text-slate-600 font-light">{feature.desc}</p>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+
+                            <div className="p-6 bg-white rounded-3xl shadow-sm border border-slate-100 flex items-center gap-6 max-w-sm animate-in fade-in slide-in-from-bottom duration-700 delay-300">
+                                <div className="flex -space-x-3">
+                                    <div className="w-12 h-12 rounded-full bg-blue-50 border-2 border-white flex items-center justify-center font-bold text-blue-600 text-sm">10k+</div>
+                                </div>
+                                <div>
+                                    <div className="flex text-yellow-400 mb-1">
+                                        <Star className="w-4 h-4 fill-current" />
+                                        <Star className="w-4 h-4 fill-current" />
+                                        <Star className="w-4 h-4 fill-current" />
+                                        <Star className="w-4 h-4 fill-current" />
+                                        <Star className="w-4 h-4 fill-current" />
+                                    </div>
+                                    <p className="text-sm font-medium text-slate-900">Familles québécoises satisfaites</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Right Column: Form */}
+                        <div className="lg:w-7/12 xl:w-1/2 animate-in fade-in zoom-in duration-1000 relative">
+                            <div className="absolute inset-0 bg-blue-500/5 rounded-3xl blur-3xl transform scale-110 -z-10"></div>
+                            <ConsultationFormSection isStandalone={true} />
+                        </div>
+
+                    </div>
+                </div>
+            </main>
+
+            {/* Section: Notre Processus / FAQ */}
+            <section className="py-24 bg-white border-t border-slate-100">
+                <div className="container mx-auto px-4 lg:px-6">
+                    <div className="text-center mb-16 max-w-2xl mx-auto">
+                        <h2
+                            className="text-[32px] md:text-[40px] font-bold text-slate-900 mb-6 leading-tight tracking-tight"
+                            style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                        >
+                            Comment se déroule <span className="text-blue-600">notre consultation ?</span>
+                        </h2>
+                        <p className="text-lg text-slate-600 font-light">
+                            Voici les questions les plus fréquentes concernant notre processus d'évaluation gratuite.
+                        </p>
+                    </div>
+
+                    <div className="max-w-4xl mx-auto">
+                        <Accordion type="single" collapsible className="w-full">
+                            {[
+                                { q: "Combien de temps dure la consultation téléphonique ?", a: "La consultation dure généralement entre 15 et 30 minutes, selon vos questions et la complexité de votre situation." },
+                                { q: "La consultation est-elle vraiment sans obligation d'achat ?", a: "Absolument. Notre objectif premier est de vous informer et d'évaluer vos besoins. Vous êtes totalement libre de vos décisions suite à cet appel." },
+                                { q: "Quelles informations dois-je préparer avant l'appel ?", a: "Il est utile de savoir si vous êtes sur l'eau de la ville ou sur un puits, le nombre de personnes résidant dans la maison, et quels sont les problèmes d'eau que vous avez remarqués (goût, odeur, calcaire, etc.)." },
+                                { q: "Un technicien devra-t-il se déplacer chez moi ?", a: "Dans la majorité des cas, nous pouvons faire une excellente pré-évaluation par téléphone. Si une analyse d'eau plus poussée ou une vérification de plomberie est nécessaire, nous pourrons planifier un déplacement." },
+                                { q: "Est-ce que je serai en contact avec un vendeur à pression ?", a: "Non. Chez Bricareau, vous parlerez avec un expert conseiller technique. Notre approche est éducative et consultative, sans aucune pression de vente." },
+                                { q: "Puis-je reporter ou annuler mon rendez-vous téléphonique ?", a: "Oui, bien sûr. Si vous avez un empêchement, envoyez-nous simplement un courriel ou appelez-nous pour replanifier à votre convenance." }
+                            ].slice(0, showAllFaqs ? undefined : 4).map((item, idx) => (
+                                <AccordionItem key={idx} value={`item-${idx}`} className="border-b-gray-200">
+                                    <AccordionTrigger className="text-left text-base md:text-lg font-medium leading-6 hover:no-underline py-6" style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}>
+                                        {item.q}
+                                    </AccordionTrigger>
+                                    <AccordionContent className="text-base font-light leading-relaxed text-slate-600 pb-6 text-justify" style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}>
+                                        {item.a}
+                                    </AccordionContent>
+                                </AccordionItem>
+                            ))}
+                        </Accordion>
+
+                        <div className="mt-12 text-center">
+                            <Button
+                                onClick={() => setShowAllFaqs(!showAllFaqs)}
+                                variant="outline"
+                                className="rounded-full px-8 h-12 text-blue-600 border-blue-600 hover:bg-blue-50"
+                            >
+                                {showAllFaqs ? "Voir moins de questions" : "Voir toutes les questions"}
+                            </Button>
                         </div>
                     </div>
-                </section>
+                </div>
+            </section>
 
-                {/* 2.Consultation Form Section */}
-                <ConsultationFormSection id="consultation" />
-            </main>
+            {/* Testimonials */}
+            <TestimonialsSection
+                title={
+                    <>
+                        <span className="text-[32px] md:text-[60px] font-light leading-[1.2] md:leading-[60px] block">Approuvé par</span>
+                        <span className="text-[32px] md:text-[60px] font-normal leading-[1.2] md:leading-[60px] block">des milliers de familles.</span>
+                    </>
+                }
+                maxReviews={8}
+            />
+
+            {/* CTA Section */}
+            <section className="bg-primary py-16 md:py-20">
+                <div className="container mx-auto px-4 text-center">
+                    <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
+                        Vous préférez nous appeler directement ?
+                    </h2>
+                    <p className="text-primary-foreground/80 text-lg mb-8 max-w-2xl mx-auto">
+                        Notre équipe est disponible du lundi au vendredi de 8h30 à 20h30.
+                    </p>
+                    <div className="flex justify-center">
+                        <Button
+                            size="lg"
+                            variant="outline"
+                            className="rounded-full px-8 h-14 border-white text-white bg-transparent hover:bg-white/10 flex items-center gap-2"
+                            asChild
+                        >
+                            <a href="tel:18552649328">
+                                <Phone className="w-5 h-5" />
+                                1-855-264-9328
+                            </a>
+                        </Button>
+                    </div>
+                </div>
+            </section>
+
             <Footer />
         </div>
     );

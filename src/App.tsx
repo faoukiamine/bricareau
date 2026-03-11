@@ -10,7 +10,7 @@ import Index from "./pages/Index";
 import Services from "./pages/Adoucisseurs-portables";
 import ContactResidentiel from "./pages/ContactResidentiel";
 import ContactEntreprises from "./pages/ContactEntreprises";
-import Contact from "./pages/Contact";
+import ContactHub from "./pages/Contact";
 import TestsEau from "./pages/Tests-Eau";
 import FAQ from "./pages/FAQ";
 import Entreprises from "./pages/Entreprises";
@@ -67,6 +67,7 @@ import FiltrationSousEvier from "./pages/Systemes-de-filtration-deau-sous-evier"
 import DesinfectionUV from "./pages/Systemes-de-desinfection-UV";
 import FiltreEauHauteEfficacite from "./pages/Filtre-eau-haute-efficacite";
 import Consultation from "./pages/page-consultation";
+import ContactForm from "./pages/Page-contact";
 // import RO6 from "./pages/RO-6";
 
 import FiltresDeRemplacement from "./pages/Filtres-de-remplacement";
@@ -149,7 +150,8 @@ const App = () => (
           <Route path="/videos" element={<Videos />} />
           <Route path="/temoignages" element={<Temoignages />} />
           <Route path="/consultation" element={<Consultation />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/contact" element={<ContactHub />} />
+          <Route path="/contact-form" element={<ContactForm />} />
           <Route path="/contact-residentiel" element={<ContactResidentiel />} />
           <Route path="/contact-entreprises" element={<ContactEntreprises />} />
           <Route path="/service" element={<Service />} />

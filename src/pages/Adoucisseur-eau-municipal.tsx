@@ -458,8 +458,6 @@ const AdoucisseurEauMunicipal = () => {
                     </div>
                 </section>
 
-                {/* 10. Consultation Form Section */}
-                <ConsultationFormSection id="consultation" />
             </main>
 
             <Footer />

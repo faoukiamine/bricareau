@@ -567,10 +567,6 @@ const DesinfectionUV = () => {
                     </div>
                 </section>
 
-                {/* 11. Contact Form Section */}
-                <ConsultationFormSection id="consultation" />
-
-
             </main>
             <Footer />
         </div>

@@ -49,7 +49,7 @@ const TIME_SLOTS = [
     "14:00", "15:00", "16:00", "17:00", "18:00"
 ];
 
-const ConsultationFormSection = ({ id }: { id?: string }) => {
+const ConsultationFormSection = ({ id, isStandalone = false }: { id?: string, isStandalone?: boolean }) => {
     const [step, setStep] = useState(1);
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSuccess, setIsSuccess] = useState(false);
@@ -209,295 +209,301 @@ const ConsultationFormSection = ({ id }: { id?: string }) => {
         );
     }
 
+    const formContent = (
+        <div className="w-full" ref={formRef}>
+            <div className={cn("bg-white rounded-3xl p-6 md:p-10 shadow-2xl relative z-10", !isStandalone && "border border-gray-100")}>
+                {/* Progress Steps */}
+                <div className="flex items-center gap-4 md:gap-8 mb-8 overflow-x-auto pb-4 border-b border-gray-100 no-scrollbar">
+                    {[
+                        { id: 1, label: "Vos informations" },
+                        { id: 2, label: "Votre disponibilité" },
+                        { id: 3, label: "Confirmation" }
+                    ].map((s) => (
+                        <div key={s.id} className={cn(
+                            "flex items-center gap-2 font-bold whitespace-nowrap transition-colors",
+                            step >= s.id ? "text-blue-600" : "text-gray-300"
+                        )}>
+                            <span className={cn(
+                                "w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center text-sm md:text-base transition-colors",
+                                step >= s.id ? "bg-blue-600 text-white" : "bg-gray-100 text-gray-400"
+                            )}>
+                                {step > s.id ? <CheckCircle2 className="w-5 h-5" /> : s.id}
+                            </span>
+                            <span className="hidden md:inline">{s.label}</span>
+                        </div>
+                    ))}
+                </div>
+
+                <Form {...form}>
+                    <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+
+                        {/* STEP 1: Personal Info */}
+                        {step === 1 && (
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 animate-in fade-in slide-in-from-right-4 duration-300">
+                                <FormField control={form.control} name="prenom" render={({ field }) => (
+                                    <FormItem>
+                                        <FormLabel className="font-bold">Prénom*</FormLabel>
+                                        <FormControl>
+                                            <Input className="h-12 bg-gray-50 border-none" placeholder=" " {...field} />
+                                        </FormControl>
+                                        <FormMessage />
+                                    </FormItem>
+                                )} />
+                                <FormField control={form.control} name="nom" render={({ field }) => (
+                                    <FormItem>
+                                        <FormLabel className="font-bold">Nom*</FormLabel>
+                                        <FormControl>
+                                            <Input className="h-12 bg-gray-50 border-none" placeholder=" " {...field} />
+                                        </FormControl>
+                                        <FormMessage />
+                                    </FormItem>
+                                )} />
+                                <FormField control={form.control} name="email" render={({ field }) => (
+                                    <FormItem>
+                                        <FormLabel className="font-bold">Courriel*</FormLabel>
+                                        <FormControl>
+                                            <Input type="email" className="h-12 bg-gray-50 border-none" placeholder=" " {...field} />
+                                        </FormControl>
+                                        <FormMessage />
+                                    </FormItem>
+                                )} />
+                                <FormField control={form.control} name="phone" render={({ field }) => (
+                                    <FormItem>
+                                        <FormLabel className="font-bold">Téléphone*</FormLabel>
+                                        <FormControl>
+                                            <Input type="tel" className="h-12 bg-gray-50 border-none" placeholder=" " {...field} />
+                                        </FormControl>
+                                        <FormMessage />
+                                    </FormItem>
+                                )} />
+                                <div className="md:col-span-2">
+                                    <FormField control={form.control} name="address" render={({ field }) => (
+                                        <FormItem>
+                                            <FormLabel className="font-bold">Adresse*</FormLabel>
+                                            <FormControl>
+                                                <Input className="h-12 bg-gray-50 border-none" placeholder=" " {...field} />
+                                            </FormControl>
+                                            <FormMessage />
+                                        </FormItem>
+                                    )} />
+                                </div>
+                                <div className="md:col-span-2 grid grid-cols-1 md:grid-cols-3 gap-6">
+                                    <FormField control={form.control} name="ville" render={({ field }) => (
+                                        <FormItem>
+                                            <FormLabel className="font-bold">Ville*</FormLabel>
+                                            <FormControl>
+                                                <Input className="h-12 bg-gray-50 border-none" placeholder=" " {...field} />
+                                            </FormControl>
+                                            <FormMessage />
+                                        </FormItem>
+                                    )} />
+                                    <FormField control={form.control} name="province" render={({ field }) => (
+                                        <FormItem>
+                                            <FormLabel className="font-bold">Province*</FormLabel>
+                                            <FormControl>
+                                                <Input className="h-12 bg-gray-50 border-none" placeholder=" " {...field} />
+                                            </FormControl>
+                                            <FormMessage />
+                                        </FormItem>
+                                    )} />
+                                    <FormField control={form.control} name="code_postal" render={({ field }) => (
+                                        <FormItem>
+                                            <FormLabel className="font-bold">Code Postal*</FormLabel>
+                                            <FormControl>
+                                                <Input className="h-12 bg-gray-50 border-none" placeholder=" " {...field} />
+                                            </FormControl>
+                                            <FormMessage />
+                                        </FormItem>
+                                    )} />
+                                </div>
+                                <div className="md:col-span-2">
+                                    <FormField control={form.control} name="consent" render={({ field }) => (
+                                        <FormItem className="flex flex-row items-start space-x-3 space-y-0 p-4 bg-gray-50 rounded-xl border border-gray-100">
+                                            <FormControl>
+                                                <Checkbox
+                                                    checked={field.value}
+                                                    onCheckedChange={field.onChange}
+                                                />
+                                            </FormControl>
+                                            <div className="space-y-1 leading-none">
+                                                <FormLabel className="text-xs text-gray-600 font-normal leading-relaxed cursor-pointer text-justify block">
+                                                    Je souhaite recevoir les prochaines communications de Bricareau. (Vous pouvez vous désabonner à tout moment.)<br />
+                                                    En cochant cette case ou en utilisant le site web Bricareau.com, vous reconnaissez avoir lu les Conditions générales et la Politique de confidentialité, les comprendre et accepter d'y être lié.*
+                                                </FormLabel>
+                                                <FormMessage />
+                                            </div>
+                                        </FormItem>
+                                    )} />
+                                </div>
+                            </div>
+                        )}
+
+                        {/* STEP 2: Scheduling */}
+                        {step === 2 && (
+                            <div className="flex flex-col gap-8 animate-in fade-in slide-in-from-right-4 duration-300">
+                                <div className="w-full">
+                                    <FormField control={form.control} name="appointment_date" render={({ field }) => (
+                                        <FormItem className="flex flex-col">
+                                            <FormLabel className="font-bold mb-2">Choisir une date</FormLabel>
+                                            <Calendar
+                                                mode="single"
+                                                selected={field.value}
+                                                onSelect={field.onChange}
+                                                disabled={(date) =>
+                                                    date < new Date() || date > addDays(new Date(), 7) || date.getDay() === 0
+                                                }
+                                                locale={fr}
+                                                className="rounded-md border shadow-sm p-3 w-full flex justify-center bg-white"
+                                                classNames={{
+                                                    day_selected: "bg-blue-600 text-white hover:bg-blue-600 focus:bg-blue-600",
+                                                    day_today: "bg-gray-100 text-gray-900 border border-gray-200",
+                                                    month: "space-y-4 w-full",
+                                                    table: "w-full border-collapse space-y-1",
+                                                    head_row: "flex w-full justify-between",
+                                                    row: "flex w-full mt-2 justify-between",
+                                                    cell: "text-center text-sm p-0 flex-1 relative [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20",
+                                                    day: "h-9 w-9 p-0 font-normal aria-selected:opacity-100 flex items-center justify-center mx-auto"
+                                                }}
+                                            />
+                                            <FormMessage />
+                                        </FormItem>
+                                    )} />
+                                </div>
+                                <div className="w-full">
+                                    <FormField control={form.control} name="appointment_time" render={({ field }) => (
+                                        <FormItem>
+                                            <FormLabel className="font-bold mb-2">Choisir une heure</FormLabel>
+                                            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-3 gap-3">
+                                                {TIME_SLOTS.map((time) => {
+                                                    const isBooked = bookedSlots.includes(time);
+                                                    return (
+                                                        <div key={time}>
+                                                            <input
+                                                                type="radio"
+                                                                id={`time-${time}`}
+                                                                className="peer sr-only"
+                                                                {...form.register("appointment_time")}
+                                                                value={time}
+                                                                disabled={isBooked}
+                                                            />
+                                                            <label
+                                                                htmlFor={`time-${time}`}
+                                                                className={cn(
+                                                                    "flex items-center justify-center px-4 py-3 border rounded-lg cursor-pointer transition-all font-medium text-sm",
+                                                                    isBooked
+                                                                        ? "bg-gray-100 text-gray-400 border-gray-200 cursor-not-allowed decoration-slice"
+                                                                        : "bg-white border-gray-200 hover:bg-gray-50 peer-checked:bg-blue-50 peer-checked:border-blue-600 peer-checked:text-blue-600"
+                                                                )}
+                                                            >
+                                                                {time}
+                                                                {isBooked && <span className="sr-only">(Indisponible)</span>}
+                                                            </label>
+                                                        </div>
+                                                    )
+                                                })}
+                                            </div>
+                                            <FormMessage />
+                                        </FormItem>
+                                    )} />
+                                </div>
+                            </div>
+                        )}
+
+                        {/* STEP 3: Confirmation */}
+                        {step === 3 && (
+                            <div className="space-y-6 animate-in fade-in slide-in-from-right-4 duration-300">
+                                <div className="bg-gray-50 rounded-xl p-6 space-y-4 border border-gray-100">
+                                    <h3 className="font-bold text-lg text-gray-900 border-b border-gray-200 pb-2">Récapitulatif</h3>
+
+                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                        <div>
+                                            <p className="text-sm text-gray-500">Nom complet</p>
+                                            <p className="font-medium text-gray-900">{form.getValues("prenom")} {form.getValues("nom")}</p>
+                                        </div>
+                                        <div>
+                                            <p className="text-sm text-gray-500">Contact</p>
+                                            <p className="font-medium text-gray-900">{form.getValues("email")}</p>
+                                            <p className="font-medium text-gray-900">{form.getValues("phone")}</p>
+                                        </div>
+                                        <div className="md:col-span-2">
+                                            <p className="text-sm text-gray-500">Adresse</p>
+                                            <p className="font-medium text-gray-900">
+                                                {form.getValues("address")}, {form.getValues("ville")}, {form.getValues("province")} {form.getValues("code_postal")}
+                                            </p>
+                                        </div>
+                                        <div className="md:col-span-2 bg-blue-50 p-4 rounded-lg border border-blue-100">
+                                            <p className="text-sm text-blue-600 font-semibold mb-1">Rendez-vous demandé</p>
+                                            <div className="flex items-center gap-2 text-blue-900 font-bold text-lg">
+                                                <CalendarIcon className="w-5 h-5" />
+                                                {form.getValues("appointment_date") && format(form.getValues("appointment_date"), "d MMMM yyyy", { locale: fr })}
+                                                <span>à</span>
+                                                <span>{form.getValues("appointment_time")}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <p className="text-sm text-gray-500 text-center">
+                                    Veuillez vérifier les informations ci-dessus avant de confirmer votre demande.
+                                </p>
+                            </div>
+                        )}
+
+                        {/* Navigation Buttons */}
+                        <div className="flex gap-4 pt-4 border-t border-gray-100">
+                            {step > 1 && (
+                                <Button
+                                    type="button"
+                                    variant="outline"
+                                    onClick={prevStep}
+                                    disabled={isNavigating || isSubmitting}
+                                    className="w-full md:w-auto h-12 rounded-full px-8 border-gray-300"
+                                >
+                                    <ChevronLeft className="w-4 h-4 mr-2" /> Retour
+                                </Button>
+                            )}
+
+                            {step < 3 ? (
+                                <Button
+                                    type="button"
+                                    onClick={nextStep}
+                                    disabled={isNavigating}
+                                    className="w-full md:w-auto ml-auto h-12 rounded-full px-8 bg-blue-600 hover:bg-blue-700 text-white"
+                                >
+                                    Continuer <ChevronRight className="w-4 h-4 ml-2" />
+                                </Button>
+                            ) : (
+                                <Button
+                                    type="submit"
+                                    disabled={isSubmitting || isNavigating}
+                                    className="w-full md:w-auto ml-auto h-12 rounded-full px-8 bg-blue-600 hover:bg-blue-700 text-white"
+                                >
+                                    {isSubmitting ? (
+                                        <>
+                                            <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                                            Envoi en cours...
+                                        </>
+                                    ) : (
+                                        "Confirmer RDV"
+                                    )}
+                                </Button>
+                            )}
+                        </div>
+                    </form>
+                </Form>
+            </div>
+        </div>
+    );
+
+    if (isStandalone) {
+        return formContent;
+    }
+
     return (
         <section id={id} className="py-24 bg-white border-t border-gray-100 scroll-mt-24">
             <div className="container mx-auto px-4">
                 <div className="max-w-3xl mx-auto flex flex-col lg:flex-row gap-20">
-
-                    {/* Right Side Form */}
-                    <div className="w-full" ref={formRef}>
-                        <div className="bg-white rounded-3xl p-6 md:p-10 border border-gray-100 shadow-2xl">
-                            {/* Progress Steps */}
-                            <div className="flex items-center gap-4 md:gap-8 mb-8 overflow-x-auto pb-4 border-b border-gray-100 no-scrollbar">
-                                {[
-                                    { id: 1, label: "Vos informations" },
-                                    { id: 2, label: "Votre disponibilité" },
-                                    { id: 3, label: "Confirmation" }
-                                ].map((s) => (
-                                    <div key={s.id} className={cn(
-                                        "flex items-center gap-2 font-bold whitespace-nowrap transition-colors",
-                                        step >= s.id ? "text-blue-600" : "text-gray-300"
-                                    )}>
-                                        <span className={cn(
-                                            "w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center text-sm md:text-base transition-colors",
-                                            step >= s.id ? "bg-blue-600 text-white" : "bg-gray-100 text-gray-400"
-                                        )}>
-                                            {step > s.id ? <CheckCircle2 className="w-5 h-5" /> : s.id}
-                                        </span>
-                                        <span className="hidden md:inline">{s.label}</span>
-                                    </div>
-                                ))}
-                            </div>
-
-                            <Form {...form}>
-                                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-
-                                    {/* STEP 1: Personal Info */}
-                                    {step === 1 && (
-                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 animate-in fade-in slide-in-from-right-4 duration-300">
-                                            <FormField control={form.control} name="prenom" render={({ field }) => (
-                                                <FormItem>
-                                                    <FormLabel className="font-bold">Prénom*</FormLabel>
-                                                    <FormControl>
-                                                        <Input className="h-12 bg-gray-50 border-none" placeholder=" " {...field} />
-                                                    </FormControl>
-                                                    <FormMessage />
-                                                </FormItem>
-                                            )} />
-                                            <FormField control={form.control} name="nom" render={({ field }) => (
-                                                <FormItem>
-                                                    <FormLabel className="font-bold">Nom*</FormLabel>
-                                                    <FormControl>
-                                                        <Input className="h-12 bg-gray-50 border-none" placeholder=" " {...field} />
-                                                    </FormControl>
-                                                    <FormMessage />
-                                                </FormItem>
-                                            )} />
-                                            <FormField control={form.control} name="email" render={({ field }) => (
-                                                <FormItem>
-                                                    <FormLabel className="font-bold">Courriel*</FormLabel>
-                                                    <FormControl>
-                                                        <Input type="email" className="h-12 bg-gray-50 border-none" placeholder=" " {...field} />
-                                                    </FormControl>
-                                                    <FormMessage />
-                                                </FormItem>
-                                            )} />
-                                            <FormField control={form.control} name="phone" render={({ field }) => (
-                                                <FormItem>
-                                                    <FormLabel className="font-bold">Téléphone*</FormLabel>
-                                                    <FormControl>
-                                                        <Input type="tel" className="h-12 bg-gray-50 border-none" placeholder=" " {...field} />
-                                                    </FormControl>
-                                                    <FormMessage />
-                                                </FormItem>
-                                            )} />
-                                            <div className="md:col-span-2">
-                                                <FormField control={form.control} name="address" render={({ field }) => (
-                                                    <FormItem>
-                                                        <FormLabel className="font-bold">Adresse*</FormLabel>
-                                                        <FormControl>
-                                                            <Input className="h-12 bg-gray-50 border-none" placeholder=" " {...field} />
-                                                        </FormControl>
-                                                        <FormMessage />
-                                                    </FormItem>
-                                                )} />
-                                            </div>
-                                            <div className="md:col-span-2 grid grid-cols-1 md:grid-cols-3 gap-6">
-                                                <FormField control={form.control} name="ville" render={({ field }) => (
-                                                    <FormItem>
-                                                        <FormLabel className="font-bold">Ville*</FormLabel>
-                                                        <FormControl>
-                                                            <Input className="h-12 bg-gray-50 border-none" placeholder=" " {...field} />
-                                                        </FormControl>
-                                                        <FormMessage />
-                                                    </FormItem>
-                                                )} />
-                                                <FormField control={form.control} name="province" render={({ field }) => (
-                                                    <FormItem>
-                                                        <FormLabel className="font-bold">Province*</FormLabel>
-                                                        <FormControl>
-                                                            <Input className="h-12 bg-gray-50 border-none" placeholder=" " {...field} />
-                                                        </FormControl>
-                                                        <FormMessage />
-                                                    </FormItem>
-                                                )} />
-                                                <FormField control={form.control} name="code_postal" render={({ field }) => (
-                                                    <FormItem>
-                                                        <FormLabel className="font-bold">Code Postal*</FormLabel>
-                                                        <FormControl>
-                                                            <Input className="h-12 bg-gray-50 border-none" placeholder=" " {...field} />
-                                                        </FormControl>
-                                                        <FormMessage />
-                                                    </FormItem>
-                                                )} />
-                                            </div>
-                                            <div className="md:col-span-2">
-                                                <FormField control={form.control} name="consent" render={({ field }) => (
-                                                    <FormItem className="flex flex-row items-start space-x-3 space-y-0 p-4 bg-gray-50 rounded-xl border border-gray-100">
-                                                        <FormControl>
-                                                            <Checkbox
-                                                                checked={field.value}
-                                                                onCheckedChange={field.onChange}
-                                                            />
-                                                        </FormControl>
-                                                        <div className="space-y-1 leading-none">
-                                                            <FormLabel className="text-xs text-gray-600 font-normal leading-relaxed cursor-pointer text-justify block">
-                                                                Je souhaite recevoir les prochaines communications de Bricareau. (Vous pouvez vous désabonner à tout moment.)<br />
-                                                                En cochant cette case ou en utilisant le site web Bricareau.com, vous reconnaissez avoir lu les Conditions générales et la Politique de confidentialité, les comprendre et accepter d'y être lié.*
-                                                            </FormLabel>
-                                                            <FormMessage />
-                                                        </div>
-                                                    </FormItem>
-                                                )} />
-                                            </div>
-                                        </div>
-                                    )}
-
-                                    {/* STEP 2: Scheduling */}
-                                    {step === 2 && (
-                                        <div className="flex flex-col gap-8 animate-in fade-in slide-in-from-right-4 duration-300">
-                                            <div className="w-full">
-                                                <FormField control={form.control} name="appointment_date" render={({ field }) => (
-                                                    <FormItem className="flex flex-col">
-                                                        <FormLabel className="font-bold mb-2">Choisir une date</FormLabel>
-                                                        <Calendar
-                                                            mode="single"
-                                                            selected={field.value}
-                                                            onSelect={field.onChange}
-                                                            disabled={(date) =>
-                                                                date < new Date() || date > addDays(new Date(), 7) || date.getDay() === 0
-                                                            }
-                                                            locale={fr}
-                                                            className="rounded-md border shadow-sm p-3 w-full flex justify-center bg-white"
-                                                            classNames={{
-                                                                day_selected: "bg-blue-600 text-white hover:bg-blue-600 focus:bg-blue-600",
-                                                                day_today: "bg-gray-100 text-gray-900 border border-gray-200",
-                                                                month: "space-y-4 w-full",
-                                                                table: "w-full border-collapse space-y-1",
-                                                                head_row: "flex w-full justify-between",
-                                                                row: "flex w-full mt-2 justify-between",
-                                                                cell: "text-center text-sm p-0 flex-1 relative [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20",
-                                                                day: "h-9 w-9 p-0 font-normal aria-selected:opacity-100 flex items-center justify-center mx-auto"
-                                                            }}
-                                                        />
-                                                        <FormMessage />
-                                                    </FormItem>
-                                                )} />
-                                            </div>
-                                            <div className="w-full">
-                                                <FormField control={form.control} name="appointment_time" render={({ field }) => (
-                                                    <FormItem>
-                                                        <FormLabel className="font-bold mb-2">Choisir une heure</FormLabel>
-                                                        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-3 gap-3">
-                                                            {TIME_SLOTS.map((time) => {
-                                                                const isBooked = bookedSlots.includes(time);
-                                                                return (
-                                                                    <div key={time}>
-                                                                        <input
-                                                                            type="radio"
-                                                                            id={`time-${time}`}
-                                                                            className="peer sr-only"
-                                                                            {...form.register("appointment_time")}
-                                                                            value={time}
-                                                                            disabled={isBooked}
-                                                                        />
-                                                                        <label
-                                                                            htmlFor={`time-${time}`}
-                                                                            className={cn(
-                                                                                "flex items-center justify-center px-4 py-3 border rounded-lg cursor-pointer transition-all font-medium text-sm",
-                                                                                isBooked
-                                                                                    ? "bg-gray-100 text-gray-400 border-gray-200 cursor-not-allowed decoration-slice"
-                                                                                    : "bg-white border-gray-200 hover:bg-gray-50 peer-checked:bg-blue-50 peer-checked:border-blue-600 peer-checked:text-blue-600"
-                                                                            )}
-                                                                        >
-                                                                            {time}
-                                                                            {isBooked && <span className="sr-only">(Indisponible)</span>}
-                                                                        </label>
-                                                                    </div>
-                                                                )
-                                                            })}
-                                                        </div>
-                                                        <FormMessage />
-                                                    </FormItem>
-                                                )} />
-                                            </div>
-                                        </div>
-                                    )}
-
-                                    {/* STEP 3: Confirmation */}
-                                    {step === 3 && (
-                                        <div className="space-y-6 animate-in fade-in slide-in-from-right-4 duration-300">
-                                            <div className="bg-gray-50 rounded-xl p-6 space-y-4 border border-gray-100">
-                                                <h3 className="font-bold text-lg text-gray-900 border-b border-gray-200 pb-2">Récapitulatif</h3>
-
-                                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                                    <div>
-                                                        <p className="text-sm text-gray-500">Nom complet</p>
-                                                        <p className="font-medium text-gray-900">{form.getValues("prenom")} {form.getValues("nom")}</p>
-                                                    </div>
-                                                    <div>
-                                                        <p className="text-sm text-gray-500">Contact</p>
-                                                        <p className="font-medium text-gray-900">{form.getValues("email")}</p>
-                                                        <p className="font-medium text-gray-900">{form.getValues("phone")}</p>
-                                                    </div>
-                                                    <div className="md:col-span-2">
-                                                        <p className="text-sm text-gray-500">Adresse</p>
-                                                        <p className="font-medium text-gray-900">
-                                                            {form.getValues("address")}, {form.getValues("ville")}, {form.getValues("province")} {form.getValues("code_postal")}
-                                                        </p>
-                                                    </div>
-                                                    <div className="md:col-span-2 bg-blue-50 p-4 rounded-lg border border-blue-100">
-                                                        <p className="text-sm text-blue-600 font-semibold mb-1">Rendez-vous demandé</p>
-                                                        <div className="flex items-center gap-2 text-blue-900 font-bold text-lg">
-                                                            <CalendarIcon className="w-5 h-5" />
-                                                            {form.getValues("appointment_date") && format(form.getValues("appointment_date"), "d MMMM yyyy", { locale: fr })}
-                                                            <span>à</span>
-                                                            <span>{form.getValues("appointment_time")}</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <p className="text-sm text-gray-500 text-center">
-                                                Veuillez vérifier les informations ci-dessus avant de confirmer votre demande.
-                                            </p>
-                                        </div>
-                                    )}
-
-                                    {/* Navigation Buttons */}
-                                    <div className="flex gap-4 pt-4 border-t border-gray-100">
-                                        {step > 1 && (
-                                            <Button
-                                                type="button"
-                                                variant="outline"
-                                                onClick={prevStep}
-                                                disabled={isNavigating || isSubmitting}
-                                                className="w-full md:w-auto h-12 rounded-full px-8 border-gray-300"
-                                            >
-                                                <ChevronLeft className="w-4 h-4 mr-2" /> Retour
-                                            </Button>
-                                        )}
-
-                                        {step < 3 ? (
-                                            <Button
-                                                type="button"
-                                                onClick={nextStep}
-                                                disabled={isNavigating}
-                                                className="w-full md:w-auto ml-auto h-12 rounded-full px-8 bg-blue-600 hover:bg-blue-700 text-white"
-                                            >
-                                                Continuer <ChevronRight className="w-4 h-4 ml-2" />
-                                            </Button>
-                                        ) : (
-                                            <Button
-                                                type="submit"
-                                                disabled={isSubmitting || isNavigating}
-                                                className="w-full md:w-auto ml-auto h-12 rounded-full px-8 bg-blue-600 hover:bg-blue-700 text-white"
-                                            >
-                                                {isSubmitting ? (
-                                                    <>
-                                                        <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                                                        Envoi en cours...
-                                                    </>
-                                                ) : (
-                                                    "Confirmer RDV"
-                                                )}
-                                            </Button>
-                                        )}
-                                    </div>
-                                </form>
-                            </Form>
-                        </div>
-                    </div>
+                    {formContent}
                 </div>
             </div>
         </section>

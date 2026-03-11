@@ -454,8 +454,6 @@ const FiltrationSousEvier = () => {
                     </div>
                 </section>
 
-                {/* 9. Consultation Form Section */}
-                <ConsultationFormSection id="consultation" />
             </main>
             <Footer />
         </div>

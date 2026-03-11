@@ -26,11 +26,11 @@ const ExpertTrustSection = () => {
                                 <div className="text-sm font-semibold text-slate-900 leading-tight">d'expertise cumulée à votre service</div>
                             </div>
                             {/* Decorative floating dots */}
-                        <div className="absolute top-10 left-10 grid grid-cols-3 gap-2 opacity-20">
-                            {[...Array(9)].map((_, i) => (
-                                <div key={i} className="w-2 h-2 rounded-full bg-blue-600" />
-                            ))}
-                        </div>
+                            <div className="absolute top-10 left-10 grid grid-cols-3 gap-2 opacity-20">
+                                {[...Array(9)].map((_, i) => (
+                                    <div key={i} className="w-2 h-2 rounded-full bg-blue-600" />
+                                ))}
+                            </div>
                         </div>
                     </div>
 
@@ -49,7 +49,7 @@ const ExpertTrustSection = () => {
                             </p>
                         </div>
 
-            
+
 
                         <div className="pt-6">
                             <Button

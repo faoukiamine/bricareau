@@ -508,8 +508,6 @@ const StationEauPotable = () => {
           </div>
         </section>
 
-        {/* 9. Consultation Form Section */}
-        <ConsultationFormSection id="consultation" />
       </main >
       <Footer />
     </div >

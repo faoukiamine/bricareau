@@ -748,8 +748,7 @@ const EauDePuits = () => {
             </div>
           </div>
         </section>
-        {/* 12. Consultation Form Section */}
-        <ConsultationFormSection id="consultation" />
+
       </main>
       <Footer />
     </div>

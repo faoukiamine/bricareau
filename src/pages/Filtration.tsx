@@ -642,8 +642,6 @@ const Filtration = () => {
                     </div>
                 </section>
 
-                {/* 12. Consultation Form Section (Adopted from Adoucissement.tsx) */}
-                <ConsultationFormSection id="consultation" />
             </main>
             <Footer />
         </div>
