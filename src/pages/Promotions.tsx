@@ -10,8 +10,8 @@ const Promotions = () => {
         {
             title: "Offre Spéciale Adoucisseur d'eau",
             description: "Économisez jusqu'à 500$ sur l'installation d'un adoucisseur d'eau résidentiel",
-            discount: "500$",
-            validUntil: "31 mars 2025",
+            discount: "20%",
+            validUntil: "31 mars 2026",
             category: "Résidentiel",
             image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=600&auto=format&fit=crop",
             features: [
@@ -21,10 +21,10 @@ const Promotions = () => {
             ]
         },
         {
-            title: "Système de Filtration Complet",
+            title: "Système de Filtration d'eau Complet",
             description: "Profitez de 20% de rabais sur nos systèmes de filtration pour toute la maison",
             discount: "20%",
-            validUntil: "15 avril 2025",
+            validUntil: "15 avril 2026",
             category: "Résidentiel",
             image: filtrationPromoImg,
             features: [
@@ -34,48 +34,9 @@ const Promotions = () => {
             ]
         },
         {
-            title: "Forfait Entreprise Premium",
-            description: "Solutions complètes pour entreprises avec installation et maintenance incluses",
-            discount: "15%",
-            validUntil: "30 juin 2025",
-            category: "Entreprise",
-            image: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=600&auto=format&fit=crop",
-            features: [
-                "Analyse d'eau professionnelle",
-                "Maintenance préventive annuelle",
-                "Support technique prioritaire"
-            ]
-        },
-        {
-            title: "Fontaine d'eau pour Bureau",
-            description: "Obtenez votre première fontaine d'eau avec 3 mois de service gratuit",
-            discount: "3 mois",
-            validUntil: "31 mai 2025",
-            category: "Commercial",
-            image: "https://images.unsplash.com/photo-1563227812-0ea4c22e6cc8?q=80&w=600&auto=format&fit=crop",
-            features: [
-                "Installation gratuite",
-                "Livraison d'eau incluse",
-                "Entretien régulier"
-            ]
-        },
-        {
-            title: "Analyse d'eau Gratuite",
-            description: "Test complet de la qualité de votre eau offert pour tout nouveau client",
-            discount: "Gratuit",
-            validUntil: "31 décembre 2025",
-            category: "Tous",
-            image: "https://images.unsplash.com/photo-1581093458791-9d42e3c5e2e9?q=80&w=600&auto=format&fit=crop",
-            features: [
-                "Test en laboratoire certifié",
-                "Rapport détaillé",
-                "Recommandations personnalisées"
-            ]
-        },
-        {
             title: "Programme de Référence",
-            description: "Recevez 200$ pour chaque client référé qui achète un système",
-            discount: "200$",
+            description: "Recevez 100$ pour chaque client référé qui achète un système d'adoucissement ou de filtration d'eau",
+            discount: "100%",
             validUntil: "Permanent",
             category: "Tous",
             image: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=600&auto=format&fit=crop",

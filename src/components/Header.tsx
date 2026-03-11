@@ -124,13 +124,13 @@ const Header = () => {
         {
           customIcon: WatersoftenericonImg,
           title: "Adoucisseurs d'eau",
-          description: "Traitez le problème de l’eau dure, un problème courant pour les propriétaires de puits et obtenez l’eau la plus douce que vous méritez.",
+          description: "Éliminez le calcaire, protégez vos électroménagers et profitez d'une peau et de cheveux plus sains avec une eau parfaitement douce.",
           href: "/adoucisseur-eau-residentiel",
         },
         {
           customIcon: saltfreeiconImg,
           title: "Conditionneurs d'eau sans sel",
-          description: "Réduisez l'accumulation sans gaspillage d'eau, parfait pour les zones à restriction de saumure.",
+          description: "La solution antitartre écologique : prévenez l'accumulation de calcaire sans sel, sans rejet d'eau et sans entretien.",
           href: "/conditionneurs-sans-sel",
         },
         {
