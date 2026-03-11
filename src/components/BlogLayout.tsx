@@ -1,9 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import { Facebook, Twitter, Linkedin, ChevronLeft, ChevronRight, Waves, Droplets, Phone } from 'lucide-react';
+import { Facebook, Twitter, Linkedin, ChevronLeft, ChevronRight, Waves, Droplets, Phone, Clock, ArrowRight } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { categories } from "@/data/blogCategories";
+import {
+    Breadcrumb,
+    BreadcrumbList,
+    BreadcrumbItem,
+    BreadcrumbLink,
+    BreadcrumbPage,
+    BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb";
+import { NavLink } from "react-router-dom";
 
 interface BlogLayoutProps {
     title: string;
@@ -12,9 +21,7 @@ interface BlogLayoutProps {
     tocItems?: { id: string; title: string }[];
 }
 
-// This will be replaced by dynamic logic inside BlogLayout
-
-const RelatedArticlesCarousel = ({ articles }: { articles: Array<{ href: string; image: string; title: string }> }) => {
+const RelatedArticlesCarousel = ({ articles }: { articles: Array<{ href: string; image: string; title: string; readTime?: string }> }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [itemsPerSlide, setItemsPerSlide] = useState(3);
 
@@ -60,10 +67,16 @@ const RelatedArticlesCarousel = ({ articles }: { articles: Array<{ href: string;
                                             <h4 className="text-xl font-medium mb-4 group-hover:text-blue-600 transition-colors tracking-tight text-slate-900 mt-2">
                                                 {article.title}
                                             </h4>
-                                            <div className="mt-auto inline-block">
-                                                <span className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-sm">
-                                                    Lire <ChevronRight className="h-4 w-4" />
-                                                </span>
+                                            <div className="mt-auto flex items-center justify-between">
+                                                <div className="w-9 h-9 rounded-full border border-blue-600 flex items-center justify-center text-blue-600 transition-all duration-300 group-hover:bg-blue-600 group-hover:text-white">
+                                                    <ArrowRight className="h-4 w-4" />
+                                                </div>
+                                                {article.readTime && (
+                                                    <span className="flex items-center gap-1.5 text-[11px] text-slate-400 font-medium">
+                                                        <Clock className="w-3 h-3" />
+                                                        {article.readTime}
+                                                    </span>
+                                                )}
                                             </div>
                                         </div>
                                     </a>
@@ -112,8 +125,11 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({ title, headerImage, children, t
         cat.products.some(p => p.title === title)
     );
 
+    // Find the current article object to get its details
+    const currentArticle = currentCategory?.products.find(p => p.title === title);
+
     // Filter articles from the same category, excluding the current one
-    let recommendedArticles = [];
+    let recommendedArticles: any[] = [];
     if (currentCategory) {
         recommendedArticles = currentCategory.products
             .filter(p => p.title !== title)
@@ -147,7 +163,7 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({ title, headerImage, children, t
                         />
                     </div>
 
-                    {/* SVG overlay with exact NSF-style curved shapes + gradients */}
+                    {/* SVG overlay */}
                     <div className="absolute inset-0 z-[2] hidden lg:block">
                         <svg
                             className="w-full h-full"
@@ -156,51 +172,41 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({ title, headerImage, children, t
                             xmlns="http://www.w3.org/2000/svg"
                         >
                             <defs>
-                                {/* Gradient for main panel: dark to medium green */}
                                 <linearGradient id="gradPanel" x1="0" y1="0" x2="1" y2="1">
                                     <stop offset="0%" stopColor="#0c2340" />
                                     <stop offset="50%" stopColor="#1a3a5c" />
                                     <stop offset="100%" stopColor="#2563a0" />
                                 </linearGradient>
-                                {/* Gradient for petal: medium to light blue */}
                                 <linearGradient id="gradPetal" x1="0" y1="0" x2="1" y2="1">
                                     <stop offset="0%" stopColor="#1a3a5c" />
                                     <stop offset="100%" stopColor="#3b82c4" />
                                 </linearGradient>
-                                {/* Gradient for top accent */}
                                 <linearGradient id="gradAccent" x1="0" y1="0" x2="1" y2="1">
                                     <stop offset="0%" stopColor="#163050" />
                                     <stop offset="100%" stopColor="#0c2340" />
                                 </linearGradient>
-                                {/* Gradient for corner accents */}
                                 <linearGradient id="gradCorner" x1="0" y1="0" x2="0" y2="1">
                                     <stop offset="0%" stopColor="#1a3a5c" />
                                     <stop offset="100%" stopColor="#3b82c4" stopOpacity="0.4" />
                                 </linearGradient>
                             </defs>
-
-                            {/* Main green panel with concave right edge */}
                             <path
                                 d="M269.7 85.95C260.8 58.45 254.75 29.7 251.75 0H0v290.5h287.25c-23.65-32.95-37.6-73.35-37.6-117 0-31.4 7.2-61.1 20.05-87.55Z"
                                 fill="url(#gradPanel)"
                             />
-                            {/* Overlapping petal/leaf shape */}
                             <path
                                 d="M269.7 85.95c-12.85 26.45-20.05 56.15-20.05 87.55 0 43.65 13.95 84.05 37.6 117h128.2C347.85 239.45 296.3 168.3 269.7 85.95Z"
                                 fill="url(#gradPetal)"
                             />
-                            {/* Top curved accent */}
                             <path
                                 d="M349.35 0h-97.6c3 29.7 9.05 58.45 17.95 85.95C287.15 50 315 20.05 349.35 0Z"
                                 fill="url(#gradAccent)"
                             />
-                            {/* Corner accent top-right */}
                             <path
                                 d="M640 107.15V0h-88.45c40.9 23.85 72.55 61.8 88.45 107.15Z"
                                 fill="url(#gradCorner)"
                                 opacity="0.4"
                             />
-                            {/* Corner accent bottom-right */}
                             <path
                                 d="M640 290.5v-50.65c-6.4 18.2-15.3 35.25-26.35 50.65H640Z"
                                 fill="url(#gradCorner)"
@@ -209,7 +215,7 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({ title, headerImage, children, t
                         </svg>
                     </div>
 
-                    {/* Mobile fallback: full green background */}
+                    {/* Mobile fallback */}
                     <div className="absolute inset-0 bg-[#1a3a5c] lg:hidden" />
                     <div className="lg:hidden absolute bottom-0 left-0 right-0 h-[200px]">
                         <img
@@ -222,6 +228,41 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({ title, headerImage, children, t
                     <div className="absolute inset-0 z-10 flex items-center">
                         <div className="container mx-auto px-4 md:px-6">
                             <div className="max-w-xl">
+                                {/* Breadcrumbs */}
+                                <Breadcrumb className="mb-6">
+                                    <BreadcrumbList className="text-white/60">
+                                        <BreadcrumbItem>
+                                            <BreadcrumbLink asChild className="hover:text-white transition-colors text-white/70">
+                                                <NavLink to="/">Accueil</NavLink>
+                                            </BreadcrumbLink>
+                                        </BreadcrumbItem>
+                                        <BreadcrumbSeparator className="text-white/30" />
+                                        <BreadcrumbItem>
+                                            <BreadcrumbLink asChild className="hover:text-white transition-colors text-white/70">
+                                                <NavLink to="/blog">Blog</NavLink>
+                                            </BreadcrumbLink>
+                                        </BreadcrumbItem>
+                                        {currentCategory && (
+                                            <>
+                                                <BreadcrumbSeparator className="text-white/30" />
+                                                <BreadcrumbItem>
+                                                    <BreadcrumbLink asChild className="hover:text-white transition-colors text-white/70">
+                                                        <NavLink to={`/blog/categorie/${currentCategory.id}`}>
+                                                            {currentCategory.title}
+                                                        </NavLink>
+                                                    </BreadcrumbLink>
+                                                </BreadcrumbItem>
+                                            </>
+                                        )}
+                                        <BreadcrumbSeparator className="text-white/30" />
+                                        <BreadcrumbItem>
+                                            <BreadcrumbPage className="text-white font-medium line-clamp-1 max-w-[200px] text-white/90">
+                                                {title}
+                                            </BreadcrumbPage>
+                                        </BreadcrumbItem>
+                                    </BreadcrumbList>
+                                </Breadcrumb>
+
                                 <h1
                                     className="text-3xl md:text-4xl lg:text-[2.8rem] font-bold italic text-white leading-tight mb-6 tracking-tight"
                                     style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif' }}
@@ -232,6 +273,15 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({ title, headerImage, children, t
                                     <span>Mars 20 — 2026</span>
                                     <span className="w-px h-3 bg-white/25"></span>
                                     <span>Par Bricareau</span>
+                                    {currentArticle?.readTime && (
+                                        <>
+                                            <span className="w-px h-3 bg-white/25"></span>
+                                            <span className="flex items-center gap-2">
+                                                <Clock className="w-3.5 h-3.5" />
+                                                {currentArticle.readTime}
+                                            </span>
+                                        </>
+                                    )}
                                 </div>
                             </div>
                         </div>
@@ -241,8 +291,6 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({ title, headerImage, children, t
                 {/* Main Content Card */}
                 <main className="container mx-auto px-4 md:px-6 relative z-10">
                     <article className="bg-white px-8 py-16 md:px-12 lg:px-16 md:py-24 shadow-sm">
-
-                        {/* Article Grid Container */}
                         <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
                             {/* Article Body */}
                             <div className="w-full lg:w-3/4 text-[15px] leading-relaxed text-gray-500 font-light space-y-8 text-justify" style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif' }}>
@@ -311,10 +359,10 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({ title, headerImage, children, t
                             </div>
                         </div>
 
-                        {/* Footer of article card */}
+                        {/* Social Share */}
                         <div className="mt-20 pt-8 border-t border-gray-100 flex flex-col md:flex-row items-center justify-end gap-6 text-gray-400">
                             <div className="flex items-center gap-4">
-                                <span className="text-[10px] font-bold tracking-[0.15em] uppercase">Share Post</span>
+                                <span className="text-[10px] font-bold tracking-[0.15em] uppercase">Partager l'article</span>
                                 <a href="#" className="w-8 h-8 rounded-full bg-[#1877F2] text-white flex items-center justify-center hover:bg-[#1877F2]/90 transition-colors">
                                     <Facebook className="w-3.5 h-3.5 fill-white" />
                                 </a>
@@ -328,10 +376,8 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({ title, headerImage, children, t
                         </div>
                     </article>
 
-                    {/* Related Articles Carousel beneath card */}
                     <RelatedArticlesCarousel articles={recommendedArticles} />
                 </main>
-
             </div>
             <Footer />
         </div>

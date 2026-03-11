@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { Menu, X, Phone, MapPin, Droplets, Filter, GlassWater, Waves, Search, ChevronDown, Mail, Tag, ArrowRight, CupSoda, Caravan, Sprout, Leaf, House, Snowflake } from "lucide-react";
+import { Menu, X, Phone, MapPin, Droplets, Filter, GlassWater, Waves, Search, ChevronDown, Mail, Tag, Microscope, ArrowRight, CupSoda, Caravan, Sprout, Leaf, House, Snowflake } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
@@ -8,7 +8,25 @@ import promoImage from "@/assets/10341859.jpg";
 import promoImage2 from "@/assets/close-up-handsom-man-taking-bath.jpg";
 import promoImage3 from "@/assets/woman-and-kid-drink-glass-water.jpg";
 import promoImage4 from "@/assets/undersink_filtration_header.jpg";
-
+import ultravioletImg from "@/assets/uv system light_12838859.png";
+import watertestImg from "@/assets/Water-test_15395190.png";
+import wholehousefiltericonImg from "@/assets/Whole house Water Filter.png";
+import pointofusefiltericonImg from "@/assets/reverse osmosis system_11062146.png";
+import undersinkfiltericonImg from "@/assets/water-filter_8782563.png";
+import replacementfiltericonImg from "@/assets/Filter cartridges_4257091.png";
+import saltfreeiconImg from "@/assets/water-tap_4497397.png";
+import portablefiltericonImg from "@/assets/mobile-home_3764879.png";
+import WatersoftenericonImg from "@/assets/water-softener.png";
+import icemakericonImg from "@/assets/ice-maker_18310650.png";
+import waterdispensericonImg from "@/assets/water-dispenser_7714494.png";
+import drinkingwaterfountainiconImg from "@/assets/drinking_14127403.png";
+import faqiconImg from "@/assets/faq_4481080.png";
+import videoiconImg from "@/assets/video-camera_8062951.png";
+import blogiconImg from "@/assets/blog_10045827.png";
+import documenticonImg from "@/assets/documentation_17862483.png";
+import contacticonImg from "@/assets/telephone_3095610.png";
+import guaranteeiconImg from "@/assets/guarantee-certificate_3734879.png";
+import serviceiconImg from "@/assets/services_5062832.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -104,19 +122,19 @@ const Header = () => {
       hasMegamenu: true,
       megamenuCards: [
         {
-          icon: Droplets,
+          customIcon: WatersoftenericonImg,
           title: "Adoucisseurs d'eau",
           description: "Traitez le problème de l’eau dure, un problème courant pour les propriétaires de puits et obtenez l’eau la plus douce que vous méritez.",
           href: "/adoucisseur-eau-residentiel",
         },
         {
-          icon: Leaf,
+          customIcon: saltfreeiconImg,
           title: "Conditionneurs d'eau sans sel",
           description: "Réduisez l'accumulation sans gaspillage d'eau, parfait pour les zones à restriction de saumure.",
           href: "/conditionneurs-sans-sel",
         },
         {
-          icon: Caravan,
+          customIcon: portablefiltericonImg,
           title: "Adoucisseurs d'eau portables",
           description: "La solution flexible pour une eau douce sans installation permanente. Idéal pour les VR et résidences secondaires.",
           href: "/adoucisseurs-portables"
@@ -136,25 +154,25 @@ const Header = () => {
       hasMegamenu: true,
       megamenuCards: [
         {
-          icon: GlassWater,
+          customIcon: wholehousefiltericonImg,
           title: "Filtres d'eau pour toute la maison",
           description: "Protection complète de votre maison avec une filtration centralisée pour toute l'eau.",
           href: "/Filtres-deau-pour-toute-la-maison"
         },
         {
-          icon: Filter,
+          customIcon: pointofusefiltericonImg,
           title: "Stations d'eau potable",
           description: "Profitez d'une eau pure et saine directement de votre robinet avec nos systèmes de filtration avancés.",
           href: "/systeme-de-filtration-deau-potable"
         },
         {
-          icon: Droplets,
+          customIcon: undersinkfiltericonImg,
           title: "Systèmes de filtration d'eau sous-évier",
           description: "Solutions compactes et efficaces pour une filtration optimale directement sous votre évier.",
           href: "/Systemes-de-filtration-deau-sous-evier"
         },
         {
-          icon: Waves,
+          customIcon: replacementfiltericonImg,
           title: "Cartouches filtrantes de remplacement",
           description: "Maintenez la performance optimale de vos systèmes avec nos cartouches de qualité.",
           href: "/filtres-de-remplacement"
@@ -172,25 +190,25 @@ const Header = () => {
       hasMegamenu: true,
       megamenuCards: [
         {
-          icon: Droplets,
+          customIcon: watertestImg,
           title: "Analyses & Tests d'eau",
           description: "Tests complets pour identifier les contaminants et problèmes de qualité de votre eau de puits.",
           href: "/tests-eau"
         },
         {
-          icon: Filter,
+          customIcon: wholehousefiltericonImg,
           title: "Systèmes de filtration d'eau spécialisés",
           description: "Nos systèmes de filtration d’eau spécialisés pour toute la maison est la solution abordable et durable pour obtenir une eau de meilleure qualité à chaque robinet de votre maison.",
           href: "/Filtres-deau"
         },
         {
-          icon: Filter,
+          customIcon: WatersoftenericonImg,
           title: "Adoucisseurs d'eau de puits",
           description: "Dites adieu aux problèmes de calcaire ! Nos adoucisseurs d’eau traitent durablement l’eau contre ses méfaits pour vous faire bénéficier d’une eau douce toute l’année.",
           href: "/adoucisseurs-eau-de-puits"
         },
         {
-          icon: GlassWater,
+          customIcon: ultravioletImg,
           title: "Systèmes de désinfection UV",
           description: "Les systèmes de désinfection de l’eau à rayons ultraviolet stérilisent l’approvisionnement en eau de votre maison contre les micro-organismes nuisibles.",
           href: "/Systemes-de-desinfection-UV"
@@ -208,19 +226,19 @@ const Header = () => {
       hasMegamenu: true,
       megamenuCards: [
         {
-          icon: Waves,
+          customIcon: drinkingwaterfountainiconImg,
           title: "Distributeurs d'eau de comptoir",
           description: "Solutions tout-en-un offrant eau froide, chaude et glace dans un seul appareil.",
           href: "/distributeurs-eau-comptoir"
         },
         {
-          icon: GlassWater,
+          customIcon: waterdispensericonImg,
           title: "Refroidisseurs d'eau sans bouteille",
           description: "Eau fraîche et filtrée à la demande pour votre bureau ou votre maison.",
           href: "/refroidisseurs"
         },
         {
-          icon: Snowflake,
+          customIcon: icemakericonImg,
           title: "Machines à glaçons",
           description: "Glace propre et abondante pour toutes vos occasions et besoins quotidiens.",
           href: "/machines-a-glace"
@@ -239,25 +257,25 @@ const Header = () => {
       hasMegamenu: true,
       megamenuCards: [
         {
-          icon: Filter,
+          customIcon: faqiconImg,
           title: "FAQ",
           description: "Trouvez rapidement des réponses aux questions les plus fréquemment posées sur nos produits.",
           href: "/faq"
         },
         {
-          icon: Droplets,
+          customIcon: blogiconImg,
           title: "Blog",
           description: "Conseils, actualités et informations sur le traitement de l'eau et nos solutions.",
           href: "/blog"
         },
         {
-          icon: GlassWater,
-          title: "Guides",
+          customIcon: documenticonImg,
+          title: "Manuels & Brochures",
           description: "Guides détaillés pour vous aider à choisir et entretenir vos systèmes de traitement d'eau.",
           href: "/guides"
         },
         {
-          icon: Waves,
+          customIcon: videoiconImg,
           title: "Vidéos",
           description: "Tutoriels vidéo et démonstrations de nos produits et services.",
           href: "/videos"
@@ -275,25 +293,25 @@ const Header = () => {
       hasMegamenu: true,
       megamenuCards: [
         {
-          icon: Phone,
+          customIcon: contacticonImg,
           title: "Contact",
           description: "Contactez notre équipe d'experts pour toute question ou demande d'information.",
           href: "/contact"
         },
         {
-          icon: Filter,
+          customIcon: serviceiconImg,
           title: "Service",
           description: "Planifiez un entretien ou une réparation avec nos techniciens certifiés.",
           href: "/service"
         },
         {
-          icon: Droplets,
+          customIcon: guaranteeiconImg,
           title: "Garantie",
           description: "Informations sur nos garanties et protection de vos investissements.",
           href: "/garantie"
         },
         {
-          icon: GlassWater,
+          customIcon: replacementfiltericonImg,
           title: "Pièces",
           description: "Commandez des pièces de rechange originales pour vos équipements.",
           href: "/pieces"
@@ -696,6 +714,7 @@ const Header = () => {
                   <div className="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-5">
                     {menuItem.megamenuCards?.map((card, index) => {
                       const Icon = card.icon;
+                      const CustomIcon = card.customIcon;
                       return (
                         <NavLink
                           key={index}
@@ -704,10 +723,23 @@ const Header = () => {
                           onClick={() => setActiveMegamenu(null)}
                         >
                           <div className="flex-shrink-0 mt-0.5">
-                            <Icon className={cn(
-                              "h-10 w-10 stroke-[1.5] transition-colors",
-                              isHeaderTransparent ? "text-blue-200 group-hover:text-white" : "text-[#60A5FA] group-hover:text-[#0052ff]"
-                            )} />
+                            {CustomIcon ? (
+                              <img
+                                src={CustomIcon}
+                                alt={card.title}
+                                className="h-10 w-10 object-contain transition-all"
+                                style={{
+                                  filter: isHeaderTransparent
+                                    ? 'brightness(0) invert(1)'
+                                    : 'invert(21%) sepia(100%) saturate(4321%) hue-rotate(225deg) brightness(98%) contrast(107%)'
+                                }}
+                              />
+                            ) : (
+                              Icon && <Icon className={cn(
+                                "h-10 w-10 stroke-[1.5] transition-colors",
+                                isHeaderTransparent ? "text-blue-200 group-hover:text-white" : "text-[#0052ff] group-hover:text-blue-700"
+                              )} />
+                            )}
                           </div>
                           <div className="flex-1">
                             <h4 className={cn(

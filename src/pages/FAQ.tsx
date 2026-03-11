@@ -76,7 +76,7 @@ const FAQ = () => {
             <Header />
 
             <main>
-                {/* 1. Hero / Header Area (Light Background as per McDonald's ref) */}
+                {/* 1. Hero / Header Area */}
                 <section className="pt-[180px] pb-12 bg-white">
                     <div className="container mx-auto px-6 max-w-5xl">
                         <h1 className="text-[36px] md:text-[52px] leading-tight font-bold text-slate-900 mb-6 tracking-tight">

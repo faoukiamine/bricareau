@@ -1,113 +1,178 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, ChevronRight, Droplets, Waves } from "lucide-react";
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
+import { ArrowRight, ChevronRight, Droplets, Waves, Search, SlidersHorizontal, Check, Clock } from "lucide-react";
 import { NavLink } from "react-router-dom";
 import { categories } from "@/data/blogCategories";
+import React, { useState } from "react";
 
 const Blog = () => {
+    const [searchQuery, setSearchQuery] = useState("");
+    const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
+
+    const handleCategoryToggle = (id: string) => {
+        setSelectedCategories(prev => {
+            if (prev.includes(id)) {
+                return prev.filter(c => c !== id);
+            } else {
+                return [...prev, id];
+            }
+        });
+    };
+
+    const filteredCategories = categories.map(cat => {
+        // If categories are selected, check if this one is included
+        if (selectedCategories.length > 0 && !selectedCategories.includes(cat.id)) {
+            return { ...cat, products: [] };
+        }
+
+        const lowerQuery = searchQuery.toLowerCase();
+        const products = cat.products.filter(product =>
+            product.title.toLowerCase().includes(lowerQuery) ||
+            product.desc.toLowerCase().includes(lowerQuery)
+        );
+
+        return { ...cat, products };
+    }).filter(cat => cat.products.length > 0);
+
+    const totalResults = filteredCategories.reduce((sum, cat) => sum + cat.products.length, 0);
+
     return (
-        <div className="min-h-screen bg-slate-50">
+        <div className="min-h-screen bg-white">
             <Header />
 
             <main>
-                {/* Hero Section - Following the design in the image */}
-                <section className="relative bg-[#001529] pt-[180px] pb-24 text-white overflow-hidden">
-                    <div className="absolute top-0 right-0 w-1/2 h-full opacity-20 hidden lg:block bg-black overflow-hidden">
-                        <iframe
-                            src="https://player.vimeo.com/video/1155585885?autoplay=1&loop=1&muted=1&background=1"
-                            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[177.78%] h-[177.78%] min-w-full min-h-full pointer-events-none"
-                            frameBorder="0"
-                            allow="autoplay; fullscreen; picture-in-picture"
-                            allowFullScreen
-                            title="Background video"
-                        ></iframe>
-                    </div>
-                    <div className="container mx-auto px-6 relative z-10">
-                        <div className="max-w-3xl">
-                            <h1 className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text-justify max-w-xl">
-                                <span className="font-bold text-white">Solutions spécialisées en filtration d'eau</span>
-                            </h1>
-                            <p className="text-[20px] leading-snug opacity-90 mb-10 text-blue-100/80 max-w-xl text-justify font-light">
-                                Découvrez notre gamme complète de systèmes de traitement d'eau conçus pour répondre à tous vos besoins, de la maison au commerce.
-                            </p>
-                            <div className="flex flex-wrap gap-4">
-                                <NavLink to="/contact" className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-3 rounded-full transition-colors">
-                                    Démarrer une analyse gratuite
-                                </NavLink>
-                            </div>
-                        </div>
+                {/* 1. Hero / Header Area */}
+                <section className="pt-[180px] pb-12 bg-white">
+                    <div className="container mx-auto px-6 max-w-5xl">
+                        <h1 className="text-[36px] md:text-[52px] leading-tight font-bold text-slate-900 mb-6 tracking-tight">
+                            Articles & Ressources
+                        </h1>
                     </div>
                 </section>
 
-                {/* Quick Navigation / Categories Icons */}
-                <div className="bg-white border-b sticky top-[64px] z-30 hidden md:block shadow-sm">
-                    <div className="container mx-auto px-6 overflow-x-auto">
-                        <div className="flex justify-center gap-12 py-6">
-                            {categories.map((cat) => (
-                                <a
-                                    key={cat.id}
-                                    href={`#${cat.id}`}
-                                    className="flex items-center gap-2 text-sm font-bold text-gray-500 hover:text-blue-600 transition-colors whitespace-nowrap"
-                                >
-                                    <span className="w-2 h-2 rounded-full bg-blue-600"></span>
-                                    {cat.title}
-                                </a>
-                            ))}
+                {/* 2. Filters Section */}
+                <section className="py-24 bg-white min-h-[50vh]">
+                    <div className="container mx-auto px-6 max-w-5xl">
+
+
+                        {/* Results Count */}
+                        <p className="font-bold text-lg md:text-xl text-slate-900 mb-8 border-b border-slate-900 pb-4">
+                            {totalResults} articles trouvés
+                        </p>
+
+                        {/* Filters Accordion */}
+                        <div className="mb-12">
+                            <Accordion type="single" collapsible className="w-full">
+                                <AccordionItem value="filters" className="border-0">
+                                    <AccordionTrigger className="text-sm font-medium hover:no-underline py-2 flex flex-row-reverse justify-end gap-3 text-slate-600 w-auto">
+                                        <span className="flex items-center gap-2"><SlidersHorizontal className="w-4 h-4" /> Filtres</span>
+                                    </AccordionTrigger>
+                                    <AccordionContent className="pt-6 pb-6 border-b border-slate-100">
+                                        <div className="flex flex-wrap gap-x-8 gap-y-4">
+                                            {categories.map(cat => (
+                                                <label key={cat.id} className="flex items-center gap-3 cursor-pointer group">
+                                                    <div className={`w-5 h-5 border rounded flex items-center justify-center transition-colors ${selectedCategories.includes(cat.id) ? 'bg-blue-600 border-blue-600' : 'border-slate-300 group-hover:border-blue-600 bg-white'}`}>
+                                                        {selectedCategories.includes(cat.id) && <Check className="w-3 h-3 text-white" strokeWidth={3} />}
+                                                    </div>
+                                                    <span className="text-[15px] text-slate-700 font-medium">{cat.title}</span>
+                                                    <input
+                                                        type="checkbox"
+                                                        className="hidden"
+                                                        checked={selectedCategories.includes(cat.id)}
+                                                        onChange={() => handleCategoryToggle(cat.id)}
+                                                    />
+                                                </label>
+                                            ))}
+                                        </div>
+                                        {selectedCategories.length > 0 && (
+                                            <div className="mt-6">
+                                                <button
+                                                    onClick={() => setSelectedCategories([])}
+                                                    className="text-blue-600 text-sm font-medium hover:underline underline-offset-4"
+                                                >
+                                                    Réinitialiser
+                                                </button>
+                                            </div>
+                                        )}
+                                    </AccordionContent>
+                                </AccordionItem>
+                            </Accordion>
+                        </div>
+
+                        {/* Results List */}
+                        <div className="flex flex-col gap-16">
+                            {filteredCategories.length === 0 ? (
+                                <div className="text-center py-16 text-slate-500">
+                                    <Search className="w-12 h-12 mx-auto mb-4 opacity-20" />
+                                    <p className="text-lg">Aucun article ne correspond à votre recherche.</p>
+                                </div>
+                            ) : (
+                                filteredCategories.map((cat, idx) => (
+                                    <div key={cat.id} id={cat.id}>
+                                        <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-6 border-b border-gray-100 pb-6">
+                                            <div>
+                                                <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">{cat.title}</h2>
+                                                <div className="h-1.5 w-24 bg-blue-600 rounded-full"></div>
+                                            </div>
+                                            {cat.products.length > 3 && (
+                                                <Button variant="link" className="text-blue-600 font-bold p-0 group" asChild>
+                                                    <NavLink to={`/blog/categorie/${cat.id}`} className="flex items-center">
+                                                        Voir tous les articles <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                                                    </NavLink>
+                                                </Button>
+                                            )}
+                                        </div>
+
+                                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                                            {cat.products.slice(0, 3).map((product, pIdx) => (
+                                                <NavLink
+                                                    key={pIdx}
+                                                    to={product.href}
+                                                    className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-slate-100 flex flex-col h-full"
+                                                >
+                                                    <div className="relative h-64 overflow-hidden">
+                                                        <img
+                                                            src={product.image}
+                                                            alt={`${product.title} - Solution Bricareau`}
+                                                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                                        />
+                                                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+
+                                                        {/* Reading Time Badge */}
+                                                        {product.readTime && (
+                                                            <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full flex items-center gap-2 shadow-sm z-10 transition-transform group-hover:scale-105">
+                                                                <Clock className="w-3.5 h-3.5 text-blue-600" />
+                                                                <span className="text-[12px] font-bold text-slate-900">{product.readTime}</span>
+                                                            </div>
+                                                        )}
+                                                    </div>
+                                                    <div className="p-8 flex flex-col flex-1">
+                                                        <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
+                                                            {product.title}
+                                                        </h3>
+                                                        <p
+                                                            className="text-slate-600 mb-6 flex-1 text-sm font-light leading-[19px]"
+                                                            style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                                        >
+                                                            {product.desc}
+                                                        </p>
+                                                        <div className="mt-auto flex justify-end">
+                                                            <div className="w-10 h-10 rounded-full border border-blue-600 flex items-center justify-center text-blue-600 transition-all duration-300 group-hover:bg-blue-600 group-hover:text-white">
+                                                                <ArrowRight className="h-5 w-5" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </NavLink>
+                                            ))}
+                                        </div>
+                                    </div>
+                                ))
+                            )}
                         </div>
                     </div>
-                </div>
-
-                {/* Category Sections */}
-                {categories.map((cat, idx) => (
-                    <section key={cat.id} id={cat.id} className={`py-24 ${idx % 2 === 0 ? 'bg-white' : 'bg-slate-50'}`}>
-                        <div className="container mx-auto px-6">
-                            <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
-                                <div>
-                                    <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">{cat.title}</h2>
-                                    <div className="h-1.5 w-24 bg-blue-600 rounded-full"></div>
-                                </div>
-                                {cat.products.length > 3 && (
-                                    <Button variant="link" className="text-blue-600 font-bold p-0 group" asChild>
-                                        <NavLink to={`/blog/categorie/${cat.id}`} className="flex items-center">
-                                            Voir plus d'articles <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-                                        </NavLink>
-                                    </Button>
-                                )}
-                            </div>
-
-                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                                {cat.products.slice(0, 3).map((product, pIdx) => (
-                                    <NavLink
-                                        key={pIdx}
-                                        to={product.href}
-                                        className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-slate-100 flex flex-col h-full"
-                                    >
-                                        <div className="relative h-64 overflow-hidden">
-                                            <img
-                                                src={product.image}
-                                                alt={`${product.title} - Solution Bricareau`}
-                                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                                            />
-                                            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-                                        </div>
-                                        <div className="p-8 flex flex-col flex-1">
-                                            <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
-                                                {product.title}
-                                            </h3>
-                                            <p className="text-slate-600 mb-6 flex-1 leading-snug">
-                                                {product.desc}
-                                            </p>
-                                            <div className="flex items-center text-blue-600 font-bold text-sm uppercase tracking-wider group/btn">
-                                                Explorer <ChevronRight className="ml-1 h-4 w-4 transition-transform group-hover/btn:translate-x-1" />
-                                            </div>
-                                        </div>
-                                    </NavLink>
-                                ))}
-                            </div>
-                        </div>
-                    </section>
-                ))}
+                </section>
 
                 {/* Final Call to Action */}
                 <section className="py-24 bg-blue-600 text-white relative overflow-hidden">
@@ -135,8 +200,9 @@ const Blog = () => {
             </main>
 
             <Footer />
-        </div>
+        </div >
     );
 };
 
 export default Blog;
+
