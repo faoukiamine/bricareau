@@ -62,10 +62,14 @@ const Garantie = () => {
                                 <div className="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center mx-auto mb-4">
                                     <Shield className="h-8 w-8 text-[#0052ff]" />
                                 </div>
-                                <h1 className="text-[32px] md:text-[52px] leading-tight font-bold text-slate-900 tracking-tighter">
+                                <h1
+                                    className="text-[32px] md:text-[52px] leading-tight text-slate-900 tracking-tighter"
+                                    style={{
+                                        fontWeight: 350 }}
+                                >
                                     Garanties et <span className="text-blue-600">Protection</span>
                                 </h1>
-                                <p className="text-[20px] leading-snug text-slate-600 font-light max-w-xl mx-auto">
+                                <p className="text-slate-600 font-light max-w-xl mx-auto">
                                     Votre investissement est protégé par nos garanties complètes pour une tranquillité d'esprit totale.
                                 </p>
                             </div>
@@ -86,7 +90,7 @@ const Garantie = () => {
                                         <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-100 mb-3">
                                             <CheckCircle className="h-8 w-8 text-green-600" />
                                         </div>
-                                        <h3 className="text-xl font-bold text-foreground mb-1">
+                                        <h3 className="text-foreground mb-1">
                                             {warranty.title}
                                         </h3>
                                         <p className="text-2xl font-bold text-[#0052ff]">
@@ -119,7 +123,7 @@ const Garantie = () => {
                         <div className="max-w-4xl mx-auto">
                             <div className="text-center mb-8">
                                 <FileText className="h-12 w-12 text-[#0052ff] mx-auto mb-4" />
-                                <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-center">
+                                <h2 className="text-slate-900 mb-8 md:leading-[48px] text-center">
                                     Enregistrement de garantie
                                 </h2>
                                 <p className="text-muted-foreground">
@@ -130,7 +134,7 @@ const Garantie = () => {
                             <div className="bg-white rounded-lg p-6 md:p-8 border border-border">
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                                     <div>
-                                        <h3 className="font-semibold mb-3">Informations requises:</h3>
+                                        <h3 className="mb-3">Informations requises:</h3>
                                         <ul className="space-y-2 text-sm text-muted-foreground">
                                             <li className="flex items-center gap-2">
                                                 <CheckCircle className="h-4 w-4 text-green-600" />
@@ -151,7 +155,7 @@ const Garantie = () => {
                                         </ul>
                                     </div>
                                     <div>
-                                        <h3 className="font-semibold mb-3">Avantages de l'enregistrement:</h3>
+                                        <h3 className="mb-3">Avantages de l'enregistrement:</h3>
                                         <ul className="space-y-2 text-sm text-muted-foreground">
                                             <li className="flex items-center gap-2">
                                                 <Clock className="h-4 w-4 text-[#0052ff]" />
@@ -187,7 +191,7 @@ const Garantie = () => {
                 <section className="py-12 md:py-16">
                     <div className="container mx-auto px-4">
                         <div className="max-w-3xl mx-auto">
-                            <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-center">
+                            <h2 className="text-slate-900 mb-8 md:leading-[48px] text-center">
                                 Questions fréquentes sur la garantie
                             </h2>
                             <div className="space-y-4">
@@ -224,7 +228,7 @@ const Garantie = () => {
                 <section className="py-12 md:py-16 bg-slate-50">
                     <div className="container mx-auto px-4">
                         <div className="max-w-3xl mx-auto text-center space-y-6">
-                            <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-center">
+                            <h2 className="text-slate-900 mb-8 md:leading-[48px] text-center">
                                 Questions sur votre garantie ?
                             </h2>
                             <p className="text-base md:text-lg text-muted-foreground">

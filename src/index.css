@@ -116,22 +116,48 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
   }
 
   p {
-    @apply font-light text-[20px] leading-[28px];
+    @apply font-light text-[16px] leading-[24px];
+  }
+
+  h2 {
+    @apply text-[32px] md:text-[60px] leading-[1.1] tracking-tighter font-normal;
+  }
+
+  h3,
+  h4 {
+    @apply text-[20px] leading-snug font-bold;
   }
 }
 
 @layer utilities {
   @keyframes heartbeat {
-    0%, 100% { transform: scale(1); }
-    15% { transform: scale(1.1); }
-    30% { transform: scale(1); }
-    45% { transform: scale(1.1); }
-    60% { transform: scale(1); }
+
+    0%,
+    100% {
+      transform: scale(1);
+    }
+
+    15% {
+      transform: scale(1.1);
+    }
+
+    30% {
+      transform: scale(1);
+    }
+
+    45% {
+      transform: scale(1.1);
+    }
+
+    60% {
+      transform: scale(1);
+    }
   }
+
   .animate-heartbeat {
     animation: heartbeat 2s ease-in-out infinite;
   }

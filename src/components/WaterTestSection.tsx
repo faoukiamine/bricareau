@@ -23,11 +23,11 @@ const WaterTestSection = () => {
                         TESTS DE LA QUALITÉ DE L'EAU
                     </span>
 
-                    <h2 className="text-3xl md:text-4xl lg:text-4xl font-bold text-[#009EE2] leading-tight mb-6 uppercase max-w-lg">
+                    <h2 className="mb-6 uppercase max-w-lg">
                         VOUS ÊTES PRÉOCCUPÉS PAR LA QUALITÉ DE VOTRE EAU ?
                     </h2>
 
-                    <p className="text-sm md:text-base text-gray-800 leading-snug mb-8 max-w-md font-medium">
+                    <p className="text-sm md:text-base text-gray-800 mb-8 max-w-md font-medium">
                         Procurez-vous notre kit de test d'eau et renvoyez-le-nous ! Nous réaliserons
                         des analyses d'eau approfondies et vous recommanderons des solutions selon
                         la composition de votre eau.

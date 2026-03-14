@@ -66,12 +66,14 @@ const Promotions = () => {
                                 <span className="text-xs font-bold text-blue-600 uppercase tracking-widest">Offres Spéciales</span>
                             </div>
                             <h1
-                                className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-slate-900 text-center lg:text-justify max-w-xl mx-auto"
-                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] mb-8 tracking-tighter text-slate-900 text-center lg:text-justify max-w-xl mx-auto"
+                                style={{
+                                    fontWeight: 350
+                                }}
                             >
-                                <span className="font-bold">Nos Promotions en Cours</span>
+                                <span>Nos Promotions en Cours</span>
                             </h1>
-                            <p className="text-[20px] leading-snug text-slate-600 font-light text-center lg:text-justify max-w-xl mx-auto">
+                            <p className="text-slate-600 font-light text-center lg:text-justify max-w-xl mx-auto">
                                 Profitez de nos offres exceptionnelles sur nos systèmes de traitement d'eau pour transformer votre quotidien.
                             </p>
                         </div>
@@ -147,7 +149,7 @@ const Promotions = () => {
                 <section className="py-12 md:py-16 bg-slate-50">
                     <div className="container mx-auto px-4">
                         <div className="max-w-4xl mx-auto">
-                            <h3 className="text-xl font-bold text-foreground mb-4">
+                            <h3 className="text-foreground mb-4">
                                 Conditions générales
                             </h3>
                             <div className="prose prose-sm text-muted-foreground space-y-2">

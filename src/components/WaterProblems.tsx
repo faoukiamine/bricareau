@@ -22,15 +22,15 @@ const WaterProblems = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <div className="space-y-4">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground">
+            <h2 className="text-foreground">
               Problèmes d'eau
             </h2>
-            <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold text-foreground">
+            <h3 className="lg:text-3xl text-foreground">
               Épargnez-vous les maux de tête et confiez le traitement de l'eau à nos Spécialistes
             </h3>
           </div>
 
-          <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto leading-snug">
+          <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto">
             Vous vous inquiétez de la qualité de votre eau potable, de tâches de rouille dans votre baignoire 
             ou d'une odeur des œufs pourris lorsque vous prenez votre douche ?
           </p>

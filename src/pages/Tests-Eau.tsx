@@ -33,8 +33,7 @@ import {
   Accordion,
   AccordionContent,
   AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+  AccordionTrigger } from "@/components/ui/accordion";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import ConsultationFormSection from "@/components/ConsultationFormSection";
@@ -128,14 +127,16 @@ const TestsEauPage = () => {
 
           <div className="container mx-auto px-6 relative z-10 flex items-center py-12 lg:py-0">
             <div className="max-w-2xl text-slate-900 lg:text-white">
-                                          <h1
-                                className="text-[32px] md:text-[42px] leading-[1.1] md:leading-[1.2] font-bold lg:font-light mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl"
-                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
-                            >
-                            <span className="sr-only">Montréal • Rive-Sud • Rive-Nord</span>
-                            Analyses d'eau professionnelles <br /> & Tests de laboratoire
-                            </h1>
-              <p className="text-lg font-light leading-relaxed text-slate-600 lg:text-white/95 mb-8 max-w-xl">
+              <h1
+                className="text-[32px] md:text-[42px] leading-[1.1] md:leading-[1.2] mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl"
+                style={{
+                  fontWeight: 350
+                }}
+              >
+                <span className="sr-only">Montréal • Rive-Sud • Rive-Nord</span>
+                Analyses d'eau professionnelles <br /> & Tests de laboratoire
+              </h1>
+              <p className="font-light text-slate-600 lg:text-white/95 mb-8 max-w-xl">
                 Besoin d'une analyse d'eau dans la région métropolitaine ? Que ce soit pour une vérification annuelle, une transaction hypothécaire ou un souci de qualité, Bricareau offre des tests complets de laboratoire partout dans le Grand Montréal, Laval et les couronnes.
               </p>
 
@@ -197,13 +198,13 @@ const TestsEauPage = () => {
                   POURQUOI TESTER ?
                 </span>
                 <h2
-                  className="text-white tracking-tighter mb-8"
-                  style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                  className="text-white mb-8"
+                  style={{ }}
                 >
                   <span className="text-[36px] md:text-[50px] font-bold leading-[1.05] block mb-2">Découvrez</span>
                   <span className="text-[36px] md:text-[50px] font-light leading-[1.05] block text-blue-100">l'invisible.</span>
                 </h2>
-                <p className="text-lg font-light leading-snug text-white/80 text-justify border-l-2 border-white/20 pl-6">
+                <p className="font-light text-white/80 text-justify border-l-2 border-white/20 pl-6">
                   L'eau claire cache parfois des secrets. Minéraux, bactéries ou contaminants chimiques : une analyse est la seule façon de savoir ce que vous buvez réellement.
                 </p>
               </div>
@@ -272,8 +273,8 @@ const TestsEauPage = () => {
                         {item.icon}
                       </div>
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
-                    <p className="text-base text-blue-50 leading-snug group-hover:text-white transition-colors">
+                    <h3 className="text-white mb-3">{item.title}</h3>
+                    <p className="text-base text-blue-50 group-hover:text-white transition-colors">
                       {item.desc}
                     </p>
                   </div>
@@ -291,8 +292,8 @@ const TestsEauPage = () => {
               {/* Title Section (Row 1, Left) */}
               <div className="lg:col-start-1 lg:row-start-1 flex flex-col justify-center">
                 <h2
-                  className="text-slate-900 tracking-tighter mb-8"
-                  style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                  className="text-slate-900 mb-8"
+                  style={{ }}
                 >
                   <span className="text-[28px] md:text-[48px] font-light leading-[1.1] md:leading-[1.1] block">Quand faut-il faire analyser</span>
                   <span className="text-[28px] md:text-[48px] font-normal leading-[1.1] md:leading-[1.1] block">l'eau de votre maison ?</span>
@@ -316,7 +317,7 @@ const TestsEauPage = () => {
                         </span>
                         <span
                           className={`text-[20px] font-bold transition-colors duration-300 ${activeService === idx ? 'text-blue-600' : 'text-slate-900 group-hover:text-blue-600'}`}
-                          style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                          style={{ }}
                         >
                           {item.title}
                         </span>
@@ -324,7 +325,7 @@ const TestsEauPage = () => {
                       <div className={`grid transition-all duration-500 ease-in-out ${activeService === idx ? 'grid-rows-[1fr] opacity-100 mt-4' : 'grid-rows-[0fr] opacity-0 mt-0'}`}>
                         <div className="overflow-hidden">
                           <div className="pl-4 ml-3 border-l-2 border-blue-200">
-                            <p className="text-slate-600 leading-snug max-w-lg">
+                            <p className="text-slate-600 max-w-lg">
                               {item.desc}
                             </p>
                           </div>
@@ -362,13 +363,13 @@ const TestsEauPage = () => {
                 <span className="w-8 h-[2px] bg-blue-600 inline-block"></span>
                 NOS SOLUTIONS D'ANALYSE DE LA QUALITÉ D'EAU
               </span>
-              <h2 className="text-slate-900 tracking-tighter mb-8"
-                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+              <h2 className="text-slate-900 mb-8"
+                style={{ }}
               >
                 <span className="text-[28px] md:text-[48px] font-light leading-[1.1] md:leading-[1.1] block">Quelle trousse d'analyse</span>
                 <span className="text-[28px] md:text-[48px] font-normal leading-[1.1] md:leading-[1.1] block">choisir pour votre eau ?</span>
               </h2>
-              <p className="text-lg text-slate-600 font-light max-w-2xl mx-auto">
+              <p className="text-slate-600 font-light max-w-2xl mx-auto">
                 Des solutions adaptées à vos besoins, de la vérification bactérienne de base au bilan complet pour une tranquillité d'esprit totale.
               </p>
             </div>
@@ -477,7 +478,7 @@ const TestsEauPage = () => {
               <Button
                 size="lg"
                 className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200 animate-heartbeat"
-                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                style={{ }}
                 asChild
               >
                 <a href="#water-test">
@@ -494,8 +495,8 @@ const TestsEauPage = () => {
           <div className="container mx-auto px-4 text-left">
             <div className="text-left mb-16">
               <h2
-                className="text-slate-900 tracking-tighter mb-8 text-left"
-                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                className="text-slate-900 mb-8 text-left"
+                style={{ }}
               >
                 <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Pour vous éclairer</span>
                 <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">Questions fréquentes</span>
@@ -551,10 +552,10 @@ const TestsEauPage = () => {
                     value={`item-${idx}`}
                     className="border-b-gray-200"
                   >
-                    <AccordionTrigger className="text-left text-base font-medium leading-6 hover:no-underline py-6" style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}>
+                    <AccordionTrigger className="text-left text-base font-medium leading-6 hover:no-underline py-6" style={{ }}>
                       {item.q}
                     </AccordionTrigger>
-                    <AccordionContent className="text-base font-light leading-6 text-gray-600 pb-6 text-justify" style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}>
+                    <AccordionContent className="text-base font-light leading-6 text-gray-600 pb-6 text-justify" style={{ }}>
                       {item.a}
                     </AccordionContent>
                   </AccordionItem>

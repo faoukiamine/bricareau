@@ -65,10 +65,14 @@ const Guides = () => {
                                 <div className="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center mx-auto mb-4">
                                     <BookOpen className="h-8 w-8 text-[#0052ff]" />
                                 </div>
-                                <h1 className="text-[32px] md:text-[52px] leading-tight font-bold text-slate-900 tracking-tighter text-center max-w-xl mx-auto">
+                                <h1
+                                    className="text-[32px] md:text-[52px] leading-tight text-slate-900 tracking-tighter text-center max-w-xl mx-auto"
+                                    style={{
+                                        fontWeight: 350 }}
+                                >
                                     Guides et <span className="text-blue-600">Documentation</span>
                                 </h1>
-                                <p className="text-[20px] leading-snug text-slate-600 font-light text-center max-w-xl mx-auto">
+                                <p className="text-slate-600 font-light text-center max-w-xl mx-auto">
                                     Ressources complètes pour vous aider à tirer le meilleur parti de vos systèmes de traitement d'eau.
                                 </p>
                             </div>
@@ -93,7 +97,7 @@ const Guides = () => {
                                             {guide.category}
                                         </span>
                                     </div>
-                                    <h3 className="text-lg font-bold text-foreground mb-2">
+                                    <h3 className="text-foreground mb-2">
                                         {guide.title}
                                     </h3>
                                     <p className="text-sm text-muted-foreground mb-4">
@@ -120,12 +124,12 @@ const Guides = () => {
                 <section className="py-12 md:py-16 bg-slate-50">
                     <div className="container mx-auto px-4">
                         <div className="max-w-4xl mx-auto">
-                            <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">
+                            <h2 className="text-center mb-8">
                                 Besoin d'aide supplémentaire ?
                             </h2>
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                                 <div className="bg-white p-6 rounded-lg text-center">
-                                    <h3 className="font-semibold text-lg mb-2">FAQ</h3>
+                                    <h3 className="mb-2">FAQ</h3>
                                     <p className="text-sm text-muted-foreground mb-4">
                                         Consultez nos questions fréquentes
                                     </p>
@@ -134,7 +138,7 @@ const Guides = () => {
                                     </Button>
                                 </div>
                                 <div className="bg-white p-6 rounded-lg text-center">
-                                    <h3 className="font-semibold text-lg mb-2">Vidéos</h3>
+                                    <h3 className="mb-2">Vidéos</h3>
                                     <p className="text-sm text-muted-foreground mb-4">
                                         Tutoriels vidéo étape par étape
                                     </p>
@@ -143,7 +147,7 @@ const Guides = () => {
                                     </Button>
                                 </div>
                                 <div className="bg-white p-6 rounded-lg text-center">
-                                    <h3 className="font-semibold text-lg mb-2">Support</h3>
+                                    <h3 className="mb-2">Support</h3>
                                     <p className="text-sm text-muted-foreground mb-4">
                                         Contactez notre équipe d'experts
                                     </p>

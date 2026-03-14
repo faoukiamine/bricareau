@@ -10,8 +10,7 @@ import {
     SelectContent,
     SelectItem,
     SelectTrigger,
-    SelectValue,
-} from "@/components/ui/select";
+    SelectValue } from "@/components/ui/select";
 import technicianImg from "@/assets/discover_expert.jpg";
 import waterTestImg from "@/assets/boire-eau-robinet.jpg";
 import drinkingWaterImg from "@/assets/Solutions d'eau potable.webp";
@@ -40,7 +39,12 @@ const Service = () => {
                             <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
                                 {/* Left Content */}
                                 <div className="lg:w-1/2 text-left">
-                                    <h1 className="text-[32px] md:text-[52px] leading-[1.1] font-bold mb-8 tracking-tighter text-slate-900">
+                                    <h1
+                                        className="text-[32px] md:text-[52px] leading-[1.1] mb-8 tracking-tighter text-slate-900"
+                                        style={{
+                                            fontWeight: 350
+                                        }}
+                                    >
                                         Faites confiance à <span className="text-blue-600 underline decoration-blue-100 underline-offset-8">Bricareau</span> pour tout ce qui concerne l'eau.
                                     </h1>
 
@@ -59,7 +63,7 @@ const Service = () => {
                                         ))}
                                     </div>
 
-                                    <p className="font-light text-[20px] leading-snug text-slate-600/80 mb-12 max-w-xl">
+                                    <p className="font-light text-slate-600/80 mb-12 max-w-xl">
                                         Faites appel aux meilleurs experts en traitement de l'eau, situés tout près de chez vous. Nous intervenons sur tous types de systèmes, même ceux que nous n'avons pas installés.
                                     </p>
 
@@ -131,7 +135,7 @@ const Service = () => {
                                         <h3 className="text-3xl md:text-4xl lg:text-5xl font-normal text-slate-900 mb-6 leading-[1.1] tracking-tighter">
                                             {feature.title}
                                         </h3>
-                                        <p className="font-light text-[20px] leading-snug text-slate-600/80 mb-8 max-w-lg">
+                                        <p className="font-light text-slate-600/80 mb-8 max-w-lg">
                                             {feature.desc}
                                         </p>
                                     </div>
@@ -151,13 +155,13 @@ const Service = () => {
                         <div className="flex flex-col lg:flex-row gap-20">
                             {/* Left Content */}
                             <div className="lg:w-2/5 text-left">
-                                <h2 className="text-xl font-bold text-slate-900 mb-6">
+                                <h2 className="text-xl text-slate-900 mb-6">
                                     Réparation et entretien des systèmes de traitement de l'eau
                                 </h2>
-                                <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
+                                <h2 className="text-slate-900 mb-8 md:leading-[48px]">
                                     Planifiez votre service en quelques clics.
                                 </h2>
-                                <p className="font-light text-[20px] leading-snug text-slate-600/80">
+                                <p className="font-light text-slate-600/80">
                                     Votre expert possède les connaissances et le savoir-faire nécessaires pour entretenir et réparer tout système de traitement d'eau disponible sur le marché – même s'il ne s'agit pas d'un adoucisseur ou d'un système de filtration Bricareau – et vous garantir une eau de la meilleure qualité possible. Renseignez-vous sur nos contrats d'entretien Bricareau pour bénéficier des services, réparations et maintenances les plus prestigieux et fiables pour votre système de traitement d'eau.
                                 </p>
                             </div>
@@ -165,7 +169,7 @@ const Service = () => {
                             {/* Right Form Card */}
                             <div className="lg:w-3/5">
                                 <div className="bg-white p-10 md:p-14 rounded-3xl shadow-2xl border border-slate-100">
-                                    <h2 className="text-3xl font-black text-slate-900 mb-4 text-left">Dites-nous ce dont vous avez besoin.</h2>
+                                    <h2 className="font-black text-slate-900 mb-4 text-left">Dites-nous ce dont vous avez besoin.</h2>
                                     <p className="text-slate-500 mb-10 text-left text-sm font-medium">Les champs marqués d'un astérisque (*) sont obligatoires.</p>
 
                                     <form className="grid grid-cols-1 md:grid-cols-2 gap-8">

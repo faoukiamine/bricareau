@@ -26,13 +26,15 @@ const Hero = () => {
           {/* Hero text */}
           <div className="space-y-6 lg:text-white">
             <h1
-              className="text-[32px] md:text-[42px] leading-[1.1] md:leading-[1.2] font-bold lg:font-light mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl"
-              style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+              className="text-[32px] md:text-[42px] leading-[1.1] md:leading-[1.2] mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl"
+              style={{
+                fontWeight: 350
+              }}
             >
               L’eau saine que votre famille mérite.
             </h1>
 
-            <p className="text-lg font-light leading-snug text-slate-600 lg:text-white/95 max-w-xl text-left lg:text-justify mb-4 lg:mb-0">
+            <p className="font-light text-slate-600 lg:text-white/95 max-w-xl text-left lg:text-justify mb-4 lg:mb-0">
               Assurez-vous que l’eau de votre maison a une belle apparence, une bonne odeur et un bon goût, qu’elle provienne d’un système municipal ou d’un puits privé.
               <br className="hidden lg:block" />
               <span className="mt-4 block">Plus de 20 000 foyers canadiens ont confié le traitement d’eau de leurs foyers à Bricareau.</span>
@@ -42,7 +44,6 @@ const Hero = () => {
               <Button
                 size="lg"
                 className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-100 lg:shadow-blue-200 w-full sm:w-auto flex items-center justify-center gap-2 group"
-                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                 asChild
               >
                 <NavLink to="/consultation">

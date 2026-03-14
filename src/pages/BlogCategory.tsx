@@ -65,11 +65,15 @@ const BlogCategory = () => {
                             </BreadcrumbList>
                         </Breadcrumb>
 
-                        <h1 className="text-4xl md:text-5xl font-black text-slate-900 mb-6 tracking-tight">
+                        <h1
+                            className="text-4xl md:text-5xl text-slate-900 mb-6 tracking-tight"
+                            style={{
+                                fontWeight: 350 }}
+                        >
                             {category.title}
                         </h1>
                         <div className="w-24 h-1.5 bg-blue-600 rounded-full mb-6"></div>
-                        <p className="text-xl text-slate-600 max-w-3xl leading-relaxed">
+                        <p className="text-slate-600 max-w-3xl">
                             Découvrez tous nos articles et guides complets concernant {category.title.toLowerCase()}.
                         </p>
                     </div>
@@ -99,12 +103,12 @@ const BlogCategory = () => {
                                     )}
                                 </div>
                                 <div className="p-8 flex flex-col flex-1">
-                                    <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
+                                    <h3 className="text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
                                         {product.title}
                                     </h3>
                                     <p
                                         className="text-slate-600 mb-6 flex-1 text-sm font-light leading-[19px]"
-                                        style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                        style={{ }}
                                     >
                                         {product.desc}
                                     </p>

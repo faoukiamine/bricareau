@@ -103,12 +103,14 @@ const CommercialIndustriel = () => {
             <div className="container mx-auto px-6 relative z-10 py-12 lg:py-0">
               <div className="max-w-2xl">
                 <h1
-                  className="text-[32px] md:text-[42px] leading-tight font-bold mb-8 tracking-tighter text-slate-900 lg:text-white"
-                  style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                  className="text-[32px] md:text-[42px] leading-tight mb-8 tracking-tighter text-slate-900 lg:text-white"
+                  style={{
+                    fontWeight: 350
+                  }}
                 >
-                  <span className="font-bold">Bricareau, votre partenaire de confiance</span>
+                  <span>Bricareau, votre partenaire de confiance</span>
                 </h1>
-                <p className="font-light text-[20px] leading-snug text-slate-600 lg:text-white/95 mb-8 max-w-xl">
+                <p className="font-light text-slate-600 lg:text-white/95 mb-8 max-w-xl">
                   Notre mission est de vous offrir une tranquillité d'esprit dans vos projets de traitement de l'eau les plus exigeants.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
@@ -153,14 +155,14 @@ const CommercialIndustriel = () => {
         {/* 3. Solutions Section */}
         <section id="solutions" className="py-12 md:py-16">
           <div className="container mx-auto px-4">
-            <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-16 text-center leading-[1.2] md:leading-[48px] tracking-tighter">
+            <h2 className="text-slate-900 mb-16 text-center md:leading-[48px]">
               Nos solutions de traitement d'eau industrielles
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
               {solutions.map((solution, index) => (
                 <div key={index} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer group flex flex-col h-full border border-gray-100 p-8">
-                  <h3 className="text-xl font-medium mb-4 group-hover:text-blue-600 transition-colors tracking-tight">{solution.title}</h3>
-                  <p className="text-slate-500 text-sm leading-snug mb-6 flex-grow">{solution.description}</p>
+                  <h3 className="mb-4 group-hover:text-blue-600 transition-colors tracking-tight">{solution.title}</h3>
+                  <p className="text-slate-500 text-sm mb-6 flex-grow">{solution.description}</p>
                   <div className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-sm mt-auto">
                     Lire <ChevronRight className="h-4 w-4" />
                   </div>
@@ -173,14 +175,14 @@ const CommercialIndustriel = () => {
         {/* 4. Why Choose Us */}
         <section className="py-12 md:py-16 bg-secondary/30">
           <div className="container mx-auto px-4">
-            <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-16 text-center leading-[1.2] md:leading-[48px] tracking-tighter">
+            <h2 className="text-slate-900 mb-16 text-center md:leading-[48px]">
               Pourquoi nous choisir?
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {advantages.map((advantage, index) => (
                 <div key={index} className="bg-background p-6 rounded-lg">
                   <advantage.icon className="h-12 w-12 text-primary mb-4" />
-                  <h3 className="text-xl font-semibold text-foreground mb-3">
+                  <h3 className="text-foreground mb-3">
                     {advantage.title}
                   </h3>
                   <p className="text-muted-foreground">
@@ -212,10 +214,10 @@ const CommercialIndustriel = () => {
         <section className="py-12 md:py-16 bg-primary/5">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center space-y-6">
-              <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
+              <h2 className="text-slate-900 mb-8 md:leading-[48px]">
                 Découvrez la meilleure solution de traitement de l'eau pour votre industrie.
               </h2>
-              <p className="text-base md:text-lg text-muted-foreground leading-snug">
+              <p className="text-base md:text-lg text-muted-foreground">
                 Nous vous accompagnons dans le développement d'un système d'équipements de traitement de l'eau sur mesure et personnalisé.
                 Nous sommes présents avant, pendant et après votre projet de traitement de l'eau.
               </p>
@@ -235,7 +237,7 @@ const CommercialIndustriel = () => {
         {/* 8. Markets Section */}
         <section className="py-12 md:py-16 bg-secondary/30">
           <div className="container mx-auto px-4">
-            <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-center">
+            <h2 className="text-slate-900 mb-8 md:leading-[48px] text-center">
               Marchés que nous servons
             </h2>
             <p className="text-center text-muted-foreground mb-12 max-w-3xl mx-auto">
@@ -249,7 +251,7 @@ const CommercialIndustriel = () => {
                   key={index}
                   className="bg-background p-6 rounded-lg text-center hover:shadow-md transition-shadow"
                 >
-                  <p className="text-lg font-medium text-foreground">{market}</p>
+                  <p className="font-medium text-foreground">{market}</p>
                 </div>
               ))}
             </div>
@@ -260,10 +262,10 @@ const CommercialIndustriel = () => {
         <section className="py-12 md:py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center space-y-6">
-              <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
+              <h2 className="text-slate-900 mb-8 md:leading-[48px]">
                 Tester la qualité de votre eau est essentiel pour votre entreprise.
               </h2>
-              <p className="text-base md:text-lg text-muted-foreground leading-snug">
+              <p className="text-base md:text-lg text-muted-foreground">
                 Les services de tests en laboratoire jouent un rôle essentiel dans la gestion des eaux, offrant des analyses
                 essentielles pour identifier les solutions de traitement les plus efficaces. Nous pouvons déterminer avec précision
                 la composition de l'eau et recommander les processus de traitement les plus adaptés aux exigences spécifiques.
@@ -282,10 +284,10 @@ const CommercialIndustriel = () => {
         <section className="py-12 md:py-16 bg-primary/5">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center space-y-6">
-              <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
+              <h2 className="text-slate-900 mb-8 md:leading-[48px]">
                 Améliorez votre eau aujourd'hui
               </h2>
-              <p className="text-base md:text-lg text-muted-foreground leading-snug">
+              <p className="text-base md:text-lg text-muted-foreground">
                 Contactez nos experts dès aujourd'hui et trouvez des solutions à vos problèmes de traitement des eaux.
               </p>
               <a

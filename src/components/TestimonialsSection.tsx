@@ -84,8 +84,8 @@ const TestimonialsSection = ({
             <div className="container mx-auto px-4 max-w-6xl">
                 <div className="text-center mb-16">
                     <h2
-                        className="text-foreground tracking-tighter"
-                        style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                        className="text-foreground"
+                        style={{ }}
                     >
                         {title}
                     </h2>
@@ -104,14 +104,14 @@ const TestimonialsSection = ({
                                         </div>
 
                                         {/* Quote Content */}
-                                        <p className="text-[18px] leading-[25px] text-[#4B5563] mb-12 font-normal italic">
+                                        <p className="leading-[25px] text-[#4B5563] mb-12 font-normal italic">
                                             « {item.text} »
                                         </p>
 
                                         {/* Bottom Row: Author & Stars */}
                                         <div className="w-full flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
                                             <div className="space-y-1">
-                                                <h4 className="font-bold text-lg text-gray-900 leading-tight">
+                                                <h4 className="text-gray-900">
                                                     {item.name}
                                                 </h4>
 

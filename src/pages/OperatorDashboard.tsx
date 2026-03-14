@@ -48,8 +48,7 @@ const OperatorDashboard = () => {
             id: Date.now().toString(),
             sender: "operator",
             text: inputValue,
-            time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
-        };
+            time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) };
 
         setMessages([...messages, newMessage]);
         setInputValue("");
@@ -133,7 +132,7 @@ const OperatorDashboard = () => {
                                             <User className="w-6 h-6" />
                                         </div>
                                         <div>
-                                            <h2 className="text-lg font-bold text-gray-900 flex items-center gap-2">
+                                            <h2 className="text-lg text-gray-900 flex items-center gap-2">
                                                 {currentSession?.name}
                                                 <BadgeCheck className="w-4 h-4 text-blue-500" />
                                             </h2>
@@ -208,7 +207,7 @@ const OperatorDashboard = () => {
                                 <div className="w-24 h-24 bg-blue-50 rounded-full flex items-center justify-center mb-6">
                                     <MessageSquare className="w-12 h-12 text-blue-200" />
                                 </div>
-                                <h2 className="text-2xl font-bold text-gray-900 mb-2">Bienvenue dans l'espace opérateur</h2>
+                                <h2 className="text-gray-900 mb-2">Bienvenue dans l'espace opérateur</h2>
                                 <p className="text-gray-500 max-w-sm">
                                     Sélectionnez une conversation dans la liste de gauche pour commencer à clavarder avec un client.
                                 </p>
@@ -219,7 +218,7 @@ const OperatorDashboard = () => {
                     {/* Right Sidebar: Client Info (Desktop Only) */}
                     <div className="hidden lg:flex w-[300px] flex-col gap-6">
                         <div className="bg-white rounded-3xl p-6 shadow-xl border border-gray-100">
-                            <h3 className="font-bold text-gray-900 mb-6 flex items-center gap-2">
+                            <h3 className="text-gray-900 mb-6 flex items-center gap-2">
                                 <User className="w-5 h-5 text-blue-600" />
                                 Profil Client
                             </h3>
@@ -253,7 +252,7 @@ const OperatorDashboard = () => {
                                 </div>
                             </div>
                             <div className="mt-8 pt-6 border-t border-gray-50">
-                                <h4 className="text-xs font-bold text-gray-900 mb-4 uppercase tracking-wider">Historique des actions</h4>
+                                <h4 className="text-xs text-gray-900 mb-4 uppercase tracking-wider">Historique des actions</h4>
                                 <div className="space-y-4">
                                     <div className="flex gap-3">
                                         <CheckCircle2 className="w-4 h-4 text-green-500 shrink-0" />
@@ -268,11 +267,11 @@ const OperatorDashboard = () => {
                         </div>
 
                         <div className="bg-[#0052ff] rounded-3xl p-6 shadow-xl shadow-blue-200 text-white">
-                            <h3 className="font-bold mb-4 flex items-center gap-2">
+                            <h3 className="mb-4 flex items-center gap-2">
                                 <BadgeCheck className="w-5 h-5" />
                                 Notes Expert
                             </h3>
-                            <p className="text-xs text-blue-100 leading-snug italic mb-6">
+                            <p className="text-xs text-blue-100 italic mb-6">
                                 "Client potentiel pour un système complet. Intéressé par la filtration du calcaire pour toute la maison."
                             </p>
                             <Button className="w-full bg-white/20 hover:bg-white/30 text-white border-none rounded-xl">

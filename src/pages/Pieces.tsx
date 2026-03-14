@@ -57,10 +57,14 @@ const Pieces = () => {
                                 <div className="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center mx-auto mb-4">
                                     <Package className="h-8 w-8 text-[#0052ff]" />
                                 </div>
-                                <h1 className="text-[32px] md:text-[52px] leading-tight font-bold text-slate-900 tracking-tighter text-center max-w-2xl mx-auto">
+                                <h1
+                                    className="text-[32px] md:text-[52px] leading-tight text-slate-900 tracking-tighter text-center max-w-2xl mx-auto"
+                                    style={{
+                                        fontWeight: 350 }}
+                                >
                                     Pièces de <span className="text-blue-600">Remplacement</span>
                                 </h1>
-                                <p className="text-[20px] leading-snug text-slate-600 font-light text-center max-w-xl mx-auto">
+                                <p className="text-slate-600 font-light text-center max-w-xl mx-auto">
                                     Trouvez toutes les pièces dont vous avez besoin pour maintenir vos équipements en parfait état de fonctionnement.
                                 </p>
                             </div>
@@ -93,7 +97,7 @@ const Pieces = () => {
                 {partCategories.map((category, categoryIndex) => (
                     <section key={categoryIndex} className="py-12 md:py-16">
                         <div className="container mx-auto px-4">
-                            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-8">
+                            <h2 className="text-foreground mb-8">
                                 {category.name}
                             </h2>
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
@@ -105,7 +109,7 @@ const Pieces = () => {
                                         <div className="aspect-square bg-slate-100 rounded-lg mb-4 flex items-center justify-center">
                                             <Package className="h-16 w-16 text-slate-400" />
                                         </div>
-                                        <h3 className="font-semibold text-foreground mb-2">
+                                        <h3 className="text-foreground mb-2">
                                             {item.name}
                                         </h3>
                                         <div className="flex items-center justify-between mb-3">
@@ -137,12 +141,12 @@ const Pieces = () => {
                 <section className="py-12 md:py-16 bg-slate-50">
                     <div className="container mx-auto px-4">
                         <div className="max-w-4xl mx-auto">
-                            <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-center">
+                            <h2 className="text-slate-900 mb-8 md:leading-[48px] text-center">
                                 Besoin d'aide pour trouver la bonne pièce ?
                             </h2>
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                                 <div className="bg-white p-6 rounded-lg text-center">
-                                    <h3 className="font-semibold text-lg mb-2">Par téléphone</h3>
+                                    <h3 className="mb-2">Par téléphone</h3>
                                     <p className="text-sm text-muted-foreground mb-4">
                                         Nos experts vous aident à identifier la pièce
                                     </p>
@@ -151,7 +155,7 @@ const Pieces = () => {
                                     </Button>
                                 </div>
                                 <div className="bg-white p-6 rounded-lg text-center">
-                                    <h3 className="font-semibold text-lg mb-2">Manuels</h3>
+                                    <h3 className="mb-2">Manuels</h3>
                                     <p className="text-sm text-muted-foreground mb-4">
                                         Consultez les schémas de pièces
                                     </p>
@@ -160,7 +164,7 @@ const Pieces = () => {
                                     </Button>
                                 </div>
                                 <div className="bg-white p-6 rounded-lg text-center">
-                                    <h3 className="font-semibold text-lg mb-2">Service</h3>
+                                    <h3 className="mb-2">Service</h3>
                                     <p className="text-sm text-muted-foreground mb-4">
                                         Laissez nos techniciens s'en occuper
                                     </p>

@@ -10,8 +10,7 @@ import {
     BreadcrumbItem,
     BreadcrumbLink,
     BreadcrumbPage,
-    BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
+    BreadcrumbSeparator } from "@/components/ui/breadcrumb";
 import { NavLink } from "react-router-dom";
 
 interface BlogLayoutProps {
@@ -40,7 +39,7 @@ const RelatedArticlesCarousel = ({ articles }: { articles: Array<{ href: string;
 
     return (
         <div className="mt-8 mb-16 w-full">
-            <h3 className="text-lg font-bold tracking-tight text-black mb-8 px-4" style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif' }}>
+            <h3 className="tracking-tight text-black mb-8 px-4">
                 Articles Recommandés
             </h3>
             <div className="relative overflow-hidden w-full px-4 py-2">
@@ -64,7 +63,7 @@ const RelatedArticlesCarousel = ({ articles }: { articles: Array<{ href: string;
                                             />
                                         </div>
                                         <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
-                                            <h4 className="text-xl font-medium mb-4 group-hover:text-blue-600 transition-colors tracking-tight text-slate-900 mt-2">
+                                            <h4 className="mb-4 group-hover:text-blue-600 transition-colors tracking-tight text-slate-900 mt-2">
                                                 {article.title}
                                             </h4>
                                             <div className="mt-auto flex items-center justify-between">
@@ -263,8 +262,10 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({ title, headerImage, children, t
                                 </Breadcrumb>
 
                                 <h1
-                                    className="text-3xl md:text-4xl lg:text-[2.8rem] font-bold italic text-slate-900 lg:text-white leading-tight mb-6 tracking-tight"
-                                    style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif' }}
+                                    className="text-3xl md:text-4xl lg:text-[2.8rem] italic text-slate-900 lg:text-white leading-tight mb-6 tracking-tight"
+                                    style={{
+                                        fontWeight: 350
+                                    }}
                                 >
                                     {title}
                                 </h1>
@@ -292,7 +293,7 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({ title, headerImage, children, t
                     <article className="bg-white px-8 py-16 md:px-12 lg:px-16 md:py-24 shadow-sm">
                         <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
                             {/* Article Body */}
-                            <div className="w-full lg:w-3/4 text-[15px] leading-relaxed text-gray-500 font-light space-y-8 text-justify" style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif' }}>
+                            <div className="w-full lg:w-3/4 text-[15px] leading-relaxed text-gray-500 font-light space-y-8 text-justify">
                                 {children}
                             </div>
 
@@ -300,10 +301,10 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({ title, headerImage, children, t
                             {tocItems && tocItems.length > 0 && (
                                 <div className="w-full lg:w-1/4 hidden lg:block">
                                     <div className="sticky top-24 pt-8 border-t-2 border-black">
-                                        <h4 className="text-[11px] font-bold text-black uppercase tracking-[0.1em] mb-6">
+                                        <h4 className="text-black uppercase tracking-[0.1em] mb-6">
                                             Dans cet article
                                         </h4>
-                                        <ul className="space-y-4 text-sm text-gray-500 font-light" style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif' }}>
+                                        <ul className="space-y-4 text-sm text-gray-500 font-light">
                                             {tocItems.map((item) => (
                                                 <li key={item.id}>
                                                     <a
@@ -329,7 +330,7 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({ title, headerImage, children, t
                                 <Droplets className="w-32 h-32" />
                             </div>
 
-                            <h3 className="text-2xl md:text-3xl font-bold mb-4 relative z-10">
+                            <h3 className="md:text-3xl mb-4 relative z-10">
                                 Prêt à retrouver une eau limpide ?
                             </h3>
                             <p className="text-blue-100 mb-8 max-w-2xl relative z-10 text-[15px]">

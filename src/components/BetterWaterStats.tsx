@@ -43,12 +43,12 @@ const BetterWaterStats = () => {
                             <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse" />
                             L'Excellence Bricareau
                         </div>
-                        <h2 className="text-white tracking-tighter mb-6">
+                        <h2 className="text-white mb-6">
                             <span className="text-[36px] md:text-[56px] font-bold leading-[1] block text-white">La promesse d'une eau saine,</span>
                             <span className="text-[36px] md:text-[56px] font-light leading-[1] text-blue-400 block mt-2">de notre rencontre à votre confort.</span>
                         </h2>
                         <div className="w-20 h-1.5 bg-blue-600 mb-8 rounded-full" />
-                        <p className="text-xl text-slate-400 font-light leading-snug max-w-md text-justify">
+                        <p className="text-slate-400 font-light max-w-md text-justify">
                             Parce que la santé de votre foyer ne supporte aucune approximation, nous avons bâti un protocole rigoureux qui garantit une pureté absolue à chaque étape.
                         </p>
                     </div>
@@ -78,10 +78,10 @@ const BetterWaterStats = () => {
 
                                     {/* Text Content */}
                                     <div className="flex-1">
-                                        <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors tracking-tight">
+                                        <h3 className="md:text-3xl text-white mb-4 group-hover:text-blue-400 transition-colors tracking-tight">
                                             {item.title}
                                         </h3>
-                                        <p className="text-[18px] leading-[25px] text-slate-400 font-light max-w-xl text-justify">
+                                        <p className="leading-[25px] text-slate-400 font-light max-w-xl text-justify">
                                             {item.desc}
                                         </p>
                                     </div>

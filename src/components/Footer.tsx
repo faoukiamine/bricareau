@@ -16,7 +16,7 @@ const Footer = () => {
                 className="h-10 w-auto brightness-0 invert"
               />
             </div>
-            <p className="text-sm text-white/80 leading-snug">
+            <p className="text-sm text-white/80">
               Spécialiste du traitement d'eau au Canada depuis plus de 20 ans.
               Votre partenaire de confiance pour une eau de qualité supérieure.
             </p>
@@ -24,7 +24,7 @@ const Footer = () => {
 
           {/* Solutions */}
           <div>
-            <h3 className="font-semibold text-lg mb-4 text-white">Nos Solutions</h3>
+            <h3 className="mb-4 text-white">Nos Solutions</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <a href="/adoucisseurs" className="text-white/80 hover:text-white transition-colors">
@@ -56,7 +56,7 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h3 className="font-semibold text-lg mb-4 text-white">Services</h3>
+            <h3 className="mb-4 text-white">Services</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <a href="/" className="text-white/80 hover:text-white transition-colors">
@@ -88,7 +88,7 @@ const Footer = () => {
 
           {/* Newsletter */}
           <div>
-            <h3 className="font-semibold text-lg mb-4 text-white">Restez informé</h3>
+            <h3 className="mb-4 text-white">Restez informé</h3>
             <p className="text-sm text-white/80 mb-4">
               Inscrivez-vous à notre infolettre pour recevoir des conseils et offres exclusives
             </p>

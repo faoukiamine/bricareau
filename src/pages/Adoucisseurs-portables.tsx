@@ -78,13 +78,15 @@ const AdoucisseursPortables = () => {
                     <div className="container mx-auto px-6 relative z-10 py-12 lg:py-0">
                         <div className="max-w-4xl text-left">
                             <h1
-                                className="text-[32px] md:text-[42px] leading-[1.1] md:leading-[1.2] font-bold lg:font-light mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl"
-                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                className="text-[32px] md:text-[42px] leading-[1.1] md:leading-[1.2] mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl"
+                                style={{
+                                    fontWeight: 350
+                                }}
                             >
                                 Adoucisseur d'eau portable <br />
                                 Une eau douce où que vous soyez !
                             </h1>
-                            <p className="text-lg font-light leading-snug text-slate-600 lg:text-gray-200 mb-12 max-w-2xl text-justify animate-in fade-in slide-in-from-bottom duration-700 delay-100">
+                            <p className="font-light text-slate-600 lg:text-gray-200 mb-12 max-w-2xl text-justify animate-in fade-in slide-in-from-bottom duration-700 delay-100">
                                 La solution d'adoucissement flexible pour votre résidence ou commerce sans installation permanence. Profitez de notre service d'échange d'adoucisseur portable avec livraison directement chez vous.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4">
@@ -128,13 +130,13 @@ const AdoucisseursPortables = () => {
                                 VOS AVANTAGES
                             </span>
                             <h2
-                                className="text-4xl md:text-5xl font-bold text-slate-900 mb-8 leading-[1.1] tracking-tight"
-                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                className="text-slate-900 mb-8"
+                                style={{ }}
                             >
                                 Une eau parfaite,<br />
                                 <span className="text-blue-600">kilomètre après kilomètre.</span>
                             </h2>
-                            <p className="text-lg text-slate-600 font-light leading-snug mb-8 text-justify">
+                            <p className="text-slate-600 font-light mb-8 text-justify">
                                 Que vous soyez au camping, au quai ou dans un chalet, ne laissez pas la qualité de l'eau gâcher votre confort. Nos solutions portables vous suivent partout.
                             </p>
 
@@ -181,12 +183,12 @@ const AdoucisseursPortables = () => {
                                         </div>
                                         <div className="flex-1">
                                             <div className="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-4">
-                                                <h3 className="text-2xl font-bold text-slate-900">{item.title}</h3>
+                                                <h3 className="text-slate-900">{item.title}</h3>
                                                 <span className={`text-sm font-medium text-${item.color}-600 bg-${item.color}-50 px-3 py-1 rounded-full w-fit`}>
                                                     {item.subtitle}
                                                 </span>
                                             </div>
-                                            <p className="text-slate-600 font-light leading-snug mb-6 text-justify">
+                                            <p className="text-slate-600 font-light mb-6 text-justify">
                                                 {item.desc}
                                             </p>
                                             <div className="flex flex-wrap gap-3">
@@ -216,10 +218,10 @@ const AdoucisseursPortables = () => {
                         <span className="text-blue-200 text-xs font-bold uppercase tracking-[0.3em] mb-6 block animate-in fade-in slide-in-from-bottom duration-700">
                             NOTRE FONCTIONNEMENT
                         </span>
-                        <h2 className="text-[32px] md:text-[48px] font-bold text-white leading-[1.1] tracking-tighter mb-6">
+                        <h2 className="text-white mb-6">
                             Un service simple <br />& sans souci.
                         </h2>
-                        <p className="text-lg font-light leading-snug text-blue-100 max-w-xl mx-auto">
+                        <p className="font-light text-blue-100 max-w-xl mx-auto">
                             De l'installation initiale à la livraison régulière de sel, nous gérons chaque détail technique pour vous garantir une eau parfaite en permanence.
                         </p>
                     </div>
@@ -257,10 +259,10 @@ const AdoucisseursPortables = () => {
                                     {step.step}
                                 </div>
 
-                                <h3 className="text-xl font-bold text-white mb-4">
+                                <h3 className="text-white mb-4">
                                     {step.title}
                                 </h3>
-                                <p className="text-blue-100 font-light leading-snug text-sm text-justify">
+                                <p className="text-blue-100 font-light text-sm text-justify">
                                     {step.desc}
                                 </p>
                             </div>
@@ -284,8 +286,8 @@ const AdoucisseursPortables = () => {
             <section className="bg-white py-24">
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-16">
-                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal text-slate-900 mb-8 leading-[1.1] tracking-tighter">Découvrez les produits associés</h2>
-                        <p className="text-lg font-light leading-snug text-gray-500 max-w-2xl mx-auto text-justify">
+                        <h2 className="text-slate-900 mb-8">Découvrez les produits associés</h2>
+                        <p className="font-light text-gray-500 max-w-2xl mx-auto text-justify">
                             Optimisez votre expérience de traitement d'eau avec nos solutions complémentaires.
                         </p>
                     </div>
@@ -325,20 +327,20 @@ const AdoucisseursPortables = () => {
                                 </div>
                                 <div className="p-8 space-y-4 flex flex-col flex-grow border-t-2 border-transparent group-hover:border-blue-600 transition-colors">
                                     <h3
-                                        className="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors tracking-tight text-center"
-                                        style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                        className="text-slate-900 group-hover:text-blue-600 transition-colors tracking-tight text-center"
+                                        style={{ }}
                                     >
                                         {prod.name}
                                     </h3>
                                     <p
-                                        className="text-[18px] leading-[25px] text-slate-500 font-light flex-grow text-justify"
-                                        style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                        className="leading-[25px] text-slate-500 font-light flex-grow text-justify"
+                                        style={{ }}
                                     >
                                         {prod.desc}
                                     </p>
                                     <div
                                         className="inline-flex items-center gap-2 text-blue-600 font-bold text-xs tracking-widest uppercase mt-4 group-hover:underline self-end"
-                                        style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                        style={{ }}
                                     >
                                         <span></span>
                                         <ArrowRight className="h-6 w-6 transform group-hover:translate-x-1 transition-transform" />

@@ -32,10 +32,14 @@ const Temoignages = () => {
 
                         <div className="container mx-auto px-6 py-12 lg:py-24 bg-gradient-to-b from-blue-50 to-white lg:from-transparent lg:to-transparent">
                             <div className="max-w-3xl mx-auto text-center space-y-6">
-                                <h1 className="text-[32px] md:text-[52px] leading-tight font-bold text-slate-900 tracking-tighter">
+                                <h1
+                                    className="text-[32px] md:text-[52px] leading-tight text-slate-900 tracking-tighter"
+                                    style={{
+                                        fontWeight: 350 }}
+                                >
                                     <span className="text-blue-600">Témoignages</span> Clients
                                 </h1>
-                                <p className="text-[20px] leading-snug text-slate-600 font-light max-w-xl mx-auto">
+                                <p className="text-slate-600 font-light max-w-xl mx-auto">
                                     Découvrez ce que nos clients disent de leur expérience avec Bricareau. Leur satisfaction est notre plus grande fierté.
                                 </p>
                                 <div className="hidden lg:flex items-center justify-center gap-2">
@@ -66,7 +70,7 @@ const Temoignages = () => {
                 <section className="py-12 md:py-16 bg-slate-50">
                     <div className="container mx-auto px-4">
                         <div className="max-w-3xl mx-auto text-center space-y-6">
-                            <h2 className="text-2xl md:text-3xl font-bold text-foreground">
+                            <h2 className="text-foreground">
                                 Rejoignez nos clients satisfaits
                             </h2>
                             <p className="text-base md:text-lg text-muted-foreground">

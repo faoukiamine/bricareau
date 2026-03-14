@@ -118,14 +118,12 @@ const Header = () => {
           customIcon: WatersoftenericonImg,
           title: "Adoucisseurs d'eau",
           description: "Éliminez le calcaire, protégez vos électroménagers et profitez d'une peau et de cheveux plus sains avec une eau parfaitement douce.",
-          href: "/adoucisseur-eau-residentiel",
-        },
+          href: "/adoucisseur-eau-residentiel" },
         {
           customIcon: saltfreeiconImg,
           title: "Conditionneurs d'eau sans sel",
           description: "La solution antitartre écologique : prévenez l'accumulation de calcaire sans sel, sans rejet d'eau et sans entretien.",
-          href: "/conditionneurs-sans-sel",
-        },
+          href: "/conditionneurs-sans-sel" },
         {
           customIcon: portablefiltericonImg,
           title: "Adoucisseurs d'eau portables",
@@ -355,7 +353,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="fixed top-0 z-50 w-full bg-white shadow-md" ref={headerRef}>
+      <header className="fixed top-0 z-50 w-full bg-white shadow-md" ref={headerRef} style={{ fontWeight: 350 }}>
 
         {/* Top Information Bar */}
         {/* Top Information Bar (Hidden) */}
@@ -383,7 +381,7 @@ const Header = () => {
                     <NavLink
                       to={item.href}
                       className={cn(
-                        "text-sm font-medium transition-colors px-3",
+                        "text-sm transition-colors px-3",
                         isHeaderTransparent ? "text-white hover:text-blue-200" : "text-gray-800 hover:text-[#0052ff]"
                       )}
                     >
@@ -417,8 +415,8 @@ const Header = () => {
                     isHeaderTransparent ? "text-white hover:text-blue-200" : "text-gray-700 hover:text-[#0052ff]"
                   )}
                 >
-                  <Phone className="h-5 w-5" />
-                  <span className="text-sm font-medium">Appelez-nous</span>
+                  <Phone className="h-5 w-5" strokeWidth={1.5} />
+                  <span className="text-sm">Appelez-nous</span>
                 </a>
 
                 {/* Contact */}
@@ -429,8 +427,8 @@ const Header = () => {
                     isHeaderTransparent ? "text-white hover:text-blue-200" : "text-gray-700 hover:text-[#0052ff]"
                   )}
                 >
-                  <Mail className="h-5 w-5" />
-                  <span className="text-sm font-medium">Contactez-nous</span>
+                  <Mail className="h-5 w-5" strokeWidth={1.5} />
+                  <span className="text-sm">Contactez-nous</span>
                 </a>
 
                 {/* Localisation */}
@@ -443,8 +441,8 @@ const Header = () => {
                     isHeaderTransparent ? "text-white hover:text-blue-200" : "text-gray-700 hover:text-[#0052ff]"
                   )}
                 >
-                  <MapPin className="h-5 w-5" />
-                  <span className="text-sm font-medium">Localisation</span>
+                  <MapPin className="h-5 w-5" strokeWidth={1.5} />
+                  <span className="text-sm">Localisation</span>
                 </a>
 
                 {/* Promotions */}
@@ -455,8 +453,8 @@ const Header = () => {
                     isHeaderTransparent ? "text-white hover:text-blue-200" : "text-gray-700 hover:text-[#0052ff]"
                   )}
                 >
-                  <Tag className="h-5 w-5" />
-                  <span className="text-sm font-medium">Promotions</span>
+                  <Tag className="h-5 w-5" strokeWidth={1.5} />
+                  <span className="text-sm">Promotions</span>
                 </a>
               </div>
 
@@ -472,20 +470,20 @@ const Header = () => {
                     setActiveMegamenu(null);
                   }}
                 >
-                  <Search className={cn("h-5 w-5", isHeaderTransparent ? "text-white" : "text-gray-700")} />
+                  <Search className={cn("h-5 w-5", isHeaderTransparent ? "text-white" : "text-gray-700")} strokeWidth={1.5} />
                 </button>
                 <a href="tel:18552649328" className="p-2" aria-label="Phone">
-                  <Phone className={cn("h-5 w-5", isHeaderTransparent ? "text-white" : "text-gray-700")} />
+                  <Phone className={cn("h-5 w-5", isHeaderTransparent ? "text-white" : "text-gray-700")} strokeWidth={1.5} />
                 </a>
                 <a href="https://www.google.com/maps/place/BRICAREAU+WATER+SPECIALIST/@45.5005535,-73.6423534,211m/data=!3m2!1e3!5s0x4cc919c4436a5a3f:0x5bb245a9935b5ece!4m6!3m5!1s0x4cc9229b28364297:0xd763dce82ea51a5f!8m2!3d45.5005535!4d-73.6423534!16s%2Fg%2F1pv5wd45p?entry=tts&g_ep=EgoyMDI2MDExMy4wIPu8ASoASAFQAw%3D%3D&skid=dc936ed0-8357-4347-8629-14786f46d771" className="p-2" aria-label="Location" target="_blank" rel="noopener noreferrer">
-                  <MapPin className={cn("h-5 w-5", isHeaderTransparent ? "text-white" : "text-gray-700")} />
+                  <MapPin className={cn("h-5 w-5", isHeaderTransparent ? "text-white" : "text-gray-700")} strokeWidth={1.5} />
                 </a>
                 <button
                   className="p-2"
                   onClick={() => setIsMenuOpen(!isMenuOpen)}
                   aria-label="Toggle menu"
                 >
-                  {isMenuOpen ? <X className={cn("h-6 w-6", isHeaderTransparent ? "text-white" : "text-gray-700")} /> : <Menu className={cn("h-6 w-6", isHeaderTransparent ? "text-white" : "text-gray-700")} />}
+                  {isMenuOpen ? <X className={cn("h-6 w-6", isHeaderTransparent ? "text-white" : "text-gray-700")} strokeWidth={1.5} /> : <Menu className={cn("h-6 w-6", isHeaderTransparent ? "text-white" : "text-gray-700")} strokeWidth={1.5} />}
                 </button>
               </div>
             </div>
@@ -523,7 +521,7 @@ const Header = () => {
                         }
                       }}
                       className={cn(
-                        "text-sm font-semibold transition-colors relative h-16 flex items-center",
+                        "text-sm transition-colors relative h-16 flex items-center",
                         isHeaderTransparent
                           ? (activeMegamenu === item.name ? "text-blue-200 border-b-2 border-white" : "text-white hover:text-blue-200")
                           : (activeMegamenu === item.name ? "text-[#0052ff] border-b-2 border-[#0052ff]" : "text-gray-700 hover:text-[#0052ff]")
@@ -540,7 +538,7 @@ const Header = () => {
               {/* Right: Search */}
               <div className="flex items-center gap-2 flex-shrink-0">
                 <div className="relative">
-                  <Search className={cn("absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 pointer-events-none z-10", isHeaderTransparent ? "text-white" : "text-gray-500")} />
+                  <Search className={cn("absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 pointer-events-none z-10", isHeaderTransparent ? "text-white" : "text-gray-500")} strokeWidth={1.5} />
                   <Input
                     ref={searchInputRef}
                     type="search"
@@ -598,7 +596,7 @@ const Header = () => {
 
                 {/* Popular Search Terms */}
                 <div className="max-w-2xl mx-auto">
-                  <h4 className="text-sm font-semibold text-gray-900 mb-3">Recherches populaires</h4>
+                  <h4 className="text-sm text-gray-900 mb-3">Recherches populaires</h4>
                   <div className="flex flex-wrap gap-2">
                     {[
                       "adoucisseur d'eau",
@@ -661,10 +659,10 @@ const Header = () => {
                             ) : null}
                           </div>
                           <div className="flex-1">
-                            <h4 className="font-bold text-base mb-1.5 transition-colors leading-tight text-gray-900 group-hover:text-[#0052ff]">
+                            <h4 className="text-base mb-1.5 transition-colors text-gray-900 group-hover:text-[#0052ff]">
                               {card.title}
                             </h4>
-                            <p className="text-sm leading-snug transition-colors text-gray-600">
+                            <p className="text-sm transition-colors text-gray-600">
                               {card.description}
                             </p>
                           </div>
@@ -685,7 +683,7 @@ const Header = () => {
                           />
                         </div>
                         <div className="p-6 flex-1 flex flex-col justify-center bg-[#0052ff]">
-                          <h3 className="text-lg font-bold mb-4 leading-tight text-white">
+                          <h3 className="mb-4 text-white">
                             {menuItem.promo.title}
                           </h3>
                           <a
@@ -707,7 +705,7 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="lg:hidden fixed inset-0 top-12 bg-white z-40 overflow-y-auto">
+          <div className="lg:hidden fixed inset-0 top-12 bg-white z-40 overflow-y-auto" style={{ fontWeight: 350 }}>
             <div className="flex flex-col h-full">
               {/* Main Content Area */}
               <div className="flex-1 overflow-y-auto">
@@ -715,7 +713,7 @@ const Header = () => {
                 <div className="px-4 pt-6 pb-4">
                   <Button
                     size="lg"
-                    className="w-full bg-[#0052ff] hover:bg-[#0052ff]/90 text-white rounded-full font-semibold"
+                    className="w-full bg-[#0052ff] hover:bg-[#0052ff]/90 text-white rounded-full"
                     asChild
                   >
                     <a href="/contact" className="flex items-center justify-center gap-2">
@@ -733,7 +731,7 @@ const Header = () => {
                           <div className="flex items-center justify-between w-full">
                             <NavLink
                               to={item.href}
-                              className="flex-1 px-4 py-4 text-left text-base font-semibold text-gray-900"
+                              className="flex-1 px-4 py-4 text-left text-base text-gray-900"
                               onClick={() => setIsMenuOpen(false)}
                             >
                               {item.name}
@@ -776,7 +774,7 @@ const Header = () => {
                           className="flex items-center justify-between w-full px-4 py-4"
                           onClick={() => setIsMenuOpen(false)}
                         >
-                          <span className="text-base font-semibold text-gray-900">{item.name}</span>
+                          <span className="text-base text-gray-900">{item.name}</span>
                           <ChevronDown className="h-5 w-5 text-gray-500 -rotate-90" />
                         </NavLink>
                       )}
@@ -814,7 +812,7 @@ const Header = () => {
                 <div className="px-4 py-4">
                   <a
                     href="tel:18552649328"
-                    className="flex items-center justify-center gap-2 text-[#0052ff] font-semibold"
+                    className="flex items-center justify-center gap-2 text-[#0052ff]"
                   >
                     <Phone className="h-5 w-5" />
                     <span>Appeler 1-855-264-9328</span>

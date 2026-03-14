@@ -31,8 +31,7 @@ import {
     Accordion,
     AccordionContent,
     AccordionItem,
-    AccordionTrigger,
-} from "@/components/ui/accordion";
+    AccordionTrigger } from "@/components/ui/accordion";
 import ConsultationFormSection from "@/components/ConsultationFormSection";
 const products = [
     { name: "Adoucisseur d'eau de la série \n Sentinelle", desc: "Le rythme parfait d'une eau toujours douce.", path: "/contact", image: SentinelWaterSoftenerImg },
@@ -153,14 +152,16 @@ const AdoucisseurEauMunicipal = () => {
                     <div className="container mx-auto px-6 relative z-10 flex items-center py-12 lg:py-0">
                         <div className="max-w-2xl text-slate-900 lg:text-white">
                             <h1
-                                className="text-[32px] md:text-[42px] leading-[1.1] md:leading-[1.2] font-bold lg:font-light mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl"
-                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                className="text-[32px] md:text-[42px] leading-[1.1] md:leading-[1.2] mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl"
+                                style={{
+                                    fontWeight: 350
+                                }}
                             >
                                 <span className="text-blue-600 lg:text-white/80">Une douceur qui se sent,</span> <br />
                                 <span>un confort qui se vit.</span>
                             </h1>
 
-                            <p className="text-lg font-light leading-relaxed text-slate-600 lg:text-white/95 mb-8 max-w-xl">
+                            <p className="font-light text-slate-600 lg:text-white/95 mb-8 max-w-xl">
                                 Protégez votre confort et vos installations avec nos adoucisseurs d'eau intelligents conçus spécifiquement pour les eaux de ville. Éliminez définitivement l'eau dure et prolongez la vie de vos électroménagers.
                             </p>
 
@@ -196,10 +197,10 @@ const AdoucisseurEauMunicipal = () => {
                 <section className="py-24 bg-blue-600 text-white text-center">
                     <div className="container mx-auto px-6 text-center">
                         <div className="text-center mb-16">
-                            <h2 className="text-[32px] md:text-[48px] font-normal text-white mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-center">
+                            <h2 className="text-white mb-8 md:leading-[48px] text-center">
                                 Pourquoi choisir nos <br />adoucisseurs d'eau résidentiels ?
                             </h2>
-                            <p className="text-lg font-light leading-snug text-blue-100 max-w-2xl mx-auto text-justify">
+                            <p className="font-light text-blue-100 max-w-2xl mx-auto text-justify">
                                 Plus qu'un simple appareil, c'est une solution complète pour la qualité de l'eau et le confort de toute votre famille.
                             </p>
                         </div>
@@ -214,8 +215,8 @@ const AdoucisseurEauMunicipal = () => {
                                     <div className="w-20 h-20 rounded-2xl bg-white flex items-center justify-center mb-8 transition-all group-hover:scale-110 group-hover:bg-white/10">
                                         <item.icon className="h-10 w-10 text-blue-600 group-hover:text-white" />
                                     </div>
-                                    <h4 className="text-2xl font-medium mb-4 tracking-tight">{item.title}</h4>
-                                    <p className="text-lg font-light leading-snug text-blue-100 text-justify">{item.desc}</p>
+                                    <h4 className="mb-4 tracking-tight">{item.title}</h4>
+                                    <p className="font-light text-blue-100 text-justify">{item.desc}</p>
                                 </div>
                             ))}
                         </div>
@@ -227,15 +228,15 @@ const AdoucisseurEauMunicipal = () => {
                     <div className="container mx-auto px-6">
                         <div className="text-left mb-16">
                             <h2
-                                className="text-[32px] md:text-[60px] font-light text-slate-900 mb-8 leading-[1.1] md:leading-[60px] tracking-tighter text-left"
-                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                className="text-slate-900 mb-8 md:leading-[60px] text-left"
+                                style={{ }}
                             >
                                 Nos adoucisseurs d'eau <br /><span className="font-normal">résidentiels</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600 mb-8"></div>
                             <p
-                                className="text-lg font-light leading-snug text-slate-600 mb-8 text-justify"
-                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                className="font-light text-slate-600 mb-8 text-justify"
+                                style={{ }}
                             >
                                 Nos adoucisseurs d'eau pour eau municipale sont spécialement conçus pour contrer les effets néfastes du calcaire tout en s'adaptant parfaitement aux spécificités des réseaux de distribution urbains. Nos solutions de pointe — les séries Sentinelle, Sérénité et Infiniti — offrent une technologie de régénération intelligente qui optimise votre consommation d'eau et de sel selon votre usage réel au quotidien. Que vous recherchiez une efficacité énergétique maximale, une protection accrue de votre plomberie ou une douceur incomparable pour votre peau et vos cheveux, nos systèmes garantissent une performance durable et une fiabilité exceptionnelle. Investir dans un adoucisseur Bricareau, c'est choisir de prolonger la vie de vos appareils électroménagers tout en réalisant des économies substantielles sur vos produits d'entretien et vos factures énergétiques. Découvrez une nouvelle dimension de confort domestique grâce à une eau parfaitement balancée, pure et saine pour l'ensemble de votre foyer.
                             </p>
@@ -256,20 +257,20 @@ const AdoucisseurEauMunicipal = () => {
                                     </div>
                                     <div className="p-8 space-y-4 flex flex-col flex-grow border-t-2 border-transparent group-hover:border-blue-600 transition-colors">
                                         <h3
-                                            className="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors tracking-tight text-center whitespace-pre-line"
-                                            style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                            className="text-slate-900 group-hover:text-blue-600 transition-colors tracking-tight text-center whitespace-pre-line"
+                                            style={{ }}
                                         >
                                             {p.name}
                                         </h3>
                                         <p
-                                            className="text-[18px] leading-[25px] text-slate-500 font-light flex-grow text-justify"
-                                            style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                            className="leading-[25px] text-slate-500 font-light flex-grow text-justify"
+                                            style={{ }}
                                         >
                                             {p.desc}
                                         </p>
                                         <div
                                             className="inline-flex items-center gap-2 text-blue-600 font-bold text-xs tracking-widest uppercase mt-4 group-hover:underline self-end"
-                                            style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                            style={{ }}
                                         >
                                             <span></span>
                                             <ArrowRight className="h-6 w-6 transform group-hover:translate-x-1 transition-transform" />
@@ -286,8 +287,8 @@ const AdoucisseurEauMunicipal = () => {
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
                             <h2
-                                className="text-[32px] md:text-[60px] font-light text-slate-900 mb-8 leading-[1.1] md:leading-[60px] tracking-tighter text-left"
-                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                className="text-slate-900 mb-8 md:leading-[60px] text-left"
+                                style={{ }}
                             >
                                 Comparez nos <br /><span className="font-normal">adoucisseurs d'eau</span>
                             </h2>
@@ -370,19 +371,19 @@ const AdoucisseurEauMunicipal = () => {
                     <div className="container mx-auto px-4 relative z-10 flex items-center py-12 lg:py-0">
                         <div className="max-w-2xl text-slate-900 lg:text-white">
                             <h2
-                                className="text-[32px] md:text-[60px] leading-[1.1] md:leading-[60px] font-bold lg:font-light mb-8 tracking-tighter text-slate-900 lg:text-white text-left"
-                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                className="md:leading-[60px] lg:font-light mb-8 text-slate-900 lg:text-white text-left"
+                                style={{ }}
                             >
                                 Des tests d'eau précis <span className="lg:font-bold"><br />pour une tranquillité d'esprit totale.</span>
                             </h2>
-                            <p className="text-lg font-light leading-snug text-slate-500 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
+                            <p className="font-light text-slate-500 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
                                 Ne devinez pas la qualité de votre eau. Nos analyses approfondies identifient les bactéries, les minéraux et les contaminants chimiques pour vous offrir une tranquillité d'esprit totale.
                             </p>
                             <div className="flex gap-4">
                                 <Button
                                     size="lg"
                                     className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200"
-                                    style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                    style={{ }}
                                     asChild
                                 >
                                     <a href="/tests-eau">Demandez une analyse d'eau</a>
@@ -397,8 +398,8 @@ const AdoucisseurEauMunicipal = () => {
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
                             <h2
-                                className="text-slate-900 tracking-tighter mb-8 text-left"
-                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                className="text-slate-900 mb-8 text-left"
+                                style={{ }}
                             >
                                 <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Pour vous éclairer</span>
                                 <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">Questions fréquentes</span>
@@ -410,10 +411,10 @@ const AdoucisseurEauMunicipal = () => {
                             <Accordion type="single" collapsible className="w-full">
                                 {faqItems.slice(0, showAllFaqs ? undefined : 6).map((item, idx) => (
                                     <AccordionItem key={idx} value={`item-${idx}`} className="border-b-gray-200">
-                                        <AccordionTrigger className="text-left text-base font-medium leading-6 hover:no-underline py-6" style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}>
+                                        <AccordionTrigger className="text-left text-base font-medium leading-6 hover:no-underline py-6" style={{ }}>
                                             {item.q}
                                         </AccordionTrigger>
-                                        <AccordionContent className="text-base font-light leading-6 text-gray-600 pb-6 text-justify" style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}>
+                                        <AccordionContent className="text-base font-light leading-6 text-gray-600 pb-6 text-justify" style={{ }}>
                                             {item.a}
                                         </AccordionContent>
                                     </AccordionItem>
@@ -436,8 +437,8 @@ const AdoucisseurEauMunicipal = () => {
                     <div className="container mx-auto px-4 text-left">
                         <div className="text-left mb-16">
                             <h2
-                                className="text-slate-900 tracking-tighter mb-8 text-left"
-                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                className="text-slate-900 mb-8 text-left"
+                                style={{ }}
                             >                                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">Ressources</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
@@ -458,7 +459,7 @@ const AdoucisseurEauMunicipal = () => {
                                     </div>
                                     <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
                                         <NavLink to={art.link}>
-                                            <h4 className="text-xl font-medium mb-4 group-hover:text-blue-600 transition-colors tracking-tight">{art.title}</h4>
+                                            <h4 className="mb-4 group-hover:text-blue-600 transition-colors tracking-tight">{art.title}</h4>
                                         </NavLink>
                                         <div className="mt-auto">
                                             <NavLink

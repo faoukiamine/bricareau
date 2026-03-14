@@ -97,12 +97,14 @@ const Pieces = () => {
                                 <span className="text-xs font-bold text-blue-600 uppercase tracking-widest leading-none">PIÈCES D'ORIGINE</span>
                             </div>
                             <h1
-                                className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-slate-900 text-center lg:text-justify max-w-xl mx-auto"
-                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] mb-8 tracking-tighter text-slate-900 text-center lg:text-justify max-w-xl mx-auto"
+                                style={{
+                                    fontWeight: 350
+                                }}
                             >
-                                <span className="font-bold">Filtres de Remplacement</span>
+                                <span>Filtres de Remplacement</span>
                             </h1>
-                            <p className="text-[20px] leading-snug text-slate-600 font-light text-center lg:text-justify max-w-xl mx-auto">
+                            <p className="text-slate-600 font-light text-center lg:text-justify max-w-xl mx-auto">
                                 Trouvez toutes les cartouches filtrantes dont vous avez besoin pour vos équipements afin de maintenir une qualité d'eau optimale toute l'année.
                             </p>
                             <div className="mt-12 flex justify-center lg:justify-start">
@@ -118,7 +120,7 @@ const Pieces = () => {
                 {partCategories.map((category, categoryIndex) => (
                     <section key={categoryIndex} className="py-12 md:py-16">
                         <div className="container mx-auto px-4">
-                            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-8">
+                            <h2 className="text-foreground mb-8">
                                 {category.name}
                             </h2>
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
@@ -134,7 +136,7 @@ const Pieces = () => {
                                                 <Package className="h-16 w-16 text-slate-400" />
                                             )}
                                         </div>
-                                        <h3 className="font-semibold text-foreground mb-2">
+                                        <h3 className="text-foreground mb-2">
                                             {item.name}
                                         </h3>
                                     </div>
@@ -148,12 +150,12 @@ const Pieces = () => {
                 <section className="py-12 md:py-16 bg-slate-50">
                     <div className="container mx-auto px-4">
                         <div className="max-w-4xl mx-auto">
-                            <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-center">
+                            <h2 className="text-slate-900 mb-8 md:leading-[48px] text-center">
                                 Besoin d'aide pour trouver la bonne pièce ?
                             </h2>
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                                 <div className="bg-white p-6 rounded-lg text-center">
-                                    <h3 className="font-semibold text-lg mb-2">Par téléphone</h3>
+                                    <h3 className="mb-2">Par téléphone</h3>
                                     <p className="text-sm text-muted-foreground mb-4">
                                         Nos experts vous aident à identifier la pièce
                                     </p>
@@ -162,7 +164,7 @@ const Pieces = () => {
                                     </Button>
                                 </div>
                                 <div className="bg-white p-6 rounded-lg text-center">
-                                    <h3 className="font-semibold text-lg mb-2">Manuels</h3>
+                                    <h3 className="mb-2">Manuels</h3>
                                     <p className="text-sm text-muted-foreground mb-4">
                                         Consultez les schémas de pièces
                                     </p>
@@ -171,7 +173,7 @@ const Pieces = () => {
                                     </Button>
                                 </div>
                                 <div className="bg-white p-6 rounded-lg text-center">
-                                    <h3 className="font-semibold text-lg mb-2">Service</h3>
+                                    <h3 className="mb-2">Service</h3>
                                     <p className="text-sm text-muted-foreground mb-4">
                                         Laissez nos techniciens s'en occuper
                                     </p>

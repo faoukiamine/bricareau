@@ -38,13 +38,13 @@ const ExpertTrustSection = () => {
                     <div className="lg:w-1/2 space-y-10">
                         <div className="space-y-6">
                             <h2
-                                className="text-slate-900 tracking-tighter text-[40px] md:text-[56px] leading-[1.1]"
-                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                className="text-slate-900"
+                                style={{ }}
                             >
                                 <span className="font-bold">Votre eau mérite un expert, </span>
                                 <span className="font-light text-blue-600 italic">pas un doute.</span>
                             </h2>
-                            <p className="text-xl text-slate-600 font-light leading-snug max-w-xl text-justify">
+                            <p className="text-slate-600 font-light max-w-xl text-justify">
                                 Ne laissez pas l'incertitude couler de votre robinet. Chez Bricareau, nous transformons chaque analyse en une certitude scientifique pour la santé de votre foyer.
                             </p>
                         </div>
@@ -55,7 +55,7 @@ const ExpertTrustSection = () => {
                             <Button
                                 size="lg"
                                 className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-12 h-16 text-lg font-bold shadow-2xl shadow-blue-200 transition-all hover:-translate-y-1 w-full sm:w-auto"
-                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                style={{ }}
                                 asChild
                             >
                                 <a href="/tests-eau#water-test" className="flex items-center justify-center gap-3">

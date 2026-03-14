@@ -29,8 +29,7 @@ import {
     Accordion,
     AccordionContent,
     AccordionItem,
-    AccordionTrigger,
-} from "@/components/ui/accordion";
+    AccordionTrigger } from "@/components/ui/accordion";
 import ConsultationFormSection from "@/components/ConsultationFormSection";
 
 
@@ -173,13 +172,15 @@ const FiltresTouteMaison = () => {
 
                     <div className="container mx-auto px-6 relative z-10 flex items-center py-12 lg:py-0">
                         <div className="max-w-2xl text-slate-900 lg:text-white">
-                             <h1
-                                className="text-[32px] md:text-[42px] leading-[1.1] md:leading-[1.2] font-bold lg:font-light mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl"
-                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                            <h1
+                                className="text-[32px] md:text-[42px] leading-[1.1] md:leading-[1.2] mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl"
+                                style={{
+                                    fontWeight: 350
+                                }}
                             >
                                 Filtres d'eau pour toute la maison, une protection intégrale.
                             </h1>
-                            <p className="text-lg font-light leading-relaxed text-slate-600 lg:text-white/95 mb-8 max-w-xl">
+                            <p className="font-light text-slate-600 lg:text-white/95 mb-8 max-w-xl">
                                 Éliminez le chlore, le fer et les sédiments de chaque goutte d'eau qui entre dans votre propriété. Nos systèmes de filtration intégrés protègent votre santé, votre peau et vos appareils électroménagers.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4">
@@ -225,10 +226,10 @@ const FiltresTouteMaison = () => {
                 <section className="py-24 bg-blue-600 text-white text-center">
                     <div className="container mx-auto px-6 text-center">
                         <div className="text-center mb-16">
-                            <h2 className="text-[32px] md:text-[48px] font-normal text-white mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-center">
+                            <h2 className="text-white mb-8 md:leading-[48px] text-center">
                                 Pourquoi choisir nos <br />systèmes de filtration d'eau ?
                             </h2>
-                            <p className="text-blue-100 max-w-2xl mx-auto text-lg">
+                            <p className="text-blue-100 max-w-2xl mx-auto">
                                 Plus qu'un simple système de filtration, c'est une protection avancée pour votre santé et un confort durable pour toute votre famille.
                             </p>
                         </div>
@@ -242,8 +243,8 @@ const FiltresTouteMaison = () => {
                                     <div className="w-20 h-20 rounded-2xl bg-white flex items-center justify-center mb-8 transition-all group-hover:scale-110 group-hover:bg-white/10">
                                         <item.icon className="h-10 w-10 text-blue-600 group-hover:text-white" />
                                     </div>
-                                    <h4 className="text-2xl font-medium mb-4 tracking-tight">{item.title}</h4>
-                                    <p className="text-blue-100 leading-snug">{item.desc}</p>
+                                    <h4 className="mb-4 tracking-tight">{item.title}</h4>
+                                    <p className="text-blue-100">{item.desc}</p>
                                 </div>
                             ))}
                         </div>
@@ -255,16 +256,16 @@ const FiltresTouteMaison = () => {
                     <div className="container mx-auto px-6">
                         <div className="text-left mb-16">
                             <h2
-                                className="text-slate-900 tracking-tighter mb-8 text-left"
-                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                className="text-slate-900 mb-8 text-left"
+                                style={{ }}
                             >
                                 <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Nos filtres d'eau</span>
                                 <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">spécialisés pour votre résidence</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600 mb-8"></div>
                             <p
-                                className="text-lg font-light leading-snug text-slate-600 mb-8 text-justify"
-                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                className="font-light text-slate-600 mb-8 text-justify"
+                                style={{ }}
                             >
                                 Nos filtres d’eau spécialisés pour toute la maison sont méticuleusement conçus pour offrir une protection robuste et ciblée contre les contaminants spécifiques que l’on retrouve fréquemment dans les réseaux de distribution municipaux. En intégrant des technologies de pointe telles que nos séries Vortex, ChlorStop et Iron Shield, nous garantissons l'élimination efficace des sédiments, du chlore et des métaux lourds qui peuvent altérer le goût, l'odeur et la qualité globale de votre eau quotidienne. Chaque solution est installée au point d’entrée de votre résidence pour assurer une pureté cristalline constante dans tous vos robinets, tout en prolongeant durablement la durée de vie de votre plomberie et de vos précieux électroménagers. Choisir un système Bricareau, c'est opter pour une expertise reconnue qui transforme votre eau municipale en une ressource revitalisante, saine et parfaitement équilibrée pour l'ensemble de votre foyer. Profitez dès aujourd'hui d'une tranquillité d'esprit absolue grâce à une filtration sur-mesure, fiable et performante, répondant aux standards les plus élevés d'excellence et de confort.
                             </p>
@@ -285,20 +286,20 @@ const FiltresTouteMaison = () => {
                                     </div>
                                     <div className="p-8 space-y-4 flex flex-col flex-grow border-t-2 border-transparent group-hover:border-blue-600 transition-colors">
                                         <h3
-                                            className="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors tracking-tight text-center"
-                                            style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                            className="text-slate-900 group-hover:text-blue-600 transition-colors tracking-tight text-center"
+                                            style={{ }}
                                         >
                                             {p.name}
                                         </h3>
                                         <p
-                                            className="text-[18px] leading-[25px] text-slate-500 font-light flex-grow text-justify"
-                                            style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                            className="leading-[25px] text-slate-500 font-light flex-grow text-justify"
+                                            style={{ }}
                                         >
                                             {p.desc}
                                         </p>
                                         <div
                                             className="inline-flex items-center gap-2 text-blue-600 font-bold text-xs tracking-widest uppercase mt-4 group-hover:underline self-end"
-                                            style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                            style={{ }}
                                         >
                                             <span></span>
                                             <ArrowRight className="h-6 w-6 transform group-hover:translate-x-1 transition-transform" />
@@ -315,8 +316,8 @@ const FiltresTouteMaison = () => {
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
                             <h2
-                                className="text-slate-900 tracking-tighter mb-8 text-left"
-                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                className="text-slate-900 mb-8 text-left"
+                                style={{ }}
                             >
                                 <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Comparez nos filtres d'eau</span>
                                 <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">spécialisés pour l'eau municipale</span>
@@ -392,20 +393,20 @@ const FiltresTouteMaison = () => {
                                 Contrôle de la Qualité D'EAU
                             </span>
                             <h2
-                                className="text-[32px] md:text-[60px] font-bold lg:font-light mb-8 tracking-tighter leading-[1.1] md:leading-[60px] text-slate-900 lg:text-white text-left"
-                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                className="lg:font-light mb-8 md:leading-[60px] text-slate-900 lg:text-white text-left"
+                                style={{ }}
                             >
                                 L'excellence commence<br />
                                 par <span className="lg:font-bold">une eau parfaite.</span>
                             </h2>
-                            <p className="text-lg font-light leading-snug text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
+                            <p className="font-light text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
                                 Le luxe, c'est de ne pas avoir à se soucier de la qualité de ce que l'on consomme. Offrez-vous la sérénité d'une eau analysée par des experts, pour une maison où tout brille, sans effort et sans compromis.
                             </p>
                             <div className="flex gap-4">
                                 <Button
                                     size="lg"
                                     className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14"
-                                    style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                    style={{ }}
                                     asChild
                                 >
                                     <a href="/tests-eau">Demandez une analyse d'eau</a>
@@ -428,10 +429,10 @@ const FiltresTouteMaison = () => {
                 {/* 8. CTA Section */}
                 <section className="bg-primary py-16 md:py-20">
                     <div className="container mx-auto px-4 text-center">
-                        <h2 className="text-2xl md:text-3xl font-bold text-primary-foreground mb-4">
+                        <h2 className="text-primary-foreground mb-4">
                             Besoin d'aide avec votre eau ?
                         </h2>
-                        <p className="text-primary-foreground/80 text-lg mb-8 max-w-2xl mx-auto">
+                        <p className="text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
                             Discutez avec un expert en un clic. Disponible par téléphone ou à domicile selon vos préférences.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -452,8 +453,8 @@ const FiltresTouteMaison = () => {
                     <div className="container mx-auto px-6">
                         <div className="text-left mb-16">
                             <h2
-                                className="text-slate-900 tracking-tighter mb-8 text-left"
-                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                className="text-slate-900 mb-8 text-left"
+                                style={{ }}
                             >
                                 <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Pour vous éclairer</span>
                                 <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">Questions fréquentes</span>
@@ -490,8 +491,8 @@ const FiltresTouteMaison = () => {
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
                             <h2
-                                className="text-slate-900 tracking-tighter mb-8 text-left"
-                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                className="text-slate-900 mb-8 text-left"
+                                style={{ }}
                             >
                                 <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">Ressources</span>
                             </h2>
@@ -515,7 +516,7 @@ const FiltresTouteMaison = () => {
                                         />
                                     </div>
                                     <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
-                                        <h4 className="text-xl font-medium mb-4 group-hover:text-blue-600 transition-colors tracking-tight">{art.title}</h4>
+                                        <h4 className="mb-4 group-hover:text-blue-600 transition-colors tracking-tight">{art.title}</h4>
                                         <div className="mt-auto">
                                             <NavLink
                                                 to={art.link || "#"}

@@ -28,8 +28,7 @@ import {
   Accordion,
   AccordionContent,
   AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+  AccordionTrigger } from "@/components/ui/accordion";
 import ConsultationFormSection from "@/components/ConsultationFormSection";
 
 
@@ -172,19 +171,21 @@ const ConditionneursSansSel = () => {
                 NOUVEAU CHEZ BRICAREAU
               </span>
               <h1
-                className="text-[32px] md:text-[42px] leading-[1.1] md:leading-[1.2] font-bold lg:font-light mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg max-w-xl"
-                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                className="text-[32px] md:text-[42px] leading-[1.1] md:leading-[1.2] mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg max-w-xl"
+                style={{
+                  fontWeight: 350
+                }}
               >
                 Conditionneur d'eau sans sel <br />
                 L'anti-tartre écologique par excellence.
               </h1>
-              <p className="text-lg font-light leading-snug text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
+              <p className="font-light text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
                 Neutralisez le calcaire sans sel, sans électricité et sans gaspillage d'eau. Notre technologie avancée TAC protège votre plomberie tout en préservant les minéraux essentiels à votre santé.
               </p>
               <Button
                 size="lg"
                 className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200"
-                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                style={{ }}
                 asChild
               >
                 <NavLink to="/consultation">Planifiez une consultation gratuite</NavLink>
@@ -216,7 +217,7 @@ const ConditionneursSansSel = () => {
               <span className="text-blue-600 font-bold tracking-widest text-xs uppercase mb-4 block">
                 Prévention du tartre
               </span>
-              <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[48px] tracking-tight">
+              <h2 className="text-slate-900 mb-8">
                 Pourquoi choisir un conditionneur <br />d'eau sans sel ?
               </h2>
               <div className="w-24 h-1.5 bg-blue-600 mx-auto rounded-full opacity-20" />
@@ -229,11 +230,11 @@ const ConditionneursSansSel = () => {
                     <item.icon className="h-8 w-8 transition-transform duration-500" />
                   </div>
 
-                  <h3 className="text-2xl font-bold text-slate-900 mb-4 group-hover:text-blue-600 transition-colors duration-300">
+                  <h3 className="text-slate-900 mb-4 group-hover:text-blue-600 transition-colors duration-300">
                     {item.title}
                   </h3>
 
-                  <p className="text-slate-500 text-lg leading-snug font-light text-justify group-hover:text-slate-600 transition-colors duration-300">
+                  <p className="text-slate-500 font-light text-justify group-hover:text-slate-600 transition-colors duration-300">
                     {item.description}
                   </p>
                 </div>
@@ -254,12 +255,12 @@ const ConditionneursSansSel = () => {
                 <div className="mb-12">
                   <span className="text-blue-600 font-bold tracking-widest text-xs uppercase mb-4 block">Innovation Durable</span>
                   <h2
-                    className="text-[32px] md:text-[34px] font-bold text-slate-900 mb-8 leading-[1.1] tracking-tight"
-                    style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                    className="text-slate-900 mb-8"
+                    style={{ }}
                   >
                     Choisissez une protection 100% écologique et préservez les minéraux essentiels de votre eau.
                   </h2>
-                  <p className="text-lg text-slate-600 mb-10 leading-snug font-light max-w-lg">
+                  <p className="text-slate-600 mb-10 font-light max-w-lg">
                     Le conditionneur d'eau sans sel de Bricareau est une alternative efficace et écologique
                     à l'adoucisseur traditionnel. Il protège votre maison du calcaire sans jamais avoir à soulever un sac de sel. Une solution durable, autonome et efficace.
                   </p>
@@ -281,8 +282,8 @@ const ConditionneursSansSel = () => {
                       <span className="absolute top-4 right-6 text-4xl font-black text-slate-100 group-hover:text-blue-50 transition-colors duration-500 select-none">
                         {item.c}
                       </span>
-                      <h4 className="text-xl font-bold text-slate-900 mb-3 relative z-10">{item.t}</h4>
-                      <p className="text-sm text-slate-500 font-light leading-snug relative z-10 text-justify">
+                      <h4 className="text-slate-900 mb-3 relative z-10">{item.t}</h4>
+                      <p className="text-sm text-slate-500 font-light relative z-10 text-justify">
                         {item.d}
                       </p>
                     </div>
@@ -322,10 +323,10 @@ const ConditionneursSansSel = () => {
         {/* 6. CTA Section */}
         <section className="bg-primary py-16 md:py-20">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-2xl md:text-3xl font-bold text-primary-foreground mb-4">
+            <h2 className="text-primary-foreground mb-4">
               Besoin d'aide avec votre eau ?
             </h2>
-            <p className="text-primary-foreground/80 text-lg mb-8 max-w-2xl mx-auto">
+            <p className="text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
               Discutez avec un expert en un clic. Disponible par téléphone ou à domicile selon vos préférences.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -346,8 +347,8 @@ const ConditionneursSansSel = () => {
           <div className="container mx-auto px-4">
             <div className="text-left mb-16">
               <h2
-                className="text-slate-900 tracking-tighter mb-8 text-left"
-                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                className="text-slate-900 mb-8 text-left"
+                style={{ }}
               >
                 <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Pour vous éclairer</span>
                 <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">Questions fréquentes</span>
@@ -359,10 +360,10 @@ const ConditionneursSansSel = () => {
               <Accordion type="single" collapsible className="w-full">
                 {faqs.slice(0, showAllFaqs ? undefined : 6).map((faq, idx) => (
                   <AccordionItem key={idx} value={`item-${idx}`} className="border-b-slate-100 px-4">
-                    <AccordionTrigger className="text-left text-base font-medium leading-6 hover:no-underline py-8 text-slate-800" style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}>
+                    <AccordionTrigger className="text-left text-base font-medium leading-6 hover:no-underline py-8 text-slate-800" style={{ }}>
                       {faq.question}
                     </AccordionTrigger>
-                    <AccordionContent className="text-base font-light leading-6 text-slate-500 pb-8 text-justify" style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}>
+                    <AccordionContent className="text-base font-light leading-6 text-slate-500 pb-8 text-justify" style={{ }}>
                       {faq.answer}
                     </AccordionContent>
                   </AccordionItem>
@@ -372,7 +373,7 @@ const ConditionneursSansSel = () => {
                 <Button
                   onClick={() => setShowAllFaqs(!showAllFaqs)}
                   className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-12 h-14 shadow-lg shadow-blue-200"
-                  style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                  style={{ }}
                 >
                   {showAllFaqs ? "Voir moins" : "Voir plus de questions"}
                 </Button>
@@ -387,8 +388,8 @@ const ConditionneursSansSel = () => {
           <div className="container mx-auto px-4">
             <div className="text-left mb-16">
               <h2
-                className="text-slate-900 tracking-tighter mb-8 text-left"
-                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                className="text-slate-900 mb-8 text-left"
+                style={{ }}
               >                                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">Ressources</span>
               </h2>
               <div className="w-24 h-1 bg-blue-600"></div>
@@ -398,18 +399,15 @@ const ConditionneursSansSel = () => {
                 {
                   title: "Adoucisseur sans sel vs avec sel : la vérité technique",
                   img: residentialWaterSoftenerImg,
-                  link: "/adoucisseur-sans-sel-vs-avec-sel-verite-technique",
-                },
+                  link: "/adoucisseur-sans-sel-vs-avec-sel-verite-technique" },
                 {
                   title: "Adoucisseur d'eau et fosse septique : compatible ou non ?",
                   img: adoucisseurFosseImg,
-                  link: "/adoucisseur-deau-et-fosse-septique-mythes-et-realites",
-                },
+                  link: "/adoucisseur-deau-et-fosse-septique-mythes-et-realites" },
                 {
                   title: "Conditionneur d'eau : Une alternative écologique à l'adoucisseur sans sel",
                   img: conditionneursImg,
-                  link: "/conditionneur-deau-une-alternative-ecologique-a-ladoucisseur-sans-sel",
-                },
+                  link: "/conditionneur-deau-une-alternative-ecologique-a-ladoucisseur-sans-sel" },
               ].map((art, i) => (
                 <NavLink
                   key={i}
@@ -424,7 +422,7 @@ const ConditionneursSansSel = () => {
                     />
                   </div>
                   <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
-                    <h4 className="text-xl font-medium mb-4 group-hover:text-blue-600 transition-colors tracking-tight">{art.title}</h4>
+                    <h4 className="mb-4 group-hover:text-blue-600 transition-colors tracking-tight">{art.title}</h4>
                     <div className="mt-auto">
                       <span className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-sm">
                         Lire <ChevronRight className="h-4 w-4 transform group-hover:translate-x-1 transition-transform" />

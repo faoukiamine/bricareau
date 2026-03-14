@@ -84,10 +84,14 @@ const Videos = () => {
                                 <div className="hidden lg:flex w-16 h-16 rounded-full bg-blue-50 items-center justify-center mx-auto mb-4">
                                     <Play className="h-8 w-8 text-[#0052ff] ml-1" fill="currentColor" />
                                 </div>
-                                <h1 className="text-[32px] md:text-[52px] leading-tight font-bold text-slate-900 tracking-tighter text-center max-w-xl mx-auto">
+                                <h1
+                                    className="text-[32px] md:text-[52px] leading-tight text-slate-900 tracking-tighter text-center max-w-xl mx-auto"
+                                    style={{
+                                        fontWeight: 350 }}
+                                >
                                     Bibliothèque <span className="text-blue-600">Vidéo</span>
                                 </h1>
-                                <p className="text-[20px] leading-snug text-slate-600 font-light text-center max-w-xl mx-auto">
+                                <p className="text-slate-600 font-light text-center max-w-xl mx-auto">
                                     Tutoriels et guides vidéo pour vous accompagner dans l'utilisation et l'entretien de vos équipements.
                                 </p>
                             </div>
@@ -99,7 +103,7 @@ const Videos = () => {
                 {videoCategories.map((category, categoryIndex) => (
                     <section key={categoryIndex} className="py-12 md:py-16">
                         <div className="container mx-auto px-4">
-                            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-8">
+                            <h2 className="text-foreground mb-8">
                                 {category.title}
                             </h2>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
@@ -125,7 +129,7 @@ const Videos = () => {
                                             </div>
                                         </div>
                                         <div className="p-4">
-                                            <h3 className="text-lg font-bold text-foreground mb-2 group-hover:text-[#0052ff] transition-colors">
+                                            <h3 className="text-foreground mb-2 group-hover:text-[#0052ff] transition-colors">
                                                 {video.title}
                                             </h3>
                                             <p className="text-sm text-muted-foreground">
@@ -143,7 +147,7 @@ const Videos = () => {
                 <section className="py-12 md:py-16 bg-slate-50">
                     <div className="container mx-auto px-4">
                         <div className="max-w-3xl mx-auto text-center space-y-6">
-                            <h2 className="text-2xl md:text-3xl font-bold text-foreground">
+                            <h2 className="text-foreground">
                                 Besoin d'aide personnalisée ?
                             </h2>
                             <p className="text-base md:text-lg text-muted-foreground">

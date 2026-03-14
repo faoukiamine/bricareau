@@ -12,8 +12,7 @@ import {
     FormField,
     FormItem,
     FormLabel,
-    FormMessage,
-} from "@/components/ui/form";
+    FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { format, addDays, setHours, setMinutes, startOfDay, endOfDay } from "date-fns";
 import { fr } from "date-fns/locale";
@@ -34,15 +33,11 @@ const formSchema = z.object({
     province: z.string().min(2, "Province requise"),
     code_postal: z.string().min(5, "Code postal requis"),
     appointment_date: z.date({
-        required_error: "Veuillez choisir une date",
-    }),
+        required_error: "Veuillez choisir une date" }),
     appointment_time: z.string({
-        required_error: "Veuillez choisir une heure",
-    }),
+        required_error: "Veuillez choisir une heure" }),
     consent: z.boolean().refine(val => val === true, {
-        message: "Champs Obligatoire",
-    }),
-});
+        message: "Champs Obligatoire" }) });
 
 const TIME_SLOTS = [
     "09:00", "10:00", "11:00", "12:00", "13:00",
@@ -65,9 +60,7 @@ const ConsultationFormSection = ({ id, isStandalone = false }: { id?: string, is
             ville: "",
             province: "",
             code_postal: "",
-            consent: false,
-        },
-    });
+            consent: false } });
 
     const [bookedSlots, setBookedSlots] = useState<string[]>([]);
     const selectedDate = form.watch("appointment_date");
@@ -151,8 +144,7 @@ const ConsultationFormSection = ({ id, isStandalone = false }: { id?: string, is
                     ville: values.ville,
                     province: values.province,
                     code_postal: values.code_postal,
-                    appointment_time: appointmentDateTime.toISOString(),
-                });
+                    appointment_time: appointmentDateTime.toISOString() });
 
             if (error) throw error;
 
@@ -160,9 +152,7 @@ const ConsultationFormSection = ({ id, isStandalone = false }: { id?: string, is
                 const { error: fnError } = await supabase.functions.invoke('send-consultation-confirmation', {
                     body: {
                         ...values,
-                        appointment_time: appointmentDateTime.toISOString(),
-                    },
-                });
+                        appointment_time: appointmentDateTime.toISOString() } });
 
                 if (fnError) {
                     console.error("Failed to send confirmation email:", fnError);
@@ -189,7 +179,7 @@ const ConsultationFormSection = ({ id, isStandalone = false }: { id?: string, is
                         <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
                             <CheckCircle2 className="w-8 h-8 text-green-600" />
                         </div>
-                        <h3 className="text-2xl font-bold text-gray-900 mb-4">Demande Reçue!</h3>
+                        <h3 className="text-gray-900 mb-4">Demande Reçue!</h3>
                         <p className="text-gray-600 mb-8">
                             Merci de nous avoir contactés. Un expert de Bricareau confirmera votre rendez-vous sous peu.
                         </p>
@@ -413,7 +403,7 @@ const ConsultationFormSection = ({ id, isStandalone = false }: { id?: string, is
                         {step === 3 && (
                             <div className="space-y-6 animate-in fade-in slide-in-from-right-4 duration-300">
                                 <div className="bg-gray-50 rounded-xl p-6 space-y-4 border border-gray-100">
-                                    <h3 className="font-bold text-lg text-gray-900 border-b border-gray-200 pb-2">Récapitulatif</h3>
+                                    <h3 className="text-gray-900 border-b border-gray-200 pb-2">Récapitulatif</h3>
 
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                         <div>

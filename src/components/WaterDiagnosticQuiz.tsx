@@ -31,21 +31,18 @@ const steps = [
         id: 1,
         title: "Votre situation",
         question: "Commençons par votre situation",
-        icon: MapPin,
-    },
+        icon: MapPin },
     {
         id: 2,
         title: "Vos symptômes",
         question: "Quels sont vos symptômes ?",
         description: "Cochez toutes les cases qui concernent votre consommation d'eau.",
-        icon: Activity,
-    },
+        icon: Activity },
     {
         id: 3,
         title: "Nos recommandations",
         question: "Votre rapport personnalisé",
-        icon: ShieldCheck,
-    }
+        icon: ShieldCheck }
 ];
 
 const symptomCategories = [
@@ -175,8 +172,7 @@ const WaterDiagnosticQuiz = () => {
                         desc: r.desc,
                         link: window.location.origin + r.link
                     }))
-                },
-            });
+                } });
 
             if (fnError) throw fnError;
 
@@ -381,7 +377,7 @@ const WaterDiagnosticQuiz = () => {
                             {step === 1 && (
                                 <div className="space-y-10">
                                     <div className="text-center">
-                                        <h2 className="text-3xl font-light text-slate-900 tracking-tight leading-tight mb-8">
+                                        <h2 className="text-slate-900 mb-8">
                                             Parlez-nous de <span className="font-bold text-blue-600">votre situation</span>
                                         </h2>
                                     </div>
@@ -542,7 +538,7 @@ const WaterDiagnosticQuiz = () => {
                             {step === 2 && (
                                 <div className="space-y-12">
                                     <div className="text-center mb-10">
-                                        <h2 className="text-3xl font-light text-slate-900 tracking-tight leading-tight">
+                                        <h2 className="text-slate-900">
                                             Quels sont <span className="font-bold text-blue-600">vos symptômes ?</span>
                                         </h2>
                                         <p className="text-slate-500 text-sm mt-4 italic">Cochez toutes les préoccupations qui vous concernent.</p>
@@ -550,7 +546,7 @@ const WaterDiagnosticQuiz = () => {
 
                                     {symptomCategories.map((category, catIdx) => (
                                         <div key={catIdx} className="space-y-6">
-                                            <h3 className="text-xl font-bold text-blue-900 border-b border-blue-50 pb-2">{category.title}</h3>
+                                            <h3 className="text-blue-900 border-b border-blue-50 pb-2">{category.title}</h3>
                                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                                                 {category.options.map((option) => (
                                                     <div
@@ -599,7 +595,7 @@ const WaterDiagnosticQuiz = () => {
                             {step === 3 && (
                                 <form onSubmit={handleSubmit} className="flex flex-col gap-6 animate-in fade-in duration-500">
                                     <div className="text-center mb-4">
-                                        <h2 className="text-2xl font-light text-slate-900 mb-2">Finalisons votre <span className="font-bold text-blue-600">rapport personnalisé</span></h2>
+                                        <h2 className="text-slate-900 mb-2">Finalisons votre <span className="font-bold text-blue-600">rapport personnalisé</span></h2>
                                         <p className="text-slate-500">Où devrions-nous envoyer vos résultats ?</p>
                                     </div>
 
@@ -700,7 +696,7 @@ const WaterDiagnosticQuiz = () => {
                                 <div className="w-20 h-20 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-6 border-4 border-white shadow-lg">
                                     <CheckCircle2 className="w-10 h-10 text-green-500" />
                                 </div>
-                                <h2 className="text-3xl font-bold text-slate-900 mb-2">Votre Prescription d'Eau</h2>
+                                <h2 className="text-slate-900 mb-2">Votre Prescription d'Eau</h2>
                                 <p className="text-slate-500 italic">Voici les solutions recommandées basées sur votre profil</p>
                             </div>
 
@@ -719,8 +715,8 @@ const WaterDiagnosticQuiz = () => {
                                                     {rec.product}
                                                 </span>
                                             </div>
-                                            <h3 className="text-xl font-bold text-slate-900 mb-2 leading-tight">{rec.title}</h3>
-                                            <p className="text-sm text-slate-600 mb-6 leading-snug">
+                                            <h3 className="text-slate-900 mb-2">{rec.title}</h3>
+                                            <p className="text-sm text-slate-600 mb-6">
                                                 {rec.desc}
                                             </p>
                                         </div>

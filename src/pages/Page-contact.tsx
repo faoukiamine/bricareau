@@ -26,10 +26,14 @@ const Contact = () => {
 
                         <div className="container mx-auto px-6 py-12 lg:py-0">
                             <div className="max-w-4xl">
-                                <h1 className="text-[36px] md:text-[56px] leading-[1.1] font-bold text-slate-900 tracking-tight mb-4">
+                                <h1
+                                    className="text-[36px] md:text-[56px] leading-[1.1] text-slate-900 tracking-tight mb-4"
+                                    style={{
+                                        fontWeight: 350 }}
+                                >
                                     Parlons de votre <span className="text-[#0052ff]">Projet d'eau</span>
                                 </h1>
-                                <p className="text-lg text-slate-600 max-w-2xl font-light leading-snug">
+                                <p className="text-slate-600 max-w-2xl font-light">
                                     Une question ? Un projet ? Notre équipe d'experts est là pour vous conseiller
                                     et vous accompagner dans le choix de votre système de traitement d'eau.
                                 </p>
@@ -46,8 +50,8 @@ const Contact = () => {
                             <div className="space-y-8">
                                 <div>
                                     <h2
-                                        className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter"
-                                        style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"', fontStyle: 'normal' }}
+                                        className="text-slate-900 mb-8 md:leading-[48px]"
+                                        style={{ fontStyle: 'normal' }}
                                     >
                                         Informations de contact
                                     </h2>
@@ -63,7 +67,7 @@ const Contact = () => {
                                             <Phone className="h-6 w-6 text-primary" />
                                         </div>
                                         <div>
-                                            <h3 className="font-semibold text-foreground mb-1">Téléphone</h3>
+                                            <h3 className="text-foreground mb-1">Téléphone</h3>
                                             <a href="tel:18552649328" className="text-muted-foreground hover:text-primary transition-colors">
                                                 1 855 264 9328
                                             </a>
@@ -75,7 +79,7 @@ const Contact = () => {
                                             <MapPin className="h-6 w-6 text-primary" />
                                         </div>
                                         <div>
-                                            <h3 className="font-semibold text-foreground mb-1">Adresse</h3>
+                                            <h3 className="text-foreground mb-1">Adresse</h3>
                                             <p className="text-muted-foreground">
                                                 4180 Avenue de Courtrai Suite 100
                                                 Montréal, QC H3S 1C3
@@ -88,7 +92,7 @@ const Contact = () => {
                                             <Clock className="h-6 w-6 text-primary" />
                                         </div>
                                         <div>
-                                            <h3 className="font-semibold text-foreground mb-1">Heures d'ouverture</h3>
+                                            <h3 className="text-foreground mb-1">Heures d'ouverture</h3>
                                             <div className="text-muted-foreground space-y-1">
                                                 <p>Lundi - Vendredi: 8h30 - 17h00</p>
                                                 <p>Sur rendez-vous</p>

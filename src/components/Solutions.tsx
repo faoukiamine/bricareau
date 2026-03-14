@@ -7,38 +7,32 @@ const solutions = [
     icon: Droplets,
     title: "Adoucisseurs d'eau",
     description: "Notre adoucisseur d'eau offrira à votre famille une grande quantité d'eau propre et douce à volonté.",
-    href: "#",
-  },
+    href: "#" },
   {
     icon: Sparkles,
     title: "Solutions d'eau potable",
     description: "Profitez d'une eau plus propre avec notre système de purification d'eau à osmose inverse à 6 étapes.",
-    href: "#",
-  },
+    href: "#" },
   {
     icon: Filter,
     title: "Filtres d'eau spécialisés",
     description: "Nos filtres sont brillamment conçus pour résoudre vos problèmes spécifiques en matière d'eau.",
-    href: "#",
-  },
+    href: "#" },
   {
     icon: Waves,
     title: "Filtration de l'eau de puits",
     description: "Nos systèmes de filtration aident à fournir une eau de qualité en provenance d'un puits artésien ou de surface.",
-    href: "#",
-  },
+    href: "#" },
   {
     icon: Zap,
     title: "Systèmes de désinfection UV",
     description: "Utilisés pour la stérilisation contre les bactéries, les virus, les coliformes, l'E.Coli, le Cryptosporidium,...",
-    href: "#",
-  },
+    href: "#" },
   {
     icon: Wine,
     title: "Fontaines d'eau",
     description: "Pratiques et économiques afin que vous puissiez profiter d'une eau fraîche au meilleur goût.",
-    href: "#",
-  },
+    href: "#" },
 ];
 
 const Solutions = () => {
@@ -46,7 +40,7 @@ const Solutions = () => {
     <section id="solutions" className="py-12 md:py-20 lg:py-24 bg-secondary/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+          <h2 className="text-foreground mb-4">
             Nos Solutions de Traitement d'Eau Résidentielles
           </h2>
         </div>

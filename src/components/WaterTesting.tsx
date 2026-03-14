@@ -11,15 +11,15 @@ const WaterTesting = () => {
           </div>
           
           <div className="space-y-4">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground">
+            <h2 className="text-foreground">
               Tests de la qualité de l'eau
             </h2>
-            <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold text-foreground">
+            <h3 className="lg:text-3xl text-foreground">
               Vous êtes préoccupés par la qualité de votre eau ?
             </h3>
           </div>
 
-          <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto leading-snug">
+          <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto">
             Procurez-vous notre kit de test d'eau et renvoyez-le-nous ! Nous réaliserons des analyses 
             d'eau approfondies et vous recommanderons des solutions selon la composition de votre eau.
           </p>

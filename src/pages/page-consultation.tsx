@@ -16,8 +16,7 @@ import {
     Accordion,
     AccordionContent,
     AccordionItem,
-    AccordionTrigger,
-} from "@/components/ui/accordion";
+    AccordionTrigger } from "@/components/ui/accordion";
 
 
 const PageConsultation = () => {
@@ -50,13 +49,14 @@ const PageConsultation = () => {
                                 Consultation Sans Frais
                             </span>
                             <h1
-                                className="text-[32px] md:text-[48px] font-bold text-slate-900 mb-6 leading-[1.1] tracking-tight animate-in fade-in slide-in-from-bottom duration-700"
-                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                className="text-[32px] md:text-[48px] text-slate-900 mb-6 leading-[1.1] tracking-tight animate-in fade-in slide-in-from-bottom duration-700"
+                                style={{
+                                    fontWeight: 350 }}
                             >
                                 Prenez le contrôle de <br className="hidden md:block" />
                                 <span className="text-blue-600">la qualité de votre eau.</span>
                             </h1>
-                            <p className="text-lg text-slate-600 mb-10 leading-snug font-light text-justify animate-in fade-in slide-in-from-bottom duration-700 delay-100">
+                            <p className="text-slate-600 mb-10 font-light text-justify animate-in fade-in slide-in-from-bottom duration-700 delay-100">
                                 Organisez un appel téléphonique gratuit avec l'un de nos experts. Nous analyserons vos besoins, répondrons à vos questions et vous guiderons vers la meilleure solution d'adoucissement ou de filtration, sans aucune vente à pression.
                             </p>
 
@@ -71,7 +71,7 @@ const PageConsultation = () => {
                                             <feature.icon className="w-6 h-6 text-blue-600" />
                                         </div>
                                         <div>
-                                            <h3 className="text-xl font-bold text-slate-900 mb-1">{feature.title}</h3>
+                                            <h3 className="text-slate-900 mb-1">{feature.title}</h3>
                                             <p className="text-slate-600 font-light">{feature.desc}</p>
                                         </div>
                                     </div>
@@ -110,12 +110,12 @@ const PageConsultation = () => {
                 <div className="container mx-auto px-4 lg:px-6">
                     <div className="text-center mb-16 max-w-2xl mx-auto">
                         <h2
-                            className="text-[32px] md:text-[40px] font-bold text-slate-900 mb-6 leading-tight tracking-tight"
-                            style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                            className="text-slate-900 mb-6"
+                            style={{ }}
                         >
                             Comment se déroule <span className="text-blue-600">notre consultation ?</span>
                         </h2>
-                        <p className="text-lg text-slate-600 font-light">
+                        <p className="text-slate-600 font-light">
                             Voici les questions les plus fréquentes concernant notre processus d'évaluation gratuite.
                         </p>
                     </div>
@@ -131,10 +131,10 @@ const PageConsultation = () => {
                                 { q: "Puis-je reporter ou annuler mon rendez-vous téléphonique ?", a: "Oui, bien sûr. Si vous avez un empêchement, envoyez-nous simplement un courriel ou appelez-nous pour replanifier à votre convenance." }
                             ].slice(0, showAllFaqs ? undefined : 4).map((item, idx) => (
                                 <AccordionItem key={idx} value={`item-${idx}`} className="border-b-gray-200">
-                                    <AccordionTrigger className="text-left text-base md:text-lg font-medium leading-6 hover:no-underline py-6" style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}>
+                                    <AccordionTrigger className="text-left text-base md:text-lg font-medium leading-6 hover:no-underline py-6" style={{ }}>
                                         {item.q}
                                     </AccordionTrigger>
-                                    <AccordionContent className="text-base font-light leading-relaxed text-slate-600 pb-6 text-justify" style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}>
+                                    <AccordionContent className="text-base font-light leading-relaxed text-slate-600 pb-6 text-justify" style={{ }}>
                                         {item.a}
                                     </AccordionContent>
                                 </AccordionItem>
@@ -168,10 +168,10 @@ const PageConsultation = () => {
             {/* CTA Section */}
             <section className="bg-primary py-16 md:py-20">
                 <div className="container mx-auto px-4 text-center">
-                    <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
+                    <h2 className="text-primary-foreground mb-4">
                         Vous préférez nous appeler directement ?
                     </h2>
-                    <p className="text-primary-foreground/80 text-lg mb-8 max-w-2xl mx-auto">
+                    <p className="text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
                         Notre équipe est disponible du lundi au vendredi de 8h30 à 20h30.
                     </p>
                     <div className="flex justify-center">

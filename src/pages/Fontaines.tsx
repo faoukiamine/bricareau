@@ -72,7 +72,7 @@ const ImpactCalculator = () => {
                         <Leaf className="w-6 h-6" />
                     </div>
                     <div>
-                        <h3 className="text-xl font-bold text-slate-900 tracking-tight leading-none mb-1.5">Eco-Bilan</h3>
+                        <h3 className="text-slate-900 tracking-tight leading-none mb-1.5">Eco-Bilan</h3>
                         <p className="text-blue-500 text-[10px] font-black uppercase tracking-widest leading-none">Simulateur d'économie</p>
                     </div>
                 </div>
@@ -147,7 +147,7 @@ const ImpactCalculator = () => {
                     </div>
 
                     <div className="pt-2">
-                        <p className="text-[9px] text-slate-400 text-center font-medium leading-snug italic">
+                        <p className="text-[9px] text-slate-400 text-center font-medium italic">
                             Éliminez le plastique, valorisez votre santé.
                         </p>
                     </div>
@@ -176,8 +176,8 @@ const SolutionCard = ({ item }: { item: SolutionItem }) => {
                 <div className="w-full aspect-square bg-slate-50 rounded-2xl mb-6 flex items-center justify-center p-4">
                     <img src={item.img} alt={`${item.title}`} className="w-full h-full object-contain mix-blend-multiply" />
                 </div>
-                <h3 className="text-xl font-bold mb-4 min-h-[56px] flex items-center justify-center text-center text-slate-900 tracking-tight">{item.title}</h3>
-                <p className="font-light text-[18px] leading-[26px] text-slate-500 mb-6 flex-grow text-justify">{item.desc}</p>
+                <h3 className="mb-4 min-h-[56px] flex items-center justify-center text-center text-slate-900 tracking-tight">{item.title}</h3>
+                <p className="font-light leading-[26px] text-slate-500 mb-6 flex-grow text-justify">{item.desc}</p>
 
                 <Button
                     onClick={() => setShowSpecs(true)}
@@ -196,7 +196,7 @@ const SolutionCard = ({ item }: { item: SolutionItem }) => {
                     }`}
             >
                 <div className="mb-8 text-left">
-                    <h3 className="text-2xl font-bold mb-2 text-blue-600">Spécifications</h3>
+                    <h3 className="mb-2 text-blue-600">Spécifications</h3>
                     <div className="w-12 h-1 bg-blue-500 rounded-full" />
                 </div>
 
@@ -248,18 +248,21 @@ const Fontaines = () => {
                             </span>
                             <span className="sr-only">Montréal • Rive-Sud • Rive-Nord</span>
                             <h1
-                                className="text-[32px] md:text-[42px] leading-[1.1] md:leading-[1.2] font-bold lg:font-light mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl"
-                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                className="text-[32px] md:text-[42px] leading-[1.1] md:leading-[1.2] mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl"
+                                style={{
+                                    fontWeight: 350
+                                }}
                             >
                                 L'Art de l'eau pure & rafraîchissante.
                             </h1>
-                            <p className="text-lg md:text-xl font-light leading-snug text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left">
+                            <p className="font-light text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left">
                                 Élevez votre expérience d'hydratation avec nos refroidisseurs d'eau haute performance. Design élégant et pureté absolue.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4">
                                 <Button
                                     size="lg"
-                                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-10 h-16 text-lg font-bold shadow-xl shadow-blue-100 transition-all hover:scale-105"
+                                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200"
+                                    style={{ }}
                                     asChild
                                 >
                                     <NavLink to="/contact" className="flex items-center gap-2">
@@ -269,7 +272,8 @@ const Fontaines = () => {
                                 <Button
                                     size="lg"
                                     variant="outline"
-                                    className="bg-slate-100 lg:bg-white/10 hover:bg-slate-200 lg:hover:bg-white/20 text-slate-800 lg:text-white border-slate-200 lg:border-white rounded-full px-10 h-16 text-lg font-bold transition-all backdrop-blur-sm"
+                                    className="bg-slate-100 lg:bg-white/10 hover:bg-slate-200 lg:hover:bg-white/20 text-slate-800 lg:text-white border-slate-200 lg:border-white rounded-full px-8 h-14 backdrop-blur-sm shadow-lg"
+                                    style={{ }}
                                     asChild
                                 >
                                     <a href="#models" className="flex items-center gap-2">
@@ -301,10 +305,10 @@ const Fontaines = () => {
                 {/* Section 1: Solutions professionnelles */}
                 <section className="py-24 bg-blue-600 text-white">
                     <div className="container mx-auto px-6 text-center">
-                        <h2 className="text-[32px] md:text-[48px] font-normal text-white mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-justify md:text-center mx-auto max-w-4xl">
+                        <h2 className="text-white mb-8 md:leading-[48px] text-justify md:text-center mx-auto max-w-4xl">
                             L'hydratation pure à la maison. <br />L'eau fraîche à la portée de vos mains.
                         </h2>
-                        <p className="font-light text-[20px] leading-snug text-white/70 max-w-4xl mx-auto mb-16">
+                        <p className="font-light text-white/70 max-w-4xl mx-auto mb-16">
                             Bricareau redéfinit votre expérience d'hydratation quotidienne avec des solutions d'eau fraîche haut de gamme.
                             Offrez à votre famille le luxe d'une eau d'une pureté exceptionnelle, toujours à la température idéale.
                         </p>
@@ -339,10 +343,10 @@ const Fontaines = () => {
                 <section className="py-32 bg-slate-50 relative overflow-hidden">
                     <div className="container mx-auto px-6">
                         <div className="text-center max-w-5xl mx-auto mb-20">
-                            <h2 className="text-[36px] md:text-[56px] font-bold text-slate-900 mb-6 leading-tight tracking-tighter">
+                            <h2 className="text-slate-900 mb-6">
                                 Plus qu'une fontaine d'eau, <br />un choix intelligent & responsable.
                             </h2>
-                            <p className="text-slate-500 text-lg font-light">
+                            <p className="text-slate-500 font-light">
                                 Alliez performance technologique, responsabilité écologique et économies domestiques.
                             </p>
                         </div>
@@ -361,9 +365,9 @@ const Fontaines = () => {
                                         <Star className="w-4 h-4 text-blue-400 fill-blue-400" />
                                         <span className="text-xs font-black text-blue-100 uppercase tracking-widest">Choix Premium </span>
                                     </div>
-                                    <h3 className="text-[42px] font-bold text-white mb-3 tracking-tighter leading-none">Art de Vivre</h3>
+                                    <h3 className="text-white mb-3 tracking-tighter leading-none">Art de Vivre</h3>
                                     <div className="w-20 h-1.5 bg-blue-500 rounded-full mb-6" />
-                                    <p className="text-white/80 text-xl font-light max-w-lg leading-snug">
+                                    <p className="text-white/80 font-light max-w-lg">
                                         Une pureté incomparable qui s'intègre harmonieusement à votre quotidien. Découvrez l'équilibre parfait entre esthétique et santé.
                                     </p>
                                 </div>
@@ -383,8 +387,8 @@ const Fontaines = () => {
                                                 <DollarSign className="w-5 h-5 text-white" />
                                             </div>
                                             <div>
-                                                <h3 className="text-sm font-bold text-white tracking-tight">Économisez de l'argent</h3>
-                                                <p className="text-white/60 text-[11px] font-light leading-snug">Réduisez vos frais d'eau de 60% : une solution rentable dès le premier jour.</p>
+                                                <h3 className="text-sm text-white tracking-tight">Économisez de l'argent</h3>
+                                                <p className="text-white/60 text-[11px] font-light">Réduisez vos frais d'eau de 60% : une solution rentable dès le premier jour.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -396,8 +400,8 @@ const Fontaines = () => {
                                                 <Clock className="w-5 h-5 text-blue-600 group-hover:text-white transition-colors" />
                                             </div>
                                             <div>
-                                                <h3 className="text-sm font-bold text-slate-900 tracking-tight">Gagnez du temps</h3>
-                                                <p className="text-slate-500 text-[11px] font-light leading-snug">Oubliez la corvée des bouteilles d'eau lourdes et les attentes de livraison interminables.</p>
+                                                <h3 className="text-sm text-slate-900 tracking-tight">Gagnez du temps</h3>
+                                                <p className="text-slate-500 text-[11px] font-light">Oubliez la corvée des bouteilles d'eau lourdes et les attentes de livraison interminables.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -409,8 +413,8 @@ const Fontaines = () => {
                                                 <Recycle className="w-5 h-5 text-blue-600 group-hover:text-white transition-colors" />
                                             </div>
                                             <div>
-                                                <h3 className="text-sm font-bold text-slate-900 tracking-tight">Sauvons l'environnement</h3>
-                                                <p className="text-slate-500 text-[11px] font-light leading-snug">Éliminez le plastique à usage unique pour une hydratation 100% responsable.</p>
+                                                <h3 className="text-sm text-slate-900 tracking-tight">Sauvons l'environnement</h3>
+                                                <p className="text-slate-500 text-[11px] font-light">Éliminez le plastique à usage unique pour une hydratation 100% responsable.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -436,7 +440,7 @@ const Fontaines = () => {
                     <div className="container mx-auto px-6">
                         <div className="max-w-6xl mx-auto">
                             {/* Main Title */}
-                            <h2 className="text-[40px] md:text-[64px] font-bold text-[#0A192F] tracking-tighter leading-[1.1] mb-20 text-balance">
+                            <h2 className="mb-20 text-balance">
                                 Vers un monde <br />
                                 <span className="text-[#0A192F]">sans bouteilles en plastique...</span>
                             </h2>
@@ -444,7 +448,7 @@ const Fontaines = () => {
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24">
                                 {/* Left Column: Action Plan */}
                                 <div className="space-y-12">
-                                    <h3 className="text-blue-600 text-lg font-bold tracking-[0.1em] uppercase">
+                                    <h3 className="text-blue-600 tracking-[0.1em] uppercase">
                                         Que devons-nous faire ?
                                     </h3>
                                     <ul className="space-y-8">
@@ -456,7 +460,7 @@ const Fontaines = () => {
                                         ].map((text, i) => (
                                             <li key={i} className="flex items-start gap-4 group">
                                                 <div className="mt-2.5 w-1.5 h-1.5 rounded-full bg-blue-600 shrink-0 group-hover:scale-150 transition-transform" />
-                                                <p className="text-slate-600 text-lg font-light leading-snug">
+                                                <p className="text-slate-600 font-light">
                                                     {text}
                                                 </p>
                                             </li>
@@ -467,10 +471,10 @@ const Fontaines = () => {
                                 {/* Right Column: Solutions & Benefits */}
                                 <div className="space-y-12">
                                     <div className="space-y-6">
-                                        <h3 className="text-blue-600 text-lg font-bold tracking-[0.1em] uppercase">
+                                        <h3 className="text-blue-600 tracking-[0.1em] uppercase">
                                             Les solutions Bricareau pour traiter l'eau de boisson :
                                         </h3>
-                                        <p className="text-slate-600 text-lg font-light leading-snug">
+                                        <p className="text-slate-600 font-light">
                                             Les gammes Bricareau ont été développées pour offrir une eau fraîche, délicieuse et saine, aussi bien pour les professionnels que pour le particulier :
                                         </p>
                                     </div>
@@ -516,21 +520,25 @@ const Fontaines = () => {
                     <div className="absolute inset-0 bg-gradient-to-br from-blue-700/40 via-transparent to-transparent opacity-50" />
                     <div className="container mx-auto px-6 relative z-10 text-center">
                         <div className="max-w-4xl mx-auto">
-                            <h2 className="text-4xl md:text-6xl font-bold text-white mb-8 leading-[1.1] tracking-tighter text-balance">
+                            <h2 className="text-white mb-8 text-balance">
                                 Sublimez votre art de vivre <br />avec l'excellence de l'eau pure.
                             </h2>
-                            <p className="text-white/60 text-xl md:text-2xl font-light mb-16 max-w-2xl mx-auto leading-snug">
+                            <p className="text-white/60 md:text-2xl font-light mb-16 max-w-2xl mx-auto">
                                 Rejoignez le club familles Bricareau et profitez d'une source d'eau digne d'un palace, sans sortir de chez vous.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-8 justify-center items-center">
-                                <Button className="bg-white hover:bg-blue-50 text-blue-600 rounded-full px-16 h-20 text-xl font-black shadow-[0_20px_40px_-5px_rgba(0,0,0,0.2)] transition-all hover:scale-105" asChild>
+                                <Button
+                                    className="bg-white hover:bg-blue-50 text-blue-600 rounded-full px-12 h-14 shadow-lg"
+                                    style={{ }}
+                                    asChild
+                                >
                                     <NavLink to="/contact">Demandez une soumission</NavLink>
                                 </Button>
                                 <a href="tel:18552649328" className="flex items-center gap-4 text-white group cursor-pointer hover:text-white/80 transition-colors">
                                     <div className="w-12 h-12 rounded-full border border-white/30 flex items-center justify-center group-hover:bg-white/10 transition-all">
-                                        <Phone className="w-5 h-5 text-white" />
+                                        <Phone className="w-5 h-5 text-white" strokeWidth={1.5} />
                                     </div>
-                                    <span className="text-lg font-bold">Parlez à un conseiller</span>
+                                    <span className="text-lg" style={{ fontWeight: 350 }}>Parlez à un conseiller</span>
                                 </a>
                             </div>
                         </div>

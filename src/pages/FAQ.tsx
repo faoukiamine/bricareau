@@ -14,7 +14,7 @@ const FAQCard = ({ item }: { item: { q: string, a: string } }) => {
 
     return (
         <div className="bg-white border border-slate-200 rounded p-6 md:p-8 flex flex-col h-full hover:shadow-md transition-shadow">
-            <h3 className="text-xl font-bold text-slate-900 mb-4 leading-tight">
+            <h3 className="text-slate-900 mb-4">
                 {item.q}
             </h3>
             <div className={`text-slate-700 font-light leading-relaxed mb-6 flex-grow ${!isExpanded && isLong ? 'line-clamp-4' : ''}`}>
@@ -90,10 +90,14 @@ const FAQ = () => {
                         </div>
 
                         <div className="container mx-auto px-6 max-w-5xl py-12 lg:py-0">
-                            <h1 className="text-[32px] md:text-[52px] leading-tight font-bold text-slate-900 mb-6 tracking-tight">
+                            <h1
+                                className="text-[32px] md:text-[52px] leading-tight text-slate-900 mb-6 tracking-tight"
+                                style={{
+                                    fontWeight: 350 }}
+                            >
                                 Obtenez des <span className="text-blue-600">réponses</span> à vos questions
                             </h1>
-                            <p className="text-[18px] text-slate-600 max-w-2xl font-light leading-relaxed">
+                            <p className="text-slate-600 max-w-2xl font-light">
                                 Vous trouverez ci-dessous les réponses aux questions les plus fréquentes. Recherchez les sujets qui vous intéressent ou triez par catégorie.
                             </p>
                         </div>
@@ -119,7 +123,7 @@ const FAQ = () => {
                         </div>
 
                         {/* Results Count */}
-                        <p className="font-bold text-lg md:text-xl text-slate-900 mb-8 border-b border-slate-900 pb-4">
+                        <p className="font-bold text-slate-900 mb-8 border-b border-slate-900 pb-4">
                             {totalResults} résultats trouvés
                         </p>
 
@@ -167,7 +171,7 @@ const FAQ = () => {
                             {filteredCategories.length === 0 ? (
                                 <div className="text-center py-16 text-slate-500">
                                     <Search className="w-12 h-12 mx-auto mb-4 opacity-20" />
-                                    <p className="text-lg">Aucune question ne correspond à votre recherche.</p>
+                                    <p className="">Aucune question ne correspond à votre recherche.</p>
                                 </div>
                             ) : (
                                 filteredCategories.map((cat) => {
@@ -178,7 +182,7 @@ const FAQ = () => {
 
                                     return (
                                         <section key={cat.id} id={cat.id}>
-                                            <h2 className="text-2xl font-bold text-slate-900 mb-6">{cat.title}</h2>
+                                            <h2 className="text-slate-900 mb-6">{cat.title}</h2>
 
                                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                                                 {displayItems.map((item, qIdx) => (
@@ -212,10 +216,10 @@ const FAQ = () => {
                         <Droplets className="absolute -top-10 -right-10 w-64 h-64 text-white" />
                     </div>
                     <div className="container mx-auto px-6 relative z-10 text-center">
-                        <h2 className="text-3xl md:text-5xl font-bold mb-8 italic">
+                        <h2 className="mb-8 italic">
                             Vous n'avez pas trouvé votre réponse ?
                         </h2>
-                        <p className="text-xl opacity-90 mb-12 max-w-2xl mx-auto leading-snug">
+                        <p className="opacity-90 mb-12 max-w-2xl mx-auto">
                             Nos experts en traitement de l'eau sont disponibles pour répondre à toutes vos interrogations et planifier une analyse gratuite.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-6 justify-center">

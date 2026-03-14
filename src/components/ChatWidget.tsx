@@ -20,8 +20,7 @@ const ChatWidget = () => {
             id: "1",
             type: "bot",
             text: "Bonjour ! Je suis l'assistant Bricareau. Comment puis-je vous aider aujourd'hui ?",
-            options: ["Analyse d'eau gratuite", "Nos produits", "Parler à un expert", "Urgence technique"],
-        },
+            options: ["Analyse d'eau gratuite", "Nos produits", "Parler à un expert", "Urgence technique"] },
     ]);
     const [inputValue, setInputValue] = useState("");
     const messagesEndRef = useRef<HTMLDivElement>(null);
@@ -42,8 +41,7 @@ const ChatWidget = () => {
         const userMessage: Message = {
             id: Date.now().toString(),
             type: "user",
-            text: text,
-        };
+            text: text };
 
         setMessages((prev) => [...prev, userMessage]);
         setInputValue("");
@@ -53,8 +51,7 @@ const ChatWidget = () => {
             const botResponse: Message = {
                 id: (Date.now() + 1).toString(),
                 type: "bot",
-                text: "Merci pour votre message. Un de nos experts en traitement d'eau va vous répondre dans quelques instants. En attendant, saviez-vous que nous offrons des analyses d'eau gratuites ?",
-            };
+                text: "Merci pour votre message. Un de nos experts en traitement d'eau va vous répondre dans quelques instants. En attendant, saviez-vous que nous offrons des analyses d'eau gratuites ?" };
 
             if (text === "Analyse d'eau gratuite") {
                 navigate("/tests-eau");
@@ -99,7 +96,7 @@ const ChatWidget = () => {
                                 <div className="absolute bottom-0 right-0 w-3 h-3 bg-green-400 border-2 border-primary rounded-full" />
                             </div>
                             <div>
-                                <h3 className="font-bold text-sm">Équipe Bricareau</h3>
+                                <h3 className="text-sm">Équipe Bricareau</h3>
                                 <p className="text-[10px] text-blue-100 opacity-80">En ligne • Répond en quelques minutes</p>
                             </div>
                         </div>

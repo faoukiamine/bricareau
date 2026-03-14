@@ -56,8 +56,8 @@ const ProductShowcase = () => {
                 <div className="text-center mb-12 md:mb-16">
                     <h2
                         id="solutions-title"
-                        className="text-slate-900 tracking-tighter scroll-mt-[120px]"
-                        style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                        className="text-slate-900 scroll-mt-[120px]"
+                        style={{ }}
                     >
                         <span className="text-[32px] md:text-[60px] font-light leading-[1.2] md:leading-[60px] block">Solutions résidentielles</span>
                         <span className="text-[32px] md:text-[60px] font-medium leading-[1.2] md:leading-[60px] block">de traitement de l'eau</span>
@@ -84,20 +84,20 @@ const ProductShowcase = () => {
                             {/* Product info */}
                             <div className="p-8 space-y-4 flex flex-col flex-grow border-t-2 border-transparent group-hover:border-blue-600 transition-colors">
                                 <h3
-                                    className="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors tracking-tight text-center"
-                                    style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                    className="text-slate-900 group-hover:text-blue-600 transition-colors tracking-tight text-center"
+                                    style={{ }}
                                 >
                                     {product.name}
                                 </h3>
                                 <p
-                                    className="text-[18px] leading-[25px] text-slate-500 font-light flex-grow text-justify"
-                                    style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                    className="leading-[25px] text-slate-500 font-light flex-grow text-justify"
+                                    style={{ }}
                                 >
                                     {product.description}
                                 </p>
                                 <div
                                     className="inline-flex items-center gap-2 text-blue-600 font-bold text-xs tracking-widest uppercase mt-4 group-hover:underline self-end"
-                                    style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                    style={{ }}
                                 >
                                     <span></span>
                                     <ArrowRight className="h-6 w-6 transform group-hover:translate-x-1 transition-transform" />

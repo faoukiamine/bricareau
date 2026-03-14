@@ -10,32 +10,27 @@ const testimonials = [
     content: "Our well water was terrible - rusty and smelly. Bricareau's system fixed everything. Can't believe the difference! The water tastes great now.",
     author: "Jennifer Martinez",
     location: "Portland, OR",
-    rating: 5,
-  },
+    rating: 5 },
   {
     content: "Excellent service from start to finish. The installation was quick, and the technician was very knowledgeable. Highly recommend their water softeners.",
     author: "David Chen",
     location: "Austin, TX",
-    rating: 5,
-  },
+    rating: 5 },
   {
     content: "We've had our system for 6 months now and our skin feels so much better. No more dry itchy skin after showers. Best investment for our home.",
     author: "Sarah Johnson",
     location: "Chicago, IL",
-    rating: 5,
-  },
+    rating: 5 },
   {
     content: "The drinking water system is a game changer. No more buying plastic bottles! The water is crisp and clean.",
     author: "Michael Brown",
     location: "Seattle, WA",
-    rating: 5,
-  },
+    rating: 5 },
   {
     content: "Professional team and top-notch products. They tested our water and recommended exactly what we needed without overselling.",
     author: "Emily Wilson",
     location: "Denver, CO",
-    rating: 5,
-  },
+    rating: 5 },
 ];
 
 const Testimonials = () => {
@@ -67,7 +62,7 @@ const Testimonials = () => {
     <section className="py-16 md:py-16 bg-white overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 md:mb-16 space-y-4">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
+          <h2 className="text-foreground">
             Unmatched Quality. <span className="font-extrabold">Unforgettable Service.</span>
           </h2>
         </div>
@@ -80,12 +75,12 @@ const Testimonials = () => {
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="flex-[0_0_100%] min-w-0 px-4">
                   <div className="flex flex-col items-center text-center space-y-6">
-                    <p className="text-xl md:text-2xl text-gray-700 leading-snug max-w-2xl font-medium">
+                    <p className="md:text-2xl text-gray-700 max-w-2xl font-medium">
                       "{testimonial.content}"
                     </p>
 
                     <div className="space-y-2">
-                      <h4 className="font-bold text-lg text-gray-900">{testimonial.author}</h4>
+                      <h4 className="text-gray-900">{testimonial.author}</h4>
                       <p className="text-sm text-gray-500">{testimonial.location}</p>
                     </div>
 

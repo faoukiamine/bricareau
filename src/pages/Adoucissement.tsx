@@ -49,7 +49,7 @@ import {
     Accordion,
     AccordionContent,
     AccordionItem,
-    AccordionTrigger,
+    AccordionTrigger
 } from "@/components/ui/accordion";
 import ConsultationFormSection from "@/components/ConsultationFormSection";
 
@@ -92,20 +92,22 @@ const Adoucissement = () => {
                     <div className="container relative z-10 mx-auto px-4 py-10 sm:py-16 lg:py-20 flex flex-col justify-center">
                         <div className="max-w-2xl lg:text-white">
                             <h1
-                                className="text-[32px] md:text-[42px] leading-[1.1] md:leading-[1.2] font-bold lg:font-light mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl"
-                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                className="text-[32px] md:text-[42px] leading-[1.1] md:leading-[1.2] mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl"
+                                style={{
+                                    fontWeight: 350
+                                }}
                             >
                                 Adoucisseurs d'eau <br />
                                 Éliminez le calcaire et l'eau dure.
                             </h1>
-                            <p className="text-lg font-light leading-snug text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
+                            <p className="font-light text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
                                 Redécouvrez le confort d'une eau soyeuse protégeant votre peau, vos cheveux et vos appareils électroménagers. Alliez économies durables et bien-être absolu avec nos solutions de traitement d'eau.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4">
                                 <Button
                                     size="lg"
                                     className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200"
-                                    style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                    style={{}}
                                     asChild
                                 >
                                     <NavLink to="/consultation">
@@ -116,7 +118,7 @@ const Adoucissement = () => {
                                     size="lg"
                                     variant="outline"
                                     className="bg-slate-100 lg:bg-white/10 hover:bg-slate-200 lg:hover:bg-white/20 text-slate-800 lg:text-white border-slate-200 lg:border-white rounded-full px-8 h-14 backdrop-blur-sm shadow-lg"
-                                    style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                    style={{}}
                                     asChild
                                 >
                                     <a href="tel:18552649328" className="flex items-center gap-2">
@@ -149,7 +151,7 @@ const Adoucissement = () => {
                 <section className="py-24 bg-blue-600 text-white text-center">
                     <div className="container mx-auto px-6 text-center">
                         <div className="text-center mb-16">
-                            <h2 className="text-[32px] md:text-[48px] font-normal text-white mb-8 leading-[1.2] md:leading-[48px] tracking-tighter text-center">
+                            <h2 className="text-white mb-8 md:leading-[48px] text-center">
                                 Les avantages de l'adoucissement d'eau
                             </h2>
                         </div>
@@ -165,20 +167,30 @@ const Adoucissement = () => {
                                     <div className="w-20 h-20 rounded-2xl bg-white flex items-center justify-center mb-8 transition-all group-hover:scale-110 group-hover:bg-white/10">
                                         <item.icon className="h-10 w-10 text-blue-600 group-hover:text-white" />
                                     </div>
-                                    <h4 className="text-2xl font-medium mb-4 tracking-tight">{item.title}</h4>
-                                    <p className="text-lg font-light leading-snug text-blue-100 text-justify">{item.desc}</p>
+                                    <h4 className="mb-4 tracking-tight">{item.title}</h4>
+                                    <p className="font-light text-blue-100 text-justify">{item.desc}</p>
                                 </div>
                             ))}
                         </div>
                     </div>
                 </section>
                 {/* 4. Water Softeners Section */}
-                <section className="py-24 bg-white relative overflow-hidden">
-                    <div className="container mx-auto px-6">
+                <section className="relative lg:py-24 bg-white overflow-hidden">
+                    {/* Mobile Image Section */}
+                    <div className="lg:hidden w-full h-[350px] sm:h-[450px] relative">
+                        <img
+                            src={kitchenImg}
+                            alt="Cuisine moderne protégée par un adoucisseur d'eau résidentiel Bricareau - Vaisselle sans taches"
+                            className="w-full h-full object-cover"
+                        />
+                        <div className="absolute inset-0 bg-black/10" />
+                    </div>
+
+                    <div className="container mx-auto px-6 py-12 lg:py-0">
                         <div className="flex flex-col lg:flex-row items-start gap-16">
-                            {/* Left Side: Image with Video Button */}
-                            <div className="w-full lg:w-1/2 lg:sticky lg:top-24 mb-12 lg:mb-0">
-                                <div className="rounded-[2.5rem] overflow-hidden shadow-2xl relative h-[300px] sm:h-[400px] lg:h-[600px] w-full group">
+                            {/* Left Side: Image with Video Button - Desktop Only */}
+                            <div className="hidden lg:block w-full lg:w-1/2 lg:sticky lg:top-24 mb-12 lg:mb-0">
+                                <div className="rounded-[2.5rem] overflow-hidden shadow-2xl relative h-[600px] w-full group">
                                     <img
                                         src={kitchenImg}
                                         alt="Cuisine moderne protégée par un adoucisseur d'eau résidentiel Bricareau - Vaisselle sans taches"
@@ -201,15 +213,15 @@ const Adoucissement = () => {
                             </div>
 
                             {/* Right Side: Content */}
-                            <div className="w-full lg:w-1/2 pt-12 lg:pt-4 relative z-10">
+                            <div className="w-full lg:w-1/2 lg:pt-4 relative z-10">
                                 <span className="text-sm font-bold uppercase tracking-widest text-blue-600 mb-4 block flex items-center gap-2">
                                     <span className="w-8 h-[2px] bg-blue-600 inline-block"></span>
                                     ADOUCISSEURS D'EAU RÉSIDENTIELS
                                 </span>
-                                <h2 className="text-[32px] md:text-[48px] font-bold text-slate-900 mb-6 leading-[1.1] tracking-tighter">
+                                <h2 className="text-slate-900 mb-6">
                                     L'éclat d'une vaisselle protégée, la douceur d'une eau maîtrisée.
                                 </h2>
-                                <p className="text-lg font-light leading-snug text-gray-600 mb-12 text-justify">
+                                <p className="font-light text-gray-600 mb-12 text-justify">
                                     Offrez à votre foyer le luxe d'une eau sans calcaire. Nos adoucisseurs de pointe éliminent le tartre à la source, garantissant non seulement une vaisselle étincelante sans aucune trace, mais aussi une protection durable de vos appareils électroménagers et de votre plomberie. Redécouvrez la brillance et la douceur dans chaque recoin de votre maison.
                                 </p>
 
@@ -220,11 +232,11 @@ const Adoucissement = () => {
                                         { title: "Protection totale", desc: "Préservez vos installations. Dites adieu aux pannes d'électroménager et aux traces de tartre sur votre robinetterie." }
                                     ].map((item, i) => (
                                         <div key={i} className="group/item">
-                                            <h3 className="text-xl font-bold mb-4 text-blue-600 flex items-center gap-3">
+                                            <h3 className="mb-4 text-blue-600 flex items-center gap-3">
                                                 <span className="text-2xl opacity-50">0{i + 1}.</span> {item.title}
                                             </h3>
                                             <div className="pl-6 border-l-2 border-blue-600/20 group-hover/item:border-blue-600 transition-colors duration-500 ml-2">
-                                                <p className="text-base text-gray-500 leading-snug text-justify">
+                                                <p className="text-base text-gray-500 text-justify">
                                                     {item.desc}
                                                 </p>
                                             </div>
@@ -245,12 +257,22 @@ const Adoucissement = () => {
                 </section>
 
                 {/* 5. Portable Water Softeners Section */}
-                <section className="py-24 bg-gray-50 relative overflow-hidden">
-                    <div className="container mx-auto px-6">
+                <section className="relative lg:py-24 bg-gray-50 overflow-hidden">
+                    {/* Mobile Image Section */}
+                    <div className="lg:hidden w-full h-[350px] sm:h-[450px] relative">
+                        <img
+                            src={mobileSoftenerImg}
+                            alt="Adoucisseur d'eau portable pour VR et bateau - Solution mobile Bricareau contre l'eau dure"
+                            className="w-full h-full object-cover"
+                        />
+                        <div className="absolute inset-0 bg-black/10" />
+                    </div>
+
+                    <div className="container mx-auto px-6 py-12 lg:py-0">
                         <div className="flex flex-col lg:flex-row-reverse items-start gap-16">
-                            {/* Right Side (visually): Image with Video Button */}
-                            <div className="w-full lg:w-1/2 lg:sticky lg:top-24 mb-12 lg:mb-0">
-                                <div className="rounded-[2.5rem] overflow-hidden shadow-2xl relative h-[300px] sm:h-[400px] lg:h-[600px] w-full group">
+                            {/* Right Side (visually): Image with Video Button - Desktop Only */}
+                            <div className="hidden lg:block w-full lg:w-1/2 lg:sticky lg:top-24 mb-12 lg:mb-0">
+                                <div className="rounded-[2.5rem] overflow-hidden shadow-2xl relative h-[600px] w-full group">
                                     <img
                                         src={mobileSoftenerImg}
                                         alt="Adoucisseur d'eau portable pour VR et bateau - Solution mobile Bricareau contre l'eau dure"
@@ -273,15 +295,15 @@ const Adoucissement = () => {
                             </div>
 
                             {/* Left Side (visually): Content */}
-                            <div className="w-full lg:w-1/2 pt-12 lg:pt-4 relative z-10">
+                            <div className="w-full lg:w-1/2 lg:pt-4 relative z-10">
                                 <span className="text-sm font-bold uppercase tracking-widest text-blue-600 mb-4 block flex items-center gap-2">
                                     <span className="w-8 h-[2px] bg-blue-600 inline-block"></span>
                                     SOLUTION MOBILE
                                 </span>
-                                <h2 className="text-[32px] md:text-[48px] font-bold text-slate-900 mb-6 leading-[1.1] tracking-tighter">
+                                <h2 className="text-slate-900 mb-6">
                                     La douceur sans frontières : l'eau douce vous suit partout.
                                 </h2>
-                                <p className="text-lg font-light leading-snug text-gray-600 mb-12 text-justify">
+                                <p className="font-light text-gray-600 mb-12 text-justify">
                                     Ne laissez plus l’eau dure des campings ou des ports abîmer vos cheveux et vos équipements. Profitez d'une eau de qualité domestique dans votre VR, votre bateau ou votre chalet avec notre adoucisseur ultra-compact.
                                 </p>
 
@@ -292,11 +314,11 @@ const Adoucissement = () => {
                                         { title: "Protection Mobile", desc: "Sauvez vos équipements. Protégez la tuyauterie de votre VR et votre chauffe-eau contre les eaux dures variables des terrains de camping." }
                                     ].map((item, i) => (
                                         <div key={i} className="group/item">
-                                            <h3 className="text-xl font-bold mb-4 text-blue-600 flex items-center gap-3">
+                                            <h3 className="mb-4 text-blue-600 flex items-center gap-3">
                                                 <span className="text-2xl opacity-50">0{i + 1}.</span> {item.title}
                                             </h3>
                                             <div className="pl-6 border-l-2 border-blue-600/20 group-hover/item:border-blue-600 transition-colors duration-500 ml-2">
-                                                <p className="text-base text-gray-500 leading-snug text-justify">
+                                                <p className="text-base text-gray-500 text-justify">
                                                     {item.desc}
                                                 </p>
                                             </div>
@@ -317,12 +339,22 @@ const Adoucissement = () => {
                 </section>
 
                 {/* 6. Water Conditionners without salt Section */}
-                <section className="py-24 bg-white relative overflow-hidden">
-                    <div className="container mx-auto px-6">
+                <section className="relative lg:py-24 bg-white overflow-hidden">
+                    {/* Mobile Image Section */}
+                    <div className="lg:hidden w-full h-[350px] sm:h-[450px] relative">
+                        <img
+                            src={untitledImg}
+                            alt="Conditionneur d'eau sans sel écologique Bricareau - Protection contre le tartre sans saumure"
+                            className="w-full h-full object-cover"
+                        />
+                        <div className="absolute inset-0 bg-black/10" />
+                    </div>
+
+                    <div className="container mx-auto px-6 py-12 lg:py-0">
                         <div className="flex flex-col lg:flex-row items-start gap-16">
-                            {/* Left Side: Image with Video Button */}
-                            <div className="w-full lg:w-1/2 lg:sticky lg:top-24 mb-12 lg:mb-0">
-                                <div className="rounded-[2.5rem] overflow-hidden shadow-2xl relative h-[300px] sm:h-[400px] lg:h-[600px] w-full group">
+                            {/* Left Side: Image with Video Button - Desktop Only */}
+                            <div className="hidden lg:block w-full lg:w-1/2 lg:sticky lg:top-24 mb-12 lg:mb-0">
+                                <div className="rounded-[2.5rem] overflow-hidden shadow-2xl relative h-[600px] w-full group">
                                     <img
                                         src={untitledImg}
                                         alt="Conditionneur d'eau sans sel écologique Bricareau - Protection contre le tartre sans saumure"
@@ -345,15 +377,15 @@ const Adoucissement = () => {
                             </div>
 
                             {/* Right Side: Content */}
-                            <div className="w-full lg:w-1/2 pt-12 lg:pt-4 relative z-10">
+                            <div className="w-full lg:w-1/2 lg:pt-4 relative z-10">
                                 <span className="text-sm font-bold uppercase tracking-widest text-blue-600 mb-4 block flex items-center gap-2">
                                     <span className="w-8 h-[2px] bg-blue-600 inline-block"></span>
                                     ALTERNATIVE ÉCOLOGIQUE
                                 </span>
-                                <h2 className="text-[32px] md:text-[48px] font-bold text-slate-900 mb-6 leading-[1.1] tracking-tighter">
+                                <h2 className="text-slate-900 mb-6">
                                     Zéro sel. Zéro électricité. Zéro souci.
                                 </h2>
-                                <p className="text-lg font-light leading-snug text-gray-600 mb-12 text-justify">
+                                <p className="font-light text-gray-600 mb-12 text-justify">
                                     Le secret d'un linge éclatant et d'une vaisselle sans traces. Sans l'ajout de sel, votre eau devient votre meilleure alliée beauté et ménage.
                                 </p>
 
@@ -364,11 +396,11 @@ const Adoucissement = () => {
                                         { title: "Eau Préservée", desc: "Gardez les bons minéraux. Le calcaire est neutralisé mais le calcium et le magnésium restent dans l'eau. Une eau saine pour votre santé et celle de votre famille." }
                                     ].map((item, i) => (
                                         <div key={i} className="group/item">
-                                            <h3 className="text-xl font-bold mb-4 text-blue-600 flex items-center gap-3">
+                                            <h3 className="mb-4 text-blue-600 flex items-center gap-3">
                                                 <span className="text-2xl opacity-50">0{i + 1}.</span> {item.title}
                                             </h3>
                                             <div className="pl-6 border-l-2 border-blue-600/20 group-hover/item:border-blue-600 transition-colors duration-500 ml-2">
-                                                <p className="text-base text-gray-500 leading-snug text-justify">
+                                                <p className="text-base text-gray-500 text-justify">
                                                     {item.desc}
                                                 </p>
                                             </div>
@@ -407,8 +439,8 @@ const Adoucissement = () => {
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
                             <h2
-                                className="text-slate-900 tracking-tighter mb-8 text-left"
-                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                className="text-slate-900 mb-8 text-left"
+                                style={{}}
                             >
                                 <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Comparez nos solutions</span>
                                 <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">d'adoucissement d'eau.</span>
@@ -495,23 +527,21 @@ const Adoucissement = () => {
                                 Contrôle de la Qualité D'EAU
                             </span>
                             <h2
-                                className="text-[32px] md:text-[60px] leading-[1.1] md:leading-[60px] font-bold lg:font-light mb-8 tracking-tighter text-slate-900 lg:text-white"
+                                className="md:leading-[60px] lg:font-light mb-8 text-slate-900 lg:text-white"
                                 style={{
-                                    fontFamily:
-                                        'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
                                 }}
                             >
                                 <span className="lg:font-bold">L’essence d’une vie saine</span><br />
                                 coule de votre robinet.
                             </h2>
-                            <p className="text-lg font-light leading-snug text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
+                            <p className="font-light text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
                                 Entre le chlore, les métaux lourds et les sédiments, votre eau cache souvent des secrets. Ne laissez plus le doute couler de votre robinet. Demandez votre test d'eau dès aujourd'hui et obtenez un portrait clair de votre eau ainsi que des solutions adaptées à votre foyer.
                             </p>
                             <div className="flex gap-4">
                                 <Button
                                     size="lg"
                                     className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200"
-                                    style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                    style={{}}
                                     asChild
                                 >
                                     <a href="/tests-eau">Demandez une analyse d'eau</a>
@@ -526,8 +556,8 @@ const Adoucissement = () => {
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
                             <h2
-                                className="text-slate-900 tracking-tighter mb-8 text-left"
-                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                className="text-slate-900 mb-8 text-left"
+                                style={{}}
                             >                                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">FAQ </span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
@@ -552,10 +582,10 @@ const Adoucissement = () => {
                                     { q: "Quelle est la garantie offerte par Bricareau ?", a: "Bricareau offre l'une des garanties les plus solides du marché, couvrant la bouteille de résine, la tête de contrôle et les composants internes pour votre tranquillité d'esprit totale." }
                                 ].slice(0, showAllFaqs ? undefined : 6).map((item, idx) => (
                                     <AccordionItem key={idx} value={`item-${idx}`} className="border-b-gray-200">
-                                        <AccordionTrigger className="text-left text-base font-medium leading-6 hover:no-underline py-6" style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}>
+                                        <AccordionTrigger className="text-left text-base font-medium leading-6 hover:no-underline py-6" style={{}}>
                                             {item.q}
                                         </AccordionTrigger>
-                                        <AccordionContent className="text-base font-light leading-6 text-gray-600 pb-6 text-justify" style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}>
+                                        <AccordionContent className="text-base font-light leading-6 text-gray-600 pb-6 text-justify" style={{}}>
                                             {item.a}
                                         </AccordionContent>
                                     </AccordionItem>
@@ -578,8 +608,8 @@ const Adoucissement = () => {
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
                             <h2
-                                className="text-slate-900 tracking-tighter mb-8 text-left"
-                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                className="text-slate-900 mb-8 text-left"
+                                style={{}}
                             >                                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">Ressources</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
@@ -604,7 +634,7 @@ const Adoucissement = () => {
                                     </div>
                                     <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
                                         <NavLink to={art.link}>
-                                            <h4 className="text-xl font-medium mb-4 group-hover:text-blue-600 transition-colors tracking-tight">{art.title}</h4>
+                                            <h4 className="mb-4 group-hover:text-blue-600 transition-colors tracking-tight">{art.title}</h4>
                                         </NavLink>
                                         <div className="mt-auto">
                                             <NavLink to={art.link} className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-sm">

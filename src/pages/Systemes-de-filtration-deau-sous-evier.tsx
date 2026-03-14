@@ -19,8 +19,7 @@ import {
     Accordion,
     AccordionContent,
     AccordionItem,
-    AccordionTrigger,
-} from "@/components/ui/accordion";
+    AccordionTrigger } from "@/components/ui/accordion";
 import ConsultationFormSection from "@/components/ConsultationFormSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 
@@ -93,20 +92,21 @@ const FiltrationSousEvier = () => {
                     <div className="container relative z-10 mx-auto px-4 py-10 sm:py-16 lg:py-20 flex flex-col justify-center">
                         <div className="max-w-2xl lg:text-white">
                             <h1
-                                className="text-[32px] md:text-[42px] leading-[1.1] md:leading-[1.2] font-bold lg:font-light mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl"
-                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                className="text-[32px] md:text-[42px] leading-[1.1] md:leading-[1.2] mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl"
+                                style={{
+                                    fontWeight: 350 }}
                             >
                                 Systèmes de filtration sous évier <br />
                                 De la pureté à chaque goutte.
                             </h1>
-                            <p className="text-lg font-light leading-snug text-slate-600 lg:text-white/90 mb-8 max-w-xl text-left lg:text-justify">
+                            <p className="font-light text-slate-600 lg:text-white/90 mb-8 max-w-xl text-left lg:text-justify">
                                 Profitez d'une eau potable d'une qualité exceptionnelle directement de votre robinet. Nos systèmes de filtration sous comptoir et d'ultrafiltration éliminent 99% des contaminants pour la santé de votre famille.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4">
                                 <Button
                                     size="lg"
                                     className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200"
-                                    style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                    style={{ }}
                                     asChild
                                 >
                                     <a href="#systemes-filtration">
@@ -117,7 +117,7 @@ const FiltrationSousEvier = () => {
                                     size="lg"
                                     variant="outline"
                                     className="bg-slate-100 lg:bg-white/10 hover:bg-slate-200 lg:hover:bg-white/20 text-slate-800 lg:text-white border-slate-200 lg:border-white rounded-full px-8 h-14 backdrop-blur-sm shadow-lg"
-                                    style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                    style={{ }}
                                     asChild
                                 >
                                     <a href="tel:18552649328" className="flex items-center gap-2">
@@ -150,10 +150,10 @@ const FiltrationSousEvier = () => {
                 <section className="py-24 bg-blue-600 text-white">
                     <div className="container mx-auto px-6">
                         <div className="text-center mb-16">
-                            <h2 className="text-[32px] md:text-[48px] font-normal text-white mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
+                            <h2 className="text-white mb-8 md:leading-[48px]">
                                 Pourquoi installer l'un de nos systèmes <br />de filtration d'eau sous l'évier de votre cuisine?
                             </h2>
-                            <p className="text-lg font-light leading-snug text-blue-100 max-w-2xl mx-auto text-justify">
+                            <p className="font-light text-blue-100 max-w-2xl mx-auto text-justify">
                                 Profitez d'une eau d'une pureté exceptionnelle pour votre boisson et votre cuisine tout en simplifiant votre quotidien.
                             </p>
                         </div>
@@ -168,8 +168,8 @@ const FiltrationSousEvier = () => {
                                     <div className="w-20 h-20 rounded-2xl bg-white flex items-center justify-center mb-8 transition-all group-hover:scale-110 group-hover:bg-white/10">
                                         <item.icon className="h-10 w-10 text-blue-600 group-hover:text-white" />
                                     </div>
-                                    <h3 className="text-2xl font-medium mb-4 tracking-tight">{item.title}</h3>
-                                    <p className="text-lg font-light leading-snug text-blue-100 text-justify">{item.desc}</p>
+                                    <h3 className="mb-4 tracking-tight">{item.title}</h3>
+                                    <p className="font-light text-blue-100 text-justify">{item.desc}</p>
                                 </div>
                             ))}
                         </div>
@@ -181,14 +181,14 @@ const FiltrationSousEvier = () => {
                     <div className="container mx-auto px-6">
                         <div className="text-left mb-16">
                             <h2
-                                className="text-slate-900 tracking-tighter mb-8 text-left"
-                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                className="text-slate-900 mb-8 text-left"
+                                style={{ }}
                             >
                                 <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Nos systèmes de filtration</span>
                                 <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">d'eau sous évier</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600 mb-8"></div>
-                            <p className="text-lg font-light leading-snug text-slate-600 mb-16 max-w-7xl mx-auto text-justify">
+                            <p className="font-light text-slate-600 mb-16 max-w-7xl mx-auto text-justify">
                                 Nos systèmes de filtration d'eau sous évier représentent la solution ultime pour transformer votre cuisine en une source de pureté inépuisable. Conçus pour s'intégrer discrètement sous votre comptoir, ces systèmes utilisent des technologies de pointe pour éliminer jusqu'à 99 % des contaminants, incluant le chlore, le plomb et les sédiments. Contrairement aux pichets filtrants, ils offrent un débit constant et une filtration beaucoup plus rigoureuse, garantissant une eau de boisson cristalline et un goût irréprochable pour vos cafés et vos repas. Avec un entretien simplifié, vous reprenez le contrôle total sur la qualité de l’eau que votre famille consomme au quotidien.
                             </p>
                         </div>
@@ -212,20 +212,20 @@ const FiltrationSousEvier = () => {
                                     </div>
                                     <div className="p-8 space-y-4 flex flex-col flex-grow border-t-2 border-transparent group-hover:border-blue-600 transition-colors">
                                         <h3
-                                            className="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors tracking-tight text-center"
-                                            style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                            className="text-slate-900 group-hover:text-blue-600 transition-colors tracking-tight text-center"
+                                            style={{ }}
                                         >
                                             {product.name}
                                         </h3>
                                         <p
-                                            className="text-slate-500 font-light leading-snug flex-grow text-justify"
-                                            style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                            className="text-slate-500 font-light flex-grow text-justify"
+                                            style={{ }}
                                         >
                                             {product.desc}
                                         </p>
                                         <div
                                             className="inline-flex items-center gap-2 text-blue-600 font-bold text-xs tracking-widest uppercase mt-4 group-hover:underline self-end"
-                                            style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                            style={{ }}
                                         >
                                             <ArrowRight className="h-6 w-6 transform group-hover:translate-x-1 transition-transform" />
                                         </div>
@@ -241,8 +241,8 @@ const FiltrationSousEvier = () => {
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
                             <h2
-                                className="text-slate-900 tracking-tighter mb-8 text-left"
-                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                className="text-slate-900 mb-8 text-left"
+                                style={{ }}
                             >
                                 <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Comparez nos solutions</span>
                                 <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">de filtration d'eau potable.</span>
@@ -322,19 +322,19 @@ const FiltrationSousEvier = () => {
                                 ANALYSE PROFESSIONNELLE
                             </span>
                             <h2
-                                className="text-[32px] md:text-[60px] font-bold lg:font-light mb-8 tracking-tighter leading-[1.1] md:leading-[60px] text-slate-900 lg:text-white text-left"
-                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                className="lg:font-light mb-8 md:leading-[60px] text-slate-900 lg:text-white text-left"
+                                style={{ }}
                             >
                                 Identifiez l'invisible, <span className="lg:font-bold"><br />maîtrisez votre pureté.</span>
                             </h2>
-                            <p className="text-lg font-light leading-snug text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
+                            <p className="font-light text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
                                 Ne laissez plus le doute couler de votre robinet. Nos tests d'eau révèlent la composition réelle de votre eau pour vous offrir une solution de filtration sur mesure, garantissant santé et sérénité à toute votre famille.
                             </p>
                             <div className="flex gap-4">
                                 <Button
                                     size="lg"
                                     className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200"
-                                    style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                    style={{ }}
                                     asChild
                                 >
                                     <a href="/tests-eau">Demandez une analyse d'eau</a>
@@ -360,8 +360,8 @@ const FiltrationSousEvier = () => {
                     <div className="container mx-auto px-4 text-left">
                         <div className="text-left mb-16">
                             <h2
-                                className="text-slate-900 tracking-tighter mb-8 text-left"
-                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                className="text-slate-900 mb-8 text-left"
+                                style={{ }}
                             >
                                 <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Pour vous éclairer</span>
                                 <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">Questions fréquentes</span>
@@ -373,34 +373,28 @@ const FiltrationSousEvier = () => {
                                 {[
                                     {
                                         q: "Quels sont les avantages d'un système de filtration sous l'évier ?",
-                                        a: "Il offre une eau de qualité embouteillée directement à votre robinet, élimine le goût et l'odeur de chlore, retire les métaux lourds et réduit drastiquement vos dépenses ainsi que votre empreinte plastique.",
-                                    },
+                                        a: "Il offre une eau de qualité embouteillée directement à votre robinet, élimine le goût et l'odeur de chlore, retire les métaux lourds et réduit drastiquement vos dépenses ainsi que votre empreinte plastique." },
                                     {
                                         q: "Quels problèmes d'eau ce système peut-il résoudre ?",
-                                        a: "Il est particulièrement efficace contre le chlore, les sédiments, le plomb, le mercure, les résidus de pesticides, et les microplastiques, garantissant une eau saine pour boire et cuisiner.",
-                                    },
+                                        a: "Il est particulièrement efficace contre le chlore, les sédiments, le plomb, le mercure, les résidus de pesticides, et les microplastiques, garantissant une eau saine pour boire et cuisiner." },
                                     {
                                         q: "Quelle est la différence entre un filtre standard et l'osmose inverse ?",
-                                        a: "Un filtre standard réduit principalement le chlore et les sédiments. L'osmose inverse va plus loin en éliminant jusqu'à 99 % de tous les contaminants dissous grâce à une membrane semi-perméable ultra-fine.",
-                                    },
+                                        a: "Un filtre standard réduit principalement le chlore et les sédiments. L'osmose inverse va plus loin en éliminant jusqu'à 99 % de tous les contaminants dissous grâce à une membrane semi-perméable ultra-fine." },
                                     {
                                         q: "À quelle fréquence faut-il remplacer les filtres ?",
-                                        a: "Pour une performance optimale, les cartouches de pré-filtration et de post-filtration doivent être changées tous les 6 à 12 mois. La membrane d'osmose inverse peut durer de 2 à 4 ans.",
-                                    },
+                                        a: "Pour une performance optimale, les cartouches de pré-filtration et de post-filtration doivent être changées tous les 6 à 12 mois. La membrane d'osmose inverse peut durer de 2 à 4 ans." },
                                     {
                                         q: "Le système prend-il beaucoup de place sous l'évier ?",
-                                        a: "Nos systèmes modernes sont très compacts. Ils occupent généralement moins de 25 % de l'espace de votre armoire sous l'évier, vous laissant de la place pour vos autres articles ménagers.",
-                                    },
+                                        a: "Nos systèmes modernes sont très compacts. Ils occupent généralement moins de 25 % de l'espace de votre armoire sous l'évier, vous laissant de la place pour vos autres articles ménagers." },
                                     {
                                         q: "Puis-je l'utiliser pour mon réfrigérateur et ma machine à glaçons ?",
-                                        a: "Absolument ! Nous pouvons raccorder votre système de filtration à votre frigo pour que vous profitiez d'une eau fraîche et de glaçons cristallins, sans aucun goût indésirable.",
-                                    },
+                                        a: "Absolument ! Nous pouvons raccorder votre système de filtration à votre frigo pour que vous profitiez d'une eau fraîche et de glaçons cristallins, sans aucun goût indésirable." },
                                 ].slice(0, showAllFaqs ? undefined : 6).map((item, idx) => (
                                     <AccordionItem key={idx} value={`item-${idx}`} className="border-b-slate-100 px-4">
-                                        <AccordionTrigger className="text-left text-base font-medium leading-6 hover:no-underline py-8 text-slate-800" style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}>
+                                        <AccordionTrigger className="text-left text-base font-medium leading-6 hover:no-underline py-8 text-slate-800" style={{ }}>
                                             {item.q}
                                         </AccordionTrigger>
-                                        <AccordionContent className="text-base font-light leading-6 text-slate-500 pb-8 text-justify" style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}>
+                                        <AccordionContent className="text-base font-light leading-6 text-slate-500 pb-8 text-justify" style={{ }}>
                                             {item.a}
                                         </AccordionContent>
                                     </AccordionItem>
@@ -423,8 +417,8 @@ const FiltrationSousEvier = () => {
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
                             <h2
-                                className="text-slate-900 tracking-tighter mb-8 text-left"
-                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                className="text-slate-900 mb-8 text-left"
+                                style={{ }}
                             >                                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">Ressources</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
@@ -434,18 +428,15 @@ const FiltrationSousEvier = () => {
                                 {
                                     title: "Filtre sous évier, l'alternative simple aux pichets filtrants",
                                     img: filtreSousEvierImg,
-                                    link: "/filtre-sous-evier-lalternative-simple-aux-pichets-filtrants",
-                                },
+                                    link: "/filtre-sous-evier-lalternative-simple-aux-pichets-filtrants" },
                                 {
                                     title: "Le plomb dans les vieilles maisons : Comment se protéger?",
                                     img: plombVieillesMaisonsImg,
-                                    link: "/le-plomb-dans-les-vieilles-maisons-comment-se-proteger",
-                                },
+                                    link: "/le-plomb-dans-les-vieilles-maisons-comment-se-proteger" },
                                 {
                                     title: "Pourquoi même l'eau de ville a besoin d'être filtrée?",
                                     img: eauVilleFiltreeImg,
-                                    link: "/pourquoi-meme-leau-de-ville-a-besoin-detre-filtree",
-                                },
+                                    link: "/pourquoi-meme-leau-de-ville-a-besoin-detre-filtree" },
                             ].map((art, i) => (
                                 <NavLink
                                     key={i}
@@ -460,7 +451,7 @@ const FiltrationSousEvier = () => {
                                         />
                                     </div>
                                     <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
-                                        <h4 className="text-xl font-medium mb-4 group-hover:text-blue-600 transition-colors tracking-tight">{art.title}</h4>
+                                        <h4 className="mb-4 group-hover:text-blue-600 transition-colors tracking-tight">{art.title}</h4>
                                         <div className="mt-auto">
                                             <span className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-sm">
                                                 Lire <ChevronRight className="h-4 w-4 transform group-hover:translate-x-1 transition-transform" />

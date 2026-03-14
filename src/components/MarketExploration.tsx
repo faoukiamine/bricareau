@@ -8,8 +8,8 @@ const MarketExploration = () => {
             <div className="container mx-auto px-4">
                 <div className="text-center mb-12 md:mb-16">
                     <h2
-                        className="text-foreground tracking-tighter"
-                        style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                        className="text-foreground"
+                        style={{ }}
                     >
                         <span className="text-[32px] md:text-[60px] font-light leading-[1.2] md:leading-[60px] block">Explore More</span>
                         <span className="text-[32px] md:text-[60px] font-medium leading-[1.2] md:leading-[60px] block">Solutions</span>
@@ -32,13 +32,13 @@ const MarketExploration = () => {
                             <div className="mb-4 bg-white/20 w-fit p-3 rounded-xl backdrop-blur-sm">
                                 <Building2 className="h-8 w-8 text-white" />
                             </div>
-                            <h3 className="text-2xl md:text-3xl font-bold mb-3">Workplace Water Solutions</h3>
-                            <p className="text-white/90 text-lg mb-6 leading-snug max-w-md">
+                            <h3 className="md:text-3xl mb-3">Workplace Water Solutions</h3>
+                            <p className="text-white/90 mb-6 max-w-md">
                                 Hydration solutions delivering safer and sustainable water for a wide range of sectors.
                             </p>
                             <div
                                 className="flex items-center gap-2 font-medium text-[16px] leading-[24px] group-hover:gap-3 transition-all"
-                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                style={{ }}
                             >
                                 <span>See Workplace Water Systems</span>
                                 <ArrowRight className="h-5 w-5" />
@@ -61,13 +61,13 @@ const MarketExploration = () => {
                             <div className="mb-4 bg-white/20 w-fit p-3 rounded-xl backdrop-blur-sm">
                                 <Factory className="h-8 w-8 text-white" />
                             </div>
-                            <h3 className="text-2xl md:text-3xl font-bold mb-3">Commercial & Industrial Solutions</h3>
-                            <p className="text-white/90 text-lg mb-6 leading-snug max-w-md">
+                            <h3 className="md:text-3xl mb-3">Commercial & Industrial Solutions</h3>
+                            <p className="text-white/90 mb-6 max-w-md">
                                 Water treatment solutions for a range of commercial and industrial water applications.
                             </p>
                             <div
                                 className="flex items-center gap-2 font-medium text-[16px] leading-[24px] group-hover:gap-3 transition-all"
-                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                style={{ }}
                             >
                                 <span>See Commercial Treatment Solutions</span>
                                 <ArrowRight className="h-5 w-5" />

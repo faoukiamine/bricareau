@@ -25,10 +25,14 @@ const Contact = () => {
             </div>
 
             <div className="container mx-auto px-6 max-w-5xl py-12 lg:py-0">
-              <h1 className="text-[32px] md:text-[52px] leading-tight font-bold text-slate-900 mb-6 tracking-tight">
+              <h1
+                className="text-[32px] md:text-[52px] leading-tight text-slate-900 mb-6 tracking-tight"
+                style={{
+                  fontWeight: 350 }}
+              >
                 <span className="text-blue-600">Contactez</span>-nous
               </h1>
-              <p className="text-[18px] text-slate-600 max-w-2xl font-light leading-relaxed">
+              <p className="text-slate-600 max-w-2xl font-light">
                 Nous sommes là pour répondre à toutes vos questions sur le traitement de l'eau.
               </p>
             </div>

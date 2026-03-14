@@ -75,19 +75,21 @@ const Entreprises = () => {
                 SOLUTIONS BUSINESS
               </span>
               <h1
-                className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-slate-900 lg:text-white text-center lg:text-justify max-w-xl mx-auto lg:mx-0"
-                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] mb-8 tracking-tighter text-slate-900 lg:text-white text-center lg:text-justify max-w-xl mx-auto lg:mx-0"
+                style={{
+                  fontWeight: 350
+                }}
               >
-                <span className="font-bold">Une eau pure au quotidien</span>
+                <span>Une eau pure au quotidien</span>
               </h1>
-              <p className="font-light text-[18px] md:text-[20px] leading-snug text-slate-600 lg:text-white/95 mb-8 max-w-xl mx-auto lg:mx-0 text-center lg:text-justify">
+              <p className="font-light md:text-[20px] text-slate-600 lg:text-white/95 mb-8 max-w-xl mx-auto lg:mx-0 text-center lg:text-justify">
                 Vos collaborateurs apprécieront la nouvelle façon d'avoir de l'eau fraîche dans votre entreprise !
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <Button
                   size="lg"
                   className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200"
-                  style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                  style={{ }}
                   asChild
                 >
                   <a href="#solutions" className="flex items-center gap-2">
@@ -98,7 +100,7 @@ const Entreprises = () => {
                   size="lg"
                   variant="outline"
                   className="bg-white lg:bg-white/10 hover:bg-slate-50 lg:hover:bg-white/20 text-blue-600 lg:text-white border-blue-600 lg:border-white rounded-full px-8 h-14 backdrop-blur-sm"
-                  style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                  style={{ }}
                   asChild
                 >
                   <a href="tel:18552649328" className="flex items-center gap-2">
@@ -114,14 +116,14 @@ const Entreprises = () => {
         {/* Solutions Section */}
         <section id="solutions" className="py-12 md:py-16">
           <div className="container mx-auto px-4">
-            <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-16 text-center leading-[1.2] md:leading-[48px] tracking-tighter">
+            <h2 className="text-slate-900 mb-16 text-center md:leading-[48px]">
               Nos solutions de traitement d'eau
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
               {solutions.map((solution, index) => (
                 <div key={index} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer group flex flex-col h-full border border-gray-100 p-8">
-                  <h3 className="text-xl font-medium mb-4 group-hover:text-blue-600 transition-colors tracking-tight">{solution.title}</h3>
-                  <p className="text-slate-500 text-sm leading-snug mb-6 flex-grow">{solution.description}</p>
+                  <h3 className="mb-4 group-hover:text-blue-600 transition-colors tracking-tight">{solution.title}</h3>
+                  <p className="text-slate-500 text-sm mb-6 flex-grow">{solution.description}</p>
                   <div className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-sm mt-auto">
                     Lire <ChevronRight className="h-4 w-4" />
                   </div>
@@ -134,10 +136,10 @@ const Entreprises = () => {
         {/* Why Choose Us */}
         <section className="py-12 md:py-16 bg-secondary/30">
           <div className="container mx-auto px-4">
-            <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 text-center leading-[1.2] md:leading-[48px] tracking-tighter max-w-4xl mx-auto">
+            <h2 className="text-slate-900 mb-8 text-center md:leading-[48px] max-w-4xl mx-auto">
               Pourquoi plus de 10 000 entreprises choisissent Bricareau?
             </h2>
-            <p className="text-center text-muted-foreground mb-12 max-w-3xl mx-auto leading-snug">
+            <p className="text-center text-muted-foreground mb-12 max-w-3xl mx-auto">
               Bricareau offre des solutions sur mesure pour fournir une eau plus fraîche et plus savoureuse dans votre espace de travail.
               Que ce soit dans la cuisine ou à la salle de réunion, nos systèmes peuvent être installés là où vos employés nécessitent une eau de haute qualité.
             </p>
@@ -145,7 +147,7 @@ const Entreprises = () => {
               {benefits.map((benefit, index) => (
                 <div key={index} className="bg-background p-6 rounded-lg">
                   <benefit.icon className="h-12 w-12 text-primary mb-4" />
-                  <h3 className="text-xl font-semibold text-foreground mb-3">
+                  <h3 className="text-foreground mb-3">
                     {benefit.title}
                   </h3>
                   <p className="text-muted-foreground">
@@ -161,13 +163,13 @@ const Entreprises = () => {
         <section className="py-12 md:py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center space-y-6">
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal text-slate-900 mb-8 leading-[1.1] tracking-tighter">
+              <h2 className="text-slate-900 mb-8">
                 Pas de plastique, pas de déchets.
               </h2>
-              <h3 className="text-xl md:text-2xl font-semibold text-primary">
+              <h3 className="text-primary">
                 Contribuez à la protection de notre écosystème
               </h3>
-              <p className="text-base md:text-lg text-muted-foreground leading-snug">
+              <p className="text-base md:text-lg text-muted-foreground">
                 Équipez votre entreprise d'un refroidisseur d'eau spécialement conçu pour les espaces exigeants et
                 diminuez l'empreinte carbone de votre entreprise grâce à nos fontaines d'eau purifiée sans bouteilles.
               </p>
@@ -181,7 +183,7 @@ const Entreprises = () => {
         {/* Sectors */}
         <section className="py-12 md:py-16 bg-secondary/30">
           <div className="container mx-auto px-4">
-            <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 text-center leading-[1.2] md:leading-[48px] tracking-tighter">
+            <h2 className="text-slate-900 mb-8 text-center md:leading-[48px]">
               Nos secteurs d'activités
             </h2>
             <p className="text-center text-muted-foreground mb-12 max-w-3xl mx-auto">
@@ -195,7 +197,7 @@ const Entreprises = () => {
                   key={index}
                   className="bg-background p-6 rounded-lg text-center hover:shadow-md transition-shadow"
                 >
-                  <p className="text-lg font-medium text-foreground">{sector}</p>
+                  <p className="font-medium text-foreground">{sector}</p>
                 </div>
               ))}
             </div>
@@ -206,13 +208,13 @@ const Entreprises = () => {
         <section className="py-12 md:py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center space-y-6">
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal text-slate-900 mb-8 leading-[1.1] tracking-tighter">
+              <h2 className="text-slate-900 mb-8">
                 Traitement d'eau résidentiel
               </h2>
-              <h3 className="text-xl font-semibold text-primary">
+              <h3 className="text-primary">
                 l'eau de votre maison
               </h3>
-              <p className="text-base md:text-lg text-muted-foreground leading-snug">
+              <p className="text-base md:text-lg text-muted-foreground">
                 Bricareau vous garantit la meilleure d'eau pour toute la maison. Nous vous proposons des solutions innovantes
                 en fonction de vos besoins: Adoucisseurs d'eau, Filtre d'eau ou stations d'eau potable par exemple.
               </p>
@@ -230,10 +232,10 @@ const Entreprises = () => {
         <section className="py-12 md:py-16 bg-primary/5">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center space-y-6">
-              <h2 className="text-[32px] md:text-[48px] font-bold text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
+              <h2 className="text-slate-900 mb-8 md:leading-[48px]">
                 Planifiez votre consultation sur l'eau
               </h2>
-              <p className="text-base md:text-lg text-muted-foreground leading-snug">
+              <p className="text-base md:text-lg text-muted-foreground">
                 Nos spécialistes en eau sont prêts à vous assister dans la recherche de la solution adéquate à votre problème d'eau.
                 Nous vous offrons un test d'eau ainsi qu'une consultation à votre domicile.
               </p>

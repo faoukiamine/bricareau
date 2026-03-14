@@ -66,10 +66,14 @@ const Blog = () => {
                         </div>
 
                         <div className="container mx-auto px-6 max-w-5xl py-12 lg:py-0">
-                            <h1 className="text-[32px] md:text-[52px] leading-tight font-bold text-slate-900 mb-6 tracking-tight">
+                            <h1
+                                className="text-[32px] md:text-[52px] leading-tight text-slate-900 mb-6 tracking-tight"
+                                style={{
+                                    fontWeight: 350 }}
+                            >
                                 Articles & <span className="text-blue-600">Ressources</span>
                             </h1>
-                            <p className="text-[18px] text-slate-600 max-w-2xl font-light leading-relaxed">
+                            <p className="text-slate-600 max-w-2xl font-light">
                                 Découvrez nos derniers articles, guides et conseils d'experts pour une eau de meilleure qualité au quotidien.
                             </p>
                         </div>
@@ -82,7 +86,7 @@ const Blog = () => {
 
 
                         {/* Results Count */}
-                        <p className="font-bold text-lg md:text-xl text-slate-900 mb-8 border-b border-slate-900 pb-4">
+                        <p className="font-bold text-slate-900 mb-8 border-b border-slate-900 pb-4">
                             {totalResults} articles trouvés
                         </p>
 
@@ -129,8 +133,8 @@ const Blog = () => {
                         {filteredCategories.length === 0 ? (
                             <div className="text-center py-24 text-slate-500 bg-slate-50 rounded-3xl border border-dashed border-slate-200">
                                 <Search className="w-16 h-16 mx-auto mb-6 opacity-20" />
-                                <h3 className="text-2xl font-bold text-slate-900 mb-2">Aucun résultat</h3>
-                                <p className="text-lg">Aucun article ne correspond à votre recherche "{searchQuery}".</p>
+                                <h3 className="text-slate-900 mb-2">Aucun résultat</h3>
+                                <p className="">Aucun article ne correspond à votre recherche "{searchQuery}".</p>
                                 <Button
                                     variant="outline"
                                     className="mt-8 rounded-full"
@@ -168,7 +172,7 @@ const Blog = () => {
                                         return (
                                             <div key={cat.id} id={cat.id} className={`pt-8 border-t-4 ${accentColor}`}>
                                                 <div className="flex items-center justify-between mb-10">
-                                                    <h2 className="text-2xl md:text-3xl font-black text-slate-900 uppercase tracking-tighter">
+                                                    <h2 className="font-black text-slate-900 uppercase">
                                                         {cat.title}
                                                     </h2>
                                                     <NavLink
@@ -199,10 +203,10 @@ const Blog = () => {
                                                                     </div>
                                                                 </div>
                                                                 <div className="p-8">
-                                                                    <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4 group-hover:text-blue-600 transition-colors leading-tight">
+                                                                    <h3 className="md:text-3xl text-slate-900 mb-4 group-hover:text-blue-600 transition-colors">
                                                                         {displayProducts[0].title}
                                                                     </h3>
-                                                                    <p className="text-slate-600 text-base font-light mb-6 flex-1 leading-snug">
+                                                                    <p className="text-slate-600 text-base font-light mb-6 flex-1">
                                                                         {displayProducts[0].desc}
                                                                     </p>
                                                                     <div className="flex justify-end">
@@ -233,7 +237,7 @@ const Blog = () => {
                                                                             <Clock className="w-3.5 h-3.5" />
                                                                             <span>{product.readTime}</span>
                                                                         </div>
-                                                                        <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors leading-tight">
+                                                                        <h3 className="text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">
                                                                             {product.title}
                                                                         </h3>
                                                                     </div>
@@ -265,7 +269,7 @@ const Blog = () => {
                                                                         <Clock className="w-3.5 h-3.5" />
                                                                         <span>{product.readTime}</span>
                                                                     </div>
-                                                                    <h3 className="text-lg font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors leading-tight">
+                                                                    <h3 className="text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
                                                                         {product.title}
                                                                     </h3>
                                                                     <p className="text-slate-600 text-sm font-light leading-[19px] line-clamp-2">
@@ -292,10 +296,10 @@ const Blog = () => {
                         <Droplets className="absolute -top-10 -right-10 w-64 h-64 text-white" />
                     </div>
                     <div className="container mx-auto px-6 relative z-10 text-center">
-                        <h2 className="text-3xl md:text-5xl font-bold mb-8 italic">
+                        <h2 className="mb-8 italic">
                             Prêt à transformer la qualité de votre eau ?
                         </h2>
-                        <p className="text-xl opacity-90 mb-12 max-w-2xl mx-auto leading-snug">
+                        <p className="opacity-90 mb-12 max-w-2xl mx-auto">
                             Nos experts sont disponibles pour une consultation personnalisée et gratuite à votre domicile ou entreprise.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-6 justify-center">

@@ -13,10 +13,10 @@ const NewEraStats = () => {
             <div className="container relative mx-auto px-4">
                 {/* Section header */}
                 <div className="text-center mb-12 md:mb-16">
-                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+                    <h2 className="text-white mb-4">
                         Une nouvelle ère d'eau de meilleure qualité
                     </h2>
-                    <p className="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto">
+                    <p className="text-slate-300 max-w-3xl mx-auto">
                         Rejoignez des milliers de foyers canadiens qui font confiance à Bricareau
                     </p>
                 </div>
@@ -28,7 +28,7 @@ const NewEraStats = () => {
                         <div className="text-6xl md:text-7xl font-bold text-[#2563EB]">
                             #1
                         </div>
-                        <p className="text-xl md:text-2xl font-semibold text-white">
+                        <p className="md:text-2xl font-semibold text-white">
                             Au Canada
                         </p>
                         <p className="text-base text-slate-400">
@@ -41,7 +41,7 @@ const NewEraStats = () => {
                         <div className="text-6xl md:text-7xl font-bold text-[#2563EB]">
                             40M+
                         </div>
-                        <p className="text-xl md:text-2xl font-semibold text-white">
+                        <p className="md:text-2xl font-semibold text-white">
                             Litres traités
                         </p>
                         <p className="text-base text-slate-400">
@@ -54,7 +54,7 @@ const NewEraStats = () => {
                         <div className="text-6xl md:text-7xl font-bold text-[#2563EB]">
                             20K+
                         </div>
-                        <p className="text-xl md:text-2xl font-semibold text-white">
+                        <p className="md:text-2xl font-semibold text-white">
                             Foyers satisfaits
                         </p>
                         <p className="text-base text-slate-400">

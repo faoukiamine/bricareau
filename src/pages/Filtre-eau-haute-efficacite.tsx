@@ -27,8 +27,7 @@ import {
     Accordion,
     AccordionContent,
     AccordionItem,
-    AccordionTrigger,
-} from "@/components/ui/accordion";
+    AccordionTrigger } from "@/components/ui/accordion";
 
 const FiltreEauHauteEfficacite = () => {
     const [showAllFaqs, setShowAllFaqs] = React.useState(false);
@@ -67,19 +66,21 @@ const FiltreEauHauteEfficacite = () => {
                                     SYSTÈME DE FILTRATION D'EAU
                                 </span>
                                 <h1
-                                    className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-slate-900 text-center lg:text-justify"
-                                    style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                    className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] mb-8 tracking-tighter text-slate-900 text-center lg:text-justify"
+                                    style={{
+                                        fontWeight: 350
+                                    }}
                                 >
-                                    Bricareau High <span className="font-normal">Efficiency (HE)</span>
+                                    Bricareau High Efficiency (HE)
                                 </h1>
-                                <p className="text-lg font-light leading-snug text-slate-600 mb-8 text-center lg:text-justify max-w-xl mx-auto lg:mx-0">
+                                <p className="font-light text-slate-600 mb-8 text-center lg:text-justify max-w-xl mx-auto lg:mx-0">
                                     L'adoucisseur et filtre d'eau le plus efficace au monde. Profitez d'une eau d'une pureté absolue tout en réalisant des économies d'eau et de sel inégalées.
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                                     <Button
                                         size="lg"
                                         className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14"
-                                        style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                        style={{ }}
                                         asChild
                                     >
                                         <NavLink to="/contact" className="flex items-center gap-2">
@@ -101,7 +102,7 @@ const FiltreEauHauteEfficacite = () => {
                                             <Zap className="w-5 h-5 text-blue-600" />
                                         </div>
                                         <div>
-                                            <h4 className="font-bold text-slate-900">Technologie HE (Haute Efficacité)</h4>
+                                            <h4 className="text-slate-900">Technologie HE (Haute Efficacité)</h4>
                                             <p className="text-slate-500 text-sm">Réduit jusqu'à 46 % de votre consommation de sel et d'eau.</p>
                                         </div>
                                     </div>
@@ -110,7 +111,7 @@ const FiltreEauHauteEfficacite = () => {
                                             <Smartphone className="w-5 h-5 text-blue-600" />
                                         </div>
                                         <div>
-                                            <h4 className="font-bold text-slate-900">Application Bricareau Connect</h4>
+                                            <h4 className="text-slate-900">Application Bricareau Connect</h4>
                                             <p className="text-slate-500 text-sm">Contrôlez votre consommation d'eau et recevez des alertes sur votre mobile.</p>
                                         </div>
                                     </div>
@@ -119,7 +120,7 @@ const FiltreEauHauteEfficacite = () => {
                                             <Search className="w-5 h-5 text-blue-600" />
                                         </div>
                                         <div>
-                                            <h4 className="font-bold text-slate-900">Aqua-Sensor® Intelligent</h4>
+                                            <h4 className="text-slate-900">Aqua-Sensor® Intelligent</h4>
                                             <p className="text-slate-500 text-sm">Détecte automatiquement le besoin de régénération pour plus d'économies.</p>
                                         </div>
                                     </div>
@@ -134,25 +135,25 @@ const FiltreEauHauteEfficacite = () => {
                     <div className="container mx-auto px-6">
                         <div className="flex flex-col lg:flex-row items-center gap-16">
                             <div className="lg:w-1/2 order-2 lg:order-1">
-                                <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
+                                <h2 className="text-slate-900 mb-8 md:leading-[48px]">
                                     Exclusivités technologiques de Bricareau
                                 </h2>
                                 <div className="space-y-8">
                                     <div className="p-8 bg-white rounded-3xl shadow-sm border border-slate-100">
-                                        <h3 className="text-xl font-bold mb-4 flex items-center gap-3">
+                                        <h3 className="mb-4 flex items-center gap-3">
                                             <div className="w-2 h-8 bg-blue-600 rounded-full" />
                                             Aqua-Sensor® Digital
                                         </h3>
-                                        <p className="text-lg font-light leading-snug text-slate-600 text-justify">
+                                        <p className="font-light text-slate-600 text-justify">
                                             Le cerveau de votre système. Contrairement aux systèmes basés sur le temps, notre capteur breveté ajuste la régénération en fonction de l'utilisation réelle et de la dureté de l'eau.
                                         </p>
                                     </div>
                                     <div className="p-8 bg-white rounded-3xl shadow-sm border border-slate-100">
-                                        <h3 className="text-xl font-bold mb-4 flex items-center gap-3">
+                                        <h3 className="mb-4 flex items-center gap-3">
                                             <div className="w-2 h-8 bg-blue-600 rounded-full" />
                                             Bricareau Connect App
                                         </h3>
-                                        <p className="text-lg font-light leading-snug text-slate-600 text-justify">
+                                        <p className="font-light text-slate-600 text-justify">
                                             Une tranquillité d'esprit totale. Suivez votre consommation, recevez des alertes de fuite ou de niveau de sel bas directement sur votre téléphone.
                                         </p>
                                     </div>
@@ -172,10 +173,10 @@ const FiltreEauHauteEfficacite = () => {
                 {/* 3. Filtration Intelligente (Benefits) */}
                 <section className="py-24 bg-white">
                     <div className="container mx-auto px-6 text-center">
-                        <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
+                        <h2 className="text-slate-900 mb-8 md:leading-[48px]">
                             Filtration intelligente qui améliore votre vie au quotidien
                         </h2>
-                        <p className="text-lg font-light leading-snug text-slate-600 mb-16 max-w-3xl mx-auto text-justify">
+                        <p className="font-light text-slate-600 mb-16 max-w-3xl mx-auto text-justify">
                             Plus qu'un simple filtre, c'est une protection complète pour votre santé et votre maison.
                         </p>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -189,8 +190,8 @@ const FiltreEauHauteEfficacite = () => {
                                     <div className="w-20 h-20 rounded-2xl bg-blue-50 flex items-center justify-center mb-6">
                                         <benefit.icon className="w-10 h-10 text-blue-600" />
                                     </div>
-                                    <h3 className="text-xl font-bold text-slate-900 mb-4">{benefit.title}</h3>
-                                    <p className="text-lg font-light leading-snug text-slate-500 text-sm text-justify">{benefit.desc}</p>
+                                    <h3 className="text-slate-900 mb-4">{benefit.title}</h3>
+                                    <p className="font-light text-slate-500 text-sm text-justify">{benefit.desc}</p>
                                 </div>
                             ))}
                         </div>
@@ -201,8 +202,8 @@ const FiltreEauHauteEfficacite = () => {
                 <section className="py-16 bg-blue-600 text-white">
                     <div className="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8">
                         <div>
-                            <h2 className="text-[32px] md:text-[48px] font-normal text-white mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">Prêt pour une meilleure eau ?</h2>
-                            <p className="text-blue-100 text-lg font-light">Découvrez pourquoi Bricareau est le leader mondial de l'eau.</p>
+                            <h2 className="text-white mb-8 md:leading-[48px]">Prêt pour une meilleure eau ?</h2>
+                            <p className="text-blue-100 font-light">Découvrez pourquoi Bricareau est le leader mondial de l'eau.</p>
                         </div>
                         <Button className="bg-white text-blue-600 hover:bg-slate-100 rounded-full px-12 h-16 text-xl font-bold shadow-lg transition-transform hover:scale-105">
                             Trouver un expert
@@ -224,7 +225,7 @@ const FiltreEauHauteEfficacite = () => {
                                 </div>
                             </div>
                             <div className="lg:w-1/2 text-left">
-                                <h2 className="text-[32px] md:text-[48px] font-normal text-slate-900 mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
+                                <h2 className="text-slate-900 mb-8 md:leading-[48px]">
                                     Le choix intelligent <br /> pour votre maison.
                                 </h2>
                                 <div className="space-y-6">
@@ -238,7 +239,7 @@ const FiltreEauHauteEfficacite = () => {
                                             <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center shrink-0">
                                                 <Check className="w-4 h-4 text-blue-600" />
                                             </div>
-                                            <p className="text-lg text-slate-700 font-light">{point}</p>
+                                            <p className="text-slate-700 font-light">{point}</p>
                                         </div>
                                     ))}
                                 </div>
@@ -253,7 +254,7 @@ const FiltreEauHauteEfficacite = () => {
                 {/* 6. Service Plan Section */}
                 <section className="py-24 bg-slate-50">
                     <div className="container mx-auto px-6 text-center">
-                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal text-slate-900 mb-16 leading-[1.1] tracking-tighter">
+                        <h2 className="text-slate-900 mb-16">
                             Plan d'entretien et tranquillité d'esprit
                         </h2>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
@@ -266,8 +267,8 @@ const FiltreEauHauteEfficacite = () => {
                                     <div className="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center mb-6">
                                         <plan.icon className="w-8 h-8 text-blue-600" />
                                     </div>
-                                    <h3 className="text-xl font-bold text-slate-900 mb-4">{plan.title}</h3>
-                                    <p className="text-lg font-light leading-snug text-slate-500 text-sm text-justify">{plan.desc}</p>
+                                    <h3 className="text-slate-900 mb-4">{plan.title}</h3>
+                                    <p className="font-light text-slate-500 text-sm text-justify">{plan.desc}</p>
                                 </div>
                             ))}
                         </div>
@@ -277,7 +278,7 @@ const FiltreEauHauteEfficacite = () => {
                 {/* 7. Comparison Table */}
                 <section className="py-24 bg-white">
                     <div className="container mx-auto px-6">
-                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal text-slate-900 mb-16 text-center leading-[1.1] tracking-tighter">
+                        <h2 className="text-slate-900 mb-16 text-center">
                             Pourquoi choisir le Bricareau HE ?
                         </h2>
                         <div className="overflow-x-auto rounded-[3rem] border border-slate-100 shadow-xl bg-white">
@@ -318,8 +319,8 @@ const FiltreEauHauteEfficacite = () => {
                 <section className="py-24 bg-slate-50">
                     <div className="container mx-auto px-6">
                         <div className="max-w-4xl mx-auto text-center">
-                            <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal text-slate-900 mb-8 leading-[1.1] tracking-tighter">Installation. Tranquille.</h2>
-                            <p className="text-lg font-light leading-snug text-slate-600 mb-16 text-justify">
+                            <h2 className="text-slate-900 mb-8">Installation. Tranquille.</h2>
+                            <p className="font-light text-slate-600 mb-16 text-justify">
                                 Nos techniciens certifiés Bricareau ne se contentent pas d'installer votre système. Ils s'assurent qu'il fonctionne à son plein potentiel pour des années de service fiable.
                             </p>
                             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -331,8 +332,8 @@ const FiltreEauHauteEfficacite = () => {
                                 ].map((step, i) => (
                                     <div key={i} className="flex flex-col items-center">
                                         <div className="text-4xl font-black text-blue-100 mb-4 italic">0{i + 1}</div>
-                                        <h4 className="font-bold text-slate-900 mb-2">{step.title}</h4>
-                                        <p className="text-xs text-slate-400 leading-snug font-light uppercase tracking-wider">{step.desc}</p>
+                                        <h4 className="text-slate-900 mb-2">{step.title}</h4>
+                                        <p className="text-xs text-slate-400 font-light uppercase tracking-wider">{step.desc}</p>
                                     </div>
                                 ))}
                             </div>
@@ -343,7 +344,7 @@ const FiltreEauHauteEfficacite = () => {
                 {/* 9. FAQ Section */}
                 <section className="py-24 bg-white">
                     <div className="container mx-auto px-6 max-w-4xl">
-                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal mb-16 text-center text-slate-900 leading-[1.1] tracking-tighter">
+                        <h2 className="mb-16 text-center text-slate-900">
                             Questions fréquemment posées
                         </h2>
                         <Accordion type="single" collapsible className="w-full">
@@ -354,10 +355,10 @@ const FiltreEauHauteEfficacite = () => {
                                 { q: "Le système HE filtre-t-il aussi le chlore ?", a: "Oui, nous pouvons configurer votre système HE avec des médias filtrants spécifiques pour éliminer le chlore, les goûts et les odeurs, en plus d'adoucir l'eau." }
                             ].slice(0, showAllFaqs ? undefined : 6).map((item, id) => (
                                 <AccordionItem key={id} value={`faq-${id}`} className="border-b-slate-100 last:border-0 mb-4 rounded-2xl overflow-hidden border">
-                                    <AccordionTrigger className="px-8 py-6 hover:bg-slate-50/50 hover:no-underline text-left text-base font-medium leading-6 text-slate-800" style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}>
+                                    <AccordionTrigger className="px-8 py-6 hover:bg-slate-50/50 hover:no-underline text-left text-base font-medium leading-6 text-slate-800" style={{ }}>
                                         {item.q}
                                     </AccordionTrigger>
-                                    <AccordionContent className="text-base font-light leading-6 text-slate-600 pb-6 text-justify" style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}>
+                                    <AccordionContent className="text-base font-light leading-6 text-slate-600 pb-6 text-justify" style={{ }}>
                                         {item.a}
                                     </AccordionContent>
                                 </AccordionItem>
@@ -382,10 +383,10 @@ const FiltreEauHauteEfficacite = () => {
                     <div className="container mx-auto px-6">
                         <div className="bg-white rounded-[4rem] shadow-2xl flex flex-col lg:flex-row items-center overflow-hidden">
                             <div className="lg:w-1/2 p-12 lg:p-24 text-left">
-                                <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal text-slate-900 mb-8 leading-[1.1] tracking-tighter">
+                                <h2 className="text-slate-900 mb-8">
                                     Offrez-vous le confort que vous méritez.
                                 </h2>
-                                <p className="text-lg font-light leading-snug text-slate-600 mb-12 text-justify">
+                                <p className="font-light text-slate-600 mb-12 text-justify">
                                     Plus de 11 millions de familles font confiance à Bricareau. Rejoignez-les dès aujourd'hui et transformez votre quotidien.
                                 </p>
                                 <Button className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-12 h-16 text-xl font-bold shadow-xl transition-all hover:scale-105" asChild>
@@ -406,7 +407,7 @@ const FiltreEauHauteEfficacite = () => {
                 {/* 12. Related Products */}
                 <section className="py-24 bg-white border-t border-slate-100">
                     <div className="container mx-auto px-6">
-                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal text-slate-900 mb-8 text-center leading-[1.1] tracking-tighter">Découvrez d'autres solutions</h2>
+                        <h2 className="text-slate-900 mb-8 text-center">Découvrez d'autres solutions</h2>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {[
                                 { title: "Osmose Inverse Bricareau", desc: "La pureté ultime pour votre eau de boisson.", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png", link: "/systeme-de-filtration-deau-potable" },
@@ -422,8 +423,8 @@ const FiltreEauHauteEfficacite = () => {
                                         />
                                     </div>
                                     <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
-                                        <h3 className="text-xl font-medium mb-2 group-hover:text-blue-600 transition-colors tracking-tight">{prod.title}</h3>
-                                        <p className="text-lg font-light leading-snug text-slate-500 text-sm mb-6 flex-grow text-justify">{prod.desc}</p>
+                                        <h3 className="mb-2 group-hover:text-blue-600 transition-colors tracking-tight">{prod.title}</h3>
+                                        <p className="font-light text-slate-500 text-sm mb-6 flex-grow text-justify">{prod.desc}</p>
                                         <NavLink
                                             to={prod.link || "#"}
                                             className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-sm"

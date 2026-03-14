@@ -29,10 +29,10 @@ const EverythingYouNeed = () => {
             <div className="container mx-auto px-4">
                 {/* Section header */}
                 <div className="text-center mb-12 md:mb-16">
-                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+                    <h2 className="text-foreground mb-4">
                         Tout ce dont vous avez besoin pour une eau plus propre
                     </h2>
-                    <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
+                    <p className="text-muted-foreground max-w-3xl mx-auto">
                         Des solutions complètes pour garantir la meilleure qualité d'eau dans votre maison
                     </p>
                 </div>
@@ -51,10 +51,10 @@ const EverythingYouNeed = () => {
                                         <Icon className="h-8 w-8 text-[#2563EB]" />
                                     </div>
                                 </div>
-                                <h3 className="text-xl font-bold text-foreground">
+                                <h3 className="text-foreground">
                                     {feature.title}
                                 </h3>
-                                <p className="text-sm text-muted-foreground leading-snug">
+                                <p className="text-sm text-muted-foreground">
                                     {feature.description}
                                 </p>
                             </div>

@@ -38,7 +38,7 @@ const Review = ({ productName, className, hideHeader = false, title }: ReviewPro
                         <div className="text-center mb-16 space-y-4">
                             {title || (
                                 <>
-                                    <h2 className="text-[32px] md:text-[54px] font-bold text-slate-900 tracking-tighter leading-tight">
+                                    <h2 className="text-slate-900">
                                         L'excellence vue par <br className="hidden md:block" />
                                         <span className="text-blue-600">nos clients satisfaits</span>
                                     </h2>
@@ -78,14 +78,14 @@ const Review = ({ productName, className, hideHeader = false, title }: ReviewPro
                                 </div>
 
                                 {/* Content */}
-                                <p className="text-slate-600 text-lg md:text-xl leading-[1.6] mb-10 flex-grow font-light italic relative z-10">
+                                <p className="text-slate-600 leading-[1.6] mb-10 flex-grow font-light italic relative z-10">
                                     "{review.text}"
                                 </p>
 
                                 {/* Footer / Author */}
                                 <div className="pt-8 border-t border-slate-50 mt-auto flex items-center justify-between">
                                     <div>
-                                        <h4 className="font-bold text-slate-900 text-xl tracking-tight leading-tight">
+                                        <h4 className="text-slate-900 tracking-tight">
                                             {review.name}
                                         </h4>
 

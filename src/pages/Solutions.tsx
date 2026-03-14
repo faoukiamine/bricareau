@@ -89,10 +89,15 @@ const Solutions = () => {
               <span className="lg:hidden text-blue-600 font-bold uppercase tracking-widest text-[10px] mb-4 block">
                 TRAITEMENT D'EAU
               </span>
-              <h1 className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-slate-900 text-center lg:text-justify max-w-xl mx-auto">
-                <span className="font-bold">Nos Solutions de Traitement d'Eau</span>
+              <h1
+                className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] mb-8 tracking-tighter text-slate-900 text-center lg:text-justify max-w-xl mx-auto"
+                style={{
+                  fontWeight: 350
+                }}
+              >
+                <span>Nos Solutions de Traitement d'Eau</span>
               </h1>
-              <p className="text-[20px] leading-snug text-slate-600 font-light text-center lg:text-justify max-w-xl mx-auto">
+              <p className="text-slate-600 font-light text-center lg:text-justify max-w-xl mx-auto">
                 Découvrez notre gamme complète de solutions pour améliorer la qualité de votre eau.
                 Que vous ayez besoin d'adoucir, filtrer ou purifier, nous avons la solution adaptée à vos besoins.
               </p>
@@ -129,17 +134,17 @@ const Solutions = () => {
                       <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center">
                         <solution.icon className="h-7 w-7 text-primary" />
                       </div>
-                      <h2 className="text-2xl md:text-3xl font-bold text-foreground">
+                      <h2 className="text-foreground">
                         {solution.title}
                       </h2>
                     </div>
 
-                    <p className="text-muted-foreground text-lg leading-snug mb-6">
+                    <p className="text-muted-foreground mb-6">
                       {solution.description}
                     </p>
 
                     <div className="bg-slate-50 rounded-xl p-6 mb-6">
-                      <h3 className="font-semibold text-foreground mb-4">Avantages clés :</h3>
+                      <h3 className="text-foreground mb-4">Avantages clés :</h3>
                       <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
                         {solution.benefits.map((benefit, i) => (
                           <li key={i} className="flex items-start gap-2">
@@ -168,10 +173,10 @@ const Solutions = () => {
         {/* CTA Section */}
         <section className="bg-primary py-16 md:py-20">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-2xl md:text-3xl font-bold text-primary-foreground mb-4">
+            <h2 className="text-primary-foreground mb-4">
               Besoin d'aide pour choisir la bonne solution ?
             </h2>
-            <p className="text-primary-foreground/80 text-lg mb-8 max-w-2xl mx-auto">
+            <p className="text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
               Nos experts sont là pour vous conseiller et vous proposer la solution
               la plus adaptée à vos besoins et à la qualité de votre eau.
             </p>

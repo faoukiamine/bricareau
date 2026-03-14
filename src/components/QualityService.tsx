@@ -51,13 +51,13 @@ const QualityService = () => {
                 {/* Section header */}
                 <div className="text-center mb-12 md:mb-16">
                     <h2
-                        className="text-foreground tracking-tighter"
-                        style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                        className="text-foreground"
+                        style={{ }}
                     >
                         <span className="text-[32px] md:text-[60px] font-light leading-[1.2] md:leading-[60px] block">Qualité inégalée.</span>
                         <span className="text-[32px] md:text-[60px] font-normal leading-[1.2] md:leading-[60px] block">Service inoubliable.</span>
                     </h2>
-                    <p className="text-lg text-muted-foreground leading-snug max-w-3xl mx-auto">
+                    <p className="text-muted-foreground max-w-3xl mx-auto">
                         Nous nous engageons à fournir les meilleures solutions de traitement d'eau avec un service exceptionnel
                     </p>
                 </div>
@@ -75,10 +75,10 @@ const QualityService = () => {
                                     <div className="w-14 h-14 rounded-lg bg-[#2563EB]/10 flex items-center justify-center">
                                         <Icon className="h-7 w-7 text-[#2563EB]" />
                                     </div>
-                                    <h3 className="text-2xl font-bold text-foreground">
+                                    <h3 className="text-foreground">
                                         {feature.title}
                                     </h3>
-                                    <p className="text-base text-muted-foreground leading-snug">
+                                    <p className="text-base text-muted-foreground">
                                         {feature.description}
                                     </p>
                                     <ul className="space-y-2 pt-2">

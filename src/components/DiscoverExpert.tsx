@@ -16,13 +16,13 @@ const DiscoverExpert = () => {
                     <div className="lg:w-1/2 space-y-10">
                         <div className="space-y-6">
                             <h2
-                                className="text-slate-900 tracking-tighter"
-                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                className="text-slate-900"
+                                style={{ }}
                             >
                                 <span className="text-[40px] md:text-[56px] font-light leading-[1.1] block">Votre solution d'eau</span>
                                 <span className="text-[40px] md:text-[56px] font-bold leading-[1.1] text-blue-600 block">personnalisée en quelques clics.</span>
                             </h2>
-                            <p className="text-xl text-slate-600 font-light leading-snug max-w-lg">
+                            <p className="text-slate-600 font-light max-w-lg">
                                 Quelques étapes suffisent pour transformer l'eau de votre foyer. Identifiez vos priorités et découvrez instantanément le système Bricareau adapté à votre réalité.
                             </p>
                         </div>
@@ -31,7 +31,7 @@ const DiscoverExpert = () => {
                             <Button
                                 size="lg"
                                 className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-10 h-16 text-lg shadow-xl shadow-blue-200 hover:shadow-blue-300 transition-all hover:-translate-y-1 w-full sm:w-auto"
-                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                style={{ }}
                                 asChild
                             >
                                 <a href="/diagnostic" className="flex items-center justify-center gap-3">

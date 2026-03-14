@@ -66,8 +66,8 @@ const ProblemHero = () => {
                         Diagnostic Interactif
                     </span>
                     <h2
-                        className="text-slate-900 tracking-tighter mb-6"
-                        style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                        className="text-slate-900 mb-6"
+                        style={{ }}
                     >
                         <span className="text-[40px] md:text-[56px] font-bold leading-[1.1] block">Identifiez votre problème</span>
                         <span className="text-[40px] md:text-[56px] font-light leading-[1.1] block text-slate-500">nous avons la solution.</span>
@@ -117,14 +117,14 @@ const ProblemHero = () => {
                             {/* Decorative large icon */}
                             <activeProblem.icon className="absolute top-8 right-8 w-32 h-32 text-slate-50 -rotate-12 pointer-events-none" />
 
-                            <h3 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6 relative z-10">
+                            <h3 className="text-3xl md:text-4xl text-slate-900 mb-6 relative z-10">
                                 {activeProblem.title}
                             </h3>
 
                             <div className="space-y-6 relative z-10 mb-8">
                                 <div>
                                     <span className="text-xs font-bold text-red-500 uppercase tracking-wide mb-1 block">Le Problème</span>
-                                    <p className="text-lg text-slate-600 leading-snug">
+                                    <p className="text-slate-600">
                                         {activeProblem.desc}
                                     </p>
                                 </div>
@@ -133,7 +133,7 @@ const ProblemHero = () => {
                                     <span className="text-xs font-bold text-blue-600 uppercase tracking-wide mb-2 block flex items-center gap-2">
                                         <Check className="w-3 h-3" /> La Solution Bricareau
                                     </span>
-                                    <p className="text-lg font-medium text-slate-800">
+                                    <p className="font-medium text-slate-800">
                                         {activeProblem.solution}
                                     </p>
                                 </div>
