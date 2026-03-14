@@ -76,7 +76,7 @@ const CommercialIndustriel = () => {
 
       <main>
         {/* 1. Hero Section */}
-        <section className="relative h-[850px] flex items-center overflow-hidden -mt-[104px] pt-[104px]">
+        <section className="relative h-[850px] flex items-center overflow-hidden">
           <div className="absolute inset-0 z-0">
             <img
               src={heroImage}

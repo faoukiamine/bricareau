@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import BlogLayout from "@/components/BlogLayout";
 import heroImg from "@/assets/plomb-canalisation-tuyau-eau.avif";
+export { heroImg };
 
 const PlombVieillesMaisonsProteger = () => {
     useEffect(() => {

@@ -8,6 +8,9 @@ import sereneLite from "@/assets/Système+de+filtration+Serene+Lite.webp";
 import conditionneurImg from "@/assets/Gemini_Generated_Image_edgz5sedgz5sedgz.png";
 import testStripImg from "@/assets/Using-a-strip-test-for-water-quality.webp";
 import applianceDamageImg from "@/assets/tarte-chauffe-eau.jpg";
+import { softenerImg as residentialWaterSoftenerImg } from "./Blog pages/Comment régler la dureté de votre adoucisseur ";
+import { adoucisseurImg as adoucisseurFosseImg } from "./Blog pages/Adoucisseur-deau- et-fosse-septique--Mythes-et-réalités";
+import { conditionneursImg } from "./Blog pages/Adoucisseur avec sel ou sans sel";
 import {
   Leaf,
   ChevronRight,
@@ -151,7 +154,7 @@ const ConditionneursSansSel = () => {
 
       <main>
         {/* 1. Hero Section */}
-        <section className="relative h-[850px] flex items-center overflow-hidden -mt-[104px] pt-[104px]">
+        <section className="relative h-[850px] flex items-center overflow-hidden">
           <div className="absolute inset-0 z-0">
             <img
               src={heroGirl}
@@ -394,19 +397,19 @@ const ConditionneursSansSel = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
                 {
-                  title: "Adoucisseur sans sel vs avec sel : La vérité technique",
-                  img: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=800&auto=format&fit=crop",
+                  title: "Adoucisseur sans sel vs avec sel : la vérité technique",
+                  img: residentialWaterSoftenerImg,
                   link: "/adoucisseur-sans-sel-vs-avec-sel-verite-technique",
                 },
                 {
                   title: "Adoucisseur d'eau et fosse septique : compatible ou non ?",
-                  img: applianceDamageImg,
+                  img: adoucisseurFosseImg,
                   link: "/adoucisseur-deau-et-fosse-septique-mythes-et-realites",
                 },
                 {
-                  title: "Comment régler la dureté de votre adoucisseur d'eau ?",
-                  img: testStripImg,
-                  link: "/comment-regler-durete-adoucisseur-eau",
+                  title: "Conditionneur d'eau : Une alternative écologique à l'adoucisseur sans sel",
+                  img: conditionneursImg,
+                  link: "/conditionneur-deau-une-alternative-ecologique-a-ladoucisseur-sans-sel",
                 },
               ].map((art, i) => (
                 <NavLink

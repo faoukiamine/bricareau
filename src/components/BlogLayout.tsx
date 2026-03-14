@@ -153,7 +153,7 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({ title, headerImage, children, t
 
             <div className="flex-grow">
                 {/* Hero Section - Split Layout */}
-                <div className="w-full min-h-[450px] md:min-h-[700px] relative -mt-[104px] flex overflow-hidden bg-[#1a3a5c]">
+                <div className="w-full min-h-[450px] md:min-h-[700px] relative flex overflow-hidden bg-[#1a3a5c]">
                     {/* Background image - right side */}
                     <div className="absolute right-0 top-0 z-[1] hidden h-full w-3/5 lg:block">
                         <img

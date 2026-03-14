@@ -5,7 +5,7 @@ import { NavLink } from "@/components/NavLink";
 const Hero = () => {
 
   return (
-    <section className="relative h-[850px] flex items-center overflow-hidden -mt-[104px] pt-[104px]">
+    <section className="relative h-[850px] flex items-center overflow-hidden">
       {/* Background image with overlay */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <img

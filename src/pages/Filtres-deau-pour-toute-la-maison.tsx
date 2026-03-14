@@ -22,6 +22,9 @@ import specializedFiltersImg from "@/assets/Filtres d'eau spécialisés.webp";
 import ironSinkImg from "@/assets/Tutorial_Cleaning_Fragranite_Sink.avif";
 import turbidWaterImg from "@/assets/eau trouble turbide.avif";
 import carbonFilterImg from "@/assets/waterdrop-carafe-in-use.webp";
+import { heroImg as eauVilleFiltreeImg } from "./Blog pages/Pourquoi-meme-leau-de-ville-a-besoin-detre-filtree";
+import { heroImg as plombVieillesMaisonsImg } from "./Blog pages/Le-plomb-dans-les-vieilles-maisons-comment-se-proteger";
+import { heroImg as filtreSousEvierImg } from "./Blog pages/Filtre-sous-evier-lalternative-simple-aux-pichets-filtrants";
 import {
     Accordion,
     AccordionContent,
@@ -145,7 +148,7 @@ const FiltresTouteMaison = () => {
 
             <main>
                 {/* 1.Hero Section */}
-                <section className="relative h-[850px] flex items-center overflow-hidden -mt-[104px] pt-[104px]">
+                <section className="relative h-[850px] flex items-center overflow-hidden">
                     <div className="absolute inset-0 z-0">
                         <img
                             src={heroFilter}
@@ -353,7 +356,7 @@ const FiltresTouteMaison = () => {
                 </section>
 
                 {/* 6. Water Testing Section */}
-                <section className="relative h-[650px] flex items-center overflow-hidden">
+                <section className="relative h-[750px] flex items-center overflow-hidden">
                     <div className="absolute inset-0 z-0">
                         <img
                             src={waterTestingImg}
@@ -475,9 +478,9 @@ const FiltresTouteMaison = () => {
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {[
-                                { title: "Adoucisseur sans sel vs avec sel : la vérité technique", img: ironSinkImg, link: "/adoucisseur-sans-sel-vs-avec-sel-verite-technique" },
-                                { title: "Comment régler la dureté de votre adoucisseur ?", img: carbonFilterImg, link: "/comment-regler-durete-adoucisseur-eau" },
-                                { title: "Adoucisseur d'eau portable pour VR", img: turbidWaterImg, link: "/adoucisseur-deau-portable-pour-vr" }
+                                { title: "Pourquoi même l'eau de ville a besoin d'être filtrée?", img: eauVilleFiltreeImg, link: "/pourquoi-meme-leau-de-ville-a-besoin-detre-filtree" },
+                                { title: "Le plomb dans les vieilles maisons : Comment se protéger?", img: plombVieillesMaisonsImg, link: "/le-plomb-dans-les-vieilles-maisons-comment-se-proteger" },
+                                { title: "Filtre sous évier, l'alternative simple aux pichets filtrants", img: filtreSousEvierImg, link: "/filtre-sous-evier-lalternative-simple-aux-pichets-filtrants" }
                             ].map((art, i) => (
                                 <div
                                     key={i}

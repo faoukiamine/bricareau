@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import BlogLayout from "@/components/BlogLayout";
 import softenerImg from "@/assets/2149186343.jpg";
+export { softenerImg };
 
 const MesurerDureteMaison = () => {
     useEffect(() => {

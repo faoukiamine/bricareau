@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import BlogLayout from "@/components/BlogLayout";
 import heroImg from "@/assets/resistance-chauffe-eau-electrique.jpg";
+export { heroImg };
 
 const CommentAdoucisseurReduitFacture = () => {
     useEffect(() => {

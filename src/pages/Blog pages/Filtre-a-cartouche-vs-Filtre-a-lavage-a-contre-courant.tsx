@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import BlogLayout from "@/components/BlogLayout";
 import heroImg from "@/assets/Double Stage Filter.jpg";
+export { heroImg };
 
 const FiltreCartoucheVsContreCourant = () => {
     useEffect(() => {

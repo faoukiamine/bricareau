@@ -26,11 +26,11 @@ import labTestImg from "@/assets/506610454-612x612-1.jpg";
 import eauDureThumb from "@/assets/9e9f1b18-7b69-4af1-9e3d-322775a1ec72.jpg";
 import rouilleThumbUpdated from "@/assets/5a4674e7-575d-4cd9-b1f2-32522f8a7072.jpg";
 import mauvaisGoutThumb from "@/assets/blog3-1.jpg";
-import coliformBacteriaImg from "@/assets/coliform_bacteria.jpg";
+import { heroImg as coliformBacteriaImg } from "./Blog pages/Bacteries-dans-le-puits-les-etapes-de-desinfection-choc";
 import dishwasherScaleImg from "@/assets/lave vaisselle entartrée avec du calcaire.jpeg";
-import womanbathImg from "@/assets/2149186343.jpg";
-import fosseSeptiqueImg from "@/assets/Cover-Image.webp";
-import puitsImg from "@/assets/mother-teaching-her-children-cook-home.jpg";
+import { softenerImg as residentialWaterSoftenerImg } from "./Blog pages/Comment régler la dureté de votre adoucisseur ";
+import { adoucisseurImg as adoucisseurFosseImg } from "./Blog pages/Adoucisseur-deau- et-fosse-septique--Mythes-et-réalités";
+import { conditionneursImg } from "./Blog pages/Adoucisseur avec sel ou sans sel";
 import {
   Accordion,
   AccordionContent,
@@ -136,7 +136,7 @@ const EauDePuits = () => {
       <Header />
       <main>
         {/* 1. Hero Section */}
-        <section className="relative h-[850px] flex items-center overflow-hidden -mt-[104px] pt-[104px]">
+        <section className="relative h-[850px] flex items-center overflow-hidden">
           <div className="absolute inset-0 z-0">
             <img
               src={heroPuits}
@@ -356,7 +356,7 @@ const EauDePuits = () => {
         </section>
 
         {/* 5.Water Testing Section */}
-        <section className="relative h-[650px] flex items-center overflow-hidden">
+        <section className="relative h-[750px] flex items-center overflow-hidden">
           <div className="absolute inset-0 z-0">
             <img
               src={labTestImg}
@@ -379,7 +379,7 @@ const EauDePuits = () => {
                 au soufre et au calcaire.
               </h1>
               <p className="text-lg font-light leading-snug text-white/95 mb-8 max-w-xl text-justify">
-                Un puits performant commence par une analyse rigoureuse. Identifiez les contaminants invisibles et protégez durablement votre santé et vos installations.              </p>
+                Un puits performant commence par une analyse rigoureuse. Identifiez les contaminants invisibles et protégez durablement votre santé et vos installations.</p>
               <div className="flex gap-4">
                 <Button
                   size="lg"
@@ -709,17 +709,17 @@ const EauDePuits = () => {
               {[
                 {
                   title: "Adoucisseur avec sel ou sans sel : la vérité technique",
-                  img: puitsImg,
+                  img: conditionneursImg,
                   link: "/adoucisseur-sans-sel-vs-avec-sel-verite-technique",
                 },
                 {
                   title: "Comment régler la dureté de votre adoucisseur d'eau ?",
-                  img: womanbathImg,
+                  img: residentialWaterSoftenerImg,
                   link: "/comment-regler-durete-adoucisseur-eau",
                 },
                 {
                   title: "Adoucisseur d'eau et fosse septique : compatible ou non ?",
-                  img: fosseSeptiqueImg,
+                  img: adoucisseurFosseImg,
                   link: "/adoucisseur-deau-et-fosse-septique-mythes-et-realites",
                 },
               ].map((art, i) => (

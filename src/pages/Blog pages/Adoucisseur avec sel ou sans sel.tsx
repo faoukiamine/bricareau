@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import BlogLayout from "@/components/BlogLayout";
 import conditionneursImg from "@/assets/avantages conditionneurs sans sel.jpg";
+export { conditionneursImg };
 
 const NiveauDureteBesoin = () => {
     useEffect(() => {

@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import BlogLayout from "@/components/BlogLayout";
 import heroImg from "@/assets/258.jpg";
+export { heroImg };
 
 const EauEmbouteilleeDangers = () => {
     useEffect(() => {

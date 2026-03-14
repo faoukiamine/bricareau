@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import BlogLayout from "@/components/BlogLayout";
 import heroImg from "@/assets/31794.jpg";
+export { heroImg };
 
 const EauPuitsOsmoseInverse = () => {
     useEffect(() => {

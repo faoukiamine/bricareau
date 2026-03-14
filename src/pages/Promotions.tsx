@@ -137,37 +137,6 @@ const Promotions = () => {
                     </div>
                 </section>
 
-                {/* CTA Section */}
-                <section className="py-12 md:py-16 bg-gradient-to-r from-[#0052ff] to-blue-600">
-                    <div className="container mx-auto px-4">
-                        <div className="max-w-3xl mx-auto text-center space-y-6">
-                            <h2 className="text-[32px] md:text-[48px] font-normal text-white mb-8 leading-[1.2] md:leading-[48px] tracking-tighter">
-                                Besoin d'aide pour choisir ?
-                            </h2>
-                            <p className="text-base md:text-lg text-white/90">
-                                Nos experts sont là pour vous conseiller et vous aider à trouver la meilleure solution adaptée à vos besoins.
-                            </p>
-                            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                                <Button
-                                    size="lg"
-                                    variant="secondary"
-                                    className="bg-white text-[#0052ff] hover:bg-white/90 rounded-full px-8"
-                                    asChild
-                                >
-                                    <a href="/contact">Contactez-nous</a>
-                                </Button>
-                                <Button
-                                    size="lg"
-                                    variant="outline"
-                                    className="border-white text-white bg-transparent hover:bg-white/10 rounded-full px-8"
-                                    asChild
-                                >
-                                    <a href="tel:18552649328">Appelez le 1-855-264-9328</a>
-                                </Button>
-                            </div>
-                        </div>
-                    </div>
-                </section>
 
                 {/* Terms Section */}
                 <section className="py-12 md:py-16 bg-slate-50">

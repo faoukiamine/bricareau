@@ -51,7 +51,7 @@ const AdoucisseursPortables = () => {
             <Header />
 
             {/* 1. Section Hero */}
-            <section className="relative h-[850px] flex items-center overflow-hidden -mt-[104px] pt-[104px]">
+            <section className="relative h-[850px] flex items-center overflow-hidden">
                 {/* Background Image & Overlays */}
                 <div className="absolute inset-0 z-0">
                     <img

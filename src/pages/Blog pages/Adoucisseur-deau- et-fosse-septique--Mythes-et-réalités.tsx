@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import BlogLayout from "@/components/BlogLayout";
 import adoucisseurImg from "@/assets/Cover-Image.webp";
+export { adoucisseurImg };
 
 const TraitementUVBacteriaNaturel = () => {
     useEffect(() => {

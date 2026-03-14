@@ -32,6 +32,9 @@ import waterTestingImg from "@/assets/undersink_filtration_header.jpg";
 import multiStageFilterImg from "@/assets/RO undersink system.jpg";
 import medsInWaterImg from "@/assets/eau_medicaments.png";
 import undersinkVsWholeHouseImg from "@/assets/2148947324.jpg";
+import { heroImg as filtreSousEvierImg } from "./Blog pages/Filtre-sous-evier-lalternative-simple-aux-pichets-filtrants";
+import { heroImg as plombVieillesMaisonsImg } from "./Blog pages/Le-plomb-dans-les-vieilles-maisons-comment-se-proteger";
+import { heroImg as eauVilleFiltreeImg } from "./Blog pages/Pourquoi-meme-leau-de-ville-a-besoin-detre-filtree";
 
 const FiltrationSousEvier = () => {
     const navigate = useNavigate();
@@ -74,7 +77,7 @@ const FiltrationSousEvier = () => {
             <Header />
             <main>
                 {/* 1.Hero Section */}
-                <section className="relative h-[850px] flex items-center overflow-hidden -mt-[104px] pt-[104px]">
+                <section className="relative h-[850px] flex items-center overflow-hidden">
                     <div className="absolute inset-0 z-0">
                         <img
                             src={heroDrink}
@@ -288,7 +291,7 @@ const FiltrationSousEvier = () => {
                 </section>
 
                 {/* 5.Water Testing Section */}
-                <section className="relative h-[650px] flex items-center overflow-hidden">
+                <section className="relative h-[750px] flex items-center overflow-hidden">
                     <div className="absolute inset-0 z-0">
                         <img
                             src={waterTestingImg}
@@ -413,19 +416,19 @@ const FiltrationSousEvier = () => {
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {[
                                 {
-                                    title: "Adoucisseur sans sel vs avec sel : la vérité technique",
-                                    img: undersinkVsWholeHouseImg,
-                                    link: "/adoucisseur-sans-sel-vs-avec-sel-verite-technique",
+                                    title: "Filtre sous évier, l'alternative simple aux pichets filtrants",
+                                    img: filtreSousEvierImg,
+                                    link: "/filtre-sous-evier-lalternative-simple-aux-pichets-filtrants",
                                 },
                                 {
-                                    title: "Comment régler la dureté de votre adoucisseur ?",
-                                    img: multiStageFilterImg,
-                                    link: "/comment-regler-durete-adoucisseur-eau",
+                                    title: "Le plomb dans les vieilles maisons : Comment se protéger?",
+                                    img: plombVieillesMaisonsImg,
+                                    link: "/le-plomb-dans-les-vieilles-maisons-comment-se-proteger",
                                 },
                                 {
-                                    title: "Adoucisseur d'eau portable pour VR",
-                                    img: medsInWaterImg,
-                                    link: "/adoucisseur-deau-portable-pour-vr",
+                                    title: "Pourquoi même l'eau de ville a besoin d'être filtrée?",
+                                    img: eauVilleFiltreeImg,
+                                    link: "/pourquoi-meme-leau-de-ville-a-besoin-detre-filtree",
                                 },
                             ].map((art, i) => (
                                 <NavLink

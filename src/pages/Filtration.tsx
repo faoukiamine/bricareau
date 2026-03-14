@@ -22,6 +22,9 @@ import undersinkSystemImg from "@/assets/Triple Stage Filter.jpg";
 import africanGirlImg from "@/assets/african-girl-stands-kitchen-drinks-water.jpg";
 import glassOfWaterImg from "@/assets/glass-of-water.jpeg";
 import waterTestingImg from "@/assets/Legionella-Monitoring.webp";
+import { heroImg as filtreSousEvierImg } from "./Blog pages/Filtre-sous-evier-lalternative-simple-aux-pichets-filtrants";
+import { heroImg as healthwaterImg } from "./Blog pages/Eau-embouteillee-les-dangers-meconnus-pour-votre-sante-au-quotidien";
+import { heroImg as rowaterImg } from "./Blog pages/Osmose-inverse-la-technologie-derriere-une-eau-100-pure";
 
 import {
     Accordion,
@@ -68,7 +71,7 @@ const Filtration = () => {
             <Header />
             <main>
                 {/* 1. Hero Section */}
-                <section className="relative h-[850px] flex items-center overflow-hidden -mt-[104px] pt-[104px]">
+                <section className="relative h-[850px] flex items-center overflow-hidden">
                     <div className="absolute inset-0 z-0">
                         <img
                             src={heroFiltration}
@@ -386,7 +389,7 @@ const Filtration = () => {
                 </section>
 
                 {/* 7.Water Testing Section */}
-                <section className="relative h-[650px] flex items-center overflow-hidden">
+                <section className="relative h-[750px] flex items-center overflow-hidden">
                     <div className="absolute inset-0 z-0">
                         <img
                             src={waterTestingImg}
@@ -601,16 +604,19 @@ const Filtration = () => {
                         </div>                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {[
                                 {
-                                    title: "Comment choisir son filtre ?",
-                                    img: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=800&auto=format&fit=crop",
+                                    title: "Filtre sous évier, l'alternative simple aux pichets filtrants",
+                                    img: filtreSousEvierImg,
+                                    link: "/filtre-sous-evier-lalternative-simple-aux-pichets-filtrants",
                                 },
                                 {
-                                    title: "Les bénéfices pour la santé",
-                                    img: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=800&auto=format&fit=crop",
+                                    title: "Osmose inverse et santé : quelle qualité d’eau obtenez-vous ?",
+                                    img: healthwaterImg,
+                                    link: "/osmose-inverse-et-sante-quelle-qualite-deau-obtenez-vous",
                                 },
                                 {
-                                    title: "Guide de l'osmose inverse",
-                                    img: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop",
+                                    title: "Osmose inverse : la technologie derrière une eau 100 % pure",
+                                    img: rowaterImg,
+                                    link: "/osmose-inverse-la-technologie-derriere-une-eau-100-pure",
                                 },
                             ].map((art, i) => (
                                 <div

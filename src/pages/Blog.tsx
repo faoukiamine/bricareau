@@ -21,17 +21,26 @@ const Blog = () => {
         });
     };
 
+    const seenHrefs = new Set<string>();
     const filteredCategories = categories.map(cat => {
         // If categories are selected, check if this one is included
-        if (selectedCategories.length > 0 && !selectedCategories.includes(cat.id)) {
+        const isCategorySelected = selectedCategories.length > 0;
+        if (isCategorySelected && !selectedCategories.includes(cat.id)) {
             return { ...cat, products: [] };
         }
 
         const lowerQuery = searchQuery.toLowerCase();
-        const products = cat.products.filter(product =>
-            product.title.toLowerCase().includes(lowerQuery) ||
-            product.desc.toLowerCase().includes(lowerQuery)
-        );
+        const products = cat.products.filter(product => {
+            const matchesSearch = product.title.toLowerCase().includes(lowerQuery) ||
+                product.desc.toLowerCase().includes(lowerQuery);
+            if (!matchesSearch) return false;
+
+            // Deduplicate across categories only when viewing multiple categories
+            if (!isCategorySelected && seenHrefs.has(product.href)) return false;
+
+            seenHrefs.add(product.href);
+            return true;
+        });
 
         return { ...cat, products };
     }).filter(cat => cat.products.length > 0);
@@ -102,75 +111,162 @@ const Blog = () => {
                         </div>
 
                         {/* Results List */}
-                        <div className="flex flex-col gap-16">
-                            {filteredCategories.length === 0 ? (
-                                <div className="text-center py-16 text-slate-500">
-                                    <Search className="w-12 h-12 mx-auto mb-4 opacity-20" />
-                                    <p className="text-lg">Aucun article ne correspond à votre recherche.</p>
-                                </div>
-                            ) : (
-                                filteredCategories.map((cat, idx) => (
-                                    <div key={cat.id} id={cat.id}>
-                                        <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-6 border-b border-gray-100 pb-6">
-                                            <div>
-                                                <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">{cat.title}</h2>
-                                                <div className="h-1.5 w-24 bg-blue-600 rounded-full"></div>
-                                            </div>
-                                            {cat.products.length > 3 && (
-                                                <Button variant="link" className="text-blue-600 font-bold p-0 group" asChild>
-                                                    <NavLink to={`/blog/categorie/${cat.id}`} className="flex items-center">
-                                                        Voir tous les articles <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                        {filteredCategories.length === 0 ? (
+                            <div className="text-center py-24 text-slate-500 bg-slate-50 rounded-3xl border border-dashed border-slate-200">
+                                <Search className="w-16 h-16 mx-auto mb-6 opacity-20" />
+                                <h3 className="text-2xl font-bold text-slate-900 mb-2">Aucun résultat</h3>
+                                <p className="text-lg">Aucun article ne correspond à votre recherche "{searchQuery}".</p>
+                                <Button
+                                    variant="outline"
+                                    className="mt-8 rounded-full"
+                                    onClick={() => { setSearchQuery(""); setSelectedCategories([]); }}
+                                >
+                                    Effacer les filtres
+                                </Button>
+                            </div>
+                        ) : (
+                            <>
+
+                                {/* 2. Varied Category Sections */}
+                                <div className="space-y-24">
+                                    {filteredCategories.map((cat, idx) => {
+                                        // Define some accent colors based on index
+                                        const accentColors = [
+                                            "border-blue-600",
+                                            "border-teal-500",
+                                            "border-purple-600",
+                                            "border-orange-500",
+                                            "border-indigo-600"
+                                        ];
+                                        const accentColor = accentColors[idx % accentColors.length];
+
+                                        // Skip the first article if it's the hero category (already shown)
+                                        // In this layout logic, we'll slice differently
+                                        const displayProducts = idx === 0 ? cat.products.slice(1, 4) : cat.products.slice(0, 3);
+                                        if (displayProducts.length === 0) return null;
+
+                                        // Patterns for varied layout:
+                                        // idx % 2 === 0: 1 large on left, 2 smaller on right (Total 3)
+                                        // idx % 2 === 1: 3-column grid
+                                        const isStaggered = idx % 2 === 0 && displayProducts.length >= 3;
+
+                                        return (
+                                            <div key={cat.id} id={cat.id} className={`pt-8 border-t-4 ${accentColor}`}>
+                                                <div className="flex items-center justify-between mb-10">
+                                                    <h2 className="text-2xl md:text-3xl font-black text-slate-900 uppercase tracking-tighter">
+                                                        {cat.title}
+                                                    </h2>
+                                                    <NavLink
+                                                        to={`/blog/categorie/${cat.id}`}
+                                                        className="text-xs font-black text-blue-600 uppercase tracking-widest flex items-center gap-2 hover:text-slate-900 transition-colors"
+                                                    >
+                                                        Tout voir <ChevronRight className="w-4 h-4" />
                                                     </NavLink>
-                                                </Button>
-                                            )}
-                                        </div>
+                                                </div>
 
-                                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                                            {cat.products.slice(0, 3).map((product, pIdx) => (
-                                                <NavLink
-                                                    key={pIdx}
-                                                    to={product.href}
-                                                    className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-slate-100 flex flex-col h-full"
-                                                >
-                                                    <div className="relative h-64 overflow-hidden">
-                                                        <img
-                                                            src={product.image}
-                                                            alt={`${product.title} - Solution Bricareau`}
-                                                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                                                        />
-                                                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-
-                                                        {/* Reading Time Badge */}
-                                                        {product.readTime && (
-                                                            <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full flex items-center gap-2 shadow-sm z-10 transition-transform group-hover:scale-105">
-                                                                <Clock className="w-3.5 h-3.5 text-blue-600" />
-                                                                <span className="text-[12px] font-bold text-slate-900">{product.readTime}</span>
-                                                            </div>
-                                                        )}
-                                                    </div>
-                                                    <div className="p-8 flex flex-col flex-1">
-                                                        <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
-                                                            {product.title}
-                                                        </h3>
-                                                        <p
-                                                            className="text-slate-600 mb-6 flex-1 text-sm font-light leading-[19px]"
-                                                            style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
-                                                        >
-                                                            {product.desc}
-                                                        </p>
-                                                        <div className="mt-auto flex justify-end">
-                                                            <div className="w-10 h-10 rounded-full border border-blue-600 flex items-center justify-center text-blue-600 transition-all duration-300 group-hover:bg-blue-600 group-hover:text-white">
-                                                                <ArrowRight className="h-5 w-5" />
-                                                            </div>
+                                                {isStaggered ? (
+                                                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                                                        {/* Left Column: 1 Large Card */}
+                                                        <div className="lg:col-span-8">
+                                                            <NavLink
+                                                                to={displayProducts[0].href}
+                                                                className="group block h-full bg-white rounded-xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-500"
+                                                            >
+                                                                <div className="relative aspect-[16/9] overflow-hidden">
+                                                                    <img
+                                                                        src={displayProducts[0].image}
+                                                                        alt={displayProducts[0].title}
+                                                                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                                                    />
+                                                                    <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm px-3 py-1.5 rounded-full flex items-center gap-2 shadow-sm">
+                                                                        <Clock className="w-3.5 h-3.5 text-blue-600" />
+                                                                        <span className="text-[12px] font-bold text-slate-900">{displayProducts[0].readTime}</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div className="p-8">
+                                                                    <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4 group-hover:text-blue-600 transition-colors leading-tight">
+                                                                        {displayProducts[0].title}
+                                                                    </h3>
+                                                                    <p className="text-slate-600 text-base font-light mb-6 flex-1 leading-snug">
+                                                                        {displayProducts[0].desc}
+                                                                    </p>
+                                                                    <div className="flex justify-end">
+                                                                        <div className="w-10 h-10 rounded-full border border-blue-600 flex items-center justify-center text-blue-600 transition-all duration-300 group-hover:bg-blue-600 group-hover:text-white">
+                                                                            <ArrowRight className="h-5 w-5" />
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </NavLink>
+                                                        </div>
+                                                        {/* Right Column: 2 Stacked Cards */}
+                                                        <div className="lg:col-span-4 flex flex-col gap-8">
+                                                            {displayProducts.slice(1, 3).map((product, pIdx) => (
+                                                                <NavLink
+                                                                    key={pIdx}
+                                                                    to={product.href}
+                                                                    className="group bg-white rounded-xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col h-full"
+                                                                >
+                                                                    <div className="relative aspect-[16/10] overflow-hidden">
+                                                                        <img
+                                                                            src={product.image}
+                                                                            alt={product.title}
+                                                                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                                                        />
+                                                                    </div>
+                                                                    <div className="p-6">
+                                                                        <div className="flex items-center gap-2 text-[11px] font-bold text-slate-400 mb-3 uppercase tracking-wider">
+                                                                            <Clock className="w-3.5 h-3.5" />
+                                                                            <span>{product.readTime}</span>
+                                                                        </div>
+                                                                        <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors leading-tight">
+                                                                            {product.title}
+                                                                        </h3>
+                                                                    </div>
+                                                                </NavLink>
+                                                            ))}
                                                         </div>
                                                     </div>
-                                                </NavLink>
-                                            ))}
-                                        </div>
-                                    </div>
-                                ))
-                            )}
-                        </div>
+                                                ) : (
+                                                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                                                        {displayProducts.map((product, pIdx) => (
+                                                            <NavLink
+                                                                key={pIdx}
+                                                                to={product.href}
+                                                                className="group bg-white rounded-xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col h-full"
+                                                            >
+                                                                <div className="relative aspect-[16/10] overflow-hidden">
+                                                                    <img
+                                                                        src={product.image}
+                                                                        alt={product.title}
+                                                                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                                                    />
+                                                                    <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm px-3 py-1.5 rounded-full flex items-center gap-2 shadow-sm opacity-0 group-hover:opacity-100 transition-opacity">
+                                                                        <Clock className="w-3.5 h-3.5 text-blue-600" />
+                                                                        <span className="text-[12px] font-bold text-slate-900">{product.readTime}</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div className="p-6">
+                                                                    <div className="flex items-center gap-2 text-[11px] font-bold text-slate-400 mb-3 uppercase tracking-wider">
+                                                                        <Clock className="w-3.5 h-3.5" />
+                                                                        <span>{product.readTime}</span>
+                                                                    </div>
+                                                                    <h3 className="text-lg font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors leading-tight">
+                                                                        {product.title}
+                                                                    </h3>
+                                                                    <p className="text-slate-600 text-sm font-light leading-[19px] line-clamp-2">
+                                                                        {product.desc}
+                                                                    </p>
+                                                                </div>
+                                                            </NavLink>
+                                                        ))}
+                                                    </div>
+                                                )}
+                                            </div>
+                                        );
+                                    })}
+                                </div>
+                            </>
+                        )}
                     </div>
                 </section>
 

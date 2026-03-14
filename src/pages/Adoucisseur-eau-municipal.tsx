@@ -20,8 +20,13 @@ import { NavLink } from "@/components/NavLink";
 import { useNavigate } from "react-router-dom";
 import React, { useEffect } from "react";
 import waterTestingImg from "@/assets/water-test.jpg";
-import residentialWaterSoftenerImg from "@/assets/residential-water-softener.png";
+import { softenerImg as residentialWaterSoftenerImg } from "./Blog pages/Comment régler la dureté de votre adoucisseur ";
+import { adoucisseurImg as adoucisseurFosseImg } from "./Blog pages/Adoucisseur-deau- et-fosse-septique--Mythes-et-réalités";
+import { conditionneursImg } from "./Blog pages/Adoucisseur avec sel ou sans sel";
 import waterSoftenerImg from "@/assets/Adoucisseurs d'eau.webp";
+import TwinAlternatingWaterSoftenerImg from "@/assets/TwinTank.webp";
+import SentinelWaterSoftenerImg from "@/assets/Sentinelle Water Softener.png";
+import SerenityWaterSoftenerImg from "@/assets/Serenity Water Softener.png";
 import {
     Accordion,
     AccordionContent,
@@ -30,9 +35,9 @@ import {
 } from "@/components/ui/accordion";
 import ConsultationFormSection from "@/components/ConsultationFormSection";
 const products = [
-    { name: "Adoucisseur d'eau de la série \n Sentinelle", desc: "Le rythme parfait d'une eau toujours douce.", path: "/contact", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
-    { name: "Adoucisseur d'eau de la série \n Sérénité", desc: "La paix durable pour votre maison et votre confort.", path: "/contact", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
-    { name: "Adoucisseur d'eau de la série \n Infiniti", desc: "Une douceur constante, à chaque goutte, à chaque seconde.", path: "/contact", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
+    { name: "Adoucisseur d'eau de la série \n Sentinelle", desc: "Le rythme parfait d'une eau toujours douce.", path: "/contact", image: SentinelWaterSoftenerImg },
+    { name: "Adoucisseur d'eau de la série \n Sérénité", desc: "La paix durable pour votre maison et votre confort.", path: "/contact", image: SerenityWaterSoftenerImg },
+    { name: "Adoucisseur d'eau de la série \n Infiniti", desc: "Une douceur constante, à chaque goutte, à chaque seconde.", path: "/contact", image: TwinAlternatingWaterSoftenerImg },
 ];
 
 interface ComparisonItem {
@@ -122,7 +127,7 @@ const AdoucisseurEauMunicipal = () => {
 
             <main>
                 {/* 1. Hero Section */}
-                <section className="relative h-[850px] flex items-center overflow-hidden -mt-[104px] pt-[104px]">
+                <section className="relative h-[850px] flex items-center overflow-hidden">
                     <div className="absolute inset-0 z-0">
                         <img
                             src={heroBath}
@@ -293,9 +298,9 @@ const AdoucisseurEauMunicipal = () => {
                                     <tr className="bg-gray-100">
                                         <th className="p-8 text-left text-gray-400 font-light uppercase tracking-wider w-1/4">Modèle</th>
                                         {[
-                                            { name: "Sentinel", img: waterSoftenerImg },
-                                            { name: "Sérénité", img: waterSoftenerImg },
-                                            { name: "Infiniti", img: waterSoftenerImg }
+                                            { name: "Sentinel", img: SentinelWaterSoftenerImg },
+                                            { name: "Sérénité", img: SerenityWaterSoftenerImg },
+                                            { name: "Infiniti", img: TwinAlternatingWaterSoftenerImg }
                                         ].map(m => (
                                             <th key={m.name} className="p-4 text-center text-gray-900 font-bold">
                                                 <div className="flex flex-col items-center gap-2">
@@ -339,7 +344,7 @@ const AdoucisseurEauMunicipal = () => {
                 />
 
                 {/* 7.Water Testing Section */}
-                <section className="relative h-[650px] flex items-center overflow-hidden">
+                <section className="relative h-[750px] flex items-center overflow-hidden">
                     <div className="absolute inset-0 z-0">
                         <img
                             src={waterTestingImg}
@@ -427,9 +432,9 @@ const AdoucisseurEauMunicipal = () => {
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {[
-                                { title: "Adoucisseur sans sel vs avec sel : la vérité technique", img: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop", link: "/adoucisseur-sans-sel-vs-avec-sel-verite-technique" },
+                                { title: "Adoucisseur sans sel vs avec sel : la vérité technique", img: conditionneursImg, link: "/adoucisseur-sans-sel-vs-avec-sel-verite-technique" },
                                 { title: "Comment régler la dureté de votre adoucisseur ?", img: residentialWaterSoftenerImg, link: "/comment-regler-durete-adoucisseur-eau" },
-                                { title: "Adoucisseur d'eau et fosse septique : compatible ou non ?", img: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=800&auto=format&fit=crop", link: "/adoucisseur-deau-et-fosse-septique-mythes-et-realites" }
+                                { title: "Adoucisseur d'eau et fosse septique : compatible ou non ?", img: adoucisseurFosseImg, link: "/adoucisseur-deau-et-fosse-septique-mythes-et-realites" }
                             ].map((art, i) => (
                                 <div
                                     key={i}

@@ -34,6 +34,9 @@ import waterSoftenerImg from "@/assets/Adoucisseurs d'eau.webp";
 import drinkingWaterImg from "@/assets/Solutions d'eau potable.webp";
 import specialFiltersImg from "@/assets/Filtres d'eau spécialisés.webp";
 import uvSystemImg2 from "@/assets/VH200-F10-265x300.jpg";
+import { adoucisseurImg as adoucisseurFosseImg } from "./Blog pages/Adoucisseur-deau- et-fosse-septique--Mythes-et-réalités";
+import { softenerImg as residentialWaterSoftenerImg } from "./Blog pages/Comment régler la dureté de votre adoucisseur ";
+import { conditionneursImg } from "./Blog pages/Adoucisseur avec sel ou sans sel";
 import {
     Accordion,
     AccordionContent,
@@ -165,7 +168,7 @@ const FiltresPuits = () => {
 
             <main>
                 {/* 1. Hero Section */}
-                <section className="relative h-[850px] flex items-center overflow-hidden -mt-[104px] pt-[104px]">
+                <section className="relative h-[850px] flex items-center overflow-hidden">
                     <div className="absolute inset-0 z-0">
                         <img
                             src={heroFilter}
@@ -580,9 +583,9 @@ const FiltresPuits = () => {
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {[
-                                { title: "Adoucisseur sans sel vs avec sel : la vérité technique", path: "/adoucisseur-sans-sel-vs-avec-sel-verite-technique", img: radonImg },
-                                { title: "Adoucisseur d'eau et fosse septique : compatible ou non ?", path: "/adoucisseur-deau-et-fosse-septique-mythes-et-realites", img: waterTasteImg },
-                                { title: "Comment régler la dureté de votre adoucisseur ?", path: "/comment-regler-durete-adoucisseur-eau", img: ironManganeseImg }
+                                { title: "Adoucisseur d'eau et fosse septique : compatible ou non ?", path: "/adoucisseur-deau-et-fosse-septique-mythes-et-realites", img: adoucisseurFosseImg },
+                                { title: "Adoucisseur sans sel vs avec sel : la vérité technique", path: "/adoucisseur-sans-sel-vs-avec-sel-verite-technique", img: residentialWaterSoftenerImg },
+                                { title: "Conditionneur d'eau : Une alternative écologique à l'adoucisseur sans sel", path: "/conditionneur-deau-une-alternative-ecologique-a-ladoucisseur-sans-sel", img: conditionneursImg }
                             ].map((art, i) => (
                                 <div
                                     key={i}

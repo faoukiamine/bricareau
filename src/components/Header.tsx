@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { Menu, X, Phone, MapPin, Droplets, Filter, GlassWater, Waves, Search, ChevronDown, Mail, Tag, Microscope, ArrowRight, CupSoda, Caravan, Sprout, Leaf, House, Snowflake } from "lucide-react";
+import { Menu, X, Phone, MapPin, Droplets, Filter, GlassWater, Waves, Search, ChevronDown, Mail, Tag, ArrowRight, CupSoda, Caravan, Sprout, Leaf, House, Snowflake } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
@@ -41,39 +41,32 @@ const Header = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const closeTimeoutRef = useRef<NodeJS.Timeout | null>(null);
-  const [isScrolled, setIsScrolled] = useState(false);
   const [headerHeight, setHeaderHeight] = useState(0);
   const headerRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-
     const updateHeaderHeight = () => {
       if (headerRef.current) {
         setHeaderHeight(headerRef.current.offsetHeight);
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
     window.addEventListener("resize", updateHeaderHeight);
 
     // Initial measure
     updateHeaderHeight();
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("resize", updateHeaderHeight);
     };
   }, []);
 
-  // Re-measure height when scrolled or location changes
+  // Re-measure height when location changes
   useEffect(() => {
     if (headerRef.current) {
       setHeaderHeight(headerRef.current.offsetHeight);
     }
-  }, [isScrolled, location.pathname]);
+  }, [location.pathname]);
 
   // Close menus on outside click
   useEffect(() => {
@@ -358,66 +351,11 @@ const Header = () => {
     console.log("Searching for:", term);
   };
 
-  // Check if we are on a page that should have a transparent header
-  const transparentPaths = [
-    "/",
-    "/adoucisseurs-portables",
-    "/adoucissement",
-    "/adoucisseur-eau-residentiel",
-    "/eau-de-puits",
-    "/specialises-filtration-eau",
-    "/conditionneurs-sans-sel",
-    "/entreprises",
-    "/commercial-industriel",
-    "/osmose-filtration",
-    "/eau-dure",
-    "/filtration",
-    "/fontaines",
-    "/systemes-de-filtration-deau-sous-evier",
-    "/systemes-de-desinfection-uv",
-    "/tests-eau",
-    "/filtres-deau",
-    "/adoucisseurs-eau-de-puits",
-    "/systeme-de-filtration-deau-potable",
-    "/filtres-deau-pour-toute-la-maison",
-    "/filtre-eau-haute-efficacite",
-    "/ro-6",
-    "/adoucisseur-deau-et-fosse-septique-mythes-et-realites",
-    "/adoucisseur-deau-portable-pour-vr",
-    "/adoucisseur-sans-sel-vs-avec-sel-verite-technique",
-    "/comment-regler-durete-adoucisseur-eau",
-    "/comment-un-adoucisseur-reduit-votre-facture-delectricite",
-    "/consommation-deau-un-adoucisseur-est-il-ecologique",
-    "/eau-dure-les-effets-caches-sur-vos-electromenagers",
-    "/est-ce-securitaire-de-boire-de-leau-adoucie",
-    "/gout-de-chlore-pourquoi-la-ville-en-ajoute-autant",
-    "/hivernisation-comment-proteger-vos-filtres-du-gel",
-    "/pourquoi-leau-de-votre-bac-a-sel-est-elle-sale",
-    "/quel-sel-choisir-pour-votre-adoucisseur-pastilles-ou-cristaux",
-    "/aquarium-pourquoi-leau-osmosee-est-vitale-pour-vos-poissons",
-    "/le-vrai-cout-de-leau-embouteillee-calculez-vos-economies",
-    "/eau-et-bebes-faut-il-faire-bouillir-leau-filtree",
-    "/filtre-sous-evier-lalternative-simple-aux-pichets-filtrants",
-    "/le-fluor-dans-leau-faut-il-le-filtrer",
-    "/le-plomb-dans-les-vieilles-maisons-comment-se-proteger",
-    "/pourquoi-meme-leau-de-ville-a-besoin-detre-filtree",
-    "/pourquoi-une-eau-pure-change-le-gout-du-cafe",
-    "/pourquoi-leau-pure-ameliore-vos-patisseries",
-    "/vivre-en-condo-les-solutions-de-filtration-compactes",
-    "/comment-savoir-si-votre-lampe-uv-fonctionne-encore",
-    "/les-risques-de-ne-pas-changer-sa-lampe-uv-apres-12-mois",
-    "/quelle-frequence-dentretien-pour-un-systeme-uv-domestique",
-    "/bacteries-dans-le-puits-les-etapes-de-desinfection-choc"
-  ];
-  const isTransparentPage = transparentPaths.includes(location.pathname.toLowerCase());
-  const isHeaderTransparent = isTransparentPage && !isScrolled && !isMenuOpen;
+  const isHeaderTransparent = false;
 
   return (
     <>
-      <header className={cn(
-        "fixed top-0 z-50 w-full transition-all duration-300",
-        isHeaderTransparent ? "bg-transparent" : "bg-white shadow-md"
-      )} ref={headerRef}>
+      <header className="fixed top-0 z-50 w-full bg-white shadow-md" ref={headerRef}>
 
         {/* Top Information Bar */}
         {/* Top Information Bar (Hidden) */}
@@ -435,10 +373,7 @@ const Header = () => {
         </a> */}
 
         {/* Upper Navigation Bar - Primary Menu + Utilities */}
-        <div className={cn(
-          "transition-all duration-300 border-b",
-          isHeaderTransparent ? "border-white/10 bg-transparent" : "border-gray-200 bg-white"
-        )}>
+        <div className="border-b border-gray-200 bg-white">
           <div className="container mx-auto px-4 md:px-6">
             <div className="flex h-16 lg:h-12 items-center justify-between">
               {/* Left: Primary Menu (Desktop) */}
@@ -558,10 +493,7 @@ const Header = () => {
         </div>
 
         {/* Lower Navigation Bar - Logo + Product Menu + Search */}
-        <div className={cn(
-          "hidden lg:block border-b transition-all duration-300",
-          isHeaderTransparent ? "border-white/20 bg-transparent" : "border-gray-200 bg-white shadow-sm"
-        )}>
+        <div className="hidden lg:block border-b border-gray-200 bg-white shadow-sm">
           <div className="container mx-auto px-4 md:px-6">
             <div className="flex h-16 items-center gap-8">
               {/* Left: Logo */}
@@ -699,12 +631,7 @@ const Header = () => {
           menuItem.hasMegamenu && activeMegamenu === menuItem.name && (
             <div
               key={menuItem.name}
-              className={cn(
-                "absolute top-full left-0 w-full transition-all duration-300 z-40",
-                isHeaderTransparent
-                  ? "bg-white/10 backdrop-blur-2xl border-t border-white/10"
-                  : "bg-white/95 backdrop-blur-md border-t border-gray-100 shadow-xl"
-              )}
+              className="absolute top-full left-0 w-full bg-white border-t border-gray-100 shadow-xl z-40"
               onMouseEnter={() => handleMenuEnter(menuItem.name)}
               onMouseLeave={() => handleMenuLeave()}
             >
@@ -713,13 +640,12 @@ const Header = () => {
                   {/* Left: Product Cards (2x2 grid) */}
                   <div className="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-5">
                     {menuItem.megamenuCards?.map((card, index) => {
-                      const Icon = card.icon;
                       const CustomIcon = card.customIcon;
                       return (
                         <NavLink
                           key={index}
                           to={card.href}
-                          className="flex items-start gap-4 p-4 rounded-xl hover:bg-white/10 transition-all group"
+                          className="flex items-start gap-4 p-4 rounded-xl hover:bg-gray-50 transition-all group"
                           onClick={() => setActiveMegamenu(null)}
                         >
                           <div className="flex-shrink-0 mt-0.5">
@@ -729,29 +655,16 @@ const Header = () => {
                                 alt={card.title}
                                 className="h-10 w-10 object-contain transition-all"
                                 style={{
-                                  filter: isHeaderTransparent
-                                    ? 'brightness(0) invert(1)'
-                                    : 'invert(21%) sepia(100%) saturate(4321%) hue-rotate(225deg) brightness(98%) contrast(107%)'
+                                  filter: 'invert(21%) sepia(100%) saturate(4321%) hue-rotate(225deg) brightness(98%) contrast(107%)'
                                 }}
                               />
-                            ) : (
-                              Icon && <Icon className={cn(
-                                "h-10 w-10 stroke-[1.5] transition-colors",
-                                isHeaderTransparent ? "text-blue-200 group-hover:text-white" : "text-[#0052ff] group-hover:text-blue-700"
-                              )} />
-                            )}
+                            ) : null}
                           </div>
                           <div className="flex-1">
-                            <h4 className={cn(
-                              "font-bold text-base mb-1.5 transition-colors leading-tight",
-                              isHeaderTransparent ? "text-white group-hover:text-blue-200" : "text-gray-900 group-hover:text-[#0052ff]"
-                            )}>
+                            <h4 className="font-bold text-base mb-1.5 transition-colors leading-tight text-gray-900 group-hover:text-[#0052ff]">
                               {card.title}
                             </h4>
-                            <p className={cn(
-                              "text-sm leading-snug transition-colors",
-                              isHeaderTransparent ? "text-blue-50/70 group-hover:text-white" : "text-gray-600"
-                            )}>
+                            <p className="text-sm leading-snug transition-colors text-gray-600">
                               {card.description}
                             </p>
                           </div>
@@ -763,22 +676,15 @@ const Header = () => {
                   {/* Right: Promotional Card */}
                   {menuItem.promo && (
                     <div className="lg:col-span-1">
-                      <div className={cn(
-                        "rounded-xl overflow-hidden shadow-md h-full flex flex-col transition-all",
-                        isHeaderTransparent ? "bg-white/5 border border-white/10" : "bg-white"
-                      )}>
+                      <div className="rounded-xl overflow-hidden shadow-md h-full flex flex-col bg-white">
                         <div className="relative h-40 flex-shrink-0">
                           <img
                             src={menuItem.promo.image}
                             alt={menuItem.promo.title || "Promotion Bricareau"}
                             className="w-full h-full object-cover"
                           />
-                          {isHeaderTransparent && <div className="absolute inset-0 bg-black/20" />}
                         </div>
-                        <div className={cn(
-                          "p-6 flex-1 flex flex-col justify-center",
-                          isHeaderTransparent ? "bg-white/5" : "bg-[#0052ff]"
-                        )}>
+                        <div className="p-6 flex-1 flex flex-col justify-center bg-[#0052ff]">
                           <h3 className="text-lg font-bold mb-4 leading-tight text-white">
                             {menuItem.promo.title}
                           </h3>
@@ -919,7 +825,7 @@ const Header = () => {
           </div>
         )}
       </header>
-      {!isTransparentPage && <div style={{ height: headerHeight }} />}
+      <div style={{ height: headerHeight }} />
     </>
   );
 };

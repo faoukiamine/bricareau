@@ -32,7 +32,9 @@ import {
 import { NavLink } from "@/components/NavLink";
 import { useNavigate } from "react-router-dom";
 import waterTestingImg from "@/assets/2147800429.jpg";
-import residentialWaterSoftenerImg from "@/assets/residential-water-softener.png";
+import { softenerImg as residentialWaterSoftenerImg } from "./Blog pages/Comment régler la dureté de votre adoucisseur ";
+import { adoucisseurImg as adoucisseurFosseImg } from "./Blog pages/Adoucisseur-deau- et-fosse-septique--Mythes-et-réalités";
+import { conditionneursImg } from "./Blog pages/Adoucisseur avec sel ou sans sel";
 import waterSoftenerImg from "@/assets/Adoucisseurs d'eau.webp";
 import specialFiltersImg from "@/assets/Filtres d'eau spécialisés.webp";
 import uvSystemImg2 from "@/assets/VH200-F10-265x300.jpg";
@@ -187,7 +189,7 @@ const AdoucisseursEauDePuits = () => {
 
             <main>
                 {/* 1. Hero Section */}
-                <section className="relative h-[750px] md:h-[800px] flex items-center overflow-hidden -mt-[104px] pt-[104px]">
+                <section className="relative h-[750px] md:h-[800px] flex items-center overflow-hidden">
                     <div className="absolute inset-0 z-0">
                         <picture>
                             <source media="(max-width: 768px)" srcSet={heroBath} />
@@ -395,7 +397,7 @@ const AdoucisseursEauDePuits = () => {
                 </section>
 
                 {/* 6. Water Testing Section */}
-                <section className="relative h-[650px] flex items-center overflow-hidden">
+                <section className="relative h-[750px] flex items-center overflow-hidden">
                     <div className="absolute inset-0 z-0">
                         <img
                             src={waterTestingImg}
@@ -588,9 +590,9 @@ const AdoucisseursEauDePuits = () => {
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {[
-                                { title: "Adoucisseur sans sel vs avec sel : la vérité technique", img: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop", link: "/adoucisseur-sans-sel-vs-avec-sel-verite-technique" },
-                                { title: "Comment régler la dureté de votre adoucisseur ?", img: residentialWaterSoftenerImg, link: "/comment-regler-durete-adoucisseur-eau" },
-                                { title: "Adoucisseur d'eau et fosse septique : compatible ou non ?", img: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=800&auto=format&fit=crop", link: "/adoucisseur-deau-et-fosse-septique-mythes-et-realites" }
+                                { title: "Adoucisseur d'eau et fosse septique : compatible ou non ?", img: adoucisseurFosseImg, link: "/adoucisseur-deau-et-fosse-septique-mythes-et-realites" },
+                                { title: "Adoucisseur sans sel vs avec sel : la vérité technique", img: residentialWaterSoftenerImg, link: "/adoucisseur-sans-sel-vs-avec-sel-verite-technique" },
+                                { title: "Conditionneur d'eau : Une alternative écologique à l'adoucisseur sans sel", img: conditionneursImg, link: "/conditionneur-deau-une-alternative-ecologique-a-ladoucisseur-sans-sel" }
                             ].map((art, i) => (
                                 <div
                                     key={i}

@@ -33,9 +33,9 @@ import uvSystemImg2 from "@/assets/VH200-F10-265x300.jpg";
 import uvSystemImg3 from "@/assets/VH410-F20-200x300.jpg";
 import uvSystemImg4 from "@/assets/500x500_V-Arros-15-IHS-10_straight-1-300x300.jpg";
 import waterTestingImg from "@/assets/Legionella-Monitoring.webp";
-import waterTasteImg from "@/assets/water-taste.jpg";
-import uvLightImg from "@/assets/Lumière UV.jpg";
-import ironRemovalImg from "@/assets/546.jpg";
+import { adoucisseurImg as adoucisseurFosseImg } from "./Blog pages/Adoucisseur-deau- et-fosse-septique--Mythes-et-réalités";
+import { conditionneursImg } from "./Blog pages/Adoucisseur avec sel ou sans sel";
+import { softenerImg as residentialWaterSoftenerImg } from "./Blog pages/Comment régler la dureté de votre adoucisseur ";
 import waterSoftenerImg from "@/assets/Adoucisseurs d'eau.webp";
 import drinkingWaterImg from "@/assets/Solutions d'eau potable.webp";
 import specialFiltersImg from "@/assets/Filtres d'eau spécialisés.webp";
@@ -73,7 +73,7 @@ const DesinfectionUV = () => {
             <Header />
             <main>
                 {/* 1. Hero Section */}
-                <section className="relative h-[850px] flex items-center overflow-hidden -mt-[104px] pt-[104px]">
+                <section className="relative h-[850px] flex items-center overflow-hidden">
                     <div className="absolute inset-0 z-0">
                         <img
                             src={heroImg}
@@ -296,7 +296,7 @@ const DesinfectionUV = () => {
                 </section>
 
                 {/* 6.Water Testing Section */}
-                <section className="relative h-[650px] flex items-center overflow-hidden">
+                <section className="relative h-[750px] flex items-center overflow-hidden">
                     <div className="absolute inset-0 z-0">
                         <img
                             src={waterTestingImg}
@@ -530,17 +530,17 @@ const DesinfectionUV = () => {
                             {[
                                 {
                                     title: "Adoucisseur d'eau et fosse septique : compatible ou non ?",
-                                    img: uvLightImg,
+                                    img: adoucisseurFosseImg,
                                     path: "/adoucisseur-deau-et-fosse-septique-mythes-et-realites"
                                 },
                                 {
                                     title: "Adoucisseur sans sel vs avec sel : la vérité technique",
-                                    img: ironRemovalImg,
+                                    img: conditionneursImg,
                                     path: "/adoucisseur-sans-sel-vs-avec-sel-verite-technique"
                                 },
                                 {
                                     title: "Comment régler la dureté de votre adoucisseur ?",
-                                    img: waterTasteImg,
+                                    img: residentialWaterSoftenerImg,
                                     path: "/comment-regler-durete-adoucisseur-eau"
                                 }
                             ].map((art, i) => (

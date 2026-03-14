@@ -17,6 +17,9 @@ import drinkingWaterImg from "@/assets/Solutions d'eau potable.webp";
 import undersinkSystemImg from "@/assets/Système+de+filtration+Serene+Lite.webp";
 import hardWaterSignsImg from "@/assets/Signs+of+hard+water+in+your+home-640w.webp";
 import hardWaterImg from "@/assets/58279.jpg";
+import { conditionneursImg } from "./Blog pages/Adoucisseur avec sel ou sans sel";
+import { softenerImg as residentialWaterSoftenerImg } from "./Blog pages/Comment régler la dureté de votre adoucisseur ";
+import { adoucisseurImg as adoucisseurFosseImg } from "./Blog pages/Adoucisseur-deau- et-fosse-septique--Mythes-et-réalités";
 
 import {
     ArrowRight,
@@ -74,7 +77,7 @@ const Adoucissement = () => {
             <Header />
             <main>
                 {/* 1. Hero Section */}
-                <section className="relative h-[850px] flex items-center overflow-hidden -mt-[104px] pt-[104px]">
+                <section className="relative h-[850px] flex items-center overflow-hidden">
                     <div className="absolute inset-0 z-0">
                         <img
                             src={heroBath}
@@ -465,7 +468,7 @@ const Adoucissement = () => {
                 </section>
 
                 {/* 9. Water Testing Section */}
-                <section className="relative h-[650px] flex items-center overflow-hidden">
+                <section className="relative h-[750px] flex items-center overflow-hidden">
                     <div className="absolute inset-0 z-0">
                         <img
                             src={waterTestingBg}
@@ -572,9 +575,9 @@ const Adoucissement = () => {
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {[
-                                { title: "Adoucisseur sans sel vs avec sel : la vérité technique", img: untitledImg, link: "/adoucisseur-sans-sel-vs-avec-sel-verite-technique" },
-                                { title: "Comment régler la dureté de votre adoucisseur ?", img: hardWaterSignsImg, link: "/comment-regler-durete-adoucisseur-eau" },
-                                { title: "Adoucisseur d'eau et fosse septique : compatible ou non ?", img: hardWaterImg, link: "/adoucisseur-deau-et-fosse-septique-mythes-et-realites" }
+                                { title: "Adoucisseur sans sel vs avec sel : la vérité technique", img: conditionneursImg, link: "/adoucisseur-sans-sel-vs-avec-sel-verite-technique" },
+                                { title: "Comment régler la dureté de votre adoucisseur ?", img: residentialWaterSoftenerImg, link: "/comment-regler-durete-adoucisseur-eau" },
+                                { title: "Adoucisseur d'eau et fosse septique : compatible ou non ?", img: adoucisseurFosseImg, link: "/adoucisseur-deau-et-fosse-septique-mythes-et-realites" }
                             ].map((art, i) => (
                                 <div
                                     key={i}

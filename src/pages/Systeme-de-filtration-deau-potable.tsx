@@ -41,6 +41,9 @@ import waterTestingImg from "@/assets/leaky-faucet-with-dripping-water-drop-cons
 import fluorideImg from "@/assets/2147807855.jpg";
 import microplasticsImg from "@/assets/2148214464.jpg";
 import pfasImg from "@/assets/PFAS.jpg.jpg";
+import { heroImg as healthwaterImg } from "./Blog pages/Eau-du-puits-au-quebec-quand-installer-un-systeme-dosmose-inverse";
+import { heroImg as drinkpurewaterImg } from "./Blog pages/Comment-losmose-inverse-protege-votre-famille-des-contaminants-invisibles";
+import rowaterImg from "@/assets/reasons-to-drink-more-water.jpg";
 
 const StationEauPotable = () => {
   const navigate = useNavigate();
@@ -84,7 +87,7 @@ const StationEauPotable = () => {
       <Header />
       <main>
         {/* 1. Hero Section - UNCHANGED */}
-        <section className="relative h-[850px] flex items-center overflow-hidden -mt-[104px] pt-[104px]">
+        <section className="relative h-[850px] flex items-center overflow-hidden">
           <div className="absolute inset-0 z-0">
             <img
               src={heroDrink}
@@ -305,7 +308,7 @@ const StationEauPotable = () => {
           </div>
         </section>
         {/* 6. Water Testing Section */}
-        <section className="relative h-[650px] flex items-center overflow-hidden">
+        <section className="relative h-[750px] flex items-center overflow-hidden">
           <div className="absolute inset-0 z-0">
             <img
               src={waterTestingImg}
@@ -325,7 +328,7 @@ const StationEauPotable = () => {
                 La vérité dans <span className="font-bold"><br />chaque goutte.</span>
               </h2>
               <p className="text-lg font-light leading-snug text-white/95 mb-8 max-w-xl text-justify">
-                Pourquoi deviner quand vous pouvez vérifier ? Un test d'eau simple pour une protection durable de votre foyer.              </p>
+                Pourquoi deviner quand vous pouvez vérifier ? <br />Un test d'eau simple pour une protection durable<br /> de votre foyer.              </p>
               <div className="flex gap-4">
                 <Button
                   size="lg"
@@ -464,19 +467,19 @@ const StationEauPotable = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
                 {
-                  title: "Adoucisseur sans sel vs avec sel : la vérité technique",
-                  img: fluorideImg,
-                  link: "/adoucisseur-sans-sel-vs-avec-sel-verite-technique",
+                  title: "Osmose inverse et santé : quelle qualité d’eau obtenez-vous ?",
+                  img: healthwaterImg,
+                  link: "/osmose-inverse-et-sante-quelle-qualite-deau-obtenez-vous",
                 },
                 {
-                  title: "Comment régler la dureté de votre adoucisseur ?",
-                  img: microplasticsImg,
-                  link: "/comment-regler-durete-adoucisseur-eau",
+                  title: "Comment l’osmose inverse protège votre famille des contaminants invisibles",
+                  img: drinkpurewaterImg,
+                  link: "/comment-losmose-inverse-protege-votre-famille-des-contaminants-invisibles",
                 },
                 {
-                  title: "Adoucisseur d'eau et fosse septique : compatible ou non ?",
-                  img: pfasImg,
-                  link: "/adoucisseur-deau-et-fosse-septique-mythes-et-realites",
+                  title: "Osmose inverse : la technologie derrière une eau 100 % pure",
+                  img: rowaterImg,
+                  link: "/osmose-inverse-la-technologie-derriere-une-eau-100-pure",
                 },
               ].map((art, i) => (
                 <div
