@@ -52,12 +52,27 @@ const Blog = () => {
             <Header />
 
             <main>
-                {/* 1. Hero / Header Area */}
-                <section className="pt-[180px] pb-12 bg-white">
-                    <div className="container mx-auto px-6 max-w-5xl">
-                        <h1 className="text-[36px] md:text-[52px] leading-tight font-bold text-slate-900 mb-6 tracking-tight">
-                            Articles & Ressources
-                        </h1>
+                {/* 1. Hero / Header Area (Redesigned for Mobile) */}
+                <section className="relative lg:pt-[180px] lg:pb-12 bg-white overflow-hidden">
+                    <div className="flex flex-col lg:flex-row">
+                        {/* Mobile Image */}
+                        <div className="lg:hidden w-full h-[300px] relative">
+                            <img
+                                src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=1200&auto=format&fit=crop"
+                                alt="Articles et Ressources Bricareau"
+                                className="w-full h-full object-cover"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-transparent"></div>
+                        </div>
+
+                        <div className="container mx-auto px-6 max-w-5xl py-12 lg:py-0">
+                            <h1 className="text-[32px] md:text-[52px] leading-tight font-bold text-slate-900 mb-6 tracking-tight">
+                                Articles & <span className="text-blue-600">Ressources</span>
+                            </h1>
+                            <p className="text-[18px] text-slate-600 max-w-2xl font-light leading-relaxed">
+                                Découvrez nos derniers articles, guides et conseils d'experts pour une eau de meilleure qualité au quotidien.
+                            </p>
+                        </div>
                     </div>
                 </section>
 

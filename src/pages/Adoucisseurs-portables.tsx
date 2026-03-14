@@ -50,50 +50,61 @@ const AdoucisseursPortables = () => {
         <div className="min-h-screen font-sans text-gray-900 bg-white selection:bg-[#0066FF] selection:text-white" style={{ '--top-banner': '168 100% 42%' } as React.CSSProperties}>
             <Header />
 
-            {/* 1. Section Hero */}
-            <section className="relative h-[850px] flex items-center overflow-hidden">
-                {/* Background Image & Overlays */}
-                <div className="absolute inset-0 z-0">
-                    <img
-                        src={heroBg}
-                        alt="Service d'échange et livraison d'adoucisseurs d'eau portables Bricareau au Québec et Canada"
-                        className="w-full h-full object-cover object-[center_30%]"
-                    />
-                    <div className="absolute inset-0 bg-black/40 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
-                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-white via-white/10 to-transparent" />
-                    {/* Brightening Start 1/3 Right */}
-                    <div className="absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white/90 via-white/40 to-transparent" />
-                </div>
+            {/* 1. Section Hero (Redesigned for Mobile) */}
+            <section className="relative lg:h-[850px] flex items-center overflow-hidden bg-white">
+                <div className="flex flex-col lg:flex-row w-full">
+                    {/* Mobile Image */}
+                    <div className="lg:hidden w-full h-[350px] relative">
+                        <img
+                            src={heroBg}
+                            alt="Adoucisseur portable Bricareau"
+                            className="w-full h-full object-cover object-[center_30%]"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-transparent" />
+                    </div>
 
-                <div className="container mx-auto px-6 relative z-10 text-center md:text-left">
-                    <div className="max-w-4xl">
-                        <h1 className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text-justify max-w-xl animate-in fade-in slide-in-from-bottom duration-700 drop-shadow-2xl">
-                            <span className="font-bold text-white">Adoucisseur d'eau portable</span> <br />
-                            <span className="font-bold">Une eau douce où que vous soyez !</span>
-                        </h1>
-                        <p className="text-lg font-light leading-snug text-gray-200 mb-12 max-w-2xl text-justify drop-shadow-lg animate-in fade-in slide-in-from-bottom duration-700 delay-100">
-                            La solution d'adoucissement flexible pour votre résidence ou commerce sans installation permanence. Profitez de notre service d'échange d'adoucisseur portable avec livraison directement chez vous.
-                        </p>
-                        <div className="flex flex-col sm:flex-row gap-4">
-                            <Button
-                                size="lg"
-                                className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200"
+                    {/* Desktop Background Area (Hidden on Mobile) */}
+                    <div className="absolute inset-0 z-0 hidden lg:block">
+                        <img
+                            src={heroBg}
+                            alt="Service d'échange et livraison d'adoucisseurs d'eau portables Bricareau au Québec et Canada"
+                            className="w-full h-full object-cover object-[center_30%]"
+                        />
+                        <div className="absolute inset-0 bg-black/40 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
+                        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-white via-white/10 to-transparent" />
+                        <div className="absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white/90 via-white/40 to-transparent" />
+                    </div>
+
+                    <div className="container mx-auto px-6 relative z-10 py-12 lg:py-0">
+                        <div className="max-w-4xl text-left">
+                            <h1
+                                className="text-[32px] md:text-[42px] leading-[1.1] md:leading-[1.2] font-bold lg:font-light mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl"
                                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
-                                asChild
                             >
-                                <NavLink to="/consultation">
-                                    Planifiez une consultation gratuite
-                                </NavLink>
-                            </Button>
+                                Adoucisseur d'eau portable <br />
+                                Une eau douce où que vous soyez !
+                            </h1>
+                            <p className="text-lg font-light leading-snug text-slate-600 lg:text-gray-200 mb-12 max-w-2xl text-justify animate-in fade-in slide-in-from-bottom duration-700 delay-100">
+                                La solution d'adoucissement flexible pour votre résidence ou commerce sans installation permanence. Profitez de notre service d'échange d'adoucisseur portable avec livraison directement chez vous.
+                            </p>
+                            <div className="flex flex-col sm:flex-row gap-4">
+                                <Button
+                                    size="lg"
+                                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200"
+                                    asChild
+                                >
+                                    <NavLink to="/consultation">
+                                        Planifiez une consultation gratuite
+                                    </NavLink>
+                                </Button>
+                            </div>
                         </div>
                     </div>
                 </div>
-                {/* 2. Wave Separator Bottom - Transition to Light Gray Section */}
-                <div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-[0] z-20 pointer-events-none">
+                {/* Wave Separator (Hidden on Mobile) */}
+                <div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-[0] z-20 pointer-events-none hidden lg:block">
                     <svg
-                        className="relative block w-full h-[50px] md:h-[80px]"
-                        data-name="Layer 1"
-                        xmlns="http://www.w3.org/2000/svg"
+                        className="relative block w-full h-[80px]"
                         viewBox="0 0 1200 120"
                         preserveAspectRatio="none"
                     >

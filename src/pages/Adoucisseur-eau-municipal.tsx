@@ -126,34 +126,41 @@ const AdoucisseurEauMunicipal = () => {
             <Header />
 
             <main>
-                {/* 1. Hero Section */}
-                <section className="relative h-[850px] flex items-center overflow-hidden">
-                    <div className="absolute inset-0 z-0">
+                {/* 1. Hero Section (Redesigned for Mobile) */}
+                <section className="relative lg:h-[850px] flex flex-col lg:flex-row items-stretch overflow-hidden">
+                    {/* Mobile Image */}
+                    <div className="lg:hidden w-full h-[300px] relative">
                         <img
                             src={heroBath}
                             alt="Bain relaxant dans une eau douce - Adoucisseur d'eau municipal Bricareau contre le calcaire"
                             className="w-full h-full object-cover object-[center_35%]"
                         />
+                        <div className="absolute inset-0 bg-black/20" />
+                    </div>
+
+                    {/* Desktop Background */}
+                    <div className="hidden lg:block absolute inset-0 z-0">
+                        <img
+                            src={heroBath}
+                            alt="Bain relaxant dans une eau douce"
+                            className="w-full h-full object-cover object-[center_35%]"
+                        />
                         <div className="absolute inset-0 bg-black/40 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
                         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-white via-white/10 to-transparent" />
-                        {/* Brightening Start 1/3 Right */}
                         <div className="absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white/90 via-white/40 to-transparent" />
                     </div>
 
-                    <div className="container mx-auto px-6 relative z-10">
-                        <div className="max-w-2xl text-white">
+                    <div className="container mx-auto px-6 relative z-10 flex items-center py-12 lg:py-0">
+                        <div className="max-w-2xl text-slate-900 lg:text-white">
                             <h1
-                                className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text-justify max-w-xl"
-                                style={{
-                                    fontFamily:
-                                        'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                }}
+                                className="text-[32px] md:text-[42px] leading-[1.1] md:leading-[1.2] font-bold lg:font-light mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl"
+                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                             >
-                                <span className="font-bold">Une douceur qui se sent,</span> <br />
-                                <span className="font-bold">un confort qui se vit.</span>
+                                <span className="text-blue-600 lg:text-white/80">Une douceur qui se sent,</span> <br />
+                                <span>un confort qui se vit.</span>
                             </h1>
 
-                            <p className="text-lg font-light leading-snug text-white/95 mb-8 max-w-xl text-justify">
+                            <p className="text-lg font-light leading-relaxed text-slate-600 lg:text-white/95 mb-8 max-w-xl">
                                 Protégez votre confort et vos installations avec nos adoucisseurs d'eau intelligents conçus spécifiquement pour les eaux de ville. Éliminez définitivement l'eau dure et prolongez la vie de vos électroménagers.
                             </p>
 
@@ -161,10 +168,6 @@ const AdoucisseurEauMunicipal = () => {
                                 <Button
                                     size="lg"
                                     className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200"
-                                    style={{
-                                        fontFamily:
-                                            'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                    }}
                                     asChild
                                 >
                                     <NavLink to="/consultation">Planifiez une consultation gratuite</NavLink>
@@ -173,12 +176,10 @@ const AdoucisseurEauMunicipal = () => {
                         </div>
                     </div>
 
-                    {/* 2. Wave Separator Bottom - Transition to Blue Section */}
-                    <div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-[0] z-20 pointer-events-none">
+                    {/* Wave Separator (Hidden on Mobile if it doesn't fit well, or kept for transition) */}
+                    <div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-[0] z-20 pointer-events-none hidden lg:block">
                         <svg
                             className="relative block w-full h-[50px] md:h-[80px]"
-                            data-name="Layer 1"
-                            xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 1200 120"
                             preserveAspectRatio="none"
                         >
@@ -343,33 +344,44 @@ const AdoucisseurEauMunicipal = () => {
                     }
                 />
 
-                {/* 7.Water Testing Section */}
-                <section className="relative h-[750px] flex items-center overflow-hidden">
-                    <div className="absolute inset-0 z-0">
+                {/* 7.Water Testing Section (Redesigned for Mobile) */}
+                <section className="relative lg:h-[750px] flex flex-col lg:flex-row items-stretch overflow-hidden bg-white">
+                    {/* Mobile Image */}
+                    <div className="lg:hidden w-full h-[300px] relative">
                         <img
                             src={waterTestingImg}
                             alt="Analyse d'eau à domicile pour détecter le calcaire et le chlore - Service Bricareau"
+                            className="w-full h-full object-cover"
+                        />
+                        <div className="absolute inset-0 bg-black/20" />
+                    </div>
+
+                    {/* Desktop Background */}
+                    <div className="hidden lg:block absolute inset-0 z-0">
+                        <img
+                            src={waterTestingImg}
+                            alt="Analyse d'eau à domicile pour détecter le calcaire et le chlore"
                             className="w-full h-full object-cover"
                         />
                         <div className="absolute inset-0 bg-black/30 lg:bg-gradient-to-r lg:from-black/50 lg:to-transparent" />
                         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-white via-white/10 to-transparent" />
                     </div>
 
-                    <div className="container mx-auto px-4 relative z-10">
-                        <div className="max-w-2xl text-white">
+                    <div className="container mx-auto px-4 relative z-10 flex items-center py-12 lg:py-0">
+                        <div className="max-w-2xl text-slate-900 lg:text-white">
                             <h2
-                                className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-white"
+                                className="text-[32px] md:text-[60px] leading-[1.1] md:leading-[60px] font-bold lg:font-light mb-8 tracking-tighter text-slate-900 lg:text-white text-left"
                                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                             >
-                                Des tests d'eau précis <span className="font-bold"><br />pour une tranquillité d'esprit totale.</span>
+                                Des tests d'eau précis <span className="lg:font-bold"><br />pour une tranquillité d'esprit totale.</span>
                             </h2>
-                            <p className="text-lg font-light leading-snug text-white/95 mb-8 max-w-xl text-justify">
+                            <p className="text-lg font-light leading-snug text-slate-500 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
                                 Ne devinez pas la qualité de votre eau. Nos analyses approfondies identifient les bactéries, les minéraux et les contaminants chimiques pour vous offrir une tranquillité d'esprit totale.
                             </p>
                             <div className="flex gap-4">
                                 <Button
                                     size="lg"
-                                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14"
+                                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200"
                                     style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                                     asChild
                                 >

@@ -77,29 +77,28 @@ const Adoucissement = () => {
             <Header />
             <main>
                 {/* 1. Hero Section */}
-                <section className="relative h-[850px] flex items-center overflow-hidden">
-                    <div className="absolute inset-0 z-0">
+                <section className="relative lg:h-[850px] flex flex-col lg:flex-row lg:items-center overflow-hidden bg-white">
+                    <div className="relative lg:absolute lg:inset-0 h-[350px] sm:h-[450px] lg:h-full w-full lg:z-0 overflow-hidden">
                         <img
                             src={heroBath}
                             alt="Confort d'une eau douce et soyeuse Québec - Bain relaxant sans calcaire Bricareau"
                             className="w-full h-full object-cover object-[center_35%]"
                         />
-                        <div className="absolute inset-0 bg-black/40 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
-                        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-white via-white/10 to-transparent" />
-                        {/* Brightening Start 1/3 Right */}
-                        <div className="absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white/90 via-white/40 to-transparent" />
+                        <div className="hidden lg:block absolute inset-0 bg-black/40 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
+                        <div className="hidden lg:block absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-white via-white/10 to-transparent" />
+                        <div className="hidden lg:block absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white/90 via-white/40 to-transparent" />
                     </div>
 
-                    <div className="container mx-auto px-6 relative z-10">
-                        <div className="max-w-2xl text-white">
+                    <div className="container relative z-10 mx-auto px-4 py-10 sm:py-16 lg:py-20 flex flex-col justify-center">
+                        <div className="max-w-2xl lg:text-white">
                             <h1
-                                className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text-justify max-w-xl"
+                                className="text-[32px] md:text-[42px] leading-[1.1] md:leading-[1.2] font-bold lg:font-light mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl"
                                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                             >
-                                <span className="font-bold text-white">Adoucisseurs d'eau</span> <br />
-                                <span className="font-bold text-white">Éliminez le calcaire et l'eau dure.</span>
+                                Adoucisseurs d'eau <br />
+                                Éliminez le calcaire et l'eau dure.
                             </h1>
-                            <p className="text-lg font-light leading-snug text-white/95 mb-8 max-w-xl text-justify">
+                            <p className="text-lg font-light leading-snug text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
                                 Redécouvrez le confort d'une eau soyeuse protégeant votre peau, vos cheveux et vos appareils électroménagers. Alliez économies durables et bien-être absolu avec nos solutions de traitement d'eau.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4">
@@ -116,7 +115,7 @@ const Adoucissement = () => {
                                 <Button
                                     size="lg"
                                     variant="outline"
-                                    className="bg-white/10 hover:bg-white/20 text-white border-white rounded-full px-8 h-14 backdrop-blur-sm shadow-lg"
+                                    className="bg-slate-100 lg:bg-white/10 hover:bg-slate-200 lg:hover:bg-white/20 text-slate-800 lg:text-white border-slate-200 lg:border-white rounded-full px-8 h-14 backdrop-blur-sm shadow-lg"
                                     style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                                     asChild
                                 >
@@ -129,7 +128,7 @@ const Adoucissement = () => {
                         </div>
                     </div>
                     {/* 2. Wave Separator Bottom - Transition to Blue Section */}
-                    <div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-[0] z-20 pointer-events-none">
+                    <div className="hidden lg:block absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-[0] z-20 pointer-events-none">
                         <svg
                             className="relative block w-full h-[50px] md:h-[80px]"
                             data-name="Layer 1"
@@ -467,33 +466,45 @@ const Adoucissement = () => {
                     </div>
                 </section>
 
-                {/* 9. Water Testing Section */}
-                <section className="relative h-[750px] flex items-center overflow-hidden">
-                    <div className="absolute inset-0 z-0">
+                {/* 9. Water Testing Section (Redesigned for Mobile) */}
+                <section className="relative lg:h-[750px] flex flex-col lg:flex-row items-stretch overflow-hidden bg-white">
+                    {/* Mobile Image */}
+                    <div className="lg:hidden w-full h-[300px] relative">
                         <img
                             src={waterTestingBg}
                             alt="Analyse d'eau à domicile et test de dureté - Diagnostic expert Bricareau"
                             className="w-full h-full object-cover"
                         />
+                        <div className="absolute inset-0 bg-blue-900/20" />
+                    </div>
+
+                    {/* Desktop Background */}
+                    <div className="hidden lg:block absolute inset-0 z-0">
+                        <img
+                            src={waterTestingBg}
+                            alt="Analyse d'eau à domicile et test de dureté"
+                            className="w-full h-full object-cover"
+                        />
                         <div className="absolute inset-0 bg-blue-900/40 lg:bg-gradient-to-r lg:from-blue-900/90 lg:to-blue-600/20 mix-blend-multiply" />
                         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-white via-white/10 to-transparent" />
                     </div>
-                    <div className="container mx-auto px-6 relative z-10">
-                        <div className="max-w-2xl text-white">
-                            <span className="text-white/80 font-bold uppercase tracking-widest text-sm mb-4 block">
+
+                    <div className="container mx-auto px-6 relative z-10 flex items-center py-12 lg:py-0">
+                        <div className="max-w-2xl text-slate-900 lg:text-white">
+                            <span className="text-blue-600 lg:text-white/80 font-bold uppercase tracking-widest text-sm mb-4 block">
                                 Contrôle de la Qualité D'EAU
                             </span>
                             <h2
-                                className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-white"
+                                className="text-[32px] md:text-[60px] leading-[1.1] md:leading-[60px] font-bold lg:font-light mb-8 tracking-tighter text-slate-900 lg:text-white"
                                 style={{
                                     fontFamily:
                                         'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
                                 }}
                             >
-                                <span className="font-bold">L’essence d’une vie saine</span><br />
+                                <span className="lg:font-bold">L’essence d’une vie saine</span><br />
                                 coule de votre robinet.
                             </h2>
-                            <p className="text-lg font-light leading-snug text-white/95 mb-8 max-w-xl text-justify">
+                            <p className="text-lg font-light leading-snug text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
                                 Entre le chlore, les métaux lourds et les sédiments, votre eau cache souvent des secrets. Ne laissez plus le doute couler de votre robinet. Demandez votre test d'eau dès aujourd'hui et obtenez un portrait clair de votre eau ainsi que des solutions adaptées à votre foyer.
                             </p>
                             <div className="flex gap-4">

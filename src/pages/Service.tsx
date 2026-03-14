@@ -23,53 +23,71 @@ const Service = () => {
             <Header />
 
             <main>
-                {/* Section 1: Trust Card (Redesigned Model) */}
-                <section className="py-32 bg-white overflow-hidden">
-                    <div className="container mx-auto px-6">
-                        <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
-                            {/* Left Content */}
-                            <div className="lg:w-1/2 text-left order-2 lg:order-1">
-                                <h1 className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-slate-900 text-justify max-w-xl">
-                                    <span className="font-bold">Faites confiance à Bricareau <br />pour tout ce qui concerne l'eau.</span>
-                                </h1>
+                {/* Section 1: Hero Section (Redesigned for Mobile) */}
+                <section className="relative lg:py-32 bg-white overflow-hidden">
+                    <div className="flex flex-col lg:flex-row items-center">
+                        {/* Mobile Image (Visible only on mobile) */}
+                        <div className="lg:hidden w-full h-[350px] relative">
+                            <img
+                                src={technicianImg}
+                                alt="Technicien expert Bricareau"
+                                className="w-full h-full object-cover"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-transparent"></div>
+                        </div>
 
-                                <div className="space-y-4 mb-10">
-                                    {[
-                                        "Experts certifiés à votre service",
-                                        "Équipements de pointe",
-                                        "Analyse d'eau personnalisée"
-                                    ].map((item, i) => (
-                                        <div key={i} className="flex items-center gap-3 text-slate-600 font-light text-[18px]">
-                                            <Check className="w-5 h-5 text-blue-600" />
-                                            <span>{item}</span>
-                                        </div>
-                                    ))}
+                        <div className="container mx-auto px-6 py-12 lg:py-0">
+                            <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+                                {/* Left Content */}
+                                <div className="lg:w-1/2 text-left">
+                                    <h1 className="text-[32px] md:text-[52px] leading-[1.1] font-bold mb-8 tracking-tighter text-slate-900">
+                                        Faites confiance à <span className="text-blue-600 underline decoration-blue-100 underline-offset-8">Bricareau</span> pour tout ce qui concerne l'eau.
+                                    </h1>
+
+                                    <div className="space-y-4 mb-10">
+                                        {[
+                                            "Experts certifiés à votre service",
+                                            "Équipements de pointe",
+                                            "Analyse d'eau personnalisée"
+                                        ].map((item, i) => (
+                                            <div key={i} className="flex items-center gap-3 text-slate-600 font-light text-[18px]">
+                                                <div className="w-6 h-6 rounded-full bg-blue-50 flex items-center justify-center">
+                                                    <Check className="w-4 h-4 text-blue-600" />
+                                                </div>
+                                                <span>{item}</span>
+                                            </div>
+                                        ))}
+                                    </div>
+
+                                    <p className="font-light text-[20px] leading-snug text-slate-600/80 mb-12 max-w-xl">
+                                        Faites appel aux meilleurs experts en traitement de l'eau, situés tout près de chez vous. Nous intervenons sur tous types de systèmes, même ceux que nous n'avons pas installés.
+                                    </p>
+
+                                    <div className="flex flex-col sm:flex-row gap-4">
+                                        <Button className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-10 h-14 text-lg font-bold group shadow-xl shadow-blue-200/50">
+                                            Planifier un service
+                                            <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
+                                        </Button>
+                                    </div>
                                 </div>
 
-                                <p className="font-light text-[20px] leading-snug text-slate-600/80 mb-12 max-w-xl">
-                                    Faites appel aux meilleurs experts en traitement de l'eau, situés tout près de chez vous. Nous intervenons sur tous types de systèmes, même ceux que nous n'avons pas installés.
-                                </p>
-
-                            </div>
-
-                            {/* Right Image Layout (Overlapping) */}
-                            <div className="lg:w-1/2 relative order-1 lg:order-2 flex justify-center lg:justify-end pr-12 lg:pr-0">
-                                {/* Background Image/Box */}
-                                <div className="relative w-[300px] md:w-[400px] h-[400px] md:h-[550px] bg-slate-100 rounded-sm overflow-hidden shadow-2xl">
-                                    <img
-                                        src={technicianImg}
-                                        alt="Technicien expert Bricareau effectuant la maintenance d'un système de traitement d'eau"
-                                        className="w-full h-full object-cover grayscale-[0.2]"
-                                    />
-                                </div>
-                                {/* Foreground Overlapping Image/Box */}
-                                <div className="absolute -bottom-10 -left-10 lg:-left-20 w-[220px] md:w-[280px] h-[280px] md:h-[350px] bg-white p-2 shadow-2xl rotate-[-6deg] transition-transform hover:rotate-0 duration-500">
-                                    <div className="w-full h-full overflow-hidden">
+                                {/* Desktop Image Layout (Hidden on mobile) */}
+                                <div className="hidden lg:block lg:w-1/2 relative pr-12 lg:pr-0">
+                                    <div className="relative w-[400px] h-[550px] bg-slate-100 rounded-sm overflow-hidden shadow-2xl">
                                         <img
-                                            src={waterTestImg}
-                                            alt="Test de qualité d'eau à domicile pour détecter calcaire et contaminants"
-                                            className="w-full h-full object-cover"
+                                            src={technicianImg}
+                                            alt="Technicien expert Bricareau"
+                                            className="w-full h-full object-cover grayscale-[0.2]"
                                         />
+                                    </div>
+                                    <div className="absolute -bottom-10 -left-20 w-[280px] h-[350px] bg-white p-2 shadow-2xl rotate-[-6deg] transition-transform hover:rotate-0 duration-500">
+                                        <div className="w-full h-full overflow-hidden">
+                                            <img
+                                                src={waterTestImg}
+                                                alt="Test de qualité d'eau"
+                                                className="w-full h-full object-cover"
+                                            />
+                                        </div>
                                     </div>
                                 </div>
                             </div>

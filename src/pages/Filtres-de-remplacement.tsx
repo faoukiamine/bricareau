@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Package, Search, ShoppingCart } from "lucide-react";
+import { Package, Search, ShoppingCart, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import sedimentFilterImg from "@/assets/PURTREX_PX05-9_78_2000x.webp";
@@ -26,55 +26,55 @@ const Pieces = () => {
         {
             name: "Filtres à charbon actif",
             items: [
-                { name: "Filtre à charbon actif GAC 10", price: "199.99", stock: "En stock",image:carbonFilterImg },
-                { name: "Filtre à charbon actif GAC 20", price: "12.99", stock: "En stock",image:carbonFilterImg },
-                { name: "Filtre à charbon actif bloc 5 microns 10", price: "11.99", stock: "En stock",image:carbonFilterImg },
-                { name: "Filtre à charbon actif bloc 5 microns 20", price: "29.99", stock: "En stock",image:carbonFilterImg }
+                { name: "Filtre à charbon actif GAC 10", price: "199.99", stock: "En stock", image: carbonFilterImg },
+                { name: "Filtre à charbon actif GAC 20", price: "12.99", stock: "En stock", image: carbonFilterImg },
+                { name: "Filtre à charbon actif bloc 5 microns 10", price: "11.99", stock: "En stock", image: carbonFilterImg },
+                { name: "Filtre à charbon actif bloc 5 microns 20", price: "29.99", stock: "En stock", image: carbonFilterImg }
             ]
         },
         {
             name: "Filtres à papier plissé",
             items: [
-                { name: "Résine adoucisseur (sac 25kg)", price: "199.99", stock: "En stock",image:pleatedFilterImg },
-                { name: "Sel en pastilles (sac 20kg)", price: "12.99", stock: "En stock",image:pleatedFilterImg },
-                { name: "Sel en cristaux (sac 20kg)", price: "11.99", stock: "En stock",image:pleatedFilterImg },
-                { name: "Nettoyant pour résine", price: "29.99", stock: "En stock",image:pleatedFilterImg }
+                { name: "Résine adoucisseur (sac 25kg)", price: "199.99", stock: "En stock", image: pleatedFilterImg },
+                { name: "Sel en pastilles (sac 20kg)", price: "12.99", stock: "En stock", image: pleatedFilterImg },
+                { name: "Sel en cristaux (sac 20kg)", price: "11.99", stock: "En stock", image: pleatedFilterImg },
+                { name: "Nettoyant pour résine", price: "29.99", stock: "En stock", image: pleatedFilterImg }
             ]
         },
         {
             name: "Filtres à bobine",
             items: [
-                { name: "Résine adoucisseur (sac 25kg)", price: "199.99", stock: "En stock",image:woundFilterImg },
-                { name: "Sel en pastilles (sac 20kg)", price: "12.99", stock: "En stock",image:woundFilterImg },
-                { name: "Sel en cristaux (sac 20kg)", price: "11.99", stock: "En stock",image:woundFilterImg },
-                { name: "Nettoyant pour résine", price: "29.99", stock: "En stock",image:woundFilterImg }
+                { name: "Résine adoucisseur (sac 25kg)", price: "199.99", stock: "En stock", image: woundFilterImg },
+                { name: "Sel en pastilles (sac 20kg)", price: "12.99", stock: "En stock", image: woundFilterImg },
+                { name: "Sel en cristaux (sac 20kg)", price: "11.99", stock: "En stock", image: woundFilterImg },
+                { name: "Nettoyant pour résine", price: "29.99", stock: "En stock", image: woundFilterImg }
             ]
         },
         {
             name: "Filtres inline",
             items: [
-                { name: "Résine adoucisseur (sac 25kg)", price: "199.99", stock: "En stock",image:inlineFilterImg },
-                { name: "Sel en pastilles (sac 20kg)", price: "12.99", stock: "En stock",image:inlineFilterImg },
-                { name: "Sel en cristaux (sac 20kg)", price: "11.99", stock: "En stock",image:inlineFilterImg },
-                { name: "Nettoyant pour résine", price: "29.99", stock: "En stock",image:inlineFilterImg }
+                { name: "Résine adoucisseur (sac 25kg)", price: "199.99", stock: "En stock", image: inlineFilterImg },
+                { name: "Sel en pastilles (sac 20kg)", price: "12.99", stock: "En stock", image: inlineFilterImg },
+                { name: "Sel en cristaux (sac 20kg)", price: "11.99", stock: "En stock", image: inlineFilterImg },
+                { name: "Nettoyant pour résine", price: "29.99", stock: "En stock", image: inlineFilterImg }
             ]
         },
         {
             name: "Filtres de déionisation",
             items: [
-                { name: "Valve de contrôle électronique", price: "349.99", stock: "Sur commande",image:deionizationFilterImg },
-                { name: "Raccord rapide 3/4\"", price: "8.99", stock: "En stock",image:deionizationFilterImg },
-                { name: "Valve de dérivation", price: "45.99", stock: "En stock",image:deionizationFilterImg },
-                { name: "Kit de raccordement", price: "79.99", stock: "En stock",image:deionizationFilterImg }
+                { name: "Valve de contrôle électronique", price: "349.99", stock: "Sur commande", image: deionizationFilterImg },
+                { name: "Raccord rapide 3/4\"", price: "8.99", stock: "En stock", image: deionizationFilterImg },
+                { name: "Valve de dérivation", price: "45.99", stock: "En stock", image: deionizationFilterImg },
+                { name: "Kit de raccordement", price: "79.99", stock: "En stock", image: deionizationFilterImg }
             ]
         },
         {
             name: "Membranes d'osmose inverse",
             items: [
-                { name: "Résine adoucisseur (sac 25kg)", price: "199.99", stock: "En stock",image:membraneFilterImg },
-                { name: "Sel en pastilles (sac 20kg)", price: "12.99", stock: "En stock",image:membraneFilterImg },
-                { name: "Sel en cristaux (sac 20kg)", price: "11.99", stock: "En stock",image:membraneFilterImg },
-                { name: "Nettoyant pour résine", price: "29.99", stock: "En stock",image:membraneFilterImg }
+                { name: "Résine adoucisseur (sac 25kg)", price: "199.99", stock: "En stock", image: membraneFilterImg },
+                { name: "Sel en pastilles (sac 20kg)", price: "12.99", stock: "En stock", image: membraneFilterImg },
+                { name: "Sel en cristaux (sac 20kg)", price: "11.99", stock: "En stock", image: membraneFilterImg },
+                { name: "Nettoyant pour résine", price: "29.99", stock: "En stock", image: membraneFilterImg }
             ]
         },
     ];
@@ -84,19 +84,32 @@ const Pieces = () => {
             <Header />
             <main>
                 {/* Hero Section */}
-                <section className="pt-32 pb-12 md:pt-40 md:pb-20 lg:pt-48 lg:pb-24 bg-gradient-to-b from-orange-50 to-background">
-                    <div className="container mx-auto px-4">
-                        <div className="max-w-3xl mx-auto text-center space-y-6">
-                            <Package className="h-16 w-16 text-[#0052ff] mx-auto" />
+                <section className="relative pt-20 pb-0 md:pt-24 lg:pt-32 bg-white overflow-hidden">
+                    {/* Mobile Decor Layer */}
+                    <div className="lg:hidden w-full h-48 bg-gradient-to-br from-orange-50 via-white to-blue-50 flex flex-col items-center justify-center border-b border-slate-100">
+                        <Package className="h-20 w-20 text-blue-200" />
+                    </div>
+
+                    <div className="container mx-auto px-4 lg:px-6">
+                        <div className="max-w-3xl mx-auto pt-10 pb-16 lg:py-0 text-center">
+                            <div className="inline-flex items-center gap-2 bg-blue-50 rounded-full px-4 py-2 mb-6">
+                                <Package className="h-5 w-5 text-blue-600" />
+                                <span className="text-xs font-bold text-blue-600 uppercase tracking-widest leading-none">PIÈCES D'ORIGINE</span>
+                            </div>
                             <h1
-                                className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-foreground text-justify max-w-xl mx-auto"
+                                className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-slate-900 text-center lg:text-justify max-w-xl mx-auto"
                                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                             >
                                 <span className="font-bold">Filtres de Remplacement</span>
                             </h1>
-                            <p className="text-[20px] leading-snug text-muted-foreground font-light text-justify max-w-xl mx-auto">
-                                Trouvez toutes les cartouches filtantes dont vous avez besoin pour vos équipements
+                            <p className="text-[20px] leading-snug text-slate-600 font-light text-center lg:text-justify max-w-xl mx-auto">
+                                Trouvez toutes les cartouches filtrantes dont vous avez besoin pour vos équipements afin de maintenir une qualité d'eau optimale toute l'année.
                             </p>
+                            <div className="mt-12 flex justify-center lg:justify-start">
+                                <Button className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 flex items-center gap-2" asChild>
+                                    <a href="#categories">Explorer le catalogue <ArrowRight className="h-5 w-5" /></a>
+                                </Button>
+                            </div>
                         </div>
                     </div>
                 </section>

@@ -1,4 +1,4 @@
-import { Phone, CheckCircle, Leaf, Users, ChevronRight } from "lucide-react";
+import { Phone, CheckCircle, Leaf, Users, ChevronRight, ArrowRight } from "lucide-react";
 import heroImage from "@/assets/hero-entreprises.jpg";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Testimonials from "@/components/Testimonials";
@@ -57,42 +57,47 @@ const Entreprises = () => {
 
       <main>
         {/* Hero Section */}
-        <section className="relative h-[800px] flex items-start overflow-hidden pt-[120px]">
-          <div className="absolute inset-0 z-0 overflow-hidden">
+        <section className="relative lg:h-[800px] flex flex-col lg:flex-row items-stretch lg:items-start overflow-hidden pt-16 lg:pt-[120px] bg-white">
+          <div className="relative w-full h-[40vh] lg:absolute lg:inset-0 lg:z-0 overflow-hidden">
             <iframe
               src="https://player.vimeo.com/video/1155585825?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1"
-              className="absolute top-1/2 left-1/2 w-[100vw] h-[56.25vw] min-h-[100vh] min-w-[177.77vh] -translate-x-1/2 -translate-y-1/2"
+              className="absolute top-1/2 left-1/2 w-[100vw] h-[56.25vw] min-h-[100%] min-w-[177.77%] -translate-x-1/2 -translate-y-1/2 object-cover"
               frameBorder="0"
               allow="autoplay; fullscreen"
               allowFullScreen
             ></iframe>
-            <div className="absolute inset-0 bg-black/30 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
+            <div className="absolute inset-0 bg-black/20 lg:bg-black/30 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
           </div>
 
-          <div className="container mx-auto px-4 relative z-10 pt-[100px]">
-            <div className="max-w-3xl text-white">
+          <div className="container mx-auto px-4 lg:px-6 relative z-10 pt-10 pb-20 lg:pt-[100px] lg:pb-0">
+            <div className="max-w-3xl text-center lg:text-left">
+              <span className="lg:hidden text-blue-600 font-bold uppercase tracking-widest text-[10px] mb-4 block">
+                SOLUTIONS BUSINESS
+              </span>
               <h1
-                className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text-justify max-w-xl"
+                className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-slate-900 lg:text-white text-center lg:text-justify max-w-xl mx-auto lg:mx-0"
                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
               >
-                <span className="font-bold text-white">Une eau pure au quotidien</span>
+                <span className="font-bold">Une eau pure au quotidien</span>
               </h1>
-              <p className="font-light text-[20px] leading-snug text-white/95 mb-8 max-w-xl text-justify">
+              <p className="font-light text-[18px] md:text-[20px] leading-snug text-slate-600 lg:text-white/95 mb-8 max-w-xl mx-auto lg:mx-0 text-center lg:text-justify">
                 Vos collaborateurs apprécieront la nouvelle façon d'avoir de l'eau fraîche dans votre entreprise !
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <Button
                   size="lg"
                   className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200"
                   style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                   asChild
                 >
-                  <a href="#solutions">Explorez nos solutions d'eau</a>
+                  <a href="#solutions" className="flex items-center gap-2">
+                    Explorez nos solutions <ArrowRight className="h-4 w-4" />
+                  </a>
                 </Button>
                 <Button
                   size="lg"
                   variant="outline"
-                  className="bg-white/10 hover:bg-white/20 text-white border-white rounded-full px-8 h-14 backdrop-blur-sm"
+                  className="bg-white lg:bg-white/10 hover:bg-slate-50 lg:hover:bg-white/20 text-blue-600 lg:text-white border-blue-600 lg:border-white rounded-full px-8 h-14 backdrop-blur-sm"
                   style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                   asChild
                 >

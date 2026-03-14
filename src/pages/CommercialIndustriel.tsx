@@ -75,61 +75,69 @@ const CommercialIndustriel = () => {
       <Header />
 
       <main>
-        {/* 1. Hero Section */}
-        <section className="relative h-[850px] flex items-center overflow-hidden">
-          <div className="absolute inset-0 z-0">
-            <img
-              src={heroImage}
-              alt="Installation industrielle de traitement d'eau et osmose inverse commerciale Bricareau"
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-black/40 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-white via-white/10 to-transparent" />
-            {/* Brightening Start 1/3 Right */}
-            <div className="absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white/90 via-white/40 to-transparent" />
-          </div>
+        {/* 1. Hero Section (Redesigned for Mobile) */}
+        <section className="relative lg:h-[850px] flex items-center overflow-hidden bg-white">
+          <div className="flex flex-col lg:flex-row w-full">
+            {/* Mobile Image */}
+            <div className="lg:hidden w-full h-[350px] relative">
+              <img
+                src={heroImage}
+                alt="Installation industrielle Bricareau"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-transparent" />
+            </div>
 
-          <div className="container mx-auto px-6 relative z-10">
-            <div className="max-w-2xl text-white">
-              <h1
-                className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text-justify max-w-xl"
-                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
-              >
-                <span className="font-bold text-white">Bricareau, votre partenaire de confiance</span>
-              </h1>
-              <p className="font-light text-[20px] leading-snug text-white/95 mb-8 max-w-xl text-justify">
-                Notre mission est de vous offrir une tranquillité d'esprit dans vos projets de traitement de l'eau les plus exigeants.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button
-                  size="lg"
-                  className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200"
+            {/* Desktop Background Area (Hidden on Mobile) */}
+            <div className="absolute inset-0 z-0 hidden lg:block">
+              <img
+                src={heroImage}
+                alt="Installation industrielle de traitement d'eau et osmose inverse commerciale Bricareau"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-black/40 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-white via-white/10 to-transparent" />
+              <div className="absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white/90 via-white/40 to-transparent" />
+            </div>
+
+            <div className="container mx-auto px-6 relative z-10 py-12 lg:py-0">
+              <div className="max-w-2xl">
+                <h1
+                  className="text-[32px] md:text-[42px] leading-tight font-bold mb-8 tracking-tighter text-slate-900 lg:text-white"
                   style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
-                  asChild
                 >
-                  <a href="#solutions">Explorez nos solutions</a>
-                </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="bg-white/10 hover:bg-white/20 text-white border-white rounded-full px-8 h-14 backdrop-blur-sm shadow-lg"
-                  style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
-                  asChild
-                >
-                  <a href="tel:18552649328" className="flex items-center gap-2">
-                    <Phone className="h-5 w-5" />
-                    1-855-264-9328
-                  </a>
-                </Button>
+                  <span className="font-bold">Bricareau, votre partenaire de confiance</span>
+                </h1>
+                <p className="font-light text-[20px] leading-snug text-slate-600 lg:text-white/95 mb-8 max-w-xl">
+                  Notre mission est de vous offrir une tranquillité d'esprit dans vos projets de traitement de l'eau les plus exigeants.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button
+                    size="lg"
+                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200"
+                    asChild
+                  >
+                    <a href="#solutions">Explorez nos solutions</a>
+                  </Button>
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="bg-white/10 hover:bg-blue-50 lg:hover:bg-white/20 text-blue-600 lg:text-white border-blue-600 lg:border-white rounded-full px-8 h-14 backdrop-blur-sm"
+                    asChild
+                  >
+                    <a href="tel:18552649328" className="flex items-center gap-2">
+                      <Phone className="h-5 w-5" />
+                      1-855-264-9328
+                    </a>
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
-          {/* 2.Wave Separator Bottom - Transition to White Section */}
-          <div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-[0] z-20 pointer-events-none">
+          {/* Wave Separator (Hidden on Mobile) */}
+          <div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-[0] z-20 pointer-events-none hidden lg:block">
             <svg
-              className="relative block w-full h-[80px] md:h-[150px]"
-              data-name="Layer 1"
-              xmlns="http://www.w3.org/2000/svg"
+              className="relative block w-full h-[150px]"
               viewBox="0 0 1200 120"
               preserveAspectRatio="none"
             >

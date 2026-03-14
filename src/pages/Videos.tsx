@@ -62,17 +62,35 @@ const Videos = () => {
         <div className="min-h-screen bg-background">
             <Header />
             <main>
-                {/* Hero Section */}
-                <section className="py-12 md:py-20 lg:py-24 bg-gradient-to-b from-purple-50 to-background">
-                    <div className="container mx-auto px-4">
-                        <div className="max-w-3xl mx-auto text-center space-y-6">
-                            <Play className="h-16 w-16 text-[#0052ff] mx-auto" />
-                            <h1 className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-foreground text-justify max-w-xl mx-auto">
-                                <span className="font-bold text-foreground">Bibliothèque Vidéo</span>
-                            </h1>
-                            <p className="text-[20px] leading-snug text-muted-foreground font-light text-justify max-w-xl mx-auto">
-                                Tutoriels et guides vidéo pour vous accompagner
-                            </p>
+                {/* Hero Section (Redesigned for Mobile) */}
+                <section className="relative lg:py-24 bg-white overflow-hidden">
+                    <div className="flex flex-col lg:flex-row items-center">
+                        {/* Mobile Image */}
+                        <div className="lg:hidden w-full h-[300px] relative">
+                            <img
+                                src={filtrationVideoImg}
+                                alt="Tutoriels Vidéo Bricareau"
+                                className="w-full h-full object-cover"
+                            />
+                            <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+                                <div className="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center">
+                                    <Play className="h-8 w-8 text-[#0052ff] ml-1" fill="currentColor" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="container mx-auto px-6 py-12 lg:py-24 bg-gradient-to-b from-purple-50 to-white lg:from-transparent lg:to-transparent">
+                            <div className="max-w-3xl mx-auto text-center space-y-6">
+                                <div className="hidden lg:flex w-16 h-16 rounded-full bg-blue-50 items-center justify-center mx-auto mb-4">
+                                    <Play className="h-8 w-8 text-[#0052ff] ml-1" fill="currentColor" />
+                                </div>
+                                <h1 className="text-[32px] md:text-[52px] leading-tight font-bold text-slate-900 tracking-tighter text-center max-w-xl mx-auto">
+                                    Bibliothèque <span className="text-blue-600">Vidéo</span>
+                                </h1>
+                                <p className="text-[20px] leading-snug text-slate-600 font-light text-center max-w-xl mx-auto">
+                                    Tutoriels et guides vidéo pour vous accompagner dans l'utilisation et l'entretien de vos équipements.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </section>

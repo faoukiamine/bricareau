@@ -11,24 +11,32 @@ const Contact = () => {
         <div className="min-h-screen bg-background">
             <Header />
             <main>
-                {/* 1. Hero Section */}
-                <section className="py-12 md:py-20 lg:py-24 bg-gradient-to-b from-primary/5 to-background">
-                    <div className="container mx-auto px-4">
-                        <div className="max-w-3xl mx-auto text-center space-y-6">
-                            <h1
-                                className="mb-8 text-center max-w-xl mx-auto"
-                                style={{ fontFamily: 'Speedee, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif', fontStyle: 'normal', fontWeight: 700, color: 'rgb(41, 41, 41)', fontSize: '54px', lineHeight: '56px' }}
-                            >
-                                Contactez-nous
-                            </h1>
-                            <div className="mb-12 flex justify-center">
-                                <p className="text-lg md:text-xl text-slate-700 max-w-4xl font-light leading-relaxed text-center">
-                                    Vous recherchez des informations sur nos produits, planifier une analyse d'eau ou vous souhaitez simplement nous contacter ? Notre équipe se fera un plaisir de vous aider à trouver les réponses.
+                {/* 1. Page Header (Redesigned for Mobile) */}
+                <header className="relative lg:pt-32 lg:pb-16 bg-white overflow-hidden border-b border-gray-50">
+                    <div className="flex flex-col lg:flex-row">
+                        {/* Mobile Image */}
+                        <div className="lg:hidden w-full h-[250px] relative">
+                            <img
+                                src="https://images.unsplash.com/photo-1596524430615-b46475ddff6e?q=80&w=1200&auto=format&fit=crop"
+                                alt="Service client Bricareau"
+                                className="w-full h-full object-cover"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-b from-black/10 to-transparent"></div>
+                        </div>
+
+                        <div className="container mx-auto px-6 py-12 lg:py-0">
+                            <div className="max-w-4xl">
+                                <h1 className="text-[36px] md:text-[56px] leading-[1.1] font-bold text-slate-900 tracking-tight mb-4">
+                                    Parlons de votre <span className="text-[#0052ff]">Projet d'eau</span>
+                                </h1>
+                                <p className="text-lg text-slate-600 max-w-2xl font-light leading-snug">
+                                    Une question ? Un projet ? Notre équipe d'experts est là pour vous conseiller
+                                    et vous accompagner dans le choix de votre système de traitement d'eau.
                                 </p>
                             </div>
                         </div>
                     </div>
-                </section>
+                </header>
 
                 {/* 2. Contact Info & Form */}
                 <section className="py-12 md:py-16">

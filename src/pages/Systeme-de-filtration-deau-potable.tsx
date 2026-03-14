@@ -86,30 +86,29 @@ const StationEauPotable = () => {
     <div className="min-h-screen bg-background text-slate-900 font-sans">
       <Header />
       <main>
-        {/* 1. Hero Section - UNCHANGED */}
-        <section className="relative h-[850px] flex items-center overflow-hidden">
-          <div className="absolute inset-0 z-0">
+        {/* 1. Hero Section */}
+        <section className="relative lg:h-[850px] flex flex-col lg:flex-row lg:items-center overflow-hidden bg-white">
+          <div className="relative lg:absolute lg:inset-0 h-[350px] sm:h-[450px] lg:h-full w-full lg:z-0 overflow-hidden">
             <img
               src={heroDrink}
               alt="Enfant buvant une eau cristalline directement du robinet filtré par Bricareau"
               className="w-full h-full object-cover object-[center_35%]"
             />
-            <div className="absolute inset-0 bg-black/40 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-white via-white/10 to-transparent" />
-            {/* Brightening Start 1/3 Right */}
-            <div className="absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white/90 via-white/40 to-transparent" />
+            <div className="hidden lg:block absolute inset-0 bg-black/40 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
+            <div className="hidden lg:block absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-white via-white/10 to-transparent" />
+            <div className="hidden lg:block absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white/90 via-white/40 to-transparent" />
           </div>
 
-          <div className="container mx-auto px-6 relative z-10">
-            <div className="max-w-2xl text-white">
-              <h1
-                className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white max-w-xl"
-                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
-              >
-                <span className="font-bold text-white">Systèmes d'osmose inverse</span> <br />
-                <span className="font-bold text-white">La pureté absolue à votre robinet.</span>
-              </h1>
-              <p className="text-lg font-light leading-snug text-white/95 mb-8 max-w-xl text-justify">
+          <div className="container relative z-10 mx-auto px-4 py-10 sm:py-16 lg:py-20 flex flex-col justify-center">
+            <div className="max-w-2xl lg:text-white">
+                <h1
+                                className="text-[32px] md:text-[42px] leading-[1.1] md:leading-[1.2] font-bold lg:font-light mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl"
+                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                            >
+                                Systèmes d'osmose inverse <br />
+                                La pureté absolue à votre robinet.
+                  </h1>
+              <p className="text-lg font-light leading-snug text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
                 Transformez votre eau municipale en une source de pureté cristalline. Nos purificateurs d'eau par osmose inverse éliminent 99% des contaminants, du plomb au chlore, pour une eau fraîche, saine et alcaline.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -126,7 +125,7 @@ const StationEauPotable = () => {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="bg-white/10 hover:bg-white/20 text-white border-white rounded-full px-8 h-14 backdrop-blur-sm shadow-lg"
+                  className="bg-slate-100 lg:bg-white/10 hover:bg-slate-200 lg:hover:bg-white/20 text-slate-800 lg:text-white border-slate-200 lg:border-white rounded-full px-8 h-14 backdrop-blur-sm shadow-lg"
                   style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                   asChild
                 >
@@ -307,32 +306,44 @@ const StationEauPotable = () => {
             </div>
           </div>
         </section>
-        {/* 6. Water Testing Section */}
-        <section className="relative h-[750px] flex items-center overflow-hidden">
-          <div className="absolute inset-0 z-0">
+        {/* 6. Water Testing Section (Redesigned for Mobile) */}
+        <section className="relative lg:h-[750px] flex flex-col lg:flex-row items-stretch overflow-hidden bg-white">
+          {/* Mobile Image */}
+          <div className="lg:hidden w-full h-[300px] relative">
             <img
               src={waterTestingImg}
               alt="Test de qualité d'eau à domicile pour détecter les contaminants - Expertise Bricareau"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-black/20" />
+          </div>
+
+          {/* Desktop Background */}
+          <div className="hidden lg:block absolute inset-0 z-0">
+            <img
+              src={waterTestingImg}
+              alt="Analyse d'eau à domicile"
               className="w-full h-full object-cover object-center"
             />
             <div className="absolute inset-0 bg-black/30 lg:bg-gradient-to-r lg:from-black/50 lg:to-transparent" />
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-white via-white/10 to-transparent" />
           </div>
 
-          <div className="container mx-auto px-4 relative z-10">
-            <div className="max-w-2xl text-white">
+          <div className="container mx-auto px-4 relative z-10 flex items-center py-12 lg:py-0">
+            <div className="max-w-2xl text-slate-900 lg:text-white">
               <h2
-                className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-white"
+                className="text-[32px] md:text-[60px] font-bold lg:font-light mb-8 tracking-tighter leading-[1.1] md:leading-[60px] text-slate-900 lg:text-white text-left"
                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
               >
-                La vérité dans <span className="font-bold"><br />chaque goutte.</span>
+                La vérité dans <span className="lg:font-bold"><br />chaque goutte.</span>
               </h2>
-              <p className="text-lg font-light leading-snug text-white/95 mb-8 max-w-xl text-justify">
-                Pourquoi deviner quand vous pouvez vérifier ? <br />Un test d'eau simple pour une protection durable<br /> de votre foyer.              </p>
+              <p className="text-lg font-light leading-snug text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
+                Pourquoi deviner quand vous pouvez vérifier ? <br />Un test d'eau simple pour une protection durable<br /> de votre foyer.
+              </p>
               <div className="flex gap-4">
                 <Button
                   size="lg"
-                  className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14"
+                  className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200"
                   style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                   asChild
                 >

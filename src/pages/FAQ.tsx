@@ -76,15 +76,27 @@ const FAQ = () => {
             <Header />
 
             <main>
-                {/* 1. Hero / Header Area */}
-                <section className="pt-[180px] pb-12 bg-white">
-                    <div className="container mx-auto px-6 max-w-5xl">
-                        <h1 className="text-[36px] md:text-[52px] leading-tight font-bold text-slate-900 mb-6 tracking-tight">
-                            Obtenez des réponses à vos questions
-                        </h1>
-                        <p className="text-[18px] text-slate-600 max-w-2xl font-light leading-relaxed">
-                            Vous trouverez ci-dessous les réponses aux questions les plus fréquentes. Recherchez les sujets qui vous intéressent ou triez par catégorie.
-                        </p>
+                {/* 1. Hero / Header Area (Redesigned for Mobile) */}
+                <section className="relative lg:pt-[180px] lg:pb-12 bg-white overflow-hidden">
+                    <div className="flex flex-col lg:flex-row">
+                        {/* Mobile Image */}
+                        <div className="lg:hidden w-full h-[250px] relative">
+                            <img
+                                src="https://images.unsplash.com/photo-1557683316-973673baf926?q=80&w=1200&auto=format&fit=crop"
+                                alt="Support Bricareau"
+                                className="w-full h-full object-cover"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-b from-black/10 to-transparent"></div>
+                        </div>
+
+                        <div className="container mx-auto px-6 max-w-5xl py-12 lg:py-0">
+                            <h1 className="text-[32px] md:text-[52px] leading-tight font-bold text-slate-900 mb-6 tracking-tight">
+                                Obtenez des <span className="text-blue-600">réponses</span> à vos questions
+                            </h1>
+                            <p className="text-[18px] text-slate-600 max-w-2xl font-light leading-relaxed">
+                                Vous trouverez ci-dessous les réponses aux questions les plus fréquentes. Recherchez les sujets qui vous intéressent ou triez par catégorie.
+                            </p>
+                        </div>
                     </div>
                 </section>
 

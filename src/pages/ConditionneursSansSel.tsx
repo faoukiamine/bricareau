@@ -154,32 +154,31 @@ const ConditionneursSansSel = () => {
 
       <main>
         {/* 1. Hero Section */}
-        <section className="relative h-[850px] flex items-center overflow-hidden">
-          <div className="absolute inset-0 z-0">
+        <section className="relative lg:h-[850px] flex flex-col lg:flex-row lg:items-center overflow-hidden bg-white">
+          <div className="relative lg:absolute lg:inset-0 h-[350px] sm:h-[450px] lg:h-full w-full lg:z-0 overflow-hidden">
             <img
               src={heroGirl}
               alt="Petite fille se lavant les mains dans une eau traitée sans sel - Conditionneur d'eau écologique Bricareau"
               className="w-full h-full object-cover object-[center_35%]"
             />
-            <div className="absolute inset-0 bg-black/40 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-white via-white/10 to-transparent" />
-            {/* Brightening Start 1/3 Right */}
-            <div className="absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white/90 via-white/40 to-transparent" />
-          </div>
+            <div className="hidden lg:block absolute inset-0 bg-black/40 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
+            <div className="hidden lg:block absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-white via-white/10 to-transparent" />
+            <div className="hidden lg:block absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white/90 via-white/40 to-transparent" />
+          </div >
 
-          <div className="container mx-auto px-6 relative z-10">
-            <div className="max-w-2xl text-white">
-              <span className="text-sm font-bold uppercase tracking-widest mb-4 block animate-color-pulse">
+          <div className="container relative z-10 mx-auto px-4 py-10 sm:py-16 lg:py-20 flex flex-col justify-center">
+            <div className="max-w-2xl lg:text-white">
+              <span className="text-sm font-bold uppercase tracking-widest mb-4 block text-blue-600 lg:text-blue-300 animate-pulse">
                 NOUVEAU CHEZ BRICAREAU
               </span>
               <h1
-                className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text-justify max-w-xl"
+                className="text-[32px] md:text-[42px] leading-[1.1] md:leading-[1.2] font-bold lg:font-light mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg max-w-xl"
                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
               >
-                <span className="font-bold">Conditionneur d'eau sans sel</span> <br />
-                <span className="font-bold text-white">L'anti-tartre écologique par excellence.</span>
+                Conditionneur d'eau sans sel <br />
+                L'anti-tartre écologique par excellence.
               </h1>
-              <p className="text-lg font-light leading-snug text-white/95 mb-8 max-w-xl text-justify">
+              <p className="text-lg font-light leading-snug text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
                 Neutralisez le calcaire sans sel, sans électricité et sans gaspillage d'eau. Notre technologie avancée TAC protège votre plomberie tout en préservant les minéraux essentiels à votre santé.
               </p>
               <Button
@@ -192,8 +191,8 @@ const ConditionneursSansSel = () => {
               </Button>
             </div>
           </div>
-          {/* 2. Wave Separator Bottom - Transition to Blue Section */}
-          <div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-[0] z-20 pointer-events-none">
+          {/* 2. Wave Separator Hidden on Mobile */}
+          <div className="hidden lg:block absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-[0] z-20 pointer-events-none">
             <svg
               className="relative block w-full h-[50px] md:h-[80px]"
               data-name="Layer 1"

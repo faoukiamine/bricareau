@@ -102,31 +102,40 @@ const TestsEauPage = () => {
     <div className="min-h-screen bg-white">
       <Header />
       <main>
-        {/* 1. Hero Section */}
-        <section className="relative h-[850px] flex items-center overflow-hidden">
-          <div className="absolute inset-0 z-0">
+        {/* 1. Hero Section (Redesigned for Mobile) */}
+        <section className="relative lg:h-[850px] flex flex-col lg:flex-row items-stretch overflow-hidden">
+          {/* Mobile Image */}
+          <div className="lg:hidden w-full h-[300px] relative">
             <img
               src={newHeroImg}
               alt="Analyse d'eau professionnelle à Montréal, Rive-Sud et Rive-Nord par Bricareau - Expert en qualité d'eau"
               className="w-full h-full object-cover"
             />
+            <div className="absolute inset-0 bg-black/20" />
+          </div>
+
+          {/* Desktop Background */}
+          <div className="hidden lg:block absolute inset-0 z-0">
+            <img
+              src={newHeroImg}
+              alt="Analyse d'eau professionnelle"
+              className="w-full h-full object-cover"
+            />
             <div className="absolute inset-0 bg-black/40 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-white via-white/10 to-transparent" />
-            {/* Brightening Start 1/3 Right */}
             <div className="absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white/90 via-white/40 to-transparent" />
-          </div >
+          </div>
 
-          <div className="container mx-auto px-6 relative z-10">
-            <div className="max-w-2xl text-white">
-              <h1
-                className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white text-justify max-w-xl"
-                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
-              >
-                <span className="sr-only">Montréal • Rive-Sud • Rive-Nord</span>
-                <span className="font-bold">Analyse d'eau professionnelle <br />& Tests de laboratoire</span>
-              </h1>
-
-              <p className="text-lg font-light leading-snug text-white/95 mb-8 max-w-xl text-justify">
+          <div className="container mx-auto px-6 relative z-10 flex items-center py-12 lg:py-0">
+            <div className="max-w-2xl text-slate-900 lg:text-white">
+                                          <h1
+                                className="text-[32px] md:text-[42px] leading-[1.1] md:leading-[1.2] font-bold lg:font-light mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl"
+                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                            >
+                            <span className="sr-only">Montréal • Rive-Sud • Rive-Nord</span>
+                            Analyses d'eau professionnelles <br /> & Tests de laboratoire
+                            </h1>
+              <p className="text-lg font-light leading-relaxed text-slate-600 lg:text-white/95 mb-8 max-w-xl">
                 Besoin d'une analyse d'eau dans la région métropolitaine ? Que ce soit pour une vérification annuelle, une transaction hypothécaire ou un souci de qualité, Bricareau offre des tests complets de laboratoire partout dans le Grand Montréal, Laval et les couronnes.
               </p>
 
@@ -134,7 +143,6 @@ const TestsEauPage = () => {
                 <Button
                   size="lg"
                   className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200"
-                  style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                   asChild
                 >
                   <a href="#water-test">
@@ -144,8 +152,7 @@ const TestsEauPage = () => {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="bg-white/10 hover:bg-white/20 text-white border-white rounded-full px-8 h-14 backdrop-blur-sm shadow-lg"
-                  style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                  className="bg-white border-blue-600 text-blue-600 lg:bg-white/10 lg:hover:bg-white/20 lg:text-white lg:border-white rounded-full px-8 h-14 backdrop-blur-sm shadow-lg"
                   asChild
                 >
                   <a href="tel:18552649328" className="flex items-center gap-2">
@@ -157,12 +164,10 @@ const TestsEauPage = () => {
             </div>
           </div>
 
-          {/* 2. Wave Separator Bottom - Transition to Dark Blue */}
-          <div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-[0] z-20 pointer-events-none">
+          {/* Wave Separator (Hidden on Mobile) */}
+          <div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-[0] z-20 pointer-events-none hidden lg:block">
             <svg
               className="relative block w-full h-[50px] md:h-[80px]"
-              data-name="Layer 1"
-              xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 1200 120"
               preserveAspectRatio="none"
             >

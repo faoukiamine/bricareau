@@ -8,24 +8,45 @@ const Temoignages = () => {
         <div className="min-h-screen bg-background">
             <Header />
             <main>
-                {/* Hero Section */}
-                <section className="py-12 md:py-20 lg:py-24 bg-gradient-to-b from-blue-50 to-background">
-                    <div className="container mx-auto px-4">
-                        <div className="max-w-3xl mx-auto text-center space-y-6">
-                            <h1 className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-foreground text-justify max-w-xl mx-auto">
-                                <span className="font-bold">Témoignages Clients</span>
-                            </h1>
-                            <p className="text-[20px] leading-snug text-muted-foreground font-light text-justify max-w-xl mx-auto">
-                                Découvrez ce que nos clients disent de leur expérience avec Bricareau.
-                            </p>
-                            <div className="flex items-center justify-center gap-2">
-                                <div className="flex text-yellow-400">
-                                    {[...Array(5)].map((_, i) => (
-                                        <Star key={i} className="h-6 w-6 fill-current" />
-                                    ))}
+                {/* Hero Section (Redesigned for Mobile) */}
+                <section className="relative lg:py-24 bg-white overflow-hidden">
+                    <div className="flex flex-col lg:flex-row items-center">
+                        {/* Mobile Image */}
+                        <div className="lg:hidden w-full h-[350px] relative">
+                            <img
+                                src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=1200&auto=format&fit=crop"
+                                alt="Clients satisfaits Bricareau"
+                                className="w-full h-full object-cover"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-transparent text-white p-6 flex items-end">
+                                <div className="flex items-center gap-2 bg-white/20 backdrop-blur-md px-4 py-2 rounded-full">
+                                    <div className="flex text-yellow-400">
+                                        {[...Array(5)].map((_, i) => (
+                                            <Star key={i} className="h-4 w-4 fill-current" />
+                                        ))}
+                                    </div>
+                                    <span className="font-bold">4.9/5</span>
                                 </div>
-                                <span className="text-lg font-bold">4.9/5</span>
-                                <span className="text-muted-foreground font-light">(Basé sur plus de 200 avis)</span>
+                            </div>
+                        </div>
+
+                        <div className="container mx-auto px-6 py-12 lg:py-24 bg-gradient-to-b from-blue-50 to-white lg:from-transparent lg:to-transparent">
+                            <div className="max-w-3xl mx-auto text-center space-y-6">
+                                <h1 className="text-[32px] md:text-[52px] leading-tight font-bold text-slate-900 tracking-tighter">
+                                    <span className="text-blue-600">Témoignages</span> Clients
+                                </h1>
+                                <p className="text-[20px] leading-snug text-slate-600 font-light max-w-xl mx-auto">
+                                    Découvrez ce que nos clients disent de leur expérience avec Bricareau. Leur satisfaction est notre plus grande fierté.
+                                </p>
+                                <div className="hidden lg:flex items-center justify-center gap-2">
+                                    <div className="flex text-yellow-400">
+                                        {[...Array(5)].map((_, i) => (
+                                            <Star key={i} className="h-6 w-6 fill-current" />
+                                        ))}
+                                    </div>
+                                    <span className="text-lg font-bold">4.9/5</span>
+                                    <span className="text-slate-500 font-light">(Basé sur plus de 200 avis)</span>
+                                </div>
                             </div>
                         </div>
                     </div>

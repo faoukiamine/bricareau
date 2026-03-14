@@ -78,13 +78,21 @@ const Solutions = () => {
       <Header />
       <main>
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-primary/5 via-background to-accent/5 py-16 md:py-24">
-          <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto text-center">
-              <h1 className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-foreground text-justify max-w-xl mx-auto">
+        <section className="relative pt-20 pb-0 md:pt-24 lg:pt-32 bg-white overflow-hidden">
+          {/* Mobile Image/Gradient Layer */}
+          <div className="lg:hidden w-full h-48 bg-gradient-to-br from-blue-50 via-white to-blue-50 flex items-center justify-center border-b border-slate-100">
+            <Droplets className="w-16 h-16 text-blue-200 animate-pulse" />
+          </div>
+
+          <div className="container mx-auto px-4 lg:px-6">
+            <div className="max-w-4xl mx-auto pt-10 pb-16 lg:py-0 text-center">
+              <span className="lg:hidden text-blue-600 font-bold uppercase tracking-widest text-[10px] mb-4 block">
+                TRAITEMENT D'EAU
+              </span>
+              <h1 className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-slate-900 text-center lg:text-justify max-w-xl mx-auto">
                 <span className="font-bold">Nos Solutions de Traitement d'Eau</span>
               </h1>
-              <p className="text-[20px] leading-snug text-muted-foreground font-light text-justify max-w-xl mx-auto">
+              <p className="text-[20px] leading-snug text-slate-600 font-light text-center lg:text-justify max-w-xl mx-auto">
                 Découvrez notre gamme complète de solutions pour améliorer la qualité de votre eau.
                 Que vous ayez besoin d'adoucir, filtrer ou purifier, nous avons la solution adaptée à vos besoins.
               </p>

@@ -11,21 +11,26 @@ const Contact = () => {
     <div className="min-h-screen bg-background">
       <Header />
       <main>
-        {/* 1. Hero Section */}
-        <section className="py-12 md:py-20 lg:py-24 bg-gradient-to-b from-primary/5 to-background">
-          <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto text-center space-y-6">
-              <h1
-                className="mb-8 text-center max-w-xl mx-auto"
-                style={{ fontFamily: 'Speedee, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif', fontStyle: 'normal', fontWeight: 700, color: 'rgb(41, 41, 41)', fontSize: '54px', lineHeight: '56px' }}
-              >
-                Contactez-nous
+        {/* Hero Section (Redesigned for Mobile) */}
+        <section className="relative lg:pt-[180px] lg:pb-12 bg-white overflow-hidden">
+          <div className="flex flex-col lg:flex-row">
+            {/* Mobile Image */}
+            <div className="lg:hidden w-full h-[300px] relative">
+              <img
+                src="https://images.unsplash.com/photo-1534536281715-e28d76689b4d?q=80&w=1200&auto=format&fit=crop"
+                alt="Contact Bricareau"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-transparent"></div>
+            </div>
+
+            <div className="container mx-auto px-6 max-w-5xl py-12 lg:py-0">
+              <h1 className="text-[32px] md:text-[52px] leading-tight font-bold text-slate-900 mb-6 tracking-tight">
+                <span className="text-blue-600">Contactez</span>-nous
               </h1>
-              <div className="mb-12 flex justify-center">
-                <p className="text-lg md:text-xl text-slate-700 max-w-4xl font-light leading-relaxed text-center">
-                  Vous recherchez des informations sur nos produits, planifier une analyse d'eau ou vous souhaitez simplement nous contacter ? Notre équipe se fera un plaisir de vous aider à trouver les réponses.
-                </p>
-              </div>
+              <p className="text-[18px] text-slate-600 max-w-2xl font-light leading-relaxed">
+                Nous sommes là pour répondre à toutes vos questions sur le traitement de l'eau.
+              </p>
             </div>
           </div>
         </section>

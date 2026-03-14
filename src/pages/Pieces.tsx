@@ -39,20 +39,31 @@ const Pieces = () => {
         <div className="min-h-screen bg-background">
             <Header />
             <main>
-                {/* Hero Section */}
-                <section className="py-12 md:py-20 lg:py-24 bg-gradient-to-b from-orange-50 to-background">
-                    <div className="container mx-auto px-4">
-                        <div className="max-w-3xl mx-auto text-center space-y-6">
-                            <Package className="h-16 w-16 text-[#0052ff] mx-auto" />
-                            <h1
-                                className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-foreground text-justify max-w-xl mx-auto"
-                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
-                            >
-                                <span className="font-bold">Pièces de Remplacement</span>
-                            </h1>
-                            <p className="text-[20px] leading-snug text-muted-foreground font-light text-justify max-w-xl mx-auto">
-                                Trouvez toutes les pièces dont vous avez besoin pour vos équipements
-                            </p>
+                {/* Hero Section (Redesigned for Mobile) */}
+                <section className="relative lg:py-24 bg-white overflow-hidden">
+                    <div className="flex flex-col lg:flex-row items-center">
+                        {/* Mobile Image */}
+                        <div className="lg:hidden w-full h-[300px] relative">
+                            <img
+                                src="https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=1200&auto=format&fit=crop"
+                                alt="Pièces de Remplacement Bricareau"
+                                className="w-full h-full object-cover"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-transparent"></div>
+                        </div>
+
+                        <div className="container mx-auto px-6 py-12 lg:py-24 bg-gradient-to-b from-orange-50 to-white lg:from-transparent lg:to-transparent">
+                            <div className="max-w-3xl mx-auto text-center space-y-6">
+                                <div className="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center mx-auto mb-4">
+                                    <Package className="h-8 w-8 text-[#0052ff]" />
+                                </div>
+                                <h1 className="text-[32px] md:text-[52px] leading-tight font-bold text-slate-900 tracking-tighter text-center max-w-2xl mx-auto">
+                                    Pièces de <span className="text-blue-600">Remplacement</span>
+                                </h1>
+                                <p className="text-[20px] leading-snug text-slate-600 font-light text-center max-w-xl mx-auto">
+                                    Trouvez toutes les pièces dont vous avez besoin pour maintenir vos équipements en parfait état de fonctionnement.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </section>

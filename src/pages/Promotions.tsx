@@ -53,21 +53,26 @@ const Promotions = () => {
             <Header />
             <main>
                 {/* Hero Section */}
-                <section className="py-12 md:py-20 lg:py-24 bg-gradient-to-br from-blue-50 via-background to-emerald-50">
-                    <div className="container mx-auto px-4">
-                        <div className="max-w-3xl mx-auto text-center space-y-6">
-                            <div className="inline-flex items-center gap-2 bg-[#0052ff]/10 rounded-full px-4 py-2 mb-4">
-                                <Tag className="h-5 w-5 text-[#0052ff]" />
-                                <span className="text-sm font-medium text-[#0052ff]">Offres Spéciales</span>
+                <section className="relative pt-20 pb-0 md:pt-24 lg:pt-32 bg-white overflow-hidden">
+                    {/* Mobile Header Decor */}
+                    <div className="lg:hidden w-full h-40 bg-gradient-to-br from-blue-50 via-white to-emerald-50 flex items-center justify-center border-b border-slate-100">
+                        <Tag className="h-16 w-16 text-blue-200" />
+                    </div>
+
+                    <div className="container mx-auto px-4 lg:px-6">
+                        <div className="max-w-3xl mx-auto pt-10 pb-16 lg:py-0 text-center">
+                            <div className="inline-flex items-center gap-2 bg-blue-50 rounded-full px-4 py-2 mb-6">
+                                <Tag className="h-5 w-5 text-blue-600" />
+                                <span className="text-xs font-bold text-blue-600 uppercase tracking-widest">Offres Spéciales</span>
                             </div>
                             <h1
-                                className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-foreground text-justify max-w-xl mx-auto"
+                                className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-slate-900 text-center lg:text-justify max-w-xl mx-auto"
                                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                             >
                                 <span className="font-bold">Nos Promotions en Cours</span>
                             </h1>
-                            <p className="text-[20px] leading-snug text-muted-foreground font-light text-justify max-w-xl mx-auto">
-                                Profitez de nos offres exceptionnelles sur nos systèmes de traitement d'eau
+                            <p className="text-[20px] leading-snug text-slate-600 font-light text-center lg:text-justify max-w-xl mx-auto">
+                                Profitez de nos offres exceptionnelles sur nos systèmes de traitement d'eau pour transformer votre quotidien.
                             </p>
                         </div>
                     </div>

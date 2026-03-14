@@ -153,7 +153,7 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({ title, headerImage, children, t
 
             <div className="flex-grow">
                 {/* Hero Section - Split Layout */}
-                <div className="w-full min-h-[450px] md:min-h-[700px] relative flex overflow-hidden bg-[#1a3a5c]">
+                <div className="w-full min-h-[450px] md:min-h-[700px] relative flex flex-col lg:flex-row overflow-hidden bg-white lg:bg-[#1a3a5c]">
                     {/* Background image - right side */}
                     <div className="absolute right-0 top-0 z-[1] hidden h-full w-3/5 lg:block">
                         <img
@@ -215,9 +215,8 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({ title, headerImage, children, t
                         </svg>
                     </div>
 
-                    {/* Mobile fallback */}
-                    <div className="absolute inset-0 bg-[#1a3a5c] lg:hidden" />
-                    <div className="lg:hidden absolute bottom-0 left-0 right-0 h-[200px]">
+                    {/* Mobile image - top side */}
+                    <div className="lg:hidden relative h-[250px] sm:h-[350px] w-full">
                         <img
                             src={headerImage}
                             alt={title}
@@ -225,28 +224,28 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({ title, headerImage, children, t
                         />
                     </div>
 
-                    <div className="absolute inset-0 z-10 flex items-center">
+                    <div className="relative lg:absolute lg:inset-0 z-10 flex items-center bg-white lg:bg-transparent py-8 lg:py-0">
                         <div className="container mx-auto px-4 md:px-6">
                             <div className="max-w-xl">
                                 {/* Breadcrumbs */}
                                 <Breadcrumb className="mb-6">
-                                    <BreadcrumbList className="text-white/60">
+                                    <BreadcrumbList className="text-slate-500 lg:text-white/60">
                                         <BreadcrumbItem>
-                                            <BreadcrumbLink asChild className="hover:text-white transition-colors text-white/70">
+                                            <BreadcrumbLink asChild className="hover:text-blue-600 lg:hover:text-white transition-colors text-slate-600 lg:text-white/70">
                                                 <NavLink to="/">Accueil</NavLink>
                                             </BreadcrumbLink>
                                         </BreadcrumbItem>
-                                        <BreadcrumbSeparator className="text-white/30" />
+                                        <BreadcrumbSeparator className="text-slate-300 lg:text-white/30" />
                                         <BreadcrumbItem>
-                                            <BreadcrumbLink asChild className="hover:text-white transition-colors text-white/70">
+                                            <BreadcrumbLink asChild className="hover:text-blue-600 lg:hover:text-white transition-colors text-slate-600 lg:text-white/70">
                                                 <NavLink to="/blog">Blog</NavLink>
                                             </BreadcrumbLink>
                                         </BreadcrumbItem>
                                         {currentCategory && (
                                             <>
-                                                <BreadcrumbSeparator className="text-white/30" />
+                                                <BreadcrumbSeparator className="text-slate-300 lg:text-white/30" />
                                                 <BreadcrumbItem>
-                                                    <BreadcrumbLink asChild className="hover:text-white transition-colors text-white/70">
+                                                    <BreadcrumbLink asChild className="hover:text-blue-600 lg:hover:text-white transition-colors text-slate-600 lg:text-white/70">
                                                         <NavLink to={`/blog/categorie/${currentCategory.id}`}>
                                                             {currentCategory.title}
                                                         </NavLink>
@@ -254,9 +253,9 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({ title, headerImage, children, t
                                                 </BreadcrumbItem>
                                             </>
                                         )}
-                                        <BreadcrumbSeparator className="text-white/30" />
+                                        <BreadcrumbSeparator className="text-slate-300 lg:text-white/30" />
                                         <BreadcrumbItem>
-                                            <BreadcrumbPage className="text-white font-medium line-clamp-1 max-w-[200px] text-white/90">
+                                            <BreadcrumbPage className="text-slate-900 lg:text-white font-medium line-clamp-1 max-w-[200px] text-slate-900 lg:text-white/90">
                                                 {title}
                                             </BreadcrumbPage>
                                         </BreadcrumbItem>
@@ -264,18 +263,18 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({ title, headerImage, children, t
                                 </Breadcrumb>
 
                                 <h1
-                                    className="text-3xl md:text-4xl lg:text-[2.8rem] font-bold italic text-white leading-tight mb-6 tracking-tight"
+                                    className="text-3xl md:text-4xl lg:text-[2.8rem] font-bold italic text-slate-900 lg:text-white leading-tight mb-6 tracking-tight"
                                     style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif' }}
                                 >
                                     {title}
                                 </h1>
-                                <div className="flex items-center flex-wrap gap-4 text-[11px] text-white/50 uppercase tracking-[0.15em]">
+                                <div className="flex items-center flex-wrap gap-4 text-[11px] text-slate-400 lg:text-white/50 uppercase tracking-[0.15em]">
                                     <span>Mars 20 — 2026</span>
-                                    <span className="w-px h-3 bg-white/25"></span>
+                                    <span className="w-px h-3 bg-slate-200 lg:bg-white/25"></span>
                                     <span>Par Bricareau</span>
                                     {currentArticle?.readTime && (
                                         <>
-                                            <span className="w-px h-3 bg-white/25"></span>
+                                            <span className="w-px h-3 bg-slate-200 lg:bg-white/25"></span>
                                             <span className="flex items-center gap-2">
                                                 <Clock className="w-3.5 h-3.5" />
                                                 {currentArticle.readTime}

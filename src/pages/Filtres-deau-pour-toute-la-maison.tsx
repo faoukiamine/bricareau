@@ -147,44 +147,53 @@ const FiltresTouteMaison = () => {
             <Header />
 
             <main>
-                {/* 1.Hero Section */}
-                <section className="relative h-[850px] flex items-center overflow-hidden">
-                    <div className="absolute inset-0 z-0">
+                {/* 1. Hero Section (Redesigned for Mobile) */}
+                <section className="relative lg:h-[850px] flex flex-col lg:flex-row items-stretch overflow-hidden">
+                    {/* Mobile Image */}
+                    <div className="lg:hidden w-full h-[300px] relative">
                         <img
                             src={heroFilter}
                             alt="Verre d'eau pure et cristalline filtrée par un système Bricareau pour toute la maison"
                             className="w-full h-full object-cover"
                         />
+                        <div className="absolute inset-0 bg-black/20" />
+                    </div>
+
+                    {/* Desktop Background */}
+                    <div className="hidden lg:block absolute inset-0 z-0">
+                        <img
+                            src={heroFilter}
+                            alt="Verre d'eau pure et cristalline filtrée"
+                            className="w-full h-full object-cover"
+                        />
                         <div className="absolute inset-0 bg-black/40 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
                         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-white via-white/10 to-transparent" />
-                        {/* Brightening Start 1/3 Right */}
                         <div className="absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white/90 via-white/40 to-transparent" />
                     </div>
 
-                    <div className="container mx-auto px-6 relative z-10">
-                        <div className="max-w-2xl text-white">
-                            <h1
-                                className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-white max-w-xl"
+                    <div className="container mx-auto px-6 relative z-10 flex items-center py-12 lg:py-0">
+                        <div className="max-w-2xl text-slate-900 lg:text-white">
+                             <h1
+                                className="text-[32px] md:text-[42px] leading-[1.1] md:leading-[1.2] font-bold lg:font-light mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl"
                                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                             >
-                                <span className="font-bold text-white">Filtres d'eau pour toute la maison, une protection intégrale au point d'entrée.</span>                           </h1>
-                            <p className="text-lg font-light leading-snug text-white/95 mb-8 max-w-xl text-justify">
+                                Filtres d'eau pour toute la maison, une protection intégrale.
+                            </h1>
+                            <p className="text-lg font-light leading-relaxed text-slate-600 lg:text-white/95 mb-8 max-w-xl">
                                 Éliminez le chlore, le fer et les sédiments de chaque goutte d'eau qui entre dans votre propriété. Nos systèmes de filtration intégrés protègent votre santé, votre peau et vos appareils électroménagers.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4">
                                 <Button
                                     size="lg"
                                     className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200"
-                                    style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                                     asChild
                                 >
-                                    <a href="#specialized-filters">Explorez nos filtres d'eau</a>
+                                    <a href="#specialized-filters">Explorez nos filtres</a>
                                 </Button>
                                 <Button
                                     size="lg"
                                     variant="outline"
-                                    className="bg-white/10 hover:bg-white/20 text-white border-white rounded-full px-8 h-14 backdrop-blur-sm shadow-lg flex items-center gap-2"
-                                    style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                    className="bg-white border-blue-600 text-blue-600 lg:bg-white/10 lg:hover:bg-white/20 lg:text-white lg:border-white rounded-full px-8 h-14 backdrop-blur-sm shadow-lg flex items-center gap-2"
                                     asChild
                                 >
                                     <a href="tel:18552649328">
@@ -195,12 +204,11 @@ const FiltresTouteMaison = () => {
                             </div>
                         </div>
                     </div>
-                    {/* 2. Wave Separator Bottom - Transition to Blue Section */}
-                    <div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-[0] z-20 pointer-events-none">
+
+                    {/* Wave Separator (Hidden on Mobile) */}
+                    <div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-[0] z-20 pointer-events-none hidden lg:block">
                         <svg
                             className="relative block w-full h-[50px] md:h-[80px]"
-                            data-name="Layer 1"
-                            xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 1200 120"
                             preserveAspectRatio="none"
                         >
@@ -355,30 +363,42 @@ const FiltresTouteMaison = () => {
                     </div>
                 </section>
 
-                {/* 6. Water Testing Section */}
-                <section className="relative h-[750px] flex items-center overflow-hidden">
-                    <div className="absolute inset-0 z-0">
+                {/* 6. Water Testing Section (Redesigned for Mobile) */}
+                <section className="relative lg:h-[750px] flex flex-col lg:flex-row items-stretch overflow-hidden bg-white">
+                    {/* Mobile Image */}
+                    <div className="lg:hidden w-full h-[300px] relative">
                         <img
                             src={waterTestingImg}
                             alt="Prélèvement et analyse d'eau municipale à domicile - Expertise Bricareau"
                             className="w-full h-full object-cover"
                         />
+                        <div className="absolute inset-0 bg-blue-900/20" />
+                    </div>
+
+                    {/* Desktop Background */}
+                    <div className="hidden lg:block absolute inset-0 z-0">
+                        <img
+                            src={waterTestingImg}
+                            alt="Analyse d'eau à domicile"
+                            className="w-full h-full object-cover"
+                        />
                         <div className="absolute inset-0 bg-blue-900/40 lg:bg-gradient-to-r lg:from-blue-900/90 lg:to-blue-600/20 mix-blend-multiply" />
                         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-white via-white/10 to-transparent" />
                     </div>
-                    <div className="container mx-auto px-4 relative z-10">
-                        <div className="max-w-2xl text-white">
-                            <span className="text-white/80 font-bold uppercase tracking-widest text-sm mb-4 block">
+
+                    <div className="container mx-auto px-4 relative z-10 flex items-center py-12 lg:py-0">
+                        <div className="max-w-2xl text-slate-900 lg:text-white">
+                            <span className="text-blue-600 lg:text-white/80 font-bold uppercase tracking-widest text-sm mb-4 block">
                                 Contrôle de la Qualité D'EAU
                             </span>
                             <h2
-                                className="text-[40px] md:text-[60px] leading-[1.1] md:leading-[60px] font-light mb-8 tracking-tighter text-white"
+                                className="text-[32px] md:text-[60px] font-bold lg:font-light mb-8 tracking-tighter leading-[1.1] md:leading-[60px] text-slate-900 lg:text-white text-left"
                                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                             >
                                 L'excellence commence<br />
-                                par <span className="font-bold">une eau parfaite.</span>
+                                par <span className="lg:font-bold">une eau parfaite.</span>
                             </h2>
-                            <p className="text-lg font-light leading-snug text-white/95 mb-8 max-w-xl text-justify">
+                            <p className="text-lg font-light leading-snug text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
                                 Le luxe, c'est de ne pas avoir à se soucier de la qualité de ce que l'on consomme. Offrez-vous la sérénité d'une eau analysée par des experts, pour une maison où tout brille, sans effort et sans compromis.
                             </p>
                             <div className="flex gap-4">

@@ -40,43 +40,62 @@ const FiltreEauHauteEfficacite = () => {
 
             <main>
                 {/* 1. Product Hero Section */}
-                <section className="pt-32 pb-20 bg-white">
+                <section className="relative pt-20 pb-0 lg:pt-32 lg:pb-20 bg-white overflow-hidden">
                     <div className="container mx-auto px-6">
-                        <div className="flex flex-col lg:flex-row items-center gap-12">
-                            <div className="lg:w-1/2 flex flex-col items-center">
-                                <img
-                                    src={productImage}
-                                    alt="Filtre d'eau haute efficacité Bricareau HE - Performance et économie d'eau certifiée"
-                                    className="max-h-[600px] object-contain drop-shadow-2xl"
-                                />
-                                <div className="mt-8 flex gap-4 opacity-50">
+                        <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+                            {/* Mobile Image Layer */}
+                            <div className="lg:w-1/2 w-full flex flex-col items-center">
+                                <div className="relative w-full aspect-square md:aspect-video lg:aspect-auto lg:h-[600px] flex items-center justify-center">
+                                    <img
+                                        src={productImage}
+                                        alt="Filtre d'eau haute efficacité Bricareau HE - Performance et économie d'eau certifiée"
+                                        className="h-full object-contain drop-shadow-2xl z-10"
+                                    />
+                                    {/* Sublte background decor */}
+                                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-blue-100 rounded-full blur-3xl opacity-30 pointer-events-none" />
+                                </div>
+                                <div className="hidden lg:flex mt-8 gap-4 opacity-50">
                                     <div className="w-12 h-12 border border-slate-200 rounded p-1"><img src={productImage} alt="Icône du filtre d'eau haute efficacité HE Bricareau" className="w-full h-full object-contain" /></div>
                                     <div className="w-12 h-12 border border-slate-200 rounded p-1 opacity-50"><Smartphone className="w-full h-full p-2" /></div>
                                     <div className="w-12 h-12 border border-slate-200 rounded p-1 opacity-50"><Settings className="w-full h-full p-2" /></div>
                                 </div>
                             </div>
-                            <div className="lg:w-1/2 text-left">
-                                <span className="text-blue-600 font-bold uppercase tracking-widest text-sm mb-4 block">
+
+                            {/* Content Layer */}
+                            <div className="lg:w-1/2 w-full text-center lg:text-left pt-8 pb-16 lg:py-0 border-t lg:border-t-0 border-slate-100">
+                                <span className="text-blue-600 font-bold uppercase tracking-widest text-[10px] md:text-sm mb-4 block">
                                     SYSTÈME DE FILTRATION D'EAU
                                 </span>
                                 <h1
-                                    className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-foreground text-justify max-w-xl"
+                                    className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] font-light mb-8 tracking-tighter text-slate-900 text-center lg:text-justify"
                                     style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
                                 >
                                     Bricareau High <span className="font-normal">Efficiency (HE)</span>
                                 </h1>
-                                <p className="text-lg font-light leading-snug text-slate-600 mb-8 text-justify">
+                                <p className="text-lg font-light leading-snug text-slate-600 mb-8 text-center lg:text-justify max-w-xl mx-auto lg:mx-0">
                                     L'adoucisseur et filtre d'eau le plus efficace au monde. Profitez d'une eau d'une pureté absolue tout en réalisant des économies d'eau et de sel inégalées.
                                 </p>
-                                <Button
-                                    size="lg"
-                                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 mb-12"
-                                    style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
-                                    asChild
-                                >
-                                    <NavLink to="/contact">Démarrer ici</NavLink>
-                                </Button>
-                                <div className="space-y-6 border-t border-slate-100 pt-8">
+                                <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                                    <Button
+                                        size="lg"
+                                        className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14"
+                                        style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+                                        asChild
+                                    >
+                                        <NavLink to="/contact" className="flex items-center gap-2">
+                                            Démarrer ici <ArrowRight className="h-5 w-5" />
+                                        </NavLink>
+                                    </Button>
+                                    <Button
+                                        size="lg"
+                                        variant="outline"
+                                        className="border-blue-600 text-blue-600 hover:bg-blue-50 rounded-full px-8 h-14"
+                                        asChild
+                                    >
+                                        <a href="tel:18552649328">Appeler expert</a>
+                                    </Button>
+                                </div>
+                                <div className="hidden lg:block space-y-6 border-t border-slate-100 pt-8 mt-12">
                                     <div className="flex gap-4 items-start">
                                         <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center shrink-0">
                                             <Zap className="w-5 h-5 text-blue-600" />
