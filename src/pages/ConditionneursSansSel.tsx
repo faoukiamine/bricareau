@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import Header from "@/components/Header";
+import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 import Footer from "@/components/Footer";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import { Button } from "@/components/ui/button";
@@ -28,7 +29,8 @@ import {
   Accordion,
   AccordionContent,
   AccordionItem,
-  AccordionTrigger } from "@/components/ui/accordion";
+  AccordionTrigger
+} from "@/components/ui/accordion";
 import ConsultationFormSection from "@/components/ConsultationFormSection";
 
 
@@ -150,10 +152,14 @@ const ConditionneursSansSel = () => {
   return (
     <div className="min-h-screen bg-white">
       <Header />
-
       <main>
         {/* 1. Hero Section */}
-        <section className="relative lg:h-[850px] flex flex-col lg:flex-row lg:items-center overflow-hidden bg-white">
+        <section className="relative lg:h-[850px] flex flex-col lg:items-center overflow-hidden bg-white text-slate-900 lg:text-white">
+          <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none">
+            <div className="container mx-auto px-4 lg:px-6 pointer-events-auto">
+              <GlobalBreadcrumbs variant="dark" />
+            </div>
+          </div>
           <div className="relative lg:absolute lg:inset-0 h-[350px] sm:h-[450px] lg:h-full w-full lg:z-0 overflow-hidden">
             <img
               src={heroGirl}
@@ -165,8 +171,8 @@ const ConditionneursSansSel = () => {
             <div className="hidden lg:block absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white/90 via-white/40 to-transparent" />
           </div >
 
-          <div className="container relative z-10 mx-auto px-4 py-10 sm:py-16 lg:py-20 flex flex-col justify-center">
-            <div className="max-w-2xl lg:text-white">
+          <div className="container relative z-10 mx-auto px-4 h-full flex items-center lg:px-6">
+            <div className="max-w-2xl lg:text-white py-12 lg:py-0">
               <span className="text-sm font-bold uppercase tracking-widest mb-4 block text-blue-600 lg:text-blue-300 animate-pulse">
                 NOUVEAU CHEZ BRICAREAU
               </span>
@@ -185,7 +191,7 @@ const ConditionneursSansSel = () => {
               <Button
                 size="lg"
                 className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200"
-                style={{ }}
+                style={{}}
                 asChild
               >
                 <NavLink to="/consultation">Planifiez une consultation gratuite</NavLink>
@@ -256,7 +262,7 @@ const ConditionneursSansSel = () => {
                   <span className="text-blue-600 font-bold tracking-widest text-xs uppercase mb-4 block">Innovation Durable</span>
                   <h2
                     className="text-slate-900 mb-8"
-                    style={{ }}
+                    style={{}}
                   >
                     Choisissez une protection 100% écologique et préservez les minéraux essentiels de votre eau.
                   </h2>
@@ -348,7 +354,7 @@ const ConditionneursSansSel = () => {
             <div className="text-left mb-16">
               <h2
                 className="text-slate-900 mb-8 text-left"
-                style={{ }}
+                style={{}}
               >
                 <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Pour vous éclairer</span>
                 <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">Questions fréquentes</span>
@@ -360,10 +366,10 @@ const ConditionneursSansSel = () => {
               <Accordion type="single" collapsible className="w-full">
                 {faqs.slice(0, showAllFaqs ? undefined : 6).map((faq, idx) => (
                   <AccordionItem key={idx} value={`item-${idx}`} className="border-b-slate-100 px-4">
-                    <AccordionTrigger className="text-left text-base font-medium leading-6 hover:no-underline py-8 text-slate-800" style={{ }}>
+                    <AccordionTrigger className="text-left text-base font-medium leading-6 hover:no-underline py-8 text-slate-800" style={{}}>
                       {faq.question}
                     </AccordionTrigger>
-                    <AccordionContent className="text-base font-light leading-6 text-slate-500 pb-8 text-justify" style={{ }}>
+                    <AccordionContent className="text-base font-light leading-6 text-slate-500 pb-8 text-justify" style={{}}>
                       {faq.answer}
                     </AccordionContent>
                   </AccordionItem>
@@ -373,7 +379,7 @@ const ConditionneursSansSel = () => {
                 <Button
                   onClick={() => setShowAllFaqs(!showAllFaqs)}
                   className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-12 h-14 shadow-lg shadow-blue-200"
-                  style={{ }}
+                  style={{}}
                 >
                   {showAllFaqs ? "Voir moins" : "Voir plus de questions"}
                 </Button>
@@ -389,7 +395,7 @@ const ConditionneursSansSel = () => {
             <div className="text-left mb-16">
               <h2
                 className="text-slate-900 mb-8 text-left"
-                style={{ }}
+                style={{}}
               >                                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">Ressources</span>
               </h2>
               <div className="w-24 h-1 bg-blue-600"></div>
@@ -399,15 +405,18 @@ const ConditionneursSansSel = () => {
                 {
                   title: "Adoucisseur sans sel vs avec sel : la vérité technique",
                   img: residentialWaterSoftenerImg,
-                  link: "/adoucisseur-sans-sel-vs-avec-sel-verite-technique" },
+                  link: "/adoucisseur-sans-sel-vs-avec-sel-verite-technique"
+                },
                 {
                   title: "Adoucisseur d'eau et fosse septique : compatible ou non ?",
                   img: adoucisseurFosseImg,
-                  link: "/adoucisseur-deau-et-fosse-septique-mythes-et-realites" },
+                  link: "/adoucisseur-deau-et-fosse-septique-mythes-et-realites"
+                },
                 {
                   title: "Conditionneur d'eau : Une alternative écologique à l'adoucisseur sans sel",
                   img: conditionneursImg,
-                  link: "/conditionneur-deau-une-alternative-ecologique-a-ladoucisseur-sans-sel" },
+                  link: "/conditionneur-deau-une-alternative-ecologique-a-ladoucisseur-sans-sel"
+                },
               ].map((art, i) => (
                 <NavLink
                   key={i}

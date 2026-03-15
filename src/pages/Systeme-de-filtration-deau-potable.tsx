@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import {
@@ -24,7 +25,8 @@ import {
   Accordion,
   AccordionContent,
   AccordionItem,
-  AccordionTrigger } from "@/components/ui/accordion";
+  AccordionTrigger
+} from "@/components/ui/accordion";
 import ConsultationFormSection from "@/components/ConsultationFormSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 
@@ -86,7 +88,12 @@ const StationEauPotable = () => {
       <Header />
       <main>
         {/* 1. Hero Section */}
-        <section className="relative lg:h-[850px] flex flex-col lg:flex-row lg:items-center overflow-hidden bg-white">
+        <section className="relative lg:h-[850px] flex flex-col lg:items-center overflow-hidden bg-white">
+          <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none">
+            <div className="container mx-auto px-6 pointer-events-auto">
+              <GlobalBreadcrumbs variant="dark" />
+            </div>
+          </div>
           <div className="relative lg:absolute lg:inset-0 h-[350px] sm:h-[450px] lg:h-full w-full lg:z-0 overflow-hidden">
             <img
               src={heroDrink}
@@ -98,15 +105,15 @@ const StationEauPotable = () => {
             <div className="hidden lg:block absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white/90 via-white/40 to-transparent" />
           </div>
 
-          <div className="container relative z-10 mx-auto px-4 py-10 sm:py-16 lg:py-20 flex flex-col justify-center">
-            <div className="max-w-2xl lg:text-white">
-                <h1
-                                className="text-[32px] md:text-[42px] leading-[1.1] md:leading-[1.2] font-bold lg:font-light mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl"
-                                style={{ }}
-                            >
-                                Systèmes d'osmose inverse <br />
-                                La pureté absolue à votre robinet.
-                  </h1>
+          <div className="container relative z-10 mx-auto px-4 h-full flex items-center lg:px-6">
+            <div className="max-w-2xl lg:text-white py-12 lg:py-0">
+              <h1
+                className="text-[32px] md:text-[42px] leading-[1.1] md:leading-[1.2] font-bold lg:font-light mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl"
+                style={{}}
+              >
+                Systèmes d'osmose inverse <br />
+                La pureté absolue à votre robinet.
+              </h1>
               <p className="font-light text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
                 Transformez votre eau municipale en une source de pureté cristalline. Nos purificateurs d'eau par osmose inverse éliminent 99% des contaminants, du plomb au chlore, pour une eau fraîche, saine et alcaline.
               </p>
@@ -114,7 +121,7 @@ const StationEauPotable = () => {
                 <Button
                   size="lg"
                   className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200"
-                  style={{ }}
+                  style={{}}
                   asChild
                 >
                   <a href="#purification-systems">
@@ -125,7 +132,7 @@ const StationEauPotable = () => {
                   size="lg"
                   variant="outline"
                   className="bg-slate-100 lg:bg-white/10 hover:bg-slate-200 lg:hover:bg-white/20 text-slate-800 lg:text-white border-slate-200 lg:border-white rounded-full px-8 h-14 backdrop-blur-sm shadow-lg"
-                  style={{ }}
+                  style={{}}
                   asChild
                 >
                   <a href="tel:18552649328" className="flex items-center gap-2">
@@ -190,7 +197,7 @@ const StationEauPotable = () => {
             <div className="text-left mb-16">
               <h2
                 className="text-slate-900 mb-8 text-left"
-                style={{ }}
+                style={{}}
               >
                 <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Nos systèmes de purification</span>
                 <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">d'eau par osmose inverse</span>
@@ -198,7 +205,7 @@ const StationEauPotable = () => {
               <div className="w-24 h-1 bg-blue-600 mb-8"></div>
               <p
                 className="font-light text-slate-600 mb-8 text-justify"
-                style={{ }}
+                style={{}}
               >
                 Nos systèmes d'osmose inverse représentent le summum de la technologie moderne permettant de transformer votre eau municipale ou de puits en une source de pureté exceptionnelle. Conçus pour s'intégrer discrètement sous votre évier, nos trois modèles phares — Vectapure, Essentiel et Sérénité — répondent avec précision à toutes vos exigences, allant de la filtration haute performance à la reminéralisation alcaline pour une eau plus saine. Chaque système a été rigoureusement testé et sélectionné pour sa fiabilité exemplaire et sa capacité inégalée à éliminer jusqu'à 99% des contaminants invisibles, vous offrant ainsi une tranquillité d'esprit absolue et un goût incomparable au quotidien. Choisir l'un de nos purificateurs, c'est investir durablement dans la santé de vos proches tout en réalisant des économies significatives sur l'achat d'eau en bouteille plastique. Profitez dès maintenant d'un accès illimité à une eau parfaitement purifiée, revitalisante et rafraîchissante, directement depuis le confort de votre cuisine.
               </p>
@@ -224,19 +231,19 @@ const StationEauPotable = () => {
                   <div className="p-8 space-y-4 flex flex-col flex-grow border-t-2 border-transparent group-hover:border-blue-600 transition-colors">
                     <h3
                       className="text-slate-900 group-hover:text-blue-600 transition-colors tracking-tight text-center"
-                      style={{ }}
+                      style={{}}
                     >
                       {product.name}
                     </h3>
                     <p
                       className="text-slate-500 font-light flex-grow text-justify"
-                      style={{ }}
+                      style={{}}
                     >
                       {product.desc}
                     </p>
                     <div
                       className="inline-flex items-center gap-2 text-blue-600 font-bold text-xs tracking-widest uppercase mt-4 group-hover:underline self-end"
-                      style={{ }}
+                      style={{}}
                     >
                       <span></span>
                       <ArrowRight className="h-6 w-6 transform group-hover:translate-x-1 transition-transform" />
@@ -254,7 +261,7 @@ const StationEauPotable = () => {
             <div className="text-left mb-16">
               <h2
                 className="text-slate-900 mb-8 text-left"
-                style={{ }}
+                style={{}}
               >
                 <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Comparez nos solutions</span>
                 <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">de filtration d'eau potable</span>
@@ -332,7 +339,7 @@ const StationEauPotable = () => {
             <div className="max-w-2xl text-slate-900 lg:text-white">
               <h2
                 className="lg:font-light mb-8 md:leading-[60px] text-slate-900 lg:text-white text-left"
-                style={{ }}
+                style={{}}
               >
                 La vérité dans <span className="lg:font-bold"><br />chaque goutte.</span>
               </h2>
@@ -343,7 +350,7 @@ const StationEauPotable = () => {
                 <Button
                   size="lg"
                   className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200"
-                  style={{ }}
+                  style={{}}
                   asChild
                 >
                   <a href="/tests-eau">Demandez une analyse d'eau</a>
@@ -369,7 +376,7 @@ const StationEauPotable = () => {
             <div className="text-left mb-16">
               <h2
                 className="text-slate-900 mb-8 text-left"
-                style={{ }}
+                style={{}}
               >
                 <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Pour vous éclairer</span>
                 <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">Questions fréquentes</span>
@@ -382,55 +389,70 @@ const StationEauPotable = () => {
                 {[
                   {
                     q: "Qu'est-ce qu'un système d'osmose inverse sous évier ?",
-                    a: "C'est un système de purification d'eau compact installé directement sous votre évier de cuisine. Il utilise une technologie de filtration à plusieurs étapes, incluant une membrane semi-perméable, pour fournir une eau d'une pureté exceptionnelle directement à un robinet dédié." },
+                    a: "C'est un système de purification d'eau compact installé directement sous votre évier de cuisine. Il utilise une technologie de filtration à plusieurs étapes, incluant une membrane semi-perméable, pour fournir une eau d'une pureté exceptionnelle directement à un robinet dédié."
+                  },
                   {
                     q: "Quels sont les principaux avantages d'un système d'osmose inverse ?",
-                    a: "Le principal avantage est la suppression de 99 % des contaminants (plomb, chlore, fluorure, arsenic, nitrates, etc.). Cela améliore considérablement le goût, l'odeur et la sécurité de votre eau pour boire et cuisiner, tout en éliminant le besoin d'acheter de l'eau en bouteille." },
+                    a: "Le principal avantage est la suppression de 99 % des contaminants (plomb, chlore, fluorure, arsenic, nitrates, etc.). Cela améliore considérablement le goût, l'odeur et la sécurité de votre eau pour boire et cuisiner, tout en éliminant le besoin d'acheter de l'eau en bouteille."
+                  },
                   {
                     q: "Est-ce difficile à installer sous un évier de cuisine ?",
-                    a: "Bien que l'installation puisse être réalisée par un bon bricoleur, nous recommandons une installation professionnelle par nos techniciens certifiés Bricareau. Cela garantit une étanchéité parfaite, un raccordement conforme au drain et une pression optimale du réservoir." },
+                    a: "Bien que l'installation puisse être réalisée par un bon bricoleur, nous recommandons une installation professionnelle par nos techniciens certifiés Bricareau. Cela garantit une étanchéité parfaite, un raccordement conforme au drain et une pression optimale du réservoir."
+                  },
                   {
                     q: "Combien de place le système prend-il dans mon armoire ?",
-                    a: "Nos systèmes modernes sont conçus pour être compacts. L'unité de filtration mesure généralement environ 15-18 pouces de hauteur, et le réservoir de stockage occupe une place similaire à celle d'un grand panier à pharmacie. Il reste généralement assez d'espace pour vos produits ménagers." },
+                    a: "Nos systèmes modernes sont conçus pour être compacts. L'unité de filtration mesure généralement environ 15-18 pouces de hauteur, et le réservoir de stockage occupe une place similaire à celle d'un grand panier à pharmacie. Il reste généralement assez d'espace pour vos produits ménagers."
+                  },
                   {
                     q: "L'osmose inverse élimine-t-elle les minéraux essentiels ?",
-                    a: "L'osmose inverse est si efficace qu'elle retire presque tout, y compris les minéraux. C'est pourquoi nos systèmes haut de gamme incluent une cartouche de reminéralisation qui réintroduit du calcium et du magnésium, équilibrant le pH pour une eau alcaline plus saine." },
+                    a: "L'osmose inverse est si efficace qu'elle retire presque tout, y compris les minéraux. C'est pourquoi nos systèmes haut de gamme incluent une cartouche de reminéralisation qui réintroduit du calcium et du magnésium, équilibrant le pH pour une eau alcaline plus saine."
+                  },
                   {
                     q: "Est-ce que le système nécessite un robinet séparé ?",
-                    a: "Oui, la plupart des installations incluent un petit robinet design dédié à l'eau purifiée. Cela permet de préserver vos filtres en utilisant l'eau standard pour la vaisselle et l'eau osmosée uniquement pour la consommation et la cuisson. Des robinets '3-en-1' sont aussi disponibles en option." },
+                    a: "Oui, la plupart des installations incluent un petit robinet design dédié à l'eau purifiée. Cela permet de préserver vos filtres en utilisant l'eau standard pour la vaisselle et l'eau osmosée uniquement pour la consommation et la cuisson. Des robinets '3-en-1' sont aussi disponibles en option."
+                  },
                   {
                     q: "À quelle fréquence faut-il remplacer les filtres ?",
-                    a: "Les pré-filtres (sédiments et charbon) doivent généralement être changés tous les 6 à 12 mois pour protéger la membrane. La membrane d'osmose inverse elle-même dure généralement entre 2 et 4 ans, selon votre consommation et la dureté de votre eau." },
+                    a: "Les pré-filtres (sédiments et charbon) doivent généralement être changés tous les 6 à 12 mois pour protéger la membrane. La membrane d'osmose inverse elle-même dure généralement entre 2 et 4 ans, selon votre consommation et la dureté de votre eau."
+                  },
                   {
                     q: "Peut-on connecter le système à un réfrigérateur ou une machine à glaçons ?",
-                    a: "Absolument ! Nous pouvons installer une ligne de dérivation pour alimenter votre réfrigérateur en eau osmosée. Vous obtiendrez ainsi des glaçons cristallins et de l'eau fraîche purifiée directement de votre distributeur de porte." },
+                    a: "Absolument ! Nous pouvons installer une ligne de dérivation pour alimenter votre réfrigérateur en eau osmosée. Vous obtiendrez ainsi des glaçons cristallins et de l'eau fraîche purifiée directement de votre distributeur de porte."
+                  },
                   {
                     q: "L'eau osmosée est-elle meilleure que l'eau en bouteille ?",
-                    a: "Dans la majorité des cas, oui. L'eau osmosée à domicile est souvent plus fraîche et subit moins de risques de contamination par le plastique des bouteilles. De plus, c'est une solution beaucoup plus écologique et économique à long terme." },
+                    a: "Dans la majorité des cas, oui. L'eau osmosée à domicile est souvent plus fraîche et subit moins de risques de contamination par le plastique des bouteilles. De plus, c'est une solution beaucoup plus écologique et économique à long terme."
+                  },
                   {
                     q: "Quelle est la différence entre un filtre à charbon simple et l'osmose inverse ?",
-                    a: "Un filtre à charbon simple réduit principalement le goût de chlore et les odeurs. L'osmose inverse va beaucoup plus loin en éliminant les solides dissous, les métaux lourds, les virus et les bactéries que le charbon seul ne peut pas arrêter." },
+                    a: "Un filtre à charbon simple réduit principalement le goût de chlore et les odeurs. L'osmose inverse va beaucoup plus loin en éliminant les solides dissous, les métaux lourds, les virus et les bactéries que le charbon seul ne peut pas arrêter."
+                  },
                   {
                     q: "Le système fait-il du bruit pendant son fonctionnement ?",
-                    a: "Le système est pratiquement silencieux. Vous pourriez entendre un léger sifflement ou un gargouillis très discret pendant qu'il remplit le réservoir ou évacue les impuretés, mais cela s'arrête dès que le réservoir est plein." },
+                    a: "Le système est pratiquement silencieux. Vous pourriez entendre un léger sifflement ou un gargouillis très discret pendant qu'il remplit le réservoir ou évacue les impuretés, mais cela s'arrête dès que le réservoir est plein."
+                  },
                   {
                     q: "Comment savoir si mes filtres doivent être changés ?",
-                    a: "Une baisse notable du débit au robinet dédié ou un changement subtil du goût sont des indicateurs. Chez Bricareau, nous proposons également des tests de conductivité (TDS) lors de nos visites d'entretien pour mesurer précisément l'efficacité de la membrane." },
+                    a: "Une baisse notable du débit au robinet dédié ou un changement subtil du goût sont des indicateurs. Chez Bricareau, nous proposons également des tests de conductivité (TDS) lors de nos visites d'entretien pour mesurer précisément l'efficacité de la membrane."
+                  },
                   {
                     q: "L'osmose inverse retire-t-elle le calcaire ?",
-                    a: "Oui, elle est extrêmement efficace pour retirer les minéraux de dureté (calcium/magnésium). Cependant, si votre eau est extrêmement dure, nous recommandons un adoucisseur en amont pour éviter que la membrane de l'osmose ne s'encrasse trop rapidement." },
+                    a: "Oui, elle est extrêmement efficace pour retirer les minéraux de dureté (calcium/magnésium). Cependant, si votre eau est extrêmement dure, nous recommandons un adoucisseur en amont pour éviter que la membrane de l'osmose ne s'encrasse trop rapidement."
+                  },
                   {
                     q: "Est-ce que le système gaspille beaucoup d'eau ?",
-                    a: "L'osmose inverse nécessite un flux d'eau pour rincer les impuretés de la membrane (eau de rejet). Nos systèmes récents sont optimisés pour être très efficaces, avec des ratios de rejet très bas comparés aux anciens modèles des années 90." },
+                    a: "L'osmose inverse nécessite un flux d'eau pour rincer les impuretés de la membrane (eau de rejet). Nos systèmes récents sont optimisés pour être très efficaces, avec des ratios de rejet très bas comparés aux anciens modèles des années 90."
+                  },
                   {
                     q: "Quelle est la durée de vie globale du système ?",
-                    a: "Avec un entretien régulier et des changements de filtres planifiés, un système d'osmose inverse de qualité Bricareau peut facilement durer 15 à 20 ans. C'est un investissement durable pour la santé de votre famille." },
+                    a: "Avec un entretien régulier et des changements de filtres planifiés, un système d'osmose inverse de qualité Bricareau peut facilement durer 15 à 20 ans. C'est un investissement durable pour la santé de votre famille."
+                  },
                 ].slice(0, showAllFaqs ? undefined : 6).map((item, idx) => (
                   <AccordionItem key={idx} value={`item-${idx}`} className="border-b-slate-100 px-4">
-                    <AccordionTrigger className="text-left text-base font-medium leading-6 hover:no-underline py-8 text-slate-800" style={{ }}>
+                    <AccordionTrigger className="text-left text-base font-medium leading-6 hover:no-underline py-8 text-slate-800" style={{}}>
                       {item.q}
                     </AccordionTrigger>
-                    <AccordionContent className="text-base font-light leading-6 text-slate-500 pb-8 text-justify" style={{ }}>
+                    <AccordionContent className="text-base font-light leading-6 text-slate-500 pb-8 text-justify" style={{}}>
                       {item.a}
                     </AccordionContent>
                   </AccordionItem>
@@ -454,7 +476,7 @@ const StationEauPotable = () => {
             <div className="text-left mb-16">
               <h2
                 className="text-slate-900 mb-8 text-left"
-                style={{ }}
+                style={{}}
               > <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">Ressources</span>
               </h2>
               <div className="w-24 h-1 bg-blue-600"></div>
@@ -464,15 +486,18 @@ const StationEauPotable = () => {
                 {
                   title: "Osmose inverse et santé : quelle qualité d’eau obtenez-vous ?",
                   img: healthwaterImg,
-                  link: "/osmose-inverse-et-sante-quelle-qualite-deau-obtenez-vous" },
+                  link: "/osmose-inverse-et-sante-quelle-qualite-deau-obtenez-vous"
+                },
                 {
                   title: "Comment l’osmose inverse protège votre famille des contaminants invisibles",
                   img: drinkpurewaterImg,
-                  link: "/comment-losmose-inverse-protege-votre-famille-des-contaminants-invisibles" },
+                  link: "/comment-losmose-inverse-protege-votre-famille-des-contaminants-invisibles"
+                },
                 {
                   title: "Osmose inverse : la technologie derrière une eau 100 % pure",
                   img: rowaterImg,
-                  link: "/osmose-inverse-la-technologie-derriere-une-eau-100-pure" },
+                  link: "/osmose-inverse-la-technologie-derriere-une-eau-100-pure"
+                },
               ].map((art, i) => (
                 <div
                   key={i}

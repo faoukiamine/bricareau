@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 import {
     ChevronRight,
     CheckCircle2,
@@ -71,7 +72,12 @@ const Filtration = () => {
             <Header />
             <main>
                 {/* 1. Hero Section */}
-                <section className="relative lg:h-[850px] flex flex-col lg:flex-row lg:items-center overflow-hidden bg-white">
+                <section className="relative lg:h-[850px] flex flex-col lg:items-center overflow-hidden bg-white">
+                    <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none">
+                        <div className="container mx-auto px-4 lg:px-6 pointer-events-auto">
+                            <GlobalBreadcrumbs variant="dark" />
+                        </div>
+                    </div>
                     <div className="relative lg:absolute lg:inset-0 h-[350px] sm:h-[450px] lg:h-full w-full lg:z-0 overflow-hidden">
                         <img
                             src={heroFiltration}
@@ -83,8 +89,8 @@ const Filtration = () => {
                         <div className="hidden lg:block absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white/90 via-white/40 to-transparent" />
                     </div>
 
-                    <div className="container relative z-10 mx-auto px-4 py-10 sm:py-16 lg:py-20 flex flex-col justify-center">
-                        <div className="max-w-2xl lg:text-white">
+                    <div className="container relative z-10 mx-auto px-4 h-full flex items-center lg:px-6">
+                        <div className="max-w-2xl lg:text-white py-12 lg:py-0">
                             <h1
                                 className="text-[32px] md:text-[42px] leading-[1.1] md:leading-[1.2] mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl"
                                 style={{

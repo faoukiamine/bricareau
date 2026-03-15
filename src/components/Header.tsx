@@ -118,12 +118,14 @@ const Header = () => {
           customIcon: WatersoftenericonImg,
           title: "Adoucisseurs d'eau",
           description: "Éliminez le calcaire, protégez vos électroménagers et profitez d'une peau et de cheveux plus sains avec une eau parfaitement douce.",
-          href: "/adoucisseur-eau-residentiel" },
+          href: "/adoucisseur-eau-residentiel"
+        },
         {
           customIcon: saltfreeiconImg,
           title: "Conditionneurs d'eau sans sel",
           description: "La solution antitartre écologique : prévenez l'accumulation de calcaire sans sel, sans rejet d'eau et sans entretien.",
-          href: "/conditionneurs-sans-sel" },
+          href: "/conditionneurs-sans-sel"
+        },
         {
           customIcon: portablefiltericonImg,
           title: "Adoucisseurs d'eau portables",

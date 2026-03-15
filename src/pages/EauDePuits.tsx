@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Check, ChevronRight, CheckCircle2, X, Phone } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
@@ -35,13 +36,15 @@ import {
   Accordion,
   AccordionContent,
   AccordionItem,
-  AccordionTrigger } from "@/components/ui/accordion";
+  AccordionTrigger
+} from "@/components/ui/accordion";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
-  CarouselPrevious } from "@/components/ui/carousel";
+  CarouselPrevious
+} from "@/components/ui/carousel";
 import ConsultationFormSection from "@/components/ConsultationFormSection";
 
 interface Problem {
@@ -55,31 +58,38 @@ const problems: Problem[] = [
   {
     title: "Eau dure",
     image: eauDureThumb,
-    desc: "Une eau riche en calcium et magnésium laisse des dépôts calcaires tenaces, ternit votre vaisselle et assèche votre peau ainsi que vos cheveux." },
+    desc: "Une eau riche en calcium et magnésium laisse des dépôts calcaires tenaces, ternit votre vaisselle et assèche votre peau ainsi que vos cheveux."
+  },
   {
     title: "Eau avec mauvais goût",
     image: mauvaisGoutThumb,
-    desc: "Un goût métallique, terreux ou de chlore gâche le plaisir de boire votre eau et peut altérer le goût de vos aliments et de votre café." },
+    desc: "Un goût métallique, terreux ou de chlore gâche le plaisir de boire votre eau et peut altérer le goût de vos aliments et de votre café."
+  },
   {
     title: "Eau avec taches de rouille",
     image: rouilleThumbUpdated,
-    desc: "Les taches rougeâtres ou orangées sur vos éviers, baignoires et vêtements sont souvent le signe d'une forte concentration de fer dans votre eau de puits." },
+    desc: "Les taches rougeâtres ou orangées sur vos éviers, baignoires et vêtements sont souvent le signe d'une forte concentration de fer dans votre eau de puits."
+  },
   {
     title: "Eau avec odeur d'œufs pourris",
     image: rottenEggsThumb,
-    desc: "Une odeur d'œufs pourris (soufre) ou de moisissure peut rendre votre eau impropre à la consommation et désagréable pour la douche." },
+    desc: "Une odeur d'œufs pourris (soufre) ou de moisissure peut rendre votre eau impropre à la consommation et désagréable pour la douche."
+  },
   {
     title: "Eau trouble ou turbide",
     image: turbideWaterThumb,
-    desc: "La présence de sable, d'argile ou de matières organiques rend l'eau trouble et peut endommager vos appareils ainsi que votre tuyauterie." },
+    desc: "La présence de sable, d'argile ou de matières organiques rend l'eau trouble et peut endommager vos appareils ainsi que votre tuyauterie."
+  },
   {
     title: "Eau jaunâtre",
     image: taninWaterThumb,
-    desc: "Une teinte jaune ou brune est souvent causée par des tanins organiques ou des nitrates, indiquant une infiltration de matières de surface." },
+    desc: "Une teinte jaune ou brune est souvent causée par des tanins organiques ou des nitrates, indiquant une infiltration de matières de surface."
+  },
   {
     title: "Eau corrosive",
     image: corrosiveWaterThumb,
-    desc: "Des dépôts verts ou bleus sur vos tuyaux et robinets indiquent une eau acide qui ronge vos canalisations, menant à des fuites éventuelles." },
+    desc: "Des dépôts verts ou bleus sur vos tuyaux et robinets indiquent une eau acide qui ronge vos canalisations, menant à des fuites éventuelles."
+  },
 ];
 
 
@@ -127,7 +137,12 @@ const EauDePuits = () => {
       <Header />
       <main>
         {/* 1. Hero Section */}
-        <section className="relative lg:h-[850px] flex flex-col lg:flex-row lg:items-center overflow-hidden bg-white">
+        <section className="relative lg:h-[850px] flex flex-col lg:items-center overflow-hidden bg-white">
+          <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none">
+            <div className="container mx-auto px-4 lg:px-6 pointer-events-auto">
+              <GlobalBreadcrumbs variant="dark" />
+            </div>
+          </div>
           <div className="relative lg:absolute lg:inset-0 h-[350px] sm:h-[450px] lg:h-full w-full lg:z-0 overflow-hidden">
             <img
               src={heroPuits}
@@ -139,8 +154,8 @@ const EauDePuits = () => {
             <div className="hidden lg:block absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white/90 via-white/40 to-transparent" />
           </div>
 
-          <div className="container relative z-10 mx-auto px-4 py-10 sm:py-16 lg:py-20 flex flex-col justify-center">
-            <div className="max-w-2xl lg:text-white">
+          <div className="container relative z-10 mx-auto px-4 h-full flex items-center lg:px-6">
+            <div className="max-w-2xl lg:text-white py-12 lg:py-0">
               <span className="text-sm font-bold uppercase tracking-widest text-blue-600 mb-4 block">
                 SOLUTIONS DE TRAITEMENT D'EAU POUR PUITS PRIVÉS
               </span>
@@ -159,7 +174,7 @@ const EauDePuits = () => {
                 <Button
                   size="lg"
                   className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200"
-                  style={{ }}
+                  style={{}}
                   asChild
                 >
                   <NavLink to="/consultation">
@@ -170,7 +185,7 @@ const EauDePuits = () => {
                   size="lg"
                   variant="outline"
                   className="bg-slate-100 lg:bg-white/10 hover:bg-slate-200 lg:hover:bg-white/20 text-slate-800 lg:text-white border-slate-200 lg:border-white rounded-full px-8 h-14 backdrop-blur-sm shadow-lg"
-                  style={{ }}
+                  style={{}}
                   asChild
                 >
                   <a href="tel:18552649328" className="flex items-center gap-2">
@@ -206,7 +221,7 @@ const EauDePuits = () => {
             <div className="text-center mb-12">
               <h2
                 className="text-slate-900 mb-8"
-                style={{ }}
+                style={{}}
               >
                 <span className="text-[32px] md:text-[50px] font-bold leading-[1.1] md:leading-[1.1] block">Problèmes courants</span>
                 <span className="text-[32px] md:text-[50px] font-bold leading-[1.1] md:leading-[1.1] block text-blue-600">de l'eau de puits</span>
@@ -219,7 +234,8 @@ const EauDePuits = () => {
             <Carousel
               opts={{
                 align: "start",
-                loop: true }}
+                loop: true
+              }}
               className="w-full"
             >
               <CarouselContent className="-ml-4">
@@ -258,7 +274,7 @@ const EauDePuits = () => {
                   NOTRE FONCTIONNEMENT
                 </span>
                 <h2 className="text-slate-900"
-                  style={{ }}
+                  style={{}}
                 >
                   Un service simple <br />& sans souci.
                 </h2>
@@ -376,7 +392,7 @@ const EauDePuits = () => {
               </span>
               <h2
                 className="md:leading-[60px] lg:font-light mb-8 text-slate-900 lg:text-white text-left"
-                style={{ }}
+                style={{}}
               >
                 <span className="lg:font-bold">Dites adieu au fer,</span><br />
                 au soufre et au calcaire.
@@ -387,7 +403,7 @@ const EauDePuits = () => {
                 <Button
                   size="lg"
                   className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200"
-                  style={{ }}
+                  style={{}}
                   onClick={() => document.getElementById('nos-adoucisseurs')?.scrollIntoView({ behavior: 'smooth' })}
                 >
                   <a href="/tests-eau">Réservez une analyse d'eau</a>
@@ -403,7 +419,7 @@ const EauDePuits = () => {
             <div className="text-left mb-16">
               <h2
                 className="text-slate-900 mb-8 text-left"
-                style={{ }}
+                style={{}}
               >
                 <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Découvrez nos solutions</span>
                 <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">de traitement de l'eau de puits</span>
@@ -411,7 +427,7 @@ const EauDePuits = () => {
               <div className="w-24 h-1 bg-blue-600 mb-8"></div>
               <p
                 className="font-light text-slate-600 mb-8 text-justify"
-                style={{ }}
+                style={{}}
               >
                 Nos solutions spécialisées pour l'eau de puits sont conçues pour transformer une eau brute et imprévisible en une source de pureté irréprochable au sein de votre foyer. Nous proposons une gamme complète incluant nos filtres spécialisés contre les différents contaminants, nos adoucisseurs de pointe éliminant le fer et le calcaire, ainsi que nos stations d'eau potable par osmose inverse pour une hydratation saine. Pour une sécurité microbiologique absolue, nos systèmes de stérilisation UV neutralisent efficacement les bactéries sans aucun ajout chimique. Chaque produit est sélectionné pour sa robustesse et sa capacité à répondre aux défis uniques posés par les eaux souterraines, vous garantissant ainsi une performance durable et une tranquillité d'esprit totale au quotidien. Faites confiance à l'expertise de Bricareau pour protéger votre santé et préserver l'intégrité de vos installations grâce à une filtration sur mesure, fiable et adaptée à vos besoins spécifiques.
               </p>
@@ -420,7 +436,8 @@ const EauDePuits = () => {
             <Carousel
               opts={{
                 align: "start",
-                loop: true }}
+                loop: true
+              }}
               className="w-full"
             >
               <CarouselContent className="-ml-4">
@@ -465,19 +482,19 @@ const EauDePuits = () => {
                       <div className="p-8 space-y-4 flex flex-col flex-grow border-t-2 border-transparent group-hover:border-blue-600 transition-colors">
                         <h3
                           className="text-slate-900 group-hover:text-blue-600 transition-colors tracking-tight text-center"
-                          style={{ }}
+                          style={{}}
                         >
                           {prod.name}
                         </h3>
                         <p
                           className="text-slate-500 font-light flex-grow text-justify"
-                          style={{ }}
+                          style={{}}
                         >
                           {prod.desc}
                         </p>
                         <div
                           className="inline-flex items-center gap-2 text-blue-600 font-bold text-xs tracking-widest uppercase mt-4 group-hover:underline self-end"
-                          style={{ }}
+                          style={{}}
                         >
                           <span></span>
                           <ArrowRight className="h-6 w-6 transform group-hover:translate-x-1 transition-transform" />
@@ -514,7 +531,7 @@ const EauDePuits = () => {
             <div className="text-left mb-16">
               <h2
                 className="text-slate-900 mb-8 text-left"
-                style={{ }}
+                style={{}}
               >
                 <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Comparez nos solutions</span>
                 <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">de traitement de l'eau de puits</span>
@@ -598,7 +615,7 @@ const EauDePuits = () => {
             <div className="text-left mb-16">
               <h2
                 className="text-slate-900 mb-8 text-left"
-                style={{ }}
+                style={{}}
               >
                 <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">FAQ</span>
               </h2>
@@ -610,59 +627,74 @@ const EauDePuits = () => {
                 {[
                   {
                     q: "Pourquoi l'eau de mon puits a-t-elle une odeur d'œufs pourris ?",
-                    a: "Cette odeur est causée par le gaz sulfure d'hydrogène. Bricareau installe des systèmes d'oxydation ou des filtres au charbon spécialisés qui éliminent totalement cette odeur pour une eau fraîche et inodore." },
+                    a: "Cette odeur est causée par le gaz sulfure d'hydrogène. Bricareau installe des systèmes d'oxydation ou des filtres au charbon spécialisés qui éliminent totalement cette odeur pour une eau fraîche et inodore."
+                  },
                   {
                     q: "Le fer dans l'eau de puits est-il dangereux ?",
-                    a: "Le fer n'est pas nocif pour la santé, mais il cause des taches de rouille tenaces, obstrue la tuyauterie et donne un goût métallique. Nos filtres à fer haute performance éliminent ces désagréments sans produits chimiques." },
+                    a: "Le fer n'est pas nocif pour la santé, mais il cause des taches de rouille tenaces, obstrue la tuyauterie et donne un goût métallique. Nos filtres à fer haute performance éliminent ces désagréments sans produits chimiques."
+                  },
                   {
                     q: "À quelle fréquence devrais-je faire tester mon eau de puits ?",
-                    a: "Il est fortement recommandé de tester votre eau au moins une fois par an pour les bactéries et les nitrates, et tous les deux ans pour les paramètres physico-chimiques profonds." },
+                    a: "Il est fortement recommandé de tester votre eau au moins une fois par an pour les bactéries et les nitrates, et tous les deux ans pour les paramètres physico-chimiques profonds."
+                  },
                   {
                     q: "Quelles sont les solutions pour éliminer les bactéries ?",
-                    a: "La solution la plus fiable est la désinfection par rayons ultraviolets (UV). Elle détruit 99,9 % des virus et bactéries (comme E. coli) sans altérer le goût ou la composition chimique de votre eau." },
+                    a: "La solution la plus fiable est la désinfection par rayons ultraviolets (UV). Elle détruit 99,9 % des virus et bactéries (comme E. coli) sans altérer le goût ou la composition chimique de votre eau."
+                  },
                   {
                     q: "Pourquoi y a-t-il des taches bleues ou vertes sur ma robinetterie ?",
-                    a: "Cela indique une eau acide (pH bas) qui corrode vos tuyaux de cuivre. Un neutraliseur de pH est essentiel pour protéger votre plomberie et éviter des fuites coûteuses à long terme." },
+                    a: "Cela indique une eau acide (pH bas) qui corrode vos tuyaux de cuivre. Un neutraliseur de pH est essentiel pour protéger votre plomberie et éviter des fuites coûteuses à long terme."
+                  },
                   {
                     q: "Un adoucisseur d'eau peut-il éliminer tout le fer ?",
-                    a: "Un adoucisseur élimine le fer 'clair' (dissous), mais pour le fer 'rouge' (oxydé) ou de fortes concentrations, un filtre à fer dédié est nécessaire en amont pour éviter d'endommager les résines de l'adoucisseur." },
+                    a: "Un adoucisseur élimine le fer 'clair' (dissous), mais pour le fer 'rouge' (oxydé) ou de fortes concentrations, un filtre à fer dédié est nécessaire en amont pour éviter d'endommager les résines de l'adoucisseur."
+                  },
                   {
                     q: "Qu'est-ce que le manganèse et comment s'en débarrasser ?",
-                    a: "Le manganèse cause des taches noires et des dépôts huileux. Nos systèmes de filtration spécialisés utilisent des médias oxydants qui capturent le manganèse efficacement, laissant votre eau limpide." },
+                    a: "Le manganèse cause des taches noires et des dépôts huileux. Nos systèmes de filtration spécialisés utilisent des médias oxydants qui capturent le manganèse efficacement, laissant votre eau limpide."
+                  },
                   {
                     q: "Pourquoi mon eau de puits est-elle trouble ou sableuse ?",
-                    a: "C'est souvent dû à des sédiments ou de la turbidité. Un filtre à sédiments ou un système de filtration multimédia à l'entrée principale clarifiera l'eau et protégera tous vos appareils ménagers." },
+                    a: "C'est souvent dû à des sédiments ou de la turbidité. Un filtre à sédiments ou un système de filtration multimédia à l'entrée principale clarifiera l'eau et protégera tous vos appareils ménagers."
+                  },
                   {
                     q: "Si mon eau semble claire, ai-je quand même besoin d'un filtre ?",
-                    a: "Oui, car de nombreux contaminants comme le plomb, l'arsenic, les nitrates ou les bactéries sont invisibles, sans goût et sans odeur. Seule une analyse d'eau peut confirmer sa pureté réelle." },
+                    a: "Oui, car de nombreux contaminants comme le plomb, l'arsenic, les nitrates ou les bactéries sont invisibles, sans goût et sans odeur. Seule une analyse d'eau peut confirmer sa pureté réelle."
+                  },
                   {
                     q: "Quelle est la durée de vie d'un système de traitement d'eau de puits ?",
-                    a: "Avec un entretien régulier, nos systèmes Bricareau ont une durée de vie moyenne de 15 à 25 ans. Nos composantes sont sélectionnées pour leur robustesse face aux eaux de puits les plus difficiles." },
+                    a: "Avec un entretien régulier, nos systèmes Bricareau ont une durée de vie moyenne de 15 à 25 ans. Nos composantes sont sélectionnées pour leur robustesse face aux eaux de puits les plus difficiles."
+                  },
                   {
                     q: "Quels sont les avantages d'un système pour toute la maison ?",
-                    a: "Vous protégez toute votre tuyauterie, prolongez la vie de vos électroménagers (chauffe-eau, lave-vaisselle), et profitez d'une eau pure à chaque robinet, pour boire, cuisiner et vous doucher." },
+                    a: "Vous protégez toute votre tuyauterie, prolongez la vie de vos électroménagers (chauffe-eau, lave-vaisselle), et profitez d'une eau pure à chaque robinet, pour boire, cuisiner et vous doucher."
+                  },
                   {
                     q: "Le traitement de l'eau affecte-t-il la pression dans la maison ?",
-                    a: "Nos experts dimensionnent votre système en fonction de votre débit maximal pour assurer une filtration optimale sans perte de pression perceptible, même lors d'utilisations simultanées." },
+                    a: "Nos experts dimensionnent votre système en fonction de votre débit maximal pour assurer une filtration optimale sans perte de pression perceptible, même lors d'utilisations simultanées."
+                  },
                   {
                     q: "L'eau de puits est-elle naturellement dure ?",
-                    a: "Dans la majorité des cas, oui. En circulant dans le sol, l'eau dissout le calcium et le magnésium. Un adoucisseur est souvent la base de tout traitement pour éviter l'accumulation de calcaire." },
+                    a: "Dans la majorité des cas, oui. En circulant dans le sol, l'eau dissout le calcium et le magnésium. Un adoucisseur est souvent la base de tout traitement pour éviter l'accumulation de calcaire."
+                  },
                   {
                     q: "Pouvez-vous éliminer les tanins (eau jaunâtre) ?",
-                    a: "Oui, les tanins proviennent de matières organiques en décomposition dans le sol. Nous utilisons des systèmes d'échange d'anions spécifiques qui retirent cette coloration 'thé' de votre eau." },
+                    a: "Oui, les tanins proviennent de matières organiques en décomposition dans le sol. Nous utilisons des systèmes d'échange d'anions spécifiques qui retirent cette coloration 'thé' de votre eau."
+                  },
                   {
                     q: "Quelle est la différence entre un filtre à sédiments et un charbon ?",
-                    a: "Le filtre à sédiments retire les particules physiques (sable, terre), tandis que le charbon activé retire les produits chimiques, les goûts et les odeurs par adsorption moléculaire." },
+                    a: "Le filtre à sédiments retire les particules physiques (sable, terre), tandis que le charbon activé retire les produits chimiques, les goûts et les odeurs par adsorption moléculaire."
+                  },
                 ].slice(0, showAllFaqs ? undefined : 6).map((item, idx) => (
                   <AccordionItem
                     key={idx}
                     value={`item-${idx}`}
                     className="border-b-gray-200"
                   >
-                    <AccordionTrigger className="text-left text-base font-medium leading-6 hover:no-underline py-6" style={{ }}>
+                    <AccordionTrigger className="text-left text-base font-medium leading-6 hover:no-underline py-6" style={{}}>
                       {item.q}
                     </AccordionTrigger>
-                    <AccordionContent className="text-base font-light leading-6 text-slate-600 pb-8 text-justify" style={{ }}>
+                    <AccordionContent className="text-base font-light leading-6 text-slate-600 pb-8 text-justify" style={{}}>
                       {item.a}
                     </AccordionContent>
                   </AccordionItem>
@@ -687,7 +719,7 @@ const EauDePuits = () => {
             <div className="text-left mb-16">
               <h2
                 className="text-slate-900 mb-8 text-left"
-                style={{ }}
+                style={{}}
               >                                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">Ressources</span>
               </h2>
               <div className="w-24 h-1 bg-blue-600"></div>
@@ -697,15 +729,18 @@ const EauDePuits = () => {
                 {
                   title: "Adoucisseur avec sel ou sans sel : la vérité technique",
                   img: conditionneursImg,
-                  link: "/adoucisseur-sans-sel-vs-avec-sel-verite-technique" },
+                  link: "/adoucisseur-sans-sel-vs-avec-sel-verite-technique"
+                },
                 {
                   title: "Comment régler la dureté de votre adoucisseur d'eau ?",
                   img: residentialWaterSoftenerImg,
-                  link: "/comment-regler-durete-adoucisseur-eau" },
+                  link: "/comment-regler-durete-adoucisseur-eau"
+                },
                 {
                   title: "Adoucisseur d'eau et fosse septique : compatible ou non ?",
                   img: adoucisseurFosseImg,
-                  link: "/adoucisseur-deau-et-fosse-septique-mythes-et-realites" },
+                  link: "/adoucisseur-deau-et-fosse-septique-mythes-et-realites"
+                },
               ].map((art, i) => (
                 <NavLink
                   key={i}

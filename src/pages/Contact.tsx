@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -12,7 +13,12 @@ const Contact = () => {
       <Header />
       <main>
         {/* Hero Section (Redesigned for Mobile) */}
-        <section className="relative lg:pt-[180px] lg:pb-12 bg-white overflow-hidden">
+        <section className="relative lg:h-[700px] bg-white overflow-hidden flex flex-col lg:items-center">
+          <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none">
+            <div className="container mx-auto px-6 max-w-5xl pointer-events-auto">
+              <GlobalBreadcrumbs variant="light" />
+            </div>
+          </div>
           <div className="flex flex-col lg:flex-row">
             {/* Mobile Image */}
             <div className="lg:hidden w-full h-[300px] relative">
@@ -24,17 +30,20 @@ const Contact = () => {
               <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-transparent"></div>
             </div>
 
-            <div className="container mx-auto px-6 max-w-5xl py-12 lg:py-0">
-              <h1
-                className="text-[32px] md:text-[52px] leading-tight text-slate-900 mb-6 tracking-tight"
-                style={{
-                  fontWeight: 350 }}
-              >
-                <span className="text-blue-600">Contactez</span>-nous
-              </h1>
-              <p className="text-slate-600 max-w-2xl font-light">
-                Nous sommes là pour répondre à toutes vos questions sur le traitement de l'eau.
-              </p>
+            <div className="container mx-auto px-6 max-w-5xl h-full flex items-center">
+              <div className="py-12 lg:py-0 w-full">
+                <h1
+                  className="text-[32px] md:text-[52px] leading-tight text-slate-900 mb-6 tracking-tight"
+                  style={{
+                    fontWeight: 350
+                  }}
+                >
+                  <span className="text-blue-600">Contactez</span>-nous
+                </h1>
+                <p className="text-slate-600 max-w-2xl font-light">
+                  Nous sommes là pour répondre à toutes vos questions sur le traitement de l'eau.
+                </p>
+              </div>
             </div>
           </div>
         </section>

@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 import Footer from "@/components/Footer";
 import { Star } from "lucide-react";
 import TestimonialsSection from "@/components/TestimonialsSection";
@@ -9,7 +10,12 @@ const Temoignages = () => {
             <Header />
             <main>
                 {/* Hero Section (Redesigned for Mobile) */}
-                <section className="relative lg:py-24 bg-white overflow-hidden">
+                <section className="relative lg:h-[800px] bg-white overflow-hidden flex flex-col lg:items-center">
+                    <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none">
+                        <div className="container mx-auto px-4 lg:px-6 pointer-events-auto">
+                            <GlobalBreadcrumbs variant="light" />
+                        </div>
+                    </div>
                     <div className="flex flex-col lg:flex-row items-center">
                         {/* Mobile Image */}
                         <div className="lg:hidden w-full h-[350px] relative">
@@ -30,12 +36,13 @@ const Temoignages = () => {
                             </div>
                         </div>
 
-                        <div className="container mx-auto px-6 py-12 lg:py-24 bg-gradient-to-b from-blue-50 to-white lg:from-transparent lg:to-transparent">
-                            <div className="max-w-3xl mx-auto text-center space-y-6">
+                        <div className="container mx-auto px-6 h-full flex items-center">
+                            <div className="max-w-3xl mx-auto text-center space-y-6 py-12 lg:py-0 w-full">
                                 <h1
                                     className="text-[32px] md:text-[52px] leading-tight text-slate-900 tracking-tighter"
                                     style={{
-                                        fontWeight: 350 }}
+                                        fontWeight: 350
+                                    }}
                                 >
                                     <span className="text-blue-600">Témoignages</span> Clients
                                 </h1>

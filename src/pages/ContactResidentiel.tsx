@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Header from "@/components/Header";
+import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -18,13 +19,15 @@ const ContactResidentiel = () => {
     phone: "",
     reason: "",
     message: "",
-    acceptMarketing: false });
+    acceptMarketing: false
+  });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast({
       title: "Message envoyé!",
-      description: "Nous vous contacterons bientôt." });
+      description: "Nous vous contacterons bientôt."
+    });
     setFormData({
       firstName: "",
       lastName: "",
@@ -32,7 +35,8 @@ const ContactResidentiel = () => {
       phone: "",
       reason: "",
       message: "",
-      acceptMarketing: false });
+      acceptMarketing: false
+    });
   };
 
   return (
@@ -41,13 +45,19 @@ const ContactResidentiel = () => {
 
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-primary/10 via-background to-secondary/10 py-16 md:py-24">
-          <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto text-center">
+        <section className="relative lg:h-[700px] bg-gradient-to-br from-primary/10 via-background to-secondary/10 overflow-hidden flex flex-col lg:items-center">
+          <div className="absolute top-[50px] left-0 right-0 z-30 pointer-events-none">
+            <div className="container mx-auto px-4 lg:px-6 pointer-events-auto">
+              <GlobalBreadcrumbs variant="light" />
+            </div>
+          </div>
+          <div className="container mx-auto px-4 h-full flex items-center">
+            <div className="max-w-3xl mx-auto text-center py-12 lg:py-0 w-full">
               <h1
                 className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] mb-8 tracking-tighter text-foreground text-justify max-w-xl mx-auto"
                 style={{
-                  fontWeight: 350 }}
+                  fontWeight: 350
+                }}
               >
                 Contactez-nous pour des solutions de traitement d'eau résidentiel
               </h1>

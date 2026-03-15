@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import Header from "@/components/Header";
+import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 import Footer from "@/components/Footer";
 import drinkWaterImg from "@/assets/boire-eau-robinet.jpg";
 import bathWomanImg from "@/assets/young-nude-woman-taking-relaxing-foamy-bath.jpg";
@@ -27,7 +28,8 @@ import {
     Accordion,
     AccordionContent,
     AccordionItem,
-    AccordionTrigger } from "@/components/ui/accordion";
+    AccordionTrigger
+} from "@/components/ui/accordion";
 
 const FiltreEauHauteEfficacite = () => {
     const [showAllFaqs, setShowAllFaqs] = React.useState(false);
@@ -39,9 +41,14 @@ const FiltreEauHauteEfficacite = () => {
 
             <main>
                 {/* 1. Product Hero Section */}
-                <section className="relative pt-20 pb-0 lg:pt-32 lg:pb-20 bg-white overflow-hidden">
-                    <div className="container mx-auto px-6">
-                        <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+                <section className="relative lg:h-[850px] flex flex-col lg:items-center overflow-hidden bg-white">
+                    <div className="absolute top-[50px] left-0 right-0 z-30 pointer-events-none">
+                        <div className="container mx-auto px-6 pointer-events-auto">
+                            <GlobalBreadcrumbs variant="light" />
+                        </div>
+                    </div>
+                    <div className="container mx-auto px-6 h-full flex items-center">
+                        <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12 w-full">
                             {/* Mobile Image Layer */}
                             <div className="lg:w-1/2 w-full flex flex-col items-center">
                                 <div className="relative w-full aspect-square md:aspect-video lg:aspect-auto lg:h-[600px] flex items-center justify-center">
@@ -80,7 +87,7 @@ const FiltreEauHauteEfficacite = () => {
                                     <Button
                                         size="lg"
                                         className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14"
-                                        style={{ }}
+                                        style={{}}
                                         asChild
                                     >
                                         <NavLink to="/contact" className="flex items-center gap-2">
@@ -199,8 +206,8 @@ const FiltreEauHauteEfficacite = () => {
                 </section>
 
                 {/* 4. Blue CTA Banner */}
-                <section className="py-16 bg-blue-600 text-white">
-                    <div className="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8">
+                <section className="bg-white min-h-[600px] lg:h-[800px] relative overflow-hidden flex flex-col lg:items-center">
+                    <div className="container mx-auto px-6 relative z-10 h-full flex flex-col lg:flex-row items-center justify-between gap-8">
                         <div>
                             <h2 className="text-white mb-8 md:leading-[48px]">Prêt pour une meilleure eau ?</h2>
                             <p className="text-blue-100 font-light">Découvrez pourquoi Bricareau est le leader mondial de l'eau.</p>
@@ -355,10 +362,10 @@ const FiltreEauHauteEfficacite = () => {
                                 { q: "Le système HE filtre-t-il aussi le chlore ?", a: "Oui, nous pouvons configurer votre système HE avec des médias filtrants spécifiques pour éliminer le chlore, les goûts et les odeurs, en plus d'adoucir l'eau." }
                             ].slice(0, showAllFaqs ? undefined : 6).map((item, id) => (
                                 <AccordionItem key={id} value={`faq-${id}`} className="border-b-slate-100 last:border-0 mb-4 rounded-2xl overflow-hidden border">
-                                    <AccordionTrigger className="px-8 py-6 hover:bg-slate-50/50 hover:no-underline text-left text-base font-medium leading-6 text-slate-800" style={{ }}>
+                                    <AccordionTrigger className="px-8 py-6 hover:bg-slate-50/50 hover:no-underline text-left text-base font-medium leading-6 text-slate-800" style={{}}>
                                         {item.q}
                                     </AccordionTrigger>
-                                    <AccordionContent className="text-base font-light leading-6 text-slate-600 pb-6 text-justify" style={{ }}>
+                                    <AccordionContent className="text-base font-light leading-6 text-slate-600 pb-6 text-justify" style={{}}>
                                         {item.a}
                                     </AccordionContent>
                                 </AccordionItem>

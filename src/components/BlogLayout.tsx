@@ -4,13 +4,7 @@ import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { categories } from "@/data/blogCategories";
-import {
-    Breadcrumb,
-    BreadcrumbList,
-    BreadcrumbItem,
-    BreadcrumbLink,
-    BreadcrumbPage,
-    BreadcrumbSeparator } from "@/components/ui/breadcrumb";
+import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 import { NavLink } from "react-router-dom";
 
 interface BlogLayoutProps {
@@ -152,7 +146,12 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({ title, headerImage, children, t
 
             <div className="flex-grow">
                 {/* Hero Section - Split Layout */}
-                <div className="w-full min-h-[450px] md:min-h-[700px] relative flex flex-col lg:flex-row overflow-hidden bg-white lg:bg-[#1a3a5c]">
+                <div className="w-full min-h-[450px] lg:h-[700px] relative flex flex-col lg:flex-row overflow-hidden bg-white lg:bg-[#1a3a5c]">
+                    <div className="absolute top-[100px] left-0 right-0 z-30 pointer-events-none">
+                        <div className="container mx-auto px-4 lg:px-6 pointer-events-auto">
+                            <GlobalBreadcrumbs variant="dark" />
+                        </div>
+                    </div>
                     {/* Background image - right side */}
                     <div className="absolute right-0 top-0 z-[1] hidden h-full w-3/5 lg:block">
                         <img
@@ -223,43 +222,9 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({ title, headerImage, children, t
                         />
                     </div>
 
-                    <div className="relative lg:absolute lg:inset-0 z-10 flex items-center bg-white lg:bg-transparent py-8 lg:py-0">
-                        <div className="container mx-auto px-4 md:px-6">
+                    <div className="relative lg:absolute lg:inset-0 z-10 flex items-center bg-white lg:bg-transparent py-12 lg:py-0 h-full">
+                        <div className="container mx-auto px-4 md:px-6 w-full">
                             <div className="max-w-xl">
-                                {/* Breadcrumbs */}
-                                <Breadcrumb className="mb-6">
-                                    <BreadcrumbList className="text-slate-500 lg:text-white/60">
-                                        <BreadcrumbItem>
-                                            <BreadcrumbLink asChild className="hover:text-blue-600 lg:hover:text-white transition-colors text-slate-600 lg:text-white/70">
-                                                <NavLink to="/">Accueil</NavLink>
-                                            </BreadcrumbLink>
-                                        </BreadcrumbItem>
-                                        <BreadcrumbSeparator className="text-slate-300 lg:text-white/30" />
-                                        <BreadcrumbItem>
-                                            <BreadcrumbLink asChild className="hover:text-blue-600 lg:hover:text-white transition-colors text-slate-600 lg:text-white/70">
-                                                <NavLink to="/blog">Blog</NavLink>
-                                            </BreadcrumbLink>
-                                        </BreadcrumbItem>
-                                        {currentCategory && (
-                                            <>
-                                                <BreadcrumbSeparator className="text-slate-300 lg:text-white/30" />
-                                                <BreadcrumbItem>
-                                                    <BreadcrumbLink asChild className="hover:text-blue-600 lg:hover:text-white transition-colors text-slate-600 lg:text-white/70">
-                                                        <NavLink to={`/blog/categorie/${currentCategory.id}`}>
-                                                            {currentCategory.title}
-                                                        </NavLink>
-                                                    </BreadcrumbLink>
-                                                </BreadcrumbItem>
-                                            </>
-                                        )}
-                                        <BreadcrumbSeparator className="text-slate-300 lg:text-white/30" />
-                                        <BreadcrumbItem>
-                                            <BreadcrumbPage className="text-slate-900 lg:text-white font-medium line-clamp-1 max-w-[200px] text-slate-900 lg:text-white/90">
-                                                {title}
-                                            </BreadcrumbPage>
-                                        </BreadcrumbItem>
-                                    </BreadcrumbList>
-                                </Breadcrumb>
 
                                 <h1
                                     className="text-3xl md:text-4xl lg:text-[2.8rem] italic text-slate-900 lg:text-white leading-tight mb-6 tracking-tight"

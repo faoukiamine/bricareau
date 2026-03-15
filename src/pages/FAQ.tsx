@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 import { ArrowRight, Droplets, Waves, Phone, ChevronRight, Search, SlidersHorizontal, Check } from "lucide-react";
@@ -77,7 +78,12 @@ const FAQ = () => {
 
             <main>
                 {/* 1. Hero / Header Area (Redesigned for Mobile) */}
-                <section className="relative lg:pt-[180px] lg:pb-12 bg-white overflow-hidden">
+                <section className="relative lg:h-[700px] bg-white overflow-hidden flex flex-col lg:items-center">
+                    <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none hidden lg:block">
+                        <div className="container mx-auto px-6 max-w-5xl pointer-events-auto">
+                            <GlobalBreadcrumbs variant="light" />
+                        </div>
+                    </div>
                     <div className="flex flex-col lg:flex-row">
                         {/* Mobile Image */}
                         <div className="lg:hidden w-full h-[250px] relative">
@@ -89,17 +95,23 @@ const FAQ = () => {
                             <div className="absolute inset-0 bg-gradient-to-b from-black/10 to-transparent"></div>
                         </div>
 
-                        <div className="container mx-auto px-6 max-w-5xl py-12 lg:py-0">
-                            <h1
-                                className="text-[32px] md:text-[52px] leading-tight text-slate-900 mb-6 tracking-tight"
-                                style={{
-                                    fontWeight: 350 }}
-                            >
-                                Obtenez des <span className="text-blue-600">réponses</span> à vos questions
-                            </h1>
-                            <p className="text-slate-600 max-w-2xl font-light">
-                                Vous trouverez ci-dessous les réponses aux questions les plus fréquentes. Recherchez les sujets qui vous intéressent ou triez par catégorie.
-                            </p>
+                        <div className="container mx-auto px-6 max-w-5xl h-full flex items-center">
+                            <div className="py-12 lg:py-0 w-full">
+                                <div className="lg:hidden">
+                                    <GlobalBreadcrumbs variant="light" />
+                                </div>
+                                <h1
+                                    className="text-[32px] md:text-[52px] leading-tight text-slate-900 mb-6 tracking-tight"
+                                    style={{
+                                        fontWeight: 350
+                                    }}
+                                >
+                                    Obtenez des <span className="text-blue-600">réponses</span> à vos questions
+                                </h1>
+                                <p className="text-slate-600 max-w-2xl font-light">
+                                    Vous trouverez ci-dessous les réponses aux questions les plus fréquentes. Recherchez les sujets qui vous intéressent ou triez par catégorie.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -215,13 +227,15 @@ const FAQ = () => {
                         <Waves className="absolute -bottom-10 -left-10 w-96 h-96 text-white" />
                         <Droplets className="absolute -top-10 -right-10 w-64 h-64 text-white" />
                     </div>
-                    <div className="container mx-auto px-6 relative z-10 text-center">
-                        <h2 className="mb-8 italic">
-                            Vous n'avez pas trouvé votre réponse ?
-                        </h2>
-                        <p className="opacity-90 mb-12 max-w-2xl mx-auto">
-                            Nos experts en traitement de l'eau sont disponibles pour répondre à toutes vos interrogations et planifier une analyse gratuite.
-                        </p>
+                    <div className="container mx-auto px-6 relative z-10 h-full flex items-center">
+                        <div className="max-w-2xl text-slate-900 lg:text-white py-12 lg:py-0">
+                            <h2 className="mb-8 italic">
+                                Vous n'avez pas trouvé votre réponse ?
+                            </h2>
+                            <p className="opacity-90 mb-12 max-w-2xl mx-auto">
+                                Nos experts en traitement de l'eau sont disponibles pour répondre à toutes vos interrogations et planifier une analyse gratuite.
+                            </p>
+                        </div>
                         <div className="flex flex-col sm:flex-row gap-6 justify-center">
                             <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50 rounded-full px-12 h-16 text-lg font-bold shadow-lg" asChild>
                                 <NavLink to="/consultation">Planifiez une consultation gratuite</NavLink>
@@ -237,7 +251,7 @@ const FAQ = () => {
                 </section>
             </main>
             <Footer />
-        </div>
+        </div >
     );
 };
 

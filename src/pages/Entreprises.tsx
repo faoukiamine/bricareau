@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import Testimonials from "@/components/Testimonials";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 import { Button } from "@/components/ui/button";
 
 const Entreprises = () => {
@@ -57,7 +58,12 @@ const Entreprises = () => {
 
       <main>
         {/* Hero Section */}
-        <section className="relative lg:h-[800px] flex flex-col lg:flex-row items-stretch lg:items-start overflow-hidden pt-16 lg:pt-[120px] bg-white">
+        <section className="relative lg:h-[800px] flex flex-col lg:items-start overflow-hidden pt-16 lg:pt-[120px] bg-white">
+          <div className="absolute top-[50px] left-0 right-0 z-30 pointer-events-none">
+            <div className="container mx-auto px-4 lg:px-6 pointer-events-auto">
+              <GlobalBreadcrumbs variant="dark" />
+            </div>
+          </div>
           <div className="relative w-full h-[40vh] lg:absolute lg:inset-0 lg:z-0 overflow-hidden">
             <iframe
               src="https://player.vimeo.com/video/1155585825?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1"
@@ -69,9 +75,9 @@ const Entreprises = () => {
             <div className="absolute inset-0 bg-black/20 lg:bg-black/30 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
           </div>
 
-          <div className="container mx-auto px-4 lg:px-6 relative z-10 pt-10 pb-20 lg:pt-[100px] lg:pb-0">
-            <div className="max-w-3xl text-center lg:text-left">
-              <span className="lg:hidden text-blue-600 font-bold uppercase tracking-widest text-[10px] mb-4 block">
+          <div className="container relative z-10 mx-auto px-4 h-full flex items-center lg:px-6">
+            <div className="max-w-2xl lg:text-white py-12 lg:py-0">
+              <span className="text-blue-600 font-bold uppercase tracking-widest text-[10px] mb-4 block">
                 SOLUTIONS BUSINESS
               </span>
               <h1
@@ -89,7 +95,7 @@ const Entreprises = () => {
                 <Button
                   size="lg"
                   className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200"
-                  style={{ }}
+                  style={{}}
                   asChild
                 >
                   <a href="#solutions" className="flex items-center gap-2">
@@ -100,7 +106,7 @@ const Entreprises = () => {
                   size="lg"
                   variant="outline"
                   className="bg-white lg:bg-white/10 hover:bg-slate-50 lg:hover:bg-white/20 text-blue-600 lg:text-white border-blue-600 lg:border-white rounded-full px-8 h-14 backdrop-blur-sm"
-                  style={{ }}
+                  style={{}}
                   asChild
                 >
                   <a href="tel:18552649328" className="flex items-center gap-2">

@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import Header from "@/components/Header";
+import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import {
@@ -23,7 +24,8 @@ import {
     Accordion,
     AccordionContent,
     AccordionItem,
-    AccordionTrigger } from "@/components/ui/accordion";
+    AccordionTrigger
+} from "@/components/ui/accordion";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import ConsultationFormSection from "@/components/ConsultationFormSection";
 
@@ -72,7 +74,12 @@ const DesinfectionUV = () => {
             <Header />
             <main>
                 {/* 1. Hero Section */}
-                <section className="relative lg:h-[850px] flex flex-col lg:flex-row lg:items-center overflow-hidden bg-white">
+                <section className="relative lg:h-[850px] flex flex-col lg:items-center overflow-hidden bg-white">
+                    <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none">
+                        <div className="container mx-auto px-4 lg:px-6 pointer-events-auto">
+                            <GlobalBreadcrumbs variant="dark" />
+                        </div>
+                    </div>
                     <div className="relative lg:absolute lg:inset-0 h-[350px] sm:h-[450px] lg:h-full w-full lg:z-0 overflow-hidden">
                         <img
                             src={heroImg}
@@ -84,8 +91,8 @@ const DesinfectionUV = () => {
                         <div className="hidden lg:block absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white/90 via-white/40 to-transparent" />
                     </div>
 
-                    <div className="container relative z-10 mx-auto px-4 py-10 sm:py-16 lg:py-20 flex flex-col justify-center">
-                        <div className="max-w-2xl lg:text-white">
+                    <div className="container relative z-10 mx-auto px-4 h-full flex items-center lg:px-6">
+                        <div className="max-w-2xl lg:text-white py-12 lg:py-0">
                             <h1
                                 className="text-[32px] md:text-[42px] leading-[1.1] md:leading-[1.2] mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl"
                                 style={{
@@ -102,7 +109,7 @@ const DesinfectionUV = () => {
                                 <Button
                                     size="lg"
                                     className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200"
-                                    style={{ }}
+                                    style={{}}
                                     asChild
                                 >
                                     <NavLink to="/consultation">Planifiez une consultation gratuite</NavLink>
@@ -111,7 +118,7 @@ const DesinfectionUV = () => {
                                     size="lg"
                                     variant="outline"
                                     className="bg-slate-100 lg:bg-white/10 hover:bg-slate-200 lg:hover:bg-white/20 text-slate-800 lg:text-white border-slate-200 lg:border-white rounded-full px-8 h-14 backdrop-blur-sm shadow-lg flex items-center gap-2"
-                                    style={{ }}
+                                    style={{}}
                                     onClick={() => document.getElementById('systemes-uv')?.scrollIntoView({ behavior: 'smooth' })}
                                 >
                                     Découvrir nos systèmes UV
@@ -143,7 +150,7 @@ const DesinfectionUV = () => {
                         <div className="text-center mb-16">
                             <h2
                                 className="text-white mb-8 md:leading-[60px] text-center"
-                                style={{ }}
+                                style={{}}
                             >
                                 <span className="font-light block">Pourquoi choisir la</span>
                                 <span className="font-normal block">désinfection UV ?</span>
@@ -181,14 +188,14 @@ const DesinfectionUV = () => {
                         <div className="text-left mb-16">
                             <h2
                                 className="text-slate-900 mb-8 text-left"
-                                style={{ }}
+                                style={{}}
                             >
                                 <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Nos systèmes de</span>
                                 <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">désinfection UV</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600 mb-12"></div>
 
-                            <p className="font-light text-slate-600 text-justify max-w-7xl mx-auto" style={{ }}>
+                            <p className="font-light text-slate-600 text-justify max-w-7xl mx-auto" style={{}}>
                                 La technologie UV est le choix idéal pour les consommateurs qui cherchent à se protéger contre les contaminants microbiologiques, notamment les bactéries (E.coli, coliformes fécaux, etc.), les virus et les protozoaires (cryptosporidium, giardia, etc.) qui peuvent être résistants au chlore. Contrairement aux traitements chimiques, les UV ne modifient pas le goût, l’odeur ou la composition physico-chimique de l’eau. Nos dispositifs UV mis en place sur le point d’entrée (POE) est installé avant que l’eau ne soit distribuée dans les foyers, au niveau de la conduite d’alimentation principale, avant qu’elle ne circule dans l’ensemble du réseau domestique.
                             </p>
                         </div>
@@ -213,19 +220,19 @@ const DesinfectionUV = () => {
                                     <div className="p-8 space-y-4 flex flex-col flex-grow border-t-2 border-transparent group-hover:border-blue-600 transition-colors">
                                         <h3
                                             className="text-slate-900 group-hover:text-blue-600 transition-colors tracking-tight text-center"
-                                            style={{ }}
+                                            style={{}}
                                         >
                                             {prod.name}
                                         </h3>
                                         <p
                                             className="text-slate-500 font-light flex-grow text-justify whitespace-pre-line"
-                                            style={{ }}
+                                            style={{}}
                                         >
                                             {prod.desc}
                                         </p>
                                         <div
                                             className="inline-flex items-center gap-2 text-blue-600 font-bold text-xs tracking-widest uppercase mt-4 group-hover:underline self-end"
-                                            style={{ }}
+                                            style={{}}
                                         >
                                             <span></span>
                                             <ArrowRight className="h-6 w-6 transform group-hover:translate-x-1 transition-transform" />
@@ -243,7 +250,7 @@ const DesinfectionUV = () => {
                         <div className="text-left mb-16">
                             <h2
                                 className="text-slate-900 mb-8 text-left"
-                                style={{ }}
+                                style={{}}
                             >
                                 <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Comparez nos</span>
                                 <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">systèmes UV</span>
@@ -325,7 +332,7 @@ const DesinfectionUV = () => {
                             </span>
                             <h2
                                 className="lg:font-light mb-8 md:leading-[60px] text-slate-900 lg:text-white text-left"
-                                style={{ }}
+                                style={{}}
                             >
                                 Votre eau de puits est-elle <span className="lg:font-bold"><br />vraiment sécuritaire ?</span>
                             </h2>
@@ -336,7 +343,7 @@ const DesinfectionUV = () => {
                                 <Button
                                     size="lg"
                                     className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200"
-                                    style={{ }}
+                                    style={{}}
                                     asChild
                                 >
                                     <a href="/tests-eau">Demandez une analyse d'eau</a>
@@ -402,19 +409,19 @@ const DesinfectionUV = () => {
                                     <div className="p-8 space-y-4 flex flex-col flex-grow border-t-2 border-transparent group-hover:border-blue-600 transition-colors">
                                         <h3
                                             className="text-slate-900 group-hover:text-blue-600 transition-colors tracking-tight text-center"
-                                            style={{ }}
+                                            style={{}}
                                         >
                                             {prod.name}
                                         </h3>
                                         <p
                                             className="leading-[25px] text-slate-500 font-light flex-grow text-justify"
-                                            style={{ }}
+                                            style={{}}
                                         >
                                             {prod.desc}
                                         </p>
                                         <div
                                             className="inline-flex items-center gap-2 text-blue-600 font-bold text-xs tracking-widest uppercase mt-4 group-hover:underline self-end"
-                                            style={{ }}
+                                            style={{}}
                                         >
                                             <span></span>
                                             <ArrowRight className="h-6 w-6 transform group-hover:translate-x-1 transition-transform" />
@@ -433,7 +440,7 @@ const DesinfectionUV = () => {
                         <div className="text-left mb-16">
                             <h2
                                 className="text-slate-900 mb-8 text-left"
-                                style={{ }}
+                                style={{}}
                             >
                                 <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Pour vous éclairer</span>
                                 <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">Questions fréquentes</span>
@@ -445,55 +452,70 @@ const DesinfectionUV = () => {
                                 {[
                                     {
                                         q: "Qu'est-ce qu'un système de désinfection UV ?",
-                                        a: "C'est un dispositif qui utilise la lumière ultraviolette (UV-C) pour neutraliser les micro-organismes nocifs dans l'eau. En pénétrant l'ADN des bactéries et virus, les rayons UV les empêchent de se reproduire et de causer des maladies." },
+                                        a: "C'est un dispositif qui utilise la lumière ultraviolette (UV-C) pour neutraliser les micro-organismes nocifs dans l'eau. En pénétrant l'ADN des bactéries et virus, les rayons UV les empêchent de se reproduire et de causer des maladies."
+                                    },
                                     {
                                         q: "Contre quels types de contaminants les UV sont-ils efficaces ?",
-                                        a: "Les systèmes UV éliminent 99,99 % des micro-organismes, y compris les bactéries comme E. coli, les virus, et les parasites résistants au chlore comme Giardia et Cryptosporidium." },
+                                        a: "Les systèmes UV éliminent 99,99 % des micro-organismes, y compris les bactéries comme E. coli, les virus, et les parasites résistants au chlore comme Giardia et Cryptosporidium."
+                                    },
                                     {
                                         q: "L'eau de puits nécessite-t-elle toujours un système UV ?",
-                                        a: "Les puits sont vulnérables aux infiltrations de surface après de fortes pluies ou la fonte des neiges. Un système UV offre une barrière de sécurité permanente contre les variations soudaines de la qualité microbiologique de votre eau." },
+                                        a: "Les puits sont vulnérables aux infiltrations de surface après de fortes pluies ou la fonte des neiges. Un système UV offre une barrière de sécurité permanente contre les variations soudaines de la qualité microbiologique de votre eau."
+                                    },
                                     {
                                         q: "Quels sont les avantages des UV par rapport au chlore ?",
-                                        a: "Les UV ne nécessitent aucun produit chimique, ne changent pas le goût ou l'odeur de l'eau, et ne créent pas de sous-produits toxiques. C'est la méthode de désinfection la plus écologique et la plus saine." },
+                                        a: "Les UV ne nécessitent aucun produit chimique, ne changent pas le goût ou l'odeur de l'eau, et ne créent pas de sous-produits toxiques. C'est la méthode de désinfection la plus écologique et la plus saine."
+                                    },
                                     {
                                         q: "Pourquoi ai-je besoin d'un système UV si j'ai un adoucisseur ?",
-                                        a: "Un adoucisseur élimine les minéraux (calcaire), mais n'élimine pas les bactéries ou les virus. Le système UV est la protection finale qui assure que l'eau que vous buvez ne contient aucun micro-organisme vivant." },
+                                        a: "Un adoucisseur élimine les minéraux (calcaire), mais n'élimine pas les bactéries ou les virus. Le système UV est la protection finale qui assure que l'eau que vous buvez ne contient aucun micro-organisme vivant."
+                                    },
                                     {
                                         q: "À quelle fréquence faut-il changer la lampe UV ?",
-                                        a: "La lampe UV doit être remplacée tous les 12 mois (environ 9 000 heures). Même si elle s'allume encore, son intensité germicide diminue drastiquement après un an et ne garantit plus la désinfection." },
+                                        a: "La lampe UV doit être remplacée tous les 12 mois (environ 9 000 heures). Même si elle s'allume encore, son intensité germicide diminue drastiquement après un an et ne garantit plus la désinfection."
+                                    },
                                     {
                                         q: "Qu'est-ce que le fourreau de quartz et comment l'entretenir ?",
-                                        a: "Le fourreau de quartz est le tube transparent qui protège la lampe de l'eau. Il doit être nettoyé régulièrement pour rester limpide. S'il est entartré ou opaque (à cause du calcaire), les rayons UV ne peuvent plus traverser pour désinfecter l'eau." },
+                                        a: "Le fourreau de quartz est le tube transparent qui protège la lampe de l'eau. Il doit être nettoyé régulièrement pour rester limpide. S'il est entartré ou opaque (à cause du calcaire), les rayons UV ne peuvent plus traverser pour désinfecter l'eau."
+                                    },
                                     {
                                         q: "Une filtration préalable est-elle nécessaire avant l'UV ?",
-                                        a: "Oui, il est crucial d'installer un filtre à sédiments de 5 microns en amont. Les particules en suspension peuvent créer des zones d'ombre où les bactéries se 'cachent' du rayonnement UV." },
+                                        a: "Oui, il est crucial d'installer un filtre à sédiments de 5 microns en amont. Les particules en suspension peuvent créer des zones d'ombre où les bactéries se 'cachent' du rayonnement UV."
+                                    },
                                     {
                                         q: "Le système UV fonctionne-t-il lors d'une panne de courant ?",
-                                        a: "Non, la lampe s'éteint sans électricité. En cas de panne, il ne faut pas consommer l'eau ou alors il faut la faire bouillir. Nos systèmes sont souvent équipés d'alarmes pour avertir de l'arrêt de la lampe." },
+                                        a: "Non, la lampe s'éteint sans électricité. En cas de panne, il ne faut pas consommer l'eau ou alors il faut la faire bouillir. Nos systèmes sont souvent équipés d'alarmes pour avertir de l'arrêt de la lampe."
+                                    },
                                     {
                                         q: "L'UV consomme-t-il beaucoup d'électricité ?",
-                                        a: "Non, un système résidentiel standard consomme à peu près autant d'énergie qu'une ampoule de 40 à 60 watts. C'est une solution très économique pour une protection 24h/24." },
+                                        a: "Non, un système résidentiel standard consomme à peu près autant d'énergie qu'une ampoule de 40 à 60 watts. C'est une solution très économique pour une protection 24h/24."
+                                    },
                                     {
                                         q: "Peut-on installer un système UV sur l'entrée d'eau de la ville ?",
-                                        a: "Bien que l'eau municipale soit traitée, de vieilles infrastructures ou des bris d'aqueduc peuvent introduire des bactéries. Un système UV domestique sert d'assurance supplémentaire pour votre tranquillité d'esprit." },
+                                        a: "Bien que l'eau municipale soit traitée, de vieilles infrastructures ou des bris d'aqueduc peuvent introduire des bactéries. Un système UV domestique sert d'assurance supplémentaire pour votre tranquillité d'esprit."
+                                    },
                                     {
                                         q: "Comment savoir si mon système UV fonctionne correctement ?",
-                                        a: "Nos contrôleurs intelligents affichent le nombre de jours restants avant le changement de lampe et émettent une alarme sonore et visuelle en cas de défaillance de la lampe ou du système." },
+                                        a: "Nos contrôleurs intelligents affichent le nombre de jours restants avant le changement de lampe et émettent une alarme sonore et visuelle en cas de défaillance de la lampe ou du système."
+                                    },
                                     {
                                         q: "La chaleur de la lampe affecte-t-elle l'eau ?",
-                                        a: "Si l'eau ne circule pas pendant plusieurs heures, l'eau à l'intérieur de la chambre d'acier inoxydable peut devenir tiède. Il suffit de laisser couler l'eau quelques secondes pour retrouver une eau fraîche." },
+                                        a: "Si l'eau ne circule pas pendant plusieurs heures, l'eau à l'intérieur de la chambre d'acier inoxydable peut devenir tiède. Il suffit de laisser couler l'eau quelques secondes pour retrouver une eau fraîche."
+                                    },
                                     {
                                         q: "Quelle est la garantie sur les systèmes UV Bricareau ?",
-                                        a: "Nos systèmes sont couverts par une garantie robuste sur la chambre de traitement en acier inoxydable (souvent 10 ans) et sur les composantes électriques et électroniques." },
+                                        a: "Nos systèmes sont couverts par une garantie robuste sur la chambre de traitement en acier inoxydable (souvent 10 ans) et sur les composantes électriques et électroniques."
+                                    },
                                     {
                                         q: "Dois-je faire tester mon eau après l'installation ?",
-                                        a: "Oui, nous recommandons toujours un test bactériologique professionnel après l'installation et une désinfection initiale de la tuyauterie pour confirmer que tout le réseau domestique est sain." }
+                                        a: "Oui, nous recommandons toujours un test bactériologique professionnel après l'installation et une désinfection initiale de la tuyauterie pour confirmer que tout le réseau domestique est sain."
+                                    }
                                 ].slice(0, showAllFaqs ? undefined : 6).map((item, idx) => (
                                     <AccordionItem key={idx} value={`item-${idx}`} className="border-b-slate-100 px-4">
-                                        <AccordionTrigger className="text-left text-base font-medium leading-6 hover:no-underline py-8 text-slate-800" style={{ }}>
+                                        <AccordionTrigger className="text-left text-base font-medium leading-6 hover:no-underline py-8 text-slate-800" style={{}}>
                                             {item.q}
                                         </AccordionTrigger>
-                                        <AccordionContent className="text-base font-light leading-6 text-slate-500 pb-8 text-justify" style={{ }}>
+                                        <AccordionContent className="text-base font-light leading-6 text-slate-500 pb-8 text-justify" style={{}}>
                                             {item.a}
                                         </AccordionContent>
                                     </AccordionItem>
@@ -517,7 +539,7 @@ const DesinfectionUV = () => {
                         <div className="text-left mb-16">
                             <h2
                                 className="text-slate-900 mb-8 text-left"
-                                style={{ }}
+                                style={{}}
                             >
                                 <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">Ressources</span>
                             </h2>

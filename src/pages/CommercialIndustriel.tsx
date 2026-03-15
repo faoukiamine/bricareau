@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import Testimonials from "@/components/Testimonials";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 import { Button } from "@/components/ui/button";
 
 const CommercialIndustriel = () => {
@@ -77,6 +78,11 @@ const CommercialIndustriel = () => {
       <main>
         {/* 1. Hero Section (Redesigned for Mobile) */}
         <section className="relative lg:h-[850px] flex items-center overflow-hidden bg-white">
+          <div className="absolute top-[50px] left-0 right-0 z-30 pointer-events-none">
+            <div className="container mx-auto px-6 pointer-events-auto">
+              <GlobalBreadcrumbs variant="dark" />
+            </div>
+          </div>
           <div className="flex flex-col lg:flex-row w-full">
             {/* Mobile Image */}
             <div className="lg:hidden w-full h-[350px] relative">
@@ -100,8 +106,8 @@ const CommercialIndustriel = () => {
               <div className="absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white/90 via-white/40 to-transparent" />
             </div>
 
-            <div className="container mx-auto px-6 relative z-10 py-12 lg:py-0">
-              <div className="max-w-2xl">
+            <div className="container relative z-10 mx-auto px-4 h-full flex items-center lg:px-6">
+              <div className="max-w-2xl lg:text-white py-12 lg:py-0">
                 <h1
                   className="text-[32px] md:text-[42px] leading-tight mb-8 tracking-tighter text-slate-900 lg:text-white"
                   style={{

@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import Header from "@/components/Header";
+import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 import ConsultationFormSection from "@/components/ConsultationFormSection";
 import Footer from "@/components/Footer";
 import TestimonialsSection from "@/components/TestimonialsSection";
@@ -41,7 +42,8 @@ import {
     Accordion,
     AccordionContent,
     AccordionItem,
-    AccordionTrigger } from "@/components/ui/accordion";
+    AccordionTrigger
+} from "@/components/ui/accordion";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
@@ -164,10 +166,14 @@ const FiltresPuits = () => {
     return (
         <div className="min-h-screen bg-background text-slate-900 font-sans">
             <Header />
-
             <main>
                 {/* 1. Hero Section */}
-                <section className="relative lg:h-[850px] flex flex-col lg:flex-row lg:items-center overflow-hidden bg-white">
+                <section className="relative lg:h-[850px] flex flex-col lg:items-center overflow-hidden bg-white">
+                    <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none">
+                        <div className="container mx-auto px-4 lg:px-6 pointer-events-auto">
+                            <GlobalBreadcrumbs variant="dark" />
+                        </div>
+                    </div>
                     <div className="relative lg:absolute lg:inset-0 h-[350px] sm:h-[450px] lg:h-full w-full lg:z-0 overflow-hidden">
                         <img
                             src={heroFilter}
@@ -179,8 +185,8 @@ const FiltresPuits = () => {
                         <div className="hidden lg:block absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white/90 via-white/40 to-transparent" />
                     </div>
 
-                    <div className="container relative z-10 mx-auto px-4 py-10 sm:py-16 lg:py-20 flex flex-col justify-center">
-                        <div className="max-w-2xl lg:text-white">
+                    <div className="container relative z-10 mx-auto px-4 h-full flex items-center lg:px-6">
+                        <div className="max-w-2xl lg:text-white py-12 lg:py-0">
                             <h1
                                 className="text-[32px] md:text-[42px] leading-[1.1] md:leading-[1.2] mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl"
                                 style={{
@@ -196,7 +202,7 @@ const FiltresPuits = () => {
                                 <Button
                                     size="lg"
                                     className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200"
-                                    style={{ }}
+                                    style={{}}
                                     asChild
                                 >
                                     <a href="#specialized-filters">Explorez nos filtres d'eau</a>
@@ -205,7 +211,7 @@ const FiltresPuits = () => {
                                     size="lg"
                                     variant="outline"
                                     className="bg-slate-100 lg:bg-white/10 hover:bg-slate-200 lg:hover:bg-white/20 text-slate-800 lg:text-white border-slate-200 lg:border-white rounded-full px-8 h-14 backdrop-blur-sm shadow-lg flex items-center gap-2"
-                                    style={{ }}
+                                    style={{}}
                                     asChild
                                 >
                                     <a href="tel:18552649328">
@@ -269,7 +275,7 @@ const FiltresPuits = () => {
                         <div className="text-left mb-16">
                             <h2
                                 className="text-slate-900 mb-8 text-left"
-                                style={{ }}
+                                style={{}}
                             >
                                 <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Nos filtres d'eau</span>
                                 <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">spécialisés pour votre résidence</span>
@@ -296,19 +302,19 @@ const FiltresPuits = () => {
                                     <div className="p-8 space-y-4 flex flex-col flex-grow border-t-2 border-transparent group-hover:border-blue-600 transition-colors">
                                         <h3
                                             className="text-slate-900 group-hover:text-blue-600 transition-colors tracking-tight text-center"
-                                            style={{ }}
+                                            style={{}}
                                         >
                                             {p.name}
                                         </h3>
                                         <p
                                             className="text-slate-500 font-light flex-grow text-justify"
-                                            style={{ }}
+                                            style={{}}
                                         >
                                             {p.desc}
                                         </p>
                                         <div
                                             className="inline-flex items-center gap-2 text-blue-600 font-bold text-xs tracking-widest uppercase mt-4 group-hover:underline self-end"
-                                            style={{ }}
+                                            style={{}}
                                         >
                                             <span></span>
                                             <ArrowRight className="h-6 w-6 transform group-hover:translate-x-1 transition-transform" />
@@ -326,7 +332,7 @@ const FiltresPuits = () => {
                         <div className="text-left mb-16">
                             <h2
                                 className="text-slate-900 mb-8 text-left"
-                                style={{ }}
+                                style={{}}
                             >
                                 <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Comparez nos filtres d'eau</span>
                                 <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">spécialisés pour l'eau de puits</span>
@@ -417,7 +423,7 @@ const FiltresPuits = () => {
                             </span>
                             <h2
                                 className="lg:font-light mb-8 md:leading-[60px] text-slate-900 lg:text-white text-left"
-                                style={{ }}
+                                style={{}}
                             >
                                 L'excellence commence<br />
                                 par <span className="lg:font-bold">une eau parfaite.</span>
@@ -429,7 +435,7 @@ const FiltresPuits = () => {
                                 <Button
                                     size="lg"
                                     className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200"
-                                    style={{ }}
+                                    style={{}}
                                     asChild
                                 >
                                     <a href="/tests-eau">Demandez une analyse d'eau</a>
@@ -497,19 +503,19 @@ const FiltresPuits = () => {
                                     <div className="p-8 space-y-4 flex flex-col flex-grow border-t-2 border-transparent group-hover:border-blue-600 transition-colors">
                                         <h3
                                             className="text-slate-900 group-hover:text-blue-600 transition-colors tracking-tight text-center"
-                                            style={{ }}
+                                            style={{}}
                                         >
                                             {prod.name}
                                         </h3>
                                         <p
                                             className="leading-[25px] text-slate-500 font-light flex-grow text-justify"
-                                            style={{ }}
+                                            style={{}}
                                         >
                                             {prod.desc}
                                         </p>
                                         <div
                                             className="inline-flex items-center gap-2 text-blue-600 font-bold text-xs tracking-widest uppercase mt-4 group-hover:underline self-end"
-                                            style={{ }}
+                                            style={{}}
                                         >
                                             <span></span>
                                             <ArrowRight className="h-6 w-6 transform group-hover:translate-x-1 transition-transform" />
@@ -549,7 +555,7 @@ const FiltresPuits = () => {
                         <div className="text-left mb-16">
                             <h2
                                 className="text-slate-900 mb-8 text-left"
-                                style={{ }}
+                                style={{}}
                             >
                                 <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Pour vous éclairer</span>
                                 <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">Questions fréquentes</span>
@@ -587,7 +593,7 @@ const FiltresPuits = () => {
                         <div className="text-left mb-16">
                             <h2
                                 className="text-slate-900 mb-8 text-left"
-                                style={{ }}
+                                style={{}}
                             >
                                 <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">Ressources</span>
                             </h2>

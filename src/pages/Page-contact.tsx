@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -12,7 +13,12 @@ const Contact = () => {
             <Header />
             <main>
                 {/* 1. Page Header (Redesigned for Mobile) */}
-                <header className="relative lg:pt-32 lg:pb-16 bg-white overflow-hidden border-b border-gray-50">
+                <header className="relative lg:h-[700px] bg-white overflow-hidden border-b border-gray-50 flex flex-col lg:items-center">
+                    <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none">
+                        <div className="container mx-auto px-4 lg:px-6 pointer-events-auto">
+                            <GlobalBreadcrumbs variant="light" />
+                        </div>
+                    </div>
                     <div className="flex flex-col lg:flex-row">
                         {/* Mobile Image */}
                         <div className="lg:hidden w-full h-[250px] relative">
@@ -24,12 +30,13 @@ const Contact = () => {
                             <div className="absolute inset-0 bg-gradient-to-b from-black/10 to-transparent"></div>
                         </div>
 
-                        <div className="container mx-auto px-6 py-12 lg:py-0">
-                            <div className="max-w-4xl">
+                        <div className="container mx-auto px-6 h-full flex items-center">
+                            <div className="max-w-4xl py-12 lg:py-0">
                                 <h1
                                     className="text-[36px] md:text-[56px] leading-[1.1] text-slate-900 tracking-tight mb-4"
                                     style={{
-                                        fontWeight: 350 }}
+                                        fontWeight: 350
+                                    }}
                                 >
                                     Parlons de votre <span className="text-[#0052ff]">Projet d'eau</span>
                                 </h1>

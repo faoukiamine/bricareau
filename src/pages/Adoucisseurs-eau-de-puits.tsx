@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import { Button } from "@/components/ui/button";
 import heroBath from "@/assets/kid-playing-bathtub.jpg";
@@ -43,7 +44,8 @@ import {
     Accordion,
     AccordionContent,
     AccordionItem,
-    AccordionTrigger } from "@/components/ui/accordion";
+    AccordionTrigger
+} from "@/components/ui/accordion";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import ConsultationFormSection from "@/components/ConsultationFormSection";
@@ -188,7 +190,12 @@ const AdoucisseursEauDePuits = () => {
 
             <main>
                 {/* 1. Hero Section */}
-                <section className="relative lg:h-[750px] md:h-[800px] flex flex-col lg:flex-row lg:items-center overflow-hidden bg-white">
+                <section className="relative lg:h-[850px] md:h-[800px] flex items-center overflow-hidden bg-white">
+                    <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none">
+                        <div className="container mx-auto px-6 pointer-events-auto text-left">
+                            <GlobalBreadcrumbs variant="dark" />
+                        </div>
+                    </div>
                     <div className="relative lg:absolute lg:inset-0 h-[350px] sm:h-[450px] lg:h-full w-full lg:z-0 overflow-hidden">
                         <picture>
                             <source media="(max-width: 768px)" srcSet={heroBath} />
@@ -203,8 +210,8 @@ const AdoucisseursEauDePuits = () => {
                         <div className="hidden lg:block absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white/90 via-white/40 to-transparent" />
                     </div>
 
-                    <div className="container relative z-10 mx-auto px-4 py-10 sm:py-16 lg:py-20 flex flex-col justify-center">
-                        <div className="max-w-2xl lg:text-white">
+                    <div className="container relative z-10 mx-auto px-4 h-full flex items-center lg:px-6">
+                        <div className="max-w-2xl lg:text-white py-12 lg:py-0">
                             <h1
                                 className="text-[32px] md:text-[42px] leading-[1.1] md:leading-[1.2] mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl"
                                 style={{
@@ -221,7 +228,7 @@ const AdoucisseursEauDePuits = () => {
                                 <Button
                                     size="lg"
                                     className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200"
-                                    style={{ }}
+                                    style={{}}
                                     asChild
                                 >
                                     <a href="/tests-eau#water-test">Réservez une analyse d'eau</a>
@@ -253,7 +260,7 @@ const AdoucisseursEauDePuits = () => {
                         <div className="text-left mb-16">
                             <h2
                                 className="text-white mb-8 text-left"
-                                style={{ }}
+                                style={{}}
                             >
                                 <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Pourquoi choisir nos</span>
                                 <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">adoucisseurs d'eau résidentiels ?</span>
@@ -289,7 +296,7 @@ const AdoucisseursEauDePuits = () => {
                         <div className="text-left mb-16">
                             <h2
                                 className="text-slate-900 mb-8 md:leading-[60px] text-left"
-                                style={{ }}
+                                style={{}}
                             >
                                 Nos adoucisseurs d'eau <br /><span className="font-normal">résidentiels - Eau de puits</span>
                             </h2>
@@ -315,19 +322,19 @@ const AdoucisseursEauDePuits = () => {
                                     <div className="p-8 space-y-4 flex flex-col flex-grow border-t-2 border-transparent group-hover:border-blue-600 transition-colors">
                                         <h3
                                             className="text-slate-900 group-hover:text-blue-600 transition-colors tracking-tight text-center"
-                                            style={{ }}
+                                            style={{}}
                                         >
                                             {p.displayName || p.name}
                                         </h3>
                                         <p
                                             className="text-slate-500 font-light leading-[24px] flex-grow text-justify"
-                                            style={{ }}
+                                            style={{}}
                                         >
                                             {p.desc}
                                         </p>
                                         <div
                                             className="inline-flex items-center gap-2 text-blue-600 font-bold text-xs tracking-widest uppercase mt-4 group-hover:underline self-end"
-                                            style={{ }}
+                                            style={{}}
                                         >
                                             <span></span>
                                             <ArrowRight className="h-6 w-6 transform group-hover:translate-x-1 transition-transform" />
@@ -345,7 +352,7 @@ const AdoucisseursEauDePuits = () => {
                         <div className="text-left mb-16">
                             <h2
                                 className="text-slate-900 mb-8 md:leading-[60px] text-left"
-                                style={{ }}
+                                style={{}}
                             >
                                 Comparez nos <br /><span className="font-normal">adoucisseurs d'eau</span>
                             </h2>
@@ -422,7 +429,7 @@ const AdoucisseursEauDePuits = () => {
                         <div className="max-w-2xl text-slate-900 lg:text-white">
                             <h2
                                 className="md:leading-[60px] lg:font-light mb-8 text-slate-900 lg:text-white text-left"
-                                style={{ }}
+                                style={{}}
                             >
                                 Des tests d'eau précis <span className="lg:font-bold"><br />pour une tranquillité d'esprit totale.</span>
                             </h2>
@@ -433,7 +440,7 @@ const AdoucisseursEauDePuits = () => {
                                 <Button
                                     size="lg"
                                     className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200"
-                                    style={{ }}
+                                    style={{}}
                                     onClick={() => document.getElementById('nos-adoucisseurs')?.scrollIntoView({ behavior: 'smooth' })}
                                 >
                                     <a href="/tests-eau">Demandez une analyse d'eau</a>
@@ -501,19 +508,19 @@ const AdoucisseursEauDePuits = () => {
                                     <div className="p-8 space-y-4 flex flex-col flex-grow border-t-2 border-transparent group-hover:border-blue-600 transition-colors">
                                         <h3
                                             className="text-slate-900 group-hover:text-blue-600 transition-colors tracking-tight text-center"
-                                            style={{ }}
+                                            style={{}}
                                         >
                                             {prod.name}
                                         </h3>
                                         <p
                                             className="leading-[25px] text-slate-500 font-light flex-grow text-justify"
-                                            style={{ }}
+                                            style={{}}
                                         >
                                             {prod.desc}
                                         </p>
                                         <div
                                             className="inline-flex items-center gap-2 text-blue-600 font-bold text-xs tracking-widest uppercase mt-4 group-hover:underline self-end"
-                                            style={{ }}
+                                            style={{}}
                                         >
                                             <span></span>
                                             <ArrowRight className="h-6 w-6 transform group-hover:translate-x-1 transition-transform" />
@@ -553,7 +560,7 @@ const AdoucisseursEauDePuits = () => {
                         <div className="text-left mb-16">
                             <h2
                                 className="text-slate-900 mb-8 text-left"
-                                style={{ }}
+                                style={{}}
                             >
                                 <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Pour vous éclairer</span>
                                 <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">Questions fréquentes</span>
@@ -565,10 +572,10 @@ const AdoucisseursEauDePuits = () => {
                             <Accordion type="single" collapsible className="w-full">
                                 {faqItems.slice(0, showAllFaqs ? undefined : 6).map((item, idx) => (
                                     <AccordionItem key={idx} value={`item-${idx}`} className="border-b-gray-200">
-                                        <AccordionTrigger className="text-left text-base font-medium leading-6 hover:no-underline py-6" style={{ }}>
+                                        <AccordionTrigger className="text-left text-base font-medium leading-6 hover:no-underline py-6" style={{}}>
                                             {item.q}
                                         </AccordionTrigger>
-                                        <AccordionContent className="text-base font-light leading-6 text-gray-600 pb-6 text-justify" style={{ }}>
+                                        <AccordionContent className="text-base font-light leading-6 text-gray-600 pb-6 text-justify" style={{}}>
                                             {item.a}
                                         </AccordionContent>
                                     </AccordionItem>
@@ -592,7 +599,7 @@ const AdoucisseursEauDePuits = () => {
                         <div className="text-left mb-16">
                             <h2
                                 className="text-slate-900 mb-8 text-left"
-                                style={{ }}
+                                style={{}}
                             >
                                 <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">Ressources</span>
                             </h2>

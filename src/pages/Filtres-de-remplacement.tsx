@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 import Footer from "@/components/Footer";
 import { Package, Search, ShoppingCart, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -11,7 +12,7 @@ import inlineFilterImg from "@/assets/OMNIPURE_K2533-JJ_2000x.webp";
 import deionizationFilterImg from "@/assets/PENTEK_WS-10_WATER_SOFTENING_CARTRIDGE_155319-43_-2_2000x.webp";
 import membraneFilterImg from "@/assets/FILMTEC_TW30-1812-50HR_REVERSE_OSMOSIS_MEMBRANE_-_50_GPD_2000x.webp";
 
-const Pieces = () => {
+const FiltresDeRemplacement = () => {
     const partCategories = [
         {
             name: "Filtres à sédiments",
@@ -84,14 +85,19 @@ const Pieces = () => {
             <Header />
             <main>
                 {/* Hero Section */}
-                <section className="relative pt-20 pb-0 md:pt-24 lg:pt-32 bg-white overflow-hidden">
+                <section className="relative lg:h-[700px] bg-white overflow-hidden flex flex-col lg:items-center">
+                    <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none">
+                        <div className="container mx-auto px-4 lg:px-6 pointer-events-auto">
+                            <GlobalBreadcrumbs variant="light" />
+                        </div>
+                    </div>
                     {/* Mobile Decor Layer */}
                     <div className="lg:hidden w-full h-48 bg-gradient-to-br from-orange-50 via-white to-blue-50 flex flex-col items-center justify-center border-b border-slate-100">
                         <Package className="h-20 w-20 text-blue-200" />
                     </div>
 
-                    <div className="container mx-auto px-4 lg:px-6">
-                        <div className="max-w-3xl mx-auto pt-10 pb-16 lg:py-0 text-center">
+                    <div className="container mx-auto px-4 lg:px-6 h-full flex items-center">
+                        <div className="max-w-3xl mx-auto py-12 lg:py-0 text-center">
                             <div className="inline-flex items-center gap-2 bg-blue-50 rounded-full px-4 py-2 mb-6">
                                 <Package className="h-5 w-5 text-blue-600" />
                                 <span className="text-xs font-bold text-blue-600 uppercase tracking-widest leading-none">PIÈCES D'ORIGINE</span>
@@ -191,4 +197,4 @@ const Pieces = () => {
     );
 };
 
-export default Pieces;
+export default FiltresDeRemplacement;

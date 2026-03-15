@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Droplets, Waves, Filter, Beaker } from "lucide-react";
@@ -78,14 +79,19 @@ const Solutions = () => {
       <Header />
       <main>
         {/* Hero Section */}
-        <section className="relative pt-20 pb-0 md:pt-24 lg:pt-32 bg-white overflow-hidden">
+        <section className="relative lg:h-[700px] bg-white overflow-hidden flex flex-col lg:items-center">
+          <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none">
+            <div className="container mx-auto px-4 lg:px-6 pointer-events-auto text-left">
+              <GlobalBreadcrumbs variant="light" />
+            </div>
+          </div>
           {/* Mobile Image/Gradient Layer */}
           <div className="lg:hidden w-full h-48 bg-gradient-to-br from-blue-50 via-white to-blue-50 flex items-center justify-center border-b border-slate-100">
             <Droplets className="w-16 h-16 text-blue-200 animate-pulse" />
           </div>
 
-          <div className="container mx-auto px-4 lg:px-6">
-            <div className="max-w-4xl mx-auto pt-10 pb-16 lg:py-0 text-center">
+          <div className="container mx-auto px-4 lg:px-6 h-full flex items-center">
+            <div className="max-w-4xl mx-auto py-12 lg:py-0 text-center w-full">
               <span className="lg:hidden text-blue-600 font-bold uppercase tracking-widest text-[10px] mb-4 block">
                 TRAITEMENT D'EAU
               </span>

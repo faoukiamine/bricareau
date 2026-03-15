@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 import { Tag, Clock, CheckCircle, ArrowRight, Percent } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -53,17 +54,24 @@ const Promotions = () => {
             <Header />
             <main>
                 {/* Hero Section */}
-                <section className="relative pt-20 pb-0 md:pt-24 lg:pt-32 bg-white overflow-hidden">
+                <section className="relative lg:h-[700px] bg-white overflow-hidden flex flex-col lg:items-center">
+                    <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none hidden lg:block">
+                        <div className="container mx-auto px-4 lg:px-6 pointer-events-auto">
+                            <GlobalBreadcrumbs variant="light" />
+                        </div>
+                    </div>
                     {/* Mobile Header Decor */}
                     <div className="lg:hidden w-full h-40 bg-gradient-to-br from-blue-50 via-white to-emerald-50 flex items-center justify-center border-b border-slate-100">
                         <Tag className="h-16 w-16 text-blue-200" />
                     </div>
 
-                    <div className="container mx-auto px-4 lg:px-6">
-                        <div className="max-w-3xl mx-auto pt-10 pb-16 lg:py-0 text-center">
+                    <div className="container mx-auto px-6 h-full flex items-center">
+                        <div className="max-w-2xl text-slate-900 lg:text-white py-12 lg:py-0 w-full">
+                            <div className="lg:hidden">
+                                <GlobalBreadcrumbs variant="light" />
+                            </div>
                             <div className="inline-flex items-center gap-2 bg-blue-50 rounded-full px-4 py-2 mb-6">
                                 <Tag className="h-5 w-5 text-blue-600" />
-                                <span className="text-xs font-bold text-blue-600 uppercase tracking-widest">Offres Spéciales</span>
                             </div>
                             <h1
                                 className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] mb-8 tracking-tighter text-slate-900 text-center lg:text-justify max-w-xl mx-auto"

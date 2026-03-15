@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 import Footer from "@/components/Footer";
 import { ArrowRight, ChevronRight, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -10,7 +11,8 @@ import {
     SelectContent,
     SelectItem,
     SelectTrigger,
-    SelectValue } from "@/components/ui/select";
+    SelectValue
+} from "@/components/ui/select";
 import technicianImg from "@/assets/discover_expert.jpg";
 import waterTestImg from "@/assets/boire-eau-robinet.jpg";
 import drinkingWaterImg from "@/assets/Solutions d'eau potable.webp";
@@ -23,7 +25,12 @@ const Service = () => {
 
             <main>
                 {/* Section 1: Hero Section (Redesigned for Mobile) */}
-                <section className="relative lg:py-32 bg-white overflow-hidden">
+                <section className="relative lg:h-[850px] flex flex-col lg:items-center overflow-hidden bg-white">
+                    <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none">
+                        <div className="container mx-auto px-4 lg:px-6 pointer-events-auto">
+                            <GlobalBreadcrumbs variant="light" />
+                        </div>
+                    </div>
                     <div className="flex flex-col lg:flex-row items-center">
                         {/* Mobile Image (Visible only on mobile) */}
                         <div className="lg:hidden w-full h-[350px] relative">
@@ -35,10 +42,10 @@ const Service = () => {
                             <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-transparent"></div>
                         </div>
 
-                        <div className="container mx-auto px-6 py-12 lg:py-0">
-                            <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+                        <div className="container mx-auto px-6 h-full flex items-center">
+                            <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24 w-full">
                                 {/* Left Content */}
-                                <div className="lg:w-1/2 text-left">
+                                <div className="lg:w-1/2 text-left py-12 lg:py-0">
                                     <h1
                                         className="text-[32px] md:text-[52px] leading-[1.1] mb-8 tracking-tighter text-slate-900"
                                         style={{

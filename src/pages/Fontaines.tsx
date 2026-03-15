@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import {
     Snowflake,
@@ -229,7 +230,12 @@ const Fontaines = () => {
             <Header />
             <main>
                 {/* Hero Section (Adoucissement Pattern) */}
-                <section className="relative lg:h-[850px] flex flex-col lg:flex-row lg:items-center overflow-hidden bg-white">
+                <section className="relative lg:h-[850px] flex flex-col lg:items-center overflow-hidden bg-white">
+                    <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none">
+                        <div className="container mx-auto px-4 lg:px-6 pointer-events-auto">
+                            <GlobalBreadcrumbs variant="dark" />
+                        </div>
+                    </div>
                     <div className="relative lg:absolute lg:inset-0 h-[350px] sm:h-[450px] lg:h-full w-full lg:z-0 overflow-hidden">
                         <img
                             src={heroFountains}
@@ -241,8 +247,8 @@ const Fontaines = () => {
                         <div className="hidden lg:block absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white/90 via-white/40 to-transparent" />
                     </div>
 
-                    <div className="container relative z-10 mx-auto px-4 py-10 sm:py-16 lg:py-20 flex flex-col justify-center">
-                        <div className="max-w-2xl lg:text-white">
+                    <div className="container relative z-10 mx-auto px-4 h-full flex items-center lg:px-6">
+                        <div className="max-w-2xl lg:text-white py-12 lg:py-0">
                             <span className="text-blue-600 lg:text-blue-400 font-bold uppercase tracking-widest text-[10px] md:text-sm mb-4 block">
                                 SOLUTIONS D'HYDRATATION
                             </span>
@@ -262,7 +268,7 @@ const Fontaines = () => {
                                 <Button
                                     size="lg"
                                     className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200"
-                                    style={{ }}
+                                    style={{}}
                                     asChild
                                 >
                                     <NavLink to="/contact" className="flex items-center gap-2">
@@ -273,7 +279,7 @@ const Fontaines = () => {
                                     size="lg"
                                     variant="outline"
                                     className="bg-slate-100 lg:bg-white/10 hover:bg-slate-200 lg:hover:bg-white/20 text-slate-800 lg:text-white border-slate-200 lg:border-white rounded-full px-8 h-14 backdrop-blur-sm shadow-lg"
-                                    style={{ }}
+                                    style={{}}
                                     asChild
                                 >
                                     <a href="#models" className="flex items-center gap-2">
@@ -529,7 +535,7 @@ const Fontaines = () => {
                             <div className="flex flex-col sm:flex-row gap-8 justify-center items-center">
                                 <Button
                                     className="bg-white hover:bg-blue-50 text-blue-600 rounded-full px-12 h-14 shadow-lg"
-                                    style={{ }}
+                                    style={{}}
                                     asChild
                                 >
                                     <NavLink to="/contact">Demandez une soumission</NavLink>

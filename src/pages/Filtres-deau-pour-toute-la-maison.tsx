@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 import Footer from "@/components/Footer";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import { Button } from "@/components/ui/button";
@@ -29,7 +30,8 @@ import {
     Accordion,
     AccordionContent,
     AccordionItem,
-    AccordionTrigger } from "@/components/ui/accordion";
+    AccordionTrigger
+} from "@/components/ui/accordion";
 import ConsultationFormSection from "@/components/ConsultationFormSection";
 
 
@@ -147,7 +149,12 @@ const FiltresTouteMaison = () => {
 
             <main>
                 {/* 1. Hero Section (Redesigned for Mobile) */}
-                <section className="relative lg:h-[850px] flex flex-col lg:flex-row items-stretch overflow-hidden">
+                <section className="relative lg:h-[850px] flex flex-col lg:items-center overflow-hidden bg-white">
+                    <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none">
+                        <div className="container mx-auto px-6 pointer-events-auto">
+                            <GlobalBreadcrumbs variant="dark" />
+                        </div>
+                    </div>
                     {/* Mobile Image */}
                     <div className="lg:hidden w-full h-[300px] relative">
                         <img
@@ -170,8 +177,8 @@ const FiltresTouteMaison = () => {
                         <div className="absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white/90 via-white/40 to-transparent" />
                     </div>
 
-                    <div className="container mx-auto px-6 relative z-10 flex items-center py-12 lg:py-0">
-                        <div className="max-w-2xl text-slate-900 lg:text-white">
+                    <div className="container mx-auto px-6 relative z-10 h-full flex items-center">
+                        <div className="max-w-2xl text-slate-900 lg:text-white py-12 lg:py-0">
                             <h1
                                 className="text-[32px] md:text-[42px] leading-[1.1] md:leading-[1.2] mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl"
                                 style={{
@@ -257,7 +264,7 @@ const FiltresTouteMaison = () => {
                         <div className="text-left mb-16">
                             <h2
                                 className="text-slate-900 mb-8 text-left"
-                                style={{ }}
+                                style={{}}
                             >
                                 <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Nos filtres d'eau</span>
                                 <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">spécialisés pour votre résidence</span>
@@ -265,7 +272,7 @@ const FiltresTouteMaison = () => {
                             <div className="w-24 h-1 bg-blue-600 mb-8"></div>
                             <p
                                 className="font-light text-slate-600 mb-8 text-justify"
-                                style={{ }}
+                                style={{}}
                             >
                                 Nos filtres d’eau spécialisés pour toute la maison sont méticuleusement conçus pour offrir une protection robuste et ciblée contre les contaminants spécifiques que l’on retrouve fréquemment dans les réseaux de distribution municipaux. En intégrant des technologies de pointe telles que nos séries Vortex, ChlorStop et Iron Shield, nous garantissons l'élimination efficace des sédiments, du chlore et des métaux lourds qui peuvent altérer le goût, l'odeur et la qualité globale de votre eau quotidienne. Chaque solution est installée au point d’entrée de votre résidence pour assurer une pureté cristalline constante dans tous vos robinets, tout en prolongeant durablement la durée de vie de votre plomberie et de vos précieux électroménagers. Choisir un système Bricareau, c'est opter pour une expertise reconnue qui transforme votre eau municipale en une ressource revitalisante, saine et parfaitement équilibrée pour l'ensemble de votre foyer. Profitez dès aujourd'hui d'une tranquillité d'esprit absolue grâce à une filtration sur-mesure, fiable et performante, répondant aux standards les plus élevés d'excellence et de confort.
                             </p>
@@ -287,19 +294,19 @@ const FiltresTouteMaison = () => {
                                     <div className="p-8 space-y-4 flex flex-col flex-grow border-t-2 border-transparent group-hover:border-blue-600 transition-colors">
                                         <h3
                                             className="text-slate-900 group-hover:text-blue-600 transition-colors tracking-tight text-center"
-                                            style={{ }}
+                                            style={{}}
                                         >
                                             {p.name}
                                         </h3>
                                         <p
                                             className="leading-[25px] text-slate-500 font-light flex-grow text-justify"
-                                            style={{ }}
+                                            style={{}}
                                         >
                                             {p.desc}
                                         </p>
                                         <div
                                             className="inline-flex items-center gap-2 text-blue-600 font-bold text-xs tracking-widest uppercase mt-4 group-hover:underline self-end"
-                                            style={{ }}
+                                            style={{}}
                                         >
                                             <span></span>
                                             <ArrowRight className="h-6 w-6 transform group-hover:translate-x-1 transition-transform" />
@@ -317,7 +324,7 @@ const FiltresTouteMaison = () => {
                         <div className="text-left mb-16">
                             <h2
                                 className="text-slate-900 mb-8 text-left"
-                                style={{ }}
+                                style={{}}
                             >
                                 <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Comparez nos filtres d'eau</span>
                                 <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">spécialisés pour l'eau municipale</span>
@@ -394,7 +401,7 @@ const FiltresTouteMaison = () => {
                             </span>
                             <h2
                                 className="lg:font-light mb-8 md:leading-[60px] text-slate-900 lg:text-white text-left"
-                                style={{ }}
+                                style={{}}
                             >
                                 L'excellence commence<br />
                                 par <span className="lg:font-bold">une eau parfaite.</span>
@@ -406,7 +413,7 @@ const FiltresTouteMaison = () => {
                                 <Button
                                     size="lg"
                                     className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14"
-                                    style={{ }}
+                                    style={{}}
                                     asChild
                                 >
                                     <a href="/tests-eau">Demandez une analyse d'eau</a>
@@ -454,7 +461,7 @@ const FiltresTouteMaison = () => {
                         <div className="text-left mb-16">
                             <h2
                                 className="text-slate-900 mb-8 text-left"
-                                style={{ }}
+                                style={{}}
                             >
                                 <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Pour vous éclairer</span>
                                 <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">Questions fréquentes</span>
@@ -492,7 +499,7 @@ const FiltresTouteMaison = () => {
                         <div className="text-left mb-16">
                             <h2
                                 className="text-slate-900 mb-8 text-left"
-                                style={{ }}
+                                style={{}}
                             >
                                 <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">Ressources</span>
                             </h2>

@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 import Footer from "@/components/Footer";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import { Button } from "@/components/ui/button";
@@ -16,7 +17,8 @@ import {
     Accordion,
     AccordionContent,
     AccordionItem,
-    AccordionTrigger } from "@/components/ui/accordion";
+    AccordionTrigger
+} from "@/components/ui/accordion";
 
 
 const PageConsultation = () => {
@@ -39,8 +41,13 @@ const PageConsultation = () => {
     return (
         <div className="min-h-screen bg-slate-50 font-sans text-slate-900">
             <Header />
-            <main className="pt-32 pb-24">
-                <div className="container mx-auto px-4 lg:px-6">
+            <main className="relative lg:h-[850px] flex flex-col lg:items-center overflow-hidden bg-white pt-20 lg:pt-0">
+                <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none">
+                    <div className="container mx-auto px-4 lg:px-6 pointer-events-auto">
+                        <GlobalBreadcrumbs variant="light" />
+                    </div>
+                </div>
+                <div className="container mx-auto px-4 lg:px-6 h-full flex items-center">
                     <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-center">
 
                         {/* Left Column: Sales Pitch */}
@@ -51,13 +58,14 @@ const PageConsultation = () => {
                             <h1
                                 className="text-[32px] md:text-[48px] text-slate-900 mb-6 leading-[1.1] tracking-tight animate-in fade-in slide-in-from-bottom duration-700"
                                 style={{
-                                    fontWeight: 350 }}
+                                    fontWeight: 350
+                                }}
                             >
                                 Prenez le contrôle de <br className="hidden md:block" />
                                 <span className="text-blue-600">la qualité de votre eau.</span>
                             </h1>
                             <p className="text-slate-600 mb-10 font-light text-justify animate-in fade-in slide-in-from-bottom duration-700 delay-100">
-                                Organisez un appel téléphonique gratuit avec l'un de nos experts. Nous analyserons vos besoins, répondrons à vos questions et vous guiderons vers la meilleure solution d'adoucissement ou de filtration, sans aucune vente à pression.
+                                Organisez une consultation téléphonique gratuite avec l'un de nos experts d'eau. Nous analyserons vos besoins, répondrons à vos questions et vous guiderons vers la meilleure solution d'adoucissement ou de filtration, sans aucune vente à pression.
                             </p>
 
                             <div className="space-y-6 mb-12 animate-in fade-in slide-in-from-bottom duration-700 delay-200">
@@ -80,7 +88,7 @@ const PageConsultation = () => {
 
                             <div className="p-6 bg-white rounded-3xl shadow-sm border border-slate-100 flex items-center gap-6 max-w-sm animate-in fade-in slide-in-from-bottom duration-700 delay-300">
                                 <div className="flex -space-x-3">
-                                    <div className="w-12 h-12 rounded-full bg-blue-50 border-2 border-white flex items-center justify-center font-bold text-blue-600 text-sm">10k+</div>
+                                    <div className="w-12 h-12 rounded-full bg-blue-50 border-2 border-white flex items-center justify-center font-bold text-blue-600 text-sm">+10k</div>
                                 </div>
                                 <div>
                                     <div className="flex text-yellow-400 mb-1">
@@ -111,7 +119,7 @@ const PageConsultation = () => {
                     <div className="text-center mb-16 max-w-2xl mx-auto">
                         <h2
                             className="text-slate-900 mb-6"
-                            style={{ }}
+                            style={{}}
                         >
                             Comment se déroule <span className="text-blue-600">notre consultation ?</span>
                         </h2>
@@ -131,10 +139,10 @@ const PageConsultation = () => {
                                 { q: "Puis-je reporter ou annuler mon rendez-vous téléphonique ?", a: "Oui, bien sûr. Si vous avez un empêchement, envoyez-nous simplement un courriel ou appelez-nous pour replanifier à votre convenance." }
                             ].slice(0, showAllFaqs ? undefined : 4).map((item, idx) => (
                                 <AccordionItem key={idx} value={`item-${idx}`} className="border-b-gray-200">
-                                    <AccordionTrigger className="text-left text-base md:text-lg font-medium leading-6 hover:no-underline py-6" style={{ }}>
+                                    <AccordionTrigger className="text-left text-base md:text-lg font-medium leading-6 hover:no-underline py-6" style={{}}>
                                         {item.q}
                                     </AccordionTrigger>
-                                    <AccordionContent className="text-base font-light leading-relaxed text-slate-600 pb-6 text-justify" style={{ }}>
+                                    <AccordionContent className="text-base font-light leading-relaxed text-slate-600 pb-6 text-justify" style={{}}>
                                         {item.a}
                                     </AccordionContent>
                                 </AccordionItem>

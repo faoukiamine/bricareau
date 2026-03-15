@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 import Footer from "@/components/Footer";
 import { Package, Search, ShoppingCart } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -40,7 +41,12 @@ const Pieces = () => {
             <Header />
             <main>
                 {/* Hero Section (Redesigned for Mobile) */}
-                <section className="relative lg:py-24 bg-white overflow-hidden">
+                <section className="relative lg:h-[800px] bg-white overflow-hidden flex flex-col lg:items-center">
+                    <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none">
+                        <div className="container mx-auto px-4 lg:px-6 pointer-events-auto">
+                            <GlobalBreadcrumbs variant="light" />
+                        </div>
+                    </div>
                     <div className="flex flex-col lg:flex-row items-center">
                         {/* Mobile Image */}
                         <div className="lg:hidden w-full h-[300px] relative">
@@ -52,15 +58,16 @@ const Pieces = () => {
                             <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-transparent"></div>
                         </div>
 
-                        <div className="container mx-auto px-6 py-12 lg:py-24 bg-gradient-to-b from-orange-50 to-white lg:from-transparent lg:to-transparent">
-                            <div className="max-w-3xl mx-auto text-center space-y-6">
+                        <div className="container mx-auto px-6 h-full flex items-center">
+                            <div className="max-w-3xl mx-auto text-center space-y-6 py-12 lg:py-0 w-full">
                                 <div className="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center mx-auto mb-4">
                                     <Package className="h-8 w-8 text-[#0052ff]" />
                                 </div>
                                 <h1
                                     className="text-[32px] md:text-[52px] leading-tight text-slate-900 tracking-tighter text-center max-w-2xl mx-auto"
                                     style={{
-                                        fontWeight: 350 }}
+                                        fontWeight: 350
+                                    }}
                                 >
                                     Pièces de <span className="text-blue-600">Remplacement</span>
                                 </h1>

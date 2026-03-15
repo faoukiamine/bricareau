@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import {
@@ -19,7 +20,8 @@ import {
     Accordion,
     AccordionContent,
     AccordionItem,
-    AccordionTrigger } from "@/components/ui/accordion";
+    AccordionTrigger
+} from "@/components/ui/accordion";
 import ConsultationFormSection from "@/components/ConsultationFormSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 
@@ -77,7 +79,12 @@ const FiltrationSousEvier = () => {
             <main>
                 {/* 1.Hero Section */}
                 {/* 1. Hero Section */}
-                <section className="relative lg:h-[850px] flex flex-col lg:flex-row lg:items-center overflow-hidden bg-white">
+                <section className="relative lg:h-[850px] flex flex-col lg:items-center overflow-hidden bg-white">
+                    <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none">
+                        <div className="container mx-auto px-4 lg:px-6 pointer-events-auto">
+                            <GlobalBreadcrumbs variant="dark" />
+                        </div>
+                    </div>
                     <div className="relative lg:absolute lg:inset-0 h-[350px] sm:h-[450px] lg:h-full w-full lg:z-0 overflow-hidden">
                         <img
                             src={heroDrink}
@@ -89,12 +96,13 @@ const FiltrationSousEvier = () => {
                         <div className="hidden lg:block absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white/90 via-white/40 to-transparent" />
                     </div>
 
-                    <div className="container relative z-10 mx-auto px-4 py-10 sm:py-16 lg:py-20 flex flex-col justify-center">
-                        <div className="max-w-2xl lg:text-white">
+                    <div className="container relative z-10 mx-auto px-4 h-full flex items-center lg:px-6">
+                        <div className="max-w-2xl lg:text-white py-12 lg:py-0">
                             <h1
                                 className="text-[32px] md:text-[42px] leading-[1.1] md:leading-[1.2] mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl"
                                 style={{
-                                    fontWeight: 350 }}
+                                    fontWeight: 350
+                                }}
                             >
                                 Systèmes de filtration sous évier <br />
                                 De la pureté à chaque goutte.
@@ -106,7 +114,7 @@ const FiltrationSousEvier = () => {
                                 <Button
                                     size="lg"
                                     className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200"
-                                    style={{ }}
+                                    style={{}}
                                     asChild
                                 >
                                     <a href="#systemes-filtration">
@@ -117,7 +125,7 @@ const FiltrationSousEvier = () => {
                                     size="lg"
                                     variant="outline"
                                     className="bg-slate-100 lg:bg-white/10 hover:bg-slate-200 lg:hover:bg-white/20 text-slate-800 lg:text-white border-slate-200 lg:border-white rounded-full px-8 h-14 backdrop-blur-sm shadow-lg"
-                                    style={{ }}
+                                    style={{}}
                                     asChild
                                 >
                                     <a href="tel:18552649328" className="flex items-center gap-2">
@@ -182,7 +190,7 @@ const FiltrationSousEvier = () => {
                         <div className="text-left mb-16">
                             <h2
                                 className="text-slate-900 mb-8 text-left"
-                                style={{ }}
+                                style={{}}
                             >
                                 <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Nos systèmes de filtration</span>
                                 <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">d'eau sous évier</span>
@@ -213,19 +221,19 @@ const FiltrationSousEvier = () => {
                                     <div className="p-8 space-y-4 flex flex-col flex-grow border-t-2 border-transparent group-hover:border-blue-600 transition-colors">
                                         <h3
                                             className="text-slate-900 group-hover:text-blue-600 transition-colors tracking-tight text-center"
-                                            style={{ }}
+                                            style={{}}
                                         >
                                             {product.name}
                                         </h3>
                                         <p
                                             className="text-slate-500 font-light flex-grow text-justify"
-                                            style={{ }}
+                                            style={{}}
                                         >
                                             {product.desc}
                                         </p>
                                         <div
                                             className="inline-flex items-center gap-2 text-blue-600 font-bold text-xs tracking-widest uppercase mt-4 group-hover:underline self-end"
-                                            style={{ }}
+                                            style={{}}
                                         >
                                             <ArrowRight className="h-6 w-6 transform group-hover:translate-x-1 transition-transform" />
                                         </div>
@@ -242,7 +250,7 @@ const FiltrationSousEvier = () => {
                         <div className="text-left mb-16">
                             <h2
                                 className="text-slate-900 mb-8 text-left"
-                                style={{ }}
+                                style={{}}
                             >
                                 <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Comparez nos solutions</span>
                                 <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">de filtration d'eau potable.</span>
@@ -323,7 +331,7 @@ const FiltrationSousEvier = () => {
                             </span>
                             <h2
                                 className="lg:font-light mb-8 md:leading-[60px] text-slate-900 lg:text-white text-left"
-                                style={{ }}
+                                style={{}}
                             >
                                 Identifiez l'invisible, <span className="lg:font-bold"><br />maîtrisez votre pureté.</span>
                             </h2>
@@ -334,7 +342,7 @@ const FiltrationSousEvier = () => {
                                 <Button
                                     size="lg"
                                     className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200"
-                                    style={{ }}
+                                    style={{}}
                                     asChild
                                 >
                                     <a href="/tests-eau">Demandez une analyse d'eau</a>
@@ -361,7 +369,7 @@ const FiltrationSousEvier = () => {
                         <div className="text-left mb-16">
                             <h2
                                 className="text-slate-900 mb-8 text-left"
-                                style={{ }}
+                                style={{}}
                             >
                                 <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Pour vous éclairer</span>
                                 <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">Questions fréquentes</span>
@@ -373,28 +381,34 @@ const FiltrationSousEvier = () => {
                                 {[
                                     {
                                         q: "Quels sont les avantages d'un système de filtration sous l'évier ?",
-                                        a: "Il offre une eau de qualité embouteillée directement à votre robinet, élimine le goût et l'odeur de chlore, retire les métaux lourds et réduit drastiquement vos dépenses ainsi que votre empreinte plastique." },
+                                        a: "Il offre une eau de qualité embouteillée directement à votre robinet, élimine le goût et l'odeur de chlore, retire les métaux lourds et réduit drastiquement vos dépenses ainsi que votre empreinte plastique."
+                                    },
                                     {
                                         q: "Quels problèmes d'eau ce système peut-il résoudre ?",
-                                        a: "Il est particulièrement efficace contre le chlore, les sédiments, le plomb, le mercure, les résidus de pesticides, et les microplastiques, garantissant une eau saine pour boire et cuisiner." },
+                                        a: "Il est particulièrement efficace contre le chlore, les sédiments, le plomb, le mercure, les résidus de pesticides, et les microplastiques, garantissant une eau saine pour boire et cuisiner."
+                                    },
                                     {
                                         q: "Quelle est la différence entre un filtre standard et l'osmose inverse ?",
-                                        a: "Un filtre standard réduit principalement le chlore et les sédiments. L'osmose inverse va plus loin en éliminant jusqu'à 99 % de tous les contaminants dissous grâce à une membrane semi-perméable ultra-fine." },
+                                        a: "Un filtre standard réduit principalement le chlore et les sédiments. L'osmose inverse va plus loin en éliminant jusqu'à 99 % de tous les contaminants dissous grâce à une membrane semi-perméable ultra-fine."
+                                    },
                                     {
                                         q: "À quelle fréquence faut-il remplacer les filtres ?",
-                                        a: "Pour une performance optimale, les cartouches de pré-filtration et de post-filtration doivent être changées tous les 6 à 12 mois. La membrane d'osmose inverse peut durer de 2 à 4 ans." },
+                                        a: "Pour une performance optimale, les cartouches de pré-filtration et de post-filtration doivent être changées tous les 6 à 12 mois. La membrane d'osmose inverse peut durer de 2 à 4 ans."
+                                    },
                                     {
                                         q: "Le système prend-il beaucoup de place sous l'évier ?",
-                                        a: "Nos systèmes modernes sont très compacts. Ils occupent généralement moins de 25 % de l'espace de votre armoire sous l'évier, vous laissant de la place pour vos autres articles ménagers." },
+                                        a: "Nos systèmes modernes sont très compacts. Ils occupent généralement moins de 25 % de l'espace de votre armoire sous l'évier, vous laissant de la place pour vos autres articles ménagers."
+                                    },
                                     {
                                         q: "Puis-je l'utiliser pour mon réfrigérateur et ma machine à glaçons ?",
-                                        a: "Absolument ! Nous pouvons raccorder votre système de filtration à votre frigo pour que vous profitiez d'une eau fraîche et de glaçons cristallins, sans aucun goût indésirable." },
+                                        a: "Absolument ! Nous pouvons raccorder votre système de filtration à votre frigo pour que vous profitiez d'une eau fraîche et de glaçons cristallins, sans aucun goût indésirable."
+                                    },
                                 ].slice(0, showAllFaqs ? undefined : 6).map((item, idx) => (
                                     <AccordionItem key={idx} value={`item-${idx}`} className="border-b-slate-100 px-4">
-                                        <AccordionTrigger className="text-left text-base font-medium leading-6 hover:no-underline py-8 text-slate-800" style={{ }}>
+                                        <AccordionTrigger className="text-left text-base font-medium leading-6 hover:no-underline py-8 text-slate-800" style={{}}>
                                             {item.q}
                                         </AccordionTrigger>
-                                        <AccordionContent className="text-base font-light leading-6 text-slate-500 pb-8 text-justify" style={{ }}>
+                                        <AccordionContent className="text-base font-light leading-6 text-slate-500 pb-8 text-justify" style={{}}>
                                             {item.a}
                                         </AccordionContent>
                                     </AccordionItem>
@@ -418,7 +432,7 @@ const FiltrationSousEvier = () => {
                         <div className="text-left mb-16">
                             <h2
                                 className="text-slate-900 mb-8 text-left"
-                                style={{ }}
+                                style={{}}
                             >                                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">Ressources</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
@@ -428,15 +442,18 @@ const FiltrationSousEvier = () => {
                                 {
                                     title: "Filtre sous évier, l'alternative simple aux pichets filtrants",
                                     img: filtreSousEvierImg,
-                                    link: "/filtre-sous-evier-lalternative-simple-aux-pichets-filtrants" },
+                                    link: "/filtre-sous-evier-lalternative-simple-aux-pichets-filtrants"
+                                },
                                 {
                                     title: "Le plomb dans les vieilles maisons : Comment se protéger?",
                                     img: plombVieillesMaisonsImg,
-                                    link: "/le-plomb-dans-les-vieilles-maisons-comment-se-proteger" },
+                                    link: "/le-plomb-dans-les-vieilles-maisons-comment-se-proteger"
+                                },
                                 {
                                     title: "Pourquoi même l'eau de ville a besoin d'être filtrée?",
                                     img: eauVilleFiltreeImg,
-                                    link: "/pourquoi-meme-leau-de-ville-a-besoin-detre-filtree" },
+                                    link: "/pourquoi-meme-leau-de-ville-a-besoin-detre-filtree"
+                                },
                             ].map((art, i) => (
                                 <NavLink
                                     key={i}

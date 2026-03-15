@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Header from "@/components/Header";
+import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 import Footer from "@/components/Footer";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import { Button } from "@/components/ui/button";
@@ -33,7 +34,8 @@ import {
   Accordion,
   AccordionContent,
   AccordionItem,
-  AccordionTrigger } from "@/components/ui/accordion";
+  AccordionTrigger
+} from "@/components/ui/accordion";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import ConsultationFormSection from "@/components/ConsultationFormSection";
@@ -102,7 +104,12 @@ const TestsEauPage = () => {
       <Header />
       <main>
         {/* 1. Hero Section (Redesigned for Mobile) */}
-        <section className="relative lg:h-[850px] flex flex-col lg:flex-row items-stretch overflow-hidden">
+        <section className="relative lg:h-[850px] flex flex-col items-center overflow-hidden bg-white">
+          <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none">
+            <div className="container mx-auto px-6 pointer-events-auto">
+              <GlobalBreadcrumbs variant="dark" />
+            </div>
+          </div>
           {/* Mobile Image */}
           <div className="lg:hidden w-full h-[300px] relative">
             <img
@@ -125,8 +132,8 @@ const TestsEauPage = () => {
             <div className="absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white/90 via-white/40 to-transparent" />
           </div>
 
-          <div className="container mx-auto px-6 relative z-10 flex items-center py-12 lg:py-0">
-            <div className="max-w-2xl text-slate-900 lg:text-white">
+          <div className="container mx-auto px-6 relative z-10 h-full flex items-center">
+            <div className="max-w-2xl text-slate-900 lg:text-white py-12 lg:py-0">
               <h1
                 className="text-[32px] md:text-[42px] leading-[1.1] md:leading-[1.2] mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl"
                 style={{
@@ -199,7 +206,7 @@ const TestsEauPage = () => {
                 </span>
                 <h2
                   className="text-white mb-8"
-                  style={{ }}
+                  style={{}}
                 >
                   <span className="text-[36px] md:text-[50px] font-bold leading-[1.05] block mb-2">Découvrez</span>
                   <span className="text-[36px] md:text-[50px] font-light leading-[1.05] block text-blue-100">l'invisible.</span>
@@ -293,7 +300,7 @@ const TestsEauPage = () => {
               <div className="lg:col-start-1 lg:row-start-1 flex flex-col justify-center">
                 <h2
                   className="text-slate-900 mb-8"
-                  style={{ }}
+                  style={{}}
                 >
                   <span className="text-[28px] md:text-[48px] font-light leading-[1.1] md:leading-[1.1] block">Quand faut-il faire analyser</span>
                   <span className="text-[28px] md:text-[48px] font-normal leading-[1.1] md:leading-[1.1] block">l'eau de votre maison ?</span>
@@ -317,7 +324,7 @@ const TestsEauPage = () => {
                         </span>
                         <span
                           className={`text-[20px] font-bold transition-colors duration-300 ${activeService === idx ? 'text-blue-600' : 'text-slate-900 group-hover:text-blue-600'}`}
-                          style={{ }}
+                          style={{}}
                         >
                           {item.title}
                         </span>
@@ -364,7 +371,7 @@ const TestsEauPage = () => {
                 NOS SOLUTIONS D'ANALYSE DE LA QUALITÉ D'EAU
               </span>
               <h2 className="text-slate-900 mb-8"
-                style={{ }}
+                style={{}}
               >
                 <span className="text-[28px] md:text-[48px] font-light leading-[1.1] md:leading-[1.1] block">Quelle trousse d'analyse</span>
                 <span className="text-[28px] md:text-[48px] font-normal leading-[1.1] md:leading-[1.1] block">choisir pour votre eau ?</span>
@@ -478,7 +485,7 @@ const TestsEauPage = () => {
               <Button
                 size="lg"
                 className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200 animate-heartbeat"
-                style={{ }}
+                style={{}}
                 asChild
               >
                 <a href="#water-test">
@@ -496,7 +503,7 @@ const TestsEauPage = () => {
             <div className="text-left mb-16">
               <h2
                 className="text-slate-900 mb-8 text-left"
-                style={{ }}
+                style={{}}
               >
                 <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Pour vous éclairer</span>
                 <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">Questions fréquentes</span>
@@ -552,10 +559,10 @@ const TestsEauPage = () => {
                     value={`item-${idx}`}
                     className="border-b-gray-200"
                   >
-                    <AccordionTrigger className="text-left text-base font-medium leading-6 hover:no-underline py-6" style={{ }}>
+                    <AccordionTrigger className="text-left text-base font-medium leading-6 hover:no-underline py-6" style={{}}>
                       {item.q}
                     </AccordionTrigger>
-                    <AccordionContent className="text-base font-light leading-6 text-gray-600 pb-6 text-justify" style={{ }}>
+                    <AccordionContent className="text-base font-light leading-6 text-gray-600 pb-6 text-justify" style={{}}>
                       {item.a}
                     </AccordionContent>
                   </AccordionItem>

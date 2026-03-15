@@ -5,14 +5,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { ChevronRight, Clock, ArrowRight } from "lucide-react";
 import { categories } from "@/data/blogCategories";
-import {
-    Breadcrumb,
-    BreadcrumbList,
-    BreadcrumbItem,
-    BreadcrumbLink,
-    BreadcrumbPage,
-    BreadcrumbSeparator
-} from "@/components/ui/breadcrumb";
+import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 
 const BlogCategory = () => {
     const { categoryId } = useParams();
@@ -41,34 +34,20 @@ const BlogCategory = () => {
         <div className="min-h-screen bg-slate-50">
             <Header />
 
-            <main className="pt-[140px] pb-24">
-                <div className="container mx-auto px-6">
-                    {/* Breadcrumbs */}
-                    <div className="mb-12">
-                        <Breadcrumb className="mb-6">
-                            <BreadcrumbList>
-                                <BreadcrumbItem>
-                                    <BreadcrumbLink asChild>
-                                        <NavLink to="/">Accueil</NavLink>
-                                    </BreadcrumbLink>
-                                </BreadcrumbItem>
-                                <BreadcrumbSeparator />
-                                <BreadcrumbItem>
-                                    <BreadcrumbLink asChild>
-                                        <NavLink to="/blog">Blog</NavLink>
-                                    </BreadcrumbLink>
-                                </BreadcrumbItem>
-                                <BreadcrumbSeparator />
-                                <BreadcrumbItem>
-                                    <BreadcrumbPage>{category.title}</BreadcrumbPage>
-                                </BreadcrumbItem>
-                            </BreadcrumbList>
-                        </Breadcrumb>
+            <main className="relative lg:h-[600px] flex flex-col lg:items-center overflow-hidden bg-white pt-20 lg:pt-0">
+                <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none">
+                    <div className="container mx-auto px-6 max-w-7xl pointer-events-auto text-left">
+                        <GlobalBreadcrumbs variant="light" />
+                    </div>
+                </div>
 
+                <div className="container mx-auto px-6 h-full flex items-center">
+                    <div className="max-w-3xl py-12 lg:py-0 w-full text-left">
                         <h1
                             className="text-4xl md:text-5xl text-slate-900 mb-6 tracking-tight"
                             style={{
-                                fontWeight: 350 }}
+                                fontWeight: 350
+                            }}
                         >
                             {category.title}
                         </h1>
@@ -77,7 +56,12 @@ const BlogCategory = () => {
                             Découvrez tous nos articles et guides complets concernant {category.title.toLowerCase()}.
                         </p>
                     </div>
+                </div>
+            </main>
 
+            {/* Articles List Container */}
+            <div className="bg-slate-50 py-24">
+                <div className="container mx-auto px-6">
                     {/* Articles Grid */}
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
                         {visibleArticles.map((product, pIdx) => (
@@ -108,7 +92,7 @@ const BlogCategory = () => {
                                     </h3>
                                     <p
                                         className="text-slate-600 mb-6 flex-1 text-sm font-light leading-[19px]"
-                                        style={{ }}
+                                        style={{}}
                                     >
                                         {product.desc}
                                     </p>
@@ -134,10 +118,10 @@ const BlogCategory = () => {
                         </div>
                     )}
                 </div>
-            </main>
+            </div>
 
             <Footer />
-        </div>
+        </div >
     );
 };
 
