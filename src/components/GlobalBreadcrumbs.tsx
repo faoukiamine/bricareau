@@ -73,7 +73,7 @@ const GlobalBreadcrumbs: React.FC<GlobalBreadcrumbsProps> = ({
     const isDark = variant === "dark";
 
     return (
-        <Breadcrumb className={cn("mb-6 relative z-20", className)}>
+        <Breadcrumb className={cn("mb-6 relative z-20 hidden lg:block", className)}>
             <BreadcrumbList className={cn(
                 isDark ? "text-slate-500 lg:text-white/60" : "text-slate-500"
             )}>

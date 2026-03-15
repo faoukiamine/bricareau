@@ -97,9 +97,6 @@ const FAQ = () => {
 
                         <div className="container mx-auto px-6 max-w-5xl h-full flex items-center">
                             <div className="py-12 lg:py-0 w-full">
-                                <div className="lg:hidden">
-                                    <GlobalBreadcrumbs variant="light" />
-                                </div>
                                 <h1
                                     className="text-[32px] md:text-[52px] leading-tight text-slate-900 mb-6 tracking-tight"
                                     style={{

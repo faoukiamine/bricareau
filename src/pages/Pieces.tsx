@@ -40,7 +40,10 @@ import ClackKitV300701 from "@/assets/Clack V3007-01.jpg";
 import ClackKitV300705 from "@/assets/Clack V3007-05.jpg";
 import ClackKitV300712 from "@/assets/Clack V3007-12.jpg";
 import UVBallast from "@/assets/Ballast UV.webp";
-import UVQuartzTube from "@/assets/UV Quartz Sleeves.jpg";
+import UVQuartzTube from "@/assets/uv-quartz-sleeves.webp";
+import UVLamp from "@/assets/uv lamps.webp";
+import FRPROHousing from "@/assets/RO housings.jpg";
+import SSROHousing from "@/assets/SS-Membrane-Housing.webp";
 
 const Pieces = () => {
     const partCategories = [
@@ -64,8 +67,10 @@ const Pieces = () => {
             ]
         },
         {
-            name: "Membranes d'osmose inverse",
+            name: "RO housings & Membranes d'osmose inverse",
             items: [
+                { name: "FRP RO housings", image: FRPROHousing },
+                { name: "Stainless Steel RO housings", image: SSROHousing },
                 { name: "Membranes d'osmose inverse résidentielles", image: residentialMembrane },
                 { name: "Membranes d'osmose inverse commerciales & industrielles", image: commercialMembrane },
             ]
@@ -122,7 +127,7 @@ const Pieces = () => {
         {
             name: "Accessoires des systèmes UV",
             items: [
-                { name: "lampes UV" },
+                { name: "Lampes UV", image: UVLamp },
                 { name: "Tubes au Quartz", image: UVQuartzTube },
                 { name: "Ballasts", image: UVBallast }
             ]
@@ -212,9 +217,7 @@ const Pieces = () => {
                                                     src={item.image}
                                                     alt={`${item.name} - Bricareau`}
                                                     className="w-full h-full object-contain"
-                                                    style={{
-                                                        mixBlendMode: item.image === UVQuartzTube ? 'screen' : 'multiply'
-                                                    }}
+                                                    style={{ mixBlendMode: 'multiply' }}
                                                 />
                                             ) : (
                                                 <Package className="h-16 w-16 text-slate-400" />
