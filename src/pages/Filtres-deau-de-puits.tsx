@@ -193,9 +193,9 @@ const FiltresPuits = () => {
                                     fontWeight: 350
                                 }}
                             >
-                                Filtres d'eau de puits pour une eau filtrée sans compromis.
+                                Filtre d'eau de puits pour une eau filtrée sans compromis.
                             </h1>
-                            <p className="font-light md:text-[20px] text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
+                            <p className="font-light md:text-[16px] text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
                                 Nos solutions spécialisées traitent efficacement le fer, le soufre (odeurs d'œufs pourris), le manganèse et l'acidité. Protégez votre plomberie et profitez d'une eau saine et limpide partout dans votre maison.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4">
@@ -617,7 +617,7 @@ const FiltresPuits = () => {
                                         />
                                     </div>
                                     <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
-                                        <h4 className="mb-4 group-hover:text-blue-600 transition-colors tracking-tight">{art.title}</h4>
+                                        <h4 className="mb-4 group-hover:text-blue-600 transition-colors tracking-tight font-medium text-base leading-6 text-[#0F1729]">{art.title}</h4>
                                         <div className="mt-auto">
                                             <NavLink
                                                 to={art.path}

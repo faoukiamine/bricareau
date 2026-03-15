@@ -48,7 +48,8 @@ const OperatorDashboard = () => {
             id: Date.now().toString(),
             sender: "operator",
             text: inputValue,
-            time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) };
+            time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+        };
 
         setMessages([...messages, newMessage]);
         setInputValue("");
@@ -143,7 +144,7 @@ const OperatorDashboard = () => {
                                         </div>
                                     </div>
                                     <div className="flex items-center gap-2">
-                                        <Button variant="outline" className="rounded-xl gap-2 font-bold text-blue-600 border-blue-100 hover:bg-blue-50">
+                                        <Button variant="outline" className="rounded-xl gap-2 text-blue-600 border-blue-100 hover:bg-blue-50">
                                             <Phone className="w-4 h-4" /> Appeler
                                         </Button>
                                         <Button variant="ghost" size="icon" className="rounded-xl">

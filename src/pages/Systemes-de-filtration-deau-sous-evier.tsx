@@ -7,11 +7,12 @@ import {
     Phone,
     CheckCircle2,
     ChevronRight,
-    ShieldCheck,
     Droplets,
     Zap,
-    CircleDollarSign
+    CircleDollarSign,
+    Search
 } from "lucide-react";
+import safetyIcon from "@/assets/1709235770048.png";
 import { NavLink } from "@/components/NavLink";
 import { useNavigate } from "react-router-dom";
 import React, { useEffect } from "react";
@@ -104,8 +105,7 @@ const FiltrationSousEvier = () => {
                                     fontWeight: 350
                                 }}
                             >
-                                Systèmes de filtration sous évier <br />
-                                De la pureté à chaque goutte.
+                                Système de filtration sous évier, de la pureté à chaque goutte.
                             </h1>
                             <p className="font-light text-slate-600 lg:text-white/90 mb-8 max-w-xl text-left lg:text-justify">
                                 Profitez d'une eau potable d'une qualité exceptionnelle directement de votre robinet. Nos systèmes de filtration sous comptoir et d'ultrafiltration éliminent 99% des contaminants pour la santé de votre famille.
@@ -167,14 +167,18 @@ const FiltrationSousEvier = () => {
                         </div>
                         <div className="flex flex-wrap justify-center gap-x-12 gap-y-16 text-center">
                             {[
-                                { icon: ShieldCheck, title: "Goût Incomparable", desc: "Sublimez vos saveurs quotidiennes. Idéal pour un café aux arômes riches et des légumes qui conservent leurs nutriments sans le goût désagréable du chlore." },
+                                { icon: safetyIcon, isImage: true, title: "Goût Incomparable", desc: "Sublimez vos saveurs quotidiennes. Idéal pour un café aux arômes riches et des légumes qui conservent leurs nuriments sans le goût désagréable du chlore." },
                                 { icon: Droplets, title: "Éco-Responsable", desc: "Dites adieu au plastique. Une seule cartouche remplace des milliers de bouteilles à usage unique, offrant un geste concret et puissant pour la planète." },
                                 { icon: Zap, title: "Discrétion Totale", desc: "Une solution compacte et invisible. S'installe discrètement sous votre comptoir de cuisine sans encombrer votre plan de travail ou votre espace de rangement." },
                                 { icon: CircleDollarSign, title: "Économies", desc: "Rentabilisez vite votre investissement. Réduisez vos dépenses annuelles en éliminant définitivement l'achat coûteux d'eau embouteillée pour tout votre foyer." },
                             ].map((item, i) => (
                                 <div key={i} className="flex flex-col items-center group w-full sm:w-[calc(50%-3rem)] lg:w-[calc(25%-3rem)]">
                                     <div className="w-20 h-20 rounded-2xl bg-white flex items-center justify-center mb-8 transition-all group-hover:scale-110 group-hover:bg-white/10">
-                                        <item.icon className="h-10 w-10 text-blue-600 group-hover:text-white" />
+                                        {item.isImage ? (
+                                            <img src={item.icon as string} alt={item.title} className="h-12 w-12 object-contain" />
+                                        ) : (
+                                            <item.icon className="h-10 w-10 text-blue-600 group-hover:text-white" />
+                                        )}
                                     </div>
                                     <h3 className="mb-4 tracking-tight">{item.title}</h3>
                                     <p className="font-light text-blue-100 text-justify">{item.desc}</p>
@@ -468,7 +472,7 @@ const FiltrationSousEvier = () => {
                                         />
                                     </div>
                                     <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
-                                        <h4 className="mb-4 group-hover:text-blue-600 transition-colors tracking-tight">{art.title}</h4>
+                                        <h4 className="mb-4 group-hover:text-blue-600 transition-colors tracking-tight font-medium text-base leading-6 text-[#0F1729]">{art.title}</h4>
                                         <div className="mt-auto">
                                             <span className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-sm">
                                                 Lire <ChevronRight className="h-4 w-4 transform group-hover:translate-x-1 transition-transform" />

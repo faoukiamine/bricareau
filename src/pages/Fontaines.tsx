@@ -17,7 +17,6 @@ import {
     Coins,
     Clock,
     Layout,
-    ShieldCheck,
     HeartPulse,
     Waves,
     Leaf,
@@ -27,8 +26,12 @@ import {
     Plus,
     Minus,
     PiggyBank,
-    Ban
+    Ban,
+    Award,
+    CircleDollarSign,
+    Search
 } from "lucide-react";
+import safetyIcon from "@/assets/1709235770048.png";
 import { Button } from "@/components/ui/button";
 import { NavLink } from "@/components/NavLink";
 import heroFountains from "@/assets/Fontaines d'eau.webp";
@@ -261,7 +264,7 @@ const Fontaines = () => {
                             >
                                 L'Art de l'eau pure & rafraîchissante.
                             </h1>
-                            <p className="font-light text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left">
+                            <p className="font-light text-slate-600 lg:text-white/95 mb-8 max-w-xl text-justify">
                                 Élevez votre expérience d'hydratation avec nos refroidisseurs d'eau haute performance. Design élégant et pureté absolue.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4">

@@ -19,11 +19,13 @@ import {
   Home,
   ArrowRight,
   Heart,
-  ShieldCheck,
   HeartPulse,
   Sprout,
-  Sparkles
+  Sparkles,
+  Search,
+  Check
 } from "lucide-react";
+import safetyIcon from "@/assets/1709235770048.png";
 import { NavLink } from "@/components/NavLink";
 import {
   Accordion,
@@ -71,7 +73,7 @@ const faqs = [
   },
   {
     question: "Le calcaire va-t-il disparaître de ma bouilloire ou de ma douche ?",
-    answer: "Le conditionneur prévient l'accumulation de calcaire dur à l'intérieur de votre plomberie et de votre chauffe-eau. En surface (verre, chrome), vous pourriez voir une légère poussière blanche facile à essuyer, car le calcaire ne peut plus s'incruster solidement."
+    answer: "Le conditionneur prévient l'accumulation de calcaire dur à l'intérieur de votre plomberie et de votre chauffe-eau. En surface (verre, chrome), vous pourriez voir une légère poussière blanche facile à essuyer, car le calcaire ne peut plus s'incrustrer solidement."
   },
   {
     question: "Est-ce efficace contre une eau extrêmement dure ?",
@@ -169,7 +171,7 @@ const ConditionneursSansSel = () => {
             <div className="hidden lg:block absolute inset-0 bg-black/40 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
             <div className="hidden lg:block absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-white via-white/10 to-transparent" />
             <div className="hidden lg:block absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white/90 via-white/40 to-transparent" />
-          </div >
+          </div>
 
           <div className="container relative z-10 mx-auto px-4 h-full flex items-center lg:px-6">
             <div className="max-w-2xl lg:text-white py-12 lg:py-0">
@@ -177,13 +179,12 @@ const ConditionneursSansSel = () => {
                 NOUVEAU CHEZ BRICAREAU
               </span>
               <h1
-                className="text-[32px] md:text-[42px] leading-[1.1] md:leading-[1.2] mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg max-w-xl"
+                className="text-[32px] md:text-[42px] leading-[1.1] md:leading-[1.2] mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-justify lg max-w-xl"
                 style={{
                   fontWeight: 350
                 }}
               >
-                Conditionneur d'eau sans sel <br />
-                L'anti-tartre écologique par excellence.
+                Conditionneur d'eau sans sel, l'anti-tartre écologique par excellence.
               </h1>
               <p className="font-light text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
                 Neutralisez le calcaire sans sel, sans électricité et sans gaspillage d'eau. Notre technologie avancée TAC protège votre plomberie tout en préservant les minéraux essentiels à votre santé.
@@ -280,17 +281,22 @@ const ConditionneursSansSel = () => {
                 {/* Features Grid - Modern Cards */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                   {[
-                    { c: "01", t: "Économies", d: "Réduit les coûts d'entretien et prolonge la vie des appareils." },
-                    { c: "02", t: "Installation", d: "S'installe facilement sur l'arrivée d'eau principale." },
-                    { c: "03", t: "Qualité", d: "Conserve l'eau potable et riche en minéraux naturels." }
+                    { icon: safetyIcon, isImage: true, title: "Sécurité maximale", desc: "Protection active contre les sédiments et les impuretés pour toute la famille." },
+                    { icon: Check, title: "Économies", desc: "Réduit les coûts d'entretien et prolonge la vie des appareils." },
+                    { icon: Home, title: "Installation", desc: "S'installe facilement sur l'arrivée d'eau principale." },
+                    { icon: Heart, title: "Qualité", desc: "Conserve l'eau potable et riche en minéraux naturels." }
                   ].map((item, idx) => (
                     <div key={idx} className="group relative pt-8 pb-6 px-6 bg-white rounded-[2rem] shadow-sm border border-blue-200 hover:border-blue-300 hover:shadow-xl hover:shadow-blue-900/5 transition-all duration-500 hover:-translate-y-1">
-                      <span className="absolute top-4 right-6 text-4xl font-black text-slate-100 group-hover:text-blue-50 transition-colors duration-500 select-none">
-                        {item.c}
-                      </span>
-                      <h4 className="text-slate-900 mb-3 relative z-10">{item.t}</h4>
+                      <div className="w-16 h-16 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center mb-8 group-hover:bg-blue-600 group-hover:text-white transition-all duration-500 shadow-sm group-hover:shadow-blue-600/30 group-hover:rotate-3">
+                        {item.isImage ? (
+                          <img src={item.icon as string} alt={item.title} className="h-10 w-10 object-contain" />
+                        ) : (
+                          <item.icon className="h-8 w-8 transition-transform duration-500" />
+                        )}
+                      </div>
+                      <h4 className="text-slate-900 mb-3 relative z-10">{item.title}</h4>
                       <p className="text-sm text-slate-500 font-light relative z-10 text-justify">
-                        {item.d}
+                        {item.desc}
                       </p>
                     </div>
                   ))}
@@ -431,7 +437,7 @@ const ConditionneursSansSel = () => {
                     />
                   </div>
                   <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
-                    <h4 className="mb-4 group-hover:text-blue-600 transition-colors tracking-tight">{art.title}</h4>
+                    <h4 className="mb-4 group-hover:text-blue-600 transition-colors tracking-tight font-medium text-base leading-6 text-[#0F1729]">{art.title}</h4>
                     <div className="mt-auto">
                       <span className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-sm">
                         Lire <ChevronRight className="h-4 w-4 transform group-hover:translate-x-1 transition-transform" />
@@ -447,7 +453,7 @@ const ConditionneursSansSel = () => {
       </main>
 
       <Footer />
-    </div>
+    </div >
   );
 };
 

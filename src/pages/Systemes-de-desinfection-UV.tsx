@@ -5,20 +5,36 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import {
     ArrowRight,
-    Check,
-    Phone,
-    CheckCircle2,
-    X,
-    ChevronRight,
-    ShieldCheck,
     Droplets,
+    Star,
+    ChevronRight,
+    CheckCircle2,
+    Clock,
+    Sparkles,
+    Shield,
     Zap,
-    Activity,
-    ShieldAlert,
-    BatteryLow,
+    Shirt,
+    TrendingDown,
+    Quote,
+    ChevronLeft,
+    Play,
+    CircleDollarSign,
+    Search,
+    Trophy,
+    Award,
+    HandCoins,
+    Phone,
+    Check,
+    X,
+    Medal,
     CupSoda,
-    HeartHandshake
+    Activity,
+    HeartHandshake,
+    BatteryLow,
+    ShieldAlert,
+    HeartPulse
 } from "lucide-react";
+import safetyIcon from "@/assets/1709235770048.png";
 import { NavLink } from "@/components/NavLink";
 import {
     Accordion,
@@ -99,10 +115,9 @@ const DesinfectionUV = () => {
                                     fontWeight: 350
                                 }}
                             >
-                                Systèmes de désinfection UV <br />
-                                Zéro produit chimique, 100% de protection.
+                                Systèmes de désinfection UV, zéro produit chimique, 100% de protection.
                             </h1>
-                            <p className="font-light md:text-[20px] text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
+                            <p className="font-light md:text-[16px] text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
                                 Éliminez 99,99% des bactéries, virus et kystes de votre eau de puits ou municipale sans aucun additif chimique. Assurez une pureté microbiologique totale pour la sécurité de votre famille à chaque robinet.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4">
@@ -161,7 +176,7 @@ const DesinfectionUV = () => {
                         </div>
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 text-center">
                             {[
-                                { icon: ShieldCheck, title: "Sans produits chimiques", desc: "Aucun goût ni odeur de chlore ajouté à votre eau." },
+                                { icon: safetyIcon, isImage: true, title: "Sans produits chimiques", desc: "Aucun goût ni odeur de chlore ajouté à votre eau." },
                                 { icon: Zap, title: "Action instantanée", desc: "L'eau est désinfectée dès qu'elle traverse le débit." },
                                 { icon: Activity, title: "Efficacité prouvée", desc: "Détruit l'ADN des micro-organismes nocifs." },
                                 { icon: HeartHandshake, title: "Sécurité 100%", desc: "Protection permanente 24h/24 contre les bactéries." },
@@ -172,7 +187,11 @@ const DesinfectionUV = () => {
                             ].map((benefit, i) => (
                                 <div key={i} className="flex flex-col items-center group">
                                     <div className="w-20 h-20 rounded-2xl bg-white flex items-center justify-center mb-8 transition-all group-hover:scale-110 group-hover:bg-white/10">
-                                        <benefit.icon className="h-10 w-10 text-blue-600 group-hover:text-white" />
+                                        {benefit.isImage ? (
+                                            <img src={benefit.icon as string} alt={benefit.title} className="h-12 w-12 object-contain" />
+                                        ) : (
+                                            <benefit.icon className="h-10 w-10 text-blue-600 group-hover:text-white" />
+                                        )}
                                     </div>
                                     <h3 className="mb-4 tracking-tight">{benefit.title}</h3>
                                     <p className="font-light text-blue-100 text-justify">{benefit.desc}</p>
@@ -572,7 +591,7 @@ const DesinfectionUV = () => {
                                         <img src={art.img} alt={`${art.title} - Guide expert Bricareau sur la désinfection UV`} className="w-full h-full object-cover transition-transform group-hover:scale-110" />
                                     </div>
                                     <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
-                                        <h4 className="mb-4 group-hover:text-blue-600 transition-colors tracking-tight">{art.title}</h4>
+                                        <h4 className="mb-4 group-hover:text-blue-600 transition-colors tracking-tight font-medium text-base leading-6 text-[#0F1729]">{art.title}</h4>
                                         <div className="mt-auto">
                                             <NavLink to={art.path} className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-sm">
                                                 Lire <ChevronRight className="h-4 w-4" />

@@ -108,7 +108,7 @@ const FAQ = () => {
                                 >
                                     Obtenez des <span className="text-blue-600">réponses</span> à vos questions
                                 </h1>
-                                <p className="text-slate-600 max-w-2xl font-light">
+                                <p className="text-slate-600 max-w-xl font-light">
                                     Vous trouverez ci-dessous les réponses aux questions les plus fréquentes. Recherchez les sujets qui vous intéressent ou triez par catégorie.
                                 </p>
                             </div>
@@ -194,7 +194,12 @@ const FAQ = () => {
 
                                     return (
                                         <section key={cat.id} id={cat.id}>
-                                            <h2 className="text-slate-900 mb-6">{cat.title}</h2>
+                                            <div className="text-left mb-12">
+                                                <h2 className="text-slate-900 mb-6">
+                                                    <span className="text-[32px] md:text-[48px] font-normal leading-[1.1] block">{cat.title}</span>
+                                                </h2>
+                                                <div className="w-20 h-1 bg-blue-600"></div>
+                                            </div>
 
                                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                                                 {displayItems.map((item, qIdx) => (
@@ -207,7 +212,7 @@ const FAQ = () => {
                                                     <Button
                                                         onClick={() => toggleExpandedCategory(cat.id)}
                                                         variant="ghost"
-                                                        className="text-blue-600 hover:text-blue-700 hover:bg-blue-50 font-medium px-4 h-10 -ml-4"
+                                                        className="text-blue-600 hover:text-blue-700 hover:bg-blue-50 px-4 h-10 -ml-4"
                                                     >
                                                         Afficher plus de questions
                                                     </Button>
@@ -237,10 +242,10 @@ const FAQ = () => {
                             </p>
                         </div>
                         <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                            <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50 rounded-full px-12 h-16 text-lg font-bold shadow-lg" asChild>
+                            <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50 rounded-full px-12 h-16 text-lg shadow-lg" asChild>
                                 <NavLink to="/consultation">Planifiez une consultation gratuite</NavLink>
                             </Button>
-                            <Button size="lg" variant="outline" className="border-2 border-white text-white bg-transparent hover:bg-white/10 rounded-full px-12 h-16 text-lg font-bold flex items-center gap-2" asChild>
+                            <Button size="lg" variant="outline" className="border-2 border-white text-white bg-transparent hover:bg-white/10 rounded-full px-12 h-16 text-lg flex items-center gap-2" asChild>
                                 <a href="tel:18552649328">
                                     <Phone className="w-5 h-5" />
                                     1-855-264-9328

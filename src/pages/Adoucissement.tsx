@@ -221,7 +221,6 @@ const Adoucissement = () => {
                             {/* Right Side: Content */}
                             <div className="w-full lg:w-1/2 lg:pt-4 relative z-10">
                                 <span className="text-sm font-bold uppercase tracking-widest text-blue-600 mb-4 block flex items-center gap-2">
-                                    <span className="w-8 h-[2px] bg-blue-600 inline-block"></span>
                                     ADOUCISSEURS D'EAU RÉSIDENTIELS
                                 </span>
                                 <h2 className="text-slate-900 mb-6">
@@ -303,7 +302,6 @@ const Adoucissement = () => {
                             {/* Left Side (visually): Content */}
                             <div className="w-full lg:w-1/2 lg:pt-4 relative z-10">
                                 <span className="text-sm font-bold uppercase tracking-widest text-blue-600 mb-4 block flex items-center gap-2">
-                                    <span className="w-8 h-[2px] bg-blue-600 inline-block"></span>
                                     SOLUTION MOBILE
                                 </span>
                                 <h2 className="text-slate-900 mb-6">
@@ -385,7 +383,6 @@ const Adoucissement = () => {
                             {/* Right Side: Content */}
                             <div className="w-full lg:w-1/2 lg:pt-4 relative z-10">
                                 <span className="text-sm font-bold uppercase tracking-widest text-blue-600 mb-4 block flex items-center gap-2">
-                                    <span className="w-8 h-[2px] bg-blue-600 inline-block"></span>
                                     ALTERNATIVE ÉCOLOGIQUE
                                 </span>
                                 <h2 className="text-slate-900 mb-6">
@@ -640,7 +637,7 @@ const Adoucissement = () => {
                                     </div>
                                     <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
                                         <NavLink to={art.link}>
-                                            <h4 className="mb-4 group-hover:text-blue-600 transition-colors tracking-tight">{art.title}</h4>
+                                            <h4 className="mb-4 group-hover:text-blue-600 transition-colors tracking-tight font-medium text-base leading-6 text-[#0F1729]">{art.title}</h4>
                                         </NavLink>
                                         <div className="mt-auto">
                                             <NavLink to={art.link} className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-sm">

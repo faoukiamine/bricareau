@@ -75,7 +75,7 @@ const Service = () => {
                                     </p>
 
                                     <div className="flex flex-col sm:flex-row gap-4">
-                                        <Button className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-10 h-14 text-lg font-bold group shadow-xl shadow-blue-200/50">
+                                        <Button className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-10 h-14 text-lg group shadow-xl shadow-blue-200/50">
                                             Planifier un service
                                             <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
                                         </Button>
@@ -223,7 +223,7 @@ const Service = () => {
                                             <Textarea id="message" className="min-h-[56px] bg-white border-slate-200 rounded-sm focus:ring-blue-600" />
                                         </div>
                                         <div className="md:col-span-2 text-left pt-4">
-                                            <Button className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-12 h-14 text-lg font-bold shadow-lg transition-transform hover:scale-105 uppercase tracking-wider">
+                                            <Button className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-12 h-14 text-lg shadow-lg transition-transform hover:scale-105 uppercase tracking-wider">
                                                 Soumettre
                                             </Button>
                                         </div>

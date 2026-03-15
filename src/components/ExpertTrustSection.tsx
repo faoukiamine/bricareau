@@ -59,7 +59,7 @@ const ExpertTrustSection = () => {
                                 asChild
                             >
                                 <a href="/tests-eau#water-test" className="flex items-center justify-center gap-3">
-                                    Réservez votre analyse d'eau
+                                    <font style={{ fontWeight: "300" }}>Réservez votre analyse d'eau </font>                                                    
                                     <ArrowRight className="w-5 h-5" />
                                 </a>
                             </Button>

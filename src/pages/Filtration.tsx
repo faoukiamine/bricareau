@@ -219,7 +219,6 @@ const Filtration = () => {
                             {/* Right Side: Content */}
                             <div className="w-full lg:w-1/2 lg:pt-4 relative z-10">
                                 <span className="text-sm font-bold uppercase tracking-widest text-blue-600 mb-4 block flex items-center gap-2">
-                                    <span className="w-8 h-[2px] bg-blue-600 inline-block"></span>
                                     Eau filtrée pour toute la maison
                                 </span>
                                 <h2 className="text-slate-900 mb-6">
@@ -301,7 +300,6 @@ const Filtration = () => {
                             {/* Left Side (visually): Content */}
                             <div className="w-full lg:w-1/2 lg:pt-4 relative z-10">
                                 <span className="text-sm font-bold uppercase tracking-widest text-blue-600 mb-4 block flex items-center gap-2">
-                                    <span className="w-8 h-[2px] bg-blue-600 inline-block"></span>
                                     EAU PURE À VOLONTÉ
                                 </span>
                                 <h2 className="text-slate-900 mb-6">
@@ -384,7 +382,6 @@ const Filtration = () => {
                             {/* Right Side: Content */}
                             <div className="w-full lg:w-1/2 lg:pt-4 relative z-10">
                                 <span className="text-sm font-bold uppercase tracking-widest text-blue-600 mb-4 block flex items-center gap-2">
-                                    <span className="w-8 h-[2px] bg-blue-600 inline-block"></span>
                                     COMPACT & PUISSANT
                                 </span>
                                 <h2 className="text-slate-900 mb-6">
@@ -681,7 +678,7 @@ const Filtration = () => {
                                         />
                                     </div>
                                     <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
-                                        <h4 className="mb-4 group-hover:text-blue-600 transition-colors tracking-tight">{art.title}</h4>
+                                        <h4 className="mb-4 group-hover:text-blue-600 transition-colors tracking-tight font-medium text-base leading-6 text-[#0F1729]">{art.title}</h4>
                                         <div className="mt-auto">
                                             <NavLink
                                                 to="#"

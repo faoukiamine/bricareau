@@ -24,11 +24,11 @@ import {
   Heart,
   Sparkles,
   FileText,
-  ShieldCheck,
   ChevronLeft,
   MessageCircle,
   Armchair
 } from "lucide-react";
+import safetyIcon from "@/assets/1709235770048.png";
 import { NavLink } from "@/components/NavLink";
 import {
   Accordion,
@@ -82,7 +82,7 @@ const TestsEauPage = () => {
     },
     {
       title: "Goût ou odeur suspecte",
-      icon: ShieldCheck,
+      icon: Droplet,
       img: smellImg,
       desc: "Une eau malodorante ou au goût étrange peut indiquer une contamination. Identifions la cause ensemble."
     },
@@ -141,9 +141,9 @@ const TestsEauPage = () => {
                 }}
               >
                 <span className="sr-only">Montréal • Rive-Sud • Rive-Nord</span>
-                Analyses d'eau professionnelles <br /> & Tests de laboratoire
+                Analyses d'eau professionnelles & Tests de laboratoire
               </h1>
-              <p className="font-light text-slate-600 lg:text-white/95 mb-8 max-w-xl">
+              <p className="font-light text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
                 Besoin d'une analyse d'eau dans la région métropolitaine ? Que ce soit pour une vérification annuelle, une transaction hypothécaire ou un souci de qualité, Bricareau offre des tests complets de laboratoire partout dans le Grand Montréal, Laval et les couronnes.
               </p>
 
@@ -275,8 +275,8 @@ const TestsEauPage = () => {
                     key={id}
                     className="group bg-white/10 hover:bg-white/20 border border-white/10 hover:border-white/20 rounded-3xl p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-blue-900/20 backdrop-blur-sm"
                   >
-                    <div className="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform duration-500 border border-white/30">
-                      <div className="h-6 w-6 text-white">
+                    <div className="w-16 h-16 rounded-2xl bg-blue-50 flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors duration-500">
+                      <div className="h-8 w-8 text-blue-600 group-hover:text-white transition-colors">
                         {item.icon}
                       </div>
                     </div>

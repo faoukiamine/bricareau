@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input";
 import sedimentFilterImg from "@/assets/PURTREX_PX05-9_78_2000x.webp";
 import carbonFilterImg from "@/assets/pentek-cbc-10-carbon-filter-cartridge-155162-43_2000x.webp";
 import pleatedFilterImg from "@/assets/pentek-r30-20bb-sediment-filter-cartridge-155430-43_2000x.webp";
-import woundFilterImg from "@/assets/Filtres bobinés.png";
+import woundFilterImg from "@/assets/PENTEK_DGD-2501_2000x.webp";
 import inlineFilterImg from "@/assets/OMNIPURE_K2533-JJ_2000x.webp";
 import deionizationFilterImg from "@/assets/PENTEK_WS-10_WATER_SOFTENING_CARTRIDGE_155319-43_-2_2000x.webp";
 import membraneFilterImg from "@/assets/FILMTEC_TW30-1812-50HR_REVERSE_OSMOSIS_MEMBRANE_-_50_GPD_2000x.webp";
@@ -36,46 +36,45 @@ const FiltresDeRemplacement = () => {
         {
             name: "Filtres à papier plissé",
             items: [
-                { name: "Résine adoucisseur (sac 25kg)", price: "199.99", stock: "En stock", image: pleatedFilterImg },
-                { name: "Sel en pastilles (sac 20kg)", price: "12.99", stock: "En stock", image: pleatedFilterImg },
-                { name: "Sel en cristaux (sac 20kg)", price: "11.99", stock: "En stock", image: pleatedFilterImg },
-                { name: "Nettoyant pour résine", price: "29.99", stock: "En stock", image: pleatedFilterImg }
+                { name: "Filtre plissé 20 microns", price: "28.99", stock: "En stock", image: pleatedFilterImg },
+                { name: "Filtre plissé 5 microns", price: "28.99", stock: "En stock", image: pleatedFilterImg },
+                { name: "Filtre plissé Big Blue 10\"", price: "34.99", stock: "En stock", image: pleatedFilterImg },
+                { name: "Filtre plissé Big Blue 20\"", price: "54.99", stock: "En stock", image: pleatedFilterImg }
             ]
         },
         {
             name: "Filtres à bobine",
             items: [
-                { name: "Résine adoucisseur (sac 25kg)", price: "199.99", stock: "En stock", image: woundFilterImg },
-                { name: "Sel en pastilles (sac 20kg)", price: "12.99", stock: "En stock", image: woundFilterImg },
-                { name: "Sel en cristaux (sac 20kg)", price: "11.99", stock: "En stock", image: woundFilterImg },
-                { name: "Nettoyant pour résine", price: "29.99", stock: "En stock", image: woundFilterImg }
+                { name: "Filtre bobiné 50 microns", price: "19.99", stock: "En stock", image: woundFilterImg },
+                { name: "Filtre bobiné 20 microns", price: "19.99", stock: "En stock", image: woundFilterImg },
+                { name: "Filtre bobiné 5 microns", price: "19.99", stock: "En stock", image: woundFilterImg },
+                { name: "Filtre bobiné 1 micron", price: "19.99", stock: "En stock", image: woundFilterImg }
             ]
         },
         {
             name: "Filtres inline",
             items: [
-                { name: "Résine adoucisseur (sac 25kg)", price: "199.99", stock: "En stock", image: inlineFilterImg },
-                { name: "Sel en pastilles (sac 20kg)", price: "12.99", stock: "En stock", image: inlineFilterImg },
-                { name: "Sel en cristaux (sac 20kg)", price: "11.99", stock: "En stock", image: inlineFilterImg },
-                { name: "Nettoyant pour résine", price: "29.99", stock: "En stock", image: inlineFilterImg }
+                { name: "Filtre inline sédiment 1/4\"", price: "24.99", stock: "En stock", image: inlineFilterImg },
+                { name: "Filtre inline charbon GAC", price: "29.99", stock: "En stock", image: inlineFilterImg },
+                { name: "Filtre inline reminéralisation", price: "34.99", stock: "En stock", image: inlineFilterImg },
+                { name: "Filtre inline alcalin", price: "39.99", stock: "En stock", image: inlineFilterImg }
             ]
         },
         {
             name: "Filtres de déionisation",
             items: [
-                { name: "Valve de contrôle électronique", price: "349.99", stock: "Sur commande", image: deionizationFilterImg },
-                { name: "Raccord rapide 3/4\"", price: "8.99", stock: "En stock", image: deionizationFilterImg },
-                { name: "Valve de dérivation", price: "45.99", stock: "En stock", image: deionizationFilterImg },
-                { name: "Kit de raccordement", price: "79.99", stock: "En stock", image: deionizationFilterImg }
+                { name: "Cartouche DI Standard 10\"", price: "69.99", stock: "En stock", image: deionizationFilterImg },
+                { name: "Cartouche DI Haute Capacité", price: "89.99", stock: "En stock", image: deionizationFilterImg },
+                { name: "Kit de déionisation complet", price: "149.99", stock: "En stock", image: deionizationFilterImg }
             ]
         },
         {
             name: "Membranes d'osmose inverse",
             items: [
-                { name: "Résine adoucisseur (sac 25kg)", price: "199.99", stock: "En stock", image: membraneFilterImg },
-                { name: "Sel en pastilles (sac 20kg)", price: "12.99", stock: "En stock", image: membraneFilterImg },
-                { name: "Sel en cristaux (sac 20kg)", price: "11.99", stock: "En stock", image: membraneFilterImg },
-                { name: "Nettoyant pour résine", price: "29.99", stock: "En stock", image: membraneFilterImg }
+                { name: "Membrane 50 GPD", price: "84.99", stock: "En stock", image: membraneFilterImg },
+                { name: "Membrane 75 GPD", price: "94.99", stock: "En stock", image: membraneFilterImg },
+                { name: "Membrane 100 GPD", price: "109.99", stock: "En stock", image: membraneFilterImg },
+                { name: "Membrane commerciale LP", price: "249.99", stock: "En stock", image: membraneFilterImg }
             ]
         },
     ];
@@ -135,9 +134,14 @@ const FiltresDeRemplacement = () => {
                                         key={itemIndex}
                                         className="bg-card border border-border rounded-lg p-6 hover:shadow-lg transition-shadow"
                                     >
-                                        <div className="aspect-square bg-slate-100 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
+                                        <div className="aspect-square bg-[#f0f4f8] rounded-lg mb-4 flex items-center justify-center overflow-hidden p-4">
                                             {item.image ? (
-                                                <img src={item.image} alt={item.name} className="w-full h-full object-cover" />
+                                                <img
+                                                    src={item.image}
+                                                    alt={item.name}
+                                                    className="w-full h-full object-contain"
+                                                    style={{ mixBlendMode: 'multiply' }}
+                                                />
                                             ) : (
                                                 <Package className="h-16 w-16 text-slate-400" />
                                             )}

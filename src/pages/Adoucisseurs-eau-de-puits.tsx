@@ -8,7 +8,6 @@ import heroBath from "@/assets/kid-playing-bathtub.jpg";
 import heroDesktop from "@/assets/family-preparing-dinner-together.jpg";
 import {
     ArrowRight,
-
     Droplets,
     Star,
     ChevronRight,
@@ -22,14 +21,17 @@ import {
     Quote,
     ChevronLeft,
     Play,
-    Check,
-    X,
-    ShieldCheck,
-    Medal,
+    CircleDollarSign,
+    Search,
     Trophy,
     Award,
-    HandCoins
+    HandCoins,
+    Phone,
+    Check,
+    X,
+    Medal
 } from "lucide-react";
+import safetyIcon from "@/assets/1709235770048.png";
 import { NavLink } from "@/components/NavLink";
 import { useNavigate } from "react-router-dom";
 import waterTestingImg from "@/assets/2147800429.jpg";
@@ -218,8 +220,7 @@ const AdoucisseursEauDePuits = () => {
                                     fontWeight: 350
                                 }}
                             >
-                                Adoucisseur d'eau de puits <br />
-                                Une protection experte contre le fer et le calcaire.
+                                Adoucisseur d'eau de puits, une protection experte contre le fer et le calcaire.
                             </h1>
                             <p className="font-light text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
                                 Profitez d'une eau soyeuse et douce, même avec un puits privé. Nos adoucisseurs haute performance neutralisent la dureté extrême et les traces de fer pour préserver votre santé et vos installations.
@@ -272,15 +273,20 @@ const AdoucisseursEauDePuits = () => {
                                 { icon: Droplets, title: "Qualité supérieure", desc: "Une douceur incomparable pour votre peau et vos cheveux dès la première douche." },
                                 { icon: Sparkles, title: "Vaisselle étincelante", desc: "Éliminez les taches de calcaire et le voile blanc sur vos verres et plats sans effort." },
                                 { icon: Shirt, title: "Linge plus doux", desc: "Des vêtements qui restent éclatants et souples plus longtemps, sans adoucissants." },
+                                { icon: safetyIcon, isImage: true, title: "Sécurité accrue", desc: "Tranquillité d'esprit totale pour la santé de votre famille." },
                                 { icon: Shield, title: "Protection totale", desc: "Prolongez la durée de vie de votre plomberie et de vos électroménagers coûteux." },
                                 { icon: HandCoins, title: "Économies garanties", desc: "Réduisez vos factures d'énergie et vos dépenses en savons et détergents de 50%." },
                                 { icon: Zap, title: "Efficacité HE", desc: "Une technologie haute efficacité qui consomme moins de sel et d'eau lors des régénérations." },
                                 { icon: Zap, title: "Protection Éco-Durable", desc: "Préservez l'environnement et vos installations septiques en diminuant le rejet de produits chimiques." },
                                 { icon: Award, title: "Expertise Bricareau", desc: "Installation certifiée et service après-vente pour une tranquillité d'esprit totale." }
-                            ].map((item, id) => (
-                                <div key={id} className="flex flex-col items-center group w-full sm:w-[calc(50%-3rem)] lg:w-[calc(25%-3rem)]">
+                            ].map((item, idx) => (
+                                <div key={idx} className="flex flex-col items-center group w-full sm:w-[calc(50%-3rem)] lg:w-[calc(25%-3rem)]">
                                     <div className="w-20 h-20 rounded-2xl bg-white flex items-center justify-center mb-8 transition-all group-hover:scale-110 group-hover:bg-white/10">
-                                        <item.icon className="h-10 w-10 text-blue-600 group-hover:text-white" />
+                                        {item.isImage ? (
+                                            <img src={item.icon as string} alt={item.title} className="h-12 w-12 object-contain" />
+                                        ) : (
+                                            <item.icon className="h-10 w-10 text-blue-600 group-hover:text-white" />
+                                        )}
                                     </div>
                                     <h4 className="mb-4 tracking-tight">{item.title}</h4>
                                     <p className="font-light text-blue-100 text-justify">{item.desc}</p>
@@ -621,7 +627,7 @@ const AdoucisseursEauDePuits = () => {
                                     </div>
                                     <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
                                         <NavLink to={art.link}>
-                                            <h4 className="mb-4 group-hover:text-blue-600 transition-colors tracking-tight">{art.title}</h4>
+                                            <h4 className="mb-4 group-hover:text-blue-600 transition-colors tracking-tight font-medium text-base leading-6 text-[#0F1729]">{art.title}</h4>
                                         </NavLink>
                                         <div className="mt-auto">
                                             <NavLink

@@ -11,7 +11,6 @@ import {
     ChevronRight,
     Star,
     Droplets,
-    ShieldCheck,
     Smartphone,
     Search,
     Clock,
@@ -21,8 +20,10 @@ import {
     CheckCircle2,
     X,
     Settings,
-    Wrench
+    Wrench,
+    CircleDollarSign
 } from "lucide-react";
+import safetyIcon from "@/assets/1709235770048.png";
 import { NavLink } from "@/components/NavLink";
 import {
     Accordion,
@@ -189,13 +190,17 @@ const FiltreEauHauteEfficacite = () => {
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                             {[
                                 { title: "Fini le goût et les odeurs", desc: "Élimine le chlore et les sédiments pour une eau pure au robinet.", icon: Droplets },
-                                { title: "Protection des appareils", desc: "Empêche l'accumulation de tartre dans votre chauffe-eau et tuyauterie.", icon: ShieldCheck },
+                                { title: "Protection des appareils", desc: "Empêche l'accumulation de tartre dans votre chauffe-eau et tuyauterie.", icon: safetyIcon, isImage: true },
                                 { title: "Peau et cheveux plus doux", desc: "Ressentez la différence dès la première douche avec une eau sans calcaire.", icon: Heart },
                                 { title: "Économies d'énergie", desc: "Des appareils plus propres fonctionnent avec une efficacité maximale.", icon: Zap }
                             ].map((benefit, i) => (
-                                <div key={i} className="flex flex-col items-center text-center p-8 transition-all hover:-translate-y-2">
-                                    <div className="w-20 h-20 rounded-2xl bg-blue-50 flex items-center justify-center mb-6">
-                                        <benefit.icon className="w-10 h-10 text-blue-600" />
+                                <div key={i} className="flex flex-col items-center group w-full sm:w-[calc(50%-3rem)] lg:w-[calc(25%-3rem)]">
+                                    <div className="w-20 h-20 rounded-2xl bg-white flex items-center justify-center mb-8 transition-all group-hover:scale-110 group-hover:bg-white/10">
+                                        {benefit.isImage ? (
+                                            <img src={benefit.icon as string} alt={benefit.title} className="h-12 w-12 object-contain" />
+                                        ) : (
+                                            <benefit.icon className="h-10 w-10 text-blue-600 group-hover:text-white font-light" strokeWidth={1.5} />
+                                        )}
                                     </div>
                                     <h3 className="text-slate-900 mb-4">{benefit.title}</h3>
                                     <p className="font-light text-slate-500 text-sm text-justify">{benefit.desc}</p>
@@ -212,7 +217,7 @@ const FiltreEauHauteEfficacite = () => {
                             <h2 className="text-white mb-8 md:leading-[48px]">Prêt pour une meilleure eau ?</h2>
                             <p className="text-blue-100 font-light">Découvrez pourquoi Bricareau est le leader mondial de l'eau.</p>
                         </div>
-                        <Button className="bg-white text-blue-600 hover:bg-slate-100 rounded-full px-12 h-16 text-xl font-bold shadow-lg transition-transform hover:scale-105">
+                        <Button className="bg-white text-blue-600 hover:bg-slate-100 rounded-full px-12 h-16 text-xl shadow-lg transition-transform hover:scale-105">
                             Trouver un expert
                         </Button>
                     </div>
@@ -250,7 +255,7 @@ const FiltreEauHauteEfficacite = () => {
                                         </div>
                                     ))}
                                 </div>
-                                <Button className="mt-12 bg-white border-2 border-blue-600 text-blue-600 hover:bg-blue-50 rounded-full px-10 h-14 text-lg font-bold">
+                                <Button className="mt-12 bg-white border-2 border-blue-600 text-blue-600 hover:bg-blue-50 rounded-full px-10 h-14 text-lg">
                                     En savoir plus sur nos tests
                                 </Button>
                             </div>
@@ -267,12 +272,16 @@ const FiltreEauHauteEfficacite = () => {
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
                             {[
                                 { title: "Bricareau Care", desc: "Entretien préventif annuel et remplacement des filtres.", icon: Clock },
-                                { title: "Garantie à vie", desc: "Couverture totale sur les pièces majeures de votre système.", icon: ShieldCheck },
+                                { title: "Garantie à vie", desc: "Couverture totale sur les pièces majeures de votre système.", icon: safetyIcon, isImage: true },
                                 { title: "Service Prioritaire", desc: "Intervention rapide sous 24h en cas de besoin urgent.", icon: Zap }
                             ].map((plan, i) => (
                                 <div key={i} className="bg-white p-10 rounded-3xl shadow-sm border border-slate-100 flex flex-col items-center">
                                     <div className="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center mb-6">
-                                        <plan.icon className="w-8 h-8 text-blue-600" />
+                                        {plan.isImage ? (
+                                            <img src={plan.icon as string} alt={plan.title} className="h-10 w-10 object-contain" />
+                                        ) : (
+                                            <plan.icon className="w-8 h-8 text-blue-600" />
+                                        )}
                                     </div>
                                     <h3 className="text-slate-900 mb-4">{plan.title}</h3>
                                     <p className="font-light text-slate-500 text-sm text-justify">{plan.desc}</p>
@@ -396,7 +405,7 @@ const FiltreEauHauteEfficacite = () => {
                                 <p className="font-light text-slate-600 mb-12 text-justify">
                                     Plus de 11 millions de familles font confiance à Bricareau. Rejoignez-les dès aujourd'hui et transformez votre quotidien.
                                 </p>
-                                <Button className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-12 h-16 text-xl font-bold shadow-xl transition-all hover:scale-105" asChild>
+                                <Button className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-12 h-16 text-xl shadow-xl transition-all hover:scale-105" asChild>
                                     <NavLink to="/contact">Planifier ma consultation</NavLink>
                                 </Button>
                             </div>

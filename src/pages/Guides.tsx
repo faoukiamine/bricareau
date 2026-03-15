@@ -104,7 +104,7 @@ const Guides = () => {
                                             {guide.category}
                                         </span>
                                     </div>
-                                    <h3 className="text-foreground mb-2">
+                                    <h3 className="text-foreground mb-2 font-medium text-base leading-6 text-[#0F1729]">
                                         {guide.title}
                                     </h3>
                                     <p className="text-sm text-muted-foreground mb-4">

@@ -11,7 +11,6 @@ import {
     RefreshCw,
     CheckCircle2,
     Droplets,
-    ShieldCheck,
     Waves,
     MessageSquare,
     Mail,
@@ -19,8 +18,10 @@ import {
     Star,
     ChevronRight,
     PackageCheck,
-    Check
+    Check,
+    Search
 } from 'lucide-react';
+import safetyIcon from "@/assets/1709235770048.png";
 import { Button } from "@/components/ui/button";
 import { NavLink } from "@/components/NavLink";
 import ConsultationFormSection from "@/components/ConsultationFormSection";
@@ -89,10 +90,9 @@ const AdoucisseursPortables = () => {
                                     fontWeight: 350
                                 }}
                             >
-                                Adoucisseur d'eau portable <br />
-                                Une eau douce où que vous soyez !
+                                Adoucisseur d'eau portable, une eau douce où que vous soyez !
                             </h1>
-                            <p className="font-light text-slate-600 lg:text-gray-200 mb-12 max-w-2xl text-justify animate-in fade-in slide-in-from-bottom duration-700 delay-100">
+                            <p className="font-light text-slate-600 lg:text-gray-200 mb-12 max-w-xl text-left lg:text-justify animate-in fade-in slide-in-from-bottom duration-700 delay-100">
                                 La solution d'adoucissement flexible pour votre résidence ou commerce sans installation permanence. Profitez de notre service d'échange d'adoucisseur portable avec livraison directement chez vous.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4">
@@ -101,7 +101,7 @@ const AdoucisseursPortables = () => {
                                     className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200"
                                     asChild
                                 >
-                                    <NavLink to="/consultation">
+                                    <NavLink to="/consultation" style={{ fontWeight: 300 }}>
                                         Planifiez une consultation gratuite
                                     </NavLink>
                                 </Button>
@@ -171,21 +171,26 @@ const AdoucisseursPortables = () => {
                                     subtitle: "Prêt en 5 minutes",
                                     desc: "Pas besoin de plombier. Connectez-le simplement entre le robinet du camping et votre entrée d'eau. C'est aussi simple que de brancher un tuyau d'arrosage.",
                                     features: ["Raccords standards", "Sans outils", "Plug & Play"],
-                                    color: "cyan"
+                                    color: "blue"
                                 },
                                 {
-                                    icon: ShieldCheck,
+                                    icon: safetyIcon,
+                                    isImage: true,
                                     title: "Protection Maximale",
                                     subtitle: "Préservez vos actifs",
                                     desc: "Élimine le calcium et le magnésium qui obstruent les tuyauteries et réduisent l'efficacité de vos appareils. Prolongez la vie de votre investissement.",
                                     features: ["Anti-tartre", "Débit constant", "Sans électricité"],
-                                    color: "indigo"
+                                    color: "blue"
                                 }
                             ].map((item, id) => (
                                 <div key={id} className="group bg-white rounded-[2rem] p-8 md:p-12 shadow-sm border border-slate-100 hover:shadow-xl hover:shadow-blue-900/5 transition-all duration-500 hover:-translate-y-1">
                                     <div className="flex flex-col md:flex-row gap-8 items-start">
-                                        <div className={`w-20 h-20 rounded-2xl bg-${item.color}-50 text-${item.color}-600 flex items-center justify-center shrink-0 group-hover:bg-${item.color}-600 group-hover:text-white transition-colors duration-500`}>
-                                            <item.icon className="w-10 h-10" />
+                                        <div className="w-16 h-16 rounded-2xl bg-blue-50 flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors duration-500">
+                                            {item.isImage ? (
+                                                <img src={item.icon as string} alt={item.title} className="h-10 w-10 object-contain" />
+                                            ) : (
+                                                <item.icon className="h-8 w-8 text-blue-600 group-hover:text-white transition-colors rotate-0" />
+                                            )}
                                         </div>
                                         <div className="flex-1">
                                             <div className="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-4">

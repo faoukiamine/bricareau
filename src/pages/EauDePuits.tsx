@@ -165,7 +165,7 @@ const EauDePuits = () => {
                   fontWeight: 350
                 }}
               >
-                Votre puits est un trésor. <br />Offrez-lui la pureté qu'il mérite.
+                Votre puits est un trésor, offrez-lui la pureté qu'il mérite.
               </h1>
               <p className="font-light text-slate-600 lg:text-white/90 mb-8 max-w-xl text-left lg:text-justify">
                 Protégez votre santé et vos installations avec nos solutions expertes pour puits privés. Éliminez le fer, le soufre, le calcaire et les bactéries pour une eau cristalline et sécuritaire partout dans votre maison.
@@ -755,7 +755,7 @@ const EauDePuits = () => {
                     />
                   </div>
                   <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
-                    <h4 className="mb-4 group-hover:text-blue-600 transition-colors tracking-tight">{art.title}</h4>
+                    <h4 className="mb-4 group-hover:text-blue-600 transition-colors tracking-tight font-medium text-base leading-6 text-[#0F1729]">{art.title}</h4>
                     <div className="mt-auto">
                       <span className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-sm">
                         Lire <ChevronRight className="h-4 w-4 transform group-hover:translate-x-1 transition-transform" />

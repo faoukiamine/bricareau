@@ -185,7 +185,7 @@ const FiltresTouteMaison = () => {
                                     fontWeight: 350
                                 }}
                             >
-                                Filtres d'eau pour toute la maison, une protection intégrale.
+                                Filtre d'eau pour toute la maison, une protection intégrale.
                             </h1>
                             <p className="font-light text-slate-600 lg:text-white/95 mb-8 max-w-xl">
                                 Éliminez le chlore, le fer et les sédiments de chaque goutte d'eau qui entre dans votre propriété. Nos systèmes de filtration intégrés protègent votre santé, votre peau et vos appareils électroménagers.
@@ -523,7 +523,7 @@ const FiltresTouteMaison = () => {
                                         />
                                     </div>
                                     <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
-                                        <h4 className="mb-4 group-hover:text-blue-600 transition-colors tracking-tight">{art.title}</h4>
+                                        <h4 className="mb-4 group-hover:text-blue-600 transition-colors tracking-tight font-medium text-base leading-6 text-[#0F1729]">{art.title}</h4>
                                         <div className="mt-auto">
                                             <NavLink
                                                 to={art.link || "#"}

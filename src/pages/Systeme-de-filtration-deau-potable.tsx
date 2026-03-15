@@ -13,10 +13,11 @@ import {
   CircleDollarSign,
   Trash2,
   Wrench,
-  ShieldCheck,
   Droplets,
-  Zap
+  Zap,
+  Search
 } from "lucide-react";
+import safetyIcon from "@/assets/1709235770048.png";
 import { NavLink } from "@/components/NavLink";
 import { useNavigate } from "react-router-dom";
 import React, { useEffect } from "react";
@@ -111,8 +112,7 @@ const StationEauPotable = () => {
                 className="text-[32px] md:text-[42px] leading-[1.1] md:leading-[1.2] font-bold lg:font-light mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl"
                 style={{}}
               >
-                Systèmes d'osmose inverse <br />
-                La pureté absolue à votre robinet.
+                Système d'osmose inverse, la pureté absolue à votre robinet.
               </h1>
               <p className="font-light text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
                 Transformez votre eau municipale en une source de pureté cristalline. Nos purificateurs d'eau par osmose inverse éliminent 99% des contaminants, du plomb au chlore, pour une eau fraîche, saine et alcaline.
@@ -174,14 +174,18 @@ const StationEauPotable = () => {
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 text-center">
               {[
-                { icon: ShieldCheck, title: "Sécurité maximale", desc: "Élimine 99% des virus, bactéries et contaminants chimiques." },
+                { icon: safetyIcon, isImage: true, title: "Sécurité maximale", desc: "Élimine 99% des virus, bactéries et contaminants chimiques." },
                 { icon: Droplets, title: "Goût incomparable", desc: "Retrouvez le vrai goût de l'eau, limpide et rafraîchissante." },
                 { icon: GlassWater, title: "Eau pure 24/7", desc: "Accès instantané à une eau de meilleure qualité." },
                 { icon: CircleDollarSign, title: "Économies", desc: "Éliminez l'achat de bouteilles d'eau plastique." },
               ].map((item, i) => (
-                <div key={i} className="flex flex-col items-center group">
+                <div key={i} className="flex flex-col items-center group w-full sm:w-[calc(50%-3rem)] lg:w-[calc(25%-3rem)]">
                   <div className="w-20 h-20 rounded-2xl bg-white flex items-center justify-center mb-8 transition-all group-hover:scale-110 group-hover:bg-white/10">
-                    <item.icon className="h-10 w-10 text-blue-600 group-hover:text-white" />
+                    {item.isImage ? (
+                      <img src={item.icon as string} alt={item.title} className="h-12 w-12 object-contain" />
+                    ) : (
+                      <item.icon className="h-10 w-10 text-blue-600 group-hover:text-white" />
+                    )}
                   </div>
                   <h3 className="mb-4 tracking-tight">{item.title}</h3>
                   <p className="font-light text-blue-100 text-justify">{item.desc}</p>
@@ -512,7 +516,7 @@ const StationEauPotable = () => {
                     />
                   </div>
                   <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
-                    <h4 className="mb-4 group-hover:text-blue-600 transition-colors tracking-tight">{art.title}</h4>
+                    <h4 className="mb-4 group-hover:text-blue-600 transition-colors tracking-tight font-medium text-base leading-6 text-[#0F1729]">{art.title}</h4>
                     <div className="mt-auto">
                       <NavLink
                         to={art.link || "#"}

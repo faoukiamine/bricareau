@@ -40,7 +40,7 @@ const Contact = () => {
                                 >
                                     Parlons de votre <span className="text-[#0052ff]">Projet d'eau</span>
                                 </h1>
-                                <p className="text-slate-600 max-w-2xl font-light">
+                                <p className="text-slate-600 max-w-xl font-light">
                                     Une question ? Un projet ? Notre équipe d'experts est là pour vous conseiller
                                     et vous accompagner dans le choix de votre système de traitement d'eau.
                                 </p>

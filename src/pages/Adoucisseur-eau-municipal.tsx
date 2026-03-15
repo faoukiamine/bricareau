@@ -165,11 +165,10 @@ const AdoucisseurEauMunicipal = () => {
                                     fontWeight: 350
                                 }}
                             >
-                                <span className="text-blue-600 lg:text-white/80">Une douceur qui se sent,</span> <br />
-                                <span>un confort qui se vit.</span>
+                                <span className="text-blue-600 lg:text-white/80">Une douceur qui se sent, un confort qui se vit.</span>
                             </h1>
 
-                            <p className="font-light text-slate-600 lg:text-white/95 mb-8 max-w-xl">
+                            <p className="font-light text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
                                 Protégez votre confort et vos installations avec nos adoucisseurs d'eau intelligents conçus spécifiquement pour les eaux de ville. Éliminez définitivement l'eau dure et prolongez la vie de vos électroménagers.
                             </p>
 
@@ -467,7 +466,7 @@ const AdoucisseurEauMunicipal = () => {
                                     </div>
                                     <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
                                         <NavLink to={art.link}>
-                                            <h4 className="mb-4 group-hover:text-blue-600 transition-colors tracking-tight">{art.title}</h4>
+                                            <h4 className="mb-4 group-hover:text-blue-600 transition-colors tracking-tight font-medium text-base leading-6 text-[#0F1729]">{art.title}</h4>
                                         </NavLink>
                                         <div className="mt-auto">
                                             <NavLink

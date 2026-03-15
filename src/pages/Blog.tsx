@@ -158,18 +158,7 @@ const Blog = () => {
                                 {/* 2. Varied Category Sections */}
                                 <div className="space-y-24">
                                     {filteredCategories.map((cat, idx) => {
-                                        // Define some accent colors based on index
-                                        const accentColors = [
-                                            "border-blue-600",
-                                            "border-teal-500",
-                                            "border-purple-600",
-                                            "border-orange-500",
-                                            "border-indigo-600"
-                                        ];
-                                        const accentColor = accentColors[idx % accentColors.length];
-
                                         // Skip the first article if it's the hero category (already shown)
-                                        // In this layout logic, we'll slice differently
                                         const displayProducts = idx === 0 ? cat.products.slice(1, 4) : cat.products.slice(0, 3);
                                         if (displayProducts.length === 0) return null;
 
@@ -179,17 +168,20 @@ const Blog = () => {
                                         const isStaggered = idx % 2 === 0 && displayProducts.length >= 3;
 
                                         return (
-                                            <div key={cat.id} id={cat.id} className={`pt-8 border-t-4 ${accentColor}`}>
-                                                <div className="flex items-center justify-between mb-10">
-                                                    <h2 className="font-black text-slate-900 uppercase">
-                                                        {cat.title}
-                                                    </h2>
-                                                    <NavLink
-                                                        to={`/blog/categorie/${cat.id}`}
-                                                        className="text-xs font-black text-blue-600 uppercase tracking-widest flex items-center gap-2 hover:text-slate-900 transition-colors"
-                                                    >
-                                                        Tout voir <ChevronRight className="w-4 h-4" />
-                                                    </NavLink>
+                                            <div key={cat.id} id={cat.id} className="pt-8">
+                                                <div className="text-left mb-12">
+                                                    <div className="flex items-center justify-between mb-8">
+                                                        <h2 className="text-slate-900">
+                                                            <span className="text-[32px] md:text-[48px] font-normal leading-[1.1] block">{cat.title}</span>
+                                                        </h2>
+                                                        <NavLink
+                                                            to={`/blog/categorie/${cat.id}`}
+                                                            className="text-xs font-black text-blue-600 uppercase tracking-widest flex items-center gap-2 hover:text-slate-900 transition-colors"
+                                                        >
+                                                            Tout voir <ChevronRight className="w-4 h-4" />
+                                                        </NavLink>
+                                                    </div>
+                                                    <div className="w-20 h-1 bg-blue-600"></div>
                                                 </div>
 
                                                 {isStaggered ? (
@@ -212,7 +204,7 @@ const Blog = () => {
                                                                     </div>
                                                                 </div>
                                                                 <div className="p-8">
-                                                                    <h3 className="md:text-3xl text-slate-900 mb-4 group-hover:text-blue-600 transition-colors">
+                                                                    <h3 className="md:text-3xl text-slate-900 mb-4 group-hover:text-blue-600 transition-colors font-medium text-base leading-6 text-[#0F1729]">
                                                                         {displayProducts[0].title}
                                                                     </h3>
                                                                     <p className="text-slate-600 text-base font-light mb-6 flex-1">
@@ -246,7 +238,7 @@ const Blog = () => {
                                                                             <Clock className="w-3.5 h-3.5" />
                                                                             <span>{product.readTime}</span>
                                                                         </div>
-                                                                        <h3 className="text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">
+                                                                        <h3 className="text-slate-900 mb-2 group-hover:text-blue-600 transition-colors font-medium text-base leading-6 text-[#0F1729]">
                                                                             {product.title}
                                                                         </h3>
                                                                     </div>
@@ -278,7 +270,7 @@ const Blog = () => {
                                                                         <Clock className="w-3.5 h-3.5" />
                                                                         <span>{product.readTime}</span>
                                                                     </div>
-                                                                    <h3 className="text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
+                                                                    <h3 className="text-slate-900 mb-3 group-hover:text-blue-600 transition-colors font-medium text-base leading-6 text-[#0F1729]">
                                                                         {product.title}
                                                                     </h3>
                                                                     <p className="text-slate-600 text-sm font-light leading-[19px] line-clamp-2">
@@ -312,10 +304,10 @@ const Blog = () => {
                             Nos experts sont disponibles pour une consultation personnalisée et gratuite à votre domicile ou entreprise.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                            <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50 rounded-full px-12 h-16 text-lg font-bold shadow-lg" asChild>
+                            <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50 rounded-full px-12 h-16 text-lg shadow-lg" asChild>
                                 <a href="/contact">Planifier ma visite</a>
                             </Button>
-                            <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white/10 rounded-full px-12 h-16 text-lg font-bold" asChild>
+                            <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white/10 rounded-full px-12 h-16 text-lg" asChild>
                                 <a href="tel:18552649328">1 (855) 264-9328</a>
                             </Button>
                         </div>
