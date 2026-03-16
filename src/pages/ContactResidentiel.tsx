@@ -46,7 +46,7 @@ const ContactResidentiel = () => {
       <main className="flex-1">
         {/* Hero Section */}
         <section className="relative lg:h-[700px] bg-gradient-to-br from-primary/10 via-background to-secondary/10 overflow-hidden flex flex-col lg:items-center">
-          <div className="absolute top-[50px] left-0 right-0 z-30 pointer-events-none">
+          <div className="absolute top-[50px] left-0 right-0 z-30 pointer-events-none hidden lg:block">
             <div className="container mx-auto px-4 lg:px-6 pointer-events-auto">
               <GlobalBreadcrumbs variant="light" />
             </div>

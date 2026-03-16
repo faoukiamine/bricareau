@@ -10,7 +10,7 @@ const Diagnostic = () => {
         <div className="min-h-screen bg-slate-50 flex flex-col">
             <Header />
             <main className="relative lg:h-[800px] flex flex-col lg:items-center overflow-hidden bg-white pt-20 lg:pt-0">
-                <div className="absolute top-[50px] left-0 right-0 z-30 pointer-events-none">
+                <div className="absolute top-[50px] left-0 right-0 z-30 pointer-events-none hidden lg:block">
                     <div className="container mx-auto px-4 lg:px-6 pointer-events-auto">
                         <GlobalBreadcrumbs variant="light" />
                     </div>

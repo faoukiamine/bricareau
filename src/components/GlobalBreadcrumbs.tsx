@@ -73,50 +73,52 @@ const GlobalBreadcrumbs: React.FC<GlobalBreadcrumbsProps> = ({
     const isDark = variant === "dark";
 
     return (
-        <Breadcrumb className={cn("mb-6 relative z-20 hidden lg:block", className)}>
-            <BreadcrumbList className={cn(
-                isDark ? "text-slate-500 lg:text-white/60" : "text-slate-500"
-            )}>
-                <BreadcrumbItem>
-                    <BreadcrumbLink asChild className={cn(
-                        "flex items-center gap-1 transition-colors",
-                        isDark ? "text-slate-600 hover:text-blue-600 lg:text-white/70 lg:hover:text-white" : "text-slate-600 hover:text-blue-600"
-                    )}>
-                        <NavLink to="/">
-                            <Home className="w-3.5 h-3.5 mr-1" />
-                            Accueil
-                        </NavLink>
-                    </BreadcrumbLink>
-                </BreadcrumbItem>
-
-                {breadcrumbItems.map((item, index) => (
-                    <React.Fragment key={item.to + index}>
-                        <BreadcrumbSeparator className={cn(
-                            isDark ? "text-slate-300 lg:text-white/30" : "text-slate-300"
+        <div className="hidden lg:block">
+            <Breadcrumb className={cn("mb-6 relative z-20", className)}>
+                <BreadcrumbList className={cn(
+                    isDark ? "text-slate-500 lg:text-white/60" : "text-slate-500"
+                )}>
+                    <BreadcrumbItem>
+                        <BreadcrumbLink asChild className={cn(
+                            "flex items-center gap-1 transition-colors",
+                            isDark ? "text-slate-600 hover:text-blue-600 lg:text-white/70 lg:hover:text-white" : "text-slate-600 hover:text-blue-600"
                         )}>
-                            <ChevronRight className="w-3.5 h-3.5" />
-                        </BreadcrumbSeparator>
-                        <BreadcrumbItem>
-                            {item.isLast ? (
-                                <BreadcrumbPage className={cn(
-                                    "font-medium line-clamp-1 max-w-[200px] md:max-w-md",
-                                    isDark ? "text-slate-900 lg:text-white" : "text-slate-900"
-                                )}>
-                                    {item.label}
-                                </BreadcrumbPage>
-                            ) : (
-                                <BreadcrumbLink asChild className={cn(
-                                    "transition-colors",
-                                    isDark ? "text-slate-600 hover:text-blue-600 lg:text-white/70 lg:hover:text-white" : "text-slate-600 hover:text-blue-600"
-                                )}>
-                                    <NavLink to={item.to}>{item.label}</NavLink>
-                                </BreadcrumbLink>
-                            )}
-                        </BreadcrumbItem>
-                    </React.Fragment>
-                ))}
-            </BreadcrumbList>
-        </Breadcrumb>
+                            <NavLink to="/">
+                                <Home className="w-3.5 h-3.5 mr-1" />
+                                Accueil
+                            </NavLink>
+                        </BreadcrumbLink>
+                    </BreadcrumbItem>
+
+                    {breadcrumbItems.map((item, index) => (
+                        <React.Fragment key={item.to + index}>
+                            <BreadcrumbSeparator className={cn(
+                                isDark ? "text-slate-300 lg:text-white/30" : "text-slate-300"
+                            )}>
+                                <ChevronRight className="w-3.5 h-3.5" />
+                            </BreadcrumbSeparator>
+                            <BreadcrumbItem>
+                                {item.isLast ? (
+                                    <BreadcrumbPage className={cn(
+                                        "font-medium line-clamp-1 max-w-[200px] md:max-w-md",
+                                        isDark ? "text-slate-900 lg:text-white" : "text-slate-900"
+                                    )}>
+                                        {item.label}
+                                    </BreadcrumbPage>
+                                ) : (
+                                    <BreadcrumbLink asChild className={cn(
+                                        "transition-colors",
+                                        isDark ? "text-slate-600 hover:text-blue-600 lg:text-white/70 lg:hover:text-white" : "text-slate-600 hover:text-blue-600"
+                                    )}>
+                                        <NavLink to={item.to}>{item.label}</NavLink>
+                                    </BreadcrumbLink>
+                                )}
+                            </BreadcrumbItem>
+                        </React.Fragment>
+                    ))}
+                </BreadcrumbList>
+            </Breadcrumb>
+        </div>
     );
 };
 
