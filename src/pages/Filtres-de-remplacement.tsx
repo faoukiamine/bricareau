@@ -32,7 +32,7 @@ const FiltresDeRemplacement = () => {
             <Header />
             <main>
                 {/* Breadcrumbs Section - Matching Adoucissement positioning */}
-                <div className="relative h-[100px] bg-white">
+                <div className="relative h-[100px] bg-white hidden lg:block">
                     <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none">
                         <div className="container mx-auto px-4 lg:px-6 pointer-events-auto">
                             <GlobalBreadcrumbs variant="light" />

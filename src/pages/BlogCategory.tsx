@@ -35,7 +35,7 @@ const BlogCategory = () => {
             <Header />
 
             <main className="relative lg:h-[600px] flex flex-col lg:items-center overflow-hidden bg-white pt-20 lg:pt-0">
-                <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none">
+                <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none hidden lg:block">
                     <div className="container mx-auto px-6 max-w-7xl pointer-events-auto text-left">
                         <GlobalBreadcrumbs variant="light" />
                     </div>

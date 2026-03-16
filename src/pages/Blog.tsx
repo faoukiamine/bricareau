@@ -55,7 +55,7 @@ const Blog = () => {
             <main>
                 {/* 1. Hero / Header Area (Redesigned for Mobile) */}
                 <section className="relative lg:h-[700px] bg-white overflow-hidden flex flex-col lg:items-center">
-                    <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none">
+                    <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none hidden lg:block">
                         <div className="container mx-auto px-6 max-w-5xl pointer-events-auto">
                             <GlobalBreadcrumbs variant="light" />
                         </div>

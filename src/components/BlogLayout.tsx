@@ -147,7 +147,7 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({ title, headerImage, children, t
             <div className="flex-grow">
                 {/* Hero Section - Split Layout */}
                 <div className="w-full min-h-[450px] lg:h-[700px] relative flex flex-col lg:flex-row overflow-hidden bg-white lg:bg-[#1a3a5c]">
-                    <div className="absolute top-[100px] left-0 right-0 z-30 pointer-events-none">
+                    <div className="absolute top-[100px] left-0 right-0 z-30 pointer-events-none hidden lg:block">
                         <div className="container mx-auto px-4 lg:px-6 pointer-events-auto">
                             <GlobalBreadcrumbs variant="dark" />
                         </div>

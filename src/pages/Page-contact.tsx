@@ -14,7 +14,7 @@ const Contact = () => {
             <main>
                 {/* 1. Page Header (Redesigned for Mobile) */}
                 <header className="relative lg:h-[700px] bg-white overflow-hidden border-b border-gray-50 flex flex-col lg:items-center">
-                    <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none">
+                    <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none hidden lg:block">
                         <div className="container mx-auto px-4 lg:px-6 pointer-events-auto">
                             <GlobalBreadcrumbs variant="light" />
                         </div>

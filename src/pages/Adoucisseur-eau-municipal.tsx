@@ -151,7 +151,7 @@ const AdoucisseurEauMunicipal = () => {
                         <div className="absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white/90 via-white/40 to-transparent" />
                     </div>
 
-                    <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none">
+                    <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none hidden lg:block">
                         <div className="container mx-auto px-6 pointer-events-auto">
                             <GlobalBreadcrumbs variant="dark" />
                         </div>
