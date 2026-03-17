@@ -17,7 +17,7 @@ import KataloxLightMedia from "@/assets/Katalox Light Media.jpg";
 import centaurActivatedCarbonMedia from "@/assets/Centaur_Catalytic_Carbon.webp";
 import activatedCarbon from "@/assets/activated_carbon.jpg";
 import birmMedia from "@/assets/Birm_Media.jpg";
-import calciteMedia from "@/assets/Calcite.webp";
+import calciteMedia from "@/assets/calcite.webp";
 import filterAgMedia from "@/assets/Filter-Ag.webp";
 import nextSandMedia from "@/assets/Nextsand.webp";
 import greensandPlusMedia from "@/assets/greensand-plus.webp";
@@ -42,7 +42,7 @@ import ClackKitV300712 from "@/assets/Clack V3007-12.jpg";
 import UVBallast from "@/assets/Ballast UV.webp";
 import UVQuartzTube from "@/assets/uv-quartz-sleeves.webp";
 import UVLamp from "@/assets/uv lamps.webp";
-import FRPROHousing from "@/assets/RO housings.jpg";
+import FRPROHousing from "@/assets/RO-Housings.jpg";
 import SSROHousing from "@/assets/SS-Membrane-Housing.webp";
 import piecesHero from "@/assets/wave-banner.jpg";
 
