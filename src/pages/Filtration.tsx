@@ -131,30 +131,59 @@ const Filtration = () => {
                     </div>
                 </section>
 
-                {/* 3. Benefits Section */}
-                <section className="py-24 bg-blue-600 text-white text-center">
-                    <div className="container mx-auto px-6 text-center">
-                        <div className="text-center mb-16">
-                            <h2 className="text-white mb-8 md:leading-[48px] text-center">
-                                Pourquoi choisir nos <br />systèmes de filtration d'eau ?
+                {/* 3. Benefits Section - Redesigned for Premium Look */}
+                <section className="py-24 bg-white relative overflow-hidden">
+                    {/* Abstract background elements */}
+                    <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-blue-50/50 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 -z-10" />
+                    <div className="absolute bottom-0 left-0 w-1/4 h-1/4 bg-blue-50 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2 -z-10" />
+
+                    <div className="container mx-auto px-6">
+                        <div className="text-center mb-20 max-w-3xl mx-auto">
+                            <h2 className="text-slate-900 mb-6 text-[42px] leading-[42px]">
+                                <span className="font-light block">Pourquoi choisir nos</span>
+                                <span className="font-bold text-blue-600">systèmes de filtration d'eau ?</span>
                             </h2>
-                            <p className="font-light text-blue-100 max-w-2xl mx-auto text-justify">
-                                Plus qu'une simple filtration, c'est une protection avancée pour votre santé et un confort durable pour votre foyer.
+                            <p className="text-slate-500 font-light text-lg">
+                                Plus qu'une simple filtration, c'est une protection avancée pour votre santé et un confort durable pour votre foyer au quotidien.
                             </p>
                         </div>
-                        <div className="flex flex-wrap justify-center gap-x-12 gap-y-16">
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-justify">
                             {[
-                                { icon: GlassWater, title: "Goût exceptionnel", desc: "Élimine 99% du chlore et des mauvaises odeurs pour une eau pure au robinet." },
-                                { icon: HandCoins, title: "Économies réelles", desc: "Réduisez vos dépenses en éliminant définitivement l'achat d'eau embouteillée." },
-                                { icon: Recycle, title: "Éco-responsable", desc: "Contribuez à la protection de l'environnement en réduisant les déchets plastiques." },
-                                { icon: Wrench, title: "Entretien facile", desc: "Des systèmes conçus pour une maintenance simple et des changements de filtres rapides." }
+                                {
+                                    icon: GlassWater,
+                                    title: "Goût exceptionnel",
+                                    desc: "Élimine 99% du chlore et des mauvaises odeurs pour une eau pure et savoureuse à chaque robinet."
+                                },
+                                {
+                                    icon: HandCoins,
+                                    title: "Économies réelles",
+                                    desc: "Réduisez vos dépenses annuelles de plus de 500$ en éliminant définitivement l'achat d'eau embouteillée."
+                                },
+                                {
+                                    icon: Recycle,
+                                    title: "Éco-responsable",
+                                    desc: "Agissez pour la planète en évitant l'utilisation de milliers de bouteilles de plastique à usage unique chaque année."
+                                },
+                                {
+                                    icon: Wrench,
+                                    title: "Sérénité Totale",
+                                    desc: "Des systèmes conçus pour une fiabilité maximale avec un entretien minimal et des changements de filtres ultra-rapides."
+                                }
                             ].map((benefit, i) => (
-                                <div key={i} className="flex flex-col items-center group w-full sm:w-[calc(50%-3rem)] lg:w-[calc(25%-3rem)]">
-                                    <div className="w-20 h-20 rounded-2xl bg-white flex items-center justify-center mb-8 transition-all group-hover:scale-110 group-hover:bg-white/10">
-                                        <benefit.icon className="h-10 w-10 text-blue-600 group-hover:text-white" />
+                                <div key={i} className="group bg-white border border-slate-100 rounded-[2rem] p-8 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2 relative overflow-hidden">
+                                    <div className="absolute -right-4 -bottom-4 opacity-5 group-hover:opacity-10 transition-opacity duration-500 transform group-hover:scale-110">
+                                        <benefit.icon className="w-32 h-32 text-blue-600" />
                                     </div>
-                                    <h4 className="mb-4 tracking-tight">{benefit.title}</h4>
-                                    <p className="font-light text-blue-100 text-justify">{benefit.desc}</p>
+                                    <div className="w-16 h-16 rounded-2xl bg-blue-50 flex items-center justify-center mb-8 group-hover:bg-blue-600 transition-colors duration-500">
+                                        <benefit.icon className="h-8 w-8 text-blue-600 group-hover:text-white transition-colors duration-500" />
+                                    </div>
+                                    <h4 className="text-xl font-bold text-slate-900 mb-4 tracking-tight group-hover:text-blue-600 transition-colors duration-500">
+                                        {benefit.title}
+                                    </h4>
+                                    <p className="text-slate-500 font-light leading-relaxed">
+                                        {benefit.desc}
+                                    </p>
                                 </div>
                             ))}
                         </div>
@@ -205,10 +234,10 @@ const Filtration = () => {
                                 <span className="text-sm font-bold uppercase tracking-widest text-blue-600 mb-4 block flex items-center gap-2">
                                     Eau filtrée pour toute la maison
                                 </span>
-                                <h2 className="text-slate-900 mb-6">
+                                <h2 className="text-slate-900 mb-6 text-[36px] leading-[36px]">
                                     Redécouvrez le luxe d'une eau filtrée cristalline.
                                 </h2>
-                                <p className="font-light text-gray-600 mb-12 text-justify">
+                                <p className="font-light text-gray-600 mb-5 text-justify">
                                     Protégez vos appareils ménagers, votre tuyauterie et votre peau. Nos systèmes de filtration centrale traitent chaque goutte d'eau qui entre dans votre foyer pour une tranquillité d'esprit totale.
                                 </p>
 
@@ -286,10 +315,10 @@ const Filtration = () => {
                                 <span className="text-sm font-bold uppercase tracking-widest text-blue-600 mb-4 block flex items-center gap-2">
                                     EAU PURE À VOLONTÉ
                                 </span>
-                                <h2 className="text-slate-900 mb-6">
+                                <h2 className="text-slate-900 mb-6 text-[36px] leading-[36px]">
                                     Votre source d'eau cristalline, <br />sans compromis.
                                 </h2>
-                                <p className="font-light text-gray-600 mb-12 text-justify">
+                                <p className="font-light text-gray-600 mb-5 text-justify">
                                     Découvrez comment notre système d'osmose inverse libère votre quotidien du goût de chlore et de la corvée des bouteilles plastique. Profitez d'une eau légère, d'une clarté de diamant, idéale pour une hydratation saine et une cuisine riche en saveurs.
                                 </p>
 
@@ -368,10 +397,10 @@ const Filtration = () => {
                                 <span className="text-sm font-bold uppercase tracking-widest text-blue-600 mb-4 block flex items-center gap-2">
                                     COMPACT & PUISSANT
                                 </span>
-                                <h2 className="text-slate-900 mb-6">
+                                <h2 className="text-slate-900 mb-6 text-[36px] leading-[36px]">
                                     Systèmes de filtration d'eau <br />sous l'évier
                                 </h2>
-                                <p className="font-light text-gray-600 mb-12 text-justify">
+                                <p className="font-light text-gray-600 mb-5 text-justify">
                                     Éliminez jusqu'à 99% des pathogènes, du plomb et du fluorure. L'osmose inverse Bricareau est la solution ultime pour une eau de boisson de qualité restaurant directement chez vous.
                                 </p>
 
@@ -461,8 +490,8 @@ const Filtration = () => {
                     filterProduct="/filtration"
                     title={
                         <>
-                            <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block tracking-tighter">Honnêteté et passion</span>
-                            <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block text-blue-600 tracking-tighter">la signature Bricareau vue par vous.</span>
+                            <span className="text-[42px] md:text-[42px] font-light leading-[1.1] md:leading-[60px] block tracking-tighter">Honnêteté et passion</span>
+                            <span className="text-[42px] md:text-[42px] font-bold text-blue-600 leading-[1.1] md:leading-[60px] block tracking-tighter">la signature Bricareau vue par vous.</span>
                         </>
                     }
                 />
@@ -476,8 +505,8 @@ const Filtration = () => {
                                 className="text-slate-900 mb-8 text-left"
                                 style={{}}
                             >
-                                <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Comparez nos solutions</span>
-                                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">de filtration d'eau de qualité.</span>
+                                <span className="text-[42px] md:text-[42px] font-light leading-[1.1] md:leading-[42px] block">Comparez nos solutions</span>
+                                <span className="text-[42px] md:text-[42px] font-normal leading-[1.1] md:leading-[42px] block">de filtration d'eau de qualité</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
@@ -529,8 +558,8 @@ const Filtration = () => {
                                 className="text-slate-900 mb-8 text-left"
                                 style={{}}
                             >
-                                <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Pour vous éclairer</span>
-                                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">Questions fréquentes</span>
+                                <span className="text-[42px] md:text-[42px] font-light leading-[1.1] md:leading-[42px] block">Pour vous éclairer</span>
+                                <span className="text-[42px] md:text-[42px] font-normal leading-[1.1] md:leading-[42px] block">Questions fréquentes</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
@@ -628,7 +657,7 @@ const Filtration = () => {
                                 className="text-slate-900 mb-8 text-left"
                                 style={{}}
                             >
-                                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">Ressources</span>
+                                <span className="text-[42px] md:text-[42px] font-normal leading-[1.1] md:leading-[42px] block">Ressources</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

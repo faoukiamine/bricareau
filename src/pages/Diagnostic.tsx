@@ -9,7 +9,7 @@ const Diagnostic = () => {
     return (
         <div className="min-h-screen bg-slate-50 flex flex-col">
             <Header />
-            <main className="relative lg:h-[800px] flex flex-col lg:items-center overflow-hidden bg-white pt-20 lg:pt-0">
+            <main className="relative flex flex-col items-center bg-white pt-20 pb-20 lg:pt-32">
                 <div className="absolute top-[50px] left-0 right-0 z-30 pointer-events-none hidden lg:block">
                     <div className="container mx-auto px-4 lg:px-6 pointer-events-auto">
                         <GlobalBreadcrumbs variant="light" />
@@ -22,8 +22,8 @@ const Diagnostic = () => {
                 <div className="absolute top-[20%] right-[-10%] w-[500px] h-[500px] bg-blue-100/50 rounded-full blur-[100px] z-0 pointer-events-none animate-pulse" />
                 <div className="absolute bottom-[10%] left-[-5%] w-[400px] h-[400px] bg-cyan-50/50 rounded-full blur-[120px] z-0 pointer-events-none" />
 
-                <div className="container mx-auto px-4 relative z-10 h-full flex items-center">
-                    <div className="max-w-4xl mx-auto text-center mb-12 py-12 lg:py-0 w-full animate-in fade-in slide-in-from-top-4 duration-1000">
+                <div className="container mx-auto px-4 relative z-10 flex flex-col items-center">
+                    <div className="max-w-4xl mx-auto text-center mb-12 w-full animate-in fade-in slide-in-from-top-4 duration-1000">
                         <span className="inline-block px-4 py-1.5 bg-blue-50 text-blue-600 rounded-full text-xs font-black uppercase tracking-widest mb-6">
                             OUTIL D'ANALYSE INTELLIGENT
                         </span>

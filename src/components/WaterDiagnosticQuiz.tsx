@@ -31,18 +31,21 @@ const steps = [
         id: 1,
         title: "Votre situation",
         question: "Commençons par votre situation",
-        icon: MapPin },
+        icon: MapPin
+    },
     {
         id: 2,
         title: "Vos symptômes",
         question: "Quels sont vos symptômes ?",
         description: "Cochez toutes les cases qui concernent votre consommation d'eau.",
-        icon: Activity },
+        icon: Activity
+    },
     {
         id: 3,
         title: "Nos recommandations",
         question: "Votre rapport personnalisé",
-        icon: ShieldCheck }
+        icon: ShieldCheck
+    }
 ];
 
 const symptomCategories = [
@@ -172,7 +175,8 @@ const WaterDiagnosticQuiz = () => {
                         desc: r.desc,
                         link: window.location.origin + r.link
                     }))
-                } });
+                }
+            });
 
             if (fnError) throw fnError;
 
@@ -298,7 +302,7 @@ const WaterDiagnosticQuiz = () => {
     const recommendations = getRecommendations();
 
     return (
-        <div className="min-h-[700px] flex items-center justify-center p-4">
+        <div className="flex items-center justify-center p-4">
             <div className={cn(
                 "w-full max-w-4xl bg-white/80 backdrop-blur-xl border border-blue-100 rounded-[40px] shadow-2xl overflow-hidden transition-all duration-500"
             )}>

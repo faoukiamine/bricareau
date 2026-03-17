@@ -98,7 +98,7 @@ const Adoucissement = () => {
                     <div className="container relative z-10 mx-auto px-4 h-full flex items-center lg:px-6">
                         <div className="max-w-2xl lg:text-white py-12 lg:py-0">
                             <h1
-                                className="text-[32px] md:text-[42px] leading-[1.1] md:leading-[1.2] mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl"
+                                className="text-[46px] md:text-[46px] leading-[1.1] md:leading-[1.2] mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl"
                                 style={{
                                     fontWeight: 350
                                 }}
@@ -137,28 +137,59 @@ const Adoucissement = () => {
                     </div>
                 </section>
 
-                {/* 3. Why choose our water softeners Section */}
-                <section className="py-24 bg-blue-600 text-white text-center">
-                    <div className="container mx-auto px-6 text-center">
-                        <div className="text-center mb-16">
-                            <h2 className="text-white mb-8 md:leading-[48px] text-center">
-                                Les avantages de l'adoucissement d'eau
-                            </h2>
-                        </div>
-                        <div className="flex flex-wrap justify-center gap-x-12 gap-y-16">
-                            {[
-                                { icon: Droplets, title: "Qualité supérieure", desc: "Une douceur incomparable pour votre peau et vos cheveux dès la première douche." },
-                                { icon: Shield, title: "Protection totale", desc: "Prolongez la durée de vie de votre plomberie et de vos électroménagers coûteux." },
-                                { icon: Shirt, title: "Linge plus doux", desc: "Des vêtements qui restent éclatants et souples plus longtemps, sans adoucissants." },
-                                { icon: HandCoins, title: "Économies garanties", desc: "Réduisez vos factures d'énergie et vos dépenses en savons et détergents de 50%." },
+                {/* 3. Benefits Section - Redesigned for Premium Look */}
+                <section className="py-24 bg-white relative overflow-hidden">
+                    {/* Abstract background elements */}
+                    <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-blue-50/50 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 -z-10" />
+                    <div className="absolute bottom-0 left-0 w-1/4 h-1/4 bg-blue-50 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2 -z-10" />
 
-                            ].map((item, id) => (
-                                <div key={id} className="flex flex-col items-center group w-full sm:w-[calc(50%-3rem)] lg:w-[calc(25%-3rem)]">
-                                    <div className="w-20 h-20 rounded-2xl bg-white flex items-center justify-center mb-8 transition-all group-hover:scale-110 group-hover:bg-white/10">
-                                        <item.icon className="h-10 w-10 text-blue-600 group-hover:text-white" />
+                    <div className="container mx-auto px-6">
+                        <div className="text-center mb-20 max-w-3xl mx-auto">
+                            <h2 className="text-slate-900 mb-6 text-[42px] leading-[42px]">
+                                <span className="font-light block">Les avantages de</span>
+                                <span className="font-bold text-blue-600">l'adoucissement d'eau</span>
+                            </h2>
+                            <p className="text-slate-500 font-light text-lg">
+                                Une transformation immédiate pour votre confort, votre santé et la longévité de votre foyer.
+                            </p>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-justify">
+                            {[
+                                {
+                                    icon: Droplets,
+                                    title: "Qualité supérieure",
+                                    desc: "Une douceur incomparable pour votre peau et vos cheveux dès la première douche, sans l'agressivité du calcaire."
+                                },
+                                {
+                                    icon: Shield,
+                                    title: "Protection totale",
+                                    desc: "Éliminez le tartre à la source et prolongez de façon significative la durée de vie de votre plomberie et de vos appareils."
+                                },
+                                {
+                                    icon: Shirt,
+                                    title: "Linge plus doux",
+                                    desc: "Retrouvez des vêtements éclatants, souples et durables sans avoir recours à des adoucissants chimiques coûteux."
+                                },
+                                {
+                                    icon: HandCoins,
+                                    title: "Économies garanties",
+                                    desc: "Réduisez vos factures d'énergie et vos dépenses en savons et détergents jusqu'à 50% grâce à une efficacité accrue."
+                                }
+                            ].map((item, i) => (
+                                <div key={i} className="group bg-white border border-slate-100 rounded-[2rem] p-8 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2 relative overflow-hidden">
+                                    <div className="absolute -right-4 -bottom-4 opacity-5 group-hover:opacity-10 transition-opacity duration-500 transform group-hover:scale-110">
+                                        <item.icon className="w-32 h-32 text-blue-600" />
                                     </div>
-                                    <h4 className="mb-4 tracking-tight">{item.title}</h4>
-                                    <p className="font-light text-blue-100 text-justify">{item.desc}</p>
+                                    <div className="w-16 h-16 rounded-2xl bg-blue-50 flex items-center justify-center mb-8 group-hover:bg-blue-600 transition-colors duration-500">
+                                        <item.icon className="h-8 w-8 text-blue-600 group-hover:text-white transition-colors duration-500" />
+                                    </div>
+                                    <h4 className="text-xl font-bold text-slate-900 mb-4 tracking-tight group-hover:text-blue-600 transition-colors duration-500">
+                                        {item.title}
+                                    </h4>
+                                    <p className="text-slate-500 font-light leading-relaxed">
+                                        {item.desc}
+                                    </p>
                                 </div>
                             ))}
                         </div>
@@ -207,10 +238,10 @@ const Adoucissement = () => {
                                 <span className="text-sm font-bold uppercase tracking-widest text-blue-600 mb-4 block flex items-center gap-2">
                                     ADOUCISSEURS D'EAU RÉSIDENTIELS
                                 </span>
-                                <h2 className="text-slate-900 mb-6">
+                                <h2 className="text-slate-900 mb-6 text-[36px] leading-[36px]">
                                     L'éclat d'une vaisselle protégée, la douceur d'une eau maîtrisée.
                                 </h2>
-                                <p className="font-light text-gray-600 mb-12 text-justify">
+                                <p className="font-light text-gray-600 mb-5 text-justify">
                                     Offrez à votre foyer le luxe d'une eau sans calcaire. Nos adoucisseurs de pointe éliminent le tartre à la source, garantissant non seulement une vaisselle étincelante sans aucune trace, mais aussi une protection durable de vos appareils électroménagers et de votre plomberie. Redécouvrez la brillance et la douceur dans chaque recoin de votre maison.
                                 </p>
 
@@ -288,10 +319,10 @@ const Adoucissement = () => {
                                 <span className="text-sm font-bold uppercase tracking-widest text-blue-600 mb-4 block flex items-center gap-2">
                                     SOLUTION MOBILE
                                 </span>
-                                <h2 className="text-slate-900 mb-6">
+                                <h2 className="text-slate-900 mb-6 text-[36px] leading-[36px]">
                                     La douceur sans frontières : l'eau douce vous suit partout.
                                 </h2>
-                                <p className="font-light text-gray-600 mb-12 text-justify">
+                                <p className="font-light text-gray-600 mb-5 text-justify">
                                     Ne laissez plus l’eau dure des campings ou des ports abîmer vos cheveux et vos équipements. Profitez d'une eau de qualité domestique dans votre VR, votre bateau ou votre chalet avec notre adoucisseur ultra-compact.
                                 </p>
 
@@ -369,10 +400,10 @@ const Adoucissement = () => {
                                 <span className="text-sm font-bold uppercase tracking-widest text-blue-600 mb-4 block flex items-center gap-2">
                                     ALTERNATIVE ÉCOLOGIQUE
                                 </span>
-                                <h2 className="text-slate-900 mb-6">
+                                <h2 className="text-slate-900 mb-6 text-[36px] leading-[36px]">
                                     Zéro sel. Zéro électricité. Zéro souci.
                                 </h2>
-                                <p className="font-light text-gray-600 mb-12 text-justify">
+                                <p className="font-light text-gray-600 mb-5 text-justify">
                                     Le secret d'un linge éclatant et d'une vaisselle sans traces. Sans l'ajout de sel, votre eau devient votre meilleure alliée beauté et ménage.
                                 </p>
 
@@ -412,8 +443,8 @@ const Adoucissement = () => {
                     filterProduct="/adoucissement"
                     title={
                         <>
-                            <span className="text-[32px] md:text-[60px] font-light leading-[1.2] md:leading-[60px] block">Une eau soyeuse.</span>
-                            <span className="text-[32px] md:text-[60px] font-normal leading-[1.2] md:leading-[60px] block">Un confort absolu.</span>
+                            <span className="text-[42px] md:text-[42px] font-light block leading-[1.2] md:leading-[42px]">Une eau soyeuse.</span>
+                            <span className="text-[42px] md:text-[42px] font-bold text-blue-600 leading-[1.2] md:leading-[42px]">Un confort absolu.</span>
                         </>
                     }
                 />
@@ -429,8 +460,8 @@ const Adoucissement = () => {
                                 className="text-slate-900 mb-8 text-left"
                                 style={{}}
                             >
-                                <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Comparez nos solutions</span>
-                                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">d'adoucissement d'eau.</span>
+                                <span className="text-[42px] md:text-[42px] font-light leading-[1.1] md:leading-[42px] block">Comparez nos solutions</span>
+                                <span className="text-[42px] md:text-[42px] font-normal leading-[1.1] md:leading-[42px] block">d'adoucissement d'eau</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
@@ -545,7 +576,7 @@ const Adoucissement = () => {
                             <h2
                                 className="text-slate-900 mb-8 text-left"
                                 style={{}}
-                            >                                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">FAQ </span>
+                            >                                <span className="text-[42px] md:text-[42px] font-normal leading-[1.1] md:leading-[42px] block">FAQ </span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
@@ -597,7 +628,7 @@ const Adoucissement = () => {
                             <h2
                                 className="text-slate-900 mb-8 text-left"
                                 style={{}}
-                            >                                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">Ressources</span>
+                            >                                <span className="text-[42px] md:text-[42px] font-normal leading-[1.1] md:leading-[42px] block">Ressources</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
