@@ -44,6 +44,7 @@ import UVQuartzTube from "@/assets/uv-quartz-sleeves.webp";
 import UVLamp from "@/assets/uv lamps.webp";
 import FRPROHousing from "@/assets/RO housings.jpg";
 import SSROHousing from "@/assets/SS-Membrane-Housing.webp";
+import piecesHero from "@/assets/wave-banner.jpg";
 
 const Pieces = () => {
     const partCategories = [
@@ -135,72 +136,47 @@ const Pieces = () => {
     ];
 
     return (
-        <div className="min-h-screen bg-background">
+        <div className="min-h-screen bg-background font-sans text-slate-900">
             <Header />
             <main>
-                {/* Hero Section (Redesigned for Mobile) */}
-                <section className="relative lg:h-[800px] bg-white overflow-hidden flex flex-col lg:items-center">
+                {/* 1. Hero Section */}
+                <section className="relative lg:h-[650px] flex flex-col lg:items-center overflow-hidden bg-white">
                     <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none hidden lg:block">
                         <div className="container mx-auto px-4 lg:px-6 pointer-events-auto">
-                            <GlobalBreadcrumbs variant="light" />
+                            <GlobalBreadcrumbs variant="dark" />
                         </div>
                     </div>
-                    <div className="flex flex-col lg:flex-row items-center">
-                        {/* Mobile Image */}
-                        <div className="lg:hidden w-full h-[300px] relative">
-                            <img
-                                src="https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=1200&auto=format&fit=crop"
-                                alt="Pièces de Remplacement Bricareau"
-                                className="w-full h-full object-cover"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-transparent"></div>
-                        </div>
-
-                        <div className="container mx-auto px-6 h-full flex items-center">
-                            <div className="max-w-3xl mx-auto text-center space-y-6 py-12 lg:py-0 w-full">
-                                <div className="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center mx-auto mb-4">
-                                    <Package className="h-8 w-8 text-[#0052ff]" />
-                                </div>
-                                <h1
-                                    className="text-[32px] md:text-[52px] leading-tight text-slate-900 tracking-tighter text-center max-w-2xl mx-auto"
-                                    style={{
-                                        fontWeight: 350
-                                    }}
-                                >
-                                    Pièces de <span className="text-blue-600">Remplacement</span>
-                                </h1>
-                                <p className="text-slate-600 font-light text-center max-w-xl mx-auto">
-                                    Trouvez toutes les pièces dont vous avez besoin pour maintenir vos équipements en parfait état de fonctionnement.
-                                </p>
-                            </div>
-                        </div>
+                    <div className="relative lg:absolute lg:inset-0 h-[350px] sm:h-[450px] lg:h-full w-full lg:z-0 overflow-hidden">
+                        <img
+                            src={piecesHero}
+                            alt="Pièces de Remplacement Bricareau - Maintenez vos équipements en parfait état"
+                            className="w-full h-full object-cover object-[center_35%]"
+                        />
+                        <div className="hidden lg:block absolute inset-0 bg-black/40 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
+                        <div className="hidden lg:block absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-white via-white/10 to-transparent" />
+                        <div className="hidden lg:block absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white/90 via-white/40 to-transparent" />
                     </div>
-                </section>
 
-                {/* Search Section */}
-                <section className="py-8 bg-slate-50 border-b border-border">
-                    <div className="container mx-auto px-4">
-                        <div className="max-w-2xl mx-auto">
-                            <div className="flex gap-3">
-                                <div className="relative flex-1">
-                                    <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
-                                    <Input
-                                        type="search"
-                                        placeholder="Rechercher par numéro de pièce ou nom..."
-                                        className="pl-10"
-                                    />
-                                </div>
-                                <Button className="bg-[#0052ff] hover:bg-[#0052ff]/90">
-                                    Rechercher
-                                </Button>
-                            </div>
+                    <div className="container relative z-10 mx-auto px-4 h-full flex items-center lg:px-6">
+                        <div className="max-w-2xl lg:text-white py-12 lg:py-0">
+                            <h1
+                                className="text-[32px] md:text-[52px] leading-[1.1] md:leading-[1.2] mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl"
+                                style={{
+                                    fontWeight: 350
+                                }}
+                            >
+                                Pièces de <span className="text-blue-600 lg:text-blue-400">Remplacement</span>
+                            </h1>
+                            <p className="font-light text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
+                                Trouvez toutes les pièces dont vous avez besoin pour maintenir vos équipements en parfait état de fonctionnement.
+                            </p>
                         </div>
                     </div>
                 </section>
 
                 {/* Parts Categories */}
                 {partCategories.map((category, categoryIndex) => (
-                    <section key={categoryIndex} className="py-12 md:py-16">
+                    <section key={categoryIndex} className={`pb-12 md:pb-16 ${categoryIndex === 0 ? 'pt-20' : 'pt-12 md:pt-16'}`}>
                         <div className="container mx-auto px-4">
                             <h2 className="text-foreground mb-8">
                                 {category.name}

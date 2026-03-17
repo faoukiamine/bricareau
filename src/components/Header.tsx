@@ -216,7 +216,7 @@ const Header = () => {
     {
       name: "Fontaines & distributeurs d'eau",
       href: "/fontaines",
-      hasMegamenu: true,
+      hasMegamenu: false,
       megamenuCards: [
         {
           customIcon: drinkingwaterfountainiconImg,

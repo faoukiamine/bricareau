@@ -8,6 +8,8 @@ import { categories } from "@/data/blogCategories";
 import React, { useState } from "react";
 import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 
+import blogHero from "@/assets/wave-banner.jpg";
+
 const Blog = () => {
     const [searchQuery, setSearchQuery] = useState("");
     const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
@@ -49,48 +51,47 @@ const Blog = () => {
     const totalResults = filteredCategories.reduce((sum, cat) => sum + cat.products.length, 0);
 
     return (
-        <div className="min-h-screen bg-white">
+        <div className="min-h-screen bg-background font-sans text-slate-900">
             <Header />
 
             <main>
-                {/* 1. Hero / Header Area (Redesigned for Mobile) */}
-                <section className="relative lg:h-[700px] bg-white overflow-hidden flex flex-col lg:items-center">
+                {/* 1. Hero Section */}
+                <section className="relative lg:h-[650px] flex flex-col lg:items-center overflow-hidden bg-white">
                     <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none hidden lg:block">
-                        <div className="container mx-auto px-6 max-w-5xl pointer-events-auto">
-                            <GlobalBreadcrumbs variant="light" />
+                        <div className="container mx-auto px-4 lg:px-6 pointer-events-auto">
+                            <GlobalBreadcrumbs variant="dark" />
                         </div>
                     </div>
-                    <div className="flex flex-col lg:flex-row">
-                        {/* Mobile Image */}
-                        <div className="lg:hidden w-full h-[300px] relative">
-                            <img
-                                src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=1200&auto=format&fit=crop"
-                                alt="Articles et Ressources Bricareau"
-                                className="w-full h-full object-cover"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-transparent"></div>
-                        </div>
+                    <div className="relative lg:absolute lg:inset-0 h-[350px] sm:h-[450px] lg:h-full w-full lg:z-0 overflow-hidden">
+                        <img
+                            src={blogHero}
+                            alt="Articles et Ressources Bricareau - Conseils d'experts en traitement d'eau"
+                            className="w-full h-full object-cover object-[center_35%]"
+                        />
+                        <div className="hidden lg:block absolute inset-0 bg-black/40 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
+                        <div className="hidden lg:block absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-white via-white/10 to-transparent" />
+                        <div className="hidden lg:block absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white/90 via-white/40 to-transparent" />
+                    </div>
 
-                        <div className="container mx-auto px-6 max-w-5xl h-full flex items-center">
-                            <div className="py-12 lg:py-0 w-full">
-                                <h1
-                                    className="text-[32px] md:text-[52px] leading-tight text-slate-900 mb-6 tracking-tight"
-                                    style={{
-                                        fontWeight: 350
-                                    }}
-                                >
-                                    Articles & <span className="text-blue-600">Ressources</span>
-                                </h1>
-                                <p className="text-slate-600 max-w-2xl font-light">
-                                    Découvrez nos derniers articles, guides et conseils d'experts pour une eau de meilleure qualité au quotidien.
-                                </p>
-                            </div>
+                    <div className="container relative z-10 mx-auto px-4 h-full flex items-center lg:px-6">
+                        <div className="max-w-2xl lg:text-white py-12 lg:py-0">
+                            <h1
+                                className="text-[32px] md:text-[52px] leading-[1.1] md:leading-[1.2] mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl"
+                                style={{
+                                    fontWeight: 350
+                                }}
+                            >
+                                Articles & <span className="text-blue-600 lg:text-blue-400">Ressources</span>
+                            </h1>
+                            <p className="font-light text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
+                                Découvrez nos derniers articles, guides et conseils d'experts pour une eau de meilleure qualité au quotidien.
+                            </p>
                         </div>
                     </div>
                 </section>
 
                 {/* 2. Filters Section */}
-                <section className="py-24 bg-white min-h-[50vh]">
+                <section className="pt-20 pb-24 bg-white min-h-[50vh]">
                     <div className="container mx-auto px-6 max-w-5xl">
 
 

@@ -4,6 +4,7 @@ import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 import { Tag, Clock, CheckCircle, ArrowRight, Percent } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import promotionsHero from "@/assets/27651.jpg";
 import filtrationPromoImg from "@/assets/10341859.jpg";
 
 const Promotions = () => {
@@ -11,9 +12,7 @@ const Promotions = () => {
         {
             title: "Offre Spéciale Adoucisseur d'eau",
             description: "Économisez jusqu'à 500$ sur l'installation d'un adoucisseur d'eau résidentiel",
-            discount: "20%",
             validUntil: "31 mars 2026",
-            category: "Résidentiel",
             image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=600&auto=format&fit=crop",
             features: [
                 "Installation professionnelle incluse",
@@ -24,9 +23,7 @@ const Promotions = () => {
         {
             title: "Système de Filtration d'eau Complet",
             description: "Profitez de 20% de rabais sur nos systèmes de filtration pour toute la maison",
-            discount: "20%",
             validUntil: "15 avril 2026",
-            category: "Résidentiel",
             image: filtrationPromoImg,
             features: [
                 "Filtration complète de l'eau",
@@ -37,9 +34,7 @@ const Promotions = () => {
         {
             title: "Programme de Référence",
             description: "Recevez 100$ pour chaque client référé qui achète un système d'adoucissement ou de filtration d'eau",
-            discount: "100%",
             validUntil: "Permanent",
-            category: "Tous",
             image: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=600&auto=format&fit=crop",
             features: [
                 "Crédit applicable sur votre compte",
@@ -50,35 +45,38 @@ const Promotions = () => {
     ];
 
     return (
-        <div className="min-h-screen bg-background">
+        <div className="min-h-screen bg-background font-sans text-slate-900">
             <Header />
             <main>
-                {/* Hero Section */}
-                <section className="relative lg:h-[700px] bg-white overflow-hidden flex flex-col lg:items-center">
+                {/* 1. Hero Section */}
+                <section className="relative lg:h-[650px] flex flex-col lg:items-center overflow-hidden bg-white">
                     <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none hidden lg:block">
                         <div className="container mx-auto px-4 lg:px-6 pointer-events-auto">
-                            <GlobalBreadcrumbs variant="light" />
+                            <GlobalBreadcrumbs variant="dark" />
                         </div>
                     </div>
-                    {/* Mobile Header Decor */}
-                    <div className="lg:hidden w-full h-40 bg-gradient-to-br from-blue-50 via-white to-emerald-50 flex items-center justify-center border-b border-slate-100">
-                        <Tag className="h-16 w-16 text-blue-200" />
+                    <div className="relative lg:absolute lg:inset-0 h-[350px] sm:h-[450px] lg:h-full w-full lg:z-0 overflow-hidden">
+                        <img
+                            src={promotionsHero}
+                            alt="Nos Promotions Bricareau - Offres exceptionnelles sur le traitement d'eau"
+                            className="w-full h-full object-cover object-[center_35%]"
+                        />
+                        <div className="hidden lg:block absolute inset-0 bg-black/40 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
+                        <div className="hidden lg:block absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-white via-white/10 to-transparent" />
+                        <div className="hidden lg:block absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white/90 via-white/40 to-transparent" />
                     </div>
 
-                    <div className="container mx-auto px-6 h-full flex items-center">
-                        <div className="max-w-2xl text-slate-900 lg:text-white py-12 lg:py-0 w-full">
-                            <div className="inline-flex items-center gap-2 bg-blue-50 rounded-full px-4 py-2 mb-6">
-                                <Tag className="h-5 w-5 text-blue-600" />
-                            </div>
+                    <div className="container relative z-10 mx-auto px-4 h-full flex items-center lg:px-6">
+                        <div className="max-w-2xl lg:text-white py-12 lg:py-0">
                             <h1
-                                className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] mb-8 tracking-tighter text-slate-900 text-center lg:text-justify max-w-xl mx-auto"
+                                className="text-[32px] md:text-[52px] leading-[1.1] md:leading-[1.2] mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl"
                                 style={{
                                     fontWeight: 350
                                 }}
                             >
-                                <span>Nos Promotions en Cours</span>
+                                Nos <span className="text-blue-600 lg:text-blue-400">Promotions</span> en Cours
                             </h1>
-                            <p className="text-slate-600 font-light text-center lg:text-justify max-w-xl mx-auto">
+                            <p className="font-light text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
                                 Profitez de nos offres exceptionnelles sur nos systèmes de traitement d'eau pour transformer votre quotidien.
                             </p>
                         </div>
@@ -86,7 +84,7 @@ const Promotions = () => {
                 </section>
 
                 {/* Promotions Grid */}
-                <section className="py-12 md:py-16">
+                <section className="pt-20 pb-12 md:pb-16">
                     <div className="container mx-auto px-4">
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
                             {promotions.map((promo, index) => (
@@ -100,17 +98,6 @@ const Promotions = () => {
                                             alt={`${promo.title} - Offre exclusive Bricareau`}
                                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                                         />
-                                        <div className="absolute top-4 right-4">
-                                            <div className="bg-[#0052ff] text-white text-lg font-bold px-4 py-2 rounded-lg shadow-lg">
-                                                <Percent className="h-5 w-5 inline mr-1" />
-                                                {promo.discount}
-                                            </div>
-                                        </div>
-                                        <div className="absolute top-4 left-4">
-                                            <span className="bg-white/90 backdrop-blur-sm text-gray-800 text-xs font-semibold px-3 py-1 rounded-full">
-                                                {promo.category}
-                                            </span>
-                                        </div>
                                     </div>
                                     <CardHeader>
                                         <CardTitle className="text-xl group-hover:text-[#0052ff] transition-colors">

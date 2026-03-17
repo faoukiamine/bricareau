@@ -128,7 +128,7 @@ const AdoucisseurEauMunicipal = () => {
 
             <main>
                 {/* 1. Hero Section (Redesigned for Mobile) */}
-                <section className="relative lg:h-[850px] flex flex-col lg:flex-row items-stretch overflow-hidden">
+                <section className="relative lg:h-[650px] flex flex-col lg:flex-row items-stretch overflow-hidden">
                     {/* Mobile Image */}
                     <div className="lg:hidden w-full h-[300px] relative">
                         <img
@@ -184,20 +184,6 @@ const AdoucisseurEauMunicipal = () => {
                         </div>
                     </div>
 
-                    {/* Wave Separator (Hidden on Mobile if it doesn't fit well, or kept for transition) */}
-                    <div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-[0] z-20 pointer-events-none hidden lg:block">
-                        <svg
-                            className="relative block w-full h-[50px] md:h-[80px]"
-                            viewBox="0 0 1200 120"
-                            preserveAspectRatio="none"
-                        >
-                            <path
-                                d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-                                fill="#2563EB"
-                                transform="rotate(180 600 60)"
-                            ></path>
-                        </svg>
-                    </div>
                 </section>
 
                 {/* 3. Why choose our residential water softeners */}
