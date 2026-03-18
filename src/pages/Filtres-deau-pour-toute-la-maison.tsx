@@ -243,38 +243,31 @@ const FiltresTouteMaison = () => {
                                     icon: Droplets, 
                                     title: "Eau cristalline", 
                                     desc: "Éliminez les sédiments et la turbidité pour une eau d'une clarté professionnelle partout chez vous.",
-                                    gradient: "from-cyan-400 to-blue-500",
-                                    iconColor: "text-blue-500"
                                 },
                                 { 
                                     icon: Shield, 
                                     title: "Protection totale", 
                                     desc: "Empêchez le fer et les minéraux corrosifs de tacher vos éviers et de détruire votre plomberie.",
-                                    gradient: "from-blue-500 to-indigo-500",
-                                    iconColor: "text-indigo-500"
                                 },
                                 { 
                                     icon: TrendingDown, 
                                     title: "Zéro odeur", 
                                     desc: "Dites adieu aux odeurs d'œufs pourris (soufre) et au goût de chlore pour une eau fraîche.",
-                                    gradient: "from-indigo-400 to-purple-500",
-                                    iconColor: "text-purple-500"
                                 }
                             ].map((item, id) => (
-                                <div 
-                                    key={id} 
-                                    className="group relative flex flex-col items-center lg:items-start text-center lg:text-left bg-white hover:bg-slate-50/50 border border-slate-100/80 hover:border-blue-100 rounded-3xl p-10 transition-all duration-500 hover:-translate-y-2 overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(59,130,246,0.1)] backdrop-blur-md"
-                                >
-                                    {/* Hover Glow Effect inside card */}
-                                    <div className={`absolute inset-0 bg-gradient-to-br opacity-0 group-hover:opacity-[0.03] transition-opacity duration-500 pointer-events-none ${item.gradient}`} />
-                                    
-                                    <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-8 relative z-10 shadow-sm bg-white border border-slate-100 group-hover:border-transparent transition-all duration-500`}>
-                                        <div className={`absolute inset-0 bg-gradient-to-br ${item.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500 rounded-2xl`} />
-                                        <item.icon className={`h-8 w-8 transition-transform duration-500 group-hover:scale-110 relative z-10 ${item.iconColor}`} />
+                                <div key={id} className="group bg-white border border-slate-100 rounded-[2rem] p-8 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2 relative overflow-hidden text-left">
+                                    <div className="absolute -right-4 -bottom-4 opacity-5 group-hover:opacity-10 transition-opacity duration-500 transform group-hover:scale-110">
+                                        <item.icon className="w-32 h-32 text-blue-600" />
                                     </div>
-                                    
-                                    <h4 className="text-2xl text-slate-900 mb-4 tracking-tight font-medium relative z-10">{item.title}</h4>
-                                    <p className="text-slate-500 font-light leading-relaxed relative z-10">{item.desc}</p>
+                                    <div className="relative z-10 w-16 h-16 rounded-2xl bg-blue-50 flex items-center justify-center mb-8 group-hover:bg-blue-600 transition-colors duration-500">
+                                        <item.icon className="h-8 w-8 text-blue-600 group-hover:text-white transition-colors duration-500" />
+                                    </div>
+                                    <h4 className="relative z-10 text-xl font-bold text-slate-900 mb-4 tracking-tight group-hover:text-blue-600 transition-colors duration-500">
+                                        {item.title}
+                                    </h4>
+                                    <p className="relative z-10 text-slate-500 font-light leading-relaxed">
+                                        {item.desc}
+                                    </p>
                                 </div>
                             ))}
                         </div>

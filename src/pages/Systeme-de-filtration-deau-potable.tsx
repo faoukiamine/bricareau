@@ -167,25 +167,26 @@ const StationEauPotable = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 text-justify">
               {[
                 { icon: ShieldCheck, title: "Sécurité maximale", desc: "Élimine 99% des virus, bactéries et contaminants chimiques." },
                 { icon: Droplets, title: "Goût incomparable", desc: "Retrouvez le vrai goût de l'eau, limpide et rafraîchissante." },
                 { icon: GlassWater, title: "Eau pure 24/7", desc: "Accès instantané à une eau de meilleure qualité." },
                 { icon: CircleDollarSign, title: "Économies", desc: "Éliminez l'achat de bouteilles d'eau plastique." },
               ].map((item, i) => (
-                <div
-                  key={i}
-                  className="group relative flex flex-col items-center bg-white/60 backdrop-blur-xl border border-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] rounded-3xl p-8 hover:-translate-y-2 transition-all duration-500 hover:border-blue-200 hover:shadow-[0_20px_40px_rgba(59,130,246,0.1)] overflow-hidden"
-                >
-                  {/* Subtle inner glow on hover */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-
-                  <div className="relative z-10 w-20 h-20 rounded-2xl bg-white border border-slate-100 flex items-center justify-center mb-8 transition-transform duration-500 group-hover:scale-110 group-hover:bg-blue-50 shadow-sm">
-                    <item.icon className="h-10 w-10 text-blue-600 transition-colors duration-300" strokeWidth={1.5} />
+                <div key={i} className="group bg-white border border-slate-100 rounded-[2rem] p-8 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2 relative overflow-hidden text-left">
+                  <div className="absolute -right-4 -bottom-4 opacity-5 group-hover:opacity-10 transition-opacity duration-500 transform group-hover:scale-110">
+                    <item.icon className="w-32 h-32 text-blue-600" />
                   </div>
-                  <h3 className="relative z-10 mb-4 tracking-tight text-slate-900 font-medium text-xl text-center">{item.title}</h3>
-                  <p className="relative z-10 font-light text-slate-500 text-center leading-relaxed group-hover:text-slate-600 transition-colors duration-300">{item.desc}</p>
+                  <div className="relative z-10 w-16 h-16 rounded-2xl bg-blue-50 flex items-center justify-center mb-8 group-hover:bg-blue-600 transition-colors duration-500">
+                    <item.icon className="h-8 w-8 text-blue-600 group-hover:text-white transition-colors duration-500" />
+                  </div>
+                  <h3 className="relative z-10 text-xl font-bold text-slate-900 mb-4 tracking-tight group-hover:text-blue-600 transition-colors duration-500">
+                    {item.title}
+                  </h3>
+                  <p className="relative z-10 text-slate-500 font-light leading-relaxed">
+                    {item.desc}
+                  </p>
                 </div>
               ))}
             </div>
