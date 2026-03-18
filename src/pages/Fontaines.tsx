@@ -249,7 +249,7 @@ const Fontaines = () => {
             <Header />
             <main>
                 {/* Hero Section (Adoucissement Pattern) */}
-                <section className="relative lg:h-[650px] flex flex-col lg:items-center overflow-hidden bg-white">
+                <section className="relative lg:min-h-[650px] flex flex-col lg:items-center overflow-hidden bg-white">
                     <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none hidden lg:block">
                         <div className="container mx-auto px-4 lg:px-6 pointer-events-auto">
                             <GlobalBreadcrumbs variant="dark" />
@@ -266,38 +266,23 @@ const Fontaines = () => {
                         <div className="hidden lg:block absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white/90 via-white/40 to-transparent" />
                     </div>
 
-                    <div className="container relative z-10 mx-auto px-4 h-full flex items-center lg:px-6">
+                    <div className="container relative z-10 mx-auto px-4 lg:min-h-[650px] flex items-center lg:px-6">
                         <div className="max-w-2xl lg:text-white py-12 lg:py-0">
-                            <span className="text-blue-600 lg:text-blue-400 font-bold uppercase tracking-widest text-[10px] md:text-sm mb-4 block">
-                                SOLUTIONS D'HYDRATATION
-                            </span>
-                            <span className="sr-only">Montréal • Rive-Sud • Rive-Nord</span>
                             <h1
                                 className="text-[48px] md:text-[48px] leading-[1.1] md:leading-[1.2] mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl"
                                 style={{
                                     fontWeight: 600
                                 }}
                             >
-                                L'art de l'eau pure rafraîchissante.
+                                L'art de l'eau pure <br /> rafraîchissante.
                             </h1>
-                            <p className="font-light text-slate-600 lg:text-white/95 mb-8 max-w-xl text-justify">
+                            <p className="font-light text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
                                 Élevez votre expérience d'hydratation avec nos refroidisseurs d'eau haute performance. Design élégant et pureté absolue.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4">
                                 <Button
                                     size="lg"
                                     className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200"
-                                    style={{}}
-                                    asChild
-                                >
-                                    <NavLink to="/contact" className="flex items-center gap-2">
-                                        Obtenir un devis <ArrowRight className="h-5 w-5" />
-                                    </NavLink>
-                                </Button>
-                                <Button
-                                    size="lg"
-                                    variant="outline"
-                                    className="bg-slate-100 lg:bg-white/10 hover:bg-slate-200 lg:hover:bg-white/20 text-slate-800 lg:text-white border-slate-200 lg:border-white rounded-full px-8 h-14 backdrop-blur-sm shadow-lg"
                                     style={{}}
                                     asChild
                                 >
@@ -311,7 +296,7 @@ const Fontaines = () => {
                 </section>
 
                 {/* Section 1: Modern Editorial Solutions Section */}
-                <section className="relative py-32 bg-white overflow-hidden">
+                <section id="models" className="relative py-32 bg-white overflow-hidden scroll-mt-20">
                     {/* Background decorations */}
                     <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-50/50 rounded-full blur-[120px] -z-0 translate-x-1/3 -translate-y-1/3" />
                     <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-slate-100/50 rounded-full blur-[100px] -z-0 -translate-x-1/2 translate-y-1/2" />
@@ -331,7 +316,7 @@ const Fontaines = () => {
                             </p>
                         </div>
 
-                        <div id="models" className="flex flex-wrap justify-center gap-10 lg:gap-14 mx-auto max-w-7xl">
+                        <div className="flex flex-wrap justify-center gap-10 lg:gap-14 mx-auto max-w-7xl">
                             {[
                                 {
                                     title: "Distributeur d'eau de comptoir",
@@ -526,7 +511,7 @@ const Fontaines = () => {
                                     className="rounded-full px-10 h-16 border-white/30 text-white bg-white/5 hover:bg-white/10 backdrop-blur-md text-lg transition-all duration-500"
                                     asChild
                                 >
-                                    <NavLink to="/tests-eau">Demandez une soumission</NavLink>
+                                    <NavLink to="/consultation">Planifiez-vous une consultation</NavLink>
                                 </Button>
                             </div>
 

@@ -21,6 +21,7 @@ import hardWaterImg from "@/assets/58279.jpg";
 import { conditionneursImg } from "./Blog pages/Adoucisseur avec sel ou sans sel";
 import { softenerImg as residentialWaterSoftenerImg } from "./Blog pages/Comment régler la dureté de votre adoucisseur ";
 import { adoucisseurImg as adoucisseurFosseImg } from "./Blog pages/Adoucisseur-deau- et-fosse-septique--Mythes-et-réalités";
+import TACsystemImg from "@/assets/free salt conditionner.webp";
 
 import {
     ArrowRight,
@@ -474,7 +475,7 @@ const Adoucissement = () => {
                                         <th className="p-8 text-left text-gray-400 font-light uppercase tracking-wider">Solutions</th>
                                         {[
                                             { name: "Adoucisseur au Sel", img: specializedFiltersImg },
-                                            { name: "Conditionneur sans Sel", img: drinkingWaterImg },
+                                            { name: "Conditionneur sans Sel", img: TACsystemImg },
                                         ].map((m, i) => (
                                             <th key={i} className="p-4 text-center text-gray-900 font-bold text-sm">
                                                 <div className="flex flex-col items-center gap-2">
