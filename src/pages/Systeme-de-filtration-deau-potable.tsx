@@ -15,7 +15,8 @@ import {
   Wrench,
   Droplets,
   Zap,
-  Search
+  Search,
+  ShieldCheck
 } from "lucide-react";
 import safetyIcon from "@/assets/1709235770048.png";
 import { NavLink } from "@/components/NavLink";
@@ -147,34 +148,44 @@ const StationEauPotable = () => {
           </div>
         </section>
 
-        {/* 3. Pourquoi choisir - Blue Section */}
-        <section className="py-24 bg-blue-600 text-white">
-          <div className="container mx-auto px-6">
-            <div className="text-center mb-16">
-              <h2 className="text-white mb-8 md:leading-[48px] text-center">
-                Pourquoi choisir nos systèmes <br />d'osmose inverse ?
+        {/* 3. Pourquoi choisir - Floating Glass Deck (Light Theme) */}
+        <section className="relative py-32 bg-slate-50 text-slate-900 overflow-hidden">
+          {/* Subtle Ambient Glows */}
+          <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-blue-200/60 rounded-full blur-[100px] pointer-events-none" />
+          <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-cyan-200/40 rounded-full blur-[100px] pointer-events-none" />
+
+          <div className="container relative z-10 mx-auto px-6">
+            <div className="text-center max-w-3xl mx-auto mb-20">
+              <h2 className="text-slate-900 mb-6 md:leading-[1.2] text-[42px] font-light tracking-tight text-center">
+                Pourquoi choisir nos systèmes <br className="hidden md:block" />
+                <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">
+                  d'osmose inverse ?
+                </span>
               </h2>
-              <p className="font-light text-blue-100 max-w-2xl mx-auto text-justify">
+              <p className="font-light text-slate-600 text-lg sm:text-xl text-center">
                 Une technologie de pointe pour une eau d'une pureté exceptionnelle tout en offrant une protection permanente pour votre foyer.
               </p>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 text-center">
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
               {[
-                { icon: safetyIcon, isImage: true, title: "Sécurité maximale", desc: "Élimine 99% des virus, bactéries et contaminants chimiques." },
+                { icon: ShieldCheck, title: "Sécurité maximale", desc: "Élimine 99% des virus, bactéries et contaminants chimiques." },
                 { icon: Droplets, title: "Goût incomparable", desc: "Retrouvez le vrai goût de l'eau, limpide et rafraîchissante." },
                 { icon: GlassWater, title: "Eau pure 24/7", desc: "Accès instantané à une eau de meilleure qualité." },
                 { icon: CircleDollarSign, title: "Économies", desc: "Éliminez l'achat de bouteilles d'eau plastique." },
               ].map((item, i) => (
-                <div key={i} className="flex flex-col items-center group w-full sm:w-[calc(50%-3rem)] lg:w-[calc(25%-3rem)]">
-                  <div className="w-20 h-20 rounded-2xl bg-white flex items-center justify-center mb-8 transition-all group-hover:scale-110 group-hover:bg-white/10">
-                    {item.isImage ? (
-                      <img src={item.icon as string} alt={item.title} className="h-12 w-12 object-contain" />
-                    ) : (
-                      <item.icon className="h-10 w-10 text-blue-600 group-hover:text-white" />
-                    )}
+                <div
+                  key={i}
+                  className="group relative flex flex-col items-center bg-white/60 backdrop-blur-xl border border-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] rounded-3xl p-8 hover:-translate-y-2 transition-all duration-500 hover:border-blue-200 hover:shadow-[0_20px_40px_rgba(59,130,246,0.1)] overflow-hidden"
+                >
+                  {/* Subtle inner glow on hover */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+                  <div className="relative z-10 w-20 h-20 rounded-2xl bg-white border border-slate-100 flex items-center justify-center mb-8 transition-transform duration-500 group-hover:scale-110 group-hover:bg-blue-50 shadow-sm">
+                    <item.icon className="h-10 w-10 text-blue-600 transition-colors duration-300" strokeWidth={1.5} />
                   </div>
-                  <h3 className="mb-4 tracking-tight">{item.title}</h3>
-                  <p className="font-light text-blue-100 text-justify">{item.desc}</p>
+                  <h3 className="relative z-10 mb-4 tracking-tight text-slate-900 font-medium text-xl text-center">{item.title}</h3>
+                  <p className="relative z-10 font-light text-slate-500 text-center leading-relaxed group-hover:text-slate-600 transition-colors duration-300">{item.desc}</p>
                 </div>
               ))}
             </div>
