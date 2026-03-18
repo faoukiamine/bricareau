@@ -54,6 +54,7 @@ import movingTipsImg from "@/assets/astuces-emmenagement-maison.jpg";
 import clothesStainsImg from "@/assets/302731406_443870381116589_3770801709209607894_n.jpg";
 import scientistImg from "@/assets/Scientist istesting water.webp";
 import newHeroImg from "@/assets/r0_0_4896_3264_w1200_h678_fmax.jpg";
+import forensicWaterImg from "@/assets/forensic-water.png";
 
 const TestsEauPage = () => {
   const [showAllFaqs, setShowAllFaqs] = useState(false);
@@ -76,7 +77,7 @@ const TestsEauPage = () => {
   const services = [
     {
       title: "Nouvel emménagement",
-      icon: MessageCircle,
+      icon: HousePlus,
       img: movingTipsImg,
       desc: "Assurez la sécurité de votre famille dès votre arrivée en testant la qualité de l'eau de votre nouvelle maison."
     },
@@ -88,13 +89,13 @@ const TestsEauPage = () => {
     },
     {
       title: "Taches sur les vêtements",
-      icon: FileText,
+      icon: Sparkles,
       img: clothesStainsImg,
       desc: "Le fer et le manganèse peuvent tacher vos vêtements. Une analyse révélera la solution adaptée pour protéger votre linge."
     },
     {
       title: "Problèmes de plomberie",
-      icon: FileText,
+      icon: Wrench,
       img: plumbingImg,
       desc: "Le calcaire obstrue vos tuyaux et réduit la durée de vie de vos appareils. Protégez votre investissement."
     }
@@ -135,9 +136,9 @@ const TestsEauPage = () => {
           <div className="container mx-auto px-6 relative z-10 h-full flex items-center">
             <div className="max-w-2xl text-slate-900 lg:text-white py-12 lg:py-0">
               <h1
-                className="text-[32px] md:text-[42px] leading-[1.1] md:leading-[1.2] mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl"
+                className="text-[42px] font-bold leading-[1.1] md:leading-[1.2] mb-4 lg:mb-8 tracking-[-0.01em] md:tracking-[-0.03em] text-slate-900 lg:text-white text-left max-w-xl"
                 style={{
-                  fontWeight: 350
+                  fontWeight: 600
                 }}
               >
                 <span className="sr-only">Montréal • Rive-Sud • Rive-Nord</span>
@@ -176,104 +177,111 @@ const TestsEauPage = () => {
 
 
 
-        {/* 3. Why test your water Section (Blue Background) - Editorial Split Layout */}
-        <section className="py-32 bg-blue-600 text-white relative z-10 -mt-2 overflow-hidden">
-          {/* Subtle Background Pattern */}
-          <div className="absolute inset-0 opacity-10 bg-[radial-gradient(white_1px,transparent_1px)] [background-size:24px_24px]"></div>
+        {/* 3. Why test your water Section (Forensic Split Alternative) - Ultra Modern */}
+        <section className="bg-white overflow-hidden">
+          <div className="flex flex-col lg:flex-row min-h-[700px]">
 
-          <div className="container mx-auto px-6 relative z-10">
-            <div className="flex flex-col lg:flex-row gap-16 lg:gap-24">
+            {/* Left Column: Clean Editorial Content (50%) */}
+            <div className="lg:w-1/2 flex items-center justify-center p-8 lg:p-24 bg-white relative">
+              {/* Subtle tech grid background */}
+              <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#3b82f6 1px, transparent 1px)', backgroundSize: '32px 32px' }} />
 
-              {/* Left Column: Sticky Title */}
-              <div className="lg:w-1/3 lg:sticky lg:top-32 h-fit">
-                <span className="inline-block py-1 px-3 rounded-full bg-white/10 text-white text-xs font-bold uppercase tracking-widest mb-6 border border-white/20">
-                  POURQUOI TESTER ?
-                </span>
-                <h2
-                  className="text-white mb-8"
-                  style={{}}
-                >
-                  <span className="text-[36px] md:text-[50px] font-bold leading-[1.05] block mb-2">Découvrez</span>
-                  <span className="text-[36px] md:text-[50px] font-light leading-[1.05] block text-blue-100">l'invisible.</span>
-                </h2>
-                <p className="font-light text-white/80 text-justify border-l-2 border-white/20 pl-6">
-                  L'eau claire cache parfois des secrets. Minéraux, bactéries ou contaminants chimiques : une analyse est la seule façon de savoir ce que vous buvez réellement.
-                </p>
-              </div>
-
-              {/* Right Column: 2x2 Grid */}
-              <div className="lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-6">
-                {[
-                  {
-                    icon: (
-                      <svg viewBox="0 0 24 24" fill="none" className="w-full h-full text-white" stroke="currentColor" strokeWidth="1.5">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="m14.479 19.374-.971.939a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5a5.2 5.2 0 0 1-.219 1.49" />
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M15 15h6" />
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M18 12v6" />
-                      </svg>
-                    ),
-                    title: "Santé et bien-être",
-                    desc: "Protégez votre famille des contaminants invisibles qui peuvent avoir des effets à long terme.",
-                    gradient: "from-blue-600 to-sky-400"
-                  },
-                  {
-                    icon: (
-                      <svg viewBox="0 0 24 24" fill="none" className="w-full h-full text-white" stroke="currentColor" strokeWidth="1.5">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M12.35 21H5a2 2 0 0 1-2-2v-9a2 2 0 0 1 .71-1.53l7-6a2 2 0 0 1 2.58 0l7 6A2 2 0 0 1 21 10v2.35" />
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M14.8 12.4A1 1 0 0 0 14 12h-4a1 1 0 0 0-1 1v8" />
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M15 18h6" />
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M18 15v6" />
-                      </svg>
-                    ),
-                    title: "Protection Maison",
-                    desc: "Prévenez la corrosion de la tuyauterie et prolongez la vie de vos appareils ménagers.",
-                    gradient: "from-sky-500 to-cyan-400"
-                  },
-                  {
-                    icon: (
-                      <svg viewBox="0 0 24 24" fill="none" className="w-full h-full text-white" stroke="currentColor" strokeWidth="1.5">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M22 11v1a10 10 0 1 1-9-10" />
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M8 14s1.5 2 4 2 4-2 4-2" />
-                        <line x1="9" x2="9.01" y1="9" y2="9" strokeLinecap="round" strokeLinejoin="round" />
-                        <line x1="15" x2="15.01" y1="9" y2="9" strokeLinecap="round" strokeLinejoin="round" />
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M16 5h6" />
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M19 2v6" />
-                      </svg>
-                    ),
-                    title: "Tranquillité d’esprit",
-                    desc: "Obtenez des réponses claires et certifiées pour ne plus douter de la qualité de votre eau.",
-                    gradient: "from-cyan-500 to-blue-400"
-                  },
-                  {
-                    icon: (
-                      <svg viewBox="0 0 24 24" fill="none" className="w-full h-full text-white" stroke="currentColor" strokeWidth="1.5">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M21 10.656V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h12.344" />
-                        <path strokeLinecap="round" strokeLinejoin="round" d="m9 11 3 3L22 4" />
-                      </svg>
-                    ),
-                    title: "Conformité & Valeur",
-                    desc: "Essentiel pour la vente d'une propriété et pour respecter les normes hypothécaires.",
-                    gradient: "from-blue-500 to-indigo-500"
-                  }
-                ].map((item, id) => (
-                  <div
-                    key={id}
-                    className="group bg-white/10 hover:bg-white/20 border border-white/10 hover:border-white/20 rounded-3xl p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-blue-900/20 backdrop-blur-sm"
-                  >
-                    <div className="w-16 h-16 rounded-2xl bg-blue-50 flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors duration-500">
-                      <div className="h-8 w-8 text-blue-600 group-hover:text-white transition-colors">
-                        {item.icon}
-                      </div>
-                    </div>
-                    <h3 className="text-white mb-3">{item.title}</h3>
-                    <p className="text-base text-blue-50 group-hover:text-white transition-colors">
-                      {item.desc}
+              <div className="max-w-xl relative z-10">
+                <div className="space-y-12">
+                  <div className="space-y-6">
+                    <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.2em]">
+                      ANALYSE SCIENTIFIQUE
+                    </span>
+                    <h2 className="text-slate-900 text-[48px] leading-[1.1]">
+                      <span className="font-light block italic opacity-60">Découvrez</span>
+                      <span className="font-bold block tracking-tight">l'invisible.</span>
+                    </h2>
+                    <p className="text-slate-500 font-light text-xl leading-relaxed">
+                      L'eau claire cache parfois des secrets. Minéraux, bactéries ou contaminants chimiques : une analyse certifiée est la seule façon de garantir une sécurité totale.
                     </p>
                   </div>
-                ))}
+
+                  {/* Horizontal Data Strip Highlights */}
+                  <div className="grid grid-cols-2 gap-8 pt-8 border-t border-slate-100">
+                    <div className="space-y-2">
+                      <div className="flex items-center gap-3 text-blue-600">
+                        <Heart className="h-5 w-5" />
+                        <span className="font-bold text-sm uppercase tracking-wider">Santé</span>
+                      </div>
+                      <p className="text-sm text-slate-400 font-light">Élimine les risques bactériologiques.</p>
+                    </div>
+                    <div className="space-y-2">
+                      <div className="flex items-center gap-3 text-blue-600">
+                        <Shield className="h-5 w-5" />
+                        <span className="font-bold text-sm uppercase tracking-wider">Maison</span>
+                      </div>
+                      <p className="text-sm text-slate-400 font-light">Protège vos équipements durablement.</p>
+                    </div>
+                    <div className="space-y-2">
+                      <div className="flex items-center gap-3 text-blue-600">
+                        <Sparkles className="h-5 w-5" />
+                        <span className="font-bold text-sm uppercase tracking-wider">Paix</span>
+                      </div>
+                      <p className="text-sm text-slate-400 font-light">Une tranquillité d'esprit certifiée.</p>
+                    </div>
+                    <div className="space-y-2">
+                      <div className="flex items-center gap-3 text-blue-600">
+                        <FileText className="h-5 w-5" />
+                        <span className="font-bold text-sm uppercase tracking-wider">Valeur</span>
+                      </div>
+                      <p className="text-sm text-slate-400 font-light">Précieux pour toute transaction Immobilière.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Column: Immersive Forensic Visual (50%) */}
+            <div className="lg:w-1/2 relative min-h-[500px] lg:min-h-full overflow-hidden group">
+              <img
+                src={forensicWaterImg}
+                alt="Macro gouttelette d'eau sous microscope Bricareau"
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-[5000ms] group-hover:scale-110"
+              />
+              {/* Glassmorphism Overlays (Floating Data Points) */}
+              <div className="absolute inset-0 bg-blue-900/10 mix-blend-multiply" />
+
+              {/* Data Point 1 */}
+              <div className="absolute top-[20%] left-[30%] animate-bounce [animation-duration:4s]">
+                <div className="backdrop-blur-xl bg-white/10 border border-white/20 rounded-full p-2 pr-6 flex items-center gap-3 shadow-2xl">
+                  <div className="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center">
+                    <div className="w-2 h-2 rounded-full bg-white animate-pulse" />
+                  </div>
+                  <span className="text-xs font-bold text-white uppercase tracking-widest">Bactéries</span>
+                </div>
               </div>
 
+              {/* Data Point 2 */}
+              <div className="absolute top-[60%] right-[25%] animate-bounce [animation-duration:3s]">
+                <div className="backdrop-blur-xl bg-white/10 border border-white/20 rounded-full p-2 pr-6 flex items-center gap-3 shadow-2xl">
+                  <div className="w-8 h-8 rounded-full bg-sky-400 flex items-center justify-center">
+                    <div className="w-2 h-2 rounded-full bg-white animate-pulse" />
+                  </div>
+                  <span className="text-xs font-bold text-white uppercase tracking-widest">Métaux Lourds</span>
+                </div>
+              </div>
+
+              {/* Data Point 3 */}
+              <div className="absolute bottom-[20%] left-[20%] animate-bounce [animation-duration:5s]">
+                <div className="backdrop-blur-xl bg-white/10 border border-white/20 rounded-full p-2 pr-6 flex items-center gap-3 shadow-2xl">
+                  <div className="w-8 h-8 rounded-full bg-indigo-500 flex items-center justify-center">
+                    <div className="w-2 h-2 rounded-full bg-white animate-pulse" />
+                  </div>
+                  <span className="text-xs font-bold text-white uppercase tracking-widest">Minéraux</span>
+                </div>
+              </div>
+
+              {/* Bottom Credit */}
+              <div className="absolute bottom-12 right-12 text-white/40 text-[10px] uppercase tracking-[0.3em] font-bold">
+                Forensic Micro-Photography Analysis
+              </div>
             </div>
+
           </div>
         </section>
 
@@ -352,14 +360,13 @@ const TestsEauPage = () => {
           <div className="container mx-auto px-6">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <span className="text-sm font-bold uppercase tracking-widest text-blue-600 mb-4 block flex items-center justify-center gap-2">
-                <span className="w-8 h-[2px] bg-blue-600 inline-block"></span>
-                NOS SOLUTIONS D'ANALYSE DE LA QUALITÉ D'EAU
+                <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.2em] mb-6">
+                  NOS SOLUTIONS D'ANALYSE DE LA QUALITÉ D'EAU
+                </span>
               </span>
-              <h2 className="text-slate-900 mb-8"
-                style={{}}
-              >
-                <span className="text-[28px] md:text-[48px] font-light leading-[1.1] md:leading-[1.1] block">Quelle trousse d'analyse</span>
-                <span className="text-[28px] md:text-[48px] font-normal leading-[1.1] md:leading-[1.1] block">choisir pour votre eau ?</span>
+              <h2 className="text-slate-900 mb-6 text-[42px] leading-[42px]">
+                <span className="font-light block">Quelle trousse d'analyse</span>
+                <span className="font-bold text-blue-600">choisir pour votre eau ?</span>
               </h2>
               <p className="text-slate-600 font-light max-w-2xl mx-auto">
                 Des solutions adaptées à vos besoins, de la vérification bactérienne de base au bilan complet pour une tranquillité d'esprit totale.
@@ -490,8 +497,8 @@ const TestsEauPage = () => {
                 className="text-slate-900 mb-8 text-left"
                 style={{}}
               >
-                <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Pour vous éclairer</span>
-                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">Questions fréquentes</span>
+                <span className="text-[42px] md:text-[42px] font-light leading-[1.1] md:leading-[42px] block">Pour vous éclairer</span>
+                <span className="text-[42px] md:text-[42px] font-normal leading-[1.1] md:leading-[42px] block">Questions fréquentes</span>
               </h2>
               <div className="w-24 h-1 bg-blue-600"></div>
             </div>

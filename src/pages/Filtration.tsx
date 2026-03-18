@@ -92,9 +92,9 @@ const Filtration = () => {
                     <div className="container relative z-10 mx-auto px-4 h-full flex items-center lg:px-6">
                         <div className="max-w-2xl lg:text-white py-12 lg:py-0">
                             <h1
-                                className="text-[32px] md:text-[42px] leading-[1.1] md:leading-[1.2] mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl"
+                                className="text-[48px] md:text-[48px] leading-[1.1] md:leading-[1.2] mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl"
                                 style={{
-                                    fontWeight: 350
+                                    fontWeight: 600
                                 }}
                             >
                                 Filtration d'eau résidentielle <br />
@@ -191,162 +191,188 @@ const Filtration = () => {
                 </section>
 
 
-                {/* 4. Whole House Water Filter Section - PRO EXCELLENCE */}
-                <section className="relative lg:py-24 bg-white overflow-hidden">
-                    {/* Mobile Image Section */}
-                    <div className="lg:hidden w-full h-[350px] sm:h-[450px] relative">
-                        <img
-                            src={teenagerShowerImg}
-                            alt="Douche sous eau filtrée Bricareau - Protection de la peau et des cheveux contre le chlore"
-                            className="w-full h-full object-cover"
-                        />
-                        <div className="absolute inset-0 bg-black/10" />
-                    </div>
+                {/* 4. Whole House Water Filter Section - Modern Editorial */}
+                <section className="relative py-32 bg-white overflow-hidden">
+                    {/* Background decorations */}
+                    <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-50/50 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2 -z-0" />
 
-                    <div className="container mx-auto px-6 py-12 lg:py-0">
-                        <div className="flex flex-col lg:flex-row items-start gap-16">
-                            {/* Left Side: Image with Video Button - Desktop Only */}
-                            <div className="hidden lg:block w-full lg:w-1/2 lg:sticky lg:top-24 mb-12 lg:mb-0">
-                                <div className="rounded-[2.5rem] overflow-hidden shadow-2xl relative h-[600px] w-full group">
-                                    <img
-                                        src={teenagerShowerImg}
-                                        alt="Douche sous eau filtrée Bricareau - Protection de la peau et des cheveux contre le chlore"
-                                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                                    />
-                                    <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors duration-500" />
+                    <div className="container mx-auto px-6 relative z-10">
+                        <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
 
-                                    {/* Play Button Card */}
-                                    <div className="absolute bottom-10 left-10 bg-blue-600/90 backdrop-blur-md rounded-2xl p-4 pr-8 flex items-center gap-4 shadow-xl cursor-pointer hover:bg-blue-700 transition-all hover:scale-105 active:scale-95 group/btn border border-white/20">
-                                        <div className="bg-white rounded-full p-3 shadow-lg group-hover/btn:shadow-xl transition-shadow relative">
-                                            <div className="absolute inset-0 rounded-full bg-blue-200 animate-ping opacity-20"></div>
-                                            <Play className="h-6 w-6 text-blue-600 fill-blue-600 ml-1 relative z-10" />
-                                        </div>
-                                        <div>
-                                            <span className="font-bold text-white text-lg block">Voir la vidéo</span>
-                                            <span className="text-blue-100 text-xs font-light">Découvrir l'expérience</span>
-                                        </div>
+                            {/* Left Side: Creative Image Stack */}
+                            <div className="w-full lg:w-1/2 relative">
+                                <div className="relative group">
+                                    {/* Main Hero Image */}
+                                    <div className="relative z-10 rounded-[3rem] overflow-hidden aspect-[4/5] shadow-2xl transition-transform duration-700 group-hover:scale-[1.01]">
+                                        <img
+                                            src={teenagerShowerImg}
+                                            alt="Douche sous eau filtrée Bricareau - Protection de la peau et des cheveux"
+                                            className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                                        />
+                                        <div className="absolute inset-0 bg-blue-900/10 mix-blend-multiply" />
                                     </div>
+
+                                    {/* Floating Detail Card */}
+                                    <div className="absolute -bottom-10 -right-6 md:-right-10 z-20 bg-white/90 backdrop-blur-xl p-8 rounded-[2.5rem] shadow-2xl border border-white/50 max-w-[280px] hidden md:block animate-float">
+                                        <div className="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center mb-4 shadow-lg shadow-blue-200">
+                                            <Wrench className="h-6 w-6 text-white" />
+                                        </div>
+                                        <h4 className="text-xl font-bold text-slate-900 mb-2">Qualité Hôtelière</h4>
+                                        <p className="text-sm text-slate-500 font-light leading-relaxed">
+                                            Une eau d'une pureté exceptionnelle pour vos spas et salles de bain de luxe.
+                                        </p>
+                                    </div>
+
+                                    {/* Background decorative square */}
+                                    <div className="absolute -top-10 -left-10 w-40 h-40 bg-blue-600/5 rounded-[3rem] -z-10 animate-pulse" />
                                 </div>
                             </div>
 
-                            {/* Right Side: Content */}
-                            <div className="w-full lg:w-1/2 lg:pt-4 relative z-10">
-                                <span className="text-sm font-bold uppercase tracking-widest text-blue-600 mb-4 block flex items-center gap-2">
-                                    Eau filtrée pour toute la maison
-                                </span>
-                                <h2 className="text-slate-900 mb-6 text-[36px] leading-[36px]">
-                                    Redécouvrez le luxe d'une eau filtrée cristalline.
-                                </h2>
-                                <p className="font-light text-gray-600 mb-5 text-justify">
-                                    Protégez vos appareils ménagers, votre tuyauterie et votre peau. Nos systèmes de filtration centrale traitent chaque goutte d'eau qui entre dans votre foyer pour une tranquillité d'esprit totale.
-                                </p>
+                            {/* Right Side: Content Editorial */}
+                            <div className="w-full lg:w-1/2 lg:pl-4">
+                                <div className="space-y-8">
+                                    <div className="space-y-4">
+                                        <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.2em]">
+                                            EAU FILTRÉE POUR TOUTE LA MAISON
+                                        </span>
+                                        <h2 className="text-slate-900 leading-tight">
+                                            <span className="text-[42px] font-light block tracking-tight">Redécouvrez le luxe d'une</span>
+                                            <span className="text-[42px] font-bold text-blue-600 block tracking-tight uppercase">eau filtrée cristalline.</span>
+                                        </h2>
+                                        <p className="text-slate-500 font-light text-lg leading-relaxed text-justify max-w-xl">
+                                            Protégez vos appareils ménagers, votre tuyauterie et votre peau dès aujourd'hui. Nos systèmes de filtration centrale traitent chaque goutte d'eau avec une précision chirurgicale.
+                                        </p>
+                                    </div>
 
-                                <div className="space-y-3">
-                                    {[
-                                        { title: "Défense Plomberie", desc: "Dites adieu au chlore résiduel et aux sédiments qui corrodent vos précieux appareils et obstruent votre robinetterie de luxe." },
-                                        { title: "Clarté de l'Eau", desc: "Réduisez drastiquement la turbidité pour une eau limpide à chaque robinet, protégeant ainsi l'éclat de vos sanitaires et de votre linge." },
-                                        { title: "Performance Longue Durée", desc: "Une technologie haute fidélité offrant une filtration efficace pendant 5 à 7 ans sans aucun entretien lourd ou changement fréquent." }
-                                    ].map((item, i) => (
-                                        <div key={i} className="group/item">
-                                            <h3 className="mb-4 text-blue-600 flex items-center gap-3">
-                                                <span className="text-2xl opacity-50">0{i + 1}.</span> {item.title}
-                                            </h3>
-                                            <div className="pl-6 border-l-2 border-blue-600/20 group-hover/item:border-blue-600 transition-colors duration-500 ml-2">
-                                                <p className="text-base text-gray-500 text-justify">
-                                                    {item.desc}
-                                                </p>
+                                    <div className="space-y-6">
+                                        {[
+                                            { title: "Défense Plomberie", desc: "Dites adieu au chlore résiduel et aux sédiments qui corrodent vos précieux appareils." },
+                                            { title: "Clarté de l'Eau", desc: "Une eau limpide à chaque robinet, protégeant l'éclat de vos sanitaires et de votre linge." },
+                                            { title: "Performance Longue Durée", desc: "Une technologie haute fidélité offrant une filtration efficace pendant 5 à 7 ans sans entretien lourd." }
+                                        ].map((item, i) => (
+                                            <div key={i} className="group flex items-start gap-6 p-4 rounded-3xl transition-colors hover:bg-slate-50">
+                                                <div className="text-2xl font-black text-blue-600/20 group-hover:text-blue-600 transition-colors pt-1">
+                                                    0{i + 1}
+                                                </div>
+                                                <div className="space-y-2">
+                                                    <h3 className="text-xl font-bold text-slate-900 tracking-tight">
+                                                        {item.title}
+                                                    </h3>
+                                                    <p className="text-slate-500 font-light text-sm leading-relaxed max-w-sm">
+                                                        {item.desc}
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        ))}
+                                    </div>
+
+                                    <div className="pt-8 flex flex-col sm:flex-row gap-6">
+                                        <NavLink to="/Filtres-deau-pour-toute-la-maison" className="w-full sm:w-auto">
+                                            <Button className="w-full sm:w-auto rounded-full bg-blue-600 hover:bg-blue-700 text-white px-10 h-16 text-lg font-bold shadow-2xl shadow-blue-500/20 group">
+                                                Voir nos filtres
+                                                <ChevronRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                                            </Button>
+                                        </NavLink>
+
+                                        <div className="flex items-center gap-4 px-6 border-l border-slate-100 hidden sm:flex">
+                                            <div className="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center">
+                                                <Phone className="h-5 w-5 text-blue-600" />
+                                            </div>
+                                            <div>
+                                                <span className="text-[10px] block text-slate-400 font-black uppercase tracking-widest leading-none mb-1">Expert direct</span>
+                                                <span className="text-sm font-bold text-slate-900">1-855-264-9328</span>
                                             </div>
                                         </div>
-                                    ))}
-                                </div>
-
-                                <div className="mt-14 pt-8 border-t border-gray-100">
-                                    <NavLink to="/Filtres-deau-pour-toute-la-maison">
-                                        <Button className="rounded-full bg-blue-600 hover:bg-blue-700 text-white px-8 h-14 text-base shadow-lg transition-all duration-300 w-full sm:w-auto hover:shadow-blue-200">
-                                            Découvrir nos filtres d'eau <ChevronRight className="ml-2 h-5 w-5" />
-                                        </Button>
-                                    </NavLink>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
 
-                {/* 5. Reverse Osmosis Water Filtration Section - STYLE MATCHED */}
-                <section className="relative lg:py-24 bg-gray-50 overflow-hidden">
-                    {/* Mobile Image Section */}
-                    <div className="lg:hidden w-full h-[350px] sm:h-[450px] relative">
-                        <img
-                            src={glassOfWaterImg}
-                            alt="Verre d'eau pure provenant d'un système d'osmose inverse Bricareau - Élimination du goût de chlore"
-                            className="w-full h-full object-cover"
-                        />
-                        <div className="absolute inset-0 bg-black/10" />
-                    </div>
+                {/* 5. Reverse Osmosis Water Filtration Section - Modern Editorial */}
+                <section className="relative py-32 bg-gray-50 overflow-hidden">
+                    {/* Background decorations */}
+                    <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-100/30 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2 -z-0" />
 
-                    <div className="container mx-auto px-6 py-12 lg:py-0">
-                        <div className="flex flex-col lg:flex-row-reverse items-start gap-16">
-                            {/* Right Side (visually): Image with Video Button - Desktop Only */}
-                            <div className="hidden lg:block w-full lg:w-1/2 lg:sticky lg:top-24 mb-12 lg:mb-0">
-                                <div className="rounded-[2.5rem] overflow-hidden shadow-2xl relative h-[600px] w-full group">
-                                    <img
-                                        src={glassOfWaterImg}
-                                        alt="Verre d'eau pure provenant d'un système d'osmose inverse Bricareau - Élimination du goût de chlore"
-                                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                                    />
-                                    <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors duration-500" />
+                    <div className="container mx-auto px-6 relative z-10">
+                        <div className="flex flex-col lg:flex-row-reverse items-center gap-16 lg:gap-24">
 
-                                    {/* Play Button Card */}
-                                    <div className="absolute bottom-10 right-10 bg-blue-600/90 backdrop-blur-md rounded-2xl p-4 pl-8 flex items-center gap-4 shadow-xl cursor-pointer hover:bg-blue-700 transition-all hover:scale-105 active:scale-95 group/btn border border-white/20 flex-row-reverse">
-                                        <div className="bg-white rounded-full p-3 shadow-lg group-hover/btn:shadow-xl transition-shadow relative">
-                                            <div className="absolute inset-0 rounded-full bg-blue-200 animate-ping opacity-20"></div>
-                                            <Play className="h-6 w-6 text-blue-600 fill-blue-600 ml-1 relative z-10" />
-                                        </div>
-                                        <div className="text-right">
-                                            <span className="font-bold text-white text-lg block">Voir la vidéo</span>
-                                            <span className="text-blue-100 text-xs font-light">Découvrir l'expérience</span>
-                                        </div>
+                            {/* Right Side: Creative Image Stack */}
+                            <div className="w-full lg:w-1/2 relative">
+                                <div className="relative group">
+                                    {/* Main Hero Image */}
+                                    <div className="relative z-10 rounded-[3rem] overflow-hidden aspect-[4/5] shadow-2xl transition-transform duration-700 group-hover:scale-[1.01]">
+                                        <img
+                                            src={glassOfWaterImg}
+                                            alt="Verre d'eau pure provenant d'un système d'osmose inverse Bricareau"
+                                            className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                                        />
+                                        <div className="absolute inset-0 bg-blue-900/10 mix-blend-multiply" />
                                     </div>
+
+                                    {/* Floating Detail Card */}
+                                    <div className="absolute -bottom-10 -left-6 md:-left-10 z-20 bg-white/90 backdrop-blur-xl p-8 rounded-[2.5rem] shadow-2xl border border-white/50 max-w-[280px] hidden md:block animate-float">
+                                        <div className="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center mb-4 shadow-lg shadow-blue-200">
+                                            <CheckCircle2 className="h-6 w-6 text-white" />
+                                        </div>
+                                        <h4 className="text-xl font-bold text-slate-900 mb-2">Pureté Certifiée</h4>
+                                        <p className="text-sm text-slate-500 font-light leading-relaxed">
+                                            Élimine 99% des contaminants pour une eau d'une clarté de diamant.
+                                        </p>
+                                    </div>
+
+                                    {/* Background decorative square */}
+                                    <div className="absolute -top-10 -right-10 w-40 h-40 bg-blue-600/5 rounded-[3rem] -z-10 animate-pulse" />
                                 </div>
                             </div>
 
-                            {/* Left Side (visually): Content */}
-                            <div className="w-full lg:w-1/2 lg:pt-4 relative z-10">
-                                <span className="text-sm font-bold uppercase tracking-widest text-blue-600 mb-4 block flex items-center gap-2">
-                                    EAU PURE À VOLONTÉ
-                                </span>
-                                <h2 className="text-slate-900 mb-6 text-[36px] leading-[36px]">
-                                    Votre source d'eau cristalline, <br />sans compromis.
-                                </h2>
-                                <p className="font-light text-gray-600 mb-5 text-justify">
-                                    Découvrez comment notre système d'osmose inverse libère votre quotidien du goût de chlore et de la corvée des bouteilles plastique. Profitez d'une eau légère, d'une clarté de diamant, idéale pour une hydratation saine et une cuisine riche en saveurs.
-                                </p>
+                            {/* Left Side: Content Editorial */}
+                            <div className="w-full lg:w-1/2 lg:pr-4">
+                                <div className="space-y-8 text-right lg:text-left">
+                                    <div className="space-y-4">
+                                        <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.2em]">
+                                            EAU PURE À VOLONTÉ
+                                        </span>
+                                        <h2 className="text-slate-900 leading-tight">
+                                            <span className="text-[42px] font-light block tracking-tight text-right lg:text-left">Votre source d'eau cristalline,</span>
+                                            <span className="text-[42px] font-bold text-blue-600 block tracking-tight uppercase text-right lg:text-left">sans compromis.</span>
+                                        </h2>
+                                        <p className="text-slate-500 font-light text-lg leading-relaxed text-justify max-w-xl ml-auto lg:ml-0">
+                                            Découvrez comment notre système d'osmose inverse libère votre quotidien du goût de chlore et de la corvée des bouteilles plastique. Une eau légère et saine à portée de main.
+                                        </p>
+                                    </div>
 
-                                <div className="space-y-3">
-                                    {[
-                                        { title: "Pureté Absolue", desc: "Élimine 99% des contaminants, métaux lourds et micro-plastiques pour une sécurité totale de toute la famille." },
-                                        { title: "Éco-Conscient", desc: "Réduisez drastiquement votre empreinte carbone en éliminant définitivement les bouteilles d'eau jetables de votre foyer." },
-                                        { title: "Saveurs Révélées", desc: "Sublimez le goût de vos boissons et petits plats avec une eau pure, sans chlore ni impuretés pour une cuisine d'exception." }
-                                    ].map((item, i) => (
-                                        <div key={i} className="group/item">
-                                            <h3 className="mb-4 text-blue-600 flex items-center gap-3">
-                                                <span className="text-2xl opacity-50">0{i + 1}.</span> {item.title}
-                                            </h3>
-                                            <div className="pl-6 border-l-2 border-blue-600/20 group-hover/item:border-blue-600 transition-colors duration-500 ml-2">
-                                                <p className="text-base text-gray-500 text-justify">
-                                                    {item.desc}
-                                                </p>
+                                    <div className="space-y-6">
+                                        {[
+                                            { title: "Pureté Absolue", desc: "Élimine 99% des contaminants, métaux lourds et micro-plastiques pour une sécurité totale." },
+                                            { title: "Éco-Conscient", desc: "Réduisez drastiquement votre empreinte carbone en éliminant les bouteilles jetables." },
+                                            { title: "Saveurs Révélées", desc: "Sublimez le goût de vos boissons et petits plats avec une eau pure sans aucune impureté." }
+                                        ].map((item, i) => (
+                                            <div key={i} className="group flex items-start lg:flex-row flex-row-reverse gap-6 p-4 rounded-3xl transition-colors hover:bg-white/50">
+                                                <div className="text-2xl font-black text-blue-600/20 group-hover:text-blue-600 transition-colors pt-1">
+                                                    0{i + 1}
+                                                </div>
+                                                <div className="space-y-2 text-right lg:text-left">
+                                                    <h3 className="text-xl font-bold text-slate-900 tracking-tight">
+                                                        {item.title}
+                                                    </h3>
+                                                    <p className="text-slate-500 font-light text-sm leading-relaxed max-w-sm ml-auto lg:ml-0">
+                                                        {item.desc}
+                                                    </p>
+                                                </div>
                                             </div>
-                                        </div>
-                                    ))}
-                                </div>
+                                        ))}
+                                    </div>
 
-                                <div className="mt-14 pt-8 border-t border-gray-200">
-                                    <NavLink to="/systeme-de-filtration-deau-potable">
-                                        <Button className="rounded-full bg-blue-600 hover:bg-blue-700 text-white px-8 h-14 text-base shadow-lg transition-all duration-300 w-full sm:w-auto hover:shadow-blue-200">
-                                            Découvrir nos systèmes d'osmose inverse <ChevronRight className="ml-2 h-5 w-5" />
-                                        </Button>
-                                    </NavLink>
+                                    <div className="pt-8 flex flex-col sm:flex-row-reverse lg:flex-row gap-6 justify-end lg:justify-start">
+                                        <NavLink to="/systeme-de-filtration-deau-potable" className="w-full sm:w-auto">
+                                            <Button className="w-full sm:w-auto rounded-full bg-blue-600 hover:bg-blue-700 text-white px-10 h-16 text-lg font-bold shadow-2xl shadow-blue-500/20 group">
+                                                Découvrir l'osmose
+                                                <ChevronRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                                            </Button>
+                                        </NavLink>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -354,81 +380,89 @@ const Filtration = () => {
                 </section>
 
 
-                {/* 6. Under Sink Water Filtration Systems Section - STYLE MATCHED */}
-                <section className="relative lg:py-24 bg-white overflow-hidden">
-                    {/* Mobile Image Section */}
-                    <div className="lg:hidden w-full h-[350px] sm:h-[450px] relative">
-                        <img
-                            src={africanGirlImg}
-                            alt="Enfant buvant de l'eau saine filtrée sous l'évier Bricareau - Sécurité alimentaire et santé"
-                            className="w-full h-full object-cover"
-                        />
-                        <div className="absolute inset-0 bg-black/10" />
-                    </div>
+                {/* 6. Under Sink Water Filtration Systems Section - Modern Editorial */}
+                <section className="relative py-32 bg-white overflow-hidden">
+                    {/* Background decorations */}
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-50/30 rounded-full blur-[120px] -z-0" />
 
-                    <div className="container mx-auto px-6 py-12 lg:py-0">
-                        <div className="flex flex-col lg:flex-row items-start gap-16">
-                            {/* Left Side: Image with Video Button - Desktop Only */}
-                            <div className="hidden lg:block w-full lg:w-1/2 lg:sticky lg:top-24 mb-12 lg:mb-0">
-                                <div className="rounded-[2.5rem] overflow-hidden shadow-2xl relative h-[600px] w-full group">
-                                    <img
-                                        src={africanGirlImg}
-                                        alt="Enfant buvant de l'eau saine filtrée sous l'évier Bricareau - Sécurité alimentaire et santé"
-                                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                                    />
-                                    <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors duration-500" />
+                    <div className="container mx-auto px-6 relative z-10">
+                        <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
 
-                                    {/* Play Button Card */}
-                                    <div className="absolute bottom-10 left-10 bg-blue-600/90 backdrop-blur-md rounded-2xl p-4 pr-8 flex items-center gap-4 shadow-xl cursor-pointer hover:bg-blue-700 transition-all hover:scale-105 active:scale-95 group/btn border border-white/20">
-                                        <div className="bg-white rounded-full p-3 shadow-lg group-hover/btn:shadow-xl transition-shadow relative">
-                                            <div className="absolute inset-0 rounded-full bg-blue-200 animate-ping opacity-20"></div>
-                                            <Play className="h-6 w-6 text-blue-600 fill-blue-600 ml-1 relative z-10" />
-                                        </div>
-                                        <div>
-                                            <span className="font-bold text-white text-lg block">Voir la vidéo</span>
-                                            <span className="text-blue-100 text-xs font-light">Découvrir l'expérience</span>
-                                        </div>
+                            {/* Left Side: Creative Image Stack */}
+                            <div className="w-full lg:w-1/2 relative">
+                                <div className="relative group">
+                                    {/* Main Hero Image */}
+                                    <div className="relative z-10 rounded-[3rem] overflow-hidden aspect-[4/5] shadow-2xl transition-transform duration-700 group-hover:scale-[1.01]">
+                                        <img
+                                            src={africanGirlImg}
+                                            alt="Enfant buvant de l'eau saine filtrée sous l'évier Bricareau"
+                                            className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                                        />
+                                        <div className="absolute inset-0 bg-blue-900/10 mix-blend-multiply" />
                                     </div>
+
+                                    {/* Floating Detail Card */}
+                                    <div className="absolute -bottom-10 -right-6 md:-right-10 z-20 bg-white/90 backdrop-blur-xl p-8 rounded-[2.5rem] shadow-2xl border border-white/50 max-w-[280px] hidden md:block animate-float">
+                                        <div className="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center mb-4 shadow-lg shadow-blue-200">
+                                            <GlassWater className="h-6 w-6 text-white" />
+                                        </div>
+                                        <h4 className="text-xl font-bold text-slate-900 mb-2">Solution Compacte</h4>
+                                        <p className="text-sm text-slate-500 font-light leading-relaxed">
+                                            Performance maximale pour un encombrement minimal sous votre évier.
+                                        </p>
+                                    </div>
+
+                                    {/* Background decorative square */}
+                                    <div className="absolute -top-10 -left-10 w-40 h-40 bg-blue-600/5 rounded-[3rem] -z-10 animate-pulse" />
                                 </div>
                             </div>
 
-                            {/* Right Side: Content */}
-                            <div className="w-full lg:w-1/2 lg:pt-4 relative z-10">
-                                <span className="text-sm font-bold uppercase tracking-widest text-blue-600 mb-4 block flex items-center gap-2">
-                                    COMPACT & PUISSANT
-                                </span>
-                                <h2 className="text-slate-900 mb-6 text-[36px] leading-[36px]">
-                                    Systèmes de filtration d'eau <br />sous l'évier
-                                </h2>
-                                <p className="font-light text-gray-600 mb-5 text-justify">
-                                    Éliminez jusqu'à 99% des pathogènes, du plomb et du fluorure. L'osmose inverse Bricareau est la solution ultime pour une eau de boisson de qualité restaurant directement chez vous.
-                                </p>
+                            {/* Right Side: Content Editorial */}
+                            <div className="w-full lg:w-1/2 lg:pl-4">
+                                <div className="space-y-8">
+                                    <div className="space-y-4">
+                                        <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.2em]">
+                                            COMPACT & PUISSANT
+                                        </span>
+                                        <h2 className="text-slate-900 leading-tight">
+                                            <span className="text-[42px] font-light block tracking-tight text-left">Systèmes de filtration</span>
+                                            <span className="text-[42px] font-bold text-blue-600 block tracking-tight uppercase text-left">d'eau sous l'évier.</span>
+                                        </h2>
+                                        <p className="text-slate-500 font-light text-lg leading-relaxed text-justify max-w-xl">
+                                            Éliminez jusqu'à 99% des pathogènes, du plomb et du fluorure. L'osmose inverse Bricareau est la solution ultime pour une eau de boisson de qualité restaurant directement chez vous.
+                                        </p>
+                                    </div>
 
-                                <div className="space-y-3">
-                                    {[
-                                        { title: "Filtration d'Élite", desc: "Un processus rigoureux en 5 étapes qui neutralise les métaux lourds, le micro-plastique et les sédiments invisibles à l'œil nu." },
-                                        { title: "Design Intelligent", desc: "Un réservoir ultra-compact conçu pour maximiser votre espace de rangement tout en offrant une réserve d'eau constante." },
-                                        { title: "Finition de Luxe", desc: "Inclut une sélection de robinets au design contemporain qui s'intègrent parfaitement à l'esthétique de votre cuisine moderne." }
-                                    ].map((item, i) => (
-                                        <div key={i} className="group/item">
-                                            <h3 className="mb-4 text-blue-600 flex items-center gap-3">
-                                                <span className="text-2xl opacity-50">0{i + 1}.</span> {item.title}
-                                            </h3>
-                                            <div className="pl-6 border-l-2 border-blue-600/20 group-hover/item:border-blue-600 transition-colors duration-500 ml-2">
-                                                <p className="text-base text-gray-500 text-justify">
-                                                    {item.desc}
-                                                </p>
+                                    <div className="space-y-6">
+                                        {[
+                                            { title: "Filtration d'Élite", desc: "Un processus rigoureux en 5 étapes qui neutralise les métaux lourds et les sédiments invisibles." },
+                                            { title: "Design Intelligent", desc: "Un réservoir ultra-compact conçu pour maximiser votre espace de rangement." },
+                                            { title: "Finition de Luxe", desc: "Inclut une sélection de robinets au design contemporain s'intégrant parfaitement à votre cuisine." }
+                                        ].map((item, i) => (
+                                            <div key={i} className="group flex items-start gap-6 p-4 rounded-3xl transition-colors hover:bg-slate-50">
+                                                <div className="text-2xl font-black text-blue-600/20 group-hover:text-blue-600 transition-colors pt-1">
+                                                    0{i + 1}
+                                                </div>
+                                                <div className="space-y-2">
+                                                    <h3 className="text-xl font-bold text-slate-900 tracking-tight">
+                                                        {item.title}
+                                                    </h3>
+                                                    <p className="text-slate-500 font-light text-sm leading-relaxed max-w-sm">
+                                                        {item.desc}
+                                                    </p>
+                                                </div>
                                             </div>
-                                        </div>
-                                    ))}
-                                </div>
+                                        ))}
+                                    </div>
 
-                                <div className="mt-14 pt-8 border-t border-gray-100">
-                                    <NavLink to="/Systemes-de-filtration-deau-sous-evier">
-                                        <Button className="rounded-full bg-blue-600 hover:bg-blue-700 text-white px-8 h-14 text-base shadow-lg transition-all duration-300 w-full sm:w-auto hover:shadow-blue-200">
-                                            Découvrir nos filtres d'eau sous-évier <ChevronRight className="ml-2 h-5 w-5" />
-                                        </Button>
-                                    </NavLink>
+                                    <div className="pt-8">
+                                        <NavLink to="/Systemes-de-filtration-deau-sous-evier" className="w-full sm:w-auto">
+                                            <Button className="w-full sm:w-auto rounded-full bg-blue-600 hover:bg-blue-700 text-white px-10 h-16 text-lg font-bold shadow-2xl shadow-blue-500/20 group">
+                                                Voir nos filtres sous-évier
+                                                <ChevronRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                                            </Button>
+                                        </NavLink>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -490,8 +524,10 @@ const Filtration = () => {
                     filterProduct="/filtration"
                     title={
                         <>
-                            <span className="text-[42px] md:text-[42px] font-light leading-[1.1] md:leading-[60px] block tracking-tighter">Honnêteté et passion</span>
-                            <span className="text-[42px] md:text-[42px] font-bold text-blue-600 leading-[1.1] md:leading-[60px] block tracking-tighter">la signature Bricareau vue par vous.</span>
+                            <h2 className="text-slate-900 mb-6 text-[42px] leading-[42px]">
+                                <span className="font-light block">Honnêteté et passion</span>
+                                <span className="font-bold text-blue-600">la signature Bricareau vue par vous.</span>
+                            </h2>
                         </>
                     }
                 />

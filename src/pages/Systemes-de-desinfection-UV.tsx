@@ -110,9 +110,9 @@ const DesinfectionUV = () => {
                     <div className="container relative z-10 mx-auto px-4 h-full flex items-center lg:px-6">
                         <div className="max-w-2xl lg:text-white py-12 lg:py-0">
                             <h1
-                                className="text-[32px] md:text-[42px] leading-[1.1] md:leading-[1.2] mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl"
+                                className="text-[48px] md:text-[48px] leading-[1.1] md:leading-[1.2] mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl"
                                 style={{
-                                    fontWeight: 350
+                                    fontWeight: 600
                                 }}
                             >
                                 Systèmes de désinfection UV, zéro produit chimique, 100% de protection.
@@ -189,12 +189,12 @@ const DesinfectionUV = () => {
                 <section id="systemes-uv" className="py-24 bg-white">
                     <div className="container mx-auto px-6">
                         <div className="text-left mb-16">
-                            <h2
+                                                        <h2
                                 className="text-slate-900 mb-8 text-left"
                                 style={{}}
                             >
-                                <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Nos systèmes de</span>
-                                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">désinfection UV</span>
+                                <span className="text-[42px] md:text-[42px] font-light leading-[1.1] md:leading-[42px] block">Nos systèmes de</span>
+                                <span className="text-[42px] md:text-[42px] font-normal leading-[1.1] md:leading-[42px] block">désinfection UV</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600 mb-12"></div>
 
@@ -255,8 +255,8 @@ const DesinfectionUV = () => {
                                 className="text-slate-900 mb-8 text-left"
                                 style={{}}
                             >
-                                <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Comparez nos</span>
-                                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">systèmes UV</span>
+                                <span className="text-[42px] md:text-[42px] font-light leading-[1.1] md:leading-[42px] block">Comparez nos</span>
+                                <span className="text-[42px] md:text-[42px] font-normal leading-[1.1] md:leading-[42px] block">systèmes UV</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
@@ -361,7 +361,8 @@ const DesinfectionUV = () => {
                     filterProduct="/Systemes-de-desinfection-UV"
                     title={
                         <>
-                            <span className="text-[32px] md:text-[60px] font-light leading-[1.2] md:leading-[60px] block">Zéro bactérie, 100 % sérénité</span>
+                        <h2 className="text-slate-900 mb-6 text-[42px] leading-[42px]">
+                                <span className="font-light">Zéro bactérie, </span><span className="font-bold text-blue-600">100 % sérénité</span></h2>
                         </>
                     }
                 />
@@ -369,8 +370,7 @@ const DesinfectionUV = () => {
                 <section className="bg-white py-24">
                     <div className="container mx-auto px-4">
                         <div className="text-center mb-16">
-                            <h2 className="text-slate-900 mb-8">Découvrez les produits associés</h2>
-                            <p className="font-light text-gray-500 max-w-2xl mx-auto text-justify">
+                            <h2 className="text-slate-900 mb-8 text-[42px] leading-[42px]">Découvrez les produits associés</h2>                            <p className="font-light text-gray-500 max-w-2xl mx-auto text-justify">
                                 Optimisez votre expérience de traitement d'eau avec nos solutions complémentaires.
                             </p>
                         </div>
@@ -441,12 +441,12 @@ const DesinfectionUV = () => {
                 <section className="py-24 bg-white border-t border-slate-100">
                     <div className="container mx-auto px-4 text-left">
                         <div className="text-left mb-16">
-                            <h2
+                             <h2
                                 className="text-slate-900 mb-8 text-left"
                                 style={{}}
                             >
-                                <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Pour vous éclairer</span>
-                                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">Questions fréquentes</span>
+                                <span className="text-[42px] md:text-[42px] font-light leading-[1.1] md:leading-[42px] block">Pour vous éclairer</span>
+                                <span className="text-[42px] md:text-[42px] font-normal leading-[1.1] md:leading-[42px] block">Questions fréquentes</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
@@ -543,8 +543,7 @@ const DesinfectionUV = () => {
                             <h2
                                 className="text-slate-900 mb-8 text-left"
                                 style={{}}
-                            >
-                                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">Ressources</span>
+                            >                                <span className="text-[42px] md:text-[42px] font-normal leading-[1.1] md:leading-[42px] block">Ressources</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>

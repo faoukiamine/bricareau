@@ -18,7 +18,7 @@ const Index = () => {
         <Hero />
         <ProductShowcase />
         <ExpertTrustSection />
- <TestimonialsSection
+        <TestimonialsSection
           filterProduct="/"
           limit={6}
           title={
@@ -29,7 +29,7 @@ const Index = () => {
           }
         />
         <BetterWaterStats />
-       
+
         <DiscoverExpert />
       </main>
       <Footer />

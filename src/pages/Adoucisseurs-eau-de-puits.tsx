@@ -6,6 +6,7 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import { Button } from "@/components/ui/button";
 import heroBath from "@/assets/kid-playing-bathtub.jpg";
 import heroDesktop from "@/assets/family-preparing-dinner-together.jpg";
+import eauDePuitsImg from "@/assets/189573.jpg";
 import {
     ArrowRight,
     Droplets,
@@ -215,9 +216,9 @@ const AdoucisseursEauDePuits = () => {
                     <div className="container relative z-10 mx-auto px-4 h-full flex items-center lg:px-6">
                         <div className="max-w-2xl lg:text-white py-12 lg:py-0">
                             <h1
-                                className="text-[32px] md:text-[42px] leading-[1.1] md:leading-[1.2] mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl"
+                                className="text-[48px] md:text-[48px] leading-[1.1] md:leading-[1.2] mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl"
                                 style={{
-                                    fontWeight: 350
+                                    fontWeight: 600
                                 }}
                             >
                                 Adoucisseur d'eau de puits, une protection experte contre le fer et le calcaire.
@@ -285,10 +286,11 @@ const AdoucisseursEauDePuits = () => {
                     <div className="container mx-auto px-6">
                         <div className="text-left mb-16">
                             <h2
-                                className="text-slate-900 mb-8 md:leading-[60px] text-left"
+                                className="text-slate-900 mb-8 text-left"
                                 style={{}}
                             >
-                                Nos adoucisseurs d'eau <br /><span className="font-normal">résidentiels - Eau de puits</span>
+                                <span className="text-[42px] md:text-[42px] font-light leading-[1.1] md:leading-[42px] block">Nos adoucisseurs d'eau</span>
+                                <span className="text-[42px] md:text-[42px] font-normal leading-[1.1] md:leading-[42px] block">résidentiels - Eau de puits</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600 mb-8"></div>
                             <p className="font-light text-gray-600 max-w-7xl mx-auto text-justify mb-8">
@@ -341,10 +343,11 @@ const AdoucisseursEauDePuits = () => {
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
                             <h2
-                                className="text-slate-900 mb-8 md:leading-[60px] text-left"
+                                className="text-slate-900 mb-8 text-left"
                                 style={{}}
                             >
-                                Comparez nos <br /><span className="font-normal">adoucisseurs d'eau</span>
+                                <span className="text-[42px] md:text-[42px] font-light leading-[1.1] md:leading-[42px] block">Comparez nos adoucisseurs</span>
+                                <span className="text-[42px] md:text-[42px] font-normal leading-[1.1] md:leading-[42px] block">d'eau de puits</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
@@ -445,8 +448,10 @@ const AdoucisseursEauDePuits = () => {
                     filterProduct="/adoucisseurs-eau-de-puits"
                     title={
                         <>
-                            <span className="text-[32px] md:text-[60px] font-light leading-[1.2] md:leading-[60px] block">Là où le calcaire dictait sa loi,</span>
-                            <span className="text-[32px] md:text-[60px] font-normal leading-[1.2] md:leading-[60px] block">nos clients ont repris le contrôle.</span>
+               <h2 className="text-slate-900 mb-6 text-[42px] leading-[42px]">
+                                <span className="font-light block">Là où le calcaire dictait sa loi,</span>
+                                <span className="font-bold text-blue-600">nos clients ont repris le contrôle.</span>
+                            </h2>
                         </>
                     }
                 />
@@ -455,7 +460,7 @@ const AdoucisseursEauDePuits = () => {
                 <section className="bg-white py-24">
                     <div className="container mx-auto px-4">
                         <div className="text-center mb-16">
-                            <h2 className="text-slate-900 mb-8">Découvrez les produits associés</h2>
+                            <h2 className="text-slate-900 mb-8 text-[42px] leading-[42px]">Découvrez les produits associés</h2>
                             <p className="font-light text-gray-500 max-w-2xl mx-auto text-justify">
                                 Optimisez votre expérience de traitement d'eau avec nos solutions complémentaires.
                             </p>
@@ -522,27 +527,57 @@ const AdoucisseursEauDePuits = () => {
                     </div>
                 </section>
 
-                {/* 9. CTA Section */}
-                <section className="bg-primary py-16 md:py-20">
-                    <div className="container mx-auto px-4 text-center">
-                        <h2 className="text-primary-foreground mb-4">
-                            Besoin d'aide avec votre eau ?
-                        </h2>
-                        <p className="text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
-                            Discutez avec un expert en un clic. Disponible par téléphone ou à domicile selon vos préférences.
-                        </p>
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <Button
-                                size="lg"
-                                variant="outline"
-                                className="rounded-full px-8 border-white text-white bg-transparent hover:bg-white/10"
-                                asChild
-                            >
-                                <a href="tel:18552649328">Appelez le 1-855-264-9328</a>
-                            </Button>
-                        </div>
-                    </div>
-                </section>
+                {/* 9. CTA Section - Premium Immersive */}
+                <section className="relative py-32 overflow-hidden">
+          {/* Background Image with Overlay */}
+          <div className="absolute inset-0 z-0">
+            <img
+              src={eauDePuitsImg}
+              alt="Expert Bricareau en traitement d'eau de puits"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 via-blue-900/90 to-blue-800/80 backdrop-blur-[2px]" />
+          </div>
+
+          <div className="container mx-auto px-6 relative z-10 text-center">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-white mb-6">
+                <span className="text-[42px] md:text-[42px] font-light leading-tight block tracking-tight opacity-90 italic">Besoin d'aide avec</span>
+                <span className="text-[42px] md:text-[42px] font-bold leading-tight block tracking-tight uppercase">votre eau de puits ?</span>
+              </h2>
+
+              <p className="text-blue-100/80 font-light text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
+                Discutez avec un expert en un clic. Disponible par téléphone ou à domicile selon vos préférences.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                <Button
+                  size="lg"
+                  className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-12 h-16 shadow-2xl shadow-white/30 group text-lg font-light"
+                  asChild
+                >
+                  <a href="tel:18552649328" className="flex items-center gap-3">
+                    <Phone className="h-5 w-5 animate-bounce" />
+                    Parlez à un expert
+                  </a>
+                </Button>
+
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="rounded-full px-10 h-16 border-white/30 text-white bg-white/5 hover:bg-white/10 backdrop-blur-md text-lg transition-all duration-500"
+                  asChild
+                >
+                  <NavLink to="/consultation">Planifiez une consultation</NavLink>
+                </Button>
+              </div>
+
+              <p className="mt-8 text-white/50 text-sm font-light">
+                Disponible 7j/7 — Réponse en moins de 24h
+              </p>
+            </div>
+          </div>
+        </section>
 
                 {/* 10. FAQ Section */}
                 <section className="py-24 bg-white">
@@ -552,8 +587,8 @@ const AdoucisseursEauDePuits = () => {
                                 className="text-slate-900 mb-8 text-left"
                                 style={{}}
                             >
-                                <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Pour vous éclairer</span>
-                                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">Questions fréquentes</span>
+                                <span className="text-[42px] md:text-[42px] font-light leading-[1.1] md:leading-[42px] block">Pour vous éclairer</span>
+                                <span className="text-[42px] md:text-[42px] font-normal leading-[1.1] md:leading-[42px] block">Questions fréquentes</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
@@ -590,8 +625,7 @@ const AdoucisseursEauDePuits = () => {
                             <h2
                                 className="text-slate-900 mb-8 text-left"
                                 style={{}}
-                            >
-                                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">Ressources</span>
+                            >                                <span className="text-[42px] md:text-[42px] font-normal leading-[1.1] md:leading-[42px] block">Ressources</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>

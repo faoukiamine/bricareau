@@ -160,9 +160,9 @@ const AdoucisseurEauMunicipal = () => {
                     <div className="container mx-auto px-6 relative z-10 h-full flex items-center">
                         <div className="max-w-2xl text-slate-900 lg:text-white py-12 lg:py-0">
                             <h1
-                                className="text-[32px] md:text-[42px] leading-[1.1] md:leading-[1.2] mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl"
+                                className="text-[48px] md:text-[48px] leading-[1.1] md:leading-[1.2] mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl"
                                 style={{
-                                    fontWeight: 350
+                                    fontWeight: 600
                                 }}
                             >
                                 <span className="text-blue-600 lg:text-white/80">Une douceur qui se sent, un confort qui se vit.</span>
@@ -221,11 +221,13 @@ const AdoucisseurEauMunicipal = () => {
                     <div className="container mx-auto px-6">
                         <div className="text-left mb-16">
                             <h2
-                                className="text-slate-900 mb-8 md:leading-[60px] text-left"
+                                className="text-slate-900 mb-8 text-left"
                                 style={{}}
                             >
-                                Nos adoucisseurs d'eau <br /><span className="font-normal">résidentiels</span>
+                                <span className="text-[42px] md:text-[42px] font-light leading-[1.1] md:leading-[42px] block">Nos adoucisseurs d'eau</span>
+                                <span className="text-[42px] md:text-[42px] font-normal leading-[1.1] md:leading-[42px] block">résidentiels - Eau municipale</span>
                             </h2>
+
                             <div className="w-24 h-1 bg-blue-600 mb-8"></div>
                             <p
                                 className="font-light text-slate-600 mb-8 text-justify"
@@ -280,10 +282,11 @@ const AdoucisseurEauMunicipal = () => {
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
                             <h2
-                                className="text-slate-900 mb-8 md:leading-[60px] text-left"
+                                className="text-slate-900 mb-8 text-left"
                                 style={{}}
                             >
-                                Comparez nos <br /><span className="font-normal">adoucisseurs d'eau</span>
+                                <span className="text-[42px] md:text-[42px] font-light leading-[1.1] md:leading-[42px] block">Comparez nos</span>
+                                <span className="text-[42px] md:text-[42px] font-normal leading-[1.1] md:leading-[42px] block">adoucisseurs d'eau</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
@@ -332,8 +335,10 @@ const AdoucisseurEauMunicipal = () => {
                     filterProduct="/adoucisseur-eau-residentiel"
                     title={
                         <>
-                            <span className="text-[32px] md:text-[60px] font-light leading-[1.2] md:leading-[60px] block text-slate-900">Une eau soyeuse.</span>
-                            <span className="text-[32px] md:text-[60px] font-normal leading-[1.2] md:leading-[60px] block text-blue-600">Un confort absolu.</span>
+                            <h2 className="text-slate-900 mb-6 text-[42px] leading-[42px]">
+                                <span className="font-light block">Une eau soyeuse.</span>
+                                <span className="font-bold text-blue-600">Un confort absolu.</span>
+                            </h2>
                         </>
                     }
                 />
@@ -394,8 +399,8 @@ const AdoucisseurEauMunicipal = () => {
                                 className="text-slate-900 mb-8 text-left"
                                 style={{}}
                             >
-                                <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Pour vous éclairer</span>
-                                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">Questions fréquentes</span>
+                                <span className="text-[42px] md:text-[42px] font-light leading-[1.1] md:leading-[42px] block">Pour vous éclairer</span>
+                                <span className="text-[42px] md:text-[42px] font-normal leading-[1.1] md:leading-[42px] block">Questions fréquentes</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
@@ -432,7 +437,7 @@ const AdoucisseurEauMunicipal = () => {
                             <h2
                                 className="text-slate-900 mb-8 text-left"
                                 style={{}}
-                            >                                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">Ressources</span>
+                            >                                <span className="text-[42px] md:text-[42px] font-normal leading-[1.1] md:leading-[42px] block">Ressources</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>

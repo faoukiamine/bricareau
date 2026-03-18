@@ -42,6 +42,8 @@ import fontaineAutoportanteImg from "@/assets/Refroidisseur+d'eau+autoportant+à
 import countertopFountainImg from "@/assets/A9.jpg";
 import bottlelessFountainImg from "@/assets/A13.jpg";
 import iceMachineImg from "@/assets/Machine+à+glaçons+de+comptoir+auto-nettoyante+de+26+lb+R.W.FLAME-78609293.webp";
+import eauFontaineImg from "@/assets/10341859.jpg";
+import ecoImpactImg from "@/assets/kitchen1.webp";
 
 interface SolutionItem {
     title: string;
@@ -169,58 +171,72 @@ const SolutionCard = ({ item }: { item: SolutionItem }) => {
         if (showSpecs) {
             timer = setTimeout(() => {
                 setShowSpecs(false);
-            }, 20000); // 20 seconds
+            }, 20000);
         }
         return () => clearTimeout(timer);
     }, [showSpecs]);
-    return (
-        <div className="group w-full md:w-[350px] h-[580px] relative overflow-hidden rounded-3xl shadow-xl border border-slate-100 bg-white">
-            {/* Front Panel */}
-            <div className="h-full p-8 flex flex-col items-center">
-                <div className="w-full aspect-square bg-slate-50 rounded-2xl mb-6 flex items-center justify-center p-4">
-                    <img src={item.img} alt={`${item.title}`} className="w-full h-full object-contain mix-blend-multiply" />
-                </div>
-                <h3 className="mb-4 min-h-[56px] flex items-center justify-center text-center text-slate-900 tracking-tight">{item.title}</h3>
-                <p className="font-light leading-[26px] text-slate-500 mb-6 flex-grow text-justify">{item.desc}</p>
 
-                <Button
-                    onClick={() => setShowSpecs(true)}
-                    variant="link"
-                    className="absolute bottom-6 right-6 p-0 group flex items-center justify-center h-auto w-auto hover:no-underline z-10"
-                >
-                    <div className="w-10 h-10 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-all shadow-md border border-blue-100/50">
-                        <Plus className="w-6 h-6 transition-transform group-hover:rotate-90" />
-                    </div>
-                </Button>
+    return (
+        <div className="group w-full md:w-[380px] h-[620px] relative overflow-hidden rounded-[3rem] shadow-[0_20px_50px_rgba(0,0,0,0.04)] border border-slate-100 bg-white transition-all duration-700 hover:shadow-[0_40px_80px_rgba(0,0,0,0.08)] hover:-translate-y-2">
+            {/* Front Panel */}
+            <div className="h-full p-10 flex flex-col items-center">
+                <div className="w-full aspect-square bg-slate-50/50 rounded-[2.5rem] mb-8 flex items-center justify-center p-8 relative overflow-hidden group-hover:bg-blue-50/30 transition-colors duration-700">
+                    <img
+                        src={item.img}
+                        alt={`${item.title}`}
+                        className="w-full h-full object-contain mix-blend-multiply transition-transform duration-700 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                </div>
+
+                <div className="space-y-4 text-center flex-grow">
+                    <h3 className="text-2xl font-bold text-slate-900 tracking-tight leading-tight">
+                        {item.title}
+                    </h3>
+                    <div className="w-12 h-1 bg-blue-600/10 rounded-full mx-auto group-hover:w-20 group-hover:bg-blue-600 transition-all duration-700" />
+                    <p className="font-light leading-relaxed text-slate-500 text-sm md:text-base text-justify">
+                        {item.desc}
+                    </p>
+                </div>
+
+                <div className="mt-8 w-full flex items-center justify-between">
+                    <Button
+                        onClick={() => setShowSpecs(true)}
+                        className="rounded-full bg-blue-600 hover:bg-blue-700 text-white px-8 h-14 font-bold transition-all duration-500 group/btn shadow-xl shadow-blue-100"
+                    >
+                        Spécifications
+                        <Plus className="ml-2 w-4 h-4 transition-transform group-hover/btn:rotate-90" />
+                    </Button>
+                </div>
             </div>
 
             {/* Specifications Slide-up Panel */}
             <div
-                className={`absolute inset-0 bg-white p-10 flex flex-col transition-transform duration-500 ease-in-out z-20 ${showSpecs ? "translate-y-0" : "translate-y-full"
+                className={`absolute inset-0 bg-white/95 backdrop-blur-xl p-12 flex flex-col transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] z-20 ${showSpecs ? "translate-y-0 opacity-100" : "translate-y-full opacity-0"
                     }`}
             >
-                <div className="mb-8 text-left">
-                    <h3 className="mb-2 text-blue-600">Spécifications</h3>
-                    <div className="w-12 h-1 bg-blue-500 rounded-full" />
+                <div className="mb-10 text-left">
+                    <h3 className="text-3xl font-bold text-slate-900 tracking-tight">Caractéristiques</h3>
+                    <div className="w-16 h-1.5 bg-blue-600 rounded-full mt-4" />
                 </div>
 
-                <ul className="space-y-6 flex-grow text-left">
+                <ul className="space-y-6 flex-grow">
                     {item.features.map((feature: string, idx: number) => (
-                        <li key={idx} className="flex items-center gap-4 group/item">
-                            <div className="w-2 h-2 rounded-full bg-blue-500 group-hover/item:scale-150 transition-transform" />
-                            <span className="text-lg font-light text-slate-600">{feature}</span>
+                        <li key={idx} className="flex items-start gap-4 group/item">
+                            <div className="mt-1.5 w-2 h-2 rounded-full bg-blue-600 shadow-[0_0_10px_rgba(37,99,235,0.4)] group-hover/item:scale-150 transition-transform" />
+                            <span className="text-base font-light text-slate-600 leading-tight">
+                                {feature}
+                            </span>
                         </li>
                     ))}
                 </ul>
 
                 <Button
                     onClick={() => setShowSpecs(false)}
-                    variant="link"
-                    className="absolute bottom-6 right-6 p-0 group flex items-center justify-center h-auto w-auto hover:no-underline"
+                    variant="outline"
+                    className="mt-8 rounded-full border-slate-200 hover:bg-slate-50 text-slate-600 h-14 font-bold"
                 >
-                    <div className="w-10 h-10 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-all shadow-md border border-blue-100/50">
-                        <Minus className="w-6 h-6" />
-                    </div>
+                    Retour
                 </Button>
             </div>
         </div>
@@ -257,12 +273,12 @@ const Fontaines = () => {
                             </span>
                             <span className="sr-only">Montréal • Rive-Sud • Rive-Nord</span>
                             <h1
-                                className="text-[32px] md:text-[42px] leading-[1.1] md:leading-[1.2] mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl"
+                                className="text-[48px] md:text-[48px] leading-[1.1] md:leading-[1.2] mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl"
                                 style={{
-                                    fontWeight: 350
+                                    fontWeight: 600
                                 }}
                             >
-                                L'Art de l'eau pure & rafraîchissante.
+                                L'art de l'eau pure rafraîchissante.
                             </h1>
                             <p className="font-light text-slate-600 lg:text-white/95 mb-8 max-w-xl text-justify">
                                 Élevez votre expérience d'hydratation avec nos refroidisseurs d'eau haute performance. Design élégant et pureté absolue.
@@ -294,17 +310,28 @@ const Fontaines = () => {
                     </div>
                 </section>
 
-                {/* Section 1: Solutions professionnelles */}
-                <section className="py-24 bg-blue-600 text-white">
-                    <div className="container mx-auto px-6 text-center">
-                        <h2 className="text-white mb-8 md:leading-[48px] text-justify md:text-center mx-auto max-w-4xl">
-                            L'hydratation pure à la maison. <br />L'eau fraîche à la portée de vos mains.
-                        </h2>
-                        <p className="font-light text-white/70 max-w-4xl mx-auto mb-16">
-                            Bricareau redéfinit votre expérience d'hydratation quotidienne avec des solutions d'eau fraîche haut de gamme.
-                            Offrez à votre famille le luxe d'une eau d'une pureté exceptionnelle, toujours à la température idéale.
-                        </p>
-                        <div className="flex flex-wrap justify-center gap-8 mx-auto max-w-7xl text-slate-900">
+                {/* Section 1: Modern Editorial Solutions Section */}
+                <section className="relative py-32 bg-white overflow-hidden">
+                    {/* Background decorations */}
+                    <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-50/50 rounded-full blur-[120px] -z-0 translate-x-1/3 -translate-y-1/3" />
+                    <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-slate-100/50 rounded-full blur-[100px] -z-0 -translate-x-1/2 translate-y-1/2" />
+
+                    <div className="container mx-auto px-6 relative z-10">
+                        <div className="text-center max-w-4xl mx-auto mb-24">
+                            <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.2em] mb-6">
+                                PURETÉ À DOMICILE
+                            </span>
+                            <h2 className="text-slate-900 mb-6 text-[42px] leading-[42px]">
+                                <span className="font-light block">L'hydratation pure à la maison.</span>
+                                <span className="font-bold text-blue-600 block">L'eau fraîche à la portée de vos mains.</span>
+                            </h2>
+                            <p className="text-slate-500 font-light text-lg leading-relaxed max-w-3xl mx-auto">
+                                Bricareau redéfinit votre expérience d'hydratation quotidienne avec des solutions d'eau fraîche haut de gamme.
+                                Offrez à votre famille le luxe d'une eau d'une pureté exceptionnelle, toujours à la température idéale.
+                            </p>
+                        </div>
+
+                        <div id="models" className="flex flex-wrap justify-center gap-10 lg:gap-14 mx-auto max-w-7xl">
                             {[
                                 {
                                     title: "Distributeur d'eau de comptoir",
@@ -331,86 +358,73 @@ const Fontaines = () => {
                     </div>
                 </section>
 
-                {/* 4. Impact & Technologie Section - BENTO GRID */}
-                <section className="py-32 bg-slate-50 relative overflow-hidden">
-                    <div className="container mx-auto px-6">
-                        <div className="text-center max-w-5xl mx-auto mb-20">
-                            <h2 className="text-slate-900 mb-6">
-                                Plus qu'une fontaine d'eau, <br />un choix intelligent & responsable.
+                {/* 4. Impact & Technologie Section - MODERN EDITORIAL BENTO */}
+                <section className="py-32 bg-white relative overflow-hidden">
+                    {/* Background glows */}
+                    <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-blue-50/50 rounded-full blur-[100px] -translate-x-1/2 -translate-y-1/2 -z-0" />
+                    <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-slate-50/50 rounded-full blur-[120px] translate-x-1/4 translate-y-1/4 -z-0" />
+
+                    <div className="container mx-auto px-6 relative z-10">
+                        <div className="text-center max-w-4xl mx-auto mb-24">
+                            <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.2em] mb-6">
+                                TECHNOLOGIE & RESPONSABILITÉ
+                            </span>
+                            <h2 className="text-slate-900 mb-6 text-[42px] leading-[42px]">
+                                <span className="font-light block">Plus qu'une fontaine d'eau,</span>
+                                <span className="font-bold text-blue-600 block">un choix intelligent & responsable.</span>
                             </h2>
-                            <p className="text-slate-500 font-light">
-                                Alliez performance technologique, responsabilité écologique et économies domestiques.
+                            <p className="text-slate-500 font-light text-lg max-w-2xl mx-auto leading-relaxed">
+                                Alliez performance technologique, responsabilité écologique et économies domestiques pour un quotidien sans compromis.
                             </p>
                         </div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                            {/* Column 2: Art de Vivre (Dominant wide image) - Now on the Left */}
-                            <div className="md:col-span-2 group relative rounded-[3rem] overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-700 min-h-[600px] order-1 md:order-1">
+                        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-10">
+                            {/* Main Visual Card - Asymmetrical Large */}
+                            <div className="md:col-span-8 group relative rounded-[3.5rem] overflow-hidden shadow-[0_30px_70px_-20px_rgba(0,0,0,0.15)] h-[650px]">
                                 <img
                                     src={artDeVivreImg}
                                     alt="L'expérience d'eau pure Bricareau"
-                                    className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-[2s]"
+                                    className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-[2.5s] ease-out"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-[#0A192F]/90 via-[#0A192F]/20 to-transparent" />
-                                <div className="absolute bottom-16 left-16 right-16 z-10 text-left">
-                                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/20 border border-blue-400/30 backdrop-blur-md mb-6">
-                                        <Star className="w-4 h-4 text-blue-400 fill-blue-400" />
-                                        <span className="text-xs font-black text-blue-100 uppercase tracking-widest">Choix Premium </span>
+                                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/10 to-transparent" />
+
+                                <div className="absolute bottom-12 left-12 right-12 z-10">
+                                    <div className="flex flex-col items-start gap-4">
+                                        <div className="px-5 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center gap-2 mb-4">
+                                            <Star className="w-4 h-4 text-yellow-400 fill-yellow-400" />
+                                            <span className="text-[10px] font-black text-white uppercase tracking-widest">Expérience Premium</span>
+                                        </div>
+                                        <h3 className="text-4xl font-bold text-white tracking-tight">Art de Vivre</h3>
+                                        <p className="text-white/80 font-light text-lg max-w-xl">
+                                            Une pureté incomparable qui s'intègre harmonieusement à votre quotidien. Découvrez l'équilibre parfait entre esthétique et santé.
+                                        </p>
                                     </div>
-                                    <h3 className="text-white mb-3 tracking-tighter leading-none">Art de Vivre</h3>
-                                    <div className="w-20 h-1.5 bg-blue-500 rounded-full mb-6" />
-                                    <p className="text-white/80 font-light max-w-lg">
-                                        Une pureté incomparable qui s'intègre harmonieusement à votre quotidien. Découvrez l'équilibre parfait entre esthétique et santé.
-                                    </p>
+                                </div>
+
+                                {/* Floating Feature Cards */}
+                                <div className="absolute top-12 right-12 z-20 space-y-4 hidden lg:block">
+                                    {[
+                                        { icon: <DollarSign className="w-5 h-5" />, title: "Rentabilité", desc: "Économisez jusqu'à 60% dès le premier jour.", bg: "bg-white/90 backdrop-blur-xl border-blue-100", color: "text-slate-900" },
+                                        { icon: <Clock className="w-5 h-5 text-blue-600" />, title: "Sérénité", desc: "Fini la corvée des bouteilles et les livraisons.", bg: "bg-white/90 backdrop-blur-xl border-blue-100", color: "text-slate-900" }
+                                    ].map((feature, idx) => (
+                                        <div key={idx} className={`p-6 rounded-[2rem] ${feature.bg} shadow-2xl border w-64 group transition-all duration-500 hover:-translate-x-2`}>
+                                            <div className="flex items-center gap-4">
+                                                <div className="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center shrink-0 group-hover:bg-blue-600 transition-colors">
+                                                    {React.cloneElement(feature.icon as React.ReactElement, { className: `w-5 h-5 ${feature.bg.includes('text-slate-900') ? 'text-blue-600' : 'text-blue-600'} group-hover:text-white` })}
+                                                </div>
+                                                <div>
+                                                    <h4 className={`text-base font-bold ${feature.color}`}>{feature.title}</h4>
+                                                    <p className={`text-[11px] font-light text-slate-500 leading-tight`}>{feature.desc}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    ))}
                                 </div>
                             </div>
 
-                            {/* Column 1: Scientific & Practical Sidebar (Narrower) - Now on the Right */}
-                            <div className="md:col-span-1 flex flex-col justify-center space-y-6 order-2 md:order-2">
-                                {/* Card 1: Calculateur d'impact (Interactive) */}
+                            {/* Impact Calculator Card - Sidebar style */}
+                            <div className="md:col-span-4 flex flex-col h-full">
                                 <ImpactCalculator />
-
-                                {/* Feature Boxes (Stacked Vertically) */}
-                                <div className="grid grid-cols-1 gap-4">
-                                    {/* Card 3: Économisez de l'argent */}
-                                    <div className="group relative bg-[#1A2A4D] p-6 rounded-[2.5rem] overflow-hidden hover:shadow-xl transition-all duration-700">
-                                        <div className="relative z-10 flex items-center gap-4 text-left">
-                                            <div className="w-10 h-10 shrink-0 rounded-xl bg-white/10 flex items-center justify-center group-hover:bg-blue-600 transition-all duration-500">
-                                                <DollarSign className="w-5 h-5 text-white" />
-                                            </div>
-                                            <div>
-                                                <h3 className="text-sm text-white tracking-tight">Économisez de l'argent</h3>
-                                                <p className="text-white/60 text-[11px] font-light">Réduisez vos frais d'eau de 60% : une solution rentable dès le premier jour.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    {/* Card 4: Gagnez du temps */}
-                                    <div className="group relative bg-white p-6 rounded-[2.5rem] border border-slate-200 overflow-hidden hover:shadow-xl transition-all duration-700">
-                                        <div className="relative z-10 flex items-center gap-4 text-left">
-                                            <div className="w-10 h-10 shrink-0 rounded-xl bg-blue-50 flex items-center justify-center group-hover:bg-blue-600 transition-colors duration-500">
-                                                <Clock className="w-5 h-5 text-blue-600 group-hover:text-white transition-colors" />
-                                            </div>
-                                            <div>
-                                                <h3 className="text-sm text-slate-900 tracking-tight">Gagnez du temps</h3>
-                                                <p className="text-slate-500 text-[11px] font-light">Oubliez la corvée des bouteilles d'eau lourdes et les attentes de livraison interminables.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    {/* Card 5: Sauvons l'environnement */}
-                                    <div className="group relative bg-white p-6 rounded-[2.5rem] border border-slate-200 overflow-hidden hover:shadow-xl transition-all duration-700">
-                                        <div className="relative z-10 flex items-center gap-4 text-left">
-                                            <div className="w-10 h-10 shrink-0 rounded-xl bg-blue-50 flex items-center justify-center group-hover:bg-blue-600 transition-colors duration-500">
-                                                <Recycle className="w-5 h-5 text-blue-600 group-hover:text-white transition-colors" />
-                                            </div>
-                                            <div>
-                                                <h3 className="text-sm text-slate-900 tracking-tight">Sauvons l'environnement</h3>
-                                                <p className="text-slate-500 text-[11px] font-light">Éliminez le plastique à usage unique pour une hydratation 100% responsable.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -421,117 +435,190 @@ const Fontaines = () => {
                     limit={6}
                     title={
                         <>
-                            <span className="text-[32px] md:text-[60px] font-light leading-[1.2] md:leading-[60px] block">L’eau que vous méritez,</span>
-                            <span className="text-[32px] md:text-[60px] font-normal leading-[1.2] md:leading-[60px] block text-blue-600">le service que vous n'oublierez pas.</span>
+                            <h2 className="text-slate-900 mb-6 text-[42px] leading-[42px]">
+                                <span className="font-light block">L’eau que vous méritez,</span>
+                                <span className="font-bold text-blue-600">le service que vous n'oublierez pas.</span>
+                            </h2>
                         </>
                     }
                 />
 
-                {/* 6. Mission Éco-Responsable Bricareau Section*/}
-                <section className="py-32 bg-white relative overflow-hidden">
-                    <div className="container mx-auto px-6">
-                        <div className="max-w-6xl mx-auto">
-                            {/* Main Title */}
-                            <h2 className="mb-20 text-balance">
-                                Vers un monde <br />
-                                <span className="text-[#0A192F]">sans bouteilles en plastique...</span>
-                            </h2>
-
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24">
-                                {/* Left Column: Action Plan */}
-                                <div className="space-y-12">
-                                    <h3 className="text-blue-600 tracking-[0.1em] uppercase">
-                                        Que devons-nous faire ?
-                                    </h3>
-                                    <ul className="space-y-8">
-                                        {[
-                                            "S'engager à réduire l'usage de bouteilles en plastique à usage unique",
-                                            "Favoriser la consommation d'eau, \"localement\", directement au robinet",
-                                            "Accompagner l'ensemble des utilisateurs dans cette démarche grâce à des solutions performantes pour traiter l'eau de boisson",
-                                            "Prendre part à la mission de la marque Bricareau Changer le monde, gorgée après gorgée"
-                                        ].map((text, i) => (
-                                            <li key={i} className="flex items-start gap-4 group">
-                                                <div className="mt-2.5 w-1.5 h-1.5 rounded-full bg-blue-600 shrink-0 group-hover:scale-150 transition-transform" />
-                                                <p className="text-slate-600 font-light">
-                                                    {text}
-                                                </p>
-                                            </li>
-                                        ))}
-                                    </ul>
+                {/* 5. Impact Environnemental - Full Width Modern Section */}
+                <section className="pb-32 bg-white relative overflow-hidden">
+                    <div className="container mx-auto px-6 relative z-10">
+                        {/* MINIMALIST LIFESTYLE ALTERNATIVE */}
+                        <div className="group relative rounded-[3.5rem] overflow-hidden bg-[#F8F9FA] border border-slate-100 shadow-[0_30px_60px_rgba(0,0,0,0.04)] min-h-[600px] flex flex-col md:flex-row items-stretch">
+                            {/* Text Content - Left 40% */}
+                            <div className="md:w-[45%] p-12 lg:p-20 flex flex-col justify-center">
+                                <div className="mb-8">
+                                    <div className="flex items-center gap-3 mb-6">
+                                        <span className="text-[10px] font-black text-blue-600 uppercase tracking-[0.2em]">
+                                            DURABILITÉ & STYLE
+                                        </span>
+                                    </div>
+                                    <h2 className="text-slate-900 mb-6 text-[42px] leading-[42px]">
+                                        <span className="font-light">Impact</span>{" "}
+                                        <span className="font-bold text-blue-600">Environnemental.</span>
+                                    </h2>
+                                    <p className="text-slate-500 font-light text-xl leading-relaxed max-w-md text-justify">
+                                        L'élégance au service de la planète. Chaque gorgée est un pas vers un monde sans plastique, sans sacrifier l'esthétique de votre intérieur.
+                                    </p>
                                 </div>
 
-                                {/* Right Column: Solutions & Benefits */}
-                                <div className="space-y-12">
-                                    <div className="space-y-6">
-                                        <h3 className="text-blue-600 tracking-[0.1em] uppercase">
-                                            Les solutions Bricareau pour traiter l'eau de boisson :
-                                        </h3>
-                                        <p className="text-slate-600 font-light">
-                                            Les gammes Bricareau ont été développées pour offrir une eau fraîche, délicieuse et saine, aussi bien pour les professionnels que pour le particulier :
-                                        </p>
-                                    </div>
+                                <NavLink to="/contact">
+                                    <Button className="rounded-full bg-blue-600 hover:bg-blue-700 text-white px-12 h-16 text-lg font-bold transition-all duration-500 shadow-xl group/btn w-fit">
+                                        Passez au vert
+                                        <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover/btn:translate-x-1" />
+                                    </Button>
+                                </NavLink>
+                            </div>
 
-                                    {/* Icon Horizontal Line Flow */}
-                                    <div className="relative pt-8 text-slate-900">
-                                        {/* Connector Line */}
-                                        <div className="absolute top-[44px] left-0 w-full h-[1px] bg-blue-100" />
-
-                                        <div className="grid grid-cols-4 gap-4 relative z-10">
-                                            {[
-                                                { icon: <Droplets className="w-7 h-7" />, label: "Eau locale filtrée", sub: "Avec ou sans magnésium" },
-                                                { icon: <Ban className="w-7 h-7" />, label: "0 bouteille", sub: "en plastique" },
-                                                { icon: <Recycle className="w-7 h-7" />, label: "Responsable", sub: "" },
-                                                { icon: <PiggyBank className="w-7 h-7" />, label: "Économique", sub: "" }
-                                            ].map((item, i) => (
-                                                <div key={i} className="flex flex-col items-center text-center group">
-                                                    <div className="w-16 h-16 rounded-full bg-blue-600 flex items-center justify-center text-white mb-6 shadow-lg shadow-blue-100 group-hover:bg-blue-700 group-hover:scale-110 transition-all duration-500">
-                                                        {item.icon}
-                                                    </div>
-                                                    <div className="space-y-1">
-                                                        <p className="text-[10px] font-black text-slate-800 uppercase tracking-wider leading-tight">
-                                                            {item.label}
-                                                        </p>
-                                                        {item.sub && (
-                                                            <p className="text-[9px] font-bold text-slate-400 uppercase tracking-widest leading-tight">
-                                                                {item.sub}
-                                                            </p>
-                                                        )}
-                                                    </div>
-                                                </div>
-                                            ))}
-                                        </div>
-                                    </div>
-                                </div>
+                            {/* Lifestyle Image - Right 60% */}
+                            <div className="md:w-[55%] relative overflow-hidden h-[400px] md:h-auto">
+                                <img
+                                    src={ecoImpactImg}
+                                    alt="Modern Fontaine Bricareau"
+                                    className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-[4s]"
+                                />
+                                {/* Subtle Overlay for depth */}
+                                <div className="absolute inset-0 bg-gradient-to-r from-[#F8F9FA] via-transparent to-transparent hidden md:block" />
                             </div>
                         </div>
                     </div>
                 </section>
 
-                {/* 7. CTA Pre-footer - VERSION RÉSIDENTIELLE LUXE Section */}
-                <section className="py-32 bg-blue-600 relative overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-br from-blue-700/40 via-transparent to-transparent opacity-50" />
+
+                {/* 9. CTA Section - Premium Immersive */}
+                <section className="relative py-32 overflow-hidden">
+                    {/* Background Image with Overlay */}
+                    <div className="absolute inset-0 z-0">
+                        <img
+                            src={eauFontaineImg}
+                            alt="Expert Bricareau en fontaines d'eau"
+                            className="w-full h-full object-cover"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 via-blue-900/90 to-blue-800/80 backdrop-blur-[2px]" />
+                    </div>
                     <div className="container mx-auto px-6 relative z-10 text-center">
                         <div className="max-w-4xl mx-auto">
-                            <h2 className="text-white mb-8 text-balance">
-                                Sublimez votre art de vivre <br />avec l'excellence de l'eau pure.
+                            <h2 className="text-white mb-6">
+                                <span className="text-[42px] md:text-[42px] font-light leading-tight block tracking-tight opacity-90 italic">Sublimez votre quotidien avec l'excellence de nos fontaines d'eau.</span>
                             </h2>
-                            <p className="text-white/60 md:text-2xl font-light mb-16 max-w-2xl mx-auto">
+                            <p className="text-blue-100/80 font-light text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
                                 Rejoignez le club familles Bricareau et profitez d'une source d'eau digne d'un palace, sans sortir de chez vous.
                             </p>
-                            <div className="flex flex-col sm:flex-row gap-8 justify-center items-center">
+
+                            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
                                 <Button
-                                    className="bg-white hover:bg-blue-50 text-blue-600 rounded-full px-12 h-14 shadow-lg"
-                                    style={{}}
+                                    size="lg"
+                                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-12 h-16 shadow-2xl shadow-white/30 group text-lg font-light"
                                     asChild
                                 >
-                                    <NavLink to="/contact">Demandez une soumission</NavLink>
+                                    <a href="tel:18552649328" className="flex items-center gap-3">
+                                        <Phone className="h-5 w-5 animate-bounce" />
+                                        Parlez à un expert
+                                    </a>
                                 </Button>
-                                <a href="tel:18552649328" className="flex items-center gap-4 text-white group cursor-pointer hover:text-white/80 transition-colors">
-                                    <div className="w-12 h-12 rounded-full border border-white/30 flex items-center justify-center group-hover:bg-white/10 transition-all">
-                                        <Phone className="w-5 h-5 text-white" strokeWidth={1.5} />
+
+                                <Button
+                                    size="lg"
+                                    variant="outline"
+                                    className="rounded-full px-10 h-16 border-white/30 text-white bg-white/5 hover:bg-white/10 backdrop-blur-md text-lg transition-all duration-500"
+                                    asChild
+                                >
+                                    <NavLink to="/tests-eau">Demandez une soumission</NavLink>
+                                </Button>
+                            </div>
+
+                            <p className="mt-8 text-white/50 text-sm font-light">
+                                Disponible 7j/7 — Réponse en moins de 24h
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                {/* 6. Mission Éco-Responsable Bricareau Section - MODERN EDITORIAL */}
+                <section className="py-32 bg-slate-50 relative overflow-hidden">
+                    {/* Decorative Background Elements */}
+                    <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-blue-100/30 rounded-full blur-[120px] translate-x-1/2 -translate-y-1/2" />
+                    <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-slate-200/20 rounded-full blur-[100px] -translate-x-1/2 translate-y-1/2" />
+
+                    <div className="container mx-auto px-6 relative z-10">
+                        <div className="max-w-6xl mx-auto">
+                            {/* Section Header */}
+                            <div className="mb-24">
+                                <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.2em] mb-6">
+                                    NOTRE ENGAGEMENT
+                                </span>
+                                <h2 className="text-slate-900 mb-6 text-[42px] leading-[42px]">
+                                    <span className="font-light block">Vers un monde</span>
+                                    <span className="font-bold text-blue-600">sans bouteilles en plastique.</span>
+                                </h2>
+                            </div>
+
+                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 lg:gap-32 items-start">
+                                {/* Left Column: Action & Philosophy */}
+                                <div className="space-y-16">
+                                    <div className="relative">
+                                        <div className="absolute -left-8 top-0 w-1 h-full bg-blue-600/20 rounded-full" />
+                                        <h3 className="text-2xl font-bold text-slate-900 mb-8 tracking-tight">
+                                            Que devons-nous faire ?
+                                        </h3>
+                                        <ul className="space-y-10">
+                                            {[
+                                                { title: "Réduction Active", text: "S'engager à réduire l'usage de bouteilles en plastique à usage unique au quotidien." },
+                                                { title: "Consommation Locale", text: "Favoriser la consommation d'eau \"locale\", directement au robinet de votre résidence." },
+                                                { title: "Accompagnement Expert", text: "Proposer des solutions performantes pour traiter l'eau de boisson en toute sécurité." },
+                                                { title: "Mission Commune", text: "Partager la vision Bricareau : Changer le monde, une gorgée après l'autre." }
+                                            ].map((item, i) => (
+                                                <li key={i} className="group flex flex-col gap-2">
+                                                    <div className="flex items-center gap-3">
+                                                        <div className="w-2 h-2 rounded-full bg-blue-600 group-hover:scale-150 transition-transform duration-300" />
+                                                        <span className="text-sm font-black text-slate-900 uppercase tracking-wider">{item.title}</span>
+                                                    </div>
+                                                    <p className="text-slate-500 font-light text-lg leading-relaxed pl-5">
+                                                        {item.text}
+                                                    </p>
+                                                </li>
+                                            ))}
+                                        </ul>
                                     </div>
-                                    <span className="text-lg" style={{ fontWeight: 350 }}>Parlez à un conseiller</span>
-                                </a>
+                                </div>
+
+                                {/* Right Column: Solution Grid */}
+                                <div className="relative">
+                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 relative z-10">
+                                        {[
+                                            { icon: <Droplets className="w-8 h-8" />, label: "Filtration Locale", desc: "Eau pure à volonté, avec ou sans magnésium.", bg: "bg-white" },
+                                            { icon: <Ban className="w-8 h-8" />, label: "Zéro Déchet", desc: "Élimination totale des bouteilles à usage unique.", bg: "bg-blue-600", dark: true },
+                                            { icon: <Recycle className="w-8 h-8" />, label: "Éco-Conception", desc: "Matériaux durables et cycles de vie optimisés.", bg: "bg-white" },
+                                            { icon: <PiggyBank className="w-8 h-8" />, label: "Économies", desc: "Retour sur investissement rapide et durable.", bg: "bg-white" }
+                                        ].map((item, i) => (
+                                            <div
+                                                key={i}
+                                                className={`p-10 rounded-[3rem] shadow-[0_20px_50px_rgba(0,0,0,0.05)] border border-slate-100 group transition-all duration-500 hover:-translate-y-2 ${item.bg} ${item.dark ? 'text-white' : 'text-slate-900'}`}
+                                            >
+                                                <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-8 transition-colors ${item.dark ? 'bg-white/20' : 'bg-blue-50 group-hover:bg-blue-600'}`}>
+                                                    {React.cloneElement(item.icon as React.ReactElement, {
+                                                        className: `w-8 h-8 ${item.dark ? 'text-white' : 'text-blue-600 group-hover:text-white'} transition-colors`
+                                                    })}
+                                                </div>
+                                                <h4 className="text-xl font-bold mb-3 tracking-tight">{item.label}</h4>
+                                                <p className={`text-sm font-light leading-relaxed ${item.dark ? 'text-blue-100/70' : 'text-slate-500'}`}>
+                                                    {item.desc}
+                                                </p>
+                                            </div>
+                                        ))}
+                                    </div>
+
+                                    {/* Subtitle/Quote inside the grid column */}
+                                    <div className="mt-12 p-8 rounded-[2.5rem] bg-slate-900 text-white relative overflow-hidden">
+                                        <div className="absolute top-0 right-0 w-32 h-32 bg-blue-600/20 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2" />
+                                        <p className="text-lg font-light italic relative z-10">
+                                            "Les gammes Bricareau offrent une eau saine, fraîche et délicieuse, pour les professionnels et les particuliers."
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

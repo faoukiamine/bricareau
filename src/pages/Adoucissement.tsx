@@ -98,9 +98,9 @@ const Adoucissement = () => {
                     <div className="container relative z-10 mx-auto px-4 h-full flex items-center lg:px-6">
                         <div className="max-w-2xl lg:text-white py-12 lg:py-0">
                             <h1
-                                className="text-[46px] md:text-[46px] leading-[1.1] md:leading-[1.2] mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl"
+                                className="text-[48px] md:text-[48px] leading-[1.1] md:leading-[1.2] mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl"
                                 style={{
-                                    fontWeight: 350
+                                    fontWeight: 600
                                 }}
                             >
                                 Adoucisseurs d'eau <br />
@@ -443,8 +443,10 @@ const Adoucissement = () => {
                     filterProduct="/adoucissement"
                     title={
                         <>
-                            <span className="text-[42px] md:text-[42px] font-light block leading-[1.2] md:leading-[42px]">Une eau soyeuse.</span>
-                            <span className="text-[42px] md:text-[42px] font-bold text-blue-600 leading-[1.2] md:leading-[42px]">Un confort absolu.</span>
+                            <h2 className="text-slate-900 mb-6 text-[42px] leading-[42px]">
+                                <span className="font-light block">Une eau soyeuse.</span>
+                                <span className="font-bold text-blue-600">Un confort absolu.</span>
+                            </h2>
                         </>
                     }
                 />
@@ -576,7 +578,9 @@ const Adoucissement = () => {
                             <h2
                                 className="text-slate-900 mb-8 text-left"
                                 style={{}}
-                            >                                <span className="text-[42px] md:text-[42px] font-normal leading-[1.1] md:leading-[42px] block">FAQ </span>
+                            >
+                                <span className="text-[42px] md:text-[42px] font-light leading-[1.1] md:leading-[42px] block">Pour vous éclairer</span>
+                                <span className="text-[42px] md:text-[42px] font-normal leading-[1.1] md:leading-[42px] block">Questions fréquentes</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>

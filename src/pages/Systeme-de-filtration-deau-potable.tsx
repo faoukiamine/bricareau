@@ -109,8 +109,10 @@ const StationEauPotable = () => {
           <div className="container relative z-10 mx-auto px-4 h-full flex items-center lg:px-6">
             <div className="max-w-2xl lg:text-white py-12 lg:py-0">
               <h1
-                className="text-[32px] md:text-[42px] leading-[1.1] md:leading-[1.2] font-bold lg:font-light mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl"
-                style={{}}
+                className="text-[48px] md:text-[48px] leading-[1.1] md:leading-[1.2] font-bold lg:font-light mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl"
+                style={{
+                  fontWeight: 600
+                }}
               >
                 Système d'osmose inverse, la pureté absolue à votre robinet.
               </h1>
@@ -187,8 +189,8 @@ const StationEauPotable = () => {
                 className="text-slate-900 mb-8 text-left"
                 style={{}}
               >
-                <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Nos systèmes de purification</span>
-                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">d'eau par osmose inverse</span>
+                <span className="text-[42px] md:text-[42px] font-light leading-[1.1] md:leading-[42px] block">Nos systèmes de purification</span>
+                <span className="text-[42px] md:text-[42px] font-normal leading-[1.1] md:leading-[42px] block">d'eau par osmose inverse</span>
               </h2>
               <div className="w-24 h-1 bg-blue-600 mb-8"></div>
               <p
@@ -251,8 +253,8 @@ const StationEauPotable = () => {
                 className="text-slate-900 mb-8 text-left"
                 style={{}}
               >
-                <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Comparez nos solutions</span>
-                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">de filtration d'eau potable</span>
+                <span className="text-[42px] md:text-[42px] font-light leading-[1.1] md:leading-[42px] block">Comparez nos solutions</span>
+                <span className="text-[42px] md:text-[42px] font-normal leading-[1.1] md:leading-[42px] block">de filtration d'eau potable</span>
               </h2>
               <div className="w-24 h-1 bg-blue-600"></div>
             </div>
@@ -353,8 +355,10 @@ const StationEauPotable = () => {
           filterProduct="/systeme-de-filtration-deau-potable"
           title={
             <>
-              <span className="text-[32px] md:text-[60px] font-light leading-[1.2] md:leading-[60px] block">L'eau de source,</span>
-              <span className="text-[32px] md:text-[60px] font-normal leading-[1.2] md:leading-[60px] block text-blue-600">directement à votre robinet.</span>
+            <h2 className="text-slate-900 mb-6 text-[42px] leading-[42px]">
+                                <span className="font-light block">L'eau de source,</span>
+                                <span className="font-bold text-blue-600">directement à votre robinet.</span>
+                            </h2>
             </>
           }
         />
@@ -362,13 +366,14 @@ const StationEauPotable = () => {
         <section className="py-24 bg-white border-t border-slate-100">
           <div className="container mx-auto px-6">
             <div className="text-left mb-16">
-              <h2
-                className="text-slate-900 mb-8 text-left"
-                style={{}}
-              >
-                <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Pour vous éclairer</span>
-                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">Questions fréquentes</span>
-              </h2>
+               <h2
+                                className="text-slate-900 mb-8 text-left"
+                                style={{}}
+                            >
+                                <span className="text-[42px] md:text-[42px] font-light leading-[1.1] md:leading-[42px] block">Pour vous éclairer</span>
+                                <span className="text-[42px] md:text-[42px] font-normal leading-[1.1] md:leading-[42px] block">Questions fréquentes</span>
+                            </h2>
+
               <div className="w-24 h-1 bg-blue-600"></div>
             </div>
 
@@ -462,11 +467,11 @@ const StationEauPotable = () => {
         <section className="py-24 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="text-left mb-16">
-              <h2
-                className="text-slate-900 mb-8 text-left"
-                style={{}}
-              > <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">Ressources</span>
-              </h2>
+               <h2
+                                className="text-slate-900 mb-8 text-left"
+                                style={{}}
+                            >                                <span className="text-[42px] md:text-[42px] font-normal leading-[1.1] md:leading-[42px] block">Ressources</span>
+                            </h2>
               <div className="w-24 h-1 bg-blue-600"></div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

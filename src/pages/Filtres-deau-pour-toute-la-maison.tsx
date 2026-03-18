@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import { Button } from "@/components/ui/button";
 import heroFilter from "@/assets/12605.jpg";
+import eauFontaineImg from "@/assets/10341859.jpg";
 import {
     ArrowRight,
     Droplets,
@@ -180,9 +181,9 @@ const FiltresTouteMaison = () => {
                     <div className="container mx-auto px-6 relative z-10 h-full flex items-center">
                         <div className="max-w-2xl text-slate-900 lg:text-white py-12 lg:py-0">
                             <h1
-                                className="text-[32px] md:text-[42px] leading-[1.1] md:leading-[1.2] mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl"
+                                className="text-[48px] md:text-[48px] leading-[1.1] md:leading-[1.2] mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl"
                                 style={{
-                                    fontWeight: 350
+                                    fontWeight: 600
                                 }}
                             >
                                 Filtre d'eau pour toute la maison, une protection intégrale.
@@ -214,29 +215,66 @@ const FiltresTouteMaison = () => {
                     </div>
                 </section>
 
-                {/* 3. Pourquoi choisir - Blue Section */}
-                <section className="py-24 bg-blue-600 text-white text-center">
-                    <div className="container mx-auto px-6 text-center">
-                        <div className="text-center mb-16">
-                            <h2 className="text-white mb-8 md:leading-[48px] text-center">
-                                Pourquoi choisir nos <br />systèmes de filtration d'eau ?
+                {/* 3. Pourquoi choisir - Ultramodern Light Glassmorphism Section */}
+                <section className="relative py-24 md:py-32 overflow-hidden bg-white">
+                    {/* Background Accents */}
+                    <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
+                        <div className="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] rounded-full bg-blue-50 blur-[120px]" />
+                        <div className="absolute bottom-[-20%] right-[-10%] w-[50%] h-[50%] rounded-full bg-cyan-50 blur-[120px]" />
+                        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-slate-50/50 to-transparent opacity-80" />
+                    </div>
+
+                    <div className="container mx-auto px-6 relative z-10">
+                        <div className="text-center mb-20">
+                            <h2 className="text-slate-900 mb-6 text-[42px] md:text-[42px] leading-[1.1] font-light tracking-tight">
+                                Pourquoi choisir nos <br className="hidden md:block"/>
+                                <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">
+                                    systèmes de filtration d'eau ?
+                                </span>
                             </h2>
-                            <p className="text-blue-100 max-w-2xl mx-auto">
+                            <p className="font-light text-slate-600 max-w-2xl mx-auto text-lg md:text-xl leading-relaxed">
                                 Plus qu'un simple système de filtration, c'est une protection avancée pour votre santé et un confort durable pour toute votre famille.
                             </p>
                         </div>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 xl:gap-12">
                             {[
-                                { icon: Droplets, title: "Eau cristalline", desc: "Éliminez les sédiments et la turbidité pour une eau d'une clarté professionnelle partout chez vous." },
-                                { icon: Shield, title: "Protection totale", desc: "Empêchez le fer et les minéraux corrosifs de tacher vos éviers et de détruire votre plomberie." },
-                                { icon: TrendingDown, title: "Zéro odeur", desc: "Dites adieu aux odeurs d'œufs pourris (soufre) et au goût de chlore pour une eau fraîche." }
+                                { 
+                                    icon: Droplets, 
+                                    title: "Eau cristalline", 
+                                    desc: "Éliminez les sédiments et la turbidité pour une eau d'une clarté professionnelle partout chez vous.",
+                                    gradient: "from-cyan-400 to-blue-500",
+                                    iconColor: "text-blue-500"
+                                },
+                                { 
+                                    icon: Shield, 
+                                    title: "Protection totale", 
+                                    desc: "Empêchez le fer et les minéraux corrosifs de tacher vos éviers et de détruire votre plomberie.",
+                                    gradient: "from-blue-500 to-indigo-500",
+                                    iconColor: "text-indigo-500"
+                                },
+                                { 
+                                    icon: TrendingDown, 
+                                    title: "Zéro odeur", 
+                                    desc: "Dites adieu aux odeurs d'œufs pourris (soufre) et au goût de chlore pour une eau fraîche.",
+                                    gradient: "from-indigo-400 to-purple-500",
+                                    iconColor: "text-purple-500"
+                                }
                             ].map((item, id) => (
-                                <div key={id} className="flex flex-col items-center group text-center">
-                                    <div className="w-20 h-20 rounded-2xl bg-white flex items-center justify-center mb-8 transition-all group-hover:scale-110 group-hover:bg-white/10">
-                                        <item.icon className="h-10 w-10 text-blue-600 group-hover:text-white" />
+                                <div 
+                                    key={id} 
+                                    className="group relative flex flex-col items-center lg:items-start text-center lg:text-left bg-white hover:bg-slate-50/50 border border-slate-100/80 hover:border-blue-100 rounded-3xl p-10 transition-all duration-500 hover:-translate-y-2 overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(59,130,246,0.1)] backdrop-blur-md"
+                                >
+                                    {/* Hover Glow Effect inside card */}
+                                    <div className={`absolute inset-0 bg-gradient-to-br opacity-0 group-hover:opacity-[0.03] transition-opacity duration-500 pointer-events-none ${item.gradient}`} />
+                                    
+                                    <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-8 relative z-10 shadow-sm bg-white border border-slate-100 group-hover:border-transparent transition-all duration-500`}>
+                                        <div className={`absolute inset-0 bg-gradient-to-br ${item.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500 rounded-2xl`} />
+                                        <item.icon className={`h-8 w-8 transition-transform duration-500 group-hover:scale-110 relative z-10 ${item.iconColor}`} />
                                     </div>
-                                    <h4 className="mb-4 tracking-tight">{item.title}</h4>
-                                    <p className="text-blue-100">{item.desc}</p>
+                                    
+                                    <h4 className="text-2xl text-slate-900 mb-4 tracking-tight font-medium relative z-10">{item.title}</h4>
+                                    <p className="text-slate-500 font-light leading-relaxed relative z-10">{item.desc}</p>
                                 </div>
                             ))}
                         </div>
@@ -251,8 +289,8 @@ const FiltresTouteMaison = () => {
                                 className="text-slate-900 mb-8 text-left"
                                 style={{}}
                             >
-                                <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Nos filtres d'eau</span>
-                                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">spécialisés pour votre résidence</span>
+                                <span className="text-[42px] md:text-[42px] font-light leading-[1.1] md:leading-[42px] block">Nos filtres d'eau</span>
+                                <span className="text-[42px] md:text-[42px] font-normal leading-[1.1] md:leading-[42px] block">spécialisés - Eau municipale</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600 mb-8"></div>
                             <p
@@ -311,8 +349,8 @@ const FiltresTouteMaison = () => {
                                 className="text-slate-900 mb-8 text-left"
                                 style={{}}
                             >
-                                <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Comparez nos filtres d'eau</span>
-                                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">spécialisés pour l'eau municipale</span>
+                                <span className="text-[42px] md:text-[42px] font-light leading-[1.1] md:leading-[42px] block">Comparez nos filtres d'eau</span>
+                                <span className="text-[42px] md:text-[42px] font-normal leading-[1.1] md:leading-[42px] block">spécialisés pour l'eau municipale</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
@@ -412,35 +450,15 @@ const FiltresTouteMaison = () => {
                 <TestimonialsSection filterProduct="/Filtres-deau-pour-toute-la-maison"
                     title={
                         <>
-                            <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block tracking-tighter text-slate-900">Fini le chlore et d'autres contaminants, </span>
-                            <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block text-blue-600 tracking-tighter">la métamorphose de votre quotidien vue par nos clients.</span>
+                            <h2 className="text-slate-900 mb-6 text-[42px] leading-[42px]">
+                                <span className="font-light block">Fini le chlore et d'autres contaminants,</span>
+                                <span className="font-bold text-blue-600">la métamorphose de votre quotidien vue par nos clients.</span>
+                            </h2>
                         </>
                     }
                 />
 
-                {/* 8. CTA Section */}
-                <section className="bg-primary py-16 md:py-20">
-                    <div className="container mx-auto px-4 text-center">
-                        <h2 className="text-primary-foreground mb-4">
-                            Besoin d'aide avec votre eau ?
-                        </h2>
-                        <p className="text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
-                            Discutez avec un expert en un clic. Disponible par téléphone ou à domicile selon vos préférences.
-                        </p>
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <Button
-                                size="lg"
-                                variant="outline"
-                                className="rounded-full px-8 border-white text-white bg-transparent hover:bg-white/10"
-                                asChild
-                            >
-                                <a href="tel:18552649328">Appelez le 1-855-264-9328</a>
-                            </Button>
-                        </div>
-                    </div>
-                </section>
-
-                {/* 9. FAQ Section */}
+                {/* 8. FAQ Section */}
                 <section className="py-24 bg-white">
                     <div className="container mx-auto px-6">
                         <div className="text-left mb-16">
@@ -448,9 +466,10 @@ const FiltresTouteMaison = () => {
                                 className="text-slate-900 mb-8 text-left"
                                 style={{}}
                             >
-                                <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Pour vous éclairer</span>
-                                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">Questions fréquentes</span>
+                                <span className="text-[42px] md:text-[42px] font-light leading-[1.1] md:leading-[42px] block">Pour vous éclairer</span>
+                                <span className="text-[42px] md:text-[42px] font-normal leading-[1.1] md:leading-[42px] block">Questions fréquentes</span>
                             </h2>
+
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
                         <div className="max-w-4xl mx-auto">
@@ -478,6 +497,54 @@ const FiltresTouteMaison = () => {
                     </div>
                 </section>
 
+                {/* 9. CTA Section - Premium Immersive */}
+                <section className="relative py-32 overflow-hidden">
+                    {/* Background Image with Overlay */}
+                    <div className="absolute inset-0 z-0">
+                        <img
+                            src={eauFontaineImg}
+                            alt="Expert Bricareau en fontaines d'eau"
+                            className="w-full h-full object-cover"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 via-blue-900/90 to-blue-800/80 backdrop-blur-[2px]" />
+                    </div>
+                    <div className="container mx-auto px-6 relative z-10 text-center">
+                        <div className="max-w-4xl mx-auto">
+                            <h2 className="text-white mb-6">
+                                <span className="text-[42px] md:text-[42px] font-light leading-tight block tracking-tight opacity-90 italic">Besoin d'aide avec votre eau ?</span>
+                            </h2>
+                            <p className="text-blue-100/80 font-light text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
+                                Discutez avec un expert en un clic. Disponible par téléphone ou à domicile selon vos préférences.                           
+                            </p>
+                            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                                <Button
+                                    size="lg"
+                                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-12 h-16 shadow-2xl shadow-white/30 group text-lg font-light"
+                                    asChild
+                                >
+                                    <a href="tel:18552649328" className="flex items-center gap-3">
+                                        <Phone className="h-5 w-5 animate-bounce" />
+                                        Parlez à un expert
+                                    </a>
+                                </Button>
+
+                                <Button
+                                    size="lg"
+                                    variant="outline"
+                                    className="rounded-full px-10 h-16 border-white/30 text-white bg-white/5 hover:bg-white/10 backdrop-blur-md text-lg transition-all duration-500"
+                                    asChild
+                                >
+                                    <NavLink to="/consultation">Planifiez une consultation</NavLink>
+                                </Button>
+                            </div>
+
+                            <p className="mt-8 text-white/50 text-sm font-light">
+                                Disponible 7j/7 — Réponse en moins de 24h
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
                 {/* 10. Resources Section */}
                 <section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-4">
@@ -485,8 +552,7 @@ const FiltresTouteMaison = () => {
                             <h2
                                 className="text-slate-900 mb-8 text-left"
                                 style={{}}
-                            >
-                                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">Ressources</span>
+                            >                                <span className="text-[42px] md:text-[42px] font-normal leading-[1.1] md:leading-[42px] block">Ressources</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

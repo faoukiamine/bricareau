@@ -219,10 +219,10 @@ const WaterTestFormSection = ({ id }: { id?: string }) => {
                     <div className="w-full text-left">
                         <h2
                             className="text-slate-900 mb-8 text-left"
-                            style={{ }}
+                            style={{}}
                         >
-                            <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Planifiez</span>
-                            <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">votre test d'eau</span>
+                            <span className="text-[42px] md:text-[42px] font-light leading-[1.1] md:leading-[42px] block">Planifiez</span>
+                            <span className="text-[42px] md:text-[42px] font-normal leading-[1.1] md:leading-[42px] block">votre test d'eau</span>
                         </h2>
                         <div className="w-24 h-1 bg-blue-600 mb-8"></div>
                         <p className="text-gray-600 mb-8">

@@ -85,7 +85,7 @@ const TestimonialsSection = ({
                 <div className="text-center mb-16">
                     <h2
                         className="text-foreground"
-                        style={{ }}
+                        style={{}}
                     >
                         {title}
                     </h2>

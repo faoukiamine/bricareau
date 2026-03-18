@@ -164,9 +164,9 @@ const EauDePuits = () => {
                 SOLUTIONS DE TRAITEMENT D'EAU POUR PUITS PRIVÉS
               </span>
               <h1
-                className="text-[32px] md:text-[42px] leading-[1.1] md:leading-[1.2] mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl"
+                className="text-[48px] md:text-[48px] leading-[1.1] md:leading-[1.2] mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl"
                 style={{
-                  fontWeight: 350
+                  fontWeight: 600
                 }}
               >
                 Votre puits est un trésor, offrez-lui la pureté qu'il mérite.
@@ -656,11 +656,12 @@ const EauDePuits = () => {
           <div className="container mx-auto px-4">
             <div className="text-left mb-16">
               <h2
-                className="text-slate-900 mb-8 text-left"
-                style={{}}
-              >
-                <span className="text-[42px] md:text-[42px] font-normal leading-[1.1] md:leading-[42px] block">FAQ</span>
-              </h2>
+                                className="text-slate-900 mb-8 text-left"
+                                style={{}}
+                            >
+                                <span className="text-[42px] md:text-[42px] font-light leading-[1.1] md:leading-[42px] block">Pour vous éclairer</span>
+                                <span className="text-[42px] md:text-[42px] font-normal leading-[1.1] md:leading-[42px] block">Questions fréquentes</span>
+                            </h2>
               <div className="w-24 h-1 bg-blue-600 mb-8"></div>
             </div>
 
