@@ -26,6 +26,7 @@ import waterTestingImg from "@/assets/Legionella-Monitoring.webp";
 import { heroImg as filtreSousEvierImg } from "./Blog pages/Filtre-sous-evier-lalternative-simple-aux-pichets-filtrants";
 import { heroImg as healthwaterImg } from "./Blog pages/Eau-embouteillee-les-dangers-meconnus-pour-votre-sante-au-quotidien";
 import { heroImg as rowaterImg } from "./Blog pages/Osmose-inverse-la-technologie-derriere-une-eau-100-pure";
+import eauDePuitsImg from "@/assets/185091336.jpg";
 
 import {
     Accordion,
@@ -240,15 +241,14 @@ const Filtration = () => {
                                             <span className="text-[42px] font-bold text-blue-600 block tracking-tight uppercase">eau filtrée cristalline.</span>
                                         </h2>
                                         <p className="text-slate-500 font-light text-lg leading-relaxed text-justify max-w-xl">
-                                            Protégez vos appareils ménagers, votre tuyauterie et votre peau dès aujourd'hui. Nos systèmes de filtration centrale traitent chaque goutte d'eau avec une précision chirurgicale.
-                                        </p>
+Les filtres d’eau pour toute la maison sont installés directement sur l’arrivée principale d’eau. Ils filtrent toute l’eau qui circule dans la maison : cuisine, salles de bain, buanderie, robinets extérieurs, etc. Ils sont idéaux pour réduire les sédiments, le sable, certaines odeurs et goûts (comme le chlore) et protéger la plomberie et les appareils.                                        </p>
                                     </div>
 
                                     <div className="space-y-6">
                                         {[
-                                            { title: "Défense Plomberie", desc: "Dites adieu au chlore résiduel et aux sédiments qui corrodent vos précieux appareils." },
-                                            { title: "Clarté de l'Eau", desc: "Une eau limpide à chaque robinet, protégeant l'éclat de vos sanitaires et de votre linge." },
-                                            { title: "Performance Longue Durée", desc: "Une technologie haute fidélité offrant une filtration efficace pendant 5 à 7 ans sans entretien lourd." }
+                                            { title: "Protection de la plomberie", desc: "Dites adieu au chlore résiduel et aux sédiments qui corrodent vos précieux appareils." },
+                                            { title: "Clarté de l'eau", desc: "Une eau limpide à chaque robinet, protégeant l'éclat de vos sanitaires et de votre linge." },
+                                            { title: "Performance longue durée", desc: "Une technologie haute fidélité offrant une filtration efficace pendant 5 à 7 ans sans entretien lourd." }
                                         ].map((item, i) => (
                                             <div key={i} className="group flex items-start gap-6 p-4 rounded-3xl transition-colors hover:bg-slate-50">
                                                 <div className="text-2xl font-black text-blue-600/20 group-hover:text-blue-600 transition-colors pt-1">
@@ -269,20 +269,10 @@ const Filtration = () => {
                                     <div className="pt-8 flex flex-col sm:flex-row gap-6">
                                         <NavLink to="/Filtres-deau-pour-toute-la-maison" className="w-full sm:w-auto">
                                             <Button className="w-full sm:w-auto rounded-full bg-blue-600 hover:bg-blue-700 text-white px-10 h-16 text-lg font-bold shadow-2xl shadow-blue-500/20 group">
-                                                Voir nos filtres
+                                                Voir nos filtres d'eau
                                                 <ChevronRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                                             </Button>
                                         </NavLink>
-
-                                        <div className="flex items-center gap-4 px-6 border-l border-slate-100 hidden sm:flex">
-                                            <div className="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center">
-                                                <Phone className="h-5 w-5 text-blue-600" />
-                                            </div>
-                                            <div>
-                                                <span className="text-[10px] block text-slate-400 font-black uppercase tracking-widest leading-none mb-1">Expert direct</span>
-                                                <span className="text-sm font-bold text-slate-900">1-855-264-9328</span>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -345,9 +335,9 @@ const Filtration = () => {
 
                                     <div className="space-y-6">
                                         {[
-                                            { title: "Pureté Absolue", desc: "Élimine 99% des contaminants, métaux lourds et micro-plastiques pour une sécurité totale." },
-                                            { title: "Éco-Conscient", desc: "Réduisez drastiquement votre empreinte carbone en éliminant les bouteilles jetables." },
-                                            { title: "Saveurs Révélées", desc: "Sublimez le goût de vos boissons et petits plats avec une eau pure sans aucune impureté." }
+                                            { title: "Pureté absolue", desc: "Élimine 99% des contaminants, métaux lourds et micro-plastiques pour une sécurité totale." },
+                                            { title: "Éco-conscient", desc: "Réduisez drastiquement votre empreinte carbone en éliminant les bouteilles jetables." },
+                                            { title: "Saveurs révélées", desc: "Sublimez le goût de vos boissons et petits plats avec une eau pure sans aucune impureté." }
                                         ].map((item, i) => (
                                             <div key={i} className="group flex items-start lg:flex-row flex-row-reverse gap-6 p-4 rounded-3xl transition-colors hover:bg-white/50">
                                                 <div className="text-2xl font-black text-blue-600/20 group-hover:text-blue-600 transition-colors pt-1">
@@ -368,7 +358,7 @@ const Filtration = () => {
                                     <div className="pt-8 flex flex-col sm:flex-row-reverse lg:flex-row gap-6 justify-end lg:justify-start">
                                         <NavLink to="/systeme-de-filtration-deau-potable" className="w-full sm:w-auto">
                                             <Button className="w-full sm:w-auto rounded-full bg-blue-600 hover:bg-blue-700 text-white px-10 h-16 text-lg font-bold shadow-2xl shadow-blue-500/20 group">
-                                                Découvrir l'osmose
+                                                Découvrir nos systèmes d'osmose inverse
                                                 <ChevronRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                                             </Button>
                                         </NavLink>
@@ -435,9 +425,9 @@ const Filtration = () => {
 
                                     <div className="space-y-6">
                                         {[
-                                            { title: "Filtration d'Élite", desc: "Un processus rigoureux en 5 étapes qui neutralise les métaux lourds et les sédiments invisibles." },
-                                            { title: "Design Intelligent", desc: "Un réservoir ultra-compact conçu pour maximiser votre espace de rangement." },
-                                            { title: "Finition de Luxe", desc: "Inclut une sélection de robinets au design contemporain s'intégrant parfaitement à votre cuisine." }
+                                            { title: "Filtration d'élite", desc: "Un processus rigoureux en 5 étapes qui neutralise les métaux lourds et les sédiments invisibles." },
+                                            { title: "Design intelligent", desc: "Un réservoir ultra-compact conçu pour maximiser votre espace de rangement." },
+                                            { title: "Finition de luxe", desc: "Inclut une sélection de robinets au design contemporain s'intégrant parfaitement à votre cuisine." }
                                         ].map((item, i) => (
                                             <div key={i} className="group flex items-start gap-6 p-4 rounded-3xl transition-colors hover:bg-slate-50">
                                                 <div className="text-2xl font-black text-blue-600/20 group-hover:text-blue-600 transition-colors pt-1">
@@ -585,8 +575,58 @@ const Filtration = () => {
                         </div>
                     </div>
                 </section>
+        {/* 9. CTA Section - Premium Immersive */}
+        <section className="relative py-32 overflow-hidden">
+          {/* Background Image with Overlay */}
+          <div className="absolute inset-0 z-0">
+            <img
+              src={eauDePuitsImg}
+              alt="Expert Bricareau en traitement d'eau de puits"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 via-blue-900/90 to-blue-800/80 backdrop-blur-[2px]" />
+          </div>
 
-                {/* 10. FAQ Section */}
+          <div className="container mx-auto px-6 relative z-10 text-center">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-white mb-6">
+                <span className="text-[42px] md:text-[42px] font-light leading-tight block tracking-tight opacity-90 italic">Besoin d'aide avec</span>
+                <span className="text-[42px] md:text-[42px] font-bold leading-tight block tracking-tight uppercase">votre filtration d'eau ?</span>
+              </h2>
+
+              <p className="text-blue-100/80 font-light text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
+                Vous n’êtes pas certain de savoir si vous avez besoin d’un filtre toute maison, d’un système sous évier ou d’une station d’osmose inverse ? Contactez‑nous pour une évaluation de votre eau et de vos besoins. Nous vous proposerons une solution de filtration d’eau résidentielle adaptée à votre maison, à votre budget et à vos priorités. </p>
+
+              <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                <Button
+                  size="lg"
+                  className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-12 h-16 shadow-2xl shadow-white/30 group text-lg font-light"
+                  asChild
+                >
+                  <a href="tel:18552649328" className="flex items-center gap-3">
+                    <Phone className="h-5 w-5 animate-bounce" />
+                    Parlez à un expert
+                  </a>
+                </Button>
+
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="rounded-full px-10 h-16 border-white/30 text-white bg-white/5 hover:bg-white/10 backdrop-blur-md text-lg transition-all duration-500"
+                  asChild
+                >
+                  <NavLink to="/tests-eau">Demandez une analyse d'eau</NavLink>
+                </Button>
+              </div>
+
+              <p className="mt-8 text-white/50 text-sm font-light">
+                Disponible 7j/7 — Réponse en moins de 24h
+              </p>
+            </div>
+          </div>
+        </section>
+
+                {/* 11. FAQ Section */}
                 <section className="py-24 bg-white">
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
@@ -685,7 +725,7 @@ const Filtration = () => {
                     </div>
                 </section>
 
-                {/* 11. Resources Section */}
+                {/* 12. Resources Section */}
                 <section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">

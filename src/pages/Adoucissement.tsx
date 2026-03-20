@@ -18,10 +18,13 @@ import drinkingWaterImg from "@/assets/Solutions d'eau potable.webp";
 import undersinkSystemImg from "@/assets/Système+de+filtration+Serene+Lite.webp";
 import hardWaterSignsImg from "@/assets/Signs+of+hard+water+in+your+home-640w.webp";
 import hardWaterImg from "@/assets/58279.jpg";
+import applianceDamageImg from "@/assets/tarte-chauffe-eau.jpg";
 import { conditionneursImg } from "./Blog pages/Adoucisseur avec sel ou sans sel";
 import { softenerImg as residentialWaterSoftenerImg } from "./Blog pages/Comment régler la dureté de votre adoucisseur ";
 import { adoucisseurImg as adoucisseurFosseImg } from "./Blog pages/Adoucisseur-deau- et-fosse-septique--Mythes-et-réalités";
 import TACsystemImg from "@/assets/free salt conditionner.webp";
+import womansufferingfromHardWaterImg from "@/assets/2149561614.jpg";
+import womansufferingdryhairfromhardwaterImg from "@/assets/12163.jpg";
 
 import {
     ArrowRight,
@@ -42,7 +45,12 @@ import {
     Home,
     Award,
     HandCoins,
-    Phone
+    Phone,
+    ZapOff,
+    Wrench,
+    CircleDollarSign,
+    TrendingUp,
+    Beaker
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import React, { useEffect } from "react";
@@ -54,10 +62,14 @@ import {
     AccordionTrigger
 } from "@/components/ui/accordion";
 import ConsultationFormSection from "@/components/ConsultationFormSection";
+import useEmblaCarousel from 'embla-carousel-react';
+import Autoplay from 'embla-carousel-autoplay';
 
 
 const Adoucissement = () => {
+    const [emblaRef] = useEmblaCarousel({ loop: true }, [Autoplay({ delay: 4000, stopOnInteraction: false })]);
     const [showAllFaqs, setShowAllFaqs] = React.useState(false);
+    const [showAllHarms, setShowAllHarms] = React.useState(false);
     const navigate = useNavigate();
 
 
@@ -134,6 +146,114 @@ const Adoucissement = () => {
                                     </a>
                                 </Button>
                             </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* 2. The Problem Section - Architectural Narrative Enhanced */}
+                <section className="py-32 bg-slate-50 relative overflow-hidden">
+                    {/* Architectural Watermark */}
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[15rem] lg:text-[22rem] font-black text-slate-200/20 select-none pointer-events-none tracking-tighter z-0 uppercase">
+                        CALCAIRE
+                    </div>
+
+                    <div className="container mx-auto px-6 relative z-10">
+                        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+
+                            {/* Left Column: Analytical Narrative (6 Harms) */}
+                            <div className="lg:col-span-5 space-y-8">
+                                <div>
+                                    <h2 className="text-slate-900 mb-6 text-[42px] leading-[42px]">
+                                        <span className="font-light block">L'impact silencieux</span>
+                                        <span className="font-bold text-blue-600">du calcaire.</span>
+                                    </h2>
+                                    <p className="font-light text-slate-600 lg:text-slate-600 mb-8 max-w-xl text-left lg:text-justify">
+                                        Ce n'est pas qu'un simple dépôt ; c'est un agent d'érosion invisible qui dégrade votre confort et vos investissements jour après jour.
+                                    </p>
+                                </div>
+
+                                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-x-8 gap-y-6 overflow-hidden transition-all duration-700">
+                                    {[
+                                        {
+                                            icon: <ZapOff className="w-6 h-6" />,
+                                            title: "+25% d'énergie",
+                                            desc: "Le tartre isole vos résistances, forçant vos appareils à consommer massivement plus."
+                                        },
+                                        {
+                                            icon: <Wrench className="w-6 h-6" />,
+                                            title: "Plomberie & Débit",
+                                            desc: "Obstruction progressive des canalisations et perte de pression aux robinets."
+                                        },
+                                        {
+                                            icon: <CircleDollarSign className="w-6 h-6" />,
+                                            title: "Maintenance Coûteuse",
+                                            desc: "Réduction de 50% de la durée de vie de vos équipements (chauffe-eau, lave-vaisselle)."
+                                        },
+                                        {
+                                            icon: <Sparkles className="w-6 h-6" />,
+                                            title: "Soin du Corps",
+                                            desc: "Agression cutanée (eczéma), irritations et cheveux ternes ou cassants."
+                                        },
+                                        {
+                                            icon: <Shirt className="w-6 h-6" />,
+                                            title: "Linge & Textiles",
+                                            desc: "Fibres qui deviennent rêches et couleurs qui ternissent au fil des lavages."
+                                        },
+                                        {
+                                            icon: <Beaker className="w-6 h-6" />,
+                                            title: "Surconsommation",
+                                            desc: "Nécessite jusqu'à 50% de détergents et savons en plus pour obtenir de la mousse."
+                                        }
+                                    ].filter((_, idx) => showAllHarms || idx < 3).map((harm, idx) => (
+                                        <div key={idx} className="flex items-start gap-3 group animate-in fade-in slide-in-from-top-4 duration-500">
+                                            <div className="w-12 h-12 rounded-xl bg-white shadow-lg flex items-center justify-center shrink-0 group-hover:bg-blue-600 transition-all duration-500 text-blue-600 group-hover:text-white group-hover:-translate-y-1">
+                                                {harm.icon}
+                                            </div>
+                                            <div>
+                                                <h3 className="text-lg font-bold text-slate-900 mb-1">{harm.title}</h3>
+                                                <p className="text-slate-500 font-light text-sm leading-snug">
+                                                    {harm.desc}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+
+                                <div className="pt-2">
+                                    <button
+                                        onClick={() => setShowAllHarms(!showAllHarms)}
+                                        className="flex items-center gap-2 text-blue-600 font-bold text-sm hover:gap-3 transition-all group"
+                                    >
+                                        {showAllHarms ? "Voir moins d'impacts" : "Voir plus d'impacts"}
+                                        <ChevronRight className={`w-4 h-4 transition-transform ${showAllHarms ? 'rotate-90' : ''}`} />
+                                    </button>
+                                </div>
+                            </div>
+
+                            {/* Right Column: Cinematic Slideshow (Embla) */}
+                            <div className="lg:col-span-7 relative sticky top-32">
+                                <div className="relative rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white group">
+                                    <div className="embla overflow-hidden" ref={emblaRef}>
+                                        <div className="embla__container flex">
+                                            {[applianceDamageImg, womansufferingdryhairfromhardwaterImg, hardWaterSignsImg, hardWaterImg, womansufferingfromHardWaterImg].map((img, idx) => (
+                                                <div key={idx} className="embla__slide flex-[0_0_100%] min-w-0 relative h-[700px]">
+                                                    <img
+                                                        src={img}
+                                                        alt={`Impact du calcaire ${idx + 1}`}
+                                                        className="w-full h-full object-cover"
+                                                    />
+                                                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-60" />
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* Architectural Frame Accents */}
+                                <div className="absolute -top-6 -right-6 w-32 h-32 border-t-2 border-r-2 border-blue-600/10 rounded-tr-[3rem]" />
+                                <div className="absolute -bottom-6 -left-6 w-32 h-32 border-b-2 border-l-2 border-blue-600/10 rounded-bl-[3rem]" />
+                            </div>
+
                         </div>
                     </div>
                 </section>
@@ -220,17 +340,13 @@ const Adoucissement = () => {
                                     />
                                     <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors duration-500" />
 
-                                    {/* Play Button Card */}
-                                    <div className="absolute bottom-10 left-10 bg-blue-600/90 backdrop-blur-md rounded-2xl p-4 pr-8 flex items-center gap-4 shadow-xl cursor-pointer hover:bg-blue-700 transition-all hover:scale-105 active:scale-95 group/btn border border-white/20">
-                                        <div className="bg-white rounded-full p-3 shadow-lg group-hover/btn:shadow-xl transition-shadow relative">
-                                            <div className="absolute inset-0 rounded-full bg-blue-200 animate-ping opacity-20"></div>
-                                            <Play className="h-6 w-6 text-blue-600 fill-blue-600 ml-1 relative z-10" />
-                                        </div>
-                                        <div>
-                                            <span className="font-bold text-white text-lg block">Voir la vidéo</span>
-                                            <span className="text-blue-100 text-xs font-light">Découvrir l'expérience</span>
-                                        </div>
-                                    </div>
+                                     {/* Water Softeners CTA Button */}
+                                    <Button 
+                                        onClick={() => navigate('/adoucisseur-eau-residentiel')}
+                                        className="absolute bottom-10 left-10 rounded-full bg-blue-600 hover:bg-blue-700 text-white px-8 h-14 text-base shadow-xl shadow-blue-200/50 transition-all hover:scale-105 active:scale-95 flex items-center gap-2 border-none"
+                                    >
+                                        Découvrir nos adoucisseurs d'eau <ChevronRight className="h-5 w-5" />
+                                    </Button>
                                 </div>
                             </div>
 
@@ -264,14 +380,6 @@ const Adoucissement = () => {
                                         </div>
                                     ))}
                                 </div>
-
-                                <div className="mt-14 pt-8 border-t border-gray-100">
-                                    <NavLink to="/adoucisseur-eau-residentiel">
-                                        <Button className="rounded-full bg-blue-600 hover:bg-blue-700 text-white px-8 h-14 text-base shadow-lg transition-all duration-300 w-full sm:w-auto hover:shadow-blue-200">
-                                            Découvrir nos adoucisseurs d'eau <ChevronRight className="ml-2 h-5 w-5" />
-                                        </Button>
-                                    </NavLink>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -301,17 +409,13 @@ const Adoucissement = () => {
                                     />
                                     <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors duration-500" />
 
-                                    {/* Play Button Card */}
-                                    <div className="absolute bottom-10 right-10 bg-blue-600/90 backdrop-blur-md rounded-2xl p-4 pl-8 flex items-center gap-4 shadow-xl cursor-pointer hover:bg-blue-700 transition-all hover:scale-105 active:scale-95 group/btn border border-white/20 flex-row-reverse">
-                                        <div className="bg-white rounded-full p-3 shadow-lg group-hover/btn:shadow-xl transition-shadow relative">
-                                            <div className="absolute inset-0 rounded-full bg-blue-200 animate-ping opacity-20"></div>
-                                            <Play className="h-6 w-6 text-blue-600 fill-blue-600 ml-1 relative z-10" />
-                                        </div>
-                                        <div className="text-right">
-                                            <span className="font-bold text-white text-lg block">Voir la vidéo</span>
-                                            <span className="text-blue-100 text-xs font-light">Découvrir l'expérience</span>
-                                        </div>
-                                    </div>
+                                    {/* Conditionneurs sans sel CTA Button */}
+                                    <Button 
+                                        onClick={() => navigate('/adoucisseurs-portables')}
+                                        className="absolute bottom-10 left-10 rounded-full bg-blue-600 hover:bg-blue-700 text-white px-8 h-14 text-base shadow-xl shadow-blue-200/50 transition-all hover:scale-105 active:scale-95 flex items-center gap-2 border-none"
+                                    >
+                                        Découvrir nos adoucisseurs portables <ChevronRight className="h-5 w-5" />
+                                    </Button>
                                 </div>
                             </div>
 
@@ -345,14 +449,6 @@ const Adoucissement = () => {
                                         </div>
                                     ))}
                                 </div>
-
-                                <div className="mt-14 pt-8 border-t border-gray-200">
-                                    <NavLink to="/adoucisseurs-portables">
-                                        <Button className="rounded-full bg-blue-600 hover:bg-blue-700 text-white px-8 h-14 text-base shadow-lg transition-all duration-300 w-full sm:w-auto hover:shadow-blue-200">
-                                            Découvrir nos adoucisseurs portables <ChevronRight className="ml-2 h-5 w-5" />
-                                        </Button>
-                                    </NavLink>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -381,18 +477,15 @@ const Adoucissement = () => {
                                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                     />
                                     <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors duration-500" />
+                                    
+                                    {/* Conditionneurs sans sel CTA Button */}
+                                    <Button 
+                                        onClick={() => navigate('/conditionneurs-sans-sel')}
+                                        className="absolute bottom-10 left-10 rounded-full bg-blue-600 hover:bg-blue-700 text-white px-8 h-14 text-base shadow-xl shadow-blue-200/50 transition-all hover:scale-105 active:scale-95 flex items-center gap-2 border-none"
+                                    >
+                                        Découvrir nos conditionneurs d'eau sans sel <ChevronRight className="h-5 w-5" />
+                                    </Button>
 
-                                    {/* Play Button Card */}
-                                    <div className="absolute bottom-10 left-10 bg-blue-600/90 backdrop-blur-md rounded-2xl p-4 pr-8 flex items-center gap-4 shadow-xl cursor-pointer hover:bg-blue-700 transition-all hover:scale-105 active:scale-95 group/btn border border-white/20">
-                                        <div className="bg-white rounded-full p-3 shadow-lg group-hover/btn:shadow-xl transition-shadow relative">
-                                            <div className="absolute inset-0 rounded-full bg-blue-200 animate-ping opacity-20"></div>
-                                            <Play className="h-6 w-6 text-blue-600 fill-blue-600 ml-1 relative z-10" />
-                                        </div>
-                                        <div>
-                                            <span className="font-bold text-white text-lg block">Voir la vidéo</span>
-                                            <span className="text-blue-100 text-xs font-light">Découvrir l'expérience</span>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
 
@@ -425,14 +518,6 @@ const Adoucissement = () => {
                                             </div>
                                         </div>
                                     ))}
-                                </div>
-
-                                <div className="mt-14 pt-8 border-t border-gray-100">
-                                    <NavLink to="/conditionneurs-sans-sel">
-                                        <Button className="rounded-full bg-blue-600 hover:bg-blue-700 text-white px-8 h-14 text-base shadow-lg transition-all duration-300 w-full sm:w-auto hover:shadow-blue-200">
-                                            Découvrir nos conditionneurs sans sel <ChevronRight className="ml-2 h-5 w-5" />
-                                        </Button>
-                                    </NavLink>
                                 </div>
                             </div>
                         </div>

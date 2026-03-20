@@ -26,7 +26,12 @@ import {
   FileText,
   ChevronLeft,
   MessageCircle,
-  Armchair
+  Armchair,
+  Phone,
+  HeartPulse,
+  FlaskConical,
+  EyeOff,
+  ShieldCheck
 } from "lucide-react";
 import safetyIcon from "@/assets/1709235770048.png";
 import { NavLink } from "@/components/NavLink";
@@ -54,7 +59,8 @@ import movingTipsImg from "@/assets/astuces-emmenagement-maison.jpg";
 import clothesStainsImg from "@/assets/302731406_443870381116589_3770801709209607894_n.jpg";
 import scientistImg from "@/assets/Scientist istesting water.webp";
 import newHeroImg from "@/assets/r0_0_4896_3264_w1200_h678_fmax.jpg";
-import forensicWaterImg from "@/assets/forensic-water.png";
+import forensicWaterImg from "@/assets/1062.jpg";
+import eauDePuitsImg from "@/assets/Filtration-eau-de-puits.webp";
 
 const TestsEauPage = () => {
   const [showAllFaqs, setShowAllFaqs] = useState(false);
@@ -177,184 +183,88 @@ const TestsEauPage = () => {
 
 
 
-        {/* 3. Why test your water Section (Forensic Split Alternative) - Ultra Modern */}
-        <section className="bg-white overflow-hidden">
-          <div className="flex flex-col lg:flex-row min-h-[700px]">
+        {/* 3. Savoir exactement ce que vous buvez (The Scientific Canvas) - Open & Editorial */}
+        <section className="py-24 lg:py-44 bg-slate-50 overflow-hidden relative border-t border-slate-100">
+          {/* Subtle Dynamic Accents */}
+          <div className="absolute inset-0 pointer-events-none">
+            <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-blue-100/30 rounded-full blur-[160px]" />
+            <div className="absolute -bottom-20 -left-20 w-[600px] h-[600px] bg-indigo-50/40 rounded-full blur-[140px]" />
+          </div>
+          <div className="container mx-auto px-6 relative z-10">
+            <div className="max-w-4xl mx-auto text-center mb-16 lg:mb-24">
+              <span className="text-sm font-bold uppercase tracking-widest text-blue-600 mb-4 block flex items-center justify-center gap-2">
+                <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.2em] mb-6">
+                  ANALYSES D'EAU DE PRÉCISION
+                </span>
+              </span>
+              <h2 className="text-slate-900 mb-6 text-[42px] leading-[1.1]">
+                <span className="font-light block">Savoir exactement</span>
+                <span className="font-bold text-blue-600">ce que vous buvez.</span>
+              </h2>
+            </div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
-            {/* Left Column: Clean Editorial Content (50%) */}
-            <div className="lg:w-1/2 flex items-center justify-center p-8 lg:p-24 bg-white relative">
-              {/* Subtle tech grid background */}
-              <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#3b82f6 1px, transparent 1px)', backgroundSize: '32px 32px' }} />
+              {/* Visual Side (Left/Center on Desktop) */}
+              <div className="relative order-2 lg:order-1">
+                {/* Large Integrated Microscopy Image */}
+                <div className="relative aspect-square lg:aspect-[4/5] rounded-[2.5rem] overflow-hidden group shadow-2xl shadow-blue-900/5">
+                  <img
+                    src={forensicWaterImg}
+                    alt="Microscopic water analysis"
+                    className="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-110 opacity-80"
+                  />
+                  {/* Subtle Overlays */}
+                  <div className="absolute inset-0 bg-gradient-to-tr from-blue-900/20 via-transparent to-white/10" />
+                </div>
+                
+                {/* Architectural Decor Lines */}
+                <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-blue-600/5 rounded-full blur-3xl" />
+              </div>
 
-              <div className="max-w-xl relative z-10">
-                <div className="space-y-12">
-                  <div className="space-y-6">
-                    <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.2em]">
-                      ANALYSE SCIENTIFIQUE
-                    </span>
-                    <h2 className="text-slate-900 text-[48px] leading-[1.1]">
-                      <span className="font-light block italic opacity-60">Découvrez</span>
-                      <span className="font-bold block tracking-tight">l'invisible.</span>
-                    </h2>
-                    <p className="text-slate-500 font-light text-xl leading-relaxed">
-                      L'eau claire cache parfois des secrets. Minéraux, bactéries ou contaminants chimiques : une analyse certifiée est la seule façon de garantir une sécurité totale.
+              {/* Content Side (Right on Desktop) */}
+              <div className="text-left order-1 lg:order-2">
+                <div className="max-w-xl">
+                  <div className="space-y-8 py-2">
+                    <p className="text-slate-600 font-light max-w-2xl mx-auto text-justify">
+                      Les analyses d’eau professionnelles et les tests de laboratoire sont la façon la plus fiable de connaître la qualité réelle de votre eau potable. Ils permettent de détecter les contaminants invisibles à l’œil nu et de choisir ensuite le bon système de traitement d'eau pour protéger votre famille. il est préférable de procéder à une analyse d'eau dans les cas suivants:
                     </p>
                   </div>
 
-                  {/* Horizontal Data Strip Highlights */}
-                  <div className="grid grid-cols-2 gap-8 pt-8 border-t border-slate-100">
-                    <div className="space-y-2">
-                      <div className="flex items-center gap-3 text-blue-600">
-                        <Heart className="h-5 w-5" />
-                        <span className="font-bold text-sm uppercase tracking-wider">Santé</span>
-                      </div>
-                      <p className="text-sm text-slate-400 font-light">Élimine les risques bactériologiques.</p>
-                    </div>
-                    <div className="space-y-2">
-                      <div className="flex items-center gap-3 text-blue-600">
-                        <Shield className="h-5 w-5" />
-                        <span className="font-bold text-sm uppercase tracking-wider">Maison</span>
-                      </div>
-                      <p className="text-sm text-slate-400 font-light">Protège vos équipements durablement.</p>
-                    </div>
-                    <div className="space-y-2">
-                      <div className="flex items-center gap-3 text-blue-600">
-                        <Sparkles className="h-5 w-5" />
-                        <span className="font-bold text-sm uppercase tracking-wider">Paix</span>
-                      </div>
-                      <p className="text-sm text-slate-400 font-light">Une tranquillité d'esprit certifiée.</p>
-                    </div>
-                    <div className="space-y-2">
-                      <div className="flex items-center gap-3 text-blue-600">
-                        <FileText className="h-5 w-5" />
-                        <span className="font-bold text-sm uppercase tracking-wider">Valeur</span>
-                      </div>
-                      <p className="text-sm text-slate-400 font-light">Précieux pour toute transaction Immobilière.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+                  {/* Integrated Diagnostic Feature List (with Circular Images) */}
+                  <div className="mt-8 space-y-4">
+                    {services.map((item, idx) => (
+                      <div 
+                        key={idx}
+                        className="group flex items-start gap-5 p-4 -mx-4 rounded-3xl transition-all duration-500 hover:bg-blue-50/30"
+                      >
+                        {/* Circular Image Frame */}
+                        <div className="relative flex-shrink-0 w-20 h-20 lg:w-24 lg:h-24 rounded-full overflow-hidden border-2 border-white shadow-xl shadow-blue-900/10 group-hover:scale-110 transition-transform duration-700">
+                          <img 
+                            src={item.img} 
+                            alt={item.title} 
+                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[2000ms]"
+                          />
+                          <div className="absolute inset-0 bg-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity" />
+                        </div>
 
-            {/* Right Column: Immersive Forensic Visual (50%) */}
-            <div className="lg:w-1/2 relative min-h-[500px] lg:min-h-full overflow-hidden group">
-              <img
-                src={forensicWaterImg}
-                alt="Macro gouttelette d'eau sous microscope Bricareau"
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-[5000ms] group-hover:scale-110"
-              />
-              {/* Glassmorphism Overlays (Floating Data Points) */}
-              <div className="absolute inset-0 bg-blue-900/10 mix-blend-multiply" />
-
-              {/* Data Point 1 */}
-              <div className="absolute top-[20%] left-[30%] animate-bounce [animation-duration:4s]">
-                <div className="backdrop-blur-xl bg-white/10 border border-white/20 rounded-full p-2 pr-6 flex items-center gap-3 shadow-2xl">
-                  <div className="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center">
-                    <div className="w-2 h-2 rounded-full bg-white animate-pulse" />
-                  </div>
-                  <span className="text-xs font-bold text-white uppercase tracking-widest">Bactéries</span>
-                </div>
-              </div>
-
-              {/* Data Point 2 */}
-              <div className="absolute top-[60%] right-[25%] animate-bounce [animation-duration:3s]">
-                <div className="backdrop-blur-xl bg-white/10 border border-white/20 rounded-full p-2 pr-6 flex items-center gap-3 shadow-2xl">
-                  <div className="w-8 h-8 rounded-full bg-sky-400 flex items-center justify-center">
-                    <div className="w-2 h-2 rounded-full bg-white animate-pulse" />
-                  </div>
-                  <span className="text-xs font-bold text-white uppercase tracking-widest">Métaux Lourds</span>
-                </div>
-              </div>
-
-              {/* Data Point 3 */}
-              <div className="absolute bottom-[20%] left-[20%] animate-bounce [animation-duration:5s]">
-                <div className="backdrop-blur-xl bg-white/10 border border-white/20 rounded-full p-2 pr-6 flex items-center gap-3 shadow-2xl">
-                  <div className="w-8 h-8 rounded-full bg-indigo-500 flex items-center justify-center">
-                    <div className="w-2 h-2 rounded-full bg-white animate-pulse" />
-                  </div>
-                  <span className="text-xs font-bold text-white uppercase tracking-widest">Minéraux</span>
-                </div>
-              </div>
-
-              {/* Bottom Credit */}
-              <div className="absolute bottom-12 right-12 text-white/40 text-[10px] uppercase tracking-[0.3em] font-bold">
-                Forensic Micro-Photography Analysis
-              </div>
-            </div>
-
-          </div>
-        </section>
-
-        {/* 4. When you should test your water Section */}
-        <section className="py-24 bg-white">
-          <div className="container mx-auto px-6">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
-              {/* Title Section (Row 1, Left) */}
-              <div className="lg:col-start-1 lg:row-start-1 flex flex-col justify-center">
-                <h2
-                  className="text-slate-900 mb-8"
-                  style={{}}
-                >
-                  <span className="text-[28px] md:text-[48px] font-light leading-[1.1] md:leading-[1.1] block">Quand faut-il faire analyser</span>
-                  <span className="text-[28px] md:text-[48px] font-normal leading-[1.1] md:leading-[1.1] block">l'eau de votre maison ?</span>
-                </h2>
-                <div className="w-24 h-1 bg-blue-600"></div>
-              </div>
-
-              {/* Services List (Row 2, Left) */}
-              <div className="lg:col-start-1 lg:row-start-2 space-y-2">
-                {services.map((item, idx) => (
-                  <div
-                    key={idx}
-                    onClick={() => setActiveService(idx)}
-                    onMouseEnter={() => setActiveService(idx)}
-                    className={`group cursor-pointer py-4 px-4 -mx-4 rounded-lg transition-all duration-300 ${activeService === idx ? 'bg-blue-50/50' : 'hover:bg-gray-50'}`}
-                  >
-                    <div className="flex flex-col">
-                      <div className="flex items-center gap-4">
-                        <span className="text-2xl md:text-3xl font-bold text-blue-600/50 group-hover:text-blue-600 transition-colors duration-300">
-                          {String(idx + 1).padStart(2, '0')}.
-                        </span>
-                        <span
-                          className={`text-[20px] font-bold transition-colors duration-300 ${activeService === idx ? 'text-blue-600' : 'text-slate-900 group-hover:text-blue-600'}`}
-                          style={{}}
-                        >
-                          {item.title}
-                        </span>
-                      </div>
-                      <div className={`grid transition-all duration-500 ease-in-out ${activeService === idx ? 'grid-rows-[1fr] opacity-100 mt-4' : 'grid-rows-[0fr] opacity-0 mt-0'}`}>
-                        <div className="overflow-hidden">
-                          <div className="pl-4 ml-3 border-l-2 border-blue-200">
-                            <p className="text-slate-600 max-w-lg">
-                              {item.desc}
-                            </p>
-                          </div>
+                        {/* Text Content */}
+                        <div className="flex-1">
+                           <h4 className="text-lg lg:text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors duration-500 mb-0 leading-tight">
+                             {item.title}
+                           </h4>
+                           <p className="text-slate-500 text-sm leading-snug font-light max-w-md">
+                             {item.desc}
+                           </p>
                         </div>
                       </div>
-                    </div>
+                    ))}
                   </div>
-                ))}
-              </div>
-
-              {/* Right Image Display (Row 2, Right) */}
-              <div className="lg:col-start-2 lg:row-start-2 relative rounded-[2.5rem] overflow-hidden shadow-2xl h-[400px] lg:h-full w-full">
-                {services.map((service, idx) => (
-                  <div
-                    key={idx}
-                    className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${activeService === idx ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}
-                  >
-                    <img
-                      src={service.img}
-                      alt={`${service.title} - Raison de faire tester votre eau par Bricareau`}
-                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-[2000ms]"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
-                  </div>
-                ))}
+                </div>
               </div>
             </div>
           </div>
         </section>
+
         {/* 5. Water Testing plans Section */}
         <section className="py-24 bg-slate-50 relative">
           <div className="container mx-auto px-6">
@@ -472,24 +382,48 @@ const TestsEauPage = () => {
                 </div>
               ))}
             </div>
-
-            <div className="mt-16 text-center">
-              <Button
-                size="lg"
-                className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200 animate-heartbeat"
-                style={{}}
-                asChild
-              >
-                <a href="#water-test">
-                  Planifiez un test d'eau
-                </a>
-              </Button>
-            </div>
           </div>
         </section>
 
 
-        {/* 6. FAQ Section */}
+
+        {/* 6. CTA Section - Premium Immersive */}
+        <section className="relative py-32 overflow-hidden">
+          {/* Background Image with Overlay */}
+          <div className="absolute inset-0 z-0">
+            <img
+              src={eauDePuitsImg}
+              alt="Expert Bricareau en traitement d'eau de puits"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 via-blue-900/90 to-blue-800/80 backdrop-blur-[2px]" />
+          </div>
+
+          <div className="container mx-auto px-6 relative z-10 text-center">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-white mb-6">
+                <span className="text-[42px] md:text-[42px] font-light leading-tight block tracking-tight opacity-90 italic">Vous avez un doute sur la qualité de votre eau, ou vous utilisez un puits privé pour votre famille ?</span>
+              </h2>
+
+              <p className="text-blue-100/80 font-light text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
+Planifier une analyse d’eau professionnelle et recevoir un rapport clair avec recommandations. Un spécialiste vous contactera pour discuter des résultats et, au besoin, vous proposer un plan de traitement adapté à votre maison.              </p>
+
+              <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                <Button
+                  size="lg"
+                className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200 animate-heartbeat"
+                  asChild
+                >
+                  <a href="tests-eau#water-test" className="flex items-center gap-3">
+                    Planifiez un test d'eau
+                  </a>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* 7. FAQ Section */}
         <section className="py-24 bg-white border-t border-slate-100">
           <div className="container mx-auto px-4 text-left">
             <div className="text-left mb-16">
@@ -572,7 +506,7 @@ const TestsEauPage = () => {
           </div>
         </section>
 
-        {/* 7. Schedule a Water Test Section */}
+        {/* 8. Schedule a Water Test Section */}
         <WaterTestFormSection id="water-test" />
 
       </main >

@@ -24,10 +24,17 @@ import {
   Sparkles,
   Search,
   Check,
-  Phone
+  Phone,
+  ShieldCheck,
+  CircleDollarSign,
+  Wrench,
+  Award,
+  TrendingUp,
+  Zap,
+  Droplets,
+  ZapOff
 } from "lucide-react";
 import eauDePuitsImg from "@/assets/185091336.jpg";
-import safetyIcon from "@/assets/1709235770048.png";
 import { NavLink } from "@/components/NavLink";
 import {
   Accordion,
@@ -50,7 +57,7 @@ const whyChoose = [
     description: "Contrairement aux adoucisseurs traditionnels, notre système ne gaspille aucune goutte d'eau pour se régénérer. Il élimine totalement les rejets de saumure polluante, préservant ainsi l'équilibre biologique de vos fosses septiques et protégeant durablement les écosystèmes locaux et les nappes phréatiques."
   },
   {
-    icon: Sparkles,
+    icon: ShieldCheck,
     title: "Zéro tartre",
     description: "Notre solution neutralise le calcaire avant qu'il ne s'incruste, formant une barrière protectrice dans toute votre plomberie. Vous prolongez considérablement la durée de vie de vos chauffe-eaux et électroménagers, tout en maintenant leur rendement énergétique optimal et en évitant les panes coûteuses."
   }
@@ -103,7 +110,7 @@ const faqs = [
   },
   {
     question: "Faut-il une prise électrique à proximité ?",
-    answer: "Non. Le système fonctionne uniquement avec la pression de l'eau entrante. C'est une solution passive qui ne tombera jamais en panne à cause d'un problème électronique ou d'une panne de courant."
+    answer: "Non. Le système fonctionne uniquement avec la pression de l'eau entrante. C'est une solution passive qui ne tombera jamais en panne à cause d'un problème électronique ou d'une piscine de courant."
   },
   {
     question: "Est-ce que cela élimine les taches sur la vaisselle ?",
@@ -116,24 +123,6 @@ const faqs = [
   {
     question: "Quelle est la garantie offerte par Bricareau ?",
     answer: "Nous offrons une garantie de satisfaction ainsi qu'une protection de 10 ans sur le réservoir et les composants structurels, assortie de notre service après-vente légendaire."
-  }
-];
-
-const resources = [
-  {
-    image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop",
-    title: "Guide d'installation de l'adoucisseur",
-    description: "Découvrez comment nos experts assurent une installation parfaite de votre système."
-  },
-  {
-    image: "https://images.unsplash.com/photo-1595152772835-2196740b6ca0?q=80&w=800&auto=format&fit=crop",
-    title: "Solution contre l'eau dure : Guide complet",
-    description: "Tout ce que vous devez savoir pour protéger votre maison du calcaire."
-  },
-  {
-    image: "https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=800&auto=format&fit=crop",
-    title: "Comment tester la dureté de son eau",
-    description: "Des étapes simples pour comprendre la qualité de l'eau à votre robinet."
   }
 ];
 
@@ -188,7 +177,7 @@ const ConditionneursSansSel = () => {
               >
                 Conditionneur d'eau sans sel, l'anti-tartre écologique par excellence.
               </h1>
-              <p className="font-light text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
+              <p className="font-light text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify text-lg leading-relaxed">
                 Neutralisez le calcaire sans sel, sans électricité et sans gaspillage d'eau. Notre technologie avancée TAC protège votre plomberie tout en préservant les minéraux essentiels à votre santé.
               </p>
               <Button
@@ -202,36 +191,139 @@ const ConditionneursSansSel = () => {
           </div>
         </section>
 
-        {/* 3. Why Choose Section - Ultra Modern */}
-        <section className="py-24 bg-slate-50 relative">
+        {/* 2. The Problem Section - Creative Diagnostic Bento */}
+        <section className="py-32 bg-slate-50 relative overflow-hidden">
+          {/* Background Decorative Elements */}
+          <div className="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:32px_32px] opacity-40"></div>
+          <div className="absolute -bottom-24 -right-24 text-[20rem] font-black text-slate-200/40 select-none pointer-events-none hidden lg:block tracking-tighter">
+            CALCAIRE
+          </div>
+
+          <div className="container mx-auto px-4 relative z-10">
+            <div className="max-w-4xl mx-auto text-center mb-20">
+              <h2 className="text-slate-900 mb-6 text-[42px] leading-[42px]">
+                <span className="font-light block">Ce que l'eau dure </span>
+                <span className="font-bold text-blue-600">coûte réellement </span>
+                <span className="font-light">à votre foyer.</span>
+              </h2>
+              <p className="text-slate-500 font-light text-xl max-w-2xl mx-auto leading-relaxed">
+                Le calcaire n'est pas un simple dépôt calcaire ; c'est un agent d'érosion silencieux qui dégrade vos équipements jour après jour.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
+              {/* Main Image Card */}
+              <div className="md:col-span-2 md:row-span-2 group relative overflow-hidden rounded-[2.5rem] bg-white shadow-2xl transition-all duration-700 hover:shadow-blue-200/50">
+                <img
+                  src={applianceDamageImg}
+                  alt="Inspection d'un chauffe-eau entartré - Dégâts du calcaire"
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+                <div className="absolute top-6 left-6 flex gap-2">
+                  <span className="bg-red-500/90 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-tighter animate-pulse">
+                    Alerte : Dégâts Critiques
+                  </span>
+                </div>
+                <div className="absolute bottom-8 left-8 right-8">
+                  <h4 className="text-white text-2xl font-bold mb-2">Usure Prématurée</h4>
+                  <p className="text-white/70 font-light text-sm">Coup d'arrêt sur l'efficacité de vos chauffe-eaux.</p>
+                </div>
+              </div>
+
+              {/* Energy Score Card */}
+              <div className="md:col-span-1 bg-blue-600 rounded-[2.5rem] p-8 text-white flex flex-col justify-between shadow-xl shadow-blue-200 hover:-translate-y-2 transition-all duration-500 relative overflow-hidden group">
+                <ZapOff className="absolute -right-6 -top-6 w-32 h-32 opacity-10 rotate-12 group-hover:rotate-45 transition-transform duration-700" />
+                <div className="relative z-10">
+                  <span className="text-blue-100/60 text-[10px] font-bold uppercase tracking-widest mb-2 block">Surconsommation</span>
+                  <div className="text-5xl font-black mb-1">+25%</div>
+                  <div className="text-blue-100 text-sm font-light">de factures énergétiques liées au tartre.</div>
+                </div>
+                <div className="relative z-10 mt-6 pt-6 border-t border-white/20">
+                  <p className="text-xs font-bold text-blue-200 uppercase tracking-tighter">Impact Énergétique</p>
+                </div>
+              </div>
+
+              {/* Plumbing Card */}
+              <div className="md:col-span-1 bg-white border border-slate-200 rounded-[2.5rem] p-8 hover:shadow-xl transition-all duration-500 hover:-translate-y-2 group">
+                <div className="w-12 h-12 rounded-2xl bg-slate-50 flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors duration-500">
+                  <Wrench className="w-6 h-6 text-slate-400 group-hover:text-white transition-colors" />
+                </div>
+                <h4 className="text-lg font-bold text-slate-900 mb-2">Tuyauterie</h4>
+                <p className="text-slate-500 font-light text-sm">Le calcaire réduit le débit et favorise la corrosion interne par points.</p>
+              </div>
+
+              {/* Cleaning Card */}
+              <div className="md:col-span-1 bg-white border border-slate-200 rounded-[2.5rem] p-8 hover:shadow-xl transition-all duration-500 hover:-translate-y-2 group">
+                <div className="w-12 h-12 rounded-2xl bg-slate-50 flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors duration-500">
+                  <Sparkles className="w-6 h-6 text-slate-400 group-hover:text-white transition-colors" />
+                </div>
+                <h4 className="text-lg font-bold text-slate-900 mb-2">Nettoyage</h4>
+                <p className="text-slate-500 font-light text-sm">Traces blanches et ternissement irréparable de vos surfaces.</p>
+              </div>
+
+              {/* Hidden Costs Card */}
+              <div className="md:col-span-1 bg-white border border-slate-200 rounded-[2.5rem] p-8 hover:shadow-xl transition-all duration-500 hover:-translate-y-2 group relative overflow-hidden">
+                <div className="absolute right-0 top-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
+                   <TrendingUp className="w-12 h-12 text-slate-900" />
+                </div>
+                <div className="w-12 h-12 rounded-2xl bg-slate-50 flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors duration-500">
+                  <CircleDollarSign className="w-6 h-6 text-slate-400 group-hover:text-white transition-colors" />
+                </div>
+                <h4 className="text-lg font-bold text-slate-900 mb-2">Coûts Cachés</h4>
+                <p className="text-slate-500 font-light text-sm">Réduction drastique de la durée de vie de vos équipements coûteux.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* 3. Why Choose Section - Unified Layout */}
+        <section className="py-24 bg-slate-50 relative pointer-events-auto border-t border-slate-200">
           <div className="container mx-auto px-4 relative z-10">
             <div className="text-center max-w-3xl mx-auto mb-20">
               <span className="text-blue-600 font-bold tracking-widest text-xs uppercase mb-4 block">
                 Prévention du tartre
               </span>
               <h2 className="text-slate-900 mb-6 text-[42px] leading-[42px]">
-                <span className="font-light block">Pourquoi choisir un conditionneur</span>
-                <span className="font-bold text-blue-600">d'eau sans sel ?</span>
+                <span className="font-light block">Pourquoi choisir un </span>
+                <span className="font-bold text-blue-600">conditionneur d'eau sans sel ?</span>
               </h2>
               <div className="w-24 h-1.5 bg-blue-600 mx-auto rounded-full opacity-20" />
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {whyChoose.map((item, idx) => (
-                <div key={idx} className="group relative bg-white rounded-[2.5rem] p-10 shadow-[0_20px_50px_rgba(8,_112,_184,_0.07)] hover:shadow-[0_20px_50px_rgba(8,_112,_184,_0.14)] transition-all duration-500 hover:-translate-y-2 border border-slate-100 hover:border-blue-100">
-                  <div className="w-16 h-16 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center mb-8 group-hover:bg-blue-600 group-hover:text-white transition-all duration-500 shadow-sm group-hover:shadow-blue-600/30 group-hover:rotate-3">
-                    <item.icon className="h-8 w-8 transition-transform duration-500" />
+            <div className="max-w-6xl mx-auto">
+              <div className="bg-white rounded-[3.5rem] shadow-2xl shadow-blue-200/20 overflow-hidden border border-slate-100 flex flex-col md:flex-row transition-all duration-700 hover:shadow-blue-200/40 group">
+                {whyChoose.map((item, idx) => (
+                  <div 
+                    key={idx} 
+                    className="flex-1 p-10 md:p-14 flex flex-col items-center text-center relative group/item"
+                  >
+                    {/* Vertical Divider */}
+                    {idx < whyChoose.length - 1 && (
+                      <div className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 w-px h-2/3 bg-slate-100"></div>
+                    )}
+                    {/* Horizontal Divider for Mobile */}
+                    {idx < whyChoose.length - 1 && (
+                      <div className="md:hidden absolute bottom-0 left-1/2 -translate-x-1/2 w-2/3 h-px bg-slate-100"></div>
+                    )}
+
+                    <div className="w-20 h-20 rounded-3xl bg-blue-50 text-blue-600 flex items-center justify-center mb-10 group-hover/item:bg-blue-600 group-hover/item:text-white transition-all duration-500 shadow-sm group-hover/item:shadow-blue-600/30 group-hover/item:rotate-6">
+                      <item.icon className="h-10 w-10 transition-transform duration-500" />
+                    </div>
+
+                    <h3 className="text-slate-900 text-2xl font-bold mb-6 group-hover/item:text-blue-600 transition-colors duration-300 tracking-tight">
+                      {item.title}
+                    </h3>
+
+                    <p className="text-slate-500 font-light leading-relaxed text-sm md:text-base text-justify md:text-center px-2">
+                      {item.description}
+                    </p>
+
+                    {/* Subtle Side Glow on Hover */}
+                    <div className="absolute inset-0 bg-blue-50/0 group-hover/item:bg-blue-50/30 transition-colors duration-500 pointer-events-none -z-10"></div>
                   </div>
-
-                  <h3 className="text-slate-900 mb-4 group-hover:text-blue-600 transition-colors duration-300">
-                    {item.title}
-                  </h3>
-
-                  <p className="text-slate-500 font-light text-justify group-hover:text-slate-600 transition-colors duration-300">
-                    {item.description}
-                  </p>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         </section>
@@ -245,45 +337,35 @@ const ConditionneursSansSel = () => {
 
               {/* Text Content */}
               <div className="lg:w-1/2">
-                <div className="mb-12">
+                <div className="mb-8">
                   <span className="text-blue-600 font-bold tracking-widest text-xs uppercase mb-4 block">Innovation Durable</span>
                   <h2
-                    className="text-slate-900 mb-8"
-                    style={{}}
+                    className="text-[42px] md:text-[42px] text-slate-900 mb-6"
                   >
-                    Choisissez une protection 100% écologique et préservez les minéraux essentiels de votre eau.
+                    Choisissez une <span className="text-[42px] md:text-[42px] text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">protection 100% écologique</span> et préservez les minéraux essentiels de votre eau.
                   </h2>
-                  <p className="text-slate-600 mb-10 font-light max-w-lg">
+                  <p className="text-slate-600 mb-8 font-light max-w-lg text-left lg:text-justify text-lg leading-relaxed">
                     Le conditionneur d'eau sans sel de Bricareau est une alternative efficace et écologique
                     à l'adoucisseur traditionnel. Il protège votre maison du calcaire sans jamais avoir à soulever un sac de sel. Une solution durable, autonome et efficace.
                   </p>
-
-                  <Button className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-10 py-7 text-lg transition-all duration-300 shadow-xl shadow-blue-600/20 hover:shadow-blue-600/40 group">
-                    <span className="mr-2">Voir toutes les options</span>
-                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                  </Button>
                 </div>
 
-                {/* Features Grid - Modern Cards */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="space-y-4">
                   {[
-                    { icon: safetyIcon, isImage: true, title: "Sécurité maximale", desc: "Protection active contre les sédiments et les impuretés pour toute la famille." },
-                    { icon: Check, title: "Économies", desc: "Réduit les coûts d'entretien et prolonge la vie des appareils." },
-                    { icon: Home, title: "Installation", desc: "S'installe facilement sur l'arrivée d'eau principale." },
-                    { icon: Heart, title: "Qualité", desc: "Conserve l'eau potable et riche en minéraux naturels." }
-                  ].map((item, idx) => (
-                    <div key={idx} className="group relative pt-8 pb-6 px-6 bg-white rounded-[2rem] shadow-sm border border-blue-200 hover:border-blue-300 hover:shadow-xl hover:shadow-blue-900/5 transition-all duration-500 hover:-translate-y-1">
-                      <div className="w-16 h-16 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center mb-8 group-hover:bg-blue-600 group-hover:text-white transition-all duration-500 shadow-sm group-hover:shadow-blue-600/30 group-hover:rotate-3">
-                        {item.isImage ? (
-                          <img src={item.icon as string} alt={item.title} className="h-10 w-10 object-contain" />
-                        ) : (
-                          <item.icon className="h-8 w-8 transition-transform duration-500" />
-                        )}
+                    { title: "Sécurité maximale", desc: "Protection active contre les sédiments et les impuretés pour toute la famille." },
+                    { title: "Économies réelles", desc: "Réduisez les coûts d'entretien et prolonge la vie des appareils jusqu'à 50%." },
+                    { title: "Installation simplifiée", desc: "S'installe facilement sur l'arrivée d'eau principale sans travaux majeurs." },
+                    { title: "Qualité supérieure", desc: "Conserve l'eau potable et riche en minéraux naturels tout en éliminant le tartre." }
+                  ].map((item, i) => (
+                    <div key={i} className="group/item">
+                      <h3 className="mb-1 text-blue-600 flex items-center gap-3 font-bold text-xl transition-colors duration-300">
+                        <div className="w-2 h-2 rounded-full bg-blue-600/30 group-hover/item:bg-blue-600 transition-colors duration-500" /> {item.title}
+                      </h3>
+                      <div className="pl-5 border-l-2 border-blue-600/10 group-hover/item:border-blue-600 transition-colors duration-500 ml-1">
+                        <p className="text-base text-slate-500 text-justify font-light leading-relaxed">
+                          {item.desc}
+                        </p>
                       </div>
-                      <h4 className="text-slate-900 mb-3 relative z-10">{item.title}</h4>
-                      <p className="text-sm text-slate-500 font-light relative z-10 text-justify">
-                        {item.desc}
-                      </p>
                     </div>
                   ))}
                 </div>
@@ -296,7 +378,7 @@ const ConditionneursSansSel = () => {
                   <img
                     src={conditionneurImg}
                     alt="Conditionneur d'eau sans sel professionnel Bricareau - Système anti-tartre haute performance"
-                    className="relative w-full max-w-[500px] mx-auto drop-shadow-2xl hover:scale-105 transition-transform duration-700 ease-out"
+                    className="relative w-full max-w-[550px] mx-auto drop-shadow-2xl hover:scale-105 transition-transform duration-700 ease-out"
                   />
                 </div>
                 {/* Decorative Elements */}

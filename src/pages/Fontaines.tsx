@@ -42,7 +42,7 @@ import fontaineAutoportanteImg from "@/assets/Refroidisseur+d'eau+autoportant+à
 import countertopFountainImg from "@/assets/A9.jpg";
 import bottlelessFountainImg from "@/assets/A13.jpg";
 import iceMachineImg from "@/assets/Machine+à+glaçons+de+comptoir+auto-nettoyante+de+26+lb+R.W.FLAME-78609293.webp";
-import eauFontaineImg from "@/assets/10341859.jpg";
+import eauFontaineImg from "@/assets/83658.jpg";
 import ecoImpactImg from "@/assets/kitchen1.webp";
 
 interface SolutionItem {
@@ -482,7 +482,7 @@ const Fontaines = () => {
                             alt="Expert Bricareau en fontaines d'eau"
                             className="w-full h-full object-cover"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 via-blue-900/90 to-blue-800/80 backdrop-blur-[2px]" />
+                        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 via-blue-800/60 to-blue-500/30 backdrop-blur-[2px]" />
                     </div>
                     <div className="container mx-auto px-6 relative z-10 text-center">
                         <div className="max-w-4xl mx-auto">
