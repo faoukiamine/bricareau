@@ -84,7 +84,7 @@ const ProductShowcase = () => {
                             {/* Product info */}
                             <div className="p-8 space-y-4 flex flex-col flex-grow border-t-2 border-transparent group-hover:border-blue-600 transition-colors">
                                 <h3
-                                    className="text-slate-900 group-hover:text-blue-600 transition-colors tracking-tight text-center"
+                                    className="text-slate-900 group-hover:text-blue-600 transition-colors tracking-tight text-center "
                                     style={{ }}
                                 >
                                     {product.name}

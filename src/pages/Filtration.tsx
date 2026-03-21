@@ -11,8 +11,20 @@ import {
     HandCoins,
     Recycle,
     Phone,
-    Play
+    Play,
+    ZapOff,
+    CircleDollarSign,
+    Sparkles,
+    Shirt,
+    Beaker,
+    Droplets,
+    Microscope,
+    AlertTriangle,
+    ShieldAlert,
+    FlaskConical
 } from "lucide-react";
+import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
 import { Button } from "@/components/ui/button";
 import { NavLink } from "@/components/NavLink";
 import heroFiltration from "@/assets/2149890905.jpg";
@@ -26,7 +38,10 @@ import waterTestingImg from "@/assets/Legionella-Monitoring.webp";
 import { heroImg as filtreSousEvierImg } from "./Blog pages/Filtre-sous-evier-lalternative-simple-aux-pichets-filtrants";
 import { heroImg as healthwaterImg } from "./Blog pages/Eau-embouteillee-les-dangers-meconnus-pour-votre-sante-au-quotidien";
 import { heroImg as rowaterImg } from "./Blog pages/Osmose-inverse-la-technologie-derriere-une-eau-100-pure";
-import eauDePuitsImg from "@/assets/185091336.jpg";
+import ourteamstudyyourwaterImg from "@/assets/10271.jpg";
+import dechetbouteilleImg from "@/assets/20051.jpg";
+import eauinnondiationImg from "@/assets/geiser-breaking-images-du-geiser-au-grand-angle-plus-14-photos-en-bref.jpeg";
+import oldpipesImg from "@/assets/Old Pipes.jpg";
 
 import {
     Accordion,
@@ -39,6 +54,9 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 
 const Filtration = () => {
     const [showAllFaqs, setShowAllFaqs] = React.useState(false);
+    const [showAllHarms, setShowAllHarms] = React.useState(false);
+
+    const [emblaRef] = useEmblaCarousel({ loop: true }, [Autoplay({ delay: 4000 })]);
     useEffect(() => {
         document.title = "Filtration d'eau : Une pureté maximale pour votre maison";
         const metaDesc = document.querySelector('meta[name="description"]');
@@ -132,6 +150,109 @@ const Filtration = () => {
                     </div>
                 </section>
 
+                {/* 2. The Problem Section - Inspired by Hard Water Section */}
+                <section className="py-32 bg-slate-50 relative overflow-hidden">
+                    {/* Architectural Watermark */}
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[15rem] lg:text-[22rem] font-black text-slate-200/20 select-none pointer-events-none tracking-tighter z-0 uppercase">
+                        PURETÉ
+                    </div>
+
+                    <div className="container mx-auto px-6 relative z-10">
+                        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+
+                            {/* Left Column: Analytical Narrative */}
+                            <div className="lg:col-span-5 space-y-8">
+                                <div>
+                                    <h2 className="text-slate-900 mb-6 text-[42px] leading-[42px]">
+                                        <span className="font-light block">L'invisible dans</span>
+                                        <span className="font-bold text-blue-600">votre verre.</span>
+                                    </h2>
+                                    <p className="font-light text-slate-600 lg:text-slate-600 mb-8 max-w-xl text-left lg:text-justify">
+                                        L'eau municipale est traitée, mais elle n'est pas pure. Entre l'usine de traitement et votre robinet, elle transporte des résidus invisibles qui impactent votre santé.
+                                    </p>
+                                </div>
+
+                                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-x-8 gap-y-6 overflow-hidden transition-all duration-700">
+                                    {[
+                                        {
+                                            icon: <FlaskConical className="w-6 h-6" />,
+                                            title: "Chlore & Goût",
+                                            desc: "Un agent de désinfection nécessaire mais agressif qui altère le goût de vos boissons et assèche votre peau."
+                                        },
+                                        {
+                                            icon: <ShieldAlert className="w-6 h-6" />,
+                                            title: "Traces de Plomb",
+                                            desc: "Résidus provenant des anciennes tuyauteries municipales qui persistent malgré les traitements."
+                                        },
+                                        {
+                                            icon: <Microscope className="w-6 h-6" />,
+                                            title: "Microplastiques",
+                                            desc: "L'ingestion involontaire de milliers de particules microscopiques présentes dans l'eau potable chaque année."
+                                        },
+                                        {
+                                            icon: <AlertTriangle className="w-6 h-6" />,
+                                            title: "Polluants Éternels",
+                                            desc: "PFAS et hormones que les centres de traitement n'arrivent pas encore à filtrer totalement."
+                                        },
+                                        {
+                                            icon: <Droplets className="w-6 h-6" />,
+                                            title: "Sédiments & Rouille",
+                                            desc: "Particules physiques provenant de la vétusté du réseau d'aqueduc qui s'accumulent chez vous."
+                                        },
+                                        {
+                                            icon: <Beaker className="w-6 h-6" />,
+                                            title: "Produits Chimiques",
+                                            desc: "Résidus industriels et agricoles qui s'infiltrent dans les nappes et le cycle de l'eau."
+                                        }
+                                    ].filter((_, idx) => showAllHarms || idx < 3).map((harm, idx) => (
+                                        <div key={idx} className="flex items-start gap-4 group animate-in fade-in slide-in-from-top-4 duration-500">
+                                            <div className="w-12 h-12 rounded-xl bg-white shadow-lg flex items-center justify-center shrink-0 group-hover:bg-blue-600 transition-all duration-500 text-blue-600 group-hover:text-white group-hover:-translate-y-1">
+                                                {harm.icon}
+                                            </div>
+                                            <div>
+                                                <h3 className="text-lg font-bold text-slate-900 mb-1">{harm.title}</h3>
+                                                <p className="text-slate-500 font-light text-sm leading-snug">
+                                                    {harm.desc}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+
+                                <div className="pt-2">
+                                    <button
+                                        onClick={() => setShowAllHarms(!showAllHarms)}
+                                        className="flex items-center gap-2 text-blue-600 font-bold text-sm hover:gap-3 transition-all group"
+                                    >
+                                        {showAllHarms ? "Voir moins de risques" : "Voir plus de risques"}
+                                        <ChevronRight className={`w-4 h-4 transition-transform ${showAllHarms ? 'rotate-90' : 'rotate-0'}`} />
+                                    </button>
+                                </div>
+                            </div>
+
+                            {/* Right Column: Cinematic Slideshow */}
+                            <div className="lg:col-span-7 relative sticky top-32">
+                                <div className="relative rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white group">
+                                    <div className="embla overflow-hidden" ref={emblaRef}>
+                                        <div className="embla__container flex">
+                                            {[healthwaterImg,dechetbouteilleImg,oldpipesImg,eauinnondiationImg ].map((img, idx) => (
+                                                <div key={idx} className="embla__slide flex-[0_0_100%] min-w-0 relative h-[600px]">
+                                                    <img
+                                                        src={img}
+                                                        alt={`Problématique eau municipale ${idx + 1}`}
+                                                        className="w-full h-full object-cover"
+                                                    />
+                                                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-60" />
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
                 {/* 3. Benefits Section - Redesigned for Premium Look */}
                 <section className="py-24 bg-white relative overflow-hidden">
                     {/* Abstract background elements */}
@@ -220,7 +341,7 @@ const Filtration = () => {
                                         </div>
                                         <h4 className="text-xl font-bold text-slate-900 mb-2">Qualité Hôtelière</h4>
                                         <p className="text-sm text-slate-500 font-light leading-relaxed">
-                                            Une eau d'une pureté exceptionnelle pour vos spas et salles de bain de luxe.
+                                            Une eau d'une pureté exceptionnelle pour vos salles de bain de luxe.
                                         </p>
                                     </div>
 
@@ -236,25 +357,25 @@ const Filtration = () => {
                                         <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.2em]">
                                             EAU FILTRÉE POUR TOUTE LA MAISON
                                         </span>
-                                        <h2 className="text-slate-900 leading-tight">
-                                            <span className="text-[42px] font-light block tracking-tight">Redécouvrez le luxe d'une</span>
-                                            <span className="text-[42px] font-bold text-blue-600 block tracking-tight uppercase">eau filtrée cristalline.</span>
+                                        <h2 className="text-slate-900 mb-6 text-[36px] leading-[36px]">
+                                            <span className="font-light block">Redécouvrez le luxe d'une</span>
+                                            <span className="font-bold text-blue-600 block">eau filtrée cristalline.</span>
                                         </h2>
                                         <p className="text-slate-500 font-light text-lg leading-relaxed text-justify max-w-xl">
 Les filtres d’eau pour toute la maison sont installés directement sur l’arrivée principale d’eau. Ils filtrent toute l’eau qui circule dans la maison : cuisine, salles de bain, buanderie, robinets extérieurs, etc. Ils sont idéaux pour réduire les sédiments, le sable, certaines odeurs et goûts (comme le chlore) et protéger la plomberie et les appareils.                                        </p>
                                     </div>
 
-                                    <div className="space-y-6">
+                                    <div className="space-y-2">
                                         {[
                                             { title: "Protection de la plomberie", desc: "Dites adieu au chlore résiduel et aux sédiments qui corrodent vos précieux appareils." },
                                             { title: "Clarté de l'eau", desc: "Une eau limpide à chaque robinet, protégeant l'éclat de vos sanitaires et de votre linge." },
                                             { title: "Performance longue durée", desc: "Une technologie haute fidélité offrant une filtration efficace pendant 5 à 7 ans sans entretien lourd." }
                                         ].map((item, i) => (
-                                            <div key={i} className="group flex items-start gap-6 p-4 rounded-3xl transition-colors hover:bg-slate-50">
+                                            <div key={i} className="group flex items-start gap-4 p-2 rounded-3xl transition-colors hover:bg-slate-50">
                                                 <div className="text-2xl font-black text-blue-600/20 group-hover:text-blue-600 transition-colors pt-1">
                                                     0{i + 1}
                                                 </div>
-                                                <div className="space-y-2">
+                                                <div className="space-y-0.5">
                                                     <h3 className="text-xl font-bold text-slate-900 tracking-tight">
                                                         {item.title}
                                                     </h3>
@@ -324,26 +445,26 @@ Les filtres d’eau pour toute la maison sont installés directement sur l’arr
                                         <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.2em]">
                                             EAU PURE À VOLONTÉ
                                         </span>
-                                        <h2 className="text-slate-900 leading-tight">
-                                            <span className="text-[42px] font-light block tracking-tight text-right lg:text-left">Votre source d'eau cristalline,</span>
-                                            <span className="text-[42px] font-bold text-blue-600 block tracking-tight uppercase text-right lg:text-left">sans compromis.</span>
+                                        <h2 className="text-slate-900 mb-6 text-[36px] leading-[36px]">
+                                            <span className="font-light block text-right lg:text-left">Votre source d'eau cristalline,</span>
+                                            <span className="font-bold text-blue-600 block text-right lg:text-left">sans compromis.</span>
                                         </h2>
                                         <p className="text-slate-500 font-light text-lg leading-relaxed text-justify max-w-xl ml-auto lg:ml-0">
                                             Découvrez comment notre système d'osmose inverse libère votre quotidien du goût de chlore et de la corvée des bouteilles plastique. Une eau légère et saine à portée de main.
                                         </p>
                                     </div>
 
-                                    <div className="space-y-6">
+                                    <div className="space-y-2">
                                         {[
                                             { title: "Pureté absolue", desc: "Élimine 99% des contaminants, métaux lourds et micro-plastiques pour une sécurité totale." },
                                             { title: "Éco-conscient", desc: "Réduisez drastiquement votre empreinte carbone en éliminant les bouteilles jetables." },
                                             { title: "Saveurs révélées", desc: "Sublimez le goût de vos boissons et petits plats avec une eau pure sans aucune impureté." }
                                         ].map((item, i) => (
-                                            <div key={i} className="group flex items-start lg:flex-row flex-row-reverse gap-6 p-4 rounded-3xl transition-colors hover:bg-white/50">
+                                            <div key={i} className="group flex items-start lg:flex-row flex-row-reverse gap-4 p-2 rounded-3xl transition-colors hover:bg-white/50">
                                                 <div className="text-2xl font-black text-blue-600/20 group-hover:text-blue-600 transition-colors pt-1">
                                                     0{i + 1}
                                                 </div>
-                                                <div className="space-y-2 text-right lg:text-left">
+                                                <div className="space-y-0.5 text-right lg:text-left">
                                                     <h3 className="text-xl font-bold text-slate-900 tracking-tight">
                                                         {item.title}
                                                     </h3>
@@ -414,26 +535,26 @@ Les filtres d’eau pour toute la maison sont installés directement sur l’arr
                                         <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.2em]">
                                             COMPACT & PUISSANT
                                         </span>
-                                        <h2 className="text-slate-900 leading-tight">
-                                            <span className="text-[42px] font-light block tracking-tight text-left">Systèmes de filtration</span>
-                                            <span className="text-[42px] font-bold text-blue-600 block tracking-tight uppercase text-left">d'eau sous l'évier.</span>
+                                        <h2 className="text-slate-900 mb-6 text-[36px] leading-[36px]">
+                                            <span className="font-light block text-left">Systèmes de filtration</span>
+                                            <span className="font-bold text-blue-600 block text-left">d'eau sous l'évier.</span>
                                         </h2>
                                         <p className="text-slate-500 font-light text-lg leading-relaxed text-justify max-w-xl">
                                             Éliminez jusqu'à 99% des pathogènes, du plomb et du fluorure. L'osmose inverse Bricareau est la solution ultime pour une eau de boisson de qualité restaurant directement chez vous.
                                         </p>
                                     </div>
 
-                                    <div className="space-y-6">
+                                    <div className="space-y-2">
                                         {[
-                                            { title: "Filtration d'élite", desc: "Un processus rigoureux en 5 étapes qui neutralise les métaux lourds et les sédiments invisibles." },
-                                            { title: "Design intelligent", desc: "Un réservoir ultra-compact conçu pour maximiser votre espace de rangement." },
+                                            { title: "Filtration d'élite", desc: "Un processus rigoureux en 3 étapes qui neutralise les métaux lourds, le chlore et les sédiments invisibles." },
+                                            { title: "Design intelligent", desc: "Ultra-compact conçu pour maximiser votre espace de rangement." },
                                             { title: "Finition de luxe", desc: "Inclut une sélection de robinets au design contemporain s'intégrant parfaitement à votre cuisine." }
                                         ].map((item, i) => (
-                                            <div key={i} className="group flex items-start gap-6 p-4 rounded-3xl transition-colors hover:bg-slate-50">
+                                            <div key={i} className="group flex items-start gap-4 p-2 rounded-3xl transition-colors hover:bg-slate-50">
                                                 <div className="text-2xl font-black text-blue-600/20 group-hover:text-blue-600 transition-colors pt-1">
                                                     0{i + 1}
                                                 </div>
-                                                <div className="space-y-2">
+                                                <div className="space-y-0.5">
                                                     <h3 className="text-xl font-bold text-slate-900 tracking-tight">
                                                         {item.title}
                                                     </h3>
@@ -580,18 +701,18 @@ Les filtres d’eau pour toute la maison sont installés directement sur l’arr
           {/* Background Image with Overlay */}
           <div className="absolute inset-0 z-0">
             <img
-              src={eauDePuitsImg}
+              src={ourteamstudyyourwaterImg}
               alt="Expert Bricareau en traitement d'eau de puits"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover object-[40%_5%]"
             />
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 via-blue-900/90 to-blue-800/80 backdrop-blur-[2px]" />
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 via-blue-900/70 to-blue-800/30 backdrop-blur-[2px]" />
           </div>
 
           <div className="container mx-auto px-6 relative z-10 text-center">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-white mb-6">
                 <span className="text-[42px] md:text-[42px] font-light leading-tight block tracking-tight opacity-90 italic">Besoin d'aide avec</span>
-                <span className="text-[42px] md:text-[42px] font-bold leading-tight block tracking-tight uppercase">votre filtration d'eau ?</span>
+                <span className="text-[42px] md:text-[42px] font-bold leading-tight block tracking-tight">votre filtration d'eau pour un choix éclairé ?</span>
               </h2>
 
               <p className="text-blue-100/80 font-light text-xl mb-12 max-w-2xl mx-auto leading-relaxed">

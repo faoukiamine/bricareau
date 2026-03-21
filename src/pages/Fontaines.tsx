@@ -190,7 +190,10 @@ const SolutionCard = ({ item }: { item: SolutionItem }) => {
                 </div>
 
                 <div className="space-y-4 text-center flex-grow">
-                    <h3 className="text-2xl font-bold text-slate-900 tracking-tight leading-tight">
+                    <h3 
+                        className="text-[20px] font-[700] text-slate-900 tracking-tight leading-[24px]"
+                        style={{ fontStyle: 'normal' }}
+                    >
                         {item.title}
                     </h3>
                     <div className="w-12 h-1 bg-blue-600/10 rounded-full mx-auto group-hover:w-20 group-hover:bg-blue-600 transition-all duration-700" />
