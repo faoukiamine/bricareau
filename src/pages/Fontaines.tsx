@@ -272,7 +272,7 @@ const Fontaines = () => {
                     <div className="container relative z-10 mx-auto px-4 lg:min-h-[650px] flex items-center lg:px-6">
                         <div className="max-w-2xl lg:text-white py-12 lg:py-0">
                             <h1
-                                className="text-[48px] md:text-[48px] leading-[1.1] md:leading-[1.2] mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl"
+                                className="mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl"
                                 style={{
                                     fontWeight: 600
                                 }}
@@ -309,7 +309,7 @@ const Fontaines = () => {
                             <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.2em] mb-6">
                                 PURETÉ À DOMICILE
                             </span>
-                            <h2 className="text-slate-900 mb-6 text-[42px] leading-[42px]">
+                            <h2 className="text-slate-900 mb-6 font-[400] leading-tight">
                                 <span className="font-light block">L'hydratation pure à la maison.</span>
                                 <span className="font-bold text-blue-600 block">L'eau fraîche à la portée de vos mains.</span>
                             </h2>
@@ -357,7 +357,7 @@ const Fontaines = () => {
                             <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.2em] mb-6">
                                 TECHNOLOGIE & RESPONSABILITÉ
                             </span>
-                            <h2 className="text-slate-900 mb-6 text-[42px] leading-[42px]">
+                            <h2 className="text-slate-900 mb-6 leading-tight">
                                 <span className="font-light block">Plus qu'une fontaine d'eau,</span>
                                 <span className="font-bold text-blue-600 block">un choix intelligent & responsable.</span>
                             </h2>
@@ -423,7 +423,7 @@ const Fontaines = () => {
                     limit={6}
                     title={
                         <>
-                            <h2 className="text-slate-900 mb-6 text-[42px] leading-[42px]">
+                            <h2 className="text-slate-900 mb-6">
                                 <span className="font-light block">L’eau que vous méritez,</span>
                                 <span className="font-bold text-blue-600">le service que vous n'oublierez pas.</span>
                             </h2>
@@ -444,7 +444,7 @@ const Fontaines = () => {
                                             DURABILITÉ & STYLE
                                         </span>
                                     </div>
-                                    <h2 className="text-slate-900 mb-6 text-[42px] leading-[42px]">
+                                    <h2 className="text-slate-900 mb-6 leading-tight">
                                         <span className="font-light">Impact</span>{" "}
                                         <span className="font-bold text-blue-600">Environnemental.</span>
                                     </h2>
@@ -490,7 +490,7 @@ const Fontaines = () => {
                     <div className="container mx-auto px-6 relative z-10 text-center">
                         <div className="max-w-4xl mx-auto">
                             <h2 className="text-white mb-6">
-                                <span className="text-[42px] md:text-[42px] font-light leading-tight block tracking-tight opacity-90 italic">Sublimez votre quotidien avec l'excellence de nos fontaines d'eau.</span>
+                                <span className="font-light leading-tight block tracking-tight opacity-90 italic">Sublimez votre quotidien avec l'excellence de nos fontaines d'eau.</span>
                             </h2>
                             <p className="text-blue-100/80 font-light text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
                                 Rejoignez le club familles Bricareau et profitez d'une source d'eau digne d'un palace, sans sortir de chez vous.
@@ -538,7 +538,7 @@ const Fontaines = () => {
                                 <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.2em] mb-6">
                                     NOTRE ENGAGEMENT
                                 </span>
-                                <h2 className="text-slate-900 mb-6 text-[42px] leading-[42px]">
+                                <h2 className="text-slate-900 mb-6 tracking-tight">
                                     <span className="font-light block">Vers un monde</span>
                                     <span className="font-bold text-blue-600">sans bouteilles en plastique.</span>
                                 </h2>

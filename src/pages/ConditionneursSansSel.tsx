@@ -170,7 +170,7 @@ const ConditionneursSansSel = () => {
                 NOUVEAU CHEZ BRICAREAU
               </span>
               <h1
-                className="text-[48px] md:text-[48px] leading-[1.1] md:leading-[1.2] mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-justify lg max-w-xl"
+                className="text-[32px] md:text-[32px] leading-[1.1] mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-justify lg max-w-xl"
                 style={{
                   fontWeight: 600
                 }}
@@ -284,9 +284,9 @@ const ConditionneursSansSel = () => {
               <span className="text-blue-600 font-bold tracking-widest text-xs uppercase mb-4 block">
                 Prévention du tartre
               </span>
-              <h2 className="text-slate-900 mb-6 text-[42px] leading-[42px]">
-                <span className="font-light block">Pourquoi choisir un </span>
-                <span className="font-bold text-blue-600">conditionneur d'eau sans sel ?</span>
+              <h2 className="text-slate-900 mb-6 text-[32px] md:text-[32px] leading-[1.1]">
+                <span className="font-light block">Zéro sel. Zéro électricité.</span>
+                <span className="font-bold text-blue-600">Zéro souci.</span>
               </h2>
               <div className="w-24 h-1.5 bg-blue-600 mx-auto rounded-full opacity-20" />
             </div>
@@ -340,9 +340,9 @@ const ConditionneursSansSel = () => {
                 <div className="mb-8">
                   <span className="text-blue-600 font-bold tracking-widest text-xs uppercase mb-4 block">Innovation Durable</span>
                   <h2
-                    className="text-[42px] md:text-[42px] text-slate-900 mb-6"
+                    className="text-[32px] md:text-[32px] text-slate-900 mb-6 leading-[1.2]"
                   >
-                    Choisissez une <span className="text-[42px] md:text-[42px] text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">protection 100% écologique</span> et préservez les minéraux essentiels de votre eau.
+                    Choisissez une <span className="text-[32px] md:text-[32px] text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500 leading-[1.2]">protection 100% écologique</span> et préservez les minéraux essentiels de votre eau.
                   </h2>
                   <p className="text-slate-600 mb-8 font-light max-w-lg text-left lg:text-justify text-lg leading-relaxed">
                     Le conditionneur d'eau sans sel de Bricareau est une alternative efficace et écologique
@@ -394,7 +394,7 @@ const ConditionneursSansSel = () => {
           filterProduct="/conditionneurs-sans-sel"
           title={
             <>
-              <h2 className="text-slate-900 mb-6 text-[42px] leading-[42px]">
+              <h2 className="text-slate-900 mb-6 text-[32px] md:text-[32px] leading-[1.2]">
                 <span className="font-light block">Le standard pro,</span>
                 <span className="font-bold text-blue-600">l’honnêteté en prime.</span>
               </h2>
@@ -415,8 +415,8 @@ const ConditionneursSansSel = () => {
 
           <div className="container mx-auto px-6 relative z-10 text-center">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-white mb-6">
-                <span className="text-[42px] font-light leading-tight block tracking-tight opacity-90 italic">Besoin d'aide avec votre eau ?</span>
+              <h2 className="text-white mb-6 text-[32px] leading-[1.2]">
+                <span className="text-[32px] font-light block tracking-tight opacity-90 italic">Besoin d'aide avec votre eau ?</span>
               </h2>
 
               <p className="text-blue-100/80 font-light text-xl mb-12 max-w-2xl mx-auto leading-relaxed">

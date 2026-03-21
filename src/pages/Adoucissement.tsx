@@ -110,12 +110,7 @@ const Adoucissement = () => {
 
                     <div className="container relative z-10 mx-auto px-4 h-full flex items-center lg:px-6">
                         <div className="max-w-2xl lg:text-white py-12 lg:py-0">
-                            <h1
-                                className="text-[48px] md:text-[48px] leading-[1.1] md:leading-[1.2] mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl"
-                                style={{
-                                    fontWeight: 600
-                                }}
-                            >
+                            <h1 className="mb-4 lg:mb-8 text-slate-900 lg:text-white text-left lg:text-justify max-w-xl">
                                 Adoucisseurs d'eau <br />
                                 Éliminez le calcaire et l'eau dure.
                             </h1>
@@ -163,9 +158,8 @@ const Adoucissement = () => {
                             {/* Left Column: Analytical Narrative (6 Harms) */}
                             <div className="lg:col-span-5 space-y-8">
                                 <div>
-                                    <h2 className="text-slate-900 mb-6 text-[42px] leading-[42px]">
-                                        <span className="font-light block">L'impact silencieux</span>
-                                        <span className="font-bold text-blue-600">du calcaire.</span>
+                                    <h2 className="text-slate-900 mb-6 font-bold text-blue-600">
+                                        L'impact silencieux du calcaire.
                                     </h2>
                                     <p className="font-light text-slate-600 lg:text-slate-600 mb-8 max-w-xl text-left lg:text-justify">
                                         Ce n'est pas qu'un simple dépôt ; c'est un agent d'érosion invisible qui dégrade votre confort et vos investissements jour après jour.
@@ -266,9 +260,9 @@ const Adoucissement = () => {
 
                     <div className="container mx-auto px-6">
                         <div className="text-center mb-20 max-w-3xl mx-auto">
-                            <h2 className="text-slate-900 mb-6 text-[42px] leading-[42px]">
-                                <span className="font-light block">Les avantages de</span>
-                                <span className="font-bold text-blue-600">l'adoucissement d'eau</span>
+                            <h2 className="text-slate-900 mb-6 font-bold text-blue-600">
+                                <span>Les avantages de</span><br />
+                                <span>l'adoucissement d'eau</span>
                             </h2>
                             <p className="text-slate-500 font-light text-lg">
                                 Une transformation immédiate pour votre confort, votre santé et la longévité de votre foyer.
@@ -357,9 +351,8 @@ const Adoucissement = () => {
                                         <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.2em]">
                                             ADOUCISSEURS D'EAU RÉSIDENTIELS
                                         </span>
-                                        <h2 className="text-slate-900 mb-6 text-[36px] leading-[36px]">
-                                            <span className="font-light block">L'éclat d'une vaisselle protégée,</span>
-                                            <span className="font-bold text-blue-600 block">la douceur d'une eau maîtrisée.</span>
+                                        <h2 className="text-slate-900 mb-6 font-bold text-blue-600">
+                                            Adoucisseurs d'eau résidentiels
                                         </h2>
                                         <p className="font-light text-slate-500 text-lg leading-relaxed text-justify">
                                             Offrez à votre foyer le luxe d'une eau sans calcaire. Nos adoucisseurs de pointe éliminent le tartre à la source, garantissant non seulement une vaisselle étincelante sans aucune trace, mais aussi une protection durable de vos appareils électroménagers et de votre plomberie.
@@ -434,9 +427,8 @@ const Adoucissement = () => {
                                                 <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.2em]">
                                                     Adoucisseurs d'eau portables - SOLUTION MOBILE
                                                 </span>
-                                                <h2 className="text-slate-900 mb-6 text-[36px] leading-[36px]">
-                                                    <span className="font-light block">La douceur sans frontières :</span>
-                                                    <span className="font-bold text-blue-600 block">l'eau douce vous suit partout.</span>
+                                                <h2 className="text-slate-900 mb-6 font-bold text-blue-600">
+                                                    Adoucisseurs d'eau portables - SOLUTION MOBILE
                                                 </h2>
                                                 <p className="font-light text-slate-500 text-lg leading-relaxed text-justify">
                                                     Ne laissez plus l’eau dure des campings ou des ports abîmer vos cheveux et vos équipements. Profitez d'une eau de qualité domestique dans votre VR, votre bateau ou votre chalet avec notre adoucisseur ultra-compact.
@@ -512,9 +504,8 @@ const Adoucissement = () => {
                                                 <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.2em]">
                                                     Conditionneurs d'eau sans sel - ALTERNATIVE ÉCOLOGIQUE
                                                 </span>
-                                                <h2 className="text-slate-900 mb-6 text-[36px] leading-[36px]">
-                                                    <span className="font-light block">Zéro sel. Zéro électricité.</span>
-                                                    <span className="font-bold text-blue-600 block">Zéro souci.</span>
+                                                <h2 className="text-slate-900 mb-6 font-bold text-blue-600">
+                                                    Conditionneurs d'eau sans sel - ALTERNATIVE ÉCOLOGIQUE
                                                 </h2>
                                                 <p className="font-light text-slate-500 text-lg leading-relaxed text-justify">
                                                     Le secret d'un linge éclatant et d'une vaisselle sans traces. Sans l'ajout de sel, votre eau devient votre meilleure alliée beauté et ménage.
@@ -553,9 +544,8 @@ const Adoucissement = () => {
                             filterProduct="/adoucissement"
                             title={
                                 <>
-                                    <h2 className="text-slate-900 mb-6 text-[42px] leading-[42px]">
-                                        <span className="font-light block">Une eau soyeuse.</span>
-                                        <span className="font-bold text-blue-600">Un confort absolu.</span>
+                                    <h2 className="text-slate-900 mb-6 font-bold text-blue-600">
+                                        Une eau soyeuse. Un confort absolu.
                                     </h2>
                                 </>
                             }
@@ -568,13 +558,9 @@ const Adoucissement = () => {
                         <section className="py-24 bg-gray-50">
                             <div className="container mx-auto px-4">
                                 <div className="text-left mb-16">
-                                    <h2
-                                        className="text-slate-900 mb-8 text-left"
-                                        style={{}}
-                                    >
-                                        <span className="text-[42px] md:text-[42px] font-light leading-[1.1] md:leading-[42px] block">Comparez nos solutions</span>
-                                        <span className="text-[42px] md:text-[42px] font-normal leading-[1.1] md:leading-[42px] block">d'adoucissement d'eau</span>
-                                    </h2>
+                                        <h2 className="text-slate-900 mb-8 font-bold text-blue-600">
+                                            Comparez nos solutions d'adoucissement d'eau
+                                        </h2>
                                     <div className="w-24 h-1 bg-blue-600"></div>
                                 </div>
                                 <div className="overflow-x-auto">
@@ -656,13 +642,8 @@ const Adoucissement = () => {
                                     <span className="text-blue-600 lg:text-white/80 font-bold uppercase tracking-widest text-sm mb-4 block">
                                         Contrôle de la Qualité D'EAU
                                     </span>
-                                    <h2
-                                        className="md:leading-[60px] lg:font-light mb-8 text-slate-900 lg:text-white"
-                                        style={{
-                                        }}
-                                    >
-                                        <span className="lg:font-bold">L’essence d’une vie saine</span><br />
-                                        coule de votre robinet.
+                                    <h2 className="mb-8 text-slate-900 lg:text-white font-bold">
+                                        L’essence d’une vie saine coule de votre robinet.
                                     </h2>
                                     <p className="font-light text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
                                         Entre le chlore, les métaux lourds et les sédiments, votre eau cache souvent des secrets. Ne laissez plus le doute couler de votre robinet. Demandez votre test d'eau dès aujourd'hui et obtenez un portrait clair de votre eau ainsi que des solutions adaptées à votre foyer.
@@ -685,12 +666,8 @@ const Adoucissement = () => {
                         <section className="py-24 bg-white">
                             <div className="container mx-auto px-4">
                                 <div className="text-left mb-16">
-                                    <h2
-                                        className="text-slate-900 mb-8 text-left"
-                                        style={{}}
-                                    >
-                                        <span className="text-[42px] md:text-[42px] font-light leading-[1.1] md:leading-[42px] block">Pour vous éclairer</span>
-                                        <span className="text-[42px] md:text-[42px] font-normal leading-[1.1] md:leading-[42px] block">Questions fréquentes</span>
+                                    <h2 className="text-slate-900 mb-8 font-bold text-blue-600">
+                                        Questions fréquentes
                                     </h2>
                                     <div className="w-24 h-1 bg-blue-600"></div>
                                 </div>
@@ -739,10 +716,8 @@ const Adoucissement = () => {
                         <section className="py-24 bg-gray-50">
                             <div className="container mx-auto px-4">
                                 <div className="text-left mb-16">
-                                    <h2
-                                        className="text-slate-900 mb-8 text-left"
-                                        style={{}}
-                                    >                                <span className="text-[42px] md:text-[42px] font-normal leading-[1.1] md:leading-[42px] block">Ressources</span>
+                                    <h2 className="text-slate-900 mb-8 font-bold text-blue-600">
+                                        Ressources
                                     </h2>
                                     <div className="w-24 h-1 bg-blue-600"></div>
                                 </div>

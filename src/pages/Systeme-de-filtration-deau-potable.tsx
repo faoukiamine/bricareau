@@ -115,7 +115,7 @@ const StationEauPotable = () => {
           <div className="container relative z-10 mx-auto px-4 h-full flex items-center lg:px-6">
             <div className="max-w-2xl lg:text-white py-12 lg:py-0">
               <h1
-                className="text-[48px] md:text-[56px] leading-[1.05] mb-6 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl font-bold lg:font-light"
+                className="text-[32px] md:text-[32px] leading-[1.1] mb-6 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl font-bold lg:font-light"
               >
                 Système d'osmose inverse, la pureté absolue à chaque goutte.
               </h1>
@@ -310,9 +310,9 @@ const StationEauPotable = () => {
               <span className="inline-block px-4 py-1.5 bg-blue-50 text-blue-600 rounded-full text-xs font-black uppercase tracking-widest mb-6">
                 L'EXCELLENCE DE L'OSMOSE INVERSE AU QUOTIDIEN
               </span>
-              <h2 className="text-slate-900 leading-[1.05] tracking-[ -0.04em] mb-10 text-center">
-                <span className="text-[42px] md:text-[42px] font-light leading-[1.1] md:leading-[42px] block tracking-tighter text-slate-900">Pourquoi choisir nos</span>
-                <span className="text-[42px] md:text-[42px] font-bold text-blue-600 leading-[1.1] md:leading-[42px] block tracking-tighter">systèmes d'osmose inverse ?</span>
+              <h2 className="text-slate-900 leading-[1.2] mb-10 text-center">
+                <span className="text-[32px] md:text-[32px] font-light leading-[1.2] block tracking-tighter text-slate-900">Pourquoi choisir nos</span>
+                <span className="text-[32px] md:text-[32px] font-bold text-blue-600 leading-[1.2] block tracking-tighter">systèmes d'osmose inverse ?</span>
               </h2>
               <div className="w-16 h-0.5 bg-blue-600/20 mx-auto mb-10" />
               <p className="font-light text-slate-500 text-lg sm:text-lg max-w-2xl mx-auto leading-relaxed italic text-center">
@@ -382,8 +382,8 @@ const StationEauPotable = () => {
                 className="text-slate-900 mb-8 text-left"
                 style={{}}
               >
-                <span className="text-[42px] md:text-[42px] font-light leading-[1.1] md:leading-[42px] block">Comparez nos solutions</span>
-                <span className="text-[42px] md:text-[42px] font-normal leading-[1.1] md:leading-[42px] block">de filtration d'eau potable</span>
+                <span className="text-[32px] md:text-[32px] font-light leading-[1.2] block">Comparez nos solutions</span>
+                <span className="text-[32px] md:text-[32px] font-normal leading-[1.2] block">de filtration d'eau potable</span>
               </h2>
               <div className="w-24 h-1 bg-blue-600"></div>
             </div>
@@ -457,7 +457,7 @@ const StationEauPotable = () => {
           <div className="container mx-auto px-4 relative z-10 flex items-center py-12 lg:py-0">
             <div className="max-w-2xl text-slate-900 lg:text-white">
               <h2
-                className="lg:font-light mb-8 md:leading-[60px] text-slate-900 lg:text-white text-left"
+                className="lg:font-light mb-8 leading-[1.2] text-slate-900 lg:text-white text-left"
                 style={{}}
               >
                 La vérité dans <span className="lg:font-bold"><br />chaque goutte.</span>
@@ -484,9 +484,9 @@ const StationEauPotable = () => {
           filterProduct="/systeme-de-filtration-deau-potable"
           title={
             <>
-            <h2 className="text-slate-900 mb-6 text-[42px] leading-[42px]">
-                                <span className="font-light block">L'eau de source,</span>
-                                <span className="font-bold text-blue-600">directement à votre robinet.</span>
+                            <h2 className="text-slate-900 mb-6 text-[32px] md:text-[32px] leading-[1.2]">
+                                <span className="font-light block">Votre source d'eau cristalline,</span>
+                                <span className="font-bold text-blue-600">sans compromis.</span>
                             </h2>
             </>
           }
@@ -506,7 +506,7 @@ const StationEauPotable = () => {
                     <div className="container mx-auto px-6 relative z-10 text-center">
                         <div className="max-w-4xl mx-auto">
                             <h2 className="text-white mb-6">
-                                <span className="text-[42px] md:text-[42px] font-light leading-tight block tracking-tight opacity-90 italic">Redéfinissez votre standard de pureté.</span>
+                                <span className="text-[32px] md:text-[32px] font-light leading-[1.2] block tracking-tight opacity-90 italic">Redéfinissez votre standard de pureté.</span>
                             </h2>
                             <p className="text-blue-100/80 font-light text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
                             Pourquoi vous contenter d'une eau ordinaire quand vous pouvez offrir à votre foyer une source de pureté incomparable ? L'osmose inverse élimine les impuretés invisibles pour ne laisser que l'essentiel : une eau cristalline, un goût exceptionnel et une tranquillité d'esprit totale. Faites le choix de la technologie la plus avancée pour votre santé et votre confort.                            </p>
@@ -547,8 +547,8 @@ const StationEauPotable = () => {
                                 className="text-slate-900 mb-8 text-left"
                                 style={{}}
                             >
-                                <span className="text-[42px] md:text-[42px] font-light leading-[1.1] md:leading-[42px] block">Pour vous éclairer</span>
-                                <span className="text-[42px] md:text-[42px] font-normal leading-[1.1] md:leading-[42px] block">Questions fréquentes</span>
+                                <span className="text-[32px] md:text-[32px] font-light leading-[1.2] block">Pour vous éclairer</span>
+                                <span className="text-[32px] md:text-[32px] font-normal leading-[1.2] block">Questions fréquentes</span>
                             </h2>
 
               <div className="w-24 h-1 bg-blue-600"></div>

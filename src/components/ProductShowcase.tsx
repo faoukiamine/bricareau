@@ -59,8 +59,8 @@ const ProductShowcase = () => {
                         className="text-slate-900 scroll-mt-[120px]"
                         style={{ }}
                     >
-                        <span className="text-[32px] md:text-[56px] font-light leading-[1.2] md:leading-[56px] text-blue-600 block">Solutions résidentielles</span>
-                        <span className="text-[32px] md:text-[56px] font-medium leading-[1.2] md:leading-[56px] block">de traitement de l'eau</span>
+                        <span className="font-light leading-[1.2] text-blue-600 block">Solutions résidentielles</span>
+                        <span className="font-medium leading-[1.2] block">de traitement de l'eau</span>
                     </h2>
                 </div>
 

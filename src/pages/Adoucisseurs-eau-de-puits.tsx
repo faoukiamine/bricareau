@@ -218,12 +218,7 @@ const AdoucisseursEauDePuits = () => {
 
                     <div className="container relative z-10 mx-auto px-4 h-full flex items-center lg:px-6">
                         <div className="max-w-2xl lg:text-white py-12 lg:py-0">
-                            <h1
-                                className="text-[48px] md:text-[48px] leading-[1.1] md:leading-[1.2] mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl"
-                                style={{
-                                    fontWeight: 600
-                                }}
-                            >
+                            <h1 className="mb-4 lg:mb-8 text-slate-900 lg:text-white text-left lg:text-justify max-w-xl">
                                 Adoucisseur d'eau de puits, une protection experte contre le fer et le calcaire.
                             </h1>
                             <p className="font-light text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
@@ -247,12 +242,9 @@ const AdoucisseursEauDePuits = () => {
                 <section className="py-24 bg-blue-600 text-white text-center">
                     <div className="container mx-auto px-6 text-center">
                         <div className="text-left mb-16">
-                            <h2
-                                className="text-white mb-8 text-left"
-                                style={{}}
-                            >
-                                <span className="text-[32px] md:text-[60px] font-light leading-[1.1] md:leading-[60px] block">Pourquoi choisir nos</span>
-                                <span className="text-[32px] md:text-[60px] font-normal leading-[1.1] md:leading-[60px] block">adoucisseurs d'eau résidentiels ?</span>
+                            <h2 className="text-white mb-8 text-left">
+                                <span className="font-light block text-white/90">Pourquoi choisir nos</span>
+                                <span className="font-bold block">adoucisseurs d'eau résidentiels ?</span>
                             </h2>
                             <div className="w-24 h-1 bg-white"></div>
                         </div>
@@ -288,12 +280,9 @@ const AdoucisseursEauDePuits = () => {
                 <section id="nos-adoucisseurs" className="py-24 bg-gray-50">
                     <div className="container mx-auto px-6">
                         <div className="text-left mb-16">
-                            <h2
-                                className="text-slate-900 mb-8 text-left"
-                                style={{}}
-                            >
-                                <span className="text-[42px] md:text-[42px] font-light leading-[1.1] md:leading-[42px] block">Nos adoucisseurs d'eau</span>
-                                <span className="text-[42px] md:text-[42px] font-normal leading-[1.1] md:leading-[42px] block">résidentiels - Eau de puits</span>
+                            <h2 className="text-slate-900 mb-8 text-left">
+                                <span className="font-light block">Nos adoucisseurs d'eau</span>
+                                <span className="font-bold block text-blue-600">résidentiels - Eau de puits</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600 mb-8"></div>
                             <p className="font-light text-gray-600 max-w-7xl mx-auto text-justify mb-8">
@@ -345,12 +334,9 @@ const AdoucisseursEauDePuits = () => {
                 <section className="py-24 bg-white border-t border-gray-100">
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
-                            <h2
-                                className="text-slate-900 mb-8 text-left"
-                                style={{}}
-                            >
-                                <span className="text-[42px] md:text-[42px] font-light leading-[1.1] md:leading-[42px] block">Comparez nos adoucisseurs</span>
-                                <span className="text-[42px] md:text-[42px] font-normal leading-[1.1] md:leading-[42px] block">d'eau de puits</span>
+                            <h2 className="text-slate-900 mb-8 text-left">
+                                <span className="font-light block">Comparez nos adoucisseurs</span>
+                                <span className="font-bold block text-blue-600">d'eau de puits</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
@@ -423,11 +409,9 @@ const AdoucisseursEauDePuits = () => {
 
                     <div className="container mx-auto px-4 relative z-10 flex items-center py-12 lg:py-0">
                         <div className="max-w-2xl text-slate-900 lg:text-white">
-                            <h2
-                                className="md:leading-[60px] lg:font-light mb-8 text-slate-900 lg:text-white text-left"
-                                style={{}}
-                            >
-                                Des tests d'eau précis <span className="lg:font-bold"><br />pour une tranquillité d'esprit totale.</span>
+                            <h2 className="mb-8 text-slate-900 lg:text-white text-left">
+                                <span className="font-light opacity-90 block">Des tests d'eau précis</span>
+                                <span className="font-bold block">pour une tranquillité d'esprit totale.</span>
                             </h2>
                             <p className="font-light text-slate-500 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
                                 Ne devinez pas la qualité de votre eau. Nos analyses approfondies identifient les bactéries, les minéraux et les contaminants chimiques pour vous offrir une tranquillité d'esprit totale.
@@ -451,9 +435,9 @@ const AdoucisseursEauDePuits = () => {
                     filterProduct="/adoucisseurs-eau-de-puits"
                     title={
                         <>
-               <h2 className="text-slate-900 mb-6 text-[42px] leading-[42px]">
+                            <h2 className="text-slate-900 mb-6">
                                 <span className="font-light block">Là où le calcaire dictait sa loi,</span>
-                                <span className="font-bold text-blue-600">nos clients ont repris le contrôle.</span>
+                                <span className="font-bold text-blue-600 block">nos clients ont repris le contrôle.</span>
                             </h2>
                         </>
                     }
@@ -463,7 +447,7 @@ const AdoucisseursEauDePuits = () => {
                 <section className="bg-white py-24">
                     <div className="container mx-auto px-4">
                         <div className="text-center mb-16">
-                            <h2 className="text-slate-900 mb-8 text-[42px] leading-[42px]">Découvrez les produits associés</h2>
+                            <h2 className="text-slate-900 mb-8 font-bold text-blue-600">Découvrez les produits associés</h2>
                             <p className="font-light text-gray-500 max-w-2xl mx-auto text-justify">
                                 Optimisez votre expérience de traitement d'eau avec nos solutions complémentaires.
                             </p>
@@ -545,8 +529,8 @@ const AdoucisseursEauDePuits = () => {
           <div className="container mx-auto px-6 relative z-10 text-center">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-white mb-6">
-                <span className="text-[42px] md:text-[42px] font-light leading-tight block tracking-tight opacity-90 italic">Besoin d'aide avec</span>
-                <span className="text-[42px] md:text-[42px] font-bold leading-tight block tracking-tight uppercase">votre eau de puits ?</span>
+                <span className="font-light block tracking-tight opacity-90 italic">Besoin d'aide avec</span>
+                <span className="font-bold block tracking-tight uppercase">votre eau de puits ?</span>
               </h2>
 
               <p className="text-blue-100/80 font-light text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
@@ -586,12 +570,9 @@ const AdoucisseursEauDePuits = () => {
                 <section className="py-24 bg-white">
                     <div className="container mx-auto px-6">
                         <div className="text-left mb-16">
-                            <h2
-                                className="text-slate-900 mb-8 text-left"
-                                style={{}}
-                            >
-                                <span className="text-[42px] md:text-[42px] font-light leading-[1.1] md:leading-[42px] block">Pour vous éclairer</span>
-                                <span className="text-[42px] md:text-[42px] font-normal leading-[1.1] md:leading-[42px] block">Questions fréquentes</span>
+                            <h2 className="text-slate-900 mb-8 text-left">
+                                <span className="font-light block">Pour vous éclairer</span>
+                                <span className="font-bold block text-blue-600">Questions fréquentes</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
@@ -625,10 +606,8 @@ const AdoucisseursEauDePuits = () => {
                 <section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-6 text-left">
                         <div className="text-left mb-16">
-                            <h2
-                                className="text-slate-900 mb-8 text-left"
-                                style={{}}
-                            >                                <span className="text-[42px] md:text-[42px] font-normal leading-[1.1] md:leading-[42px] block">Ressources</span>
+                            <h2 className="text-slate-900 mb-8 text-left font-bold text-blue-600">
+                                Ressources
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>

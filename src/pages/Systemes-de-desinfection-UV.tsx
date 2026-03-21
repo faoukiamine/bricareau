@@ -113,7 +113,7 @@ const DesinfectionUV = () => {
                     <div className="container relative z-10 mx-auto px-4 h-full flex items-center lg:px-6">
                         <div className="max-w-2xl lg:text-white py-12 lg:py-0">
                             <h1
-                                className="text-[48px] md:text-[48px] leading-[1.1] md:leading-[1.2] mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl"
+                                className="mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl"
                                 style={{
                                     fontWeight: 600
                                 }}
@@ -177,7 +177,7 @@ const DesinfectionUV = () => {
                             <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.2em] mb-6">
                                 TRAITEMENT d'EAU POTABLE SANS CHLORE
                             </span>
-                            <h2 className="text-slate-900 mb-8 text-[42px] leading-[1.1]">
+                            <h2 className="text-slate-900 mb-8 leading-[1.2]">
                                 <span className="font-light block">Pourquoi choisir la</span>
                                 <span className="font-bold text-blue-600">désinfection UV ?</span>
                             </h2>
@@ -242,8 +242,8 @@ const DesinfectionUV = () => {
                                 className="text-slate-900 mb-8 text-left"
                                 style={{}}
                             >
-                                <span className="text-[42px] md:text-[42px] font-light leading-[1.1] md:leading-[42px] block">Nos systèmes de</span>
-                                <span className="text-[42px] md:text-[42px] font-normal leading-[1.1] md:leading-[42px] block">désinfection UV</span>
+                                <span className="font-light leading-[1.1] block">Nos systèmes de</span>
+                                <span className="font-normal leading-[1.1] block">désinfection UV</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600 mb-12"></div>
 
@@ -304,8 +304,8 @@ const DesinfectionUV = () => {
                                 className="text-slate-900 mb-8 text-left"
                                 style={{}}
                             >
-                                <span className="text-[42px] md:text-[42px] font-light leading-[1.1] md:leading-[42px] block">Comparez nos</span>
-                                <span className="text-[42px] md:text-[42px] font-normal leading-[1.1] md:leading-[42px] block">systèmes UV</span>
+                                <span className="font-light leading-[1.1] block">Comparez nos</span>
+                                <span className="font-normal leading-[1.1] block">systèmes UV</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
@@ -383,7 +383,7 @@ const DesinfectionUV = () => {
                                 ANALYSE MICROBIOLOGIQUE
                             </span>
                             <h2
-                                className="lg:font-light mb-8 md:leading-[60px] text-slate-900 lg:text-white text-left"
+                                className="lg:font-light mb-8 text-slate-900 lg:text-white text-left"
                                 style={{}}
                             >
                                 Votre eau de puits est-elle <span className="lg:font-bold"><br />vraiment sécuritaire ?</span>
@@ -419,7 +419,7 @@ const DesinfectionUV = () => {
                 <section className="bg-white py-24">
                     <div className="container mx-auto px-4">
                         <div className="text-center mb-16">
-                            <h2 className="text-slate-900 mb-8 text-[42px] leading-[42px]">Découvrez les produits associés</h2>                            <p className="font-light text-gray-500 max-w-2xl mx-auto text-justify">
+                            <h2 className="text-slate-900 mb-8">Découvrez les produits associés</h2>                            <p className="font-light text-gray-500 max-w-2xl mx-auto text-justify">
                                 Optimisez votre expérience de traitement d'eau avec nos solutions complémentaires.
                             </p>
                         </div>
@@ -494,8 +494,8 @@ const DesinfectionUV = () => {
                                 className="text-slate-900 mb-8 text-left"
                                 style={{}}
                             >
-                                <span className="text-[42px] md:text-[42px] font-light leading-[1.1] md:leading-[42px] block">Pour vous éclairer</span>
-                                <span className="text-[42px] md:text-[42px] font-normal leading-[1.1] md:leading-[42px] block">Questions fréquentes</span>
+                                <span className="font-light leading-[1.1] block">Pour vous éclairer</span>
+                                <span className="font-normal leading-[1.1] block">Questions fréquentes</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>

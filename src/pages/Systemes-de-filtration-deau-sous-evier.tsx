@@ -123,7 +123,7 @@ const FiltrationSousEvier = () => {
                     <div className="container relative z-10 mx-auto px-4 h-full flex items-center lg:px-6">
                         <div className="max-w-2xl lg:text-white py-12 lg:py-0">
                             <h1
-                                className="text-[48px] md:text-[48px] leading-[1.1] md:leading-[1.2] mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl"
+                                className="text-[32px] md:text-[32px] leading-[1.1] mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl"
                                 style={{
                                     fontWeight: 600
                                 }}
@@ -329,9 +329,9 @@ const FiltrationSousEvier = () => {
               <span className="inline-block px-4 py-1.5 bg-blue-50 text-blue-600 rounded-full text-xs font-black uppercase tracking-widest mb-6">
                                 L'EXCELLENCE DE L'EAU FILTRÉE AU QUOTIDIEN
                             </span>
-                            <h2 className="text-slate-900 leading-[1.05] tracking-[ -0.04em] mb-10">
-                                <span className="text-[42px] md:text-[42px] font-light leading-[1.1] md:leading-[42px] block tracking-tighter text-slate-900">Pourquoi privilégier nos</span>
-              <span className="text-[42px] md:text-[42px] font-bold text-blue-600 leading-[1.1] md:leading-[42px] block tracking-tighter">systèmes de filtration d'eau sous l'évier ?</span>
+                            <h2 className="text-slate-900 leading-[1.2] mb-10">
+                                <span className="text-[32px] md:text-[32px] font-light leading-[1.2] block tracking-tighter text-slate-900">Pourquoi privilégier nos</span>
+              <span className="text-[32px] md:text-[32px] font-bold text-blue-600 leading-[1.2] block tracking-tighter">systèmes de filtration d'eau sous l'évier ?</span>
                             </h2>
                             <div className="w-16 h-0.5 bg-blue-600/20 mx-auto mb-10" />
                             <p className="font-light text-slate-500 text-lg max-w-2xl mx-auto leading-relaxed italic">
@@ -401,8 +401,8 @@ const FiltrationSousEvier = () => {
                                 className="text-slate-900 mb-8 text-left"
                                 style={{}}
                             >
-                                <span className="text-[42px] md:text-[42px] font-light leading-[1.1] md:leading-[42px] block">Comparez nos solutions</span>
-                                <span className="text-[42px] md:text-[42px] font-normal leading-[1.1] md:leading-[42px] block">de filtration d'eau potable.</span>
+                                <span className="text-[32px] md:text-[32px] font-light leading-[1.2] block">Comparez nos solutions</span>
+                                <span className="text-[32px] md:text-[32px] font-normal leading-[1.2] block">de filtration d'eau potable.</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
@@ -479,7 +479,7 @@ const FiltrationSousEvier = () => {
                                 ANALYSE PROFESSIONNELLE
                             </span>
                             <h2
-                                className="lg:font-light mb-8 md:leading-[60px] text-slate-900 lg:text-white text-left"
+                                className="lg:font-light mb-8 leading-[1.2] text-slate-900 lg:text-white text-left"
                                 style={{}}
                             >
                                 Identifiez l'invisible, <span className="lg:font-bold"><br />maîtrisez votre pureté.</span>
@@ -506,7 +506,7 @@ const FiltrationSousEvier = () => {
                     filterProduct="/Systemes-de-filtration-deau-sous-evier"
                     title={
                         <>
-                            <h2 className="text-slate-900 mb-6 text-[42px] leading-[42px]">
+                            <h2 className="text-slate-900 mb-6 text-[32px] leading-[1.2]">
                                 <span className="font-light block">Adieu les bouteilles plastiques</span>
                                 <span className="font-bold text-blue-600">Ils ont enfin retrouvé la liberté au robinet</span>
                             </h2>
@@ -522,8 +522,8 @@ const FiltrationSousEvier = () => {
                                 className="text-slate-900 mb-8 text-left"
                                 style={{}}
                             >
-                                <span className="text-[42px] md:text-[42px] font-light leading-[1.1] md:leading-[42px] block">Pour vous éclairer</span>
-                                <span className="text-[42px] md:text-[42px] font-normal leading-[1.1] md:leading-[42px] block">Questions fréquentes</span>
+                                <span className="text-[32px] md:text-[32px] font-light leading-[1.2] block">Pour vous éclairer</span>
+                                <span className="text-[32px] md:text-[32px] font-normal leading-[1.2] block">Questions fréquentes</span>
                             </h2>
 
                             <div className="w-24 h-1 bg-blue-600"></div>
@@ -592,7 +592,7 @@ const FiltrationSousEvier = () => {
                     <div className="container mx-auto px-6 relative z-10 text-center">
                         <div className="max-w-4xl mx-auto">
                             <h2 className="text-white mb-6">
-                                <span className="text-[42px] md:text-[42px] font-light leading-tight block tracking-tight opacity-90 italic">Prêt à dire adieu à l’eau embouteillée ?</span>
+                                <span className="text-[32px] md:text-[32px] font-light leading-[1.2] block tracking-tight opacity-90 italic">Prêt à dire adieu à l’eau embouteillée ?</span>
                             </h2>
                             <p className="text-blue-100/80 font-light text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
                                 Passez au filtre sous évier et profitez d’une eau filtrée, savoureuse et économique directement à votre robinet. Contactez-nous pour une démonstration, une analyse d’eau ou un devis personnalisé. Installation rapide sous 48h disponible dans plusieurs régions !                            </p>
@@ -633,7 +633,7 @@ const FiltrationSousEvier = () => {
                             <h2
                                 className="text-slate-900 mb-8 text-left"
                                 style={{}}
-                            >                                <span className="text-[42px] md:text-[42px] font-normal leading-[1.1] md:leading-[42px] block">Ressources</span>
+                            >                                <span className="text-[32px] md:text-[32px] font-normal leading-[1.2] block">Ressources</span>
                             </h2>
 
                             <div className="w-24 h-1 bg-blue-600"></div>

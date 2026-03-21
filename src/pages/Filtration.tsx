@@ -110,12 +110,7 @@ const Filtration = () => {
 
                     <div className="container relative z-10 mx-auto px-4 h-full flex items-center lg:px-6">
                         <div className="max-w-2xl lg:text-white py-12 lg:py-0">
-                            <h1
-                                className="text-[48px] md:text-[48px] leading-[1.1] md:leading-[1.2] mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl"
-                                style={{
-                                    fontWeight: 600
-                                }}
-                            >
+                            <h1 className="mb-4 lg:mb-8 text-slate-900 lg:text-white text-left lg:text-justify max-w-xl">
                                 Filtration d'eau résidentielle <br />
                                 L'excellence pour votre santé.
                             </h1>
@@ -163,9 +158,8 @@ const Filtration = () => {
                             {/* Left Column: Analytical Narrative */}
                             <div className="lg:col-span-5 space-y-8">
                                 <div>
-                                    <h2 className="text-slate-900 mb-6 text-[42px] leading-[42px]">
-                                        <span className="font-light block">L'invisible dans</span>
-                                        <span className="font-bold text-blue-600">votre verre.</span>
+                                    <h2 className="text-slate-900 mb-6 font-bold text-blue-600">
+                                        L'invisible dans votre verre.
                                     </h2>
                                     <p className="font-light text-slate-600 lg:text-slate-600 mb-8 max-w-xl text-left lg:text-justify">
                                         L'eau municipale est traitée, mais elle n'est pas pure. Entre l'usine de traitement et votre robinet, elle transporte des résidus invisibles qui impactent votre santé.
@@ -261,9 +255,8 @@ const Filtration = () => {
 
                     <div className="container mx-auto px-6">
                         <div className="text-center mb-20 max-w-3xl mx-auto">
-                            <h2 className="text-slate-900 mb-6 text-[42px] leading-[42px]">
-                                <span className="font-light block">Pourquoi choisir nos</span>
-                                <span className="font-bold text-blue-600">systèmes de filtration d'eau ?</span>
+                            <h2 className="text-slate-900 mb-6 font-bold text-blue-600">
+                                Pourquoi choisir nos systèmes de filtration d'eau ?
                             </h2>
                             <p className="text-slate-500 font-light text-lg">
                                 Plus qu'une simple filtration, c'est une protection avancée pour votre santé et un confort durable pour votre foyer au quotidien.
@@ -357,10 +350,10 @@ const Filtration = () => {
                                         <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.2em]">
                                             EAU FILTRÉE POUR TOUTE LA MAISON
                                         </span>
-                                        <h2 className="text-slate-900 mb-6 text-[36px] leading-[36px]">
-                                            <span className="font-light block">Redécouvrez le luxe d'une</span>
-                                            <span className="font-bold text-blue-600 block">eau filtrée cristalline.</span>
-                                        </h2>
+                                         <h2 className="text-slate-900 mb-6 text-[32px] md:text-[32px] leading-[1.2]">
+                                             <span className="font-light block">Redécouvrez le luxe d'une</span>
+                                             <span className="font-bold text-blue-600">eau filtrée cristalline.</span>
+                                         </h2>
                                         <p className="text-slate-500 font-light text-lg leading-relaxed text-justify max-w-xl">
 Les filtres d’eau pour toute la maison sont installés directement sur l’arrivée principale d’eau. Ils filtrent toute l’eau qui circule dans la maison : cuisine, salles de bain, buanderie, robinets extérieurs, etc. Ils sont idéaux pour réduire les sédiments, le sable, certaines odeurs et goûts (comme le chlore) et protéger la plomberie et les appareils.                                        </p>
                                     </div>
@@ -445,10 +438,10 @@ Les filtres d’eau pour toute la maison sont installés directement sur l’arr
                                         <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.2em]">
                                             EAU PURE À VOLONTÉ
                                         </span>
-                                        <h2 className="text-slate-900 mb-6 text-[36px] leading-[36px]">
-                                            <span className="font-light block text-right lg:text-left">Votre source d'eau cristalline,</span>
-                                            <span className="font-bold text-blue-600 block text-right lg:text-left">sans compromis.</span>
-                                        </h2>
+                                         <h2 className="text-slate-900 mb-6 text-[32px] md:text-[32px] leading-[1.2]">
+                                             <span className="font-light block">Votre source d'eau cristalline,</span>
+                                             <span className="font-bold text-blue-600 text-right lg:text-left">sans compromis.</span>
+                                         </h2>
                                         <p className="text-slate-500 font-light text-lg leading-relaxed text-justify max-w-xl ml-auto lg:ml-0">
                                             Découvrez comment notre système d'osmose inverse libère votre quotidien du goût de chlore et de la corvée des bouteilles plastique. Une eau légère et saine à portée de main.
                                         </p>
@@ -535,10 +528,10 @@ Les filtres d’eau pour toute la maison sont installés directement sur l’arr
                                         <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.2em]">
                                             COMPACT & PUISSANT
                                         </span>
-                                        <h2 className="text-slate-900 mb-6 text-[36px] leading-[36px]">
-                                            <span className="font-light block text-left">Systèmes de filtration</span>
-                                            <span className="font-bold text-blue-600 block text-left">d'eau sous l'évier.</span>
-                                        </h2>
+                                         <h2 className="text-slate-900 mb-6 text-[32px] md:text-[32px] leading-[1.2]">
+                                             <span className="font-light block">Systèmes de filtration</span>
+                                             <span className="font-bold text-blue-600">d'eau sous l'évier.</span>
+                                         </h2>
                                         <p className="text-slate-500 font-light text-lg leading-relaxed text-justify max-w-xl">
                                             Éliminez jusqu'à 99% des pathogènes, du plomb et du fluorure. L'osmose inverse Bricareau est la solution ultime pour une eau de boisson de qualité restaurant directement chez vous.
                                         </p>
@@ -608,12 +601,9 @@ Les filtres d’eau pour toute la maison sont installés directement sur l’arr
                             <span className="text-blue-600 lg:text-white/80 font-bold uppercase tracking-widest text-sm mb-4 block">
                                 Contrôle de la Qualité D'EAU
                             </span>
-                            <h2
-                                className="lg:font-light mb-8 md:leading-[60px] text-slate-900 lg:text-white text-left"
-                                style={{}}
-                            >
-                                <span className="lg:font-bold">Votre eau sous la loupe.</span>
-                            </h2>
+                             <h2 className="lg:font-light mb-8 font-bold text-slate-900 lg:text-white text-left text-[32px] leading-[1.2]">
+                                 Votre eau sous la loupe.
+                             </h2>
                             <p className="font-light text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
                                 Ne devinez pas la qualité de votre eau. Nos analyses approfondies identifient les bactéries, les minéraux et les contaminants chimiques pour vous offrir une tranquillité d'esprit totale.                            </p>
                             <div className="flex gap-4">
@@ -635,10 +625,9 @@ Les filtres d’eau pour toute la maison sont installés directement sur l’arr
                     filterProduct="/filtration"
                     title={
                         <>
-                            <h2 className="text-slate-900 mb-6 text-[42px] leading-[42px]">
-                                <span className="font-light block">Honnêteté et passion</span>
-                                <span className="font-bold text-blue-600">la signature Bricareau vue par vous.</span>
-                            </h2>
+                             <h2 className="text-slate-900 mb-6 font-bold text-blue-600 text-[32px] leading-[1.2]">
+                                 Honnêteté et passion : la signature Bricareau vue par vous.
+                             </h2>
                         </>
                     }
                 />
@@ -648,13 +637,9 @@ Les filtres d’eau pour toute la maison sont installés directement sur l’arr
                 <section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
-                            <h2
-                                className="text-slate-900 mb-8 text-left"
-                                style={{}}
-                            >
-                                <span className="text-[42px] md:text-[42px] font-light leading-[1.1] md:leading-[42px] block">Comparez nos solutions</span>
-                                <span className="text-[42px] md:text-[42px] font-normal leading-[1.1] md:leading-[42px] block">de filtration d'eau de qualité</span>
-                            </h2>
+                                 <h2 className="text-slate-900 mb-8 font-bold text-blue-600 text-[32px] leading-[1.2]">
+                                     Comparez nos solutions de filtration d'eau
+                                 </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
                         <div className="overflow-x-auto">
@@ -710,9 +695,9 @@ Les filtres d’eau pour toute la maison sont installés directement sur l’arr
 
           <div className="container mx-auto px-6 relative z-10 text-center">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-white mb-6">
-                <span className="text-[42px] md:text-[42px] font-light leading-tight block tracking-tight opacity-90 italic">Besoin d'aide avec</span>
-                <span className="text-[42px] md:text-[42px] font-bold leading-tight block tracking-tight">votre filtration d'eau pour un choix éclairé ?</span>
+              <h2 className="text-white mb-6 text-[32px] leading-[1.2]">
+                <span className="font-light leading-tight block tracking-tight opacity-90 italic">Besoin d'aide avec</span>
+                <span className="font-bold leading-tight block tracking-tight">votre filtration d'eau pour un choix éclairé ?</span>
               </h2>
 
               <p className="text-blue-100/80 font-light text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
@@ -751,13 +736,9 @@ Les filtres d’eau pour toute la maison sont installés directement sur l’arr
                 <section className="py-24 bg-white">
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
-                            <h2
-                                className="text-slate-900 mb-8 text-left"
-                                style={{}}
-                            >
-                                <span className="text-[42px] md:text-[42px] font-light leading-[1.1] md:leading-[42px] block">Pour vous éclairer</span>
-                                <span className="text-[42px] md:text-[42px] font-normal leading-[1.1] md:leading-[42px] block">Questions fréquentes</span>
-                            </h2>
+                             <h2 className="text-slate-900 mb-8 font-bold text-blue-600 text-[32px] leading-[1.2]">
+                                 Questions fréquentes
+                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
                         <div className="max-w-4xl mx-auto">
@@ -854,7 +835,7 @@ Les filtres d’eau pour toute la maison sont installés directement sur l’arr
                                 className="text-slate-900 mb-8 text-left"
                                 style={{}}
                             >
-                                <span className="text-[42px] md:text-[42px] font-normal leading-[1.1] md:leading-[42px] block">Ressources</span>
+                                <span className="text-[32px] md:text-[32px] font-normal leading-[1.2] block">Ressources</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

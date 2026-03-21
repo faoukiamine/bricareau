@@ -109,7 +109,7 @@ const CommercialIndustriel = () => {
             <div className="container relative z-10 mx-auto px-4 h-full flex items-center lg:px-6">
               <div className="max-w-2xl lg:text-white py-12 lg:py-0">
                 <h1
-                  className="text-[32px] md:text-[42px] leading-tight mb-8 tracking-tighter text-slate-900 lg:text-white"
+                  className="text-[28px] md:text-[32px] leading-tight mb-8 tracking-tighter text-slate-900 lg:text-white"
                   style={{
                     fontWeight: 350
                   }}

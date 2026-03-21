@@ -164,7 +164,7 @@ const EauDePuits = () => {
                 SOLUTIONS DE TRAITEMENT D'EAU POUR PUITS PRIVÉS
               </span>
               <h1
-                className="text-[48px] md:text-[48px] leading-[1.1] md:leading-[1.2] mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl"
+                className="mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl"
                 style={{
                   fontWeight: 600
                 }}
@@ -211,8 +211,8 @@ const EauDePuits = () => {
           <div className="container mx-auto px-6 relative z-10">
             <div className="text-center mb-24 max-w-3xl mx-auto">
               <h2 className="text-slate-900 mb-5">
-                <span className="text-[42px] md:text-[42px] font-light leading-tight block tracking-tighter">Problèmes courants</span>
-                <span className="text-[42px] md:text-[42px] font-bold text-blue-600 leading-tight block tracking-tighter">de l'eau de puits</span>
+                <span className="font-light leading-tight block tracking-tighter">Problèmes courants</span>
+                <span className="font-bold text-blue-600 leading-tight block tracking-tighter">de l'eau de puits</span>
               </h2>
               <p className="text-slate-500 font-light text-lg leading-relaxed">
                 L'eau de votre puits est vivante et changeante. Identifiez les signes avant-coureurs pour garantir la sécurité de votre foyer et la longévité de vos installations.
@@ -259,7 +259,7 @@ const EauDePuits = () => {
 
                       <div className="space-y-4">
                         <h3 className={`text-slate-900 group-hover:text-blue-600 transition-colors duration-500 tracking-tight
-                          ${isFeatured ? 'text-4xl font-bold' : 'text-xl font-bold'}
+                          ${isFeatured ? 'md:text-[32px] font-bold' : 'text-xl font-bold'}
                         `}>
                           {problem.title}
                         </h3>
@@ -298,8 +298,8 @@ const EauDePuits = () => {
                 NOTRE FONCTIONNEMENT
               </span>
               <h2 className="text-slate-900 mb-6">
-                <span className="text-[42px] md:text-[42px] font-light leading-tight block tracking-tighter">Un service simple</span>
-                <span className="text-[42px] md:text-[42px] font-bold text-blue-600 leading-tight block tracking-tighter">& sans souci.</span>
+                <span className="font-light leading-tight block tracking-tighter">Un service simple</span>
+                <span className="font-bold text-blue-600 leading-tight block tracking-tighter">& sans souci.</span>
               </h2>
               <p className="text-slate-500 font-light text-lg max-w-2xl mx-auto text-center leading-relaxed">
                 Confiez-nous la gestion de votre eau de puits. De l'expertise initiale à l'installation finale, nous nous occupons de tout pour vous garantir une eau saine, sans compromis.
@@ -361,7 +361,7 @@ const EauDePuits = () => {
                   {/* Text Content Section */}
                   <div className="w-full lg:w-1/2 flex flex-col justify-center px-4 lg:px-20">
                     <div className={`space-y-6 ${idx % 2 === 1 ? 'lg:text-right lg:items-end' : 'lg:text-left lg:items-start'}`}>
-                      <h3 className="text-[24px] md:text-[24px] font-bold text-slate-900 leading-tight group-hover:text-blue-600 transition-colors">
+                      <h3 className="font-bold text-slate-900 leading-tight group-hover:text-blue-600 transition-colors">
                         {step.title}
                       </h3>
                       <div className={`w-12 h-1.5 bg-blue-600 rounded-full ${idx % 2 === 1 ? 'ml-auto' : ''}`} />
@@ -405,7 +405,7 @@ const EauDePuits = () => {
                 Contrôle de la Qualité D'EAU
               </span>
               <h2
-                className="md:leading-[60px] lg:font-light mb-8 text-slate-900 lg:text-white text-left"
+                className="lg:font-light mb-8 text-slate-900 lg:text-white text-left"
                 style={{}}
               >
                 <span className="lg:font-bold">Dites adieu au fer,</span><br />
@@ -434,8 +434,8 @@ const EauDePuits = () => {
                 className="text-slate-900 mb-8 text-left"
                 style={{}}
               >
-                <span className="text-[42px] md:text-[42px] font-light leading-[1.1] md:leading-[42px] block">Découvrez nos solutions</span>
-                <span className="text-[42px] md:text-[42px] font-normal leading-[1.1] md:leading-[42px] block">de traitement de l'eau de puits</span>
+                <span className="font-light leading-[1.1] block">Découvrez nos solutions</span>
+                <span className="font-normal leading-[1.1] block">de traitement de l'eau de puits</span>
               </h2>
               <div className="w-24 h-1 bg-blue-600 mb-8"></div>
               <p
@@ -530,8 +530,8 @@ const EauDePuits = () => {
           filterProduct="/eau-de-puits"
           title={
             <>
-              <span className="text-[42px] md:text-[42px] font-light leading-[1.1] md:leading-[42px] block tracking-tighter text-slate-900">La solution là </span>
-              <span className="text-[42px] md:text-[42px] font-bold text-blue-600 leading-[1.1] md:leading-[42px] block tracking-tighter">où d'autres ont échoué.</span>
+              <span className="font-light leading-[1.1] block tracking-tighter text-slate-900">La solution là </span>
+              <span className="font-bold text-blue-600 leading-[1.1] block tracking-tighter">où d'autres ont échoué.</span>
             </>
           }
         />
@@ -546,8 +546,8 @@ const EauDePuits = () => {
                 className="text-slate-900 mb-8 text-left"
                 style={{}}
               >
-                <span className="text-[42px] md:text-[42px] font-light leading-[1.1] md:leading-[42px] block">Comparez nos solutions</span>
-                <span className="text-[42px] md:text-[42px] font-normal leading-[1.1] md:leading-[42px] block">de traitement de l'eau de puits</span>
+                <span className="font-light leading-[1.1] block">Comparez nos solutions</span>
+                <span className="font-normal leading-[1.1] block">de traitement de l'eau de puits</span>
               </h2>
               <div className="w-24 h-1 bg-blue-600 mb-8"></div>
             </div>
@@ -615,8 +615,8 @@ const EauDePuits = () => {
           <div className="container mx-auto px-6 relative z-10 text-center">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-white mb-6">
-                <span className="text-[42px] md:text-[42px] font-light leading-tight block tracking-tight opacity-90 italic">Besoin d'aide avec</span>
-                <span className="text-[42px] md:text-[42px] font-bold leading-tight block tracking-tight uppercase">votre eau de puits ?</span>
+                <span className="font-light leading-tight block tracking-tight opacity-90 italic">Besoin d'aide avec</span>
+                <span className="font-bold leading-tight block tracking-tight uppercase">votre eau de puits ?</span>
               </h2>
 
               <p className="text-blue-100/80 font-light text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
@@ -764,7 +764,7 @@ const EauDePuits = () => {
               <h2
                 className="text-slate-900 mb-8 text-left"
                 style={{}}
-              >                                <span className="text-[42px] md:text-[42px] font-normal leading-[1.1] md:leading-[42px] block">Ressources</span>
+              >                                <span className="font-normal leading-[1.1] block">Ressources</span>
               </h2>
               <div className="w-24 h-1 bg-blue-600"></div>
             </div>

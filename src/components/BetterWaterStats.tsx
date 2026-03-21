@@ -44,8 +44,8 @@ const BetterWaterStats = () => {
                             L'Excellence Bricareau
                         </div>
                         <h2 className="text-white mb-6">
-                            <span className="text-[36px] md:text-[56px] font-bold leading-[1] block text-white">La promesse d'une eau saine,</span>
-                            <span className="text-[36px] md:text-[56px] font-light leading-[1] text-blue-400 block mt-2">de notre rencontre à votre confort.</span>
+                            <span className="font-bold leading-[1] block text-white">La promesse d'une eau saine,</span>
+                            <span className="font-light leading-[1] text-blue-400 block mt-2">de notre rencontre à votre confort.</span>
                         </h2>
                         <div className="w-20 h-1.5 bg-blue-600 mb-8 rounded-full" />
                         <p className="text-slate-400 font-light max-w-md text-justify">
@@ -78,7 +78,7 @@ const BetterWaterStats = () => {
 
                                     {/* Text Content */}
                                     <div className="flex-1">
-                                        <h3 className="md:text-3xl text-white mb-4 group-hover:text-blue-400 transition-colors tracking-tight">
+                                        <h3 className="text-white mb-4 group-hover:text-blue-400 transition-colors tracking-tight">
                                             {item.title}
                                         </h3>
                                         <p className="leading-[25px] text-slate-400 font-light max-w-xl text-justify">
