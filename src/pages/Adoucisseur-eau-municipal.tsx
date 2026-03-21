@@ -25,7 +25,7 @@ import { softenerImg as residentialWaterSoftenerImg } from "./Blog pages/Comment
 import { adoucisseurImg as adoucisseurFosseImg } from "./Blog pages/Adoucisseur-deau- et-fosse-septique--Mythes-et-réalités";
 import { conditionneursImg } from "./Blog pages/Adoucisseur avec sel ou sans sel";
 import waterSoftenerImg from "@/assets/Adoucisseurs d'eau.webp";
-import TwinAlternatingWaterSoftenerImg from "@/assets/TwinTank.webp";
+import TwinAlternatingWaterSoftenerImg from "@/assets/Alternating Water Softener.png";
 import SentinelWaterSoftenerImg from "@/assets/Sentinelle Water Softener.png";
 import SerenityWaterSoftenerImg from "@/assets/Serenity Water Softener.png";
 import {

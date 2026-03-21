@@ -232,7 +232,7 @@ const AdoucisseursPortables = () => {
                                             </p>
                                             <div className="flex flex-wrap gap-4">
                                                 {["Anti-tartre", "Débit constant", "Sans électricité"].map((f, i) => (
-                                                    <div key={i} className="flex items-center gap-2 text-sm font-bold text-blue-600 bg-blue-50/50 px-4 py-2 rounded-full uppercase tracking-tighter">
+                                                    <div key={i} className="flex items-center gap-2 text-sm font-bold text-blue-600 bg-blue-50/50 px-4 py-2 rounded-full tracking-tighter">
                                                         <CheckCircle2 className="w-4 h-4" />
                                                         {f}
                                                     </div>

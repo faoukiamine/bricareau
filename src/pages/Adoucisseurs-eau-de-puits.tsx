@@ -7,6 +7,9 @@ import { Button } from "@/components/ui/button";
 import heroBath from "@/assets/kid-playing-bathtub.jpg";
 import heroDesktop from "@/assets/family-preparing-dinner-together.jpg";
 import eauDePuitsImg from "@/assets/189573.jpg";
+import TwinAlternatingWaterSoftenerImg from "@/assets/Alternating Water Softener.png";
+import SentinelWaterSoftenerImg from "@/assets/Sentinelle Water Softener.png";
+import SerenityWaterSoftenerImg from "@/assets/Serenity Water Softener.png";
 import {
     ArrowRight,
     Droplets,
@@ -56,9 +59,9 @@ import ConsultationFormSection from "@/components/ConsultationFormSection";
 
 const products = [
 
-    { name: "Adoucisseur d'eau de la série Sentinelle HE", displayName: <>Adoucisseur d'eau de la série<br />Sentinelle HE</>, desc: "Le rythme parfait d'une eau toujours douce.", path: "/contact", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
-    { name: "Adoucisseur d'eau de la série Sérénité HE", displayName: <>Adoucisseur d'eau de la série<br />Sérénité HE</>, desc: "La paix durable pour votre maison et votre confort.", path: "/contact", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
-    { name: "Adoucisseur d'eau de la série Infiniti HE", displayName: <>Adoucisseur d'eau de la série<br />Infiniti HE</>, desc: "Une douceur constante, à chaque goutte, à chaque seconde.", path: "/contact", image: "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png" },
+    { name: "Adoucisseur d'eau de la série Sentinelle HE", displayName: <>Adoucisseur d'eau de la série<br />Sentinelle HE</>, desc: "Le rythme parfait d'une eau toujours douce.", path: "/contact", image: SentinelWaterSoftenerImg },
+    { name: "Adoucisseur d'eau de la série Sérénité HE", displayName: <>Adoucisseur d'eau de la série<br />Sérénité HE</>, desc: "La paix durable pour votre maison et votre confort.", path: "/contact", image: SerenityWaterSoftenerImg },
+    { name: "Adoucisseur d'eau de la série Infiniti HE", displayName: <>Adoucisseur d'eau de la série<br />Infiniti HE</>, desc: "Une douceur constante, à chaque goutte, à chaque seconde.", path: "/contact", image: TwinAlternatingWaterSoftenerImg },
 ];
 const faqItems = [
     {
@@ -125,47 +128,47 @@ const faqItems = [
 
 interface ComparisonItem {
     feature: string;
-    Sérénité: string;
-    Sentinel: string;
-    Infiniti: string;
+    "Sérénité HE": string;
+    "Sentinel HE": string;
+    "Infiniti HE": string;
 }
 
 const comparisonData: ComparisonItem[] = [
     {
         feature: "Principe de Déclenchement",
-        Sérénité: "Se régénère à intervalles de temps fixes (ex: tous les 3 jours).",
-        Sentinel: "Se régénère selon le volume d'eau réellement consommé.",
-        Infiniti: "Alterne entre deux bouteilles dès que l'une est saturée."
+        "Sérénité HE": "Se régénère à intervalles de temps fixes (ex: tous les 3 jours).",
+        "Sentinel HE": "Se régénère selon le volume d'eau réellement consommé.",
+        "Infiniti HE": "Alterne entre deux bouteilles dès que l'une est saturée."
     },
     {
         feature: "Disponibilité d'Eau Douce",
-        Sérénité: "Interrompue pendant la régénération (souvent la nuit).",
-        Sentinel: "Interrompue pendant la régénération (souvent la nuit).",
-        Infiniti: "Permanente (24h/24) sans aucune interruption."
+        "Sérénité HE": "Interrompue pendant la régénération (souvent la nuit).",
+        "Sentinel HE": "Interrompue pendant la régénération (souvent la nuit).",
+        "Infiniti HE": "Permanente (24h/24) sans aucune interruption."
     },
     {
         feature: "Efficacité (Sel & Eau)",
-        Sérénité: "Moyenne (consomme même si peu d'eau a été utilisée).",
-        Sentinel: "Optimale (ne se régénère que si nécessaire).",
-        Infiniti: "Maximale (utilise la résine à 100% de sa capacité)."
+        "Sérénité HE": "Moyenne (consomme même si peu d'eau a été utilisée).",
+        "Sentinel HE": "Optimale (ne se régénère que si nécessaire).",
+        "Infiniti HE": "Maximale (utilise la résine à 100% de sa capacité)."
     },
     {
         feature: "Profil Utilisateur Idéal",
-        Sérénité: "Consommation d'eau très stable et prévisible.",
-        Sentinel: "Familles avec variations de consommation (invités, saisons).",
-        Infiniti: "Grosses consommations ou besoins critiques (gîtes, grandes familles)."
+        "Sérénité HE": "Consommation d'eau très stable et prévisible.",
+        "Sentinel HE": "Familles avec variations de consommation (invités, saisons).",
+        "Infiniti HE": "Grosses consommations ou besoins critiques (gîtes, grandes familles)."
     },
     {
         feature: "Complexité Technique",
-        Sérénité: "Simple et très robuste.",
-        Sentinel: "Électronique avancée avec capteur de débit.",
-        Infiniti: "Système double nécessitant plus d'espace."
+        "Sérénité HE": "Simple et très robuste.",
+        "Sentinel HE": "Électronique avancée avec capteur de débit.",
+        "Infiniti HE": "Système double nécessitant plus d'espace."
     },
     {
         feature: "Investissement Initial",
-        Sérénité: "Économique.",
-        Sentinel: "Intermédiaire.",
-        Infiniti: "Plus élevé."
+        "Sérénité HE": "Économique.",
+        "Sentinel HE": "Intermédiaire.",
+        "Infiniti HE": "Plus élevé."
     },
 ];
 
@@ -357,9 +360,9 @@ const AdoucisseursEauDePuits = () => {
                                     <tr className="bg-gray-100">
                                         <th className="p-8 text-left text-gray-400 font-light uppercase tracking-wider w-1/4">Modèle</th>
                                         {[
-                                            { name: "Sérénité HE", img: waterSoftenerImg },
-                                            { name: "Sentinel HE", img: waterSoftenerImg },
-                                            { name: "Infiniti HE", img: waterSoftenerImg }
+                                            { name: "Sérénité HE", img: SerenityWaterSoftenerImg },
+                                            { name: "Sentinel HE", img: SentinelWaterSoftenerImg },
+                                            { name: "Infiniti HE", img: TwinAlternatingWaterSoftenerImg }
                                         ].map(m => (
                                             <th key={m.name} className="p-4 text-center text-gray-900 font-bold border-l border-white/50 first:border-l-0">
                                                 <div className="flex flex-col items-center">
@@ -382,7 +385,7 @@ const AdoucisseursEauDePuits = () => {
                                     {comparisonData.map((row, i) => (
                                         <tr key={i} className="hover:bg-gray-50 transition-colors">
                                             <td className="p-8 font-bold text-slate-900 border-r border-gray-100 bg-gray-50/30">{row.feature}</td>
-                                            {["Sérénité", "Sentinel", "Infiniti"].map((model) => (
+                                            {["Sérénité HE", "Sentinel HE", "Infiniti HE"].map((model) => (
                                                 <td key={model} className="p-8 text-center text-lg font-light leading-snug text-gray-600 text-justify">
                                                     {row[model as keyof ComparisonItem]}
                                                 </td>

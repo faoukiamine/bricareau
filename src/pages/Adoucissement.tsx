@@ -232,34 +232,11 @@ const Adoucissement = () => {
 
                             {/* Right Column: Cinematic Slideshow (Embla) */}
                             <div className="lg:col-span-7 relative sticky top-32">
-                                <div className="relative rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white group h-[700px]">
-                                    {/* Mosaic Overlay Effect inspired by "Before/After" ref */}
-                                    <div className="absolute inset-0 grid grid-cols-6 grid-rows-6 z-20 pointer-events-none">
-                                        {[...Array(36)].map((_, i) => {
-                                            // Define specific patterns for the mosaic
-                                            const isWhite = [0, 1, 4, 5, 6, 11, 24, 25, 30, 31, 35].includes(i);
-                                            const isTinted = [3, 7, 10, 18, 23, 29].includes(i);
-                                            const isHidden = [12, 13, 17, 19, 32, 33].includes(i); // Randomly hide some to reveal bg
-                                            
-                                            return (
-                                                <div 
-                                                    key={i} 
-                                                    className={`
-                                                        border-[0.5px] border-white/5 transition-all duration-1000
-                                                        ${isWhite ? 'bg-white' : ''}
-                                                        ${isTinted ? 'bg-blue-900/40 backdrop-blur-[2px]' : ''}
-                                                        ${isHidden ? 'bg-slate-50' : ''}
-                                                        group-hover:border-white/20
-                                                    `}
-                                                />
-                                            );
-                                        })}
-                                    </div>
-
-                                    <div className="embla h-full overflow-hidden" ref={emblaRef}>
-                                        <div className="embla__container h-full flex">
+                                <div className="relative rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white group">
+                                    <div className="embla overflow-hidden" ref={emblaRef}>
+                                        <div className="embla__container flex">
                                             {[applianceDamageImg, womansufferingdryhairfromhardwaterImg, hardWaterSignsImg, hardWaterImg, womansufferingfromHardWaterImg].map((img, idx) => (
-                                                <div key={idx} className="embla__slide flex-[0_0_100%] min-w-0 relative h-full">
+                                                <div key={idx} className="embla__slide flex-[0_0_100%] min-w-0 relative h-[700px]">
                                                     <img
                                                         src={img}
                                                         alt={`Impact du calcaire ${idx + 1}`}
