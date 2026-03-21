@@ -274,7 +274,7 @@ const Fontaines = () => {
                                     fontWeight: 600
                                 }}
                             >
-                                L'art de l'eau pure <br /> rafraîchissante.
+                                Fontaines d'eau, l'art de l'eau pure rafraîchissante.
                             </h1>
                             <p className="font-light text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
                                 Élevez votre expérience d'hydratation avec nos refroidisseurs d'eau haute performance. Design élégant et pureté absolue.

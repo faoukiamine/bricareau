@@ -51,6 +51,7 @@ import { heroImg as healthwaterImg } from "./Blog pages/Eau-du-puits-au-quebec-q
 import { heroImg as drinkpurewaterImg } from "./Blog pages/Comment-losmose-inverse-protege-votre-famille-des-contaminants-invisibles";
 import rowaterImg from "@/assets/reasons-to-drink-more-water.jpg";
 import schemaOsmoseImg from "@/assets/Schema-osmose-inverse.png";
+import eauFontaineImg from "@/assets/33860.jpg";
 
 const StationEauPotable = () => {
   const navigate = useNavigate();
@@ -79,14 +80,14 @@ const StationEauPotable = () => {
 
   const comparisonData: ComparisonItem[] = [
     { feature: "Installation sous l'évier (Point d'usage)", stage4: true, stage6: true, stage5: true },
-    { feature: "Nombre d'étapes de filtration", stage4: "4 Étapes", stage6: "6 Étapes", stage5: "5 Étapes" },
-    { feature: "Production journalière", stage4: "75 GPD", stage6: "75 GPD", stage5: "600 GPD" },
+    { feature: "Nombre d'étapes de filtration", stage4: "4 Étapes", stage6: "5 Étapes", stage5: "6 Étapes" },
+    { feature: "Production journalière", stage4: "75 GPD", stage6: "600 GPD", stage5: "75 GPD" },
     { feature: "Élimination sédiments et chlore", stage4: true, stage6: true, stage5: true },
     { feature: "Membrane d'osmose inverse (99%)", stage4: true, stage6: true, stage5: true },
     { feature: "Double pré-filtration au charbon", stage4: false, stage6: true, stage5: true },
     { feature: "Filtre de polissage final", stage4: true, stage6: true, stage5: true },
-    { feature: "Cartouche de reminéralisation", stage4: "Option", stage6: true, stage5: "Option" },
-    { feature: "Équilibrage du pH (Alcalin)", stage4: "Option", stage6: true, stage5: "Option" },
+    { feature: "Cartouche de reminéralisation", stage4: "Option", stage6: "Option", stage5: true },
+    { feature: "Équilibrage du pH (Alcalin)", stage4: "Option", stage6: "Option", stage5: "Option" },
   ];
 
   return (
@@ -213,7 +214,7 @@ const StationEauPotable = () => {
                        <img 
                           src={schemaOsmoseImg} 
                           alt="Schéma technique du processus de filtration par osmose inverse Bricareau" 
-                          className="w-full h-auto relative z-10 transition-transform duration-700 mix-blend-multiply"
+                          className="w-full h-auto relative z-10 transition-transform duration-700"
                        />
                     </div>
                  </div>
@@ -462,7 +463,7 @@ const StationEauPotable = () => {
                 La vérité dans <span className="lg:font-bold"><br />chaque goutte.</span>
               </h2>
               <p className="font-light text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
-                Pourquoi deviner quand vous pouvez vérifier ? <br />Un test d'eau simple pour une protection durable<br /> de votre foyer.
+                Pourquoi deviner quand vous pouvez vérifier ? <br />Un test d'eau simple pour une protection durable<br /> de l'eau de votre foyer.
               </p>
               <div className="flex gap-4">
                 <Button
@@ -491,6 +492,54 @@ const StationEauPotable = () => {
           }
         />
 
+{/* 8. CTA Section - Premium Immersive */}
+                <section className="relative py-32 overflow-hidden">
+                    {/* Background Image with Overlay */}
+                    <div className="absolute inset-0 z-0">
+                        <img
+                            src={eauFontaineImg}
+                            alt="Expert Bricareau en fontaines d'eau"
+                            className="w-full h-full object-cover object-[50%_20%]"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 via-blue-800/50 to-blue-500/20 backdrop-blur-[5px]" />
+                    </div>
+                    <div className="container mx-auto px-6 relative z-10 text-center">
+                        <div className="max-w-4xl mx-auto">
+                            <h2 className="text-white mb-6">
+                                <span className="text-[42px] md:text-[42px] font-light leading-tight block tracking-tight opacity-90 italic">Redéfinissez votre standard de pureté.</span>
+                            </h2>
+                            <p className="text-blue-100/80 font-light text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
+                            Pourquoi vous contenter d'une eau ordinaire quand vous pouvez offrir à votre foyer une source de pureté incomparable ? L'osmose inverse élimine les impuretés invisibles pour ne laisser que l'essentiel : une eau cristalline, un goût exceptionnel et une tranquillité d'esprit totale. Faites le choix de la technologie la plus avancée pour votre santé et votre confort.                            </p>
+                            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                                <Button
+                                    size="lg"
+                                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-12 h-16 shadow-2xl shadow-white/30 group text-lg font-light"
+                                    asChild
+                                >
+                                    <a href="tel:18552649328" className="flex items-center gap-3">
+                                        <Phone className="h-5 w-5 animate-bounce" />
+                                        Parlez à un expert
+                                    </a>
+                                </Button>
+
+                                <Button
+                                    size="lg"
+                                    variant="outline"
+                                    className="rounded-full px-10 h-16 border-white/30 text-white bg-white/5 hover:bg-white/10 backdrop-blur-md text-lg transition-all duration-500"
+                                    asChild
+                                >
+                                    <NavLink to="/consultation">Planifiez-vous une consultation</NavLink>
+                                </Button>
+                            </div>
+
+                            <p className="mt-8 text-white/50 text-sm font-light">
+                                Disponible 7j/7 — Réponse en moins de 24h
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+{/* 9. FAQ Section */}
         <section className="py-24 bg-white border-t border-slate-100">
           <div className="container mx-auto px-6">
             <div className="text-left mb-16">

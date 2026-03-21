@@ -24,7 +24,7 @@ import process4 from "@/assets/unnamed (2).jpg";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import labTestImg from "@/assets/506610454-612x612-1.jpg";
 import eauDureThumb from "@/assets/9e9f1b18-7b69-4af1-9e3d-322775a1ec72.jpg";
-import eauDePuitsImg from "@/assets/185091336.jpg";
+import happyFamilyImg from "@/assets/happy-family-enjoying-time-together.jpg";
 import rouilleThumbUpdated from "@/assets/5a4674e7-575d-4cd9-b1f2-32522f8a7072.jpg";
 import mauvaisGoutThumb from "@/assets/blog3-1.jpg";
 import { heroImg as coliformBacteriaImg } from "./Blog pages/Bacteries-dans-le-puits-les-etapes-de-desinfection-choc";
@@ -343,10 +343,11 @@ const EauDePuits = () => {
                       <div className="absolute inset-0 bg-blue-900/10 group-hover:bg-transparent transition-colors duration-500" />
 
                       {/* Step Badge Overlapping Image */}
-                      <div className={`absolute top-8 ${idx % 2 === 1 ? 'left-8' : 'right-8'} bg-white/90 backdrop-blur-md px-6 py-4 rounded-3xl shadow-xl flex items-center gap-3 border border-white/50`}>
-                        <span className="text-xl font-black text-blue-600">0{idx + 1}</span>
-                        <div className="w-8 h-px bg-slate-200" />
-                        <span className="text-xs font-black uppercase tracking-widest text-slate-400">Phase</span>
+                      <div className="absolute bottom-8 right-8 bg-white/90 backdrop-blur-md px-6 py-4 rounded-3xl shadow-xl flex items-baseline gap-2 border border-white/50">
+                        <span className="text-xl font-black text-blue-600">
+                          {idx + 1}<sup className="text-xs">{idx === 0 ? 'ère' : 'ème'}</sup>
+                        </span>
+                        <span className="text-xs font-black uppercase tracking-widest text-blue-600">Phase</span>
                       </div>
                     </div>
                   </div>
@@ -604,11 +605,11 @@ const EauDePuits = () => {
           {/* Background Image with Overlay */}
           <div className="absolute inset-0 z-0">
             <img
-              src={eauDePuitsImg}
+              src={happyFamilyImg}
               alt="Expert Bricareau en traitement d'eau de puits"
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 via-blue-900/90 to-blue-800/80 backdrop-blur-[2px]" />
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 via-blue-900/60 to-blue-800/30 backdrop-blur-[6px]" />
           </div>
 
           <div className="container mx-auto px-6 relative z-10 text-center">
