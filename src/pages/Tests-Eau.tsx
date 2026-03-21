@@ -60,7 +60,7 @@ import clothesStainsImg from "@/assets/302731406_443870381116589_377080170920960
 import scientistImg from "@/assets/Scientist istesting water.webp";
 import newHeroImg from "@/assets/r0_0_4896_3264_w1200_h678_fmax.jpg";
 import forensicWaterImg from "@/assets/1062.jpg";
-import eauDePuitsImg from "@/assets/Filtration-eau-de-puits.webp";
+import glasspurewaterImg from "@/assets/pexels-pavel-danilyuk-6715989.jpg";
 
 const TestsEauPage = () => {
   const [showAllFaqs, setShowAllFaqs] = useState(false);
@@ -171,7 +171,7 @@ const TestsEauPage = () => {
                   asChild
                 >
                   <a href="tel:18552649328" className="flex items-center gap-2">
-                    <Clock className="h-5 w-5" />
+                    <Phone className="h-5 w-5" />
                     1-855-264-9328
                   </a>
                 </Button>
@@ -392,11 +392,11 @@ const TestsEauPage = () => {
           {/* Background Image with Overlay */}
           <div className="absolute inset-0 z-0">
             <img
-              src={eauDePuitsImg}
+              src={glasspurewaterImg}
               alt="Expert Bricareau en traitement d'eau de puits"
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 via-blue-900/90 to-blue-800/80 backdrop-blur-[2px]" />
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 via-blue-900/70 to-blue-800/10 backdrop-blur-[2px]" />
           </div>
 
           <div className="container mx-auto px-6 relative z-10 text-center">

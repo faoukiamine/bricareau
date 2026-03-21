@@ -8,10 +8,8 @@ import {
     Droplets,
     Star,
     ChevronRight,
-    CheckCircle2,
     Clock,
     Sparkles,
-    Shield,
     Zap,
     Shirt,
     TrendingDown,
@@ -32,7 +30,12 @@ import {
     HeartHandshake,
     BatteryLow,
     ShieldAlert,
-    HeartPulse
+    HeartPulse,
+    ShieldCheck,
+    Leaf,
+    Wrench,
+    CheckCircle2,
+    Shield
 } from "lucide-react";
 import safetyIcon from "@/assets/1709235770048.png";
 import { NavLink } from "@/components/NavLink";
@@ -144,43 +147,89 @@ const DesinfectionUV = () => {
                 </section>
 
                 {/* 3. Why choose UV disinfection? */}
-                <section className="py-24 bg-blue-600 text-white">
-                    <div className="container mx-auto px-6">
-                        <div className="text-center mb-16">
-                            <h2
-                                className="text-white mb-8 md:leading-[60px] text-center"
-                                style={{}}
-                            >
+                <section className="py-24 lg:py-32 bg-slate-50 relative overflow-hidden">
+                    {/* UV Spectral Background Layer */}
+                    <div className="absolute inset-0 pointer-events-none select-none overflow-hidden">
+                        {/* Integrated UV Spectrum Image - Provides the core visual anchor */}
+                        <div className="absolute inset-0 opacity-[0.18] pointer-events-none">
+                            <img 
+                                src="/src/assets/uv-spectrum-abstract.png" 
+                                alt="" 
+                                className="w-full h-full object-cover blur-2xl scale-110"
+                            />
+                        </div>
+
+                        {/* Base Spectral Glows - Enhances the image depth */}
+                        <div className="absolute top-[-10%] left-[-10%] w-[70%] h-[70%] bg-[radial-gradient(circle,rgba(99,102,241,0.12)_0%,transparent_70%)] blur-[120px]" />
+                        <div className="absolute bottom-[-20%] right-[-10%] w-[80%] h-[80%] bg-[radial-gradient(circle,rgba(167,139,250,0.15)_0%,transparent_70%)] blur-[140px]" />
+                        
+                        {/* Linear Spectral Beams (Anamorphic) - Adds procedural light energy */}
+                        <div className="absolute top-1/4 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-blue-400/30 to-transparent -rotate-12 blur-[1px]" />
+                        <div className="absolute top-1/2 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-indigo-500/25 to-transparent rotate-6 blur-[2px]" />
+                        <div className="absolute bottom-1/4 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-purple-400/30 to-transparent -rotate-3 blur-[1px]" />
+
+                        {/* Spectral "Prism" Overlay */}
+                        <div className="absolute inset-0 bg-[linear-gradient(115deg,transparent,rgba(59,130,246,0.03)_20%,rgba(139,92,246,0.05)_40%,rgba(217,70,239,0.03)_60%,transparent)] opacity-40 mix-blend-overlay" />
+                    </div>
+
+                    <div className="container mx-auto px-6 relative z-10">
+                        <div className="max-w-3xl mx-auto text-center mb-20">
+                            <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.2em] mb-6">
+                                TRAITEMENT d'EAU POTABLE SANS CHLORE
+                            </span>
+                            <h2 className="text-slate-900 mb-8 text-[42px] leading-[1.1]">
                                 <span className="font-light block">Pourquoi choisir la</span>
-                                <span className="font-normal block">désinfection UV ?</span>
+                                <span className="font-bold text-blue-600">désinfection UV ?</span>
                             </h2>
-                            <p className="font-light text-blue-100 max-w-2xl mx-auto text-justify">
-                                Profitez d'une tranquillité d'esprit totale avec une technologie qui élimine 99,99% des pathogènes sans ajout de produits chimiques.
+                            <p className="text-slate-500 font-light text-lg max-w-2xl mx-auto leading-relaxed">
+                                Une technologie de pointe qui neutralise les pathogènes par rayonnement, offrant une eau pure sans aucun compromis chimique.
                             </p>
                         </div>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 text-center">
-                            {[
-                                { icon: safetyIcon, isImage: true, title: "Sans produits chimiques", desc: "Aucun goût ni odeur de chlore ajouté à votre eau." },
-                                { icon: Zap, title: "Action instantanée", desc: "L'eau est désinfectée dès qu'elle traverse le débit." },
-                                { icon: Activity, title: "Efficacité prouvée", desc: "Détruit l'ADN des micro-organismes nocifs." },
-                                { icon: HeartHandshake, title: "Sécurité 100%", desc: "Protection permanente 24h/24 contre les bactéries." },
-                                { icon: CupSoda, title: "Goût préservé", desc: "L'eau garde ses propriétés organoleptiques." },
-                                { icon: Droplets, title: "Eau cristalline", desc: "Conserve les minéraux essentiels de votre eau." },
-                                { icon: BatteryLow, title: "Faible énergie", desc: "Consomme autant qu'une ampoule standard." },
-                                { icon: ShieldAlert, title: "Zéro risque", desc: "Pas de stockage de produits chimiques dangereux." }
-                            ].map((benefit, i) => (
-                                <div key={i} className="flex flex-col items-center group">
-                                    <div className="w-20 h-20 rounded-2xl bg-white flex items-center justify-center mb-8 transition-all group-hover:scale-110 group-hover:bg-white/10">
-                                        {benefit.isImage ? (
-                                            <img src={benefit.icon as string} alt={benefit.title} className="h-12 w-12 object-contain" />
-                                        ) : (
-                                            <benefit.icon className="h-10 w-10 text-blue-600 group-hover:text-white" />
-                                        )}
+
+                        <div className="relative">
+                            {/* Central "UV Ray" Visual Anchor (Desktop only) */}
+                            <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-blue-200 to-transparent -translate-x-1/2 opacity-60" />
+
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 lg:gap-x-32 gap-y-16 lg:gap-y-0 relative">
+                                {[
+                                    { icon: Leaf, title: "Sans produits chimiques", desc: "Aucun goût ni odeur de chlore. Les rayons UV agissent physiquement sur les pathogènes, préservant la pureté originelle de votre eau sans aucun additif chimique." },
+                                    { icon: Zap, title: "Action instantanée", desc: "Contrairement au chlore qui nécessite un temps de contact, les UV désinfectent l'eau dès qu'elle traverse la chambre de traitement." },
+                                    { icon: Award, title: "Efficacité prouvée", desc: "Le rayonnement UV-C pénètre instantanément l'ADN des micro-organismes, les rendant inoffensifs et incapables de se reproduire." },
+                                    { icon: Shield, title: "Sécurité absolue", desc: "Une barrière infranchissable contre les bactéries, virus et kystes (Cryptosporidium), même ceux résistants aux désinfectants classiques." },
+                                    { icon: CupSoda, title: "Goût préservé", desc: "Votre eau conserve toutes ses propriétés minérales et son goût naturel frais, sans les sous-produits toxiques liés au chlore." },
+                                    { icon: ShieldCheck, title: "Zéro risque", desc: "Pas de manipulation ni de stockage de produits chimiques dangereux chez vous. Une solution propre, saine et sans danger pour l'environnement." },
+                                    { icon: BatteryLow, title: "Éco-Énergétique", desc: "Une protection permanente 24h/24 qui consomme aussi peu d'énergie qu'une simple ampoule domestique standard." },
+                                    { icon: Wrench, title: "Entretien minimal", desc: "Conçu pour la simplicité. Un changement de lampe annuel suffit pour garantir une performance optimale et une sécurité constante." }
+                                ].map((benefit, i) => (
+                                    <div 
+                                        key={i} 
+                                        className={`group relative flex flex-col md:flex-row items-start lg:items-center gap-6 lg:gap-8 ${
+                                            i % 2 === 0 ? 'lg:justify-end lg:text-right' : 'lg:justify-start lg:text-left'
+                                        } ${
+                                            // Stagger effect on desktop
+                                            i % 2 !== 0 ? 'lg:translate-y-32' : ''
+                                        } lg:mb-40 transition-all duration-700`}
+                                    >
+                                        {/* Content container for better alignment */}
+                                        <div className={`flex flex-col ${i % 2 === 0 ? 'lg:items-end' : 'lg:items-start'} max-w-md`}>
+                                            <div className={`w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center mb-6 text-blue-600 group-hover:bg-blue-600 group-hover:text-white group-hover:scale-110 transition-all duration-500 shadow-[0_0_20px_rgba(37,99,235,0.1)]`}>
+                                                <benefit.icon className="h-6 w-6" />
+                                            </div>
+                                            <h3 className="text-2xl font-bold text-slate-900 mb-4 tracking-tight group-hover:text-blue-600 transition-colors">
+                                                {benefit.title}
+                                            </h3>
+                                            <p className={`text-slate-500 font-light leading-relaxed ${i % 2 === 0 ? 'lg:text-right' : 'lg:text-left'} text-justify md:text-inherit`}>
+                                                {benefit.desc}
+                                            </p>
+                                        </div>
+
+                                        {/* Connecting "Glow Node" on the central line (Desktop only) */}
+                                        <div className={`hidden lg:block absolute top-1/2 w-4 h-4 rounded-full bg-blue-100 border-2 border-white shadow-sm transition-all duration-500 group-hover:bg-blue-600 group-hover:scale-125 group-hover:shadow-[0_0_15px_rgba(37,99,235,0.5)] ${
+                                            i % 2 === 0 ? '-right-16 lg:-right-[68px]' : '-left-16 lg:-left-[68px]'
+                                        } -translate-y-1/2`} />
                                     </div>
-                                    <h3 className="mb-4 tracking-tight">{benefit.title}</h3>
-                                    <p className="font-light text-blue-100 text-justify">{benefit.desc}</p>
-                                </div>
-                            ))}
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </section>

@@ -10,7 +10,28 @@ import {
     Droplets,
     Zap,
     CircleDollarSign,
-    Search
+    Search,
+    ShieldAlert,
+    Wind,
+    Leaf,
+    Ban,
+    Scale,
+    Smile,
+    Waves,
+    Activity,
+    Check,
+    X,
+    FlaskConical,
+    Layers,
+    Sprout,
+    Atom,
+    GlassWater,
+    Anvil,
+    Microscope,
+    Bug,
+    Mountain,
+    Sparkles,
+    TriangleAlert
 } from "lucide-react";
 import safetyIcon from "@/assets/1709235770048.png";
 import { NavLink } from "@/components/NavLink";
@@ -34,9 +55,11 @@ import waterTestingImg from "@/assets/undersink_filtration_header.jpg";
 import multiStageFilterImg from "@/assets/RO undersink system.jpg";
 import medsInWaterImg from "@/assets/eau_medicaments.png";
 import undersinkVsWholeHouseImg from "@/assets/2148947324.jpg";
+import bgEfficiencyImg from "@/assets/2148728701.jpg";
 import { heroImg as filtreSousEvierImg } from "./Blog pages/Filtre-sous-evier-lalternative-simple-aux-pichets-filtrants";
 import { heroImg as plombVieillesMaisonsImg } from "./Blog pages/Le-plomb-dans-les-vieilles-maisons-comment-se-proteger";
 import { heroImg as eauVilleFiltreeImg } from "./Blog pages/Pourquoi-meme-leau-de-ville-a-besoin-detre-filtree";
+import womandrinkingwaterImg from "@/assets/25716.jpg";
 
 const FiltrationSousEvier = () => {
     const navigate = useNavigate();
@@ -138,39 +161,102 @@ const FiltrationSousEvier = () => {
                     </div>
                 </section>
 
-                {/* 2. Pourquoi choisir */}
-                <section className="py-24 bg-blue-600 text-white">
-                    <div className="container mx-auto px-6">
-                        <div className="text-center mb-16">
-                            <h2 className="text-white mb-8 md:leading-[48px]">
-                                Pourquoi installer l'un de nos systèmes <br />de filtration d'eau sous l'évier de votre cuisine?
-                            </h2>
-                            <p className="font-light text-blue-100 max-w-2xl mx-auto text-justify">
-                                Profitez d'une eau d'une pureté exceptionnelle pour votre boisson et votre cuisine tout en simplifiant votre quotidien.
-                            </p>
-                        </div>
-                        <div className="flex flex-wrap justify-center gap-x-12 gap-y-16 text-center">
-                            {[
-                                { icon: safetyIcon, isImage: true, title: "Goût Incomparable", desc: "Sublimez vos saveurs quotidiennes. Idéal pour un café aux arômes riches et des légumes qui conservent leurs nuriments sans le goût désagréable du chlore." },
-                                { icon: Droplets, title: "Éco-Responsable", desc: "Dites adieu au plastique. Une seule cartouche remplace des milliers de bouteilles à usage unique, offrant un geste concret et puissant pour la planète." },
-                                { icon: Zap, title: "Discrétion Totale", desc: "Une solution compacte et invisible. S'installe discrètement sous votre comptoir de cuisine sans encombrer votre plan de travail ou votre espace de rangement." },
-                                { icon: CircleDollarSign, title: "Économies", desc: "Rentabilisez vite votre investissement. Réduisez vos dépenses annuelles en éliminant définitivement l'achat coûteux d'eau embouteillée pour tout votre foyer." },
-                            ].map((item, i) => (
-                                <div key={i} className="flex flex-col items-center group w-full sm:w-[calc(50%-3rem)] lg:w-[calc(25%-3rem)]">
-                                    <div className="w-20 h-20 rounded-2xl bg-white flex items-center justify-center mb-8 transition-all group-hover:scale-110 group-hover:bg-white/10">
-                                        {item.isImage ? (
-                                            <img src={item.icon as string} alt={item.title} className="h-12 w-12 object-contain" />
-                                        ) : (
-                                            <item.icon className="h-10 w-10 text-blue-600 group-hover:text-white" />
-                                        )}
-                                    </div>
-                                    <h3 className="mb-4 tracking-tight">{item.title}</h3>
-                                    <p className="font-light text-blue-100 text-justify">{item.desc}</p>
-                                </div>
-                            ))}
-                        </div>
+                {/* 2. Ce qu'il élimine - Efficiency Section */}
+                <section className="py-24 relative overflow-hidden bg-white">
+                    {/* Background Image with Harmony Filters */}
+                    <div className="absolute inset-0 z-0">
+                        <img 
+                            src={bgEfficiencyImg} 
+                            alt="" 
+                            className="w-full h-full object-cover opacity-60 pointer-events-none" 
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent backdrop-blur-[0.5px]" />
                     </div>
-                </section>
+
+                    {/* Ambient Glows */}
+                    <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-100/30 rounded-full blur-[120px] translate-x-1/2 -translate-y-1/2 z-0" />
+                    <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-indigo-100/20 rounded-full blur-[100px] -translate-x-1/2 translate-y-1/2 z-0" />
+
+                    <div className="container mx-auto px-6 relative z-10">
+                        <div className="max-w-3xl mb-20">
+              <span className="inline-block px-4 py-1.5 bg-blue-50 text-blue-600 rounded-full text-xs font-black uppercase tracking-widest mb-6">
+                                PERFORMANCE & CAPACITÉ
+                            </span>
+                            <h2 className="text-slate-900 leading-[1.1] tracking-tight">
+                                <span className="text-[42px] md:text-[42px] font-light leading-[1.1] md:leading-[42px] block tracking-tighter text-slate-900">Qu’est-ce qu’un filtre sous évier</span>
+              <span className="text-[42px] md:text-[42px] font-bold text-blue-600 leading-[1.1] md:leading-[42px] block tracking-tighter">élimine-t-il réellement ?</span>
+                            </h2>
+                        </div>
+
+                        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-stretch">
+                            {/* Pro-Efficiency Column */}
+                            <div className="lg:col-span-7 space-y-12">
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+                                    {[
+                                        { title: "Chlore & Chloramines", desc: "Élimine le goût et l'odeur de 'piscine' pour une eau délicieuse." },
+                                        { title: "Sédiments & Rouille", desc: "Retient le sable, la terre et les particules en suspension." },
+                                        { title: "Pesticides & Herbicides", desc: "Réduit les traces de polluants agricoles courants." },
+                                        { title: "Composés Organiques", desc: "Capture les COV pour une eau chimiquement plus pure." },
+                                        { title: "Odeurs & Mauvais Goûts", desc: "Neutralise toute saveur métallique ou terreuse désagréable." },
+                                        { title: "Métaux Lourds", desc: "Selon cartouches : réduit plomb, cuivre et aluminium." },
+                                    ].map((item, idx) => (
+                                        <div key={idx} className="group flex gap-4 transition-all duration-300">
+                                            <div className="flex-shrink-0 mt-1">
+                                                <Check className="w-4 h-4 text-blue-600" />
+                                            </div>
+                                            <div className="space-y-1">
+                                                <h4 className="text-slate-900 font-bold text-[15px] tracking-tight">{item.title}</h4>
+                                                <p className="text-slate-500 font-light text-[13px] leading-relaxed italic">{item.desc}</p>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                                <div className="mt-12 p-8 bg-blue-50/40 rounded-[2rem] border border-blue-100/50 backdrop-blur-sm relative overflow-hidden group">
+                                    <div className="absolute top-0 right-0 p-6 opacity-5 group-hover:scale-110 transition-transform">
+                                        <CheckCircle2 className="w-16 h-16 text-blue-600" />
+                                    </div>
+                                    <p className="text-sm text-blue-700 font-light leading-relaxed mb-0 relative z-10 text-justify">
+                                        <strong className="block mb-2 text-base font-bold text-blue-800 text-left">Besoin d'une protection complète ?</strong>
+                                        Si votre eau présente des problèmes microbiologiques ou de calcaire, demandez conseil à nos experts pour combiner votre filtre avec nos solutions spécialisées et obtenir une eau parfaite.
+                                    </p>
+                                </div>
+                            </div>
+
+                            {/* Limits Column (Glassmorphism Sidebar) */}
+                            <div className="lg:col-span-5">
+                                <div className="bg-white/5 backdrop-blur-2xl rounded-[3rem] p-10 border border-white/20 relative shadow-[0_20px_50px_-20px_rgba(0,0,0,0.05)]">
+                                    <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/4">
+                                        <div className="w-64 h-64 bg-blue-100/20 rounded-full blur-3xl opacity-50" />
+                                    </div>
+
+                                    <div className="flex items-center gap-4 mb-10 relative z-10">
+                                        <div className="w-12 h-12 rounded-2xl bg-red-50 backdrop-blur-md flex items-center justify-center text-red-500 border border-red-100">
+                                            <TriangleAlert className="h-5 w-5" />
+                                        </div>
+                                        <h3 className="text-xl font-bold text-slate-900 tracking-tight">Limites importantes</h3>
+                                    </div>
+
+                                    <div className="space-y-8 relative z-10">
+                                        {[
+                                            { label: "Dureté & Calcaire", desc: "Ne remplace pas un adoucisseur. Il ne traite pas l'accumulation de tartre." },
+                                            { label: "Désinfection Totale", desc: "Ne traite pas les virus/bactéries. Nécessite un système UV ou chlore excepté le système d'ultrafiltration." },
+                                            { label: "Contaminants Dissous", desc: "Efficacité limitée sur PFAS/Nitrates. L'osmose inverse est alors recommandée." },
+                                        ].map((limit, idx) => (
+                                            <div key={idx} className="flex gap-4 items-start group">
+                                                <div className="mt-2 h-1.5 w-1.5 rounded-full bg-slate-400 ring-[5px] ring-slate-100 group-hover:bg-slate-600 transition-all flex-shrink-0" />
+                                                <div className="space-y-1">
+                                                    <div className="text-slate-900 text-[15px] font-semibold">{limit.label}</div>
+                                                    <p className="text-slate-500 font-light text-sm italic">{limit.desc}</p>
+                                                </div>
+                                            </div>
+                                        ))}
+                                    </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
 
                 {/* 3. Product Grid */}
                 <section id="systemes-filtration" className="py-24 bg-white">
@@ -225,6 +311,81 @@ const FiltrationSousEvier = () => {
                                         >
                                             <ArrowRight className="h-6 w-6 transform group-hover:translate-x-1 transition-transform" />
                                         </div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+               {/* 3. Pourquoi choisir - Fluid Editorial Design */}
+                <section className="py-32 bg-white relative overflow-hidden">
+                    {/* Background Decorative Elements */}
+                    <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-blue-50/30 rounded-full blur-[120px] -translate-y-1/2 z-0" />
+                    <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-indigo-50/20 rounded-full blur-[100px] translate-y-1/2 z-0" />
+
+                    <div className="container mx-auto px-6 relative z-10">
+                        <div className="max-w-4xl mx-auto text-center mb-24">
+              <span className="inline-block px-4 py-1.5 bg-blue-50 text-blue-600 rounded-full text-xs font-black uppercase tracking-widest mb-6">
+                                L'EXCELLENCE DE L'EAU FILTRÉE AU QUOTIDIEN
+                            </span>
+                            <h2 className="text-slate-900 leading-[1.05] tracking-[ -0.04em] mb-10">
+                                <span className="text-[42px] md:text-[42px] font-light leading-[1.1] md:leading-[42px] block tracking-tighter text-slate-900">Pourquoi privilégier nos</span>
+              <span className="text-[42px] md:text-[42px] font-bold text-blue-600 leading-[1.1] md:leading-[42px] block tracking-tighter">systèmes de filtration d'eau sous l'évier ?</span>
+                            </h2>
+                            <div className="w-16 h-0.5 bg-blue-600/20 mx-auto mb-10" />
+                            <p className="font-light text-slate-500 text-lg max-w-2xl mx-auto leading-relaxed italic">
+                                Une fusion parfaite entre haute technologie, durabilité environnementale et confort domestique absolu.
+                            </p>
+                        </div>
+
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-20 gap-y-24">
+                            {[
+                                { 
+                                    icon: GlassWater, 
+                                    title: "Goût Authentique", 
+                                    desc: "Sublimez vos saveurs. Un café aux arômes authentiques et des plats qui retrouvent leur vrai goût, libérés du chlore.",
+                                    num: "01"
+                                },
+                                { 
+                                    icon: Leaf, 
+                                    title: "Zéro Plastique", 
+                                    desc: "Dites définitivement adieu au plastique. Une seule cartouche préserve la planète de milliers de bouteilles jetables.",
+                                    num: "02"
+                                },
+                                { 
+                                    icon: Sparkles, 
+                                    title: "Design compact", 
+                                    desc: "L'élégance de la discrétion. Une intégration fluide sous votre comptoir qui préserve l'esthétique de votre cuisine.",
+                                    num: "03"
+                                },
+                                { 
+                                    icon: Activity, 
+                                    title: "Rendement Durable", 
+                                    desc: "Une économie intelligente. Transformez votre eau du robinet en une ressource premium, sans coût récurrent.",
+                                    num: "04"
+                                },
+                            ].map((item, i) => (
+                                <div key={i} className="group flex items-start gap-10">
+                                    <div className="relative flex-shrink-0">
+                                        <div className="w-16 h-16 flex items-center justify-center text-blue-600 transition-all duration-700">
+                                            <item.icon strokeWidth={1} className="w-14 h-14 group-hover:scale-110 group-hover:rotate-6 transition-all duration-700" />
+                                        </div>
+                                        <span className="absolute -top-6 -left-6 text-6xl font-black text-blue-100/20 group-hover:text-blue-200/30 transition-colors duration-700 select-none">
+                                            {item.num}
+                                        </span>
+                                    </div>
+                                    
+                                    <div className="space-y-4">
+                                        <div className="flex items-center gap-4">
+                                            <h3 className="text-2xl font-bold text-slate-900 tracking-tight group-hover:text-blue-600 transition-colors duration-500">
+                                                {item.title}
+                                            </h3>
+                                            <div className="h-px w-0 group-hover:w-12 bg-blue-600/30 transition-all duration-700" />
+                                        </div>
+                                        <p className="text-slate-500 font-light text-base leading-relaxed text-justify opacity-80 group-hover:opacity-100 transition-opacity duration-500 max-w-lg">
+                                            {item.desc}
+                                        </p>
                                     </div>
                                 </div>
                             ))}
@@ -417,7 +578,55 @@ const FiltrationSousEvier = () => {
                     </div>
                 </section>
 
-                {/* 8. Resources Section */}
+                {/* 8. CTA Section - Premium Immersive */}
+                <section className="relative py-32 overflow-hidden">
+                    {/* Background Image with Overlay */}
+                    <div className="absolute inset-0 z-0">
+                        <img
+                            src={womandrinkingwaterImg}
+                            alt="Expert Bricareau en fontaines d'eau"
+                            className="w-full h-full object-cover object-[center_25%]"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 via-blue-800/60 to-blue-500/30 backdrop-blur-[2px]" />
+                    </div>
+                    <div className="container mx-auto px-6 relative z-10 text-center">
+                        <div className="max-w-4xl mx-auto">
+                            <h2 className="text-white mb-6">
+                                <span className="text-[42px] md:text-[42px] font-light leading-tight block tracking-tight opacity-90 italic">Prêt à dire adieu à l’eau embouteillée ?</span>
+                            </h2>
+                            <p className="text-blue-100/80 font-light text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
+                                Passez au filtre sous évier et profitez d’une eau filtrée, savoureuse et économique directement à votre robinet. Contactez-nous pour une démonstration, une analyse d’eau ou un devis personnalisé. Installation rapide sous 48h disponible dans plusieurs régions !                            </p>
+
+                            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                                <Button
+                                    size="lg"
+                                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-12 h-16 shadow-2xl shadow-white/30 group text-lg font-light"
+                                    asChild
+                                >
+                                    <a href="tel:18552649328" className="flex items-center gap-3">
+                                        <Phone className="h-5 w-5 animate-bounce" />
+                                        Parlez à un expert
+                                    </a>
+                                </Button>
+
+                                <Button
+                                    size="lg"
+                                    variant="outline"
+                                    className="rounded-full px-10 h-16 border-white/30 text-white bg-white/5 hover:bg-white/10 backdrop-blur-md text-lg transition-all duration-500"
+                                    asChild
+                                >
+                                    <NavLink to="/consultation">Planifiez-vous une consultation</NavLink>
+                                </Button>
+                            </div>
+
+                            <p className="mt-8 text-white/50 text-sm font-light">
+                                Disponible 7j/7 — Réponse en moins de 24h
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                {/* 9. Resources Section */}
                 <section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">

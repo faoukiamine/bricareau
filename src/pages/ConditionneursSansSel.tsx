@@ -410,7 +410,7 @@ const ConditionneursSansSel = () => {
               alt="Expert Bricareau en traitement d'eau de puits"
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 via-blue-900/90 to-blue-800/80 backdrop-blur-[2px]" />
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-900/80 via-blue-900/70 to-blue-800/30 backdrop-blur-[2px]" />
           </div>
 
           <div className="container mx-auto px-6 relative z-10 text-center">

@@ -248,7 +248,7 @@ const Fontaines = () => {
         <div className="min-h-screen bg-white">
             <Header />
             <main>
-                {/* Hero Section (Adoucissement Pattern) */}
+                {/* 1. Hero Section (Adoucissement Pattern) */}
                 <section className="relative lg:min-h-[650px] flex flex-col lg:items-center overflow-hidden bg-white">
                     <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none hidden lg:block">
                         <div className="container mx-auto px-4 lg:px-6 pointer-events-auto">
@@ -295,7 +295,7 @@ const Fontaines = () => {
                     </div>
                 </section>
 
-                {/* Section 1: Modern Editorial Solutions Section */}
+                {/* 2. Section 1: Modern Editorial Solutions Section */}
                 <section id="models" className="relative py-32 bg-white overflow-hidden scroll-mt-20">
                     {/* Background decorations */}
                     <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-50/50 rounded-full blur-[120px] -z-0 translate-x-1/3 -translate-y-1/3" />
@@ -343,7 +343,7 @@ const Fontaines = () => {
                     </div>
                 </section>
 
-                {/* 4. Impact & Technologie Section - MODERN EDITORIAL BENTO */}
+                {/* 3. Impact & Technologie Section - MODERN EDITORIAL BENTO */}
                 <section className="py-32 bg-white relative overflow-hidden">
                     {/* Background glows */}
                     <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-blue-50/50 rounded-full blur-[100px] -translate-x-1/2 -translate-y-1/2 -z-0" />
@@ -428,7 +428,7 @@ const Fontaines = () => {
                     }
                 />
 
-                {/* 5. Impact Environnemental - Full Width Modern Section */}
+                {/* 4. Impact Environnemental - Full Width Modern Section */}
                 <section className="pb-32 bg-white relative overflow-hidden">
                     <div className="container mx-auto px-6 relative z-10">
                         {/* MINIMALIST LIFESTYLE ALTERNATIVE */}
@@ -473,7 +473,7 @@ const Fontaines = () => {
                 </section>
 
 
-                {/* 9. CTA Section - Premium Immersive */}
+                {/* 5. CTA Section - Premium Immersive */}
                 <section className="relative py-32 overflow-hidden">
                     {/* Background Image with Overlay */}
                     <div className="absolute inset-0 z-0">

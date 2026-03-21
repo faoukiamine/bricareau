@@ -16,7 +16,10 @@ import {
   Droplets,
   Zap,
   Search,
-  ShieldCheck
+  ShieldCheck,
+  ShieldAlert,
+  Sparkles,
+  Activity
 } from "lucide-react";
 import safetyIcon from "@/assets/1709235770048.png";
 import { NavLink } from "@/components/NavLink";
@@ -47,6 +50,7 @@ import pfasImg from "@/assets/PFAS.jpg.jpg";
 import { heroImg as healthwaterImg } from "./Blog pages/Eau-du-puits-au-quebec-quand-installer-un-systeme-dosmose-inverse";
 import { heroImg as drinkpurewaterImg } from "./Blog pages/Comment-losmose-inverse-protege-votre-famille-des-contaminants-invisibles";
 import rowaterImg from "@/assets/reasons-to-drink-more-water.jpg";
+import schemaOsmoseImg from "@/assets/Schema-osmose-inverse.png";
 
 const StationEauPotable = () => {
   const navigate = useNavigate();
@@ -110,35 +114,30 @@ const StationEauPotable = () => {
           <div className="container relative z-10 mx-auto px-4 h-full flex items-center lg:px-6">
             <div className="max-w-2xl lg:text-white py-12 lg:py-0">
               <h1
-                className="text-[48px] md:text-[48px] leading-[1.1] md:leading-[1.2] font-bold lg:font-light mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl"
-                style={{
-                  fontWeight: 600
-                }}
+                className="text-[48px] md:text-[56px] leading-[1.05] mb-6 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl font-bold lg:font-light"
               >
-                Système d'osmose inverse, la pureté absolue à votre robinet.
+                Système d'osmose inverse, la pureté absolue à chaque goutte.
               </h1>
-              <p className="font-light text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
-                Transformez votre eau municipale en une source de pureté cristalline. Nos purificateurs d'eau par osmose inverse éliminent 99% des contaminants, du plomb au chlore, pour une eau fraîche, saine et alcaline.
+              <p className="font-light text-slate-600 lg:text-white/95 mb-10 max-w-xl text-left lg:text-justify text-lg leading-relaxed">
+                Transformez votre eau municipale en une source de pureté cristalline. Nos purificateurs d'eau par osmose inverse éliminent 99% des contaminants pour une eau fraîche, saine et alcaline.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-5">
                 <Button
                   size="lg"
-                  className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200"
-                  style={{}}
+                  className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-10 h-16 shadow-xl shadow-blue-200/50 transition-all hover:scale-105 active:scale-95"
                   asChild
                 >
                   <a href="#purification-systems">
-                    Découvrir nos systèmes d'osmose inverse
+                    Explorer nos systèmes
                   </a>
                 </Button>
                 <Button
                   size="lg"
                   variant="outline"
-                  className="bg-slate-100 lg:bg-white/10 hover:bg-slate-200 lg:hover:bg-white/20 text-slate-800 lg:text-white border-slate-200 lg:border-white rounded-full px-8 h-14 backdrop-blur-sm shadow-lg"
-                  style={{}}
+                  className="bg-slate-100 lg:bg-white/10 hover:bg-slate-200 lg:hover:bg-white/20 text-slate-800 lg:text-white border-slate-200 lg:border-white rounded-full px-10 h-16 backdrop-blur-sm shadow-lg transition-all hover:scale-105"
                   asChild
                 >
-                  <a href="tel:18552649328" className="flex items-center gap-2">
+                  <a href="tel:18552649328" className="flex items-center gap-3">
                     <Phone className="h-5 w-5" />
                     1-855-264-9328
                   </a>
@@ -146,54 +145,97 @@ const StationEauPotable = () => {
               </div>
             </div>
           </div>
+
+          {/* Decorative Flow Line - Desktop Only */}
+          <div className="hidden lg:block absolute bottom-0 left-[4.5rem] w-px h-32 bg-gradient-to-b from-transparent to-blue-200/50 z-20" />
         </section>
+        {/* 2. La Science de la Pureté - Technical Journey Transition */}
+        <section className="py-20 lg:py-24 bg-slate-50/50 relative overflow-hidden">
+          {/* Background Technical Watermark */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full opacity-[0.03] pointer-events-none z-0">
+             <div className="w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-blue-600 to-transparent scale-150" />
+          </div>
 
-        {/* 3. Pourquoi choisir - Floating Glass Deck (Light Theme) */}
-        <section className="relative py-32 bg-slate-50 text-slate-900 overflow-hidden">
-          {/* Subtle Ambient Glows */}
-          <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-blue-200/60 rounded-full blur-[100px] pointer-events-none" />
-          <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-cyan-200/40 rounded-full blur-[100px] pointer-events-none" />
-
-          <div className="container relative z-10 mx-auto px-6">
-            <div className="text-center max-w-3xl mx-auto mb-20">
-              <h2 className="text-slate-900 mb-6 md:leading-[1.2] text-[42px] font-light tracking-tight text-center">
-                Pourquoi choisir nos systèmes <br className="hidden md:block" />
-                <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">
-                  d'osmose inverse ?
-                </span>
-              </h2>
-              <p className="font-light text-slate-600 text-lg sm:text-xl text-center">
-                Une technologie de pointe pour une eau d'une pureté exceptionnelle tout en offrant une protection permanente pour votre foyer.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 text-justify">
-              {[
-                { icon: ShieldCheck, title: "Sécurité maximale", desc: "Élimine 99% des virus, bactéries et contaminants chimiques." },
-                { icon: Droplets, title: "Goût incomparable", desc: "Retrouvez le vrai goût de l'eau, limpide et rafraîchissante." },
-                { icon: GlassWater, title: "Eau pure 24/7", desc: "Accès instantané à une eau de meilleure qualité." },
-                { icon: CircleDollarSign, title: "Économies", desc: "Éliminez l'achat de bouteilles d'eau plastique." },
-              ].map((item, i) => (
-                <div key={i} className="group bg-white border border-slate-100 rounded-[2rem] p-8 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2 relative overflow-hidden text-left">
-                  <div className="absolute -right-4 -bottom-4 opacity-5 group-hover:opacity-10 transition-opacity duration-500 transform group-hover:scale-110">
-                    <item.icon className="w-32 h-32 text-blue-600" />
-                  </div>
-                  <div className="relative z-10 w-16 h-16 rounded-2xl bg-blue-50 flex items-center justify-center mb-8 group-hover:bg-blue-600 transition-colors duration-500">
-                    <item.icon className="h-8 w-8 text-blue-600 group-hover:text-white transition-colors duration-500" />
-                  </div>
-                  <h3 className="relative z-10 text-xl font-bold text-slate-900 mb-4 tracking-tight group-hover:text-blue-600 transition-colors duration-500">
-                    {item.title}
-                  </h3>
-                  <p className="relative z-10 text-slate-500 font-light leading-relaxed">
-                    {item.desc}
-                  </p>
+          <div className="container mx-auto px-6 relative z-10">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-center">
+              
+              {/* Left: The Narrative Content */}
+              <div className="lg:col-span-6 space-y-10">
+                <div className="space-y-6">
+                  <span className="inline-block px-4 py-1.5 bg-blue-600 text-white rounded-full text-[10px] font-black uppercase tracking-[0.3em] shadow-lg shadow-blue-200">
+                    L'INGÉNIERIE DE LA PURETÉ
+                  </span>
+                  <h2 className="text-slate-900 leading-[1.05] tracking-tight">
+                    <span className="font-light block text-[42px] md:text-[64px] text-slate-400">Plus qu’un filtre,</span>
+                    <span className="font-bold block text-[42px] md:text-[64px] text-blue-600">une métamorphose.</span>
+                  </h2>
                 </div>
-              ))}
+                
+                <p className="font-light text-slate-600 text-lg leading-relaxed text-justify max-w-xl">
+                  Issue du dessalement de l’eau de mer, cette technologie utilise une membrane de 0,0001 micron pour bloquer les impuretés les plus infimes. Cette barrière physique absolue élimine virus, métaux lourds et micropolluants, garantissant une pureté cristalline constante à chaque verre.
+                </p>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-8 border-t border-slate-100 text-justify">
+                   {[
+                     { 
+                       title: "Qualité supérieure à la bouteille", 
+                       desc: "Accédez à une eau d'une pureté certifiée, surpassant les standards des eaux minérales du commerce."
+                     },
+                     { 
+                       title: "Barrière anti-polluants", 
+                       desc: "Éliminez efficacement les résidus de médicaments, le plomb et les micro-plastiques indétectables."
+                     },
+                     { 
+                       title: "Saveur des aliments préservée", 
+                       desc: "Redécouvrez le vrai goût de vos infusions, de votre café et de vos préparations culinaires."
+                     },
+                     { 
+                       title: "Pureté en libre-service", 
+                       desc: "Profitez d'un débit constant et illimité directement à votre robinet, sans aucune attente."
+                     }
+                   ].map((item, idx) => (
+                     <div key={idx} className="group flex gap-3 p-1 transition-all duration-500 cursor-default">
+                        <div className="w-1.5 h-1.5 bg-blue-600 rounded-full mt-[10px] flex-shrink-0 group-hover:scale-125 transition-transform" />
+                        <div>
+                           <h4 className="font-bold text-slate-800 text-lg mb-2 group-hover:text-blue-600 transition-colors">{item.title}</h4>
+                           <p className="text-slate-500 font-light text-sm leading-relaxed">{item.desc}</p>
+                        </div>
+                     </div>
+                   ))}
+                </div>
+              </div>
+
+              {/* Right: The Visual Connection (The "Core" of Osmosis) */}
+              <div className="lg:col-span-6 relative">
+                 <div className="relative max-w-2xl mx-auto group">
+                    {/* Integrated Schema - No Card/Box */}
+                    <div className="relative overflow-hidden transition-all duration-700">
+                       <img 
+                          src={schemaOsmoseImg} 
+                          alt="Schéma technique du processus de filtration par osmose inverse Bricareau" 
+                          className="w-full h-auto relative z-10 transition-transform duration-700 mix-blend-multiply"
+                       />
+                    </div>
+                 </div>
+
+                 {/* Tech Label */}
+                 <div className="mt-16 bg-slate-50 rounded-3xl p-8 border border-slate-100 flex items-center gap-6">
+                    <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm">
+                       <ShieldCheck className="w-6 h-6 text-blue-600" />
+                    </div>
+                    <p className="text-slate-500 text-sm font-light italic leading-snug">
+                       "Une barrière physique absolue contre les virus, PFAS, hormones et métaux lourds."
+                    </p>
+                 </div>
+              </div>
+
             </div>
+
+            
           </div>
         </section>
 
-        {/* 4. Systèmes d'osmose inverse - Product Grid */}
+        {/* 3. Systèmes d'osmose inverse - Product Grid */}
         <section id="purification-systems" className="py-24 bg-white">
           <div className="container mx-auto px-6">
             <div className="text-left mb-16">
@@ -250,6 +292,80 @@ const StationEauPotable = () => {
                       <span></span>
                       <ArrowRight className="h-6 w-6 transform group-hover:translate-x-1 transition-transform" />
                     </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+        {/* 4. Pourquoi choisir - Fluid Editorial Design */}
+        <section className="py-32 bg-white relative overflow-hidden">
+          {/* Background Decorative Elements */}
+          <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-blue-50/30 rounded-full blur-[120px] -translate-y-1/2 z-0" />
+          <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-indigo-50/20 rounded-full blur-[100px] translate-y-1/2 z-0" />
+
+          <div className="container mx-auto px-6 relative z-10">
+            <div className="max-w-4xl mx-auto text-center mb-24">
+              <span className="inline-block px-4 py-1.5 bg-blue-50 text-blue-600 rounded-full text-xs font-black uppercase tracking-widest mb-6">
+                L'EXCELLENCE DE L'OSMOSE INVERSE AU QUOTIDIEN
+              </span>
+              <h2 className="text-slate-900 leading-[1.05] tracking-[ -0.04em] mb-10 text-center">
+                <span className="text-[42px] md:text-[42px] font-light leading-[1.1] md:leading-[42px] block tracking-tighter text-slate-900">Pourquoi choisir nos</span>
+                <span className="text-[42px] md:text-[42px] font-bold text-blue-600 leading-[1.1] md:leading-[42px] block tracking-tighter">systèmes d'osmose inverse ?</span>
+              </h2>
+              <div className="w-16 h-0.5 bg-blue-600/20 mx-auto mb-10" />
+              <p className="font-light text-slate-500 text-lg sm:text-lg max-w-2xl mx-auto leading-relaxed italic text-center">
+                Une technologie de pointe pour une eau d'une pureté exceptionnelle tout en offrant une protection permanente pour votre foyer.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-20 gap-y-24">
+              {[
+                { 
+                  icon: ShieldCheck, 
+                  title: "Sécurité maximale", 
+                  desc: "Élimine 99% des virus, bactéries et contaminants chimiques.",
+                  num: "01"
+                },
+                { 
+                  icon: Droplets, 
+                  title: "Goût incomparable", 
+                  desc: "Retrouvez le vrai goût de l'eau, limpide et rafraîchissante.",
+                  num: "02"
+                },
+                { 
+                  icon: GlassWater, 
+                  title: "Eau pure 24/7", 
+                  desc: "Accès instantané à une eau de meilleure qualité.",
+                  num: "03"
+                },
+                { 
+                  icon: CircleDollarSign, 
+                  title: "Économies", 
+                  desc: "Éliminez l'achat de bouteilles d'eau plastique.",
+                  num: "04"
+                },
+              ].map((item, i) => (
+                <div key={i} className="group flex items-start gap-10">
+                  <div className="relative flex-shrink-0">
+                    <div className="w-16 h-16 flex items-center justify-center text-blue-600 transition-all duration-700">
+                      <item.icon strokeWidth={1} className="w-14 h-14 group-hover:scale-110 group-hover:rotate-6 transition-all duration-700" />
+                    </div>
+                    <span className="absolute -top-6 -left-6 text-6xl font-black text-blue-100/20 group-hover:text-blue-200/30 transition-colors duration-700 select-none">
+                      {item.num}
+                    </span>
+                  </div>
+                  
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-4">
+                      <h3 className="text-2xl font-bold text-slate-900 tracking-tight group-hover:text-blue-600 transition-colors duration-500 text-left">
+                        {item.title}
+                      </h3>
+                      <div className="h-px w-0 group-hover:w-12 bg-blue-600/30 transition-all duration-700" />
+                    </div>
+                    <p className="text-slate-500 font-light text-base leading-relaxed text-left opacity-80 group-hover:opacity-100 transition-opacity duration-500 max-w-lg">
+                      {item.desc}
+                    </p>
                   </div>
                 </div>
               ))}
@@ -476,13 +592,14 @@ const StationEauPotable = () => {
         </section>
 
         {/* 8. Resources Section */}
-        <section className="py-24 bg-gray-50">
-          <div className="container mx-auto px-4">
+        <section className="py-24 bg-white border-t border-slate-100">
+          <div className="container mx-auto px-6">
             <div className="text-left mb-16">
                <h2
                                 className="text-slate-900 mb-8 text-left"
                                 style={{}}
-                            >                                <span className="text-[42px] md:text-[42px] font-normal leading-[1.1] md:leading-[42px] block">Ressources</span>
+                            >
+                                <span className="text-[42px] md:text-[42px] font-light leading-[1.1] md:leading-[42px] block">Ressources</span>
                             </h2>
               <div className="w-24 h-1 bg-blue-600"></div>
             </div>

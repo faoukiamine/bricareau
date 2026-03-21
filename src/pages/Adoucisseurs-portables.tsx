@@ -19,7 +19,11 @@ import {
     ChevronRight,
     PackageCheck,
     Check,
-    Search
+    Search,
+    Wrench,
+    HeartHandshake,
+    ShieldCheck,
+    Shield
 } from 'lucide-react';
 import safetyIcon from "@/assets/1709235770048.png";
 import { Button } from "@/components/ui/button";
@@ -31,6 +35,7 @@ import waterSoftenerImg from "@/assets/Adoucisseurs d'eau.webp";
 import drinkingWaterImg from "@/assets/Solutions d'eau potable.webp";
 import specialFiltersImg from "@/assets/Filtres d'eau spécialisés.webp";
 import missionImg from "@/assets/boire-eau-robinet.jpg";
+import portableSoftenerProdImg from "@/assets/Portable Water Softener.webp";
 
 
 const AdoucisseursPortables = () => {
@@ -111,156 +116,233 @@ const AdoucisseursPortables = () => {
                 </div>
             </section>
 
-            {/* 3. Sections Benefits - Sticky Split Layout */}
-            <section className="py-24 bg-gray-50 relative">
+            {/* 3. Sections Benefits - Fluid Asymmetrical Editorial Layout */}
+            <section className="py-24 lg:py-32 bg-slate-50 relative overflow-hidden">
+                {/* Background Fluid Elements */}
+                <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-blue-100/40 to-transparent pointer-events-none" />
+                <div className="absolute bottom-0 left-0 w-1/4 h-1/2 bg-[radial-gradient(circle_at_bottom_left,rgba(37,99,235,0.05)_0%,transparent_70%)] pointer-events-none" />
+
                 <div className="container mx-auto px-6">
-                    <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-start">
-
-                        {/* Left Column: Sticky Header */}
-                        <div className="lg:w-1/3 lg:sticky lg:top-32 h-fit">
-                            <span className="inline-block py-1 px-3 rounded-full bg-blue-100 text-blue-600 text-xs font-bold uppercase tracking-widest mb-6 border border-blue-200">
-                                VOS AVANTAGES
-                            </span>
-                            <h2 className="text-slate-900 mb-6 text-[42px] leading-[42px]">
-                                <span className="font-light block">Une eau parfaite,</span>
-                                <span className="font-bold text-blue-600">kilomètre après kilomètre.</span>
-                            </h2>
-                            <p className="text-slate-600 font-light mb-8 text-justify">
-                                Que vous soyez au camping, au quai ou dans un chalet, ne laissez pas la qualité de l'eau gâcher votre confort. Nos solutions portables vous suivent partout.
-                            </p>
-
-                            <div className="hidden lg:block p-6 bg-white rounded-2xl shadow-lg border border-blue-50">
-                                <p className="font-medium text-slate-900 mb-2">Le saviez-vous ?</p>
-                                <p className="text-sm text-slate-500 font-light">
-                                    L'eau dure des campings endommage les chauffe-eaux de VR en moins de 2 ans. Un adoucisseur est votre meilleure assurance.
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 items-start">
+                        
+                        {/* Left Content Side: Header & Fact */}
+                        <div className="lg:col-span-5 lg:sticky lg:top-32 h-fit space-y-16">
+                            <div>
+                                <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.2em] mb-8">
+                                    VOS AVANTAGES
+                                </span>
+                                <h2 className="text-slate-900 mb-8 text-[48px] md:text-[56px] leading-[1.1] tracking-tight">
+                                    <span className="font-light block">Une eau parfaite,</span>
+                                    <span className="font-bold text-blue-600">kilomètre après kilomètre.</span>
+                                </h2>
+                                <p className="text-slate-500 font-light text-xl leading-relaxed">
+                                    Que vous soyez au camping, au quai ou dans un chalet, ne laissez pas la qualité de l'eau gâcher votre confort. Nos solutions portables vous suivent partout.
                                 </p>
+                            </div>
+
+                            <div className="relative p-10 bg-white shadow-2xl shadow-blue-900/5 rounded-3xl border border-blue-50/50 group hover:-translate-y-1 transition-transform duration-500 overflow-hidden">
+                                <div className="absolute top-0 right-0 w-24 h-24 bg-blue-50 rounded-full -translate-y-12 translate-x-12 opacity-50" />
+                                <div className="relative z-10">
+                                    <div className="flex items-center gap-3 mb-4">
+                                        <div className="w-6 h-[1px] bg-blue-600" />
+                                        <span className="text-blue-600 font-bold text-xs uppercase tracking-widest">Le saviez-vous ?</span>
+                                    </div>
+                                    <p className="text-slate-600 font-light text-lg leading-relaxed italic">
+                                        "L'eau dure des campings endommage les chauffe-eaux de VR en moins de 2 ans. Un adoucisseur est votre meilleure assurance."
+                                    </p>
+                                </div>
                             </div>
                         </div>
 
-                        {/* Right Column: Vertical Card Stack */}
-                        <div className="lg:w-2/3 flex flex-col gap-8">
-                            {[
-                                {
-                                    icon: MapPin,
-                                    title: "100% Nomade",
-                                    subtitle: "Conçu pour la route",
-                                    desc: "Un format ultra-compact qui se range facilement dans une soute de VR ou un coffre de bateau. Poids plume pour une manipulation aisée.",
-                                    features: ["Poids réduit", "Poignée ergonomique", "Format valise"],
-                                    color: "blue"
-                                },
-                                {
-                                    icon: Settings,
-                                    title: "Installation Instantanée",
-                                    subtitle: "Prêt en 5 minutes",
-                                    desc: "Pas besoin de plombier. Connectez-le simplement entre le robinet du camping et votre entrée d'eau. C'est aussi simple que de brancher un tuyau d'arrosage.",
-                                    features: ["Raccords standards", "Sans outils", "Plug & Play"],
-                                    color: "blue"
-                                },
-                                {
-                                    icon: safetyIcon,
-                                    isImage: true,
-                                    title: "Protection Maximale",
-                                    subtitle: "Préservez vos actifs",
-                                    desc: "Élimine le calcium et le magnésium qui obstruent les tuyauteries et réduisent l'efficacité de vos appareils. Prolongez la vie de votre investissement.",
-                                    features: ["Anti-tartre", "Débit constant", "Sans électricité"],
-                                    color: "blue"
-                                }
-                            ].map((item, id) => (
-                                <div key={id} className="group bg-white rounded-[2rem] p-8 md:p-12 shadow-sm border border-slate-100 hover:shadow-xl hover:shadow-blue-900/5 transition-all duration-500 hover:-translate-y-1">
-                                    <div className="flex flex-col md:flex-row gap-8 items-start">
-                                        <div className="w-16 h-16 rounded-2xl bg-blue-50 flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors duration-500">
-                                            {item.isImage ? (
-                                                <img src={item.icon as string} alt={item.title} className="h-10 w-10 object-contain" />
-                                            ) : (
-                                                <item.icon className="h-8 w-8 text-blue-600 group-hover:text-white transition-colors rotate-0" />
-                                            )}
+                        {/* Right Content Side: Staggered Benefits Cards */}
+                        <div className="lg:col-span-7 flex flex-col gap-12 lg:gap-32 lg:pt-32">
+                            
+                            {/* Card 1: 100% Nomade */}
+                            <div className="group relative lg:translate-x-12">
+                                <div className="absolute -inset-4 bg-white/40 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                                <div className="relative bg-white p-10 md:p-14 rounded-[3rem] shadow-xl shadow-blue-900/5 hover:shadow-2xl hover:shadow-blue-900/10 transition-all duration-700">
+                                    <div className="flex flex-col md:flex-row gap-10 items-start">
+                                        <div className="w-16 h-16 rounded-2xl bg-blue-50 flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all duration-500 shadow-lg shadow-blue-900/5">
+                                            <MapPin className="h-8 w-8" />
                                         </div>
                                         <div className="flex-1">
-                                            <div className="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-4">
-                                                <h3 className="text-slate-900">{item.title}</h3>
-                                                <span className={`text-sm font-medium text-${item.color}-600 bg-${item.color}-50 px-3 py-1 rounded-full w-fit`}>
-                                                    {item.subtitle}
-                                                </span>
+                                            <div className="mb-6">
+                                                <span className="text-blue-600 font-bold text-xs uppercase tracking-[0.2em]">Conçu pour la route</span>
+                                                <h3 className="text-3xl font-bold text-slate-900 mt-2">100% Nomade</h3>
                                             </div>
-                                            <p className="text-slate-600 font-light mb-6 text-justify">
-                                                {item.desc}
+                                            <p className="text-slate-500 font-light text-lg leading-relaxed mb-8">
+                                                Un format ultra-compact qui se range facilement dans une soute de VR ou un coffre de bateau. Poids plume pour une manipulation aisée.
                                             </p>
                                             <div className="flex flex-wrap gap-3">
-                                                {item.features.map((feature, i) => (
-                                                    <span key={i} className="text-sm text-slate-500 flex items-center gap-1.5">
-                                                        <CheckCircle2 className={`w-4 h-4 text-${item.color}-500`} />
-                                                        {feature}
+                                                {["Poids réduit", "Poignée ergonomique", "Format valise"].map((f, i) => (
+                                                    <span key={i} className="text-sm font-medium text-slate-500 flex items-center gap-2 px-4 py-2 bg-slate-50 rounded-full border border-slate-100">
+                                                        <CheckCircle2 className="w-4 h-4 text-blue-500" />
+                                                        {f}
                                                     </span>
                                                 ))}
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            ))}
-                        </div>
+                            </div>
 
+                            {/* Card 2: Installation Instantanée */}
+                            <div className="group relative lg:-translate-x-12">
+                                <div className="relative bg-blue-600 p-10 md:p-14 rounded-[3rem] shadow-2xl shadow-blue-900/20 text-white overflow-hidden hover:bg-blue-700 transition-all duration-700">
+                                    <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+                                    <div className="flex flex-col md:flex-row gap-10 items-start relative z-10">
+                                        <div className="w-16 h-16 rounded-2xl bg-white/20 backdrop-blur-md flex items-center justify-center text-white border border-white/30">
+                                            <Settings className="h-8 w-8 text-white" />
+                                        </div>
+                                        <div className="flex-1">
+                                            <div className="mb-6">
+                                                <span className="text-blue-100 font-bold text-xs uppercase tracking-[0.2em]">Prêt en 5 minutes</span>
+                                                <h3 className="text-3xl font-bold mt-2">Installation Instantanée</h3>
+                                            </div>
+                                            <p className="text-blue-50 font-light text-lg leading-relaxed mb-8">
+                                                Pas besoin de plombier. Connectez-le simplement entre le robinet du camping et votre entrée d'eau. C'est aussi simple que de brancher un tuyau d'arrosage.
+                                            </p>
+                                            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                                                {["Raccords standards", "Sans outils", "Plug & Play"].map((f, i) => (
+                                                    <div key={i} className="flex items-center gap-2 text-sm font-medium text-blue-100">
+                                                        <Check className="w-4 h-4" />
+                                                        {f}
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Card 3: Protection Maximale */}
+                            <div className="group relative lg:translate-x-4">
+                                <div className="relative bg-white p-10 md:p-14 rounded-[3rem] shadow-xl shadow-blue-900/5 hover:shadow-2xl transition-all duration-700 border border-slate-100">
+                                    <div className="flex flex-col md:flex-row gap-10 items-start">
+                                        <div className="w-16 h-16 rounded-2xl bg-blue-50 flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all duration-500">
+                                            <Shield className="h-8 w-8" />
+                                        </div>
+                                        <div className="flex-1">
+                                            <div className="mb-6">
+                                                <span className="text-blue-600 font-bold text-xs uppercase tracking-[0.2em]">Préservez vos actifs</span>
+                                                <h3 className="text-3xl font-bold text-slate-900 mt-2">Protection Maximale</h3>
+                                            </div>
+                                            <p className="text-slate-500 font-light text-lg leading-relaxed mb-8">
+                                                Élimine le calcium et le magnésium qui obstruent les tuyauteries et réduisent l'efficacité de vos appareils. Prolongez la vie de votre investissement.
+                                            </p>
+                                            <div className="flex flex-wrap gap-4">
+                                                {["Anti-tartre", "Débit constant", "Sans électricité"].map((f, i) => (
+                                                    <div key={i} className="flex items-center gap-2 text-sm font-bold text-blue-600 bg-blue-50/50 px-4 py-2 rounded-full uppercase tracking-tighter">
+                                                        <CheckCircle2 className="w-4 h-4" />
+                                                        {f}
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
             </section>
 
-            {/* 4. Section Processus - Modern Connected Steps (Blue Theme) */}
-            <section className="bg-gradient-to-br from-blue-600 to-blue-800 py-32 relative overflow-hidden text-white">
-                <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
-                <div className="container mx-auto px-4 relative z-10">
-                    {/* Header Layout */}
+            {/* 4. Section Processus - Modern "Timeline" Service Design (UV Inspired) */}
+            <section className="py-24 lg:py-32 bg-slate-50 relative overflow-hidden">
+                {/* Advanced "Service Flow" Background Layers */}
+                <div className="absolute inset-0 pointer-events-none select-none overflow-hidden">
+                    {/* Diffused Product Image - Integrating the subject without clutter */}
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60%] h-full opacity-10 md:opacity-[0.22] pointer-events-none z-0">
+                        <img 
+                            src={portableSoftenerProdImg} 
+                            alt="" 
+                            className="w-full h-full object-contain scale-110"
+                        />
+                         {/* Soft Gradient Fade for diffusion */}
+                        <div className="absolute inset-0 bg-gradient-to-b from-slate-50 via-transparent to-slate-50" />
+                        <div className="absolute inset-0 bg-gradient-to-r from-slate-50 via-transparent to-slate-50" />
+                    </div>
+
+                    {/* Spectral Glows - Water and Purity Focus */}
+                    <div className="absolute top-[-10%] left-[-10%] w-[70%] h-[70%] bg-[radial-gradient(circle,rgba(37,99,235,0.08)_0%,transparent_70%)] blur-[120px]" />
+                    <div className="absolute bottom-[-20%] right-[-10%] w-[80%] h-[80%] bg-[radial-gradient(circle,rgba(59,130,246,0.1)_0%,transparent_70%)] blur-[140px]" />
+                    
+                    {/* Linear Flow Beams */}
+                    <div className="absolute top-1/2 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-blue-400/20 to-transparent rotate-3 blur-[1px]" />
+                    <div className="absolute bottom-1/4 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-blue-600/10 to-transparent -rotate-6 blur-[2px]" />
+                </div>
+
+                <div className="container mx-auto px-6 relative z-10">
                     <div className="text-center max-w-3xl mx-auto mb-24">
-                        <span className="text-blue-200 text-xs font-bold uppercase tracking-[0.3em] mb-6 block animate-in fade-in slide-in-from-bottom duration-700">
+                        <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.3em] mb-6">
                             NOTRE FONCTIONNEMENT
                         </span>
-                        <h2 className="text-white mb-6">
-                            Un service simple <br />& sans souci.
+                        <h2 className="text-slate-900 mb-6 text-[42px] leading-[1.1]">
+                            <span className="font-light block">Un service simple</span>
+                            <span className="font-bold text-blue-600">& sans souci.</span>
                         </h2>
-                        <p className="font-light text-blue-100 max-w-xl mx-auto">
-                            De l'installation initiale à la livraison régulière de sel, nous gérons chaque détail technique pour vous garantir une eau parfaite en permanence.
+                        <p className="text-slate-500 font-light text-lg max-w-2xl mx-auto leading-relaxed">
+                            De l'installation initiale à la livraison des unités fraîchement régénérées, nous gérons chaque détail technique pour vous garantir une eau parfaite en permanence.
                         </p>
                     </div>
 
-                    {/* Connected Steps Grid */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
-                        {/* Connecting Line (Desktop Only) */}
-                        <div className="hidden lg:block absolute top-[2.5rem] left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-blue-400 to-transparent w-full -z-10 opacity-50"></div>
+                    <div className="relative">
+                        {/* Central Flow Line (Desktop Only) */}
+                        <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-blue-200 to-transparent -translate-x-1/2 opacity-60" />
 
-                        {[
-                            {
-                                step: "01",
-                                title: "Analyse d'eau",
-                                desc: "Nous commençons par un test complet pour calibrer votre adoucisseur portable selon vos besoins spécifiques."
-                            },
-                            {
-                                step: "02",
-                                title: "Installation Rapide",
-                                desc: "Nos techniciens installent votre système portatif en quelques minutes, sans travaux lourds ni plomberie complexe."
-                            },
-                            {
-                                step: "03",
-                                title: "Cycles d'Échange",
-                                desc: "Recevez des unités fraîchement régénérées selon un calendrier simplifié qui s'adapte à votre consommation réelle."
-                            },
-                            {
-                                step: "04",
-                                title: "Suivi & Support",
-                                desc: "Une assistance continue et des vérifications de routine pour s'assurer que votre eau reste d'une qualité irréprochable."
-                            }
-                        ].map((step, idx) => (
-                            <div key={idx} className="group relative bg-white/10 backdrop-blur-sm pt-8 pb-8 px-6 rounded-3xl hover:bg-white/20 transition-all duration-500 text-center lg:text-left border border-white/10 hover:border-white/30 hover:-translate-y-1">
-                                {/* Step Number Bubble */}
-                                <div className="w-20 h-20 mx-auto lg:mx-0 bg-white text-blue-600 rounded-full flex items-center justify-center text-xl font-bold mb-8 shadow-lg shadow-blue-900/20 group-hover:scale-110 transition-transform duration-500 relative z-10">
-                                    {step.step}
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 lg:gap-x-32 gap-y-16 lg:gap-y-0 relative">
+                            {[
+                                {
+                                    number: "01",
+                                    title: "Analyse d'eau",
+                                    desc: "Nous commençons par un test complet pour calibrer votre adoucisseur portable selon vos besoins spécifiques."
+                                },
+                                {
+                                    number: "02",
+                                    title: "Installation Rapide",
+                                    desc: "Nos techniciens installent votre système portatif en quelques minutes, sans travaux lourds ni plomberie complexe."
+                                },
+                                {
+                                    number: "03",
+                                    title: "Cycles d'Échange",
+                                    desc: "Recevez des unités fraîchement régénérées selon un calendrier simplifié qui s'adapte à votre consommation réelle."
+                                },
+                                {
+                                    number: "04",
+                                    title: "Suivi & Support",
+                                    desc: "Une assistance continue et des vérifications de routine pour s'assurer que votre eau reste d'une qualité irréprochable."
+                                }
+                            ].map((step, idx) => (
+                                <div 
+                                    key={idx} 
+                                    className={`group relative flex flex-col md:flex-row items-start lg:items-center gap-6 lg:gap-8 ${
+                                        idx % 2 === 0 ? 'lg:justify-end lg:text-right text-left' : 'lg:justify-start lg:text-left text-left'
+                                    } ${
+                                        // Stagger effect on desktop
+                                        idx % 2 !== 0 ? 'lg:translate-y-24' : ''
+                                    } lg:mb-32 transition-all duration-700`}
+                                >
+                                    {/* Content container */}
+                                    <div className={`flex flex-col ${idx % 2 === 0 ? 'lg:items-end' : 'lg:items-start'} max-w-md`}>
+                                        <div className={`w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center mb-6 text-blue-600 font-bold text-lg group-hover:bg-blue-600 group-hover:text-white group-hover:scale-110 transition-all duration-500 shadow-[0_0_20px_rgba(37,99,235,0.1)]`}>
+                                            {step.number}
+                                        </div>
+                                        <h3 className="text-2xl font-bold text-slate-900 mb-4 tracking-tight group-hover:text-blue-600 transition-colors">
+                                            {step.title}
+                                        </h3>
+                                        <p className={`text-slate-500 font-light leading-relaxed ${idx % 2 === 0 ? 'lg:text-right' : 'lg:text-left'} text-justify md:text-inherit`}>
+                                            {step.desc}
+                                        </p>
+                                    </div>
+
+                                    {/* Connecting Glow Node on the central line (Desktop only) */}
+                                    <div className={`hidden lg:block absolute top-1/4 w-4 h-4 rounded-full bg-blue-100 border-2 border-white shadow-sm transition-all duration-500 group-hover:bg-blue-600 group-hover:scale-125 group-hover:shadow-[0_0_15px_rgba(37,99,235,0.5)] ${
+                                        idx % 2 === 0 ? '-right-16 lg:-right-[68px]' : '-left-16 lg:-left-[68px]'
+                                    } `} />
                                 </div>
-
-                                <h3 className="text-white mb-4">
-                                    {step.title}
-                                </h3>
-                                <p className="text-blue-100 font-light text-sm text-justify">
-                                    {step.desc}
-                                </p>
-                            </div>
-                        ))}
+                            ))}
+                        </div>
                     </div>
                 </div>
             </section>

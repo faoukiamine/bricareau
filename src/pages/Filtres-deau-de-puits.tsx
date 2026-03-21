@@ -37,7 +37,7 @@ import uvSystemImg2 from "@/assets/VH200-F10-265x300.jpg";
 import { adoucisseurImg as adoucisseurFosseImg } from "./Blog pages/Adoucisseur-deau- et-fosse-septique--Mythes-et-réalités";
 import { softenerImg as residentialWaterSoftenerImg } from "./Blog pages/Comment régler la dureté de votre adoucisseur ";
 import { conditionneursImg } from "./Blog pages/Adoucisseur avec sel ou sans sel";
-import eauDePuitsImg from "@/assets/Filtration-eau-de-puits.webp";
+import SoftwaterImg from "@/assets/161502.jpg";
 import {
     Accordion,
     AccordionContent,
@@ -517,11 +517,11 @@ const FiltresPuits = () => {
           {/* Background Image with Overlay */}
           <div className="absolute inset-0 z-0">
             <img
-              src={eauDePuitsImg}
+              src={SoftwaterImg}
               alt="Expert Bricareau en traitement d'eau de puits"
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 via-blue-900/90 to-blue-800/80 backdrop-blur-[2px]" />
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 via-blue-900/70 to-blue-800/30 backdrop-blur-[2px]" />
           </div>
 
           <div className="container mx-auto px-6 relative z-10 text-center">
