@@ -68,7 +68,7 @@ const OperatorDashboard = () => {
                     <div className="w-full md:w-[350px] bg-white rounded-3xl shadow-xl border border-gray-100 flex flex-col overflow-hidden">
                         <div className="p-6 border-b border-gray-50">
                             <div className="flex items-center justify-between mb-6">
-                                <h1 className="text-xl font-bold text-gray-900 flex items-center gap-2">
+                                <h1 className="font-bold text-gray-900 flex items-center gap-2">
                                     <MessageSquare className="text-blue-600" />
                                     Conversations
                                 </h1>
@@ -133,7 +133,7 @@ const OperatorDashboard = () => {
                                             <User className="w-6 h-6" />
                                         </div>
                                         <div>
-                                            <h2 className="text-lg text-gray-900 flex items-center gap-2">
+                                            <h2 className="text-gray-900 flex items-center gap-2">
                                                 {currentSession?.name}
                                                 <BadgeCheck className="w-4 h-4 text-blue-500" />
                                             </h2>
@@ -208,7 +208,7 @@ const OperatorDashboard = () => {
                                 <div className="w-24 h-24 bg-blue-50 rounded-full flex items-center justify-center mb-6">
                                     <MessageSquare className="w-12 h-12 text-blue-200" />
                                 </div>
-                                <h2 className="text-gray-900 mb-2">Bienvenue dans l'espace opérateur</h2>
+                                <h2 className="text-gray-900 mb-2 font-bold">Bienvenue dans l'espace opérateur</h2>
                                 <p className="text-gray-500 max-w-sm">
                                     Sélectionnez une conversation dans la liste de gauche pour commencer à clavarder avec un client.
                                 </p>

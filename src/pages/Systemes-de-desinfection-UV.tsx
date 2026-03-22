@@ -113,10 +113,7 @@ const DesinfectionUV = () => {
                     <div className="container relative z-10 mx-auto px-4 h-full flex items-center lg:px-6">
                         <div className="max-w-2xl lg:text-white py-12 lg:py-0">
                             <h1
-                                className="mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl"
-                                style={{
-                                    fontWeight: 600
-                                }}
+                                className="leading-[1.1] md:leading-[1.2] mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left max-w-xl"
                             >
                                 Systèmes de désinfection UV, zéro produit chimique, 100% de protection.
                             </h1>
@@ -177,7 +174,7 @@ const DesinfectionUV = () => {
                             <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.2em] mb-6">
                                 TRAITEMENT d'EAU POTABLE SANS CHLORE
                             </span>
-                            <h2 className="text-slate-900 mb-8 leading-[1.2]">
+                            <h2 className="text-slate-900 mb-8 leading-[1.1] group-hover:text-blue-600 transition-colors">
                                 <span className="font-light block">Pourquoi choisir la</span>
                                 <span className="font-bold text-blue-600">désinfection UV ?</span>
                             </h2>
@@ -215,7 +212,7 @@ const DesinfectionUV = () => {
                                             <div className={`w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center mb-6 text-blue-600 group-hover:bg-blue-600 group-hover:text-white group-hover:scale-110 transition-all duration-500 shadow-[0_0_20px_rgba(37,99,235,0.1)]`}>
                                                 <benefit.icon className="h-6 w-6" />
                                             </div>
-                                            <h3 className="text-2xl font-bold text-slate-900 mb-4 tracking-tight group-hover:text-blue-600 transition-colors">
+                                            <h3 className="card-title mb-4 group-hover:text-blue-600 transition-colors">
                                                 {benefit.title}
                                             </h3>
                                             <p className={`text-slate-500 font-light leading-relaxed ${i % 2 === 0 ? 'lg:text-right' : 'lg:text-left'} text-justify md:text-inherit`}>
@@ -410,8 +407,8 @@ const DesinfectionUV = () => {
                     filterProduct="/Systemes-de-desinfection-UV"
                     title={
                         <>
-                        <h2 className="text-slate-900 mb-6 text-[42px] leading-[42px]">
-                                <span className="font-light">Zéro bactérie, </span><span className="font-bold text-blue-600">100 % sérénité</span></h2>
+                            <span className="font-light block">Zéro bactérie,</span>
+                            <span className="font-bold text-blue-600 block">100 % sérénité.</span>
                         </>
                     }
                 />
@@ -592,7 +589,7 @@ const DesinfectionUV = () => {
                             <h2
                                 className="text-slate-900 mb-8 text-left"
                                 style={{}}
-                            >                                <span className="text-[42px] md:text-[42px] font-normal leading-[1.1] md:leading-[42px] block">Ressources</span>
+                            >                                <span className="font-normal leading-[1.1] block">Ressources</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>

@@ -72,10 +72,7 @@ const Guides = () => {
                                     <BookOpen className="h-8 w-8 text-[#0052ff]" />
                                 </div>
                                 <h1
-                                    className="text-[32px] md:text-[52px] leading-tight text-slate-900 tracking-tighter text-center max-w-xl mx-auto"
-                                    style={{
-                                        fontWeight: 350
-                                    }}
+                                    className="leading-tight text-slate-900 tracking-tighter text-center max-w-xl mx-auto"
                                 >
                                     Guides et <span className="text-blue-600">Documentation</span>
                                 </h1>

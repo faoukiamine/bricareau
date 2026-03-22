@@ -164,10 +164,7 @@ const EauDePuits = () => {
                 SOLUTIONS DE TRAITEMENT D'EAU POUR PUITS PRIVÉS
               </span>
               <h1
-                className="mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl"
-                style={{
-                  fontWeight: 600
-                }}
+                className="leading-[1.1] md:leading-[1.2] mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left max-w-xl"
               >
                 Votre puits est un trésor, offrez-lui la pureté qu'il mérite.
               </h1>
@@ -258,9 +255,7 @@ const EauDePuits = () => {
                       </div>
 
                       <div className="space-y-4">
-                        <h3 className={`text-slate-900 group-hover:text-blue-600 transition-colors duration-500 tracking-tight
-                          ${isFeatured ? 'md:text-[32px] font-bold' : 'text-xl font-bold'}
-                        `}>
+                        <h3 className="card-title group-hover:text-blue-600 transition-colors duration-500">
                           {problem.title}
                         </h3>
                         <p className={`text-slate-500 font-light leading-relaxed text-justify
@@ -405,7 +400,7 @@ const EauDePuits = () => {
                 Contrôle de la Qualité D'EAU
               </span>
               <h2
-                className="lg:font-light mb-8 text-slate-900 lg:text-white text-left"
+                className="md:leading-[60px] lg:font-light mb-8 text-slate-900 lg:text-white text-left"
                 style={{}}
               >
                 <span className="lg:font-bold">Dites adieu au fer,</span><br />
@@ -434,8 +429,8 @@ const EauDePuits = () => {
                 className="text-slate-900 mb-8 text-left"
                 style={{}}
               >
-                <span className="font-light leading-[1.1] block">Découvrez nos solutions</span>
-                <span className="font-normal leading-[1.1] block">de traitement de l'eau de puits</span>
+                <span className="font-light leading-[1.1] md:leading-[1.1] block">Découvrez nos solutions</span>
+                <span className="font-normal leading-[1.1] md:leading-[1.1] block">de traitement de l'eau de puits</span>
               </h2>
               <div className="w-24 h-1 bg-blue-600 mb-8"></div>
               <p
@@ -494,8 +489,7 @@ const EauDePuits = () => {
                       </div>
                       <div className="p-8 space-y-4 flex flex-col flex-grow border-t-2 border-transparent group-hover:border-blue-600 transition-colors">
                         <h3
-                          className="text-slate-900 group-hover:text-blue-600 transition-colors tracking-tight text-center"
-                          style={{}}
+                          className="card-title group-hover:text-blue-600 transition-colors text-center"
                         >
                           {prod.name}
                         </h3>
@@ -530,8 +524,8 @@ const EauDePuits = () => {
           filterProduct="/eau-de-puits"
           title={
             <>
-              <span className="font-light leading-[1.1] block tracking-tighter text-slate-900">La solution là </span>
-              <span className="font-bold text-blue-600 leading-[1.1] block tracking-tighter">où d'autres ont échoué.</span>
+              <span className="font-light block">La solution là </span>
+              <span className="font-bold text-blue-600 block">où d'autres ont échoué.</span>
             </>
           }
         />
@@ -660,8 +654,8 @@ const EauDePuits = () => {
                                 className="text-slate-900 mb-8 text-left"
                                 style={{}}
                             >
-                                <span className="text-[42px] md:text-[42px] font-light leading-[1.1] md:leading-[42px] block">Pour vous éclairer</span>
-                                <span className="text-[42px] md:text-[42px] font-normal leading-[1.1] md:leading-[42px] block">Questions fréquentes</span>
+                                <span className="font-light leading-[1.1] block">Pour vous éclairer</span>
+                                <span className="font-normal leading-[1.1] block">Questions fréquentes</span>
                             </h2>
               <div className="w-24 h-1 bg-blue-600 mb-8"></div>
             </div>
@@ -811,7 +805,6 @@ const EauDePuits = () => {
             </div>
           </div>
         </section>
-
       </main>
       <Footer />
     </div>

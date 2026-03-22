@@ -76,10 +76,7 @@ const Blog = () => {
                     <div className="container relative z-10 mx-auto px-4 h-full flex items-center lg:px-6">
                         <div className="max-w-2xl lg:text-white py-12 lg:py-0">
                             <h1
-                                className="text-[32px] md:text-[52px] leading-[1.1] md:leading-[1.2] mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl"
-                                style={{
-                                    fontWeight: 350
-                                }}
+                                className="leading-[1.1] md:leading-[1.2] mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left max-w-xl"
                             >
                                 Articles & <span className="text-blue-600 lg:text-blue-400">Ressources</span>
                             </h1>
@@ -173,7 +170,7 @@ const Blog = () => {
                                                 <div className="text-left mb-12">
                                                     <div className="flex items-center justify-between mb-8">
                                                         <h2 className="text-slate-900">
-                                                            <span className="text-[32px] md:text-[48px] font-normal leading-[1.1] block">{cat.title}</span>
+                                                            <span className="font-normal leading-[1.1] block">{cat.title}</span>
                                                         </h2>
                                                         <NavLink
                                                             to={`/blog/categorie/${cat.id}`}

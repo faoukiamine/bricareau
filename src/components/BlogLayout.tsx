@@ -227,10 +227,7 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({ title, headerImage, children, t
                             <div className="max-w-xl">
 
                                 <h1
-                                    className="text-3xl md:text-4xl lg:text-[2.8rem] italic text-slate-900 lg:text-white leading-tight mb-6 tracking-tight"
-                                    style={{
-                                        fontWeight: 350
-                                    }}
+                                    className="italic text-slate-900 lg:text-white leading-tight mb-6 tracking-tight"
                                 >
                                     {title}
                                 </h1>

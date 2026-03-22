@@ -24,8 +24,8 @@ const TestimonialsSection = ({
     maxReviews,
     title = (
         <>
-            <span className="text-[32px] md:text-[60px] font-light leading-[1.2] md:leading-[60px] block">Qualité inégalée.</span>
-            <span className="text-[32px] md:text-[60px] font-normal leading-[1.2] md:leading-[60px] block">Service inoubliable.</span>
+            <span className="font-light block">Qualité inégalée.</span>
+            <span className="font-bold text-blue-600 block">Service inoubliable.</span>
         </>
     )
 }: TestimonialsSectionProps) => {
@@ -111,9 +111,9 @@ const TestimonialsSection = ({
                                         {/* Bottom Row: Author & Stars */}
                                         <div className="w-full flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
                                             <div className="space-y-1">
-                                                <h4 className="text-gray-900">
+                                                <h5 className="text-gray-900">
                                                     {item.name}
-                                                </h4>
+                                                </h5>
 
                                             </div>
 

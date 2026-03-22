@@ -355,7 +355,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="fixed top-0 z-50 w-full bg-white shadow-md" ref={headerRef} style={{ fontWeight: 350 }}>
+      <header className="fixed top-0 z-50 w-full bg-white shadow-md" ref={headerRef}>
 
         {/* Top Information Bar */}
         {/* Top Information Bar (Hidden) */}
@@ -707,7 +707,7 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="lg:hidden fixed inset-0 top-12 bg-white z-40 overflow-y-auto" style={{ fontWeight: 350 }}>
+          <div className="lg:hidden fixed inset-0 top-12 bg-white z-40 overflow-y-auto">
             <div className="flex flex-col h-full">
               {/* Main Content Area */}
               <div className="flex-1 overflow-y-auto">

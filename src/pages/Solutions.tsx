@@ -96,10 +96,7 @@ const Solutions = () => {
                 TRAITEMENT D'EAU
               </span>
               <h1
-                className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] mb-8 tracking-tighter text-slate-900 text-center lg:text-justify max-w-xl mx-auto"
-                style={{
-                  fontWeight: 350
-                }}
+                className="leading-[1.1] md:leading-[1.2] mb-8 tracking-tighter text-slate-900 text-center max-w-2xl mx-auto"
               >
                 <span>Nos Solutions de Traitement d'Eau</span>
               </h1>

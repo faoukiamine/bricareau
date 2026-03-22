@@ -33,10 +33,7 @@ const Contact = () => {
             <div className="container mx-auto px-6 max-w-5xl h-full flex items-center">
               <div className="py-12 lg:py-0 w-full">
                 <h1
-                  className="text-[32px] md:text-[52px] leading-tight text-slate-900 mb-6 tracking-tight"
-                  style={{
-                    fontWeight: 350
-                  }}
+                  className="leading-tight text-slate-900 mb-6 tracking-tight"
                 >
                   <span className="text-blue-600">Contactez</span>-nous
                 </h1>
@@ -58,8 +55,7 @@ const Contact = () => {
                   <img src="/images/FAQ.jpg" alt="Foire aux questions" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
                 <h3
-                  className="mb-4"
-                  style={{ fontFamily: 'Speedee, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif', fontStyle: 'normal', fontWeight: 400, color: 'rgb(41, 41, 41)', fontSize: '36px', lineHeight: '40px' }}
+                  className="mb-4 text-slate-900"
                 >
                   Foire aux questions
                 </h3>
@@ -80,8 +76,7 @@ const Contact = () => {
                   <img src="/images/40-AdobeStock_365603381.jpeg" alt="Consultation gratuite" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
                 <h3
-                  className="mb-4"
-                  style={{ fontFamily: 'Speedee, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif', fontStyle: 'normal', fontWeight: 400, color: 'rgb(41, 41, 41)', fontSize: '36px', lineHeight: '40px' }}
+                  className="mb-4 text-slate-900"
                 >
                   Demande de consultation
                 </h3>
@@ -101,8 +96,7 @@ const Contact = () => {
                   <img src="/images/SERVICES.jpg" alt="Support client & Entretien" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
                 <h3
-                  className="mb-4"
-                  style={{ fontFamily: 'Speedee, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif', fontStyle: 'normal', fontWeight: 400, color: 'rgb(41, 41, 41)', fontSize: '36px', lineHeight: '40px' }}
+                  className="mb-4 text-slate-900"
                 >
                   Support client & Entretien
                 </h3>

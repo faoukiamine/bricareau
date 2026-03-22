@@ -39,10 +39,7 @@ const Temoignages = () => {
                         <div className="container mx-auto px-6 h-full flex items-center">
                             <div className="max-w-3xl mx-auto text-center space-y-6 py-12 lg:py-0 w-full">
                                 <h1
-                                    className="text-[32px] md:text-[52px] leading-tight text-slate-900 tracking-tighter"
-                                    style={{
-                                        fontWeight: 350
-                                    }}
+                                    className="leading-tight text-slate-900 tracking-tighter"
                                 >
                                     <span className="text-blue-600">Témoignages</span> Clients
                                 </h1>
@@ -67,8 +64,8 @@ const Temoignages = () => {
                 <TestimonialsSection
                     title={
                         <>
-                            <span className="text-[32px] md:text-[60px] font-light leading-[1.2] md:leading-[60px] block">L'excellence vue par</span>
-                            <span className="text-[32px] md:text-[60px] font-normal leading-[1.2] md:leading-[60px] block text-blue-600">nos clients satisfaits.</span>
+                            <span className="font-light block">L'excellence vue par</span>
+                            <span className="font-bold text-blue-600 block">nos clients satisfaits.</span>
                         </>
                     }
                 />

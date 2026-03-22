@@ -56,10 +56,7 @@ const PageConsultation = () => {
                                 Consultation Sans Frais
                             </span>
                             <h1
-                                className="text-[32px] md:text-[48px] text-slate-900 mb-6 leading-[1.1] tracking-tight animate-in fade-in slide-in-from-bottom duration-700"
-                                style={{
-                                    fontWeight: 350
-                                }}
+                                className="text-slate-900 mb-6 leading-[1.1] tracking-tight animate-in fade-in slide-in-from-bottom duration-700"
                             >
                                 Prenez le contrôle de <br className="hidden md:block" />
                                 <span className="text-blue-600">la qualité de votre eau.</span>

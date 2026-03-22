@@ -81,10 +81,7 @@ const Entreprises = () => {
                 SOLUTIONS BUSINESS
               </span>
               <h1
-                className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] mb-8 tracking-tighter text-slate-900 lg:text-white text-center lg:text-justify max-w-xl mx-auto lg:mx-0"
-                style={{
-                  fontWeight: 350
-                }}
+                className="leading-[1.1] md:leading-[1.2] mb-8 tracking-tighter text-slate-900 lg:text-white text-center max-w-xl mx-auto lg:mx-0"
               >
                 <span>Une eau pure au quotidien</span>
               </h1>
@@ -122,7 +119,7 @@ const Entreprises = () => {
         {/* Solutions Section */}
         <section id="solutions" className="py-12 md:py-16">
           <div className="container mx-auto px-4">
-            <h2 className="text-slate-900 mb-16 text-center md:leading-[48px]">
+            <h2 className="text-slate-900 mb-16 text-center">
               Nos solutions de traitement d'eau
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
@@ -142,7 +139,7 @@ const Entreprises = () => {
         {/* Why Choose Us */}
         <section className="py-12 md:py-16 bg-secondary/30">
           <div className="container mx-auto px-4">
-            <h2 className="text-slate-900 mb-8 text-center md:leading-[48px] max-w-4xl mx-auto">
+            <h2 className="text-slate-900 mb-8 text-center max-w-4xl mx-auto">
               Pourquoi plus de 10 000 entreprises choisissent Bricareau?
             </h2>
             <p className="text-center text-muted-foreground mb-12 max-w-3xl mx-auto">
@@ -189,7 +186,7 @@ const Entreprises = () => {
         {/* Sectors */}
         <section className="py-12 md:py-16 bg-secondary/30">
           <div className="container mx-auto px-4">
-            <h2 className="text-slate-900 mb-8 text-center md:leading-[48px]">
+            <h2 className="text-slate-900 mb-8 text-center">
               Nos secteurs d'activités
             </h2>
             <p className="text-center text-muted-foreground mb-12 max-w-3xl mx-auto">
@@ -238,7 +235,7 @@ const Entreprises = () => {
         <section className="py-12 md:py-16 bg-primary/5">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center space-y-6">
-              <h2 className="text-slate-900 mb-8 md:leading-[48px]">
+              <h2 className="text-slate-900 mb-8">
                 Planifiez votre consultation sur l'eau
               </h2>
               <p className="text-base md:text-lg text-muted-foreground">

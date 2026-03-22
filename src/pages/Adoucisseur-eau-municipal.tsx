@@ -35,6 +35,11 @@ import {
     AccordionTrigger
 } from "@/components/ui/accordion";
 import ConsultationFormSection from "@/components/ConsultationFormSection";
+import process1 from "@/assets/2148563485.jpg";
+import process2 from "@/assets/section-image-and-content-23.jpg";
+import process3 from "@/assets/SERVICES.jpg";
+import process4 from "@/assets/unnamed (2).jpg";
+import labTestImg from "@/assets/test-laboratoire-diligence-inspection-750x500.jpg";
 const products = [
     { name: "Adoucisseur d'eau de la série \n Sentinelle", desc: "Le rythme parfait d'une eau toujours douce.", path: "/contact", image: SentinelWaterSoftenerImg },
     { name: "Adoucisseur d'eau de la série \n Sérénité", desc: "La paix durable pour votre maison et votre confort.", path: "/contact", image: SerenityWaterSoftenerImg },
@@ -160,10 +165,7 @@ const AdoucisseurEauMunicipal = () => {
                     <div className="container mx-auto px-6 relative z-10 h-full flex items-center">
                         <div className="max-w-2xl text-slate-900 lg:text-white py-12 lg:py-0">
                             <h1
-                                className="text-[32px] md:text-[32px] leading-[1.1] mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl"
-                                style={{
-                                    fontWeight: 600
-                                }}
+                                className="leading-[1.1] md:leading-[1.2] mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left max-w-xl"
                             >
                                 <span className="text-blue-600 lg:text-white/80">Une douceur qui se sent, un confort qui se vit.</span>
                             </h1>
@@ -190,7 +192,7 @@ const AdoucisseurEauMunicipal = () => {
                 <section className="py-24 bg-blue-600 text-white text-center">
                     <div className="container mx-auto px-6 text-center">
                         <div className="text-center mb-16">
-                            <h2 className="text-white mb-8 leading-[1.2] text-center">
+                            <h2 className="text-white mb-8 md:leading-[48px] text-center">
                                 Pourquoi choisir nos <br />adoucisseurs d'eau résidentiels ?
                             </h2>
                             <p className="font-light text-blue-100 max-w-2xl mx-auto text-justify">
@@ -224,8 +226,8 @@ const AdoucisseurEauMunicipal = () => {
                                 className="text-slate-900 mb-8 text-left"
                                 style={{}}
                             >
-                                <span className="text-[32px] md:text-[32px] font-light leading-[1.2] block">Nos adoucisseurs d'eau</span>
-                                <span className="text-[32px] md:text-[32px] font-normal leading-[1.2] block">résidentiels - Eau municipale</span>
+                                <span className="text-[42px] md:text-[42px] font-light leading-[1.1] md:leading-[42px] block">Nos adoucisseurs d'eau</span>
+                                <span className="text-[42px] md:text-[42px] font-normal leading-[1.1] md:leading-[42px] block">résidentiels - Eau municipale</span>
                             </h2>
 
                             <div className="w-24 h-1 bg-blue-600 mb-8"></div>
@@ -285,8 +287,8 @@ const AdoucisseurEauMunicipal = () => {
                                 className="text-slate-900 mb-8 text-left"
                                 style={{}}
                             >
-                                <span className="text-[32px] md:text-[32px] font-light leading-[1.2] block">Comparez nos</span>
-                                <span className="text-[32px] md:text-[32px] font-normal leading-[1.2] block">adoucisseurs d'eau</span>
+                                <span className="text-[42px] md:text-[42px] font-light leading-[1.1] md:leading-[42px] block">Comparez nos</span>
+                                <span className="text-[42px] md:text-[42px] font-normal leading-[1.1] md:leading-[42px] block">adoucisseurs d'eau</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
@@ -332,13 +334,12 @@ const AdoucisseurEauMunicipal = () => {
 
                 {/* 6.Testimonials Grid Section */}
                 <TestimonialsSection
-                    filterProduct="/adoucisseur-eau-residentiel"
+                    filterProduct="/adoucissement"
+                    limit={5}
                     title={
                         <>
-                            <h2 className="text-slate-900 mb-6 text-[32px] md:text-[32px] leading-[1.2]">
-                                <span className="font-light block">Une eau soyeuse.</span>
-                                <span className="font-bold text-blue-600">Un confort absolu.</span>
-                            </h2>
+                            <span className="font-light block">Une eau soyeuse.</span>
+                            <span className="font-bold text-blue-600 block">Un confort absolu.</span>
                         </>
                     }
                 />
@@ -369,7 +370,7 @@ const AdoucisseurEauMunicipal = () => {
                     <div className="container mx-auto px-4 relative z-10 flex items-center py-12 lg:py-0">
                         <div className="max-w-2xl text-slate-900 lg:text-white">
                             <h2
-                                className="leading-[1.2] lg:font-light mb-8 text-slate-900 lg:text-white text-left"
+                                className="md:leading-[60px] lg:font-light mb-8 text-slate-900 lg:text-white text-left"
                                 style={{}}
                             >
                                 Des tests d'eau précis <span className="lg:font-bold"><br />pour une tranquillité d'esprit totale.</span>
@@ -391,7 +392,7 @@ const AdoucisseurEauMunicipal = () => {
                     </div>
                 </section>
 
-                {/* 8.FAQ Section */}
+                {/* 9. FAQ Section */}
                 <section className="py-24 bg-white">
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
@@ -399,8 +400,8 @@ const AdoucisseurEauMunicipal = () => {
                                 className="text-slate-900 mb-8 text-left"
                                 style={{}}
                             >
-                                <span className="text-[32px] md:text-[32px] font-light leading-[1.2] block">Pour vous éclairer</span>
-                                <span className="text-[32px] md:text-[32px] font-normal leading-[1.2] block">Questions fréquentes</span>
+                                <span className="text-[42px] md:text-[42px] font-light leading-[1.1] md:leading-[42px] block">Pour vous éclairer</span>
+                                <span className="text-[42px] md:text-[42px] font-normal leading-[1.1] md:leading-[42px] block">Questions fréquentes</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
@@ -430,14 +431,14 @@ const AdoucisseurEauMunicipal = () => {
                     </div>
                 </section>
 
-                {/* 9. Resources Section */}
+                {/* 10. Resources Section */}
                 <section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-4 text-left">
                         <div className="text-left mb-16">
                             <h2
                                 className="text-slate-900 mb-8 text-left"
                                 style={{}}
-                            >                                <span className="text-[32px] md:text-[32px] font-normal leading-[1.2] block">Ressources</span>
+                            >                                <span className="text-[42px] md:text-[42px] font-normal leading-[1.1] md:leading-[42px] block">Ressources</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
@@ -473,7 +474,6 @@ const AdoucisseurEauMunicipal = () => {
                         </div>
                     </div>
                 </section>
-
             </main>
 
             <Footer />

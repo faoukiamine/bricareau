@@ -47,10 +47,7 @@ const Service = () => {
                                 {/* Left Content */}
                                 <div className="lg:w-1/2 text-left py-12 lg:py-0">
                                     <h1
-                                        className="text-[32px] md:text-[52px] leading-[1.1] mb-8 tracking-tighter text-slate-900"
-                                        style={{
-                                            fontWeight: 350
-                                        }}
+                                        className="leading-[1.1] mb-8 tracking-tighter text-slate-900"
                                     >
                                         Faites confiance à <span className="text-blue-600 underline decoration-blue-100 underline-offset-8">Bricareau</span> pour tout ce qui concerne l'eau.
                                     </h1>
@@ -139,7 +136,7 @@ const Service = () => {
                                 <div key={i} className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
                                     <div className="lg:w-1/2 text-left">
                                         <span className="text-sm font-black text-slate-400 mb-6 block font-mono">{feature.num}</span>
-                                        <h3 className="text-3xl md:text-4xl lg:text-5xl font-normal text-slate-900 mb-6 leading-[1.1] tracking-tighter">
+                                        <h3 className="text-slate-900 mb-6 leading-[1.1] tracking-tighter">
                                             {feature.title}
                                         </h3>
                                         <p className="font-light text-slate-600/80 mb-8 max-w-lg">
@@ -176,7 +173,7 @@ const Service = () => {
                             {/* Right Form Card */}
                             <div className="lg:w-3/5">
                                 <div className="bg-white p-10 md:p-14 rounded-3xl shadow-2xl border border-slate-100">
-                                    <h2 className="font-black text-slate-900 mb-4 text-left">Dites-nous ce dont vous avez besoin.</h2>
+                                    <h2 className="text-slate-900 mb-4 text-left">Dites-nous ce dont vous avez besoin.</h2>
                                     <p className="text-slate-500 mb-10 text-left text-sm font-medium">Les champs marqués d'un astérisque (*) sont obligatoires.</p>
 
                                     <form className="grid grid-cols-1 md:grid-cols-2 gap-8">

@@ -74,10 +74,7 @@ const FiltreEauHauteEfficacite = () => {
                                     SYSTÈME DE FILTRATION D'EAU
                                 </span>
                                 <h1
-                                    className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] mb-8 tracking-tighter text-slate-900 text-center lg:text-justify"
-                                    style={{
-                                        fontWeight: 350
-                                    }}
+                                    className="leading-[1.1] md:leading-[1.2] mb-8 tracking-tighter text-slate-900 text-center"
                                 >
                                     Bricareau High Efficiency (HE)
                                 </h1>
@@ -143,7 +140,7 @@ const FiltreEauHauteEfficacite = () => {
                     <div className="container mx-auto px-6">
                         <div className="flex flex-col lg:flex-row items-center gap-16">
                             <div className="lg:w-1/2 order-2 lg:order-1">
-                                <h2 className="text-slate-900 mb-8 md:leading-[48px]">
+                                <h2 className="text-slate-900 mb-8">
                                     Exclusivités technologiques de Bricareau
                                 </h2>
                                 <div className="space-y-8">
@@ -181,7 +178,7 @@ const FiltreEauHauteEfficacite = () => {
                 {/* 3. Filtration Intelligente (Benefits) */}
                 <section className="py-24 bg-white">
                     <div className="container mx-auto px-6 text-center">
-                        <h2 className="text-slate-900 mb-8 md:leading-[48px]">
+                        <h2 className="text-slate-900 mb-8">
                             Filtration intelligente qui améliore votre vie au quotidien
                         </h2>
                         <p className="font-light text-slate-600 mb-16 max-w-3xl mx-auto text-justify">
@@ -202,7 +199,7 @@ const FiltreEauHauteEfficacite = () => {
                                             <benefit.icon className="h-10 w-10 text-blue-600 group-hover:text-white font-light" strokeWidth={1.5} />
                                         )}
                                     </div>
-                                    <h3 className="text-slate-900 mb-4">{benefit.title}</h3>
+                                    <h3 className="card-title mb-4">{benefit.title}</h3>
                                     <p className="font-light text-slate-500 text-sm text-justify">{benefit.desc}</p>
                                 </div>
                             ))}
@@ -214,7 +211,7 @@ const FiltreEauHauteEfficacite = () => {
                 <section className="bg-white min-h-[600px] lg:h-[800px] relative overflow-hidden flex flex-col lg:items-center">
                     <div className="container mx-auto px-6 relative z-10 h-full flex flex-col lg:flex-row items-center justify-between gap-8">
                         <div>
-                            <h2 className="text-white mb-8 md:leading-[48px]">Prêt pour une meilleure eau ?</h2>
+                            <h2 className="text-white mb-8">Prêt pour une meilleure eau ?</h2>
                             <p className="text-blue-100 font-light">Découvrez pourquoi Bricareau est le leader mondial de l'eau.</p>
                         </div>
                         <Button className="bg-white text-blue-600 hover:bg-slate-100 rounded-full px-12 h-16 text-xl shadow-lg transition-transform hover:scale-105">
@@ -237,7 +234,7 @@ const FiltreEauHauteEfficacite = () => {
                                 </div>
                             </div>
                             <div className="lg:w-1/2 text-left">
-                                <h2 className="text-slate-900 mb-8 md:leading-[48px]">
+                                <h2 className="text-slate-900 mb-8">
                                     Le choix intelligent <br /> pour votre maison.
                                 </h2>
                                 <div className="space-y-6">
@@ -283,7 +280,7 @@ const FiltreEauHauteEfficacite = () => {
                                             <plan.icon className="w-8 h-8 text-blue-600" />
                                         )}
                                     </div>
-                                    <h3 className="text-slate-900 mb-4">{plan.title}</h3>
+                                    <h3 className="card-title mb-4">{plan.title}</h3>
                                     <p className="font-light text-slate-500 text-sm text-justify">{plan.desc}</p>
                                 </div>
                             ))}

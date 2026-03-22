@@ -188,10 +188,7 @@ const FiltresPuits = () => {
                     <div className="container relative z-10 mx-auto px-4 h-full flex items-center lg:px-6">
                         <div className="max-w-2xl lg:text-white py-12 lg:py-0">
                             <h1
-                                className="text-[48px] md:text-[48px] leading-[1.1] md:leading-[1.2] mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl"
-                                style={{
-                                    fontWeight: 600
-                                }}
+                                className="leading-[1.1] md:leading-[1.2] mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left max-w-xl"
                             >
                                 Filtre d'eau de puits pour une eau filtrée sans compromis.
                             </h1>
@@ -228,7 +225,7 @@ const FiltresPuits = () => {
                 <section className="py-24 bg-blue-600 text-white text-center">
                     <div className="container mx-auto px-6 text-center">
                         <div className="text-center mb-16">
-                            <h2 className="text-white mb-8 md:leading-[48px] text-center">
+                            <h2 className="text-white mb-8 text-center">
                                 Pourquoi choisir nos <br />systèmes de filtration d'eau ?
                             </h2>
                             <p className="text-blue-100 max-w-2xl mx-auto">
@@ -261,8 +258,8 @@ const FiltresPuits = () => {
                                 className="text-slate-900 mb-8 text-left"
                                 style={{}}
                             >
-                                <span className="text-[42px] md:text-[42px] font-light leading-[1.1] md:leading-[42px] block">Nos filtres d'eau spécialisés</span>
-                                <span className="text-[42px] md:text-[42px] font-normal leading-[1.1] md:leading-[42px] block">pour votre résidence</span>
+                                <span className="font-light leading-[1.1] block">Nos filtres d'eau spécialisés</span>
+                                <span className="font-normal leading-[1.1] block">pour votre résidence</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                             <p className="mt-8 font-light text-slate-600 text-justify w-full">
@@ -318,8 +315,8 @@ const FiltresPuits = () => {
                                 className="text-slate-900 mb-8 text-left"
                                 style={{}}
                             >
-                                <span className="text-[42px] md:text-[42px] font-light leading-[1.1] md:leading-[42px] block">Comparez nos filtres d'eau</span>
-                                <span className="text-[42px] md:text-[42px] font-normal leading-[1.1] md:leading-[42px] block">spécialisés pour l'eau de puits</span>
+                                <span className="font-light leading-[1.1] block">Comparez nos filtres d'eau</span>
+                                <span className="font-normal leading-[1.1] block">spécialisés pour l'eau de puits</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
@@ -434,7 +431,7 @@ const FiltresPuits = () => {
                     filterProduct="/Filtres-deau"
                     title={
                         <>
-                            <h2 className="text-slate-900 mb-6 text-[42px] leading-[42px]">
+                            <h2 className="text-slate-900 mb-6">
                                 <span className="font-light block">Buvez l'eau de votre puits sans crainte</span>
                                 <span className="font-bold text-blue-600">Ils ont fait le saut avec nous.</span>
                             </h2>
@@ -446,7 +443,7 @@ const FiltresPuits = () => {
                 <section className="bg-white py-24">
                     <div className="container mx-auto px-4">
                         <div className="text-center mb-16">
-<h2 className="text-slate-900 mb-8 text-[42px] leading-[42px]">Découvrez les produits associés</h2>                            <p className="font-light text-gray-500 max-w-2xl mx-auto text-justify">
+<h2 className="text-slate-900 mb-8">Découvrez les produits associés</h2>                            <p className="font-light text-gray-500 max-w-2xl mx-auto text-justify">
                                 Optimisez votre expérience de traitement d'eau avec nos solutions complémentaires.
                             </p>
                         </div>
@@ -527,8 +524,8 @@ const FiltresPuits = () => {
           <div className="container mx-auto px-6 relative z-10 text-center">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-white mb-6">
-                <span className="text-[42px] md:text-[42px] font-light leading-tight block tracking-tight opacity-90 italic">Besoin d'aide avec</span>
-                <span className="text-[42px] md:text-[42px] font-bold leading-tight block tracking-tight uppercase">votre eau de puits ?</span>
+                <span className="font-light leading-tight block tracking-tight opacity-90 italic">Besoin d'aide avec</span>
+                <span className="font-bold leading-tight block tracking-tight uppercase">votre eau de puits ?</span>
               </h2>
 
               <p className="text-blue-100/80 font-light text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
@@ -572,8 +569,8 @@ const FiltresPuits = () => {
                                 className="text-slate-900 mb-8 text-left"
                                 style={{}}
                             >
-                                <span className="text-[42px] md:text-[42px] font-light leading-[1.1] md:leading-[42px] block">Pour vous éclairer</span>
-                                <span className="text-[42px] md:text-[42px] font-normal leading-[1.1] md:leading-[42px] block">Questions fréquentes</span>
+                                <span className="font-light leading-[1.1] block">Pour vous éclairer</span>
+                                <span className="font-normal leading-[1.1] block">Questions fréquentes</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
@@ -608,7 +605,7 @@ const FiltresPuits = () => {
  <h2
                                 className="text-slate-900 mb-8 text-left"
                                 style={{}}
-                            >                                <span className="text-[42px] md:text-[42px] font-normal leading-[1.1] md:leading-[42px] block">Ressources</span>
+                            >                                <span className="font-normal leading-[1.1] block">Ressources</span>
                             </h2>
 
                             <div className="w-24 h-1 bg-blue-600"></div>

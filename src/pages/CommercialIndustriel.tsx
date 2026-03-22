@@ -109,10 +109,7 @@ const CommercialIndustriel = () => {
             <div className="container relative z-10 mx-auto px-4 h-full flex items-center lg:px-6">
               <div className="max-w-2xl lg:text-white py-12 lg:py-0">
                 <h1
-                  className="text-[28px] md:text-[32px] leading-tight mb-8 tracking-tighter text-slate-900 lg:text-white"
-                  style={{
-                    fontWeight: 350
-                  }}
+                  className="leading-tight mb-8 tracking-tighter text-slate-900 lg:text-white"
                 >
                   <span>Bricareau, votre partenaire de confiance</span>
                 </h1>
@@ -161,7 +158,7 @@ const CommercialIndustriel = () => {
         {/* 3. Solutions Section */}
         <section id="solutions" className="py-12 md:py-16">
           <div className="container mx-auto px-4">
-            <h2 className="text-slate-900 mb-16 text-center md:leading-[48px]">
+            <h2 className="text-slate-900 mb-16 text-center">
               Nos solutions de traitement d'eau industrielles
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
@@ -181,7 +178,7 @@ const CommercialIndustriel = () => {
         {/* 4. Why Choose Us */}
         <section className="py-12 md:py-16 bg-secondary/30">
           <div className="container mx-auto px-4">
-            <h2 className="text-slate-900 mb-16 text-center md:leading-[48px]">
+            <h2 className="text-slate-900 mb-16 text-center">
               Pourquoi nous choisir?
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -220,7 +217,7 @@ const CommercialIndustriel = () => {
         <section className="py-12 md:py-16 bg-primary/5">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center space-y-6">
-              <h2 className="text-slate-900 mb-8 md:leading-[48px]">
+              <h2 className="text-slate-900 mb-8">
                 Découvrez la meilleure solution de traitement de l'eau pour votre industrie.
               </h2>
               <p className="text-base md:text-lg text-muted-foreground">
@@ -243,7 +240,7 @@ const CommercialIndustriel = () => {
         {/* 8. Markets Section */}
         <section className="py-12 md:py-16 bg-secondary/30">
           <div className="container mx-auto px-4">
-            <h2 className="text-slate-900 mb-8 md:leading-[48px] text-center">
+            <h2 className="text-slate-900 mb-8 text-center">
               Marchés que nous servons
             </h2>
             <p className="text-center text-muted-foreground mb-12 max-w-3xl mx-auto">
@@ -268,7 +265,7 @@ const CommercialIndustriel = () => {
         <section className="py-12 md:py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center space-y-6">
-              <h2 className="text-slate-900 mb-8 md:leading-[48px]">
+              <h2 className="text-slate-900 mb-8">
                 Tester la qualité de votre eau est essentiel pour votre entreprise.
               </h2>
               <p className="text-base md:text-lg text-muted-foreground">
@@ -290,7 +287,7 @@ const CommercialIndustriel = () => {
         <section className="py-12 md:py-16 bg-primary/5">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center space-y-6">
-              <h2 className="text-slate-900 mb-8 md:leading-[48px]">
+              <h2 className="text-slate-900 mb-8">
                 Améliorez votre eau aujourd'hui
               </h2>
               <p className="text-base md:text-lg text-muted-foreground">

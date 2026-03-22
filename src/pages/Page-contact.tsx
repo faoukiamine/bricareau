@@ -34,9 +34,6 @@ const Contact = () => {
                             <div className="max-w-4xl py-12 lg:py-0">
                                 <h1
                                     className="text-[36px] md:text-[56px] leading-[1.1] text-slate-900 tracking-tight mb-4"
-                                    style={{
-                                        fontWeight: 350
-                                    }}
                                 >
                                     Parlons de votre <span className="text-[#0052ff]">Projet d'eau</span>
                                 </h1>

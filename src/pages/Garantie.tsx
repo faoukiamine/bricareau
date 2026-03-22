@@ -69,10 +69,7 @@ const Garantie = () => {
                                     <Shield className="h-8 w-8 text-[#0052ff]" />
                                 </div>
                                 <h1
-                                    className="text-[32px] md:text-[52px] leading-tight text-slate-900 tracking-tighter"
-                                    style={{
-                                        fontWeight: 350
-                                    }}
+                                    className="leading-tight text-slate-900 tracking-tighter"
                                 >
                                     Garanties et <span className="text-blue-600">Protection</span>
                                 </h1>
@@ -130,7 +127,7 @@ const Garantie = () => {
                         <div className="max-w-4xl mx-auto">
                             <div className="text-center mb-8">
                                 <FileText className="h-12 w-12 text-[#0052ff] mx-auto mb-4" />
-                                <h2 className="text-slate-900 mb-8 md:leading-[48px] text-center">
+                                <h2 className="text-slate-900 mb-8 text-center">
                                     Enregistrement de garantie
                                 </h2>
                                 <p className="text-muted-foreground">
@@ -198,7 +195,7 @@ const Garantie = () => {
                 <section className="py-12 md:py-16">
                     <div className="container mx-auto px-4">
                         <div className="max-w-3xl mx-auto">
-                            <h2 className="text-slate-900 mb-8 md:leading-[48px] text-center">
+                            <h2 className="text-slate-900 mb-8 text-center">
                                 Questions fréquentes sur la garantie
                             </h2>
                             <div className="space-y-4">
@@ -235,7 +232,7 @@ const Garantie = () => {
                 <section className="py-12 md:py-16 bg-slate-50">
                     <div className="container mx-auto px-4">
                         <div className="max-w-3xl mx-auto text-center space-y-6">
-                            <h2 className="text-slate-900 mb-8 md:leading-[48px] text-center">
+                            <h2 className="text-slate-900 mb-8 text-center">
                                 Questions sur votre garantie ?
                             </h2>
                             <p className="text-base md:text-lg text-muted-foreground">

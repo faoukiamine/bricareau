@@ -28,10 +28,7 @@ const Diagnostic = () => {
                             OUTIL D'ANALYSE INTELLIGENT
                         </span>
                         <h1
-                            className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] mb-8 tracking-tighter text-slate-900 text-justify max-w-xl mx-auto"
-                            style={{
-                                fontWeight: 350
-                            }}
+                            className="mb-8 tracking-tighter text-slate-900 max-w-xl mx-auto"
                         >
                             Découvrez la solution parfaite pour votre eau
                         </h1>

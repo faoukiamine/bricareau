@@ -142,10 +142,7 @@ const TestsEauPage = () => {
           <div className="container mx-auto px-6 relative z-10 h-full flex items-center">
             <div className="max-w-2xl text-slate-900 lg:text-white py-12 lg:py-0">
               <h1
-                className="text-[42px] font-bold leading-[1.1] md:leading-[1.2] mb-4 lg:mb-8 tracking-[-0.01em] md:tracking-[-0.03em] text-slate-900 lg:text-white text-left max-w-xl"
-                style={{
-                  fontWeight: 600
-                }}
+                className="leading-[1.1] md:leading-[1.2] mb-4 lg:mb-8 tracking-[-0.01em] md:tracking-[-0.03em] text-slate-900 lg:text-white text-left max-w-xl"
               >
                 <span className="sr-only">Montréal • Rive-Sud • Rive-Nord</span>
                 Analyses d'eau professionnelles & Tests de laboratoire
@@ -197,9 +194,9 @@ const TestsEauPage = () => {
                   ANALYSES D'EAU DE PRÉCISION
                 </span>
               </span>
-              <h2 className="text-slate-900 mb-6 text-[42px] leading-[1.1]">
-                <span className="font-light block">Savoir exactement</span>
-                <span className="font-bold text-blue-600">ce que vous buvez.</span>
+              <h2 className="text-slate-900 mb-6 leading-[1.1]">
+                <span className="block italic opacity-90">Savoir exactement</span>
+                <span className="text-blue-600">ce que vous buvez.</span>
               </h2>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
@@ -249,7 +246,7 @@ const TestsEauPage = () => {
 
                         {/* Text Content */}
                         <div className="flex-1">
-                           <h4 className="text-lg lg:text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors duration-500 mb-0 leading-tight">
+                           <h4 className="text-slate-900 group-hover:text-blue-600 transition-colors duration-500 mb-0 leading-tight">
                              {item.title}
                            </h4>
                            <p className="text-slate-500 text-sm leading-snug font-light max-w-md">
@@ -274,9 +271,9 @@ const TestsEauPage = () => {
                   NOS SOLUTIONS D'ANALYSE DE LA QUALITÉ D'EAU
                 </span>
               </span>
-              <h2 className="text-slate-900 mb-6 text-[42px] leading-[42px]">
-                <span className="font-light block">Quelle trousse d'analyse</span>
-                <span className="font-bold text-blue-600">choisir pour votre eau ?</span>
+              <h2 className="text-slate-900 mb-6">
+                <span className="block italic opacity-90">Quelle trousse d'analyse</span>
+                <span className="text-blue-600">choisir pour votre eau ?</span>
               </h2>
               <p className="text-slate-600 font-light max-w-2xl mx-auto">
                 Des solutions adaptées à vos besoins, de la vérification bactérienne de base au bilan complet pour une tranquillité d'esprit totale.
@@ -359,7 +356,7 @@ const TestsEauPage = () => {
                     <span className={`text-xs font-bold uppercase tracking-widest mb-2 block ${plan.featured ? 'text-blue-400' : 'text-slate-500'}`}>
                       {plan.subtitle}
                     </span>
-                    <h3 className={`text-2xl font-bold mb-4 ${plan.featured ? 'text-white' : 'text-blue-600'}`}>
+                    <h3 className={`text-2xl mb-4 ${plan.featured ? 'text-white' : 'text-blue-600'}`}>
                       {plan.title}
                     </h3>
                     <p className={`text-sm leading-snug ${plan.featured ? 'text-slate-400' : 'text-slate-600'}`}>
@@ -402,7 +399,7 @@ const TestsEauPage = () => {
           <div className="container mx-auto px-6 relative z-10 text-center">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-white mb-6">
-                <span className="text-[42px] md:text-[42px] font-light leading-tight block tracking-tight opacity-90 italic">Vous avez un doute sur la qualité de votre eau, ou vous utilisez un puits privé pour votre famille ?</span>
+                <span className="block tracking-tight opacity-90 italic">Vous avez un doute sur la qualité de votre eau, ou vous utilisez un puits privé pour votre famille ?</span>
               </h2>
 
               <p className="text-blue-100/80 font-light text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
@@ -427,12 +424,9 @@ Planifier une analyse d’eau professionnelle et recevoir un rapport clair avec 
         <section className="py-24 bg-white border-t border-slate-100">
           <div className="container mx-auto px-4 text-left">
             <div className="text-left mb-16">
-              <h2
-                className="text-slate-900 mb-8 text-left"
-                style={{}}
-              >
-                <span className="text-[42px] md:text-[42px] font-light leading-[1.1] md:leading-[42px] block">Pour vous éclairer</span>
-                <span className="text-[42px] md:text-[42px] font-normal leading-[1.1] md:leading-[42px] block">Questions fréquentes</span>
+              <h2 className="text-slate-900 mb-8 text-left">
+                <span className="block italic opacity-90">Pour vous éclairer</span>
+                <span className="block">Questions fréquentes</span>
               </h2>
               <div className="w-24 h-1 bg-blue-600"></div>
             </div>

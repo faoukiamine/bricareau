@@ -44,10 +44,7 @@ const BlogCategory = () => {
                 <div className="container mx-auto px-6 h-full flex items-center">
                     <div className="max-w-3xl py-12 lg:py-0 w-full text-left">
                         <h1
-                            className="text-4xl md:text-5xl text-slate-900 mb-6 tracking-tight"
-                            style={{
-                                fontWeight: 350
-                            }}
+                            className="text-slate-900 mb-6 tracking-tight"
                         >
                             {category.title}
                         </h1>

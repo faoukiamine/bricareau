@@ -56,10 +56,7 @@ const ContactEntreprises = () => {
           <div className="container mx-auto px-4 h-full flex items-center">
             <div className="max-w-3xl mx-auto text-center py-12 lg:py-0 w-full">
               <h1
-                className="text-[28px] md:text-[42px] leading-[32px] md:leading-[42px] mb-8 tracking-tighter text-foreground text-justify max-w-xl mx-auto"
-                style={{
-                  fontWeight: 350
-                }}
+                className="leading-[1.1] md:leading-[1.2] mb-8 tracking-tighter text-foreground max-w-xl mx-auto"
               >
                 Contactez-nous pour des solutions de l'eau de bureau
               </h1>

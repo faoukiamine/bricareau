@@ -56,11 +56,10 @@ const ProductShowcase = () => {
                 <div className="text-center mb-12 md:mb-16">
                     <h2
                         id="solutions-title"
-                        className="text-slate-900 scroll-mt-[120px]"
-                        style={{ }}
+                        className="text-slate-900 scroll-mt-[120px] mb-6"
                     >
-                        <span className="font-light leading-[1.2] text-blue-600 block">Solutions résidentielles</span>
-                        <span className="font-medium leading-[1.2] block">de traitement de l'eau</span>
+                        <span className="font-light block">Solutions résidentielles</span>
+                        <span className="font-bold text-blue-600 block">de traitement de l'eau</span>
                     </h2>
                 </div>
 
@@ -84,8 +83,7 @@ const ProductShowcase = () => {
                             {/* Product info */}
                             <div className="p-8 space-y-4 flex flex-col flex-grow border-t-2 border-transparent group-hover:border-blue-600 transition-colors">
                                 <h3
-                                    className="text-slate-900 group-hover:text-blue-600 transition-colors tracking-tight text-center "
-                                    style={{ }}
+                                    className="card-title group-hover:text-blue-600 transition-colors"
                                 >
                                     {product.name}
                                 </h3>

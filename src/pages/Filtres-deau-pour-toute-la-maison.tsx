@@ -181,10 +181,7 @@ const FiltresTouteMaison = () => {
                     <div className="container mx-auto px-6 relative z-10 h-full flex items-center">
                         <div className="max-w-2xl text-slate-900 lg:text-white py-12 lg:py-0">
                             <h1
-                                className="text-[32px] md:text-[32px] leading-[1.1] mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl"
-                                style={{
-                                    fontWeight: 600
-                                }}
+                                className="mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left max-w-xl"
                             >
                                 Filtre d'eau pour toute la maison, une protection intégrale.
                             </h1>
@@ -226,9 +223,9 @@ const FiltresTouteMaison = () => {
 
                     <div className="container mx-auto px-6 relative z-10">
                         <div className="text-center mb-20">
-                            <h2 className="text-slate-900 mb-6 leading-[1.1] font-light tracking-tight">
+                            <h2 className="text-slate-900 mb-6 leading-[1.1] tracking-tight">
                                 Pourquoi choisir nos <br className="hidden md:block"/>
-                                <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">
+                                <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">
                                     systèmes de filtration d'eau ?
                                 </span>
                             </h2>
@@ -262,7 +259,7 @@ const FiltresTouteMaison = () => {
                                     <div className="relative z-10 w-16 h-16 rounded-2xl bg-blue-50 flex items-center justify-center mb-8 group-hover:bg-blue-600 transition-colors duration-500">
                                         <item.icon className="h-8 w-8 text-blue-600 group-hover:text-white transition-colors duration-500" />
                                     </div>
-                                    <h4 className="relative z-10 text-xl font-bold text-slate-900 mb-4 tracking-tight group-hover:text-blue-600 transition-colors duration-500">
+                                    <h4 className="card-title mb-4 group-hover:text-blue-600 transition-colors duration-500">
                                         {item.title}
                                     </h4>
                                     <p className="relative z-10 text-slate-500 font-light leading-relaxed">
@@ -309,8 +306,7 @@ const FiltresTouteMaison = () => {
                                     </div>
                                     <div className="p-8 space-y-4 flex flex-col flex-grow border-t-2 border-transparent group-hover:border-blue-600 transition-colors">
                                         <h3
-                                            className="text-slate-900 group-hover:text-blue-600 transition-colors tracking-tight text-center"
-                                            style={{}}
+                                            className="card-title group-hover:text-blue-600 transition-colors text-center"
                                         >
                                             {p.name}
                                         </h3>
@@ -339,11 +335,11 @@ const FiltresTouteMaison = () => {
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
                             <h2
-                                className="text-slate-900 mb-8 text-left text-[32px] md:text-[32px] leading-[1.2]"
+                                className="text-slate-900 mb-8 text-left"
                                 style={{}}
                             >
-                                <span className="font-light leading-[1.2] block">Comparez nos filtres d'eau</span>
-                                <span className="font-normal leading-[1.2] block">spécialisés pour l'eau municipale</span>
+                                <span className="font-light leading-[1.1] block">Comparez nos filtres d'eau</span>
+                                <span className="font-normal leading-[1.1] block">spécialisés pour l'eau municipale</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
@@ -416,7 +412,7 @@ const FiltresTouteMaison = () => {
                                 Contrôle de la Qualité D'EAU
                             </span>
                             <h2
-                                className="lg:font-light mb-8 text-slate-900 lg:text-white text-left text-[32px] md:text-[32px] leading-[1.2]"
+                                className="lg:font-light mb-8 text-slate-900 lg:text-white text-left"
                                 style={{}}
                             >
                                 L'excellence commence<br />
@@ -443,10 +439,8 @@ const FiltresTouteMaison = () => {
                 <TestimonialsSection filterProduct="/Filtres-deau-pour-toute-la-maison"
                     title={
                         <>
-                            <h2 className="text-slate-900 mb-6 text-[32px] md:text-[32px] leading-[1.2]">
-                                <span className="font-light block">Fini le chlore et d'autres contaminants,</span>
-                                <span className="font-bold text-blue-600">la métamorphose de votre quotidien vue par nos clients.</span>
-                            </h2>
+                            <span className="font-light block">Fini le chlore et les contaminants,</span>
+                            <span className="font-bold text-blue-600 block">la métamorphose vue par nos clients.</span>
                         </>
                     }
                 />

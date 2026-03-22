@@ -26,10 +26,7 @@ const Hero = () => {
           {/* Hero text */}
           <div className="space-y-6 lg:text-white">
             <h1
-              className="mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left lg:text-justify max-w-xl"
-              style={{
-                fontWeight: 350
-              }}
+              className="leading-[1.1] md:leading-[1.2] mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left max-w-xl"
             >
               L’eau saine que votre famille mérite.
             </h1>
