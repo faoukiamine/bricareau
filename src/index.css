@@ -124,11 +124,11 @@ All colors MUST be HSL.
   }
 
   h1 {
-    @apply text-[30px] md:text-[36px] lg:text-[48px] leading-[1.2] font-bold tracking-tight;
+    @apply text-[30px] md:text-[36px] lg:text-[42px] leading-[1.2] font-bold tracking-tight;
   }
 
   h2 {
-    @apply text-[24px] md:text-[30px] lg:text-[40px] leading-[1.25] tracking-tight font-bold;
+    @apply text-[28px] md:text-[32px] lg:text-[36px] leading-[1.25] tracking-tight font-bold;
   }
 
   h3 {

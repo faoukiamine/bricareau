@@ -42,6 +42,15 @@ import ourteamstudyyourwaterImg from "@/assets/10271.jpg";
 import dechetbouteilleImg from "@/assets/20051.jpg";
 import eauinnondiationImg from "@/assets/geiser-breaking-images-du-geiser-au-grand-angle-plus-14-photos-en-bref.jpeg";
 import oldpipesImg from "@/assets/Old Pipes.jpg";
+import glassofwaterImg from "@/assets/2151358994.jpg";
+import waterDropsImg from "@/assets/water_drops.svg";
+import ecoImg from "@/assets/eco.svg";
+import cheerImg from "@/assets/cheer.svg";
+import countertopsImg from "@/assets/countertops.svg";
+import verifiedImg from "@/assets/verified.svg";
+import hotelClassImg from "@/assets/hotel_class.svg";
+import contaminatedwaterImg from "@/assets/2148926639.jpg";
+
 
 import {
     Accordion,
@@ -159,7 +168,7 @@ const Filtration = () => {
                             <div className="lg:col-span-5 space-y-8">
                                 <div>
                                     <h2 className="text-slate-900 mb-6 font-bold text-blue-600">
-                                        L'invisible dans votre verre.
+                                        L'invisible dans votre verre d'eau.
                                     </h2>
                                     <p className="font-light text-slate-600 lg:text-slate-600 mb-8 max-w-xl text-left lg:text-justify">
                                         L'eau municipale est traitée, mais elle n'est pas pure. Entre l'usine de traitement et votre robinet, elle transporte des résidus invisibles qui impactent votre santé.
@@ -193,13 +202,15 @@ const Filtration = () => {
                                             desc: "Résidus industriels et agricoles qui s'infiltrent dans les nappes et le cycle de l'eau."
                                         }
                                     ].filter((_, idx) => showAllHarms || idx < 3).map((harm, idx) => (
-                                        <div key={idx} className="flex items-start gap-4 animate-in fade-in slide-in-from-top-4 duration-500">
-                                            <span className="text-2xl font-bold text-blue-600 leading-none mt-1">
-                                                -
-                                            </span>
-                                            <div>
-                                                <h3 className="text-slate-900 mb-1">{harm.title}</h3>
-                                                <p className="text-slate-500 font-light text-sm leading-snug">
+                                        <div key={idx} className="group flex items-start gap-4 p-2 rounded-3xl transition-colors hover:bg-slate-50 animate-in fade-in slide-in-from-top-4 duration-500">
+                                            <div className="flex h-7 flex-shrink-0 items-center">
+                                                <span className="text-3xl font-bold text-blue-600/20 group-hover:text-blue-600 transition-colors duration-500 leading-none -mt-1">
+                                                    -
+                                                </span>
+                                            </div>
+                                            <div className="space-y-0.5">
+                                                <h3 className="text-lg font-bold text-blue-600/20 group-hover:text-blue-600 transition-colors duration-500 mb-1">{harm.title}</h3>
+                                                <p className="text-slate-500 font-light text-sm leading-snug max-w-sm">
                                                     {harm.desc}
                                                 </p>
                                             </div>
@@ -223,7 +234,7 @@ const Filtration = () => {
                                 <div className="relative rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white group">
                                     <div className="embla overflow-hidden" ref={emblaRef}>
                                         <div className="embla__container flex">
-                                            {[healthwaterImg,dechetbouteilleImg,oldpipesImg,eauinnondiationImg ].map((img, idx) => (
+                                            {[glassofwaterImg,healthwaterImg,dechetbouteilleImg,oldpipesImg,eauinnondiationImg,contaminatedwaterImg ].map((img, idx) => (
                                                 <div key={idx} className="embla__slide flex-[0_0_100%] min-w-0 relative h-[600px]">
                                                     <img
                                                         src={img}
@@ -261,7 +272,7 @@ const Filtration = () => {
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-justify">
                             {[
                                 {
-                                    icon: GlassWater,
+                                    iconSrc: waterDropsImg,
                                     title: "Goût exceptionnel",
                                     desc: "Élimine 99% du chlore et des mauvaises odeurs pour une eau pure et savoureuse à chaque robinet."
                                 },
@@ -271,26 +282,37 @@ const Filtration = () => {
                                     desc: "Réduisez vos dépenses annuelles de plus de 500$ en éliminant définitivement l'achat d'eau embouteillée."
                                 },
                                 {
-                                    icon: Recycle,
+                                    iconSrc: ecoImg,
                                     title: "Éco-responsable",
                                     desc: "Agissez pour la planète en évitant l'utilisation de milliers de bouteilles de plastique à usage unique chaque année."
                                 },
                                 {
-                                    icon: Wrench,
+                                    iconSrc: cheerImg,
                                     title: "Sérénité Totale",
                                     desc: "Des systèmes conçus pour une fiabilité maximale avec un entretien minimal et des changements de filtres ultra-rapides."
                                 }
-                            ].map((benefit, i) => (
+                            ].map((benefit: any, i) => (
                                 <div key={i} className="group bg-white border border-slate-100 rounded-[2rem] p-8 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2 relative overflow-hidden">
                                     <div className="absolute -right-4 -bottom-4 opacity-5 group-hover:opacity-10 transition-opacity duration-500 transform group-hover:scale-110">
-                                        <benefit.icon className="w-32 h-32 text-blue-600" />
+                                        {benefit.iconSrc ? (
+                                            <img src={benefit.iconSrc} className="w-32 h-32" style={{ filter: 'invert(32%) sepia(96%) saturate(3015%) hue-rotate(212deg) brightness(97%) contrast(96%)' }} alt="" />
+                                        ) : (
+                                            <benefit.icon className="w-32 h-32 text-blue-600" />
+                                        )}
                                     </div>
-                                    <div className="w-16 h-16 rounded-2xl bg-blue-50 flex items-center justify-center mb-8 group-hover:bg-blue-600 transition-colors duration-500">
-                                        <benefit.icon className="h-8 w-8 text-blue-600 group-hover:text-white transition-colors duration-500" />
+                                    <div className="relative w-16 h-16 rounded-2xl bg-blue-50 flex items-center justify-center mb-8 group-hover:bg-blue-600 transition-colors duration-500">
+                                        {benefit.iconSrc ? (
+                                            <>
+                                                <img src={benefit.iconSrc} className="absolute h-8 w-8 transition-opacity duration-500 opacity-100 group-hover:opacity-0" style={{ filter: 'invert(32%) sepia(96%) saturate(3015%) hue-rotate(212deg) brightness(97%) contrast(96%)' }} alt={benefit.title} />
+                                                <img src={benefit.iconSrc} className="absolute h-8 w-8 transition-opacity duration-500 opacity-0 group-hover:opacity-100 brightness-0 invert" alt={`${benefit.title} hover`} />
+                                            </>
+                                        ) : (
+                                            <benefit.icon className="h-8 w-8 text-blue-600 group-hover:text-white transition-colors duration-500" />
+                                        )}
                                     </div>
-                                    <h4 className="text-slate-900 mb-4 tracking-tight group-hover:text-blue-600 transition-colors duration-500">
+                                    <h5 className="text-slate-900 mb-4 tracking-tight group-hover:text-blue-600 transition-colors duration-500">
                                         {benefit.title}
-                                    </h4>
+                                    </h5>
                                     <p className="text-slate-500 font-light leading-relaxed">
                                         {benefit.desc}
                                     </p>
@@ -325,7 +347,7 @@ const Filtration = () => {
                                     {/* Floating Detail Card */}
                                     <div className="absolute -bottom-10 -right-6 md:-right-10 z-20 bg-white/90 backdrop-blur-xl p-8 rounded-[2.5rem] shadow-2xl border border-white/50 max-w-[280px] hidden md:block animate-float">
                                         <div className="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center mb-4 shadow-lg shadow-blue-200">
-                                            <Wrench className="h-6 w-6 text-white" />
+                                            <img src={hotelClassImg} className="h-6 w-6 brightness-0 invert" alt="Qualité Hôtelière" />
                                         </div>
                                         <h4 className="text-xl font-bold text-slate-900 mb-2">Qualité Hôtelière</h4>
                                         <p className="text-sm text-slate-500 font-light leading-relaxed">
@@ -343,13 +365,13 @@ const Filtration = () => {
                                 <div className="space-y-8">
                                     <div className="space-y-4">
                                         <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.2em]">
-                                            EAU FILTRÉE POUR TOUTE LA MAISON
+                                            PROTECTION & SANTÉ
                                         </span>
                                          <h2 className="text-slate-900 mb-6 font-bold text-blue-600">
                                              Eau filtrée pour toute la maison
                                          </h2>
                                         <p className="text-slate-500 font-light text-lg leading-relaxed text-justify max-w-xl">
-Les filtres d’eau pour toute la maison sont installés directement sur l’arrivée principale d’eau. Ils filtrent toute l’eau qui circule dans la maison : cuisine, salles de bain, buanderie, robinets extérieurs, etc. Ils sont idéaux pour réduire les sédiments, le sable, certaines odeurs et goûts (comme le chlore) et protéger la plomberie et les appareils.                                        </p>
+                                            Les filtres d’eau pour toute la maison sont installés directement sur l’arrivée principale d’eau. Ils filtrent toute l’eau qui circule dans la maison : cuisine, salles de bain, buanderie, robinets extérieurs, etc. Ils sont idéaux pour réduire les sédiments, le sable, certaines odeurs et goûts (comme le chlore) et protéger la plomberie et les appareils.                                        </p>
                                     </div>
 
                                     <div className="space-y-2">
@@ -363,7 +385,7 @@ Les filtres d’eau pour toute la maison sont installés directement sur l’arr
                                                     0{i + 1}
                                                 </div>
                                                 <div className="space-y-0.5">
-                                                    <h3 className="text-xl font-bold text-slate-900 tracking-tight">
+                                                    <h3 className="text-xl font-bold tracking-tight text-blue-600/20 group-hover:text-blue-600 transition-colors">
                                                         {item.title}
                                                     </h3>
                                                     <p className="text-slate-500 font-light text-sm leading-relaxed max-w-sm">
@@ -412,7 +434,7 @@ Les filtres d’eau pour toute la maison sont installés directement sur l’arr
                                     {/* Floating Detail Card */}
                                     <div className="absolute -bottom-10 -left-6 md:-left-10 z-20 bg-white/90 backdrop-blur-xl p-8 rounded-[2.5rem] shadow-2xl border border-white/50 max-w-[280px] hidden md:block animate-float">
                                         <div className="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center mb-4 shadow-lg shadow-blue-200">
-                                            <CheckCircle2 className="h-6 w-6 text-white" />
+                                            <img src={verifiedImg} className="h-6 w-6 brightness-0 invert" alt="Pureté Certifiée" />
                                         </div>
                                         <h4 className="text-xl font-bold text-slate-900 mb-2">Pureté Certifiée</h4>
                                         <p className="text-sm text-slate-500 font-light leading-relaxed">
@@ -451,7 +473,7 @@ Les filtres d’eau pour toute la maison sont installés directement sur l’arr
                                                     0{i + 1}
                                                 </div>
                                                 <div className="space-y-0.5 text-right lg:text-left">
-                                                    <h3 className="text-xl font-bold text-slate-900 tracking-tight">
+                                                    <h3 className="text-xl font-bold tracking-tight text-blue-600/20 group-hover:text-blue-600 transition-colors">
                                                         {item.title}
                                                     </h3>
                                                     <p className="text-slate-500 font-light text-sm leading-relaxed max-w-sm ml-auto lg:ml-0">
@@ -501,7 +523,7 @@ Les filtres d’eau pour toute la maison sont installés directement sur l’arr
                                     {/* Floating Detail Card */}
                                     <div className="absolute -bottom-10 -right-6 md:-right-10 z-20 bg-white/90 backdrop-blur-xl p-8 rounded-[2.5rem] shadow-2xl border border-white/50 max-w-[280px] hidden md:block animate-float">
                                         <div className="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center mb-4 shadow-lg shadow-blue-200">
-                                            <GlassWater className="h-6 w-6 text-white" />
+                                            <img src={countertopsImg} className="h-6 w-6 brightness-0 invert" alt="Solution Compacte" />
                                         </div>
                                         <h4 className="text-xl font-bold text-slate-900 mb-2">Solution Compacte</h4>
                                         <p className="text-sm text-slate-500 font-light leading-relaxed">
@@ -540,7 +562,7 @@ Les filtres d’eau pour toute la maison sont installés directement sur l’arr
                                                     0{i + 1}
                                                 </div>
                                                 <div className="space-y-0.5">
-                                                    <h3 className="text-xl font-bold text-slate-900 tracking-tight">
+                                                    <h3 className="text-xl font-bold tracking-tight text-blue-600/20 group-hover:text-blue-600 transition-colors">
                                                         {item.title}
                                                     </h3>
                                                     <p className="text-slate-500 font-light text-sm leading-relaxed max-w-sm">
@@ -593,7 +615,7 @@ Les filtres d’eau pour toute la maison sont installés directement sur l’arr
                             <span className="text-blue-600 lg:text-white/80 font-bold uppercase tracking-widest text-sm mb-4 block">
                                 Contrôle de la Qualité D'EAU
                             </span>
-                             <h2 className="lg:font-light mb-8 font-bold text-slate-900 lg:text-white text-left">
+                            <h2 className="mb-8 text-slate-900 lg:text-white font-bold uppercase font-weight-bold 900">
                                  Votre eau sous la loupe.
                              </h2>
                             <p className="font-light text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
@@ -628,9 +650,13 @@ Les filtres d’eau pour toute la maison sont installés directement sur l’arr
                 <section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
-                                 <h2 className="text-slate-900 mb-8 font-bold text-blue-600">
-                                     Comparez nos solutions de filtration d'eau
-                                 </h2>
+                            <h2
+                                className="text-slate-900 mb-8 text-left"
+                                style={{}}
+                            >
+                                <span className="font-light leading-[1.1] block">Comparez nos solutions</span>
+                                <span className="font-normal leading-[1.1] block">de filtration d'eau</span>
+                            </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
                         <div className="overflow-x-auto">
@@ -687,8 +713,8 @@ Les filtres d’eau pour toute la maison sont installés directement sur l’arr
           <div className="container mx-auto px-6 relative z-10 text-center">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-white mb-6">
-                <span className="font-light leading-tight block tracking-tight opacity-90 italic">Besoin d'aide avec</span>
-                <span className="font-bold leading-tight block tracking-tight">votre filtration d'eau pour un choix éclairé ?</span>
+                <span className="font-light leading-tight block tracking-tight opacity-90">Votre expertise sur-mesure</span>
+                <span className="font-bold leading-tight block tracking-tight">Un accompagnement personnalisé pour vous guider vers le système adapté à votre réalité et votre budget.</span>
               </h2>
 
               <p className="text-blue-100/80 font-light text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
@@ -712,7 +738,7 @@ Les filtres d’eau pour toute la maison sont installés directement sur l’arr
                   className="rounded-full px-10 h-16 border-white/30 text-white bg-white/5 hover:bg-white/10 backdrop-blur-md text-lg transition-all duration-500"
                   asChild
                 >
-                  <NavLink to="/tests-eau">Demandez une analyse d'eau</NavLink>
+                  <NavLink to="/consultation">Planifiez une consultation gratuite</NavLink>
                 </Button>
               </div>
 
@@ -727,9 +753,13 @@ Les filtres d’eau pour toute la maison sont installés directement sur l’arr
                 <section className="py-24 bg-white">
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
-                             <h2 className="text-slate-900 mb-8 font-bold text-blue-600">
-                                 Questions fréquentes
-                             </h2>
+                             <h2
+                                className="text-slate-900 mb-8 text-left"
+                                style={{}}
+                            >
+                                <span className="font-light leading-[1.1] block">Pour vous éclairer</span>
+                                <span className="font-normal leading-[1.1] block">Questions fréquentes</span>
+                            </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
                         <div className="max-w-4xl mx-auto">
@@ -825,8 +855,7 @@ Les filtres d’eau pour toute la maison sont installés directement sur l’arr
                             <h2
                                 className="text-slate-900 mb-8 text-left"
                                 style={{}}
-                            >
-                                <span className="text-[42px] md:text-[42px] font-normal leading-[1.1] md:leading-[42px] block">Ressources</span>
+                            >                                <span className="font-normal leading-[1.1] block">Ressources</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

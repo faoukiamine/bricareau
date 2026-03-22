@@ -8,6 +8,16 @@ import kitchenImg from "@/assets/18036672_SIE_2720_1530_21_04_30_SIE_CRM_Dishwas
 import untitledImg from "@/assets/2151469364.jpg";
 import mobileSoftenerImg from "@/assets/9-optimized.webp";
 import bathroomImg from "@/assets/2705.jpg";
+import financeModeImg from "@/assets/finance_mode.svg";
+import plumbingImg from "@/assets/plumbing.svg";
+import moneyBagImg from "@/assets/money_bag.svg";
+import healthMetricsImg from "@/assets/health_metrics.svg";
+import laundryImg from "@/assets/laundry.svg";
+import detergentsImg from "@/assets/detergents.svg";
+import starsImg from "@/assets/stars.svg";
+import healthSafetyImg from "@/assets/health_and_safety.svg";
+import softImg from "@/assets/soft.svg";
+import savingsImg from "@/assets/savings.svg";
 import waterTestGemini from "@/assets/Gemini_Generated_Image_rk3i02rk3i02rk3i.png";
 import waterTestingImg from "@/assets/2147800429.jpg";
 import process1 from "@/assets/2148563485.jpg";
@@ -158,8 +168,8 @@ const Adoucissement = () => {
                             {/* Left Column: Analytical Narrative (6 Harms) */}
                             <div className="lg:col-span-5 space-y-8">
                                 <div>
-                                    <h2 className="text-slate-900 mb-6 font-bold text-blue-600">
-                                        L'impact silencieux du calcaire.
+                                    <h2 className="text-slate-900 mb-6 font-bold">
+                                        L'impact silencieux du <span className="uppercase text-blue-600">calcaire.</span>
                                     </h2>
                                     <p className="font-light text-slate-600 lg:text-slate-600 mb-8 max-w-xl text-left lg:text-justify">
                                         Ce n'est pas qu'un simple dépôt ; c'est un agent d'érosion invisible qui dégrade votre confort et vos investissements jour après jour.
@@ -169,43 +179,43 @@ const Adoucissement = () => {
                                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-x-8 gap-y-6 overflow-hidden transition-all duration-700">
                                     {[
                                         {
-                                            icon: <ZapOff className="w-6 h-6" />,
-                                            title: "+25% d'énergie",
+                                            icon: <img src={financeModeImg} className="w-6 h-6 opacity-20 group-hover:opacity-100 transition-opacity duration-500" style={{ filter: 'invert(32%) sepia(96%) saturate(3015%) hue-rotate(212deg) brightness(97%) contrast(96%)' }} alt="finance mode" />,
+                                            title: "+25% de consommation énergétique",
                                             desc: "Le tartre isole vos résistances, forçant vos appareils à consommer massivement plus."
                                         },
                                         {
-                                            icon: <Wrench className="w-6 h-6" />,
-                                            title: "Plomberie & Débit",
+                                            icon: <img src={plumbingImg} className="w-6 h-6 opacity-20 group-hover:opacity-100 transition-opacity duration-500" style={{ filter: 'invert(32%) sepia(96%) saturate(3015%) hue-rotate(212deg) brightness(97%) contrast(96%)' }} alt="plumbing" />,
+                                            title: "Plomberie obstruée & Débit réduit",
                                             desc: "Obstruction progressive des canalisations et perte de pression aux robinets."
                                         },
                                         {
-                                            icon: <CircleDollarSign className="w-6 h-6" />,
-                                            title: "Maintenance Coûteuse",
+                                            icon: <img src={moneyBagImg} className="w-6 h-6 opacity-20 group-hover:opacity-100 transition-opacity duration-500" style={{ filter: 'invert(32%) sepia(96%) saturate(3015%) hue-rotate(212deg) brightness(97%) contrast(96%)' }} alt="money bag" />,
+                                            title: "Maintenance coûteuse",
                                             desc: "Réduction de 50% de la durée de vie de vos équipements (chauffe-eau, lave-vaisselle)."
                                         },
                                         {
-                                            icon: <Sparkles className="w-6 h-6" />,
-                                            title: "Soin du Corps",
+                                            icon: <img src={healthMetricsImg} className="w-6 h-6 opacity-20 group-hover:opacity-100 transition-opacity duration-500" style={{ filter: 'invert(32%) sepia(96%) saturate(3015%) hue-rotate(212deg) brightness(97%) contrast(96%)' }} alt="health metrics" />,
+                                            title: "Soin du corps",
                                             desc: "Agression cutanée (eczéma), irritations et cheveux ternes ou cassants."
                                         },
                                         {
-                                            icon: <Shirt className="w-6 h-6" />,
-                                            title: "Linge & Textiles",
+                                            icon: <img src={laundryImg} className="w-6 h-6 opacity-20 group-hover:opacity-100 transition-opacity duration-500" style={{ filter: 'invert(32%) sepia(96%) saturate(3015%) hue-rotate(212deg) brightness(97%) contrast(96%)' }} alt="laundry" />,
+                                            title: "Linge & textiles",
                                             desc: "Fibres qui deviennent rêches et couleurs qui ternissent au fil des lavages."
                                         },
                                         {
-                                            icon: <Beaker className="w-6 h-6" />,
-                                            title: "Surconsommation",
+                                            icon: <img src={detergentsImg} className="w-6 h-6 opacity-20 group-hover:opacity-100 transition-opacity duration-500" style={{ filter: 'invert(32%) sepia(96%) saturate(3015%) hue-rotate(212deg) brightness(97%) contrast(96%)' }} alt="detergents" />,
+                                            title: "Surconsommation de détergents",
                                             desc: "Nécessite jusqu'à 50% de détergents et savons en plus pour obtenir de la mousse."
                                         }
                                     ].filter((_, idx) => showAllHarms || idx < 3).map((harm, idx) => (
-                                        <div key={idx} className="flex items-start gap-3 group animate-in fade-in slide-in-from-top-4 duration-500">
-                                            <div className="w-12 h-12 rounded-xl bg-white shadow-lg flex items-center justify-center shrink-0 group-hover:bg-blue-600 transition-all duration-500 text-blue-600 group-hover:text-white group-hover:-translate-y-1">
+                                        <div key={idx} className="group flex items-start gap-4 p-2 rounded-3xl transition-colors hover:bg-slate-50 animate-in fade-in slide-in-from-top-4 duration-500">
+                                            <div className="pt-1">
                                                 {harm.icon}
                                             </div>
-                                            <div>
-                                                <h3 className="text-lg font-bold text-slate-900 mb-1">{harm.title}</h3>
-                                                <p className="text-slate-500 font-light text-sm leading-snug">
+                                            <div className="space-y-0.5">
+                                                <h3 className="text-lg font-bold text-blue-600/20 group-hover:text-blue-600 transition-colors duration-500 mb-1">{harm.title}</h3>
+                                                <p className="text-slate-500 font-light text-sm leading-snug max-w-sm">
                                                     {harm.desc}
                                                 </p>
                                             </div>
@@ -229,7 +239,7 @@ const Adoucissement = () => {
                                 <div className="relative rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white group">
                                     <div className="embla overflow-hidden" ref={emblaRef}>
                                         <div className="embla__container flex">
-                                            {[applianceDamageImg, womansufferingdryhairfromhardwaterImg, hardWaterSignsImg, hardWaterImg, womansufferingfromHardWaterImg].map((img, idx) => (
+                                            {[womansufferingfromHardWaterImg, applianceDamageImg, womansufferingdryhairfromhardwaterImg, hardWaterSignsImg, hardWaterImg].map((img, idx) => (
                                                 <div key={idx} className="embla__slide flex-[0_0_100%] min-w-0 relative h-[700px]">
                                                     <img
                                                         src={img}
@@ -272,36 +282,37 @@ const Adoucissement = () => {
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-justify">
                             {[
                                 {
-                                    icon: Droplets,
+                                    iconSrc: starsImg,
                                     title: "Qualité supérieure",
                                     desc: "Une douceur incomparable pour votre peau et vos cheveux dès la première douche, sans l'agressivité du calcaire."
                                 },
                                 {
-                                    icon: Shield,
+                                    iconSrc: healthSafetyImg,
                                     title: "Protection totale",
                                     desc: "Éliminez le tartre à la source et prolongez de façon significative la durée de vie de votre plomberie et de vos appareils."
                                 },
                                 {
-                                    icon: Shirt,
+                                    iconSrc: softImg,
                                     title: "Linge plus doux",
                                     desc: "Retrouvez des vêtements éclatants, souples et durables sans avoir recours à des adoucissants chimiques coûteux."
                                 },
                                 {
-                                    icon: HandCoins,
+                                    iconSrc: savingsImg,
                                     title: "Économies garanties",
                                     desc: "Réduisez vos factures d'énergie et vos dépenses en savons et détergents jusqu'à 50% grâce à une efficacité accrue."
                                 }
                             ].map((item, i) => (
                                 <div key={i} className="group bg-white border border-slate-100 rounded-[2rem] p-8 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2 relative overflow-hidden">
                                     <div className="absolute -right-4 -bottom-4 opacity-5 group-hover:opacity-10 transition-opacity duration-500 transform group-hover:scale-110">
-                                        <item.icon className="w-32 h-32 text-blue-600" />
+                                        <img src={item.iconSrc} className="w-32 h-32" style={{ filter: 'invert(32%) sepia(96%) saturate(3015%) hue-rotate(212deg) brightness(97%) contrast(96%)' }} alt="" />
                                     </div>
-                                    <div className="w-16 h-16 rounded-2xl bg-blue-50 flex items-center justify-center mb-8 group-hover:bg-blue-600 transition-colors duration-500">
-                                        <item.icon className="h-8 w-8 text-blue-600 group-hover:text-white transition-colors duration-500" />
+                                    <div className="relative w-16 h-16 rounded-2xl bg-blue-50 flex items-center justify-center mb-8 group-hover:bg-blue-600 transition-colors duration-500">
+                                        <img src={item.iconSrc} className="absolute h-8 w-8 transition-opacity duration-500 opacity-100 group-hover:opacity-0" style={{ filter: 'invert(32%) sepia(96%) saturate(3015%) hue-rotate(212deg) brightness(97%) contrast(96%)' }} alt={item.title} />
+                                        <img src={item.iconSrc} className="absolute h-8 w-8 transition-opacity duration-500 opacity-0 group-hover:opacity-100 brightness-0 invert" alt={`${item.title} hover`} />
                                     </div>
-                                    <h4 className="text-xl font-bold text-slate-900 mb-4 tracking-tight group-hover:text-blue-600 transition-colors duration-500">
+                                    <h5 className="text-xl font-bold text-slate-900 mb-4 tracking-tight group-hover:text-blue-600 transition-colors duration-500">
                                         {item.title}
-                                    </h4>
+                                    </h5>
                                     <p className="text-slate-500 font-light leading-relaxed">
                                         {item.desc}
                                     </p>
@@ -361,16 +372,16 @@ const Adoucissement = () => {
 
                                     <div className="space-y-2">
                                         {[
-                                            { title: "Économies réelles", desc: "Réduisez vos dépenses. Économisez jusqu'à 30% sur vos produits d'entretien et réduisez drastiquement vos factures d'énergie." },
                                             { title: "Douceur infinie", desc: "Une peau et des cheveux sublimés. Retrouvez la souplesse naturelle de votre peau et l'éclat de vos cheveux dès la première douche." },
+                                            { title: "Économies réelles", desc: "Réduisez vos dépenses. Économisez jusqu'à 30% sur vos produits d'entretien et réduisez drastiquement vos factures d'énergie." },
                                             { title: "Protection totale", desc: "Préservez vos installations. Dites adieu aux pannes d'électroménager et aux traces de tartre sur votre robinetterie." }
                                         ].map((item, i) => (
                                             <div key={i} className="group flex items-start gap-4 p-2 rounded-3xl transition-colors hover:bg-slate-50">
-                                                <div className="text-2xl font-black text-blue-600/20 transition-colors pt-1">
+                                                <div className="text-2xl font-black text-blue-600/20 group-hover:text-blue-600 transition-colors pt-1">
                                                     0{i + 1}
                                                 </div>
                                                 <div className="space-y-0.5">
-                                                    <h3 className={`text-xl font-bold tracking-tight ${item.title === "Économies réelles" ? "text-blue-600/20" : "text-slate-900"}`}>
+                                                    <h3 className="text-xl font-bold tracking-tight text-blue-600/20 group-hover:text-blue-600 transition-colors">
                                                         {item.title}
                                                     </h3>
                                                     <p className="text-slate-500 font-light text-sm leading-relaxed max-w-sm">
@@ -442,11 +453,11 @@ const Adoucissement = () => {
                                             { title: "Protection Mobile", desc: "Sauvez vos équipements. Protégez la tuyauterie de votre VR et votre chauffe-eau contre les eaux dures variables." }
                                         ].map((item, i) => (
                                             <div key={i} className="group flex items-start gap-4 p-2 rounded-3xl transition-colors hover:bg-slate-50">
-                                                <div className="text-2xl font-black text-blue-600/20 transition-colors pt-1">
+                                                <div className="text-2xl font-black text-blue-600/20 group-hover:text-blue-600 transition-colors pt-1">
                                                     0{i + 1}
                                                 </div>
                                                 <div className="space-y-0.5">
-                                                    <h3 className="text-xl font-bold text-slate-900 tracking-tight">
+                                                    <h3 className="text-xl font-bold tracking-tight text-blue-600/20 group-hover:text-blue-600 transition-colors">
                                                         {item.title}
                                                     </h3>
                                                     <p className="text-slate-500 font-light text-sm leading-relaxed max-w-sm">
@@ -519,11 +530,11 @@ const Adoucissement = () => {
                                             { title: "Eau Préservée", desc: "Gardez les bons minéraux. Le calcaire est neutralisé mais le calcium et le magnésium restent dans l'eau pour votre santé." }
                                         ].map((item, i) => (
                                             <div key={i} className="group flex items-start gap-4 p-2 rounded-3xl transition-colors hover:bg-slate-50">
-                                                <div className="text-2xl font-black text-blue-600/20 transition-colors pt-1">
+                                                <div className="text-2xl font-black text-blue-600/20 group-hover:text-blue-600 transition-colors pt-1">
                                                     0{i + 1}
                                                 </div>
                                                 <div className="space-y-0.5">
-                                                    <h3 className="text-xl font-bold text-slate-900 tracking-tight">
+                                                    <h3 className="text-xl font-bold tracking-tight text-blue-600/20 group-hover:text-blue-600 transition-colors">
                                                         {item.title}
                                                     </h3>
                                                     <p className="text-slate-500 font-light text-sm leading-relaxed max-w-sm">
@@ -558,9 +569,13 @@ const Adoucissement = () => {
                 <section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
-                            <h2 className="text-slate-900 mb-8 font-bold text-blue-600">
-                                Comparez nos solutions d'adoucissement d'eau
-                            </h2>
+              <h2
+                className="text-slate-900 mb-8 text-left"
+                style={{}}
+              >
+                <span className="font-light leading-[1.1] block">Comparez nos solutions</span>
+                <span className="font-normal leading-[1.1] block">d'adoucissement d'eau</span>
+              </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
                         <div className="overflow-x-auto">
@@ -642,10 +657,10 @@ const Adoucissement = () => {
                             <span className="text-blue-600 lg:text-white/80 font-bold uppercase tracking-widest text-sm mb-4 block">
                                 Contrôle de la Qualité D'EAU
                             </span>
-                            <h2 className="mb-8 text-slate-900 lg:text-white font-bold">
+                            <h2 className="mb-8 text-slate-900 lg:text-white font-bold uppercase font-weight-bold 900">
                                 L’essence d’une vie saine coule de votre robinet.
                             </h2>
-                            <p className="font-light text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
+                            <p className="font-light text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left">
                                 Entre le chlore, les métaux lourds et les sédiments, votre eau cache souvent des secrets. Ne laissez plus le doute couler de votre robinet. Demandez votre test d'eau dès aujourd'hui et obtenez un portrait clair de votre eau ainsi que des solutions adaptées à votre foyer.
                             </p>
                             <div className="flex gap-4">
@@ -666,8 +681,12 @@ const Adoucissement = () => {
                 <section className="py-24 bg-white">
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
-                            <h2 className="text-slate-900 mb-8 font-bold text-blue-600">
-                                Questions fréquentes
+              <h2
+                                className="text-slate-900 mb-8 text-left"
+                                style={{}}
+                            >
+                                <span className="font-light leading-[1.1] block">Pour vous éclairer</span>
+                                <span className="font-normal leading-[1.1] block">Questions fréquentes</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
@@ -716,8 +735,10 @@ const Adoucissement = () => {
                 <section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
-                            <h2 className="text-slate-900 mb-8 font-bold text-blue-600">
-                                Ressources
+                            <h2
+                                className="text-slate-900 mb-8 text-left"
+                                style={{}}
+                            >                                <span className="font-normal leading-[1.1] block">Ressources</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>

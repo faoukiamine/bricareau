@@ -249,7 +249,7 @@ const EauDePuits = () => {
                         </div>
                         {isFeatured && (
                           <span className="px-3 py-1 bg-blue-600 text-white rounded-full text-[10px] font-black uppercase tracking-widest">
-                            Contaminant Majeur
+                            Contaminant populaire
                           </span>
                         )}
                       </div>
@@ -269,9 +269,6 @@ const EauDePuits = () => {
                     {/* Interactive Corners */}
                     <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                     <div className="absolute bottom-4 right-8 opacity-0 group-hover:opacity-100 group-hover:translate-x-2 transition-all duration-500">
-                      <div className="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center shadow-lg shadow-blue-200">
-                        <ArrowRight className="h-5 w-5 text-white" />
-                      </div>
                     </div>
                   </div>
                 );
@@ -399,10 +396,7 @@ const EauDePuits = () => {
               <span className="text-blue-600 lg:text-white/80 font-bold uppercase tracking-widest text-sm mb-4 block">
                 Contrôle de la Qualité D'EAU
               </span>
-              <h2
-                className="md:leading-[60px] lg:font-light mb-8 text-slate-900 lg:text-white text-left"
-                style={{}}
-              >
+              <h2 className="mb-8 text-slate-900 lg:text-white font-bold uppercase font-weight-bold 900">
                 <span className="lg:font-bold">Dites adieu au fer,</span><br />
                 au soufre et au calcaire.
               </h2>
@@ -609,8 +603,7 @@ const EauDePuits = () => {
           <div className="container mx-auto px-6 relative z-10 text-center">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-white mb-6">
-                <span className="font-light leading-tight block tracking-tight opacity-90 italic">Besoin d'aide avec</span>
-                <span className="font-bold leading-tight block tracking-tight uppercase">votre eau de puits ?</span>
+                <span className="font-bold leading-tight block tracking-tight opacity-90">Maîtrisez la qualité de votre eau de puits</span>
               </h2>
 
               <p className="text-blue-100/80 font-light text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
@@ -635,7 +628,7 @@ const EauDePuits = () => {
                   className="rounded-full px-10 h-16 border-white/30 text-white bg-white/5 hover:bg-white/10 backdrop-blur-md text-lg transition-all duration-500"
                   asChild
                 >
-                  <NavLink to="/tests-eau">Demandez une analyse d'eau</NavLink>
+                  <NavLink to="/consultation">Planifiez une consultation gratuite</NavLink>
                 </Button>
               </div>
 
