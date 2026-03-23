@@ -1,7 +1,7 @@
 import { Phone, Award, DollarSign, CheckCircle2, ChevronRight } from "lucide-react";
 import heroImage from "@/assets/1451506551.JPG";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import Testimonials from "@/components/Testimonials";
+import TestimonialsSection from "@/components/TestimonialsSection";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
@@ -235,7 +235,7 @@ const CommercialIndustriel = () => {
         </section>
 
         {/* 7. Testimonials */}
-        <Testimonials />
+        <TestimonialsSection />
 
         {/* 8. Markets Section */}
         <section className="py-12 md:py-16 bg-secondary/30">

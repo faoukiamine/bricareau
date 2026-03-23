@@ -27,17 +27,17 @@ const Footer = () => {
             <h3 className="mb-4 text-white">Nos Solutions</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="/adoucisseurs" className="text-white/80 hover:text-white transition-colors">
+                <a href="/adoucissement" className="text-white/80 hover:text-white transition-colors">
                   Adoucisseurs d'eau
                 </a>
               </li>
               <li>
-                <a href="/services#filtration" className="text-white/80 hover:text-white transition-colors">
+                <a href="/filtration" className="text-white/80 hover:text-white transition-colors">
                   Filtration d'eau
                 </a>
               </li>
               <li>
-                <a href="/services#osmose" className="text-white/80 hover:text-white transition-colors">
+                <a href="/systeme-de-filtration-deau-potable" className="text-white/80 hover:text-white transition-colors">
                   Osmose inverse
                 </a>
               </li>
@@ -47,7 +47,7 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="/services#fontaines" className="text-white/80 hover:text-white transition-colors">
+                <a href="/fontaines" className="text-white/80 hover:text-white transition-colors">
                   Fontaines d'eau
                 </a>
               </li>

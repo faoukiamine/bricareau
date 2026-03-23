@@ -613,7 +613,7 @@ const FiltresPuits = () => {
                             {[
                                 { title: "Adoucisseur d'eau et fosse septique : compatible ou non ?", path: "/adoucisseur-deau-et-fosse-septique-mythes-et-realites", img: adoucisseurFosseImg },
                                 { title: "Adoucisseur sans sel vs avec sel : la vérité technique", path: "/adoucisseur-sans-sel-vs-avec-sel-verite-technique", img: residentialWaterSoftenerImg },
-                                { title: "Conditionneur d'eau : Une alternative écologique à l'adoucisseur sans sel", path: "/conditionneur-deau-une-alternative-ecologique-a-ladoucisseur-sans-sel", img: conditionneursImg }
+                                { title: "Conditionneur d'eau : Une alternative écologique à l'adoucisseur sans sel", path: "/adoucisseur-sans-sel-vs-avec-sel-verite-technique", img: conditionneursImg }
                             ].map((art, i) => (
                                 <div
                                     key={i}

@@ -1,7 +1,7 @@
 import { Phone, CheckCircle, Leaf, Users, ChevronRight, ArrowRight } from "lucide-react";
 import heroImage from "@/assets/hero-entreprises.jpg";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import Testimonials from "@/components/Testimonials";
+import TestimonialsSection from "@/components/TestimonialsSection";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
@@ -181,7 +181,7 @@ const Entreprises = () => {
         </section>
 
         {/* Testimonials */}
-        <Testimonials />
+        <TestimonialsSection />
 
         {/* Sectors */}
         <section className="py-12 md:py-16 bg-secondary/30">

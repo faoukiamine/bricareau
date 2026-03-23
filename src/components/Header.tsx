@@ -222,19 +222,19 @@ const Header = () => {
           customIcon: drinkingwaterfountainiconImg,
           title: "Distributeurs d'eau de comptoir",
           description: "Solutions tout-en-un offrant eau froide, chaude et glace dans un seul appareil.",
-          href: "/distributeurs-eau-comptoir"
+          href: "/fontaines"
         },
         {
           customIcon: waterdispensericonImg,
           title: "Refroidisseurs d'eau sans bouteille",
           description: "Eau fraîche et filtrée à la demande pour votre bureau ou votre maison.",
-          href: "/refroidisseurs"
+          href: "/fontaines"
         },
         {
           customIcon: icemakericonImg,
           title: "Machines à glaçons",
           description: "Glace propre et abondante pour toutes vos occasions et besoins quotidiens.",
-          href: "/machines-a-glace"
+          href: "/fontaines"
         },
 
       ],

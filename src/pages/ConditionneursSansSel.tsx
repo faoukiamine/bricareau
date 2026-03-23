@@ -303,7 +303,7 @@ const ConditionneursSansSel = () => {
               {[
                 { title: "Adoucisseur sans sel vs avec sel", img: residentialWaterSoftenerImg, link: "/adoucisseur-sans-sel-vs-avec-sel-verite-technique" },
                 { title: "Fosse septique et adoucisseur", img: adoucisseurFosseImg, link: "/adoucisseur-deau-et-fosse-septique-mythes-et-realites" },
-                { title: "L'alternative écologique", img: conditionneursImg, link: "/conditionneur-deau-une-alternative-ecologique-a-ladoucisseur-sans-sel" }
+                { title: "L'alternative écologique", img: conditionneursImg, link: "/adoucisseur-sans-sel-vs-avec-sel-verite-technique" }
               ].map((art, i) => (
                 <NavLink key={i} to={art.link} className="bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-xl transition-all group border border-slate-100">
                   <div className="h-56 overflow-hidden">

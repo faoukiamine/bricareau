@@ -104,6 +104,7 @@ const App = () => (
           <Route path="/adoucisseurs-portables" element={<Services />} />
           <Route path="/solutions" element={<Solutions />} />
           <Route path="/adoucissement" element={<Adoucisseurs />} />
+          <Route path="/adoucisseurs" element={<Adoucisseurs />} />
           <Route path="/adoucisseur-eau-residentiel" element={<AdoucisseurEauResidentiel />} />
           <Route path="/adoucisseurs-eau-de-puits" element={<AdoucisseursEauDePuits />} />
           <Route path="/conditionneurs-sans-sel" element={<ConditionneursSansSel />} />
