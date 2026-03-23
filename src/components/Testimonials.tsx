@@ -5,34 +5,6 @@ import { useCallback, useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { type EmblaCarouselType } from "embla-carousel";
 
-const testimonials = [
-  {
-    content: "Our well water was terrible - rusty and smelly. Bricareau's system fixed everything. Can't believe the difference! The water tastes great now.",
-    author: "Jennifer Martinez",
-    location: "Portland, OR",
-    rating: 5 },
-  {
-    content: "Excellent service from start to finish. The installation was quick, and the technician was very knowledgeable. Highly recommend their water softeners.",
-    author: "David Chen",
-    location: "Austin, TX",
-    rating: 5 },
-  {
-    content: "We've had our system for 6 months now and our skin feels so much better. No more dry itchy skin after showers. Best investment for our home.",
-    author: "Sarah Johnson",
-    location: "Chicago, IL",
-    rating: 5 },
-  {
-    content: "The drinking water system is a game changer. No more buying plastic bottles! The water is crisp and clean.",
-    author: "Michael Brown",
-    location: "Seattle, WA",
-    rating: 5 },
-  {
-    content: "Professional team and top-notch products. They tested our water and recommended exactly what we needed without overselling.",
-    author: "Emily Wilson",
-    location: "Denver, CO",
-    rating: 5 },
-];
-
 const Testimonials = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay({ delay: 5000 })]);
   const [canScrollPrev, setCanScrollPrev] = useState(false);

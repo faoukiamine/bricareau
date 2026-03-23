@@ -59,6 +59,9 @@ import { softenerImg as residentialWaterSoftenerImg } from "./Blog pages/Comment
 import waterSoftenerImg from "@/assets/Adoucisseurs d'eau.webp";
 import drinkingWaterImg from "@/assets/Solutions d'eau potable.webp";
 import specialFiltersImg from "@/assets/Filtres d'eau spécialisés.webp";
+import personShieldSvg from "@/assets/person_shield.svg";
+import resetWrenchSvg from "@/assets/reset_wrench.svg";
+
 
 const DesinfectionUV = () => {
     const [showAllFaqs, setShowAllFaqs] = React.useState(false);
@@ -192,11 +195,21 @@ const DesinfectionUV = () => {
                                     { icon: Leaf, title: "Sans produits chimiques", desc: "Aucun goût ni odeur de chlore. Les rayons UV agissent physiquement sur les pathogènes, préservant la pureté originelle de votre eau sans aucun additif chimique." },
                                     { icon: Zap, title: "Action instantanée", desc: "Contrairement au chlore qui nécessite un temps de contact, les UV désinfectent l'eau dès qu'elle traverse la chambre de traitement." },
                                     { icon: Award, title: "Efficacité prouvée", desc: "Le rayonnement UV-C pénètre instantanément l'ADN des micro-organismes, les rendant inoffensifs et incapables de se reproduire." },
-                                    { icon: Shield, title: "Sécurité absolue", desc: "Une barrière infranchissable contre les bactéries, virus et kystes (Cryptosporidium), même ceux résistants aux désinfectants classiques." },
+                                    { 
+                                        iconSrc: personShieldSvg, 
+                                        isSvg: true, 
+                                        title: "Sécurité absolue", 
+                                        desc: "Une barrière infranchissable contre les bactéries, virus et kystes (Cryptosporidium), même ceux résistants aux désinfectants classiques." 
+                                    },
                                     { icon: CupSoda, title: "Goût préservé", desc: "Votre eau conserve toutes ses propriétés minérales et son goût naturel frais, sans les sous-produits toxiques liés au chlore." },
                                     { icon: ShieldCheck, title: "Zéro risque", desc: "Pas de manipulation ni de stockage de produits chimiques dangereux chez vous. Une solution propre, saine et sans danger pour l'environnement." },
                                     { icon: BatteryLow, title: "Éco-Énergétique", desc: "Une protection permanente 24h/24 qui consomme aussi peu d'énergie qu'une simple ampoule domestique standard." },
-                                    { icon: Wrench, title: "Entretien minimal", desc: "Conçu pour la simplicité. Un changement de lampe annuel suffit pour garantir une performance optimale et une sécurité constante." }
+                                    { 
+                                        iconSrc: resetWrenchSvg, 
+                                        isSvg: true, 
+                                        title: "Entretien minimal", 
+                                        desc: "Conçu pour la simplicité. Un changement de lampe annuel suffit pour garantir une performance optimale et une sécurité constante." 
+                                    },
                                 ].map((benefit, i) => (
                                     <div 
                                         key={i} 
@@ -209,8 +222,24 @@ const DesinfectionUV = () => {
                                     >
                                         {/* Content container for better alignment */}
                                         <div className={`flex flex-col ${i % 2 === 0 ? 'lg:items-end' : 'lg:items-start'} max-w-md`}>
-                                            <div className={`w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center mb-6 text-blue-600 group-hover:bg-blue-600 group-hover:text-white group-hover:scale-110 transition-all duration-500 shadow-[0_0_20px_rgba(37,99,235,0.1)]`}>
-                                                <benefit.icon className="h-6 w-6" />
+                                            <div className={`w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center mb-6 text-blue-600 group-hover:bg-blue-600 group-hover:text-white group-hover:scale-110 transition-all duration-500 shadow-[0_0_20px_rgba(37,99,235,0.1)] overflow-hidden`}>
+                                                {benefit.isSvg ? (
+                                                    <div 
+                                                        className="w-6 h-6 bg-current"
+                                                        style={{
+                                                            maskImage: `url(${benefit.iconSrc})`,
+                                                            WebkitMaskImage: `url(${benefit.iconSrc})`,
+                                                            maskRepeat: 'no-repeat',
+                                                            WebkitMaskRepeat: 'no-repeat',
+                                                            maskPosition: 'center',
+                                                            WebkitMaskPosition: 'center',
+                                                            maskSize: 'contain',
+                                                            WebkitMaskSize: 'contain'
+                                                        }}
+                                                    />
+                                                ) : (
+                                                    <benefit.icon className="h-6 w-6" />
+                                                )}
                                             </div>
                                             <h3 className="card-title mb-4 group-hover:text-blue-600 transition-colors">
                                                 {benefit.title}
@@ -268,8 +297,7 @@ const DesinfectionUV = () => {
                                     </div>
                                     <div className="p-8 space-y-4 flex flex-col flex-grow border-t-2 border-transparent group-hover:border-blue-600 transition-colors">
                                         <h3
-                                            className="text-slate-900 group-hover:text-blue-600 transition-colors tracking-tight text-center"
-                                            style={{}}
+                                            className="card-title group-hover:text-blue-600 transition-colors text-center"
                                         >
                                             {prod.name}
                                         </h3>
@@ -416,7 +444,8 @@ const DesinfectionUV = () => {
                 <section className="bg-white py-24">
                     <div className="container mx-auto px-4">
                         <div className="text-center mb-16">
-                            <h2 className="text-slate-900 mb-8">Découvrez les produits associés</h2>                            <p className="font-light text-gray-500 max-w-2xl mx-auto text-justify">
+                            <h2 className="text-slate-900 mb-8">Découvrez les produits associés</h2>                            
+                            <p className="font-light text-gray-500 max-w-2xl mx-auto text-center">
                                 Optimisez votre expérience de traitement d'eau avec nos solutions complémentaires.
                             </p>
                         </div>
@@ -457,8 +486,7 @@ const DesinfectionUV = () => {
                                     </div>
                                     <div className="p-8 space-y-4 flex flex-col flex-grow border-t-2 border-transparent group-hover:border-blue-600 transition-colors">
                                         <h3
-                                            className="text-slate-900 group-hover:text-blue-600 transition-colors tracking-tight text-center"
-                                            style={{}}
+                                            className="card-title group-hover:text-blue-600 transition-colors text-center"
                                         >
                                             {prod.name}
                                         </h3>

@@ -99,7 +99,7 @@ const TestimonialsSection = ({
                                 <div key={index} className="flex-[0_0_100%] min-w-0 px-2 md:px-4">
                                     <div className="bg-white p-6 md:p-14 rounded-[2rem] shadow-[0_10px_40px_-15px_rgba(0,0,0,0.1)] border border-gray-50 flex flex-col items-start text-left relative transition-all duration-300">
                                         {/* Quote Icon */}
-                                        <div className="text-[#3FA9F5] mb-8">
+                                        <div className="text-blue-600 mb-8">
                                             <Quote className="w-12 h-12 md:w-14 md:h-14" strokeWidth={1} />
                                         </div>
 
@@ -149,7 +149,7 @@ const TestimonialsSection = ({
                                 className={cn(
                                     "transition-all duration-300",
                                     selectedIndex === index
-                                        ? "w-8 h-2 bg-[#3FA9F5] rounded-full"
+                                        ? "w-8 h-2 bg-blue-600 rounded-full"
                                         : "w-2 h-2 bg-gray-200 rounded-full hover:bg-gray-300"
                                 )}
                                 aria-label={`Aller au témoignage ${index + 1}`}

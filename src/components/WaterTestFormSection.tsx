@@ -226,7 +226,7 @@ const WaterTestFormSection = ({ id }: { id?: string }) => {
                         </h2>
                         <div className="w-24 h-1 bg-blue-600 mb-8"></div>
                         <p className="text-gray-600 mb-8">
-                            Remplissez le formulaire ci-dessous pour planifier le prélèvement de votre échantillon d'eau.
+                            Remplissez le formulaire pour planifier le prélèvement de votre échantillon d'eau.
                         </p>
                     </div>
 

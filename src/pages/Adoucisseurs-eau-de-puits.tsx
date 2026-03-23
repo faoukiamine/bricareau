@@ -10,6 +10,12 @@ import eauDePuitsImg from "@/assets/189573.jpg";
 import TwinAlternatingWaterSoftenerImg from "@/assets/Alternating Water Softener.png";
 import SentinelWaterSoftenerImg from "@/assets/Sentinelle Water Softener.png";
 import SerenityWaterSoftenerImg from "@/assets/Serenity Water Softener.png";
+import mantakesbathImg from "@/assets/pexels-gabby-k-6621025 (1).jpg";
+import waterRipples from "@/assets/water_purity_ripples_1774299396791.png";
+import residentialSoftenerAsset from "@/assets/Adoucisseur_d_eau.png";
+import softwaterImg from "@/assets/glass-of-water.jpeg";
+import luxuryBathroomImg from "@/assets/7031878.jpg";
+import spaRelaxationImg from "@/assets/young-nude-woman-taking-relaxing-foamy-bath.jpg";
 import {
     ArrowRight,
     Droplets,
@@ -250,48 +256,120 @@ const AdoucisseursEauDePuits = () => {
                     </div>
                 </section>
 
-                {/* 3. Why choose our water softeners */}
-                <section className="py-24 bg-blue-600 text-white text-center">
-                    <div className="container mx-auto px-6 text-center">
-                        <div className="text-left mb-16">
-                            <h2
-                                className="text-white mb-8 text-left"
-                                style={{}}
-                            >
-                                <span className="font-light leading-[1.1] md:leading-[60px] block">Pourquoi choisir nos</span>
-                                <span className="font-normal leading-[1.1] md:leading-[60px] block">adoucisseurs d'eau résidentiels ?</span>
-                            </h2>
-                            <div className="w-24 h-1 bg-white"></div>
+                {/* 2. Transition Section - L'Impact de la Pureté */}
+                <section className="relative py-32 bg-white overflow-hidden">
+                    {/* Background Texture */}
+                    <div className="absolute top-0 right-0 w-full h-full opacity-[0.03] pointer-events-none">
+                        <img 
+                            src={waterRipples} 
+                            alt="" 
+                            className="w-full h-full object-cover scale-150 rotate-12"
+                        />
+                    </div>
+                    
+                    <div className="container mx-auto px-6 relative z-10">
+                        <div className="flex flex-col md:flex-row gap-12 md:items-center mb-32">
+                            <div className="flex-1 max-w-3xl">
+                <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black tracking-[0.2em] mb-6">
+                                    Eau adoucie
+                                </span>
+                                <h2 className="text-slate-900 leading-[1.1] mb-12">
+                                    <span className="font-light block tracking-tighter">Vivez l'eau au-delà</span>
+                                    <span className="font-bold text-blue-600 block tracking-tighter">de la simple apparence.</span>
+                                </h2>
+                                <p className="text-xl text-slate-500 font-light max-w-2xl leading-relaxed text-justify">
+                                    Dans un puits privé, la clarté visuelle n'est que la surface. Notre technologie d'adoucissement transforme la structure même de votre eau, éliminant l'agressivité du calcaire et du fer pour une douceur que vous ressentirez à chaque goutte, sur chaque surface.
+                                </p>
+                            </div>
+                            <div className="md:w-1/3 flex justify-center md:justify-end">
+                                <img 
+                                    src={residentialSoftenerAsset} 
+                                    alt="Adoucisseur d'eau résidentiel" 
+                                    className="h-auto max-h-[500px] object-contain drop-shadow-2xl"
+                                />
+                            </div>
                         </div>
-                        <div className="flex flex-wrap justify-center gap-x-12 gap-y-16">
-                            {[
-                                { icon: Droplets, title: "Qualité supérieure", desc: "Une douceur incomparable pour votre peau et vos cheveux dès la première douche." },
-                                { icon: Sparkles, title: "Vaisselle étincelante", desc: "Éliminez les taches de calcaire et le voile blanc sur vos verres et plats sans effort." },
-                                { icon: Shirt, title: "Linge plus doux", desc: "Des vêtements qui restent éclatants et souples plus longtemps, sans adoucissants." },
-                                { icon: safetyIcon, isImage: true, title: "Sécurité accrue", desc: "Tranquillité d'esprit totale pour la santé de votre famille." },
-                                { icon: Shield, title: "Protection totale", desc: "Prolongez la durée de vie de votre plomberie et de vos électroménagers coûteux." },
-                                { icon: HandCoins, title: "Économies garanties", desc: "Réduisez vos factures d'énergie et vos dépenses en savons et détergents de 50%." },
-                                { icon: Zap, title: "Efficacité HE", desc: "Une technologie haute efficacité qui consomme moins de sel et d'eau lors des régénérations." },
-                                { icon: Zap, title: "Protection Éco-Durable", desc: "Préservez l'environnement et vos installations septiques en diminuant le rejet de produits chimiques." },
-                                { icon: Award, title: "Expertise Bricareau", desc: "Installation certifiée et service après-vente pour une tranquillité d'esprit totale." }
-                            ].map((item, idx) => (
-                                <div key={idx} className="flex flex-col items-center group w-full sm:w-[calc(50%-3rem)] lg:w-[calc(25%-3rem)]">
-                                    <div className="w-20 h-20 rounded-2xl bg-white flex items-center justify-center mb-8 transition-all group-hover:scale-110 group-hover:bg-white/10">
-                                        {item.isImage ? (
-                                            <img src={item.icon as string} alt={item.title} className="h-12 w-12 object-contain" />
-                                        ) : (
-                                            <item.icon className="h-10 w-10 text-blue-600 group-hover:text-white" />
-                                        )}
-                                    </div>
-                                    <h4 className="mb-4 tracking-tight">{item.title}</h4>
-                                    <p className="font-light text-blue-100 text-justify">{item.desc}</p>
+
+                        <div className="flex flex-col space-y-32 md:space-y-48">
+                            {/* Benefit 1 - Right Text, Left Image */}
+                            <div className="flex flex-col md:flex-row-reverse gap-12 md:items-center group relative">
+                                <div className="absolute -top-12 -right-8 text-[180px] font-black text-slate-50 opacity-100 group-hover:text-blue-50 transition-colors duration-1000 select-none tracking-tighter -z-10">
+                                    01
                                 </div>
-                            ))}
+                                <div className="md:w-1/2 space-y-8 pr-4 md:text-right flex flex-col items-end">
+                                    <div className="space-y-4 items-end flex flex-col">
+                                        <h3 className="text-[24px] font-bold text-slate-900 leading-tight group-hover:text-blue-600 transition-colors duration-500">
+                                            Adoucissement de haute performance
+                                        </h3>
+                                        <div className="w-16 h-1 bg-blue-600 rounded-full transform origin-right group-hover:scale-x-150 transition-transform duration-500" />
+                                    </div>
+                                    <p className="text-xl text-slate-500 font-light leading-relaxed text-right max-w-xl">
+                                        Un équilibre parfait entre minéralité et douceur. Notre système transforme la structure du calcaire, protégeant vos installations tout en préservant la fraîcheur naturelle de l'eau de puits pour une pureté cristalline inégalée.
+                                    </p>
+                                </div>
+                                <div className="md:w-1/2 overflow-hidden rounded-3xl shadow-2xl">
+                                    <img 
+                                        src={softwaterImg} 
+                                        alt="Test de pureté de l'eau" 
+                                        className="w-full h-64 md:h-[400px] object-cover transform group-hover:scale-110 transition-transform duration-1000"
+                                    />
+                                </div>
+                            </div>
+
+                            {/* Benefit 2 - Left Text, Right Image */}
+                            <div className="flex flex-col md:flex-row gap-12 md:items-center group relative">
+                                <div className="absolute -top-12 -left-8 text-[180px] font-black text-slate-50 opacity-100 group-hover:text-blue-50 transition-colors duration-1000 select-none tracking-tighter -z-10">
+                                    02
+                                </div>
+                                <div className="md:w-1/2 space-y-8 pl-4">
+                                    <div className="space-y-4">
+                                        <h3 className="text-[24px] font-bold text-slate-900 leading-tight group-hover:text-blue-600 transition-colors duration-500">
+                                            Protection et longévité de votre foyer
+                                        </h3>
+                                        <div className="w-16 h-1 bg-blue-600 rounded-full transform origin-left group-hover:scale-x-150 transition-transform duration-500" />
+                                    </div>
+                                    <p className="text-xl text-slate-500 font-light leading-relaxed text-justify max-w-xl">
+                                        Dites adieu aux traces de rouille et au vert-de-gris. Une protection active pour votre robinetterie de luxe et vos appareils haut de gamme, prolongeant l'éclat originel de votre foyer pour des décennies.
+                                    </p>
+                                </div>
+                                <div className="md:w-1/2 overflow-hidden rounded-3xl shadow-2xl">
+                                    <img 
+                                        src={luxuryBathroomImg} 
+                                        alt="Salle de bain luxueuse et protégée" 
+                                        className="w-full h-64 md:h-[400px] object-cover transform group-hover:scale-110 transition-transform duration-1000"
+                                    />
+                                </div>
+                            </div>
+
+                            {/* Benefit 3 - Right Text, Left Image */}
+                            <div className="flex flex-col md:flex-row-reverse gap-12 md:items-center group relative pb-16">
+                                <div className="absolute -top-12 -right-8 text-[180px] font-black text-slate-50 opacity-100 group-hover:text-blue-50 transition-colors duration-1000 select-none tracking-tighter -z-10">
+                                    03
+                                </div>
+                                <div className="md:w-1/2 space-y-8 pr-4 md:text-right flex flex-col items-end">
+                                    <div className="space-y-4 items-end flex flex-col">
+                                        <h3 className="text-[24px] font-bold text-slate-900 leading-tight group-hover:text-blue-600 transition-colors duration-500">
+                                            Confort et douceur sensorielle
+                                        </h3>
+                                        <div className="w-16 h-1 bg-blue-600 rounded-full transform origin-right group-hover:scale-x-150 transition-transform duration-500" />
+                                    </div>
+                                    <p className="text-xl text-slate-500 font-light leading-relaxed text-right max-w-xl">
+                                        Offrez à votre famille le luxe d'une eau soyeuse qui hydrate profondément. Une sensation de douceur sur la peau, des cheveux visiblement plus brillants et un linge enveloppé d'un éclat soigné à chaque lavage.
+                                    </p>
+                                </div>
+                                <div className="md:w-1/2 overflow-hidden rounded-3xl shadow-2xl">
+                                    <img 
+                                        src={spaRelaxationImg} 
+                                        alt="Moment de détente spa à domicile" 
+                                        className="w-full h-64 md:h-[400px] object-cover transform group-hover:scale-110 transition-transform duration-1000"
+                                    />
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
 
-                {/* 4. Product Grid Section */}
+                {/* 3. Product Grid Section */}
                 <section id="nos-adoucisseurs" className="py-24 bg-gray-50">
                     <div className="container mx-auto px-6">
                         <div className="text-left mb-16">
@@ -299,8 +377,8 @@ const AdoucisseursEauDePuits = () => {
                                 className="text-slate-900 mb-8 text-left"
                                 style={{}}
                             >
-                                <span className="text-[42px] md:text-[42px] font-light leading-[1.1] md:leading-[42px] block">Nos adoucisseurs d'eau</span>
-                                <span className="text-[42px] md:text-[42px] font-normal leading-[1.1] md:leading-[42px] block">résidentiels - Eau de puits</span>
+                                <span className="font-light leading-[1.1] block">Nos adoucisseurs d'eau</span>
+                                <span className="font-normal leading-[1.1] block">résidentiels - Eau de puits</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600 mb-8"></div>
                             <p className="font-light text-gray-600 max-w-7xl mx-auto text-justify mb-8">
@@ -322,10 +400,7 @@ const AdoucisseursEauDePuits = () => {
                                         />
                                     </div>
                                     <div className="p-8 space-y-4 flex flex-col flex-grow border-t-2 border-transparent group-hover:border-blue-600 transition-colors">
-                                        <h3
-                                            className="text-slate-900 group-hover:text-blue-600 transition-colors tracking-tight text-center"
-                                            style={{}}
-                                        >
+                                        <h3 className="card-title text-center group-hover:text-blue-600 transition-colors duration-500">
                                             {p.displayName || p.name}
                                         </h3>
                                         <p
@@ -356,8 +431,8 @@ const AdoucisseursEauDePuits = () => {
                                 className="text-slate-900 mb-8 text-left"
                                 style={{}}
                             >
-                                <span className="text-[42px] md:text-[42px] font-light leading-[1.1] md:leading-[42px] block">Comparez nos adoucisseurs</span>
-                                <span className="text-[42px] md:text-[42px] font-normal leading-[1.1] md:leading-[42px] block">d'eau de puits</span>
+                                <span className="font-light leading-[1.1] block">Comparez nos adoucisseurs</span>
+                                <span className="font-normal leading-[1.1] block">d'eau de puits</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
@@ -430,12 +505,10 @@ const AdoucisseursEauDePuits = () => {
 
                     <div className="container mx-auto px-4 relative z-10 flex items-center py-12 lg:py-0">
                         <div className="max-w-2xl text-slate-900 lg:text-white">
-                            <h2
-                                className="md:leading-[60px] lg:font-light mb-8 text-slate-900 lg:text-white text-left"
-                                style={{}}
-                            >
-                                Des tests d'eau précis <span className="lg:font-bold"><br />pour une tranquillité d'esprit totale.</span>
-                            </h2>
+                             <h2 className="mb-8 text-slate-900 lg:text-white font-bold uppercase font-weight-bold 900">
+                                 Des tests d'eau précis <br />
+                                 pour une tranquillité d'esprit totale.
+                             </h2>
                             <p className="font-light text-slate-500 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
                                 Ne devinez pas la qualité de votre eau. Nos analyses approfondies identifient les bactéries, les minéraux et les contaminants chimiques pour vous offrir une tranquillité d'esprit totale.
                             </p>
@@ -509,10 +582,7 @@ const AdoucisseursEauDePuits = () => {
                                         />
                                     </div>
                                     <div className="p-8 space-y-4 flex flex-col flex-grow border-t-2 border-transparent group-hover:border-blue-600 transition-colors">
-                                        <h3
-                                            className="text-slate-900 group-hover:text-blue-600 transition-colors tracking-tight text-center"
-                                            style={{}}
-                                        >
+                                        <h3 className="card-title text-center group-hover:text-blue-600 transition-colors duration-500">
                                             {prod.name}
                                         </h3>
                                         <p
@@ -540,22 +610,21 @@ const AdoucisseursEauDePuits = () => {
                     {/* Background Image with Overlay */}
                     <div className="absolute inset-0 z-0">
                         <img
-                            src={eauDePuitsImg}
+                            src={mantakesbathImg}
                             alt="Expert Bricareau en traitement d'eau de puits"
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-cover object-[center_30%]"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 via-blue-900/90 to-blue-800/80 backdrop-blur-[2px]" />
+                        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 via-blue-900/60 to-blue-800/40 backdrop-blur-[2px]" />
                     </div>
 
                     <div className="container mx-auto px-6 relative z-10 text-center">
                         <div className="max-w-4xl mx-auto">
                             <h2 className="text-white mb-6">
-                                <span className="text-[42px] md:text-[42px] font-light leading-tight block tracking-tight opacity-90 italic">Besoin d'aide avec</span>
-                                <span className="text-[42px] md:text-[42px] font-bold leading-tight block tracking-tight uppercase">votre eau de puits ?</span>
+                                <span className="font-bold leading-tight block tracking-tight">Préservez votre foyer avec une eau d'une douceur absolue.</span>
                             </h2>
 
                             <p className="text-blue-100/80 font-light text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
-                                Discutez avec un expert en un clic. Disponible par téléphone ou à domicile selon vos préférences.
+                                Ne laissez plus le calcaire de votre puits user vos électroménagers et agresser votre peau. Alliez la performance d'une plomberie protégée au confort d'une eau douce à chaque robinet.
                             </p>
 
                             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
@@ -595,8 +664,8 @@ const AdoucisseursEauDePuits = () => {
                                 className="text-slate-900 mb-8 text-left"
                                 style={{}}
                             >
-                                <span className="text-[42px] md:text-[42px] font-light leading-[1.1] md:leading-[42px] block">Pour vous éclairer</span>
-                                <span className="text-[42px] md:text-[42px] font-normal leading-[1.1] md:leading-[42px] block">Questions fréquentes</span>
+                                <span className="font-light leading-[1.1] block">Pour vous éclairer</span>
+                                <span className="font-normal leading-[1.1] block">Questions fréquentes</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
@@ -633,7 +702,7 @@ const AdoucisseursEauDePuits = () => {
                             <h2
                                 className="text-slate-900 mb-8 text-left"
                                 style={{}}
-                            >                                <span className="text-[42px] md:text-[42px] font-normal leading-[1.1] md:leading-[42px] block">Ressources</span>
+                            >                                <span className="font-normal leading-[1.1] block">Ressources</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>

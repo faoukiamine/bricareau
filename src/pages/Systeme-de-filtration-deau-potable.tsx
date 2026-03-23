@@ -51,7 +51,7 @@ import { heroImg as healthwaterImg } from "./Blog pages/Eau-du-puits-au-quebec-q
 import { heroImg as drinkpurewaterImg } from "./Blog pages/Comment-losmose-inverse-protege-votre-famille-des-contaminants-invisibles";
 import rowaterImg from "@/assets/reasons-to-drink-more-water.jpg";
 import schemaOsmoseImg from "@/assets/Schema-osmose-inverse.png";
-import eauFontaineImg from "@/assets/33860.jpg";
+import eauFontaineImg from "@/assets/reasons-to-drink-more-water.jpg";
 
 const StationEauPotable = () => {
   const navigate = useNavigate();

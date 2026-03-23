@@ -154,7 +154,7 @@ const Filtration = () => {
                     </div>
                 </section>
 
-                {/* 2. The Problem Section - Inspired by Hard Water Section */}
+                {/* 2. The Problem Section */}
                 <section className="py-32 bg-slate-50 relative overflow-hidden">
                     {/* Architectural Watermark */}
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[15rem] lg:text-[22rem] font-black text-slate-200/20 select-none pointer-events-none tracking-tighter z-0 uppercase">
@@ -223,7 +223,7 @@ const Filtration = () => {
                                         onClick={() => setShowAllHarms(!showAllHarms)}
                                         className="flex items-center gap-2 text-blue-600 font-bold text-sm hover:gap-3 transition-all group"
                                     >
-                                        {showAllHarms ? "Voir moins de risques" : "Voir plus de risques"}
+                                        {showAllHarms ? "Voir moins" : "Voir plus"}
                                         <ChevronRight className={`w-4 h-4 transition-transform ${showAllHarms ? 'rotate-90' : 'rotate-0'}`} />
                                     </button>
                                 </div>
@@ -713,7 +713,6 @@ const Filtration = () => {
           <div className="container mx-auto px-6 relative z-10 text-center">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-white mb-6">
-                <span className="font-light leading-tight block tracking-tight opacity-90">Votre expertise sur-mesure</span>
                 <span className="font-bold leading-tight block tracking-tight">Un accompagnement personnalisé pour vous guider vers le système adapté à votre réalité et votre budget.</span>
               </h2>
 

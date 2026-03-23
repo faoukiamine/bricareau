@@ -207,6 +207,9 @@ const TraitementEauDePuits = () => {
 
           <div className="container mx-auto px-6 relative z-10">
             <div className="text-center mb-24 max-w-3xl mx-auto">
+              <span className="inline-block px-4 py-1.5 bg-blue-50 text-blue-600 rounded-full text-xs font-black uppercase tracking-widest mb-6">
+                Contaminants fréquents dans l'eau
+              </span>
               <h2 className="text-slate-900 mb-5">
                 <span className="font-light leading-tight block tracking-tighter">Problèmes courants</span>
                 <span className="font-bold text-blue-600 leading-tight block tracking-tighter">de l'eau de puits</span>

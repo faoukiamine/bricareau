@@ -503,8 +503,7 @@ const Fontaines = () => {
                     <div className="container mx-auto px-6 relative z-10 text-center">
                         <div className="max-w-4xl mx-auto">
                             <h2 className="text-white mb-6">
-                                <span className="font-light block">Sublimez votre quotidien</span>
-                                <span className="font-bold text-white block">avec l'excellence de nos fontaines d'eau.</span>
+                                <span className="font-bold text-white block">Sublimez votre quotidien avec l'excellence de nos fontaines d'eau.</span>
                             </h2>
                             <p className="text-blue-100/80 font-light text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
                                 Rejoignez le club familles Bricareau et profitez d'une source d'eau digne d'un palace, sans sortir de chez vous.

@@ -60,7 +60,7 @@ import clothesStainsImg from "@/assets/302731406_443870381116589_377080170920960
 import scientistImg from "@/assets/Scientist istesting water.webp";
 import newHeroImg from "@/assets/r0_0_4896_3264_w1200_h678_fmax.jpg";
 import forensicWaterImg from "@/assets/1062.jpg";
-import glasspurewaterImg from "@/assets/pexels-pavel-danilyuk-6715989.jpg";
+import glasspurewaterImg from "@/assets/glass-of-water.jpeg";
 
 const TestsEauPage = () => {
   const [showAllFaqs, setShowAllFaqs] = useState(false);
@@ -191,7 +191,7 @@ const TestsEauPage = () => {
             <div className="max-w-4xl mx-auto text-center mb-16 lg:mb-24">
               <span className="text-sm font-bold uppercase tracking-widest text-blue-600 mb-4 block flex items-center justify-center gap-2">
                 <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.2em] mb-6">
-                  ANALYSES D'EAU DE PRÉCISION
+                  TESTS & ANALYSES D'EAU DE PRÉCISION
                 </span>
               </span>
               <h2 className="text-slate-900 mb-6 leading-[1.1]">
@@ -246,7 +246,7 @@ const TestsEauPage = () => {
 
                         {/* Text Content */}
                         <div className="flex-1">
-                           <h4 className="text-slate-900 group-hover:text-blue-600 transition-colors duration-500 mb-0 leading-tight">
+                           <h4 className="text-xl font-bold tracking-tight text-blue-600/20 group-hover:text-blue-600 transition-colors duration-500 mb-0 leading-tight">
                              {item.title}
                            </h4>
                            <p className="text-slate-500 text-sm leading-snug font-light max-w-md">
@@ -399,11 +399,11 @@ const TestsEauPage = () => {
           <div className="container mx-auto px-6 relative z-10 text-center">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-white mb-6">
-                <span className="block tracking-tight opacity-90 italic">Vous avez un doute sur la qualité de votre eau, ou vous utilisez un puits privé pour votre famille ?</span>
+                <span className="block tracking-tight opacity-90">Vous avez un doute sur la qualité de votre eau, ou vous utilisez un puits privé pour votre famille ?</span>
               </h2>
 
               <p className="text-blue-100/80 font-light text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
-Planifier une analyse d’eau professionnelle et recevoir un rapport clair avec recommandations. Un spécialiste vous contactera pour discuter des résultats et, au besoin, vous proposer un plan de traitement adapté à votre maison.              </p>
+                Planifier une analyse d’eau professionnelle et recevoir un rapport clair avec recommandations. Un spécialiste vous contactera pour discuter des résultats et, au besoin, vous proposer un plan de traitement adapté à votre maison.              </p>
 
               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
                 <Button
@@ -424,10 +424,13 @@ Planifier une analyse d’eau professionnelle et recevoir un rapport clair avec 
         <section className="py-24 bg-white border-t border-slate-100">
           <div className="container mx-auto px-4 text-left">
             <div className="text-left mb-16">
-              <h2 className="text-slate-900 mb-8 text-left">
-                <span className="block italic opacity-90">Pour vous éclairer</span>
-                <span className="block">Questions fréquentes</span>
-              </h2>
+                             <h2
+                                className="text-slate-900 mb-8 text-left"
+                                style={{}}
+                            >
+                                <span className="font-light leading-[1.1] block">Pour vous éclairer</span>
+                                <span className="font-normal leading-[1.1] block">Questions fréquentes</span>
+                            </h2>
               <div className="w-24 h-1 bg-blue-600"></div>
             </div>
             <div className="max-w-4xl mx-auto">
