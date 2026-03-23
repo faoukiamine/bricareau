@@ -13,10 +13,10 @@ import plumbingImg from "@/assets/plumbing.svg";
 import moneyBagImg from "@/assets/money_bag.svg";
 import healthMetricsImg from "@/assets/health_metrics.svg";
 import laundryImg from "@/assets/laundry.svg";
-import detergentsImg from "@/assets/detergents.svg";
+import detergentsImg from "@/assets/Detergents.svg";
 import starsImg from "@/assets/stars.svg";
 import healthSafetyImg from "@/assets/health_and_safety.svg";
-import softImg from "@/assets/soft.svg";
+import softImg from "@/assets/Soft.svg";
 import savingsImg from "@/assets/savings.svg";
 import waterTestGemini from "@/assets/Gemini_Generated_Image_rk3i02rk3i02rk3i.png";
 import waterTestingImg from "@/assets/2147800429.jpg";
@@ -569,13 +569,13 @@ const Adoucissement = () => {
                 <section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
-              <h2
-                className="text-slate-900 mb-8 text-left"
-                style={{}}
-              >
-                <span className="font-light leading-[1.1] block">Comparez nos solutions</span>
-                <span className="font-normal leading-[1.1] block">d'adoucissement d'eau</span>
-              </h2>
+                            <h2
+                                className="text-slate-900 mb-8 text-left"
+                                style={{}}
+                            >
+                                <span className="font-light leading-[1.1] block">Comparez nos solutions</span>
+                                <span className="font-normal leading-[1.1] block">d'adoucissement d'eau</span>
+                            </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
                         <div className="overflow-x-auto">
@@ -681,7 +681,7 @@ const Adoucissement = () => {
                 <section className="py-24 bg-white">
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
-              <h2
+                            <h2
                                 className="text-slate-900 mb-8 text-left"
                                 style={{}}
                             >
