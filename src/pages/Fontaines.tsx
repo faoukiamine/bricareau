@@ -469,11 +469,8 @@ const Fontaines = () => {
                                 <img src={ecoImpactImg5} alt="Robinet d'eau pure" className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700" />
                             </div>
 
-                            {/* Image 3: Right Top */}
-                            <div className="sm:col-span-1 md:col-span-3 md:row-span-1 relative group overflow-hidden rounded-[2rem] shadow-sm min-h-[250px] md:min-h-0">
-                                <div className="absolute inset-0 bg-slate-900/10 group-hover:bg-transparent transition-colors duration-500 z-10" />
-                                <img src={ecoImpactImg6} alt="Fontaine sur réseau" className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700" />
-                            </div>
+                            {/* Image 3: Right Top - Empty Slot */}
+                            <div className="sm:col-span-1 md:col-span-3 md:row-span-1" />
 
                             {/* Image 4: Center Bottom */}
                             <div className="sm:col-span-1 md:col-span-3 md:row-span-1 relative group overflow-hidden rounded-[2rem] shadow-sm min-h-[250px] md:min-h-0">
