@@ -117,7 +117,7 @@ const comparisonData: ComparisonItem[] = [
   { feature: "Filtration des polluants chimiques", filters: "Option", softeners: false, osmose: true, uv: false },
 ];
 
-const EauDePuits = () => {
+const TraitementEauDePuits = () => {
 
 
   const [showAllFaqs, setShowAllFaqs] = React.useState(false);
@@ -515,7 +515,8 @@ const EauDePuits = () => {
 
         {/* 7. Testimonials Section */}
         <TestimonialsSection
-          filterProduct="/eau-de-puits"
+          filterProduct="/traitement-eau-de-puits"
+          limit={5}
           title={
             <>
               <span className="font-light block">La solution là </span>
@@ -804,4 +805,4 @@ const EauDePuits = () => {
   );
 };
 
-export default EauDePuits;
+export default TraitementEauDePuits;

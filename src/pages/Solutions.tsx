@@ -68,7 +68,7 @@ const solutions = [
       "Solutions personnalisées"
     ],
     icon: Beaker,
-    link: "/eau-de-puits",
+    link: "/traitement-eau-de-puits",
     image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=800&auto=format&fit=crop"
   }
 ];

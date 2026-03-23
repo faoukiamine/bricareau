@@ -98,10 +98,11 @@ const GlobalBreadcrumbs: React.FC<GlobalBreadcrumbsProps> = ({
                                 <ChevronRight className="w-3.5 h-3.5" />
                             </BreadcrumbSeparator>
                             <BreadcrumbItem>
-                                {item.isLast ? (
+                                {item.isLast || item.label === "Ressources" || item.label === "Support" ? (
                                     <BreadcrumbPage className={cn(
                                         "font-medium line-clamp-1 max-w-[200px] md:max-w-md",
-                                        isDark ? "text-slate-900 lg:text-white" : "text-slate-900"
+                                        isDark ? "text-slate-900 lg:text-white" : "text-slate-900",
+                                        (item.label === "Ressources" || item.label === "Support") && (isDark ? "lg:text-white/60" : "text-slate-500")
                                     )}>
                                         {item.label}
                                     </BreadcrumbPage>

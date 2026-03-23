@@ -5,7 +5,6 @@ import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import {
     Snowflake,
-    Droplets,
     Building2,
     Phone,
     Zap,
@@ -26,7 +25,6 @@ import {
     Plus,
     Minus,
     PiggyBank,
-    Ban,
     Award,
     CircleDollarSign,
     Search
@@ -44,6 +42,15 @@ import bottlelessFountainImg from "@/assets/A13.jpg";
 import iceMachineImg from "@/assets/Machine+à+glaçons+de+comptoir+auto-nettoyante+de+26+lb+R.W.FLAME-78609293.webp";
 import eauFontaineImg from "@/assets/83658.jpg";
 import ecoImpactImg from "@/assets/kitchen1.webp";
+import ecoImpactImg2 from "@/assets/block-img-3-d.webp";
+import ecoImpactImg3 from "@/assets/Water fountain in the dining room.jpg";
+import ecoImpactImg4 from "@/assets/water-dispenser in office.jpg";
+import ecoImpactImg5 from "@/assets/water-dispenser in kitchen.jpg";
+import ecoImpactImg6 from "@/assets/water-dispenser in evening room.png";
+import recycleSvg from "@/assets/recycling.svg";
+import nestEcoLeafSvg from "@/assets/nest_eco_leaf.svg";
+import financeModeSvg from "@/assets/finance_mode.svg";
+import waterFilterPng from "@/assets/water-filter_8782563.png";
 
 interface SolutionItem {
     title: string;
@@ -185,8 +192,8 @@ const SolutionCard = ({ item }: { item: SolutionItem }) => {
                         src={item.img}
                         alt={`${item.title}`}
                         className={`w-full h-full object-contain mix-blend-multiply transition-transform duration-1000 ${item.title === "Machine à glaçons"
-                                ? "scale-[1.45] group-hover:scale-[1.55]"
-                                : "scale-100 group-hover:scale-110"
+                            ? "scale-[1.45] group-hover:scale-[1.55]"
+                            : "scale-100 group-hover:scale-110"
                             }`}
                     />
                     <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
@@ -369,7 +376,7 @@ const Fontaines = () => {
                             {/* Main Visual Card - Asymmetrical Large */}
                             <div className="md:col-span-8 group relative rounded-[3.5rem] overflow-hidden shadow-[0_30px_70px_-20px_rgba(0,0,0,0.15)] h-[650px]">
                                 <img
-                                    src={artDeVivreImg}
+                                    src={ecoImpactImg6}
                                     alt="L'expérience d'eau pure Bricareau"
                                     className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-[2.5s] ease-out"
                                 />
@@ -428,49 +435,61 @@ const Fontaines = () => {
                     }
                 />
 
-                {/* 4. Impact Environnemental - Full Width Modern Section */}
-                <section className="pb-32 bg-white relative overflow-hidden">
+                {/* 3.5. Portfolio Section - Modern Bento 5 Images */}
+                <section className="py-24 bg-white relative overflow-hidden">
                     <div className="container mx-auto px-6 relative z-10">
-                        {/* MINIMALIST LIFESTYLE ALTERNATIVE */}
-                        <div className="group relative rounded-[3.5rem] overflow-hidden bg-[#F8F9FA] border border-slate-100 shadow-[0_30px_60px_rgba(0,0,0,0.04)] min-h-[600px] flex flex-col md:flex-row items-stretch">
-                            {/* Text Content - Left 40% */}
-                            <div className="md:w-[45%] p-12 lg:p-20 flex flex-col justify-center">
-                                <div className="mb-8">
-                                    <div className="flex items-center gap-3 mb-6">
-                                        <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.2em] mb-6">
-                                            DURABILITÉ & STYLE
-                                        </span>
-                                    </div>
-                                    <h2 className="text-slate-900 mb-6">
-                                        <span className="font-light block">Impact</span>
-                                        <span className="font-bold text-blue-600 block">environnemental.</span>
-                                    </h2>
-                                    <p className="text-slate-500 font-light text-xl leading-relaxed max-w-md text-justify">
-                                        L'élégance au service de la planète. Chaque gorgée est un pas vers un monde sans plastique, sans sacrifier l'esthétique de votre intérieur.
-                                    </p>
-                                </div>
+                        <div className="text-center md:text-left mb-16 flex flex-col md:flex-row md:items-end justify-between gap-8">
+                            <div>
+                                <span className="inline-block px-4 py-1.5 bg-blue-50 text-blue-600 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] mb-6">
+                                    NOTRE PORTFOLIO
+                                </span>
+                                <h2 className="text-slate-900 text-[36px] tracking-tight leading-[1.1]">
+                                    <span className="font-light block">Intégration</span>
+                                    <span className="text-blue-600 font-bold block">parfaite & élégante.</span>
+                                </h2>
+                            </div>
+                            <div className="max-w-md pb-2">
+                                <p className="text-slate-500 font-light text-lg">
+                                    Découvrez comment nos fontaines et refroidisseurs d'eau s'intègrent harmonieusement dans tous les espaces, alliant esthétique moderne et fonctionnalité.
+                                </p>
+                            </div>
+                        </div>
 
-                                <NavLink to="/contact">
-                                    <Button className="rounded-full bg-blue-600 hover:bg-blue-700 text-white px-12 h-16 text-lg font-bold transition-all duration-500 shadow-xl group/btn w-fit">
-                                        Passez au vert
-                                        <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover/btn:translate-x-1" />
-                                    </Button>
-                                </NavLink>
+                        {/* 5-Image Bento Grid */}
+                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-12 md:grid-rows-2 gap-4 lg:gap-6 lg:h-[650px]">
+                            {/* Image 1: Main (left side) */}
+                            <div className="sm:col-span-2 md:col-span-6 md:row-span-2 relative group overflow-hidden rounded-[2rem] shadow-sm min-h-[350px] md:min-h-0">
+                                <div className="absolute inset-0 bg-slate-900/10 group-hover:bg-transparent transition-colors duration-500 z-10" />
+                                <img src={ecoImpactImg3} alt="Fontaine de comptoir Bricareau" className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700" />
                             </div>
 
-                            {/* Lifestyle Image - Right 60% */}
-                            <div className="md:w-[55%] relative overflow-hidden h-[400px] md:h-auto">
-                                <img
-                                    src={ecoImpactImg}
-                                    alt="Modern Fontaine Bricareau"
-                                    className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-[4s]"
-                                />
-                                {/* Subtle Overlay for depth */}
-                                <div className="absolute inset-0 bg-gradient-to-r from-[#F8F9FA] via-transparent to-transparent hidden md:block" />
+                            {/* Image 2: Center Top */}
+                            <div className="sm:col-span-1 md:col-span-3 md:row-span-1 relative group overflow-hidden rounded-[2rem] shadow-sm min-h-[250px] md:min-h-0">
+                                <div className="absolute inset-0 bg-slate-900/10 group-hover:bg-transparent transition-colors duration-500 z-10" />
+                                <img src={ecoImpactImg5} alt="Robinet d'eau pure" className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700" />
+                            </div>
+
+                            {/* Image 3: Right Top */}
+                            <div className="sm:col-span-1 md:col-span-3 md:row-span-1 relative group overflow-hidden rounded-[2rem] shadow-sm min-h-[250px] md:min-h-0">
+                                <div className="absolute inset-0 bg-slate-900/10 group-hover:bg-transparent transition-colors duration-500 z-10" />
+                                <img src={ecoImpactImg6} alt="Fontaine sur réseau" className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700" />
+                            </div>
+
+                            {/* Image 4: Center Bottom */}
+                            <div className="sm:col-span-1 md:col-span-3 md:row-span-1 relative group overflow-hidden rounded-[2rem] shadow-sm min-h-[250px] md:min-h-0">
+                                <div className="absolute inset-0 bg-slate-900/10 group-hover:bg-transparent transition-colors duration-500 z-10" />
+                                <img src={ecoImpactImg2} alt="Art de vivre Bricareau" className="w-full h-full object-cover object-right group-hover:scale-105 transition-transform duration-700" />
+                            </div>
+
+                            {/* Image 5: Right Bottom */}
+                            <div className="sm:col-span-1 md:col-span-3 md:row-span-1 relative group overflow-hidden rounded-[2rem] shadow-sm min-h-[250px] md:min-h-0">
+                                <div className="absolute inset-0 bg-slate-900/10 group-hover:bg-transparent transition-colors duration-500 z-10" />
+                                <img src={ecoImpactImg4} alt="Eau fraîche et pure" className="w-full h-full object-cover object-right group-hover:scale-105 transition-transform duration-700" />
                             </div>
                         </div>
                     </div>
                 </section>
+
 
 
                 {/* 5. CTA Section - Premium Immersive */}
@@ -529,12 +548,12 @@ const Fontaines = () => {
                     <div className="absolute inset-0 pointer-events-none select-none overflow-hidden">
                         {/* Diffused Product Image - Integrating the subject without clutter */}
                         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60%] h-full opacity-10 md:opacity-[0.22] pointer-events-none z-0">
-                            <img 
-                                src={drinkingTapImg} 
-                                alt="" 
+                            <img
+                                src={drinkingTapImg}
+                                alt=""
                                 className="w-full h-full object-contain scale-110"
                             />
-                             {/* Soft Gradient Fade for diffusion */}
+                            {/* Soft Gradient Fade for diffusion */}
                             <div className="absolute inset-0 bg-gradient-to-b from-slate-50 via-transparent to-slate-50" />
                             <div className="absolute inset-0 bg-gradient-to-r from-slate-50 via-transparent to-slate-50" />
                         </div>
@@ -542,7 +561,7 @@ const Fontaines = () => {
                         {/* Spectral Glows - Water and Purity Focus */}
                         <div className="absolute top-[-10%] left-[-10%] w-[70%] h-[70%] bg-[radial-gradient(circle,rgba(37,99,235,0.08)_0%,transparent_70%)] blur-[120px]" />
                         <div className="absolute bottom-[-20%] right-[-10%] w-[80%] h-[80%] bg-[radial-gradient(circle,rgba(59,130,246,0.1)_0%,transparent_70%)] blur-[140px]" />
-                        
+
                         {/* Linear Flow Beams */}
                         <div className="absolute top-1/2 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-blue-400/20 to-transparent rotate-3 blur-[1px]" />
                         <div className="absolute bottom-1/4 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-blue-600/10 to-transparent -rotate-6 blur-[2px]" />
@@ -563,7 +582,7 @@ const Fontaines = () => {
                                 </div>
                                 <div className="max-w-md md:pb-3">
                                     <p className="text-lg font-light italic text-slate-500 border-l-[3px] border-blue-600 pl-6 py-2">
-                                        "Les gammes Bricareau offrent une eau saine, fraîche et délicieuse, pour les professionnels et les particuliers."
+                                        "Notre gamme offre une eau saine, fraîche et délicieuse, pour les professionnels et les particuliers."
                                     </p>
                                 </div>
                             </div>
@@ -572,15 +591,12 @@ const Fontaines = () => {
                                 {/* Left Content: Timeline "Que devons-nous faire?" */}
                                 <div className="space-y-12 relative z-10">
                                     <h3 className="text-2xl font-bold text-slate-900 tracking-tight flex items-center gap-4">
-                                        <div className="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center">
-                                            <Leaf className="w-4 h-4 text-blue-600" />
-                                        </div>
                                         Que devons-nous faire ?
                                     </h3>
-                                    
+
                                     <div className="relative pl-5">
                                         <div className="absolute left-[3px] top-2 bottom-6 w-px bg-slate-200" />
-                                        
+
                                         <ul className="space-y-10">
                                             {[
                                                 { title: "Réduction Active", text: "S'engager à réduire l'usage de bouteilles en plastique à usage unique au quotidien." },
@@ -590,7 +606,7 @@ const Fontaines = () => {
                                             ].map((item, i) => (
                                                 <li key={i} className="relative group/item">
                                                     <div className="absolute -left-[27px] top-2 w-[7px] h-[7px] bg-slate-300 rounded-full group-hover/item:bg-blue-600 group-hover/item:scale-150 transition-all duration-300" />
-                                                    
+
                                                     <div className="flex flex-col gap-1">
                                                         <span className="text-sm font-semibold text-slate-900 transition-colors duration-300">{item.title}</span>
                                                         <p className="text-slate-500 font-light text-base leading-relaxed max-w-lg transition-colors duration-300">
@@ -606,20 +622,29 @@ const Fontaines = () => {
                                 {/* Right Content: Grid features */}
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6 relative z-10">
                                     {[
-                                        { icon: <Droplets />, label: "Filtration Locale", desc: "Eau pure à volonté, avec ou sans magnésium." },
-                                        { icon: <Ban />, label: "Zéro Déchet", desc: "Élimination totale des bouteilles à usage unique." },
-                                        { icon: <Recycle />, label: "Éco-Conception", desc: "Matériaux durables et cycles de vie optimisés." },
-                                        { icon: <PiggyBank />, label: "Économies", desc: "Retour sur investissement rapide et durable." }
+                                        { isSvg: true, iconSrc: waterFilterPng, label: "Filtration Locale", desc: "Eau pure à volonté, avec ou sans magnésium." },
+                                        { isSvg: true, iconSrc: nestEcoLeafSvg, label: "Zéro Déchet", desc: "Élimination totale des bouteilles à usage unique." },
+                                        { isSvg: true, iconSrc: recycleSvg, label: "Éco-Conception", desc: "Matériaux durables et cycles de vie optimisés." },
+                                        { isSvg: true, iconSrc: financeModeSvg, label: "Économies", desc: "Retour sur investissement rapide et durable." }
                                     ].map((item, i) => (
                                         <div key={i} className="relative bg-white/40 backdrop-blur-xl p-8 rounded-[2rem] border border-white shadow-sm hover:bg-white/70 hover:shadow-2xl hover:shadow-blue-900/10 hover:-translate-y-1.5 group transition-all duration-500 overflow-hidden">
                                             {/* Subliminal Hover Background */}
                                             <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-blue-50/50 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
-                                            
+
                                             <div className="relative z-10 flex flex-col items-start text-left h-full">
                                                 <div className="w-14 h-14 rounded-[1.25rem] bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-400 mb-8 group-hover:bg-blue-600 group-hover:border-blue-600 group-hover:text-white group-hover:shadow-[0_8px_20px_rgba(37,99,235,0.25)] transition-all duration-500 group-hover:scale-110">
-                                                    {React.cloneElement(item.icon as React.ReactElement, { className: "w-6 h-6" })}
+                                                    <div
+                                                        className="w-6 h-6 bg-current transition-colors duration-500"
+                                                        style={{
+                                                            maskImage: `url(${item.iconSrc})`,
+                                                            WebkitMaskImage: `url(${item.iconSrc})`,
+                                                            maskSize: 'contain',
+                                                            maskRepeat: 'no-repeat',
+                                                            maskPosition: 'center'
+                                                        }}
+                                                    />
                                                 </div>
-                                                
+
                                                 <div className="flex-grow">
                                                     <h4 className="text-slate-900 font-bold text-lg tracking-tight mb-3 group-hover:text-blue-700 transition-colors duration-300">{item.label}</h4>
                                                     {/* Animated Underline */}

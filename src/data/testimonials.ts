@@ -70,7 +70,7 @@ export const allTestimonials: Testimonial[] = [
         rating: 5,
         text: "Service exceptionnel. Connaissent vraiment leur domaine. Solution trouvée pour mon eau de puits là où d'autres ont échoué.",
         paths: [
-            "/eau-de-puits"
+            "/traitement-eau-de-puits"
         ]
     },
     {
@@ -78,7 +78,7 @@ export const allTestimonials: Testimonial[] = [
         rating: 5,
         text: "Entreprise fiable et honnête. Pas de vente de pression, juste de bons conseils adaptés à mes besoins.",
         paths: [
-            "/eau-de-puits"
+            "/traitement-eau-de-puits"
         ]
     },
     {
@@ -86,7 +86,7 @@ export const allTestimonials: Testimonial[] = [
         rating: 5,
         text: "Excellent service après-vente. Réponse rapide à une question technique après l'installation.",
         paths: [
-            "/eau-de-puits"
+            "/traitement-eau-de-puits"
         ]
     },
     {
@@ -118,7 +118,7 @@ export const allTestimonials: Testimonial[] = [
         rating: 5,
         text: "Technicien ponctuel et très poli. Le travail est propre et le système de filtration fonctionne à merveille.",
         paths: [
-            "/eau-de-puits"
+            "/traitement-eau-de-puits"
         ]
     },
     {
@@ -370,7 +370,7 @@ export const allTestimonials: Testimonial[] = [
         rating: 5,
         text: "Entreprise sérieuse. Les résultats des tests d'eau après installation sont probants.",
         paths: [
-            "/eau-de-puits"
+            "/traitement-eau-de-puits"
         ]
     },
     {
@@ -476,7 +476,7 @@ export const allTestimonials: Testimonial[] = [
         rating: 5,
         text: "Enfin une solution durable pour notre eau de puits. Service impeccable.",
         paths: [
-            "/eau-de-puits",
+            "/traitement-eau-de-puits",
             "/adoucisseurs-eau-de-puits"
         ]
     },

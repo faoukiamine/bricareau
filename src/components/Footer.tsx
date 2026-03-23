@@ -42,7 +42,7 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="/eau-de-puits" className="text-white/80 hover:text-white transition-colors">
+                <a href="/traitement-eau-de-puits" className="text-white/80 hover:text-white transition-colors">
                   Traitement eau de puits
                 </a>
               </li>

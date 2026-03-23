@@ -21,7 +21,7 @@ import AdoucisseurEauResidentiel from "./pages/Adoucisseur-eau-municipal";
 import AdoucisseursEauDePuits from "./pages/Adoucisseurs-eau-de-puits";
 import ConditionneursSansSel from "./pages/ConditionneursSansSel";
 import StationEauPotable from "./pages/Systeme-de-filtration-deau-potable";
-import EauDePuits from "./pages/EauDePuits";
+import TraitementEauDePuits from "./pages/Traitement-eau-de-puits";
 import Filtration from "./pages/Filtration";
 import Fontaines from "./pages/Fontaines";
 import Blog from "./pages/Blog";
@@ -108,7 +108,7 @@ const App = () => (
           <Route path="/adoucisseurs-eau-de-puits" element={<AdoucisseursEauDePuits />} />
           <Route path="/conditionneurs-sans-sel" element={<ConditionneursSansSel />} />
           <Route path="/systeme-de-filtration-deau-potable" element={<StationEauPotable />} />
-          <Route path="/eau-de-puits" element={<EauDePuits />} />
+          <Route path="/traitement-eau-de-puits" element={<TraitementEauDePuits />} />
           <Route path="/filtration" element={<Filtration />} />
           <Route path="/Filtres-deau" element={<SpecializedFiltration />} />
           <Route path="/Filtres-deau-pour-toute-la-maison" element={<FiltresPourTouteLaMaison />} />

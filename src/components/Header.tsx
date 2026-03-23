@@ -179,7 +179,7 @@ const Header = () => {
     },
     {
       name: "Traitement de l'eau de puits",
-      href: "/eau-de-puits",
+      href: "/traitement-eau-de-puits",
       hasMegamenu: true,
       megamenuCards: [
         {
@@ -246,7 +246,6 @@ const Header = () => {
     },
     {
       name: "Ressources",
-      href: "/faq",
       hasMegamenu: true,
       megamenuCards: [
         {
@@ -282,7 +281,6 @@ const Header = () => {
     },
     {
       name: "Support",
-      href: "/contact",
       hasMegamenu: true,
       megamenuCards: [
         {
@@ -515,15 +513,14 @@ const Header = () => {
                       onMouseEnter={() => item.hasMegamenu ? handleMenuEnter(item.name) : null}
                       onMouseLeave={() => item.hasMegamenu ? handleMenuLeave() : null}
                       onClick={() => {
-                        if (!item.hasMegamenu) {
+                        if (item.href) {
                           navigate(item.href);
-                        } else {
-                          // Even if it has a megamenu, we want the parent click to navigate
-                          navigate(item.href);
+                          setActiveMegamenu(null);
                         }
                       }}
                       className={cn(
                         "text-sm transition-colors relative h-16 flex items-center",
+                        !item.href && "cursor-default",
                         isHeaderTransparent
                           ? (activeMegamenu === item.name ? "text-blue-200 border-b-2 border-white" : "text-white hover:text-blue-200")
                           : (activeMegamenu === item.name ? "text-[#0052ff] border-b-2 border-[#0052ff]" : "text-gray-700 hover:text-[#0052ff]")
@@ -731,13 +728,19 @@ const Header = () => {
                       {item.hasMegamenu ? (
                         <div>
                           <div className="flex items-center justify-between w-full">
-                            <NavLink
-                              to={item.href}
-                              className="flex-1 px-4 py-4 text-left text-base text-gray-900"
-                              onClick={() => setIsMenuOpen(false)}
-                            >
-                              {item.name}
-                            </NavLink>
+                            {item.href ? (
+                              <NavLink
+                                to={item.href}
+                                className="flex-1 px-4 py-4 text-left text-base text-gray-900"
+                                onClick={() => setIsMenuOpen(false)}
+                              >
+                                {item.name}
+                              </NavLink>
+                            ) : (
+                              <span className="flex-1 px-4 py-4 text-left text-base text-gray-900">
+                                {item.name}
+                              </span>
+                            )}
                             <button
                               onClick={(e) => {
                                 e.preventDefault();

@@ -38,7 +38,7 @@ const products = [
         name: "Filtration eau de puits",
         description: "Nos systèmes de filtration aident à fournir une eau de qualité en provenance d'un puits artésien ou de surface.",
         image: filtrationPuitsImg,
-        link: "/eau-de-puits"
+        link: "/traitement-eau-de-puits"
     },
     {
         name: "Systèmes de désinfection UV",
