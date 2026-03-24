@@ -61,6 +61,7 @@ import drinkingWaterImg from "@/assets/Solutions d'eau potable.webp";
 import specialFiltersImg from "@/assets/Filtres d'eau spécialisés.webp";
 import personShieldSvg from "@/assets/person_shield.svg";
 import resetWrenchSvg from "@/assets/reset_wrench.svg";
+import uvSpectrumAbstractImg from "@/assets/uv-spectrum-abstract.png";
 
 
 const DesinfectionUV = () => {
@@ -152,9 +153,9 @@ const DesinfectionUV = () => {
                     <div className="absolute inset-0 pointer-events-none select-none overflow-hidden">
                         {/* Integrated UV Spectrum Image - Provides the core visual anchor */}
                         <div className="absolute inset-0 opacity-[0.18] pointer-events-none">
-                            <img 
-                                src="/src/assets/uv-spectrum-abstract.png" 
-                                alt="" 
+                            <img
+                                src={uvSpectrumAbstractImg}
+                                alt=""
                                 className="w-full h-full object-cover blur-2xl scale-110"
                             />
                         </div>
@@ -162,7 +163,7 @@ const DesinfectionUV = () => {
                         {/* Base Spectral Glows - Enhances the image depth */}
                         <div className="absolute top-[-10%] left-[-10%] w-[70%] h-[70%] bg-[radial-gradient(circle,rgba(99,102,241,0.12)_0%,transparent_70%)] blur-[120px]" />
                         <div className="absolute bottom-[-20%] right-[-10%] w-[80%] h-[80%] bg-[radial-gradient(circle,rgba(167,139,250,0.15)_0%,transparent_70%)] blur-[140px]" />
-                        
+
                         {/* Linear Spectral Beams (Anamorphic) - Adds procedural light energy */}
                         <div className="absolute top-1/4 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-blue-400/30 to-transparent -rotate-12 blur-[1px]" />
                         <div className="absolute top-1/2 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-indigo-500/25 to-transparent rotate-6 blur-[2px]" />
@@ -195,40 +196,39 @@ const DesinfectionUV = () => {
                                     { icon: Leaf, title: "Sans produits chimiques", desc: "Aucun goût ni odeur de chlore. Les rayons UV agissent physiquement sur les pathogènes, préservant la pureté originelle de votre eau sans aucun additif chimique." },
                                     { icon: Zap, title: "Action instantanée", desc: "Contrairement au chlore qui nécessite un temps de contact, les UV désinfectent l'eau dès qu'elle traverse la chambre de traitement." },
                                     { icon: Award, title: "Efficacité prouvée", desc: "Le rayonnement UV-C pénètre instantanément l'ADN des micro-organismes, les rendant inoffensifs et incapables de se reproduire." },
-                                    { 
-                                        iconSrc: personShieldSvg, 
-                                        isSvg: true, 
-                                        title: "Sécurité absolue", 
-                                        desc: "Une barrière infranchissable contre les bactéries, virus et kystes (Cryptosporidium), même ceux résistants aux désinfectants classiques." 
+                                    {
+                                        iconSrc: personShieldSvg,
+                                        isSvg: true,
+                                        title: "Sécurité absolue",
+                                        desc: "Une barrière infranchissable contre les bactéries, virus et kystes (Cryptosporidium), même ceux résistants aux désinfectants classiques."
                                     },
                                     { icon: CupSoda, title: "Goût préservé", desc: "Votre eau conserve toutes ses propriétés minérales et son goût naturel frais, sans les sous-produits toxiques liés au chlore." },
                                     { icon: ShieldCheck, title: "Zéro risque", desc: "Pas de manipulation ni de stockage de produits chimiques dangereux chez vous. Une solution propre, saine et sans danger pour l'environnement." },
                                     { icon: BatteryLow, title: "Éco-Énergétique", desc: "Une protection permanente 24h/24 qui consomme aussi peu d'énergie qu'une simple ampoule domestique standard." },
-                                    { 
-                                        iconSrc: resetWrenchSvg, 
-                                        isSvg: true, 
-                                        title: "Entretien minimal", 
-                                        desc: "Conçu pour la simplicité. Un changement de lampe annuel suffit pour garantir une performance optimale et une sécurité constante." 
+                                    {
+                                        iconSrc: resetWrenchSvg,
+                                        isSvg: true,
+                                        title: "Entretien minimal",
+                                        desc: "Conçu pour la simplicité. Un changement de lampe annuel suffit pour garantir une performance optimale et une sécurité constante."
                                     },
                                 ].map((benefit, i) => (
-                                    <div 
-                                        key={i} 
-                                        className={`group relative flex flex-col md:flex-row items-start lg:items-center gap-6 lg:gap-8 ${
-                                            i % 2 === 0 ? 'lg:justify-end lg:text-right' : 'lg:justify-start lg:text-left'
-                                        } ${
+                                    <div
+                                        key={i}
+                                        className={`group relative flex flex-col md:flex-row items-start lg:items-center gap-6 lg:gap-8 ${i % 2 === 0 ? 'lg:justify-end lg:text-right' : 'lg:justify-start lg:text-left'
+                                            } ${
                                             // Stagger effect on desktop
                                             i % 2 !== 0 ? 'lg:translate-y-32' : ''
-                                        } lg:mb-40 transition-all duration-700`}
+                                            } lg:mb-40 transition-all duration-700`}
                                     >
                                         {/* Content container for better alignment */}
                                         <div className={`flex flex-col ${i % 2 === 0 ? 'lg:items-end' : 'lg:items-start'} max-w-md`}>
                                             <div className={`w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center mb-6 text-blue-600 group-hover:bg-blue-600 group-hover:text-white group-hover:scale-110 transition-all duration-500 shadow-[0_0_20px_rgba(37,99,235,0.1)] overflow-hidden`}>
                                                 {benefit.isSvg ? (
-                                                    <div 
+                                                    <div
                                                         className="w-6 h-6 bg-current"
                                                         style={{
-                                                            maskImage: `url(${benefit.iconSrc})`,
-                                                            WebkitMaskImage: `url(${benefit.iconSrc})`,
+                                                            maskImage: `url("${benefit.iconSrc}")`,
+                                                            WebkitMaskImage: `url("${benefit.iconSrc}")`,
                                                             maskRepeat: 'no-repeat',
                                                             WebkitMaskRepeat: 'no-repeat',
                                                             maskPosition: 'center',
@@ -250,9 +250,8 @@ const DesinfectionUV = () => {
                                         </div>
 
                                         {/* Connecting "Glow Node" on the central line (Desktop only) */}
-                                        <div className={`hidden lg:block absolute top-1/2 w-4 h-4 rounded-full bg-blue-100 border-2 border-white shadow-sm transition-all duration-500 group-hover:bg-blue-600 group-hover:scale-125 group-hover:shadow-[0_0_15px_rgba(37,99,235,0.5)] ${
-                                            i % 2 === 0 ? '-right-16 lg:-right-[68px]' : '-left-16 lg:-left-[68px]'
-                                        } -translate-y-1/2`} />
+                                        <div className={`hidden lg:block absolute top-1/2 w-4 h-4 rounded-full bg-blue-100 border-2 border-white shadow-sm transition-all duration-500 group-hover:bg-blue-600 group-hover:scale-125 group-hover:shadow-[0_0_15px_rgba(37,99,235,0.5)] ${i % 2 === 0 ? '-right-16 lg:-right-[68px]' : '-left-16 lg:-left-[68px]'
+                                            } -translate-y-1/2`} />
                                     </div>
                                 ))}
                             </div>
@@ -264,7 +263,7 @@ const DesinfectionUV = () => {
                 <section id="systemes-uv" className="py-24 bg-white">
                     <div className="container mx-auto px-6">
                         <div className="text-left mb-16">
-                                                        <h2
+                            <h2
                                 className="text-slate-900 mb-8 text-left"
                                 style={{}}
                             >
@@ -444,7 +443,7 @@ const DesinfectionUV = () => {
                 <section className="bg-white py-24">
                     <div className="container mx-auto px-4">
                         <div className="text-center mb-16">
-                            <h2 className="text-slate-900 mb-8">Découvrez les produits associés</h2>                            
+                            <h2 className="text-slate-900 mb-8">Découvrez les produits associés</h2>
                             <p className="font-light text-gray-500 max-w-2xl mx-auto text-center">
                                 Optimisez votre expérience de traitement d'eau avec nos solutions complémentaires.
                             </p>
@@ -515,7 +514,7 @@ const DesinfectionUV = () => {
                 <section className="py-24 bg-white border-t border-slate-100">
                     <div className="container mx-auto px-4 text-left">
                         <div className="text-left mb-16">
-                             <h2
+                            <h2
                                 className="text-slate-900 mb-8 text-left"
                                 style={{}}
                             >

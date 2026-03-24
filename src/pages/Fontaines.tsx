@@ -632,8 +632,8 @@ const Fontaines = () => {
                                                     <div
                                                         className="w-6 h-6 bg-current transition-colors duration-500"
                                                         style={{
-                                                            maskImage: `url(${item.iconSrc})`,
-                                                            WebkitMaskImage: `url(${item.iconSrc})`,
+                                                            maskImage: `url("${item.iconSrc}")`,
+                                                            WebkitMaskImage: `url("${item.iconSrc}")`,
                                                             maskSize: 'contain',
                                                             maskRepeat: 'no-repeat',
                                                             maskPosition: 'center'
