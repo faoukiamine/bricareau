@@ -195,8 +195,9 @@ const TestsEauPage = () => {
                 </span>
               </span>
               <h2 className="text-slate-900 mb-6 leading-[1.1]">
-                <span className="block italic opacity-90">Savoir exactement</span>
-                <span className="text-blue-600">ce que vous buvez.</span>
+                <span className="block font-light opacity-90">Savoir exactement</span>
+                <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">
+                  ce que vous buvez.</span>
               </h2>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
@@ -272,8 +273,9 @@ const TestsEauPage = () => {
                 </span>
               </span>
               <h2 className="text-slate-900 mb-6">
-                <span className="block italic opacity-90">Quelle trousse d'analyse</span>
-                <span className="text-blue-600">choisir pour votre eau ?</span>
+                <span className="block font-light opacity-90">Quelle trousse d'analyse</span>
+                <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">
+                  choisir pour votre eau ?</span>
               </h2>
               <p className="text-slate-600 font-light max-w-2xl mx-auto">
                 Des solutions adaptées à vos besoins, de la vérification bactérienne de base au bilan complet pour une tranquillité d'esprit totale.

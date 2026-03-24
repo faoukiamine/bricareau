@@ -207,12 +207,13 @@ const TraitementEauDePuits = () => {
 
           <div className="container mx-auto px-6 relative z-10">
             <div className="text-center mb-24 max-w-3xl mx-auto">
-              <span className="inline-block px-4 py-1.5 bg-blue-50 text-blue-600 rounded-full text-xs font-black uppercase tracking-widest mb-6">
+              <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.2em] mb-8">
                 Contaminants fréquents dans l'eau
               </span>
               <h2 className="text-slate-900 mb-5">
                 <span className="font-light leading-tight block tracking-tighter">Problèmes courants</span>
-                <span className="font-bold text-blue-600 leading-tight block tracking-tighter">de l'eau de puits</span>
+                <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">
+                  de l'eau de puits</span>
               </h2>
               <p className="text-slate-500 font-light text-lg leading-relaxed">
                 L'eau de votre puits est vivante et changeante. Identifiez les signes avant-coureurs pour garantir la sécurité de votre foyer et la longévité de vos installations.
@@ -289,12 +290,13 @@ const TraitementEauDePuits = () => {
           <div className="container mx-auto px-6 relative z-10">
             {/* Header */}
             <div className="text-center mb-32 max-w-4xl mx-auto">
-              <span className="inline-block px-4 py-1.5 bg-blue-50 text-blue-600 rounded-full text-xs font-black uppercase tracking-widest mb-6">
+              <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.2em] mb-8">
                 NOTRE FONCTIONNEMENT
               </span>
               <h2 className="text-slate-900 mb-6">
                 <span className="font-light leading-tight block tracking-tighter">Un service simple</span>
-                <span className="font-bold text-blue-600 leading-tight block tracking-tighter">& sans souci.</span>
+                <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">
+                  & sans souci.</span>
               </h2>
               <p className="text-slate-500 font-light text-lg max-w-2xl mx-auto text-center leading-relaxed">
                 Confiez-nous la gestion de votre eau de puits. De l'expertise initiale à l'installation finale, nous nous occupons de tout pour vous garantir une eau saine, sans compromis.
@@ -523,7 +525,8 @@ const TraitementEauDePuits = () => {
           title={
             <>
               <span className="font-light block">La solution là </span>
-              <span className="font-bold text-blue-600 block">où d'autres ont échoué.</span>
+              <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">
+où d'autres ont échoué.</span>
             </>
           }
         />

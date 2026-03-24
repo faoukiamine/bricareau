@@ -317,7 +317,9 @@ const Fontaines = () => {
                             </span>
                             <h2 className="text-slate-900 mb-6">
                                 <span className="font-light block">L'hydratation pure à la maison.</span>
-                                <span className="font-bold text-blue-600 block">L'eau fraîche à la portée de vos mains.</span>
+                                <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">
+                                    L'eau fraîche à la portée de vos mains.
+                                </span>
                             </h2>
                             <p className="text-slate-500 font-light text-lg leading-relaxed max-w-3xl mx-auto">
                                 Bricareau redéfinit votre expérience d'hydratation quotidienne avec des solutions d'eau fraîche haut de gamme.
@@ -365,7 +367,9 @@ const Fontaines = () => {
                             </span>
                             <h2 className="text-slate-900 mb-6">
                                 <span className="font-light block">Plus qu'une fontaine d'eau,</span>
-                                <span className="font-bold text-blue-600 block">un choix intelligent & responsable.</span>
+                                <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">
+                                    un choix intelligent & responsable.
+                                </span>
                             </h2>
                             <p className="text-slate-500 font-light text-lg max-w-2xl mx-auto leading-relaxed">
                                 Alliez performance technologique, responsabilité écologique et économies domestiques pour un quotidien sans compromis.
@@ -430,7 +434,9 @@ const Fontaines = () => {
                     title={
                         <>
                             <span className="font-light block">L’eau que vous méritez,</span>
-                            <span className="font-bold text-blue-600 block">le service que vous n'oublierez pas.</span>
+                            <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">
+                                le service que vous n'oublierez pas.
+                            </span>
                         </>
                     }
                 />
@@ -445,7 +451,8 @@ const Fontaines = () => {
                                 </span>
                                 <h2 className="text-slate-900 text-[36px] tracking-tight leading-[1.1]">
                                     <span className="font-light block">Intégration</span>
-                                    <span className="text-blue-600 font-bold block">parfaite & élégante.</span>
+                                    <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">
+                                        parfaite & élégante.</span>
                                 </h2>
                             </div>
                             <div className="max-w-md pb-2">
@@ -573,7 +580,8 @@ const Fontaines = () => {
                                     </span>
                                     <h4 className="text-slate-900 text-[36px] tracking-tight leading-[1.1]">
                                         <span className="font-light block mb-2 text-slate-500">Vers un monde</span>
-                                        <span className="font-bold text-slate-900 block">sans bouteilles en plastique.</span>
+                                        <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">
+                                        sans bouteilles en plastique.</span>
                                     </h4>
                                 </div>
                                 <div className="max-w-md md:pb-3">

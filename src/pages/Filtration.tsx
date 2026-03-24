@@ -167,7 +167,8 @@ const Filtration = () => {
                             {/* Left Column: Analytical Narrative */}
                             <div className="lg:col-span-5 space-y-8">
                                 <div>
-                                    <h2 className="text-slate-900 mb-6 font-bold text-blue-600">
+                                    <h2 className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">
+
                                         L'invisible dans votre verre d'eau.
                                     </h2>
                                     <p className="font-light text-slate-600 lg:text-slate-600 mb-8 max-w-xl text-left lg:text-justify">
@@ -262,7 +263,8 @@ const Filtration = () => {
                         <div className="text-center mb-20 max-w-3xl mx-auto">
                             <h2 className="text-slate-900 mb-6">
                                 <span className="font-light block">Pourquoi choisir nos systèmes</span>
-                                <span className="font-bold text-blue-600 block">de filtration d'eau ?</span>
+                                <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">
+                                    de filtration d'eau ?</span>
                             </h2>
                             <p className="text-slate-500 font-light text-lg">
                                 Plus qu'une simple filtration, c'est une protection avancée pour votre santé et un confort durable pour votre foyer au quotidien.
@@ -640,7 +642,8 @@ const Filtration = () => {
                     title={
                         <>
                             <span className="font-light block">Honnêteté et passion :</span>
-                            <span className="font-bold text-blue-600 block">la signature Bricareau vue par vous.</span>
+                            <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">
+                                la signature Bricareau vue par vous.</span>
                         </>
                     }
                 />

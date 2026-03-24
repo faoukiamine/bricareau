@@ -30,9 +30,9 @@ import {
     Microscope,
     Bug,
     Mountain,
-    Sparkles,
     TriangleAlert
 } from "lucide-react";
+import waterFilterPng from "@/assets/water-filter_8782563.png";
 import safetyIcon from "@/assets/1709235770048.png";
 import { NavLink } from "@/components/NavLink";
 import { useNavigate } from "react-router-dom";
@@ -60,6 +60,23 @@ import { heroImg as filtreSousEvierImg } from "./Blog pages/Filtre-sous-evier-la
 import { heroImg as plombVieillesMaisonsImg } from "./Blog pages/Le-plomb-dans-les-vieilles-maisons-comment-se-proteger";
 import { heroImg as eauVilleFiltreeImg } from "./Blog pages/Pourquoi-meme-leau-de-ville-a-besoin-detre-filtree";
 import womandrinkingwaterImg from "@/assets/25716.jpg";
+
+const WaterFilterIcon = ({ className }: { className?: string }) => (
+    <div 
+        className={className} 
+        style={{
+            backgroundColor: "currentColor",
+            maskImage: `url(${waterFilterPng})`,
+            maskSize: 'contain',
+            maskRepeat: 'no-repeat',
+            maskPosition: 'center',
+            WebkitMaskImage: `url(${waterFilterPng})`,
+            WebkitMaskSize: 'contain',
+            WebkitMaskRepeat: 'no-repeat',
+            WebkitMaskPosition: 'center',
+        }}
+    />
+);
 
 const FiltrationSousEvier = () => {
     const navigate = useNavigate();
@@ -174,12 +191,13 @@ const FiltrationSousEvier = () => {
 
                     <div className="container mx-auto px-6 relative z-10">
                         <div className="max-w-3xl mb-20">
-              <span className="inline-block px-4 py-1.5 bg-blue-50 text-blue-600 rounded-full text-xs font-black uppercase tracking-widest mb-6">
+                            <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.2em] mb-8">
                                 PERFORMANCE & CAPACITÉ
                             </span>
                             <h2 className="text-slate-900 leading-[1.1] tracking-tight">
                                 <span className="font-light block tracking-tighter text-slate-900">Qu’est-ce qu’un filtre sous évier</span>
-              <span className="font-bold text-blue-600 block tracking-tighter">élimine-t-il réellement ?</span>
+                                <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">
+                                    élimine-t-il réellement ?</span>
                             </h2>
                         </div>
 
@@ -288,10 +306,7 @@ const FiltrationSousEvier = () => {
                                         />
                                     </div>
                                     <div className="p-8 space-y-4 flex flex-col flex-grow border-t-2 border-transparent group-hover:border-blue-600 transition-colors">
-                                        <h3
-                                            className="text-slate-900 group-hover:text-blue-600 transition-colors tracking-tight text-center"
-                                            style={{}}
-                                        >
+                                        <h3 className="card-title text-center group-hover:text-blue-600 transition-colors duration-500">
                                             {product.name}
                                         </h3>
                                         <p
@@ -326,7 +341,8 @@ const FiltrationSousEvier = () => {
                             </span>
                             <h2 className="text-slate-900 leading-[1.05] tracking-[ -0.04em] mb-10">
                                 <span className="font-light block tracking-tighter text-slate-900">Pourquoi privilégier nos</span>
-              <span className="font-bold text-blue-600 block tracking-tighter">systèmes de filtration d'eau sous l'évier ?</span>
+                                <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">
+                                    systèmes de filtration d'eau sous l'évier ?</span>
                             </h2>
                             <div className="w-16 h-0.5 bg-blue-600/20 mx-auto mb-10" />
                             <p className="font-light text-slate-500 text-lg max-w-2xl mx-auto leading-relaxed italic">
@@ -349,7 +365,7 @@ const FiltrationSousEvier = () => {
                                     num: "02"
                                 },
                                 { 
-                                    icon: Sparkles, 
+                                    icon: WaterFilterIcon, 
                                     title: "Design compact", 
                                     desc: "L'élégance de la discrétion. Une intégration fluide sous votre comptoir qui préserve l'esthétique de votre cuisine.",
                                     num: "03"
@@ -396,8 +412,8 @@ const FiltrationSousEvier = () => {
                                 className="text-slate-900 mb-8 text-left"
                                 style={{}}
                             >
-                                <span className="font-light block">Comparez nos solutions</span>
-                                <span className="font-normal block">de filtration d'eau potable.</span>
+                                <span className="font-light leading-[1.1] block">Comparez nos solutions</span>
+                                <span className="font-normal leading-[1.1] block">de filtration d'eau potable.</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
@@ -473,11 +489,8 @@ const FiltrationSousEvier = () => {
                             <span className="text-blue-600 lg:text-white/80 text-xs font-black uppercase tracking-[0.3em] mb-8 block">
                                 ANALYSE PROFESSIONNELLE
                             </span>
-                            <h2
-                                className="lg:font-light mb-8 md:leading-[60px] text-slate-900 lg:text-white text-left"
-                                style={{}}
-                            >
-                                Identifiez l'invisible, <span className="lg:font-bold"><br />maîtrisez votre pureté.</span>
+                            <h2 className="mb-8 text-slate-900 lg:text-white font-bold uppercase">
+                                Identifiez l'invisible, maîtrisez la pureté de votre eau.
                             </h2>
                             <p className="font-light text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
                                 Ne laissez plus le doute couler de votre robinet. Nos tests d'eau révèlent la composition réelle de votre eau pour vous offrir une solution de filtration sur mesure, garantissant santé et sérénité à toute votre famille.
@@ -502,7 +515,8 @@ const FiltrationSousEvier = () => {
                     title={
                         <>
                             <span className="font-light block">Adieu les bouteilles plastiques,</span>
-                            <span className="font-bold text-blue-600 block">enfin la liberté au robinet.</span>
+                            <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">
+                                enfin la liberté au robinet.</span>
                         </>
                     }
                 />
@@ -515,8 +529,8 @@ const FiltrationSousEvier = () => {
                                 className="text-slate-900 mb-8 text-left"
                                 style={{}}
                             >
-                                <span className="font-light block">Pour vous éclairer</span>
-                                <span className="font-normal block">Questions fréquentes</span>
+                                <span className="font-light leading-[1.1] block">Pour vous éclairer</span>
+                                <span className="font-normal leading-[1.1] block">Questions fréquentes</span>
                             </h2>
 
                             <div className="w-24 h-1 bg-blue-600"></div>
@@ -585,7 +599,7 @@ const FiltrationSousEvier = () => {
                     <div className="container mx-auto px-6 relative z-10 text-center">
                         <div className="max-w-4xl mx-auto">
                             <h2 className="text-white mb-6">
-                                <span className="font-light block tracking-tight opacity-90 italic">Prêt à dire adieu à l’eau embouteillée ?</span>
+                                <span className="font-bold block tracking-tight opacity-90">Prêt à dire adieu à l’eau embouteillée ?</span>
                             </h2>
                             <p className="text-blue-100/80 font-light text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
                                 Passez au filtre sous évier et profitez d’une eau filtrée, savoureuse et économique directement à votre robinet. Contactez-nous pour une démonstration, une analyse d’eau ou un devis personnalisé. Installation rapide sous 48h disponible dans plusieurs régions !                            </p>
@@ -626,7 +640,8 @@ const FiltrationSousEvier = () => {
                             <h2
                                 className="text-slate-900 mb-8 text-left"
                                 style={{}}
-                            >                                <span className="font-normal block">Ressources</span>
+                            >                 
+                                <span className="font-normal leading-[1.1] block">Ressources</span>
                             </h2>
 
                             <div className="w-24 h-1 bg-blue-600"></div>
@@ -662,7 +677,7 @@ const FiltrationSousEvier = () => {
                                         />
                                     </div>
                                     <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
-                                        <h4 className="mb-4 group-hover:text-blue-600 transition-colors tracking-tight font-medium text-[#0F1729]">{art.title}</h4>
+                                        <h4 className="mb-4 group-hover:text-blue-600 transition-colors tracking-tight font-medium text-base leading-6 text-[#0F1729]">{art.title}</h4>
                                         <div className="mt-auto">
                                             <span className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-sm">
                                                 Lire <ChevronRight className="h-4 w-4 transform group-hover:translate-x-1 transition-transform" />

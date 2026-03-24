@@ -165,9 +165,9 @@ const DesinfectionUV = () => {
                         <div className="absolute bottom-[-20%] right-[-10%] w-[80%] h-[80%] bg-[radial-gradient(circle,rgba(167,139,250,0.15)_0%,transparent_70%)] blur-[140px]" />
 
                         {/* Linear Spectral Beams (Anamorphic) - Adds procedural light energy */}
-                        <div className="absolute top-1/4 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-blue-400/30 to-transparent -rotate-12 blur-[1px]" />
-                        <div className="absolute top-1/2 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-indigo-500/25 to-transparent rotate-6 blur-[2px]" />
-                        <div className="absolute bottom-1/4 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-purple-400/30 to-transparent -rotate-3 blur-[1px]" />
+                        <div className="absolute top-1/4 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-blue-400/20 to-transparent -rotate-12 blur-[1px]" />
+                        <div className="absolute top-1/2 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-indigo-500/10 to-transparent rotate-6 blur-[2px]" />
+                        <div className="absolute bottom-1/4 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-purple-400/10 to-transparent -rotate-3 blur-[1px]" />
 
                         {/* Spectral "Prism" Overlay */}
                         <div className="absolute inset-0 bg-[linear-gradient(115deg,transparent,rgba(59,130,246,0.03)_20%,rgba(139,92,246,0.05)_40%,rgba(217,70,239,0.03)_60%,transparent)] opacity-40 mix-blend-overlay" />
@@ -180,7 +180,8 @@ const DesinfectionUV = () => {
                             </span>
                             <h2 className="text-slate-900 mb-8 leading-[1.1] group-hover:text-blue-600 transition-colors">
                                 <span className="font-light block">Pourquoi choisir la</span>
-                                <span className="font-bold text-blue-600">désinfection UV ?</span>
+                                <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">
+                                    désinfection UV ?</span>
                             </h2>
                             <p className="text-slate-500 font-light text-lg max-w-2xl mx-auto leading-relaxed">
                                 Une technologie de pointe qui neutralise les pathogènes par rayonnement, offrant une eau pure sans aucun compromis chimique.
@@ -407,10 +408,10 @@ const DesinfectionUV = () => {
                                 ANALYSE MICROBIOLOGIQUE
                             </span>
                             <h2
-                                className="lg:font-light mb-8 text-slate-900 lg:text-white text-left"
+                                className="lg:font-bold mb-8 text-slate-900 lg:text-white text-left uppercase"
                                 style={{}}
                             >
-                                Votre eau de puits est-elle <span className="lg:font-bold"><br />vraiment sécuritaire ?</span>
+                                Votre eau de puits est-elle vraiment sécuritaire ?
                             </h2>
                             <p className="font-light text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
                                 Ne devinez pas la qualité de votre eau. Nos analyses approfondies identifient les bactéries, les minéraux et les contaminants chimiques pour vous offrir une tranquillité d'esprit totale.
@@ -435,7 +436,8 @@ const DesinfectionUV = () => {
                     title={
                         <>
                             <span className="font-light block">Zéro bactérie,</span>
-                            <span className="font-bold text-blue-600 block">100 % sérénité.</span>
+                            <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">
+                                100 % sérénité.</span>
                         </>
                     }
                 />

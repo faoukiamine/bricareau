@@ -168,7 +168,8 @@ const StationEauPotable = () => {
                   </span>
                   <h2 className="text-slate-900 leading-[1.05] tracking-tight">
                     <span className="font-light block text-slate-400">Plus qu’un filtre,</span>
-                    <span className="font-bold block text-blue-600">une métamorphose.</span>
+                    <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">
+                        une métamorphose.</span>
                   </h2>
                 </div>
                 
@@ -231,8 +232,6 @@ const StationEauPotable = () => {
               </div>
 
             </div>
-
-            
           </div>
         </section>
 
@@ -311,7 +310,8 @@ const StationEauPotable = () => {
               </span>
               <h2 className="text-slate-900 leading-[1.05] tracking-[ -0.04em] mb-10 text-center">
                 <span className="font-light leading-[1.1] block tracking-tighter text-slate-900">Pourquoi choisir nos</span>
-                <span className="font-bold text-blue-600 leading-[1.1] block tracking-tighter">systèmes d'osmose inverse ?</span>
+                <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">
+                    systèmes d'osmose inverse ?</span>
               </h2>
               <div className="w-16 h-0.5 bg-blue-600/20 mx-auto mb-10" />
               <p className="font-light text-slate-500 text-lg sm:text-lg max-w-2xl mx-auto leading-relaxed italic text-center">
@@ -456,13 +456,13 @@ const StationEauPotable = () => {
           <div className="container mx-auto px-4 relative z-10 flex items-center py-12 lg:py-0">
             <div className="max-w-2xl text-slate-900 lg:text-white">
               <h2
-                className="lg:font-light mb-8 md:leading-[60px] text-slate-900 lg:text-white text-left"
+                className="lg:font-bold mb-8 md:leading-[60px] text-slate-900 lg:text-white text-left uppercase"
                 style={{}}
               >
-                La vérité dans <span className="lg:font-bold"><br />chaque goutte.</span>
+                La vérité dans chaque goutte.
               </h2>
               <p className="font-light text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
-                Pourquoi deviner quand vous pouvez vérifier ? <br />Un test d'eau simple pour une protection durable<br /> de l'eau de votre foyer.
+                Pourquoi deviner quand vous pouvez vérifier ? Un test d'eau simple pour une protection durable de l'eau de votre foyer.
               </p>
               <div className="flex gap-4">
                 <Button
@@ -484,7 +484,8 @@ const StationEauPotable = () => {
           title={
             <>
                 <span className="font-light block">L'eau de source,</span>
-                <span className="font-bold text-blue-600 block">directement à votre robinet.</span>
+                <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">
+                directement à votre robinet.</span>
             </>
           }
         />
@@ -503,7 +504,7 @@ const StationEauPotable = () => {
                     <div className="container mx-auto px-6 relative z-10 text-center">
                         <div className="max-w-4xl mx-auto">
                             <h2 className="text-white mb-6">
-                                <span className="font-light leading-tight block tracking-tight opacity-90 italic">Redéfinissez votre standard de pureté.</span>
+                                <span className="font-bold leading-tight block tracking-tight opacity-90">Redéfinissez votre standard de pureté.</span>
                             </h2>
                             <p className="text-blue-100/80 font-light text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
                             Pourquoi vous contenter d'une eau ordinaire quand vous pouvez offrir à votre foyer une source de pureté incomparable ? L'osmose inverse élimine les impuretés invisibles pour ne laisser que l'essentiel : une eau cristalline, un goût exceptionnel et une tranquillité d'esprit totale. Faites le choix de la technologie la plus avancée pour votre santé et votre confort.                            </p>

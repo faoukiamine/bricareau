@@ -168,8 +168,8 @@ const Adoucissement = () => {
                             {/* Left Column: Analytical Narrative (6 Harms) */}
                             <div className="lg:col-span-5 space-y-8">
                                 <div>
-                                    <h2 className="text-slate-900 mb-6 font-bold">
-                                        L'impact silencieux du <span className="uppercase text-blue-600">calcaire.</span>
+                                    <h2 className="text-light text-slate-400 mb-6 font-light">
+                                        L'impact silencieux du <span className="uppercase font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500"><br/>calcaire.</span>
                                     </h2>
                                     <p className="font-light text-slate-600 lg:text-slate-600 mb-8 max-w-xl text-left lg:text-justify">
                                         Ce n'est pas qu'un simple dépôt ; c'est un agent d'érosion invisible qui dégrade votre confort et vos investissements jour après jour.
@@ -272,7 +272,7 @@ const Adoucissement = () => {
                         <div className="text-center mb-20 max-w-3xl mx-auto">
                             <h2 className="text-slate-900 mb-6">
                                 <span className="font-light block">Les avantages de</span>
-                                <span className="font-bold text-blue-600 block">l'adoucissement d'eau</span>
+                                <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">l'adoucissement d'eau</span>
                             </h2>
                             <p className="text-slate-500 font-light text-lg">
                                 Une transformation immédiate pour votre confort, votre santé et la longévité de votre foyer.
@@ -557,13 +557,10 @@ const Adoucissement = () => {
                     title={
                         <>
                             <span className="font-light block">Une eau soyeuse.</span>
-                            <span className="font-bold text-blue-600 block">Un confort absolu.</span>
+                            <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">Un confort absolu.</span>
                         </>
                     }
                 />
-
-
-
 
                 {/* 8. Comparison Table */}
                 <section className="py-24 bg-gray-50">

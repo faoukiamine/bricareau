@@ -275,7 +275,8 @@ const AdoucisseursEauDePuits = () => {
                                 </span>
                                 <h2 className="text-slate-900 leading-[1.1] mb-12">
                                     <span className="font-light block tracking-tighter">Vivez l'eau au-delà</span>
-                                    <span className="font-bold text-blue-600 block tracking-tighter">de la simple apparence.</span>
+                                    <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">
+                                        de la simple apparence.</span>
                                 </h2>
                                 <p className="text-xl text-slate-500 font-light max-w-2xl leading-relaxed text-justify">
                                     Dans un puits privé, la clarté visuelle n'est que la surface. Notre technologie d'adoucissement transforme la structure même de votre eau, éliminant l'agressivité du calcaire et du fer pour une douceur que vous ressentirez à chaque goutte, sur chaque surface.
@@ -532,7 +533,8 @@ const AdoucisseursEauDePuits = () => {
                     title={
                         <>
                             <span className="font-light block">Là où le calcaire dictait sa loi,</span>
-                            <span className="font-bold text-blue-600 block">nos clients ont repris le contrôle.</span>
+                            <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">
+                                nos clients ont repris le contrôle.</span>
                         </>
                     }
                 />

@@ -223,9 +223,9 @@ const FiltresTouteMaison = () => {
 
                     <div className="container mx-auto px-6 relative z-10">
                         <div className="text-center mb-20">
-                            <h2 className="text-slate-900 mb-6 leading-[1.1] tracking-tight">
+                            <h2 className="font-light block">
                                 Pourquoi choisir nos <br className="hidden md:block"/>
-                                <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">
+                                <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">
                                     systèmes de filtration d'eau ?
                                 </span>
                             </h2>
@@ -412,11 +412,11 @@ const FiltresTouteMaison = () => {
                                 Contrôle de la Qualité D'EAU
                             </span>
                             <h2
-                                className="lg:font-light mb-8 text-slate-900 lg:text-white text-left"
+                                className="lg:font-bold mb-8 text-slate-900 lg:text-white text-left uppercase"
                                 style={{}}
                             >
-                                L'excellence commence<br />
-                                par <span className="lg:font-bold">une eau parfaite.</span>
+                                L'excellence commence <br/>
+                                par une eau parfaite.
                             </h2>
                             <p className="font-light text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
                                 Le luxe, c'est de ne pas avoir à se soucier de la qualité de ce que l'on consomme. Offrez-vous la sérénité d'une eau analysée par des experts, pour une maison où tout brille, sans effort et sans compromis.
@@ -440,7 +440,9 @@ const FiltresTouteMaison = () => {
                     title={
                         <>
                             <span className="font-light block">Fini le chlore et les contaminants,</span>
-                            <span className="font-bold text-blue-600 block">la métamorphose vue par nos clients.</span>
+                            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">
+                                la métamorphose vue par nos clients.
+                            </span>
                         </>
                     }
                 />
@@ -498,7 +500,7 @@ const FiltresTouteMaison = () => {
                     <div className="container mx-auto px-6 relative z-10 text-center">
                         <div className="max-w-4xl mx-auto">
                             <h2 className="text-white mb-6">
-                                <span className="font-light leading-tight block tracking-tight opacity-90 italic">Besoin d'aide avec votre eau ?</span>
+                                <span className="font-bold leading-tight block tracking-tight opacity-90">Besoin d'aide avec votre eau ?</span>
                             </h2>
                             <p className="text-blue-100/80 font-light text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
                                 Discutez avec un expert en un clic. Disponible par téléphone ou à domicile selon vos préférences.                           

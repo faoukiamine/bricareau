@@ -224,9 +224,9 @@ const FiltresPuits = () => {
                                 <div className="space-y-6">
                                     <h2 className="text-slate-900 leading-[1.1] mb-12">
                                         <span className="font-light block tracking-tighter">Votre puits possède</span>
-                                        <span className="font-bold text-blue-600 block tracking-tighter">son propre ADN.</span>
+                                        <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">
+                                            son propre ADN.</span>
                                     </h2>
-                                    <div className="w-32 h-2 bg-blue-600 rounded-full" />
                                 </div>
 
                                 <div className="space-y-8">
@@ -355,13 +355,13 @@ const FiltresPuits = () => {
                     <div className="absolute top-0 right-0 w-1/3 h-full bg-slate-50/50 -skew-x-12 translate-x-1/2 pointer-events-none" />
                     
                     <div className="container mx-auto px-6 relative z-10">
-                        <div className="max-w-4xl mb-32">
+                        <div className="max-w-4xl mx-auto text-center mb-32">
                             <h2 className="text-slate-900 leading-[1.1] mb-12">
                                 <span className="font-light block tracking-tighter">Pourquoi choisir nos</span>
-                                <span className="font-bold text-blue-600 block tracking-tighter">systèmes de filtration d'eau ?</span>
+                                <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">
+                                    systèmes de filtration d'eau ?</span>
                             </h2>
-                            <div className="w-32 h-2 bg-blue-600 rounded-full mb-12" />
-                            <p className="text-lg text-slate-500 font-light leading-relaxed text-justify max-w-xl">
+                            <p className="text-lg text-slate-500 font-light leading-relaxed text-center max-w-xl mx-auto">
                                 Plus qu'un simple système de filtration, c'est une protection avancée pour votre santé et un confort durable pour toute votre famille.
                             </p>
                         </div>
@@ -570,7 +570,8 @@ const FiltresPuits = () => {
                         <>
                             <h2 className="text-slate-900 mb-6 font-bold">
                                 <span className="font-light block">Buvez l'eau de votre puits sans crainte</span>
-                                <span className="font-bold text-blue-600">Ils ont fait le saut avec nous.</span>
+                                <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">
+                                    Ils ont fait le saut avec nous.</span>
                             </h2>
                         </>
                     }
@@ -580,8 +581,8 @@ const FiltresPuits = () => {
                 <section className="bg-white py-24">
                     <div className="container mx-auto px-4">
                         <div className="text-center mb-16">
-                            <h2 className="text-slate-900 mb-8 font-bold uppercase">Découvrez les produits associés</h2>
-                            <p className="font-light text-gray-500 max-w-2xl mx-auto text-justify">
+                            <h2 className="text-slate-900 mb-8 font-bold">Découvrez les produits associés</h2>
+                            <p className="font-light text-gray-500 max-w-2xl mx-auto">
                                 Optimisez votre expérience de traitement d'eau avec nos solutions complémentaires.
                             </p>
                         </div>

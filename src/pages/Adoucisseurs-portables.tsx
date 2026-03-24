@@ -129,7 +129,7 @@ const AdoucisseursPortables = () => {
                                     VOS AVANTAGES
                                 </span>
                                 <h2 className="text-slate-900 mb-8 leading-[1.1] tracking-tight">
-                                    Une eau parfaite, <span className="text-blue-600">kilomètre après kilomètre.</span>
+                                    Une eau parfaite, <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">kilomètre après kilomètre.</span>
                                 </h2>
                                 <p className="text-slate-500 font-light text-xl leading-relaxed">
                                     Que vous soyez au camping, au quai ou dans un chalet, ne laissez pas la qualité de l'eau gâcher votre confort. Nos solutions portables vous suivent partout.
@@ -275,7 +275,7 @@ const AdoucisseursPortables = () => {
                             NOTRE FONCTIONNEMENT
                         </span>
                         <h2 className="text-slate-900 mb-6 text-[42px] leading-[1.1]">
-                            Un service simple <span className="text-blue-600">& sans souci.</span>
+                            Un service simple <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">& sans souci.</span>
                         </h2>
                         <p className="text-slate-500 font-light text-lg max-w-2xl mx-auto leading-relaxed">
                             De l'installation initiale à la livraison des unités fraîchement régénérées, nous gérons chaque détail technique pour vous garantir une eau parfaite en permanence.
@@ -348,7 +348,7 @@ const AdoucisseursPortables = () => {
             title={
                 <>
                     <span className="font-light block">L’eau pure comme standard.</span>
-                    <span className="font-bold text-blue-600 block">Le service comme signature.</span>
+                    <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">Le service comme signature.</span>
                 </>
             }
         />
@@ -357,8 +357,8 @@ const AdoucisseursPortables = () => {
             <section className="bg-white py-24">
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-16">
-                        <h2 className="text-slate-900 mb-6 text-[42px] leading-[42px]">
-                            <span className="font-light block">Découvrez les produits associés</span>
+                        <h2 className="text-slate-900 mb-6 text-4xl leading-10">
+                            <span className="font-bold block">Découvrez les produits associés</span>
                         </h2>
                         <p className="font-light text-gray-500 max-w-2xl mx-auto text-center">
                             Optimisez votre expérience de traitement d'eau avec nos solutions complémentaires.
@@ -400,8 +400,7 @@ const AdoucisseursPortables = () => {
                                 </div>
                                 <div className="p-8 space-y-4 flex flex-col flex-grow border-t-2 border-transparent group-hover:border-blue-600 transition-colors">
                                     <h3
-                                        className="text-slate-900 group-hover:text-blue-600 transition-colors tracking-tight text-center"
-                                        style={{}}
+                                        className="card-title group-hover:text-blue-600 transition-colors text-center"
                                     >
                                         {prod.name}
                                     </h3>
@@ -425,7 +424,6 @@ const AdoucisseursPortables = () => {
                 </div>
             </section>
 
-            <ConsultationFormSection />
             <Footer />
         </div>
     );

@@ -126,8 +126,9 @@ const ConditionneursSansSel = () => {
         <section className="py-32 bg-slate-50 relative overflow-hidden">
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-4xl mx-auto text-center mb-20">
-              <h2 className="text-slate-900 mb-6 leading-tight">
-                Ce que l'eau dure <span className="text-blue-600">coûte réellement.</span>
+              <h2 className="text slate-900 mb-6 leading-tight">
+                <span className="font-light">Ce que l'eau dure </span>
+                <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">coûte réellement.</span>
               </h2>
               <p className="text-slate-500 font-light text-xl max-w-2xl mx-auto leading-relaxed">
                 Le calcaire dégrade vos équipements jour après jour. Protégez-les avec une solution efficace.
@@ -178,7 +179,7 @@ const ConditionneursSansSel = () => {
           <div className="container mx-auto px-4">
             <div className="text-center max-w-3xl mx-auto mb-20">
               <h2 className="text-slate-900 mb-6 leading-tight">
-                Pourquoi choisir le <span className="text-blue-600">sans sel ?</span>
+                <span className="font-light">Pourquoi choisir le </span><span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">conditionneur d'eau sans sel ?</span>
               </h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -201,7 +202,7 @@ const ConditionneursSansSel = () => {
             <div className="flex flex-col lg:flex-row items-center gap-16">
               <div className="lg:w-1/2">
                 <h2 className="text-[42px] leading-tight font-light mb-8">
-                  Une protection <span className="font-bold text-blue-600">100% écologique.</span>
+                  Une protection <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">100% écologique.</span>
                 </h2>
                 <div className="space-y-6">
                   {[
@@ -226,91 +227,29 @@ const ConditionneursSansSel = () => {
           </div>
         </section>
 
-        {/* 5. Processus Section */}
-        <section className="relative py-32 bg-white overflow-hidden">
-            <div className="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-px bg-slate-100 hidden lg:block" />
-            <div className="container mx-auto px-6 relative z-10">
-                <div className="text-center mb-32 max-w-4xl mx-auto">
-                    <span className="inline-block px-4 py-1.5 bg-blue-50 text-blue-600 rounded-full text-xs font-black uppercase tracking-widest mb-6">
-                        NOTRE FONCTIONNEMENT
-                    </span>
-                    <h2 className="text-slate-900 mb-6 text-[42px] leading-tight">
-                        <span className="font-light block">Un service simple</span>
-                        <span className="font-bold text-blue-600">& sans souci.</span>
-                    </h2>
-                </div>
-
-                <div className="space-y-24 lg:space-y-0">
-                    {[
-                        { title: "Analyse d'eau", desc: "Identification précise de la chimie de votre eau.", img: process1 },
-                        { title: "Conseil Expert", desc: "Choix de la technologie TAC adaptée à votre foyer.", img: process2 },
-                        { title: "Installation", desc: "Mise en place rapide par nos techniciens certifiés.", img: process3 },
-                        { title: "Sérénité", desc: "Protection durable contre le tartre, sans sel.", img: process4 }
-                    ].map((step, idx) => (
-                        <div key={idx} className={`group relative flex flex-col md:flex-row items-center gap-12 lg:gap-0 ${idx % 2 === 1 ? 'lg:flex-row-reverse' : ''} lg:min-h-[400px]`}>
-                            <div className="w-full lg:w-1/2 flex justify-center p-4">
-                                <div className="relative w-full max-w-md aspect-[4/3] rounded-[3rem] overflow-hidden shadow-xl">
-                                    <img src={step.img} alt={step.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-                                    <div className="absolute bottom-6 right-6 bg-white/90 backdrop-blur-md px-4 py-2 rounded-2xl font-bold text-blue-600">0{idx + 1}</div>
-                                </div>
-                            </div>
-                            <div className="w-full lg:w-1/2 flex flex-col justify-center px-4 lg:px-20 text-center lg:text-left">
-                                <h3 className="text-2xl font-bold mb-4 group-hover:text-blue-600 transition-colors">{step.title}</h3>
-                                <p className="text-slate-500 font-light text-lg">{step.desc}</p>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            </div>
-        </section>
-
-        {/* 6. Testimonials */}
-        <TestimonialsSection
-          filterProduct="/conditionneurs-sans-sel"
-          title={
-            <>
-              <span className="font-light block">Le standard pro,</span>
-              <span className="font-bold text-blue-600 block">l’honnêteté en prime.</span>
-            </>
-          }
-        />
-
-        {/* 7. FAQ Section */}
-        <section className="py-24 bg-white border-t border-slate-100">
-          <div className="container mx-auto px-4">
-            <div className="text-left mb-16 max-w-4xl mx-auto">
-              <h2 className="text-slate-900 mb-8 text-[42px] font-light leading-tight">Questions <span className="font-bold text-blue-600">fréquentes</span></h2>
-              <div className="w-24 h-1 bg-blue-600"></div>
-            </div>
-            <div className="max-w-4xl mx-auto">
-              <Accordion type="single" collapsible>
-                {faqs.map((faq, idx) => (
-                  <AccordionItem key={idx} value={`item-${idx}`} className="border-b-slate-100">
-                    <AccordionTrigger className="text-left py-6">{faq.question}</AccordionTrigger>
-                    <AccordionContent className="text-slate-500 font-light pb-6">{faq.answer}</AccordionContent>
-                  </AccordionItem>
-                ))}
-              </Accordion>
-            </div>
-          </div>
-        </section>
-
-        {/* 8. Resources Section */}
+        {/* 5. Resources Section */}
         <section className="py-24 bg-slate-50">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold mb-12">Ressources</h2>
+            <div className="text-left mb-16">
+              <h2
+                className="text-slate-900 mb-8 text-left"
+              >
+                <span className="font-normal leading-[1.1] block">Ressources</span>
+              </h2>
+              <div className="w-24 h-1 bg-blue-600"></div>
+            </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
                 { title: "Adoucisseur sans sel vs avec sel", img: residentialWaterSoftenerImg, link: "/adoucisseur-sans-sel-vs-avec-sel-verite-technique" },
                 { title: "Fosse septique et adoucisseur", img: adoucisseurFosseImg, link: "/adoucisseur-deau-et-fosse-septique-mythes-et-realites" },
                 { title: "L'alternative écologique", img: conditionneursImg, link: "/adoucisseur-sans-sel-vs-avec-sel-verite-technique" }
               ].map((art, i) => (
-                <NavLink key={i} to={art.link} className="bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-xl transition-all group border border-slate-100">
+                <NavLink key={i} to={art.link} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all group border border-gray-100 flex flex-col h-full">
                   <div className="h-56 overflow-hidden">
                     <img src={art.img} alt={art.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                   </div>
-                  <div className="p-8">
-                    <h4 className="font-bold group-hover:text-blue-600 transition-colors mb-4">{art.title}</h4>
+                  <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
+                    <h4 className="mb-4 group-hover:text-blue-600 transition-colors tracking-tight font-medium text-base leading-6 text-[#0F1729]">{art.title}</h4>
                     <span className="text-blue-600 font-bold flex items-center gap-2 text-sm">Lire <ChevronRight className="w-4 h-4" /></span>
                   </div>
                 </NavLink>
@@ -318,8 +257,6 @@ const ConditionneursSansSel = () => {
             </div>
           </div>
         </section>
-
-        <ConsultationFormSection />
       </main>
       <Footer />
     </div>
