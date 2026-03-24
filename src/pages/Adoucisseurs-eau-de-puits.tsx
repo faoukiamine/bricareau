@@ -702,7 +702,8 @@ const AdoucisseursEauDePuits = () => {
                             <h2
                                 className="text-slate-900 mb-8 text-left"
                                 style={{}}
-                            >                                <span className="font-normal leading-[1.1] block">Ressources</span>
+                            >                 
+                            <span className="font-normal leading-[1.1] block">Ressources</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>

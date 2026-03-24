@@ -12,40 +12,30 @@ import {
     ChevronRight,
     CheckCircle2,
     Shield,
-    Zap,
-    TrendingDown,
-    Play,
-    Phone
+    GlassWater,
+    Phone,
 } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import { useNavigate } from "react-router-dom";
-import waterTestBg from "@/assets/Enercare_JP_Day_2_Kitchen_Faucet_498-2048x1365.jpg";
-import bathroomImg from "@/assets/contemporary-bathroom-elements.jpg";
+import bathroomImg from "@/assets/1571462.jpg";
 import specializedFiltersImg from "@/assets/Filtres d'eau spécialisés.webp";
-import watersofterImg from "@/assets/Adoucisseurs d'eau.webp";
-import drinkingwatersofterImg from "@/assets/Solutions d'eau potable.webp";
 import process1 from "@/assets/2148563485.jpg";
-import labTestImg from "@/assets/test-laboratoire-diligence-inspection-750x500.jpg";
-import waterTestingImg from "@/assets/test-laboratoire-diligence-inspection-750x500.jpg";
-import ironManganeseImg from "@/assets/eau-fer-manganèse.jpg";
+import waterTestingImg1 from "@/assets/342800.jpg";
 import waterTasteImg from "@/assets/water-taste.jpg";
-import radonImg from "@/assets/radon.jpg";
 import waterSoftenerImg from "@/assets/Adoucisseurs d'eau.webp";
 import drinkingWaterImg from "@/assets/Solutions d'eau potable.webp";
-import specialFiltersImg from "@/assets/Filtres d'eau spécialisés.webp";
 import uvSystemImg2 from "@/assets/VH200-F10-265x300.jpg";
 import { adoucisseurImg as adoucisseurFosseImg } from "./Blog pages/Adoucisseur-deau- et-fosse-septique--Mythes-et-réalités";
 import { softenerImg as residentialWaterSoftenerImg } from "./Blog pages/Comment régler la dureté de votre adoucisseur ";
 import { conditionneursImg } from "./Blog pages/Adoucisseur avec sel ou sans sel";
-import SoftwaterImg from "@/assets/161502.jpg";
+import crystalClearWaterImg from "@/assets/5846952.jpg";
+import zeroOdorImg from "@/assets/reasons-to-drink-more-water.jpg";
 import {
     Accordion,
     AccordionContent,
     AccordionItem,
     AccordionTrigger
 } from "@/components/ui/accordion";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 
 const products = [
     { name: "Filtre d'eau Vortex", desc: "Spécialisé pour l'eau contenant des sédiments.", image: specializedFiltersImg },
@@ -55,8 +45,8 @@ const products = [
     { name: "Filtre d'eau Oxy-pure", desc: "Spécialisé pour l'eau contenant du fer et du manganèse.", image: specializedFiltersImg },
     { name: "Filtre d'eau Sulphur Shield", desc: "Spécialisé pour l'eau contenant du sulfure d'hydrogène.", image: specializedFiltersImg },
     { name: "Filtre d'eau Zéro-As", desc: "Spécialisé pour l'eau contenant de l'arsenic.", image: specializedFiltersImg },
-    { name: "Filtre d'eau Tann-Ex", desc: "Spécialisé pour l'eau contenant du tanin.", image: watersofterImg },
-    { name: "Système d'osmose inverse Sérénité Pure", desc: "Spécialisé pour l'eau contenant beaucoup de sels dissous.", image: drinkingwatersofterImg },
+    { name: "Filtre d'eau Tann-Ex", desc: "Spécialisé pour l'eau contenant du tanin.", image: waterSoftenerImg },
+    { name: "Système d'osmose inverse Essentiel", desc: "Spécialisé pour l'eau contenant beaucoup de sels dissous.", image: drinkingWaterImg },
 ];
 
 const faqItems = [
@@ -221,36 +211,91 @@ const FiltresPuits = () => {
                     </div>
                 </section>
 
-                {/* 3. Pourquoi choisir - Blue Section */}
-                <section className="py-24 bg-blue-600 text-white text-center">
-                    <div className="container mx-auto px-6 text-center">
-                        <div className="text-center mb-16">
-                            <h2 className="text-white mb-8 text-center">
-                                Pourquoi choisir nos <br />systèmes de filtration d'eau ?
-                            </h2>
-                            <p className="text-blue-100 max-w-2xl mx-auto">
-                                Plus qu'un simple système de filtration, c'est une protection avancée pour votre santé et un confort durable pour toute votre famille.
-                            </p>
-                        </div>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-                            {[
-                                { icon: Droplets, title: "Eau cristalline", desc: "Éliminez les sédiments et la turbidité pour une eau d'une clarté professionnelle partout chez vous." },
-                                { icon: Shield, title: "Protection totale", desc: "Empêchez le fer et les minéraux corrosifs de tacher vos éviers et de détruire votre plomberie." },
-                                { icon: TrendingDown, title: "Zéro odeur", desc: "Dites adieu aux odeurs d'œufs pourris (soufre) et au goût de chlore pour une eau fraîche." }
-                            ].map((item, id) => (
-                                <div key={id} className="flex flex-col items-center group text-center">
-                                    <div className="w-20 h-20 rounded-2xl bg-white flex items-center justify-center mb-8 transition-all group-hover:scale-110 group-hover:bg-white/10">
-                                        <item.icon className="h-10 w-10 text-blue-600 group-hover:text-white" />
-                                    </div>
-                                    <h4 className="mb-4 tracking-tight">{item.title}</h4>
-                                    <p className="text-blue-100">{item.desc}</p>
+                {/* 2. Bridge Section */}
+                <section className="relative py-32 bg-white overflow-hidden">
+                    {/* Background Decorative Elements */}
+                    <div className="absolute top-0 right-0 w-1/3 h-full bg-slate-50/50 -skew-x-12 translate-x-1/2 pointer-events-none" />
+                    <div className="absolute -bottom-24 left-1/4 w-64 h-64 bg-blue-50 rounded-full blur-3xl opacity-60 pointer-events-none" />
+
+                    <div className="container mx-auto px-6 relative z-10">
+                        <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+                            {/* Left: Text Content with Creative Typography */}
+                            <div className="lg:w-1/2 space-y-12">
+                                <div className="space-y-6">
+                                    <h2 className="text-slate-900 leading-[1.1] mb-12">
+                                        <span className="font-light block tracking-tighter">Votre puits possède</span>
+                                        <span className="font-bold text-blue-600 block tracking-tighter">son propre ADN.</span>
+                                    </h2>
+                                    <div className="w-32 h-2 bg-blue-600 rounded-full" />
                                 </div>
-                            ))}
+
+                                <div className="space-y-8">
+                                    <p className="text-lg text-slate-500 font-light leading-relaxed italic text-justify max-w-xl">
+                                        "Une filtration d'eau classique est une réponse générique à un problème unique. Nous concevons la solution en respectant l'ADN de votre eau."
+                                    </p>
+                                    
+                                    <p className="text-lg text-slate-500 font-light leading-relaxed text-justify max-w-xl">
+                                        L'eau de votre puits est le fruit d'une géologie complexe. Là où d'autres voient simplement du fer ou du calcaire, Bricareau analyse la synergie des minéraux. Notre approche bridge l'écart entre une eau brute, parfois agressive, et une ressource précieuse, revitalisante et protectrice pour votre foyer. 
+                                    </p>
+                                </div>
+
+                                <div className="flex flex-wrap gap-12 pt-12 border-t border-slate-100">
+                                    <div className="space-y-1">
+                                        <p className="text-3xl font-bold text-slate-900 tracking-tighter">Labo</p>
+                                        <p className="text-[10px] uppercase tracking-[0.2em] font-bold text-blue-600">Analyse d'Eau de Puits</p>
+                                    </div>
+                                    <div className="space-y-1">
+                                        <p className="text-3xl font-bold text-slate-900 tracking-tighter">Zéro</p>
+                                        <p className="text-[10px] uppercase tracking-[0.2em] font-bold text-blue-600">Fer, Soufre & Manganèse</p>
+                                    </div>
+                                    <div className="space-y-1">
+                                        <p className="text-3xl font-bold text-slate-900 tracking-tighter">Traitement</p>
+                                        <p className="text-[10px] uppercase tracking-[0.2em] font-bold text-blue-600">Performance Élite</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Right: Creative Visual Montage */}
+                            <div className="lg:w-1/2 relative">
+                                <div className="relative w-full aspect-square md:aspect-[4/3] lg:aspect-square">
+                                    {/* Abstract background shapes */}
+                                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-[radial-gradient(circle,rgba(37,99,235,0.05)_0%,transparent_95%)] animate-pulse" />
+                                    
+                                    {/* Primary Visual */}
+                                    <div className="absolute inset-0 rounded-[4rem] overflow-hidden shadow-2xl skew-y-2 transform hover:skew-y-0 transition-transform duration-1000 z-10 group">
+                                        <img 
+                                            src={process1} 
+                                            alt="Analyse d'eau de puits de précision par Bricareau" 
+                                            className="w-full h-full object-cover transform scale-110 group-hover:scale-100 transition-transform duration-1000"
+                                        />
+                                        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/40 to-transparent" />
+                                    </div>
+
+                                    {/* Secondary floating element */}
+                                    <div className="absolute -bottom-24 -right-12 w-2/3 h-2/5 bg-blue-600/20 backdrop-blur-xl rounded-[3rem] shadow-2xl z-20 p-10 flex flex-col justify-center transform -rotate-3 border border-white/10">
+                                        <Droplets className="text-white h-12 w-12 mb-6" />
+                                        <h4 className="text-lg text-slate-700 font-light leading-relaxed italic text-justify max-w-xl">
+                                            "L'eau qui court sur la pierre s'oublie, l'eau qui passe par le filtre se purifie."
+                                        </h4>
+                                    </div>
+
+                                    {/* Floating Stats or Details */}
+                                    <div className="absolute -top-12 -left-12 bg-white p-8 rounded-[2rem] shadow-xl z-30 border border-slate-50 space-y-4 max-w-[220px] hidden md:block animate-float">
+                                        <div className="flex items-center gap-2 text-blue-600">
+                                            <div className="w-2 h-2 rounded-full bg-blue-600 animate-ping" />
+                                            <span className="font-bold text-[10px] uppercase tracking-widest">En temps réel</span>
+                                        </div>
+                                        <p className="text-sm font-light text-slate-500 leading-snug">
+                                            Neutralisation instantanée de <span className="font-bold text-slate-900">sulfure d'hydrogène</span> et des <span className="font-bold text-slate-900">métaux lourds</span>.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
 
-                {/* 4. Product Grid Section */}
+                {/* 3. Product Grid Section */}
                 <section id="specialized-filters" className="py-24 bg-gray-50 scroll-mt-20">
                     <div className="container mx-auto px-6">
                         <div className="text-left mb-16">
@@ -259,7 +304,7 @@ const FiltresPuits = () => {
                                 style={{}}
                             >
                                 <span className="font-light leading-[1.1] block">Nos filtres d'eau spécialisés</span>
-                                <span className="font-normal leading-[1.1] block">pour votre résidence</span>
+                                <span className="font-normal leading-[1.1] block">pour le traitement de l'eau de votre puits</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                             <p className="mt-8 font-light text-slate-600 text-justify w-full">
@@ -281,10 +326,7 @@ const FiltresPuits = () => {
                                         />
                                     </div>
                                     <div className="p-8 space-y-4 flex flex-col flex-grow border-t-2 border-transparent group-hover:border-blue-600 transition-colors">
-                                        <h3
-                                            className="text-slate-900 group-hover:text-blue-600 transition-colors tracking-tight text-center"
-                                            style={{}}
-                                        >
+                                        <h3 className="card-title text-center group-hover:text-blue-600 transition-colors duration-500">
                                             {p.name}
                                         </h3>
                                         <p
@@ -303,6 +345,111 @@ const FiltresPuits = () => {
                                     </div>
                                 </div>
                             ))}
+                        </div>
+                    </div>
+                </section>
+
+                {/* 4. Why choose our water filtration system? Section - Redesigned with Editorial Flair */}
+                <section className="py-32 bg-white relative overflow-hidden">
+                    {/* Background Decorative Element */}
+                    <div className="absolute top-0 right-0 w-1/3 h-full bg-slate-50/50 -skew-x-12 translate-x-1/2 pointer-events-none" />
+                    
+                    <div className="container mx-auto px-6 relative z-10">
+                        <div className="max-w-4xl mb-32">
+                            <h2 className="text-slate-900 leading-[1.1] mb-12">
+                                <span className="font-light block tracking-tighter">Pourquoi choisir nos</span>
+                                <span className="font-bold text-blue-600 block tracking-tighter">systèmes de filtration d'eau ?</span>
+                            </h2>
+                            <div className="w-32 h-2 bg-blue-600 rounded-full mb-12" />
+                            <p className="text-lg text-slate-500 font-light leading-relaxed text-justify max-w-xl">
+                                Plus qu'un simple système de filtration, c'est une protection avancée pour votre santé et un confort durable pour toute votre famille.
+                            </p>
+                        </div>
+
+                        <div className="space-y-48">
+                            {/* Feature 1 - Right Text, Left Image */}
+                            <div className="flex flex-col md:flex-row-reverse gap-20 items-center group relative">
+                                <div className="absolute -top-16 -right-12 text-[240px] font-black text-slate-50 pointer-events-none select-none tracking-tighter opacity-100 group-hover:text-blue-50 transition-colors duration-1000 -z-10">
+                                    01
+                                </div>
+                                <div className="md:w-1/2 space-y-8 md:text-right flex flex-col items-end">
+                                    <div className="w-20 h-20 rounded-3xl bg-blue-600 flex items-center justify-center shadow-2xl shadow-blue-200 group-hover:scale-110 transition-transform duration-500">
+                                        <Droplets className="text-white h-10 w-10" />
+                                    </div>
+                                    <h3 className="text-[24px] font-bold text-slate-900 leading-tight group-hover:text-blue-600 transition-colors duration-500">
+                                        Eau cristalline
+                                    </h3>
+                                    <p className="text-lg text-slate-500 font-light leading-relaxed text-justify max-w-xl">
+                                        Éliminez les sédiments et la turbidité pour une eau d'une clarté professionnelle partout chez vous.
+                                    </p>
+                                </div>
+                                <div className="md:w-1/2">
+                                    <div className="relative aspect-[4/3] rounded-[4rem] overflow-hidden shadow-2xl skew-y-1 group-hover:skew-y-0 transition-transform duration-1000 border-8 border-white">
+                                        <img 
+                                            src={crystalClearWaterImg} 
+                                            alt="Eau d'une clarté cristalline" 
+                                            className="w-full h-full object-cover scale-110 group-hover:scale-100 transition-transform duration-1000"
+                                        />
+                                        <div className="absolute inset-0 bg-blue-900/10 mix-blend-overlay" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Feature 2 - Left Text, Right Image */}
+                            <div className="flex flex-col md:flex-row gap-20 items-center group relative">
+                                <div className="absolute -top-16 -left-12 text-[240px] font-black text-slate-50 pointer-events-none select-none tracking-tighter opacity-100 group-hover:text-blue-50 transition-colors duration-1000 -z-10">
+                                    02
+                                </div>
+                                <div className="md:w-1/2 space-y-8">
+                                    <div className="w-20 h-20 rounded-3xl bg-blue-600 flex items-center justify-center shadow-2xl shadow-blue-200 group-hover:scale-110 transition-transform duration-500">
+                                        <Shield className="text-white h-10 w-10" />
+                                    </div>
+                                    <h3 className="text-[24px] font-bold text-slate-900 leading-tight group-hover:text-blue-600 transition-colors duration-500">
+                                        Protection totale
+                                    </h3>
+                                    <p className="text-lg text-slate-500 font-light leading-relaxed text-justify max-w-xl">
+                                        Empêchez le fer et les minéraux corrosifs de tacher vos éviers et de détruire votre plomberie.
+                                    </p>
+                                </div>
+                                <div className="md:w-1/2">
+                                    <div className="relative aspect-[4/3] rounded-[4rem] overflow-hidden shadow-2xl -skew-y-1 group-hover:skew-y-0 transition-transform duration-1000 border-8 border-white">
+                                        <img 
+                                            src={bathroomImg} 
+                                            alt="Protection de la plomberie et robinetterie" 
+                                            className="w-full h-full object-cover scale-110 group-hover:scale-100 transition-transform duration-1000"
+                                        />
+                                        <div className="absolute inset-0 bg-blue-900/10 mix-blend-overlay" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Feature 3 - Right Text, Left Image */}
+                            <div className="flex flex-col md:flex-row-reverse gap-20 items-center group relative pb-16">
+                                <div className="absolute -top-16 -right-12 text-[240px] font-black text-slate-50 pointer-events-none select-none tracking-tighter opacity-100 group-hover:text-blue-50 transition-colors duration-1000 -z-10">
+                                    03
+                                </div>
+                                <div className="md:w-1/2 space-y-8 md:text-right flex flex-col items-end">
+                                    <div className="w-20 h-20 rounded-3xl bg-blue-600 flex items-center justify-center shadow-2xl shadow-blue-200 group-hover:scale-110 transition-transform duration-500">
+                                        <GlassWater className="text-white h-10 w-10" />
+                                    </div>
+                                    <h3 className="text-[24px] font-bold text-slate-900 leading-tight group-hover:text-blue-600 transition-colors duration-500">
+                                        Zéro odeur
+                                    </h3>
+                                    <p className="text-lg text-slate-500 font-light leading-relaxed text-justify max-w-xl">
+                                        Dites adieu aux odeurs d'œufs pourris (soufre) et au goût de chlore pour une eau fraîche.
+                                    </p>
+                                </div>
+                                <div className="md:w-1/2">
+                                    <div className="relative aspect-[4/3] rounded-[4rem] overflow-hidden shadow-2xl skew-y-1 group-hover:skew-y-0 transition-transform duration-1000 border-8 border-white">
+                                        <img 
+                                            src={zeroOdorImg} 
+                                            alt="Eau inodore et pure au goût" 
+                                            className="w-full h-full object-cover scale-110 group-hover:scale-100 transition-transform duration-1000"
+                                        />
+                                        <div className="absolute inset-0 bg-blue-900/10 mix-blend-overlay" />
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -326,25 +473,18 @@ const FiltresPuits = () => {
                                     <tr className="bg-gray-100">
                                         <th className="p-8 text-left text-gray-400 font-medium uppercase tracking-wider w-[280px]">Modèles</th>
                                         {[
-                                            { key: "Vortex", name: "Vortex", img: specializedFiltersImg },
-                                            { key: "ZenPH", name: "Zen-pH", img: specializedFiltersImg },
-                                            { key: "ChlorStop", name: "ChlorStop", img: specializedFiltersImg },
-                                            { key: "IronShield", name: "Iron Shield", img: specializedFiltersImg },
-                                            { key: "OxyPure", name: "Oxy-pure", img: specializedFiltersImg },
-                                            { key: "SulphurShield", name: "Sulphur Shield", img: specializedFiltersImg },
-                                            { key: "ZeroAs", name: "Zéro-As", img: specializedFiltersImg },
-                                            { key: "TannEx", name: "Tann-Ex", img: watersofterImg },
-                                            { key: "SerenitePure", name: "Sérénité Pure", img: drinkingwatersofterImg }
+                                            { key: "Vortex", name: "Vortex"},
+                                            { key: "ZenPH", name: "Zen-pH"},
+                                            { key: "ChlorStop", name: "ChlorStop"},
+                                            { key: "IronShield", name: "Iron Shield"},
+                                            { key: "OxyPure", name: "Oxy-pure"},
+                                            { key: "SulphurShield", name: "Sulphur Shield"},
+                                            { key: "ZeroAs", name: "Zéro-As"},
+                                            { key: "TannEx", name: "Tann-Ex"},
+                                            { key: "SerenitePure", name: "Sérénité Pure"}
                                         ].map(m => (
                                             <th key={m.key} className="p-4 text-center text-gray-900 font-bold border-l border-white/50 first:border-l-0">
                                                 <div className="flex flex-col items-center">
-                                                    <div className="h-[100px] w-full flex items-center justify-center mb-4">
-                                                        <img
-                                                            src={m.img}
-                                                            alt={`Modèle ${m.name} - Filtre d'eau de puits haute performance Bricareau`}
-                                                            className="max-h-full max-w-full object-contain mix-blend-multiply"
-                                                        />
-                                                    </div>
                                                     <div className="text-[13px] leading-tight uppercase tracking-wider min-h-[32px] flex items-center justify-center px-1">
                                                         {m.name}
                                                     </div>
@@ -379,7 +519,7 @@ const FiltresPuits = () => {
                     {/* Mobile Image */}
                     <div className="lg:hidden w-full h-[300px] relative">
                         <img
-                            src={waterTestingImg}
+                            src={waterTestingImg1}
                             alt="Analyse d'eau de puits en laboratoire - Test de fer, soufre, pH et bactéries Bricareau"
                             className="w-full h-full object-cover"
                         />
@@ -389,7 +529,7 @@ const FiltresPuits = () => {
                     {/* Desktop Background */}
                     <div className="hidden lg:block absolute inset-0 z-0">
                         <img
-                            src={waterTestingImg}
+                            src={waterTestingImg1}
                             alt="Analyse d'eau de puits en laboratoire"
                             className="w-full h-full object-cover"
                         />
@@ -402,12 +542,9 @@ const FiltresPuits = () => {
                             <span className="text-blue-600 lg:text-white/80 font-bold uppercase tracking-widest text-sm mb-4 block">
                                 Contrôle de la Qualité D'EAU
                             </span>
-                            <h2
-                                className="lg:font-light mb-8 md:leading-[60px] text-slate-900 lg:text-white text-left"
-                                style={{}}
-                            >
+                            <h2 className="mb-8 text-slate-900 lg:text-white font-bold uppercase">
                                 L'excellence commence<br />
-                                par <span className="lg:font-bold">une eau parfaite.</span>
+                                par une eau parfaite.
                             </h2>
                             <p className="font-light text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
                                 Le luxe, c'est de ne pas avoir à se soucier de la qualité de ce que l'on consomme. Offrez-vous la sérénité d'une eau analysée par des experts, pour une maison où tout brille, sans effort et sans compromis.
@@ -428,10 +565,10 @@ const FiltresPuits = () => {
 
                 {/* 7. Testimonials Grid Section */}
                 <TestimonialsSection
-                    filterProduct="/Filtres-deau"
+                    filterProduct="/filtration"
                     title={
                         <>
-                            <h2 className="text-slate-900 mb-6">
+                            <h2 className="text-slate-900 mb-6 font-bold">
                                 <span className="font-light block">Buvez l'eau de votre puits sans crainte</span>
                                 <span className="font-bold text-blue-600">Ils ont fait le saut avec nous.</span>
                             </h2>
@@ -439,11 +576,12 @@ const FiltresPuits = () => {
                     }
                 />
 
-                {/* 8. Section Associated Products */}
+                {/* 8. Associated Products Section */}
                 <section className="bg-white py-24">
                     <div className="container mx-auto px-4">
                         <div className="text-center mb-16">
-<h2 className="text-slate-900 mb-8">Découvrez les produits associés</h2>                            <p className="font-light text-gray-500 max-w-2xl mx-auto text-justify">
+                            <h2 className="text-slate-900 mb-8 font-bold uppercase">Découvrez les produits associés</h2>
+                            <p className="font-light text-gray-500 max-w-2xl mx-auto text-justify">
                                 Optimisez votre expérience de traitement d'eau avec nos solutions complémentaires.
                             </p>
                         </div>
@@ -483,10 +621,7 @@ const FiltresPuits = () => {
                                         />
                                     </div>
                                     <div className="p-8 space-y-4 flex flex-col flex-grow border-t-2 border-transparent group-hover:border-blue-600 transition-colors">
-                                        <h3
-                                            className="text-slate-900 group-hover:text-blue-600 transition-colors tracking-tight text-center"
-                                            style={{}}
-                                        >
+                                        <h3 className="card-title text-center group-hover:text-blue-600 transition-colors duration-500">
                                             {prod.name}
                                         </h3>
                                         <p
@@ -509,63 +644,62 @@ const FiltresPuits = () => {
                     </div>
                 </section>
 
-        {/* 9. CTA Section - Premium Immersive */}
-        <section className="relative py-32 overflow-hidden">
-          {/* Background Image with Overlay */}
-          <div className="absolute inset-0 z-0">
-            <img
-              src={SoftwaterImg}
-              alt="Expert Bricareau en traitement d'eau de puits"
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 via-blue-900/70 to-blue-800/30 backdrop-blur-[2px]" />
-          </div>
+                {/* 9. CTA Sectiion */}
+                <section className="relative py-32 overflow-hidden">
+                    {/* Background Image with Overlay */}
+                    <div className="absolute inset-0 z-0">
+                        <img
+                            src={crystalClearWaterImg}
+                            alt="Expert Bricareau en traitement d'eau de puits"
+                            className="w-full h-full object-cover"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 via-blue-900/70 to-blue-800/30 backdrop-blur-[2px]" />
+                    </div>
 
-          <div className="container mx-auto px-6 relative z-10 text-center">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-white mb-6">
-                <span className="font-light leading-tight block tracking-tight opacity-90 italic">Besoin d'aide avec</span>
-                <span className="font-bold leading-tight block tracking-tight uppercase">votre eau de puits ?</span>
-              </h2>
+                    <div className="container mx-auto px-6 relative z-10 text-center">
+                        <div className="max-w-4xl mx-auto">
+                            <h2 className="text-white mb-6">
+                                <span className="font-bold leading-tight block tracking-tight">Passez d'une eau problématique à une source de pureté irréprochable avec nos systèmes de pointe.</span>
+                            </h2>
 
-              <p className="text-blue-100/80 font-light text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
-                Le fer, le soufre et le calcaire ne sont pas une fatalité. Protégez votre santé et retrouvez le plaisir d'une eau pure, inodore et cristalline dès aujourd'hui.
-              </p>
+                            <p className="text-blue-100/80 font-light text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
+                                Le fer, le soufre et le calcaire ne sont pas une fatalité. Protégez votre santé et retrouvez le plaisir d'une eau pure, inodore et cristalline dès aujourd'hui.
+                            </p>
 
-              <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                <Button
-                  size="lg"
-                  className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-12 h-16 shadow-2xl shadow-white/30 group text-lg font-light"
-                  asChild
-                >
-                  <a href="tel:18552649328" className="flex items-center gap-3">
-                    <Phone className="h-5 w-5 animate-bounce" />
-                    Parlez à un expert
-                  </a>
-                </Button>
+                            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                                <Button
+                                    size="lg"
+                                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-12 h-16 shadow-2xl shadow-white/30 group text-lg font-light"
+                                    asChild
+                                >
+                                    <a href="tel:18552649328" className="flex items-center gap-3">
+                                        <Phone className="h-5 w-5 animate-bounce" />
+                                        Parlez à un expert
+                                    </a>
+                                </Button>
 
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="rounded-full px-10 h-16 border-white/30 text-white bg-white/5 hover:bg-white/10 backdrop-blur-md text-lg transition-all duration-500"
-                  asChild
-                >
-                  <NavLink to="/tests-eau">Demandez une analyse d'eau</NavLink>
-                </Button>
-              </div>
+                                <Button
+                                    size="lg"
+                                    variant="outline"
+                                    className="rounded-full px-10 h-16 border-white/30 text-white bg-white/5 hover:bg-white/10 backdrop-blur-md text-lg transition-all duration-500"
+                                    asChild
+                                >
+                                    <NavLink to="/tests-eau">Demandez une analyse d'eau</NavLink>
+                                </Button>
+                            </div>
 
-              <p className="mt-8 text-white/50 text-sm font-light">
-                Disponible 7j/7 — Réponse en moins de 24h
-              </p>
-            </div>
-          </div>
-        </section>
+                            <p className="mt-8 text-white/50 text-sm font-light">
+                                Disponible 7j/7 — Réponse en moins de 24h
+                            </p>
+                        </div>
+                    </div>
+                </section>
 
                 {/* 10. FAQ Section */}
                 <section className="py-24 bg-white">
                     <div className="container mx-auto px-6">
                         <div className="text-left mb-16">
-                             <h2
+                            <h2
                                 className="text-slate-900 mb-8 text-left"
                                 style={{}}
                             >
@@ -598,18 +732,21 @@ const FiltresPuits = () => {
                         </div>
                     </div>
                 </section>
+                
                 {/* 11. Resources Section */}
                 <section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
- <h2
+                            <h2
                                 className="text-slate-900 mb-8 text-left"
                                 style={{}}
-                            >                                <span className="font-normal leading-[1.1] block">Ressources</span>
+                            >                 
+                                <span className="font-normal leading-[1.1] block">Ressources</span>
                             </h2>
 
                             <div className="w-24 h-1 bg-blue-600"></div>
-                        </div>                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {[
                                 { title: "Adoucisseur d'eau et fosse septique : compatible ou non ?", path: "/adoucisseur-deau-et-fosse-septique-mythes-et-realites", img: adoucisseurFosseImg },
                                 { title: "Adoucisseur sans sel vs avec sel : la vérité technique", path: "/adoucisseur-sans-sel-vs-avec-sel-verite-technique", img: residentialWaterSoftenerImg },
