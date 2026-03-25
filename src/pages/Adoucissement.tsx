@@ -36,6 +36,8 @@ import { adoucisseurImg as adoucisseurFosseImg } from "./Blog pages/Adoucisseur-
 import TACsystemImg from "@/assets/free salt conditionner.webp";
 import womansufferingfromHardWaterImg from "@/assets/2149561614.jpg";
 import womansufferingdryhairfromhardwaterImg from "@/assets/12163.jpg";
+import arrowDownIcon from "@/assets/keyboard_double_arrow_down.svg";
+import arrowUpIcon from "@/assets/keyboard_double_arrow_up.svg";
 
 import {
     ArrowRight,
@@ -188,13 +190,18 @@ const Adoucissement = () => {
                                     ))}
                                 </div>
 
-                                <div className="pt-2">
+                                <div className="pt-8 flex justify-center">
                                     <button
                                         onClick={() => setShowAllHarms(!showAllHarms)}
-                                        className="flex items-center gap-2 text-blue-600 font-bold text-sm hover:gap-3 transition-all group"
+                                        className="flex items-center gap-2 text-blue-600 hover:scale-125 transition-all group"
+                                        title={showAllHarms ? "Voir moins" : "Voir plus"}
                                     >
-                                        {showAllHarms ? "Voir moins d'impacts" : "Voir plus d'impacts"}
-                                        <ChevronRight className={`w-4 h-4 transition-transform ${showAllHarms ? 'rotate-90' : ''}`} />
+                                        <img 
+                                            src={showAllHarms ? arrowUpIcon : arrowDownIcon} 
+                                            className="w-10 h-10" 
+                                            style={{ filter: 'invert(32%) sepia(96%) saturate(3015%) hue-rotate(212deg) brightness(97%) contrast(96%)' }}
+                                            alt={showAllHarms ? "Voir moins" : "Voir plus"}
+                                        />
                                     </button>
                                 </div>
                             </div>
@@ -587,8 +594,8 @@ const Adoucissement = () => {
                             fontStyle: 'normal'
                         }}
                     >
-                        <span className="italic font-light text-[#2563eb] block">Pour vous éclairer</span>
-                        <span className="font-bold text-[#1e3a8a] block">Questions fréquentes</span>
+                        <span className="italic font-light text-[#2563eb] block">Comparez nos solutions</span>
+                        <span className="font-bold text-[#1e3a8a] block">d'adoucissement d'eau</span>
                     </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>

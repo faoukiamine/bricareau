@@ -660,8 +660,7 @@ const TraitementEauDePuits = () => {
                   fontStyle: 'normal'
                 }}
               >
-                <span className="italic font-light text-blue-400 block">Maîtrisez</span>
-                <span className="font-bold text-white block">la qualité de votre eau de puits</span>
+                <span className="font-bold text-white block">Maîtrisez la qualité de votre eau de puits </span>
               </h2>
 
               <p 

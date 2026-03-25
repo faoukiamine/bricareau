@@ -102,10 +102,18 @@ const ConditionneursSansSel = () => {
         <section className="py-32 bg-slate-50 relative overflow-hidden">
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-4xl mx-auto text-center mb-20">
-              <h2 className="text slate-900 mb-6 leading-tight">
-                <span className="font-light">Ce que l'eau dure </span>
-                <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">coûte réellement.</span>
-              </h2>
+              <h2 
+                                className="mb-8 text-center"
+                                style={{
+                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                    fontSize: '48px',
+                                    lineHeight: '48px',
+                                    fontStyle: 'normal'
+                                }}
+                            >
+                                <span className="italic font-light text-[#2563eb] block">Ce que l'eau dure</span>
+                                <span className="font-bold text-[#1e3a8a] block">coûte réellement.</span>
+                            </h2>
               <p className="text-slate-500 font-light text-xl max-w-2xl mx-auto leading-relaxed">
                 Le calcaire dégrade vos équipements jour après jour. Protégez-les avec une solution efficace.
               </p>
@@ -154,9 +162,18 @@ const ConditionneursSansSel = () => {
         <section className="py-24 bg-white border-t border-slate-100">
           <div className="container mx-auto px-4">
             <div className="text-center max-w-3xl mx-auto mb-20">
-              <h2 className="text-slate-900 mb-6 leading-tight">
-                <span className="font-light">Pourquoi choisir le </span><span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">conditionneur d'eau sans sel ?</span>
-              </h2>
+              <h2 
+                                className="mb-8 text-center"
+                                style={{
+                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                    fontSize: '48px',
+                                    lineHeight: '48px',
+                                    fontStyle: 'normal'
+                                }}
+                            >
+                                <span className="italic font-light text-[#2563eb] block">Pourquoi choisir le</span>
+                                <span className="font-bold text-[#1e3a8a] block">conditionneur d'eau sans sel ?</span>
+                            </h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {whyChoose.map((item, idx) => (
@@ -207,11 +224,17 @@ const ConditionneursSansSel = () => {
         <section className="py-24 bg-slate-50">
           <div className="container mx-auto px-4">
             <div className="text-left mb-16">
-              <h2
-                className="text-slate-900 mb-8 text-left"
-              >
-                <span className="font-normal leading-[1.1] block">Ressources</span>
-              </h2>
+              <h2 
+                                className="mb-8"
+                                style={{
+                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                    fontSize: '48px',
+                                    lineHeight: '48px',
+                                    fontStyle: 'normal'
+                                }}
+                            >
+                                <span className="font-bold text-[#1e3a8a] block text-left">Ressources</span>
+                            </h2>
               <div className="w-24 h-1 bg-blue-600"></div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

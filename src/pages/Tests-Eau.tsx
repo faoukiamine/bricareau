@@ -369,7 +369,7 @@ const TestsEauPage = () => {
                   fontStyle: 'normal'
                 }}
               >
-                <span className="italic font-light text-blue-400 block">Vous avez un doute</span>
+                <span className="font-bold text-white block">Vous avez un doute</span>
                 <span className="font-bold text-white block">sur la qualité de votre eau ?</span>
               </h2>
 
@@ -377,14 +377,20 @@ const TestsEauPage = () => {
                 Planifier une analyse d’eau professionnelle et recevoir un rapport clair avec recommandations. Un spécialiste vous contactera pour discuter des résultats et, au besoin, vous proposer un plan de traitement adapté à votre maison.              </p>
 
               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                <Button
-                  asChild
-                >
-                  <a href="tests-eau#water-test" className="flex items-center gap-3">
-                    Planifiez un test d'eau
-                  </a>
-                </Button>
-              </div>
+                                              <Button asChild>
+                                                  <a href="tel:18552649328" className="flex items-center gap-3">
+                                                      <Phone className="h-5 w-5 animate-bounce" />
+                                                      Parlez à un expert
+                                                  </a>
+                                              </Button>
+              
+                                              <Button
+                                                  variant="outline"
+                                                  asChild
+                                              >
+                                                  <NavLink to="/consultation">Planifiez-vous une consultation</NavLink>
+                                              </Button>
+                                          </div>
             </div>
           </div>
         </section>

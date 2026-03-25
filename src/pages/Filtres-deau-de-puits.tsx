@@ -603,7 +603,7 @@ const FiltresPuits = () => {
                                     fontStyle: 'normal'
                                 }}
                             >
-                                <span className="italic font-light text-white/80 block">L'excellence commence</span>
+                                <span className="italic font-light text-white block">L'excellence commence</span>
                                 <span className="font-bold text-white block">par une eau parfaite.</span>
                             </h2>
                             <p className="font-light text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
@@ -740,7 +740,7 @@ const FiltresPuits = () => {
                                     fontStyle: 'normal'
                                 }}
                             >
-                                <span className="italic font-light text-white/80 block tracking-tight">Passez d'une eau problématique</span>
+                                <span className="font-bold text-white block tracking-tight">Passez d'une eau problématique</span>
                                 <span className="font-bold text-white block tracking-tight">à une source de pureté.</span>
                             </h2>
 
@@ -755,16 +755,14 @@ const FiltresPuits = () => {
                                                                     Parlez à un expert
                                                                 </a>
                                                             </Button>
-
-                                <Button
-                                    size="lg"
-                                    variant="outline"
-                                    className="rounded-full px-10 h-16 border-white/30 text-white bg-white/5 hover:bg-white/10 backdrop-blur-md text-lg transition-all duration-500"
-                                    asChild
-                                >
-                                    <NavLink to="/tests-eau">Demandez une analyse d'eau</NavLink>
-                                </Button>
-                            </div>
+                            
+                                                            <Button
+                                                                variant="outline"
+                                                                asChild
+                                                            >
+                                                                <NavLink to="/consultation">Planifiez-vous une consultation</NavLink>
+                                                            </Button>
+                                                        </div>
 
                             <p className="mt-8 text-white/50 text-sm font-light">
                                 Disponible 7j/7 — Réponse en moins de 24h

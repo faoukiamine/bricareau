@@ -541,7 +541,9 @@ const AdoucisseursEauDePuits = () => {
 
                     <div className="container mx-auto px-4 relative z-10 flex items-center py-12 lg:py-0">
                         <div className="max-w-2xl text-slate-900 lg:text-white">
-                             <h2 
+                             <span className="font-bold text-[#1e3a8a] block uppercase">
+                                Contrôle de la Qualité D'EAU
+                            </span><h2 
                                  className="scroll-mt-[120px] mb-8"
                                  style={{
                                     fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
@@ -693,26 +695,38 @@ const AdoucisseursEauDePuits = () => {
 
                     <div className="container mx-auto px-6 relative z-10 text-center">
                         <div className="max-w-4xl mx-auto">
-                            <h2 className="text-white mb-6">
-                                <span className="font-bold leading-tight block tracking-tight">Préservez votre foyer avec une eau d'une douceur absolue.</span>
-                            </h2>
+                            <h2 
+                                className="mb-8"
+                                style={{
+                                fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                fontSize: '48px',
+                                lineHeight: '48px',
+                                fontStyle: 'normal'
+                }}
+              >
+                <span className="font-bold text-white block">Préservez votre foyer avec </span>
+                <span className="font-bold text-white block">une eau d'une douceur absolue.</span>
+              </h2>
 
                             <p className="text-white/80 text-xl font-light mb-10 max-w-2xl mx-auto">
                                 Ne laissez plus le calcaire de votre puits user vos électroménagers et agresser votre peau. Alliez la performance d'une plomberie protégée au confort d'une eau douce à chaque robinet.
                             </p>
 
                             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                                <Button asChild>
-                                    <a href="tel:18552649328" className="flex items-center gap-3">
-                                        <Phone className="h-5 w-5 animate-bounce" />
-                                        Parlez à un expert
-                                    </a>
-                                </Button>
-
-                                <Button variant="secondary" asChild>
-                                    <NavLink to="/consultation">Planifiez une consultation</NavLink>
-                                </Button>
-                            </div>
+                                                            <Button asChild>
+                                                                <a href="tel:18552649328" className="flex items-center gap-3">
+                                                                    <Phone className="h-5 w-5 animate-bounce" />
+                                                                    Parlez à un expert
+                                                                </a>
+                                                            </Button>
+                            
+                                                            <Button
+                                                                variant="outline"
+                                                                asChild
+                                                            >
+                                                                <NavLink to="/consultation">Planifiez-vous une consultation</NavLink>
+                                                            </Button>
+                                                        </div>
 
                             <p className="mt-8 text-white/50 text-sm font-light">
                                 Disponible 7j/7 — Réponse en moins de 24h

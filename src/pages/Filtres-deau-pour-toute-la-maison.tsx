@@ -120,7 +120,7 @@ const comparisonData: ComparisonItem[] = [
     { feature: "Élimination du fer et manganèse", vortex: false, chlorstop: false, ironshield: true },
     { feature: "Amélioration du goût de l'eau", vortex: "Mineure", chlorstop: true, ironshield: true },
     { feature: "Protection de la plomberie et robinetterie", vortex: true, chlorstop: true, ironshield: true },
-    { feature: "Fonctionnement sans électricité", vortex: true, chlorstop: true, ironshield: true },
+    { feature: "Fonctionnement avec électricité", vortex: true, chlorstop: true, ironshield: true },
 ];
 
 const FiltresTouteMaison = () => {
@@ -241,11 +241,12 @@ const FiltresTouteMaison = () => {
                             </h2>
                             <div className="w-24 h-1 bg-blue-600 mb-8"></div>
                             <p 
-                                className="mb-8 text-justify leading-snug"
+                                className="mb-8 text-justify"
                                 style={{
                                     fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
                                     fontSize: '20px',
                                     fontWeight: '300',
+                                    lineHeight: '28px',
                                     color: 'rgb(71, 85, 105)'
                                 }}
                             >
@@ -280,8 +281,9 @@ const FiltresTouteMaison = () => {
                                         </p>
                                         <div
                                             className="inline-flex items-center gap-2 text-blue-600 font-bold text-xs tracking-widest uppercase mt-4 group-hover:underline self-end"
+                                            style={{}}
                                         >
-                                            <span>Découvrir</span>
+                                            <span></span>
                                             <ArrowRight className="h-6 w-6 transform group-hover:translate-x-1 transition-transform" />
                                         </div>
                                     </div>
@@ -374,8 +376,8 @@ const FiltresTouteMaison = () => {
 
                     <div className="container mx-auto px-4 relative z-10 flex items-center py-12 lg:py-0">
                         <div className="max-w-2xl text-slate-900 lg:text-white">
-                            <span className="text-blue-600 lg:text-blue-300 text-xs font-black uppercase tracking-[0.3em] mb-8 block">
-                                Contrôle de la Qualité d'eau
+                            <span className="text-blue-600 lg:text-[#1e3a8a] text-xs font-black uppercase tracking-[0.3em] mb-8 block">
+                                Contrôle de la Qualité D'EAU
                             </span>
                             <h2
                                 className="mb-8"
@@ -393,12 +395,13 @@ const FiltresTouteMaison = () => {
                                 Le luxe, c'est de ne pas avoir à se soucier de la qualité de ce que l'on consomme. Offrez-vous la sérénité d'une eau analysée par des experts, pour une maison où tout brille, sans effort et sans compromis.
                             </p>
                             <div className="flex gap-4">
-                                <Button 
-                                    size="lg"
-                                    asChild
-                                >
-                                    <a href="/tests-eau">Demandez une analyse d'eau</a>
-                                </Button>
+                                <div className="flex gap-4">
+                                                <Button
+                                                  asChild
+                                                >
+                                                  <a href="/tests-eau">Demandez une analyse d'eau</a>
+                                                </Button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -409,8 +412,18 @@ const FiltresTouteMaison = () => {
                     filterProduct="/filtres-deau-pour-toute-la-maison"
                     title={
                         <>
-                            <span className="italic font-light text-[#2563eb] block text-center">Fini le chlore et les contaminants,</span>
-                            <span className="font-bold text-[#1e3a8a] block text-center">la métamorphose vue par nos clients.</span>
+                            <h2 
+                                className="mb-8"
+                                style={{
+                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                    fontSize: '48px',
+                                    lineHeight: '48px',
+                                    fontStyle: 'normal'
+                                }}
+                            >
+                                <span className="italic font-light text-[#2563eb] block text-center">Fini le chlore et les contaminants,</span>
+                                <span className="font-bold text-[#1e3a8a] block text-center">la métamorphose vue par nos clients.</span>
+                            </h2>
                         </>
                     }
                 />
@@ -441,7 +454,7 @@ const FiltresTouteMaison = () => {
                                         <AccordionTrigger className="text-left font-medium text-lg hover:no-underline py-6">
                                             {item.q}
                                         </AccordionTrigger>
-                                        <AccordionContent className="text-slate-600 text-xl font-light leading-snug pb-6 text-left">
+                                        <AccordionContent className="text-gray-600 text-lg leading-snug pb-6 text-left">
                                             {item.a}
                                         </AccordionContent>
                                     </AccordionItem>
@@ -449,10 +462,9 @@ const FiltresTouteMaison = () => {
                             </Accordion>
                             <div className="mt-12 text-center">
                                 <Button
-                                    onClick={() => setShowAllFaqs(!showAllFaqs)}
-                                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-12 h-14 shadow-lg shadow-blue-200"
-                                >
-                                    {showAllFaqs ? "Voir moins de questions" : "Voir toutes les questions"}
+                                                  onClick={() => setShowAllFaqs(!showAllFaqs)}
+                                                >
+                                                  {showAllFaqs ? "Voir moins de questions" : "Voir toutes les questions"}
                                 </Button>
                             </div>
                         </div>
@@ -481,31 +493,24 @@ const FiltresTouteMaison = () => {
                                     fontStyle: 'normal'
                                 }}
                             >
-                                <span className="italic font-light text-blue-400 block tracking-tight opacity-90">Besoin d'aide avec</span>
-                                <span className="font-bold text-white block tracking-tight opacity-90">votre eau ?</span>
+                                <span className="font-bold text-white block tracking-tight opacity-90">Besoin d'aide avec votre eau ?</span>
                             </h2>
                             <p className="text-blue-100/80 font-light text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
                                 Discutez avec un expert en un clic. Disponible par téléphone ou à domicile selon vos préférences.                           
                             </p>
                             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                                <Button
-                                    size="lg"
-                                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-12 h-16 shadow-2xl shadow-white/30 group text-lg font-light"
-                                    asChild
-                                >
+                                <Button asChild>
                                     <a href="tel:18552649328" className="flex items-center gap-3">
                                         <Phone className="h-5 w-5 animate-bounce" />
                                         Parlez à un expert
                                     </a>
                                 </Button>
-
+                                                                            
                                 <Button
-                                    size="lg"
                                     variant="outline"
-                                    className="rounded-full px-10 h-16 border-white/30 text-white bg-white/5 hover:bg-white/10 backdrop-blur-md text-lg transition-all duration-500"
                                     asChild
                                 >
-                                    <NavLink to="/consultation">Planifiez une consultation</NavLink>
+                                    <NavLink to="/consultation">Planifiez-vous une consultation</NavLink>
                                 </Button>
                             </div>
 

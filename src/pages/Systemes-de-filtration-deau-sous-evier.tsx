@@ -311,7 +311,7 @@ const FiltrationSousEvier = () => {
               <span className="inline-block px-4 py-1.5 bg-blue-50 text-blue-600 rounded-full text-xs font-black uppercase tracking-widest mb-6">
                                 L'EXCELLENCE DE L'EAU FILTRÉE AU QUOTIDIEN
                             </span>
-                             <h2 
+                            <h2 
                                 className="mb-8 text-center"
                                 style={{
                                     fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
@@ -571,12 +571,11 @@ title={
                                 ))}
                             </Accordion>
                             <div className="mt-12 text-center">
-                                <Button
-                                    onClick={() => setShowAllFaqs(!showAllFaqs)}
-                                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-12 h-14 shadow-lg shadow-blue-200"
-                                >
-                                    {showAllFaqs ? "Voir moins de questions" : "Voir toutes les questions"}
-                                </Button>
+                                            <Button
+                                              onClick={() => setShowAllFaqs(!showAllFaqs)}
+                                            >
+                                              {showAllFaqs ? "Voir moins de questions" : "Voir toutes les questions"}
+                                            </Button>
                             </div>
                         </div>
                     </div>
@@ -600,28 +599,21 @@ title={
                             </h2>
                             <p className="text-blue-100/80 font-light text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
                                 Passez au filtre sous évier et profitez d’une eau filtrée, savoureuse et économique directement à votre robinet. Contactez-nous pour une démonstration, une analyse d’eau ou un devis personnalisé. Installation rapide sous 48h disponible dans plusieurs régions !                            </p>
-
-                            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                                <Button
-                                    size="lg"
-                                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-12 h-16 shadow-2xl shadow-white/30 group text-lg font-light"
-                                    asChild
-                                >
-                                    <a href="tel:18552649328" className="flex items-center gap-3">
-                                        <Phone className="h-5 w-5 animate-bounce" />
-                                        Parlez à un expert
-                                    </a>
-                                </Button>
-
-                                <Button
-                                    size="lg"
-                                    variant="outline"
-                                    className="rounded-full px-10 h-16 border-white/30 text-white bg-white/5 hover:bg-white/10 backdrop-blur-md text-lg transition-all duration-500"
-                                    asChild
-                                >
-                                    <NavLink to="/consultation">Planifiez-vous une consultation</NavLink>
-                                </Button>
-                            </div>
+<div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                                                                                <Button asChild>
+                                                                                    <a href="tel:18552649328" className="flex items-center gap-3">
+                                                                                        <Phone className="h-5 w-5 animate-bounce" />
+                                                                                        Parlez à un expert
+                                                                                    </a>
+                                                                                </Button>
+                                                
+                                                                                <Button
+                                                                                    variant="outline"
+                                                                                    asChild
+                                                                                >
+                                                                                    <NavLink to="/consultation">Planifiez-vous une consultation</NavLink>
+                                                                                </Button>
+                                                                            </div>
 
                             <p className="mt-8 text-white/50 text-sm font-light">
                                 Disponible 7j/7 — Réponse en moins de 24h

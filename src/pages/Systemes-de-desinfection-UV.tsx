@@ -306,8 +306,8 @@ const DesinfectionUV = () => {
                                     fontStyle: 'normal'
                                 }}
                             >
-                                <span className="italic font-light text-[#2563eb] block">Comparez nos</span>
-                                <span className="font-bold text-[#1e3a8a] block">systèmes UV</span>
+                                <span className="italic font-light text-[#2563eb] block">Comparez nos systèmes</span>
+                                <span className="font-bold text-[#1e3a8a] block">de stérilisation UV</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
@@ -381,7 +381,9 @@ const DesinfectionUV = () => {
 
                     <div className="container mx-auto px-4 relative z-10 flex items-center py-12 lg:py-0">
                         <div className="max-w-2xl text-slate-900 lg:text-white">
-                             <h2
+                             <span className="font-bold text-[#1e3a8a] block uppercase">
+                                Contrôle de la Qualité D'EAU
+                            </span><h2
                                 className="mb-8"
                                 style={{
                                     fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',

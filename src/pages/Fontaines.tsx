@@ -556,8 +556,8 @@ const Fontaines = () => {
                                     fontStyle: 'normal'
                                 }}
                             >
-                                <span className="italic font-light text-blue-400 block">Sublimez</span>
-                                <span className="font-bold text-white block">votre quotidien avec l'excellence de nos fontaines d'eau.</span>
+                                <span className="font-bold text-white block">Sublimez votre quotidien avec </span>
+                                <span className="font-bold text-white block">l'excellence de nos fontaines d'eau.</span>
                             </h2>
                             <p 
                                 className="mb-12 max-w-2xl mx-auto"
