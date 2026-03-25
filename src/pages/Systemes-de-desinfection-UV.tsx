@@ -283,7 +283,7 @@ const DesinfectionUV = () => {
                                             className="inline-flex items-center gap-2 text-blue-600 font-bold text-xs tracking-widest uppercase mt-4 group-hover:underline self-end"
                                             style={{}}
                                         >
-                                            <span>Découvrir</span>
+                                            <span></span>
                                             <ArrowRight className="h-6 w-6 transform group-hover:translate-x-1 transition-transform" />
                                         </div>
                                     </div>
@@ -390,7 +390,7 @@ const DesinfectionUV = () => {
                                     fontStyle: 'normal'
                                 }}
                             >
-                                <span className="italic font-light text-blue-400 block">Des tests d'eau précis</span>
+                                <span className="italic font-light text-white/80 block">Des tests d'eau précis</span>
                                 <span className="font-bold text-white block">pour une tranquillité d'esprit totale.</span>
                             </h2>
                             <p className="font-light text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
@@ -487,7 +487,7 @@ const DesinfectionUV = () => {
                                             className="inline-flex items-center gap-2 text-blue-600 font-bold text-xs tracking-widest uppercase mt-4 group-hover:underline self-end"
                                             style={{}}
                                         >
-                                            <span>Découvrir</span>
+                                            <span></span>
                                             <ArrowRight className="h-6 w-6 transform group-hover:translate-x-1 transition-transform" />
                                         </div>
                                     </div>

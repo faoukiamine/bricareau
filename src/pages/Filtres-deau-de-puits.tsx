@@ -591,7 +591,7 @@ const FiltresPuits = () => {
 
                     <div className="container mx-auto px-4 relative z-10 flex items-center py-12 lg:py-0">
                         <div className="max-w-2xl text-slate-900 lg:text-white">
-                            <span className="text-blue-600 lg:text-white/80 font-bold uppercase tracking-widest text-sm mb-4 block">
+                            <span className="font-bold text-[#1e3a8a] block uppercase">
                                 Contrôle de la Qualité D'EAU
                             </span>
                             <h2
@@ -603,19 +603,14 @@ const FiltresPuits = () => {
                                     fontStyle: 'normal'
                                 }}
                             >
-                                <span className="italic font-light text-blue-400 block">L'excellence commence</span>
+                                <span className="italic font-light text-white/80 block">L'excellence commence</span>
                                 <span className="font-bold text-white block">par une eau parfaite.</span>
                             </h2>
                             <p className="font-light text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
                                 Le luxe, c'est de ne pas avoir à se soucier de la qualité de ce que l'on consomme. Offrez-vous la sérénité d'une eau analysée par des experts, pour une maison où tout brille, sans effort et sans compromis.
                             </p>
                             <div className="flex gap-4">
-                                <Button
-                                    size="lg"
-                                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200"
-                                    style={{}}
-                                    asChild
-                                >
+                                <Button asChild>
                                     <a href="/tests-eau">Demandez une analyse d'eau</a>
                                 </Button>
                             </div>
@@ -745,7 +740,7 @@ const FiltresPuits = () => {
                                     fontStyle: 'normal'
                                 }}
                             >
-                                <span className="italic font-light text-blue-400 block tracking-tight">Passez d'une eau problématique</span>
+                                <span className="italic font-light text-white/80 block tracking-tight">Passez d'une eau problématique</span>
                                 <span className="font-bold text-white block tracking-tight">à une source de pureté.</span>
                             </h2>
 
@@ -754,16 +749,12 @@ const FiltresPuits = () => {
                             </p>
 
                             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                                <Button
-                                    size="lg"
-                                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-12 h-16 shadow-2xl shadow-white/30 group text-lg font-light"
-                                    asChild
-                                >
-                                    <a href="tel:18552649328" className="flex items-center gap-3">
-                                        <Phone className="h-5 w-5 animate-bounce" />
-                                        Parlez à un expert
-                                    </a>
-                                </Button>
+                                                            <Button asChild>
+                                                                <a href="tel:18552649328" className="flex items-center gap-3">
+                                                                    <Phone className="h-5 w-5 animate-bounce" />
+                                                                    Parlez à un expert
+                                                                </a>
+                                                            </Button>
 
                                 <Button
                                     size="lg"
@@ -799,28 +790,28 @@ const FiltresPuits = () => {
                                 <span className="font-bold text-[#1e3a8a] block">Questions fréquentes</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
-                        </div>
-                        <div className="max-w-4xl mx-auto">
-                            <Accordion type="single" collapsible className="w-full">
-                                {faqItems.slice(0, showAllFaqs ? undefined : 6).map((item, idx) => (
-                                    <AccordionItem key={idx} value={`item-${idx}`} className="border-b-gray-200">
-                                        <AccordionTrigger className="text-left font-medium text-lg hover:no-underline py-6">
-                                            {item.q}
-                                        </AccordionTrigger>
-                                        <AccordionContent className="text-gray-600 text-lg leading-snug pb-6 text-left">
-                                            {item.a}
-                                        </AccordionContent>
-                                    </AccordionItem>
-                                ))}
-                            </Accordion>
-                            <div className="mt-12 text-center">
-                                <Button
-                                    onClick={() => setShowAllFaqs(!showAllFaqs)}
-                                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-12 h-14 shadow-lg shadow-blue-200"
-                                >
-                                    {showAllFaqs ? "Voir moins de questions" : "Voir toutes les questions"}
-                                </Button>
-                            </div>
+                                                    </div>
+                            
+                                                    <div className="max-w-4xl mx-auto">
+                                                        <Accordion type="single" collapsible className="w-full">
+                                                            {faqItems.slice(0, showAllFaqs ? undefined : 6).map((item, idx) => (
+                                                                <AccordionItem key={idx} value={`item-${idx}`} className="border-b-gray-200">
+                                                                    <AccordionTrigger className="text-left text-base font-medium leading-6 hover:no-underline py-6" style={{}}>
+                                                                        {item.q}
+                                                                    </AccordionTrigger>
+                                                                    <AccordionContent className="text-base font-light leading-6 text-gray-600 pb-6 text-justify" style={{}}>
+                                                                        {item.a}
+                                                                    </AccordionContent>
+                                                                </AccordionItem>
+                                                            ))}
+                                                        </Accordion>
+                                                        <div className="mt-12 text-center">
+                                                            <Button
+                                                                onClick={() => setShowAllFaqs(!showAllFaqs)}
+                                                            >
+                                                                {showAllFaqs ? "Voir moins de questions" : "Voir toutes les questions"}
+                                                            </Button>
+                                                        </div>
                         </div>
                     </div>
                 </section>

@@ -550,7 +550,7 @@ const AdoucisseursEauDePuits = () => {
                                     fontStyle: 'normal'
                                  }}
                              >
-                                 <span className="italic font-light text-blue-400 block tracking-tight">Des tests d'eau précis</span>
+                                 <span className="italic font-light text-white/80 block tracking-tight">Des tests d'eau précis</span>
                                  <span className="font-bold text-white block tracking-tight">pour une tranquillité d'esprit.</span>
                              </h2>
                             <p className="font-light text-slate-500 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
