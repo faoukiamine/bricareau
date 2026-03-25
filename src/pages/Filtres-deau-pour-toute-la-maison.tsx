@@ -381,7 +381,7 @@ const FiltresTouteMaison = () => {
 
                     <div className="container mx-auto px-4 relative z-10 flex items-center py-12 lg:py-0">
                         <div className="max-w-2xl text-slate-900 lg:text-white">
-                            <span className="text-blue-600 lg:text-white/80 font-bold uppercase tracking-widest text-sm mb-4 block">
+                            <span className="text-blue-600 lg:text-[#1e3a8a] text-xs font-black uppercase tracking-[0.3em] mb-8 block">
                                 Contrôle de la Qualité D'EAU
                             </span>
                             <h2
@@ -393,7 +393,7 @@ const FiltresTouteMaison = () => {
                                     fontStyle: 'normal'
                                 }}
                             >
-                                <span className="italic font-light text-blue-400 block">L'excellence commence</span>
+                                <span className="italic font-light text-white block">L'excellence commence</span>
                                 <span className="font-bold text-white block">par une eau parfaite.</span>
                             </h2>
                             <p className="font-light text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">

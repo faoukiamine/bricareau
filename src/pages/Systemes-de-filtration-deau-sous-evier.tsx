@@ -153,10 +153,18 @@ const FiltrationSousEvier = () => {
                             <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.2em] mb-8">
                                 PERFORMANCE & CAPACITÉ
                             </span>
-                            <h2 className="text-slate-900 leading-[1.1] tracking-tight">
-                                <span className="font-light block tracking-tighter text-slate-900">Qu’est-ce qu’un filtre sous évier</span>
-                                <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">
-                                    élimine-t-il réellement ?</span>
+                            
+                            <h2 
+                                className="mb-8 text-left"
+                                style={{
+                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                    fontSize: '48px',
+                                    lineHeight: '48px',
+                                    fontStyle: 'normal'
+                                }}
+                            >
+                                <span className="italic font-light text-[#2563eb] block">Qu’est-ce qu’un filtre sous évier</span>
+                                <span className="font-bold text-[#1e3a8a] block">élimine-t-il réellement ?</span>
                             </h2>
                         </div>
 
@@ -234,12 +242,17 @@ const FiltrationSousEvier = () => {
                 <section id="systemes-filtration" className="py-24 bg-white">
                     <div className="container mx-auto px-6">
                         <div className="text-left mb-16">
-                            <h2
-                                className="text-slate-900 mb-8 text-left"
-                                style={{}}
+                            <h2 
+                                className="mb-8 text-left"
+                                style={{
+                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                    fontSize: '48px',
+                                    lineHeight: '48px',
+                                    fontStyle: 'normal'
+                                }}
                             >
-                                <span className="font-light block">Nos systèmes de filtration</span>
-                                <span className="font-normal block">d'eau sous évier</span>
+                                <span className="italic font-light text-[#2563eb] block">Nos systèmes de filtration</span>
+                                <span className="font-bold text-[#1e3a8a] block">d'eau sous évier</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600 mb-8"></div>
                             <p className="font-light text-slate-600 mb-16 max-w-7xl mx-auto text-justify">
@@ -298,10 +311,17 @@ const FiltrationSousEvier = () => {
               <span className="inline-block px-4 py-1.5 bg-blue-50 text-blue-600 rounded-full text-xs font-black uppercase tracking-widest mb-6">
                                 L'EXCELLENCE DE L'EAU FILTRÉE AU QUOTIDIEN
                             </span>
-                            <h2 className="text-slate-900 leading-[1.05] tracking-[ -0.04em] mb-10">
-                                <span className="font-light block tracking-tighter text-slate-900">Pourquoi privilégier nos</span>
-                                <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">
-                                    systèmes de filtration d'eau sous l'évier ?</span>
+                             <h2 
+                                className="mb-8 text-center"
+                                style={{
+                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                    fontSize: '48px',
+                                    lineHeight: '48px',
+                                    fontStyle: 'normal'
+                                }}
+                            >
+                                <span className="italic font-light text-[#2563eb] block">Pourquoi privilégier nos</span>
+                                <span className="font-bold text-[#1e3a8a] block">systèmes de filtration d'eau sous l'évier ?</span>
                             </h2>
                             <div className="w-16 h-0.5 bg-blue-600/20 mx-auto mb-10" />
                             <p className="font-light text-slate-500 text-lg max-w-2xl mx-auto leading-relaxed italic">
@@ -367,12 +387,17 @@ const FiltrationSousEvier = () => {
                 <section className="py-24 bg-white">
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
-                            <h2
-                                className="text-slate-900 mb-8 text-left"
-                                style={{}}
+                            <h2 
+                                className="mb-8 text-left"
+                                style={{
+                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                    fontSize: '48px',
+                                    lineHeight: '48px',
+                                    fontStyle: 'normal'
+                                }}
                             >
-                                <span className="font-light leading-[1.1] block">Comparez nos solutions</span>
-                                <span className="font-normal leading-[1.1] block">de filtration d'eau potable.</span>
+                                <span className="italic font-light text-[#2563eb] block">Comparez nos solutions</span>
+                                <span className="font-bold text-[#1e3a8a] block">de filtration d'eau potable.</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
@@ -445,11 +470,20 @@ const FiltrationSousEvier = () => {
 
                     <div className="container mx-auto px-4 relative z-10 flex items-center py-12 lg:py-0">
                         <div className="max-w-2xl text-slate-900 lg:text-white">
-                            <span className="text-blue-600 lg:text-white/80 text-xs font-black uppercase tracking-[0.3em] mb-8 block">
-                                ANALYSE PROFESSIONNELLE
+                            <span className="text-blue-600 lg:text-[#1e3a8a] text-xs font-black uppercase tracking-[0.3em] mb-8 block">
+                                TESTS D'EAU PROFESSIONNELS
                             </span>
-                            <h2 className="mb-8 text-slate-900 lg:text-white font-bold uppercase">
-                                Identifiez l'invisible, maîtrisez la pureté de votre eau.
+                            <h2
+                                className="mb-8"
+                                style={{
+                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                    fontSize: '48px',
+                                    lineHeight: '48px',
+                                    fontStyle: 'normal'
+                                }}
+                            >
+                                <span className="italic font-light text-white block">Identifiez l'invisible,</span>
+                                <span className="font-bold text-white block">maîtrisez la pureté de votre eau.</span>
                             </h2>
                             <p className="font-light text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
                                 Ne laissez plus le doute couler de votre robinet. Nos tests d'eau révèlent la composition réelle de votre eau pour vous offrir une solution de filtration sur mesure, garantissant santé et sérénité à toute votre famille.
@@ -471,21 +505,12 @@ const FiltrationSousEvier = () => {
                 {/* 6. Testimonials Section */}
                 <TestimonialsSection
                     filterProduct="/Systemes-de-filtration-deau-sous-evier"
-                    <div className="container mx-auto px-4 text-left">
-                        <div className="text-left mb-16"></div><h2 
-                                className="mb-8 text-left"
-                                style={{
-                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                    fontSize: '48px',
-                                    lineHeight: '48px',
-                                    fontStyle: 'normal'
-                                }}
-                            >
-                                <span className="italic font-light text-[#2563eb] block">Adieu les bouteilles plastiques,</span>
-                                <span className="font-bold text-[#1e3a8a] block">Enfin la liberté au robinet.</span>
-                            </h2>
+title={
+                        <>
+                            <span className="italic font-light text-[#2563eb] block text-center">Adieu les bouteilles plastiques,</span>
+                            <span className="font-bold text-[#1e3a8a] block text-center">Enfin la liberté au robinet.</span>
                         </>
-                    </div>
+                    }
                 />
 
                 {/* 7. FAQ Section */}
