@@ -117,19 +117,10 @@ const CommercialIndustriel = () => {
                   Notre mission est de vous offrir une tranquillité d'esprit dans vos projets de traitement de l'eau les plus exigeants.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button
-                    size="lg"
-                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200"
-                    asChild
-                  >
+                  <Button asChild>
                     <a href="#solutions">Explorez nos solutions</a>
                   </Button>
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="bg-white/10 hover:bg-blue-50 lg:hover:bg-white/20 text-blue-600 lg:text-white border-blue-600 lg:border-white rounded-full px-8 h-14 backdrop-blur-sm"
-                    asChild
-                  >
+                  <Button variant="outline" asChild>
                     <a href="tel:18552649328" className="flex items-center gap-2">
                       <Phone className="h-5 w-5" />
                       1-855-264-9328
@@ -224,12 +215,9 @@ const CommercialIndustriel = () => {
                 Nous vous accompagnons dans le développement d'un système d'équipements de traitement de l'eau sur mesure et personnalisé.
                 Nous sommes présents avant, pendant et après votre projet de traitement de l'eau.
               </p>
-              <a
-                href="/contact"
-                className="inline-flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground font-medium rounded-md hover:bg-primary/90 transition-colors"
-              >
-                Demandez une consultation
-              </a>
+              <Button asChild>
+                <a href="/contact">Demandez une consultation</a>
+              </Button>
             </div>
           </div>
         </section>
@@ -273,12 +261,9 @@ const CommercialIndustriel = () => {
                 essentielles pour identifier les solutions de traitement les plus efficaces. Nous pouvons déterminer avec précision
                 la composition de l'eau et recommander les processus de traitement les plus adaptés aux exigences spécifiques.
               </p>
-              <a
-                href="/tests-eau"
-                className="inline-flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground font-medium rounded-md hover:bg-primary/90 transition-colors"
-              >
-                Testez votre eau aujourd'hui !
-              </a>
+              <Button asChild>
+                <a href="/tests-eau">Testez votre eau aujourd'hui !</a>
+              </Button>
             </div>
           </div>
         </section>
@@ -293,13 +278,15 @@ const CommercialIndustriel = () => {
               <p className="text-base md:text-lg text-muted-foreground">
                 Contactez nos experts dès aujourd'hui et trouvez des solutions à vos problèmes de traitement des eaux.
               </p>
-              <a
-                href="tel:18552649328"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-medium rounded-md hover:bg-primary/90 transition-colors"
-              >
-                <Phone className="h-4 w-4" />
-                Appelez-nous sans frais au 1 855 264 9328
-              </a>
+              <Button asChild>
+                <a
+                  href="tel:18552649328"
+                  className="flex items-center gap-2"
+                >
+                  <Phone className="h-4 w-4" />
+                  Appelez-nous sans frais au 1 855 264 9328
+                </a>
+              </Button>
             </div>
           </div>
         </section>

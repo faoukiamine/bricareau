@@ -67,8 +67,6 @@ const ExpertTrustSection = () => {
 
                         <div className="pt-6">
                             <Button
-                                size="lg"
-                                className="bg-[#2563eb] border-[#2563eb] text-white hover:bg-white hover:text-[#2563eb] hover:border-[#2563eb] h-14 px-10 rounded-full text-lg cursor-pointer font-bold border-2 w-full sm:w-auto"
                                 asChild
                             >
                                 <a href="/tests-eau#water-test" className="flex items-center justify-center gap-3">

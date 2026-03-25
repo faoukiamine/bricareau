@@ -145,7 +145,7 @@ const LandingResidential = () => {
                             </p>
                         </div>
                         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                            <Button asChild className="bg-[#2563EB] hover:bg-[#1d4ed8] text-white h-16 px-12 rounded-full text-xl shadow-2xl transition-all hover:scale-105 cursor-pointer">
+                            <Button asChild>
                                 <a href="/tests-eau#water-test">
                                     Réserver mon analyse gratuite
                                     <ArrowRight className="ml-3 w-6 h-6" />

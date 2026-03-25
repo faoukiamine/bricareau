@@ -393,9 +393,8 @@ const FiltresTouteMaison = () => {
                                 Le luxe, c'est de ne pas avoir à se soucier de la qualité de ce que l'on consomme. Offrez-vous la sérénité d'une eau analysée par des experts, pour une maison où tout brille, sans effort et sans compromis.
                             </p>
                             <div className="flex gap-4">
-                                <Button
+                                <Button 
                                     size="lg"
-                                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200/50 transition-all hover:scale-105"
                                     asChild
                                 >
                                     <a href="/tests-eau">Demandez une analyse d'eau</a>
@@ -408,7 +407,8 @@ const FiltresTouteMaison = () => {
                 {/* 7. Testimonials Grid Section */}
                 <TestimonialsSection 
                     filterProduct="/filtres-deau-pour-toute-la-maison"
-                                       <>
+                    title={
+                        <>
                             <span className="italic font-light text-[#2563eb] block text-center">Fini le chlore et les contaminants,</span>
                             <span className="font-bold text-[#1e3a8a] block text-center">la métamorphose vue par nos clients.</span>
                         </>

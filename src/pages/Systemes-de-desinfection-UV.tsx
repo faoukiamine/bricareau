@@ -283,7 +283,7 @@ const DesinfectionUV = () => {
                                             className="inline-flex items-center gap-2 text-blue-600 font-bold text-xs tracking-widest uppercase mt-4 group-hover:underline self-end"
                                             style={{}}
                                         >
-                                            <span></span>
+                                            <span>Découvrir</span>
                                             <ArrowRight className="h-6 w-6 transform group-hover:translate-x-1 transition-transform" />
                                         </div>
                                     </div>
@@ -398,9 +398,6 @@ const DesinfectionUV = () => {
                             </p>
                             <div className="flex gap-4">
                                 <Button
-                                    size="lg"
-                                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200"
-                                    style={{}}
                                     asChild
                                 >
                                     <a href="/tests-eau">Demandez une analyse d'eau</a>
@@ -490,7 +487,7 @@ const DesinfectionUV = () => {
                                             className="inline-flex items-center gap-2 text-blue-600 font-bold text-xs tracking-widest uppercase mt-4 group-hover:underline self-end"
                                             style={{}}
                                         >
-                                            <span></span>
+                                            <span>Découvrir</span>
                                             <ArrowRight className="h-6 w-6 transform group-hover:translate-x-1 transition-transform" />
                                         </div>
                                     </div>
@@ -596,7 +593,6 @@ const DesinfectionUV = () => {
                             <div className="mt-12 text-center">
                                 <Button
                                     onClick={() => setShowAllFaqs(!showAllFaqs)}
-                                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-12 h-14 shadow-lg shadow-blue-200"
                                 >
                                     {showAllFaqs ? "Voir moins de questions" : "Voir toutes les questions"}
                                 </Button>

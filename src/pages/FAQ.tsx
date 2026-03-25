@@ -206,7 +206,6 @@ const FAQ = () => {
                                                     <Button
                                                         onClick={() => toggleExpandedCategory(cat.id)}
                                                         variant="ghost"
-                                                        className="text-blue-600 hover:text-blue-700 hover:bg-blue-50 px-4 h-10 -ml-4"
                                                     >
                                                         Afficher plus de questions
                                                     </Button>
@@ -236,11 +235,11 @@ const FAQ = () => {
                             </p>
                         </div>
                         <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                            <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50 rounded-full px-12 h-16 text-lg shadow-lg" asChild>
+                            <Button variant="secondary" asChild>
                                 <NavLink to="/consultation">Planifiez une consultation gratuite</NavLink>
                             </Button>
-                            <Button size="lg" variant="outline" className="border-2 border-white text-white bg-transparent hover:bg-white/10 rounded-full px-12 h-16 text-lg flex items-center gap-2" asChild>
-                                <a href="tel:18552649328">
+                            <Button variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600" asChild>
+                                <a href="tel:18552649328" className="flex items-center gap-2">
                                     <Phone className="w-5 h-5" />
                                     1-855-264-9328
                                 </a>

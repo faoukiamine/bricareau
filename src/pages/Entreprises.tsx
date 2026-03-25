@@ -88,24 +88,13 @@ const Entreprises = () => {
               <p className="font-light md:text-[20px] text-slate-600 lg:text-white/95 mb-8 max-w-xl mx-auto lg:mx-0 text-center lg:text-justify">
                 Vos collaborateurs apprécieront la nouvelle façon d'avoir de l'eau fraîche dans votre entreprise !
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <Button
-                  size="lg"
-                  className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200"
-                  style={{}}
-                  asChild
-                >
+               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <Button asChild>
                   <a href="#solutions" className="flex items-center gap-2">
                     Explorez nos solutions <ArrowRight className="h-4 w-4" />
                   </a>
                 </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="bg-white lg:bg-white/10 hover:bg-slate-50 lg:hover:bg-white/20 text-blue-600 lg:text-white border-blue-600 lg:border-white rounded-full px-8 h-14 backdrop-blur-sm"
-                  style={{}}
-                  asChild
-                >
+                <Button variant="outline" asChild>
                   <a href="tel:18552649328" className="flex items-center gap-2">
                     <Phone className="h-5 w-5" />
                     1-855-264-9328

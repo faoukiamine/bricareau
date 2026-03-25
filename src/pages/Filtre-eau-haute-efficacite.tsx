@@ -99,9 +99,6 @@ const FiltreEauHauteEfficacite = () => {
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                                     <Button
-                                        size="lg"
-                                        className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14"
-                                        style={{}}
                                         asChild
                                     >
                                         <NavLink to="/contact" className="flex items-center gap-2">
@@ -109,9 +106,7 @@ const FiltreEauHauteEfficacite = () => {
                                         </NavLink>
                                     </Button>
                                     <Button
-                                        size="lg"
                                         variant="outline"
-                                        className="border-blue-600 text-blue-600 hover:bg-blue-50 rounded-full px-8 h-14"
                                         asChild
                                     >
                                         <a href="tel:18552649328">Appeler expert</a>
@@ -278,8 +273,10 @@ const FiltreEauHauteEfficacite = () => {
                                 Découvrez pourquoi Bricareau est le leader mondial de l'eau.
                             </p>
                         </div>
-                        <Button className="bg-white text-blue-600 hover:bg-slate-100 rounded-full px-12 h-16 text-xl shadow-lg transition-transform hover:scale-105">
-                            Trouver un expert
+                        <Button 
+                            asChild
+                        >
+                            <NavLink to="/diagnostic">Trouver un expert</NavLink>
                         </Button>
                     </div>
                 </section>
@@ -325,8 +322,11 @@ const FiltreEauHauteEfficacite = () => {
                                         </div>
                                     ))}
                                 </div>
-                                <Button className="mt-12 bg-white border-2 border-blue-600 text-blue-600 hover:bg-blue-50 rounded-full px-10 h-14 text-lg">
-                                    En savoir plus sur nos tests
+                                <Button 
+                                    variant="outline"
+                                    asChild
+                                >
+                                    <NavLink to="/tests-eau">En savoir plus sur nos tests</NavLink>
                                 </Button>
                             </div>
                         </div>
@@ -491,7 +491,6 @@ const FiltreEauHauteEfficacite = () => {
                         <div className="mt-12 text-center">
                             <Button
                                 onClick={() => setShowAllFaqs(!showAllFaqs)}
-                                className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-12 h-14 shadow-lg shadow-blue-200"
                             >
                                 {showAllFaqs ? "Voir moins de questions" : "Voir toutes les questions"}
                             </Button>

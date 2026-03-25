@@ -144,7 +144,6 @@ const Blog = () => {
                                 <p className="">Aucun article ne correspond à votre recherche "{searchQuery}".</p>
                                 <Button
                                     variant="outline"
-                                    className="mt-8 rounded-full"
                                     onClick={() => { setSearchQuery(""); setSelectedCategories([]); }}
                                 >
                                     Effacer les filtres
@@ -302,10 +301,10 @@ const Blog = () => {
                             Nos experts sont disponibles pour une consultation personnalisée et gratuite à votre domicile ou entreprise.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                            <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50 rounded-full px-12 h-16 text-lg shadow-lg" asChild>
+                            <Button asChild>
                                 <a href="/contact">Planifier ma visite</a>
                             </Button>
-                            <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white/10 rounded-full px-12 h-16 text-lg" asChild>
+                            <Button variant="outline" asChild>
                                 <a href="tel:18552649328">1 (855) 264-9328</a>
                             </Button>
                         </div>

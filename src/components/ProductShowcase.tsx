@@ -110,7 +110,6 @@ const ProductShowcase = () => {
                                     className="inline-flex items-center gap-2 text-blue-600 font-bold text-xs tracking-widest uppercase mt-4 group-hover:underline self-end"
                                     style={{ }}
                                 >
-                                    <span></span>
                                     <ArrowRight className="h-6 w-6 transform group-hover:translate-x-1 transition-transform" />
                                 </div>
                             </div>

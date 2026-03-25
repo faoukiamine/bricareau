@@ -378,8 +378,6 @@ const TestsEauPage = () => {
 
               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
                 <Button
-                  size="lg"
-                className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200 animate-heartbeat"
                   asChild
                 >
                   <a href="tests-eau#water-test" className="flex items-center gap-3">
@@ -470,7 +468,6 @@ const TestsEauPage = () => {
               <div className="mt-12 text-center">
                 <Button
                   onClick={() => setShowAllFaqs(!showAllFaqs)}
-                  className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-12 h-14 shadow-lg shadow-blue-200"
                 >
                   {showAllFaqs ? "Voir moins de questions" : "Voir toutes les questions"}
                 </Button>

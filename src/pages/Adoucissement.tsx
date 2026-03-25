@@ -123,9 +123,19 @@ const Adoucissement = () => {
                             {/* Left Column: Analytical Narrative (6 Harms) */}
                             <div className="lg:col-span-5 space-y-8">
                                 <div>
-                                    <h2 className="text-light text-slate-400 mb-6 font-light">
-                                        L'impact silencieux du <span className="uppercase font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500"><br/>calcaire.</span>
-                                    </h2>
+                                    <h2 
+                                        id="solutions-title"
+                                        className="scroll-mt-[120px] mb-8"
+                                        style={{
+                                            fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                            fontSize: '48px',
+                            lineHeight: '48px',
+                            fontStyle: 'normal'
+                        }}
+                    >
+                        <span className="italic font-light text-[#2563eb] block">L'impact silencieux du</span>
+                        <span className="font-bold text-[#1e3a8a] block">calcaire.</span>
+                    </h2>
                                     <p className="font-light text-slate-600 lg:text-slate-600 mb-8 max-w-xl text-left lg:text-justify">
                                         Ce n'est pas qu'un simple dépôt ; c'est un agent d'érosion invisible qui dégrade votre confort et vos investissements jour après jour.
                                     </p>
@@ -225,10 +235,19 @@ const Adoucissement = () => {
 
                     <div className="container mx-auto px-6">
                         <div className="text-center mb-20 max-w-3xl mx-auto">
-                            <h2 className="text-slate-900 mb-6">
-                                <span className="font-light block">Les avantages de</span>
-                                <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">l'adoucissement d'eau</span>
-                            </h2>
+                            <h2 
+                                        id="solutions-title"
+                                        className="scroll-mt-[120px] mb-8"
+                                        style={{
+                                            fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                            fontSize: '48px',
+                            lineHeight: '48px',
+                            fontStyle: 'normal'
+                        }}
+                    >
+                        <span className="italic font-light text-[#2563eb] block">Les avantages de</span>
+                        <span className="font-bold text-[#1e3a8a] block">l'adoucissement d'eau</span>
+                    </h2>
                             <p className="text-slate-500 font-light text-lg">
                                 Une transformation immédiate pour votre confort, votre santé et la longévité de votre foyer.
                             </p>
@@ -303,7 +322,7 @@ const Adoucissement = () => {
                                     {/* Water Softeners CTA Button */}
                                     <Button
                                         onClick={() => navigate('/adoucisseur-eau-residentiel')}
-                                        className="absolute bottom-10 left-10 rounded-full bg-blue-600 hover:bg-blue-700 text-white px-8 h-14 text-base shadow-xl shadow-blue-200/50 transition-all hover:scale-105 active:scale-95 flex items-center gap-2 border-none"
+                                        className="absolute bottom-10 left-10"
                                     >
                                         Découvrir nos adoucisseurs d'eau <ChevronRight className="h-5 w-5" />
                                     </Button>
@@ -317,9 +336,19 @@ const Adoucissement = () => {
                                         <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.2em]">
                                             Eau municipale
                                         </span>
-                                        <h2 className="text-slate-900 mb-6 font-bold text-blue-600">
-                                            Adoucisseurs d'eau résidentiels
-                                        </h2>
+                                        <h2 
+                                        id="solutions-title"
+                                        className="scroll-mt-[120px] mb-8"
+                                        style={{
+                                            fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                            fontSize: '48px',
+                                            lineHeight: '48px',
+                                            fontStyle: 'normal'
+                                        }}
+                                    >
+                                        <span className="italic font-light text-[#2563eb] block">Adoucisseurs d'eau résidentiels</span>
+                                    </h2>
+                                        
                                         <p className="font-light text-slate-500 text-lg leading-relaxed text-justify">
                                             Offrez à votre foyer le luxe d'une eau sans calcaire. Nos adoucisseurs de pointe éliminent le tartre à la source, garantissant non seulement une vaisselle étincelante sans aucune trace, mais aussi une protection durable de vos appareils électroménagers et de votre plomberie.
                                         </p>
@@ -379,7 +408,7 @@ const Adoucissement = () => {
                                     {/* Conditionneurs sans sel CTA Button */}
                                     <Button
                                         onClick={() => navigate('/adoucisseurs-portables')}
-                                        className="absolute bottom-10 left-10 rounded-full bg-blue-600 hover:bg-blue-700 text-white px-8 h-14 text-base shadow-xl shadow-blue-200/50 transition-all hover:scale-105 active:scale-95 flex items-center gap-2 border-none"
+                                        className="absolute bottom-10 left-10"
                                     >
                                         Découvrir nos adoucisseurs portables <ChevronRight className="h-5 w-5" />
                                     </Button>
@@ -393,9 +422,18 @@ const Adoucissement = () => {
                                         <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.2em]">
                                             SOLUTION MOBILE
                                         </span>
-                                        <h2 className="text-slate-900 mb-6 font-bold text-blue-600">
-                                            Adoucisseurs d'eau portables
-                                        </h2>
+                                        <h2 
+                                        id="solutions-title"
+                                        className="scroll-mt-[120px] mb-8"
+                                        style={{
+                                            fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                            fontSize: '48px',
+                            lineHeight: '48px',
+                            fontStyle: 'normal'
+                        }}
+                    >
+                        <span className="italic font-light text-[#2563eb] block">Adoucisseurs d'eau portables</span>
+                    </h2>
                                         <p className="font-light text-slate-500 text-lg leading-relaxed text-justify">
                                             Ne laissez plus l’eau dure des campings ou des ports abîmer vos cheveux et vos équipements. Profitez d'une eau de qualité domestique dans votre VR, votre bateau ou votre chalet avec notre adoucisseur ultra-compact.
                                         </p>
@@ -455,7 +493,7 @@ const Adoucissement = () => {
                                     {/* Conditionneurs sans sel CTA Button */}
                                     <Button
                                         onClick={() => navigate('/conditionneurs-sans-sel')}
-                                        className="absolute bottom-10 left-10 rounded-full bg-blue-600 hover:bg-blue-700 text-white px-8 h-14 text-base shadow-xl shadow-blue-200/50 transition-all hover:scale-105 active:scale-95 flex items-center gap-2 border-none"
+                                        className="absolute bottom-10 left-10"
                                     >
                                         Découvrir nos conditionneurs d'eau sans sel <ChevronRight className="h-5 w-5" />
                                     </Button>
@@ -470,9 +508,18 @@ const Adoucissement = () => {
                                         <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.2em]">
                                             ALTERNATIVE ÉCOLOGIQUE
                                         </span>
-                                        <h2 className="text-slate-900 mb-6 font-bold text-blue-600">
-                                            Conditionneurs d'eau sans sel
-                                        </h2>
+                                        <h2 
+                                        id="solutions-title"
+                                        className="scroll-mt-[120px] mb-8"
+                                        style={{
+                                            fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                            fontSize: '48px',
+                            lineHeight: '48px',
+                            fontStyle: 'normal'
+                        }}
+                    >
+                        <span className="italic font-light text-[#2563eb] block">Conditionneurs d'eau sans sel</span>
+                    </h2>
                                         <p className="font-light text-slate-500 text-lg leading-relaxed text-justify">
                                             Le secret d'un linge éclatant et d'une vaisselle sans traces. Sans l'ajout de sel, votre eau devient votre meilleure alliée beauté et ménage.
                                         </p>
@@ -510,10 +557,19 @@ const Adoucissement = () => {
                     filterProduct="/adoucissement"
                     limit={5}
                     title={
-                        <>
-                            <span className="font-light block">Une eau soyeuse.</span>
-                            <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">Un confort absolu.</span>
-                        </>
+                    <h2 
+                                        id="solutions-title"
+                                        className="scroll-mt-[120px] mb-8"
+                                        style={{
+                                            fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                            fontSize: '48px',
+                            lineHeight: '48px',
+                            fontStyle: 'normal'
+                        }}
+                    >
+                        <span className="italic font-light text-[#2563eb] block">Une eau soyeuse.</span>
+                        <span className="font-bold text-[#1e3a8a] block">Un confort absolu.</span>
+                    </h2>
                     }
                 />
 
@@ -521,13 +577,19 @@ const Adoucissement = () => {
                 <section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
-                            <h2
-                                className="text-slate-900 mb-8 text-left"
-                                style={{}}
-                            >
-                                <span className="font-light leading-[1.1] block">Comparez nos solutions</span>
-                                <span className="font-normal leading-[1.1] block">d'adoucissement d'eau</span>
-                            </h2>
+                            <h2 
+                                        id="solutions-title"
+                                        className="scroll-mt-[120px] mb-8"
+                                        style={{
+                                            fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                            fontSize: '48px',
+                            lineHeight: '48px',
+                            fontStyle: 'normal'
+                        }}
+                    >
+                        <span className="italic font-light text-[#2563eb] block">Pour vous éclairer</span>
+                        <span className="font-bold text-[#1e3a8a] block">Questions fréquentes</span>
+                    </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
                         <div className="overflow-x-auto">
@@ -606,22 +668,27 @@ const Adoucissement = () => {
 
                     <div className="container mx-auto px-6 relative z-10 flex items-center py-12 lg:py-0">
                         <div className="max-w-2xl text-slate-900 lg:text-white">
-                            <span className="text-blue-600 lg:text-white/80 font-bold uppercase tracking-widest text-sm mb-4 block">
-                                Contrôle de la Qualité D'EAU
+                            <span className="font-bold text-[#1e3a8a] block uppercase">
+                                Contrôle de la Qualité d'eau
                             </span>
-                            <h2 className="mb-8 text-slate-900 lg:text-white font-bold uppercase font-weight-bold 900">
-                                L’essence d’une vie saine coule de votre robinet.
-                            </h2>
+                            <h2 
+                                        id="solutions-title"
+                                        className="scroll-mt-[120px] mb-8"
+                                        style={{
+                                            fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                            fontSize: '48px',
+                            lineHeight: '48px',
+                            fontStyle: 'normal'
+                        }}
+                    >
+                        <span className="italic font-light text-white block">L’essence d’une vie saine</span>
+                        <span className="font-bold text-white block">coule de votre robinet.</span>
+                    </h2>
                             <p className="font-light text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left">
                                 Entre le chlore, les métaux lourds et les sédiments, votre eau cache souvent des secrets. Ne laissez plus le doute couler de votre robinet. Demandez votre test d'eau dès aujourd'hui et obtenez un portrait clair de votre eau ainsi que des solutions adaptées à votre foyer.
                             </p>
                             <div className="flex gap-4">
-                                <Button
-                                    size="lg"
-                                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200"
-                                    style={{}}
-                                    asChild
-                                >
+                                <Button asChild>
                                     <a href="/tests-eau">Demandez une analyse d'eau</a>
                                 </Button>
                             </div>
@@ -633,13 +700,19 @@ const Adoucissement = () => {
                 <section className="py-24 bg-white">
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
-                            <h2
-                                className="text-slate-900 mb-8 text-left"
-                                style={{}}
-                            >
-                                <span className="font-light leading-[1.1] block">Pour vous éclairer</span>
-                                <span className="font-normal leading-[1.1] block">Questions fréquentes</span>
-                            </h2>
+                            <h2 
+                                        id="solutions-title"
+                                        className="scroll-mt-[120px] mb-8"
+                                        style={{
+                                            fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                            fontSize: '48px',
+                            lineHeight: '48px',
+                            fontStyle: 'normal'
+                        }}
+                    >
+                        <span className="italic font-light text-[#2563eb] block">Pour vous éclairer</span>
+                        <span className="font-bold text-[#1e3a8a] block">Questions fréquentes</span>
+                    </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
                         <div className="max-w-4xl mx-auto">
@@ -674,7 +747,6 @@ const Adoucissement = () => {
                             <div className="mt-12 text-center">
                                 <Button
                                     onClick={() => setShowAllFaqs(!showAllFaqs)}
-                                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-12 h-14 shadow-lg shadow-blue-200"
                                 >
                                     {showAllFaqs ? "Voir moins de questions" : "Voir toutes les questions"}
                                 </Button>
@@ -687,11 +759,18 @@ const Adoucissement = () => {
                 <section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
-                            <h2
-                                className="text-slate-900 mb-8 text-left"
-                                style={{}}
-                            >                                <span className="font-normal leading-[1.1] block">Ressources</span>
-                            </h2>
+                            <h2 
+                                        id="solutions-title"
+                                        className="scroll-mt-[120px] mb-8"
+                                        style={{
+                                            fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                            fontSize: '48px',
+                            lineHeight: '48px',
+                            fontStyle: 'normal'
+                        }}
+                    >
+                        <span className="font-bold text-[#1e3a8a] block">Ressources</span>
+                    </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

@@ -201,7 +201,6 @@ const WaterTestFormSection = ({ id }: { id?: string }) => {
                                 setStep(1);
                                 form.reset();
                             }}
-                            className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8"
                         >
                             Nouvelle demande
                         </Button>
@@ -535,7 +534,7 @@ const WaterTestFormSection = ({ id }: { id?: string }) => {
                                                 variant="outline"
                                                 onClick={prevStep}
                                                 disabled={isNavigating || isSubmitting}
-                                                className="w-full md:w-auto h-12 rounded-full px-8 border-gray-300"
+                                                className="w-full md:w-auto"
                                             >
                                                 <ChevronLeft className="w-4 h-4 mr-2" /> Retour
                                             </Button>
@@ -546,7 +545,7 @@ const WaterTestFormSection = ({ id }: { id?: string }) => {
                                                 type="button"
                                                 onClick={nextStep}
                                                 disabled={isNavigating}
-                                                className="w-full md:w-auto ml-auto h-12 rounded-full px-8 bg-blue-600 hover:bg-blue-700 text-white"
+                                                className="w-full md:w-auto ml-auto"
                                             >
                                                 Continuer <ChevronRight className="w-4 h-4 ml-2" />
                                             </Button>
@@ -554,7 +553,7 @@ const WaterTestFormSection = ({ id }: { id?: string }) => {
                                             <Button
                                                 type="submit"
                                                 disabled={isSubmitting || isNavigating}
-                                                className="w-full md:w-auto ml-auto h-12 rounded-full px-8 bg-blue-600 hover:bg-blue-700 text-white"
+                                                className="w-full md:w-auto ml-auto"
                                             >
                                                 {isSubmitting ? (
                                                     <>

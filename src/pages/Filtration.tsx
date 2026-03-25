@@ -355,9 +355,11 @@ const Filtration = () => {
 
                                     <div className="pt-8 flex flex-col sm:flex-row gap-6">
                                         <NavLink to="/filtres-deau-pour-toute-la-maison" className="w-full sm:w-auto">
-                                            <Button className="w-full sm:w-auto rounded-full bg-blue-600 hover:bg-blue-700 text-white px-10 h-16 text-lg font-bold shadow-2xl shadow-blue-500/20 group">
-                                                Voir nos filtres d'eau
-                                                <ChevronRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                                            <Button asChild>
+                                                <NavLink to="/filtres-deau-pour-toute-la-maison" className="flex items-center">
+                                                    Voir nos filtres d'eau
+                                                    <ChevronRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                                                </NavLink>
                                             </Button>
                                         </NavLink>
                                     </div>
@@ -443,9 +445,11 @@ const Filtration = () => {
 
                                     <div className="pt-8 flex flex-col sm:flex-row-reverse lg:flex-row gap-6 justify-end lg:justify-start">
                                         <NavLink to="/systeme-de-filtration-deau-potable" className="w-full sm:w-auto">
-                                            <Button className="w-full sm:w-auto rounded-full bg-blue-600 hover:bg-blue-700 text-white px-10 h-16 text-lg font-bold shadow-2xl shadow-blue-500/20 group">
-                                                Découvrir nos systèmes d'osmose inverse
-                                                <ChevronRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                                            <Button asChild>
+                                                <NavLink to="/systeme-de-filtration-deau-potable" className="flex items-center">
+                                                    Découvrir nos systèmes d'osmose inverse
+                                                    <ChevronRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                                                </NavLink>
                                             </Button>
                                         </NavLink>
                                     </div>
@@ -532,9 +536,11 @@ const Filtration = () => {
 
                                     <div className="pt-8">
                                         <NavLink to="/Systemes-de-filtration-deau-sous-evier" className="w-full sm:w-auto">
-                                            <Button className="w-full sm:w-auto rounded-full bg-blue-600 hover:bg-blue-700 text-white px-10 h-16 text-lg font-bold shadow-2xl shadow-blue-500/20 group">
-                                                Voir nos filtres sous-évier
-                                                <ChevronRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                                            <Button asChild>
+                                                <NavLink to="/Systemes-de-filtration-deau-sous-evier" className="flex items-center">
+                                                    Voir nos filtres sous-évier
+                                                    <ChevronRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                                                </NavLink>
                                             </Button>
                                         </NavLink>
                                     </div>
@@ -580,8 +586,6 @@ const Filtration = () => {
                             <div className="flex gap-4">
                                 <Button
                                     size="lg"
-                                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200"
-                                    style={{}}
                                     asChild
                                 >
                                     <a href="/tests-eau">Demandez une analyse d'eau</a>
@@ -675,26 +679,18 @@ const Filtration = () => {
               </h2>
 
               <p className="text-blue-100/80 font-light text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
-                Vous n’êtes pas certain de savoir si vous avez besoin d’un filtre toute maison, d’un système sous évier ou d’une station d’osmose inverse ? Contactez‑nous pour une évaluation de votre eau et de vos besoins. Nous vous proposerons une solution de filtration d’eau résidentielle adaptée à votre maison, à votre budget et à vos priorités. </p>
+                Vous n’êtes pas certain de savoir si vous avez besoin d’un filtre toute maison, d’un système sous évier ou d’une station d’osmose inverse ? Contactez‑nous pour une évaluation de votre eau et de vos besoins. Nous vous proposerons une solution de filtration d’eau résidentielle adaptée à votre maison, à votre budget et à vos priorités.
+              </p>
 
               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                <Button
-                  size="lg"
-                  className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-12 h-16 shadow-2xl shadow-white/30 group text-lg font-light"
-                  asChild
-                >
+                <Button asChild>
                   <a href="tel:18552649328" className="flex items-center gap-3">
                     <Phone className="h-5 w-5 animate-bounce" />
                     Parlez à un expert
                   </a>
                 </Button>
 
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="rounded-full px-10 h-16 border-white/30 text-white bg-white/5 hover:bg-white/10 backdrop-blur-md text-lg transition-all duration-500"
-                  asChild
-                >
+                <Button variant="outline" asChild>
                   <NavLink to="/consultation">Planifiez une consultation gratuite</NavLink>
                 </Button>
               </div>
@@ -735,7 +731,7 @@ const Filtration = () => {
                                         a: "Pour un système sous-évier, les cartouches classiques se changent généralement tous les 6 à 12 mois. La membrane d'osmose inverse peut durer 2 à 3 ans selon la qualité de votre eau d'entrée."
                                     },
                                     {
-                                        q: "Les filtres sous-évier éliminent-ils les bactéries ?",
+                                        q: "Les filtres sous-évier éliminent-il les bactéries ?",
                                         a: "Les systèmes d'osmose inverse et certains filtres spécialisés à ultrafiltration sont extrêmement efficaces contre les particules microscopiques, mais pour une protection bactériologique totale, nous recommandons un système UV en complément."
                                     },
                                     {
@@ -794,10 +790,7 @@ const Filtration = () => {
                                 ))}
                             </Accordion>
                             <div className="mt-12 text-center">
-                                <Button
-                                    onClick={() => setShowAllFaqs(!showAllFaqs)}
-                                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-12 h-14 shadow-lg shadow-blue-200"
-                                >
+                                <Button onClick={() => setShowAllFaqs(!showAllFaqs)}>
                                     {showAllFaqs ? "Voir moins de questions" : "Voir toutes les questions"}
                                 </Button>
                             </div>

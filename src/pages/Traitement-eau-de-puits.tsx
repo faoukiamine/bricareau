@@ -402,7 +402,7 @@ const TraitementEauDePuits = () => {
 
           <div className="container mx-auto px-4 relative z-10 flex items-center py-12 lg:py-0">
             <div className="max-w-2xl text-slate-900 lg:text-white">
-              <span className="text-blue-600 lg:text-white/80 font-bold uppercase tracking-widest text-sm mb-4 block">
+              <span className="font-bold text-[#1e3a8a] block uppercase">
                 Contrôle de la Qualité D'EAU
               </span>
               <h2 
@@ -415,7 +415,7 @@ const TraitementEauDePuits = () => {
                     color: 'white'
                 }}
               >
-                <span className="italic font-light text-blue-400 block">Dites adieu au fer,</span>
+                <span className="italic font-light text-white/80 block">Dites adieu au fer,</span>
                 <span className="font-bold text-white block">au soufre et au calcaire.</span>
               </h2>
               <p 

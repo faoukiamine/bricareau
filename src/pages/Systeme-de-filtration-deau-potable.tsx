@@ -245,9 +245,8 @@ const StationEauPotable = () => {
                     </p>
                     <div
                       className="inline-flex items-center gap-2 text-blue-600 font-bold text-xs tracking-widest uppercase mt-4 group-hover:underline self-end"
-                      style={{}}
                     >
-                      <span></span>
+                      <span>Découvrir</span>
                       <ArrowRight className="h-6 w-6 transform group-hover:translate-x-1 transition-transform" />
                     </div>
                   </div>
@@ -425,9 +424,6 @@ const StationEauPotable = () => {
               </p>
               <div className="flex gap-4">
                 <Button
-                  size="lg"
-                  className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200"
-                  style={{}}
                   asChild
                 >
                   <a href="/tests-eau">Demandez une analyse d'eau</a>
@@ -469,8 +465,6 @@ const StationEauPotable = () => {
                             Pourquoi vous contenter d'une eau ordinaire quand vous pouvez offrir à votre foyer une source de pureté incomparable ? L'osmose inverse élimine les impuretés invisibles pour ne laisser que l'essentiel : une eau cristalline, un goût exceptionnel et une tranquillité d'esprit totale. Faites le choix de la technologie la plus avancée pour votre santé et votre confort.                            </p>
                             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
                                 <Button
-                                    size="lg"
-                                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-12 h-16 shadow-2xl shadow-white/30 group text-lg font-light"
                                     asChild
                                 >
                                     <a href="tel:18552649328" className="flex items-center gap-3">
@@ -480,9 +474,7 @@ const StationEauPotable = () => {
                                 </Button>
 
                                 <Button
-                                    size="lg"
                                     variant="outline"
-                                    className="rounded-full px-10 h-16 border-white/30 text-white bg-white/5 hover:bg-white/10 backdrop-blur-md text-lg transition-all duration-500"
                                     asChild
                                 >
                                     <NavLink to="/consultation">Planifiez-vous une consultation</NavLink>
@@ -588,7 +580,6 @@ const StationEauPotable = () => {
               <div className="mt-12 text-center">
                 <Button
                   onClick={() => setShowAllFaqs(!showAllFaqs)}
-                  className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-12 h-14 shadow-lg shadow-blue-200"
                 >
                   {showAllFaqs ? "Voir moins de questions" : "Voir toutes les questions"}
                 </Button>

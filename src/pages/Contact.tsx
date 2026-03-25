@@ -65,7 +65,7 @@ const Contact = () => {
                 >
                   Vous n'avez pas envie de nous contacter, ou vous pensez que nous avons déjà répondu à votre question ? Consultez notre FAQ exhaustive.
                 </p>
-                <Button className="w-fit bg-blue-600 hover:bg-blue-700 text-white px-8 h-12 rounded-full" asChild>
+                <Button asChild>
                   <NavLink to="/faq">Consultez la FAQ</NavLink>
                 </Button>
               </div>
@@ -86,7 +86,7 @@ const Contact = () => {
                 >
                   Pour planifier une consultation gratuite, discuter de l'installation d'un nouveau système ou obtenir une soumission, nos experts sont là.
                 </p>
-                <Button className="w-fit bg-blue-600 hover:bg-blue-700 text-white px-8 h-12 rounded-full" asChild>
+                <Button asChild>
                   <NavLink to="/consultation">Planifiez une consultation</NavLink>
                 </Button>
               </div>
@@ -106,7 +106,7 @@ const Contact = () => {
                 >
                   Si vous êtes déjà client Bricareau et que vous avez besoin d'aide avec votre système ou pour planifier un entretien de routine.
                 </p>
-                <Button className="w-fit bg-blue-600 hover:bg-blue-700 text-white px-8 h-12 rounded-full" asChild>
+                <Button asChild>
                   <NavLink to="/contact-form">Contactez-nous</NavLink>
                 </Button>
               </div>
