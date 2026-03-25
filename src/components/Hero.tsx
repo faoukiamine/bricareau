@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Phone } from "lucide-react";
 import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 import heroImage from "@/assets/23568974.png";
+import { cn } from "@/lib/utils";
 
 interface HeroProps {
   image?: string;
@@ -15,6 +16,7 @@ interface HeroProps {
   imageAlt?: string;
   badge?: string;
   singleLineTitle?: boolean;
+  gradualOpacity75?: boolean;
 }
 
 const Hero = ({
@@ -28,21 +30,27 @@ const Hero = ({
   showBreadcrumbs = false,
   imageAlt = "Solutions expertes en traitement d'eau résidentiel Bricareau",
   badge,
-  singleLineTitle = false
+  singleLineTitle = false,
+  gradualOpacity75 = true
 }: HeroProps) => {
   return (
     <section className="relative lg:h-[800px] flex flex-col items-center overflow-hidden bg-white">
       {showBreadcrumbs && (
         <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none hidden lg:block">
           <div className="container mx-auto px-4 lg:px-6 pointer-events-auto">
-            <GlobalBreadcrumbs variant="dark" />
+            <GlobalBreadcrumbs variant="light" />
           </div>
         </div>
       )}
 
       {/* 1. Background Image Section with Gradients */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-r from-[#f0f9ff] via-[#f0f9ff]/80 to-transparent z-10" />
+        <div className={cn(
+          "absolute inset-0 z-10",
+          gradualOpacity75 
+            ? "bg-gradient-to-r from-[#f0f9ff] via-[#f0f9ff]/40 35% to-transparent" 
+            : "bg-gradient-to-r from-[#f0f9ff] via-[#f0f9ff]/80 to-transparent"
+        )} />
         <img
           src={image || heroImage}
           alt={imageAlt}
