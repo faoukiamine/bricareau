@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Header from "@/components/Header";
+import Hero from "@/components/Hero";
 import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 import Footer from "@/components/Footer";
 import TestimonialsSection from "@/components/TestimonialsSection";
@@ -108,74 +109,19 @@ const TestsEauPage = () => {
   ];
   return (
     <div className="min-h-screen bg-white">
-      <Header />
-      <main>
-        {/* 1. Hero Section (Redesigned for Mobile) */}
-        <section className="relative lg:h-[650px] flex flex-col items-center overflow-hidden bg-white">
-          <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none hidden lg:block">
-            <div className="container mx-auto px-6 pointer-events-auto">
-              <GlobalBreadcrumbs variant="dark" />
-            </div>
-          </div>
-          {/* Mobile Image */}
-          <div className="lg:hidden w-full h-[300px] relative">
-            <img
-              src={newHeroImg}
-              alt="Analyse d'eau professionnelle à Montréal, Rive-Sud et Rive-Nord par Bricareau - Expert en qualité d'eau"
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-black/20" />
-          </div>
-
-          {/* Desktop Background */}
-          <div className="hidden lg:block absolute inset-0 z-0">
-            <img
-              src={newHeroImg}
-              alt="Analyse d'eau professionnelle"
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-black/40 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-white via-white/10 to-transparent" />
-            <div className="absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white/90 via-white/40 to-transparent" />
-          </div>
-
-          <div className="container mx-auto px-6 relative z-10 h-full flex items-center">
-            <div className="max-w-2xl text-slate-900 lg:text-white py-12 lg:py-0">
-              <h1
-                className="leading-[1.1] md:leading-[1.2] mb-4 lg:mb-8 tracking-[-0.01em] md:tracking-[-0.03em] text-slate-900 lg:text-white text-left max-w-xl"
-              >
-                <span className="sr-only">Montréal • Rive-Sud • Rive-Nord</span>
-                Analyses d'eau professionnelles & Tests de laboratoire
-              </h1>
-              <p className="font-light text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
-                Besoin d'une analyse d'eau dans la région métropolitaine ? Que ce soit pour une vérification annuelle, une transaction hypothécaire ou un souci de qualité, Bricareau offre des tests complets de laboratoire partout dans le Grand Montréal, Laval et les couronnes.
-              </p>
-
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button
-                  size="lg"
-                  className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200"
-                  asChild
-                >
-                  <a href="#water-test">
-                    Planifiez un test d'eau
-                  </a>
-                </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="bg-white border-blue-600 text-blue-600 lg:bg-white/10 lg:hover:bg-white/20 lg:text-white lg:border-white rounded-full px-8 h-14 backdrop-blur-sm shadow-lg"
-                  asChild
-                >
-                  <a href="tel:18552649328" className="flex items-center gap-2">
-                    <Phone className="h-5 w-5" />
-                    1-855-264-9328
-                  </a>
-                </Button>
-              </div>
-            </div>
-          </div>
-        </section >
+       <Header />
+       <main>
+                <Hero 
+                    image={newHeroImg}
+                    highlightedTitle="Analyses d'eau professionnelles"
+                    mainTitle="& Tests de laboratoire"
+                    subtitle="Besoin d'une analyse d'eau dans la région métropolitaine ? Que ce soit pour une vérification annuelle, une transaction hypothécaire ou un souci de qualité, Bricareau offre des tests complets de laboratoire partout dans le Grand Montréal, Laval et les couronnes."
+                    ctaText="Planifiez un test d'eau"
+                    ctaLink="#water-test"
+                    showPhone={true}
+                    showBreadcrumbs={true}
+                    singleLineTitle={true}
+                />
 
 
 

@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import Hero from "@/components/Hero";
 import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 import Footer from "@/components/Footer";
 import TestimonialsSection from "@/components/TestimonialsSection";
@@ -146,71 +147,21 @@ const FiltresTouteMaison = () => {
     }, []);
     return (
         <div className="min-h-screen bg-white text-slate-900 font-sans">
-            <Header />
+             <Header />
+ 
+             <main>
+                <Hero 
+                    image={heroFilter}
+                    highlightedTitle="Filtre d'eau pour toute la maison,"
+                    mainTitle="une protection intégrale."
+                    subtitle="Éliminez le chlore, le fer et les sédiments de chaque goutte d'eau qui entre dans votre propriété. Nos systèmes de filtration intégrés protègent votre santé, votre peau et vos appareils électroménagers."
+                    ctaText="Explorez nos filtres"
+                    ctaLink="#specialized-filters"
+                    showPhone={true}
+                    showBreadcrumbs={true}
+                    singleLineTitle={true}
 
-            <main>
-                {/* 1. Hero Section (Redesigned for Mobile) */}
-                <section className="relative lg:h-[650px] flex flex-col lg:items-center overflow-hidden bg-white">
-                    <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none hidden lg:block">
-                        <div className="container mx-auto px-6 pointer-events-auto">
-                            <GlobalBreadcrumbs variant="dark" />
-                        </div>
-                    </div>
-                    {/* Mobile Image */}
-                    <div className="lg:hidden w-full h-[300px] relative">
-                        <img
-                            src={heroFilter}
-                            alt="Verre d'eau pure et cristalline filtrée par un système Bricareau pour toute la maison"
-                            className="w-full h-full object-cover"
-                        />
-                        <div className="absolute inset-0 bg-black/20" />
-                    </div>
-
-                    {/* Desktop Background */}
-                    <div className="hidden lg:block absolute inset-0 z-0">
-                        <img
-                            src={heroFilter}
-                            alt="Verre d'eau pure et cristalline filtrée"
-                            className="w-full h-full object-cover"
-                        />
-                        <div className="absolute inset-0 bg-black/40 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
-                        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-white via-white/10 to-transparent" />
-                        <div className="absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white/90 via-white/40 to-transparent" />
-                    </div>
-
-                    <div className="container mx-auto px-6 relative z-10 h-full flex items-center">
-                        <div className="max-w-2xl text-slate-900 lg:text-white py-12 lg:py-0">
-                            <h1
-                                className="mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left max-w-xl"
-                            >
-                                Filtre d'eau pour toute la maison, une protection intégrale.
-                            </h1>
-                            <p className="font-light text-slate-600 lg:text-white/95 mb-8 max-w-xl">
-                                Éliminez le chlore, le fer et les sédiments de chaque goutte d'eau qui entre dans votre propriété. Nos systèmes de filtration intégrés protègent votre santé, votre peau et vos appareils électroménagers.
-                            </p>
-                            <div className="flex flex-col sm:flex-row gap-4">
-                                <Button
-                                    size="lg"
-                                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200"
-                                    asChild
-                                >
-                                    <a href="#specialized-filters">Explorez nos filtres</a>
-                                </Button>
-                                <Button
-                                    size="lg"
-                                    variant="outline"
-                                    className="bg-white border-blue-600 text-blue-600 lg:bg-white/10 lg:hover:bg-white/20 lg:text-white lg:border-white rounded-full px-8 h-14 backdrop-blur-sm shadow-lg flex items-center gap-2"
-                                    asChild
-                                >
-                                    <a href="tel:18552649328">
-                                        <Phone className="h-5 w-5" />
-                                        1-855-264-9328
-                                    </a>
-                                </Button>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                />
 
                 {/* 3. Pourquoi choisir - Ultramodern Light Glassmorphism Section */}
                 <section className="relative py-24 md:py-32 overflow-hidden bg-white">

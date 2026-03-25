@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import Hero from "@/components/Hero";
 import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -116,62 +117,20 @@ const FiltrationSousEvier = () => {
 
     return (
         <div className="min-h-screen bg-background text-slate-900 font-sans">
-            <Header />
-            <main>
-                {/* 1.Hero Section */}
-                {/* 1. Hero Section */}
-                <section className="relative lg:h-[650px] flex flex-col lg:items-center overflow-hidden bg-white">
-                    <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none hidden lg:block">
-                        <div className="container mx-auto px-4 lg:px-6 pointer-events-auto">
-                            <GlobalBreadcrumbs variant="dark" />
-                        </div>
-                    </div>
-                    <div className="relative lg:absolute lg:inset-0 h-[350px] sm:h-[450px] lg:h-full w-full lg:z-0 overflow-hidden">
-                        <img
-                            src={heroDrink}
-                            alt="Femme appréciant un verre d'eau fraîchement filtrée au robinet - Système Bricareau"
-                            className="w-full h-full object-cover"
-                        />
-                        <div className="hidden lg:block absolute inset-0 bg-black/40 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
-                        <div className="hidden lg:block absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-white via-white/10 to-transparent" />
-                        <div className="hidden lg:block absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white/90 via-white/40 to-transparent" />
-                    </div>
+             <Header />
+             <main>
+                <Hero 
+                    image={heroDrink}
+                    highlightedTitle="Système de filtration sous évier,"
+                    mainTitle="de l'eau pure à chaque goutte."
+                    subtitle="Profitez d'une eau potable d'une qualité exceptionnelle directement de votre robinet. Nos systèmes de filtration sous comptoir et d'ultrafiltration éliminent 99% des contaminants pour la santé de votre famille."
+                    ctaText="Explorez nos systèmes de filtration"
+                    ctaLink="#systemes-filtration"
+                    showPhone={true}
+                    showBreadcrumbs={true}
+                    singleLineTitle={true}
 
-                    <div className="container relative z-10 mx-auto px-4 h-full flex items-center lg:px-6">
-                        <div className="max-w-2xl lg:text-white py-12 lg:py-0">
-                            <h1 className="leading-[1.1] md:leading-[1.2] mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left max-w-xl">
-                                Système de filtration sous évier, de la pureté à chaque goutte.
-                            </h1>
-                            <p className="font-light text-slate-600 lg:text-white/90 mb-8 max-w-xl text-left lg:text-justify">
-                                Profitez d'une eau potable d'une qualité exceptionnelle directement de votre robinet. Nos systèmes de filtration sous comptoir et d'ultrafiltration éliminent 99% des contaminants pour la santé de votre famille.
-                            </p>
-                            <div className="flex flex-col sm:flex-row gap-4">
-                                <Button
-                                    size="lg"
-                                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200"
-                                    style={{}}
-                                    asChild
-                                >
-                                    <a href="#systemes-filtration">
-                                        Explorez nos systèmes de filtration
-                                    </a>
-                                </Button>
-                                <Button
-                                    size="lg"
-                                    variant="outline"
-                                    className="bg-slate-100 lg:bg-white/10 hover:bg-slate-200 lg:hover:bg-white/20 text-slate-800 lg:text-white border-slate-200 lg:border-white rounded-full px-8 h-14 backdrop-blur-sm shadow-lg"
-                                    style={{}}
-                                    asChild
-                                >
-                                    <a href="tel:18552649328" className="flex items-center gap-2">
-                                        <Phone className="h-5 w-5" />
-                                        1-855-264-9328
-                                    </a>
-                                </Button>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                />
 
                 {/* 2. Ce qu'il élimine - Efficiency Section */}
                 <section className="py-24 relative overflow-hidden bg-white">

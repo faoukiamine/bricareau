@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
+import Hero from "@/components/Hero";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import { Button } from "@/components/ui/button";
 import heroBath from "@/assets/sub-category-dryer.webp";
@@ -9,14 +9,12 @@ import {
     Droplets,
     ChevronRight,
     CheckCircle2,
-    Sparkles,
     Shield,
     Zap,
     Wifi,
-    Shirt,
-    Award,
+    Binary,
     HandCoins,
-    Binary
+    Award
 } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import { useNavigate } from "react-router-dom";
@@ -25,7 +23,6 @@ import waterTestingImg from "@/assets/water-test.jpg";
 import { softenerImg as residentialWaterSoftenerImg } from "./Blog pages/Comment régler la dureté de votre adoucisseur ";
 import { adoucisseurImg as adoucisseurFosseImg } from "./Blog pages/Adoucisseur-deau- et-fosse-septique--Mythes-et-réalités";
 import { conditionneursImg } from "./Blog pages/Adoucisseur avec sel ou sans sel";
-import waterSoftenerImg from "@/assets/Adoucisseurs d'eau.webp";
 import TwinAlternatingWaterSoftenerImg from "@/assets/Alternating Water Softener.png";
 import SentinelWaterSoftenerImg from "@/assets/Sentinelle Water Softener.png";
 import SerenityWaterSoftenerImg from "@/assets/Serenity Water Softener.png";
@@ -128,65 +125,19 @@ const AdoucisseurEauMunicipal = () => {
         const ogDesc = document.querySelector('meta[property="og:description"]');
         if (ogDesc) ogDesc.setAttribute("content", "Des solutions intelligentes pour une eau sans calcaire 24h/24. Découvrez nos adoucisseurs Sentinelle et Infiniti.");
     }, []);
+
     return (
         <div className="min-h-screen bg-white">
             <Header />
-
             <main>
-                {/* 1. Hero Section (Redesigned for Mobile) */}
-                <section className="relative lg:h-[650px] flex flex-col lg:flex-row items-stretch overflow-hidden">
-                    {/* Mobile Image */}
-                    <div className="lg:hidden w-full h-[300px] relative">
-                        <img
-                            src={heroBath}
-                            alt="Bain relaxant dans une eau douce - Adoucisseur d'eau municipal Bricareau contre le calcaire"
-                            className="w-full h-full object-cover object-[center_35%]"
-                        />
-                        <div className="absolute inset-0 bg-black/20" />
-                    </div>
-
-                    {/* Desktop Background */}
-                    <div className="hidden lg:block absolute inset-0 z-0">
-                        <img
-                            src={heroBath}
-                            alt="Bain relaxant dans une eau douce"
-                            className="w-full h-full object-cover object-[center_35%]"
-                        />
-                        <div className="absolute inset-0 bg-black/40 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
-                        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-white via-white/10 to-transparent" />
-                        <div className="absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white/90 via-white/40 to-transparent" />
-                    </div>
-
-                    <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none hidden lg:block">
-                        <div className="container mx-auto px-6 pointer-events-auto">
-                            <GlobalBreadcrumbs variant="dark" />
-                        </div>
-                    </div>
-
-                    <div className="container mx-auto px-6 relative z-10 h-full flex items-center">
-                        <div className="max-w-2xl text-slate-900 lg:text-white py-12 lg:py-0">
-                            <h1
-                                className="leading-[1.1] md:leading-[1.2] mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left max-w-xl"
-                            >
-                                <span className="text-blue-600 lg:text-white/80">Une douceur qui se sent, un confort qui se vit.</span>
-                            </h1>
-
-                            <p className="font-light text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
-                                Protégez votre confort et vos installations avec nos adoucisseurs d'eau intelligents conçus spécifiquement pour les eaux de ville. Éliminez définitivement l'eau dure et prolongez la vie de vos électroménagers.
-                            </p>
-
-                            <div className="flex flex-col sm:flex-row gap-4">
-                                <Button
-                                    size="lg"
-                                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200"
-                                    asChild
-                                >
-                                    <NavLink to="/consultation">Planifiez une consultation gratuite</NavLink>
-                                </Button>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                <Hero 
+                    image={heroBath}
+                    highlightedTitle="Une douceur qui se sent"
+                    mainTitle="un confort qui se vit."
+                    subtitle="Protégez votre confort et vos installations avec nos adoucisseurs d'eau intelligents conçus spécifiquement pour les eaux de ville. Éliminez définitivement l'eau dure et prolongez la vie de vos électroménagers."
+                    showPhone={true}
+                    showBreadcrumbs={true}
+                />
                 
                 {/* 2. Scientific Theory Section: How it Works */}
                 <section className="py-24 lg:py-32 bg-white relative overflow-hidden">

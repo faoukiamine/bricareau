@@ -86,6 +86,7 @@ import GoutDeChlorePourquoiLaVilleEnAjouteAutant from "./pages/Blog pages/Gout-d
 
 import PolitiqueConfidentialite from "./pages/Politique-de-Confidentialite";
 import ConditionsGeneralesUtilisation from "./pages/Conditions-Generales-Utilisation";
+import LandingResidential from "./pages/LandingResidential";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -166,6 +167,7 @@ const App = () => (
           <Route path="/promotions" element={<Promotions />} />
           <Route path="/politique-de-confidentialite" element={<PolitiqueConfidentialite />} />
           <Route path="/conditions-generales-utilisation" element={<ConditionsGeneralesUtilisation />} />
+          <Route path="/landing-residentiel" element={<LandingResidential />} />
 
           {/* Blog Routes */}
           <Route path="/adoucisseur-deau-et-fosse-septique-mythes-et-realites" element={<TraitementUVNaturel />} />

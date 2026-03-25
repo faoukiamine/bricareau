@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Hero from "@/components/Hero";
 import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import {
@@ -55,63 +56,18 @@ const AdoucisseursPortables = () => {
 
     return (
         <div className="min-h-screen font-sans text-gray-900 bg-white selection:bg-[#0066FF] selection:text-white" style={{ '--top-banner': '168 100% 42%' } as React.CSSProperties}>
-            <Header />
+             <Header />
+ 
+             <main>
+                <Hero 
+                    image={heroBg}
+                    highlightedTitle="Adoucisseur d'eau portable,"
+                    mainTitle="une eau douce où que vous soyez !"
+                    subtitle="La solution d'adoucissement flexible pour votre résidence ou commerce sans installation permanence. Profitez de notre service d'échange d'adoucisseur portable avec livraison directement chez vous."
+                    showPhone={true}
+                    showBreadcrumbs={true}
+                />
 
-            {/* 1. Section Hero (Redesigned for Mobile) */}
-            <section className="relative lg:h-[650px] flex items-center overflow-hidden bg-white">
-                <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none hidden lg:block">
-                    <div className="container mx-auto px-6 pointer-events-auto">
-                        <GlobalBreadcrumbs variant="dark" />
-                    </div>
-                </div>
-                <div className="flex flex-col lg:flex-row w-full">
-                    {/* Mobile Image */}
-                    <div className="lg:hidden w-full h-[350px] relative">
-                        <img
-                            src={heroBg}
-                            alt="Adoucisseur portable Bricareau"
-                            className="w-full h-full object-cover object-[center_30%]"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-transparent" />
-                    </div>
-
-                    {/* Desktop Background Area (Hidden on Mobile) */}
-                    <div className="absolute inset-0 z-0 hidden lg:block">
-                        <img
-                            src={heroBg}
-                            alt="Service d'échange et livraison d'adoucisseurs d'eau portables Bricareau au Québec et Canada"
-                            className="w-full h-full object-cover object-[center_30%]"
-                        />
-                        <div className="absolute inset-0 bg-black/40 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
-                        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-white via-white/10 to-transparent" />
-                        <div className="absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white/90 via-white/40 to-transparent" />
-                    </div>
-
-                    <div className="container relative z-10 mx-auto px-6 h-full flex items-center">
-                        <div className="max-w-4xl text-left py-12 lg:py-0">
-                            <h1
-                                className="leading-[1.1] md:leading-[1.2] mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left max-w-xl"
-                            >
-                                Adoucisseur d'eau portable, une eau douce où que vous soyez !
-                            </h1>
-                            <p className="font-light text-slate-600 lg:text-gray-200 mb-12 max-w-xl text-left lg:text-justify animate-in fade-in slide-in-from-bottom duration-700 delay-100">
-                                La solution d'adoucissement flexible pour votre résidence ou commerce sans installation permanence. Profitez de notre service d'échange d'adoucisseur portable avec livraison directement chez vous.
-                            </p>
-                            <div className="flex flex-col sm:flex-row gap-4">
-                                <Button
-                                    size="lg"
-                                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200"
-                                    asChild
-                                >
-                                    <NavLink to="/consultation" style={{ fontWeight: 300 }}>
-                                        Planifiez une consultation gratuite
-                                    </NavLink>
-                                </Button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
 
             {/* 3. Sections Benefits - Fluid Asymmetrical Editorial Layout */}
             <section className="py-24 lg:py-32 bg-slate-50 relative overflow-hidden">
@@ -424,6 +380,7 @@ const AdoucisseursPortables = () => {
                 </div>
             </section>
 
+             </main>
             <Footer />
         </div>
     );

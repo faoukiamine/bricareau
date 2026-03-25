@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import Hero from "@/components/Hero";
 import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -92,64 +93,18 @@ const StationEauPotable = () => {
 
   return (
     <div className="min-h-screen bg-background text-slate-900 font-sans">
-      <Header />
-      <main>
-        {/* 1. Hero Section */}
-        <section className="relative lg:h-[650px] flex flex-col lg:items-center overflow-hidden bg-white">
-          <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none hidden lg:block">
-            <div className="container mx-auto px-6 pointer-events-auto">
-              <GlobalBreadcrumbs variant="dark" />
-            </div>
-          </div>
-          <div className="relative lg:absolute lg:inset-0 h-[350px] sm:h-[450px] lg:h-full w-full lg:z-0 overflow-hidden">
-            <img
-              src={heroDrink}
-              alt="Enfant buvant une eau cristalline directement du robinet filtré par Bricareau"
-              className="w-full h-full object-cover object-[center_35%]"
-            />
-            <div className="hidden lg:block absolute inset-0 bg-black/40 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
-            <div className="hidden lg:block absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-white via-white/10 to-transparent" />
-            <div className="hidden lg:block absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white/90 via-white/40 to-transparent" />
-          </div>
-
-          <div className="container relative z-10 mx-auto px-4 h-full flex items-center lg:px-6">
-            <div className="max-w-2xl lg:text-white py-12 lg:py-0">
-              <h1
-                className="leading-[1.05] mb-6 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left max-w-xl"
-              >
-                Système d'osmose inverse, la pureté absolue à chaque goutte.
-              </h1>
-              <p className="font-light text-slate-600 lg:text-white/95 mb-10 max-w-xl text-left lg:text-justify text-lg leading-relaxed">
-                Transformez votre eau municipale en une source de pureté cristalline. Nos purificateurs d'eau par osmose inverse éliminent 99% des contaminants pour une eau fraîche, saine et alcaline.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-5">
-                <Button
-                  size="lg"
-                  className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-10 h-16 shadow-xl shadow-blue-200/50 transition-all hover:scale-105 active:scale-95"
-                  asChild
-                >
-                  <a href="#purification-systems">
-                    Explorer nos systèmes
-                  </a>
-                </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="bg-slate-100 lg:bg-white/10 hover:bg-slate-200 lg:hover:bg-white/20 text-slate-800 lg:text-white border-slate-200 lg:border-white rounded-full px-10 h-16 backdrop-blur-sm shadow-lg transition-all hover:scale-105"
-                  asChild
-                >
-                  <a href="tel:18552649328" className="flex items-center gap-3">
-                    <Phone className="h-5 w-5" />
-                    1-855-264-9328
-                  </a>
-                </Button>
-              </div>
-            </div>
-          </div>
-
-          {/* Decorative Flow Line - Desktop Only */}
-          <div className="hidden lg:block absolute bottom-0 left-[4.5rem] w-px h-32 bg-gradient-to-b from-transparent to-blue-200/50 z-20" />
-        </section>
+       <Header />
+       <main>
+                <Hero 
+                    image={heroDrink}
+                    highlightedTitle="Système d'osmose inverse,"
+                    mainTitle="la pureté absolue à chaque goutte."
+                    subtitle="Transformez votre eau municipale en une source de pureté cristalline. Nos purificateurs d'eau par osmose inverse éliminent 99% des contaminants pour une eau fraîche, saine et alcaline."
+                    ctaText="Explorer nos systèmes"
+                    ctaLink="#purification-systems"
+                    showPhone={true}
+                    showBreadcrumbs={true}
+                />
         {/* 2. La Science de la Pureté - Technical Journey Transition */}
         <section className="py-20 lg:py-24 bg-slate-50/50 relative overflow-hidden">
           {/* Background Technical Watermark */}

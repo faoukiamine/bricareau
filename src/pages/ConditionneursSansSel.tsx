@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import Header from "@/components/Header";
+import Hero from "@/components/Hero";
 import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 import Footer from "@/components/Footer";
 import TestimonialsSection from "@/components/TestimonialsSection";
@@ -85,42 +86,17 @@ const ConditionneursSansSel = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      <Header />
-      <main>
-        {/* 1. Hero Section */}
-        <section className="relative lg:h-[650px] flex flex-col lg:items-center overflow-hidden bg-white text-slate-900 lg:text-white">
-          <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none hidden lg:block">
-            <div className="container mx-auto px-4 lg:px-6 pointer-events-auto">
-              <GlobalBreadcrumbs variant="dark" />
-            </div>
-          </div>
-          <div className="relative lg:absolute lg:inset-0 h-[350px] sm:h-[450px] lg:h-full w-full lg:z-0 overflow-hidden">
-            <img
-              src={heroGirl}
-              alt="Conditionneur d'eau écologique Bricareau"
-              className="w-full h-full object-cover object-[center_35%]"
-            />
-            <div className="hidden lg:block absolute inset-0 bg-black/40 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
-            <div className="hidden lg:block absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-white via-white/10 to-transparent" />
-          </div>
-
-          <div className="container relative z-10 mx-auto px-4 h-full flex items-center lg:px-6">
-            <div className="max-w-2xl lg:text-white py-12 lg:py-0">
-              <span className="text-sm font-bold uppercase tracking-widest mb-4 block text-blue-600 lg:text-blue-300">
-                NOUVEAU CHEZ BRICAREAU
-              </span>
-              <h1 className="leading-[1.1] md:leading-[1.2] mb-4 lg:mb-8 tracking-tighter">
-                Conditionneur d'eau sans sel, l'anti-tartre écologique.
-              </h1>
-              <p className="font-light text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify text-lg leading-relaxed">
-                Neutralisez le calcaire sans sel, sans électricité et sans gaspillage d'eau. Notre technologie TAC protège votre plomberie tout en préservant les minéraux essentiels.
-              </p>
-              <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14" asChild>
-                <NavLink to="/consultation">Planifiez une consultation gratuite</NavLink>
-              </Button>
-            </div>
-          </div>
-        </section>
+             <Header />
+             <main>
+                <Hero 
+                    image={heroGirl}
+                    highlightedTitle="Conditionneur d'eau sans sel,"
+                    mainTitle="l'anti-tartre écologique."
+                    subtitle="Neutralisez le calcaire sans sel, sans électricité et sans gaspillage d'eau. Notre technologie TAC protège votre plomberie tout en préservant les minéraux essentiels."
+                    showPhone={true}
+                    showBreadcrumbs={true}
+                    singleLineTitle={true}
+                />
 
         {/* 2. Problem Section */}
         <section className="py-32 bg-slate-50 relative overflow-hidden">

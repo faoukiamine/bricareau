@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import Header from "@/components/Header";
+import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
 import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 import TestimonialsSection from "@/components/TestimonialsSection";
@@ -208,53 +209,19 @@ const AdoucisseursEauDePuits = () => {
 
     return (
         <div className="min-h-screen bg-white">
-            <Header />
-
-            <main>
-                {/* 1. Hero Section */}
-                <section className="relative lg:h-[650px] md:h-[800px] flex items-center overflow-hidden bg-white">
-                    <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none hidden lg:block">
-                        <div className="container mx-auto px-6 pointer-events-auto text-left">
-                            <GlobalBreadcrumbs variant="dark" />
-                        </div>
-                    </div>
-                    <div className="relative lg:absolute lg:inset-0 h-[350px] sm:h-[450px] lg:h-full w-full lg:z-0 overflow-hidden">
-                        <picture>
-                            <source media="(max-width: 768px)" srcSet={heroBath} />
-                            <img
-                                src={heroDesktop}
-                                alt="Bain d'enfant dans une eau de puits douce et saine - Adoucisseur d'eau Bricareau"
-                                className="w-full h-full object-cover object-[center_30%]"
-                            />
-                        </picture>
-                        <div className="hidden lg:block absolute inset-0 bg-black/40 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
-                        <div className="hidden lg:block absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-white via-white/10 to-transparent" />
-                        <div className="hidden lg:block absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white/90 via-white/40 to-transparent" />
-                    </div>
-
-                    <div className="container relative z-10 mx-auto px-4 h-full flex items-center lg:px-6">
-                        <div className="max-w-2xl lg:text-white py-12 lg:py-0">
-                            <h1
-                                className="leading-[1.1] md:leading-[1.2] mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left max-w-xl"
-                            >
-                                Adoucisseur d'eau de puits, une protection experte contre le fer et le calcaire.
-                            </h1>
-                            <p className="font-light text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
-                                Profitez d'une eau soyeuse et douce, même avec un puits privé. Nos adoucisseurs haute performance neutralisent la dureté extrême et les traces de fer pour préserver votre santé et vos installations.
-                            </p>
-                            <div className="flex flex-col sm:flex-row gap-4">
-                                <Button
-                                    size="lg"
-                                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200"
-                                    style={{}}
-                                    asChild
-                                >
-                                    <a href="/tests-eau#water-test">Réservez une analyse d'eau</a>
-                                </Button>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+             <Header />
+             <main>
+                <Hero 
+                    image={heroDesktop}
+                    highlightedTitle="Adoucisseur d'eau de puits,"
+                    mainTitle="une protection experte contre le fer et le calcaire."
+                    subtitle="Profitez d'une eau soyeuse et douce, même avec un puits privé. Nos adoucisseurs haute performance neutralisent la dureté extrême et les traces de fer pour préserver votre santé et vos installations."
+                    ctaText="Réservez une analyse d'eau"
+                    ctaLink="/tests-eau#water-test"
+                    showPhone={true}
+                    showBreadcrumbs={true}
+                    singleLineTitle={true}
+                />
 
                 {/* 2. Transition Section - L'Impact de la Pureté */}
                 <section className="relative py-32 bg-white overflow-hidden">
