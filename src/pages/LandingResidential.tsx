@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import { ArrowRight, CheckCircle2, Star, Quote, ShieldCheck, Waves } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroImg from "@/assets/Gemini_Generated_Image_ct1u02ct1u02ct1u.png";
+import heroImg from "@/assets/23568974.png";
 
 const LandingResidential = () => {
     return (

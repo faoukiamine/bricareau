@@ -102,7 +102,7 @@ export const allTestimonials: Testimonial[] = [
         rating: 5,
         text: "Très satisfait de l'expertise pour mon problème de fer dans l'eau de mon puits.",
         paths: [
-            "/Filtres-deau"
+            "/filtres-deau"
         ]
     },
     {
@@ -110,7 +110,7 @@ export const allTestimonials: Testimonial[] = [
         rating: 5,
         text: "Excellent service pour mon chalet. L'installation du système UV a réglé tous nos problèmes bactériens.",
         paths: [
-            "/Systemes-de-desinfection-UV"
+            "/systemes-de-desinfection-uv"
         ]
     },
     {
@@ -191,7 +191,7 @@ export const allTestimonials: Testimonial[] = [
         rating: 5,
         text: "Professionnalisme de A à Z. De l'analyse d'eau jusqu'à l'installation finale.",
         paths: [
-            "/Filtres-deau-pour-toute-la-maison"
+            "/filtres-deau-pour-toute-la-maison"
         ]
     },
     {
@@ -272,7 +272,7 @@ export const allTestimonials: Testimonial[] = [
         rating: 5,
         text: "Excellent rapport qualité-prix et service impeccable.",
         paths: [
-            "/Filtres-deau-pour-toute-la-maison"
+            "/filtres-deau-pour-toute-la-maison"
         ]
     },
     {
@@ -305,7 +305,7 @@ export const allTestimonials: Testimonial[] = [
         rating: 5,
         text: "Rapidité d'exécution incroyable. Mon système a été installé en quelques jours.",
         paths: [
-            "/Systemes-de-desinfection-UV"
+            "/systemes-de-desinfection-uv"
         ]
     },
     {
@@ -313,7 +313,7 @@ export const allTestimonials: Testimonial[] = [
         rating: 5,
         text: "Je recommande Bricareau pour leur honnêteté et leur savoir-faire.",
         paths: [
-            "/Filtres-deau-pour-toute-la-maison"
+            "/filtres-deau-pour-toute-la-maison"
         ]
     },
     {
@@ -435,7 +435,7 @@ export const allTestimonials: Testimonial[] = [
         rating: 5,
         text: "Excellent service de A à Z. Je recommande vivement Bricareau.",
         paths: [
-            "/Filtres-deau-pour-toute-la-maison"
+            "/filtres-deau-pour-toute-la-maison"
         ]
     },
     {
@@ -485,7 +485,7 @@ export const allTestimonials: Testimonial[] = [
         rating: 5,
         text: "Je recommande pour le professionnalisme et la rapidité d'exécution.",
         paths: [
-            "/Filtres-deau-pour-toute-la-maison"
+            "/filtres-deau-pour-toute-la-maison"
         ]
     },
     {
@@ -549,7 +549,7 @@ export const allTestimonials: Testimonial[] = [
         rating: 5,
         text: "Système très fiable et facile d'entretien. L'alarme nous prévient quand changer la lampe, c'est rassurant. Je me sens en sécurité en buvant mon eau.",
         paths: [
-            "/Systemes-de-desinfection-UV"
+            "/systemes-de-desinfection-uv"
         ]
     },
     {
@@ -557,7 +557,7 @@ export const allTestimonials: Testimonial[] = [
         rating: 5,
         text: "Après avoir trouvé des bactéries dans notre eau de puits, nous avons installé un système UV Bricareau. Les tests suivants étaient parfaits. Grande tranquillité d'esprit.",
         paths: [
-            "/Systemes-de-desinfection-UV"
+            "/systemes-de-desinfection-uv"
         ]
     },
     {
@@ -565,7 +565,7 @@ export const allTestimonials: Testimonial[] = [
         rating: 5,
         text: "Excellent produit. Plus de soucis de contamination microbiologique. L'installation a été faite de manière très professionnelle.",
         paths: [
-            "/Systemes-de-desinfection-UV"
+            "/systemes-de-desinfection-uv"
         ]
     }
 ];

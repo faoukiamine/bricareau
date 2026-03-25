@@ -44,7 +44,7 @@ const products = [
         name: "Systèmes de désinfection UV",
         description: "Utilisés pour la stérilisation contre les bactéries, les virus, les coliformes, l'E.Coli, le Cryptosporidium,...",
         image: uvImg,
-        link: "/Systemes-de-desinfection-UV"
+        link: "/systemes-de-desinfection-uv"
     }
 ];
 

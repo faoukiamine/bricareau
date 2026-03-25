@@ -339,7 +339,7 @@ const AdoucisseursPortables = () => {
                                 name: "Systèmes de filtration d'eau spécialisés",
                                 desc: "Nos filtres spécialisés sont conçus pour cibler et éliminer efficacement les contaminants spécifiques de votre eau.",
                                 img: specialFiltersImg,
-                                link: "/Filtres-deau-pour-toute-la-maison"
+                                link: "/filtres-deau-pour-toute-la-maison"
                             }
                         ].map((prod, i) => (
                             <div

@@ -148,9 +148,8 @@ const Header = () => {
       megamenuCards: [
         {
           customIcon: wholehousefiltericonImg,
-          title: "Filtres d'eau pour toute la maison",
           description: "Protection complète de votre maison avec une filtration centralisée pour toute l'eau.",
-          href: "/Filtres-deau-pour-toute-la-maison"
+          href: "/filtres-deau-pour-toute-la-maison"
         },
         {
           customIcon: pointofusefiltericonImg,
@@ -162,7 +161,7 @@ const Header = () => {
           customIcon: undersinkfiltericonImg,
           title: "Systèmes de filtration d'eau sous-évier",
           description: "Solutions compactes et efficaces pour une filtration optimale directement sous votre évier.",
-          href: "/Systemes-de-filtration-deau-sous-evier"
+          href: "/systemes-de-filtration-deau-sous-evier"
         },
         {
           customIcon: replacementfiltericonImg,
@@ -192,7 +191,7 @@ const Header = () => {
           customIcon: wholehousefiltericonImg,
           title: "Systèmes de filtration d'eau spécialisés",
           description: "Nos systèmes de filtration d’eau spécialisés pour toute la maison est la solution abordable et durable pour obtenir une eau de meilleure qualité à chaque robinet de votre maison.",
-          href: "/Filtres-deau"
+          href: "/filtres-deau"
         },
         {
           customIcon: WatersoftenericonImg,
@@ -204,7 +203,7 @@ const Header = () => {
           customIcon: ultravioletImg,
           title: "Systèmes de désinfection UV",
           description: "Les systèmes de désinfection de l’eau à rayons ultraviolet stérilisent l’approvisionnement en eau de votre maison contre les micro-organismes nuisibles.",
-          href: "/Systemes-de-desinfection-UV"
+          href: "/systemes-de-desinfection-uv"
         },
       ],
       promo: {

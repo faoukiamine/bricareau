@@ -112,10 +112,10 @@ const App = () => (
           <Route path="/systeme-de-filtration-deau-potable" element={<StationEauPotable />} />
           <Route path="/traitement-eau-de-puits" element={<TraitementEauDePuits />} />
           <Route path="/filtration" element={<Filtration />} />
-          <Route path="/Filtres-deau" element={<SpecializedFiltration />} />
-          <Route path="/Filtres-deau-pour-toute-la-maison" element={<FiltresPourTouteLaMaison />} />
-          <Route path="/Systemes-de-filtration-deau-sous-evier" element={<FiltrationSousEvier />} />
-          <Route path="/Systemes-de-desinfection-UV" element={<DesinfectionUV />} />
+          <Route path="/filtres-deau" element={<SpecializedFiltration />} />
+          <Route path="/filtres-deau-pour-toute-la-maison" element={<FiltresPourTouteLaMaison />} />
+          <Route path="/systemes-de-filtration-deau-sous-evier" element={<FiltrationSousEvier />} />
+          <Route path="/systemes-de-desinfection-uv" element={<DesinfectionUV />} />
           <Route path="/filtre-eau-haute-efficacite" element={<FiltreEauHauteEfficacite />} />
           {/* <Route path="/ro-6" element={<RO6 />} /> */}
           <Route path="/fontaines" element={<Fontaines />} />

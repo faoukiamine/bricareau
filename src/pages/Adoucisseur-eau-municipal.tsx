@@ -379,12 +379,17 @@ const AdoucisseurEauMunicipal = () => {
                 <section className="py-24 bg-white border-t border-gray-100">
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
-                            <h2
-                                className="text-slate-900 mb-8 text-left"
-                                style={{}}
+                            <h2 
+                                className="mb-8 text-left"
+                                style={{
+                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                    fontSize: '48px',
+                                    lineHeight: '48px',
+                                    fontStyle: 'normal'
+                                }}
                             >
-                                <span className="font-light leading-[1.1] block">Comparez nos</span>
-                                <span className="font-normal leading-[1.1] block">adoucisseurs d'eau</span>
+                                <span className="italic font-light text-[#2563eb] block">Comparez nos</span>
+                                <span className="font-bold text-[#1e3a8a] block">adoucisseurs d'eau</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
@@ -474,7 +479,7 @@ const AdoucisseurEauMunicipal = () => {
                                     fontStyle: 'normal'
                                 }}
                             >
-                                <span className="italic font-light text-blue-400 block">Des tests d'eau précis</span>
+                                <span className="italic font-light text-white block">Des tests d'eau précis</span>
                                 <span className="font-bold text-white block">pour une tranquillité d'esprit totale.</span>
                             </h2>
                             <p className="font-light text-slate-500 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
@@ -542,10 +547,16 @@ const AdoucisseurEauMunicipal = () => {
                 <section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-4 text-left">
                         <div className="text-left mb-16">
-                            <h2
-                                className="text-slate-900 mb-8 text-left"
-                                style={{}}
-                            >                                <span className="font-normal leading-[1.1] block">Ressources</span>
+                            <h2 
+                                className="mb-8"
+                                style={{
+                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                    fontSize: '48px',
+                                    lineHeight: '48px',
+                                    fontStyle: 'normal'
+                                }}
+                            >
+                                <span className="font-bold text-[#1e3a8a] block text-left">Ressources</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>

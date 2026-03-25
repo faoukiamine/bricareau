@@ -354,7 +354,7 @@ const Filtration = () => {
                                     </div>
 
                                     <div className="pt-8 flex flex-col sm:flex-row gap-6">
-                                        <NavLink to="/Filtres-deau-pour-toute-la-maison" className="w-full sm:w-auto">
+                                        <NavLink to="/filtres-deau-pour-toute-la-maison" className="w-full sm:w-auto">
                                             <Button className="w-full sm:w-auto rounded-full bg-blue-600 hover:bg-blue-700 text-white px-10 h-16 text-lg font-bold shadow-2xl shadow-blue-500/20 group">
                                                 Voir nos filtres d'eau
                                                 <ChevronRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
