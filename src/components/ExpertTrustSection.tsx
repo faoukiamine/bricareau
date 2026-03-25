@@ -37,13 +37,28 @@ const ExpertTrustSection = () => {
                     {/* Content Side */}
                     <div className="lg:w-1/2 space-y-10">
                         <div className="space-y-6">
-                            <h2
-                                className="text-slate-900"
-                                style={{ }}
+                            <h2 
+                                style={{
+                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                    fontSize: '48px',
+                                    lineHeight: '48px',
+                                    fontStyle: 'normal'
+                                }}
                             >
-                                <span className="font-light">Votre eau mérite un expert,</span> <span className="font-bold text-blue-600">pas un doute.</span>
+                                <span className="italic font-light text-[#2563eb]">Votre eau mérite un expert,</span> <br /> 
+                                <span className="font-bold text-[#1e3a8a]">pas un doute.</span>
                             </h2>
-                            <p className="text-slate-600 font-light max-w-xl text-justify">
+                             <p 
+                                className="max-w-xl text-justify"
+                                style={{
+                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                    fontWeight: 300,
+                                    color: 'rgb(71, 85, 105)',
+                                    fontSize: '20px',
+                                    lineHeight: '28px',
+                                    fontStyle: 'normal'
+                                }}
+                            >
                                 Ne laissez pas l'incertitude couler de votre robinet. Chez Bricareau, nous transformons chaque analyse en une certitude scientifique pour la santé de votre foyer.
                             </p>
                         </div>
@@ -53,8 +68,7 @@ const ExpertTrustSection = () => {
                         <div className="pt-6">
                             <Button
                                 size="lg"
-                                className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-12 h-16 text-lg font-light shadow-2xl shadow-blue-200 transition-all hover:-translate-y-1 w-full sm:w-auto"
-                                style={{ }}
+                                className="bg-[#2563eb] border-[#2563eb] text-white hover:bg-white hover:text-[#2563eb] hover:border-[#2563eb] h-14 px-10 rounded-full text-lg cursor-pointer font-bold border-2 w-full sm:w-auto"
                                 asChild
                             >
                                 <a href="/tests-eau#water-test" className="flex items-center justify-center gap-3">

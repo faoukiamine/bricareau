@@ -240,12 +240,28 @@ const AdoucisseursEauDePuits = () => {
                 <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black tracking-[0.2em] mb-6">
                                     Eau adoucie
                                 </span>
-                                <h2 className="text-slate-900 leading-[1.1] mb-12">
-                                    <span className="font-light block tracking-tighter">Vivez l'eau au-delà</span>
-                                    <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">
-                                        de la simple apparence.</span>
+                                <h2 
+                                    className="mb-12"
+                                    style={{
+                                        fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                        fontSize: '48px',
+                                        lineHeight: '48px',
+                                        fontStyle: 'normal'
+                                    }}
+                                >
+                                    <span className="italic font-light text-[#2563eb] block tracking-tighter">Vivez l'eau au-delà</span>
+                                    <span className="font-bold text-[#1e3a8a] block">de la simple apparence.</span>
                                 </h2>
-                                <p className="text-xl text-slate-500 font-light max-w-2xl leading-relaxed text-justify">
+                                <p 
+                                    className="text-justify max-w-2xl"
+                                    style={{
+                                        fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                        fontSize: '20px',
+                                        fontWeight: '300',
+                                        lineHeight: '28px',
+                                        color: 'rgb(71, 85, 105)'
+                                    }}
+                                >
                                     Dans un puits privé, la clarté visuelle n'est que la surface. Notre technologie d'adoucissement transforme la structure même de votre eau, éliminant l'agressivité du calcaire et du fer pour une douceur que vous ressentirez à chaque goutte, sur chaque surface.
                                 </p>
                             </div>
@@ -271,7 +287,16 @@ const AdoucisseursEauDePuits = () => {
                                         </h3>
                                         <div className="w-16 h-1 bg-blue-600 rounded-full transform origin-right group-hover:scale-x-150 transition-transform duration-500" />
                                     </div>
-                                    <p className="text-xl text-slate-500 font-light leading-relaxed text-right max-w-xl">
+                                    <p 
+                                        className="text-right max-w-xl"
+                                        style={{
+                                            fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                            fontSize: '20px',
+                                            fontWeight: '300',
+                                            lineHeight: '28px',
+                                            color: 'rgb(71, 85, 105)'
+                                        }}
+                                    >
                                         Un équilibre parfait entre minéralité et douceur. Notre système transforme la structure du calcaire, protégeant vos installations tout en préservant la fraîcheur naturelle de l'eau de puits pour une pureté cristalline inégalée.
                                     </p>
                                 </div>
@@ -296,7 +321,16 @@ const AdoucisseursEauDePuits = () => {
                                         </h3>
                                         <div className="w-16 h-1 bg-blue-600 rounded-full transform origin-left group-hover:scale-x-150 transition-transform duration-500" />
                                     </div>
-                                    <p className="text-xl text-slate-500 font-light leading-relaxed text-justify max-w-xl">
+                                    <p 
+                                        className="text-justify max-w-xl"
+                                        style={{
+                                            fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                            fontSize: '20px',
+                                            fontWeight: '300',
+                                            lineHeight: '28px',
+                                            color: 'rgb(71, 85, 105)'
+                                        }}
+                                    >
                                         Dites adieu aux traces de rouille et au vert-de-gris. Une protection active pour votre robinetterie de luxe et vos appareils haut de gamme, prolongeant l'éclat originel de votre foyer pour des décennies.
                                     </p>
                                 </div>
@@ -321,7 +355,16 @@ const AdoucisseursEauDePuits = () => {
                                         </h3>
                                         <div className="w-16 h-1 bg-blue-600 rounded-full transform origin-right group-hover:scale-x-150 transition-transform duration-500" />
                                     </div>
-                                    <p className="text-xl text-slate-500 font-light leading-relaxed text-right max-w-xl">
+                                    <p 
+                                        className="text-right max-w-xl"
+                                        style={{
+                                            fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                            fontSize: '20px',
+                                            fontWeight: '300',
+                                            lineHeight: '28px',
+                                            color: 'rgb(71, 85, 105)'
+                                        }}
+                                    >
                                         Offrez à votre famille le luxe d'une eau soyeuse qui hydrate profondément. Une sensation de douceur sur la peau, des cheveux visiblement plus brillants et un linge enveloppé d'un éclat soigné à chaque lavage.
                                     </p>
                                 </div>
@@ -341,15 +384,29 @@ const AdoucisseursEauDePuits = () => {
                 <section id="nos-adoucisseurs" className="py-24 bg-gray-50">
                     <div className="container mx-auto px-6">
                         <div className="text-left mb-16">
-                            <h2
-                                className="text-slate-900 mb-8 text-left"
-                                style={{}}
+                            <h2 
+                                className="mb-8 text-left"
+                                style={{
+                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                    fontSize: '48px',
+                                    lineHeight: '48px',
+                                    fontStyle: 'normal'
+                                }}
                             >
-                                <span className="font-light leading-[1.1] block">Nos adoucisseurs d'eau</span>
-                                <span className="font-normal leading-[1.1] block">résidentiels - Eau de puits</span>
+                                <span className="italic font-light text-[#2563eb] block text-left">Nos adoucisseurs d'eau</span>
+                                <span className="font-bold text-[#1e3a8a] block text-left">résidentiels - Eau de puits</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600 mb-8"></div>
-                            <p className="font-light text-gray-600 max-w-7xl mx-auto text-justify mb-8">
+                            <p 
+                                className="mx-auto text-justify mb-8"
+                                style={{
+                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                    fontSize: '20px',
+                                    fontWeight: '300',
+                                    lineHeight: '28px',
+                                    color: 'rgb(71, 85, 105)'
+                                }}
+                            >
                                 Découvrez notre gamme exclusive d'adoucisseurs d'eau pour puits, spécialement conçue pour traiter les eaux souterraines les plus complexes. Nos systèmes haute efficacité (HE) éliminent efficacement la dureté, le fer et le manganèse, garantissant une eau pure et douce pour toute votre maison. Grâce à une technologie de régénération intelligente, nos solutions durables protègent vos installations tout en réduisant votre consommation de sel et d'eau. Offrez à votre famille le confort d'une eau de qualité supérieure, débarrassée des impuretés et des problèmes de calcaire typiques des puits artésiens ou de surface.
                             </p>
                         </div>
@@ -372,8 +429,14 @@ const AdoucisseursEauDePuits = () => {
                                             {p.displayName || p.name}
                                         </h3>
                                         <p
-                                            className="text-slate-500 font-light leading-[24px] flex-grow text-justify"
-                                            style={{}}
+                                            className="flex-grow text-justify"
+                                            style={{
+                                                fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                                fontSize: '20px',
+                                                fontWeight: '300',
+                                                lineHeight: '28px',
+                                                color: 'rgb(71, 85, 105)'
+                                            }}
                                         >
                                             {p.desc}
                                         </p>
@@ -395,12 +458,17 @@ const AdoucisseursEauDePuits = () => {
                 <section className="py-24 bg-white border-t border-gray-100">
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
-                            <h2
-                                className="text-slate-900 mb-8 text-left"
-                                style={{}}
+                            <h2 
+                                className="mb-8 text-left"
+                                style={{
+                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                    fontSize: '48px',
+                                    lineHeight: '48px',
+                                    fontStyle: 'normal'
+                                }}
                             >
-                                <span className="font-light leading-[1.1] block">Comparez nos adoucisseurs</span>
-                                <span className="font-normal leading-[1.1] block">d'eau de puits</span>
+                                <span className="italic font-light text-[#2563eb] block">Comparez nos adoucisseurs</span>
+                                <span className="font-bold text-[#1e3a8a] block">d'eau de puits</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
@@ -473,9 +541,17 @@ const AdoucisseursEauDePuits = () => {
 
                     <div className="container mx-auto px-4 relative z-10 flex items-center py-12 lg:py-0">
                         <div className="max-w-2xl text-slate-900 lg:text-white">
-                             <h2 className="mb-8 text-slate-900 lg:text-white font-bold uppercase font-weight-bold 900">
-                                 Des tests d'eau précis <br />
-                                 pour une tranquillité d'esprit totale.
+                             <h2 
+                                 className="mb-8"
+                                 style={{
+                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                    fontSize: '48px',
+                                    lineHeight: '48px',
+                                    fontStyle: 'normal'
+                                 }}
+                             >
+                                 <span className="italic font-light text-blue-400 block tracking-tight">Des tests d'eau précis</span>
+                                 <span className="font-bold text-white block tracking-tight">pour une tranquillité d'esprit.</span>
                              </h2>
                             <p className="font-light text-slate-500 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
                                 Ne devinez pas la qualité de votre eau. Nos analyses approfondies identifient les bactéries, les minéraux et les contaminants chimiques pour vous offrir une tranquillité d'esprit totale.
@@ -499,9 +575,18 @@ const AdoucisseursEauDePuits = () => {
                     filterProduct="/adoucisseurs-eau-de-puits"
                     title={
                         <>
-                            <span className="font-light block">Là où le calcaire dictait sa loi,</span>
-                            <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">
-                                nos clients ont repris le contrôle.</span>
+                            <h2 
+                                className="mb-8"
+                                style={{
+                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                    fontSize: '48px',
+                                    lineHeight: '48px',
+                                    fontStyle: 'normal'
+                                }}
+                            >
+                                <span className="italic font-light text-[#2563eb] block text-center">Là où le calcaire dictait sa loi,</span>
+                                <span className="font-bold text-[#1e3a8a] block text-center">nos clients ont repris le contrôle.</span>
+                            </h2>
                         </>
                     }
                 />
@@ -510,8 +595,27 @@ const AdoucisseursEauDePuits = () => {
                 <section className="bg-white py-24">
                     <div className="container mx-auto px-4">
                         <div className="text-center mb-16">
-                            <h2 className="text-slate-900 mb-8">Découvrez les produits associés</h2>
-                            <p className="font-light text-gray-500 max-w-2xl mx-auto text-justify">
+                            <h2 
+                                className="mb-8"
+                                style={{
+                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                    fontSize: '48px',
+                                    lineHeight: '48px',
+                                    fontStyle: 'normal'
+                                }}
+                            >
+                                <span className="font-bold text-[#1e3a8a] block text-center">Découvrez les produits associés</span>
+                            </h2>
+                            <p 
+                                className="mx-auto text-center"
+                                style={{
+                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                    fontSize: '20px',
+                                    fontWeight: '300',
+                                    lineHeight: '28px',
+                                    color: 'rgb(71, 85, 105)'
+                                }}
+                            >
                                 Optimisez votre expérience de traitement d'eau avec nos solutions complémentaires.
                             </p>
                         </div>
@@ -555,8 +659,14 @@ const AdoucisseursEauDePuits = () => {
                                             {prod.name}
                                         </h3>
                                         <p
-                                            className="leading-[25px] text-slate-500 font-light flex-grow text-justify"
-                                            style={{}}
+                                            className="flex-grow text-justify"
+                                            style={{
+                                                fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                                fontSize: '20px',
+                                                fontWeight: '300',
+                                                lineHeight: '28px',
+                                                color: 'rgb(71, 85, 105)'
+                                            }}
                                         >
                                             {prod.desc}
                                         </p>
@@ -630,11 +740,16 @@ const AdoucisseursEauDePuits = () => {
                     <div className="container mx-auto px-6">
                         <div className="text-left mb-16">
                             <h2
-                                className="text-slate-900 mb-8 text-left"
-                                style={{}}
+                                className="mb-8 text-left"
+                                style={{
+                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                    fontSize: '48px',
+                                    lineHeight: '48px',
+                                    fontStyle: 'normal'
+                                }}
                             >
-                                <span className="font-light leading-[1.1] block">Pour vous éclairer</span>
-                                <span className="font-normal leading-[1.1] block">Questions fréquentes</span>
+                                <span className="italic font-light text-[#2563eb] block">Pour vous éclairer</span>
+                                <span className="font-bold text-[#1e3a8a] block">Questions fréquentes</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
@@ -668,11 +783,16 @@ const AdoucisseursEauDePuits = () => {
                 <section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-6 text-left">
                         <div className="text-left mb-16">
-                            <h2
-                                className="text-slate-900 mb-8 text-left"
-                                style={{}}
-                            >                 
-                            <span className="font-normal leading-[1.1] block">Ressources</span>
+                            <h2 
+                                className="mb-8 text-left"
+                                style={{
+                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                    fontSize: '48px',
+                                    lineHeight: '48px',
+                                    fontStyle: 'normal'
+                                }}
+                            >
+                                <span className="font-bold text-[#1e3a8a] block text-left">Ressources</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>

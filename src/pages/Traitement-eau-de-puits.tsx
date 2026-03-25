@@ -161,12 +161,28 @@ const TraitementEauDePuits = () => {
               <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.2em] mb-8">
                 Contaminants fréquents dans l'eau
               </span>
-              <h2 className="text-slate-900 mb-5">
-                <span className="font-light leading-tight block tracking-tighter">Problèmes courants</span>
-                <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">
-                  de l'eau de puits</span>
+              <h2 
+                className="mb-8"
+                style={{
+                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                    fontSize: '48px',
+                    lineHeight: '48px',
+                    fontStyle: 'normal'
+                }}
+              >
+                <span className="italic font-light text-[#2563eb] block">Problèmes courants</span>
+                <span className="font-bold text-[#1e3a8a] block">de l'eau de puits</span>
               </h2>
-              <p className="text-slate-500 font-light text-lg leading-relaxed">
+              <p 
+                style={{
+                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                    fontWeight: 300,
+                    color: 'rgb(71, 85, 105)',
+                    fontSize: '20px',
+                    lineHeight: '28px',
+                    fontStyle: 'normal'
+                }}
+              >
                 L'eau de votre puits est vivante et changeante. Identifiez les signes avant-coureurs pour garantir la sécurité de votre foyer et la longévité de vos installations.
               </p>
             </div>
@@ -213,9 +229,19 @@ const TraitementEauDePuits = () => {
                         <h3 className="card-title group-hover:text-blue-600 transition-colors duration-500">
                           {problem.title}
                         </h3>
-                        <p className={`text-slate-500 font-light leading-relaxed text-justify
-                          ${isFeatured ? 'text-lg max-w-md' : 'text-sm'}
-                        `}>
+                        <p 
+                          className={`text-justify
+                            ${isFeatured ? 'max-w-md' : ''}
+                          `}
+                          style={{
+                              fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                              fontWeight: 300,
+                              color: 'rgb(71, 85, 105)',
+                              fontSize: isFeatured ? '20px' : '18px',
+                              lineHeight: isFeatured ? '28px' : '24px',
+                              fontStyle: 'normal'
+                          }}
+                        >
                           {problem.desc}
                         </p>
                       </div>
@@ -244,12 +270,29 @@ const TraitementEauDePuits = () => {
               <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.2em] mb-8">
                 NOTRE FONCTIONNEMENT
               </span>
-              <h2 className="text-slate-900 mb-6">
-                <span className="font-light leading-tight block tracking-tighter">Un service simple</span>
-                <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">
-                  & sans souci.</span>
+              <h2 
+                className="mb-8"
+                style={{
+                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                    fontSize: '48px',
+                    lineHeight: '48px',
+                    fontStyle: 'normal'
+                }}
+              >
+                <span className="italic font-light text-[#2563eb] block">Un service simple</span>
+                <span className="font-bold text-[#1e3a8a] block">& sans souci.</span>
               </h2>
-              <p className="text-slate-500 font-light text-lg max-w-2xl mx-auto text-center leading-relaxed">
+              <p 
+                className="max-w-2xl mx-auto text-center"
+                style={{
+                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                    fontWeight: 300,
+                    color: 'rgb(71, 85, 105)',
+                    fontSize: '20px',
+                    lineHeight: '28px',
+                    fontStyle: 'normal'
+                }}
+              >
                 Confiez-nous la gestion de votre eau de puits. De l'expertise initiale à l'installation finale, nous nous occupons de tout pour vous garantir une eau saine, sans compromis.
               </p>
             </div>
@@ -313,7 +356,17 @@ const TraitementEauDePuits = () => {
                         {step.title}
                       </h3>
                       <div className={`w-12 h-1.5 bg-blue-600 rounded-full ${idx % 2 === 1 ? 'ml-auto' : ''}`} />
-                      <p className="text-slate-500 font-light text-lg leading-relaxed text-justify max-w-xl">
+                      <p 
+                        className="text-justify max-w-xl"
+                        style={{
+                            fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                            fontWeight: 300,
+                            color: 'rgb(71, 85, 105)',
+                            fontSize: '20px',
+                            lineHeight: '28px',
+                            fontStyle: 'normal'
+                        }}
+                      >
                         {step.desc}
                       </p>
                     </div>
@@ -352,20 +405,35 @@ const TraitementEauDePuits = () => {
               <span className="text-blue-600 lg:text-white/80 font-bold uppercase tracking-widest text-sm mb-4 block">
                 Contrôle de la Qualité D'EAU
               </span>
-              <h2 className="mb-8 text-slate-900 lg:text-white font-bold uppercase font-weight-bold 900">
-                <span className="lg:font-bold">Dites adieu au fer,</span><br />
-                au soufre et au calcaire.
+              <h2 
+                className="mb-8"
+                style={{
+                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                    fontSize: '48px',
+                    lineHeight: '48px',
+                    fontStyle: 'normal',
+                    color: 'white'
+                }}
+              >
+                <span className="italic font-light text-blue-400 block">Dites adieu au fer,</span>
+                <span className="font-bold text-white block">au soufre et au calcaire.</span>
               </h2>
-              <p className="font-light text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
+              <p 
+                className="mb-8 max-w-xl text-left lg:text-justify"
+                style={{
+                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                    fontWeight: 300,
+                    color: 'rgba(255, 255, 255, 0.95)',
+                    fontSize: '20px',
+                    lineHeight: '28px',
+                    fontStyle: 'normal'
+                }}
+              >
                 Un puits performant commence par une analyse rigoureuse. Identifiez les contaminants invisibles et protégez durablement votre santé et vos installations.</p>
               <div className="flex gap-4">
-                <Button
-                  size="lg"
-                  className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200"
-                  style={{}}
-                >
-                  <a href="/tests-eau">Réservez une analyse d'eau</a>
-                </Button>
+                  <Button asChild>
+                    <a href="/tests-eau">Réservez une analyse d'eau</a>
+                  </Button>
               </div>
             </div>
           </div>
@@ -376,16 +444,28 @@ const TraitementEauDePuits = () => {
           <div className="container mx-auto px-6">
             <div className="text-left mb-16">
               <h2
-                className="text-slate-900 mb-8 text-left"
-                style={{}}
+                className="mb-8 text-left"
+                style={{
+                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                    fontSize: '48px',
+                    lineHeight: '48px',
+                    fontStyle: 'normal'
+                }}
               >
-                <span className="font-light leading-[1.1] md:leading-[1.1] block">Découvrez nos solutions</span>
-                <span className="font-normal leading-[1.1] md:leading-[1.1] block">de traitement de l'eau de puits</span>
+                <span className="italic font-light text-[#2563eb] block">Découvrez nos solutions</span>
+                <span className="font-bold text-[#1e3a8a] block">de traitement de l'eau de puits</span>
               </h2>
               <div className="w-24 h-1 bg-blue-600 mb-8"></div>
               <p
-                className="font-light text-slate-600 mb-8 text-justify"
-                style={{}}
+                className="mb-8 text-justify"
+                style={{
+                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                    fontWeight: 300,
+                    color: 'rgb(71, 85, 105)',
+                    fontSize: '20px',
+                    lineHeight: '28px',
+                    fontStyle: 'normal'
+                }}
               >
                 Nos solutions spécialisées pour l'eau de puits sont conçues pour transformer une eau brute et imprévisible en une source de pureté irréprochable au sein de votre foyer. Nous proposons une gamme complète incluant nos filtres spécialisés contre les différents contaminants, nos adoucisseurs de pointe éliminant le fer et le calcaire, ainsi que nos stations d'eau potable par osmose inverse pour une hydratation saine. Pour une sécurité microbiologique absolue, nos systèmes de stérilisation UV neutralisent efficacement les bactéries sans aucun ajout chimique. Chaque produit est sélectionné pour sa robustesse et sa capacité à répondre aux défis uniques posés par les eaux souterraines, vous garantissant ainsi une performance durable et une tranquillité d'esprit totale au quotidien. Faites confiance à l'expertise de Bricareau pour protéger votre santé et préserver l'intégrité de vos installations grâce à une filtration sur mesure, fiable et adaptée à vos besoins spécifiques.
               </p>
@@ -444,8 +524,15 @@ const TraitementEauDePuits = () => {
                           {prod.name}
                         </h3>
                         <p
-                          className="text-slate-500 font-light flex-grow text-justify"
-                          style={{}}
+                          className="flex-grow text-justify"
+                          style={{
+                              fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                              fontWeight: 300,
+                              color: 'rgb(71, 85, 105)',
+                              fontSize: '20px',
+                              lineHeight: '28px',
+                              fontStyle: 'normal'
+                          }}
                         >
                           {prod.desc}
                         </p>
@@ -475,9 +562,8 @@ const TraitementEauDePuits = () => {
           limit={5}
           title={
             <>
-              <span className="font-light block">La solution là </span>
-              <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">
-où d'autres ont échoué.</span>
+              <span className="italic font-light text-[#2563eb] block">La solution là </span>
+              <span className="font-bold text-[#1e3a8a] block">où d'autres ont échoué.</span>
             </>
           }
         />
@@ -489,11 +575,16 @@ où d'autres ont échoué.</span>
           <div className="container mx-auto px-4">
             <div className="text-left mb-16">
               <h2
-                className="text-slate-900 mb-8 text-left"
-                style={{}}
+                className="mb-8 text-left"
+                style={{
+                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                    fontSize: '48px',
+                    lineHeight: '48px',
+                    fontStyle: 'normal'
+                }}
               >
-                <span className="font-light leading-[1.1] block">Comparez nos solutions</span>
-                <span className="font-normal leading-[1.1] block">de traitement de l'eau de puits</span>
+                <span className="italic font-light text-[#2563eb] block">Comparez nos solutions</span>
+                <span className="font-bold text-[#1e3a8a] block">de traitement de l'eau de puits</span>
               </h2>
               <div className="w-24 h-1 bg-blue-600 mb-8"></div>
             </div>
@@ -560,20 +651,35 @@ où d'autres ont échoué.</span>
 
           <div className="container mx-auto px-6 relative z-10 text-center">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-white mb-6">
-                <span className="font-bold leading-tight block tracking-tight opacity-90">Maîtrisez la qualité de votre eau de puits</span>
+              <h2
+                className="mb-8"
+                style={{
+                  fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                  fontSize: '48px',
+                  lineHeight: '48px',
+                  fontStyle: 'normal'
+                }}
+              >
+                <span className="italic font-light text-blue-400 block">Maîtrisez</span>
+                <span className="font-bold text-white block">la qualité de votre eau de puits</span>
               </h2>
 
-              <p className="text-blue-100/80 font-light text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
+              <p 
+                className="mb-12 max-w-2xl mx-auto"
+                style={{
+                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                    fontWeight: 300,
+                    color: 'rgba(219, 234, 254, 0.8)',
+                    fontSize: '20px',
+                    lineHeight: '28px',
+                    fontStyle: 'normal'
+                }}
+              >
                 Le fer, le soufre et le calcaire ne sont pas une fatalité. Protégez votre santé et retrouvez le plaisir d'une eau pure, inodore et cristalline dès aujourd'hui.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                <Button
-                  size="lg"
-                  className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-12 h-16 shadow-2xl shadow-white/30 group text-lg font-light"
-                  asChild
-                >
+                <Button asChild className="shadow-2xl shadow-white/30 group">
                   <a href="tel:18552649328" className="flex items-center gap-3">
                     <Phone className="h-5 w-5 animate-bounce" />
                     Parlez à un expert
@@ -581,12 +687,10 @@ où d'autres ont échoué.</span>
                 </Button>
 
                 <Button
-                  size="lg"
                   variant="outline"
-                  className="rounded-full px-10 h-16 border-white/30 text-white bg-white/5 hover:bg-white/10 backdrop-blur-md text-lg transition-all duration-500"
                   asChild
                 >
-                  <NavLink to="/consultation">Planifiez une consultation gratuite</NavLink>
+                  <a href="/consultation">Planifiez une consultation gratuite</a>
                 </Button>
               </div>
 
@@ -602,12 +706,17 @@ où d'autres ont échoué.</span>
           <div className="container mx-auto px-4">
             <div className="text-left mb-16">
               <h2
-                                className="text-slate-900 mb-8 text-left"
-                                style={{}}
-                            >
-                                <span className="font-light leading-[1.1] block">Pour vous éclairer</span>
-                                <span className="font-normal leading-[1.1] block">Questions fréquentes</span>
-                            </h2>
+                className="mb-8 text-left"
+                style={{
+                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                    fontSize: '48px',
+                    lineHeight: '48px',
+                    fontStyle: 'normal'
+                }}
+              >
+                <span className="italic font-light text-[#2563eb] block">Pour vous éclairer</span>
+                <span className="font-bold text-[#1e3a8a] block">Questions fréquentes</span>
+              </h2>
               <div className="w-24 h-1 bg-blue-600 mb-8"></div>
             </div>
 
@@ -683,7 +792,17 @@ où d'autres ont échoué.</span>
                     <AccordionTrigger className="text-left text-base font-medium leading-6 hover:no-underline py-6" style={{}}>
                       {item.q}
                     </AccordionTrigger>
-                    <AccordionContent className="text-base font-light leading-6 text-slate-600 pb-8 text-justify" style={{}}>
+                    <AccordionContent 
+                      className="pb-8 text-justify"
+                      style={{
+                          fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                          fontWeight: 300,
+                          color: 'rgb(71, 85, 105)',
+                          fontSize: '20px',
+                          lineHeight: '28px',
+                          fontStyle: 'normal'
+                      }}
+                    >
                       {item.a}
                     </AccordionContent>
                   </AccordionItem>
@@ -692,7 +811,7 @@ où d'autres ont échoué.</span>
               <div className="mt-12 text-center">
                 <Button
                   onClick={() => setShowAllFaqs(!showAllFaqs)}
-                  className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-12 h-14 shadow-lg shadow-blue-200"
+                  className="shadow-lg shadow-blue-200"
                 >
                   {showAllFaqs ? "Voir moins de questions" : "Voir toutes les questions"}
                 </Button>
@@ -706,10 +825,16 @@ où d'autres ont échoué.</span>
         <section className="py-24 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="text-left mb-16">
-              <h2
-                className="text-slate-900 mb-8 text-left"
-                style={{}}
-              >                                <span className="font-normal leading-[1.1] block">Ressources</span>
+              <h2 
+                className="mb-8 text-left"
+                style={{
+                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                    fontSize: '48px',
+                    lineHeight: '48px',
+                    fontStyle: 'normal'
+                }}
+              >
+                <span className="font-bold text-[#1e3a8a] block">Ressources</span>
               </h2>
               <div className="w-24 h-1 bg-blue-600"></div>
             </div>

@@ -1,12 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { Phone } from "lucide-react";
 import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
+import heroImage from "@/assets/23568974.png";
 
 interface HeroProps {
-  image: string;
-  highlightedTitle: string;
-  mainTitle: string;
-  subtitle: string;
+  image?: string;
+  highlightedTitle?: string;
+  mainTitle?: string;
+  subtitle?: string;
   ctaText?: string;
   ctaLink?: string;
   showPhone?: boolean;
@@ -18,12 +19,12 @@ interface HeroProps {
 
 const Hero = ({
   image,
-  highlightedTitle,
-  mainTitle,
-  subtitle,
+  highlightedTitle = "L'eau saine,",
+  mainTitle = "que votre famille mérite.",
+  subtitle = "Assurez-vous que l'eau de votre maison a une belle apparence, une bonne odeur et un bon goût, qu'elle provienne d'un système municipal ou d'un puits privé. Plus de 20 000 foyers canadiens ont confié leur eau à Bricareau.",
   ctaText = "Planifiez une consultation gratuite",
   ctaLink = "/consultation",
-  showPhone = false,
+  showPhone = true,
   showBreadcrumbs = false,
   imageAlt = "Solutions expertes en traitement d'eau résidentiel Bricareau",
   badge,
@@ -43,7 +44,7 @@ const Hero = ({
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-r from-[#f0f9ff] via-[#f0f9ff]/80 to-transparent z-10" />
         <img
-          src={image}
+          src={image || heroImage}
           alt={imageAlt}
           className="w-full h-full object-cover object-right opacity-60"
         />
@@ -66,24 +67,32 @@ const Hero = ({
               <span className="italic font-light text-[#2563eb]">{highlightedTitle}</span>{singleLineTitle ? " " : <br />} {mainTitle}
             </h1>
             
-            <p className="font-light text-[#1e3a8a]/80 text-lg lg:text-xl max-w-xl leading-relaxed">
+            <p 
+              className="max-w-xl"
+              style={{
+                fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                fontWeight: 300,
+                color: 'rgb(71, 85, 105)',
+                fontSize: '20px',
+                lineHeight: '28px',
+                fontStyle: 'normal'
+              }}
+            >
               {subtitle}
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Button asChild variant="outline" className="bg-[#2563eb] border-[#2563eb] text-white hover:bg-white hover:text-[#2563eb] h-14 px-10 rounded-full text-lg cursor-pointer font-bold">
+              <Button asChild>
                 <a href={ctaLink}>{ctaText}</a>
               </Button>
               
               {showPhone && (
                 <Button
-                  size="lg"
                   variant="outline"
-                  className="bg-[#2563eb] border-[#2563eb] text-white hover:bg-white hover:text-[#2563eb] h-14 px-10 rounded-full text-lg cursor-pointer font-bold"
                   asChild
                 >
                   <a href="tel:18552649328" className="flex items-center gap-2">
-                    <Phone className="h-5 w-5" />
+                    <Phone className="w-5 h-5" />
                     1-855-264-9328
                   </a>
                 </Button>

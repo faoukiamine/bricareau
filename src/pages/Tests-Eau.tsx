@@ -140,10 +140,17 @@ const TestsEauPage = () => {
                   TESTS & ANALYSES D'EAU DE PRÉCISION
                 </span>
               </span>
-              <h2 className="text-slate-900 mb-6 leading-[1.1]">
-                <span className="block font-light opacity-90">Savoir exactement</span>
-                <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">
-                  ce que vous buvez.</span>
+              <h2 
+                className="mb-8"
+                style={{
+                  fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                  fontSize: '48px',
+                  lineHeight: '48px',
+                  fontStyle: 'normal'
+                }}
+              >
+                <span className="italic font-light text-[#2563eb] block text-center">Savoir exactement</span>
+                <span className="font-bold text-[#1e3a8a] block text-center">ce que vous buvez.</span>
               </h2>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
@@ -218,10 +225,17 @@ const TestsEauPage = () => {
                   NOS SOLUTIONS D'ANALYSE DE LA QUALITÉ D'EAU
                 </span>
               </span>
-              <h2 className="text-slate-900 mb-6">
-                <span className="block font-light opacity-90">Quelle trousse d'analyse</span>
-                <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">
-                  choisir pour votre eau ?</span>
+              <h2 
+                className="mb-8"
+                style={{
+                  fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                  fontSize: '48px',
+                  lineHeight: '48px',
+                  fontStyle: 'normal'
+                }}
+              >
+                <span className="italic font-light text-[#2563eb] block text-center">Quelle trousse d'analyse</span>
+                <span className="font-bold text-[#1e3a8a] block text-center">choisir pour votre eau ?</span>
               </h2>
               <p className="text-slate-600 font-light max-w-2xl mx-auto">
                 Des solutions adaptées à vos besoins, de la vérification bactérienne de base au bilan complet pour une tranquillité d'esprit totale.
@@ -346,8 +360,17 @@ const TestsEauPage = () => {
 
           <div className="container mx-auto px-6 relative z-10 text-center">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-white mb-6">
-                <span className="block tracking-tight opacity-90">Vous avez un doute sur la qualité de votre eau, ou vous utilisez un puits privé pour votre famille ?</span>
+              <h2 
+                className="mb-8"
+                style={{
+                  fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                  fontSize: '48px',
+                  lineHeight: '48px',
+                  fontStyle: 'normal'
+                }}
+              >
+                <span className="italic font-light text-blue-400 block">Vous avez un doute</span>
+                <span className="font-bold text-white block">sur la qualité de votre eau ?</span>
               </h2>
 
               <p className="text-blue-100/80 font-light text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
@@ -373,11 +396,16 @@ const TestsEauPage = () => {
           <div className="container mx-auto px-4 text-left">
             <div className="text-left mb-16">
                              <h2
-                                className="text-slate-900 mb-8 text-left"
-                                style={{}}
+                                className="mb-8 text-left"
+                                style={{
+                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                    fontSize: '48px',
+                                    lineHeight: '48px',
+                                    fontStyle: 'normal'
+                                }}
                             >
-                                <span className="font-light leading-[1.1] block">Pour vous éclairer</span>
-                                <span className="font-normal leading-[1.1] block">Questions fréquentes</span>
+                                <span className="italic font-light text-[#2563eb] block">Pour vous éclairer</span>
+                                <span className="font-bold text-[#1e3a8a] block">Questions fréquentes</span>
                             </h2>
               <div className="w-24 h-1 bg-blue-600"></div>
             </div>

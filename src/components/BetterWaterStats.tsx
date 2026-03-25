@@ -48,7 +48,17 @@ const BetterWaterStats = () => {
                             <span className="text-[36px] md:text-[56px] font-light leading-[1] text-blue-400 block mt-2">de notre rencontre à votre confort.</span>
                         </h2>
                         <div className="w-20 h-1.5 bg-blue-600 mb-8 rounded-full" />
-                        <p className="text-slate-400 font-light max-w-md text-justify">
+                        <p 
+                            className="max-w-md text-justify"
+                            style={{
+                                fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                fontWeight: 300,
+                                color: 'rgb(71, 85, 105)',
+                                fontSize: '20px',
+                                lineHeight: '28px',
+                                fontStyle: 'normal'
+                            }}
+                        >
                             Parce que la santé de votre foyer ne supporte aucune approximation, nous avons bâti un protocole rigoureux qui garantit une pureté absolue à chaque étape.
                         </p>
                     </div>
@@ -81,7 +91,17 @@ const BetterWaterStats = () => {
                                         <h3 className="md:text-3xl text-white mb-4 group-hover:text-blue-400 transition-colors tracking-tight">
                                             {item.title}
                                         </h3>
-                                        <p className="leading-[25px] text-slate-400 font-light max-w-xl text-justify">
+                                        <p 
+                                            className="max-w-xl text-justify"
+                                            style={{
+                                                fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                                fontWeight: 300,
+                                                color: 'rgb(71, 85, 105)',
+                                                fontSize: '20px',
+                                                lineHeight: '28px',
+                                                fontStyle: 'normal'
+                                            }}
+                                        >
                                             {item.desc}
                                         </p>
                                     </div>

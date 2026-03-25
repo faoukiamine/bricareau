@@ -138,10 +138,17 @@ const DesinfectionUV = () => {
                             <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.2em] mb-6">
                                 TRAITEMENT d'EAU POTABLE SANS CHLORE
                             </span>
-                            <h2 className="text-slate-900 mb-8 leading-[1.1] group-hover:text-blue-600 transition-colors">
-                                <span className="font-light block">Pourquoi choisir la</span>
-                                <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">
-                                    désinfection UV ?</span>
+                            <h2
+                                className="mb-8"
+                                style={{
+                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                    fontSize: '48px',
+                                    lineHeight: '48px',
+                                    fontStyle: 'normal'
+                                }}
+                            >
+                                <span className="italic font-light text-[#2563eb] block">Pourquoi choisir la</span>
+                                <span className="font-bold text-[#1e3a8a] block text-center">désinfection UV ?</span>
                             </h2>
                             <p className="text-slate-500 font-light text-lg max-w-2xl mx-auto leading-relaxed">
                                 Une technologie de pointe qui neutralise les pathogènes par rayonnement, offrant une eau pure sans aucun compromis chimique.
@@ -225,11 +232,16 @@ const DesinfectionUV = () => {
                     <div className="container mx-auto px-6">
                         <div className="text-left mb-16">
                             <h2
-                                className="text-slate-900 mb-8 text-left"
-                                style={{}}
+                                className="mb-8 text-left"
+                                style={{
+                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                    fontSize: '48px',
+                                    lineHeight: '48px',
+                                    fontStyle: 'normal'
+                                }}
                             >
-                                <span className="font-light leading-[1.1] block">Nos systèmes de</span>
-                                <span className="font-normal leading-[1.1] block">désinfection UV</span>
+                                <span className="italic font-light text-[#2563eb] block">Nos systèmes de</span>
+                                <span className="font-bold text-[#1e3a8a] block">désinfection UV</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600 mb-12"></div>
 
@@ -286,11 +298,16 @@ const DesinfectionUV = () => {
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
                             <h2
-                                className="text-slate-900 mb-8 text-left"
-                                style={{}}
+                                className="mb-8 text-left"
+                                style={{
+                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                    fontSize: '48px',
+                                    lineHeight: '48px',
+                                    fontStyle: 'normal'
+                                }}
                             >
-                                <span className="font-light leading-[1.1] block">Comparez nos</span>
-                                <span className="font-normal leading-[1.1] block">systèmes UV</span>
+                                <span className="italic font-light text-[#2563eb] block">Comparez nos</span>
+                                <span className="font-bold text-[#1e3a8a] block">systèmes UV</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
@@ -364,10 +381,18 @@ const DesinfectionUV = () => {
 
                     <div className="container mx-auto px-4 relative z-10 flex items-center py-12 lg:py-0">
                         <div className="max-w-2xl text-slate-900 lg:text-white">
-                             <h2 className="mb-8 text-slate-900 lg:text-white font-bold uppercase font-weight-bold 900">
-                                 Des tests d'eau précis <br />
-                                 pour une tranquillité d'esprit totale.
-                             </h2>
+                             <h2
+                                className="mb-8"
+                                style={{
+                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                    fontSize: '48px',
+                                    lineHeight: '48px',
+                                    fontStyle: 'normal'
+                                }}
+                            >
+                                <span className="italic font-light text-blue-400 block">Des tests d'eau précis</span>
+                                <span className="font-bold text-white block">pour une tranquillité d'esprit totale.</span>
+                            </h2>
                             <p className="font-light text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
                                 Ne devinez pas la qualité de votre eau. Nos analyses approfondies identifient les bactéries, les minéraux et les contaminants chimiques pour vous offrir une tranquillité d'esprit totale.
                             </p>
@@ -390,9 +415,8 @@ const DesinfectionUV = () => {
                     filterProduct="/Systemes-de-desinfection-UV"
                     title={
                         <>
-                            <span className="font-light block">Zéro bactérie,</span>
-                            <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">
-                                100 % sérénité.</span>
+                            <span className="italic font-light text-[#2563eb] block text-center">Zéro bactérie,</span>
+                            <span className="font-bold text-[#1e3a8a] block text-center">100 % sérénité.</span>
                         </>
                     }
                 />
@@ -400,7 +424,17 @@ const DesinfectionUV = () => {
                 <section className="bg-white py-24">
                     <div className="container mx-auto px-4">
                         <div className="text-center mb-16">
-                            <h2 className="text-slate-900 mb-8">Découvrez les produits associés</h2>
+                            <h2
+                                className="mb-8"
+                                style={{
+                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                    fontSize: '48px',
+                                    lineHeight: '48px',
+                                    fontStyle: 'normal'
+                                }}
+                            >
+                                <span className="font-bold text-[#1e3a8a] block text-center">Découvrez les produits associés</span>
+                            </h2>
                             <p className="font-light text-gray-500 max-w-2xl mx-auto text-center">
                                 Optimisez votre expérience de traitement d'eau avec nos solutions complémentaires.
                             </p>
@@ -472,11 +506,16 @@ const DesinfectionUV = () => {
                     <div className="container mx-auto px-4 text-left">
                         <div className="text-left mb-16">
                             <h2
-                                className="text-slate-900 mb-8 text-left"
-                                style={{}}
+                                className="mb-8 text-left"
+                                style={{
+                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                    fontSize: '48px',
+                                    lineHeight: '48px',
+                                    fontStyle: 'normal'
+                                }}
                             >
-                                <span className="font-light leading-[1.1] block">Pour vous éclairer</span>
-                                <span className="font-normal leading-[1.1] block">Questions fréquentes</span>
+                                <span className="italic font-light text-[#2563eb] block">Pour vous éclairer</span>
+                                <span className="font-bold text-[#1e3a8a] block">Questions fréquentes</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
@@ -571,9 +610,15 @@ const DesinfectionUV = () => {
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
                             <h2
-                                className="text-slate-900 mb-8 text-left"
-                                style={{}}
-                            >                                <span className="font-normal leading-[1.1] block">Ressources</span>
+                                className="mb-8 text-left"
+                                style={{
+                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                    fontSize: '48px',
+                                    lineHeight: '48px',
+                                    fontStyle: 'normal'
+                                }}
+                            >
+                                <span className="font-bold text-[#1e3a8a] block">Ressources</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>

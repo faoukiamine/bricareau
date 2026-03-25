@@ -711,8 +711,7 @@ const Header = () => {
                 {/* CTA Button */}
                 <div className="px-4 pt-6 pb-4">
                   <Button
-                    size="lg"
-                    className="w-full bg-[#0052ff] hover:bg-[#0052ff]/90 text-white rounded-full"
+                    className="w-full"
                     asChild
                   >
                     <a href="/contact" className="flex items-center justify-center gap-2">

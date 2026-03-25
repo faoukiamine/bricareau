@@ -54,12 +54,18 @@ const ProductShowcase = () => {
             <div className="container mx-auto px-4">
                 {/* Section header */}
                 <div className="text-center mb-12 md:mb-16">
-                    <h2
+                    <h2 
                         id="solutions-title"
-                        className="text-slate-900 scroll-mt-[120px] mb-6"
+                        className="scroll-mt-[120px] mb-8"
+                        style={{
+                            fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                            fontSize: '48px',
+                            lineHeight: '48px',
+                            fontStyle: 'normal'
+                        }}
                     >
-                        <span className="font-light block">Nos solutions résidentielles</span>
-                        <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">de traitement de l'eau</span>
+                        <span className="italic font-light text-[#2563eb] block">Nos solutions résidentielles</span>
+                        <span className="font-bold text-[#1e3a8a] block">de traitement de l'eau</span>
                     </h2>
                 </div>
 
@@ -88,8 +94,15 @@ const ProductShowcase = () => {
                                     {product.name}
                                 </h3>
                                 <p
-                                    className="leading-[25px] text-slate-500 font-light flex-grow text-justify"
-                                    style={{ }}
+                                    className="flex-grow text-justify"
+                                    style={{
+                                        fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                        fontWeight: 300,
+                                        color: 'rgb(71, 85, 105)',
+                                        fontSize: '20px',
+                                        lineHeight: '28px',
+                                        fontStyle: 'normal'
+                                    }}
                                 >
                                     {product.description}
                                 </p>

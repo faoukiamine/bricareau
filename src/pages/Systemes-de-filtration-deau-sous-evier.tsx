@@ -471,25 +471,38 @@ const FiltrationSousEvier = () => {
                 {/* 6. Testimonials Section */}
                 <TestimonialsSection
                     filterProduct="/Systemes-de-filtration-deau-sous-evier"
-                    title={
-                        <>
-                            <span className="font-light block">Adieu les bouteilles plastiques,</span>
-                            <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">
-                                enfin la liberté au robinet.</span>
+                    <div className="container mx-auto px-4 text-left">
+                        <div className="text-left mb-16"></div><h2 
+                                className="mb-8 text-left"
+                                style={{
+                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                    fontSize: '48px',
+                                    lineHeight: '48px',
+                                    fontStyle: 'normal'
+                                }}
+                            >
+                                <span className="italic font-light text-[#2563eb] block">Adieu les bouteilles plastiques,</span>
+                                <span className="font-bold text-[#1e3a8a] block">Enfin la liberté au robinet.</span>
+                            </h2>
                         </>
-                    }
+                    </div>
                 />
 
                 {/* 7. FAQ Section */}
                 <section className="py-24 bg-white border-t border-slate-100">
                     <div className="container mx-auto px-4 text-left">
                         <div className="text-left mb-16">
-                            <h2
-                                className="text-slate-900 mb-8 text-left"
-                                style={{}}
+                            <h2 
+                                className="mb-8 text-left"
+                                style={{
+                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                    fontSize: '48px',
+                                    lineHeight: '48px',
+                                    fontStyle: 'normal'
+                                }}
                             >
-                                <span className="font-light leading-[1.1] block">Pour vous éclairer</span>
-                                <span className="font-normal leading-[1.1] block">Questions fréquentes</span>
+                                <span className="italic font-light text-[#2563eb] block">Pour vous éclairer</span>
+                                <span className="font-bold text-[#1e3a8a] block">Questions fréquentes</span>
                             </h2>
 
                             <div className="w-24 h-1 bg-blue-600"></div>
@@ -596,13 +609,17 @@ const FiltrationSousEvier = () => {
                 <section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
-                            <h2
-                                className="text-slate-900 mb-8 text-left"
-                                style={{}}
-                            >                 
-                                <span className="font-normal leading-[1.1] block">Ressources</span>
+                             <h2 
+                                className="mb-8"
+                                style={{
+                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                    fontSize: '48px',
+                                    lineHeight: '48px',
+                                    fontStyle: 'normal'
+                                }}
+                            >
+                                <span className="font-bold text-[#1e3a8a] block text-left">Ressources</span>
                             </h2>
-
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

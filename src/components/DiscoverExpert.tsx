@@ -15,25 +15,34 @@ const DiscoverExpert = () => {
                     {/* Left Side: Content */}
                     <div className="lg:w-1/2 space-y-10">
                         <div className="space-y-6">
-                            <h2
-                                className="text-slate-900"
-                                style={{ }}
+                            <h2 
+                                style={{
+                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                    fontSize: '48px',
+                                    lineHeight: '48px',
+                                    fontStyle: 'normal'
+                                }}
                             >
-                                <span className="text-[36px] md:text-[36px] font-light leading-[1.1] text-normal block">Votre solution d'eau personnalisée</span>
-                                <span className="text-[36px] md:text-[36px] font-bold leading-[1.1] bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500 block">en quelques clics.</span>
+                                <span className="italic font-light text-[#2563eb] leading-[1.1] block">Votre solution d'eau personnalisée</span>
+                                <span className="font-bold text-[#1e3a8a] leading-[1.1] block">en quelques clics.</span>
                             </h2>
-                            <p className="text-slate-600 font-light max-w-lg">
+                            <p 
+                                className="max-w-lg"
+                                style={{
+                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                    fontWeight: 300,
+                                    color: 'rgb(71, 85, 105)',
+                                    fontSize: '20px',
+                                    lineHeight: '28px',
+                                    fontStyle: 'normal'
+                                }}
+                            >
                                 Quelques étapes suffisent pour transformer l'eau de votre foyer. Identifiez vos priorités et découvrez instantanément le système Bricareau adapté à votre réalité.
                             </p>
                         </div>
 
                         <div className="pt-4">
-                            <Button
-                                size="lg"
-                                className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-10 h-16 text-lg shadow-xl shadow-blue-200 hover:shadow-blue-300 transition-all hover:-translate-y-1 w-full sm:w-auto"
-                                style={{ }}
-                                asChild
-                            >
+                            <Button asChild>
                                 <a href="/diagnostic" className="flex items-center justify-center gap-3">
                                     Diagnostic gratuit en 1 min
                                     <ArrowRight className="w-5 h-5" />

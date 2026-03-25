@@ -147,10 +147,9 @@ const PageConsultation = () => {
                         </Accordion>
 
                         <div className="mt-12 text-center">
-                            <Button
-                                onClick={() => setShowAllFaqs(!showAllFaqs)}
-                                variant="outline"
-                                className="rounded-full px-8 h-12 text-blue-600 border-blue-600 hover:bg-blue-50"
+                             <Button
+                                 onClick={() => setShowAllFaqs(!showAllFaqs)}
+                                 variant="outline"
                             >
                                 {showAllFaqs ? "Voir moins de questions" : "Voir toutes les questions"}
                             </Button>
@@ -181,9 +180,8 @@ const PageConsultation = () => {
                     </p>
                     <div className="flex justify-center">
                         <Button
-                            size="lg"
                             variant="outline"
-                            className="rounded-full px-8 h-14 border-white text-white bg-transparent hover:bg-white/10 flex items-center gap-2"
+                            className="border-white text-white hover:bg-white/10 flex items-center gap-2"
                             asChild
                         >
                             <a href="tel:18552649328">

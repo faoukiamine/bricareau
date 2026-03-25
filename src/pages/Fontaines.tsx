@@ -161,7 +161,17 @@ const ImpactCalculator = () => {
                     </div>
 
                     <div className="pt-2">
-                        <p className="text-[9px] text-slate-400 text-center font-medium italic">
+                        <p 
+                            className="text-center italic"
+                            style={{
+                                fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                fontWeight: 300,
+                                color: 'rgb(71, 85, 105)',
+                                fontSize: '18px',
+                                lineHeight: '24px',
+                                fontStyle: 'italic'
+                            }}
+                        >
                             Éliminez le plastique, valorisez votre santé.
                         </p>
                     </div>
@@ -207,16 +217,23 @@ const SolutionCard = ({ item }: { item: SolutionItem }) => {
                         {item.title}
                     </h3>
                     <div className="w-12 h-1 bg-blue-600/10 rounded-full mx-auto group-hover:w-20 group-hover:bg-blue-600 transition-all duration-700" />
-                    <p className="font-light leading-relaxed text-slate-500 text-sm md:text-base text-justify md:h-[72px]">
+                    <p 
+                        className="flex-grow text-justify"
+                        style={{
+                            fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                            fontWeight: 300,
+                            color: 'rgb(71, 85, 105)',
+                            fontSize: '20px',
+                            lineHeight: '28px',
+                            fontStyle: 'normal'
+                        }}
+                    >
                         {item.desc}
                     </p>
                 </div>
 
                 <div className="mt-8 w-full flex items-center justify-between">
-                    <Button
-                        onClick={() => setShowSpecs(true)}
-                        className="rounded-full bg-blue-600 hover:bg-blue-700 text-white px-8 h-14 font-bold transition-all duration-500 group/btn shadow-xl shadow-blue-100"
-                    >
+                    <Button onClick={() => setShowSpecs(true)}>
                         Spécifications
                         <Plus className="ml-2 w-4 h-4 transition-transform group-hover/btn:rotate-90" />
                     </Button>
@@ -247,7 +264,6 @@ const SolutionCard = ({ item }: { item: SolutionItem }) => {
                 <Button
                     onClick={() => setShowSpecs(false)}
                     variant="outline"
-                    className="mt-8 rounded-full border-slate-200 hover:bg-slate-50 text-slate-600 h-14 font-bold"
                 >
                     Retour
                 </Button>
@@ -281,13 +297,29 @@ const Fontaines = () => {
                             <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.2em] mb-6">
                                 PURETÉ À DOMICILE
                             </span>
-                            <h2 className="text-slate-900 mb-6">
-                                <span className="font-light block">L'hydratation pure à la maison.</span>
-                                <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">
-                                    L'eau fraîche à la portée de vos mains.
-                                </span>
+                            <h2 
+                                className="mb-6"
+                                style={{
+                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                    fontSize: '48px',
+                                    lineHeight: '48px',
+                                    fontStyle: 'normal'
+                                }}
+                            >
+                                <span className="italic font-light text-[#2563eb] block">L'hydratation pure à la maison,</span>
+                                <span className="font-bold text-[#1e3a8a] block">l'eau fraîche à la portée de vos mains.</span>
                             </h2>
-                            <p className="text-slate-500 font-light text-lg leading-relaxed max-w-3xl mx-auto">
+                            <p 
+                                className="max-w-3xl mx-auto"
+                                style={{
+                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                    fontWeight: 300,
+                                    color: 'rgb(71, 85, 105)',
+                                    fontSize: '20px',
+                                    lineHeight: '28px',
+                                    fontStyle: 'normal'
+                                }}
+                            >
                                 Bricareau redéfinit votre expérience d'hydratation quotidienne avec des solutions d'eau fraîche haut de gamme.
                                 Offrez à votre famille le luxe d'une eau d'une pureté exceptionnelle, toujours à la température idéale.
                             </p>
@@ -331,13 +363,29 @@ const Fontaines = () => {
                             <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.2em] mb-6">
                                 TECHNOLOGIE & RESPONSABILITÉ
                             </span>
-                            <h2 className="text-slate-900 mb-6">
-                                <span className="font-light block">Plus qu'une fontaine d'eau,</span>
-                                <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">
-                                    un choix intelligent & responsable.
-                                </span>
+                            <h2 
+                                className="mb-6"
+                                style={{
+                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                    fontSize: '48px',
+                                    lineHeight: '48px',
+                                    fontStyle: 'normal'
+                                }}
+                            >
+                                <span className="italic font-light text-[#2563eb] block">Plus qu'une fontaine d'eau,</span>
+                                <span className="font-bold text-[#1e3a8a] block">un choix intelligent & responsable.</span>
                             </h2>
-                            <p className="text-slate-500 font-light text-lg max-w-2xl mx-auto leading-relaxed">
+                            <p 
+                                className="max-w-2xl mx-auto"
+                                style={{
+                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                    fontWeight: 300,
+                                    color: 'rgb(71, 85, 105)',
+                                    fontSize: '20px',
+                                    lineHeight: '28px',
+                                    fontStyle: 'normal'
+                                }}
+                            >
                                 Alliez performance technologique, responsabilité écologique et économies domestiques pour un quotidien sans compromis.
                             </p>
                         </div>
@@ -359,7 +407,17 @@ const Fontaines = () => {
                                             <span className="text-[10px] font-black text-white uppercase tracking-widest">Expérience Premium</span>
                                         </div>
                                         <h3 className="font-bold text-white tracking-tight">Art de Vivre</h3>
-                                        <p className="text-white/80 font-light text-lg max-w-xl">
+                                        <p 
+                                            className="text-white/80"
+                                            style={{
+                                                fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                                fontWeight: 300,
+                                                color: 'rgba(255, 255, 255, 0.8)',
+                                                fontSize: '20px',
+                                                lineHeight: '28px',
+                                                fontStyle: 'normal'
+                                            }}
+                                        >
                                             Une pureté incomparable qui s'intègre harmonieusement à votre quotidien. Découvrez l'équilibre parfait entre esthétique et santé.
                                         </p>
                                     </div>
@@ -399,10 +457,8 @@ const Fontaines = () => {
                     limit={5}
                     title={
                         <>
-                            <span className="font-light block">L’eau que vous méritez,</span>
-                            <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">
-                                le service que vous n'oublierez pas.
-                            </span>
+                            <span className="italic font-light text-[#2563eb] block">L’eau que vous méritez,</span>
+                            <span className="font-bold text-[#1e3a8a] block">le service que vous n'oublierez pas.</span>
                         </>
                     }
                 />
@@ -415,14 +471,30 @@ const Fontaines = () => {
                                 <span className="inline-block px-4 py-1.5 bg-blue-50 text-blue-600 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] mb-6">
                                     NOTRE PORTFOLIO
                                 </span>
-                                <h2 className="text-slate-900 text-[36px] tracking-tight leading-[1.1]">
-                                    <span className="font-light block">Intégration</span>
-                                    <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">
-                                        parfaite & élégante.</span>
+                                <h2 
+                                    className="tracking-tight leading-[1.1]"
+                                    style={{
+                                        fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                        fontSize: '48px',
+                                        lineHeight: '48px',
+                                        fontStyle: 'normal'
+                                    }}
+                                >
+                                    <span className="italic font-light text-[#2563eb] block">Intégration</span>
+                                    <span className="font-bold text-[#1e3a8a] block">parfaite & élégante.</span>
                                 </h2>
                             </div>
                             <div className="max-w-md pb-2">
-                                <p className="text-slate-500 font-light text-lg">
+                                <p 
+                                    style={{
+                                        fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                        fontWeight: 300,
+                                        color: 'rgb(71, 85, 105)',
+                                        fontSize: '20px',
+                                        lineHeight: '28px',
+                                        fontStyle: 'normal'
+                                    }}
+                                >
                                     Découvrez comment nos fontaines et refroidisseurs d'eau s'intègrent harmonieusement dans tous les espaces, alliant esthétique moderne et fonctionnalité.
                                 </p>
                             </div>
@@ -475,19 +547,34 @@ const Fontaines = () => {
                     </div>
                     <div className="container mx-auto px-6 relative z-10 text-center">
                         <div className="max-w-4xl mx-auto">
-                            <h2 className="text-white mb-6">
-                                <span className="font-bold text-white block">Sublimez votre quotidien avec l'excellence de nos fontaines d'eau.</span>
+                            <h2 
+                                className="mb-8"
+                                style={{
+                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                    fontSize: '48px',
+                                    lineHeight: '48px',
+                                    fontStyle: 'normal'
+                                }}
+                            >
+                                <span className="italic font-light text-blue-400 block">Sublimez</span>
+                                <span className="font-bold text-white block">votre quotidien avec l'excellence de nos fontaines d'eau.</span>
                             </h2>
-                            <p className="text-blue-100/80 font-light text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
+                            <p 
+                                className="mb-12 max-w-2xl mx-auto"
+                                style={{
+                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                    fontWeight: 300,
+                                    color: 'rgba(219, 234, 254, 0.8)',
+                                    fontSize: '20px',
+                                    lineHeight: '28px',
+                                    fontStyle: 'normal'
+                                }}
+                            >
                                 Rejoignez le club familles Bricareau et profitez d'une source d'eau digne d'un palace, sans sortir de chez vous.
                             </p>
 
                             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                                <Button
-                                    size="lg"
-                                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-12 h-16 shadow-2xl shadow-white/30 group text-lg font-light"
-                                    asChild
-                                >
+                                <Button asChild>
                                     <a href="tel:18552649328" className="flex items-center gap-3">
                                         <Phone className="h-5 w-5 animate-bounce" />
                                         Parlez à un expert
@@ -495,9 +582,7 @@ const Fontaines = () => {
                                 </Button>
 
                                 <Button
-                                    size="lg"
                                     variant="outline"
-                                    className="rounded-full px-10 h-16 border-white/30 text-white bg-white/5 hover:bg-white/10 backdrop-blur-md text-lg transition-all duration-500"
                                     asChild
                                 >
                                     <NavLink to="/consultation">Planifiez-vous une consultation</NavLink>
@@ -544,14 +629,31 @@ const Fontaines = () => {
                                     <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] mb-8">
                                         NOTRE ENGAGEMENT
                                     </span>
-                                    <h4 className="text-slate-900 text-[36px] tracking-tight leading-[1.1]">
-                                        <span className="font-light block mb-2 text-slate-500">Vers un monde</span>
-                                        <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">
-                                        sans bouteilles en plastique.</span>
+                                    <h4 
+                                        className="tracking-tight leading-[1.1]"
+                                        style={{
+                                            fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                            fontSize: '48px',
+                                            lineHeight: '48px',
+                                            fontStyle: 'normal'
+                                        }}
+                                    >
+                                        <span className="italic font-light text-[#2563eb] block mb-2">Vers un monde</span>
+                                        <span className="font-bold text-[#1e3a8a] block">sans bouteilles en plastique.</span>
                                     </h4>
                                 </div>
                                 <div className="max-w-md md:pb-3">
-                                    <p className="text-lg font-light italic text-slate-500 border-l-[3px] border-blue-600 pl-6 py-2">
+                                    <p 
+                                        className="italic border-l-[3px] border-blue-600 pl-6 py-2"
+                                        style={{
+                                            fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                            fontWeight: 300,
+                                            color: 'rgb(71, 85, 105)',
+                                            fontSize: '20px',
+                                            lineHeight: '28px',
+                                            fontStyle: 'italic'
+                                        }}
+                                    >
                                         "Notre gamme offre une eau saine, fraîche et délicieuse, pour les professionnels et les particuliers."
                                     </p>
                                 </div>
@@ -579,7 +681,17 @@ const Fontaines = () => {
 
                                                     <div className="flex flex-col gap-1">
                                                         <span className="text-sm font-semibold text-slate-900 transition-colors duration-300">{item.title}</span>
-                                                        <p className="text-slate-500 font-light text-base leading-relaxed max-w-lg transition-colors duration-300">
+                                                        <p 
+                                                            className="max-w-lg transition-colors duration-300"
+                                                            style={{
+                                                                fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                                                fontWeight: 300,
+                                                                color: 'rgb(71, 85, 105)',
+                                                                fontSize: '20px',
+                                                                lineHeight: '28px',
+                                                                fontStyle: 'normal'
+                                                            }}
+                                                        >
                                                             {item.text}
                                                         </p>
                                                     </div>
@@ -619,7 +731,18 @@ const Fontaines = () => {
                                                     <h4 className="text-slate-900 font-bold text-lg tracking-tight mb-3 group-hover:text-blue-700 transition-colors duration-300">{item.label}</h4>
                                                     {/* Animated Underline */}
                                                     <div className="h-[2px] w-6 bg-slate-200 mb-4 group-hover:w-12 group-hover:bg-blue-600 transition-all duration-500 ease-out rounded-full" />
-                                                    <p className="text-slate-500 font-light text-sm leading-relaxed">{item.desc}</p>
+                                                    <p 
+                                                        style={{
+                                                            fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                                            fontWeight: 300,
+                                                            color: 'rgb(71, 85, 105)',
+                                                            fontSize: '20px',
+                                                            lineHeight: '28px',
+                                                            fontStyle: 'normal'
+                                                        }}
+                                                    >
+                                                        {item.desc}
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>

@@ -40,6 +40,37 @@ const FiltresDeRemplacement = () => {
                     </div>
                 </div>
 
+                <section className="py-24 bg-white overflow-hidden">
+                    <div className="container mx-auto px-6 relative z-10">
+                        <div className="max-w-4xl mx-auto text-center mb-16">
+                            <h2 
+                                className="mb-8"
+                                style={{
+                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                    fontSize: '48px',
+                                    lineHeight: '48px',
+                                    fontStyle: 'normal'
+                                }}
+                            >
+                                <span className="italic font-light text-[#2563eb] block">Filtres de remplacement :</span>
+                                <span className="font-bold text-[#1e3a8a] block">La pureté préservée, jour après jour.</span>
+                            </h2>
+                            <p 
+                                className="mx-auto max-w-2xl"
+                                style={{
+                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                    fontSize: '20px',
+                                    fontWeight: '300',
+                                    lineHeight: '28px',
+                                    color: 'rgb(71, 85, 105)'
+                                }}
+                            >
+                                Identifiez facilement le filtre compatible avec votre système pour garantir une performance optimale.
+                            </p>
+                        </div>
+                </div>
+                </section>
+
                 <div id="categories">
                     {partCategories.map((category, categoryIndex) => (
                         <section key={categoryIndex} className="py-12 md:py-16">

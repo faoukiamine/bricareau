@@ -83,9 +83,14 @@ const TestimonialsSection = ({
         <section className="py-20 bg-white overflow-hidden relative">
             <div className="container mx-auto px-4 max-w-6xl">
                 <div className="text-center mb-16">
-                    <h2
+                    <h2 
                         className="text-foreground"
-                        style={{}}
+                        style={{
+                            fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                            fontSize: '48px',
+                            lineHeight: '48px',
+                            fontStyle: 'normal'
+                        }}
                     >
                         {title}
                     </h2>
@@ -104,7 +109,17 @@ const TestimonialsSection = ({
                                         </div>
 
                                         {/* Quote Content */}
-                                        <p className="leading-[25px] text-[#4B5563] mb-12 font-normal italic">
+                                        <p 
+                                            className="mb-12"
+                                            style={{
+                                                fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                                fontWeight: 300,
+                                                color: 'rgb(71, 85, 105)',
+                                                fontSize: '20px',
+                                                lineHeight: '28px',
+                                                fontStyle: 'normal'
+                                            }}
+                                        >
                                             « {item.text} »
                                         </p>
 

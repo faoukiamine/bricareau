@@ -181,19 +181,44 @@ const FiltresPuits = () => {
                             {/* Left: Text Content with Creative Typography */}
                             <div className="lg:w-1/2 space-y-12">
                                 <div className="space-y-6">
-                                    <h2 className="text-slate-900 leading-[1.1] mb-12">
-                                        <span className="font-light block tracking-tighter">Votre puits possède</span>
-                                        <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">
-                                            son propre ADN.</span>
+                                    <h2 
+                                        className="mb-12"
+                                        style={{
+                                            fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                            fontSize: '48px',
+                                            lineHeight: '48px',
+                                            fontStyle: 'normal'
+                                        }}
+                                    >
+                                        <span className="italic font-light text-[#2563eb] block text-left">Votre puits possède</span>
+                                        <span className="font-bold text-[#1e3a8a] block text-left">son propre ADN.</span>
                                     </h2>
                                 </div>
 
                                 <div className="space-y-8">
-                                    <p className="text-lg text-slate-500 font-light leading-relaxed italic text-justify max-w-xl">
+                                     <p 
+                                        className="italic text-justify max-w-xl"
+                                        style={{
+                                            fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                            fontSize: '20px',
+                                            fontWeight: '300',
+                                            lineHeight: '28px',
+                                            color: 'rgb(71, 85, 105)'
+                                        }}
+                                    >
                                         "Une filtration d'eau classique est une réponse générique à un problème unique. Nous concevons la solution en respectant l'ADN de votre eau."
                                     </p>
                                     
-                                    <p className="text-lg text-slate-500 font-light leading-relaxed text-justify max-w-xl">
+                                    <p 
+                                        className="text-justify max-w-xl"
+                                        style={{
+                                            fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                            fontSize: '20px',
+                                            fontWeight: '300',
+                                            lineHeight: '28px',
+                                            color: 'rgb(71, 85, 105)'
+                                        }}
+                                    >
                                         L'eau de votre puits est le fruit d'une géologie complexe. Là où d'autres voient simplement du fer ou du calcaire, Bricareau analyse la synergie des minéraux. Notre approche bridge l'écart entre une eau brute, parfois agressive, et une ressource précieuse, revitalisante et protectrice pour votre foyer. 
                                     </p>
                                 </div>
@@ -258,15 +283,29 @@ const FiltresPuits = () => {
                 <section id="specialized-filters" className="py-24 bg-gray-50 scroll-mt-20">
                     <div className="container mx-auto px-6">
                         <div className="text-left mb-16">
-                            <h2
-                                className="text-slate-900 mb-8 text-left"
-                                style={{}}
+                            <h2 
+                                className="mb-8 text-left"
+                                style={{
+                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                    fontSize: '48px',
+                                    lineHeight: '48px',
+                                    fontStyle: 'normal'
+                                }}
                             >
-                                <span className="font-light leading-[1.1] block">Nos filtres d'eau spécialisés</span>
-                                <span className="font-normal leading-[1.1] block">pour le traitement de l'eau de votre puits</span>
+                                <span className="italic font-light text-[#2563eb] block text-left">Nos filtres d'eau</span>
+                                <span className="font-bold text-[#1e3a8a] block text-left">spécialisés - Eau de puits</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
-                            <p className="mt-8 font-light text-slate-600 text-justify w-full">
+                            <p 
+                                className="mt-8 text-justify w-full"
+                                style={{
+                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                    fontSize: '20px',
+                                    fontWeight: '300',
+                                    lineHeight: '28px',
+                                    color: 'rgb(71, 85, 105)'
+                                }}
+                            >
                                 Découvrez notre gamme complète de filtres spécialisés, conçus pour répondre aux défis uniques des puits privés artésiens ou de surface. Que vous fassiez face à des taches de fer tenaces, des odeurs de soufre incommodantes, une eau acide corrosive ou la présence de contaminants invisibles comme l'arsenic, nos systèmes offrent une solution ciblée et performante. Chaque unité est dotée d'une technologie de pointe pour assurer une filtration maximale tout en préservant l'intégrité de votre plomberie et de vos appareils électroménagers. En investissant dans l'une de nos solutions Vortex, Iron Shield, Zen-pH, ou autres, vous choisissez une tranquillité d'esprit durable et une qualité d'eau irréprochable pour toute votre famille. Nos experts vous accompagnent dans le diagnostic et l'installation pour garantir que chaque goutte d'eau qui coule de votre robinet soit pure, sûre et limpide.
                             </p>
                         </div>
@@ -289,8 +328,14 @@ const FiltresPuits = () => {
                                             {p.name}
                                         </h3>
                                         <p
-                                            className="text-slate-500 font-light flex-grow text-justify"
-                                            style={{}}
+                                            className="text-justify"
+                                            style={{
+                                                fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                                fontSize: '20px',
+                                                fontWeight: '300',
+                                                lineHeight: '28px',
+                                                color: 'rgb(71, 85, 105)'
+                                            }}
                                         >
                                             {p.desc}
                                         </p>
@@ -315,12 +360,28 @@ const FiltresPuits = () => {
                     
                     <div className="container mx-auto px-6 relative z-10">
                         <div className="max-w-4xl mx-auto text-center mb-32">
-                            <h2 className="text-slate-900 leading-[1.1] mb-12">
-                                <span className="font-light block tracking-tighter">Pourquoi choisir nos</span>
-                                <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">
-                                    systèmes de filtration d'eau ?</span>
+                            <h2
+                                className="mb-12"
+                                style={{
+                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                    fontSize: '48px',
+                                    lineHeight: '48px',
+                                    fontStyle: 'normal'
+                                }}
+                            >
+                                <span className="italic font-light text-[#2563eb] block">Pourquoi choisir nos</span>
+                                <span className="font-bold text-[#1e3a8a] block text-center">systèmes de filtration d'eau ?</span>
                             </h2>
-                            <p className="text-lg text-slate-500 font-light leading-relaxed text-center max-w-xl mx-auto">
+                            <p 
+                                className="text-center max-w-xl mx-auto"
+                                style={{
+                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                    fontSize: '20px',
+                                    fontWeight: '300',
+                                    lineHeight: '28px',
+                                    color: 'rgb(71, 85, 105)'
+                                }}
+                            >
                                 Plus qu'un simple système de filtration, c'est une protection avancée pour votre santé et un confort durable pour toute votre famille.
                             </p>
                         </div>
@@ -338,7 +399,16 @@ const FiltresPuits = () => {
                                     <h3 className="text-[24px] font-bold text-slate-900 leading-tight group-hover:text-blue-600 transition-colors duration-500">
                                         Eau cristalline
                                     </h3>
-                                    <p className="text-lg text-slate-500 font-light leading-relaxed text-justify max-w-xl">
+                                     <p 
+                                        className="text-justify max-w-xl"
+                                        style={{
+                                            fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                            fontSize: '20px',
+                                            fontWeight: '300',
+                                            lineHeight: '28px',
+                                            color: 'rgb(71, 85, 105)'
+                                        }}
+                                    >
                                         Éliminez les sédiments et la turbidité pour une eau d'une clarté professionnelle partout chez vous.
                                     </p>
                                 </div>
@@ -366,7 +436,16 @@ const FiltresPuits = () => {
                                     <h3 className="text-[24px] font-bold text-slate-900 leading-tight group-hover:text-blue-600 transition-colors duration-500">
                                         Protection totale
                                     </h3>
-                                    <p className="text-lg text-slate-500 font-light leading-relaxed text-justify max-w-xl">
+                                     <p 
+                                        className="text-justify max-w-xl"
+                                        style={{
+                                            fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                            fontSize: '20px',
+                                            fontWeight: '300',
+                                            lineHeight: '28px',
+                                            color: 'rgb(71, 85, 105)'
+                                        }}
+                                    >
                                         Empêchez le fer et les minéraux corrosifs de tacher vos éviers et de détruire votre plomberie.
                                     </p>
                                 </div>
@@ -394,7 +473,16 @@ const FiltresPuits = () => {
                                     <h3 className="text-[24px] font-bold text-slate-900 leading-tight group-hover:text-blue-600 transition-colors duration-500">
                                         Zéro odeur
                                     </h3>
-                                    <p className="text-lg text-slate-500 font-light leading-relaxed text-justify max-w-xl">
+                                     <p 
+                                        className="text-justify max-w-xl"
+                                        style={{
+                                            fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                            fontSize: '20px',
+                                            fontWeight: '300',
+                                            lineHeight: '28px',
+                                            color: 'rgb(71, 85, 105)'
+                                        }}
+                                    >
                                         Dites adieu aux odeurs d'œufs pourris (soufre) et au goût de chlore pour une eau fraîche.
                                     </p>
                                 </div>
@@ -418,11 +506,16 @@ const FiltresPuits = () => {
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
                             <h2
-                                className="text-slate-900 mb-8 text-left"
-                                style={{}}
+                                className="mb-8 text-left"
+                                style={{
+                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                    fontSize: '48px',
+                                    lineHeight: '48px',
+                                    fontStyle: 'normal'
+                                }}
                             >
-                                <span className="font-light leading-[1.1] block">Comparez nos filtres d'eau</span>
-                                <span className="font-normal leading-[1.1] block">spécialisés pour l'eau de puits</span>
+                                <span className="italic font-light text-[#2563eb] block">Comparez nos filtres d'eau</span>
+                                <span className="font-bold text-[#1e3a8a] block">spécialisés pour l'eau de puits</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
@@ -501,9 +594,17 @@ const FiltresPuits = () => {
                             <span className="text-blue-600 lg:text-white/80 font-bold uppercase tracking-widest text-sm mb-4 block">
                                 Contrôle de la Qualité D'EAU
                             </span>
-                            <h2 className="mb-8 text-slate-900 lg:text-white font-bold uppercase">
-                                L'excellence commence<br />
-                                par une eau parfaite.
+                            <h2
+                                className="mb-8"
+                                style={{
+                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                    fontSize: '48px',
+                                    lineHeight: '48px',
+                                    fontStyle: 'normal'
+                                }}
+                            >
+                                <span className="italic font-light text-blue-400 block">L'excellence commence</span>
+                                <span className="font-bold text-white block">par une eau parfaite.</span>
                             </h2>
                             <p className="font-light text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
                                 Le luxe, c'est de ne pas avoir à se soucier de la qualité de ce que l'on consomme. Offrez-vous la sérénité d'une eau analysée par des experts, pour une maison où tout brille, sans effort et sans compromis.
@@ -527,10 +628,17 @@ const FiltresPuits = () => {
                     filterProduct="/filtration"
                     title={
                         <>
-                            <h2 className="text-slate-900 mb-6 font-bold">
-                                <span className="font-light block">Buvez l'eau de votre puits sans crainte</span>
-                                <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">
-                                    Ils ont fait le saut avec nous.</span>
+                             <h2
+                                className="mb-6"
+                                style={{
+                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                    fontSize: '48px',
+                                    lineHeight: '48px',
+                                    fontStyle: 'normal'
+                                }}
+                            >
+                                <span className="italic font-light text-[#2563eb] block text-center">Buvez l'eau de votre puits sans crainte</span>
+                                <span className="font-bold text-[#1e3a8a] block text-center">Ils ont fait le saut avec nous.</span>
                             </h2>
                         </>
                     }
@@ -540,7 +648,17 @@ const FiltresPuits = () => {
                 <section className="bg-white py-24">
                     <div className="container mx-auto px-4">
                         <div className="text-center mb-16">
-                            <h2 className="text-slate-900 mb-8 font-bold">Découvrez les produits associés</h2>
+                            <h2
+                                className="mb-8"
+                                style={{
+                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                    fontSize: '48px',
+                                    lineHeight: '48px',
+                                    fontStyle: 'normal'
+                                }}
+                            >
+                                <span className="font-bold text-[#1e3a8a] block text-center">Découvrez les produits associés</span>
+                            </h2>
                             <p className="font-light text-gray-500 max-w-2xl mx-auto">
                                 Optimisez votre expérience de traitement d'eau avec nos solutions complémentaires.
                             </p>
@@ -618,8 +736,17 @@ const FiltresPuits = () => {
 
                     <div className="container mx-auto px-6 relative z-10 text-center">
                         <div className="max-w-4xl mx-auto">
-                            <h2 className="text-white mb-6">
-                                <span className="font-bold leading-tight block tracking-tight">Passez d'une eau problématique à une source de pureté irréprochable avec nos systèmes de pointe.</span>
+                            <h2 
+                                className="mb-6"
+                                style={{
+                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                    fontSize: '48px',
+                                    lineHeight: '48px',
+                                    fontStyle: 'normal'
+                                }}
+                            >
+                                <span className="italic font-light text-blue-400 block tracking-tight">Passez d'une eau problématique</span>
+                                <span className="font-bold text-white block tracking-tight">à une source de pureté.</span>
                             </h2>
 
                             <p className="text-blue-100/80 font-light text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
@@ -660,11 +787,16 @@ const FiltresPuits = () => {
                     <div className="container mx-auto px-6">
                         <div className="text-left mb-16">
                             <h2
-                                className="text-slate-900 mb-8 text-left"
-                                style={{}}
+                                className="mb-8 text-left"
+                                style={{
+                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                    fontSize: '48px',
+                                    lineHeight: '48px',
+                                    fontStyle: 'normal'
+                                }}
                             >
-                                <span className="font-light leading-[1.1] block">Pour vous éclairer</span>
-                                <span className="font-normal leading-[1.1] block">Questions fréquentes</span>
+                                <span className="italic font-light text-[#2563eb] block">Pour vous éclairer</span>
+                                <span className="font-bold text-[#1e3a8a] block">Questions fréquentes</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
@@ -697,11 +829,16 @@ const FiltresPuits = () => {
                 <section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
-                            <h2
-                                className="text-slate-900 mb-8 text-left"
-                                style={{}}
-                            >                 
-                                <span className="font-normal leading-[1.1] block">Ressources</span>
+                            <h2 
+                                className="mb-8 text-left"
+                                style={{
+                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                    fontSize: '48px',
+                                    lineHeight: '48px',
+                                    fontStyle: 'normal'
+                                }}
+                            >
+                                <span className="font-bold text-[#1e3a8a] block text-left">Ressources</span>
                             </h2>
 
                             <div className="w-24 h-1 bg-blue-600"></div>

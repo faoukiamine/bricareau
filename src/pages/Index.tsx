@@ -23,8 +23,8 @@ const Index = () => {
           limit={6}
           title={
             <>
-              <span className="font-light block">Votre confiance.</span>
-              <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">Notre plus grande fierté.</span>
+              <span className="italic font-light text-[#2563eb] block">Votre confiance.</span>
+              <span className="font-bold text-[#1e3a8a] block">Notre plus grande fierté.</span>
             </>
           }
         />
