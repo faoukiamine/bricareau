@@ -84,9 +84,9 @@ import EffetsCachesEauDureElectromenagers from "./pages/Blog pages/Eau-dure-les-
 import EstCeSecuritaireBoireEauAdoucie from "./pages/Blog pages/Est-ce-securitaire-de-boire-de-leau-adoucie";
 import GoutDeChlorePourquoiLaVilleEnAjouteAutant from "./pages/Blog pages/Gout-de-chlore-pourquoi-la-ville-en-ajoute-autant";
 
-
+import PolitiqueConfidentialite from "./pages/Politique-de-Confidentialite";
+import ConditionsGeneralesUtilisation from "./pages/Conditions-Generales-Utilisation";
 import NotFound from "./pages/NotFound";
-
 
 const queryClient = new QueryClient();
 
@@ -164,6 +164,8 @@ const App = () => (
           <Route path="/entreprises" element={<Entreprises />} />
           <Route path="/commercial-industriel" element={<CommercialIndustriel />} />
           <Route path="/promotions" element={<Promotions />} />
+          <Route path="/politique-de-confidentialite" element={<PolitiqueConfidentialite />} />
+          <Route path="/conditions-generales-utilisation" element={<ConditionsGeneralesUtilisation />} />
 
           {/* Blog Routes */}
           <Route path="/adoucisseur-deau-et-fosse-septique-mythes-et-realites" element={<TraitementUVNaturel />} />

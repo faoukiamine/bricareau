@@ -24,7 +24,7 @@ const Index = () => {
           title={
             <>
               <span className="font-light block">Votre confiance.</span>
-              <span className="font-bold text-blue-600 block">Notre plus grande fierté.</span>
+              <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">Notre plus grande fierté.</span>
             </>
           }
         />

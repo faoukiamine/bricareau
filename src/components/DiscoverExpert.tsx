@@ -19,8 +19,8 @@ const DiscoverExpert = () => {
                                 className="text-slate-900"
                                 style={{ }}
                             >
-                                <span className="text-[40px] md:text-[56px] font-light leading-[1.1] text-blue-600 block">Votre solution d'eau</span>
-                                <span className="text-[40px] md:text-[56px] font-bold leading-[1.1] text-600 block">personnalisée en quelques clics.</span>
+                                <span className="text-[36px] md:text-[36px] font-light leading-[1.1] text-normal block">Votre solution d'eau personnalisée</span>
+                                <span className="text-[36px] md:text-[36px] font-bold leading-[1.1] bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500 block">en quelques clics.</span>
                             </h2>
                             <p className="text-slate-600 font-light max-w-lg">
                                 Quelques étapes suffisent pour transformer l'eau de votre foyer. Identifiez vos priorités et découvrez instantanément le système Bricareau adapté à votre réalité.

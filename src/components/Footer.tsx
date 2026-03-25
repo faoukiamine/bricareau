@@ -1,6 +1,7 @@
 import { Facebook, Twitter, Youtube, Instagram, Mail } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -157,12 +158,12 @@ const Footer = () => {
               <a href="/contact" className="hover:text-white transition-colors">
                 Contact
               </a>
-              <a href="#" className="hover:text-white transition-colors">
+              <Link to="/politique-de-confidentialite" className="hover:text-white transition-colors">
                 Politique de confidentialité
-              </a>
-              <a href="#" className="hover:text-white transition-colors">
+              </Link>
+              <Link to="/conditions-generales-utilisation" className="hover:text-white transition-colors">
                 Conditions d'utilisation
-              </a>
+              </Link>
             </div>
           </div>
         </div>

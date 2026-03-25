@@ -58,8 +58,8 @@ const ProductShowcase = () => {
                         id="solutions-title"
                         className="text-slate-900 scroll-mt-[120px] mb-6"
                     >
-                        <span className="font-light block">Solutions résidentielles</span>
-                        <span className="font-bold text-blue-600 block">de traitement de l'eau</span>
+                        <span className="font-light block">Nos solutions résidentielles</span>
+                        <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">de traitement de l'eau</span>
                     </h2>
                 </div>
 

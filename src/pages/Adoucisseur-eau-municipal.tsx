@@ -15,7 +15,8 @@ import {
     Wifi,
     Shirt,
     Award,
-    HandCoins
+    HandCoins,
+    Binary
 } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import { useNavigate } from "react-router-dom";
@@ -28,6 +29,10 @@ import waterSoftenerImg from "@/assets/Adoucisseurs d'eau.webp";
 import TwinAlternatingWaterSoftenerImg from "@/assets/Alternating Water Softener.png";
 import SentinelWaterSoftenerImg from "@/assets/Sentinelle Water Softener.png";
 import SerenityWaterSoftenerImg from "@/assets/Serenity Water Softener.png";
+import savingsConceptImg from "@/assets/savings-water.png";
+import efficiencyTechnoImg from "@/assets/efficiency-water.png";
+import intelligenceWaterImg from "@/assets/intelligence-water.png";
+import expertiseWaterImg from "@/assets/expertise-water.png";
 import {
     Accordion,
     AccordionContent,
@@ -35,10 +40,6 @@ import {
     AccordionTrigger
 } from "@/components/ui/accordion";
 import ConsultationFormSection from "@/components/ConsultationFormSection";
-import process1 from "@/assets/2148563485.jpg";
-import process2 from "@/assets/section-image-and-content-23.jpg";
-import process3 from "@/assets/SERVICES.jpg";
-import process4 from "@/assets/unnamed (2).jpg";
 import labTestImg from "@/assets/test-laboratoire-diligence-inspection-750x500.jpg";
 const products = [
     { name: "Adoucisseur d'eau de la série \n Sentinelle", desc: "Le rythme parfait d'une eau toujours douce.", path: "/contact", image: SentinelWaterSoftenerImg },
@@ -185,38 +186,66 @@ const AdoucisseurEauMunicipal = () => {
                             </div>
                         </div>
                     </div>
-
                 </section>
-
-                {/* 3. Why choose our residential water softeners */}
-                <section className="py-24 bg-blue-600 text-white text-center">
-                    <div className="container mx-auto px-6 text-center">
-                        <div className="text-center mb-16">
-                            <h2 className="text-white mb-8 md:leading-[48px] text-center">
-                                Pourquoi choisir nos <br />adoucisseurs d'eau résidentiels ?
-                            </h2>
-                            <p className="font-light text-blue-100 max-w-2xl mx-auto text-justify">
-                                Plus qu'un simple appareil, c'est une solution complète pour la qualité de l'eau et le confort de toute votre famille.
-                            </p>
-                        </div>
-                        <div className="flex flex-wrap justify-center gap-x-12 gap-y-16">
-                            {[
-                                { icon: HandCoins, title: "Économies garanties", desc: "Réduisez vos factures d'énergie et vos dépenses en savons et détergents de 50%." },
-                                { icon: Zap, title: "Efficacité HE", desc: "Une technologie haute efficacité qui consomme moins de sel et d'eau." },
-                                { icon: Wifi, title: "Régénération adaptée", desc: "Nous avons la technologie exacte pour votre profil." },
-                                { icon: Award, title: "Expertise Bricareau", desc: "Installation certifiée et service après-vente pour une tranquillité d'esprit totale." }
-                            ].map((item, id) => (
-                                <div key={id} className="flex flex-col items-center group w-full sm:w-[calc(50%-3rem)] lg:w-[calc(25%-3rem)]">
-                                    <div className="w-20 h-20 rounded-2xl bg-white flex items-center justify-center mb-8 transition-all group-hover:scale-110 group-hover:bg-white/10">
-                                        <item.icon className="h-10 w-10 text-blue-600 group-hover:text-white" />
-                                    </div>
-                                    <h4 className="mb-4 tracking-tight">{item.title}</h4>
-                                    <p className="font-light text-blue-100 text-justify">{item.desc}</p>
+                
+                {/* 2. Scientific Theory Section: How it Works */}
+                <section className="py-24 lg:py-32 bg-white relative overflow-hidden">
+                    {/* Background elements */}
+                    <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-blue-50/30 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/4" />
+                    <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-cyan-50/30 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/4" />
+                    
+                    <div className="container mx-auto px-6 relative z-10">
+                        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+                            
+                             {/* Centered Context */}
+                             <div className="lg:col-span-12 max-w-4xl mx-auto space-y-12">
+                                <div>
+                                    <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.3em] mb-6">
+                                        SCIENCE & INNOVATION
+                                    </span>
+                                    <h2 className="text-slate-900 mb-8 leading-[1.1] tracking-tight">
+                                        La science de <br />
+                                        <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">l'échange ionique.</span>
+                                    </h2>
+                                    <p className="text-slate-500 font-light text-lg leading-relaxed text-justify">
+                                        Au cœur de chaque adoucisseur Bricareau se trouve un processus chimique fascinant. Contrairement aux filtres standards qui retiennent les impuretés physiques, l'adoucisseur agit au niveau moléculaire pour transformer la nature même de votre eau.
+                                    </p>
                                 </div>
-                            ))}
+
+                                <div className="space-y-6">
+                                    <div className="p-8 bg-slate-50 rounded-[2.5rem] border border-slate-100 hover:shadow-xl transition-all duration-500 group">
+                                        <div className="flex gap-6 items-start">
+                                            <div className="w-12 h-12 rounded-2xl bg-white shadow-sm flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                                                <Binary className="w-6 h-6" />
+                                            </div>
+                                            <div className="flex-1">
+                                                <h4 className="card-title text-base mb-2">Le secret est dans la résine</h4>
+                                                <p className="text-slate-500 text-sm font-light leading-relaxed">
+                                                    Le réservoir contient des millions de billes de résine polymère chargées d'ions sodium. Ces billes agissent comme des aimants intelligents pour attirer le calcaire.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="p-8 bg-slate-50 rounded-[2.5rem] border border-slate-100 hover:shadow-xl transition-all duration-500 group">
+                                        <div className="flex gap-6 items-start">
+                                            <div className="w-12 h-12 rounded-2xl bg-white shadow-sm flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                                                <Droplets className="w-6 h-6" />
+                                            </div>
+                                            <div className="flex-1">
+                                                <h4 className="card-title text-base mb-2">Substitution moléculaire</h4>
+                                                <p className="text-slate-500 text-sm font-light leading-relaxed">
+                                                    Lorsqu'une molécule de calcium ou de magnésium touche la résine, elle s'y fixe instantanément, libérant en échange une quantité infime de sodium inoffensif.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
+
 
                 {/* 4.Product Grid Section */}
                 <section id="nos-adoucisseurs" className="py-24 bg-gray-50">
@@ -269,6 +298,111 @@ const AdoucisseurEauMunicipal = () => {
                                         >
                                             <span></span>
                                             <ArrowRight className="h-6 w-6 transform group-hover:translate-x-1 transition-transform" />
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+                {/* 3. Why choose our residential water softeners - Visual Visual Editorial Redesign */}
+                <section className="py-20 bg-slate-950 relative overflow-hidden">
+                    {/* Immersive Deep Background */}
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-blue-600/5 rounded-full blur-[200px] pointer-events-none" />
+                    
+                    {/* Minimalist Grid Markers (Tech Blueprint Vibe) */}
+                    <div className="absolute inset-0 opacity-[0.04] pointer-events-none">
+                        <div className="absolute top-0 left-1/2 w-px h-full bg-white hidden lg:block" />
+                        <div className="absolute top-1/4 left-0 w-full h-px bg-white hidden lg:block" />
+                    </div>
+
+                    <div className="container mx-auto px-6 relative z-20">
+                        {/* Elegant Header with Staggered Typography */}
+                        <div className="flex flex-col lg:flex-row items-end justify-between mb-20 gap-8">
+                            <div className="max-w-xl text-left">
+                                <span className="text-blue-500 font-black tracking-[0.4em] text-[11px] uppercase mb-4 block underline decoration-blue-500/30 underline-offset-8">EXCELLENCE BRICAREAU</span>
+                                <h2 className="text-white tracking-tighter leading-[0.9] text-5xl md:text-7xl lg:text-8xl">
+                                    Élite de la <br />
+                                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-300 to-indigo-300 font-black">Pureté.</span>
+                                </h2>
+                            </div>
+                            <p className="text-white font-light text-xl max-w-sm text-left lg:text-right border-l lg:border-l-0 lg:border-r-2 border-blue-500/30 pl-6 lg:pl-0 lg:pr-8 leading-relaxed italic opacity-80">
+                                L'alliance parfaite entre une technologie invisible et des bénéfices tangibles et durables.
+                            </p>
+                        </div>
+
+                        {/* Staggered Visual Blocks Grid */}
+                        <div className="space-y-24 lg:space-y-32">
+                            {[
+                                { 
+                                    icon: HandCoins, 
+                                    num: "01",
+                                    title: "Économies Invisibles", 
+                                    desc: "Une optimisation chirurgicale de vos ressources. Réduisez vos dépenses en sel, eau et électricité dès le premier jour.",
+                                    image: savingsConceptImg,
+                                    reverse: false
+                                },
+                                { 
+                                    icon: Zap, 
+                                    num: "02",
+                                    title: "Efficacité Haute-fidélité", 
+                                    desc: "Une technologie haute efficacité qui garantit une douceur constante avec une empreinte écologique minimale.",
+                                    image: efficiencyTechnoImg,
+                                    reverse: true
+                                },
+                                { 
+                                    icon: Wifi, 
+                                    num: "03",
+                                    title: "Intelligence Régénérative", 
+                                    desc: "Un cerveau électronique qui apprend de vos habitudes pour ne régénérer que le strict nécessaire. Précis. Intelligent.",
+                                    image: intelligenceWaterImg,
+                                    reverse: false
+                                },
+                                { 
+                                    icon: Award, 
+                                    num: "04",
+                                    title: "Expertise Certifiée Bricareau", 
+                                    desc: "L'excellence de l'installation et de l'accompagnement d'élite. Choisissez la tranquillité d'esprit absolue.",
+                                    image: expertiseWaterImg,
+                                    reverse: true
+                                }
+                            ].map((item, id) => (
+                                <div key={id} className={`flex flex-col lg:flex-row items-center gap-12 lg:gap-20 ${item.reverse ? 'lg:flex-row-reverse' : ''}`}>
+                                    {/* Text Content */}
+                                    <div className="flex-1 space-y-8 relative">
+                                        <div className="flex items-center gap-6">
+                                            <div className="relative group">
+                                                <div className="absolute inset-0 bg-blue-500/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
+                                                <item.icon className="h-14 w-14 text-blue-400 relative z-10" strokeWidth={1} />
+                                            </div>
+                                            <span className="text-6xl font-black text-white/5 tracking-tighter select-none leading-none">
+                                                {item.num}
+                                            </span>
+                                        </div>
+                                        <h4 className="text-3xl md:text-5xl font-bold text-white tracking-tight">{item.title}</h4>
+                                        <p className="text-white font-normal leading-relaxed text-lg lg:text-xl text-justify opacity-90 italic max-w-xl">
+                                            {item.desc}
+                                        </p>
+                                        <div className="flex items-center gap-4 pt-4">
+                                            <div className="h-1 w-12 bg-blue-600 rounded-full" />
+                                            <div className="h-1 w-2 bg-blue-900 rounded-full" />
+                                        </div>
+                                    </div>
+
+                                    {/* Visual Representation */}
+                                    <div className="flex-1 w-full group relative">
+                                        {/* Atmosphere Aura */}
+                                        <div className="absolute -inset-4 bg-blue-500/10 blur-[100px] opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
+                                        
+                                        <div className="relative aspect-video lg:aspect-[4/3] overflow-hidden rounded-[3rem] border border-white/5 transition-all duration-700 shadow-2xl group-hover:scale-[1.02]">
+                                            <img 
+                                                src={item.image} 
+                                                alt={item.title} 
+                                                className="w-full h-full object-cover scale-105 group-hover:scale-100 transition-all duration-1000"
+                                            />
+                                            {/* Minimalist Overlay Fade */}
+                                            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 to-transparent opacity-60" />
                                         </div>
                                     </div>
                                 </div>

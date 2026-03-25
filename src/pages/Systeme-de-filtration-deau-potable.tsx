@@ -177,10 +177,10 @@ const StationEauPotable = () => {
                   Issue du dessalement de l’eau de mer, cette technologie utilise une membrane de 0,0001 micron pour bloquer les impuretés les plus infimes. Cette barrière physique absolue élimine virus, métaux lourds et micropolluants, garantissant une pureté cristalline constante à chaque verre.
                 </p>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-8 border-t border-slate-100 text-justify">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-8 border-t border-slate-100">
                    {[
                      { 
-                       title: "Qualité supérieure à la bouteille", 
+                       title: "Qualité supérieure à l'eau embouteillée", 
                        desc: "Accédez à une eau d'une pureté certifiée, surpassant les standards des eaux minérales du commerce."
                      },
                      { 
@@ -196,11 +196,15 @@ const StationEauPotable = () => {
                        desc: "Profitez d'un débit constant et illimité directement à votre robinet, sans aucune attente."
                      }
                    ].map((item, idx) => (
-                     <div key={idx} className="group flex gap-3 p-1 transition-all duration-500 cursor-default">
-                        <div className="w-1.5 h-1.5 bg-blue-600 rounded-full mt-[10px] flex-shrink-0 group-hover:scale-125 transition-transform" />
-                        <div>
-                           <h4 className="font-bold text-slate-800 text-lg mb-2 group-hover:text-blue-600 transition-colors">{item.title}</h4>
-                           <p className="text-slate-500 font-light text-sm leading-relaxed">{item.desc}</p>
+                     <div key={idx} className="group p-1 transition-all duration-500 cursor-default">
+                        <div className="flex items-start gap-3 mb-2">
+                           <div className="h-6 flex items-center shrink-0"> {/* H-6 matching the line-height of text-lg (approx 1.5rem/24px) */}
+                              <div className="w-1.5 h-1.5 bg-slate-500 rounded-full group-hover:scale-125 transition-transform" />
+                           </div>
+                           <h5 className="font-[420] block text-slate-500 text-left leading-6">{item.title}</h5>
+                        </div>
+                        <div className="pl-[1.125rem]"> {/* Align with title text (6px bullet + 12px gap) */}
+                           <p className="text-slate-500 font-light text-sm leading-relaxed text-left">{item.desc}</p>
                         </div>
                      </div>
                    ))}
@@ -305,7 +309,7 @@ const StationEauPotable = () => {
 
           <div className="container mx-auto px-6 relative z-10">
             <div className="max-w-4xl mx-auto text-center mb-24">
-              <span className="inline-block px-4 py-1.5 bg-blue-50 text-blue-600 rounded-full text-xs font-black uppercase tracking-widest mb-6">
+              <span className="inline-block px-4 py-1.5 bg-blue-600 text-blue-600 rounded-full text-xs text-white font-black uppercase tracking-widest mb-6">
                 L'EXCELLENCE DE L'OSMOSE INVERSE AU QUOTIDIEN
               </span>
               <h2 className="text-slate-900 leading-[1.05] tracking-[ -0.04em] mb-10 text-center">
