@@ -392,7 +392,7 @@ const Fontaines = () => {
 
                         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-10">
                             {/* Main Visual Card - Asymmetrical Large */}
-                            <div className="md:col-span-8 group relative rounded-[3.5rem] overflow-hidden shadow-[0_30px_70px_-20px_rgba(0,0,0,0.15)] h-[650px]">
+                            <div className="md:col-span-8 group relative -mx-6 lg:mx-0 rounded-none lg:rounded-[3.5rem] overflow-hidden shadow-none lg:shadow-[0_30px_70px_-20px_rgba(0,0,0,0.15)] h-[450px] md:h-[600px] lg:h-[650px]">
                                 <img
                                     src={ecoImpactImg6}
                                     alt="L'expérience d'eau pure Bricareau"
@@ -553,7 +553,8 @@ const Fontaines = () => {
                                     fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
                                     fontSize: '48px',
                                     lineHeight: '48px',
-                                    fontStyle: 'normal'
+                                    fontStyle: 'normal',
+                                    fontWeight: 300,
                                 }}
                             >
                                 <span className="font-bold text-white block">Sublimez votre quotidien avec </span>
@@ -564,7 +565,7 @@ const Fontaines = () => {
                                 style={{
                                     fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
                                     fontWeight: 300,
-                                    color: 'rgba(219, 234, 254, 0.8)',
+                                    color: 'rgba(255, 255, 255, 0.8)',
                                     fontSize: '20px',
                                     lineHeight: '28px',
                                     fontStyle: 'normal'

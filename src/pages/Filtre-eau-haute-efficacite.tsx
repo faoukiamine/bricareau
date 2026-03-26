@@ -73,28 +73,11 @@ const FiltreEauHauteEfficacite = () => {
                                 <span className="text-blue-600 font-bold uppercase tracking-widest text-[10px] md:text-sm mb-4 block">
                                     SYSTÈME DE FILTRATION D'EAU
                                 </span>
-                                <h1
-                                    className="leading-[1.1] md:leading-[1.2] mb-8 tracking-tighter text-slate-900 text-center"
-                                    style={{
-                                        fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                        fontSize: '64px',
-                                        fontWeight: '800',
-                                        lineHeight: '64px'
-                                    }}
-                                >
+                                <h1 className="leading-[1.1] md:leading-[1.2] mb-8 tracking-tighter text-slate-900 text-center">
                                     <span className="italic font-light text-[#2563eb] block">Bricareau</span>
                                     <span className="font-bold text-[#1e3a8a] block">High Efficiency (HE)</span>
                                 </h1>
-                                <p 
-                                    className="mb-8 text-center lg:text-justify max-w-xl mx-auto lg:mx-0"
-                                    style={{
-                                        fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                        fontSize: '20px',
-                                        fontWeight: '300',
-                                        lineHeight: '28px',
-                                        color: 'rgb(71, 85, 105)'
-                                    }}
-                                >
+                                <p className="body-pro-max mb-8 text-center lg:text-justify max-w-xl mx-auto lg:mx-0">
                                     L'adoucisseur et filtre d'eau le plus efficace au monde. Profitez d'une eau d'une pureté absolue tout en réalisant des économies d'eau et de sel inégalées.
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -151,15 +134,7 @@ const FiltreEauHauteEfficacite = () => {
                     <div className="container mx-auto px-6">
                         <div className="flex flex-col lg:flex-row items-center gap-16">
                             <div className="lg:w-1/2 order-2 lg:order-1">
-                                <h2 
-                                    className="mb-8"
-                                    style={{
-                                        fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                        fontSize: '48px',
-                                        lineHeight: '48px',
-                                        fontStyle: 'normal'
-                                    }}
-                                >
+                                <h2 className="mb-8 heading-pro-max">
                                     <span className="italic font-light text-[#2563eb] block text-left">Exclusivités</span>
                                     <span className="font-bold text-[#1e3a8a] block text-left">technologiques de Bricareau</span>
                                 </h2>
@@ -169,18 +144,18 @@ const FiltreEauHauteEfficacite = () => {
                                             <div className="w-2 h-8 bg-blue-600 rounded-full" />
                                             Aqua-Sensor® Digital
                                         </h3>
-                                        <p className="font-light text-slate-600 text-justify">
-                                            Le cerveau de votre système. Contrairement aux systèmes basés sur le temps, notre capteur breveté ajuste la régénération en fonction de l'utilisation réelle et de la dureté de l'eau.
-                                        </p>
+                                         <p className="body-pro-max text-slate-600 text-justify">
+                                             Le cerveau de votre système. Contrairement aux systèmes basés sur le temps, notre capteur breveté ajuste la régénération en fonction de l'utilisation réelle et de la dureté de l'eau.
+                                         </p>
                                     </div>
                                     <div className="p-8 bg-white rounded-3xl shadow-sm border border-slate-100">
                                         <h3 className="mb-4 flex items-center gap-3">
                                             <div className="w-2 h-8 bg-blue-600 rounded-full" />
                                             Bricareau Connect App
                                         </h3>
-                                        <p className="font-light text-slate-600 text-justify">
-                                            Une tranquillité d'esprit totale. Suivez votre consommation, recevez des alertes de fuite ou de niveau de sel bas directement sur votre téléphone.
-                                        </p>
+                                         <p className="body-pro-max text-slate-600 text-justify">
+                                             Une tranquillité d'esprit totale. Suivez votre consommation, recevez des alertes de fuite ou de niveau de sel bas directement sur votre téléphone.
+                                         </p>
                                     </div>
                                 </div>
                             </div>
@@ -198,30 +173,13 @@ const FiltreEauHauteEfficacite = () => {
                 {/* 3. Filtration Intelligente (Benefits) */}
                 <section className="py-24 bg-white">
                     <div className="container mx-auto px-6 text-center">
-                        <h2 
-                            className="mb-8"
-                            style={{
-                                fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                fontSize: '48px',
-                                lineHeight: '48px',
-                                fontStyle: 'normal'
-                            }}
-                        >
+                        <h2 className="mb-8 heading-pro-max">
                             <span className="italic font-light text-[#2563eb] block">Filtration intelligente qui</span>
                             <span className="font-bold text-[#1e3a8a] block">améliore votre vie au quotidien</span>
                         </h2>
-                        <p 
-                            className="mb-16 max-w-3xl mx-auto text-justify"
-                            style={{
-                                fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                fontSize: '20px',
-                                fontWeight: '300',
-                                lineHeight: '28px',
-                                color: 'rgb(71, 85, 105)'
-                            }}
-                        >
-                            Plus qu'un simple filtre, c'est une protection complète pour votre santé et votre maison.
-                        </p>
+                         <p className="body-pro-max text-slate-500 text-center mx-auto">
+                             Plus qu'un simple filtre, c'est une protection complète pour votre santé et votre maison.
+                         </p>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                             {[
                                 { title: "Fini le goût et les odeurs", desc: "Élimine le chlore et les sédiments pour une eau pure au robinet.", icon: Droplets },
@@ -238,7 +196,9 @@ const FiltreEauHauteEfficacite = () => {
                                         )}
                                     </div>
                                     <h3 className="card-title mb-4">{benefit.title}</h3>
-                                    <p className="font-light text-slate-500 text-sm text-justify">{benefit.desc}</p>
+                                     <p className="body-pro-max text-slate-500 text-justify mb-8">
+                                         {benefit.desc}
+                                     </p>
                                 </div>
                             ))}
                         </div>
@@ -249,27 +209,11 @@ const FiltreEauHauteEfficacite = () => {
                 <section className="bg-white min-h-[600px] lg:h-[800px] relative overflow-hidden flex flex-col lg:items-center">
                     <div className="container mx-auto px-6 relative z-10 h-full flex flex-col lg:flex-row items-center justify-between gap-8">
                         <div>
-                            <h2 
-                                className="mb-8"
-                                style={{
-                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                    fontSize: '48px',
-                                    lineHeight: '48px',
-                                    fontStyle: 'normal'
-                                }}
-                            >
+                            <h2 className="mb-8 heading-pro-max">
                                 <span className="italic font-light text-blue-400 block">Prêt pour une</span>
                                 <span className="font-bold text-white block">meilleure eau ?</span>
                             </h2>
-                            <p 
-                                className="text-blue-100"
-                                style={{
-                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                    fontSize: '20px',
-                                    fontWeight: '300',
-                                    lineHeight: '28px'
-                                }}
-                            >
+                            <p className="body-pro-max text-blue-100 mb-8 lg:mb-0">
                                 Découvrez pourquoi Bricareau est le leader mondial de l'eau.
                             </p>
                         </div>
@@ -295,15 +239,7 @@ const FiltreEauHauteEfficacite = () => {
                                 </div>
                             </div>
                             <div className="lg:w-1/2 text-left">
-                                <h2 
-                                    className="mb-8"
-                                    style={{
-                                        fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                        fontSize: '48px',
-                                        lineHeight: '48px',
-                                        fontStyle: 'normal'
-                                    }}
-                                >
+                                <h2 className="mb-8 heading-pro-max">
                                     <span className="italic font-light text-[#2563eb] block text-left">Le choix intelligent</span>
                                     <span className="font-bold text-[#1e3a8a] block text-left">pour votre maison.</span>
                                 </h2>
@@ -318,7 +254,9 @@ const FiltreEauHauteEfficacite = () => {
                                             <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center shrink-0">
                                                 <Check className="w-4 h-4 text-blue-600" />
                                             </div>
-                                            <p className="text-slate-700 font-light">{point}</p>
+                                             <p className="body-pro-max text-slate-700 text-justify">
+                                                 {point}
+                                             </p>
                                         </div>
                                     ))}
                                 </div>
@@ -336,15 +274,7 @@ const FiltreEauHauteEfficacite = () => {
                 {/* 6. Service Plan Section */}
                 <section className="py-24 bg-slate-50">
                     <div className="container mx-auto px-6 text-center">
-                        <h2 
-                            className="mb-16"
-                            style={{
-                                fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                fontSize: '48px',
-                                lineHeight: '48px',
-                                fontStyle: 'normal'
-                            }}
-                        >
+                        <h2 className="mb-16 heading-pro-max text-center">
                             <span className="italic font-light text-[#2563eb] block text-center">Plan d'entretien et</span>
                             <span className="font-bold text-[#1e3a8a] block text-center">tranquillité d'esprit</span>
                         </h2>
@@ -363,7 +293,9 @@ const FiltreEauHauteEfficacite = () => {
                                         )}
                                     </div>
                                     <h3 className="card-title mb-4">{plan.title}</h3>
-                                    <p className="font-light text-slate-500 text-sm text-justify">{plan.desc}</p>
+                                     <p className="body-pro-max text-slate-500 text-justify">
+                                         {plan.desc}
+                                     </p>
                                 </div>
                             ))}
                         </div>
@@ -373,15 +305,7 @@ const FiltreEauHauteEfficacite = () => {
                 {/* 7. Comparison Table */}
                 <section className="py-24 bg-white">
                     <div className="container mx-auto px-6">
-                        <h2 
-                            className="mb-16 text-center"
-                            style={{
-                                fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                fontSize: '48px',
-                                lineHeight: '48px',
-                                fontStyle: 'normal'
-                            }}
-                        >
+                        <h2 className="mb-16 heading-pro-max text-center">
                             <span className="italic font-light text-[#2563eb] block">Pourquoi choisir le</span>
                             <span className="font-bold text-[#1e3a8a] block">Bricareau HE ?</span>
                         </h2>
@@ -423,22 +347,14 @@ const FiltreEauHauteEfficacite = () => {
                 <section className="py-24 bg-slate-50">
                     <div className="container mx-auto px-6">
                         <div className="max-w-4xl mx-auto text-center">
-                            <h2 
-                                className="mb-8"
-                                style={{
-                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                    fontSize: '48px',
-                                    lineHeight: '48px',
-                                    fontStyle: 'normal'
-                                }}
-                            >
+                            <h2 className="mb-8 heading-pro-max text-center">
                                 <span className="italic font-light text-[#2563eb] block text-center">Installation.</span>
                                 <span className="font-bold text-[#1e3a8a] block text-center">Tranquille.</span>
                             </h2>
-                            <p className="font-light text-slate-600 mb-16 text-justify">
-                                Nos techniciens certifiés Bricareau ne se contentent pas d'installer votre système. Ils s'assurent qu'il fonctionne à son plein potentiel pour des années de service fiable.
-                            </p>
-                            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+                             <p className="body-pro-max text-slate-600 text-justify mb-16 max-w-2xl mx-auto">
+                                 Nos techniciens certifiés Bricareau ne se contentent pas d'installer votre système. Ils s'assurent qu'il fonctionne à son plein potentiel pour des années de service fiable.
+                             </p>
+                           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                                 {[
                                     { title: "Planification expertise", desc: "Diagnostic gratuit de votre plomberie." },
                                     { title: "Installation certifiée", desc: "Respect strict des normes locales." },
@@ -459,15 +375,7 @@ const FiltreEauHauteEfficacite = () => {
                 {/* 9. FAQ Section */}
                 <section className="py-24 bg-white">
                     <div className="container mx-auto px-6 max-w-4xl">
-                        <h2 
-                            className="mb-16 text-center"
-                            style={{
-                                fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                fontSize: '48px',
-                                lineHeight: '48px',
-                                fontStyle: 'normal'
-                            }}
-                        >
+                        <h2 className="mb-16 heading-pro-max text-center">
                             <span className="italic font-light text-[#2563eb] block text-center">Questions</span>
                             <span className="font-bold text-[#1e3a8a] block text-center">fréquemment posées</span>
                         </h2>
@@ -503,17 +411,9 @@ const FiltreEauHauteEfficacite = () => {
                     filterProduct="/filtre-eau-haute-efficacite" 
                     title={
                         <>
-                             <h2
-                                className="mb-6"
-                                style={{
-                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                    fontSize: '48px',
-                                    lineHeight: '48px',
-                                    fontStyle: 'normal'
-                                }}
-                            >
-                                <span className="italic font-light text-[#2563eb] block text-center">L'eau pure,</span>
-                                <span className="font-bold text-[#1e3a8a] block text-center">le témoignage de nos clients.</span>
+                             <h2 className="mb-8 heading-pro-max text-center">
+                                <span className="italic font-light text-[#2563eb] block">L'eau pure,</span>
+                                <span className="font-bold text-[#1e3a8a] block">le témoignage de nos clients.</span>
                             </h2>
                         </>
                     }
@@ -524,22 +424,14 @@ const FiltreEauHauteEfficacite = () => {
                     <div className="container mx-auto px-6">
                         <div className="bg-white rounded-[4rem] shadow-2xl flex flex-col lg:flex-row items-center overflow-hidden">
                             <div className="lg:w-1/2 p-12 lg:p-24 text-left">
-                                <h2 
-                                    className="mb-8"
-                                    style={{
-                                        fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                        fontSize: '48px',
-                                        lineHeight: '48px',
-                                        fontStyle: 'normal'
-                                    }}
-                                >
+                                <h2 className="mb-8 heading-pro-max text-left">
                                     <span className="italic font-light text-[#2563eb] block text-left">Offrez-vous le confort</span>
                                     <span className="font-bold text-[#1e3a8a] block text-left">que vous méritez.</span>
                                 </h2>
-                                <p className="font-light text-slate-600 mb-12 text-justify">
-                                    Plus de 11 millions de familles font confiance à Bricareau. Rejoignez-les dès aujourd'hui et transformez votre quotidien.
-                                </p>
-                                <Button className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-12 h-16 text-xl shadow-xl transition-all hover:scale-105" asChild>
+                                 <p className="body-pro-max text-slate-600 text-justify mb-12">
+                                     Plus de 11 millions de familles font confiance à Bricareau. Rejoignez-les dès aujourd'hui et transformez votre quotidien.
+                                 </p>
+                               <Button className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-12 h-16 text-xl shadow-xl transition-all hover:scale-105" asChild>
                                     <NavLink to="/contact">Planifier ma consultation</NavLink>
                                 </Button>
                             </div>
@@ -557,15 +449,7 @@ const FiltreEauHauteEfficacite = () => {
                 {/* 12. Related Products */}
                 <section className="py-24 bg-white border-t border-slate-100">
                     <div className="container mx-auto px-6">
-                        <h2 
-                            className="mb-8 text-center"
-                            style={{
-                                fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                fontSize: '48px',
-                                lineHeight: '48px',
-                                fontStyle: 'normal'
-                            }}
-                        >
+                        <h2 className="mb-8 heading-pro-max text-center">
                             <span className="italic font-light text-[#2563eb] block">Découvrez d'autres</span>
                             <span className="font-bold text-[#1e3a8a] block">solutions</span>
                         </h2>
@@ -585,8 +469,10 @@ const FiltreEauHauteEfficacite = () => {
                                     </div>
                                     <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
                                         <h3 className="mb-2 group-hover:text-blue-600 transition-colors tracking-tight">{prod.title}</h3>
-                                        <p className="font-light text-slate-500 text-sm mb-6 flex-grow text-justify">{prod.desc}</p>
-                                        <NavLink
+                                         <p className="body-pro-max text-slate-500 text-justify">
+                                             {prod.desc}
+                                         </p>
+                                       <NavLink
                                             to={prod.link || "#"}
                                             className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-sm"
                                         >

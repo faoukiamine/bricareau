@@ -141,7 +141,7 @@ const ProblemHero = () => {
 
                             <Button
                                 size="lg"
-                                className="bg-slate-900 hover:bg-slate-800 text-white rounded-full px-8 h-14 w-full md:w-auto self-start z-10 shadow-lg"
+                                className="bg-slate-900 hover:bg-slate-800 text-white rounded-full px-8 h-14 w-fit self-start z-10 shadow-lg"
                                 asChild
                             >
                                 <a href="/consultation" className="flex items-center justify-center gap-2">

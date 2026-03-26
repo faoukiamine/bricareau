@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import React, { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -68,7 +69,21 @@ const Filtration = () => {
     const [showAllFaqs, setShowAllFaqs] = React.useState(false);
     const [showAllHarms, setShowAllHarms] = React.useState(false);
 
-    const [emblaRef] = useEmblaCarousel({ loop: true }, [Autoplay({ delay: 4000 })]);
+    const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay({ delay: 4000 })]);
+    const [selectedIndex, setSelectedIndex] = React.useState(0);
+    const [scrollSnaps, setScrollSnaps] = React.useState<number[]>([]);
+
+    const onSelect = React.useCallback(() => {
+        if (!emblaApi) return;
+        setSelectedIndex(emblaApi.selectedScrollSnap());
+    }, [emblaApi, setSelectedIndex]);
+
+    useEffect(() => {
+        if (!emblaApi) return;
+        onSelect();
+        setScrollSnaps(emblaApi.scrollSnapList());
+        emblaApi.on('select', onSelect);
+    }, [emblaApi, setScrollSnaps, onSelect]);
     useEffect(() => {
         document.title = "Filtration d'eau : Une pureté maximale pour votre maison";
         const metaDesc = document.querySelector('meta[name="description"]');
@@ -201,12 +216,12 @@ const Filtration = () => {
                             </div>
 
                             {/* Right Column: Cinematic Slideshow */}
-                            <div className="lg:col-span-7 relative sticky top-32">
-                                <div className="relative rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white group">
+                            <div className="lg:col-span-7 relative lg:sticky lg:top-32 -mx-6 lg:mx-0">
+                                <div className="relative rounded-none lg:rounded-[3rem] overflow-hidden shadow-2xl border-0 lg:border-8 border-white group">
                                     <div className="embla overflow-hidden" ref={emblaRef}>
                                         <div className="embla__container flex">
-                                            {[glassofwaterImg,healthwaterImg,dechetbouteilleImg,oldpipesImg,eauinnondiationImg,contaminatedwaterImg ].map((img, idx) => (
-                                                <div key={idx} className="embla__slide flex-[0_0_100%] min-w-0 relative h-[600px]">
+                                            {[glassofwaterImg, healthwaterImg, dechetbouteilleImg, oldpipesImg, eauinnondiationImg, contaminatedwaterImg].map((img, idx) => (
+                                                <div key={idx} className="embla__slide flex-[0_0_100%] min-w-0 relative h-[400px] md:h-[500px] lg:h-[600px]">
                                                     <img
                                                         src={img}
                                                         alt={`Problématique eau municipale ${idx + 1}`}
@@ -217,87 +232,108 @@ const Filtration = () => {
                                             ))}
                                         </div>
                                     </div>
+
+                                    {/* Pagination Buttons - Premium Glass Style */}
+                                    <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-2.5 z-30 bg-black/10 backdrop-blur-md px-4 py-2.5 rounded-full border border-white/10 shadow-2xl transition-all hover:bg-black/20 group-hover:bottom-10">
+                                        {scrollSnaps.map((_, index) => (
+                                            <button
+                                                key={index}
+                                                onClick={() => emblaApi?.scrollTo(index)}
+                                                className={cn(
+                                                    "h-1.5 rounded-full transition-all duration-500",
+                                                    index === selectedIndex 
+                                                        ? "bg-white w-8 shadow-[0_0_15px_rgba(255,255,255,0.5)]" 
+                                                        : "bg-white/30 w-1.5 hover:bg-white/60"
+                                                )}
+                                                aria-label={`Go to slide ${index + 1}`}
+                                            />
+                                        ))}
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
 
-                {/* 3. Benefits Section - Redesigned for Premium Look */}
-                <section className="py-24 bg-white relative overflow-hidden">
-                    {/* Abstract background elements */}
-                    <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-blue-50/50 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 -z-10" />
-                    <div className="absolute bottom-0 left-0 w-1/4 h-1/4 bg-blue-50 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2 -z-10" />
-
-                    <div className="container mx-auto px-6">
-                        <div className="text-center mb-20 max-w-3xl mx-auto">
-                            <h2
-                                className="mb-8 text-left"
-                                style={{
-                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                    fontSize: '48px',
-                                    lineHeight: '48px',
-                                    fontStyle: 'normal'
-                                }}
-                            >
-                                <span className="italic font-light text-[#2563eb] block text-center">Pourquoi choisir nos systèmes</span>
-                                <span className="font-bold text-[#1e3a8a] block text-center">de filtration d'eau ?</span>
-                            </h2>
-                            <p className="text-slate-500 font-light text-lg">
-                                Plus qu'une simple filtration, c'est une protection avancée pour votre santé et un confort durable pour votre foyer au quotidien.
-                            </p>
-                        </div>
-
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-justify">
-                            {[
-                                {
-                                    iconSrc: waterDropsImg,
-                                    title: "Goût exceptionnel",
-                                    desc: "Élimine 99% du chlore et des mauvaises odeurs pour une eau pure et savoureuse à chaque robinet."
-                                },
-                                {
-                                    icon: HandCoins,
-                                    title: "Économies réelles",
-                                    desc: "Réduisez vos dépenses annuelles de plus de 500$ en éliminant définitivement l'achat d'eau embouteillée."
-                                },
-                                {
-                                    iconSrc: ecoImg,
-                                    title: "Éco-responsable",
-                                    desc: "Agissez pour la planète en évitant l'utilisation de milliers de bouteilles de plastique à usage unique chaque année."
-                                },
-                                {
-                                    iconSrc: cheerImg,
-                                    title: "Sérénité Totale",
-                                    desc: "Des systèmes conçus pour une fiabilité maximale avec un entretien minimal et des changements de filtres ultra-rapides."
-                                }
-                            ].map((benefit: any, i) => (
-                                <div key={i} className="group bg-white border border-slate-100 rounded-[2rem] p-8 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2 relative overflow-hidden">
-                                    <div className="absolute -right-4 -bottom-4 opacity-5 group-hover:opacity-10 transition-opacity duration-500 transform group-hover:scale-110">
-                                        {benefit.iconSrc ? (
-                                            <img src={benefit.iconSrc} className="w-32 h-32" style={{ filter: 'invert(32%) sepia(96%) saturate(3015%) hue-rotate(212deg) brightness(97%) contrast(96%)' }} alt="" />
-                                        ) : (
-                                            <benefit.icon className="w-32 h-32 text-blue-600" />
-                                        )}
+                <section id="benefits-split" className="bg-white overflow-hidden border-y border-slate-100">
+                    <div className="flex flex-col lg:flex-row items-stretch min-h-[600px] lg:min-h-[850px]">
+                        
+                        {/* Left Side: Benefits Content - Dark Theme */}
+                        <div className="w-full lg:w-1/2 flex items-center bg-[#1e3a8a] justify-start lg:justify-end border-r border-white/5">
+                            <div className="w-full max-w-[750px] px-6 sm:px-12 lg:px-16 xl:px-24 py-24 lg:py-32">
+                                <div className="space-y-16">
+                                    <div className="space-y-8">
+                                        <h2 className="text-3xl md:text-5xl lg:text-5xl leading-tight font-light text-white">
+                                            Pourquoi choisir nos systèmes <br />
+                                            <span className="font-bold italic text-blue-300">de filtration d'eau ?</span>
+                                        </h2>
+                                        <p className="text-lg lg:text-xl text-white/70 font-light leading-relaxed max-w-xl">
+                                            Plus qu'une simple filtration, c'est une protection avancée pour votre santé et un confort durable pour votre foyer au quotidien.
+                                        </p>
                                     </div>
-                                    <div className="relative w-16 h-16 rounded-2xl bg-blue-50 flex items-center justify-center mb-8 group-hover:bg-blue-600 transition-colors duration-500">
-                                        {benefit.iconSrc ? (
-                                            <>
-                                                <img src={benefit.iconSrc} className="absolute h-8 w-8 transition-opacity duration-500 opacity-100 group-hover:opacity-0" style={{ filter: 'invert(32%) sepia(96%) saturate(3015%) hue-rotate(212deg) brightness(97%) contrast(96%)' }} alt={benefit.title} />
-                                                <img src={benefit.iconSrc} className="absolute h-8 w-8 transition-opacity duration-500 opacity-0 group-hover:opacity-100 brightness-0 invert" alt={`${benefit.title} hover`} />
-                                            </>
-                                        ) : (
-                                            <benefit.icon className="h-8 w-8 text-blue-600 group-hover:text-white transition-colors duration-500" />
-                                        )}
+
+                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
+                                        {[
+                                            {
+                                                icon: Droplets,
+                                                title: "Goût exceptionnel",
+                                                desc: "Élimine 99% du chlore et des odeurs pour une eau pure."
+                                            },
+                                            {
+                                                icon: HandCoins,
+                                                title: "Économies réelles",
+                                                desc: "Économisez plus de 500$/an sur l'eau embouteillée."
+                                            },
+                                            {
+                                                icon: Recycle,
+                                                title: "Éco-responsable",
+                                                desc: "Évitez des milliers de bouteilles plastique par an."
+                                            },
+                                            {
+                                                icon: Sparkles,
+                                                title: "Sérénité Totale",
+                                                desc: "Fiabilité maximale avec un entretien ultra-simple."
+                                            }
+                                        ].map((benefit, i) => (
+                                            <div key={i} className="space-y-4 group">
+                                                <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center group-hover:bg-blue-600 transition-all duration-500">
+                                                    <benefit.icon className="h-6 w-6 text-blue-300 group-hover:text-white" />
+                                                </div>
+                                                <h3 className="text-lg font-bold text-white group-hover:text-blue-300 transition-colors">
+                                                    {benefit.title}
+                                                </h3>
+                                                <p className="text-sm text-white/60 font-light leading-relaxed">
+                                                    {benefit.desc}
+                                                </p>
+                                            </div>
+                                        ))}
                                     </div>
-                                    <h5 className="text-slate-900 mb-4 tracking-tight group-hover:text-blue-600 transition-colors duration-500">
-                                        {benefit.title}
-                                    </h5>
-                                    <p className="text-slate-500 font-light leading-relaxed">
-                                        {benefit.desc}
-                                    </p>
                                 </div>
-                            ))}
+                            </div>
                         </div>
+
+                        {/* Right Side: Immersive Visual */}
+                        <div className="w-full lg:w-1/2 relative min-h-[400px] lg:min-h-full overflow-hidden">
+                            <img 
+                                src={glassOfWaterImg} 
+                                alt="Eau pure Bricareau" 
+                                className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 hover:scale-105"
+                            />
+                            <div className="absolute inset-0 bg-blue-900/10" />
+                            
+                            {/* Decorative Floating Card */}
+                            <div className="absolute bottom-12 left-12 bg-white/95 backdrop-blur-xl p-10 rounded-[3rem] shadow-2xl border border-white/50 max-w-[320px] hidden xl:block animate-float">
+                                <div className="flex items-center gap-4 mb-6">
+                                    <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+                                    <span className="text-[10px] uppercase font-black text-slate-400 tracking-widest">Technologie Active</span>
+                                </div>
+                                <h4 className="text-2xl font-bold text-slate-900 mb-4 tracking-tight">Pureté de diamant.</h4>
+                                <p className="text-sm text-slate-500 font-light leading-relaxed">
+                                    Une filtration haute-performance qui redéfinit votre standard de vie.
+                                </p>
+                            </div>
+                        </div>
+
                     </div>
                 </section>
 
@@ -311,10 +347,10 @@ const Filtration = () => {
                         <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
 
                             {/* Left Side: Creative Image Stack */}
-                            <div className="w-full lg:w-1/2 relative">
+                            <div className="w-full lg:w-1/2 relative -mx-6 lg:mx-0">
                                 <div className="relative group">
                                     {/* Main Hero Image */}
-                                    <div className="relative z-10 rounded-[3rem] overflow-hidden aspect-[4/5] shadow-2xl transition-transform duration-700 group-hover:scale-[1.01]">
+                                    <div className="relative z-10 rounded-none lg:rounded-[3rem] overflow-hidden aspect-[4/5] shadow-none lg:shadow-2xl transition-transform duration-700 group-hover:scale-[1.01]">
                                         <img
                                             src={teenagerShowerImg}
                                             alt="Douche sous eau filtrée Bricareau - Protection de la peau et des cheveux"
@@ -410,10 +446,10 @@ const Filtration = () => {
                         <div className="flex flex-col lg:flex-row-reverse items-center gap-16 lg:gap-24">
 
                             {/* Right Side: Creative Image Stack */}
-                            <div className="w-full lg:w-1/2 relative">
+                            <div className="w-full lg:w-1/2 relative -mx-6 lg:mx-0">
                                 <div className="relative group">
                                     {/* Main Hero Image */}
-                                    <div className="relative z-10 rounded-[3rem] overflow-hidden aspect-[4/5] shadow-2xl transition-transform duration-700 group-hover:scale-[1.01]">
+                                    <div className="relative z-10 rounded-none lg:rounded-[3rem] overflow-hidden aspect-[4/5] shadow-none lg:shadow-2xl transition-transform duration-700 group-hover:scale-[1.01]">
                                         <img
                                             src={glassOfWaterImg}
                                             alt="Verre d'eau pure provenant d'un système d'osmose inverse Bricareau"
@@ -510,10 +546,10 @@ const Filtration = () => {
                         <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
 
                             {/* Left Side: Creative Image Stack */}
-                            <div className="w-full lg:w-1/2 relative">
+                            <div className="w-full lg:w-1/2 relative -mx-6 lg:mx-0">
                                 <div className="relative group">
                                     {/* Main Hero Image */}
-                                    <div className="relative z-10 rounded-[3rem] overflow-hidden aspect-[4/5] shadow-2xl transition-transform duration-700 group-hover:scale-[1.01]">
+                                    <div className="relative z-10 rounded-none lg:rounded-[3rem] overflow-hidden aspect-[4/5] shadow-none lg:shadow-2xl transition-transform duration-700 group-hover:scale-[1.01]">
                                         <img
                                             src={africanGirlImg}
                                             alt="Enfant buvant de l'eau saine filtrée sous l'évier Bricareau"
@@ -749,10 +785,9 @@ const Filtration = () => {
                 <span className="font-bold leading-tight block tracking-tight">Un accompagnement personnalisé pour vous guider vers le système adapté à votre réalité et votre budget.</span>
               </h2>
 
-              <p className="text-blue-100/80 font-light text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
-                Vous n’êtes pas certain de savoir si vous avez besoin d’un filtre toute maison, d’un système sous évier ou d’une station d’osmose inverse ? Contactez‑nous pour une évaluation de votre eau et de vos besoins. Nous vous proposerons une solution de filtration d’eau résidentielle adaptée à votre maison, à votre budget et à vos priorités.
+              <p className="text-white font-light text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
+                Vous n’êtes pas certain de savoir si vous avez besoin d’un filtre toute maison, d’un système sous évier ou d’une station d’osmose inverse ? Contactez‑nous pour une évaluation de votre eau et de vos besoins. 
               </p>
-
               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
                 <Button asChild>
                   <a href="tel:18552649328" className="flex items-center gap-3">

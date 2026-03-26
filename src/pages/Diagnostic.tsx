@@ -1,43 +1,44 @@
 import React from 'react';
 import Header from "@/components/Header";
-import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 import Footer from "@/components/Footer";
 import WaterDiagnosticQuiz from "@/components/WaterDiagnosticQuiz";
-import problemBg from "@/assets/problem_hero_bg.jpg";
 
 const Diagnostic = () => {
     return (
-        <div className="min-h-screen bg-slate-50 flex flex-col">
+        <div className="min-h-screen bg-white flex flex-col">
             <Header />
-            <main className="relative flex flex-col items-center bg-white pt-20 pb-20 lg:pt-32">
-                <div className="absolute top-[50px] left-0 right-0 z-30 pointer-events-none hidden lg:block">
-                    <div className="container mx-auto px-4 lg:px-6 pointer-events-auto">
-                        <GlobalBreadcrumbs variant="light" />
-                    </div>
-                </div>
-                {/* Visual Background Elements */}
-                <div className="absolute top-0 left-0 w-full h-[500px] z-0 opacity-10 pointer-events-none">
-                    <img src={problemBg} alt="Diagnostic interactif de la qualité de l'eau Bricareau - Analyse et solutions personnalisées" className="w-full h-full object-cover grayscale" />
-                </div>
-                <div className="absolute top-[20%] right-[-10%] w-[500px] h-[500px] bg-blue-100/50 rounded-full blur-[100px] z-0 pointer-events-none animate-pulse" />
-                <div className="absolute bottom-[10%] left-[-5%] w-[400px] h-[400px] bg-cyan-50/50 rounded-full blur-[120px] z-0 pointer-events-none" />
+            <main className="relative flex-1 flex flex-col items-center justify-center py-20 lg:py-16">
+                {/* Background Accents - Subtle & Minimalist */}
+                <div className="absolute top-0 inset-x-0 h-[600px] bg-gradient-to-b from-blue-50/50 to-transparent -z-10" />
+                <div className="absolute top-40 left-1/4 w-[300px] h-[300px] bg-blue-100/20 rounded-full blur-[100px] -z-10" />
 
-                <div className="container mx-auto px-4 relative z-10 flex flex-col items-center">
-                    <div className="max-w-4xl mx-auto text-center mb-12 w-full animate-in fade-in slide-in-from-top-4 duration-1000">
-                        <span className="inline-block px-4 py-1.5 bg-blue-50 text-blue-600 rounded-full text-xs font-black uppercase tracking-widest mb-6">
-                            OUTIL D'ANALYSE INTELLIGENT
-                        </span>
-                        <h1
-                            className="mb-8 tracking-tighter text-slate-900 max-w-xl mx-auto"
+                <div className="container mx-auto px-6 relative z-10 flex flex-col items-center">
+                    <div className="max-w-3xl mx-auto text-center mb-10 w-full animate-in fade-in slide-in-from-top-4 duration-1000">
+                        <h1 
+                            className="text-[32px] md:text-[46px] lg:text-[54px] leading-[1.1] mb-10 tracking-tight"
+                            style={{
+                                fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                fontStyle: 'normal'
+                            }}
                         >
-                            Découvrez la solution parfaite pour votre eau
+                            <span className="italic font-light text-[#2563eb] block">Découvrez la solution</span>
+                            <span className="font-bold text-[#1e3a8a] block text-center">parfaite pour votre eau.</span>
                         </h1>
-                        <p className="text-slate-500 font-light text-justify max-w-xl mx-auto">
-                            Répondez à quelques questions rapides pour obtenir une recommandation personnalisée basée sur vos besoins spécifiques et la provenance de votre eau.
+
+                        <p 
+                            className="max-w-xl mx-auto text-slate-500 font-light text-[18px] md:text-[20px] leading-snug"
+                            style={{
+                                fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                fontStyle: 'normal'
+                            }}
+                        >
+                            Quelques questions rapides pour transformer la qualité de votre quotidien. Obtenez votre prescription d'eau personnalisée en moins de 2 minutes.
                         </p>
                     </div>
 
-                    <WaterDiagnosticQuiz />
+                    <div className="w-full max-w-4xl">
+                        <WaterDiagnosticQuiz />
+                    </div>
                 </div>
             </main>
             <Footer />

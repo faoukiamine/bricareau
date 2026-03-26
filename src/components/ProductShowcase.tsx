@@ -57,11 +57,9 @@ const ProductShowcase = () => {
                 <div className="text-center mb-12 md:mb-16">
                     <h2 
                         id="solutions-title"
-                        className="scroll-mt-[120px] mb-8"
+                        className="scroll-mt-[120px] mb-8 text-[28px] md:text-[36px] lg:text-[48px] leading-tight"
                         style={{
                             fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                            fontSize: '48px',
-                            lineHeight: '48px',
                             fontStyle: 'normal'
                         }}
                     >
@@ -95,13 +93,9 @@ const ProductShowcase = () => {
                                     {product.name}
                                 </h3>
                                 <p
-                                    className="flex-grow text-justify"
+                                    className="flex-grow text-justify text-[16px] md:text-[18px] lg:text-[20px] leading-snug font-light text-slate-600"
                                     style={{
                                         fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                        fontWeight: 300,
-                                        color: 'rgb(71, 85, 105)',
-                                        fontSize: '20px',
-                                        lineHeight: '28px',
                                         fontStyle: 'normal'
                                     }}
                                 >

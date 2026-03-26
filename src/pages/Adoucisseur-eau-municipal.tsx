@@ -50,9 +50,28 @@ import {
 import ConsultationFormSection from "@/components/ConsultationFormSection";
 import labTestImg from "@/assets/test-laboratoire-diligence-inspection-750x500.jpg";
 const products = [
-    { name: "Adoucisseur d'eau de la série \n Sentinelle", desc: "Le rythme parfait d'une eau toujours douce.", path: "/contact", image: SentinelWaterSoftenerImg },
-    { name: "Adoucisseur d'eau de la série \n Sérénité", desc: "La paix durable pour votre maison et votre confort.", path: "/contact", image: SerenityWaterSoftenerImg },
-    { name: "Adoucisseur d'eau de la série \n Infiniti", desc: "Une douceur constante, à chaque goutte, à chaque seconde.", path: "/contact", image: TwinAlternatingWaterSoftenerImg },
+    { 
+        name: "Adoucisseur d'eau de la série \n Sentinelle", 
+        desc: "Votre priorité est d'éradiquer le calcaire avec une précision chirurgicale, sans complexité inutile.", 
+        features: ["Protection des électros", "Format compact intelligent", "Économie de sel optimisée"],
+        path: "/contact", 
+        image: SentinelWaterSoftenerImg 
+    },
+    { 
+        name: "Adoucisseur d'eau de la série \n Sérénité", 
+        desc: "Vous cherchez l'eau parfaite pour la peau, les cheveux et la consommation, en éliminant aussi le chlore.", 
+        features: ["Hybride : Calcaire & Chlore", "Douceur dermatologique", "Élimine odeurs et goûts"],
+        isRecommended: true,
+        path: "/contact", 
+        image: SerenityWaterSoftenerImg 
+    },
+    { 
+        name: "Adoucisseur d'eau de la série \n Infiniti", 
+        desc: "Grandes familles ou besoins critiques : vous refusez toute interruption de douceur, 24h/24.", 
+        features: ["Double bouteille alternée", "Eau douce non-stop", "Performance industrielle"],
+        path: "/contact", 
+        image: TwinAlternatingWaterSoftenerImg 
+    },
 ];
 
 interface ComparisonItem {
@@ -143,7 +162,7 @@ const AdoucisseurEauMunicipal = () => {
             <main>
                 <Hero 
                     image={heroBath}
-                    highlightedTitle="Une douceur qui se sent"
+                    highlightedTitle="Une douceur qui se sent,"
                     mainTitle="un confort qui se vit."
                     subtitle="Protégez votre confort et vos installations avec nos adoucisseurs d'eau intelligents conçus spécifiquement pour les eaux de ville. Éliminez définitivement l'eau dure et prolongez la vie de vos électroménagers."
                     showPhone={true}
@@ -162,110 +181,19 @@ const AdoucisseurEauMunicipal = () => {
                     </div>
 
                     <div className="container mx-auto px-6 relative z-10">
-                        <div className="text-center max-w-4xl mx-auto mb-20 lg:mb-24">
-                            <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.3em] mb-6">
-                                GUIDE DE SÉLECTION DE VOTRE ADOUCISSEUR
+                        <div className="text-center max-w-7xl mx-auto mb-20 lg:mb-24">
+                            <span className="inline-block px-4 py-1.5 bg-blue-600 text-white rounded-full text-[10px] font-black uppercase tracking-[0.3em] mb-6">
+                                GUIDE DE SÉLECTION DE VOTRE ADOUCISSEUR D'EAU
                             </span>
-                            <h2 
-                                className="mb-8"
-                                style={{
-                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                    fontSize: '48px',
-                                    lineHeight: '52px',
-                                    fontStyle: 'normal'
-                                }}
-                            >
+                            <h2 className="mb-8 heading-pro-max text-center">
                                 <span className="italic font-light text-[#2563eb] block">L'équilibre idéal pour</span>
                                 <span className="font-bold text-[#1e3a8a] block">votre ville et votre vie.</span>
                             </h2>
-                            <p className="text-slate-500 font-light text-xl leading-relaxed">
-                                Parce que l'eau des municipalités dans notre province Québec varie selon les secteurs, nos architectures de soins s'adaptent à vos priorités réelles.
-                            </p>
-                        </div>
-
-                        <div className="grid grid-cols-1 lg:grid-cols-3 gap-0 border border-slate-100 rounded-[3rem] overflow-hidden shadow-2xl shadow-slate-200/50">
-                            {/* Column 1: Sentinel */}
-                            <div className="p-12 lg:p-16 bg-white border-b lg:border-b-0 lg:border-r border-slate-100 hover:bg-slate-50 transition-colors duration-500 group">
-                                <h3 className="text-2xl font-bold text-[#1e3a8a] mb-6 leading-tight">Le Profil <br/>"Sentinel"</h3>
-                                <div className="space-y-6">
-                                    <p className="text-slate-500 font-light text-base leading-relaxed">
-                                        Votre priorité est d'éradiquer le calcaire avec une précision chirurgicale, sans complexité inutile.
-                                    </p>
-                                    <ul className="space-y-4 pt-4">
-                                        {["Protection des électros", "Format compact intelligent", "Économie de sel optimisée"].map((item, i) => (
-                                            <li key={i} className="flex items-center gap-3 text-sm text-slate-600 font-light">
-                                                <CheckCircle2 className="w-4 h-4 text-blue-500" /> {item}
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            </div>
-
-                            {/* Column 2: Sérénité */}
-                            <div className="p-12 lg:p-16 bg-blue-50/20 border-b lg:border-b-0 lg:border-r border-slate-100 hover:bg-white transition-colors duration-500 group relative overflow-hidden">
-                                <div className="absolute top-0 right-0 p-4">
-                                    <span className="text-[10px] font-black text-blue-600 bg-white px-3 py-1 rounded-full shadow-sm">RECOMMANDÉ</span>
-                                </div>
-                                <h3 className="text-2xl font-bold text-[#1e3a8a] mb-6 leading-tight">Le Profil <br/>"Sérénité"</h3>
-                                <div className="space-y-6">
-                                    <p className="text-slate-500 font-light text-base leading-relaxed">
-                                        Vous cherchez l'eau parfaite pour la peau, les cheveux et la consommation, en éliminant aussi le chlore.
-                                    </p>
-                                    <ul className="space-y-4 pt-4">
-                                        {["Hybride : Calcaire & Chlore", "Douceur dermatologique", "Élimine odeurs et goûts"].map((item, i) => (
-                                            <li key={i} className="flex items-center gap-3 text-sm text-slate-600 font-light">
-                                                <CheckCircle2 className="w-4 h-4 text-blue-500" /> {item}
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            </div>
-
-                            {/* Column 3: Infiniti */}
-                            <div className="p-12 lg:p-16 bg-white hover:bg-slate-50 transition-colors duration-500 group">
-                                <h3 className="text-2xl font-bold text-[#1e3a8a] mb-6 leading-tight">Le Profil <br/>"Infiniti"</h3>
-                                <div className="space-y-6">
-                                    <p className="text-slate-500 font-light text-base leading-relaxed">
-                                        Grandes familles ou besoins critiques : vous refusez toute interruption de douceur, 24h/24.
-                                    </p>
-                                    <ul className="space-y-4 pt-4">
-                                        {["Double bouteille alternée", "Eau douce non-stop", "Performance industrielle"].map((item, i) => (
-                                            <li key={i} className="flex items-center gap-3 text-sm text-slate-600 font-light">
-                                                <CheckCircle2 className="w-4 h-4 text-indigo-500" /> {item}
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-
-                {/* 4.Product Grid Section */}
-                <section id="nos-adoucisseurs" className="py-24 bg-gray-50">
-                    <div className="container mx-auto px-6">
-                        <div className="text-left mb-16">
-                            <h2
-                                className="mb-8 text-left"
-                                style={{
-                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                    fontSize: '48px',
-                                    lineHeight: '48px',
-                                    fontStyle: 'normal'
-                                }}
-                            >
-                                <span className="italic font-light text-[#2563eb] block">Nos adoucisseurs d'eau</span>
-                                <span className="font-bold text-[#1e3a8a] block">résidentiels - Eau municipale</span>
-                            </h2>
-                            <div className="w-24 h-1 bg-blue-600 mb-8"></div>
-                            <p
-                                className="font-light text-slate-600 mb-8 text-justify"
-                                style={{}}
-                            >
+                            <p className="body-pro-max text-center lg:text-justify mx-auto">
                                 Nos adoucisseurs d'eau pour eau municipale sont spécialement conçus pour contrer les effets néfastes du calcaire tout en s'adaptant parfaitement aux spécificités des réseaux de distribution urbains. Nos solutions de pointe — les séries Sentinelle, Sérénité et Infiniti — offrent une technologie de régénération intelligente qui optimise votre consommation d'eau et de sel selon votre usage réel au quotidien. Que vous recherchiez une efficacité énergétique maximale, une protection accrue de votre plomberie ou une douceur incomparable pour votre peau et vos cheveux, nos systèmes garantissent une performance durable et une fiabilité exceptionnelle. Investir dans un adoucisseur Bricareau, c'est choisir de prolonger la vie de vos appareils électroménagers tout en réalisant des économies substantielles sur vos produits d'entretien et vos factures énergétiques. Découvrez une nouvelle dimension de confort domestique grâce à une eau parfaitement balancée, pure et saine pour l'ensemble de votre foyer.
                             </p>
                         </div>
+
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto">
                             {products.map((p, i) => (
                                 <div
@@ -274,6 +202,13 @@ const AdoucisseurEauMunicipal = () => {
                                     onClick={() => navigate(p.path || "/adoucisseurs")}
                                 >
                                     <div className="relative h-80 overflow-hidden bg-slate-50 flex items-center justify-center p-12">
+                                        {p.isRecommended && (
+                                            <div className="absolute top-4 right-4 z-10">
+                                                <span className="inline-block px-4 py-1.5 bg-blue-600 text-white rounded-full text-[10px] font-black uppercase tracking-[0.3em] mb-6">
+                                                    RECOMMANDÉ
+                                                </span>
+                                            </div>
+                                        )}
                                         <img
                                             src={p.image}
                                             alt={`${p.name} - Adoucisseur d'eau résidentiel haute performance Bricareau`}
@@ -286,17 +221,19 @@ const AdoucisseurEauMunicipal = () => {
                                         >
                                             {p.name}
                                         </h3>
-                                        <p
-                                            className="leading-[25px] text-slate-500 font-light flex-grow text-justify"
-                                            style={{}}
-                                        >
+                                        <p className="body-pro-max text-slate-500 text-justify">
                                             {p.desc}
                                         </p>
+                                        <ul className="space-y-3 pt-2">
+                                            {p.features?.map((f, idx) => (
+                                                <li key={idx} className="flex items-center gap-2 text-sm text-slate-600 font-light">
+                                                    <CheckCircle2 className="w-4 h-4 text-blue-500" /> {f}
+                                                </li>
+                                            ))}
+                                        </ul>
                                         <div
                                             className="inline-flex items-center gap-2 text-blue-600 font-bold text-xs tracking-widest uppercase mt-4 group-hover:underline self-end"
-                                            style={{}}
                                         >
-                                            <span></span>
                                             <ArrowRight className="h-6 w-6 transform group-hover:translate-x-1 transition-transform" />
                                         </div>
                                     </div>
@@ -305,29 +242,19 @@ const AdoucisseurEauMunicipal = () => {
                         </div>
                     </div>
                 </section>
-
-                
                 
                 {/* 4.5 PARCOURS SÉRÉNITÉ */}
                 <section className="py-24 lg:py-32 bg-white relative overflow-hidden">
                      <div className="container mx-auto px-6 relative z-10">
                         <div className="text-center max-w-3xl mx-auto mb-20 lg:mb-24">
-                            <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.3em] mb-6">
+                            <span className="inline-block px-4 py-1.5 bg-blue-600 text-white rounded-full text-[10px] font-black uppercase tracking-[0.3em] mb-6">
                                 VOTRE EXPÉRIENCE CLIENT
                             </span>
-                            <h2 
-                                className="mb-8"
-                                style={{
-                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                    fontSize: '48px',
-                                    lineHeight: '48px',
-                                    fontStyle: 'normal'
-                                }}
-                            >
+                            <h2 className="mb-8 heading-pro-max text-center">
                                 <span className="italic font-light text-[#2563eb] block">Une transition fluide vers</span>
                                 <span className="font-bold text-[#1e3a8a] block">l'eau adoucie.</span>
                             </h2>
-                            <p className="text-slate-500 font-light text-xl leading-snug">
+                            <p className="body-pro-max text-center max-w-3xl mx-auto">
                                 Le Parcours Bricareau : une expertise d'élite, depuis votre première analyse jusqu'à la douceur éternelle de votre eau municipale.
                             </p>
                         </div>
@@ -376,7 +303,7 @@ const AdoucisseurEauMunicipal = () => {
                                         </div>
                                     </div>
                                     <h4 className="text-xl font-bold text-slate-800 mb-4 group-hover:text-blue-600 transition-colors leading-tight">{item.title}</h4>
-                                    <p className="text-slate-500 font-light text-sm leading-relaxed max-w-[220px] mx-auto">
+                                    <p className="body-pro-max text-slate-500 text-center max-w-[220px] mx-auto">
                                         {item.desc}
                                     </p>
                                 </div>
@@ -384,20 +311,20 @@ const AdoucisseurEauMunicipal = () => {
                         </div>
                         
                         {/* Featured Banner with generated image */}
-                        <div className="rounded-[3rem] overflow-hidden shadow-2xl border border-slate-100 group relative">
+                        <div className="rounded-none lg:rounded-[3rem] overflow-hidden shadow-none lg:shadow-2xl border-0 lg:border border-slate-100 group relative -mx-6 lg:mx-0">
                             <img 
                                 src={installationSoftenerImg} 
                                 alt="Installation professionnelle d'un adoucisseur d'eau Bricareau" 
-                                className="w-full h-[650px] object-cover group-hover:scale-105 transition-transform duration-[3000ms] brightness-[1.2] contrast-[1.05]"
+                                className="w-full h-[450px] md:h-[550px] lg:h-[650px] object-cover group-hover:scale-105 transition-transform duration-[3000ms] brightness-[1.2] contrast-[1.05]"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-r from-[#1e3a8a]/70 via-[#1e3a8a]/30 to-transparent p-12 lg:p-20 flex items-center">
+                            <div className="absolute inset-0 bg-gradient-to-r from-[#1e3a8a]/70 via-[#1e3a8a]/30 to-transparent p-8 md:p-12 lg:p-20 flex items-center">
                                 <div className="max-w-lg">
                                     <div className="flex items-center gap-3 text-blue-400 font-bold text-xs tracking-widest uppercase mb-6">
                                         <CheckCircle className="w-5 h-5" />
                                         Engagement Certifié
                                     </div>
                                     <h3 className="text-white text-4xl font-bold mb-6 leading-tight">L'excellence Bricareau s'installe chez vous.</h3>
-                                    <p className="text-white/80 font-light text-lg mb-10 leading-relaxed">
+                                    <p className="text-white text-lg mb-10 text-justify">
                                         Chaque installation est une signature de qualité. Nos techniciens certifiés assurent une mise en place chirurgicale de vos systèmes, garantissant performance et esthétique.
                                     </p>
                                 </div>
@@ -410,15 +337,7 @@ const AdoucisseurEauMunicipal = () => {
                 <section className="py-24 bg-white border-t border-gray-100">
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
-                            <h2 
-                                className="mb-8 text-left"
-                                style={{
-                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                    fontSize: '48px',
-                                    lineHeight: '48px',
-                                    fontStyle: 'normal'
-                                }}
-                            >
+                            <h2 className="mb-8 heading-pro-max text-left">
                                 <span className="italic font-light text-[#2563eb] block">Comparez nos</span>
                                 <span className="font-bold text-[#1e3a8a] block">adoucisseurs d'eau</span>
                             </h2>
@@ -501,19 +420,11 @@ const AdoucisseurEauMunicipal = () => {
 
                     <div className="container mx-auto px-4 relative z-10 flex items-center py-12 lg:py-0">
                         <div className="max-w-2xl text-slate-900 lg:text-white">
-                            <h2
-                                className="mb-8"
-                                style={{
-                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                    fontSize: '48px',
-                                    lineHeight: '48px',
-                                    fontStyle: 'normal'
-                                }}
-                            >
-                                <span className="italic font-light text-white block">Des tests d'eau précis</span>
-                                <span className="font-bold text-white block">pour une tranquillité d'esprit totale.</span>
+                            <h2 className="mb-8 heading-pro-max text-left">
+                                <span className="italic font-light text-[#1e3a8a] lg:text-white block">Des tests d'eau précis</span>
+                                <span className="font-bold text-[#1e3a8a] lg:text-white block">pour une tranquillité d'esprit totale.</span>
                             </h2>
-                            <p className="font-light text-slate-500 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
+                            <p className="body-pro-max text-slate-500 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
                                 Ne devinez pas la qualité de votre eau. Nos analyses approfondies identifient les bactéries, les minéraux et les contaminants chimiques pour vous offrir une tranquillité d'esprit totale.
                             </p>
                             <div className="flex gap-4">
@@ -531,15 +442,7 @@ const AdoucisseurEauMunicipal = () => {
                 <section className="py-24 bg-white">
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
-                            <h2
-                                className="mb-8 text-left"
-                                style={{
-                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                    fontSize: '48px',
-                                    lineHeight: '48px',
-                                    fontStyle: 'normal'
-                                }}
-                            >
+                            <h2 className="mb-8 heading-pro-max text-left">
                                 <span className="italic font-light text-[#2563eb] block">Pour vous éclairer</span>
                                 <span className="font-bold text-[#1e3a8a] block">Questions fréquentes</span>
                             </h2>
@@ -574,15 +477,7 @@ const AdoucisseurEauMunicipal = () => {
                 <section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-4 text-left">
                         <div className="text-left mb-16">
-                            <h2 
-                                className="mb-8"
-                                style={{
-                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                    fontSize: '48px',
-                                    lineHeight: '48px',
-                                    fontStyle: 'normal'
-                                }}
-                            >
+                            <h2 className="mb-8 heading-pro-max text-left">
                                 <span className="font-bold text-[#1e3a8a] block text-left">Ressources</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>

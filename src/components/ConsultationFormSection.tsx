@@ -447,7 +447,7 @@ const ConsultationFormSection = ({ id, isStandalone = false }: { id?: string, is
                                     variant="outline"
                                     onClick={prevStep}
                                     disabled={isNavigating || isSubmitting}
-                                    className="w-full md:w-auto h-12 rounded-full px-8 border-gray-300"
+                                    className="w-fit h-12 rounded-full px-8 border-gray-300"
                                 >
                                     <ChevronLeft className="w-4 h-4 mr-2" /> Retour
                                 </Button>
@@ -458,7 +458,7 @@ const ConsultationFormSection = ({ id, isStandalone = false }: { id?: string, is
                                     type="button"
                                     onClick={nextStep}
                                     disabled={isNavigating}
-                                    className="w-full md:w-auto ml-auto h-12 rounded-full px-8 bg-blue-600 hover:bg-blue-700 text-white"
+                                    className="w-fit ml-auto h-12 rounded-full px-8 bg-blue-600 hover:bg-blue-700 text-white"
                                 >
                                     Continuer <ChevronRight className="w-4 h-4 ml-2" />
                                 </Button>
@@ -466,7 +466,7 @@ const ConsultationFormSection = ({ id, isStandalone = false }: { id?: string, is
                                 <Button
                                     type="submit"
                                     disabled={isSubmitting || isNavigating}
-                                    className="w-full md:w-auto ml-auto h-12 rounded-full px-8 bg-blue-600 hover:bg-blue-700 text-white"
+                                    className="w-fit ml-auto h-12 rounded-full px-8 bg-blue-600 hover:bg-blue-700 text-white"
                                 >
                                     {isSubmitting ? (
                                         <>

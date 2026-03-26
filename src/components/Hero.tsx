@@ -17,6 +17,7 @@ interface HeroProps {
   badge?: string;
   singleLineTitle?: boolean;
   gradualOpacity75?: boolean;
+  className?: string; // Add this
 }
 
 const Hero = ({
@@ -31,10 +32,11 @@ const Hero = ({
   imageAlt = "Solutions expertes en traitement d'eau résidentiel Bricareau",
   badge,
   singleLineTitle = false,
-  gradualOpacity75 = true
+  gradualOpacity75 = true,
+  className // Add this
 }: HeroProps) => {
   return (
-    <section className="relative lg:h-[800px] flex flex-col items-center overflow-hidden bg-white">
+    <section className={cn("relative lg:h-[800px] flex flex-col items-center overflow-hidden bg-white", className)}>
       {showBreadcrumbs && (
         <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none hidden lg:block">
           <div className="container mx-auto px-4 lg:px-6 pointer-events-auto">
@@ -54,7 +56,7 @@ const Hero = ({
         <img
           src={image || heroImage}
           alt={imageAlt}
-          className="w-full h-full object-cover object-right opacity-60"
+          className="w-full h-full object-cover object-right opacity-80"
         />
       </div>
 
@@ -69,10 +71,15 @@ const Hero = ({
               </div>
             )}
             <h1 
-              className="text-4xl sm:text-5xl lg:text-[70px] font-[800] text-[#1e3a8a] leading-tight lg:leading-[70px] tracking-tight"
-              style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"' }}
+              className="text-[32px] md:text-[46px] lg:text-[50px] leading-[1.1] mb-12 max-w-xl"
+              style={{
+                fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                fontStyle: 'normal'
+              }}
             >
-              <span className="italic font-light text-[#2563eb]">{highlightedTitle}</span>{singleLineTitle ? " " : <br />} {mainTitle}
+              <span className="italic font-light text-[#2563eb]">{highlightedTitle}</span>
+              <br />
+              <span className="font-bold text-[#1e3a8a]">{mainTitle}</span>
             </h1>
             
             <p 
@@ -89,8 +96,8 @@ const Hero = ({
               {subtitle}
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Button asChild>
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 pt-4">
+              <Button asChild className="w-fit">
                 <a href={ctaLink}>{ctaText}</a>
               </Button>
               
@@ -98,6 +105,7 @@ const Hero = ({
                 <Button
                   variant="outline"
                   asChild
+                  className="w-fit"
                 >
                   <a href="tel:18552649328" className="flex items-center gap-2">
                     <Phone className="w-5 h-5" />

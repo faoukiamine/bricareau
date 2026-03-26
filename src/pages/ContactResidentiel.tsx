@@ -156,7 +156,7 @@ const ContactResidentiel = () => {
                   </Label>
                 </div>
 
-                <Button type="submit" size="lg" className="w-full md:w-auto">
+                <Button type="submit" size="lg" className="w-fit px-8">
                   Envoyez
                 </Button>
               </form>

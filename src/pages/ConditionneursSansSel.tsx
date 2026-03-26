@@ -106,6 +106,7 @@ const ConditionneursSansSel = () => {
                     showPhone={true}
                     showBreadcrumbs={true}
                     singleLineTitle={true}
+                    className="lg:h-[750px]"
                 />
  
         {/* 1.5. Education Section: Understanding Limescale */}
@@ -323,8 +324,10 @@ const ConditionneursSansSel = () => {
                   ))}
                 </div>
               </div>
-              <div className="lg:w-1/2">
-                <img src={conditionneurImg} alt="Conditionneur Bricareau" className="max-w-md mx-auto drop-shadow-2xl" />
+              <div className="w-full lg:w-1/2 relative -mx-4 lg:mx-0">
+                <div className="relative rounded-none lg:rounded-[3rem] overflow-hidden bg-white/40 backdrop-blur-sm p-12 shadow-none lg:shadow-2xl">
+                  <img src={conditionneurImg} alt="Conditionneur Bricareau" className="w-full h-[400px] md:h-[500px] lg:h-[600px] object-contain drop-shadow-2xl" />
+                </div>
               </div>
             </div>
           </div>

@@ -121,21 +121,13 @@ const StationEauPotable = () => {
                   <span className="inline-block px-4 py-1.5 bg-blue-600 text-white rounded-full text-[10px] font-black uppercase tracking-[0.3em] shadow-lg shadow-blue-200">
                     L'INGÉNIERIE DE LA PURETÉ
                   </span>
-                  <h2
-                                className="mb-8"
-                                style={{
-                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                    fontSize: '48px',
-                                    lineHeight: '48px',
-                                    fontStyle: 'normal'
-                                }}
-                            >
+                            <h2 className="mb-8 heading-pro-max text-left">
                                 <span className="italic font-light text-[#2563eb] block">Plus qu’un filtre,</span>
                                 <span className="font-bold text-[#1e3a8a] block text-left">une métamorphose.</span>
                             </h2>
                 </div>
                 
-                <p className="font-light text-slate-600 text-lg leading-relaxed text-justify max-w-xl">
+                <p className="body-pro-max text-slate-600 mb-0 text-justify max-w-xl">
                   Issue du dessalement de l’eau de mer, cette technologie utilise une membrane de 0,0001 micron pour bloquer les impuretés les plus infimes. Cette barrière physique absolue élimine virus, métaux lourds et micropolluants, garantissant une pureté cristalline constante à chaque verre.
                 </p>
 
@@ -205,23 +197,12 @@ const StationEauPotable = () => {
         <section id="purification-systems" className="py-24 bg-white">
           <div className="container mx-auto px-6">
             <div className="text-left mb-16">
-              <h2
-                                className="mb-8"
-                                style={{
-                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                    fontSize: '48px',
-                                    lineHeight: '48px',
-                                    fontStyle: 'normal'
-                                }}
-                            >
+              <h2 className="mb-8 heading-pro-max text-left">
                                 <span className="italic font-light text-[#2563eb] block">Nos systèmes de purification</span>
                                 <span className="font-bold text-[#1e3a8a] block text-left">d'eau par osmose inverse</span>
                             </h2>
               <div className="w-24 h-1 bg-blue-600 mb-8"></div>
-              <p
-                className="font-light text-slate-600 mb-8 text-justify"
-                style={{}}
-              >
+              <p className="body-pro-max mb-8 text-justify">
                 Nos systèmes d'osmose inverse représentent le summum de la technologie moderne permettant de transformer votre eau municipale ou de puits en une source de pureté exceptionnelle. Conçus pour s'intégrer discrètement sous votre évier, nos trois modèles phares — Vectapure, Essentiel et Sérénité — répondent avec précision à toutes vos exigences, allant de la filtration haute performance à la reminéralisation alcaline pour une eau plus saine. Chaque système a été rigoureusement testé et sélectionné pour sa fiabilité exemplaire et sa capacité inégalée à éliminer jusqu'à 99% des contaminants invisibles, vous offrant ainsi une tranquillité d'esprit absolue et un goût incomparable au quotidien. Choisir l'un de nos purificateurs, c'est investir durablement dans la santé de vos proches tout en réalisant des économies significatives sur l'achat d'eau en bouteille plastique. Profitez dès maintenant d'un accès illimité à une eau parfaitement purifiée, revitalisante et rafraîchissante, directement depuis le confort de votre cuisine.
               </p>
             </div>
@@ -249,10 +230,7 @@ const StationEauPotable = () => {
                     >
                       {product.name}
                     </h3>
-                    <p
-                      className="text-slate-500 font-light flex-grow text-justify"
-                      style={{}}
-                    >
+                    <p className="body-pro-max text-slate-500 flex-grow text-justify">
                       {product.desc}
                     </p>
                     <div
@@ -276,20 +254,12 @@ const StationEauPotable = () => {
               <span className="inline-block px-4 py-1.5 bg-blue-600 text-blue-600 rounded-full text-xs text-white font-black uppercase tracking-widest mb-6">
                 L'EXCELLENCE D'UNE EAU SANTÉ AU QUOTIDIEN
               </span>
-              <h2
-                                className="mb-8"
-                                style={{
-                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                    fontSize: '48px',
-                                    lineHeight: '48px',
-                                    fontStyle: 'normal'
-                                }}
-                            >
+              <h2 className="mb-8 heading-pro-max text-center">
                                 <span className="italic font-light text-[#2563eb] block">Pourquoi choisir nos</span>
                                 <span className="font-bold text-[#1e3a8a] block text-center">systèmes de purification d'eau par osmose inverse ?</span>
                             </h2>
               <div className="w-16 h-0.5 bg-blue-600/20 mx-auto mb-10" />
-              <p className="font-light text-slate-500 text-lg sm:text-lg max-w-2xl mx-auto leading-relaxed italic text-center">
+              <p className="body-pro-max text-slate-500 max-w-2xl mx-auto text-center italic">
                 Une technologie de pointe pour une eau d'une pureté exceptionnelle tout en offrant une protection permanente pour votre foyer.
               </p>
             </div>
@@ -338,7 +308,7 @@ const StationEauPotable = () => {
                       </h3>
                       <div className="h-px w-0 group-hover:w-12 bg-blue-600/30 transition-all duration-700" />
                     </div>
-                    <p className="text-slate-500 font-light text-base leading-relaxed text-left opacity-80 group-hover:opacity-100 transition-opacity duration-500 max-w-lg">
+                    <p className="body-pro-max text-slate-500 text-left opacity-80 group-hover:opacity-100 transition-opacity duration-500 max-w-lg">
                       {item.desc}
                     </p>
                   </div>
@@ -352,15 +322,7 @@ const StationEauPotable = () => {
         <section className="py-24 bg-white">
           <div className="container mx-auto px-4">
             <div className="text-left mb-16">
-              <h2
-                                className="mb-8"
-                                style={{
-                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                    fontSize: '48px',
-                                    lineHeight: '48px',
-                                    fontStyle: 'normal'
-                                }}
-                            >
+              <h2 className="mb-8 heading-pro-max text-left">
                                 <span className="italic font-light text-[#2563eb] block">Comparez nos solutions</span>
                                 <span className="font-bold text-[#1e3a8a] block text-left">de filtration d'eau potable</span>
                             </h2>
@@ -437,17 +399,11 @@ const StationEauPotable = () => {
                              <span className="font-bold text-[#1e3a8a] block uppercase">
                                 Contrôle de la Qualité D'EAU
                             </span><h2
-                                className="mb-8"
-                                style={{
-                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                    fontSize: '48px',
-                                    lineHeight: '48px',
-                                    fontStyle: 'normal'
-                                }}
+                                className="mb-8 heading-pro-max text-left"
                             >
                                 <span className="font-bold text-white block">La vérité dans chaque goutte.</span>
                             </h2>
-              <p className="font-light text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
+              <p className="body-pro-max text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
                 Pourquoi deviner quand vous pouvez vérifier ? Un test d'eau simple pour une protection durable de l'eau de votre foyer.
               </p>
               <div className="flex gap-4">
@@ -465,15 +421,7 @@ const StationEauPotable = () => {
         <TestimonialsSection
           filterProduct="/systeme-de-filtration-deau-potable"
           title={
-          <h2
-                                className="mb-8 text-left"
-                                style={{
-                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                    fontSize: '48px',
-                                    lineHeight: '48px',
-                                    fontStyle: 'normal'
-                                }}
-                            >
+                            <h2 className="mb-8 heading-pro-max text-center">
                                 <span className="italic font-light text-[#2563eb] block text-center">L'eau de source,</span>
                                 <span className="font-bold text-[#1e3a8a] block text-center">directement à votre robinet.</span>
                             </h2>
@@ -493,15 +441,7 @@ const StationEauPotable = () => {
                     </div>
                     <div className="container mx-auto px-6 relative z-10 text-center">
                                             <div className="max-w-4xl mx-auto">
-                                                <h2 
-                                                    className="mb-6"
-                                                    style={{
-                                                        fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                                        fontSize: '48px',
-                                                        lineHeight: '48px',
-                                                        fontStyle: 'normal'
-                                                    }}
-                                                >
+                                                <h2 className="mb-6 heading-pro-max text-center">
                                                     <span className="font-bold text-white block tracking-tight">Redéfinissez votre standard de pureté.</span>
                                                 </h2>
                                                 <p className="text-blue-100/80 font-light text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
@@ -532,15 +472,7 @@ const StationEauPotable = () => {
         <section className="py-24 bg-white border-t border-slate-100">
           <div className="container mx-auto px-6">
             <div className="text-left mb-16">
-              <h2
-                                className="mb-8 text-left"
-                                style={{
-                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                    fontSize: '48px',
-                                    lineHeight: '48px',
-                                    fontStyle: 'normal'
-                                }}
-                            >
+              <h2 className="mb-8 heading-pro-max text-left">
                                 <span className="italic font-light text-[#2563eb] block">Pour vous éclairer</span>
                                 <span className="font-bold text-[#1e3a8a] block">Questions fréquentes</span>
                             </h2>
@@ -616,7 +548,7 @@ const StationEauPotable = () => {
                     <AccordionTrigger className="text-left text-base font-medium leading-6 hover:no-underline py-8 text-slate-800" style={{}}>
                       {item.q}
                     </AccordionTrigger>
-                    <AccordionContent className="text-base font-light leading-6 text-slate-500 pb-8 text-justify" style={{}}>
+                    <AccordionContent className="body-pro-max text-slate-500 pb-8 text-justify">
                       {item.a}
                     </AccordionContent>
                   </AccordionItem>
@@ -637,15 +569,7 @@ const StationEauPotable = () => {
         <section className="py-24 bg-white border-t border-slate-100">
           <div className="container mx-auto px-6">
             <div className="text-left mb-16">
-               <h2
-                                className="mb-8 text-left"
-                                style={{
-                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                    fontSize: '48px',
-                                    lineHeight: '48px',
-                                    fontStyle: 'normal'
-                                }}
-                            >
+               <h2 className="mb-8 heading-pro-max text-left">
                                 <span className="font-bold text-[#1e3a8a] block">Ressources</span>
                             </h2>
               <div className="w-24 h-1 bg-blue-600"></div>

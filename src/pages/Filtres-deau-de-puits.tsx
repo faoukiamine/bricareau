@@ -196,95 +196,57 @@ const FiltresPuits = () => {
                 />
 
                 {/* 2. Bridge Section */}
-                <section className="relative py-32 bg-white overflow-hidden">
-                    {/* Background Decorative Elements */}
-                    <div className="absolute top-0 right-0 w-1/3 h-full bg-slate-50/50 -skew-x-12 translate-x-1/2 pointer-events-none" />
-                    <div className="absolute -bottom-24 left-1/4 w-64 h-64 bg-blue-50 rounded-full blur-3xl opacity-60 pointer-events-none" />
+                <section id="puits-adn" className="bg-white overflow-hidden border-y border-slate-100">
+                    <div className="flex flex-col lg:flex-row items-stretch min-h-[600px] lg:min-h-[800px]">
+                        
+                        {/* Left Side: Content - Aligned with logo/grid */}
+                        <div className="w-full lg:w-1/2 flex items-center bg-slate-50/5 justify-start lg:justify-end">
+                            <div className="w-full max-w-[750px] px-6 sm:px-12 lg:px-16 xl:px-24 py-24 lg:py-32">
+                                <div className="space-y-12">
+                                    <div className="space-y-6">
+                                        <h2 className="text-3xl md:text-4xl lg:text-5xl leading-tight font-light text-[#1e3a8a]">
+                                            Votre puits possède <br />
+                                            <span className="font-bold italic">son propre ADN.</span>
+                                        </h2>
+                                        
+                                        <div className="space-y-8">
+                                            <p className="text-lg lg:text-xl italic text-slate-700 font-light leading-relaxed">
+                                                "Une filtration d'eau classique est une réponse générique à un problème unique. Nous concevons la solution en respectant l'ADN de votre eau."
+                                            </p>
+                                            
+                                            <p className="text-base lg:text-lg text-slate-600 font-light leading-relaxed text-justify">
+                                                L'eau de votre puits est le fruit d'une géologie complexe. Là où d'autres voient simplement du fer ou du calcaire, Bricareau analyse la synergie des minéraux. Notre approche bridge l'écart entre une eau brute, parfois agressive, et une ressource précieuse, revitalisante et protectrice pour votre foyer. 
+                                            </p>
 
-                    <div className="container mx-auto px-6 relative z-10">
-                        <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
-                            {/* Left: Text Content with Creative Typography */}
-                            <div className="lg:w-1/2 space-y-12">
-                                <div className="space-y-6">
-                                    <h2 
-                                        className="mb-12"
-                                        style={{
-                                            fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                            fontSize: '48px',
-                                            lineHeight: '48px',
-                                            fontStyle: 'normal'
-                                        }}
-                                    >
-                                        <span className="italic font-light text-[#2563eb] block text-left">Votre puits possède</span>
-                                        <span className="font-bold text-[#1e3a8a] block text-left">son propre ADN.</span>
-                                    </h2>
-                                </div>
-
-                                <div className="space-y-8">
-                                     <p 
-                                        className="italic text-justify max-w-xl"
-                                        style={{
-                                            fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                            fontSize: '20px',
-                                            fontWeight: '300',
-                                            lineHeight: '28px',
-                                            color: 'rgb(71, 85, 105)'
-                                        }}
-                                    >
-                                        "Une filtration d'eau classique est une réponse générique à un problème unique. Nous concevons la solution en respectant l'ADN de votre eau."
-                                    </p>
-                                    
-                                    <p 
-                                        className="text-justify max-w-xl"
-                                        style={{
-                                            fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                            fontSize: '20px',
-                                            fontWeight: '300',
-                                            lineHeight: '28px',
-                                            color: 'rgb(71, 85, 105)'
-                                        }}
-                                    >
-                                        L'eau de votre puits est le fruit d'une géologie complexe. Là où d'autres voient simplement du fer ou du calcaire, Bricareau analyse la synergie des minéraux. Notre approche bridge l'écart entre une eau brute, parfois agressive, et une ressource précieuse, revitalisante et protectrice pour votre foyer. 
-                                    </p>
-                                </div>
-                            </div>
-
-                            {/* Right: Creative Visual Montage */}
-                            <div className="lg:w-1/2 relative">
-                                <div className="relative w-full aspect-square md:aspect-[4/3] lg:aspect-square">
-                                    {/* Abstract background shapes */}
-                                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-[radial-gradient(circle,rgba(37,99,235,0.05)_0%,transparent_95%)] animate-pulse" />
-                                    
-                                    {/* Primary Visual */}
-                                    <div className="absolute inset-0 rounded-[4rem] overflow-hidden shadow-2xl skew-y-2 transform hover:skew-y-0 transition-transform duration-1000 z-10 group">
-                                        <img 
-                                            src={process1} 
-                                            alt="Analyse d'eau de puits de précision par Bricareau" 
-                                            className="w-full h-full object-cover transform scale-110 group-hover:scale-100 transition-transform duration-1000"
-                                        />
-                                        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/40 to-transparent" />
-                                    </div>
-
-                                    {/* Secondary floating element - Lowered Further (95%) */}
-                                    <div className="absolute top-[95%] -translate-y-1/2 -right-12 w-2/3 h-2/5 bg-blue-600/20 backdrop-blur-xl rounded-[3rem] shadow-2xl z-20 p-10 flex flex-col items-center justify-center transform -rotate-3 border border-white/10">
-                                        <Droplets className="text-white h-12 w-12 mb-6" />
-                                        <h4 className="text-lg text-slate-700 font-light leading-relaxed italic text-center max-w-xl">
-                                            "L'eau qui court sur la pierre s'oublie, l'eau qui passe par le filtre se purifie."
-                                        </h4>
-                                    </div>
-
-                                    {/* Floating Stats or Details */}
-                                    <div className="absolute -top-12 -left-12 bg-white p-8 rounded-[2rem] shadow-xl z-30 border border-slate-50 space-y-4 max-w-[220px] hidden md:block animate-float">
-                                        <div className="flex items-center gap-2 text-blue-600">
-                                            <span className="font-bold text-[10px] uppercase animate-bounce">En temps réel</span>
+                                            <div className="pt-6 lg:pt-10 opacity-90">
+                                                <p className="text-xl lg:text-3xl text-blue-600/90 font-light italic" style={{ fontFamily: '"Cormorant Garamond", serif', letterSpacing: '-0.01em' }}>
+                                                    "L'eau qui court sur la pierre s'oublie, l'eau qui passe par le filtre se purifie."
+                                                </p>
+                                            </div>
                                         </div>
-                                        <p className="text-sm font-light text-slate-500 leading-snug">
-                                            Neutralisation instantanée de <span className="font-bold text-slate-900">sulfure d'hydrogène</span> et des <span className="font-bold text-slate-900">métaux lourds</span>.
-                                        </p>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
+                        {/* Right Side: Visual Image - Edge to Edge */}
+                        <div className="w-full lg:w-1/2 relative min-h-[450px] lg:min-h-full border-l border-slate-100 transition-all duration-1000">
+                            <img 
+                                src={process1} 
+                                alt="Analyse d'eau de puits Bricareau" 
+                                className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000"
+                            />
+                            <div className="absolute inset-0 bg-blue-900/5" />
+                            
+                            {/* Feature Badge - Refined Inside positioning */}
+                            <div className="absolute top-10 left-10 bg-white shadow-2xl p-8 rounded-[2.5rem] border border-slate-50 space-y-3 max-w-[220px] hidden xl:block animate-float">
+                                <span className="font-bold text-[10px] uppercase text-blue-600 tracking-widest">Expertise Puits</span>
+                                <p className="text-sm font-light text-slate-500 leading-snug">
+                                    Traitement ciblé basé sur la <span className="font-bold text-slate-900">géologie</span> de votre terrain.
+                                </p>
+                            </div>
+                        </div>
+
                     </div>
                 </section>
 
@@ -292,29 +254,12 @@ const FiltresPuits = () => {
                 <section id="specialized-filters" className="py-24 bg-gray-50 scroll-mt-20">
                     <div className="container mx-auto px-6">
                         <div className="text-left mb-16">
-                            <h2 
-                                className="mb-8 text-left"
-                                style={{
-                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                    fontSize: '48px',
-                                    lineHeight: '48px',
-                                    fontStyle: 'normal'
-                                }}
-                            >
+                            <h2 className="mb-8 heading-pro-max text-left">
                                 <span className="italic font-light text-[#2563eb] block text-left">Nos filtres d'eau</span>
                                 <span className="font-bold text-[#1e3a8a] block text-left">spécialisés - Eau de puits</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
-                            <p 
-                                className="mt-8 text-justify w-full"
-                                style={{
-                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                    fontSize: '20px',
-                                    fontWeight: '300',
-                                    lineHeight: '28px',
-                                    color: 'rgb(71, 85, 105)'
-                                }}
-                            >
+                            <p className="body-pro-max mt-8 text-justify w-full">
                                 Découvrez notre gamme complète de filtres spécialisés, conçus pour répondre aux défis uniques des puits privés artésiens ou de surface. Que vous fassiez face à des taches de fer tenaces, des odeurs de soufre incommodantes, une eau acide corrosive ou la présence de contaminants invisibles comme l'arsenic, nos systèmes offrent une solution ciblée et performante. Chaque unité est dotée d'une technologie de pointe pour assurer une filtration maximale tout en préservant l'intégrité de votre plomberie et de vos appareils électroménagers. En investissant dans l'une de nos solutions Vortex, Iron Shield, Zen-pH, ou autres, vous choisissez une tranquillité d'esprit durable et une qualité d'eau irréprochable pour toute votre famille. Nos experts vous accompagnent dans le diagnostic et l'installation pour garantir que chaque goutte d'eau qui coule de votre robinet soit pure, sûre et limpide.
                             </p>
                         </div>
@@ -336,18 +281,9 @@ const FiltresPuits = () => {
                                         <h3 className="card-title text-center group-hover:text-blue-600 transition-colors duration-500">
                                             {p.name}
                                         </h3>
-                                        <p
-                                            className="text-justify"
-                                            style={{
-                                                fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                                fontSize: '20px',
-                                                fontWeight: '300',
-                                                lineHeight: '28px',
-                                                color: 'rgb(71, 85, 105)'
-                                            }}
-                                        >
-                                            {p.desc}
-                                        </p>
+                                         <p className="body-pro-max text-slate-600 text-justify">
+                                             {p.desc}
+                                         </p>
                                         <div
                                             className="inline-flex items-center gap-2 text-blue-600 font-bold text-xs tracking-widest uppercase mt-4 group-hover:underline self-end"
                                             style={{}}
@@ -375,27 +311,19 @@ const FiltresPuits = () => {
                             <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.3em] mb-8">
                                 L'EXCELLENCE BRICAREAU
                             </span>
-                            <h2
-                                className="mb-12"
-                                style={{
-                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                    fontSize: '48px',
-                                    lineHeight: '52px',
-                                    fontStyle: 'normal'
-                                }}
-                            >
+                            <h2 className="mb-12 heading-pro-max text-center">
                                 <span className="italic font-light text-[#2563eb] block">Pourquoi choisir nos</span>
                                 <span className="font-bold text-[#1e3a8a] block text-center">systèmes de filtration d'eau ?</span>
                             </h2>
-                            <p className="text-slate-500 font-light text-xl leading-relaxed max-w-2xl mx-auto">
-                                Plus qu'un simple système de filtration, c'est une protection avancée pour votre santé et un confort durable pour toute votre famille.
-                            </p>
+                             <p className="body-pro-max text-slate-500 text-center mx-auto">
+                                 Plus qu'un simple système de filtration, c'est une protection avancée pour votre santé et un confort durable pour toute votre famille.
+                             </p>
                         </div>
 
                         <div className="grid grid-cols-1 lg:grid-cols-12 gap-24 items-center">
                             {/* Card Stack Side (Left - Interactive) */}
-                            <div className="lg:col-span-7 relative h-[500px] md:h-[700px] flex items-center justify-center mb-16 lg:mb-0">
-                                <div className="relative w-full max-w-[450px] aspect-[3/4] group">
+                            <div className="lg:col-span-7 relative h-[450px] md:h-[600px] lg:h-[700px] flex items-center justify-center mb-16 lg:mb-0 -mx-6 lg:mx-0">
+                                <div className="relative w-full lg:max-w-[450px] aspect-square md:aspect-video lg:aspect-[3/4] group">
 
                                     {cardStack.map((cardIdx, position) => {
                                         const card = cardData[cardIdx];
@@ -403,9 +331,9 @@ const FiltresPuits = () => {
                                             <div 
                                                 key={card.id}
                                                 onClick={() => handleCardClick(card.id)}
-                                                className={`absolute inset-0 bg-white rounded-[2.5rem] p-4 border border-slate-100 cursor-pointer transition-all duration-700 ease-out cursor-pointer ${positionStyles[position]}`}
+                                                className={`absolute inset-0 bg-white rounded-none lg:rounded-[2.5rem] p-4 border border-slate-100 lg:border-slate-100 cursor-pointer transition-all duration-700 ease-out ${positionStyles[position]}`}
                                             >
-                                                <div className="w-full h-full rounded-[1.8rem] overflow-hidden relative group">
+                                                <div className="w-full h-full rounded-none lg:rounded-[1.8rem] overflow-hidden relative group">
                                                     <img src={card.img} alt={card.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                                                     <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
                                                         <p className="text-white font-bold text-xl">{card.title}</p>
@@ -435,9 +363,9 @@ const FiltresPuits = () => {
                                                     <h3 className={`text-2xl font-bold transition-all duration-500 ${isTop ? 'text-blue-600' : 'text-[#1e3a8a] group-hover:text-blue-400'}`}>
                                                         {feature.title}
                                                     </h3>
-                                                    <p className="text-slate-500 font-light text-base leading-relaxed text-justify max-w-md">
-                                                        {feature.desc}
-                                                    </p>
+                                                     <p className="body-pro-max text-slate-500 text-justify max-w-md">
+                                                         {feature.desc}
+                                                     </p>
                                                 </div>
                                             </div>
                                         </div>
@@ -452,15 +380,7 @@ const FiltresPuits = () => {
                 <section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
-                            <h2
-                                className="mb-8 text-left"
-                                style={{
-                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                    fontSize: '48px',
-                                    lineHeight: '48px',
-                                    fontStyle: 'normal'
-                                }}
-                            >
+                            <h2 className="mb-8 heading-pro-max text-left">
                                 <span className="italic font-light text-[#2563eb] block">Comparez nos filtres d'eau</span>
                                 <span className="font-bold text-[#1e3a8a] block">spécialisés pour l'eau de puits</span>
                             </h2>
@@ -541,17 +461,9 @@ const FiltresPuits = () => {
                             <span className="font-bold text-[#1e3a8a] block uppercase">
                                 Contrôle de la Qualité D'EAU
                             </span>
-                            <h2
-                                className="mb-8"
-                                style={{
-                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                    fontSize: '48px',
-                                    lineHeight: '48px',
-                                    fontStyle: 'normal'
-                                }}
-                            >
-                                <span className="italic font-light text-white block">L'excellence commence</span>
-                                <span className="font-bold text-white block">par une eau parfaite.</span>
+                             <h2 className="mb-8 heading-pro-max">
+                                <span className="italic font-light text-[#2563eb] lg:text-white block">L'excellence commence</span>
+                                <span className="font-bold text-[#1e3a8a] lg:text-white block">par une eau parfaite.</span>
                             </h2>
                             <p className="font-light text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
                                 Le luxe, c'est de ne pas avoir à se soucier de la qualité de ce que l'on consomme. Offrez-vous la sérénité d'une eau analysée par des experts, pour une maison où tout brille, sans effort et sans compromis.
@@ -570,15 +482,7 @@ const FiltresPuits = () => {
                     filterProduct="/filtration"
                     title={
                         <>
-                             <h2
-                                className="mb-6"
-                                style={{
-                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                    fontSize: '48px',
-                                    lineHeight: '48px',
-                                    fontStyle: 'normal'
-                                }}
-                            >
+                              <h2 className="mb-6 heading-pro-max text-center">
                                 <span className="italic font-light text-[#2563eb] block text-center">Buvez l'eau de votre puits sans crainte</span>
                                 <span className="font-bold text-[#1e3a8a] block text-center">Ils ont fait le saut avec nous.</span>
                             </h2>
@@ -590,20 +494,12 @@ const FiltresPuits = () => {
                 <section className="bg-white py-24">
                     <div className="container mx-auto px-4">
                         <div className="text-center mb-16">
-                            <h2
-                                className="mb-8"
-                                style={{
-                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                    fontSize: '48px',
-                                    lineHeight: '48px',
-                                    fontStyle: 'normal'
-                                }}
-                            >
+                            <h2 className="mb-8 heading-pro-max text-center">
                                 <span className="font-bold text-[#1e3a8a] block text-center">Découvrez les produits associés</span>
                             </h2>
-                            <p className="font-light text-gray-500 max-w-2xl mx-auto">
-                                Optimisez votre expérience de traitement d'eau avec nos solutions complémentaires.
-                            </p>
+                             <p className="body-pro-max text-gray-500 text-center mx-auto">
+                                 Optimisez votre expérience de traitement d'eau avec nos solutions complémentaires.
+                             </p>
                         </div>
 
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -644,12 +540,9 @@ const FiltresPuits = () => {
                                         <h3 className="card-title text-center group-hover:text-blue-600 transition-colors duration-500">
                                             {prod.name}
                                         </h3>
-                                        <p
-                                            className="leading-[25px] text-slate-500 font-light flex-grow text-justify"
-                                            style={{}}
-                                        >
-                                            {prod.desc}
-                                        </p>
+                                         <p className="body-pro-max text-slate-500 text-justify">
+                                             {prod.desc}
+                                         </p>
                                         <div
                                             className="inline-flex items-center gap-2 text-blue-600 font-bold text-xs tracking-widest uppercase mt-4 group-hover:underline self-end"
                                             style={{}}
@@ -678,22 +571,14 @@ const FiltresPuits = () => {
 
                     <div className="container mx-auto px-6 relative z-10 text-center">
                         <div className="max-w-4xl mx-auto">
-                            <h2 
-                                className="mb-6"
-                                style={{
-                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                    fontSize: '48px',
-                                    lineHeight: '48px',
-                                    fontStyle: 'normal'
-                                }}
-                            >
+                            <h2 className="mb-6 heading-pro-max">
                                 <span className="font-bold text-white block tracking-tight">Passez d'une eau problématique</span>
                                 <span className="font-bold text-white block tracking-tight">à une source de pureté.</span>
                             </h2>
 
-                            <p className="text-blue-100/80 font-light text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
-                                Le fer, le soufre et le calcaire ne sont pas une fatalité. Protégez votre santé et retrouvez le plaisir d'une eau pure, inodore et cristalline dès aujourd'hui.
-                            </p>
+                             <p className="body-pro-max text-blue-100/80 text-center mx-auto">
+                                 Le fer, le soufre et le calcaire ne sont pas une fatalité. Protégez votre santé et retrouvez le plaisir d'une eau pure, inodore et cristalline dès aujourd'hui.
+                             </p>
 
                             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
                                                             <Button asChild>
@@ -702,7 +587,7 @@ const FiltresPuits = () => {
                                                                     Parlez à un expert
                                                                 </a>
                                                             </Button>
-                            
+
                                                             <Button
                                                                 variant="outline"
                                                                 asChild
@@ -722,21 +607,13 @@ const FiltresPuits = () => {
                 <section className="py-24 bg-white">
                     <div className="container mx-auto px-6">
                         <div className="text-left mb-16">
-                            <h2
-                                className="mb-8 text-left"
-                                style={{
-                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                    fontSize: '48px',
-                                    lineHeight: '48px',
-                                    fontStyle: 'normal'
-                                }}
-                            >
+                            <h2 className="mb-8 heading-pro-max text-left">
                                 <span className="italic font-light text-[#2563eb] block">Pour vous éclairer</span>
                                 <span className="font-bold text-[#1e3a8a] block">Questions fréquentes</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                                                     </div>
-                            
+
                                                     <div className="max-w-4xl mx-auto">
                                                         <Accordion type="single" collapsible className="w-full">
                                                             {faqItems.slice(0, showAllFaqs ? undefined : 6).map((item, idx) => (
@@ -760,20 +637,12 @@ const FiltresPuits = () => {
                         </div>
                     </div>
                 </section>
-                
+
                 {/* 11. Resources Section */}
                 <section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
-                            <h2 
-                                className="mb-8 text-left"
-                                style={{
-                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                    fontSize: '48px',
-                                    lineHeight: '48px',
-                                    fontStyle: 'normal'
-                                }}
-                            >
+                            <h2 className="mb-8 heading-pro-max text-left">
                                 <span className="font-bold text-[#1e3a8a] block text-left">Ressources</span>
                             </h2>
 

@@ -161,30 +161,13 @@ const TraitementEauDePuits = () => {
               <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.2em] mb-8">
                 Contaminants fréquents dans l'eau
               </span>
-              <h2 
-                className="mb-8"
-                style={{
-                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                    fontSize: '48px',
-                    lineHeight: '48px',
-                    fontStyle: 'normal'
-                }}
-              >
-                <span className="italic font-light text-[#2563eb] block">Problèmes courants</span>
-                <span className="font-bold text-[#1e3a8a] block">de l'eau de puits</span>
-              </h2>
-              <p 
-                style={{
-                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                    fontWeight: 300,
-                    color: 'rgb(71, 85, 105)',
-                    fontSize: '20px',
-                    lineHeight: '28px',
-                    fontStyle: 'normal'
-                }}
-              >
-                L'eau de votre puits est vivante et changeante. Identifiez les signes avant-coureurs pour garantir la sécurité de votre foyer et la longévité de vos installations.
-              </p>
+               <h2 className="mb-8 heading-pro-max text-center">
+                 <span className="italic font-light text-[#2563eb] block">Problèmes courants</span>
+                 <span className="font-bold text-[#1e3a8a] block">de l'eau de puits</span>
+               </h2>
+               <p className="body-pro-max text-slate-500 text-center">
+                 L'eau de votre puits est vivante et changeante. Identifiez les signes avant-coureurs pour garantir la sécurité de votre foyer et la longévité de vos installations.
+               </p>
             </div>
 
             {/* Bento Grid */}
@@ -230,17 +213,7 @@ const TraitementEauDePuits = () => {
                           {problem.title}
                         </h3>
                         <p 
-                          className={`text-justify
-                            ${isFeatured ? 'max-w-md' : ''}
-                          `}
-                          style={{
-                              fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                              fontWeight: 300,
-                              color: 'rgb(71, 85, 105)',
-                              fontSize: isFeatured ? '20px' : '18px',
-                              lineHeight: isFeatured ? '28px' : '24px',
-                              fontStyle: 'normal'
-                          }}
+                          className={`body-pro-max text-slate-600 text-justify ${isFeatured ? 'max-w-md' : ''}`}
                         >
                           {problem.desc}
                         </p>
@@ -270,31 +243,13 @@ const TraitementEauDePuits = () => {
               <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.2em] mb-8">
                 NOTRE FONCTIONNEMENT
               </span>
-              <h2 
-                className="mb-8"
-                style={{
-                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                    fontSize: '48px',
-                    lineHeight: '48px',
-                    fontStyle: 'normal'
-                }}
-              >
-                <span className="italic font-light text-[#2563eb] block">Un service simple</span>
-                <span className="font-bold text-[#1e3a8a] block">& sans souci.</span>
-              </h2>
-              <p 
-                className="max-w-2xl mx-auto text-center"
-                style={{
-                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                    fontWeight: 300,
-                    color: 'rgb(71, 85, 105)',
-                    fontSize: '20px',
-                    lineHeight: '28px',
-                    fontStyle: 'normal'
-                }}
-              >
-                Confiez-nous la gestion de votre eau de puits. De l'expertise initiale à l'installation finale, nous nous occupons de tout pour vous garantir une eau saine, sans compromis.
-              </p>
+               <h2 className="mb-8 heading-pro-max text-center">
+                 <span className="italic font-light text-[#2563eb] block text-center">Un service simple</span>
+                 <span className="font-bold text-[#1e3a8a] block text-center">& sans souci.</span>
+               </h2>
+               <p className="body-pro-max text-slate-600 max-w-2xl mx-auto text-center">
+                 Confiez-nous la gestion de votre eau de puits. De l'expertise initiale à l'installation finale, nous nous occupons de tout pour vous garantir une eau saine, sans compromis.
+               </p>
             </div>
 
             {/* Steps - Alternating Zig Zag */}
@@ -356,19 +311,9 @@ const TraitementEauDePuits = () => {
                         {step.title}
                       </h3>
                       <div className={`w-12 h-1.5 bg-blue-600 rounded-full ${idx % 2 === 1 ? 'ml-auto' : ''}`} />
-                      <p 
-                        className="text-justify max-w-xl"
-                        style={{
-                            fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                            fontWeight: 300,
-                            color: 'rgb(71, 85, 105)',
-                            fontSize: '20px',
-                            lineHeight: '28px',
-                            fontStyle: 'normal'
-                        }}
-                      >
-                        {step.desc}
-                      </p>
+                       <p className="body-pro-max text-slate-600 text-justify max-w-xl">
+                         {step.desc}
+                       </p>
                     </div>
                   </div>
                 </div>
@@ -405,31 +350,13 @@ const TraitementEauDePuits = () => {
               <span className="font-bold text-[#1e3a8a] block uppercase">
                 Contrôle de la Qualité D'EAU
               </span>
-              <h2 
-                className="mb-8"
-                style={{
-                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                    fontSize: '48px',
-                    lineHeight: '48px',
-                    fontStyle: 'normal',
-                    color: 'white'
-                }}
-              >
-                <span className="italic font-light text-white/80 block">Dites adieu au fer,</span>
-                <span className="font-bold text-white block">au soufre et au calcaire.</span>
-              </h2>
-              <p 
-                className="mb-8 max-w-xl text-left lg:text-justify"
-                style={{
-                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                    fontWeight: 300,
-                    color: 'rgba(255, 255, 255, 0.95)',
-                    fontSize: '20px',
-                    lineHeight: '28px',
-                    fontStyle: 'normal'
-                }}
-              >
-                Un puits performant commence par une analyse rigoureuse. Identifiez les contaminants invisibles et protégez durablement votre santé et vos installations.</p>
+               <h2 className="mb-8 heading-pro-max text-left">
+                 <span className="italic font-light text-[#1e3a8a] lg:text-white/80 block">Dites adieu au fer,</span>
+                 <span className="font-bold text-[#1e3a8a] lg:text-white block">au soufre et au calcaire.</span>
+               </h2>
+               <p className="body-pro-max text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
+                 Un puits performant commence par une analyse rigoureuse. Identifiez les contaminants invisibles et protégez durablement votre santé et vos installations.
+               </p>
               <div className="flex gap-4">
                   <Button asChild>
                     <a href="/tests-eau">Réservez une analyse d'eau</a>
@@ -443,32 +370,14 @@ const TraitementEauDePuits = () => {
         <section className="bg-white py-24">
           <div className="container mx-auto px-6">
             <div className="text-left mb-16">
-              <h2
-                className="mb-8 text-left"
-                style={{
-                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                    fontSize: '48px',
-                    lineHeight: '48px',
-                    fontStyle: 'normal'
-                }}
-              >
-                <span className="italic font-light text-[#2563eb] block">Découvrez nos solutions</span>
-                <span className="font-bold text-[#1e3a8a] block">de traitement de l'eau de puits</span>
-              </h2>
-              <div className="w-24 h-1 bg-blue-600 mb-8"></div>
-              <p
-                className="mb-8 text-justify"
-                style={{
-                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                    fontWeight: 300,
-                    color: 'rgb(71, 85, 105)',
-                    fontSize: '20px',
-                    lineHeight: '28px',
-                    fontStyle: 'normal'
-                }}
-              >
-                Nos solutions spécialisées pour l'eau de puits sont conçues pour transformer une eau brute et imprévisible en une source de pureté irréprochable au sein de votre foyer. Nous proposons une gamme complète incluant nos filtres spécialisés contre les différents contaminants, nos adoucisseurs de pointe éliminant le fer et le calcaire, ainsi que nos stations d'eau potable par osmose inverse pour une hydratation saine. Pour une sécurité microbiologique absolue, nos systèmes de stérilisation UV neutralisent efficacement les bactéries sans aucun ajout chimique. Chaque produit est sélectionné pour sa robustesse et sa capacité à répondre aux défis uniques posés par les eaux souterraines, vous garantissant ainsi une performance durable et une tranquillité d'esprit totale au quotidien. Faites confiance à l'expertise de Bricareau pour protéger votre santé et préserver l'intégrité de vos installations grâce à une filtration sur mesure, fiable et adaptée à vos besoins spécifiques.
-              </p>
+               <h2 className="mb-8 heading-pro-max text-left">
+                 <span className="italic font-light text-[#2563eb] block">Découvrez nos solutions</span>
+                 <span className="font-bold text-[#1e3a8a] block">de traitement de l'eau de puits</span>
+               </h2>
+               <div className="w-24 h-1 bg-blue-600 mb-8"></div>
+               <p className="body-pro-max text-slate-600 mb-8 text-justify">
+                 Nos solutions spécialisées pour l'eau de puits sont conçues pour transformer une eau brute et imprévisible en une source de pureté irréprochable au sein de votre foyer. Nous proposons une gamme complète incluant nos filtres spécialisés contre les différents contaminants, nos adoucisseurs de pointe éliminant le fer et le calcaire, ainsi que nos stations d'eau potable par osmose inverse pour une hydratation saine. Pour une sécurité microbiologique absolue, nos systèmes de stérilisation UV neutralisent efficacement les bactéries sans aucun ajout chimique. Chaque produit est sélectionné pour sa robustesse et sa capacité à répondre aux défis uniques posés par les eaux souterraines, vous garantissant ainsi une performance durable et une tranquillité d'esprit totale au quotidien. Faites confiance à l'expertise de Bricareau pour protéger votre santé et préserver l'intégrité de vos installations grâce à une filtration sur mesure, fiable et adaptée à vos besoins spécifiques.
+               </p>
             </div>
 
             <Carousel
@@ -523,19 +432,9 @@ const TraitementEauDePuits = () => {
                         >
                           {prod.name}
                         </h3>
-                        <p
-                          className="flex-grow text-justify"
-                          style={{
-                              fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                              fontWeight: 300,
-                              color: 'rgb(71, 85, 105)',
-                              fontSize: '20px',
-                              lineHeight: '28px',
-                              fontStyle: 'normal'
-                          }}
-                        >
-                          {prod.desc}
-                        </p>
+                         <p className="body-pro-max text-slate-600 flex-grow text-justify">
+                           {prod.desc}
+                         </p>
                         <div
                           className="inline-flex items-center gap-2 text-blue-600 font-bold text-xs tracking-widest uppercase mt-4 group-hover:underline self-end"
                           style={{}}
@@ -574,19 +473,11 @@ const TraitementEauDePuits = () => {
         <section className="py-24 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="text-left mb-16">
-              <h2
-                className="mb-8 text-left"
-                style={{
-                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                    fontSize: '48px',
-                    lineHeight: '48px',
-                    fontStyle: 'normal'
-                }}
-              >
-                <span className="italic font-light text-[#2563eb] block">Comparez nos solutions</span>
-                <span className="font-bold text-[#1e3a8a] block">de traitement de l'eau de puits</span>
-              </h2>
-              <div className="w-24 h-1 bg-blue-600 mb-8"></div>
+               <h2 className="mb-8 heading-pro-max text-left">
+                 <span className="italic font-light text-[#2563eb] block">Comparez nos solutions</span>
+                 <span className="font-bold text-[#1e3a8a] block">de traitement de l'eau de puits</span>
+               </h2>
+               <div className="w-24 h-1 bg-blue-600 mb-8"></div>
             </div>
 
             <div className="overflow-x-auto">
@@ -651,31 +542,13 @@ const TraitementEauDePuits = () => {
 
           <div className="container mx-auto px-6 relative z-10 text-center">
             <div className="max-w-4xl mx-auto">
-              <h2
-                className="mb-8"
-                style={{
-                  fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                  fontSize: '48px',
-                  lineHeight: '48px',
-                  fontStyle: 'normal'
-                }}
-              >
-                <span className="font-bold text-white block">Maîtrisez la qualité de votre eau de puits </span>
-              </h2>
+               <h2 className="mb-8 heading-pro-max text-center">
+                 <span className="font-bold text-white block text-center">Maîtrisez la qualité de votre eau de puits </span>
+               </h2>
 
-              <p 
-                className="mb-12 max-w-2xl mx-auto"
-                style={{
-                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                    fontWeight: 300,
-                    color: 'rgba(219, 234, 254, 0.8)',
-                    fontSize: '20px',
-                    lineHeight: '28px',
-                    fontStyle: 'normal'
-                }}
-              >
-                Le fer, le soufre et le calcaire ne sont pas une fatalité. Protégez votre santé et retrouvez le plaisir d'une eau pure, inodore et cristalline dès aujourd'hui.
-              </p>
+               <p className="font-light text-white mb-12 max-w-2xl mx-auto text-center">
+                 Le fer, le soufre et le calcaire ne sont pas une fatalité. Protégez votre santé et retrouvez le plaisir d'une eau pure, inodore et cristalline dès aujourd'hui.
+               </p>
 
               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
                 <Button asChild className="shadow-2xl shadow-white/30 group">
@@ -704,19 +577,11 @@ const TraitementEauDePuits = () => {
         <section className="py-24 bg-white">
           <div className="container mx-auto px-4">
             <div className="text-left mb-16">
-              <h2
-                className="mb-8 text-left"
-                style={{
-                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                    fontSize: '48px',
-                    lineHeight: '48px',
-                    fontStyle: 'normal'
-                }}
-              >
-                <span className="italic font-light text-[#2563eb] block">Pour vous éclairer</span>
-                <span className="font-bold text-[#1e3a8a] block">Questions fréquentes</span>
-              </h2>
-              <div className="w-24 h-1 bg-blue-600 mb-8"></div>
+               <h2 className="mb-8 heading-pro-max text-left">
+                 <span className="italic font-light text-[#2563eb] block">Pour vous éclairer</span>
+                 <span className="font-bold text-[#1e3a8a] block">Questions fréquentes</span>
+               </h2>
+               <div className="w-24 h-1 bg-blue-600 mb-8"></div>
             </div>
 
             <div className="max-w-4xl mx-auto">
@@ -791,19 +656,9 @@ const TraitementEauDePuits = () => {
                     <AccordionTrigger className="text-left text-base font-medium leading-6 hover:no-underline py-6" style={{}}>
                       {item.q}
                     </AccordionTrigger>
-                    <AccordionContent 
-                      className="pb-8 text-justify"
-                      style={{
-                          fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                          fontWeight: 300,
-                          color: 'rgb(71, 85, 105)',
-                          fontSize: '20px',
-                          lineHeight: '28px',
-                          fontStyle: 'normal'
-                      }}
-                    >
-                      {item.a}
-                    </AccordionContent>
+                     <AccordionContent className="body-pro-max text-slate-500 pb-8 text-justify">
+                       {item.a}
+                     </AccordionContent>
                   </AccordionItem>
                 ))}
               </Accordion>
@@ -824,17 +679,9 @@ const TraitementEauDePuits = () => {
         <section className="py-24 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="text-left mb-16">
-              <h2 
-                className="mb-8 text-left"
-                style={{
-                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                    fontSize: '48px',
-                    lineHeight: '48px',
-                    fontStyle: 'normal'
-                }}
-              >
-                <span className="font-bold text-[#1e3a8a] block">Ressources</span>
-              </h2>
+               <h2 className="mb-8 heading-pro-max text-left">
+                 <span className="font-bold text-[#1e3a8a] block">Ressources</span>
+               </h2>
               <div className="w-24 h-1 bg-blue-600"></div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

@@ -136,19 +136,11 @@ const TestsEauPage = () => {
           <div className="container mx-auto px-6 relative z-10">
             <div className="max-w-4xl mx-auto text-center mb-16 lg:mb-24">
               <span className="text-sm font-bold uppercase tracking-widest text-blue-600 mb-4 block flex items-center justify-center gap-2">
-                <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.2em] mb-6">
-                  TESTS & ANALYSES D'EAU DE PRÉCISION
-                </span>
+                 <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.2em] mb-6">
+                   TESTS & ANALYSES D'EAU DE PRÉCISION
+                 </span>
               </span>
-              <h2 
-                className="mb-8"
-                style={{
-                  fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                  fontSize: '48px',
-                  lineHeight: '48px',
-                  fontStyle: 'normal'
-                }}
-              >
+              <h2 className="mb-8 heading-pro-max text-center">
                 <span className="italic font-light text-[#2563eb] block text-center">Savoir exactement</span>
                 <span className="font-bold text-[#1e3a8a] block text-center">ce que vous buvez.</span>
               </h2>
@@ -156,9 +148,9 @@ const TestsEauPage = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
               {/* Visual Side (Left/Center on Desktop) */}
-              <div className="relative order-2 lg:order-1">
+              <div className="relative order-2 lg:order-1 -mx-6 lg:mx-0">
                 {/* Large Integrated Microscopy Image */}
-                <div className="relative aspect-square lg:aspect-[4/5] rounded-[2.5rem] overflow-hidden group shadow-2xl shadow-blue-900/5">
+                <div className="relative h-[450px] md:h-[550px] lg:h-[700px] rounded-none lg:rounded-[2.5rem] overflow-hidden group shadow-none lg:shadow-2xl shadow-blue-900/5">
                   <img
                     src={forensicWaterImg}
                     alt="Microscopic water analysis"
@@ -176,7 +168,7 @@ const TestsEauPage = () => {
               <div className="text-left order-1 lg:order-2">
                 <div className="max-w-xl">
                   <div className="space-y-8 py-2">
-                    <p className="text-slate-600 font-light max-w-2xl mx-auto text-justify">
+                    <p className="body-pro-max max-w-2xl mx-auto text-justify">
                       Les analyses d’eau professionnelles et les tests de laboratoire sont la façon la plus fiable de connaître la qualité réelle de votre eau potable. Ils permettent de détecter les contaminants invisibles à l’œil nu et de choisir ensuite le bon système de traitement d'eau pour protéger votre famille. il est préférable de procéder à une analyse d'eau dans les cas suivants:
                     </p>
                   </div>
@@ -221,23 +213,15 @@ const TestsEauPage = () => {
           <div className="container mx-auto px-6">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <span className="text-sm font-bold uppercase tracking-widest text-blue-600 mb-4 block flex items-center justify-center gap-2">
-                <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.2em] mb-6">
-                  NOS SOLUTIONS D'ANALYSE DE LA QUALITÉ D'EAU
-                </span>
+                 <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.2em] mb-6">
+                   NOS SOLUTIONS D'ANALYSE DE LA QUALITÉ D'EAU
+                 </span>
               </span>
-              <h2 
-                className="mb-8"
-                style={{
-                  fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                  fontSize: '48px',
-                  lineHeight: '48px',
-                  fontStyle: 'normal'
-                }}
-              >
+              <h2 className="mb-8 heading-pro-max text-center">
                 <span className="italic font-light text-[#2563eb] block text-center">Quelle trousse d'analyse</span>
                 <span className="font-bold text-[#1e3a8a] block text-center">choisir pour votre eau ?</span>
               </h2>
-              <p className="text-slate-600 font-light max-w-2xl mx-auto">
+              <p className="body-pro-max max-w-2xl mx-auto text-center">
                 Des solutions adaptées à vos besoins, de la vérification bactérienne de base au bilan complet pour une tranquillité d'esprit totale.
               </p>
             </div>
@@ -360,15 +344,7 @@ const TestsEauPage = () => {
 
           <div className="container mx-auto px-6 relative z-10 text-center">
             <div className="max-w-4xl mx-auto">
-              <h2 
-                className="mb-8"
-                style={{
-                  fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                  fontSize: '48px',
-                  lineHeight: '48px',
-                  fontStyle: 'normal'
-                }}
-              >
+              <h2 className="mb-8 heading-pro-max text-center">
                 <span className="font-bold text-white block">Vous avez un doute</span>
                 <span className="font-bold text-white block">sur la qualité de votre eau ?</span>
               </h2>
@@ -399,15 +375,7 @@ const TestsEauPage = () => {
         <section className="py-24 bg-white border-t border-slate-100">
           <div className="container mx-auto px-4 text-left">
             <div className="text-left mb-16">
-                             <h2
-                                className="mb-8 text-left"
-                                style={{
-                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                    fontSize: '48px',
-                                    lineHeight: '48px',
-                                    fontStyle: 'normal'
-                                }}
-                            >
+                             <h2 className="mb-8 heading-pro-max text-left">
                                 <span className="italic font-light text-[#2563eb] block">Pour vous éclairer</span>
                                 <span className="font-bold text-[#1e3a8a] block">Questions fréquentes</span>
                             </h2>

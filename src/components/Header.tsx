@@ -148,6 +148,7 @@ const Header = () => {
       megamenuCards: [
         {
           customIcon: wholehousefiltericonImg,
+          title: "Filtres d'eau pour toute la maison",
           description: "Protection complète de votre maison avec une filtration centralisée pour toute l'eau.",
           href: "/filtres-deau-pour-toute-la-maison"
         },

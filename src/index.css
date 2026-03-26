@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
 html {
   scroll-behavior: smooth;
 }
@@ -120,27 +122,27 @@ All colors MUST be HSL.
   }
 
   p {
-    @apply font-light text-[16px] leading-[24px];
+    @apply text-[16px] md:text-[18px] lg:text-[20px] leading-snug font-light text-slate-600;
   }
 
   h1 {
-    @apply text-[30px] md:text-[36px] lg:text-[42px] leading-[1.2] font-bold tracking-tight;
+    @apply text-[32px] md:text-[48px] lg:text-[64px] leading-[1.1] font-bold tracking-tighter;
   }
 
   h2 {
-    @apply text-[28px] md:text-[32px] lg:text-[36px] leading-[1.25] tracking-tight font-bold;
+    @apply text-[28px] md:text-[36px] lg:text-[48px] leading-[1.2] font-bold tracking-tight;
   }
 
   h3 {
-    @apply text-[20px] md:text-[24px] lg:text-[28px] leading-[1.3] font-semibold;
+    @apply text-[22px] md:text-[28px] lg:text-[32px] leading-[1.3] font-semibold tracking-tight;
   }
 
   h4 {
-    @apply text-[18px] md:text-[20px] lg:text-[24px] leading-[1.4] font-medium;
+    @apply text-[18px] md:text-[22px] lg:text-[26px] leading-[1.4] font-medium;
   }
 
   h5 {
-    @apply text-[16px] md:text-[18px] lg:text-[20px] leading-[1.5] font-medium;
+    @apply text-[16px] md:text-[18px] lg:text-[22px] leading-[1.5] font-medium;
   }
 
   .card-title {
@@ -150,6 +152,15 @@ All colors MUST be HSL.
 }
 
 @layer utilities {
+  .heading-pro-max {
+    @apply text-[28px] md:text-[36px] lg:text-[48px] leading-tight tracking-tight;
+  }
+  .subheading-pro-max {
+    @apply text-[20px] md:text-[24px] lg:text-[28px] leading-snug font-medium tracking-tight;
+  }
+  .body-pro-max {
+    @apply text-[16px] md:text-[18px] lg:text-[20px] leading-snug font-light text-slate-600;
+  }
   @keyframes heartbeat {
 
     0%,

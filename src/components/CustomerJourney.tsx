@@ -49,18 +49,16 @@ const CustomerJourney = () => {
                         L'EXPÉRIENCE BRICAREAU
                     </span>
                     <h2 
-                        className="mb-8"
+                        className="mb-8 text-[28px] md:text-[36px] lg:text-[48px] leading-tight"
                         style={{
                             fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                            fontSize: '48px',
-                            lineHeight: '52px',
                             fontStyle: 'normal'
                         }}
                     >
                         <span className="italic font-light text-[#2563eb] block">La promesse d'une eau saine,</span>
                         <span className="font-bold text-[#1e3a8a] block">de notre rencontre à votre confort.</span>
                     </h2>
-                    <p className="text-slate-500 font-light text-xl leading-relaxed max-w-2xl mx-auto mb-12">
+                    <p className="text-[16px] md:text-[18px] lg:text-[20px] leading-snug font-light text-slate-600 max-w-2xl mx-auto mb-12">
                         Parce que la santé de votre foyer ne supporte aucune approximation, nous avons bâti un protocole rigoureux qui garantit une pureté absolue à chaque étape.
                     </p>
                 </div>

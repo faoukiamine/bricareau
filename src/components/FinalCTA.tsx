@@ -45,7 +45,7 @@ const FinalCTA = () => {
                             </p>
                             <Button
                                 size="lg"
-                                className="w-full bg-white text-[#2563EB] hover:bg-white/90 font-semibold shadow-lg hover:shadow-xl transition-all group"
+                                className="w-fit mx-auto flex bg-white text-[#2563EB] hover:bg-white/90 font-semibold shadow-lg hover:shadow-xl transition-all group"
                             >
                                 Commencer maintenant
                                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
