@@ -7,6 +7,7 @@ import filtresSpecialisesImg from "@/assets/Filtres d'eau spécialisés.webp";
 import fontainesImg from "@/assets/A13.jpg";
 import filtrationPuitsImg from "@/assets/Filtration-eau-de-puits.webp";
 import uvImg from "@/assets/Systèmes de désinfection UV.webp";
+import WellWaterEquipmentImg from "@/assets/vs6opjvs6opjvs6o.png";
 
 const products = [
     {
@@ -37,7 +38,7 @@ const products = [
     {
         name: "Filtration eau de puits",
         description: "Nos systèmes de filtration aident à fournir une eau de qualité en provenance d'un puits artésien ou de surface.",
-        image: filtrationPuitsImg,
+        image: WellWaterEquipmentImg,
         link: "/traitement-eau-de-puits"
     },
     {

@@ -7,6 +7,7 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import { Button } from "@/components/ui/button";
 import heroGirl from "@/assets/cute-little-girl-washing-hands.jpg";
 import conditionneurImg from "@/assets/Gemini_Generated_Image_edgz5sedgz5sedgz.png";
+import tacComparisonImg from "@/assets/tac-comparison.png";
 import applianceDamageImg from "@/assets/tarte-chauffe-eau.jpg";
 import { softenerImg as residentialWaterSoftenerImg } from "./Blog pages/Comment régler la dureté de votre adoucisseur ";
 import { adoucisseurImg as adoucisseurFosseImg } from "./Blog pages/Adoucisseur-deau- et-fosse-septique--Mythes-et-réalités";
@@ -20,8 +21,16 @@ import {
   ShieldCheck,
   CircleDollarSign,
   TrendingUp,
+  Zap,
+  Droplets,
+  ArrowRight,
+  CheckCircle2,
+  X,
+  ShieldAlert,
+  Trash2,
   ZapOff
 } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import eauDePuitsImg from "@/assets/185091336.jpg";
 import { NavLink } from "@/components/NavLink";
 import {
@@ -75,6 +84,7 @@ const faqs = [
 
 const ConditionneursSansSel = () => {
   const [showAllFaqs, setShowAllFaqs] = React.useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     document.title = "Conditionneur d'eau sans sel | L'anti-tartre écologique | Bricareau";
@@ -97,62 +107,162 @@ const ConditionneursSansSel = () => {
                     showBreadcrumbs={true}
                     singleLineTitle={true}
                 />
+ 
+        {/* 1.5. Education Section: Understanding Limescale */}
+        <section className="py-24 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="flex flex-col lg:flex-row items-center gap-16">
+              <div className="lg:w-1/2">
+                <h2 
+                    className="mb-8"
+                    style={{
+                        fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                        fontSize: '48px',
+                        lineHeight: '48px',
+                        fontStyle: 'normal'
+                    }}
+                >
+                    <span className="italic font-light text-[#2563eb] block">Comprendre le calcaire autrement</span>
+                    <span className="font-bold text-[#1e3a8a] block">Le problème n'est pas le minéral, c'est son cristal</span>
+                </h2>
+                <div className="space-y-6 text-slate-600 font-light text-lg leading-snug">
+                  <p className="text-justify">
+                    La dureté de l'eau est causée par le calcium et le magnésium. Ces minéraux sont essentiels à la santé, mais lorsqu'ils chauffent ou s'accumulent, ils se transforment en carbonate de calcium (calcite), un cristal dur et adhésif qui :
+                  </p>
+                  <ul className="space-y-4">
+                    <li className="flex gap-3">
+                      <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-blue-600 shrink-0" />
+                      <span>Entartre vos canalisations et vos appareils (chauffe-eau, lave-linge).</span>
+                    </li>
+                    <li className="flex gap-3">
+                      <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-blue-600 shrink-0" />
+                      <span>Diminue l'efficacité de vos détergents et assèche votre peau.</span>
+                    </li>
+                    <li className="flex gap-3">
+                      <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-blue-600 shrink-0" />
+                      <span>Gaspille de l'énergie, car une mince couche de tartre sur un élément chauffant agit comme un isolant.</span>
+                    </li>
+                  </ul>
+                  <p className="pt-4 border-t border-slate-100 text-justify">
+                    Une solution standard (adoucisseur au sel) retire ces minéraux. <span className="font-medium text-[#1e3a8a]">La technologie TAC, elle, change la structure du minéral</span> pour qu'il ne puisse plus se déposer.
+                  </p>
+                </div>
+              </div>
+              <div className="lg:w-1/2">
+                <img 
+                    src={tacComparisonImg} 
+                    alt="Comparaison entre eau dure et technologie TAC" 
+                    className="w-full h-auto mix-blend-multiply"
+                />
+                <p className="mt-6 text-center text-slate-400 text-sm italic">
+                    Dépôts de tartre vs minéraux neutralisés par la technologie TAC.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
 
-        {/* 2. Problem Section */}
-        <section className="py-32 bg-slate-50 relative overflow-hidden">
+        {/* 2. Problem Section - "The Financial Audit" Alternative */}
+        <section className="py-32 bg-[#F8FAFC] relative overflow-hidden">
+          {/* Abstract pattern background */}
+          <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-blue-100/50 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+          <div className="absolute bottom-0 left-0 w-1/4 h-1/4 bg-blue-50/50 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
+
           <div className="container mx-auto px-4 relative z-10">
-            <div className="max-w-4xl mx-auto text-center mb-20">
+            <div className="max-w-4xl mx-auto text-center mb-24">
               <h2 
-                                className="mb-8 text-center"
-                                style={{
-                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                    fontSize: '48px',
-                                    lineHeight: '48px',
-                                    fontStyle: 'normal'
-                                }}
-                            >
-                                <span className="italic font-light text-[#2563eb] block">Ce que l'eau dure</span>
-                                <span className="font-bold text-[#1e3a8a] block">coûte réellement.</span>
-                            </h2>
-              <p className="text-slate-500 font-light text-xl max-w-2xl mx-auto leading-relaxed">
-                Le calcaire dégrade vos équipements jour après jour. Protégez-les avec une solution efficace.
+                className="mb-8 text-center"
+                style={{
+                  fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                  fontSize: '48px',
+                  lineHeight: '48px',
+                  fontStyle: 'normal'
+                }}
+              >
+                <span className="italic font-light text-[#2563eb] block">Ce que l'eau dure</span>
+                <span className="font-bold text-[#1e3a8a] block">coûte réellement.</span>
+              </h2>
+              <p className="text-slate-600 font-light text-xl max-w-3xl mx-auto leading-snug">
+                On la voit sur la paroi de la douche ou au fond de la bouilloire, mais le véritable coût se cache là où vous ne regardez pas <span className="text-[#2563eb] font-medium">une fuite financière invisible</span> dans votre maison.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
-              <div className="md:col-span-2 md:row-span-2 group relative overflow-hidden rounded-[2.5rem] bg-white shadow-2xl">
-                <img src={applianceDamageImg} alt="Dégâts du calcaire" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent"></div>
-                <div className="absolute bottom-8 left-8 right-8 text-white">
-                  <h4 className="text-2xl mb-2">Usure Prématurée</h4>
-                  <p className="font-light text-sm opacity-80">Coup d'arrêt sur l'efficacité de vos chauffe-eaux.</p>
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 max-w-7xl mx-auto items-stretch">
+              {/* Point 1: Taxe Énergétique - Large Focus Card */}
+              <div className="lg:col-span-12 xl:col-span-4 flex flex-col">
+                <div className="group bg-white/70 backdrop-blur-md rounded-[2.5rem] p-10 border border-white shadow-xl hover:shadow-2xl transition-all duration-300 flex-grow relative overflow-hidden">
+                  <div className="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-90 transition-opacity">
+                    <TrendingUp className="w-32 h-32 text-blue-900 text-[#1e3a8a] group-hover:text-blue-600 transition-colors" />
+                  </div>
+                  <div className="text-blue-600 font-bold text-sm tracking-widest uppercase mb-6 flex items-center gap-2">
+                    Impact Énergétique
+                  </div>
+                  <div className="flex items-baseline gap-2 mb-4">
+                    <span className="text-7xl font-black text-[#1e3a8a] group-hover:text-blue-600 transition-colors">+15%</span>
+                    <span className="text-slate-400 font-light italic">de conso</span>
+                  </div>
+                  <h3 className="text-2xl font-bold text-slate-800 mb-6 font-primary leading-tight">La "Taxe Énergétique" du calcaire</h3>
+                  <div className="space-y-4 text-slate-600 font-light leading-snug">
+                    <p>Le calcaire agit comme un isolant entre la chaleur et l'eau. Pour une famille au Québec, c'est entre <span className="font-bold text-slate-900 underline decoration-blue-200 decoration-8 underline-offset-0">100$ et 200$ d'énergie gaspillée</span> chaque année juste pour chauffer le tartre.</p>
+                    <div className="flex items-center gap-3 text-sm font-medium text-slate-400 border-t border-slate-100 pt-6">
+                      <Zap className="w-4 h-4 text-orange-400" />
+                      Constat : 1mm de tartre = +10% de facture.
+                    </div>
+                  </div>
                 </div>
               </div>
 
-              <div className="md:col-span-1 bg-blue-600 rounded-[2.5rem] p-8 text-white flex flex-col justify-between shadow-xl">
-                <ZapOff className="w-12 h-12 opacity-20" />
-                <div>
-                  <div className="text-5xl font-black mb-1">+25%</div>
-                  <div className="text-blue-100 text-sm font-light">de factures énergétiques liées au tartre.</div>
+              {/* Point 2: Le Vol des électros - Split with visual cues */}
+              <div className="lg:col-span-12 xl:col-span-8">
+                <div className="bg-[#1e3a8a] rounded-[2.5rem] p-1.5 shadow-2xl overflow-hidden group">
+                  <div className="bg-white rounded-[2rem] p-10 lg:p-12 flex flex-col md:flex-row gap-12">
+                    <div className="md:w-3/5">
+                      <div className="text-blue-600 font-bold text-sm tracking-widest uppercase mb-6 flex items-center gap-2">
+                        Risque Matériel
+                      </div>
+                      <h3 className="text-3xl font-bold text-slate-800 mb-8 leading-[1.1]">Le "Vol" de vos électroménagers haut de gamme</h3>
+                      <p className="text-slate-500 font-light text-lg mb-8 leading-relaxed">
+                        Sans protection, vos investissements s'usent deux fois plus vite. Le calcaire ronge les pompes et les joints de l'intérieur.
+                      </p>
+                      
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                        <div className="p-6 bg-slate-50 rounded-3xl border border-slate-100 transition-colors group-hover:bg-slate-50/80">
+                          <span className="text-3xl font-black text-[#1e3a8a] group-hover:text-blue-600 transition-colors">-50%</span>
+                          <p className="text-slate-500 text-sm font-light">
+                            <span className="font-bold text-slate-700">Chauffe-eau :</span> 6 ans au lieu de 12 ans.
+                          </p>
+                        </div>
+                        <div className="p-6 bg-slate-50 rounded-3xl border border-slate-100 transition-colors group-hover:bg-slate-50/80">
+                          <span className="text-3xl font-black text-[#1e3a8a] group-hover:text-blue-600 transition-colors">500$</span>
+                          <p className="text-slate-500 text-sm font-light">
+                            <span className="font-bold text-slate-700">Réparations :</span> Coût moyen par visite de technicien.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div className="md:w-2/5 flex flex-col justify-center border-l border-slate-100 pl-4 md:pl-10">
+                      <div className="space-y-8">
+                        <div>
+                          <h4 className="font-bold text-slate-800 mb-2 flex items-center gap-2 leading-tight">
+                            Produits d'entretien ménager
+                          </h4>
+                          <p className="text-slate-500 font-light text-sm leading-relaxed">
+                            Les minéraux "emprisonnent" vos savons, votre shampoing et vos détergents. Vous utilisez <span className="font-bold text-blue-600">+50% de détergent</span> pour le même résultat.
+                          </p>
+                        </div>
+                        <div>
+                          <h4 className="font-bold text-slate-800 mb-2 flex items-center gap-2 leading-tight">
+                            Vêtements & Linge
+                          </h4>
+                          <p className="text-slate-500 font-light text-sm leading-relaxed">
+                            Les fibres s'usent prématurément, le linge devient rêche et les couleurs se ternissent dès les premiers lavages.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
-
-              <div className="md:col-span-1 bg-white border border-slate-200 rounded-[2.5rem] p-8 hover:shadow-xl transition-all">
-                <Wrench className="w-8 h-8 text-blue-600 mb-4" />
-                <h4 className="card-title mb-2">Tuyauterie</h4>
-                <p className="text-slate-500 text-sm font-light">Le calcaire réduit le débit et favorise la corrosion.</p>
-              </div>
-
-              <div className="md:col-span-1 bg-white border border-slate-200 rounded-[2.5rem] p-8 hover:shadow-xl transition-all">
-                <Sparkles className="w-8 h-8 text-blue-600 mb-4" />
-                <h4 className="card-title mb-2">Nettoyage</h4>
-                <p className="text-slate-500 text-sm font-light">Traces blanches tenaces sur vos surfaces.</p>
-              </div>
-
-              <div className="md:col-span-1 bg-white border border-slate-200 rounded-[2.5rem] p-8 hover:shadow-xl transition-all">
-                <CircleDollarSign className="w-8 h-8 text-blue-600 mb-4" />
-                <h4 className="card-title mb-2">Coûts Cachés</h4>
-                <p className="text-slate-500 text-sm font-light">Réduction de la durée de vie des équipements.</p>
               </div>
             </div>
           </div>

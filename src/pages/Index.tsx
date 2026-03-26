@@ -2,9 +2,8 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import ProductShowcase from "@/components/ProductShowcase";
+import CustomerJourney from "@/components/CustomerJourney";
 import ExpertTrustSection from "@/components/ExpertTrustSection";
-
-import BetterWaterStats from "@/components/BetterWaterStats";
 import DiscoverExpert from "@/components/DiscoverExpert";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import MarketExploration from "@/components/MarketExploration";
@@ -17,6 +16,7 @@ const Index = () => {
       <main>
         <Hero />
         <ProductShowcase />
+        <CustomerJourney />
         <ExpertTrustSection />
         <TestimonialsSection
           filterProduct="/"
@@ -28,7 +28,6 @@ const Index = () => {
             </>
           }
         />
-        <BetterWaterStats />
 
         <DiscoverExpert />
       </main>

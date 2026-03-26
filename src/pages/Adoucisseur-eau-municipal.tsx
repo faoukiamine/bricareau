@@ -14,7 +14,12 @@ import {
     Wifi,
     Binary,
     HandCoins,
-    Award
+    Award,
+    Search,
+    Microscope,
+    Sparkles,
+    Wrench,
+    CheckCircle
 } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import { useNavigate } from "react-router-dom";
@@ -30,6 +35,12 @@ import savingsConceptImg from "@/assets/savings-water.png";
 import efficiencyTechnoImg from "@/assets/efficiency-water.png";
 import intelligenceWaterImg from "@/assets/intelligence-water.png";
 import expertiseWaterImg from "@/assets/expertise-water.png";
+import installationSoftenerImg from "@/assets/WaterSoftenerInstallation.jpg";
+import diagnosticStepImg from "@/assets/step-diagnostic.png";
+import customStepImg from "@/assets/step-custom.png";
+import installationStepImg from "@/assets/step-installation.png";
+import serenityStepImg from "@/assets/step-serenity.png";
+import panoramaBgImg from "@/assets/Rain.webp";
 import {
     Accordion,
     AccordionContent,
@@ -139,66 +150,91 @@ const AdoucisseurEauMunicipal = () => {
                     showBreadcrumbs={true}
                 />
                 
-                {/* 2. Scientific Theory Section: How it Works */}
+                {/* 2. Selection Guide: The Bridge */}
                 <section className="py-24 lg:py-32 bg-white relative overflow-hidden">
-                    {/* Background elements */}
-                    <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-blue-50/30 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/4" />
-                    <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-cyan-50/30 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/4" />
-                    
+                    {/* Atmospheric Background */}
+                    <div className="absolute inset-0 opacity-5 pointer-events-none">
+                        <img 
+                            src={panoramaBgImg} 
+                            alt="" 
+                            className="w-full h-full object-cover grayscale"
+                        />
+                    </div>
+
                     <div className="container mx-auto px-6 relative z-10">
-                        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
-                            
-                             {/* Centered Context */}
-                             <div className="lg:col-span-12 max-w-4xl mx-auto space-y-12">
-                                <div>
-                                    <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.3em] mb-6">
-                                        SCIENCE & INNOVATION
-                                    </span>
-                                    <h2 
-                                        className="mb-8"
-                                        style={{
-                                            fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                            fontSize: '48px',
-                                            lineHeight: '48px',
-                                            fontStyle: 'normal'
-                                        }}
-                                    >
-                                        <span className="italic font-light text-[#2563eb] block">La science de</span>
-                                        <span className="font-bold text-[#1e3a8a] block">l'échange ionique.</span>
-                                    </h2>
-                                    <p className="text-slate-500 font-light text-lg leading-relaxed text-justify">
-                                        Au cœur de chaque adoucisseur Bricareau se trouve un processus chimique fascinant. Contrairement aux filtres standards qui retiennent les impuretés physiques, l'adoucisseur agit au niveau moléculaire pour transformer la nature même de votre eau.
-                                    </p>
-                                </div>
+                        <div className="text-center max-w-4xl mx-auto mb-20 lg:mb-24">
+                            <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.3em] mb-6">
+                                GUIDE DE SÉLECTION DE VOTRE ADOUCISSEUR
+                            </span>
+                            <h2 
+                                className="mb-8"
+                                style={{
+                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                    fontSize: '48px',
+                                    lineHeight: '52px',
+                                    fontStyle: 'normal'
+                                }}
+                            >
+                                <span className="italic font-light text-[#2563eb] block">L'équilibre idéal pour</span>
+                                <span className="font-bold text-[#1e3a8a] block">votre ville et votre vie.</span>
+                            </h2>
+                            <p className="text-slate-500 font-light text-xl leading-relaxed">
+                                Parce que l'eau des municipalités dans notre province Québec varie selon les secteurs, nos architectures de soins s'adaptent à vos priorités réelles.
+                            </p>
+                        </div>
 
+                        <div className="grid grid-cols-1 lg:grid-cols-3 gap-0 border border-slate-100 rounded-[3rem] overflow-hidden shadow-2xl shadow-slate-200/50">
+                            {/* Column 1: Sentinel */}
+                            <div className="p-12 lg:p-16 bg-white border-b lg:border-b-0 lg:border-r border-slate-100 hover:bg-slate-50 transition-colors duration-500 group">
+                                <h3 className="text-2xl font-bold text-[#1e3a8a] mb-6 leading-tight">Le Profil <br/>"Sentinel"</h3>
                                 <div className="space-y-6">
-                                    <div className="p-8 bg-slate-50 rounded-[2.5rem] border border-slate-100 hover:shadow-xl transition-all duration-500 group">
-                                        <div className="flex gap-6 items-start">
-                                            <div className="w-12 h-12 rounded-2xl bg-white shadow-sm flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all">
-                                                <Binary className="w-6 h-6" />
-                                            </div>
-                                            <div className="flex-1">
-                                                <h4 className="card-title text-base mb-2">Le secret est dans la résine</h4>
-                                                <p className="text-slate-500 text-sm font-light leading-relaxed">
-                                                    Le réservoir contient des millions de billes de résine polymère chargées d'ions sodium. Ces billes agissent comme des aimants intelligents pour attirer le calcaire.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <p className="text-slate-500 font-light text-base leading-relaxed">
+                                        Votre priorité est d'éradiquer le calcaire avec une précision chirurgicale, sans complexité inutile.
+                                    </p>
+                                    <ul className="space-y-4 pt-4">
+                                        {["Protection des électros", "Format compact intelligent", "Économie de sel optimisée"].map((item, i) => (
+                                            <li key={i} className="flex items-center gap-3 text-sm text-slate-600 font-light">
+                                                <CheckCircle2 className="w-4 h-4 text-blue-500" /> {item}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            </div>
 
-                                    <div className="p-8 bg-slate-50 rounded-[2.5rem] border border-slate-100 hover:shadow-xl transition-all duration-500 group">
-                                        <div className="flex gap-6 items-start">
-                                            <div className="w-12 h-12 rounded-2xl bg-white shadow-sm flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all">
-                                                <Droplets className="w-6 h-6" />
-                                            </div>
-                                            <div className="flex-1">
-                                                <h4 className="card-title text-base mb-2">Substitution moléculaire</h4>
-                                                <p className="text-slate-500 text-sm font-light leading-relaxed">
-                                                    Lorsqu'une molécule de calcium ou de magnésium touche la résine, elle s'y fixe instantanément, libérant en échange une quantité infime de sodium inoffensif.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
+                            {/* Column 2: Sérénité */}
+                            <div className="p-12 lg:p-16 bg-blue-50/20 border-b lg:border-b-0 lg:border-r border-slate-100 hover:bg-white transition-colors duration-500 group relative overflow-hidden">
+                                <div className="absolute top-0 right-0 p-4">
+                                    <span className="text-[10px] font-black text-blue-600 bg-white px-3 py-1 rounded-full shadow-sm">RECOMMANDÉ</span>
+                                </div>
+                                <h3 className="text-2xl font-bold text-[#1e3a8a] mb-6 leading-tight">Le Profil <br/>"Sérénité"</h3>
+                                <div className="space-y-6">
+                                    <p className="text-slate-500 font-light text-base leading-relaxed">
+                                        Vous cherchez l'eau parfaite pour la peau, les cheveux et la consommation, en éliminant aussi le chlore.
+                                    </p>
+                                    <ul className="space-y-4 pt-4">
+                                        {["Hybride : Calcaire & Chlore", "Douceur dermatologique", "Élimine odeurs et goûts"].map((item, i) => (
+                                            <li key={i} className="flex items-center gap-3 text-sm text-slate-600 font-light">
+                                                <CheckCircle2 className="w-4 h-4 text-blue-500" /> {item}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            </div>
+
+                            {/* Column 3: Infiniti */}
+                            <div className="p-12 lg:p-16 bg-white hover:bg-slate-50 transition-colors duration-500 group">
+                                <h3 className="text-2xl font-bold text-[#1e3a8a] mb-6 leading-tight">Le Profil <br/>"Infiniti"</h3>
+                                <div className="space-y-6">
+                                    <p className="text-slate-500 font-light text-base leading-relaxed">
+                                        Grandes familles ou besoins critiques : vous refusez toute interruption de douceur, 24h/24.
+                                    </p>
+                                    <ul className="space-y-4 pt-4">
+                                        {["Double bouteille alternée", "Eau douce non-stop", "Performance industrielle"].map((item, i) => (
+                                            <li key={i} className="flex items-center gap-3 text-sm text-slate-600 font-light">
+                                                <CheckCircle2 className="w-4 h-4 text-indigo-500" /> {item}
+                                            </li>
+                                        ))}
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -270,109 +306,104 @@ const AdoucisseurEauMunicipal = () => {
                     </div>
                 </section>
 
-                {/* 3. Why choose our residential water softeners - Visual Visual Editorial Redesign */}
-                <section className="py-20 bg-slate-950 relative overflow-hidden">
-                    {/* Immersive Deep Background */}
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-blue-600/5 rounded-full blur-[200px] pointer-events-none" />
-                    
-                    {/* Minimalist Grid Markers (Tech Blueprint Vibe) */}
-                    <div className="absolute inset-0 opacity-[0.04] pointer-events-none">
-                        <div className="absolute top-0 left-1/2 w-px h-full bg-white hidden lg:block" />
-                        <div className="absolute top-1/4 left-0 w-full h-px bg-white hidden lg:block" />
-                    </div>
-
-                    <div className="container mx-auto px-6 relative z-20">
-                        {/* Elegant Header with Staggered Typography */}
-                        <div className="flex flex-col lg:flex-row items-end justify-between mb-20 gap-8">
-                            <div className="max-w-xl text-left">
-                                <span className="text-blue-500 font-black tracking-[0.4em] text-[11px] uppercase mb-4 block underline decoration-blue-500/30 underline-offset-8">EXCELLENCE BRICAREAU</span>
-                                <h2 className="text-white tracking-tighter leading-[0.9] text-5xl md:text-7xl lg:text-8xl">
-                                    Élite de la <br />
-                                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-300 to-indigo-300 font-black">Pureté.</span>
-                                </h2>
-                            </div>
-                            <p className="text-white font-light text-xl max-w-sm text-left lg:text-right border-l lg:border-l-0 lg:border-r-2 border-blue-500/30 pl-6 lg:pl-0 lg:pr-8 leading-relaxed italic opacity-80">
-                                L'alliance parfaite entre une technologie invisible et des bénéfices tangibles et durables.
+                
+                
+                {/* 4.5 PARCOURS SÉRÉNITÉ */}
+                <section className="py-24 lg:py-32 bg-white relative overflow-hidden">
+                     <div className="container mx-auto px-6 relative z-10">
+                        <div className="text-center max-w-3xl mx-auto mb-20 lg:mb-24">
+                            <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.3em] mb-6">
+                                VOTRE EXPÉRIENCE CLIENT
+                            </span>
+                            <h2 
+                                className="mb-8"
+                                style={{
+                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                    fontSize: '48px',
+                                    lineHeight: '48px',
+                                    fontStyle: 'normal'
+                                }}
+                            >
+                                <span className="italic font-light text-[#2563eb] block">Une transition fluide vers</span>
+                                <span className="font-bold text-[#1e3a8a] block">l'eau adoucie.</span>
+                            </h2>
+                            <p className="text-slate-500 font-light text-xl leading-snug">
+                                Le Parcours Bricareau : une expertise d'élite, depuis votre première analyse jusqu'à la douceur éternelle de votre eau municipale.
                             </p>
                         </div>
 
-                        {/* Staggered Visual Blocks Grid */}
-                        <div className="space-y-24 lg:space-y-32">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 relative mb-24 lg:mb-32">
+                            {/* Connecting Line (Desktop) */}
+                            <div className="hidden lg:block absolute top-[48px] left-[10%] w-[80%] h-px bg-slate-100 z-0" />
+                            
                             {[
                                 { 
-                                    icon: HandCoins, 
-                                    num: "01",
-                                    title: "Économies Invisibles", 
-                                    desc: "Une optimisation chirurgicale de vos ressources. Réduisez vos dépenses en sel, eau et électricité dès le premier jour.",
-                                    image: savingsConceptImg,
-                                    reverse: false
+                                    step: "01",
+                                    title: "Diagnostic Précis", 
+                                    desc: "Analyse de la dureté et du chlore de votre eau.",
+                                    image: diagnosticStepImg,
+                                    color: "border-blue-100"
                                 },
                                 { 
-                                    icon: Zap, 
-                                    num: "02",
-                                    title: "Efficacité Haute-fidélité", 
-                                    desc: "Une technologie haute efficacité qui garantit une douceur constante avec une empreinte écologique minimale.",
-                                    image: efficiencyTechnoImg,
-                                    reverse: true
+                                    step: "02",
+                                    title: "Sur-Mesure", 
+                                    desc: "Nous calibrons votre futur adoucisseur d'eau selon vos habitudes de consommation réelles.",
+                                    image: customStepImg,
+                                    color: "border-indigo-100"
                                 },
                                 { 
-                                    icon: Wifi, 
-                                    num: "03",
-                                    title: "Intelligence Régénérative", 
-                                    desc: "Un cerveau électronique qui apprend de vos habitudes pour ne régénérer que le strict nécessaire. Précis. Intelligent.",
-                                    image: intelligenceWaterImg,
-                                    reverse: false
+                                    step: "03",
+                                    title: "Installation d'Élite", 
+                                    desc: "Mise en place rigoureuse par nos plombiers certifiés. Propreté et excellence garanties.",
+                                    image: installationStepImg,
+                                    color: "border-cyan-100"
                                 },
                                 { 
-                                    icon: Award, 
-                                    num: "04",
-                                    title: "Expertise Certifiée Bricareau", 
-                                    desc: "L'excellence de l'installation et de l'accompagnement d'élite. Choisissez la tranquillité d'esprit absolue.",
-                                    image: expertiseWaterImg,
-                                    reverse: true
+                                    step: "04",
+                                    title: "Sérénité Totale", 
+                                    desc: "Bénéficiez d'une eau parfaite 24h/24 et d'un suivi proactif de nos experts.",
+                                    image: serenityStepImg,
+                                    color: "border-emerald-100"
                                 }
-                            ].map((item, id) => (
-                                <div key={id} className={`flex flex-col lg:flex-row items-center gap-12 lg:gap-20 ${item.reverse ? 'lg:flex-row-reverse' : ''}`}>
-                                    {/* Text Content */}
-                                    <div className="flex-1 space-y-8 relative">
-                                        <div className="flex items-center gap-6">
-                                            <div className="relative group">
-                                                <div className="absolute inset-0 bg-blue-500/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
-                                                <item.icon className="h-14 w-14 text-blue-400 relative z-10" strokeWidth={1} />
-                                            </div>
-                                            <span className="text-6xl font-black text-white/5 tracking-tighter select-none leading-none">
-                                                {item.num}
-                                            </span>
+                            ].map((item, idx) => (
+                                <div key={idx} className="relative z-10 group text-center">
+                                    <div className="mb-8 relative flex items-center justify-center">
+                                        <div className={`w-32 h-32 rounded-[2.5rem] overflow-hidden border-2 ${item.color} shadow-xl shadow-slate-200/50 group-hover:scale-110 transition-transform duration-500 bg-white`}>
+                                            <img src={item.image} alt={item.title} className="w-full h-full object-cover" />
                                         </div>
-                                        <h4 className="text-3xl md:text-5xl font-bold text-white tracking-tight">{item.title}</h4>
-                                        <p className="text-white font-normal leading-relaxed text-lg lg:text-xl text-justify opacity-90 italic max-w-xl">
-                                            {item.desc}
-                                        </p>
-                                        <div className="flex items-center gap-4 pt-4">
-                                            <div className="h-1 w-12 bg-blue-600 rounded-full" />
-                                            <div className="h-1 w-2 bg-blue-900 rounded-full" />
+                                        <div className="absolute -top-2 -right-2 w-10 h-10 bg-[#1e3a8a] text-white rounded-full flex items-center justify-center font-black text-xs shadow-lg border-2 border-white">
+                                            {item.step}
                                         </div>
                                     </div>
-
-                                    {/* Visual Representation */}
-                                    <div className="flex-1 w-full group relative">
-                                        {/* Atmosphere Aura */}
-                                        <div className="absolute -inset-4 bg-blue-500/10 blur-[100px] opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
-                                        
-                                        <div className="relative aspect-video lg:aspect-[4/3] overflow-hidden rounded-[3rem] border border-white/5 transition-all duration-700 shadow-2xl group-hover:scale-[1.02]">
-                                            <img 
-                                                src={item.image} 
-                                                alt={item.title} 
-                                                className="w-full h-full object-cover scale-105 group-hover:scale-100 transition-all duration-1000"
-                                            />
-                                            {/* Minimalist Overlay Fade */}
-                                            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 to-transparent opacity-60" />
-                                        </div>
-                                    </div>
+                                    <h4 className="text-xl font-bold text-slate-800 mb-4 group-hover:text-blue-600 transition-colors leading-tight">{item.title}</h4>
+                                    <p className="text-slate-500 font-light text-sm leading-relaxed max-w-[220px] mx-auto">
+                                        {item.desc}
+                                    </p>
                                 </div>
                             ))}
                         </div>
-                    </div>
+                        
+                        {/* Featured Banner with generated image */}
+                        <div className="rounded-[3rem] overflow-hidden shadow-2xl border border-slate-100 group relative">
+                            <img 
+                                src={installationSoftenerImg} 
+                                alt="Installation professionnelle d'un adoucisseur d'eau Bricareau" 
+                                className="w-full h-[650px] object-cover group-hover:scale-105 transition-transform duration-[3000ms] brightness-[1.2] contrast-[1.05]"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-r from-[#1e3a8a]/70 via-[#1e3a8a]/30 to-transparent p-12 lg:p-20 flex items-center">
+                                <div className="max-w-lg">
+                                    <div className="flex items-center gap-3 text-blue-400 font-bold text-xs tracking-widest uppercase mb-6">
+                                        <CheckCircle className="w-5 h-5" />
+                                        Engagement Certifié
+                                    </div>
+                                    <h3 className="text-white text-4xl font-bold mb-6 leading-tight">L'excellence Bricareau s'installe chez vous.</h3>
+                                    <p className="text-white/80 font-light text-lg mb-10 leading-relaxed">
+                                        Chaque installation est une signature de qualité. Nos techniciens certifiés assurent une mise en place chirurgicale de vos systèmes, garantissant performance et esthétique.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                     </div>
                 </section>
 
                 {/* 5.Comparison Table Section */}
