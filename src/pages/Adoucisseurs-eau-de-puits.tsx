@@ -276,74 +276,94 @@ const AdoucisseursEauDePuits = () => {
                             </div>
                         </div>
 
+                        {/* Redesigned Architectural Benefits Deck */}
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 border border-slate-100 shadow-2xl overflow-hidden rounded-none">
-                            {/* Card 1: Adoucissement */}
-                            <div className="group bg-transparent border-r border-b lg:border-b-0 border-slate-100 flex flex-col transition-all duration-700">
-                                <div className="grid grid-cols-1 lg:grid-cols-2 h-full">
-                                    <div className="p-8 lg:p-10 space-y-6 flex flex-col justify-center">
-                                        <h3 className="text-xl font-bold text-[#1e3a8a] leading-tight">
+                            {/* Card 1: 01. Adoucissement */}
+                            <div className="group relative bg-transparent border-r border-b lg:border-b-0 border-slate-100 min-h-[450px] flex flex-col transition-all duration-1000">
+                                {/* Watermark Number */}
+                                <div className="absolute top-4 left-6 text-[120px] font-black text-slate-900/5 select-none pointer-events-none tracking-tighter italic">
+                                    01
+                                </div>
+                                <div className="relative z-10 flex-1 p-10 lg:p-14 flex flex-col justify-between">
+                                    <div className="space-y-6">
+                                        <div className="w-12 h-1 bg-blue-600"></div>
+                                        <h3 className="text-3xl font-bold text-[#1e3a8a] leading-tight max-w-[280px]">
                                             Adoucissement de haute performance
                                         </h3>
-                                        <p className="body-pro-max text-justify text-[13px] leading-relaxed">
-                                            Un équilibre parfait entre minéralité et douceur. Notre système protège vos installations tout en préservant la fraîcheur naturelle de l'eau.
+                                        <p className="body-pro-max text-justify text-[15px] leading-relaxed max-w-xs">
+                                            Un équilibre parfait entre minéralité et douceur. Notre système transforme la structure du calcaire, protégeant vos installations tout en préservant la fraîcheur naturelle de l'eau.
                                         </p>
                                     </div>
-                                    <div className="h-64 lg:h-full overflow-hidden">
+                                    <div className="mt-12 -mx-10 lg:-mx-14 -mb-10 lg:-mb-14 h-64 overflow-hidden border-t border-slate-50">
                                         <img 
                                             src={softwaterImg} 
                                             alt="Pureté de l'eau adoucie de puits" 
-                                            className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-[2000ms]"
+                                            className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-[4000ms]"
                                         />
                                     </div>
                                 </div>
                             </div>
 
-                            {/* Card 2: Confort */}
-                            <div className="group bg-transparent border-b lg:border-b-0 border-slate-100 flex flex-col transition-all duration-700">
-                                <div className="grid grid-cols-1 lg:grid-cols-2 h-full">
-                                    <div className="p-8 lg:p-10 space-y-6 flex flex-col justify-center">
-                                        <h3 className="text-xl font-bold text-[#1e3a8a] leading-tight">
+                            {/* Card 2: 02. Confort */}
+                            <div className="group relative bg-transparent border-b lg:border-b-0 border-slate-100 min-h-[450px] flex flex-col transition-all duration-1000">
+                                {/* Watermark Number */}
+                                <div className="absolute top-4 left-6 text-[120px] font-black text-slate-900/5 select-none pointer-events-none tracking-tighter italic">
+                                    02
+                                </div>
+                                <div className="relative z-10 flex-1 p-10 lg:p-14 flex flex-col justify-between">
+                                    <div className="space-y-6">
+                                        <div className="w-12 h-1 bg-blue-600"></div>
+                                        <h3 className="text-3xl font-bold text-[#1e3a8a] leading-tight max-w-[280px]">
                                             Confort et douceur sensorielle
                                         </h3>
-                                        <p className="body-pro-max text-justify text-[13px] leading-relaxed">
-                                            Offrez à votre famille le luxe d'une eau soyeuse qui hydrate profondément. Une sensation de douceur sur la peau et des cheveux brillants.
+                                        <p className="body-pro-max text-justify text-[15px] leading-relaxed max-w-xs">
+                                            Offrez à votre famille le luxe d'une eau soyeuse qui hydrate profondément. Une sensation de douceur sur la peau et des cheveux visiblement plus brillants.
                                         </p>
                                     </div>
-                                    <div className="h-64 lg:h-full overflow-hidden">
+                                    <div className="mt-12 -mx-10 lg:-mx-14 -mb-10 lg:-mb-14 h-64 overflow-hidden border-t border-slate-50">
                                         <img 
                                             src={spaRelaxationImg} 
                                             alt="Douceur sensorielle et confort spa" 
-                                            className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-[2000ms]"
+                                            className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-[4000ms]"
                                         />
                                     </div>
                                 </div>
                             </div>
 
-                            {/* Card 3: Protection (Full Width beneath the two) */}
-                            <div className="group bg-transparent col-span-1 lg:col-span-2 border-t border-slate-100 flex flex-col transition-all duration-700">
-                                <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
-                                    <div className="p-8 lg:p-10 space-y-6">
-                                        <h3 className="text-xl font-bold text-[#1e3a8a] leading-tight">
-                                            Protection et longévité de votre foyer
-                                        </h3>
-                                        <p className="body-pro-max text-justify text-[13px] leading-relaxed max-w-xl">
-                                            Dites adieu aux traces de rouille et au vert-de-gris. Une protection active pour votre robinetterie de luxe et vos appareils haut de gamme, prolongeant l'éclat originel de votre foyer.
-                                        </p>
-                                        <div className="pt-2">
-                                            <Button 
-                                                className="rounded-full px-6 py-4 h-auto font-bold bg-[#2563eb] hover:bg-[#1e3a8a] text-white shadow-md text-xs group/btn"
-                                                onClick={() => navigate('/consultation')}
-                                            >
-                                                Protégez vos installations <ChevronRight className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
-                                            </Button>
+                            {/* Card 3: 03. Protection - Immersive Widescreen Showcase */}
+                            <div className="group relative bg-transparent col-span-1 lg:col-span-2 border-t border-slate-100 flex flex-col transition-all duration-1000">
+                                <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[500px]">
+                                    {/* Content Section */}
+                                    <div className="relative p-10 lg:p-20 flex flex-col justify-center space-y-8 overflow-hidden">
+                                        {/* Watermark Number */}
+                                        <div className="absolute -top-10 -right-10 text-[240px] font-black text-slate-900/5 select-none pointer-events-none tracking-tighter italic">
+                                            03
+                                        </div>
+                                        <div className="relative z-10 space-y-8">
+                                            <div className="w-20 h-1.5 bg-blue-600"></div>
+                                            <h3 className="text-4xl lg:text-5xl font-black text-[#1e3a8a] leading-[1.1]">
+                                                Protection et longévité <br/> 
+                                                <span className="text-blue-600 italic font-light">de votre foyer</span>
+                                            </h3>
+                                            <p className="body-pro-max text-justify text-lg leading-relaxed max-w-2xl text-slate-600">
+                                                Dites adieu aux traces de rouille et au vert-de-gris. Une protection active pour votre robinetterie de luxe et vos appareils haut de gamme, prolongeant l'éclat originel de votre foyer pour des générations.
+                                            </p>
+                                            <div className="pt-6">
+                                                <Button asChild>
+                                                    <a href="/tests-eau">Protégez vos installations</a>
+                                                </Button>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div className="h-64 lg:h-72 overflow-hidden">
+                                    {/* Image Section */}
+                                    <div className="relative overflow-hidden h-[400px] lg:h-auto">
                                         <img 
                                             src={luxuryBathroomImg} 
                                             alt="Protection de la plomberie et du foyer" 
-                                            className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-[2000ms]"
+                                            className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-[6000ms]"
                                         />
+                                        <div className="absolute inset-0 bg-gradient-to-r from-white via-transparent to-transparent hidden lg:block opacity-50"></div>
+                                        <div className="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-1000"></div>
                                     </div>
                                 </div>
                             </div>
