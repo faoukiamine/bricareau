@@ -19,9 +19,11 @@ import { NavLink } from "@/components/NavLink";
 import { useNavigate } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import waterTestingImg from "@/assets/reasons-to-drink-more-water.jpg";
-import specializedFiltersImg from "@/assets/premium_bathroom_protection_1774493901305.png";
+import waterzeroodorImg from "@/assets/6802936.jpg";
+import specializedFiltersImg from "@/assets/Filtres d'eau spécialisés.webp";
 import crystalClearWaterImg from "@/assets/5846952.jpg";
 import comfortImg from "@/assets/71luIOvIQuL._AC_SL1500_.jpg";
+import wholeHouseprotectionImg from "@/assets/342800.jpg";
 import { heroImg as eauVilleFiltreeImg } from "./Blog pages/Pourquoi-meme-leau-de-ville-a-besoin-detre-filtree";
 import { heroImg as plombVieillesMaisonsImg } from "./Blog pages/Le-plomb-dans-les-vieilles-maisons-comment-se-proteger";
 import { heroImg as filtreSousEvierImg } from "./Blog pages/Filtre-sous-evier-lalternative-simple-aux-pichets-filtrants";
@@ -41,7 +43,7 @@ const products = [
 ];
 
 const reviews = [
-    { name: "Robert D.", rating: 4, text: "Bon produit, technicien très professionnel. Je recommande vivement.", date: "Il y a 1 mois" },
+    { name: "Robert D.", rating: 5, text: "Bon produit, technicien très professionnel. Je recommande vivement.", date: "Il y a 1 mois" },
     { name: "Sophie T.", rating: 5, text: "Une eau de qualité partout dans la maison. Le service client de Bricareau est top.", date: "Il y a 2 semaines" },
 ];
 
@@ -138,8 +140,8 @@ const FiltresTouteMaison = () => {
     };
 
     const cardData = [
-        { id: 0, title: "Zéro odeur", img: waterTestingImg, desc: "Dites adieu aux odeurs d'œufs pourris (soufre) et au goût de chlore pour une eau fraîche, revigorante et délicieuse à chaque gorgée." },
-        { id: 1, title: "Protection totale", img: specializedFiltersImg, desc: "Empêchez le fer et les minéraux corrosifs de tacher vos éviers et de détruire votre plomberie. Nos filtres prolongent la vie de vos électroménagers." },
+        { id: 0, title: "Zéro odeur", img: waterzeroodorImg, desc: "Dites adieu aux odeurs d'œufs pourris (soufre) et au goût de chlore pour une eau fraîche, revigorante et délicieuse à chaque gorgée." },
+        { id: 1, title: "Protection totale", img: wholeHouseprotectionImg, desc: "Empêchez le fer et les minéraux corrosifs de tacher vos éviers et de détruire votre plomberie. Nos filtres prolongent la vie de vos électroménagers." },
         { id: 2, title: "Eau cristalline", img: crystalClearWaterImg, desc: "Éliminez les sédiments et la turbidité pour une eau d'une clarté professionnelle partout chez vous, à chaque robinet. Une pureté visible." },
         { id: 3, title: "Confort durable", img: comfortImg, desc: "Savourez un bien-être quotidien inégalé grâce à une eau exceptionnelle qui protège votre peau et votre tuyauterie." }
     ];
@@ -248,14 +250,6 @@ const FiltresTouteMaison = () => {
                                         </div>
                                     );
                                 })}
-                                <div className="pt-8">
-                                    <Button 
-                                        className="rounded-full px-10 py-7 h-auto font-bold bg-[#2563eb] hover:bg-[#1e3a8a] text-white shadow-lg shadow-blue-200 group/btn"
-                                        onClick={() => navigate('/consultation')}
-                                    >
-                                        Planifiez votre analyse <ChevronRight className="ml-2 w-6 h-6 group-hover/btn:translate-x-1 transition-transform" />
-                                    </Button>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -471,10 +465,10 @@ const FiltresTouteMaison = () => {
                     <div className="container mx-auto px-6 relative z-10 text-center">
                         <div className="max-w-4xl mx-auto">
                             <h2 className="mb-6 heading-pro-max">
-                                <span className="font-bold text-white block tracking-tight opacity-90">Besoin d'aide avec votre eau ?</span>
+                                <span className="font-bold text-white block">Protégez votre peau et votre santé à la source.</span>
                             </h2>
-                            <p className="text-blue-100/80 font-light text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
-                                Discutez avec un expert en un clic. Disponible par téléphone ou à domicile selon vos préférences.                           
+                            <p className="text-white font-light text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
+                                Le chlore et les impuretés de l'eau municipale altèrent le goût de votre eau, assèchent votre peau et abîment vos cheveux. Installez une barrière protectrice pour toute la maison et ressentez la différence dès la première douche.                           
                             </p>
                             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
                                 <Button asChild>

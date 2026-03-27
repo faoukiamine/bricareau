@@ -14,13 +14,13 @@ import financeModeImg from "@/assets/finance_mode.svg";
 import plumbingImg from "@/assets/plumbing.svg";
 import moneyBagImg from "@/assets/money_bag.svg";
 import healthMetricsImg from "@/assets/health_metrics.svg";
-import laundryImg from "@/assets/laundry.svg";
+import laundryImg from "@/assets/302731406_443870381116589_3770801709209607894_n.jpg";
+import laundryIcon from "@/assets/laundry.svg";
 import detergentsImg from "@/assets/Detergents.svg";
 import starsImg from "@/assets/stars.svg";
 import healthSafetyImg from "@/assets/health_and_safety.svg";
 import softImg from "@/assets/Soft.svg";
 import savingsImg from "@/assets/savings.svg";
-import waterTestGemini from "@/assets/Gemini_Generated_Image_rk3i02rk3i02rk3i.png";
 import waterTestingImg from "@/assets/2147800429.jpg";
 import process1 from "@/assets/2148563485.jpg";
 import labTestImg from "@/assets/test-laboratoire-diligence-inspection-750x500.jpg";
@@ -181,7 +181,7 @@ const Adoucissement = () => {
                                             desc: "Agression cutanée (eczéma), irritations et cheveux ternes ou cassants."
                                         },
                                         {
-                                            icon: <img src={laundryImg} className="w-6 h-6 opacity-20 group-hover:opacity-100 transition-opacity duration-500" style={{ filter: 'invert(32%) sepia(96%) saturate(3015%) hue-rotate(212deg) brightness(97%) contrast(96%)' }} alt="laundry" />,
+                                            icon: <img src={laundryIcon} className="w-6 h-6 opacity-20 group-hover:opacity-100 transition-opacity duration-500" style={{ filter: 'invert(32%) sepia(96%) saturate(3015%) hue-rotate(212deg) brightness(97%) contrast(96%)' }} alt="laundry" />,
                                             title: "Linge & textiles",
                                             desc: "Fibres qui deviennent rêches et couleurs qui ternissent au fil des lavages."
                                         },
@@ -226,7 +226,7 @@ const Adoucissement = () => {
                                 <div className="relative rounded-none lg:rounded-[3rem] overflow-hidden shadow-none lg:shadow-2xl border-0 lg:border-8 border-white group">
                                     <div className="embla overflow-hidden" ref={emblaRef}>
                                         <div className="embla__container flex">
-                                            {[womansufferingfromHardWaterImg, applianceDamageImg, womansufferingdryhairfromhardwaterImg, hardWaterSignsImg, hardWaterImg].map((img, idx) => (
+                                            {[applianceDamageImg, womansufferingfromHardWaterImg, laundryImg, womansufferingdryhairfromhardwaterImg, hardWaterSignsImg, hardWaterImg].map((img, idx) => (
                                                 <div key={idx} className="embla__slide flex-[0_0_100%] min-w-0 relative h-[450px] md:h-[550px] lg:h-[700px]">
                                                     <img
                                                         src={img}

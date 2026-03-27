@@ -255,89 +255,134 @@ const Filtration = () => {
                     </div>
                 </section>
 
-                <section id="benefits-split" className="bg-white overflow-hidden border-y border-slate-100">
-                    <div className="flex flex-col lg:flex-row items-stretch min-h-[600px] lg:min-h-[850px]">
-                        
-                        {/* Left Side: Benefits Content - Dark Theme */}
-                        <div className="w-full lg:w-1/2 flex items-center bg-[#1e3a8a] justify-start lg:justify-end border-r border-white/5">
-                            <div className="w-full max-w-[750px] px-6 sm:px-12 lg:px-16 xl:px-24 py-24 lg:py-32">
-                                <div className="space-y-16">
-                                    <div className="space-y-8">
-                                        <h2 className="text-3xl md:text-5xl lg:text-5xl leading-tight font-light text-white">
-                                            Pourquoi choisir nos systèmes <br />
-                                            <span className="font-bold italic text-blue-300">de filtration d'eau ?</span>
-                                        </h2>
-                                        <p className="text-lg lg:text-xl text-white/70 font-light leading-relaxed max-w-xl">
-                                            Plus qu'une simple filtration, c'est une protection avancée pour votre santé et un confort durable pour votre foyer au quotidien.
+                {/* 3. The Redesigned Bridge Section: Architectural Triptych */}
+                <section className="py-32 bg-[#f8f9fa] relative overflow-hidden">
+                    <div className="container mx-auto px-6 relative z-10">
+                        <div className="max-w-4xl mx-auto text-center mb-24 space-y-6">
+                            <h2 className="heading-pro-max">
+                                <span className="italic font-light text-[#2563eb] block">De la prise de conscience</span>
+                                <span className="font-bold text-[#1e3a8a] block ">À la solution parfaite</span>
+                            </h2>
+                            <p className="body-pro-max text-slate-500 max-w-2xl mx-auto leading-relaxed">
+                                Identifier l'invisible est la première étape. Choisissez maintenant le bouclier technologique qui redéfinira la relation de votre foyer avec l'eau.
+                            </p>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            
+                            {/* Card 001: Whole House - Navy Style */}
+                            <a href="#solutions-title" className="group block relative bg-[#1e3a8a] rounded-[2.5rem] p-10 h-[720px] flex flex-col transition-all duration-700 hover:-translate-y-4 shadow-2xl overflow-hidden">
+                                <div className="space-y-0 relative z-10 flex flex-col h-full">
+                                    
+                                    {/* 80px Spacer */}
+                                    <div className="h-20"></div>
+
+                                    {/* Unfiltered Architectural Image Overlay */}
+                                    <div className="w-full h-48 overflow-hidden rounded-3xl shadow-lg relative">
+                                        <img 
+                                            src={teenagerShowerImg} 
+                                            alt="Eau filtrée toute la maison" 
+                                            className="w-full h-full object-cover transition-transform duration-[3000ms] group-hover:scale-110"
+                                        />
+                                    </div>
+
+                                    <div className="space-y-6 pt-8">
+                                        <h3 className="text-3xl font-bold text-white leading-[1.1] group-hover:text-blue-200 transition-colors">
+                                            Systèmes de filtration d'eau pour <br/> toute la maison
+                                        </h3>
+                                        <p className="text-white/70 text-sm leading-relaxed max-w-[260px]">
+                                            Une protection globale qui neutralise le chlore et les sédiments dès l'entrée de votre demeure.
                                         </p>
                                     </div>
-
-                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
-                                        {[
-                                            {
-                                                icon: Droplets,
-                                                title: "Goût exceptionnel",
-                                                desc: "Élimine 99% du chlore et des odeurs pour une eau pure."
-                                            },
-                                            {
-                                                icon: HandCoins,
-                                                title: "Économies réelles",
-                                                desc: "Économisez plus de 500$/an sur l'eau embouteillée."
-                                            },
-                                            {
-                                                icon: Recycle,
-                                                title: "Éco-responsable",
-                                                desc: "Évitez des milliers de bouteilles plastique par an."
-                                            },
-                                            {
-                                                icon: Sparkles,
-                                                title: "Sérénité Totale",
-                                                desc: "Fiabilité maximale avec un entretien ultra-simple."
-                                            }
-                                        ].map((benefit, i) => (
-                                            <div key={i} className="space-y-4 group">
-                                                <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center group-hover:bg-blue-600 transition-all duration-500">
-                                                    <benefit.icon className="h-6 w-6 text-blue-300 group-hover:text-white" />
-                                                </div>
-                                                <h3 className="text-lg font-bold text-white group-hover:text-blue-300 transition-colors">
-                                                    {benefit.title}
-                                                </h3>
-                                                <p className="text-sm text-white/60 font-light leading-relaxed">
-                                                    {benefit.desc}
-                                                </p>
-                                            </div>
-                                        ))}
+                                </div>
+                                {/* Floating Arrow Button Custom Cutout Style */}
+                                <div className="absolute bottom-0 right-0 w-24 h-24 bg-[#f8f9fa] rounded-tl-[3rem] transition-all group-hover:w-28 group-hover:h-28">
+                                    <div className="absolute inset-0 m-4 bg-[#2563eb] rounded-full flex items-center justify-center text-white shadow-xl transition-transform group-hover:scale-110">
+                                        <ChevronRight className="w-8 h-8" />
                                     </div>
                                 </div>
-                            </div>
-                        </div>
+                            </a>
 
-                        {/* Right Side: Immersive Visual */}
-                        <div className="w-full lg:w-1/2 relative min-h-[400px] lg:min-h-full overflow-hidden">
-                            <img 
-                                src={glassOfWaterImg} 
-                                alt="Eau pure Bricareau" 
-                                className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 hover:scale-105"
-                            />
-                            <div className="absolute inset-0 bg-blue-900/10" />
-                            
-                            {/* Decorative Floating Card */}
-                            <div className="absolute bottom-12 left-12 bg-white/95 backdrop-blur-xl p-10 rounded-[3rem] shadow-2xl border border-white/50 max-w-[320px] hidden xl:block animate-float">
-                                <div className="flex items-center gap-4 mb-6">
-                                    <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                                    <span className="text-[10px] uppercase font-black text-slate-400 tracking-widest">Technologie Active</span>
+                            {/* Card 002: Crystal Purity - Royal Blue Style */}
+                            <a href="#undersink-title" className="group block relative bg-[#2563eb] rounded-[2.5rem] p-10 h-[720px] flex flex-col transition-all duration-700 hover:-translate-y-4 shadow-2xl overflow-hidden">
+                                <div className="space-y-0 relative z-10 flex flex-col h-full">
+                                    
+
+                                    {/* 80px Spacer */}
+                                    <div className="h-20"></div>
+
+                                    <div className="space-y-6">
+                                        <h3 className="text-3xl font-bold text-white leading-[1.1]">
+                                            Systèmes d'osmose inverse
+                                        </h3>
+                                        <p className="text-white/80 text-sm leading-relaxed max-w-[260px]">
+                                            L'osmose inverse : la technologie d'élite pour une eau de dégustation pure, sans contaminants.
+                                        </p>
+                                        <div className="space-y-4 pt-4"></div>
+
+                                    </div>
+
+                                    {/* Unfiltered Architectural Image Overlay - After Paragraph */}
+                                    <div className="w-full h-48 overflow-hidden rounded-3xl shadow-lg mt-8 relative">
+                                        <img 
+                                            src={glassOfWaterImg} 
+                                            alt="Pureté cristalline" 
+                                            className="w-full h-full object-cover transition-transform duration-[3000ms] group-hover:scale-110"
+                                        />
+                                    </div>
                                 </div>
-                                <h4 className="text-2xl font-bold text-slate-900 mb-4 tracking-tight">Pureté de diamant.</h4>
-                                <p className="text-sm text-slate-500 font-light leading-relaxed">
-                                    Une filtration haute-performance qui redéfinit votre standard de vie.
-                                </p>
-                            </div>
-                        </div>
+                                
+                                {/* Floating Arrow Button Custom Cutout Style */}
+                                <div className="absolute bottom-0 right-0 w-24 h-24 bg-[#f8f9fa] rounded-tl-[3rem] transition-all group-hover:w-28 group-hover:h-28">
+                                    <div className="absolute inset-0 m-4 bg-[#1e3a8a] rounded-full flex items-center justify-center text-white shadow-xl transition-transform group-hover:scale-110">
+                                        <ChevronRight className="w-8 h-8" />
+                                    </div>
+                                </div>
+                            </a>
 
+                            {/* Card 003: Under-Sink Systems - Navy Patterned */}
+                            <a href="#compact-filtration-title" className="group block relative bg-[#1e3a8a] rounded-[2.5rem] p-10 h-[720px] flex flex-col transition-all duration-700 hover:-translate-y-4 shadow-2xl overflow-hidden">
+                                {/* Subtle Geometric Pattern Overlay (SVG pattern or Image) */}
+                                <div className="absolute inset-0 opacity-10 mix-blend-overlay">
+                                    <div className="w-full h-full bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:20px_20px] lg:[background-size:30px_30px]" />
+                                </div>
+
+                                <div className="relative z-10 space-y-0 flex flex-col h-full">
+                                    
+
+                                    {/* 80px Spacer */}
+                                    <div className="h-20"></div>
+
+                                    {/* Unfiltered Architectural Image Overlay */}
+                                    <div className="w-full h-48 overflow-hidden rounded-3xl shadow-lg relative">
+                                        <img 
+                                            src={undersinkSystemImg} 
+                                            alt="Systèmes de filtration d'eau sous l'évier" 
+                                            className="w-full h-full object-cover transition-transform duration-[3000ms] group-hover:scale-110"
+                                        />
+                                    </div>
+
+                                    <div className="space-y-6 pt-8">
+                                        <h3 className="text-3xl font-bold text-white leading-[1.1] group-hover:text-blue-200 transition-colors">
+                                            Systèmes de filtration d'eau <br/> sous l'évier.
+                                        </h3>
+                                        <p className="text-white/70 text-sm leading-relaxed max-w-[260px]">
+                                            Des solutions compactes conçues pour s'intégrer harmonieusement sous votre évier sans compromettre l'espace.
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                                {/* Floating Arrow Button Custom Cutout Style */}
+                                <div className="absolute bottom-0 right-0 w-24 h-24 bg-[#f8f9fa] rounded-tl-[3rem] transition-all group-hover:w-28 group-hover:h-28">
+                                    <div className="absolute inset-0 m-4 bg-[#2563eb] rounded-full flex items-center justify-center text-white shadow-xl transition-transform group-hover:scale-110">
+                                        <ChevronRight className="w-8 h-8" />
+                                    </div>
+                                </div>
+                            </a>
+
+                        </div>
                     </div>
                 </section>
-
-
                 {/* 4. Whole House Water Filter Section - Modern Editorial */}
                 <section className="relative py-32 bg-white overflow-hidden">
                     {/* Background decorations */}
@@ -455,7 +500,6 @@ const Filtration = () => {
                                             alt="Verre d'eau pure provenant d'un système d'osmose inverse Bricareau"
                                             className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
                                         />
-                                        <div className="absolute inset-0 bg-blue-900/10 mix-blend-multiply" />
                                     </div>
 
                                     {/* Floating Detail Card */}
@@ -482,7 +526,7 @@ const Filtration = () => {
                                             EAU PURE À VOLONTÉ
                                         </span>
                                          <h2 
-                                        id="solutions-title"
+                                        id="undersink-title"
                                         className="scroll-mt-[120px] mb-8"
                                         style={{
                                             fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
@@ -521,11 +565,11 @@ const Filtration = () => {
                                     </div>
 
                                     <div className="pt-8 flex flex-col sm:flex-row-reverse lg:flex-row gap-6 justify-end lg:justify-start">
-                                        <NavLink to="/systeme-de-filtration-deau-potable" className="w-full sm:w-auto">
-                                            <Button asChild>
-                                                <NavLink to="/systeme-de-filtration-deau-potable" className="flex items-center">
+                                        <NavLink to="/systeme-de-filtration-deau-potable" className="w-full sm:w-fit">
+                                            <Button size="lg" className="rounded-full px-12 py-7 transition-all duration-300 hover:shadow-xl hover:shadow-blue-100" asChild>
+                                                <NavLink to="/systeme-de-filtration-deau-potable" className="flex items-center text-lg">
                                                     Découvrir nos systèmes d'osmose inverse
-                                                    <ChevronRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                                                    <ChevronRight className="ml-2 h-6 w-6 transition-transform group-hover:translate-x-1" />
                                                 </NavLink>
                                             </Button>
                                         </NavLink>
@@ -582,7 +626,7 @@ const Filtration = () => {
                                             COMPACT & PUISSANT
                                         </span>
                                         <h2 
-                                        id="solutions-title"
+                                        id="compact-filtration-title"
                                         className="scroll-mt-[120px] mb-8"
                                         style={{
                                             fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
@@ -620,12 +664,12 @@ const Filtration = () => {
                                         ))}
                                     </div>
 
-                                    <div className="pt-8">
-                                        <NavLink to="/Systemes-de-filtration-deau-sous-evier" className="w-full sm:w-auto">
-                                            <Button asChild>
-                                                <NavLink to="/Systemes-de-filtration-deau-sous-evier" className="flex items-center">
+                                    <div className="pt-8 flex flex-col sm:flex-row gap-6">
+                                        <NavLink to="/Systemes-de-filtration-deau-sous-evier" className="w-full sm:w-fit">
+                                            <Button size="lg" className="w-full rounded-full px-12 py-7 transition-all duration-300 hover:shadow-xl hover:shadow-blue-200" asChild>
+                                                <NavLink to="/Systemes-de-filtration-deau-sous-evier" className="flex items-center text-lg">
                                                     Voir nos filtres sous-évier
-                                                    <ChevronRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                                                    <ChevronRight className="ml-2 h-6 w-6 transition-transform group-hover:translate-x-1" />
                                                 </NavLink>
                                             </Button>
                                         </NavLink>
