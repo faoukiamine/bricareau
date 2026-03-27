@@ -36,7 +36,7 @@ const DiscoverExpert = () => {
                             <div className="pt-4">
                                 <Button asChild>
                                     <a href="/diagnostic" className="flex items-center justify-center gap-3">
-                                        Diagnostic gratuit en 1 min
+                                        Diagnostic gratuit en 2 min
                                         <ArrowRight className="w-5 h-5" />
                                     </a>
                                 </Button>

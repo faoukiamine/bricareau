@@ -446,13 +446,10 @@ const FiltrationSousEvier = () => {
                                 Ne laissez plus le doute couler de votre robinet. Nos tests d'eau révèlent la composition réelle de votre eau pour vous offrir une solution de filtration sur mesure, garantissant santé et sérénité à toute votre famille.
                             </p>
                             <div className="flex gap-4">
-                                <Button
-                                    size="lg"
-                                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 h-14 shadow-lg shadow-blue-200"
-                                    style={{}}
-                                    asChild
-                                >
-                                    <a href="/tests-eau">Demandez une analyse d'eau</a>
+                                <Button asChild>
+                                    <a href="/tests-eau">
+                                        Demandez une analyse d'eau
+                                    </a>
                                 </Button>
                             </div>
                         </div>
@@ -546,7 +543,7 @@ title={
                             <h2 className="text-white mb-6">
                                 <span className="font-bold block tracking-tight opacity-90">Prêt à dire adieu à l’eau embouteillée ?</span>
                             </h2>
-                            <p className="text-blue-100/80 font-light text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
+                            <p className="text-white font-light text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
                                 Passez au filtre sous évier et profitez d’une eau filtrée, savoureuse et économique directement à votre robinet. Contactez-nous pour une démonstration, une analyse d’eau ou un devis personnalisé. Installation rapide sous 48h disponible dans plusieurs régions !                            </p>
 <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
                                                                                 <Button asChild>
