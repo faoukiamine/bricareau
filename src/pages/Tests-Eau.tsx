@@ -342,7 +342,7 @@ const TestsEauPage = () => {
                 <span className="font-bold text-white block">sur la qualité de votre eau ?</span>
               </h2>
 
-              <p className="text-blue-100/80 font-light text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
+              <p className="text-white font-light text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
                 Planifier une analyse d’eau professionnelle et recevoir un rapport clair avec recommandations. Un spécialiste vous contactera pour discuter des résultats et, au besoin, vous proposer un plan de traitement adapté à votre maison.              </p>
 
               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
