@@ -568,7 +568,7 @@ const WaterDiagnosticQuiz = () => {
                                                 <ArrowLeft className="w-4 h-4 mr-2" /> Précédent
                                             </Button>
                                             <Button onClick={() => setStep(step + 1)} size="lg" className="rounded-full px-12 transition-all w-full sm:w-auto">
-                                                {step === 8 ? "Étape finale" : "Continuer"} <ArrowRight className="ml-2 w-4 h-4" />
+                                                {step === 8 ? "Suivant" : "Continuer"} <ArrowRight className="ml-2 w-4 h-4" />
                                             </Button>
                                         </div>
                                     </div>

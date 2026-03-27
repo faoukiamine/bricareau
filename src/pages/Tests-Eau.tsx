@@ -365,7 +365,7 @@ const TestsEauPage = () => {
         </section>
 
         {/* 7. FAQ Section */}
-        <section className="py-32 bg-white border-t border-slate-100">
+        <section className="pt-32 pb-16 bg-white border-t border-slate-100">
           <div className="container mx-auto px-4 text-left">
             <div className="text-left mb-20">
                              <h2 className="mb-8 heading-pro-max text-left">

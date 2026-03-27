@@ -221,9 +221,6 @@ const WaterTestFormSection = ({ id }: { id?: string }) => {
         <section id={id} className="py-24 bg-white border-t border-gray-100 scroll-mt-24 overflow-hidden">
             <div className="container mx-auto px-4">
                 <div className="max-w-4xl mx-auto mb-16 text-center">
-                    <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.2em] mb-6">
-                        ÉTAPE FINALE
-                    </span>
                     <h2 className="mb-8 heading-pro-max">
                         <span className="italic font-light text-[#2563eb]">Planifiez </span>
                         <span className="font-bold text-[#1e3a8a]">votre test d'eau.</span>
