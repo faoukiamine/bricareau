@@ -36,7 +36,7 @@ const products = [
         link: "/fontaines"
     },
     {
-        name: "Filtration eau de puits",
+        name: "Filtration d'eau de puits",
         description: "Nos systèmes de filtration aident à fournir une eau de qualité en provenance d'un puits artésien ou de surface.",
         image: WellWaterEquipmentImg,
         link: "/traitement-eau-de-puits"

@@ -17,7 +17,8 @@ interface HeroProps {
   badge?: string;
   singleLineTitle?: boolean;
   gradualOpacity75?: boolean;
-  className?: string; // Add this
+  className?: string;
+  imagePosition?: string;
 }
 
 const Hero = ({
@@ -33,7 +34,8 @@ const Hero = ({
   badge,
   singleLineTitle = false,
   gradualOpacity75 = true,
-  className // Add this
+  className,
+  imagePosition = "object-right"
 }: HeroProps) => {
   return (
     <section className={cn("relative lg:h-[800px] flex flex-col items-center overflow-hidden bg-white", className)}>
@@ -56,7 +58,7 @@ const Hero = ({
         <img
           src={image || heroImage}
           alt={imageAlt}
-          className="w-full h-full object-cover object-right opacity-80"
+          className={cn("w-full h-full object-cover opacity-80", imagePosition)}
         />
       </div>
 

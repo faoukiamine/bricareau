@@ -134,29 +134,29 @@ const ImpactCalculator = () => {
 
                 {/* Dynamic Results */}
                 <div className="mt-auto space-y-3">
-                    <div className="relative overflow-hidden p-6 rounded-[2.5rem] bg-emerald-50/50 border border-emerald-100 flex items-center justify-between group/res">
+                    <div className="relative overflow-hidden p-6 rounded-[2.5rem] bg-emerald-600 border border-emerald-700 flex items-center justify-between group/res transition-all duration-500 shadow-xl shadow-emerald-200">
                         <div>
-                            <span className="text-[10px] font-black text-emerald-600 uppercase tracking-widest block mb-1">Plastique Évité</span>
+                            <span className="text-[10px] font-black text-emerald-100 uppercase tracking-widest block mb-1">Plastique Évité</span>
                             <div className="flex items-baseline gap-2">
-                                <span className="text-4xl font-black text-slate-900 tracking-tighter tabular-nums">{bottlesSaved.toLocaleString()}</span>
-                                <span className="text-emerald-600/60 text-[10px] font-bold uppercase">Unités</span>
+                                <span className="text-4xl font-black text-white tracking-tighter tabular-nums">{bottlesSaved.toLocaleString()}</span>
+                                <span className="text-emerald-100/60 text-[10px] font-bold uppercase">Unités</span>
                             </div>
                         </div>
-                        <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center shadow-sm border border-emerald-50/50 group-hover/res:scale-110 transition-transform">
-                            <Recycle className="w-6 h-6 text-emerald-500" />
+                        <div className="w-12 h-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center border border-white/30 group-hover/res:scale-110 transition-transform">
+                            <Recycle className="w-6 h-6 text-white" />
                         </div>
                     </div>
 
-                    <div className="relative overflow-hidden p-6 rounded-[2.5rem] bg-blue-50/50 border border-blue-100 flex items-center justify-between group/res">
+                    <div className="relative overflow-hidden p-6 rounded-[2.5rem] bg-blue-600 border border-blue-700 flex items-center justify-between group/res transition-all duration-500 shadow-xl shadow-blue-200">
                         <div>
-                            <span className="text-[10px] font-black text-blue-600 uppercase tracking-widest block mb-1">Économies Nettes</span>
+                            <span className="text-[10px] font-black text-blue-100 uppercase tracking-widest block mb-1">Économies Nettes</span>
                             <div className="flex items-baseline gap-1">
-                                <span className="text-4xl font-black text-slate-900 tracking-tighter tabular-nums">{moneySaved.toLocaleString()}</span>
-                                <span className="text-blue-600 font-bold text-2xl tracking-tighter">$</span>
+                                <span className="text-4xl font-black text-white tracking-tighter tabular-nums">{moneySaved.toLocaleString()}</span>
+                                <span className="text-white font-bold text-2xl tracking-tighter">$</span>
                             </div>
                         </div>
-                        <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center shadow-sm border border-blue-50/50 group-hover/res:scale-110 transition-transform">
-                            <PiggyBank className="w-6 h-6 text-blue-500" />
+                        <div className="w-12 h-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center border border-white/30 group-hover/res:scale-110 transition-transform">
+                            <PiggyBank className="w-6 h-6 text-white" />
                         </div>
                     </div>
 
@@ -352,14 +352,10 @@ const Fontaines = () => {
                     </div>
                 </section>
 
-                {/* 3. Impact & Technologie Section - MODERN EDITORIAL BENTO */}
                 <section className="py-32 bg-white relative overflow-hidden">
-                    {/* Background glows */}
-                    <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-blue-50/50 rounded-full blur-[100px] -translate-x-1/2 -translate-y-1/2 -z-0" />
-                    <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-slate-50/50 rounded-full blur-[120px] translate-x-1/4 translate-y-1/4 -z-0" />
-
-                    <div className="container mx-auto px-6 relative z-10">
-                        <div className="text-center max-w-4xl mx-auto mb-24">
+                    {/* Centered technical header */}
+                    <div className="container mx-auto px-6 relative z-10 mb-20">
+                        <div className="text-center max-w-4xl mx-auto">
                             <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.2em] mb-6">
                                 TECHNOLOGIE & RESPONSABILITÉ
                             </span>
@@ -372,11 +368,11 @@ const Fontaines = () => {
                                     fontStyle: 'normal'
                                 }}
                             >
-                                <span className="italic font-light text-[#2563eb] block">Plus qu'une fontaine d'eau,</span>
-                                <span className="font-bold text-[#1e3a8a] block">un choix intelligent & responsable.</span>
+                                <span className="italic font-light text-[#2563eb] block text-[32px] md:text-[40px] lg:text-[48px]">Plus qu'une fontaine d'eau,</span>
+                                <span className="font-bold text-[#1e3a8a] block text-[32px] md:text-[40px] lg:text-[48px]">un choix intelligent & responsable.</span>
                             </h2>
                             <p 
-                                className="max-w-2xl mx-auto"
+                                className="max-w-3xl mx-auto"
                                 style={{
                                     fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
                                     fontWeight: 300,
@@ -386,66 +382,39 @@ const Fontaines = () => {
                                     fontStyle: 'normal'
                                 }}
                             >
-                                Alliez performance technologique, responsabilité écologique et économies domestiques pour un quotidien sans compromis.
+                                Alliez performance technologique, responsabilité écologique et économies domestiques pour un quotidien sans compromis. Dépassons ensemble les standards de l'hydratation classique.
                             </p>
                         </div>
+                    </div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-10">
-                            {/* Main Visual Card - Asymmetrical Large */}
-                            <div className="md:col-span-8 group relative -mx-6 lg:mx-0 rounded-none lg:rounded-[3.5rem] overflow-hidden shadow-none lg:shadow-[0_30px_70px_-20px_rgba(0,0,0,0.15)] h-[450px] md:h-[600px] lg:h-[650px]">
-                                <img
-                                    src={ecoImpactImg6}
-                                    alt="L'expérience d'eau pure Bricareau"
-                                    className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-[2.5s] ease-out"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/10 to-transparent" />
-
-                                <div className="absolute bottom-12 left-12 right-12 z-10">
-                                    <div className="flex flex-col items-start gap-4">
-                                        <div className="px-5 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center gap-2 mb-4">
-                                            <Star className="w-4 h-4 text-yellow-400 fill-yellow-400" />
-                                            <span className="text-[10px] font-black text-white uppercase tracking-widest">Expérience Premium</span>
-                                        </div>
-                                        <h3 className="font-bold text-white tracking-tight">Art de Vivre</h3>
-                                        <p 
-                                            className="text-white/80"
-                                            style={{
-                                                fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                                fontWeight: 300,
-                                                color: 'rgba(255, 255, 255, 0.8)',
-                                                fontSize: '20px',
-                                                lineHeight: '28px',
-                                                fontStyle: 'normal'
-                                            }}
-                                        >
-                                            Une pureté incomparable qui s'intègre harmonieusement à votre quotidien. Découvrez l'équilibre parfait entre esthétique et santé.
-                                        </p>
+                    {/* Full-Width immersive content */}
+                    <div className="flex flex-col-reverse lg:flex-row items-stretch border-y border-slate-100 min-h-[650px] lg:min-h-[800px]">
+                        {/* Left Side: Editorial Image & Narrative */}
+                        <div className="w-full lg:w-1/2 relative group overflow-hidden h-[450px] md:h-[600px] lg:h-auto">
+                            <img
+                                src={ecoImpactImg6}
+                                alt="L'expérience d'eau pure Bricareau"
+                                className="absolute inset-0 w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-105"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/10 to-transparent" />
+                            
+                            <div className="absolute bottom-12 left-12 right-12 z-20">
+                                <div className="max-w-xl space-y-6">
+                                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full">
+                                        <Star className="w-4 h-4 text-yellow-400 fill-yellow-400" />
+                                        <span className="text-[10px] font-black text-white uppercase tracking-widest">Expérience Premium</span>
                                     </div>
-                                </div>
-
-                                {/* Floating Feature Cards */}
-                                <div className="absolute top-12 right-12 z-20 space-y-4 hidden lg:block">
-                                    {[
-                                        { icon: <DollarSign className="w-5 h-5" />, title: "Rentabilité", desc: "Économisez jusqu'à 60% dès le premier jour.", bg: "bg-white/90 backdrop-blur-xl border-blue-100", color: "text-slate-900" },
-                                        { icon: <Clock className="w-5 h-5 text-blue-600" />, title: "Sérénité", desc: "Fini la corvée des bouteilles et les livraisons.", bg: "bg-white/90 backdrop-blur-xl border-blue-100", color: "text-slate-900" }
-                                    ].map((feature, idx) => (
-                                        <div key={idx} className={`p-6 rounded-[2rem] ${feature.bg} shadow-2xl border w-64 group transition-all duration-500 hover:-translate-x-2`}>
-                                            <div className="flex items-center gap-4">
-                                                <div className="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center shrink-0 group-hover:bg-blue-600 transition-colors">
-                                                    {React.cloneElement(feature.icon as React.ReactElement, { className: `w-5 h-5 ${feature.bg.includes('text-slate-900') ? 'text-blue-600' : 'text-blue-600'} group-hover:text-white` })}
-                                                </div>
-                                                <div>
-                                                    <h4 className={`text-base font-bold ${feature.color}`}>{feature.title}</h4>
-                                                    <p className={`text-[11px] font-light text-slate-500 leading-tight`}>{feature.desc}</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    ))}
+                                    <h3 className="text-3xl lg:text-4xl font-bold text-white tracking-tight">Art de Vivre</h3>
+                                    <p className="text-white text-[18px] lg:text-[20px] leading-relaxed italic border-l-2 border-blue-500 pl-6">
+                                        Une pureté incomparable qui s'intègre harmonieusement à votre quotidien. Découvrez l'équilibre parfait entre esthétique et santé, où chaque gorgée est une signature de qualité.
+                                    </p>
                                 </div>
                             </div>
+                        </div>
 
-                            {/* Impact Calculator Card - Sidebar style */}
-                            <div className="md:col-span-4 flex flex-col h-full">
+                        {/* Right Side: Results & Eco-Bilan Container */}
+                        <div className="w-full lg:w-1/2 flex items-center bg-slate-50/10 justify-start">
+                            <div className="w-full max-w-[700px] px-6 sm:px-12 lg:px-16 xl:px-24 py-20 lg:py-0">
                                 <ImpactCalculator />
                             </div>
                         </div>
@@ -554,11 +523,11 @@ const Fontaines = () => {
                                     fontSize: '48px',
                                     lineHeight: '48px',
                                     fontStyle: 'normal',
-                                    fontWeight: 300,
+                                    fontWeight: 500,
                                 }}
                             >
-                                <span className="font-bold text-white block">Sublimez votre quotidien avec </span>
-                                <span className="font-bold text-white block">l'excellence de nos fontaines d'eau.</span>
+                                <span className="text-white block">Sublimez votre quotidien avec </span>
+                                <span className="text-white block">l'excellence de nos fontaines d'eau.</span>
                             </h2>
                             <p 
                                 className="mb-12 max-w-2xl mx-auto"

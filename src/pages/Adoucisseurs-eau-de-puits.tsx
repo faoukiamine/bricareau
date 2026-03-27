@@ -276,79 +276,74 @@ const AdoucisseursEauDePuits = () => {
                             </div>
                         </div>
 
-                        <div className="flex flex-col space-y-32 md:space-y-48">
-                            {/* Benefit 1 - Right Text, Left Image */}
-                            <div className="flex flex-col md:flex-row-reverse gap-12 md:items-center group relative">
-                                <div className="absolute -top-12 -right-8 text-[180px] font-black text-slate-50 opacity-100 group-hover:text-blue-50 transition-colors duration-1000 select-none tracking-tighter -z-10">
-                                    01
-                                </div>
-                                <div className="md:w-1/2 space-y-8 pr-4 md:text-right flex flex-col items-end">
-                                    <div className="space-y-4 items-end flex flex-col">
-                                        <h3 className="text-[24px] font-bold text-slate-900 leading-tight group-hover:text-blue-600 transition-colors duration-500">
+                        <div className="space-y-8 lg:space-y-12 max-w-7xl mx-auto">
+                            {/* Top Row: Two Balanced Cards */}
+                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+                                {/* Card 1: Adoucissement */}
+                                <div className="group bg-white rounded-[3rem] border border-slate-100 shadow-xl shadow-slate-200/50 overflow-hidden flex flex-col h-full hover:shadow-2xl transition-all duration-700">
+                                    <div className="p-10 lg:p-12 space-y-8 flex flex-col flex-grow">
+                                        <h3 className="text-2xl lg:text-3xl font-bold text-[#1e3a8a] leading-tight">
                                             Adoucissement de haute performance
                                         </h3>
-                                        <div className="w-16 h-1 bg-blue-600 rounded-full transform origin-right group-hover:scale-x-150 transition-transform duration-500" />
+                                        <p className="body-pro-max text-justify text-[15px] leading-relaxed">
+                                            Un équilibre parfait entre minéralité et douceur. Notre système transforme la structure du calcaire, protégeant vos installations tout en préservant la fraîcheur naturelle de l'eau.
+                                        </p>
+                                        <div className="mt-auto pt-6 overflow-hidden rounded-2xl h-56 lg:h-64">
+                                            <img 
+                                                src={softwaterImg} 
+                                                alt="Pureté de l'eau adoucie de puits" 
+                                                className="w-full h-full object-cover rounded-2xl transform group-hover:scale-110 transition-transform duration-[2000ms]"
+                                            />
+                                        </div>
                                     </div>
-                                    <p className="body-pro-max text-right max-w-xl">
-                                        Un équilibre parfait entre minéralité et douceur. Notre système transforme la structure du calcaire, protégeant vos installations tout en préservant la fraîcheur naturelle de l'eau de puits pour une pureté cristalline inégalée.
-                                    </p>
                                 </div>
-                                <div className="md:w-1/2 overflow-hidden rounded-3xl shadow-2xl">
-                                    <img 
-                                        src={softwaterImg} 
-                                        alt="Test de pureté de l'eau" 
-                                        className="w-full h-64 md:h-[400px] object-cover transform group-hover:scale-110 transition-transform duration-1000"
-                                    />
-                                </div>
-                            </div>
 
-                            {/* Benefit 2 - Left Text, Right Image */}
-                            <div className="flex flex-col md:flex-row gap-12 md:items-center group relative">
-                                <div className="absolute -top-12 -left-8 text-[180px] font-black text-slate-50 opacity-100 group-hover:text-blue-50 transition-colors duration-1000 select-none tracking-tighter -z-10">
-                                    02
-                                </div>
-                                <div className="md:w-1/2 space-y-8 pl-4">
-                                    <div className="space-y-4">
-                                        <h3 className="text-[24px] font-bold text-slate-900 leading-tight group-hover:text-blue-600 transition-colors duration-500">
-                                            Protection et longévité de votre foyer
-                                        </h3>
-                                        <div className="w-16 h-1 bg-blue-600 rounded-full transform origin-left group-hover:scale-x-150 transition-transform duration-500" />
-                                    </div>
-                                    <p className="body-pro-max text-justify max-w-xl">
-                                        Dites adieu aux traces de rouille et au vert-de-gris. Une protection active pour votre robinetterie de luxe et vos appareils haut de gamme, prolongeant l'éclat originel de votre foyer pour des décennies.
-                                    </p>
-                                </div>
-                                <div className="md:w-1/2 overflow-hidden rounded-3xl shadow-2xl">
-                                    <img 
-                                        src={luxuryBathroomImg} 
-                                        alt="Salle de bain luxueuse et protégée" 
-                                        className="w-full h-64 md:h-[400px] object-cover transform group-hover:scale-110 transition-transform duration-1000"
-                                    />
-                                </div>
-                            </div>
-
-                            {/* Benefit 3 - Right Text, Left Image */}
-                            <div className="flex flex-col md:flex-row-reverse gap-12 md:items-center group relative pb-16">
-                                <div className="absolute -top-12 -right-8 text-[180px] font-black text-slate-50 opacity-100 group-hover:text-blue-50 transition-colors duration-1000 select-none tracking-tighter -z-10">
-                                    03
-                                </div>
-                                <div className="md:w-1/2 space-y-8 pr-4 md:text-right flex flex-col items-end">
-                                    <div className="space-y-4 items-end flex flex-col">
-                                        <h3 className="text-[24px] font-bold text-slate-900 leading-tight group-hover:text-blue-600 transition-colors duration-500">
+                                {/* Card 2: Confort */}
+                                <div className="group bg-white rounded-[3rem] border border-slate-100 shadow-xl shadow-slate-200/50 overflow-hidden flex flex-col h-full hover:shadow-2xl transition-all duration-700">
+                                    <div className="p-10 lg:p-12 space-y-8 flex flex-col flex-grow">
+                                        <h3 className="text-2xl lg:text-3xl font-bold text-[#1e3a8a] leading-tight">
                                             Confort et douceur sensorielle
                                         </h3>
-                                        <div className="w-16 h-1 bg-blue-600 rounded-full transform origin-right group-hover:scale-x-150 transition-transform duration-500" />
+                                        <p className="body-pro-max text-justify text-[15px] leading-relaxed">
+                                            Offrez à votre famille le luxe d'une eau soyeuse qui hydrate profondément. Une sensation de douceur sur la peau et des cheveux visiblement plus brillants.
+                                        </p>
+                                        <div className="mt-auto pt-6 overflow-hidden rounded-2xl h-56 lg:h-64">
+                                            <img 
+                                                src={spaRelaxationImg} 
+                                                alt="Douceur sensorielle et confort spa" 
+                                                className="w-full h-full object-cover rounded-2xl transform group-hover:scale-110 transition-transform duration-[2000ms]"
+                                            />
+                                        </div>
                                     </div>
-                                    <p className="body-pro-max text-right max-w-xl">
-                                        Offrez à votre famille le luxe d'une eau soyeuse qui hydrate profondément. Une sensation de douceur sur la peau, des cheveux visiblement plus brillants et un linge enveloppé d'un éclat soigné à chaque lavage.
-                                    </p>
                                 </div>
-                                <div className="md:w-1/2 overflow-hidden rounded-3xl shadow-2xl">
-                                    <img 
-                                        src={spaRelaxationImg} 
-                                        alt="Moment de détente spa à domicile" 
-                                        className="w-full h-64 md:h-[400px] object-cover transform group-hover:scale-110 transition-transform duration-1000"
-                                    />
+                            </div>
+
+                            {/* Bottom Row: One Full Width Featured Card - Protection */}
+                            <div className="group bg-white rounded-[3rem] border border-slate-100 shadow-xl shadow-slate-200/50 overflow-hidden hover:shadow-2xl transition-all duration-700">
+                                <div className="grid grid-cols-1 lg:grid-cols-2 lg:items-center">
+                                    <div className="p-10 lg:p-14 space-y-8">
+                                        <h3 className="text-3xl lg:text-4xl font-bold text-[#1e3a8a] leading-tight">
+                                            Protection et longévité de votre foyer
+                                        </h3>
+                                        <p className="body-pro-max text-justify text-lg leading-relaxed max-w-xl">
+                                            Dites adieu aux traces de rouille et au vert-de-gris. Une protection active pour votre robinetterie de luxe et vos appareils haut de gamme, prolongeant l'éclat originel de votre foyer pour des décennies.
+                                        </p>
+                                        <div className="pt-4">
+                                            <Button 
+                                                className="rounded-full px-10 py-7 h-auto font-bold bg-[#2563eb] hover:bg-[#1e3a8a] text-white shadow-lg shadow-blue-200 group/btn"
+                                                onClick={() => navigate('/consultation')}
+                                            >
+                                                Protégez vos installations <ChevronRight className="ml-2 w-6 h-6 group-hover/btn:translate-x-1 transition-transform" />
+                                            </Button>
+                                        </div>
+                                    </div>
+                                    <div className="h-80 lg:h-[600px] overflow-hidden">
+                                        <img 
+                                            src={luxuryBathroomImg} 
+                                            alt="Protection de la plomberie et du foyer" 
+                                            className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-[4000ms]"
+                                        />
+                                    </div>
                                 </div>
                             </div>
                         </div>

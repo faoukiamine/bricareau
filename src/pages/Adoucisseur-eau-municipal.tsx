@@ -325,7 +325,7 @@ const AdoucisseurEauMunicipal = () => {
                                     </div>
                                     <h3 className="text-white text-4xl font-bold mb-6 leading-tight">L'excellence Bricareau s'installe chez vous.</h3>
                                     <p className="text-white text-lg mb-10 text-justify">
-                                        Chaque installation est une signature de qualité. Nos techniciens certifiés assurent une mise en place chirurgicale de vos systèmes, garantissant performance et esthétique.
+                                        Chaque installation est une signature de qualité. Nos techniciens assurent une mise en place chirurgicale de vos systèmes, garantissant performance et esthétique.
                                     </p>
                                 </div>
                             </div>

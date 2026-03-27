@@ -164,6 +164,9 @@ const Footer = () => {
               <Link to="/conditions-generales-utilisation" className="hover:text-white transition-colors">
                 Conditions d'utilisation
               </Link>
+              <Link to="/desabonnement" className="hover:text-white transition-colors underline decoration-white/30 underline-offset-4">
+                Désabonner
+              </Link>
             </div>
           </div>
         </div>

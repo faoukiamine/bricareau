@@ -126,54 +126,47 @@ const TestsEauPage = () => {
 
 
 
-        {/* 3. Savoir exactement ce que vous buvez (The Scientific Canvas) - Open & Editorial */}
-        <section className="py-24 lg:py-44 bg-slate-50 overflow-hidden relative border-t border-slate-100">
-          {/* Subtle Dynamic Accents */}
-          <div className="absolute inset-0 pointer-events-none">
-            <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-blue-100/30 rounded-full blur-[160px]" />
-            <div className="absolute -bottom-20 -left-20 w-[600px] h-[600px] bg-indigo-50/40 rounded-full blur-[140px]" />
-          </div>
-          <div className="container mx-auto px-6 relative z-10">
-            <div className="max-w-4xl mx-auto text-center mb-16 lg:mb-24">
-              <span className="text-sm font-bold uppercase tracking-widest text-blue-600 mb-4 block flex items-center justify-center gap-2">
-                 <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.2em] mb-6">
-                   TESTS & ANALYSES D'EAU DE PRÉCISION
-                 </span>
+        <section className="pt-32 pb-0 bg-white relative overflow-hidden">
+          {/* Centered technical header */}
+          <div className="container mx-auto px-6 relative z-10 mb-20 text-center">
+            <div className="max-w-4xl mx-auto">
+              <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.2em] mb-6">
+                TESTS & ANALYSES D'EAU DE PRÉCISION
               </span>
-              <h2 className="mb-8 heading-pro-max text-center">
-                <span className="italic font-light text-[#2563eb] block text-center">Savoir exactement</span>
-                <span className="font-bold text-[#1e3a8a] block text-center">ce que vous buvez.</span>
+              <h2 className="mb-8 heading-pro-max">
+                <span className="italic font-light text-[#2563eb] block">Savoir exactement</span>
+                <span className="font-bold text-[#1e3a8a] block">ce que vous buvez.</span>
               </h2>
+              <p className="body-pro-max max-w-6xl mx-auto text-justify" style={{ fontWeight: 300, color: 'rgb(71, 85, 105)', fontSize: '20px', lineHeight: '28px' }}>
+                Les analyses d’eau professionnelles et les tests de laboratoire sont la façon la plus fiable de connaître la qualité réelle de votre eau potable. Ils permettent de détecter les contaminants invisibles à l’œil nu et de choisir ensuite le bon système de traitement d'eau pour protéger votre famille. il est préférable de procéder à une analyse d'eau dans les cas suivants:
+              </p>
             </div>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          </div>
 
-              {/* Visual Side (Left/Center on Desktop) */}
-              <div className="relative order-2 lg:order-1 -mx-6 lg:mx-0">
-                {/* Large Integrated Microscopy Image */}
-                <div className="relative h-[450px] md:h-[550px] lg:h-[700px] rounded-none lg:rounded-[2.5rem] overflow-hidden group shadow-none lg:shadow-2xl shadow-blue-900/5">
-                  <img
-                    src={forensicWaterImg}
-                    alt="Microscopic water analysis"
-                    className="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-110 opacity-80"
-                  />
-                  {/* Subtle Overlays */}
-                  <div className="absolute inset-0 bg-gradient-to-tr from-blue-900/20 via-transparent to-white/10" />
-                </div>
-                
-                {/* Architectural Decor Lines */}
-                <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-blue-600/5 rounded-full blur-3xl" />
-              </div>
+          {/* Full-Width immersive content */}
+          <div className="flex flex-col-reverse lg:flex-row items-stretch min-h-[650px] lg:min-h-[850px]">
+            {/* Left Side: Cinematic Visual */}
+            <div className="w-full lg:w-1/2 relative group overflow-hidden h-[450px] md:h-[600px] lg:h-auto">
+              <img
+                src={forensicWaterImg}
+                alt="Microscopic water analysis"
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-blue-900/10 backdrop-blur-[1px]" />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent" />
+            </div>
 
-              {/* Content Side (Right on Desktop) */}
-              <div className="text-left order-1 lg:order-2">
-                <div className="max-w-xl">
-                  <div className="space-y-8 py-2">
-                    <p className="body-pro-max max-w-2xl mx-auto text-justify">
-                      Les analyses d’eau professionnelles et les tests de laboratoire sont la façon la plus fiable de connaître la qualité réelle de votre eau potable. Ils permettent de détecter les contaminants invisibles à l’œil nu et de choisir ensuite le bon système de traitement d'eau pour protéger votre famille. il est préférable de procéder à une analyse d'eau dans les cas suivants:
+            {/* Right Side: Information Grid */}
+            <div className="w-full lg:w-1/2 flex items-center bg-slate-50/10 justify-start border-b border-slate-100">
+              <div className="w-full max-w-[800px] px-6 sm:px-12 lg:px-16 xl:px-24 py-20 lg:py-0">
+                <div className="space-y-8">
+                  <div className="space-y-4">
+                    <p className="text-slate-500 font-light text-lg">
+                      Il est préférable de procéder à une analyse d'eau dans les cas suivants :
                     </p>
                   </div>
-
-                  {/* Integrated Diagnostic Feature List (with Circular Images) */}
+                  
+                  {/* Integrated Diagnostic Feature List (with Circular Images) - RESTORED ORIGINAL CONTENT DESIGN */}
                   <div className="mt-8 space-y-4">
                     {services.map((item, idx) => (
                       <div 
@@ -372,9 +365,9 @@ const TestsEauPage = () => {
         </section>
 
         {/* 7. FAQ Section */}
-        <section className="py-24 bg-white border-t border-slate-100">
+        <section className="py-32 bg-white border-t border-slate-100">
           <div className="container mx-auto px-4 text-left">
-            <div className="text-left mb-16">
+            <div className="text-left mb-20">
                              <h2 className="mb-8 heading-pro-max text-left">
                                 <span className="italic font-light text-[#2563eb] block">Pour vous éclairer</span>
                                 <span className="font-bold text-[#1e3a8a] block">Questions fréquentes</span>
@@ -439,9 +432,10 @@ const TestsEauPage = () => {
                   </AccordionItem>
                 ))}
               </Accordion>
-              <div className="mt-12 text-center">
+              <div className="mt-20 text-center">
                 <Button
                   onClick={() => setShowAllFaqs(!showAllFaqs)}
+                  size="lg"
                 >
                   {showAllFaqs ? "Voir moins de questions" : "Voir toutes les questions"}
                 </Button>
@@ -451,7 +445,9 @@ const TestsEauPage = () => {
         </section>
 
         {/* 8. Schedule a Water Test Section */}
-        <WaterTestFormSection id="water-test" />
+        <section className="pt-24 bg-white relative overflow-hidden">
+          <WaterTestFormSection id="water-test" />
+        </section>
 
       </main >
       <Footer />

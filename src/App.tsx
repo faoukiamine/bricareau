@@ -86,6 +86,7 @@ import GoutDeChlorePourquoiLaVilleEnAjouteAutant from "./pages/Blog pages/Gout-d
 
 import PolitiqueConfidentialite from "./pages/Politique-de-Confidentialite";
 import ConditionsGeneralesUtilisation from "./pages/Conditions-Generales-Utilisation";
+import Desabonnement from "./pages/Desabonnement";
 import LandingResidential from "./pages/LandingResidential";
 import NotFound from "./pages/NotFound";
 
@@ -167,6 +168,7 @@ const App = () => (
           <Route path="/promotions" element={<Promotions />} />
           <Route path="/politique-de-confidentialite" element={<PolitiqueConfidentialite />} />
           <Route path="/conditions-generales-utilisation" element={<ConditionsGeneralesUtilisation />} />
+          <Route path="/desabonnement" element={<Desabonnement />} />
           <Route path="/landing-residentiel" element={<LandingResidential />} />
 
           {/* Blog Routes */}

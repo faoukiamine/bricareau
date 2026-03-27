@@ -160,7 +160,7 @@ const ContactEntreprises = () => {
                       setFormData({ ...formData, acceptMarketing: checked as boolean })
                     }
                   />
-                  <Label htmlFor="marketing" className="text-sm font-normal cursor-pointer">
+                  <Label htmlFor="marketing" className="text-sm font-normal cursor-pointer text-justify">
                     J'accepte de recevoir des propositions commerciales et des informations sur les produits et services par mail et par téléphone.
                   </Label>
                 </div>

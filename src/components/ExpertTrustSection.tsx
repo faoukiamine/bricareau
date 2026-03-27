@@ -13,7 +13,7 @@ const ExpertTrustSection = () => {
                     <img
                         src={expertImg}
                         alt="Expert Bricareau lors d'une analyse d'eau rigoureuse"
-                        className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                        className="absolute inset-0 w-full h-full object-cover"
                     />
                     {/* Floating Stats Overlay */}
                     <div className="absolute top-10 right-10 bg-white/90 backdrop-blur-md p-6 rounded-3xl shadow-xl border border-white/50 max-w-[200px] z-20">

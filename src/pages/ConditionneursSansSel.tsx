@@ -300,34 +300,54 @@ const ConditionneursSansSel = () => {
           </div>
         </section>
 
-        {/* 4. Product Section */}
-        <section className="py-24 bg-slate-50">
-          <div className="container mx-auto px-4">
-            <div className="flex flex-col lg:flex-row items-center gap-16">
-              <div className="lg:w-1/2">
-                <h2 className="text-[42px] leading-tight font-light mb-8">
-                  Une protection <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">100% écologique.</span>
-                </h2>
-                <div className="space-y-6">
-                  {[
-                    { title: "Sérénité Totale", desc: "Aucun sac de sel à porter, aucune maintenance complexe." },
-                    { title: "Santé Préservée", desc: "Conserve le calcium et magnésium naturels de votre eau." },
-                    { title: "Économies Durables", desc: "Zéro consommation d'eau et d'électricité." }
-                  ].map((item, i) => (
-                    <div key={i} className="flex gap-4">
-                      <div className="mt-1"><ShieldCheck className="w-6 h-6 text-blue-600" /></div>
-                      <div>
-                        <h4 className="card-title">{item.title}</h4>
-                        <p className="text-slate-500 font-light">{item.desc}</p>
-                      </div>
+        {/* 4. Product Section - Mirrored from DiscoverExpert layout */}
+        <section className="bg-white relative overflow-hidden border-y border-slate-100">
+          <div className="flex flex-col-reverse lg:flex-row items-stretch min-h-[500px] lg:min-h-[750px]">
+            {/* Content Side */}
+            <div className="w-full lg:w-1/2 flex items-center bg-slate-50/10 justify-start lg:justify-end">
+              <div className="w-full max-w-[700px] px-6 sm:px-12 lg:px-10 xl:px-12 py-20 lg:py-32">
+                <div className="space-y-10">
+                  <div className="space-y-6">
+                    <h2 className="text-[42px] lg:text-[56px] leading-[1.1] font-light text-[#1e3a8a]">
+                      Une protection <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">100% écologique.</span>
+                    </h2>
+                    <div className="space-y-8">
+                      {[
+                        { title: "Sérénité Totale", desc: "Aucun sac de sel à porter, aucune maintenance complexe." },
+                        { title: "Santé Préservée", desc: "Conserve le calcium et magnésium naturels de votre eau." },
+                        { title: "Économies Durables", desc: "Zéro consommation d'eau et d'électricité." }
+                      ].map((item, i) => (
+                        <div key={i} className="flex gap-6 group">
+                          <div className="mt-1 flex-shrink-0">
+                            <div className="w-12 h-12 rounded-2xl bg-white shadow-sm flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 border border-slate-100">
+                              <ShieldCheck className="w-6 h-6" />
+                            </div>
+                          </div>
+                          <div>
+                            <h4 className="text-xl font-bold text-slate-900 mb-2">{item.title}</h4>
+                            <p className="text-slate-500 font-light text-[18px] leading-snug">{item.desc}</p>
+                          </div>
+                        </div>
+                      ))}
                     </div>
-                  ))}
+                  </div>
                 </div>
               </div>
-              <div className="w-full lg:w-1/2 relative -mx-4 lg:mx-0">
-                <div className="relative rounded-none lg:rounded-[3rem] overflow-hidden bg-white/40 backdrop-blur-sm p-12 shadow-none lg:shadow-2xl">
-                  <img src={conditionneurImg} alt="Conditionneur Bricareau" className="w-full h-[400px] md:h-[500px] lg:h-[600px] object-contain drop-shadow-2xl" />
-                </div>
+            </div>
+
+            {/* Image Side */}
+            <div className="w-full lg:w-1/2 relative group overflow-hidden h-[400px] md:h-[550px] lg:h-auto border-l border-slate-100 bg-white">
+              <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(37,99,235,0.03)_0%,transparent_70%)] pointer-events-none" />
+              
+              <img 
+                src={conditionneurImg} 
+                alt="Conditionneur Bricareau haute performance" 
+                className="absolute inset-0 w-full h-full object-cover drop-shadow-[0_20px_50px_rgba(0,0,0,0.12)]" 
+              />
+              
+              {/* Decorative branding anchor */}
+              <div className="absolute bottom-10 right-10 opacity-30 select-none">
+                <div className="text-[80px] font-black text-slate-50 leading-none">TAC</div>
               </div>
             </div>
           </div>

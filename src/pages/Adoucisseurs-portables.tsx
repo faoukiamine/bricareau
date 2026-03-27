@@ -66,6 +66,7 @@ const AdoucisseursPortables = () => {
                     subtitle="La solution d'adoucissement flexible pour votre résidence ou commerce sans installation permanence. Profitez de notre service d'échange d'adoucisseur portable avec livraison directement chez vous."
                     showPhone={true}
                     showBreadcrumbs={true}
+                    imagePosition="object-[center_25%]"
                 />
 
 

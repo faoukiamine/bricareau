@@ -17,9 +17,11 @@ import {
 } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import { useNavigate } from "react-router-dom";
-import React, { useEffect } from "react";
-import waterTestingImg from "@/assets/3756051.jpg";
-import specializedFiltersImg from "@/assets/Filtres d'eau spécialisés.webp";
+import React, { useEffect, useState } from "react";
+import waterTestingImg from "@/assets/reasons-to-drink-more-water.jpg";
+import specializedFiltersImg from "@/assets/premium_bathroom_protection_1774493901305.png";
+import crystalClearWaterImg from "@/assets/5846952.jpg";
+import comfortImg from "@/assets/71luIOvIQuL._AC_SL1500_.jpg";
 import { heroImg as eauVilleFiltreeImg } from "./Blog pages/Pourquoi-meme-leau-de-ville-a-besoin-detre-filtree";
 import { heroImg as plombVieillesMaisonsImg } from "./Blog pages/Le-plomb-dans-les-vieilles-maisons-comment-se-proteger";
 import { heroImg as filtreSousEvierImg } from "./Blog pages/Filtre-sous-evier-lalternative-simple-aux-pichets-filtrants";
@@ -126,6 +128,28 @@ const comparisonData: ComparisonItem[] = [
 const FiltresTouteMaison = () => {
     const navigate = useNavigate();
     const [showAllFaqs, setShowAllFaqs] = React.useState(false);
+    const [cardStack, setCardStack] = useState([0, 1, 2, 3]);
+
+    const handleCardClick = (cardIndex: number) => {
+        setCardStack(prev => {
+            const newStack = prev.filter(idx => idx !== cardIndex);
+            return [...newStack, cardIndex];
+        });
+    };
+
+    const cardData = [
+        { id: 0, title: "Zéro odeur", img: waterTestingImg, desc: "Dites adieu aux odeurs d'œufs pourris (soufre) et au goût de chlore pour une eau fraîche, revigorante et délicieuse à chaque gorgée." },
+        { id: 1, title: "Protection totale", img: specializedFiltersImg, desc: "Empêchez le fer et les minéraux corrosifs de tacher vos éviers et de détruire votre plomberie. Nos filtres prolongent la vie de vos électroménagers." },
+        { id: 2, title: "Eau cristalline", img: crystalClearWaterImg, desc: "Éliminez les sédiments et la turbidité pour une eau d'une clarté professionnelle partout chez vous, à chaque robinet. Une pureté visible." },
+        { id: 3, title: "Confort durable", img: comfortImg, desc: "Savourez un bien-être quotidien inégalé grâce à une eau exceptionnelle qui protège votre peau et votre tuyauterie." }
+    ];
+
+    const positionStyles = [
+        "transform -rotate-[16deg] -translate-x-20 translate-y-16 z-0 scale-90 opacity-60",
+        "transform -rotate-[8deg] -translate-x-10 translate-y-8 z-10 scale-95 opacity-80",
+        "transform -rotate-[2deg] translate-x-0 translate-y-0 z-20 scale-100 opacity-95",
+        "transform rotate-[12deg] translate-x-16 -translate-y-10 z-30 scale-105 opacity-100 shadow-[20px_50px_100px_-20px_rgba(30,58,138,0.3)] shadow-blue-900/40"
+    ];
 
     useEffect(() => {
         document.title = "Filtres d'eau pour toute la maison | Filtration Point d'Entrée | Bricareau";
@@ -140,6 +164,7 @@ const FiltresTouteMaison = () => {
         const ogDesc = document.querySelector('meta[property="og:description"]');
         if (ogDesc) ogDesc.setAttribute("content", "Une eau filtrée à chaque robinet. Découvrez nos systèmes Vortex, ChlorStop et Iron Shield.");
     }, []);
+
     return (
         <div className="min-h-screen bg-white text-slate-900 font-sans">
              <Header />
@@ -155,62 +180,83 @@ const FiltresTouteMaison = () => {
                     showPhone={true}
                     showBreadcrumbs={true}
                     singleLineTitle={true}
-
                 />
 
-                {/* 3. Pourquoi choisir - Ultramodern Light Glassmorphism Section */}
-                <section className="relative py-24 md:py-32 overflow-hidden bg-white">
-                    {/* Background Accents */}
-                    <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
-                        <div className="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] rounded-full bg-blue-50 blur-[120px]" />
-                        <div className="absolute bottom-[-20%] right-[-10%] w-[50%] h-[50%] rounded-full bg-cyan-50 blur-[120px]" />
-                        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-slate-50/50 to-transparent opacity-80" />
-                    </div>
-
+                {/* 3. Pourquoi choisir - Interactive Card Stack Editorial Layout */}
+                <section className="relative py-32 overflow-hidden bg-white">
                     <div className="container mx-auto px-6 relative z-10">
-                        <div className="text-center mb-20">
-                             <h2 className="mb-8 heading-pro-max text-center">
-                                <span className="italic font-light text-[#2563eb] block text-center">Pourquoi choisir nos</span>
+                        <div className="max-w-4xl mx-auto text-center mb-24">
+                            <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.3em] mb-8">
+                                L'EXCELLENCE BRICAREAU
+                            </span>
+                            <h2 className="mb-8 heading-pro-max text-center">
+                                <span className="italic font-light text-[#2563eb] block">Pourquoi choisir nos</span>
                                 <span className="font-bold text-[#1e3a8a] block text-center">systèmes de filtration d'eau ?</span>
                             </h2>
-                            <p className="body-pro-max max-w-2xl mx-auto text-center">
-                                Plus qu'un simple système de filtration, c'est une protection avancée pour votre santé et un confort durable pour toute votre famille.
+                            <p className="body-pro-max text-slate-500 text-center mx-auto">
+                                Plus qu'un simple système de filtration, c'est une protection avancée pour votre santé et un confort durable pour toute votre famille au quotidien.
                             </p>
                         </div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 xl:gap-12">
-                            {[
-                                { 
-                                    icon: Droplets, 
-                                    title: "Eau cristalline", 
-                                    desc: "Éliminez les sédiments et la turbidité pour une eau d'une clarté professionnelle partout chez vous.",
-                                },
-                                { 
-                                    icon: Shield, 
-                                    title: "Protection totale", 
-                                    desc: "Empêchez le fer et les minéraux corrosifs de tacher vos éviers et de détruire votre plomberie.",
-                                },
-                                { 
-                                    icon: TrendingDown, 
-                                    title: "Zéro odeur", 
-                                    desc: "Dites adieu aux odeurs d'œufs pourris (soufre) et au goût de chlore pour une eau fraîche.",
-                                }
-                            ].map((item, id) => (
-                                <div key={id} className="group bg-white border border-slate-100 rounded-[2rem] p-8 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2 relative overflow-hidden text-left">
-                                    <div className="absolute -right-4 -bottom-4 opacity-5 group-hover:opacity-10 transition-opacity duration-500 transform group-hover:scale-110">
-                                        <item.icon className="w-32 h-32 text-blue-600" />
-                                    </div>
-                                    <div className="relative z-10 w-16 h-16 rounded-2xl bg-blue-50 flex items-center justify-center mb-8 group-hover:bg-blue-600 transition-colors duration-500">
-                                        <item.icon className="h-8 w-8 text-blue-600 group-hover:text-white transition-colors duration-500" />
-                                    </div>
-                                    <h4 className="card-title mb-4 group-hover:text-blue-600 transition-colors duration-500">
-                                        {item.title}
-                                    </h4>
-                                     <p className="body-pro-max text-slate-500 text-justify">
-                                         {item.desc}
-                                     </p>
+                        <div className="grid grid-cols-1 lg:grid-cols-12 gap-24 items-center">
+                            {/* Card Stack Side (Left - Interactive) */}
+                            <div className="lg:col-span-12 xl:col-span-7 relative h-[450px] md:h-[600px] lg:h-[700px] flex items-center justify-center mb-16 lg:mb-0 -mx-6 lg:mx-0">
+                                <div className="relative w-full lg:max-w-[450px] aspect-square md:aspect-video lg:aspect-[3/4] group">
+                                    {cardStack.map((cardIdx, position) => {
+                                        const card = cardData[cardIdx];
+                                        return (
+                                            <div 
+                                                key={card.id}
+                                                onClick={() => handleCardClick(card.id)}
+                                                className={`absolute inset-0 bg-white rounded-none lg:rounded-[2.5rem] p-4 border border-slate-100 lg:border-slate-100 cursor-pointer transition-all duration-700 ease-out ${positionStyles[position]}`}
+                                            >
+                                                <div className="w-full h-full rounded-none lg:rounded-[1.8rem] overflow-hidden relative group">
+                                                    <img src={card.img} alt={card.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                                                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
+                                                        <p className="text-white font-bold text-xl">{card.title}</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        );
+                                    })}
                                 </div>
-                            ))}
+                            </div>
+
+                            {/* Text Content Side (Vertical Column) */}
+                            <div className="lg:col-span-12 xl:col-span-5 space-y-16">
+                                {cardData.map((feature, idx) => {
+                                    const isTop = cardStack[3] === feature.id; // Check if this feature's card is on top
+                                    return (
+                                        <div 
+                                            key={idx} 
+                                            className={`group transition-all duration-500 cursor-pointer ${isTop ? 'scale-110' : 'opacity-60 scale-95 hover:opacity-100'}`}
+                                            onClick={() => handleCardClick(feature.id)}
+                                        >
+                                            <div className="flex items-start gap-8">
+                                                <div className="pt-2">
+                                                    <div className={`w-2.5 h-2.5 rounded-full bg-blue-600 shadow-[0_0_15px_rgba(37,99,235,0.4)] ${isTop ? 'scale-150 animate-pulse' : 'scale-100'} transition-all`} />
+                                                </div>
+                                                <div className="space-y-4">
+                                                    <h3 className={`text-2xl font-bold transition-all duration-500 ${isTop ? 'text-blue-600' : 'text-[#1e3a8a] group-hover:text-blue-400'}`}>
+                                                        {feature.title}
+                                                    </h3>
+                                                     <p className="body-pro-max text-slate-500 text-justify max-w-md ml-0">
+                                                         {feature.desc}
+                                                     </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    );
+                                })}
+                                <div className="pt-8">
+                                    <Button 
+                                        className="rounded-full px-10 py-7 h-auto font-bold bg-[#2563eb] hover:bg-[#1e3a8a] text-white shadow-lg shadow-blue-200 group/btn"
+                                        onClick={() => navigate('/consultation')}
+                                    >
+                                        Planifiez votre analyse <ChevronRight className="ml-2 w-6 h-6 group-hover/btn:translate-x-1 transition-transform" />
+                                    </Button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>

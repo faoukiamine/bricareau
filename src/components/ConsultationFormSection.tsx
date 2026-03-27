@@ -18,6 +18,7 @@ import { format, addDays, setHours, setMinutes, startOfDay, endOfDay } from "dat
 import { fr } from "date-fns/locale";
 import { Loader2, CheckCircle2, ChevronLeft, ChevronRight, Calendar as CalendarIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { Link } from "react-router-dom";
 import { supabase } from "@/lib/supabase";
 import { toast } from "sonner";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
@@ -316,9 +317,9 @@ const ConsultationFormSection = ({ id, isStandalone = false }: { id?: string, is
                                                 />
                                             </FormControl>
                                             <div className="space-y-1 leading-none">
-                                                <FormLabel className="text-xs text-gray-600 font-normal leading-relaxed cursor-pointer text-justify block">
+                                                <FormLabel className="text-xs text-gray-600 font-normal leading-relaxed cursor-pointer block" style={{ textAlign: 'justify' }}>
                                                     Je souhaite recevoir les prochaines communications de Bricareau. (Vous pouvez vous désabonner à tout moment.)<br />
-                                                    En cochant cette case ou en utilisant le site web Bricareau.com, vous reconnaissez avoir lu les Conditions générales et la Politique de confidentialité, les comprendre et accepter d'y être lié.*
+                                                    En cochant cette case ou en utilisant le site web Bricareau.com, vous reconnaissez avoir lu les <Link to="/conditions-generales-utilisation" className="underline hover:text-blue-700 transition-colors">Conditions générales</Link> et la <Link to="/politique-de-confidentialite" className="underline hover:text-blue-700 transition-colors">Politique de confidentialité</Link>, les comprendre et accepter d'y être lié.*
                                                 </FormLabel>
                                                 <FormMessage />
                                             </div>

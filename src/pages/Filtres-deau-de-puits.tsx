@@ -557,7 +557,7 @@ const FiltresPuits = () => {
                     </div>
                 </section>
 
-                {/* 9. CTA Sectiion */}
+                {/* 9. CTA Section */}
                 <section className="relative py-32 overflow-hidden">
                     {/* Background Image with Overlay */}
                     <div className="absolute inset-0 z-0">
@@ -576,7 +576,7 @@ const FiltresPuits = () => {
                                 <span className="font-bold text-white block tracking-tight">à une source de pureté.</span>
                             </h2>
 
-                             <p className="body-pro-max text-blue-100/80 text-center mx-auto">
+                             <p className="text-white text-center mx-auto mb-12 max-w-2xl font-light text-lg lg:text-xl leading-relaxed">
                                  Le fer, le soufre et le calcaire ne sont pas une fatalité. Protégez votre santé et retrouvez le plaisir d'une eau pure, inodore et cristalline dès aujourd'hui.
                              </p>
 

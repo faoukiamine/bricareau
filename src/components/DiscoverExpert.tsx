@@ -50,7 +50,7 @@ const DiscoverExpert = () => {
                     <img
                         src={guideExpertImg}
                         alt="Expert Bricareau effectuant une analyse d'eau à domicile pour un diagnostic personnalisé"
-                        className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-1000 group-hover:scale-110"
+                        className="absolute inset-0 w-full h-full object-cover object-top"
                         style={{ filter: 'contrast(1.05) saturate(1.1) brightness(1.02)' }}
                     />
                     
