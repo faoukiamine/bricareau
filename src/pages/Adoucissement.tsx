@@ -9,7 +9,7 @@ import heroBath from "@/assets/young-nude-woman-taking-relaxing-foamy-bath.jpeg"
 import kitchenImg from "@/assets/18036672_SIE_2720_1530_21_04_30_SIE_CRM_Dishwasher_Hand_Taking_Out_Wine_Glass_Basket_Motiv_11_0017.webp";
 import untitledImg from "@/assets/2151469364.jpg";
 import mobileSoftenerImg from "@/assets/9-optimized.webp";
-import bathroomImg from "@/assets/2705.jpg";
+import bathroomImg from "@/assets/contemporary-bathroom-elements.jpg";
 import financeModeImg from "@/assets/finance_mode.svg";
 import plumbingImg from "@/assets/plumbing.svg";
 import moneyBagImg from "@/assets/money_bag.svg";
@@ -140,22 +140,13 @@ const Adoucissement = () => {
                             {/* Left Column: Analytical Narrative (6 Harms) */}
                             <div className="lg:col-span-5 space-y-8">
                                 <div>
-                                    <h2 
-                                        id="solutions-title"
-                                        className="scroll-mt-[120px] mb-8"
-                                        style={{
-                                            fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                            fontSize: '48px',
-                            lineHeight: '48px',
-                            fontStyle: 'normal'
-                        }}
-                    >
-                        <span className="italic font-light text-[#2563eb] block">L'impact silencieux du</span>
-                        <span className="font-bold text-[#1e3a8a] block">calcaire.</span>
-                    </h2>
-                                    <p className="font-light text-slate-600 lg:text-slate-600 mb-8 max-w-xl text-left lg:text-justify">
-                                        Ce n'est pas qu'un simple dépôt ; c'est un agent d'érosion invisible qui dégrade votre confort et vos investissements jour après jour.
-                                    </p>
+                                     <h2 className="heading-pro-max text-left mb-8">
+                                         <span className="italic font-light text-[#2563eb] block">L'impact silencieux du</span>
+                                         <span className="font-bold text-[#1e3a8a] block">calcaire.</span>
+                                     </h2>
+                                     <p className="body-pro-max mb-8 max-w-xl text-left">
+                                         Ce n'est pas qu'un simple dépôt ; c'est un agent d'érosion invisible qui dégrade votre confort et vos investissements jour après jour.
+                                     </p>
                                 </div>
 
                                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-x-8 gap-y-6 overflow-hidden transition-all duration-700">
@@ -281,7 +272,7 @@ const Adoucissement = () => {
                                      <span className="italic font-light text-[#2563eb] block">Les avantages de</span>
                                      <span className="font-bold text-[#1e3a8a] block">l'adoucissement d'eau</span>
                                  </h2>
-                         <p className="body-pro-max text-slate-500 text-center">
+                         <p className="body-pro-max text-center">
                              Une transformation immédiate pour votre confort, votre santé et la longévité de votre foyer.
                          </p>
                         </div>
@@ -320,7 +311,7 @@ const Adoucissement = () => {
                                     <h5 className="text-xl font-bold text-slate-900 mb-4 tracking-tight group-hover:text-blue-600 transition-colors duration-500">
                                         {item.title}
                                     </h5>
-                                     <p className="body-pro-max text-slate-500 leading-relaxed">
+                                     <p className="body-pro-max">
                                          {item.desc}
                                      </p>
                                 </div>
@@ -375,7 +366,7 @@ const Adoucissement = () => {
                                      >
                                          <span className="italic font-light text-[#2563eb] block">Adoucisseurs d'eau résidentiels</span>
                                      </h2>
-                                     <p className="body-pro-max text-slate-600 mb-8 max-w-xl text-left lg:text-justify">
+                                     <p className="body-pro-max mb-8 max-w-xl text-left">
                                             Offrez à votre foyer le luxe d'une eau sans calcaire. Nos adoucisseurs de pointe éliminent le tartre à la source, garantissant non seulement une vaisselle étincelante sans aucune trace, mais aussi une protection durable de vos appareils électroménagers et de votre plomberie.
                                         </p>
                                     </div>
@@ -451,7 +442,7 @@ const Adoucissement = () => {
                                         <h2 className="mb-8 heading-pro-max text-left">
                                              <span className="italic font-light text-[#2563eb] block text-left">Adoucisseurs d'eau portables</span>
                                          </h2>
-                                         <p className="body-pro-max text-slate-500 text-justify">
+                                         <p className="body-pro-max text-left">
                                              Ne laissez plus l’eau dure des campings ou des ports abîmer vos cheveux et vos équipements. Profitez d'une eau de qualité domestique dans votre VR, votre bateau ou votre chalet avec notre adoucisseur ultra-compact.
                                          </p>
                                     </div>
@@ -528,7 +519,7 @@ const Adoucissement = () => {
                                         <h2 className="mb-8 heading-pro-max text-left">
                                              <span className="italic font-light text-[#2563eb] block text-left">Conditionneurs d'eau sans sel</span>
                                          </h2>
-                                         <p className="body-pro-max text-slate-500 text-justify">
+                                         <p className="body-pro-max text-left">
                                              Le secret d'un linge éclatant et d'une vaisselle sans traces. Sans l'ajout de sel, votre eau devient votre meilleure alliée beauté et ménage.
                                          </p>
                                     </div>
@@ -739,8 +730,8 @@ const Adoucissement = () => {
                     </div>
                     <div className="container mx-auto px-6 relative z-10 text-center">
                         <div className="max-w-4xl mx-auto">
-                            <h2 className="text-white mb-6">
-                                <span className="font-bold block tracking-tight opacity-90">Prêt à retrouver la douceur d’une eau sans calcaire ?</span>
+                            <h2 className="heading-pro-max text-white text-center mb-6">
+                                <span className="font-bold block tracking-tight">Prêt à retrouver la douceur d’une eau sans calcaire ?</span>
                             </h2>
                             <p className="text-white font-light text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
                                 Éliminez le tartre, protégez votre foyer et redécouvrez le confort d’une peau soyeuse. Contactez nos experts pour une analyse de dureté gratuite et une solution sur mesure.

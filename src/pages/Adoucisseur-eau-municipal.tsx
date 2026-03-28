@@ -4,6 +4,7 @@ import Hero from "@/components/Hero";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import { Button } from "@/components/ui/button";
 import heroBath from "@/assets/sub-category-dryer.webp";
+import hardWaterFaucetImg from "@/assets/Hard Water-Faucet.jpg";
 import {
     ArrowRight,
     Droplets,
@@ -24,7 +25,7 @@ import {
 import { NavLink } from "@/components/NavLink";
 import { useNavigate } from "react-router-dom";
 import React, { useEffect } from "react";
-import waterTestingImg from "@/assets/water-test.jpg";
+import waterTestingImg from "@/assets/6802936.jpg";
 import { softenerImg as residentialWaterSoftenerImg } from "./Blog pages/Comment régler la dureté de votre adoucisseur ";
 import { adoucisseurImg as adoucisseurFosseImg } from "./Blog pages/Adoucisseur-deau- et-fosse-septique--Mythes-et-réalités";
 import { conditionneursImg } from "./Blog pages/Adoucisseur avec sel ou sans sel";
@@ -402,7 +403,7 @@ const AdoucisseurEauMunicipal = () => {
                         <img
                             src={waterTestingImg}
                             alt="Analyse d'eau à domicile pour détecter le calcaire et le chlore - Service Bricareau"
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-cover object-right"
                         />
                         <div className="absolute inset-0 bg-black/20" />
                     </div>
@@ -412,7 +413,7 @@ const AdoucisseurEauMunicipal = () => {
                         <img
                             src={waterTestingImg}
                             alt="Analyse d'eau à domicile pour détecter le calcaire et le chlore"
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-cover object-right"
                         />
                         <div className="absolute inset-0 bg-black/30 lg:bg-gradient-to-r lg:from-black/50 lg:to-transparent" />
                         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-white via-white/10 to-transparent" />
@@ -478,18 +479,18 @@ const AdoucisseurEauMunicipal = () => {
                     {/* Background Image with Overlay */}
                     <div className="absolute inset-0 z-0">
                         <img
-                            src={heroBath}
-                            alt="Confort municipal supérieur"
+                            src={hardWaterFaucetImg}
+                            alt="Problématique d'eau dure sur la robinetterie - Solution Bricareau"
                             className="w-full h-full object-cover"
                         />
                         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 via-blue-800/60 to-blue-500/30 backdrop-blur-[2px]" />
                     </div>
                     <div className="container mx-auto px-6 relative z-10 text-center">
                         <div className="max-w-4xl mx-auto">
-                            <h2 className="text-white mb-6">
-                                <span className="font-bold block tracking-tight opacity-90">Libérez votre robinet du calcaire de la ville.</span>
+                            <h2 className="heading-pro-max text-white text-center mb-6">
+                                <span className="font-bold block tracking-tight">Libérez votre robinet du calcaire de la ville.</span>
                             </h2>
-                            <p className="text-white font-light text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
+                            <p className="body-pro-max !text-white text-center mb-12 max-w-2xl mx-auto">
                                 Les solutions municipales ne suffisent pas toujours. Prenez le contrôle total de votre eau et redécouvrez la douceur d’un foyer protégé.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">

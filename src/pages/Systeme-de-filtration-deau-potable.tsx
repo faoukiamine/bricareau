@@ -444,7 +444,7 @@ const StationEauPotable = () => {
                                                 <h2 className="mb-6 heading-pro-max text-center">
                                                     <span className="font-bold text-white block tracking-tight">Redéfinissez votre standard de pureté.</span>
                                                 </h2>
-                                                <p className="text-blue-100/80 font-light text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
+                                                <p className="body-pro-max !text-white text-center mb-12 max-w-2xl mx-auto">
                                                     Pourquoi vous contenter d'une eau ordinaire quand vous pouvez offrir à votre foyer une source de pureté incomparable ? L'osmose inverse élimine les impuretés invisibles pour ne laisser que l'essentiel : une eau cristalline, un goût exceptionnel et une tranquillité d'esprit totale. Faites le choix de la technologie la plus avancée pour votre santé et votre confort.                            </p>
                                                 <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
                                                                                 <Button asChild>

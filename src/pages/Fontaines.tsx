@@ -516,30 +516,11 @@ const Fontaines = () => {
                     </div>
                     <div className="container mx-auto px-6 relative z-10 text-center">
                         <div className="max-w-4xl mx-auto">
-                            <h2 
-                                className="mb-8"
-                                style={{
-                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                    fontSize: '48px',
-                                    lineHeight: '48px',
-                                    fontStyle: 'normal',
-                                    fontWeight: 500,
-                                }}
-                            >
+                            <h2 className="heading-pro-max text-white text-center mb-8">
                                 <span className="text-white block">Sublimez votre quotidien avec </span>
                                 <span className="text-white block">l'excellence de nos fontaines d'eau.</span>
                             </h2>
-                            <p 
-                                className="mb-12 max-w-2xl mx-auto"
-                                style={{
-                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                    fontWeight: 300,
-                                    color: 'rgba(255, 255, 255, 0.8)',
-                                    fontSize: '20px',
-                                    lineHeight: '28px',
-                                    fontStyle: 'normal'
-                                }}
-                            >
+                            <p className="body-pro-max !text-white text-center mb-12 max-w-2xl mx-auto">
                                 Rejoignez le club familles Bricareau et profitez d'une source d'eau digne d'un palace, sans sortir de chez vous.
                             </p>
 

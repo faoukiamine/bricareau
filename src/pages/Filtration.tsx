@@ -29,6 +29,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { Button } from "@/components/ui/button";
 import { NavLink } from "@/components/NavLink";
+import { useNavigate } from "react-router-dom";
 import heroFiltration from "@/assets/2149890905.jpg";
 import drinkingWaterImg from "@/assets/Solutions d'eau potable.webp";
 import specializedFiltersImg from "@/assets/Filtres d'eau spécialisés.webp";
@@ -68,6 +69,7 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 const Filtration = () => {
     const [showAllFaqs, setShowAllFaqs] = React.useState(false);
     const [showAllHarms, setShowAllHarms] = React.useState(false);
+    const navigate = useNavigate();
 
     const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay({ delay: 4000 })]);
     const [selectedIndex, setSelectedIndex] = React.useState(0);
@@ -139,19 +141,11 @@ const Filtration = () => {
                             {/* Left Column: Analytical Narrative */}
                             <div className="lg:col-span-5 space-y-8">
                                 <div>
-                                    <h2
-                                className="mb-8 text-left"
-                                style={{
-                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                    fontSize: '48px',
-                                    lineHeight: '48px',
-                                    fontStyle: 'normal'
-                                }}
-                            >
-                                <span className="italic font-light text-[#2563eb] block text-left">L'invisible dans</span>
-                                <span className="font-bold text-[#1e3a8a] block text-left">votre verre d'eau</span>
-                            </h2>
-                                    <p className="font-light text-slate-600 lg:text-slate-600 mb-8 max-w-xl text-left lg:text-justify">
+                                    <h2 className="heading-pro-max text-left mb-8">
+                                        <span className="italic font-light text-[#2563eb] block">L'invisible dans</span>
+                                        <span className="font-bold text-[#1e3a8a] block">votre verre d'eau</span>
+                                    </h2>
+                                    <p className="body-pro-max mb-8 max-w-xl text-left">
                                         L'eau municipale est traitée, mais elle n'est pas pure. Entre l'usine de traitement et votre robinet, elle transporte des résidus invisibles qui impactent votre santé.
                                     </p>
                                 </div>
@@ -263,7 +257,7 @@ const Filtration = () => {
                                 <span className="italic font-light text-[#2563eb] block">De la prise de conscience</span>
                                 <span className="font-bold text-[#1e3a8a] block ">À la solution parfaite</span>
                             </h2>
-                            <p className="body-pro-max text-slate-500 max-w-2xl mx-auto leading-relaxed">
+                            <p className="body-pro-max max-w-2xl mx-auto">
                                 Identifier l'invisible est la première étape. Choisissez maintenant le bouclier technologique qui redéfinira la relation de votre foyer avec l'eau.
                             </p>
                         </div>
@@ -427,20 +421,11 @@ const Filtration = () => {
                                         <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.2em]">
                                             PROTECTION & SANTÉ
                                         </span>
-                                         <h2 
-                                        id="solutions-title"
-                                        className="scroll-mt-[120px] mb-8"
-                                        style={{
-                                            fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                            fontSize: '48px',
-                                            lineHeight: '48px',
-                                            fontStyle: 'normal'
-                                        }}
-                                    >
-                                        <span className="italic font-light text-[#2563eb] block">Eau filtrée pour toute la maison</span>
+                                         <h2 id="solutions-title" className="heading-pro-max text-left mb-8 scroll-mt-[120px]">
+                                            <span className="italic font-light text-[#2563eb] block">Eau filtrée pour toute la maison</span>
                                         </h2>
                                          
-                                        <p className="text-slate-500 font-light text-lg leading-relaxed text-justify max-w-xl">
+                                        <p className="body-pro-max text-justify max-w-xl">
                                             Les filtres d’eau pour toute la maison sont installés directement sur l’arrivée principale d’eau. Ils filtrent toute l’eau qui circule dans la maison : cuisine, salles de bain, buanderie, robinets extérieurs, etc. Ils sont idéaux pour réduire les sédiments, le sable, certaines odeurs et goûts (comme le chlore) et protéger la plomberie et les appareils.                                        </p>
                                     </div>
 
@@ -525,19 +510,10 @@ const Filtration = () => {
                                         <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.2em]">
                                             EAU PURE À VOLONTÉ
                                         </span>
-                                         <h2 
-                                        id="undersink-title"
-                                        className="scroll-mt-[120px] mb-8"
-                                        style={{
-                                            fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                            fontSize: '48px',
-                                            lineHeight: '48px',
-                                            fontStyle: 'normal'
-                                        }}
-                                    >
-                                        <span className="italic font-light text-[#2563eb] block">Votre source d'eau cristalline, sans compromis.</span>
+                                         <h2 id="undersink-title" className="heading-pro-max text-right lg:text-left mb-8 scroll-mt-[120px]">
+                                            <span className="italic font-light text-[#2563eb] block">Votre source d'eau cristalline, sans compromis.</span>
                                         </h2>
-                                        <p className="text-slate-500 font-light text-lg leading-relaxed text-justify max-w-xl ml-auto lg:ml-0">
+                                        <p className="body-pro-max text-justify max-w-xl ml-auto lg:ml-0">
                                             Découvrez comment notre système d'osmose inverse libère votre quotidien du goût de chlore et de la corvée des bouteilles plastique. Une eau légère et saine à portée de main.
                                         </p>
                                     </div>
@@ -637,7 +613,7 @@ const Filtration = () => {
                                     >
                                         <span className="italic font-light text-[#2563eb] block">Systèmes de filtration d'eau sous l'évier.</span>
                                         </h2>
-                                        <p className="text-slate-500 font-light text-lg leading-relaxed text-justify max-w-xl">
+                                        <p className="body-pro-max text-justify max-w-xl">
                                             Éliminez jusqu'à 99% des pathogènes, du plomb et du fluorure. Notre gamme Cristal Pro est la solution ultime pour une eau de boisson de qualité supérieure directement chez vous.
                                         </p>
                                     </div>
@@ -705,21 +681,15 @@ const Filtration = () => {
 
                     <div className="container mx-auto px-4 relative z-10 flex items-center py-12 lg:py-0">
                         <div className="max-w-2xl text-slate-900 lg:text-white">
-                           <span className="font-bold text-[#1e3a8a] block uppercase">
+                            <span className="font-bold text-[#1e3a8a] block uppercase mb-2">
                                 Contrôle de la Qualité D'EAU
-                            </span><h2
-                                className="mb-8"
-                                style={{
-                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                    fontSize: '48px',
-                                    lineHeight: '48px',
-                                    fontStyle: 'normal'
-                                }}
-                            >
+                            </span>
+                            <h2 className="heading-pro-max text-left mb-8">
                                 <span className="font-bold text-white block">Votre eau, notre priorité.</span>
                             </h2>
-                            <p className="font-light text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
-                                Ne devinez pas la qualité de votre eau. Nos analyses approfondies identifient les bactéries, les minéraux et les contaminants chimiques pour vous offrir une tranquillité d'esprit totale.                            </p>
+                            <p className="body-pro-max text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left">
+                                Ne laissez plus le doute couler de votre robinet. Demandez votre test d'eau dès aujourd'hui et obtenez un portrait clair de votre eau ainsi que des solutions adaptées à votre foyer.
+                            </p>
                             <div className="flex gap-4">
                                 <Button
                                     size="lg"
@@ -737,17 +707,9 @@ const Filtration = () => {
                     filterProduct="/filtration"
                     title={
                         <>
-                        <h2
-                                className="mb-8 text-left"
-                                style={{
-                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                    fontSize: '48px',
-                                    lineHeight: '48px',
-                                    fontStyle: 'normal'
-                                }}
-                            >
-                                <span className="italic font-light text-[#2563eb] block text-center">Honnêteté et passion :</span>
-                                <span className="font-bold text-[#1e3a8a] block text-center">la signature Bricareau vue par vous.</span>
+                            <h2 className="heading-pro-max text-center mb-12">
+                                <span className="italic font-light text-[#2563eb] block">Honnêteté et passion :</span>
+                                <span className="font-bold text-[#1e3a8a] block">la signature Bricareau vue par vous.</span>
                             </h2>
                         </>
                     }
@@ -758,15 +720,7 @@ const Filtration = () => {
                 <section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
-                            <h2
-                                className="mb-8 text-left"
-                                style={{
-                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                    fontSize: '48px',
-                                    lineHeight: '48px',
-                                    fontStyle: 'normal'
-                                }}
-                            >
+                            <h2 className="heading-pro-max text-left mb-8">
                                 <span className="italic font-light text-[#2563eb] block">Comparez nos solutions</span>
                                 <span className="font-bold text-[#1e3a8a] block">de filtration d'eau</span>
                             </h2>
@@ -825,22 +779,22 @@ const Filtration = () => {
 
           <div className="container mx-auto px-6 relative z-10 text-center">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-white mb-6">
-                <span className="font-bold leading-tight block tracking-tight">Un accompagnement personnalisé pour vous guider vers le système adapté à votre réalité et votre budget.</span>
+              <h2 className="heading-pro-max text-white text-center mb-6">
+                <span className="font-bold block tracking-tight">Un accompagnement personnalisé pour vous guider vers le système adapté à votre réalité et votre budget.</span>
               </h2>
 
-              <p className="text-white font-light text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
+              <p className="body-pro-max !text-white text-center mb-12 max-w-2xl mx-auto">
                 Vous n’êtes pas certain de savoir si vous avez besoin d’un filtre toute maison, d’un système sous évier ou d’une station d’osmose inverse ? Contactez‑nous pour une évaluation de votre eau et de vos besoins. 
               </p>
               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                <Button asChild>
+                <Button size="lg" asChild>
                   <a href="tel:18552649328" className="flex items-center gap-3">
                     <Phone className="h-5 w-5 animate-bounce" />
                     Parlez à un expert
                   </a>
                 </Button>
 
-                <Button variant="outline" asChild>
+                <Button variant="outline" size="lg" asChild>
                   <NavLink to="/consultation">Planifiez une consultation gratuite</NavLink>
                 </Button>
               </div>
@@ -856,15 +810,7 @@ const Filtration = () => {
                 <section className="py-24 bg-white">
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
-                             <h2
-                                className="mb-8 text-left"
-                                style={{
-                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                    fontSize: '48px',
-                                    lineHeight: '48px',
-                                    fontStyle: 'normal'
-                                }}
-                            >
+                            <h2 className="heading-pro-max text-left mb-8">
                                 <span className="italic font-light text-[#2563eb] block">Pour vous éclairer</span>
                                 <span className="font-bold text-[#1e3a8a] block">Questions fréquentes</span>
                             </h2>
@@ -957,19 +903,12 @@ const Filtration = () => {
                 <section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
-                            <h2
-                                className="mb-8 text-left"
-                                style={{
-                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                    fontSize: '48px',
-                                    lineHeight: '48px',
-                                    fontStyle: 'normal'
-                                }}
-                            >
+                            <h2 className="heading-pro-max text-left mb-8">
                                 <span className="font-bold text-[#1e3a8a] block">Ressources</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
-                        </div>                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {[
                                 {
                                     title: "Filtre sous évier, l'alternative simple aux pichets filtrants",
@@ -990,7 +929,7 @@ const Filtration = () => {
                                 <div
                                     key={i}
                                     className="group bg-white rounded-3xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full cursor-pointer"
-                                    onClick={() => window.location.href = "#"}
+                                    onClick={() => navigate(art.link)}
                                 >
                                     <div className="h-56 overflow-hidden">
                                         <img
@@ -1003,7 +942,7 @@ const Filtration = () => {
                                         <h4 className="mb-4 group-hover:text-blue-600 transition-colors tracking-tight font-medium text-base leading-6 text-[#0F1729]">{art.title}</h4>
                                         <div className="mt-auto">
                                             <NavLink
-                                                to="#"
+                                                to={art.link}
                                                 className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-sm"
                                             >
                                                 Lire <ChevronRight className="h-4 w-4 transform group-hover:translate-x-1 transition-transform" />
