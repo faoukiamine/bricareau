@@ -9,6 +9,8 @@ import heroBath from "@/assets/young-nude-woman-taking-relaxing-foamy-bath.jpeg"
 import kitchenImg from "@/assets/18036672_SIE_2720_1530_21_04_30_SIE_CRM_Dishwasher_Hand_Taking_Out_Wine_Glass_Basket_Motiv_11_0017.webp";
 import untitledImg from "@/assets/2151469364.jpg";
 import mobileSoftenerImg from "@/assets/9-optimized.webp";
+import portableWaterSoftenerImg from "@/assets/Portable_Water_Softener.jpg";
+import designImg from "@/assets/Design.jpg";
 import bathroomImg from "@/assets/342800.jpg";
 import financeModeImg from "@/assets/finance_mode.svg";
 import plumbingImg from "@/assets/plumbing.svg";
@@ -344,9 +346,9 @@ const Adoucissement = () => {
                                 <div className="space-y-0 relative z-10 flex flex-col h-full">
                                     <div className="h-20"></div>
 
-                                    <div className="w-full h-48 overflow-hidden rounded-3xl shadow-lg relative">
+                                    <div className="w-full h-48 overflow-hidden rounded-3xl shadow-lg relative bg-[#1e3a8a]">
                                         <img 
-                                            src={mobileSoftenerImg} 
+                                            src={designImg} 
                                             alt="Adoucisseur d'eau portable Série Nomade" 
                                             className="w-full h-full object-cover transition-transform duration-[3000ms] group-hover:scale-110"
                                         />
@@ -522,7 +524,7 @@ const Adoucissement = () => {
                     {/* Mobile Image Section */}
                     <div className="lg:hidden w-full h-[350px] sm:h-[450px] relative">
                         <img
-                            src={mobileSoftenerImg}
+                            src={designImg}
                             alt="Adoucisseur d'eau portable pour VR et bateau - Solution mobile Bricareau contre l'eau dure"
                             className="w-full h-full object-cover"
                         />
@@ -535,7 +537,7 @@ const Adoucissement = () => {
                             <div className="hidden lg:block w-full lg:w-1/2 lg:sticky lg:top-24 mb-12 lg:mb-0">
                                 <div className="rounded-[2.5rem] overflow-hidden shadow-2xl relative h-[600px] w-full group">
                                     <img
-                                        src={mobileSoftenerImg}
+                                        src={designImg}
                                         alt="Adoucisseur d'eau portable pour VR et bateau - Solution mobile Bricareau contre l'eau dure"
                                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                     />

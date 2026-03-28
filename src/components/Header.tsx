@@ -264,49 +264,20 @@ const Header = () => {
       }
     },
     {
-      name: "Ressources",
+      name: "Support",
       hasMegamenu: true,
       megamenuCards: [
+        {
+          customIcon: replacementfiltericonImg,
+          title: "Pièces",
+          description: "Commandez des pièces de rechange originales pour vos équipements.",
+          href: "/pieces"
+        },
         {
           customIcon: faqiconImg,
           title: "FAQ",
           description: "Trouvez rapidement des réponses aux questions les plus fréquemment posées sur nos produits.",
           href: "/faq"
-        },
-        {
-          customIcon: blogiconImg,
-          title: "Blog",
-          description: "Conseils, actualités et informations sur le traitement de l'eau et nos solutions.",
-          href: "/blog"
-        },
-        {
-          customIcon: documenticonImg,
-          title: "Manuels & Brochures",
-          description: "Guides détaillés pour vous aider à choisir et entretenir vos systèmes de traitement d'eau.",
-          href: "/guides"
-        },
-        {
-          customIcon: videoiconImg,
-          title: "Vidéos",
-          description: "Tutoriels vidéo et démonstrations de nos produits et services.",
-          href: "/videos"
-        },
-      ],
-      promo: {
-        title: "Centre d'apprentissage",
-        image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?q=80&w=600&auto=format&fit=crop",
-        link: "/ressources"
-      }
-    },
-    {
-      name: "Support",
-      hasMegamenu: true,
-      megamenuCards: [
-        {
-          customIcon: contacticonImg,
-          title: "Contact",
-          description: "Contactez notre équipe d'experts pour toute question ou demande d'information.",
-          href: "/contact"
         },
         {
           customIcon: serviceiconImg,
@@ -315,16 +286,16 @@ const Header = () => {
           href: "/service"
         },
         {
-          customIcon: guaranteeiconImg,
-          title: "Garantie",
-          description: "Informations sur nos garanties et protection de vos investissements.",
-          href: "/garantie"
+          customIcon: blogiconImg,
+          title: "Blog",
+          description: "Conseils, actualités et informations sur le traitement de l'eau et nos solutions.",
+          href: "/blog"
         },
         {
-          customIcon: replacementfiltericonImg,
-          title: "Pièces",
-          description: "Commandez des pièces de rechange originales pour vos équipements.",
-          href: "/pieces"
+          customIcon: contacticonImg,
+          title: "Contact",
+          description: "Contactez notre équipe d'experts pour toute question ou demande d'information.",
+          href: "/contact"
         },
       ],
       promo: {
