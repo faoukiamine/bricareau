@@ -45,6 +45,7 @@ import process1 from "@/assets/2148563485.jpg";
 import process2 from "@/assets/section-image-and-content-23.jpg";
 import process3 from "@/assets/SERVICES.jpg";
 import process4 from "@/assets/unnamed (2).jpg";
+import helpKitchenImg from "@/assets/help-kitchen.jpg";
 
 const whyChoose = [
   {
@@ -359,9 +360,9 @@ const ConditionneursSansSel = () => {
             {/* Background Image with Overlay */}
             <div className="absolute inset-0 z-0">
                 <img
-                    src={heroGirl}
-                    alt="Protection écologique du foyer"
-                    className="w-full h-full object-cover"
+                    src={helpKitchenImg}
+                    alt="Protection écologique de la cuisine et du foyer"
+                    className="w-full h-full object-cover object-[right_bottom]"
                 />
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 via-blue-800/60 to-blue-500/30 backdrop-blur-[2px]" />
             </div>

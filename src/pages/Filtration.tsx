@@ -255,7 +255,7 @@ const Filtration = () => {
                         <div className="max-w-4xl mx-auto text-center mb-24 space-y-6">
                             <h2 className="heading-pro-max">
                                 <span className="italic font-light text-[#2563eb] block">De la prise de conscience</span>
-                                <span className="font-bold text-[#1e3a8a] block ">À la solution parfaite</span>
+                                <span className="font-bold text-[#1e3a8a] block ">à la solution parfaite</span>
                             </h2>
                             <p className="body-pro-max max-w-2xl mx-auto">
                                 Identifier l'invisible est la première étape. Choisissez maintenant le bouclier technologique qui redéfinira la relation de votre foyer avec l'eau.

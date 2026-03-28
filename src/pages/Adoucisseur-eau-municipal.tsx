@@ -25,7 +25,7 @@ import {
 import { NavLink } from "@/components/NavLink";
 import { useNavigate } from "react-router-dom";
 import React, { useEffect } from "react";
-import waterTestingImg from "@/assets/6802936.jpg";
+import waterTestingImg from "@/assets/pexels-vlada-karpovich-6802945.jpg";
 import { softenerImg as residentialWaterSoftenerImg } from "./Blog pages/Comment régler la dureté de votre adoucisseur ";
 import { adoucisseurImg as adoucisseurFosseImg } from "./Blog pages/Adoucisseur-deau- et-fosse-septique--Mythes-et-réalités";
 import { conditionneursImg } from "./Blog pages/Adoucisseur avec sel ou sans sel";
@@ -403,7 +403,7 @@ const AdoucisseurEauMunicipal = () => {
                         <img
                             src={waterTestingImg}
                             alt="Analyse d'eau à domicile pour détecter le calcaire et le chlore - Service Bricareau"
-                            className="w-full h-full object-cover object-right"
+                            className="w-full h-full object-cover object-[75%_15%]"
                         />
                         <div className="absolute inset-0 bg-black/20" />
                     </div>
@@ -413,7 +413,7 @@ const AdoucisseurEauMunicipal = () => {
                         <img
                             src={waterTestingImg}
                             alt="Analyse d'eau à domicile pour détecter le calcaire et le chlore"
-                            className="w-full h-full object-cover object-right"
+                            className="w-full h-full object-cover object-[75%_15%]"
                         />
                         <div className="absolute inset-0 bg-black/30 lg:bg-gradient-to-r lg:from-black/50 lg:to-transparent" />
                         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-white via-white/10 to-transparent" />

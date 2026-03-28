@@ -19,7 +19,7 @@ import { NavLink } from "@/components/NavLink";
 import { useNavigate } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import waterTestingImg from "@/assets/reasons-to-drink-more-water.jpg";
-import waterzeroodorImg from "@/assets/6802936.jpg";
+import waterzeroodorImg from "@/assets/pexels-vlada-karpovich-6802947.jpg";
 import specializedFiltersImg from "@/assets/Filtres d'eau spécialisés.webp";
 import crystalClearWaterImg from "@/assets/5846952.jpg";
 import comfortImg from "@/assets/71luIOvIQuL._AC_SL1500_.jpg";

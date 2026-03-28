@@ -1,244 +1,389 @@
-import { Phone, CheckCircle, Leaf, Users, ChevronRight, ArrowRight } from "lucide-react";
-import heroImage from "@/assets/hero-entreprises.jpg";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Phone, CheckCircle, Leaf, Users, ChevronRight, ArrowRight, CupSoda, Coffee, Snowflake, Sparkles, Building2, ShieldCheck, HeartPulse } from "lucide-react";
+import heroImage from "@/assets/hero-image.jpg";
+import { Card, CardContent } from "@/components/ui/card";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 import { Button } from "@/components/ui/button";
+import { NavLink } from "react-router-dom";
+import { cn } from "@/lib/utils";
+
+import fountainImg from "@/assets/10341859.jpg";
+import officeMeetingImg from "@/assets/Gallery_Extra_I-Tap_Images_4-1.png";
+import coffeeImg from "@/assets/vki-eccellenza-touch-keurigcollection-matrix.full.webp";
+import iceCubeImg from "@/assets/Manitowoc-NEO-120V-42-Air-Cooled-Countertop-Chewing-Ice-Nugget-Ice-Maker-and-20-lbs_-Bin-with-Lever-Dispensing-CNP0202A-161L_1100x971.webp";
+import coolerImg from "@/assets/774f43e9-1fd4-49ec-86f5-7c8e51bcbd81-removebg-preview.png";
+import lifestyleFountainImg from "@/assets/C-Tap-Under-Counter-1-1-1.webp";
+import corporateLifeImg from "@/assets/20230add-4ce5-4ae6-a6dc-1f9a2c3aeb7b.jpg";
 
 const Entreprises = () => {
-  const solutions = [
+  const products = [
     {
-      title: "Fontaines & Distributeurs d'eau à Réseau",
-      description: "Pratiques, rentables et adaptés pour tous les milieux de travail. Réduisent le gaspillage et simplifient l'utilisation en entreprise."
+      title: "Refroidisseurs Haute Performance",
+      description: "Eau froide, tempérée et chaude à volonté. Sans bouteille, reliés directement à votre réseau.",
+      icon: CupSoda,
+      image: coolerImg,
+      color: "blue"
     },
     {
-      title: "Fontaines & Distributeurs d'eau avec Bouteille",
-      description: "Obtenez de l'eau fraîche grâce à nos options de livraison flexibles pour répondre à vos besoins professionnels."
+      title: "Eau Pétillante & Saveurs",
+      description: "Ajoutez une touche de luxe à votre bureau avec nos distributeurs d'eau pétillante filtrée.",
+      icon: Sparkles,
+      image: lifestyleFountainImg,
+      color: "indigo"
     },
     {
-      title: "Stations d'hydratation d'eau réfrigérée sans contact",
-      description: "Pratiques et faciles à installer. Elles fournissent de l'eau rafraîchissante, réfrigérée quelle que soit la demande."
+      title: "Machines à Glaçons",
+      description: "Production de glace pure et abondante pour vos cafétérias et événements corporatifs.",
+      icon: Snowflake,
+      image: iceCubeImg,
+      color: "cyan"
     },
     {
-      title: "Stations d'eau potable purifiée par osmose inverse",
-      description: "Installation facile sous l'évier pour accès à une eau délicieuse et saine et plus fraîche directement de votre robinet de cuisine."
+      title: "Solutions Café Premium",
+      description: "Une eau parfaitement filtrée pour sublimer les arômes de vos cafés préférés.",
+      icon: Coffee,
+      image: coffeeImg,
+      color: "amber"
     }
   ];
 
   const benefits = [
     {
-      icon: CheckCircle,
-      title: "Solutions personnalisées",
-      description: "Nos spécialistes en eau vont évaluer la qualité de votre eau potable et les besoins de votre environnement de travail pour créer une solution personalisée et une installation adaptée à votre site, sans aucune interruption."
-    },
-    {
-      icon: Users,
-      title: "Service complet",
-      description: "L'équipe de service à la clientèle dédiée est disponible pour chaque installation. Nos équipes compétentes de service à la clientèle vous promettent une maintenance préventive proactive, les changements de filtres et tout le service et soutien."
+      icon: HeartPulse,
+      title: "Bien-être des Employés",
+      description: "Une hydratation saine augmente la concentration et la productivité de vos équipes au quotidien."
     },
     {
       icon: Leaf,
-      title: "Solutions rentables & durables",
-      description: "Beaucoup de nos clients ont minimisé leur empreinte écologique en utilisant nos systèmes de traitement d'eau rentables et durables tout en bénéficiant d'une eau propre, sûre et conforme aux normes réglementaires."
+      title: "Engagement Écologique",
+      description: "Éliminez des milliers de bouteilles plastique à usage unique chaque année pour votre entreprise."
+    },
+    {
+      icon: ShieldCheck,
+      title: "Service 5 Étoiles",
+      description: "Maintenance préventive, changements de filtres proactifs et support technique prioritaire."
     }
   ];
 
-  const sectors = [
-    "Entreprise",
-    "Écoles, collèges & Universités",
-    "Cliniques & Hôpitaux",
-    "Restaurants"
-  ];
-
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-white">
       <Header />
 
       <main>
-        {/* Hero Section */}
-        <section className="relative lg:h-[800px] flex flex-col lg:items-start overflow-hidden pt-16 lg:pt-[120px] bg-white">
-          <div className="absolute top-[50px] left-0 right-0 z-30 pointer-events-none hidden lg:block">
-            <div className="container mx-auto px-4 lg:px-6 pointer-events-auto">
-              <GlobalBreadcrumbs variant="dark" />
-            </div>
-          </div>
-          <div className="relative w-full h-[40vh] lg:absolute lg:inset-0 lg:z-0 overflow-hidden">
-            <iframe
+        {/* 1. Modern Hero Section with Video/Image Overlay */}
+        <section className="relative min-h-[85vh] flex items-center pt-24 overflow-hidden">
+          <div className="absolute inset-0 z-0">
+             <iframe
               src="https://player.vimeo.com/video/1155585825?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1"
-              className="absolute top-1/2 left-1/2 w-[100vw] h-[56.25vw] min-h-[100%] min-w-[177.77%] -translate-x-1/2 -translate-y-1/2 object-cover"
+              className="absolute top-1/2 left-1/2 w-[100vw] h-[56.25vw] min-h-[100%] min-w-[177.77%] -translate-x-1/2 -translate-y-1/2 object-cover opacity-80"
               frameBorder="0"
               allow="autoplay; fullscreen"
               allowFullScreen
             ></iframe>
-            <div className="absolute inset-0 bg-black/20 lg:bg-black/30 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
+            <div className="absolute inset-0 bg-blue-900/40 mix-blend-multiply" />
+            <div className="absolute inset-0 bg-gradient-to-t from-white via-white/20 to-transparent" />
           </div>
 
-          <div className="container relative z-10 mx-auto px-4 h-full flex items-center lg:px-6">
-            <div className="max-w-2xl lg:text-white py-12 lg:py-0">
-              <span className="text-blue-600 font-bold uppercase tracking-widest text-[10px] mb-4 block">
-                SOLUTIONS BUSINESS
-              </span>
-              <h1
-                className="leading-[1.1] md:leading-[1.2] mb-8 tracking-tighter text-slate-900 lg:text-white text-center max-w-xl mx-auto lg:mx-0"
-              >
-                <span>Une eau pure au quotidien</span>
-              </h1>
-              <p className="font-light md:text-[20px] text-slate-600 lg:text-white/95 mb-8 max-w-xl mx-auto lg:mx-0 text-center lg:text-justify">
-                Vos collaborateurs apprécieront la nouvelle façon d'avoir de l'eau fraîche dans votre entreprise !
-              </p>
-               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <Button asChild>
-                  <a href="#solutions" className="flex items-center gap-2">
-                    Explorez nos solutions <ArrowRight className="h-4 w-4" />
-                  </a>
-                </Button>
-                <Button variant="outline" asChild>
-                  <a href="tel:18552649328" className="flex items-center gap-2">
-                    <Phone className="h-5 w-5" />
-                    1-855-264-9328
-                  </a>
-                </Button>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Solutions Section */}
-        <section id="solutions" className="py-12 md:py-16">
-          <div className="container mx-auto px-4">
-            <h2 className="text-slate-900 mb-16 text-center">
-              Nos solutions de traitement d'eau
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-              {solutions.map((solution, index) => (
-                <div key={index} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer group flex flex-col h-full border border-gray-100 p-8">
-                  <h3 className="mb-4 group-hover:text-blue-600 transition-colors tracking-tight">{solution.title}</h3>
-                  <p className="text-slate-500 text-sm mb-6 flex-grow">{solution.description}</p>
-                  <div className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-sm mt-auto">
-                    Lire <ChevronRight className="h-4 w-4" />
+          <div className="container mx-auto px-6 relative z-10">
+              <div className="max-w-3xl space-y-8">
+                  <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-600/10 border border-blue-600/20 text-blue-700 text-[10px] font-black uppercase tracking-widest">
+                      <Building2 className="h-4 w-4" />
+                      Solutions Hydratation Business
                   </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Why Choose Us */}
-        <section className="py-12 md:py-16 bg-secondary/30">
-          <div className="container mx-auto px-4">
-            <h2 className="text-slate-900 mb-8 text-center max-w-4xl mx-auto">
-              Pourquoi plus de 10 000 entreprises choisissent Bricareau?
-            </h2>
-            <p className="text-center text-muted-foreground mb-12 max-w-3xl mx-auto">
-              Bricareau offre des solutions sur mesure pour fournir une eau plus fraîche et plus savoureuse dans votre espace de travail.
-              Que ce soit dans la cuisine ou à la salle de réunion, nos systèmes peuvent être installés là où vos employés nécessitent une eau de haute qualité.
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="bg-background p-6 rounded-lg">
-                  <benefit.icon className="h-12 w-12 text-primary mb-4" />
-                  <h3 className="text-foreground mb-3">
-                    {benefit.title}
-                  </h3>
-                  <p className="text-muted-foreground">
-                    {benefit.description}
+                  <h1 className="leading-[1.1] tracking-tighter text-slate-900">
+                      <span className="block font-light italic text-blue-600">L'excellence de l'eau</span>
+                      <span className="block font-bold">pour vos collaborateurs.</span>
+                  </h1>
+                  <p className="body-pro-max text-left max-w-xl">
+                      Transformez votre espace de travail avec nos systèmes d'hydratation haut de gamme. Pureté, design et durabilité pour une culture d'entreprise saine.
                   </p>
+                  <div className="flex flex-wrap gap-4 pt-4">
+                      <Button size="lg" className="rounded-full px-10 h-16 text-lg shadow-xl shadow-blue-600/20" asChild>
+                          <a href="#solutions">Découvrir nos solutions</a>
+                      </Button>
+                      <Button variant="outline" size="lg" className="rounded-full px-10 h-16 text-lg border-slate-200 bg-white/50 backdrop-blur-sm hover:bg-white" asChild>
+                          <a href="tel:18552649328" className="flex items-center gap-2">
+                              <Phone className="h-5 w-5" /> 1-855-264-9328
+                          </a>
+                      </Button>
+                  </div>
+              </div>
+          </div>
+        </section>
+
+        {/* 2. Key Pillars of Productivity */}
+        <section className="py-24 bg-white">
+            <div className="container mx-auto px-6">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-16 max-w-6xl mx-auto">
+                    {benefits.map((benefit, i) => (
+                        <div key={i} className="text-center space-y-6 group">
+                            <div className="w-20 h-20 bg-slate-50 rounded-3xl flex items-center justify-center mx-auto group-hover:bg-blue-600 transition-colors duration-500 shadow-sm border border-slate-100">
+                                <benefit.icon className="h-10 w-10 text-blue-600 group-hover:text-white transition-colors duration-500" />
+                            </div>
+                            <h3 className="text-2xl font-bold text-slate-900">{benefit.title}</h3>
+                            <p className="text-slate-500 font-light leading-relaxed">
+                                {benefit.description}
+                            </p>
+                        </div>
+                    ))}
                 </div>
-              ))}
             </div>
-          </div>
         </section>
 
-        {/* Environmental Impact */}
-        <section className="py-12 md:py-16">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center space-y-6">
-              <h2 className="text-slate-900 mb-8">
-                Pas de plastique, pas de déchets.
-              </h2>
-              <h3 className="text-primary">
-                Contribuez à la protection de notre écosystème
-              </h3>
-              <p className="text-base md:text-lg text-muted-foreground">
-                Équipez votre entreprise d'un refroidisseur d'eau spécialement conçu pour les espaces exigeants et
-                diminuez l'empreinte carbone de votre entreprise grâce à nos fontaines d'eau purifiée sans bouteilles.
-              </p>
+        {/* 3. Product Gallery (Bento Style) */}
+        <section id="solutions" className="py-24 bg-slate-50 overflow-hidden">
+            <div className="container mx-auto px-6">
+                <div className="text-center max-w-3xl mx-auto mb-20 space-y-4">
+                    <h2 className="heading-pro-max">
+                        <span className="italic font-light text-blue-600 block">Variété & Qualité</span>
+                        <span className="font-bold text-slate-900">Le Choix des Professionnels.</span>
+                    </h2>
+                    <p className="body-pro-max">
+                        Des solutions adaptées à chaque recoin de votre entreprise : de l'accueil vip à la salle de repos des employés.
+                    </p>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    {products.map((p, i) => (
+                        <div key={i} className="bg-white rounded-[2.5rem] shadow-sm hover:shadow-2xl transition-all duration-500 flex flex-col border border-slate-200/50 group overflow-hidden">
+                            <div className="h-64 bg-white relative p-6">
+                                <img src={p.image} alt={p.title} className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-700" />
+                                <div className="absolute top-4 left-4 w-12 h-12 rounded-xl bg-white/90 backdrop-blur-sm flex items-center justify-center shadow-sm">
+                                    <p.icon className={cn("h-6 w-6 text-blue-600")} />
+                                </div>
+                            </div>
+                            <div className="p-8 flex flex-col flex-grow">
+                                <h4 className="text-xl font-bold text-slate-900 mb-4">{p.title}</h4>
+                                <p className="text-slate-500 font-light text-sm leading-relaxed mb-6 flex-grow">
+                                    {p.description}
+                                </p>
+                                <NavLink to="/contact" className="text-blue-600 font-bold flex items-center gap-2 group/link text-sm uppercase tracking-wider">
+                                    En savoir plus <ChevronRight className="h-4 w-4 transform group-hover/link:translate-x-1 transition-transform" />
+                                </NavLink>
+                            </div>
+                        </div>
+                    ))}
+                </div>
             </div>
-          </div>
         </section>
 
-        {/* Testimonials */}
+        {/* 4. Immersive Context Section - Full Width */}
+        <section className="bg-white border-y border-slate-100 overflow-hidden">
+            <div className="flex flex-col lg:flex-row items-stretch min-h-[500px] lg:min-h-[700px]">
+                {/* Left Side: Image */}
+                <div className="w-full lg:w-1/2 relative group overflow-hidden h-[400px] md:h-[550px] lg:h-auto border-r border-slate-100">
+                    <img
+                        src={corporateLifeImg}
+                        alt="Expérience d'hydratation urbaine Bricareau"
+                        className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
+                    />
+                    {/* Floating Badge */}
+                    <div className="absolute bottom-10 left-10 right-10 md:right-auto md:w-80 bg-blue-600/95 backdrop-blur-xl p-8 rounded-[2rem] shadow-2xl border border-white/20 z-20">
+                         <div className="text-4xl font-bold mb-2 text-white italic tracking-tighter">10k+</div>
+                         <div className="text-sm font-medium text-white/90 uppercase tracking-widest leading-tight">Entreprises satisfaites au Québec</div>
+                    </div>
+                </div>
+
+                {/* Right Side: Content */}
+                <div className="w-full lg:w-1/2 flex items-center justify-center lg:justify-start">
+                    <div className="w-full max-w-[750px] px-8 sm:px-16 lg:px-20 xl:px-24 py-24 lg:py-32 space-y-12">
+                        <div className="space-y-6">
+                            <h2 className="heading-pro-max text-left">
+                                <span className="italic font-light text-blue-600 block">Plus qu'une machine</span>
+                                <span className="font-bold text-slate-900 leading-tight">Une Expérience d'Accueil.</span>
+                            </h2>
+                            <p className="body-pro-max text-left font-light leading-relaxed">
+                                Chaque détail compte pour l'image de votre marque. Nos fontaines au design moderne et épuré s'intègrent parfaitement dans vos salles d'attente, halls d'entrée et bureaux de direction.
+                            </p>
+                        </div>
+
+                        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-8 gap-x-12">
+                            {[
+                                "Installation soignée et discrète",
+                                "Maintenance préventive quadrimestrielle",
+                                "Technologie sans contact (options capteurs)",
+                                "Glace & café en complément"
+                            ].map((item, i) => (
+                                <li key={i} className="flex items-start gap-4 text-slate-700 font-medium italic group/item">
+                                    <div className="mt-1 w-6 h-6 rounded-full bg-blue-50 flex items-center justify-center group-hover/item:bg-blue-600 transition-colors duration-300 flex-shrink-0">
+                                        <CheckCircle className="h-4 w-4 text-blue-600 group-hover/item:text-white transition-colors duration-300" />
+                                    </div>
+                                    <span className="flex-1 leading-snug">{item}</span>
+                                </li>
+                            ))}
+                        </ul>
+
+                        <div className="pt-8 text-left">
+                             <Button size="lg" className="rounded-full px-12 h-16 text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300" asChild>
+                                <a href="/contact">Évaluer vos besoins</a>
+                             </Button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {/* 5. Ecological Impact Banner */}
+        <section className="py-20 bg-slate-950 text-white overflow-hidden relative">
+            <div className="absolute top-0 right-0 w-1/3 h-full bg-blue-600/10 blur-[120px] rounded-full translate-x-1/2" />
+            <div className="container mx-auto px-6 relative z-10 text-center space-y-8">
+                <Leaf className="h-16 w-16 text-green-400 mx-auto animate-pulse" />
+                <h2 className="text-4xl lg:text-5xl font-bold tracking-tight">Zéro Plastique. Impact Maximal.</h2>
+                <p className="text-slate-400 text-xl font-light max-w-2xl mx-auto leading-relaxed">
+                    Un seul refroidisseur Bricareau élimine en moyenne 2 500 bouteilles de plastique par an. Rejoignez le mouvement vers un bureau sans déchets.
+                </p>
+                <div className="pt-4">
+                    <Button variant="outline" className="rounded-full px-10 h-14 border-white/20 text-white hover:bg-white hover:text-slate-950 transition-colors" asChild>
+                        <a href="/guides">Calculer votre impact</a>
+                    </Button>
+                </div>
+            </div>
+        </section>
+
+        {/* 6. Eau Pétillante & Saveurs Section - Full Width */}
+        <section id="petillante" className="bg-white border-y border-slate-100 overflow-hidden">
+            <div className="flex flex-col-reverse lg:flex-row items-stretch min-h-[500px] lg:min-h-[700px]">
+                {/* Left Side: Content */}
+                <div className="w-full lg:w-1/2 flex items-center justify-center lg:justify-end bg-slate-50/50">
+                    <div className="w-full max-w-[750px] px-8 sm:px-16 lg:px-20 xl:px-24 py-24 lg:py-32 space-y-12">
+                        <div className="space-y-6">
+                            <h2 className="heading-pro-max text-left">
+                                <span className="italic font-light text-blue-600 block">L'Effervescence Chic</span>
+                                <span className="font-bold text-slate-900 leading-tight">Le luxe au quotidien.</span>
+                            </h2>
+                            <p className="body-pro-max text-left font-light leading-relaxed">
+                                Remplacez les boissons sucrées par une eau pétillante fraîche, micro-filtrée et ajustable selon les goûts. Une solution élégante pour vos salles de conférences et bureaux de direction.
+                            </p>
+                        </div>
+
+                        <ul className="space-y-6 text-left">
+                            {[
+                                "Système sous-comptoir ultra discret et épuré",
+                                "Eau plate, fraîche et pétillante en un seul geste",
+                                "Option d'ajout de saveurs naturelles",
+                                "Design minimaliste s'intégrant parfaitement au décor"
+                            ].map((item, i) => (
+                                <li key={i} className="flex items-center gap-4 text-slate-800 font-medium italic group/item">
+                                    <Sparkles className="h-5 w-5 text-indigo-400 group-hover/item:scale-125 transition-transform duration-300" />
+                                    <span className="leading-snug">{item}</span>
+                                </li>
+                            ))}
+                        </ul>
+                         <div className="pt-8 text-left">
+                            <Button size="lg" variant="outline" className="rounded-full px-12 h-16 text-lg border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white transition-all duration-300 shadow-lg shadow-blue-600/5" asChild>
+                                <a href="/contact">Personnaliser votre fontaine</a>
+                            </Button>
+                        </div>
+                    </div>
+                </div>
+
+                 {/* Right Side: Image */}
+                <div className="w-full lg:w-1/2 relative group overflow-hidden h-[400px] md:h-[550px] lg:h-auto border-l border-slate-100">
+                    <img
+                        src={officeMeetingImg}
+                        alt="Collaboration au bureau"
+                        className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
+                    />
+                    {/* Floating Badge */}
+                    <div className="absolute top-10 left-10 right-10 md:right-auto md:w-80 bg-white/95 backdrop-blur-xl p-8 rounded-[2rem] shadow-2xl border border-white/20 z-20">
+                         <Sparkles className="h-10 w-10 text-indigo-500 mb-4" />
+                         <div className="text-sm font-bold text-slate-900 leading-tight">Customisation totale du niveau de bulles.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {/* 7. Machines à Glaçons Section - Full Width */}
+        <section id="glacons" className="bg-slate-50 border-y border-slate-200 overflow-hidden">
+            <div className="flex flex-col lg:flex-row items-stretch min-h-[500px] lg:min-h-[700px]">
+                {/* Left Side: Image */}
+                <div className="w-full lg:w-1/2 relative group overflow-hidden h-[400px] md:h-[550px] lg:h-auto border-r border-slate-200 bg-white shadow-inner">
+                    <img
+                        src={iceCubeImg}
+                        alt="Machine à glaçons Manitowoc"
+                        className="absolute inset-0 w-full h-full object-contain p-20 group-hover:scale-105 transition-transform duration-1000"
+                    />
+                    {/* Floating Badge */}
+                    <div className="absolute bottom-10 left-10 right-10 md:right-auto md:w-80 bg-blue-600/95 backdrop-blur-xl p-8 rounded-[2rem] shadow-2xl border border-white/20 z-20">
+                         <Snowflake className="h-8 w-8 text-blue-200 mb-4" />
+                         <div className="text-sm font-bold text-white uppercase tracking-wider">Production 24/7</div>
+                    </div>
+                </div>
+
+                {/* Right Side: Content */}
+                <div className="w-full lg:w-1/2 flex items-center justify-center lg:justify-start">
+                    <div className="w-full max-w-[750px] px-8 sm:px-16 lg:px-20 xl:px-24 py-24 lg:py-32 space-y-12">
+                        <div className="space-y-6">
+                            <h2 className="heading-pro-max text-left">
+                                <span className="italic font-light text-blue-600 block">La Glace Pure Pro</span>
+                                <span className="font-bold text-slate-900 leading-tight">À la demande au bureau.</span>
+                            </h2>
+                            <p className="body-pro-max text-left font-light leading-relaxed">
+                                Offrez à vos équipes une glace croustillante, cristalline et sans odeur. Idéale pour les réceptions d'affaires, les cafétérias ou simplement pour rafraîchir une journée de travail dynamique.
+                            </p>
+                        </div>
+
+                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 pt-4 text-left">
+                             <div className="p-8 bg-white rounded-3xl border border-slate-200 shadow-sm group/card hover:border-blue-300 transition-all duration-300">
+                                 <h4 className="font-bold text-slate-900 mb-3 underline decoration-blue-600 decoration-2 underline-offset-4">Technologie Nugget</h4>
+                                 <p className="text-sm text-slate-500 italic leading-relaxed">Une glace plus tendre, facile à croquer et qui préserve parfaitement les arômes de vos boissons préférées.</p>
+                             </div>
+                             <div className="p-8 bg-white rounded-3xl border border-slate-200 shadow-sm group/card hover:border-blue-300 transition-all duration-300 text-left">
+                                 <h4 className="font-bold text-slate-900 mb-3 underline decoration-blue-600 decoration-2 underline-offset-4">Hygiène Totale</h4>
+                                 <p className="text-sm text-slate-500 italic leading-relaxed">Circuit d'eaux micro-filtrées garantissant une glace d'une pureté absolue, 100% sécuritaire pour vos employés.</p>
+                             </div>
+                        </div>
+
+                        <div className="pt-8 text-left">
+                            <Button size="lg" className="rounded-full px-12 h-16 text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 shadow-blue-600/20" asChild>
+                                <a href="/contact" className="flex items-center gap-2">Découvrir les modèles <ArrowRight className="h-4 w-4" /></a>
+                            </Button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {/* 6. Testimonials */}
         <TestimonialsSection />
 
-        {/* Sectors */}
-        <section className="py-12 md:py-16 bg-secondary/30">
-          <div className="container mx-auto px-4">
-            <h2 className="text-slate-900 mb-8 text-center">
-              Nos secteurs d'activités
-            </h2>
-            <p className="text-center text-muted-foreground mb-12 max-w-3xl mx-auto">
-              Nous nous engageons à fournir des solutions innovantes en matière de traitement des eaux qui répondent aux besoins
-              uniques de divers marchés. Notre expertise et nos technologies de pointe nous permettent de servir un large éventail
-              de secteurs d'activités, garantissant une gestion efficace et durable des eaux.
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-              {sectors.map((sector, index) => (
-                <div
-                  key={index}
-                  className="bg-background p-6 rounded-lg text-center hover:shadow-md transition-shadow"
-                >
-                  <p className="font-medium text-foreground">{sector}</p>
+        {/* 7. REDEFINED CTA SECTION */}
+        <section className="relative h-[650px] flex items-center overflow-hidden">
+            <div className="absolute inset-0 z-0">
+                <img
+                    src={fountainImg}
+                    alt="Hydratation premium au bureau"
+                    className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-blue-900/80 to-blue-600/40" />
+            </div>
+            <div className="container mx-auto px-6 relative z-10 text-center">
+                <div className="max-w-4xl mx-auto">
+                    <h2 className="heading-pro-max !text-white text-center mb-8">
+                        <span className="italic font-light text-blue-300 block tracking-tight">Modernisez votre bureau</span>
+                        <span className="font-bold block tracking-tight">Réinventez la pause eau.</span>
+                    </h2>
+                    <p className="body-pro-max !text-white text-center mb-12 max-w-2xl mx-auto opacity-90 leading-relaxed">
+                        Nos consultants sont spécialisés dans l'aménagement d'espaces d'hydratation haute performance. Profitez d'un essai gratuit de 7 jours pour votre équipe.
+                    </p>
+                    <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                        <Button size="lg" className="bg-white text-blue-900 hover:bg-blue-50 px-10 h-16 text-xl rounded-full shadow-xl" asChild>
+                            <a href="/contact">Demander un essai gratuit</a>
+                        </Button>
+                                                                    
+                        <Button
+                            variant="outline"
+                            size="lg"
+                            asChild
+                            className="bg-transparent border-white/30 text-white hover:bg-white hover:text-blue-900 px-10 h-16 text-xl rounded-full backdrop-blur-md"
+                        >
+                            <a href="tel:18552649328">Parler à un conseiller</a>
+                        </Button>
+                    </div>
                 </div>
-              ))}
             </div>
-          </div>
-        </section>
-
-        {/* Residential Promotion */}
-        <section className="py-12 md:py-16">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center space-y-6">
-              <h2 className="text-slate-900 mb-8">
-                Traitement d'eau résidentiel
-              </h2>
-              <h3 className="text-primary">
-                l'eau de votre maison
-              </h3>
-              <p className="text-base md:text-lg text-muted-foreground">
-                Bricareau vous garantit la meilleure d'eau pour toute la maison. Nous vous proposons des solutions innovantes
-                en fonction de vos besoins: Adoucisseurs d'eau, Filtre d'eau ou stations d'eau potable par exemple.
-              </p>
-              <a
-                href="/"
-                className="inline-flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground font-medium rounded-md hover:bg-primary/90 transition-colors"
-              >
-                Voir nos solutions d'eau
-              </a>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-12 md:py-16 bg-primary/5">
-          <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto text-center space-y-6">
-              <h2 className="text-slate-900 mb-8">
-                Planifiez votre consultation sur l'eau
-              </h2>
-              <p className="text-base md:text-lg text-muted-foreground">
-                Nos spécialistes en eau sont prêts à vous assister dans la recherche de la solution adéquate à votre problème d'eau.
-                Nous vous offrons un test d'eau ainsi qu'une consultation à votre domicile.
-              </p>
-              <a
-                href="/contact"
-                className="inline-flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground font-medium rounded-md hover:bg-primary/90 transition-colors"
-              >
-                Contactez-nous
-              </a>
-            </div>
-          </div>
         </section>
       </main>
 

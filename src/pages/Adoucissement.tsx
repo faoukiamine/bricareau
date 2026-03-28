@@ -9,7 +9,7 @@ import heroBath from "@/assets/young-nude-woman-taking-relaxing-foamy-bath.jpeg"
 import kitchenImg from "@/assets/18036672_SIE_2720_1530_21_04_30_SIE_CRM_Dishwasher_Hand_Taking_Out_Wine_Glass_Basket_Motiv_11_0017.webp";
 import untitledImg from "@/assets/2151469364.jpg";
 import mobileSoftenerImg from "@/assets/9-optimized.webp";
-import bathroomImg from "@/assets/contemporary-bathroom-elements.jpg";
+import bathroomImg from "@/assets/342800.jpg";
 import financeModeImg from "@/assets/finance_mode.svg";
 import plumbingImg from "@/assets/plumbing.svg";
 import moneyBagImg from "@/assets/money_bag.svg";
@@ -256,6 +256,122 @@ const Adoucissement = () => {
                         </div>
                     </div>
                 </section>
+                
+                {/* 2.5. The Bridge Section: Architectural Triptych */}
+                <section className="py-32 bg-[#f8f9fa] relative overflow-hidden">
+                    <div className="container mx-auto px-6 relative z-10">
+                        <div className="max-w-4xl mx-auto text-center mb-24 space-y-6">
+                            <h2 className="heading-pro-max">
+                                <span className="italic font-light text-[#2563eb] block">De la prise de conscience</span>
+                                <span className="font-bold text-[#1e3a8a] block ">À la solution parfaite</span>
+                            </h2>
+                            <p className="body-pro-max max-w-2xl mx-auto">
+                                Une fois les dommages du calcaire identifiés, l'étape suivante consiste à choisir le bouclier technologique adapté à votre style de vie et à vos valeurs environnementales.
+                            </p>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            
+                            {/* Card 001: Traditional Softeners - Navy Style */}
+                            <a href="/adoucisseur-eau-residentiel" className="group block relative bg-[#1e3a8a] rounded-[2.5rem] p-10 h-[720px] flex flex-col transition-all duration-700 hover:-translate-y-4 shadow-2xl overflow-hidden">
+                                <div className="space-y-0 relative z-10 flex flex-col h-full">
+                                    
+                                    <div className="h-20"></div>
+
+                                    {/* Unfiltered Architectural Image Overlay */}
+                                    <div className="w-full h-48 overflow-hidden rounded-3xl shadow-lg relative">
+                                        <img 
+                                            src={residentialWaterSoftenerImg} 
+                                            alt="Adoucisseur d'eau résidentiel Sentinel" 
+                                            className="w-full h-full object-cover transition-transform duration-[3000ms] group-hover:scale-110"
+                                        />
+                                    </div>
+
+                                    <div className="space-y-6 pt-8">
+                                        <h3 className="text-3xl font-bold text-white leading-[1.1] group-hover:text-blue-200 transition-colors">
+                                            Adoucisseurs au sel haute performance
+                                        </h3>
+                                        <p className="text-white/70 text-sm leading-relaxed max-w-[260px]">
+                                            L'étalon-or de l'industrie pour éliminer totalement les ions de calcium et de magnésium de votre eau.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div className="absolute bottom-0 right-0 w-24 h-24 bg-[#f8f9fa] rounded-tl-[3rem] transition-all group-hover:w-28 group-hover:h-28">
+                                    <div className="absolute inset-0 m-4 bg-[#2563eb] rounded-full flex items-center justify-center text-white shadow-xl transition-transform group-hover:scale-110">
+                                        <ChevronRight className="w-8 h-8" />
+                                    </div>
+                                </div>
+                            </a>
+
+                            {/* Card 002: Eco-Friendly TAC - Royal Blue Style */}
+                            <a href="/conditionneurs-sans-sel" className="group block relative bg-[#2563eb] rounded-[2.5rem] p-10 h-[720px] flex flex-col transition-all duration-700 hover:-translate-y-4 shadow-2xl overflow-hidden">
+                                <div className="space-y-0 relative z-10 flex flex-col h-full">
+                                    
+                                    <div className="h-20"></div>
+
+                                    <div className="space-y-6">
+                                        <h3 className="text-3xl font-bold text-white leading-[1.1]">
+                                            Série Écologique <br/> sans sel (TAC)
+                                        </h3>
+                                        <p className="text-white/80 text-sm leading-relaxed max-w-[260px]">
+                                            Une technologie novatrice qui neutralise le calcaire sans sel, sans électricité et sans gaspillage d'eau.
+                                        </p>
+                                    </div>
+
+                                    {/* Unfiltered Architectural Image Overlay */}
+                                    <div className="w-full h-48 overflow-hidden rounded-3xl shadow-lg mt-8 relative">
+                                        <img 
+                                            src={untitledImg} 
+                                            alt="Conditionneur d'eau sans sel écologique" 
+                                            className="w-full h-full object-cover transition-transform duration-[3000ms] group-hover:scale-110"
+                                        />
+                                    </div>
+                                </div>
+                                
+                                <div className="absolute bottom-0 right-0 w-24 h-24 bg-[#f8f9fa] rounded-tl-[3rem] transition-all group-hover:w-28 group-hover:h-28">
+                                    <div className="absolute inset-0 m-4 bg-[#1e3a8a] rounded-full flex items-center justify-center text-white shadow-xl transition-transform group-hover:scale-110">
+                                        <ChevronRight className="w-8 h-8" />
+                                    </div>
+                                </div>
+                            </a>
+
+                            {/* Card 003: Portable Series - Navy Patterned */}
+                            <a href="/adoucisseurs-portables" className="group block relative bg-[#1e3a8a] rounded-[2.5rem] p-10 h-[720px] flex flex-col transition-all duration-700 hover:-translate-y-4 shadow-2xl overflow-hidden">
+                                <div className="absolute inset-0 opacity-10 mix-blend-overlay">
+                                    <img src={starsImg} className="w-full h-full object-cover" alt="" />
+                                </div>
+                                
+                                <div className="space-y-0 relative z-10 flex flex-col h-full">
+                                    <div className="h-20"></div>
+
+                                    <div className="w-full h-48 overflow-hidden rounded-3xl shadow-lg relative">
+                                        <img 
+                                            src={mobileSoftenerImg} 
+                                            alt="Adoucisseur d'eau portable Série Nomade" 
+                                            className="w-full h-full object-cover transition-transform duration-[3000ms] group-hover:scale-110"
+                                        />
+                                    </div>
+
+                                    <div className="space-y-6 pt-8">
+                                        <h3 className="text-3xl font-bold text-white leading-[1.1] group-hover:text-blue-200 transition-colors">
+                                            Série Nomade <br/> portables & compacts
+                                        </h3>
+                                        <p className="text-white/70 text-sm leading-relaxed max-w-[260px]">
+                                            La puissance de l'adoucissement Bricareau dans un format compact pour le VR, le bateau ou le condo.
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                                <div className="absolute bottom-0 right-0 w-24 h-24 bg-[#f8f9fa] rounded-tl-[3rem] transition-all group-hover:w-28 group-hover:h-28">
+                                    <div className="absolute inset-0 m-4 bg-[#2563eb] rounded-full flex items-center justify-center text-white shadow-xl transition-transform group-hover:scale-110">
+                                        <ChevronRight className="w-8 h-8" />
+                                    </div>
+                                </div>
+                            </a>
+
+                        </div>
+                    </div>
+                </section>
 
                 {/* 3. Benefits Section - Redesigned for Premium Look */}
                 <section className="py-24 bg-white relative overflow-hidden">
@@ -343,13 +459,7 @@ const Adoucissement = () => {
                                     />
                                     <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors duration-500" />
 
-                                    {/* Water Softeners CTA Button */}
-                                    <Button
-                                        onClick={() => navigate('/adoucisseur-eau-residentiel')}
-                                        className="absolute bottom-10 left-10"
-                                    >
-                                        Découvrir nos adoucisseurs d'eau <ChevronRight className="h-5 w-5" />
-                                    </Button>
+
                                 </div>
                             </div>
 
@@ -392,6 +502,15 @@ const Adoucissement = () => {
                                             </div>
                                         ))}
                                     </div>
+                                    <div className="pt-6">
+                                        <Button
+                                            onClick={() => navigate('/adoucisseur-eau-residentiel')}
+                                            size="lg"
+                                            className="w-full sm:w-auto"
+                                        >
+                                            Découvrir nos adoucisseurs d'eau <ChevronRight className="h-5 w-5 ml-2" />
+                                        </Button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -422,13 +541,7 @@ const Adoucissement = () => {
                                     />
                                     <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors duration-500" />
 
-                                    {/* Conditionneurs sans sel CTA Button */}
-                                    <Button
-                                        onClick={() => navigate('/adoucisseurs-portables')}
-                                        className="absolute bottom-10 left-10"
-                                    >
-                                        Découvrir nos adoucisseurs portables <ChevronRight className="h-5 w-5" />
-                                    </Button>
+
                                 </div>
                             </div>
 
@@ -468,6 +581,15 @@ const Adoucissement = () => {
                                             </div>
                                         ))}
                                     </div>
+                                    <div className="pt-6">
+                                        <Button
+                                            onClick={() => navigate('/adoucisseurs-portables')}
+                                            size="lg"
+                                            className="w-full sm:w-auto"
+                                        >
+                                            Découvrir nos adoucisseurs portables <ChevronRight className="h-5 w-5 ml-2" />
+                                        </Button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -498,13 +620,7 @@ const Adoucissement = () => {
                                     />
                                     <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors duration-500" />
 
-                                    {/* Conditionneurs sans sel CTA Button */}
-                                    <Button
-                                        onClick={() => navigate('/conditionneurs-sans-sel')}
-                                        className="absolute bottom-10 left-10"
-                                    >
-                                        Découvrir nos conditionneurs d'eau sans sel <ChevronRight className="h-5 w-5" />
-                                    </Button>
+
 
                                 </div>
                             </div>
@@ -544,6 +660,15 @@ const Adoucissement = () => {
                                                 </div>
                                             </div>
                                         ))}
+                                    </div>
+                                    <div className="pt-6">
+                                        <Button
+                                            onClick={() => navigate('/conditionneurs-sans-sel')}
+                                            size="lg"
+                                            className="w-full sm:w-auto"
+                                        >
+                                            Découvrir nos conditionneurs d'eau sans sel <ChevronRight className="h-5 w-5 ml-2" />
+                                        </Button>
                                     </div>
                                 </div>
                             </div>

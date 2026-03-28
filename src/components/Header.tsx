@@ -28,6 +28,25 @@ import contacticonImg from "@/assets/telephone_3095610.png";
 import guaranteeiconImg from "@/assets/guarantee-certificate_3734879.png";
 import serviceiconImg from "@/assets/services_5062832.png";
 
+interface MegamenuCard {
+  customIcon?: string;
+  title: string;
+  description: string;
+  href: string;
+}
+
+interface MenuItem {
+  name: string;
+  href?: string;
+  hasMegamenu: boolean;
+  megamenuCards?: MegamenuCard[];
+  promo?: {
+    title: string;
+    image: string;
+    link: string;
+  };
+}
+
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -108,7 +127,7 @@ const Header = () => {
     { name: "Commercial", href: "/commercial-industriel" },
   ];
 
-  const productMenuItems = [
+  const productMenuItems: MenuItem[] = [
     {
       name: "Adoucissement d'eau",
       href: "/adoucissement",
@@ -316,6 +335,218 @@ const Header = () => {
     },
   ];
 
+  const commercialProductMenuItems: MenuItem[] = [
+    {
+      name: "Systèmes Industriels",
+      hasMegamenu: true,
+      megamenuCards: [
+        {
+          customIcon: WatersoftenericonImg,
+          title: "Adoucisseurs Twin CI",
+          description: "Systèmes duplex haute performance pour une eau douce continue 24/7 sans perte de pression.",
+          href: "/commercial-industriel#expertise"
+        },
+        {
+          customIcon: pointofusefiltericonImg,
+          title: "Osmose Inverse Industrielle",
+          description: "Filtration moléculaire haute capacité pour laboratoires et processus de fabrication critiques.",
+          href: "/commercial-industriel#expertise"
+        },
+        {
+          customIcon: wholehousefiltericonImg,
+          title: "Filtration Média Spécialisée",
+          description: "Solutions sur mesure pour sédiments, fer, soufre et déionisation des eaux de procédé.",
+          href: "/commercial-industriel#expertise"
+        },
+        {
+          customIcon: ultravioletImg,
+          title: "Stérilisation UV Pro",
+          description: "Désinfection microbiologique par rayons UV pour garantir une eau exempte de bactéries.",
+          href: "/commercial-industriel#expertise"
+        },
+      ],
+      promo: {
+        title: "Optimisation des coûts de maintenance industrielle.",
+        image: promoImage4,
+        link: "/contact"
+      }
+    },
+    {
+      name: "Expertise & Support",
+      hasMegamenu: true,
+      megamenuCards: [
+        {
+          customIcon: watertestImg,
+          title: "Analyses de Laboratoire",
+          description: "Diagnostics certifiés et audits de qualité d'eau pour tous les secteurs industriels.",
+          href: "/tests-eau"
+        },
+        {
+          customIcon: serviceiconImg,
+          title: "Ingénierie de Déploiement",
+          description: "Accompagnement complet de la conception à l'installation de vos systèmes complexes.",
+          href: "/contact"
+        },
+        {
+          customIcon: documenticonImg,
+          title: "Cahier Technique & Devis",
+          description: "Demandez une étude personnalisée et des spécifications techniques pour votre projet.",
+          href: "/contact"
+        },
+        {
+          customIcon: blogiconImg,
+          title: "Études de Cas Pro",
+          description: "Découvrez nos réalisations et l'impact de nos solutions sur la performance industrielle.",
+          href: "/blog"
+        },
+      ],
+      promo: {
+        title: "Support Technique Prioritaire 24/7 pour les Entreprises.",
+        image: promoImage,
+        link: "/service"
+      }
+    },
+    {
+       name: "Secteurs",
+       href: "/commercial-industriel#secteurs",
+       hasMegamenu: false
+    },
+    {
+      name: "Ressources B2B",
+      hasMegamenu: true,
+      megamenuCards: [
+        {
+          customIcon: faqiconImg,
+          title: "FAQ Industrielle",
+          description: "Questions techniques sur les débits, la conformité et les exigences d'installation.",
+          href: "/faq"
+        },
+        {
+          customIcon: contacticonImg,
+          title: "Expert Conseil",
+          description: "Parlez directement à un ingénieur spécialisé dans le traitement d'eau.",
+          href: "/contact"
+        },
+      ],
+      promo: {
+        title: "Consultez le centre de documentation technique.",
+        image: "https://images.unsplash.com/photo-1454165833767-027ffea9e77b?q=80&w=600&auto=format&fit=crop",
+        link: "/guides"
+      }
+    },
+  ];
+
+  const isCommercialPage = location.pathname.includes('/commercial-industriel');
+  const isEntreprisePage = location.pathname.includes('/entreprises');
+
+  const entreprisesProductMenuItems: MenuItem[] = [
+    {
+      name: "Refroidisseurs d’eau",
+      href: "/fontaines",
+      hasMegamenu: true,
+      megamenuCards: [
+        {
+          customIcon: waterdispensericonImg,
+          title: "Fontaines Sans Bouteille",
+          description: "Reliées au réseau, filtration intégrée pour une eau fraîche continue au bureau sans logistique de bouteilles.",
+          href: "/fontaines"
+        },
+        {
+          customIcon: drinkingwaterfountainiconImg,
+          title: "Distributeurs Haute Capacité",
+          description: "Solutions pour usines, cafétérias et grands lieux publics avec filtration UV optionnelle.",
+          href: "/fontaines"
+        },
+      ],
+      promo: {
+        title: "Essai gratuit de 7 jours en entreprise au Québec.",
+        image: promoImage3,
+        link: "/contact"
+      }
+    },
+    {
+      name: "Eau Pétillante",
+      href: "/fontaines",
+      hasMegamenu: false
+    },
+    {
+      name: "Machines à glace",
+      href: "/fontaines",
+      hasMegamenu: true,
+      megamenuCards: [
+        {
+          customIcon: icemakericonImg,
+          title: "Unités de Production de Glace",
+          description: "Systèmes de glaçons haute performance pour vos réceptions d'affaires et salles de repos.",
+          href: "/fontaines"
+        },
+      ],
+      promo: {
+        title: "Une glace pure, une image de marque soignée.",
+        image: promoImage4,
+        link: "/fontaines"
+      }
+    },
+    {
+       name: "Machines à café",
+       href: "/fontaines",
+       hasMegamenu: false
+    },
+    {
+      name: "Ressources",
+      hasMegamenu: true,
+      megamenuCards: [
+        {
+          customIcon: blogiconImg,
+          title: "Blog & Bien-être",
+          description: "Conseils pour transformer l'hydratation en moteur de productivité au bureau.",
+          href: "/blog"
+        },
+        {
+          customIcon: faqiconImg,
+          title: "FAQ Support Pro",
+          description: "Tout ce qu'il faut savoir sur l'entretien et la conformité de vos fontaines.",
+          href: "/faq"
+        },
+      ],
+      promo: {
+        title: "Découvrez notre centre de ressources Business.",
+        image: promoImage2,
+        link: "/guides"
+      }
+    },
+    {
+      name: "Soutien",
+      hasMegamenu: true,
+      megamenuCards: [
+        {
+          customIcon: contacticonImg,
+          title: "Équipe Expert Conseil",
+          description: "Parlez à un conseiller spécialisé dans les solutions d'eau pour entreprises.",
+          href: "/contact"
+        },
+        {
+          customIcon: serviceiconImg,
+          title: "Installation & Maintenance",
+          description: "Planifiez votre entretien proactif ou demandez une réparation urgente.",
+          href: "/service"
+        },
+      ],
+      promo: {
+        title: "Service Gants Blancs : Votre satisfaction est notre priorité.",
+        image: promoImage,
+        link: "/contact"
+      }
+    },
+  ];
+
+  let activeMenuToDisplay = productMenuItems;
+  if (isCommercialPage) {
+    activeMenuToDisplay = commercialProductMenuItems;
+  } else if (isEntreprisePage) {
+    activeMenuToDisplay = entreprisesProductMenuItems;
+  }
+
   const handleMenuEnter = (itemName: string) => {
     if (closeTimeoutRef.current) {
       clearTimeout(closeTimeoutRef.current);
@@ -507,7 +738,7 @@ const Header = () => {
 
               {/* Center: Product Menu */}
               <nav className="flex items-center gap-6 flex-1 justify-center">
-                {productMenuItems.map((item) => (
+                {activeMenuToDisplay.map((item) => (
                   <div key={item.name} className="relative">
                     <button
                       onMouseEnter={() => item.hasMegamenu ? handleMenuEnter(item.name) : null}
@@ -624,7 +855,7 @@ const Header = () => {
         )}
 
         {/* Megamenus */}
-        {productMenuItems.map((menuItem) => (
+        {activeMenuToDisplay.map((menuItem) => (
           menuItem.hasMegamenu && activeMegamenu === menuItem.name && (
             <div
               key={menuItem.name}
@@ -722,7 +953,7 @@ const Header = () => {
 
                 {/* Product Menu - Accordion Style */}
                 <div className="border-t border-gray-200">
-                  {productMenuItems.map((item) => (
+                  {activeMenuToDisplay.map((item) => (
                     <div key={item.name} className="border-b border-gray-200">
                       {item.hasMegamenu ? (
                         <div>
