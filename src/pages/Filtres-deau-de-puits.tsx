@@ -558,7 +558,7 @@ const FiltresPuits = () => {
                 </section>
 
                 {/* 9. CTA Section */}
-                <section className="relative py-32 overflow-hidden">
+                <section className="relative h-[600px] flex items-center overflow-hidden">
                     {/* Background Image with Overlay */}
                     <div className="absolute inset-0 z-0">
                         <img

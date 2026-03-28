@@ -528,7 +528,7 @@ title={
                 </section>
 
                 {/* 8. CTA Section - Premium Immersive */}
-                <section className="relative py-32 overflow-hidden">
+                <section className="relative h-[600px] flex items-center overflow-hidden">
                     {/* Background Image with Overlay */}
                     <div className="absolute inset-0 z-0">
                         <img

@@ -21,7 +21,8 @@ import {
     X,
     Settings,
     Wrench,
-    CircleDollarSign
+    CircleDollarSign,
+    Phone
 } from "lucide-react";
 import safetyIcon from "@/assets/1709235770048.png";
 import { NavLink } from "@/components/NavLink";
@@ -205,23 +206,45 @@ const FiltreEauHauteEfficacite = () => {
                     </div>
                 </section>
 
-                {/* 4. Blue CTA Banner */}
-                <section className="bg-white min-h-[600px] lg:h-[800px] relative overflow-hidden flex flex-col lg:items-center">
-                    <div className="container mx-auto px-6 relative z-10 h-full flex flex-col lg:flex-row items-center justify-between gap-8">
-                        <div>
-                            <h2 className="mb-8 heading-pro-max">
-                                <span className="italic font-light text-blue-400 block">Prêt pour une</span>
-                                <span className="font-bold text-white block">meilleure eau ?</span>
+                {/* 4. PREMIUM CTA SECTION */}
+                <section className="relative h-[600px] flex items-center overflow-hidden">
+                    {/* Background Image with Overlay */}
+                    <div className="absolute inset-0 z-0">
+                        <img
+                            src={drinkWaterImg}
+                            alt="Pureté absolue Bricareau HE"
+                            className="w-full h-full object-cover"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 via-blue-800/60 to-blue-500/30 backdrop-blur-[2px]" />
+                    </div>
+                    <div className="container mx-auto px-6 relative z-10 text-center">
+                        <div className="max-w-4xl mx-auto">
+                            <h2 className="text-white mb-6">
+                                <span className="font-bold block tracking-tight opacity-90">Prêt pour une meilleure eau ?</span>
                             </h2>
-                            <p className="body-pro-max text-blue-100 mb-8 lg:mb-0">
-                                Découvrez pourquoi Bricareau est le leader mondial de l'eau.
+                            <p className="text-white font-light text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
+                                Découvrez pourquoi Bricareau est le leader mondial de l'eau. Alliez performance, économies et santé avec nos solutions de filtration intelligentes.
+                            </p>
+                            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                                <Button asChild>
+                                    <a href="tel:18552649328" className="flex items-center gap-3">
+                                        <Phone className="h-5 w-5 animate-bounce" />
+                                        Parlez à un expert
+                                    </a>
+                                </Button>
+                                                                            
+                                <Button
+                                    variant="outline"
+                                    asChild
+                                >
+                                    <NavLink to="/diagnostic">Trouver un expert</NavLink>
+                                </Button>
+                            </div>
+
+                            <p className="mt-8 text-white/50 text-sm font-light">
+                                Disponible 7j/7 — Réponse en moins de 24h
                             </p>
                         </div>
-                        <Button 
-                            asChild
-                        >
-                            <NavLink to="/diagnostic">Trouver un expert</NavLink>
-                        </Button>
                     </div>
                 </section>
 

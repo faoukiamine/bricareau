@@ -638,7 +638,7 @@ const Filtration = () => {
                                         <span className="italic font-light text-[#2563eb] block">Systèmes de filtration d'eau sous l'évier.</span>
                                         </h2>
                                         <p className="text-slate-500 font-light text-lg leading-relaxed text-justify max-w-xl">
-                                            Éliminez jusqu'à 99% des pathogènes, du plomb et du fluorure. L'osmose inverse Bricareau est la solution ultime pour une eau de boisson de qualité restaurant directement chez vous.
+                                            Éliminez jusqu'à 99% des pathogènes, du plomb et du fluorure. Notre gamme Cristal Pro est la solution ultime pour une eau de boisson de qualité supérieure directement chez vous.
                                         </p>
                                     </div>
 
@@ -812,7 +812,7 @@ const Filtration = () => {
                     </div>
                 </section>
         {/* 9. CTA Section - Premium Immersive */}
-        <section className="relative py-32 overflow-hidden">
+        <section className="relative h-[600px] flex items-center overflow-hidden">
           {/* Background Image with Overlay */}
           <div className="absolute inset-0 z-0">
             <img

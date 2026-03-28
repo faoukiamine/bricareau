@@ -268,27 +268,47 @@ const CommercialIndustriel = () => {
           </div>
         </section>
 
-        {/* 10. Final CTA */}
-        <section className="py-12 md:py-16 bg-primary/5">
-          <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto text-center space-y-6">
-              <h2 className="text-slate-900 mb-8">
-                Améliorez votre eau aujourd'hui
-              </h2>
-              <p className="text-base md:text-lg text-muted-foreground">
-                Contactez nos experts dès aujourd'hui et trouvez des solutions à vos problèmes de traitement des eaux.
-              </p>
-              <Button asChild>
-                <a
-                  href="tel:18552649328"
-                  className="flex items-center gap-2"
-                >
-                  <Phone className="h-4 w-4" />
-                  Appelez-nous sans frais au 1 855 264 9328
-                </a>
-              </Button>
+        {/* 10. PREMIUM CTA SECTION */}
+        <section className="relative h-[600px] flex items-center overflow-hidden">
+            {/* Background Image with Overlay */}
+            <div className="absolute inset-0 z-0">
+                <img
+                    src={heroImage}
+                    alt="Partenaire industriel de confiance"
+                    className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 via-blue-800/60 to-blue-500/30 backdrop-blur-[2px]" />
             </div>
-          </div>
+            <div className="container mx-auto px-6 relative z-10 text-center">
+                <div className="max-w-4xl mx-auto">
+                    <h2 className="text-white mb-6">
+                        <span className="font-bold block tracking-tight opacity-90">L'expertise Bricareau au service de votre performance.</span>
+                    </h2>
+                    <p className="text-white font-light text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
+                        Optimisez vos processus, réduisez vos coûts de maintenance et garantissez une qualité d’eau irréprochable. Nos experts conçoivent pour vous des solutions sur mesure, robustes et conformes aux normes les plus strictes.
+                    </p>
+                    <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                        <Button asChild>
+                            <a href="tel:18552649328" className="flex items-center gap-3 text-white">
+                                <Phone className="h-5 w-5 animate-bounce" />
+                                Parlez à un expert
+                            </a>
+                        </Button>
+                                                                    
+                        <Button
+                            variant="outline"
+                            asChild
+                            className="bg-transparent border-white text-white hover:bg-white hover:text-blue-900"
+                        >
+                            <a href="/contact">Demandez une consultation</a>
+                        </Button>
+                    </div>
+
+                    <p className="mt-8 text-white/50 text-sm font-light">
+                        Expertise industrielle — Support technique 24/7
+                    </p>
+                </div>
+            </div>
         </section>
       </main>
 

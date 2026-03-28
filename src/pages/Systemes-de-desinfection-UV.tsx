@@ -549,6 +549,48 @@ const DesinfectionUV = () => {
                     </div>
                 </section>
 
+                {/* 9. PREMIUM CTA SECTION */}
+                <section className="relative h-[600px] flex items-center overflow-hidden">
+                    {/* Background Image with Overlay */}
+                    <div className="absolute inset-0 z-0">
+                        <img
+                            src={heroImg}
+                            alt="Sécurité microbiologique totale"
+                            className="w-full h-full object-cover"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 via-blue-800/60 to-blue-500/30 backdrop-blur-[2px]" />
+                    </div>
+                    <div className="container mx-auto px-6 relative z-10 text-center">
+                        <div className="max-w-4xl mx-auto">
+                            <h2 className="text-white mb-6">
+                                <span className="font-bold block tracking-tight opacity-90">Zéro bactérie. 100 % sérénité.</span>
+                            </h2>
+                            <p className="text-white font-light text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
+                                Protégez votre famille contre les micro-organismes invisibles. Installez une barrière UV de pointe et profitez d’une eau pure, sans aucun produit chimique ajouté.
+                            </p>
+                            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                                <Button asChild>
+                                    <a href="tel:18552649328" className="flex items-center gap-3">
+                                        <Phone className="h-5 w-5 animate-bounce" />
+                                        Parlez à un expert
+                                    </a>
+                                </Button>
+                                                                            
+                                <Button
+                                    variant="outline"
+                                    asChild
+                                >
+                                    <NavLink to="/consultation">Planifiez-vous une consultation</NavLink>
+                                </Button>
+                            </div>
+
+                            <p className="mt-8 text-white/50 text-sm font-light">
+                                Disponible 7j/7 — Réponse en moins de 24h
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
                 {/* 10. Resources Section */}
                 <section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-4">
