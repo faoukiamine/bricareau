@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 import Footer from "@/components/Footer";
+import Hero from "@/components/Hero";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import { Button } from "@/components/ui/button";
 import {
@@ -19,6 +20,7 @@ import {
     AccordionItem,
     AccordionTrigger
 } from "@/components/ui/accordion";
+import heroConsultation from "@/assets/8786.jpg";
 
 
 const PageConsultation = () => {
@@ -40,64 +42,43 @@ const PageConsultation = () => {
 
     return (
         <div className="min-h-screen bg-slate-50 font-sans text-slate-900">
-            <Header />
-            <main className="relative lg:h-[850px] flex flex-col lg:items-center overflow-hidden bg-white pt-20 lg:pt-0">
-                <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none hidden lg:block">
-                    <div className="container mx-auto px-4 lg:px-6 pointer-events-auto">
-                        <GlobalBreadcrumbs variant="light" />
-                    </div>
-                </div>
-                <div className="container mx-auto px-4 lg:px-6 h-full flex items-center">
-                    <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-center">
+            <Hero 
+                image={heroConsultation}
+                badge="Consultation Sans Frais"
+                highlightedTitle="Prenez le contrôle de"
+                mainTitle="la qualité de votre eau."
+                subtitle="Organisez une consultation téléphonique gratuite avec l'un de nos experts d'eau. Nous analyserons vos besoins, répondrons à vos questions et vous guiderons vers la meilleure solution d'adoucissement ou de filtration, sans aucune vente à pression."
+                showPhone={true}
+                showBreadcrumbs={true}
+                ctaText="Commencer l'évaluation"
+                ctaLink="#consultation-form"
+            />
 
-                        {/* Left Column: Sales Pitch */}
-                        <div className="lg:w-5/12 xl:w-1/2 flex flex-col justify-center">
-                            <span className="text-blue-600 font-bold tracking-widest text-xs uppercase mb-4 block animate-in fade-in slide-in-from-bottom duration-500">
-                                Consultation Sans Frais
-                            </span>
-                            <h1
-                                className="text-slate-900 mb-6 leading-[1.1] tracking-tight animate-in fade-in slide-in-from-bottom duration-700"
-                            >
-                                Prenez le contrôle de <br className="hidden md:block" />
-                                <span className="text-blue-600">la qualité de votre eau.</span>
-                            </h1>
-                            <p className="text-slate-600 mb-10 font-light text-justify animate-in fade-in slide-in-from-bottom duration-700 delay-100">
-                                Organisez une consultation téléphonique gratuite avec l'un de nos experts d'eau. Nous analyserons vos besoins, répondrons à vos questions et vous guiderons vers la meilleure solution d'adoucissement ou de filtration, sans aucune vente à pression.
-                            </p>
+            <main className="relative flex flex-col lg:items-center bg-white py-16 lg:py-32">
+                <div id="consultation-form" className="container mx-auto px-4 lg:px-6">
 
-                            <div className="space-y-6 mb-12 animate-in fade-in slide-in-from-bottom duration-700 delay-200">
+                    <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-start">
+
+                        {/* Left Column: Sales Pitch (Features & Proof) */}
+                        <div className="lg:w-5/12 xl:w-1/2 flex flex-col justify-center space-y-12">
+                            <div className="flex flex-col items-center lg:items-start space-y-6 animate-in fade-in slide-in-from-bottom duration-700 delay-200">
                                 {[
                                     { icon: CheckCircle2, title: "Évaluation sur mesure", desc: "Solutions personnalisées pour votre domicile." },
                                     { icon: Sparkles, title: "Zéro pression", desc: "Conseils impartiaux, aucune obligation d'achat." },
                                     { icon: Award, title: "Expertise garantie", desc: "Des techniciens certifiés à votre écoute." }
                                 ].map((feature, idx) => (
-                                    <div key={idx} className="flex gap-4 items-start">
-                                        <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center shrink-0">
-                                            <feature.icon className="w-6 h-6 text-blue-600" />
+                                    <div key={idx} className="flex items-center gap-6 bg-white/80 backdrop-blur-md p-6 rounded-[2rem] shadow-sm border border-slate-100 w-full group hover:shadow-md transition-all">
+                                        <div className="w-14 h-14 bg-blue-600 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-blue-200 group-hover:scale-110 transition-transform shrink-0">
+                                            <feature.icon className="w-6 h-6" />
                                         </div>
-                                        <div>
-                                            <h3 className="text-slate-900 mb-1">{feature.title}</h3>
-                                            <p className="text-slate-600 font-light">{feature.desc}</p>
+                                        <div className="text-left">
+                                            <h4 className="font-bold text-slate-900 text-base mb-1">{feature.title}</h4>
+                                            <p className="text-slate-500 text-sm font-light leading-relaxed">{feature.desc}</p>
                                         </div>
                                     </div>
                                 ))}
                             </div>
 
-                            <div className="p-6 bg-white rounded-3xl shadow-sm border border-slate-100 flex items-center gap-6 max-w-sm animate-in fade-in slide-in-from-bottom duration-700 delay-300">
-                                <div className="flex -space-x-3">
-                                    <div className="w-12 h-12 rounded-full bg-blue-50 border-2 border-white flex items-center justify-center font-bold text-blue-600 text-sm">+10k</div>
-                                </div>
-                                <div>
-                                    <div className="flex text-yellow-400 mb-1">
-                                        <Star className="w-4 h-4 fill-current" />
-                                        <Star className="w-4 h-4 fill-current" />
-                                        <Star className="w-4 h-4 fill-current" />
-                                        <Star className="w-4 h-4 fill-current" />
-                                        <Star className="w-4 h-4 fill-current" />
-                                    </div>
-                                    <p className="text-sm font-medium text-slate-900">Familles québécoises satisfaites</p>
-                                </div>
-                            </div>
                         </div>
 
                         {/* Right Column: Form */}
@@ -114,11 +95,9 @@ const PageConsultation = () => {
             <section className="py-24 bg-white border-t border-slate-100">
                 <div className="container mx-auto px-4 lg:px-6">
                     <div className="text-center mb-16 max-w-2xl mx-auto">
-                        <h2
-                            className="text-slate-900 mb-6"
-                            style={{}}
-                        >
-                            Comment se déroule <span className="text-blue-600">notre consultation ?</span>
+                        <h2 className="heading-pro-max mb-8">
+                            <span className="italic font-light text-[#2563eb] block">Comment se déroule</span>
+                            <span className="font-bold text-[#1e3a8a] block">notre consultation ?</span>
                         </h2>
                         <p className="text-slate-600 font-light">
                             Voici les questions les plus fréquentes concernant notre processus d'évaluation gratuite.
@@ -154,41 +133,6 @@ const PageConsultation = () => {
                                 {showAllFaqs ? "Voir moins de questions" : "Voir toutes les questions"}
                             </Button>
                         </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Testimonials */}
-            <TestimonialsSection
-                title={
-                    <>
-                        <span className="text-[32px] md:text-[60px] font-light leading-[1.2] md:leading-[60px] block">Approuvé par</span>
-                        <span className="text-[32px] md:text-[60px] font-normal leading-[1.2] md:leading-[60px] block">des milliers de familles.</span>
-                    </>
-                }
-                maxReviews={8}
-            />
-
-            {/* CTA Section */}
-            <section className="bg-primary py-16 md:py-20">
-                <div className="container mx-auto px-4 text-center">
-                    <h2 className="text-primary-foreground mb-4">
-                        Vous préférez nous appeler directement ?
-                    </h2>
-                    <p className="text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
-                        Notre équipe est disponible du lundi au vendredi de 8h30 à 20h30.
-                    </p>
-                    <div className="flex justify-center">
-                        <Button
-                            variant="outline"
-                            className="border-white text-white hover:bg-white/10 flex items-center gap-2"
-                            asChild
-                        >
-                            <a href="tel:18552649328">
-                                <Phone className="w-5 h-5" />
-                                1-855-264-9328
-                            </a>
-                        </Button>
                     </div>
                 </div>
             </section>
