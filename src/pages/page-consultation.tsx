@@ -10,10 +10,16 @@ import {
     Award,
     Star,
     Phone,
+    ShieldCheck,
+    Quote,
+    Clock,
+    UserCheck,
+    Smartphone,
     ChevronDown
 } from "lucide-react";
 import React, { useEffect, useState } from "react";
 import ConsultationFormSection from "@/components/ConsultationFormSection";
+import { cn } from "@/lib/utils";
 import {
     Accordion,
     AccordionContent,
@@ -42,51 +48,115 @@ const PageConsultation = () => {
 
     return (
         <div className="min-h-screen bg-slate-50 font-sans text-slate-900">
+            <Header />
             <Hero 
                 image={heroConsultation}
-                badge="Consultation Sans Frais"
                 highlightedTitle="Prenez le contrôle de"
                 mainTitle="la qualité de votre eau."
                 subtitle="Organisez une consultation téléphonique gratuite avec l'un de nos experts d'eau. Nous analyserons vos besoins, répondrons à vos questions et vous guiderons vers la meilleure solution d'adoucissement ou de filtration, sans aucune vente à pression."
-                showPhone={true}
                 showBreadcrumbs={true}
+                showPhone={false}
+                badge="Service Technique en ligne"
+                liveStatus={true}
                 ctaText="Commencer l'évaluation"
                 ctaLink="#consultation-form"
             />
+            <main className="relative flex flex-col bg-white pb-16 lg:pb-32">
+                <div id="consultation-form" className="container mx-auto px-4 lg:px-6 -mt-24 lg:-mt-40 relative z-20">
+                    <div className="flex flex-col lg:flex-row items-start gap-16 lg:gap-24">
+                        
+                        {/* Left Side: Editorial Content */}
+                        <div className="w-full lg:w-5/12 space-y-12 animate-in fade-in slide-in-from-left duration-1000 lg:pt-56 pt-12">
+                             <div className="space-y-6">
+                                 <p className="body-pro-max text-slate-600 max-w-xl text-left">
+                                    Remplissez le formulaire à droite pour choisir le moment idéal. Nos experts vous contacteront pour une évaluation complète et sans engagement de vos besoins.
+                                 </p>
+                             </div>
 
-            <main className="relative flex flex-col lg:items-center bg-white py-16 lg:py-32">
-                <div id="consultation-form" className="container mx-auto px-4 lg:px-6">
-
-                    <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-start">
-
-                        {/* Left Column: Sales Pitch (Features & Proof) */}
-                        <div className="lg:w-5/12 xl:w-1/2 flex flex-col justify-center space-y-12">
-                            <div className="flex flex-col items-center lg:items-start space-y-6 animate-in fade-in slide-in-from-bottom duration-700 delay-200">
+                             {/* Modern Benefit List with Icons - Staggered Reveal */}
+                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                                 {[
-                                    { icon: CheckCircle2, title: "Évaluation sur mesure", desc: "Solutions personnalisées pour votre domicile." },
-                                    { icon: Sparkles, title: "Zéro pression", desc: "Conseils impartiaux, aucune obligation d'achat." },
-                                    { icon: Award, title: "Expertise garantie", desc: "Des techniciens certifiés à votre écoute." }
-                                ].map((feature, idx) => (
-                                    <div key={idx} className="flex items-center gap-6 bg-white/80 backdrop-blur-md p-6 rounded-[2rem] shadow-sm border border-slate-100 w-full group hover:shadow-md transition-all">
-                                        <div className="w-14 h-14 bg-blue-600 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-blue-200 group-hover:scale-110 transition-transform shrink-0">
-                                            <feature.icon className="w-6 h-6" />
+                                    { icon: Phone, title: "Appel de conseil", text: "15 min avec un expert certifié", delay: "delay-100" },
+                                    { icon: ShieldCheck, title: "Zéro Engagement", text: "Conseils 100% impartiaux", delay: "delay-200" },
+                                    { icon: Award, title: "Professionnels certifiés", text: "Le meilleur de l'industrie", delay: "delay-300" },
+                                    { icon: Star, title: "Satisfaction", text: "Plus de 20,000 foyers", delay: "delay-500" }
+                                ].map((item, i) => (
+                                    <div key={i} className={cn("flex flex-col gap-3 group animate-in fade-in slide-in-from-bottom-4 duration-700 fill-mode-both", item.delay)}>
+                                        <div className="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all duration-500">
+                                            <item.icon className="w-5 h-5" />
                                         </div>
-                                        <div className="text-left">
-                                            <h4 className="font-bold text-slate-900 text-base mb-1">{feature.title}</h4>
-                                            <p className="text-slate-500 text-sm font-light leading-relaxed">{feature.desc}</p>
+                                        <div>
+                                            <h4 className="font-bold text-[#1e3a8a] text-sm uppercase tracking-wider">{item.title}</h4>
+                                            <p className="text-slate-500 text-xs font-light">{item.text}</p>
                                         </div>
                                     </div>
                                 ))}
+                             </div>
+
+                             {/* Editorial Testimonial in Column */}
+                             <div className="pt-12 border-t border-slate-100 animate-in fade-in duration-1000 delay-700">
+                                 <Quote className="w-10 h-10 text-blue-600 mb-4" />
+                                 <p className="text-xl font-light italic text-slate-500 leading-relaxed mb-6">
+                                    "Une approche humaine et technique qui a totalement changé notre vision du traitement de l'eau. Simple, efficace et sans aucune pression."
+                                 </p>
+                                 <div className="flex items-center gap-4">
+                                     <div>
+                                         <p className="font-bold text-[#1e3a8a] text-sm uppercase">Marc-Antoine D.</p>
+                                         <p className="text-slate-400 text-[10px] uppercase font-bold tracking-widest">Client Privé • Montréal</p>
+                                     </div>
+                                 </div>
+                             </div>
+                        </div>
+
+                        {/* Right Side: The Premium Form Card */}
+                        <div className="w-full lg:w-7/12 animate-in fade-in slide-in-from-right duration-1000">
+                            <div className="relative">
+                                {/* Decorative Blobs */}
+                                <div className="absolute -top-20 -right-20 w-64 h-64 bg-blue-100 rounded-full blur-3xl opacity-50 -z-10 animate-pulse"></div>
+                                <div className="absolute -bottom-20 -left-20 w-48 h-48 bg-blue-50 rounded-full blur-3xl opacity-50 -z-10"></div>
+                                
+                                <div className="bg-white p-8 lg:p-12 rounded-[3.5rem] shadow-[0_22px_70px_4px_rgba(0,0,0,0.08)] border border-slate-50 relative overflow-hidden backdrop-blur-sm">
+                                    <div className="absolute top-0 left-0 w-2 h-full bg-blue-600"></div>
+                                    <ConsultationFormSection isStandalone={true} />
+                                </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
 
+                {/* Step-by-Step Timeline Section */}
+                <div className="w-full mt-32 py-24 bg-slate-50/50">
+                    <div className="container mx-auto px-4 lg:px-6">
+                        <div className="text-center mb-16 max-w-2xl mx-auto">
+                            <h3 className="heading-pro-max mb-6">
+                                <span className="italic font-light text-[#2563eb] block">Le parcours de</span>
+                                <span className="font-bold text-[#1e3a8a] block">votre consultation</span>
+                            </h3>
+                            <p className="text-slate-500 font-light">Simple, transparent et professionnel. Voici comment nous préparons votre solution.</p>
                         </div>
 
-                        {/* Right Column: Form */}
-                        <div className="lg:w-7/12 xl:w-1/2 animate-in fade-in zoom-in duration-1000 relative">
-                            <div className="absolute inset-0 bg-blue-500/5 rounded-3xl blur-3xl transform scale-110 -z-10"></div>
-                            <ConsultationFormSection isStandalone={true} />
+                        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+                            {/* Horizontal Line (Desktop) */}
+                            <div className="absolute top-1/2 left-0 w-full h-px bg-slate-200 hidden md:block -translate-y-1/2 -z-10"></div>
+                            
+                            {[
+                                { step: "01", icon: Smartphone, title: "Réservation Rapide", desc: "Choisissez votre créneau en 30 secondes." },
+                                { step: "02", icon: UserCheck, title: "Validation d'expert", desc: "Nous analysons votre demande avant l'appel." },
+                                { step: "03", icon: Phone, title: "Analyse de votre besoin", desc: "15 min pour comprendre votre eau." },
+                                { step: "04", icon: Clock, title: "Rapport Dédié", desc: "Recevez votre solution personnalisée." }
+                            ].map((process, i) => (
+                                <div key={i} className="flex flex-col items-center text-center space-y-4 bg-white p-8 rounded-[2.5rem] border border-slate-100 shadow-sm hover:shadow-xl transition-all hover:-translate-y-2 group">
+                                    <div className="w-16 h-16 rounded-3xl bg-blue-600 text-white flex items-center justify-center shadow-lg shadow-blue-200 group-hover:rotate-6 transition-transform">
+                                        <process.icon className="w-8 h-8" />
+                                    </div>
+                                    <div className="space-y-2">
+                                        <span className="text-[10px] font-black text-blue-600 uppercase tracking-[0.2em]">{process.step}</span>
+                                        <h4 className="font-bold text-[#1e3a8a] text-base mb-1">{process.title}</h4>
+                                        <p className="text-slate-500 text-xs leading-relaxed font-light">{process.desc}</p>
+                                    </div>
+                                </div>
+                            ))}
                         </div>
-
                     </div>
                 </div>
             </main>
@@ -94,7 +164,7 @@ const PageConsultation = () => {
             {/* Section: Notre Processus / FAQ */}
             <section className="py-24 bg-white border-t border-slate-100">
                 <div className="container mx-auto px-4 lg:px-6">
-                    <div className="text-center mb-16 max-w-2xl mx-auto">
+                    <div className="text-center mb-16 max-w-4xl mx-auto">
                         <h2 className="heading-pro-max mb-8">
                             <span className="italic font-light text-[#2563eb] block">Comment se déroule</span>
                             <span className="font-bold text-[#1e3a8a] block">notre consultation ?</span>
@@ -128,7 +198,7 @@ const PageConsultation = () => {
                         <div className="mt-12 text-center">
                              <Button
                                  onClick={() => setShowAllFaqs(!showAllFaqs)}
-                                 variant="outline"
+                                 className="rounded-full px-8 h-auto py-4 bg-blue-600 text-white border-2 border-blue-600 font-bold transition-all hover:bg-white hover:text-blue-600 active:scale-95 shadow-lg shadow-blue-100/50 hover:shadow-xl"
                             >
                                 {showAllFaqs ? "Voir moins de questions" : "Voir toutes les questions"}
                             </Button>

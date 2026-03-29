@@ -448,9 +448,9 @@ const ConsultationFormSection = ({ id, isStandalone = false }: { id?: string, is
                                     variant="outline"
                                     onClick={prevStep}
                                     disabled={isNavigating || isSubmitting}
-                                    className="w-fit h-12 rounded-full px-8 border-gray-300"
+                                    className="w-fit h-auto py-4 rounded-full px-8 border-gray-300 font-bold transition-all hover:bg-gray-50 active:scale-95 text-slate-600"
                                 >
-                                    <ChevronLeft className="w-4 h-4 mr-2" /> Retour
+                                    <ChevronLeft className="w-5 h-5 mr-2" /> Retour
                                 </Button>
                             )}
 
@@ -459,19 +459,19 @@ const ConsultationFormSection = ({ id, isStandalone = false }: { id?: string, is
                                     type="button"
                                     onClick={nextStep}
                                     disabled={isNavigating}
-                                    className="w-fit ml-auto h-12 rounded-full px-8 bg-blue-600 hover:bg-blue-700 text-white"
+                                    className="w-fit ml-auto h-auto py-4 rounded-full px-10 bg-blue-600 text-white border-2 border-blue-600 text-base font-bold transition-all hover:bg-white hover:text-blue-600 hover:shadow-lg hover:shadow-blue-200/50 hover:scale-105 active:scale-95"
                                 >
-                                    Continuer <ChevronRight className="w-4 h-4 ml-2" />
+                                    Continuer <ChevronRight className="w-5 h-5 ml-2" />
                                 </Button>
                             ) : (
                                 <Button
                                     type="submit"
                                     disabled={isSubmitting || isNavigating}
-                                    className="w-fit ml-auto h-12 rounded-full px-8 bg-blue-600 hover:bg-blue-700 text-white"
+                                    className="w-fit ml-auto h-auto py-4 rounded-full px-10 bg-blue-600 text-white border-2 border-blue-600 text-base font-bold transition-all hover:bg-white hover:text-blue-600 hover:shadow-lg hover:shadow-blue-200/50 hover:scale-105 active:scale-95"
                                 >
                                     {isSubmitting ? (
                                         <>
-                                            <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                                            <Loader2 className="mr-2 h-5 w-5 animate-spin" />
                                             Envoi en cours...
                                         </>
                                     ) : (

@@ -19,6 +19,7 @@ interface HeroProps {
   gradualOpacity75?: boolean;
   className?: string;
   imagePosition?: string;
+  liveStatus?: boolean;
 }
 
 const Hero = ({
@@ -35,7 +36,8 @@ const Hero = ({
   singleLineTitle = false,
   gradualOpacity75 = true,
   className,
-  imagePosition = "object-right"
+  imagePosition = "object-right",
+  liveStatus = false
 }: HeroProps) => {
   return (
     <section className={cn("relative lg:h-[800px] flex flex-col items-center overflow-hidden bg-white", className)}>
@@ -67,8 +69,20 @@ const Hero = ({
         <div className="max-w-3xl space-y-8 text-left">
           <div className="space-y-6">
             {badge && (
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#2563eb]/10 border border-[#2563eb]/20 text-[#2563eb] text-sm font-bold uppercase tracking-widest">
-                <span className="w-2 h-2 rounded-full bg-[#2563eb] animate-pulse" />
+              <div className={cn(
+                "inline-flex items-center gap-2 px-4 py-2 rounded-full border text-[10px] font-black uppercase tracking-[0.2em]",
+                liveStatus 
+                  ? "bg-green-50 border-green-100 text-green-600" 
+                  : "bg-[#2563eb]/10 border-[#2563eb]/20 text-[#2563eb]"
+              )}>
+                {liveStatus ? (
+                  <span className="relative flex h-2 w-2">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                  </span>
+                ) : (
+                  <span className="w-2 h-2 rounded-full bg-[#2563eb] animate-pulse" />
+                )}
                 {badge}
               </div>
             )}
