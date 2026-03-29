@@ -57,11 +57,7 @@ const ProductShowcase = () => {
                 <div className="text-center mb-12 md:mb-16">
                     <h2 
                         id="solutions-title"
-                        className="scroll-mt-[120px] mb-8 text-[28px] md:text-[36px] lg:text-[48px] leading-tight"
-                        style={{
-                            fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                            fontStyle: 'normal'
-                        }}
+                        className="scroll-mt-[120px] mb-8 heading-pro-max"
                     >
                         <span className="italic font-light text-[#2563eb] block">Nos solutions résidentielles</span>
                         <span className="font-bold text-[#1e3a8a] block">de traitement de l'eau</span>

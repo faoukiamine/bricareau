@@ -8,11 +8,10 @@ const MarketExploration = () => {
             <div className="container mx-auto px-4">
                 <div className="text-center mb-12 md:mb-16">
                     <h2
-                        className="text-foreground"
-                        style={{ }}
+                        className="heading-pro-max text-center"
                     >
-                        <span className="text-[32px] md:text-[60px] font-light leading-[1.2] md:leading-[60px] block">Explore More</span>
-                        <span className="text-[32px] md:text-[60px] font-medium leading-[1.2] md:leading-[60px] block">Solutions</span>
+                        <span className="italic font-light text-[#2563eb] block">Explore More</span>
+                        <span className="font-bold text-[#1e3a8a] block">Solutions</span>
                     </h2>
                 </div>
 

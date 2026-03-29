@@ -116,15 +116,7 @@ const ConditionneursSansSel = () => {
           <div className="container mx-auto px-4">
             <div className="flex flex-col lg:flex-row items-center gap-16">
               <div className="lg:w-1/2">
-                <h2 
-                    className="mb-8"
-                    style={{
-                        fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                        fontSize: '48px',
-                        lineHeight: '48px',
-                        fontStyle: 'normal'
-                    }}
-                >
+                <h2 className="mb-8 heading-pro-max text-left">
                     <span className="italic font-light text-[#2563eb] block">Comprendre le calcaire autrement</span>
                     <span className="font-bold text-[#1e3a8a] block">Le problème n'est pas le minéral, c'est son cristal</span>
                 </h2>
@@ -173,15 +165,7 @@ const ConditionneursSansSel = () => {
 
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-4xl mx-auto text-center mb-24">
-              <h2 
-                className="mb-8 text-center"
-                style={{
-                  fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                  fontSize: '48px',
-                  lineHeight: '48px',
-                  fontStyle: 'normal'
-                }}
-              >
+              <h2 className="mb-8 heading-pro-max text-center">
                 <span className="italic font-light text-[#2563eb] block">Ce que l'eau dure</span>
                 <span className="font-bold text-[#1e3a8a] block">coûte réellement.</span>
               </h2>
@@ -275,15 +259,7 @@ const ConditionneursSansSel = () => {
         <section className="py-24 bg-white border-t border-slate-100">
           <div className="container mx-auto px-4">
             <div className="text-center max-w-3xl mx-auto mb-20">
-              <h2 
-                                className="mb-8 text-center"
-                                style={{
-                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                    fontSize: '48px',
-                                    lineHeight: '48px',
-                                    fontStyle: 'normal'
-                                }}
-                            >
+              <h2 className="mb-8 heading-pro-max text-center">
                                 <span className="italic font-light text-[#2563eb] block">Pourquoi choisir le</span>
                                 <span className="font-bold text-[#1e3a8a] block">conditionneur d'eau sans sel ?</span>
                             </h2>
@@ -310,8 +286,9 @@ const ConditionneursSansSel = () => {
               <div className="w-full max-w-[700px] px-6 sm:px-12 lg:px-10 xl:px-12 py-20 lg:py-32">
                 <div className="space-y-10">
                   <div className="space-y-6">
-                    <h2 className="text-[42px] lg:text-[56px] leading-[1.1] font-light text-[#1e3a8a]">
-                      Une protection <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">100% écologique.</span>
+                    <h2 className="mb-8 heading-pro-max text-left">
+                        <span className="italic font-light text-[#2563eb] block">Une protection</span>
+                        <span className="font-bold text-[#1e3a8a] block">100% écologique.</span>
                     </h2>
                     <div className="space-y-8">
                       {[
@@ -401,15 +378,7 @@ const ConditionneursSansSel = () => {
         <section className="py-24 bg-slate-50">
           <div className="container mx-auto px-4">
             <div className="text-left mb-16">
-              <h2 
-                                className="mb-8"
-                                style={{
-                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                    fontSize: '48px',
-                                    lineHeight: '48px',
-                                    fontStyle: 'normal'
-                                }}
-                            >
+              <h2 className="mb-8 heading-pro-max text-left">
                                 <span className="font-bold text-[#1e3a8a] block text-left">Ressources</span>
                             </h2>
               <div className="w-24 h-1 bg-blue-600"></div>

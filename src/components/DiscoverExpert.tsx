@@ -12,13 +12,7 @@ const DiscoverExpert = () => {
                     <div className="w-full max-w-[700px] px-6 sm:px-12 lg:px-10 xl:px-12 py-20 lg:py-32">
                         <div className="space-y-10">
                             <div className="space-y-6">
-                                <h2 
-                                    className="text-[28px] md:text-[36px] lg:text-[48px] leading-tight lg:leading-[48px]"
-                                    style={{
-                                        fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                        fontStyle: 'normal'
-                                    }}
-                                >
+                                <h2 className="heading-pro-max text-left">
                                     <span className="italic font-light text-[#2563eb]">Votre solution d'eau personnalisée </span>
                                     <span className="font-bold text-[#1e3a8a]">en quelques clics.</span>
                                 </h2>

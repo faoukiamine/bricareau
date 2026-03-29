@@ -137,7 +137,7 @@ const TestsEauPage = () => {
                 <span className="italic font-light text-[#2563eb] block">Savoir exactement</span>
                 <span className="font-bold text-[#1e3a8a] block">ce que vous buvez.</span>
               </h2>
-              <p className="body-pro-max max-w-6xl mx-auto text-justify" style={{ fontWeight: 300, color: 'rgb(71, 85, 105)', fontSize: '20px', lineHeight: '28px' }}>
+              <p className="body-pro-max max-w-6xl mx-auto text-justify">
                 Les analyses d’eau professionnelles et les tests de laboratoire sont la façon la plus fiable de connaître la qualité réelle de votre eau potable. Ils permettent de détecter les contaminants invisibles à l’œil nu et de choisir ensuite le bon système de traitement d'eau pour protéger votre famille. il est préférable de procéder à une analyse d'eau dans les cas suivants:
               </p>
             </div>

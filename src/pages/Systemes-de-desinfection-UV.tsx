@@ -389,7 +389,8 @@ const DesinfectionUV = () => {
                     <div className="container mx-auto px-4">
                         <div className="text-center mb-16">
                             <h2 className="mb-8 heading-pro-max text-center">
-                                <span className="font-bold text-[#1e3a8a] block text-center">Découvrez les produits associés</span>
+                                <span className="italic font-light text-[#2563eb] block text-center">Qualité garantie :</span>
+                                <span className="font-bold text-[#1e3a8a] block text-center">découvrez les produits associés.</span>
                             </h2>
                             <p className="body-pro-max text-gray-500 max-w-2xl mx-auto text-center">
                                 Optimisez votre expérience de traitement d'eau avec nos solutions complémentaires.
@@ -562,7 +563,7 @@ const DesinfectionUV = () => {
                     </div>
                     <div className="container mx-auto px-6 relative z-10 text-center">
                         <div className="max-w-4xl mx-auto">
-                            <h2 className="text-white mb-6">
+                            <h2 className="text-white mb-6 heading-pro-max">
                                 <span className="font-bold block tracking-tight opacity-90">Zéro bactérie. 100 % sérénité.</span>
                             </h2>
                             <p className="text-white font-light text-xl mb-12 max-w-2xl mx-auto leading-relaxed">

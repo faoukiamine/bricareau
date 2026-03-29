@@ -297,15 +297,7 @@ const Fontaines = () => {
                             <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.2em] mb-6">
                                 PURETÉ À DOMICILE
                             </span>
-                            <h2 
-                                className="mb-6"
-                                style={{
-                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                    fontSize: '48px',
-                                    lineHeight: '48px',
-                                    fontStyle: 'normal'
-                                }}
-                            >
+                            <h2 className="mb-6 heading-pro-max text-center">
                                 <span className="italic font-light text-[#2563eb] block">L'hydratation pure à la maison,</span>
                                 <span className="font-bold text-[#1e3a8a] block">l'eau fraîche à la portée de vos mains.</span>
                             </h2>
@@ -359,15 +351,7 @@ const Fontaines = () => {
                             <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.2em] mb-6">
                                 TECHNOLOGIE & RESPONSABILITÉ
                             </span>
-                            <h2 
-                                className="mb-6"
-                                style={{
-                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                    fontSize: '48px',
-                                    lineHeight: '48px',
-                                    fontStyle: 'normal'
-                                }}
-                            >
+                            <h2 className="mb-6 heading-pro-max text-center">
                                 <span className="italic font-light text-[#2563eb] block text-[32px] md:text-[40px] lg:text-[48px]">Plus qu'une fontaine d'eau,</span>
                                 <span className="font-bold text-[#1e3a8a] block text-[32px] md:text-[40px] lg:text-[48px]">un choix intelligent & responsable.</span>
                             </h2>
@@ -424,12 +408,12 @@ const Fontaines = () => {
                 <TestimonialsSection
                     filterProduct="/fontaines-d-eau"
                     limit={5}
-                    title={
-                        <>
-                            <span className="italic font-light text-[#2563eb] block">L’eau que vous méritez,</span>
-                            <span className="font-bold text-[#1e3a8a] block">le service que vous n'oublierez pas.</span>
-                        </>
-                    }
+                title={
+                    <h2 className="mb-8 heading-pro-max text-center">
+                        <span className="italic font-light text-[#2563eb] block">L’eau que vous méritez,</span>
+                        <span className="font-bold text-[#1e3a8a] block">le service que vous n'oublierez pas.</span>
+                    </h2>
+                }
                 />
 
                 {/* 3.5. Portfolio Section - Modern Bento 5 Images */}
@@ -440,15 +424,7 @@ const Fontaines = () => {
                                 <span className="inline-block px-4 py-1.5 bg-blue-50 text-blue-600 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] mb-6">
                                     NOTRE PORTFOLIO
                                 </span>
-                                <h2 
-                                    className="tracking-tight leading-[1.1]"
-                                    style={{
-                                        fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                        fontSize: '48px',
-                                        lineHeight: '48px',
-                                        fontStyle: 'normal'
-                                    }}
-                                >
+                                <h2 className="heading-pro-max tracking-tight leading-[1.1]">
                                     <span className="italic font-light text-[#2563eb] block">Intégration</span>
                                     <span className="font-bold text-[#1e3a8a] block">parfaite & élégante.</span>
                                 </h2>
@@ -580,18 +556,10 @@ const Fontaines = () => {
                                     <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] mb-8">
                                         NOTRE ENGAGEMENT
                                     </span>
-                                    <h4 
-                                        className="tracking-tight leading-[1.1]"
-                                        style={{
-                                            fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                            fontSize: '48px',
-                                            lineHeight: '48px',
-                                            fontStyle: 'normal'
-                                        }}
-                                    >
+                                    <h2 className="heading-pro-max tracking-tight leading-[1.1]">
                                         <span className="italic font-light text-[#2563eb] block mb-2">Vers un monde</span>
                                         <span className="font-bold text-[#1e3a8a] block">sans bouteilles en plastique.</span>
-                                    </h4>
+                                    </h2>
                                 </div>
                                 <div className="max-w-md md:pb-3">
                                     <p 

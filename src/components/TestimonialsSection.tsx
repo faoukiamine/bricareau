@@ -88,7 +88,7 @@ const TestimonialsSection = ({
                         style={{
                             fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
                             fontSize: '48px',
-                            lineHeight: '48px',
+                            lineHeight: '52px',
                             fontStyle: 'normal'
                         }}
                     >

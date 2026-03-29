@@ -361,7 +361,7 @@ const Service = () => {
                     <div className="container mx-auto px-6">
                         <div className="flex flex-col lg:flex-row-reverse items-center gap-24">
                             <div className="lg:w-1/2 space-y-8">
-                                <h2 className="text-2xl md:text-3xl lg:text-[40px] font-sans tracking-tight leading-tight text-left text-slate-900 mb-8">
+                                <h2 className="text-2xl md:text-3xl lg:text-[40px] font-sans tracking-tight leading-tight lg:leading-[52px] text-left text-slate-900 mb-8">
                                     <span className="italic font-light text-blue-600 block">Performance & Protection</span>
                                     <span className="font-bold text-[#1e3a8a] block">Une maintenance d'élite <br />pour vos systèmes d'eau.</span>
                                 </h2>
@@ -409,7 +409,7 @@ const Service = () => {
                     <div className="container mx-auto px-6">
                         <div className="flex flex-col lg:flex-row items-center gap-24">
                             <div className="lg:w-1/2 space-y-8">
-                                <h2 className="text-2xl md:text-3xl lg:text-[40px] font-sans tracking-tight leading-tight text-left text-slate-900 mb-8">
+                                <h2 className="text-2xl md:text-3xl lg:text-[40px] font-sans tracking-tight leading-tight lg:leading-[52px] text-left text-slate-900 mb-8">
                                     <span className="italic font-light text-blue-600 block">Pureté & Santé</span>
                                     <span className="font-bold text-[#1e3a8a] block">Savourez une eau d'une <br />pureté exceptionnelle.</span>
                                 </h2>
@@ -459,7 +459,7 @@ const Service = () => {
                     <div className="container mx-auto px-6">
                         <div className="flex flex-col lg:flex-row-reverse items-center gap-24">
                             <div className="lg:w-1/2 space-y-8">
-                                <h2 className="text-2xl md:text-3xl lg:text-[40px] font-sans tracking-tight leading-tight text-left text-slate-900 mb-8">
+                                <h2 className="text-2xl md:text-3xl lg:text-[40px] font-sans tracking-tight leading-tight lg:leading-[52px] text-left text-slate-900 mb-8">
                                     <span className="italic font-light text-blue-600 block">Diagnostic & Précision</span>
                                     <span className="font-bold text-[#1e3a8a] block">Révélez ce que <br />votre eau vous cache.</span>
                                 </h2>
@@ -481,7 +481,6 @@ const Service = () => {
                                 <div className="pt-4">
                                     <Button 
                                         onClick={() => navigate('/tests-eau')}
-                                        variant="outline" 
                                         className="rounded-full px-12"
                                     >
                                         Voir toutes les analyses <ArrowRight className="ml-2 w-4 h-4" />

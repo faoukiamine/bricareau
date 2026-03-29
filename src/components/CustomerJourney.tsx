@@ -49,11 +49,7 @@ const CustomerJourney = () => {
                         L'EXPÉRIENCE BRICAREAU
                     </span>
                     <h2 
-                        className="mb-8 text-[28px] md:text-[36px] lg:text-[48px] leading-tight"
-                        style={{
-                            fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                            fontStyle: 'normal'
-                        }}
+                        className="mb-8 heading-pro-max"
                     >
                         <span className="italic font-light text-[#2563eb] block">La promesse d'une eau saine,</span>
                         <span className="font-bold text-[#1e3a8a] block">de notre rencontre à votre confort.</span>

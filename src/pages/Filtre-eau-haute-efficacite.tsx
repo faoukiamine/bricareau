@@ -219,7 +219,7 @@ const FiltreEauHauteEfficacite = () => {
                     </div>
                     <div className="container mx-auto px-6 relative z-10 text-center">
                         <div className="max-w-4xl mx-auto">
-                            <h2 className="text-white mb-6">
+                            <h2 className="text-white mb-6 heading-pro-max">
                                 <span className="font-bold block tracking-tight opacity-90">Prêt pour une meilleure eau ?</span>
                             </h2>
                             <p className="text-white font-light text-xl mb-12 max-w-2xl mx-auto leading-relaxed">

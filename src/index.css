@@ -130,7 +130,7 @@ All colors MUST be HSL.
   }
 
   h2 {
-    @apply text-[28px] md:text-[36px] lg:text-[48px] leading-[1.085] font-bold tracking-tight;
+    @apply text-[28px] md:text-[36px] lg:text-[48px] leading-tight lg:leading-[52px] font-bold tracking-tight;
   }
 
   h3 {
@@ -153,7 +153,7 @@ All colors MUST be HSL.
 
 @layer utilities {
   .heading-pro-max {
-    @apply text-[28px] md:text-[36px] lg:text-[48px] leading-tight tracking-tight;
+    @apply text-[28px] md:text-[36px] lg:text-[48px] leading-tight lg:leading-[52px] tracking-tight;
   }
   .subheading-pro-max {
     @apply text-[20px] md:text-[24px] lg:text-[28px] leading-snug font-medium tracking-tight;

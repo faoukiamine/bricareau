@@ -459,12 +459,12 @@ const FiltrationSousEvier = () => {
                 {/* 6. Testimonials Section */}
                 <TestimonialsSection
                     filterProduct="/Systemes-de-filtration-deau-sous-evier"
-title={
-                        <>
-                            <span className="italic font-light text-[#2563eb] block text-center">Adieu les bouteilles plastiques,</span>
-                            <span className="font-bold text-[#1e3a8a] block text-center">Enfin la liberté au robinet.</span>
-                        </>
-                    }
+                 title={
+                    <h2 className="mb-8 heading-pro-max text-center">
+                        <span className="italic font-light text-[#2563eb] block text-center">Adieu les bouteilles plastiques,</span>
+                        <span className="font-bold text-[#1e3a8a] block text-center">Enfin la liberté au robinet.</span>
+                    </h2>
+                 }
                 />
 
                 {/* 7. FAQ Section */}
@@ -540,7 +540,7 @@ title={
                     </div>
                     <div className="container mx-auto px-6 relative z-10 text-center">
                         <div className="max-w-4xl mx-auto">
-                            <h2 className="text-white mb-6">
+                            <h2 className="text-white mb-6 heading-pro-max">
                                 <span className="font-bold block tracking-tight opacity-90">Prêt à dire adieu à l’eau embouteillée ?</span>
                             </h2>
                             <p className="text-white font-light text-xl mb-12 max-w-2xl mx-auto leading-relaxed">

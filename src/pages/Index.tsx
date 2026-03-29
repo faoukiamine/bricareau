@@ -22,10 +22,10 @@ const Index = () => {
           filterProduct="/"
           limit={6}
           title={
-            <>
+            <h2 className="heading-pro-max text-center">
               <span className="italic font-light text-[#2563eb] block">Votre confiance.</span>
               <span className="font-bold text-[#1e3a8a] block">Notre plus grande fierté.</span>
-            </>
+            </h2>
           }
         />
 

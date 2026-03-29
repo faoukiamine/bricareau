@@ -204,9 +204,9 @@ const FiltresPuits = () => {
                             <div className="w-full max-w-[750px] px-6 sm:px-12 lg:px-16 xl:px-24 py-24 lg:py-32">
                                 <div className="space-y-12">
                                     <div className="space-y-6">
-                                        <h2 className="text-3xl md:text-4xl lg:text-5xl leading-tight font-light text-[#1e3a8a]">
-                                            Votre puits possède <br />
-                                            <span className="font-bold italic">son propre ADN.</span>
+                                        <h2 className="mb-8 heading-pro-max text-left text-[#1e3a8a]">
+                                            <span className="italic font-light block">Votre puits possède</span>
+                                            <span className="font-bold block">son propre ADN.</span>
                                         </h2>
                                         
                                         <div className="space-y-8">
@@ -481,12 +481,10 @@ const FiltresPuits = () => {
                 <TestimonialsSection
                     filterProduct="/filtration"
                     title={
-                        <>
-                              <h2 className="mb-6 heading-pro-max text-center">
-                                <span className="italic font-light text-[#2563eb] block text-center">Buvez l'eau de votre puits sans crainte</span>
-                                <span className="font-bold text-[#1e3a8a] block text-center">Ils ont fait le saut avec nous.</span>
-                            </h2>
-                        </>
+                        <h2 className="mb-8 heading-pro-max text-center">
+                            <span className="italic font-light text-[#2563eb] block text-center">Buvez l'eau de votre puits sans crainte</span>
+                            <span className="font-bold text-[#1e3a8a] block text-center">Ils ont fait le saut avec nous.</span>
+                        </h2>
                     }
                 />
 

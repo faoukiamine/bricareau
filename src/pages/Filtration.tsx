@@ -602,16 +602,11 @@ const Filtration = () => {
                                             COMPACT & PUISSANT
                                         </span>
                                         <h2 
-                                        id="compact-filtration-title"
-                                        className="scroll-mt-[120px] mb-8"
-                                        style={{
-                                            fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                            fontSize: '48px',
-                                            lineHeight: '48px',
-                                            fontStyle: 'normal'
-                                        }}
-                                    >
-                                        <span className="italic font-light text-[#2563eb] block">Systèmes de filtration d'eau sous l'évier.</span>
+                                            id="compact-filtration-title"
+                                            className="heading-pro-max scroll-mt-[120px] mb-8"
+                                        >
+                                            <span className="italic font-light text-[#2563eb] block">Systèmes de filtration d'eau</span>
+                                            <span className="font-bold text-[#1e3a8a] block">sous l'évier.</span>
                                         </h2>
                                         <p className="body-pro-max text-justify max-w-xl">
                                             Éliminez jusqu'à 99% des pathogènes, du plomb et du fluorure. Notre gamme Cristal Pro est la solution ultime pour une eau de boisson de qualité supérieure directement chez vous.

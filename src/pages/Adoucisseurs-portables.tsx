@@ -86,18 +86,10 @@ const AdoucisseursPortables = () => {
                                     VOS AVANTAGES
                                 </span>
                                 
-                                <h2 
-                                className="mb-8 text-center"
-                                style={{
-                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                    fontSize: '48px',
-                                    lineHeight: '48px',
-                                    fontStyle: 'normal'
-                                }}
-                            >
-                                <span className="italic font-light text-[#2563eb] block text-left">Une eau parfaite,</span>
-                                <span className="font-bold text-[#1e3a8a] block text-left">kilomètre après kilomètre.</span>
-                            </h2>
+                                <h2 className="mb-8 heading-pro-max text-left">
+                                    <span className="italic font-light text-[#2563eb] block">Une eau parfaite,</span>
+                                    <span className="font-bold text-[#1e3a8a] block">kilomètre après kilomètre.</span>
+                                </h2>
                                 <p className="text-slate-500 font-light text-xl leading-relaxed">
                                     Que vous soyez au camping, au quai ou dans un chalet, ne laissez pas la qualité de l'eau gâcher votre confort. Nos solutions portables vous suivent partout.
                                 </p>
@@ -241,18 +233,10 @@ const AdoucisseursPortables = () => {
                         <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.3em] mb-6">
                             NOTRE FONCTIONNEMENT
                         </span>
-                        <h2 
-                                className="mb-8 text-center"
-                                style={{
-                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                    fontSize: '48px',
-                                    lineHeight: '48px',
-                                    fontStyle: 'normal'
-                                }}
-                            >
-                                <span className="italic font-light text-[#2563eb] block">Un service simple</span>
-                                <span className="font-bold text-[#1e3a8a] block">& sans souci.</span>
-                            </h2>
+                        <h2 className="mb-8 text-center heading-pro-max">
+                            <span className="italic font-light text-[#2563eb] block">Un service simple</span>
+                            <span className="font-bold text-[#1e3a8a] block">& sans souci.</span>
+                        </h2>
                         
                         <p className="text-slate-500 font-light text-lg max-w-2xl mx-auto leading-relaxed">
                             De l'installation initiale à la livraison des unités fraîchement régénérées, nous gérons chaque détail technique pour vous garantir une eau parfaite en permanence.
@@ -324,18 +308,10 @@ const AdoucisseursPortables = () => {
                 filterProduct="/adoucisseurs-portables"
             title={
                 <>
-                <h2 
-                                className="mb-8 text-center"
-                                style={{
-                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                    fontSize: '48px',
-                                    lineHeight: '48px',
-                                    fontStyle: 'normal'
-                                }}
-                            >
-                                <span className="italic font-light text-[#2563eb] block">L’eau pure comme standard.</span>
-                                <span className="font-bold text-[#1e3a8a] block">Le service comme signature.</span>
-                            </h2>
+                <h2 className="mb-8 heading-pro-max text-center">
+                    <span className="italic font-light text-[#2563eb] block">L’eau pure comme standard.</span>
+                    <span className="font-bold text-[#1e3a8a] block">Le service comme signature.</span>
+                </h2>
                 </>
             }
         />
@@ -344,16 +320,9 @@ const AdoucisseursPortables = () => {
             <section className="bg-white py-24">
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-16">
-                        <h2 
-                                className="mb-8 text-center"
-                                style={{
-                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                    fontSize: '48px',
-                                    lineHeight: '48px',
-                                    fontStyle: 'normal'
-                                }}
-                            >                                <span className="font-bold text-[#1e3a8a] block">Découvrez les produits associés</span>
-                            </h2>
+                        <h2 className="mb-8 heading-pro-max text-center">                                
+                                <span className="font-bold text-[#1e3a8a] block">Découvrez les produits associés</span>
+                             </h2>
                         <p className="font-light text-gray-500 max-w-2xl mx-auto text-center">
                             Optimisez votre expérience de traitement d'eau avec nos solutions complémentaires.
                         </p>

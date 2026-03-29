@@ -174,16 +174,6 @@ const Pieces = () => {
 
                 <section className="py-24 bg-white relative overflow-hidden">
                     <div className="container mx-auto px-4">
-                        <div className="max-w-4xl mx-auto text-center mb-16">
-                            <h2 className="heading-pro-max mb-8 text-center">
-                                <span className="italic font-light text-[#2563eb] block">Explorez nos</span>
-                                <span className="font-bold text-[#1e3a8a] block">catégories de pièces</span>
-                            </h2>
-                            <p className="body-pro-max text-slate-500 max-w-3xl mx-auto">
-                                Gardez votre système de traitement d'eau à son summum de performance avec nos composantes de qualité supérieure. Nous avons rigoureusement sélectionné chaque pièce pour sa durabilité et sa conformité aux normes les plus exigeantes. Explorez nos catégories pour identifier les solutions de remplacement authentiques — des cartouches filtrantes de précision aux vannes de contrôle intelligentes — conçues pour assurer la pureté et la clarté de votre eau, jour après jour.
-                            </p>
-                        </div>
-
                         <Tabs defaultValue="Tout" className="flex flex-col lg:flex-row gap-12 text-center lg:text-left">
                             <aside className="lg:w-1/4">
                                 <TabsList className="flex flex-col items-stretch h-auto w-full p-2 bg-slate-50/50 backdrop-blur-md rounded-3xl border border-slate-100 shadow-sm lg:sticky lg:top-32 gap-1">
@@ -212,6 +202,17 @@ const Pieces = () => {
                             </aside>
 
                             <div className="lg:w-3/4">
+                                <div className="flex flex-col items-center text-center mb-16 w-full">
+                                    <div className="max-w-4xl">
+                                        <h2 className="heading-pro-max mb-8 text-center">
+                                            <span className="italic font-light text-[#2563eb] block">Explorez nos</span>
+                                            <span className="font-bold text-[#1e3a8a] block">catégories de pièces</span>
+                                        </h2>
+                                        <p className="body-pro-max text-slate-500 max-w-2xl mx-auto text-center">
+                                            Gardez votre système de traitement d'eau à son summum de performance avec nos composantes de qualité supérieure. Nous avons rigoureusement sélectionné chaque pièce pour sa durabilité et sa conformité aux normes les plus exigeantes. Explorez nos catégories pour identifier les solutions de remplacement authentiques — des cartouches filtrantes de précision aux vannes de contrôle intelligentes — conçues pour assurer la pureté et la clarté de votre eau, jour après jour.
+                                        </p>
+                                    </div>
+                                </div>
                                 <TabsContent 
                                     value="Tout"
                                     className="animate-in fade-in slide-in-from-bottom-4 duration-500"
@@ -287,8 +288,8 @@ const Pieces = () => {
                 <section className="py-12 md:py-16 bg-slate-50">
                     <div className="container mx-auto px-4">
                         <div className="max-w-4xl mx-auto">
-                            <h2 className="text-center mb-12">
-                                <span className="font-light italic text-[#00b4ff] block mb-2 sm:mb-0 sm:inline">Besoin d'aide pour </span>
+                            <h2 className="text-center mb-12 heading-pro-max">
+                                <span className="font-light italic text-[#2563eb] block mb-2 sm:mb-0 sm:inline">Besoin d'aide pour </span>
                                 <span className="font-bold text-[#1e3a8a] block sm:inline">trouver la bonne pièce ?</span>
                             </h2>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">

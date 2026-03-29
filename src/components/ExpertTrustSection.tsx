@@ -33,14 +33,7 @@ const ExpertTrustSection = () => {
                     <div className="w-full max-w-[700px] px-6 sm:px-12 lg:px-10 xl:px-12 py-20 lg:py-32">
                         <div className="space-y-12">
                             <div className="space-y-6">
-                                <h2
-                                    style={{
-                                        fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                        fontSize: '48px',
-                                        lineHeight: '48px',
-                                        fontStyle: 'normal'
-                                    }}
-                                >
+                                <h2 className="heading-pro-max text-left">
                                     <span className="italic font-light text-[#2563eb]">Votre eau mérite un expert, </span>
                                     <span className="font-bold text-[#1e3a8a]">pas un doute.</span>
                                 </h2>
