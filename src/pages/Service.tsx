@@ -15,12 +15,14 @@ import {
     Calendar,
     Zap,
     MapPin,
-    Droplets
+    Droplets,
+    Phone,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import servicesHero from "@/assets/SERVICES.jpg";
 import technicianImg from "@/assets/discover_expert.jpg";
+import bricareauCareImg from "@/assets/cae3c0a4-5b4d-4b0e-8bc3-3550a714f7bb.jpg";
 import waterSoftenerInstallImg from "@/assets/Water-Softener-installation.jpg";
 import roSystemImg from "@/assets/reverse osmosis system_11062146.png";
 import roTechnicianImg from "@/assets/technicien repare osmoseur.avif";
@@ -116,7 +118,7 @@ const Service = () => {
                             <div className="flex flex-col sm:flex-row gap-4 animate-in fade-in slide-in-from-top-8 duration-1000 delay-500">
                                 <Button 
                                     onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
-                                    className="h-16 px-10 rounded-full bg-blue-600 hover:bg-blue-700 text-white text-lg font-bold shadow-2xl shadow-blue-500/20"
+                                    className="rounded-full px-12"
                                 >
                                     Planifier un service
                                     <ArrowRight className="ml-2 w-5 h-5" />
@@ -157,9 +159,9 @@ const Service = () => {
                                                 <div className="h-20"></div>
                                                 <div className="w-full h-48 overflow-hidden rounded-3xl shadow-lg relative">
                                                     <img 
-                                                        src={technicianImg} 
-                                                        alt="Expertise technique Bricareau" 
-                                                        className="w-full h-full object-cover"
+                                                        src={bricareauCareImg} 
+                                                        alt="Expertise technique certifiée Bricareau" 
+                                                        className="w-full h-full object-cover object-[50%_30%]"
                                                     />
                                                 </div>
                                                 <div className="space-y-6 pt-8">
@@ -224,8 +226,8 @@ const Service = () => {
                                                 <div className="h-20"></div>
                                                 <div className="w-full h-48 overflow-hidden rounded-3xl shadow-lg relative">
                                                     <img 
-                                                        src={labTestImg} 
-                                                        alt="Diagnostic expert" 
+                                                        src={servicesHero} 
+                                                        alt="Dépannage expert Bricareau" 
                                                         className="w-full h-full object-cover"
                                                     />
                                                 </div>
@@ -272,8 +274,8 @@ const Service = () => {
                                                 </div>
                                                 <div className="w-full h-48 overflow-hidden rounded-3xl shadow-lg mt-12 relative">
                                                     <img 
-                                                        src={servicesHero} 
-                                                        alt="Analyses de laboratoire" 
+                                                        src={labTestImg} 
+                                                        alt="Analyses de laboratoire certifiées" 
                                                         className="w-full h-full object-cover"
                                                     />
                                                 </div>
@@ -311,7 +313,7 @@ const Service = () => {
                                 
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                                     {[
-                                        { icon: <ShieldCheck className="w-5 h-5" />, text: "Garantie étendue pièces & MO" },
+                                        { icon: <ShieldCheck className="w-5 h-5" />, text: "Garantie étendue pièces & Main d'oeuvre" },
                                         { icon: <PhoneCall className="w-5 h-5" />, text: "Dépannage prioritaire sous 24h" },
                                         { icon: <CheckCircle2 className="w-5 h-5" />, text: "Analyses d'eau incluses" },
                                         { icon: <UserCheck className="w-5 h-5" />, text: "Suivi par un technicien dédié" }
@@ -324,8 +326,14 @@ const Service = () => {
                                 </div>
 
                                 <div className="pt-6">
-                                    <Button className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-12 h-14 text-lg font-bold">
-                                        Parlez avec un conseiller
+                                    <Button
+                                        asChild
+                                        className="rounded-full px-12"
+                                    >
+                                        <a href="tel:18552649328" className="flex items-center gap-2">
+                                            <Phone className="w-5 h-5" />
+                                            Parlez avec un conseiller
+                                        </a>
                                     </Button>
                                 </div>
                             </div>
@@ -333,9 +341,9 @@ const Service = () => {
                             <div className="lg:w-1/2 relative group">
                                 <div className="relative z-10 rounded-[4rem] overflow-hidden aspect-square shadow-2xl">
                                     <img 
-                                        src={technicianImg} 
-                                        className="w-full h-full object-cover"
-                                        alt="Technicien Bricareau en intervention"
+                                        src={bricareauCareImg} 
+                                        className="w-full h-full object-cover object-top"
+                                        alt="Service Bricareau Care"
                                     />
                                     <div className="absolute inset-0 bg-blue-900/10 mix-blend-multiply" />
                                 </div>
@@ -374,7 +382,7 @@ const Service = () => {
                                     ))}
                                 </div>
                                 <div className="pt-6">
-                                    <Button className="rounded-full px-10 h-14 bg-blue-600 hover:bg-blue-700 text-white font-bold shadow-lg shadow-blue-500/20">
+                                    <Button className="rounded-full px-12">
                                         Planifiez un service
                                     </Button>
                                 </div>
@@ -410,10 +418,10 @@ const Service = () => {
                                 </p>
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-6 gap-x-12">
                                     {[
-                                        { title: "Filtres Haute Densité", desc: "Remplacement semestriel pour protéger la membrane." },
+                                        { title: "Filtres d'eau de haute qualité", desc: "Remplacement semestriel pour protéger la membrane." },
                                         { title: "Membranes TFC", desc: "Tests de pureté et remplacement tous les 2-3 ans." },
                                         { title: "Biofilm & Hygiène", desc: "Désinfection complète du réservoir de stockage." },
-                                        { title: "Analyse TDS", desc: "Vérification instantanée de l'efficacité de filtration." }
+                                        { title: "Analyse de TDS", desc: "Vérification instantanée de l'efficacité de filtration." }
                                     ].map((item, i) => (
                                         <div key={i} className="space-y-1">
                                             <h4 className="text-base font-bold text-slate-900 border-l-2 border-blue-600 pl-3">{item.title}</h4>
@@ -422,7 +430,7 @@ const Service = () => {
                                     ))}
                                 </div>
                                 <div className="pt-6">
-                                    <Button className="rounded-full px-10 h-14 bg-[#1e3a8a] hover:bg-blue-800 text-white font-bold shadow-lg shadow-blue-500/20">
+                                    <Button className="rounded-full px-12">
                                         Réservez votre entretien
                                     </Button>
                                 </div>
@@ -474,7 +482,7 @@ const Service = () => {
                                     <Button 
                                         onClick={() => navigate('/tests-eau')}
                                         variant="outline" 
-                                        className="rounded-full px-8 h-12 border-blue-600 text-blue-600 hover:bg-blue-50"
+                                        className="rounded-full px-12"
                                     >
                                         Voir toutes les analyses <ArrowRight className="ml-2 w-4 h-4" />
                                     </Button>
@@ -573,10 +581,10 @@ const Service = () => {
                                                     <SelectValue placeholder="Choisir un service" />
                                                 </SelectTrigger>
                                                 <SelectContent>
-                                                    <SelectItem value="repair">Réparations d'urgence</SelectItem>
+                                                    <SelectItem value="test">Analyse d'eau</SelectItem>
                                                     <SelectItem value="maintenance">Entretien & Maintenance</SelectItem>
                                                     <SelectItem value="install">Installation & Mise en service</SelectItem>
-                                                    <SelectItem value="test">Analyse d'eau</SelectItem>
+                                                    <SelectItem value="repair">Réparations d'urgence</SelectItem>
                                                 </SelectContent>
                                             </Select>
                                         </div>
@@ -594,7 +602,7 @@ const Service = () => {
                                         </div>
 
                                         <div className="md:col-span-2 text-left pt-2">
-                                            <Button className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-12 h-16 text-lg font-bold shadow-xl shadow-blue-500/20 transition-all hover:scale-105 active:scale-95 group">
+                                            <Button className="rounded-full px-12 transition-all hover:scale-105 active:scale-95 group">
                                                 Envoyez
                                                 <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
                                             </Button>
