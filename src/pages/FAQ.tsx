@@ -16,7 +16,7 @@ const FAQCard = ({ item }: { item: { q: string, a: string } }) => {
 
     return (
         <div className="bg-white border border-slate-200 rounded p-6 md:p-8 flex flex-col h-full hover:shadow-md transition-shadow">
-            <h3 className="text-slate-900 mb-4">
+            <h3 className="text-lg font-bold text-slate-900 mb-3 leading-snug">
                 {item.q}
             </h3>
             <div className={`text-slate-700 font-light leading-relaxed mb-6 flex-grow ${!isExpanded && isLong ? 'line-clamp-4' : ''}`}>
@@ -189,8 +189,8 @@ const FAQ = () => {
                                     return (
                                         <section key={cat.id} id={cat.id}>
                                             <div className="text-left mb-12">
-                                                <h2 className="text-slate-900 mb-6">
-                                                    <span className="font-normal leading-[1.1] block">{cat.title}</span>
+                                                <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
+                                                    {cat.title}
                                                 </h2>
                                                 <div className="w-20 h-1 bg-blue-600"></div>
                                             </div>
@@ -205,7 +205,7 @@ const FAQ = () => {
                                                 <div className="mt-6">
                                                     <Button
                                                         onClick={() => toggleExpandedCategory(cat.id)}
-                                                        variant="ghost"
+                                                        className="rounded-full px-8"
                                                     >
                                                         Afficher plus de questions
                                                     </Button>
@@ -219,34 +219,7 @@ const FAQ = () => {
                     </div>
                 </section>
 
-                {/* 3. Final Call to Action */}
-                <section className="py-24 bg-blue-600 text-white relative overflow-hidden">
-                    <div className="absolute top-0 left-0 w-full h-full opacity-10">
-                        <Waves className="absolute -bottom-10 -left-10 w-96 h-96 text-white" />
-                        <Droplets className="absolute -top-10 -right-10 w-64 h-64 text-white" />
-                    </div>
-                    <div className="container mx-auto px-6 relative z-10 h-full flex items-center">
-                        <div className="max-w-2xl text-slate-900 lg:text-white py-12 lg:py-0">
-                            <h2 className="mb-8 italic">
-                                Vous n'avez pas trouvé votre réponse ?
-                            </h2>
-                            <p className="opacity-90 mb-12 max-w-2xl mx-auto">
-                                Nos experts en traitement de l'eau sont disponibles pour répondre à toutes vos interrogations et planifier une analyse gratuite.
-                            </p>
-                        </div>
-                        <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                            <Button variant="secondary" asChild>
-                                <NavLink to="/consultation">Planifiez une consultation gratuite</NavLink>
-                            </Button>
-                            <Button variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600" asChild>
-                                <a href="tel:18552649328" className="flex items-center gap-2">
-                                    <Phone className="w-5 h-5" />
-                                    1-855-264-9328
-                                </a>
-                            </Button>
-                        </div>
-                    </div>
-                </section>
+
             </main>
             <Footer />
         </div >

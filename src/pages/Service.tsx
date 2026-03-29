@@ -21,12 +21,21 @@ import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import servicesHero from "@/assets/SERVICES.jpg";
 import technicianImg from "@/assets/discover_expert.jpg";
-import installationImg from "@/assets/WaterSoftenerInstallation.jpg";
+import waterSoftenerInstallImg from "@/assets/Water-Softener-installation.jpg";
 import roSystemImg from "@/assets/reverse osmosis system_11062146.png";
 import labTestImg from "@/assets/test-laboratoire-diligence-inspection-750x500.jpg";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import { Checkbox } from "@/components/ui/checkbox";
+import { NavLink } from "@/components/NavLink";
+import {
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+    CarouselPrevious,
+    CarouselNext
+} from "@/components/ui/carousel";
 import {
     Select,
     SelectContent,
@@ -107,9 +116,6 @@ const Service = () => {
                                     Planifier un service
                                     <ArrowRight className="ml-2 w-5 h-5" />
                                 </Button>
-                                <Button variant="outline" className="h-16 px-10 rounded-full border-white/20 bg-white/5 backdrop-blur-md text-white hover:bg-white/10 text-lg font-bold">
-                                    Nos contrats d'entretien
-                                </Button>
                             </div>
                         </div>
                     </div>
@@ -118,37 +124,165 @@ const Service = () => {
                     <div className="absolute bottom-0 right-0 w-1/3 h-24 bg-white rounded-tl-[5rem] hidden md:block" />
                 </section>
 
-                {/* 2. THE SERVICES GRID - PILLARS */}
-                <section className="py-32 bg-white relative overflow-hidden">
+                <section className="py-24 bg-white relative overflow-hidden">
                     <div className="container mx-auto px-6">
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16">
-                            {services.map((item, idx) => (
-                                <div key={idx} className={`group p-10 rounded-[3rem] ${item.bgColor} border border-slate-100 transition-all duration-700 hover:-translate-y-4 hover:shadow-2xl hover:shadow-blue-900/5`}>
-                                    <div className="mb-8 w-16 h-16 rounded-2xl bg-white shadow-xl flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-colors duration-500">
-                                        {item.icon}
+                        <div className="max-w-4xl mx-auto text-center mb-24 space-y-6">
+                            <h2 className="heading-pro-max">
+                                <span className="italic font-light text-[#2563eb] block">Une expertise complète</span>
+                                <span className="font-bold text-[#1e3a8a] block">pour votre eau</span>
+                            </h2>
+                            <p className="body-pro-max max-w-2xl mx-auto">
+                                De l'installation à la maintenance préventive, nos techniciens certifiés assurent la pérennité de vos équipements de traitement d'eau à travers tout le Québec.
+                            </p>
+                        </div>
+
+                        <div className="relative">
+                            <Carousel 
+                                opts={{
+                                    align: "start",
+                                    loop: true,
+                                }}
+                                className="w-full"
+                            >
+                                <CarouselContent className="-ml-8">
+                                    {/* Card 001: Mise en service - Navy Style */}
+                                    <CarouselItem className="pl-8 md:basis-1/2 lg:basis-1/3">
+                                        <div className="group block relative bg-[#1e3a8a] rounded-[2.5rem] p-10 h-[720px] flex flex-col transition-all duration-700 hover:-translate-y-4 shadow-2xl overflow-hidden">
+                                            <div className="space-y-0 relative z-10 flex flex-col h-full">
+                                                <div className="h-20"></div>
+                                                <div className="w-full h-48 overflow-hidden rounded-3xl shadow-lg relative">
+                                                    <img 
+                                                        src={waterSoftenerInstallImg} 
+                                                        alt="Mise en service experte" 
+                                                        className="w-full h-full object-cover transition-transform duration-[3000ms] group-hover:scale-110"
+                                                    />
+                                                </div>
+                                                <div className="space-y-6 pt-8">
+                                                    <h3 className="text-3xl font-bold text-white leading-[1.1] group-hover:text-blue-200 transition-colors">
+                                                        Mise en service certifiée
+                                                    </h3>
+                                                    <p className="text-white/70 text-sm leading-relaxed">
+                                                        L'installation par un expert certifié garantit la validité de votre garantie et la performance optimale de votre système dès le premier jour.
+                                                    </p>
+                                                    <ul className="space-y-2 pt-4">
+                                                        {["Calibration précise", "Tests d'étanchéité", "Formation utilisateur"].map((benefit, i) => (
+                                                            <li key={i} className="flex items-center gap-2 text-xs font-medium text-white/60">
+                                                                <CheckCircle2 className="w-3 h-3 text-blue-400" />
+                                                                {benefit}
+                                                            </li>
+                                                        ))}
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </CarouselItem>
+
+                                    {/* Card 002: Entretien préventif - Royal Blue Style */}
+                                    <CarouselItem className="pl-8 md:basis-1/2 lg:basis-1/3">
+                                        <div className="group block relative bg-[#2563eb] rounded-[2.5rem] p-10 h-[720px] flex flex-col transition-all duration-700 hover:-translate-y-4 shadow-2xl overflow-hidden">
+                                            <div className="space-y-0 relative z-10 flex flex-col h-full">
+                                                <div className="h-20"></div>
+                                                <div className="w-full h-48 overflow-hidden rounded-3xl shadow-lg relative">
+                                                    <img 
+                                                        src={technicianImg} 
+                                                        alt="Entretien préventif" 
+                                                        className="w-full h-full object-cover transition-transform duration-[3000ms] group-hover:scale-110"
+                                                    />
+                                                </div>
+                                                <div className="space-y-6 pt-8">
+                                                    <h3 className="text-3xl font-bold text-white leading-[1.1]">
+                                                        Entretien préventif durable
+                                                    </h3>
+                                                    <p className="text-white/80 text-sm leading-relaxed">
+                                                        Un système bien entretenu dure deux fois plus longtemps. Nos techniciens réalisent un diagnostic complet et le nettoyage de vos composants.
+                                                    </p>
+                                                    <ul className="space-y-2 pt-4">
+                                                        {["Nettoyage résine", "Vérification vannes", "Livraison consommables"].map((benefit, i) => (
+                                                            <li key={i} className="flex items-center gap-2 text-xs font-medium text-white/70">
+                                                                <CheckCircle2 className="w-3 h-3 text-blue-100" />
+                                                                {benefit}
+                                                            </li>
+                                                        ))}
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </CarouselItem>
+
+                                    {/* Card 003: Dépannage - Navy Patterned */}
+                                    <CarouselItem className="pl-8 md:basis-1/2 lg:basis-1/3">
+                                        <div className="group block relative bg-[#1e3a8a] rounded-[2.5rem] p-10 h-[720px] flex flex-col transition-all duration-700 hover:-translate-y-4 shadow-2xl overflow-hidden">
+                                            <div className="absolute inset-0 opacity-10 mix-blend-overlay">
+                                                <div className="w-full h-full bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:20px_20px]" />
+                                            </div>
+                                            <div className="relative z-10 space-y-0 flex flex-col h-full">
+                                                <div className="h-20"></div>
+                                                <div className="w-full h-48 overflow-hidden rounded-3xl shadow-lg relative">
+                                                    <img 
+                                                        src={servicesHero} 
+                                                        alt="Dépannage expert" 
+                                                        className="w-full h-full object-cover transition-transform duration-[3000ms] group-hover:scale-110"
+                                                    />
+                                                </div>
+                                                <div className="space-y-6 pt-8">
+                                                    <h3 className="text-3xl font-bold text-white leading-[1.1] group-hover:text-blue-200 transition-colors">
+                                                        Dépannage expert 24/7
+                                                    </h3>
+                                                    <p className="text-white/70 text-sm leading-relaxed">
+                                                        Votre système montre des signes de fatigue ? Nous intervenons sur toutes les marques du marché pour restaurer la qualité de votre eau.
+                                                    </p>
+                                                    <ul className="space-y-2 pt-4">
+                                                        {["Diagnostic rapide", "Pièces d'origine", "Réparation garantie"].map((benefit, i) => (
+                                                            <li key={i} className="flex items-center gap-2 text-xs font-medium text-white/60">
+                                                                <CheckCircle2 className="w-3 h-3 text-blue-400" />
+                                                                {benefit}
+                                                            </li>
+                                                        ))}
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </CarouselItem>
+
+                                    {/* Card 004: Analyses d'eau - Royal Blue Style */}
+                                    <CarouselItem className="pl-8 md:basis-1/2 lg:basis-1/3">
+                                        <div className="group block relative bg-[#2563eb] rounded-[2.5rem] p-10 h-[720px] flex flex-col transition-all duration-700 hover:-translate-y-4 shadow-2xl overflow-hidden">
+                                            <div className="space-y-0 relative z-10 flex flex-col h-full">
+                                                <div className="h-20"></div>
+                                                <div className="w-full h-48 overflow-hidden rounded-3xl shadow-lg relative">
+                                                    <img 
+                                                        src={labTestImg} 
+                                                        alt="Analyses d'eau expertes" 
+                                                        className="w-full h-full object-cover transition-transform duration-[3000ms] group-hover:scale-110"
+                                                    />
+                                                </div>
+                                                <div className="space-y-6 pt-8">
+                                                    <h3 className="text-3xl font-bold text-white leading-[1.1]">
+                                                        Analyses d'eau expertes
+                                                    </h3>
+                                                    <p className="text-white/80 text-sm leading-relaxed">
+                                                        Évaluez la qualité de votre eau avec des tests certifiés et recevez un diagnostic complet sous 48h pour une solution sur mesure.
+                                                    </p>
+                                                    <ul className="space-y-2 pt-4">
+                                                        {["Tests certifiés", "Rapport détaillé", "Solutions sur-mesure"].map((benefit, i) => (
+                                                            <li key={i} className="flex items-center gap-2 text-xs font-medium text-white/70">
+                                                                <CheckCircle2 className="w-3 h-3 text-blue-100" />
+                                                                {benefit}
+                                                            </li>
+                                                        ))}
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </CarouselItem>
+                                </CarouselContent>
+                                <div className="absolute top-1/2 -translate-y-1/2 left-0 right-0 pointer-events-none">
+                                    <div className="container mx-auto relative h-full">
+                                        <CarouselPrevious className="pointer-events-auto absolute -left-12 lg:-left-20 h-14 w-14 bg-white/90 backdrop-blur-md text-blue-600 border-none shadow-2xl hover:bg-blue-600 hover:text-white transition-all duration-300" />
+                                        <CarouselNext className="pointer-events-auto absolute -right-12 lg:-right-20 h-14 w-14 bg-white/90 backdrop-blur-md text-blue-600 border-none shadow-2xl hover:bg-blue-600 hover:text-white transition-all duration-300" />
                                     </div>
-                                    <span className="text-blue-600 font-black text-[10px] uppercase tracking-[0.2em] mb-4 block">
-                                        {item.subtitle}
-                                    </span>
-                                    <h3 className="text-3xl font-bold text-slate-900 mb-6 group-hover:text-blue-600 transition-colors">
-                                        {item.title}
-                                    </h3>
-                                    <p className="text-slate-500 font-light leading-relaxed mb-8">
-                                        {item.desc}
-                                    </p>
-                                    <ul className="space-y-3 mb-10">
-                                        {item.benefits.map((benefit, i) => (
-                                            <li key={i} className="flex items-center gap-2 text-sm font-medium text-slate-700">
-                                                <CheckCircle2 className="w-4 h-4 text-blue-500" />
-                                                {benefit}
-                                            </li>
-                                        ))}
-                                    </ul>
-                                    <Button variant="link" className="p-0 text-blue-600 font-bold flex items-center gap-2 group-hover:translate-x-2 transition-transform">
-                                        En savoir plus <ChevronRight className="w-4 h-4" />
-                                    </Button>
                                 </div>
-                            ))}
+                            </Carousel>
                         </div>
                     </div>
                 </section>
@@ -215,35 +349,35 @@ const Service = () => {
                         <div className="flex flex-col lg:flex-row-reverse items-center gap-24">
                             <div className="lg:w-1/2 space-y-8">
                                 <h2 className="heading-pro-max text-left text-slate-900">
-                                    <span className="italic font-light text-blue-600 block">Expertise Adoucisseur</span>
-                                    <span className="font-bold block leading-[1.1]">Entretien des systèmes <br />automatiques & centraux.</span>
+                                    <span className="italic font-light text-blue-600 block">Performance & Protection</span>
+                                    <span className="font-bold block leading-[1.1]">Une maintenance d'élite <br />pour vos systèmes d'eau.</span>
                                 </h2>
                                 <p className="body-pro-max text-slate-600 text-justify">
-                                    Les systèmes automatiques de traitement d'eau sont l'épine dorsale de votre maison. Leur complexité mécanique demande une précision d'orfèvre pour garantir une eau douce et pure à chaque instant.
+                                    Optimisez la performance et la longévité de vos adoucisseurs et filtres d'eau partout au Québec. Un entretien régulier par nos techniciens certifiés assure une élimination efficace du calcaire et des contaminants, protège vos installations de plomberie et garantit une eau d'une qualité exceptionnelle pour toute votre famille.
                                 </p>
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-6 gap-x-12">
                                     {[
-                                        { title: "Réparation Valves & Contrôleurs", desc: "Expertise sur toutes les grandes marques (Fleck, Clack, etc.)." },
-                                        { title: "Remplacement des Médias", desc: "Nettoyage ou changement des résines et médias filtrants." },
-                                        { title: "Désinfection du Système", desc: "Traitement antibactérien des lits de média et réservoirs de sel." },
-                                        { title: "Optimisation des Cycles", desc: "Réglages fins pour réduire la consommation d'eau et de sel." }
+                                        { title: "Valves & Contrôleurs", desc: "Expertise multimarques (Fleck, Clack, Autotrol)." },
+                                        { title: "Rebed", desc: "Changement des résines et médias filtrants haute qualité." },
+                                        { title: "Nettoyage et Désinfection", desc: "Traitement antibactérien des réservoirs de sel." },
+                                        { title: "Optimisation Éco", desc: "Réglages fins pour minimiser les rejets d'eau et la consommation de sel." }
                                     ].map((item, i) => (
-                                        <div key={i} className="space-y-2">
-                                            <h4 className="font-bold text-slate-900 border-l-2 border-blue-600 pl-3">{item.title}</h4>
-                                            <p className="text-sm text-slate-500">{item.desc}</p>
+                                        <div key={i} className="space-y-1">
+                                            <h4 className="text-base font-bold text-slate-900 border-l-2 border-blue-600 pl-3">{item.title}</h4>
+                                            <p className="text-xs text-slate-500 font-light">{item.desc}</p>
                                         </div>
                                     ))}
                                 </div>
                                 <div className="pt-6">
-                                    <Button className="rounded-full px-10 h-14 bg-blue-600 hover:bg-blue-700 text-white font-bold">
-                                        Planifier une maintenance centrale
+                                    <Button className="rounded-full px-10 h-14 bg-blue-600 hover:bg-blue-700 text-white font-bold shadow-lg shadow-blue-500/20">
+                                        Planifiez un service
                                     </Button>
                                 </div>
                             </div>
                             <div className="lg:w-1/2">
                                 <div className="relative rounded-[4rem] overflow-hidden aspect-[4/5] shadow-2xl group">
                                     <img 
-                                        src={installationImg} 
+                                        src={waterSoftenerInstallImg} 
                                         className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
                                         alt="Maintenance adoucisseur d'eau Bricareau"
                                     />
@@ -263,41 +397,41 @@ const Service = () => {
                         <div className="flex flex-col lg:flex-row items-center gap-24">
                             <div className="lg:w-1/2 space-y-8">
                                 <h2 className="heading-pro-max text-left text-slate-900">
-                                    <span className="italic font-light text-blue-600 block">Expertise Osmose</span>
-                                    <span className="font-bold block leading-[1.1]">Maintenance des <br />systèmes d'osmose inverse.</span>
+                                    <span className="italic font-light text-blue-600 block">Pureté & Santé</span>
+                                    <span className="font-bold block leading-[1.1]">Savourez une eau d'une <br />pureté exceptionnelle.</span>
                                 </h2>
                                 <p className="body-pro-max text-slate-600 text-justify">
-                                    Pour une eau d'une pureté absolue, votre système d'osmose inverse nécessite un entretien rigoureux. Nos experts s'assurent du bon débit et de la qualité microbiologique de votre réserve d'eau.
+                                    Assurez la pureté cristalline de votre eau potable municipale ou de puits. Le remplacement périodique des membranes et des filtres de votre système d'osmose inverse est essentiel pour éliminer 99% des contaminants et garantir une hygiène irréprochable.
                                 </p>
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-6 gap-x-12">
                                     {[
-                                        { title: "Filtres sédiments & charbon", desc: "Remplacement semestriel pour protéger la membrane." },
-                                        { title: "Membranes TFC", desc: "Test de TDS et remplacement tous les 2 à 3 ans." },
-                                        { title: "Désinfection du réservoir", desc: "Élimination des biofilms pour une eau saine." },
-                                        { title: "Test de Pureté (TDS)", desc: "Vérification instantanée de l'efficacité du système." }
+                                        { title: "Filtres Haute Densité", desc: "Remplacement semestriel pour protéger la membrane." },
+                                        { title: "Membranes TFC", desc: "Tests de pureté et remplacement tous les 2-3 ans." },
+                                        { title: "Biofilm & Hygiène", desc: "Désinfection complète du réservoir de stockage." },
+                                        { title: "Analyse TDS", desc: "Vérification instantanée de l'efficacité de filtration." }
                                     ].map((item, i) => (
-                                        <div key={i} className="space-y-2">
-                                            <h4 className="font-bold text-slate-900 border-l-2 border-blue-600 pl-3">{item.title}</h4>
-                                            <p className="text-sm text-slate-500">{item.desc}</p>
+                                        <div key={i} className="space-y-1">
+                                            <h4 className="text-base font-bold text-slate-900 border-l-2 border-blue-600 pl-3">{item.title}</h4>
+                                            <p className="text-xs text-slate-500 font-light">{item.desc}</p>
                                         </div>
                                     ))}
                                 </div>
                                 <div className="pt-6">
-                                    <Button className="rounded-full px-10 h-14 bg-[#1e3a8a] hover:bg-blue-900 text-white font-bold">
-                                        Réserver un entretien RO
+                                    <Button className="rounded-full px-10 h-14 bg-[#1e3a8a] hover:bg-blue-800 text-white font-bold shadow-lg shadow-blue-500/20">
+                                        Réservez votre entretien
                                     </Button>
                                 </div>
                             </div>
                             <div className="lg:w-1/2">
-                                <div className="relative p-12 bg-slate-50 rounded-[4rem] flex items-center justify-center group overflow-hidden">
+                                <div className="relative rounded-[4rem] overflow-hidden aspect-[4/5] shadow-2xl group bg-slate-50">
                                     <div className="absolute inset-0 bg-blue-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                                     <img 
                                         src={roSystemImg} 
-                                        className="w-full max-w-md h-auto object-contain transition-transform duration-700 group-hover:scale-110 drop-shadow-2xl"
+                                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 drop-shadow-2xl"
                                         alt="Système d'osmose inverse Bricareau"
                                     />
                                     <div className="absolute bottom-8 right-8">
-                                        <div className="w-20 h-20 bg-white rounded-2xl flex items-center justify-center shadow-xl">
+                                        <div className="w-20 h-20 bg-white/90 backdrop-blur-md rounded-2xl flex items-center justify-center shadow-xl">
                                             <Droplets className="w-10 h-10 text-blue-600 animate-pulse" />
                                         </div>
                                     </div>
@@ -313,17 +447,17 @@ const Service = () => {
                         <div className="flex flex-col lg:flex-row-reverse items-center gap-24">
                             <div className="lg:w-1/2 space-y-8">
                                 <h2 className="heading-pro-max text-left text-slate-900">
-                                    <span className="italic font-light text-blue-600 block">Analyses de pointe</span>
-                                    <span className="font-bold block leading-[1.1]">Rendre l'invisible <br />enfin visible.</span>
+                                    <span className="italic font-light text-blue-600 block">Diagnostic & Précision</span>
+                                    <span className="font-bold block leading-[1.1]">Révélez ce que <br />votre eau vous cache.</span>
                                 </h2>
                                 <p className="body-pro-max text-slate-600 text-justify">
-                                    Une eau cristalline peut cacher des contaminants invisibles. Bricareau révolutionne l'analyse d'eau avec des outils de diagnostic digitaux ultra-précis. Que ce soit pour le calcaire, le fer ou le soufre, notre technologie identifie la source exacte du problème pour vous proposer la solution de traitement idéale.
+                                    L'apparence cristalline de votre eau ne garantit pas sa pureté. Bricareau déploie des protocoles d'analyse scientifique pour identifier les contaminants invisibles qui impactent votre santé et vos installations. Du calcaire aux métaux lourds, notre diagnostic digital ultra-précis cible la racine de vos problèmes d'eau pour déployer la solution de traitement parfaitement adaptée.
                                 </p>
                                 <div className="space-y-4">
                                     {[
-                                        "Diagnostic de dureté certifié",
-                                        "Analyse chromatographique des métaux",
-                                        "Rapport d'expertise labo sous 48h"
+                                        "Analyse certifiée de dureté et minéraux",
+                                        "Détection moléculaire des métaux et soufre",
+                                        "Audit technique et rapport d'expertise 48h"
                                     ].map((text, i) => (
                                         <div key={i} className="flex items-center gap-3">
                                             <div className="w-2 h-2 rounded-full bg-blue-600" />
@@ -342,16 +476,13 @@ const Service = () => {
                                 </div>
                             </div>
                             <div className="lg:w-1/2">
-                                <div className="relative rounded-[3rem] overflow-hidden aspect-[16/10] shadow-2xl group">
+                                <div className="relative rounded-[4rem] overflow-hidden aspect-[4/5] shadow-2xl group">
                                     <img 
                                         src={labTestImg} 
                                         className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
                                         alt="Analyse d'eau digitale en laboratoire"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-blue-900/40 to-transparent" />
-                                    <div className="absolute top-6 left-6 px-4 py-2 bg-white/90 backdrop-blur-md rounded-full shadow-lg">
-                                        <span className="text-[10px] font-black text-blue-600 tracking-widest uppercase">Précision 99.9%</span>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -366,62 +497,54 @@ const Service = () => {
                     </div>
 
                     <div className="container mx-auto px-6 relative z-10">
-                        <div className="flex flex-col lg:flex-row gap-20">
-                            {/* Left Content */}
-                            <div className="lg:w-2/5 text-left space-y-8">
-                                <div className="space-y-4">
-                                    <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.2em]">
-                                        Assistance Client
-                                    </span>
-                                    <h2 className="heading-pro-max text-left mb-8">
-                                        <span className="italic font-light text-[#2563eb] block text-left">Planifiez votre</span>
-                                        <span className="font-bold text-[#1e3a8a] block">rendez-vous.</span>
-                                    </h2>
-                                </div>
-                                
-                                <p className="body-pro-max text-left">
-                                    Besoin d'une installation, d'une réparation ou d'un simple changement de filtres ? Nos experts interviennent sur tous les types d'équipements, même ceux que nous n'avons pas installés.
-                                </p>
+                        <div className="max-w-4xl mx-auto text-center mb-16 space-y-6">
+                            <h2 className="heading-pro-max">
+                                <span className="italic font-light text-[#2563eb] block">Planifiez votre</span>
+                                <span className="font-bold text-[#1e3a8a] block">rendez-vous de service.</span>
+                            </h2>
+                            <p className="body-pro-max max-w-2xl mx-auto">
+                                Besoin d'une installation, d'une réparation ou d'un simple changement de filtres ? Nos experts interviennent sur tous les types d'équipements, partout au Québec.
+                            </p>
+                        </div>
 
-                                <div className="space-y-6 pt-4">
-                                    <div className="flex items-start gap-4">
-                                        <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center shadow-lg text-blue-600">
-                                            <PhoneCall className="w-6 h-6" />
-                                        </div>
-                                        <div>
-                                            <h4 className="font-bold text-slate-900">Urgence technique</h4>
-                                            <p className="text-blue-600 font-bold text-xl">1-800-BRICAREAU</p>
-                                        </div>
+                        <div className="flex flex-col lg:flex-row items-start gap-16 lg:gap-20">
+                            {/* Left Icons Column */}
+                            <div className="lg:w-1/3 space-y-6">
+                                <div className="flex items-center gap-4 bg-white/80 backdrop-blur-md p-6 rounded-3xl shadow-sm border border-slate-100 w-full group hover:shadow-md transition-all">
+                                    <div className="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-blue-200 group-hover:scale-110 transition-transform">
+                                        <PhoneCall className="w-6 h-6" />
                                     </div>
-                                    <div className="flex items-start gap-4">
-                                        <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center shadow-lg text-blue-600">
-                                            <Calendar className="w-6 h-6" />
-                                        </div>
-                                        <div>
-                                            <h4 className="font-bold text-slate-900">Disponibilités</h4>
-                                            <p className="text-slate-500 text-sm">Lun - Ven : 8h00 - 18h00</p>
-                                        </div>
+                                    <div className="text-left">
+                                        <h4 className="font-bold text-slate-900 text-sm">Urgence technique</h4>
+                                        <p className="text-blue-600 font-bold text-lg">1-855-264-9328</p>
                                     </div>
-                                    <div className="flex items-start gap-4">
-                                        <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center shadow-lg text-blue-600">
-                                            <MapPin className="w-6 h-6" />
-                                        </div>
-                                        <div>
-                                            <h4 className="font-bold text-slate-900">Zone d'intervention</h4>
-                                            <p className="text-slate-500 text-sm">Grand Montréal et partout au Québec</p>
-                                        </div>
+                                </div>
+                                <div className="flex items-center gap-4 bg-white/80 backdrop-blur-md p-6 rounded-3xl shadow-sm border border-slate-100 w-full group hover:shadow-md transition-all">
+                                    <div className="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-blue-200 group-hover:scale-110 transition-transform">
+                                        <Calendar className="w-6 h-6" />
+                                    </div>
+                                    <div className="text-left">
+                                        <h4 className="font-bold text-slate-900 text-sm">Disponibilités</h4>
+                                        <p className="text-slate-500 text-sm">Lun - Ven : 8h00 - 18h00</p>
+                                    </div>
+                                </div>
+                                <div className="flex items-center gap-4 bg-white/80 backdrop-blur-md p-6 rounded-3xl shadow-sm border border-slate-100 w-full group hover:shadow-md transition-all">
+                                    <div className="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-blue-200 group-hover:scale-110 transition-transform">
+                                        <MapPin className="w-6 h-6" />
+                                    </div>
+                                    <div className="text-left">
+                                        <h4 className="font-bold text-slate-900 text-sm">Zone d'intervention</h4>
+                                        <p className="text-slate-500 text-sm">Partout au Grand Montréal et ses environs</p>
                                     </div>
                                 </div>
                             </div>
 
                             {/* Right Form Card */}
-                            <div className="lg:w-3/5">
-                                <div className="bg-white p-10 md:p-14 rounded-[3rem] shadow-2xl border border-slate-100 relative">
+                            <div className="lg:w-2/3 w-full">
+                                <div className="bg-white p-10 md:p-14 rounded-[3rem] shadow-2xl border border-slate-100 relative overflow-hidden">
                                      <div className="absolute -top-6 -right-6 w-32 h-32 bg-blue-600/5 rounded-full -z-10 animate-pulse" />
                                     
-                                    <h3 className="text-3xl font-bold text-slate-900 mb-8 text-left">Parlez-nous de votre projet.</h3>
-
-                                    <form className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                     <form className="grid grid-cols-1 md:grid-cols-2 gap-8">
                                         <div className="space-y-2 text-left">
                                             <Label htmlFor="fname" className="text-xs font-black uppercase tracking-widest text-slate-400 ml-1">Prénom*</Label>
                                             <Input id="fname" className="h-14 bg-slate-50 border-none rounded-2xl focus:ring-2 focus:ring-blue-600 focus:bg-white transition-all shadow-inner" />
@@ -456,9 +579,18 @@ const Service = () => {
                                             <Label htmlFor="message" className="text-xs font-black uppercase tracking-widest text-slate-400 ml-1">Détails de votre demande</Label>
                                             <Textarea id="message" className="min-h-[120px] bg-slate-50 border-none rounded-2xl focus:ring-2 focus:ring-blue-600 focus:bg-white transition-all shadow-inner" />
                                         </div>
-                                        <div className="md:col-span-2 text-left pt-4">
+                                        <div className="md:col-span-2 space-y-4 pt-4">
+                                            <div className="flex items-start space-x-4 bg-slate-50 p-6 rounded-[2rem] border border-slate-100 transition-all hover:bg-slate-100/50">
+                                                <Checkbox id="consent" className="mt-1 border-slate-300 data-[state=checked]:bg-blue-600 data-[state=checked]:border-blue-600" />
+                                                <Label htmlFor="consent" className="text-xs leading-relaxed text-slate-500 font-light cursor-pointer select-none">
+                                                    En soumettant ce formulaire, j'accepte que mes données soient utilisées pour me recontacter dans le cadre de ma demande. Pour en savoir plus, consultez nos <NavLink to="/conditions-utilisation" className="text-blue-600 font-bold hover:underline">Conditions d'utilisation</NavLink> et notre <NavLink to="/politique-de-confidentialite" className="text-blue-600 font-bold hover:underline">Politique de confidentialité</NavLink>.
+                                                </Label>
+                                            </div>
+                                        </div>
+
+                                        <div className="md:col-span-2 text-left pt-2">
                                             <Button className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-12 h-16 text-lg font-bold shadow-xl shadow-blue-500/20 transition-all hover:scale-105 active:scale-95 group">
-                                                Envoyer ma demande
+                                                Envoyez
                                                 <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
                                             </Button>
                                         </div>

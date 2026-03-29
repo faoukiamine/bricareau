@@ -76,7 +76,7 @@ const FiltresDeRemplacement = () => {
                                                 )}
                                             </div>
                                             <div className="p-6 space-y-4 flex flex-col flex-grow border-t-2 border-transparent group-hover:border-blue-600 transition-colors">
-                                                <h3 className="text-slate-900 text-center group-hover:text-blue-600 transition-colors tracking-tight">
+                                                <h3 className="text-slate-900 text-center group-hover:text-blue-600 transition-colors tracking-tight text-lg font-bold">
                                                     {item.name}
                                                 </h3>
                                             </div>

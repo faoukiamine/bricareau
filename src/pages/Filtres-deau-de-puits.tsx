@@ -218,8 +218,8 @@ const FiltresPuits = () => {
                                                 L'eau de votre puits est le fruit d'une géologie complexe. Là où d'autres voient simplement du fer ou du calcaire, Bricareau analyse la synergie des minéraux. Notre approche bridge l'écart entre une eau brute, parfois agressive, et une ressource précieuse, revitalisante et protectrice pour votre foyer. 
                                             </p>
 
-                                            <div className="pt-6 lg:pt-10 opacity-90">
-                                                <p className="text-xl lg:text-3xl text-blue-600/90 font-light italic" style={{ fontFamily: '"Cormorant Garamond", serif', letterSpacing: '-0.01em' }}>
+                                            <div className="pt-4 lg:pt-6 opacity-90">
+                                                <p className="text-lg lg:text-xl text-blue-600/90 font-light italic" style={{ fontFamily: '"Cormorant Garamond", serif', letterSpacing: '-0.01em' }}>
                                                     "L'eau qui court sur la pierre s'oublie, l'eau qui passe par le filtre se purifie."
                                                 </p>
                                             </div>

@@ -161,6 +161,13 @@ All colors MUST be HSL.
   .body-pro-max {
     @apply text-[16px] md:text-[18px] lg:text-[20px] leading-snug font-light text-slate-600;
   }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
   @keyframes heartbeat {
 
     0%,

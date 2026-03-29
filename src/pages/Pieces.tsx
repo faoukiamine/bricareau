@@ -1,7 +1,8 @@
 import Header from "@/components/Header";
 import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 import Footer from "@/components/Footer";
-import { Package, Search } from "lucide-react";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Package, Search, ArrowRight, ChevronRight, MessageSquare, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import polypropyleneIcon from "@/assets/Polypropylene.svg";
@@ -171,73 +172,141 @@ const Pieces = () => {
                     </div>
                 </section>
 
-                {/* Parts Categories */}
-                {partCategories.map((category, categoryIndex) => (
-                    <section key={categoryIndex} className={`pb-12 md:pb-16 ${categoryIndex === 0 ? 'pt-20' : 'pt-12 md:pt-16'}`}>
-                        <div className="container mx-auto px-4">
-                            <h2 className="text-foreground mb-8">
-                                {category.name}
+                <section className="py-24 bg-white relative overflow-hidden">
+                    <div className="container mx-auto px-4">
+                        <div className="max-w-4xl mx-auto text-center mb-16">
+                            <h2 className="heading-pro-max mb-8 text-center">
+                                <span className="italic font-light text-[#2563eb] block">Explorez nos</span>
+                                <span className="font-bold text-[#1e3a8a] block">catégories de pièces</span>
                             </h2>
-                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-                                {category.items.map((item, itemIndex) => (
-                                    <div
-                                        key={itemIndex}
-                                        className="bg-card border border-border rounded-lg p-6 hover:shadow-lg transition-shadow"
+                            <p className="body-pro-max text-slate-500 max-w-3xl mx-auto">
+                                Gardez votre système de traitement d'eau à son summum de performance avec nos composantes de qualité supérieure. Nous avons rigoureusement sélectionné chaque pièce pour sa durabilité et sa conformité aux normes les plus exigeantes. Explorez nos catégories pour identifier les solutions de remplacement authentiques — des cartouches filtrantes de précision aux vannes de contrôle intelligentes — conçues pour assurer la pureté et la clarté de votre eau, jour après jour.
+                            </p>
+                        </div>
+
+                        <Tabs defaultValue="Tout" className="flex flex-col lg:flex-row gap-12 text-center lg:text-left">
+                            <aside className="lg:w-1/4">
+                                <TabsList className="flex flex-col items-stretch h-auto w-full p-2 bg-slate-50/50 backdrop-blur-md rounded-3xl border border-slate-100 shadow-sm lg:sticky lg:top-32 gap-1">
+                                    <TabsTrigger
+                                        value="Tout"
+                                        className="w-full justify-start px-6 py-3.5 rounded-2xl text-[14px] font-bold tracking-tight transition-all duration-300 data-[state=active]:bg-white data-[state=active]:text-[#1e3a8a] data-[state=active]:shadow-lg text-slate-500 hover:text-[#2563eb]"
                                     >
-                                        <div className="aspect-square bg-[#f0f4f8] rounded-lg mb-4 flex items-center justify-center p-4">
-                                            {item.image ? (
-                                                <img
-                                                    src={item.image}
-                                                    alt={`${item.name} - Bricareau`}
-                                                    className="w-full h-full object-contain"
-                                                    style={{ mixBlendMode: 'multiply' }}
-                                                />
-                                            ) : (
-                                                <Package className="h-16 w-16 text-slate-400" />
-                                            )}
+                                        <div className="flex items-center gap-3">
+                                            <Package className="h-4 w-4" />
+                                            <span>Toutes les catégories</span>
                                         </div>
-                                        <h3 className="text-foreground">
-                                            {item.name}
-                                        </h3>
+                                    </TabsTrigger>
+                                    {partCategories.map((category) => (
+                                        <TabsTrigger
+                                            key={category.name}
+                                            value={category.name}
+                                            className="w-full justify-start px-6 py-3.5 rounded-2xl text-[14px] font-bold tracking-tight transition-all duration-300 data-[state=active]:bg-white data-[state=active]:text-[#1e3a8a] data-[state=active]:shadow-lg text-slate-500 hover:text-[#2563eb]"
+                                        >
+                                            <div className="flex items-center gap-3 text-left">
+                                                <div className="w-1.5 h-1.5 rounded-full bg-blue-400 opacity-40" />
+                                                <span>{category.name}</span>
+                                            </div>
+                                        </TabsTrigger>
+                                    ))}
+                                </TabsList>
+                            </aside>
+
+                            <div className="lg:w-3/4">
+                                <TabsContent 
+                                    value="Tout"
+                                    className="animate-in fade-in slide-in-from-bottom-4 duration-500"
+                                >
+                                    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+                                        {partCategories.flatMap(cat => cat.items).map((item, itemIndex) => (
+                                                <div
+                                                    key={itemIndex}
+                                                    className="group bg-white border border-slate-100 rounded-3xl overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full cursor-pointer"
+                                                >
+                                                    <div className="relative h-64 overflow-hidden bg-slate-50 flex items-center justify-center p-8">
+                                                        <div className="absolute inset-0 bg-blue-600/5 opacity-0 group-hover:opacity-100 transition-opacity" />
+                                                        {item.image ? (
+                                                            <img
+                                                                src={item.image}
+                                                                alt={`${item.name} - Bricareau`}
+                                                                className="max-h-full object-contain relative z-10 group-hover:scale-110 transition-transform duration-700 mix-blend-multiply"
+                                                            />
+                                                        ) : (
+                                                            <Package className="h-16 w-16 text-slate-300 relative z-10" />
+                                                        )}
+                                                    </div>
+                                                    <div className="p-6 space-y-4 flex flex-col flex-grow border-t-2 border-transparent group-hover:border-blue-600 transition-colors">
+                                                        <h3 className="text-lg font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
+                                                            {item.name}
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                        ))}
                                     </div>
+                                </TabsContent>
+
+                                {partCategories.map((category, index) => (
+                                    <TabsContent 
+                                        key={index}
+                                        value={category.name}
+                                        className="animate-in fade-in slide-in-from-bottom-4 duration-500"
+                                    >
+                                        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+                                            {category.items.map((item, itemIndex) => (
+                                                    <div
+                                                        key={itemIndex}
+                                                        className="group bg-white border border-slate-100 rounded-3xl overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full cursor-pointer"
+                                                    >
+                                                        <div className="relative h-64 overflow-hidden bg-slate-50 flex items-center justify-center p-8">
+                                                            <div className="absolute inset-0 bg-blue-600/5 opacity-0 group-hover:opacity-100 transition-opacity" />
+                                                            {item.image ? (
+                                                                <img
+                                                                    src={item.image}
+                                                                    alt={`${item.name} - Bricareau`}
+                                                                    className="max-h-full object-contain relative z-10 group-hover:scale-110 transition-transform duration-700 mix-blend-multiply"
+                                                                />
+                                                            ) : (
+                                                                <Package className="h-16 w-16 text-slate-300 relative z-10" />
+                                                            )}
+                                                        </div>
+                                                        <div className="p-6 space-y-4 flex flex-col flex-grow border-t-2 border-transparent group-hover:border-blue-600 transition-colors">
+                                                            <h3 className="text-lg font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
+                                                                {item.name}
+                                                            </h3>
+                                                        </div>
+                                                    </div>
+                                            ))}
+                                        </div>
+                                    </TabsContent>
                                 ))}
                             </div>
-                        </div>
-                    </section>
-                ))}
+                        </Tabs>
+                    </div>
+                </section>
 
                 {/* Help Section */}
                 <section className="py-12 md:py-16 bg-slate-50">
                     <div className="container mx-auto px-4">
                         <div className="max-w-4xl mx-auto">
-                            <h2 className="text-slate-900 mb-8 md:leading-[48px] text-center">
-                                Besoin d'aide pour trouver la bonne pièce ?
+                            <h2 className="text-center mb-12">
+                                <span className="font-light italic text-[#00b4ff] block mb-2 sm:mb-0 sm:inline">Besoin d'aide pour </span>
+                                <span className="font-bold text-[#1e3a8a] block sm:inline">trouver la bonne pièce ?</span>
                             </h2>
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                                <div className="bg-white p-6 rounded-lg text-center">
-                                    <h3 className="mb-2">Par téléphone</h3>
-                                    <p className="text-sm text-muted-foreground mb-4">
-                                        Nos experts vous aident à identifier la pièce
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+                                <div className="bg-white p-8 rounded-3xl text-center shadow-sm hover:shadow-md transition-shadow border border-slate-100">
+                                    <h3 className="text-lg font-bold text-slate-900 mb-3">Par téléphone</h3>
+                                    <p className="text-sm text-slate-500 mb-6 font-light">
+                                        Nos experts vous aident à identifier la pièce immédiatement.
                                     </p>
-                                    <Button variant="outline" asChild>
+                                    <Button asChild className="rounded-full px-8">
                                         <a href="tel:18552649328">1 855 264 9328</a>
                                     </Button>
                                 </div>
-                                <div className="bg-white p-6 rounded-lg text-center">
-                                    <h3 className="mb-2">Manuels</h3>
-                                    <p className="text-sm text-muted-foreground mb-4">
-                                        Consultez les schémas de pièces
+                                <div className="bg-white p-8 rounded-3xl text-center shadow-sm hover:shadow-md transition-shadow border border-slate-100">
+                                    <h3 className="text-lg font-bold text-slate-900 mb-3">Service</h3>
+                                    <p className="text-sm text-slate-500 mb-6 font-light">
+                                        Laissez nos techniciens certifiés s'en occuper pour vous.
                                     </p>
-                                    <Button variant="outline" asChild>
-                                        <a href="/manuels">Voir les manuels</a>
-                                    </Button>
-                                </div>
-                                <div className="bg-white p-6 rounded-lg text-center">
-                                    <h3 className="mb-2">Service</h3>
-                                    <p className="text-sm text-muted-foreground mb-4">
-                                        Laissez nos techniciens s'en occuper
-                                    </p>
-                                    <Button variant="outline" asChild>
+                                    <Button asChild className="rounded-full px-8">
                                         <a href="/service">Planifier un service</a>
                                     </Button>
                                 </div>
