@@ -130,7 +130,7 @@ All colors MUST be HSL.
   }
 
   h2 {
-    @apply text-[28px] md:text-[36px] lg:text-[48px] leading-[1.2] font-bold tracking-tight;
+    @apply text-[28px] md:text-[36px] lg:text-[48px] leading-[1.085] font-bold tracking-tight;
   }
 
   h3 {

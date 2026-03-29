@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
+import Footer from "@/components/Footer";
 import { 
     ArrowRight, 
     ChevronRight, 
@@ -23,7 +23,9 @@ import servicesHero from "@/assets/SERVICES.jpg";
 import technicianImg from "@/assets/discover_expert.jpg";
 import waterSoftenerInstallImg from "@/assets/Water-Softener-installation.jpg";
 import roSystemImg from "@/assets/reverse osmosis system_11062146.png";
+import roTechnicianImg from "@/assets/technicien repare osmoseur.avif";
 import labTestImg from "@/assets/test-laboratoire-diligence-inspection-750x500.jpg";
+import diagnosticImg from "@/assets/step-diagnostic.png";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
@@ -96,16 +98,19 @@ const Service = () => {
                     />
                     <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-slate-900/40 to-transparent" />
                     
-                    <div className="container mx-auto px-6 relative z-10">
+                    <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none hidden lg:block">
+                        <div className="container mx-auto px-6 pointer-events-auto">
+                            <GlobalBreadcrumbs variant="dark" />
+                        </div>
+                    </div>
+
+                    <div className="container relative z-10 mx-auto px-6 h-full flex items-center pt-32 pb-20">
                         <div className="max-w-3xl">
-                             <div className="mb-8 animate-in fade-in slide-in-from-left-4 duration-700">
-                                <GlobalBreadcrumbs variant="light" />
-                            </div>
                             <h1 className="heading-pro-max text-white text-left mb-6 [text-shadow:_0_2px_10px_rgb(0_0_0_/_20%)] animate-in fade-in slide-in-from-left-8 duration-1000">
                                 <span className="italic font-light text-blue-400 block">Expertise & Sérénité</span>
-                                <span className="font-bold block leading-[1.1]">Des services dédiés à <br />votre tranquillité.</span>
+                                <span className="font-bold text-white block">Des services dédiés à <br />votre tranquillité.</span>
                             </h1>
-                            <p className="body-pro-max text-white/80 text-left mb-10 max-w-xl animate-in fade-in slide-in-from-left-12 duration-1200">
+                            <p className="text-white text-left mb-10 max-w-xl animate-in fade-in slide-in-from-left-12 duration-1200">
                                 Bricareau s'engage à vos côtés pour simplifier le suivi, l'entretien et la performance de vos installations d'eau, partout au Québec.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 animate-in fade-in slide-in-from-top-8 duration-1000 delay-500">
@@ -127,7 +132,7 @@ const Service = () => {
                 <section className="py-24 bg-white relative overflow-hidden">
                     <div className="container mx-auto px-6">
                         <div className="max-w-4xl mx-auto text-center mb-24 space-y-6">
-                            <h2 className="heading-pro-max">
+                            <h2 className="heading">
                                 <span className="italic font-light text-[#2563eb] block">Une expertise complète</span>
                                 <span className="font-bold text-[#1e3a8a] block">pour votre eau</span>
                             </h2>
@@ -152,9 +157,9 @@ const Service = () => {
                                                 <div className="h-20"></div>
                                                 <div className="w-full h-48 overflow-hidden rounded-3xl shadow-lg relative">
                                                     <img 
-                                                        src={waterSoftenerInstallImg} 
-                                                        alt="Mise en service experte" 
-                                                        className="w-full h-full object-cover transition-transform duration-[3000ms] group-hover:scale-110"
+                                                        src={technicianImg} 
+                                                        alt="Expertise technique Bricareau" 
+                                                        className="w-full h-full object-cover"
                                                     />
                                                 </div>
                                                 <div className="space-y-6 pt-8">
@@ -164,7 +169,7 @@ const Service = () => {
                                                     <p className="text-white/70 text-sm leading-relaxed">
                                                         L'installation par un expert certifié garantit la validité de votre garantie et la performance optimale de votre système dès le premier jour.
                                                     </p>
-                                                    <ul className="space-y-2 pt-4">
+                                                    <ul className="space-y-2 pt-1">
                                                         {["Calibration précise", "Tests d'étanchéité", "Formation utilisateur"].map((benefit, i) => (
                                                             <li key={i} className="flex items-center gap-2 text-xs font-medium text-white/60">
                                                                 <CheckCircle2 className="w-3 h-3 text-blue-400" />
@@ -182,21 +187,14 @@ const Service = () => {
                                         <div className="group block relative bg-[#2563eb] rounded-[2.5rem] p-10 h-[720px] flex flex-col transition-all duration-700 hover:-translate-y-4 shadow-2xl overflow-hidden">
                                             <div className="space-y-0 relative z-10 flex flex-col h-full">
                                                 <div className="h-20"></div>
-                                                <div className="w-full h-48 overflow-hidden rounded-3xl shadow-lg relative">
-                                                    <img 
-                                                        src={technicianImg} 
-                                                        alt="Entretien préventif" 
-                                                        className="w-full h-full object-cover transition-transform duration-[3000ms] group-hover:scale-110"
-                                                    />
-                                                </div>
-                                                <div className="space-y-6 pt-8">
+                                                <div className="space-y-6">
                                                     <h3 className="text-3xl font-bold text-white leading-[1.1]">
                                                         Entretien préventif durable
                                                     </h3>
                                                     <p className="text-white/80 text-sm leading-relaxed">
                                                         Un système bien entretenu dure deux fois plus longtemps. Nos techniciens réalisent un diagnostic complet et le nettoyage de vos composants.
                                                     </p>
-                                                    <ul className="space-y-2 pt-4">
+                                                    <ul className="space-y-2 pt-1 mb-12">
                                                         {["Nettoyage résine", "Vérification vannes", "Livraison consommables"].map((benefit, i) => (
                                                             <li key={i} className="flex items-center gap-2 text-xs font-medium text-white/70">
                                                                 <CheckCircle2 className="w-3 h-3 text-blue-100" />
@@ -204,6 +202,13 @@ const Service = () => {
                                                             </li>
                                                         ))}
                                                     </ul>
+                                                </div>
+                                                <div className="w-full h-48 overflow-hidden rounded-3xl shadow-lg mt-12 relative">
+                                                    <img 
+                                                        src={waterSoftenerInstallImg} 
+                                                        alt="Entretien de système d'eau" 
+                                                        className="w-full h-full object-cover"
+                                                    />
                                                 </div>
                                             </div>
                                         </div>
@@ -219,9 +224,9 @@ const Service = () => {
                                                 <div className="h-20"></div>
                                                 <div className="w-full h-48 overflow-hidden rounded-3xl shadow-lg relative">
                                                     <img 
-                                                        src={servicesHero} 
-                                                        alt="Dépannage expert" 
-                                                        className="w-full h-full object-cover transition-transform duration-[3000ms] group-hover:scale-110"
+                                                        src={labTestImg} 
+                                                        alt="Diagnostic expert" 
+                                                        className="w-full h-full object-cover"
                                                     />
                                                 </div>
                                                 <div className="space-y-6 pt-8">
@@ -231,7 +236,7 @@ const Service = () => {
                                                     <p className="text-white/70 text-sm leading-relaxed">
                                                         Votre système montre des signes de fatigue ? Nous intervenons sur toutes les marques du marché pour restaurer la qualité de votre eau.
                                                     </p>
-                                                    <ul className="space-y-2 pt-4">
+                                                    <ul className="space-y-2 pt-1">
                                                         {["Diagnostic rapide", "Pièces d'origine", "Réparation garantie"].map((benefit, i) => (
                                                             <li key={i} className="flex items-center gap-2 text-xs font-medium text-white/60">
                                                                 <CheckCircle2 className="w-3 h-3 text-blue-400" />
@@ -249,21 +254,14 @@ const Service = () => {
                                         <div className="group block relative bg-[#2563eb] rounded-[2.5rem] p-10 h-[720px] flex flex-col transition-all duration-700 hover:-translate-y-4 shadow-2xl overflow-hidden">
                                             <div className="space-y-0 relative z-10 flex flex-col h-full">
                                                 <div className="h-20"></div>
-                                                <div className="w-full h-48 overflow-hidden rounded-3xl shadow-lg relative">
-                                                    <img 
-                                                        src={labTestImg} 
-                                                        alt="Analyses d'eau expertes" 
-                                                        className="w-full h-full object-cover transition-transform duration-[3000ms] group-hover:scale-110"
-                                                    />
-                                                </div>
-                                                <div className="space-y-6 pt-8">
+                                                <div className="space-y-6">
                                                     <h3 className="text-3xl font-bold text-white leading-[1.1]">
                                                         Analyses d'eau expertes
                                                     </h3>
                                                     <p className="text-white/80 text-sm leading-relaxed">
                                                         Évaluez la qualité de votre eau avec des tests certifiés et recevez un diagnostic complet sous 48h pour une solution sur mesure.
                                                     </p>
-                                                    <ul className="space-y-2 pt-4">
+                                                    <ul className="space-y-2 pt-1 mb-12">
                                                         {["Tests certifiés", "Rapport détaillé", "Solutions sur-mesure"].map((benefit, i) => (
                                                             <li key={i} className="flex items-center gap-2 text-xs font-medium text-white/70">
                                                                 <CheckCircle2 className="w-3 h-3 text-blue-100" />
@@ -271,6 +269,13 @@ const Service = () => {
                                                             </li>
                                                         ))}
                                                     </ul>
+                                                </div>
+                                                <div className="w-full h-48 overflow-hidden rounded-3xl shadow-lg mt-12 relative">
+                                                    <img 
+                                                        src={servicesHero} 
+                                                        alt="Analyses de laboratoire" 
+                                                        className="w-full h-full object-cover"
+                                                    />
                                                 </div>
                                             </div>
                                         </div>
@@ -296,7 +301,7 @@ const Service = () => {
                     <div className="container mx-auto px-6 relative z-10">
                         <div className="flex flex-col lg:flex-row items-center gap-20">
                             <div className="lg:w-1/2 space-y-8">
-                                <h2 className="heading-pro-max text-white text-left">
+                                <h2 className="heading">
                                     <span className="italic font-light text-blue-400 block">Bricareau Care</span>
                                     <span className="font-bold block leading-[1.1]">Contrats d'entretien <br />All-Inclusive.</span>
                                 </h2>
@@ -320,13 +325,13 @@ const Service = () => {
 
                                 <div className="pt-6">
                                     <Button className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-12 h-14 text-lg font-bold">
-                                        Découvrir les forfaits
+                                        Parlez avec un conseiller
                                     </Button>
                                 </div>
                             </div>
 
                             <div className="lg:w-1/2 relative group">
-                                <div className="relative z-10 rounded-[4rem] overflow-hidden aspect-square shadow-2xl transition-transform duration-700 group-hover:scale-[1.02]">
+                                <div className="relative z-10 rounded-[4rem] overflow-hidden aspect-square shadow-2xl">
                                     <img 
                                         src={technicianImg} 
                                         className="w-full h-full object-cover"
@@ -335,8 +340,8 @@ const Service = () => {
                                     <div className="absolute inset-0 bg-blue-900/10 mix-blend-multiply" />
                                 </div>
                                 <div className="absolute -bottom-10 -right-10 w-48 h-48 bg-blue-600 rounded-full flex flex-col items-center justify-center text-center p-6 shadow-2xl z-20 border-8 border-slate-900">
-                                    <span className="text-4xl font-black block">10+</span>
-                                    <span className="text-[10px] font-bold uppercase tracking-widest block">Ans de sérénité</span>
+                                    <span className="text-4xl font-black block">+25</span>
+                                    <span className="text-[10px] font-bold uppercase tracking-widest block">Ans de service</span>
                                 </div>
                             </div>
                         </div>
@@ -348,9 +353,9 @@ const Service = () => {
                     <div className="container mx-auto px-6">
                         <div className="flex flex-col lg:flex-row-reverse items-center gap-24">
                             <div className="lg:w-1/2 space-y-8">
-                                <h2 className="heading-pro-max text-left text-slate-900">
+                                <h2 className="text-2xl md:text-3xl lg:text-[40px] font-sans tracking-tight leading-tight text-left text-slate-900 mb-8">
                                     <span className="italic font-light text-blue-600 block">Performance & Protection</span>
-                                    <span className="font-bold block leading-[1.1]">Une maintenance d'élite <br />pour vos systèmes d'eau.</span>
+                                    <span className="font-bold text-[#1e3a8a] block">Une maintenance d'élite <br />pour vos systèmes d'eau.</span>
                                 </h2>
                                 <p className="body-pro-max text-slate-600 text-justify">
                                     Optimisez la performance et la longévité de vos adoucisseurs et filtres d'eau partout au Québec. Un entretien régulier par nos techniciens certifiés assure une élimination efficace du calcaire et des contaminants, protège vos installations de plomberie et garantit une eau d'une qualité exceptionnelle pour toute votre famille.
@@ -378,7 +383,7 @@ const Service = () => {
                                 <div className="relative rounded-[4rem] overflow-hidden aspect-[4/5] shadow-2xl group">
                                     <img 
                                         src={waterSoftenerInstallImg} 
-                                        className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                                        className="w-full h-full object-cover"
                                         alt="Maintenance adoucisseur d'eau Bricareau"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-[#1e3a8a]/40 to-transparent" />
@@ -396,9 +401,9 @@ const Service = () => {
                     <div className="container mx-auto px-6">
                         <div className="flex flex-col lg:flex-row items-center gap-24">
                             <div className="lg:w-1/2 space-y-8">
-                                <h2 className="heading-pro-max text-left text-slate-900">
+                                <h2 className="text-2xl md:text-3xl lg:text-[40px] font-sans tracking-tight leading-tight text-left text-slate-900 mb-8">
                                     <span className="italic font-light text-blue-600 block">Pureté & Santé</span>
-                                    <span className="font-bold block leading-[1.1]">Savourez une eau d'une <br />pureté exceptionnelle.</span>
+                                    <span className="font-bold text-[#1e3a8a] block">Savourez une eau d'une <br />pureté exceptionnelle.</span>
                                 </h2>
                                 <p className="body-pro-max text-slate-600 text-justify">
                                     Assurez la pureté cristalline de votre eau potable municipale ou de puits. Le remplacement périodique des membranes et des filtres de votre système d'osmose inverse est essentiel pour éliminer 99% des contaminants et garantir une hygiène irréprochable.
@@ -426,9 +431,9 @@ const Service = () => {
                                 <div className="relative rounded-[4rem] overflow-hidden aspect-[4/5] shadow-2xl group bg-slate-50">
                                     <div className="absolute inset-0 bg-blue-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                                     <img 
-                                        src={roSystemImg} 
-                                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 drop-shadow-2xl"
-                                        alt="Système d'osmose inverse Bricareau"
+                                        src={roTechnicianImg} 
+                                        className="w-full h-full object-cover drop-shadow-2xl"
+                                        alt="Maintenance système d'osmose inverse"
                                     />
                                     <div className="absolute bottom-8 right-8">
                                         <div className="w-20 h-20 bg-white/90 backdrop-blur-md rounded-2xl flex items-center justify-center shadow-xl">
@@ -446,18 +451,18 @@ const Service = () => {
                     <div className="container mx-auto px-6">
                         <div className="flex flex-col lg:flex-row-reverse items-center gap-24">
                             <div className="lg:w-1/2 space-y-8">
-                                <h2 className="heading-pro-max text-left text-slate-900">
+                                <h2 className="text-2xl md:text-3xl lg:text-[40px] font-sans tracking-tight leading-tight text-left text-slate-900 mb-8">
                                     <span className="italic font-light text-blue-600 block">Diagnostic & Précision</span>
-                                    <span className="font-bold block leading-[1.1]">Révélez ce que <br />votre eau vous cache.</span>
+                                    <span className="font-bold text-[#1e3a8a] block">Révélez ce que <br />votre eau vous cache.</span>
                                 </h2>
                                 <p className="body-pro-max text-slate-600 text-justify">
-                                    L'apparence cristalline de votre eau ne garantit pas sa pureté. Bricareau déploie des protocoles d'analyse scientifique pour identifier les contaminants invisibles qui impactent votre santé et vos installations. Du calcaire aux métaux lourds, notre diagnostic digital ultra-précis cible la racine de vos problèmes d'eau pour déployer la solution de traitement parfaitement adaptée.
+                                    L'apparence cristalline de votre eau ne garantit pas sa pureté. Bricareau déploie des protocoles d'analyse scientifique pour identifier les contaminants invisibles qui impactent votre santé et vos installations. Du calcaire aux métaux lourds, notre diagnostic cible la racine de vos problèmes d'eau pour déployer la solution de traitement parfaitement adaptée.
                                 </p>
                                 <div className="space-y-4">
                                     {[
-                                        "Analyse certifiée de dureté et minéraux",
-                                        "Détection moléculaire des métaux et soufre",
-                                        "Audit technique et rapport d'expertise 48h"
+                                        "Analyse certifiée des minéraux et bactéries",
+                                        "Scan des métaux lourds",
+                                        "Rapport d'analyse détaillé"
                                     ].map((text, i) => (
                                         <div key={i} className="flex items-center gap-3">
                                             <div className="w-2 h-2 rounded-full bg-blue-600" />
@@ -478,9 +483,9 @@ const Service = () => {
                             <div className="lg:w-1/2">
                                 <div className="relative rounded-[4rem] overflow-hidden aspect-[4/5] shadow-2xl group">
                                     <img 
-                                        src={labTestImg} 
-                                        className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
-                                        alt="Analyse d'eau digitale en laboratoire"
+                                        src={diagnosticImg} 
+                                        className="w-full h-full object-cover"
+                                        alt="Diagnostic digital d'eau Bricareau"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-blue-900/40 to-transparent" />
                                 </div>
@@ -503,7 +508,7 @@ const Service = () => {
                                 <span className="font-bold text-[#1e3a8a] block">rendez-vous de service.</span>
                             </h2>
                             <p className="body-pro-max max-w-2xl mx-auto">
-                                Besoin d'une installation, d'une réparation ou d'un simple changement de filtres ? Nos experts interviennent sur tous les types d'équipements, partout au Québec.
+                                Besoin d'une installation, d'une réparation ou d'un simple changement de filtres ? Nos experts interviennent sur tous les types d'équipements, au Grand Montréal et ses environs.
                             </p>
                         </div>
 
@@ -534,7 +539,7 @@ const Service = () => {
                                     </div>
                                     <div className="text-left">
                                         <h4 className="font-bold text-slate-900 text-sm">Zone d'intervention</h4>
-                                        <p className="text-slate-500 text-sm">Partout au Grand Montréal et ses environs</p>
+                                        <p className="text-slate-500 text-sm">Partout au Grand Montréal et ses environs (Périmètre de 300km)</p>
                                     </div>
                                 </div>
                             </div>
