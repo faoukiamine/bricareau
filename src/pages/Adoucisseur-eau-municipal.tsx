@@ -182,62 +182,72 @@ const AdoucisseurEauMunicipal = () => {
                     </div>
 
                     <div className="container mx-auto px-6 relative z-10">
-                        <div className="text-center max-w-7xl mx-auto mb-20 lg:mb-24">
-                            <span className="inline-block px-4 py-1.5 bg-blue-600 text-white rounded-full text-[10px] font-black uppercase tracking-[0.3em] mb-6">
-                                GUIDE DE SÉLECTION DE VOTRE ADOUCISSEUR D'EAU
+                        <div className="text-center max-w-7xl mx-auto mb-20 lg:mb-24 px-6 md:px-0">
+                            <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.3em] mb-8">
+                                GUIDE D'EXPERTISE MUNICIPALE
                             </span>
                             <h2 className="mb-8 heading-pro-max text-center">
-                                <span className="italic font-light text-[#2563eb] block">L'équilibre idéal pour</span>
-                                <span className="font-bold text-[#1e3a8a] block">votre ville et votre vie.</span>
+                                <span className="italic font-light text-[#2563eb] block">L'expertise anticalcaire</span>
+                                <span className="font-bold text-[#1e3a8a] block">adaptée à votre réseau municipal.</span>
                             </h2>
-                            <p className="body-pro-max text-center lg:text-justify mx-auto">
-                                Nos adoucisseurs d'eau pour eau municipale sont spécialement conçus pour contrer les effets néfastes du calcaire tout en s'adaptant parfaitement aux spécificités des réseaux de distribution urbains. Nos solutions de pointe — les séries Sentinelle, Sérénité et Infiniti — offrent une technologie de régénération intelligente qui optimise votre consommation d'eau et de sel selon votre usage réel au quotidien. Que vous recherchiez une efficacité énergétique maximale, une protection accrue de votre plomberie ou une douceur incomparable pour votre peau et vos cheveux, nos systèmes garantissent une performance durable et une fiabilité exceptionnelle. Investir dans un adoucisseur Bricareau, c'est choisir de prolonger la vie de vos appareils électroménagers tout en réalisant des économies substantielles sur vos produits d'entretien et vos factures énergétiques. Découvrez une nouvelle dimension de confort domestique grâce à une eau parfaitement balancée, pure et saine pour l'ensemble de votre foyer.
+                            <p className="body-pro-max text-center max-w-4xl mx-auto px-4">
+                                Nos adoucisseurs d'eau pour réseaux municipaux sont spécifiquement calibrés pour neutraliser la dureté urbaine tout en préservant l'intégrité de vos installations. Une synergie parfaite entre <span className="text-blue-600 font-bold">économie de ressources</span> et <span className="text-blue-600 font-bold">confort absolu</span>.
                             </p>
                         </div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                             {products.map((p, i) => (
                                 <div
                                     key={i}
-                                    className="group bg-white rounded-[3rem] overflow-hidden border border-slate-100 hover:shadow-[0_40px_80px_-20px_rgba(37,99,235,0.15)] transition-all duration-700 hover:-translate-y-3 flex flex-col h-full cursor-pointer"
+                                    className="group relative bg-white rounded-[3rem] overflow-hidden border border-slate-100 hover:shadow-[0_40px_80px_-20px_rgba(37,99,235,0.15)] transition-all duration-700 hover:-translate-y-4 flex flex-col h-full cursor-pointer"
                                     onClick={() => navigate(p.path || "/adoucisseurs")}
                                 >
-                                    <div className="relative h-80 overflow-hidden bg-slate-50/50 flex items-center justify-center p-12">
+                                    <div className="relative h-80 overflow-hidden bg-slate-50/30 flex items-center justify-center p-12 overflow-hidden">
                                         {p.isRecommended && (
-                                            <div className="absolute top-6 right-6 z-10">
-                                                <span className="inline-block px-4 py-1.5 bg-blue-600 text-white rounded-full text-[10px] font-black uppercase tracking-[0.3em] shadow-lg shadow-blue-500/20">
-                                                    RECOMMANDÉ
+                                            <div className="absolute top-8 right-8 z-10">
+                                                <span className="inline-block px-4 py-1.5 bg-blue-600 text-white rounded-full text-[10px] font-black uppercase tracking-[0.3em] shadow-xl shadow-blue-500/30 animate-pulse">
+                                                    LE CHOIX DES EXPERTS
                                                 </span>
                                             </div>
                                         )}
                                         <img
                                             src={p.image}
-                                            alt={`${p.name} - Adoucisseur d'eau résidentiel haute performance Bricareau`}
-                                            className="max-h-full object-contain group-hover:scale-110 transition-transform duration-1000 mix-blend-multiply"
+                                            alt={`${p.name}`}
+                                            className="max-h-full object-contain group-hover:scale-110 transition-transform duration-1000 mix-blend-multiply relative z-10"
                                         />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                                        {/* Dynamic Background Circle */}
+                                        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(37,99,235,0.05)_0%,_transparent_70%)] group-hover:scale-150 transition-transform duration-1000" />
                                     </div>
-                                    <div className="p-10 space-y-6 flex flex-col flex-grow border-t-2 border-transparent group-hover:border-blue-600 transition-all duration-500">
+
+                                    <div className="p-10 space-y-6 flex flex-col flex-grow relative">
+                                        <div className="absolute top-0 left-10 right-10 h-1 bg-gradient-to-r from-transparent via-blue-100 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-700" />
+                                        
                                         <h3 className="text-2xl font-bold text-[#1e3a8a] text-center whitespace-pre-line group-hover:text-blue-600 transition-colors">
                                             {p.name}
                                         </h3>
-                                        <p className="text-slate-500 text-sm leading-relaxed text-justify italic font-light">
+                                        
+                                        <p className="text-slate-500 text-sm leading-relaxed text-center italic font-light px-4">
                                             {p.desc}
                                         </p>
-                                        <div className="space-y-4 flex-grow">
+
+                                        <div className="space-y-4 pt-4 border-t border-slate-50">
                                             {p.features?.map((f, idx) => (
-                                                <div key={idx} className="flex items-start gap-3">
-                                                    <div className="mt-1 w-5 h-5 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0 group-hover:bg-blue-600 transition-colors duration-500">
-                                                        <CheckCircle2 className="w-3 h-3 text-blue-600 group-hover:text-white transition-colors" />
+                                                <div key={idx} className="flex items-center gap-4 group/item">
+                                                    <div className="w-6 h-6 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0 group-hover:bg-blue-600 transition-colors duration-500">
+                                                        <CheckCircle2 className="w-3.5 h-3.5 text-blue-600 group-hover:text-white transition-colors" />
                                                     </div>
-                                                    <span className="text-sm text-slate-600 font-medium group-hover:text-slate-900 transition-colors">{f}</span>
+                                                    <span className="text-sm text-slate-600 font-medium group-hover:text-[#1e3a8a] transition-colors">{f}</span>
                                                 </div>
                                             ))}
                                         </div>
-                                        <div className="pt-6 border-t border-slate-50 flex items-center justify-between">
-                                            <span className="text-[10px] font-black uppercase tracking-widest text-blue-600/40 group-hover:text-blue-600 transition-colors italic">Détails techniques</span>
-                                            <div className="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-all duration-500 group-hover:translate-x-2">
-                                                <ArrowRight className="h-5 w-5" />
+
+                                        <div className="pt-8 mt-auto flex items-center justify-between">
+                                            <div className="flex flex-col">
+                                                <span className="text-[10px] font-black uppercase tracking-widest text-[#1e3a8a]/40 group-hover:text-blue-600 transition-colors">Performance</span>
+                                                <span className="text-[10px] font-bold text-slate-400 group-hover:text-slate-600 transition-colors">Certifiée CSA/NSF</span>
+                                            </div>
+                                            <div className="w-12 h-12 rounded-2xl bg-slate-50 flex items-center justify-center text-slate-400 group-hover:bg-blue-600 group-hover:text-white group-hover:shadow-lg group-hover:shadow-blue-500/30 transition-all duration-500">
+                                                <ArrowRight className="h-6 w-6" />
                                             </div>
                                         </div>
                                     </div>
@@ -256,7 +266,7 @@ const AdoucisseurEauMunicipal = () => {
                             </span>
                             <h2 className="mb-8 heading-pro-max text-center">
                                 <span className="italic font-light text-[#2563eb] block">Une transition fluide vers</span>
-                                <span className="font-bold text-[#1e3a8a] block">l'eau adoucie.</span>
+                                <span className="font-bold text-[#1e3a8a] block">une eau douce d'exception.</span>
                             </h2>
                             <p className="body-pro-max text-center max-w-3xl mx-auto">
                                 Le Parcours Bricareau : une expertise d'élite, depuis votre première analyse jusqu'à la douceur éternelle de votre eau municipale.
@@ -277,7 +287,7 @@ const AdoucisseurEauMunicipal = () => {
                                 },
                                 { 
                                     step: "02",
-                                    title: "Sur-Mesure", 
+                                    title: "Solutions sur-mesure", 
                                     desc: "Nous calibrons votre futur adoucisseur d'eau selon vos habitudes de consommation réelles.",
                                     image: customStepImg,
                                     color: "border-indigo-100"
@@ -344,8 +354,8 @@ const AdoucisseurEauMunicipal = () => {
                                 ANALYSE COMPARATIVE
                             </span>
                             <h2 className="heading-pro-max">
-                                <span className="italic font-light text-[#2563eb] block text-center">Trouvez le bouclier</span>
-                                <span className="font-bold text-[#1e3a8a] block text-center">adapté à votre foyer.</span>
+                                <span className="italic font-light text-[#2563eb] block text-center">Identifiez la performance</span>
+                                <span className="font-bold text-[#1e3a8a] block text-center">optimale pour votre foyer.</span>
                             </h2>
                         </div>
 
@@ -355,13 +365,16 @@ const AdoucisseurEauMunicipal = () => {
                                     <tr className="bg-slate-50/50">
                                         <th className="p-10 text-left text-blue-900/40 font-black uppercase tracking-widest text-[10px]">Critères Techniques</th>
                                         {[
-                                            { name: "Série Sentinelle", img: SentinelWaterSoftenerImg, badge: "Précision Économique", color: "bg-[#1e3a8a]" },
-                                            { name: "Série Sérénité", img: SerenityWaterSoftenerImg, badge: "Hybride Ultime", color: "bg-[#2563eb]" },
-                                            { name: "Série Infiniti", img: TwinAlternatingWaterSoftenerImg, badge: "Puissance 24h/24", color: "bg-[#0F1729]" }
+                                            { name: "Série Sentinelle", img: SentinelWaterSoftenerImg, badge: "Précision Économique", color: "bg-[#1e3a8a]", offset: "-right-20" },
+                                            { name: "Série Sérénité", img: SerenityWaterSoftenerImg, badge: "Hybride Ultime", color: "bg-[#2563eb]", offset: "-right-12" },
+                                            { name: "Série Infiniti", img: TwinAlternatingWaterSoftenerImg, badge: "Puissance 24h/24", color: "bg-orange-500", offset: "-right-20" }
                                         ].map((m, i) => (
                                             <th key={i} className="p-6 text-center">
                                                 <div className="flex flex-col items-center gap-6">
                                                     <div className="relative group/img">
+                                                        <div className={`absolute -top-3 ${m.offset} z-20 ${m.color} text-white text-[8px] font-black uppercase tracking-[0.4em] px-3 py-1 rounded-full shadow-2xl whitespace-nowrap`}>
+                                                            {m.badge}
+                                                        </div>
                                                         <div className="absolute inset-0 bg-blue-600 rounded-full blur-2xl opacity-0 group-hover/img:opacity-20 transition-opacity duration-700" />
                                                         <img
                                                             src={m.img}
@@ -369,12 +382,7 @@ const AdoucisseurEauMunicipal = () => {
                                                             className="w-[140px] h-[120px] object-contain mx-auto mix-blend-multiply relative z-10 transition-transform duration-700 group-hover/img:scale-110"
                                                         />
                                                     </div>
-                                                    <div className="space-y-2">
-                                                        <span className={`inline-block px-3 py-1 ${m.color} text-white rounded-full text-[8px] font-bold uppercase tracking-widest`}>
-                                                            {m.badge}
-                                                        </span>
-                                                        <div className="text-lg font-bold text-[#1e3a8a]">{m.name}</div>
-                                                    </div>
+                                                    <div className="text-lg font-bold text-[#1e3a8a]">{m.name}</div>
                                                 </div>
                                             </th>
                                         ))}
@@ -386,7 +394,7 @@ const AdoucisseurEauMunicipal = () => {
                                             <td className="p-10 font-bold text-[#1e3a8a] border-r border-slate-50 bg-slate-50/20 text-sm italic group-hover:text-blue-600 transition-colors">
                                                 {row.feature}
                                             </td>
-                                            {["Sérénité", "Sentinel", "Infiniti"].map((model) => (
+                                            {["Sentinel", "Sérénité", "Infiniti"].map((model) => (
                                                 <td key={model} className="p-10 text-center text-sm font-light leading-relaxed text-slate-600">
                                                     {row[model as keyof ComparisonItem]}
                                                 </td>
@@ -489,44 +497,77 @@ const AdoucisseurEauMunicipal = () => {
                     </div>
                 </section>
 
-                {/* 10. PREMIUM CTA SECTION */}
-                <section className="relative h-[600px] flex items-center overflow-hidden">
+                {/* 10. PREMIUM CTA SECTION - REBUILT FOR IMPACT */}
+                <section className="relative py-32 flex items-center overflow-hidden bg-[#1e3a8a]">
+                    {/* Animated background elements */}
+                    <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-blue-600/20 to-transparent skew-x-12 translate-x-1/4" />
+                    <div className="absolute bottom-0 left-0 w-1/2 h-full bg-gradient-to-r from-cyan-400/10 to-transparent -skew-x-12 -translate-x-1/4" />
+                    
                     {/* Background Image with Overlay */}
-                    <div className="absolute inset-0 z-0">
+                    <div className="absolute inset-0 z-0 opacity-40">
                         <img
                             src={hardWaterFaucetImg}
                             alt="Problématique d'eau dure sur la robinetterie - Solution Bricareau"
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-cover grayscale brightness-150"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 via-blue-800/60 to-blue-500/30 backdrop-blur-[2px]" />
+                        <div className="absolute inset-0 bg-[#1e3a8a]/10 backdrop-blur-sm" />
                     </div>
-                    <div className="container mx-auto px-6 relative z-10 text-center">
-                        <div className="max-w-4xl mx-auto">
-                            <h2 className="heading-pro-max text-white text-center mb-6">
-                                <span className="font-bold block tracking-tight">Libérez votre robinet du calcaire de la ville.</span>
-                            </h2>
-                            <p className="body-pro-max !text-white text-center mb-12 max-w-2xl mx-auto">
-                                Les solutions municipales ne suffisent pas toujours. Prenez le contrôle total de votre eau et redécouvrez la douceur d’un foyer protégé.
-                            </p>
-                            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                                <Button asChild>
+
+                    <div className="container mx-auto px-6 relative z-10">
+                        <div className="max-w-5xl mx-auto text-center space-y-12">
+                            <div className="space-y-6">
+                                <span className="inline-block px-4 py-1.5 bg-white text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.4em]">
+                                    PRENEZ LE CONTRÔLE DE VOTRE EAU
+                                </span>
+                                <h2 className="text-4xl md:text-6xl lg:text-5xl font-light text-white leading-[1.1] tracking-tighter">
+                                    Libérez votre foyer <br />
+                                    <span className="text-white italic font-bold font-serif">du calcaire.</span>
+                                </h2>
+                                <p className="text-lg md:text-xl text-blue-100/80 max-w-2xl mx-auto font-light leading-relaxed">
+                                    Une protection intégrale pour votre plomberie et vos électroménagers. <br className="hidden md:block" />
+                                    Activez <span className="text-white font-bold border-b border-white">la protection ultime</span> dès aujourd'hui.
+                                </p>
+                            </div>
+
+                            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-4">
+                                <Button
+                                    size="lg"
+                                    className="h-16 px-10 bg-blue-600 text-white hover:bg-white hover:text-blue-600 rounded-full text-lg shadow-2xl shadow-blue-900/50 hover:scale-105 transition-all duration-500 active:scale-95"
+                                    asChild
+                                >
                                     <a href="tel:18552649328" className="flex items-center gap-3">
-                                        <Phone className="h-5 w-5 animate-bounce" />
-                                        Parlez à un expert
+                                        <Phone className="h-6 w-6 animate-pulse" />
+                                        Parlez avec un expert
                                     </a>
                                 </Button>
                                                                             
-                                <Button
-                                    variant="outline"
+                                <Button 
+                                    size="lg"
+                                    className="h-16 px-10 bg-blue-600 text-white hover:bg-white hover:text-blue-600 rounded-full text-lg shadow-2xl shadow-blue-900/50 hover:scale-105 transition-all duration-500 active:scale-95 group"
                                     asChild
                                 >
-                                    <NavLink to="/consultation">Planifiez-vous une consultation</NavLink>
+                                    <NavLink to="/consultation" className="flex items-center gap-2">
+                                        Demandez une consultation
+                                        <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                                    </NavLink>
                                 </Button>
                             </div>
 
-                            <p className="mt-8 text-white/50 text-sm font-light">
-                                Disponible 7j/7 — Réponse en moins de 24h
-                            </p>
+                            <div className="pt-8 flex flex-col items-center gap-4">
+                                <div className="flex -space-x-4">
+                                    {[1, 2, 3, 4].map((i) => (
+                                        <div key={i} className="w-12 h-12 rounded-full border-4 border-[#1e3a8a] bg-blue-400 overflow-hidden shadow-xl">
+                                            <img src={`https://i.pravatar.cc/150?img=${i + 10}`} alt="Expert" className="w-full h-full object-cover" />
+                                        </div>
+                                    ))}
+                                    <div className="w-12 h-12 rounded-full border-4 border-[#1e3a8a] bg-white flex items-center justify-center text-blue-900 font-bold text-xs shadow-xl">
+                                        4.9/5
+                                    </div>
+                                </div>
+                                <p className="text-blue-200/60 text-sm font-medium">
+                                    Rejoignez plus de <span className="text-white">1,500 familles</span> satisfaites au Québec cette année.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -575,24 +616,6 @@ const AdoucisseurEauMunicipal = () => {
             </main>
 
             <Footer />
-
-            {/* Sticky Consultation CTA - Pro Max Conversion Tool */}
-            <div className="fixed bottom-8 right-8 z-[100] group hidden md:block">
-                <NavLink to="/consultation">
-                    <div className="relative">
-                        <div className="absolute inset-0 bg-blue-600 rounded-full animate-ping opacity-20 group-hover:opacity-40 transition-opacity" />
-                        <div className="relative flex items-center gap-3 bg-white/90 backdrop-blur-xl border border-blue-100 p-2 pr-6 rounded-full shadow-[0_20px_50px_rgba(0,0,0,0.1)] hover:shadow-[0_25px_60px_rgba(37,99,235,0.2)] transition-all duration-500 group-hover:-translate-y-2 group-hover:bg-blue-600">
-                            <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white group-hover:bg-white group-hover:text-blue-600 transition-colors duration-500">
-                                <Sparkles className="w-6 h-6 animate-pulse" />
-                            </div>
-                            <div className="flex flex-col">
-                                <span className="text-[10px] font-black uppercase tracking-[0.2em] text-blue-600 group-hover:text-white/80 transition-colors">Test d'eau</span>
-                                <span className="text-sm font-bold text-slate-900 group-hover:text-white transition-colors">Audit municipal offert</span>
-                            </div>
-                        </div>
-                    </div>
-                </NavLink>
-            </div>
         </div>
     );
 };

@@ -2,12 +2,9 @@ import React, { useEffect } from 'react';
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
-import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import { Button } from "@/components/ui/button";
-import heroBath from "@/assets/kid-playing-bathtub.jpg";
 import heroDesktop from "@/assets/family-preparing-dinner-together.jpg";
-import eauDePuitsImg from "@/assets/189573.jpg";
 import TwinAlternatingWaterSoftenerImg from "@/assets/Alternating Water Softener.png";
 import SentinelWaterSoftenerImg from "@/assets/Sentinelle Water Softener.png";
 import SerenityWaterSoftenerImg from "@/assets/Serenity Water Softener.png";
@@ -19,37 +16,16 @@ import luxuryBathroomImg from "@/assets/7031878.jpg";
 import spaRelaxationImg from "@/assets/young-nude-woman-taking-relaxing-foamy-bath.jpg";
 import {
     ArrowRight,
-    Droplets,
-    Star,
     ChevronRight,
     CheckCircle2,
-    Clock,
-    Sparkles,
-    Shield,
-    Zap,
-    Shirt,
-    TrendingDown,
-    Quote,
-    ChevronLeft,
-    Play,
-    CircleDollarSign,
-    Search,
-    Trophy,
-    Award,
-    HandCoins,
-    Phone,
-    Check,
-    X,
-    Medal
+    Phone
 } from "lucide-react";
-import safetyIcon from "@/assets/1709235770048.png";
 import { NavLink } from "@/components/NavLink";
 import { useNavigate } from "react-router-dom";
 import waterTestingImg from "@/assets/2147800429.jpg";
 import { softenerImg as residentialWaterSoftenerImg } from "./Blog pages/Comment régler la dureté de votre adoucisseur ";
 import { adoucisseurImg as adoucisseurFosseImg } from "./Blog pages/Adoucisseur-deau- et-fosse-septique--Mythes-et-réalités";
 import { conditionneursImg } from "./Blog pages/Adoucisseur avec sel ou sans sel";
-import waterSoftenerImg from "@/assets/Adoucisseurs d'eau.webp";
 import specialFiltersImg from "@/assets/Filtres d'eau spécialisés.webp";
 import uvSystemImg2 from "@/assets/VH200-F10-265x300.jpg";
 import drinkingWaterImg from "@/assets/Solutions d'eau potable.webp";
@@ -59,13 +35,6 @@ import {
     AccordionItem,
     AccordionTrigger
 } from "@/components/ui/accordion";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import ConsultationFormSection from "@/components/ConsultationFormSection";
-import process1 from "@/assets/2148563485.jpg";
-import process2 from "@/assets/section-image-and-content-23.jpg";
-import process3 from "@/assets/SERVICES.jpg";
-import process4 from "@/assets/unnamed (2).jpg";
 import hardWaterFaucetImg from "@/assets/Hard Water-Faucet.jpg";
 import drySkinImg from "@/assets/different-types-of-eczema.jpg";
 import cloudyGlassImg from "@/assets/18036672_SIE_2720_1530_21_04_30_SIE_CRM_Dishwasher_Hand_Taking_Out_Wine_Glass_Basket_Motiv_11_0017.webp";
@@ -99,6 +68,7 @@ const products = [
         image: TwinAlternatingWaterSoftenerImg 
     },
 ];
+
 const faqItems = [
     {
         q: "Pourquoi un adoucisseur est-il presque essentiel pour l'eau de puits ?",
@@ -217,25 +187,19 @@ const comparisonData: ComparisonItem[] = [
 const AdoucisseursEauDePuits = () => {
     const [showAllFaqs, setShowAllFaqs] = React.useState(false);
     const navigate = useNavigate();
+
     useEffect(() => {
         document.title = "Adoucisseur d'eau de puits : Protection fer et calcaire";
         const metaDesc = document.querySelector('meta[name="description"]');
         if (metaDesc) {
             metaDesc.setAttribute("content", "Protégez votre maison et vos appareils avec nos adoucisseurs d'eau spécialisés pour puits privés. Élimination efficace du fer et du calcaire.");
         }
-
-        // OG Tags
-        const ogTitle = document.querySelector('meta[property="og:title"]');
-        if (ogTitle) ogTitle.setAttribute("content", "Adoucisseur de puits : Fer et Calcaire | Bricareau");
-        const ogDesc = document.querySelector('meta[property="og:description"]');
-        if (ogDesc) ogDesc.setAttribute("content", "Solutions d'adoucissement robustes pour traiter l'eau dure et le fer de votre puits. Performance et fiabilité garanties.");
     }, []);
-
 
     return (
         <div className="min-h-screen bg-white">
-             <Header />
-             <main>
+            <Header />
+            <main>
                 <Hero 
                     image={heroDesktop}
                     highlightedTitle="Adoucisseur d'eau de puits,"
@@ -250,7 +214,6 @@ const AdoucisseursEauDePuits = () => {
 
                 {/* 2. Transition Section - L'Impact de la Pureté */}
                 <section className="relative py-32 bg-white overflow-hidden">
-                    {/* Background Texture */}
                     <div className="absolute top-0 right-0 w-full h-full opacity-[0.1] pointer-events-none">
                         <img 
                             src={waterRipples} 
@@ -262,14 +225,14 @@ const AdoucisseursEauDePuits = () => {
                     <div className="container mx-auto px-6 relative z-10">
                         <div className="flex flex-col md:flex-row gap-12 md:items-center mb-32">
                             <div className="flex-1 max-w-3xl">
-                <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black tracking-[0.2em] mb-6">
+                                <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black tracking-[0.2em] mb-6">
                                     Eau adoucie
                                 </span>
                                 <h2 className="scroll-mt-[120px] mb-8 heading-pro-max">
                                     <span className="italic font-light text-[#2563eb] block">Vivez l'eau au-delà</span>
                                     <span className="font-bold text-[#1e3a8a] block">de la simple apparence.</span>
                                 </h2>
-                                <p className="body-pro-max text-justify max-w-2xl">
+                                <p className="body-pro-max text-justify max-w-2xl text-slate-600 font-light">
                                     Dans un puits privé, la clarté visuelle n'est que la surface. Notre technologie d'adoucissement transforme la structure même de votre eau, éliminant l'agressivité du calcaire et du fer pour une douceur que vous ressentirez à chaque goutte, sur chaque surface.
                                 </p>
                             </div>
@@ -282,94 +245,52 @@ const AdoucisseursEauDePuits = () => {
                             </div>
                         </div>
 
-                        {/* Redesigned Architectural Benefits Deck */}
+                        {/* Architectural Benefits Deck */}
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 border border-slate-100 shadow-2xl overflow-hidden rounded-none">
-                            {/* Card 1: 01. Adoucissement */}
                             <div className="group relative bg-transparent border-r border-b lg:border-b-0 border-slate-100 min-h-[450px] flex flex-col transition-all duration-1000">
-                                {/* Watermark Number */}
-                                <div className="absolute top-4 left-6 text-[120px] font-black text-slate-900/5 select-none pointer-events-none tracking-tighter italic">
-                                    01
-                                </div>
+                                <div className="absolute top-4 left-6 text-[120px] font-black text-slate-900/5 select-none pointer-events-none tracking-tighter italic">01</div>
                                 <div className="relative z-10 flex-1 p-10 lg:p-14 flex flex-col justify-between">
                                     <div className="space-y-6">
                                         <div className="w-12 h-1 bg-blue-600"></div>
-                                        <h3 className="text-3xl font-bold text-[#1e3a8a] leading-tight max-w-[280px]">
-                                            Adoucissement de haute performance
-                                        </h3>
-                                        <p className="body-pro-max text-justify text-[15px] leading-relaxed max-w-xs">
-                                            Un équilibre parfait entre minéralité et douceur. Notre système transforme la structure du calcaire, protégeant vos installations tout en préservant la fraîcheur naturelle de l'eau.
-                                        </p>
+                                        <h3 className="text-3xl font-bold text-[#1e3a8a] leading-tight max-w-[280px]">Adoucissement de haute performance</h3>
+                                        <p className="body-pro-max text-justify text-[15px] leading-relaxed max-w-xs text-slate-600 font-light">Un équilibre parfait entre minéralité et douceur. Notre système transforme la structure du calcaire, protégeant vos installations.</p>
                                     </div>
                                     <div className="mt-12 -mx-10 lg:-mx-14 -mb-10 lg:-mb-14 h-64 overflow-hidden border-t border-slate-50">
-                                        <img 
-                                            src={softwaterImg} 
-                                            alt="Pureté de l'eau adoucie de puits" 
-                                            className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-[4000ms]"
-                                        />
+                                        <img src={softwaterImg} alt="Pureté de l'eau" className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-[4000ms]" />
                                     </div>
                                 </div>
                             </div>
 
-                            {/* Card 2: 02. Confort */}
                             <div className="group relative bg-transparent border-b lg:border-b-0 border-slate-100 min-h-[450px] flex flex-col transition-all duration-1000">
-                                {/* Watermark Number */}
-                                <div className="absolute top-4 left-6 text-[120px] font-black text-slate-900/5 select-none pointer-events-none tracking-tighter italic">
-                                    02
-                                </div>
+                                <div className="absolute top-4 left-6 text-[120px] font-black text-slate-900/5 select-none pointer-events-none tracking-tighter italic">02</div>
                                 <div className="relative z-10 flex-1 p-10 lg:p-14 flex flex-col justify-between">
                                     <div className="space-y-6">
                                         <div className="w-12 h-1 bg-blue-600"></div>
-                                        <h3 className="text-3xl font-bold text-[#1e3a8a] leading-tight max-w-[280px]">
-                                            Confort et douceur sensorielle
-                                        </h3>
-                                        <p className="body-pro-max text-justify text-[15px] leading-relaxed max-w-xs">
-                                            Offrez à votre famille le luxe d'une eau soyeuse qui hydrate profondément. Une sensation de douceur sur la peau et des cheveux visiblement plus brillants.
-                                        </p>
+                                        <h3 className="text-3xl font-bold text-[#1e3a8a] leading-tight max-w-[280px]">Confort et douceur sensorielle</h3>
+                                        <p className="body-pro-max text-justify text-[15px] leading-relaxed max-w-xs text-slate-600 font-light">Offrez à votre famille le luxe d'une eau soyeuse qui hydrate profondément. Une sensation de douceur sur la peau.</p>
                                     </div>
                                     <div className="mt-12 -mx-10 lg:-mx-14 -mb-10 lg:-mb-14 h-64 overflow-hidden border-t border-slate-50">
-                                        <img 
-                                            src={spaRelaxationImg} 
-                                            alt="Douceur sensorielle et confort spa" 
-                                            className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-[4000ms]"
-                                        />
+                                        <img src={spaRelaxationImg} alt="Douceur sensorielle" className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-[4000ms]" />
                                     </div>
                                 </div>
                             </div>
 
-                            {/* Card 3: 03. Protection - Immersive Widescreen Showcase */}
                             <div className="group relative bg-transparent col-span-1 lg:col-span-2 border-t border-slate-100 flex flex-col transition-all duration-1000">
                                 <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[500px]">
-                                    {/* Content Section */}
                                     <div className="relative p-10 lg:p-20 flex flex-col justify-center space-y-8 overflow-hidden">
-                                        {/* Watermark Number */}
-                                        <div className="absolute -top-10 -right-10 text-[240px] font-black text-slate-900/5 select-none pointer-events-none tracking-tighter italic">
-                                            03
-                                        </div>
+                                        <div className="absolute -top-10 -right-10 text-[240px] font-black text-slate-900/5 select-none pointer-events-none tracking-tighter italic">03</div>
                                         <div className="relative z-10 space-y-8">
                                             <div className="w-20 h-1.5 bg-blue-600"></div>
-                                            <h3 className="text-4xl lg:text-5xl font-black text-[#1e3a8a] leading-[1.1]">
-                                                Protection et longévité <br/> 
-                                                <span className="text-blue-600 italic font-light">de votre foyer</span>
-                                            </h3>
-                                            <p className="body-pro-max text-justify text-lg leading-relaxed max-w-2xl text-slate-600">
-                                                Dites adieu aux traces de rouille et au vert-de-gris. Une protection active pour votre robinetterie de luxe et vos appareils haut de gamme, prolongeant l'éclat originel de votre foyer pour des générations.
-                                            </p>
+                                            <h3 className="text-4xl lg:text-5xl font-black text-[#1e3a8a] leading-[1.1]">Protection et longévité <br/> <span className="text-blue-600 italic font-light">de votre foyer</span></h3>
+                                            <p className="body-pro-max text-justify text-lg leading-relaxed max-w-2xl text-slate-600 font-light">Dites adieu aux traces de rouille. Une protection active pour votre robinetterie de luxe et vos appareils haut de gamme.</p>
                                             <div className="pt-6">
-                                                <Button asChild>
-                                                    <a href="/tests-eau">Protégez vos installations</a>
-                                                </Button>
+                                                <Button asChild><a href="/tests-eau">Protégez vos installations</a></Button>
                                             </div>
                                         </div>
                                     </div>
-                                    {/* Image Section */}
                                     <div className="relative overflow-hidden h-[400px] lg:h-auto">
-                                        <img 
-                                            src={luxuryBathroomImg} 
-                                            alt="Protection de la plomberie et du foyer" 
-                                            className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-[6000ms]"
-                                        />
+                                        <img src={luxuryBathroomImg} alt="Protection" className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-[6000ms]" />
                                         <div className="absolute inset-0 bg-gradient-to-r from-white via-transparent to-transparent hidden lg:block opacity-50"></div>
-                                        <div className="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-1000"></div>
                                     </div>
                                 </div>
                             </div>
@@ -377,114 +298,55 @@ const AdoucisseursEauDePuits = () => {
                     </div>
                 </section>
 
-                {/* 2.5 Diagnostic Branding Section - L'Ennemi Invisible */}
+                {/* 2.5 Diagnostic Branding Section */}
                 <section className="py-24 bg-slate-50 relative overflow-hidden">
                     <div className="container mx-auto px-6">
                         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
                             <div className="max-w-3xl">
-                                <span className="inline-block px-4 py-1 bg-red-600/10 text-red-600 rounded-full text-[10px] font-black tracking-widest mb-4">
-                                    VOTRE PUITS VOUS PARLE
-                                </span>
+                                <span className="inline-block px-4 py-1 bg-red-600/10 text-red-600 rounded-full text-[10px] font-black tracking-widest mb-4">VOTRE PUITS VOUS PARLE</span>
                                 <h2 className="heading-pro-max">
                                     <span className="italic font-light text-blue-600 block">Identifiez les signes de</span>
                                     <span className="font-bold text-slate-800 block">la dureté extrême.</span>
                                 </h2>
                             </div>
-                            <p className="body-pro-max max-w-sm text-slate-500 italic border-l-2 border-red-500 pl-6">
-                                Le calcaire de puits est plus agressif. Ne le laissez pas ronger la valeur de votre investissement immobilier.
-                            </p>
+                            <p className="body-pro-max max-w-sm text-slate-500 italic border-l-2 border-red-500 pl-6">Le calcaire de puits est plus agressif. Ne le laissez pas ronger la valeur de votre investissement.</p>
                         </div>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                             {[
-                                { 
-                                    problem: "Robinetterie Entartrée", 
-                                    cause: "Calcaire & Magnésium", 
-                                    solution: "Protection Active",
-                                    color: "bg-blue-500",
-                                    img: hardWaterFaucetImg
-                                },
-                                { 
-                                    problem: "Peau & Cheveux Secs", 
-                                    cause: "Irritation par les minéraux", 
-                                    solution: "Douceur Sensorielle",
-                                    color: "bg-pink-500",
-                                    img: drySkinImg
-                                },
-                                { 
-                                    problem: "Verres & Vaisselle Voilés", 
-                                    cause: "Dépôts minéraux opaques", 
-                                    solution: "Éclat Crystal",
-                                    color: "bg-cyan-400",
-                                    img: cloudyGlassImg
-                                },
-                                { 
-                                    problem: "Chauffe-eau en Surconsommation", 
-                                    cause: "Calcaire sur les résistances", 
-                                    solution: "Efficacité Énergétique",
-                                    color: "bg-orange-600",
-                                    img: brokenHeaterImg
-                                },
-                                { 
-                                    problem: "Taches de Rouille/Fer", 
-                                    cause: "Présence de fer ferreux", 
-                                    solution: "Iron Fighter Technology",
-                                    color: "bg-amber-700",
-                                    img: ironStainImg
-                                },
-                                { 
-                                    problem: "Linge Rêche & Usé", 
-                                    cause: "Frottement minéral sur les fibres", 
-                                    solution: "Soin des Textiles",
-                                    color: "bg-indigo-500",
-                                    img: residentialSoftenerAsset
-                                }
+                                { problem: "Robinetterie Entartrée", cause: "Calcaire & Magnésium", solution: "Protection Active", color: "bg-blue-500", img: hardWaterFaucetImg },
+                                { problem: "Peau & Cheveux Secs", cause: "Irritation par les minéraux", solution: "Douceur Sensorielle", color: "bg-pink-500", img: drySkinImg },
+                                { problem: "Vaisselle Voilée", cause: "Dépôts minéraux", solution: "Éclat Crystal", color: "bg-cyan-400", img: cloudyGlassImg },
+                                { problem: "Chauffe-eau Entartré", cause: "Calcaire", solution: "Efficacité Énergétique", color: "bg-orange-600", img: brokenHeaterImg },
+                                { problem: "Taches de Rouille", cause: "Fer ferreux", solution: "Iron Fighter Technology", color: "bg-amber-700", img: ironStainImg },
+                                { problem: "Linge Rêche", cause: "Frottement minéral", solution: "Soin des Textiles", color: "bg-indigo-500", img: residentialSoftenerAsset }
                             ].map((s, i) => (
                                 <div 
                                     key={i} 
-                                    className="group relative h-[360px] rounded-[3rem] overflow-hidden border border-white bg-white/40 backdrop-blur-xl shadow-sm cursor-pointer transition-all duration-700 hover:shadow-2xl hover:shadow-blue-200/50 hover:border-blue-200 hover:-translate-y-2"
+                                    className="group relative h-[360px] rounded-[3.5rem] overflow-hidden border border-white bg-white/40 backdrop-blur-xl shadow-sm cursor-pointer transition-all duration-700 hover:shadow-2xl hover:-translate-y-2"
                                     onClick={() => navigate("/consultation")}
                                 >
-                                    {/* Background Image with Overlay */}
                                     <div className="absolute inset-0 z-0">
-                                        <img 
-                                            src={s.img} 
-                                            alt={s.problem} 
-                                            className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-30 group-hover:opacity-50"
-                                        />
+                                        <img src={s.img} alt={s.problem} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-30" />
                                         <div className="absolute inset-0 bg-gradient-to-br from-white via-white/80 to-transparent" />
                                     </div>
-
                                     <div className="relative z-10 inset-0 p-10 h-full flex flex-col justify-between">
                                         <div className="space-y-4">
                                             <div className="flex items-center gap-3">
                                                 <div className={`w-3 h-3 rounded-full ${s.color} shadow-lg`} />
-                                                <span className="text-[10px] font-black uppercase tracking-wider text-slate-500 group-hover:text-blue-600 transition-colors">
-                                                    Cause : {s.cause}
-                                                </span>
+                                                <span className="text-[10px] font-black uppercase tracking-wider text-slate-500">Cause : {s.cause}</span>
                                             </div>
-                                            <h3 className="text-3xl font-bold text-[#1e3a8a] leading-[1.1] transition-all duration-500 group-hover:translate-x-2">
-                                                {s.problem}
-                                            </h3>
+                                            <h3 className="text-3xl font-bold text-[#1e3a8a] leading-[1.1]">{s.problem}</h3>
                                         </div>
-
-                                        <div className="space-y-4">
+                                        <div className="space-y-2">
                                             <div className="h-px w-12 bg-blue-200 group-hover:w-full transition-all duration-700" />
-                                            <div className="text-xs font-light text-slate-600 group-hover:text-blue-800 transition-all italic">
-                                                Bénéfice : <span className="font-bold border-b border-transparent group-hover:border-blue-600">{s.solution}</span>
-                                            </div>
+                                            <div className="text-xs font-light text-slate-600 italic">Bénéfice : <span className="font-bold">{s.solution}</span></div>
                                         </div>
                                     </div>
-
-                                    {/* Hover Overlay CTA */}
-                                    <div className="absolute inset-0 bg-blue-600/95 z-20 opacity-0 group-hover:opacity-100 transition-all duration-700 flex flex-col items-center justify-center p-8 space-y-6 translate-y-full group-hover:translate-y-0 text-center">
-                                        <div className="text-center">
-                                            <p className="text-white/80 text-xs font-black uppercase tracking-widest mb-2 italic">Analyse gratuite</p>
-                                            <h4 className="text-white text-2xl font-bold leading-tight px-6">Mesurer ma dureté d'eau</h4>
-                                        </div>
-                                        <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center text-white border border-white/20 group-hover:rotate-45 transition-transform duration-700">
-                                            <ArrowRight className="w-6 h-6" />
-                                        </div>
+                                    <div className="absolute inset-0 bg-blue-600/95 z-20 opacity-0 group-hover:opacity-100 transition-all duration-700 flex flex-col items-center justify-center p-8 translate-y-full group-hover:translate-y-0 text-center">
+                                        <p className="text-white/80 text-xs font-black uppercase tracking-widest mb-2 italic">Analyse gratuite</p>
+                                        <h4 className="text-white text-2xl font-bold leading-tight px-6 mb-6">Mesurer ma dureté d'eau</h4>
+                                        <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center text-white border border-white/20"><ArrowRight className="w-6 h-6" /></div>
                                     </div>
                                 </div>
                             ))}
@@ -494,56 +356,36 @@ const AdoucisseursEauDePuits = () => {
 
                 {/* 3. Product Grid Section */}
                 <section id="nos-adoucisseurs" className="py-24 bg-gray-50">
-                    <div className="container mx-auto px-6">
+                    <div className="container mx-auto px-6 text-left">
                         <div className="text-left mb-16">
-                            <h2 className="scroll-mt-[120px] mb-8 heading-pro-max">
+                            <h2 className="heading-pro-max">
                                 <span className="italic font-light text-[#2563eb] block">Nos adoucisseurs d'eau</span>
                                 <span className="font-bold text-[#1e3a8a] block">résidentiels - Eau de puits</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600 mb-8"></div>
-                            <p className="body-pro-max mx-auto text-justify mb-8">
-                                Découvrez notre gamme exclusive d'adoucisseurs d'eau pour puits, spécialement conçue pour traiter les eaux souterraines les plus complexes. Nos systèmes haute efficacité (HE) éliminent efficacement la dureté, le fer et le manganèse, garantissant une eau pure et douce pour toute votre maison. Grâce à une technologie de régénération intelligente, nos solutions durables protègent vos installations tout en réduisant votre consommation de sel et d'eau. Offrez à votre famille le confort d'une eau de qualité supérieure, débarrassée des impuretés et des problèmes de calcaire typiques des puits artésiens ou de surface.
-                            </p>
+                            <p className="body-pro-max text-justify mb-8 text-slate-600 font-light">Découvrez notre gamme exclusive d'adoucisseurs d'eau pour puits, conçue pour traiter les eaux souterraines complexes.</p>
                         </div>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                             {products.map((p, i) => (
-                                <div
-                                    key={i}
-                                    className="group bg-white rounded-3xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full cursor-pointer"
-                                    onClick={() => window.location.href = p.path || "/adoucisseurs"}
-                                >
-                                    <div className="relative h-80 overflow-hidden bg-slate-50 flex items-center justify-center p-12">
-                                        {p.isRecommended && (
-                                            <div className="absolute top-4 right-4 z-10">
-                                                <span className="text-[10px] font-black text-blue-600 bg-white px-3 py-1.5 rounded-full shadow-md border border-blue-50">RECOMMANDÉ</span>
-                                            </div>
-                                        )}
-                                        <img
-                                            src={p.image}
-                                            alt={`${p.name} - Adoucisseur d'eau spécialisé pour traiter le fer des puits Bricareau`}
-                                            className="max-h-full object-contain group-hover:scale-110 transition-transform duration-700 mix-blend-multiply"
-                                        />
+                                <div key={i} className="group bg-white rounded-[3rem] overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-700 hover:-translate-y-3 flex flex-col h-full cursor-pointer" onClick={() => navigate(p.path || "/contact")}>
+                                    <div className="relative h-80 overflow-hidden bg-slate-50/50 flex items-center justify-center p-12">
+                                        {p.isRecommended && <div className="absolute top-6 right-6 z-10"><span className="inline-block px-4 py-1.5 bg-blue-600 text-white rounded-full text-[10px] font-black uppercase tracking-[0.3em] shadow-lg">RECOMMANDÉ</span></div>}
+                                        <img src={p.image} alt={p.name} className="max-h-full object-contain group-hover:scale-110 transition-transform duration-1000 mix-blend-multiply" />
                                     </div>
-                                    <div className="p-8 space-y-4 flex flex-col flex-grow border-t-2 border-transparent group-hover:border-blue-600 transition-colors">
-                                        <h3 className="card-title text-center group-hover:text-blue-600 transition-colors duration-500">
-                                            {p.displayName || p.name}
-                                        </h3>
-                                        <p className="body-pro-max text-justify">
-                                            {p.desc}
-                                        </p>
-                                        <ul className="space-y-3 pt-2">
+                                    <div className="p-10 space-y-6 flex flex-col flex-grow border-t border-transparent group-hover:border-blue-600 transition-all duration-500">
+                                        <h3 className="text-2xl font-bold text-[#1e3a8a] text-center whitespace-pre-line">{p.displayName || p.name}</h3>
+                                        <p className="text-slate-500 text-sm leading-relaxed text-center italic font-light">{p.desc}</p>
+                                        <div className="space-y-4 flex-grow">
                                             {p.features?.map((f, idx) => (
-                                                <li key={idx} className="flex items-center gap-2 text-sm text-slate-600 font-light">
-                                                    <CheckCircle2 className="w-4 h-4 text-blue-500" /> {f}
-                                                </li>
+                                                <div key={idx} className="flex items-start gap-3">
+                                                    <div className="mt-1 w-5 h-5 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0 group-hover:bg-blue-600 transition-colors"><CheckCircle2 className="w-3 h-3 text-blue-600 group-hover:text-white" /></div>
+                                                    <span className="text-sm text-slate-600 font-medium">{f}</span>
+                                                </div>
                                             ))}
-                                        </ul>
-                                        <div
-                                            className="inline-flex items-center gap-2 text-blue-600 font-bold text-xs tracking-widest uppercase mt-4 group-hover:underline self-end"
-                                            style={{}}
-                                        >
-                                            <span></span>
-                                            <ArrowRight className="h-6 w-6 transform group-hover:translate-x-1 transition-transform" />
+                                        </div>
+                                        <div className="pt-6 border-t border-slate-50 flex items-center justify-between">
+                                            <span className="text-[10px] font-black uppercase tracking-widest text-blue-600/40 italic">Détails techniques</span>
+                                            <div className="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-all"><ArrowRight className="h-5 w-5" /></div>
                                         </div>
                                     </div>
                                 </div>
@@ -553,72 +395,43 @@ const AdoucisseursEauDePuits = () => {
                 </section>
 
                 {/* 5. Comparison Table Section */}
-                <section className="py-24 bg-white border-t border-gray-100">
-                    <div className="container mx-auto px-4">
-                        <div className="text-left mb-16">
-                            <h2 className="scroll-mt-[120px] mb-8 heading-pro-max">
-                                <span className="italic font-light text-[#2563eb] block">Comparez nos adoucisseurs</span>
-                                <span className="font-bold text-[#1e3a8a] block">d'eau de puits</span>
+                <section className="py-24 bg-white relative overflow-hidden">
+                    <div className="container mx-auto px-6">
+                        <div className="text-center mb-16">
+                            <span className="inline-block px-4 py-1.5 bg-blue-100 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-widest mb-6">ANALYSE COMPARATIVE</span>
+                            <h2 className="heading-pro-max">
+                                <span className="italic font-light text-[#2563eb] block">L'expertise technique</span>
+                                <span className="font-bold text-[#1e3a8a] block">au service de votre puits.</span>
                             </h2>
-                            <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
-                        <div className="overflow-x-auto">
-                            <table className="w-full min-w-[1000px] border-collapse bg-white rounded-2xl overflow-hidden shadow-sm">
+                        <div className="overflow-x-auto pb-12">
+                            <table className="w-full min-w-[1000px] border-collapse bg-white rounded-[3rem] overflow-hidden shadow-xl border border-slate-100">
                                 <thead>
-                                    <tr className="bg-gray-100">
-                                        <th className="p-8 text-left text-gray-400 font-light uppercase tracking-wider w-1/4">Modèle</th>
+                                    <tr className="bg-slate-50/50">
+                                        <th className="p-10 text-left text-blue-900/40 font-black uppercase tracking-widest text-[10px]">Critères de Performance</th>
                                         {[
-                                            { 
-                                                name: "Sentinel HE", 
-                                                img: SentinelWaterSoftenerImg,
-                                                badge: "Efficacité Pure",
-                                                badgeColor: "bg-emerald-500"
-                                            },
-                                            { 
-                                                name: "Sérénité HE", 
-                                                img: SerenityWaterSoftenerImg,
-                                                badge: "Choix des Familles",
-                                                badgeColor: "bg-blue-600"
-                                            },
-                                            { 
-                                                name: "Infiniti HE", 
-                                                img: TwinAlternatingWaterSoftenerImg,
-                                                badge: "Performance 24/7",
-                                                badgeColor: "bg-indigo-600"
-                                            }
-                                        ].map(m => (
-                                            <th key={m.name} className="p-4 text-center text-gray-900 font-bold border-l border-white/50 first:border-l-0 relative group">
-                                                {/* Badge */}
-                                                <div className="absolute top-2 right-2 z-10">
-                                                    <span className={`text-[8px] font-black text-white ${m.badgeColor} px-2 py-0.5 rounded-full shadow-sm`}>
-                                                        {m.badge}
-                                                    </span>
-                                                </div>
-                                                
-                                                <div className="flex flex-col items-center">
-                                                    <div className="h-[120px] w-full flex items-center justify-center mb-4 transition-transform duration-500 group-hover:scale-110">
-                                                        <img
-                                                            src={m.img}
-                                                            alt={`Modèle ${m.name} - Système de filtration d'eau de puits haute efficacité Bricareau`}
-                                                            className="max-h-full max-w-full object-contain mix-blend-multiply"
-                                                        />
-                                                    </div>
-                                                    <div className="text-[13px] leading-tight uppercase tracking-wider min-h-[32px] flex items-center justify-center px-1">
-                                                        {m.name}
+                                            { name: "Sentinelle HE", img: SentinelWaterSoftenerImg, badge: "Efficacité Pure", color: "bg-emerald-600" },
+                                            { name: "Sérénité HE", img: SerenityWaterSoftenerImg, badge: "Choix des Familles", color: "bg-blue-600" },
+                                            { name: "Infiniti HE", img: TwinAlternatingWaterSoftenerImg, badge: "Performance 24/7", color: "bg-indigo-700" }
+                                        ].map((m, i) => (
+                                            <th key={i} className="p-6 text-center">
+                                                <div className="flex flex-col items-center gap-6">
+                                                    <img src={m.img} alt={m.name} className="w-[140px] h-[120px] object-contain mx-auto mix-blend-multiply transition-transform group-hover:scale-110" />
+                                                    <div className="space-y-2">
+                                                        <span className={`inline-block px-3 py-1 ${m.color} text-white rounded-full text-[8px] font-bold uppercase tracking-widest`}>{m.badge}</span>
+                                                        <div className="text-lg font-bold text-[#1e3a8a]">{m.name}</div>
                                                     </div>
                                                 </div>
                                             </th>
                                         ))}
                                     </tr>
                                 </thead>
-                                <tbody className="divide-y divide-gray-100">
+                                <tbody className="divide-y divide-slate-100">
                                     {comparisonData.map((row, i) => (
-                                        <tr key={i} className="hover:bg-gray-50 transition-colors">
-                                            <td className="p-8 font-bold text-slate-900 border-r border-gray-100 bg-gray-50/30">{row.feature}</td>
+                                        <tr key={i} className="hover:bg-blue-50/30 transition-colors group">
+                                            <td className="p-10 font-bold text-[#1e3a8a] border-r border-slate-50 bg-slate-50/20 text-sm italic group-hover:text-blue-600">{row.feature}</td>
                                             {["Sérénité HE", "Sentinel HE", "Infiniti HE"].map((model) => (
-                                                <td key={model} className="p-8 text-center text-lg font-light leading-snug text-gray-600 text-justify">
-                                                    {row[model as keyof ComparisonItem]}
-                                                </td>
+                                                <td key={model} className="p-10 text-center text-sm font-light text-slate-600">{row[model as keyof ComparisonItem]}</td>
                                             ))}
                                         </tr>
                                     ))}
@@ -628,124 +441,62 @@ const AdoucisseursEauDePuits = () => {
                     </div>
                 </section>
 
-                {/* 6. Water Testing Section (Redesigned for Mobile) */}
+                {/* 6. Water Testing Section */}
                 <section className="relative lg:h-[750px] flex flex-col lg:flex-row items-stretch overflow-hidden bg-white">
-                    {/* Mobile Image */}
                     <div className="lg:hidden w-full h-[300px] relative">
-                        <img
-                            src={waterTestingImg}
-                            alt="Test de dureté et analyse de fer pour eau de puits résidentielle - Expertise Bricareau"
-                            className="w-full h-full object-cover"
-                        />
-                        <div className="absolute inset-0 bg-black/20" />
+                        <img src={waterTestingImg} alt="Test de dureté" className="w-full h-full object-cover" />
                     </div>
-
-                    {/* Desktop Background */}
                     <div className="hidden lg:block absolute inset-0 z-0">
-                        <img
-                            src={waterTestingImg}
-                            alt="Test de dureté et analyse de fer pour eau de puits résidentielle"
-                            className="w-full h-full object-cover"
-                        />
+                        <img src={waterTestingImg} alt="Test de dureté" className="w-full h-full object-cover" />
                         <div className="absolute inset-0 bg-black/30 lg:bg-gradient-to-r lg:from-black/50 lg:to-transparent" />
-                        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-white via-white/10 to-transparent" />
                     </div>
-
-                    <div className="container mx-auto px-4 relative z-10 flex items-center py-12 lg:py-0">
+                    <div className="container mx-auto px-6 relative z-10 flex items-center py-12 lg:py-0">
                         <div className="max-w-2xl text-slate-900 lg:text-white">
-                             <span className="font-bold text-[#1e3a8a] block uppercase">
-                                Contrôle de la Qualité D'EAU
-                            </span><h2 
-                                 className="scroll-mt-[120px] mb-8 heading-pro-max"
-                             >
-                                 <span className="italic font-light text-[#1e3a8a] lg:text-white block tracking-tight">Des tests d'eau précis</span>
-                                 <span className="font-bold text-[#1e3a8a] lg:text-white block tracking-tight">pour une tranquillité d'esprit.</span>
-                             </h2>
-                            <p className="font-light text-slate-500 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
-                                Ne devinez pas la qualité de votre eau. Nos analyses approfondies identifient les bactéries, les minéraux et les contaminants chimiques pour vous offrir une tranquillité d'esprit totale.
-                            </p>
-                            <div className="flex gap-4">
-                                <Button asChild>
-                                    <a href="/tests-eau">Demandez une analyse d'eau</a>
-                                </Button>
-                            </div>
+                            <span className="font-bold text-[#1e3a8a] lg:text-white block uppercase tracking-widest text-xs mb-4">Contrôle de la Qualité D'EAU</span>
+                            <h2 className="heading-pro-max">
+                                <span className="italic font-light text-[#1e3a8a] lg:text-white block tracking-tight">Des tests d'eau précis</span>
+                                <span className="font-bold text-[#1e3a8a] lg:text-white block tracking-tight">pour une tranquillité d'esprit.</span>
+                            </h2>
+                            <p className="font-light text-slate-500 lg:text-white/95 mb-8 max-w-xl text-lg mt-6">Analyse approfondie pour identifier les minéraux et contaminants.</p>
+                            <div className="flex gap-4"><Button asChild><a href="/tests-eau">Demandez une analyse d'eau</a></Button></div>
                         </div>
                     </div>
                 </section>
 
-                {/* 7.Testimonials Grid Section */}
+                {/* 7. Testimonials */}
                 <TestimonialsSection
                     filterProduct="/adoucisseurs-eau-de-puits"
                     title={
-                        <>
-                            <h2 className="mb-8 heading-pro-max text-center">
-                                <span className="italic font-light text-[#2563eb] block text-center">Là où le calcaire dictait sa loi,</span>
-                                <span className="font-bold text-[#1e3a8a] block text-center">nos clients ont repris le contrôle.</span>
-                            </h2>
-                        </>
+                        <h2 className="mb-16 heading-pro-max text-center">
+                            <span className="italic font-light text-[#2563eb] block text-center">Là où le calcaire dictait sa loi,</span>
+                            <span className="font-bold text-[#1e3a8a] block text-center">nos clients ont repris le contrôle.</span>
+                        </h2>
                     }
                 />
 
-                {/* 8. Section Associated Products */}
+                {/* 8. Associated Products */}
                 <section className="bg-white py-24">
-                    <div className="container mx-auto px-4">
-                        <div className="text-center mb-16">
-                            <h2 className="mb-8 heading-pro-max text-center">
-                                <span className="font-bold text-[#1e3a8a] block text-center">Découvrez les produits associés</span>
+                    <div className="container mx-auto px-6 text-left">
+                        <div className="text-left mb-16">
+                            <h2 className="heading-pro-max">
+                                <span className="font-bold text-[#1e3a8a] block text-left">Solutions associées</span>
                             </h2>
-                            <p className="body-pro-max mx-auto text-center">
-                                Optimisez votre expérience de traitement d'eau avec nos solutions complémentaires.
-                            </p>
+                            <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
-
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {[
-                                {
-                                    name: "Systèmes de filtration d'eau spécialisés",
-                                    desc: "Nos filtres spécialisés sont conçus pour cibler et éliminer efficacement les contaminants spécifiques de votre eau de puits.",
-                                    img: specialFiltersImg,
-                                    link: "/Filtres-deau"
-                                },
-                                {
-                                    name: "Systèmes de désinfection UV",
-                                    desc: "Utilisés pour la stérilisation contre les bactéries, les virus, les coliformes, l'E.Coli, le Cryptosporidium,...",
-                                    img: uvSystemImg2,
-                                    link: "/systemes-de-desinfection-UV"
-                                },
-                                {
-                                    name: "Stations d'eau potable",
-                                    desc: "Une eau de qualité minérale directement à votre évier, pour une hydratation pure et sans déchets plastiques.",
-                                    img: drinkingWaterImg,
-                                    link: "/systeme-de-filtration-deau-potable"
-                                }
-
+                                { name: "Filtration spécialisée", desc: "Ciblez fer, tanins, soufre.", img: specialFiltersImg, link: "/Filtres-deau" },
+                                { name: "Désinfection UV", desc: "Stérilisation absolue.", img: uvSystemImg2, link: "/systemes-de-desinfection-UV" },
+                                { name: "Stations d'eau potable", desc: "Qualité minérale à l'évier.", img: drinkingWaterImg, link: "/systeme-de-filtration-deau-potable" }
                             ].map((prod, i) => (
-                                <div
-                                    key={i}
-                                    className="group bg-white rounded-3xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full cursor-pointer"
-                                    onClick={() => window.location.href = prod.link}
-                                >
-                                    <div className="relative h-80 overflow-hidden bg-slate-50 flex items-center justify-center p-12">
-                                        <img
-                                            src={prod.img}
-                                            alt={`${prod.name} - Solution Bricareau pour une eau pure et sans calcaire partout`}
-                                            className="max-h-full object-contain group-hover:scale-110 transition-transform duration-700 mix-blend-multiply"
-                                        />
+                                <div key={i} className="group bg-white rounded-[2.5rem] overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 flex flex-col h-full cursor-pointer" onClick={() => navigate(prod.link)}>
+                                    <div className="relative h-64 overflow-hidden bg-slate-50/50 flex items-center justify-center p-10">
+                                        <img src={prod.img} alt={prod.name} className="max-h-full object-contain mix-blend-multiply" />
                                     </div>
-                                    <div className="p-8 space-y-4 flex flex-col flex-grow border-t-2 border-transparent group-hover:border-blue-600 transition-colors">
-                                        <h3 className="card-title text-center group-hover:text-blue-600 transition-colors duration-500">
-                                            {prod.name}
-                                        </h3>
-                                        <p className="body-pro-max flex-grow text-justify">
-                                            {prod.desc}
-                                        </p>
-                                        <div
-                                            className="inline-flex items-center gap-2 text-blue-600 font-bold text-xs tracking-widest uppercase mt-4 group-hover:underline self-end"
-                                            style={{}}
-                                        >
-                                            <span></span>
-                                            <ArrowRight className="h-6 w-6 transform group-hover:translate-x-1 transition-transform" />
-                                        </div>
+                                    <div className="p-8 space-y-4 flex flex-col flex-grow border-t border-slate-50 group-hover:border-blue-600 transition-all">
+                                        <h3 className="text-xl font-bold text-[#1e3a8a] text-center">{prod.name}</h3>
+                                        <p className="text-slate-500 text-sm leading-relaxed text-center italic font-light">{prod.desc}</p>
+                                        <div className="pt-4 flex justify-center"><div className="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-all"><ArrowRight className="h-5 w-5" /></div></div>
                                     </div>
                                 </div>
                             ))}
@@ -753,124 +504,73 @@ const AdoucisseursEauDePuits = () => {
                     </div>
                 </section>
 
-                {/* 9. CTA Section - Premium Immersive */}
+                {/* 9. CTA */}
                 <section className="relative py-32 overflow-hidden">
-                    {/* Background Image with Overlay */}
                     <div className="absolute inset-0 z-0">
-                        <img
-                            src={mantakesbathImg}
-                            alt="Expert Bricareau en traitement d'eau de puits"
-                            className="w-full h-full object-cover object-[center_30%]"
-                        />
+                        <img src={mantakesbathImg} alt="Expert" className="w-full h-full object-cover object-[center_30%]" />
                         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 via-blue-900/60 to-blue-800/40 backdrop-blur-[2px]" />
                     </div>
-
                     <div className="container mx-auto px-6 relative z-10 text-center">
                         <div className="max-w-4xl mx-auto">
-               <h2 className="mb-8 heading-pro-max text-center">
-                <span className="font-bold text-white block">Préservez votre foyer avec </span>
-                <span className="font-bold text-white block">une eau d'une douceur absolue.</span>
-              </h2>
-
-                            <p className="text-white text-xl font-light mb-10 max-w-2xl mx-auto">
-                                Ne laissez plus le calcaire de votre puits user vos électroménagers et agresser votre peau. Alliez la performance d'une plomberie protégée au confort d'une eau douce à chaque robinet.
-                            </p>
-
-                            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                                                            <Button asChild>
-                                                                <a href="tel:18552649328" className="flex items-center gap-3">
-                                                                    <Phone className="h-5 w-5 animate-bounce" />
-                                                                    Parlez à un expert
-                                                                </a>
-                                                            </Button>
-                            
-                                                            <Button
-                                                                variant="outline"
-                                                                asChild
-                                                            >
-                                                                <NavLink to="/consultation">Planifiez-vous une consultation</NavLink>
-                                                            </Button>
-                                                        </div>
-
-                            <p className="mt-8 text-white/50 text-sm font-light">
-                                Disponible 7j/7 — Réponse en moins de 24h
-                            </p>
-                        </div>
-                    </div>
-                </section>
-
-                {/* 11. FAQ Section */}
-                <section className="py-24 bg-white">
-                    <div className="container mx-auto px-6">
-                        <div className="text-left mb-16">
-                            <h2 className="mb-8 heading-pro-max text-left">
-                                <span className="italic font-light text-[#2563eb] block">Pour vous éclairer</span>
-                                <span className="font-bold text-[#1e3a8a] block">Questions fréquentes</span>
+                            <h2 className="mb-8 heading-pro-max text-center">
+                                <span className="font-bold text-white block">Préservez votre foyer avec</span>
+                                <span className="font-bold text-white block uppercase">une eau d'une douceur absolue.</span>
                             </h2>
-                            <div className="w-24 h-1 bg-blue-600"></div>
-                        </div>
-
-                        <div className="max-w-4xl mx-auto">
-                            <Accordion type="single" collapsible className="w-full">
-                                {faqItems.slice(0, showAllFaqs ? undefined : 6).map((item, idx) => (
-                                    <AccordionItem key={idx} value={`item-${idx}`} className="border-b-gray-200">
-                                        <AccordionTrigger className="text-left text-base font-medium leading-6 hover:no-underline py-6" style={{}}>
-                                            {item.q}
-                                        </AccordionTrigger>
-                                        <AccordionContent className="text-base font-light leading-6 text-gray-600 pb-6 text-justify" style={{}}>
-                                            {item.a}
-                                        </AccordionContent>
-                                    </AccordionItem>
-                                ))}
-                            </Accordion>
-                            <div className="mt-12 text-center">
-                                <Button
-                                    onClick={() => setShowAllFaqs(!showAllFaqs)}
-                                >
-                                    {showAllFaqs ? "Voir moins de questions" : "Voir toutes les questions"}
-                                </Button>
+                            <p className="text-white text-xl font-light mb-10 opacity-90 text-center">Alliez performance et confort à chaque robinet.</p>
+                            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                                <Button asChild size="lg" className="h-16 px-10 rounded-full text-lg"><a href="tel:18552649328" className="flex items-center gap-3"><Phone className="h-5 w-5 animate-pulse" />Parlez à un expert</a></Button>
+                                <Button variant="outline" size="lg" className="h-16 px-10 rounded-full text-lg bg-white/10 text-white border-white/20 hover:bg-white hover:text-blue-900" asChild><NavLink to="/consultation">Planifiez une consultation</NavLink></Button>
                             </div>
                         </div>
                     </div>
                 </section>
 
-                {/* 12. Resources Section */}
+                {/* 11. FAQ */}
+                <section className="py-24 bg-white">
+                    <div className="container mx-auto px-6 text-left">
+                        <div className="text-left mb-16">
+                            <h2 className="mb-8 heading-pro-max">
+                                <span className="italic font-light text-[#2563eb] block">Pour vous éclairer</span>
+                                <span className="font-bold text-[#1e3a8a] block">Questions fréquentes</span>
+                            </h2>
+                            <div className="w-24 h-1 bg-blue-600"></div>
+                        </div>
+                        <div className="max-w-4xl mx-auto">
+                            <Accordion type="single" collapsible className="w-full">
+                                {faqItems.slice(0, showAllFaqs ? undefined : 6).map((item, idx) => (
+                                    <AccordionItem key={idx} value={`item-${idx}`} className="border-b-gray-200">
+                                        <AccordionTrigger className="text-left text-base font-medium py-6">{item.q}</AccordionTrigger>
+                                        <AccordionContent className="text-base font-light text-gray-600 pb-6 text-justify">{item.a}</AccordionContent>
+                                    </AccordionItem>
+                                ))}
+                            </Accordion>
+                            <div className="mt-12 text-center">
+                                <Button onClick={() => setShowAllFaqs(!showAllFaqs)} variant="outline" className="rounded-full px-8">{showAllFaqs ? "Voir moins" : "Voir toutes les questions"}</Button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* 12. Resources */}
                 <section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-6 text-left">
                         <div className="text-left mb-16">
-                            <h2 
-                                className="mb-8 heading-pro-max text-left"
-                            >
-                                <span className="font-bold text-[#1e3a8a] block text-left">Ressources</span>
-                            </h2>
+                            <h2 className="mb-8 heading-pro-max"><span className="font-bold text-[#1e3a8a] block">Ressources</span></h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {[
-                                { title: "Adoucisseur d'eau et fosse septique : compatible ou non ?", img: adoucisseurFosseImg, link: "/adoucisseur-deau-et-fosse-septique-mythes-et-realites" },
-                                { title: "Adoucisseur sans sel vs avec sel : la vérité technique", img: residentialWaterSoftenerImg, link: "/adoucisseur-sans-sel-vs-avec-sel-verite-technique" },
-                                { title: "Conditionneur d'eau : Une alternative écologique à l'adoucisseur sans sel", img: conditionneursImg, link: "/conditionneur-deau-une-alternative-ecologique-a-ladoucisseur-sans-sel" }
+                                { title: "Fosse septique : compatible ?", img: adoucisseurFosseImg, link: "/adoucisseur-deau-et-fosse-septique-mythes-et-realites" },
+                                { title: "Sans sel vs Avec sel", img: residentialWaterSoftenerImg, link: "/adoucisseur-sans-sel-vs-avec-sel-verite-technique" },
+                                { title: "Conditionneur d'eau", img: conditionneursImg, link: "/conditionneur-deau-une-alternative-ecologique-a-ladoucisseur-sans-sel" }
                             ].map((art, i) => (
-                                <div
-                                    key={i}
-                                    className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer group flex flex-col h-full border border-gray-100"
-                                    onClick={() => navigate(art.link)}
-                                >
+                                <div key={i} className="bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer group flex flex-col h-full border border-slate-100" onClick={() => navigate(art.link)}>
                                     <div className="h-56 overflow-hidden">
-                                        <img src={art.img} alt={`${art.title} - Expertise Bricareau en traitement d'eau de puits`} className="w-full h-full object-cover transition-transform group-hover:scale-110" />
+                                        <img src={art.img} alt={art.title} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
                                     </div>
-                                    <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
-                                        <NavLink to={art.link}>
-                                            <h4 className="mb-4 group-hover:text-blue-600 transition-colors tracking-tight font-medium text-base leading-6 text-[#0F1729]">{art.title}</h4>
-                                        </NavLink>
-                                        <div className="mt-auto">
-                                            <NavLink
-                                                to={art.link}
-                                                className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-sm"
-                                            >
-                                                Lire <ChevronRight className="h-4 w-4" />
-                                            </NavLink>
-                                        </div>
+                                    <div className="p-8 text-left transition-colors flex flex-col flex-grow">
+                                        <h4 className="mb-4 group-hover:text-blue-600 transition-colors font-bold text-lg text-[#0F1729] leading-tight">{art.title}</h4>
+                                        <div className="mt-auto"><div className="text-blue-600 font-bold flex items-center gap-2 text-sm uppercase tracking-widest">Lire <ArrowRight className="h-4 w-4" /></div></div>
                                     </div>
                                 </div>
                             ))}
@@ -878,20 +578,12 @@ const AdoucisseursEauDePuits = () => {
                     </div>
                 </section>
             </main>
-
             <Footer />
-
-            {/* Sticky Consultation CTA */}
             <div className="fixed bottom-8 right-8 z-[100] group">
-                <div 
-                    onClick={() => navigate("/consultation")}
-                    className="relative flex items-center gap-4 bg-white/60 backdrop-blur-xl border border-white p-2 pr-6 rounded-full shadow-2xl cursor-pointer transition-all duration-500 hover:scale-105 hover:bg-white/90 group"
-                >
+                <div onClick={() => navigate("/consultation")} className="relative flex items-center gap-4 bg-white/60 backdrop-blur-xl border border-white p-2 pr-6 rounded-full shadow-2xl cursor-pointer transition-all duration-500 hover:scale-105 hover:bg-white/90">
                     <div className="relative">
                         <div className="absolute inset-0 bg-blue-600 rounded-full animate-ping opacity-20 group-hover:opacity-40" />
-                        <div className="relative w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white shadow-lg">
-                            <Phone className="w-5 h-5" />
-                        </div>
+                        <div className="relative w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white shadow-lg"><Phone className="w-5 h-5" /></div>
                     </div>
                     <div className="flex flex-col">
                         <span className="text-[10px] font-black uppercase tracking-widest text-[#1e3a8a]/60">Expertise de puits</span>

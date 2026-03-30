@@ -125,12 +125,13 @@ const Service = () => {
                             </p>
                             <div className="flex flex-col sm:flex-row items-start lg:items-center gap-8 animate-in fade-in slide-in-from-bottom duration-1000 delay-200">
                                 <Button 
+                                    size="lg"
                                     asChild
-                                    className="rounded-full px-12 h-14 bg-blue-600 hover:bg-blue-700 text-white font-bold transition-all hover:scale-105 active:scale-95 shadow-xl shadow-blue-200 group gap-2"
+                                    className="w-fit group"
                                 >
                                     <button onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}>
                                         Planifier un service
-                                        <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
+                                        <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-2" />
                                     </button>
                                 </Button>
                                 
@@ -350,8 +351,9 @@ const Service = () => {
 
                                 <div className="pt-6">
                                     <Button
+                                        size="lg"
                                         asChild
-                                        className="rounded-full px-12 h-14 bg-blue-600 hover:bg-blue-700 text-white font-bold transition-all hover:scale-105 active:scale-95 shadow-xl shadow-blue-500/20 group gap-2"
+                                        className="bg-white text-blue-600 hover:bg-blue-600 hover:text-white border-white border-2 font-bold transition-all duration-300 rounded-full group px-10 h-14"
                                     >
                                         <a href="tel:18552649328" className="flex items-center gap-2">
                                             <Phone className="w-5 h-5 transition-transform group-hover:rotate-12" />
@@ -411,11 +413,12 @@ const Service = () => {
                                 </div>
                                 <div className="pt-6">
                                     <Button 
+                                        size="lg"
                                         onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
-                                        className="rounded-full px-12 h-14 bg-blue-600 hover:bg-blue-700 text-white font-bold transition-all hover:scale-105 active:scale-95 shadow-xl shadow-blue-200 group gap-2"
+                                        className="w-fit group"
                                     >
                                         Planifiez un service
-                                        <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
+                                        <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-2" />
                                     </Button>
                                 </div>
                             </div>
@@ -468,11 +471,12 @@ const Service = () => {
                                 </div>
                                 <div className="pt-6">
                                     <Button 
+                                        size="lg"
                                         onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
-                                        className="rounded-full px-12 h-14 bg-blue-600 hover:bg-blue-700 text-white font-bold transition-all hover:scale-105 active:scale-95 shadow-xl shadow-blue-200 group gap-2"
+                                        className="w-fit group"
                                     >
                                         Réservez votre entretien
-                                        <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
+                                        <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-2" />
                                     </Button>
                                 </div>
                             </div>
@@ -484,11 +488,6 @@ const Service = () => {
                                         className="w-full h-full object-cover drop-shadow-2xl"
                                         alt="Maintenance système d'osmose inverse"
                                     />
-                                    <div className="absolute bottom-8 right-8">
-                                        <div className="w-20 h-20 bg-white/90 backdrop-blur-md rounded-2xl flex items-center justify-center shadow-xl">
-                                            <Droplets className="w-10 h-10 text-blue-600 animate-pulse" />
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -526,11 +525,12 @@ const Service = () => {
                                 </div>
                                 <div className="pt-4">
                                     <Button 
+                                        size="lg"
                                         onClick={() => navigate('/tests-eau')}
-                                        className="rounded-full px-12 h-14 bg-blue-600 hover:bg-blue-700 text-white font-bold transition-all hover:scale-105 active:scale-95 shadow-xl shadow-blue-200 group gap-2"
+                                        className="w-fit group"
                                     >
                                         Voir toutes les analyses 
-                                        <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
+                                        <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-2" />
                                     </Button>
                                 </div>
                             </div>
@@ -639,9 +639,12 @@ const Service = () => {
                                             <Textarea id="message" className="min-h-[120px] bg-slate-50 border-none rounded-2xl focus:ring-2 focus:ring-blue-600 focus:bg-white transition-all shadow-inner" />
                                         </div>
                                         <div className="md:col-span-2 space-y-4 pt-4">
-                                            <Button className="w-full rounded-full h-16 bg-blue-600 hover:bg-blue-700 text-white font-bold text-lg transition-all hover:scale-[1.02] shadow-xl shadow-blue-200">
+                                            <Button 
+                                                size="lg"
+                                                className="w-full group"
+                                            >
                                                 Envoyer ma demande de rendez-vous
-                                                <ArrowRight className="ml-2 w-5 h-5" />
+                                                <ArrowRight className="w-6 h-6 transition-transform group-hover:translate-x-2" />
                                             </Button>
                                         </div>
                                      </form>

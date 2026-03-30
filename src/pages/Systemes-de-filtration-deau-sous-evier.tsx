@@ -333,46 +333,49 @@ const FiltrationSousEvier = () => {
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
-                        <div className="overflow-x-auto">
-                            <table className="w-full min-w-[1000px] border-collapse bg-white rounded-2xl overflow-hidden shadow-sm">
+                        <div className="overflow-x-auto pb-12">
+                            <table className="w-full min-w-[1000px] border-collapse bg-white rounded-[3rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.05)] border border-slate-100">
                                 <thead>
-                                    <tr className="bg-gray-100/50">
-                                        <th className="p-8 text-left text-cyan-900/40 font-black uppercase tracking-widest text-[10px]">Solutions</th>
+                                    <tr className="bg-slate-50/50">
+                                        <th className="p-10 text-left text-blue-900/40 font-black uppercase tracking-widest text-[10px]">Critères Techniques</th>
                                         {[
                                             { name: "Cristal Pro I", img: essentialImg, badge: "L'Essentiel", color: "bg-cyan-600" },
                                             { name: "Cristal Pro II", img: plusROImg, badge: "Le Plus Populaire", color: "bg-emerald-600" },
                                             { name: "Cristal Pro III", img: eliteROImg, badge: "Ultra-Protection", color: "bg-blue-600" },
                                         ].map((m, i) => (
-                                            <th key={i} className="p-4 text-center text-gray-900 font-bold">
-                                                <div className="flex flex-col items-center gap-4 group">
-                                                    <div className="relative">
-                                                        <div className={`absolute -top-3 -right-12 z-20 ${m.color} text-white text-[8px] font-black uppercase tracking-[0.2em] px-3 py-1 rounded-full shadow-lg whitespace-nowrap`}>
+                                            <th key={i} className="p-6 text-center">
+                                                <div className="flex flex-col items-center gap-6">
+                                                    <div className="relative group/img">
+                                                        <div className={`absolute -top-3 -right-12 z-20 ${m.color} text-white text-[8px] font-black uppercase tracking-[0.4em] px-3 py-1 rounded-full shadow-2xl whitespace-nowrap`}>
                                                             {m.badge}
                                                         </div>
+                                                        <div className="absolute inset-0 bg-blue-600 rounded-full blur-2xl opacity-0 group-hover/img:opacity-20 transition-opacity duration-700" />
                                                         <img
                                                             src={m.img}
-                                                            alt={`Filtre d'eau ${m.name} - Technologie d'ultrafiltration Bricareau`}
-                                                            className="w-[140px] h-[110px] object-contain mx-auto mix-blend-multiply group-hover:scale-110 transition-transform duration-500"
+                                                            alt={`Modèle ${m.name}`}
+                                                            className="w-[160px] h-[130px] object-contain mx-auto mix-blend-multiply relative z-10 transition-transform duration-700 group-hover/img:scale-110"
                                                         />
                                                     </div>
-                                                    <span className="max-w-[120px] inline-block uppercase tracking-wider text-[11px] text-[#164E63]">{m.name}</span>
+                                                    <div className="text-lg font-bold text-[#1e3a8a] max-w-[150px] mx-auto leading-tight">{m.name}</div>
                                                 </div>
                                             </th>
                                         ))}
                                     </tr>
                                 </thead>
-                                <tbody className="divide-y divide-gray-100">
+                                <tbody className="divide-y divide-slate-100">
                                     {comparisonData.map((row, i) => (
-                                        <tr key={i} className="hover:bg-gray-50 transition-colors">
-                                            <td className="p-8 font-light text-gray-700">{row.feature}</td>
-                                            <td className="p-8 text-center text-sm">
-                                                {typeof row.essential === 'string' ? <span className="text-blue-600 font-bold bg-blue-50 px-3 py-1 rounded-full text-[10px] whitespace-nowrap">{row.essential}</span> : (row.essential ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : null)}
+                                        <tr key={i} className="hover:bg-blue-50/30 transition-colors group">
+                                            <td className="p-10 font-bold text-[#1e3a8a] border-r border-slate-50 bg-slate-50/20 text-sm italic group-hover:text-blue-600 transition-colors">
+                                                {row.feature}
                                             </td>
-                                            <td className="p-8 text-center text-sm">
-                                                {typeof row.plus === 'string' ? <span className="text-blue-600 font-bold bg-blue-50 px-3 py-1 rounded-full text-[10px] whitespace-nowrap">{row.plus}</span> : (row.plus ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : null)}
+                                            <td className="p-10 text-center text-sm font-light leading-relaxed text-slate-600">
+                                                {typeof row.essential === 'string' ? <span className="text-blue-600 font-bold bg-blue-50 px-4 py-1.5 rounded-full text-[10px] uppercase shadow-sm">{row.essential}</span> : (row.essential ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : <div className="h-6 w-6 mx-auto opacity-10"><X className="h-6 w-6" /></div>)}
                                             </td>
-                                            <td className="p-8 text-center text-sm">
-                                                {typeof row.elite === 'string' ? <span className="text-blue-600 font-bold bg-blue-50 px-3 py-1 rounded-full text-[10px] whitespace-nowrap">{row.elite}</span> : (row.elite ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : null)}
+                                            <td className="p-10 text-center text-sm font-light leading-relaxed text-slate-600">
+                                                {typeof row.plus === 'string' ? <span className="text-blue-600 font-bold bg-blue-50 px-4 py-1.5 rounded-full text-[10px] uppercase shadow-sm">{row.plus}</span> : (row.plus ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : <div className="h-6 w-6 mx-auto opacity-10"><X className="h-6 w-6" /></div>)}
+                                            </td>
+                                            <td className="p-10 text-center text-sm font-light leading-relaxed text-slate-600">
+                                                {typeof row.elite === 'string' ? <span className="text-blue-600 font-bold bg-blue-50 px-4 py-1.5 rounded-full text-[10px] uppercase shadow-sm">{row.elite}</span> : (row.elite ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : <div className="h-6 w-6 mx-auto opacity-10"><X className="h-6 w-6" /></div>)}
                                             </td>
                                         </tr>
                                     ))}

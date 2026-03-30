@@ -572,42 +572,45 @@ const Filtration = () => {
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
-                        <div className="overflow-x-auto">
-                            <table className="w-full min-w-[1000px] border-collapse bg-white rounded-2xl overflow-hidden shadow-sm">
+                        <div className="overflow-x-auto pb-12">
+                            <table className="w-full min-w-[1000px] border-collapse bg-white rounded-[3rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.05)] border border-slate-100">
                                 <thead>
-                                    <tr className="bg-gray-100">
-                                        <th className="p-8 text-left text-gray-400 font-light uppercase tracking-wider">Solutions</th>
+                                    <tr className="bg-slate-50/50">
+                                        <th className="p-10 text-left text-blue-900/40 font-black uppercase tracking-widest text-[10px]">Critères Techniques</th>
                                         {[
                                             { name: "Filtres d'eau spécialisés", img: specializedFiltersImg, badge: "Protection Globale", badgeColor: "bg-blue-600" },
                                             { name: "Systèmes de filtration sous l'évier", img: undersinkSystemImg, badge: "Pureté Dégustation", badgeColor: "bg-emerald-600" }
                                         ].map((m, i) => (
-                                            <th key={i} className="p-4 text-center text-gray-900 font-bold text-sm">
-                                                <div className="flex flex-col items-center gap-4 group">
-                                                    <div className="relative">
-                                                        <div className={`absolute -top-3 -right-16 z-20 ${m.badgeColor} text-white text-[8px] font-black uppercase tracking-[0.2em] px-3 py-1 rounded-full shadow-xl whitespace-nowrap`}>
+                                            <th key={i} className="p-6 text-center">
+                                                <div className="flex flex-col items-center gap-6">
+                                                    <div className="relative group/img">
+                                                        <div className={`absolute -top-3 -right-16 z-20 ${m.badgeColor} text-white text-[8px] font-black uppercase tracking-[0.4em] px-3 py-1 rounded-full shadow-2xl whitespace-nowrap`}>
                                                             {m.badge}
                                                         </div>
+                                                        <div className="absolute inset-0 bg-blue-600 rounded-full blur-2xl opacity-0 group-hover/img:opacity-20 transition-opacity duration-700" />
                                                         <img
                                                             src={m.img}
-                                                            alt={`${m.name} - Solution de filtration d'eau Bricareau`}
-                                                            className="w-[180px] h-[140px] object-contain mx-auto mix-blend-multiply group-hover:scale-110 transition-transform duration-500"
+                                                            alt={m.name}
+                                                            className="w-[180px] h-[140px] object-contain mx-auto mix-blend-multiply relative z-10 transition-transform duration-700 group-hover/img:scale-110"
                                                         />
                                                     </div>
-                                                    <div className="text-[14px] max-w-[150px] mx-auto text-[#1e3a8a]">{m.name}</div>
+                                                    <div className="text-lg font-bold text-[#1e3a8a] max-w-[150px] mx-auto leading-tight">{m.name}</div>
                                                 </div>
                                             </th>
                                         ))}
                                     </tr>
                                 </thead>
-                                <tbody className="divide-y divide-gray-100">
+                                <tbody className="divide-y divide-slate-100">
                                     {comparisonData.map((row, i) => (
-                                        <tr key={i} className="hover:bg-gray-50 transition-colors">
-                                            <td className="p-8 font-light text-gray-700">{row.feature}</td>
-                                            <td className="p-8 text-center">
-                                                {typeof row.whole === 'string' ? <span className="text-blue-600 font-bold bg-blue-50 px-4 py-1.5 rounded-full text-[10px] uppercase">{row.whole}</span> : (row.whole ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : null)}
+                                        <tr key={i} className="hover:bg-blue-50/30 transition-colors group">
+                                            <td className="p-10 font-bold text-[#1e3a8a] border-r border-slate-50 bg-slate-50/20 text-sm italic group-hover:text-blue-600 transition-colors">
+                                                {row.feature}
                                             </td>
-                                            <td className="p-8 text-center">
-                                                {typeof row.basic === 'string' ? <span className="text-blue-600 font-bold bg-blue-50 px-4 py-1.5 rounded-full text-[10px] uppercase">{row.basic}</span> : (row.basic ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : null)}
+                                            <td className="p-10 text-center text-sm font-light leading-relaxed text-slate-600">
+                                                {typeof row.whole === 'string' ? <span className="text-blue-600 font-bold bg-blue-50 px-4 py-1.5 rounded-full text-[10px] uppercase shadow-sm">{row.whole}</span> : (row.whole ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : <div className="h-6 w-6 mx-auto opacity-10"><X className="h-6 w-6" /></div>)}
+                                            </td>
+                                            <td className="p-10 text-center text-sm font-light leading-relaxed text-slate-600">
+                                                {typeof row.basic === 'string' ? <span className="text-blue-600 font-bold bg-blue-50 px-4 py-1.5 rounded-full text-[10px] uppercase shadow-sm">{row.basic}</span> : (row.basic ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : <div className="h-6 w-6 mx-auto opacity-10"><X className="h-6 w-6" /></div>)}
                                             </td>
                                         </tr>
                                     ))}

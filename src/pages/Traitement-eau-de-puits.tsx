@@ -590,45 +590,55 @@ const TraitementEauDePuits = () => {
                <div className="w-24 h-1 bg-blue-600 mb-8"></div>
             </div>
 
-            <div className="overflow-x-auto">
-              <table className="w-full min-w-[1000px] border-collapse bg-white rounded-2xl overflow-hidden shadow-sm">
+            <div className="overflow-x-auto pb-12">
+              <table className="w-full min-w-[1000px] border-collapse bg-white rounded-[3rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.05)] border border-slate-100">
                 <thead>
-                  <tr className="bg-gray-100">
-                    <th className="p-8 text-left text-gray-400 font-light uppercase tracking-wider">Solutions</th>
+                  <tr className="bg-slate-50/50">
+                    <th className="p-10 text-left text-blue-900/40 font-black uppercase tracking-widest text-[10px]">Critères Techniques</th>
                     {[
-                      { name: "Filtres spécialisés", img: specializedFiltersImg },
-                      { name: "Adoucisseurs", img: waterSoftenerImg },
-                      { name: "Osmose inverse", img: drinkingWaterImg },
-                      { name: "Stérilisation UV", img: uvSystemImg }
+                      { name: "Filtres spécialisés", img: specializedFiltersImg, badge: "Sédiments & Fer", color: "bg-slate-500" },
+                      { name: "Adoucisseurs", img: waterSoftenerImg, badge: "Calcaire & Fer", color: "bg-blue-600" },
+                      { name: "Osmose inverse", img: drinkingWaterImg, badge: "Osmose Pure", color: "bg-emerald-600" },
+                      { name: "Stérilisation UV", img: uvSystemImg, badge: "Stérilisation", color: "bg-amber-600" }
                     ].map((m, i) => (
-                      <th key={i} className="p-4 text-center text-gray-900 font-bold text-sm">
-                        <div className="flex flex-col items-center gap-2">
-                          <img
-                            src={m.img}
-                            alt={`Comparaison ${m.name} - Système de traitement pour puits privés`}
-                            className="w-[150px] h-[120px] object-contain mx-auto mix-blend-multiply"
-                          />
-                          <span className="max-w-[150px] inline-block">{m.name}</span>
+                      <th key={i} className="p-6 text-center">
+                        <div className="flex flex-col items-center gap-6">
+                          <div className="relative group/img">
+                            <div className="absolute inset-0 bg-blue-600 rounded-full blur-2xl opacity-0 group-hover/img:opacity-20 transition-opacity duration-700" />
+                            <img
+                              src={m.img}
+                              alt={m.name}
+                              className="w-[140px] h-[120px] object-contain mx-auto mix-blend-multiply relative z-10 transition-transform duration-700 group-hover/img:scale-110"
+                            />
+                          </div>
+                          <div className="space-y-2">
+                            <span className={`inline-block px-3 py-1 ${m.color} text-white rounded-full text-[8px] font-bold uppercase tracking-widest shadow-lg shadow-blue-900/10`}>
+                              {m.badge}
+                            </span>
+                            <div className="text-lg font-bold text-[#1e3a8a]">{m.name}</div>
+                          </div>
                         </div>
                       </th>
                     ))}
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-gray-100">
+                <tbody className="divide-y divide-slate-100">
                   {comparisonData.map((row, i) => (
-                    <tr key={i} className="hover:bg-gray-50 transition-colors">
-                      <td className="p-8 font-light text-gray-700">{row.feature}</td>
-                      <td className="p-8 text-center text-sm">
-                        {typeof row.filters === 'string' ? <span className="text-blue-600 font-bold bg-blue-50 px-3 py-1 rounded-full text-[10px] whitespace-nowrap">{row.filters}</span> : (row.filters ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : null)}
+                    <tr key={i} className="hover:bg-blue-50/30 transition-colors group">
+                      <td className="p-10 font-bold text-[#1e3a8a] border-r border-slate-50 bg-slate-50/20 text-sm italic group-hover:text-blue-600 transition-colors">
+                        {row.feature}
                       </td>
-                      <td className="p-8 text-center text-sm">
-                        {typeof row.softeners === 'string' ? <span className="text-blue-600 font-bold bg-blue-50 px-3 py-1 rounded-full text-[10px] whitespace-nowrap">{row.softeners}</span> : (row.softeners ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : null)}
+                      <td className="p-10 text-center text-sm font-light leading-relaxed text-slate-600">
+                        {typeof row.filters === 'string' ? <span className="text-blue-600 font-bold bg-blue-50 px-3 py-1 rounded-full text-[10px] whitespace-nowrap">{row.filters}</span> : (row.filters ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : <div className="h-6 w-6 mx-auto opacity-10"><X className="h-6 w-6" /></div>)}
                       </td>
-                      <td className="p-8 text-center text-sm">
-                        {typeof row.osmose === 'string' ? <span className="text-blue-600 font-bold bg-blue-50 px-3 py-1 rounded-full text-[10px] whitespace-nowrap">{row.osmose}</span> : (row.osmose ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : null)}
+                      <td className="p-10 text-center text-sm font-light leading-relaxed text-slate-600">
+                        {typeof row.softeners === 'string' ? <span className="text-blue-600 font-bold bg-blue-50 px-3 py-1 rounded-full text-[10px] whitespace-nowrap">{row.softeners}</span> : (row.softeners ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : <div className="h-6 w-6 mx-auto opacity-10"><X className="h-6 w-6" /></div>)}
                       </td>
-                      <td className="p-8 text-center text-sm">
-                        {typeof row.uv === 'string' ? <span className="text-blue-600 font-bold bg-blue-50 px-3 py-1 rounded-full text-[10px] whitespace-nowrap">{row.uv}</span> : (row.uv ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : null)}
+                      <td className="p-10 text-center text-sm font-light leading-relaxed text-slate-600">
+                        {typeof row.osmose === 'string' ? <span className="text-blue-600 font-bold bg-blue-50 px-3 py-1 rounded-full text-[10px] whitespace-nowrap">{row.osmose}</span> : (row.osmose ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : <div className="h-6 w-6 mx-auto opacity-10"><X className="h-6 w-6" /></div>)}
+                      </td>
+                      <td className="p-10 text-center text-sm font-light leading-relaxed text-slate-600">
+                        {typeof row.uv === 'string' ? <span className="text-blue-600 font-bold bg-blue-50 px-3 py-1 rounded-full text-[10px] whitespace-nowrap">{row.uv}</span> : (row.uv ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : <div className="h-6 w-6 mx-auto opacity-10"><X className="h-6 w-6" /></div>)}
                       </td>
                     </tr>
                   ))}
