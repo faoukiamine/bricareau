@@ -63,6 +63,7 @@ import specialFiltersImg from "@/assets/Filtres d'eau spécialisés.webp";
 import personShieldSvg from "@/assets/person_shield.svg";
 import resetWrenchSvg from "@/assets/reset_wrench.svg";
 import uvSpectrumAbstractImg from "@/assets/uv-spectrum-abstract.png";
+import stormVisualImg from "@/assets/pourquoi-est-ce-que-les-orages-produisent-des-eclairs-et-du-tonnerree28089-1-1690x1200.jpg";
 
 
 const DesinfectionUV = () => {
@@ -219,6 +220,79 @@ const DesinfectionUV = () => {
                     </div>
                 </section>
 
+                {/* 3.5. Pathogen Neutralization - Visual Proof */}
+                <section className="py-24 bg-white relative overflow-hidden">
+                    <div className="container mx-auto px-6 relative z-10">
+                        <div className="flex flex-col lg:flex-row items-center gap-16">
+                            <div className="lg:w-1/2 space-y-8">
+                                <span className="inline-block px-4 py-1.5 bg-indigo-100 text-indigo-600 rounded-full text-[10px] font-black uppercase tracking-widest">
+                                    SÉCURITÉ BIOLOGIQUE
+                                </span>
+                                <h2 className="heading-pro-max">
+                                    <span className="italic font-light text-[#2563eb] block">Éliminez l'invisible :</span>
+                                    <span className="font-bold text-[#1e3a8a] block text-center lg:text-left">Protection contre 99,99% des pathogènes.</span>
+                                </h2>
+                                <p className="body-pro-max text-slate-500">
+                                    Votre eau peut sembler claire tout en abritant des micro-organismes nocifs. Nos rayons UV-C ciblent le cœur des contaminants pour les rendre inoffensifs en une fraction de seconde.
+                                </p>
+                                
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    {[
+                                        { name: "E. Coli", level: "99.99%" },
+                                        { name: "Giardia", level: "99.99%" },
+                                        { name: "Salmonelle", level: "99.99%" },
+                                        { name: "Légionelle", level: "99.99%" },
+                                        { name: "Hépatite A", level: "99.99%" },
+                                        { name: "Cryptosporidium", level: "99.99%" }
+                                    ].map((p, i) => (
+                                        <div key={i} className="flex items-center gap-3 p-4 rounded-2xl bg-slate-50 border border-slate-100 group hover:border-blue-200 transition-all">
+                                            <div className="w-2 h-2 rounded-full bg-blue-600 shadow-[0_0_10px_rgba(37,99,235,0.5)]" />
+                                            <div>
+                                                <div className="text-sm font-bold text-[#1e3a8a]">{p.name}</div>
+                                                <div className="text-[10px] font-black uppercase tracking-tighter text-blue-600 opacity-60 group-hover:opacity-100 transition-opacity whitespace-nowrap">Neutralisé à {p.level}</div>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                            
+                            <div className="lg:w-1/2 relative">
+                                {/* Visual Representation of UV Shielding */}
+                                <div className="relative rounded-[3rem] overflow-hidden aspect-square flex items-center justify-center bg-slate-900 shadow-2xl group cursor-crosshair">
+                                    <img 
+                                        src={stormVisualImg} 
+                                        alt="Force énergétique UV - Bricareau" 
+                                        className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-[3s]"
+                                    />
+                                    <div className="absolute inset-0 bg-indigo-950/40 group-hover:bg-indigo-950/20 transition-colors duration-1000" />
+                                    
+                                    {/* Procedural UV Animation Rays */}
+                                    <div className="absolute inset-0 overflow-hidden mix-blend-add opacity-50">
+                                        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(99,102,241,0.3)_0%,transparent_70%)] animate-pulse" />
+                                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] h-[1px] bg-blue-400 rotate-12 blur-sm" />
+                                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] h-[1px] bg-indigo-500 -rotate-12 blur-sm" />
+                                    </div>
+
+                                    <div className="relative z-10 text-center space-y-6 px-12">
+                                        <div className="w-24 h-24 rounded-full bg-blue-600/30 backdrop-blur-md border border-blue-400/50 flex items-center justify-center mx-auto mb-8 shadow-[0_0_50px_rgba(37,99,235,0.3)] group-hover:scale-110 group-hover:bg-blue-600 transition-all duration-700">
+                                            <ShieldCheck className="w-12 h-12 text-white" />
+                                        </div>
+                                        <div className="text-4xl font-black text-white tracking-tight uppercase drop-shadow-2xl">Barrière Active</div>
+                                        <p className="text-white text-sm font-light leading-relaxed max-w-xs mx-auto">
+                                            Une puissance de rayonnement certifiée pour garantir une eau sécuritaire à chaque litre consommé.
+                                        </p>
+                                        <div className="pt-8">
+                                            <Button asChild className="rounded-full bg-white text-[#1e3a8a] hover:bg-white hover:scale-105 transition-all border-none h-14 px-10 font-black shadow-xl">
+                                                <a href="/consultation">Évaluez mon eau</a>
+                                            </Button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
                 {/* 4. UV Systems - Product Grid */}
                 <section id="systemes-uv" className="py-24 bg-white">
                     <div className="container mx-auto px-6">
@@ -290,18 +364,25 @@ const DesinfectionUV = () => {
                                     <tr className="bg-gray-100">
                                         <th className="p-8 text-left text-gray-400 font-light uppercase tracking-wider w-1/4">Modèle</th>
                                         {[
-                                            { name: "VH200-F10", img: uvSystemImg2 },
-                                            { name: "VH410-F20", img: uvSystemImg3 },
-                                            { name: "Arros 15-IHS10", img: uvSystemImg4 }
+                                            { name: "VH200-F10", img: uvSystemImg2, badge: null },
+                                            { name: "VH410-F20", img: uvSystemImg3, badge: "Choix des Familles" },
+                                            { name: "Arros 15-IHS10", img: uvSystemImg4, badge: "Nouveau" }
                                         ].map(m => (
-                                            <th key={m.name} className="p-4 text-center text-gray-900 font-bold">
+                                            <th key={m.name} className="py-8 px-4 text-center text-gray-900 font-bold relative">
                                                 <div className="flex flex-col items-center gap-2">
-                                                    <img
-                                                        src={m.img}
-                                                        alt={`Modèle ${m.name} - Stérilisateur d'eau UV haute performance Bricareau`}
-                                                        className="w-[120px] h-[100px] object-contain mx-auto mix-blend-multiply"
-                                                    />
-                                                    <div className="text-[14px]">{m.name}</div>
+                                                    <div className="relative inline-block">
+                                                        {m.badge && (
+                                                            <span className="absolute -top-1 -right-8 bg-blue-600 text-white text-[7px] font-black px-2 py-0.5 rounded-full uppercase tracking-widest whitespace-nowrap shadow-lg shadow-blue-200/50 z-20">
+                                                                {m.badge}
+                                                            </span>
+                                                        )}
+                                                        <img
+                                                            src={m.img}
+                                                            alt={`Modèle ${m.name} - Stérilisateur d'eau UV haute performance Bricareau`}
+                                                            className="w-[120px] h-[100px] object-contain mx-auto mix-blend-multiply transition-transform duration-500 hover:scale-110"
+                                                        />
+                                                    </div>
+                                                    <div className="text-[14px] mt-2">{m.name}</div>
                                                 </div>
                                             </th>
                                         ))}
@@ -389,8 +470,7 @@ const DesinfectionUV = () => {
                     <div className="container mx-auto px-4">
                         <div className="text-center mb-16">
                             <h2 className="mb-8 heading-pro-max text-center">
-                                <span className="italic font-light text-[#2563eb] block text-center">Qualité garantie :</span>
-                                <span className="font-bold text-[#1e3a8a] block text-center">découvrez les produits associés.</span>
+                                <span className="font-bold text-[#1e3a8a] block text-center">Découvrez les produits associés.</span>
                             </h2>
                             <p className="body-pro-max text-gray-500 max-w-2xl mx-auto text-center">
                                 Optimisez votre expérience de traitement d'eau avec nos solutions complémentaires.
@@ -643,6 +723,28 @@ const DesinfectionUV = () => {
                 </section>
 
             </main>
+
+            {/* Floating Sticky CTA - Phase III Conversion Focus */}
+            <div className="fixed bottom-8 right-8 z-[100] animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-[3s] pointer-events-none">
+                <div className="pointer-events-auto group/sticky">
+                    <Button 
+                        asChild
+                        className="h-16 px-8 rounded-full bg-white/9 worst-blur text-[#1e3a8a] border border-slate-200/50 shadow-[0_20px_60px_rgba(0,0,0,0.1)] hover:shadow-indigo-200/50 hover:bg-white hover:-translate-y-2 transition-all duration-500 active:scale-95"
+                        style={{ backdropFilter: 'blur(20px)' }}
+                    >
+                        <a href="/consultation" className="flex items-center gap-4">
+                            <div className="relative">
+                                <div className="w-10 h-10 bg-[#4f46e5] rounded-full flex items-center justify-center text-white group-hover/sticky:rotate-[360deg] transition-all duration-700 shadow-lg shadow-indigo-200">
+                                    <ArrowRight className="w-5 h-5" />
+                                </div>
+                                <span className="absolute -top-1 -right-1 w-3 h-3 bg-green-500 rounded-full border-2 border-white animate-pulse" />
+                            </div>
+                            <span className="font-black text-sm uppercase tracking-wider whitespace-nowrap text-indigo-950">Consultation Gratuite</span>
+                        </a>
+                    </Button>
+                </div>
+            </div>
+
             <Footer />
         </div>
     );
