@@ -13,7 +13,9 @@ import {
     CheckCircle2,
     Shield,
     TrendingDown,
-    Phone
+    Phone,
+    Sparkles,
+    Waves
 } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import { useNavigate } from "react-router-dom";
@@ -37,9 +39,9 @@ import ConsultationFormSection from "@/components/ConsultationFormSection";
 
 
 const products = [
-    { name: "Filtre d'eau Vortex", desc: "Spécialisé pour l'eau contenant des sédiments.", image: specializedFiltersImg },
-    { name: "Filtre d'eau ChlorStop", desc: "Spécialisé pour l'eau contenant du chlore.", image: specializedFiltersImg },
-    { name: "Filtre d'eau Iron Shield", desc: "Spécialisé pour l'eau contenant du fer.", image: specializedFiltersImg },
+    { name: "Filtre d'eau Vortex", desc: "Protection supérieure contre les sédiments, le sable et les particules de rouille.", image: specializedFiltersImg, badge: "Zéro Sédiments", badgeColor: "bg-blue-600" },
+    { name: "Filtre d'eau ChlorStop", desc: "Notre solution d'élite pour une eau sans goût ni odeur de chlore (piscine).", image: specializedFiltersImg, badge: "Best-Seller", badgeColor: "bg-emerald-600" },
+    { name: "Filtre d'eau Iron Shield", desc: "Élimine efficacement le fer et les taches brunes qui altèrent vos sanitaires.", image: specializedFiltersImg, badge: "Expert Fer", badgeColor: "bg-blue-900" },
 ];
 
 const reviews = [
@@ -184,73 +186,96 @@ const FiltresTouteMaison = () => {
                     singleLineTitle={true}
                 />
 
-                {/* 3. Pourquoi choisir - Interactive Card Stack Editorial Layout */}
-                <section className="relative py-32 overflow-hidden bg-white">
+                {/* 3. Diagnostic Bento Grid - Symptom Logic Modernization */}
+                <section className="relative py-32 bg-white overflow-hidden">
                     <div className="container mx-auto px-6 relative z-10">
                         <div className="max-w-4xl mx-auto text-center mb-24">
                             <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.3em] mb-8">
-                                L'EXCELLENCE BRICAREAU
+                                L'EAU DE MUNICIPALITÉ DÉCRYPTÉE
                             </span>
-                            <h2 className="mb-8 heading-pro-max text-center">
-                                <span className="italic font-light text-[#2563eb] block">Pourquoi choisir nos</span>
-                                <span className="font-bold text-[#1e3a8a] block text-center">systèmes de filtration d'eau ?</span>
+                             <h2 className="mb-8 heading-pro-max text-center">
+                                <span className="italic font-light text-[#2563eb] block">L'invisible menace sous</span>
+                                <span className="font-bold text-[#1e3a8a] block text-center">votre robinet quotidien.</span>
                             </h2>
                             <p className="body-pro-max text-slate-500 text-center mx-auto">
-                                Plus qu'un simple système de filtration, c'est une protection avancée pour votre santé et un confort durable pour toute votre famille au quotidien.
+                                Vos sens vous alertent : une odeur de chlore, une peau qui tiraille, ou des dépôts suspects. Identifiez votre symptôme et découvrez le bouclier Bricareau adapté.
                             </p>
                         </div>
 
-                        <div className="grid grid-cols-1 lg:grid-cols-12 gap-24 items-center">
-                            {/* Card Stack Side (Left - Interactive) */}
-                            <div className="lg:col-span-12 xl:col-span-7 relative h-[450px] md:h-[600px] lg:h-[700px] flex items-center justify-center mb-16 lg:mb-0 -mx-6 lg:mx-0">
-                                <div className="relative w-full lg:max-w-[450px] aspect-square md:aspect-video lg:aspect-[3/4] group">
-                                    {cardStack.map((cardIdx, position) => {
-                                        const card = cardData[cardIdx];
-                                        return (
-                                            <div 
-                                                key={card.id}
-                                                onClick={() => handleCardClick(card.id)}
-                                                className={`absolute inset-0 bg-white rounded-none lg:rounded-[2.5rem] p-4 border border-slate-100 lg:border-slate-100 cursor-pointer transition-all duration-700 ease-out ${positionStyles[position]}`}
-                                            >
-                                                <div className="w-full h-full rounded-none lg:rounded-[1.8rem] overflow-hidden relative group">
-                                                    <img src={card.img} alt={card.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                                                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
-                                                        <p className="text-white font-bold text-xl">{card.title}</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        );
-                                    })}
-                                </div>
-                            </div>
-
-                            {/* Text Content Side (Vertical Column) */}
-                            <div className="lg:col-span-12 xl:col-span-5 space-y-16">
-                                {cardData.map((feature, idx) => {
-                                    const isTop = cardStack[3] === feature.id; // Check if this feature's card is on top
-                                    return (
-                                        <div 
-                                            key={idx} 
-                                            className={`group transition-all duration-500 cursor-pointer ${isTop ? 'scale-110' : 'opacity-60 scale-95 hover:opacity-100'}`}
-                                            onClick={() => handleCardClick(feature.id)}
-                                        >
-                                            <div className="flex items-start gap-8">
-                                                <div className="pt-2">
-                                                    <div className={`w-2.5 h-2.5 rounded-full bg-blue-600 shadow-[0_0_15px_rgba(37,99,235,0.4)] ${isTop ? 'scale-150 animate-pulse' : 'scale-100'} transition-all`} />
-                                                </div>
-                                                <div className="space-y-4">
-                                                    <h3 className={`text-2xl font-bold transition-all duration-500 ${isTop ? 'text-blue-600' : 'text-[#1e3a8a] group-hover:text-blue-400'}`}>
-                                                        {feature.title}
-                                                    </h3>
-                                                     <p className="body-pro-max text-slate-500 text-justify max-w-md ml-0">
-                                                         {feature.desc}
-                                                     </p>
-                                                </div>
+                        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+                            {[
+                                { 
+                                    title: "Goût de Chlore", 
+                                    benefit: "Pureté de source", 
+                                    desc: "Fini l'odeur de 'piscine'. Transformez chaque robinet en une fontaine d'eau fraîche, évitant l'achat de milliers de bouteilles plastiques.",
+                                    img: waterzeroodorImg,
+                                    badge: "Le Confort Gout",
+                                    icon: <Droplets className="w-5 h-5 text-emerald-500" />
+                                },
+                                { 
+                                    title: "Peau & Cheveux", 
+                                    benefit: "Hydratation Soin", 
+                                    desc: "Le chlore et les sédiments dessèchent votre peau et ternissent vos cheveux. Offrez-vous une expérience spa à chaque douche.",
+                                    img: comfortImg,
+                                    badge: "Bien-être",
+                                    icon: <Sparkles className="w-5 h-5 text-blue-400" />
+                                },
+                                { 
+                                    title: "Plomberie Saine", 
+                                    benefit: "Économie Durable", 
+                                    desc: "Les sédiments et le fer créent des micro-abrasions et de la corrosion. Protégez vos tuyauteries et vos lave-vaisselles haut de gamme.",
+                                    img: wholeHouseprotectionImg,
+                                    badge: "Protection Asset",
+                                    icon: <Shield className="w-5 h-5 text-amber-500" />
+                                },
+                                { 
+                                    title: "Eau Cristalline", 
+                                    benefit: "Clarté Visuelle", 
+                                    desc: "Éliminez la turbidité et les particules de rouille pour une eau transparente. Idéal pour ceux qui ne tolèrent aucun compromis sur la pureté.",
+                                    img: crystalClearWaterImg,
+                                    badge: "Pureté Vision",
+                                    icon: <Waves className="w-5 h-5 text-blue-600" />
+                                }
+                            ].map((item, i) => (
+                                <div key={i} className="group relative bg-[#F8FAFC] rounded-[2.5rem] p-4 border border-slate-100/50 hover:bg-white transition-all duration-700 hover:shadow-[0_40px_100px_-20px_rgba(30,58,138,0.1)] overflow-hidden">
+                                     {/* Background Image with Parallax-ish Effect */}
+                                     <div className="relative h-64 overflow-hidden rounded-[2rem] mb-8">
+                                        <img 
+                                            src={item.img} 
+                                            alt={item.title} 
+                                            className="w-full h-full object-cover transition-transform duration-[3000ms] group-hover:scale-110"
+                                        />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                                        
+                                        <div className="absolute top-4 left-4 z-20">
+                                            <div className="bg-white/90 backdrop-blur-xl px-4 py-1.5 rounded-full flex items-center gap-2 shadow-sm">
+                                                {item.icon}
+                                                <span className="text-[10px] font-black text-slate-900 uppercase tracking-widest">{item.badge}</span>
                                             </div>
                                         </div>
-                                    );
-                                })}
-                            </div>
+                                    </div>
+
+                                    {/* Content */}
+                                    <div className="px-4 pb-4 space-y-4">
+                                        <div className="space-y-1">
+                                            <span className="text-[10px] font-black text-blue-600 uppercase tracking-widest">{item.benefit}</span>
+                                            <h3 className="text-2xl font-bold text-[#1e3a8a] leading-tight group-hover:text-blue-600 transition-colors">
+                                                {item.title}
+                                            </h3>
+                                        </div>
+                                        <p className="text-slate-500 text-sm leading-relaxed font-light text-justify">
+                                            {item.desc}
+                                        </p>
+                                        
+                                        <button 
+                                            onClick={() => document.getElementById('specialized-filters')?.scrollIntoView({ behavior: 'smooth' })}
+                                            className="pt-4 flex items-center gap-2 text-blue-600 text-xs font-bold uppercase tracking-widest group-hover:gap-4 transition-all"
+                                        >
+                                            La Solution <ArrowRight className="w-4 h-4" />
+                                        </button>
+                                    </div>
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </section>
@@ -322,13 +347,18 @@ const FiltresTouteMaison = () => {
                                         <th className="p-8 text-left text-gray-400 font-light uppercase tracking-wider">Solutions</th>
                                         {products.map((m, i) => (
                                             <th key={i} className="p-4 text-center text-gray-900 font-bold text-sm">
-                                                <div className="flex flex-col items-center gap-2">
-                                                    <img
-                                                        src={m.image}
-                                                        alt={`Modèle ${m.name} - Système de filtration haute performance Bricareau`}
-                                                        className="w-[150px] h-[120px] object-contain mx-auto mix-blend-multiply"
-                                                    />
-                                                    <div className="text-[14px] uppercase tracking-wider">{m.name.replace("Filtre d'eau ", "")}</div>
+                                                <div className="flex flex-col items-center gap-4 group">
+                                                    <div className="relative">
+                                                        <div className={`absolute -top-3 -right-12 z-20 ${m.badgeColor} text-white text-[8px] font-black uppercase tracking-[0.2em] px-3 py-1 rounded-full shadow-xl whitespace-nowrap`}>
+                                                            {m.badge}
+                                                        </div>
+                                                        <img
+                                                            src={m.image}
+                                                            alt={`Modèle ${m.name} - Système de filtration haute performance Bricareau`}
+                                                            className="w-[180px] h-[140px] object-contain mx-auto mix-blend-multiply group-hover:scale-110 transition-transform duration-500"
+                                                        />
+                                                    </div>
+                                                    <div className="text-[14px] uppercase tracking-wider text-[#1e3a8a]">{m.name.replace("Filtre d'eau ", "")}</div>
                                                 </div>
                                             </th>
                                         ))}
@@ -539,6 +569,24 @@ const FiltresTouteMaison = () => {
             </main>
 
             <Footer />
+
+            {/* Sticky Consultation CTA - Pro Max Conversion Tool */}
+            <div className="fixed bottom-8 right-8 z-[100] group hidden md:block">
+                <NavLink to="/consultation">
+                    <div className="relative">
+                        <div className="absolute inset-0 bg-blue-600 rounded-full animate-ping opacity-20 group-hover:opacity-40 transition-opacity" />
+                        <div className="relative flex items-center gap-3 bg-white/90 backdrop-blur-xl border border-blue-100 p-2 pr-6 rounded-full shadow-[0_20px_50px_rgba(0,0,0,0.1)] hover:shadow-[0_25px_60px_rgba(37,99,235,0.2)] transition-all duration-500 group-hover:-translate-y-2 group-hover:bg-blue-600">
+                            <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white group-hover:bg-white group-hover:text-blue-600 transition-colors duration-500">
+                                <Sparkles className="w-6 h-6 animate-pulse" />
+                            </div>
+                            <div className="flex flex-col">
+                                <span className="text-[10px] font-black uppercase tracking-[0.2em] text-blue-600 group-hover:text-white/80 transition-colors">Audit Gratuit</span>
+                                <span className="text-sm font-bold text-slate-900 group-hover:text-white transition-colors">Analyse d'eau</span>
+                            </div>
+                        </div>
+                    </div>
+                </NavLink>
+            </div>
         </div>
     );
 };
