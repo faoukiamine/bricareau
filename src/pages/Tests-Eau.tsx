@@ -131,77 +131,120 @@ const TestsEauPage = () => {
 
 
 
-        <section className="pt-32 pb-0 bg-white relative overflow-hidden">
-          {/* Centered technical header */}
-          <div className="container mx-auto px-6 relative z-10 mb-20 text-center">
-            <div className="max-w-4xl mx-auto">
-              <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.2em] mb-6">
-                TESTS & ANALYSES D'EAU DE PRÉCISION
+        <section id="scenarios-analyse" className="py-24 bg-white relative overflow-hidden">
+          <div className="container mx-auto px-6">
+            <div className="text-center max-w-4xl mx-auto mb-16">
+              <span className="inline-block px-4 py-1 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black tracking-widest mb-4">
+                GUIDE DE PRÉVENTION
               </span>
-              <h2 className="mb-8 heading-pro-max">
-                <span className="italic font-light text-[#2563eb] block">Savoir exactement</span>
-                <span className="font-bold text-[#1e3a8a] block">ce que vous buvez.</span>
+              <h2 className="heading-pro-max">
+                <span className="italic font-light text-blue-600 block">Quand devriez-vous</span>
+                <span className="font-bold text-slate-800 block">tester votre eau ?</span>
               </h2>
-              <p className="body-pro-max max-w-6xl mx-auto text-justify">
-                Les analyses d’eau professionnelles et les tests de laboratoire sont la façon la plus fiable de connaître la qualité réelle de votre eau potable. Ils permettent de détecter les contaminants invisibles à l’œil nu et de choisir ensuite le bon système de traitement d'eau pour protéger votre famille. il est préférable de procéder à une analyse d'eau dans les cas suivants:
+              <p className="body-pro-max text-slate-500 mt-6 mx-auto">
+                L'invisible est souvent le plus dangereux. Identifiez la situation qui vous concerne pour choisir le test de laboratoire adéquat.
               </p>
             </div>
-          </div>
 
-          {/* Full-Width immersive content */}
-          <div className="flex flex-col-reverse lg:flex-row items-stretch min-h-[650px] lg:min-h-[850px]">
-            {/* Left Side: Cinematic Visual */}
-            <div className="w-full lg:w-1/2 relative group overflow-hidden h-[450px] md:h-[600px] lg:h-auto">
-              <img
-                src={forensicWaterImg}
-                alt="Microscopic water analysis"
-                className="absolute inset-0 w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-blue-900/10 backdrop-blur-[1px]" />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent" />
-            </div>
-
-            {/* Right Side: Information Grid */}
-            <div className="w-full lg:w-1/2 flex items-center bg-slate-50/10 justify-start border-b border-slate-100">
-              <div className="w-full max-w-[800px] px-6 sm:px-12 lg:px-16 xl:px-24 py-20 lg:py-0">
-                <div className="space-y-8">
-                  <div className="space-y-4">
-                    <p className="text-slate-500 font-light text-lg">
-                      Il est préférable de procéder à une analyse d'eau dans les cas suivants :
-                    </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                { 
+                  title: "Transaction Immobilière", 
+                  desc: "Obligatoire pour les hypothèques et notaires. Certificat de potabilité certifié.", 
+                  benefit: "Validité Légale",
+                  color: "bg-blue-600",
+                  img: mortgageImg
+                },
+                { 
+                  title: "Nouveau-né & Santé", 
+                  desc: "Vérification des nitrates et bactéries pour les estomacs fragiles des nourrissons.", 
+                  benefit: "Sécurité Optimale",
+                  color: "bg-pink-500",
+                  img: babySafetyImg
+                },
+                { 
+                  title: "Goût ou Odeur Suspecte", 
+                  desc: "L'œuf pourri ou le goût métallique cachent des réalités chimiques complexes.", 
+                  benefit: "Confort Gustatif",
+                  color: "bg-amber-500",
+                  img: tasteOdorImg
+                },
+                { 
+                  title: "Acidité & Corrosion", 
+                  desc: "Taches bleues/vertes sur les éviers ? Votre plomberie est peut-être en train de se dissoudre.", 
+                  benefit: "Économie Plomberie",
+                  color: "bg-cyan-500",
+                  img: acidWaterImg
+                },
+                { 
+                  title: "Après un Orage/Crues", 
+                  desc: "Les fortes pluies peuvent contaminer les puits de surface. Un test rapide s'impose.", 
+                  benefit: "Tranquillité d'esprit",
+                  color: "bg-slate-700",
+                  img: stormWaterImg
+                },
+                { 
+                  title: "Suivi Annuel (Puits)", 
+                  desc: "Santé Québec recommande une analyse microbiologique tous les 6 mois.", 
+                  benefit: "Conformité Santé",
+                  color: "bg-emerald-600",
+                  img: forensicWaterImg
+                }
+              ].map((item, i) => (
+                <div 
+                  key={i} 
+                  className="group relative h-[380px] rounded-[3rem] overflow-hidden border border-slate-100 bg-white shadow-sm cursor-pointer transition-all duration-700 hover:shadow-2xl hover:shadow-blue-200/50 hover:border-blue-200 hover:-translate-y-2"
+                  onClick={() => {
+                    const el = document.getElementById('water-test');
+                    el?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                >
+                  {/* Background Image with Overlay */}
+                  <div className="absolute inset-0 z-0">
+                    <img 
+                      src={item.img} 
+                      alt={item.title} 
+                      className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-30 group-hover:opacity-60"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-br from-white via-white/80 to-transparent" />
                   </div>
-                  
-                  {/* Integrated Diagnostic Feature List (with Circular Images) - RESTORED ORIGINAL CONTENT DESIGN */}
-                  <div className="mt-8 space-y-4">
-                    {services.map((item, idx) => (
-                      <div 
-                        key={idx}
-                        className="group flex items-start gap-5 p-4 -mx-4 rounded-3xl transition-all duration-500 hover:bg-blue-50/30"
-                      >
-                        {/* Circular Image Frame */}
-                        <div className="relative flex-shrink-0 w-20 h-20 lg:w-24 lg:h-24 rounded-full overflow-hidden border-2 border-white shadow-xl shadow-blue-900/10 group-hover:scale-110 transition-transform duration-700">
-                          <img 
-                            src={item.img} 
-                            alt={item.title} 
-                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[2000ms]"
-                          />
-                          <div className="absolute inset-0 bg-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity" />
-                        </div>
 
-                        {/* Text Content */}
-                        <div className="flex-1">
-                           <h4 className="text-xl font-bold tracking-tight text-blue-600/20 group-hover:text-blue-600 transition-colors duration-500 mb-0 leading-tight">
-                             {item.title}
-                           </h4>
-                           <p className="text-slate-500 text-sm leading-snug font-light max-w-md">
-                             {item.desc}
-                           </p>
-                        </div>
+                  <div className="relative z-10 inset-0 p-10 h-full flex flex-col justify-between">
+                    <div className="space-y-4">
+                      <div className="flex items-center gap-3">
+                        <div className={`w-3 h-3 rounded-full ${item.color} shadow-lg`} />
+                        <span className="text-[10px] font-black uppercase tracking-wider text-slate-500 group-hover:text-blue-600 transition-colors">
+                          Priorité : {item.benefit}
+                        </span>
                       </div>
-                    ))}
+                      <h3 className="text-3xl font-bold text-[#1e3a8a] leading-[1.1] transition-all duration-500 group-hover:translate-x-2">
+                        {item.title}
+                      </h3>
+                      <p className="body-pro-max text-sm leading-relaxed text-slate-600 opacity-80 group-hover:opacity-100 transition-opacity">
+                        {item.desc}
+                      </p>
+                    </div>
+
+                    <div className="space-y-4">
+                      <div className="h-px w-12 bg-blue-200 group-hover:w-full transition-all duration-700" />
+                      <div className="inline-flex items-center gap-2 text-blue-600 font-bold text-[10px] uppercase tracking-widest">
+                        En savoir plus <ArrowRight className="w-4 h-4" />
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Hover Overlay CTA */}
+                  <div className="absolute inset-0 bg-[#1e3a8a]/95 z-20 opacity-0 group-hover:opacity-100 transition-all duration-700 flex flex-col items-center justify-center p-8 space-y-6 translate-y-full group-hover:translate-y-0 text-center">
+                    <div className="text-center">
+                      <p className="text-white/60 text-[10px] font-black uppercase tracking-[0.2em] mb-2 italic">Diagnostic Rapide</p>
+                      <h4 className="text-white text-2xl font-bold leading-tight px-6">Réserver cette analyse spécifique</h4>
+                    </div>
+                    <div className="w-14 h-14 rounded-full bg-blue-600 text-white flex items-center justify-center shadow-2xl border border-blue-400 group-hover:rotate-[360deg] transition-transform duration-1000">
+                      <TestTube className="w-6 h-6" />
+                    </div>
                   </div>
                 </div>
-              </div>
+              ))}
             </div>
           </div>
         </section>
@@ -456,7 +499,30 @@ const TestsEauPage = () => {
 
       </main >
       <Footer />
-    </div >
+
+      {/* Sticky Test CTA */}
+      <div className="fixed bottom-8 right-8 z-[100] group">
+        <div 
+          onClick={() => {
+            const el = document.getElementById('water-test');
+            el?.scrollIntoView({ behavior: 'smooth' });
+          }}
+          className="relative flex items-center gap-4 bg-white/60 backdrop-blur-xl border border-white p-2 pr-6 rounded-full shadow-2xl cursor-pointer transition-all duration-500 hover:scale-105 hover:bg-white/90 group"
+        >
+          <div className="relative">
+            <div className="absolute inset-0 bg-blue-600 rounded-full animate-ping opacity-20 group-hover:opacity-40" />
+            <div className="relative w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white shadow-lg">
+              <TestTube className="w-5 h-5" />
+            </div>
+          </div>
+          <div className="flex flex-col">
+            <span className="text-[10px] font-black uppercase tracking-widest text-[#1e3a8a]/60">Analyse Certifiée</span>
+            <span className="text-sm font-bold text-[#1e3a8a]">Réserver mon test</span>
+          </div>
+          <ChevronRight className="w-4 h-4 text-blue-600 group-hover:translate-x-1 transition-transform" />
+        </div>
+      </div>
+    </div>
   );
 };
 
