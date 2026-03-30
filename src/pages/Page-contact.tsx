@@ -15,13 +15,22 @@ import {
     SelectTrigger, 
     SelectValue 
 } from "@/components/ui/select";
+import { cn } from "@/lib/utils";
+import { 
+    ShieldCheck, 
+    CheckCircle2, 
+    Award, 
+    MessageSquare,
+    Smartphone 
+} from "lucide-react";
+import contactHero from "@/assets/126171.jpg";
 
 const Contact = () => {
     return (
         <div className="min-h-screen bg-background">
             <Header />
             <main>
-                <section className="relative lg:h-[650px] flex flex-col lg:items-center overflow-hidden bg-white">
+                <section className="relative lg:h-[850px] flex flex-col lg:items-center overflow-hidden bg-white">
                     <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none hidden lg:block">
                         <div className="container mx-auto px-4 lg:px-6 pointer-events-auto">
                             <GlobalBreadcrumbs variant="dark" />
@@ -29,76 +38,92 @@ const Contact = () => {
                     </div>
                     <div className="relative lg:absolute lg:inset-0 h-[350px] sm:h-[450px] lg:h-full w-full lg:z-0 overflow-hidden">
                         <img
-                            src="https://images.unsplash.com/photo-1596524430615-b46475ddff6e?q=80&w=1200&auto=format&fit=crop"
+                            src={contactHero}
                             alt="Service client Bricareau"
-                            className="w-full h-full object-cover object-[center_35%]"
+                            className="w-full h-full object-cover object-[center_35%] opacity-80"
                         />
-                        <div className="hidden lg:block absolute inset-0 bg-black/40 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
-                        <div className="hidden lg:block absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-white via-white/10 to-transparent" />
-                        <div className="hidden lg:block absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white/90 via-white/40 to-transparent" />
+                        <div className="absolute inset-0 bg-gradient-to-r from-[#f0f9ff] via-[#f0f9ff]/40 35% to-transparent z-10" />
                     </div>
 
                     <div className="container relative z-10 mx-auto px-4 h-full flex items-center lg:px-6">
-                        <div className="max-w-2xl lg:text-white py-12 lg:py-0 text-left">
-                            <h1 className="leading-[1.1] md:leading-[1.2] mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white max-w-xl">
-                                Parlons de votre <br />
-                                <span className="text-blue-600 lg:text-blue-400">Projet d'eau</span>.
+                        <div className="max-w-3xl text-left space-y-8 animate-in fade-in slide-in-from-left duration-1000">
+                            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-green-500/10 border border-green-500/20 text-green-600 text-[10px] font-black uppercase tracking-[0.2em] w-fit">
+                                <span className="relative flex h-2 w-2">
+                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                                    <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                                </span>
+                                Support Technique en ligne • Temps de réponse &lt; 15 min
+                            </div>
+                            <h1 className="leading-[1.1] md:leading-[1.2] tracking-tighter text-slate-900 max-w-2xl">
+                                <span className="italic font-light text-[#2563eb] block mb-2">Planifiez votre</span>
+                                <span className="font-bold text-[#1e3a8a] block">rendez-vous de service.</span>
                             </h1>
-                            <p className="font-light text-slate-600 lg:text-white/95 mb-8 max-w-xl">
-                                Une question ? Un projet ? Notre équipe d'experts est là pour vous conseiller
-                                et vous accompagner dans le choix de votre système de traitement d'eau avec transparence et rigueur.
+                            <p className="font-light text-slate-600 max-w-xl text-lg leading-relaxed">
+                                Besoin d'une installation, d'une réparation ou d'un simple changement de filtres ? 
+                                Nos experts interviennent partout au Grand Montréal et ses environs.
                             </p>
                         </div>
                     </div>
                 </section>
 
                 {/* 2. CONTACT FORM SECTION */}
-                <section id="contact-form" className="py-32 bg-slate-50 relative scroll-mt-24">
+                <section id="contact-form" className="pb-32 bg-slate-50 relative scroll-mt-24">
                      {/* Background Watermark */}
                      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[15rem] lg:text-[22rem] font-black text-slate-200/20 select-none pointer-events-none tracking-tighter z-0 uppercase">
                         SUPPORT
                     </div>
 
-                    <div className="container mx-auto px-6 relative z-10">
-                        <div className="max-w-4xl mx-auto text-center mb-16 space-y-6">
-                            <h2 className="heading-pro-max">
-                                <span className="italic font-light text-[#2563eb] block">Planifiez votre</span>
-                                <span className="font-bold text-[#1e3a8a] block">rendez-vous de service.</span>
-                            </h2>
-                            <p className="body-pro-max max-w-2xl mx-auto">
-                                Besoin d'une installation, d'une réparation ou d'un simple changement de filtres ? Nos experts interviennent sur tous les types d'équipements, au Grand Montréal et ses environs.
-                            </p>
-                        </div>
-
-                        <div className="flex flex-col lg:flex-row items-start gap-16 lg:gap-20">
-                            {/* Left Icons Column */}
-                            <div className="lg:w-1/3 space-y-6">
-                                <div className="flex items-center gap-4 bg-white/80 backdrop-blur-md p-6 rounded-3xl shadow-sm border border-slate-100 w-full group hover:shadow-md transition-all">
-                                    <div className="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-blue-200 group-hover:scale-110 transition-transform">
-                                        <PhoneCall className="w-6 h-6" />
+                    <div className="container mx-auto px-6 relative z-10 translate-y-[-20%]">
+                        <div className="flex flex-col lg:flex-row items-start lg:items-stretch gap-16 lg:gap-20">
+                            {/* Left Icons Column - Staggered Reveal */}
+                            <div className="lg:w-1/3 flex flex-col justify-end space-y-6">
+                                {[
+                                    { 
+                                        icon: PhoneCall, 
+                                        title: "Appel sans frais", 
+                                        content: "1-855-264-9328", 
+                                        sub: "Ligne prioritaire 24/7",
+                                        delay: "delay-100" 
+                                    },
+                                    { 
+                                        icon: Calendar, 
+                                        title: "Disponibilités", 
+                                        content: "Lun - Ven : 8h00 - 18h00", 
+                                        sub: "Service à domicile rapide",
+                                        delay: "delay-200" 
+                                    },
+                                    { 
+                                        icon: MapPin, 
+                                        title: "Zone d'intervention", 
+                                        content: "Grand Montréal & Environs", 
+                                        sub: "Périmètre de 300km (Rayon Local)",
+                                        delay: "delay-300",
+                                        isMap: true
+                                    }
+                                ].map((item, i) => (
+                                    <div key={i} className={cn(
+                                        "flex flex-col bg-white/80 backdrop-blur-md p-6 rounded-[2rem] shadow-sm border border-slate-100 w-full group hover:shadow-xl transition-all duration-500 animate-in fade-in slide-in-from-left-8", 
+                                        item.delay
+                                    )}>
+                                        <div className="flex items-center gap-4">
+                                            <div className="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-blue-200 group-hover:scale-110 group-hover:rotate-3 transition-all">
+                                                <item.icon className="w-6 h-6" />
+                                            </div>
+                                            <div className="text-left">
+                                                <h4 className="font-bold text-slate-900 text-sm tracking-tight">{item.title}</h4>
+                                                <p className={cn("text-lg font-bold leading-none", item.isMap ? "text-slate-800" : "text-blue-600")}>{item.content}</p>
+                                                <p className="text-[10px] uppercase font-black tracking-widest text-slate-400 mt-1 opacity-60">{item.sub}</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div className="text-left">
-                                        <h4 className="font-bold text-slate-900 text-sm">Urgence technique</h4>
-                                        <p className="text-blue-600 font-bold text-lg">1-855-264-9328</p>
-                                    </div>
-                                </div>
-                                <div className="flex items-center gap-4 bg-white/80 backdrop-blur-md p-6 rounded-3xl shadow-sm border border-slate-100 w-full group hover:shadow-md transition-all">
-                                    <div className="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-blue-200 group-hover:scale-110 transition-transform">
-                                        <Calendar className="w-6 h-6" />
-                                    </div>
-                                    <div className="text-left">
-                                        <h4 className="font-bold text-slate-900 text-sm">Disponibilités</h4>
-                                        <p className="text-slate-500 text-sm">Lun - Ven : 8h00 - 18h00</p>
-                                    </div>
-                                </div>
-                                <div className="flex items-center gap-4 bg-white/80 backdrop-blur-md p-6 rounded-3xl shadow-sm border border-slate-100 w-full group hover:shadow-md transition-all">
-                                    <div className="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-blue-200 group-hover:scale-110 transition-transform">
-                                        <MapPin className="w-6 h-6" />
-                                    </div>
-                                    <div className="text-left">
-                                        <h4 className="font-bold text-slate-900 text-sm">Zone d'intervention</h4>
-                                        <p className="text-slate-500 text-sm">Partout au Grand Montréal et ses environs (Périmètre de 300km)</p>
-                                    </div>
+                                ))}
+                                
+                                <div className="p-8 bg-blue-600 rounded-[2.5rem] text-white shadow-xl shadow-blue-200 animate-in fade-in slide-in-from-left-12 delay-500">
+                                    <h4 className="font-bold text-lg mb-2">Besoin d'aide immédiate?</h4>
+                                    <p className="text-white/80 text-sm font-light mb-6">Nos techniciens sont prêts à répondre à vos questions techniques complexes dès maintenant.</p>
+                                    <Button variant="outline" className="w-full rounded-full bg-white/10 border-white/20 text-white hover:bg-white hover:text-blue-600 border-none h-12 font-bold">
+                                        <MessageSquare className="w-4 h-4 mr-2" /> Clavardage en direct
+                                    </Button>
                                 </div>
                             </div>
 
@@ -151,18 +176,19 @@ const Contact = () => {
                                             </div>
                                         </div>
 
-                                        <div className="md:col-span-2 text-left pt-2">
-                                            <Button className="rounded-full px-12 transition-all hover:scale-105 active:scale-95 group">
-                                                Envoyez
-                                                <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
-                                            </Button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                                         <div className="md:col-span-2 text-left pt-6 border-t border-slate-200 mt-4 flex flex-col md:flex-row md:items-center justify-between gap-8">
+                                             <Button className="rounded-full px-12 h-14 bg-blue-600 hover:bg-blue-700 text-white font-bold transition-all hover:scale-105 active:scale-95 shadow-xl shadow-blue-200 group shrink-0">
+                                                 Envoyez
+                                                 <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
+                                             </Button>
+
+                                         </div>
+                                     </form>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </section>
             </main>
             <Footer />
         </div>

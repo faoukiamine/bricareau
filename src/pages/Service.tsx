@@ -382,7 +382,10 @@ const Service = () => {
                                     ))}
                                 </div>
                                 <div className="pt-6">
-                                    <Button className="rounded-full px-12">
+                                    <Button 
+                                        onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
+                                        className="rounded-full px-12"
+                                    >
                                         Planifiez un service
                                     </Button>
                                 </div>
@@ -430,7 +433,10 @@ const Service = () => {
                                     ))}
                                 </div>
                                 <div className="pt-6">
-                                    <Button className="rounded-full px-12">
+                                    <Button 
+                                        onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
+                                        className="rounded-full px-12"
+                                    >
                                         Réservez votre entretien
                                     </Button>
                                 </div>

@@ -308,7 +308,7 @@ const Pieces = () => {
                                         Laissez nos techniciens certifiés s'en occuper pour vous.
                                     </p>
                                     <Button asChild className="rounded-full px-8">
-                                        <a href="/service">Planifier un service</a>
+                                        <a href="/service#contact-form">Planifier un service</a>
                                     </Button>
                                 </div>
                             </div>

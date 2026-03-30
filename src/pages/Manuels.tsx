@@ -241,7 +241,7 @@ const Manuels = () => {
                                     className="bg-[#0052ff] hover:bg-[#0052ff]/90 text-white rounded-full px-8"
                                     asChild
                                 >
-                                    <a href="/service">Planifier un service</a>
+                                    <a href="/service#contact-form">Planifier un service</a>
                                 </Button>
                                 <Button
                                     size="lg"

@@ -6,13 +6,14 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Phone, Mail, MapPin, Clock, ChevronRight } from "lucide-react";
 import { NavLink } from "react-router-dom";
+import contactHero from "@/assets/118022.jpg";
 
 const Contact = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
       <main>
-        <section className="relative lg:h-[650px] flex flex-col lg:items-center overflow-hidden bg-white">
+        <section className="relative lg:h-[800px] flex flex-col lg:items-center overflow-hidden bg-white">
           <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none hidden lg:block">
             <div className="container mx-auto px-4 lg:px-6 pointer-events-auto">
               <GlobalBreadcrumbs variant="dark" />
@@ -20,22 +21,20 @@ const Contact = () => {
           </div>
           <div className="relative lg:absolute lg:inset-0 h-[350px] sm:h-[450px] lg:h-full w-full lg:z-0 overflow-hidden">
             <img
-              src="https://images.unsplash.com/photo-1534536281715-e28d76689b4d?q=80&w=1200&auto=format&fit=crop"
+              src={contactHero}
               alt="Contact Bricareau"
-              className="w-full h-full object-cover object-[center_35%]"
+              className="w-full h-full object-cover object-[center_35%] opacity-80"
             />
-            <div className="hidden lg:block absolute inset-0 bg-black/40 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
-            <div className="hidden lg:block absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-white via-white/10 to-transparent" />
-            <div className="hidden lg:block absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white/90 via-white/40 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#f0f9ff] via-[#f0f9ff]/40 35% to-transparent z-10" />
           </div>
 
           <div className="container relative z-10 mx-auto px-4 h-full flex items-center lg:px-6">
-            <div className="max-w-2xl lg:text-white py-12 lg:py-0 text-left">
-              <h1 className="leading-[1.1] md:leading-[1.2] mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white max-w-xl">
-                Contactez-nous <br />
-                Notre expertise à votre <span className="text-blue-600 lg:text-blue-400">service</span>.
+            <div className="max-w-2xl text-left py-12 lg:py-0">
+              <h1 className="leading-[1.1] md:leading-[1.2] mb-4 lg:mb-8 tracking-tighter text-[#1e3a8a] max-w-xl">
+                <span className="italic font-light text-[#2563eb] block mb-2">Expertise & Service</span>
+                Contactez-nous. Notre équipe est à votre écoute.
               </h1>
-              <p className="font-light text-slate-600 lg:text-white/95 mb-8 max-w-xl">
+              <p className="font-light text-slate-600 mb-8 max-w-xl text-lg leading-relaxed">
                 Nous sommes là pour répondre à toutes vos questions sur le traitement de l'eau. Que ce soit pour un conseil technique ou une demande de soumission, nos experts vous accompagnent avec transparence.
               </p>
             </div>
