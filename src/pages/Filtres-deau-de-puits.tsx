@@ -39,6 +39,13 @@ import {
     AccordionTrigger
 } from "@/components/ui/accordion";
 
+import rottenEggsThumb from "@/assets/Water_Smells_Like_Rotten_Eggs_1400x.webp";
+import rouilleThumbUpdated from "@/assets/5a4674e7-575d-4cd9-b1f2-32522f8a7072.jpg";
+import turbideWaterThumb from "@/assets/Turbide-Water.webp";
+import corrosiveWaterThumb from "@/assets/Corrosive-Water.webp";
+import taninWaterThumb from "@/assets/problemes-deau-tanin.jpg";
+import mauvaisGoutThumb from "@/assets/blog3-1.jpg";
+
 const products = [
     { name: "Filtre d'eau Vortex", desc: "Spécialisé pour l'eau contenant des sédiments.", image: specializedFiltersImg },
     { name: "Filtre d'eau Zen-pH", desc: "Spécialisé pour neutraliser l'eau acide.", image: specializedFiltersImg },
@@ -165,6 +172,18 @@ const FiltresPuits = () => {
         });
     };
 
+    // Auto-rotation for the card stack Phase III - Dynamics
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCardStack(prev => {
+                const nextCard = prev[0]; // Take the bottom-most card
+                const remaining = prev.slice(1);
+                return [...remaining, nextCard]; // Move it to the top
+            });
+        }, 5000);
+        return () => clearInterval(interval);
+    }, []);
+
     const cardData = [
         { id: 0, title: "Zéro odeur", img: zeroOdorImg, desc: "Dites adieu aux odeurs d'œufs pourris (soufre) et au goût de chlore pour une eau fraîche." },
         { id: 1, title: "Protection totale", img: bathroomImg, desc: "Empêchez le fer et les minéraux corrosifs de tacher vos éviers et de détruire votre plomberie." },
@@ -247,6 +266,137 @@ const FiltresPuits = () => {
                             </div>
                         </div>
 
+                    </div>
+                </section>
+
+                {/* 2.5. Symptom Diagnostic Grid */}
+                <section className="py-24 bg-white relative overflow-hidden">
+                    <div className="container mx-auto px-6">
+                        <div className="text-center mb-16">
+                            <span className="inline-block px-4 py-1.5 bg-blue-100 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-widest mb-6">
+                                DIAGNOSTIC AUTOMATIQUE
+                            </span>
+                            <h2 className="heading-pro-max">
+                                <span className="italic font-light text-[#2563eb] block">Quel problème d'eau</span>
+                                <span className="font-bold text-[#1e3a8a] block text-center">de puits vivez-vous au quotidien ?</span>
+                            </h2>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            {[
+                                { 
+                                    problem: "Odeur d'œufs pourris", 
+                                    cause: "Gaz sulfure d'hydrogène", 
+                                    solution: "Sulphur Shield",
+                                    color: "bg-amber-500",
+                                    icon: "🌀",
+                                    img: rottenEggsThumb
+                                },
+                                { 
+                                    problem: "Taches de Rouille", 
+                                    cause: "Excès de fer ferrique/ferreux", 
+                                    solution: "Iron Shield",
+                                    color: "bg-orange-500",
+                                    icon: "💧",
+                                    img: rouilleThumbUpdated
+                                },
+                                { 
+                                    problem: "Sable & Sédiments", 
+                                    cause: "Eaux turbides ou filtrage incomplet", 
+                                    solution: "Vortex Filtration",
+                                    color: "bg-slate-400",
+                                    icon: "🌪️",
+                                    img: turbideWaterThumb
+                                },
+                                { 
+                                    problem: "Eau Acide (pH bas)", 
+                                    cause: "Corrosion de la plomberie (cuivre)", 
+                                    solution: "Zen-pH Neutralizer",
+                                    color: "bg-blue-400",
+                                    icon: "🧪",
+                                    img: corrosiveWaterThumb
+                                },
+                                { 
+                                    problem: "Taches Noires", 
+                                    cause: "Présence de Manganèse", 
+                                    solution: "Oxy-pure Series",
+                                    color: "bg-stone-900",
+                                    icon: "⚫",
+                                    img: mauvaisGoutThumb
+                                },
+                                { 
+                                    problem: "Eau de thé / Colorée", 
+                                    cause: "Tanins d'origine organique", 
+                                    solution: "Tann-Ex System",
+                                    color: "bg-yellow-700",
+                                    icon: "☕",
+                                    img: taninWaterThumb
+                                }
+                            ].map((s, i) => (
+                                <div 
+                                    key={i} 
+                                    className="group relative h-[340px] rounded-[3rem] overflow-hidden border border-white bg-white/40 backdrop-blur-xl shadow-sm cursor-pointer transition-all duration-700 hover:shadow-2xl hover:shadow-blue-200/50 hover:border-blue-200 hover:-translate-y-2"
+                                    onClick={() => navigate("/consultation")}
+                                >
+                                    {/* Background Image with Overlay */}
+                                    <div className="absolute inset-0 z-0">
+                                        <img 
+                                            src={s.img} 
+                                            alt={s.problem} 
+                                            className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-30 group-hover:opacity-50"
+                                        />
+                                        <div className="absolute inset-0 bg-gradient-to-br from-white via-white/80 to-transparent" />
+                                    </div>
+
+                                    <div className="relative z-10 inset-0 p-10 h-full flex flex-col justify-between">
+                                        <div className="space-y-4">
+                                            <div className="flex items-center gap-3">
+                                                <div className={`w-3 h-3 rounded-full ${s.color} shadow-lg`} />
+                                                <span className="text-[10px] font-black uppercase tracking-wider text-slate-500 group-hover:text-blue-600 transition-colors">
+                                                    Cause : {s.cause}
+                                                </span>
+                                            </div>
+                                            <h3 className="text-3xl font-bold text-[#1e3a8a] leading-[1.1] transition-all duration-500 group-hover:translate-x-2">
+                                                {s.problem}
+                                            </h3>
+                                        </div>
+
+                                        <div className="space-y-4">
+                                            <div className="h-px w-12 bg-blue-200 group-hover:w-full transition-all duration-700" />
+                                            <div className="text-xs font-light text-slate-600 group-hover:text-blue-800 transition-all italic">
+                                                Solution recommandée : <span className="font-bold border-b border-transparent group-hover:border-blue-600">{s.solution}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* Hover Overlay CTA */}
+                                    <div className="absolute inset-0 bg-blue-600/95 z-20 opacity-0 group-hover:opacity-100 transition-all duration-700 flex flex-col items-center justify-center p-8 space-y-6 translate-y-full group-hover:translate-y-0 text-center">
+                                        <div className="text-center">
+                                            <p className="text-white/80 text-xs font-black uppercase tracking-widest mb-2 italic">Résoudre ce problème</p>
+                                            <h4 className="text-white text-2xl font-bold leading-tight px-6">Expertise gratuite pour cette solution</h4>
+                                        </div>
+                                        <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center text-white border border-white/20 group-hover:rotate-45 transition-transform duration-700">
+                                            <ArrowRight className="w-6 h-6" />
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+
+                        <div className="mt-20 p-8 rounded-[2.5rem] bg-indigo-950 flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl animate-in fade-in slide-in-from-bottom-8">
+                            <div className="flex items-center gap-6">
+                                <div className="w-16 h-16 rounded-2xl bg-blue-600 flex items-center justify-center text-white shadow-xl shadow-blue-500/20">
+                                    <CheckCircle2 className="w-8 h-8" />
+                                </div>
+                                <div className="text-left">
+                                    <h4 className="text-white font-bold text-xl">Vous ne savez pas quel filtre choisir ?</h4>
+                                    <p className="text-indigo-200/60 font-light text-sm">Laissez nos ingénieurs analyser votre eau gratuitement.</p>
+                                </div>
+                            </div>
+                            <Button asChild className="h-14 px-8 rounded-full bg-white text-indigo-950 hover:bg-blue-50 font-black">
+                                <a href="/consultation">Démarrer le diagnostic gratuit</a>
+                            </Button>
+                        </div>
                     </div>
                 </section>
 
@@ -392,19 +542,24 @@ const FiltresPuits = () => {
                                     <tr className="bg-gray-100">
                                         <th className="p-8 text-left text-gray-400 font-medium uppercase tracking-wider w-[280px]">Modèles</th>
                                         {[
-                                            { key: "Vortex", name: "Vortex"},
-                                            { key: "ZenPH", name: "Zen-pH"},
-                                            { key: "ChlorStop", name: "ChlorStop"},
-                                            { key: "IronShield", name: "Iron Shield"},
-                                            { key: "OxyPure", name: "Oxy-pure"},
-                                            { key: "SulphurShield", name: "Sulphur Shield"},
-                                            { key: "ZeroAs", name: "Zéro-As"},
-                                            { key: "TannEx", name: "Tann-Ex"},
-                                            { key: "SerenitePure", name: "Sérénité Pure"}
+                                            { key: "Vortex", name: "Vortex", badge: null },
+                                            { key: "ZenPH", name: "Zen-pH", badge: null },
+                                            { key: "ChlorStop", name: "ChlorStop", badge: null },
+                                            { key: "IronShield", name: "Iron Shield", badge: "Populaire" },
+                                            { key: "OxyPure", name: "Oxy-pure", badge: null },
+                                            { key: "SulphurShield", name: "Sulphur Shield", badge: null },
+                                            { key: "ZeroAs", name: "Zéro-As", badge: null },
+                                            { key: "TannEx", name: "Tann-Ex", badge: null },
+                                            { key: "SerenitePure", name: "Sérénité Pure", badge: "Premium" }
                                         ].map(m => (
-                                            <th key={m.key} className="p-4 text-center text-gray-900 font-bold border-l border-white/50 first:border-l-0">
+                                            <th key={m.key} className="py-10 px-4 text-center text-gray-900 font-bold border-l border-white/50 first:border-l-0 relative min-w-[140px]">
                                                 <div className="flex flex-col items-center">
-                                                    <div className="text-[13px] leading-tight uppercase tracking-wider min-h-[32px] flex items-center justify-center px-1">
+                                                    {m.badge && (
+                                                        <span className="absolute top-2 right-2 bg-blue-600 text-white text-[7px] font-black px-2 py-0.5 rounded-full uppercase tracking-tighter whitespace-nowrap shadow-lg shadow-blue-200/50">
+                                                            {m.badge}
+                                                        </span>
+                                                    )}
+                                                    <div className="text-[12px] leading-tight uppercase tracking-wider min-h-[32px] flex items-center justify-center px-1">
                                                         {m.name}
                                                     </div>
                                                 </div>
@@ -682,6 +837,27 @@ const FiltresPuits = () => {
                 </section>
 
             </main>
+
+            {/* Floating Sticky CTA - Phase III Conversion Focus */}
+            <div className="fixed bottom-8 right-8 z-[100] animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-[3s] pointer-events-none">
+                <div className="pointer-events-auto group/sticky">
+                    <Button 
+                        asChild
+                        className="h-16 px-8 rounded-full bg-white/9 worst-blur text-[#1e3a8a] border border-slate-200/50 shadow-[0_20px_60px_rgba(0,0,0,0.1)] hover:shadow-indigo-200/50 hover:bg-white hover:-translate-y-2 transition-all duration-500 active:scale-95"
+                        style={{ backdropFilter: 'blur(20px)' }}
+                    >
+                        <a href="/consultation" className="flex items-center gap-4">
+                            <div className="relative">
+                                <div className="w-10 h-10 bg-[#2563eb] rounded-full flex items-center justify-center text-white group-hover/sticky:rotate-[360deg] transition-all duration-700 shadow-lg shadow-blue-200">
+                                    <ArrowRight className="w-5 h-5" />
+                                </div>
+                                <span className="absolute -top-1 -right-1 w-3 h-3 bg-green-500 rounded-full border-2 border-white animate-pulse" />
+                            </div>
+                            <span className="font-black text-sm uppercase tracking-wider whitespace-nowrap text-indigo-950">Consultation Gratuite</span>
+                        </a>
+                    </Button>
+                </div>
+            </div>
 
             <Footer />
         </div>

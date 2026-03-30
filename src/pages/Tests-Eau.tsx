@@ -62,6 +62,11 @@ import scientistImg from "@/assets/Scientist istesting water.webp";
 import newHeroImg from "@/assets/r0_0_4896_3264_w1200_h678_fmax.jpg";
 import forensicWaterImg from "@/assets/1062.jpg";
 import glasspurewaterImg from "@/assets/glass-of-water.jpeg";
+import babySafetyImg from "@/assets/When-Can-Babies-Have-Water.jpg";
+import acidWaterImg from "@/assets/corrosive-water-problems-Low-pH.jpg";
+import stormWaterImg from "@/assets/eau trouble turbide.avif";
+import mortgageImg from "@/assets/A13.jpg";
+import tasteOdorImg from "@/assets/water-taste.jpg";
 
 const TestsEauPage = () => {
   const [showAllFaqs, setShowAllFaqs] = useState(false);
