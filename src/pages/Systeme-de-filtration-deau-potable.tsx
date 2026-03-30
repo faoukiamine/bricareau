@@ -20,7 +20,9 @@ import {
   ShieldCheck,
   ShieldAlert,
   Sparkles,
-  Activity
+  Activity,
+  Microscope,
+  Waves
 } from "lucide-react";
 import safetyIcon from "@/assets/1709235770048.png";
 import { NavLink } from "@/components/NavLink";
@@ -193,58 +195,86 @@ const StationEauPotable = () => {
           </div>
         </section>
 
-        {/* 3. Systèmes d'osmose inverse - Product Grid */}
-        <section id="purification-systems" className="py-24 bg-white">
-          <div className="container mx-auto px-6">
-            <div className="text-left mb-16">
-              <h2 className="mb-8 heading-pro-max text-left">
-                                <span className="italic font-light text-[#2563eb] block">Nos systèmes de purification</span>
-                                <span className="font-bold text-[#1e3a8a] block text-left">d'eau par osmose inverse</span>
-                            </h2>
-              <div className="w-24 h-1 bg-blue-600 mb-8"></div>
-              <p className="body-pro-max mb-8 text-justify">
-                Nos systèmes d'osmose inverse représentent le summum de la technologie moderne permettant de transformer votre eau municipale ou de puits en une source de pureté exceptionnelle. Conçus pour s'intégrer discrètement sous votre évier, nos trois modèles phares — Vectapure, Essentiel et Sérénité — répondent avec précision à toutes vos exigences, allant de la filtration haute performance à la reminéralisation alcaline pour une eau plus saine. Chaque système a été rigoureusement testé et sélectionné pour sa fiabilité exemplaire et sa capacité inégalée à éliminer jusqu'à 99% des contaminants invisibles, vous offrant ainsi une tranquillité d'esprit absolue et un goût incomparable au quotidien. Choisir l'un de nos purificateurs, c'est investir durablement dans la santé de vos proches tout en réalisant des économies significatives sur l'achat d'eau en bouteille plastique. Profitez dès maintenant d'un accès illimité à une eau parfaitement purifiée, revitalisante et rafraîchissante, directement depuis le confort de votre cuisine.
+        {/* 3. Menaces Invisibles - Symptom-Logic Bento Grid */}
+        <section className="relative py-32 bg-white overflow-hidden">
+          <div className="container mx-auto px-6 relative z-10">
+            <div className="max-w-4xl mx-auto text-center mb-24">
+              <span className="inline-block px-4 py-1.5 bg-red-600/10 text-red-600 rounded-full text-[10px] font-black uppercase tracking-[0.3em] mb-8">
+                L'INVISIBLE DANS VOTRE VERRE
+              </span>
+               <h2 className="mb-8 heading-pro-max text-center">
+                  <span className="italic font-light text-[#2563eb] block">Ce que vos sens ne peuvent</span>
+                  <span className="font-bold text-[#1e3a8a] block text-center">pas détecter.</span>
+              </h2>
+              <p className="body-pro-max text-slate-500 text-center mx-auto">
+                Le chlore n'est que la pointe de l'iceberg. Votre eau municipale peut abriter des micro-polluants invisibles qui s'accumulent silencieusement dans votre organisme.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+
+            <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
               {[
-                { name: "Système d'osmose inverse de la série Vectapure", desc: "La pureté accessible sans compromis sur la qualité.", img: vectapureROImg },
-                { name: "Système d'osmose inverse de la série Essentiel", desc: "Le summum de la filtration avec reminéralisation alcaline incluse.", img: drinkingWaterImg, path: "/ro-6" },
-                { name: "Système d'osmose inverse de la série Sérénité", desc: "Performance exceptionnelle pour les familles actives.", img: freezelifeROImg },
-              ].map((product, i) => (
-                <div
-                  key={i}
-                  className="group bg-white rounded-3xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full cursor-pointer"
-                  onClick={() => navigate(product.path || "/contact")}
-                >
-                  <div className="relative h-80 overflow-hidden bg-slate-50 flex items-center justify-center p-12">
-                    <img
-                      src={product.img}
-                      alt={`${product.name} - Système de purification d'eau par osmose inverse Bricareau`}
-                      className="max-h-full object-contain group-hover:scale-110 transition-transform duration-700 mix-blend-multiply"
-                    />
-                  </div>
-                  <div className="p-8 space-y-4 flex flex-col flex-grow border-t-2 border-transparent group-hover:border-blue-600 transition-colors">
-                    <h3
-                      className="card-title group-hover:text-blue-600 transition-colors text-center"
-                    >
-                      {product.name}
-                    </h3>
-                    <p className="body-pro-max text-slate-500 flex-grow text-justify">
-                      {product.desc}
-                    </p>
-                    <div
-                      className="inline-flex items-center gap-2 text-blue-600 font-bold text-xs tracking-widest uppercase mt-4 group-hover:underline self-end"
-                    >                      <ArrowRight className="h-6 w-6 transform group-hover:translate-x-1 transition-transform" />
+                { 
+                  title: "PFAS 'Polluants Éternels'", 
+                  threat: "Hautement Persistant", 
+                  desc: "Utilisés dans l'industrie, ils ne se dégradent jamais. L'osmose inverse est l'une des rares barrières physiques certifiées pour les bloquer.",
+                  img: pfasImg,
+                  badge: "Risque Santé",
+                  icon: <ShieldAlert className="w-5 h-5 text-red-500" />
+                },
+                { 
+                  title: "Micro-plastiques", 
+                  threat: "Omniprésent", 
+                  desc: "Des milliers de fragments par litre. Nos membranes de 0.0001 micron garantissent une eau sans résidus plastiques pour toute la famille.",
+                  img: microplasticsImg,
+                  badge: "Environnement",
+                  icon: <Microscope className="w-5 h-5 text-blue-500" />
+                },
+                { 
+                  title: "Fluorure & Chlore", 
+                  threat: "Goût & Équilibre", 
+                  desc: "Indispensables au traitement, mais désagréables en bouche. Retrouvez la pureté d'une eau de source minérale sans les additifs chimiques.",
+                  img: fluorideImg,
+                  badge: "Pureté Gout",
+                  icon: <Waves className="w-5 h-5 text-emerald-500" />
+                },
+                { 
+                  title: "Résidus Médicinaux", 
+                  threat: "Invisible", 
+                  desc: "Trace d'hormones et d'antibiotiques traversant les filtres standards. Offrez à vos enfants une eau débarrassée de toute substance étrangère.",
+                  img: healthwaterImg,
+                  badge: "Protection Enfant",
+                  icon: <Activity className="w-5 h-5 text-amber-500" />
+                }
+              ].map((item, i) => (
+                <div key={i} className="group relative bg-[#F8FAFC] rounded-[2.5rem] p-4 border border-slate-100/50 hover:bg-white transition-all duration-700 hover:shadow-[0_40px_100px_-20px_rgba(30,58,138,0.1)] overflow-hidden">
+                  <div className="relative h-64 overflow-hidden rounded-[2rem] mb-8">
+                    <img src={item.img} alt={item.title} className="w-full h-full object-cover transition-transform duration-[3000ms] group-hover:scale-110" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    <div className="absolute top-4 left-4 z-20">
+                      <div className="bg-white/90 backdrop-blur-xl px-4 py-1.5 rounded-full flex items-center gap-2 shadow-sm">
+                        {item.icon}
+                        <span className="text-[10px] font-black text-slate-900 uppercase tracking-widest">{item.badge}</span>
+                      </div>
                     </div>
+                  </div>
+                  <div className="px-4 pb-4 space-y-4">
+                    <div className="space-y-1">
+                      <span className="text-[10px] font-black text-red-600 uppercase tracking-widest">{item.threat}</span>
+                      <h3 className="text-xl font-bold text-[#1e3a8a] leading-tight group-hover:text-blue-600 transition-colors">{item.title}</h3>
+                    </div>
+                    <p className="text-slate-500 text-sm leading-relaxed font-light text-justify">{item.desc}</p>
+                    <button onClick={() => document.getElementById('purification-systems')?.scrollIntoView({ behavior: 'smooth' })} className="pt-4 flex items-center gap-2 text-blue-600 text-xs font-bold uppercase tracking-widest group-hover:gap-4 transition-all">
+                      La Barrière <ArrowRight className="w-4 h-4" />
+                    </button>
                   </div>
                 </div>
               ))}
             </div>
           </div>
         </section>
+
         {/* 4. Pourquoi choisir - Fluid Editorial Design */}
-        <section className="py-32 bg-white relative overflow-hidden">
+        <section id="purification-systems" className="py-32 bg-white relative overflow-hidden">
           {/* Background Decorative Elements */}
           <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-blue-50/30 rounded-full blur-[120px] -translate-y-1/2 z-0" />
           <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-indigo-50/20 rounded-full blur-[100px] translate-y-1/2 z-0" />
@@ -331,22 +361,26 @@ const StationEauPotable = () => {
             <div className="overflow-x-auto">
               <table className="w-full min-w-[1000px] border-collapse bg-white rounded-2xl overflow-hidden shadow-sm">
                 <thead>
-                  <tr className="bg-gray-100">
-                    <th className="p-8 text-left text-gray-400 font-light uppercase tracking-wider">Solutions</th>
+                  <tr className="bg-gray-100/50">
+                    <th className="p-8 text-left text-blue-900/40 font-black uppercase tracking-widest text-[10px]">Solutions</th>
                     {[
-                      { name: "Série Vectapure", img: vectapureROImg },
-                      { name: "Série Essentiel", img: drinkingWaterImg },
-                      { name: "Série Sérénité", img: freezelifeROImg },
-
+                      { name: "Série Vectapure", img: vectapureROImg, badge: "L'Essentiel", color: "bg-blue-600" },
+                      { name: "Série Essentiel", img: drinkingWaterImg, badge: "Le Plus Populaire", color: "bg-emerald-600" },
+                      { name: "Série Sérénité", img: freezelifeROImg, badge: "Débit Direct", color: "bg-amber-600" },
                     ].map((m, i) => (
                       <th key={i} className="p-4 text-center text-gray-900 font-bold text-sm">
-                        <div className="flex flex-col items-center gap-2">
-                          <img
-                            src={m.img}
-                            alt={`Purificateur d'eau ${m.name} - Technologie d'osmose inverse Bricareau`}
-                            className="w-[120px] h-[100px] object-contain mx-auto mix-blend-multiply"
-                          />
-                          <span className="max-w-[100px] inline-block uppercase tracking-wider text-[10px]">{m.name}</span>
+                        <div className="flex flex-col items-center gap-4 group">
+                          <div className="relative">
+                            <div className={`absolute -top-3 -right-12 z-20 ${m.color} text-white text-[8px] font-black uppercase tracking-[0.2em] px-3 py-1 rounded-full shadow-lg whitespace-nowrap`}>
+                              {m.badge}
+                            </div>
+                            <img
+                              src={m.img}
+                              alt={`Purificateur d'eau ${m.name} - Technologie d'osmose inverse Bricareau`}
+                              className="w-[140px] h-[110px] object-contain mx-auto mix-blend-multiply group-hover:scale-110 transition-transform duration-500"
+                            />
+                          </div>
+                          <span className="max-w-[120px] inline-block uppercase tracking-wider text-[11px] text-[#1e3a8a]">{m.name}</span>
                         </div>
                       </th>
                     ))}
@@ -623,6 +657,24 @@ const StationEauPotable = () => {
 
       </main >
       <Footer />
+
+      {/* Sticky Consultation CTA - Pro Max Conversion Tool */}
+      <div className="fixed bottom-8 right-8 z-[100] group hidden md:block">
+          <NavLink to="/consultation">
+              <div className="relative">
+                  <div className="absolute inset-0 bg-blue-600 rounded-full animate-ping opacity-20 group-hover:opacity-40 transition-opacity" />
+                  <div className="relative flex items-center gap-3 bg-white/90 backdrop-blur-xl border border-blue-100 p-2 pr-6 rounded-full shadow-[0_20px_50px_rgba(0,0,0,0.1)] hover:shadow-[0_25px_60px_rgba(37,99,235,0.2)] transition-all duration-500 group-hover:-translate-y-2 group-hover:bg-blue-600">
+                      <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white group-hover:bg-white group-hover:text-blue-600 transition-colors duration-500">
+                          <Sparkles className="w-6 h-6 animate-pulse" />
+                      </div>
+                      <div className="flex flex-col">
+                          <span className="text-[10px] font-black uppercase tracking-[0.2em] text-blue-600 group-hover:text-white/80 transition-colors">Audit Gratuit</span>
+                          <span className="text-sm font-bold text-slate-900 group-hover:text-white transition-colors">Analyse d'eau</span>
+                      </div>
+                  </div>
+              </div>
+          </NavLink>
+       </div>
     </div >
   );
 };
