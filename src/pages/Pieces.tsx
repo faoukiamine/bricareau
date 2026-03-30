@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 import Footer from "@/components/Footer";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Package, Search, ArrowRight, ChevronRight, MessageSquare, Phone } from "lucide-react";
+import { Package, Search, ArrowRight, ChevronRight, MessageSquare, Phone, PhoneCall, ShieldCheck, Truck, Timer, Calendar, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import polypropyleneIcon from "@/assets/Polypropylene.svg";
@@ -45,7 +45,7 @@ import UVQuartzTube from "@/assets/uv-quartz-sleeves.webp";
 import UVLamp from "@/assets/uv lamps.webp";
 import FRPROHousing from "@/assets/RO-Housings.jpg";
 import SSROHousing from "@/assets/SS-Membrane-Housing.webp";
-import piecesHero from "@/assets/wave-banner.jpg";
+import piecesHero from "@/assets/2148976317.jpg";
 
 const Pieces = () => {
     const partCategories = [
@@ -92,7 +92,7 @@ const Pieces = () => {
                 { name: "Birm (sac 25 litres)", image: birmMedia },
                 { name: "Green-Sand", image: greensandPlusMedia },
                 { name: "Calcite", image: calciteMedia },
-                { name: "Filer-Ag", image: filterAgMedia },
+                { name: "Filter-Ag", image: filterAgMedia },
                 { name: "Next-Sand", image: nextSandMedia },
             ]
         },
@@ -108,7 +108,6 @@ const Pieces = () => {
                 { name: "Kit de raccordement V3007-01", image: ClackKitV300701 },
                 { name: "Kit de raccordement V3007-05", image: ClackKitV300705 },
                 { name: "Kit de raccordement V3007-12", image: ClackKitV300712 },
-
             ]
         },
         {
@@ -137,179 +136,256 @@ const Pieces = () => {
     ];
 
     return (
-        <div className="min-h-screen bg-background font-sans text-slate-900">
+        <div className="min-h-screen bg-white font-sans text-slate-900">
             <Header />
             <main>
-                {/* 1. Hero Section */}
-                <section className="relative lg:h-[650px] flex flex-col lg:items-center overflow-hidden bg-white">
-                    <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none hidden lg:block">
-                        <div className="container mx-auto px-4 lg:px-6 pointer-events-auto">
+                {/* 1. HERO SECTION PRO MAX */}
+                <section className="relative h-[800px] flex flex-col items-center justify-center overflow-hidden bg-white group">
+                    {/* Breadcrumbs Positioning - Fixed to top to match Home page */}
+                    <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none hidden lg:block animate-in fade-in slide-in-from-top-4 duration-700">
+                        <div className="container mx-auto px-6 pointer-events-auto">
                             <GlobalBreadcrumbs variant="dark" />
                         </div>
                     </div>
-                    <div className="relative lg:absolute lg:inset-0 h-[350px] sm:h-[450px] lg:h-full w-full lg:z-0 overflow-hidden">
+
+                    {/* Background Layer */}
+                    <div className="absolute inset-0 w-full h-full overflow-hidden">
                         <img
                             src={piecesHero}
-                            alt="Pièces de Remplacement Bricareau - Maintenez vos équipements en parfait état"
-                            className="w-full h-full object-cover object-[center_35%]"
+                            alt="Pièces de Remplacement Bricareau"
+                            className="w-full h-full object-cover object-[center_35%] scale-105 group-hover:scale-100 transition-transform duration-[3s] ease-out"
                         />
-                        <div className="hidden lg:block absolute inset-0 bg-black/40 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
-                        <div className="hidden lg:block absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-white via-white/10 to-transparent" />
-                        <div className="hidden lg:block absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white/90 via-white/40 to-transparent" />
+                        {/* Gradient Signature Bricareau - Exactly like Index Hero */}
+                        <div className="absolute inset-0 z-10 bg-gradient-to-r from-[#f0f9ff] via-[#f0f9ff]/40 35% to-transparent" />
+                        <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white to-transparent" />
                     </div>
 
-                    <div className="container relative z-10 mx-auto px-4 h-full flex items-center lg:px-6">
-                        <div className="max-w-2xl lg:text-white py-12 lg:py-0">
-                            <h1
-                                className="leading-[1.1] md:leading-[1.2] mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left max-w-xl"
+                    {/* Content Layer */}
+                    <div className="container relative z-20 mx-auto px-6 h-full flex flex-col items-start justify-center">
+                        <div className="mt-12 max-w-3xl space-y-8 animate-in fade-in slide-in-from-bottom-12 duration-[1.2s]">
+                            <h1 
+                                className="leading-[55px] tracking-tighter text-left mb-8 max-w-4xl animate-in fade-in slide-in-from-bottom-12 duration-[1.2s]"
+                                style={{
+                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                }}
                             >
-                                Pièces de <span className="text-blue-600 lg:text-blue-400">Remplacement</span>
+                                <span className="italic font-light text-[#2563eb] text-[50px] block lg:inline-block">Maintenez la performance.</span>
+                                <br className="hidden lg:block" />
+                                <span className="font-bold text-[#1e3a8a] text-[50px] block lg:inline-block">Pièces de Remplacement</span>
                             </h1>
-                            <p className="font-light text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
-                                Trouvez toutes les pièces dont vous avez besoin pour maintenir vos équipements en parfait état de fonctionnement.
+
+                            <p className="body-pro-max text-slate-600 max-w-xl text-left font-light leading-relaxed">
+                                Trouvez les composantes d'origine nécessaires pour assurer la pérennité et l'efficacité de vos systèmes de traitement d'eau. Une sélection rigoureuse pour une tranquillité d'esprit totale.
                             </p>
+
+                            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                                <Button className="bg-[#2563eb] hover:bg-[#1e3a8a] text-white rounded-full h-16 px-10 text-lg font-bold transition-all hover:scale-105 active:scale-95 shadow-xl shadow-blue-200 group/btn">
+                                    Parler à un expert
+                                    <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover/btn:translate-x-1" />
+                                </Button>
+                                <Button variant="outline" className="rounded-full h-16 px-10 text-lg font-bold border-2 border-slate-200 hover:bg-slate-50 transition-all group/call">
+                                    <Phone className="mr-2 w-5 h-5 text-[#2563eb]" />
+                                    1 855 264 9328
+                                </Button>
+                            </div>
+                        </div>
+
+                        {/* Trust Bar Section - Repositioned to Right */}
+                        <div className="absolute bottom-12 right-6 lg:bottom-12 lg:right-12 z-20 animate-in fade-in slide-in-from-right-12 duration-1000 delay-700 pointer-events-none">
+                            <div className="flex flex-col gap-4 pointer-events-auto">
+                                {/* Item 1: Stock */}
+                                <div className="bg-white/60 backdrop-blur-2xl p-4 lg:p-6 rounded-[2rem] border border-white/50 shadow-2xl shadow-blue-900/10 min-w-[200px] group cursor-default">
+                                    <div className="flex items-center gap-4">
+                                        <div className="w-12 h-12 bg-blue-600/10 rounded-2xl flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all shadow-sm shrink-0">
+                                            <Timer className="w-6 h-6" />
+                                        </div>
+                                        <div className="text-left">
+                                            <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest leading-none mb-1">Stock</p>
+                                            <p className="text-sm font-bold text-[#1e3a8a]">Expédition 24/48h</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* Item 2: Origine */}
+                                <div className="bg-white/60 backdrop-blur-2xl p-4 lg:p-6 rounded-[2rem] border border-white/50 shadow-2xl shadow-blue-900/10 min-w-[200px] group cursor-default">
+                                    <div className="flex items-center gap-4">
+                                        <div className="w-12 h-12 bg-blue-600/10 rounded-2xl flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all shadow-sm shrink-0">
+                                            <ShieldCheck className="w-6 h-6" />
+                                        </div>
+                                        <div className="text-left">
+                                            <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest leading-none mb-1">Origine</p>
+                                            <p className="text-sm font-bold text-[#1e3a8a]">Pièces Certifiées</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* Item 3: Expédition */}
+                                <div className="bg-white/60 backdrop-blur-2xl p-4 lg:p-6 rounded-[2rem] border border-white/50 shadow-2xl shadow-blue-900/10 min-w-[200px] group cursor-default">
+                                    <div className="flex items-center gap-4">
+                                        <div className="w-12 h-12 bg-blue-600/10 rounded-2xl flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all shadow-sm shrink-0">
+                                            <Truck className="w-6 h-6" />
+                                        </div>
+                                        <div className="text-left">
+                                            <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest leading-none mb-1">Expédition</p>
+                                            <p className="text-sm font-bold text-[#1e3a8a]">Partout au Canada</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
 
+                {/* 2. CATALOG SECTION PRO MAX */}
                 <section className="py-24 bg-white relative overflow-hidden">
-                    <div className="container mx-auto px-4">
-                        <Tabs defaultValue="Tout" className="flex flex-col lg:flex-row gap-12 text-center lg:text-left">
-                            <aside className="lg:w-1/4">
-                                <TabsList className="flex flex-col items-stretch h-auto w-full p-2 bg-slate-50/50 backdrop-blur-md rounded-3xl border border-slate-100 shadow-sm lg:sticky lg:top-32 gap-1">
-                                    <TabsTrigger
-                                        value="Tout"
-                                        className="w-full justify-start px-6 py-3.5 rounded-2xl text-[14px] font-bold tracking-tight transition-all duration-300 data-[state=active]:bg-white data-[state=active]:text-[#1e3a8a] data-[state=active]:shadow-lg text-slate-500 hover:text-[#2563eb]"
-                                    >
-                                        <div className="flex items-center gap-3">
-                                            <Package className="h-4 w-4" />
-                                            <span>Toutes les catégories</span>
-                                        </div>
-                                    </TabsTrigger>
-                                    {partCategories.map((category) => (
-                                        <TabsTrigger
-                                            key={category.name}
-                                            value={category.name}
-                                            className="w-full justify-start px-6 py-3.5 rounded-2xl text-[14px] font-bold tracking-tight transition-all duration-300 data-[state=active]:bg-white data-[state=active]:text-[#1e3a8a] data-[state=active]:shadow-lg text-slate-500 hover:text-[#2563eb]"
-                                        >
-                                            <div className="flex items-center gap-3 text-left">
-                                                <div className="w-1.5 h-1.5 rounded-full bg-blue-400 opacity-40" />
-                                                <span>{category.name}</span>
-                                            </div>
-                                        </TabsTrigger>
-                                    ))}
-                                </TabsList>
-                            </aside>
+                     {/* Background Watermark 1 */}
+                     <div className="absolute top-20 left-1/2 -translate-x-1/2 text-[15rem] lg:text-[25rem] font-black text-slate-50/50 select-none pointer-events-none tracking-tighter uppercase whitespace-nowrap z-0">
+                        SÉLECTION
+                    </div>
 
-                            <div className="lg:w-3/4">
-                                <div className="flex flex-col items-center text-center mb-16 w-full">
-                                    <div className="max-w-4xl">
-                                        <h2 className="heading-pro-max mb-8 text-center">
-                                            <span className="italic font-light text-[#2563eb] block">Explorez nos</span>
-                                            <span className="font-bold text-[#1e3a8a] block">catégories de pièces</span>
-                                        </h2>
-                                        <p className="body-pro-max text-slate-500 max-w-2xl mx-auto text-center">
-                                            Gardez votre système de traitement d'eau à son summum de performance avec nos composantes de qualité supérieure. Nous avons rigoureusement sélectionné chaque pièce pour sa durabilité et sa conformité aux normes les plus exigeantes. Explorez nos catégories pour identifier les solutions de remplacement authentiques — des cartouches filtrantes de précision aux vannes de contrôle intelligentes — conçues pour assurer la pureté et la clarté de votre eau, jour après jour.
-                                        </p>
+                    <div className="container mx-auto px-6 relative z-10">
+                        <Tabs defaultValue="Tout" className="flex flex-col lg:flex-row gap-16">
+                            {/* Sticky Navigation Sidebar */}
+                            <aside className="lg:w-1/4 animate-in fade-in slide-in-from-left duration-1000">
+                                <div className="lg:sticky lg:top-32 space-y-4">
+                                    <div className="bg-slate-50/80 backdrop-blur-md p-6 rounded-[2.5rem] border border-slate-100 shadow-sm">
+                                        <div className="mb-6 px-2">
+                                            <h4 className="text-xs font-black text-[#2563eb] uppercase tracking-widest mb-1">Sélecteur</h4>
+                                            <p className="text-lg font-bold text-[#1e3a8a]">Catégories</p>
+                                        </div>
+                                        <TabsList className="flex flex-col items-stretch h-auto w-full p-0 bg-transparent gap-2">
+                                            <TabsTrigger
+                                                value="Tout"
+                                                className="w-full justify-start px-6 py-4 rounded-3xl text-[14px] font-black tracking-tight transition-all duration-300 data-[state=active]:bg-white data-[state=active]:text-[#2563eb] data-[state=active]:shadow-lg data-[state=active]:scale-[1.02] text-slate-400 hover:text-[#2563eb] hover:bg-white/50"
+                                            >
+                                                <div className="flex items-center gap-3">
+                                                    <Package className="h-5 w-5" />
+                                                    <span>Inventaire Complet</span>
+                                                </div>
+                                            </TabsTrigger>
+                                            {partCategories.map((category) => (
+                                                <TabsTrigger
+                                                    key={category.name}
+                                                    value={category.name}
+                                                    className="w-full justify-start px-6 py-4 rounded-3xl text-[14px] font-black tracking-tight transition-all duration-300 data-[state=active]:bg-white data-[state=active]:text-[#2563eb] data-[state=active]:shadow-lg data-[state=active]:scale-[1.02] text-slate-400 hover:text-[#2563eb] hover:bg-white/50 text-left"
+                                                >
+                                                    <div className="flex items-center gap-3">
+                                                        <div className="w-2 h-2 rounded-full bg-blue-400 opacity-40 group-data-[state=active]:opacity-100" />
+                                                        <span className="truncate">{category.name}</span>
+                                                    </div>
+                                                </TabsTrigger>
+                                            ))}
+                                        </TabsList>
+                                    </div>
+
+                                    {/* Sidebar CTA Badge */}
+                                    <div className="bg-[#1e3a8a] p-8 rounded-[2.5rem] shadow-2xl relative overflow-hidden group/sidebar-cta">
+                                        <div className="absolute -right-8 -bottom-8 w-24 h-24 bg-blue-600/20 rounded-full transition-transform group-hover/sidebar-cta:scale-150 duration-700" />
+                                        <div className="relative z-10 space-y-4">
+                                            <MessageSquare className="w-10 h-10 text-blue-400" />
+                                            <p className="text-white font-bold leading-tight">Besoin d'aide pour identifier une pièce ?</p>
+                                            <Button variant="link" className="text-blue-400 p-0 h-auto font-black uppercase text-xs tracking-widest hover:text-white transition-colors flex items-center">
+                                                Envoyer une photo
+                                                <ArrowRight className="ml-2 w-4 h-4" />
+                                            </Button>
+                                        </div>
                                     </div>
                                 </div>
-                                <TabsContent 
-                                    value="Tout"
-                                    className="animate-in fade-in slide-in-from-bottom-4 duration-500"
-                                >
-                                    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
-                                        {partCategories.flatMap(cat => cat.items).map((item, itemIndex) => (
-                                                <div
-                                                    key={itemIndex}
-                                                    className="group bg-white border border-slate-100 rounded-3xl overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full cursor-pointer"
-                                                >
-                                                    <div className="relative h-64 overflow-hidden bg-slate-50 flex items-center justify-center p-8">
-                                                        <div className="absolute inset-0 bg-blue-600/5 opacity-0 group-hover:opacity-100 transition-opacity" />
-                                                        {item.image ? (
-                                                            <img
-                                                                src={item.image}
-                                                                alt={`${item.name} - Bricareau`}
-                                                                className="max-h-full object-contain relative z-10 group-hover:scale-110 transition-transform duration-700 mix-blend-multiply"
-                                                            />
-                                                        ) : (
-                                                            <Package className="h-16 w-16 text-slate-300 relative z-10" />
-                                                        )}
-                                                    </div>
-                                                    <div className="p-6 space-y-4 flex flex-col flex-grow border-t-2 border-transparent group-hover:border-blue-600 transition-colors">
-                                                        <h3 className="text-lg font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
-                                                            {item.name}
-                                                        </h3>
-                                                    </div>
-                                                </div>
-                                        ))}
-                                    </div>
-                                </TabsContent>
+                            </aside>
 
-                                {partCategories.map((category, index) => (
-                                    <TabsContent 
-                                        key={index}
-                                        value={category.name}
-                                        className="animate-in fade-in slide-in-from-bottom-4 duration-500"
-                                    >
+                            {/* Main Content Area */}
+                            <div className="lg:w-3/4 space-y-12">
+                                <div className="flex flex-col items-start gap-4 animate-in fade-in slide-in-from-bottom-4 duration-1000">
+                                     <h2 className="heading-pro-max text-left">
+                                        <span className="italic font-light text-[#2563eb] block">Explorez nos</span>
+                                        <span className="font-bold text-[#1e3a8a] block uppercase">composantes d'origine.</span>
+                                    </h2>
+                                    <p className="body-pro-max text-slate-500 max-w-2xl text-left font-light">
+                                        Filtres, membranes, vannes et accessoires parfaitement compatibles avec vos systèmes. Qualité certifiée pour un rendement optimal.
+                                    </p>
+                                </div>
+
+                                <div className="relative">
+                                    <TabsContent value="Tout" className="animate-in fade-in slide-in-from-bottom-8 duration-700 m-0">
                                         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
-                                            {category.items.map((item, itemIndex) => (
-                                                    <div
-                                                        key={itemIndex}
-                                                        className="group bg-white border border-slate-100 rounded-3xl overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full cursor-pointer"
-                                                    >
-                                                        <div className="relative h-64 overflow-hidden bg-slate-50 flex items-center justify-center p-8">
-                                                            <div className="absolute inset-0 bg-blue-600/5 opacity-0 group-hover:opacity-100 transition-opacity" />
-                                                            {item.image ? (
-                                                                <img
-                                                                    src={item.image}
-                                                                    alt={`${item.name} - Bricareau`}
-                                                                    className="max-h-full object-contain relative z-10 group-hover:scale-110 transition-transform duration-700 mix-blend-multiply"
-                                                                />
-                                                            ) : (
-                                                                <Package className="h-16 w-16 text-slate-300 relative z-10" />
-                                                            )}
-                                                        </div>
-                                                        <div className="p-6 space-y-4 flex flex-col flex-grow border-t-2 border-transparent group-hover:border-blue-600 transition-colors">
-                                                            <h3 className="text-lg font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
-                                                                {item.name}
-                                                            </h3>
-                                                        </div>
-                                                    </div>
+                                            {partCategories.flatMap(cat => cat.items).map((item, idx) => (
+                                                <PartCard key={idx} item={item} />
                                             ))}
                                         </div>
                                     </TabsContent>
-                                ))}
+
+                                    {partCategories.map((category, idx) => (
+                                        <TabsContent key={idx} value={category.name} className="animate-in fade-in slide-in-from-bottom-8 duration-700 m-0">
+                                            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+                                                {category.items.map((item, itemIdx) => (
+                                                    <PartCard key={itemIdx} item={item} />
+                                                ))}
+                                            </div>
+                                        </TabsContent>
+                                    ))}
+                                </div>
                             </div>
                         </Tabs>
                     </div>
                 </section>
 
-                {/* Help Section */}
-                <section className="py-12 md:py-16 bg-slate-50">
-                    <div className="container mx-auto px-4">
-                        <div className="max-w-4xl mx-auto">
-                            <h2 className="text-center mb-12 heading-pro-max">
-                                <span className="font-light italic text-[#2563eb] block mb-2 sm:mb-0 sm:inline">Besoin d'aide pour </span>
-                                <span className="font-bold text-[#1e3a8a] block sm:inline">trouver la bonne pièce ?</span>
-                            </h2>
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
-                                <div className="bg-white p-8 rounded-3xl text-center shadow-sm hover:shadow-md transition-shadow border border-slate-100">
-                                    <h3 className="text-lg font-bold text-slate-900 mb-3">Par téléphone</h3>
-                                    <p className="text-sm text-slate-500 mb-6 font-light">
-                                        Nos experts vous aident à identifier la pièce immédiatement.
-                                    </p>
-                                    <Button asChild className="rounded-full px-8">
-                                        <a href="tel:18552649328">1 855 264 9328</a>
-                                    </Button>
+                {/* 3. SUPPORT / CONVERSION SECTION PRO MAX */}
+                <section className="py-32 bg-slate-50 relative overflow-hidden">
+                     {/* Background Watermark 2 */}
+                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[15rem] lg:text-[22rem] font-black text-slate-200/20 select-none pointer-events-none tracking-tighter uppercase z-0">
+                        SUPPORT
+                    </div>
+
+                    <div className="container mx-auto px-6 relative z-10">
+                        <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-16">
+                            <div className="lg:w-1/2 space-y-8 text-left animate-in fade-in slide-in-from-left duration-[1.2s]">
+                                <h2 className="heading-pro-max">
+                                    <span className="italic font-light text-[#2563eb] block font-sans">Ne perdez pas de temps,</span>
+                                    <span className="font-black text-[#1e3a8a] block uppercase">parlez à un technicien.</span>
+                                </h2>
+                                <p className="body-pro-max text-slate-600 font-light leading-relaxed">
+                                    Identifier la bonne pièce peut être complexe. Nos experts sont formés pour vous donner la référence exacte en quelques minutes. Un service gratuit pour vous assurer la bonne commande du premier coup.
+                                </p>
+                                
+                                <div className="space-y-4 pt-4">
+                                     <div className="flex items-center gap-6 bg-white p-8 rounded-[2.5rem] shadow-xl shadow-blue-900/5 group hover:shadow-2xl transition-all border border-slate-100">
+                                        <div className="w-14 h-14 bg-blue-600 rounded-[1.5rem] flex items-center justify-center text-white group-hover:rotate-12 transition-transform shadow-lg shadow-blue-200">
+                                            <PhoneCall className="w-7 h-7" />
+                                        </div>
+                                        <div>
+                                            <p className="text-sm font-black text-slate-400 uppercase tracking-widest mb-1">Support Téléphonique</p>
+                                            <p className="text-2xl font-black text-[#1e3a8a]">1-855-264-9328</p>
+                                        </div>
+                                    </div>
+                                    <div className="flex items-center gap-6 bg-white p-8 rounded-[2.5rem] shadow-xl shadow-blue-900/5 group hover:shadow-2xl transition-all border border-slate-100">
+                                        <div className="w-14 h-14 bg-blue-600 rounded-[1.5rem] flex items-center justify-center text-white group-hover:rotate-12 transition-transform shadow-lg shadow-blue-200">
+                                            <Calendar className="w-7 h-7" />
+                                        </div>
+                                        <div>
+                                            <p className="text-sm font-black text-slate-400 uppercase tracking-widest mb-1">Besoin d'installation ?</p>
+                                            <a href="/service#contact-form" className="text-2xl font-black text-[#2563eb] hover:underline flex items-center gap-2">
+                                                Prendre rendez-vous
+                                                <ArrowRight className="w-6 h-6" />
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div className="bg-white p-8 rounded-3xl text-center shadow-sm hover:shadow-md transition-shadow border border-slate-100">
-                                    <h3 className="text-lg font-bold text-slate-900 mb-3">Service</h3>
-                                    <p className="text-sm text-slate-500 mb-6 font-light">
-                                        Laissez nos techniciens certifiés s'en occuper pour vous.
-                                    </p>
-                                    <Button asChild className="rounded-full px-8">
-                                        <a href="/service#contact-form">Planifier un service</a>
-                                    </Button>
+                            </div>
+
+                            <div className="lg:w-1/2 w-full animate-in fade-in slide-in-from-right duration-[1.2s]">
+                                <div className="relative bg-white p-10 md:p-14 rounded-[4rem] shadow-2xl border border-slate-100 overflow-hidden">
+                                     <div className="absolute -top-10 -right-10 w-40 h-40 bg-blue-600/5 rounded-full blur-3xl" />
+                                     <div className="relative z-10 space-y-6">
+                                        <div className="w-16 h-1 bg-blue-600 rounded-full mb-6" />
+                                        <h3 className="text-3xl font-black text-[#1e3a8a] uppercase leading-tight">Zone d'intervention</h3>
+                                        <p className="text-slate-500 font-light leading-relaxed">
+                                            Nous livrons vos pièces partout au Canada. Pour les installations, nos techniciens mobiles se déplacent chez vous au **Grand Montréal et un périmètre de 300km**avec tout l'équipement nécessaire.
+                                        </p>
+                                        <div className="flex items-center gap-3 text-[#2563eb] font-bold">
+                                            <MapPin className="w-5 h-5" />
+                                            <span>Livraison partout au Canada</span>
+                                        </div>
+                                     </div>
                                 </div>
                             </div>
                         </div>
@@ -320,5 +396,44 @@ const Pieces = () => {
         </div>
     );
 };
+
+/* Sub-component for Part Cards to keep main clean and manage animations */
+const PartCard = ({ item }: { item: any }) => (
+    <div className="group bg-white border border-slate-100 rounded-[3rem] overflow-hidden hover:shadow-2xl transition-all duration-700 hover:-translate-y-4 flex flex-col h-full cursor-pointer relative animate-in fade-in slide-in-from-bottom-12">
+        {/* Availability Badge */}
+        <div className="absolute top-6 right-6 z-20">
+             <div className="bg-[#22c55e]/10 backdrop-blur-md px-4 py-1.5 rounded-full flex items-center gap-2 border border-[#22c55e]/30">
+                <div className="w-1.5 h-1.5 rounded-full bg-[#22c55e] animate-pulse" />
+                <span className="text-[10px] font-black uppercase tracking-widest text-[#15803d]">En Stock</span>
+             </div>
+        </div>
+
+        <div className="relative h-72 overflow-hidden bg-slate-50/50 flex items-center justify-center p-12 transition-colors group-hover:bg-[#f0f9ff]/50">
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-600/0 via-blue-600/0 to-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+            {item.image ? (
+                <img
+                    src={item.image}
+                    alt={`${item.name} - Bricareau`}
+                    className="max-h-full object-contain relative z-10 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-1000 ease-in-out mix-blend-multiply drop-shadow-lg"
+                />
+            ) : (
+                <Package className="h-20 w-20 text-slate-200 relative z-10 group-hover:text-blue-100 transition-colors" />
+            )}
+        </div>
+        <div className="p-8 space-y-4 flex flex-col flex-grow relative">
+            <h3 className="text-xl font-black text-[#1e3a8a] group-hover:text-[#2563eb] transition-colors leading-tight">
+                {item.name}
+            </h3>
+            <div className="pt-4 mt-auto flex items-center justify-between">
+                <span className="text-xs font-black uppercase tracking-widest text-slate-400 group-hover:text-blue-400 transition-all">Consulter</span>
+                <div className="w-10 h-10 bg-slate-100 rounded-2xl flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-all">
+                    <ArrowRight className="w-5 h-5" />
+                </div>
+            </div>
+            {/* Hover Shine Effect */}
+            <div className="absolute bottom-0 left-0 h-1.5 w-0 bg-blue-600 transition-all duration-700 group-hover:w-full" />
+        </div>
+    </div>
+);
 
 export default Pieces;

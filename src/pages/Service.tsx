@@ -91,14 +91,14 @@ const Service = () => {
             <Header />
             
             <main>
-                {/* 1. IMMERSIVE HERO */}
-                <section className="relative h-[80vh] md:h-[90vh] min-h-[600px] flex items-center justify-center overflow-hidden">
+                {/* 1. IMMERSIVE HERO - INDEX STYLE */}
+                <section className="relative lg:h-[800px] flex items-center justify-center overflow-hidden bg-white">
                     <img 
                         src={servicesHero} 
-                        className="absolute inset-0 w-full h-full object-cover"
+                        className="absolute inset-0 w-full h-full object-cover opacity-80"
                         alt="Services Bricareau - Expertise technique"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-slate-900/40 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-[#f0f9ff] via-[#f0f9ff]/40 35% to-transparent z-10" />
                     
                     <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none hidden lg:block">
                         <div className="container mx-auto px-6 pointer-events-auto">
@@ -106,44 +106,67 @@ const Service = () => {
                         </div>
                     </div>
 
-                    <div className="container relative z-10 mx-auto px-6 h-full flex items-center pt-32 pb-20">
-                        <div className="max-w-3xl">
-                            <h1 className="heading-pro-max text-white text-left mb-6 [text-shadow:_0_2px_10px_rgb(0_0_0_/_20%)] animate-in fade-in slide-in-from-left-8 duration-1000">
-                                <span className="italic font-light text-blue-400 block">Expertise & Sérénité</span>
-                                <span className="font-bold text-white block">Des services dédiés à <br />votre tranquillité.</span>
+                    <div className="container relative z-20 mx-auto px-6 h-full flex items-center pt-32 pb-20">
+                        <div className="max-w-3xl text-left">
+                            <h1 
+                                className="tracking-tighter text-[#1e3a8a] mb-6 animate-in fade-in slide-in-from-left duration-1000"
+                                style={{ 
+                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                    fontSize: '50px',
+                                    lineHeight: '55px',
+                                    fontWeight: 300 
+                                }}
+                            >
+                                <span className="italic text-[#2563eb] block mb-2 font-light">Expertise & Sérénité</span>
+                                <span className="font-bold block">Des services dédiés à <br />votre tranquillité.</span>
                             </h1>
-                            <p className="text-white text-left mb-10 max-w-xl animate-in fade-in slide-in-from-left-12 duration-1200">
+                            <p className="text-slate-600 mb-10 max-w-xl animate-in fade-in slide-in-from-left duration-1000 delay-100 text-lg">
                                 Bricareau s'engage à vos côtés pour simplifier le suivi, l'entretien et la performance de vos installations d'eau, partout au Québec.
                             </p>
-                            <div className="flex flex-col sm:flex-row gap-4 animate-in fade-in slide-in-from-top-8 duration-1000 delay-500">
+                            <div className="flex flex-col sm:flex-row items-start lg:items-center gap-8 animate-in fade-in slide-in-from-bottom duration-1000 delay-200">
                                 <Button 
-                                    onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
-                                    className="rounded-full px-12"
+                                    asChild
+                                    className="rounded-full px-12 h-14 bg-blue-600 hover:bg-blue-700 text-white font-bold transition-all hover:scale-105 active:scale-95 shadow-xl shadow-blue-200 group gap-2"
                                 >
-                                    Planifier un service
-                                    <ArrowRight className="ml-2 w-5 h-5" />
+                                    <button onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}>
+                                        Planifier un service
+                                        <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
+                                    </button>
                                 </Button>
+                                
+                                <div className="flex items-center gap-4 text-slate-500 text-sm font-light border-l border-slate-200 pl-8 hidden md:flex">
+                                    <div className="flex flex-col">
+                                        <span className="font-bold text-[#1e3a8a]">Intervention sous 24h</span>
+                                        <span className="text-xs">Urgences prioritaires</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
 
                     {/* Architectural Accent */}
-                    <div className="absolute bottom-0 right-0 w-1/3 h-24 bg-white rounded-tl-[5rem] hidden md:block" />
+                    <div className="absolute bottom-0 right-0 w-1/3 h-24 bg-white rounded-tl-[5rem] hidden md:block z-10" />
                 </section>
 
+                {/* 2. SERVICES CAROUSEL - WITH WATERMARK */}
                 <section className="py-24 bg-white relative overflow-hidden">
-                    <div className="container mx-auto px-6">
-                        <div className="max-w-4xl mx-auto text-center mb-24 space-y-6">
+                    {/* Background Watermark */}
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none select-none">
+                        <span className="text-[12rem] md:text-[20rem] font-bold text-slate-100/40 opacity-30 leading-none uppercase tracking-tighter">SÉRÉNITÉ</span>
+                    </div>
+
+                    <div className="container mx-auto px-6 relative z-10">
+                        <div className="max-w-4xl mx-auto text-center mb-24 space-y-6 animate-in fade-in slide-in-from-bottom duration-700">
                             <h2 className="heading">
                                 <span className="italic font-light text-[#2563eb] block">Une expertise complète</span>
                                 <span className="font-bold text-[#1e3a8a] block">pour votre eau</span>
                             </h2>
-                            <p className="body-pro-max max-w-2xl mx-auto">
+                            <p className="body-pro-max max-w-2xl mx-auto text-slate-500">
                                 De l'installation à la maintenance préventive, nos techniciens certifiés assurent la pérennité de vos équipements de traitement d'eau à travers tout le Québec.
                             </p>
                         </div>
 
-                        <div className="relative">
+                        <div className="relative animate-in fade-in slide-in-from-bottom duration-1000 delay-300">
                             <Carousel 
                                 opts={{
                                     align: "start",
@@ -294,14 +317,14 @@ const Service = () => {
                     </div>
                 </section>
 
-                {/* 3. BRICAREAU CARE - SERVICE CONTRACTS (Inspired by BWT Service) */}
+                {/* 3. BRICAREAU CARE - SERVICE CONTRACTS */}
                 <section className="py-32 bg-slate-900 text-white relative overflow-hidden">
                     <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
                         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-blue-500 rounded-full blur-[200px] -translate-y-1/2 translate-x-1/2" />
                     </div>
 
                     <div className="container mx-auto px-6 relative z-10">
-                        <div className="flex flex-col lg:flex-row items-center gap-20">
+                        <div className="flex flex-col lg:flex-row items-center gap-20 animate-in fade-in slide-in-from-bottom duration-1000">
                             <div className="lg:w-1/2 space-y-8">
                                 <h2 className="heading">
                                     <span className="italic font-light text-blue-400 block">Bricareau Care</span>
@@ -328,10 +351,10 @@ const Service = () => {
                                 <div className="pt-6">
                                     <Button
                                         asChild
-                                        className="rounded-full px-12"
+                                        className="rounded-full px-12 h-14 bg-blue-600 hover:bg-blue-700 text-white font-bold transition-all hover:scale-105 active:scale-95 shadow-xl shadow-blue-500/20 group gap-2"
                                     >
                                         <a href="tel:18552649328" className="flex items-center gap-2">
-                                            <Phone className="w-5 h-5" />
+                                            <Phone className="w-5 h-5 transition-transform group-hover:rotate-12" />
                                             Parlez avec un conseiller
                                         </a>
                                     </Button>
@@ -356,10 +379,15 @@ const Service = () => {
                     </div>
                 </section>
 
-                {/* 4. WATER SOFTENER & WHOLE HOUSE FILTER MAINTENANCE */}
-                <section className="py-32 bg-slate-50 overflow-hidden">
-                    <div className="container mx-auto px-6">
-                        <div className="flex flex-col lg:flex-row-reverse items-center gap-24">
+                {/* 4. WATER SOFTENER MAINTENANCE - WITH PERFORMANCE WATERMARK */}
+                <section className="py-32 bg-slate-50 overflow-hidden relative">
+                    {/* Background Watermark */}
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none select-none">
+                        <span className="text-[12rem] md:text-[20rem] font-bold text-slate-200/40 opacity-30 leading-none uppercase tracking-tighter">PERFORMANCE</span>
+                    </div>
+
+                    <div className="container mx-auto px-6 relative z-10">
+                        <div className="flex flex-col lg:flex-row-reverse items-center gap-24 animate-in fade-in slide-in-from-bottom duration-1000">
                             <div className="lg:w-1/2 space-y-8">
                                 <h2 className="text-2xl md:text-3xl lg:text-[40px] font-sans tracking-tight leading-tight lg:leading-[52px] text-left text-slate-900 mb-8">
                                     <span className="italic font-light text-blue-600 block">Performance & Protection</span>
@@ -384,9 +412,10 @@ const Service = () => {
                                 <div className="pt-6">
                                     <Button 
                                         onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
-                                        className="rounded-full px-12"
+                                        className="rounded-full px-12 h-14 bg-blue-600 hover:bg-blue-700 text-white font-bold transition-all hover:scale-105 active:scale-95 shadow-xl shadow-blue-200 group gap-2"
                                     >
                                         Planifiez un service
+                                        <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
                                     </Button>
                                 </div>
                             </div>
@@ -407,10 +436,15 @@ const Service = () => {
                     </div>
                 </section>
 
-                {/* 5. REVERSE OSMOSIS MAINTENANCE */}
-                <section className="py-32 bg-white overflow-hidden">
-                    <div className="container mx-auto px-6">
-                        <div className="flex flex-col lg:flex-row items-center gap-24">
+                {/* 5. REVERSE OSMOSIS MAINTENANCE - WITH PURITÉ WATERMARK */}
+                <section className="py-32 bg-white overflow-hidden relative">
+                    {/* Background Watermark */}
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none select-none">
+                        <span className="text-[12rem] md:text-[20rem] font-bold text-slate-100/40 opacity-30 leading-none uppercase tracking-tighter">PURITÉ</span>
+                    </div>
+
+                    <div className="container mx-auto px-6 relative z-10">
+                        <div className="flex flex-col lg:flex-row items-center gap-24 animate-in fade-in slide-in-from-bottom duration-1000">
                             <div className="lg:w-1/2 space-y-8">
                                 <h2 className="text-2xl md:text-3xl lg:text-[40px] font-sans tracking-tight leading-tight lg:leading-[52px] text-left text-slate-900 mb-8">
                                     <span className="italic font-light text-blue-600 block">Pureté & Santé</span>
@@ -435,9 +469,10 @@ const Service = () => {
                                 <div className="pt-6">
                                     <Button 
                                         onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
-                                        className="rounded-full px-12"
+                                        className="rounded-full px-12 h-14 bg-blue-600 hover:bg-blue-700 text-white font-bold transition-all hover:scale-105 active:scale-95 shadow-xl shadow-blue-200 group gap-2"
                                     >
                                         Réservez votre entretien
+                                        <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
                                     </Button>
                                 </div>
                             </div>
@@ -460,10 +495,15 @@ const Service = () => {
                     </div>
                 </section>
 
-                {/* 6. WATER ANALYSIS & DIGITAL DIAGNOSTIC */}
-                <section className="py-32 bg-white overflow-hidden">
-                    <div className="container mx-auto px-6">
-                        <div className="flex flex-col lg:flex-row-reverse items-center gap-24">
+                {/* 6. WATER ANALYSIS & DIGITAL DIAGNOSTIC - WITH ANALYSE WATERMARK */}
+                <section className="py-32 bg-white overflow-hidden relative">
+                    {/* Background Watermark */}
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none select-none">
+                        <span className="text-[12rem] md:text-[20rem] font-bold text-slate-100/40 opacity-30 leading-none uppercase tracking-tighter">ANALYSE</span>
+                    </div>
+
+                    <div className="container mx-auto px-6 relative z-10">
+                        <div className="flex flex-col lg:flex-row-reverse items-center gap-24 animate-in fade-in slide-in-from-bottom duration-1000">
                             <div className="lg:w-1/2 space-y-8">
                                 <h2 className="text-2xl md:text-3xl lg:text-[40px] font-sans tracking-tight leading-tight lg:leading-[52px] text-left text-slate-900 mb-8">
                                     <span className="italic font-light text-blue-600 block">Diagnostic & Précision</span>
@@ -487,9 +527,10 @@ const Service = () => {
                                 <div className="pt-4">
                                     <Button 
                                         onClick={() => navigate('/tests-eau')}
-                                        className="rounded-full px-12"
+                                        className="rounded-full px-12 h-14 bg-blue-600 hover:bg-blue-700 text-white font-bold transition-all hover:scale-105 active:scale-95 shadow-xl shadow-blue-200 group gap-2"
                                     >
-                                        Voir toutes les analyses <ArrowRight className="ml-2 w-4 h-4" />
+                                        Voir toutes les analyses 
+                                        <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
                                     </Button>
                                 </div>
                             </div>
@@ -533,7 +574,7 @@ const Service = () => {
                                         <PhoneCall className="w-6 h-6" />
                                     </div>
                                     <div className="text-left">
-                                        <h4 className="font-bold text-slate-900 text-sm">Urgence technique</h4>
+                                        <h4 className="font-bold text-slate-900 text-sm">Appel sans frais</h4>
                                         <p className="text-blue-600 font-bold text-lg">1-855-264-9328</p>
                                     </div>
                                 </div>
@@ -598,31 +639,23 @@ const Service = () => {
                                             <Textarea id="message" className="min-h-[120px] bg-slate-50 border-none rounded-2xl focus:ring-2 focus:ring-blue-600 focus:bg-white transition-all shadow-inner" />
                                         </div>
                                         <div className="md:col-span-2 space-y-4 pt-4">
-                                            <div className="flex items-start space-x-4 bg-slate-50 p-6 rounded-[2rem] border border-slate-100 transition-all hover:bg-slate-100/50">
-                                                <Checkbox id="consent" className="mt-1 border-slate-300 data-[state=checked]:bg-blue-600 data-[state=checked]:border-blue-600" />
-                                                <Label htmlFor="consent" className="text-xs leading-relaxed text-slate-500 font-light cursor-pointer select-none">
-                                                    En soumettant ce formulaire, j'accepte que mes données soient utilisées pour me recontacter dans le cadre de ma demande. Pour en savoir plus, consultez nos <NavLink to="/conditions-utilisation" className="text-blue-600 font-bold hover:underline">Conditions d'utilisation</NavLink> et notre <NavLink to="/politique-de-confidentialite" className="text-blue-600 font-bold hover:underline">Politique de confidentialité</NavLink>.
-                                                </Label>
-                                            </div>
-                                        </div>
-
-                                        <div className="md:col-span-2 text-left pt-2">
-                                            <Button className="rounded-full px-12 transition-all hover:scale-105 active:scale-95 group">
-                                                Envoyez
-                                                <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
+                                            <Button className="w-full rounded-full h-16 bg-blue-600 hover:bg-blue-700 text-white font-bold text-lg transition-all hover:scale-[1.02] shadow-xl shadow-blue-200">
+                                                Envoyer ma demande de rendez-vous
+                                                <ArrowRight className="ml-2 w-5 h-5" />
                                             </Button>
                                         </div>
-                                    </form>
+                                     </form>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
             </main>
-
+            
             <Footer />
         </div>
     );
 };
 
 export default Service;
+
