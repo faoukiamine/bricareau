@@ -129,254 +129,105 @@ const Filtration = () => {
                 />
 
                 {/* 2. The Problem Section */}
-                <section className="py-32 bg-slate-50 relative overflow-hidden">
-                    {/* Architectural Watermark */}
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[15rem] lg:text-[22rem] font-black text-slate-200/20 select-none pointer-events-none tracking-tighter z-0 uppercase">
-                        PURETÉ
-                    </div>
-
+                <section id="problemes-eau" className="py-24 bg-white relative overflow-hidden">
                     <div className="container mx-auto px-6 relative z-10">
-                        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-
-                            {/* Left Column: Analytical Narrative */}
-                            <div className="lg:col-span-5 space-y-8">
-                                <div>
-                                    <h2 className="heading-pro-max text-left mb-8">
-                                        <span className="italic font-light text-[#2563eb] block">L'invisible dans</span>
-                                        <span className="font-bold text-[#1e3a8a] block">votre verre d'eau</span>
-                                    </h2>
-                                    <p className="body-pro-max mb-8 max-w-xl text-left">
-                                        L'eau municipale est traitée, mais elle n'est pas pure. Entre l'usine de traitement et votre robinet, elle transporte des résidus invisibles qui impactent votre santé.
-                                    </p>
-                                </div>
-
-                                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-x-8 gap-y-6 overflow-hidden transition-all duration-700">
-                                    {[
-                                        {
-                                            title: "Chlore",
-                                            desc: "Un agent de désinfection nécessaire mais agressif qui altère le goût de vos boissons et assèche votre peau."
-                                        },
-                                        {
-                                            title: "Traces de Plomb",
-                                            desc: "Résidus provenant des anciennes tuyauteries municipales qui persistent malgré les traitements."
-                                        },
-                                        {
-                                            title: "Microplastiques",
-                                            desc: "L'ingestion involontaire de milliers de particules microscopiques présentes dans l'eau potable chaque année."
-                                        },
-                                        {
-                                            title: "Polluants Éternels",
-                                            desc: "PFAS et hormones que les centres de traitement n'arrivent pas encore à filtrer totalement."
-                                        },
-                                        {
-                                            title: "Sédiments & Rouille",
-                                            desc: "Particules physiques provenant de la vétusté du réseau d'aqueduc qui s'accumulent chez vous."
-                                        },
-                                        {
-                                            title: "Produits Chimiques",
-                                            desc: "Résidus industriels et agricoles qui s'infiltrent dans les nappes et le cycle de l'eau."
-                                        }
-                                    ].filter((_, idx) => showAllHarms || idx < 3).map((harm, idx) => (
-                                        <div key={idx} className="group flex items-start gap-4 p-2 rounded-3xl transition-colors hover:bg-slate-50 animate-in fade-in slide-in-from-top-4 duration-500">
-                                            <div className="flex h-7 flex-shrink-0 items-center">
-                                                <span className="text-3xl font-bold text-blue-600/20 group-hover:text-blue-600 transition-colors duration-500 leading-none -mt-1">
-                                                    -
-                                                </span>
-                                            </div>
-                                            <div className="space-y-0.5">
-                                                <h3 className="text-lg font-bold text-blue-600/20 group-hover:text-blue-600 transition-colors duration-500 mb-1">{harm.title}</h3>
-                                                <p className="text-slate-500 font-light text-sm leading-snug max-w-sm">
-                                                    {harm.desc}
-                                                </p>
-                                            </div>
-                                        </div>
-                                    ))}
-                                </div>
-
-                                <div className="pt-8 flex justify-center">
-                                    <button
-                                        onClick={() => setShowAllHarms(!showAllHarms)}
-                                        className="flex items-center gap-2 text-blue-600 hover:scale-125 transition-all group"
-                                        title={showAllHarms ? "Voir moins" : "Voir plus"}
-                                    >
-                                        <img 
-                                            src={showAllHarms ? arrowUpIcon : arrowDownIcon} 
-                                            className="w-10 h-10" 
-                                            style={{ filter: 'invert(32%) sepia(96%) saturate(3015%) hue-rotate(212deg) brightness(97%) contrast(96%)' }}
-                                            alt={showAllHarms ? "Voir moins" : "Voir plus"}
-                                        />
-                                    </button>
-                                </div>
-                            </div>
-
-                            {/* Right Column: Cinematic Slideshow */}
-                            <div className="lg:col-span-7 relative lg:sticky lg:top-32 -mx-6 lg:mx-0">
-                                <div className="relative rounded-none lg:rounded-[3rem] overflow-hidden shadow-2xl border-0 lg:border-8 border-white group">
-                                    <div className="embla overflow-hidden" ref={emblaRef}>
-                                        <div className="embla__container flex">
-                                            {[glassofwaterImg, healthwaterImg, dechetbouteilleImg, oldpipesImg, eauinnondiationImg, contaminatedwaterImg].map((img, idx) => (
-                                                <div key={idx} className="embla__slide flex-[0_0_100%] min-w-0 relative h-[400px] md:h-[500px] lg:h-[600px]">
-                                                    <img
-                                                        src={img}
-                                                        alt={`Problématique eau municipale ${idx + 1}`}
-                                                        className="w-full h-full object-cover"
-                                                    />
-                                                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-60" />
-                                                </div>
-                                            ))}
-                                        </div>
-                                    </div>
-
-                                    {/* Pagination Buttons - Premium Glass Style */}
-                                    <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-2.5 z-30 bg-black/10 backdrop-blur-md px-4 py-2.5 rounded-full border border-white/10 shadow-2xl transition-all hover:bg-black/20 group-hover:bottom-10">
-                                        {scrollSnaps.map((_, index) => (
-                                            <button
-                                                key={index}
-                                                onClick={() => emblaApi?.scrollTo(index)}
-                                                className={cn(
-                                                    "h-1.5 rounded-full transition-all duration-500",
-                                                    index === selectedIndex 
-                                                        ? "bg-white w-8 shadow-[0_0_15px_rgba(255,255,255,0.5)]" 
-                                                        : "bg-white/30 w-1.5 hover:bg-white/60"
-                                                )}
-                                                aria-label={`Go to slide ${index + 1}`}
-                                            />
-                                        ))}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                {/* 3. The Redesigned Bridge Section: Architectural Triptych */}
-                <section className="py-32 bg-[#f8f9fa] relative overflow-hidden">
-                    <div className="container mx-auto px-6 relative z-10">
-                        <div className="max-w-4xl mx-auto text-center mb-24 space-y-6">
+                        <div className="text-center max-w-4xl mx-auto mb-20">
+                            <span className="inline-block px-4 py-1 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black tracking-widest mb-6 uppercase">
+                                Diagnostic de Pureté
+                            </span>
                             <h2 className="heading-pro-max">
-                                <span className="italic font-light text-[#2563eb] block">De la prise de conscience</span>
-                                <span className="font-bold text-[#1e3a8a] block ">à la solution parfaite</span>
+                                <span className="italic font-light text-blue-600 block leading-tight">Identifier l'invisible :</span>
+                                <span className="font-bold text-slate-800 block leading-tight">Pourquoi filtrer votre eau ?</span>
                             </h2>
-                            <p className="body-pro-max max-w-2xl mx-auto">
-                                Identifier l'invisible est la première étape. Choisissez maintenant le bouclier technologique qui redéfinira la relation de votre foyer avec l'eau.
+                            <p className="body-pro-max text-slate-500 mt-6 mx-auto max-w-2xl px-4">
+                                L'eau municipale traverse des kilomètres de tuyauteries vétustes avant d'arriver chez vous. Chaque verre peut contenir des traces de l'imparfait.
                             </p>
                         </div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                            
-                            {/* Card 001: Whole House - Navy Style */}
-                            <a href="#solutions-title" className="group block relative bg-[#1e3a8a] rounded-[2.5rem] p-10 h-[720px] flex flex-col transition-all duration-700 hover:-translate-y-4 shadow-2xl overflow-hidden">
-                                <div className="space-y-0 relative z-10 flex flex-col h-full">
-                                    
-                                    {/* 80px Spacer */}
-                                    <div className="h-20"></div>
-
-                                    {/* Unfiltered Architectural Image Overlay */}
-                                    <div className="w-full h-48 overflow-hidden rounded-3xl shadow-lg relative">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                            {[
+                                {
+                                    title: "L'impact Plastique",
+                                    desc: "Éliminez définitivement l'achat de 2000+ bouteilles de plastique par an. Une victoire écologique et financière.",
+                                    benefit: "Zéro Déchet",
+                                    color: "bg-emerald-500",
+                                    icon: <Recycle className="w-6 h-6" />,
+                                    img: dechetbouteilleImg
+                                },
+                                {
+                                    title: "Santé & Nouveau-nés",
+                                    desc: "Traces de plomb, micro-plastiques et hormones. Protégez les systèmes immunitaires fragiles de votre famille.",
+                                    benefit: "Sécurité Totale",
+                                    color: "bg-pink-500",
+                                    icon: <Microscope className="w-6 h-6" />,
+                                    img: africanGirlImg
+                                },
+                                {
+                                    title: "Réseaux Vétustes",
+                                    desc: "Des particules de rouille et de sédiments provenant de tuyauteries municipales centenaires se déposent dans vos verres.",
+                                    benefit: "Infrastructure",
+                                    color: "bg-amber-600",
+                                    icon: <Wrench className="w-6 h-6" />,
+                                    img: oldpipesImg
+                                },
+                                {
+                                    title: "Goût de Chlore",
+                                    desc: "Le chlore est nécessaire pour désinfecter, mais il altère le goût de vos boissons et dessèche votre peau sous la douche.",
+                                    benefit: "Confort Gustatif",
+                                    color: "bg-blue-600",
+                                    icon: <GlassWater className="w-6 h-6" />,
+                                    img: teenagerShowerImg
+                                }
+                            ].map((item, i) => (
+                                <div 
+                                    key={i} 
+                                    className="group relative h-[500px] rounded-[3rem] overflow-hidden border border-slate-100 bg-slate-50/50 cursor-pointer shadow-sm transition-all duration-700 hover:shadow-2xl hover:shadow-blue-200/50 hover:border-blue-100 hover:-translate-y-3"
+                                    onClick={() => {
+                                        const el = document.getElementById('solutions-title');
+                                        el?.scrollIntoView({ behavior: 'smooth' });
+                                    }}
+                                >
+                                    {/* background with slight zoom on hover */}
+                                    <div className="absolute inset-0 z-0 scale-105 group-hover:scale-110 transition-transform duration-[2000ms]">
                                         <img 
-                                            src={teenagerShowerImg} 
-                                            alt="Eau filtrée toute la maison" 
-                                            className="w-full h-full object-cover transition-transform duration-[3000ms] group-hover:scale-110"
+                                            src={item.img} 
+                                            alt={item.title} 
+                                            className="w-full h-full object-cover opacity-20 group-hover:opacity-40 transition-opacity grayscale group-hover:grayscale-0" 
                                         />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-transparent" />
                                     </div>
 
-                                    <div className="space-y-6 pt-8">
-                                        <h3 className="text-3xl font-bold text-white leading-[1.1] group-hover:text-blue-200 transition-colors">
-                                            Systèmes de filtration d'eau pour <br/> toute la maison
-                                        </h3>
-                                        <p className="text-white/70 text-sm leading-relaxed max-w-[260px]">
-                                            Une protection globale qui neutralise le chlore et les sédiments dès l'entrée de votre demeure.
-                                        </p>
+                                    <div className="relative z-10 p-10 flex flex-col h-full justify-between">
+                                        <div className="space-y-6">
+                                            <div className="flex items-center justify-between">
+                                                <div className={`w-14 h-14 rounded-2xl ${item.color} text-white flex items-center justify-center shadow-lg transition-transform duration-500 group-hover:rotate-12`}>
+                                                    {item.icon}
+                                                </div>
+                                                <span className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 group-hover:text-blue-600 transition-colors">
+                                                    {item.benefit}
+                                                </span>
+                                            </div>
+                                            <h3 className="text-3xl font-bold text-slate-800 leading-[1.1] transition-all duration-500 group-hover:text-blue-700">
+                                                {item.title}
+                                            </h3>
+                                            <p className="body-pro-max text-sm leading-relaxed text-slate-600 opacity-80 group-hover:opacity-100 transition-all">
+                                                {item.desc}
+                                            </p>
+                                        </div>
+
+                                        <div className="flex items-center gap-2 text-blue-600 font-bold text-[10px] uppercase tracking-widest opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500">
+                                            Voir solutions <ChevronRight className="w-4 h-4" />
+                                        </div>
                                     </div>
+
+                                    {/* Glow effect on hover */}
+                                    <div className="absolute -bottom-20 -right-20 w-40 h-40 bg-blue-400/20 rounded-full blur-[80px] opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
                                 </div>
-                                {/* Floating Arrow Button Custom Cutout Style */}
-                                <div className="absolute bottom-0 right-0 w-24 h-24 bg-[#f8f9fa] rounded-tl-[3rem] transition-all group-hover:w-28 group-hover:h-28">
-                                    <div className="absolute inset-0 m-4 bg-[#2563eb] rounded-full flex items-center justify-center text-white shadow-xl transition-transform group-hover:scale-110">
-                                        <ChevronRight className="w-8 h-8" />
-                                    </div>
-                                </div>
-                            </a>
-
-                            {/* Card 002: Crystal Purity - Royal Blue Style */}
-                            <a href="#undersink-title" className="group block relative bg-[#2563eb] rounded-[2.5rem] p-10 h-[720px] flex flex-col transition-all duration-700 hover:-translate-y-4 shadow-2xl overflow-hidden">
-                                <div className="space-y-0 relative z-10 flex flex-col h-full">
-                                    
-
-                                    {/* 80px Spacer */}
-                                    <div className="h-20"></div>
-
-                                    <div className="space-y-6">
-                                        <h3 className="text-3xl font-bold text-white leading-[1.1]">
-                                            Systèmes d'osmose inverse
-                                        </h3>
-                                        <p className="text-white/80 text-sm leading-relaxed max-w-[260px]">
-                                            L'osmose inverse : la technologie d'élite pour une eau de dégustation pure, sans contaminants.
-                                        </p>
-                                        <div className="space-y-4 pt-4"></div>
-
-                                    </div>
-
-                                    {/* Unfiltered Architectural Image Overlay - After Paragraph */}
-                                    <div className="w-full h-48 overflow-hidden rounded-3xl shadow-lg mt-8 relative">
-                                        <img 
-                                            src={glassOfWaterImg} 
-                                            alt="Pureté cristalline" 
-                                            className="w-full h-full object-cover transition-transform duration-[3000ms] group-hover:scale-110"
-                                        />
-                                    </div>
-                                </div>
-                                
-                                {/* Floating Arrow Button Custom Cutout Style */}
-                                <div className="absolute bottom-0 right-0 w-24 h-24 bg-[#f8f9fa] rounded-tl-[3rem] transition-all group-hover:w-28 group-hover:h-28">
-                                    <div className="absolute inset-0 m-4 bg-[#1e3a8a] rounded-full flex items-center justify-center text-white shadow-xl transition-transform group-hover:scale-110">
-                                        <ChevronRight className="w-8 h-8" />
-                                    </div>
-                                </div>
-                            </a>
-
-                            {/* Card 003: Under-Sink Systems - Navy Patterned */}
-                            <a href="#compact-filtration-title" className="group block relative bg-[#1e3a8a] rounded-[2.5rem] p-10 h-[720px] flex flex-col transition-all duration-700 hover:-translate-y-4 shadow-2xl overflow-hidden">
-                                {/* Subtle Geometric Pattern Overlay (SVG pattern or Image) */}
-                                <div className="absolute inset-0 opacity-10 mix-blend-overlay">
-                                    <div className="w-full h-full bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:20px_20px] lg:[background-size:30px_30px]" />
-                                </div>
-
-                                <div className="relative z-10 space-y-0 flex flex-col h-full">
-                                    
-
-                                    {/* 80px Spacer */}
-                                    <div className="h-20"></div>
-
-                                    {/* Unfiltered Architectural Image Overlay */}
-                                    <div className="w-full h-48 overflow-hidden rounded-3xl shadow-lg relative">
-                                        <img 
-                                            src={undersinkSystemImg} 
-                                            alt="Systèmes de filtration d'eau sous l'évier" 
-                                            className="w-full h-full object-cover transition-transform duration-[3000ms] group-hover:scale-110"
-                                        />
-                                    </div>
-
-                                    <div className="space-y-6 pt-8">
-                                        <h3 className="text-3xl font-bold text-white leading-[1.1] group-hover:text-blue-200 transition-colors">
-                                            Systèmes de filtration d'eau <br/> sous l'évier.
-                                        </h3>
-                                        <p className="text-white/70 text-sm leading-relaxed max-w-[260px]">
-                                            Des solutions compactes conçues pour s'intégrer harmonieusement sous votre évier sans compromettre l'espace.
-                                        </p>
-                                    </div>
-                                </div>
-                                
-                                {/* Floating Arrow Button Custom Cutout Style */}
-                                <div className="absolute bottom-0 right-0 w-24 h-24 bg-[#f8f9fa] rounded-tl-[3rem] transition-all group-hover:w-28 group-hover:h-28">
-                                    <div className="absolute inset-0 m-4 bg-[#2563eb] rounded-full flex items-center justify-center text-white shadow-xl transition-transform group-hover:scale-110">
-                                        <ChevronRight className="w-8 h-8" />
-                                    </div>
-                                </div>
-                            </a>
-
+                            ))}
                         </div>
                     </div>
                 </section>
+
                 {/* 4. Whole House Water Filter Section - Modern Editorial */}
                 <section className="relative py-32 bg-white overflow-hidden">
                     {/* Background decorations */}
@@ -727,17 +578,22 @@ const Filtration = () => {
                                     <tr className="bg-gray-100">
                                         <th className="p-8 text-left text-gray-400 font-light uppercase tracking-wider">Solutions</th>
                                         {[
-                                            { name: "Filtres d'eau spécialisés", img: specializedFiltersImg },
-                                            { name: "Systèmes de filtration sous l'évier", img: undersinkSystemImg }
+                                            { name: "Filtres d'eau spécialisés", img: specializedFiltersImg, badge: "Protection Globale", badgeColor: "bg-blue-600" },
+                                            { name: "Systèmes de filtration sous l'évier", img: undersinkSystemImg, badge: "Pureté Dégustation", badgeColor: "bg-emerald-600" }
                                         ].map((m, i) => (
                                             <th key={i} className="p-4 text-center text-gray-900 font-bold text-sm">
-                                                <div className="flex flex-col items-center gap-2">
-                                                    <img
-                                                        src={m.img}
-                                                        alt={`${m.name} - Solution de filtration d'eau Bricareau pour maison et cuisine`}
-                                                        className="w-[150px] h-[120px] object-contain mx-auto mix-blend-multiply"
-                                                    />
-                                                    <div className="text-[14px]">{m.name}</div>
+                                                <div className="flex flex-col items-center gap-4 group">
+                                                    <div className="relative">
+                                                        <div className={`absolute -top-3 -right-16 z-20 ${m.badgeColor} text-white text-[8px] font-black uppercase tracking-[0.2em] px-3 py-1 rounded-full shadow-xl whitespace-nowrap`}>
+                                                            {m.badge}
+                                                        </div>
+                                                        <img
+                                                            src={m.img}
+                                                            alt={`${m.name} - Solution de filtration d'eau Bricareau`}
+                                                            className="w-[180px] h-[140px] object-contain mx-auto mix-blend-multiply group-hover:scale-110 transition-transform duration-500"
+                                                        />
+                                                    </div>
+                                                    <div className="text-[14px] max-w-[150px] mx-auto text-[#1e3a8a]">{m.name}</div>
                                                 </div>
                                             </th>
                                         ))}
@@ -952,6 +808,26 @@ const Filtration = () => {
 
             </main>
             <Footer />
+
+            {/* Sticky Filtration CTA */}
+            <div className="fixed bottom-8 right-8 z-[100] group">
+                <div 
+                    onClick={() => navigate('/consultation')}
+                    className="relative flex items-center gap-4 bg-white/60 backdrop-blur-xl border border-white p-2 pr-6 rounded-full shadow-2xl cursor-pointer transition-all duration-500 hover:scale-105 hover:bg-white/90 group"
+                >
+                    <div className="relative">
+                        <div className="absolute inset-0 bg-blue-600 rounded-full animate-ping opacity-20 group-hover:opacity-40" />
+                        <div className="relative w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white shadow-lg">
+                            <Sparkles className="w-5 h-5" />
+                        </div>
+                    </div>
+                    <div className="flex flex-col">
+                        <span className="text-[10px] font-black uppercase tracking-widest text-[#1e3a8a]/60">Besoin d'aide ?</span>
+                        <span className="text-sm font-bold text-[#1e3a8a]">Consultation gratuite</span>
+                    </div>
+                    <ChevronRight className="w-4 h-4 text-blue-600 group-hover:translate-x-1 transition-transform" />
+                </div>
+            </div>
         </div>
     );
 };
