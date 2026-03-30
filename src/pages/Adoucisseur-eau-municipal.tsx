@@ -199,13 +199,13 @@ const AdoucisseurEauMunicipal = () => {
                             {products.map((p, i) => (
                                 <div
                                     key={i}
-                                    className="group bg-white rounded-3xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full cursor-pointer"
+                                    className="group bg-white rounded-[3rem] overflow-hidden border border-slate-100 hover:shadow-[0_40px_80px_-20px_rgba(37,99,235,0.15)] transition-all duration-700 hover:-translate-y-3 flex flex-col h-full cursor-pointer"
                                     onClick={() => navigate(p.path || "/adoucisseurs")}
                                 >
-                                    <div className="relative h-80 overflow-hidden bg-slate-50 flex items-center justify-center p-12">
+                                    <div className="relative h-80 overflow-hidden bg-slate-50/50 flex items-center justify-center p-12">
                                         {p.isRecommended && (
-                                            <div className="absolute top-4 right-4 z-10">
-                                                <span className="inline-block px-4 py-1.5 bg-blue-600 text-white rounded-full text-[10px] font-black uppercase tracking-[0.3em] mb-6">
+                                            <div className="absolute top-6 right-6 z-10">
+                                                <span className="inline-block px-4 py-1.5 bg-blue-600 text-white rounded-full text-[10px] font-black uppercase tracking-[0.3em] shadow-lg shadow-blue-500/20">
                                                     RECOMMANDÉ
                                                 </span>
                                             </div>
@@ -213,29 +213,32 @@ const AdoucisseurEauMunicipal = () => {
                                         <img
                                             src={p.image}
                                             alt={`${p.name} - Adoucisseur d'eau résidentiel haute performance Bricareau`}
-                                            className="max-h-full object-contain group-hover:scale-110 transition-transform duration-700 mix-blend-multiply"
+                                            className="max-h-full object-contain group-hover:scale-110 transition-transform duration-1000 mix-blend-multiply"
                                         />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                                     </div>
-                                    <div className="p-8 space-y-4 flex flex-col flex-grow border-t-2 border-transparent group-hover:border-blue-600 transition-colors">
-                                        <h3
-                                            className="card-title group-hover:text-blue-600 transition-colors text-center whitespace-pre-line"
-                                        >
+                                    <div className="p-10 space-y-6 flex flex-col flex-grow border-t-2 border-transparent group-hover:border-blue-600 transition-all duration-500">
+                                        <h3 className="text-2xl font-bold text-[#1e3a8a] text-center whitespace-pre-line group-hover:text-blue-600 transition-colors">
                                             {p.name}
                                         </h3>
-                                        <p className="body-pro-max text-slate-500 text-justify">
+                                        <p className="text-slate-500 text-sm leading-relaxed text-justify italic font-light">
                                             {p.desc}
                                         </p>
-                                        <ul className="space-y-3 pt-2">
+                                        <div className="space-y-4 flex-grow">
                                             {p.features?.map((f, idx) => (
-                                                <li key={idx} className="flex items-center gap-2 text-sm text-slate-600 font-light">
-                                                    <CheckCircle2 className="w-4 h-4 text-blue-500" /> {f}
-                                                </li>
+                                                <div key={idx} className="flex items-start gap-3">
+                                                    <div className="mt-1 w-5 h-5 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0 group-hover:bg-blue-600 transition-colors duration-500">
+                                                        <CheckCircle2 className="w-3 h-3 text-blue-600 group-hover:text-white transition-colors" />
+                                                    </div>
+                                                    <span className="text-sm text-slate-600 font-medium group-hover:text-slate-900 transition-colors">{f}</span>
+                                                </div>
                                             ))}
-                                        </ul>
-                                        <div
-                                            className="inline-flex items-center gap-2 text-blue-600 font-bold text-xs tracking-widest uppercase mt-4 group-hover:underline self-end"
-                                        >
-                                            <ArrowRight className="h-6 w-6 transform group-hover:translate-x-1 transition-transform" />
+                                        </div>
+                                        <div className="pt-6 border-t border-slate-50 flex items-center justify-between">
+                                            <span className="text-[10px] font-black uppercase tracking-widest text-blue-600/40 group-hover:text-blue-600 transition-colors italic">Détails techniques</span>
+                                            <div className="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-all duration-500 group-hover:translate-x-2">
+                                                <ArrowRight className="h-5 w-5" />
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -334,45 +337,57 @@ const AdoucisseurEauMunicipal = () => {
                      </div>
                 </section>
 
-                {/* 5.Comparison Table Section */}
-                <section className="py-24 bg-white border-t border-gray-100">
-                    <div className="container mx-auto px-4">
-                        <div className="text-left mb-16">
-                            <h2 className="mb-8 heading-pro-max text-left">
-                                <span className="italic font-light text-[#2563eb] block">Comparez nos</span>
-                                <span className="font-bold text-[#1e3a8a] block">adoucisseurs d'eau</span>
+                <section className="py-24 bg-white relative overflow-hidden">
+                    <div className="container mx-auto px-6">
+                        <div className="text-center mb-16">
+                            <span className="inline-block px-4 py-1.5 bg-blue-100 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-widest mb-6">
+                                ANALYSE COMPARATIVE
+                            </span>
+                            <h2 className="heading-pro-max">
+                                <span className="italic font-light text-[#2563eb] block text-center">Trouvez le bouclier</span>
+                                <span className="font-bold text-[#1e3a8a] block text-center">adapté à votre foyer.</span>
                             </h2>
-                            <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
-                        <div className="overflow-x-auto">
-                            <table className="w-full min-w-[1000px] border-collapse bg-white rounded-2xl overflow-hidden shadow-sm">
+
+                        <div className="overflow-x-auto pb-12">
+                            <table className="w-full min-w-[1000px] border-collapse bg-white rounded-[3rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.05)] border border-slate-100">
                                 <thead>
-                                    <tr className="bg-gray-100">
-                                        <th className="p-8 text-left text-gray-400 font-light uppercase tracking-wider w-1/4">Modèle</th>
+                                    <tr className="bg-slate-50/50">
+                                        <th className="p-10 text-left text-blue-900/40 font-black uppercase tracking-widest text-[10px]">Critères Techniques</th>
                                         {[
-                                            { name: "Sentinel", img: SentinelWaterSoftenerImg },
-                                            { name: "Sérénité", img: SerenityWaterSoftenerImg },
-                                            { name: "Infiniti", img: TwinAlternatingWaterSoftenerImg }
-                                        ].map(m => (
-                                            <th key={m.name} className="p-4 text-center text-gray-900 font-bold">
-                                                <div className="flex flex-col items-center gap-2">
-                                                    <img
-                                                        src={m.img}
-                                                        alt={`Modèle ${m.name} - Système d'adoucissement d'eau municipal Bricareau`}
-                                                        className="w-[120px] h-[100px] object-contain mx-auto mix-blend-multiply"
-                                                    />
-                                                    <div className="text-[14px]">{m.name}</div>
+                                            { name: "Série Sentinelle", img: SentinelWaterSoftenerImg, badge: "Précision Économique", color: "bg-[#1e3a8a]" },
+                                            { name: "Série Sérénité", img: SerenityWaterSoftenerImg, badge: "Hybride Ultime", color: "bg-[#2563eb]" },
+                                            { name: "Série Infiniti", img: TwinAlternatingWaterSoftenerImg, badge: "Puissance 24h/24", color: "bg-[#0F1729]" }
+                                        ].map((m, i) => (
+                                            <th key={i} className="p-6 text-center">
+                                                <div className="flex flex-col items-center gap-6">
+                                                    <div className="relative group/img">
+                                                        <div className="absolute inset-0 bg-blue-600 rounded-full blur-2xl opacity-0 group-hover/img:opacity-20 transition-opacity duration-700" />
+                                                        <img
+                                                            src={m.img}
+                                                            alt={m.name}
+                                                            className="w-[140px] h-[120px] object-contain mx-auto mix-blend-multiply relative z-10 transition-transform duration-700 group-hover/img:scale-110"
+                                                        />
+                                                    </div>
+                                                    <div className="space-y-2">
+                                                        <span className={`inline-block px-3 py-1 ${m.color} text-white rounded-full text-[8px] font-bold uppercase tracking-widest`}>
+                                                            {m.badge}
+                                                        </span>
+                                                        <div className="text-lg font-bold text-[#1e3a8a]">{m.name}</div>
+                                                    </div>
                                                 </div>
                                             </th>
                                         ))}
                                     </tr>
                                 </thead>
-                                <tbody className="divide-y divide-gray-100">
+                                <tbody className="divide-y divide-slate-100">
                                     {comparisonData.map((row, i) => (
-                                        <tr key={i} className="hover:bg-gray-50 transition-colors">
-                                            <td className="p-8 font-bold text-slate-900 border-r border-gray-100 bg-gray-50/30">{row.feature}</td>
+                                        <tr key={i} className="hover:bg-blue-50/30 transition-colors group">
+                                            <td className="p-10 font-bold text-[#1e3a8a] border-r border-slate-50 bg-slate-50/20 text-sm italic group-hover:text-blue-600 transition-colors">
+                                                {row.feature}
+                                            </td>
                                             {["Sérénité", "Sentinel", "Infiniti"].map((model) => (
-                                                <td key={model} className="p-8 text-center text-lg font-light leading-snug text-gray-600 text-justify">
+                                                <td key={model} className="p-10 text-center text-sm font-light leading-relaxed text-slate-600">
                                                     {row[model as keyof ComparisonItem]}
                                                 </td>
                                             ))}
@@ -560,6 +575,24 @@ const AdoucisseurEauMunicipal = () => {
             </main>
 
             <Footer />
+
+            {/* Sticky Consultation CTA - Pro Max Conversion Tool */}
+            <div className="fixed bottom-8 right-8 z-[100] group hidden md:block">
+                <NavLink to="/consultation">
+                    <div className="relative">
+                        <div className="absolute inset-0 bg-blue-600 rounded-full animate-ping opacity-20 group-hover:opacity-40 transition-opacity" />
+                        <div className="relative flex items-center gap-3 bg-white/90 backdrop-blur-xl border border-blue-100 p-2 pr-6 rounded-full shadow-[0_20px_50px_rgba(0,0,0,0.1)] hover:shadow-[0_25px_60px_rgba(37,99,235,0.2)] transition-all duration-500 group-hover:-translate-y-2 group-hover:bg-blue-600">
+                            <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white group-hover:bg-white group-hover:text-blue-600 transition-colors duration-500">
+                                <Sparkles className="w-6 h-6 animate-pulse" />
+                            </div>
+                            <div className="flex flex-col">
+                                <span className="text-[10px] font-black uppercase tracking-[0.2em] text-blue-600 group-hover:text-white/80 transition-colors">Test d'eau</span>
+                                <span className="text-sm font-bold text-slate-900 group-hover:text-white transition-colors">Audit municipal offert</span>
+                            </div>
+                        </div>
+                    </div>
+                </NavLink>
+            </div>
         </div>
     );
 };

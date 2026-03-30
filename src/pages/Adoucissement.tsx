@@ -122,255 +122,139 @@ const Adoucissement = () => {
             <main>
                 <Hero 
                     image={heroBath}
-                    highlightedTitle="Adoucisseurs d'eau"
-                    mainTitle="Éliminez le calcaire et l'eau dure."
-                    subtitle="Redécouvrez le confort d'une eau soyeuse protégeant votre peau, vos cheveux et vos appareils électroménagers. Alliez économies durables et bien-être absolu avec nos solutions de traitement d'eau."
+                    highlightedTitle="Adoucisseurs d'eau,"
+                    mainTitle="éliminez le calcaire et l'eau dure."
+                    subtitle="Redécouvrez l'expérience d'une eau soyeuse qui préserve votre peau, vos cheveux et vos investissements. Une technologie de pointe pour une protection durable de votre foyer."
                     showPhone={true}
                     showBreadcrumbs={true}
                 />
 
-                {/* 2. The Problem Section */}
-                <section className="py-32 bg-slate-50 relative overflow-hidden">
-                    {/* Architectural Watermark */}
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[15rem] lg:text-[22rem] font-black text-slate-200/20 select-none pointer-events-none tracking-tighter z-0 uppercase">
-                        CALCAIRE
-                    </div>
-
+                {/* 2. Diagnostic Impact - Bento Grid */}
+                <section className="py-24 lg:py-32 bg-slate-50/50 relative overflow-hidden">
+                    <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_30%,_rgba(37,99,235,0.05)_0%,_transparent_50%)] pointer-events-none" />
+                    
                     <div className="container mx-auto px-6 relative z-10">
-                        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-
-                            {/* Left Column: Analytical Narrative (6 Harms) */}
-                            <div className="lg:col-span-5 space-y-8">
-                                <div>
-                                     <h2 className="heading-pro-max text-left mb-8">
-                                         <span className="italic font-light text-[#2563eb] block">L'impact silencieux du</span>
-                                         <span className="font-bold text-[#1e3a8a] block">calcaire.</span>
-                                     </h2>
-                                     <p className="body-pro-max mb-8 max-w-xl text-left">
-                                         Ce n'est pas qu'un simple dépôt ; c'est un agent d'érosion invisible qui dégrade votre confort et vos investissements jour après jour.
-                                     </p>
-                                </div>
-
-                                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-x-8 gap-y-6 overflow-hidden transition-all duration-700">
-                                    {[
-                                        {
-                                            icon: <img src={financeModeImg} className="w-6 h-6 opacity-20 group-hover:opacity-100 transition-opacity duration-500" style={{ filter: 'invert(32%) sepia(96%) saturate(3015%) hue-rotate(212deg) brightness(97%) contrast(96%)' }} alt="finance mode" />,
-                                            title: "+25% de consommation énergétique",
-                                            desc: "Le tartre isole vos résistances, forçant vos appareils à consommer massivement plus."
-                                        },
-                                        {
-                                            icon: <img src={plumbingImg} className="w-6 h-6 opacity-20 group-hover:opacity-100 transition-opacity duration-500" style={{ filter: 'invert(32%) sepia(96%) saturate(3015%) hue-rotate(212deg) brightness(97%) contrast(96%)' }} alt="plumbing" />,
-                                            title: "Plomberie obstruée & Débit réduit",
-                                            desc: "Obstruction progressive des canalisations et perte de pression aux robinets."
-                                        },
-                                        {
-                                            icon: <img src={moneyBagImg} className="w-6 h-6 opacity-20 group-hover:opacity-100 transition-opacity duration-500" style={{ filter: 'invert(32%) sepia(96%) saturate(3015%) hue-rotate(212deg) brightness(97%) contrast(96%)' }} alt="money bag" />,
-                                            title: "Maintenance coûteuse",
-                                            desc: "Réduction de 50% de la durée de vie de vos équipements (chauffe-eau, lave-vaisselle)."
-                                        },
-                                        {
-                                            icon: <img src={healthMetricsImg} className="w-6 h-6 opacity-20 group-hover:opacity-100 transition-opacity duration-500" style={{ filter: 'invert(32%) sepia(96%) saturate(3015%) hue-rotate(212deg) brightness(97%) contrast(96%)' }} alt="health metrics" />,
-                                            title: "Soin du corps",
-                                            desc: "Agression cutanée (eczéma), irritations et cheveux ternes ou cassants."
-                                        },
-                                        {
-                                            icon: <img src={laundryIcon} className="w-6 h-6 opacity-20 group-hover:opacity-100 transition-opacity duration-500" style={{ filter: 'invert(32%) sepia(96%) saturate(3015%) hue-rotate(212deg) brightness(97%) contrast(96%)' }} alt="laundry" />,
-                                            title: "Linge & textiles",
-                                            desc: "Fibres qui deviennent rêches et couleurs qui ternissent au fil des lavages."
-                                        },
-                                        {
-                                            icon: <img src={detergentsImg} className="w-6 h-6 opacity-20 group-hover:opacity-100 transition-opacity duration-500" style={{ filter: 'invert(32%) sepia(96%) saturate(3015%) hue-rotate(212deg) brightness(97%) contrast(96%)' }} alt="detergents" />,
-                                            title: "Surconsommation de détergents",
-                                            desc: "Nécessite jusqu'à 50% de détergents et savons en plus pour obtenir de la mousse."
-                                        }
-                                    ].filter((_, idx) => showAllHarms || idx < 3).map((harm, idx) => (
-                                        <div key={idx} className="group flex items-start gap-4 p-2 rounded-3xl transition-colors hover:bg-slate-50 animate-in fade-in slide-in-from-top-4 duration-500">
-                                            <div className="pt-1">
-                                                {harm.icon}
-                                            </div>
-                                            <div className="space-y-0.5">
-                                                <h3 className="text-lg font-bold text-blue-600/20 group-hover:text-blue-600 transition-colors duration-500 mb-1">{harm.title}</h3>
-                                                <p className="text-slate-500 font-light text-sm leading-snug max-w-sm">
-                                                    {harm.desc}
-                                                </p>
-                                            </div>
-                                        </div>
-                                    ))}
-                                </div>
-
-                                <div className="pt-8 flex justify-center">
-                                    <button
-                                        onClick={() => setShowAllHarms(!showAllHarms)}
-                                        className="flex items-center gap-2 text-blue-600 hover:scale-125 transition-all group"
-                                        title={showAllHarms ? "Voir moins" : "Voir plus"}
-                                    >
-                                        <img 
-                                            src={showAllHarms ? arrowUpIcon : arrowDownIcon} 
-                                            className="w-10 h-10" 
-                                            style={{ filter: 'invert(32%) sepia(96%) saturate(3015%) hue-rotate(212deg) brightness(97%) contrast(96%)' }}
-                                            alt={showAllHarms ? "Voir moins" : "Voir plus"}
-                                        />
-                                    </button>
-                                </div>
-                            </div>
-
-                            {/* Right Column: Cinematic Slideshow (Embla) */}
-                            <div className="lg:col-span-7 relative lg:sticky lg:top-32 -mx-6 lg:mx-0">
-                                <div className="relative rounded-none lg:rounded-[3rem] overflow-hidden shadow-none lg:shadow-2xl border-0 lg:border-8 border-white group">
-                                    <div className="embla overflow-hidden" ref={emblaRef}>
-                                        <div className="embla__container flex">
-                                            {[applianceDamageImg, womansufferingfromHardWaterImg, laundryImg, womansufferingdryhairfromhardwaterImg, hardWaterSignsImg, hardWaterImg].map((img, idx) => (
-                                                <div key={idx} className="embla__slide flex-[0_0_100%] min-w-0 relative h-[450px] md:h-[550px] lg:h-[700px]">
-                                                    <img
-                                                        src={img}
-                                                        alt={`Impact du calcaire ${idx + 1}`}
-                                                        className="w-full h-full object-cover"
-                                                    />
-                                                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-60" />
-                                                </div>
-                                            ))}
-                                        </div>
-                                    </div>
-
-                                    {/* Pagination Buttons - Premium Glass Style */}
-                                    <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-2.5 z-30 bg-black/10 backdrop-blur-md px-4 py-2.5 rounded-full border border-white/10 shadow-2xl transition-all hover:bg-black/20 group-hover:bottom-10">
-                                        {scrollSnaps.map((_, index) => (
-                                            <button
-                                                key={index}
-                                                onClick={() => emblaApi?.scrollTo(index)}
-                                                className={cn(
-                                                    "h-1.5 rounded-full transition-all duration-500",
-                                                    index === selectedIndex 
-                                                        ? "bg-white w-8 shadow-[0_0_15px_rgba(255,255,255,0.5)]" 
-                                                        : "bg-white/30 w-1.5 hover:bg-white/60"
-                                                )}
-                                                aria-label={`Go to slide ${index + 1}`}
-                                            />
-                                        ))}
-                                    </div>
-                                </div>
-
-                                {/* Architectural Frame Accents */}
-                                <div className="absolute -top-6 -right-6 w-32 h-32 border-t-2 border-r-2 border-blue-600/10 rounded-tr-[3rem]" />
-                                <div className="absolute -bottom-6 -left-6 w-32 h-32 border-b-2 border-l-2 border-blue-600/10 rounded-bl-[3rem]" />
-                            </div>
-
-                        </div>
-                    </div>
-                </section>
-                
-                {/* 2.5. The Bridge Section: Architectural Triptych */}
-                <section className="py-32 bg-[#f8f9fa] relative overflow-hidden">
-                    <div className="container mx-auto px-6 relative z-10">
-                        <div className="max-w-4xl mx-auto text-center mb-24 space-y-6">
-                            <h2 className="heading-pro-max">
-                                <span className="italic font-light text-[#2563eb] block">De la prise de conscience</span>
-                                <span className="font-bold text-[#1e3a8a] block ">À la solution parfaite</span>
+                        <div className="max-w-4xl mx-auto text-center mb-24">
+                            <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.3em] mb-8">
+                                DIAGNOSTIC L'EAU DURE
+                            </span>
+                            <h2 className="mb-8 heading-pro-max text-center">
+                                <span className="italic font-light text-[#2563eb] block">L'impact silencieux du</span>
+                                <span className="font-bold text-[#1e3a8a] block text-center">calcaire sur votre vie.</span>
                             </h2>
-                            <p className="body-pro-max max-w-2xl mx-auto">
-                                Une fois les dommages du calcaire identifiés, l'étape suivante consiste à choisir le bouclier technologique adapté à votre style de vie et à vos valeurs environnementales.
+                            <p className="body-pro-max text-slate-500 text-center mx-auto max-w-2xl">
+                                Le calcaire n'est pas qu'un dépôt blanc ; c'est un agent d'érosion invisible qui dégrade votre confort, votre santé et vos finances au quotidien.
                             </p>
                         </div>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                            
-                            {/* Card 001: Traditional Softeners - Navy Style */}
-                            <a href="/adoucisseur-eau-residentiel" className="group block relative bg-[#1e3a8a] rounded-[2.5rem] p-10 h-[720px] flex flex-col transition-all duration-700 hover:-translate-y-4 shadow-2xl overflow-hidden">
-                                <div className="space-y-0 relative z-10 flex flex-col h-full">
-                                    
-                                    <div className="h-20"></div>
-
-                                    {/* Unfiltered Architectural Image Overlay */}
-                                    <div className="w-full h-48 overflow-hidden rounded-3xl shadow-lg relative">
+                            {[
+                                { 
+                                    title: "Énergie & Coût", 
+                                    impact: "+25% Facture", 
+                                    desc: "Le tartre isole vos résistances, forçant vos appareils à consommer massivement plus d'électricité pour chauffer l'eau.",
+                                    icon: <Zap className="w-6 h-6 text-blue-600" />,
+                                    badge: "Impact Financier",
+                                    img: applianceDamageImg,
+                                    color: "bg-amber-500"
+                                },
+                                { 
+                                    title: "Peau & Dermatite", 
+                                    impact: "Irritations", 
+                                    desc: "L'eau dure assèche l'épiderme et peut aggraver l'eczéma. Retrouvez une peau soyeuse et des cheveux éclatants.",
+                                    icon: <Heart className="w-6 h-6 text-rose-500" />,
+                                    badge: "Soin Personnel",
+                                    img: womansufferingfromHardWaterImg,
+                                    color: "bg-rose-500"
+                                },
+                                { 
+                                    title: "Électroménagers", 
+                                    impact: "Vie /2", 
+                                    desc: "Réduisez drastiquement la fréquence de remplacement de votre chauffe-eau, lave-linge et lave-vaisselle.",
+                                    icon: <Shield className="w-6 h-6 text-emerald-600" />,
+                                    badge: "Protection Actifs",
+                                    img: kitchenImg,
+                                    color: "bg-emerald-600"
+                                },
+                                { 
+                                    title: "Entretien Ménager", 
+                                    impact: "Double effort", 
+                                    desc: "Dites adieu aux traces de tartre sur la robinetterie et aux voiles blanchâtres sur votre vaisselle étincelante.",
+                                    icon: <Sparkles className="w-6 h-6 text-cyan-500" />,
+                                    badge: "Confort",
+                                    img: hardWaterSignsImg,
+                                    color: "bg-cyan-500"
+                                },
+                                { 
+                                    title: "Textiles & Linge", 
+                                    impact: "Usure Précoce", 
+                                    desc: "Les fibres deviennent rêches et les couleurs ternissent. Protégez la douceur de vos vêtements préférés.",
+                                    icon: <Shirt className="w-6 h-6 text-indigo-500" />,
+                                    badge: "Linge Doux",
+                                    img: laundryImg,
+                                    color: "bg-indigo-500"
+                                },
+                                { 
+                                    title: "Consommation", 
+                                    impact: "Savon x2", 
+                                    desc: "L'eau dure nécessite jusqu'à 50% de détergents et savons en plus pour obtenir une mousse efficace.",
+                                    icon: <HandCoins className="w-6 h-6 text-amber-500" />,
+                                    badge: "Économie",
+                                    img: hardWaterImg,
+                                    color: "bg-amber-500"
+                                }
+                            ].map((item, idx) => (
+                                <div 
+                                    key={idx} 
+                                    className="group relative h-[420px] rounded-[3rem] overflow-hidden border border-white bg-white/40 backdrop-blur-xl shadow-sm cursor-pointer transition-all duration-700 hover:shadow-2xl hover:shadow-blue-200/50 hover:border-blue-200 hover:-translate-y-2"
+                                    onClick={() => navigate("/consultation")}
+                                >
+                                    {/* Background Image with Overlay */}
+                                    <div className="absolute inset-0 z-0">
                                         <img 
-                                            src={residentialWaterSoftenerImg} 
-                                            alt="Adoucisseur d'eau résidentiel Sentinel" 
-                                            className="w-full h-full object-cover transition-transform duration-[3000ms] group-hover:scale-110"
+                                            src={item.img} 
+                                            alt={item.title} 
+                                            className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-40 group-hover:opacity-60"
                                         />
+                                        <div className="absolute inset-0 bg-gradient-to-br from-white via-white/80 to-transparent" />
                                     </div>
 
-                                    <div className="space-y-6 pt-8">
-                                        <h3 className="text-3xl font-bold text-white leading-[1.1] group-hover:text-blue-200 transition-colors">
-                                            Adoucisseurs au sel haute performance
-                                        </h3>
-                                        <p className="text-white/70 text-sm leading-relaxed max-w-[260px]">
-                                            L'étalon-or de l'industrie pour éliminer totalement les ions de calcium et de magnésium de votre eau.
-                                        </p>
+                                    <div className="relative z-10 inset-0 p-10 h-full flex flex-col justify-between">
+                                        <div className="space-y-4">
+                                            <div className="flex items-center gap-3">
+                                                <div className={`w-3 h-3 rounded-full ${item.color} shadow-lg`} />
+                                                <span className="text-[10px] font-black uppercase tracking-wider text-slate-500 group-hover:text-blue-600 transition-colors">
+                                                    {item.badge}
+                                                </span>
+                                            </div>
+                                            <h3 className="text-3xl font-bold text-[#1e3a8a] leading-[1.1] transition-all duration-500 group-hover:translate-x-2">
+                                                {item.title}
+                                            </h3>
+                                            <p className="text-slate-600 text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-all duration-1000 translate-y-4 group-hover:translate-y-0 text-justify">
+                                                {item.desc}
+                                            </p>
+                                        </div>
+
+                                        <div className="space-y-4">
+                                            <div className="h-px w-12 bg-blue-200 group-hover:w-full transition-all duration-700" />
+                                            <div className="text-xs font-light text-slate-600 group-hover:text-blue-800 transition-all italic">
+                                                Impact : <span className="font-bold border-b border-transparent group-hover:border-blue-600">{item.impact}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* Hover Overlay CTA */}
+                                    <div className="absolute inset-0 bg-blue-600/95 z-20 opacity-0 group-hover:opacity-100 transition-all duration-700 flex flex-col items-center justify-center p-8 space-y-6 translate-y-full group-hover:translate-y-0 text-center">
+                                        <div className="text-center">
+                                            <p className="text-white/80 text-xs font-black uppercase tracking-widest mb-2 italic">Résoudre ce problème</p>
+                                            <h4 className="text-white text-2xl font-bold leading-tight px-6">Expertise gratuite pour cette solution</h4>
+                                        </div>
+                                        <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center text-white border border-white/20 group-hover:rotate-45 transition-transform duration-700">
+                                            <ArrowRight className="w-6 h-6" />
+                                        </div>
                                     </div>
                                 </div>
-                                <div className="absolute bottom-0 right-0 w-24 h-24 bg-[#f8f9fa] rounded-tl-[3rem] transition-all group-hover:w-28 group-hover:h-28">
-                                    <div className="absolute inset-0 m-4 bg-[#2563eb] rounded-full flex items-center justify-center text-white shadow-xl transition-transform group-hover:scale-110">
-                                        <ChevronRight className="w-8 h-8" />
-                                    </div>
-                                </div>
-                            </a>
-
-                            {/* Card 002: Eco-Friendly TAC - Royal Blue Style */}
-                            <a href="/conditionneurs-sans-sel" className="group block relative bg-[#2563eb] rounded-[2.5rem] p-10 h-[720px] flex flex-col transition-all duration-700 hover:-translate-y-4 shadow-2xl overflow-hidden">
-                                <div className="space-y-0 relative z-10 flex flex-col h-full">
-                                    
-                                    <div className="h-20"></div>
-
-                                    <div className="space-y-6">
-                                        <h3 className="text-3xl font-bold text-white leading-[1.1]">
-                                            Série Écologique <br/> sans sel (TAC)
-                                        </h3>
-                                        <p className="text-white/80 text-sm leading-relaxed max-w-[260px]">
-                                            Une technologie novatrice qui neutralise le calcaire sans sel, sans électricité et sans gaspillage d'eau.
-                                        </p>
-                                    </div>
-
-                                    {/* Unfiltered Architectural Image Overlay */}
-                                    <div className="w-full h-48 overflow-hidden rounded-3xl shadow-lg mt-8 relative">
-                                        <img 
-                                            src={untitledImg} 
-                                            alt="Conditionneur d'eau sans sel écologique" 
-                                            className="w-full h-full object-cover transition-transform duration-[3000ms] group-hover:scale-110"
-                                        />
-                                    </div>
-                                </div>
-                                
-                                <div className="absolute bottom-0 right-0 w-24 h-24 bg-[#f8f9fa] rounded-tl-[3rem] transition-all group-hover:w-28 group-hover:h-28">
-                                    <div className="absolute inset-0 m-4 bg-[#1e3a8a] rounded-full flex items-center justify-center text-white shadow-xl transition-transform group-hover:scale-110">
-                                        <ChevronRight className="w-8 h-8" />
-                                    </div>
-                                </div>
-                            </a>
-
-                            {/* Card 003: Portable Series - Navy Patterned */}
-                            <a href="/adoucisseurs-portables" className="group block relative bg-[#1e3a8a] rounded-[2.5rem] p-10 h-[720px] flex flex-col transition-all duration-700 hover:-translate-y-4 shadow-2xl overflow-hidden">
-                                <div className="absolute inset-0 opacity-10 mix-blend-overlay">
-                                    <img src={starsImg} className="w-full h-full object-cover" alt="" />
-                                </div>
-                                
-                                <div className="space-y-0 relative z-10 flex flex-col h-full">
-                                    <div className="h-20"></div>
-
-                                    <div className="w-full h-48 overflow-hidden rounded-3xl shadow-lg relative bg-[#1e3a8a]">
-                                        <img 
-                                            src={designImg} 
-                                            alt="Adoucisseur d'eau portable Série Nomade" 
-                                            className="w-full h-full object-cover transition-transform duration-[3000ms] group-hover:scale-110"
-                                        />
-                                    </div>
-
-                                    <div className="space-y-6 pt-8">
-                                        <h3 className="text-3xl font-bold text-white leading-[1.1] group-hover:text-blue-200 transition-colors">
-                                            Série Nomade <br/> portables & compacts
-                                        </h3>
-                                        <p className="text-white/70 text-sm leading-relaxed max-w-[260px]">
-                                            La puissance de l'adoucissement Bricareau dans un format compact pour le VR, le bateau ou le condo.
-                                        </p>
-                                    </div>
-                                </div>
-                                
-                                <div className="absolute bottom-0 right-0 w-24 h-24 bg-[#f8f9fa] rounded-tl-[3rem] transition-all group-hover:w-28 group-hover:h-28">
-                                    <div className="absolute inset-0 m-4 bg-[#2563eb] rounded-full flex items-center justify-center text-white shadow-xl transition-transform group-hover:scale-110">
-                                        <ChevronRight className="w-8 h-8" />
-                                    </div>
-                                </div>
-                            </a>
-
+                            ))}
                         </div>
                     </div>
                 </section>
@@ -702,20 +586,25 @@ const Adoucissement = () => {
                         <div className="overflow-x-auto">
                             <table className="w-full min-w-[1000px] border-collapse bg-white rounded-2xl overflow-hidden shadow-sm">
                                 <thead>
-                                    <tr className="bg-gray-100">
-                                        <th className="p-8 text-left text-gray-400 font-light uppercase tracking-wider">Solutions</th>
+                                    <tr className="bg-gray-100/50">
+                                        <th className="p-8 text-left text-blue-900/40 font-black uppercase tracking-widest text-[10px]">Solutions</th>
                                         {[
-                                            { name: "Adoucisseur au Sel", img: specializedFiltersImg },
-                                            { name: "Conditionneur sans Sel", img: TACsystemImg },
+                                            { name: "Adoucisseur Sentinel", img: specializedFiltersImg, badge: "Performance Totale", color: "bg-[#1e3a8a]" },
+                                            { name: "Conditionneur sans Sel", img: TACsystemImg, badge: "Éco-Responsable", color: "bg-[#2563eb]" },
                                         ].map((m, i) => (
-                                            <th key={i} className="p-4 text-center text-gray-900 font-bold text-sm">
-                                                <div className="flex flex-col items-center gap-2">
-                                                    <img
-                                                        src={m.img}
-                                                        alt={`${m.name} - Système de traitement d'eau haute performance Bricareau`}
-                                                        className="w-[150px] h-[120px] object-contain mx-auto mix-blend-multiply"
-                                                    />
-                                                    <div className="text-[14px]">{m.name}</div>
+                                            <th key={i} className="p-4 text-center text-gray-900 font-bold">
+                                                <div className="flex flex-col items-center gap-4 group">
+                                                    <div className="relative">
+                                                        <div className={`absolute -top-3 -right-6 z-20 ${m.color} text-white text-[8px] font-black uppercase tracking-[0.2em] px-3 py-1 rounded-full shadow-lg whitespace-nowrap`}>
+                                                            {m.badge}
+                                                        </div>
+                                                        <img
+                                                            src={m.img}
+                                                            alt={`${m.name} - Système de traitement d'eau haute performance Bricareau`}
+                                                            className="w-[150px] h-[120px] object-contain mx-auto mix-blend-multiply group-hover:scale-110 transition-transform duration-500 rounded-xl"
+                                                        />
+                                                    </div>
+                                                    <span className="max-w-[140px] inline-block uppercase tracking-wider text-[11px] text-[#1e3a8a]">{m.name}</span>
                                                 </div>
                                             </th>
                                         ))}
@@ -931,6 +820,24 @@ const Adoucissement = () => {
 
             </main>
             <Footer />
+
+            {/* Sticky Consultation CTA - Pro Max Conversion Tool */}
+            <div className="fixed bottom-8 right-8 z-[100] group hidden md:block">
+                <NavLink to="/consultation">
+                    <div className="relative">
+                        <div className="absolute inset-0 bg-blue-600 rounded-full animate-ping opacity-20 group-hover:opacity-40 transition-opacity" />
+                        <div className="relative flex items-center gap-3 bg-white/90 backdrop-blur-xl border border-blue-100 p-2 pr-6 rounded-full shadow-[0_20px_50px_rgba(0,0,0,0.1)] hover:shadow-[0_25px_60px_rgba(37,99,235,0.2)] transition-all duration-500 group-hover:-translate-y-2 group-hover:bg-blue-600">
+                            <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white group-hover:bg-white group-hover:text-blue-600 transition-colors duration-500">
+                                <Sparkles className="w-6 h-6 animate-pulse" />
+                            </div>
+                            <div className="flex flex-col">
+                                <span className="text-[10px] font-black uppercase tracking-[0.2em] text-blue-600 group-hover:text-white/80 transition-colors">Audit Gratuit</span>
+                                <span className="text-sm font-bold text-slate-900 group-hover:text-white transition-colors">Analyse de dureté</span>
+                            </div>
+                        </div>
+                    </div>
+                </NavLink>
+            </div>
         </div>
     );
 };

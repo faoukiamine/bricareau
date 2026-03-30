@@ -9,16 +9,10 @@ import {
     CheckCircle2,
     ChevronRight,
     Droplets,
-    Zap,
-    CircleDollarSign,
-    Search,
+    ShieldCheck,
     ShieldAlert,
-    Wind,
+    Sparkles,
     Leaf,
-    Ban,
-    Scale,
-    Smile,
-    Waves,
     Activity,
     Check,
     X,
@@ -31,7 +25,8 @@ import {
     Microscope,
     Bug,
     Mountain,
-    TriangleAlert
+    TriangleAlert,
+    Waves
 } from "lucide-react";
 import waterFilterPng from "@/assets/water-filter_8782563.png";
 import safetyIcon from "@/assets/1709235770048.png";
@@ -132,103 +127,75 @@ const FiltrationSousEvier = () => {
 
                 />
 
-                {/* 2. Ce qu'il élimine - Efficiency Section */}
-                <section className="py-24 relative overflow-hidden bg-white">
-                    {/* Background Image with Harmony Filters */}
-                    <div className="absolute inset-0 z-0">
-                        <img 
-                            src={bgEfficiencyImg} 
-                            alt="" 
-                            className="w-full h-full object-cover opacity-60 pointer-events-none" 
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent backdrop-blur-[0.5px]" />
-                    </div>
-
-                    {/* Ambient Glows */}
-                    <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-100/30 rounded-full blur-[120px] translate-x-1/2 -translate-y-1/2 z-0" />
-                    <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-indigo-100/20 rounded-full blur-[100px] -translate-x-1/2 translate-y-1/2 z-0" />
-
+                {/* 2. La Pureté Invisible - High-Impact Bento Grid */}
+                <section className="py-24 lg:py-32 bg-slate-50/30 relative overflow-hidden">
+                    {/* Abstract Pure Water Background */}
+                    <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_30%,_rgba(8,145,178,0.05)_0%,_transparent_50%)] pointer-events-none" />
+                    
                     <div className="container mx-auto px-6 relative z-10">
-                        <div className="max-w-3xl mb-20">
-                            <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.2em] mb-8">
-                                PERFORMANCE & CAPACITÉ
+                        <div className="max-w-4xl mx-auto text-center mb-24">
+                            <span className="inline-block px-4 py-1.5 bg-cyan-600/10 text-cyan-700 rounded-full text-[10px] font-black uppercase tracking-[0.3em] mb-8">
+                                OPTIMISATION DU ROBINET
                             </span>
-                            
-                            <h2 className="mb-8 heading-pro-max text-left">
-                                <span className="italic font-light text-[#2563eb] block">Qu’est-ce qu’un filtre sous évier</span>
-                                <span className="font-bold text-[#1e3a8a] block">élimine-t-il réellement ?</span>
+                             <h2 className="mb-8 heading-pro-max text-center">
+                                <span className="italic font-light text-[#0891B2] block">L'eau de source,</span>
+                                <span className="font-bold text-[#164E63] block text-center">sans la bouteille.</span>
                             </h2>
+                            <p className="body-pro-max text-slate-500 text-center mx-auto max-w-2xl">
+                                Pourquoi vous contenter d'une eau moyenne ? Nos filtres sous évier transforment votre robinet standard en une source de pureté gastronomique, éliminant l'indésirable pour ne laisser que l'essentiel.
+                            </p>
                         </div>
 
-                        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-stretch">
-                            {/* Pro-Efficiency Column */}
-                            <div className="lg:col-span-7 space-y-12">
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
-                                    {[
-                                        { title: "Chlore & Chloramines", desc: "Élimine le goût et l'odeur de 'piscine' pour une eau délicieuse." },
-                                        { title: "Sédiments & Rouille", desc: "Retient le sable, la terre et les particules en suspension." },
-                                        { title: "Pesticides & Herbicides", desc: "Réduit les traces de polluants agricoles courants." },
-                                        { title: "Composés Organiques", desc: "Capture les COV pour une eau chimiquement plus pure." },
-                                        { title: "Odeurs & Mauvais Goûts", desc: "Neutralise toute saveur métallique ou terreuse désagréable." },
-                                        { title: "Métaux Lourds", desc: "Selon cartouches : réduit plomb, cuivre et aluminium." },
-                                    ].map((item, idx) => (
-                                        <div key={idx} className="group flex gap-4 transition-all duration-300">
-                                            <div className="flex-shrink-0 mt-1">
-                                                <Check className="w-4 h-4 text-blue-600" />
-                                            </div>
-                                            <div className="space-y-1">
-                                                <h4 className="card-title">{item.title}</h4>
-                                                <p className="text-slate-500 font-light text-[13px] leading-relaxed italic">{item.desc}</p>
-                                            </div>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                            {[
+                                { 
+                                    title: "Goût & Odeur", 
+                                    benefit: "Élimination Chlore", 
+                                    desc: "Dites adieu aux saveurs chimiques. Retrouvez l'arôme pur de vos cafés, thés et bouillons sans l'arrière-goût de chlore.",
+                                    icon: <Droplets className="w-6 h-6 text-cyan-600" />,
+                                    badge: "Gastronomique"
+                                },
+                                { 
+                                    title: "Protection Plomb", 
+                                    benefit: "Filtre Sédiments", 
+                                    desc: "Une barrière impénétrable contre les résidus métalliques et le plomb des anciennes canalisations pour la sécurité de vos enfants.",
+                                    icon: <ShieldCheck className="w-6 h-6 text-emerald-600" />,
+                                    badge: "Santé Famille"
+                                },
+                                { 
+                                    title: "Zéro Bactérie", 
+                                    benefit: "Ultrafiltration", 
+                                    desc: "Notre membrane 0.01 micron bloque physiquement 99.9% des micro-organismes, sans aucun produit chimique ajouté.",
+                                    icon: <Microscope className="w-6 h-6 text-blue-600" />,
+                                    badge: "Bio-Pureté"
+                                },
+                                { 
+                                    title: "Éco-Impact", 
+                                    benefit: "3000L par Filtre", 
+                                    desc: "Remplacez jusqu'à 2000 bouteilles plastiques par an. Une solution durable pour votre portefeuille et pour la planète.",
+                                    icon: <Leaf className="w-6 h-6 text-emerald-500" />,
+                                    badge: "Planète"
+                                }
+                            ].map((item, idx) => (
+                                <div key={idx} className="group relative bg-white rounded-[2.5rem] p-8 border border-slate-100 hover:shadow-[0_40px_80px_-20px_rgba(8,145,178,0.12)] transition-all duration-700 hover:-translate-y-2 overflow-hidden flex flex-col items-center text-center">
+                                    <div className="w-16 h-16 bg-slate-50 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 group-hover:bg-cyan-50 transition-all duration-500 shadow-sm border border-slate-100">
+                                        {item.icon}
+                                    </div>
+                                    <div className="space-y-4 flex-grow">
+                                        <div className="space-y-1">
+                                            <span className="text-[10px] font-black text-cyan-600 uppercase tracking-widest block">{item.benefit}</span>
+                                            <h3 className="text-xl font-bold text-[#164E63]">{item.title}</h3>
                                         </div>
-                                    ))}
-                                </div>
-                                <div className="mt-12 p-8 bg-blue-50/40 rounded-[2rem] border border-blue-100/50 backdrop-blur-sm relative overflow-hidden group">
-                                    <div className="absolute top-0 right-0 p-6 opacity-5 group-hover:scale-110 transition-transform">
-                                        <CheckCircle2 className="w-16 h-16 text-blue-600" />
+                                        <p className="text-slate-500 text-sm leading-relaxed font-light">{item.desc}</p>
                                     </div>
-                                    <p className="text-sm text-blue-700 font-light leading-relaxed mb-0 relative z-10 text-justify">
-                                        <strong className="block mb-2 text-base font-bold text-blue-800 text-left">Besoin d'une protection complète ?</strong>
-                                        Si votre eau présente des problèmes microbiologiques ou de calcaire, demandez conseil à nos experts pour combiner votre filtre avec nos solutions spécialisées et obtenir une eau parfaite.
-                                    </p>
-                                </div>
-                            </div>
-
-                            {/* Limits Column (Glassmorphism Sidebar) */}
-                            <div className="lg:col-span-5">
-                                <div className="bg-white/5 backdrop-blur-2xl rounded-[3rem] p-10 border border-white/20 relative shadow-[0_20px_50px_-20px_rgba(0,0,0,0.05)]">
-                                    <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/4">
-                                        <div className="w-64 h-64 bg-blue-100/20 rounded-full blur-3xl opacity-50" />
-                                    </div>
-
-                                    <div className="flex items-center gap-4 mb-10 relative z-10">
-                                        <div className="w-12 h-12 rounded-2xl bg-red-50 backdrop-blur-md flex items-center justify-center text-red-500 border border-red-100">
-                                            <TriangleAlert className="h-5 w-5" />
-                                        </div>
-                                        <h3 className="card-title">Limites importantes</h3>
-                                    </div>
-
-                                    <div className="space-y-8 relative z-10">
-                                        {[
-                                            { label: "Dureté & Calcaire", desc: "Ne remplace pas un adoucisseur. Il ne traite pas l'accumulation de tartre." },
-                                            { label: "Désinfection Totale", desc: "Ne traite pas les virus/bactéries. Nécessite un système UV ou chlore excepté le système d'ultrafiltration." },
-                                            { label: "Contaminants Dissous", desc: "Efficacité limitée sur PFAS/Nitrates. L'osmose inverse est alors recommandée." },
-                                        ].map((limit, idx) => (
-                                            <div key={idx} className="flex gap-4 items-start group">
-                                                <div className="mt-2 h-1.5 w-1.5 rounded-full bg-slate-400 ring-[5px] ring-slate-100 group-hover:bg-slate-600 transition-all flex-shrink-0" />
-                                                <div className="space-y-1">
-                                                    <div className="text-slate-900 text-[15px] font-semibold">{limit.label}</div>
-                                                    <p className="text-slate-500 font-light text-sm italic">{limit.desc}</p>
-                                                </div>
-                                            </div>
-                                        ))}
-                                    </div>
-
+                                    <div className="mt-8 pt-6 border-t border-slate-50 w-full">
+                                        <span className="px-3 py-1 bg-slate-100/50 rounded-full text-[9px] font-bold text-slate-400 uppercase tracking-widest">{item.badge}</span>
                                     </div>
                                 </div>
-                            </div>
+                            ))}
                         </div>
-                    </section>
+                    </div>
+                </section>
 
                 {/* 3. Product Grid */}
                 <section id="systemes-filtration" className="py-24 bg-white">
@@ -369,21 +336,26 @@ const FiltrationSousEvier = () => {
                         <div className="overflow-x-auto">
                             <table className="w-full min-w-[1000px] border-collapse bg-white rounded-2xl overflow-hidden shadow-sm">
                                 <thead>
-                                    <tr className="bg-gray-100">
-                                        <th className="p-8 text-left text-gray-400 font-light uppercase tracking-wider">Solutions</th>
+                                    <tr className="bg-gray-100/50">
+                                        <th className="p-8 text-left text-cyan-900/40 font-black uppercase tracking-widest text-[10px]">Solutions</th>
                                         {[
-                                            { name: "Cristal Pro I", img: essentialImg },
-                                            { name: "Cristal Pro II", img: plusROImg },
-                                            { name: "Cristal Pro III", img: eliteROImg },
+                                            { name: "Cristal Pro I", img: essentialImg, badge: "L'Essentiel", color: "bg-cyan-600" },
+                                            { name: "Cristal Pro II", img: plusROImg, badge: "Le Plus Populaire", color: "bg-emerald-600" },
+                                            { name: "Cristal Pro III", img: eliteROImg, badge: "Ultra-Protection", color: "bg-blue-600" },
                                         ].map((m, i) => (
                                             <th key={i} className="p-4 text-center text-gray-900 font-bold">
-                                                <div className="flex flex-col items-center gap-2">
-                                                    <img
-                                                        src={m.img}
-                                                        alt={`Filtre d'eau ${m.name} - Technologie d'ultrafiltration Bricareau`}
-                                                        className="w-[120px] h-[100px] object-contain mx-auto mix-blend-multiply"
-                                                    />
-                                                    <div className="text-[14px]">{m.name}</div>
+                                                <div className="flex flex-col items-center gap-4 group">
+                                                    <div className="relative">
+                                                        <div className={`absolute -top-3 -right-12 z-20 ${m.color} text-white text-[8px] font-black uppercase tracking-[0.2em] px-3 py-1 rounded-full shadow-lg whitespace-nowrap`}>
+                                                            {m.badge}
+                                                        </div>
+                                                        <img
+                                                            src={m.img}
+                                                            alt={`Filtre d'eau ${m.name} - Technologie d'ultrafiltration Bricareau`}
+                                                            className="w-[140px] h-[110px] object-contain mx-auto mix-blend-multiply group-hover:scale-110 transition-transform duration-500"
+                                                        />
+                                                    </div>
+                                                    <span className="max-w-[120px] inline-block uppercase tracking-wider text-[11px] text-[#164E63]">{m.name}</span>
                                                 </div>
                                             </th>
                                         ))}
@@ -623,6 +595,24 @@ const FiltrationSousEvier = () => {
 
             </main>
             <Footer />
+
+            {/* Sticky Consultation CTA - Pro Max Conversion Tool */}
+            <div className="fixed bottom-8 right-8 z-[100] group hidden md:block">
+                <NavLink to="/consultation">
+                    <div className="relative">
+                        <div className="absolute inset-0 bg-cyan-600 rounded-full animate-ping opacity-20 group-hover:opacity-40 transition-opacity" />
+                        <div className="relative flex items-center gap-3 bg-white/90 backdrop-blur-xl border border-cyan-100 p-2 pr-6 rounded-full shadow-[0_20px_50px_rgba(0,0,0,0.1)] hover:shadow-[0_25px_60px_rgba(8,145,178,0.2)] transition-all duration-500 group-hover:-translate-y-2 group-hover:bg-cyan-600">
+                            <div className="w-12 h-12 bg-cyan-600 rounded-full flex items-center justify-center text-white group-hover:bg-white group-hover:text-cyan-600 transition-colors duration-500">
+                                <Sparkles className="w-6 h-6 animate-pulse" />
+                            </div>
+                            <div className="flex flex-col">
+                                <span className="text-[10px] font-black uppercase tracking-[0.2em] text-cyan-600 group-hover:text-white/80 transition-colors">Audit Gratuit</span>
+                                <span className="text-sm font-bold text-slate-900 group-hover:text-white transition-colors">Analyse d'eau</span>
+                            </div>
+                        </div>
+                    </div>
+                </NavLink>
+            </div>
         </div>
     );
 };
