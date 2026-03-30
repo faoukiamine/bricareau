@@ -777,7 +777,7 @@ const Adoucissement = () => {
                                     variant="outline"
                                     asChild
                                 >
-                                    <NavLink to="/consultation">Planifiez-vous une consultation</NavLink>
+                                    <NavLink to="/consultation">Planifiez une consultation</NavLink>
                                 </Button>
                             </div>
 

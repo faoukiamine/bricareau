@@ -9,6 +9,7 @@ import heroGirl from "@/assets/cute-little-girl-washing-hands.jpg";
 import conditionneurImg from "@/assets/Gemini_Generated_Image_edgz5sedgz5sedgz.png";
 import tacComparisonImg from "@/assets/tac-comparison.png";
 import applianceDamageImg from "@/assets/tarte-chauffe-eau.jpg";
+import hardWaterFaucetImg from "@/assets/Hard Water-Faucet.jpg";
 import { softenerImg as residentialWaterSoftenerImg } from "./Blog pages/Comment régler la dureté de votre adoucisseur ";
 import { adoucisseurImg as adoucisseurFosseImg } from "./Blog pages/Adoucisseur-deau- et-fosse-septique--Mythes-et-réalités";
 import { conditionneursImg } from "./Blog pages/Adoucisseur avec sel ou sans sel";
@@ -332,44 +333,68 @@ const ConditionneursSansSel = () => {
           </div>
         </section>
 
-        {/* 6. CTA Section - Premium Immersive */}
-        <section className="relative h-[600px] flex items-center overflow-hidden">
+
+        {/* 10. PREMIUM CTA SECTION - REBUILT FOR IMPACT */}
+        <section className="relative py-32 flex items-center overflow-hidden bg-[#1e3a8a]">
+            {/* Animated background elements */}
+            <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-blue-600/20 to-transparent skew-x-12 translate-x-1/4" />
+            <div className="absolute bottom-0 left-0 w-1/2 h-full bg-gradient-to-r from-cyan-400/10 to-transparent -skew-x-12 -translate-x-1/4" />
+            
             {/* Background Image with Overlay */}
-            <div className="absolute inset-0 z-0">
+            <div className="absolute inset-0 z-0 opacity-40">
                 <img
                     src={helpKitchenImg}
-                    alt="Protection écologique de la cuisine et du foyer"
-                    className="w-full h-full object-cover object-[right_bottom]"
+                    alt="Problématique d'eau dure sur la robinetterie - Solution Bricareau"
+                    className="w-full h-full object-cover grayscale brightness-150"
                 />
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 via-blue-800/60 to-blue-500/30 backdrop-blur-[2px]" />
+                <div className="absolute inset-0 bg-[#1e3a8a]/10 backdrop-blur-sm" />
             </div>
-            <div className="container mx-auto px-6 relative z-10 text-center">
-                <div className="max-w-4xl mx-auto">
-                    <h2 className="text-white mb-6">
-                        <span className="font-bold block tracking-tight opacity-90">Protégez votre maison, préservez la nature.</span>
-                    </h2>
-                    <p className="text-white font-light text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
-                        Passez à la technologie TAC et neutralisez le calcaire sans aucun produit chimique ni gaspillage d'eau. Profitez d’une solution anti-tartre performante, écologique et sans entretien.
-                    </p>
-                    <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+
+            <div className="container mx-auto px-6 relative z-10">
+                <div className="max-w-5xl mx-auto text-center space-y-12">
+                    <div className="space-y-6">
+                        <span className="inline-block px-4 py-1.5 bg-white text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.4em]">
+                            PRENEZ LE CONTRÔLE DE VOTRE EAU
+                        </span>
+                        <h2 className="text-4xl md:text-6xl lg:text-5xl font-light text-white leading-[1.1] tracking-tighter">
+                            Protégez votre maison, <br />
+                            <span className="text-white italic font-bold font-serif">préservez la nature.</span>
+                        </h2>
+                        <p className="text-lg md:text-xl text-blue-100/80 max-w-2xl mx-auto font-light leading-relaxed">
+                            Passez à la technologie TAC et neutralisez le calcaire sans aucun produit chimique ni gaspillage d'eau. Profitez d’une solution anti-tartre performante, écologique et sans entretien. <br className="hidden md:block" />
+                        </p>
+                    </div>
+
+                    <div className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-4">
                         <Button asChild>
                             <a href="tel:18552649328" className="flex items-center gap-3">
                                 <Phone className="h-5 w-5 animate-bounce" />
                                 Parlez à un expert
                             </a>
                         </Button>
-                                                                    
                         <Button
                             variant="outline"
                             asChild
                         >
-                            <NavLink to="/consultation">Planifiez-vous une consultation</NavLink>
+                            <NavLink to="/consultation">Planifiez une consultation</NavLink>
                         </Button>
                     </div>
 
-                    <p className="mt-8 text-white/50 text-sm font-light">
-                        Disponible 7j/7 — Réponse en moins de 24h
-                    </p>
+                    <div className="pt-8 flex flex-col items-center gap-4">
+                        <div className="flex -space-x-4">
+                            {[1, 2, 3, 4].map((i) => (
+                                <div key={i} className="w-12 h-12 rounded-full border-4 border-[#1e3a8a] bg-blue-400 overflow-hidden shadow-xl">
+                                    <img src={`https://i.pravatar.cc/150?img=${i + 10}`} alt="Expert" className="w-full h-full object-cover" />
+                                </div>
+                            ))}
+                            <div className="w-12 h-12 rounded-full border-4 border-[#1e3a8a] bg-white flex items-center justify-center text-blue-900 font-bold text-xs shadow-xl">
+                                4.9/5
+                            </div>
+                        </div>
+                        <p className="text-blue-200/60 text-sm font-medium">
+                            Rejoignez plus de <span className="text-white">1,500 familles</span> satisfaites au Québec cette année.
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>

@@ -530,26 +530,17 @@ const AdoucisseurEauMunicipal = () => {
                             </div>
 
                             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-4">
-                                <Button
-                                    size="lg"
-                                    className="h-16 px-10 bg-blue-600 text-white hover:bg-white hover:text-blue-600 rounded-full text-lg shadow-2xl shadow-blue-900/50 hover:scale-105 transition-all duration-500 active:scale-95"
-                                    asChild
-                                >
+                                <Button asChild>
                                     <a href="tel:18552649328" className="flex items-center gap-3">
-                                        <Phone className="h-6 w-6 animate-pulse" />
-                                        Parlez avec un expert
+                                        <Phone className="h-5 w-5 animate-bounce" />
+                                        Parlez à un expert
                                     </a>
                                 </Button>
-                                                                            
-                                <Button 
-                                    size="lg"
-                                    className="h-16 px-10 bg-blue-600 text-white hover:bg-white hover:text-blue-600 rounded-full text-lg shadow-2xl shadow-blue-900/50 hover:scale-105 transition-all duration-500 active:scale-95 group"
+                                <Button
+                                    variant="outline"
                                     asChild
                                 >
-                                    <NavLink to="/consultation" className="flex items-center gap-2">
-                                        Demandez une consultation
-                                        <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                                    </NavLink>
+                                    <NavLink to="/consultation">Planifiez une consultation</NavLink>
                                 </Button>
                             </div>
 
