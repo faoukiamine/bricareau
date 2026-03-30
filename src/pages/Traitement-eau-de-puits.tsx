@@ -171,7 +171,7 @@ const TraitementEauDePuits = () => {
             </div>
 
             {/* Bento Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 auto-rows-[240px]">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 auto-rows-[minmax(320px,auto)]">
               {problems.map((problem, idx) => {
                 // Custom grid spans for Bento feel
                 const isFeatured = idx === 0; // First item (Fer) is large
@@ -180,10 +180,11 @@ const TraitementEauDePuits = () => {
                 return (
                   <div
                     key={idx}
-                    className={`group relative rounded-[2.5rem] overflow-hidden border border-white bg-white/40 backdrop-blur-xl shadow-sm hover:shadow-2xl transition-all duration-700 hover:-translate-y-2
-                      ${isFeatured ? 'md:col-span-2 md:row-span-2' : ''}
-                      ${isWide ? 'md:col-span-2' : ''}
+                    className={`group relative rounded-[2.5rem] overflow-hidden border border-white bg-white/40 backdrop-blur-xl shadow-sm hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 cursor-pointer
+                      ${isFeatured ? "md:col-span-2 md:row-span-2" : ""}
+                      ${isWide ? "md:col-span-2" : ""}
                     `}
+                    onClick={() => (window.location.href = "/consultation")}
                   >
                     {/* Background Image with Overlay */}
                     <div className="absolute inset-0 z-0">
@@ -196,10 +197,12 @@ const TraitementEauDePuits = () => {
                     </div>
 
                     {/* Content */}
-                    <div className="relative z-10 p-8 h-full flex flex-col justify-between">
+                    <div className="relative z-10 p-10 h-full flex flex-col justify-start gap-6">
                       <div className="flex justify-between items-start">
                         <div className="w-12 h-12 rounded-2xl bg-white shadow-md flex items-center justify-center group-hover:bg-blue-600 transition-colors duration-500">
-                          <span className="text-sm font-black text-slate-400 group-hover:text-white">0{idx + 1}</span>
+                          <span className="text-sm font-black text-slate-400 group-hover:text-white">
+                            0{idx + 1}
+                          </span>
                         </div>
                         {isFeatured && (
                           <span className="px-3 py-1 bg-blue-600 text-white rounded-full text-[10px] font-black uppercase tracking-widest">
@@ -212,17 +215,20 @@ const TraitementEauDePuits = () => {
                         <h3 className="card-title group-hover:text-blue-600 transition-colors duration-500">
                           {problem.title}
                         </h3>
-                        <p 
-                          className={`body-pro-max text-slate-600 text-justify ${isFeatured ? 'max-w-md' : ''}`}
+                        <p
+                          className={`body-pro-max text-slate-600 text-left ${
+                            isFeatured ? "max-w-md" : "line-clamp-4"
+                          }`}
                         >
                           {problem.desc}
                         </p>
                       </div>
-                    </div>
 
-                    {/* Interactive Corners */}
-                    <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                    <div className="absolute bottom-4 right-8 opacity-0 group-hover:opacity-100 group-hover:translate-x-2 transition-all duration-500">
+                      {/* Diagnostic Action Overlay - Only visible on hover */}
+                      <div className="mt-auto pt-2 flex items-center gap-3 text-[#2563eb] font-black text-[10px] uppercase tracking-widest opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500">
+                        <span>Diagnostiquer cette eau</span>
+                        <ArrowRight className="w-4 h-4" />
+                      </div>
                     </div>
                   </div>
                 );
@@ -452,6 +458,110 @@ const TraitementEauDePuits = () => {
                 <CarouselNext className="relative static translate-y-0 translate-x-0 bg-blue-600 text-white hover:bg-blue-700 border-none" />
               </div>
             </Carousel>
+          </div>
+        </section>
+
+        {/* 6.5. Avant / Après - Visual Proof Section */}
+        <section className="relative py-32 bg-slate-50 overflow-hidden">
+          <div className="container mx-auto px-6 relative z-10">
+            <div className="text-center mb-24 max-w-3xl mx-auto">
+              <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.2em] mb-8">
+                RÉSULTATS CONCRETS
+              </span>
+              <h2 className="mb-8 heading-pro-max text-center">
+                <span className="italic font-light text-[#2563eb] block">Avant / Après :</span>
+                <span className="font-bold text-[#1e3a8a] block">La Transformation Bricareau</span>
+              </h2>
+              <p className="body-pro-max text-slate-500 text-center">
+                Ne vous contentez pas de nous croire sur parole. Visualisez l'impact immédiat de nos systèmes sur la qualité, la clarté et la sécurité de votre eau de puits.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              {/* Comparison 1: Iron & Rust */}
+              <div className="group bg-white rounded-[3rem] p-8 lg:p-12 border border-slate-100 shadow-xl hover:shadow-2xl transition-all duration-700">
+                <div className="flex items-center gap-6 mb-12">
+                   <div className="w-16 h-16 rounded-2xl bg-orange-100 flex items-center justify-center text-orange-600">
+                     <span className="text-xl font-black">Fe</span>
+                   </div>
+                   <div>
+                     <h3 className="text-2xl font-bold text-[#1e3a8a]">Fer & Manganèse</h3>
+                     <p className="text-sm text-slate-500">Élimination des taches et du goût métallique</p>
+                   </div>
+                </div>
+
+                <div className="grid grid-cols-2 gap-4 relative">
+                  {/* Before */}
+                  <div className="space-y-4">
+                    <div className="relative aspect-square rounded-[2rem] overflow-hidden">
+                      <img src={rouilleThumbUpdated} alt="Eau de puits ferreuse avant traitement" className="w-full h-full object-cover grayscale-[0.3]" />
+                      <div className="absolute inset-0 bg-orange-900/20" />
+                      <span className="absolute top-4 left-4 bg-red-600 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest">Avant</span>
+                    </div>
+                    <p className="text-xs font-medium text-slate-400 text-center">Eau tachée, sédiments visibles</p>
+                  </div>
+                  {/* After */}
+                  <div className="space-y-4">
+                    <div className="relative aspect-square rounded-[2rem] overflow-hidden border-4 border-blue-600/20">
+                      <img src={happyFamilyImg} alt="Eau pure après traitement Bricareau" className="w-full h-full object-cover opacity-90" />
+                      <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/10 to-transparent" />
+                      <span className="absolute top-4 left-4 bg-blue-600 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest">Après</span>
+                    </div>
+                    <p className="text-xs font-bold text-blue-600 text-center">Pureté cristalline certifiée</p>
+                  </div>
+                  {/* Connector Arrow */}
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-lg border border-slate-100 flex items-center justify-center z-10 text-blue-600">
+                    <ChevronRight className="w-6 h-6" />
+                  </div>
+                </div>
+              </div>
+
+              {/* Comparison 2: Turbidité & Clarté */}
+              <div className="group bg-white rounded-[3rem] p-8 lg:p-12 border border-slate-100 shadow-xl hover:shadow-2xl transition-all duration-700">
+                <div className="flex items-center gap-6 mb-12">
+                   <div className="w-16 h-16 rounded-2xl bg-blue-100 flex items-center justify-center text-blue-600">
+                     <span className="text-xl font-black">H2O</span>
+                   </div>
+                   <div>
+                     <h3 className="text-2xl font-bold text-[#1e3a8a]">Turbidité & Algues</h3>
+                     <p className="text-sm text-slate-500">Filtration multi-niveaux pour une eau limpide</p>
+                   </div>
+                </div>
+
+                <div className="grid grid-cols-2 gap-4 relative">
+                  {/* Before */}
+                  <div className="space-y-4">
+                    <div className="relative aspect-square rounded-[2rem] overflow-hidden">
+                      <img src={turbideWaterThumb} alt="Eau de puits trouble avant filtration" className="w-full h-full object-cover" />
+                      <div className="absolute inset-0 bg-slate-900/20" />
+                      <span className="absolute top-4 left-4 bg-red-600 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest">Avant</span>
+                    </div>
+                    <p className="text-xs font-medium text-slate-400 text-center">Eau trouble, particules en suspension</p>
+                  </div>
+                  {/* After */}
+                  <div className="space-y-4">
+                    <div className="relative aspect-square rounded-[2rem] overflow-hidden border-4 border-blue-600/20">
+                      <div className="w-full h-full bg-blue-50 flex items-center justify-center">
+                         <div className="w-3/4 h-3/4 rounded-full bg-blue-600/20 blur-3xl animate-pulse" />
+                         <img src={drinkingWaterImg} alt="Eau pure Bricareau" className="absolute inset-0 w-full h-full object-contain p-8 mix-blend-multiply" />
+                      </div>
+                      <span className="absolute top-4 left-4 bg-blue-600 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest">Après</span>
+                    </div>
+                    <p className="text-xs font-bold text-blue-600 text-center">Eau 100% limpide et inodore</p>
+                  </div>
+                  {/* Connector Arrow */}
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-lg border border-slate-100 flex items-center justify-center z-10 text-blue-600">
+                    <ChevronRight className="w-6 h-6" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="mt-20 text-center">
+              <Button asChild className="h-16 px-12 rounded-full text-lg shadow-blue-200">
+                <a href="/consultation">Obtenir ma solution sur mesure</a>
+              </Button>
+            </div>
           </div>
         </section>
 
@@ -728,6 +838,30 @@ const TraitementEauDePuits = () => {
           </div>
         </section>
       </main>
+
+      {/* Floating Sticky CTA - Phase III Conversion Focus */}
+      <div className="fixed bottom-8 right-8 z-[100] animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-[3s] pointer-events-none">
+        <div className="pointer-events-auto group/sticky">
+          <Button
+            asChild
+            className="h-16 px-8 rounded-full bg-white/9 worst-blur text-[#1e3a8a] border border-slate-200/50 shadow-[0_20px_60px_rgba(0,0,0,0.1)] hover:shadow-blue-200/50 hover:bg-white hover:-translate-y-2 transition-all duration-500 active:scale-95"
+            style={{ backdropFilter: "blur(20px)" }}
+          >
+            <a href="/consultation" className="flex items-center gap-4">
+              <div className="relative">
+                <div className="w-10 h-10 bg-[#2563eb] rounded-full flex items-center justify-center text-white group-hover/sticky:rotate-[360deg] transition-all duration-700 shadow-lg shadow-blue-200">
+                  <ArrowRight className="w-5 h-5" />
+                </div>
+                <span className="absolute -top-1 -right-1 w-3 h-3 bg-green-500 rounded-full border-2 border-white animate-pulse" />
+              </div>
+              <span className="font-black text-sm uppercase tracking-wider whitespace-nowrap">
+                Consultation Gratuite
+              </span>
+            </a>
+          </Button>
+        </div>
+      </div>
+
       <Footer />
     </div>
   );
