@@ -55,6 +55,9 @@ import hotelClassImg from "@/assets/hotel_class.svg";
 import contaminatedwaterImg from "@/assets/2148926639.jpg";
 import arrowDownIcon from "@/assets/keyboard_double_arrow_down.svg";
 import arrowUpIcon from "@/assets/keyboard_double_arrow_up.svg";
+import hardWaterFaucetImg from "@/assets/Hard Water-Faucet.jpg";
+import newbornHealthImg from "@/assets/47A0F39600000578-5222035-image-a-1_1514911887749.jpg";
+import waterTasteImg from "@/assets/water-taste.jpg";
 
 
 import {
@@ -160,7 +163,7 @@ const Filtration = () => {
                                     benefit: "Sécurité Totale",
                                     color: "bg-pink-500",
                                     icon: <Microscope className="w-6 h-6" />,
-                                    img: africanGirlImg
+                                    img: newbornHealthImg
                                 },
                                 {
                                     title: "Réseaux Vétustes",
@@ -176,7 +179,7 @@ const Filtration = () => {
                                     benefit: "Confort Gustatif",
                                     color: "bg-blue-600",
                                     icon: <GlassWater className="w-6 h-6" />,
-                                    img: teenagerShowerImg
+                                    img: waterTasteImg
                                 }
                             ].map((item, i) => (
                                 <div 
@@ -192,7 +195,7 @@ const Filtration = () => {
                                         <img 
                                             src={item.img} 
                                             alt={item.title} 
-                                            className="w-full h-full object-cover opacity-20 group-hover:opacity-40 transition-opacity grayscale group-hover:grayscale-0" 
+                                            className="w-full h-full object-cover opacity-1 group-hover:opacity-40 transition-opacity grayscale group-hover:grayscale-0" 
                                         />
                                         <div className="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-transparent" />
                                     </div>
@@ -619,45 +622,70 @@ const Filtration = () => {
                         </div>
                     </div>
                 </section>
-        {/* 9. CTA Section - Premium Immersive */}
-        <section className="relative h-[600px] flex items-center overflow-hidden">
-          {/* Background Image with Overlay */}
-          <div className="absolute inset-0 z-0">
-            <img
-              src={ourteamstudyyourwaterImg}
-              alt="Expert Bricareau en traitement d'eau de puits"
-              className="w-full h-full object-cover object-[40%_5%]"
-            />
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 via-blue-900/70 to-blue-800/30 backdrop-blur-[2px]" />
-          </div>
 
-          <div className="container mx-auto px-6 relative z-10 text-center">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="heading-pro-max text-white text-center mb-6">
-                <span className="font-bold block tracking-tight">Un accompagnement personnalisé pour vous guider vers le système adapté à votre réalité et votre budget.</span>
-              </h2>
-
-              <p className="body-pro-max !text-white text-center mb-12 max-w-2xl mx-auto">
-                Vous n’êtes pas certain de savoir si vous avez besoin d’un filtre toute maison, d’un système sous évier ou d’une station d’osmose inverse ? Contactez‑nous pour une évaluation de votre eau et de vos besoins. 
-              </p>
-              <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                <Button size="lg" asChild>
-                  <a href="tel:18552649328" className="flex items-center gap-3">
-                    <Phone className="h-5 w-5 animate-bounce" />
-                    Parlez à un expert
-                  </a>
-                </Button>
-
-                <Button variant="outline" size="lg" asChild>
-                  <NavLink to="/consultation">Planifiez une consultation gratuite</NavLink>
-                </Button>
-              </div>
-
-              <p className="mt-8 text-white/50 text-sm font-light">
-                Disponible 7j/7 — Réponse en moins de 24h
-              </p>
+        {/* 10. PREMIUM CTA SECTION - REBUILT FOR IMPACT */}
+        <section className="relative py-32 flex items-center overflow-hidden bg-[#1e3a8a]">
+            {/* Animated background elements */}
+            <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-blue-600/20 to-transparent skew-x-12 translate-x-1/4" />
+            <div className="absolute bottom-0 left-0 w-1/2 h-full bg-gradient-to-r from-cyan-400/10 to-transparent -skew-x-12 -translate-x-1/4" />
+            
+            {/* Background Image with Overlay */}
+            <div className="absolute inset-0 z-0 opacity-40">
+                <img
+                    src={ourteamstudyyourwaterImg}
+                    alt="Problématique d'eau dure sur la robinetterie - Solution Bricareau"
+                    className="w-full h-full object-cover grayscale brightness-150"
+                />
+                <div className="absolute inset-0 bg-[#1e3a8a]/10 backdrop-blur-sm" />
             </div>
-          </div>
+
+            <div className="container mx-auto px-6 relative z-10">
+                <div className="max-w-5xl mx-auto text-center space-y-12">
+                    <div className="space-y-6">
+                        <span className="inline-block px-4 py-1.5 bg-white text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.4em]">
+                            AVIS D'EXPERTS D'EAU
+                        </span>
+                        <h2 className="text-4xl md:text-6xl lg:text-5xl font-light text-white leading-[1.1] tracking-tighter">
+                            Démystifiez vos options <br />
+                            <span className="text-white italic font-bold font-serif">de filtration d'eau résidentielle.</span>
+                        </h2>
+                        <p className="text-lg md:text-xl text-blue-100/80 max-w-2xl mx-auto font-light leading-relaxed">
+                            Vous n’êtes pas certain de savoir si vous avez besoin d’un filtre d'eau pour toute la maison, d’un système sous évier ou d’une station d’osmose inverse ? Contactez‑nous pour accompagnement personnalisé pour vous guider vers le système adapté à votre réalité et votre budget.
+                        </p>
+                    </div>
+
+                    <div className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-4">
+                        <Button asChild>
+                            <a href="tel:18552649328" className="flex items-center gap-3">
+                                <Phone className="h-5 w-5 animate-bounce" />
+                                Parlez à un expert
+                            </a>
+                        </Button>
+                        <Button
+                            variant="outline"
+                            asChild
+                        >
+                            <NavLink to="/consultation">Planifiez une consultation</NavLink>
+                        </Button>
+                    </div>
+
+                    <div className="pt-8 flex flex-col items-center gap-4">
+                        <div className="flex -space-x-4">
+                            {[1, 2, 3, 4].map((i) => (
+                                <div key={i} className="w-12 h-12 rounded-full border-4 border-[#1e3a8a] bg-blue-400 overflow-hidden shadow-xl">
+                                    <img src={`https://i.pravatar.cc/150?img=${i + 10}`} alt="Expert" className="w-full h-full object-cover" />
+                                </div>
+                            ))}
+                            <div className="w-12 h-12 rounded-full border-4 border-[#1e3a8a] bg-white flex items-center justify-center text-blue-900 font-bold text-xs shadow-xl">
+                                4.9/5
+                            </div>
+                        </div>
+                        <p className="text-blue-200/60 text-sm font-medium">
+                            Rejoignez plus de <span className="text-white">1,500 familles</span> satisfaites au Québec cette année.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </section>
 
                 {/* 11. FAQ Section */}

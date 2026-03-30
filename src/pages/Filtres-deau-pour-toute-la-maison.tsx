@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import { Button } from "@/components/ui/button";
 import heroFilter from "@/assets/12605.jpg";
-import eauFontaineImg from "@/assets/10341859.jpg";
+import FilteredcitywaterImg from "@/assets/2150084031.jpg";
 import {
     ArrowRight,
     Droplets,
@@ -22,6 +22,7 @@ import { NavLink } from "@/components/NavLink";
 import { useNavigate } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import waterTestingImg from "@/assets/reasons-to-drink-more-water.jpg";
+import hardWaterFaucetImg from "@/assets/Hard Water-Faucet.jpg";
 import waterzeroodorImg from "@/assets/pexels-vlada-karpovich-6802947.jpg";
 import specializedFiltersImg from "@/assets/Filtres d'eau spécialisés.webp";
 import crystalClearWaterImg from "@/assets/5846952.jpg";
@@ -211,7 +212,6 @@ const FiltresTouteMaison = () => {
                                     desc: "Fini l'odeur de 'piscine'. Transformez chaque robinet en une fontaine d'eau fraîche, évitant l'achat de milliers de bouteilles plastiques.",
                                     img: waterzeroodorImg,
                                     badge: "Le Confort Gout",
-                                    icon: <Droplets className="w-5 h-5 text-emerald-500" />
                                 },
                                 { 
                                     title: "Peau & Cheveux", 
@@ -219,7 +219,6 @@ const FiltresTouteMaison = () => {
                                     desc: "Le chlore et les sédiments dessèchent votre peau et ternissent vos cheveux. Offrez-vous une expérience spa à chaque douche.",
                                     img: comfortImg,
                                     badge: "Bien-être",
-                                    icon: <Sparkles className="w-5 h-5 text-blue-400" />
                                 },
                                 { 
                                     title: "Plomberie Saine", 
@@ -227,7 +226,6 @@ const FiltresTouteMaison = () => {
                                     desc: "Les sédiments et le fer créent des micro-abrasions et de la corrosion. Protégez vos tuyauteries et vos lave-vaisselles haut de gamme.",
                                     img: wholeHouseprotectionImg,
                                     badge: "Protection Asset",
-                                    icon: <Shield className="w-5 h-5 text-amber-500" />
                                 },
                                 { 
                                     title: "Eau Cristalline", 
@@ -235,7 +233,6 @@ const FiltresTouteMaison = () => {
                                     desc: "Éliminez la turbidité et les particules de rouille pour une eau transparente. Idéal pour ceux qui ne tolèrent aucun compromis sur la pureté.",
                                     img: crystalClearWaterImg,
                                     badge: "Pureté Vision",
-                                    icon: <Waves className="w-5 h-5 text-blue-600" />
                                 }
                             ].map((item, i) => (
                                 <div key={i} className="group relative bg-[#F8FAFC] rounded-[2.5rem] p-4 border border-slate-100/50 hover:bg-white transition-all duration-700 hover:shadow-[0_40px_100px_-20px_rgba(30,58,138,0.1)] overflow-hidden">
@@ -249,9 +246,8 @@ const FiltresTouteMaison = () => {
                                         <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                                         
                                         <div className="absolute top-4 left-4 z-20">
-                                            <div className="bg-white/90 backdrop-blur-xl px-4 py-1.5 rounded-full flex items-center gap-2 shadow-sm">
-                                                {item.icon}
-                                                <span className="text-[10px] font-black text-slate-900 uppercase tracking-widest">{item.badge}</span>
+                                            <div className="bg-white/30 backdrop-blur-md px-4 py-1.5 rounded-full flex items-center shadow-sm border border-white/20">
+                                                <span className="text-[10px] font-black text-white uppercase tracking-widest">{item.badge}</span>
                                             </div>
                                         </div>
                                     </div>
@@ -485,44 +481,67 @@ const FiltresTouteMaison = () => {
                     </div>
                 </section>
 
-                {/* 9. CTA Section - Premium Immersive */}
-                <section className="relative h-[600px] flex items-center overflow-hidden">
+                {/* 10. PREMIUM CTA SECTION - REBUILT FOR IMPACT */}
+                <section className="relative py-32 flex items-center overflow-hidden bg-[#1e3a8a]">
+                    {/* Animated background elements */}
+                    <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-blue-600/20 to-transparent skew-x-12 translate-x-1/4" />
+                    <div className="absolute bottom-0 left-0 w-1/2 h-full bg-gradient-to-r from-cyan-400/10 to-transparent -skew-x-12 -translate-x-1/4" />
+                    
                     {/* Background Image with Overlay */}
-                    <div className="absolute inset-0 z-0">
+                    <div className="absolute inset-0 z-0 opacity-40">
                         <img
-                            src={eauFontaineImg}
-                            alt="Expert Bricareau en fontaines d'eau"
-                            className="w-full h-full object-cover"
+                            src={FilteredcitywaterImg}
+                            alt="Problématique d'eau dure sur la robinetterie - Solution Bricareau"
+                            className="w-full h-full object-cover grayscale brightness-150"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 via-blue-900/90 to-blue-800/80 backdrop-blur-[2px]" />
+                        <div className="absolute inset-0 bg-[#1e3a8a]/10 backdrop-blur-sm" />
                     </div>
-                    <div className="container mx-auto px-6 relative z-10 text-center">
-                        <div className="max-w-4xl mx-auto">
-                            <h2 className="mb-6 heading-pro-max">
-                                <span className="font-bold text-white block">Protégez votre peau et votre santé à la source.</span>
-                            </h2>
-                            <p className="text-white font-light text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
-                                Le chlore et les impuretés de l'eau municipale altèrent le goût de votre eau, assèchent votre peau et abîment vos cheveux. Installez une barrière protectrice pour toute la maison et ressentez la différence dès la première douche.                           
-                            </p>
-                            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+
+                    <div className="container mx-auto px-6 relative z-10">
+                        <div className="max-w-5xl mx-auto text-center space-y-12">
+                            <div className="space-y-6">
+                                <span className="inline-block px-4 py-1.5 bg-white text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.4em]">
+                                    VOTRE PEAU ET VOS CHEVEUX VOUS REMERCIERONT
+                                </span>
+                                <h2 className="text-4xl md:text-6xl lg:text-5xl font-light text-white leading-[1.1] tracking-tighter">
+                                    Libérez votre foyer <br />
+                                    <span className="text-white italic font-bold font-serif">du chlore et des sédiments.</span>
+                                </h2>
+                                <p className="text-lg md:text-xl text-blue-100/80 max-w-2xl mx-auto font-light leading-relaxed">
+                                    Le chlore et les impuretés de l'eau municipale altèrent le goût de votre eau, assèchent votre peau et abîment vos cheveux. Installez une barrière protectrice pour toute la maison et ressentez la différence dès la première douche.<br className="hidden md:block" />
+                                </p>
+                            </div>
+
+                            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-4">
                                 <Button asChild>
                                     <a href="tel:18552649328" className="flex items-center gap-3">
                                         <Phone className="h-5 w-5 animate-bounce" />
                                         Parlez à un expert
                                     </a>
                                 </Button>
-                                                                            
                                 <Button
                                     variant="outline"
                                     asChild
                                 >
-                                    <NavLink to="/consultation">Planifiez-vous une consultation</NavLink>
+                                    <NavLink to="/consultation">Planifiez une consultation</NavLink>
                                 </Button>
                             </div>
 
-                            <p className="mt-8 text-white/50 text-sm font-light">
-                                Disponible 7j/7 — Réponse en moins de 24h
-                            </p>
+                            <div className="pt-8 flex flex-col items-center gap-4">
+                                <div className="flex -space-x-4">
+                                    {[1, 2, 3, 4].map((i) => (
+                                        <div key={i} className="w-12 h-12 rounded-full border-4 border-[#1e3a8a] bg-blue-400 overflow-hidden shadow-xl">
+                                            <img src={`https://i.pravatar.cc/150?img=${i + 10}`} alt="Expert" className="w-full h-full object-cover" />
+                                        </div>
+                                    ))}
+                                    <div className="w-12 h-12 rounded-full border-4 border-[#1e3a8a] bg-white flex items-center justify-center text-blue-900 font-bold text-xs shadow-xl">
+                                        4.9/5
+                                    </div>
+                                </div>
+                                <p className="text-blue-200/60 text-sm font-medium">
+                                    Rejoignez plus de <span className="text-white">1,500 familles</span> satisfaites au Québec cette année.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </section>
