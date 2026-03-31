@@ -53,6 +53,7 @@ import recycleSvg from "@/assets/recycling.svg";
 import nestEcoLeafSvg from "@/assets/nest_eco_leaf.svg";
 import financeModeSvg from "@/assets/finance_mode.svg";
 import waterFilterPng from "@/assets/water-filter_8782563.png";
+import ourteamstudyyourwaterImg from "@/assets/10271.jpg";
 
 interface SolutionItem {
     title: string;
@@ -583,49 +584,70 @@ const Fontaines = () => {
 
 
 
-                {/* 5. CTA Section - Premium Immersive */}
-                <section className="relative py-32 overflow-hidden">
-                    {/* Background Image with Overlay */}
-                    <div className="absolute inset-0 z-0">
-                        <img
-                            src={eauFontaineImg}
-                            alt="Expert Bricareau en fontaines d'eau"
-                            className="w-full h-full object-cover"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 via-blue-800/60 to-blue-500/30 backdrop-blur-[2px]" />
-                    </div>
-                    <div className="container mx-auto px-6 relative z-10 text-center">
-                        <div className="max-w-4xl mx-auto">
-                            <h2 className="heading-pro-max text-white text-center mb-8">
-                                <span className="text-white block">Sublimez votre quotidien avec </span>
-                                <span className="text-white block">l'excellence de nos fontaines d'eau.</span>
-                            </h2>
-                            <p className="body-pro-max !text-white text-center mb-12 max-w-2xl mx-auto">
-                                Rejoignez le club familles Bricareau et profitez d'une source d'eau digne d'un palace, sans sortir de chez vous.
-                            </p>
+                {/* 11. PREMIUM CTA SECTION - REBUILT FOR IMPACT */}
+                <section className="relative py-32 flex items-center overflow-hidden bg-[#1e3a8a]">
+                  {/* Animated background elements */}
+                  <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-blue-600/20 to-transparent skew-x-12 translate-x-1/4" />
+                  <div className="absolute bottom-0 left-0 w-1/2 h-full bg-gradient-to-r from-cyan-400/10 to-transparent -skew-x-12 -translate-x-1/4" />
+                  
+                  {/* Background Image with Overlay */}
+                  <div className="absolute inset-0 z-0 opacity-40">
+                    <img
+                      src={eauFontaineImg}
+                      alt="Expert Bricareau analysant vos options de filtration"
+                      className="w-full h-full object-cover grayscale brightness-150"
+                    />
+                    <div className="absolute inset-0 bg-[#1e3a8a]/10 backdrop-blur-sm" />
+                  </div>
 
-                            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                                <Button asChild>
-                                    <a href="tel:18552649328" className="flex items-center gap-3">
-                                        <Phone className="h-5 w-5 animate-bounce" />
-                                        Parlez à un expert
-                                    </a>
-                                </Button>
+                  <div className="container mx-auto px-6 relative z-10">
+                    <div className="max-w-5xl mx-auto text-center space-y-12">
+                      <div className="space-y-6">
+                        <span className="inline-block px-4 py-1.5 bg-white text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.4em]">
+                          L’HYDRATATION SUPÉRIEURE À PORTÉE DE MAIN
+                        </span>
+                        <h2 className="text-4xl md:text-6xl lg:text-5xl font-light text-white leading-[1.1] tracking-tighter">
+                          Sublimez votre quotidien avec l'excellence <br />
+                          <span className="text-white italic font-bold font-serif">de nos fontaines d'eau.</span>
+                        </h2>
+                        <p className="text-lg md:text-xl text-blue-100/80 max-w-2xl mx-auto font-light leading-relaxed">
+                          Dites adieu aux bouteilles de plastique encombrantes et profitez d'une source d'eau pure, fraîche ou chaude, instantanément. Que ce soit pour votre foyer ou votre espace de travail, nos distributeurs allient design moderne et filtration de pointe pour une hydratation saine et écologique.</p>
+                      </div>
 
-                                <Button
-                                    variant="outline"
-                                    asChild
-                                >
-                                    <NavLink to="/consultation">Planifiez-vous une consultation</NavLink>
-                                </Button>
+                      <div className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-4">
+                        <Button asChild>
+                          <a href="tel:18552649328" className="flex items-center gap-3">
+                            <Phone className="h-5 w-5 animate-bounce" />
+                            Parlez à un expert
+                          </a>
+                        </Button>
+                        <Button
+                          variant="outline"
+                          asChild
+                        >
+                          <NavLink to="/consultation">Planifiez une consultation</NavLink>
+                        </Button>
+                      </div>
+
+                      <div className="pt-8 flex flex-col items-center gap-4">
+                        <div className="flex -space-x-4">
+                          {[1, 2, 3, 4].map((i) => (
+                            <div key={i} className="w-12 h-12 rounded-full border-4 border-[#1e3a8a] bg-blue-400 overflow-hidden shadow-xl">
+                              <img src={`https://i.pravatar.cc/150?img=${i + 10}`} alt="Expert" className="w-full h-full object-cover" />
                             </div>
-
-                            <p className="mt-8 text-white/50 text-sm font-light">
-                                Disponible 7j/7 — Réponse en moins de 24h
-                            </p>
+                          ))}
+                          <div className="w-12 h-12 rounded-full border-4 border-[#1e3a8a] bg-white flex items-center justify-center text-blue-900 font-bold text-xs shadow-xl">
+                            4.9/5
+                          </div>
                         </div>
+                        <p className="text-blue-200/60 text-sm font-medium">
+                          Rejoignez plus de <span className="text-white">1,500 familles</span> satisfaites au Québec cette année.
+                        </p>
+                      </div>
                     </div>
+                  </div>
                 </section>
+
 
                 {/* 6. Mission Éco-Responsable Bricareau Section - ULTRA MINIMALIST WITH DIFFUSED IMAGE */}
                 <section className="py-32 bg-slate-50 relative overflow-hidden">
@@ -782,7 +804,6 @@ const Fontaines = () => {
                 </section>
 
                 
-                <DiscoverExpert />
             </main>
             
             {/* Floating Sticky CTA - Phase III Conversion Focus */}
