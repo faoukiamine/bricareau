@@ -243,7 +243,7 @@ const Filtration = () => {
                             <div className="w-full lg:w-1/2 relative -mx-6 lg:mx-0">
                                 <div className="relative group">
                                     {/* Main Hero Image */}
-                                    <div className="relative z-10 rounded-none lg:rounded-[3rem] overflow-hidden aspect-[4/5] shadow-none lg:shadow-2xl transition-transform duration-700 group-hover:scale-[1.01]">
+                                    <div className="relative z-10 rounded-none lg:rounded-[3rem] overflow-hidden aspect-square shadow-none lg:shadow-2xl transition-transform duration-700 group-hover:scale-[1.01]">
                                         <img
                                             src={teenagerShowerImg}
                                             alt="Douche sous eau filtrée Bricareau - Protection de la peau et des cheveux"

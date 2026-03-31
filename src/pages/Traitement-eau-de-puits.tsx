@@ -11,6 +11,7 @@ import uvSystemImg from "@/assets/Systèmes de désinfection UV.webp";
 import waterSoftenerImg from "@/assets/Adoucisseurs d'eau.webp";
 import drinkingWaterImg from "@/assets/Solutions d'eau potable.webp";
 import specializedFiltersImg from "@/assets/Filtres d'eau spécialisés.webp";
+import eauCristallineImg from "@/assets/Eau cristalline.jpg";
 import rottenEggsThumb from "@/assets/Water_Smells_Like_Rotten_Eggs_1400x.webp";
 import waterTasteThumb from "@/assets/water-taste.jpg";
 import turbideWaterThumb from "@/assets/Turbide-Water.webp";
@@ -27,6 +28,8 @@ import labTestImg from "@/assets/506610454-612x612-1.jpg";
 import eauDureThumb from "@/assets/9e9f1b18-7b69-4af1-9e3d-322775a1ec72.jpg";
 import happyFamilyImg from "@/assets/happy-family-enjoying-time-together.jpg";
 import rouilleThumbUpdated from "@/assets/5a4674e7-575d-4cd9-b1f2-32522f8a7072.jpg";
+import WCwithoutIronImg from "@/assets/Cuvette de toilette sans taches de fer.jpg";
+import WCwithIronImg from "@/assets/Cuvette de toilette avec taches de fer.png";
 import mauvaisGoutThumb from "@/assets/blog3-1.jpg";
 import { heroImg as coliformBacteriaImg } from "./Blog pages/Bacteries-dans-le-puits-les-etapes-de-desinfection-choc";
 import { softenerImg as residentialWaterSoftenerImg } from "./Blog pages/Comment régler la dureté de votre adoucisseur ";
@@ -495,20 +498,20 @@ const TraitementEauDePuits = () => {
                   {/* Before */}
                   <div className="space-y-4">
                     <div className="relative aspect-square rounded-[2rem] overflow-hidden">
-                      <img src={rouilleThumbUpdated} alt="Eau de puits ferreuse avant traitement" className="w-full h-full object-cover grayscale-[0.3]" />
+                      <img src={WCwithIronImg} alt="Eau de puits ferreuse avant traitement" className="w-full h-full object-cover grayscale-[0.3]" />
                       <div className="absolute inset-0 bg-orange-900/20" />
                       <span className="absolute top-4 left-4 bg-red-600 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest">Avant</span>
                     </div>
-                    <p className="text-xs font-medium text-slate-400 text-center">Eau tachée, sédiments visibles</p>
+                    <p className="text-xs font-medium text-slate-400 text-center">Eau ferreuse et dépôts de rouille</p>
                   </div>
                   {/* After */}
                   <div className="space-y-4">
                     <div className="relative aspect-square rounded-[2rem] overflow-hidden border-4 border-blue-600/20">
-                      <img src={happyFamilyImg} alt="Eau pure après traitement Bricareau" className="w-full h-full object-cover opacity-90" />
+                      <img src={WCwithoutIronImg} alt="Eau pure après traitement Bricareau" className="w-full h-full object-cover opacity-90" />
                       <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/10 to-transparent" />
                       <span className="absolute top-4 left-4 bg-blue-600 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest">Après</span>
                     </div>
-                    <p className="text-xs font-bold text-blue-600 text-center">Pureté cristalline certifiée</p>
+                    <p className="text-xs font-bold text-blue-600 text-center">Éclat retrouvé, porcelaine comme neuve !</p>
                   </div>
                   {/* Connector Arrow */}
                   <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-lg border border-slate-100 flex items-center justify-center z-10 text-blue-600">
@@ -542,10 +545,7 @@ const TraitementEauDePuits = () => {
                   {/* After */}
                   <div className="space-y-4">
                     <div className="relative aspect-square rounded-[2rem] overflow-hidden border-4 border-blue-600/20">
-                      <div className="w-full h-full bg-blue-50 flex items-center justify-center">
-                         <div className="w-3/4 h-3/4 rounded-full bg-blue-600/20 blur-3xl animate-pulse" />
-                         <img src={drinkingWaterImg} alt="Eau pure Bricareau" className="absolute inset-0 w-full h-full object-contain p-8 mix-blend-multiply" />
-                      </div>
+                        <img src={eauCristallineImg} alt="Eau pure Bricareau" className="absolute inset-0 w-full h-full object-cover" />
                       <span className="absolute top-4 left-4 bg-blue-600 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest">Après</span>
                     </div>
                     <p className="text-xs font-bold text-blue-600 text-center">Eau 100% limpide et inodore</p>
@@ -602,9 +602,12 @@ const TraitementEauDePuits = () => {
                       { name: "Osmose inverse", img: drinkingWaterImg, badge: "Osmose Pure", color: "bg-emerald-600" },
                       { name: "Stérilisation UV", img: uvSystemImg, badge: "Stérilisation", color: "bg-amber-600" }
                     ].map((m, i) => (
-                      <th key={i} className="p-6 text-center">
+                      <th key={i} className="p-6 text-center align-bottom">
                         <div className="flex flex-col items-center gap-6">
-                          <div className="relative group/img">
+                          <div className="relative group/img pr-4 pt-4">
+                            <span className={`absolute top-0 right-0 z-20 px-3 py-1 ${m.color} text-white rounded-full text-[8px] font-bold uppercase tracking-widest shadow-lg shadow-blue-900/10 whitespace-nowrap`}>
+                              {m.badge}
+                            </span>
                             <div className="absolute inset-0 bg-blue-600 rounded-full blur-2xl opacity-0 group-hover/img:opacity-20 transition-opacity duration-700" />
                             <img
                               src={m.img}
@@ -613,9 +616,6 @@ const TraitementEauDePuits = () => {
                             />
                           </div>
                           <div className="space-y-2">
-                            <span className={`inline-block px-3 py-1 ${m.color} text-white rounded-full text-[8px] font-bold uppercase tracking-widest shadow-lg shadow-blue-900/10`}>
-                              {m.badge}
-                            </span>
                             <div className="text-lg font-bold text-[#1e3a8a]">{m.name}</div>
                           </div>
                         </div>
@@ -649,7 +649,7 @@ const TraitementEauDePuits = () => {
           </div>
         </section>
 
-        {/* 11. PREMIUM CTA SECTION - REBUILT FOR IMPACT */}
+        {/* 11. PREMIUM CTA SECTION */}
         <section className="relative py-32 flex items-center overflow-hidden bg-[#1e3a8a]">
           {/* Animated background elements */}
           <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-blue-600/20 to-transparent skew-x-12 translate-x-1/4" />

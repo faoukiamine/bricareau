@@ -161,6 +161,7 @@ const AdoucisseurEauMunicipal = () => {
         <div className="min-h-screen bg-white">
             <Header />
             <main>
+                {/* 1. Hero Section */}
                 <Hero 
                     image={heroBath}
                     highlightedTitle="Une douceur qui se sent,"
@@ -257,7 +258,7 @@ const AdoucisseurEauMunicipal = () => {
                     </div>
                 </section>
                 
-                {/* 4.5 PARCOURS SÉRÉNITÉ */}
+                {/* 3. TimeLine SÉRÉNITÉ */}
                 <section className="py-24 lg:py-32 bg-white relative overflow-hidden">
                      <div className="container mx-auto px-6 relative z-10">
                         <div className="text-center max-w-3xl mx-auto mb-20 lg:mb-24">
@@ -347,6 +348,7 @@ const AdoucisseurEauMunicipal = () => {
                      </div>
                 </section>
 
+                {/* 4. Comparative Analysis Section */}
                 <section className="py-24 bg-white relative overflow-hidden">
                     <div className="container mx-auto px-6">
                         <div className="text-center mb-16">
@@ -497,7 +499,7 @@ const AdoucisseurEauMunicipal = () => {
                     </div>
                 </section>
 
-                {/* 10. PREMIUM CTA SECTION - REBUILT FOR IMPACT */}
+                {/* 10. PREMIUM CTA SECTION */}
                 <section className="relative py-32 flex items-center overflow-hidden bg-[#1e3a8a]">
                     {/* Animated background elements */}
                     <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-blue-600/20 to-transparent skew-x-12 translate-x-1/4" />

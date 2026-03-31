@@ -415,11 +415,20 @@ const AdoucisseursEauDePuits = () => {
                                             { name: "Sérénité HE", img: SerenityWaterSoftenerImg, badge: "Choix des Familles", color: "bg-blue-600" },
                                             { name: "Infiniti HE", img: TwinAlternatingWaterSoftenerImg, badge: "Performance 24/7", color: "bg-indigo-700" }
                                         ].map((m, i) => (
-                                            <th key={i} className="p-6 text-center">
+                                            <th key={i} className="p-6 text-center align-bottom">
                                                 <div className="flex flex-col items-center gap-6">
-                                                    <img src={m.img} alt={m.name} className="w-[140px] h-[120px] object-contain mx-auto mix-blend-multiply transition-transform group-hover:scale-110" />
+                                                    <div className="relative group/img pr-4 pt-4">
+                                                        <span className={`absolute top-0 right-0 z-20 px-3 py-1 ${m.color} text-white rounded-full text-[8px] font-bold uppercase tracking-widest shadow-lg shadow-blue-900/10 whitespace-nowrap`}>
+                                                            {m.badge}
+                                                        </span>
+                                                        <div className="absolute inset-0 bg-blue-600 rounded-full blur-2xl opacity-0 group-hover/img:opacity-20 transition-opacity duration-700" />
+                                                        <img
+                                                            src={m.img}
+                                                            alt={m.name}
+                                                            className="w-[140px] h-[120px] object-contain mx-auto mix-blend-multiply relative z-10 transition-transform duration-700 group-hover/img:scale-110"
+                                                        />
+                                                    </div>
                                                     <div className="space-y-2">
-                                                        <span className={`inline-block px-3 py-1 ${m.color} text-white rounded-full text-[8px] font-bold uppercase tracking-widest`}>{m.badge}</span>
                                                         <div className="text-lg font-bold text-[#1e3a8a]">{m.name}</div>
                                                     </div>
                                                 </div>

@@ -8,15 +8,12 @@ import heroFilter from "@/assets/12605.jpg";
 import FilteredcitywaterImg from "@/assets/2150084031.jpg";
 import {
     ArrowRight,
-    Droplets,
     ChevronRight,
     CheckCircle2,
-    Shield,
-    TrendingDown,
+    CheckCircle,
     X,
     Phone,
     Sparkles,
-    Waves
 } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import { useNavigate } from "react-router-dom";
@@ -26,6 +23,7 @@ import hardWaterFaucetImg from "@/assets/Hard Water-Faucet.jpg";
 import waterzeroodorImg from "@/assets/pexels-vlada-karpovich-6802947.jpg";
 import specializedFiltersImg from "@/assets/Filtres d'eau spécialisés.webp";
 import crystalClearWaterImg from "@/assets/5846952.jpg";
+import installationSoftenerImg from "@/assets/WaterSoftenerInstallation.jpg";
 import comfortImg from "@/assets/71luIOvIQuL._AC_SL1500_.jpg";
 import wholeHouseprotectionImg from "@/assets/342800.jpg";
 import { heroImg as eauVilleFiltreeImg } from "./Blog pages/Pourquoi-meme-leau-de-ville-a-besoin-detre-filtree";
@@ -35,7 +33,7 @@ import {
     Accordion,
     AccordionContent,
     AccordionItem,
-    AccordionTrigger
+    AccordionTrigger,
 } from "@/components/ui/accordion";
 import ConsultationFormSection from "@/components/ConsultationFormSection";
 
@@ -134,28 +132,6 @@ const comparisonData: ComparisonItem[] = [
 const FiltresTouteMaison = () => {
     const navigate = useNavigate();
     const [showAllFaqs, setShowAllFaqs] = React.useState(false);
-    const [cardStack, setCardStack] = useState([0, 1, 2, 3]);
-
-    const handleCardClick = (cardIndex: number) => {
-        setCardStack(prev => {
-            const newStack = prev.filter(idx => idx !== cardIndex);
-            return [...newStack, cardIndex];
-        });
-    };
-
-    const cardData = [
-        { id: 0, title: "Zéro odeur", img: waterzeroodorImg, desc: "Dites adieu aux odeurs d'œufs pourris (soufre) et au goût de chlore pour une eau fraîche, revigorante et délicieuse à chaque gorgée." },
-        { id: 1, title: "Protection totale", img: wholeHouseprotectionImg, desc: "Empêchez le fer et les minéraux corrosifs de tacher vos éviers et de détruire votre plomberie. Nos filtres prolongent la vie de vos électroménagers." },
-        { id: 2, title: "Eau cristalline", img: crystalClearWaterImg, desc: "Éliminez les sédiments et la turbidité pour une eau d'une clarté professionnelle partout chez vous, à chaque robinet. Une pureté visible." },
-        { id: 3, title: "Confort durable", img: comfortImg, desc: "Savourez un bien-être quotidien inégalé grâce à une eau exceptionnelle qui protège votre peau et votre tuyauterie." }
-    ];
-
-    const positionStyles = [
-        "transform -rotate-[16deg] -translate-x-20 translate-y-16 z-0 scale-90 opacity-60",
-        "transform -rotate-[8deg] -translate-x-10 translate-y-8 z-10 scale-95 opacity-80",
-        "transform -rotate-[2deg] translate-x-0 translate-y-0 z-20 scale-100 opacity-95",
-        "transform rotate-[12deg] translate-x-16 -translate-y-10 z-30 scale-105 opacity-100 shadow-[20px_50px_100px_-20px_rgba(30,58,138,0.3)] shadow-blue-900/40"
-    ];
 
     useEffect(() => {
         document.title = "Filtres d'eau pour toute la maison | Filtration Point d'Entrée | Bricareau";
@@ -197,7 +173,7 @@ const FiltresTouteMaison = () => {
                             </span>
                              <h2 className="mb-8 heading-pro-max text-center">
                                 <span className="italic font-light text-[#2563eb] block">L'invisible menace sous</span>
-                                <span className="font-bold text-[#1e3a8a] block text-center">votre robinet quotidien.</span>
+                                <span className="font-bold text-[#1e3a8a] block">votre robinet quotidien.</span>
                             </h2>
                             <p className="body-pro-max text-slate-500 text-center mx-auto">
                                 Vos sens vous alertent : une odeur de chlore, une peau qui tiraille, ou des dépôts suspects. Identifiez votre symptôme et découvrez le bouclier Bricareau adapté.
@@ -315,14 +291,34 @@ const FiltresTouteMaison = () => {
                                          </p>
                                         <div
                                             className="inline-flex items-center gap-2 text-blue-600 font-bold text-xs tracking-widest uppercase mt-4 group-hover:underline self-end"
-                                            style={{}}
                                         >
-                                            <span></span>
+                                            <span>En savoir plus</span>
                                             <ArrowRight className="h-6 w-6 transform group-hover:translate-x-1 transition-transform" />
                                         </div>
                                     </div>
                                 </div>
                             ))}
+                        </div>
+                        
+                        {/* Featured Banner with generated image */}
+                        <div className="rounded-none lg:rounded-[3rem] overflow-hidden shadow-none lg:shadow-2xl border-0 lg:border border-slate-100 group relative -mx-6 lg:mx-0 mt-24 lg:mt-32">
+                            <img 
+                                src={installationSoftenerImg} 
+                                alt="Installation professionnelle d'un adoucisseur d'eau Bricareau" 
+                                className="w-full h-[450px] md:h-[550px] lg:h-[650px] object-cover group-hover:scale-105 transition-transform duration-[3000ms] brightness-[1.1] contrast-[1.05]"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-r from-[#1e3a8a]/80 via-[#1e3a8a]/40 to-transparent p-8 md:p-12 lg:p-20 flex items-center lg:pt-32">
+                                <div className="max-w-lg">
+                                    <div className="flex items-center gap-3 text-blue-400 font-bold text-xs tracking-widest uppercase mb-6">
+                                        <CheckCircle className="w-5 h-5" />
+                                        Engagement Certifié
+                                    </div>
+                                    <h3 className="text-white text-4xl font-bold mb-6 leading-tight">Offrez à votre famille la qualité d'une eau filtrée supérieure.</h3>
+                                    <p className="text-white text-lg mb-10 text-justify">
+                                        Profitez d'une installation propre, durable et optimisée par nos experts. Optez pour la tranquillité d'esprit avec une intégration technique signée Bricareau Water Specialist.                                
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -343,10 +339,10 @@ const FiltresTouteMaison = () => {
                                     <tr className="bg-slate-50/50">
                                         <th className="p-10 text-left text-blue-900/40 font-black uppercase tracking-widest text-[10px]">Critères Techniques</th>
                                         {products.map((m, i) => (
-                                            <th key={i} className="p-6 text-center">
+                                            <th key={i} className="p-6 text-center align-bottom">
                                                 <div className="flex flex-col items-center gap-6">
-                                                    <div className="relative group/img">
-                                                        <div className={`absolute -top-3 -right-12 z-20 ${m.badgeColor} text-white text-[8px] font-black uppercase tracking-[0.4em] px-3 py-1 rounded-full shadow-2xl whitespace-nowrap`}>
+                                                    <div className="relative group/img pr-4 pt-4">
+                                                        <div className={`absolute top-0 right-0 z-20 ${m.badgeColor} text-white text-[8px] font-black uppercase tracking-[0.4em] px-3 py-1 rounded-full shadow-2xl whitespace-nowrap`}>
                                                             {m.badge}
                                                         </div>
                                                         <div className="absolute inset-0 bg-blue-600 rounded-full blur-2xl opacity-0 group-hover/img:opacity-20 transition-opacity duration-700" />
@@ -408,7 +404,7 @@ const FiltresTouteMaison = () => {
                         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-white via-white/10 to-transparent" />
                     </div>
 
-                    <div className="container mx-auto px-4 relative z-10 flex items-center py-12 lg:py-0">
+                    <div className="container mx-auto px-4 relative z-10 flex items-center py-12 lg:py-0 lg:h-full">
                         <div className="max-w-2xl text-slate-900 lg:text-white">
                             <span className="text-blue-600 lg:text-[#1e3a8a] text-xs font-black uppercase tracking-[0.3em] mb-8 block">
                                 Contrôle de la Qualité D'EAU
@@ -438,10 +434,8 @@ const FiltresTouteMaison = () => {
                     filterProduct="/filtres-deau-pour-toute-la-maison"
                     title={
                         <>
-                            <h2 className="mb-8 heading-pro-max text-center">
-                                <span className="italic font-light text-[#2563eb] block text-center">Fini le chlore et les contaminants,</span>
-                                <span className="font-bold text-[#1e3a8a] block text-center">la métamorphose vue par nos clients.</span>
-                            </h2>
+                            <span className="italic font-light text-[#2563eb] block text-center">Fini le chlore et les contaminants,</span>
+                            <span className="font-bold text-[#1e3a8a] block text-center">la métamorphose vue par nos clients.</span>
                         </>
                     }
                 />
@@ -481,7 +475,7 @@ const FiltresTouteMaison = () => {
                     </div>
                 </section>
 
-                {/* 10. PREMIUM CTA SECTION - REBUILT FOR IMPACT */}
+                {/* 9. PREMIUM CTA SECTION */}
                 <section className="relative py-32 flex items-center overflow-hidden bg-[#1e3a8a]">
                     {/* Animated background elements */}
                     <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-blue-600/20 to-transparent skew-x-12 translate-x-1/4" />
@@ -554,7 +548,9 @@ const FiltresTouteMaison = () => {
                                 <span className="font-bold text-[#1e3a8a] block text-left">Ressources</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
-                        </div>                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {[
                                 { title: "Pourquoi même l'eau de ville a besoin d'être filtrée?", img: eauVilleFiltreeImg, link: "/pourquoi-meme-leau-de-ville-a-besoin-detre-filtree" },
                                 { title: "Le plomb dans les vieilles maisons : Comment se protéger?", img: plombVieillesMaisonsImg, link: "/le-plomb-dans-les-vieilles-maisons-comment-se-proteger" },
