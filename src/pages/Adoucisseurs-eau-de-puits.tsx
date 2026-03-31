@@ -40,6 +40,7 @@ import drySkinImg from "@/assets/different-types-of-eczema.jpg";
 import cloudyGlassImg from "@/assets/18036672_SIE_2720_1530_21_04_30_SIE_CRM_Dishwasher_Hand_Taking_Out_Wine_Glass_Basket_Motiv_11_0017.webp";
 import brokenHeaterImg from "@/assets/detartrage-chauffe-eau-electrique.jpg";
 import ironStainImg from "@/assets/5a4674e7-575d-4cd9-b1f2-32522f8a7072.jpg";
+import ourteamstudyyourwaterImg from "@/assets/10271.jpg";
 
 const products = [
     { 
@@ -306,7 +307,7 @@ const AdoucisseursEauDePuits = () => {
                                 <span className="inline-block px-4 py-1 bg-red-600/10 text-red-600 rounded-full text-[10px] font-black tracking-widest mb-4">VOTRE PUITS VOUS PARLE</span>
                                 <h2 className="heading-pro-max">
                                     <span className="italic font-light text-blue-600 block">Identifiez les signes de</span>
-                                    <span className="font-bold text-slate-800 block">la dureté extrême.</span>
+                                    <span className="font-bold text-[#1e3a8a] block">la dureté extrême.</span>
                                 </h2>
                             </div>
                             <p className="body-pro-max max-w-sm text-slate-500 italic border-l-2 border-red-500 pl-6">Le calcaire de puits est plus agressif. Ne le laissez pas ronger la valeur de votre investissement.</p>
@@ -358,12 +359,12 @@ const AdoucisseursEauDePuits = () => {
                 <section id="nos-adoucisseurs" className="py-24 bg-gray-50">
                     <div className="container mx-auto px-6 text-left">
                         <div className="text-left mb-16">
-                            <h2 className="heading-pro-max">
-                                <span className="italic font-light text-[#2563eb] block">Nos adoucisseurs d'eau</span>
-                                <span className="font-bold text-[#1e3a8a] block">résidentiels - Eau de puits</span>
+                            <h2 className="mb-8 heading-pro-max text-left">
+                                <span className="italic font-light text-[#2563eb] block text-left">Nos adoucisseurs d'eau</span>
+                                <span className="font-bold text-[#1e3a8a] block text-left">résidentiels - Eau de puits</span>
                             </h2>
-                            <div className="w-24 h-1 bg-blue-600 mb-8"></div>
-                            <p className="body-pro-max text-justify mb-8 text-slate-600 font-light">Découvrez notre gamme exclusive d'adoucisseurs d'eau pour puits, conçue pour traiter les eaux souterraines complexes.</p>
+                            <div className="w-24 h-1 bg-blue-600"></div>
+                            <p className="body-pro-max mt-8 text-justify w-full">Découvrez notre gamme exclusive d'adoucisseurs d'eau pour puits, conçue pour traiter les eaux souterraines complexes.</p>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                             {products.map((p, i) => (
@@ -478,10 +479,12 @@ const AdoucisseursEauDePuits = () => {
                 <section className="bg-white py-24">
                     <div className="container mx-auto px-6 text-left">
                         <div className="text-left mb-16">
-                            <h2 className="heading-pro-max">
-                                <span className="font-bold text-[#1e3a8a] block text-left">Solutions associées</span>
+                            <h2 className="mb-8 heading-pro-max text-center">
+                                <span className="font-bold text-[#1e3a8a] block text-center">Découvrez les produits associés</span>
                             </h2>
-                            <div className="w-24 h-1 bg-blue-600"></div>
+                            <p className="body-pro-max text-gray-500 text-center mx-auto">
+                                Optimisez votre expérience de traitement d'eau avec nos solutions complémentaires.
+                            </p>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {[
@@ -504,26 +507,70 @@ const AdoucisseursEauDePuits = () => {
                     </div>
                 </section>
 
-                {/* 9. CTA */}
-                <section className="relative py-32 overflow-hidden">
-                    <div className="absolute inset-0 z-0">
-                        <img src={mantakesbathImg} alt="Expert" className="w-full h-full object-cover object-[center_30%]" />
-                        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 via-blue-900/60 to-blue-800/40 backdrop-blur-[2px]" />
-                    </div>
-                    <div className="container mx-auto px-6 relative z-10 text-center">
-                        <div className="max-w-4xl mx-auto">
-                            <h2 className="mb-8 heading-pro-max text-center">
-                                <span className="font-bold text-white block">Préservez votre foyer avec</span>
-                                <span className="font-bold text-white block uppercase">une eau d'une douceur absolue.</span>
-                            </h2>
-                            <p className="text-white text-xl font-light mb-10 opacity-90 text-center">Alliez performance et confort à chaque robinet.</p>
-                            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                                <Button asChild size="lg" className="h-16 px-10 rounded-full text-lg"><a href="tel:18552649328" className="flex items-center gap-3"><Phone className="h-5 w-5 animate-pulse" />Parlez à un expert</a></Button>
-                                <Button variant="outline" size="lg" className="h-16 px-10 rounded-full text-lg bg-white/10 text-white border-white/20 hover:bg-white hover:text-blue-900" asChild><NavLink to="/consultation">Planifiez une consultation</NavLink></Button>
+                {/* 11. PREMIUM CTA SECTION - REBUILT FOR IMPACT */}
+                <section className="relative py-32 flex items-center overflow-hidden bg-[#1e3a8a]">
+                  {/* Animated background elements */}
+                  <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-blue-600/20 to-transparent skew-x-12 translate-x-1/4" />
+                  <div className="absolute bottom-0 left-0 w-1/2 h-full bg-gradient-to-r from-cyan-400/10 to-transparent -skew-x-12 -translate-x-1/4" />
+                  
+                  {/* Background Image with Overlay */}
+                  <div className="absolute inset-0 z-0 opacity-40">
+                    <img
+                      src={mantakesbathImg}
+                      alt="Expert Bricareau analysant vos options d'adoucissement"
+                      className="w-full h-full object-cover grayscale brightness-150"
+                    />
+                    <div className="absolute inset-0 bg-[#1e3a8a]/10 backdrop-blur-sm" />
+                  </div>
+
+                  <div className="container mx-auto px-6 relative z-10">
+                    <div className="max-w-5xl mx-auto text-center space-y-12">
+                      <div className="space-y-6">
+                        <span className="inline-block px-4 py-1.5 bg-white text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.4em]">
+                          LE CONFORT RÉSIDENTIEL RÉINVENTÉ
+                        </span>
+                        <h2 className="text-4xl md:text-6xl lg:text-5xl font-light text-white leading-[1.1] tracking-tighter">
+                          Préservez votre foyer avec <br />
+                          <span className="text-white italic font-bold font-serif">une eau d'une douceur absolue.</span>
+                        </h2>
+                        <p className="text-lg md:text-xl text-blue-100/80 max-w-2xl mx-auto font-light leading-relaxed">
+                          Protégez vos appareils et votre plomberie du calcaire tout en profitant d'une eau douce au quotidien. Contactez nos experts pour votre solution d'adoucissement sur mesure.</p>
+                      </div>
+
+                      <div className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-4">
+                        <Button asChild>
+                          <a href="tel:18552649328" className="flex items-center gap-3">
+                            <Phone className="h-5 w-5 animate-bounce" />
+                            Parlez à un expert
+                          </a>
+                        </Button>
+                        <Button
+                          variant="outline"
+                          asChild
+                        >
+                          <NavLink to="/consultation">Planifiez une consultation</NavLink>
+                        </Button>
+                      </div>
+
+                      <div className="pt-8 flex flex-col items-center gap-4">
+                        <div className="flex -space-x-4">
+                          {[1, 2, 3, 4].map((i) => (
+                            <div key={i} className="w-12 h-12 rounded-full border-4 border-[#1e3a8a] bg-blue-400 overflow-hidden shadow-xl">
+                              <img src={`https://i.pravatar.cc/150?img=${i + 10}`} alt="Expert" className="w-full h-full object-cover" />
                             </div>
+                          ))}
+                          <div className="w-12 h-12 rounded-full border-4 border-[#1e3a8a] bg-white flex items-center justify-center text-blue-900 font-bold text-xs shadow-xl">
+                            4.9/5
+                          </div>
                         </div>
+                        <p className="text-blue-200/60 text-sm font-medium">
+                          Rejoignez plus de <span className="text-white">1,500 familles</span> satisfaites au Québec cette année.
+                        </p>
+                      </div>
                     </div>
+                  </div>
                 </section>
+
 
                 {/* 11. FAQ */}
                 <section className="py-24 bg-white">
