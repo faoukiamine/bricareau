@@ -8,6 +8,7 @@ import heroBath from "@/assets/sub-category-dryer.webp";
 import hardWaterFaucetImg from "@/assets/Hard Water-Faucet.jpg";
 import {
     ArrowRight,
+    ArrowLeft,
     Droplets,
     ChevronRight,
     CheckCircle2,
@@ -423,7 +424,7 @@ const AdoucisseurEauMunicipal = () => {
                 />
 
                 {/* 7.Water Testing Section (Redesigned for Mobile) */}
-                <section className="relative lg:h-[750px] flex flex-col lg:flex-row items-stretch overflow-hidden bg-white">
+                <section className="relative lg:h-[800px] flex flex-col lg:flex-row items-stretch overflow-hidden bg-white">
                     {/* Mobile Image */}
                     <div className="lg:hidden w-full h-[300px] relative">
                         <img
@@ -449,7 +450,7 @@ const AdoucisseurEauMunicipal = () => {
                         <div className="max-w-2xl text-slate-900 lg:text-white">
                             <h2 className="mb-8 heading-pro-max text-left">
                                 <span className="italic font-light text-[#1e3a8a] lg:text-white block">Des tests d'eau précis</span>
-                                <span className="font-bold text-[#1e3a8a] lg:text-white block">pour une tranquillité d'esprit totale.</span>
+                                <span className="text-white italic font-bold font-serif">pour une tranquillité d'esprit totale.</span>
                             </h2>
                             <p className="body-pro-max text-slate-500 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
                                 Ne devinez pas la qualité de votre eau. Nos analyses approfondies identifient les bactéries, les minéraux et les contaminants chimiques pour vous offrir une tranquillité d'esprit totale.
@@ -598,6 +599,26 @@ const AdoucisseurEauMunicipal = () => {
                         </div>
                     </div>
                 </section>
+                
+                {/* Floating Sticky CTA - Phase III Conversion Focus */}
+                      <div className="fixed bottom-8 right-8 z-[100] animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-[3s] pointer-events-none">
+                        <div className="pointer-events-auto group/sticky">
+                          <Button
+                            asChild
+                            className="bg-white hover:-translate-y-2 transition-all duration-10000 active:scale-95"
+                            style={{ backdropFilter: "blur(20px)" }}
+                          >
+                            <a href="/consultation" className="flex items-center gap-4 animate-bounce" style={{ animationDuration: '3s' }}>
+                              <span className="font-black-light text-sm tracking-wider white text-blue-600 space-nowrap text-center">
+                                Réservez votre <br />consultation gratuite
+                              </span>
+                              <div className="w-10 h-10 bg-[#2563eb] rounded-full flex items-center justify-center text-white group-hover/sticky:rotate-[360deg] shadow-lg shadow-blue-200">
+                                  <ArrowRight className="w-5 h-5" />
+                                </div>
+                            </a>
+                          </Button>
+                        </div>
+                      </div>
             </main>
 
             <Footer />

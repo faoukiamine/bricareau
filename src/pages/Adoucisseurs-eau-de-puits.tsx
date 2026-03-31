@@ -453,7 +453,7 @@ const AdoucisseursEauDePuits = () => {
                 </section>
 
                 {/* 6. Water Testing Section */}
-                <section className="relative lg:h-[750px] flex flex-col lg:flex-row items-stretch overflow-hidden bg-white">
+                <section className="relative lg:h-[800px] flex flex-col lg:flex-row items-stretch overflow-hidden bg-white">
                     <div className="lg:hidden w-full h-[300px] relative">
                         <img src={waterTestingImg} alt="Test de dureté" className="w-full h-full object-cover" />
                     </div>
@@ -461,12 +461,14 @@ const AdoucisseursEauDePuits = () => {
                         <img src={waterTestingImg} alt="Test de dureté" className="w-full h-full object-cover" />
                         <div className="absolute inset-0 bg-black/30 lg:bg-gradient-to-r lg:from-black/50 lg:to-transparent" />
                     </div>
-                    <div className="container mx-auto px-6 relative z-10 flex items-center py-12 lg:py-0">
+                    <div className="container mx-auto px-4 relative z-10 flex items-center py-12 lg:py-0">
                         <div className="max-w-2xl text-slate-900 lg:text-white">
-                            <span className="font-bold text-[#1e3a8a] lg:text-white block uppercase tracking-widest text-xs mb-4">Contrôle de la Qualité D'EAU</span>
+                            <span className="text-blue-600 lg:text-blue-600 text-xs font-black uppercase tracking-[0.3em] mb-8 block">
+                                Contrôle de la Qualité D'EAU
+                            </span>
                             <h2 className="heading-pro-max">
-                                <span className="italic font-light text-[#1e3a8a] lg:text-white block tracking-tight">Des tests d'eau précis</span>
-                                <span className="font-bold text-[#1e3a8a] lg:text-white block tracking-tight">pour une tranquillité d'esprit.</span>
+                                <span className="italic font-light text-white lg:text-white block tracking-tight">Des tests d'eau précis</span>
+                                <span className="text-white italic font-bold font-serif">pour une tranquillité d'esprit.</span>
                             </h2>
                             <p className="font-light text-slate-500 lg:text-white/95 mb-8 max-w-xl text-lg mt-6">Analyse approfondie pour identifier les minéraux et contaminants.</p>
                             <div className="flex gap-4"><Button asChild><a href="/tests-eau">Demandez une analyse d'eau</a></Button></div>
@@ -625,21 +627,27 @@ const AdoucisseursEauDePuits = () => {
                         </div>
                     </div>
                 </section>
+                            {/* Floating Sticky CTA - Phase III Conversion Focus */}
+                                  <div className="fixed bottom-8 right-8 z-[100] animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-[3s] pointer-events-none">
+                                    <div className="pointer-events-auto group/sticky">
+                                      <Button
+                                        asChild
+                                        className="bg-white hover:-translate-y-2 transition-all duration-10000 active:scale-95"
+                                        style={{ backdropFilter: "blur(20px)" }}
+                                      >
+                                        <a href="/consultation" className="flex items-center gap-4 animate-bounce" style={{ animationDuration: '3s' }}>
+                                          <span className="font-black-light text-sm tracking-wider white text-blue-600 space-nowrap text-center">
+                                            Réservez votre <br />consultation gratuite
+                                          </span>
+                                          <div className="w-10 h-10 bg-[#2563eb] rounded-full flex items-center justify-center text-white group-hover/sticky:rotate-[360deg] shadow-lg shadow-blue-200">
+                                              <ArrowRight className="w-5 h-5" />
+                                            </div>
+                                        </a>
+                                      </Button>
+                                    </div>
+                                  </div>
             </main>
             <Footer />
-            <div className="fixed bottom-8 right-8 z-[100] group">
-                <div onClick={() => navigate("/consultation")} className="relative flex items-center gap-4 bg-white/60 backdrop-blur-xl border border-white p-2 pr-6 rounded-full shadow-2xl cursor-pointer transition-all duration-500 hover:scale-105 hover:bg-white/90">
-                    <div className="relative">
-                        <div className="absolute inset-0 bg-blue-600 rounded-full animate-ping opacity-20 group-hover:opacity-40" />
-                        <div className="relative w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white shadow-lg"><Phone className="w-5 h-5" /></div>
-                    </div>
-                    <div className="flex flex-col">
-                        <span className="text-[10px] font-black uppercase tracking-widest text-[#1e3a8a]/60">Expertise de puits</span>
-                        <span className="text-sm font-bold text-[#1e3a8a]">Consultation Gratuite</span>
-                    </div>
-                    <ChevronRight className="w-4 h-4 text-blue-600 group-hover:translate-x-1 transition-transform" />
-                </div>
-            </div>
         </div>
     );
 };

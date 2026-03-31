@@ -8,6 +8,7 @@ import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 import {
     ChevronRight,
     CheckCircle2,
+    ArrowRight,
     X,
     Wrench,
     GlassWater,
@@ -142,7 +143,7 @@ const Filtration = () => {
                             </span>
                             <h2 className="heading-pro-max">
                                 <span className="italic font-light text-blue-600 block leading-tight">Identifier l'invisible :</span>
-                                <span className="font-bold text-slate-800 block leading-tight">Pourquoi filtrer votre eau ?</span>
+                                <span className="font-bold text-[#1e3a8a] block leading-tight">Pourquoi filtrer votre eau ?</span>
                             </h2>
                             <p className="body-pro-max text-slate-500 mt-6 mx-auto max-w-2xl px-4">
                                 L'eau municipale traverse des kilomètres de tuyauteries vétustes avant d'arriver chez vous. Chaque verre peut contenir des traces de l'imparfait.
@@ -461,8 +462,7 @@ const Filtration = () => {
                                             id="compact-filtration-title"
                                             className="heading-pro-max scroll-mt-[120px] mb-8"
                                         >
-                                            <span className="italic font-light text-[#2563eb] block">Systèmes de filtration d'eau</span>
-                                            <span className="font-bold text-[#1e3a8a] block">sous l'évier.</span>
+                                            <span className="italic font-light text-[#2563eb] block">Systèmes de filtration d'eau sous l'évier</span>
                                         </h2>
                                         <p className="body-pro-max text-justify max-w-xl">
                                             Éliminez jusqu'à 99% des pathogènes, du plomb et du fluorure. Notre gamme Cristal Pro est la solution ultime pour une eau de boisson de qualité supérieure directement chez vous.
@@ -508,7 +508,7 @@ const Filtration = () => {
                 </section>
 
                 {/* 7.Water Testing Section (Redesigned for Mobile) */}
-                <section className="relative lg:h-[750px] flex flex-col lg:flex-row items-stretch overflow-hidden bg-white">
+                <section className="relative lg:h-[800px] flex flex-col lg:flex-row items-stretch overflow-hidden bg-white">
                     {/* Mobile Image */}
                     <div className="lg:hidden w-full h-[300px] relative">
                         <img
@@ -532,11 +532,12 @@ const Filtration = () => {
 
                     <div className="container mx-auto px-4 relative z-10 flex items-center py-12 lg:py-0">
                         <div className="max-w-2xl text-slate-900 lg:text-white">
-                            <span className="font-bold text-[#1e3a8a] block uppercase mb-2">
+                            <span className="text-blue-600 lg:text-blue-600 text-xs font-black uppercase tracking-[0.3em] mb-8 block">
                                 Contrôle de la Qualité D'EAU
                             </span>
+
                             <h2 className="heading-pro-max text-left mb-8">
-                                <span className="font-bold text-white block">Votre eau, notre priorité.</span>
+                                <span className="font-light italic text-white block">Votre eau est</span><span className="text-white italic font-bold font-serif"> notre priorité.</span>
                             </h2>
                             <p className="body-pro-max text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left">
                                 Ne laissez plus le doute couler de votre robinet. Demandez votre test d'eau dès aujourd'hui et obtenez un portrait clair de votre eau ainsi que des solutions adaptées à votre foyer.
@@ -830,28 +831,27 @@ const Filtration = () => {
                     </div>
                 </section>
 
+                {/* Floating Sticky CTA - Phase III Conversion Focus */}
+                <div className="fixed bottom-8 right-8 z-[100] animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-[3s] pointer-events-none">
+                  <div className="pointer-events-auto group/sticky">
+                    <Button
+                      asChild
+                      className="bg-white hover:-translate-y-2 transition-all duration-10000 active:scale-95"
+                      style={{ backdropFilter: "blur(20px)" }}
+                    >
+                        <a href="/consultation" className="flex items-center gap-4 animate-bounce" style={{ animationDuration: '3s' }}>
+                            <span className="font-black-light text-sm tracking-wider white text-blue-600 space-nowrap text-center">
+                                Réservez votre <br />consultation gratuite
+                            </span>
+                            <div className="w-10 h-10 bg-[#2563eb] rounded-full flex items-center justify-center text-white group-hover/sticky:rotate-[360deg] shadow-lg shadow-blue-200">
+                                <ArrowRight className="w-5 h-5" />
+                            </div>
+                        </a>
+                    </Button>
+                  </div>
+                </div>
             </main>
             <Footer />
-
-            {/* Sticky Filtration CTA */}
-            <div className="fixed bottom-8 right-8 z-[100] group">
-                <div 
-                    onClick={() => navigate('/consultation')}
-                    className="relative flex items-center gap-4 bg-white/60 backdrop-blur-xl border border-white p-2 pr-6 rounded-full shadow-2xl cursor-pointer transition-all duration-500 hover:scale-105 hover:bg-white/90 group"
-                >
-                    <div className="relative">
-                        <div className="absolute inset-0 bg-blue-600 rounded-full animate-ping opacity-20 group-hover:opacity-40" />
-                        <div className="relative w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white shadow-lg">
-                            <Sparkles className="w-5 h-5" />
-                        </div>
-                    </div>
-                    <div className="flex flex-col">
-                        <span className="text-[10px] font-black uppercase tracking-widest text-[#1e3a8a]/60">Besoin d'aide ?</span>
-                        <span className="text-sm font-bold text-[#1e3a8a]">Consultation gratuite</span>
-                    </div>
-                    <ChevronRight className="w-4 h-4 text-blue-600 group-hover:translate-x-1 transition-transform" />
-                </div>
-            </div>
         </div>
     );
 };

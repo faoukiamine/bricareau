@@ -419,6 +419,25 @@ const ConditionneursSansSel = () => {
             </div>
           </div>
         </section>
+      {/* Floating Sticky CTA - Phase III Conversion Focus */}
+      <div className="fixed bottom-8 right-8 z-[100] animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-[3s] pointer-events-none">
+        <div className="pointer-events-auto group/sticky">
+          <Button
+            asChild
+            className="bg-white hover:-translate-y-2 transition-all duration-10000 active:scale-95"
+            style={{ backdropFilter: "blur(20px)" }}
+          >
+            <a href="/consultation" className="flex items-center gap-4 animate-bounce" style={{ animationDuration: '3s' }}>
+              <span className="font-black-light text-sm tracking-wider white text-blue-600 space-nowrap text-center">
+                Réservez votre <br />consultation gratuite
+              </span>
+              <div className="w-10 h-10 bg-[#2563eb] rounded-full flex items-center justify-center text-white group-hover/sticky:rotate-[360deg] shadow-lg shadow-blue-200">
+                  <ArrowRight className="w-5 h-5" />
+                </div>
+            </a>
+          </Button>
+        </div>
+      </div>
       </main>
       <Footer />
     </div>

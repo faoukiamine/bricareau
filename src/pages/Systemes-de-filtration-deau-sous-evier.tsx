@@ -388,7 +388,7 @@ const FiltrationSousEvier = () => {
                 </section>
 
                 {/* 5.Water Testing Section (Redesigned for Mobile) */}
-                <section className="relative lg:h-[750px] flex flex-col lg:flex-row items-stretch overflow-hidden bg-white">
+                <section className="relative lg:h-[800px] flex flex-col lg:flex-row items-stretch overflow-hidden bg-white">
                     {/* Mobile Image */}
                     <div className="lg:hidden w-full h-[300px] relative">
                         <img
@@ -412,12 +412,12 @@ const FiltrationSousEvier = () => {
 
                     <div className="container mx-auto px-4 relative z-10 flex items-center py-12 lg:py-0">
                         <div className="max-w-2xl text-slate-900 lg:text-white">
-                            <span className="text-blue-600 lg:text-[#1e3a8a] text-xs font-black uppercase tracking-[0.3em] mb-8 block">
+                            <span className="text-blue-600 lg:text-blue-600 text-xs font-black uppercase tracking-[0.3em] mb-8 block">
                                 TESTS D'EAU PROFESSIONNELS
                             </span>
                             <h2 className="mb-8 heading-pro-max text-left">
                                 <span className="italic font-light text-white block">Identifiez l'invisible,</span>
-                                <span className="font-bold text-white block">maîtrisez la pureté de votre eau.</span>
+                                <span className="text-white italic font-bold font-serif">maîtrisez la pureté de votre eau.</span>
                             </h2>
                             <p className="font-light text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
                                 Ne laissez plus le doute couler de votre robinet. Nos tests d'eau révèlent la composition réelle de votre eau pour vous offrir une solution de filtration sur mesure, garantissant santé et sérénité à toute votre famille.
@@ -616,22 +616,24 @@ const FiltrationSousEvier = () => {
             </main>
             <Footer />
 
-            {/* Sticky Consultation CTA - Pro Max Conversion Tool */}
-            <div className="fixed bottom-8 right-8 z-[100] group hidden md:block">
-                <NavLink to="/consultation">
-                    <div className="relative">
-                        <div className="absolute inset-0 bg-cyan-600 rounded-full animate-ping opacity-20 group-hover:opacity-40 transition-opacity" />
-                        <div className="relative flex items-center gap-3 bg-white/90 backdrop-blur-xl border border-cyan-100 p-2 pr-6 rounded-full shadow-[0_20px_50px_rgba(0,0,0,0.1)] hover:shadow-[0_25px_60px_rgba(8,145,178,0.2)] transition-all duration-500 group-hover:-translate-y-2 group-hover:bg-cyan-600">
-                            <div className="w-12 h-12 bg-cyan-600 rounded-full flex items-center justify-center text-white group-hover:bg-white group-hover:text-cyan-600 transition-colors duration-500">
-                                <Sparkles className="w-6 h-6 animate-pulse" />
-                            </div>
-                            <div className="flex flex-col">
-                                <span className="text-[10px] font-black uppercase tracking-[0.2em] text-cyan-600 group-hover:text-white/80 transition-colors">Audit Gratuit</span>
-                                <span className="text-sm font-bold text-slate-900 group-hover:text-white transition-colors">Analyse d'eau</span>
-                            </div>
-                        </div>
+            {/* Floating Sticky CTA - Phase III Conversion Focus */}
+            <div className="fixed bottom-8 right-8 z-[100] animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-[3s] pointer-events-none">
+              <div className="pointer-events-auto group/sticky">
+                <Button
+                  asChild
+                  className="bg-white hover:-translate-y-2 transition-all duration-10000 active:scale-95"
+                  style={{ backdropFilter: "blur(20px)" }}
+                >
+                  <a href="/consultation" className="flex items-center gap-4 animate-bounce" style={{ animationDuration: '3s' }}>
+                    <span className="font-black-light text-sm tracking-wider white text-blue-600 space-nowrap text-center">
+                      Réservez votre <br />consultation gratuite
+                    </span>
+                    <div className="w-10 h-10 bg-[#2563eb] rounded-full flex items-center justify-center text-white group-hover/sticky:rotate-[360deg] shadow-lg shadow-blue-200">
+                      <ArrowRight className="w-5 h-5" />
                     </div>
-                </NavLink>
+                            </a>
+                </Button>
+              </div>
             </div>
         </div>
     );

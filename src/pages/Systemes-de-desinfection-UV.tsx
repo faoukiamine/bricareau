@@ -415,7 +415,7 @@ const DesinfectionUV = () => {
                 </section>
 
                 {/* 6.Water Testing Section (Redesigned for Mobile) */}
-                <section className="relative lg:h-[750px] flex flex-col lg:flex-row items-stretch overflow-hidden bg-white">
+                <section className="relative lg:h-[800px] flex flex-col lg:flex-row items-stretch overflow-hidden bg-white">
                     {/* Mobile Image */}
                     <div className="lg:hidden w-full h-[300px] relative">
                         <img
@@ -439,13 +439,14 @@ const DesinfectionUV = () => {
 
                     <div className="container mx-auto px-4 relative z-10 flex items-center py-12 lg:py-0">
                         <div className="max-w-2xl text-slate-900 lg:text-white">
-                             <span className="font-bold text-[#1e3a8a] block uppercase">
+                            <span className="text-blue-600 lg:text-blue-600 text-xs font-black uppercase tracking-[0.3em] mb-8 block">
                                 Contrôle de la Qualité D'EAU
-                            </span><h2 className="mb-8 heading-pro-max text-left">
-                                <span className="italic font-light text-[#1e3a8a] lg:text-white block">Des tests d'eau précis</span>
-                                <span className="font-bold text-[#1e3a8a] lg:text-white block">pour une tranquillité d'esprit totale.</span>
+                            </span>
+                            <h2 className="mb-8 heading-pro-max text-left">
+                                <span className="italic font-light text-white lg:text-white block">Des tests d'eau précis</span>
+                                <span className="text-white italic font-bold font-serif">pour une tranquillité d'esprit totale.</span>
                             </h2>
-                            <p className="font-light text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
+                            <p className="font-light text-white lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
                                 Ne devinez pas la qualité de votre eau. Nos analyses approfondies identifient les bactéries, les minéraux et les contaminants chimiques pour vous offrir une tranquillité d'esprit totale.
                             </p>
                             <div className="flex gap-4">
@@ -743,23 +744,22 @@ const DesinfectionUV = () => {
 
             {/* Floating Sticky CTA - Phase III Conversion Focus */}
             <div className="fixed bottom-8 right-8 z-[100] animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-[3s] pointer-events-none">
-                <div className="pointer-events-auto group/sticky">
-                    <Button 
-                        asChild
-                        className="h-16 px-8 rounded-full bg-white/9 worst-blur text-[#1e3a8a] border border-slate-200/50 shadow-[0_20px_60px_rgba(0,0,0,0.1)] hover:shadow-indigo-200/50 hover:bg-white hover:-translate-y-2 transition-all duration-500 active:scale-95"
-                        style={{ backdropFilter: 'blur(20px)' }}
-                    >
-                        <a href="/consultation" className="flex items-center gap-4">
-                            <div className="relative">
-                                <div className="w-10 h-10 bg-[#4f46e5] rounded-full flex items-center justify-center text-white group-hover/sticky:rotate-[360deg] transition-all duration-700 shadow-lg shadow-indigo-200">
-                                    <ArrowRight className="w-5 h-5" />
-                                </div>
-                                <span className="absolute -top-1 -right-1 w-3 h-3 bg-green-500 rounded-full border-2 border-white animate-pulse" />
-                            </div>
-                            <span className="font-black text-sm uppercase tracking-wider whitespace-nowrap text-indigo-950">Consultation Gratuite</span>
-                        </a>
-                    </Button>
-                </div>
+              <div className="pointer-events-auto group/sticky">
+                <Button
+                  asChild
+                  className="bg-white hover:-translate-y-2 transition-all duration-10000 active:scale-95"
+                  style={{ backdropFilter: "blur(20px)" }}
+                >
+                  <a href="/consultation" className="flex items-center gap-4 animate-bounce" style={{ animationDuration: '3s' }}>
+                    <span className="font-black-light text-sm tracking-wider white text-blue-600 space-nowrap text-center">
+                      Réservez votre <br />consultation gratuite
+                    </span>
+                    <div className="w-10 h-10 bg-[#2563eb] rounded-full flex items-center justify-center text-white group-hover/sticky:rotate-[360deg] shadow-lg shadow-blue-200">
+                      <ArrowRight className="w-5 h-5" />
+                    </div>
+                            </a>
+                </Button>
+              </div>
             </div>
 
             <Footer />
