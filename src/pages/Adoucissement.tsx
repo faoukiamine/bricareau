@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 import TestimonialsSection from "@/components/TestimonialsSection";
+import ExpertAvatars from "@/components/ExpertAvatars";
 import { Button } from "@/components/ui/button";
 import heroBath from "@/assets/young-nude-woman-taking-relaxing-foamy-bath.jpeg";
 import kitchenImg from "@/assets/18036672_SIE_2720_1530_21_04_30_SIE_CRM_Dishwasher_Hand_Taking_Out_Wine_Glass_Basket_Motiv_11_0017.webp";
@@ -735,7 +736,7 @@ const Adoucissement = () => {
                 </section>
 
 
-                {/* 10. PREMIUM CTA SECTION - REBUILT FOR IMPACT */}
+                {/* 10. PREMIUM CTA SECTION */}
                 <section className="relative py-32 flex items-center overflow-hidden bg-[#1e3a8a]">
                     {/* Animated background elements */}
                     <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-blue-600/20 to-transparent skew-x-12 translate-x-1/4" />
@@ -782,16 +783,7 @@ const Adoucissement = () => {
                             </div>
 
                             <div className="pt-8 flex flex-col items-center gap-4">
-                                <div className="flex -space-x-4">
-                                    {[1, 2, 3, 4].map((i) => (
-                                        <div key={i} className="w-12 h-12 rounded-full border-4 border-[#1e3a8a] bg-blue-400 overflow-hidden shadow-xl">
-                                            <img src={`https://i.pravatar.cc/150?img=${i + 10}`} alt="Expert" className="w-full h-full object-cover" />
-                                        </div>
-                                    ))}
-                                    <div className="w-12 h-12 rounded-full border-4 border-[#1e3a8a] bg-white flex items-center justify-center text-blue-900 font-bold text-xs shadow-xl">
-                                        4.9/5
-                                    </div>
-                                </div>
+                                <ExpertAvatars />
                                 <p className="text-blue-200/60 text-sm font-medium">
                                     Rejoignez plus de <span className="text-white">1,500 familles</span> satisfaites au Québec cette année.
                                 </p>

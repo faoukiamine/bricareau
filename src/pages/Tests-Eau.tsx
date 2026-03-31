@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import Header from "@/components/Header";
-import Hero from "@/components/Hero";
-import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 import Footer from "@/components/Footer";
+import ExpertAvatars from "@/components/ExpertAvatars";
+import Hero from "@/components/Hero";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import { Button } from "@/components/ui/button";
 import {
@@ -61,12 +61,12 @@ import movingTipsImg from "@/assets/astuces-emmenagement-maison.jpg";
 import clothesStainsImg from "@/assets/302731406_443870381116589_3770801709209607894_n.jpg";
 import scientistImg from "@/assets/Scientist istesting water.webp";
 import newHeroImg from "@/assets/r0_0_4896_3264_w1200_h678_fmax.jpg";
-import forensicWaterImg from "@/assets/1062.jpg";
+import forensicWaterImg from "@/assets/2148597980.jpg";
 import glasspurewaterImg from "@/assets/glass-of-water.jpeg";
 import babySafetyImg from "@/assets/When-Can-Babies-Have-Water.jpg";
 import acidWaterImg from "@/assets/corrosive-water-problems-Low-pH.jpg";
 import stormWaterImg from "@/assets/eau trouble turbide.avif";
-import mortgageImg from "@/assets/A13.jpg";
+import mortgageImg from "@/assets/2148895486.jpg";
 import tasteOdorImg from "@/assets/water-taste.jpg";
 
 const TestsEauPage = () => {
@@ -418,16 +418,7 @@ const TestsEauPage = () => {
               </div>
 
               <div className="pt-8 flex flex-col items-center gap-4">
-                <div className="flex -space-x-4">
-                  {[1, 2, 3, 4].map((i) => (
-                    <div key={i} className="w-12 h-12 rounded-full border-4 border-[#1e3a8a] bg-blue-400 overflow-hidden shadow-xl">
-                      <img src={`https://i.pravatar.cc/150?img=${i + 10}`} alt="Expert" className="w-full h-full object-cover" />
-                    </div>
-                  ))}
-                  <div className="w-12 h-12 rounded-full border-4 border-[#1e3a8a] bg-white flex items-center justify-center text-blue-900 font-bold text-xs shadow-xl">
-                    4.9/5
-                  </div>
-                </div>
+                <ExpertAvatars />
                 <p className="text-blue-200/60 text-sm font-medium">
                   Rejoignez plus de <span className="text-white">1,500 familles</span> satisfaites au Québec cette année.
                 </p>

@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import ExpertAvatars from "@/components/ExpertAvatars";
 import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -549,16 +550,7 @@ const FiltrationSousEvier = () => {
                             </div>
 
                             <div className="pt-8 flex flex-col items-center gap-4">
-                                <div className="flex -space-x-4">
-                                    {[1, 2, 3, 4].map((i) => (
-                                        <div key={i} className="w-12 h-12 rounded-full border-4 border-[#1e3a8a] bg-blue-400 overflow-hidden shadow-xl">
-                                            <img src={`https://i.pravatar.cc/150?img=${i + 10}`} alt="Expert" className="w-full h-full object-cover" />
-                                        </div>
-                                    ))}
-                                    <div className="w-12 h-12 rounded-full border-4 border-[#1e3a8a] bg-white flex items-center justify-center text-blue-900 font-bold text-xs shadow-xl">
-                                        4.9/5
-                                    </div>
-                                </div>
+                                <ExpertAvatars />
                                 <p className="text-blue-200/60 text-sm font-medium">
                                     Rejoignez plus de <span className="text-white">1,500 familles</span> satisfaites au Québec cette année.
                                 </p>

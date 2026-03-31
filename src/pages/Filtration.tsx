@@ -2,6 +2,7 @@ import { cn } from "@/lib/utils";
 import React, { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ExpertAvatars from "@/components/ExpertAvatars";
 import Hero from "@/components/Hero";
 import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 import {
@@ -57,6 +58,7 @@ import arrowDownIcon from "@/assets/keyboard_double_arrow_down.svg";
 import arrowUpIcon from "@/assets/keyboard_double_arrow_up.svg";
 import hardWaterFaucetImg from "@/assets/Hard Water-Faucet.jpg";
 import newbornHealthImg from "@/assets/47A0F39600000578-5222035-image-a-1_1514911887749.jpg";
+import healthAndSafetyIcon from "@/assets/health_and_safety.svg";
 import waterTasteImg from "@/assets/water-taste.jpg";
 
 
@@ -162,7 +164,7 @@ const Filtration = () => {
                                     desc: "Traces de plomb, micro-plastiques et hormones. Protégez les systèmes immunitaires fragiles de votre famille.",
                                     benefit: "Sécurité Totale",
                                     color: "bg-pink-500",
-                                    icon: <Microscope className="w-6 h-6" />,
+                                    icon: <img src={healthAndSafetyIcon} className="w-6 h-6 brightness-0 invert" alt="Santé & Nouveau-nés icon" />,
                                     img: newbornHealthImg
                                 },
                                 {
@@ -670,16 +672,7 @@ const Filtration = () => {
                     </div>
 
                     <div className="pt-8 flex flex-col items-center gap-4">
-                        <div className="flex -space-x-4">
-                            {[1, 2, 3, 4].map((i) => (
-                                <div key={i} className="w-12 h-12 rounded-full border-4 border-[#1e3a8a] bg-blue-400 overflow-hidden shadow-xl">
-                                    <img src={`https://i.pravatar.cc/150?img=${i + 10}`} alt="Expert" className="w-full h-full object-cover" />
-                                </div>
-                            ))}
-                            <div className="w-12 h-12 rounded-full border-4 border-[#1e3a8a] bg-white flex items-center justify-center text-blue-900 font-bold text-xs shadow-xl">
-                                4.9/5
-                            </div>
-                        </div>
+                        <ExpertAvatars />
                         <p className="text-blue-200/60 text-sm font-medium">
                             Rejoignez plus de <span className="text-white">1,500 familles</span> satisfaites au Québec cette année.
                         </p>
