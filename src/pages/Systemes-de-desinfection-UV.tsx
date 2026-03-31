@@ -366,25 +366,26 @@ const DesinfectionUV = () => {
                                     <tr className="bg-gray-100">
                                         <th className="p-8 text-left text-gray-400 font-light uppercase tracking-wider w-1/4">Modèle</th>
                                         {[
-                                            { name: "VH200-F10", img: uvSystemImg2, badge: null },
-                                            { name: "VH410-F20", img: uvSystemImg3, badge: "Choix des Familles" },
-                                            { name: "Arros 15-IHS10", img: uvSystemImg4, badge: "Nouveau" }
+                                            { name: "VH200-F10", img: uvSystemImg2, badge: null, color: "bg-blue-600" },
+                                            { name: "VH410-F20", img: uvSystemImg3, badge: "Choix des Familles", color: "bg-blue-600" },
+                                            { name: "Arros 15-IHS10", img: uvSystemImg4, badge: "Nouveau", color: "bg-emerald-600" }
                                         ].map(m => (
-                                            <th key={m.name} className="py-8 px-4 text-center text-gray-900 font-bold relative">
-                                                <div className="flex flex-col items-center gap-2">
-                                                    <div className="relative inline-block">
+                                            <th key={m.name} className="p-6 text-center align-bottom relative">
+                                                <div className="flex flex-col items-center gap-6">
+                                                    <div className="relative group/img pr-4 pt-4">
                                                         {m.badge && (
-                                                            <span className="absolute -top-1 -right-8 bg-blue-600 text-white text-[7px] font-black px-2 py-0.5 rounded-full uppercase tracking-widest whitespace-nowrap shadow-lg shadow-blue-200/50 z-20">
+                                                            <span className={`absolute top-0 right-0 z-20 px-3 py-1 ${m.color} text-white rounded-full text-[8px] font-bold uppercase tracking-widest shadow-lg shadow-blue-900/10 whitespace-nowrap`}>
                                                                 {m.badge}
                                                             </span>
                                                         )}
+                                                        <div className="absolute inset-0 bg-blue-600 rounded-full blur-2xl opacity-0 group-hover/img:opacity-20 transition-opacity duration-700" />
                                                         <img
                                                             src={m.img}
                                                             alt={`Modèle ${m.name} - Stérilisateur d'eau UV haute performance Bricareau`}
-                                                            className="w-[120px] h-[100px] object-contain mx-auto mix-blend-multiply transition-transform duration-500 hover:scale-110"
+                                                            className="w-[140px] h-[120px] object-contain mx-auto mix-blend-multiply relative z-10 transition-transform duration-700 group-hover/img:scale-110"
                                                         />
                                                     </div>
-                                                    <div className="text-[14px] mt-2">{m.name}</div>
+                                                    <div className="text-lg font-bold text-[#1e3a8a]">{m.name}</div>
                                                 </div>
                                             </th>
                                         ))}

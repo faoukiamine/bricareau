@@ -53,12 +53,12 @@ const symptomCategories = [
     {
         title: "Accumulation et taches",
         options: [
-            "Échelle / accumulation",
-            "Résidus de savon",
+            "Accumulation de tartre",
+            "Corrosion des tuyaux",
+            "Linge rêche",
             "Plats tachetés",
-            "Linge rêche et irritant",
-            "Corrosion des canalisations",
-            "taches de rouille",
+            "Résidus de savon",
+            "Taches de rouille",
             "Taches bleu-vert"
         ]
     },
@@ -72,27 +72,28 @@ const symptomCategories = [
     {
         title: "Goût, odeur et aspect",
         options: [
-            "Chlore (Goût/Odeur)",
             "Amer",
-            "Salé",
-            "mauvais goût",
+            "Chlore (Goût/Odeur)",
+            "Mauvais goût",
             "Métallique",
+            "Moisisserie",
+            "Nuageux",
             "Odeur d'oeuf pourri",
-            "Moisisserie/marécageux",
-            "Nuageux/sédimentaire"
+            "Salé"
         ]
     },
     {
         title: "Contaminants",
         options: [
             "Arsenic",
-            "Chlore (Contaminant)",
-            "Nitrate",
             "Bactéries",
-            "Plomb",
+            "Chlore (Contaminant)",
+            "Eau dure",
             "Microplastiques",
+            "Nitrate",
             "PFAS",
-            "Eau dure"
+            "Plomb",
+
         ]
     }
 ];
@@ -185,7 +186,7 @@ const WaterDiagnosticQuiz = () => {
 
             if (fnError) throw fnError;
 
-            toast.success("Votre prescription a été envoyée par courriel !");
+            toast.success("Votre rapport a été envoyé par courriel !");
             setIsSubmitted(true);
         } catch (error) {
             console.error("Error submitting diagnostic:", error);
@@ -200,8 +201,8 @@ const WaterDiagnosticQuiz = () => {
         const { source, signs } = formData;
         const recs = [];
 
-        if (["Échelle / accumulation", "Résidus de savon", "Plats tachetés", "Linge rêche et irritant",
-            "cheveux secs et ternes", "Peau sèche et irritée", "Eau dure"].some(s => signs.includes(s))) {
+        if (["Accumulation de tartre", "Résidus de savon", "Plats tachetés", "Linge rêche",
+            "cheveux secs et ternes", "Peau sèche", "Eau dure"].some(s => signs.includes(s))) {
             const isMunicipal = source === "Municipal";
             recs.push({
                 title: isMunicipal ? "Adoucisseur d'Eau Municipal" : "Adoucisseur d'Eau de Puits",
@@ -220,7 +221,7 @@ const WaterDiagnosticQuiz = () => {
             });
         }
 
-        if (["Chlore (Contaminant)", "Chlore (Goût/Odeur)", "mauvais goût"].some(s => signs.includes(s))) {
+        if (["Chlore (Contaminant)", "Chlore (Goût/Odeur)", "Mauvais goût"].some(s => signs.includes(s))) {
             recs.push({
                 title: "Filtre spécialisé Chlor Stop",
                 desc: "Élimine le chlore et les mauvais goûts pour une eau rafraîchissante et sans odeur de produits chimiques.",
@@ -265,7 +266,7 @@ const WaterDiagnosticQuiz = () => {
             });
         }
 
-        if (signs.includes("Nuageux/sédimentaire")) {
+        if (signs.includes("Nuageux")) {
             recs.push({
                 title: "Filtre spécialisé Vortex",
                 desc: "Clarifie l'eau trouble en éliminant les particules en suspension et sédiments fins.",
@@ -274,7 +275,7 @@ const WaterDiagnosticQuiz = () => {
             });
         }
 
-        if (signs.includes("Corrosion des canalisations") || signs.includes("Taches bleu-vert")) {
+        if (signs.includes("Corrosion des tuyaux") || signs.includes("Taches bleu-vert")) {
             recs.push({
                 title: "Filtre neutralisant Zen-pH",
                 desc: "Neutralise l'eau corrosive pour protéger vos tuyaux de cuivre contre l'amincissement et les taches vertes.",
@@ -423,7 +424,7 @@ const WaterDiagnosticQuiz = () => {
                                             onValueChange={(val) => setFormData({ ...formData, residenceType: val })}
                                             className="grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-2xl mx-auto pt-4"
                                         >
-                                            {[ "Condo", "Maison", "Chalet" ].map((option) => (
+                                            {[ "Chalet", "Condo", "Maison" ].map((option) => (
                                                 <div key={option} className="relative">
                                                     <RadioGroupItem value={option} id={`res-${option}`} className="peer sr-only" />
                                                     <Label
@@ -465,9 +466,9 @@ const WaterDiagnosticQuiz = () => {
                                         <RadioGroup
                                             value={formData.source}
                                             onValueChange={(val) => handleSourceChange(val)}
-                                            className="grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-2xl mx-auto pt-4"
+                                            className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-2xl mx-auto pt-4"
                                         >
-                                            {[ "Municipal", "Eau de puits", "Pas sûr" ].map((option) => (
+                                            {[ "Municipal", "Eau de puits" ].map((option) => (
                                                 <div key={option} className="relative">
                                                     <RadioGroupItem value={option} id={`src-${option}`} className="peer sr-only" />
                                                     <Label
@@ -523,7 +524,7 @@ const WaterDiagnosticQuiz = () => {
                                             <ArrowLeft className="w-4 h-4 mr-2" /> Précédent
                                         </Button>
                                         <Button disabled={!formData.household} onClick={() => setStep(5)} size="lg" className="rounded-full px-12 transition-all w-full sm:w-auto">
-                                            Analyser mon eau <ArrowRight className="ml-2 w-4 h-4" />
+                                            Analysez mon eau <ArrowRight className="ml-2 w-4 h-4" />
                                         </Button>
                                     </div>
                                 </div>
@@ -586,7 +587,7 @@ const WaterDiagnosticQuiz = () => {
                                             lineHeight: '28px',
                                             fontWeight: 500,
                                             color: 'rgb(15, 23, 42)'
-                                        }}>Où envoyer votre prescription ?</h3>
+                                        }}>Où envoyer votre rapport ?</h3>
                                     </div>
 
                                     <div className="grid grid-cols-2 gap-4">
@@ -618,7 +619,7 @@ const WaterDiagnosticQuiz = () => {
                                     lineHeight: '28px',
                                     fontWeight: 500,
                                     color: 'rgb(15, 23, 42)'
-                                }}>Votre Prescription d'Eau</h2>
+                                }}>Votre rapport d'eau</h2>
                                 <p className="text-slate-500">Solutions recommandées pour votre foyer.</p>
                             </div>
 
@@ -634,7 +635,7 @@ const WaterDiagnosticQuiz = () => {
 
                             <div className="flex flex-col items-center gap-4 pt-6 border-t border-slate-100">
                                 <Button size="lg" className="bg-slate-900 border-slate-900 text-white hover:bg-white hover:text-slate-900 rounded-full px-12 shadow-xl transition-all" onClick={() => window.location.href = '/contact'}>Prendre rendez-vous avec un expert</Button>
-                                <Button variant="ghost" onClick={() => { setIsSubmitted(false); setStep(1); }} className="text-slate-400 text-xs hover:text-blue-600 font-bold">Relancer l'analyse</Button>
+                                <Button variant="ghost" onClick={() => { setIsSubmitted(false); setStep(1); }} className="text-slate-400 text-xs hover:text-blue-600 font-bold">Relancer le diagnostic</Button>
                             </div>
                         </div>
                     )}

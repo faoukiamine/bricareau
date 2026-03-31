@@ -5,7 +5,7 @@ import {
 } from "lucide-react";
 import diagnosticStepImg from "@/assets/step-diagnostic.png";
 import customStepImg from "@/assets/catalogue.png";
-import installationStepImg from "@/assets/SERVICES.jpg";
+import installationStepImg from "@/assets/Installation experte - Bricareau.jpg";
 import serenityStepImg from "@/assets/close-up-handsom-man-taking-bath.jpg";
 import { Button } from "@/components/ui/button";
 

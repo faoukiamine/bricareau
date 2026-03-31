@@ -2,7 +2,7 @@ import React from 'react';
 import { ArrowRight } from "lucide-react";
 import diagnosticStepImg from "@/assets/step-diagnostic.png";
 import customStepImg from "@/assets/catalogue.png";
-import installationStepImg from "@/assets/SERVICES.jpg";
+import installationStepImg from "@/assets/Installation experte - Bricareau.jpg";
 import serenityStepImg from "@/assets/close-up-handsom-man-taking-bath.jpg";
 import familyImg from "@/assets/happy-family-enjoying-time-together.jpg";
 import bathroomImg from "@/assets/contemporary-bathroom-elements.jpg";
