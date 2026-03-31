@@ -153,12 +153,12 @@ const Filtration = () => {
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                             {[
                                 {
-                                    title: "L'impact Plastique",
-                                    desc: "Éliminez définitivement l'achat de 2000+ bouteilles de plastique par an. Une victoire écologique et financière.",
-                                    benefit: "Zéro Déchet",
-                                    color: "bg-emerald-500",
-                                    icon: <Recycle className="w-6 h-6" />,
-                                    img: dechetbouteilleImg
+                                    title: "Réseaux Vétustes",
+                                    desc: "Des particules de rouille et de sédiments provenant de tuyauteries municipales centenaires se déposent dans vos verres.",
+                                    benefit: "Infrastructure",
+                                    color: "bg-amber-600",
+                                    icon: <Wrench className="w-6 h-6" />,
+                                    img: oldpipesImg
                                 },
                                 {
                                     title: "Santé & Nouveau-nés",
@@ -169,27 +169,31 @@ const Filtration = () => {
                                     img: newbornHealthImg
                                 },
                                 {
-                                    title: "Réseaux Vétustes",
-                                    desc: "Des particules de rouille et de sédiments provenant de tuyauteries municipales centenaires se déposent dans vos verres.",
-                                    benefit: "Infrastructure",
-                                    color: "bg-amber-600",
-                                    icon: <Wrench className="w-6 h-6" />,
-                                    img: oldpipesImg
-                                },
-                                {
                                     title: "Goût de Chlore",
                                     desc: "Le chlore est nécessaire pour désinfecter, mais il altère le goût de vos boissons et dessèche votre peau sous la douche.",
                                     benefit: "Confort Gustatif",
                                     color: "bg-blue-600",
                                     icon: <GlassWater className="w-6 h-6" />,
                                     img: waterTasteImg
-                                }
+                                },
+                                {
+                                    title: "L'impact Plastique",
+                                    desc: "Éliminez définitivement l'achat de 2000+ bouteilles de plastique par an. Une victoire écologique et financière.",
+                                    benefit: "Zéro Déchet",
+                                    color: "bg-emerald-500",
+                                    icon: <Recycle className="w-6 h-6" />,
+                                    img: dechetbouteilleImg
+                                },
                             ].map((item, i) => (
                                 <div 
                                     key={i} 
                                     className="group relative h-[500px] rounded-[3rem] overflow-hidden border border-slate-100 bg-slate-50/50 cursor-pointer shadow-sm transition-all duration-700 hover:shadow-2xl hover:shadow-blue-200/50 hover:border-blue-100 hover:-translate-y-3"
                                     onClick={() => {
-                                        const el = document.getElementById('solutions-title');
+                                        let targetId = 'solutions-title';
+                                        if (i === 0) targetId = 'compact-filtration-title';
+                                        else if (i === 1) targetId = 'undersink-title';
+                                        
+                                        const el = document.getElementById(targetId);
                                         el?.scrollIntoView({ behavior: 'smooth' });
                                     }}
                                 >
