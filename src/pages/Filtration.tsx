@@ -102,6 +102,40 @@ const Filtration = () => {
         setScrollSnaps(emblaApi.scrollSnapList());
         emblaApi.on('select', onSelect);
     }, [emblaApi, setScrollSnaps, onSelect]);
+
+    const [resourceIndex, setResourceIndex] = React.useState(1);
+    const resources = [
+        {
+            title: "Filtre sous évier : l'alternative simple aux pichets filtrants",
+            img: filtreSousEvierImg,
+            link: "/filtre-sous-evier-lalternative-simple-aux-pichets-filtrants"
+        },
+        {
+            title: "Eau embouteillée : les dangers méconnus pour votre santé au quotidien",
+            img: healthwaterImg,
+            link: "/eau-embouteillee-les-dangers-meconnus-pour-votre-sante-au-quotidien"
+        },
+        {
+            title: "Nos systèmes de filtration d'eau sous évier : La solution ultime",
+            img: undersinkSystemImg,
+            link: "/systemes-de-filtration-deau-sous-evier"
+        },
+        {
+            title: "Osmose inverse : la technologie derrière une eau 100 % pure",
+            img: rowaterImg,
+            link: "/osmose-inverse-la-technologie-derriere-une-eau-100-pure"
+        },
+    ];
+
+    const handleScrollRessources = () => {
+        if (resourcesRef.current) {
+            const scrollLeft = resourcesRef.current.scrollLeft;
+            const containerWidth = resourcesRef.current.offsetWidth;
+            const itemWidth = resourcesRef.current.querySelector('div')?.offsetWidth || containerWidth;
+            const newIndex = Math.round(scrollLeft / itemWidth) + 1;
+            setResourceIndex(Math.min(newIndex, resources.length));
+        }
+    };
     useEffect(() => {
         document.title = "Filtration d'eau : Une pureté maximale pour votre maison";
         const metaDesc = document.querySelector('meta[name="description"]');
@@ -376,34 +410,34 @@ const Filtration = () => {
 
                             {/* Left Side: Content Editorial */}
                             <div className="w-full lg:w-1/2 lg:pr-4">
-                                <div className="space-y-8 text-right lg:text-left">
+                                <div className="space-y-8 text-left">
                                     <div className="space-y-4">
                                         <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.2em]">
                                             EAU PURE À VOLONTÉ
                                         </span>
-                                         <h2 id="undersink-title" className="heading-pro-max text-right lg:text-left mb-8 scroll-mt-[120px]">
+                                         <h2 id="undersink-title" className="heading-pro-max text-left mb-8 scroll-mt-[120px]">
                                             <span className="italic font-light text-[#2563eb] block">Votre source d'eau cristalline, sans compromis.</span>
                                         </h2>
-                                        <p className="body-pro-max text-justify max-w-xl ml-auto lg:ml-0">
+                                        <p className="body-pro-max text-left max-w-xl lg:ml-0">
                                             Découvrez comment notre système d'osmose inverse libère votre quotidien du goût de chlore et de la corvée des bouteilles plastique. Une eau légère et saine à portée de main.
                                         </p>
                                     </div>
 
                                     <div className="space-y-2">
-                                        {[
+                                        { [
                                             { title: "Pureté absolue", desc: "Élimine 99% des contaminants, métaux lourds et micro-plastiques pour une sécurité totale." },
                                             { title: "Éco-conscient", desc: "Réduisez drastiquement votre empreinte carbone en éliminant les bouteilles jetables." },
                                             { title: "Saveurs révélées", desc: "Sublimez le goût de vos boissons et petits plats avec une eau pure sans aucune impureté." }
                                         ].map((item, i) => (
-                                            <div key={i} className="group flex items-start lg:flex-row flex-row-reverse gap-4 p-2 rounded-3xl transition-colors hover:bg-white/50">
+                                            <div key={i} className="group flex items-start flex-row gap-4 p-2 rounded-3xl transition-colors hover:bg-white/50">
                                                 <div className="text-2xl font-black text-blue-600/20 group-hover:text-blue-600 transition-colors pt-1">
                                                     0{i + 1}
                                                 </div>
-                                                <div className="space-y-0.5 text-right lg:text-left">
+                                                <div className="space-y-0.5 text-left">
                                                     <h3 className="text-xl font-bold tracking-tight text-blue-600/20 group-hover:text-blue-600 transition-colors">
                                                         {item.title}
                                                     </h3>
-                                                    <p className="text-slate-500 font-light text-sm leading-relaxed max-w-sm ml-auto lg:ml-0">
+                                                    <p className="text-slate-500 font-light text-sm leading-relaxed max-w-sm lg:ml-0">
                                                         {item.desc}
                                                     </p>
                                                 </div>
@@ -411,7 +445,7 @@ const Filtration = () => {
                                         ))}
                                     </div>
 
-                                    <div className="pt-8 flex flex-col sm:flex-row-reverse lg:flex-row gap-6 justify-end lg:justify-start">
+                                    <div className="pt-8 flex flex-col sm:flex-row lg:flex-row gap-6 justify-start">
                                         <NavLink to="/systeme-de-filtration-deau-potable" className="w-full sm:w-fit">
                                             <Button size="lg" className="rounded-full px-12 py-7 transition-all duration-300 hover:shadow-xl hover:shadow-blue-100" asChild>
                                                 <NavLink to="/systeme-de-filtration-deau-potable" className="flex items-center text-lg">
@@ -843,25 +877,10 @@ const Filtration = () => {
                         </div>
                         <div 
                             ref={resourcesRef}
+                            onScroll={handleScrollRessources}
                             className="flex lg:grid lg:grid-cols-3 gap-8 overflow-x-auto lg:overflow-x-visible no-scrollbar snap-x snap-mandatory pb-12 px-1 lg:px-0 scroll-smooth"
                         >
-                            {[
-                                {
-                                    title: "Filtre sous évier, l'alternative simple aux pichets filtrants",
-                                    img: filtreSousEvierImg,
-                                    link: "/filtre-sous-evier-lalternative-simple-aux-pichets-filtrants"
-                                },
-                                {
-                                    title: "Osmose inverse et santé : quelle qualité d’eau obtenez-vous ?",
-                                    img: healthwaterImg,
-                                    link: "/osmose-inverse-et-sante-quelle-qualite-deau-obtenez-vous"
-                                },
-                                {
-                                    title: "Osmose inverse : la technologie derrière une eau 100 % pure",
-                                    img: rowaterImg,
-                                    link: "/osmose-inverse-la-technologie-derriere-une-eau-100-pure"
-                                },
-                            ].map((art, i) => (
+                            {resources.map((art, i) => (
                                 <div
                                     key={i}
                                     className="min-w-[70vw] md:min-w-[45vw] lg:min-w-0 snap-center group bg-white rounded-3xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full cursor-pointer"
@@ -889,24 +908,32 @@ const Filtration = () => {
                             ))}
                         </div>
 
-                        {/* Navigation arrows for carousel at bottom right */}
-                        <div className="lg:hidden flex items-center justify-end gap-3 mt-4 relative z-30">
-                            <Button 
-                                size="icon" 
-                                variant="outline" 
-                                className="w-10 h-10 rounded-full border-blue-100 hover:bg-blue-600 hover:text-white transition-all shadow-sm"
-                                onClick={() => scrollResources('left')}
-                            >
-                                <ChevronLeft className="h-5 w-5" />
-                            </Button>
-                            <Button 
-                                size="icon" 
-                                variant="outline" 
-                                className="w-10 h-10 rounded-full border-blue-100 hover:bg-blue-600 hover:text-white transition-all shadow-sm"
-                                onClick={() => scrollResources('right')}
-                            >
-                                <ChevronRight className="h-5 w-5" />
-                            </Button>
+                        {/* Navigation arrows and numbering for carousel - Mobile ONLY */}
+                        <div className="lg:hidden flex items-center justify-center relative mt-6">
+                            <div className="flex items-center gap-4">
+                                <Button 
+                                    size="icon" 
+                                    variant="outline" 
+                                    className="w-12 h-12 rounded-full border-blue-100 hover:bg-blue-600 hover:text-white transition-all shadow-sm bg-white"
+                                    onClick={() => scrollResources('left')}
+                                >
+                                    <ChevronLeft className="h-6 w-6" />
+                                </Button>
+                                <Button 
+                                    size="icon" 
+                                    variant="outline" 
+                                    className="w-12 h-12 rounded-full border-blue-100 hover:bg-blue-600 hover:text-white transition-all shadow-sm bg-white"
+                                    onClick={() => scrollResources('right')}
+                                >
+                                    <ChevronRight className="h-6 w-6" />
+                                </Button>
+                            </div>
+                            
+                            <div className="absolute right-2 text-sm font-black text-[#1e3a8a] bg-blue-50/50 px-4 py-2 rounded-full border border-blue-100/50">
+                                <span className="text-blue-600">{resourceIndex}</span>
+                                <span className="mx-1 text-slate-300">/</span>
+                                <span className="text-slate-400">{resources.length}</span>
+                            </div>
                         </div>
                     </div>
                 </section>

@@ -84,6 +84,35 @@ const DesinfectionUV = () => {
             resourcesRef.current.scrollBy({ left: direction === 'left' ? -scrollAmount : scrollAmount, behavior: 'smooth' });
         }
     };
+
+    const [resourceIndex, setResourceIndex] = React.useState(1);
+    const resources = [
+        {
+            title: "Adoucisseur d'eau et fosse septique : compatible ou non ?",
+            img: adoucisseurFosseImg,
+            path: "/adoucisseur-deau-et-fosse-septique-mythes-et-realites"
+        },
+        {
+            title: "Adoucisseur sans sel vs avec sel : la vérité technique",
+            img: conditionneursImg,
+            path: "/adoucisseur-sans-sel-vs-avec-sel-verite-technique"
+        },
+        {
+            title: "Comment régler la dureté de votre adoucisseur ?",
+            img: residentialWaterSoftenerImg,
+            path: "/comment-regler-durete-adoucisseur-eau"
+        }
+    ];
+
+    const handleScrollRessources = () => {
+        if (resourcesRef.current) {
+            const scrollLeft = resourcesRef.current.scrollLeft;
+            const containerWidth = resourcesRef.current.offsetWidth;
+            const itemWidth = resourcesRef.current.querySelector('div')?.offsetWidth || containerWidth;
+            const newIndex = Math.round(scrollLeft / itemWidth) + 1;
+            setResourceIndex(Math.min(newIndex, resources.length));
+        }
+    };
     useEffect(() => {
         document.title = "Désinfection UV : Éliminez 99,99% des bactéries et virus";
         const metaDesc = document.querySelector('meta[name="description"]');
@@ -319,7 +348,7 @@ const DesinfectionUV = () => {
                             </h2>
                             <div className="w-24 h-1 bg-blue-600 mb-12"></div>
 
-                            <p className="body-pro-max text-slate-600 text-justify max-w-7xl mx-auto">
+                            <p className="body-pro-max text-slate-600 text-left lg:text-justify max-w-7xl mx-auto">
                                 La technologie UV est le choix idéal pour les consommateurs qui cherchent à se protéger contre les contaminants microbiologiques, notamment les bactéries (E.coli, coliformes fécaux, etc.), les virus et les protozoaires (cryptosporidium, giardia, etc.) qui peuvent être résistants au chlore. Contrairement aux traitements chimiques, les UV ne modifient pas le goût, l’odeur ou la composition physico-chimique de l’eau. Nos dispositifs UV mis en place sur le point d’entrée (POE) est installé avant que l’eau ne soit distribuée dans les foyers, au niveau de la conduite d’alimentation principale, avant qu’elle ne circule dans l’ensemble du réseau domestique.
                             </p>
                         </div>
@@ -347,7 +376,7 @@ const DesinfectionUV = () => {
                                         >
                                             {prod.name}
                                         </h3>
-                                        <p className="body-pro-max text-slate-500 flex-grow text-justify whitespace-pre-line">
+                                        <p className="body-pro-max text-slate-500 flex-grow text-left lg:text-justify whitespace-pre-line">
                                             {prod.desc}
                                         </p>
                                         <div
@@ -580,7 +609,7 @@ const DesinfectionUV = () => {
                                         >
                                             {prod.name}
                                         </h3>
-                                        <p className="body-pro-max text-slate-500 flex-grow text-justify">
+                                        <p className="body-pro-max text-slate-500 flex-grow text-left lg:text-justify">
                                             {prod.desc}
                                         </p>
                                         <div
@@ -759,25 +788,10 @@ const DesinfectionUV = () => {
                         </div>
                         <div 
                             ref={resourcesRef}
+                            onScroll={handleScrollRessources}
                             className="flex lg:grid lg:grid-cols-3 gap-8 overflow-x-auto lg:overflow-x-visible no-scrollbar snap-x snap-mandatory pb-12 px-1 lg:px-0 scroll-smooth"
                         >
-                            {[
-                                {
-                                    title: "Adoucisseur d'eau et fosse septique : compatible ou non ?",
-                                    img: adoucisseurFosseImg,
-                                    path: "/adoucisseur-deau-et-fosse-septique-mythes-et-realites"
-                                },
-                                {
-                                    title: "Adoucisseur sans sel vs avec sel : la vérité technique",
-                                    img: conditionneursImg,
-                                    path: "/adoucisseur-sans-sel-vs-avec-sel-verite-technique"
-                                },
-                                {
-                                    title: "Comment régler la dureté de votre adoucisseur ?",
-                                    img: residentialWaterSoftenerImg,
-                                    path: "/comment-regler-durete-adoucisseur-eau"
-                                }
-                            ].map((art, i) => (
+                            {resources.map((art, i) => (
                                 <div
                                     key={i}
                                     className="min-w-[70vw] md:min-w-[45vw] lg:min-w-0 snap-center bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer group flex flex-col h-full border border-gray-100"
@@ -798,24 +812,32 @@ const DesinfectionUV = () => {
                             ))}
                         </div>
 
-                        {/* Navigation arrows for carousel at bottom right */}
-                        <div className="lg:hidden flex items-center justify-end gap-3 mt-4 relative z-30">
-                            <Button 
-                                size="icon" 
-                                variant="outline" 
-                                className="w-10 h-10 rounded-full border-blue-100 hover:bg-blue-600 hover:text-white transition-all shadow-sm"
-                                onClick={() => scrollResources('left')}
-                            >
-                                <ChevronLeft className="h-5 w-5" />
-                            </Button>
-                            <Button 
-                                size="icon" 
-                                variant="outline" 
-                                className="w-10 h-10 rounded-full border-blue-100 hover:bg-blue-600 hover:text-white transition-all shadow-sm"
-                                onClick={() => scrollResources('right')}
-                            >
-                                <ChevronRight className="h-5 w-5" />
-                            </Button>
+                        {/* Navigation arrows and numbering for carousel - Mobile ONLY */}
+                        <div className="lg:hidden flex items-center justify-center relative mt-6">
+                            <div className="flex items-center gap-4">
+                                <Button 
+                                    size="icon" 
+                                    variant="outline" 
+                                    className="w-12 h-12 rounded-full border-blue-100 hover:bg-blue-600 hover:text-white transition-all shadow-sm bg-white"
+                                    onClick={() => scrollResources('left')}
+                                >
+                                    <ChevronLeft className="h-6 w-6" />
+                                </Button>
+                                <Button 
+                                    size="icon" 
+                                    variant="outline" 
+                                    className="w-12 h-12 rounded-full border-blue-100 hover:bg-blue-600 hover:text-white transition-all shadow-sm bg-white"
+                                    onClick={() => scrollResources('right')}
+                                >
+                                    <ChevronRight className="h-6 w-6" />
+                                </Button>
+                            </div>
+                            
+                            <div className="absolute right-2 text-sm font-black text-[#1e3a8a] bg-blue-50/50 px-4 py-2 rounded-full border border-blue-100/50">
+                                <span className="text-blue-600">{resourceIndex}</span>
+                                <span className="mx-1 text-slate-300">/</span>
+                                <span className="text-slate-400">{resources.length}</span>
+                            </div>
                         </div>
                     </div>
                 </section>

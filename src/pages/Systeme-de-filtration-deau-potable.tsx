@@ -74,6 +74,35 @@ const StationEauPotable = () => {
       }
   };
 
+  const [resourceIndex, setResourceIndex] = React.useState(1);
+  const resources = [
+    {
+      title: "Eau du puits au Québec : quand installer un système d'osmose inverse",
+      img: healthwaterImg,
+      link: "/eau-du-puits-au-quebec-quand-installer-un-systeme-dosmose-inverse"
+    },
+    {
+      title: "Comment l'osmose inverse protège votre famille des contaminants invisibles",
+      img: drinkpurewaterImg,
+      link: "/comment-losmose-inverse-protege-votre-famille-des-contaminants-invisibles"
+    },
+    {
+      title: "Osmose inverse : la technologie derrière une eau 100 % pure",
+      img: rowaterImg,
+      link: "/osmose-inverse-la-technologie-derriere-une-eau-100-pure"
+    },
+  ];
+
+  const handleScrollRessources = () => {
+    if (resourcesRef.current) {
+        const scrollLeft = resourcesRef.current.scrollLeft;
+        const containerWidth = resourcesRef.current.offsetWidth;
+        const itemWidth = resourcesRef.current.querySelector('div')?.offsetWidth || containerWidth;
+        const newIndex = Math.round(scrollLeft / itemWidth) + 1;
+        setResourceIndex(Math.min(newIndex, resources.length));
+    }
+  };
+
   useEffect(() => {
     document.title = "Systèmes d'osmose inverse | Purificateur d'eau potable | Bricareau";
     const metaDesc = document.querySelector('meta[name="description"]');
@@ -684,25 +713,10 @@ const StationEauPotable = () => {
             </div>
             <div 
               ref={resourcesRef}
+              onScroll={handleScrollRessources}
               className="flex lg:grid lg:grid-cols-3 gap-8 overflow-x-auto lg:overflow-x-visible no-scrollbar snap-x snap-mandatory pb-12 px-1 lg:px-0 scroll-smooth"
             >
-              {[
-                {
-                  title: "Osmose inverse et santé : quelle qualité d’eau obtenez-vous ?",
-                  img: healthwaterImg,
-                  link: "/osmose-inverse-et-sante-quelle-qualite-deau-obtenez-vous"
-                },
-                {
-                  title: "Comment l’osmose inverse protège votre famille des contaminants invisibles",
-                  img: drinkpurewaterImg,
-                  link: "/comment-losmose-inverse-protege-votre-famille-des-contaminants-invisibles"
-                },
-                {
-                  title: "Osmose inverse : la technologie derrière une eau 100 % pure",
-                  img: rowaterImg,
-                  link: "/osmose-inverse-la-technologie-derriere-une-eau-100-pure"
-                },
-              ].map((art, i) => (
+              {resources.map((art, i) => (
                 <div
                   key={i}
                   className="min-w-[70vw] md:min-w-[45vw] lg:min-w-0 snap-center group bg-white rounded-3xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full cursor-pointer"
@@ -730,24 +744,32 @@ const StationEauPotable = () => {
               ))}
             </div>
 
-            {/* Navigation arrows for carousel at bottom right */}
-            <div className="lg:hidden flex items-center justify-end gap-3 mt-4 relative z-30">
-                <Button 
-                    size="icon" 
-                    variant="outline" 
-                    className="w-10 h-10 rounded-full border-blue-100 hover:bg-blue-600 hover:text-white transition-all shadow-sm"
-                    onClick={() => scrollResources('left')}
-                >
-                    <ChevronLeft className="h-5 w-5" />
-                </Button>
-                <Button 
-                    size="icon" 
-                    variant="outline" 
-                    className="w-10 h-10 rounded-full border-blue-100 hover:bg-blue-600 hover:text-white transition-all shadow-sm"
-                    onClick={() => scrollResources('right')}
-                >
-                    <ChevronRight className="h-5 w-5" />
-                </Button>
+            {/* Navigation arrows and numbering for carousel - Mobile ONLY */}
+            <div className="lg:hidden flex items-center justify-center relative mt-6">
+                <div className="flex items-center gap-4">
+                    <Button 
+                        size="icon" 
+                        variant="outline" 
+                        className="w-12 h-12 rounded-full border-blue-100 hover:bg-blue-600 hover:text-white transition-all shadow-sm bg-white"
+                        onClick={() => scrollResources('left')}
+                    >
+                        <ChevronLeft className="h-6 w-6" />
+                    </Button>
+                    <Button 
+                        size="icon" 
+                        variant="outline" 
+                        className="w-12 h-12 rounded-full border-blue-100 hover:bg-blue-600 hover:text-white transition-all shadow-sm bg-white"
+                        onClick={() => scrollResources('right')}
+                    >
+                        <ChevronRight className="h-6 w-6" />
+                    </Button>
+                </div>
+                
+                <div className="absolute right-2 text-sm font-black text-[#1e3a8a] bg-blue-50/50 px-4 py-2 rounded-full border border-blue-100/50">
+                    <span className="text-blue-600">{resourceIndex}</span>
+                    <span className="mx-1 text-slate-300">/</span>
+                    <span className="text-slate-400">{resources.length}</span>
+                </div>
             </div>
           </div>
         </section>
