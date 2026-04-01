@@ -417,7 +417,7 @@ const DesinfectionUV = () => {
                 {/* 6.Water Testing Section (Redesigned for Mobile) */}
                 <section className="relative lg:h-[800px] flex flex-col lg:flex-row items-stretch overflow-hidden bg-white">
                     {/* Mobile Image */}
-                    <div className="lg:hidden w-full h-[300px] relative">
+                    <div className="lg:hidden w-full h-[600px] relative">
                         <img
                             src={waterTestingImg}
                             alt="Analyse microbiologique de l'eau de puits pour détecter les bactéries - Expertise Bricareau"

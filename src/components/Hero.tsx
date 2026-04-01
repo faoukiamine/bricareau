@@ -40,7 +40,7 @@ const Hero = ({
   liveStatus = false
 }: HeroProps) => {
   return (
-    <section className={cn("relative lg:h-[800px] flex flex-col items-center overflow-hidden bg-white", className)}>
+    <section className={cn("relative lg:h-[800px] flex flex-col overflow-hidden bg-white", className)}>
       {showBreadcrumbs && (
         <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none hidden lg:block">
           <div className="container mx-auto px-4 lg:px-6 pointer-events-auto">
@@ -49,23 +49,23 @@ const Hero = ({
         </div>
       )}
 
-      {/* 1. Background Image Section with Gradients */}
-      <div className="absolute inset-0 z-0">
+      {/* 1. Image Section - Stacked on Mobile/Tablet Portrait, Overlay on Desktop */}
+      <div className="relative lg:absolute lg:inset-0 w-full h-[400px] md:h-[550px] lg:h-full z-0 overflow-hidden">
         <div className={cn(
-          "absolute inset-0 z-10",
+          "absolute inset-0 z-10 transition-opacity duration-1000",
           gradualOpacity75 
-            ? "bg-gradient-to-r from-[#f0f9ff] via-[#f0f9ff]/40 35% to-transparent" 
-            : "bg-gradient-to-r from-[#f0f9ff] via-[#f0f9ff]/80 to-transparent"
+            ? "bg-gradient-to-b from-transparent to-white lg:bg-gradient-to-r lg:from-[#f0f9ff] lg:via-[#f0f9ff]/40 lg:to-transparent lg:35%" 
+            : "bg-gradient-to-b from-transparent to-white lg:bg-gradient-to-r lg:from-[#f0f9ff] lg:via-[#f0f9ff]/80 lg:to-transparent"
         )} />
         <img
           src={image || heroImage}
           alt={imageAlt}
-          className={cn("w-full h-full object-cover opacity-80", imagePosition)}
+          className={cn("w-full h-full object-cover", imagePosition)}
         />
       </div>
 
       {/* 2. Content Section */}
-      <div className="container relative z-10 mx-auto px-4 h-full flex items-center pt-32 pb-20 lg:pt-0 lg:pb-0">
+      <div className="container relative z-10 mx-auto px-4 lg:h-full flex flex-col items-start justify-center pt-16 pb-24 lg:pt-0 lg:pb-0">
         <div className="max-w-3xl space-y-8 text-left">
           <div className="space-y-6">
             {badge && (

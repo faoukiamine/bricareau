@@ -333,48 +333,27 @@ const Fontaines = () => {
                                     </a>
                                 </Button>
                             </div>
-                        </div>
 
-                        {/* Vertical Trust Bar Section - High Conversion Point */}
-                        <div className="absolute bottom-12 right-6 lg:bottom-12 lg:right-12 z-20 animate-in fade-in slide-in-from-right-12 duration-1000 delay-700 pointer-events-none">
-                            <div className="flex flex-col gap-4 pointer-events-auto">
-                                {/* Item 1: Technologie */}
-                                <div className="bg-white/60 backdrop-blur-2xl p-4 lg:p-6 rounded-[2rem] border border-white/50 shadow-2xl shadow-blue-900/10 min-w-[220px] group cursor-default">
-                                    <div className="flex items-center gap-4">
-                                        <div className="w-12 h-12 bg-blue-600/10 rounded-2xl flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all shadow-sm shrink-0">
-                                            <Zap className="w-6 h-6" />
+                            {/* Aligned Trust Row Section */}
+                            <div className="pt-12 z-20 animate-in fade-in slide-in-from-left-12 duration-1000 delay-700 w-full lg:w-auto">
+                                <div className="flex flex-row gap-4 pointer-events-auto overflow-x-auto pb-4 lg:pb-0 no-scrollbar">
+                                    {[
+                                        { label: "Technologie", val: "Filtration Double", icon: <Zap className="w-5 h-5" /> },
+                                        { label: "Pureté", val: "Certifié NSF/ANSI", icon: <Award className="w-5 h-5" /> },
+                                        { label: "Éco-Conçu", val: "Zéro Bouteilles", icon: <Leaf className="w-5 h-5" /> }
+                                    ].map((item, i) => (
+                                        <div key={i} className="bg-white/70 backdrop-blur-3xl p-3 lg:p-4 rounded-full border border-white/50 shadow-2xl shadow-blue-900/10 min-w-[200px] lg:min-w-[240px] group cursor-default transition-all duration-500 hover:scale-105">
+                                            <div className="flex items-center gap-4">
+                                                <div className="w-10 h-10 lg:w-12 lg:h-12 bg-blue-600/10 rounded-full flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all shadow-sm shrink-0">
+                                                    {item.icon}
+                                                </div>
+                                                <div className="text-left pr-4">
+                                                    <p className="text-[9px] lg:text-[10px] font-black text-slate-400 uppercase tracking-widest leading-none mb-1">{item.label}</p>
+                                                    <p className="text-xs lg:text-sm font-bold text-[#1e3a8a] whitespace-nowrap">{item.val}</p>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div className="text-left">
-                                            <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest leading-none mb-1">Technologie</p>
-                                            <p className="text-sm font-bold text-[#1e3a8a]">Filtration Double</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                {/* Item 2: Pureté */}
-                                <div className="bg-white/60 backdrop-blur-2xl p-4 lg:p-6 rounded-[2rem] border border-white/50 shadow-2xl shadow-blue-900/10 min-w-[220px] group cursor-default">
-                                    <div className="flex items-center gap-4">
-                                        <div className="w-12 h-12 bg-blue-600/10 rounded-2xl flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all shadow-sm shrink-0">
-                                            <Award className="w-6 h-6" />
-                                        </div>
-                                        <div className="text-left">
-                                            <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest leading-none mb-1">Pureté</p>
-                                            <p className="text-sm font-bold text-[#1e3a8a]">Certifié NSF/ANSI</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                {/* Item 3: Éco-Conçu */}
-                                <div className="bg-white/60 backdrop-blur-2xl p-4 lg:p-6 rounded-[2rem] border border-white/50 shadow-2xl shadow-blue-900/10 min-w-[220px] group cursor-default">
-                                    <div className="flex items-center gap-4">
-                                        <div className="w-12 h-12 bg-blue-600/10 rounded-2xl flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all shadow-sm shrink-0">
-                                            <Leaf className="w-6 h-6" />
-                                        </div>
-                                        <div className="text-left">
-                                            <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest leading-none mb-1">Éco-Conçu</p>
-                                            <p className="text-sm font-bold text-[#1e3a8a]">Zéro Bouteilles</p>
-                                        </div>
-                                    </div>
+                                    ))}
                                 </div>
                             </div>
                         </div>

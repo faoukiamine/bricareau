@@ -165,7 +165,7 @@ const Footer = () => {
                 Conditions d'utilisation
               </Link>
               <Link to="/desabonnement" className="hover:text-white transition-colors underline decoration-white/30 underline-offset-4">
-                Désabonner
+                Se désabonner
               </Link>
             </div>
           </div>
@@ -174,7 +174,7 @@ const Footer = () => {
         {/* Bottom bar */}
         <div className="text-center">
           <p className="text-sm text-white/70">
-            Copyright © 2025 Bricareau Water Specialist. Tous droits réservés.
+            Copyright © 2026 Bricareau Water Specialist. Tous droits réservés.
           </p>
         </div>
       </div>

@@ -317,7 +317,7 @@ const ConditionneursSansSel = () => {
             </div>
 
             {/* Image Side */}
-            <div className="w-full lg:w-1/2 relative group overflow-hidden h-[400px] md:h-[550px] lg:h-auto border-l border-slate-100 bg-white">
+            <div className="w-full lg:w-1/2 relative group overflow-hidden h-[600px] lg:h-auto border-l border-slate-100 bg-white">
               <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(37,99,235,0.03)_0%,transparent_70%)] pointer-events-none" />
               
               <img 

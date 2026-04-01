@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { cn } from "@/lib/utils";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
@@ -18,8 +19,10 @@ import spaRelaxationImg from "@/assets/young-nude-woman-taking-relaxing-foamy-ba
 import {
     ArrowRight,
     ChevronRight,
+    ChevronLeft,
     CheckCircle2,
-    Phone
+    Phone,
+    X
 } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import { useNavigate } from "react-router-dom";
@@ -36,11 +39,19 @@ import {
     AccordionItem,
     AccordionTrigger
 } from "@/components/ui/accordion";
+import {
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+    CarouselNext,
+    CarouselPrevious,
+} from "@/components/ui/carousel";
 import hardWaterFaucetImg from "@/assets/Hard Water-Faucet.jpg";
 import drySkinImg from "@/assets/different-types-of-eczema.jpg";
 import cloudyGlassImg from "@/assets/18036672_SIE_2720_1530_21_04_30_SIE_CRM_Dishwasher_Hand_Taking_Out_Wine_Glass_Basket_Motiv_11_0017.webp";
 import brokenHeaterImg from "@/assets/detartrage-chauffe-eau-electrique.jpg";
 import ironStainImg from "@/assets/5a4674e7-575d-4cd9-b1f2-32522f8a7072.jpg";
+import ConsultationFormSection from "@/components/ConsultationFormSection";
 import ourteamstudyyourwaterImg from "@/assets/10271.jpg";
 
 const products = [
@@ -48,7 +59,6 @@ const products = [
         name: "Adoucisseur d'eau de la série Sentinelle HE", 
         displayName: <>Adoucisseur d'eau de la série<br />Sentinelle HE</>, 
         desc: "Votre priorité est d'éradiquer le calcaire avec une précision chirurgicale, sans complexité inutile.", 
-        features: ["Protection des électros", "Format compact intelligent", "Économie de sel optimisée"],
         path: "/contact", 
         image: SentinelWaterSoftenerImg 
     },
@@ -56,7 +66,6 @@ const products = [
         name: "Adoucisseur d'eau de la série Sérénité HE", 
         displayName: <>Adoucisseur d'eau de la série<br />Sérénité HE</>, 
         desc: "Vous cherchez l'eau parfaite pour la peau, les cheveux et la consommation, en éliminant aussi le chlore.", 
-        features: ["Hybride : Calcaire & Chlore", "Douceur dermatologique", "Élimine odeurs et goûts"],
         isRecommended: true,
         path: "/contact", 
         image: SerenityWaterSoftenerImg 
@@ -65,7 +74,6 @@ const products = [
         name: "Adoucisseur d'eau de la série Infiniti HE", 
         displayName: <>Adoucisseur d'eau de la série<br />Infiniti HE</>, 
         desc: "Grandes familles ou besoins critiques : vous refusez toute interruption de douceur, 24h/24.", 
-        features: ["Double bouteille alternée", "Eau douce non-stop", "Performance industrielle"],
         path: "/contact", 
         image: TwinAlternatingWaterSoftenerImg 
     },
@@ -189,6 +197,7 @@ const comparisonData: ComparisonItem[] = [
 const AdoucisseursEauDePuits = () => {
     const [showAllFaqs, setShowAllFaqs] = React.useState(false);
     const navigate = useNavigate();
+    const [activeCol, setActiveCol] = React.useState(0);
 
     useEffect(() => {
         document.title = "Adoucisseur d'eau de puits : Protection fer et calcaire";
@@ -367,7 +376,8 @@ const AdoucisseursEauDePuits = () => {
                             <div className="w-24 h-1 bg-blue-600"></div>
                             <p className="body-pro-max mt-8 text-justify w-full">Découvrez notre gamme exclusive d'adoucisseurs d'eau pour puits, conçue pour traiter les eaux souterraines complexes.</p>
                         </div>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {/* Desktop Grid (lg+) */}
+                        <div className="hidden lg:grid grid-cols-3 gap-8">
                             {products.map((p, i) => (
                                 <div key={i} className="group bg-white rounded-[3rem] overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-700 hover:-translate-y-3 flex flex-col h-full cursor-pointer" onClick={() => navigate(p.path || "/contact")}>
                                     <div className="relative h-80 overflow-hidden bg-slate-50/50 flex items-center justify-center p-12">
@@ -377,21 +387,66 @@ const AdoucisseursEauDePuits = () => {
                                     <div className="p-10 space-y-6 flex flex-col flex-grow border-t border-transparent group-hover:border-blue-600 transition-all duration-500">
                                         <h3 className="text-2xl font-bold text-[#1e3a8a] text-center whitespace-pre-line">{p.displayName || p.name}</h3>
                                         <p className="text-slate-500 text-sm leading-relaxed text-center italic font-light">{p.desc}</p>
-                                        <div className="space-y-4 flex-grow">
-                                            {p.features?.map((f, idx) => (
-                                                <div key={idx} className="flex items-start gap-3">
-                                                    <div className="mt-1 w-5 h-5 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0 group-hover:bg-blue-600 transition-colors"><CheckCircle2 className="w-3 h-3 text-blue-600 group-hover:text-white" /></div>
-                                                    <span className="text-sm text-slate-600 font-medium">{f}</span>
-                                                </div>
-                                            ))}
-                                        </div>
-                                        <div className="pt-6 border-t border-slate-50 flex items-center justify-between">
-                                            <span className="text-[10px] font-black uppercase tracking-widest text-blue-600/40 italic">Détails techniques</span>
-                                            <div className="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-all"><ArrowRight className="h-5 w-5" /></div>
+                                        <div className="pt-6 flex items-center justify-end">
+                                            <div className="w-12 h-12 rounded-full bg-slate-50 flex items-center justify-center group-hover:bg-blue-600 transition-all shadow-sm group-hover:shadow-blue-200 text-blue-600 group-hover:text-white"><ArrowRight className="h-6 w-6" /></div>
                                         </div>
                                     </div>
                                 </div>
                             ))}
+                        </div>
+
+                        {/* Mobile/Tablet Carousel (under lg) */}
+                        <div className="lg:hidden relative">
+                            <Carousel
+                                opts={{
+                                    align: "start",
+                                    loop: true
+                                }}
+                                className="w-full"
+                            >
+                                <CarouselContent className="-ml-4 pb-12">
+                                    {products.map((p, i) => (
+                                        <CarouselItem key={i} className="pl-4 md:basis-1/2">
+                                            <div 
+                                                className="group bg-white rounded-[2.5rem] overflow-hidden border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col h-full cursor-pointer" 
+                                                onClick={() => navigate(p.path || "/contact")}
+                                            >
+                                                <div className="relative h-64 overflow-hidden bg-slate-50/50 flex items-center justify-center p-8">
+                                                    {p.isRecommended && (
+                                                        <div className="absolute top-4 right-4 z-10">
+                                                            <span className="inline-block px-3 py-1 bg-blue-600 text-white rounded-full text-[8px] font-black uppercase tracking-widest shadow-lg">
+                                                                RECOMMANDÉ
+                                                            </span>
+                                                        </div>
+                                                    )}
+                                                    <img 
+                                                        src={p.image} 
+                                                        alt={p.name} 
+                                                        className="max-h-full object-contain group-hover:scale-105 transition-transform duration-700 mix-blend-multiply" 
+                                                    />
+                                                </div>
+                                                <div className="p-8 space-y-4 flex flex-col flex-grow border-t border-transparent group-hover:border-blue-600 transition-all">
+                                                    <h3 className="text-xl font-bold text-[#1e3a8a] text-center leading-tight whitespace-pre-line">
+                                                        {p.displayName || p.name}
+                                                    </h3>
+                                                    <p className="text-slate-500 text-xs leading-relaxed text-center italic font-light flex-grow">
+                                                        {p.desc}
+                                                    </p>
+                                                    <div className="pt-4 flex items-center justify-center">
+                                                        <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                                                            <ArrowRight className="h-5 w-5" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </CarouselItem>
+                                    ))}
+                                </CarouselContent>
+                                <div className="flex items-center justify-center gap-4 mt-4">
+                                    <CarouselPrevious className="static translate-y-0 h-10 w-10 border-blue-100 text-blue-600 hover:bg-blue-600 hover:text-white" />
+                                    <CarouselNext className="static translate-y-0 h-10 w-10 border-blue-100 text-blue-600 hover:bg-blue-600 hover:text-white" />
+                                </div>
+                            </Carousel>
                         </div>
                     </div>
                 </section>
@@ -406,55 +461,100 @@ const AdoucisseursEauDePuits = () => {
                                 <span className="font-bold text-[#1e3a8a] block">au service de votre puits.</span>
                             </h2>
                         </div>
-                        <div className="overflow-x-auto pb-12">
-                            <table className="w-full min-w-[1000px] border-collapse bg-white rounded-[3rem] overflow-hidden shadow-xl border border-slate-100">
-                                <thead>
-                                    <tr className="bg-slate-50/50">
-                                        <th className="p-10 text-left text-blue-900/40 font-black uppercase tracking-widest text-[10px]">Critères de Performance</th>
-                                        {[
-                                            { name: "Sentinelle HE", img: SentinelWaterSoftenerImg, badge: "Efficacité Pure", color: "bg-emerald-600" },
-                                            { name: "Sérénité HE", img: SerenityWaterSoftenerImg, badge: "Choix des Familles", color: "bg-blue-600" },
-                                            { name: "Infiniti HE", img: TwinAlternatingWaterSoftenerImg, badge: "Performance 24/7", color: "bg-indigo-700" }
-                                        ].map((m, i) => (
-                                            <th key={i} className="p-6 text-center align-bottom">
-                                                <div className="flex flex-col items-center gap-6">
-                                                    <div className="relative group/img pr-4 pt-4">
-                                                        <span className={`absolute top-0 right-0 z-20 px-3 py-1 ${m.color} text-white rounded-full text-[8px] font-bold uppercase tracking-widest shadow-lg shadow-blue-900/10 whitespace-nowrap`}>
-                                                            {m.badge}
-                                                        </span>
-                                                        <div className="absolute inset-0 bg-blue-600 rounded-full blur-2xl opacity-0 group-hover/img:opacity-20 transition-opacity duration-700" />
-                                                        <img
-                                                            src={m.img}
-                                                            alt={m.name}
-                                                            className="w-[140px] h-[120px] object-contain mx-auto mix-blend-multiply relative z-10 transition-transform duration-700 group-hover/img:scale-110"
-                                                        />
-                                                    </div>
-                                                    <div className="space-y-2">
-                                                        <div className="text-lg font-bold text-[#1e3a8a]">{m.name}</div>
-                                                    </div>
-                                                </div>
+                        <div className="overflow-x-visible relative text-left">
+                            {/* Navigation Arrows for Mobile/Tablet */}
+                            <div className="lg:hidden flex items-center justify-end gap-3 mb-8 relative z-30">
+                                <Button 
+                                    size="icon" 
+                                    variant="outline" 
+                                    className="w-10 h-10 rounded-full border-blue-100 hover:bg-blue-600 hover:text-white transition-all shadow-sm"
+                                    onClick={() => setActiveCol(Math.max(0, activeCol - 1))}
+                                    disabled={activeCol === 0}
+                                >
+                                    <ChevronLeft className="h-5 w-5" />
+                                </Button>
+                                <Button 
+                                    size="icon" 
+                                    variant="outline" 
+                                    className="w-10 h-10 rounded-full border-blue-100 hover:bg-blue-600 hover:text-white transition-all shadow-sm"
+                                    onClick={() => setActiveCol(Math.min(2, activeCol + 1))}
+                                    disabled={activeCol === 2}
+                                >
+                                    <ChevronRight className="h-5 w-5" />
+                                </Button>
+                            </div>
+
+                            <div className="overflow-x-auto lg:overflow-x-visible no-scrollbar pb-8">
+                                <table className="w-full border-collapse bg-white rounded-3xl overflow-hidden shadow-2xl relative">
+                                    <thead>
+                                        <tr className="bg-slate-50 relative z-20">
+                                            <th className="p-6 md:p-10 text-left text-blue-900/40 font-black uppercase tracking-widest text-[10px] sticky left-0 bg-slate-50 z-30 border-r border-slate-100 drop-shadow-md lg:drop-shadow-none min-w-[160px] md:min-w-[200px]">
+                                                Critères de Performance
                                             </th>
-                                        ))}
-                                    </tr>
-                                </thead>
-                                <tbody className="divide-y divide-slate-100">
-                                    {comparisonData.map((row, i) => (
-                                        <tr key={i} className="hover:bg-blue-50/30 transition-colors group">
-                                            <td className="p-10 font-bold text-[#1e3a8a] border-r border-slate-50 bg-slate-50/20 text-sm italic group-hover:text-blue-600">{row.feature}</td>
-                                            {["Sérénité HE", "Sentinel HE", "Infiniti HE"].map((model) => (
-                                                <td key={model} className="p-10 text-center text-sm font-light text-slate-600">{row[model as keyof ComparisonItem]}</td>
+                                            {[
+                                                { name: "Sentinelle HE", img: SentinelWaterSoftenerImg, badge: "Efficacité Pure", color: "bg-emerald-600" },
+                                                { name: "Sérénité HE", img: SerenityWaterSoftenerImg, badge: "Choix des Familles", color: "bg-blue-600" },
+                                                { name: "Infiniti HE", img: TwinAlternatingWaterSoftenerImg, badge: "Performance 24/7", color: "bg-indigo-700" }
+                                            ].map((m, i) => (
+                                                <th 
+                                                    key={i} 
+                                                    className={cn(
+                                                        "p-4 md:p-6 text-center transition-all duration-500 min-w-[220px]",
+                                                        i === activeCol ? "table-cell" : "hidden lg:table-cell"
+                                                    )}
+                                                >
+                                                    <div className="flex flex-col items-center gap-6">
+                                                        <div className="relative group/img pr-4 pt-4">
+                                                            <span className={`absolute top-0 right-0 z-20 px-3 py-1 ${m.color} text-white rounded-full text-[8px] font-bold uppercase tracking-widest shadow-lg shadow-blue-900/10 whitespace-nowrap scale-90 md:scale-100`}>
+                                                                {m.badge}
+                                                            </span>
+                                                            <div className="absolute inset-0 bg-blue-600 rounded-full blur-2xl opacity-0 group-hover/img:opacity-20 transition-opacity duration-700" />
+                                                            <img
+                                                                src={m.img}
+                                                                alt={m.name}
+                                                                className="w-[120px] md:w-[140px] h-[100px] md:h-[120px] object-contain mx-auto mix-blend-multiply relative z-10 transition-transform duration-700 group-hover/img:scale-110"
+                                                            />
+                                                        </div>
+                                                        <div className="text-[13px] md:text-lg font-bold text-[#1e3a8a]">{m.name}</div>
+                                                    </div>
+                                                </th>
                                             ))}
                                         </tr>
-                                    ))}
-                                </tbody>
-                            </table>
+                                    </thead>
+                                    <tbody className="divide-y divide-slate-100 relative z-10">
+                                        {comparisonData.map((row, i) => (
+                                            <tr key={i} className="hover:bg-blue-50/30 transition-colors group">
+                                                <td className="p-6 md:p-10 font-bold text-[#1e3a8a] bg-white sticky left-0 z-30 border-r border-slate-50 drop-shadow-sm lg:drop-shadow-none text-[12px] md:text-sm italic group-hover:text-blue-600 transition-colors">
+                                                    {row.feature}
+                                                </td>
+                                                {["Sentinelle HE", "Sérénité HE", "Infiniti HE"].map((model, idx) => (
+                                                    <td 
+                                                        key={model} 
+                                                        className={cn(
+                                                            "p-6 md:p-10 text-center text-[13px] md:text-sm font-light leading-relaxed text-slate-600 transition-all duration-500",
+                                                            idx === activeCol ? "table-cell" : "hidden lg:table-cell"
+                                                        )}
+                                                    >
+                                                        {(() => {
+                                                            const val = row[model as keyof typeof row];
+                                                            if (typeof val === 'string') return <span className="text-slate-600 font-light">{val}</span>;
+                                                            if (val === true) return <CheckCircle2 className="h-5 w-5 md:h-6 md:w-6 text-blue-600 mx-auto" />;
+                                                            return <div className="h-5 w-5 md:h-6 md:w-6 mx-auto opacity-10"><X className="h-5 w-5 md:h-6 md:w-6" /></div>;
+                                                        })()}
+                                                    </td>
+                                                ))}
+                                            </tr>
+                                        ))}
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </section>
 
                 {/* 6. Water Testing Section */}
                 <section className="relative lg:h-[800px] flex flex-col lg:flex-row items-stretch overflow-hidden bg-white">
-                    <div className="lg:hidden w-full h-[300px] relative">
+                    <div className="lg:hidden w-full h-[600px] relative">
                         <img src={waterTestingImg} alt="Test de dureté" className="w-full h-full object-cover" />
                     </div>
                     <div className="hidden lg:block absolute inset-0 z-0">
@@ -511,7 +611,7 @@ const AdoucisseursEauDePuits = () => {
                                     <div className="p-8 space-y-4 flex flex-col flex-grow border-t border-slate-50 group-hover:border-blue-600 transition-all">
                                         <h3 className="text-xl font-bold text-[#1e3a8a] text-center">{prod.name}</h3>
                                         <p className="text-slate-500 text-sm leading-relaxed text-center italic font-light">{prod.desc}</p>
-                                        <div className="pt-4 flex justify-center"><div className="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-all"><ArrowRight className="h-5 w-5" /></div></div>
+                                        <div className="pt-4 flex justify-end"><div className="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center group-hover:bg-blue-600 transition-all text-blue-600 group-hover:text-white border border-blue-600/5 group-hover:border-transparent shadow-sm"><ArrowRight className="h-5 w-5" /></div></div>
                                     </div>
                                 </div>
                             ))}

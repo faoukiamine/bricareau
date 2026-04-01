@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
@@ -28,6 +29,7 @@ import waterTestingImg from "@/assets/2147800429.jpg";
 import process1 from "@/assets/2148563485.jpg";
 import labTestImg from "@/assets/test-laboratoire-diligence-inspection-750x500.jpg";
 import waterTestingBg from "@/assets/undersink_filtration_header.jpg";
+import adoucisseursImg from "@/assets/Adoucisseurs d'eau.webp";
 import specializedFiltersImg from "@/assets/Filtres d'eau spécialisés.webp";
 import drinkingWaterImg from "@/assets/Solutions d'eau potable.webp";
 import undersinkSystemImg from "@/assets/Système+de+filtration+Serene+Lite.webp";
@@ -46,6 +48,8 @@ import hardWaterFaucetImg from "@/assets/Hard Water-Faucet.jpg";
 
 import {
     ArrowRight,
+    ChevronRight,
+    ChevronLeft,
     Droplets,
     Heart,
     Shield,
@@ -54,7 +58,6 @@ import {
     Zap,
     Check,
     CheckCircle2,
-    ChevronRight,
     Star,
     Play,
     X,
@@ -100,8 +103,9 @@ const Adoucissement = () => {
         setScrollSnaps(emblaApi.scrollSnapList());
         emblaApi.on('select', onSelect);
     }, [emblaApi, setScrollSnaps, onSelect]);
-    const [showAllFaqs, setShowAllFaqs] = React.useState(false);
-    const [showAllHarms, setShowAllHarms] = React.useState(false);
+    const [showAllFaqs, setShowAllFaqs] = useState(false);
+    const [showAllHarms, setShowAllHarms] = useState(false);
+    const [activeCol, setActiveCol] = useState(0); 
     const navigate = useNavigate();
 
 
@@ -585,58 +589,102 @@ const Adoucissement = () => {
                                      </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
-                        <div className="overflow-x-auto">
-                            <table className="w-full min-w-[1000px] border-collapse bg-white rounded-2xl overflow-hidden shadow-sm">
-                                <thead>
-                                    <tr className="bg-gray-100/50">
-                                        <th className="p-8 text-left text-blue-900/40 font-black uppercase tracking-widest text-[10px]">Solutions</th>
-                                        {[
-                                            { name: "Adoucisseur Sentinel", img: specializedFiltersImg, badge: "Performance Totale", color: "bg-[#1e3a8a]" },
-                                            { name: "Conditionneur sans Sel", img: TACsystemImg, badge: "Éco-Responsable", color: "bg-[#2563eb]" },
-                                        ].map((m, i) => (
-                                            <th key={i} className="p-4 text-center text-gray-900 font-bold">
-                                                <div className="flex flex-col items-center gap-4 group">
-                                                    <div className="relative">
-                                                        <div className={`absolute -top-3 -right-6 z-20 ${m.color} text-white text-[8px] font-black uppercase tracking-[0.2em] px-3 py-1 rounded-full shadow-lg whitespace-nowrap`}>
-                                                            {m.badge}
-                                                        </div>
-                                                        <img
-                                                            src={m.img}
-                                                            alt={`${m.name} - Système de traitement d'eau haute performance Bricareau`}
-                                                            className="w-[150px] h-[120px] object-contain mx-auto mix-blend-multiply group-hover:scale-110 transition-transform duration-500 rounded-xl"
-                                                        />
-                                                    </div>
-                                                    <span className="max-w-[140px] inline-block uppercase tracking-wider text-[11px] text-[#1e3a8a]">{m.name}</span>
-                                                </div>
+                        <div className="overflow-x-visible relative">
+                            {/* Navigation Arrows for Mobile/Tablet */}
+                            <div className="lg:hidden flex items-center justify-end gap-3 mb-6 relative z-30">
+                                <Button 
+                                    size="icon" 
+                                    variant="outline" 
+                                    className="w-10 h-10 rounded-full border-blue-100 hover:bg-blue-600 hover:text-white transition-all shadow-sm"
+                                    onClick={() => setActiveCol(0)}
+                                    disabled={activeCol === 0}
+                                >
+                                    <ChevronLeft className="h-5 w-5" />
+                                </Button>
+                                <Button 
+                                    size="icon" 
+                                    variant="outline" 
+                                    className="w-10 h-10 rounded-full border-blue-100 hover:bg-blue-600 hover:text-white transition-all shadow-sm"
+                                    onClick={() => setActiveCol(1)}
+                                    disabled={activeCol === 1}
+                                >
+                                    <ChevronRight className="h-5 w-5" />
+                                </Button>
+                            </div>
+
+                            <div className="overflow-x-auto lg:overflow-x-visible no-scrollbar pb-8">
+                                <table className="w-full border-collapse bg-white rounded-3xl overflow-hidden shadow-2xl relative">
+                                    <thead>
+                                        <tr className="bg-slate-50 relative z-20">
+                                            <th className="p-6 md:p-8 text-left text-blue-900/40 font-black uppercase tracking-widest text-[10px] sticky left-0 bg-slate-50 z-30 border-r border-slate-100 drop-shadow-md lg:drop-shadow-none min-w-[160px] md:min-w-[200px]">
+                                                Solutions
                                             </th>
-                                        ))}
-                                    </tr>
-                                </thead>
-                                <tbody className="divide-y divide-gray-100">
-                                    {[
-                                        { feature: "Technologie de traitement", specialized: "Échange Ionique", station: "Temp-A-Cure (TAC)" },
-                                        { feature: "Action sur les minéraux", specialized: "Élimination Physique", station: "Neutralisation" },
-                                        { feature: "Sacs de sel à manipuler", specialized: "Oui (Mensuel)", station: "Non (Jamais)" },
-                                        { feature: "Gaspillage d'eau", specialized: "Régénération", station: "0% Gaspillage" },
-                                        { feature: "Énergie & Électricité", specialized: "Nécessaire", station: "Sans électricité" },
-                                        { feature: "Sensation sur la peau", specialized: "Soyeuse / Glissante", station: "Naturelle" },
-                                        { feature: "Impact Environnemental", specialized: "Rejet de saumure", station: "100% Écologique" },
-                                        { feature: "Minéraux de santé (Ca/Mg)", specialized: "Retirés", station: "Préservés" },
-                                        { feature: "Protection contre le tartre", specialized: "Totale", station: "Excellente" },
-                                        { feature: "Espace d'installation", specialized: "Moyen", station: "Compact" }
-                                    ].map((row, i) => (
-                                        <tr key={i} className="hover:bg-gray-50 transition-colors">
-                                            <td className="p-8 font-light text-gray-700">{row.feature}</td>
-                                            <td className="p-8 text-center">
-                                                {typeof row.specialized === 'string' ? <span className="text-blue-600 font-bold bg-blue-50 px-3 py-1 rounded-full text-[10px]">{row.specialized}</span> : (row.specialized ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : null)}
-                                            </td>
-                                            <td className="p-8 text-center">
-                                                {typeof row.station === 'string' ? <span className="text-blue-600 font-bold bg-blue-50 px-3 py-1 rounded-full text-[10px]">{row.station}</span> : (row.station ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : null)}
-                                            </td>
+                                            {[
+                                                { name: "Adoucisseur Sentinel", img: adoucisseursImg, badge: "Performance Totale", color: "bg-[#1e3a8a]" },
+                                                { name: "Conditionneur sans Sel", img: TACsystemImg, badge: "Éco-Responsable", color: "bg-[#2563eb]" },
+                                            ].map((m, i) => (
+                                                <th 
+                                                    key={i} 
+                                                    className={cn(
+                                                        "p-4 md:p-6 text-center text-gray-900 font-bold transition-all duration-500",
+                                                        i === activeCol ? "table-cell" : "hidden lg:table-cell"
+                                                    )}
+                                                >
+                                                    <div className="flex flex-col items-center gap-4 group py-4">
+                                                        <div className="relative">
+                                                            <div className={`absolute -top-3 -right-6 z-20 ${m.color} text-white text-[8px] font-black uppercase tracking-[0.2em] px-3 py-1 rounded-full shadow-lg whitespace-nowrap scale-90 md:scale-100`}>
+                                                                {m.badge}
+                                                            </div>
+                                                            <img
+                                                                src={m.img}
+                                                                alt={`${m.name} - Système de traitement d'eau haute performance Bricareau`}
+                                                                className="w-[120px] md:w-[150px] h-[100px] md:h-[120px] object-contain mx-auto mix-blend-multiply group-hover:scale-110 transition-transform duration-500 rounded-xl"
+                                                            />
+                                                        </div>
+                                                        <span className="max-w-[140px] inline-block uppercase tracking-wider text-[10px] md:text-[11px] text-[#1e3a8a]">{m.name}</span>
+                                                    </div>
+                                                </th>
+                                            ))}
                                         </tr>
-                                    ))}
-                                </tbody>
-                            </table>
+                                    </thead>
+                                    <tbody className="divide-y divide-slate-100 relative z-10">
+                                        {[
+                                            { feature: "Technologie de traitement", specialized: "Échange Ionique", station: "Temp-A-Cure (TAC)" },
+                                            { feature: "Action sur les minéraux", specialized: "Élimination Physique", station: "Neutralisation" },
+                                            { feature: "Sacs de sel à manipuler", specialized: "Oui (Mensuel)", station: "Non (Jamais)" },
+                                            { feature: "Gaspillage d'eau", specialized: "Régénération", station: "0% Gaspillage" },
+                                            { feature: "Énergie & Électricité", specialized: "Nécessaire", station: "Sans électricité" },
+                                            { feature: "Sensation sur la peau", specialized: "Soyeuse / Glissante", station: "Naturelle" },
+                                            { feature: "Impact Environnemental", specialized: "Rejet de saumure", station: "100% Écologique" },
+                                            { feature: "Minéraux de santé (Ca/Mg)", specialized: "Retirés", station: "Préservés" },
+                                            { feature: "Protection contre le tartre", specialized: "Totale", station: "Excellente" },
+                                            { feature: "Espace d'installation", specialized: "Moyen", station: "Compact" }
+                                        ].map((row, i) => (
+                                            <tr key={i} className="hover:bg-slate-50/50 transition-colors group">
+                                                <td className="p-6 md:p-8 font-medium text-slate-700 bg-white sticky left-0 z-30 border-r border-slate-50 drop-shadow-sm lg:drop-shadow-none text-sm md:text-base">
+                                                    {row.feature}
+                                                </td>
+                                                <td 
+                                                    className={cn(
+                                                        "p-6 md:p-8 text-center transition-all duration-500",
+                                                        activeCol === 0 ? "table-cell" : "hidden lg:table-cell"
+                                                    )}
+                                                >
+                                                    {typeof row.specialized === 'string' ? <span className="text-blue-600 font-bold bg-blue-50/50 px-3 py-1.5 rounded-full text-[10px] md:text-[11px]">{row.specialized}</span> : (row.specialized ? <CheckCircle2 className="h-5 w-5 md:h-6 md:w-6 text-blue-600 mx-auto" /> : null)}
+                                                </td>
+                                                <td 
+                                                    className={cn(
+                                                        "p-6 md:p-8 text-center transition-all duration-500",
+                                                        activeCol === 1 ? "table-cell" : "hidden lg:table-cell"
+                                                    )}
+                                                >
+                                                    {typeof row.station === 'string' ? <span className="text-blue-600 font-bold bg-blue-50/50 px-3 py-1.5 rounded-full text-[10px] md:text-[11px]">{row.station}</span> : (row.station ? <CheckCircle2 className="h-5 w-5 md:h-6 md:w-6 text-blue-600 mx-auto" /> : null)}
+                                                </td>
+                                            </tr>
+                                        ))}
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -644,7 +692,7 @@ const Adoucissement = () => {
                 {/* 9. Water Testing Section (Redesigned for Mobile) */}
                 <section className="relative lg:h-[800px] flex flex-col lg:flex-row items-stretch overflow-hidden bg-white">
                     {/* Mobile Image */}
-                    <div className="lg:hidden w-full h-[300px] relative">
+                    <div className="lg:hidden w-full h-[600px] relative">
                         <img
                             src={waterTestingBg}
                             alt="Analyse d'eau à domicile et test de dureté - Diagnostic expert Bricareau"

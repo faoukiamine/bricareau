@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import { cn } from "@/lib/utils";
 import Hero from "@/components/Hero";
 import ExpertAvatars from "@/components/ExpertAvatars";
 import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
@@ -10,6 +11,7 @@ import FilteredcitywaterImg from "@/assets/2150084031.jpg";
 import {
     ArrowRight,
     ChevronRight,
+    ChevronLeft,
     CheckCircle2,
     CheckCircle,
     X,
@@ -19,7 +21,7 @@ import {
 import { NavLink } from "@/components/NavLink";
 import { useNavigate } from "react-router-dom";
 import React, { useEffect, useState } from "react";
-import waterTestingImg from "@/assets/reasons-to-drink-more-water.jpg";
+import excellenceWaterImg from "@/assets/2943.jpg";
 import hardWaterFaucetImg from "@/assets/Hard Water-Faucet.jpg";
 import waterzeroodorImg from "@/assets/pexels-vlada-karpovich-6802947.jpg";
 import specializedFiltersImg from "@/assets/Filtres d'eau spécialisés.webp";
@@ -133,6 +135,7 @@ const comparisonData: ComparisonItem[] = [
 const FiltresTouteMaison = () => {
     const navigate = useNavigate();
     const [showAllFaqs, setShowAllFaqs] = React.useState(false);
+    const [activeCol, setActiveCol] = React.useState(0);
 
     useEffect(() => {
         document.title = "Filtres d'eau pour toute la maison | Filtration Point d'Entrée | Bricareau";
@@ -334,50 +337,89 @@ const FiltresTouteMaison = () => {
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
-                        <div className="overflow-x-auto pb-12">
-                            <table className="w-full min-w-[1000px] border-collapse bg-white rounded-[3rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.05)] border border-slate-100">
-                                <thead>
-                                    <tr className="bg-slate-50/50">
-                                        <th className="p-10 text-left text-blue-900/40 font-black uppercase tracking-widest text-[10px]">Critères Techniques</th>
-                                        {products.map((m, i) => (
-                                            <th key={i} className="p-6 text-center align-bottom">
-                                                <div className="flex flex-col items-center gap-6">
-                                                    <div className="relative group/img pr-4 pt-4">
-                                                        <div className={`absolute top-0 right-0 z-20 ${m.badgeColor} text-white text-[8px] font-black uppercase tracking-[0.4em] px-3 py-1 rounded-full shadow-2xl whitespace-nowrap`}>
-                                                            {m.badge}
-                                                        </div>
-                                                        <div className="absolute inset-0 bg-blue-600 rounded-full blur-2xl opacity-0 group-hover/img:opacity-20 transition-opacity duration-700" />
-                                                        <img
-                                                            src={m.image}
-                                                            alt={`Modèle ${m.name}`}
-                                                            className="w-[180px] h-[140px] object-contain mx-auto mix-blend-multiply relative z-10 transition-transform duration-700 group-hover/img:scale-110"
-                                                        />
-                                                    </div>
-                                                    <div className="text-lg font-bold text-[#1e3a8a] max-w-[150px] mx-auto leading-tight">{m.name.replace("Filtre d'eau ", "")}</div>
-                                                </div>
+                        <div className="overflow-x-visible relative">
+                            {/* Navigation Arrows for Mobile/Tablet */}
+                            <div className="lg:hidden flex items-center justify-end gap-3 mb-8 relative z-30">
+                                <Button 
+                                    size="icon" 
+                                    variant="outline" 
+                                    className="w-10 h-10 rounded-full border-blue-100 hover:bg-blue-600 hover:text-white transition-all shadow-sm"
+                                    onClick={() => setActiveCol(Math.max(0, activeCol - 1))}
+                                    disabled={activeCol === 0}
+                                >
+                                    <ChevronLeft className="h-5 w-5" />
+                                </Button>
+                                <Button 
+                                    size="icon" 
+                                    variant="outline" 
+                                    className="w-10 h-10 rounded-full border-blue-100 hover:bg-blue-600 hover:text-white transition-all shadow-sm"
+                                    onClick={() => setActiveCol(Math.min(2, activeCol + 1))}
+                                    disabled={activeCol === 2}
+                                >
+                                    <ChevronRight className="h-5 w-5" />
+                                </Button>
+                            </div>
+
+                            <div className="overflow-x-auto lg:overflow-x-visible no-scrollbar pb-8">
+                                <table className="w-full border-collapse bg-white rounded-3xl overflow-hidden shadow-2xl relative">
+                                    <thead>
+                                        <tr className="bg-slate-50 relative z-20">
+                                            <th className="p-6 md:p-10 text-left text-blue-900/40 font-black uppercase tracking-widest text-[10px] sticky left-0 bg-slate-50 z-30 border-r border-slate-100 drop-shadow-md lg:drop-shadow-none min-w-[160px] md:min-w-[200px]">
+                                                Critères Techniques
                                             </th>
-                                        ))}
-                                    </tr>
-                                </thead>
-                                <tbody className="divide-y divide-slate-100">
-                                    {comparisonData.map((row, i) => (
-                                        <tr key={i} className="hover:bg-blue-50/30 transition-colors group">
-                                            <td className="p-10 font-bold text-[#1e3a8a] border-r border-slate-50 bg-slate-50/20 text-sm italic group-hover:text-blue-600 transition-colors">
-                                                {row.feature}
-                                            </td>
-                                            <td className="p-10 text-center text-sm font-light leading-relaxed text-slate-600">
-                                                {typeof row.vortex === 'string' ? <span className="text-blue-600 font-bold bg-blue-50 px-4 py-1.5 rounded-full text-[10px] uppercase shadow-sm">{row.vortex}</span> : (row.vortex ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : <div className="h-6 w-6 mx-auto opacity-10"><X className="h-6 w-6" /></div>)}
-                                            </td>
-                                            <td className="p-10 text-center text-sm font-light leading-relaxed text-slate-600">
-                                                {typeof row.chlorstop === 'string' ? <span className="text-blue-600 font-bold bg-blue-50 px-4 py-1.5 rounded-full text-[10px] uppercase shadow-sm">{row.chlorstop}</span> : (row.chlorstop ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : <div className="h-6 w-6 mx-auto opacity-10"><X className="h-6 w-6" /></div>)}
-                                            </td>
-                                            <td className="p-10 text-center text-sm font-light leading-relaxed text-slate-600">
-                                                {typeof row.ironshield === 'string' ? <span className="text-blue-600 font-bold bg-blue-50 px-4 py-1.5 rounded-full text-[10px] uppercase shadow-sm">{row.ironshield}</span> : (row.ironshield ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : <div className="h-6 w-6 mx-auto opacity-10"><X className="h-6 w-6" /></div>)}
-                                            </td>
+                                            {products.map((m, i) => (
+                                                <th 
+                                                    key={i} 
+                                                    className={cn(
+                                                        "p-4 md:p-6 text-center transition-all duration-500 min-w-[220px]",
+                                                        i === activeCol ? "table-cell" : "hidden lg:table-cell"
+                                                    )}
+                                                >
+                                                    <div className="flex flex-col items-center gap-6">
+                                                        <div className="relative group/img pr-4 pt-4">
+                                                            <div className={`absolute top-0 right-0 z-20 ${m.badgeColor} text-white text-[8px] font-black uppercase tracking-[0.4em] px-3 py-1 rounded-full shadow-2xl whitespace-nowrap scale-90 md:scale-100`}>
+                                                                {m.badge}
+                                                            </div>
+                                                            <div className="absolute inset-0 bg-blue-600 rounded-full blur-2xl opacity-0 group-hover/img:opacity-20 transition-opacity duration-700" />
+                                                            <img
+                                                                src={m.image}
+                                                                alt={`Modèle ${m.name}`}
+                                                                className="w-[140px] md:w-[180px] h-[100px] md:h-[140px] object-contain mx-auto mix-blend-multiply relative z-10 transition-transform duration-700 group-hover/img:scale-110"
+                                                            />
+                                                        </div>
+                                                        <div className="text-[13px] md:text-lg font-bold text-[#1e3a8a] max-w-[150px] mx-auto leading-tight">{m.name.replace("Filtre d'eau ", "")}</div>
+                                                    </div>
+                                                </th>
+                                            ))}
                                         </tr>
-                                    ))}
-                                </tbody>
-                            </table>
+                                    </thead>
+                                    <tbody className="divide-y divide-slate-100 relative z-10">
+                                        {comparisonData.map((row, i) => (
+                                            <tr key={i} className="hover:bg-blue-50/30 transition-colors group">
+                                                <td className="p-6 md:p-10 font-bold text-[#1e3a8a] bg-white sticky left-0 z-30 border-r border-slate-50 drop-shadow-sm lg:drop-shadow-none text-[12px] md:text-sm italic group-hover:text-blue-600 transition-colors">
+                                                    {row.feature}
+                                                </td>
+                                                {["vortex", "chlorstop", "ironshield"].map((model, idx) => (
+                                                    <td 
+                                                        key={model} 
+                                                        className={cn(
+                                                            "p-6 md:p-10 text-center text-[13px] md:text-sm font-light leading-relaxed text-slate-600 transition-all duration-500",
+                                                            idx === activeCol ? "table-cell" : "hidden lg:table-cell"
+                                                        )}
+                                                    >
+                                                        {(() => {
+                                                            const val = row[model as keyof typeof row];
+                                                            if (typeof val === 'string') return <span className="text-blue-600 font-bold bg-blue-50/50 px-4 py-1.5 rounded-full text-[10px] uppercase shadow-sm whitespace-nowrap">{val}</span>;
+                                                            if (val === true) return <CheckCircle2 className="h-5 w-5 md:h-6 md:w-6 text-blue-600 mx-auto" />;
+                                                            return <div className="h-5 w-5 md:h-6 md:w-6 mx-auto opacity-10"><X className="h-5 w-5 md:h-6 md:w-6" /></div>;
+                                                        })()}
+                                                    </td>
+                                                ))}
+                                            </tr>
+                                        ))}
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -385,9 +427,9 @@ const FiltresTouteMaison = () => {
                 {/* 6. Water Testing Section (Redesigned for Mobile) */}
                 <section className="relative lg:h-[800px] flex flex-col lg:flex-row items-stretch overflow-hidden bg-white">
                     {/* Mobile Image */}
-                    <div className="lg:hidden w-full h-[300px] relative">
+                    <div className="lg:hidden w-full h-[600px] relative">
                         <img
-                            src={waterTestingImg}
+                            src={excellenceWaterImg}
                             alt="Prélèvement et analyse d'eau municipale à domicile - Expertise Bricareau"
                             className="w-full h-full object-cover"
                         />
@@ -397,7 +439,7 @@ const FiltresTouteMaison = () => {
                     {/* Desktop Background */}
                     <div className="hidden lg:block absolute inset-0 z-0">
                         <img
-                            src={waterTestingImg}
+                            src={excellenceWaterImg}
                             alt="Analyse d'eau à domicile"
                             className="w-full h-full object-cover"
                         />

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { cn } from "@/lib/utils";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
@@ -16,6 +17,8 @@ import {
     Shield,
     GlassWater,
     Phone,
+    X,
+    ChevronLeft,
 } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import { useNavigate } from "react-router-dom";
@@ -148,7 +151,9 @@ const comparisonData: ComparisonItem[] = [
     { feature: "Entretien / Maintenance", Vortex: "Minimal", ZenPH: "Moyen", ChlorStop: "Bas", IronShield: "Bas", OxyPure: "Moyen", SulphurShield: "Bas", ZeroAs: "Moyen", TannEx: "Moyen", SerenitePure: "Élevé" },];
 
 const FiltresPuits = () => {
+    const navigate = useNavigate();
     const [showAllFaqs, setShowAllFaqs] = React.useState(false);
+    const [activeCol, setActiveCol] = React.useState(0);
     useEffect(() => {
         document.title = "Filtres d'eau de puits | Traitement Fer, Soufre & Manganèse | Bricareau";
         const metaDesc = document.querySelector('meta[name="description"]');
@@ -163,7 +168,6 @@ const FiltresPuits = () => {
         if (ogDesc) ogDesc.setAttribute("content", "Solutions avancées pour traiter le fer, le soufre et les impuretés de votre eau de puits. Protégez votre santé et votre maison.");
     }, []);
 
-    const navigate = useNavigate();
     const [cardStack, setCardStack] = useState([0, 1, 2, 3]); // Initial order with 4 cards
 
     const handleCardClick = (cardIndex: number) => {
@@ -392,7 +396,7 @@ const FiltresPuits = () => {
                                 </div>
                                 <div className="text-left">
                                     <h4 className="text-white font-bold text-xl">Vous ne savez pas quel filtre choisir ?</h4>
-                                    <p className="text-indigo-200/60 font-light text-sm">Laissez nos ingénieurs analyser votre eau gratuitement.</p>
+                                    <p className="text-indigo-200/60 font-light text-sm">Laissez nos experts d'eau faire un diagnostic de votre eau gratuitement.</p>
                                 </div>
                             </div>
                             <Button asChild className="h-14 px-8 rounded-full bg-white text-indigo-950 hover:bg-blue-50 font-black">
@@ -538,54 +542,95 @@ const FiltresPuits = () => {
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
-                        <div className="overflow-x-auto">
-                            <table className="w-full min-w-[1600px] border-collapse bg-white rounded-2xl overflow-hidden shadow-sm">
-                                <thead>
-                                    <tr className="bg-gray-100">
-                                        <th className="p-8 text-left text-gray-400 font-medium uppercase tracking-wider w-[280px]">Modèles</th>
-                                        {[
-                                            { key: "Vortex", name: "Vortex", badge: null },
-                                            { key: "ZenPH", name: "Zen-pH", badge: null },
-                                            { key: "ChlorStop", name: "ChlorStop", badge: null },
-                                            { key: "IronShield", name: "Iron Shield", badge: "Populaire" },
-                                            { key: "OxyPure", name: "Oxy-pure", badge: null },
-                                            { key: "SulphurShield", name: "Sulphur Shield", badge: null },
-                                            { key: "ZeroAs", name: "Zéro-As", badge: null },
-                                            { key: "TannEx", name: "Tann-Ex", badge: null },
-                                            { key: "SerenitePure", name: "Sérénité Pure", badge: "Premium" }
-                                        ].map(m => (
-                                            <th key={m.key} className="py-10 px-4 text-center text-gray-900 font-bold border-l border-white/50 first:border-l-0 relative min-w-[140px]">
-                                                <div className="flex flex-col items-center">
-                                                    {m.badge && (
-                                                        <span className="absolute top-2 right-2 bg-blue-600 text-white text-[7px] font-black px-2 py-0.5 rounded-full uppercase tracking-tighter whitespace-nowrap shadow-lg shadow-blue-200/50">
-                                                            {m.badge}
-                                                        </span>
-                                                    )}
-                                                    <div className="text-[12px] leading-tight uppercase tracking-wider min-h-[32px] flex items-center justify-center px-1">
-                                                        {m.name}
-                                                    </div>
-                                                </div>
+                        <div className="overflow-x-visible relative">
+                            {/* Navigation Arrows for Mobile/Tablet */}
+                            <div className="lg:hidden flex items-center justify-end gap-3 mb-8 relative z-30">
+                                <Button 
+                                    size="icon" 
+                                    variant="outline" 
+                                    className="w-10 h-10 rounded-full border-blue-100 hover:bg-blue-600 hover:text-white transition-all shadow-sm"
+                                    onClick={() => setActiveCol(Math.max(0, activeCol - 1))}
+                                    disabled={activeCol === 0}
+                                >
+                                    <ChevronLeft className="h-5 w-5" />
+                                </Button>
+                                <Button 
+                                    size="icon" 
+                                    variant="outline" 
+                                    className="w-10 h-10 rounded-full border-blue-100 hover:bg-blue-600 hover:text-white transition-all shadow-sm"
+                                    onClick={() => setActiveCol(Math.min(8, activeCol + 1))}
+                                    disabled={activeCol === 8}
+                                >
+                                    <ChevronRight className="h-5 w-5" />
+                                </Button>
+                            </div>
+
+                            <div className="overflow-x-auto lg:overflow-x-visible no-scrollbar pb-8">
+                                <table className="w-full border-collapse bg-white rounded-3xl overflow-hidden shadow-2xl relative">
+                                    <thead>
+                                        <tr className="bg-slate-50 relative z-20">
+                                            <th className="p-6 md:p-10 text-left text-blue-900/40 font-black uppercase tracking-widest text-[10px] sticky left-0 bg-slate-50 z-30 border-r border-slate-100 drop-shadow-md lg:drop-shadow-none min-w-[160px] md:min-w-[200px]">
+                                                Modèles
                                             </th>
-                                        ))}
-                                    </tr>
-                                </thead>
-                                <tbody className="divide-y divide-gray-100">
-                                    {comparisonData.map((row, i) => (
-                                        <tr key={i} className="hover:bg-gray-50 transition-colors">
-                                            <td className="p-8 font-medium text-gray-700">{row.feature}</td>
-                                            {["Vortex", "ZenPH", "ChlorStop", "IronShield", "OxyPure", "SulphurShield", "ZeroAs", "TannEx", "SerenitePure"].map((key) => (
-                                                <td key={key} className="p-8 text-center">
-                                                    {typeof row[key as keyof ComparisonItem] === 'string' ? (
-                                                        <span className="text-blue-600 font-bold text-[10px] bg-blue-50 px-3 py-1 rounded-full">{row[key as keyof ComparisonItem]}</span>
-                                                    ) : (
-                                                        row[key as keyof ComparisonItem] ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : null
+                                            {[
+                                                { key: "Vortex", name: "Vortex", badge: null },
+                                                { key: "ZenPH", name: "Zen-pH", badge: null },
+                                                { key: "ChlorStop", name: "ChlorStop", badge: null },
+                                                { key: "IronShield", name: "Iron Shield", badge: "Populaire" },
+                                                { key: "OxyPure", name: "Oxy-pure", badge: null },
+                                                { key: "SulphurShield", name: "Sulphur Shield", badge: null },
+                                                { key: "ZeroAs", name: "Zéro-As", badge: null },
+                                                { key: "TannEx", name: "Tann-Ex", badge: null },
+                                                { key: "SerenitePure", name: "Sérénité Pure", badge: "Premium" }
+                                            ].map((m, i) => (
+                                                <th 
+                                                    key={m.key} 
+                                                    className={cn(
+                                                        "p-4 md:p-6 text-center transition-all duration-500 min-w-[140px]",
+                                                        i === activeCol ? "table-cell" : "hidden lg:table-cell"
                                                     )}
-                                                </td>
+                                                >
+                                                    <div className="flex flex-col items-center">
+                                                        {m.badge && (
+                                                            <span className="absolute top-2 right-2 bg-blue-600 text-white text-[7px] font-black px-2 py-0.5 rounded-full uppercase tracking-tighter whitespace-nowrap shadow-lg shadow-blue-200/50">
+                                                                {m.badge}
+                                                            </span>
+                                                        )}
+                                                        <div className="text-[10px] md:text-[12px] font-bold text-[#1e3a8a] leading-tight uppercase tracking-wider min-h-[32px] flex items-center justify-center px-1">
+                                                            {m.name}
+                                                        </div>
+                                                    </div>
+                                                </th>
                                             ))}
                                         </tr>
-                                    ))}
-                                </tbody>
-                            </table>
+                                    </thead>
+                                    <tbody className="divide-y divide-slate-100 relative z-10">
+                                        {comparisonData.map((row, i) => (
+                                            <tr key={i} className="hover:bg-blue-50/30 transition-colors group">
+                                                <td className="p-6 md:p-8 font-bold text-[#1e3a8a] bg-white sticky left-0 z-30 border-r border-slate-50 drop-shadow-sm lg:drop-shadow-none text-[12px] md:text-sm italic group-hover:text-blue-600 transition-colors max-w-[200px]">
+                                                    {row.feature}
+                                                </td>
+                                                {["Vortex", "ZenPH", "ChlorStop", "IronShield", "OxyPure", "SulphurShield", "ZeroAs", "TannEx", "SerenitePure"].map((key, idx) => (
+                                                    <td 
+                                                        key={key} 
+                                                        className={cn(
+                                                            "p-6 md:p-8 text-center text-[13px] md:text-sm font-light leading-relaxed text-slate-600 transition-all duration-500",
+                                                            idx === activeCol ? "table-cell" : "hidden lg:table-cell"
+                                                        )}
+                                                    >
+                                                        {(() => {
+                                                            const val = row[key as keyof typeof row];
+                                                            if (typeof val === 'string') return <span className="text-blue-600 font-bold bg-blue-50/50 px-3 py-1 rounded-full text-[9px] md:text-[10px] uppercase shadow-sm whitespace-nowrap">{val}</span>;
+                                                            if (val === true) return <CheckCircle2 className="h-5 w-5 md:h-6 md:w-6 text-blue-600 mx-auto" />;
+                                                            return <div className="h-5 w-5 md:h-6 md:w-6 mx-auto opacity-10"><X className="h-5 w-5 md:h-6 md:w-6" /></div>;
+                                                        })()}
+                                                    </td>
+                                                ))}
+                                            </tr>
+                                        ))}
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -593,7 +638,7 @@ const FiltresPuits = () => {
                 {/* 6. Water Testing Section (Redesigned for Mobile) */}
                 <section className="relative lg:h-[800px] flex flex-col lg:flex-row items-stretch overflow-hidden bg-white">
                     {/* Mobile Image */}
-                    <div className="lg:hidden w-full h-[300px] relative">
+                    <div className="lg:hidden w-full h-[600px] relative">
                         <img
                             src={waterTestingImg1}
                             alt="Analyse d'eau de puits en laboratoire - Test de fer, soufre, pH et bactéries Bricareau"

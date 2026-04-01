@@ -62,21 +62,34 @@ const Blog = () => {
                             <GlobalBreadcrumbs variant="dark" />
                         </div>
                     </div>
-                    <div className="relative lg:absolute lg:inset-0 h-[350px] sm:h-[450px] lg:h-full w-full lg:z-0 overflow-hidden">
+                    <div className="relative lg:absolute lg:inset-0 h-[450px] md:h-[600px] lg:h-full w-full lg:z-0 overflow-hidden">
+                        {/* Mobile Title Overlay (Hidden on Desktop) */}
+                        <div className="lg:hidden absolute inset-0 z-30 flex flex-col justify-center px-4 md:px-12 pointer-events-none">
+                            <div className="max-w-sm md:max-w-lg">
+                                <h1 
+                                    className="leading-[1.1] md:leading-[1.2] tracking-tighter text-slate-900 drop-shadow-sm text-left"
+                                >
+                                    Articles & <span className="text-blue-600">Ressources</span>
+                                </h1>
+                            </div>
+                        </div>
+
                         <img
                             src={blogHero}
                             alt="Articles et Ressources Bricareau - Conseils d'experts en traitement d'eau"
                             className="w-full h-full object-cover object-[center_35%]"
                         />
+                        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/50 to-white lg:bg-none lg:z-10" />
                         <div className="hidden lg:block absolute inset-0 bg-black/40 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
                         <div className="hidden lg:block absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-white via-white/10 to-transparent" />
                         <div className="hidden lg:block absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white/90 via-white/40 to-transparent" />
                     </div>
 
-                    <div className="container relative z-10 mx-auto px-4 h-full flex items-center lg:px-6">
+                    <div className="container relative z-10 mx-auto px-4 h-full flex items-center lg:px-6 pt-10 lg:pt-0">
                         <div className="max-w-2xl lg:text-white py-12 lg:py-0">
+                            {/* Desktop Only Title */}
                             <h1
-                                className="leading-[1.1] md:leading-[1.2] mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left max-w-xl"
+                                className="hidden lg:block leading-[1.1] md:leading-[1.2] mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left max-w-xl"
                             >
                                 Articles & <span className="text-blue-600 lg:text-blue-400">Ressources</span>
                             </h1>
