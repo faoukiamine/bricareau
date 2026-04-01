@@ -82,6 +82,14 @@ const Filtration = () => {
     const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay({ delay: 4000 })]);
     const [selectedIndex, setSelectedIndex] = React.useState(0);
     const [scrollSnaps, setScrollSnaps] = React.useState<number[]>([]);
+    const resourcesRef = React.useRef<HTMLDivElement>(null);
+
+    const scrollResources = (direction: 'left' | 'right') => {
+        if (resourcesRef.current) {
+            const scrollAmount = resourcesRef.current.clientWidth * 0.8;
+            resourcesRef.current.scrollBy({ left: direction === 'left' ? -scrollAmount : scrollAmount, behavior: 'smooth' });
+        }
+    };
 
     const onSelect = React.useCallback(() => {
         if (!emblaApi) return;
@@ -543,9 +551,10 @@ const Filtration = () => {
                             </span>
 
                             <h2 className="heading-pro-max text-left mb-8">
-                                <span className="font-light italic text-white block">Votre eau est</span><span className="text-white italic font-bold font-serif"> notre priorité.</span>
+                                <span className="font-light italic text-[#1e3a8a] lg:text-white block">Votre eau est</span>
+                                <span className="text-[#1e3a8a] lg:text-white italic font-bold font-serif"> notre priorité.</span>
                             </h2>
-                            <p className="body-pro-max text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left">
+                            <p className="body-pro-max text-black lg:text-white/95 mb-8 max-w-xl text-left">
                                 Ne laissez plus le doute couler de votre robinet. Demandez votre test d'eau dès aujourd'hui et obtenez un portrait clair de votre eau ainsi que des solutions adaptées à votre foyer.
                             </p>
                             <div className="flex gap-4">
@@ -832,7 +841,10 @@ const Filtration = () => {
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div 
+                            ref={resourcesRef}
+                            className="flex lg:grid lg:grid-cols-3 gap-8 overflow-x-auto lg:overflow-x-visible no-scrollbar snap-x snap-mandatory pb-12 px-1 lg:px-0 scroll-smooth"
+                        >
                             {[
                                 {
                                     title: "Filtre sous évier, l'alternative simple aux pichets filtrants",
@@ -852,7 +864,7 @@ const Filtration = () => {
                             ].map((art, i) => (
                                 <div
                                     key={i}
-                                    className="group bg-white rounded-3xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full cursor-pointer"
+                                    className="min-w-[70vw] md:min-w-[45vw] lg:min-w-0 snap-center group bg-white rounded-3xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full cursor-pointer"
                                     onClick={() => navigate(art.link)}
                                 >
                                     <div className="h-56 overflow-hidden">
@@ -875,6 +887,26 @@ const Filtration = () => {
                                     </div>
                                 </div>
                             ))}
+                        </div>
+
+                        {/* Navigation arrows for carousel at bottom right */}
+                        <div className="lg:hidden flex items-center justify-end gap-3 mt-4 relative z-30">
+                            <Button 
+                                size="icon" 
+                                variant="outline" 
+                                className="w-10 h-10 rounded-full border-blue-100 hover:bg-blue-600 hover:text-white transition-all shadow-sm"
+                                onClick={() => scrollResources('left')}
+                            >
+                                <ChevronLeft className="h-5 w-5" />
+                            </Button>
+                            <Button 
+                                size="icon" 
+                                variant="outline" 
+                                className="w-10 h-10 rounded-full border-blue-100 hover:bg-blue-600 hover:text-white transition-all shadow-sm"
+                                onClick={() => scrollResources('right')}
+                            >
+                                <ChevronRight className="h-5 w-5" />
+                            </Button>
                         </div>
                     </div>
                 </section>

@@ -40,6 +40,7 @@ import {
     Shield
 } from "lucide-react";
 import safetyIcon from "@/assets/1709235770048.png";
+import { useNavigate } from "react-router-dom";
 import { NavLink } from "@/components/NavLink";
 import {
     Accordion,
@@ -49,6 +50,7 @@ import {
 } from "@/components/ui/accordion";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import ConsultationFormSection from "@/components/ConsultationFormSection";
+import { cn } from "@/lib/utils";
 
 import heroImg from "@/assets/african-girl-stands-kitchen-drinks-water.jpg";
 import uvSystemImg2 from "@/assets/VH200-F10-265x300.jpg";
@@ -70,7 +72,18 @@ import sterileWaterImg from "@/assets/1713.jpg";
 
 
 const DesinfectionUV = () => {
+    const navigate = useNavigate();
     const [showAllFaqs, setShowAllFaqs] = React.useState(false);
+    const [activeCol, setActiveCol] = React.useState(1);
+
+    const resourcesRef = React.useRef<HTMLDivElement>(null);
+
+    const scrollResources = (direction: 'left' | 'right') => {
+        if (resourcesRef.current) {
+            const scrollAmount = resourcesRef.current.clientWidth * 0.8;
+            resourcesRef.current.scrollBy({ left: direction === 'left' ? -scrollAmount : scrollAmount, behavior: 'smooth' });
+        }
+    };
     useEffect(() => {
         document.title = "Désinfection UV : Éliminez 99,99% des bactéries et virus";
         const metaDesc = document.querySelector('meta[name="description"]');
@@ -352,7 +365,7 @@ const DesinfectionUV = () => {
                 </section>
 
                 {/* 5. Comparison Table */}
-                <section className="py-24 bg-white border-t border-slate-50">
+                <section className="py-24 bg-white border-t border-slate-50 relative overflow-hidden">
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
                             <h2 className="mb-8 heading-pro-max text-left">
@@ -361,51 +374,96 @@ const DesinfectionUV = () => {
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
-                        <div className="overflow-x-auto">
-                            <table className="w-full min-w-[1000px] border-collapse bg-white rounded-2xl overflow-hidden shadow-sm">
+
+                        {/* Navigation Arrows for Mobile/Tablet */}
+                        <div className="lg:hidden flex items-center justify-end gap-3 mb-8 relative z-30">
+                            <Button 
+                                size="icon" 
+                                variant="outline" 
+                                className="w-10 h-10 rounded-full border-blue-100 hover:bg-blue-600 hover:text-white transition-all shadow-sm"
+                                onClick={() => setActiveCol(Math.max(0, activeCol - 1))}
+                                disabled={activeCol === 0}
+                            >
+                                <ChevronLeft className="h-5 w-5" />
+                            </Button>
+                            <div className="flex gap-1.5 px-2">
+                                {[0, 1, 2].map((i) => (
+                                    <div key={i} className={`h-1.5 rounded-full transition-all duration-300 ${i === activeCol ? 'w-6 bg-blue-600' : 'w-1.5 bg-blue-100'}`} />
+                                ))}
+                            </div>
+                            <Button 
+                                size="icon" 
+                                variant="outline" 
+                                className="w-10 h-10 rounded-full border-blue-100 hover:bg-blue-600 hover:text-white transition-all shadow-sm"
+                                onClick={() => setActiveCol(Math.min(2, activeCol + 1))}
+                                disabled={activeCol === 2}
+                            >
+                                <ChevronRight className="h-5 w-5" />
+                            </Button>
+                        </div>
+
+                        <div className="overflow-x-auto lg:overflow-x-visible no-scrollbar pb-8">
+                            <table className="w-full border-collapse bg-white rounded-3xl overflow-hidden shadow-2xl relative">
                                 <thead>
-                                    <tr className="bg-gray-100">
-                                        <th className="p-8 text-left text-gray-400 font-light uppercase tracking-wider w-1/4">Modèle</th>
+                                    <tr className="bg-slate-50 relative z-20">
+                                        <th className="p-6 md:p-8 text-left text-blue-900/40 font-black uppercase tracking-widest text-[10px] sticky left-0 bg-slate-50 z-[35] border-r border-slate-100 drop-shadow-md lg:drop-shadow-none min-w-[160px] md:min-w-[200px]">
+                                            Modèle
+                                        </th>
                                         {[
                                             { name: "VH200-F10", img: uvSystemImg2, badge: null, color: "bg-blue-600" },
                                             { name: "VH410-F20", img: uvSystemImg3, badge: "Choix des Familles", color: "bg-blue-600" },
                                             { name: "Arros 15-IHS10", img: uvSystemImg4, badge: "Nouveau", color: "bg-emerald-600" }
-                                        ].map(m => (
-                                            <th key={m.name} className="p-6 text-center align-bottom relative">
-                                                <div className="flex flex-col items-center gap-6">
-                                                    <div className="relative group/img pr-4 pt-4">
+                                        ].map((m, i) => (
+                                            <th 
+                                                key={m.name} 
+                                                className={cn(
+                                                    "p-4 md:p-6 text-center transition-all duration-500 min-w-[200px] lg:min-w-0",
+                                                    i === activeCol ? "table-cell" : "hidden lg:table-cell"
+                                                )}
+                                            >
+                                                <div className="flex flex-col items-center gap-4 group py-4">
+                                                    <div className="relative">
                                                         {m.badge && (
-                                                            <span className={`absolute top-0 right-0 z-20 px-3 py-1 ${m.color} text-white rounded-full text-[8px] font-bold uppercase tracking-widest shadow-lg shadow-blue-900/10 whitespace-nowrap`}>
+                                                            <div className={`absolute -top-3 -right-6 z-20 ${m.color} text-white text-[8px] font-black uppercase tracking-[0.2em] px-3 py-1 rounded-full shadow-lg whitespace-nowrap scale-90 md:scale-100`}>
                                                                 {m.badge}
-                                                            </span>
+                                                            </div>
                                                         )}
-                                                        <div className="absolute inset-0 bg-blue-600 rounded-full blur-2xl opacity-0 group-hover/img:opacity-20 transition-opacity duration-700" />
                                                         <img
                                                             src={m.img}
                                                             alt={`Modèle ${m.name} - Stérilisateur d'eau UV haute performance Bricareau`}
-                                                            className="w-[140px] h-[120px] object-contain mx-auto mix-blend-multiply relative z-10 transition-transform duration-700 group-hover/img:scale-110"
+                                                            className="w-[120px] md:w-[140px] h-[100px] md:h-[120px] object-contain mx-auto mix-blend-multiply group-hover:scale-110 transition-transform duration-700 relative z-10"
                                                         />
                                                     </div>
-                                                    <div className="text-lg font-bold text-[#1e3a8a]">{m.name}</div>
+                                                    <span className="text-sm font-bold text-[#1e3a8a] uppercase tracking-wider">{m.name}</span>
                                                 </div>
                                             </th>
                                         ))}
                                     </tr>
                                 </thead>
-                                <tbody className="divide-y divide-gray-100">
+                                <tbody className="divide-y divide-slate-100 relative z-10">
                                     {comparisonData.map((row, i) => (
-                                        <tr key={i} className="hover:bg-gray-50 transition-colors">
-                                            <td className="p-8 font-light text-gray-700">{row.feature}</td>
-                                            <td className="p-8 text-center">
-                                                {typeof row.VH200F10 === 'string' ? <span className="text-blue-600 font-bold">{row.VH200F10}</span> : (row.VH200F10 ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : null)}
+                                        <tr key={i} className="hover:bg-slate-50/50 transition-colors group">
+                                            <td className="p-6 md:p-8 font-medium text-slate-700 bg-white sticky left-0 z-30 border-r border-slate-50 drop-shadow-sm lg:drop-shadow-none text-sm md:text-base">
+                                                {row.feature}
                                             </td>
-                                            <td className="p-8 text-center bg-blue-50/20">
-                                                {typeof row.VH410F20 === 'string' ? <span className="text-blue-600 font-bold">{row.VH410F20}</span> : (row.VH410F20 ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : null)}
+                                            <td className={cn(
+                                                "p-6 md:p-8 text-center transition-all duration-500",
+                                                activeCol === 0 ? "table-cell" : "hidden lg:table-cell"
+                                            )}>
+                                                {typeof row.VH200F10 === 'string' ? <span className="text-blue-600 font-bold bg-blue-50/50 px-3 py-1.5 rounded-full text-[10px] md:text-[11px]">{row.VH200F10}</span> : (row.VH200F10 ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : null)}
                                             </td>
-                                            <td className="p-8 text-center bg-blue-50/20">
-                                                {typeof row.Arros15IHS10 === 'string' ? <span className="text-blue-600 font-bold">{row.Arros15IHS10}</span> : (row.Arros15IHS10 ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : null)}
+                                            <td className={cn(
+                                                "p-6 md:p-8 text-center transition-all duration-500 bg-blue-50/10 lg:bg-transparent",
+                                                activeCol === 1 ? "table-cell" : "hidden lg:table-cell"
+                                            )}>
+                                                {typeof row.VH410F20 === 'string' ? <span className="text-blue-600 font-bold bg-blue-50/50 px-3 py-1.5 rounded-full text-[10px] md:text-[11px]">{row.VH410F20}</span> : (row.VH410F20 ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : null)}
                                             </td>
-
+                                            <td className={cn(
+                                                "p-6 md:p-8 text-center transition-all duration-500",
+                                                activeCol === 2 ? "table-cell" : "hidden lg:table-cell"
+                                            )}>
+                                                {typeof row.Arros15IHS10 === 'string' ? <span className="text-blue-600 font-bold bg-blue-50/50 px-3 py-1.5 rounded-full text-[10px] md:text-[11px]">{row.Arros15IHS10}</span> : (row.Arros15IHS10 ? <CheckCircle2 className="h-6 w-6 text-blue-600 mx-auto" /> : null)}
+                                            </td>
                                         </tr>
                                     ))}
                                 </tbody>
@@ -443,10 +501,10 @@ const DesinfectionUV = () => {
                                 Contrôle de la Qualité D'EAU
                             </span>
                             <h2 className="mb-8 heading-pro-max text-left">
-                                <span className="italic font-light text-white lg:text-white block">Des tests d'eau précis</span>
-                                <span className="text-white italic font-bold font-serif">pour une tranquillité d'esprit totale.</span>
+                                <span className="italic font-light text-[#1e3a8a] lg:text-white block">Des tests d'eau précis</span>
+                                <span className="text-[#1e3a8a] lg:text-white italic font-bold font-serif">pour une tranquillité d'esprit totale.</span>
                             </h2>
-                            <p className="font-light text-white lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
+                            <p className="font-light text-black lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
                                 Ne devinez pas la qualité de votre eau. Nos analyses approfondies identifient les bactéries, les minéraux et les contaminants chimiques pour vous offrir une tranquillité d'esprit totale.
                             </p>
                             <div className="flex gap-4">
@@ -699,7 +757,10 @@ const DesinfectionUV = () => {
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div 
+                            ref={resourcesRef}
+                            className="flex lg:grid lg:grid-cols-3 gap-8 overflow-x-auto lg:overflow-x-visible no-scrollbar snap-x snap-mandatory pb-12 px-1 lg:px-0 scroll-smooth"
+                        >
                             {[
                                 {
                                     title: "Adoucisseur d'eau et fosse septique : compatible ou non ?",
@@ -719,8 +780,8 @@ const DesinfectionUV = () => {
                             ].map((art, i) => (
                                 <div
                                     key={i}
-                                    className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer group flex flex-col h-full border border-gray-100"
-                                    onClick={() => window.location.href = art.path}
+                                    className="min-w-[70vw] md:min-w-[45vw] lg:min-w-0 snap-center bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer group flex flex-col h-full border border-gray-100"
+                                    onClick={() => navigate(art.path)}
                                 >
                                     <div className="h-56 overflow-hidden">
                                         <img src={art.img} alt={`${art.title} - Guide expert Bricareau sur la désinfection UV`} className="w-full h-full object-cover transition-transform group-hover:scale-110" />
@@ -737,6 +798,25 @@ const DesinfectionUV = () => {
                             ))}
                         </div>
 
+                        {/* Navigation arrows for carousel at bottom right */}
+                        <div className="lg:hidden flex items-center justify-end gap-3 mt-4 relative z-30">
+                            <Button 
+                                size="icon" 
+                                variant="outline" 
+                                className="w-10 h-10 rounded-full border-blue-100 hover:bg-blue-600 hover:text-white transition-all shadow-sm"
+                                onClick={() => scrollResources('left')}
+                            >
+                                <ChevronLeft className="h-5 w-5" />
+                            </Button>
+                            <Button 
+                                size="icon" 
+                                variant="outline" 
+                                className="w-10 h-10 rounded-full border-blue-100 hover:bg-blue-600 hover:text-white transition-all shadow-sm"
+                                onClick={() => scrollResources('right')}
+                            >
+                                <ChevronRight className="h-5 w-5" />
+                            </Button>
+                        </div>
                     </div>
                 </section>
 

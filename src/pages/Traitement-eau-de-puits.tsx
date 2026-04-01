@@ -6,6 +6,7 @@ import ExpertAvatars from "@/components/ExpertAvatars";
 import Hero from "@/components/Hero";
 import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 import { ArrowRight, Check, ChevronRight, ChevronLeft, CheckCircle2, X, Phone } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import heroPuits from "@/assets/blog-10-copyright.jpg";
@@ -127,6 +128,7 @@ const comparisonData: ComparisonItem[] = [
 const TraitementEauDePuits = () => {
 
 
+  const navigate = useNavigate();
   const [showAllFaqs, setShowAllFaqs] = React.useState(false);
   const [activeCol, setActiveCol] = React.useState(0);
   useEffect(() => {
@@ -143,6 +145,14 @@ const TraitementEauDePuits = () => {
     if (ogDesc) ogDesc.setAttribute("content", "Protégez votre santé avec nos systèmes de filtration spécialisés pour puits privés. Expertise et fiabilité.");
   }, []);
 
+  const resourcesRef = React.useRef<HTMLDivElement>(null);
+
+  const scrollResources = (direction: 'left' | 'right') => {
+    if (resourcesRef.current) {
+      const scrollAmount = resourcesRef.current.clientWidth * 0.8;
+      resourcesRef.current.scrollBy({ left: direction === 'left' ? -scrollAmount : scrollAmount, behavior: 'smooth' });
+    }
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -364,10 +374,10 @@ const TraitementEauDePuits = () => {
                                 Contrôle de la Qualité D'EAU
                             </span>
                <h2 className="mb-8 heading-pro-max text-left">
-                 <span className="italic font-light text-[#1e3a8a] lg:text-white/80 block">Dites adieu au</span>
-                 <span className="text-white italic font-bold font-serif">fer, soufre et calcaire.</span>
+                 <span className="italic font-light text-[#1e3a8a] lg:text-white block">Dites adieu au</span>
+                 <span className="text-[#1e3a8a] lg:text-white italic font-bold font-serif">fer, soufre et calcaire.</span>
                </h2>
-               <p className="body-pro-max text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
+               <p className="body-pro-max text-black lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
                  Un puits performant commence par une analyse rigoureuse. Identifiez les contaminants invisibles et protégez durablement votre santé et vos installations.
                </p>
               <div className="flex gap-4">
@@ -853,7 +863,10 @@ const TraitementEauDePuits = () => {
                </h2>
               <div className="w-24 h-1 bg-blue-600"></div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div 
+              ref={resourcesRef}
+              className="flex lg:grid lg:grid-cols-3 gap-8 overflow-x-auto lg:overflow-x-visible no-scrollbar snap-x snap-mandatory pb-12 px-1 lg:px-0 scroll-smooth"
+            >
               {[
                 {
                   title: "Adoucisseur avec sel ou sans sel : la vérité technique",
@@ -874,7 +887,7 @@ const TraitementEauDePuits = () => {
                 <NavLink
                   key={i}
                   to={art.link || "#"}
-                  className="group bg-white rounded-3xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full block cursor-pointer"
+                  className="min-w-[70vw] md:min-w-[45vw] lg:min-w-0 snap-center group bg-white rounded-3xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full block cursor-pointer"
                 >
                   <div className="h-56 overflow-hidden">
                     <img
@@ -893,6 +906,26 @@ const TraitementEauDePuits = () => {
                   </div>
                 </NavLink>
               ))}
+            </div>
+
+            {/* Navigation arrows for carousel at bottom right */}
+            <div className="lg:hidden flex items-center justify-end gap-3 mt-4 relative z-30">
+              <Button 
+                size="icon" 
+                variant="outline" 
+                className="w-10 h-10 rounded-full border-blue-100 hover:bg-blue-600 hover:text-white transition-all shadow-sm"
+                onClick={() => scrollResources('left')}
+              >
+                <ChevronLeft className="h-5 w-5" />
+              </Button>
+              <Button 
+                size="icon" 
+                variant="outline" 
+                className="w-10 h-10 rounded-full border-blue-100 hover:bg-blue-600 hover:text-white transition-all shadow-sm"
+                onClick={() => scrollResources('right')}
+              >
+                <ChevronRight className="h-5 w-5" />
+              </Button>
             </div>
           </div>
         </section>

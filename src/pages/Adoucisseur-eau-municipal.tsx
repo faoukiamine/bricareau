@@ -147,6 +147,14 @@ const AdoucisseurEauMunicipal = () => {
     const [showAllFaqs, setShowAllFaqs] = React.useState(false);
     const [activeCol, setActiveCol] = React.useState(0);
     const navigate = useNavigate();
+    const resourcesRef = React.useRef<HTMLDivElement>(null);
+
+    const scrollResources = (direction: 'left' | 'right') => {
+        if (resourcesRef.current) {
+            const scrollAmount = resourcesRef.current.clientWidth * 0.8;
+            resourcesRef.current.scrollBy({ left: direction === 'left' ? -scrollAmount : scrollAmount, behavior: 'smooth' });
+        }
+    };
 
     useEffect(() => {
         document.title = "Adoucisseur d'eau résidentiel | Solutions pour l'eau municipale | Bricareau";
@@ -489,11 +497,14 @@ const AdoucisseurEauMunicipal = () => {
 
                     <div className="container mx-auto px-4 relative z-10 flex items-center py-12 lg:py-0">
                         <div className="max-w-2xl text-slate-900 lg:text-white">
+                            <span className="text-blue-600 lg:text-blue-600 text-xs font-black uppercase tracking-[0.3em] mb-8 block">
+                                Contrôle de la Qualité D'EAU
+                            </span>
                             <h2 className="mb-8 heading-pro-max text-left">
                                 <span className="italic font-light text-[#1e3a8a] lg:text-white block">Des tests d'eau précis</span>
-                                <span className="text-white italic font-bold font-serif">pour une tranquillité d'esprit totale.</span>
+                                <span className="text-[#1e3a8a] lg:text-white italic font-bold font-serif">pour une tranquillité d'esprit totale.</span>
                             </h2>
-                            <p className="body-pro-max text-slate-500 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
+                            <p className="body-pro-max text-black lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
                                 Ne devinez pas la qualité de votre eau. Nos analyses approfondies identifient les bactéries, les minéraux et les contaminants chimiques pour vous offrir une tranquillité d'esprit totale.
                             </p>
                             <div className="flex gap-4">
@@ -608,7 +619,10 @@ const AdoucisseurEauMunicipal = () => {
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div 
+                            ref={resourcesRef}
+                            className="flex lg:grid lg:grid-cols-3 gap-8 overflow-x-auto lg:overflow-x-visible no-scrollbar snap-x snap-mandatory pb-12 px-1 lg:px-0 scroll-smooth"
+                        >
                             {[
                                 { title: "Adoucisseur sans sel vs avec sel : la vérité technique", img: conditionneursImg, link: "/adoucisseur-sans-sel-vs-avec-sel-verite-technique" },
                                 { title: "Comment régler la dureté de votre adoucisseur ?", img: residentialWaterSoftenerImg, link: "/comment-regler-durete-adoucisseur-eau" },
@@ -616,7 +630,7 @@ const AdoucisseurEauMunicipal = () => {
                             ].map((art, i) => (
                                 <div
                                     key={i}
-                                    className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer group flex flex-col h-full border border-gray-100"
+                                    className="min-w-[70vw] md:min-w-[45vw] lg:min-w-0 snap-center bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer group flex flex-col h-full border border-gray-100"
                                     onClick={() => navigate(art.link)}
                                 >
                                     <div className="h-56 overflow-hidden">
@@ -637,6 +651,26 @@ const AdoucisseurEauMunicipal = () => {
                                     </div>
                                 </div>
                             ))}
+                        </div>
+
+                        {/* Navigation arrows for carousel at bottom right */}
+                        <div className="lg:hidden flex items-center justify-end gap-3 mt-4 relative z-30">
+                            <Button 
+                                size="icon" 
+                                variant="outline" 
+                                className="w-10 h-10 rounded-full border-blue-100 hover:bg-blue-600 hover:text-white transition-all shadow-sm"
+                                onClick={() => scrollResources('left')}
+                            >
+                                <ChevronLeft className="h-5 w-5" />
+                            </Button>
+                            <Button 
+                                size="icon" 
+                                variant="outline" 
+                                className="w-10 h-10 rounded-full border-blue-100 hover:bg-blue-600 hover:text-white transition-all shadow-sm"
+                                onClick={() => scrollResources('right')}
+                            >
+                                <ChevronRight className="h-5 w-5" />
+                            </Button>
                         </div>
                     </div>
                 </section>

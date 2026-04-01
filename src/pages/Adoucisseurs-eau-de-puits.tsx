@@ -197,6 +197,14 @@ const comparisonData: ComparisonItem[] = [
 const AdoucisseursEauDePuits = () => {
     const [showAllFaqs, setShowAllFaqs] = React.useState(false);
     const navigate = useNavigate();
+    const resourcesRef = React.useRef<HTMLDivElement>(null);
+
+    const scrollResources = (direction: 'left' | 'right') => {
+        if (resourcesRef.current) {
+            const scrollAmount = resourcesRef.current.clientWidth * 0.8;
+            resourcesRef.current.scrollBy({ left: direction === 'left' ? -scrollAmount : scrollAmount, behavior: 'smooth' });
+        }
+    };
     const [activeCol, setActiveCol] = React.useState(0);
 
     useEffect(() => {
@@ -567,10 +575,10 @@ const AdoucisseursEauDePuits = () => {
                                 Contrôle de la Qualité D'EAU
                             </span>
                             <h2 className="heading-pro-max">
-                                <span className="italic font-light text-white lg:text-white block tracking-tight">Des tests d'eau précis</span>
-                                <span className="text-white italic font-bold font-serif">pour une tranquillité d'esprit.</span>
+                                <span className="italic font-light text-[#1e3a8a] lg:text-white block tracking-tight">Des tests d'eau précis</span>
+                                <span className="text-[#1e3a8a] lg:text-white italic font-bold font-serif">pour une tranquillité d'esprit.</span>
                             </h2>
-                            <p className="font-light text-slate-500 lg:text-white/95 mb-8 max-w-xl text-lg mt-6">Analyse approfondie pour identifier les minéraux et contaminants.</p>
+                            <p className="font-light text-black lg:text-white/95 mb-8 max-w-xl text-lg mt-6">Analyse approfondie pour identifier les minéraux et contaminants.</p>
                             <div className="flex gap-4"><Button asChild><a href="/tests-eau">Demandez une analyse d'eau</a></Button></div>
                         </div>
                     </div>
@@ -708,13 +716,16 @@ const AdoucisseursEauDePuits = () => {
                             <h2 className="mb-8 heading-pro-max"><span className="font-bold text-[#1e3a8a] block">Ressources</span></h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div 
+                            ref={resourcesRef}
+                            className="flex lg:grid lg:grid-cols-3 gap-8 overflow-x-auto lg:overflow-x-visible no-scrollbar snap-x snap-mandatory pb-12 px-1 lg:px-0 scroll-smooth"
+                        >
                             {[
                                 { title: "Fosse septique : compatible ?", img: adoucisseurFosseImg, link: "/adoucisseur-deau-et-fosse-septique-mythes-et-realites" },
                                 { title: "Sans sel vs Avec sel", img: residentialWaterSoftenerImg, link: "/adoucisseur-sans-sel-vs-avec-sel-verite-technique" },
                                 { title: "Conditionneur d'eau", img: conditionneursImg, link: "/conditionneur-deau-une-alternative-ecologique-a-ladoucisseur-sans-sel" }
                             ].map((art, i) => (
-                                <div key={i} className="bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer group flex flex-col h-full border border-slate-100" onClick={() => navigate(art.link)}>
+                                <div key={i} className="min-w-[70vw] md:min-w-[45vw] lg:min-w-0 snap-center bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer group flex flex-col h-full border border-slate-100" onClick={() => navigate(art.link)}>
                                     <div className="h-56 overflow-hidden">
                                         <img src={art.img} alt={art.title} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
                                     </div>
@@ -724,6 +735,26 @@ const AdoucisseursEauDePuits = () => {
                                     </div>
                                 </div>
                             ))}
+                        </div>
+
+                        {/* Navigation arrows for carousel at bottom right */}
+                        <div className="lg:hidden flex items-center justify-end gap-3 mt-4 relative z-30">
+                            <Button 
+                                size="icon" 
+                                variant="outline" 
+                                className="w-10 h-10 rounded-full border-blue-100 hover:bg-blue-600 hover:text-white transition-all shadow-sm"
+                                onClick={() => scrollResources('left')}
+                            >
+                                <ChevronLeft className="h-5 w-5" />
+                            </Button>
+                            <Button 
+                                size="icon" 
+                                variant="outline" 
+                                className="w-10 h-10 rounded-full border-blue-100 hover:bg-blue-600 hover:text-white transition-all shadow-sm"
+                                onClick={() => scrollResources('right')}
+                            >
+                                <ChevronRight className="h-5 w-5" />
+                            </Button>
                         </div>
                     </div>
                 </section>

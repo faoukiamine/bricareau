@@ -16,6 +16,7 @@ import { adoucisseurImg as adoucisseurFosseImg } from "./Blog pages/Adoucisseur-
 import { conditionneursImg } from "./Blog pages/Adoucisseur avec sel ou sans sel";
 import {
   ChevronRight,
+  ChevronLeft,
   Sparkles,
   Wrench,
   HeartPulse,
@@ -89,6 +90,14 @@ const faqs = [
 const ConditionneursSansSel = () => {
   const [showAllFaqs, setShowAllFaqs] = React.useState(false);
   const navigate = useNavigate();
+  const resourcesRef = React.useRef<HTMLDivElement>(null);
+
+  const scrollResources = (direction: 'left' | 'right') => {
+      if (resourcesRef.current) {
+          const scrollAmount = resourcesRef.current.clientWidth * 0.8;
+          resourcesRef.current.scrollBy({ left: direction === 'left' ? -scrollAmount : scrollAmount, behavior: 'smooth' });
+      }
+  };
 
   useEffect(() => {
     document.title = "Conditionneur d'eau sans sel | L'anti-tartre écologique | Bricareau";
@@ -400,13 +409,16 @@ const ConditionneursSansSel = () => {
                             </h2>
               <div className="w-24 h-1 bg-blue-600"></div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div 
+              ref={resourcesRef}
+              className="flex lg:grid lg:grid-cols-3 gap-8 overflow-x-auto lg:overflow-x-visible no-scrollbar snap-x snap-mandatory pb-12 px-1 lg:px-0 scroll-smooth"
+            >
               {[
                 { title: "Adoucisseur sans sel vs avec sel", img: residentialWaterSoftenerImg, link: "/adoucisseur-sans-sel-vs-avec-sel-verite-technique" },
                 { title: "Fosse septique et adoucisseur", img: adoucisseurFosseImg, link: "/adoucisseur-deau-et-fosse-septique-mythes-et-realites" },
                 { title: "L'alternative écologique", img: conditionneursImg, link: "/adoucisseur-sans-sel-vs-avec-sel-verite-technique" }
               ].map((art, i) => (
-                <NavLink key={i} to={art.link} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all group border border-gray-100 flex flex-col h-full">
+                <NavLink key={i} to={art.link} className="min-w-[70vw] md:min-w-[45vw] lg:min-w-0 snap-center bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all group border border-gray-100 flex flex-col h-full">
                   <div className="h-56 overflow-hidden">
                     <img src={art.img} alt={art.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                   </div>
@@ -416,6 +428,26 @@ const ConditionneursSansSel = () => {
                   </div>
                 </NavLink>
               ))}
+            </div>
+
+            {/* Navigation arrows for carousel at bottom right */}
+            <div className="lg:hidden flex items-center justify-end gap-3 mt-4 relative z-30">
+                <Button 
+                    size="icon" 
+                    variant="outline" 
+                    className="w-10 h-10 rounded-full border-blue-100 hover:bg-blue-600 hover:text-white transition-all shadow-sm"
+                    onClick={() => scrollResources('left')}
+                >
+                    <ChevronLeft className="h-5 w-5" />
+                </Button>
+                <Button 
+                    size="icon" 
+                    variant="outline" 
+                    className="w-10 h-10 rounded-full border-blue-100 hover:bg-blue-600 hover:text-white transition-all shadow-sm"
+                    onClick={() => scrollResources('right')}
+                >
+                    <ChevronRight className="h-5 w-5" />
+                </Button>
             </div>
           </div>
         </section>

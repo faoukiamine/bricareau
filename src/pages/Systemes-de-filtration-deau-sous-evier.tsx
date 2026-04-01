@@ -97,6 +97,15 @@ const FiltrationSousEvier = () => {
         if (ogDesc) ogDesc.setAttribute("content", "Profitez d'une eau saine et délicieuse avec nos solutions d'ultrafiltration Cristal Pro. Gain d'espace et performance.");
     }, []);
 
+    const resourcesRef = React.useRef<HTMLDivElement>(null);
+
+    const scrollResources = (direction: 'left' | 'right') => {
+        if (resourcesRef.current) {
+            const scrollAmount = resourcesRef.current.clientWidth * 0.8;
+            resourcesRef.current.scrollBy({ left: direction === 'left' ? -scrollAmount : scrollAmount, behavior: 'smooth' });
+        }
+    };
+
     interface ComparisonItem {
         feature: string;
         elite: boolean | string;
@@ -458,10 +467,10 @@ const FiltrationSousEvier = () => {
                                 TESTS D'EAU PROFESSIONNELS
                             </span>
                             <h2 className="mb-8 heading-pro-max text-left">
-                                <span className="italic font-light text-white block">Identifiez l'invisible,</span>
-                                <span className="text-white italic font-bold font-serif">maîtrisez la pureté de votre eau.</span>
+                                <span className="italic font-light text-[#1e3a8a] lg:text-white block">Identifiez l'invisible,</span>
+                                <span className="text-[#1e3a8a] lg:text-white italic font-bold font-serif">maîtrisez la pureté de votre eau.</span>
                             </h2>
-                            <p className="font-light text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
+                            <p className="font-light text-black lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
                                 Ne laissez plus le doute couler de votre robinet. Nos tests d'eau révèlent la composition réelle de votre eau pour vous offrir une solution de filtration sur mesure, garantissant santé et sérénité à toute votre famille.
                             </p>
                             <div className="flex gap-4">
@@ -611,7 +620,10 @@ const FiltrationSousEvier = () => {
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div 
+                            ref={resourcesRef}
+                            className="flex lg:grid lg:grid-cols-3 gap-8 overflow-x-auto lg:overflow-x-visible no-scrollbar snap-x snap-mandatory pb-12 px-1 lg:px-0 scroll-smooth"
+                        >
                             {[
                                 {
                                     title: "Filtre sous évier, l'alternative simple aux pichets filtrants",
@@ -632,7 +644,7 @@ const FiltrationSousEvier = () => {
                                 <NavLink
                                     key={i}
                                     to={art.link || "#"}
-                                    className="group bg-white rounded-3xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full block cursor-pointer"
+                                    className="min-w-[70vw] md:min-w-[45vw] lg:min-w-0 snap-center group bg-white rounded-3xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full block cursor-pointer"
                                 >
                                     <div className="h-56 overflow-hidden">
                                         <img
@@ -651,6 +663,25 @@ const FiltrationSousEvier = () => {
                                     </div>
                                 </NavLink>
                             ))}
+                        </div>
+
+                        <div className="lg:hidden flex items-center justify-end gap-3 mt-4 relative z-30">
+                            <Button 
+                                size="icon" 
+                                variant="outline" 
+                                className="w-10 h-10 rounded-full border-blue-100 hover:bg-blue-600 hover:text-white transition-all shadow-sm"
+                                onClick={() => scrollResources('left')}
+                            >
+                                <ChevronLeft className="h-5 w-5" />
+                            </Button>
+                            <Button 
+                                size="icon" 
+                                variant="outline" 
+                                className="w-10 h-10 rounded-full border-blue-100 hover:bg-blue-600 hover:text-white transition-all shadow-sm"
+                                onClick={() => scrollResources('right')}
+                            >
+                                <ChevronRight className="h-5 w-5" />
+                            </Button>
                         </div>
                     </div>
                 </section>
