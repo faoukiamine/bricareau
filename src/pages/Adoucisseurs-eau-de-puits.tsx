@@ -26,7 +26,7 @@ import {
 } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import { useNavigate } from "react-router-dom";
-import waterTestingImg from "@/assets/2147800429.jpg";
+import waterTestingImg from "@/assets/11299.jpg";
 import { softenerImg as residentialWaterSoftenerImg } from "./Blog pages/Comment régler la dureté de votre adoucisseur ";
 import { adoucisseurImg as adoucisseurFosseImg } from "./Blog pages/Adoucisseur-deau- et-fosse-septique--Mythes-et-réalités";
 import { conditionneursImg } from "./Blog pages/Adoucisseur avec sel ou sans sel";
@@ -196,8 +196,25 @@ const comparisonData: ComparisonItem[] = [
 
 const AdoucisseursEauDePuits = () => {
     const [showAllFaqs, setShowAllFaqs] = React.useState(false);
+    const [resourceIndex, setResourceIndex] = React.useState(1);
     const navigate = useNavigate();
     const resourcesRef = React.useRef<HTMLDivElement>(null);
+
+    const handleScrollRessources = () => {
+        if (resourcesRef.current) {
+            const scrollLeft = resourcesRef.current.scrollLeft;
+            const containerWidth = resourcesRef.current.offsetWidth;
+            const itemWidth = resourcesRef.current.querySelector('div')?.offsetWidth || containerWidth;
+            const index = Math.round(scrollLeft / itemWidth) + 1;
+            setResourceIndex(Math.min(index, resources.length));
+        }
+    };
+
+    const resources = [
+        { title: "Fosse septique : compatible ?", img: adoucisseurFosseImg, link: "/adoucisseur-deau-et-fosse-septique-mythes-et-realites" },
+        { title: "Sans sel vs Avec sel", img: residentialWaterSoftenerImg, link: "/adoucisseur-sans-sel-vs-avec-sel-verite-technique" },
+        { title: "Conditionneur d'eau", img: conditionneursImg, link: "/conditionneur-deau-une-alternative-ecologique-a-ladoucisseur-sans-sel" }
+    ];
 
     const scrollResources = (direction: 'left' | 'right') => {
         if (resourcesRef.current) {
@@ -723,13 +740,10 @@ const AdoucisseursEauDePuits = () => {
                         </div>
                         <div 
                             ref={resourcesRef}
+                            onScroll={handleScrollRessources}
                             className="flex lg:grid lg:grid-cols-3 gap-8 overflow-x-auto lg:overflow-x-visible no-scrollbar snap-x snap-mandatory pb-12 px-1 lg:px-0 scroll-smooth"
                         >
-                            {[
-                                { title: "Fosse septique : compatible ?", img: adoucisseurFosseImg, link: "/adoucisseur-deau-et-fosse-septique-mythes-et-realites" },
-                                { title: "Sans sel vs Avec sel", img: residentialWaterSoftenerImg, link: "/adoucisseur-sans-sel-vs-avec-sel-verite-technique" },
-                                { title: "Conditionneur d'eau", img: conditionneursImg, link: "/conditionneur-deau-une-alternative-ecologique-a-ladoucisseur-sans-sel" }
-                            ].map((art, i) => (
+                            {resources.map((art, i) => (
                                 <div key={i} className="min-w-[70vw] md:min-w-[45vw] lg:min-w-0 snap-center bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer group flex flex-col h-full border border-slate-100" onClick={() => navigate(art.link)}>
                                     <div className="h-56 overflow-hidden">
                                         <img src={art.img} alt={art.title} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
@@ -742,24 +756,28 @@ const AdoucisseursEauDePuits = () => {
                             ))}
                         </div>
 
-                        {/* Navigation arrows for carousel at bottom right */}
-                        <div className="lg:hidden flex items-center justify-end gap-3 mt-4 relative z-30">
+                        {/* Navigation arrows for carousel - Mobile/Tablet ONLY */}
+                        <div className="lg:hidden flex items-center justify-center gap-4 mt-6 relative z-30">
                             <Button 
                                 size="icon" 
-                                variant="outline" 
-                                className="w-10 h-10 rounded-full border-blue-100 hover:bg-blue-600 hover:text-white transition-all shadow-sm"
+                                className="w-12 h-12 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-all shadow-md shadow-blue-100"
                                 onClick={() => scrollResources('left')}
                             >
-                                <ChevronLeft className="h-5 w-5" />
+                                <ChevronLeft className="h-6 w-6" />
                             </Button>
                             <Button 
                                 size="icon" 
-                                variant="outline" 
-                                className="w-10 h-10 rounded-full border-blue-100 hover:bg-blue-600 hover:text-white transition-all shadow-sm"
+                                className="w-12 h-12 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-all shadow-md shadow-blue-100"
                                 onClick={() => scrollResources('right')}
                             >
-                                <ChevronRight className="h-5 w-5" />
+                                <ChevronRight className="h-6 w-6" />
                             </Button>
+
+                            <div className="absolute right-2 text-sm font-black text-[#1e3a8a] bg-blue-50/50 px-4 py-2 rounded-full border border-blue-100/50">
+                                <span className="text-blue-600">{resourceIndex}</span>
+                                <span className="mx-1 text-slate-300">/</span>
+                                <span className="text-slate-400">{resources.length}</span>
+                            </div>
                         </div>
                     </div>
                 </section>

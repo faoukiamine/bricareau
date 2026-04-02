@@ -305,17 +305,17 @@ const Fontaines = () => {
                     <div className="container relative z-20 mx-auto px-6 h-full flex flex-col items-start justify-center">
                         <div className="mt-12 max-w-3xl space-y-8 animate-in fade-in slide-in-from-bottom-12 duration-[1.2s]">
                             <h1 
-                                className="leading-[55px] tracking-tighter text-left mb-8 max-w-4xl"
+                                className="leading-tight lg:leading-[55px] tracking-tighter text-left mb-8 max-w-4xl"
                                 style={{
                                     fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
                                 }}
                             >
-                                <span className="italic font-light text-[#2563eb] text-[50px] block lg:inline-block">Fontaines d'eau,</span>
+                                <span className="italic font-light text-[#2563eb] text-[35px] lg:text-[50px] block lg:inline-block">Fontaines d'eau,</span>
                                 <br className="hidden lg:block" />
-                                <span className="font-bold text-[#1e3a8a] text-[50px] block lg:inline-block">l'art de l'eau pure.</span>
+                                <span className="font-bold text-[#1e3a8a] text-[35px] lg:text-[50px] block lg:inline-block">l'art de l'eau pure.</span>
                             </h1>
 
-                            <p className="body-pro-max text-slate-600 max-w-xl text-left font-light leading-relaxed">
+                            <p className="body-pro-max text-slate-800 lg:text-slate-600 max-w-xl text-left font-medium lg:font-light leading-relaxed">
                                 Élevez votre expérience d'hydratation avec nos refroidisseurs d'eau haute performance. Un design élégant allié à une pureté absolue pour votre maison ou votre bureau.
                             </p>
 
@@ -336,21 +336,19 @@ const Fontaines = () => {
 
                             {/* Aligned Trust Row Section */}
                             <div className="pt-12 z-20 animate-in fade-in slide-in-from-left-12 duration-1000 delay-700 w-full lg:w-auto">
-                                <div className="flex flex-row gap-4 pointer-events-auto overflow-x-auto pb-4 lg:pb-0 no-scrollbar">
+                                <div className="grid grid-cols-3 lg:flex lg:flex-row gap-2 lg:gap-4 pointer-events-auto">
                                     {[
-                                        { label: "Technologie", val: "Filtration Double", icon: <Zap className="w-5 h-5" /> },
-                                        { label: "Pureté", val: "Certifié NSF/ANSI", icon: <Award className="w-5 h-5" /> },
-                                        { label: "Éco-Conçu", val: "Zéro Bouteilles", icon: <Leaf className="w-5 h-5" /> }
+                                        { label: "Technologie", val: "Filtration Double", icon: <Zap className="w-4 h-4 lg:w-5 lg:h-5" /> },
+                                        { label: "Pureté", val: "Certifié NSF/ANSI", icon: <Award className="w-4 h-4 lg:w-5 lg:h-5" /> },
+                                        { label: "Éco-Conçu", val: "Zéro Bouteilles", icon: <Leaf className="w-4 h-4 lg:w-5 lg:h-5" /> }
                                     ].map((item, i) => (
-                                        <div key={i} className="bg-white/70 backdrop-blur-3xl p-3 lg:p-4 rounded-full border border-white/50 shadow-2xl shadow-blue-900/10 min-w-[200px] lg:min-w-[240px] group cursor-default transition-all duration-500 hover:scale-105">
-                                            <div className="flex items-center gap-4">
-                                                <div className="w-10 h-10 lg:w-12 lg:h-12 bg-blue-600/10 rounded-full flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all shadow-sm shrink-0">
-                                                    {item.icon}
-                                                </div>
-                                                <div className="text-left pr-4">
-                                                    <p className="text-[9px] lg:text-[10px] font-black text-slate-400 uppercase tracking-widest leading-none mb-1">{item.label}</p>
-                                                    <p className="text-xs lg:text-sm font-bold text-[#1e3a8a] whitespace-nowrap">{item.val}</p>
-                                                </div>
+                                        <div key={i} className="bg-white/90 lg:bg-white/70 backdrop-blur-3xl p-2 lg:p-4 rounded-2xl lg:rounded-full border border-white/50 shadow-2xl shadow-blue-900/10 flex flex-col lg:flex-row items-center text-center lg:text-left gap-2 lg:gap-4 group cursor-default transition-all duration-500 hover:scale-105">
+                                            <div className="w-8 h-8 lg:w-12 lg:h-12 bg-blue-600/10 rounded-full flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all shadow-sm shrink-0">
+                                                {item.icon}
+                                            </div>
+                                            <div className="min-w-0">
+                                                <p className="text-[9px] lg:text-[10px] font-black text-slate-500 lg:text-slate-400 uppercase tracking-widest leading-none mb-1">{item.label}</p>
+                                                <p className="text-[10px] lg:text-sm font-bold text-[#1e3a8a] leading-tight">{item.val}</p>
                                             </div>
                                         </div>
                                     ))}
@@ -452,24 +450,28 @@ const Fontaines = () => {
                     </div>
 
                     {/* Full-Width immersive content */}
-                    <div className="flex flex-col-reverse lg:flex-row items-stretch border-y border-slate-100 min-h-[650px] lg:min-h-[800px]">
+                    <div className="flex flex-col lg:flex-row items-stretch border-y border-slate-100 min-h-[650px] lg:min-h-[800px]">
                         {/* Left Side: Editorial Image & Narrative */}
-                        <div className="w-full lg:w-1/2 relative group overflow-hidden h-[450px] md:h-[600px] lg:h-auto">
-                            <img
-                                src={ecoImpactImg6}
-                                alt="L'expérience d'eau pure Bricareau"
-                                className="absolute inset-0 w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-105"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/10 to-transparent" />
+                        <div className="w-full lg:w-1/2 relative group overflow-hidden flex flex-col h-auto bg-slate-50">
+                            {/* Image Part */}
+                            <div className="relative lg:absolute lg:inset-0 h-[450px] md:h-[600px] lg:h-full overflow-hidden">
+                                <img
+                                    src={ecoImpactImg6}
+                                    alt="L'expérience d'eau pure Bricareau"
+                                    className="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-105"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/10 to-transparent hidden lg:block" />
+                            </div>
                             
-                            <div className="absolute bottom-12 left-12 right-12 z-20">
+                            {/* Text Part - Repositioned for Mobile */}
+                            <div className="relative lg:absolute lg:bottom-12 lg:left-12 lg:right-12 z-20 p-8 lg:p-0">
                                 <div className="max-w-xl space-y-6">
-                                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full">
+                                    <div className="hidden lg:inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full">
                                         <Star className="w-4 h-4 text-yellow-400 fill-yellow-400" />
                                         <span className="text-[10px] font-black text-white uppercase tracking-widest">Expérience Premium</span>
                                     </div>
-                                    <h3 className="text-3xl lg:text-4xl font-bold text-white tracking-tight">Art de Vivre</h3>
-                                    <p className="text-white text-[18px] lg:text-[20px] leading-relaxed italic border-l-2 border-blue-500 pl-6">
+                                    <h3 className="text-3xl lg:text-4xl font-bold text-[#1e3a8a] lg:text-white tracking-tight">Art de Vivre</h3>
+                                    <p className="text-slate-700 lg:text-white text-[18px] lg:text-[20px] leading-relaxed italic border-l-2 border-blue-500 pl-6">
                                         Une pureté incomparable qui s'intègre harmonieusement à votre quotidien. Découvrez l'équilibre parfait entre esthétique et santé, où chaque gorgée est une signature de qualité.
                                     </p>
                                 </div>

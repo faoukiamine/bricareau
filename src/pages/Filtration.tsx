@@ -40,7 +40,7 @@ import teenagerShowerImg from "@/assets/teenager-taking-shower-reduce-hangover-e
 import undersinkSystemImg from "@/assets/Triple Stage Filter.jpg";
 import africanGirlImg from "@/assets/african-girl-stands-kitchen-drinks-water.jpg";
 import glassOfWaterImg from "@/assets/glass-of-water.jpeg";
-import waterTestingImg from "@/assets/Legionella-Monitoring.webp";
+import waterTestingImg from "@/assets/39677.jpg";
 import { heroImg as filtreSousEvierImg } from "./Blog pages/Filtre-sous-evier-lalternative-simple-aux-pichets-filtrants";
 import { heroImg as healthwaterImg } from "./Blog pages/Eau-embouteillee-les-dangers-meconnus-pour-votre-sante-au-quotidien";
 import { heroImg as rowaterImg } from "./Blog pages/Osmose-inverse-la-technologie-derriere-une-eau-100-pure";
@@ -567,9 +567,9 @@ const Filtration = () => {
                         <img
                             src={waterTestingImg}
                             alt="Analyse d'eau en laboratoire"
-                            className="w-full h-full object-cover opacity-95"
+                            className="w-full h-full object-cover"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent lg:from-white/95 lg:via-white/70 lg:to-transparent" />
+                        <div className="absolute inset-0 bg-black/30 lg:bg-gradient-to-r lg:from-black/50 lg:to-transparent" />
                     </div>
 
                     <div className="container mx-auto px-4 relative z-10 flex items-center py-12 lg:py-0">
@@ -602,10 +602,8 @@ const Filtration = () => {
                     filterProduct="/filtration"
                     title={
                         <>
-                            <h2 className="heading-pro-max text-center mb-12">
-                                <span className="italic font-light text-[#2563eb] block">Honnêteté et passion :</span>
-                                <span className="font-bold text-[#1e3a8a] block">la signature Bricareau vue par vous.</span>
-                            </h2>
+                            <span className="italic font-light text-[#2563eb] block text-center">Honnêteté et passion :</span>
+                            <span className="font-bold text-[#1e3a8a] block text-center">la signature Bricareau vue par vous.</span>
                         </>
                     }
                 />
@@ -902,21 +900,19 @@ const Filtration = () => {
                             ))}
                         </div>
 
-                        {/* Navigation arrows and numbering for carousel - Mobile ONLY */}
+                        {/* Navigation arrows and numbering for carousel - Mobile/Tablet ONLY */}
                         <div className="lg:hidden flex items-center justify-center relative mt-6">
                             <div className="flex items-center gap-4">
                                 <Button 
                                     size="icon" 
-                                    variant="outline" 
-                                    className="w-12 h-12 rounded-full border-blue-100 hover:bg-blue-600 hover:text-white transition-all shadow-sm bg-white"
+                                    className="w-12 h-12 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-all shadow-md shadow-blue-100"
                                     onClick={() => scrollResources('left')}
                                 >
                                     <ChevronLeft className="h-6 w-6" />
                                 </Button>
                                 <Button 
                                     size="icon" 
-                                    variant="outline" 
-                                    className="w-12 h-12 rounded-full border-blue-100 hover:bg-blue-600 hover:text-white transition-all shadow-sm bg-white"
+                                    className="w-12 h-12 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-all shadow-md shadow-blue-100"
                                     onClick={() => scrollResources('right')}
                                 >
                                     <ChevronRight className="h-6 w-6" />

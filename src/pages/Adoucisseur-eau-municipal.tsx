@@ -146,8 +146,25 @@ const faqItems = [
 const AdoucisseurEauMunicipal = () => {
     const [showAllFaqs, setShowAllFaqs] = React.useState(false);
     const [activeCol, setActiveCol] = React.useState(0);
+    const [resourceIndex, setResourceIndex] = React.useState(1);
     const navigate = useNavigate();
     const resourcesRef = React.useRef<HTMLDivElement>(null);
+
+    const handleScrollRessources = () => {
+        if (resourcesRef.current) {
+            const scrollLeft = resourcesRef.current.scrollLeft;
+            const containerWidth = resourcesRef.current.offsetWidth;
+            const itemWidth = resourcesRef.current.querySelector('div')?.offsetWidth || containerWidth;
+            const index = Math.round(scrollLeft / itemWidth) + 1;
+            setResourceIndex(Math.min(index, resources.length));
+        }
+    };
+
+    const resources = [
+        { title: "Adoucisseur sans sel vs avec sel : la vérité technique", img: conditionneursImg, link: "/adoucisseur-sans-sel-vs-avec-sel-verite-technique" },
+        { title: "Comment régler la dureté de votre adoucisseur ?", img: residentialWaterSoftenerImg, link: "/comment-regler-durete-adoucisseur-eau" },
+        { title: "Adoucisseur d'eau et fosse septique : compatible ou non ?", img: adoucisseurFosseImg, link: "/adoucisseur-deau-et-fosse-septique-mythes-et-realites" }
+    ];
 
     const scrollResources = (direction: 'left' | 'right') => {
         if (resourcesRef.current) {
@@ -323,11 +340,13 @@ const AdoucisseurEauMunicipal = () => {
                             ].map((item, idx) => (
                                 <div key={idx} className="relative z-10 group text-center">
                                     <div className="mb-8 relative flex items-center justify-center">
-                                        <div className={`w-32 h-32 rounded-[2.5rem] overflow-hidden border-2 ${item.color} shadow-xl shadow-slate-200/50 group-hover:scale-110 transition-transform duration-500 bg-white`}>
-                                            <img src={item.image} alt={item.title} className="w-full h-full object-cover" />
-                                        </div>
-                                        <div className="absolute -top-2 -right-2 w-10 h-10 bg-[#1e3a8a] text-white rounded-full flex items-center justify-center font-black text-xs shadow-lg border-2 border-white">
-                                            {item.step}
+                                        <div className="relative w-fit mx-auto">
+                                            <div className={`w-32 h-32 rounded-[2.5rem] overflow-hidden border-2 ${item.color} shadow-xl shadow-slate-200/50 group-hover:scale-110 transition-transform duration-500 bg-white`}>
+                                                <img src={item.image} alt={item.title} className="w-full h-full object-cover" />
+                                            </div>
+                                            <div className="absolute -top-2 -left-2 lg:-left-auto lg:-top-2 lg:-right-2 w-10 h-10 bg-blue-600 lg:bg-[#1e3a8a] text-white rounded-full flex items-center justify-center font-black text-xs shadow-lg border-2 border-white z-20">
+                                                {item.step}
+                                            </div>
                                         </div>
                                     </div>
                                     <h4 className="text-xl font-bold text-slate-800 mb-4 group-hover:text-blue-600 transition-colors leading-tight">{item.title}</h4>
@@ -620,13 +639,10 @@ const AdoucisseurEauMunicipal = () => {
                         </div>
                         <div 
                             ref={resourcesRef}
+                            onScroll={handleScrollRessources}
                             className="flex lg:grid lg:grid-cols-3 gap-8 overflow-x-auto lg:overflow-x-visible no-scrollbar snap-x snap-mandatory pb-12 px-1 lg:px-0 scroll-smooth"
                         >
-                            {[
-                                { title: "Adoucisseur sans sel vs avec sel : la vérité technique", img: conditionneursImg, link: "/adoucisseur-sans-sel-vs-avec-sel-verite-technique" },
-                                { title: "Comment régler la dureté de votre adoucisseur ?", img: residentialWaterSoftenerImg, link: "/comment-regler-durete-adoucisseur-eau" },
-                                { title: "Adoucisseur d'eau et fosse septique : compatible ou non ?", img: adoucisseurFosseImg, link: "/adoucisseur-deau-et-fosse-septique-mythes-et-realites" }
-                            ].map((art, i) => (
+                            {resources.map((art, i) => (
                                 <div
                                     key={i}
                                     className="min-w-[70vw] md:min-w-[45vw] lg:min-w-0 snap-center bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer group flex flex-col h-full border border-gray-100"
@@ -652,24 +668,28 @@ const AdoucisseurEauMunicipal = () => {
                             ))}
                         </div>
 
-                        {/* Navigation arrows for carousel at bottom right */}
-                        <div className="lg:hidden flex items-center justify-end gap-3 mt-4 relative z-30">
+                        {/* Navigation arrows for carousel - Mobile/Tablet ONLY */}
+                        <div className="lg:hidden flex items-center justify-center gap-4 mt-6 relative z-30">
                             <Button 
                                 size="icon" 
-                                variant="outline" 
-                                className="w-10 h-10 rounded-full border-blue-100 hover:bg-blue-600 hover:text-white transition-all shadow-sm"
+                                className="w-12 h-12 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-all shadow-md shadow-blue-100"
                                 onClick={() => scrollResources('left')}
                             >
-                                <ChevronLeft className="h-5 w-5" />
+                                <ChevronLeft className="h-6 w-6" />
                             </Button>
                             <Button 
                                 size="icon" 
-                                variant="outline" 
-                                className="w-10 h-10 rounded-full border-blue-100 hover:bg-blue-600 hover:text-white transition-all shadow-sm"
+                                className="w-12 h-12 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-all shadow-md shadow-blue-100"
                                 onClick={() => scrollResources('right')}
                             >
-                                <ChevronRight className="h-5 w-5" />
+                                <ChevronRight className="h-6 w-6" />
                             </Button>
+
+                            <div className="absolute right-2 text-sm font-black text-[#1e3a8a] bg-blue-50/50 px-4 py-2 rounded-full border border-blue-100/50">
+                                <span className="text-blue-600">{resourceIndex}</span>
+                                <span className="mx-1 text-slate-300">/</span>
+                                <span className="text-slate-400">{resources.length}</span>
+                            </div>
                         </div>
                     </div>
                 </section>

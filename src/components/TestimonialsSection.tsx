@@ -83,15 +83,7 @@ const TestimonialsSection = ({
         <section className="py-20 bg-white overflow-hidden relative">
             <div className="container mx-auto px-4 max-w-6xl">
                 <div className="text-center mb-16">
-                    <h2 
-                        className="text-foreground"
-                        style={{
-                            fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                            fontSize: '48px',
-                            lineHeight: '52px',
-                            fontStyle: 'normal'
-                        }}
-                    >
+                    <h2 className="heading-pro-max mb-12 text-foreground">
                         {title}
                     </h2>
                 </div>

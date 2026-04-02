@@ -50,7 +50,7 @@ import heroDrink from "@/assets/hero-image.jpg";
 import eliteROImg from "@/assets/Triple Stage Filter.jpg";
 import plusROImg from "@/assets/Double Stage Filter.jpg";
 import essentialImg from "@/assets/Single Stage Filter.jpg";
-import waterTestingImg from "@/assets/undersink_filtration_header.jpg";
+import waterTestingImg from "@/assets/185091336.jpg";
 import multiStageFilterImg from "@/assets/RO undersink system.jpg";
 import medsInWaterImg from "@/assets/eau_medicaments.png";
 import undersinkVsWholeHouseImg from "@/assets/2148947324.jpg";
@@ -97,7 +97,24 @@ const FiltrationSousEvier = () => {
         if (ogDesc) ogDesc.setAttribute("content", "Profitez d'une eau saine et délicieuse avec nos solutions d'ultrafiltration Cristal Pro. Gain d'espace et performance.");
     }, []);
 
+    const [resourceIndex, setResourceIndex] = React.useState(1);
     const resourcesRef = React.useRef<HTMLDivElement>(null);
+
+    const handleScrollRessources = () => {
+        if (resourcesRef.current) {
+            const scrollLeft = resourcesRef.current.scrollLeft;
+            const containerWidth = resourcesRef.current.offsetWidth;
+            const itemWidth = resourcesRef.current.querySelector('div')?.offsetWidth || containerWidth;
+            const index = Math.round(scrollLeft / itemWidth) + 1;
+            setResourceIndex(Math.min(index, resources.length));
+        }
+    };
+
+    const resources = [
+        { title: "L'alternative aux pichets", img: filtreSousEvierImg, link: "/filtre-sous-evier-lalternative-simple-aux-pichets-filtrants" },
+        { title: "Protéger sa famille du plomb", img: plombVieillesMaisonsImg, link: "/le-plomb-dans-les-vieilles-maisons-comment-se-proteger" },
+        { title: "Filtrer l'eau de ville ?", img: eauVilleFiltreeImg, link: "/pourquoi-meme-leau-de-ville-a-besoin-detre-filtree" }
+    ];
 
     const scrollResources = (direction: 'left' | 'right') => {
         if (resourcesRef.current) {
@@ -621,25 +638,10 @@ const FiltrationSousEvier = () => {
                         </div>
                         <div 
                             ref={resourcesRef}
+                            onScroll={handleScrollRessources}
                             className="flex lg:grid lg:grid-cols-3 gap-8 overflow-x-auto lg:overflow-x-visible no-scrollbar snap-x snap-mandatory pb-12 px-1 lg:px-0 scroll-smooth"
                         >
-                            {[
-                                {
-                                    title: "Filtre sous évier, l'alternative simple aux pichets filtrants",
-                                    img: filtreSousEvierImg,
-                                    link: "/filtre-sous-evier-lalternative-simple-aux-pichets-filtrants"
-                                },
-                                {
-                                    title: "Le plomb dans les vieilles maisons : Comment se protéger?",
-                                    img: plombVieillesMaisonsImg,
-                                    link: "/le-plomb-dans-les-vieilles-maisons-comment-se-proteger"
-                                },
-                                {
-                                    title: "Pourquoi même l'eau de ville a besoin d'être filtrée?",
-                                    img: eauVilleFiltreeImg,
-                                    link: "/pourquoi-meme-leau-de-ville-a-besoin-detre-filtree"
-                                },
-                            ].map((art, i) => (
+                            {resources.map((art, i) => (
                                 <NavLink
                                     key={i}
                                     to={art.link || "#"}
@@ -664,23 +666,28 @@ const FiltrationSousEvier = () => {
                             ))}
                         </div>
 
-                        <div className="lg:hidden flex items-center justify-end gap-3 mt-4 relative z-30">
+                        {/* Navigation arrows for carousel - Mobile/Tablet ONLY */}
+                        <div className="lg:hidden flex items-center justify-center gap-4 mt-6 relative z-30">
                             <Button 
                                 size="icon" 
-                                variant="outline" 
-                                className="w-10 h-10 rounded-full border-blue-100 hover:bg-blue-600 hover:text-white transition-all shadow-sm"
+                                className="w-12 h-12 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-all shadow-md shadow-blue-100"
                                 onClick={() => scrollResources('left')}
                             >
-                                <ChevronLeft className="h-5 w-5" />
+                                <ChevronLeft className="h-6 w-6" />
                             </Button>
                             <Button 
                                 size="icon" 
-                                variant="outline" 
-                                className="w-10 h-10 rounded-full border-blue-100 hover:bg-blue-600 hover:text-white transition-all shadow-sm"
+                                className="w-12 h-12 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-all shadow-md shadow-blue-100"
                                 onClick={() => scrollResources('right')}
                             >
-                                <ChevronRight className="h-5 w-5" />
+                                <ChevronRight className="h-6 w-6" />
                             </Button>
+
+                            <div className="absolute right-2 text-sm font-black text-[#1e3a8a] bg-blue-50/50 px-4 py-2 rounded-full border border-blue-100/50">
+                                <span className="text-blue-600">{resourceIndex}</span>
+                                <span className="mx-1 text-slate-300">/</span>
+                                <span className="text-slate-400">{resources.length}</span>
+                            </div>
                         </div>
                     </div>
                 </section>

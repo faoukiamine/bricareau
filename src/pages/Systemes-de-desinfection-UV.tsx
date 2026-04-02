@@ -812,21 +812,19 @@ const DesinfectionUV = () => {
                             ))}
                         </div>
 
-                        {/* Navigation arrows and numbering for carousel - Mobile ONLY */}
+                        {/* Navigation arrows and numbering for carousel - Mobile/Tablet ONLY */}
                         <div className="lg:hidden flex items-center justify-center relative mt-6">
                             <div className="flex items-center gap-4">
                                 <Button 
                                     size="icon" 
-                                    variant="outline" 
-                                    className="w-12 h-12 rounded-full border-blue-100 hover:bg-blue-600 hover:text-white transition-all shadow-sm bg-white"
+                                    className="w-12 h-12 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-all shadow-md shadow-blue-100"
                                     onClick={() => scrollResources('left')}
                                 >
                                     <ChevronLeft className="h-6 w-6" />
                                 </Button>
                                 <Button 
                                     size="icon" 
-                                    variant="outline" 
-                                    className="w-12 h-12 rounded-full border-blue-100 hover:bg-blue-600 hover:text-white transition-all shadow-sm bg-white"
+                                    className="w-12 h-12 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-all shadow-md shadow-blue-100"
                                     onClick={() => scrollResources('right')}
                                 >
                                     <ChevronRight className="h-6 w-6" />

@@ -743,26 +743,24 @@ const StationEauPotable = () => {
               ))}
             </div>
 
-            {/* Navigation arrows and numbering for carousel - Mobile ONLY */}
+            {/* Navigation arrows and numbering for carousel - Mobile/Tablet ONLY */}
             <div className="lg:hidden flex items-center justify-center relative mt-6">
-                <div className="flex items-center gap-4">
-                    <Button 
-                        size="icon" 
-                        variant="outline" 
-                        className="w-12 h-12 rounded-full border-blue-100 hover:bg-blue-600 hover:text-white transition-all shadow-sm bg-white"
-                        onClick={() => scrollResources('left')}
-                    >
-                        <ChevronLeft className="h-6 w-6" />
-                    </Button>
-                    <Button 
-                        size="icon" 
-                        variant="outline" 
-                        className="w-12 h-12 rounded-full border-blue-100 hover:bg-blue-600 hover:text-white transition-all shadow-sm bg-white"
-                        onClick={() => scrollResources('right')}
-                    >
-                        <ChevronRight className="h-6 w-6" />
-                    </Button>
-                </div>
+              <div className="flex items-center gap-4">
+                <Button 
+                    size="icon" 
+                    className="w-12 h-12 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-all shadow-md shadow-blue-100"
+                    onClick={() => scrollResources('left')}
+                >
+                    <ChevronLeft className="h-6 w-6" />
+                </Button>
+                <Button 
+                    size="icon" 
+                    className="w-12 h-12 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-all shadow-md shadow-blue-100"
+                    onClick={() => scrollResources('right')}
+                >
+                    <ChevronRight className="h-6 w-6" />
+                </Button>
+              </div>
                 
                 <div className="absolute right-2 text-sm font-black text-[#1e3a8a] bg-blue-50/50 px-4 py-2 rounded-full border border-blue-100/50">
                     <span className="text-blue-600">{resourceIndex}</span>

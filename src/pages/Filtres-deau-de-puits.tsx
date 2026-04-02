@@ -154,7 +154,24 @@ const FiltresPuits = () => {
     const navigate = useNavigate();
     const [showAllFaqs, setShowAllFaqs] = React.useState(false);
     const [activeCol, setActiveCol] = React.useState(0);
+    const [resourceIndex, setResourceIndex] = React.useState(1);
     const resourcesRef = React.useRef<HTMLDivElement>(null);
+
+    const handleScrollRessources = () => {
+        if (resourcesRef.current) {
+            const scrollLeft = resourcesRef.current.scrollLeft;
+            const containerWidth = resourcesRef.current.offsetWidth;
+            const itemWidth = resourcesRef.current.querySelector('div')?.offsetWidth || containerWidth;
+            const index = Math.round(scrollLeft / itemWidth) + 1;
+            setResourceIndex(Math.min(index, resources.length));
+        }
+    };
+
+    const resources = [
+        { title: "Filtration d'eau de puits : guide complet", img: crystalClearWaterImg, path: "/filtration-eau-de-puits-votre-guide-complet" },
+        { title: "L'importance de l'analyse d'eau", img: residentialWaterSoftenerImg, path: "/pourquoi-analyser-eau-de-puits-avant-de-filtrer" },
+        { title: "Eaux ferrugineuses et soufrées", img: adoucisseurFosseImg, path: "/comment-eliminer-fer-manganese-soufre-eau-de-puits" }
+    ];
 
     const scrollResources = (direction: 'left' | 'right') => {
         if (resourcesRef.current) {
@@ -867,13 +884,10 @@ const FiltresPuits = () => {
                         </div>
                         <div 
                             ref={resourcesRef}
+                            onScroll={handleScrollRessources}
                             className="flex lg:grid lg:grid-cols-3 gap-8 overflow-x-auto lg:overflow-x-visible no-scrollbar snap-x snap-mandatory pb-12 px-1 lg:px-0 scroll-smooth"
                         >
-                            {[
-                                { title: "Adoucisseur d'eau et fosse septique : compatible ou non ?", path: "/adoucisseur-deau-et-fosse-septique-mythes-et-realites", img: adoucisseurFosseImg },
-                                { title: "Adoucisseur sans sel vs avec sel : la vérité technique", path: "/adoucisseur-sans-sel-vs-avec-sel-verite-technique", img: residentialWaterSoftenerImg },
-                                { title: "Conditionneur d'eau : Une alternative écologique à l'adoucisseur sans sel", path: "/adoucisseur-sans-sel-vs-avec-sel-verite-technique", img: conditionneursImg }
-                            ].map((art, i) => (
+                            {resources.map((art, i) => (
                                 <div
                                     key={i}
                                     className="min-w-[70vw] md:min-w-[45vw] lg:min-w-0 snap-center group bg-white rounded-3xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full cursor-pointer"
@@ -901,24 +915,28 @@ const FiltresPuits = () => {
                             ))}
                         </div>
 
-                        {/* Navigation arrows for carousel at bottom right */}
-                        <div className="lg:hidden flex items-center justify-end gap-3 mt-4 relative z-30">
+                        {/* Navigation arrows for carousel - Mobile/Tablet ONLY */}
+                        <div className="lg:hidden flex items-center justify-center gap-4 mt-6 relative z-30">
                             <Button 
                                 size="icon" 
-                                variant="outline" 
-                                className="w-10 h-10 rounded-full border-blue-100 hover:bg-blue-600 hover:text-white transition-all shadow-sm"
+                                className="w-12 h-12 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-all shadow-md shadow-blue-100"
                                 onClick={() => scrollResources('left')}
                             >
-                                <ChevronLeft className="h-5 w-5" />
+                                <ChevronLeft className="h-6 w-6" />
                             </Button>
                             <Button 
                                 size="icon" 
-                                variant="outline" 
-                                className="w-10 h-10 rounded-full border-blue-100 hover:bg-blue-600 hover:text-white transition-all shadow-sm"
+                                className="w-12 h-12 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-all shadow-md shadow-blue-100"
                                 onClick={() => scrollResources('right')}
                             >
-                                <ChevronRight className="h-5 w-5" />
+                                <ChevronRight className="h-6 w-6" />
                             </Button>
+
+                            <div className="absolute right-2 text-sm font-black text-[#1e3a8a] bg-blue-50/50 px-4 py-2 rounded-full border border-blue-100/50">
+                                <span className="text-blue-600">{resourceIndex}</span>
+                                <span className="mx-1 text-slate-300">/</span>
+                                <span className="text-slate-400">{resources.length}</span>
+                            </div>
                         </div>
                     </div>
                 </section>
