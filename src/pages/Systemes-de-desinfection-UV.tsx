@@ -265,23 +265,41 @@ const DesinfectionUV = () => {
                     </div>
                 </section>
 
-                {/* 3.5. Pathogen Neutralization - Visual Proof */}
-                <section className="py-24 bg-white relative overflow-hidden">
+                {/* 3.5. Pathogen Neutralization - Redesigned section */}
+                <section className="relative py-32 flex items-center overflow-hidden bg-slate-950">
+                    {/* Cinematic Background */}
+                    <div className="absolute inset-0 z-0">
+                        <img 
+                            src={stormVisualImg} 
+                            alt="Force énergétique UV - Bricareau" 
+                            className="w-full h-full object-cover opacity-40 animate-pulse-slow"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/60 to-transparent" />
+                        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(37,99,235,0.05)_0%,transparent_50%)]" />
+                        
+                        {/* Abstract procedural rays */}
+                        <div className="absolute inset-0 overflow-hidden mix-blend-screen opacity-20">
+                            <div className="absolute top-1/2 left-0 w-full h-[1px] bg-blue-400 rotate-12 blur-md" />
+                            <div className="absolute top-1/2 left-0 w-full h-[1px] bg-indigo-500 -rotate-12 blur-md" />
+                        </div>
+                    </div>
+
                     <div className="container mx-auto px-6 relative z-10">
-                        <div className="flex flex-col lg:flex-row items-center gap-16">
-                            <div className="lg:w-1/2 space-y-8">
-                                <span className="inline-block px-4 py-1.5 bg-indigo-100 text-indigo-600 rounded-full text-[10px] font-black uppercase tracking-widest">
-                                    SÉCURITÉ BIOLOGIQUE
-                                </span>
-                                <h2 className="heading-pro-max">
-                                    <span className="italic font-light text-[#2563eb] block">Éliminez l'invisible :</span>
-                                    <span className="font-bold text-[#1e3a8a] block text-center lg:text-left">Protection contre 99,99% des pathogènes.</span>
-                                </h2>
-                                <p className="body-pro-max text-slate-500">
-                                    Votre eau peut sembler claire tout en abritant des micro-organismes nocifs. Nos rayons UV-C ciblent le cœur des contaminants pour les rendre inoffensifs en une fraction de seconde.
-                                </p>
-                                
-                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
+                            {/* Content Column */}
+                            <div className="space-y-10 order-1">
+                                <div className="space-y-6">
+                                    <h2 className="text-4xl md:text-6xl lg:text-5xl font-light text-white leading-[1.1] tracking-tighter">
+                                        Éliminez l'invisible : <br />
+                                        <span className="text-blue-400 italic font-bold font-serif whitespace-nowrap">Protection contre 99,99%.</span>
+                                    </h2>
+                                    <p className="text-lg text-slate-300 font-light leading-relaxed max-w-xl">
+                                        Votre eau peut sembler cristalline tout en abritant des micro-organismes nocifs. Nos rayons UV-C ciblent le cœur des contaminants pour les rendre inoffensifs en une fraction de seconde, sans produits chimiques.
+                                    </p>
+                                </div>
+
+                                {/* Pathogens Grid */}
+                                <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                                     {[
                                         { name: "E. Coli", level: "99.99%" },
                                         { name: "Giardia", level: "99.99%" },
@@ -290,46 +308,56 @@ const DesinfectionUV = () => {
                                         { name: "Hépatite A", level: "99.99%" },
                                         { name: "Cryptosporidium", level: "99.99%" }
                                     ].map((p, i) => (
-                                        <div key={i} className="flex items-center gap-3 p-4 rounded-2xl bg-slate-50 border border-slate-100 group hover:border-blue-200 transition-all">
-                                            <div className="w-2 h-2 rounded-full bg-blue-600 shadow-[0_0_10px_rgba(37,99,235,0.5)]" />
+                                        <div key={i} className="flex items-center gap-3 p-4 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm group hover:bg-white/10 hover:border-blue-500/50 transition-all duration-500">
+                                            <div className="w-1.5 h-1.5 rounded-full bg-blue-400 shadow-[0_0_8px_rgba(96,165,250,0.8)]" />
                                             <div>
-                                                <div className="text-sm font-bold text-[#1e3a8a]">{p.name}</div>
-                                                <div className="text-[10px] font-black uppercase tracking-tighter text-blue-600 opacity-60 group-hover:opacity-100 transition-opacity whitespace-nowrap">Neutralisé à {p.level}</div>
+                                                <div className="text-[12px] font-bold text-white group-hover:text-blue-400 transition-colors uppercase tracking-wider">{p.name}</div>
+                                                <div className="text-[9px] font-black tracking-widest text-blue-400/60 uppercase">{p.level}</div>
                                             </div>
                                         </div>
                                     ))}
                                 </div>
-                            </div>
-                            
-                            <div className="lg:w-1/2 relative">
-                                {/* Visual Representation of UV Shielding */}
-                                <div className="relative rounded-[3rem] overflow-hidden aspect-square flex items-center justify-center bg-slate-900 shadow-2xl group cursor-crosshair">
-                                    <img 
-                                        src={stormVisualImg} 
-                                        alt="Force énergétique UV - Bricareau" 
-                                        className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-[3s]"
-                                    />
-                                    <div className="absolute inset-0 bg-indigo-950/40 group-hover:bg-indigo-950/20 transition-colors duration-1000" />
-                                    
-                                    {/* Procedural UV Animation Rays */}
-                                    <div className="absolute inset-0 overflow-hidden mix-blend-add opacity-50">
-                                        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(99,102,241,0.3)_0%,transparent_70%)] animate-pulse" />
-                                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] h-[1px] bg-blue-400 rotate-12 blur-sm" />
-                                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] h-[1px] bg-indigo-500 -rotate-12 blur-sm" />
-                                    </div>
 
-                                    <div className="relative z-10 text-center space-y-6 px-12">
-                                        <div className="w-24 h-24 rounded-full bg-blue-600/30 backdrop-blur-md border border-blue-400/50 flex items-center justify-center mx-auto mb-8 shadow-[0_0_50px_rgba(37,99,235,0.3)] group-hover:scale-110 group-hover:bg-blue-600 transition-all duration-700">
-                                            <ShieldCheck className="w-12 h-12 text-white" />
+                                {/* Mobile/Tablet only Barrière Active block */}
+                                <div className="lg:hidden p-8 rounded-[2.5rem] bg-gradient-to-br from-blue-600/20 to-indigo-900/30 border border-white/10 backdrop-blur-xl">
+                                    <div className="flex flex-col items-center text-center space-y-6">
+                                        <div className="w-16 h-16 rounded-2xl bg-blue-600 flex items-center justify-center shadow-xl">
+                                            <ShieldCheck className="w-8 h-8 text-white" />
                                         </div>
-                                        <div className="text-4xl font-black text-white tracking-tight uppercase drop-shadow-2xl">Barrière Active</div>
-                                        <p className="text-white text-sm font-light leading-relaxed max-w-xs mx-auto">
-                                            Une puissance de rayonnement certifiée pour garantir une eau sécuritaire à chaque litre consommé.
-                                        </p>
-                                        <div className="pt-8">
-                                            <Button asChild className="rounded-full bg-white text-[#1e3a8a] hover:bg-white hover:scale-105 transition-all border-none h-14 px-10 font-black shadow-xl">
-                                                <a href="/consultation">Évaluez mon eau</a>
-                                            </Button>
+                                        <div>
+                                            <div className="text-3xl font-black text-white tracking-tighter mb-2 italic uppercase">BARRIÈRE ACTIVE</div>
+                                            <p className="text-blue-100/60 font-light leading-relaxed text-sm italic">
+                                                "Une puissance de rayonnement UV-C certifiée pour garantir une eau sécuritaire à chaque litre consommé, protégeant votre famille des menaces invisibles."
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="pt-6 flex flex-col sm:flex-row gap-8 items-center border-t border-white/10">
+                                    <Button asChild className="w-full sm:w-auto">
+                                        <a href="/consultation">Évaluer la sécurité de mon eau</a>
+                                    </Button>
+                                </div>
+                            </div>
+
+                            {/* Impact Column (Desktop only) */}
+                            <div className="hidden lg:block lg:pl-12 order-2">
+                                <div className="relative p-12 rounded-[4rem] bg-gradient-to-br from-blue-600/20 to-indigo-900/30 border border-white/10 backdrop-blur-xl shadow-2xl overflow-hidden group">
+                                    <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 blur-[60px]" />
+                                    <div className="absolute bottom-0 left-0 w-32 h-32 bg-indigo-500/10 blur-[60px]" />
+                                    
+                                    <div className="relative z-10 space-y-8 text-center lg:text-left">
+                                        <div className="w-20 h-20 rounded-3xl bg-blue-600 flex items-center justify-center mx-auto lg:mx-0 rotate-3 group-hover:rotate-6 transition-transform duration-700 shadow-2xl">
+                                            <ShieldCheck className="w-10 h-10 text-white" />
+                                        </div>
+                                        <div>
+                                            <div className="text-5xl font-black text-white tracking-tighter mb-2 italic">BARRIÈRE ACTIVE</div>
+                                            <p className="text-blue-100/60 font-light leading-relaxed text-lg italic">
+                                                "Une puissance de rayonnement UV-C certifiée pour garantir une eau sécuritaire à chaque litre consommé, protégeant votre famille des menaces invisibles."
+                                            </p>
+                                        </div>
+                                        <div className="flex justify-center lg:justify-start gap-2 h-1 bg-white/5 rounded-full overflow-hidden">
+                                            <div className="w-1/3 bg-blue-500 animate-[loading_2s_ease-in-out_infinite]" />
                                         </div>
                                     </div>
                                 </div>

@@ -580,15 +580,15 @@ const AdoucisseursEauDePuits = () => {
                 {/* 6. Water Testing Section */}
                 <section className="relative lg:h-[800px] flex flex-col lg:flex-row items-stretch overflow-hidden bg-white">
                     {/* Mobile Image */}
-                    <div className="lg:hidden w-full h-auto relative bg-slate-50">
+                    <div className="lg:hidden w-full h-[400px] relative bg-slate-50">
                         <img
                             src={waterTestingImg}
                             alt="Analyse d'eau à domicile pour détecter le calcaire et le chlore - Service Bricareau"
-                            className="w-full h-auto object-contain"
+                            className="w-full h-full object-cover object-[center_25%]"
                         />
                     </div>
                     <div className="hidden lg:block absolute inset-0 z-0">
-                        <img src={waterTestingImg} alt="Test de dureté" className="w-full h-full object-cover" />
+                        <img src={waterTestingImg} alt="Test de dureté" className="w-full h-full object-cover object-[center_25%]" />
                         <div className="absolute inset-0 bg-black/30 lg:bg-gradient-to-r lg:from-black/50 lg:to-transparent" />
                     </div>
                     <div className="container mx-auto px-4 relative z-10 flex items-center py-12 lg:py-0">

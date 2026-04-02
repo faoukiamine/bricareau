@@ -36,6 +36,7 @@ import undersinkSystemImg from "@/assets/Système+de+filtration+Serene+Lite.webp
 import hardWaterSignsImg from "@/assets/Signs+of+hard+water+in+your+home-640w.webp";
 import hardWaterImg from "@/assets/58279.jpg";
 import applianceDamageImg from "@/assets/tarte-chauffe-eau.jpg";
+import benefitsVisualImg from "@/assets/2149141912.jpg";
 import { conditionneursImg } from "./Blog pages/Adoucisseur avec sel ou sans sel";
 import { softenerImg as residentialWaterSoftenerImg } from "./Blog pages/Comment régler la dureté de votre adoucisseur ";
 import { adoucisseurImg as adoucisseurFosseImg } from "./Blog pages/Adoucisseur-deau- et-fosse-septique--Mythes-et-réalités";
@@ -71,7 +72,8 @@ import {
     Wrench,
     CircleDollarSign,
     TrendingUp,
-    Beaker
+    Beaker,
+    ShieldCheck
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import React, { useEffect } from "react";
@@ -290,65 +292,109 @@ const Adoucissement = () => {
                     </div>
                 </section>
 
-                {/* 3. Benefits Section - Redesigned for Premium Look */}
-                <section className="py-24 bg-white relative overflow-hidden">
-                    {/* Abstract background elements */}
-                    <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-blue-50/50 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 -z-10" />
-                    <div className="absolute bottom-0 left-0 w-1/4 h-1/4 bg-blue-50 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2 -z-10" />
+                {/* 3. Benefits Section - Redesigned to match Osmosis Page Style */}
+                <section className="py-20 lg:py-32 bg-slate-50/50 relative overflow-hidden">
+                    {/* Background Technical Watermark */}
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full opacity-[0.03] pointer-events-none z-0">
+                        <div className="w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-blue-600 to-transparent scale-150" />
+                    </div>
 
-                    <div className="container mx-auto px-6">
-                        <div className="text-center mb-20 max-w-3xl mx-auto">
-                         <h2 
-                                     id="benefits-title"
-                                     className="scroll-mt-[120px] mb-8 heading-pro-max text-center"
-                                 >
-                                     <span className="italic font-light text-[#2563eb] block">Les avantages de</span>
-                                     <span className="font-bold text-[#1e3a8a] block">l'adoucissement d'eau</span>
-                                 </h2>
-                         <p className="body-pro-max text-center">
-                             Une transformation immédiate pour votre confort, votre santé et la longévité de votre foyer.
-                         </p>
-                        </div>
-
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-justify">
-                            {[
-                                {
-                                    iconSrc: starsImg,
-                                    title: "Qualité supérieure",
-                                    desc: "Une douceur incomparable pour votre peau et vos cheveux dès la première douche, sans l'agressivité du calcaire."
-                                },
-                                {
-                                    iconSrc: healthSafetyImg,
-                                    title: "Protection totale",
-                                    desc: "Éliminez le tartre à la source et prolongez de façon significative la durée de vie de votre plomberie et de vos appareils."
-                                },
-                                {
-                                    iconSrc: softImg,
-                                    title: "Linge plus doux",
-                                    desc: "Retrouvez des vêtements éclatants, souples et durables sans avoir recours à des adoucissants chimiques coûteux."
-                                },
-                                {
-                                    iconSrc: savingsImg,
-                                    title: "Économies garanties",
-                                    desc: "Réduisez vos factures d'énergie et vos dépenses en savons et détergents jusqu'à 50% grâce à une efficacité accrue."
-                                }
-                            ].map((item, i) => (
-                                <div key={i} className="group bg-white border border-slate-100 rounded-[2rem] p-8 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2 relative overflow-hidden">
-                                    <div className="absolute -right-4 -bottom-4 opacity-5 group-hover:opacity-10 transition-opacity duration-500 transform group-hover:scale-110">
-                                        <img src={item.iconSrc} className="w-32 h-32" style={{ filter: 'invert(32%) sepia(96%) saturate(3015%) hue-rotate(212deg) brightness(97%) contrast(96%)' }} alt="" />
-                                    </div>
-                                    <div className="relative w-16 h-16 rounded-2xl bg-blue-50 flex items-center justify-center mb-8 group-hover:bg-blue-600 transition-colors duration-500">
-                                        <img src={item.iconSrc} className="absolute h-8 w-8 transition-opacity duration-500 opacity-100 group-hover:opacity-0" style={{ filter: 'invert(32%) sepia(96%) saturate(3015%) hue-rotate(212deg) brightness(97%) contrast(96%)' }} alt={item.title} />
-                                        <img src={item.iconSrc} className="absolute h-8 w-8 transition-opacity duration-500 opacity-0 group-hover:opacity-100 brightness-0 invert" alt={`${item.title} hover`} />
-                                    </div>
-                                    <h5 className="text-xl font-bold text-slate-900 mb-4 tracking-tight group-hover:text-blue-600 transition-colors duration-500">
-                                        {item.title}
-                                    </h5>
-                                     <p className="body-pro-max">
-                                         {item.desc}
-                                     </p>
+                    <div className="container mx-auto px-6 relative z-10">
+                        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-center">
+                            
+                            {/* Left: Content */}
+                            <div className="lg:col-span-12 xl:col-span-7 space-y-10">
+                                <div className="space-y-6">
+                                    <span className="inline-block px-4 py-1.5 bg-blue-600 text-white rounded-full text-[10px] font-black uppercase tracking-[0.3em] shadow-lg shadow-blue-200">
+                                        L'INGÉNIERIE DU CONFORT
+                                    </span>
+                                    <h2 id="benefits-title" className="scroll-mt-[120px] mb-8 heading-pro-max text-left">
+                                        <span className="italic font-light text-[#2563eb] block">Les avantages de</span>
+                                        <span className="font-bold text-[#1e3a8a] block text-left">l'adoucissement d'eau.</span>
+                                    </h2>
+                                    <p className="body-pro-max text-slate-600 text-left max-w-2xl">
+                                        Une transformation immédiate pour votre confort, votre santé et la longévité de votre foyer. Dites adieu au calcaire et retrouvez une eau pure et soyeuse.
+                                    </p>
                                 </div>
-                            ))}
+
+                                {/* Mobile/Tablet Visuel Section - Appears after paragraph */}
+                                <div className="xl:hidden relative group py-8">
+                                    <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl transition-all duration-700">
+                                        <img 
+                                            src={benefitsVisualImg} 
+                                            alt="Visualisation des bénéfices de l'eau adoucie Bricareau mobile" 
+                                            className="w-full h-auto rounded-[2.5rem] opacity-90"
+                                        />
+                                        
+                                        {/* Floating Label for Mobile/Tablet overlaying the image bottom */}
+                                        <div className="absolute bottom-6 left-4 right-4 bg-white/90 backdrop-blur-md rounded-[2rem] p-5 shadow-2xl border border-white/50 flex items-center gap-4 z-20">
+                                            <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center shrink-0 shadow-lg shadow-blue-200">
+                                                <ShieldCheck className="w-5 h-5 text-white" />
+                                            </div>
+                                            <p className="text-slate-700 text-[12px] font-medium italic leading-snug">
+                                                "Transformez chaque robinet en une source de bien-être pur, libérée des agressions du calcaire."
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8 pt-8 border-t border-slate-100">
+                                    {[
+                                        {
+                                            title: "Qualité supérieure",
+                                            desc: "Une douceur incomparable pour votre peau et vos cheveux dès la première douche."
+                                        },
+                                        {
+                                            title: "Protection totale",
+                                            desc: "Éliminez le tartre et prolongez la durée de vie de votre plomberie et appareils."
+                                        },
+                                        {
+                                            title: "Linge plus doux",
+                                            desc: "Retrouvez des vêtements éclatants et souples sans adoucissants chimiques."
+                                        },
+                                        {
+                                            title: "Économies garanties",
+                                            desc: "Réduisez vos factures d'énergie et vos dépenses en savons jusqu'à 50%."
+                                        }
+                                    ].map((item, idx) => (
+                                        <div key={idx} className="group p-1 transition-all duration-500 cursor-default">
+                                            <div className="flex items-start gap-3 mb-2">
+                                                <div className="h-6 flex items-center shrink-0">
+                                                    <div className="w-1.5 h-1.5 bg-blue-600 rounded-full group-hover:scale-150 transition-transform" />
+                                                </div>
+                                                <h5 className="font-bold block text-slate-900 group-hover:text-blue-600 transition-colors text-left leading-6 uppercase text-xs tracking-widest">{item.title}</h5>
+                                            </div>
+                                            <div className="pl-[1.125rem]">
+                                                <p className="text-slate-500 font-light text-sm leading-relaxed text-left">{item.desc}</p>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+
+                            {/* Right: Visual (Desktop Only) */}
+                            <div className="hidden xl:block lg:col-span-12 xl:col-span-5 relative">
+                                <div className="relative group">
+                                    <div className="relative rounded-[3rem] overflow-hidden shadow-2xl transition-all duration-700">
+                                        <img 
+                                            src={benefitsVisualImg} 
+                                            alt="Visualisation des bénéfices de l'eau adoucie Bricareau" 
+                                            className="w-full h-auto rounded-[3rem] group-hover:scale-105 transition-transform duration-700 opacity-90"
+                                        />
+                                    </div>
+                                    
+                                    {/* Desktop Floating Quote Box */}
+                                    <div className="mt-12 lg:absolute lg:-bottom-12 lg:-left-12 lg:right-12 bg-white rounded-3xl p-8 shadow-xl border border-slate-50 flex items-center gap-6 z-20">
+                                        <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center shrink-0 shadow-lg shadow-blue-200">
+                                            <ShieldCheck className="w-6 h-6 text-white" />
+                                        </div>
+                                        <p className="text-slate-600 text-sm font-light italic leading-snug">
+                                            "Transformez chaque robinet en une source de bien-être pur, libérée des agressions du calcaire."
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </section>
