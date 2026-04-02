@@ -303,7 +303,7 @@ const Adoucissement = () => {
                         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-center">
                             
                             {/* Left: Content */}
-                            <div className="lg:col-span-12 xl:col-span-7 space-y-10">
+                            <div className="lg:col-span-12 xl:col-span-5 space-y-10">
                                 <div className="space-y-6">
                                     <span className="inline-block px-4 py-1.5 bg-blue-600 text-white rounded-full text-[10px] font-black uppercase tracking-[0.3em] shadow-lg shadow-blue-200">
                                         L'INGÉNIERIE DU CONFORT
@@ -373,7 +373,7 @@ const Adoucissement = () => {
                             </div>
 
                             {/* Right: Visual (Desktop Only) */}
-                            <div className="hidden xl:block lg:col-span-12 xl:col-span-5 relative">
+                            <div className="hidden xl:block lg:col-span-12 xl:col-span-7 relative">
                                 <div className="relative group">
                                     <div className="relative rounded-[3rem] overflow-hidden shadow-2xl transition-all duration-700">
                                         <img 
@@ -687,7 +687,7 @@ const Adoucissement = () => {
                                 <table className="w-full border-collapse bg-white rounded-3xl overflow-hidden shadow-2xl relative">
                                     <thead>
                                         <tr className="bg-slate-50 relative z-20">
-                                            <th className="p-6 md:p-8 text-left text-blue-900/40 font-black uppercase tracking-widest text-[10px] sticky left-0 bg-slate-50 z-30 border-r border-slate-100 drop-shadow-md lg:drop-shadow-none min-w-[160px] md:min-w-[200px]">
+                                            <th className="p-6 md:p-10 text-left text-blue-900/40 font-black uppercase tracking-widest text-[10px] sticky left-0 bg-slate-50 z-30 border-r border-slate-100 drop-shadow-md lg:drop-shadow-none min-w-[160px] md:min-w-[200px]">
                                                 Solutions
                                             </th>
                                             {[
@@ -732,7 +732,7 @@ const Adoucissement = () => {
                                             { feature: "Espace d'installation", specialized: "Moyen", station: "Compact" }
                                         ].map((row, i) => (
                                             <tr key={i} className="hover:bg-slate-50/50 transition-colors group">
-                                                <td className="p-6 md:p-8 font-medium text-slate-700 bg-white sticky left-0 z-30 border-r border-slate-50 drop-shadow-sm lg:drop-shadow-none text-sm md:text-base">
+                                                <td className="p-6 md:p-10 font-bold text-[#1e3a8a] bg-white sticky left-0 z-30 border-r border-slate-50 drop-shadow-sm lg:drop-shadow-none text-[12px] md:text-sm italic group-hover:text-blue-600 transition-colors">
                                                     {row.feature}
                                                 </td>
                                                 <td 

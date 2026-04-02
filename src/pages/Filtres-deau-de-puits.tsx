@@ -414,20 +414,7 @@ const FiltresPuits = () => {
                             ))}
                         </div>
 
-                        <div className="mt-20 p-8 rounded-[2.5rem] bg-indigo-950 flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl animate-in fade-in slide-in-from-bottom-8">
-                            <div className="flex items-center gap-6">
-                                <div className="w-16 h-16 rounded-2xl bg-blue-600 flex items-center justify-center text-white shadow-xl shadow-blue-500/20">
-                                    <CheckCircle2 className="w-8 h-8" />
-                                </div>
-                                <div className="text-left">
-                                    <h4 className="text-white font-bold text-xl">Vous ne savez pas quel filtre choisir ?</h4>
-                                    <p className="text-indigo-200/60 font-light text-sm">Laissez nos experts d'eau faire un diagnostic de votre eau gratuitement.</p>
-                                </div>
-                            </div>
-                            <Button asChild className="h-14 px-8 rounded-full bg-white text-indigo-950 hover:bg-blue-50 font-black">
-                                <a href="/consultation">Démarrer le diagnostic gratuit</a>
-                            </Button>
-                        </div>
+
                     </div>
                 </section>
 
@@ -475,6 +462,21 @@ const FiltresPuits = () => {
                                     </div>
                                 </div>
                             ))}
+                        </div>
+
+                        <div className="mt-20 p-8 rounded-[2.5rem] bg-indigo-950 flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl animate-in fade-in slide-in-from-bottom-8">
+                            <div className="flex items-center gap-6">
+                                <div className="w-16 h-16 rounded-2xl bg-blue-600 flex items-center justify-center text-white shadow-xl shadow-blue-500/20">
+                                    <CheckCircle2 className="w-8 h-8" />
+                                </div>
+                                <div className="text-left">
+                                    <h4 className="text-white font-bold text-xl">Vous ne savez pas quel filtre choisir ?</h4>
+                                    <p className="text-indigo-200/60 font-light text-sm">Laissez nos experts d'eau faire un diagnostic de votre eau gratuitement.</p>
+                                </div>
+                            </div>
+                            <Button asChild className="h-14 px-8 rounded-full bg-white text-indigo-950 hover:bg-blue-50 font-black">
+                                <a href="/consultation">Démarrer le diagnostic gratuit</a>
+                            </Button>
                         </div>
                     </div>
                 </section>
