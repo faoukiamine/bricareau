@@ -562,8 +562,13 @@ const AdoucisseursEauDePuits = () => {
 
                 {/* 6. Water Testing Section */}
                 <section className="relative lg:h-[800px] flex flex-col lg:flex-row items-stretch overflow-hidden bg-white">
-                    <div className="lg:hidden w-full h-[600px] relative">
-                        <img src={waterTestingImg} alt="Test de dureté" className="w-full h-full object-cover" />
+                    {/* Mobile Image */}
+                    <div className="lg:hidden w-full h-auto relative bg-slate-50">
+                        <img
+                            src={waterTestingImg}
+                            alt="Analyse d'eau à domicile pour détecter le calcaire et le chlore - Service Bricareau"
+                            className="w-full h-auto object-contain"
+                        />
                     </div>
                     <div className="hidden lg:block absolute inset-0 z-0">
                         <img src={waterTestingImg} alt="Test de dureté" className="w-full h-full object-cover" />
@@ -759,7 +764,7 @@ const AdoucisseursEauDePuits = () => {
                     </div>
                 </section>
                             {/* Floating Sticky CTA - Phase III Conversion Focus */}
-                                  <div className="fixed bottom-8 right-8 z-[100] animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-[3s] pointer-events-none">
+                                  <div className="hidden md:block fixed bottom-8 right-8 z-[100] animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-[3s] pointer-events-none">
                                     <div className="pointer-events-auto group/sticky">
                                       <Button
                                         asChild

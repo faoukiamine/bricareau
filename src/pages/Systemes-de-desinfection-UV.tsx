@@ -504,13 +504,13 @@ const DesinfectionUV = () => {
                 {/* 6.Water Testing Section (Redesigned for Mobile) */}
                 <section className="relative lg:h-[800px] flex flex-col lg:flex-row items-stretch overflow-hidden bg-white">
                     {/* Mobile Image */}
-                    <div className="lg:hidden w-full h-[600px] relative">
+                    {/* Mobile Image */}
+                    <div className="lg:hidden w-full h-auto relative bg-slate-50">
                         <img
                             src={waterTestingImg}
-                            alt="Analyse microbiologique de l'eau de puits pour détecter les bactéries - Expertise Bricareau"
-                            className="w-full h-full object-cover"
+                            alt="Analyse d'eau à domicile pour détecter le calcaire et le chlore - Service Bricareau"
+                            className="w-full h-auto object-contain"
                         />
-                        <div className="absolute inset-0 bg-black/20" />
                     </div>
 
                     {/* Desktop Background */}
@@ -845,7 +845,7 @@ const DesinfectionUV = () => {
             </main>
 
             {/* Floating Sticky CTA - Phase III Conversion Focus */}
-            <div className="fixed bottom-8 right-8 z-[100] animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-[3s] pointer-events-none">
+            <div className="hidden md:block fixed bottom-8 right-8 z-[100] animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-[3s] pointer-events-none">
               <div className="pointer-events-auto group/sticky">
                 <Button
                   asChild

@@ -514,7 +514,7 @@ const TestsEauPage = () => {
         </section>
 
         {/* Floating Sticky CTA - Phase III Conversion Focus */}
-            <div className="fixed bottom-8 right-8 z-[100] animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-[3s] pointer-events-none">
+            <div className="hidden md:block fixed bottom-8 right-8 z-[100] animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-[3s] pointer-events-none">
               <div className="pointer-events-auto group/sticky">
                 <Button
                   asChild

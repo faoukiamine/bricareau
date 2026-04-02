@@ -717,24 +717,24 @@ const Adoucissement = () => {
                 {/* 9. Water Testing Section (Redesigned for Mobile) */}
                 <section className="relative lg:h-[800px] flex flex-col lg:flex-row items-stretch overflow-hidden bg-white">
                     {/* Mobile Image */}
-                    <div className="lg:hidden w-full h-[600px] relative">
+                    {/* Mobile Image */}
+                    <div className="lg:hidden w-full relative bg-[#F8FAFC]">
                         <img
-                            src={waterTestingBg}
-                            alt="Analyse d'eau à domicile et test de dureté - Diagnostic expert Bricareau"
-                            className="w-full h-full object-cover"
+                            src={waterTestingImg}
+                            alt="Analyse d'eau à domicile et test de dureté - Bricareau"
+                            className="w-full h-auto object-contain block mx-auto"
                         />
-                        <div className="absolute inset-0 bg-blue-900/20" />
+                        <div className="absolute inset-0 bg-blue-900/5" />
                     </div>
 
                     {/* Desktop Background */}
-                    <div className="hidden lg:block absolute inset-0 z-0">
+                    <div className="hidden lg:block absolute inset-0 z-0 bg-slate-50">
                         <img
-                            src={waterTestingBg}
+                            src={waterTestingImg}
                             alt="Analyse d'eau à domicile et test de dureté"
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-cover opacity-95"
                         />
-                        <div className="absolute inset-0 bg-blue-900/40 lg:bg-gradient-to-r lg:from-blue-900/90 lg:to-blue-600/20 mix-blend-multiply" />
-                        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-white via-white/10 to-transparent" />
+                        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent lg:from-white/95 lg:via-white/70 lg:to-transparent" />
                     </div>
 
                     <div className="container mx-auto px-4 relative z-10 flex items-center py-12 lg:py-0">
@@ -942,7 +942,7 @@ const Adoucissement = () => {
             <Footer />
 
                 {/* Floating Sticky CTA - Phase III Conversion Focus */}
-                      <div className="fixed bottom-8 right-8 z-[100] animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-[3s] pointer-events-none">
+                      <div className="hidden md:block fixed bottom-8 right-8 z-[100] animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-[3s] pointer-events-none">
                         <div className="pointer-events-auto group/sticky">
                           <Button
                             asChild

@@ -155,7 +155,7 @@ const Header = () => {
 
       ],
       promo: {
-        title: "Une eau parfaite commencence par une analyse rigoureuse.",
+        title: "Une eau parfaite commence par une analyse rigoureuse.",
         image: promoImage2,
         link: "/tests-eau"
       }
@@ -884,7 +884,7 @@ const Header = () => {
                           />
                         </div>
                         <div className="p-6 flex-1 flex flex-col justify-center bg-[#0052ff]">
-                          <h3 className="mb-4 text-white">
+                          <h3 className="mb-4 text-white text-lg md:text-xl font-bold leading-tight">
                             {menuItem.promo.title}
                           </h3>
                           <a
