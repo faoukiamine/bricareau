@@ -179,7 +179,7 @@ const FiltrationSousEvier = () => {
                                         <span className="font-bold text-[#164E63] block">sans la bouteille.</span>
                                     </h2>
                                     <p className="body-pro-max text-slate-500 max-w-2xl text-justify">
-                                        Pourquoi vous contenter d'une eau moyenne ? Transformez votre robinet en une source de pureté gastronomique. Nos systèmes filtrent l'indésirable pour ne laisser couler que l'essentiel : une eau fraîche, saine et libérée des contraintes du plastique.
+                                        Ne faites plus aucun compromis. Transformez votre robinet en une source de pureté gastronomique. Nos systèmes filtrent l'indésirable pour ne laisser couler que l'essentiel : une eau fraîche, saine et libérée des contraintes du plastique.
                                     </p>
                                 </div>
                             </div>
