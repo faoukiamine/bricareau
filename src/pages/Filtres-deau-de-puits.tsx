@@ -505,7 +505,7 @@ const FiltresPuits = () => {
 
                         <div className="grid grid-cols-1 lg:grid-cols-12 gap-24 items-center">
                             {/* Card Stack Side (Left - Interactive) */}
-                            <div className="lg:col-span-7 relative h-[450px] md:h-[600px] lg:h-[700px] flex items-center justify-center mb-16 lg:mb-0 -mx-6 lg:mx-0">
+                            <div className="lg:col-span-7 relative h-[450px] md:h-[600px] lg:h-[700px] flex items-center justify-center mt-12 lg:mt-0 mb-16 lg:mb-0 -mx-6 lg:mx-0">
                                 <div className="relative w-full lg:max-w-[450px] aspect-square md:aspect-video lg:aspect-[3/4] group">
 
                                     {cardStack.map((cardIdx, position) => {

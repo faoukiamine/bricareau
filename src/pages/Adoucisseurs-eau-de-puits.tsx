@@ -337,15 +337,15 @@ const AdoucisseursEauDePuits = () => {
                 {/* 2.5 Diagnostic Branding Section */}
                 <section className="py-24 bg-slate-50 relative overflow-hidden">
                     <div className="container mx-auto px-6">
-                        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+                        <div className="flex flex-col md:flex-row justify-between items-start mb-16 gap-8">
                             <div className="max-w-3xl">
                                 <span className="inline-block px-4 py-1 bg-red-600/10 text-red-600 rounded-full text-[10px] font-black tracking-widest mb-4">VOTRE PUITS VOUS PARLE</span>
-                                <h2 className="heading-pro-max">
+                                <h2 className="heading-pro-max text-left">
                                     <span className="italic font-light text-blue-600 block">Identifiez les signes de</span>
                                     <span className="font-bold text-[#1e3a8a] block">la dureté extrême.</span>
                                 </h2>
                             </div>
-                            <p className="body-pro-max max-w-sm text-slate-500 italic border-l-2 border-red-500 pl-6">Le calcaire de puits est plus agressif. Ne le laissez pas ronger la valeur de votre investissement.</p>
+                            <p className="body-pro-max max-w-sm text-slate-500 italic border-l-2 border-red-500 pl-6 text-left">Le calcaire de puits est plus agressif. Ne le laissez pas ronger la valeur de votre investissement.</p>
                         </div>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -355,7 +355,7 @@ const AdoucisseursEauDePuits = () => {
                                 { problem: "Vaisselle Voilée", cause: "Dépôts minéraux", solution: "Éclat Crystal", color: "bg-cyan-400", img: cloudyGlassImg },
                                 { problem: "Chauffe-eau Entartré", cause: "Calcaire", solution: "Efficacité Énergétique", color: "bg-orange-600", img: brokenHeaterImg },
                                 { problem: "Taches de Rouille", cause: "Fer ferreux", solution: "Iron Fighter Technology", color: "bg-amber-700", img: ironStainImg },
-                                { problem: "Linge Rêche", cause: "Frottement minéral", solution: "Soin des Textiles", color: "bg-indigo-500", img: residentialSoftenerAsset }
+                                { problem: "Linge Rêche", cause: "Frottement minéral", solution: "Soin des Textiles", color: "bg-indigo-500", img: "/302731406_443870381116589_3770801709209607894_n.jpg" }
                             ].map((s, i) => (
                                 <div 
                                     key={i} 
@@ -420,58 +420,43 @@ const AdoucisseursEauDePuits = () => {
                             ))}
                         </div>
 
-                        {/* Mobile/Tablet Carousel (under lg) */}
-                        <div className="lg:hidden relative">
-                            <Carousel
-                                opts={{
-                                    align: "start",
-                                    loop: true
-                                }}
-                                className="w-full"
-                            >
-                                <CarouselContent className="-ml-4 pb-12">
-                                    {products.map((p, i) => (
-                                        <CarouselItem key={i} className="pl-4 md:basis-1/2">
-                                            <div 
-                                                className="group bg-white rounded-[2.5rem] overflow-hidden border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col h-full cursor-pointer" 
-                                                onClick={() => navigate(p.path || "/contact")}
-                                            >
-                                                <div className="relative h-64 overflow-hidden bg-slate-50/50 flex items-center justify-center p-8">
-                                                    {p.isRecommended && (
-                                                        <div className="absolute top-4 right-4 z-10">
-                                                            <span className="inline-block px-3 py-1 bg-blue-600 text-white rounded-full text-[8px] font-black uppercase tracking-widest shadow-lg">
-                                                                RECOMMANDÉ
-                                                            </span>
-                                                        </div>
-                                                    )}
-                                                    <img 
-                                                        src={p.image} 
-                                                        alt={p.name} 
-                                                        className="max-h-full object-contain group-hover:scale-105 transition-transform duration-700 mix-blend-multiply" 
-                                                    />
-                                                </div>
-                                                <div className="p-8 space-y-4 flex flex-col flex-grow border-t border-transparent group-hover:border-blue-600 transition-all">
-                                                    <h3 className="text-xl font-bold text-[#1e3a8a] text-center leading-tight whitespace-pre-line">
-                                                        {p.displayName || p.name}
-                                                    </h3>
-                                                    <p className="text-slate-500 text-xs leading-relaxed text-center italic font-light flex-grow">
-                                                        {p.desc}
-                                                    </p>
-                                                    <div className="pt-4 flex items-center justify-center">
-                                                        <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all">
-                                                            <ArrowRight className="h-5 w-5" />
-                                                        </div>
-                                                    </div>
-                                                </div>
+                        {/* Mobile/Tablet Grid (under lg) */}
+                        <div className="lg:hidden grid grid-cols-1 md:grid-cols-2 gap-8">
+                            {products.map((p, i) => (
+                                <div 
+                                    key={i}
+                                    className="group bg-white rounded-[2.5rem] overflow-hidden border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col h-full cursor-pointer" 
+                                    onClick={() => navigate(p.path || "/contact")}
+                                >
+                                    <div className="relative h-64 overflow-hidden bg-slate-50/50 flex items-center justify-center p-8">
+                                        {p.isRecommended && (
+                                            <div className="absolute top-4 right-4 z-10">
+                                                <span className="inline-block px-3 py-1 bg-blue-600 text-white rounded-full text-[8px] font-black uppercase tracking-widest shadow-lg">
+                                                    RECOMMANDÉ
+                                                </span>
                                             </div>
-                                        </CarouselItem>
-                                    ))}
-                                </CarouselContent>
-                                <div className="flex items-center justify-center gap-4 mt-4">
-                                    <CarouselPrevious className="static translate-y-0 h-10 w-10 border-blue-100 text-blue-600 hover:bg-blue-600 hover:text-white" />
-                                    <CarouselNext className="static translate-y-0 h-10 w-10 border-blue-100 text-blue-600 hover:bg-blue-600 hover:text-white" />
+                                        )}
+                                        <img 
+                                            src={p.image} 
+                                            alt={p.name} 
+                                            className="max-h-full object-contain group-hover:scale-105 transition-transform duration-700 mix-blend-multiply" 
+                                        />
+                                    </div>
+                                    <div className="p-8 space-y-4 flex flex-col flex-grow border-t border-transparent group-hover:border-blue-600 transition-all">
+                                        <h3 className="text-xl font-bold text-[#1e3a8a] text-center leading-tight whitespace-pre-line">
+                                            {p.displayName || p.name}
+                                        </h3>
+                                        <p className="text-slate-500 text-xs leading-relaxed text-center italic font-light flex-grow">
+                                            {p.desc}
+                                        </p>
+                                        <div className="pt-4 flex items-center justify-center">
+                                            <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                                                <ArrowRight className="h-5 w-5" />
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </Carousel>
+                            ))}
                         </div>
                     </div>
                 </section>
@@ -628,23 +613,62 @@ const AdoucisseursEauDePuits = () => {
                                 Optimisez votre expérience de traitement d'eau avec nos solutions complémentaires.
                             </p>
                         </div>
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        {/* Desktop Grid (lg+) */}
+                        <div className="hidden lg:grid grid-cols-3 gap-8">
                             {[
                                 { name: "Filtration spécialisée", desc: "Ciblez fer, tanins, soufre.", img: specialFiltersImg, link: "/Filtres-deau" },
                                 { name: "Désinfection UV", desc: "Stérilisation absolue.", img: uvSystemImg2, link: "/systemes-de-desinfection-UV" },
                                 { name: "Stations d'eau potable", desc: "Qualité minérale à l'évier.", img: drinkingWaterImg, link: "/systeme-de-filtration-deau-potable" }
                             ].map((prod, i) => (
-                                <div key={i} className="group bg-white rounded-[2.5rem] overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 flex flex-col h-full cursor-pointer" onClick={() => navigate(prod.link)}>
-                                    <div className="relative h-64 overflow-hidden bg-slate-50/50 flex items-center justify-center p-10">
-                                        <img src={prod.img} alt={prod.name} className="max-h-full object-contain mix-blend-multiply" />
+                                <div key={i} className="group bg-white rounded-3xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full cursor-pointer" onClick={() => navigate(prod.link)}>
+                                    <div className="relative h-80 overflow-hidden bg-slate-50 flex items-center justify-center p-12">
+                                        <img src={prod.img} alt={`${prod.name} - Solution Bricareau`} className="max-h-full object-contain group-hover:scale-110 transition-transform duration-700 mix-blend-multiply" />
                                     </div>
-                                    <div className="p-8 space-y-4 flex flex-col flex-grow border-t border-slate-50 group-hover:border-blue-600 transition-all">
-                                        <h3 className="text-xl font-bold text-[#1e3a8a] text-center">{prod.name}</h3>
-                                        <p className="text-slate-500 text-sm leading-relaxed text-center italic font-light">{prod.desc}</p>
-                                        <div className="pt-4 flex justify-end"><div className="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center group-hover:bg-blue-600 transition-all text-blue-600 group-hover:text-white border border-blue-600/5 group-hover:border-transparent shadow-sm"><ArrowRight className="h-5 w-5" /></div></div>
+                                    <div className="p-8 space-y-4 flex flex-col flex-grow border-t-2 border-transparent group-hover:border-blue-600 transition-colors">
+                                        <h3 className="card-title group-hover:text-blue-600 transition-colors">{prod.name}</h3>
+                                        <p className="body-pro-max text-slate-500 flex-grow">{prod.desc}</p>
+                                        <div className="self-end">
+                                            <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                                                <ArrowRight className="h-5 w-5" />
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             ))}
+                        </div>
+
+                        {/* Mobile/Tablet Carousel (under lg) */}
+                        <div className="lg:hidden">
+                            <Carousel
+                                opts={{
+                                    align: "start",
+                                    loop: false
+                                }}
+                                className="w-full"
+                            >
+                                <CarouselContent className="-ml-4 pb-8">
+                                    {[
+                                        { name: "Filtration spécialisée", desc: "Ciblez fer, tanins, soufre.", img: specialFiltersImg, link: "/Filtres-deau" },
+                                        { name: "Désinfection UV", desc: "Stérilisation absolue.", img: uvSystemImg2, link: "/systemes-de-desinfection-UV" },
+                                        { name: "Stations d'eau potable", desc: "Qualité minérale à l'évier.", img: drinkingWaterImg, link: "/systeme-de-filtration-deau-potable" }
+                                    ].map((prod, i) => (
+                                        <CarouselItem key={i} className="pl-4 basis-[80%] md:basis-[45%]">
+                                            <div className="group bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-sm flex flex-col h-full cursor-pointer" onClick={() => navigate(prod.link)}>
+                                                <div className="relative h-64 overflow-hidden bg-slate-50 flex items-center justify-center p-8">
+                                                    <img src={prod.img} alt={prod.name} className="max-h-full object-contain group-hover:scale-105 transition-transform duration-700 mix-blend-multiply" />
+                                                </div>
+                                                <div className="p-8 space-y-4 flex flex-col flex-grow border-t-2 border-transparent transition-all">
+                                                    <h3 className="card-title text-[#1e3a8a]">{prod.name}</h3>
+                                                    <p className="body-pro-max text-slate-500 flex-grow">{prod.desc}</p>
+                                                    <div className="self-end">
+                                                        <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-blue-600"><ArrowRight className="h-5 w-5" /></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </CarouselItem>
+                                    ))}
+                                </CarouselContent>
+                            </Carousel>
                         </div>
                     </div>
                 </section>

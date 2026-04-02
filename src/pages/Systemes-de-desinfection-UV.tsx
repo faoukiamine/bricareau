@@ -51,6 +51,11 @@ import {
 import TestimonialsSection from "@/components/TestimonialsSection";
 import ConsultationFormSection from "@/components/ConsultationFormSection";
 import { cn } from "@/lib/utils";
+import {
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+} from "@/components/ui/carousel";
 
 import heroImg from "@/assets/african-girl-stands-kitchen-drinks-water.jpg";
 import uvSystemImg2 from "@/assets/VH200-F10-265x300.jpg";
@@ -597,7 +602,8 @@ const DesinfectionUV = () => {
                             </p>
                         </div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        {/* Desktop Grid (lg+) */}
+                        <div className="hidden lg:grid grid-cols-3 gap-8">
                             {[
                                 {
                                     name: "Systèmes de filtration d'eau spécialisés",
@@ -617,7 +623,6 @@ const DesinfectionUV = () => {
                                     img: drinkingWaterImg,
                                     link: "/systeme-de-filtration-deau-potable"
                                 }
-
                             ].map((prod, i) => (
                                 <div
                                     key={i}
@@ -627,29 +632,77 @@ const DesinfectionUV = () => {
                                     <div className="relative h-80 overflow-hidden bg-slate-50 flex items-center justify-center p-12">
                                         <img
                                             src={prod.img}
-                                            alt={`${prod.name} - Solution Bricareau pour une eau pure et sans calcaire partout`}
+                                            alt={`${prod.name} - Solution Bricareau`}
                                             className="max-h-full object-contain group-hover:scale-110 transition-transform duration-700 mix-blend-multiply"
                                         />
                                     </div>
                                     <div className="p-8 space-y-4 flex flex-col flex-grow border-t-2 border-transparent group-hover:border-blue-600 transition-colors">
-                                        <h3
-                                            className="card-title group-hover:text-blue-600 transition-colors text-center"
-                                        >
-                                            {prod.name}
-                                        </h3>
-                                        <p className="body-pro-max text-slate-500 flex-grow text-left lg:text-justify">
-                                            {prod.desc}
-                                        </p>
-                                        <div
-                                            className="inline-flex items-center gap-2 text-blue-600 font-bold text-xs tracking-widest uppercase mt-4 group-hover:underline self-end"
-                                            style={{}}
-                                        >
-                                            <span></span>
+                                        <h3 className="card-title group-hover:text-blue-600 transition-colors text-center">{prod.name}</h3>
+                                        <p className="body-pro-max text-slate-500 flex-grow text-left lg:text-justify">{prod.desc}</p>
+                                        <div className="inline-flex items-center gap-2 text-blue-600 font-bold text-xs tracking-widest uppercase mt-4 group-hover:underline self-end">
                                             <ArrowRight className="h-6 w-6 transform group-hover:translate-x-1 transition-transform" />
                                         </div>
                                     </div>
                                 </div>
                             ))}
+                        </div>
+
+                        {/* Mobile/Tablet Carousel (under lg) */}
+                        <div className="lg:hidden">
+                            <Carousel
+                                opts={{
+                                    align: "start",
+                                    loop: false
+                                }}
+                                className="w-full"
+                            >
+                                <CarouselContent className="-ml-4 pb-8">
+                                    {[
+                                        {
+                                            name: "Systèmes de filtration d'eau spécialisés",
+                                            desc: "Nos filtres spécialisés sont conçus pour cibler et éliminer efficacement les contaminants spécifiques.",
+                                            img: specialFiltersImg,
+                                            link: "/Filtres-deau"
+                                        },
+                                        {
+                                            name: "Adoucisseurs d'eau",
+                                            desc: "Éliminez le calcaire pour une peau douce et un linge éclatant.",
+                                            img: waterSoftenerImg,
+                                            link: "/adoucisseurs-eau-de-puits"
+                                        },
+                                        {
+                                            name: "Stations d'eau potable",
+                                            desc: "Une eau de qualité minérale directement à votre évier.",
+                                            img: drinkingWaterImg,
+                                            link: "/systeme-de-filtration-deau-potable"
+                                        }
+                                    ].map((prod, i) => (
+                                        <CarouselItem key={i} className="pl-4 basis-[80%] md:basis-[45%]">
+                                            <div
+                                                className="group bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-sm flex flex-col h-full cursor-pointer"
+                                                onClick={() => window.location.href = prod.link}
+                                            >
+                                                <div className="relative h-64 overflow-hidden bg-slate-50 flex items-center justify-center p-8">
+                                                    <img
+                                                        src={prod.img}
+                                                        alt={prod.name}
+                                                        className="max-h-full object-contain mix-blend-multiply"
+                                                    />
+                                                </div>
+                                                <div className="p-8 space-y-4 flex flex-col flex-grow border-t-2 border-transparent transition-all">
+                                                    <h3 className="card-title text-[#1e3a8a]">{prod.name}</h3>
+                                                    <p className="body-pro-max text-slate-500 flex-grow">{prod.desc}</p>
+                                                    <div className="self-end">
+                                                        <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-blue-600">
+                                                            <ArrowRight className="h-5 w-5" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </CarouselItem>
+                                    ))}
+                                </CarouselContent>
+                            </Carousel>
                         </div>
                     </div>
                 </section>
