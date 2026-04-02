@@ -60,6 +60,7 @@ import { heroImg as plombVieillesMaisonsImg } from "./Blog pages/Le-plomb-dans-l
 import { heroImg as eauVilleFiltreeImg } from "./Blog pages/Pourquoi-meme-leau-de-ville-a-besoin-detre-filtree";
 import womandrinkingwaterImg from "@/assets/25716.jpg";
 import ourteamstudyyourwaterImg from "@/assets/10271.jpg";
+import springWaterImg from "@/assets/pure-spring-water.png";
 
 const WaterFilterIcon = ({ className }: { className?: string }) => (
     <div 
@@ -158,72 +159,108 @@ const FiltrationSousEvier = () => {
 
                 />
 
-                {/* 2. La Pureté Invisible - High-Impact Bento Grid */}
-                <section className="py-24 lg:py-32 bg-slate-50/30 relative overflow-hidden">
-                    {/* Abstract Pure Water Background */}
-                    <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_30%,_rgba(8,145,178,0.05)_0%,_transparent_50%)] pointer-events-none" />
-                    
-                    <div className="container mx-auto px-6 relative z-10">
-                        <div className="max-w-4xl mx-auto text-center mb-24">
-                            <span className="inline-block px-4 py-1.5 bg-cyan-600/10 text-cyan-700 rounded-full text-[10px] font-black uppercase tracking-[0.3em] mb-8">
-                                OPTIMISATION DU ROBINET
-                            </span>
-                             <h2 className="mb-8 heading-pro-max text-center">
-                                <span className="italic font-light text-[#0891B2] block">L'eau de source,</span>
-                                <span className="font-bold text-[#164E63] block text-center">sans la bouteille.</span>
-                            </h2>
-                            <p className="body-pro-max text-slate-500 text-center mx-auto max-w-2xl">
-                                Pourquoi vous contenter d'une eau moyenne ? Nos filtres sous évier transforment votre robinet standard en une source de pureté gastronomique, éliminant l'indésirable pour ne laisser que l'essentiel.
-                            </p>
-                        </div>
+                {/* 2. L'EAU DE SOURCE, SANS LA BOUTEILLE - Editorial Impact Redesign */}
+                <section className="py-24 lg:py-40 bg-white relative overflow-hidden">
+                    {/* Immersive Background Decor */}
+                    <div className="absolute top-0 right-0 w-1/3 h-full bg-slate-50/50 -skew-x-12 translate-x-1/4 pointer-events-none" />
+                    <div className="absolute bottom-0 left-0 w-64 h-64 bg-cyan-50/30 rounded-full blur-[100px] -translate-x-1/2 pointer-events-none" />
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                            {[
-                                { 
-                                    title: "Goût & Odeur", 
-                                    benefit: "Élimination Chlore", 
-                                    desc: "Dites adieu aux saveurs chimiques. Retrouvez l'arôme pur de vos cafés, thés et bouillons sans l'arrière-goût de chlore.",
-                                    icon: <Droplets className="w-6 h-6 text-cyan-600" />,
-                                    badge: "Gastronomique"
-                                },
-                                { 
-                                    title: "Protection Plomb", 
-                                    benefit: "Filtre Sédiments", 
-                                    desc: "Une barrière impénétrable contre les résidus métalliques et le plomb des anciennes canalisations pour la sécurité de vos enfants.",
-                                    icon: <ShieldCheck className="w-6 h-6 text-emerald-600" />,
-                                    badge: "Santé Famille"
-                                },
-                                { 
-                                    title: "Zéro Bactérie", 
-                                    benefit: "Ultrafiltration", 
-                                    desc: "Notre membrane 0.01 micron bloque physiquement 99.9% des micro-organismes, sans aucun produit chimique ajouté.",
-                                    icon: <Microscope className="w-6 h-6 text-blue-600" />,
-                                    badge: "Bio-Pureté"
-                                },
-                                { 
-                                    title: "Éco-Impact", 
-                                    benefit: "3000L par Filtre", 
-                                    desc: "Remplacez jusqu'à 2000 bouteilles plastiques par an. Une solution durable pour votre portefeuille et pour la planète.",
-                                    icon: <Leaf className="w-6 h-6 text-emerald-500" />,
-                                    badge: "Planète"
-                                }
-                            ].map((item, idx) => (
-                                <div key={idx} className="group relative bg-white rounded-[2.5rem] p-8 border border-slate-100 hover:shadow-[0_40px_80px_-20px_rgba(8,145,178,0.12)] transition-all duration-700 hover:-translate-y-2 overflow-hidden flex flex-col items-center text-center">
-                                    <div className="w-16 h-16 bg-slate-50 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 group-hover:bg-cyan-50 transition-all duration-500 shadow-sm border border-slate-100">
-                                        {item.icon}
-                                    </div>
-                                    <div className="space-y-4 flex-grow">
-                                        <div className="space-y-1">
-                                            <span className="text-[10px] font-black text-cyan-600 uppercase tracking-widest block">{item.benefit}</span>
-                                            <h3 className="text-xl font-bold text-[#164E63]">{item.title}</h3>
+                    <div className="container mx-auto px-6 relative z-10">
+                        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-x-24 lg:gap-y-8 items-start">
+                            
+                            {/* 1. Header Column (Mobile: 1st, Desktop: Top Right) */}
+                            <div className="lg:col-span-7 lg:col-start-6 space-y-8">
+                                <div className="space-y-8">
+                                    <span className="inline-block px-4 py-1.5 bg-cyan-600/10 text-cyan-700 rounded-full text-[10px] font-black uppercase tracking-[0.3em]">
+                                        OPTIMISATION DU ROBINET
+                                    </span>
+                                    <h2 className="heading-pro-max text-left !leading-[1.1]">
+                                        <span className="italic font-light text-[#0891B2] block">L'eau de source,</span>
+                                        <span className="font-bold text-[#164E63] block">sans la bouteille.</span>
+                                    </h2>
+                                    <p className="body-pro-max text-slate-500 max-w-2xl text-justify">
+                                        Pourquoi vous contenter d'une eau moyenne ? Transformez votre robinet en une source de pureté gastronomique. Nos systèmes filtrent l'indésirable pour ne laisser couler que l'essentiel : une eau fraîche, saine et libérée des contraintes du plastique.
+                                    </p>
+                                </div>
+                            </div>
+
+                            {/* 2. Image Column (Mobile: 2nd, Desktop: Spanning Left) */}
+                            <div className="lg:col-span-5 lg:row-start-1 lg:row-span-2 relative group mt-8 lg:mt-0">
+                                <div className="absolute -inset-4 bg-slate-100 rounded-[4rem] group-hover:bg-cyan-50 transition-colors duration-700 -rotate-2" />
+                                <div className="relative aspect-[4/5] overflow-hidden rounded-[3rem] shadow-2xl border border-white/50">
+                                    <img 
+                                        src={springWaterImg} 
+                                        alt="Eau de source pure Bricareau" 
+                                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
+                                    />
+                                    {/* Experience Label */}
+                                    <div className="absolute bottom-8 left-8 right-8 p-8 bg-white/70 backdrop-blur-xl rounded-3xl border border-white/20 shadow-xl group-hover:-translate-y-2 transition-all duration-500">
+                                        <div className="flex items-center gap-4">
+                                            <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white shadow-lg shadow-blue-200">
+                                                <Droplets className="w-6 h-6" />
+                                            </div>
+                                            <div>
+                                                <p className="text-[10px] font-black uppercase tracking-widest text-[#164E63]">Pureté Absolue</p>
+                                                <p className="text-lg font-bold text-[#1e3a8a]">Zéro Chlore, 100% Vie</p>
+                                            </div>
                                         </div>
-                                        <p className="text-slate-500 text-sm leading-relaxed font-light">{item.desc}</p>
-                                    </div>
-                                    <div className="mt-8 pt-6 border-t border-slate-50 w-full">
-                                        <span className="px-3 py-1 bg-slate-100/50 rounded-full text-[9px] font-bold text-slate-400 uppercase tracking-widest">{item.badge}</span>
                                     </div>
                                 </div>
-                            ))}
+                            </div>
+
+                            {/* 3. Benefits Column (Mobile: 3rd, Desktop: Bottom Right) */}
+                            <div className="lg:col-span-7 lg:col-start-6 space-y-12 mt-8 lg:mt-0">
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                    {[
+                                        { 
+                                            title: "Gastronomie", 
+                                            benefit: "Goût & Odeur", 
+                                            desc: "Redécouvrez l'arôme pur de vos cafés et thés, libéré des saveurs chimiques de l'eau de ville.",
+                                            icon: <Anvil className="w-5 h-5 text-cyan-600" /> 
+                                        },
+                                        { 
+                                            title: "Protection", 
+                                            benefit: "Zéro Plomb", 
+                                            desc: "Une barrière physique impénétrable contre les résidus métalliques des canalisations anciennes.",
+                                            icon: <ShieldCheck className="w-5 h-5 text-emerald-600" />
+                                        },
+                                        { 
+                                            title: "Science", 
+                                            benefit: "Ultrafiltration", 
+                                            desc: "Technologie 0.01 micron bloquant 99.9% des micro-organismes sans aucun ajout chimique.",
+                                            icon: <Microscope className="w-5 h-5 text-emerald-600" />
+                                        },
+                                        { 
+                                            title: "Écologie", 
+                                            benefit: "Zéro Déchet", 
+                                            desc: "Évitez 2000 bouteilles plastiques par an. Économisez pour vous et préservez pour la planète.",
+                                            icon: <Leaf className="w-5 h-5 text-emerald-500" />
+                                        }
+                                    ].map((item, idx) => (
+                                        <div key={idx} className="group/item flex flex-col gap-4 p-6 bg-slate-50/50 rounded-3xl border border-transparent hover:border-cyan-100 hover:bg-white hover:shadow-xl transition-all duration-500">
+                                            <div className="flex items-center gap-4">
+                                                <div className="w-10 h-10 rounded-xl bg-white flex items-center justify-center shadow-sm border border-slate-100 group-hover/item:scale-110 transition-transform">
+                                                    {item.icon}
+                                                </div>
+                                                <div>
+                                                    <p className="text-[10px] font-black text-cyan-600 uppercase tracking-widest">{item.title}</p>
+                                                    <h3 className="text-lg font-bold text-[#164E63]">{item.benefit}</h3>
+                                                </div>
+                                            </div>
+                                            <p className="text-slate-500 text-sm leading-relaxed font-light text-justify">{item.desc}</p>
+                                        </div>
+                                    ))}
+                                </div>
+
+                                <div className="pt-8">
+                                    <Button asChild size="lg" variant="default" className="w-full sm:w-fit font-bold rounded-full group">
+                                        <a href="tel:18552649328" className="flex items-center gap-3">
+                                            Passer à l'eau pure dès aujourd'hui
+                                            <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                                        </a>
+                                    </Button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
