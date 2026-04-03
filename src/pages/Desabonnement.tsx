@@ -9,6 +9,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
 import { Loader2, CheckCircle2, ChevronRight, ChevronLeft } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { supabase } from "@/lib/supabase";
 
 const UNSUBSCRIBE_REASONS = [
     { id: "too_many", label: "Je reçois trop de courriels" },
@@ -48,14 +49,12 @@ const Desabonnement = () => {
 
         setIsSubmitting(true);
         try {
-            // Simulate API call for unsubscription + survey collection
-            console.log("Unsubscribing:", { 
-                email, 
-                reason, 
-                details: otherDetails 
+            const { error: fnError } = await supabase.functions.invoke('resend-unsubscribe-contact', {
+                body: { email, reason, details: otherDetails }
             });
-            await new Promise(resolve => setTimeout(resolve, 1500));
-            
+
+            if (fnError) throw fnError;
+
             setIsSuccess(true);
             toast.success("Vous avez été désabonné avec succès.");
         } catch (error) {
@@ -93,7 +92,7 @@ const Desabonnement = () => {
                                 <p className="text-gray-600">
                                     Votre demande a été traitée. Vous ne recevrez plus de communications marketing de notre part à l'adresse <strong>{email}</strong>.
                                 </p>
-                                <Button 
+                                <Button
                                     onClick={() => window.location.href = "/"}
                                     className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8"
                                 >
@@ -107,13 +106,13 @@ const Desabonnement = () => {
                                         <Label className="font-bold text-sm block mb-4">Pourquoi souhaitez-vous vous désabonner ?*</Label>
                                         <div className="space-y-3">
                                             {UNSUBSCRIBE_REASONS.map((r) => (
-                                                <div 
+                                                <div
                                                     key={r.id}
                                                     onClick={() => setReason(r.id)}
                                                     className={cn(
                                                         "p-4 rounded-xl border-2 cursor-pointer transition-all hover:bg-white flex items-center gap-3",
-                                                        reason === r.id 
-                                                            ? "border-blue-600 bg-white" 
+                                                        reason === r.id
+                                                            ? "border-blue-600 bg-white"
                                                             : "border-transparent bg-white/50"
                                                     )}
                                                 >
@@ -134,7 +133,7 @@ const Desabonnement = () => {
                                         {reason === "other" && (
                                             <div className="space-y-2 animate-in fade-in slide-in-from-top-2 duration-300 mt-4">
                                                 <Label htmlFor="details" className="text-xs font-bold text-gray-500">Précisez votre raison</Label>
-                                                <Textarea 
+                                                <Textarea
                                                     id="details"
                                                     placeholder="Dites-nous en plus..."
                                                     value={otherDetails}
@@ -144,8 +143,8 @@ const Desabonnement = () => {
                                             </div>
                                         )}
 
-                                        <Button 
-                                            type="submit" 
+                                        <Button
+                                            type="submit"
                                             className="w-full h-12 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-bold transition-all group"
                                         >
                                             Suivant <ChevronRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -156,7 +155,7 @@ const Desabonnement = () => {
                                         <div className="space-y-2">
                                             <Label htmlFor="email" className="font-bold text-sm">Confirmez votre adresse courriel*</Label>
                                             <p className="text-xs text-gray-500 mb-2">Entrez l'adresse à laquelle vous recevez nos courriels pour finaliser le désabonnement.</p>
-                                            <Input 
+                                            <Input
                                                 id="email"
                                                 type="email"
                                                 placeholder="votre@email.com"
@@ -169,7 +168,7 @@ const Desabonnement = () => {
                                         </div>
 
                                         <div className="flex gap-4">
-                                            <Button 
+                                            <Button
                                                 type="button"
                                                 variant="outline"
                                                 onClick={() => setStep(1)}
@@ -177,8 +176,8 @@ const Desabonnement = () => {
                                             >
                                                 <ChevronLeft className="mr-2 w-4 h-4" /> Retour
                                             </Button>
-                                            <Button 
-                                                type="submit" 
+                                            <Button
+                                                type="submit"
                                                 disabled={isSubmitting}
                                                 className="flex-1 h-12 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-bold transition-all"
                                             >
