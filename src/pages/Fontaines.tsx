@@ -280,42 +280,68 @@ const Fontaines = () => {
         <div className="min-h-screen bg-white">
             <Header />
             <main>
-                {/* 1. HERO SECTION PRO MAX - Phase I Modernization */}
-                <section className="relative h-[800px] flex flex-col items-center justify-center overflow-hidden bg-white group">
-                    {/* Breadcrumbs Positioning - Aligned with site standard */}
-                    <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none hidden lg:block animate-in fade-in slide-in-from-top-4 duration-700">
+                {/* 1. IMMERSIVE HERO - INDEX STYLE */}
+                <section className="relative lg:h-[800px] flex flex-col overflow-hidden bg-white lg:pt-32">
+                    {/* Image Section - Stacked on Mobile/Tablet Portrait, Overlay on Desktop */}
+                    <div className="relative lg:absolute lg:inset-0 w-full h-[400px] md:h-[550px] lg:h-full z-0 overflow-hidden">
+                        <div className="absolute inset-0 z-10 bg-gradient-to-b from-transparent via-[#f0f9ff]/20 to-white lg:bg-gradient-to-r lg:from-[#f0f9ff] lg:via-[#f0f9ff]/40 35% lg:to-transparent" />
+                        <img 
+                            src={heroFountains} 
+                            alt="Fontaines d'eau Bricareau"
+                            className="w-full h-full object-cover object-center scale-105 group-hover:scale-100 transition-transform duration-[3s] ease-out"
+                        />
+                        {/* Floating Trust Row - Mobile/Tablet Only */}
+                        <div className="absolute bottom-4 left-4 right-4 z-20 lg:hidden">
+                            <div className="grid grid-cols-3 gap-2">
+                                {[
+                                    { label: "Technologie", val: "Filtration Double", icon: <Zap className="w-4 h-4" /> },
+                                    { label: "Pureté", val: "Certifié NSF/ANSI", icon: <Award className="w-4 h-4" /> },
+                                    { label: "Éco-Conçu", val: "Zéro Bouteilles", icon: <Leaf className="w-4 h-4" /> }
+                                ].map((item, i) => (
+                                    <div key={i} className="bg-white/90 backdrop-blur-md p-2 rounded-xl border border-white/50 shadow-lg flex flex-col items-center text-center gap-1.5 transition-all duration-500">
+                                        <div className="w-7 h-7 bg-blue-600/10 rounded-full flex items-center justify-center text-blue-600 shrink-0">
+                                            {item.icon}
+                                        </div>
+                                        <div className="min-w-0">
+                                            <p className="text-[7.5px] font-black text-slate-400 uppercase tracking-tight leading-none mb-1">{item.label}</p>
+                                            <p className="text-[9px] font-bold text-[#1e3a8a] leading-tight break-words">{item.val}</p>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Breadcrumbs - Hidden on Mobile, Absolute on Desktop */}
+                    <div className="absolute top-[120px] left-0 right-0 z-30 pointer-events-none hidden lg:block">
                         <div className="container mx-auto px-6 pointer-events-auto">
                             <GlobalBreadcrumbs variant="dark" />
                         </div>
                     </div>
 
-                    {/* Background Layer with Signature Filter */}
-                    <div className="absolute inset-0 w-full h-full overflow-hidden">
-                        <img
-                            src={heroFountains}
-                            alt="Fontaines d'eau Bricareau"
-                            className="w-full h-full object-cover object-center scale-105 group-hover:scale-100 transition-transform duration-[3s] ease-out"
-                        />
-                        {/* Signature Bricareau Gradient Filter */}
-                        <div className="absolute inset-0 z-10 bg-gradient-to-r from-[#f0f9ff] via-[#f0f9ff]/40 35% to-transparent" />
-                        <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white to-transparent" />
-                    </div>
+                    {/* Content Section */}
+                    <div className="container relative z-10 mx-auto px-6 py-12 lg:py-0 h-full flex items-center">
+                        <div className="max-w-4xl text-left space-y-8 animate-in fade-in slide-in-from-left duration-1000">
+                            {/* status button */}
+                            <div className="hidden lg:flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-600 text-[10px] font-black uppercase tracking-[0.2em] w-fit">
+                                <span className="relative flex h-2 w-2">
+                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                                    <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+                                </span>
+                                Technologie & Pureté
+                            </div>
 
-                    {/* Content Layer */}
-                    <div className="container relative z-20 mx-auto px-6 h-full flex flex-col items-start justify-center">
-                        <div className="mt-12 max-w-3xl space-y-8 animate-in fade-in slide-in-from-bottom-12 duration-[1.2s]">
                             <h1 
-                                className="leading-tight lg:leading-[55px] tracking-tighter text-left mb-8 max-w-4xl"
+                                className="leading-tight lg:leading-[55px] tracking-tighter text-left max-w-4xl"
                                 style={{
                                     fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
                                 }}
                             >
-                                <span className="italic font-light text-[#2563eb] text-[35px] lg:text-[50px] block lg:inline-block">Fontaines d'eau,</span>
-                                <br className="hidden lg:block" />
-                                <span className="font-bold text-[#1e3a8a] text-[35px] lg:text-[50px] block lg:inline-block">l'art de l'eau pure.</span>
+                                <span className="italic font-light text-[#2563eb] text-[32px] md:text-[46px] lg:text-[50px] block">Fontaines d'eau,</span>
+                                <span className="font-bold text-[#1e3a8a] text-[32px] md:text-[46px] lg:text-[50px] block">l'art de l'eau pure.</span>
                             </h1>
 
-                            <p className="body-pro-max text-slate-800 lg:text-slate-600 max-w-xl text-left font-medium lg:font-light leading-relaxed">
+                            <p className="body-pro-max text-slate-600 max-w-xl text-left">
                                 Élevez votre expérience d'hydratation avec nos refroidisseurs d'eau haute performance. Un design élégant allié à une pureté absolue pour votre maison ou votre bureau.
                             </p>
 
@@ -334,21 +360,21 @@ const Fontaines = () => {
                                 </Button>
                             </div>
 
-                            {/* Aligned Trust Row Section */}
-                            <div className="pt-12 z-20 animate-in fade-in slide-in-from-left-12 duration-1000 delay-700 w-full lg:w-auto">
-                                <div className="grid grid-cols-3 lg:flex lg:flex-row gap-2 lg:gap-4 pointer-events-auto">
+                            {/* Aligned Trust Row Section - Desktop Only */}
+                            <div className="pt-8 w-full lg:w-auto hidden lg:block">
+                                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                                     {[
-                                        { label: "Technologie", val: "Filtration Double", icon: <Zap className="w-4 h-4 lg:w-5 lg:h-5" /> },
-                                        { label: "Pureté", val: "Certifié NSF/ANSI", icon: <Award className="w-4 h-4 lg:w-5 lg:h-5" /> },
-                                        { label: "Éco-Conçu", val: "Zéro Bouteilles", icon: <Leaf className="w-4 h-4 lg:w-5 lg:h-5" /> }
+                                        { label: "Technologie", val: "Filtration Double", icon: <Zap className="w-5 h-5" /> },
+                                        { label: "Pureté", val: "Certifié NSF/ANSI", icon: <Award className="w-5 h-5" /> },
+                                        { label: "Éco-Conçu", val: "Zéro Bouteilles", icon: <Leaf className="w-5 h-5" /> }
                                     ].map((item, i) => (
-                                        <div key={i} className="bg-white/90 lg:bg-white/70 backdrop-blur-3xl p-2 lg:p-4 rounded-2xl lg:rounded-full border border-white/50 shadow-2xl shadow-blue-900/10 flex flex-col lg:flex-row items-center text-center lg:text-left gap-2 lg:gap-4 group cursor-default transition-all duration-500 hover:scale-105">
-                                            <div className="w-8 h-8 lg:w-12 lg:h-12 bg-blue-600/10 rounded-full flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all shadow-sm shrink-0">
+                                        <div key={i} className="bg-white/60 backdrop-blur-md p-4 rounded-2xl border border-white/50 shadow-sm flex items-center gap-4 group cursor-default transition-all duration-500 hover:scale-105">
+                                            <div className="w-10 h-10 bg-blue-600/10 rounded-full flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all shadow-sm shrink-0">
                                                 {item.icon}
                                             </div>
                                             <div className="min-w-0">
-                                                <p className="text-[9px] lg:text-[10px] font-black text-slate-500 lg:text-slate-400 uppercase tracking-widest leading-none mb-1">{item.label}</p>
-                                                <p className="text-[10px] lg:text-sm font-bold text-[#1e3a8a] leading-tight">{item.val}</p>
+                                                <p className="text-[9px] font-black text-slate-400 uppercase tracking-widest leading-none mb-1">{item.label}</p>
+                                                <p className="text-sm font-bold text-[#1e3a8a] leading-tight">{item.val}</p>
                                             </div>
                                         </div>
                                     ))}
