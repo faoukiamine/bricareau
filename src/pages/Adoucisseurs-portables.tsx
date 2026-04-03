@@ -37,9 +37,24 @@ import drinkingWaterImg from "@/assets/Solutions d'eau potable.webp";
 import specialFiltersImg from "@/assets/Filtres d'eau spécialisés.webp";
 import missionImg from "@/assets/boire-eau-robinet.jpg";
 import portableSoftenerProdImg from "@/assets/Portable Water Softener.webp";
+import { cn } from "@/lib/utils";
+import rvCampingImg from "@/assets/luxury_rv_camping.png";
+import yachtImg from "@/assets/luxury_yacht.png";
+import cabinImg from "@/assets/modern_cabin.png";
+import waterGlassImg from "@/assets/portable_water_glass.png";
 
 
 const AdoucisseursPortables = () => {
+    const [currentSlide, setCurrentSlide] = React.useState(0);
+    const slides = [rvCampingImg, yachtImg, cabinImg];
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setCurrentSlide((prev) => (prev + 1) % slides.length);
+        }, 5000); // 5 seconds
+        return () => clearInterval(timer);
+    }, [slides.length]);
+
     useEffect(() => {
         document.title = "Adoucisseur d'eau portable | Service d'Échange et Livraison | Bricareau";
         const metaDesc = document.querySelector('meta[name="description"]');
@@ -70,131 +85,136 @@ const AdoucisseursPortables = () => {
                 />
 
 
-            {/* 3. Sections Benefits - Fluid Asymmetrical Editorial Layout */}
-            <section className="py-24 lg:py-32 bg-slate-50 relative overflow-hidden">
-                {/* Background Fluid Elements */}
-                <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-blue-100/40 to-transparent pointer-events-none" />
-                <div className="absolute bottom-0 left-0 w-1/4 h-1/2 bg-[radial-gradient(circle_at_bottom_left,rgba(37,99,235,0.05)_0%,transparent_70%)] pointer-events-none" />
+            {/* 3. Sections Benefits - Ultra-Modern Nomad Portfolio */}
+            <section className="py-24 lg:py-40 bg-white relative overflow-hidden">
+                {/* Decorative Fluid Background */}
+                <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-blue-50/50 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/3 pointer-events-none" />
+                <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-slate-50/50 rounded-full blur-[100px] translate-y-1/3 -translate-x-1/4 pointer-events-none" />
 
-                <div className="container mx-auto px-6">
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 items-start">
+                <div className="container mx-auto px-6 relative z-10">
+                    {/* Centered Premium Header */}
+                    <div className="max-w-4xl mx-auto text-center mb-24">
+                        <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.3em] mb-8">
+                            <Waves className="w-3 h-3" />
+                            L'Expérience Nomade Bricareau
+                        </span>
+                        <h2 className="heading-pro-max text-center mb-8">
+                            <span className="italic font-light text-[#2563eb] block">Une eau parfaite,</span>
+                            <span className="font-bold text-[#1e3a8a] block">kilomètre après kilomètre.</span>
+                        </h2>
+                        <p className="text-slate-500 font-light text-xl leading-relaxed max-w-2xl mx-auto">
+                            Que vous exploriez les routes dans un VR de luxe ou que vous profitiez du calme d'un chalet isolé, nos solutions portables redéfinissent le confort en voyage.
+                        </p>
+                    </div>
+
+                    {/* Premium Bento Portfolio Grid */}
+                    <div className="grid grid-cols-1 md:grid-cols-12 gap-8 h-auto lg:h-[900px]">
                         
-                        {/* Left Content Side: Header & Fact */}
-                        <div className="lg:col-span-5 lg:sticky lg:top-32 h-fit space-y-16">
-                            <div>
-                                <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.2em] mb-8">
-                                    VOS AVANTAGES
-                                </span>
-                                
-                                <h2 className="mb-8 heading-pro-max text-left">
-                                    <span className="italic font-light text-[#2563eb] block">Une eau parfaite,</span>
-                                    <span className="font-bold text-[#1e3a8a] block">kilomètre après kilomètre.</span>
-                                </h2>
-                                <p className="text-slate-500 font-light text-xl leading-relaxed">
-                                    Que vous soyez au camping, au quai ou dans un chalet, ne laissez pas la qualité de l'eau gâcher votre confort. Nos solutions portables vous suivent partout.
+                        {/* Main Feature Card - 100% Nomade (Left, Large) */}
+                        <div className="md:col-span-12 lg:col-span-7 group relative rounded-[3.5rem] overflow-hidden shadow-2xl shadow-blue-900/10 border border-slate-100 transition-all duration-700 hover:-translate-y-2">
+                            {/* Background Images with Multi-Slide Logic */}
+                            <div className="absolute inset-0 w-full h-full">
+                                {slides.map((slide, idx) => (
+                                    <img 
+                                        key={idx}
+                                        src={slide} 
+                                        alt={`Nomade Bricareau Slide ${idx + 1}`}
+                                        className={cn(
+                                            "absolute inset-0 w-full h-full object-cover transition-all duration-1000 ease-in-out",
+                                            currentSlide === idx ? "opacity-100 scale-100 z-0" : "opacity-0 scale-110 -z-10"
+                                        )}
+                                    />
+                                ))}
+                            </div>
+                            {/* Glassmorphic Overlay */}
+                            <div className="absolute inset-0 bg-gradient-to-t from-[#1e3a8a]/90 via-[#1e3a8a]/40 to-transparent" />
+                            
+                            {/* Floating intelligence chip */}
+                            <div className="absolute top-8 left-8 z-20 backdrop-blur-md bg-white/10 border border-white/20 p-6 rounded-[2rem] max-w-[280px] hidden md:block">
+                                <p className="text-white/90 text-sm font-light italic leading-relaxed">
+                                    "L'eau dure des campings endommage les chauffe-eaux de VR en moins de 2 ans."
                                 </p>
                             </div>
 
-                            <div className="relative p-10 bg-white shadow-2xl shadow-blue-900/5 rounded-3xl border border-blue-50/50 group hover:-translate-y-1 transition-transform duration-500 overflow-hidden">
-                                <div className="absolute top-0 right-0 w-24 h-24 bg-blue-50 rounded-full -translate-y-12 translate-x-12 opacity-50" />
-                                <div className="relative z-10">
-                                    <div className="flex items-center gap-3 mb-4">
-                                        <div className="w-6 h-[1px] bg-blue-600" />
-                                        <span className="text-blue-600 font-bold text-xs uppercase tracking-widest">Le saviez-vous ?</span>
+                            {/* Content at Bottom */}
+                            <div className="absolute inset-x-0 bottom-0 p-10 md:p-14 z-20">
+                                <div className="flex flex-col gap-6">
+                                    <div className="w-16 h-16 rounded-2xl bg-white/20 backdrop-blur-xl flex items-center justify-center text-white border border-white/30 mb-2">
+                                        <MapPin className="h-8 w-8" />
                                     </div>
-                                    <p className="text-slate-600 font-light text-lg leading-relaxed italic">
-                                        "L'eau dure des campings endommage les chauffe-eaux de VR en moins de 2 ans. Un adoucisseur est votre meilleure assurance."
-                                    </p>
+                                    <div>
+                                        <span className="text-blue-300 font-bold text-xs uppercase tracking-[0.2em]">Liberté Totale</span>
+                                        <h3 className="text-3xl md:text-4xl font-bold text-white mt-4 mb-6">100% Nomade</h3>
+                                        <p className="text-white/80 font-light text-lg leading-relaxed max-w-lg mb-8">
+                                            Un format ultra-compact et poids plume conçu pour se glisser dans n'importe quelle soute. Emportez la qualité Bricareau partout avec vous.
+                                        </p>
+                                        <div className="flex flex-wrap gap-3">
+                                            {["Poids réduit", "Format valise", "Poignée ergonomique"].map((f, i) => (
+                                                <span key={i} className="px-5 py-2.5 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-white text-sm font-medium">
+                                                    {f}
+                                                </span>
+                                            ))}
+                                        </div>
+                                        {/* Slide Indicators */}
+                                        <div className="flex gap-2 mt-8">
+                                            {slides.map((_, idx) => (
+                                                <div 
+                                                    key={idx} 
+                                                    className={cn(
+                                                        "h-1.5 rounded-full transition-all duration-500",
+                                                        currentSlide === idx ? "w-8 bg-blue-400" : "w-2 bg-white/30"
+                                                    )} 
+                                                />
+                                            ))}
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        {/* Right Content Side: Staggered Benefits Cards */}
-                        <div className="lg:col-span-7 flex flex-col gap-12 lg:gap-32 lg:pt-32">
+                        {/* Right Stacked Column */}
+                        <div className="md:col-span-12 lg:col-span-5 grid grid-cols-1 gap-8">
                             
-                            {/* Card 1: 100% Nomade */}
-                            <div className="group relative lg:translate-x-12">
-                                <div className="absolute -inset-4 bg-white/40 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                                <div className="relative bg-white p-10 md:p-14 rounded-[3rem] shadow-xl shadow-blue-900/5 hover:shadow-2xl hover:shadow-blue-900/10 transition-all duration-700">
-                                    <div className="flex flex-col md:flex-row gap-10 items-start">
-                                        <div className="w-16 h-16 rounded-2xl bg-blue-50 flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all duration-500 shadow-lg shadow-blue-900/5">
-                                            <MapPin className="h-8 w-8" />
-                                        </div>
-                                        <div className="flex-1">
-                                            <div className="mb-6">
-                                                <span className="text-blue-600 font-bold text-xs uppercase tracking-[0.2em]">Conçu pour la route</span>
-                                                <h3 className="card-title mt-2">100% Nomade</h3>
-                                            </div>
-                                            <p className="text-slate-500 font-light text-lg leading-relaxed mb-8">
-                                                Un format ultra-compact qui se range facilement dans une soute de VR ou un coffre de bateau. Poids plume pour une manipulation aisée.
-                                            </p>
-                                            <div className="flex flex-wrap gap-3">
-                                                {["Poids réduit", "Poignée ergonomique", "Format valise"].map((f, i) => (
-                                                    <span key={i} className="text-sm font-medium text-slate-500 flex items-center gap-2 px-4 py-2 bg-slate-50 rounded-full border border-slate-100">
-                                                        <CheckCircle2 className="w-4 h-4 text-blue-500" />
-                                                        {f}
-                                                    </span>
-                                                ))}
-                                            </div>
+                            {/* Card 2: Installation (Top Right) */}
+                            <div className="group relative bg-[#2563eb] rounded-[3rem] overflow-hidden p-10 md:p-12 shadow-2xl shadow-blue-500/20 text-white transition-all duration-700 hover:bg-[#1d4ed8]">
+                                <div className="absolute top-0 right-0 w-48 h-48 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+                                <div className="relative z-10 flex flex-col h-full bg-blue">
+                                    <div className="w-14 h-14 rounded-2xl bg-white/20 flex items-center justify-center mb-8 border border-white/30">
+                                        <Settings className="h-7 w-7 text-white animate-spin-slow" />
+                                    </div>
+                                    <div className="mt-auto">
+                                        <span className="text-blue-100 font-bold text-xs uppercase tracking-[0.2em]">Plug & Play</span>
+                                        <h3 className="text-2xl font-bold text-white mt-3 mb-4">Installation Instantanée</h3>
+                                        <p className="text-blue-50 font-light text-lg leading-relaxed mb-6">
+                                            Connectez-le simplement entre le robinet et votre entrée d'eau. Prêt en moins de 5 minutes.
+                                        </p>
+                                        <div className="flex items-center gap-4 text-blue-100 font-medium">
+                                            <span className="w-8 h-[1px] bg-white/50" />
+                                            <span className="text-sm">Aucun outil requis</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
-                            {/* Card 2: Installation Instantanée */}
-                            <div className="group relative lg:-translate-x-12">
-                                <div className="relative bg-blue-600 p-10 md:p-14 rounded-[3rem] shadow-2xl shadow-blue-900/20 text-white overflow-hidden hover:bg-blue-700 transition-all duration-700">
-                                    <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
-                                    <div className="flex flex-col md:flex-row gap-10 items-start relative z-10">
-                                        <div className="w-16 h-16 rounded-2xl bg-white/20 backdrop-blur-md flex items-center justify-center text-white border border-white/30">
-                                            <Settings className="h-8 w-8 text-white" />
-                                        </div>
-                                        <div className="flex-1">
-                                            <div className="mb-6">
-                                                <span className="text-blue-100 font-bold text-xs uppercase tracking-[0.2em]">Prêt en 5 minutes</span>
-                                                <h3 className="card-title text-white mt-2">Installation Instantanée</h3>
-                                            </div>
-                                            <p className="text-blue-50 font-light text-lg leading-relaxed mb-8">
-                                                Pas besoin de plombier. Connectez-le simplement entre le robinet du camping et votre entrée d'eau. C'est aussi simple que de brancher un tuyau d'arrosage.
-                                            </p>
-                                            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                                                {["Raccords standards", "Sans outils", "Plug & Play"].map((f, i) => (
-                                                    <div key={i} className="flex items-center gap-2 text-sm font-medium text-blue-100">
-                                                        <Check className="w-4 h-4" />
-                                                        {f}
-                                                    </div>
-                                                ))}
-                                            </div>
-                                        </div>
-                                    </div>
+                            {/* Card 3: Protection (Bottom Right) */}
+                            <div className="group relative bg-white rounded-[3rem] overflow-hidden shadow-xl shadow-blue-900/5 hover:shadow-2xl transition-all duration-700 border border-slate-100 flex flex-col">
+                                <div className="relative h-48 md:h-64 overflow-hidden bg-slate-50">
+                                    <img 
+                                        src={waterGlassImg} 
+                                        alt="Pureté de l'eau adoucie Bricareau"
+                                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent" />
                                 </div>
-                            </div>
-
-                            {/* Card 3: Protection Maximale */}
-                            <div className="group relative lg:translate-x-4">
-                                <div className="relative bg-white p-10 md:p-14 rounded-[3rem] shadow-xl shadow-blue-900/5 hover:shadow-2xl transition-all duration-700 border border-slate-100">
-                                    <div className="flex flex-col md:flex-row gap-10 items-start">
-                                        <div className="w-16 h-16 rounded-2xl bg-blue-50 flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all duration-500">
-                                            <Shield className="h-8 w-8" />
-                                        </div>
-                                        <div className="flex-1">
-                                            <div className="mb-6">
-                                                <span className="text-blue-600 font-bold text-xs uppercase tracking-[0.2em]">Préservez vos actifs</span>
-                                                <h3 className="card-title mt-2">Protection Maximale</h3>
-                                            </div>
-                                            <p className="text-slate-500 font-light text-lg leading-relaxed mb-8">
-                                                Élimine le calcium et le magnésium qui obstruent les tuyauteries et réduisent l'efficacité de vos appareils. Prolongez la vie de votre investissement.
-                                            </p>
-                                            <div className="flex flex-wrap gap-4">
-                                                {["Anti-tartre", "Débit constant", "Sans électricité"].map((f, i) => (
-                                                    <div key={i} className="flex items-center gap-2 text-sm font-bold text-blue-600 bg-blue-50/50 px-4 py-2 rounded-full tracking-tighter">
-                                                        <CheckCircle2 className="w-4 h-4" />
-                                                        {f}
-                                                    </div>
-                                                ))}
-                                            </div>
-                                        </div>
+                                <div className="p-10 relative z-10 -mt-12 bg-white rounded-t-[3rem] flex-1 flex flex-col">
+                                    <div className="w-14 h-14 rounded-2xl bg-blue-600 flex items-center justify-center mb-6 shadow-lg shadow-blue-200">
+                                        <Shield className="h-7 w-7 text-white" />
                                     </div>
+                                    <span className="text-blue-600 font-bold text-xs uppercase tracking-[0.2em]">Actifs Préservés</span>
+                                    <h3 className="text-2xl font-bold text-[#1e3a8a] mt-3 mb-4">Protection Maximale</h3>
+                                    <p className="text-slate-500 font-light text-lg leading-relaxed">
+                                        Élimine le calcaire qui réduit l'efficacité de vos tuyauteries et appareils de voyage. Longue vie à votre confort.
+                                    </p>
                                 </div>
                             </div>
 
