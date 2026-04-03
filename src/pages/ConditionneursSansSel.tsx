@@ -49,24 +49,7 @@ import process2 from "@/assets/section-image-and-content-23.jpg";
 import process3 from "@/assets/SERVICES.jpg";
 import process4 from "@/assets/unnamed (2).jpg";
 import helpKitchenImg from "@/assets/help-kitchen.jpg";
-
-const whyChoose = [
-  {
-    icon: HeartPulse,
-    title: "Zéro sodium",
-    description: "Les adoucisseurs à échange d'ions remplacent les minéraux sains par du sodium, ce qui peut impacter votre santé. Notre technologie cristallise le calcaire sans jamais ajouter de sel, offrant une eau parfaite pour les régimes pauvres en sodium."
-  },
-  {
-    icon: Sprout,
-    title: "Zéro rejet d'eau",
-    description: "Contrairement aux adoucisseurs traditionnels, notre système ne gaspille aucune goutte d'eau. Il élimine totalement les rejets de saumure, préservant ainsi l'équilibre de vos fosses septiques et l'environnement."
-  },
-  {
-    icon: ShieldCheck,
-    title: "Zéro tartre",
-    description: "Notre solution neutralise le calcaire avant qu'il ne s'incruste, formant une barrière protectrice dans toute votre plomberie. Vous prolongez la durée de vie de vos chauffe-eaux et électroménagers."
-  }
-];
+import pureWaterImg from "@/assets/pure_water_lifestyle.png";
 
 const faqs = [
   {
@@ -283,25 +266,97 @@ const ConditionneursSansSel = () => {
           </div>
         </section>
 
-        {/* 3. Why Choose Section */}
-        <section className="py-24 bg-white border-t border-slate-100">
-          <div className="container mx-auto px-4">
-            <div className="text-center max-w-3xl mx-auto mb-20">
+        {/* 3. Redesigned Why Choose Section: Biophilic Bento Mosaic */}
+        <section className="py-32 bg-white relative overflow-hidden">
+          {/* Subtle Decorative Elements */}
+          <div className="absolute top-20 left-0 w-64 h-64 bg-blue-50 rounded-full blur-3xl opacity-50" />
+          <div className="absolute bottom-20 right-0 w-96 h-96 bg-green-50 rounded-full blur-3xl opacity-30" />
+
+          <div className="container mx-auto px-4 relative z-10">
+            <div className="max-w-4xl mx-auto text-center mb-24">
               <h2 className="mb-8 heading-pro-max text-center">
-                                <span className="italic font-light text-[#2563eb] block">Pourquoi choisir le</span>
-                                <span className="font-bold text-[#1e3a8a] block">conditionneur d'eau sans sel ?</span>
-                            </h2>
+                <span className="italic font-light text-[#2563eb] block">Pourquoi choisir le</span>
+                <span className="font-bold text-[#1e3a8a] block">conditionneur d'eau sans sel ?</span>
+              </h2>
+              <p className="text-slate-500 font-light text-xl">Une approche holistique : respect de votre corps, de votre maison et de la planète.</p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {whyChoose.map((item, idx) => (
-                <div key={idx} className="p-10 bg-slate-50 rounded-[2.5rem] text-center hover:bg-white hover:shadow-xl transition-all border border-transparent hover:border-slate-100 group">
-                  <div className="w-16 h-16 rounded-2xl bg-blue-600 text-white flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
-                    <item.icon className="w-8 h-8" />
-                  </div>
-                  <h3 className="card-title mb-4">{item.title}</h3>
-                  <p className="text-slate-500 font-light text-sm leading-relaxed">{item.description}</p>
+
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 max-w-7xl mx-auto">
+              {/* Card 1: Health & Purity (Large Hero Card) */}
+              <div className="lg:col-span-12 lg:row-span-4 group relative rounded-[3.5rem] overflow-hidden bg-white shadow-2xl shadow-blue-900/5 transition-all duration-700 hover:-translate-y-2 border border-slate-100 flex flex-col xl:flex-row min-h-[500px]">
+                <div className="w-full xl:w-7/12 relative overflow-hidden h-[300px] xl:h-auto">
+                  <img 
+                    src={pureWaterImg} 
+                    alt="Mode de vie sain et eau pure Bricareau" 
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" 
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-r from-white/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                 </div>
-              ))}
+                
+                <div className="w-full xl:w-5/12 p-12 xl:p-16 flex flex-col justify-center bg-white relative">
+                   <div className="absolute top-0 right-0 p-8 opacity-5">
+                      <HeartPulse className="w-32 h-32 text-blue-600" />
+                   </div>
+                   <div className="w-16 h-16 rounded-2xl bg-blue-100 flex items-center justify-center mb-10 text-blue-600 group-hover:scale-110 transition-transform">
+                      <HeartPulse className="w-8 h-8" />
+                   </div>
+                   <span className="text-blue-600 font-bold text-xs uppercase tracking-[0.3em] mb-4">SANTÉ & BIEN-ÊTRE</span>
+                   <h3 className="text-4xl font-bold text-[#1e3a8a] mb-6 leading-tight">Zéro sodium, 100% minéraux</h3>
+                   <p className="text-slate-500 font-light text-xl leading-relaxed mb-8">
+                     Contrairement au sel qui "vole" les bons minéraux de votre eau, notre technologie conserve le calcium et le magnésium essentiels tout en éliminant son pouvoir incrustant.
+                   </p>
+                   <div className="flex items-center gap-4 text-[#1e3a8a] font-medium pt-8 border-t border-slate-50">
+                      <span className="w-12 h-[1px] bg-blue-600" />
+                      <span>Eau potable parfaite sans additifs chimiques</span>
+                   </div>
+                </div>
+              </div>
+
+              {/* Card 2: Environment (Bottom Left) */}
+              <div className="lg:col-span-12 xl:col-span-7 lg:row-span-3 group relative rounded-[3rem] p-12 overflow-hidden bg-[#1e3a8a] shadow-2xl transition-all duration-700 hover:-translate-y-2 min-h-[350px] flex flex-col">
+                <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/20 rounded-full -mr-32 -mt-32 blur-3xl group-hover:bg-blue-400/30 transition-colors" />
+                <div className="relative z-10 flex flex-col h-full">
+                  <div className="w-14 h-14 rounded-2xl bg-white/10 backdrop-blur-xl flex items-center justify-center mb-8 border border-white/20 group-hover:rotate-12 transition-transform">
+                    <Sprout className="w-7 h-7 text-white" />
+                  </div>
+                  <div className="mt-auto">
+                    <span className="text-blue-300 font-bold text-xs uppercase tracking-[0.2em]">ENGAGEMENT ÉCO</span>
+                    <h3 className="text-3xl font-bold text-white mt-4 mb-4">Zéro rejet, respect total</h3>
+                    <p className="text-blue-50 font-light text-lg leading-relaxed mb-8 opacity-80 group-hover:opacity-100 transition-opacity">
+                      Pas de régénération, donc aucun gaspillage d’eau. Une solution conçue pour les foyers soucieux de leur impact environnemental et la longévité de leur fosse septique.
+                    </p>
+                    <div className="inline-flex items-center gap-3 px-5 py-2.5 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-white text-sm font-medium">
+                       <Droplets className="w-4 h-4 text-cyan-300" />
+                       Économisez des milliers de litres d'eau par an
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Card 3: Protection (Bottom Right) */}
+              <div className="lg:col-span-12 xl:col-span-5 lg:row-span-3 group relative rounded-[3rem] p-12 overflow-hidden bg-slate-50 shadow-xl transition-all duration-700 hover:-translate-y-2 border border-slate-100 min-h-[350px] flex flex-col">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-transparent" />
+                <div className="relative z-10 flex flex-col h-full">
+                  <div className="w-14 h-14 rounded-2xl bg-[#1e3a8a] flex items-center justify-center mb-8 shadow-lg shadow-blue-200 group-hover:scale-110 transition-transform">
+                    <ShieldCheck className="w-7 h-7 text-white" />
+                  </div>
+                  <div className="mt-auto">
+                    <span className="text-blue-600 font-bold text-xs uppercase tracking-[0.2em]">PROTECTION MATÉRIELLE</span>
+                    <h3 className="text-2xl font-bold text-[#1e3a8a] mt-4 mb-4">Zéro tartre incrusté</h3>
+                    <p className="text-slate-500 font-light text-lg leading-relaxed mb-6">
+                      La technologie TAC agit en amont pour stopper la calcification avant qu'elle ne ronge vos chauffe-eaux et électroménagers de luxe.
+                    </p>
+                    <ul className="space-y-3">
+                       {["Plomberie préservée", "Éclat des surfaces", "Efficacité thermique"].map((req, i) => (
+                         <li key={i} className="flex items-center gap-3 text-sm font-medium text-slate-600 uppercase tracking-wider">
+                           <div className="w-1.5 h-1.5 rounded-full bg-blue-600" />
+                           {req}
+                         </li>
+                       ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -474,11 +529,11 @@ const ConditionneursSansSel = () => {
         <div className="pointer-events-auto group/sticky">
           <Button
             asChild
-            className="bg-white hover:-translate-y-2 transition-all duration-10000 active:scale-95"
+            className="bg-white hover:-translate-y-2 transition-all duration-700 active:scale-95"
             style={{ backdropFilter: "blur(20px)" }}
           >
             <a href="/consultation" className="flex items-center gap-4 animate-bounce" style={{ animationDuration: '3s' }}>
-              <span className="font-black-light text-sm tracking-wider white text-blue-600 space-nowrap text-center">
+              <span className="font-medium text-sm tracking-wider text-blue-600 whitespace-nowrap text-center">
                 Réservez votre <br />consultation gratuite
               </span>
               <div className="w-10 h-10 bg-[#2563eb] rounded-full flex items-center justify-center text-white group-hover/sticky:rotate-[360deg] shadow-lg shadow-blue-200">
