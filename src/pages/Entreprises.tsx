@@ -1,5 +1,5 @@
 import { Phone, CheckCircle, Leaf, Users, ChevronRight, ArrowRight, CupSoda, Coffee, Snowflake, Sparkles, Building2, ShieldCheck, HeartPulse } from "lucide-react";
-import heroImage from "@/assets/hero-image.jpg";
+import heroImage from "@/assets/Hero-Entreprise.jpg";
 import { Card, CardContent } from "@/components/ui/card";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import Footer from "@/components/Footer";
@@ -12,7 +12,7 @@ import { cn } from "@/lib/utils";
 import fountainImg from "@/assets/10341859.jpg";
 import officeMeetingImg from "@/assets/Gallery_Extra_I-Tap_Images_4-1.png";
 import coffeeImg from "@/assets/vki-eccellenza-touch-keurigcollection-matrix.full.webp";
-import iceCubeImg from "@/assets/Manitowoc-NEO-120V-42-Air-Cooled-Countertop-Chewing-Ice-Nugget-Ice-Maker-and-20-lbs_-Bin-with-Lever-Dispensing-CNP0202A-161L_1100x971.webp";
+import iceCubeImg from "@/assets/Manitowoc-NEO-120V-42-Air-Cooled-Countertop-Chewing-Ice-Nugget-Ice-Maker-and-20-lbs_-Bin-with-Lever-Dispensing-CNP0202A-161L_1100x971.jpg";
 import coolerImg from "@/assets/774f43e9-1fd4-49ec-86f5-7c8e51bcbd81-removebg-preview.png";
 import lifestyleFountainImg from "@/assets/C-Tap-Under-Counter-1-1-1.webp";
 import corporateLifeImg from "@/assets/20230add-4ce5-4ae6-a6dc-1f9a2c3aeb7b.jpg";
@@ -75,14 +75,12 @@ const Entreprises = () => {
         {/* 1. Modern Hero Section with Video/Image Overlay */}
         <section className="relative min-h-[85vh] flex items-center pt-24 overflow-hidden">
           <div className="absolute inset-0 z-0">
-             <iframe
-              src="https://player.vimeo.com/video/1155585825?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1"
-              className="absolute top-1/2 left-1/2 w-[100vw] h-[56.25vw] min-h-[100%] min-w-[177.77%] -translate-x-1/2 -translate-y-1/2 object-cover opacity-80"
-              frameBorder="0"
-              allow="autoplay; fullscreen"
-              allowFullScreen
-            ></iframe>
-            <div className="absolute inset-0 bg-blue-900/40 mix-blend-multiply" />
+            <img 
+              src={heroImage} 
+              alt="Solutions Hydratation Business Bricareau" 
+              className="absolute inset-0 w-full h-full object-cover opacity-95 brightness-110" 
+            />
+            <div className="absolute inset-0 bg-blue-900/20 mix-blend-multiply" />
             <div className="absolute inset-0 bg-gradient-to-t from-white via-white/20 to-transparent" />
           </div>
 
@@ -303,7 +301,7 @@ const Entreprises = () => {
                     <img
                         src={iceCubeImg}
                         alt="Machine à glaçons Manitowoc"
-                        className="absolute inset-0 w-full h-full object-contain p-20 group-hover:scale-105 transition-transform duration-1000"
+                        className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
                     />
                     {/* Floating Badge */}
                     <div className="absolute bottom-10 left-10 right-10 md:right-auto md:w-80 bg-blue-600/95 backdrop-blur-xl p-8 rounded-[2rem] shadow-2xl border border-white/20 z-20">
