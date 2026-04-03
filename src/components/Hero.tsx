@@ -87,7 +87,7 @@ const Hero = ({
               </div>
             )}
             <h1 
-              className="text-[32px] md:text-[46px] lg:text-[50px] leading-[1.1] mb-12 max-w-xl"
+              className="text-[32px] md:text-[46px] lg:text-[50px] leading-[1.1] mb-12 max-w-xl animate-in fade-in slide-in-from-left duration-1000"
               style={{
                 fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
                 fontStyle: 'normal'
@@ -99,7 +99,7 @@ const Hero = ({
             </h1>
             
             <p 
-              className="max-w-xl"
+              className="max-w-xl animate-in fade-in slide-in-from-left duration-1000 delay-100 text-lg"
               style={{
                 fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
                 fontWeight: 300,
@@ -112,7 +112,7 @@ const Hero = ({
               {subtitle}
             </p>
 
-            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 pt-4">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 pt-4 animate-in fade-in slide-in-from-left duration-1000 delay-200">
               <Button asChild className="w-fit">
                 <a href={ctaLink}>{ctaText}</a>
               </Button>

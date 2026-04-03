@@ -124,7 +124,7 @@ const Service = () => {
                             <p className="text-slate-600 mb-10 max-w-xl animate-in fade-in slide-in-from-left duration-1000 delay-100 text-lg">
                                 Bricareau s'engage à vos côtés pour simplifier le suivi, l'entretien et la performance de vos installations d'eau, partout au Québec.
                             </p>
-                            <div className="flex flex-col sm:flex-row items-start lg:items-center gap-8 animate-in fade-in slide-in-from-bottom duration-1000 delay-200">
+                            <div className="flex flex-col sm:flex-row items-start lg:items-center gap-8 animate-in fade-in slide-in-from-left duration-1000 delay-200">
                                 <Button 
                                     size="lg"
                                     asChild
