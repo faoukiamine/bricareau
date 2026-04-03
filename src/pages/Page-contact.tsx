@@ -30,7 +30,7 @@ const Contact = () => {
         <div className="min-h-screen bg-background">
             <Header />
             <main>
-                <section className="relative lg:h-[850px] flex flex-col lg:items-center overflow-hidden bg-white pt-20 lg:pt-32">
+                <section className="relative lg:h-[850px] flex flex-col lg:items-center overflow-hidden bg-white lg:pt-32">
                     <div className="absolute top-[120px] left-0 right-0 z-30 pointer-events-none hidden lg:block">
                         <div className="container mx-auto px-4 lg:px-6 pointer-events-auto">
                             <GlobalBreadcrumbs variant="dark" />

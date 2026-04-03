@@ -92,7 +92,7 @@ const Service = () => {
             
             <main>
                 {/* 1. IMMERSIVE HERO - INDEX STYLE */}
-                <section className="relative lg:h-[800px] flex flex-col overflow-hidden bg-white pt-20 lg:pt-32">
+                <section className="relative lg:h-[800px] flex flex-col overflow-hidden bg-white lg:pt-32">
                     {/* Image Section - Stacked on Mobile/Tablet Portrait, Overlay on Desktop */}
                     <div className="relative lg:absolute lg:inset-0 w-full h-[400px] md:h-[550px] lg:h-full z-0 overflow-hidden">
                         <div className="absolute inset-0 z-10 bg-gradient-to-b from-transparent via-[#f0f9ff]/20 to-white lg:bg-gradient-to-r lg:from-[#f0f9ff] lg:via-[#f0f9ff]/40 35% lg:to-transparent" />
