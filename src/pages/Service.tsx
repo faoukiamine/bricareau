@@ -92,13 +92,16 @@ const Service = () => {
             
             <main>
                 {/* 1. IMMERSIVE HERO - INDEX STYLE */}
-                <section className="relative lg:h-[800px] flex items-center justify-center overflow-hidden bg-white">
-                    <img 
-                        src={servicesHero} 
-                        className="absolute inset-0 w-full h-full object-cover opacity-80"
-                        alt="Services Bricareau - Expertise technique"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-r from-[#f0f9ff] via-[#f0f9ff]/40 35% to-transparent z-10" />
+                <section className="relative lg:h-[800px] flex flex-col overflow-hidden bg-white pt-20 lg:pt-32">
+                    {/* Image Section - Stacked on Mobile/Tablet Portrait, Overlay on Desktop */}
+                    <div className="relative lg:absolute lg:inset-0 w-full h-[400px] md:h-[550px] lg:h-full z-0 overflow-hidden">
+                        <div className="absolute inset-0 z-10 bg-gradient-to-b from-transparent via-[#f0f9ff]/20 to-white lg:bg-gradient-to-r lg:from-[#f0f9ff] lg:via-[#f0f9ff]/40 35% lg:to-transparent" />
+                        <img 
+                            src={servicesHero} 
+                            className="w-full h-full object-cover"
+                            alt="Services Bricareau - Expertise technique"
+                        />
+                    </div>
                     
                     <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none hidden lg:block">
                         <div className="container mx-auto px-6 pointer-events-auto">
@@ -106,14 +109,12 @@ const Service = () => {
                         </div>
                     </div>
 
-                    <div className="container relative z-20 mx-auto px-6 h-full flex items-center pt-32 pb-20">
+                    <div className="container relative z-20 mx-auto px-6 lg:h-full flex flex-col items-start justify-center pt-16 pb-24 lg:pt-0 lg:pb-0">
                         <div className="max-w-3xl text-left">
                             <h1 
-                                className="tracking-tighter text-[#1e3a8a] mb-6 animate-in fade-in slide-in-from-left duration-1000"
+                                className="text-[32px] md:text-[46px] lg:text-[50px] leading-[1.1] tracking-tighter text-[#1e3a8a] mb-6 animate-in fade-in slide-in-from-left duration-1000"
                                 style={{ 
                                     fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                    fontSize: '50px',
-                                    lineHeight: '55px',
                                     fontWeight: 300 
                                 }}
                             >
@@ -158,7 +159,7 @@ const Service = () => {
 
                     <div className="container mx-auto px-6 relative z-10">
                         <div className="max-w-4xl mx-auto text-center mb-24 space-y-6 animate-in fade-in slide-in-from-bottom duration-700">
-                            <h2 className="heading">
+                            <h2 className="heading-pro-max">
                                 <span className="italic font-light text-[#2563eb] block">Une expertise complète</span>
                                 <span className="font-bold text-[#1e3a8a] block">pour votre eau</span>
                             </h2>
@@ -326,8 +327,23 @@ const Service = () => {
 
                     <div className="container mx-auto px-6 relative z-10">
                         <div className="flex flex-col lg:flex-row items-center gap-20 animate-in fade-in slide-in-from-bottom duration-1000">
+                            <div className="lg:w-1/2 relative group">
+                                <div className="relative z-10 rounded-[4rem] overflow-hidden aspect-square shadow-2xl">
+                                    <img 
+                                        src={bricareauCareImg} 
+                                        className="w-full h-full object-cover object-top transition-transform duration-1000 group-hover:scale-110" 
+                                        alt="Service Bricareau Care"
+                                    />
+                                    <div className="absolute inset-0 bg-blue-900/10 mix-blend-multiply" />
+                                </div>
+                                <div className="absolute -bottom-10 -right-10 w-48 h-48 bg-blue-600 rounded-full flex flex-col items-center justify-center text-center p-6 shadow-2xl z-20 border-8 border-slate-900">
+                                    <span className="text-4xl font-black block text-white">+25</span>
+                                    <span className="text-[10px] font-bold uppercase tracking-widest block text-white">Ans de service</span>
+                                </div>
+                            </div>
+
                             <div className="lg:w-1/2 space-y-8">
-                                <h2 className="heading">
+                                <h2 className="heading-pro-max">
                                     <span className="italic font-light text-blue-400 block">Bricareau Care</span>
                                     <span className="font-bold block leading-[1.1]">Contrats d'entretien <br />All-Inclusive.</span>
                                 </h2>
@@ -355,26 +371,11 @@ const Service = () => {
                                         asChild
                                         className="bg-white text-blue-600 hover:bg-blue-600 hover:text-white border-white border-2 font-bold transition-all duration-300 rounded-full group px-10 h-14"
                                     >
-                                        <a href="tel:18552649328" className="flex items-center gap-2">
+                                        <a href="tel:18552649328" className="flex items-center gap-2 font-bold">
                                             <Phone className="w-5 h-5 transition-transform group-hover:rotate-12" />
                                             Parlez avec un conseiller
                                         </a>
                                     </Button>
-                                </div>
-                            </div>
-
-                            <div className="lg:w-1/2 relative group">
-                                <div className="relative z-10 rounded-[4rem] overflow-hidden aspect-square shadow-2xl">
-                                    <img 
-                                        src={bricareauCareImg} 
-                                        className="w-full h-full object-cover object-top"
-                                        alt="Service Bricareau Care"
-                                    />
-                                    <div className="absolute inset-0 bg-blue-900/10 mix-blend-multiply" />
-                                </div>
-                                <div className="absolute -bottom-10 -right-10 w-48 h-48 bg-blue-600 rounded-full flex flex-col items-center justify-center text-center p-6 shadow-2xl z-20 border-8 border-slate-900">
-                                    <span className="text-4xl font-black block">+25</span>
-                                    <span className="text-[10px] font-bold uppercase tracking-widest block">Ans de service</span>
                                 </div>
                             </div>
                         </div>
@@ -390,8 +391,22 @@ const Service = () => {
 
                     <div className="container mx-auto px-6 relative z-10">
                         <div className="flex flex-col lg:flex-row-reverse items-center gap-24 animate-in fade-in slide-in-from-bottom duration-1000">
+                            <div className="lg:w-1/2">
+                                <div className="relative rounded-[4rem] overflow-hidden aspect-[4/5] shadow-2xl group">
+                                    <img 
+                                        src={waterSoftenerInstallImg} 
+                                        className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" 
+                                        alt="Maintenance adoucisseur d'eau Bricareau"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-[#1e3a8a]/40 to-transparent" />
+                                     <div className="absolute bottom-10 left-10 right-10 p-8 bg-white/10 backdrop-blur-xl rounded-3xl border border-white/20">
+                                        <p className="text-white font-medium italic">"Une valve bien réglée peut économiser jusqu'à 30% de sel par an."</p>
+                                    </div>
+                                </div>
+                            </div>
+
                             <div className="lg:w-1/2 space-y-8">
-                                <h2 className="text-2xl md:text-3xl lg:text-[40px] font-sans tracking-tight leading-tight lg:leading-[52px] text-left text-slate-900 mb-8">
+                                <h2 className="heading-pro-max text-left text-slate-900 mb-8">
                                     <span className="italic font-light text-blue-600 block">Performance & Protection</span>
                                     <span className="font-bold text-[#1e3a8a] block">Une maintenance d'élite <br />pour vos systèmes d'eau.</span>
                                 </h2>
@@ -415,24 +430,11 @@ const Service = () => {
                                     <Button 
                                         size="lg"
                                         onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
-                                        className="w-fit group"
+                                        className="w-fit group font-bold"
                                     >
                                         Planifiez un service
                                         <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-2" />
                                     </Button>
-                                </div>
-                            </div>
-                            <div className="lg:w-1/2">
-                                <div className="relative rounded-[4rem] overflow-hidden aspect-[4/5] shadow-2xl group">
-                                    <img 
-                                        src={waterSoftenerInstallImg} 
-                                        className="w-full h-full object-cover"
-                                        alt="Maintenance adoucisseur d'eau Bricareau"
-                                    />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-[#1e3a8a]/40 to-transparent" />
-                                     <div className="absolute bottom-10 left-10 right-10 p-8 bg-white/10 backdrop-blur-xl rounded-3xl border border-white/20">
-                                        <p className="text-white font-medium italic">"Une valve bien réglée peut économiser jusqu'à 30% de sel par an."</p>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -448,8 +450,19 @@ const Service = () => {
 
                     <div className="container mx-auto px-6 relative z-10">
                         <div className="flex flex-col lg:flex-row items-center gap-24 animate-in fade-in slide-in-from-bottom duration-1000">
+                            <div className="lg:w-1/2">
+                                <div className="relative rounded-[4rem] overflow-hidden aspect-[4/5] shadow-2xl group bg-slate-50">
+                                    <div className="absolute inset-0 bg-blue-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                                    <img 
+                                        src={roTechnicianImg} 
+                                        className="w-full h-full object-cover drop-shadow-2xl transition-transform duration-1000 group-hover:scale-110" 
+                                        alt="Maintenance système d'osmose inverse"
+                                    />
+                                </div>
+                            </div>
+
                             <div className="lg:w-1/2 space-y-8">
-                                <h2 className="text-2xl md:text-3xl lg:text-[40px] font-sans tracking-tight leading-tight lg:leading-[52px] text-left text-slate-900 mb-8">
+                                <h2 className="heading-pro-max text-left text-slate-900 mb-8">
                                     <span className="italic font-light text-blue-600 block">Pureté & Santé</span>
                                     <span className="font-bold text-[#1e3a8a] block">Savourez une eau d'une <br />pureté exceptionnelle.</span>
                                 </h2>
@@ -473,21 +486,11 @@ const Service = () => {
                                     <Button 
                                         size="lg"
                                         onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
-                                        className="w-fit group"
+                                        className="w-fit group font-bold"
                                     >
                                         Réservez votre entretien
                                         <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-2" />
                                     </Button>
-                                </div>
-                            </div>
-                            <div className="lg:w-1/2">
-                                <div className="relative rounded-[4rem] overflow-hidden aspect-[4/5] shadow-2xl group bg-slate-50">
-                                    <div className="absolute inset-0 bg-blue-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-                                    <img 
-                                        src={roTechnicianImg} 
-                                        className="w-full h-full object-cover drop-shadow-2xl"
-                                        alt="Maintenance système d'osmose inverse"
-                                    />
                                 </div>
                             </div>
                         </div>
@@ -503,8 +506,19 @@ const Service = () => {
 
                     <div className="container mx-auto px-6 relative z-10">
                         <div className="flex flex-col lg:flex-row-reverse items-center gap-24 animate-in fade-in slide-in-from-bottom duration-1000">
+                            <div className="lg:w-1/2">
+                                <div className="relative rounded-[4rem] overflow-hidden aspect-[4/5] shadow-2xl group">
+                                    <img 
+                                        src={diagnosticImg} 
+                                        className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" 
+                                        alt="Diagnostic digital d'eau Bricareau"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-blue-900/40 to-transparent" />
+                                </div>
+                            </div>
+
                             <div className="lg:w-1/2 space-y-8">
-                                <h2 className="text-2xl md:text-3xl lg:text-[40px] font-sans tracking-tight leading-tight lg:leading-[52px] text-left text-slate-900 mb-8">
+                                <h2 className="heading-pro-max text-left text-slate-900 mb-8">
                                     <span className="italic font-light text-blue-600 block">Diagnostic & Précision</span>
                                     <span className="font-bold text-[#1e3a8a] block">Révélez ce que <br />votre eau vous cache.</span>
                                 </h2>
@@ -527,21 +541,11 @@ const Service = () => {
                                     <Button 
                                         size="lg"
                                         onClick={() => navigate('/tests-eau')}
-                                        className="w-fit group"
+                                        className="w-fit group font-bold"
                                     >
                                         Voir toutes les analyses 
                                         <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-2" />
                                     </Button>
-                                </div>
-                            </div>
-                            <div className="lg:w-1/2">
-                                <div className="relative rounded-[4rem] overflow-hidden aspect-[4/5] shadow-2xl group">
-                                    <img 
-                                        src={diagnosticImg} 
-                                        className="w-full h-full object-cover"
-                                        alt="Diagnostic digital d'eau Bricareau"
-                                    />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-blue-900/40 to-transparent" />
                                 </div>
                             </div>
                         </div>
@@ -549,7 +553,7 @@ const Service = () => {
                 </section>
 
                 {/* 7. CONTACT FORM SECTION */}
-                <section id="contact-form" className="py-32 bg-slate-50 relative scroll-mt-24">
+                <section id="contact-form" className="py-32 bg-slate-50 relative scroll-mt-32">
                      {/* Background Watermark */}
                      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[15rem] lg:text-[22rem] font-black text-slate-200/20 select-none pointer-events-none tracking-tighter z-0 uppercase">
                         SUPPORT
@@ -566,7 +570,7 @@ const Service = () => {
                             </p>
                         </div>
 
-                        <div className="flex flex-col lg:flex-row items-start gap-16 lg:gap-20">
+                        <div className="flex flex-col-reverse lg:flex-row items-start gap-16 lg:gap-20">
                             {/* Left Icons Column */}
                             <div className="lg:w-1/3 space-y-6">
                                 <div className="flex items-center gap-4 bg-white/80 backdrop-blur-md p-6 rounded-3xl shadow-sm border border-slate-100 w-full group hover:shadow-md transition-all">

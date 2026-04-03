@@ -30,8 +30,8 @@ const Contact = () => {
         <div className="min-h-screen bg-background">
             <Header />
             <main>
-                <section className="relative lg:h-[850px] flex flex-col lg:items-center overflow-hidden bg-white">
-                    <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none hidden lg:block">
+                <section className="relative lg:h-[850px] flex flex-col lg:items-center overflow-hidden bg-white pt-20 lg:pt-32">
+                    <div className="absolute top-[120px] left-0 right-0 z-30 pointer-events-none hidden lg:block">
                         <div className="container mx-auto px-4 lg:px-6 pointer-events-auto">
                             <GlobalBreadcrumbs variant="dark" />
                         </div>
@@ -45,7 +45,7 @@ const Contact = () => {
                         <div className="absolute inset-0 bg-gradient-to-r from-[#f0f9ff] via-[#f0f9ff]/40 35% to-transparent z-10" />
                     </div>
 
-                    <div className="container relative z-10 mx-auto px-4 h-full flex items-center lg:px-6">
+                    <div className="container relative z-10 mx-auto px-4 h-full flex items-start pt-12 lg:pt-0 lg:items-center lg:px-6">
                         <div className="max-w-3xl text-left space-y-8 animate-in fade-in slide-in-from-left duration-1000">
                             <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-green-500/10 border border-green-500/20 text-green-600 text-[10px] font-black uppercase tracking-[0.2em] w-fit">
                                 <span className="relative flex h-2 w-2">
@@ -67,14 +67,14 @@ const Contact = () => {
                 </section>
 
                 {/* 2. CONTACT FORM SECTION */}
-                <section id="contact-form" className="pb-32 bg-slate-50 relative scroll-mt-24">
+                <section id="contact-form" className="py-20 lg:pb-32 bg-slate-50 relative scroll-mt-32">
                      {/* Background Watermark */}
-                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[15rem] lg:text-[22rem] font-black text-slate-200/20 select-none pointer-events-none tracking-tighter z-0 uppercase">
+                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[15rem] lg:text-[22rem] font-black text-slate-200/10 select-none pointer-events-none tracking-tighter z-0 uppercase">
                         SUPPORT
                     </div>
 
-                    <div className="container mx-auto px-6 relative z-10 translate-y-[-20%]">
-                        <div className="flex flex-col lg:flex-row items-start lg:items-stretch gap-16 lg:gap-20">
+                    <div className="container mx-auto px-6 relative z-10 lg:-translate-y-32">
+                        <div className="flex flex-col-reverse lg:flex-row items-start lg:items-stretch gap-16 lg:gap-20">
                             {/* Left Icons Column - Staggered Reveal */}
                             <div className="lg:w-1/3 flex flex-col justify-end space-y-6">
                                 {[

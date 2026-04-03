@@ -53,6 +53,7 @@ import brokenHeaterImg from "@/assets/detartrage-chauffe-eau-electrique.jpg";
 import ironStainImg from "@/assets/5a4674e7-575d-4cd9-b1f2-32522f8a7072.jpg";
 import ConsultationFormSection from "@/components/ConsultationFormSection";
 import ourteamstudyyourwaterImg from "@/assets/10271.jpg";
+import laundryImg from "@/assets/302731406_443870381116589_3770801709209607894_n.jpg";
 
 const products = [
     { 
@@ -337,15 +338,15 @@ const AdoucisseursEauDePuits = () => {
                 {/* 2.5 Diagnostic Branding Section */}
                 <section className="py-24 bg-slate-50 relative overflow-hidden">
                     <div className="container mx-auto px-6">
-                        <div className="flex flex-col md:flex-row justify-between items-start mb-16 gap-8">
+                        <div className="flex flex-col items-start mb-16 gap-8">
                             <div className="max-w-3xl">
                                 <span className="inline-block px-4 py-1 bg-red-600/10 text-red-600 rounded-full text-[10px] font-black tracking-widest mb-4">VOTRE PUITS VOUS PARLE</span>
                                 <h2 className="heading-pro-max text-left">
                                     <span className="italic font-light text-blue-600 block">Identifiez les signes de</span>
-                                    <span className="font-bold text-[#1e3a8a] block">la dureté extrême.</span>
+                                    <span className="font-bold text-[#1e3a8a] block text-left">la dureté extrême.</span>
                                 </h2>
                             </div>
-                            <p className="body-pro-max max-w-sm text-slate-500 italic border-l-2 border-red-500 pl-6 text-left">Le calcaire de puits est plus agressif. Ne le laissez pas ronger la valeur de votre investissement.</p>
+                            <p className="body-pro-max max-w-3xl text-slate-500 italic border-l-2 border-red-500 pl-6 text-left">Le calcaire de puits est plus agressif. Ne le laissez pas ronger la valeur de votre investissement.</p>
                         </div>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -355,7 +356,7 @@ const AdoucisseursEauDePuits = () => {
                                 { problem: "Vaisselle Voilée", cause: "Dépôts minéraux", solution: "Éclat Crystal", color: "bg-cyan-400", img: cloudyGlassImg },
                                 { problem: "Chauffe-eau Entartré", cause: "Calcaire", solution: "Efficacité Énergétique", color: "bg-orange-600", img: brokenHeaterImg },
                                 { problem: "Taches de Rouille", cause: "Fer ferreux", solution: "Iron Fighter Technology", color: "bg-amber-700", img: ironStainImg },
-                                { problem: "Linge Rêche", cause: "Frottement minéral", solution: "Soin des Textiles", color: "bg-indigo-500", img: "/302731406_443870381116589_3770801709209607894_n.jpg" }
+                                { problem: "Linge Rêche", cause: "Frottement minéral", solution: "Soin des Textiles", color: "bg-indigo-500", img: laundryImg }
                             ].map((s, i) => (
                                 <div 
                                     key={i} 
@@ -695,7 +696,7 @@ const AdoucisseursEauDePuits = () => {
                         <span className="inline-block px-4 py-1.5 bg-white text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.4em]">
                           LE CONFORT RÉSIDENTIEL RÉINVENTÉ
                         </span>
-                        <h2 className="text-4xl md:text-6xl lg:text-5xl font-light text-white leading-[1.1] tracking-tighter">
+                        <h2 className="heading-pro-max text-white">
                           Préservez votre foyer avec <br />
                           <span className="text-white italic font-bold font-serif">une eau d'une douceur absolue.</span>
                         </h2>
