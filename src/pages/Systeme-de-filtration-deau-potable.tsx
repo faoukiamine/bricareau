@@ -485,6 +485,22 @@ const StationEauPotable = () => {
                                                 ))}
                                             </tr>
                                         ))}
+                                            <tr className="bg-slate-50/50">
+                                                <td className="p-6 md:p-10 sticky left-0 z-30 bg-slate-50 border-r border-slate-100"></td>
+                                                {[0, 1, 2].map((idx) => (
+                                                    <td 
+                                                        key={idx}
+                                                        className={cn(
+                                                            "p-6 md:p-10 text-center transition-all duration-500",
+                                                            idx === activeCol ? "table-cell" : "hidden lg:table-cell"
+                                                        )}
+                                                    >
+                                                        <Button asChild className="w-full shadow-lg shadow-blue-100 transition-all active:scale-95">
+                                                            <NavLink to="/contact">Choisir ce système</NavLink>
+                                                        </Button>
+                                                    </td>
+                                                ))}
+                                            </tr>
                                     </tbody>
                                 </table>
                             </div>

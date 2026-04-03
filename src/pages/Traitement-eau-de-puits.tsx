@@ -53,6 +53,9 @@ import {
 } from "@/components/ui/carousel";
 import ConsultationFormSection from "@/components/ConsultationFormSection";
 import ourteamstudyyourwaterImg from "@/assets/10271.jpg";
+import pidImg from "@/assets/PID.webp";
+import supportImg from "@/assets/8786.jpg";
+import laboratoryImg from "@/assets/2148926623.jpg";
 
 interface Problem {
   title: string;
@@ -269,93 +272,113 @@ const TraitementEauDePuits = () => {
           </div>
         </section>
 
-        {/* 4. Processus Section - Modern Alternating Timeline */}
+        {/* 4. Processus Section - Liquid Glass Bento Journey Alternative */}
         <section className="relative py-32 bg-white overflow-hidden">
-          {/* Subtle connecting vertical line for desktop and mobile */}
-          <div className="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-px bg-slate-100 hidden lg:block" />
-          <div className="absolute top-0 bottom-0 left-8 md:left-1/2 md:-translate-x-1/2 w-px bg-slate-100 lg:hidden" />
+          {/* Iridescent Background Accents */}
+          <div className="absolute top-0 left-0 w-full h-full opacity-30 pointer-events-none">
+            <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-400/20 rounded-full blur-[120px] animate-pulse" />
+            <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-cyan-300/10 rounded-full blur-[150px]" />
+          </div>
 
           <div className="container mx-auto px-6 relative z-10">
-            {/* Header */}
-            <div className="text-center mb-32 max-w-4xl mx-auto">
-              <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.2em] mb-8">
-                NOTRE FONCTIONNEMENT
+            {/* Header - Centered Minimal */}
+            <div className="text-center mb-24 max-w-3xl mx-auto">
+               <span className="inline-block px-4 py-1.5 bg-blue-600/5 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.4em] mb-8 border border-blue-100">
+                L'EXPÉRIENCE BRICAREAU
               </span>
                <h2 className="mb-8 heading-pro-max text-center">
-                 <span className="italic font-light text-[#2563eb] block text-center">Un service simple</span>
-                 <span className="font-bold text-[#1e3a8a] block text-center">& sans souci.</span>
+                 <span className="italic font-light text-blue-500 block">Une transformation</span>
+                 <span className="font-bold text-[#1e3a8a] block text-center">Simple & Transparente.</span>
                </h2>
-               <p className="body-pro-max text-slate-600 max-w-2xl mx-auto text-center">
-                 Confiez-nous la gestion de votre eau de puits. De l'expertise initiale à l'installation finale, nous nous occupons de tout pour vous garantir une eau saine, sans compromis.
+               <p className="body-pro-max text-slate-500 text-center">
+                 Quatre étapes clés orchestrées avec une précision chirurgicale pour libérer tout le potentiel de votre eau.
                </p>
             </div>
 
-            {/* Steps - Alternating Zig Zag */}
-            <div className="space-y-24 lg:space-y-0">
-              {[
-                {
-                  title: "Analyse d'eau",
-                  desc: "Nous effectuons un test approfondi en laboratoire pour identifier les contaminants spécifiques à votre puits. Une compréhension précise est la clé d'une solution durable.",
-                  img: process1
-                },
-                {
-                  title: "Diagnostic Global",
-                  desc: "Nos experts conçoivent une solution de filtration sur mesure adaptée à la chimie unique de votre eau. Chaque système est pensé pour votre consommation réelle.",
-                  img: process2
-                },
-                {
-                  title: "Installation Experte",
-                  desc: "Nos techniciens certifiés installent vos systèmes avec une précision professionnelle pour une performance durable. Nous respectons votre espace et les normes les plus strictes.",
-                  img: process3
-                },
-                {
-                  title: "Suivi de Qualité",
-                  desc: "Nous assurons des tests de suivi et un entretien régulier pour garantir la sécurité continue de votre foyer. Votre tranquillité d'esprit est notre priorité.",
-                  img: process4
-                }
-              ].map((step, idx) => (
-                <div key={idx} className={`group relative flex flex-col md:flex-row items-center gap-12 lg:gap-0 ${idx % 2 === 1 ? 'lg:flex-row-reverse' : ''} lg:min-h-[450px]`}>
-
-                  {/* Visual Content Section */}
-                  <div className="w-full lg:w-1/2 flex justify-center p-4">
-                    <div className="relative w-full max-w-md aspect-[4/3] rounded-[3rem] overflow-hidden shadow-2xl transition-transform duration-700 group-hover:scale-[1.02]">
-                      <img
-                        src={step.img}
-                        alt={`${step.title} - Expertise Bricareau`}
-                        className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
-                      />
-                      <div className="absolute inset-0 bg-blue-900/10 group-hover:bg-transparent transition-colors duration-500" />
-
-                      {/* Step Badge Overlapping Image */}
-                      <div className="absolute bottom-8 right-8 bg-white/90 backdrop-blur-md px-6 py-4 rounded-3xl shadow-xl flex items-baseline gap-2 border border-white/50">
-                        <span className="text-xl font-black text-blue-600">
-                          {idx + 1}<sup className="text-xs">{idx === 0 ? 'ère' : 'ème'}</sup>
-                        </span>
-                        <span className="text-xs font-black uppercase tracking-widest text-blue-600">Phase</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Pulsing Marker on the line */}
-                  <div className="absolute left-8 md:left-1/2 md:-translate-x-1/2 w-12 h-12 flex items-center justify-center z-20 top-0 md:top-1/2 md:-translate-y-1/2 lg:flex lg:static lg:w-0 lg:h-0">
-                    <div className="relative w-4 h-4 rounded-full bg-blue-600 border-4 border-white shadow-[0_0_0_8px_rgba(37,99,235,0.1)] group-hover:shadow-[0_0_0_15px_rgba(37,99,235,0.15)] transition-all duration-500 hidden lg:block"
-                      style={{ position: 'absolute', transform: 'translateX(-50%)', left: '0' }} />
-                  </div>
-
-                  {/* Text Content Section */}
-                  <div className="w-full lg:w-1/2 flex flex-col justify-center px-4 lg:px-20">
-                    <div className={`space-y-6 ${idx % 2 === 1 ? 'lg:text-right lg:items-end' : 'lg:text-left lg:items-start'}`}>
-                      <h3 className="font-bold text-slate-900 leading-tight group-hover:text-blue-600 transition-colors">
-                        {step.title}
-                      </h3>
-                      <div className={`w-12 h-1.5 bg-blue-600 rounded-full ${idx % 2 === 1 ? 'ml-auto' : ''}`} />
-                       <p className="body-pro-max text-slate-600 text-justify max-w-xl">
-                         {step.desc}
-                       </p>
-                    </div>
+            {/* The Bento Grid Journey */}
+            <div className="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-6 auto-rows-[280px]">
+              
+              {/* STEP 1: Full-Height Vertical (Diagnostic) */}
+              <div className="md:col-span-3 lg:col-span-4 lg:row-span-2 group relative rounded-[3rem] overflow-hidden border border-slate-100 bg-white shadow-sm hover:shadow-2xl transition-all duration-700">
+                <div className="absolute inset-0 z-0">
+                  <img src={laboratoryImg} alt="Analyse" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-30 grayscale group-hover:grayscale-0" />
+                  <div className="absolute inset-0 bg-gradient-to-b from-white via-white/80 to-blue-50/40" />
+                </div>
+                <div className="relative z-10 p-10 h-full flex flex-col">
+                  <span className="w-12 h-12 rounded-2xl bg-blue-600 text-white flex items-center justify-center font-black text-xl mb-8 shadow-lg shadow-blue-200">01</span>
+                  <h3 className="card-title text-3xl mb-6">Analyse experte en laboratoire</h3>
+                  <p className="text-slate-500 font-light leading-relaxed mb-auto text-justify">
+                    Tout commence par la vérité scientifique. Nous identifions avec une précision millimétrée chaque contaminant présent dans votre eau brute pour définir la base de votre solution.
+                  </p>
+                  <div className="w-full h-1 bg-blue-600/10 rounded-full mt-10 overflow-hidden">
+                    <div className="w-1/4 h-full bg-blue-600 group-hover:w-full transition-all duration-1000" />
                   </div>
                 </div>
-              ))}
+              </div>
+
+              {/* STEP 2: Wide Horizontal (Engineering) */}
+              <div className="md:col-span-3 lg:col-span-8 group relative rounded-[3rem] overflow-hidden border border-slate-100 bg-white shadow-sm hover:shadow-2xl transition-all duration-700">
+                <div className="absolute inset-0 z-0">
+                  <img src={pidImg} alt="Conception" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-40 grayscale group-hover:grayscale-0" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 to-transparent" />
+                </div>
+                <div className="relative z-10 p-10 h-full flex flex-col justify-center max-w-xl">
+                  <div className="flex items-center gap-4 mb-6">
+                    <span className="w-10 h-10 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center font-bold">02</span>
+                    <span className="text-[10px] font-black tracking-widest text-blue-600 uppercase">Architecture Technique</span>
+                  </div>
+                  <h3 className="card-title text-2xl mb-4">Ingénierie sur mesure</h3>
+                  <p className="text-slate-500 font-light leading-relaxed">
+                    Nos ingénieurs conçoivent une architecture de filtration optimisée, calibrée selon vos résultats et votre volume de consommation quotidien.
+                  </p>
+                </div>
+              </div>
+
+              {/* STEP 3: Square (Installation) */}
+              <div className="md:col-span-3 lg:col-span-4 group relative rounded-[3rem] overflow-hidden border border-slate-100 bg-slate-900 shadow-xl hover:shadow-blue-900/20 transition-all duration-700">
+                 <div className="absolute inset-0 z-0 opacity-40">
+                  <img src={process3} alt="Installation" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-blue-900/40 to-transparent" />
+                <div className="relative z-10 p-10 h-full flex flex-col">
+                  <span className="w-10 h-10 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 text-white flex items-center justify-center font-bold mb-auto">03</span>
+                  <h3 className="text-white font-bold text-2xl mb-4">Mise en œuvre experte</h3>
+                  <p className="text-blue-100/70 text-sm font-light leading-relaxed">
+                    Installation de haute précision pilotée par nos techniciens spécialisés.
+                  </p>
+                </div>
+              </div>
+
+              {/* STEP 4: Horizontal (Support) */}
+              <div className="md:col-span-3 lg:col-span-4 group relative rounded-[3rem] overflow-hidden border border-blue-100 bg-white shadow-sm hover:shadow-blue-200 transition-all duration-700">
+                <div className="absolute inset-0 z-0">
+                  <img src={supportImg} alt="Suivi" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-30 grayscale group-hover:grayscale-0" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-blue-50/20" />
+                </div>
+                <div className="relative z-10 p-10 h-full flex flex-col justify-between">
+                  <div className="flex justify-between items-start">
+                    <span className="w-10 h-10 rounded-xl bg-blue-600 text-white flex items-center justify-center font-bold">04</span>
+                    <div className="flex gap-1">
+                      {[1,2,3].map(i => <div key={i} className="w-1.5 h-1.5 rounded-full bg-blue-400 group-hover:bg-blue-600 transition-colors" />)}
+                    </div>
+                  </div>
+                  <div>
+                    <h3 className="text-[#1e3a8a] font-bold text-xl mb-2 italic">Suivi & Excellence</h3>
+                    <p className="text-slate-500 text-sm font-light">Accompagnement continu et maintenance préventive certifiée.</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            {/* Global CTA - Glass Floating */}
+            <div className="mt-20 flex justify-center">
+               <div className="inline-flex items-center p-2 rounded-full bg-white/50 backdrop-blur-md border border-slate-100 shadow-xl">
+                 <span className="px-6 text-sm font-medium text-slate-500 hidden sm:inline">Prêt pour votre diagnostic ?</span>
+                 <Button asChild className="rounded-full px-10 h-14 shadow-lg shadow-blue-200">
+                   <a href="/consultation">Débuter l'analyse <ArrowRight className="ml-2 w-4 h-4" /></a>
+                 </Button>
+               </div>
             </div>
           </div>
         </section>
