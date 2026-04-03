@@ -42,6 +42,9 @@ import rvCampingImg from "@/assets/luxury_rv_camping.png";
 import yachtImg from "@/assets/luxury_yacht.png";
 import cabinImg from "@/assets/modern_cabin.png";
 import waterGlassImg from "@/assets/portable_water_glass.png";
+import cableIcon from "@/assets/cable.svg";
+import boatBusIcon from "@/assets/boat_bus.svg";
+import carryOnBagIcon from "@/assets/carry_on_bag.svg";
 
 
 const AdoucisseursPortables = () => {
@@ -139,8 +142,8 @@ const AdoucisseursPortables = () => {
                             {/* Content at Bottom */}
                             <div className="absolute inset-x-0 bottom-0 p-10 md:p-14 z-20">
                                 <div className="flex flex-col gap-6">
-                                    <div className="w-16 h-16 rounded-2xl bg-white/20 backdrop-blur-xl flex items-center justify-center text-white border border-white/30 mb-2">
-                                        <MapPin className="h-8 w-8" />
+                                    <div className="w-16 h-16 rounded-2xl bg-white/20 backdrop-blur-xl flex items-center justify-center text-white border border-white/30 mb-2 group-hover:scale-110 transition-transform">
+                                        <img src={carryOnBagIcon} alt="Carry On Bag Icon" className="h-8 w-8 filter brightness-0 invert" />
                                     </div>
                                     <div>
                                         <span className="text-blue-300 font-bold text-xs uppercase tracking-[0.2em]">Liberté Totale</span>
@@ -174,13 +177,12 @@ const AdoucisseursPortables = () => {
 
                         {/* Right Stacked Column */}
                         <div className="md:col-span-12 lg:col-span-5 grid grid-cols-1 gap-8">
-                            
-                            {/* Card 2: Installation (Top Right) */}
-                            <div className="group relative bg-[#2563eb] rounded-[3rem] overflow-hidden p-10 md:p-12 shadow-2xl shadow-blue-500/20 text-white transition-all duration-700 hover:bg-[#1d4ed8]">
-                                <div className="absolute top-0 right-0 w-48 h-48 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
-                                <div className="relative z-10 flex flex-col h-full bg-blue">
-                                    <div className="w-14 h-14 rounded-2xl bg-white/20 flex items-center justify-center mb-8 border border-white/30">
-                                        <Settings className="h-7 w-7 text-white animate-spin-slow" />
+                            {/* Card 2: Plug & Play (Top Right) */}
+                            <div className="group relative bg-[#1e3a8a] rounded-[3rem] p-10 md:p-12 overflow-hidden shadow-2xl shadow-blue-900/20 transition-all duration-700 hover:-translate-y-2 min-h-[400px] flex flex-col">
+                                <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 rounded-full -mr-16 -mt-16 blur-3xl group-hover:bg-blue-400/20 transition-colors" />
+                                <div className="relative z-10 flex flex-col h-full">
+                                    <div className="w-14 h-14 rounded-2xl bg-white/10 backdrop-blur-xl flex items-center justify-center mb-8 border border-white/20 group-hover:scale-110 transition-transform">
+                                        <img src={cableIcon} alt="Cable Icon" className="h-7 w-7 filter brightness-0 invert opacity-80 group-hover:opacity-100 transition-all" />
                                     </div>
                                     <div className="mt-auto">
                                         <span className="text-blue-100 font-bold text-xs uppercase tracking-[0.2em]">Plug & Play</span>
@@ -204,11 +206,10 @@ const AdoucisseursPortables = () => {
                                         alt="Pureté de l'eau adoucie Bricareau"
                                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                                     />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent" />
                                 </div>
                                 <div className="p-10 relative z-10 -mt-12 bg-white rounded-t-[3rem] flex-1 flex flex-col">
-                                    <div className="w-14 h-14 rounded-2xl bg-blue-600 flex items-center justify-center mb-6 shadow-lg shadow-blue-200">
-                                        <Shield className="h-7 w-7 text-white" />
+                                    <div className="w-14 h-14 rounded-2xl bg-blue-600 flex items-center justify-center mb-6 shadow-lg shadow-blue-200 group-hover:scale-110 transition-transform">
+                                        <img src={boatBusIcon} alt="Boat & Bus Icon" className="h-7 w-7 filter brightness-0 invert" />
                                     </div>
                                     <span className="text-blue-600 font-bold text-xs uppercase tracking-[0.2em]">Actifs Préservés</span>
                                     <h3 className="text-2xl font-bold text-[#1e3a8a] mt-3 mb-4">Protection Maximale</h3>
