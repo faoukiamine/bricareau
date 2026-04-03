@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
-import { Search, Home, Hammer, Layers, TreePine } from "lucide-react";
+import { Home, AlertCircle, Factory, Building2, Wrench, ArrowRight } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
@@ -13,85 +13,103 @@ const NotFound = () => {
   }, [location.pathname]);
 
   return (
-    <div className="min-h-screen bg-background flex flex-col">
+    <div className="min-h-screen bg-[#f8f9ff] flex flex-col font-sans selection:bg-[#dbe1ff] selection:text-[#00174b]">
       <Header />
 
-      <main className="flex-1 pt-24 flex flex-col md:flex-row items-stretch">
-        <div className="flex-1 px-8 md:px-16 py-12 flex flex-col justify-center">
-          <div className="max-w-2xl space-y-8">
+      <main className="flex-1 pt-24 pb-12 px-6 flex flex-col justify-center max-w-7xl mx-auto w-full">
+        {/* Hero Section: Asymmetrical Layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          {/* Left: Text Content */}
+          <div className="lg:col-span-6 space-y-8 order-2 lg:order-1">
             <div className="space-y-4">
-              <span className="inline-block px-3 py-1 bg-muted text-primary font-bold text-xs tracking-widest uppercase rounded">
-                Erreur 404
-              </span>
-              <h1 className="text-5xl md:text-7xl font-black text-foreground tracking-tighter leading-none">
-                Page égarée sur <span className="text-primary">le chantier !</span>
+              <span className="text-xs uppercase tracking-[0.2em] text-[#4059aa] font-bold inline-block border-l-4 border-[#004ac6] pl-4">Erreur 404</span>
+              <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-[#0d1c2e]">
+                Page introuvable <span className="text-[#004ac6]">dans le circuit</span>.
               </h1>
-              <p className="text-lg text-muted-foreground max-w-md leading-relaxed">
-                Il semblerait que les plans aient été mal lus. La page que vous cherchez a peut-être été déplacée ou n'existe plus.
+              <p className="text-lg text-[#434655] leading-relaxed max-w-xl">
+                Il semble que le flux d'information ait été interrompu. Cette page a peut-être été filtrée lors d'une mise à jour technique ou déplacée vers une nouvelle section de notre infrastructure.
               </p>
             </div>
 
-            <div className="relative max-w-md group">
-              <input
-                className="w-full h-14 pl-12 pr-4 bg-muted border-none rounded-xl focus:ring-0 focus:bg-slate-200 dark:focus:bg-slate-800 transition-all text-foreground placeholder:text-muted-foreground"
-                placeholder="Rechercher un produit ou un guide..."
-                type="text"
-              />
-              <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-primary group-focus-within:scale-110 transition-transform h-5 w-5" />
-              <div className="absolute left-0 bottom-0 h-1 w-0 bg-primary group-focus-within:w-full transition-all duration-300"></div>
-            </div>
-
-            <div className="flex flex-wrap gap-4">
+            {/* Primary Action */}
+            <div className="flex flex-col sm:flex-row gap-4">
               <Link
-                className="px-8 py-4 bg-gradient-to-br from-primary to-blue-700 text-primary-foreground rounded-lg font-bold text-sm tracking-widest uppercase hover:shadow-lg hover:shadow-primary/20 transition-all active:scale-95 flex items-center gap-2"
+                className="bg-gradient-to-br from-[#004ac6] to-[#2563eb] text-white px-8 py-4 rounded-md font-bold text-sm uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg active:scale-95 transition-all w-full sm:w-auto"
                 to="/"
               >
                 <Home className="h-5 w-5" />
-                RETOURNER À L'ACCUEIL
+                Retourner à la source (Accueil)
+              </Link>
+              <Link
+                className="bg-[#dce9ff] text-[#264191] px-8 py-4 rounded-md font-bold text-sm uppercase tracking-wider flex items-center justify-center gap-2 active:scale-95 transition-all w-full sm:w-auto"
+                to="/contact"
+              >
+                Consulter l'aide technique
               </Link>
             </div>
+          </div>
 
-            <div className="pt-8">
-              <p className="text-xs font-bold text-muted-foreground uppercase tracking-widest mb-6">
-                Continuer l'exploration
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <Link className="group p-6 bg-muted rounded-xl hover:bg-slate-200 dark:hover:bg-slate-800 transition-all flex flex-col items-center text-center gap-3" to="/adoucisseurs">
-                  <div className="w-12 h-12 bg-background flex items-center justify-center rounded-full text-primary group-hover:scale-110 transition-transform">
-                    <Hammer className="h-6 w-6" />
+          {/* Right: Technical Hero Image */}
+          <div className="lg:col-span-6 order-1 lg:order-2 relative">
+            <div className="relative z-10 rounded-2xl overflow-hidden aspect-square lg:aspect-auto lg:h-[600px] shadow-2xl outline outline-1 outline-[#c3c6d7]/15">
+              <img
+                className="w-full h-full object-cover grayscale-[0.3] hover:grayscale-0 transition-all duration-700"
+                alt="High-tech industrial water filtration system"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8zKsH683zkUlc99xrqsjgqf-zJlCsedlQFmnea1DrpYodWXOK3m7zTwKD5nfuLV93bFBTH84l3x9-vNSqz7y_PdMkAu7RT_2etn5IpGfDelVJ1cdU0hAfJMtOQT0xvweS73JG8w_SjwoFhV6GIvqe0Pa7PKONriA55SZBrhwelSPAKr6Eo8M3EPk8Aw1FuG1VMLxIj8BZx4oEQCnAKl5B8CYX2Oa9KnG58mCZHzG0d73PCCAJrWqHjjyNNM5-PcRfpuXkcwZaCCB1"
+              />
+
+              {/* Measurement Overlay Component */}
+              <div className="absolute top-10 left-10 p-4 bg-white/80 backdrop-blur-md rounded-lg outline outline-1 outline-[#c3c6d7]/15">
+                <div className="flex items-center gap-3">
+                  <AlertCircle className="text-[#004ac6] h-6 w-6" fill="currentColor" stroke="white" />
+                  <div>
+                    <p className="text-[10px] uppercase tracking-widest text-[#4059aa] font-bold">État du Flux</p>
+                    <p className="text-sm font-bold text-[#004ac6]">Interruption Détectée</p>
                   </div>
-                  <span className="text-sm font-bold text-foreground">Outillage</span>
-                </Link>
-                <Link className="group p-6 bg-muted rounded-xl hover:bg-slate-200 dark:hover:bg-slate-800 transition-all flex flex-col items-center text-center gap-3" to="/filtration">
-                  <div className="w-12 h-12 bg-background flex items-center justify-center rounded-full text-primary group-hover:scale-110 transition-transform">
-                    <Layers className="h-6 w-6" />
-                  </div>
-                  <span className="text-sm font-bold text-foreground">Matériaux</span>
-                </Link>
-                <Link className="group p-6 bg-muted rounded-xl hover:bg-slate-200 dark:hover:bg-slate-800 transition-all flex flex-col items-center text-center gap-3" to="/solutions">
-                  <div className="w-12 h-12 bg-background flex items-center justify-center rounded-full text-primary group-hover:scale-110 transition-transform">
-                    <TreePine className="h-6 w-6" />
-                  </div>
-                  <span className="text-sm font-bold text-foreground">Jardin</span>
-                </Link>
+                </div>
+              </div>
+
+              {/* Technical Annotation */}
+              <div className="absolute bottom-10 right-10 hidden md:block">
+                <div className="flex flex-col items-end gap-1">
+                  <div className="w-24 h-[1px] bg-[#004ac6]/40"></div>
+                  <p className="text-[10px] font-mono text-[#2563eb] bg-[#d5e3fc] px-2 py-1">COORD_REF: 404_NOT_FOUND</p>
+                </div>
               </div>
             </div>
+
+            {/* Decorative Background Elements */}
+            <div className="absolute -bottom-6 -left-6 w-48 h-48 bg-[#004ac6]/5 rounded-full blur-3xl -z-10"></div>
+            <div className="absolute -top-6 -right-6 w-64 h-64 bg-[#4059aa]/5 rounded-full blur-3xl -z-10"></div>
           </div>
         </div>
 
-        <div className="hidden lg:block w-1/3 relative overflow-hidden bg-muted">
-          <img
-            alt="High-end construction site"
-            className="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-60"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6yAMP5TBYBAS5yuJBzKmKfIxCGaVuSO3OvyHxBkMce_MAkogwdR6_t4cSpmVe5mZ-Hrp98RibXllbkp5yBDv87NddHAGtx-tfgWiinILJTq5jo1aEMOSLKd5lKOuVe4xLfzPPNrJAn46SEysYX9fdnYBhE3kDi_-470-hwh17itAwAXB9I6BSmTQeomvxcG6awE8Sd1q84blpNfvZ1GfjA52tkxYTBqzD0nKQzp1CZ60LR-WK_mUvKiv8za8hJtlbtAVoG-FN7CbE"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-background via-transparent to-transparent"></div>
-          <div className="absolute bottom-12 right-12 text-right">
-            <div className="bg-background/80 backdrop-blur-md p-6 rounded-xl border-l-4 border-primary">
-              <span className="text-4xl font-black text-primary block leading-none mb-2">404</span>
-              <span className="text-sm font-bold text-foreground uppercase tracking-widest">Zone en travaux</span>
+        {/* Quick Access Categories: Bento-ish Grid */}
+        <div className="mt-24 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <Link className="bg-[#eff4ff] p-8 rounded-2xl hover:bg-[#d5e3fc] transition-colors group cursor-pointer" to="/commercial-industriel">
+            <Factory className="text-[#004ac6] mb-4 h-8 w-8" />
+            <h3 className="text-xl font-bold mb-2 text-[#0d1c2e]">Industrie</h3>
+            <p className="text-sm text-[#434655]">Traitements à haut débit pour les infrastructures industrielles complexes.</p>
+            <div className="mt-6 flex items-center gap-2 text-[#004ac6] font-bold text-sm opacity-0 group-hover:opacity-100 transition-opacity">
+              Explorer <ArrowRight className="h-4 w-4" />
             </div>
-          </div>
+          </Link>
+          <Link className="bg-[#eff4ff] p-8 rounded-2xl hover:bg-[#d5e3fc] transition-colors group cursor-pointer" to="/adoucisseurs">
+            <Building2 className="text-[#004ac6] mb-4 h-8 w-8" />
+            <h3 className="text-xl font-bold mb-2 text-[#0d1c2e]">Résidentiel</h3>
+            <p className="text-sm text-[#434655]">Solutions d'adoucissement et de filtration pour le confort de l'habitat.</p>
+            <div className="mt-6 flex items-center gap-2 text-[#004ac6] font-bold text-sm opacity-0 group-hover:opacity-100 transition-opacity">
+              Explorer <ArrowRight className="h-4 w-4" />
+            </div>
+          </Link>
+          <Link className="bg-[#eff4ff] p-8 rounded-2xl hover:bg-[#d5e3fc] transition-colors group cursor-pointer" to="/service">
+            <Wrench className="text-[#004ac6] mb-4 h-8 w-8" />
+            <h3 className="text-xl font-bold mb-2 text-[#0d1c2e]">Maintenance</h3>
+            <p className="text-sm text-[#434655]">Services d'entretien périodique et pièces détachées d'origine.</p>
+            <div className="mt-6 flex items-center gap-2 text-[#004ac6] font-bold text-sm opacity-0 group-hover:opacity-100 transition-opacity">
+              Explorer <ArrowRight className="h-4 w-4" />
+            </div>
+          </Link>
         </div>
       </main>
 
