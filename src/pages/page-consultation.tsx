@@ -66,7 +66,7 @@ const PageConsultation = () => {
                     <div className="flex flex-col lg:flex-row items-start gap-16 lg:gap-24">
                         
                         {/* Left Side: Editorial Content */}
-                        <div className="w-full lg:w-5/12 space-y-12 animate-in fade-in slide-in-from-left duration-1000 lg:pt-56 pt-12">
+                        <div className="w-full lg:w-4/12 space-y-12 animate-in fade-in slide-in-from-left duration-1000 lg:pt-56 pt-24">
                              <div className="space-y-6">
                                  <p className="body-pro-max text-slate-600 max-w-xl text-left">
                                     Remplissez le formulaire à droite pour choisir le moment idéal. Nos experts vous contacteront pour une évaluation complète et sans engagement de vos besoins.
@@ -74,7 +74,7 @@ const PageConsultation = () => {
                              </div>
 
                              {/* Modern Benefit List with Icons - Staggered Reveal */}
-                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-8">
                                 {[
                                     { icon: Phone, title: "Appel de conseil", text: "15 min avec un expert certifié", delay: "delay-100" },
                                     { icon: ShieldCheck, title: "Zéro Engagement", text: "Conseils 100% impartiaux", delay: "delay-200" },
@@ -109,13 +109,13 @@ const PageConsultation = () => {
                         </div>
 
                         {/* Right Side: The Premium Form Card */}
-                        <div className="w-full lg:w-7/12 animate-in fade-in slide-in-from-right duration-1000">
+                        <div className="w-full lg:w-8/12 animate-in fade-in slide-in-from-right duration-1000">
                             <div className="relative">
                                 {/* Decorative Blobs */}
                                 <div className="absolute -top-20 -right-20 w-64 h-64 bg-blue-100 rounded-full blur-3xl opacity-50 -z-10 animate-pulse"></div>
                                 <div className="absolute -bottom-20 -left-20 w-48 h-48 bg-blue-50 rounded-full blur-3xl opacity-50 -z-10"></div>
                                 
-                                <div className="bg-white p-8 lg:p-12 rounded-[3.5rem] shadow-[0_22px_70px_4px_rgba(0,0,0,0.08)] border border-slate-50 relative overflow-hidden backdrop-blur-sm">
+                                <div className="bg-white p-4 md:p-8 lg:p-12 rounded-[2.5rem] lg:rounded-[3.5rem] shadow-[0_22px_70px_4px_rgba(0,0,0,0.08)] border border-slate-50 relative overflow-hidden backdrop-blur-sm">
                                     <div className="absolute top-0 left-0 w-2 h-full bg-blue-600"></div>
                                     <ConsultationFormSection isStandalone={true} />
                                 </div>
