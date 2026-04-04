@@ -31,9 +31,9 @@ const Contact = () => {
             <Header />
             <main>
                 <section className="relative lg:h-[850px] flex flex-col lg:items-center overflow-hidden bg-white lg:pt-32">
-                    <div className="absolute top-[120px] left-0 right-0 z-30 pointer-events-none hidden lg:block">
+                    <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none hidden lg:block">
                         <div className="container mx-auto px-4 lg:px-6 pointer-events-auto">
-                            <GlobalBreadcrumbs variant="dark" />
+                            <GlobalBreadcrumbs variant="light" />
                         </div>
                     </div>
                     <div className="relative lg:absolute lg:inset-0 h-[350px] sm:h-[450px] lg:h-full w-full lg:z-0 overflow-hidden">

@@ -87,15 +87,17 @@ const Hero = ({
               </div>
             )}
             <h1 
-              className="text-[32px] md:text-[46px] lg:text-[50px] leading-[1.1] mb-12 max-w-xl animate-in fade-in slide-in-from-left duration-1000"
+              className={cn(
+                "text-[32px] md:text-[46px] lg:text-[50px] leading-[1.1] mb-12 animate-in fade-in slide-in-from-left duration-1000",
+                singleLineTitle ? "max-w-4xl" : "max-w-xl"
+              )}
               style={{
                 fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
                 fontStyle: 'normal'
               }}
             >
-              <span className="italic font-light text-[#2563eb]">{highlightedTitle}</span>
-              <br />
-              <span className="font-bold text-[#1e3a8a]">{mainTitle}</span>
+              <span className={cn("italic font-light text-[#2563eb]", !singleLineTitle && "block")}>{highlightedTitle}</span>
+              <span className={cn("font-bold text-[#1e3a8a]", !singleLineTitle && "block")}>{singleLineTitle && " "}{mainTitle}</span>
             </h1>
             
             <p 
