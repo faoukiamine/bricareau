@@ -630,7 +630,7 @@ const FiltrationSousEvier = () => {
                                 <span className="inline-block px-4 py-1.5 bg-white text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.4em]">
                                     FINI LES BOUTEILLES EN PLASTIQUE
                                 </span>
-                                <h2 className="text-4xl md:text-6xl lg:text-5xl font-light text-white leading-[1.1] tracking-tighter">
+                                <h2 className="heading-pro-max text-white">
                                     Optez pour un filtre sous évier et savourez <br />
                                     <span className="text-white italic font-bold font-serif">une eau pure au robinet.</span>
                                 </h2>

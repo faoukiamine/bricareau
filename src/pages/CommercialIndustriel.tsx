@@ -333,7 +333,7 @@ const CommercialIndustriel = () => {
                         <span className="inline-block px-5 py-2 bg-blue-600/10 border border-blue-500/20 text-blue-400 rounded-full text-xs font-black uppercase tracking-[0.4em]">
                             PRÊT À OPTIMISER VOS OPÉRATIONS ?
                         </span>
-                        <h2 className="text-5xl lg:text-8xl font-bold text-white tracking-tighter leading-[0.9]">
+                        <h2 className="heading-pro-max text-white">
                             Élevez vos standards. <br/>
                             <span className="text-blue-400 italic font-light">Maîtrisez votre eau.</span>
                         </h2>

@@ -608,7 +608,7 @@ const Fontaines = () => {
                         <span className="inline-block px-4 py-1.5 bg-white text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.4em]">
                           L’HYDRATATION SUPÉRIEURE À PORTÉE DE MAIN
                         </span>
-                        <h2 className="text-4xl md:text-6xl lg:text-5xl font-light text-white leading-[1.1] tracking-tighter">
+                        <h2 className="heading-pro-max text-white">
                           Sublimez votre quotidien avec l'excellence <br />
                           <span className="text-white italic font-bold font-serif">de nos fontaines d'eau.</span>
                         </h2>

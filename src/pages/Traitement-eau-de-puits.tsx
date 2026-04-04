@@ -755,7 +755,7 @@ const TraitementEauDePuits = () => {
                 <span className="inline-block px-4 py-1.5 bg-white text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.4em]">
                   UNE EAU ENFIN SANS ODEUR NI TACHES
                 </span>
-                <h2 className="text-4xl md:text-6xl lg:text-5xl font-light text-white leading-[1.1] tracking-tighter">
+                <h2 className="heading-pro-max text-white">
                   Maîtrisez la qualité de votre eau de puits<br />et protégez votre famille
                   <span className="text-white italic font-bold font-serif"> contre les contaminants.</span>
                 </h2>

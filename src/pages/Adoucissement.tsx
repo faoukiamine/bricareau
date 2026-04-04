@@ -878,7 +878,7 @@ const Adoucissement = () => {
                                 <span className="inline-block px-4 py-1.5 bg-white text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.4em]">
                                     PRENEZ LE CONTRÔLE DE VOTRE EAU
                                 </span>
-                                <h2 className="text-4xl md:text-6xl lg:text-5xl font-light text-white leading-[1.1] tracking-tighter">
+                                <h2 className="heading-pro-max text-white">
                                     Prêt à retrouver la douceur <span className="text-white italic font-bold font-serif"> <br />d'une eau sans Calcaire ?</span>
                                 </h2>
                                 <p className="text-lg md:text-xl text-blue-100/80 max-w-2xl mx-auto font-light leading-relaxed">

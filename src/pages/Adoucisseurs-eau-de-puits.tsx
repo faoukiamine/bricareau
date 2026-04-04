@@ -60,6 +60,7 @@ const products = [
         name: "Adoucisseur d'eau de la série Sentinelle HE", 
         displayName: <>Adoucisseur d'eau de la série<br />Sentinelle HE</>, 
         desc: "Votre priorité est d'éradiquer le calcaire avec une précision chirurgicale, sans complexité inutile.", 
+        features: ["Gestion experte du fer ferreux", "Technologie haute efficacité", "Fiabilité sans compromis"],
         path: "/contact", 
         image: SentinelWaterSoftenerImg 
     },
@@ -67,6 +68,7 @@ const products = [
         name: "Adoucisseur d'eau de la série Sérénité HE", 
         displayName: <>Adoucisseur d'eau de la série<br />Sérénité HE</>, 
         desc: "Vous cherchez l'eau parfaite pour la peau, les cheveux et la consommation, en éliminant aussi le chlore.", 
+        features: ["Traitement calcaire & fer légué", "Eau soyeuse pour le corps", "Préservation de la plomberie"],
         isRecommended: true,
         path: "/contact", 
         image: SerenityWaterSoftenerImg 
@@ -75,6 +77,7 @@ const products = [
         name: "Adoucisseur d'eau de la série Infiniti HE", 
         displayName: <>Adoucisseur d'eau de la série<br />Infiniti HE</>, 
         desc: "Grandes familles ou besoins critiques : vous refusez toute interruption de douceur, 24h/24.", 
+        features: ["Performance 24/7 sans interruption", "Cycle alterné intelligent", "Solution haute capacité"],
         path: "/contact", 
         image: TwinAlternatingWaterSoftenerImg 
     },
@@ -146,51 +149,45 @@ const faqItems = [
 interface ComparisonItem {
     feature: string;
     'Sérénité HE': string;
-    'Sentinel HE': string;
+    'Sentinelle HE': string;
     'Infiniti HE': string;
 }
 
 const comparisonData: ComparisonItem[] = [
-    {
+   {
         feature: "Principe de Déclenchement",
         'Sérénité HE': "Se régénère à intervalles de temps fixes (ex: tous les 3 jours).",
-        'Sentinel HE': "Se régénère selon le volume d'eau réellement consommé.",
+        'Sentinelle HE': "Se régénère selon le volume d'eau réellement consommé.",
         'Infiniti HE': "Alterne entre deux bouteilles dès que l'une est saturée."
     },
     {
         feature: "Disponibilité d'Eau Douce",
         'Sérénité HE': "Interrompue pendant la régénération (souvent la nuit).",
-        'Sentinel HE': "Interrompue pendant la régénération (souvent la nuit).",
+        'Sentinelle HE': "Interrompue pendant la régénération (souvent la nuit).",
         'Infiniti HE': "Permanente (24h/24) sans aucune interruption."
     },
     {
         feature: "Efficacité (Sel & Eau)",
-        'Sérénité HE': "Modérée (environ 75-80% d'efficacité).",
-        'Sentinel HE': "Optimale (jusqu'à 95% d'efficacité).",
-        'Infiniti HE': "Maximale (jusqu'à 100% sans gaspillage)."
-    },
-    {
-        feature: "Coût d'Entretien (Annuel)",
-        'Sérénité HE': "Moyen ($)",
-        'Sentinel HE': "Bas ($$)",
-        'Infiniti HE': "Économique ($$$)"
+        'Sérénité HE': "Moyenne (consomme même si peu d'eau a été utilisée).",
+        'Sentinelle HE': "Optimale (ne se régénère que si nécessaire).",
+        'Infiniti HE': "Maximale (utilise la résine à 100% de sa capacité)."
     },
     {
         feature: "Profil Utilisateur Idéal",
         'Sérénité HE': "Consommation d'eau très stable et prévisible.",
-        'Sentinel HE': "Familles avec variations de consommation (invités, saisons).",
+        'Sentinelle HE': "Familles avec variations de consommation (invités, saisons).",
         'Infiniti HE': "Grosses consommations ou besoins critiques (gîtes, grandes familles)."
     },
     {
         feature: "Complexité Technique",
         'Sérénité HE': "Simple et très robuste.",
-        'Sentinel HE': "Électronique avancée avec capteur de débit.",
+        'Sentinelle HE': "Électronique avancée avec capteur de débit.",
         'Infiniti HE': "Système double nécessitant plus d'espace."
     },
     {
         feature: "Investissement Initial",
         'Sérénité HE': "Économique.",
-        'Sentinel HE': "Intermédiaire.",
+        'Sentinelle HE': "Intermédiaire.",
         'Infiniti HE': "Plus élevé."
     },
 ];
@@ -223,7 +220,7 @@ const AdoucisseursEauDePuits = () => {
             resourcesRef.current.scrollBy({ left: direction === 'left' ? -scrollAmount : scrollAmount, behavior: 'smooth' });
         }
     };
-    const [activeCol, setActiveCol] = React.useState(0);
+    const [activeCol, setActiveCol] = React.useState(1);
 
     useEffect(() => {
         document.title = "Adoucisseur d'eau de puits : Protection fer et calcaire";
@@ -413,7 +410,19 @@ const AdoucisseursEauDePuits = () => {
                                     <div className="p-10 space-y-6 flex flex-col flex-grow border-t border-transparent group-hover:border-blue-600 transition-all duration-500">
                                         <h3 className="text-2xl font-bold text-[#1e3a8a] text-center whitespace-pre-line">{p.displayName || p.name}</h3>
                                         <p className="text-slate-500 text-sm leading-relaxed text-center italic font-light">{p.desc}</p>
-                                        <div className="pt-6 flex items-center justify-end">
+                                        
+                                        <div className="space-y-4 pt-4 border-t border-slate-50">
+                                            {p.features?.map((f, idx) => (
+                                                <div key={idx} className="flex items-center gap-4 group/item">
+                                                    <div className="w-6 h-6 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0 group-hover:bg-blue-600 transition-colors duration-500">
+                                                        <CheckCircle2 className="w-3.5 h-3.5 text-blue-600 group-hover:text-white transition-colors" />
+                                                    </div>
+                                                    <span className="text-sm text-slate-600 font-medium group-hover:text-[#1e3a8a] transition-colors">{f}</span>
+                                                </div>
+                                            ))}
+                                        </div>
+
+                                        <div className="pt-6 mt-auto flex items-center justify-end">
                                             <div className="w-12 h-12 rounded-full bg-slate-50 flex items-center justify-center group-hover:bg-blue-600 transition-all shadow-sm group-hover:shadow-blue-200 text-blue-600 group-hover:text-white"><ArrowRight className="h-6 w-6" /></div>
                                         </div>
                                     </div>
@@ -447,10 +456,22 @@ const AdoucisseursEauDePuits = () => {
                                         <h3 className="text-xl font-bold text-[#1e3a8a] text-center leading-tight whitespace-pre-line">
                                             {p.displayName || p.name}
                                         </h3>
-                                        <p className="text-slate-500 text-xs leading-relaxed text-center italic font-light flex-grow">
+                                        <p className="text-slate-500 text-xs leading-relaxed text-center italic font-light">
                                             {p.desc}
                                         </p>
-                                        <div className="pt-4 flex items-center justify-center">
+
+                                        <div className="space-y-3 pt-4 border-t border-slate-50">
+                                            {p.features?.map((f, idx) => (
+                                                <div key={idx} className="flex items-center gap-3">
+                                                    <div className="w-5 h-5 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0">
+                                                        <CheckCircle2 className="w-3 h-3 text-blue-600" />
+                                                    </div>
+                                                    <span className="text-xs text-slate-600 font-medium">{f}</span>
+                                                </div>
+                                            ))}
+                                        </div>
+
+                                        <div className="pt-4 mt-auto flex items-center justify-center">
                                             <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all">
                                                 <ArrowRight className="h-5 w-5" />
                                             </div>
