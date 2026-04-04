@@ -169,9 +169,16 @@ const Contact = () => {
                                         </div>
                                         <div className="md:col-span-2 space-y-4 pt-4">
                                             <div className="flex items-start space-x-4 bg-slate-50 p-6 rounded-[2rem] border border-slate-100 transition-all hover:bg-slate-100/50">
-                                                <Checkbox id="consent" className="mt-1 border-slate-300 data-[state=checked]:bg-blue-600 data-[state=checked]:border-blue-600" />
-                                                <Label htmlFor="consent" className="text-xs leading-relaxed text-slate-500 font-light cursor-pointer select-none">
-                                                    En soumettant ce formulaire, j'accepte que mes données soient utilisées pour me recontacter dans le cadre de ma demande. Pour en savoir plus, consultez nos <NavLink to="/conditions-utilisation" className="text-blue-600 font-bold hover:underline">Conditions d'utilisation</NavLink> et notre <NavLink to="/politique-de-confidentialite" className="text-blue-600 font-bold hover:underline">Politique de confidentialité</NavLink>.
+                                                <Checkbox id="legal_consent" className="mt-1 border-slate-300 data-[state=checked]:bg-blue-600 data-[state=checked]:border-blue-600" required />
+                                                <Label htmlFor="legal_consent" className="text-xs leading-relaxed text-slate-500 font-light cursor-pointer select-none" style={{ textAlign: 'justify' }}>
+                                                    En cochant cette case ou en utilisant le site web Bricareau.com, vous reconnaissez avoir lu les <NavLink to="/conditions-utilisation" className="text-blue-600 font-bold hover:underline">Conditions générales</NavLink> et la <NavLink to="/politique-de-confidentialite" className="text-blue-600 font-bold hover:underline">Politique de confidentialité</NavLink>, les comprendre et accepter d'y être lié.*
+                                                </Label>
+                                            </div>
+
+                                            <div className="flex items-start space-x-4 bg-slate-50 p-6 rounded-[2rem] border border-slate-100 transition-all hover:bg-slate-100/50">
+                                                <Checkbox id="marketing_consent" className="mt-1 border-slate-300 data-[state=checked]:bg-blue-600 data-[state=checked]:border-blue-600" />
+                                                <Label htmlFor="marketing_consent" className="text-xs leading-relaxed text-slate-500 font-light cursor-pointer select-none">
+                                                    Je souhaite recevoir les prochaines communications de Bricareau. (Vous pouvez vous désabonner à tout moment.)
                                                 </Label>
                                             </div>
                                         </div>

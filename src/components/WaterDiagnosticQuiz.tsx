@@ -110,7 +110,9 @@ const WaterDiagnosticQuiz = () => {
         prenom: '',
         nom: '',
         phone: '',
-        email: ''
+        email: '',
+        legal_consent: false,
+        marketing_consent: false
     });
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -595,6 +597,31 @@ const WaterDiagnosticQuiz = () => {
                                         <Input placeholder="Nom" required className="h-12 rounded-xl border-slate-100 font-light" value={formData.nom} onChange={(e) => setFormData({ ...formData, nom: e.target.value })} />
                                         <Input type="tel" placeholder="Téléphone" required className="h-12 rounded-xl border-slate-100 font-light col-span-2" value={formData.phone} onChange={(e) => setFormData({ ...formData, phone: e.target.value })} />
                                         <Input type="email" placeholder="Email" required className="h-12 rounded-xl border-slate-100 font-light col-span-2" value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} />
+                                        
+                                        <div className="col-span-2 space-y-4 pt-2">
+                                            <div className="flex items-start gap-3 p-4 bg-slate-50 rounded-xl border border-slate-100 transition-all hover:bg-slate-100/50">
+                                                <Checkbox 
+                                                    id="legal_consent" 
+                                                    required 
+                                                    checked={formData.legal_consent}
+                                                    onCheckedChange={(checked) => setFormData({ ...formData, legal_consent: checked === true })}
+                                                />
+                                                <Label htmlFor="legal_consent" className="text-[10px] leading-relaxed text-slate-500 font-normal cursor-pointer select-none" style={{ textAlign: 'justify' }}>
+                                                    En cochant cette case ou en utilisant le site web Bricareau.com, vous reconnaissez avoir lu les Conditions générales et la Politique de confidentialité, les comprendre et accepter d'y être lié.*
+                                                </Label>
+                                            </div>
+
+                                            <div className="flex items-start gap-3 p-4 bg-slate-50 rounded-xl border border-slate-100 transition-all hover:bg-slate-100/50">
+                                                <Checkbox 
+                                                    id="marketing_consent" 
+                                                    checked={formData.marketing_consent}
+                                                    onCheckedChange={(checked) => setFormData({ ...formData, marketing_consent: checked === true })}
+                                                />
+                                                <Label htmlFor="marketing_consent" className="text-[10px] leading-relaxed text-slate-500 font-normal cursor-pointer select-none">
+                                                    Je souhaite recevoir les prochaines communications de Bricareau. (Vous pouvez vous désabonner à tout moment.)
+                                                </Label>
+                                            </div>
+                                        </div>
                                     </div>
 
                                     <div className="flex flex-col-reverse sm:flex-row items-center justify-center gap-4 pt-4">

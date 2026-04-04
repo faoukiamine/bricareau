@@ -20,7 +20,8 @@ const ContactEntreprises = () => {
     phone: "",
     reason: "",
     message: "",
-    acceptMarketing: false
+    acceptMarketing: false,
+    acceptTOC: false
   });
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -37,7 +38,8 @@ const ContactEntreprises = () => {
       phone: "",
       reason: "",
       message: "",
-      acceptMarketing: false
+      acceptMarketing: false,
+      acceptTOC: false
     });
   };
 
@@ -152,17 +154,29 @@ const ContactEntreprises = () => {
                   />
                 </div>
 
-                <div className="flex items-start gap-2">
-                  <Checkbox
-                    id="marketing"
-                    checked={formData.acceptMarketing}
-                    onCheckedChange={(checked) =>
-                      setFormData({ ...formData, acceptMarketing: checked as boolean })
-                    }
-                  />
-                  <Label htmlFor="marketing" className="text-sm font-normal cursor-pointer text-justify">
-                    J'accepte de recevoir des propositions commerciales et des informations sur les produits et services par mail et par téléphone.
-                  </Label>
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3 p-4 bg-slate-50 rounded-xl border border-border/50">
+                    <Checkbox
+                      id="toc"
+                      required
+                      checked={formData.acceptTOC}
+                      onCheckedChange={(checked) => setFormData({ ...formData, acceptTOC: checked === true })}
+                    />
+                    <Label htmlFor="toc" className="text-xs font-normal leading-relaxed text-muted-foreground cursor-pointer" style={{ textAlign: 'justify' }}>
+                      En cochant cette case ou en utilisant le site web Bricareau.com, vous reconnaissez avoir lu les Conditions générales et la Politique de confidentialité, les comprendre et accepter d'y être lié.*
+                    </Label>
+                  </div>
+
+                  <div className="flex items-start gap-3 p-4 bg-slate-50 rounded-xl border border-border/50">
+                    <Checkbox
+                      id="marketing"
+                      checked={formData.acceptMarketing}
+                      onCheckedChange={(checked) => setFormData({ ...formData, acceptMarketing: checked === true })}
+                    />
+                    <Label htmlFor="marketing" className="text-xs font-normal leading-relaxed text-muted-foreground cursor-pointer">
+                      Je souhaite recevoir les prochaines communications de Bricareau. (Vous pouvez vous désabonner à tout moment.)
+                    </Label>
+                  </div>
                 </div>
 
                 <Button type="submit" size="lg" className="w-fit px-8">

@@ -674,8 +674,8 @@ const TraitementEauDePuits = () => {
                                             {[
                                                 { name: "Filtres spécialisés", img: specializedFiltersImg, badge: "Sédiments & Fer", color: "bg-slate-500" },
                                                 { name: "Adoucisseurs", img: waterSoftenerImg, badge: "Calcaire & Fer", color: "bg-blue-600" },
-                                                { name: "Osmose inverse", img: drinkingWaterImg, badge: "Osmose Pure", color: "bg-emerald-600" },
-                                                { name: "Stérilisation UV", img: uvSystemImg, badge: "Stérilisation", color: "bg-amber-600" }
+                                                { name: "Osmose inverse", img: drinkingWaterImg, badge: "Eau salée", color: "bg-emerald-600" },
+                                                { name: "Stérilisation UV", img: uvSystemImg, badge: "Désinfection", color: "bg-amber-600" }
                                             ].map((m, i) => (
                                                 <th 
                                                     key={i} 

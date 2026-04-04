@@ -38,8 +38,9 @@ const formSchema = z.object({
         required_error: "Veuillez choisir une date" }),
     appointment_time: z.string({
         required_error: "Veuillez choisir une heure" }),
-    consent: z.boolean().refine(val => val === true, {
-        message: "Champs Obligatoire" })
+    legal_consent: z.boolean().refine(val => val === true, {
+        message: "Champs Obligatoire" }),
+    marketing_consent: z.boolean().optional().default(false)
 });
 
 const TIME_SLOTS = [
@@ -63,7 +64,8 @@ const WaterTestFormSection = ({ id }: { id?: string }) => {
             province: "",
             code_postal: "",
             water_test_kits: [],
-            consent: false
+            legal_consent: false,
+            marketing_consent: false
         }
     });
 
@@ -99,7 +101,7 @@ const WaterTestFormSection = ({ id }: { id?: string }) => {
 
         let fieldsToValidate: (keyof z.infer<typeof formSchema>)[] = [];
         if (step === 1) {
-            fieldsToValidate = ["prenom", "nom", "email", "phone", "address", "ville", "province", "code_postal", "consent"];
+            fieldsToValidate = ["prenom", "nom", "email", "phone", "address", "ville", "province", "code_postal", "legal_consent"];
         } else if (step === 2) {
             fieldsToValidate = ["water_test_kits"];
         } else if (step === 3) {
@@ -337,8 +339,8 @@ const WaterTestFormSection = ({ id }: { id?: string }) => {
                                                 </FormItem>
                                             )} />
                                         </div>
-                                        <div className="md:col-span-2">
-                                            <FormField control={form.control} name="consent" render={({ field }) => (
+                                        <div className="md:col-span-2 space-y-4">
+                                            <FormField control={form.control} name="legal_consent" render={({ field }) => (
                                                 <FormItem className="flex flex-row items-start space-x-3 space-y-0 p-4 bg-gray-50 rounded-xl border border-gray-100">
                                                     <FormControl>
                                                         <Checkbox
@@ -348,10 +350,25 @@ const WaterTestFormSection = ({ id }: { id?: string }) => {
                                                     </FormControl>
                                                     <div className="space-y-1 leading-none">
                                                         <FormLabel className="text-xs text-gray-600 font-normal leading-relaxed cursor-pointer block" style={{ textAlign: 'justify' }}>
-                                                            Je souhaite recevoir les prochaines communications de Bricareau. (Vous pouvez vous désabonner à tout moment.)<br />
                                                             En cochant cette case ou en utilisant le site web Bricareau.com, vous reconnaissez avoir lu les <Link to="/conditions-generales-utilisation" className="underline hover:text-blue-700 transition-colors">Conditions générales</Link> et la <Link to="/politique-de-confidentialite" className="underline hover:text-blue-700 transition-colors">Politique de confidentialité</Link>, les comprendre et accepter d'y être lié.*
                                                         </FormLabel>
                                                         <FormMessage />
+                                                    </div>
+                                                </FormItem>
+                                            )} />
+
+                                            <FormField control={form.control} name="marketing_consent" render={({ field }) => (
+                                                <FormItem className="flex flex-row items-start space-x-3 space-y-0 p-4 bg-gray-50 rounded-xl border border-gray-100">
+                                                    <FormControl>
+                                                        <Checkbox
+                                                            checked={field.value}
+                                                            onCheckedChange={field.onChange}
+                                                        />
+                                                    </FormControl>
+                                                    <div className="space-y-1 leading-none">
+                                                        <FormLabel className="text-xs text-gray-600 font-normal leading-relaxed cursor-pointer block" style={{ textAlign: 'justify' }}>
+                                                            Je souhaite recevoir les prochaines communications de Bricareau. (Vous pouvez vous désabonner à tout moment.)
+                                                        </FormLabel>
                                                     </div>
                                                 </FormItem>
                                             )} />
