@@ -13,6 +13,7 @@ interface HeroProps {
   ctaLink?: string;
   showPhone?: boolean;
   showBreadcrumbs?: boolean;
+  breadcrumbVariant?: "on-light" | "on-dark" | "light" | "dark";
   imageAlt?: string;
   badge?: string;
   singleLineTitle?: boolean;
@@ -31,6 +32,7 @@ const Hero = ({
   ctaLink = "/consultation",
   showPhone = true,
   showBreadcrumbs = false,
+  breadcrumbVariant = "on-light",
   imageAlt = "Solutions expertes en traitement d'eau résidentiel Bricareau",
   badge,
   singleLineTitle = false,
@@ -44,7 +46,7 @@ const Hero = ({
       {showBreadcrumbs && (
         <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none hidden lg:block">
           <div className="container mx-auto px-4 lg:px-6 pointer-events-auto">
-            <GlobalBreadcrumbs variant="light" />
+            <GlobalBreadcrumbs variant={breadcrumbVariant} />
           </div>
         </div>
       )}

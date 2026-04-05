@@ -126,6 +126,13 @@ const Entreprises = () => {
                   </div>
               </div>
           </div>
+
+          {/* Breadcrumbs - Hidden on Mobile, Absolute on Desktop */}
+          <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none hidden lg:block">
+              <div className="container mx-auto px-6 pointer-events-auto">
+                  <GlobalBreadcrumbs variant="light" />
+              </div>
+          </div>
         </section>
 
         {/* 2. Key Pillars of Productivity */}
@@ -230,11 +237,18 @@ const Entreprises = () => {
                             ))}
                         </ul>
 
-                        <div className="pt-8 text-left">
-                             <Button size="lg" className="rounded-full px-12 h-16 text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300" asChild>
-                                <a href="/contact">Évaluer vos besoins</a>
-                             </Button>
+                        <div className="flex gap-4 pt-10 animate-in fade-in slide-in-from-bottom duration-1000 delay-300">
+                            <Button size="lg" className="rounded-full h-14 px-10 text-base" asChild>
+                                <NavLink to="/contact-entreprises">Essayer nos fontaines gratuitement</NavLink>
+                            </Button>
                         </div>
+                    </div>
+                </div>
+
+                {/* Breadcrumbs - Hidden on Mobile, Absolute on Desktop */}
+                <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none hidden lg:block">
+                    <div className="container mx-auto px-6 pointer-events-auto">
+                        <GlobalBreadcrumbs variant="dark" />
                     </div>
                 </div>
             </div>

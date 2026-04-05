@@ -113,7 +113,7 @@ const Service = () => {
                     
                     <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none hidden lg:block">
                         <div className="container mx-auto px-6 pointer-events-auto">
-                            <GlobalBreadcrumbs variant="dark" />
+                            <GlobalBreadcrumbs variant="light" />
                         </div>
                     </div>
 

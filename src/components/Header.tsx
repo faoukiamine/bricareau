@@ -419,25 +419,25 @@ const Header = () => {
   ];
 
   const isCommercialPage = location.pathname.includes('/commercial-industriel');
-  const isEntreprisePage = location.pathname.includes('/entreprises');
+  const isEntreprisePage = location.pathname.includes('/entreprises') || location.pathname.includes('-entreprises');
 
   const entreprisesProductMenuItems: MenuItem[] = [
     {
       name: "Refroidisseurs d’eau",
-      href: "/fontaines",
+      href: "/refroidisseurs-eau-entreprises",
       hasMegamenu: true,
       megamenuCards: [
         {
           customIcon: waterdispensericonImg,
           title: "Fontaines Sans Bouteille",
           description: "Reliées au réseau, filtration intégrée pour une eau fraîche continue au bureau sans logistique de bouteilles.",
-          href: "/fontaines"
+          href: "/refroidisseurs-eau-entreprises"
         },
         {
           customIcon: drinkingwaterfountainiconImg,
           title: "Distributeurs Haute Capacité",
           description: "Solutions pour usines, cafétérias et grands lieux publics avec filtration UV optionnelle.",
-          href: "/fontaines"
+          href: "/refroidisseurs-eau-entreprises"
         },
       ],
       promo: {
@@ -448,30 +448,30 @@ const Header = () => {
     },
     {
       name: "Eau Pétillante",
-      href: "/fontaines",
+      href: "/eau-petillante-entreprises",
       hasMegamenu: false
     },
     {
       name: "Machines à glace",
-      href: "/fontaines",
+      href: "/machines-a-glace-entreprises",
       hasMegamenu: true,
       megamenuCards: [
         {
           customIcon: icemakericonImg,
           title: "Unités de Production de Glace",
           description: "Systèmes de glaçons haute performance pour vos réceptions d'affaires et salles de repos.",
-          href: "/fontaines"
+          href: "/machines-a-glace-entreprises"
         },
       ],
       promo: {
         title: "Une glace pure, une image de marque soignée.",
         image: promoImage4,
-        link: "/fontaines"
+        link: "/machines-a-glace-entreprises"
       }
     },
     {
        name: "Machines à café",
-       href: "/fontaines",
+       href: "/machines-a-cafe-entreprises",
        hasMegamenu: false
     },
     {

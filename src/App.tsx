@@ -67,12 +67,9 @@ import DesinfectionUV from "./pages/Systemes-de-desinfection-UV";
 import FiltreEauHauteEfficacite from "./pages/Filtre-eau-haute-efficacite";
 import Consultation from "./pages/page-consultation";
 import ContactForm from "./pages/Page-contact";
-// import RO6 from "./pages/RO-6";
-
 import FiltresDeRemplacement from "./pages/Filtres-de-remplacement";
 import Diagnostic from "./pages/Diagnostic";
 import OperatorDashboard from "./pages/OperatorDashboard";
-// import PourquoiLaLampeUV from "./pages/Blog pages/Pourquoi-la-lampe-UV-est-elle-indispensable-pour-votre-eau-de-puits";
 import TraitementUVNaturel from "./pages/Blog pages/Adoucisseur-deau- et-fosse-septique--Mythes-et-réalités";
 import FiltreDoucheBienfaits from "./pages/Blog pages/Adoucisseur-deau-portable-pour-VR";
 import NiveauDureteBesoin from "./pages/Blog pages/Adoucisseur avec sel ou sans sel";
@@ -82,12 +79,16 @@ import ConsommationEauAdoucisseurEcologique from "./pages/Blog pages/Consommatio
 import EffetsCachesEauDureElectromenagers from "./pages/Blog pages/Eau-dure-les-effets-caches-sur-vos-electromenagers";
 import EstCeSecuritaireBoireEauAdoucie from "./pages/Blog pages/Est-ce-securitaire-de-boire-de-leau-adoucie";
 import GoutDeChlorePourquoiLaVilleEnAjouteAutant from "./pages/Blog pages/Gout-de-chlore-pourquoi-la-ville-en-ajoute-autant";
-
 import PolitiqueConfidentialite from "./pages/Politique-de-Confidentialite";
 import ConditionsGeneralesUtilisation from "./pages/Conditions-Generales-Utilisation";
 import Desabonnement from "./pages/Desabonnement";
 import LandingResidential from "./pages/LandingResidential";
 import NotFound from "./pages/NotFound";
+
+import RefroidisseursEauEntreprises from "./pages/Refroidisseurs-eau-entreprises";
+import EauPetillanteEntreprises from "./pages/Eau-petillante-entreprises";
+import MachinesAGlaceEntreprises from "./pages/Machines-a-glace-entreprises";
+import MachinesACafeEntreprises from "./pages/Machines-a-cafe-entreprises";
 
 const queryClient = new QueryClient();
 
@@ -116,7 +117,6 @@ const App = () => (
           <Route path="/systemes-de-filtration-deau-sous-evier" element={<FiltrationSousEvier />} />
           <Route path="/systemes-de-desinfection-uv" element={<DesinfectionUV />} />
           <Route path="/filtre-eau-haute-efficacite" element={<FiltreEauHauteEfficacite />} />
-          {/* <Route path="/ro-6" element={<RO6 />} /> */}
           <Route path="/fontaines" element={<Fontaines />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/categorie/:categoryId" element={<BlogCategory />} />
@@ -180,12 +180,14 @@ const App = () => (
           <Route path="/est-ce-securitaire-de-boire-de-leau-adoucie" element={<EstCeSecuritaireBoireEauAdoucie />} />
           <Route path="/gout-de-chlore-pourquoi-la-ville-en-ajoute-autant" element={<GoutDeChlorePourquoiLaVilleEnAjouteAutant />} />
 
-
           <Route path="/filtres-de-remplacement" element={<FiltresDeRemplacement />} />
-
           <Route path="/diagnostic" element={<Diagnostic />} />
           <Route path="/operator" element={<OperatorDashboard />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          
+          <Route path="/refroidisseurs-eau-entreprises" element={<RefroidisseursEauEntreprises />} />
+          <Route path="/eau-petillante-entreprises" element={<EauPetillanteEntreprises />} />
+          <Route path="/machines-a-glace-entreprises" element={<MachinesAGlaceEntreprises />} />
+          <Route path="/machines-a-cafe-entreprises" element={<MachinesACafeEntreprises />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

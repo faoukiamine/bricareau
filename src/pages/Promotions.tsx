@@ -68,7 +68,7 @@ const Promotions = () => {
                 <section className="relative h-[650px] md:h-[750px] lg:h-[800px] flex flex-col items-center justify-center overflow-hidden bg-white group">
                     <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none hidden lg:block">
                         <div className="container mx-auto px-4 lg:px-6 pointer-events-auto">
-                            <GlobalBreadcrumbs variant="dark" />
+                            <GlobalBreadcrumbs variant="light" />
                         </div>
                     </div>
                     

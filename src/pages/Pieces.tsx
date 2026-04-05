@@ -160,8 +160,8 @@ const Pieces = () => {
                 <section className="relative h-[800px] flex flex-col items-center justify-center overflow-hidden bg-white group">
                     {/* Breadcrumbs Positioning - Fixed to top to match Home page */}
                     <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none hidden lg:block animate-in fade-in slide-in-from-top-4 duration-700">
-                        <div className="container mx-auto px-6 pointer-events-auto">
-                            <GlobalBreadcrumbs variant="dark" />
+                        <div className="container mx-auto px-4 lg:px-6 pointer-events-auto">
+                            <GlobalBreadcrumbs variant="light" />
                         </div>
                     </div>
 

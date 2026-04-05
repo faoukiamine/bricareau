@@ -14,17 +14,26 @@ import { categories } from "@/data/blogCategories";
 import { cn } from "@/lib/utils";
 
 interface GlobalBreadcrumbsProps {
-    variant?: "light" | "dark";
+    /** 
+     * theme of the breadcrumbs: 
+     * - "on-light": dark text for light backgrounds (default)
+     * - "on-dark": white text for dark backgrounds or image heroes
+     */
+    variant?: "on-light" | "on-dark" | "light" | "dark"; 
     className?: string;
 }
 
 const GlobalBreadcrumbs: React.FC<GlobalBreadcrumbsProps> = ({
-    variant = "light",
+    variant = "on-light",
     className,
 }) => {
     const location = useLocation();
     const { categoryId } = useParams();
     const pathnames = location.pathname.split("/").filter((x) => x);
+
+    // Map legacy names to new descriptive ones
+    const activeVariant = (variant === "light") ? "on-light" : (variant === "dark") ? "on-dark" : variant;
+    const isOnDark = activeVariant === "on-dark";
 
     const getLabel = (slug: string, isFromUrl: boolean, index?: number) => {
         // Check main labels first
@@ -76,12 +85,12 @@ const GlobalBreadcrumbs: React.FC<GlobalBreadcrumbsProps> = ({
         <div className="hidden lg:block">
             <Breadcrumb className={cn("mb-6 relative z-20", className)}>
                 <BreadcrumbList className={cn(
-                    isDark ? "text-slate-500 lg:text-white/60" : "text-slate-500"
+                    isOnDark ? "text-slate-500 lg:text-white/60" : "text-slate-500"
                 )}>
                     <BreadcrumbItem>
                         <BreadcrumbLink asChild className={cn(
                             "flex items-center gap-1 transition-colors",
-                            isDark ? "text-slate-600 hover:text-blue-600 lg:text-white/70 lg:hover:text-white" : "text-slate-600 hover:text-blue-600"
+                            isOnDark ? "text-slate-600 hover:text-blue-600 lg:text-white/70 lg:hover:text-white" : "text-slate-600 hover:text-blue-600"
                         )}>
                             <NavLink to="/">
                                 <Home className="w-3.5 h-3.5 mr-1" />
@@ -93,7 +102,7 @@ const GlobalBreadcrumbs: React.FC<GlobalBreadcrumbsProps> = ({
                     {breadcrumbItems.map((item, index) => (
                         <React.Fragment key={item.to + index}>
                             <BreadcrumbSeparator className={cn(
-                                isDark ? "text-slate-300 lg:text-white/30" : "text-slate-300"
+                                isOnDark ? "text-slate-300 lg:text-white/30" : "text-slate-300"
                             )}>
                                 <ChevronRight className="w-3.5 h-3.5" />
                             </BreadcrumbSeparator>
@@ -101,15 +110,15 @@ const GlobalBreadcrumbs: React.FC<GlobalBreadcrumbsProps> = ({
                                 {item.isLast || item.label === "Ressources" || item.label === "Support" ? (
                                     <BreadcrumbPage className={cn(
                                         "font-medium line-clamp-1 max-w-[200px] md:max-w-md",
-                                        isDark ? "text-slate-900 lg:text-white" : "text-slate-900",
-                                        (item.label === "Ressources" || item.label === "Support") && (isDark ? "lg:text-white/60" : "text-slate-500")
+                                        isOnDark ? "text-slate-900 lg:text-white" : "text-slate-900",
+                                        (item.label === "Ressources" || item.label === "Support") && (isOnDark ? "lg:text-white/60" : "text-slate-500")
                                     )}>
                                         {item.label}
                                     </BreadcrumbPage>
                                 ) : (
                                     <BreadcrumbLink asChild className={cn(
                                         "transition-colors",
-                                        isDark ? "text-slate-600 hover:text-blue-600 lg:text-white/70 lg:hover:text-white" : "text-slate-600 hover:text-blue-600"
+                                        isOnDark ? "text-slate-600 hover:text-blue-600 lg:text-white/70 lg:hover:text-white" : "text-slate-600 hover:text-blue-600"
                                     )}>
                                         <NavLink to={item.to}>{item.label}</NavLink>
                                     </BreadcrumbLink>
