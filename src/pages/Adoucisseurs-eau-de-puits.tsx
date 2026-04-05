@@ -727,7 +727,7 @@ const AdoucisseursEauDePuits = () => {
                         <span className="inline-block px-4 py-1.5 bg-white text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.4em]">
                           LE CONFORT RÉSIDENTIEL RÉINVENTÉ
                         </span>
-                        <h2 className="heading-pro-max text-white">
+                        <h2 className="font-light block leading-tight lg:leading-[52px] text-white">
                           Préservez votre foyer avec <br />
                           <span className="text-white italic font-bold font-serif">une eau d'une douceur absolue.</span>
                         </h2>

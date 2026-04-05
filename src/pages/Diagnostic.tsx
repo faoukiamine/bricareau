@@ -5,6 +5,7 @@ import WaterDiagnosticQuiz from "@/components/WaterDiagnosticQuiz";
 
 const Diagnostic = () => {
     useEffect(() => {
+        window.scrollTo(0, 0);
         document.title = "Diagnostic en Ligne | Évaluez votre Eau au Québec | Bricareau";
         const metaDesc = document.querySelector('meta[name="description"]');
         if (metaDesc) {

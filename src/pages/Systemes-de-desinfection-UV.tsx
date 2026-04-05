@@ -76,6 +76,18 @@ import ourteamstudyyourwaterImg from "@/assets/10271.jpg";
 import sterileWaterImg from "@/assets/1713.jpg";
 
 
+const HighEfficiencyIcon = ({ className }: { className?: string }) => (
+    <svg 
+        xmlns="http://www.w3.org/2000/svg" 
+        viewBox="0 -960 960 960" 
+        fill="currentColor"
+        className={className}
+    >
+        <path d="M130-240q-37.5 0-63.75-26.25T40-330v-300q0-37.5 26.25-63.75T130-720h620q37.5 0 63.75 26.25T840-630v300q0 37.5-26.25 63.75T750-240H130Zm0-60h620q12.75 0 21.38-8.63Q780-317.25 780-330v-300q0-12.75-8.62-21.38Q762.75-660 750-660H130q-12.75 0-21.37 8.62Q100-642.75 100-630v300q0 12.75 8.63 21.37Q117.25-300 130-300Zm740-87v-186h20q12 0 21 9t9 21v126q0 12-9 21t-21 9h-20Zm-740 57v-300h620v300H130Z"/>
+    </svg>
+);
+
+
 const DesinfectionUV = () => {
     const navigate = useNavigate();
     const [showAllFaqs, setShowAllFaqs] = React.useState(false);
@@ -221,7 +233,7 @@ const DesinfectionUV = () => {
                                     desc: "Aucun stockage, aucune manipulation de substances toxiques n'est requise. Sécurité intégrale.",
                                 },
                                 { 
-                                    icon: BatteryLow, title: "Haut Rendement", 
+                                    icon: HighEfficiencyIcon, title: "Haut Rendement", 
                                     desc: "Fonctionnement passif 24h/24 dont la consommation énergétique équivaut à celle d'une simple ampoule LED.",
                                 },
                                 {
@@ -295,7 +307,7 @@ const DesinfectionUV = () => {
                             {/* Content Column */}
                             <div className="space-y-10 order-1">
                                 <div className="space-y-6">
-                                    <h2 className="heading-pro-max text-white">
+                                    <h2 className="font-light block leading-tight lg:leading-[52px] text-white">
                                         Éliminez l'invisible : <br />
                                         <span className="text-blue-400 italic font-bold font-serif whitespace-nowrap">Protection contre 99,99%.</span>
                                     </h2>
@@ -826,7 +838,7 @@ const DesinfectionUV = () => {
                         <span className="inline-block px-4 py-1.5 bg-white text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.4em]">
                           LA PROTECTION ULTIME CONTRE LES BACTÉRIES
                         </span>
-                        <h2 className="heading-pro-max text-white">
+                        <h2 className="font-light block leading-tight lg:leading-[52px] text-white">
                           Éliminez 99,99 % des virus et des bactéries <br />
                           <span className="text-white italic font-bold font-serif">avec la stérilisation UV.</span>
                         </h2>

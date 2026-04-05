@@ -880,9 +880,9 @@ const Adoucissement = () => {
                                 <span className="inline-block px-4 py-1.5 bg-white text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.4em]">
                                     PRENEZ LE CONTRÔLE DE VOTRE EAU
                                 </span>
-                                <h2 className="heading-pro-max text-center text-white">
-                                    <span className="font-light block leading-tight">Prêt à retrouver la douceur</span>
-                                    <span className="italic font-bold block leading-tight">d'une eau sans Calcaire ?</span>
+                                <h2 className="font-light block leading-tight lg:leading-[52px] text-center text-white">
+                                    <span>Prêt à retrouver la douceur</span> <br />
+                                    <span className="italic font-bold font-serif">d'une eau sans Calcaire ?</span>
                                 </h2>
                                 <p className="text-lg md:text-xl text-blue-100/80 max-w-2xl mx-auto font-light leading-relaxed">
                                     Éliminez le tartre, protégez votre foyer et redécouvrez le confort d’une peau soyeuse. Contactez nos experts pour une analyse de dureté gratuite et une solution sur mesure.<br className="hidden md:block" />

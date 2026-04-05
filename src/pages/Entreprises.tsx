@@ -376,9 +376,9 @@ const Entreprises = () => {
             </div>
             <div className="container mx-auto px-6 relative z-10 text-center">
                 <div className="max-w-4xl mx-auto">
-                    <h2 className="heading-pro-max !text-white text-center mb-8">
-                        <span className="italic font-light text-blue-300 block tracking-tight">Modernisez votre bureau</span>
-                        <span className="font-bold block tracking-tight">Réinventez la pause eau.</span>
+                    <h2 className="font-light block leading-tight lg:leading-[52px] text-white text-center mb-8">
+                        <span className="italic font-light text-blue-300">Modernisez votre bureau</span> <br />
+                        <span className="font-bold font-serif">Réinventez la pause eau.</span>
                     </h2>
                     <p className="body-pro-max !text-white text-center mb-12 max-w-2xl mx-auto opacity-90 leading-relaxed">
                         Nos consultants sont spécialisés dans l'aménagement d'espaces d'hydratation haute performance. Profitez d'un essai gratuit de 7 jours pour votre équipe.

@@ -629,7 +629,7 @@ const WaterDiagnosticQuiz = () => {
                                             <ArrowLeft className="w-4 h-4 mr-2" /> Précédent
                                         </Button>
                                         <Button type="submit" disabled={isSubmitting} size="lg" className="rounded-full transition-all w-full sm:w-auto">
-                                            {isSubmitting ? "Envoi..." : "Générer ma prescription gratuite"}
+                                            {isSubmitting ? "Envoi..." : "Obtenir mon rapport"}
                                         </Button>
                                     </div>
                                 </form>
@@ -661,8 +661,21 @@ const WaterDiagnosticQuiz = () => {
                             </div>
 
                             <div className="flex flex-col items-center gap-4 pt-6 border-t border-slate-100">
-                                <Button size="lg" className="bg-slate-900 border-slate-900 text-white hover:bg-white hover:text-slate-900 rounded-full px-12 shadow-xl transition-all" onClick={() => window.location.href = '/contact'}>Prendre rendez-vous avec un expert</Button>
-                                <Button variant="ghost" onClick={() => { setIsSubmitted(false); setStep(1); }} className="text-slate-400 text-xs hover:text-blue-600 font-bold">Relancer le diagnostic</Button>
+                                <Button 
+                                    size="lg" 
+                                    className="w-full sm:w-auto"
+                                    onClick={() => window.location.href = '/contact'}
+                                >
+                                    Prendre rendez-vous avec un expert
+                                </Button>
+                                <Button 
+                                    variant="outline"
+                                    size="lg"
+                                    className="w-full sm:w-auto"
+                                    onClick={() => { setIsSubmitted(false); setStep(1); }}
+                                >
+                                    Relancer le diagnostic
+                                </Button>
                             </div>
                         </div>
                     )}

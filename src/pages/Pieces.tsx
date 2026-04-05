@@ -413,7 +413,16 @@ const Pieces = () => {
 
 /* Sub-component for Part Cards to keep main clean and manage animations */
 const PartCard = ({ item }: { item: any }) => (
-    <div className="group bg-white border border-slate-100 rounded-[3rem] overflow-hidden hover:shadow-2xl transition-all duration-700 hover:-translate-y-4 flex flex-col h-full cursor-pointer relative animate-in fade-in slide-in-from-bottom-12">
+    <div 
+        className="group bg-white rounded-3xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full cursor-pointer relative animate-in fade-in slide-in-from-bottom-12"
+        onClick={() => {
+            // For now, since there's no specific link for parts, we scroll to contact or show support
+            const contactSection = document.getElementById('contact-support');
+            if (contactSection) {
+                contactSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        }}
+    >
         {/* Availability Badge */}
         <div className="absolute top-6 right-6 z-20">
              <div className="bg-[#22c55e]/10 backdrop-blur-md px-4 py-1.5 rounded-full flex items-center gap-2 border border-[#22c55e]/30">
@@ -422,30 +431,28 @@ const PartCard = ({ item }: { item: any }) => (
              </div>
         </div>
 
-        <div className="relative h-72 overflow-hidden bg-slate-50/50 flex items-center justify-center p-12 transition-colors group-hover:bg-[#f0f9ff]/50">
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-600/0 via-blue-600/0 to-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+        {/* Product image */}
+        <div className="relative h-80 overflow-hidden bg-slate-50 flex items-center justify-center p-12">
             {item.image ? (
                 <img
                     src={item.image}
                     alt={`${item.name} - Bricareau`}
-                    className="max-h-full object-contain relative z-10 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-1000 ease-in-out mix-blend-multiply drop-shadow-lg"
+                    className="max-h-full object-contain relative z-10 group-hover:scale-110 transition-transform duration-700 mix-blend-multiply"
                 />
             ) : (
                 <Package className="h-20 w-20 text-slate-200 relative z-10 group-hover:text-blue-100 transition-colors" />
             )}
         </div>
-        <div className="p-8 space-y-4 flex flex-col flex-grow relative">
-            <h3 className="text-xl font-black text-[#1e3a8a] group-hover:text-[#2563eb] transition-colors leading-tight">
+
+        {/* Product info */}
+        <div className="p-8 space-y-4 flex flex-col flex-grow border-t-2 border-transparent group-hover:border-blue-600 transition-colors">
+            <h3 className="card-title group-hover:text-blue-600 transition-colors">
                 {item.name}
             </h3>
-            <div className="pt-4 mt-auto flex items-center justify-between">
-                <span className="text-xs font-black uppercase tracking-widest text-slate-400 group-hover:text-blue-400 transition-all">Consulter</span>
-                <div className="w-10 h-10 bg-slate-100 rounded-2xl flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-all">
-                    <ArrowRight className="w-5 h-5" />
-                </div>
+            
+            <div className="inline-flex items-center gap-2 text-blue-600 font-bold text-xs tracking-widest uppercase mt-auto group-hover:underline self-end">
+                <ArrowRight className="h-6 w-6 transform group-hover:translate-x-1 transition-transform" />
             </div>
-            {/* Hover Shine Effect */}
-            <div className="absolute bottom-0 left-0 h-1.5 w-0 bg-blue-600 transition-all duration-700 group-hover:w-full" />
         </div>
     </div>
 );

@@ -30,6 +30,7 @@ import serviceiconImg from "@/assets/services_5062832.png";
 
 interface MegamenuCard {
   customIcon?: string;
+  svgIcon?: React.ReactNode;
   title: string;
   description: string;
   href: string;
@@ -274,16 +275,26 @@ const Header = () => {
           href: "/pieces"
         },
         {
-          customIcon: faqiconImg,
-          title: "FAQ",
-          description: "Trouvez rapidement des réponses aux questions les plus fréquemment posées sur nos produits.",
-          href: "/faq"
+          svgIcon: (
+            <svg xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 -960 960 960" width="40" fill="currentColor">
+              <path d="M572-352q12-12 12-29t-12-29q-12-12-29-12t-29 12q-12 12-12 29t12 29q12 12 29 12t29-12Zm-54-114h47q2-29 8.5-43t32.5-39q27-26 37.5-45.4Q654-612.79 654-639q0-45.88-31.5-74.94Q591-743 540-743q-38 0-68 20.5T428-665l45 19q11-25 27.5-38t39.5-13q29.78 0 48.39 17T607-637q0 20-9 35t-32 32q-32 29-40 46.5t-8 57.5ZM260-200q-24 0-42-18t-18-42v-560q0-24 18-42t42-18h560q24 0 42 18t18 42v560q0 24-18 42t-42 18H260Zm0-60h560v-560H260v560ZM140-80q-24 0-42-18t-18-42v-620h60v620h620v60H140Zm120-740v560-560Z"/>
+            </svg>
+          ),
+          title: "Quiz",
+          description: "Trouvez le système de filtration d'eau parfait pour vos besoins en répondant à quelques questions simples.",
+          href: "/diagnostic"
         },
         {
           customIcon: serviceiconImg,
           title: "Service",
           description: "Planifiez un entretien ou une réparation avec nos techniciens certifiés.",
           href: "/service"
+        },
+              {
+          customIcon: faqiconImg,
+          title: "FAQ",
+          description: "Trouvez rapidement des réponses aux questions les plus fréquemment posées sur nos produits.",
+          href: "/faq"
         },
         {
           customIcon: blogiconImg,
@@ -839,9 +850,13 @@ const Header = () => {
                           onClick={() => setActiveMegamenu(null)}
                         >
                           <div className="flex-shrink-0 mt-0.5">
-                            {CustomIcon ? (
+                            {card.svgIcon ? (
+                              <div className="h-10 w-10 flex items-center justify-center text-blue-600">
+                                {card.svgIcon}
+                              </div>
+                            ) : card.customIcon ? (
                               <img
-                                src={CustomIcon}
+                                src={card.customIcon}
                                 alt={card.title}
                                 className="h-10 w-10 object-contain transition-all"
                                 style={{

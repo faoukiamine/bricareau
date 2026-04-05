@@ -5,9 +5,9 @@ const IdealBricareauCTA = () => {
         <section className="bg-[#2563EB] py-16 md:py-20">
             <div className="container mx-auto px-4">
                 <div className="max-w-3xl mx-auto text-center space-y-6">
-                    <h2 className="heading-pro-max text-white">
-                        <span className="italic font-light block leading-tight">La solution idéale Bricareau</span>
-                        <span className="font-bold block leading-tight">pour votre maison</span>
+                    <h2 className="font-light block leading-tight lg:leading-[52px] text-white">
+                        <span className="italic">La solution idéale Bricareau</span> <br />
+                        <span className="font-bold font-serif">pour votre maison</span>
                     </h2>
                     <p className="text-white/90">
                         Découvrez comment nos systèmes de traitement d'eau peuvent transformer votre quotidien

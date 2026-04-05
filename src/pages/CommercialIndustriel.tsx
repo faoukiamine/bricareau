@@ -237,9 +237,9 @@ const CommercialIndustriel = () => {
                 <div className="flex flex-col lg:flex-row items-center gap-24">
                     <div className="w-full lg:w-1/2 space-y-12">
                         <div className="space-y-6">
-                            <h2 className="heading-pro-max text-left text-white">
-                                <span className="italic font-light text-blue-400 block">Analyse Stratégique</span>
-                                <span className="font-bold block tracking-tight">Zéro compromis sur la <br/>continuité de service.</span>
+                            <h2 className="font-light block leading-tight lg:leading-[52px] text-left text-white">
+                                <span className="italic font-light text-blue-400">Analyse Stratégique</span> <br />
+                                <span className="font-bold font-serif whitespace-nowrap">Zéro compromis sur la continuité de service.</span>
                             </h2>
                             <p className="body-pro-max text-left !text-slate-400 max-w-xl">
                                 Une eau mal traitée est un risque financier majeur. Nous auditons vos infrastructures pour transformer une dépense de maintenance en un avantage compétitif.
@@ -350,9 +350,9 @@ const CommercialIndustriel = () => {
                         <span className="inline-block px-5 py-2 bg-blue-600/10 border border-blue-500/20 text-blue-400 rounded-full text-xs font-black uppercase tracking-[0.4em]">
                             PRÊT À OPTIMISER VOS OPÉRATIONS ?
                         </span>
-                        <h2 className="heading-pro-max text-white">
+                        <h2 className="font-light block leading-tight lg:leading-[52px] text-white">
                             Élevez vos standards. <br/>
-                            <span className="text-blue-400 italic font-light">Maîtrisez votre eau.</span>
+                            <span className="text-blue-400 italic font-bold font-serif">Maîtrisez votre eau.</span>
                         </h2>
                         <p className="text-xl lg:text-2xl text-slate-400 max-w-3xl mx-auto font-light leading-relaxed">
                             Ménagez vos équipements, réduisez vos coûts de maintenance et garantissez une qualité constante à chaque étape de votre processus.

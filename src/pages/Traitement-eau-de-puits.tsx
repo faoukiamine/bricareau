@@ -757,9 +757,9 @@ const TraitementEauDePuits = () => {
                 <span className="inline-block px-4 py-1.5 bg-white text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.4em]">
                   UNE EAU ENFIN SANS ODEUR NI TACHES
                 </span>
-                <h2 className="heading-pro-max text-center text-white">
-                  <span className="font-light block leading-tight">Maîtrisez la qualité de votre eau de puits</span>
-                  <span className="italic font-bold block leading-tight">et protégez votre famille contre les contaminants.</span>
+                <h2 className="font-light block leading-tight lg:leading-[52px] text-center text-white">
+                  <span>Maîtrisez la qualité de votre eau de puits</span> <br />
+                  <span className="italic font-bold font-serif">et protégez votre famille contre les contaminants.</span>
                 </h2>
                 <p className="text-lg md:text-xl text-blue-100/80 max-w-2xl mx-auto font-light leading-relaxed">
                     Le fer, le soufre et le calcaire ne sont pas une fatalité. Protégez votre santé et retrouvez le plaisir d'une eau pure, inodore et cristalline dès aujourd'hui.                </p>
