@@ -39,6 +39,12 @@ import ecoImpactImg4 from "@/assets/water-dispenser in office.jpg";
 import ecoImpactImg from "@/assets/kitchen1.webp";
 import ourteamstudyyourwaterImg from "@/assets/10271.jpg";
 
+// Sector images
+import officeSectorImg from "@/assets/water-dispenser in office.jpg";
+import industrySectorImg from "@/assets/hero_industrial_power.png";
+import clinicSectorImg from "@/assets/clinic_water_solution.png";
+import educationSectorImg from "@/assets/education_water_solution.png";
+
 interface B2BSolution {
     title: string;
     subtitle: string;
@@ -203,6 +209,41 @@ const RefroidisseursEauEntreprises = () => {
             desc: "Conçu pour les environnements exigeants. Robuste, haute capacité et filtration renforcée pour les zones à fort passage.",
             img: countertopFountainImg, // Reusing similar for placeholder
             features: ["Boîtier anti-choc", "Filtration sédiments 5 microns", "Débit 15L/heure (froid)", "Pédale de commande sans contact", "Résistance industrielle"]
+        }
+    ];
+
+    const sectors = [
+        {
+            title: "Bureaux & PME",
+            desc: "Améliorez le bien-être et la productivité de vos équipes avec une eau fraîche et pure accessible à tout moment.",
+            benefit: "Productivité",
+            color: "bg-blue-600",
+            icon: <Building2 className="w-6 h-6" />,
+            img: officeSectorImg
+        },
+        {
+            title: "Industries & Usines",
+            desc: "Des solutions robustes haute capacité conçues pour résister aux environnements exigeants et assurer l'hydratation massive.",
+            benefit: "Haute Capacité",
+            color: "bg-amber-600",
+            icon: <Zap className="w-6 h-6" />,
+            img: industrySectorImg
+        },
+        {
+            title: "Cliniques & Santé",
+            desc: "Une hygiène irréprochable avec filtration microbiologique avancée pour les patients et le personnel soignant.",
+            benefit: "Hygiène Certifiée",
+            color: "bg-emerald-500",
+            icon: <ShieldCheck className="w-6 h-6" />,
+            img: clinicSectorImg
+        },
+        {
+            title: "Éducation & Campus",
+            desc: "Encouragez l'hydratation saine des étudiants avec des fontaines sans contact rapides et faciles d'entretien.",
+            benefit: "Jeunesse & Santé",
+            color: "bg-pink-500",
+            icon: <Users className="w-6 h-6" />,
+            img: educationSectorImg
         }
     ];
 
@@ -387,25 +428,63 @@ const RefroidisseursEauEntreprises = () => {
                     </div>
                 </section>
 
-                {/* 5. SECTORS SECTION */}
-                <section className="py-24 bg-slate-50">
-                    <div className="container mx-auto px-6">
-                        <div className="text-center mb-16">
-                            <h2 className="text-3xl font-bold text-slate-950 tracking-tight">Des solutions adaptées à chaque milieu</h2>
-                            <p className="text-slate-500 mt-4 font-light italic">Que vous soyez une start-up ou une manufacture multi-sites.</p>
+                {/* 5. SECTORS SECTION - REDESIGNED TO MATCH FILTRATION PAGE */}
+                <section className="py-32 bg-white relative overflow-hidden">
+                    <div className="container mx-auto px-6 relative z-10">
+                        <div className="text-center max-w-4xl mx-auto mb-20">
+                            <span className="inline-block px-4 py-1 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black tracking-widest mb-6 uppercase">
+                                Expertise Multisectorielle
+                            </span>
+                            <h2 className="heading-pro-max text-center">
+                                <span className="italic font-light text-blue-600 block">Des solutions adaptées</span>
+                                <span className="font-bold text-slate-950 block">à chaque milieu professionnel.</span>
+                            </h2>
+                            <p className="body-pro-max text-center mt-6 mx-auto max-w-2xl">
+                                Que vous soyez une start-up créative ou une manufacture multi-sites, nous configurons nos fontaines pour répondre aux exigences spécifiques de votre secteur.
+                            </p>
                         </div>
-                        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-                            {[
-                                { name: "Bureaux & PME", icon: Building2 },
-                                { name: "Industries & Usines", icon: Zap },
-                                { name: "Cliniques & Santé", icon: ShieldCheck },
-                                { name: "Éducation & Campus", icon: Users }
-                            ].map((sector, i) => (
-                                <div key={i} className="bg-white p-8 rounded-3xl border border-slate-100 flex flex-col items-center gap-4 hover:shadow-xl hover:-translate-y-1 transition-all">
-                                    <div className="w-12 h-12 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center">
-                                        <sector.icon className="w-6 h-6" />
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                            {sectors.map((item, i) => (
+                                <div 
+                                    key={i} 
+                                    className="group relative h-[500px] rounded-[3rem] overflow-hidden border border-slate-100 bg-slate-50/50 cursor-pointer shadow-sm transition-all duration-700 hover:shadow-2xl hover:shadow-blue-200/50 hover:border-blue-100 hover:-translate-y-3"
+                                >
+                                    {/* background with slight zoom on hover */}
+                                    <div className="absolute inset-0 z-0 scale-105 group-hover:scale-110 transition-transform duration-[2000ms]">
+                                        <img 
+                                            src={item.img} 
+                                            alt={item.title} 
+                                            className="w-full h-full object-cover opacity-1 group-hover:opacity-40 transition-opacity grayscale group-hover:grayscale-0" 
+                                        />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-transparent" />
                                     </div>
-                                    <span className="font-bold text-slate-950 text-center">{sector.name}</span>
+
+                                    <div className="relative z-10 p-10 flex flex-col h-full justify-between">
+                                        <div className="space-y-6">
+                                            <div className="flex items-center justify-between">
+                                                <div className={`w-14 h-14 rounded-2xl ${item.color} text-white flex items-center justify-center shadow-lg transition-transform duration-500 group-hover:rotate-12`}>
+                                                    {item.icon}
+                                                </div>
+                                                <span className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 group-hover:text-blue-600 transition-colors">
+                                                    {item.benefit}
+                                                </span>
+                                            </div>
+                                            <h3 className="text-3xl font-bold text-slate-800 leading-[1.1] transition-all duration-500 group-hover:text-blue-700">
+                                                {item.title}
+                                            </h3>
+                                            <p className="body-pro-max text-sm leading-relaxed text-slate-600 opacity-80 group-hover:opacity-100 transition-all">
+                                                {item.desc}
+                                            </p>
+                                        </div>
+
+                                        <div className="flex items-center gap-2 text-blue-600 font-bold text-[10px] uppercase tracking-widest opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500">
+                                            Voir solutions <ChevronRight className="w-4 h-4" />
+                                        </div>
+                                    </div>
+
+                                    {/* Glow effect on hover */}
+                                    <div className="absolute -bottom-20 -right-20 w-40 h-40 bg-blue-400/20 rounded-full blur-[80px] opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
                                 </div>
                             ))}
                         </div>

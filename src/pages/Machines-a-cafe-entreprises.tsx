@@ -31,10 +31,9 @@ import {
     AccordionTrigger,
 } from "@/components/ui/accordion";
 
-// Reusing assets or mimicking the look
+// Reusing assets 
 import heroFountains from "@/assets/Fontaines d'eau.webp"; // Background
-import officeCoffeeImg from "@/assets/water-dispenser in office.jpg"; // For hero or section
-import officeLifeImg from "@/assets/10271.jpg"; // For collaboration section
+import officeCoffeeImg from "@/assets/water-dispenser in office.jpg"; 
 import bellucciBistroImg from "@/assets/bellucci-bistro.jpg";
 import saecoRoyalImg from "@/assets/saeco-royal-otc.jpg";
 import lacimbaliSLiteImg from "@/assets/lacimbali-s-lite.webp";
@@ -42,7 +41,7 @@ import juraX10Img from "@/assets/jura-x10-dark-inox.jpg";
 import rexS300ManualImg from "@/assets/rex-royal-s300-manual.png";
 import rexS2ManualImg from "@/assets/rex-royal-s2-manual.png";
 import rexS2AutomilkImg from "@/assets/rex-royal-s2-automilk.webp";
-import rexS300AutomilkImg from "@/assets/rex-royal-s300-automilk.png";
+import rexS300AutomilkImg from "@/assets/rex-royal-s300-automilk-pro.png";
 import nectaKreaImg from "@/assets/necta-krea-touch.jpg";
 import nectaKometaImg from "@/assets/necta-kometa.png";
 import rexS1AutomilkImg from "@/assets/rex-royal-s1-automilk.webp";
@@ -55,195 +54,173 @@ import gaggiaG150Img from "@/assets/gaggia-g150.jpg";
 import juraGigaX8Img from "@/assets/jura-giga-x8.webp";
 import juraGigaX8cImg from "@/assets/jura-giga-x8c.webp";
 
-
 const MachinesACafeEntreprises = () => {
     useEffect(() => {
         document.title = "Service de Café pour Entreprises | Solutions Caféine Pro | Bricareau";
         window.scrollTo(0, 0);
     }, []);
 
-    const [activeTab, setActiveTab] = useState("espresso");
-
+    // Reordered from smallest capacity to largest
     const coffeeSolutions = [
         {
             id: "bellucci-bistro",
-            category: "espresso",
             title: "Bellucci Bistro",
-            subtitle: "Machine à espresso automatique Bistro",
-            desc: "L'art du café à l'état pur. Une élégance sophistiquée avec un broyeur de précision pour vos espaces corporatifs.",
-            features: ["Écran tactile intuitif", "Broyeur intégré haute précision", "Mousseur à lait intégré"],
+            subtitle: "La plus compacte",
+            desc: "L'art du café à l'état pur dans un format ultra-compact. Parfait pour les bureaux de direction et espaces restreints.",
+            features: ["Écran tactile intuitif", "Broyeur de précision", "Design élégant"],
             img: bellucciBistroImg
         },
         {
             id: "saeco-royal-otc",
-            category: "espresso",
             title: "Saeco Royal OTC",
-            subtitle: "La performance quotidienne",
-            desc: "Un classique redéfini pour le bureau. Rapidité, robustesse et une interface conviviale pour tous vos espresso.",
-            features: ["Entretien simplifié", "Système One Touch Cappuccino", "Broyeur conique en acier"],
+            subtitle: "Classique polyvalent",
+            desc: "La robustesse SAECO éprouvée pour le bureau quotidien. Un espresso parfait en une seule touche.",
+            features: ["One Touch Cappuccino", "Maintenance facile", "Rapport qualité/prix imbattable"],
             img: saecoRoyalImg
         },
         {
-            id: "lacimbali-s-lite",
-            category: "espresso",
-            title: "LaCimbali S-Lite",
-            subtitle: "Technologie Italienne Compacte",
-            desc: "Un concentré de puissance dans un format compact. Idéal pour les boutiques ou les petits bureaux de prestige.",
-            features: ["Chaudière performante", "Interface tactile HD 10\"", "Production de mousse de qualité"],
-            img: lacimbaliSLiteImg
-        },
-        {
-            id: "jura-x10",
-            category: "grain",
-            title: "Jura X10 Dark Inox",
-            subtitle: "La référence suisse",
-            desc: "L'excellence helvétique au service du goût. Une versatilité incroyable pour des cafés spécialisés parfaits.",
-            features: ["Processus d'extraction Pulse (P.E.P.®)", "31 spécialités programmables", "Broyeur Professional Aroma"],
-            img: juraX10Img
-        },
-        {
-            id: "rex-royal-s300-manual",
-            category: "grain",
-            title: "Rex-Royal S300 Manual",
-            subtitle: "Tradition et Modernité (CST)",
-            desc: "Pour les puristes exigeants. Une machine qui offre un contrôle manuel précis tout en automatisant le complexe.",
-            features: ["Lait texturé manuellement", "Double broyeur haute performance", "Interface tactile personnalisée"],
-            img: rexS300ManualImg
-        },
-        {
-            id: "rex-royal-s2-manual",
-            category: "grain",
-            title: "Rex-Royal S2 Manual",
-            subtitle: "L'élégance ergonomique (CST)",
-            desc: "Une robustesse légendaire suisse. Conçue pour durer et offrir une qualité de grain exceptionnelle jour après jour.",
-            features: ["Corps en métaux nobles", "Écran tactile personnalisable", "Maintenance ultra-rapide"],
-            img: rexS2ManualImg
-        },
-        {
-            id: "rex-royal-s2-automilk",
-            category: "grain",
-            title: "Rex-Royal S2 Automilk",
-            subtitle: "Lait parfait automatisé (MCTI)",
-            desc: "La perfection dans chaque tasse. Le système Automilk transforme le lait en une mousse veloutée sans intervention.",
-            features: ["Système Automilk breveté", "Grains fraîchement moulus", "Refroidisseur à lait intégré"],
-            img: rexS2AutomilkImg
-        },
-        {
-            id: "rex-royal-s300-automilk",
-            category: "grain",
-            title: "Rex-Royal S300 Automilk",
-            subtitle: "Le summum du volume (MCTI)",
-            desc: "La bête de somme du bureau. Capable de gérer une affluence record sans jamais sacrifier la qualité.",
-            features: ["Vitesse de production XXL", "Nettoyage automatique certifié", "Interface professionnelle"],
-            img: rexS300AutomilkImg
-        },
-        {
-            id: "necta-krea",
-            category: "grain",
-            title: "Necta Krea Touch",
-            subtitle: "Design contemporain haut de gamme",
-            desc: "Une allure futuriste qui sublime votre bureau. Des boissons variées, du chocolat chaud riche aux espresso serrés.",
-            features: ["Cadre éclairé par LED", "Interface tactile conviviale", "Technologie d'infusion optimisée"],
-            img: nectaKreaImg
-        },
-        {
-            id: "necta-kometa",
-            category: "grain",
-            title: "Necta Kometa",
-            subtitle: "Performance et Polyvalence",
-            desc: "L'innovation accessible. Une solution de café complète pour les environnements de travail dynamiques.",
-            features: ["Compacte et puissante", "Menu riche et personnalisable", "Accès facile pour maintenance"],
-            img: nectaKometaImg
-        },
-        {
-            id: "rex-royal-s1-automilk",
-            category: "grain",
-            title: "Rex-Royal S1 Automilk",
-            subtitle: "Compact Automilk (MCT)",
-            desc: "Petite par la taille, grande par l'arôme. La solution idéale pour les bureaux exigus cherchant un lait parfait.",
-            features: ["Design Gain de place", "Système de lait automatisé", "Écran tactile couleur"],
-            img: rexS1AutomilkImg
-        },
-        {
-            id: "bellucci-caffe-bar",
-            category: "espresso",
-            title: "Bellucci Caffè Bar Plus",
-            subtitle: "Votre station café complète",
-            desc: "Imaginez un café bar professionnel dans votre espace de pause. Une polyvalence totale pour tous les goûts.",
-            features: ["Double chaudière ultra-rapide", "Compatible raccordement d'eau", "Bac à grains XXL"],
-            img: bellucciCaffeBarImg
-        },
-        {
             id: "jura-w8",
-            category: "espresso",
             title: "Jura W8 Dark Inox",
-            subtitle: "L'esprit de bureau premium",
-            desc: "Conçue pour durer. Une machine de service moyenne gamme avec des performances dignes des plus grandes Jura.",
-            features: ["Broyeur P.A.G.2+", "Écran tactile haute résolution", "Système de nettoyage automatique"],
+            subtitle: "L'élégance helvétique",
+            desc: "Toute la précision suisse pour environ 50 tasses/jour. Un café gourmet à chaque tasse.",
+            features: ["Nettoyage automatique", "31 spécialités", "P.E.P.® Extraction"],
             img: juraW8Img
         },
         {
             id: "saeco-magic-m2",
-            category: "espresso",
             title: "Saeco Magic M2 +",
-            subtitle: "La magie du café interactif",
-            desc: "Une expérience utilisateur sans précédent. Chaque sélection est un plaisir visuel et gustatif.",
-            features: ["Interface graphique riche", "Sorties réglables en hauteur", "Système de lait hygiénique"],
+            subtitle: "Expérience interactive",
+            desc: "Une interface riche et des sorties réglables en hauteur pour s'adapter à toutes les tasses.",
+            features: ["Interface graphique riche", "Sorties réglables", "Lait hygiénique"],
             img: saecoMagicImg
         },
         {
-            id: "saeco-idea",
-            category: "espresso",
-            title: "Saeco Idea Duo Restyle",
-            subtitle: "L'icône du café professionnel",
-            desc: "Une machine à café puissante et élégante, parfaite pour les environnements à haut débit et les connaisseurs.",
-            features: ["Double sortie pour service rapide", "Vapeur et eau chaude simultanées", "Logiciel de gestion avancée"],
-            img: saecoIdeaImg
+            id: "lacimbali-s-lite",
+            title: "LaCimbali S-Lite",
+            subtitle: "Prestige Compact",
+            desc: "Le savoir-faire italien dans une machine compacte de haute performance. Idéal pour les boutiques de luxe.",
+            features: ["Chaudière performante", "Écran HD 10\"", "Mousse de lait barista"],
+            img: lacimbaliSLiteImg
+        },
+        {
+            id: "rex-royal-s1-automilk",
+            title: "Rex-Royal S1 Automilk",
+            subtitle: "Petit volume Premium",
+            desc: "La qualité Rex-Royal dans un format gain de place avec le système de lait automatisé révolutionnaire.",
+            features: ["Design compact S1", "Lait automatisé MCT", "Écran couleur tactile"],
+            img: rexS1AutomilkImg
+        },
+        {
+            id: "jura-x10",
+            title: "Jura X10 Dark Inox",
+            subtitle: "La performance sans compromis",
+            desc: "Conçue pour durer, la X10 offre une versatilité impressionnante pour les bureaux exigeants.",
+            features: ["31 spécialités", "Broyeur Professional Aroma", "Réservoir eau extra-large"],
+            img: juraX10Img
+        },
+        {
+            id: "bellucci-caffe-bar",
+            title: "Bellucci Caffè Bar Plus",
+            subtitle: "Station Café Complète",
+            desc: "Transformez votre espace de pause en véritable café-bar avec cette station polyvalente.",
+            features: ["Double chaudière rapide", "Grand bac à grains", "Raccordement possible"],
+            img: bellucciCaffeBarImg
         },
         {
             id: "gaggia-concetto",
-            category: "espresso",
             title: "Gaggia Concetto Evo Duo",
-            subtitle: "L'héritage Gaggia au bureau",
-            desc: "Un hommage à l'espresso italien traditionnel avec une technologie de pointe pour une extraction parfaite.",
-            features: ["Groupes d'infusion haut rendement", "Interface capacitive Pro", "Qualité de mousse barista"],
+            subtitle: "L'héritage italien",
+            desc: "Performance et tradition se rencontrent pour offrir un débit constant de qualité professionnelle.",
+            features: ["Infusion haut rendement", "Interface capacitive Pro", "Design intemporel"],
             img: gaggiaConcettoImg
         },
         {
+            id: "necta-kometa",
+            title: "Necta Kometa",
+            subtitle: "L'innovation accessible",
+            desc: "Un menu riche dans une machine aux lignes modernes. La polyvalence incarnée pour l'entreprise dynamique.",
+            features: ["Menu personnalisable", "Maintenance simplifiée", "Design attractif"],
+            img: nectaKometaImg
+        },
+        {
+            id: "rex-royal-s2-manual",
+            title: "Rex-Royal S2 Manual",
+            subtitle: "Standard Suisse (CST)",
+            desc: "La robustesse légendaire pour un usage intensif. Une ergonomie parfaite pour la qualité en volume.",
+            features: ["Construction métal noble", "Ergonomie suisse", "Longévité exceptionnelle"],
+            img: rexS2ManualImg
+        },
+        {
+            id: "rex-royal-s2-automilk",
+            title: "Rex-Royal S2 Automilk",
+            subtitle: "Standard Pro (MCTI)",
+            desc: "Le best-seller suisse. Un lait parfait et une mouture précise pour un débit constant toute la journée.",
+            features: ["Lait Automilk", "Entretien certifié", "Fiabilité totale"],
+            img: rexS2AutomilkImg
+        },
+        {
+            id: "necta-krea",
+            title: "Necta Krea Touch",
+            subtitle: "Vitesse et Capacité",
+            desc: "Spécialement conçue pour le libre-service à haut débit avec un éclairage LED attractif.",
+            features: ["Cadre LED", "Infusion optimisée", "Boissons gourmandes variées"],
+            img: nectaKreaImg
+        },
+        {
             id: "gaggia-g150",
-            category: "espresso",
             title: "Gaggia G150",
-            subtitle: "Performance Industrielle",
-            desc: "La machine conçue pour les charges de travail intensives sans compromis sur la finesse de l'arôme.",
-            features: ["Structure robuste en métal", "Interface conviviale", "Rapidité d'exécution constante"],
+            subtitle: "Heavy Duty",
+            desc: "Une machine construite pour les environnements industriels et les cafeterias à fort achalandage.",
+            features: ["Structure métal robuste", "Débit intensif", "Rapidité constante"],
             img: gaggiaG150Img
         },
         {
+            id: "saeco-idea",
+            title: "Saeco Idea Duo Restyle",
+            subtitle: "Double performance",
+            desc: "Performance XXL avec double bec verseur pour servir deux tasses simultanément sans perte de qualité.",
+            features: ["Vapeur/Eau chaude simultanées", "Logiciel de gestion Pro", "Haut débit"],
+            img: saecoIdeaImg
+        },
+        {
+            id: "rex-royal-s300-manual",
+            title: "Rex-Royal S300 Manual",
+            subtitle: "Puriste Haut Volume (CST)",
+            desc: "Le summum du contrôle manuel pour les gros volumes. Pour ceux qui ne font aucun compromis.",
+            features: ["Lait texturé manuellement", "Double broyeur haute performance", "Volume de production élevé"],
+            img: rexS300ManualImg
+        },
+        {
+            id: "rex-royal-s300-automilk",
+            title: "Rex-Royal S300 Automilk",
+            subtitle: "Automate XXL (MCTI)",
+            desc: "La machine la plus puissante pour les cafétérias d'entreprise et les hôpitaux. Capacité monstre.",
+            features: ["Production record", "Systeme Automilk XXL", "Interface Expert"],
+            img: rexS300AutomilkImg
+        },
+        {
             id: "jura-giga-x8",
-            category: "grain",
             title: "Jura Giga X8",
-            subtitle: "La puissance ultime chez Jura",
-            desc: "La Giga X8 symbolise le luxe et la performance ultime. Deux moulins pour des mélanges personnalisés parfaits.",
-            features: ["2 broyeurs en céramique", "Buse de vapeur mobile", "Performance record"],
+            subtitle: "Luxe & Performance",
+            desc: "Double moulin céramique pour l'ultime qualité en haut débit. L'étoile de la gamme Jura.",
+            features: ["2 broyeurs céramique", "Buse de vapeur mobile", "Performance d'exception"],
             img: juraGigaX8Img
         },
         {
             id: "jura-giga-x8c",
-            category: "grain",
             title: "Jura Giga X8c",
-            subtitle: "Puissance avec raccordement direct",
-            desc: "Toute la force de la Giga X8 avec un raccordement direct à l'eau pour une autonomie totale et sans interruption.",
-            features: ["Raccordement d'eau fixe", "Large bac à marc", "Interface professionnelle experte"],
+            subtitle: "Autonomie Totale",
+            desc: "Le summum de la performance avec raccordement direct à l'eau pour une productivité ininterrompue.",
+            features: ["Raccordement d'eau direct", "Expertise helvétique", "Débit ininterrompu"],
             img: juraGigaX8cImg
         }
     ];
-
 
     return (
         <div className="min-h-screen bg-white font-sans selection:bg-blue-100 selection:text-blue-900">
             <Header />
             <main>
-                {/* 1. HERO SECTION - CULLIGAN INSPIRED BUT PRO MAX STYLE */}
+                {/* 1. HERO SECTION */}
                 <section className="relative min-h-[90vh] flex items-center pt-24 overflow-hidden bg-slate-950">
                     <div className="absolute inset-0 z-0">
                         <img 
@@ -255,7 +232,6 @@ const MachinesACafeEntreprises = () => {
                         <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/60 to-transparent" />
                     </div>
 
-                    {/* Breadcrumbs - Hidden on Mobile, Absolute on Desktop */}
                     <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none hidden lg:block">
                         <div className="container mx-auto px-6 pointer-events-auto">
                             <GlobalBreadcrumbs variant="dark" />
@@ -355,16 +331,18 @@ const MachinesACafeEntreprises = () => {
                     </div>
                 </section>
 
-                {/* 3. PRODUCT GRID - CULLIGAN STYLE CARDS */}
+                {/* 3. PRODUCT GRID */}
                 <section className="py-32 bg-slate-50 relative overflow-hidden">
                     <div className="container mx-auto px-6">
                         <div className="text-center max-w-3xl mx-auto mb-20 space-y-6">
+                            <div className="inline-block px-4 py-1 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black tracking-widest uppercase">
+                                Notre Collection PRO
+                            </div>
                             <h2 className="text-4xl lg:text-5xl font-bold text-slate-950 tracking-tight">
                                 La sélection <span className="italic font-light text-blue-600">Bricareau PRO.</span>
                             </h2>
                             <p className="text-slate-500 font-light text-lg">
-                                Choisissez parmi nos gammes à dosettes, à infusion ou nos cafetières à grains. 
-                                Une solution pour chaque taille d'entreprise.
+                                Classées par capacité : des solutions agiles pour PME aux automates haute performance pour cafétérias industrielles.
                             </p>
                         </div>
 
@@ -372,9 +350,9 @@ const MachinesACafeEntreprises = () => {
                             {coffeeSolutions.map((item, idx) => (
                                 <div key={idx} className="group bg-white rounded-[3.5rem] overflow-hidden border border-slate-100 shadow-[0_30px_60px_rgba(0,0,0,0.03)] hover:shadow-[0_45px_90px_rgba(0,0,0,0.08)] transition-all duration-700 hover:-translate-y-2">
                                     <div className="p-12 flex flex-col h-full">
-                                        <div className="w-full aspect-[4/3] bg-slate-50 rounded-[2.5rem] mb-10 overflow-hidden relative p-8">
-                                            <img src={item.img} alt={item.title} className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-[2s]" />
-                                            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                                        <div className="w-full aspect-square bg-slate-50/50 rounded-[2.5rem] mb-10 overflow-hidden relative p-6">
+                                            <img src={item.img} alt={item.title} className="w-full h-full object-contain mix-blend-multiply group-hover:scale-110 transition-transform duration-[2s]" />
+                                            <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                                         </div>
                                         
                                         <div className="flex-grow space-y-4">
@@ -392,14 +370,10 @@ const MachinesACafeEntreprises = () => {
                                             </div>
                                         </div>
 
-                                        <div className="mt-12 pt-8 border-t border-slate-50 flex items-center justify-between">
-                                            <Button variant="ghost" className="px-0 font-bold text-slate-950 hover:bg-transparent group/btn">
-                                                Détails techniques
-                                                <Plus className="ml-2 w-4 h-4 transition-transform group-hover/btn:rotate-90" />
-                                            </Button>
-                                            <Button size="lg" className="rounded-full h-14 px-8 bg-slate-900 hover:bg-blue-600 text-white transition-all duration-500">
-                                                Choisir
-                                            </Button>
+                                        <div className="mt-12 pt-8 border-t border-slate-50 flex items-center justify-end">
+                                            <div className="w-14 h-14 rounded-full bg-blue-50 flex items-center justify-center text-blue-600 hover:bg-blue-600 hover:text-white transition-all duration-500 cursor-pointer group/arrow shadow-sm">
+                                                <ArrowRight className="w-6 h-6 transition-transform group-hover/arrow:translate-x-1" />
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -408,7 +382,7 @@ const MachinesACafeEntreprises = () => {
                     </div>
                 </section>
 
-                {/* 4. FILTRATION ADVANTAGE SECTION (THE BRICAREAU DNA) */}
+                {/* 4. FILTRATION ADVANTAGE SECTION */}
                 <section className="py-32 bg-white flex items-center">
                     <div className="container mx-auto px-6">
                         <div className="flex flex-col lg:flex-row items-center gap-24">
@@ -450,41 +424,9 @@ const MachinesACafeEntreprises = () => {
                     </div>
                 </section>
 
-                {/* 5. FAQ SECTION - CULLIGAN ACCORDION STYLE */}
-                <section className="py-32 bg-slate-950 text-white">
-                    <div className="container mx-auto px-6">
-                        <div className="max-w-4xl mx-auto space-y-16">
-                            <div className="text-center space-y-6">
-                                <h2 className="text-4xl lg:text-5xl font-bold tracking-tight">
-                                    Foire aux questions
-                                </h2>
-                                <p className="text-slate-400 font-light italic">Tout ce que vous devez savoir sur le café au bureau.</p>
-                            </div>
-
-                            <Accordion type="single" collapsible className="w-full space-y-4">
-                                {[
-                                    { q: "Pourquoi choisir Bricareau comme fournisseur de café ?", a: "Nous combinons une expertise unique en filtration d'eau avec des équipements de café haut de gamme pour une expérience sans souci et un goût supérieur." },
-                                    { q: "Quelle machine devrais-je choisir pour mon équipe ?", a: "Cela dépend de votre effectif et de vos préférences (dosettes vs grains). Nos experts analysent vos besoins lors de l'estimation gratuite." },
-                                    { q: "L'entretien est-il inclus ?", a: "Oui, tous nos forfaits entreprises incluent l'entretien préventif, le détartrage et le support technique prioritaire." },
-                                    { q: "Proposez-vous du lait et du sucre ?", a: "Nous offrons une solution de gestion complète des stocks, incluant les essentiels du coin café." }
-                                ].map((faq, i) => (
-                                    <AccordionItem key={i} value={`faq-${i}`} className="border-b border-white/10 px-4 hover:bg-white/5 transition-colors rounded-2xl overflow-hidden">
-                                        <AccordionTrigger className="text-left py-8 text-lg font-bold hover:no-underline hover:text-blue-400 transition-colors">
-                                            {faq.q}
-                                        </AccordionTrigger>
-                                        <AccordionContent className="pb-8 text-slate-400 font-light leading-relaxed">
-                                            {faq.a}
-                                        </AccordionContent>
-                                    </AccordionItem>
-                                ))}
-                            </Accordion>
-                        </div>
-                    </div>
-                </section>
-
                 <TestimonialsSection />
 
-                {/* 6. FINAL CTA SECTION */}
+                {/* 5. FINAL CTA SECTION */}
                 <section className="py-32 bg-blue-600 relative overflow-hidden">
                     <div className="absolute inset-0 z-0 opacity-10">
                         <img src="https://images.unsplash.com/photo-1541167760496-1628856ab752?q=80&w=1920&auto=format&fit=crop" alt="Coffee beans" className="w-full h-full object-cover" />
