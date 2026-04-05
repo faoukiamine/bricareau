@@ -58,9 +58,6 @@ import {
 } from "@/components/ui/carousel";
 
 import heroImg from "@/assets/african-girl-stands-kitchen-drinks-water.jpg";
-import babyBottleImg from "@/assets/60ML-Natural-Feel-Mini-Nursing-Bottle-Caliber-for-Newborn-Baby-Drinking-Water-Milk-Fruit-Baby-Feeding.jpg";
-import smallHexImg from "@/assets/34168.jpg";
-import springWaterImg from "@/assets/pure-spring-water.png";
 import uvSystemImg2 from "@/assets/VH200-F10-265x300.jpg";
 import uvSystemImg3 from "@/assets/VH410-F20-200x300.jpg";
 import uvSystemImg4 from "@/assets/500x500_V-Arros-15-IHS-10_straight-1-300x300.jpg";
@@ -179,238 +176,98 @@ const DesinfectionUV = () => {
                         <div className="absolute inset-0 bg-gradient-to-b from-white via-white/40 to-white opacity-90"></div>
                     </div>
 
-                    <div className="w-full relative z-10 w-full relative">
-                        <div className="max-w-7xl mx-auto px-6 mb-16 lg:mb-24">
-                            <div className="max-w-4xl">
-                                <div className="flex items-center gap-4 mb-8">
-                                    <div className="h-[1px] w-12 bg-slate-900"></div>
-                                    <span className="text-slate-900 text-xs font-mono font-bold uppercase tracking-[0.2em]">
-                                        Analyse Technologique
-                                    </span>
-                                </div>
-                                 <h2 className="mb-8 heading-pro-max text-left">
-                                     <span className="italic font-light text-[#2563eb] block">Pourquoi la</span>
-                                     <span className="font-bold text-[#1e3a8a] block">Désinfection UV ?</span>
-                                 </h2>
-                                 <p className="text-lg text-slate-500 max-w-2xl font-light leading-relaxed">
-                                     Une ingénierie de précision paramétrée pour éradiquer 99,99% des micro-organismes sans aucun additif chimique.
-                                 </p>
+                    <div className="container mx-auto px-6 max-w-7xl relative z-10">
+                        <div className="max-w-4xl mb-24">
+                            <div className="flex items-center gap-4 mb-8">
+                                <div className="h-[1px] w-12 bg-slate-900"></div>
+                                <span className="text-slate-900 text-xs font-mono font-bold uppercase tracking-[0.2em]">
+                                    Analyse Technologique
+                                </span>
                             </div>
+                             <h2 className="mb-8 heading-pro-max text-left">
+                                 <span className="italic font-light text-[#2563eb] block">Pourquoi la</span>
+                                 <span className="font-bold text-[#1e3a8a] block">Désinfection UV ?</span>
+                             </h2>
+                             <p className="text-lg text-slate-500 max-w-2xl font-light leading-relaxed">
+                                 Une ingénierie de précision paramétrée pour éradiquer 99,99% des micro-organismes sans aucun additif chimique.
+                             </p>
                         </div>
 
-                        {/* Honeycomb / Hexagon Grid System */}
-                        {(() => {
-                            const uvBenefits = [
+                        {/* Architectural Grid (Swiss Style) */}
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 border-t border-l border-slate-200">
+                            {[
                                 { 
                                     icon: Leaf, title: "100% Naturel", 
-                                    desc: "Purification physique sans additifs chimiques. La minéralité de l'eau est conservée."
+                                    desc: "Purification physique sans additifs chimiques. La minéralité de l'eau est intégralement préservée.",
                                 },
                                 { 
                                     icon: Zap, title: "Action Instantanée", 
-                                    desc: "Éradication immédiate des pathogènes dans le sas UV-C."
+                                    desc: "Éradication immédiate des pathogènes lors du passage à travers le sas de rayonnement UV-C.",
                                 },
                                 { 
                                     icon: Award, title: "Qualité Clinique", 
-                                    desc: "Efficacité prouvée en laboratoire : neutralisation totale de l'ADN microbien."
+                                    desc: "Efficacité prouvée en laboratoire : neutralisation totale de l'ADN des micro-organismes.",
                                 },
                                 {
                                     iconSrc: personShieldSvg, isSvg: true, title: "Tolérance Zéro", 
-                                    desc: "Barrière infranchissable certifiée contre les kystes et bactéries exclus."
+                                    desc: "Barrière infranchissable certifiée contre les bactéries, virus et kystes parasitoïdes exclus.",
                                 },
                                 { 
                                     icon: CupSoda, title: "Goût Inaltéré", 
-                                    desc: "Sans composés chlorés, l'eau conserve son intégrité gustative et sa pureté."
+                                    desc: "Sans composés chlorés, l'eau conserve son intégrité gustative et sa fraîcheur pure.",
                                 },
                                 { 
                                     icon: ShieldCheck, title: "Zéro Particule Nocive", 
-                                    desc: "Aucun stockage ou manipulation de substances toxiques. Sécurité totale."
+                                    desc: "Aucun stockage, aucune manipulation de substances toxiques n'est requise. Sécurité intégrale.",
                                 },
                                 { 
                                     icon: BatteryLow, title: "Haut Rendement", 
-                                    desc: "Fonctionnement passif dont la consommation équivaut à une ampoule LED."
+                                    desc: "Fonctionnement passif 24h/24 dont la consommation énergétique équivaut à celle d'une simple ampoule LED.",
                                 },
                                 {
                                     iconSrc: resetWrenchSvg, isSvg: true, title: "Maintenance Réduite", 
-                                    desc: "Cycle optimisé : remplacement unique de la lampe ultraviolette une fois par an."
-                                }
-                            ];
-
-                            const hexGrid = [
-                                // Row 1 
-                                [
-                                    { type: "empty" }, 
-                                    { type: "image", src: babyBottleImg, dots: ['top', 'bottom-right'] }, 
-                                    { type: "content", content: uvBenefits[0], lines: ['top-right'], dots: ['top-right'] }, 
-                                    { type: "blue", dots: ['top'] }, 
-                                    { type: "empty" }, 
-                                    { type: "small", src: smallHexImg, dots: ['bottom'] }
-                                ],
-                                // Row 2 
-                                [
-                                    { type: "content", content: uvBenefits[1], dots: ['left-top'] }, 
-                                    { type: "image", src: uvSystemImg2 }, 
-                                    { type: "content", content: uvBenefits[2], dots: ['right-bottom'] }, 
-                                    { type: "empty" }, 
-                                    { type: "content", content: uvBenefits[3], lines: ['right-bottom'] }
-                                ],
-                                // Row 3
-                                [
-                                    { type: "empty" }, 
-                                    { type: "content", content: uvBenefits[4], dots: ['left-bottom'] }, 
-                                    { type: "blue", lines: ['bottom'] }, 
-                                    { type: "content", content: uvBenefits[7], dots: ['right-bottom'] }, 
-                                    { type: "small-blue" }
-                                ],
-                                // Row 4
-                                [
-                                    { type: "image", src: springWaterImg, dots: ['left-bottom'] }, 
-                                    { type: "content", content: uvBenefits[6] }, 
-                                    { type: "content", content: uvBenefits[5], dots: ['bottom'] }, 
-                                    { type: "empty" }
-                                ]
-                            ];
-
-                            const HexNode = ({ cx, cy }: { cx: string, cy: string }) => (
-                                <div className={`absolute ${cx} ${cy} -translate-x-1/2 -translate-y-1/2 w-[16px] h-[16px] rounded-full bg-[#1e3a8a] border-[3px] border-white z-20`} style={{ boxShadow: '0 2px 4px rgba(0,0,0,0.1)' }} />
-                            );
-
-                            const Hexagon = ({ item, colIndex }: { item: any; colIndex?: number }) => {
-                                const isBlue = item.type === "blue" || item.type === "blue-outline";
-                                const isContent = item.type === "content";
-                                const isSmall = item.type === "small" || item.type === "small-blue";
-                                const isImage = item.type === "image";
-                                const isEmpty = item.type === "empty";
-                                const clip = 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)';
-
-                                return (
-                                    <div className={`relative ${isEmpty ? 'invisible' : ''} w-[240px] h-[277px]`}>
-                                        
-                                        {/* Dots/Nodes */}
-                                        {item.dots?.includes('top') && <HexNode cx="left-1/2" cy="top-0" />}
-                                        {item.dots?.includes('top-right') && <HexNode cx="left-[100%]" cy="top-[25%]" />}
-                                        {item.dots?.includes('right-bottom') && <HexNode cx="left-[100%]" cy="top-[75%]" />}
-                                        {item.dots?.includes('bottom') && <HexNode cx="left-1/2" cy="top-[100%]" />}
-                                        {item.dots?.includes('left-bottom') && <HexNode cx="left-0" cy="top-[75%]" />}
-                                        {item.dots?.includes('left-top') && <HexNode cx="left-0" cy="top-[25%]" />}
-                                        
-                                        {/* Chemical Lines / Bonds */}
-                                        {item.lines?.includes('top-right') && (
-                                            <div className="absolute top-[25%] left-[100%] w-16 h-[2.5px] bg-[#1e3a8a]/30 origin-left -rotate-30 z-0">
-                                                <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-[20%] w-[12px] h-[12px] rounded-full bg-[#1e3a8a] border-[2px] border-white shadow-sm" />
-                                            </div>
-                                        )}
-                                        {item.lines?.includes('right-bottom') && (
-                                            <div className="absolute top-[75%] left-[100%] w-24 h-[2.5px] bg-[#1e3a8a]/30 origin-left rotate-30 z-0">
-                                                <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-[20%] w-[12px] h-[12px] rounded-full bg-[#1e3a8a] border-[2px] border-white shadow-sm" />
-                                            </div>
-                                        )}
-                                        {item.lines?.includes('bottom') && (
-                                            <div className="absolute top-[100%] left-[50%] h-20 w-[2.5px] bg-[#1e3a8a]/30 origin-top z-0">
-                                                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-[20%] w-[12px] h-[12px] rounded-full bg-[#1e3a8a] border-[2px] border-white shadow-sm" />
-                                            </div>
-                                        )}
-
-                                        {isSmall && (
-                                            <div className={`absolute inset-[30%] ${item.type === 'small-blue' ? 'bg-[#1e3a8a] opacity-90 shadow-sm' : 'bg-[#1e3a8a] p-[1px] opacity-100'}`} style={{ clipPath: clip }}>
-                                                {item.src ? (
-                                                    <img src={item.src} alt="" className="w-full h-full object-cover" style={{ clipPath: clip }} />
-                                                ) : (
-                                                    item.type !== 'small-blue' && <div className="w-full h-full bg-slate-50" style={{ clipPath: clip }}></div>
-                                                )}
-                                            </div>
-                                        )}
-
-                                        {!isSmall && !isEmpty && (
-                                            <div className="group absolute inset-0 transition-all duration-500 hover:scale-[1.05] hover:-translate-y-3 hover:z-40 cursor-pointer drop-shadow-[0_8px_15px_rgba(0,0,0,0.06)] hover:drop-shadow-[0_20px_35px_rgba(37,99,235,0.3)]">
-                                                <div 
-                                                    className="w-full h-full bg-[#1e3a8a] p-[4px] relative group-hover:bg-blue-600 transition-colors duration-500"
-                                                    style={{ clipPath: clip }}
-                                                >
-                                                    <div 
-                                                        className={`w-full h-full flex flex-col items-center justify-center text-center ${isContent || isImage ? 'bg-white' : 'bg-[#1e3a8a]'} relative z-10`}
-                                                        style={{ clipPath: clip }}
-                                                    >
-                                                        {isImage && (
-                                                            <>
-                                                                {/* Image fills the entire hex cell background */}
-                                                                <img src={item.src} alt="" className="absolute inset-0 w-full h-full object-cover opacity-100 group-hover:scale-110 transition-all duration-700" />
-                                                            </>
-                                                        )}
-                                                        
-                                                        {item.type === 'blue-outline' && (
-                                                            <div className="absolute inset-[6px] bg-white z-0" style={{ clipPath: clip }}>
-                                                                <div className="absolute inset-[3px] bg-[#1e3a8a] group-hover:bg-blue-600 transition-colors duration-500" style={{ clipPath: clip }}>
-                                                                    <div className="absolute inset-[1px] bg-white" style={{ clipPath: clip }}></div>
-                                                                </div>
-                                                            </div>
-                                                        )}
-
-                                                        {isContent && item.content && (
-                                                            <div className="z-10 flex flex-col items-center px-4 -mt-2">
-                                                                {/* Icon bounces and scales up on hover */}
-                                                                <div className="w-10 h-10 mb-3 flex items-center justify-center text-[#1e3a8a] group-hover:text-blue-600 group-hover:scale-110 group-hover:-translate-y-1 transition-all duration-300">
-                                                                    {item.content.isSvg ? (
-                                                                        <div
-                                                                            className="w-7 h-7 bg-current shrink-0"
-                                                                            style={{ maskImage: `url("${item.content.iconSrc}")`, WebkitMaskImage: `url("${item.content.iconSrc}")`, maskRepeat: 'no-repeat', maskPosition: 'center', maskSize: 'contain' }}
-                                                                        />
-                                                                    ) : (
-                                                                        <item.content.icon className="h-7 w-7 stroke-[1.5] shrink-0" />
-                                                                    )}
-                                                                </div>
-                                                                {/* Text colors shift dynamically */}
-                                                                <h3 className="text-[15px] font-bold text-slate-900 mb-2 tracking-tight leading-tight group-hover:text-blue-700 transition-colors duration-300">
-                                                                    {item.content.title}
-                                                                </h3>
-                                                                <p className="font-normal leading-tight text-slate-500 text-[12px] group-hover:text-slate-800 transition-colors duration-300">
-                                                                    {item.content.desc}
-                                                                </p>
-                                                            </div>
-                                                        )}
-                                                    </div>
-                                                </div>
-                                            </div>
+                                    desc: "Cycle d'entretien optimisé : remplacement unique de la lampe ultraviolette une fois par annuité.",
+                                },
+                            ].map((benefit, i) => (
+                                <div
+                                    key={i}
+                                    className="group relative p-10 border-b border-r border-slate-200 bg-white/40 backdrop-blur-sm hover:bg-white transition-all duration-500 flex flex-col h-full overflow-hidden"
+                                >
+                                    
+                                    <div className="w-12 h-12 mb-10 flex items-center justify-center text-slate-800 group-hover:text-blue-600 transition-colors duration-300 relative z-10">
+                                        {benefit.isSvg ? (
+                                            <div
+                                                className="w-7 h-7 bg-current shrink-0"
+                                                style={{
+                                                    maskImage: `url("${benefit.iconSrc}")`,
+                                                    WebkitMaskImage: `url("${benefit.iconSrc}")`,
+                                                    maskRepeat: 'no-repeat',
+                                                    WebkitMaskRepeat: 'no-repeat',
+                                                    maskPosition: 'center',
+                                                    WebkitMaskPosition: 'center',
+                                                    maskSize: 'contain',
+                                                    WebkitMaskSize: 'contain'
+                                                }}
+                                            />
+                                        ) : (
+                                            <benefit.icon className="h-7 w-7 stroke-[1.5] shrink-0" />
                                         )}
                                     </div>
-                                );
-                            };
-
-                            return (
-                                <div className="w-full relative flex justify-start pb-12 lg:pb-24 pl-0 min-[1600px]:justify-center">
-                                    {/* Desktop Molecular Graphic (No scrollbar, pure scaling) */}
-                                    <div className="hidden lg:block relative flex-shrink-0 origin-left scale-[0.6] min-[1200px]:scale-[0.85] xl:scale-100 pl-4 lg:pl-10">
-                                        <div className="flex flex-col items-start relative w-fit">
-                                            {hexGrid.map((row, rowIndex) => (
-                                                <div 
-                                                    key={rowIndex} 
-                                                    className="flex justify-start relative w-fit"
-                                                    style={{ 
-                                                        gap: '24px', 
-                                                        marginTop: rowIndex > 0 ? '-69px' : '0px',
-                                                        marginLeft: rowIndex % 2 === 1 ? '132px' : '0px',
-                                                        zIndex: 30 - rowIndex
-                                                    }}
-                                                >
-                                                    {row.map((item, i) => (
-                                                        <Hexagon key={`desktop-${rowIndex}-${i}`} item={item} colIndex={i} />
-                                                    ))}
-                                                </div>
-                                            ))}
-                                        </div>
+                                    
+                                    <div className="relative z-10 flex flex-col flex-grow mt-auto">
+                                        <h3 className="text-lg font-bold text-slate-900 mb-4 tracking-tight group-hover:text-blue-700 transition-colors">
+                                            {benefit.title}
+                                        </h3>
+                                        <p className="font-normal leading-relaxed text-slate-500 text-[14px]">
+                                            {benefit.desc}
+                                        </p>
                                     </div>
 
-                                    {/* Mobile/Tablet Simple Wrapping Honeycomb (No horizontal scroll needed) */}
-                                    <div className="flex lg:hidden flex-wrap justify-start gap-x-2 px-6">
-                                        {hexGrid.flat().filter(h => h.type === 'content' || h.type === 'image' || h.type === 'blue').map((item, i) => (
-                                            <div key={`mob-${i}`} className="mb-[-28px] transform scale-75 origin-top-left">
-                                                <Hexagon item={item} colIndex={i} />
-                                            </div>
-                                        ))}
-                                    </div>
+                                    {/* Precision corner accent */}
+                                    <div className="absolute bottom-0 left-0 w-0 h-[2px] bg-blue-600 group-hover:w-full transition-all duration-500 ease-out" />
                                 </div>
-                            );
-                        })()}
-
+                            ))}
+                        </div>
                     </div>
                 </section>
 
