@@ -45,7 +45,7 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import heroDrink from "@/assets/boire-eau-robinet.jpg";
 import drinkingWaterImg from "@/assets/Solutions d'eau potable.webp";
 import vectapureROImg from "@/assets/V3604RO.jpg";
-import freezelifeROImg from "@/assets/PX500_2.webp";
+import freezelifeROImg from "@/assets/67acea99-c085-4df5-b21f-e840244a30db.jpg";
 import sereneLiteImg from "@/assets/Système+de+filtration+Serene+Lite.webp";
 import specializedFiltersImg from "@/assets/Filtres d'eau spécialisés.webp";
 import waterSoftenerImg from "@/assets/Adoucisseurs d'eau.webp";
@@ -310,9 +310,96 @@ const StationEauPotable = () => {
                       <h3 className="text-xl font-bold text-[#1e3a8a] leading-tight group-hover:text-blue-600 transition-colors">{item.title}</h3>
                     </div>
                     <p className="text-slate-500 text-sm leading-relaxed font-light text-justify">{item.desc}</p>
-                    <button onClick={() => document.getElementById('purification-systems')?.scrollIntoView({ behavior: 'smooth' })} className="pt-4 flex items-center gap-2 text-blue-600 text-xs font-bold uppercase tracking-widest group-hover:gap-4 transition-all">
+                    <button onClick={() => document.getElementById('nos-produits')?.scrollIntoView({ behavior: 'smooth' })} className="pt-4 flex items-center gap-2 text-blue-600 text-xs font-bold uppercase tracking-widest group-hover:gap-4 transition-all">
                       La Barrière <ArrowRight className="w-4 h-4" />
                     </button>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* 3.5 NOS PRODUITS - Premium Catalog Grid */}
+        <section id="nos-produits" className="py-32 bg-slate-50/50 relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-100/30 rounded-full blur-[120px] -mr-64 -mt-64 z-0" />
+          
+          <div className="container mx-auto px-6 relative z-10">
+            <div className="text-center max-w-4xl mx-auto mb-20 space-y-4">
+              <span className="inline-block px-4 py-1.5 bg-blue-600 text-white rounded-full text-xs font-black uppercase tracking-widest mb-6">
+                La Gamme Bricareau Pure
+              </span>
+              <h2 className="mb-8 heading-pro-max text-center">
+                <span className="italic font-light text-[#2563eb] block">Nos systèmes de</span>
+                <span className="font-bold text-[#1e3a8a] block text-center">purification d'eau.</span>
+              </h2>
+              <p className="body-pro-max text-center mx-auto max-w-2xl px-4 lg:px-0">
+                Découvrez nos solutions de pointe, de la filtration compacte sous évier aux systèmes d'osmose inverse haute performance sans réservoir.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 max-w-7xl mx-auto">
+              {[
+                {
+                  title: "Vectapure NX",
+                  subtitle: "L'Essentiel de la Pureté",
+                  desc: "Un système à 4 étapes éprouvé, ultra-compact et efficace pour les budgets maîtrisés.",
+                  img: vectapureROImg,
+                  badge: "Série NX",
+                  color: "bg-blue-600",
+                  features: ["4 étapes", "75 GPD", "Changement des filtres facile "]
+                },
+                {
+                  title: "Essentiel",
+                  subtitle: "Le Choix des Familles",
+                  desc: "Notre best-seller à 6 étapes avec polissage final pour une eau d'une douceur incomparable.",
+                  img: drinkingWaterImg,
+                  badge: "Populaire",
+                  color: "bg-emerald-600",
+                  features: ["6 étapes", "Production 75 GPD", "Maintenance Facile"]
+                },
+                {
+                  title: "Sérénité Direct-Flow",
+                  subtitle: "Performance sans Réservoir",
+                  desc: "Débit instantané 600 GPD. Pas de réservoir encombrant, eau fraîche en continu à volonté.",
+                  img: freezelifeROImg,
+                  badge: "Vitesse XXL",
+                  color: "bg-amber-600",
+                  features: ["5 étapes", "600 GPD réels", "Compact"]
+                }
+              ].map((item, i) => (
+                <div key={i} className="group bg-white rounded-[3rem] p-8 border border-slate-100 shadow-[0_20px_50px_rgba(0,0,0,0.03)] hover:shadow-[0_45px_100px_rgba(0,0,0,0.1)] transition-all duration-700 hover:-translate-y-2 flex flex-col h-full">
+                  <div className="w-full aspect-square bg-slate-50/50 rounded-[2.5rem] mb-8 overflow-hidden relative p-4 flex items-center justify-center">
+                    <img src={item.img} alt={item.title} className="w-full h-full object-contain mix-blend-multiply group-hover:scale-110 transition-transform duration-[2s]" />
+                    <div className="absolute top-4 right-4">
+                      <div className={cn("px-4 py-1.5 rounded-full shadow-lg backdrop-blur-sm", item.color)}>
+                        <span className="text-[9px] font-black uppercase tracking-[0.2em] text-white italic">{item.badge}</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="flex-grow space-y-3">
+                    <div className="text-blue-600 font-bold text-[9px] uppercase tracking-[0.2em]">{item.subtitle}</div>
+                    <h3 className="text-2xl font-bold text-slate-900 tracking-tight leading-tight group-hover:text-blue-600 transition-colors">{item.title}</h3>
+                    <p className="text-slate-500 font-light text-sm leading-relaxed mb-6">{item.desc}</p>
+                    
+                    <div className="space-y-3 pt-4 border-t border-slate-50">
+                      {item.features.map((f, idx) => (
+                        <div key={idx} className="flex items-center gap-3">
+                          <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
+                          <span className="text-xs font-medium text-slate-600">{f}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="mt-10 pt-8 border-t border-slate-50 flex items-center justify-end">
+                    <div 
+                      onClick={() => navigate('/contact')}
+                      className="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center text-blue-600 hover:bg-blue-600 hover:text-white transition-all duration-500 cursor-pointer group/btn"
+                    >
+                      <ArrowRight className="w-5 h-5 transition-transform group-hover/btn:translate-x-1" />
+                    </div>
                   </div>
                 </div>
               ))}
