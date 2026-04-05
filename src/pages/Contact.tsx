@@ -1,3 +1,4 @@
+import React, { useEffect } from "react";
 import Header from "@/components/Header";
 import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 import Footer from "@/components/Footer";
@@ -9,6 +10,22 @@ import { NavLink } from "react-router-dom";
 import contactHero from "@/assets/118022.jpg";
 
 const Contact = () => {
+  useEffect(() => {
+    document.title = "Contactez Bricareau | Service Client Traitement d'Eau au Québec";
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+      metaDesc.setAttribute("content", "Besoin d'aide pour votre eau ? Contactez l'équipe Bricareau par téléphone, courriel ou via notre formulaire. Experts en traitement d'eau à votre service partout au Québec.");
+    }
+
+    // OG Tags
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) ogTitle.setAttribute("content", "Contactez Bricareau : Votre Expert Eau au Québec");
+    const ogDesc = document.querySelector('meta[property="og:description"]');
+    if (ogDesc) ogDesc.setAttribute("content", "Une question ? Un projet ? Notre service client est là pour vous accompagner. Contactez-nous pour une eau plus pure dès aujourd'hui.");
+    const ogUrl = document.querySelector('meta[property="og:url"]');
+    if (ogUrl) ogUrl.setAttribute("content", "https://bricareau.com/contact");
+  }, []);
+
   return (
     <div className="min-h-screen bg-background">
       <Header />

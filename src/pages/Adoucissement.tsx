@@ -137,17 +137,19 @@ const Adoucissement = () => {
 
 
     useEffect(() => {
-        document.title = "Adoucisseur d'eau : Adieu le calcaire et l'eau dure";
+        document.title = "Adoucisseur d'eau au Québec | Éliminez le Calcaire | Bricareau";
         const metaDesc = document.querySelector('meta[name="description"]');
         if (metaDesc) {
-            metaDesc.setAttribute("content", "Dites adieu au calcaire avec nos adoucisseurs d'eau haute performance. Profitez d'une peau plus douce et protégez vos appareils.");
+            metaDesc.setAttribute("content", "Protégez votre maison du calcaire avec nos adoucisseurs d'eau haute efficacité au Québec. Peau douce, linge éclatant et protection durable de vos appareils. Expertise Bricareau.");
         }
 
         // OG Tags
         const ogTitle = document.querySelector('meta[property="og:title"]');
-        if (ogTitle) ogTitle.setAttribute("content", "Adoucisseur d'eau : Éliminez le calcaire | Bricareau");
+        if (ogTitle) ogTitle.setAttribute("content", "Adoucisseur d'eau au Québec : Solutions Anti-Calcaire | Bricareau");
         const ogDesc = document.querySelector('meta[property="og:description"]');
-        if (ogDesc) ogDesc.setAttribute("content", "Une eau soyeuse pour toute la maison. Découvrez nos solutions d'adoucissement haute performance.");
+        if (ogDesc) ogDesc.setAttribute("content", "Dites adieu à l'eau dure. Découvrez nos adoucisseurs résidentiels pour une eau soyeuse et protéger votre plomberie dans tout votre foyer.");
+        const ogUrl = document.querySelector('meta[property="og:url"]');
+        if (ogUrl) ogUrl.setAttribute("content", "https://bricareau.com/adoucissement");
     }, []);
     return (
         <div className="min-h-screen bg-background font-sans text-slate-900">
@@ -878,8 +880,9 @@ const Adoucissement = () => {
                                 <span className="inline-block px-4 py-1.5 bg-white text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.4em]">
                                     PRENEZ LE CONTRÔLE DE VOTRE EAU
                                 </span>
-                                <h2 className="heading-pro-max text-white">
-                                    Prêt à retrouver la douceur <span className="text-white italic font-bold font-serif"> <br />d'une eau sans Calcaire ?</span>
+                                <h2 className="heading-pro-max text-center text-white">
+                                    <span className="font-light block leading-tight">Prêt à retrouver la douceur</span>
+                                    <span className="italic font-bold block leading-tight">d'une eau sans Calcaire ?</span>
                                 </h2>
                                 <p className="text-lg md:text-xl text-blue-100/80 max-w-2xl mx-auto font-light leading-relaxed">
                                     Éliminez le tartre, protégez votre foyer et redécouvrez le confort d’une peau soyeuse. Contactez nos experts pour une analyse de dureté gratuite et une solution sur mesure.<br className="hidden md:block" />

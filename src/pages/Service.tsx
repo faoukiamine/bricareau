@@ -55,8 +55,16 @@ const Service = () => {
         document.title = "Services & Entretien Bricareau | Expertise en Traitement d'Eau";
         const metaDesc = document.querySelector('meta[name="description"]');
         if (metaDesc) {
-            metaDesc.setAttribute("content", "Bénéficiez d'une maintenance experte pour vos adoucisseurs et systèmes de filtration. Mise en service, dépannage et contrats d'entretien Bricareau.");
+            metaDesc.setAttribute("content", "Bénéficiez d'une maintenance experte pour vos adoucisseurs et systèmes de filtration au Québec. Mise en service, dépannage et contrats d'entretien Bricareau.");
         }
+
+        // OG Tags
+        const ogTitle = document.querySelector('meta[property="og:title"]');
+        if (ogTitle) ogTitle.setAttribute("content", "Expertise Technique Bricareau : Votre Eau Entre de Bonnes Mains");
+        const ogDesc = document.querySelector('meta[property="og:description"]');
+        if (ogDesc) ogDesc.setAttribute("content", "Intervention experte et entretien certifié pour tous vos systèmes de traitement d'eau à travers le Québec.");
+        const ogUrl = document.querySelector('meta[property="og:url"]');
+        if (ogUrl) ogUrl.setAttribute("content", "https://bricareau.com/service");
     }, []);
 
     const services = [

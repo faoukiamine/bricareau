@@ -163,17 +163,19 @@ const FiltresTouteMaison = () => {
     };
 
     useEffect(() => {
-        document.title = "Filtres d'eau pour toute la maison | Filtration Point d'Entrée | Bricareau";
+        document.title = "Filtres d'eau pour toute la maison au Québec | Protection Intégrale | Bricareau";
         const metaDesc = document.querySelector('meta[name="description"]');
         if (metaDesc) {
-            metaDesc.setAttribute("content", "Protégez toute votre plomberie avec nos filtres d'eau pour toute la maison. Solutions efficaces contre le chlore, les sédiments et le fer au Canada.");
+            metaDesc.setAttribute("content", "Protégez toute votre plomberie avec nos filtres d'eau pour toute la maison au Québec. Solutions efficaces contre le chlore, les sédiments et le fer pour une eau pure partout.");
         }
 
         // OG Tags
         const ogTitle = document.querySelector('meta[property="og:title"]');
-        if (ogTitle) ogTitle.setAttribute("content", "Filtres d'eau pour toute la maison - Protection intégrale | Bricareau");
+        if (ogTitle) ogTitle.setAttribute("content", "Filtres d'eau pour toute la maison - Protection Intégrale Québec | Bricareau");
         const ogDesc = document.querySelector('meta[property="og:description"]');
-        if (ogDesc) ogDesc.setAttribute("content", "Une eau filtrée à chaque robinet. Découvrez nos systèmes Vortex, ChlorStop et Iron Shield.");
+        if (ogDesc) ogDesc.setAttribute("content", "Une eau filtrée à chaque robinet. Découvrez nos systèmes Vortex, ChlorStop et Iron Shield pour une protection totale de votre foyer.");
+        const ogUrl = document.querySelector('meta[property="og:url"]');
+        if (ogUrl) ogUrl.setAttribute("content", "https://bricareau.com/filtres-deau-pour-toute-la-maison");
     }, []);
 
     return (

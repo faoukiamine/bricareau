@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { MessageSquare, Users, Settings, Search, Send, User, BadgeCheck, Clock, CheckCircle2, MoreVertical, Phone, Mail, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -24,6 +24,29 @@ interface Message {
 }
 
 const OperatorDashboard = () => {
+    useEffect(() => {
+        document.title = "Tableau de Bord Opérateur | Bricareau";
+        const metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc) {
+            metaDesc.setAttribute("content", "Interface de gestion des conversations clients pour les opérateurs Bricareau.");
+        }
+
+        // Noindex for dashboard
+        let robotsMeta = document.querySelector('meta[name="robots"]');
+        if (!robotsMeta) {
+            robotsMeta = document.createElement('meta');
+            robotsMeta.setAttribute('name', 'robots');
+            document.head.appendChild(robotsMeta);
+        }
+        robotsMeta.setAttribute('content', 'noindex, nofollow');
+
+        // OG Tags
+        const ogTitle = document.querySelector('meta[property="og:title"]');
+        if (ogTitle) ogTitle.setAttribute("content", "Bricareau Operator Dashboard");
+        const ogUrl = document.querySelector('meta[property="og:url"]');
+        if (ogUrl) ogUrl.setAttribute("content", "https://bricareau.com/operator");
+    }, []);
+
     const [activeSession, setActiveSession] = useState<string | null>("1");
     const [sessions] = useState<ChatSession[]>([
         { id: "1", name: "Jean Dupont", lastMessage: "Quel est le prix pour un adoucisseur ?", time: "2 min", unread: 2, status: "online" },

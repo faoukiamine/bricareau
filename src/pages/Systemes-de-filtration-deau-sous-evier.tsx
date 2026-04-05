@@ -96,6 +96,8 @@ const FiltrationSousEvier = () => {
         if (ogTitle) ogTitle.setAttribute("content", "Filtration sous évier : Pureté et Confort | Bricareau");
         const ogDesc = document.querySelector('meta[property="og:description"]');
         if (ogDesc) ogDesc.setAttribute("content", "Profitez d'une eau saine et délicieuse avec nos solutions d'ultrafiltration Cristal Pro. Gain d'espace et performance.");
+        const ogUrl = document.querySelector('meta[property="og:url"]');
+        if (ogUrl) ogUrl.setAttribute("content", "https://bricareau.com/systemes-de-filtration-deau-sous-evier");
     }, []);
 
     const [resourceIndex, setResourceIndex] = React.useState(1);

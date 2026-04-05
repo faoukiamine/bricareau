@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
@@ -6,6 +7,22 @@ import { Button } from "@/components/ui/button";
 import heroImg from "@/assets/23568974.png";
 
 const LandingResidential = () => {
+    useEffect(() => {
+        document.title = "Solutions de Traitement d'Eau Résidentiel au Québec | Bricareau";
+        const metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc) {
+            metaDesc.setAttribute("content", "Expert en adoucisseurs d'eau et filtration résidentielle au Québec. Améliorez la santé de votre foyer avec une eau pure, sans calcaire ni contaminants.");
+        }
+
+        // OG Tags
+        const ogTitle = document.querySelector('meta[property="og:title"]');
+        if (ogTitle) ogTitle.setAttribute("content", "Eau Pure pour votre Foyer | Bricareau Résidentiel");
+        const ogDesc = document.querySelector('meta[property="og:description"]');
+        if (ogDesc) ogDesc.setAttribute("content", "Découvrez nos systèmes de filtration et adoucisseurs haute performance pour votre maison.");
+        const ogUrl = document.querySelector('meta[property="og:url"]');
+        if (ogUrl) ogUrl.setAttribute("content", "https://bricareau.com/residentiel");
+    }, []);
+
     return (
         <div className="min-h-screen bg-[#f0f9ff] text-[#1e3a8a] font-sans selection:bg-[#2563eb]/20 selection:text-[#2563eb]">
             <Header />

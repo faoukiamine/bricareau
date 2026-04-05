@@ -1,8 +1,24 @@
+import React, { useEffect } from "react";
 import Header from "@/components/Header";
 import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 import Footer from "@/components/Footer";
 
 const PolitiqueConfidentialite = () => {
+    useEffect(() => {
+        document.title = "Politique de Confidentialité | Bricareau Water Specialist";
+        const metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc) {
+            metaDesc.setAttribute("content", "Consultez notre politique de confidentialité pour comprendre comment Bricareau protège vos renseignements personnels conformément à la Loi 25 au Québec.");
+        }
+
+        // OG Tags
+        const ogTitle = document.querySelector('meta[property="og:title"]');
+        if (ogTitle) ogTitle.setAttribute("content", "Politique de Confidentialité - Bricareau Québec");
+        const ogDesc = document.querySelector('meta[property="og:description"]');
+        if (ogDesc) ogDesc.setAttribute("content", "Protection de vos données et respect de votre vie privée. Découvrez nos engagements en matière de sécurité des informations.");
+        const ogUrl = document.querySelector('meta[property="og:url"]');
+        if (ogUrl) ogUrl.setAttribute("content", "https://bricareau.com/politique-de-confidentialite");
+    }, []);
     return (
         <div className="min-h-screen bg-white text-[#1a3a5a]">
             <Header />

@@ -1,3 +1,4 @@
+import React, { useEffect } from "react";
 import Header from "@/components/Header";
 import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 import Footer from "@/components/Footer";
@@ -74,6 +75,22 @@ const solutions = [
 ];
 
 const Solutions = () => {
+  useEffect(() => {
+    document.title = "Nos Solutions de Traitement d'Eau au Québec | Bricareau";
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+      metaDesc.setAttribute("content", "Découvrez nos solutions complètes : adoucisseurs, filtration toute la maison, osmose inverse et traitement de puits. Expertise québécoise pour une eau pure.");
+    }
+
+    // OG Tags
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) ogTitle.setAttribute("content", "Solutions de Traitement d'Eau | Bricareau Québec");
+    const ogDesc = document.querySelector('meta[property="og:description"]');
+    if (ogDesc) ogDesc.setAttribute("content", "Améliorez la qualité de votre eau dès aujourd'hui avec nos technologies de pointe.");
+    const ogUrl = document.querySelector('meta[property="og:url"]');
+    if (ogUrl) ogUrl.setAttribute("content", "https://bricareau.com/solutions");
+  }, []);
+
   return (
     <div className="min-h-screen bg-background">
       <Header />

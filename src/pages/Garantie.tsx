@@ -1,3 +1,4 @@
+import React, { useEffect } from "react";
 import Header from "@/components/Header";
 import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 import Footer from "@/components/Footer";
@@ -5,6 +6,22 @@ import { Shield, CheckCircle, FileText, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Garantie = () => {
+    useEffect(() => {
+        document.title = "Garanties & Enregistrement | Protection Bricareau Québec";
+        const metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc) {
+            metaDesc.setAttribute("content", "Profitez de la meilleure protection pour votre système de traitement d'eau au Québec. Enregistrez votre garantie Bricareau en ligne et assurez votre sérénité.");
+        }
+
+        // OG Tags
+        const ogTitle = document.querySelector('meta[property="og:title"]');
+        if (ogTitle) ogTitle.setAttribute("content", "Protection Bricareau : Votre Qualité d'Eau Garantie");
+        const ogDesc = document.querySelector('meta[property="og:description"]');
+        if (ogDesc) ogDesc.setAttribute("content", "Enregistrement facile et support complet pour tous nos systèmes. Garantissez la performance durable de votre installation.");
+        const ogUrl = document.querySelector('meta[property="og:url"]');
+        if (ogUrl) ogUrl.setAttribute("content", "https://bricareau.com/garantie");
+    }, []);
+
     const warranties = [
         {
             title: "Garantie sur les produits",

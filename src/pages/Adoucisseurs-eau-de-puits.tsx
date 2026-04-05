@@ -57,30 +57,32 @@ import laundryImg from "@/assets/302731406_443870381116589_3770801709209607894_n
 
 const products = [
     { 
+        name: "Adoucisseur d'eau de la série Sérénité HE", 
+        displayName: <>Adoucisseur d'eau de la série<br />Sérénité HE</>, 
+        desc: "Vous cherchez l'eau parfaite pour la peau, les cheveux et la consommation, en éliminant aussi le chlore.", 
+        features: ["Traitement calcaire & fer légué", "Eau soyeuse pour le corps", "Préservation de la plomberie"],
+        path: "/contact",
+        image: SerenityWaterSoftenerImg,
+        isRecommended: true
+    },
+    { 
         name: "Adoucisseur d'eau de la série Sentinelle HE", 
         displayName: <>Adoucisseur d'eau de la série<br />Sentinelle HE</>, 
         desc: "Votre priorité est d'éradiquer le calcaire avec une précision chirurgicale, sans complexité inutile.", 
         features: ["Gestion experte du fer ferreux", "Technologie haute efficacité", "Fiabilité sans compromis"],
         path: "/contact", 
-        image: SentinelWaterSoftenerImg 
-    },
-    { 
-        name: "Adoucisseur d'eau de la série Sérénité HE", 
-        displayName: <>Adoucisseur d'eau de la série<br />Sérénité HE</>, 
-        desc: "Vous cherchez l'eau parfaite pour la peau, les cheveux et la consommation, en éliminant aussi le chlore.", 
-        features: ["Traitement calcaire & fer légué", "Eau soyeuse pour le corps", "Préservation de la plomberie"],
-        isRecommended: true,
-        path: "/contact", 
-        image: SerenityWaterSoftenerImg 
+        image: SentinelWaterSoftenerImg,
+        isRecommended: false
     },
     { 
         name: "Adoucisseur d'eau de la série Infiniti HE", 
         displayName: <>Adoucisseur d'eau de la série<br />Infiniti HE</>, 
         desc: "Grandes familles ou besoins critiques : vous refusez toute interruption de douceur, 24h/24.", 
-        features: ["Performance 24/7 sans interruption", "Cycle alterné intelligent", "Solution haute capacité"],
+        features: ["Performance 24/7", "Cycle alterné", "Solution haute capacité"],
         path: "/contact", 
-        image: TwinAlternatingWaterSoftenerImg 
-    },
+        image: TwinAlternatingWaterSoftenerImg,
+        isRecommended: false
+    }
 ];
 
 const faqItems = [
@@ -220,14 +222,22 @@ const AdoucisseursEauDePuits = () => {
             resourcesRef.current.scrollBy({ left: direction === 'left' ? -scrollAmount : scrollAmount, behavior: 'smooth' });
         }
     };
-    const [activeCol, setActiveCol] = React.useState(1);
+    const [activeCol, setActiveCol] = React.useState(0);
 
     useEffect(() => {
-        document.title = "Adoucisseur d'eau de puits : Protection fer et calcaire";
+        document.title = "Adoucisseur d'eau de puits au Québec | Fer et Calcaire | Bricareau";
         const metaDesc = document.querySelector('meta[name="description"]');
         if (metaDesc) {
-            metaDesc.setAttribute("content", "Protégez votre maison et vos appareils avec nos adoucisseurs d'eau spécialisés pour puits privés. Élimination efficace du fer et du calcaire.");
+            metaDesc.setAttribute("content", "Solutions expertes pour l'eau de puits au Québec. Nos adoucisseurs haute performance éliminent efficacement le calcaire et le fer ferreux pour protéger votre santé et votre plomberie.");
         }
+
+        // OG Tags
+        const ogTitle = document.querySelector('meta[property="og:title"]');
+        if (ogTitle) ogTitle.setAttribute("content", "Adoucisseur d'eau de puits au Québec : Protection contre le Fer | Bricareau");
+        const ogDesc = document.querySelector('meta[property="og:description"]');
+        if (ogDesc) ogDesc.setAttribute("content", "Retrouvez une eau douce et pure de votre puits. Protection maximale contre le fer, le calcaire et les minéraux pour tout votre foyer.");
+        const ogUrl = document.querySelector('meta[property="og:url"]');
+        if (ogUrl) ogUrl.setAttribute("content", "https://bricareau.com/adoucisseurs-eau-de-puits");
     }, []);
 
     return (
@@ -524,8 +534,8 @@ const AdoucisseursEauDePuits = () => {
                                                 Critères de Performance
                                             </th>
                                             {[
-                                                { name: "Sentinelle HE", img: SentinelWaterSoftenerImg, badge: "Efficacité Pure", color: "bg-emerald-600" },
                                                 { name: "Sérénité HE", img: SerenityWaterSoftenerImg, badge: "Choix des Familles", color: "bg-blue-600" },
+                                                { name: "Sentinelle HE", img: SentinelWaterSoftenerImg, badge: "Efficacité Pure", color: "bg-emerald-600" },
                                                 { name: "Infiniti HE", img: TwinAlternatingWaterSoftenerImg, badge: "Performance 24/7", color: "bg-indigo-700" }
                                             ].map((m, i) => (
                                                 <th 
@@ -559,7 +569,7 @@ const AdoucisseursEauDePuits = () => {
                                                 <td className="p-6 md:p-10 font-bold text-[#1e3a8a] bg-white sticky left-0 z-30 border-r border-slate-50 drop-shadow-sm lg:drop-shadow-none text-[12px] md:text-sm italic group-hover:text-blue-600 transition-colors">
                                                     {row.feature}
                                                 </td>
-                                                {["Sentinelle HE", "Sérénité HE", "Infiniti HE"].map((model, idx) => (
+                                                {["Sérénité HE", "Sentinelle HE", "Infiniti HE"].map((model, idx) => (
                                                     <td 
                                                         key={model} 
                                                         className={cn(

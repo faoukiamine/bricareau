@@ -1,9 +1,23 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WaterDiagnosticQuiz from "@/components/WaterDiagnosticQuiz";
 
 const Diagnostic = () => {
+    useEffect(() => {
+        document.title = "Diagnostic en Ligne | Évaluez votre Eau au Québec | Bricareau";
+        const metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc) {
+            metaDesc.setAttribute("content", "Utilisez notre outil de diagnostic en ligne pour identifier les problèmes de votre eau : calcaire, fer, soufre ou odeurs. Solution personnalisée instantanée.");
+        }
+
+        // OG Tags
+        const ogTitle = document.querySelector('meta[property="og:title"]');
+        if (ogTitle) ogTitle.setAttribute("content", "Diagnostic - Qualité de l'Eau | Bricareau");
+        const ogUrl = document.querySelector('meta[property="og:url"]');
+        if (ogUrl) ogUrl.setAttribute("content", "https://bricareau.com/diagnostic");
+    }, []);
+
     return (
         <div className="min-h-screen bg-white flex flex-col">
             <Header />

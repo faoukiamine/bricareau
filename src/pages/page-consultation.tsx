@@ -33,17 +33,19 @@ const PageConsultation = () => {
     const [showAllFaqs, setShowAllFaqs] = useState(false);
 
     useEffect(() => {
-        document.title = "Planifiez une consultation gratuite | Bricareau";
+        document.title = "Consultation Gratuite sur l'Eau au Québec | Bricareau";
         const metaDesc = document.querySelector('meta[name="description"]');
         if (metaDesc) {
-            metaDesc.setAttribute("content", "Discutez avec nos experts et planifiez une consultation téléphonique sans engagement pour analyser votre eau et trouver la meilleure solution de traitement.");
+            metaDesc.setAttribute("content", "Obtenez une évaluation gratuite de la qualité de votre eau. Planifiez une consultation téléphonique sans engagement pour trouver la solution de traitement idéale.");
         }
 
         // OG Tags
         const ogTitle = document.querySelector('meta[property="og:title"]');
-        if (ogTitle) ogTitle.setAttribute("content", "Consultation Gratuite sur l'eau | Bricareau");
+        if (ogTitle) ogTitle.setAttribute("content", "Consultation Gratuite : Trouvez Votre Solution d'Eau | Bricareau");
         const ogDesc = document.querySelector('meta[property="og:description"]');
-        if (ogDesc) ogDesc.setAttribute("content", "Recevez une évaluation personnalisée de vos besoins en traitement d'eau par un expert certifié Bricareau.");
+        if (ogDesc) ogDesc.setAttribute("content", "Recevez des conseils d'experts pour votre eau de puits ou municipale au Québec. Aucun engagement, satisfaction garantie.");
+        const ogUrl = document.querySelector('meta[property="og:url"]');
+        if (ogUrl) ogUrl.setAttribute("content", "https://bricareau.com/consultation");
     }, []);
 
     return (

@@ -59,17 +59,19 @@ const AdoucisseursPortables = () => {
     }, [slides.length]);
 
     useEffect(() => {
-        document.title = "Adoucisseur d'eau portable | Service d'Échange et Livraison | Bricareau";
+        document.title = "Adoucisseur d'eau portable | Service d'Échange et Livraison au Québec | Bricareau";
         const metaDesc = document.querySelector('meta[name="description"]');
         if (metaDesc) {
-            metaDesc.setAttribute("content", "La solution flexible pour une eau douce partout au Canada : l'adoucisseur d'eau portable par échange. Pas d'installation permanente, livraison rapide à domicile.");
+            metaDesc.setAttribute("content", "La solution flexible pour une eau douce partout au Québec : l'adoucisseur d'eau portable par échange. Idéal pour VR, bateaux et chalets. Livraison à domicile.");
         }
 
         // OG Tags
         const ogTitle = document.querySelector('meta[property="og:title"]');
-        if (ogTitle) ogTitle.setAttribute("content", "Adoucisseur d'eau portable et Service d'échange | Bricareau");
+        if (ogTitle) ogTitle.setAttribute("content", "Adoucisseur d'eau portable au Québec | Bricareau");
         const ogDesc = document.querySelector('meta[property="og:description"]');
         if (ogDesc) ogDesc.setAttribute("content", "Profitez d’une eau douce sans installation permanente avec notre service d'échange d'adoucisseurs portables.");
+        const ogUrl = document.querySelector('meta[property="og:url"]');
+        if (ogUrl) ogUrl.setAttribute("content", "https://bricareau.com/adoucisseurs-portables");
     }, []);
 
     return (

@@ -1,3 +1,4 @@
+import React, { useEffect } from "react";
 import Header from "@/components/Header";
 import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 import Footer from "@/components/Footer";
@@ -5,6 +6,21 @@ import { BookOpen, Download, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Manuels = () => {
+    useEffect(() => {
+        document.title = "Manuels & Documentation | Support Bricareau Traitement d'Eau";
+        const metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc) {
+            metaDesc.setAttribute("content", "Accédez aux guides d'installation et manuels d'utilisation pour vos adoucisseurs et filtres Bricareau. Toute la documentation technique à votre portée.");
+        }
+
+        // OG Tags
+        const ogTitle = document.querySelector('meta[property="og:title"]');
+        if (ogTitle) ogTitle.setAttribute("content", "Support Bricareau : Documentation & Manuels Techniques");
+        const ogDesc = document.querySelector('meta[property="og:description"]');
+        if (ogDesc) ogDesc.setAttribute("content", "Téléchargez instantanément vos guides en format PDF. L'expertise technique Bricareau simplifiée.");
+        const ogUrl = document.querySelector('meta[property="og:url"]');
+        if (ogUrl) ogUrl.setAttribute("content", "https://bricareau.com/manuels");
+    }, []);
     const manualCategories = [
         {
             title: "Adoucisseurs d'eau",

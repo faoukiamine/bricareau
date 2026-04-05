@@ -1,3 +1,4 @@
+import React, { useEffect } from "react";
 import Header from "@/components/Header";
 import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 import Footer from "@/components/Footer";
@@ -12,6 +13,21 @@ import InlineFilters from "@/assets/inline water filters.png";
 import woundFilterImg from "@/assets/String Wound Cartridge Filters.png";
 
 const FiltresDeRemplacement = () => {
+    useEffect(() => {
+        document.title = "Filtres de remplacement d'eau au Québec | Cartouches et Médias | Bricareau";
+        const metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc) {
+            metaDesc.setAttribute("content", "Large sélection de filtres de remplacement au Québec : sédiments, charbon actif, membrane osmose inverse et cartouches anti-calcaire. Maintenez la pureté de votre eau.");
+        }
+
+        // OG Tags
+        const ogTitle = document.querySelector('meta[property="og:title"]');
+        if (ogTitle) ogTitle.setAttribute("content", "Filtres de remplacement d'eau | Cartouches Haute Performance | Bricareau");
+        const ogDesc = document.querySelector('meta[property="og:description"]');
+        if (ogDesc) ogDesc.setAttribute("content", "Trouvez les cartouches et filtres compatibles avec votre système de traitement d'eau. Qualité supérieure pour une filtration durable.");
+        const ogUrl = document.querySelector('meta[property="og:url"]');
+        if (ogUrl) ogUrl.setAttribute("content", "https://bricareau.com/filtres-de-remplacement");
+    }, []);
     const partCategories = [
         {
             items: [

@@ -1,8 +1,24 @@
+import React, { useEffect } from "react";
 import Header from "@/components/Header";
 import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 import Footer from "@/components/Footer";
 
 const ConditionsGeneralesUtilisation = () => {
+    useEffect(() => {
+        document.title = "Conditions Générales d'Utilisation | Bricareau Water Specialist";
+        const metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc) {
+            metaDesc.setAttribute("content", "Consultez les conditions générales d'utilisation du site Bricareau.com. Informations sur nos services de traitement d'eau au Québec et modalités d'utilisation.");
+        }
+
+        // OG Tags
+        const ogTitle = document.querySelector('meta[property="og:title"]');
+        if (ogTitle) ogTitle.setAttribute("content", "Conditions Générales d'Utilisation - Bricareau");
+        const ogDesc = document.querySelector('meta[property="og:description"]');
+        if (ogDesc) ogDesc.setAttribute("content", "Modalités d'accès et d'utilisation du portail Bricareau pour vos solutions d'eau résidentielles.");
+        const ogUrl = document.querySelector('meta[property="og:url"]');
+        if (ogUrl) ogUrl.setAttribute("content", "https://bricareau.com/conditions-generales-utilisation");
+    }, []);
     return (
         <div className="min-h-screen bg-white text-[#1a3a5a]">
             <Header />

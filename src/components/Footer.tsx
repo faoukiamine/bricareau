@@ -93,18 +93,23 @@ const Footer = () => {
             <p className="text-sm text-white/80 mb-4">
               Inscrivez-vous à notre infolettre pour recevoir des conseils et offres exclusives
             </p>
-            <div className="flex gap-2">
-              <Input
-                type="email"
-                placeholder="Votre email"
-                className="bg-white/10 border-white/20 text-white placeholder:text-white/60 focus-visible:ring-white/50"
-              />
-              <Button
-                size="icon"
-                className="bg-white text-[#2563EB] hover:bg-white/90 shrink-0"
-              >
-                <Mail className="h-4 w-4" />
-              </Button>
+            <div className="flex flex-col gap-2">
+              <div className="flex gap-2">
+                <Input
+                  type="email"
+                  placeholder="Votre email"
+                  className="bg-white/10 border-white/20 text-white placeholder:text-white/60 focus-visible:ring-white/50"
+                />
+                <Button
+                  size="icon"
+                  className="bg-white text-[#2563EB] hover:bg-white/90 shrink-0"
+                >
+                  <Mail className="h-4 w-4" />
+                </Button>
+              </div>
+              <p className="text-[10px] text-white/50 leading-tight">
+                En m'inscrivant, j'accepte la <Link to="/politique-de-confidentialite" className="underline">politique de confidentialité</Link>.
+              </p>
             </div>
           </div>
         </div>

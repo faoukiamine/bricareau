@@ -1,3 +1,4 @@
+import React, { useEffect } from "react";
 import Header from "@/components/Header";
 import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 import Footer from "@/components/Footer";
@@ -48,6 +49,22 @@ import SSROHousing from "@/assets/SS-Membrane-Housing.webp";
 import piecesHero from "@/assets/2148976317.jpg";
 
 const Pieces = () => {
+    useEffect(() => {
+        document.title = "Pièces de Remplacement | Filtres et Composantes d'Origine au Québec | Bricareau";
+        const metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc) {
+            metaDesc.setAttribute("content", "Besoin de filtres, membranes ou cartouches pour votre système d'eau ? Trouvez les pièces de remplacement certifiées chez Bricareau. Expédition rapide partout au Québec.");
+        }
+
+        // OG Tags
+        const ogTitle = document.querySelector('meta[property="og:title"]');
+        if (ogTitle) ogTitle.setAttribute("content", "Pièces de Remplacement Certifiées | Bricareau");
+        const ogDesc = document.querySelector('meta[property="og:description"]');
+        if (ogDesc) ogDesc.setAttribute("content", "Maintenez la performance de votre système avec nos pièces d'origine certifiées.");
+        const ogUrl = document.querySelector('meta[property="og:url"]');
+        if (ogUrl) ogUrl.setAttribute("content", "https://bricareau.com/pieces");
+    }, []);
+
     const partCategories = [
         {
             name: "Cartouches filtrantes",

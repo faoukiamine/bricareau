@@ -1,17 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-
 const IdealBricareauCTA = () => {
     return (
         <section className="bg-[#2563EB] py-16 md:py-20">
             <div className="container mx-auto px-4">
                 <div className="max-w-3xl mx-auto text-center space-y-6">
-                    <h2
-                        className="text-white"
-                        style={{ }}
-                    >
-                        <span className="text-[32px] md:text-[60px] font-light leading-[1.2] md:leading-[60px] block">La solution idéale Bricareau</span>
-                        <span className="text-[32px] md:text-[60px] font-normal leading-[1.2] md:leading-[60px] block">pour votre maison</span>
+                    <h2 className="heading-pro-max text-white">
+                        <span className="italic font-light block leading-tight">La solution idéale Bricareau</span>
+                        <span className="font-bold block leading-tight">pour votre maison</span>
                     </h2>
                     <p className="text-white/90">
                         Découvrez comment nos systèmes de traitement d'eau peuvent transformer votre quotidien

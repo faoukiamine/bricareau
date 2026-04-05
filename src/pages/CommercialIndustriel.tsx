@@ -1,3 +1,4 @@
+import React, { useEffect } from "react";
 import { Phone, Award, DollarSign, CheckCircle2, ChevronRight, Factory, Droplets, FlaskConical, ShieldCheck, Zap, Cog, Activity, HardHat, Recycle, Building2, ShieldAlert, BarChart3, Microscope, Workflow } from "lucide-react";
 import heroIndustrialImg from "@/assets/hero_industrial_power.png";
 import waterTestingBg from "@/assets/undersink_filtration_header.jpg";
@@ -72,6 +73,22 @@ const CommercialIndustriel = () => {
     { name: "Alimentaire", icon: Droplets, sub: "Standards HACCP" },
     { name: "Pharmaceutique", icon: Microscope, sub: "Pureté Grade Labo" }
   ];
+
+  useEffect(() => {
+    document.title = "Traitement d'Eau Industriel et Commercial au Québec | Bricareau";
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+      metaDesc.setAttribute("content", "Solutions de traitement d'eau haute performance pour commerces et industries au Québec. Adoucisseurs, osmose inverse et ingénierie sur mesure. Fiabilité 24/7.");
+    }
+
+    // OG Tags
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) ogTitle.setAttribute("content", "Bricareau : Partenaire de Pureté pour l'Industrie Québécoise");
+    const ogDesc = document.querySelector('meta[property="og:description"]');
+    if (ogDesc) ogDesc.setAttribute("content", "Optimisez vos processus opérationnels avec une eau de qualité supérieure. Expertise Bricareau en milieu commercial et industriel.");
+    const ogUrl = document.querySelector('meta[property="og:url"]');
+    if (ogUrl) ogUrl.setAttribute("content", "https://bricareau.com/commercial-industriel");
+  }, []);
 
   return (
     <div className="min-h-screen bg-white">

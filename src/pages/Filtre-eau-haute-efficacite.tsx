@@ -34,6 +34,21 @@ import {
 } from "@/components/ui/accordion";
 
 const FiltreEauHauteEfficacite = () => {
+    useEffect(() => {
+        document.title = "Filtre d'eau Haute Efficacité au Québec | Bricareau HE | Économies d'eau";
+        const metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc) {
+            metaDesc.setAttribute("content", "Découvrez l'adoucisseur et filtre d'eau le plus efficace au monde au Québec. Le Bricareau HE réduit jusqu'à 46% votre consommation de sel et d'eau. Pureté intelligente.");
+        }
+
+        // OG Tags
+        const ogTitle = document.querySelector('meta[property="og:title"]');
+        if (ogTitle) ogTitle.setAttribute("content", "Bricareau HE : La Révolution de la Filtration d'eau au Québec");
+        const ogDesc = document.querySelector('meta[property="og:description"]');
+        if (ogDesc) ogDesc.setAttribute("content", "Performance inégalée et économies garanties. Alliez santé et écologie avec notre système de filtration haute efficacité connecté.");
+        const ogUrl = document.querySelector('meta[property="og:url"]');
+        if (ogUrl) ogUrl.setAttribute("content", "https://bricareau.com/filtre-eau-haute-efficacite");
+    }, []);
     const [showAllFaqs, setShowAllFaqs] = React.useState(false);
     const productImage = "https://bricareau.com/wp-content/uploads/2025/01/cl10em-00-sc_bt1833-removebg-preview-1.png";
 

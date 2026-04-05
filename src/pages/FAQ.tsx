@@ -35,6 +35,21 @@ const FAQCard = ({ item }: { item: { q: string, a: string } }) => {
 };
 
 const FAQ = () => {
+    useEffect(() => {
+        document.title = "Foire aux Questions (FAQ) - Traitement d'Eau | Bricareau";
+        const metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc) {
+            metaDesc.setAttribute("content", "Toutes vos questions sur l'adoucissement, la filtration, les tests d'eau et l'entretien de vos systèmes de traitement d'eau au Québec. Réponses d'experts.");
+        }
+
+        // OG Tags
+        const ogTitle = document.querySelector('meta[property="og:title"]');
+        if (ogTitle) ogTitle.setAttribute("content", "FAQ Bricareau : Vos Questions sur l'Eau Répondues");
+        const ogDesc = document.querySelector('meta[property="og:description"]');
+        if (ogDesc) ogDesc.setAttribute("content", "Trouvez rapidement des réponses claires sur la qualité de votre eau et nos solutions de traitement pour votre domicile.");
+        const ogUrl = document.querySelector('meta[property="og:url"]');
+        if (ogUrl) ogUrl.setAttribute("content", "https://bricareau.com/faq");
+    }, []);
     const [searchQuery, setSearchQuery] = useState("");
     const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
     const [expandedCategories, setExpandedCategories] = useState<Record<string, boolean>>({});

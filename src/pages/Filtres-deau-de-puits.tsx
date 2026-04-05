@@ -180,17 +180,19 @@ const FiltresPuits = () => {
         }
     };
     useEffect(() => {
-        document.title = "Filtres d'eau de puits | Traitement Fer, Soufre & Manganèse | Bricareau";
+        document.title = "Filtre d'Eau de Puits Québec | Fer, Soufre et Manganèse | Bricareau";
         const metaDesc = document.querySelector('meta[name="description"]');
         if (metaDesc) {
-            metaDesc.setAttribute("content", "Éliminez les polluants de votre eau de puits : fer, odeurs de soufre, manganèse et pH acide. Solutions de filtration résidentielle expertes au Canada par Bricareau.");
+            metaDesc.setAttribute("content", "Expertise québécoise en filtration d'eau de puits. Éliminez le fer, le soufre et le manganèse avec nos systèmes spécialisés. Analyse d'eau gratuite à domicile.");
         }
 
         // OG Tags
         const ogTitle = document.querySelector('meta[property="og:title"]');
-        if (ogTitle) ogTitle.setAttribute("content", "Filtres d'eau de puits spécialisés - Pureté & Protection | Bricareau");
+        if (ogTitle) ogTitle.setAttribute("content", "Filtration d'Eau de Puits au Québec : Solutions Spécialisées | Bricareau");
         const ogDesc = document.querySelector('meta[property="og:description"]');
-        if (ogDesc) ogDesc.setAttribute("content", "Solutions avancées pour traiter le fer, le soufre et les impuretés de votre eau de puits. Protégez votre santé et votre maison.");
+        if (ogDesc) ogDesc.setAttribute("content", "Dites adieu aux odeurs d'œufs pourris et aux taches de rouille. Protection complète pour votre puits.");
+        const ogUrl = document.querySelector('meta[property="og:url"]');
+        if (ogUrl) ogUrl.setAttribute("content", "https://bricareau.com/Filtres-deau-de-puits");
     }, []);
 
     const [cardStack, setCardStack] = useState([0, 1, 2, 3]); // Initial order with 4 cards

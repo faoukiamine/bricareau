@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Header from "@/components/Header";
 import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 import Footer from "@/components/Footer";
@@ -12,6 +12,22 @@ import { useToast } from "@/hooks/use-toast";
 
 const ContactResidentiel = () => {
   const { toast } = useToast();
+  useEffect(() => {
+    document.title = "Contact Résidentiel | Solutions d'Eau pour la Maison au Québec | Bricareau";
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+      metaDesc.setAttribute("content", "Besoin d'un adoucisseur ou d'un système de filtration ? Contactez Bricareau pour une analyse d'eau gratuite à domicile partout au Québec.");
+    }
+
+    // OG Tags
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) ogTitle.setAttribute("content", "Contact Résidentiel | Bricareau Traitement d'Eau");
+    const ogDesc = document.querySelector('meta[property="og:description"]');
+    if (ogDesc) ogDesc.setAttribute("content", "Parlez à un expert pour vos besoins en traitement d'eau résidentiel. Service rapide et courtois.");
+    const ogUrl = document.querySelector('meta[property="og:url"]');
+    if (ogUrl) ogUrl.setAttribute("content", "https://bricareau.com/contact-residentiel");
+  }, []);
+
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",

@@ -279,6 +279,22 @@ const SolutionCard = ({ item }: { item: SolutionItem }) => {
 };
 
 const Fontaines = () => {
+    useEffect(() => {
+        document.title = "Fontaines d'Eau et Refroidisseurs | Solutions de Pureté au Québec | Bricareau";
+        const metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc) {
+            metaDesc.setAttribute("content", "Découvrez notre gamme de fontaines d'eau sans bouteille et refroidisseurs pour maison ou bureau au Québec. Technologie de filtration avancée pour une eau pure.");
+        }
+
+        // OG Tags
+        const ogTitle = document.querySelector('meta[property="og:title"]');
+        if (ogTitle) ogTitle.setAttribute("content", "Fontaines d'Eau Haute Performance | Bricareau");
+        const ogDesc = document.querySelector('meta[property="og:description"]');
+        if (ogDesc) ogDesc.setAttribute("content", "Dites adieu aux bouteilles de plastique. Eau fraîche et pure à volonté.");
+        const ogUrl = document.querySelector('meta[property="og:url"]');
+        if (ogUrl) ogUrl.setAttribute("content", "https://bricareau.com/fontaines-d-eau");
+    }, []);
+
     return (
         <div className="min-h-screen bg-white">
             <Header />

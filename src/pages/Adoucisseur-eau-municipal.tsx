@@ -174,17 +174,19 @@ const AdoucisseurEauMunicipal = () => {
     };
 
     useEffect(() => {
-        document.title = "Adoucisseur d'eau résidentiel | Solutions pour l'eau municipale | Bricareau";
+        document.title = "Adoucisseur d'eau résidentiel au Québec | Eau Municipale | Bricareau";
         const metaDesc = document.querySelector('meta[name="description"]');
         if (metaDesc) {
-            metaDesc.setAttribute("content", "Éliminez le calcaire de votre eau de ville. Nos adoucisseurs résidentiels Sentinelle, Sérénité et Infiniti protègent votre maison et votre confort au Canada.");
+            metaDesc.setAttribute("content", "Éliminez le calcaire de votre eau de ville au Québec. Nos adoucisseurs résidentiels Sentinelle, Sérénité et Infiniti protègent votre plomberie et vos électroménagers efficacement.");
         }
 
         // OG Tags
         const ogTitle = document.querySelector('meta[property="og:title"]');
-        if (ogTitle) ogTitle.setAttribute("content", "Adoucisseur d'eau résidentiel pour eau municipale | Bricareau");
+        if (ogTitle) ogTitle.setAttribute("content", "Adoucisseur d'eau résidentiel Québec : Dites adieu au calcaire | Bricareau");
         const ogDesc = document.querySelector('meta[property="og:description"]');
-        if (ogDesc) ogDesc.setAttribute("content", "Des solutions intelligentes pour une eau sans calcaire 24h/24. Découvrez nos adoucisseurs Sentinelle et Infiniti.");
+        if (ogDesc) ogDesc.setAttribute("content", "Protégez votre foyer avec nos adoucisseurs d'eau intelligents au Québec. Solutions économes, durables et performantes pour l'eau municipale.");
+        const ogUrl = document.querySelector('meta[property="og:url"]');
+        if (ogUrl) ogUrl.setAttribute("content", "https://bricareau.com/adoucisseur-eau-municipal");
     }, []);
 
     return (
@@ -372,7 +374,7 @@ const AdoucisseurEauMunicipal = () => {
                                     </div>
                                     <h3 className="text-white text-4xl font-bold mb-6 leading-tight">L'excellence Bricareau s'installe chez vous.</h3>
                                     <p className="text-white text-lg mb-10 text-justify">
-                                        Chaque installation est une signature de qualité. Nos techniciens assurent une mise en place chirurgicale de vos systèmes, garantissant performance et esthétique.
+                                        Chaque installation est une signature de qualité. Nos techniciens assurent une meilleure mise en place de vos systèmes, garantissant performance et esthétique.
                                     </p>
                                 </div>
                             </div>

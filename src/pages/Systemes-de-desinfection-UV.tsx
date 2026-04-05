@@ -119,17 +119,19 @@ const DesinfectionUV = () => {
         }
     };
     useEffect(() => {
-        document.title = "Désinfection UV : Éliminez 99,99% des bactéries et virus";
+        document.title = "Systèmes de Désinfection UV au Québec | Stérilisateur d'Eau | Bricareau";
         const metaDesc = document.querySelector('meta[name="description"]');
         if (metaDesc) {
-            metaDesc.setAttribute("content", "Protection maximale contre les bactéries et virus. Nos systèmes UV éliminent 99,99% des micro-organismes sans produits chimiques.");
+            metaDesc.setAttribute("content", "Éliminez 99,99% des bactéries et virus de votre eau de puits au Québec. Nos systèmes de désinfection UV certifiés offrent une eau 100% sécuritaire sans produits chimiques.");
         }
 
         // OG Tags
         const ogTitle = document.querySelector('meta[property="og:title"]');
-        if (ogTitle) ogTitle.setAttribute("content", "Désinfection UV : Sécurité microbiologique | Bricareau");
+        if (ogTitle) ogTitle.setAttribute("content", "Stérilisateur UV Québec : Protection Bactérienne Totale | Bricareau");
         const ogDesc = document.querySelector('meta[property="og:description"]');
-        if (ogDesc) ogDesc.setAttribute("content", "Une eau potable sécuritaire pour toute votre famille. Découvrez nos solutions de stérilisation UV haute performance.");
+        if (ogDesc) ogDesc.setAttribute("content", "Zéro bactérie, 100% sérénité. Protégez la santé de votre famille avec nos solutions de désinfection UV de haute performance au Québec.");
+        const ogUrl = document.querySelector('meta[property="og:url"]');
+        if (ogUrl) ogUrl.setAttribute("content", "https://bricareau.com/systemes-de-desinfection-UV");
     }, []);
 
 

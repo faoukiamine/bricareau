@@ -132,17 +132,19 @@ const Filtration = () => {
         }
     };
     useEffect(() => {
-        document.title = "Filtration d'eau : Une pureté maximale pour votre maison";
+        document.title = "Filtration d'eau au Québec | Eau Pure et Saine | Bricareau";
         const metaDesc = document.querySelector('meta[name="description"]');
         if (metaDesc) {
-            metaDesc.setAttribute("content", "Découvrez nos systèmes de filtration d'eau pour toute la maison. Éliminez les contaminants et améliorez le goût de votre eau avec Bricareau.");
+            metaDesc.setAttribute("content", "Systèmes de filtration d'eau haute performance au Québec. Éliminez chlore, plomb et contaminants avec nos solutions sur mesure pour toute la maison ou sous l'évier.");
         }
 
         // OG Tags
         const ogTitle = document.querySelector('meta[property="og:title"]');
-        if (ogTitle) ogTitle.setAttribute("content", "Filtration d'eau : Pureté maximale | Bricareau");
+        if (ogTitle) ogTitle.setAttribute("content", "Filtration d'eau au Québec : Pureté et Santé | Bricareau");
         const ogDesc = document.querySelector('meta[property="og:description"]');
-        if (ogDesc) ogDesc.setAttribute("content", "Une eau pure à chaque robinet. Investissez dans la santé de votre famille avec nos solutions de filtration avancées.");
+        if (ogDesc) ogDesc.setAttribute("content", "Obtenez une eau cristalline à chaque robinet. Découvrez nos technologies de filtration avancées pour la santé de votre foyer.");
+        const ogUrl = document.querySelector('meta[property="og:url"]');
+        if (ogUrl) ogUrl.setAttribute("content", "https://bricareau.com/filtration");
     }, []);
 
 

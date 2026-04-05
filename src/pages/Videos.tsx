@@ -1,3 +1,4 @@
+import React, { useEffect } from "react";
 import Header from "@/components/Header";
 import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 import Footer from "@/components/Footer";
@@ -5,6 +6,20 @@ import { Play, Clock } from "lucide-react";
 import filtrationVideoImg from "@/assets/10341859.jpg";
 
 const Videos = () => {
+    useEffect(() => {
+        document.title = "Bibliothèque Vidéo | Tutoriels et Guides Bricareau";
+        const metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc) {
+            metaDesc.setAttribute("content", "Visionnez nos tutoriels vidéo sur l'utilisation, l'entretien et l'installation de vos systèmes de traitement d'eau au Québec.");
+        }
+
+        // OG Tags
+        const ogTitle = document.querySelector('meta[property="og:title"]');
+        if (ogTitle) ogTitle.setAttribute("content", "Vidéos et Tutoriels | Bricareau");
+        const ogUrl = document.querySelector('meta[property="og:url"]');
+        if (ogUrl) ogUrl.setAttribute("content", "https://bricareau.com/videos");
+    }, []);
+
     const videoCategories = [
         {
             title: "Installation",

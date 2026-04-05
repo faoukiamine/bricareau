@@ -5,12 +5,27 @@ import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/
 import { ArrowRight, ChevronRight, Droplets, Waves, Search, SlidersHorizontal, Check, Clock } from "lucide-react";
 import { NavLink } from "react-router-dom";
 import { categories } from "@/data/blogCategories";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 
 import blogHero from "@/assets/wave-banner.jpg";
 
 const Blog = () => {
+    useEffect(() => {
+        document.title = "Blog & Ressources sur le Traitement d'Eau | Bricareau";
+        const metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc) {
+            metaDesc.setAttribute("content", "Découvrez nos articles, guides et conseils d'experts pour améliorer la qualité de votre eau au Québec. Tout sur l'adoucissement, la filtration et les tests d'eau.");
+        }
+
+        // OG Tags
+        const ogTitle = document.querySelector('meta[property="og:title"]');
+        if (ogTitle) ogTitle.setAttribute("content", "Blog Bricareau : Conseils d'Experts en Qualité d'Eau");
+        const ogDesc = document.querySelector('meta[property="og:description"]');
+        if (ogDesc) ogDesc.setAttribute("content", "Guides pratiques et actualités sur le traitement de l'eau pour votre résidence ou commerce au Grand Montréal.");
+        const ogUrl = document.querySelector('meta[property="og:url"]');
+        if (ogUrl) ogUrl.setAttribute("content", "https://bricareau.com/blog");
+    }, []);
     const [searchQuery, setSearchQuery] = useState("");
     const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
 

@@ -4,7 +4,24 @@ import Footer from "@/components/Footer";
 import { BookOpen, Download, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+import React, { useEffect } from "react";
+
 const Guides = () => {
+    useEffect(() => {
+        document.title = "Guides & Documentation sur le Traitement d'Eau | Bricareau Québec";
+        const metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc) {
+            metaDesc.setAttribute("content", "Téléchargez nos guides d'experts sur l'adoucissement d'eau, la filtration et l'entretien de vos systèmes. Ressources complètes pour une eau pure au Québec.");
+        }
+
+        // OG Tags
+        const ogTitle = document.querySelector('meta[property="og:title"]');
+        if (ogTitle) ogTitle.setAttribute("content", "Ressources & Guides : L'Expertise Bricareau à votre Service");
+        const ogDesc = document.querySelector('meta[property="og:description"]');
+        if (ogDesc) ogDesc.setAttribute("content", "Tout savoir sur le traitement d'eau résidentiel et commercial. Manuels, guides d'entretien et conseils d'experts.");
+        const ogUrl = document.querySelector('meta[property="og:url"]');
+        if (ogUrl) ogUrl.setAttribute("content", "https://bricareau.com/guides");
+    }, []);
     const guides = [
         {
             title: "Guide complet de l'adoucisseur d'eau",

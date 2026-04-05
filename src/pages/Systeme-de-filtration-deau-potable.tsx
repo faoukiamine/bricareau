@@ -25,7 +25,8 @@ import {
   Sparkles,
   Activity,
   Microscope,
-  Waves
+  Waves,
+  CheckCircle
 } from "lucide-react";
 import safetyIcon from "@/assets/1709235770048.png";
 import { NavLink } from "@/components/NavLink";
@@ -60,6 +61,7 @@ import schemaOsmoseImg from "@/assets/Schema-osmose-inverse.png";
 import eauFontaineImg from "@/assets/reasons-to-drink-more-water.jpg";
 import eauMedicamentsImg from "@/assets/eau_medicaments.png";
 import ourteamstudyyourwaterImg from "@/assets/10271.jpg";
+import reverseosmosisinstallationImg from "@/assets/Reverse Osmosis Installation.jpg";
 
 const StationEauPotable = () => {
   const navigate = useNavigate();
@@ -104,17 +106,19 @@ const StationEauPotable = () => {
   };
 
   useEffect(() => {
-    document.title = "Systèmes d'osmose inverse | Purificateur d'eau potable | Bricareau";
+    document.title = "Osmose Inverse au Québec | Système de Filtration d'Eau Potable | Bricareau";
     const metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) {
-      metaDesc.setAttribute("content", "Optimisez la qualité de votre eau avec nos systèmes d'osmose inverse à 4, 5 et 6 étapes. Éliminez 99% des contaminants pour une eau pure et alcaline à domicile.");
+        metaDesc.setAttribute("content", "Obtenez une eau d'une pureté absolue avec nos systèmes d'osmose inverse au Québec. Élimine 99% des contaminants, métaux lourds et chlore pour une santé optimale.");
     }
 
     // OG Tags
     const ogTitle = document.querySelector('meta[property="og:title"]');
-    if (ogTitle) ogTitle.setAttribute("content", "Systèmes d'osmose inverse et purification d'eau | Bricareau");
+    if (ogTitle) ogTitle.setAttribute("content", "Osmose Inverse Québec : L'Eau la plus Pure à Domicile | Bricareau");
     const ogDesc = document.querySelector('meta[property="og:description"]');
-    if (ogDesc) ogDesc.setAttribute("content", "Découvrez la pureté absolue avec nos stations d'osmose inverse Cristal Pro et Sérénité.");
+    if (ogDesc) ogDesc.setAttribute("content", "Dites adieu aux bouteilles d'eau. Profitez d'une eau filtrée de qualité premium directement à votre robinet avec Bricareau au Québec.");
+    const ogUrl = document.querySelector('meta[property="og:url"]');
+    if (ogUrl) ogUrl.setAttribute("content", "https://bricareau.com/systeme-de-filtration-deau-potable");
   }, []);
 
   interface ComparisonItem {
@@ -388,6 +392,26 @@ const StationEauPotable = () => {
                 </div>
               ))}
             </div>
+             {/* Featured Banner with generated image */}
+                        <div className="rounded-none lg:rounded-[3rem] overflow-hidden shadow-none lg:shadow-2xl border-0 lg:border border-slate-100 group relative -mx-6 lg:mx-0 mt-24 lg:mt-32">
+                            <img 
+                                src={reverseosmosisinstallationImg} 
+                                alt="Installation professionnelle d'un adoucisseur d'eau Bricareau" 
+                                className="w-full h-[450px] md:h-[550px] lg:h-[650px] object-cover group-hover:scale-105 transition-transform duration-[3000ms] brightness-[1.1] contrast-[1.05]"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-r from-[#1e3a8a]/80 via-[#1e3a8a]/40 to-transparent p-8 md:p-12 lg:p-20 flex items-center lg:pt-32">
+                                <div className="max-w-lg">
+                                    <div className="flex items-center gap-3 text-blue-400 font-bold text-xs tracking-widest uppercase mb-6">
+                                        <CheckCircle className="w-5 h-5" />
+                                        Engagement Certifié
+                                    </div>
+                                    <h3 className="text-white text-4xl font-bold mb-6 leading-tight">Offrez à votre famille la qualité d'une eau pure de qualité minérale.</h3>
+                                    <p className="text-white text-lg mb-10 text-justify">
+                                        Profitez d'une installation propre, durable et optimisée par nos experts. Optez pour la tranquillité d'esprit avec une intégration technique signée Bricareau Water Specialist.                                
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
           </div>
         </section>
 

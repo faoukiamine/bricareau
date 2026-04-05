@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Header from "@/components/Header";
 import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 import Footer from "@/components/Footer";
@@ -12,6 +12,22 @@ import { useToast } from "@/hooks/use-toast";
 
 const ContactEntreprises = () => {
   const { toast } = useToast();
+  useEffect(() => {
+    document.title = "Contact Entreprises | Solutions d'Eau de Bureau au Québec | Bricareau";
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+      metaDesc.setAttribute("content", "Contactez nos experts pour des solutions de fontaines à eau et traitement d'eau pour entreprise au Québec. Analyse gratuite et service professionnel.");
+    }
+
+    // OG Tags
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) ogTitle.setAttribute("content", "Solutions d'Eau pour Entreprises | Contact Bricareau");
+    const ogDesc = document.querySelector('meta[property="og:description"]');
+    if (ogDesc) ogDesc.setAttribute("content", "Optimisez la qualité de l'eau dans vos bureaux. Contactez-nous pour une consultation personnalisée.");
+    const ogUrl = document.querySelector('meta[property="og:url"]');
+    if (ogUrl) ogUrl.setAttribute("content", "https://bricareau.com/contact-entreprises");
+  }, []);
+
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",

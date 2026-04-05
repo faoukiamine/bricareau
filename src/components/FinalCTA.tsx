@@ -37,8 +37,9 @@ const FinalCTA = () => {
                     {/* Right side - CTA Card */}
                     <Card className="bg-[#2563EB] border-none shadow-2xl">
                         <CardContent className="p-8 md:p-12 space-y-6">
-                            <h2 className="text-3xl md:text-4xl text-white font-bold tracking-tight">
-                                Prêt à améliorer la qualité de votre eau ?
+                            <h2 className="heading-pro-max text-white">
+                                <span className="italic font-light block leading-tight">Prêt à améliorer</span>
+                                <span className="font-bold block leading-tight">la qualité de votre eau ?</span>
                             </h2>
                             <p className="text-white/90">
                                 Commencez dès aujourd'hui avec une consultation gratuite et découvrez comment nous pouvons transformer votre eau.

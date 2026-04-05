@@ -1,3 +1,4 @@
+import React, { useEffect } from "react";
 import Header from "@/components/Header";
 import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 import Footer from "@/components/Footer";
@@ -5,6 +6,21 @@ import { Star } from "lucide-react";
 import TestimonialsSection from "@/components/TestimonialsSection";
 
 const Temoignages = () => {
+    useEffect(() => {
+        document.title = "Témoignages Clients & Avis Bricareau | Satisfaction Garantie";
+        const metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc) {
+            metaDesc.setAttribute("content", "Découvrez pourquoi nos clients au Québec nous font confiance. Lisez les avis certifiés sur nos services de traitement d'eau et adoucisseurs.");
+        }
+
+        // OG Tags
+        const ogTitle = document.querySelector('meta[property="og:title"]');
+        if (ogTitle) ogTitle.setAttribute("content", "L'Excellence Bricareau vue par nos clients");
+        const ogDesc = document.querySelector('meta[property="og:description"]');
+        if (ogDesc) ogDesc.setAttribute("content", "Votre satisfaction est notre priorité. Rejoignez des milliers de clients heureux au Québec.");
+        const ogUrl = document.querySelector('meta[property="og:url"]');
+        if (ogUrl) ogUrl.setAttribute("content", "https://bricareau.com/temoignages");
+    }, []);
     return (
         <div className="min-h-screen bg-background">
             <Header />

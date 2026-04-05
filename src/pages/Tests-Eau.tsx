@@ -72,17 +72,19 @@ import tasteOdorImg from "@/assets/water-taste.jpg";
 const TestsEauPage = () => {
   const [showAllFaqs, setShowAllFaqs] = useState(false);
   useEffect(() => {
-    document.title = "Test d'eau et Analyse d'eau | Montréal, Rive-Sud & Rive-Nord | Bricareau";
+    document.title = "Test d'eau et Analyse d'eau au Québec | Montréal, Rive Nord& Rive-Sud | Bricareau";
     const metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) {
-      metaDesc.setAttribute("content", "Besoin d'un test d'eau à Montréal, sur la Rive-Sud ou la Rive-Nord ? Analyse d'eau complète et précise pour puits et réseaux municipaux par les experts de Bricareau.");
+      metaDesc.setAttribute("content", "Obtenez une analyse d'eau complète et précise au Québec. Tests de laboratoire certifiés pour puits et réseaux municipaux à Montréal, Laval, Rive-Sud et Rive-Nord.");
     }
 
     // OG Tags
     const ogTitle = document.querySelector('meta[property="og:title"]');
-    if (ogTitle) ogTitle.setAttribute("content", "Analyse d'eau professionnelle | Grand Montréal & Environs | Bricareau");
+    if (ogTitle) ogTitle.setAttribute("content", "Analyse d'eau professionnelle au Québec | Grand Montréal | Bricareau");
     const ogDesc = document.querySelector('meta[property="og:description"]');
-    if (ogDesc) ogDesc.setAttribute("content", "Service complet de tests d'eau pour le Grand Montréal. Résultats certifiés et solutions sur mesure pour votre résidence.");
+    if (ogDesc) ogDesc.setAttribute("content", "Protégez votre santé avec nos tests d'eau certifiés. Résultats rapides et diagnostics d'experts pour la potabilité de votre eau.");
+    const ogUrl = document.querySelector('meta[property="og:url"]');
+    if (ogUrl) ogUrl.setAttribute("content", "https://bricareau.com/tests-eau");
   }, []);
 
   const [activeService, setActiveService] = useState(0);

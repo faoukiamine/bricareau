@@ -556,6 +556,49 @@ const WaterTestFormSection = ({ id }: { id?: string }) => {
                                             </div>
                                         </div>
 
+                                        <div className="space-y-4 pt-2">
+                                            <FormField
+                                                control={form.control}
+                                                name="legal_consent"
+                                                render={({ field }) => (
+                                                    <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-xl border p-4 bg-gray-50/50">
+                                                        <FormControl>
+                                                            <Checkbox
+                                                                checked={field.value}
+                                                                onCheckedChange={field.onChange}
+                                                            />
+                                                        </FormControl>
+                                                        <div className="space-y-1 leading-none">
+                                                            <FormLabel className="text-[10px] font-normal text-slate-500 leading-normal cursor-pointer select-none">
+                                                                En cochant cette case ou en utilisant le site web Bricareau.com, vous reconnaissez avoir lu les <Link to="/conditions-generales-utilisation" className="text-blue-600 hover:underline font-medium">Conditions générales</Link> et la <Link to="/politique-de-confidentialite" className="text-blue-600 hover:underline font-medium">Politique de confidentialité</Link>, les comprendre et accepter d'y être lié.*
+                                                            </FormLabel>
+                                                            <FormMessage />
+                                                        </div>
+                                                    </FormItem>
+                                                )}
+                                            />
+
+                                            <FormField
+                                                control={form.control}
+                                                name="marketing_consent"
+                                                render={({ field }) => (
+                                                    <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-xl border p-4 bg-gray-50/50">
+                                                        <FormControl>
+                                                            <Checkbox
+                                                                checked={field.value}
+                                                                onCheckedChange={field.onChange}
+                                                            />
+                                                        </FormControl>
+                                                        <div className="space-y-1 leading-none">
+                                                            <FormLabel className="text-[10px] font-normal text-slate-500 leading-normal cursor-pointer select-none">
+                                                                Je souhaite recevoir les prochaines communications de Bricareau. (Vous pouvez vous désabonner à tout moment.)
+                                                            </FormLabel>
+                                                        </div>
+                                                    </FormItem>
+                                                )}
+                                            />
+                                        </div>
+
                                         <p className="text-sm text-gray-500 text-center">
                                             Veuillez vérifier les informations ci-dessus avant de confirmer votre demande.
                                         </p>

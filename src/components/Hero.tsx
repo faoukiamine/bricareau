@@ -88,7 +88,7 @@ const Hero = ({
             )}
             <h1 
               className={cn(
-                "text-[32px] md:text-[46px] lg:text-[50px] leading-[1.1] mb-12 animate-in fade-in slide-in-from-left duration-1000",
+                "text-[32px] md:text-[46px] lg:text-[50px] leading-[1.1] mb-6 animate-in fade-in slide-in-from-left duration-1000",
                 singleLineTitle ? "max-w-4xl" : "max-w-xl"
               )}
               style={{

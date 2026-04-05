@@ -152,17 +152,19 @@ const TraitementEauDePuits = () => {
   ];
 
   useEffect(() => {
-    document.title = "Eau de puits : Solutions de traitement et filtration";
+    document.title = "Traitement d'eau de puits au Québec | Fer, Soufre et Bactéries | Bricareau";
     const metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) {
-      metaDesc.setAttribute("content", "Solutions expertes pour l'eau de puits : fer, soufre et bactéries. Profitez d'une eau pure avec nos systèmes de filtration haute performance.");
+      metaDesc.setAttribute("content", "Experts en traitement d'eau de puits au Québec. Éliminez efficacement le fer, le soufre (odeur d'œufs pourris), le calcaire et les bactéries. Analyse d'eau complète et solutions certifiées.");
     }
 
     // OG Tags
     const ogTitle = document.querySelector('meta[property="og:title"]');
-    if (ogTitle) ogTitle.setAttribute("content", "Eau de puits : Traitement et Purification | Bricareau");
+    if (ogTitle) ogTitle.setAttribute("content", "Traitement d'eau de puits au Québec : Solutions Spécialisées | Bricareau");
     const ogDesc = document.querySelector('meta[property="og:description"]');
-    if (ogDesc) ogDesc.setAttribute("content", "Protégez votre santé avec nos systèmes de filtration spécialisés pour puits privés. Expertise et fiabilité.");
+    if (ogDesc) ogDesc.setAttribute("content", "Retrouvez une eau de puits cristalline et sécuritaire pour votre famille. Spécialistes en filtration de fer, soufre et désinfection UV au Québec.");
+    const ogUrl = document.querySelector('meta[property="og:url"]');
+    if (ogUrl) ogUrl.setAttribute("content", "https://bricareau.com/traitement-eau-de-puits");
   }, []);
 
   const scrollResources = (direction: 'left' | 'right') => {
@@ -755,9 +757,9 @@ const TraitementEauDePuits = () => {
                 <span className="inline-block px-4 py-1.5 bg-white text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.4em]">
                   UNE EAU ENFIN SANS ODEUR NI TACHES
                 </span>
-                <h2 className="heading-pro-max text-white">
-                  Maîtrisez la qualité de votre eau de puits<br />et protégez votre famille
-                  <span className="text-white italic font-bold font-serif"> contre les contaminants.</span>
+                <h2 className="heading-pro-max text-center text-white">
+                  <span className="font-light block leading-tight">Maîtrisez la qualité de votre eau de puits</span>
+                  <span className="italic font-bold block leading-tight">et protégez votre famille contre les contaminants.</span>
                 </h2>
                 <p className="text-lg md:text-xl text-blue-100/80 max-w-2xl mx-auto font-light leading-relaxed">
                     Le fer, le soufre et le calcaire ne sont pas une fatalité. Protégez votre santé et retrouvez le plaisir d'une eau pure, inodore et cristalline dès aujourd'hui.                </p>

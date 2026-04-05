@@ -10,6 +10,20 @@ const NotFound = () => {
 
   useEffect(() => {
     console.error("404 Error: User attempted to access non-existent route:", location.pathname);
+    document.title = "Page Introuvable | Bricareau Traitement d'Eau";
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+      metaDesc.setAttribute("content", "Désolé, la page que vous recherchez sur Bricareau.com n'existe pas ou a été déplacée. Retournez à l'accueil pour explorer nos solutions de traitement d'eau.");
+    }
+    
+    // Noindex for 404 pages is good practice
+    let robots = document.querySelector('meta[name="robots"]');
+    if (!robots) {
+      robots = document.createElement('meta');
+      robots.setAttribute('name', 'robots');
+      document.head.appendChild(robots);
+    }
+    robots.setAttribute('content', 'noindex, follow');
   }, [location.pathname]);
 
   return (

@@ -1,3 +1,4 @@
+import React, { useEffect } from "react";
 import { Phone, CheckCircle, Leaf, Users, ChevronRight, ArrowRight, CupSoda, Coffee, Snowflake, Sparkles, Building2, ShieldCheck, HeartPulse } from "lucide-react";
 import heroImage from "@/assets/Hero-Entreprise.jpg";
 import { Card, CardContent } from "@/components/ui/card";
@@ -66,6 +67,22 @@ const Entreprises = () => {
       description: "Maintenance préventive, changements de filtres proactifs et support technique prioritaire."
     }
   ];
+
+  useEffect(() => {
+    document.title = "Solutions d'Eau pour Entreprises et Bureaux au Québec | Bricareau";
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+      metaDesc.setAttribute("content", "Optimisez le bien-être de vos employés avec nos solutions d'hydratation premium au Québec. Refroidisseurs sans bouteille, eau pétillante et machines à glaçons pour bureaux.");
+    }
+
+    // OG Tags
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) ogTitle.setAttribute("content", "Bricareau : L'Excellence de l'Eau au Bureau | Québec");
+    const ogDesc = document.querySelector('meta[property="og:description"]');
+    if (ogDesc) ogDesc.setAttribute("content", "Offrez une eau pure et fraîche à vos collaborateurs. Solutions écologiques, design et performantes pour entreprises québécoises.");
+    const ogUrl = document.querySelector('meta[property="og:url"]');
+    if (ogUrl) ogUrl.setAttribute("content", "https://bricareau.com/entreprises");
+  }, []);
 
   return (
     <div className="min-h-screen bg-white">

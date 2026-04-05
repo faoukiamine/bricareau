@@ -1,3 +1,4 @@
+import React, { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
@@ -8,6 +9,21 @@ import promotionsHero from "@/assets/27651.jpg";
 import filtrationPromoImg from "@/assets/10341859.jpg";
 
 const Promotions = () => {
+    useEffect(() => {
+        document.title = "Promotions et Offres Spéciales | Traitement d'Eau Bricareau";
+        const metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc) {
+            metaDesc.setAttribute("content", "Économisez sur votre système de traitement d'eau au Québec. Découvrez nos promotions exclusives sur les adoucisseurs et filtres à eau. Offres à durée limitée !");
+        }
+
+        // OG Tags
+        const ogTitle = document.querySelector('meta[property="og:title"]');
+        if (ogTitle) ogTitle.setAttribute("content", "Promotions Bricareau : Économisez sur la Qualité de votre Eau");
+        const ogDesc = document.querySelector('meta[property="og:description"]');
+        if (ogDesc) ogDesc.setAttribute("content", "Profitez de rabais exceptionnels sur l'installation et l'entretien de vos systèmes d'eau résidentiels et commerciaux.");
+        const ogUrl = document.querySelector('meta[property="og:url"]');
+        if (ogUrl) ogUrl.setAttribute("content", "https://bricareau.com/promotions");
+    }, []);
     const promotions = [
         {
             title: "Offre Spéciale Adoucisseur d'eau",

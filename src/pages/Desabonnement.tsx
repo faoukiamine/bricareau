@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 import Footer from "@/components/Footer";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -20,6 +20,20 @@ const UNSUBSCRIBE_REASONS = [
 ];
 
 const Desabonnement = () => {
+    useEffect(() => {
+        document.title = "Désabonnement | Bricareau Traitement d'Eau";
+        const metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc) {
+            metaDesc.setAttribute("content", "Gérez vos préférences de communication avec Bricareau. Formulaire de désabonnement rapide et simple.");
+        }
+
+        // OG Tags
+        const ogTitle = document.querySelector('meta[property="og:title"]');
+        if (ogTitle) ogTitle.setAttribute("content", "Désabonnement - Bricareau");
+        const ogUrl = document.querySelector('meta[property="og:url"]');
+        if (ogUrl) ogUrl.setAttribute("content", "https://bricareau.com/desabonnement");
+    }, []);
+
     const [step, setStep] = useState(1);
     const [email, setEmail] = useState("");
     const [reason, setReason] = useState("");
