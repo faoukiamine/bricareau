@@ -87,11 +87,8 @@ const Desabonnement = () => {
             setSuccessMessage(data.message || "");
             setIsSuccess(true);
 
-            if (data.message === "Already unsubscribed") {
-                toast.success("Vous êtes déjà désabonné.");
-            } else {
-                toast.success("Un courriel de confirmation vous a été envoyé.");
-            }
+            // Standardized message for privacy: don't confirm if email exists or not
+            toast.success("Demande traitée. Si votre adresse est dans notre liste, un courriel a été envoyé.");
         } catch (error) {
             toast.error("Une erreur est survenue. Veuillez réessayer plus tard.");
         } finally {
@@ -121,32 +118,18 @@ const Desabonnement = () => {
                         {isSuccess ? (
                             <div className="space-y-6 animate-in fade-in zoom-in duration-500">
                                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto">
-                                    {successMessage === "Already unsubscribed" ? (
-                                        <CheckCircle2 className="w-8 h-8 text-blue-600" />
-                                    ) : (
-                                        <Mail className="w-8 h-8 text-blue-600" />
-                                    )}
+                                    <Mail className="w-8 h-8 text-blue-600" />
                                 </div>
                                 <h3 className="text-xl font-bold text-gray-900">
-                                    {successMessage === "Already unsubscribed"
-                                        ? "Déjà désabonné"
-                                        : "Action requise : Vérifiez vos courriels"}
+                                    Vérifiez votre boîte de réception
                                 </h3>
                                 <div className="text-gray-600 space-y-4">
-                                    {successMessage === "Already unsubscribed" ? (
-                                        <p>
-                                            L'adresse <strong>{email}</strong> est déjà retirée de nos listes de diffusion marketing.
-                                        </p>
-                                    ) : (
-                                        <>
-                                            <p>
-                                                Pour finaliser votre désabonnement, nous avons envoyé un lien de confirmation à l'adresse <strong>{email}</strong>.
-                                            </p>
-                                            <p className="text-sm border-t border-gray-200 pt-4 mt-4">
-                                                Veuillez cliquer sur le bouton dans le courriel pour confirmer votre choix. Si vous ne le voyez pas, vérifiez votre dossier de courriels indésirables.
-                                            </p>
-                                        </>
-                                    )}
+                                    <p>
+                                        Si votre adresse courriel (<strong>{email}</strong>) est inscrite à notre infolettre, vous recevrez sous peu un lien de confirmation pour finaliser votre désabonnement.
+                                    </p>
+                                    <p className="text-sm border-t border-gray-200 pt-4 mt-4">
+                                        Pensez à vérifier votre dossier de courriels indésirables si vous ne recevez rien d'ici quelques minutes.
+                                    </p>
                                 </div>
                                 <Button
                                     onClick={() => window.location.href = "/"}
