@@ -7,9 +7,11 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
-import { Loader2, CheckCircle2, ChevronRight, ChevronLeft } from "lucide-react";
+import { Loader2, CheckCircle2, ChevronRight, ChevronLeft, Mail } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { supabase } from "@/lib/supabase";
+
+import { useSearchParams } from "react-router-dom";
 
 const UNSUBSCRIBE_REASONS = [
     { id: "too_many", label: "Je reçois trop de courriels" },
@@ -20,6 +22,8 @@ const UNSUBSCRIBE_REASONS = [
 ];
 
 const Desabonnement = () => {
+    const [searchParams] = useSearchParams();
+
     useEffect(() => {
         document.title = "Désabonnement | Bricareau Traitement d'Eau";
         const metaDesc = document.querySelector('meta[name="description"]');
@@ -27,19 +31,30 @@ const Desabonnement = () => {
             metaDesc.setAttribute("content", "Gérez vos préférences de communication avec Bricareau. Formulaire de désabonnement rapide et simple.");
         }
 
+        // Handle errors from confirmation link
+        const error = searchParams.get("error");
+        if (error === "invalid_token") {
+            toast.error("Le lien de désabonnement est invalide ou a expiré. Veuillez soumettre une nouvelle demande.");
+        } else if (error === "missing_token") {
+            toast.error("Jeton de désabonnement manquant.");
+        }
+
         // OG Tags
         const ogTitle = document.querySelector('meta[property="og:title"]');
         if (ogTitle) ogTitle.setAttribute("content", "Désabonnement - Bricareau");
         const ogUrl = document.querySelector('meta[property="og:url"]');
         if (ogUrl) ogUrl.setAttribute("content", "https://bricareau.com/desabonnement");
-    }, []);
+    }, [searchParams]);
 
     const [step, setStep] = useState(1);
+
     const [email, setEmail] = useState("");
     const [reason, setReason] = useState("");
     const [otherDetails, setOtherDetails] = useState("");
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSuccess, setIsSuccess] = useState(false);
+
+    const [successMessage, setSuccessMessage] = useState("");
 
     const handleNextStep = (e: React.FormEvent) => {
         e.preventDefault();
@@ -63,14 +78,20 @@ const Desabonnement = () => {
 
         setIsSubmitting(true);
         try {
-            const { error: fnError } = await supabase.functions.invoke('resend-unsubscribe-contact', {
+            const { data, error: fnError } = await supabase.functions.invoke('resend-unsubscribe-contact', {
                 body: { email, reason, details: otherDetails }
             });
 
             if (fnError) throw fnError;
 
+            setSuccessMessage(data.message || "");
             setIsSuccess(true);
-            toast.success("Vous avez été désabonné avec succès.");
+
+            if (data.message === "Already unsubscribed") {
+                toast.success("Vous êtes déjà désabonné.");
+            } else {
+                toast.success("Un courriel de confirmation vous a été envoyé.");
+            }
         } catch (error) {
             toast.error("Une erreur est survenue. Veuillez réessayer plus tard.");
         } finally {
@@ -99,13 +120,34 @@ const Desabonnement = () => {
                     <div className="bg-gray-50 p-8 rounded-3xl border border-gray-100 shadow-sm transition-all duration-300">
                         {isSuccess ? (
                             <div className="space-y-6 animate-in fade-in zoom-in duration-500">
-                                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto">
-                                    <CheckCircle2 className="w-8 h-8 text-green-600" />
+                                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto">
+                                    {successMessage === "Already unsubscribed" ? (
+                                        <CheckCircle2 className="w-8 h-8 text-blue-600" />
+                                    ) : (
+                                        <Mail className="w-8 h-8 text-blue-600" />
+                                    )}
                                 </div>
-                                <h3 className="text-xl font-bold text-gray-900">Confirmation de désabonnement</h3>
-                                <p className="text-gray-600">
-                                    Votre demande a été traitée. Vous ne recevrez plus de communications marketing de notre part à l'adresse <strong>{email}</strong>.
-                                </p>
+                                <h3 className="text-xl font-bold text-gray-900">
+                                    {successMessage === "Already unsubscribed"
+                                        ? "Déjà désabonné"
+                                        : "Action requise : Vérifiez vos courriels"}
+                                </h3>
+                                <div className="text-gray-600 space-y-4">
+                                    {successMessage === "Already unsubscribed" ? (
+                                        <p>
+                                            L'adresse <strong>{email}</strong> est déjà retirée de nos listes de diffusion marketing.
+                                        </p>
+                                    ) : (
+                                        <>
+                                            <p>
+                                                Pour finaliser votre désabonnement, nous avons envoyé un lien de confirmation à l'adresse <strong>{email}</strong>.
+                                            </p>
+                                            <p className="text-sm border-t border-gray-200 pt-4 mt-4">
+                                                Veuillez cliquer sur le bouton dans le courriel pour confirmer votre choix. Si vous ne le voyez pas, vérifiez votre dossier de courriels indésirables.
+                                            </p>
+                                        </>
+                                    )}
+                                </div>
                                 <Button
                                     onClick={() => window.location.href = "/"}
                                     className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8"
