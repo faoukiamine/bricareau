@@ -12,7 +12,8 @@ import {
     FormField,
     FormItem,
     FormLabel,
-    FormMessage } from "@/components/ui/form";
+    FormMessage
+} from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { format, addDays, setHours, setMinutes, startOfDay, endOfDay } from "date-fns";
 import { fr } from "date-fns/locale";
@@ -34,11 +35,14 @@ const formSchema = z.object({
     province: z.string().min(2, "Province requise"),
     code_postal: z.string().min(5, "Code postal requis"),
     appointment_date: z.date({
-        required_error: "Veuillez choisir une date" }),
+        required_error: "Veuillez choisir une date"
+    }),
     appointment_time: z.string({
-        required_error: "Veuillez choisir une heure" }),
+        required_error: "Veuillez choisir une heure"
+    }),
     legal_consent: z.boolean().refine(val => val === true, {
-        message: "Champs Obligatoire" }),
+        message: "Champs Obligatoire"
+    }),
     marketing_consent: z.boolean().optional().default(false)
 });
 
@@ -147,10 +151,13 @@ const ConsultationFormSection = ({ id, isStandalone = false }: { id?: string, is
                     nom: values.nom,
                     email: values.email,
                     phone: values.phone,
+                    address: values.address,
                     ville: values.ville,
                     province: values.province,
                     code_postal: values.code_postal,
-                    appointment_time: appointmentDateTime.toISOString() });
+                    appointment_time: appointmentDateTime.toISOString(),
+                    type: "consultation"
+                });
 
             if (error) throw error;
 
@@ -158,7 +165,9 @@ const ConsultationFormSection = ({ id, isStandalone = false }: { id?: string, is
                 const { error: fnError } = await supabase.functions.invoke('send-consultation-confirmation', {
                     body: {
                         ...values,
-                        appointment_time: appointmentDateTime.toISOString() } });
+                        appointment_time: appointmentDateTime.toISOString()
+                    }
+                });
 
                 if (fnError) {
                     console.error("Failed to send confirmation email:", fnError);
