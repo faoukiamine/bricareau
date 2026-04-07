@@ -515,6 +515,11 @@ const AdoucisseursEauDePuits = () => {
                                 >
                                     <ChevronLeft className="h-5 w-5" />
                                 </Button>
+                                <div className="flex gap-1.5 px-2">
+                                    {[0, 1, 2].map((i) => (
+                                        <div key={i} className={`h-1.5 rounded-full transition-all duration-300 ${i === activeCol ? 'w-6 bg-blue-600' : 'w-1.5 bg-blue-100'}`} />
+                                    ))}
+                                </div>
                                 <Button 
                                     size="icon" 
                                     variant="outline" 
