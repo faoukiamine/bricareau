@@ -52,7 +52,7 @@ const Hero = ({
       )}
 
       {/* 1. Image Section - Stacked on Mobile/Tablet Portrait, Overlay on Desktop */}
-      <div className="relative lg:absolute lg:inset-0 w-full h-[400px] md:h-[550px] lg:h-full z-0 overflow-hidden">
+      <div className="relative lg:absolute lg:inset-0 w-full aspect-[4/3] sm:aspect-video lg:aspect-auto lg:h-full z-0 overflow-hidden">
         <div className={cn(
           "absolute inset-0 z-10 transition-opacity duration-1000",
           gradualOpacity75 

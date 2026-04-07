@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { CheckCircle2, Facebook, Instagram, Youtube, Twitter, ArrowRight } from "lucide-react";
-import { motion } from "framer-motion";
+
 
 const DesabonnementSucces = () => {
     useEffect(() => {
@@ -47,23 +47,16 @@ const DesabonnementSucces = () => {
                 </div>
 
                 <div className="container mx-auto px-4 py-16 max-w-4xl">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
+                    <div
                         className="bg-white rounded-[2.5rem] p-12 text-center shadow-2xl shadow-blue-900/5 border border-slate-100"
                     >
                         <div className="mb-8 relative inline-block">
-                            <motion.div
-                                initial={{ scale: 0 }}
-                                animate={{ scale: 1 }}
-                                transition={{ type: "spring", damping: 12, stiffness: 200, delay: 0.2 }}
+                            <div
                                 className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto"
                             >
                                 <CheckCircle2 className="w-10 h-10 text-green-600" />
-                            </motion.div>
-                            <motion.div
-                                animate={{ scale: [1, 1.2, 1] }}
-                                transition={{ repeat: Infinity, duration: 3 }}
+                            </div>
+                            <div
                                 className="absolute -top-2 -right-2 w-6 h-6 bg-blue-500 rounded-full border-4 border-white"
                             />
                         </div>
@@ -111,7 +104,7 @@ const DesabonnementSucces = () => {
                                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                             </Button>
                         </div>
-                    </motion.div>
+                    </div>
                 </div>
             </main>
             <Footer />
