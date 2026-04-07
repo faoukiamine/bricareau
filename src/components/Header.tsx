@@ -613,7 +613,7 @@ const Header = () => {
                   <img
                     src="/logo.png"
                     alt="Bricareau Water Specialist - Traitement d'eau résidentiel au Canada"
-                    className="h-12 w-auto object-contain"
+                    className="h-8 md:h-12 w-auto object-contain max-w-[100px] md:max-w-none"
                   />
                 </NavLink>
               </div>
@@ -663,7 +663,7 @@ const Header = () => {
               </div>
 
               {/* Mobile: Icon Row */}
-              <div className="lg:hidden flex items-center gap-2 sm:gap-4 ml-auto">
+              <div className="lg:hidden flex items-center gap-1 sm:gap-4 ml-auto">
                 <button
                   ref={mobileSearchButtonRef}
                   className="p-1.5 sm:p-2"

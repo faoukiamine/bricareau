@@ -316,8 +316,8 @@ const WaterDiagnosticQuiz = () => {
                 "w-full max-w-4xl bg-white border border-slate-100 rounded-none md:rounded-[3rem] shadow-sm overflow-hidden"
             )}>
                 {/* Progress Header - Ultra-Compact */}
-                <div className="pt-10 px-4 sm:px-12 w-full">
-                    <div className="flex items-center justify-between mb-8 max-w-xl mx-auto w-full relative px-2">
+                <div className="pt-10 px-0 sm:px-12 w-full overflow-x-hidden">
+                    <div className="flex items-center justify-center gap-2 sm:gap-12 mb-8 max-w-xl mx-auto w-full relative px-2">
                         {/* Step 1 */}
                         <div className="flex flex-col items-center gap-3 z-10 bg-white px-2 sm:px-4 text-center">
                             <div className={cn(
