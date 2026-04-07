@@ -200,7 +200,7 @@ const DesinfectionUV = () => {
                                  <span className="italic font-light text-[#2563eb] block">Pourquoi la</span>
                                  <span className="font-bold text-[#1e3a8a] block">Désinfection UV ?</span>
                              </h2>
-                             <p className="text-lg text-slate-500 max-w-2xl font-light leading-relaxed">
+                             <p className="text-lg text-slate-500 max-w-2xl font-light leading-relaxed text-justify lg:text-left">
                                  Une ingénierie de précision paramétrée pour éradiquer 99,99% des micro-organismes sans aucun additif chimique.
                              </p>
                         </div>
@@ -311,7 +311,7 @@ const DesinfectionUV = () => {
                                         Éliminez l'invisible : <br />
                                         <span className="text-blue-400 italic font-bold font-serif whitespace-nowrap">Protection contre 99,99%.</span>
                                     </h2>
-                                    <p className="text-lg text-slate-300 font-light leading-relaxed max-w-xl">
+                                    <p className="text-lg text-slate-300 font-light leading-relaxed max-w-xl text-justify lg:text-left">
                                         Votre eau peut sembler cristalline tout en abritant des micro-organismes nocifs. Nos rayons UV-C ciblent le cœur des contaminants pour les rendre inoffensifs en une fraction de seconde, sans produits chimiques.
                                     </p>
                                 </div>
@@ -394,7 +394,7 @@ const DesinfectionUV = () => {
                             </h2>
                             <div className="w-24 h-1 bg-blue-600 mb-12"></div>
 
-                            <p className="body-pro-max text-slate-600 text-left lg:text-justify max-w-7xl mx-auto">
+                            <p className="body-pro-max text-slate-600 text-justify lg:text-left max-w-7xl mx-auto">
                                 La technologie UV est le choix idéal pour les consommateurs qui cherchent à se protéger contre les contaminants microbiologiques, notamment les bactéries (E.coli, coliformes fécaux, etc.), les virus et les protozoaires (cryptosporidium, giardia, etc.) qui peuvent être résistants au chlore. Contrairement aux traitements chimiques, les UV ne modifient pas le goût, l’odeur ou la composition physico-chimique de l’eau. Nos dispositifs UV mis en place sur le point d’entrée (POE) est installé avant que l’eau ne soit distribuée dans les foyers, au niveau de la conduite d’alimentation principale, avant qu’elle ne circule dans l’ensemble du réseau domestique.
                             </p>
                         </div>
@@ -579,7 +579,7 @@ const DesinfectionUV = () => {
                                 <span className="italic font-light text-[#1e3a8a] lg:text-white block">Des tests d'eau précis</span>
                                 <span className="text-[#1e3a8a] lg:text-white italic font-bold font-serif">pour une tranquillité d'esprit totale.</span>
                             </h2>
-                            <p className="font-light text-black lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
+                            <p className="font-light text-black lg:text-white/95 mb-8 max-w-xl text-justify lg:text-left">
                                 Ne devinez pas la qualité de votre eau. Nos analyses approfondies identifient les bactéries, les minéraux et les contaminants chimiques pour vous offrir une tranquillité d'esprit totale.
                             </p>
                             <div className="flex gap-4">

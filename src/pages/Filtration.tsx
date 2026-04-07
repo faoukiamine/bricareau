@@ -415,7 +415,7 @@ const Filtration = () => {
                                          <h2 id="undersink-title" className="heading-pro-max text-left mb-8 scroll-mt-[120px]">
                                             <span className="italic font-light text-[#2563eb] block">Votre source d'eau cristalline, sans compromis.</span>
                                         </h2>
-                                        <p className="body-pro-max text-left max-w-xl lg:ml-0">
+                                        <p className="body-pro-max text-justify lg:text-left max-w-xl lg:ml-0">
                                             Découvrez comment notre système d'osmose inverse libère votre quotidien du goût de chlore et de la corvée des bouteilles plastique. Une eau légère et saine à portée de main.
                                         </p>
                                     </div>
@@ -584,7 +584,7 @@ const Filtration = () => {
                                 <span className="font-light italic text-[#1e3a8a] lg:text-white block">Votre eau est</span>
                                 <span className="text-[#1e3a8a] lg:text-white italic font-bold font-serif"> notre priorité.</span>
                             </h2>
-                            <p className="body-pro-max text-black lg:text-white/95 mb-8 max-w-xl text-left">
+                            <p className="body-pro-max text-black lg:text-white/95 mb-8 max-w-xl text-justify lg:text-left">
                                 Ne laissez plus le doute couler de votre robinet. Demandez votre test d'eau dès aujourd'hui et obtenez un portrait clair de votre eau ainsi que des solutions adaptées à votre foyer.
                             </p>
                             <div className="flex gap-4">

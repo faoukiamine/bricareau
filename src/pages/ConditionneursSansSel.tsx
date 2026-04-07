@@ -302,7 +302,7 @@ const ConditionneursSansSel = () => {
                    </div>
                    <span className="text-blue-600 font-bold text-xs uppercase tracking-[0.3em] mb-4">SANTÉ & BIEN-ÊTRE</span>
                    <h3 className="text-4xl font-bold text-[#1e3a8a] mb-6 leading-tight">Zéro sodium, 100% minéraux</h3>
-                   <p className="text-slate-500 font-light text-xl leading-relaxed mb-8">
+                   <p className="text-slate-500 font-light text-xl leading-relaxed mb-8 text-justify lg:text-left">
                      Contrairement au sel qui "vole" les bons minéraux de votre eau, notre technologie conserve le calcium et le magnésium essentiels tout en éliminant son pouvoir incrustant.
                    </p>
                    <div className="flex items-center gap-4 text-[#1e3a8a] font-medium pt-8 border-t border-slate-50">
@@ -322,7 +322,7 @@ const ConditionneursSansSel = () => {
                   <div className="mt-auto">
                     <span className="text-blue-300 font-bold text-xs uppercase tracking-[0.2em]">ENGAGEMENT ÉCO</span>
                     <h3 className="text-3xl font-bold text-white mt-4 mb-4">Zéro rejet, respect total</h3>
-                    <p className="text-blue-50 font-light text-lg leading-relaxed mb-8 opacity-80 group-hover:opacity-100 transition-opacity">
+                    <p className="text-blue-50 font-light text-lg leading-relaxed mb-8 opacity-80 group-hover:opacity-100 transition-opacity text-justify lg:text-left">
                       Pas de régénération, donc aucun gaspillage d’eau. Une solution conçue pour les foyers soucieux de leur impact environnemental et la longévité de leur fosse septique.
                     </p>
                     <div className="inline-flex items-center gap-3 px-5 py-2.5 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-white text-sm font-medium">
@@ -343,7 +343,7 @@ const ConditionneursSansSel = () => {
                   <div className="mt-auto">
                     <span className="text-blue-600 font-bold text-xs uppercase tracking-[0.2em]">PROTECTION MATÉRIELLE</span>
                     <h3 className="text-2xl font-bold text-[#1e3a8a] mt-4 mb-4">Zéro tartre incrusté</h3>
-                    <p className="text-slate-500 font-light text-lg leading-relaxed mb-6">
+                    <p className="text-slate-500 font-light text-lg leading-relaxed mb-6 text-justify lg:text-left">
                       La technologie TAC agit en amont pour stopper la calcification avant qu'elle ne ronge vos chauffe-eaux et électroménagers de luxe.
                     </p>
                     <ul className="space-y-3">

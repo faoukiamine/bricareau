@@ -416,7 +416,7 @@ const TraitementEauDePuits = () => {
                  <span className="italic font-light text-[#1e3a8a] lg:text-white block">Dites adieu au</span>
                  <span className="text-[#1e3a8a] lg:text-white italic font-bold font-serif">fer, soufre et calcaire.</span>
                </h2>
-               <p className="body-pro-max text-black lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
+               <p className="body-pro-max text-black lg:text-white/95 mb-8 max-w-xl text-justify lg:text-left">
                  Un puits performant commence par une analyse rigoureuse. Identifiez les contaminants invisibles et protégez durablement votre santé et vos installations.
                </p>
               <div className="flex gap-4">

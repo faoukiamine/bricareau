@@ -103,21 +103,29 @@ const Hero = ({
             </h1>
             
             <p 
-              className="max-w-xl animate-in fade-in slide-in-from-left duration-1000 delay-100 text-lg"
+              className="max-w-xl animate-in fade-in slide-in-from-left duration-1000 delay-100 text-justify lg:text-left"
               style={{
                 fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
                 fontWeight: 300,
                 color: 'rgb(71, 85, 105)',
-                fontSize: '20px',
-                lineHeight: '28px',
+                fontSize: 'var(--p-font-size, 18px)',
+                lineHeight: '1.5',
                 fontStyle: 'normal'
               }}
             >
+              <style dangerouslySetInnerHTML={{ __html: `
+                @media (min-width: 768px) {
+                  :root { --p-font-size: 20px; }
+                }
+                @media (max-width: 767px) {
+                  :root { --p-font-size: 18px; }
+                }
+              `}} />
               {subtitle}
             </p>
 
-            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 pt-4 animate-in fade-in slide-in-from-left duration-1000 delay-200">
-              <Button asChild className="w-fit">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-4 animate-in fade-in slide-in-from-left duration-1000 delay-200 w-full sm:w-auto">
+              <Button asChild className="w-full sm:w-fit h-auto py-4 px-6 rounded-full text-base font-bold whitespace-normal text-center leading-tight bg-[#2563eb] hover:bg-[#1e3a8a] text-white">
                 <a href={ctaLink}>{ctaText}</a>
               </Button>
               
@@ -125,10 +133,10 @@ const Hero = ({
                 <Button
                   variant="outline"
                   asChild
-                  className="w-fit"
+                  className="w-full sm:w-fit h-auto py-4 px-6 rounded-full text-base font-bold border-2 border-[#2563eb] text-[#2563eb] hover:bg-[#2563eb] hover:text-white transition-all transition-duration-300"
                 >
-                  <a href="tel:18552649328" className="flex items-center gap-2">
-                    <Phone className="w-5 h-5" />
+                  <a href="tel:18552649328" className="flex items-center justify-center gap-2">
+                    <Phone className="w-5 h-5 flex-shrink-0" />
                     1-855-264-9328
                   </a>
                 </Button>

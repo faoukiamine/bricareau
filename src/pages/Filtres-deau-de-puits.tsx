@@ -262,7 +262,7 @@ const FiltresPuits = () => {
                                         </h2>
                                         
                                         <div className="space-y-8">
-                                            <p className="text-lg lg:text-xl italic text-slate-700 font-light leading-relaxed">
+                                            <p className="text-lg lg:text-xl italic text-slate-700 font-light leading-relaxed text-justify lg:text-left">
                                                 "Une filtration d'eau classique est une réponse générique à un problème unique. Nous concevons la solution en respectant l'ADN de votre eau."
                                             </p>
                                             
@@ -695,7 +695,7 @@ const FiltresPuits = () => {
                                 <span className="italic font-light text-[#1e3a8a] lg:text-white block">L'excellence commence</span>
                                 <span className="text-[#1e3a8a] lg:text-white italic font-bold font-serif">par une eau parfaite.</span>
                             </h2>
-                            <p className="font-light text-black lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
+                            <p className="font-light text-black lg:text-white/95 mb-8 max-w-xl text-justify lg:text-left">
                                 Le luxe, c'est de ne pas avoir à se soucier de la qualité de ce que l'on consomme. Offrez-vous la sérénité d'une eau analysée par des experts, pour une maison où tout brille, sans effort et sans compromis.
                             </p>
                             <div className="flex gap-4">

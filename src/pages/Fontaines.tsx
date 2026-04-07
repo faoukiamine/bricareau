@@ -351,7 +351,7 @@ const Fontaines = () => {
                                 <span className="font-bold text-[#1e3a8a] text-[32px] md:text-[46px] lg:text-[50px] block">l'art de l'eau pure.</span>
                             </h1>
 
-                            <p className="body-pro-max text-slate-600 max-w-xl text-left">
+                            <p className="body-pro-max text-slate-600 max-w-xl text-justify lg:text-left">
                                 Élevez votre expérience d'hydratation avec nos refroidisseurs d'eau haute performance. Un design élégant allié à une pureté absolue pour votre maison ou votre bureau.
                             </p>
 
@@ -507,7 +507,7 @@ const Fontaines = () => {
                                         <span className="text-[10px] font-black text-white uppercase tracking-widest">Expérience Premium</span>
                                     </div>
                                     <h3 className="text-3xl lg:text-4xl font-bold text-[#1e3a8a] lg:text-white tracking-tight">Art de Vivre</h3>
-                                    <p className="text-slate-700 lg:text-white text-[18px] lg:text-[20px] leading-relaxed italic border-l-2 border-blue-500 pl-6">
+                                    <p className="text-slate-700 lg:text-white text-[18px] lg:text-[20px] leading-relaxed italic border-l-2 border-blue-500 pl-6 text-justify lg:text-left">
                                         Une pureté incomparable qui s'intègre harmonieusement à votre quotidien. Découvrez l'équilibre parfait entre esthétique et santé, où chaque gorgée est une signature de qualité.
                                     </p>
                                 </div>

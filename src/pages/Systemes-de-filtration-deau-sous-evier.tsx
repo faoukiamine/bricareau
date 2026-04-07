@@ -525,7 +525,7 @@ const FiltrationSousEvier = () => {
                                 <span className="italic font-light text-[#1e3a8a] lg:text-white block">Identifiez l'invisible,</span>
                                 <span className="text-[#1e3a8a] lg:text-white italic font-bold font-serif">maîtrisez la pureté de votre eau.</span>
                             </h2>
-                            <p className="font-light text-black lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
+                            <p className="font-light text-black lg:text-white/95 mb-8 max-w-xl text-justify lg:text-left">
                                 Ne laissez plus le doute couler de votre robinet. Nos tests d'eau révèlent la composition réelle de votre eau pour vous offrir une solution de filtration sur mesure, garantissant santé et sérénité à toute votre famille.
                             </p>
                             <div className="flex gap-4">

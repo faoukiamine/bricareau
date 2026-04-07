@@ -617,7 +617,7 @@ const AdoucisseursEauDePuits = () => {
                                 <span className="italic font-light text-[#1e3a8a] lg:text-white block tracking-tight">Des tests d'eau précis</span>
                                 <span className="text-[#1e3a8a] lg:text-white italic font-bold font-serif">pour une tranquillité d'esprit.</span>
                             </h2>
-                            <p className="font-light text-black lg:text-white/95 mb-8 max-w-xl text-lg mt-6">Analyse approfondie pour identifier les minéraux et contaminants.</p>
+                             <p className="font-light text-black lg:text-white/95 mb-8 max-w-xl text-lg mt-6 text-justify lg:text-left">Analyse approfondie pour identifier les minéraux et contaminants.</p>
                             <div className="flex gap-4"><Button asChild><a href="/tests-eau">Demandez une analyse d'eau</a></Button></div>
                         </div>
                     </div>

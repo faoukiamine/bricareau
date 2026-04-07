@@ -314,7 +314,7 @@ const Adoucissement = () => {
                                         <span className="italic font-light text-[#2563eb] block">Les avantages de</span>
                                         <span className="font-bold text-[#1e3a8a] block text-left">l'adoucissement d'eau.</span>
                                     </h2>
-                                    <p className="body-pro-max text-slate-600 text-left max-w-2xl">
+                                    <p className="body-pro-max text-slate-600 text-justify lg:text-left max-w-2xl">
                                         Une transformation immédiate pour votre confort, votre santé et la longévité de votre foyer. Dites adieu au calcaire et retrouvez une eau pure et soyeuse.
                                     </p>
                                 </div>
@@ -441,7 +441,7 @@ const Adoucissement = () => {
                                      >
                                          <span className="italic font-light text-[#2563eb] block">Adoucisseurs d'eau résidentiels</span>
                                      </h2>
-                                     <p className="body-pro-max mb-8 max-w-xl text-left">
+                                     <p className="body-pro-max mb-8 max-w-xl text-justify lg:text-left">
                                             Offrez à votre foyer le luxe d'une eau sans calcaire. Nos adoucisseurs de pointe éliminent le tartre à la source, garantissant non seulement une vaisselle étincelante sans aucune trace, mais aussi une protection durable de vos appareils électroménagers et de votre plomberie.
                                         </p>
                                     </div>
@@ -520,7 +520,7 @@ const Adoucissement = () => {
                                         <h2 className="mb-8 heading-pro-max text-left">
                                              <span className="italic font-light text-[#2563eb] block text-left">Adoucisseurs d'eau portables</span>
                                          </h2>
-                                         <p className="body-pro-max text-left">
+                                         <p className="body-pro-max text-justify lg:text-left">
                                              Ne laissez plus l’eau dure des campings ou des ports abîmer vos cheveux et vos équipements. Profitez d'une eau de qualité domestique dans votre VR, votre bateau ou votre chalet avec notre adoucisseur ultra-compact.
                                          </p>
                                     </div>
@@ -600,7 +600,7 @@ const Adoucissement = () => {
                                         <h2 className="mb-8 heading-pro-max text-left">
                                              <span className="italic font-light text-[#2563eb] block text-left">Conditionneurs d'eau sans sel</span>
                                          </h2>
-                                         <p className="body-pro-max text-left">
+                                         <p className="body-pro-max text-justify lg:text-left">
                                              Le secret d'un linge éclatant et d'une vaisselle sans traces. Sans l'ajout de sel, votre eau devient votre meilleure alliée beauté et ménage.
                                          </p>
                                     </div>
