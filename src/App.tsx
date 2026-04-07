@@ -90,6 +90,8 @@ import EauPetillanteEntreprises from "./pages/Eau-petillante-entreprises";
 import MachinesAGlaceEntreprises from "./pages/Machines-a-glace-entreprises";
 import MachinesACafeEntreprises from "./pages/Machines-a-cafe-entreprises";
 
+import DesabonnementSucces from "./pages/DesabonnementSucces";
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -167,6 +169,7 @@ const App = () => (
           <Route path="/politique-de-confidentialite" element={<PolitiqueConfidentialite />} />
           <Route path="/conditions-generales-utilisation" element={<ConditionsGeneralesUtilisation />} />
           <Route path="/desabonnement" element={<Desabonnement />} />
+          <Route path="/desabonnement-succes" element={<DesabonnementSucces />} />
           <Route path="/landing-residentiel" element={<LandingResidential />} />
 
           {/* Blog Routes */}
@@ -183,7 +186,7 @@ const App = () => (
           <Route path="/filtres-de-remplacement" element={<FiltresDeRemplacement />} />
           <Route path="/diagnostic" element={<Diagnostic />} />
           <Route path="/operator" element={<OperatorDashboard />} />
-          
+
           <Route path="/refroidisseurs-eau-entreprises" element={<RefroidisseursEauEntreprises />} />
           <Route path="/eau-petillante-entreprises" element={<EauPetillanteEntreprises />} />
           <Route path="/machines-a-glace-entreprises" element={<MachinesAGlaceEntreprises />} />

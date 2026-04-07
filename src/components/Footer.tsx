@@ -1,9 +1,40 @@
-import { Facebook, Twitter, Youtube, Instagram, Mail } from "lucide-react";
+import { useState } from "react";
+import { Facebook, Twitter, Youtube, Instagram, Mail, Loader2 } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { toast } from "sonner";
+import { supabase } from "@/lib/supabase";
 
 const Footer = () => {
+  const [email, setEmail] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleSubscribe = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email || !email.includes("@")) {
+      toast.error("Veuillez entrer une adresse courriel valide.");
+      return;
+    }
+
+    setIsLoading(true);
+    try {
+      const { error } = await supabase.functions.invoke("newsletter-subscribe", {
+        body: { email },
+      });
+
+      if (error) throw error;
+
+      toast.success("Votre inscription a été enregistrée avec succès !");
+      setEmail("");
+    } catch (err: any) {
+      console.error("Newsletter error:", err);
+      toast.error("Une erreur s'est produite lors de l'inscription.");
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   return (
     <footer className="bg-[#2563EB] text-white py-12 md:py-16">
       <div className="container mx-auto px-4">
@@ -93,24 +124,30 @@ const Footer = () => {
             <p className="text-sm text-white/80 mb-4">
               Inscrivez-vous à notre infolettre pour recevoir des conseils et offres exclusives
             </p>
-            <div className="flex flex-col gap-2">
+            <form onSubmit={handleSubscribe} className="flex flex-col gap-2">
               <div className="flex gap-2">
                 <Input
                   type="email"
                   placeholder="Votre email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   className="bg-white/10 border-white/20 text-white placeholder:text-white/60 focus-visible:ring-white/50"
+                  disabled={isLoading}
+                  required
                 />
                 <Button
+                  type="submit"
                   size="icon"
                   className="bg-white text-[#2563EB] hover:bg-white/90 shrink-0"
+                  disabled={isLoading}
                 >
-                  <Mail className="h-4 w-4" />
+                  {isLoading ? <Loader2 className="h-4 w-4 animate-spin" /> : <Mail className="h-4 w-4" />}
                 </Button>
               </div>
               <p className="text-[10px] text-white/50 leading-tight">
                 En m'inscrivant, j'accepte la <Link to="/politique-de-confidentialite" className="underline">politique de confidentialité</Link>.
               </p>
-            </div>
+            </form>
           </div>
         </div>
 
