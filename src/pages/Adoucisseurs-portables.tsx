@@ -116,7 +116,7 @@ const AdoucisseursPortables = () => {
                     <div className="grid grid-cols-1 md:grid-cols-12 gap-8 h-auto lg:h-[900px]">
                         
                         {/* Main Feature Card - 100% Nomade (Left, Large) */}
-                        <div className="md:col-span-12 lg:col-span-7 group relative rounded-[3.5rem] overflow-hidden shadow-2xl shadow-blue-900/10 border border-slate-100 transition-all duration-700 hover:-translate-y-2">
+                        <div className="md:col-span-12 lg:col-span-7 group relative rounded-[3.5rem] overflow-hidden shadow-2xl shadow-blue-900/10 border border-slate-100 transition-all duration-700 hover:-translate-y-2 min-h-[600px] lg:min-h-0">
                             {/* Background Images with Multi-Slide Logic */}
                             <div className="absolute inset-0 w-full h-full">
                                 {slides.map((slide, idx) => (
@@ -150,7 +150,7 @@ const AdoucisseursPortables = () => {
                                     <div>
                                         <span className="text-blue-300 font-bold text-xs uppercase tracking-[0.2em]">Liberté Totale</span>
                                         <h3 className="text-3xl md:text-4xl font-bold text-white mt-4 mb-6">100% Nomade</h3>
-                                        <p className="text-white/80 font-light text-lg leading-relaxed max-w-lg mb-8">
+                                        <p className="text-white/80 font-light text-lg leading-relaxed max-w-lg mb-8 text-justify lg:text-left">
                                             Un format ultra-compact et poids plume conçu pour se glisser dans n'importe quelle soute. Emportez la qualité Bricareau partout avec vous.
                                         </p>
                                         <div className="flex flex-wrap gap-3">
