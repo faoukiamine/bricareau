@@ -359,7 +359,7 @@ const WaterDiagnosticQuiz = () => {
                 </div>
 
                 {/* Quiz Content */}
-                <div className="px-6 md:px-12 pb-12 min-h-[400px] flex flex-col justify-center">
+                <div className="py-8 md:py-12 px-0 md:px-12 min-h-[400px] flex flex-col items-center w-full relative">
                     {!isSubmitted ? (
                         <div key={step} className="animate-in fade-in slide-in-from-bottom-2 duration-500">
 
@@ -637,8 +637,8 @@ const WaterDiagnosticQuiz = () => {
                         </div>
                     ) : (
                         /* Results - Compact */
-                        <div className="max-w-4xl mx-auto py-8">
-                            <div className="text-center mb-10">
+                        <div className="w-full py-4 px-4 md:px-8 flex flex-col items-center">
+                            <div className="text-center mb-8 w-full flex flex-col items-center">
                                 <ShieldCheck className="w-10 h-10 text-blue-600 mx-auto mb-4" />
                                 <h2 className="mb-2" style={{
                                     fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
