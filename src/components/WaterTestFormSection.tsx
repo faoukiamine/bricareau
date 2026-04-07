@@ -226,7 +226,7 @@ const WaterTestFormSection = ({ id }: { id?: string }) => {
                 <div className="max-w-3xl mx-auto w-full">
                     <div className="bg-white rounded-3xl p-6 md:p-10 border border-gray-100 shadow-2xl">
                         {/* Progress Steps */}
-                        <div className="flex items-center justify-between gap-2 mb-8 border-b border-gray-100 pb-4">
+                        <div className="flex items-center justify-between gap-1 sm:gap-2 mb-8 border-b border-gray-100 pb-4 overflow-x-hidden">
                             {[
                                 { id: 1, label: "INFORMATIONS" },
                                 { id: 2, label: "TESTS" },
@@ -480,7 +480,7 @@ const WaterTestFormSection = ({ id }: { id?: string }) => {
                                                                     <label
                                                                         htmlFor={`time-${time}`}
                                                                         className={cn(
-                                                                            "flex items-center justify-center px-4 py-3 border rounded-lg cursor-pointer transition-all font-medium text-sm",
+                                                                            "flex items-center justify-center px-2 sm:px-4 py-3 border rounded-lg cursor-pointer transition-all font-medium text-xs sm:text-sm",
                                                                             isBooked
                                                                                 ? "bg-gray-100 text-gray-400 border-gray-200 cursor-not-allowed decoration-slice"
                                                                                 : "bg-white border-gray-200 hover:bg-gray-50 peer-checked:bg-blue-50 peer-checked:border-blue-600 peer-checked:text-blue-600"
@@ -597,47 +597,48 @@ const WaterTestFormSection = ({ id }: { id?: string }) => {
                                 )}
 
                                 {/* Navigation Buttons */}
-                                <div className="flex gap-4 pt-4 border-t border-gray-100">
-                                    {step > 1 && (
-                                        <Button
-                                            type="button"
-                                            variant="outline"
-                                            onClick={prevStep}
-                                            disabled={isNavigating || isSubmitting}
-                                            size="lg"
-                                            className="w-fit"
-                                        >
-                                            <ChevronLeft className="w-4 h-4 mr-2" /> Retour
-                                        </Button>
-                                    )}
+                                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-4 border-t border-gray-100">
+                                    <div className="flex gap-3 w-full sm:w-auto order-2 sm:order-1">
+                                        {step > 1 && (
+                                            <Button
+                                                type="button"
+                                                variant="outline"
+                                                onClick={prevStep}
+                                                disabled={isNavigating || isSubmitting}
+                                                className="flex-1 sm:w-fit py-3.5 sm:py-4 h-auto rounded-full px-4 sm:px-8 border-gray-300 font-bold transition-all hover:bg-gray-50 active:scale-95 text-slate-600 text-sm sm:text-base"
+                                            >
+                                                <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5 mr-1 sm:mr-2" /> Retour
+                                            </Button>
+                                        )}
+                                    </div>
 
-                                    {step < 4 ? (
-                                        <Button
-                                            type="button"
-                                            onClick={nextStep}
-                                            disabled={isNavigating}
-                                            size="lg"
-                                            className="w-fit ml-auto"
-                                        >
-                                            Continuer <ChevronRight className="w-4 h-4 ml-2" />
-                                        </Button>
-                                    ) : (
-                                        <Button
-                                            type="submit"
-                                            disabled={isSubmitting || isNavigating}
-                                            size="lg"
-                                            className="w-fit ml-auto"
-                                        >
-                                            {isSubmitting ? (
-                                                <>
-                                                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                                                    Envoi en cours...
-                                                </>
-                                            ) : (
-                                                "Confirmer RDV"
-                                            )}
-                                        </Button>
-                                    )}
+                                    <div className="flex w-full sm:w-auto order-1 sm:order-2 sm:ml-auto">
+                                        {step < 4 ? (
+                                            <Button
+                                                type="button"
+                                                onClick={nextStep}
+                                                disabled={isNavigating}
+                                                className="w-full sm:w-fit py-3.5 sm:py-4 h-auto rounded-full px-6 sm:px-10 bg-blue-600 text-white border-2 border-blue-600 text-sm sm:text-base font-bold transition-all hover:bg-white hover:text-blue-600 hover:shadow-lg hover:shadow-blue-200/50 hover:scale-105 active:scale-95"
+                                            >
+                                                Continuer <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 ml-1 sm:mr-2" />
+                                            </Button>
+                                        ) : (
+                                            <Button
+                                                type="submit"
+                                                disabled={isSubmitting || isNavigating}
+                                                className="w-full sm:w-fit py-3.5 sm:py-4 h-auto rounded-full px-6 sm:px-10 bg-blue-600 text-white border-2 border-blue-600 text-sm sm:text-base font-bold transition-all hover:bg-white hover:text-blue-600 hover:shadow-lg hover:shadow-blue-200/50 hover:scale-105 active:scale-95"
+                                            >
+                                                {isSubmitting ? (
+                                                    <>
+                                                        <Loader2 className="mr-2 h-4 w-4 sm:h-5 sm:w-5 animate-spin" />
+                                                        Envoi...
+                                                    </>
+                                                ) : (
+                                                    "Confirmer RDV"
+                                                )}
+                                            </Button>
+                                        )}
+                                    </div>
                                 </div>
                             </form>
                         </Form>
