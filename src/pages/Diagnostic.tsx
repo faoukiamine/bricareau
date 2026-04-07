@@ -27,7 +27,7 @@ const Diagnostic = () => {
                 <div className="absolute top-0 inset-x-0 h-[600px] bg-gradient-to-b from-blue-50/50 to-transparent -z-10" />
                 <div className="absolute top-40 left-1/4 w-[300px] h-[300px] bg-blue-100/20 rounded-full blur-[100px] -z-10" />
 
-                <div className="container mx-auto px-6 relative z-10 flex flex-col items-center">
+                <div className="container mx-auto px-4 sm:px-6 relative z-10 flex flex-col items-center">
                     <div className="max-w-3xl mx-auto text-center mb-10 w-full animate-in fade-in slide-in-from-top-4 duration-1000">
                         <h1 
                             className="text-[32px] md:text-[46px] lg:text-[54px] leading-[1.1] mb-10 tracking-tight"

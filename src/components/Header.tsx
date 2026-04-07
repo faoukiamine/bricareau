@@ -663,10 +663,10 @@ const Header = () => {
               </div>
 
               {/* Mobile: Icon Row */}
-              <div className="lg:hidden flex items-center gap-4 ml-auto">
+              <div className="lg:hidden flex items-center gap-2 sm:gap-4 ml-auto">
                 <button
                   ref={mobileSearchButtonRef}
-                  className="p-2"
+                  className="p-1.5 sm:p-2"
                   aria-label="Search"
                   onClick={() => {
                     setIsSearchFocused(true);
@@ -676,14 +676,14 @@ const Header = () => {
                 >
                   <Search className={cn("h-5 w-5", isHeaderTransparent ? "text-white" : "text-gray-700")} strokeWidth={1.5} />
                 </button>
-                <a href="tel:18552649328" className="p-2 md:hidden" aria-label="Phone">
+                <a href="tel:18552649328" className="p-1.5 sm:p-2 md:hidden" aria-label="Phone">
                   <Phone className={cn("h-5 w-5", isHeaderTransparent ? "text-white" : "text-gray-700")} strokeWidth={1.5} />
                 </a>
-                <a href="https://www.google.com/maps/place/BRICAREAU+WATER+SPECIALIST/@45.5005535,-73.6423534,211m/data=!3m2!1e3!5s0x4cc919c4436a5a3f:0x5bb245a9935b5ece!4m6!3m5!1s0x4cc9229b28364297:0xd763dce82ea51a5f!8m2!3d45.5005535!4d-73.6423534!16s%2Fg%2F1pv5wd45p?entry=tts&g_ep=EgoyMDI2MDExMy4wIPu8ASoASAFQAw%3D%3D&skid=dc936ed0-8357-4347-8629-14786f46d771" className="p-2" aria-label="Location" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.google.com/maps/place/BRICAREAU+WATER+SPECIALIST/@45.5005535,-73.6423534,211m/data=!3m2!1e3!5s0x4cc919c4436a5a3f:0x5bb245a9935b5ece!4m6!3m5!1s0x4cc9229b28364297:0xd763dce82ea51a5f!8m2!3d45.5005535!4d-73.6423534!16s%2Fg%2F1pv5wd45p?entry=tts&g_ep=EgoyMDI2MDExMy4wIPu8ASoASAFQAw%3D%3D&skid=dc936ed0-8357-4347-8629-14786f46d771" className="p-1.5 sm:p-2" aria-label="Location" target="_blank" rel="noopener noreferrer">
                   <MapPin className={cn("h-5 w-5", isHeaderTransparent ? "text-white" : "text-gray-700")} strokeWidth={1.5} />
                 </a>
                 <button
-                  className="p-2"
+                  className="p-1.5 sm:p-2"
                   onClick={() => setIsMenuOpen(!isMenuOpen)}
                   aria-label="Toggle menu"
                 >

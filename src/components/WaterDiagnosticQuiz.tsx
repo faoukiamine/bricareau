@@ -311,13 +311,13 @@ const WaterDiagnosticQuiz = () => {
     const mainStep = getActiveMainStep();
 
     return (
-        <div id="quiz-container" className="flex items-center justify-center p-0 md:p-4 scroll-mt-40">
+        <div id="quiz-container" className="flex items-center justify-center p-0 md:p-4 scroll-mt-40 w-full overflow-x-hidden">
             <div className={cn(
-                "w-full max-w-4xl bg-white border border-slate-100 rounded-none md:rounded-[3rem] shadow-sm overflow-hidden transition-all duration-500"
+                "w-full max-w-4xl bg-white border border-slate-100 rounded-none md:rounded-[3rem] shadow-sm overflow-hidden"
             )}>
                 {/* Progress Header - Ultra-Compact */}
-                <div className="pt-10 px-6 sm:px-12 w-full">
-                    <div className="flex items-center justify-between mb-8 max-w-xl mx-auto w-full relative">
+                <div className="pt-10 px-4 sm:px-12 w-full">
+                    <div className="flex items-center justify-between mb-8 max-w-xl mx-auto w-full relative px-2">
                         {/* Step 1 */}
                         <div className="flex flex-col items-center gap-3 z-10 bg-white px-2 sm:px-4 text-center">
                             <div className={cn(
@@ -325,7 +325,7 @@ const WaterDiagnosticQuiz = () => {
                                 mainStep >= 1 ? "bg-blue-600 ring-4 ring-blue-50" : "bg-slate-200"
                             )} />
                             <span className={cn(
-                                "text-[9px] font-black uppercase tracking-widest transition-colors",
+                                "text-[8px] sm:text-[9px] font-black uppercase tracking-tight sm:tracking-widest transition-colors",
                                 mainStep >= 1 ? "text-blue-600" : "text-slate-300"
                             )}>Profil</span>
                         </div>
@@ -337,7 +337,7 @@ const WaterDiagnosticQuiz = () => {
                                 mainStep >= 2 ? "bg-blue-600 ring-4 ring-blue-50" : "bg-slate-200"
                             )} />
                             <span className={cn(
-                                "text-[9px] font-black uppercase tracking-widest transition-colors",
+                                "text-[8px] sm:text-[9px] font-black uppercase tracking-tight sm:tracking-widest transition-colors",
                                 mainStep >= 2 ? "text-blue-600" : "text-slate-300"
                             )}>Évaluation</span>
                         </div>
@@ -349,7 +349,7 @@ const WaterDiagnosticQuiz = () => {
                                 mainStep >= 3 || isSubmitted ? "bg-blue-600 ring-4 ring-blue-50" : "bg-slate-200"
                             )} />
                             <span className={cn(
-                                "text-[9px] font-black uppercase tracking-widest transition-colors",
+                                "text-[8px] sm:text-[9px] font-black uppercase tracking-tight sm:tracking-widest transition-colors",
                                 mainStep >= 3 || isSubmitted ? "text-blue-600" : "text-slate-300"
                             )}>Résultats</span>
                         </div>
