@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Phone } from "lucide-react";
+import { Phone, ArrowRight } from "lucide-react";
 import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 import heroImage from "@/assets/23568974.png";
 import { cn } from "@/lib/utils";
@@ -125,8 +125,11 @@ const Hero = ({
             </p>
 
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-4 animate-in fade-in slide-in-from-left duration-1000 delay-200 w-full sm:w-auto">
-              <Button asChild className="w-full sm:w-fit h-auto py-4 px-6 rounded-full text-base font-bold whitespace-normal text-center leading-tight bg-[#2563eb] hover:bg-[#1e3a8a] text-white">
-                <a href={ctaLink}>{ctaText}</a>
+              <Button asChild className="w-full sm:w-fit h-auto py-4 px-8 rounded-full text-base font-bold whitespace-normal text-center leading-tight bg-[#2563eb] text-white hover:bg-white hover:text-[#2563eb] border-2 border-[#2563eb] group transition-all duration-300 shadow-lg shadow-blue-200 hover:shadow-blue-300">
+                <a href={ctaLink} className="inline-flex items-center justify-center gap-2">
+                  {ctaText}
+                  <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+                </a>
               </Button>
               
               {showPhone && (
