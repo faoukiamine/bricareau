@@ -1,30 +1,28 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Header from "@/components/Header";
 import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 import Footer from "@/components/Footer";
 import { 
     ArrowRight, 
-    ChevronRight, 
     CheckCircle2, 
     Wrench, 
     ShieldCheck, 
-    Clock, 
     PhoneCall, 
     Settings, 
     UserCheck,
     Calendar,
     Zap,
     MapPin,
-    Droplets,
     Phone,
+    Loader2,
+    Send,
+    MessageSquare
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import servicesHero from "@/assets/SERVICES.jpg";
-import technicianImg from "@/assets/discover_expert.jpg";
 import bricareauCareImg from "@/assets/cae3c0a4-5b4d-4b0e-8bc3-3550a714f7bb.jpg";
 import waterSoftenerInstallImg from "@/assets/Water-Softener-installation.jpg";
-import roSystemImg from "@/assets/reverse osmosis system_11062146.png";
 import roServiceImg from "@/assets/RO service.png";
 import labTestImg from "@/assets/test-laboratoire-diligence-inspection-750x500.jpg";
 import diagnosticImg from "@/assets/step-diagnostic.png";
@@ -47,9 +45,55 @@ import {
     SelectTrigger,
     SelectValue
 } from "@/components/ui/select";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import * as z from "zod";
+import {
+    Form,
+    FormControl,
+    FormField,
+    FormItem,
+    FormLabel,
+    FormMessage
+} from "@/components/ui/form";
+import { supabase } from "@/lib/supabase";
+import { toast } from "sonner";
+import { cn } from "@/lib/utils";
+
+const formSchema = z.object({
+    prenom: z.string().min(2, "Le prénom doit contenir au moins 2 caractères"),
+    nom: z.string().min(2, "Le nom doit contenir au moins 2 caractères"),
+    email: z.string().email("Adresse courriel invalide"),
+    phone: z.string().min(10, "Numéro de téléphone invalide"),
+    interest: z.string({
+        required_error: "Veuillez choisir un service"
+    }),
+    message: z.string().optional(),
+    legal_consent: z.boolean().refine(val => val === true, {
+        message: "Champs Obligatoire"
+    }),
+    marketing_consent: z.boolean().optional().default(false)
+});
 
 const ServicesTraitementEau = () => {
     const navigate = useNavigate();
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [isSuccess, setIsSuccess] = useState(false);
+    const formRef = useRef<HTMLDivElement>(null);
+
+    const form = useForm<z.infer<typeof formSchema>>({
+        resolver: zodResolver(formSchema),
+        defaultValues: {
+            prenom: "",
+            nom: "",
+            email: "",
+            phone: "",
+            interest: "",
+            message: "",
+            legal_consent: false,
+            marketing_consent: false
+        }
+    });
 
     useEffect(() => {
         document.title = "Services & Entretien Bricareau | Expertise en Traitement d'Eau";
@@ -57,42 +101,49 @@ const ServicesTraitementEau = () => {
         if (metaDesc) {
             metaDesc.setAttribute("content", "Bénéficiez d'une maintenance experte pour vos adoucisseurs et systèmes de filtration au Québec. Mise en service, dépannage et contrats d'entretien Bricareau.");
         }
-
-        // OG Tags
-        const ogTitle = document.querySelector('meta[property="og:title"]');
-        if (ogTitle) ogTitle.setAttribute("content", "Expertise Technique Bricareau : Votre Eau Entre de Bonnes Mains");
-        const ogDesc = document.querySelector('meta[property="og:description"]');
-        if (ogDesc) ogDesc.setAttribute("content", "Intervention experte et entretien certifié pour tous vos systèmes de traitement d'eau à travers le Québec.");
-        const ogUrl = document.querySelector('meta[property="og:url"]');
-        if (ogUrl) ogUrl.setAttribute("content", "https://bricareau.com/service");
     }, []);
 
-    const services = [
-        {
-            icon: <Zap className="w-8 h-8 text-blue-600" />,
-            title: "Mise en service",
-            subtitle: "Pour bien commencer",
-            desc: "L'installation par un expert certifié garantit la validité de votre garantie et la performance optimale de votre système dès le premier jour.",
-            benefits: ["Calibration précise", "Tests d'étanchéité", "Formation utilisateur"],
-            bgColor: "bg-blue-50/50"
-        },
-        {
-            icon: <Settings className="w-8 h-8 text-blue-600" />,
-            title: "Entretien préventif",
-            subtitle: "Votre sérénité durable",
-            desc: "Un système bien entretenu dure deux fois plus longtemps. Nos techniciens réalisent un diagnostic complet et le nettoyage de vos composants.",
-            benefits: ["Nettoyage résine", "Vérification vannes", "Livraison de consommables"],
-            bgColor: "bg-slate-50"
-        },
-        {
-            icon: <Wrench className="w-8 h-8 text-blue-600" />,
-            title: "Dépannage expert",
-            subtitle: "Réactivité 24/7",
-            desc: "Votre système montre des signes de fatigue ? Nous intervenons sur toutes les marques du marché pour restaurer la qualité de votre eau.",
-            benefits: ["Diagnostic rapide", "Pièces d'origine", "Réparation garantie"],
-            bgColor: "bg-blue-50/30"
+    const onSubmit = async (values: z.infer<typeof formSchema>) => {
+        setIsSubmitting(true);
+        try {
+            const now = new Date().toISOString();
+
+            const { error } = await supabase
+                .from("consultations")
+                .insert({
+                    prenom: values.prenom,
+                    nom: values.nom,
+                    email: values.email,
+                    phone: values.phone,
+                    interest: values.interest,
+                    message: values.message,
+                    appointment_time: now,
+                    type: "Service Request"
+                });
+
+            if (error) throw error;
+
+            try {
+                await supabase.functions.invoke('send-consultation-confirmation', {
+                    body: {
+                        ...values,
+                        appointment_time: now,
+                        type: "Service Request"
+                    }
+                });
+            } catch (fnErr) {
+                console.error("Email function error:", fnErr);
+            }
+
+            toast.success("Demande envoyée avec succès!");
+            setIsSuccess(true);
+        } catch (error) {
+            console.error("Error:", error);
+            toast.error("Erreur lors de l'envoi.");
+        } finally {
+            setIsSubmitting(false);
         }
-    ];
+    };
 
     return (
         <div className="min-h-screen bg-white font-sans text-slate-900 overflow-x-hidden">
@@ -561,122 +612,181 @@ const ServicesTraitementEau = () => {
                 </section>
 
                 {/* 7. CONTACT FORM SECTION */}
-                <section id="contact-form" className="py-32 bg-slate-50 relative scroll-mt-32">
+                <section id="contact-form" className="py-32 bg-slate-50 relative scroll-mt-32" ref={formRef}>
                      {/* Background Watermark */}
                      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[15rem] lg:text-[22rem] font-black text-slate-200/20 select-none pointer-events-none tracking-tighter z-0 uppercase">
                         SUPPORT
                     </div>
 
                     <div className="container mx-auto px-6 relative z-10">
-                        <div className="max-w-4xl mx-auto text-center mb-16 space-y-6">
-                            <h2 className="heading-pro-max">
-                                <span className="italic font-light text-[#2563eb] block">Planifiez votre</span>
-                                <span className="font-bold text-[#1e3a8a] block">rendez-vous de service.</span>
-                            </h2>
-                            <p className="body-pro-max max-w-2xl mx-auto">
-                                Besoin d'une installation, d'une réparation ou d'un simple changement de filtres ? Nos experts interviennent sur tous les types d'équipements, au Grand Montréal et ses environs.
-                            </p>
-                        </div>
-
-                        <div className="flex flex-col-reverse lg:flex-row items-start gap-16 lg:gap-20">
-                            {/* Left Icons Column */}
-                            <div className="lg:w-1/3 space-y-6">
-                                <div className="flex items-center gap-4 bg-white/80 backdrop-blur-md p-6 rounded-3xl shadow-sm border border-slate-100 w-full group hover:shadow-md transition-all">
-                                    <div className="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-blue-200 group-hover:scale-110 transition-transform">
-                                        <PhoneCall className="w-6 h-6" />
-                                    </div>
-                                    <div className="text-left">
-                                        <h4 className="font-bold text-slate-900 text-sm">Appel sans frais</h4>
-                                        <p className="text-blue-600 font-bold text-lg">1-855-264-9328</p>
-                                    </div>
+                        {isSuccess ? (
+                            <div className="max-w-2xl mx-auto bg-white rounded-[3rem] p-12 text-center shadow-2xl animate-in zoom-in-95 duration-500">
+                                <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-8">
+                                    <CheckCircle2 className="w-10 h-10 text-green-600" />
                                 </div>
-                                <div className="flex items-center gap-4 bg-white/80 backdrop-blur-md p-6 rounded-3xl shadow-sm border border-slate-100 w-full group hover:shadow-md transition-all">
-                                    <div className="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-blue-200 group-hover:scale-110 transition-transform">
-                                        <Calendar className="w-6 h-6" />
-                                    </div>
-                                    <div className="text-left">
-                                        <h4 className="font-bold text-slate-900 text-sm">Disponibilités</h4>
-                                        <p className="text-slate-500 text-sm">Lun - Ven : 8h00 - 18h00</p>
-                                    </div>
-                                </div>
-                                <div className="flex items-center gap-4 bg-white/80 backdrop-blur-md p-6 rounded-3xl shadow-sm border border-slate-100 w-full group hover:shadow-md transition-all">
-                                    <div className="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-blue-200 group-hover:scale-110 transition-transform">
-                                        <MapPin className="w-6 h-6" />
-                                    </div>
-                                    <div className="text-left">
-                                        <h4 className="font-bold text-slate-900 text-sm">Zone d'intervention</h4>
-                                        <p className="text-slate-500 text-sm">Partout au Grand Montréal et ses environs (Périmètre de 300km)</p>
-                                    </div>
-                                </div>
+                                <h2 className="text-3xl font-bold text-slate-900 mb-4">Demande Reçue !</h2>
+                                <p className="text-slate-600 mb-10 text-lg">
+                                    Merci pour votre message. Un expert technique de Bricareau analysera votre demande et vous contactera dans les plus brefs délais.
+                                </p>
+                                <Button
+                                    onClick={() => {
+                                        setIsSuccess(false);
+                                        form.reset();
+                                    }}
+                                    className="rounded-full px-10 h-14 bg-blue-600 hover:bg-blue-700 text-white font-bold"
+                                >
+                                    Faire une autre demande
+                                </Button>
                             </div>
+                        ) : (
+                            <>
+                                <div className="max-w-4xl mx-auto text-center mb-16 space-y-6">
+                                    <h2 className="heading-pro-max">
+                                        <span className="italic font-light text-[#2563eb] block">Planifiez votre</span>
+                                        <span className="font-bold text-[#1e3a8a] block">rendez-vous de service.</span>
+                                    </h2>
+                                    <p className="body-pro-max max-w-2xl mx-auto">
+                                        Besoin d'une installation, d'une réparation ou d'un simple changement de filtres ? Nos experts interviennent sur tous les types d'équipements, au Grand Montréal et ses environs.
+                                    </p>
+                                </div>
 
-                            {/* Right Form Card */}
-                            <div className="lg:w-2/3 w-full">
-                                <div className="bg-white p-10 md:p-14 rounded-[3rem] shadow-2xl border border-slate-100 relative overflow-hidden">
-                                     <div className="absolute -top-6 -right-6 w-32 h-32 bg-blue-600/5 rounded-full -z-10 animate-pulse" />
-                                    
-                                     <form className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                                        <div className="space-y-2 text-left">
-                                            <Label htmlFor="fname" className="text-xs font-black uppercase tracking-widest text-slate-400 ml-1">Prénom*</Label>
-                                            <Input id="fname" className="h-14 bg-slate-50 border-none rounded-2xl focus:ring-2 focus:ring-blue-600 focus:bg-white transition-all shadow-inner" />
-                                        </div>
-                                        <div className="space-y-2 text-left">
-                                            <Label htmlFor="lname" className="text-xs font-black uppercase tracking-widest text-slate-400 ml-1">Nom*</Label>
-                                            <Input id="lname" className="h-14 bg-slate-50 border-none rounded-2xl focus:ring-2 focus:ring-blue-600 focus:bg-white transition-all shadow-inner" />
-                                        </div>
-                                        <div className="space-y-2 text-left lg:col-span-2">
-                                            <Label htmlFor="email" className="text-xs font-black uppercase tracking-widest text-slate-400 ml-1">Courriel*</Label>
-                                            <Input id="email" type="email" className="h-14 bg-slate-50 border-none rounded-2xl focus:ring-2 focus:ring-blue-600 focus:bg-white transition-all shadow-inner" />
-                                        </div>
-                                        <div className="space-y-2 text-left">
-                                            <Label htmlFor="phone" className="text-xs font-black uppercase tracking-widest text-slate-400 ml-1">Téléphone*</Label>
-                                            <Input id="phone" type="tel" className="h-14 bg-slate-50 border-none rounded-2xl focus:ring-2 focus:ring-blue-600 focus:bg-white transition-all shadow-inner" />
-                                        </div>
-                                        <div className="space-y-2 text-left">
-                                            <Label htmlFor="interest" className="text-xs font-black uppercase tracking-widest text-slate-400 ml-1">Service requis*</Label>
-                                            <Select>
-                                                <SelectTrigger className="h-14 bg-slate-50 border-none rounded-2xl focus:ring-2 focus:ring-blue-600 focus:bg-white transition-all shadow-inner">
-                                                    <SelectValue placeholder="Choisir un service" />
-                                                </SelectTrigger>
-                                                <SelectContent>
-                                                    <SelectItem value="test">Analyse d'eau</SelectItem>
-                                                    <SelectItem value="maintenance">Entretien & Maintenance</SelectItem>
-                                                    <SelectItem value="install">Installation & Mise en service</SelectItem>
-                                                    <SelectItem value="repair">Réparations d'urgence</SelectItem>
-                                                </SelectContent>
-                                            </Select>
-                                        </div>
-                                        <div className="md:col-span-2 space-y-2 text-left">
-                                            <Label htmlFor="message" className="text-xs font-black uppercase tracking-widest text-slate-400 ml-1">Détails de votre demande</Label>
-                                            <Textarea id="message" className="min-h-[120px] bg-slate-50 border-none rounded-2xl focus:ring-2 focus:ring-blue-600 focus:bg-white transition-all shadow-inner" />
-                                        </div>
-                                        <div className="md:col-span-2 space-y-4 pt-4">
-                                            <div className="flex items-start space-x-4 bg-slate-50 p-6 rounded-[2rem] border border-slate-100 transition-all hover:bg-slate-100/50">
-                                                <Checkbox id="legal_consent" className="mt-1 border-slate-300 data-[state=checked]:bg-blue-600 data-[state=checked]:border-blue-600" required />
-                                                <Label htmlFor="legal_consent" className="text-xs leading-relaxed text-slate-500 font-light cursor-pointer select-none" style={{ textAlign: 'justify' }}>
-                                                    En cochant cette case ou en utilisant le site web Bricareau.com, vous reconnaissez avoir lu les <NavLink to="/conditions-utilisation" className="text-blue-600 font-bold hover:underline">Conditions générales</NavLink> et la <NavLink to="/politique-de-confidentialite" className="text-blue-600 font-bold hover:underline">Politique de confidentialité</NavLink>, les comprendre et accepter d'y être lié.*
-                                                </Label>
+                                <div className="flex flex-col-reverse lg:flex-row items-start gap-16 lg:gap-20">
+                                    {/* Left Icons Column */}
+                                    <div className="lg:w-1/3 space-y-6">
+                                        <div className="flex items-center gap-4 bg-white/80 backdrop-blur-md p-6 rounded-3xl shadow-sm border border-slate-100 w-full group hover:shadow-md transition-all">
+                                            <div className="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-blue-200 group-hover:scale-110 transition-transform">
+                                                <PhoneCall className="w-6 h-6" />
                                             </div>
-
-                                            <div className="flex items-start space-x-4 bg-slate-50 p-6 rounded-[2rem] border border-slate-100 transition-all hover:bg-slate-100/50">
-                                                <Checkbox id="marketing_consent" className="mt-1 border-slate-300 data-[state=checked]:bg-blue-600 data-[state=checked]:border-blue-600" />
-                                                <Label htmlFor="marketing_consent" className="text-xs leading-relaxed text-slate-500 font-light cursor-pointer select-none">
-                                                    Je souhaite recevoir les prochaines communications de Bricareau. (Vous pouvez vous désabonner à tout moment.)
-                                                </Label>
+                                            <div className="text-left">
+                                                <h4 className="font-bold text-slate-900 text-sm">Appel sans frais</h4>
+                                                <p className="text-blue-600 font-bold text-lg">1-855-264-9328</p>
                                             </div>
+                                        </div>
+                                        <div className="flex items-center gap-4 bg-white/80 backdrop-blur-md p-6 rounded-3xl shadow-sm border border-slate-100 w-full group hover:shadow-md transition-all">
+                                            <div className="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-blue-200 group-hover:scale-110 transition-transform">
+                                                <Calendar className="w-6 h-6" />
+                                            </div>
+                                            <div className="text-left">
+                                                <h4 className="font-bold text-slate-900 text-sm">Disponibilités</h4>
+                                                <p className="text-slate-500 text-sm">Lun - Ven : 8h00 - 18h00</p>
+                                            </div>
+                                        </div>
+                                        <div className="flex items-center gap-4 bg-white/80 backdrop-blur-md p-6 rounded-3xl shadow-sm border border-slate-100 w-full group hover:shadow-md transition-all">
+                                            <div className="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-blue-200 group-hover:scale-110 transition-transform">
+                                                <MapPin className="w-6 h-6" />
+                                            </div>
+                                            <div className="text-left">
+                                                <h4 className="font-bold text-slate-900 text-sm">Zone d'intervention</h4>
+                                                <p className="text-slate-500 text-sm text-[11px]">Partout au Grand Montréal et ses environs (Périmètre de 300km)</p>
+                                            </div>
+                                        </div>
 
-                                            <Button 
-                                                size="lg"
-                                                className="w-full group rounded-full h-14 bg-blue-600 hover:bg-blue-700 text-white font-bold transition-all hover:scale-[1.02] active:scale-95 shadow-xl shadow-blue-200"
-                                            >
-                                                Envoyer ma demande de rendez-vous
-                                                <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
+                                        <div className="p-8 bg-blue-600 rounded-[2.5rem] text-white shadow-xl shadow-blue-200">
+                                            <h4 className="font-bold text-lg mb-2">Besoin d'aide immédiate?</h4>
+                                            <p className="text-white/80 text-sm font-light mb-6">Nos techniciens sont prêts à répondre à vos questions techniques complexes dès maintenant.</p>
+                                            <Button variant="outline" className="w-full rounded-full bg-white/10 border-white/20 text-white hover:bg-white hover:text-blue-600 border-none h-12 font-bold">
+                                                <MessageSquare className="w-4 h-4 mr-2" /> Clavardage en direct
                                             </Button>
                                         </div>
-                                     </form>
+                                    </div>
+
+                                    {/* Right Form Card */}
+                                    <div className="lg:w-2/3 w-full">
+                                        <div className="bg-white p-10 md:p-14 rounded-[3rem] shadow-2xl border border-slate-100 relative overflow-hidden">
+                                            <div className="mb-10 text-left border-b border-slate-100 pb-6">
+                                                <h3 className="text-2xl font-bold text-slate-900">Formulaire de demande</h3>
+                                                <p className="text-slate-500 font-light mt-1">Réponse technique sous 15 minutes.</p>
+                                            </div>
+
+                                            <Form {...form}>
+                                                <form onSubmit={form.handleSubmit(onSubmit)} className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                                    <FormField control={form.control} name="prenom" render={({ field }) => (
+                                                        <FormItem className="space-y-2 text-left">
+                                                            <FormLabel className="text-xs font-black uppercase tracking-widest text-slate-400 ml-1">Prénom*</FormLabel>
+                                                            <FormControl><Input placeholder="Prénom" className="h-14 bg-slate-50 border-none rounded-2xl shadow-inner focus:bg-white transition-all" {...field} /></FormControl>
+                                                            <FormMessage />
+                                                        </FormItem>
+                                                    )} />
+                                                    <FormField control={form.control} name="nom" render={({ field }) => (
+                                                        <FormItem className="space-y-2 text-left">
+                                                            <FormLabel className="text-xs font-black uppercase tracking-widest text-slate-400 ml-1">Nom*</FormLabel>
+                                                            <FormControl><Input placeholder="Nom" className="h-14 bg-slate-50 border-none rounded-2xl shadow-inner focus:bg-white transition-all" {...field} /></FormControl>
+                                                            <FormMessage />
+                                                        </FormItem>
+                                                    )} />
+                                                    <FormField control={form.control} name="email" render={({ field }) => (
+                                                        <FormItem className="md:col-span-2 space-y-2 text-left">
+                                                            <FormLabel className="text-xs font-black uppercase tracking-widest text-slate-400 ml-1">Courriel*</FormLabel>
+                                                            <FormControl><Input placeholder="votre@email.com" type="email" className="h-14 bg-slate-50 border-none rounded-2xl shadow-inner focus:bg-white transition-all" {...field} /></FormControl>
+                                                            <FormMessage />
+                                                        </FormItem>
+                                                    )} />
+                                                    <FormField control={form.control} name="phone" render={({ field }) => (
+                                                        <FormItem className="space-y-2 text-left">
+                                                            <FormLabel className="text-xs font-black uppercase tracking-widest text-slate-400 ml-1">Téléphone*</FormLabel>
+                                                            <FormControl><Input placeholder="(514) 000-0000" type="tel" className="h-14 bg-slate-50 border-none rounded-2xl shadow-inner focus:bg-white transition-all" {...field} /></FormControl>
+                                                            <FormMessage />
+                                                        </FormItem>
+                                                    )} />
+                                                    <FormField control={form.control} name="interest" render={({ field }) => (
+                                                        <FormItem className="space-y-2 text-left">
+                                                            <FormLabel className="text-xs font-black uppercase tracking-widest text-slate-400 ml-1">Service requis*</FormLabel>
+                                                            <Select onValueChange={field.onChange} defaultValue={field.value}>
+                                                                <FormControl>
+                                                                    <SelectTrigger className="h-14 bg-slate-50 border-none rounded-2xl shadow-inner focus:bg-white">
+                                                                        <SelectValue placeholder="Choisir un service" />
+                                                                    </SelectTrigger>
+                                                                </FormControl>
+                                                                <SelectContent>
+                                                                    <SelectItem value="Analyse d'eau">Analyse d'eau</SelectItem>
+                                                                    <SelectItem value="Entretien">Entretien & Maintenance</SelectItem>
+                                                                    <SelectItem value="Installation">Installation & Mise en service</SelectItem>
+                                                                    <SelectItem value="Réparation">Réparations d'urgence</SelectItem>
+                                                                </SelectContent>
+                                                            </Select>
+                                                            <FormMessage />
+                                                        </FormItem>
+                                                    )} />
+                                                    <FormField control={form.control} name="message" render={({ field }) => (
+                                                        <FormItem className="md:col-span-2 space-y-2 text-left">
+                                                            <FormLabel className="text-xs font-black uppercase tracking-widest text-slate-400 ml-1">Détails de votre demande</FormLabel>
+                                                            <FormControl><Textarea placeholder="Comment pouvons-nous vous aider ?" className="min-h-[120px] bg-slate-50 border-none rounded-2xl shadow-inner focus:bg-white" {...field} /></FormControl>
+                                                            <FormMessage />
+                                                        </FormItem>
+                                                    )} />
+                                                    <div className="md:col-span-2 space-y-4 pt-4">
+                                                        <FormField control={form.control} name="legal_consent" render={({ field }) => (
+                                                            <FormItem className="flex flex-row items-start space-x-4 bg-slate-50 p-6 rounded-[2rem] border border-slate-100 transition-all hover:bg-slate-100/50">
+                                                                <FormControl><Checkbox checked={field.value} onCheckedChange={field.onChange} /></FormControl>
+                                                                <div className="space-y-1">
+                                                                    <FormLabel className="text-[11px] leading-relaxed text-slate-500 font-light cursor-pointer block" style={{ textAlign: 'justify' }}>
+                                                                        En cochant cette case ou en utilisant le site web Bricareau.com, vous reconnaissez avoir lu les <Link to="/conditions-generales-utilisation" className="text-blue-600 font-bold underline">Conditions générales</Link> et la <Link to="/politique-de-confidentialite" className="text-blue-600 font-bold underline">Politique de confidentialité</Link>, les comprendre et accepter d'y être lié.*
+                                                                    </FormLabel>
+                                                                    <FormMessage />
+                                                                </div>
+                                                            </FormItem>
+                                                        )} />
+
+                                                        <Button 
+                                                            type="submit"
+                                                            disabled={isSubmitting}
+                                                            size="lg"
+                                                            className="w-full md:w-auto rounded-full h-14 bg-blue-600 hover:bg-blue-700 text-white font-bold transition-all hover:scale-[1.02] active:scale-95 shadow-xl shadow-blue-200 px-12"
+                                                        >
+                                                            {isSubmitting ? (
+                                                                <><Loader2 className="mr-2 w-5 h-5 animate-spin" /> Envoi en cours...</>
+                                                            ) : (
+                                                                <><Send className="mr-2 w-5 h-5" /> Envoyer ma demande</>
+                                                            )}
+                                                        </Button>
+                                                    </div>
+                                                </form>
+                                            </Form>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
+                            </>
+                        )}
                     </div>
                 </section>
             </main>
