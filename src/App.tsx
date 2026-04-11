@@ -5,7 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import CookieConsent from "./components/CookieConsent";
-import Index from "./pages/Index";
+import Home from "./pages/Home";
 import Services from "./pages/Adoucisseurs-portables";
 import ContactResidentiel from "./pages/ContactResidentiel";
 import ContactEntreprises from "./pages/ContactEntreprises";
@@ -55,8 +55,8 @@ import EauEmbouteilleeImpacts from "./pages/Blog pages/Eau-embouteillee-quels-im
 import Guides from "./pages/Guides";
 import Videos from "./pages/Videos";
 import Temoignages from "./pages/Temoignages";
-import Service from "./pages/Service";
-import Garantie from "./pages/Garantie";
+import ServicesTraitementEau from "./pages/Services-de-traitement-eau";
+
 import Pieces from "./pages/Pieces";
 import Manuels from "./pages/Manuels";
 import Promotions from "./pages/Promotions";
@@ -69,7 +69,7 @@ import Consultation from "./pages/page-consultation";
 import ContactForm from "./pages/Page-contact";
 import FiltresDeRemplacement from "./pages/Filtres-de-remplacement";
 import Diagnostic from "./pages/Diagnostic";
-import OperatorDashboard from "./pages/OperatorDashboard";
+
 import TraitementUVNaturel from "./pages/Blog pages/Adoucisseur-deau- et-fosse-septique--Mythes-et-réalités";
 import FiltreDoucheBienfaits from "./pages/Blog pages/Adoucisseur-deau-portable-pour-VR";
 import NiveauDureteBesoin from "./pages/Blog pages/Adoucisseur avec sel ou sans sel";
@@ -82,7 +82,7 @@ import GoutDeChlorePourquoiLaVilleEnAjouteAutant from "./pages/Blog pages/Gout-d
 import PolitiqueConfidentialite from "./pages/Politique-de-Confidentialite";
 import ConditionsGeneralesUtilisation from "./pages/Conditions-Generales-Utilisation";
 import Desabonnement from "./pages/Desabonnement";
-import LandingResidential from "./pages/LandingResidential";
+
 import NotFound from "./pages/NotFound";
 
 import RefroidisseursEauEntreprises from "./pages/Refroidisseurs-eau-entreprises";
@@ -103,7 +103,7 @@ const App = () => (
         <ScrollToTop />
         <CookieConsent />
         <Routes>
-          <Route path="/" element={<Index />} />
+          <Route path="/" element={<Home />} />
           <Route path="/adoucisseurs-portables" element={<Services />} />
           <Route path="/solutions" element={<Solutions />} />
           <Route path="/adoucissement" element={<Adoucisseurs />} />
@@ -157,8 +157,8 @@ const App = () => (
           <Route path="/contact-form" element={<ContactForm />} />
           <Route path="/contact-residentiel" element={<ContactResidentiel />} />
           <Route path="/contact-entreprises" element={<ContactEntreprises />} />
-          <Route path="/service" element={<Service />} />
-          <Route path="/garantie" element={<Garantie />} />
+          <Route path="/service" element={<ServicesTraitementEau />} />
+
           <Route path="/pieces" element={<Pieces />} />
           <Route path="/manuels" element={<Manuels />} />
           <Route path="/tests-eau" element={<TestsEau />} />
@@ -170,7 +170,7 @@ const App = () => (
           <Route path="/conditions-generales-utilisation" element={<ConditionsGeneralesUtilisation />} />
           <Route path="/desabonnement" element={<Desabonnement />} />
           <Route path="/desabonnement-succes" element={<DesabonnementSucces />} />
-          <Route path="/landing-residentiel" element={<LandingResidential />} />
+
 
           {/* Blog Routes */}
           <Route path="/adoucisseur-deau-et-fosse-septique-mythes-et-realites" element={<TraitementUVNaturel />} />
@@ -185,7 +185,7 @@ const App = () => (
 
           <Route path="/filtres-de-remplacement" element={<FiltresDeRemplacement />} />
           <Route path="/diagnostic" element={<Diagnostic />} />
-          <Route path="/operator" element={<OperatorDashboard />} />
+
 
           <Route path="/refroidisseurs-eau-entreprises" element={<RefroidisseursEauEntreprises />} />
           <Route path="/eau-petillante-entreprises" element={<EauPetillanteEntreprises />} />

@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import guideExpertImg from "@/assets/discover_expert.jpg";
 
-const DiscoverExpert = () => {
+const WaterDiagnosis = () => {
     return (
         <section className="bg-white relative overflow-hidden border-y border-slate-100">
             <div className="flex flex-col-reverse lg:flex-row items-stretch min-h-[500px] lg:min-h-[750px]">
@@ -78,4 +78,4 @@ const DiscoverExpert = () => {
     );
 };
 
-export default DiscoverExpert;
+export default WaterDiagnosis;

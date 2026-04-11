@@ -1,15 +1,15 @@
 import { useEffect } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import ProductShowcase from "@/components/ProductShowcase";
+import ProductsArray from "@/components/Products_Array";
 import CustomerJourney from "@/components/CustomerJourney";
 import ExpertTrustSection from "@/components/ExpertTrustSection";
-import DiscoverExpert from "@/components/DiscoverExpert";
+import WaterDiagnosis from "@/components/water_diagnosis";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import MarketExploration from "@/components/MarketExploration";
 import Footer from "@/components/Footer";
 
-const Index = () => {
+const Home = () => {
   useEffect(() => {
     document.title = "Bricareau | Experts en Traitement et Filtration d'eau au Québec";
     
@@ -34,7 +34,7 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
-        <ProductShowcase />
+        <ProductsArray />
         <CustomerJourney />
         <ExpertTrustSection />
         <TestimonialsSection
@@ -43,16 +43,16 @@ const Index = () => {
           title={
             <>
               <span className="italic font-light text-[#2563eb] block">Votre confiance.</span>
-              <span className="font-bold text-[#1e3a8a] block">Notre plus grande fierté.</span>
+              <span className="font-bold text-[#1e3a8a] block">Notre plus grande fierte.</span>
             </>
           }
         />
 
-        <DiscoverExpert />
+        <WaterDiagnosis />
       </main>
       <Footer />
     </div>
   );
 };
 
-export default Index;
+export default Home;

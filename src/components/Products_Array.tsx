@@ -49,7 +49,7 @@ const products = [
     }
 ];
 
-const ProductShowcase = () => {
+const ProductsArray = () => {
     return (
         <section id="solutions" className="py-16 md:py-20 lg:py-24 bg-white">
             <div className="container mx-auto px-4">
@@ -115,4 +115,4 @@ const ProductShowcase = () => {
     );
 };
 
-export default ProductShowcase;
+export default ProductsArray;

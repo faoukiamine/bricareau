@@ -361,7 +361,7 @@ const ConditionneursSansSel = () => {
           </div>
         </section>
 
-        {/* 4. Product Section - Mirrored from DiscoverExpert layout */}
+        {/* 4. Product Section - Mirrored from WaterDiagnosis layout */}
         <section className="bg-white relative overflow-hidden border-y border-slate-100">
           <div className="flex flex-col-reverse lg:flex-row items-stretch min-h-[500px] lg:min-h-[750px]">
             {/* Content Side */}

@@ -25,7 +25,7 @@ import technicianImg from "@/assets/discover_expert.jpg";
 import bricareauCareImg from "@/assets/cae3c0a4-5b4d-4b0e-8bc3-3550a714f7bb.jpg";
 import waterSoftenerInstallImg from "@/assets/Water-Softener-installation.jpg";
 import roSystemImg from "@/assets/reverse osmosis system_11062146.png";
-import roTechnicianImg from "@/assets/technicien repare osmoseur.avif";
+import roServiceImg from "@/assets/RO service.png";
 import labTestImg from "@/assets/test-laboratoire-diligence-inspection-750x500.jpg";
 import diagnosticImg from "@/assets/step-diagnostic.png";
 import { Input } from "@/components/ui/input";
@@ -48,7 +48,7 @@ import {
     SelectValue
 } from "@/components/ui/select";
 
-const Service = () => {
+const ServicesTraitementEau = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -462,7 +462,7 @@ const Service = () => {
                                 <div className="relative rounded-[4rem] overflow-hidden aspect-[4/5] shadow-2xl group bg-slate-50">
                                     <div className="absolute inset-0 bg-blue-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                                     <img 
-                                        src={roTechnicianImg} 
+                                        src={roServiceImg} 
                                         className="w-full h-full object-cover drop-shadow-2xl transition-transform duration-1000 group-hover:scale-110" 
                                         alt="Maintenance système d'osmose inverse"
                                     />
@@ -686,5 +686,4 @@ const Service = () => {
     );
 };
 
-export default Service;
-
+export default ServicesTraitementEau;

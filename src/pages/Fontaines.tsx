@@ -5,7 +5,7 @@ import Hero from "@/components/Hero";
 import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import ExpertAvatars from "@/components/ExpertAvatars";
-import DiscoverExpert from "@/components/DiscoverExpert";
+import WaterDiagnosis from "@/components/water_diagnosis";
 import {
     Snowflake,
     Building2,
