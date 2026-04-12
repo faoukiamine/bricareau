@@ -69,6 +69,7 @@ import Consultation from "./pages/page-consultation";
 import ContactForm from "./pages/Page-contact";
 import FiltresDeRemplacement from "./pages/Filtres-de-remplacement";
 import Diagnostic from "./pages/Diagnostic";
+import SearchPage from "./pages/Search";
 
 import TraitementUVNaturel from "./pages/Blog pages/Adoucisseur-deau- et-fosse-septique--Mythes-et-réalités";
 import FiltreDoucheBienfaits from "./pages/Blog pages/Adoucisseur-deau-portable-pour-VR";
@@ -191,6 +192,7 @@ const App = () => (
           <Route path="/eau-petillante-entreprises" element={<EauPetillanteEntreprises />} />
           <Route path="/machines-a-glace-entreprises" element={<MachinesAGlaceEntreprises />} />
           <Route path="/machines-a-cafe-entreprises" element={<MachinesACafeEntreprises />} />
+          <Route path="/search" element={<SearchPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

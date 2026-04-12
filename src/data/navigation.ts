@@ -1,0 +1,427 @@
+import promoImage2 from "@/assets/close-up-handsom-man-taking-bath.jpg";
+import promoImage3 from "@/assets/woman-and-kid-drink-glass-water.jpg";
+import promoImage4 from "@/assets/undersink_filtration_header.jpg";
+import promoImage from "@/assets/10341859.jpg";
+
+import ultravioletImg from "@/assets/uv system light_12838859.png";
+import watertestImg from "@/assets/Water-test_15395190.png";
+import wholehousefiltericonImg from "@/assets/Whole house Water Filter.png";
+import pointofusefiltericonImg from "@/assets/reverse osmosis system_11062146.png";
+import undersinkfiltericonImg from "@/assets/water-filter_8782563.png";
+import replacementfiltericonImg from "@/assets/Filter cartridges_4257091.png";
+import saltfreeiconImg from "@/assets/water-tap_4497397.png";
+import portablefiltericonImg from "@/assets/mobile-home_3764879.png";
+import WatersoftenericonImg from "@/assets/water-softener.png";
+import icemakericonImg from "@/assets/ice-maker_18310650.png";
+import waterdispensericonImg from "@/assets/water-dispenser_7714494.png";
+import drinkingwaterfountainiconImg from "@/assets/drinking_14127403.png";
+import faqiconImg from "@/assets/faq_4481080.png";
+import videoiconImg from "@/assets/video-camera_8062951.png";
+import blogiconImg from "@/assets/blog_10045827.png";
+import documenticonImg from "@/assets/documentation_17862483.png";
+import contacticonImg from "@/assets/telephone_3095610.png";
+import serviceiconImg from "@/assets/services_5062832.png";
+
+export interface MegamenuCard {
+  customIcon?: string;
+  svgIcon?: string; // We'll handle this as a string for simplicity in data, or keep it as element if needed
+  title: string;
+  description: string;
+  href: string;
+}
+
+export interface MenuItem {
+  name: string;
+  href?: string;
+  hasMegamenu: boolean;
+  megamenuCards?: MegamenuCard[];
+  promo?: {
+    title: string;
+    image: string;
+    link: string;
+  };
+}
+
+export const productMenuItems: MenuItem[] = [
+  {
+    name: "Adoucissement d'eau",
+    href: "/adoucissement",
+    hasMegamenu: true,
+    megamenuCards: [
+      {
+        customIcon: WatersoftenericonImg,
+        title: "Adoucisseurs d'eau",
+        description: "Éliminez le calcaire, protégez vos électroménagers et profitez d'une peau et de cheveux plus sains avec une eau parfaitement douce.",
+        href: "/adoucisseur-eau-residentiel"
+      },
+      {
+        customIcon: saltfreeiconImg,
+        title: "Conditionneurs d'eau sans sel",
+        description: "La solution antitartre écologique : prévenez l'accumulation de calcaire sans sel, sans rejet d'eau et sans entretien.",
+        href: "/conditionneurs-sans-sel"
+      },
+      {
+        customIcon: portablefiltericonImg,
+        title: "Adoucisseurs d'eau portables",
+        description: "La solution flexible pour une eau douce sans installation permanente. Idéal pour les VR et résidences secondaires.",
+        href: "/adoucisseurs-portables"
+      },
+    ],
+    promo: {
+      title: "Une eau parfaite commence par une analyse rigoureuse.",
+      image: promoImage2,
+      link: "/tests-eau"
+    }
+  },
+  {
+    name: "Filtration d'eau",
+    href: "/filtration",
+    hasMegamenu: true,
+    megamenuCards: [
+      {
+        customIcon: wholehousefiltericonImg,
+        title: "Filtres d'eau pour toute la maison",
+        description: "Protection complète de votre maison avec une filtration centralisée pour toute l'eau.",
+        href: "/filtres-deau-pour-toute-la-maison"
+      },
+      {
+        customIcon: pointofusefiltericonImg,
+        title: "Stations d'eau potable",
+        description: "Profitez d'une eau pure et saine directement de votre robinet avec nos systèmes de filtration avancés.",
+        href: "/systeme-de-filtration-deau-potable"
+      },
+      {
+        customIcon: undersinkfiltericonImg,
+        title: "Systèmes de filtration d'eau sous-évier",
+        description: "Solutions compactes et efficaces pour une filtration optimale directement sous votre évier.",
+        href: "/systemes-de-filtration-deau-sous-evier"
+      },
+      {
+        customIcon: replacementfiltericonImg,
+        title: "Cartouches filtrantes de remplacement",
+        description: "Maintenez la performance optimale de vos systèmes avec nos cartouches de qualité.",
+        href: "/filtres-de-remplacement"
+      },
+    ],
+    promo: {
+      title: "Protégez votre famille des contaminants invisibles qui peuvent avoir des effets à long terme",
+      image: promoImage3,
+      link: "/tests-eau"
+    }
+  },
+  {
+    name: "Traitement de l'eau de puits",
+    href: "/traitement-eau-de-puits",
+    hasMegamenu: true,
+    megamenuCards: [
+      {
+        customIcon: watertestImg,
+        title: "Analyses & Tests d'eau",
+        description: "Tests complets pour identifier les contaminants et problèmes de qualité de votre eau de puits.",
+        href: "/tests-eau"
+      },
+      {
+        customIcon: wholehousefiltericonImg,
+        title: "Systèmes de filtration d'eau spécialisés",
+        description: "Nos systèmes de filtration d’eau spécialisés pour toute la maison est la solution abordable et durable pour obtenir une eau de meilleure qualité à chaque robinet de votre maison.",
+        href: "/filtres-deau"
+      },
+      {
+        customIcon: WatersoftenericonImg,
+        title: "Adoucisseurs d'eau de puits",
+        description: "Dites adieu aux problèmes de calcaire ! Nos adoucisseurs d’eau traitent durablement l’eau contre ses méfaits pour vous faire bénéficier d’une eau douce toute l’année.",
+        href: "/adoucisseurs-eau-de-puits"
+      },
+      {
+        customIcon: ultravioletImg,
+        title: "Systèmes de désinfection UV",
+        description: "Les systèmes de désinfection de l’eau à rayons ultraviolet stérilisent l’approvisionnement en eau de votre maison contre les micro-organismes nuisibles.",
+        href: "/systemes-de-desinfection-uv"
+      },
+    ],
+    promo: {
+      title: "Des tests d'eau précis pour une tranquillité d'esprit totale.",
+      image: promoImage4,
+      link: "/tests-eau"
+    }
+  },
+  {
+    name: "Fontaines & distributeurs d'eau",
+    href: "/fontaines",
+    hasMegamenu: false,
+    megamenuCards: [
+      {
+        customIcon: drinkingwaterfountainiconImg,
+        title: "Distributeurs d'eau de comptoir",
+        description: "Solutions tout-en-un offrant eau froide, chaude et glace dans un seul appareil.",
+        href: "/fontaines"
+      },
+      {
+        customIcon: waterdispensericonImg,
+        title: "Refroidisseurs d'eau sans bouteille",
+        description: "Eau fraîche et filtrée à la demande pour votre bureau ou votre maison.",
+        href: "/fontaines"
+      },
+      {
+        customIcon: icemakericonImg,
+        title: "Machines à glaçons",
+        description: "Glace propre et abondante pour toutes vos occasions et besoins quotidiens.",
+        href: "/fontaines"
+      },
+    ],
+    promo: {
+      title: "Profitez d'une eau pure et revitalisante au quotidien",
+      image: promoImage,
+      link: "/systeme-de-filtration-deau-potable"
+    }
+  },
+  {
+    name: "Support",
+    hasMegamenu: true,
+    megamenuCards: [
+      {
+        customIcon: replacementfiltericonImg,
+        title: "Pièces",
+        description: "Commandez des pièces de rechange originales pour vos équipements.",
+        href: "/pieces"
+      },
+      {
+        customIcon: faqiconImg,
+        title: "Quiz",
+        description: "Trouvez le système de filtration d'eau parfait pour vos besoins en répondant à quelques questions simples.",
+        href: "/diagnostic"
+      },
+      {
+        customIcon: serviceiconImg,
+        title: "Service",
+        description: "Planifiez un entretien ou une réparation avec nos techniciens certifiés.",
+        href: "/service"
+      },
+      {
+        customIcon: faqiconImg,
+        title: "FAQ",
+        description: "Trouvez rapidement des réponses aux questions les plus fréquemment posées sur nos produits.",
+        href: "/faq"
+      },
+      {
+        customIcon: blogiconImg,
+        title: "Blog",
+        description: "Conseils, actualités et informations sur le traitement de l'eau et nos solutions.",
+        href: "/blog"
+      },
+      {
+        customIcon: contacticonImg,
+        title: "Contact",
+        description: "Contactez notre équipe d'experts pour toute question ou demande d'information.",
+        href: "/contact"
+      },
+    ],
+    promo: {
+      title: "Nous sommes là pour vous aider",
+      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=600\u0026auto=format\u0026fit=crop",
+      link: "/contact"
+    }
+  },
+];
+
+export const commercialProductMenuItems: MenuItem[] = [
+  {
+    name: "Systèmes Industriels",
+    hasMegamenu: true,
+    megamenuCards: [
+      {
+        customIcon: WatersoftenericonImg,
+        title: "Adoucisseurs Twin CI",
+        description: "Systèmes duplex haute performance pour une eau douce continue 24/7 sans perte de pression.",
+        href: "/commercial-industriel#expertise"
+      },
+      {
+        customIcon: pointofusefiltericonImg,
+        title: "Osmose Inverse Industrielle",
+        description: "Filtration moléculaire haute capacité pour laboratoires et processus de fabrication critiques.",
+        href: "/commercial-industriel#expertise"
+      },
+      {
+        customIcon: wholehousefiltericonImg,
+        title: "Filtration Média Spécialisée",
+        description: "Solutions sur mesure pour sédiments, fer, soufre et déionisation des eaux de procédé.",
+        href: "/commercial-industriel#expertise"
+      },
+      {
+        customIcon: ultravioletImg,
+        title: "Stérilisation UV Pro",
+        description: "Désinfection microbiologique par rayons UV pour garantir une eau exempte de bactéries.",
+        href: "/commercial-industriel#expertise"
+      },
+    ],
+    promo: {
+      title: "Optimisation des coûts de maintenance industrielle.",
+      image: promoImage4,
+      link: "/contact"
+    }
+  },
+  {
+    name: "Expertise \u0026 Support",
+    hasMegamenu: true,
+    megamenuCards: [
+      {
+        customIcon: watertestImg,
+        title: "Analyses de Laboratoire",
+        description: "Diagnostics certifiés et audits de qualité d'eau pour tous les secteurs industriels.",
+        href: "/tests-eau"
+      },
+      {
+        customIcon: serviceiconImg,
+        title: "Ingénierie de Déploiement",
+        description: "Accompagnement complet de la conception à l'installation de vos systèmes complexes.",
+        href: "/contact"
+      },
+      {
+        customIcon: documenticonImg,
+        title: "Cahier Technique \u0026 Devis",
+        description: "Demandez une étude personnalisée et des spécifications techniques pour votre projet.",
+        href: "/contact"
+      },
+      {
+        customIcon: blogiconImg,
+        title: "Études de Cas Pro",
+        description: "Découvrez nos réalisations et l'impact de nos solutions sur la performance industrielle.",
+        href: "/blog"
+      },
+    ],
+    promo: {
+      title: "Support Technique Prioritaire 24/7 pour les Entreprises.",
+      image: promoImage,
+      link: "/service"
+    }
+  },
+  {
+     name: "Secteurs",
+     href: "/commercial-industriel#secteurs",
+     hasMegamenu: false
+  },
+  {
+    name: "Ressources B2B",
+    hasMegamenu: true,
+    megamenuCards: [
+      {
+        customIcon: faqiconImg,
+        title: "FAQ Industrielle",
+        description: "Questions techniques sur les débits, la conformité et les exigences d'installation.",
+        href: "/faq"
+      },
+      {
+        customIcon: contacticonImg,
+        title: "Expert Conseil",
+        description: "Parlez directement à un ingénieur spécialisé dans le traitement d'eau.",
+        href: "/contact"
+      },
+    ],
+    promo: {
+      title: "Consultez le centre de documentation technique.",
+      image: "https://images.unsplash.com/photo-1454165833767-027ffea9e77b?q=80\u0026w=600\u0026auto=format\u0026fit=crop",
+      link: "/guides"
+    }
+  },
+];
+
+export const entreprisesProductMenuItems: MenuItem[] = [
+  {
+    name: "Refroidisseurs d’eau",
+    href: "/refroidisseurs-eau-entreprises",
+    hasMegamenu: true,
+    megamenuCards: [
+      {
+        customIcon: waterdispensericonImg,
+        title: "Fontaines Sans Bouteille",
+        description: "Reliées au réseau, filtration intégrée pour une eau fraîche continue au bureau sans logistique de bouteilles.",
+        href: "/refroidisseurs-eau-entreprises"
+      },
+      {
+        customIcon: drinkingwaterfountainiconImg,
+        title: "Distributeurs Haute Capacité",
+        description: "Solutions pour usines, cafétérias et grands lieux publics avec filtration UV optionnelle.",
+        href: "/refroidisseurs-eau-entreprises"
+      },
+    ],
+    promo: {
+      title: "Essai gratuit de 7 jours en entreprise au Québec.",
+      image: promoImage3,
+      link: "/contact"
+    }
+  },
+  {
+    name: "Eau Pétillante",
+    href: "/eau-petillante-entreprises",
+    hasMegamenu: false
+  },
+  {
+    name: "Machines à glace",
+    href: "/machines-a-glace-entreprises",
+    hasMegamenu: true,
+    megamenuCards: [
+      {
+        customIcon: icemakericonImg,
+        title: "Unités de Production de Glace",
+        description: "Systèmes de glaçons haute performance pour vos réceptions d'affaires et salles de repos.",
+        href: "/machines-a-glace-entreprises"
+      },
+    ],
+    promo: {
+      title: "Une glace pure, une image de marque soignée.",
+      image: promoImage4,
+      link: "/machines-a-glace-entreprises"
+    }
+  },
+  {
+     name: "Machines à café",
+     href: "/machines-a-cafe-entreprises",
+     hasMegamenu: false
+  },
+  {
+    name: "Ressources",
+    hasMegamenu: true,
+    megamenuCards: [
+      {
+        customIcon: blogiconImg,
+        title: "Blog \u0026 Bien-être",
+        description: "Conseils pour transformer l'hydratation en moteur de productivité au bureau.",
+        href: "/blog"
+      },
+      {
+        customIcon: faqiconImg,
+        title: "FAQ Support Pro",
+        description: "Tout ce qu'il faut savoir sur l'entretien et la conformité de vos fontaines.",
+        href: "/faq"
+      },
+    ],
+    promo: {
+      title: "Découvrez notre centre de ressources Business.",
+      image: promoImage2,
+      link: "/guides"
+    }
+  },
+  {
+    name: "Soutien",
+    hasMegamenu: true,
+    megamenuCards: [
+      {
+        customIcon: contacticonImg,
+        title: "Équipe Expert Conseil",
+        description: "Parlez à un conseiller spécialisé dans les solutions d'eau pour entreprises.",
+        href: "/contact"
+      },
+      {
+        customIcon: serviceiconImg,
+        title: "Installation \u0026 Maintenance",
+        description: "Planifiez votre entretien proactif ou demandez une réparation urgente.",
+        href: "/service"
+      },
+    ],
+    promo: {
+      title: "Service Gants Blancs : Votre satisfaction est notre priorité.",
+      image: promoImage,
+      link: "/contact"
+    }
+  },
+];
