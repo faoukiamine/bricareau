@@ -34,7 +34,7 @@ const ConditionsGeneralesUtilisation = () => {
                         </h1>
                         <p className="text-xl font-bold text-[#1a5a8a]">Bricareau Water Specialist</p>
                         <p className="text-sm text-gray-500 mt-2">Dernière mise à jour : 24 mars 2026</p>
-                        <p className="text-xs text-gray-500 mt-1">Site web : [www.bricareau.ca]</p>
+                        <p className="text-xs text-gray-500 mt-1">Site web : [www.bricareau.com]</p>
                     </div>
 
                     <div className="space-y-8 text-[15px] leading-relaxed border-t border-gray-200 pt-8">
