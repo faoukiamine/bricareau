@@ -91,6 +91,8 @@ import EauPetillanteEntreprises from "./pages/Eau-petillante-entreprises";
 import MachinesAGlaceEntreprises from "./pages/Machines-a-glace-entreprises";
 import MachinesACafeEntreprises from "./pages/Machines-a-cafe-entreprises";
 
+import AdoucisseurSentinelle from "./pages/Adoucisseur-Sentinelle";
+
 import DesabonnementSucces from "./pages/DesabonnementSucces";
 
 const queryClient = new QueryClient();
@@ -110,6 +112,7 @@ const App = () => (
           <Route path="/adoucissement" element={<Adoucisseurs />} />
           <Route path="/adoucisseurs" element={<Adoucisseurs />} />
           <Route path="/adoucisseur-eau-residentiel" element={<AdoucisseurEauResidentiel />} />
+          <Route path="/adoucisseur-sentinelle" element={<AdoucisseurSentinelle />} />
           <Route path="/adoucisseurs-eau-de-puits" element={<AdoucisseursEauDePuits />} />
           <Route path="/conditionneurs-sans-sel" element={<ConditionneursSansSel />} />
           <Route path="/systeme-de-filtration-deau-potable" element={<StationEauPotable />} />

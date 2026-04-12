@@ -130,7 +130,7 @@ export const productIndex: ProductIndexItem[] = [
     name: "Série Sentinelle",
     keywords: ["sentinelle", "adoucisseur", "précision", "compact", "économie de sel"],
     description: "Adoucisseur d'eau précis et compact, idéal pour éradiquer le calcaire sans complexité inutile.",
-    href: "/adoucisseur-eau-residentiel",
+    href: "/adoucisseur-sentinelle",
     category: "Adoucisseurs d'eau"
   },
   {

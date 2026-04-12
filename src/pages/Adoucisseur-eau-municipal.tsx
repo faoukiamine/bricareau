@@ -59,7 +59,7 @@ const products = [
         name: "Adoucisseur d'eau de la série \n Sentinelle", 
         desc: "Votre priorité est d'éradiquer le calcaire avec une précision chirurgicale, sans complexité inutile.", 
         features: ["Protection des électros", "Format compact intelligent", "Économie de sel optimisée"],
-        path: "/contact", 
+        path: "/adoucisseur-sentinelle", 
         image: SentinelWaterSoftenerImg 
     },
     { 
