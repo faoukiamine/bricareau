@@ -5,22 +5,8 @@ import { Button } from "@/components/ui/button";
 import { 
     CheckCircle2, 
     Droplets, 
-    Zap, 
-    ShieldCheck, 
     ArrowRight, 
-    ChevronRight, 
-    Wifi, 
-    Sparkles, 
-    HandCoins, 
-    CloudRain, 
-    Waves,
-    Info,
-    Smartphone,
-    Activity,
-    Settings,
-    Timer,
-    Check,
-    Brain
+    Activity
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import ExpertAvatars from "@/components/ExpertAvatars";
@@ -46,69 +32,41 @@ const AdoucisseurSentinelle = () => {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
-    const features = [
-        {
-            title: "Régénération Intelligente",
-            desc: "Calcul automatique des cycles basé sur votre consommation réelle pour 50% d'économie en sel.",
-            icon: Activity,
-            color: "text-blue-600",
-            bg: "bg-blue-50"
-        },
-        {
-            title: "Technologie 'Sentinelle'",
-            desc: "Surveillance 24/7 du débit et des paramètres pour une performance constante.",
-            icon: ShieldCheck,
-            color: "text-emerald-600",
-            bg: "bg-emerald-50"
-        },
-        {
-            title: "Compact & Élégant",
-            desc: "Format optimisé pour s'intégrer discrètement dans votre sous-sol ou placard technique.",
-            icon: Settings,
-            color: "text-amber-600",
-            bg: "bg-amber-50"
-        },
-        {
-            title: "Mémoire Permanente",
-            desc: "Sauvegarde automatique de vos réglages. Le système conserve sa programmation même après une panne de courant prolongée.",
-            icon: Brain,
-            color: "text-indigo-600",
-            bg: "bg-indigo-50"
-        }
-    ];
 
-    const [selectedModel, setSelectedModel] = useState("SEN-1044");
+
+    const [selectedModel, setSelectedModel] = useState("SEN-40K");
 
     const models = {
-        "SEN-844": { resin: "0.75 Cu. Ft.", service_flow: "11.7 GPM", peak_flow: "16.5 GPM", capacity: "20,000 grains", dim: "8\" x 44\"", brine: "15\" x 17\" x 36\"", Power: "120V/60Hz" },
-        "SEN-948": { resin: "1.0 Cu. Ft.", service_flow: "13.1 GPM", peak_flow: "18.5 GPM", capacity: "30,000 grains", dim: "9\" x 48\"", brine: "15\" x 17\" x 36\"", Power: "120V/60Hz" },
-        "SEN-1044": { resin: "1.25 Cu. Ft.", service_flow: "16.0 GPM", peak_flow: "22.0 GPM", capacity: "40,000 grains", dim: "10\" x 44\"", brine: "15\" x 17\" x 36\"", Power: "120V/60Hz" },
-        "SEN-1054": { resin: "1.5 Cu. Ft.", service_flow: "13.3 GPM", peak_flow: "18.5 GPM", capacity: "50,000 grains", dim: "10\" x 54\"", brine: "15\" x 17\" x 36\"", Power: "120V/60Hz" },
-        "SEN-1252": { resin: "2.0 Cu. Ft.", service_flow: "16.4 GPM", peak_flow: "23.0 GPM", capacity: "60,000 grains", dim: "12\" x 52\"", brine: "18\" x 40\"", Power: "120V/60Hz" },
-        "SEN-1354": { resin: "2.5 Cu. Ft.", service_flow: "17.1 GPM", peak_flow: "24.0 GPM", capacity: "75,000 grains", dim: "13\" x 54\"", brine: "18\" x 40\"", Power: "120V/60Hz" }
+        "SEN-32K": { capacity: "32,000 grains", resin: "1.00 pi³", service_flow: "9 GPM", tank: "9\" x 48\"", backwash: "2.2 GPM", weight: "98 lbs" },
+        "SEN-40K": { capacity: "40,000 grains", resin: "1.25 pi³", service_flow: "10 GPM", tank: "10\" x 44\"", backwash: "2.7 GPM", weight: "111 lbs" },
+        "SEN-48K": { capacity: "48,000 grains", resin: "1.50 pi³", service_flow: "12 GPM", tank: "10\" x 54\"", backwash: "2.7 GPM", weight: "124 lbs" },
+        "SEN-64K": { capacity: "64,000 grains", resin: "2.00 pi³", service_flow: "13 GPM", tank: "12\" x 48\"", backwash: "3.2 GPM", weight: "152 lbs" },
+        "SEN-80K": { capacity: "80,000 grains", resin: "2.50 pi³", service_flow: "18 GPM", tank: "13\" x 54\"", backwash: "4.2 GPM", weight: "219 lbs" }
     };
 
     const currentModel = models[selectedModel];
 
     const specs = [
         { label: "Modèle Sélectionné", value: selectedModel },
+        { label: "Capacité en grains", value: currentModel.capacity },
+        { label: "Volume de résine", value: currentModel.resin },
         { label: "Débit de service", value: currentModel.service_flow },
-        { label: "Débit de pointe", value: currentModel.peak_flow },
-        { label: "Volume du média", value: currentModel.resin },
-        { label: "Capacité (Maximum)", value: currentModel.capacity },
-        { label: "Dim. Réservoir", value: currentModel.dim },
-        { label: "Dim. Bac à sel", value: currentModel.brine },
-        { label: "Alimentation électrique", value: currentModel.Power },
-        { label: "Raccordement entrée/sortie", value: "3/4\" ou 1\"" },
-        { label: "Raccordement au drain", value: "3/4\"" },
-    ];
+        { label: "Débit de lavage (Backwash)", value: currentModel.backwash },
+        { label: "Dimensions du réservoir", value: currentModel.tank },
+        { label: "Raccordement", value: "1\" High Flow" },
+        { label: "Poids approximatif", value: currentModel.weight },
+        { label: "Alimentation électrique", value: "120V/60Hz" },
+        { label: "Pression de service", value: "20-125 psi" },
+        { label: "Température d'opération", value: "2°C - 43°C" },
+        { label: "Type de vanne", value: "Série Signature" },
+   ];
 
     return (
         <div className="min-h-screen bg-white font-sans text-slate-900 selection:bg-blue-100 selection:text-blue-900">
             <Header />
 
-            {/* 1. HERO SECTION - ULTRA PREMIUM */}
-            <section className="relative lg:h-[800px] flex flex-col justify-center overflow-hidden bg-slate-50 py-20 lg:py-0">
+            {/* 1. HERO & SPECS SECTION - MERGED */}
+            <section className="relative flex flex-col justify-center overflow-hidden bg-slate-50 py-24">
                 {/* Background Decor */}
                 <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-blue-50/50 to-transparent pointer-events-none" />
                 <div className="absolute -top-24 -right-24 w-[600px] h-[600px] bg-blue-100/30 rounded-full blur-[120px] pointer-events-none" />
@@ -125,7 +83,7 @@ const AdoucisseurSentinelle = () => {
                             </h1>
 
                             <p className="text-xl text-slate-600 font-light leading-relaxed max-w-lg">
-                                Plus qu'un simple adoucisseur, la Série Sentinelle est votre bouclier technologique contre le calcaire. Performance, élégance et économies réunies dans un format compact.
+                                Une eau douce de qualité supérieure que vous ressentez à chaque douche et dans la douceur de votre serviette. La Série Sentinelle est votre bouclier technologique contre le calcaire.
                             </p>
 
                             <div className="flex flex-col sm:flex-row gap-4 pt-4">
@@ -166,231 +124,171 @@ const AdoucisseurSentinelle = () => {
                                 
 
                             </motion.div>
-                        </div>
                     </div>
-                </div>
-            </section>
-
-            {/* 2. PRODUCT DETAILS & FEATURES - Expanded Section */}
-            <section id="decouvrir" className="py-24 bg-white relative overflow-hidden">
-                <div className="container mx-auto px-6">
-                    <div className="grid lg:grid-cols-2 gap-20 items-center mb-24">
-                        <div className="space-y-8">
-                            <div className="inline-block py-1 px-3 rounded-md bg-blue-50 text-blue-600 font-bold text-xs uppercase tracking-widest">Détails du produit</div>
-                            <h2 className="text-4xl font-bold tracking-tight text-slate-900 leading-tight">
-                                Une technologie conçue pour <br />
-                                <span className="text-blue-600">durer des décennies.</span>
-                            </h2>
-                            <p className="text-lg text-slate-600 font-light leading-relaxed">
-                                L'adoucisseur Série Sentinelle n'est pas un simple appareil domestique ; c'est un investissement dans la santé de votre maison. Sa vanne intelligente mesure votre consommation d'eau au litre près, évitant les régénérations inutiles et prolongeant la vie de la résine de haute performance.
-                            </p>
-                            <div className="grid sm:grid-cols-2 gap-6">
-                                {[
-                                    { t: "Vanne électronique", d: "Technologie de dernière génération pour un contrôle ultra-précis." },
-                                    { t: "Résine Haute Performance", d: "Résine à haute efficacité pour une capacité d'échange optimale." },
-                                    { t: "Vanne Bypass Pro", d: "Permet d'isoler le système en un seul geste." },
-                                    { t: "Bac à sel renforcé", d: "Empêche la formation de condensation pour garder votre sol propre et sec." }
-                                ].map((item, i) => (
-                                    <div key={i} className="flex gap-4">
-                                        <div className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-blue-100 flex items-center justify-center">
-                                            <Check className="w-3 h-3 text-blue-600" />
-                                        </div>
-                                        <div>
-                                            <div className="font-bold text-slate-900 text-sm">{item.t}</div>
-                                            <div className="text-xs text-slate-500 font-light mt-1">{item.d}</div>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                        <div className="bg-slate-50 rounded-[3rem] p-12 lg:p-16 border border-slate-100 relative overflow-hidden group">
-                            <div className="absolute top-0 right-0 w-64 h-64 bg-blue-400/5 rounded-full -mr-20 -mt-20 blur-3xl group-hover:bg-blue-400/10 transition-colors" />
-                            <h3 className="text-2xl font-bold mb-8 uppercase tracking-tighter">Caractéristiques de pointe</h3>
-                            <div className="space-y-8">
-                                {features.map((f, i) => (
-                                    <div key={i} className="flex items-start gap-6">
-                                        <div className={cn("w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 transition-transform duration-500 group-hover:scale-110", f.bg, f.color)}>
-                                            <f.icon className="w-6 h-6" />
-                                        </div>
-                                        <div>
-                                            <h4 className="font-bold text-slate-900 text-lg uppercase tracking-tight">{f.title}</h4>
-                                            <p className="text-slate-500 font-light text-sm mt-1">{f.desc}</p>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
                     </div>
-
-
-                </div>
-            </section>
-
-            {/* 3. LIFESTYLE SECTION - Full Width Visual */}
-            <section className="relative h-[600px] lg:h-[800px] overflow-hidden flex items-center">
-                <img 
-                    src={heroBg} 
-                    alt="Vie quotidienne avec eau adoucie" 
-                    className="absolute inset-0 w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-blue-900/40 backdrop-blur-[2px]" />
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-900 via-blue-900/60 to-transparent" />
                 
-                <div className="container mx-auto px-6 relative z-10">
-                    <div className="max-w-2xl text-white space-y-8">
-                        <div className="w-20 h-1 bg-blue-400" />
-                        <h2 className="text-5xl lg:text-6xl font-black italic tracking-tighter leading-[1.05]">
-                            PROTECTION <br />
-                            TOTALE. <br />
-                            <span className="text-blue-300">CONFORT ABSOLU.</span>
-                        </h2>
-                        <ul className="space-y-4">
-                            {[
-                                "Peau et cheveux d'une douceur incroyable",
-                                "Vaisselle étincelante sans traces de calcaire",
-                                "Protection de vos électroménagers haut de gamme",
-                                "Réduction immédiate de l'utilisation de savon"
-                            ].map((item, i) => (
-                                <li key={i} className="flex items-center gap-3 text-lg font-light">
-                                    <CheckCircle2 className="text-blue-400 h-6 w-6" />
-                                    {item}
-                                </li>
-                            ))}
-                        </ul>
-                        <div className="pt-6">
-                            <Button asChild size="lg" className="rounded-full bg-white text-blue-900 hover:bg-blue-50 h-14 px-10">
-                                <a href="/contact">Demander un prix</a>
-                            </Button>
+                {/* Integrated Specs Console */}
+                    <div className="mt-24 pt-24 border-t border-slate-200/60">
+                        <div className="max-w-4xl mx-auto space-y-12">
+                            <div className="text-center space-y-6">
+                                <div className="inline-block py-1 px-3 rounded-md bg-blue-600 text-white font-bold text-[10px] uppercase tracking-[0.2em]">Fiche Technique</div>
+                                <h2 className="heading-pro-max text-center">
+                                    <span className="italic font-light text-[#2563eb] block text-3xl">Spécifications</span>
+                                    <span className="font-bold text-[#1e3a8a] block uppercase text-4xl">Série Sentinelle.</span>
+                                </h2>
+                                
+                                <div className="flex flex-wrap justify-center gap-2 pt-4">
+                                    {Object.keys(models).map((m) => (
+                                        <button
+                                            key={m}
+                                            onClick={() => setSelectedModel(m)}
+                                            className={cn(
+                                                "px-6 py-2.5 rounded-full text-[10px] font-black uppercase tracking-widest transition-all",
+                                                selectedModel === m 
+                                                    ? "bg-blue-600 text-white shadow-xl shadow-blue-200" 
+                                                    : "bg-slate-100 text-slate-400 hover:bg-slate-200"
+                                            )}
+                                        >
+                                            {m.split('-')[1]}
+                                        </button>
+                                    ))}
+                                </div>
+                            </div>
+
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
+                                {specs.map((s, i) => (
+                                    <div 
+                                        key={i} 
+                                        className="group flex items-center justify-between p-6 rounded-3xl bg-white border border-slate-100 transition-all hover:shadow-2xl hover:border-blue-200"
+                                    >
+                                        <div className="flex flex-col gap-1">
+                                            <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest">{s.label}</span>
+                                            <span className="text-lg font-bold text-slate-900 group-hover:text-blue-600 transition-colors tracking-tight">{s.value}</span>
+                                        </div>
+                                        <div className="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center border border-slate-100 group-hover:bg-blue-50 group-hover:border-blue-100 transition-all">
+                                            <CheckCircle2 className="w-5 h-5 text-blue-100 group-hover:text-blue-600 transition-colors" />
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+
+                            <div className="flex flex-wrap justify-center gap-12">
+                                <div className="flex items-center gap-4 text-xs font-bold text-slate-500 tracking-widest uppercase">
+                                    <div className="w-12 h-[1px] bg-slate-200" />
+                                    CERTIFIÉ NSF/ANSI 44
+                                </div>
+                                <div className="flex items-center gap-4 text-xs font-bold text-slate-500 tracking-widest uppercase">
+                                    <div className="w-12 h-[1px] bg-slate-200" />
+                                    GARANTIE 10 ANS
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* 4. TECHNICAL SPECS - High-End Laboratory Design */}
-            <section className="py-24 bg-white relative overflow-hidden">
+            {/* 2.5 ADVANCED TECHNOLOGY SECTION - New Content from PDF */}
+            <section className="py-24 bg-white">
                 <div className="container mx-auto px-6">
-                    <div className="max-w-6xl mx-auto">
-                        <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
-                            {/* Visual Side */}
-                            <div className="lg:w-1/2 relative">
-                                <div className="absolute inset-0 bg-blue-100/50 rounded-full blur-[100px] -z-10" />
-                                <motion.div 
-                                    initial={{ opacity: 0, scale: 0.9 }}
-                                    whileInView={{ opacity: 1, scale: 1 }}
-                                    viewport={{ once: true }}
-                                    className="relative flex justify-center"
-                                >
-                                    <img 
-                                        src={sentinelImg} 
-                                        alt="Détails techniques Sentinelle" 
-                                        className="max-h-[500px] object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.1)]"
-                                    />
-                                    
-                                </motion.div>
-                            </div>
-
-                            {/* Data Side */}
-                            <div className="lg:w-1/2 space-y-10">
-                                <div className="space-y-4">
-                                    <div className="inline-block py-1 px-3 rounded-md bg-blue-600 text-white font-bold text-[10px] uppercase tracking-[0.2em]">Fiche Technique</div>
-                                    <h2 className="text-4xl lg:text-5xl font-black text-slate-900 tracking-tighter uppercase leading-none italic">
-                                        Spécifications <br />
-                                        <span className="text-blue-600">Techniques.</span>
-                                    </h2>
-                                    
-                                    {/* Model Switcher */}
-                                    <div className="flex flex-wrap gap-2 pt-4">
-                                        {Object.keys(models).map((m) => (
-                                            <button
-                                                key={m}
-                                                onClick={() => setSelectedModel(m)}
-                                                className={cn(
-                                                    "px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-widest transition-all",
-                                                    selectedModel === m 
-                                                        ? "bg-blue-600 text-white shadow-lg shadow-blue-200" 
-                                                        : "bg-slate-100 text-slate-400 hover:bg-slate-200"
-                                                )}
-                                            >
-                                                {m}
-                                            </button>
-                                        ))}
+                    <div className="max-w-7xl mx-auto">
+                        <div className="grid lg:grid-cols-2 gap-16 items-center">
+                            <div className="order-2 lg:order-1 relative rounded-[3rem] overflow-hidden bg-slate-100 p-12 flex items-center justify-center">
+                                <div className="absolute inset-0 bg-gradient-to-br from-blue-600/5 to-transparent" />
+                                <div className="relative space-y-6 text-center">
+                                    <div className="text-6xl font-black text-blue-600/10 uppercase italic select-none">Ion Exchange</div>
+                                    <div className="p-8 bg-white rounded-3xl shadow-xl border border-slate-100 max-w-sm mx-auto">
+                                        <h3 className="text-xl font-bold text-slate-900 mb-4">Le Processus d'Échange d'Ions</h3>
+                                        <p className="text-sm text-slate-500 leading-relaxed font-light">
+                                            L'adoucisseur remplace les minéraux responsables de la dureté (calcium et magnésium) par des ions adoucissants. La résine haute performance capture ces minéraux et les évacue lors de la régénération automatique.
+                                        </p>
                                     </div>
                                 </div>
-
-                                <div className="grid grid-cols-1 gap-3">
-                                    {specs.map((s, i) => (
-                                        <div 
-                                            key={i} 
-                                            className="group flex items-center justify-between p-5 rounded-2xl bg-slate-50 border border-slate-100 transition-all hover:bg-white hover:shadow-xl hover:border-blue-200"
-                                        >
-                                            <div className="flex items-center gap-4">
-                                                <div className="w-1.5 h-1.5 rounded-full bg-blue-600 opacity-20 group-hover:opacity-100 transition-opacity" />
-                                                <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest">{s.label}</span>
+                            </div>
+                            
+                            <div className="order-1 lg:order-2 space-y-8">
+                                <div className="space-y-4">
+                                    <div className="inline-block py-1 px-3 rounded-md bg-slate-100 text-slate-600 font-bold text-[10px] uppercase tracking-[0.2em]">Technologie de Pointe</div>
+                                    <h2 className="text-4xl lg:text-5xl font-black text-slate-900 tracking-tighter uppercase leading-tight italic">
+                                        Vanne de contrôle <br />
+                                        <span className="text-blue-600 font-serif lowercase italic font-light">Série Signature.</span>
+                                    </h2>
+                                </div>
+                                
+                                <div className="space-y-6">
+                                    {[
+                                        { title: "Mouvement Linéaire Breveté", desc: "Équipée d'un piston à mouvement linéaire alternatif breveté pour un service et des taux de lavage à contre-courant optimaux." },
+                                        { title: "Conception Monobloc", desc: "Assemblage de cales d'espacement scellées en une seule pièce, conçu pour durer des décennies sans entretien." },
+                                        { title: "Intelligence Volumétrique", desc: "S'adapte automatiquement à votre consommation réelle pour minimiser l'utilisation de sel et d'eau." }
+                                    ].map((tech, i) => (
+                                        <div key={i} className="flex gap-6 group">
+                                            <div className="w-12 h-12 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-all duration-500 shrink-0">
+                                                <CheckCircle2 className="w-6 h-6" />
                                             </div>
-                                            <span className="text-base font-bold text-slate-900 group-hover:text-blue-600 transition-colors">{s.value}</span>
+                                            <div className="space-y-1">
+                                                <h4 className="font-bold text-slate-900 uppercase tracking-tight italic">{tech.title}</h4>
+                                                <p className="text-sm text-slate-500 leading-relaxed font-light">{tech.desc}</p>
+                                            </div>
                                         </div>
                                     ))}
                                 </div>
-
-                                <div className="pt-6 flex flex-wrap gap-10">
-                                    <div className="flex items-center gap-3 text-sm font-bold text-slate-400">
-                                        <CheckCircle2 className="w-5 h-5 text-blue-600" />
-                                        CERTIFIÉ NSF/ANSI 44
-                                    </div>
-                                    <div className="flex items-center gap-3 text-sm font-bold text-slate-400">
-                                        <CheckCircle2 className="w-5 h-5 text-blue-600" />
-                                        GARANTIE 10 ANS
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* 5. INSTALLATION & MAINTENANCE */}
+
+
+            {/* 3. BÉNÉFICES SECTION - Dynamic Grid */}
             <section className="py-24 bg-slate-50 relative overflow-hidden">
                 <div className="container mx-auto px-6">
-                    <div className="grid lg:grid-cols-2 gap-20 items-center">
-                        <div className="space-y-8 order-2 lg:order-1">
-                            <div className="inline-block py-1 px-3 rounded-md bg-blue-100 text-blue-700 font-bold text-xs uppercase tracking-widest">Installation et maintenance</div>
-                            <h2 className="text-4xl font-bold text-slate-900 tracking-tight leading-tight">Installation certifiée, <br /> <span className="text-blue-600 italic">Entretien simplifié.</span></h2>
-                            
-                            <div className="space-y-6">
-                                {[
-                                    { t: "Installation en 2h", d: "Nos techniciens certifiés Bricareau effectuent une installation propre et conforme aux normes de plomberie du Québec.", icon: Timer },
-                                    { t: "Entretien Minimal", d: "Ajoutez simplement du sel une fois par mois. Aucun changement de filtre requis pour la Série Sentinelle.", icon: Settings },
-                                    { t: "Suivi Annuel", d: "Nous recommandons un test d'eau annuel gratuit pour s'assurer que les réglages sont toujours optimaux.", icon: Activity }
-                                ].map((item, i) => (
-                                    <div key={i} className="flex gap-6 p-6 rounded-2xl bg-white border border-slate-100 shadow-sm">
-                                        <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center flex-shrink-0 text-blue-600">
-                                            <item.icon className="w-6 h-6" />
-                                        </div>
-                                        <div>
-                                            <h4 className="font-bold text-slate-900 uppercase tracking-tight">{item.t}</h4>
-                                            <p className="text-slate-500 text-sm font-light mt-1">{item.d}</p>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                        <div className="order-1 lg:order-2 space-y-10">
-                            <div className="p-8 rounded-[2.5rem] bg-blue-600 text-white space-y-6 relative overflow-hidden">
-                                <Waves className="absolute -top-10 -right-10 w-40 h-40 text-white/5" />
-                                <h3 className="text-2xl font-bold italic tracking-tight uppercase">Plan de Maintenance Sérénité</h3>
-                                <p className="text-blue-100 font-light leading-relaxed">
-                                    Abonnez-vous à notre service de livraison de sel et profitez d'une extension de garantie illimitée sur toutes les pièces et la main-d’œuvre.
-                                </p>
-                                <Button className="bg-white text-blue-600 hover:bg-blue-50 rounded-full h-12 px-8 font-bold">Découvrir le plan</Button>
-                            </div>
-                            <div className="grid grid-cols-2 gap-6 text-center">
-                                <div className="p-6 rounded-3xl bg-white border border-slate-100">
-                                    <div className="text-3xl font-black text-slate-900">2h</div>
-                                    <div className="text-[10px] text-slate-400 font-black uppercase mt-1 tracking-widest">INSTALLATION</div>
+                    <div className="max-w-7xl mx-auto">
+                        <div className="grid lg:grid-cols-2 gap-24 items-center">
+                            <div className="space-y-12">
+                                <div className="space-y-4">
+                                    <div className="inline-block py-1 px-3 rounded-md bg-blue-100 text-blue-600 font-bold text-[10px] uppercase tracking-[0.2em]">Bénéfices de la Série Sentinelle</div>
+                                    <h2 className="text-4xl lg:text-6xl font-black text-slate-900 tracking-tighter uppercase leading-[0.9] italic">
+                                        Une eau que <br />
+                                        <span className="text-blue-600">vous ressentez.</span>
+                                    </h2>
+                                    <p className="text-xl text-slate-500 font-light leading-relaxed">
+                                        Chaque adoucisseur est conçu pour répondre aux défis uniques de votre eau, offrant à votre famille un confort exceptionnel au quotidien.
+                                    </p>
                                 </div>
-                                <div className="p-6 rounded-3xl bg-white border border-slate-100">
-                                    <div className="text-3xl font-black text-slate-900">20 ans</div>
-                                    <div className="text-[10px] text-slate-400 font-black uppercase mt-1 tracking-widest">DURABILITÉ</div>
+
+                                <div className="grid sm:grid-cols-2 gap-8">
+                                    {[
+                                        { title: "Salle de Bain", text: "Votre peau et vos cheveux seront visiblement plus doux. Fini les traces de savon sur l'évier et la douche." },
+                                        { title: "Cuisine", text: "La vaisselle se nettoie plus facilement et ressort sans taches. Vos mains seront plus douces." },
+                                        { title: "Buanderie", text: "Les vêtements seront plus éclatants et dureront plus longtemps (+33% de durée de vie)." },
+                                        { title: "Appareils", text: "Vos chauffe-eau et lave-vaisselle durent 30% plus longtemps grâce à l'élimination du tartre." }
+                                    ].map((benefit, i) => (
+                                        <div key={i} className="space-y-2">
+                                            <h4 className="font-bold text-slate-900 uppercase tracking-tight italic flex items-center gap-2">
+                                                <div className="w-1.5 h-1.5 rounded-full bg-blue-600" />
+                                                {benefit.title}
+                                            </h4>
+                                            <p className="text-sm text-slate-500 leading-relaxed font-light">{benefit.text}</p>
+                                        </div>
+                                    ))}
+                                </div>
+                                
+                                <Button asChild size="lg" className="rounded-full bg-blue-600 text-white hover:bg-blue-700 h-14 px-10 shadow-xl shadow-blue-200">
+                                    <a href="/contact">Obtenir ma soumission</a>
+                                </Button>
+                            </div>
+
+                            <div className="relative rounded-[3rem] overflow-hidden aspect-square lg:aspect-auto lg:h-[700px]">
+                                <img 
+                                    src={heroBg} 
+                                    alt="Confort de l'eau adoucie" 
+                                    className="absolute inset-0 w-full h-full object-cover"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-blue-900/60 to-transparent" />
+                                <div className="absolute bottom-12 left-12 right-12 p-8 rounded-3xl bg-white/10 backdrop-blur-xl border border-white/20 text-white">
+                                    <p className="text-lg font-light italic leading-relaxed">
+                                        "L'investissement dans un adoucisseur Nelsen vous récompensera avec une eau de qualité à chaque robinet de votre maison."
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -398,7 +296,108 @@ const AdoucisseurSentinelle = () => {
                 </div>
             </section>
 
-            {/* 6. QUESTIONS ET RÉPONSES (FAQ) */}
+
+            {/* 4. PRODUCT ECOSYSTEM - Editorial Split Alternative */}
+            <section className="py-24 bg-white relative overflow-hidden">
+                <div className="container mx-auto px-6">
+                    <div className="max-w-7xl mx-auto">
+                        {/* Section Header */}
+                        <div className="mb-20 space-y-4">
+                            <motion.div 
+                                initial={{ opacity: 0, x: -20 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true }}
+                                className="flex items-center gap-4"
+                            >
+                                <div className="h-[2px] w-12 bg-blue-600" />
+                                <span className="text-blue-600 font-bold text-xs uppercase tracking-[0.4em]">Écosystème Bricareau</span>
+                            </motion.div>
+                            <motion.h2 
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: 0.1 }}
+                                className="text-4xl lg:text-6xl font-black text-slate-900 tracking-tighter uppercase leading-none italic"
+                            >
+                                Une eau parfaite, <br />
+                                <span className="text-blue-600">souvent une affaire de combo.</span>
+                            </motion.h2>
+                        </div>
+
+                        {/* Interactive Split Layout */}
+                        <div className="flex flex-col lg:flex-row gap-4 items-stretch relative min-h-[500px]">
+                            {/* Step 1: Horizontal Block */}
+                            <motion.a 
+                                href="/tests-eau"
+                                initial={{ opacity: 0, scale: 0.98 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                whileHover={{ flex: 1.2 }}
+                                transition={{ type: "spring", stiffness: 100, damping: 20 }}
+                                className="flex-1 group relative overflow-hidden rounded-[3rem] bg-slate-50 border border-slate-100 p-12 lg:p-16 flex flex-col justify-between transition-all duration-700"
+                            >
+                                {/* Background Watermark */}
+                                <div className="absolute top-1/2 right-0 -translate-y-1/2 translate-x-1/4 text-[20rem] font-black text-slate-200/50 italic select-none -z-10 group-hover:scale-110 group-hover:-rotate-12 transition-transform duration-1000">01</div>
+                                
+                                <div className="space-y-8 relative z-10">
+                                    <div className="w-16 h-16 rounded-2xl bg-amber-500 text-white flex items-center justify-center shadow-lg shadow-amber-200 group-hover:rotate-12 transition-transform duration-500">
+                                        <Activity className="w-8 h-8" />
+                                    </div>
+                                    <h3 className="text-3xl lg:text-4xl font-black text-slate-900 uppercase tracking-tighter leading-none italic">
+                                        D'abord, testez <br />
+                                        <span className="text-amber-500">votre niveau de dureté.</span>
+                                    </h3>
+                                    <p className="text-slate-500 font-light text-lg leading-relaxed max-w-sm">
+                                        Une analyse précise permet de calibrer votre Série Sentinelle au grain près pour une efficacité maximale du sel.
+                                    </p>
+                                </div>
+
+                                <div className="relative z-10 flex items-center gap-4 text-xs font-black text-slate-900 uppercase tracking-widest pt-12 group-hover:gap-8 transition-all">
+                                    <div className="h-[2px] w-8 bg-slate-900 group-hover:w-16 transition-all duration-500" />
+                                    Obtenir mon test d'eau
+                                </div>
+                            </motion.a>
+
+                            {/* Middle Connector - Dynamic Plus Sign */}
+                            <div className="hidden lg:flex absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 w-16 h-16 rounded-full bg-white border border-slate-200 items-center justify-center text-slate-400 shadow-xl group-hover:scale-125 transition-transform duration-500">
+                                <ArrowRight className="w-6 h-6 rotate-90 lg:rotate-0" />
+                            </div>
+
+                            {/* Step 2: Horizontal Block */}
+                            <motion.a 
+                                href="/filtres-deau-pour-toute-la-maison"
+                                initial={{ opacity: 0, scale: 0.98 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                whileHover={{ flex: 1.2 }}
+                                transition={{ type: "spring", stiffness: 100, damping: 20, delay: 0.1 }}
+                                className="flex-1 group relative overflow-hidden rounded-[3rem] bg-slate-900 p-12 lg:p-16 flex flex-col justify-between transition-all duration-700"
+                            >
+                                {/* Background Watermark */}
+                                <div className="absolute top-1/2 right-0 -translate-y-1/2 translate-x-1/4 text-[20rem] font-black text-white/5 italic select-none -z-10 group-hover:scale-110 group-hover:-rotate-12 transition-transform duration-1000">02</div>
+                                
+                                <div className="space-y-8 relative z-10">
+                                    <div className="w-16 h-16 rounded-2xl bg-blue-600 text-white flex items-center justify-center shadow-lg shadow-blue-500/20 group-hover:rotate-12 transition-transform duration-500">
+                                        <Droplets className="w-8 h-8" />
+                                    </div>
+                                    <h3 className="text-3xl lg:text-4xl font-black text-white uppercase tracking-tighter leading-none italic">
+                                        Ensuite, filtrez <br />
+                                        <span className="text-blue-500">sédiments & chlore.</span>
+                                    </h3>
+                                    <p className="text-slate-400 font-light text-lg leading-relaxed max-w-sm">
+                                        Coupler l'adoucisseur à une filtration haute efficacité garantit une protection totale et une eau au goût cristallin.
+                                    </p>
+                                </div>
+
+                                <div className="relative z-10 flex items-center gap-4 text-xs font-black text-white uppercase tracking-widest pt-12 group-hover:gap-8 transition-all">
+                                    <div className="h-[2px] w-8 bg-blue-600 group-hover:w-16 transition-all duration-500" />
+                                    Voir les filtres combos
+                                </div>
+                            </motion.a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* 5. QUESTIONS ET RÉPONSES (FAQ) */}
             <section className="py-24 bg-white">
                 <div className="container mx-auto px-6 max-w-4xl">
                     <div className="text-center mb-16 space-y-4">
@@ -426,7 +425,7 @@ const AdoucisseurSentinelle = () => {
                 </div>
             </section>
 
-            {/* 7. ÉVALUATION ET AVIS */}
+            {/* 6. ÉVALUATION ET AVIS */}
             <section className="py-24 bg-slate-50 relative overflow-hidden">
                 <div className="container mx-auto px-6">
                     <div className="flex flex-col lg:flex-row gap-16 items-start">

@@ -27,6 +27,7 @@ import documenticonImg from "@/assets/documentation_17862483.png";
 import contacticonImg from "@/assets/telephone_3095610.png";
 import guaranteeiconImg from "@/assets/guarantee-certificate_3734879.png";
 import serviceiconImg from "@/assets/services_5062832.png";
+import logoBricareau from "@/assets/Logo Bricareau.png";
 
 import { productMenuItems, commercialProductMenuItems, entreprisesProductMenuItems, type MenuItem } from "@/data/navigation";
 import { searchSite, type SearchResult } from "@/data/searchData";
@@ -110,7 +111,8 @@ const Header = () => {
     { name: "Entreprises", href: "/entreprises" },
     { name: "Commercial", href: "/commercial-industriel" },
   ];
-  // Search Logic
+
+  // Search Logic
   const [searchResults, setSearchResults] = useState<SearchResult[]>([]);
 
   useEffect(() => {
@@ -220,7 +222,7 @@ const Header = () => {
               <div className="lg:hidden flex items-center">
                 <NavLink to="/" className="flex items-center">
                   <img
-                    src="/logo.png"
+                    src={logoBricareau}
                     alt="Bricareau Water Specialist - Traitement d'eau résidentiel au Canada"
                     className="h-8 md:h-12 w-auto object-contain max-w-[100px] md:max-w-none"
                   />
@@ -311,7 +313,7 @@ const Header = () => {
               <div className="flex items-center flex-shrink-0">
                 <NavLink to="/" className="flex items-center">
                   <img
-                    src="/logo.png"
+                    src={logoBricareau}
                     alt="Bricareau Water Specialist - Expert en adoucissement et filtration d'eau"
                     className="h-14 w-auto object-contain"
                   />

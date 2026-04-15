@@ -46,6 +46,7 @@ import customStepImg from "@/assets/step-custom.png";
 import installationStepImg from "@/assets/step-installation.png";
 import serenityStepImg from "@/assets/step-serenity.png";
 import panoramaBgImg from "@/assets/Rain.webp";
+import SentinellePDF from "@/assets/brochure-freshpoint-fr.pdf";
 import {
     Accordion,
     AccordionContent,
@@ -233,7 +234,13 @@ const AdoucisseurEauMunicipal = () => {
                                 <div
                                     key={i}
                                     className="group relative bg-white rounded-[3rem] overflow-hidden border border-slate-100 hover:shadow-[0_40px_80px_-20px_rgba(37,99,235,0.15)] transition-all duration-700 hover:-translate-y-4 flex flex-col h-full cursor-pointer"
-                                    onClick={() => navigate(p.path || "/adoucisseurs")}
+                                    onClick={() => {
+                                        if (p.name.includes("Sentinelle")) {
+                                            window.open(SentinellePDF, '_blank');
+                                        } else {
+                                            navigate(p.path || "/adoucisseurs");
+                                        }
+                                    }}
                                 >
                                     <div className="relative h-80 overflow-hidden bg-slate-50/30 flex items-center justify-center p-12 overflow-hidden">
                                         {p.isRecommended && (

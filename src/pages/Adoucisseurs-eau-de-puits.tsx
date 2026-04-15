@@ -12,6 +12,7 @@ import SentinelWaterSoftenerImg from "@/assets/Sentinelle Water Softener.png";
 import SerenityWaterSoftenerImg from "@/assets/Serenity Water Softener.png";
 import mantakesbathImg from "@/assets/pexels-gabby-k-6621025 (1).jpg";
 import waterRipples from "@/assets/water_purity_ripples_1774299396791.png";
+import SentinellePDF from "@/assets/brochure-freshpoint-fr.pdf";
 import residentialSoftenerAsset from "@/assets/Adoucisseur_d_eau.png";
 import softwaterImg from "@/assets/glass-of-water.jpeg";
 import luxuryBathroomImg from "@/assets/7031878.jpg";
@@ -412,7 +413,13 @@ const AdoucisseursEauDePuits = () => {
                         {/* Desktop Grid (lg+) */}
                         <div className="hidden lg:grid grid-cols-3 gap-8">
                             {products.map((p, i) => (
-                                <div key={i} className="group bg-white rounded-[3rem] overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-700 hover:-translate-y-3 flex flex-col h-full cursor-pointer" onClick={() => navigate(p.path || "/contact")}>
+                                <div key={i} className="group bg-white rounded-[3rem] overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-700 hover:-translate-y-3 flex flex-col h-full cursor-pointer" onClick={() => {
+                                    if (p.name.includes("Sentinelle")) {
+                                        window.open(SentinellePDF, '_blank');
+                                    } else {
+                                        navigate(p.path || "/contact");
+                                    }
+                                }}>
                                     <div className="relative h-80 overflow-hidden bg-slate-50/50 flex items-center justify-center p-12">
                                         {p.isRecommended && <div className="absolute top-6 right-6 z-10"><span className="inline-block px-4 py-1.5 bg-blue-600 text-white rounded-full text-[10px] font-black uppercase tracking-[0.3em] shadow-lg">RECOMMANDÉ</span></div>}
                                         <img src={p.image} alt={p.name} className="max-h-full object-contain group-hover:scale-110 transition-transform duration-1000 mix-blend-multiply" />
@@ -446,7 +453,13 @@ const AdoucisseursEauDePuits = () => {
                                 <div 
                                     key={i}
                                     className="group bg-white rounded-[2.5rem] overflow-hidden border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col h-full cursor-pointer" 
-                                    onClick={() => navigate(p.path || "/contact")}
+                                    onClick={() => {
+                                        if (p.name.includes("Sentinelle")) {
+                                            window.open(SentinellePDF, '_blank');
+                                        } else {
+                                            navigate(p.path || "/contact");
+                                        }
+                                    }}
                                 >
                                     <div className="relative h-64 overflow-hidden bg-slate-50/50 flex items-center justify-center p-8">
                                         {p.isRecommended && (

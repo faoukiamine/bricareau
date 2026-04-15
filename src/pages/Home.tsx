@@ -43,7 +43,7 @@ const Home = () => {
           title={
             <>
               <span className="italic font-light text-[#2563eb] block">Votre confiance.</span>
-              <span className="font-bold text-[#1e3a8a] block">Notre plus grande fierte.</span>
+              <span className="font-bold text-[#1e3a8a] block">Notre plus grande fierté.</span>
             </>
           }
         />

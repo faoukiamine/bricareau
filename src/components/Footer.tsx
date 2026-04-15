@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { toast } from "sonner";
 import { supabase } from "@/lib/supabase";
+import logoBricareau from "@/assets/Logo Bricareau.jpg";
 
 const Footer = () => {
   const [email, setEmail] = useState("");
@@ -43,9 +44,9 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center gap-2">
               <img
-                src="/logo.png"
+                src={logoBricareau}
                 alt="Bricareau Water Specialist - Spécialiste du traitement d'eau au Canada"
-                className="h-10 w-auto brightness-0 invert"
+                className="h-10 w-auto"
               />
             </div>
             <p className="text-sm text-white/80">
