@@ -22,6 +22,14 @@ import {
     ChevronRight,
     ChevronLeft,
     CheckCircle2,
+    ShieldCheck,
+    Wrench,
+    Bath,
+    Droplets,
+    GlassWater,
+    ThermometerSun,
+    Pipette,
+    Shirt,
     Phone,
     X,
     CheckCircle
@@ -346,55 +354,126 @@ const AdoucisseursEauDePuits = () => {
                 </section>
 
                 {/* 2.5 Diagnostic Branding Section */}
-                <section className="py-24 bg-slate-50 relative overflow-hidden">
-                    <div className="container mx-auto px-6">
-                        <div className="flex flex-col items-start mb-16 gap-8">
-                            <div className="max-w-3xl">
-                                <span className="inline-block px-4 py-1 bg-red-600/10 text-red-600 rounded-full text-[10px] font-black tracking-widest mb-4">VOTRE PUITS VOUS PARLE</span>
-                                <h2 className="heading-pro-max text-left">
-                                    <span className="italic font-light text-blue-600 block">Identifiez les signes de</span>
-                                    <span className="font-bold text-[#1e3a8a] block text-left">la dureté extrême.</span>
-                                </h2>
-                            </div>
-                            <p className="body-pro-max max-w-3xl text-slate-500 italic border-l-2 border-red-500 pl-6 text-left">Le calcaire de puits est plus agressif. Ne le laissez pas ronger la valeur de votre investissement.</p>
+                <section className="py-24 bg-white relative overflow-hidden">
+                    <div className="container mx-auto px-6 font-sans">
+                        <div className="text-center mb-16">
+                            <span className="inline-block px-4 py-1.5 bg-red-100 text-red-600 rounded-full text-[10px] font-black uppercase tracking-widest mb-6">
+                                DIAGNOSTIC AUTOMATIQUE
+                            </span>
+                            <h2 className="heading-pro-max">
+                                <span className="italic font-light text-blue-600 block text-center">Identifiez les signes de</span>
+                                <span className="font-bold text-[#1e3a8a] block text-center uppercase tracking-tight">la dureté extrême.</span>
+                            </h2>
                         </div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10">
                             {[
-                                { problem: "Robinetterie Entartrée", cause: "Calcaire & Magnésium", solution: "Protection Active", color: "bg-blue-500", img: hardWaterFaucetImg },
-                                { problem: "Peau & Cheveux Secs", cause: "Irritation par les minéraux", solution: "Douceur Sensorielle", color: "bg-pink-500", img: drySkinImg },
-                                { problem: "Vaisselle Voilée", cause: "Dépôts minéraux", solution: "Éclat Crystal", color: "bg-cyan-400", img: cloudyGlassImg },
-                                { problem: "Chauffe-eau Entartré", cause: "Calcaire", solution: "Efficacité Énergétique", color: "bg-orange-600", img: brokenHeaterImg },
-                                { problem: "Taches de Rouille", cause: "Fer ferreux", solution: "Iron Fighter Technology", color: "bg-amber-700", img: ironStainImg },
-                                { problem: "Linge Rêche", cause: "Frottement minéral", solution: "Soin des Textiles", color: "bg-indigo-500", img: laundryImg }
+                                { 
+                                    problem: "Robinetterie Entartrée", 
+                                    cause: "Dépôts de Calcaire", 
+                                    solution: "Protection Intégrale",
+                                    color: "from-blue-600 to-indigo-800",
+                                    icon: <Bath className="w-8 h-8" />,
+                                    img: hardWaterFaucetImg
+                                },
+                                { 
+                                    problem: "Peau & Cheveux Secs", 
+                                    cause: "Irritation Minérale", 
+                                    solution: "Soin Cutané Actif",
+                                    icon: <Droplets className="w-8 h-8" />,
+                                    color: "from-rose-400 to-pink-600",
+                                    img: drySkinImg
+                                },
+                                { 
+                                    problem: "Vaisselle Voilée", 
+                                    cause: "Précipités de Silice", 
+                                    solution: "Éclat Crystal",
+                                    icon: <GlassWater className="w-8 h-8" />,
+                                    color: "from-cyan-400 to-blue-500",
+                                    img: cloudyGlassImg
+                                },
+                                { 
+                                    problem: "Chauffe-eau Entartré", 
+                                    cause: "Surchauffe & Corrosion", 
+                                    solution: "Efficacité Thermique",
+                                    icon: <ThermometerSun className="w-8 h-8" />,
+                                    color: "from-orange-500 to-red-700",
+                                    img: brokenHeaterImg
+                                },
+                                { 
+                                    problem: "Taches de Rouille", 
+                                    cause: "Fer & Manganèse", 
+                                    solution: "Filtration Catalytique",
+                                    icon: <Pipette className="w-8 h-8" />,
+                                    color: "from-amber-600 to-orange-900",
+                                    img: ironStainImg
+                                },
+                                { 
+                                    problem: "Linge Rêche", 
+                                    cause: "Incrustation de Fibres", 
+                                    solution: "Protection Textile",
+                                    icon: <Shirt className="w-8 h-8" />,
+                                    color: "from-purple-500 to-indigo-700",
+                                    img: laundryImg
+                                }
                             ].map((s, i) => (
                                 <div 
                                     key={i} 
-                                    className="group relative h-[360px] rounded-[3.5rem] overflow-hidden border border-white bg-white/40 backdrop-blur-xl shadow-sm cursor-pointer transition-all duration-700 hover:shadow-2xl hover:-translate-y-2"
+                                    className="group relative h-[420px] rounded-[3.5rem] overflow-hidden border border-white/40 bg-white/5 backdrop-blur-md cursor-pointer transition-all duration-700 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_50px_rgba(30,58,138,0.15)] hover:-translate-y-3"
                                     onClick={() => navigate("/consultation")}
                                 >
                                     <div className="absolute inset-0 z-0">
-                                        <img src={s.img} alt={s.problem} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-30" />
-                                        <div className="absolute inset-0 bg-gradient-to-br from-white via-white/80 to-transparent" />
+                                        <img 
+                                            src={s.img} 
+                                            alt={s.problem} 
+                                            className="w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-110 opacity-30 group-hover:opacity-50 grayscale-[0.5] group-hover:grayscale-0"
+                                        />
+                                        <div className="absolute inset-0 bg-gradient-to-b from-white/95 via-white/80 to-blue-50/10" />
                                     </div>
-                                    <div className="relative z-10 inset-0 p-10 h-full flex flex-col justify-between">
-                                        <div className="space-y-4">
-                                            <div className="flex items-center gap-3">
-                                                <div className={`w-3 h-3 rounded-full ${s.color} shadow-lg`} />
-                                                <span className="text-[10px] font-black uppercase tracking-wider text-slate-500">Cause : {s.cause}</span>
+
+                                    <div className="relative z-10 p-10 h-full flex flex-col">
+                                        <div className="flex justify-between items-start mb-8">
+                                            <div className={cn(
+                                                "w-16 h-16 rounded-2xl flex items-center justify-center text-white shadow-xl transition-all duration-500 group-hover:rotate-[10deg] group-hover:scale-110 bg-gradient-to-br",
+                                                s.color
+                                            )}>
+                                                {s.icon}
                                             </div>
-                                            <h3 className="text-3xl font-bold text-[#1e3a8a] leading-[1.1]">{s.problem}</h3>
+                                            <div className="bg-red-600/10 backdrop-blur-md px-4 py-1.5 rounded-full border border-red-200/50">
+                                                <span className="text-[9px] font-black uppercase tracking-widest text-red-700">Dureté Critique</span>
+                                            </div>
                                         </div>
-                                        <div className="space-y-2">
-                                            <div className="h-px w-12 bg-blue-200 group-hover:w-full transition-all duration-700" />
-                                            <div className="text-xs font-light text-slate-600 italic">Bénéfice : <span className="font-bold">{s.solution}</span></div>
+
+                                        <div className="flex-grow space-y-4">
+                                            <div className="flex items-center gap-2">
+                                                <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
+                                                <span className="text-[10px] font-bold uppercase tracking-wider text-slate-500 italic">
+                                                    Cause : {s.cause}
+                                                </span>
+                                            </div>
+                                            <h3 className="text-3xl font-black text-[#1e3a8a] leading-[1.1] tracking-tight">
+                                                {s.problem}
+                                            </h3>
+                                            <p className="text-sm font-light text-slate-600 leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-700 delay-100 italic">
+                                                Ne laissez pas les minéraux agressifs dégrader votre confort quotidien. Bricareau vous offre une solution sur mesure.
+                                            </p>
+                                        </div>
+
+                                        <div className="mt-auto pt-6 border-t border-blue-100/50">
+                                            <div className="flex items-center justify-between">
+                                                <div className="space-y-1">
+                                                    <span className="text-[10px] uppercase font-bold text-slate-400">Solution Bricareau</span>
+                                                    <p className="text-sm font-black text-blue-600">
+                                                        {s.solution}
+                                                    </p>
+                                                </div>
+                                                <div className="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center shadow-lg shadow-blue-200 transition-all duration-500 group-hover:translate-x-2">
+                                                    <ArrowRight className="w-5 h-5" />
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div className="absolute inset-0 bg-blue-600/95 z-20 opacity-0 group-hover:opacity-100 transition-all duration-700 flex flex-col items-center justify-center p-8 translate-y-full group-hover:translate-y-0 text-center">
-                                        <p className="text-white/80 text-xs font-black uppercase tracking-widest mb-2 italic">Analyse gratuite</p>
-                                        <h4 className="text-white text-2xl font-bold leading-tight px-6 mb-6">Mesurer ma dureté d'eau</h4>
-                                        <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center text-white border border-white/20"><ArrowRight className="w-6 h-6" /></div>
-                                    </div>
+                                    <div className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/30 to-white/0 -translate-x-[100%] group-hover:translate-x-[100%] transition-transform duration-[1.5s] ease-in-out pointer-events-none" />
                                 </div>
                             ))}
                         </div>

@@ -301,7 +301,7 @@ const AdoucisseurEauMunicipal = () => {
                 <section className="py-24 lg:py-32 bg-white relative overflow-hidden">
                      <div className="container mx-auto px-6 relative z-10">
                         <div className="text-center max-w-3xl mx-auto mb-20 lg:mb-24">
-                            <span className="inline-block px-4 py-1.5 bg-blue-600 text-white rounded-full text-[10px] font-black uppercase tracking-[0.3em] mb-6">
+                            <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.3em] mb-8">
                                 VOTRE EXPÉRIENCE CLIENT
                             </span>
                             <h2 className="mb-8 heading-pro-max text-center">

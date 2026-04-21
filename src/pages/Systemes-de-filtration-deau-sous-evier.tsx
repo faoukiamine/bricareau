@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import {
     ArrowRight,
     Phone,
+    CheckCircle,
     CheckCircle2,
     ChevronRight,
     ChevronLeft,
@@ -61,6 +62,7 @@ import { heroImg as eauVilleFiltreeImg } from "./Blog pages/Pourquoi-meme-leau-d
 import womandrinkingwaterImg from "@/assets/25716.jpg";
 import ourteamstudyyourwaterImg from "@/assets/10271.jpg";
 import springWaterImg from "@/assets/pure-spring-water.png";
+import installationUnderSinkWaterFiltrationSystemImg from "@/assets/Undersink Filtration System installation.png";
 
 const WaterFilterIcon = ({ className }: { className?: string }) => (
     <div 
@@ -389,6 +391,30 @@ const FiltrationSousEvier = () => {
                                     </div>
                                 </div>
                             ))}
+                        </div>
+                    </div>
+                </section>
+
+                {/* Engagement Certifié Section */}
+                <section className="bg-white py-12">
+                    <div className="container mx-auto px-6">
+                        <div className="rounded-none lg:rounded-[3rem] overflow-hidden shadow-none lg:shadow-2xl border-0 lg:border border-slate-100 group relative -mx-6 lg:mx-0">
+                            <img 
+                                src={installationUnderSinkWaterFiltrationSystemImg} 
+                                alt="Installation experte d'un système de désinfection UV Bricareau" 
+                                className="w-full h-[450px] md:h-[550px] lg:h-[650px] object-cover group-hover:scale-105 transition-transform duration-[3000ms] brightness-[1.2] contrast-[1.05]"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-r from-[#1e3a8a]/70 via-[#1e3a8a]/30 to-transparent p-8 md:p-12 lg:p-20 flex items-center">
+                                <div className="max-w-lg">
+                                    <div className="flex items-center gap-3 text-blue-400 font-bold text-xs tracking-widest uppercase mb-6">
+                                        <CheckCircle className="w-5 h-5" />
+                                        L'expertise au service de votre santé.
+                                    </div>
+                                    <h3 className="text-white text-4xl font-bold mb-6 leading-tight">Une pureté incomparable, un service signature</h3>
+                                    <p className="text-white text-lg mb-10 text-justify">
+                                        Savourez la tranquillité d’esprit d’une eau saine pour toute votre famille, tout en valorisant votre intérieur avec une solution haut de gamme. Parce que vous méritez ce qu'il y a de mieux, nous mettons notre expertise au service de votre santé et de votre confort.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>

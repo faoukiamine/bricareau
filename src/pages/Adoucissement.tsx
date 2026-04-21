@@ -307,7 +307,7 @@ const Adoucissement = () => {
                             {/* Left: Content */}
                             <div className="lg:col-span-12 xl:col-span-5 space-y-10">
                                 <div className="space-y-6">
-                                    <span className="inline-block px-4 py-1.5 bg-blue-600 text-white rounded-full text-[10px] font-black uppercase tracking-[0.3em] shadow-lg shadow-blue-200">
+                                    <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.3em] mb-8">
                                         L'INGÉNIERIE DU CONFORT
                                     </span>
                                     <h2 id="benefits-title" className="scroll-mt-[120px] mb-8 heading-pro-max text-left">

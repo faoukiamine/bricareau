@@ -38,7 +38,13 @@ import {
     Wrench,
     CheckCircle2,
     CheckCircle,
-    Shield
+    Shield,
+    Biohazard,
+    CloudLightning,
+    AlertTriangle,
+    FlaskConical,
+    Microscope,
+    Droplets as DropletsIcon
 } from "lucide-react";
 import safetyIcon from "@/assets/1709235770048.png";
 import { useNavigate } from "react-router-dom";
@@ -386,6 +392,137 @@ const DesinfectionUV = () => {
                     </div>
                 </section>
 
+                {/* 2.5. Symptom Diagnostic Grid - UV Focused */}
+                <section className="py-24 bg-white relative overflow-hidden">
+                    <div className="container mx-auto px-6 font-sans">
+                        <div className="text-center mb-16">
+                            <span className="inline-block px-4 py-1.5 bg-blue-100 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-widest mb-6">
+                                DIAGNOSTIC DE SÉCURITÉ
+                            </span>
+                            <h2 className="heading-pro-max">
+                                <span className="italic font-light text-[#2563eb] block">Quelles menaces invisibles</span>
+                                <span className="font-bold text-[#1e3a8a] block text-center uppercase tracking-tight">guettent votre puits ?</span>
+                            </h2>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10">
+                            {[
+                                { 
+                                    problem: "Test Coliformes Positif", 
+                                    cause: "Infiltration de bactéries", 
+                                    solution: "Stérilisateur UV Select",
+                                    color: "from-red-500 to-rose-700",
+                                    icon: <Biohazard className="w-8 h-8" />,
+                                    img: waterTestingImg
+                                },
+                                { 
+                                    problem: "Virus Entériques", 
+                                    cause: "Contamination des nappes", 
+                                    solution: "UV Haute-Performance",
+                                    icon: <ShieldAlert className="w-8 h-8" />,
+                                    color: "from-purple-500 to-indigo-700",
+                                    img: uvSpectrumAbstractImg
+                                },
+                                { 
+                                    problem: "Kystes & Parasites", 
+                                    cause: "Giardia & Cryptosporidium", 
+                                    solution: "Filtration 1 Micron + UV",
+                                    color: "from-amber-500 to-orange-700",
+                                    icon: <Microscope className="w-8 h-8" />,
+                                    img: sterileWaterImg
+                                },
+                                { 
+                                    problem: "Post-Orage / Fontes", 
+                                    cause: "Ruissellement de surface", 
+                                    solution: "Système UV-IHS",
+                                    color: "from-indigo-600 to-blue-900",
+                                    icon: <CloudLightning className="w-8 h-8" />,
+                                    img: stormVisualImg
+                                },
+                                { 
+                                    problem: "Puits de Surface", 
+                                    cause: "Forte vulnérabilité externe", 
+                                    solution: "Série VH Bricareau",
+                                    color: "from-emerald-500 to-teal-700",
+                                    icon: <DropletsIcon className="w-8 h-8" />,
+                                    img: ourteamstudyyourwaterImg
+                                },
+                                { 
+                                    problem: "Avis d'Ébullition", 
+                                    cause: "Prévention proactive", 
+                                    solution: "Protection 24/7 Bricareau",
+                                    color: "from-blue-400 to-cyan-600",
+                                    icon: <ShieldCheck className="w-8 h-8" />,
+                                    img: heroImg
+                                }
+                            ].map((s, i) => (
+                                <div 
+                                    key={i} 
+                                    className="group relative h-[420px] rounded-[3.5rem] overflow-hidden border border-white/40 bg-white/5 backdrop-blur-md cursor-pointer transition-all duration-700 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_50px_rgba(30,58,138,0.15)] hover:-translate-y-3"
+                                    onClick={() => navigate("/consultation")}
+                                >
+                                    {/* Background Image with Cinematic Overlay */}
+                                    <div className="absolute inset-0 z-0">
+                                        <img 
+                                            src={s.img} 
+                                            alt={s.problem} 
+                                            className="w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-110 opacity-40 group-hover:opacity-60 grayscale-[0.5] group-hover:grayscale-0"
+                                        />
+                                        <div className="absolute inset-0 bg-gradient-to-b from-white/95 via-white/80 to-blue-50/40" />
+                                    </div>
+
+                                    <div className="relative z-10 p-10 h-full flex flex-col">
+                                        {/* Icon & Category */}
+                                        <div className="flex justify-between items-start mb-8">
+                                            <div className={cn(
+                                                "w-16 h-16 rounded-2xl flex items-center justify-center text-white shadow-xl transition-all duration-500 group-hover:rotate-[10deg] group-hover:scale-110 bg-gradient-to-br",
+                                                s.color
+                                            )}>
+                                                {s.icon}
+                                            </div>
+                                            <div className="bg-blue-600/10 backdrop-blur-md px-4 py-1.5 rounded-full border border-blue-200/50">
+                                                <span className="text-[9px] font-black uppercase tracking-widest text-blue-700">Alerte Sanitaire</span>
+                                            </div>
+                                        </div>
+
+                                        <div className="flex-grow space-y-4">
+                                            <div className="flex items-center gap-2">
+                                                <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
+                                                <span className="text-[10px] font-bold uppercase tracking-wider text-slate-500 italic">
+                                                    Risque : {s.cause}
+                                                </span>
+                                            </div>
+                                            <h3 className="text-3xl font-black text-[#1e3a8a] leading-[1.1] tracking-tight">
+                                                {s.problem}
+                                            </h3>
+                                            <p className="text-sm font-light text-slate-600 leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-700 delay-100">
+                                                Les micro-organismes ne préviennent pas. Protégez votre famille contre les menaces invisibles présentes dans votre eau de puits.
+                                            </p>
+                                        </div>
+
+                                        <div className="mt-auto pt-6 border-t border-blue-100/50">
+                                            <div className="flex items-center justify-between">
+                                                <div className="space-y-1">
+                                                    <span className="text-[10px] uppercase font-bold text-slate-400">Solution Recommandée</span>
+                                                    <p className="text-sm font-black text-blue-600">
+                                                        {s.solution}
+                                                    </p>
+                                                </div>
+                                                <div className="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center shadow-lg shadow-blue-200 transition-all duration-500 group-hover:translate-x-2">
+                                                    <ArrowRight className="w-5 h-5" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* Glass Shine Effect */}
+                                    <div className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/30 to-white/0 -translate-x-[100%] group-hover:translate-x-[100%] transition-transform duration-[1.5s] ease-in-out pointer-events-none" />
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
                 {/* 4. UV Systems - Product Grid */}
                 <section id="systemes-uv" className="py-24 bg-white">
                     <div className="container mx-auto px-6">
@@ -441,7 +578,7 @@ const DesinfectionUV = () => {
                     </div>
                 </section>
 
-  {/* Engagement Certifié Section */}
+                {/* Engagement Certifié Section */}
                 <section className="bg-white py-12">
                     <div className="container mx-auto px-6">
                         <div className="rounded-none lg:rounded-[3rem] overflow-hidden shadow-none lg:shadow-2xl border-0 lg:border border-slate-100 group relative -mx-6 lg:mx-0">
