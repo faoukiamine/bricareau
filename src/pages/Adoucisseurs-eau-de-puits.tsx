@@ -23,7 +23,8 @@ import {
     ChevronLeft,
     CheckCircle2,
     Phone,
-    X
+    X,
+    CheckCircle
 } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import { useNavigate } from "react-router-dom";
@@ -55,6 +56,7 @@ import ironStainImg from "@/assets/5a4674e7-575d-4cd9-b1f2-32522f8a7072.jpg";
 import ConsultationFormSection from "@/components/ConsultationFormSection";
 import ourteamstudyyourwaterImg from "@/assets/10271.jpg";
 import laundryImg from "@/assets/302731406_443870381116589_3770801709209607894_n.jpg";
+import installationSoftenerImg from "@/assets/Water softener installation to remove hard water.png";
 
 const products = [
     { 
@@ -502,6 +504,30 @@ const AdoucisseursEauDePuits = () => {
                                     </div>
                                 </div>
                             ))}
+                        </div>
+                    </div>
+                </section>
+
+                {/* Engagement Certifié Section */}
+                <section className="bg-white py-12">
+                    <div className="container mx-auto px-6">
+                        <div className="rounded-none lg:rounded-[3rem] overflow-hidden shadow-none lg:shadow-2xl border-0 lg:border border-slate-100 group relative -mx-6 lg:mx-0">
+                            <img 
+                                src={installationSoftenerImg} 
+                                alt="Installation professionnelle d'un adoucisseur d'eau Bricareau" 
+                                className="w-full h-[450px] md:h-[550px] lg:h-[650px] object-cover group-hover:scale-105 transition-transform duration-[3000ms] brightness-[1.2] contrast-[1.05]"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-r from-[#1e3a8a]/70 via-[#1e3a8a]/30 to-transparent p-8 md:p-12 lg:p-20 flex items-center">
+                                <div className="max-w-lg">
+                                    <div className="flex items-center gap-3 text-blue-400 font-bold text-xs tracking-widest uppercase mb-6">
+                                        <CheckCircle className="w-5 h-5" />
+                                        Votre Confort, Notre Priorité.
+                                    </div>
+                                    <h3 className="text-white text-4xl font-bold mb-6 leading-tight">Votre satisfaction, notre plus belle réussite.</h3>
+                                    <p className="text-white text-lg mb-10 text-justify">
+                                        Rien n'est plus gratifiant pour notre équipe que de voir le sourire d'un client satisfait après une installation réussie. De l'analyse initiale à la mise en service de votre adoucisseur, nous mettons notre savoir-faire technique au service de votre confort. Faites confiance à Bricareau pour une eau plus douce et une plomberie protégée durablement.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>

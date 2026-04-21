@@ -37,6 +37,7 @@ import {
     Leaf,
     Wrench,
     CheckCircle2,
+    CheckCircle,
     Shield
 } from "lucide-react";
 import safetyIcon from "@/assets/1709235770048.png";
@@ -74,6 +75,7 @@ import uvSpectrumAbstractImg from "@/assets/uv-spectrum-abstract.png";
 import stormVisualImg from "@/assets/pourquoi-est-ce-que-les-orages-produisent-des-eclairs-et-du-tonnerree28089-1-1690x1200.jpg";
 import ourteamstudyyourwaterImg from "@/assets/10271.jpg";
 import sterileWaterImg from "@/assets/1713.jpg";
+import installationuvsystemImg from "@/assets/UV system installation to kill bacteria.png";
 
 
 const HighEfficiencyIcon = ({ className }: { className?: string }) => (
@@ -439,6 +441,29 @@ const DesinfectionUV = () => {
                     </div>
                 </section>
 
+  {/* Engagement Certifié Section */}
+                <section className="bg-white py-12">
+                    <div className="container mx-auto px-6">
+                        <div className="rounded-none lg:rounded-[3rem] overflow-hidden shadow-none lg:shadow-2xl border-0 lg:border border-slate-100 group relative -mx-6 lg:mx-0">
+                            <img 
+                                src={installationuvsystemImg} 
+                                alt="Installation experte d'un système de désinfection UV Bricareau" 
+                                className="w-full h-[450px] md:h-[550px] lg:h-[650px] object-cover group-hover:scale-105 transition-transform duration-[3000ms] brightness-[1.2] contrast-[1.05]"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-r from-[#1e3a8a]/70 via-[#1e3a8a]/30 to-transparent p-8 md:p-12 lg:p-20 flex items-center">
+                                <div className="max-w-lg">
+                                    <div className="flex items-center gap-3 text-blue-400 font-bold text-xs tracking-widest uppercase mb-6">
+                                        <CheckCircle className="w-5 h-5" />
+                                        Une protection microbiologique sans faille
+                                    </div>
+                                    <h3 className="text-white text-4xl font-bold mb-6 leading-tight">La puissance de la lumière UV pour une eau parfaitement saine</h3>
+                                    <p className="text-white text-lg mb-10 text-justify">
+                                        Adoptez la tranquillité d'esprit absolue avec nos systèmes de désinfection par rayons ultraviolets (UV). Conçus pour éliminer efficacement les bactéries, virus et autres micro-organismes nocifs, nos systèmes garantissent une eau saine pour toute votre famille, sans altérer le goût ni la minéralisation naturelle.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
                 {/* 5. Comparison Table */}
                 <section className="py-24 bg-white border-t border-slate-50 relative overflow-hidden">
                     <div className="container mx-auto px-4">
