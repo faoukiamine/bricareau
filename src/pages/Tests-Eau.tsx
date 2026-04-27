@@ -524,7 +524,7 @@ const TestsEauPage = () => {
                   style={{ backdropFilter: "blur(20px)" }}
                 >
                   <a href="/consultation" className="flex items-center gap-4 animate-bounce" style={{ animationDuration: '3s' }}>
-                    <span className="font-black-light text-sm tracking-wider white text-blue-600 space-nowrap text-center">
+                    <span className="font-bold text-sm tracking-wider text-blue-600 whitespace-nowrap text-center">
                       Réservez votre <br />consultation gratuite
                     </span>
                     <div className="w-10 h-10 bg-[#2563eb] rounded-full flex items-center justify-center text-white group-hover/sticky:rotate-[360deg] shadow-lg shadow-blue-200">
