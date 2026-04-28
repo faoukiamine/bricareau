@@ -1,52 +1,29 @@
 import { useState, useEffect, useRef } from "react";
-import { Menu, X, Phone, MapPin, Droplets, Filter, GlassWater, Waves, Search, ChevronDown, Mail, Tag, ArrowRight, CupSoda, Caravan, Sprout, Leaf, House, Snowflake } from "lucide-react";
+import { 
+    Menu, X, Phone, Mail, MapPin, 
+    ChevronDown, ArrowRight, Search, 
+    ArrowUpRight, ChevronRight
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { cn } from "@/lib/utils";
-import promoImage from "@/assets/10341859.jpg";
-import promoImage2 from "@/assets/close-up-handsom-man-taking-bath.jpg";
-import promoImage3 from "@/assets/woman-and-kid-drink-glass-water.jpg";
-import promoImage4 from "@/assets/undersink_filtration_header.jpg";
-import ultravioletImg from "@/assets/uv system light_12838859.png";
-import watertestImg from "@/assets/Water-test_15395190.png";
-import wholehousefiltericonImg from "@/assets/Whole house Water Filter.png";
-import pointofusefiltericonImg from "@/assets/reverse osmosis system_11062146.png";
-import undersinkfiltericonImg from "@/assets/water-filter_8782563.png";
-import replacementfiltericonImg from "@/assets/Filter cartridges_4257091.png";
-import saltfreeiconImg from "@/assets/water-tap_4497397.png";
-import portablefiltericonImg from "@/assets/mobile-home_3764879.png";
-import WatersoftenericonImg from "@/assets/water-softener.png";
-import icemakericonImg from "@/assets/ice-maker_18310650.png";
-import waterdispensericonImg from "@/assets/water-dispenser_7714494.png";
-import drinkingwaterfountainiconImg from "@/assets/drinking_14127403.png";
-import faqiconImg from "@/assets/faq_4481080.png";
-import videoiconImg from "@/assets/video-camera_8062951.png";
-import blogiconImg from "@/assets/blog_10045827.png";
-import documenticonImg from "@/assets/documentation_17862483.png";
-import contacticonImg from "@/assets/telephone_3095610.png";
-import guaranteeiconImg from "@/assets/guarantee-certificate_3734879.png";
-import serviceiconImg from "@/assets/services_5062832.png";
 import logoBricareau from "@/assets/Logo Bricareau.png";
 
-import { productMenuItems, commercialProductMenuItems, entreprisesProductMenuItems, type MenuItem } from "@/data/navigation";
+import { mainNavMenuItems, type MenuItem } from "@/data/navigation";
 import { searchSite, type SearchResult } from "@/data/searchData";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [activeMegamenu, setActiveMegamenu] = useState<string | null>(null);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isSearchFocused, setIsSearchFocused] = useState(false);
-  const [isSearchClosing, setIsSearchClosing] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
-  const searchRef = useRef<HTMLDivElement>(null);
-  const searchInputRef = useRef<HTMLInputElement>(null);
-  const mobileSearchButtonRef = useRef<HTMLButtonElement>(null);
   const location = useLocation();
   const navigate = useNavigate();
+  const headerRef = useRef<HTMLElement>(null);
   const closeTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const [headerHeight, setHeaderHeight] = useState(0);
-  const headerRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const updateHeaderHeight = () => {
@@ -54,658 +31,397 @@ const Header = () => {
         setHeaderHeight(headerRef.current.offsetHeight);
       }
     };
-
     window.addEventListener("resize", updateHeaderHeight);
-
-    // Initial measure
     updateHeaderHeight();
-
-    return () => {
-      window.removeEventListener("resize", updateHeaderHeight);
-    };
+    return () => window.removeEventListener("resize", updateHeaderHeight);
   }, []);
 
-  // Re-measure height when location changes
-  useEffect(() => {
-    if (headerRef.current) {
-      setHeaderHeight(headerRef.current.offsetHeight);
-    }
-  }, [location.pathname]);
-
-  // Close menus on outside click
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (headerRef.current && !headerRef.current.contains(event.target as Node)) {
-        setActiveDropdown(null);
         setActiveMegamenu(null);
-      }
-      // Check if click is outside search panel, compact search input, AND mobile search button
-      const clickedOutsidePanel = searchRef.current && !searchRef.current.contains(event.target as Node);
-      const clickedOutsideInput = searchInputRef.current && !searchInputRef.current.contains(event.target as Node);
-      const clickedOutsideMobileButton = mobileSearchButtonRef.current && !mobileSearchButtonRef.current.contains(event.target as Node);
-      if (clickedOutsidePanel && clickedOutsideInput && clickedOutsideMobileButton) {
+        setActiveDropdown(null);
         setIsSearchFocused(false);
       }
     };
-
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  // Close menus on Escape key
-  useEffect(() => {
-    const handleEscape = (event: KeyboardEvent) => {
-      if (event.key === "Escape") {
-        setActiveDropdown(null);
-        setActiveMegamenu(null);
-        setIsSearchFocused(false);
-      }
-    };
-
-    document.addEventListener("keydown", handleEscape);
-    return () => document.removeEventListener("keydown", handleEscape);
-  }, []);
-
-  const primaryMenuItems = [
-    { name: "Résidentiel", href: "/" },
-    { name: "Entreprises", href: "/entreprises" },
-    { name: "Commercial", href: "/commercial-industriel" },
-  ];
-
-  // Search Logic
-  const [searchResults, setSearchResults] = useState<SearchResult[]>([]);
-
-  useEffect(() => {
-    if (searchQuery.length >= 2) {
-      const results = searchSite(searchQuery);
-      setSearchResults(results);
-    } else {
-      setSearchResults([]);
-    }
-  }, [searchQuery]);
-  const isCommercialPage = location.pathname.includes('/commercial-industriel');
-  const isEntreprisePage = location.pathname.includes('/entreprises') || location.pathname.includes('-entreprises');
-
-  let activeMenuToDisplay = productMenuItems;
-  if (isCommercialPage) {
-    activeMenuToDisplay = commercialProductMenuItems;
-  } else if (isEntreprisePage) {
-    activeMenuToDisplay = entreprisesProductMenuItems;
-  }
-
-  const handleMenuEnter = (itemName: string) => {
+  const handleMenuEnter = (itemName: string, hasMegamenu: boolean) => {
     if (closeTimeoutRef.current) {
       clearTimeout(closeTimeoutRef.current);
       closeTimeoutRef.current = null;
     }
-    setActiveMegamenu(itemName);
-    setActiveDropdown(null);
-    setIsSearchFocused(false);
-    setIsSearchClosing(false);
+    if (hasMegamenu) {
+      setActiveMegamenu(itemName);
+      setActiveDropdown(null);
+    } else {
+      setActiveDropdown(itemName);
+      setActiveMegamenu(null);
+    }
   };
 
   const handleMenuLeave = () => {
     closeTimeoutRef.current = setTimeout(() => {
       setActiveMegamenu(null);
+      setActiveDropdown(null);
     }, 150);
   };
 
-  const handleDropdownToggle = (itemName: string) => {
-    setActiveDropdown(activeDropdown === itemName ? null : itemName);
-    setActiveMegamenu(null);
-  };
-
-  const handleSearchClose = () => {
-    setIsSearchFocused(false);
-    setSearchQuery("");
-  };
-
-  const handlePopularSearchClick = (term: string) => {
-    setSearchQuery(term);
-    // Here you would typically trigger a search or navigation
-    console.log("Searching for:", term);
-  };
-
-  const handleSearchKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === "Enter" && searchQuery.length >= 2) {
-      setIsSearchFocused(false);
-      navigate(`/search?q=${encodeURIComponent(searchQuery)}`);
-    }
-  };
-
-  const isHeaderTransparent = false;
-
   return (
     <>
-      <header className="fixed top-0 z-50 w-full bg-white shadow-md" ref={headerRef}>
+      <header className="fixed top-0 z-50 w-full bg-white border-b border-gray-100 shadow-sm" ref={headerRef}>
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="flex h-20 items-center justify-between gap-4">
+            
+            {/* Logo */}
+            <NavLink to="/" className="flex items-center flex-shrink-0">
+              <img
+                src={logoBricareau}
+                alt="Bricareau Water Specialist"
+                className="h-10 md:h-12 w-auto object-contain"
+              />
+            </NavLink>
 
-        {/* Top Information Bar */}
-        {/* Top Information Bar (Hidden) */}
-        {/* <a
-          href="/consultation"
-          className={cn(
-            "block w-full transition-colors text-center py-2",
-            isHeaderTransparent ? "bg-transparent border-b border-white/10" : "bg-blue-600 hover:bg-blue-700"
-          )}
-        >
-          <div className="container mx-auto px-4 md:px-6 flex items-center justify-center gap-2 text-white">
-            <span className="text-sm font-bold">Obtenez une consultation gratuite sur votre eau</span>
-            <ArrowRight className="h-4 w-4" />
-          </div>
-        </a> */}
-
-        {/* Upper Navigation Bar - Primary Menu + Utilities */}
-        <div className="border-b border-gray-200 bg-white">
-          <div className="container mx-auto px-4 md:px-6">
-            <div className="flex h-16 lg:h-12 items-center justify-between">
-              {/* Left: Primary Menu (Desktop) */}
-              <nav className="hidden lg:flex items-center gap-1" role="navigation">
-                {primaryMenuItems.map((item, index) => (
-                  <div key={item.name} className="flex items-center">
-                    <NavLink
-                      to={item.href}
-                      className={cn(
-                        "text-sm transition-colors px-3",
-                        isHeaderTransparent ? "text-white hover:text-blue-200" : "text-gray-800 hover:text-[#0052ff]"
-                      )}
-                    >
-                      {item.name}
-                    </NavLink>
-                    {index < primaryMenuItems.length - 1 && (
-                      <span className="text-gray-300">|</span>
-                    )}
-                  </div>
-                ))}
-              </nav>
-
-              {/* Mobile Logo */}
-              <div className="lg:hidden flex items-center">
-                <NavLink to="/" className="flex items-center">
-                  <img
-                    src={logoBricareau}
-                    alt="Bricareau Water Specialist - Traitement d'eau résidentiel au Canada"
-                    className="h-8 md:h-12 w-auto object-contain max-w-[100px] md:max-w-none"
-                  />
-                </NavLink>
-              </div>
-
-              {/* Right: Utilities */}
-              <div className="hidden lg:flex items-center gap-6 ml-auto">
-                {/* Phone */}
-
-
-                {/* Contact */}
-                <a
-                  href="/contact"
-                  className={cn(
-                    "flex items-center gap-2 transition-colors group",
-                    isHeaderTransparent ? "text-white hover:text-blue-200" : "text-gray-700 hover:text-[#0052ff]"
-                  )}
+            {/* Main Nav (Desktop) */}
+            <nav className="hidden lg:flex items-center gap-8 flex-1 justify-center">
+              {mainNavMenuItems.map((item) => (
+                <div 
+                    key={item.name} 
+                    className="relative px-2 py-6"
+                    onMouseEnter={() => handleMenuEnter(item.name, item.hasMegamenu)}
+                    onMouseLeave={handleMenuLeave}
                 >
-                  <Mail className="h-5 w-5" strokeWidth={1.5} />
-                  <span className="text-sm">Contactez-nous</span>
-                </a>
-
-                {/* Localisation */}
-                <a
-                  href="https://www.google.com/maps/place/BRICAREAU+WATER+SPECIALIST/@45.5005535,-73.6423534,211m/data=!3m2!1e3!5s0x4cc919c4436a5a3f:0x5bb245a9935b5ece!4m6!3m5!1s0x4cc9229b28364297:0xd763dce82ea51a5f!8m2!3d45.5005535!4d-73.6423534!16s%2Fg%2F1pv5wd45p?entry=tts&g_ep=EgoyMDI2MDExMy4wIPu8ASoASAFQAw%3D%3D&skid=dc936ed0-8357-4347-8629-14786f46d771"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={cn(
-                    "flex items-center gap-2 transition-colors group",
-                    isHeaderTransparent ? "text-white hover:text-blue-200" : "text-gray-700 hover:text-[#0052ff]"
-                  )}
-                >
-                  <MapPin className="h-5 w-5" strokeWidth={1.5} />
-                  <span className="text-sm">Localisation</span>
-                </a>
-
-                {/* Promotions */}
-                <a
-                  href="/promotions"
-                  className={cn(
-                    "flex items-center gap-2 transition-colors group",
-                    isHeaderTransparent ? "text-white hover:text-blue-200" : "text-gray-700 hover:text-[#0052ff]"
-                  )}
-                >
-                  <Tag className="h-5 w-5" strokeWidth={1.5} />
-                  <span className="text-sm">Promotions</span>
-                </a>
-              </div>
-
-              {/* Mobile: Icon Row */}
-              <div className="lg:hidden flex items-center gap-1 sm:gap-4 ml-auto">
-                <button
-                  ref={mobileSearchButtonRef}
-                  className="p-1.5 sm:p-2"
-                  aria-label="Search"
-                  onClick={() => {
-                    setIsSearchFocused(true);
-                    setIsMenuOpen(false);
-                    setActiveMegamenu(null);
-                  }}
-                >
-                  <Search className={cn("h-5 w-5", isHeaderTransparent ? "text-white" : "text-gray-700")} strokeWidth={1.5} />
-                </button>
-                <a href="tel:18552649328" className="p-1.5 sm:p-2 md:hidden" aria-label="Phone">
-                  <Phone className={cn("h-5 w-5", isHeaderTransparent ? "text-white" : "text-gray-700")} strokeWidth={1.5} />
-                </a>
-                <a href="https://www.google.com/maps/place/BRICAREAU+WATER+SPECIALIST/@45.5005535,-73.6423534,211m/data=!3m2!1e3!5s0x4cc919c4436a5a3f:0x5bb245a9935b5ece!4m6!3m5!1s0x4cc9229b28364297:0xd763dce82ea51a5f!8m2!3d45.5005535!4d-73.6423534!16s%2Fg%2F1pv5wd45p?entry=tts&g_ep=EgoyMDI2MDExMy4wIPu8ASoASAFQAw%3D%3D&skid=dc936ed0-8357-4347-8629-14786f46d771" className="p-1.5 sm:p-2" aria-label="Location" target="_blank" rel="noopener noreferrer">
-                  <MapPin className={cn("h-5 w-5", isHeaderTransparent ? "text-white" : "text-gray-700")} strokeWidth={1.5} />
-                </a>
-                <button
-                  className="p-1.5 sm:p-2"
-                  onClick={() => setIsMenuOpen(!isMenuOpen)}
-                  aria-label="Toggle menu"
-                >
-                  {isMenuOpen ? <X className={cn("h-6 w-6", isHeaderTransparent ? "text-white" : "text-gray-700")} strokeWidth={1.5} /> : <Menu className={cn("h-6 w-6", isHeaderTransparent ? "text-white" : "text-gray-700")} strokeWidth={1.5} />}
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Lower Navigation Bar - Logo + Product Menu + Search */}
-        <div className="hidden lg:block border-b border-gray-200 bg-white shadow-sm">
-          <div className="container mx-auto px-4 md:px-6">
-            <div className="flex h-16 items-center gap-8">
-              {/* Left: Logo */}
-              <div className="flex items-center flex-shrink-0">
-                <NavLink to="/" className="flex items-center">
-                  <img
-                    src={logoBricareau}
-                    alt="Bricareau Water Specialist - Expert en adoucissement et filtration d'eau"
-                    className="h-14 w-auto object-contain"
-                  />
-                </NavLink>
-              </div>
-
-              {/* Center: Product Menu */}
-              <nav className="flex items-center gap-6 flex-1 justify-center">
-                {activeMenuToDisplay.map((item) => (
-                  <div key={item.name} className="relative">
-                    <button
-                      onMouseEnter={() => item.hasMegamenu ? handleMenuEnter(item.name) : null}
-                      onMouseLeave={() => item.hasMegamenu ? handleMenuLeave() : null}
-                      onClick={() => {
-                        if (item.href) {
-                          navigate(item.href);
-                          setActiveMegamenu(null);
-                        }
-                      }}
-                      className={cn(
-                        "text-sm transition-colors relative h-16 flex items-center",
-                        !item.href && "cursor-default",
-                        isHeaderTransparent
-                          ? (activeMegamenu === item.name ? "text-blue-200 border-b-2 border-white" : "text-white hover:text-blue-200")
-                          : (activeMegamenu === item.name ? "text-[#0052ff] border-b-2 border-[#0052ff]" : "text-gray-700 hover:text-[#0052ff]")
-                      )}
-                      aria-haspopup={item.hasMegamenu ? "true" : undefined}
-                      aria-expanded={activeMegamenu === item.name}
-                    >
-                      {item.name}
-                    </button>
-                  </div>
-                ))}
-              </nav>
-
-              {/* Right: Search */}
-              <div className="flex items-center gap-2 flex-shrink-0">
-                <div className="relative">
-                  <Search className={cn("absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 pointer-events-none z-10", isHeaderTransparent ? "text-white" : "text-gray-500")} strokeWidth={1.5} />
-                  <Input
-                    ref={searchInputRef}
-                    type="search"
-                    placeholder="Recherche"
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
+                  <button 
                     className={cn(
-                      "w-64 h-9 pl-10 pr-4 text-sm border-gray-300 rounded-full focus-visible:ring-2 focus-visible:ring-[#0052ff] focus-visible:border-[#0052ff] [&::-webkit-search-cancel-button]:hidden [&::-webkit-search-decoration]:hidden transition-colors",
-                      isHeaderTransparent ? "bg-white/10 border-white/30 text-white placeholder:text-white/60" : "bg-white border-gray-300 text-gray-900"
+                        "text-[13px] font-bold uppercase tracking-wider flex items-center gap-1.5 transition-colors",
+                        (activeMegamenu === item.name || activeDropdown === item.name) ? "text-[#0052ff]" : "text-slate-700 hover:text-[#0052ff]"
                     )}
-                    onFocus={() => {
-                      setIsSearchFocused(true);
-                      setActiveMegamenu(null);
+                    onClick={() => {
+                        if (item.href) {
+                            navigate(item.href);
+                            setActiveDropdown(null);
+                            setActiveMegamenu(null);
+                        }
                     }}
-                    onKeyDown={handleSearchKeyDown}
-                  />
+                  >
+                    {item.name}
+                    {(item.hasMegamenu || item.items) && <ChevronDown className={cn("w-4 h-4 transition-transform", (activeMegamenu === item.name || activeDropdown === item.name) && "rotate-180")} />}
+                  </button>
+
+                  {/* Standard Dropdown */}
+                  {!item.hasMegamenu && item.items && activeDropdown === item.name && (
+                    <div className="absolute top-full left-0 w-64 bg-white border border-gray-100 shadow-2xl rounded-xl py-4 overflow-hidden animate-in fade-in slide-in-from-top-2 duration-200">
+                        {item.items.map((sub, i) => (
+                            <NavLink 
+                                key={i} 
+                                to={sub.href} 
+                                className="block px-6 py-3 text-sm text-slate-600 hover:text-[#0052ff] hover:bg-slate-50 transition-colors font-medium border-l-2 border-transparent hover:border-[#0052ff]"
+                                onClick={() => setActiveDropdown(null)}
+                            >
+                                {sub.name}
+                            </NavLink>
+                        ))}
+                    </div>
+                  )}
                 </div>
+              ))}
+            </nav>
+
+            {/* Right Utilities (Desktop) */}
+            <div className="hidden lg:flex items-center gap-8">
+              <a href="tel:18552649328" className="text-[13px] font-black text-slate-800 flex items-center gap-2 group">
+                <div className="w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center group-hover:bg-blue-50 transition-colors">
+                    <Phone className="w-4 h-4 text-[#0052ff]" />
+                </div>
+                (855) 264-9328
+              </a>
+              
+              <div className="flex items-center gap-3">
+                <Button 
+                    variant="outline" 
+                    className="border-[2px] border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white rounded-full px-8 h-12 text-[10px] font-black uppercase tracking-widest transition-all"
+                    onClick={() => navigate("/contact")}
+                >
+                    Contactez-nous
+                </Button>
+                <Button 
+                    className="bg-slate-900 text-white hover:bg-slate-800 rounded-full px-8 h-12 text-[10px] font-black uppercase tracking-widest transition-all"
+                    onClick={() => navigate("/contact-form")}
+                >
+                    Demander un service
+                </Button>
               </div>
             </div>
+
+            {/* Mobile Toggle */}
+            <button className="lg:hidden p-2 text-slate-700" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+                {isMenuOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
+            </button>
           </div>
         </div>
 
-        {/* Full-Width Expandable Search Panel */}
-        {isSearchFocused && (
-          <>
-
-            {/* Search Panel */}
-            <div
-              ref={searchRef}
-              className="absolute top-full left-0 right-0 bg-white border-b border-gray-200 shadow-lg z-50 lg:animate-in lg:slide-in-from-top lg:duration-200 max-h-[calc(100vh-80px)] overflow-y-auto"
+        {/* Megamenu: "Ce que nous faisons" (MATCHING IMAGE) */}
+        {activeMegamenu === "Ce que nous faisons" && (
+            <div 
+                className="absolute top-full left-0 w-full bg-white border-t border-gray-100 shadow-2xl z-50 animate-in slide-in-from-top-4 duration-300"
+                onMouseEnter={() => handleMenuEnter("Ce que nous faisons", true)}
+                onMouseLeave={handleMenuLeave}
             >
+                <div className="container mx-auto px-4 md:px-6 py-16 flex gap-12">
+                    {/* Left Vertical Label */}
+                    <div className="hidden xl:flex flex-col items-center justify-end w-12 border-r border-gray-100 self-stretch mr-12 pb-8">
+                        <div className="whitespace-nowrap -rotate-90 origin-center mb-24">
+                            <span className="text-[10px] font-black text-slate-900 uppercase tracking-[0.5em]">
+                                CE QUE NOUS FAISONS
+                            </span>
+                        </div>
+                    </div>
 
-              <div className="container mx-auto px-4 md:px-6 md:py-8">
-                {/* Search Box with Close Button */}
-                <div className="max-w-2xl mx-auto mb-6 md:mb-8 lg:mt-0 flex items-center gap-4">
-                  <div className="relative flex-1">
-                    <Search className="absolute left-3 md:left-4 top-1/2 -translate-y-1/2 h-4 md:h-5 w-4 md:w-5 text-gray-500 pointer-events-none" />
-                    <Input
-                      type="search"
-                      placeholder="Rechercher sur Bricareau.com"
-                      value={searchQuery}
-                      onChange={(e) => setSearchQuery(e.target.value)}
-                      className="w-full h-11 md:h-12 pl-10 md:pl-12 pr-4 text-sm md:text-base border-gray-300 rounded-full focus-visible:ring-2 focus-visible:ring-[#0052ff] focus-visible:border-[#0052ff] shadow-sm [&::-webkit-search-cancel-button]:hidden [&::-webkit-search-decoration]:hidden"
-                      autoFocus
-                      onKeyDown={handleSearchKeyDown}
-                    />
-                  </div>
-                  {/* Close Button */}
-                  <button
-                    onClick={handleSearchClose}
-                    className="p-2 hover:bg-gray-100 rounded-full transition-colors flex-shrink-0"
-                    aria-label="Close search"
-                  >
-                    <X className="h-6 w-6 text-gray-600" />
-                  </button>
-                </div>
-
-                {/* Search Results */}
-                {searchQuery.length >= 2 && (
-                  <div className="max-w-4xl mx-auto mt-8 border-t border-gray-100 pt-8">
-                    <h4 className="text-lg font-bold text-gray-900 mb-6 flex items-center gap-2">
-                       Résultats pour <span className="text-[#0052ff]">"{searchQuery}"</span>
-                    </h4>
-                    
-                    {searchResults.length > 0 ? (
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        {searchResults.map((result, idx) => (
-                          <NavLink
-                            key={idx}
-                            to={result.href}
-                            className="group p-4 bg-gray-50 hover:bg-white border border-transparent hover:border-blue-100 rounded-xl transition-all shadow-sm hover:shadow-md"
-                            onClick={() => {
-                              setIsSearchFocused(false);
-                              setSearchQuery("");
-                            }}
-                          >
-                            <div className="flex items-center gap-2 mb-1">
-                              <span className="text-[10px] font-black uppercase tracking-widest text-[#0052ff] bg-blue-50 px-2 py-0.5 rounded">
-                                {result.type}
-                              </span>
-                              {result.category && (
-                                <span className="text-[10px] text-gray-400 font-medium">
-                                  in {result.category}
-                                </span>
-                              )}
-                            </div>
-                            <h5 className="font-bold text-gray-900 group-hover:text-[#0052ff] transition-colors line-clamp-1">
-                              {result.title}
-                            </h5>
-                            <p className="text-sm text-gray-500 line-clamp-2 mt-1 font-light">
-                              {result.description}
-                            </p>
-                          </NavLink>
+                    {/* The Grid of 4 Cards */}
+                    <div className="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        {mainNavMenuItems.find(m => m.name === "Ce que nous faisons")?.megamenuCards?.map((card, idx) => (
+                            <NavLink 
+                                key={idx} 
+                                to={card.href}
+                                className="group block bg-white shadow-sm hover:shadow-xl transition-all duration-500 rounded-sm overflow-hidden"
+                                onClick={() => setActiveMegamenu(null)}
+                            >
+                                <div className="aspect-[4/3] overflow-hidden relative">
+                                    <img 
+                                        src={card.image} 
+                                        alt={card.title} 
+                                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[2s]"
+                                    />
+                                    <div className="absolute inset-0 bg-transparent group-hover:bg-blue-600/10 transition-colors duration-500" />
+                                </div>
+                                <div className="p-6 md:p-8 flex items-center justify-between border-t border-gray-50">
+                                    <h4 className="text-[11px] font-black text-slate-900 uppercase tracking-widest leading-tight">
+                                        {card.title.includes(' ET ') ? (
+                                            card.title.split(' ET ').map((word, i) => (
+                                                <span key={i} className="block">
+                                                    {word} {i === 0 && "ET"}
+                                                </span>
+                                            ))
+                                        ) : (
+                                            card.title
+                                        )}
+                                    </h4>
+                                    <div className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-[#0052ff] group-hover:bg-[#0052ff] group-hover:text-white transition-all duration-300">
+                                        <ArrowRight className="w-5 h-5" />
+                                    </div>
+                                </div>
+                            </NavLink>
                         ))}
-                      </div>
-                    ) : (
-                      <div className="text-center py-12 bg-gray-50 rounded-2xl border border-dashed border-gray-200">
-                        <Search className="h-10 w-10 text-gray-300 mx-auto mb-3" />
-                        <p className="text-gray-500">Aucun résultat trouvé pour votre recherche.</p>
-                      </div>
-                    )}
-
-                    <div className="mt-8 text-center">
-                       <NavLink 
-                        to={`/search?q=${encodeURIComponent(searchQuery)}`}
-                        className="inline-flex items-center gap-2 text-sm font-bold text-[#0052ff] hover:underline"
-                        onClick={() => setIsSearchFocused(false)}
-                       >
-                         Voir tous les résultats détaillés
-                         <ArrowRight className="h-4 w-4" />
-                       </NavLink>
                     </div>
-                  </div>
-                )}
-
-                {/* Popular Search Terms */}
-                {searchQuery.length < 2 && (
-                  <div className="max-w-2xl mx-auto">
-                    <h4 className="text-sm text-gray-900 mb-3 font-bold">Recherches populaires</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {[
-                        "adoucisseur d'eau",
-                        "filtration",
-                        "eau de puits",
-                        "fontaines",
-                        "osmose inverse",
-                        "conditionneurs sans sel",
-                        "analyse d'eau",
-                        "service"
-                      ].map((term, index) => (
-                        <button
-                          key={index}
-                          onClick={() => handlePopularSearchClick(term)}
-                          className="px-3 md:px-4 py-1.5 md:py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 text-xs md:text-sm rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-[#0052ff] focus:ring-offset-2"
-                          tabIndex={0}
-                        >
-                          {term}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </div>
+                </div>
             </div>
-          </>
         )}
 
-        {/* Megamenus */}
-        {activeMenuToDisplay.map((menuItem) => (
-          menuItem.hasMegamenu && activeMegamenu === menuItem.name && (
-            <div
-              key={menuItem.name}
-              className="absolute top-full left-0 w-full bg-white border-t border-gray-100 shadow-xl z-40"
-              onMouseEnter={() => handleMenuEnter(menuItem.name)}
-              onMouseLeave={() => handleMenuLeave()}
+        {/* Megamenu: "Qui sommes-nous ?" (MATCHING IMAGE) */}
+        {activeMegamenu === "Qui sommes-nous ?" && (
+            <div 
+                className="absolute top-full left-0 w-full bg-white border-t border-gray-100 shadow-2xl z-50 animate-in slide-in-from-top-4 duration-300"
+                onMouseEnter={() => handleMenuEnter("Qui sommes-nous ?", true)}
+                onMouseLeave={handleMenuLeave}
             >
-              <div className="container mx-auto px-4 md:px-6 py-10">
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                  {/* Left: Product Cards (2x2 grid) */}
-                  <div className="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-5">
-                    {menuItem.megamenuCards?.map((card, index) => {
-                      const CustomIcon = card.customIcon;
-                      return (
-                        <NavLink
-                          key={index}
-                          to={card.href}
-                          className="flex items-start gap-4 p-4 rounded-xl hover:bg-gray-50 transition-all group"
-                          onClick={() => setActiveMegamenu(null)}
-                        >
-                          <div className="flex-shrink-0 mt-0.5">
-                            {card.svgIcon ? (
-                              <div className="h-10 w-10 flex items-center justify-center text-blue-600">
-                                {card.svgIcon}
-                              </div>
-                            ) : card.customIcon ? (
-                              <img
-                                src={card.customIcon}
-                                alt={card.title}
-                                className="h-10 w-10 object-contain transition-all"
-                                style={{
-                                  filter: 'invert(21%) sepia(100%) saturate(4321%) hue-rotate(225deg) brightness(98%) contrast(107%)'
-                                }}
-                              />
-                            ) : null}
-                          </div>
-                          <div className="flex-1">
-                            <h4 className="text-base mb-1.5 transition-colors text-gray-900 group-hover:text-[#0052ff]">
-                              {card.title}
-                            </h4>
-                            <p className="text-sm transition-colors text-gray-600">
-                              {card.description}
-                            </p>
-                          </div>
-                        </NavLink>
-                      );
-                    })}
-                  </div>
-
-                  {/* Right: Promotional Card */}
-                  {menuItem.promo && (
-                    <div className="lg:col-span-1">
-                      <div className="rounded-xl overflow-hidden shadow-md h-full flex flex-col bg-white">
-                        <div className="relative h-40 flex-shrink-0">
-                          <img
-                            src={menuItem.promo.image}
-                            alt={menuItem.promo.title || "Promotion Bricareau"}
-                            className="w-full h-full object-cover"
-                          />
+                <div className="container mx-auto px-4 md:px-6 py-16 flex gap-12">
+                    {/* Left Vertical Label */}
+                    <div className="hidden xl:flex flex-col items-center justify-end w-12 border-r border-gray-100 self-stretch mr-12 pb-8">
+                        <div className="whitespace-nowrap -rotate-90 origin-center mb-24">
+                            <span className="text-[10px] font-black text-slate-900 uppercase tracking-[0.5em]">
+                                QUI SOMMES-NOUS ?
+                            </span>
                         </div>
-                        <div className="p-6 flex-1 flex flex-col justify-center bg-[#0052ff]">
-                          <h3 className="mb-4 text-white text-lg md:text-xl font-bold leading-tight">
-                            {menuItem.promo.title}
-                          </h3>
-                          <a
-                            href={menuItem.promo.link}
-                            className="inline-flex items-center gap-2 text-sm font-semibold text-white hover:underline"
-                          >
-                            En savoir plus
-                            <ChevronDown className="h-4 w-4 -rotate-90" />
-                          </a>
-                        </div>
-                      </div>
                     </div>
-                  )}
-                </div>
-              </div>
-            </div>
-          )
-        ))}
 
-        {/* Mobile Menu */}
-        {isMenuOpen && (
-          <div className="lg:hidden fixed inset-0 top-12 bg-white z-40 overflow-y-auto">
-            <div className="flex flex-col h-full">
-              {/* Main Content Area */}
-              <div className="flex-1 overflow-y-auto">
-                {/* CTA Button */}
-                <div className="px-4 pt-6 pb-4">
-                  <Button
-                    className="w-full"
-                    asChild
-                  >
-                    <a href="/contact" className="flex items-center justify-center gap-2">
-                      <span>Contactez-nous</span>
-                    </a>
-                  </Button>
-                </div>
-
-                {/* Product Menu - Accordion Style */}
-                <div className="border-t border-gray-200">
-                  {activeMenuToDisplay.map((item) => (
-                    <div key={item.name} className="border-b border-gray-200">
-                      {item.hasMegamenu ? (
-                        <div>
-                          <div className="flex items-center justify-between w-full">
-                            {item.href ? (
-                              <NavLink
-                                to={item.href}
-                                className="flex-1 px-4 py-4 text-left text-base text-gray-900"
-                                onClick={() => setIsMenuOpen(false)}
-                              >
-                                {item.name}
-                              </NavLink>
-                            ) : (
-                              <span className="flex-1 px-4 py-4 text-left text-base text-gray-900">
-                                {item.name}
-                              </span>
-                            )}
-                            <button
-                              onClick={(e) => {
-                                e.preventDefault();
-                                e.stopPropagation();
-                                handleDropdownToggle(`mobile-${item.name}`);
-                              }}
-                              className="p-4 focus:outline-none"
-                              aria-label="Toggle dropdown"
-                            >
-                              <ChevronDown
-                                className={cn(
-                                  "h-5 w-5 text-gray-500 transition-transform",
-                                  activeDropdown === `mobile-${item.name}` && "rotate-180"
-                                )}
-                              />
-                            </button>
-                          </div>
-                          {activeDropdown === `mobile-${item.name}` && item.megamenuCards && (
-                            <div className="bg-gray-50 px-4 pb-4">
-                              {item.megamenuCards.map((card, idx) => (
-                                <NavLink
-                                  key={idx}
-                                  to={card.href}
-                                  className="block py-2.5 text-sm text-gray-700 hover:text-[#0052ff]"
-                                  onClick={() => setIsMenuOpen(false)}
-                                >
-                                  {card.title}
-                                </NavLink>
-                              ))}
+                    {/* Content Columns */}
+                    <div className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-12 pr-12">
+                        {mainNavMenuItems.find(m => m.name === "Qui sommes-nous ?")?.megamenuGroups?.map((group, gIdx) => (
+                            <div key={gIdx} className="space-y-10 border-r last:border-0 border-gray-50">
+                                {group.items.map((item, iIdx) => (
+                                    <NavLink 
+                                        key={iIdx} 
+                                        to={item.href}
+                                        className="group block space-y-3 pr-8"
+                                        onClick={() => setActiveMegamenu(null)}
+                                    >
+                                        <div className="flex items-center gap-3">
+                                            <h4 className="text-sm font-black text-slate-900 group-hover:text-[#0052ff] transition-colors uppercase tracking-tight">{item.title}</h4>
+                                            <ArrowRight className="w-3 h-3 text-[#0052ff] opacity-0 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0" />
+                                        </div>
+                                        <p className="text-[13px] text-slate-500 font-light leading-relaxed max-w-[340px]">
+                                            {item.description}
+                                        </p>
+                                    </NavLink>
+                                ))}
                             </div>
-                          )}
+                        ))}
+                    </div>
+
+                    {/* Right Promo Box (MATCHING IMAGE) */}
+                    {mainNavMenuItems.find(m => m.name === "Qui sommes-nous ?")?.promo && (
+                        <div className="hidden lg:flex w-[450px] bg-slate-50 rounded-sm p-10 relative overflow-hidden group/promo">
+                            <div className="relative z-10 space-y-6 max-w-[240px]">
+                                <h3 className="text-xl font-black text-slate-900 leading-tight tracking-tight">
+                                    {mainNavMenuItems.find(m => m.name === "Qui sommes-nous ?")?.promo?.title}
+                                </h3>
+                                <p className="text-[13px] text-slate-500 font-light leading-relaxed">
+                                    {mainNavMenuItems.find(m => m.name === "Qui sommes-nous ?")?.promo?.subtitle}
+                                </p>
+                                <NavLink 
+                                    to={mainNavMenuItems.find(m => m.name === "Qui sommes-nous ?")?.promo?.link || "#"}
+                                    className="flex items-center gap-3 text-[10px] font-black text-slate-900 uppercase tracking-widest pt-4 group-hover/promo:text-[#0052ff] transition-colors"
+                                    onClick={() => setActiveMegamenu(null)}
+                                >
+                                    {mainNavMenuItems.find(m => m.name === "Qui sommes-nous ?")?.promo?.cta}
+                                    <div className="w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center bg-white group-hover/promo:bg-[#0052ff] group-hover/promo:text-white transition-all">
+                                        <ArrowRight className="w-4 h-4" />
+                                    </div>
+                                </NavLink>
+                            </div>
+                            
+                            {/* Product Image on Right */}
+                            <div className="absolute right-[-20px] bottom-[-20px] w-64 h-64 pointer-events-none group-hover/promo:scale-110 transition-transform duration-700">
+                                <img 
+                                    src={mainNavMenuItems.find(m => m.name === "Qui sommes-nous ?")?.promo?.image}
+                                    alt="Promo Kit"
+                                    className="w-full h-full object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.1)]"
+                                />
+                            </div>
                         </div>
-                      ) : (
-                        <NavLink
-                          to={item.href}
-                          className="flex items-center justify-between w-full px-4 py-4"
-                          onClick={() => setIsMenuOpen(false)}
-                        >
-                          <span className="text-base text-gray-900">{item.name}</span>
-                          <ChevronDown className="h-5 w-5 text-gray-500 -rotate-90" />
-                        </NavLink>
-                      )}
-                    </div>
-                  ))}
+                    )}
                 </div>
-              </div>
-
-              {/* Bottom Navigation Bar */}
-              <div className="border-t border-gray-200 bg-white">
-                {/* Primary Menu Items */}
-                <div className="flex items-center justify-center gap-1 px-4 py-4 border-b border-gray-200">
-                  {primaryMenuItems.map((item, index) => (
-                    <div key={item.name} className="flex items-center">
-                      <NavLink
-                        to={item.href}
-                        className={({ isActive }) => cn(
-                          "text-sm font-medium px-3 py-1 transition-colors",
-                          isActive
-                            ? "text-[#0052ff] border-b-2 border-[#0052ff]"
-                            : "text-gray-700 hover:text-[#0052ff]"
-                        )}
-                        onClick={() => setIsMenuOpen(false)}
-                      >
-                        {item.name}
-                      </NavLink>
-                      {index < primaryMenuItems.length - 1 && (
-                        <span className="text-gray-300">|</span>
-                      )}
-                    </div>
-                  ))}
-                </div>
-
-                {/* Phone Link */}
-                <div className="px-4 py-4">
-                  <a
-                    href="tel:18552649328"
-                    className="flex items-center justify-center gap-2 text-[#0052ff]"
-                  >
-                    <Phone className="h-5 w-5" />
-                    <span>Appeler 1-855-264-9328</span>
-                  </a>
-                </div>
-              </div>
             </div>
-          </div>
+        )}
+
+        {/* Megamenu: "Ressources" (MATCHING IMAGE) */}
+        {activeMegamenu === "Ressources" && (
+            <div 
+                className="absolute top-full left-0 w-full bg-white border-t border-gray-100 shadow-2xl z-50 animate-in slide-in-from-top-4 duration-300"
+                onMouseEnter={() => handleMenuEnter("Ressources", true)}
+                onMouseLeave={handleMenuLeave}
+            >
+                <div className="container mx-auto px-4 md:px-6 py-16 flex gap-12">
+                    {/* Left Vertical Label */}
+                    <div className="hidden xl:flex flex-col items-center justify-end w-12 border-r border-gray-100 self-stretch mr-12 pb-8">
+                        <div className="whitespace-nowrap -rotate-90 origin-center mb-24">
+                            <span className="text-[10px] font-black text-slate-900 uppercase tracking-[0.5em]">
+                                RESSOURCES
+                            </span>
+                        </div>
+                    </div>
+
+                    {/* Content Columns */}
+                    <div className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-12 pr-12">
+                        {mainNavMenuItems.find(m => m.name === "Ressources")?.megamenuGroups?.map((group, gIdx) => (
+                            <div key={gIdx} className="space-y-10 border-r last:border-0 border-gray-50">
+                                {group.items.map((item, iIdx) => (
+                                    <NavLink 
+                                        key={iIdx} 
+                                        to={item.href}
+                                        className="group block space-y-3 pr-8"
+                                        onClick={() => setActiveMegamenu(null)}
+                                    >
+                                        <div className="flex items-center gap-3">
+                                            <h4 className="text-sm font-black text-slate-900 group-hover:text-[#0052ff] transition-colors uppercase tracking-tight">{item.title}</h4>
+                                            <ArrowRight className="w-3 h-3 text-[#0052ff] opacity-0 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0" />
+                                        </div>
+                                        <p className="text-[13px] text-slate-500 font-light leading-relaxed max-w-[340px]">
+                                            {item.description}
+                                        </p>
+                                    </NavLink>
+                                ))}
+                            </div>
+                        ))}
+                    </div>
+
+                    {/* Right Promo Box (MATCHING IMAGE) */}
+                    {mainNavMenuItems.find(m => m.name === "Ressources")?.promo && (
+                        <div className="hidden lg:flex w-[450px] bg-slate-50 rounded-sm p-10 relative overflow-hidden group/promo">
+                            <div className="relative z-10 space-y-6 max-w-[240px]">
+                                <h3 className="text-xl font-black text-slate-900 leading-tight tracking-tight">
+                                    {mainNavMenuItems.find(m => m.name === "Ressources")?.promo?.title}
+                                </h3>
+                                <p className="text-[13px] text-slate-500 font-light leading-relaxed">
+                                    {mainNavMenuItems.find(m => m.name === "Ressources")?.promo?.subtitle}
+                                </p>
+                                <NavLink 
+                                    to={mainNavMenuItems.find(m => m.name === "Ressources")?.promo?.link || "#"}
+                                    className="flex items-center gap-3 text-[10px] font-black text-slate-900 uppercase tracking-widest pt-4 group-hover/promo:text-[#0052ff] transition-colors"
+                                    onClick={() => setActiveMegamenu(null)}
+                                >
+                                    {mainNavMenuItems.find(m => m.name === "Ressources")?.promo?.cta}
+                                    <div className="w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center bg-white group-hover/promo:bg-[#0052ff] group-hover/promo:text-white transition-all">
+                                        <ArrowRight className="w-4 h-4" />
+                                    </div>
+                                </NavLink>
+                            </div>
+                            
+                            {/* Technical Product Image on Right */}
+                            <div className="absolute right-[-20px] bottom-[-20px] w-64 h-64 pointer-events-none group-hover/promo:scale-110 transition-transform duration-700">
+                                <img 
+                                    src={mainNavMenuItems.find(m => m.name === "Ressources")?.promo?.image}
+                                    alt="Technical Resource"
+                                    className="w-full h-full object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.1)]"
+                                />
+                            </div>
+                        </div>
+                    )}
+                </div>
+            </div>
+        )}
+
+        {/* Mobile Menu Overlay */}
+        {isMenuOpen && (
+            <div className="lg:hidden fixed inset-0 top-20 bg-white z-[100] overflow-y-auto animate-in slide-in-from-right duration-300">
+                <div className="p-6 space-y-8">
+                    {mainNavMenuItems.map((item) => (
+                        <div key={item.name} className="space-y-4">
+                            {item.href ? (
+                                <NavLink 
+                                    to={item.href}
+                                    className="text-xs font-black text-[#0052ff] hover:text-[#0052ff]/80 uppercase tracking-widest block py-2"
+                                    onClick={() => setIsMenuOpen(false)}
+                                >
+                                    {item.name}
+                                </NavLink>
+                            ) : (
+                                <div className="text-xs font-black text-slate-400 uppercase tracking-widest">{item.name}</div>
+                            )}
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                {(item.megamenuCards || item.items || item.megamenuGroups?.flatMap(g => g.items.map(i => ({ name: i.title, href: i.href }))))?.map((sub: any, i) => (
+                                    <NavLink 
+                                        key={i} 
+                                        to={sub.href} 
+                                        className="text-sm font-bold text-slate-800 hover:text-[#0052ff] flex items-center justify-between group"
+                                        onClick={() => setIsMenuOpen(false)}
+                                    >
+                                        <span>{sub.title || sub.name}</span>
+                                        <ChevronRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-all" />
+                                    </NavLink>
+                                ))}
+                            </div>
+                        </div>
+                    ))}
+                    <div className="pt-8 border-t border-gray-100 space-y-6">
+                        <Button 
+                            className="w-full bg-[#0052ff] h-14 rounded-full font-black uppercase tracking-widest text-[11px]"
+                            onClick={() => {
+                                setIsMenuOpen(false);
+                                navigate("/contact");
+                            }}
+                        >
+                            Contactez-nous
+                        </Button>
+                        <a href="tel:18552649328" className="flex items-center justify-center gap-2 font-black text-slate-800 py-4">
+                            <Phone className="w-5 h-5 text-[#0052ff]" />
+                            (855) 264-9328
+                        </a>
+                    </div>
+                </div>
+            </div>
         )}
       </header>
       <div style={{ height: headerHeight }} />

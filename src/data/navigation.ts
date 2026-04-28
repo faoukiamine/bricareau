@@ -1,7 +1,7 @@
-import promoImage2 from "@/assets/close-up-handsom-man-taking-bath.jpg";
+import promoImage2 from "@/assets/30759.jpg";
 import promoImage3 from "@/assets/woman-and-kid-drink-glass-water.jpg";
-import promoImage4 from "@/assets/undersink_filtration_header.jpg";
-import promoImage from "@/assets/10341859.jpg";
+import promoImage4 from "@/assets/bureau-megamenu.jpg";
+import promoImage from "@/assets/industrial_hero_pro_max.png";
 
 import ultravioletImg from "@/assets/uv system light_12838859.png";
 import watertestImg from "@/assets/Water-test_15395190.png";
@@ -21,13 +21,15 @@ import blogiconImg from "@/assets/blog_10045827.png";
 import documenticonImg from "@/assets/documentation_17862483.png";
 import contacticonImg from "@/assets/telephone_3095610.png";
 import serviceiconImg from "@/assets/services_5062832.png";
+import pfasImg from "@/assets/PFAS.jpg.jpg";
 
 export interface MegamenuCard {
   customIcon?: string;
-  svgIcon?: string; // We'll handle this as a string for simplicity in data, or keep it as element if needed
+  svgIcon?: React.ReactNode; 
   title: string;
-  description: string;
+  description?: string;
   href: string;
+  image?: string; 
 }
 
 export interface MenuItem {
@@ -35,12 +37,140 @@ export interface MenuItem {
   href?: string;
   hasMegamenu: boolean;
   megamenuCards?: MegamenuCard[];
+  megamenuGroups?: {
+    items: { title: string; description: string; href: string }[];
+  }[];
+  items?: { name: string; href: string }[]; // Simple dropdown items
   promo?: {
     title: string;
+    subtitle?: string;
     image: string;
     link: string;
+    cta?: string;
   };
 }
+
+// THE NEW MAIN MENU STRUCTURE (BASED ON BLUEDROP)
+export const mainNavMenuItems: MenuItem[] = [
+    {
+        name: "Accueil 1",
+        href: "/home1",
+        hasMegamenu: true,
+    },
+    {
+        name: "Ce que nous faisons",
+        hasMegamenu: true,
+        megamenuCards: [
+            {
+                title: "RÉSIDENTIEL",
+                image: promoImage3,
+                href: "/residentiel"
+            },
+            {
+                title: "HÔTELLERIE ET RESTAURATION",
+                image: promoImage2,
+                href: "/commercial-industriel"
+            },
+            {
+                title: "BUREAU",
+                image: promoImage4, 
+                href: "/entreprises"
+            },
+            {
+                title: "COMMERCIAL ET INDUSTRIEL",
+                image: promoImage,
+                href: "/commercial-industriel"
+            }
+        ]
+    },
+    {
+        name: "Qui sommes-nous ?",
+        hasMegamenu: true,
+        megamenuGroups: [
+            {
+                items: [
+                     { 
+                        title: "Notre compagnie", 
+                        description: "Découvrez pourquoi nous sommes le partenaire leader en filtration d'eau au Québec.", 
+                        href: "/pourquoi-choisir-bricareau" 
+                    },
+                  { 
+                        title: "Pourquoi nous choisir ?", 
+                        description: "Découvrez pourquoi nous sommes le partenaire leader en filtration d'eau au Québec.", 
+                        href: "/pourquoi-choisir-bricareau" 
+                    },
+                    { 
+                        title: "Notre processus", 
+                        description: "Découvrez comment nos experts peuvent vous aider à trouver la solution qui vous convient.", 
+                        href: "/notre-processus" 
+                    },
+                ]
+            },
+            {
+                items: [
+                    { 
+                        title: "Durabilité", 
+                        description: "Découvrez comment nous fournissons des systèmes de filtration d'eau économiques, efficaces et durables.", 
+                        href: "/durabilite" 
+                    },
+                    { 
+                        title: "Carrières", 
+                        description: "Rejoignez une équipe passionnée et participez à l'avenir du traitement d'eau.", 
+                        href: "/carrieres" 
+                    }
+                ]
+            }
+        ],
+        promo: {
+            title: "Découvrez la différence Bricareau Water",
+            subtitle: "Nous préférons travailler en nous basant sur tous les faits. Pour commencer, planifiez une analyse d'eau complète.",
+            image: watertestImg,
+            link: "/tests-eau",
+            cta: "PLANIFIEZ UN TEST D'EAU"
+        }
+    },
+    {
+        name: "Ressources",
+        hasMegamenu: true,
+        megamenuGroups: [
+            {
+                items: [
+                    { 
+                        title: "Blog", 
+                        description: "Restez informé des nouveautés dans le monde de l'eau.", 
+                        href: "/blog" 
+                    },
+                    { 
+                        title: "Contaminants courants", 
+                        description: "Consultez la liste complète des contaminants courants.", 
+                        href: "/contaminants" 
+                    }
+                ]
+            },
+            {
+                items: [
+                    { 
+                        title: "Tests d'eau", 
+                        description: "Planifiez une analyse complète de votre eau pour garantir sa pureté et sa sécurité.", 
+                        href: "/tests-eau" 
+                    },
+                    { 
+                        title: "Diagnostic", 
+                        description: "Utilisez notre outil d'autodiagnostic pour identifier rapidement les solutions adaptées à vos besoins.", 
+                        href: "/diagnostic" 
+                    }
+                ]
+            }
+        ],
+        promo: {
+            title: "Élimination des PFAS",
+            subtitle: "Les PFAS sont des substances chimiques de synthèse issues de divers produits toxiques qui se sont retrouvées dans les eaux souterraines et de surface.",
+            image: pfasImg,
+            link: "/pfas",
+            cta: "APPRENEZ-EN DAVANTAGE SUR LES PFAS"
+        }
+    }
+];
 
 export const productMenuItems: MenuItem[] = [
   {
@@ -261,7 +391,7 @@ export const commercialProductMenuItems: MenuItem[] = [
     }
   },
   {
-    name: "Expertise \u0026 Support",
+    name: "Expertise & Support",
     hasMegamenu: true,
     megamenuCards: [
       {
@@ -278,7 +408,7 @@ export const commercialProductMenuItems: MenuItem[] = [
       },
       {
         customIcon: documenticonImg,
-        title: "Cahier Technique \u0026 Devis",
+        title: "Cahier Technique & Devis",
         description: "Demandez une étude personnalisée et des spécifications techniques pour votre projet.",
         href: "/contact"
       },
@@ -319,7 +449,7 @@ export const commercialProductMenuItems: MenuItem[] = [
     ],
     promo: {
       title: "Consultez le centre de documentation technique.",
-      image: "https://images.unsplash.com/photo-1454165833767-027ffea9e77b?q=80\u0026w=600\u0026auto=format\u0026fit=crop",
+      image: "https://images.unsplash.com/photo-1454165833767-027ffea9e77b?q=80&w=600&auto=format&fit=crop",
       link: "/guides"
     }
   },
@@ -384,7 +514,7 @@ export const entreprisesProductMenuItems: MenuItem[] = [
     megamenuCards: [
       {
         customIcon: blogiconImg,
-        title: "Blog \u0026 Bien-être",
+        title: "Blog & Bien-être",
         description: "Conseils pour transformer l'hydratation en moteur de productivité au bureau.",
         href: "/blog"
       },
@@ -413,7 +543,7 @@ export const entreprisesProductMenuItems: MenuItem[] = [
       },
       {
         customIcon: serviceiconImg,
-        title: "Installation \u0026 Maintenance",
+        title: "Installation & Maintenance",
         description: "Planifiez votre entretien proactif ou demandez une réparation urgente.",
         href: "/service"
       },

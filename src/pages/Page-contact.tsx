@@ -199,7 +199,7 @@ const Contact = () => {
                             {/* Left Icons Column */}
                             <div className="lg:w-1/3 flex flex-col justify-end space-y-6">
                                 {[
-                                    { icon: PhoneCall, title: "Appel sans frais", content: "1-855-264-9328", sub: "Ligne prioritaire 24/7", delay: "delay-100" },
+                                    { icon: PhoneCall, title: "Appel sans frais", content: "(855) 264-9328", sub: "Ligne prioritaire 24/7", delay: "delay-100" },
                                     { icon: CalendarIcon, title: "Disponibilités", content: "Lun - Ven : 8h00 - 18h00", sub: "Service à domicile rapide", delay: "delay-200" },
                                     { icon: MapPin, title: "Zone d'intervention", content: "Grand Montréal & Environs", sub: "Périmètre de 300km (Rayon Local)", delay: "delay-300", isMap: true }
                                 ].map((item, i) => (

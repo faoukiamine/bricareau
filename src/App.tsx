@@ -95,6 +95,12 @@ import AdoucisseurSentinelle from "./pages/Adoucisseur-Sentinelle";
 
 import DesabonnementSucces from "./pages/DesabonnementSucces";
 
+import ResidentialServices from "./pages/ResidentialServices";
+import WhyChooseUs from "./pages/WhyChooseUs";
+import Sustainability from "./pages/Sustainability";
+import OurProcess from "./pages/OurProcess";
+import Home1 from "./pages/Home1";
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -107,7 +113,12 @@ const App = () => (
         <CookieConsent />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/home1" element={<Home1 />} />
           <Route path="/adoucisseurs-portables" element={<Services />} />
+          <Route path="/residentiel" element={<ResidentialServices />} />
+          <Route path="/pourquoi-choisir-bricareau" element={<WhyChooseUs />} />
+          <Route path="/durabilite" element={<Sustainability />} />
+          <Route path="/notre-processus" element={<OurProcess />} />
           <Route path="/solutions" element={<Solutions />} />
           <Route path="/adoucissement" element={<Adoucisseurs />} />
           <Route path="/adoucisseurs" element={<Adoucisseurs />} />
