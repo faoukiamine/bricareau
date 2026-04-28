@@ -96,7 +96,7 @@ const Header = () => {
                   <button 
                     className={cn(
                         "text-[13px] font-bold uppercase tracking-wider flex items-center gap-1.5 transition-colors",
-                        (activeMegamenu === item.name || activeDropdown === item.name) ? "text-[#0052ff]" : "text-slate-700 hover:text-[#0052ff]"
+                        (activeMegamenu === item.name || activeDropdown === item.name) ? "text-[#3d6aab]" : "text-slate-700 hover:text-[#3d6aab]"
                     )}
                     onClick={() => {
                         if (item.href) {
@@ -117,7 +117,7 @@ const Header = () => {
                             <NavLink 
                                 key={i} 
                                 to={sub.href} 
-                                className="block px-6 py-3 text-sm text-slate-600 hover:text-[#0052ff] hover:bg-slate-50 transition-colors font-medium border-l-2 border-transparent hover:border-[#0052ff]"
+                                className="block px-6 py-3 text-sm text-slate-600 hover:text-[#3d6aab] hover:bg-slate-50 transition-colors font-medium border-l-2 border-transparent hover:border-[#3d6aab]"
                                 onClick={() => setActiveDropdown(null)}
                             >
                                 {sub.name}
@@ -131,9 +131,9 @@ const Header = () => {
 
             {/* Right Utilities (Desktop) */}
             <div className="hidden lg:flex items-center gap-8">
-              <a href="tel:18552649328" className="text-[13px] font-black text-slate-800 flex items-center gap-2 group">
+              <a href="tel:18552649328" className="text-[13px] font-medium text-slate-800 flex items-center gap-2 group">
                 <div className="w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center group-hover:bg-blue-50 transition-colors">
-                    <Phone className="w-4 h-4 text-[#0052ff]" />
+                    <Phone className="w-4 h-4 text-[#3d6aab]" />
                 </div>
                 (855) 264-9328
               </a>
@@ -141,13 +141,13 @@ const Header = () => {
               <div className="flex items-center gap-3">
                 <Button 
                     variant="outline" 
-                    className="border-[2px] border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white rounded-full px-8 h-12 text-[10px] font-black uppercase tracking-widest transition-all"
-                    onClick={() => navigate("/contact")}
+                    className="border-[2px] border-[#3d6aab] text-[#3d6aab] hover:bg-[#3d6aab] hover:text-white rounded-full px-8 h-12 text-[10px] font-black uppercase tracking-widest transition-all"
+                    onClick={() => navigate("/consultation")}
                 >
                     Contactez-nous
                 </Button>
                 <Button 
-                    className="bg-slate-900 text-white hover:bg-slate-800 rounded-full px-8 h-12 text-[10px] font-black uppercase tracking-widest transition-all"
+                    className="bg-[#3d6aab] text-white hover:bg-[#32588c] rounded-full px-8 h-12 text-[10px] font-black uppercase tracking-widest transition-all"
                     onClick={() => navigate("/contact-form")}
                 >
                     Demander un service
@@ -208,7 +208,7 @@ const Header = () => {
                                             card.title
                                         )}
                                     </h4>
-                                    <div className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-[#0052ff] group-hover:bg-[#0052ff] group-hover:text-white transition-all duration-300">
+                                    <div className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-[#3d6aab] group-hover:bg-[#3d6aab] group-hover:text-white transition-all duration-300">
                                         <ArrowRight className="w-5 h-5" />
                                     </div>
                                 </div>
@@ -248,8 +248,8 @@ const Header = () => {
                                         onClick={() => setActiveMegamenu(null)}
                                     >
                                         <div className="flex items-center gap-3">
-                                            <h4 className="text-sm font-black text-slate-900 group-hover:text-[#0052ff] transition-colors uppercase tracking-tight">{item.title}</h4>
-                                            <ArrowRight className="w-3 h-3 text-[#0052ff] opacity-0 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0" />
+                                            <h4 className="text-sm font-black text-slate-900 group-hover:text-[#3d6aab] transition-colors uppercase tracking-tight">{item.title}</h4>
+                                            <ArrowRight className="w-3 h-3 text-[#3d6aab] opacity-0 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0" />
                                         </div>
                                         <p className="text-[13px] text-slate-500 font-light leading-relaxed max-w-[340px]">
                                             {item.description}
@@ -272,11 +272,11 @@ const Header = () => {
                                 </p>
                                 <NavLink 
                                     to={mainNavMenuItems.find(m => m.name === "Qui sommes-nous ?")?.promo?.link || "#"}
-                                    className="flex items-center gap-3 text-[10px] font-black text-slate-900 uppercase tracking-widest pt-4 group-hover/promo:text-[#0052ff] transition-colors"
+                                    className="flex items-center gap-3 text-[10px] font-black text-slate-900 uppercase tracking-widest pt-4 group-hover/promo:text-[#3d6aab] transition-colors"
                                     onClick={() => setActiveMegamenu(null)}
                                 >
                                     {mainNavMenuItems.find(m => m.name === "Qui sommes-nous ?")?.promo?.cta}
-                                    <div className="w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center bg-white group-hover/promo:bg-[#0052ff] group-hover/promo:text-white transition-all">
+                                    <div className="w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center bg-white group-hover/promo:bg-[#3d6aab] group-hover/promo:text-white transition-all">
                                         <ArrowRight className="w-4 h-4" />
                                     </div>
                                 </NavLink>
@@ -407,10 +407,10 @@ const Header = () => {
                     ))}
                     <div className="pt-8 border-t border-gray-100 space-y-6">
                         <Button 
-                            className="w-full bg-[#0052ff] h-14 rounded-full font-black uppercase tracking-widest text-[11px]"
+                            className="w-full bg-[#3d6aab] h-14 rounded-full font-black uppercase tracking-widest text-[11px]"
                             onClick={() => {
                                 setIsMenuOpen(false);
-                                navigate("/contact");
+                                navigate("/consultation");
                             }}
                         >
                             Contactez-nous

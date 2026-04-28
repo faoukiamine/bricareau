@@ -105,32 +105,32 @@ const Home1 = () => {
         {
             icon: ShieldCheck,
             title: "Fournisseur de confiance",
-            description: "Nous sommes fiers de fournir des solutions d'eau pure et sécuritaire à des milliers de clients à travers le pays."
+            description: "Forts d'un héritage d'excellence, nous protégeons la santé de plus de 20 000 foyers canadiens grâce à nos standards de sécurité rigoureux."
         },
         {
             icon: Settings,
             title: "Solutions multiples",
-            description: "Que ce soit pour votre maison, votre bureau ou votre industrie, nous avons une solution adaptée à chaque besoin spécifique."
+            description: "De l'ingénierie résidentielle précise aux déploiements industriels complexes, nos architectures sur mesure s'adaptent à chaque défi technique."
         },
         {
             icon: Zap,
             title: "Équipe hautement qualifiée",
-            description: "Nos techniciens experts sont formés pour installer et entretenir vos systèmes avec une précision inégalée."
+            description: "Nos maîtres techniciens certifiés déploient une expertise de pointe pour garantir une installation millimétrée et une performance durable."
         },
         {
             icon: Droplets,
             title: "Service pratique",
-            description: "Bénéficiez d'une assistance réactive et d'un suivi personnalisé pour garantir la performance optimale de vos équipements."
+            description: "Bénéficiez d'une continuité opérationnelle totale grâce à notre conciergerie technique réactive et nos protocoles de maintenance prédictive."
         },
         {
             icon: TrendingUp,
             title: "Rentable",
-            description: "Économisez sur le long terme grâce à nos solutions éco-énergétiques et à la durabilité exceptionnelle de nos produits."
+            description: "Optimisez vos actifs avec nos technologies à haut rendement, conçues pour maximiser votre retour sur investissement et réduire vos coûts énergétiques."
         },
         {
             icon: Leaf,
             title: "Engagés en faveur du développement durable",
-            description: "Nous privilégions les technologies respectueuses de l'environnement pour préserver cette ressource vitale qu'est l'eau."
+            description: "Nous intégrons des systèmes éco-responsables de nouvelle génération pour préserver les ressources hydriques et minimiser l'empreinte écologique."
         }
     ];
 
@@ -139,32 +139,62 @@ const Home1 = () => {
             <Header />
 
             {/* Hero Section */}
-            <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
-                <img
-                    src={heroImg}
-                    alt="Pure water"
-                    className="absolute inset-0 w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-black/40" />
-                <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto flex flex-col items-center gap-8 pt-12">
-                    <h1 className="text-5xl md:text-7xl font-black tracking-tighter leading-tight drop-shadow-lg">
-                        L'excellence en <span className="text-blue-400">filtration</span> d'eau.
-                    </h1>
-                    <p className="text-xl md:text-2xl font-medium text-slate-200 drop-shadow-md">
-                        Solutions sur mesure pour le résidentiel, commercial et industriel.
-                    </p>
-                    <Button
-                        variant="outline"
-                        className="bg-transparent border-white border-2 text-white hover:bg-white hover:text-black rounded-full px-12 h-14 text-xs font-black uppercase tracking-widest transition-all mt-4"
-                        onClick={() => navigate("/solutions")}
-                    >
-                        Découvrir
-                    </Button>
+            <section className="relative lg:h-[800px] flex flex-col overflow-hidden bg-white">
+                {/* 1. Image Section - Overlay on Desktop */}
+                <div className="relative lg:absolute lg:inset-0 w-full aspect-[4/3] sm:aspect-video lg:aspect-auto lg:h-full z-0 overflow-hidden">
+                    <div className="absolute inset-0 z-10 bg-gradient-to-b from-transparent to-white lg:bg-gradient-to-r lg:from-white lg:via-white/70 lg:to-transparent" />
+                    <img
+                        src={heroImg}
+                        alt="Bricareau Water Specialist"
+                        className="w-full h-full object-cover object-center"
+                    />
+                </div>
+
+                {/* 2. Content Section */}
+                <div className="container relative z-10 mx-auto px-4 lg:px-12 lg:h-full flex flex-col items-start justify-center pt-20 pb-24 lg:pt-0 lg:pb-0">
+                    <div className="max-w-3xl space-y-8 text-left">
+                        <div className="space-y-6">
+                            <h1 className="mb-6 animate-in fade-in slide-in-from-left duration-1000 tracking-tighter"
+                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif', fontSize: '50px', lineHeight: '55px' }}>
+                                <span className="italic font-light text-[#3d6aab] block">Bricareau,</span>
+                                <span className="font-bold text-[#1e3a8a] block">votre partenaire d'excellence.</span>
+                            </h1>
+                            
+                            <p className="max-w-xl animate-in fade-in slide-in-from-left duration-1000 delay-100 text-left text-slate-600 text-lg md:text-xl font-light leading-relaxed">
+                                Plus de 20 ans d'engagement et 20 000 foyers protégés au Québec. Nous sommes votre allié stratégique pour une gestion de l'eau intelligente, durable et sans compromis.
+                            </p>
+
+                            <div className="flex flex-col sm:flex-row items-start gap-8 pt-4">
+                                <div className="relative inline-block w-full sm:w-auto group">
+                                    <div className="absolute inset-0 border border-[#3d6aab] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                                    <Button
+                                        className="relative w-full sm:w-auto bg-[#3d6aab] hover:bg-white hover:text-[#3d6aab] text-white rounded-[2rem] h-[3.25rem] px-8 font-black uppercase tracking-[0.1em] text-[11px] transition-all border-none"
+                                        onClick={() => navigate("/consultation")}
+                                    >
+                                        Planifiez une consultation gratuite
+                                    </Button>
+                                </div>
+                                
+                                <div className="relative inline-block w-full sm:w-auto group">
+                                    <div className="absolute inset-0 border border-[#3d6aab] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                                    <Button
+                                        asChild
+                                        className="relative w-full sm:w-auto bg-[#3d6aab] hover:bg-white hover:text-[#3d6aab] text-white rounded-[2rem] h-[3.25rem] px-8 font-black uppercase tracking-[0.1em] text-[11px] transition-all border-none"
+                                    >
+                                        <a href="tel:18552649328" className="flex items-center justify-center gap-2">
+                                            <Phone className="w-5 h-5 flex-shrink-0" />
+                                            1-855-264-9328
+                                        </a>
+                                    </Button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
             {/* Partner Ribbon */}
-            <section className="bg-blue-600 py-10 overflow-hidden border-b border-blue-700">
+            <section className="bg-[#3d6aab] py-10 overflow-hidden border-y border-[#3d6aab]/20">
                 <div className="w-full relative">
                     <div className="flex w-max animate-marquee gap-16 opacity-60 grayscale hover:opacity-100 transition-opacity duration-700">
                         {/* First Set */}
@@ -217,7 +247,7 @@ const Home1 = () => {
                                     <Button
                                         variant="outline"
                                         size="icon"
-                                        className="rounded-full bg-white border-none w-10 h-10 group-hover:bg-[#0052ff] group-hover:text-white transition-colors"
+                                        className="rounded-full bg-white border-none w-10 h-10 group-hover:bg-[#3d6aab] group-hover:text-white transition-colors"
                                         onClick={() => navigate(sector.href)}
                                     >
                                         <ChevronRight className="w-5 h-5" />
@@ -233,36 +263,45 @@ const Home1 = () => {
             <section className="py-24 bg-white overflow-hidden relative">
                 <div className="container mx-auto px-4">
                     <div className="text-center max-w-3xl mx-auto mb-20">
-                        <span className="text-[#0052ff] font-bold text-xs uppercase tracking-[0.3em] mb-4 block">Notre Expertise</span>
+                        <span className="text-[#3d6aab] font-bold text-xs uppercase tracking-[0.3em] mb-4 block">Notre Expertise</span>
                         <h2 className="text-5xl font-black text-[#0f172a] mb-6 leading-tight">Découvrez la différence Bricareau</h2>
-                        <p className="text-slate-600 text-lg font-medium">Découvrez pour quoi nous sommes plus que de simples fournisseurs de solutions d'eau.</p>
+                        <p className="text-slate-600 text-lg sm:text-xl font-light leading-relaxed max-w-2xl mx-auto">
+                            Découvrez une fusion unique entre technologie de pointe et expertise humaine.
+                            Nous concevons des écosystèmes hydriques intelligents pour protéger votre santé
+                            et garantir une pureté absolue à chaque goutte, pour aujourd'hui et pour demain.
+                        </p>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-6xl mx-auto">
                         {features.map((feature, index) => (
-                            <div key={index} className="flex flex-col items-center text-center p-8 rounded-3xl hover:bg-slate-50 transition-colors group">
-                                <div className="w-16 h-16 rounded-2xl bg-blue-50 flex items-center justify-center mb-8 group-hover:bg-[#0052ff] transition-colors">
-                                    <feature.icon className="w-8 h-8 text-[#0052ff] group-hover:text-white transition-colors" />
+                            <div key={index} className="flex flex-col items-center text-center p-8 rounded-3xl hover:bg-slate-50 transition-all group border border-transparent hover:border-slate-100 shadow-sm hover:shadow-md h-full">
+                                <div className="w-16 h-16 rounded-2xl bg-blue-50 flex items-center justify-center mb-8 group-hover:bg-[#3d6aab] transition-colors shadow-sm">
+                                    <feature.icon className="w-8 h-8 text-[#3d6aab] group-hover:text-white transition-colors" />
                                 </div>
-                                <h3 className="text-xl font-bold text-[#0f172a] mb-4">{feature.title}</h3>
-                                <p className="text-slate-600 leading-relaxed font-medium">{feature.description}</p>
+                                <h3 className="text-xl font-bold text-[#0f172a] mb-4 min-h-[3.5rem] flex items-center justify-center">{feature.title}</h3>
+                                <p className="text-slate-600 leading-relaxed font-medium text-sm flex-1">
+                                    {feature.description}
+                                </p>
                             </div>
                         ))}
                     </div>
 
                     <div className="text-center mt-20">
-                        <Button
-                            className="bg-transparent border-2 border-slate-200 text-slate-800 hover:bg-slate-900 hover:text-white hover:border-slate-900 rounded-full px-10 h-14 font-black uppercase tracking-widest text-[11px] transition-all"
-                            onClick={() => navigate("/pourquoi-choisir-bricareau")}
-                        >
-                            Pourquoi nous choisir ?
-                        </Button>
+                        <div className="relative inline-block w-full sm:w-auto group">
+                            <div className="absolute inset-0 border border-[#3d6aab] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                            <Button
+                                className="relative w-full sm:w-auto bg-[#3d6aab] hover:bg-white hover:text-[#3d6aab] text-white rounded-[2rem] h-[3.25rem] px-10 font-black uppercase tracking-widest text-[11px] transition-all border-none"
+                                onClick={() => navigate("/pourquoi-choisir-bricareau")}
+                            >
+                                Pourquoi nous choisir ?
+                            </Button>
+                        </div>
                     </div>
                 </div>
             </section>
 
             {/* Solution Finder Section */}
-            <section className="py-16 sm:py-20 bg-[#22282e]">
+            <section className="py-16 sm:py-20 bg-[#3d6aab]">
                 <div className="container mx-auto px-4 max-w-5xl">
                     <div className="flex flex-col gap-6">
                         <div className="text-left mb-2">
@@ -298,10 +337,10 @@ const Home1 = () => {
                                 <div className="relative inline-block w-full md:w-auto group">
                                     <div className="absolute inset-0 border border-white rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
                                     <Button
-                                        className="relative w-full md:w-auto bg-[#7595b3] hover:bg-[#6484a4] text-[#0f172a] rounded-[2rem] h-[3.25rem] px-8 font-black uppercase tracking-[0.1em] text-[11px] transition-colors border-none"
+                                        className="relative w-full md:w-auto bg-white hover:bg-[#3d6aab] text-[#3d6aab] hover:text-white rounded-[2rem] h-[3.25rem] px-8 font-black uppercase tracking-[0.1em] text-[11px] transition-all border-none"
                                         onClick={() => navigate(productRouteMap[selectedProduit] || "/contact")}
                                     >
-                                        PARCOURIR LES SOLUTIONS
+                                        PARCOURIR NOS SOLUTIONS
                                     </Button>
                                 </div>
                             </div>
@@ -385,7 +424,7 @@ const Home1 = () => {
                         {/* Circular Badge */}
                         <div className="absolute right-4 sm:right-12 lg:right-24 bottom-16 sm:bottom-12 z-20">
                             <div className="relative w-32 h-32 flex items-center justify-center animate-[spin_15s_linear_infinite] bg-white/90 backdrop-blur-sm rounded-full p-2 shadow-2xl">
-                                <svg viewBox="0 0 100 100" className="w-full h-full absolute inset-0 text-[#0052ff] font-sans overflow-visible">
+                                <svg viewBox="0 0 100 100" className="w-full h-full absolute inset-0 text-[#3d6aab] font-sans overflow-visible">
                                     <path id="circlePath" d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0" fill="none" />
                                     <text fontSize="8.5" fontWeight="900" letterSpacing="0.16em" fill="currentcolor">
                                         <textPath href="#circlePath" startOffset="0%" textAnchor="start">
@@ -407,12 +446,15 @@ const Home1 = () => {
                 <div className="absolute inset-0 bg-blue-50/80" />
                 <div className="container mx-auto px-4 relative z-10 text-center">
                     <h2 className="text-6xl font-black text-[#0f172a] mb-12 max-w-4xl mx-auto leading-tight uppercase tracking-tighter">Laissez-nous vous aider à trouver la solution adaptée.</h2>
-                    <Button
-                        className="bg-[#0052ff] hover:bg-blue-700 text-white rounded-full px-12 h-16 font-black uppercase tracking-widest text-xs shadow-xl shadow-blue-500/30 transition-all hover:scale-105"
-                        onClick={() => navigate("/contact")}
-                    >
-                        NOUS JOINDRE
-                    </Button>
+                    <div className="relative inline-block group">
+                        <div className="absolute inset-0 border border-[#3d6aab] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                        <Button
+                            className="relative bg-[#3d6aab] hover:bg-white hover:text-[#3d6aab] text-white rounded-[2rem] px-12 h-16 font-black uppercase tracking-widest text-xs transition-all border-none"
+                            onClick={() => navigate("/consultation")}
+                        >
+                            NOUS JOINDRE
+                        </Button>
+                    </div>
                 </div>
             </section>
 

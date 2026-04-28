@@ -18,11 +18,13 @@ import softenerImg from "@/assets/Water-Softener-installation.jpg";
 import filtrationImg from "@/assets/woman-and-kid-drink-glass-water.jpg";
 import wholeHouseImg from "@/assets/Filtration-eau-de-puits.webp";
 import drinkWaterImg from "@/assets/water-dispenser in kitchen.jpg";
+import uvImg from "@/assets/UV-system.jpg";
 
 const ResidentialServices = () => {
     const navigate = useNavigate();
     const [activeSection, setActiveSection] = useState(0);
     const [showNav, setShowNav] = useState(false);
+    const [isNavVisible, setIsNavVisible] = useState(true);
     
     const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
     const containerRef = useRef<HTMLDivElement>(null);
@@ -43,6 +45,16 @@ const ResidentialServices = () => {
                     const index = sectionRefs.current.findIndex(ref => ref === entry.target);
                     if (index !== -1) {
                         setActiveSection(index);
+                        
+                        // Si c'est la dernière section, on lance le timer pour cacher la nav
+                        if (index === programs.length - 1) {
+                            setTimeout(() => {
+                                setIsNavVisible(false);
+                            }, 1000);
+                        } else {
+                            // Si on remonte ou change de section autre que la dernière, on la réaffiche
+                            setIsNavVisible(true);
+                        }
                     }
                 }
             });
@@ -72,6 +84,17 @@ const ResidentialServices = () => {
 
     const programs = [
         {
+            title: "Systèmes de filtration pour toute la maison",
+            navTitle: "Systèmes de filtration pour toute la maison",
+            desc: "Installé pour fournir de l'eau filtrée dans toute votre maison, protégeant chaque point d'eau de votre foyer.",
+            points: [
+                "Élimination du chlore, produits chimiques et pesticides",
+                "Systèmes pour éliminer le plomb, kystes et PFOA/PFOS",
+                "Élimination efficace du fer et du manganèse"
+            ],
+            image: wholeHouseImg,
+            link: "/filtres-deau"
+        },{
             title: "Adoucissement de l'eau",
             navTitle: "Adoucissement de l'eau",
             desc: "L'un des problèmes d'eau les plus courants rencontrés par les propriétaires est l'eau dure.",
@@ -96,20 +119,8 @@ const ResidentialServices = () => {
             link: "/systeme-de-filtration-deau-potable"
         },
         {
-            title: "Systèmes de filtration pour toute la maison",
-            navTitle: "Systèmes de filtration pour toute la maison",
-            desc: "Installé pour fournir de l'eau filtrée dans toute votre maison, protégeant chaque point d'eau de votre foyer.",
-            points: [
-                "Élimination du chlore, produits chimiques et pesticides",
-                "Systèmes pour éliminer le plomb, kystes et PFOA/PFOS",
-                "Élimination efficace du fer et du manganèse"
-            ],
-            image: wholeHouseImg,
-            link: "/filtres-deau-pour-toute-la-maison"
-        },
-        {
-            title: "Systèmes d'eau plate et gazeuse",
-            navTitle: "Systèmes d'eau plate et gazeuse",
+            title: "Fontaines d'eau",
+            navTitle: "Fontaines d'eau",
             desc: "L'hydratation premium s'invite dans votre quotidien avec la même technologie utilisée par vos restaurants préférés.",
             points: [
                 "Approvisionnement illimité en eau plate et gazeuse filtrée",
@@ -118,6 +129,18 @@ const ResidentialServices = () => {
             ],
             image: drinkWaterImg,
             link: "/fontaines"
+        },
+        {
+            title: "Systèmes de désinfection UV",
+            navTitle: "Désinfection UV",
+            desc: "Éliminez 99,99% des bactéries, virus et kystes sans produits chimiques grâce à la puissance des rayons ultraviolets.",
+            points: [
+                "Protection totale contre E. coli et coliformes",
+                "Traitement écologique sans goût ni odeur",
+                "Idéal pour l'eau de puits et de surface"
+            ],
+            image: uvImg,
+            link: "/Systemes-de-desinfection-UV"
         }
     ];
 
@@ -180,7 +203,8 @@ const ResidentialServices = () => {
                     <div className="container mx-auto px-6 relative z-10 text-center">
                         <div className="max-w-4xl mx-auto">
                             <h1 className="text-6xl md:text-[5.5rem] font-black text-white uppercase tracking-tighter mb-12">
-                                RÉSIDENTIEL
+                                <span className="text-blue-400 italic font-light lowercase">Services</span><br />
+                                Résidentiel
                             </h1>
                             <Button 
                                 size="lg" 
@@ -219,7 +243,7 @@ const ResidentialServices = () => {
                     {/* Vertical Side Nav - ADJUSTED INDENT (RETRAIT) TO ALIGN WITH LOGO */}
                     <div className={cn(
                         "fixed left-0 top-0 bottom-0 z-50 hidden lg:block transition-all duration-700",
-                        showNav ? "opacity-100" : "opacity-0 pointer-events-none"
+                        showNav && isNavVisible ? "opacity-100" : "opacity-0 pointer-events-none"
                     )}>
                         <div className="container mx-auto px-6 md:px-12 h-full relative">
                             {/* The Nav Group - Increased left offset to align with logo icon/center */}
@@ -385,7 +409,7 @@ const ResidentialServices = () => {
                         <Button 
                             size="lg" 
                             className="bg-[#0052ff] text-white hover:bg-blue-600 px-20 h-16 rounded-full font-black uppercase tracking-[0.3em] text-[10px] transition-all shadow-2xl hover:scale-105 active:scale-95"
-                            onClick={() => navigate("/contact")}
+                            onClick={() => navigate("/consultation")}
                         >
                             Planifier une consultation
                         </Button>

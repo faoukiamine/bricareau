@@ -55,7 +55,7 @@ export const mainNavMenuItems: MenuItem[] = [
     {
         name: "Accueil 1",
         href: "/home1",
-        hasMegamenu: true,
+        hasMegamenu: false,
     },
     {
         name: "Ce que nous faisons",
@@ -69,12 +69,12 @@ export const mainNavMenuItems: MenuItem[] = [
             {
                 title: "HÔTELLERIE ET RESTAURATION",
                 image: promoImage2,
-                href: "/commercial-industriel"
+                href: "/hotellerie-restauration"
             },
             {
                 title: "BUREAU",
                 image: promoImage4, 
-                href: "/entreprises"
+                href: "/bureau"
             },
             {
                 title: "COMMERCIAL ET INDUSTRIEL",
@@ -144,6 +144,11 @@ export const mainNavMenuItems: MenuItem[] = [
                         title: "Contaminants courants", 
                         description: "Consultez la liste complète des contaminants courants.", 
                         href: "/contaminants" 
+                    },
+                    { 
+                        title: "FAQ", 
+                        description: "Trouvez rapidement des réponses aux questions les plus fréquemment posées sur nos produits et services.", 
+                        href: "/faq" 
                     }
                 ]
             },
