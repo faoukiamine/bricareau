@@ -5,6 +5,7 @@ import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
 import ExpertAvatars from "@/components/ExpertAvatars";
 import TestimonialsSection from "@/components/TestimonialsSection";
+import { ProMaxButton } from "@/components/ui/ProMaxButton";
 import { Button } from "@/components/ui/button";
 import heroDesktop from "@/assets/family-preparing-dinner-together.jpg";
 import TwinAlternatingWaterSoftenerImg from "@/assets/Alternating Water Softener.png";
@@ -284,8 +285,8 @@ const AdoucisseursEauDePuits = () => {
                                     Eau adoucie
                                 </span>
                                 <h2 className="scroll-mt-[120px] mb-8 heading-pro-max">
-                                    <span className="italic font-light text-[#3d6aab] block">Vivez l'eau au-delà</span>
-                                    <span className="font-bold text-[#3d6aab] block">de la simple apparence.</span>
+                                    <span className="italic font-light text-[#18448F] block">Vivez l'eau au-delà</span>
+                                    <span className="font-bold text-[#18448F] block">de la simple apparence.</span>
                                 </h2>
                                 <p className="body-pro-max text-justify max-w-2xl text-slate-600 font-light">
                                     Dans un puits privé, la clarté visuelle n'est que la surface. Notre technologie d'adoucissement transforme la structure même de votre eau, éliminant l'agressivité du calcaire et du fer pour une douceur que vous ressentirez à chaque goutte, sur chaque surface.
@@ -307,7 +308,7 @@ const AdoucisseursEauDePuits = () => {
                                 <div className="relative z-10 flex-1 p-10 lg:p-14 flex flex-col justify-between">
                                     <div className="space-y-6">
                                         <div className="w-12 h-1 bg-blue-600"></div>
-                                        <h3 className="text-3xl font-bold text-[#3d6aab] leading-tight max-w-[280px]">Adoucissement de haute performance</h3>
+                                        <h3 className="text-3xl font-bold text-[#18448F] leading-tight max-w-[280px]">Adoucissement de haute performance</h3>
                                         <p className="body-pro-max text-justify text-[15px] leading-relaxed max-w-xs text-slate-600 font-light">Un équilibre parfait entre minéralité et douceur. Notre système transforme la structure du calcaire, protégeant vos installations.</p>
                                     </div>
                                     <div className="mt-12 -mx-10 lg:-mx-14 -mb-10 lg:-mb-14 h-64 overflow-hidden border-t border-slate-50">
@@ -321,7 +322,7 @@ const AdoucisseursEauDePuits = () => {
                                 <div className="relative z-10 flex-1 p-10 lg:p-14 flex flex-col justify-between">
                                     <div className="space-y-6">
                                         <div className="w-12 h-1 bg-blue-600"></div>
-                                        <h3 className="text-3xl font-bold text-[#3d6aab] leading-tight max-w-[280px]">Confort et douceur sensorielle</h3>
+                                        <h3 className="text-3xl font-bold text-[#18448F] leading-tight max-w-[280px]">Confort et douceur sensorielle</h3>
                                         <p className="body-pro-max text-justify text-[15px] leading-relaxed max-w-xs text-slate-600 font-light">Offrez à votre famille le luxe d'une eau soyeuse qui hydrate profondément. Une sensation de douceur sur la peau.</p>
                                     </div>
                                     <div className="mt-12 -mx-10 lg:-mx-14 -mb-10 lg:-mb-14 h-64 overflow-hidden border-t border-slate-50">
@@ -336,10 +337,12 @@ const AdoucisseursEauDePuits = () => {
                                         <div className="absolute -top-10 -right-10 text-[240px] font-black text-slate-900/5 select-none pointer-events-none tracking-tighter italic">03</div>
                                         <div className="relative z-10 space-y-8">
                                             <div className="w-20 h-1.5 bg-blue-600"></div>
-                                            <h3 className="text-4xl lg:text-5xl font-black text-[#3d6aab] leading-[1.1]">Protection et longévité <br/> <span className="text-blue-600 italic font-light">de votre foyer</span></h3>
+                                            <h3 className="text-4xl lg:text-5xl font-black text-[#18448F] leading-[1.1]">Protection et longévité <br/> <span className="text-blue-600 italic font-light">de votre foyer</span></h3>
                                             <p className="body-pro-max text-justify text-lg leading-relaxed max-w-2xl text-slate-600 font-light">Dites adieu aux traces de rouille. Une protection active pour votre robinetterie de luxe et vos appareils haut de gamme.</p>
                                             <div className="pt-6">
-                                                <Button asChild><a href="/tests-eau">Protégez vos installations</a></Button>
+                                            <ProMaxButton asChild variant="primary">
+                                                <a href="/tests-eau">Protégez vos installations</a>
+                                            </ProMaxButton>
                                             </div>
                                         </div>
                                     </div>
@@ -362,7 +365,7 @@ const AdoucisseursEauDePuits = () => {
                             </span>
                             <h2 className="heading-pro-max">
                                 <span className="italic font-light text-blue-600 block text-center">Identifiez les signes de</span>
-                                <span className="font-bold text-[#3d6aab] block text-center uppercase tracking-tight">la dureté extrême.</span>
+                                <span className="font-bold text-[#18448F] block text-center uppercase tracking-tight">la dureté extrême.</span>
                             </h2>
                         </div>
 
@@ -451,7 +454,7 @@ const AdoucisseursEauDePuits = () => {
                                                     Cause : {s.cause}
                                                 </span>
                                             </div>
-                                            <h3 className="text-3xl font-black text-[#3d6aab] leading-[1.1] tracking-tight">
+                                            <h3 className="text-3xl font-black text-[#18448F] leading-[1.1] tracking-tight">
                                                 {s.problem}
                                             </h3>
                                             <p className="text-sm font-light text-slate-600 leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-700 delay-100 italic">
@@ -485,8 +488,8 @@ const AdoucisseursEauDePuits = () => {
                     <div className="container mx-auto px-6 text-left">
                         <div className="text-left mb-16">
                             <h2 className="mb-8 heading-pro-max text-left">
-                                <span className="italic font-light text-[#3d6aab] block text-left">Nos adoucisseurs d'eau</span>
-                                <span className="font-bold text-[#3d6aab] block text-left">résidentiels - Eau de puits</span>
+                                <span className="italic font-light text-[#18448F] block text-left">Nos adoucisseurs d'eau</span>
+                                <span className="font-bold text-[#18448F] block text-left">résidentiels - Eau de puits</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                             <p className="body-pro-max mt-8 text-justify w-full">Découvrez notre gamme exclusive d'adoucisseurs d'eau pour puits, conçue pour traiter les eaux souterraines complexes.</p>
@@ -506,7 +509,7 @@ const AdoucisseursEauDePuits = () => {
                                         <img src={p.image} alt={p.name} className="max-h-full object-contain group-hover:scale-110 transition-transform duration-1000 mix-blend-multiply" />
                                     </div>
                                     <div className="p-10 space-y-6 flex flex-col flex-grow border-t border-transparent group-hover:border-blue-600 transition-all duration-500">
-                                        <h3 className="text-2xl font-bold text-[#3d6aab] text-center whitespace-pre-line">{p.displayName || p.name}</h3>
+                                        <h3 className="text-2xl font-bold text-[#18448F] text-center whitespace-pre-line">{p.displayName || p.name}</h3>
                                         <p className="text-slate-500 text-sm leading-relaxed text-center italic font-light">{p.desc}</p>
                                         
                                         <div className="space-y-4 pt-4 border-t border-slate-50">
@@ -515,7 +518,7 @@ const AdoucisseursEauDePuits = () => {
                                                     <div className="w-6 h-6 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0 group-hover:bg-blue-600 transition-colors duration-500">
                                                         <CheckCircle2 className="w-3.5 h-3.5 text-blue-600 group-hover:text-white transition-colors" />
                                                     </div>
-                                                    <span className="text-sm text-slate-600 font-medium group-hover:text-[#3d6aab] transition-colors">{f}</span>
+                                                    <span className="text-sm text-slate-600 font-medium group-hover:text-[#18448F] transition-colors">{f}</span>
                                                 </div>
                                             ))}
                                         </div>
@@ -557,7 +560,7 @@ const AdoucisseursEauDePuits = () => {
                                         />
                                     </div>
                                     <div className="p-8 space-y-4 flex flex-col flex-grow border-t border-transparent group-hover:border-blue-600 transition-all">
-                                        <h3 className="text-xl font-bold text-[#3d6aab] text-center leading-tight whitespace-pre-line">
+                                        <h3 className="text-xl font-bold text-[#18448F] text-center leading-tight whitespace-pre-line">
                                             {p.displayName || p.name}
                                         </h3>
                                         <p className="text-slate-500 text-xs leading-relaxed text-center italic font-light">
@@ -596,7 +599,7 @@ const AdoucisseursEauDePuits = () => {
                                 alt="Installation professionnelle d'un adoucisseur d'eau Bricareau" 
                                 className="w-full h-[450px] md:h-[550px] lg:h-[650px] object-cover group-hover:scale-105 transition-transform duration-[3000ms] brightness-[1.2] contrast-[1.05]"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-r from-[#3d6aab]/70 via-[#3d6aab]/30 to-transparent p-8 md:p-12 lg:p-20 flex items-center">
+                            <div className="absolute inset-0 bg-gradient-to-r from-[#18448F]/70 via-[#18448F]/30 to-transparent p-8 md:p-12 lg:p-20 flex items-center">
                                 <div className="max-w-lg">
                                     <div className="flex items-center gap-3 text-blue-400 font-bold text-xs tracking-widest uppercase mb-6">
                                         <CheckCircle className="w-5 h-5" />
@@ -617,8 +620,8 @@ const AdoucisseursEauDePuits = () => {
                         <div className="text-center mb-16">
                             <span className="inline-block px-4 py-1.5 bg-blue-100 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-widest mb-6">ANALYSE COMPARATIVE</span>
                             <h2 className="heading-pro-max">
-                                <span className="italic font-light text-[#3d6aab] block">L'expertise technique</span>
-                                <span className="font-bold text-[#3d6aab] block">au service de votre puits.</span>
+                                <span className="italic font-light text-[#18448F] block">L'expertise technique</span>
+                                <span className="font-bold text-[#18448F] block">au service de votre puits.</span>
                             </h2>
                         </div>
                         <div className="overflow-x-visible relative text-left">
@@ -678,7 +681,7 @@ const AdoucisseursEauDePuits = () => {
                                                                 className="w-[120px] md:w-[140px] h-[100px] md:h-[120px] object-contain mx-auto mix-blend-multiply relative z-10 transition-transform duration-700 group-hover/img:scale-110"
                                                             />
                                                         </div>
-                                                        <div className="text-[13px] md:text-lg font-bold text-[#3d6aab]">{m.name}</div>
+                                                        <div className="text-[13px] md:text-lg font-bold text-[#18448F]">{m.name}</div>
                                                     </div>
                                                 </th>
                                             ))}
@@ -687,7 +690,7 @@ const AdoucisseursEauDePuits = () => {
                                     <tbody className="divide-y divide-slate-100 relative z-10">
                                         {comparisonData.map((row, i) => (
                                             <tr key={i} className="hover:bg-blue-50/30 transition-colors group">
-                                                <td className="p-6 md:p-10 font-bold text-[#3d6aab] bg-white sticky left-0 z-30 border-r border-slate-50 drop-shadow-sm lg:drop-shadow-none text-[12px] md:text-sm italic group-hover:text-blue-600 transition-colors">
+                                                <td className="p-6 md:p-10 font-bold text-[#18448F] bg-white sticky left-0 z-30 border-r border-slate-50 drop-shadow-sm lg:drop-shadow-none text-[12px] md:text-sm italic group-hover:text-blue-600 transition-colors">
                                                     {row.feature}
                                                 </td>
                                                 {["Sérénité HE", "Sentinelle HE", "Infiniti HE"].map((model, idx) => (
@@ -735,11 +738,18 @@ const AdoucisseursEauDePuits = () => {
                                 Contrôle de la Qualité D'EAU
                             </span>
                             <h2 className="heading-pro-max">
-                                <span className="italic font-light text-[#3d6aab] lg:text-white block tracking-tight">Des tests d'eau précis</span>
-                                <span className="text-[#3d6aab] lg:text-white italic font-bold font-serif">pour une tranquillité d'esprit.</span>
+                                <span className="italic font-light text-[#18448F] lg:text-white block tracking-tight">Des tests d'eau précis</span>
+                                <span className="text-[#18448F] lg:text-white italic font-bold font-serif">pour une tranquillité d'esprit.</span>
                             </h2>
                              <p className="font-light text-black lg:text-white/95 mb-8 max-w-xl text-lg mt-6 text-justify lg:text-left">Analyse approfondie pour identifier les minéraux et contaminants.</p>
-                            <div className="flex gap-4"><Button asChild><a href="/tests-eau">Demandez une analyse d'eau</a></Button></div>
+                            <div className="flex gap-4">
+                                <ProMaxButton 
+                                    asChild
+                                    variant="primary"
+                                >
+                                    <a href="/tests-eau">Demandez une analyse d'eau</a>
+                                </ProMaxButton>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -749,8 +759,8 @@ const AdoucisseursEauDePuits = () => {
                     filterProduct="/adoucisseurs-eau-de-puits"
                     title={
                         <h2 className="mb-16 heading-pro-max text-center">
-                            <span className="italic font-light text-[#3d6aab] block text-center">Là où le calcaire dictait sa loi,</span>
-                            <span className="font-bold text-[#3d6aab] block text-center">nos clients ont repris le contrôle.</span>
+                            <span className="italic font-light text-[#18448F] block text-center">Là où le calcaire dictait sa loi,</span>
+                            <span className="font-bold text-[#18448F] block text-center">nos clients ont repris le contrôle.</span>
                         </h2>
                     }
                 />
@@ -760,7 +770,7 @@ const AdoucisseursEauDePuits = () => {
                     <div className="container mx-auto px-6 text-left">
                         <div className="text-left mb-16">
                             <h2 className="mb-8 heading-pro-max text-center">
-                                <span className="font-bold text-[#3d6aab] block text-center">Découvrez les produits associés</span>
+                                <span className="font-bold text-[#18448F] block text-center">Découvrez les produits associés</span>
                             </h2>
                             <p className="body-pro-max text-gray-500 text-center mx-auto">
                                 Optimisez votre expérience de traitement d'eau avec nos solutions complémentaires.
@@ -811,7 +821,7 @@ const AdoucisseursEauDePuits = () => {
                                                     <img src={prod.img} alt={prod.name} className="max-h-full object-contain group-hover:scale-105 transition-transform duration-700 mix-blend-multiply" />
                                                 </div>
                                                 <div className="p-8 space-y-4 flex flex-col flex-grow border-t-2 border-transparent transition-all">
-                                                    <h3 className="card-title text-[#3d6aab]">{prod.name}</h3>
+                                                    <h3 className="card-title text-[#18448F]">{prod.name}</h3>
                                                     <p className="body-pro-max text-slate-500 flex-grow">{prod.desc}</p>
                                                     <div className="self-end">
                                                         <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-blue-600"><ArrowRight className="h-5 w-5" /></div>
@@ -827,7 +837,7 @@ const AdoucisseursEauDePuits = () => {
                 </section>
 
                 {/* 11. PREMIUM CTA SECTION - REBUILT FOR IMPACT */}
-                <section className="relative py-32 flex items-center overflow-hidden bg-[#3d6aab]">
+                <section className="relative py-32 flex items-center overflow-hidden bg-[#18448F]">
                   {/* Animated background elements */}
                   <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-blue-600/20 to-transparent skew-x-12 translate-x-1/4" />
                   <div className="absolute bottom-0 left-0 w-1/2 h-full bg-gradient-to-r from-cyan-400/10 to-transparent -skew-x-12 -translate-x-1/4" />
@@ -839,7 +849,7 @@ const AdoucisseursEauDePuits = () => {
                       alt="Expert Bricareau analysant vos options d'adoucissement"
                       className="w-full h-full object-cover grayscale brightness-150"
                     />
-                    <div className="absolute inset-0 bg-[#3d6aab]/10 backdrop-blur-sm" />
+                    <div className="absolute inset-0 bg-[#18448F]/10 backdrop-blur-sm" />
                   </div>
 
                   <div className="container mx-auto px-6 relative z-10">
@@ -857,18 +867,21 @@ const AdoucisseursEauDePuits = () => {
                       </div>
 
                       <div className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-4">
-                        <Button asChild>
+                        <ProMaxButton 
+                            asChild
+                            variant="white"
+                        >
                           <a href="tel:18552649328" className="flex items-center gap-3">
                             <Phone className="h-5 w-5 animate-bounce" />
                             Parlez à un expert
                           </a>
-                        </Button>
-                        <Button
-                          variant="outline"
+                        </ProMaxButton>
+                        <ProMaxButton
+                          variant="outline-white"
                           asChild
                         >
                           <NavLink to="/consultation">Planifiez une consultation</NavLink>
-                        </Button>
+                        </ProMaxButton>
                       </div>
 
                       <div className="pt-8 flex flex-col items-center gap-4">
@@ -887,8 +900,8 @@ const AdoucisseursEauDePuits = () => {
                     <div className="container mx-auto px-6 text-left">
                         <div className="text-left mb-16">
                             <h2 className="mb-8 heading-pro-max">
-                                <span className="italic font-light text-[#3d6aab] block">Pour vous éclairer</span>
-                                <span className="font-bold text-[#3d6aab] block">Questions fréquentes</span>
+                                <span className="italic font-light text-[#18448F] block">Pour vous éclairer</span>
+                                <span className="font-bold text-[#18448F] block">Questions fréquentes</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
@@ -902,7 +915,12 @@ const AdoucisseursEauDePuits = () => {
                                 ))}
                             </Accordion>
                             <div className="mt-12 text-center">
-                                <Button onClick={() => setShowAllFaqs(!showAllFaqs)} variant="outline">{showAllFaqs ? "Voir moins" : "Voir toutes les questions"}</Button>
+                                <ProMaxButton 
+                                    onClick={() => setShowAllFaqs(!showAllFaqs)} 
+                                    variant="primary"
+                                >
+                                    {showAllFaqs ? "Voir moins" : "Voir toutes les questions"}
+                                </ProMaxButton>
                             </div>
                         </div>
                     </div>
@@ -912,7 +930,7 @@ const AdoucisseursEauDePuits = () => {
                 <section className="py-24 bg-gray-50">
                     <div className="container mx-auto px-6 text-left">
                         <div className="text-left mb-16">
-                            <h2 className="mb-8 heading-pro-max"><span className="font-bold text-[#3d6aab] block">Ressources</span></h2>
+                            <h2 className="mb-8 heading-pro-max"><span className="font-bold text-[#18448F] block">Ressources</span></h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
                         <div 
@@ -948,7 +966,7 @@ const AdoucisseursEauDePuits = () => {
                                 <ChevronRight className="h-6 w-6" />
                             </Button>
 
-                            <div className="absolute right-2 text-sm font-black text-[#3d6aab] bg-blue-50/50 px-4 py-2 rounded-full border border-blue-100/50">
+                            <div className="absolute right-2 text-sm font-black text-[#18448F] bg-blue-50/50 px-4 py-2 rounded-full border border-blue-100/50">
                                 <span className="text-blue-600">{resourceIndex}</span>
                                 <span className="mx-1 text-slate-300">/</span>
                                 <span className="text-slate-400">{resources.length}</span>
@@ -959,20 +977,19 @@ const AdoucisseursEauDePuits = () => {
                             {/* Floating Sticky CTA - Phase III Conversion Focus */}
                                   <div className="hidden md:block fixed bottom-8 right-8 z-[100] animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-[3s] pointer-events-none">
                                     <div className="pointer-events-auto group/sticky">
-                                      <Button
+                                      <ProMaxButton
                                         asChild
-                                        className="bg-white hover:-translate-y-2 active:scale-95 transition-all duration-300 shadow-2xl"
-                                        style={{ backdropFilter: "blur(20px)" }}
+                                        variant="primary"
                                       >
                                         <a href="/consultation" className="flex items-center gap-4 animate-bounce" style={{ animationDuration: '3s' }}>
-                                          <span className="font-bold text-sm tracking-wider text-blue-600 whitespace-nowrap text-center">
+                                          <span className="font-bold text-sm tracking-wider whitespace-nowrap text-center">
                                             Réservez votre <br />consultation gratuite
                                           </span>
-                                          <div className="w-10 h-10 bg-[#3d6aab] rounded-full flex items-center justify-center text-white group-hover/sticky:rotate-[360deg] shadow-lg shadow-blue-200">
+                                          <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center text-white group-hover/sticky:rotate-[360deg] transition-all">
                                             <ArrowRight className="w-5 h-5" />
                                           </div>
                                         </a>
-                                      </Button>
+                                      </ProMaxButton>
                                     </div>
                                   </div>
             </main>

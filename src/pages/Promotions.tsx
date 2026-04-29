@@ -96,8 +96,8 @@ const Promotions = () => {
                                     fontStyle: 'normal'
                                 }}
                             >
-                                <span className="italic font-light text-[#3d6aab] block mb-2">Nos Promotions</span>
-                                <span className="font-black text-[#3d6aab]">en Cours.</span>
+                                <span className="italic font-light text-[#18448F] block mb-2">Nos Promotions</span>
+                                <span className="font-black text-[#18448F]">en Cours.</span>
                             </h1>
                             <p className="text-slate-700 font-light text-center max-w-xl mx-auto text-[18px] md:text-[20px] leading-relaxed">
                                 Profitez de nos offres exceptionnelles sur nos systèmes de traitement d'eau pour transformer votre quotidien.

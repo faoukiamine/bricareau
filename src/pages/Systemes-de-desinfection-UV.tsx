@@ -205,8 +205,8 @@ const DesinfectionUV = () => {
                                 </span>
                             </div>
                              <h2 className="mb-8 heading-pro-max text-left">
-                                 <span className="italic font-light text-[#3d6aab] block">Pourquoi la</span>
-                                 <span className="font-bold text-[#3d6aab] block">Désinfection UV ?</span>
+                                 <span className="italic font-light text-[#18448F] block">Pourquoi la</span>
+                                 <span className="font-bold text-[#18448F] block">Désinfection UV ?</span>
                              </h2>
                              <p className="text-lg text-slate-500 max-w-2xl font-light leading-relaxed text-justify lg:text-left">
                                  Une ingénierie de précision paramétrée pour éradiquer 99,99% des micro-organismes sans aucun additif chimique.
@@ -361,10 +361,10 @@ const DesinfectionUV = () => {
 
                                 <div className="pt-6 flex flex-col sm:flex-row gap-8 items-center border-t border-white/10">
                                     <div className="relative inline-block w-full sm:w-auto group">
-                                        <div className="absolute inset-0 border border-[#3d6aab] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                                        <div className="absolute inset-0 border border-[#18448F] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
                                         <Button 
                                             asChild 
-                                            className="relative w-full sm:w-auto bg-[#3d6aab] hover:bg-white hover:text-[#3d6aab] text-white rounded-[2rem] h-16 px-12 font-black uppercase tracking-widest text-xs transition-all border-none"
+                                            className="relative w-full sm:w-auto bg-[#18448F] hover:bg-white hover:text-[#18448F] text-white rounded-[2rem] h-16 px-12 font-black uppercase tracking-widest text-xs transition-all border-none"
                                         >
                                             <a href="/consultation">Évaluer la sécurité de mon eau</a>
                                         </Button>
@@ -406,8 +406,8 @@ const DesinfectionUV = () => {
                                 DIAGNOSTIC DE SÉCURITÉ
                             </span>
                             <h2 className="heading-pro-max">
-                                <span className="italic font-light text-[#3d6aab] block">Quelles menaces invisibles</span>
-                                <span className="font-bold text-[#3d6aab] block text-center uppercase tracking-tight">guettent votre puits ?</span>
+                                <span className="italic font-light text-[#18448F] block">Quelles menaces invisibles</span>
+                                <span className="font-bold text-[#18448F] block text-center uppercase tracking-tight">guettent votre puits ?</span>
                             </h2>
                         </div>
 
@@ -498,7 +498,7 @@ const DesinfectionUV = () => {
                                                     Risque : {s.cause}
                                                 </span>
                                             </div>
-                                            <h3 className="text-3xl font-black text-[#3d6aab] leading-[1.1] tracking-tight">
+                                            <h3 className="text-3xl font-black text-[#18448F] leading-[1.1] tracking-tight">
                                                 {s.problem}
                                             </h3>
                                             <p className="text-sm font-light text-slate-600 leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-700 delay-100">
@@ -534,8 +534,8 @@ const DesinfectionUV = () => {
                     <div className="container mx-auto px-6">
                         <div className="text-left mb-16">
                             <h2 className="mb-8 heading-pro-max text-left">
-                                <span className="italic font-light text-[#3d6aab] block">Nos systèmes de</span>
-                                <span className="font-bold text-[#3d6aab] block">désinfection UV</span>
+                                <span className="italic font-light text-[#18448F] block">Nos systèmes de</span>
+                                <span className="font-bold text-[#18448F] block">désinfection UV</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600 mb-12"></div>
 
@@ -593,7 +593,7 @@ const DesinfectionUV = () => {
                                 alt="Installation experte d'un système de désinfection UV Bricareau" 
                                 className="w-full h-[450px] md:h-[550px] lg:h-[650px] object-cover group-hover:scale-105 transition-transform duration-[3000ms] brightness-[1.2] contrast-[1.05]"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-r from-[#3d6aab]/70 via-[#3d6aab]/30 to-transparent p-8 md:p-12 lg:p-20 flex items-center">
+                            <div className="absolute inset-0 bg-gradient-to-r from-[#18448F]/70 via-[#18448F]/30 to-transparent p-8 md:p-12 lg:p-20 flex items-center">
                                 <div className="max-w-lg">
                                     <div className="flex items-center gap-3 text-blue-400 font-bold text-xs tracking-widest uppercase mb-6">
                                         <CheckCircle className="w-5 h-5" />
@@ -612,8 +612,8 @@ const DesinfectionUV = () => {
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
                             <h2 className="mb-8 heading-pro-max text-left">
-                                <span className="italic font-light text-[#3d6aab] block">Comparez nos systèmes</span>
-                                <span className="font-bold text-[#3d6aab] block">de stérilisation UV</span>
+                                <span className="italic font-light text-[#18448F] block">Comparez nos systèmes</span>
+                                <span className="font-bold text-[#18448F] block">de stérilisation UV</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
@@ -675,7 +675,7 @@ const DesinfectionUV = () => {
                                                             className="w-[120px] md:w-[140px] h-[100px] md:h-[120px] object-contain mx-auto mix-blend-multiply group-hover:scale-110 transition-transform duration-700 relative z-10"
                                                         />
                                                     </div>
-                                                    <span className="text-sm font-bold text-[#3d6aab] uppercase tracking-wider">{m.name}</span>
+                                                    <span className="text-sm font-bold text-[#18448F] uppercase tracking-wider">{m.name}</span>
                                                 </div>
                                             </th>
                                         ))}
@@ -742,18 +742,18 @@ const DesinfectionUV = () => {
                                 Contrôle de la Qualité D'EAU
                             </span>
                             <h2 className="mb-8 heading-pro-max text-left">
-                                <span className="italic font-light text-[#3d6aab] lg:text-white block">Des tests d'eau précis</span>
-                                <span className="text-[#3d6aab] lg:text-white italic font-bold font-serif">pour une tranquillité d'esprit totale.</span>
+                                <span className="italic font-light text-[#18448F] lg:text-white block">Des tests d'eau précis</span>
+                                <span className="text-[#18448F] lg:text-white italic font-bold font-serif">pour une tranquillité d'esprit totale.</span>
                             </h2>
                             <p className="font-light text-black lg:text-white/95 mb-8 max-w-xl text-justify lg:text-left">
                                 Ne devinez pas la qualité de votre eau. Nos analyses approfondies identifient les bactéries, les minéraux et les contaminants chimiques pour vous offrir une tranquillité d'esprit totale.
                             </p>
                             <div className="flex gap-4">
                                 <div className="relative inline-block w-full sm:w-auto group">
-                                    <div className="absolute inset-0 border border-[#3d6aab] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                                    <div className="absolute inset-0 border border-[#18448F] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
                                     <Button
                                         asChild
-                                        className="relative w-full sm:w-auto bg-[#3d6aab] hover:bg-white hover:text-[#3d6aab] text-white rounded-[2rem] h-16 px-12 font-black uppercase tracking-widest text-xs transition-all border-none"
+                                        className="relative w-full sm:w-auto bg-[#18448F] hover:bg-white hover:text-[#18448F] text-white rounded-[2rem] h-16 px-12 font-black uppercase tracking-widest text-xs transition-all border-none"
                                     >
                                         <a href="/tests-eau">Demandez une analyse d'eau</a>
                                     </Button>
@@ -768,8 +768,8 @@ const DesinfectionUV = () => {
                     filterProduct="/Systemes-de-desinfection-UV"
                     title={
                         <>
-                            <span className="italic font-light text-[#3d6aab] block text-center">Zéro bactérie,</span>
-                            <span className="font-bold text-[#3d6aab] block text-center">100 % sérénité.</span>
+                            <span className="italic font-light text-[#18448F] block text-center">Zéro bactérie,</span>
+                            <span className="font-bold text-[#18448F] block text-center">100 % sérénité.</span>
                         </>
                     }
                 />
@@ -778,7 +778,7 @@ const DesinfectionUV = () => {
                     <div className="container mx-auto px-4">
                         <div className="text-center mb-16">
                             <h2 className="mb-8 heading-pro-max text-center">
-                                <span className="font-bold text-[#3d6aab] block text-center">Découvrez les produits associés.</span>
+                                <span className="font-bold text-[#18448F] block text-center">Découvrez les produits associés.</span>
                             </h2>
                             <p className="body-pro-max text-gray-500 max-w-2xl mx-auto text-center">
                                 Optimisez votre expérience de traitement d'eau avec nos solutions complémentaires.
@@ -873,7 +873,7 @@ const DesinfectionUV = () => {
                                                     />
                                                 </div>
                                                 <div className="p-8 space-y-4 flex flex-col flex-grow border-t-2 border-transparent transition-all">
-                                                    <h3 className="card-title text-[#3d6aab]">{prod.name}</h3>
+                                                    <h3 className="card-title text-[#18448F]">{prod.name}</h3>
                                                     <p className="body-pro-max text-slate-500 flex-grow">{prod.desc}</p>
                                                     <div className="self-end">
                                                         <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-blue-600">
@@ -896,8 +896,8 @@ const DesinfectionUV = () => {
                     <div className="container mx-auto px-4 text-left">
                         <div className="text-left mb-16">
                             <h2 className="mb-8 heading-pro-max text-left">
-                                <span className="italic font-light text-[#3d6aab] block">Pour vous éclairer</span>
-                                <span className="font-bold text-[#3d6aab] block">Questions fréquentes</span>
+                                <span className="italic font-light text-[#18448F] block">Pour vous éclairer</span>
+                                <span className="font-bold text-[#18448F] block">Questions fréquentes</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
@@ -977,9 +977,9 @@ const DesinfectionUV = () => {
                             </Accordion>
                             <div className="mt-12 text-center">
                                 <div className="relative inline-block group">
-                                    <div className="absolute inset-0 border border-[#3d6aab] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                                    <div className="absolute inset-0 border border-[#18448F] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
                                     <Button
-                                        className="relative bg-[#3d6aab] hover:bg-white hover:text-[#3d6aab] text-white rounded-[2rem] h-16 px-12 font-black uppercase tracking-widest text-xs transition-all border-none"
+                                        className="relative bg-[#18448F] hover:bg-white hover:text-[#18448F] text-white rounded-[2rem] h-16 px-12 font-black uppercase tracking-widest text-xs transition-all border-none"
                                         onClick={() => setShowAllFaqs(!showAllFaqs)}
                                     >
                                         {showAllFaqs ? "Voir moins de questions" : "Voir toutes les questions"}
@@ -991,7 +991,7 @@ const DesinfectionUV = () => {
                 </section>
 
                 {/* 11. PREMIUM CTA SECTION - REBUILT FOR IMPACT */}
-                <section className="relative py-32 flex items-center overflow-hidden bg-[#3d6aab]">
+                <section className="relative py-32 flex items-center overflow-hidden bg-[#18448F]">
                   {/* Animated background elements */}
                   <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-blue-600/20 to-transparent skew-x-12 translate-x-1/4" />
                   <div className="absolute bottom-0 left-0 w-1/2 h-full bg-gradient-to-r from-cyan-400/10 to-transparent -skew-x-12 -translate-x-1/4" />
@@ -1003,7 +1003,7 @@ const DesinfectionUV = () => {
                       alt="Expert Bricareau analysant vos options de filtration"
                       className="w-full h-full object-cover grayscale brightness-150"
                     />
-                    <div className="absolute inset-0 bg-[#3d6aab]/10 backdrop-blur-sm" />
+                    <div className="absolute inset-0 bg-[#18448F]/10 backdrop-blur-sm" />
                   </div>
 
                   <div className="container mx-auto px-6 relative z-10">
@@ -1061,7 +1061,7 @@ const DesinfectionUV = () => {
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
                             <h2 className="mb-8 heading-pro-max text-left">
-                                <span className="font-bold text-[#3d6aab] block">Ressources</span>
+                                <span className="font-bold text-[#18448F] block">Ressources</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
@@ -1108,7 +1108,7 @@ const DesinfectionUV = () => {
                                 </Button>
                             </div>
                             
-                            <div className="absolute right-2 text-sm font-black text-[#3d6aab] bg-blue-50/50 px-4 py-2 rounded-full border border-blue-100/50">
+                            <div className="absolute right-2 text-sm font-black text-[#18448F] bg-blue-50/50 px-4 py-2 rounded-full border border-blue-100/50">
                                 <span className="text-blue-600">{resourceIndex}</span>
                                 <span className="mx-1 text-slate-300">/</span>
                                 <span className="text-slate-400">{resources.length}</span>
@@ -1131,7 +1131,7 @@ const DesinfectionUV = () => {
                     <span className="font-bold text-sm tracking-wider text-blue-600 whitespace-nowrap text-center">
                       Réservez votre <br />consultation gratuite
                     </span>
-                    <div className="w-10 h-10 bg-[#3d6aab] rounded-full flex items-center justify-center text-white group-hover/sticky:rotate-[360deg] shadow-lg shadow-blue-200">
+                    <div className="w-10 h-10 bg-[#18448F] rounded-full flex items-center justify-center text-white group-hover/sticky:rotate-[360deg] shadow-lg shadow-blue-200">
                       <ArrowRight className="w-5 h-5" />
                     </div>
                   </a>

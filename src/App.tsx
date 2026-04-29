@@ -98,7 +98,6 @@ import DesabonnementSucces from "./pages/DesabonnementSucces";
 
 import ResidentialServices from "./pages/ResidentialServices";
 import HotellerieRestauration from "./pages/HotellerieRestauration";
-import A1 from "./pages/A1";
 import Bureau from "./pages/Bureau";
 import WhyChooseUs from "./pages/WhyChooseUs";
 import Sustainability from "./pages/Sustainability";
@@ -193,7 +192,7 @@ const App = () => (
           <Route path="/conditions-generales-utilisation" element={<ConditionsGeneralesUtilisation />} />
           <Route path="/desabonnement" element={<Desabonnement />} />
           <Route path="/desabonnement-succes" element={<DesabonnementSucces />} />
-          <Route path="/A1" element={<A1 />} />
+
 
 
           {/* Blog Routes */}

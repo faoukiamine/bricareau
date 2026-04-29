@@ -178,8 +178,8 @@ const Contact = () => {
                                 Support Technique en ligne • Temps de réponse &lt; 15 min
                             </div>
                             <h1 className="leading-[1.1] md:leading-[1.2] tracking-tighter text-slate-900 max-w-2xl">
-                                <span className="italic font-light text-[#3d6aab] block mb-2">Comment pouvons-nous</span>
-                                <span className="font-bold text-[#3d6aab] block">vous aider ?</span>
+                                <span className="italic font-light text-[#18448F] block mb-2">Comment pouvons-nous</span>
+                                <span className="font-bold text-[#18448F] block">vous aider ?</span>
                             </h1>
                             <p className="font-light text-slate-600 max-w-xl text-lg leading-relaxed">
                                 Besoin d'une installation, d'une réparation ou d'un simple changement de filtres ? 

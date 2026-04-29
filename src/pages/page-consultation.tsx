@@ -84,11 +84,11 @@ const PageConsultation = () => {
                                     { icon: Star, title: "Satisfaction", text: "Plus de 20,000 foyers", delay: "delay-500" }
                                 ].map((item, i) => (
                                     <div key={i} className={cn("flex flex-col gap-3 group animate-in fade-in slide-in-from-bottom-4 duration-700 fill-mode-both", item.delay)}>
-                                        <div className="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all duration-500">
+                                        <div className="w-10 h-10 rounded-xl bg-[#18448F]/10 flex items-center justify-center text-[#18448F] group-hover:bg-[#18448F] group-hover:text-white transition-all duration-500">
                                             <item.icon className="w-5 h-5" />
                                         </div>
                                         <div>
-                                            <h4 className="font-bold text-[#3d6aab] text-sm uppercase tracking-wider">{item.title}</h4>
+                                            <h4 className="font-bold text-[#18448F] text-sm uppercase tracking-wider">{item.title}</h4>
                                             <p className="text-slate-500 text-xs font-light">{item.text}</p>
                                         </div>
                                     </div>
@@ -97,13 +97,13 @@ const PageConsultation = () => {
 
                              {/* Editorial Testimonial in Column */}
                              <div className="pt-12 border-t border-slate-100 animate-in fade-in duration-1000 delay-700">
-                                 <Quote className="w-10 h-10 text-blue-600 mb-4" />
+                                 <Quote className="w-10 h-10 text-[#18448F] mb-4" />
                                  <p className="text-xl font-light italic text-slate-500 leading-relaxed mb-6">
                                     "Une approche humaine et technique qui a totalement changé notre vision du traitement de l'eau. Simple, efficace et sans aucune pression."
                                  </p>
                                  <div className="flex items-center gap-4">
                                      <div>
-                                         <p className="font-bold text-[#3d6aab] text-sm uppercase">Marc-Antoine D.</p>
+                                         <p className="font-bold text-[#18448F] text-sm uppercase">Marc-Antoine D.</p>
                                          <p className="text-slate-400 text-[10px] uppercase font-bold tracking-widest">Client Privé • Montréal</p>
                                      </div>
                                  </div>
@@ -114,11 +114,11 @@ const PageConsultation = () => {
                         <div className="w-full lg:w-8/12 animate-in fade-in slide-in-from-right duration-1000">
                             <div className="relative">
                                 {/* Decorative Blobs */}
-                                <div className="absolute -top-20 -right-20 w-64 h-64 bg-blue-100 rounded-full blur-3xl opacity-50 -z-10 animate-pulse"></div>
-                                <div className="absolute -bottom-20 -left-20 w-48 h-48 bg-blue-50 rounded-full blur-3xl opacity-50 -z-10"></div>
+                                <div className="absolute -top-20 -right-20 w-64 h-64 bg-[#18448F]/10 rounded-full blur-3xl opacity-50 -z-10 animate-pulse"></div>
+                                <div className="absolute -bottom-20 -left-20 w-48 h-48 bg-[#18448F]/5 rounded-full blur-3xl opacity-50 -z-10"></div>
                                 
                                 <div className="bg-white p-4 md:p-8 lg:p-12 rounded-[2.5rem] lg:rounded-[3.5rem] shadow-[0_22px_70px_4px_rgba(0,0,0,0.08)] border border-slate-50 relative overflow-hidden backdrop-blur-sm">
-                                    <div className="absolute top-0 left-0 w-2 h-full bg-blue-600"></div>
+                                    <div className="absolute top-0 left-0 w-2 h-full bg-[#18448F]"></div>
                                     <ConsultationFormSection isStandalone={true} />
                                 </div>
                             </div>
@@ -131,8 +131,8 @@ const PageConsultation = () => {
                     <div className="container mx-auto px-4 lg:px-6">
                         <div className="text-center mb-16 max-w-2xl mx-auto">
                             <h3 className="heading-pro-max mb-6">
-                                <span className="italic font-light text-[#3d6aab] block">Le parcours de</span>
-                                <span className="font-bold text-[#3d6aab] block">votre consultation</span>
+                                <span className="italic font-light text-[#18448F] block">Le parcours de</span>
+                                <span className="font-bold text-[#18448F] block">votre consultation</span>
                             </h3>
                             <p className="text-slate-500 font-light">Simple, transparent et professionnel. Voici comment nous préparons votre solution.</p>
                         </div>
@@ -148,12 +148,12 @@ const PageConsultation = () => {
                                 { step: "04", icon: Clock, title: "Rapport Dédié", desc: "Recevez votre solution personnalisée." }
                             ].map((process, i) => (
                                 <div key={i} className="flex flex-col items-center text-center space-y-4 bg-white p-8 rounded-[2.5rem] border border-slate-100 shadow-sm hover:shadow-xl transition-all hover:-translate-y-2 group">
-                                    <div className="w-16 h-16 rounded-3xl bg-blue-600 text-white flex items-center justify-center shadow-lg shadow-blue-200 group-hover:rotate-6 transition-transform">
+                                    <div className="w-16 h-16 rounded-3xl bg-[#18448F] text-white flex items-center justify-center shadow-lg shadow-[#18448F]/20 group-hover:rotate-6 transition-transform">
                                         <process.icon className="w-8 h-8" />
                                     </div>
                                     <div className="space-y-2">
-                                        <span className="text-[10px] font-black text-blue-600 uppercase tracking-[0.2em]">{process.step}</span>
-                                        <h4 className="font-bold text-[#3d6aab] text-base mb-1">{process.title}</h4>
+                                        <span className="text-[10px] font-black text-[#18448F] uppercase tracking-[0.2em]">{process.step}</span>
+                                        <h4 className="font-bold text-[#18448F] text-base mb-1">{process.title}</h4>
                                         <p className="text-slate-500 text-xs leading-relaxed font-light">{process.desc}</p>
                                     </div>
                                 </div>
@@ -168,8 +168,8 @@ const PageConsultation = () => {
                 <div className="container mx-auto px-4 lg:px-6">
                     <div className="text-center mb-16 max-w-4xl mx-auto">
                         <h2 className="heading-pro-max mb-8">
-                            <span className="italic font-light text-[#3d6aab] block">Comment se déroule</span>
-                            <span className="font-bold text-[#3d6aab] block">notre consultation ?</span>
+                            <span className="italic font-light text-[#18448F] block">Comment se déroule</span>
+                            <span className="font-bold text-[#18448F] block">notre consultation ?</span>
                         </h2>
                         <p className="text-slate-600 font-light">
                             Voici les questions les plus fréquentes concernant notre processus d'évaluation gratuite.
@@ -199,9 +199,9 @@ const PageConsultation = () => {
 
                         <div className="mt-12 text-center">
                             <div className="relative inline-block group">
-                                <div className="absolute inset-0 border border-[#3d6aab] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                                <div className="absolute inset-0 border border-[#18448F] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
                                 <Button
-                                    className="relative bg-[#3d6aab] hover:bg-white hover:text-[#3d6aab] text-white rounded-[2rem] h-16 px-12 font-black uppercase tracking-widest text-xs transition-all border-none"
+                                    className="relative bg-[#18448F] hover:bg-white hover:text-[#18448F] text-white rounded-[2rem] h-16 px-12 font-black uppercase tracking-widest text-xs transition-all border-none"
                                     onClick={() => setShowAllFaqs(!showAllFaqs)}
                                 >
                                     {showAllFaqs ? "Voir moins de questions" : "Voir toutes les questions"}

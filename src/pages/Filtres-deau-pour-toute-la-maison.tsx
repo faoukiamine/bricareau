@@ -5,6 +5,7 @@ import ExpertAvatars from "@/components/ExpertAvatars";
 import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 import Footer from "@/components/Footer";
 import TestimonialsSection from "@/components/TestimonialsSection";
+import { ProMaxButton } from "@/components/ui/ProMaxButton";
 import { Button } from "@/components/ui/button";
 import heroFilter from "@/assets/12605.jpg";
 import FilteredcitywaterImg from "@/assets/2150084031.jpg";
@@ -203,8 +204,8 @@ const FiltresTouteMaison = () => {
                                 L'EAU DE MUNICIPALITÉ DÉCRYPTÉE
                             </span>
                              <h2 className="mb-8 heading-pro-max text-center">
-                                <span className="italic font-light text-[#3d6aab] block">L'invisible menace sous</span>
-                                <span className="font-bold text-[#3d6aab] block">votre robinet quotidien.</span>
+                                <span className="italic font-light text-[#18448F] block">L'invisible menace sous</span>
+                                <span className="font-bold text-[#18448F] block">votre robinet quotidien.</span>
                             </h2>
                             <p className="body-pro-max text-slate-500 text-center mx-auto">
                                 Vos sens vous alertent : une odeur de chlore, une peau qui tiraille, ou des dépôts suspects. Identifiez votre symptôme et découvrez le bouclier Bricareau adapté.
@@ -263,7 +264,7 @@ const FiltresTouteMaison = () => {
                                     <div className="px-4 pb-4 space-y-4">
                                         <div className="space-y-1">
                                             <span className="text-[10px] font-black text-blue-600 uppercase tracking-widest">{item.benefit}</span>
-                                            <h3 className="text-2xl font-bold text-[#3d6aab] leading-tight group-hover:text-blue-600 transition-colors">
+                                            <h3 className="text-2xl font-bold text-[#18448F] leading-tight group-hover:text-blue-600 transition-colors">
                                                 {item.title}
                                             </h3>
                                         </div>
@@ -289,8 +290,8 @@ const FiltresTouteMaison = () => {
                     <div className="container mx-auto px-6">
                         <div className="text-left mb-16">
                             <h2 className="mb-8 heading-pro-max text-left">
-                                <span className="italic font-light text-[#3d6aab] block text-left">Nos filtres d'eau</span>
-                                <span className="font-bold text-[#3d6aab] block text-left">spécialisés - Eau municipale</span>
+                                <span className="italic font-light text-[#18448F] block text-left">Nos filtres d'eau</span>
+                                <span className="font-bold text-[#18448F] block text-left">spécialisés - Eau municipale</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600 mb-8"></div>
                             <p className="body-pro-max mb-8 text-justify">
@@ -338,7 +339,7 @@ const FiltresTouteMaison = () => {
                                 alt="Installation professionnelle d'un adoucisseur d'eau Bricareau" 
                                 className="w-full h-[450px] md:h-[550px] lg:h-[650px] object-cover group-hover:scale-105 transition-transform duration-[3000ms] brightness-[1.1] contrast-[1.05]"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-r from-[#3d6aab]/80 via-[#3d6aab]/40 to-transparent p-8 md:p-12 lg:p-20 flex items-center lg:pt-32">
+                            <div className="absolute inset-0 bg-gradient-to-r from-[#18448F]/80 via-[#18448F]/40 to-transparent p-8 md:p-12 lg:p-20 flex items-center lg:pt-32">
                                 <div className="max-w-lg">
                                     <div className="flex items-center gap-3 text-blue-400 font-bold text-xs tracking-widest uppercase mb-6">
                                         <CheckCircle className="w-5 h-5" />
@@ -359,8 +360,8 @@ const FiltresTouteMaison = () => {
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
                             <h2 className="mb-8 heading-pro-max text-left">
-                                <span className="italic font-light text-[#3d6aab] block text-left">Comparez nos filtres d'eau</span>
-                                <span className="font-bold text-[#3d6aab] block text-left">spécialisés pour l'eau municipale</span>
+                                <span className="italic font-light text-[#18448F] block text-left">Comparez nos filtres d'eau</span>
+                                <span className="font-bold text-[#18448F] block text-left">spécialisés pour l'eau municipale</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
@@ -419,7 +420,7 @@ const FiltresTouteMaison = () => {
                                                                 className="w-[140px] md:w-[180px] h-[100px] md:h-[140px] object-contain mx-auto mix-blend-multiply relative z-10 transition-transform duration-700 group-hover/img:scale-110"
                                                             />
                                                         </div>
-                                                        <div className="text-[13px] md:text-lg font-bold text-[#3d6aab] max-w-[150px] mx-auto leading-tight">{m.name.replace("Filtre d'eau ", "")}</div>
+                                                        <div className="text-[13px] md:text-lg font-bold text-[#18448F] max-w-[150px] mx-auto leading-tight">{m.name.replace("Filtre d'eau ", "")}</div>
                                                     </div>
                                                 </th>
                                             ))}
@@ -428,7 +429,7 @@ const FiltresTouteMaison = () => {
                                     <tbody className="divide-y divide-slate-100 relative z-10">
                                         {comparisonData.map((row, i) => (
                                             <tr key={i} className="hover:bg-blue-50/30 transition-colors group">
-                                                <td className="p-6 md:p-10 font-bold text-[#3d6aab] bg-white sticky left-0 z-30 border-r border-slate-50 drop-shadow-sm lg:drop-shadow-none text-[12px] md:text-sm italic group-hover:text-blue-600 transition-colors">
+                                                <td className="p-6 md:p-10 font-bold text-[#18448F] bg-white sticky left-0 z-30 border-r border-slate-50 drop-shadow-sm lg:drop-shadow-none text-[12px] md:text-sm italic group-hover:text-blue-600 transition-colors">
                                                     {row.feature}
                                                 </td>
                                                 {["vortex", "chlorstop", "ironshield"].map((model, idx) => (
@@ -484,19 +485,19 @@ const FiltresTouteMaison = () => {
                                 Contrôle de la Qualité D'EAU
                             </span>
                              <h2 className="mb-8 heading-pro-max">
-                                <span className="italic font-light text-[#3d6aab] lg:text-white block">L'excellence commence par</span>
-                                <span className="text-[#3d6aab] lg:text-white italic font-bold font-serif">une eau parfaite.</span>
+                                <span className="italic font-light text-[#18448F] lg:text-white block">L'excellence commence par</span>
+                                <span className="text-[#18448F] lg:text-white italic font-bold font-serif">une eau parfaite.</span>
                             </h2>
                             <p className="font-light text-black lg:text-white/95 mb-8 max-w-xl text-justify lg:text-left">
                                 Le luxe, c'est de ne pas avoir à se soucier de la qualité de ce que l'on consomme. Offrez-vous la sérénité d'une eau analysée par des experts, pour une maison où tout brille, sans effort et sans compromis.
                             </p>
                             <div className="flex gap-4">
                                 <div className="flex gap-4">
-                                                <Button
+                                                <ProMaxButton
                                                   asChild
                                                 >
                                                   <a href="/tests-eau">Demandez une analyse d'eau</a>
-                                                </Button>
+                                                </ProMaxButton>
                                 </div>
                             </div>
                         </div>
@@ -508,8 +509,8 @@ const FiltresTouteMaison = () => {
                     filterProduct="/filtres-deau-pour-toute-la-maison"
                     title={
                         <>
-                            <span className="italic font-light text-[#3d6aab] block text-center">Fini le chlore et les contaminants,</span>
-                            <span className="font-bold text-[#3d6aab] block text-center">la métamorphose vue par nos clients.</span>
+                            <span className="italic font-light text-[#18448F] block text-center">Fini le chlore et les contaminants,</span>
+                            <span className="font-bold text-[#18448F] block text-center">la métamorphose vue par nos clients.</span>
                         </>
                     }
                 />
@@ -519,8 +520,8 @@ const FiltresTouteMaison = () => {
                     <div className="container mx-auto px-6">
                         <div className="text-left mb-16">
                             <h2 className="mb-8 heading-pro-max text-left">
-                                <span className="italic font-light text-[#3d6aab] block">Pour vous éclairer</span>
-                                <span className="font-bold text-[#3d6aab] block">Questions fréquentes</span>
+                                <span className="italic font-light text-[#18448F] block">Pour vous éclairer</span>
+                                <span className="font-bold text-[#18448F] block">Questions fréquentes</span>
                             </h2>
 
                             <div className="w-24 h-1 bg-blue-600"></div>
@@ -539,18 +540,18 @@ const FiltresTouteMaison = () => {
                                 ))}
                             </Accordion>
                             <div className="mt-12 text-center">
-                                <Button
-                                                  onClick={() => setShowAllFaqs(!showAllFaqs)}
-                                                >
-                                                  {showAllFaqs ? "Voir moins de questions" : "Voir toutes les questions"}
-                                </Button>
+                                <ProMaxButton
+                                    onClick={() => setShowAllFaqs(!showAllFaqs)}
+                                >
+                                    {showAllFaqs ? "Voir moins de questions" : "Voir toutes les questions"}
+                                </ProMaxButton>
                             </div>
                         </div>
                     </div>
                 </section>
 
                 {/* 9. PREMIUM CTA SECTION */}
-                <section className="relative py-32 flex items-center overflow-hidden bg-[#3d6aab]">
+                <section className="relative py-32 flex items-center overflow-hidden bg-[#18448F]">
                     {/* Animated background elements */}
                     <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-blue-600/20 to-transparent skew-x-12 translate-x-1/4" />
                     <div className="absolute bottom-0 left-0 w-1/2 h-full bg-gradient-to-r from-cyan-400/10 to-transparent -skew-x-12 -translate-x-1/4" />
@@ -562,7 +563,7 @@ const FiltresTouteMaison = () => {
                             alt="Problématique d'eau dure sur la robinetterie - Solution Bricareau"
                             className="w-full h-full object-cover grayscale brightness-150"
                         />
-                        <div className="absolute inset-0 bg-[#3d6aab]/10 backdrop-blur-sm" />
+                        <div className="absolute inset-0 bg-[#18448F]/10 backdrop-blur-sm" />
                     </div>
 
                     <div className="container mx-auto px-6 relative z-10">
@@ -581,18 +582,18 @@ const FiltresTouteMaison = () => {
                             </div>
 
                             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-4">
-                                <Button asChild>
+                                <ProMaxButton asChild variant="white">
                                     <a href="tel:18552649328" className="flex items-center gap-3">
                                         <Phone className="h-5 w-5 animate-bounce" />
                                         Parlez à un expert
                                     </a>
-                                </Button>
-                                <Button
-                                    variant="outline"
+                                </ProMaxButton>
+                                <ProMaxButton
+                                    variant="outline-white"
                                     asChild
                                 >
                                     <NavLink to="/consultation">Planifiez une consultation</NavLink>
-                                </Button>
+                                </ProMaxButton>
                             </div>
 
                             <div className="pt-8 flex flex-col items-center gap-4">
@@ -610,7 +611,7 @@ const FiltresTouteMaison = () => {
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
                             <h2 className="mb-8 heading-pro-max text-left">
-                                <span className="font-bold text-[#3d6aab] block text-left">Ressources</span>
+                                <span className="font-bold text-[#18448F] block text-left">Ressources</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
@@ -665,7 +666,7 @@ const FiltresTouteMaison = () => {
                                 <ChevronRight className="h-6 w-6" />
                             </Button>
 
-                            <div className="absolute right-2 text-sm font-black text-[#3d6aab] bg-blue-50/50 px-4 py-2 rounded-full border border-blue-100/50">
+                            <div className="absolute right-2 text-sm font-black text-[#18448F] bg-blue-50/50 px-4 py-2 rounded-full border border-blue-100/50">
                                 <span className="text-blue-600">{resourceIndex}</span>
                                 <span className="mx-1 text-slate-300">/</span>
                                 <span className="text-slate-400">{resources.length}</span>
@@ -680,22 +681,21 @@ const FiltresTouteMaison = () => {
 
             {/* Floating Sticky CTA - Phase III Conversion Focus */}
             <div className="hidden md:block fixed bottom-8 right-8 z-[100] animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-[3s] pointer-events-none">
-              <div className="pointer-events-auto group/sticky">
-                <Button
+                <ProMaxButton
                   asChild
-                  className="bg-white hover:-translate-y-2 transition-all duration-10000 active:scale-95"
+                  variant="white"
+                  className="rounded-[2.5rem] h-16 px-8 shadow-2xl transition-all border-none"
                   style={{ backdropFilter: "blur(20px)" }}
                 >
-                  <a href="/consultation" className="flex items-center gap-4 animate-bounce" style={{ animationDuration: '3s' }}>
-                    <span className="font-bold text-sm tracking-wider text-blue-600 whitespace-nowrap text-center">
+                  <a href="/consultation" className="flex items-center gap-4">
+                    <span className="font-black text-[10px] uppercase tracking-[0.2em] text-[#18448F] whitespace-nowrap text-left leading-relaxed">
                       Réservez votre <br />consultation gratuite
                     </span>
-                    <div className="w-10 h-10 bg-[#3d6aab] rounded-full flex items-center justify-center text-white group-hover/sticky:rotate-[360deg] shadow-lg shadow-blue-200">
+                    <div className="w-10 h-10 bg-[#18448F] rounded-full flex items-center justify-center text-white group-hover:rotate-[360deg] transition-transform duration-700 shadow-lg shadow-blue-200">
                       <ArrowRight className="w-5 h-5" />
                     </div>
-                            </a>
-                </Button>
-              </div>
+                  </a>
+                </ProMaxButton>
             </div>
         </div>
     );

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Header from "@/components/Header";
 import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 import Footer from "@/components/Footer";
+import { ProMaxButton } from "@/components/ui/ProMaxButton";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -195,9 +196,13 @@ const ContactEntreprises = () => {
                   </div>
                 </div>
 
-                <Button type="submit">
+                <ProMaxButton 
+                  type="submit"
+                  variant="primary"
+                  className="w-full"
+                >
                   Envoyez
-                </Button>
+                </ProMaxButton>
               </form>
             </div>
           </div>

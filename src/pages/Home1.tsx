@@ -156,8 +156,8 @@ const Home1 = () => {
                         <div className="space-y-6">
                             <h1 className="mb-6 animate-in fade-in slide-in-from-left duration-1000 tracking-tighter"
                                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif', fontSize: '50px', lineHeight: '55px' }}>
-                                <span className="italic font-light text-[#3d6aab] block">Bricareau,</span>
-                                <span className="font-bold text-[#3d6aab] block">votre partenaire d'excellence.</span>
+                                <span className="italic font-light text-[#18448F] block">Bricareau,</span>
+                                <span className="font-bold text-[#18448F] block">votre partenaire d'excellence.</span>
                             </h1>
                             
                             <p className="max-w-xl animate-in fade-in slide-in-from-left duration-1000 delay-100 text-left text-slate-600 text-lg md:text-xl font-light leading-relaxed">
@@ -166,9 +166,9 @@ const Home1 = () => {
 
                             <div className="flex flex-col sm:flex-row items-start gap-8 pt-4">
                                 <div className="relative inline-block w-full sm:w-auto group">
-                                    <div className="absolute inset-0 border border-[#3d6aab] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                                    <div className="absolute inset-0 border border-[#18448F] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
                                     <Button
-                                        className="relative w-full sm:w-auto bg-[#3d6aab] hover:bg-white hover:text-[#3d6aab] text-white rounded-[2rem] h-[3.25rem] px-8 font-black uppercase tracking-[0.1em] text-[11px] transition-all border-none"
+                                        className="relative w-full sm:w-auto bg-[#18448F] hover:bg-white hover:text-[#18448F] text-white rounded-[2rem] h-[3.25rem] px-8 font-black uppercase tracking-[0.1em] text-[11px] transition-all border-none"
                                         onClick={() => navigate("/consultation")}
                                     >
                                         Planifiez une consultation gratuite
@@ -176,10 +176,10 @@ const Home1 = () => {
                                 </div>
                                 
                                 <div className="relative inline-block w-full sm:w-auto group">
-                                    <div className="absolute inset-0 border border-[#3d6aab] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                                    <div className="absolute inset-0 border border-[#18448F] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
                                     <Button
                                         asChild
-                                        className="relative w-full sm:w-auto bg-[#3d6aab] hover:bg-white hover:text-[#3d6aab] text-white rounded-[2rem] h-[3.25rem] px-8 font-black uppercase tracking-[0.1em] text-[11px] transition-all border-none"
+                                        className="relative w-full sm:w-auto bg-[#18448F] hover:bg-white hover:text-[#18448F] text-white rounded-[2rem] h-[3.25rem] px-8 font-black uppercase tracking-[0.1em] text-[11px] transition-all border-none"
                                     >
                                         <a href="tel:18552649328" className="flex items-center justify-center gap-2">
                                             <Phone className="w-5 h-5 flex-shrink-0" />
@@ -194,7 +194,7 @@ const Home1 = () => {
             </section>
 
             {/* Partner Ribbon */}
-            <section className="bg-[#3d6aab] py-10 overflow-hidden border-y border-[#3d6aab]/20">
+            <section className="bg-[#18448F] py-10 overflow-hidden border-y border-[#18448F]/20">
                 <div className="w-full relative">
                     <div className="flex w-max animate-marquee gap-16 opacity-60 grayscale hover:opacity-100 transition-opacity duration-700">
                         {/* First Set */}
@@ -247,7 +247,7 @@ const Home1 = () => {
                                     <Button
                                         variant="outline"
                                         size="icon"
-                                        className="rounded-full bg-white border-none w-10 h-10 group-hover:bg-[#3d6aab] group-hover:text-white transition-colors"
+                                        className="rounded-full bg-white border-none w-10 h-10 group-hover:bg-[#18448F] group-hover:text-white transition-colors"
                                         onClick={() => navigate(sector.href)}
                                     >
                                         <ChevronRight className="w-5 h-5" />
@@ -263,7 +263,7 @@ const Home1 = () => {
             <section className="py-24 bg-white overflow-hidden relative">
                 <div className="container mx-auto px-4">
                     <div className="text-center max-w-3xl mx-auto mb-20">
-                        <span className="text-[#3d6aab] font-bold text-xs uppercase tracking-[0.3em] mb-4 block">Notre Expertise</span>
+                        <span className="text-[#18448F] font-bold text-xs uppercase tracking-[0.3em] mb-4 block">Notre Expertise</span>
                         <h2 className="text-5xl font-black text-[#0f172a] mb-6 leading-tight">Découvrez la différence Bricareau</h2>
                         <p className="text-slate-600 text-lg sm:text-xl font-light leading-relaxed max-w-2xl mx-auto">
                             Découvrez une fusion unique entre technologie de pointe et expertise humaine.
@@ -275,8 +275,8 @@ const Home1 = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-6xl mx-auto">
                         {features.map((feature, index) => (
                             <div key={index} className="flex flex-col items-center text-center p-8 rounded-3xl hover:bg-slate-50 transition-all group border border-transparent hover:border-slate-100 shadow-sm hover:shadow-md h-full">
-                                <div className="w-16 h-16 rounded-2xl bg-blue-50 flex items-center justify-center mb-8 group-hover:bg-[#3d6aab] transition-colors shadow-sm">
-                                    <feature.icon className="w-8 h-8 text-[#3d6aab] group-hover:text-white transition-colors" />
+                                <div className="w-16 h-16 rounded-2xl bg-blue-50 flex items-center justify-center mb-8 group-hover:bg-[#18448F] transition-colors shadow-sm">
+                                    <feature.icon className="w-8 h-8 text-[#18448F] group-hover:text-white transition-colors" />
                                 </div>
                                 <h3 className="text-xl font-bold text-[#0f172a] mb-4 min-h-[3.5rem] flex items-center justify-center">{feature.title}</h3>
                                 <p className="text-slate-600 leading-relaxed font-medium text-sm flex-1">
@@ -288,9 +288,9 @@ const Home1 = () => {
 
                     <div className="text-center mt-20">
                         <div className="relative inline-block w-full sm:w-auto group">
-                            <div className="absolute inset-0 border border-[#3d6aab] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                            <div className="absolute inset-0 border border-[#18448F] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
                             <Button
-                                className="relative w-full sm:w-auto bg-[#3d6aab] hover:bg-white hover:text-[#3d6aab] text-white rounded-[2rem] h-[3.25rem] px-10 font-black uppercase tracking-widest text-[11px] transition-all border-none"
+                                className="relative w-full sm:w-auto bg-[#18448F] hover:bg-white hover:text-[#18448F] text-white rounded-[2rem] h-[3.25rem] px-10 font-black uppercase tracking-widest text-[11px] transition-all border-none"
                                 onClick={() => navigate("/pourquoi-choisir-bricareau")}
                             >
                                 Pourquoi nous choisir ?
@@ -301,7 +301,7 @@ const Home1 = () => {
             </section>
 
             {/* Solution Finder Section */}
-            <section className="py-16 sm:py-20 bg-[#3d6aab]">
+            <section className="py-16 sm:py-20 bg-[#18448F]">
                 <div className="container mx-auto px-4 max-w-5xl">
                     <div className="flex flex-col gap-6">
                         <div className="text-left mb-2">
@@ -337,7 +337,7 @@ const Home1 = () => {
                                 <div className="relative inline-block w-full md:w-auto group">
                                     <div className="absolute inset-0 border border-white rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
                                     <Button
-                                        className="relative w-full md:w-auto bg-white hover:bg-[#3d6aab] text-[#3d6aab] hover:text-white rounded-[2rem] h-[3.25rem] px-8 font-black uppercase tracking-[0.1em] text-[11px] transition-all border-none"
+                                        className="relative w-full md:w-auto bg-white hover:bg-[#18448F] text-[#18448F] hover:text-white rounded-[2rem] h-[3.25rem] px-8 font-black uppercase tracking-[0.1em] text-[11px] transition-all border-none"
                                         onClick={() => navigate(productRouteMap[selectedProduit] || "/contact")}
                                     >
                                         PARCOURIR NOS SOLUTIONS
@@ -365,7 +365,7 @@ const Home1 = () => {
                         {/* Dot Pattern Background */}
                         <div
                             className="absolute top-0 left-0 w-80 h-80 opacity-50 -translate-x-12 -translate-y-12 z-0"
-                            style={{ backgroundImage: 'radial-gradient(#3d6aab 2px, transparent 2px)', backgroundSize: '12px 12px' }}
+                            style={{ backgroundImage: 'radial-gradient(#18448F 2px, transparent 2px)', backgroundSize: '12px 12px' }}
                         />
 
                         <div className="flex flex-col lg:flex-row relative">
@@ -424,7 +424,7 @@ const Home1 = () => {
                         {/* Circular Badge */}
                         <div className="absolute right-4 sm:right-12 lg:right-24 bottom-16 sm:bottom-12 z-20">
                             <div className="relative w-32 h-32 flex items-center justify-center animate-[spin_15s_linear_infinite] bg-white/90 backdrop-blur-sm rounded-full p-2 shadow-2xl">
-                                <svg viewBox="0 0 100 100" className="w-full h-full absolute inset-0 text-[#3d6aab] font-sans overflow-visible">
+                                <svg viewBox="0 0 100 100" className="w-full h-full absolute inset-0 text-[#18448F] font-sans overflow-visible">
                                     <path id="circlePath" d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0" fill="none" />
                                     <text fontSize="8.5" fontWeight="900" letterSpacing="0.16em" fill="currentcolor">
                                         <textPath href="#circlePath" startOffset="0%" textAnchor="start">
@@ -447,9 +447,9 @@ const Home1 = () => {
                 <div className="container mx-auto px-4 relative z-10 text-center">
                     <h2 className="text-6xl font-black text-[#0f172a] mb-12 max-w-4xl mx-auto leading-tight uppercase tracking-tighter">Laissez-nous vous aider à trouver la solution adaptée.</h2>
                     <div className="relative inline-block group">
-                        <div className="absolute inset-0 border border-[#3d6aab] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                        <div className="absolute inset-0 border border-[#18448F] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
                         <Button
-                            className="relative bg-[#3d6aab] hover:bg-white hover:text-[#3d6aab] text-white rounded-[2rem] px-12 h-16 font-black uppercase tracking-widest text-xs transition-all border-none"
+                            className="relative bg-[#18448F] hover:bg-white hover:text-[#18448F] text-white rounded-[2rem] px-12 h-16 font-black uppercase tracking-widest text-xs transition-all border-none"
                             onClick={() => navigate("/consultation")}
                         >
                             NOUS JOINDRE

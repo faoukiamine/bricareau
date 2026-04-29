@@ -84,7 +84,7 @@ const Blog = () => {
                                 <h1 
                                     className="leading-[1.1] md:leading-[1.2] tracking-tighter text-slate-900 drop-shadow-sm text-left"
                                 >
-                                    Articles & <span className="text-blue-600">Ressources</span>
+                                    Articles & <span className="text-[#18448F]">Ressources</span>
                                 </h1>
                             </div>
                         </div>
@@ -106,7 +106,7 @@ const Blog = () => {
                             <h1
                                 className="hidden lg:block leading-[1.1] md:leading-[1.2] mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left max-w-xl"
                             >
-                                Articles & <span className="text-blue-600 lg:text-blue-400">Ressources</span>
+                                Articles & <span className="text-[#18448F] lg:text-[#18448F]">Ressources</span>
                             </h1>
                             <p className="font-light text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
                                 Découvrez nos derniers articles, guides et conseils d'experts pour une eau de meilleure qualité au quotidien.
@@ -136,7 +136,7 @@ const Blog = () => {
                                         <div className="flex flex-wrap gap-x-8 gap-y-4">
                                             {categories.map(cat => (
                                                 <label key={cat.id} className="flex items-center gap-3 cursor-pointer group">
-                                                    <div className={`w-5 h-5 border rounded flex items-center justify-center transition-colors ${selectedCategories.includes(cat.id) ? 'bg-blue-600 border-blue-600' : 'border-slate-300 group-hover:border-blue-600 bg-white'}`}>
+                                                    <div className={`w-5 h-5 border rounded flex items-center justify-center transition-colors ${selectedCategories.includes(cat.id) ? 'bg-[#18448F] border-[#18448F]' : 'border-slate-300 group-hover:border-[#18448F] bg-white'}`}>
                                                         {selectedCategories.includes(cat.id) && <Check className="w-3 h-3 text-white" strokeWidth={3} />}
                                                     </div>
                                                     <span className="text-[15px] text-slate-700 font-medium">{cat.title}</span>
@@ -153,7 +153,7 @@ const Blog = () => {
                                             <div className="mt-6">
                                                 <button
                                                     onClick={() => setSelectedCategories([])}
-                                                    className="text-blue-600 text-sm font-medium hover:underline underline-offset-4"
+                                                    className="text-[#18448F] text-sm font-medium hover:underline underline-offset-4"
                                                 >
                                                     Réinitialiser
                                                 </button>
@@ -170,12 +170,16 @@ const Blog = () => {
                                 <Search className="w-16 h-16 mx-auto mb-6 opacity-20" />
                                 <h3 className="text-slate-900 mb-2">Aucun résultat</h3>
                                 <p className="">Aucun article ne correspond à votre recherche "{searchQuery}".</p>
-                                <Button
-                                    variant="outline"
-                                    onClick={() => { setSearchQuery(""); setSelectedCategories([]); }}
-                                >
-                                    Effacer les filtres
-                                </Button>
+                                <div className="relative inline-block group">
+                                    <div className="absolute inset-0 border border-[#18448F] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                                    <Button
+                                        variant="outline"
+                                        onClick={() => { setSearchQuery(""); setSelectedCategories([]); }}
+                                        className="relative bg-[#18448F] border-none text-white hover:bg-white hover:text-[#18448F] rounded-[2rem] h-12 px-8 font-black uppercase tracking-widest text-[10px] transition-all"
+                                    >
+                                        Effacer les filtres
+                                    </Button>
+                                </div>
                             </div>
                         ) : (
                             <>
@@ -201,12 +205,12 @@ const Blog = () => {
                                                         </h2>
                                                         <NavLink
                                                             to={`/blog/categorie/${cat.id}`}
-                                                            className="text-xs font-black text-blue-600 uppercase tracking-widest flex items-center gap-2 hover:text-slate-900 transition-colors"
+                                                            className="text-xs font-black text-[#18448F] uppercase tracking-widest flex items-center gap-2 hover:text-slate-900 transition-colors"
                                                         >
                                                             Tout voir <ChevronRight className="w-4 h-4" />
                                                         </NavLink>
                                                     </div>
-                                                    <div className="w-20 h-1 bg-blue-600"></div>
+                                                    <div className="w-20 h-1 bg-[#18448F]"></div>
                                                 </div>
 
                                                 {isStaggered ? (
@@ -224,19 +228,19 @@ const Blog = () => {
                                                                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                                                     />
                                                                     <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm px-3 py-1.5 rounded-full flex items-center gap-2 shadow-sm">
-                                                                        <Clock className="w-3.5 h-3.5 text-blue-600" />
+                                                                        <Clock className="w-3.5 h-3.5 text-[#18448F]" />
                                                                         <span className="text-[12px] font-bold text-slate-900">{displayProducts[0].readTime}</span>
                                                                     </div>
                                                                 </div>
                                                                 <div className="p-8">
-                                                                    <h3 className="md:text-3xl text-slate-900 mb-4 group-hover:text-blue-600 transition-colors font-medium text-base leading-6 text-[#0F1729]">
+                                                                    <h3 className="md:text-3xl text-slate-900 mb-4 group-hover:text-[#18448F] transition-colors font-medium text-base leading-6 text-[#0F1729]">
                                                                         {displayProducts[0].title}
                                                                     </h3>
                                                                     <p className="text-slate-600 text-base font-light mb-6 flex-1">
                                                                         {displayProducts[0].desc}
                                                                     </p>
                                                                     <div className="flex justify-end">
-                                                                        <div className="w-10 h-10 rounded-full border border-blue-600 flex items-center justify-center text-blue-600 transition-all duration-300 group-hover:bg-blue-600 group-hover:text-white">
+                                                                        <div className="w-10 h-10 rounded-full border border-[#18448F] flex items-center justify-center text-[#18448F] transition-all duration-300 group-hover:bg-[#18448F] group-hover:text-white">
                                                                             <ArrowRight className="h-5 w-5" />
                                                                         </div>
                                                                     </div>
@@ -263,7 +267,7 @@ const Blog = () => {
                                                                             <Clock className="w-3.5 h-3.5" />
                                                                             <span>{product.readTime}</span>
                                                                         </div>
-                                                                        <h3 className="text-slate-900 mb-2 group-hover:text-blue-600 transition-colors font-medium text-base leading-6 text-[#0F1729]">
+                                                                        <h3 className="text-slate-900 mb-2 group-hover:text-[#18448F] transition-colors font-medium text-base leading-6 text-[#0F1729]">
                                                                             {product.title}
                                                                         </h3>
                                                                     </div>
@@ -286,7 +290,7 @@ const Blog = () => {
                                                                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                                                     />
                                                                     <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm px-3 py-1.5 rounded-full flex items-center gap-2 shadow-sm opacity-0 group-hover:opacity-100 transition-opacity">
-                                                                        <Clock className="w-3.5 h-3.5 text-blue-600" />
+                                                                        <Clock className="w-3.5 h-3.5 text-[#18448F]" />
                                                                         <span className="text-[12px] font-bold text-slate-900">{product.readTime}</span>
                                                                     </div>
                                                                 </div>
@@ -295,7 +299,7 @@ const Blog = () => {
                                                                         <Clock className="w-3.5 h-3.5" />
                                                                         <span>{product.readTime}</span>
                                                                     </div>
-                                                                    <h3 className="text-slate-900 mb-3 group-hover:text-blue-600 transition-colors font-medium text-base leading-6 text-[#0F1729]">
+                                                                    <h3 className="text-slate-900 mb-3 group-hover:text-[#18448F] transition-colors font-medium text-base leading-6 text-[#0F1729]">
                                                                         {product.title}
                                                                     </h3>
                                                                     <p className="text-slate-600 text-sm font-light leading-[19px] line-clamp-2">
@@ -316,25 +320,50 @@ const Blog = () => {
                 </section>
 
                 {/* Final Call to Action */}
-                <section className="py-24 bg-blue-600 text-white relative overflow-hidden">
-                    <div className="absolute top-0 left-0 w-full h-full opacity-10">
-                        <Waves className="absolute -bottom-10 -left-10 w-96 h-96 text-white" />
-                        <Droplets className="absolute -top-10 -right-10 w-64 h-64 text-white" />
-                    </div>
-                    <div className="container mx-auto px-6 relative z-10 text-center">
-                        <h2 className="mb-8 italic">
-                            Prêt à transformer la qualité de votre eau ?
-                        </h2>
-                        <p className="opacity-90 mb-12 max-w-2xl mx-auto">
-                            Nos experts sont disponibles pour une consultation personnalisée et gratuite à votre domicile ou entreprise.
-                        </p>
-                        <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                            <Button asChild>
-                                <a href="/contact">Planifier ma visite</a>
-                            </Button>
-                            <Button variant="outline" asChild>
-                                <a href="tel:18552649328">1 (855) 264-9328</a>
-                            </Button>
+                <section className="relative py-32 flex items-center overflow-hidden bg-[#18448F]">
+                    {/* Animated background elements */}
+                    <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-white/10 to-transparent skew-x-12 translate-x-1/4" />
+                    <div className="absolute bottom-0 left-0 w-1/2 h-full bg-gradient-to-r from-white/10 to-transparent -skew-x-12 -translate-x-1/4" />
+                    
+                    <div className="container mx-auto px-6 relative z-10">
+                        <div className="max-w-5xl mx-auto text-center space-y-12">
+                            <div className="space-y-6">
+                                <span className="inline-block px-4 py-1.5 bg-white text-[#18448F] rounded-full text-[10px] font-black uppercase tracking-[0.4em]">
+                                    PRÊT À TRANSFORMER VOTRE EAU ?
+                                </span>
+                                <h2 className="font-light block leading-tight lg:leading-[52px] text-white text-3xl md:text-5xl">
+                                    Obtenez des conseils <br />
+                                    <span className="text-white italic font-bold font-serif">personnalisés d'un expert.</span>
+                                </h2>
+                                <p className="text-lg md:text-xl text-blue-100/80 max-w-2xl mx-auto font-light leading-relaxed">
+                                    Nos experts sont disponibles pour une consultation gratuite afin de discuter de vos besoins en traitement d'eau résidentiel ou commercial.
+                                </p>
+                            </div>
+
+                            <div className="flex flex-col sm:flex-row gap-8 justify-center items-center pt-4">
+                                <div className="relative inline-block w-full sm:w-auto group">
+                                    <div className="absolute inset-0 border border-white rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                                    <Button 
+                                        asChild
+                                        className="relative bg-white text-[#18448F] hover:bg-white hover:text-[#18448F] rounded-[2rem] h-16 px-12 font-black uppercase tracking-widest text-xs transition-all border-none w-full sm:w-auto"
+                                    >
+                                        <a href="/contact" className="flex items-center gap-3">
+                                            Planifier ma visite
+                                        </a>
+                                    </Button>
+                                </div>
+
+                                <div className="relative inline-block w-full sm:w-auto group">
+                                    <div className="absolute inset-0 border border-white rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                                    <Button
+                                        variant="outline"
+                                        asChild
+                                        className="relative bg-transparent border-none text-white hover:bg-[#18448F] hover:text-white rounded-[2rem] h-16 px-12 font-black uppercase tracking-widest text-xs transition-all w-full sm:w-auto"
+                                    >
+                                        <a href="tel:18552649328">1 (855) 264-9328</a>
+                                    </Button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>

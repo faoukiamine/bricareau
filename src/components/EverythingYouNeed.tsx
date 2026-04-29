@@ -47,8 +47,8 @@ const EverythingYouNeed = () => {
                                 className="text-center space-y-4 p-6 rounded-xl bg-white hover:shadow-lg transition-shadow"
                             >
                                 <div className="flex justify-center">
-                                    <div className="w-16 h-16 rounded-full bg-[#3d6aab]/10 flex items-center justify-center">
-                                        <Icon className="h-8 w-8 text-[#3d6aab]" />
+                                    <div className="w-16 h-16 rounded-full bg-[#18448F]/10 flex items-center justify-center">
+                                        <Icon className="h-8 w-8 text-[#18448F]" />
                                     </div>
                                 </div>
                                 <h3 className="text-foreground">

@@ -20,6 +20,7 @@ import {
     Sparkles,
     Check
 } from "lucide-react";
+import { ProMaxButton } from "@/components/ui/ProMaxButton";
 import { Button } from "@/components/ui/button";
 import { NavLink } from "react-router-dom";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -132,12 +133,18 @@ const MachinesAGlaceEntreprises = () => {
                             </p>
                             
                             <div className="flex flex-col sm:flex-row gap-6 pt-6">
-                                <Button size="lg" className="h-16 px-10 text-lg rounded-full bg-blue-600 hover:bg-blue-500 shadow-xl shadow-blue-900/20" asChild>
+                                <ProMaxButton 
+                                    asChild
+                                    variant="primary"
+                                >
                                     <NavLink to="/contact-entreprises">Planifier une démo</NavLink>
-                                </Button>
-                                <Button size="lg" variant="outline" className="h-16 px-10 text-lg rounded-full border-white/20 text-white hover:bg-white/10 transition-all">
+                                </ProMaxButton>
+                                <ProMaxButton 
+                                    variant="outline-white"
+                                    asChild
+                                >
                                     <NavLink to="/contact-entreprises">Télécharger le catalogue</NavLink>
-                                </Button>
+                                </ProMaxButton>
                             </div>
                         </div>
                     </div>
@@ -279,9 +286,9 @@ const MachinesAGlaceEntreprises = () => {
                                     <thead>
                                         <tr className="bg-slate-50">
                                             <th className="p-10 text-xl font-bold text-slate-950 w-1/4">Caractéristiques</th>
-                                            <th className="p-10 text-center text-[#3d6aab] text-lg font-bold">Élite Hydra</th>
-                                            <th className="p-10 text-center text-[#3d6aab] text-lg font-bold">Atlas Cube</th>
-                                            <th className="p-10 text-center text-[#3d6aab] text-lg font-bold">Zenith Bin</th>
+                                            <th className="p-10 text-center text-[#18448F] text-lg font-bold">Élite Hydra</th>
+                                            <th className="p-10 text-center text-[#18448F] text-lg font-bold">Atlas Cube</th>
+                                            <th className="p-10 text-center text-[#18448F] text-lg font-bold">Zenith Bin</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -311,12 +318,18 @@ const MachinesAGlaceEntreprises = () => {
                             <p className="text-blue-100 font-light text-lg italic">Nos experts en hydratation vous conseillent gratuitement.</p>
                         </div>
                         <div className="flex gap-6">
-                            <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50 px-10 rounded-full h-16 font-bold shadow-2xl" asChild>
+                            <ProMaxButton 
+                                variant="white"
+                                asChild
+                            >
                                 <a href="tel:18552649328">1-855-264-9328</a>
-                            </Button>
-                            <Button size="lg" variant="outline" className="h-16 px-10 text-lg rounded-full border-white/40 text-white hover:bg-white/10 hidden lg:flex">
+                            </ProMaxButton>
+                            <ProMaxButton 
+                                variant="outline-white"
+                                asChild
+                            >
                                 <NavLink to="/contact-entreprises">Message Rapide</NavLink>
-                            </Button>
+                            </ProMaxButton>
                         </div>
                     </div>
                 </section>
@@ -325,7 +338,7 @@ const MachinesAGlaceEntreprises = () => {
                 <section className="py-32 bg-white relative">
                     <div className="container mx-auto px-6 text-center mb-20 space-y-6">
                         <h2 className="text-xs font-black uppercase tracking-[0.4em] text-blue-600 italic">Preuve Sociale</h2>
-                        <h3 className="heading-pro-max font-bold text-[#3d6aab] block">Les leaders de l'industrie font confiance <br/>à l'expertise en eau de Bricareau.</h3>
+                        <h3 className="heading-pro-max font-bold text-[#18448F] block">Les leaders de l'industrie font confiance <br/>à l'expertise en eau de Bricareau.</h3>
                         <div className="flex flex-wrap items-center justify-center gap-12 opacity-40 grayscale pt-10">
                             {/* Placeholder Logos */}
                             <div className="font-serif text-3xl font-bold">CORPORATE</div>

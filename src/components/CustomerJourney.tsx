@@ -7,6 +7,7 @@ import diagnosticStepImg from "@/assets/step-diagnostic.png";
 import customStepImg from "@/assets/catalogue.png";
 import installationStepImg from "@/assets/Installation experte - Bricareau.jpg";
 import serenityStepImg from "@/assets/close-up-handsom-man-taking-bath.jpg";
+import { ProMaxButton } from "@/components/ui/ProMaxButton";
 import { Button } from "@/components/ui/button";
 
 const steps = [
@@ -51,8 +52,8 @@ const CustomerJourney = () => {
                     <h2 
                         className="mb-8 heading-pro-max"
                     >
-                        <span className="italic font-light text-[#3d6aab] block">La promesse d'une eau saine,</span>
-                        <span className="font-bold text-[#3d6aab] block">de notre rencontre à votre confort.</span>
+                        <span className="italic font-light text-[#18448F] block">La promesse d'une eau saine,</span>
+                        <span className="font-bold text-[#18448F] block">de notre rencontre à votre confort.</span>
                     </h2>
                     <p className="text-[16px] md:text-[18px] lg:text-[20px] leading-snug font-light text-slate-600 max-w-2xl mx-auto mb-12">
                         Parce que la santé de votre foyer ne supporte aucune approximation, nous avons bâti un protocole rigoureux qui garantit une pureté absolue à chaque étape.
@@ -75,7 +76,7 @@ const CustomerJourney = () => {
                                         alt={step.title} 
                                         className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
                                     />
-                                    <div className="absolute inset-0 bg-gradient-to-tr from-[#3d6aab]/40 to-transparent mix-blend-multiply opacity-60" />
+                                    <div className="absolute inset-0 bg-gradient-to-tr from-[#18448F]/40 to-transparent mix-blend-multiply opacity-60" />
                                     
                                 </div>
 
@@ -84,7 +85,7 @@ const CustomerJourney = () => {
                                         <span className="text-4xl font-black text-slate-100 group-hover:text-blue-50 transition-colors tracking-tighter">
                                             {step.number}
                                         </span>
-                                        <h3 className="text-2xl font-bold text-[#3d6aab] group-hover:text-blue-600 transition-colors">
+                                        <h3 className="text-2xl font-bold text-[#18448F] group-hover:text-blue-600 transition-colors">
                                             {step.title}
                                         </h3>
                                     </div>
@@ -99,11 +100,11 @@ const CustomerJourney = () => {
 
                 {/* Call to Action below steps */}
                 <div className="mt-24 flex justify-center">
-                    <Button asChild>
+                    <ProMaxButton asChild>
                         <a href="/consultation">
                             Planifiez une consultation gratuite
                         </a>
-                    </Button>
+                    </ProMaxButton>
                 </div>
             </div>
         </section>

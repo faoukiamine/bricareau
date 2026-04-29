@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
+import { ProMaxButton } from "@/components/ui/ProMaxButton";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 import { ArrowRight, Droplets, Waves, Phone, ChevronRight, Search, SlidersHorizontal, Check } from "lucide-react";
@@ -25,7 +26,7 @@ const FAQCard = ({ item }: { item: { q: string, a: string } }) => {
             {isLong && (
                 <button
                     onClick={() => setIsExpanded(!isExpanded)}
-                    className="text-blue-600 text-[15px] font-medium hover:underline self-start mt-auto underline-offset-4"
+                    className="text-[#18448F] text-[15px] font-medium hover:underline self-start mt-auto underline-offset-4"
                 >
                     {isExpanded ? 'Lire moins' : 'Lire la suite'}
                 </button>
@@ -113,10 +114,10 @@ const FAQ = () => {
                     <div className="container relative z-10 mx-auto px-4 h-full flex items-center lg:px-6">
                         <div className="max-w-2xl lg:text-white py-12 lg:py-0">
                             <h1
-                                className="leading-[1.1] md:leading-[1.2] mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left max-w-xl"
+                                className="leading-[1.1] md:leading-[1.2] mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left max-w-xl text-3xl md:text-5xl lg:text-6xl"
                             >
                                 Foire aux questions <br />
-                                Obtenez des <span className="text-blue-600 lg:text-blue-400">réponses</span> claires.
+                                Obtenez des <span className="text-[#18448F] lg:text-blue-400">réponses</span> claires.
                             </h1>
                             <p className="font-light text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
                                 Vous trouverez ci-dessous les réponses aux questions les plus fréquentes sur le traitement de l'eau. Recherchez les sujets qui vous intéressent ou triez par catégorie pour trouver rapidement l'information dont vous avez besoin.
@@ -134,11 +135,11 @@ const FAQ = () => {
                             <input
                                 type="text"
                                 placeholder="Rechercher une question"
-                                className="w-full text-2xl md:text-4xl text-slate-900 border-b-2 border-slate-300 pb-4 pt-2 outline-none focus:border-blue-600 transition-colors bg-white font-light placeholder:text-slate-300"
+                                className="w-full text-2xl md:text-4xl text-slate-900 border-b-2 border-slate-300 pb-4 pt-2 outline-none focus:border-[#18448F] transition-colors bg-white font-light placeholder:text-slate-300"
                                 value={searchQuery}
                                 onChange={(e) => setSearchQuery(e.target.value)}
                             />
-                            <button className="absolute right-0 top-2 bottom-4 w-12 md:w-16 flex items-center justify-center bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors focus:outline-none">
+                            <button className="absolute right-0 top-2 bottom-4 w-12 md:w-16 flex items-center justify-center bg-[#18448F] text-white rounded hover:bg-[#18448F]/90 transition-colors focus:outline-none">
                                 <Search className="w-5 h-5 md:w-6 md:h-6" />
                             </button>
                         </div>
@@ -159,7 +160,7 @@ const FAQ = () => {
                                         <div className="flex flex-wrap gap-x-8 gap-y-4">
                                             {faqCategories.map(cat => (
                                                 <label key={cat.id} className="flex items-center gap-3 cursor-pointer group">
-                                                    <div className={`w-5 h-5 border rounded flex items-center justify-center transition-colors ${selectedCategories.includes(cat.id) ? 'bg-blue-600 border-blue-600' : 'border-slate-300 group-hover:border-blue-600 bg-white'}`}>
+                                                    <div className={`w-5 h-5 border rounded flex items-center justify-center transition-colors ${selectedCategories.includes(cat.id) ? 'bg-[#18448F] border-[#18448F]' : 'border-slate-300 group-hover:border-[#18448F] bg-white'}`}>
                                                         {selectedCategories.includes(cat.id) && <Check className="w-3 h-3 text-white" strokeWidth={3} />}
                                                     </div>
                                                     <span className="text-[15px] text-slate-700 font-medium">{cat.title}</span>
@@ -176,7 +177,7 @@ const FAQ = () => {
                                             <div className="mt-6">
                                                 <button
                                                     onClick={() => setSelectedCategories([])}
-                                                    className="text-blue-600 text-sm font-medium hover:underline underline-offset-4"
+                                                    className="text-[#18448F] text-sm font-medium hover:underline underline-offset-4"
                                                 >
                                                     Réinitialiser
                                                 </button>
@@ -207,7 +208,7 @@ const FAQ = () => {
                                                 <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
                                                     {cat.title}
                                                 </h2>
-                                                <div className="w-20 h-1 bg-blue-600"></div>
+                                                <div className="w-20 h-1 bg-[#18448F]"></div>
                                             </div>
 
                                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -217,13 +218,12 @@ const FAQ = () => {
                                             </div>
 
                                             {hasMore && (
-                                                <div className="mt-6">
-                                                    <Button
+                                                <div className="mt-8">
+                                                    <ProMaxButton
                                                         onClick={() => toggleExpandedCategory(cat.id)}
-                                                        className="rounded-full px-8"
                                                     >
                                                         Afficher plus de questions
-                                                    </Button>
+                                                    </ProMaxButton>
                                                 </div>
                                             )}
                                         </section>
@@ -234,7 +234,48 @@ const FAQ = () => {
                     </div>
                 </section>
 
+                {/* 3. PREMIUM CTA SECTION */}
+                <section className="relative py-32 flex items-center overflow-hidden bg-[#18448F]">
+                    {/* Animated background elements */}
+                    <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-white/10 to-transparent skew-x-12 translate-x-1/4" />
+                    <div className="absolute bottom-0 left-0 w-1/2 h-full bg-gradient-to-r from-white/10 to-transparent -skew-x-12 -translate-x-1/4" />
+                    
+                    <div className="container mx-auto px-6 relative z-10">
+                        <div className="max-w-5xl mx-auto text-center space-y-12">
+                            <div className="space-y-6">
+                                <span className="inline-block px-4 py-1.5 bg-white text-[#18448F] rounded-full text-[10px] font-black uppercase tracking-[0.4em]">
+                                    BESOIN D'ASSISTANCE ?
+                                </span>
+                                <h2 className="font-light block leading-tight lg:leading-[52px] text-white text-3xl md:text-5xl">
+                                    Vous n'avez pas trouvé <br />
+                                    <span className="text-white italic font-bold font-serif">la réponse à votre question ?</span>
+                                </h2>
+                                <p className="text-lg md:text-xl text-blue-100/80 max-w-2xl mx-auto font-light leading-relaxed">
+                                    Nos experts sont disponibles pour discuter de votre projet de traitement d'eau et répondre à toutes vos interrogations techniques ou commerciales.
+                                </p>
+                            </div>
 
+                            <div className="flex flex-col sm:flex-row gap-8 justify-center items-center pt-4">
+                                <ProMaxButton 
+                                    asChild
+                                    variant="white"
+                                >
+                                    <a href="tel:18552649328" className="flex items-center gap-3">
+                                        <Phone className="h-5 w-5 animate-bounce" />
+                                        Parlez à un expert
+                                    </a>
+                                </ProMaxButton>
+
+                                <ProMaxButton
+                                    variant="outline-white"
+                                    asChild
+                                >
+                                    <NavLink to="/consultation">Planifiez une consultation</NavLink>
+                                </ProMaxButton>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </main>
             <Footer />
         </div >

@@ -22,6 +22,7 @@ import {
     Handshake,
     Microwave // Using as placeholder or others
 } from "lucide-react";
+import { ProMaxButton } from "@/components/ui/ProMaxButton";
 import { Button } from "@/components/ui/button";
 import { NavLink } from "react-router-dom";
 import {
@@ -255,15 +256,26 @@ const MachinesACafeEntreprises = () => {
                             </p>
                             
                             <div className="flex flex-wrap gap-6 pt-4">
-                                <Button size="lg" className="h-[72px] px-12 text-lg rounded-full font-bold group bg-blue-600 hover:bg-blue-700 shadow-2xl shadow-blue-500/20" asChild>
+                                <ProMaxButton 
+                                    asChild
+                                    variant="primary"
+                                >
                                     <NavLink to="/contact-entreprises">
                                         Obtenir mon estimation gratuite
                                         <ArrowRight className="ml-3 w-6 h-6 transition-transform group-hover:translate-x-2" />
                                     </NavLink>
-                                </Button>
-                                <Button variant="outline" size="lg" className="h-[72px] px-12 text-lg rounded-full border-white/20 text-white hover:bg-white/10 backdrop-blur-md">
-                                    Voir nos machines
-                                </Button>
+                                </ProMaxButton>
+                                <ProMaxButton 
+                                    variant="outline-white"
+                                    asChild
+                                >
+                                    <button onClick={() => {
+                                        const el = document.getElementById('collection-pro');
+                                        el?.scrollIntoView({ behavior: 'smooth' });
+                                    }}>
+                                        Voir nos machines
+                                    </button>
+                                </ProMaxButton>
                             </div>
                         </div>
                     </div>
@@ -334,7 +346,7 @@ const MachinesACafeEntreprises = () => {
                 {/* 3. PRODUCT GRID */}
                 <section className="py-32 bg-slate-50 relative overflow-hidden">
                     <div className="container mx-auto px-6">
-                        <div className="text-center max-w-3xl mx-auto mb-20 space-y-6">
+                        <div id="collection-pro" className="text-center max-w-3xl mx-auto mb-20 space-y-6 scroll-mt-[120px]">
                             <div className="inline-block px-4 py-1 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black tracking-widest uppercase">
                                 Notre Collection PRO
                             </div>
@@ -442,15 +454,21 @@ const MachinesACafeEntreprises = () => {
                             </p>
                         </div>
                         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                            <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50 h-[72px] px-14 rounded-full font-bold text-xl shadow-xl hover:scale-105 transition-all" asChild>
+                            <ProMaxButton 
+                                variant="white"
+                                asChild
+                            >
                                 <NavLink to="/contact-entreprises">Commencer l'essai</NavLink>
-                            </Button>
-                            <Button variant="outline" size="lg" className="border-white/30 text-white hover:bg-white/10 h-[72px] px-14 rounded-full font-bold text-xl backdrop-blur-md">
+                            </ProMaxButton>
+                            <ProMaxButton 
+                                variant="outline-white"
+                                asChild
+                            >
                                 <a href="tel:18552649328" className="flex items-center gap-3">
                                     <Phone className="w-6 h-6" />
                                     1-855-264-9328
                                 </a>
-                            </Button>
+                            </ProMaxButton>
                         </div>
                     </div>
                 </section>

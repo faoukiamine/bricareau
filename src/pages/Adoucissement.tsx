@@ -6,6 +6,7 @@ import Hero from "@/components/Hero";
 import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import ExpertAvatars from "@/components/ExpertAvatars";
+import { ProMaxButton } from "@/components/ui/ProMaxButton";
 import { Button } from "@/components/ui/button";
 import heroBath from "@/assets/young-nude-woman-taking-relaxing-foamy-bath.jpeg";
 import kitchenImg from "@/assets/18036672_SIE_2720_1530_21_04_30_SIE_CRM_Dishwasher_Hand_Taking_Out_Wine_Glass_Basket_Motiv_11_0017.webp";
@@ -174,8 +175,8 @@ const Adoucissement = () => {
                                 DIAGNOSTIC L'EAU DURE
                             </span>
                             <h2 className="mb-8 heading-pro-max text-center">
-                                <span className="italic font-light text-[#3d6aab] block">L'impact silencieux du</span>
-                                <span className="font-bold text-[#3d6aab] block text-center">calcaire sur votre vie.</span>
+                                <span className="italic font-light text-[#18448F] block">L'impact silencieux du</span>
+                                <span className="font-bold text-[#18448F] block text-center">calcaire sur votre vie.</span>
                             </h2>
                             <p className="body-pro-max text-slate-500 text-center mx-auto max-w-2xl">
                                 Le calcaire n'est pas qu'un dépôt blanc ; c'est un agent d'érosion invisible qui dégrade votre confort, votre santé et vos finances au quotidien.
@@ -262,7 +263,7 @@ const Adoucissement = () => {
                                                     {item.badge}
                                                 </span>
                                             </div>
-                                            <h3 className="text-3xl font-bold text-[#3d6aab] leading-[1.1] transition-all duration-500 group-hover:translate-x-2">
+                                            <h3 className="text-3xl font-bold text-[#18448F] leading-[1.1] transition-all duration-500 group-hover:translate-x-2">
                                                 {item.title}
                                             </h3>
                                             <p className="text-slate-600 text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-all duration-1000 translate-y-4 group-hover:translate-y-0 text-justify">
@@ -311,8 +312,8 @@ const Adoucissement = () => {
                                         L'INGÉNIERIE DU CONFORT
                                     </span>
                                     <h2 id="benefits-title" className="scroll-mt-[120px] mb-8 heading-pro-max text-left">
-                                        <span className="italic font-light text-[#3d6aab] block">Les avantages de</span>
-                                        <span className="font-bold text-[#3d6aab] block text-left">l'adoucissement d'eau.</span>
+                                        <span className="italic font-light text-[#18448F] block">Les avantages de</span>
+                                        <span className="font-bold text-[#18448F] block text-left">l'adoucissement d'eau.</span>
                                     </h2>
                                     <p className="body-pro-max text-slate-600 text-justify lg:text-left max-w-2xl">
                                         Une transformation immédiate pour votre confort, votre santé et la longévité de votre foyer. Dites adieu au calcaire et retrouvez une eau pure et soyeuse.
@@ -439,7 +440,7 @@ const Adoucissement = () => {
                                          id="impact-title"
                                          className="scroll-mt-[120px] mb-8 heading-pro-max text-left"
                                      >
-                                         <span className="italic font-light text-[#3d6aab] block">Adoucisseurs d'eau résidentiels</span>
+                                         <span className="italic font-light text-[#18448F] block">Adoucisseurs d'eau résidentiels</span>
                                      </h2>
                                      <p className="body-pro-max mb-8 max-w-xl text-justify lg:text-left">
                                             Offrez à votre foyer le luxe d'une eau sans calcaire. Nos adoucisseurs de pointe éliminent le tartre à la source, garantissant non seulement une vaisselle étincelante sans aucune trace, mais aussi une protection durable de vos appareils électroménagers et de votre plomberie.
@@ -468,15 +469,12 @@ const Adoucissement = () => {
                                         ))}
                                     </div>
                                     <div className="pt-6">
-                                        <div className="relative inline-block group">
-                                            <div className="absolute inset-0 border border-[#3d6aab] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
-                                            <Button 
-                                                onClick={() => navigate('/adoucisseur-eau-residentiel')}
-                                                className="relative bg-[#3d6aab] hover:bg-white hover:text-[#3d6aab] text-white rounded-[2rem] h-12 px-8 font-black uppercase tracking-widest text-[11px] transition-all border-none"
-                                            >
-                                                Découvrir nos adoucisseurs d'eau <ChevronRight className="h-4 w-4 ml-2 transition-transform group-hover:translate-x-1" />
-                                            </Button>
-                                        </div>
+                                        <ProMaxButton 
+                                            onClick={() => navigate('/adoucisseur-eau-residentiel')}
+                                            className="h-12 px-8"
+                                        >
+                                            Découvrir nos adoucisseurs d'eau <ChevronRight className="h-4 w-4 ml-2 transition-transform group-hover:translate-x-1" />
+                                        </ProMaxButton>
                                     </div>
                                 </div>
                             </div>
@@ -520,7 +518,7 @@ const Adoucissement = () => {
                                             SOLUTION MOBILE
                                         </span>
                                         <h2 className="mb-8 heading-pro-max text-left">
-                                             <span className="italic font-light text-[#3d6aab] block text-left">Adoucisseurs d'eau portables</span>
+                                             <span className="italic font-light text-[#18448F] block text-left">Adoucisseurs d'eau portables</span>
                                          </h2>
                                          <p className="body-pro-max text-justify lg:text-left">
                                              Ne laissez plus l’eau dure des campings ou des ports abîmer vos cheveux et vos équipements. Profitez d'une eau de qualité domestique dans votre VR, votre bateau ou votre chalet avec notre adoucisseur ultra-compact.
@@ -549,15 +547,12 @@ const Adoucissement = () => {
                                         ))}
                                     </div>
                                     <div className="pt-6">
-                                        <div className="relative inline-block group">
-                                            <div className="absolute inset-0 border border-[#3d6aab] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
-                                            <Button 
-                                                onClick={() => navigate('/adoucisseurs-portables')}
-                                                className="relative bg-[#3d6aab] hover:bg-white hover:text-[#3d6aab] text-white rounded-[2rem] h-12 px-8 font-black uppercase tracking-widest text-[11px] transition-all border-none"
-                                            >
-                                                Découvrir nos adoucisseurs portables <ChevronRight className="h-4 w-4 ml-2 transition-transform group-hover:translate-x-1" />
-                                            </Button>
-                                        </div>
+                                        <ProMaxButton 
+                                            onClick={() => navigate('/adoucisseurs-portables')}
+                                            className="h-12 px-8"
+                                        >
+                                            Découvrir nos adoucisseurs portables <ChevronRight className="h-4 w-4 ml-2 transition-transform group-hover:translate-x-1" />
+                                        </ProMaxButton>
                                     </div>
                                 </div>
                             </div>
@@ -602,7 +597,7 @@ const Adoucissement = () => {
                                             ALTERNATIVE ÉCOLOGIQUE
                                         </span>
                                         <h2 className="mb-8 heading-pro-max text-left">
-                                             <span className="italic font-light text-[#3d6aab] block text-left">Conditionneurs d'eau sans sel</span>
+                                             <span className="italic font-light text-[#18448F] block text-left">Conditionneurs d'eau sans sel</span>
                                          </h2>
                                          <p className="body-pro-max text-justify lg:text-left">
                                              Le secret d'un linge éclatant et d'une vaisselle sans traces. Sans l'ajout de sel, votre eau devient votre meilleure alliée beauté et ménage.
@@ -631,15 +626,12 @@ const Adoucissement = () => {
                                         ))}
                                     </div>
                                     <div className="pt-6">
-                                        <div className="relative inline-block group">
-                                            <div className="absolute inset-0 border border-[#3d6aab] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
-                                            <Button 
-                                                onClick={() => navigate('/conditionneurs-sans-sel')}
-                                                className="relative bg-[#3d6aab] hover:bg-white hover:text-[#3d6aab] text-white rounded-[2rem] h-12 px-8 font-black uppercase tracking-widest text-[11px] transition-all border-none"
-                                            >
-                                                Découvrir nos conditionneurs d'eau sans sel <ChevronRight className="h-4 w-4 ml-2 transition-transform group-hover:translate-x-1" />
-                                            </Button>
-                                        </div>
+                                        <ProMaxButton 
+                                            onClick={() => navigate('/conditionneurs-sans-sel')}
+                                            className="h-12 px-8"
+                                        >
+                                            Découvrir nos conditionneurs d'eau sans sel <ChevronRight className="h-4 w-4 ml-2 transition-transform group-hover:translate-x-1" />
+                                        </ProMaxButton>
                                     </div>
                                 </div>
                             </div>
@@ -652,8 +644,8 @@ const Adoucissement = () => {
                     limit={5}
                     title={
                         <>
-                            <span className="italic font-light text-[#3d6aab] block">Une eau soyeuse.</span>
-                            <span className="font-bold text-[#3d6aab] block">Un confort absolu.</span>
+                            <span className="italic font-light text-[#18448F] block">Une eau soyeuse.</span>
+                            <span className="font-bold text-[#18448F] block">Un confort absolu.</span>
                         </>
                     }
                 />
@@ -663,8 +655,8 @@ const Adoucissement = () => {
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
                             <h2 className="mb-8 heading-pro-max text-left">
-                                         <span className="italic font-light text-[#3d6aab] block">Comparez nos solutions</span>
-                                         <span className="font-bold text-[#3d6aab] block">d'adoucissement d'eau</span>
+                                         <span className="italic font-light text-[#18448F] block">Comparez nos solutions</span>
+                                         <span className="font-bold text-[#18448F] block">d'adoucissement d'eau</span>
                                      </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
@@ -704,8 +696,8 @@ const Adoucissement = () => {
                                                 Solutions
                                             </th>
                                             {[
-                                                { name: "Adoucisseur Sentinel", img: adoucisseursImg, badge: "Performance Totale", color: "bg-[#3d6aab]" },
-                                                { name: "Conditionneur sans Sel", img: TACsystemImg, badge: "Éco-Responsable", color: "bg-[#3d6aab]" },
+                                                { name: "Adoucisseur Sentinel", img: adoucisseursImg, badge: "Performance Totale", color: "bg-[#18448F]" },
+                                                { name: "Conditionneur sans Sel", img: TACsystemImg, badge: "Éco-Responsable", color: "bg-[#18448F]" },
                                             ].map((m, i) => (
                                                 <th 
                                                     key={i} 
@@ -725,7 +717,7 @@ const Adoucissement = () => {
                                                                 className="w-[120px] md:w-[150px] h-[100px] md:h-[120px] object-contain mx-auto mix-blend-multiply group-hover:scale-110 transition-transform duration-500 rounded-xl"
                                                             />
                                                         </div>
-                                                        <span className="max-w-[140px] inline-block uppercase tracking-wider text-[10px] md:text-[11px] text-[#3d6aab]">{m.name}</span>
+                                                        <span className="max-w-[140px] inline-block uppercase tracking-wider text-[10px] md:text-[11px] text-[#18448F]">{m.name}</span>
                                                     </div>
                                                 </th>
                                             ))}
@@ -745,7 +737,7 @@ const Adoucissement = () => {
                                             { feature: "Espace d'installation", specialized: "Moyen", station: "Compact" }
                                         ].map((row, i) => (
                                             <tr key={i} className="hover:bg-slate-50/50 transition-colors group">
-                                                <td className="p-6 md:p-10 font-bold text-[#3d6aab] bg-white sticky left-0 z-30 border-r border-slate-50 drop-shadow-sm lg:drop-shadow-none text-[12px] md:text-sm italic group-hover:text-blue-600 transition-colors">
+                                                <td className="p-6 md:p-10 font-bold text-[#18448F] bg-white sticky left-0 z-30 border-r border-slate-50 drop-shadow-sm lg:drop-shadow-none text-[12px] md:text-sm italic group-hover:text-blue-600 transition-colors">
                                                     {row.feature}
                                                 </td>
                                                 <td 
@@ -803,22 +795,20 @@ const Adoucissement = () => {
                             </span>
 
                             <h2 className="mb-8 heading-pro-max text-left">
-                                <span className="font-light italic text-[#3d6aab] lg:text-white block">L’essence d’une vie saine</span>
-                                <span className="text-[#3d6aab] lg:text-white italic font-bold font-serif">coule de votre robinet.</span>
+                                <span className="font-light italic text-[#18448F] lg:text-white block">L’essence d’une vie saine</span>
+                                <span className="text-[#18448F] lg:text-white italic font-bold font-serif">coule de votre robinet.</span>
                             </h2>
                             <p className="body-pro-max text-black lg:text-white/95 mb-8 max-w-xl text-left">
                                  Entre le chlore, les métaux lourds et les sédiments, votre eau cache souvent des secrets. Ne laissez plus le doute couler de votre robinet. Demandez votre test d'eau dès aujourd'hui et obtenez un portrait clair de votre eau ainsi que des solutions adaptées à votre foyer.
                              </p>
                             <div className="flex gap-4">
-                                <div className="relative inline-block group">
-                                    <div className="absolute inset-0 border border-white rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
-                                    <Button
+                                    <ProMaxButton
                                         asChild
-                                        className="relative bg-white text-[#3d6aab] hover:bg-blue-600 hover:text-white rounded-[2rem] h-14 px-10 font-black uppercase tracking-widest text-[11px] transition-all border-none"
+                                        variant="white"
+                                        className="h-16 px-10"
                                     >
                                         <a href="/tests-eau">Demandez une analyse d'eau</a>
-                                    </Button>
-                                </div>
+                                    </ProMaxButton>
                             </div>
                         </div>
                     </div>
@@ -829,8 +819,8 @@ const Adoucissement = () => {
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
                             <h2 className="mb-8 heading-pro-max text-left">
-                                         <span className="italic font-light text-[#3d6aab] block">Pour vous éclairer</span>
-                                         <span className="font-bold text-[#3d6aab] block">Questions fréquentes</span>
+                                         <span className="italic font-light text-[#18448F] block">Pour vous éclairer</span>
+                                         <span className="font-bold text-[#18448F] block">Questions fréquentes</span>
                                      </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
@@ -864,15 +854,12 @@ const Adoucissement = () => {
                                 ))}
                             </Accordion>
                             <div className="mt-12 text-center">
-                                <div className="relative inline-block group">
-                                    <div className="absolute inset-0 border border-[#3d6aab] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
-                                    <Button
-                                        onClick={() => setShowAllFaqs(!showAllFaqs)}
-                                        className="relative bg-[#3d6aab] hover:bg-white hover:text-[#3d6aab] text-white rounded-[2rem] h-12 px-8 font-black uppercase tracking-widest text-[11px] transition-all border-none"
-                                    >
-                                        {showAllFaqs ? "Voir moins de questions" : "Voir toutes les questions"}
-                                    </Button>
-                                </div>
+                                <ProMaxButton
+                                    onClick={() => setShowAllFaqs(!showAllFaqs)}
+                                    className="h-16 px-8"
+                                >
+                                    {showAllFaqs ? "Voir moins de questions" : "Voir toutes les questions"}
+                                </ProMaxButton>
                             </div>
                         </div>
                     </div>
@@ -880,7 +867,7 @@ const Adoucissement = () => {
 
 
                 {/* 10. PREMIUM CTA SECTION */}
-                <section className="relative py-32 flex items-center overflow-hidden bg-[#3d6aab]">
+                <section className="relative py-32 flex items-center overflow-hidden bg-[#18448F]">
                     {/* Animated background elements */}
                     <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-blue-600/20 to-transparent skew-x-12 translate-x-1/4" />
                     <div className="absolute bottom-0 left-0 w-1/2 h-full bg-gradient-to-r from-cyan-400/10 to-transparent -skew-x-12 -translate-x-1/4" />
@@ -892,7 +879,7 @@ const Adoucissement = () => {
                             alt="Problématique d'eau dure sur la robinetterie - Solution Bricareau"
                             className="w-full h-full object-cover grayscale brightness-150"
                         />
-                        <div className="absolute inset-0 bg-[#3d6aab]/10 backdrop-blur-sm" />
+                        <div className="absolute inset-0 bg-[#18448F]/10 backdrop-blur-sm" />
                     </div>
 
                     <div className="container mx-auto px-6 relative z-10">
@@ -911,28 +898,23 @@ const Adoucissement = () => {
                             </div>
 
                              <div className="flex flex-col sm:flex-row gap-8 justify-center items-center pt-8">
-                                 <div className="relative inline-block group">
-                                     <div className="absolute inset-0 border border-white rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
-                                     <Button 
+                                     <ProMaxButton 
                                          asChild
-                                         className="relative bg-white text-[#3d6aab] hover:bg-blue-600 hover:text-white rounded-[2rem] h-14 px-10 font-black uppercase tracking-widest text-[11px] transition-all border-none"
+                                         variant="white"
+                                         className="h-16 px-10"
                                      >
                                          <a href="tel:18552649328" className="flex items-center gap-3">
                                              <Phone className="h-5 w-5 animate-bounce" />
                                              Parlez à un expert
                                          </a>
-                                     </Button>
-                                 </div>
-                                 <div className="relative inline-block group">
-                                     <div className="absolute inset-0 border border-white rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
-                                     <Button
-                                         variant="outline"
+                                     </ProMaxButton>
+                                     <ProMaxButton
+                                         variant="outline-white"
                                          asChild
-                                         className="relative bg-transparent border border-white/30 text-white hover:bg-white hover:text-[#3d6aab] rounded-[2rem] h-14 px-10 font-black uppercase tracking-widest text-[11px] transition-all"
+                                         className="h-16 px-10"
                                      >
                                          <NavLink to="/consultation">Planifiez une consultation</NavLink>
-                                     </Button>
-                                 </div>
+                                     </ProMaxButton>
                              </div>
 
                             <div className="pt-8 flex flex-col items-center gap-4">
@@ -951,7 +933,7 @@ const Adoucissement = () => {
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
                             <h2 className="mb-8 heading-pro-max text-left">
-                                         <span className="font-bold text-[#3d6aab] block">Ressources</span>
+                                         <span className="font-bold text-[#18448F] block">Ressources</span>
                                      </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
@@ -1006,7 +988,7 @@ const Adoucissement = () => {
                                 </Button>
                             </div>
                             
-                            <div className="absolute right-2 text-sm font-black text-[#3d6aab] bg-blue-50/50 px-4 py-2 rounded-full border border-blue-100/50">
+                            <div className="absolute right-2 text-sm font-black text-[#18448F] bg-blue-50/50 px-4 py-2 rounded-full border border-blue-100/50">
                                 <span className="text-blue-600">{resourceIndex}</span>
                                 <span className="mx-1 text-slate-300">/</span>
                                 <span className="text-slate-400">{resources.length}</span>
@@ -1018,27 +1000,21 @@ const Adoucissement = () => {
             </main>
             <Footer />
 
-                {/* Floating Sticky CTA - Phase III Conversion Focus */}
-                      <div className="hidden md:block fixed bottom-8 right-8 z-[100] animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-[3s] pointer-events-none">
-                        <div className="pointer-events-auto group/sticky">
-                           <div className="relative inline-block group/sticky pointer-events-auto">
-                            <div className="absolute inset-0 border-2 border-white rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover/sticky:-translate-x-[3px] group-hover/sticky:translate-y-[3px]"></div>
-                            <Button
-                              asChild
-                              className="relative bg-white text-[#3d6aab] hover:bg-blue-600 hover:text-white rounded-[2rem] h-[4.5rem] px-8 font-black uppercase tracking-widest text-[11px] transition-all border-none shadow-2xl"
-                            >
-                              <a href="/consultation" className="flex items-center gap-4">
-                                <span className="text-center leading-tight">
-                                  Réservez votre <br />consultation gratuite
-                                </span>
-                                <div className="w-10 h-10 bg-[#3d6aab] rounded-full flex items-center justify-center text-white group-hover/sticky:rotate-[360deg] transition-all duration-700 shadow-lg shadow-blue-200">
-                                    <ArrowRight className="w-5 h-5" />
-                                  </div>
-                              </a>
-                            </Button>
+                      <ProMaxButton
+                        asChild
+                        variant="white"
+                        className="rounded-[2.5rem] h-16 px-8 shadow-2xl transition-all border-none"
+                        style={{ backdropFilter: "blur(20px)" }}
+                      >
+                        <a href="/consultation" className="flex items-center gap-4">
+                          <span className="font-black text-[10px] uppercase tracking-[0.2em] text-[#18448F] whitespace-nowrap text-left leading-relaxed">
+                            Réservez votre <br />consultation gratuite
+                          </span>
+                          <div className="w-10 h-10 bg-[#18448F] rounded-full flex items-center justify-center text-white group-hover:rotate-[360deg] transition-transform duration-700 shadow-lg shadow-blue-200">
+                            <ArrowRight className="w-5 h-5" />
                           </div>
-                        </div>
-                      </div>
+                        </a>
+                      </ProMaxButton>
         </div>
     );
 };

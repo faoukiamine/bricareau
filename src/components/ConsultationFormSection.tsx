@@ -198,16 +198,19 @@ const ConsultationFormSection = ({ id, isStandalone = false }: { id?: string, is
                         <p className="text-gray-600 mb-8">
                             Merci de nous avoir contactés. Un expert de Bricareau confirmera votre rendez-vous sous peu.
                         </p>
-                        <Button
-                            onClick={() => {
-                                setIsSuccess(false);
-                                setStep(1);
-                                form.reset();
-                            }}
-                            className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8"
-                        >
-                            Nouvelle demande
-                        </Button>
+                        <div className="relative inline-block group">
+                            <div className="absolute inset-0 border border-[#18448F] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                            <Button
+                                onClick={() => {
+                                    setIsSuccess(false);
+                                    setStep(1);
+                                    form.reset();
+                                }}
+                                className="relative bg-[#18448F] hover:bg-white hover:text-[#18448F] text-white rounded-[2rem] h-14 px-10 font-black uppercase tracking-widest text-[11px] transition-all border-none"
+                            >
+                                Nouvelle demande
+                            </Button>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -226,11 +229,11 @@ const ConsultationFormSection = ({ id, isStandalone = false }: { id?: string, is
                     ].map((s) => (
                         <div key={s.id} className={cn(
                             "flex items-center gap-2 font-bold whitespace-nowrap transition-colors",
-                            step >= s.id ? "text-blue-600" : "text-gray-300"
+                            step >= s.id ? "text-[#18448F]" : "text-gray-300"
                         )}>
                             <span className={cn(
                                 "w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center text-sm md:text-base transition-colors",
-                                step >= s.id ? "bg-blue-600 text-white" : "bg-gray-100 text-gray-400"
+                                step >= s.id ? "bg-[#18448F] text-white" : "bg-gray-100 text-gray-400"
                             )}>
                                 {step > s.id ? <CheckCircle2 className="w-5 h-5" /> : s.id}
                             </span>
@@ -332,7 +335,7 @@ const ConsultationFormSection = ({ id, isStandalone = false }: { id?: string, is
                                             </FormControl>
                                             <div className="space-y-1 leading-none">
                                                 <FormLabel className="text-xs text-gray-600 font-normal leading-relaxed cursor-pointer block" style={{ textAlign: 'justify' }}>
-                                                    En cochant cette case ou en utilisant le site web Bricareau.com, vous reconnaissez avoir lu les <Link to="/conditions-generales-utilisation" className="underline hover:text-blue-700 transition-colors">Conditions générales</Link> et la <Link to="/politique-de-confidentialite" className="underline hover:text-blue-700 transition-colors">Politique de confidentialité</Link>, les comprendre et accepter d'y être lié.*
+                                                    En cochant cette case ou en utilisant le site web Bricareau.com, vous reconnaissez avoir lu les <Link to="/conditions-generales-utilisation" className="underline hover:text-[#18448F] transition-colors">Conditions générales</Link> et la <Link to="/politique-de-confidentialite" className="underline hover:text-[#18448F] transition-colors">Politique de confidentialité</Link>, les comprendre et accepter d'y être lié.*
                                                 </FormLabel>
                                                 <FormMessage />
                                             </div>
@@ -375,7 +378,7 @@ const ConsultationFormSection = ({ id, isStandalone = false }: { id?: string, is
                                                 locale={fr}
                                                 className="rounded-md border shadow-sm p-3 w-full flex justify-center bg-white"
                                                 classNames={{
-                                                    day_selected: "bg-blue-600 text-white hover:bg-blue-600 focus:bg-blue-600",
+                                                    day_selected: "bg-[#18448F] text-white hover:bg-[#18448F] focus:bg-[#18448F]",
                                                     day_today: "bg-gray-100 text-gray-900 border border-gray-200",
                                                     month: "space-y-4 w-full",
                                                     table: "w-full border-collapse space-y-1",
@@ -412,7 +415,7 @@ const ConsultationFormSection = ({ id, isStandalone = false }: { id?: string, is
                                                                     "flex items-center justify-center px-2 sm:px-4 py-3 border rounded-lg cursor-pointer transition-all font-medium text-xs sm:text-sm",
                                                                     isBooked
                                                                         ? "bg-gray-100 text-gray-400 border-gray-200 cursor-not-allowed decoration-slice"
-                                                                        : "bg-white border-gray-200 hover:bg-gray-50 peer-checked:bg-blue-50 peer-checked:border-blue-600 peer-checked:text-blue-600"
+                                                                        : "bg-white border-gray-200 hover:bg-gray-50 peer-checked:bg-[#18448F]/10 peer-checked:border-[#18448F] peer-checked:text-[#18448F]"
                                                                 )}
                                                             >
                                                                 {time}
@@ -450,14 +453,14 @@ const ConsultationFormSection = ({ id, isStandalone = false }: { id?: string, is
                                             <p className="font-medium text-gray-900">
                                                 {form.getValues("address")}, {form.getValues("ville")}, {form.getValues("province")} {form.getValues("code_postal")}
                                             </p>
-                                        </div>
-                                        <div className="md:col-span-2 bg-blue-50 p-4 rounded-lg border border-blue-100">
-                                            <p className="text-sm text-blue-600 font-semibold mb-1">Rendez-vous demandé</p>
-                                            <div className="flex items-center gap-2 text-blue-900 font-bold text-lg">
-                                                <CalendarIcon className="w-5 h-5" />
-                                                {form.getValues("appointment_date") && format(form.getValues("appointment_date"), "d MMMM yyyy", { locale: fr })}
-                                                <span>à</span>
-                                                <span>{form.getValues("appointment_time")}</span>
+                                            <div className="md:col-span-2 bg-[#18448F]/5 p-4 rounded-lg border border-[#18448F]/10">
+                                                <p className="text-sm text-[#18448F] font-semibold mb-1">Rendez-vous demandé</p>
+                                                <div className="flex items-center gap-2 text-[#18448F] font-bold text-lg">
+                                                    <CalendarIcon className="w-5 h-5" />
+                                                    {form.getValues("appointment_date") && format(form.getValues("appointment_date"), "d MMMM yyyy", { locale: fr })}
+                                                    <span>à</span>
+                                                    <span>{form.getValues("appointment_time")}</span>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -490,23 +493,23 @@ const ConsultationFormSection = ({ id, isStandalone = false }: { id?: string, is
                             <div className="flex w-full sm:w-auto order-1 sm:order-2 sm:ml-auto">
                                 {step < 3 ? (
                                     <div className="relative inline-block w-full sm:w-auto group">
-                                        <div className="absolute inset-0 border border-[#3d6aab] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                                        <div className="absolute inset-0 border border-[#18448F] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
                                         <Button
                                             type="button"
                                             onClick={nextStep}
                                             disabled={isNavigating}
-                                            className="relative w-full sm:w-auto bg-[#3d6aab] hover:bg-white hover:text-[#3d6aab] text-white rounded-[2rem] h-14 px-10 font-black uppercase tracking-widest text-xs transition-all border-none"
+                                            className="relative w-full sm:w-auto bg-[#18448F] hover:bg-white hover:text-[#18448F] text-white rounded-[2rem] h-14 px-10 font-black uppercase tracking-widest text-xs transition-all border-none"
                                         >
                                             Continuer <ChevronRight className="w-4 h-4 ml-2" />
                                         </Button>
                                     </div>
                                 ) : (
                                     <div className="relative inline-block w-full sm:w-auto group">
-                                        <div className="absolute inset-0 border border-[#3d6aab] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                                        <div className="absolute inset-0 border border-[#18448F] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
                                         <Button
                                             type="submit"
                                             disabled={isSubmitting || isNavigating}
-                                            className="relative w-full sm:w-auto bg-[#3d6aab] hover:bg-white hover:text-[#3d6aab] text-white rounded-[2rem] h-14 px-10 font-black uppercase tracking-widest text-xs transition-all border-none"
+                                            className="relative w-full sm:w-auto bg-[#18448F] hover:bg-white hover:text-[#18448F] text-white rounded-[2rem] h-14 px-10 font-black uppercase tracking-widest text-xs transition-all border-none"
                                         >
                                             {isSubmitting ? (
                                                 <>

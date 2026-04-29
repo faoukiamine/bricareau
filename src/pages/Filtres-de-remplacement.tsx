@@ -60,8 +60,8 @@ const FiltresDeRemplacement = () => {
                     <div className="container mx-auto px-6 relative z-10">
                         <div className="max-w-4xl mx-auto text-center mb-16">
                             <h2 className="mb-8 heading-pro-max text-center">
-                                <span className="italic font-light text-[#3d6aab] block">Filtres de remplacement :</span>
-                                <span className="font-bold text-[#3d6aab] block">La pureté préservée, jour après jour.</span>
+                                <span className="italic font-light text-[#18448F] block">Filtres de remplacement :</span>
+                                <span className="font-bold text-[#18448F] block">La pureté préservée, jour après jour.</span>
                             </h2>
                             <p className="body-pro-max mx-auto max-w-2xl text-center">
                                 Identifiez facilement le filtre compatible avec votre système pour garantir une performance optimale.

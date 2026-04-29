@@ -48,7 +48,7 @@ const NotFound = () => {
             {/* Primary Action */}
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
-                className="bg-gradient-to-br from-[#004ac6] to-[#3d6aab] text-white px-8 py-4 rounded-md font-bold text-sm uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg active:scale-95 transition-all w-full sm:w-auto"
+                className="bg-gradient-to-br from-[#004ac6] to-[#18448F] text-white px-8 py-4 rounded-md font-bold text-sm uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg active:scale-95 transition-all w-full sm:w-auto"
                 to="/"
               >
                 <Home className="h-5 w-5" />
@@ -87,7 +87,7 @@ const NotFound = () => {
               <div className="absolute bottom-10 right-10 hidden md:block">
                 <div className="flex flex-col items-end gap-1">
                   <div className="w-24 h-[1px] bg-[#004ac6]/40"></div>
-                  <p className="text-[10px] font-mono text-[#3d6aab] bg-[#d5e3fc] px-2 py-1">COORD_REF: 404_NOT_FOUND</p>
+                  <p className="text-[10px] font-mono text-[#18448F] bg-[#d5e3fc] px-2 py-1">COORD_REF: 404_NOT_FOUND</p>
                 </div>
               </div>
             </div>

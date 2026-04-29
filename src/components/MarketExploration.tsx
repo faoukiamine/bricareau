@@ -10,8 +10,8 @@ const MarketExploration = () => {
                     <h2
                         className="heading-pro-max text-center"
                     >
-                        <span className="italic font-light text-[#3d6aab] block">Explore More</span>
-                        <span className="font-bold text-[#3d6aab] block">Solutions</span>
+                        <span className="italic font-light text-[#18448F] block">Explore More</span>
+                        <span className="font-bold text-[#18448F] block">Solutions</span>
                     </h2>
                 </div>
 
@@ -24,7 +24,7 @@ const MarketExploration = () => {
                                 alt="Workplace Water Solutions"
                                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-[#0052ff]/90 to-[#0052ff]/40 mix-blend-multiply opacity-90 transition-opacity duration-300 group-hover:opacity-100" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-[#18448F]/90 to-[#18448F]/40 mix-blend-multiply opacity-90 transition-opacity duration-300 group-hover:opacity-100" />
                         </div>
 
                         <div className="relative h-full p-8 md:p-12 flex flex-col justify-end text-white z-10">

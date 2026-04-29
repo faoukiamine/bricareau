@@ -322,11 +322,11 @@ const WaterDiagnosticQuiz = () => {
                         <div className="flex flex-col items-center gap-3 z-10 bg-white px-2 sm:px-4 text-center">
                             <div className={cn(
                                 "w-2.5 h-2.5 rounded-full transition-all duration-500",
-                                mainStep >= 1 ? "bg-blue-600 ring-4 ring-blue-50" : "bg-slate-200"
+                                mainStep >= 1 ? "bg-[#18448F] ring-4 ring-[#18448F]/10" : "bg-slate-200"
                             )} />
                             <span className={cn(
                                 "text-[8px] sm:text-[9px] font-black uppercase tracking-tight sm:tracking-widest transition-colors",
-                                mainStep >= 1 ? "text-blue-600" : "text-slate-300"
+                                mainStep >= 1 ? "text-[#18448F]" : "text-slate-300"
                             )}>Profil</span>
                         </div>
 
@@ -334,11 +334,11 @@ const WaterDiagnosticQuiz = () => {
                         <div className="flex flex-col items-center gap-3 z-10 bg-white px-2 sm:px-4 text-center">
                             <div className={cn(
                                 "w-2.5 h-2.5 rounded-full transition-all duration-500",
-                                mainStep >= 2 ? "bg-blue-600 ring-4 ring-blue-50" : "bg-slate-200"
+                                mainStep >= 2 ? "bg-[#18448F] ring-4 ring-[#18448F]/10" : "bg-slate-200"
                             )} />
                             <span className={cn(
                                 "text-[8px] sm:text-[9px] font-black uppercase tracking-tight sm:tracking-widest transition-colors",
-                                mainStep >= 2 ? "text-blue-600" : "text-slate-300"
+                                mainStep >= 2 ? "text-[#18448F]" : "text-slate-300"
                             )}>Évaluation</span>
                         </div>
 
@@ -346,11 +346,11 @@ const WaterDiagnosticQuiz = () => {
                         <div className="flex flex-col items-center gap-3 z-10 bg-white px-2 sm:px-4 text-center">
                             <div className={cn(
                                 "w-2.5 h-2.5 rounded-full transition-all duration-500",
-                                mainStep >= 3 || isSubmitted ? "bg-blue-600 ring-4 ring-blue-50" : "bg-slate-200"
+                                mainStep >= 3 || isSubmitted ? "bg-[#18448F] ring-4 ring-[#18448F]/10" : "bg-slate-200"
                             )} />
                             <span className={cn(
                                 "text-[8px] sm:text-[9px] font-black uppercase tracking-tight sm:tracking-widest transition-colors",
-                                mainStep >= 3 || isSubmitted ? "text-blue-600" : "text-slate-300"
+                                mainStep >= 3 || isSubmitted ? "text-[#18448F]" : "text-slate-300"
                             )}>Résultats</span>
                         </div>
 
@@ -367,7 +367,7 @@ const WaterDiagnosticQuiz = () => {
                             {step === 1 && (
                                 <div className="space-y-8 py-4">
                                     <div className="space-y-4">
-                                        <p className="text-[10px] font-black uppercase tracking-[0.2em] text-blue-600 text-center">Étape 01 — Statut</p>
+                                        <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#18448F] text-center">Étape 01 — Statut</p>
                                         <h3 className="text-center" style={{
                                             fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
                                             fontSize: '24px',
@@ -386,8 +386,8 @@ const WaterDiagnosticQuiz = () => {
                                                     <Label
                                                         htmlFor={`occ-${option}`}
                                                         className={cn(
-                                                            "flex items-center justify-center p-8 rounded-[2rem] border-2 cursor-pointer transition-all hover:bg-slate-50 peer-data-[state=checked]:border-blue-600 peer-data-[state=checked]:bg-blue-50/20",
-                                                            formData.occupancy === option ? "border-blue-600 bg-blue-50/20" : "border-slate-50 bg-slate-50/30"
+                                                            "flex items-center justify-center p-8 rounded-[2rem] border-2 cursor-pointer transition-all hover:bg-slate-50 peer-data-[state=checked]:border-[#18448F] peer-data-[state=checked]:bg-[#18448F]/5",
+                                                            formData.occupancy === option ? "border-[#18448F] bg-[#18448F]/5" : "border-slate-50 bg-slate-50/30"
                                                         )}
                                                     >
                                                         <span className="text-xl font-light text-slate-900">{option}</span>
@@ -397,14 +397,16 @@ const WaterDiagnosticQuiz = () => {
                                         </RadioGroup>
                                     </div>
                                     <div className="flex justify-center pt-2">
-                                        <Button
-                                            disabled={!formData.occupancy}
-                                            onClick={() => setStep(2)}
-                                            size="lg"
-                                            className="rounded-full px-12 transition-all hover:scale-[1.02] active:scale-[0.98]"
-                                        >
-                                            Suivant <ArrowRight className="ml-2 w-4 h-4" />
-                                        </Button>
+                                        <div className="relative group w-full sm:w-auto">
+                                            <div className="absolute inset-0 border border-[#18448F] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                                            <Button
+                                                disabled={!formData.occupancy}
+                                                onClick={() => setStep(2)}
+                                                className="relative w-full sm:w-auto bg-[#18448F] hover:bg-white hover:text-[#18448F] text-white rounded-[2rem] h-16 px-12 font-black uppercase tracking-widest text-xs transition-all border-none"
+                                            >
+                                                Suivant <ArrowRight className="ml-2 w-4 h-4" />
+                                            </Button>
+                                        </div>
                                     </div>
                                 </div>
                             )}
@@ -413,7 +415,7 @@ const WaterDiagnosticQuiz = () => {
                             {step === 2 && (
                                 <div className="space-y-8 py-4">
                                     <div className="space-y-4">
-                                        <p className="text-[10px] font-black uppercase tracking-[0.2em] text-blue-600 text-center">Étape 02 — Habitat</p>
+                                        <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#18448F] text-center">Étape 02 — Habitat</p>
                                         <h3 className="text-center" style={{
                                             fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
                                             fontSize: '24px',
@@ -432,8 +434,8 @@ const WaterDiagnosticQuiz = () => {
                                                     <Label
                                                         htmlFor={`res-${option}`}
                                                         className={cn(
-                                                            "flex items-center justify-center p-6 rounded-[2rem] border-2 cursor-pointer transition-all hover:bg-slate-50 h-24 text-center peer-data-[state=checked]:border-blue-600 peer-data-[state=checked]:bg-blue-50/20",
-                                                            formData.residenceType === option ? "border-blue-600 bg-blue-50/20" : "border-slate-50 bg-slate-50/30"
+                                                            "flex items-center justify-center p-6 rounded-[2rem] border-2 cursor-pointer transition-all hover:bg-slate-50 h-24 text-center peer-data-[state=checked]:border-[#18448F] peer-data-[state=checked]:bg-[#18448F]/5",
+                                                            formData.residenceType === option ? "border-[#18448F] bg-[#18448F]/5" : "border-slate-50 bg-slate-50/30"
                                                         )}
                                                     >
                                                         <span className="text-lg font-light text-slate-900">{option}</span>
@@ -442,13 +444,27 @@ const WaterDiagnosticQuiz = () => {
                                             ))}
                                         </RadioGroup>
                                     </div>
-                                    <div className="flex flex-col-reverse sm:flex-row items-center justify-center gap-4 pt-2">
-                                        <Button variant="outline" onClick={() => setStep(1)} size="lg" className="rounded-full px-12 transition-all w-full sm:w-auto">
-                                            <ArrowLeft className="w-4 h-4 mr-2" /> Précédent
-                                        </Button>
-                                        <Button disabled={!formData.residenceType} onClick={() => setStep(3)} size="lg" className="rounded-full px-12 transition-all w-full sm:w-auto">
-                                            Suivant <ArrowRight className="ml-2 w-4 h-4" />
-                                        </Button>
+                                    <div className="flex flex-col sm:flex-row items-center justify-center gap-8 pt-2">
+                                        <div className="relative group w-full sm:w-auto">
+                                            <div className="absolute inset-0 border border-[#18448F] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                                            <Button 
+                                                variant="outline" 
+                                                onClick={() => setStep(1)} 
+                                                className="relative w-full sm:w-auto bg-white hover:bg-[#18448F] text-[#18448F] hover:text-white rounded-[2rem] h-16 px-12 font-black uppercase tracking-widest text-xs transition-all border-none"
+                                            >
+                                                <ArrowLeft className="w-4 h-4 mr-2" /> Précédent
+                                            </Button>
+                                        </div>
+                                        <div className="relative group w-full sm:w-auto">
+                                            <div className="absolute inset-0 border border-[#18448F] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                                            <Button 
+                                                disabled={!formData.residenceType} 
+                                                onClick={() => setStep(3)} 
+                                                className="relative w-full sm:w-auto bg-[#18448F] hover:bg-white hover:text-[#18448F] text-white rounded-[2rem] h-16 px-12 font-black uppercase tracking-widest text-xs transition-all border-none"
+                                            >
+                                                Suivant <ArrowRight className="ml-2 w-4 h-4" />
+                                            </Button>
+                                        </div>
                                     </div>
                                 </div>
                             )}
@@ -457,7 +473,7 @@ const WaterDiagnosticQuiz = () => {
                             {step === 3 && (
                                 <div className="space-y-8 py-4">
                                     <div className="space-y-4">
-                                        <p className="text-[10px] font-black uppercase tracking-[0.2em] text-blue-600 text-center">Étape 03 — Source</p>
+                                        <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#18448F] text-center">Étape 03 — Source</p>
                                         <h3 className="text-center" style={{
                                             fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
                                             fontSize: '24px',
@@ -476,8 +492,8 @@ const WaterDiagnosticQuiz = () => {
                                                     <Label
                                                         htmlFor={`src-${option}`}
                                                         className={cn(
-                                                            "flex items-center justify-center p-6 rounded-[2rem] border-2 cursor-pointer transition-all hover:bg-slate-50 h-24 text-center peer-data-[state=checked]:border-blue-600 peer-data-[state=checked]:bg-blue-50/20",
-                                                            formData.source === option ? "border-blue-600 bg-blue-50/20" : "border-slate-50 bg-slate-50/30"
+                                                            "flex items-center justify-center p-6 rounded-[2rem] border-2 cursor-pointer transition-all hover:bg-slate-50 h-24 text-center peer-data-[state=checked]:border-[#18448F] peer-data-[state=checked]:bg-[#18448F]/5",
+                                                            formData.source === option ? "border-[#18448F] bg-[#18448F]/5" : "border-slate-50 bg-slate-50/30"
                                                         )}
                                                     >
                                                         <span className="text-lg font-light text-slate-900">{option}</span>
@@ -486,13 +502,27 @@ const WaterDiagnosticQuiz = () => {
                                             ))}
                                         </RadioGroup>
                                     </div>
-                                    <div className="flex flex-col-reverse sm:flex-row items-center justify-center gap-4 pt-2">
-                                        <Button variant="outline" onClick={() => setStep(2)} size="lg" className="rounded-full px-12 transition-all w-full sm:w-auto">
-                                            <ArrowLeft className="w-4 h-4 mr-2" /> Précédent
-                                        </Button>
-                                        <Button disabled={!formData.source} onClick={() => setStep(4)} size="lg" className="rounded-full px-12 transition-all w-full sm:w-auto">
-                                            Suivant <ArrowRight className="ml-2 w-4 h-4" />
-                                        </Button>
+                                    <div className="flex flex-col sm:flex-row items-center justify-center gap-8 pt-2">
+                                        <div className="relative group w-full sm:w-auto">
+                                            <div className="absolute inset-0 border border-[#18448F] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                                            <Button 
+                                                variant="outline" 
+                                                onClick={() => setStep(2)} 
+                                                className="relative w-full sm:w-auto bg-white hover:bg-[#18448F] text-[#18448F] hover:text-white rounded-[2rem] h-16 px-12 font-black uppercase tracking-widest text-xs transition-all border-none"
+                                            >
+                                                <ArrowLeft className="w-4 h-4 mr-2" /> Précédent
+                                            </Button>
+                                        </div>
+                                        <div className="relative group w-full sm:w-auto">
+                                            <div className="absolute inset-0 border border-[#18448F] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                                            <Button 
+                                                disabled={!formData.source} 
+                                                onClick={() => setStep(4)} 
+                                                className="relative w-full sm:w-auto bg-[#18448F] hover:bg-white hover:text-[#18448F] text-white rounded-[2rem] h-16 px-12 font-black uppercase tracking-widest text-xs transition-all border-none"
+                                            >
+                                                Suivant <ArrowRight className="ml-2 w-4 h-4" />
+                                            </Button>
+                                        </div>
                                     </div>
                                 </div>
                             )}
@@ -501,7 +531,7 @@ const WaterDiagnosticQuiz = () => {
                             {step === 4 && (
                                 <div className="space-y-8 py-4">
                                     <div className="space-y-4">
-                                        <p className="text-[10px] font-black uppercase tracking-[0.2em] text-blue-600 text-center">Étape 04 — Foyer</p>
+                                        <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#18448F] text-center">Étape 04 — Foyer</p>
                                         <h3 className="text-center" style={{
                                             fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
                                             fontSize: '24px',
@@ -514,20 +544,34 @@ const WaterDiagnosticQuiz = () => {
                                                 <button
                                                     key={option}
                                                     onClick={() => handleHouseholdChange(option)}
-                                                    className={`h-24 rounded-[2rem] border-2 transition-all font-light text-xl ${formData.household === option ? 'border-blue-600 bg-blue-50/20 text-slate-900' : 'border-slate-50 bg-slate-50/30 text-slate-900 hover:border-blue-100'}`}
+                                                    className={`h-24 rounded-[2rem] border-2 transition-all font-light text-xl ${formData.household === option ? 'border-[#18448F] bg-[#18448F]/5 text-slate-900' : 'border-slate-50 bg-slate-50/30 text-slate-900 hover:border-[#18448F]/20'}`}
                                                 >
                                                     {option}
                                                 </button>
                                             ))}
                                         </div>
                                     </div>
-                                    <div className="flex flex-col-reverse sm:flex-row items-center justify-center gap-4 pt-2">
-                                        <Button variant="outline" onClick={() => setStep(3)} size="lg" className="rounded-full px-12 transition-all w-full sm:w-auto">
-                                            <ArrowLeft className="w-4 h-4 mr-2" /> Précédent
-                                        </Button>
-                                        <Button disabled={!formData.household} onClick={() => setStep(5)} size="lg" className="rounded-full px-12 transition-all w-full sm:w-auto">
-                                            Analysez mon eau <ArrowRight className="ml-2 w-4 h-4" />
-                                        </Button>
+                                    <div className="flex flex-col sm:flex-row items-center justify-center gap-8 pt-2">
+                                        <div className="relative group w-full sm:w-auto">
+                                            <div className="absolute inset-0 border border-[#18448F] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                                            <Button 
+                                                variant="outline" 
+                                                onClick={() => setStep(3)} 
+                                                className="relative w-full sm:w-auto bg-white hover:bg-[#18448F] text-[#18448F] hover:text-white rounded-[2rem] h-16 px-12 font-black uppercase tracking-widest text-xs transition-all border-none"
+                                            >
+                                                <ArrowLeft className="w-4 h-4 mr-2" /> Précédent
+                                            </Button>
+                                        </div>
+                                        <div className="relative group w-full sm:w-auto">
+                                            <div className="absolute inset-0 border border-[#18448F] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                                            <Button 
+                                                disabled={!formData.household} 
+                                                onClick={() => setStep(5)} 
+                                                className="relative w-full sm:w-auto bg-[#18448F] hover:bg-white hover:text-[#18448F] text-white rounded-[2rem] h-16 px-12 font-black uppercase tracking-widest text-xs transition-all border-none"
+                                            >
+                                                Analysez mon eau <ArrowRight className="ml-2 w-4 h-4" />
+                                            </Button>
+                                        </div>
                                     </div>
                                 </div>
                             )}
@@ -539,7 +583,7 @@ const WaterDiagnosticQuiz = () => {
                                 return (
                                     <div className="space-y-8 py-4">
                                         <div className="text-center max-w-xl mx-auto space-y-2">
-                                            <p className="text-[10px] font-black uppercase tracking-[0.2em] text-blue-600">Étape {step.toString().padStart(2, '0')} — Symptômes</p>
+                                            <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#18448F]">Étape {step.toString().padStart(2, '0')} — Symptômes</p>
                                             <h3 style={{
                                                 fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
                                                 fontSize: '24px',
@@ -557,22 +601,35 @@ const WaterDiagnosticQuiz = () => {
                                                     onClick={() => handleSignToggle(option)}
                                                     className={cn(
                                                         "group p-4 rounded-2xl border-2 cursor-pointer transition-all flex items-center gap-3",
-                                                        formData.signs.includes(option) ? "border-blue-600 bg-blue-50/20" : "border-slate-50 bg-white hover:bg-slate-50"
+                                                        formData.signs.includes(option) ? "border-[#18448F] bg-[#18448F]/5" : "border-slate-50 bg-white hover:bg-slate-50"
                                                     )}
                                                 >
-                                                    <Checkbox checked={formData.signs.includes(option)} className="w-4 h-4 rounded-full border-slate-300" />
+                                                    <Checkbox checked={formData.signs.includes(option)} className="w-4 h-4 rounded-full border-slate-300 data-[state=checked]:bg-[#18448F] data-[state=checked]:border-[#18448F]" />
                                                     <span className="text-sm font-light text-slate-800 leading-tight">{option.replace(/ \(.*\)/, '')}</span>
                                                 </div>
                                             ))}
                                         </div>
 
-                                        <div className="flex flex-col-reverse sm:flex-row items-center justify-center gap-4 pt-6">
-                                            <Button variant="outline" onClick={() => setStep(step - 1)} size="lg" className="rounded-full px-12 transition-all w-full sm:w-auto">
-                                                <ArrowLeft className="w-4 h-4 mr-2" /> Précédent
-                                            </Button>
-                                            <Button onClick={() => setStep(step + 1)} size="lg" className="rounded-full px-12 transition-all w-full sm:w-auto">
-                                                {step === 8 ? "Suivant" : "Continuer"} <ArrowRight className="ml-2 w-4 h-4" />
-                                            </Button>
+                                        <div className="flex flex-col sm:flex-row items-center justify-center gap-8 pt-6">
+                                            <div className="relative group w-full sm:w-auto">
+                                                <div className="absolute inset-0 border border-[#18448F] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                                                <Button 
+                                                    variant="outline" 
+                                                    onClick={() => setStep(step - 1)} 
+                                                    className="relative w-full sm:w-auto bg-white hover:bg-[#18448F] text-[#18448F] hover:text-white rounded-[2rem] h-16 px-12 font-black uppercase tracking-widest text-xs transition-all border-none"
+                                                >
+                                                    <ArrowLeft className="w-4 h-4 mr-2" /> Précédent
+                                                </Button>
+                                            </div>
+                                            <div className="relative group w-full sm:w-auto">
+                                                <div className="absolute inset-0 border border-[#18448F] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                                                <Button 
+                                                    onClick={() => setStep(step + 1)} 
+                                                    className="relative w-full sm:w-auto bg-[#18448F] hover:bg-white hover:text-[#18448F] text-white rounded-[2rem] h-16 px-12 font-black uppercase tracking-widest text-xs transition-all border-none"
+                                                >
+                                                    {step === 8 ? "Suivant" : "Continuer"} <ArrowRight className="ml-2 w-4 h-4" />
+                                                </Button>
+                                            </div>
                                         </div>
                                     </div>
                                 );
@@ -582,7 +639,7 @@ const WaterDiagnosticQuiz = () => {
                             {step === 9 && (
                                 <form onSubmit={handleSubmit} className="flex flex-col gap-8 max-w-xl mx-auto py-4">
                                     <div className="text-center space-y-2">
-                                        <p className="text-[10px] font-black uppercase tracking-[0.2em] text-blue-600">Résultats</p>
+                                        <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#18448F]">Résultats</p>
                                         <h3 style={{
                                             fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
                                             fontSize: '24px',
@@ -605,6 +662,7 @@ const WaterDiagnosticQuiz = () => {
                                                     required 
                                                     checked={formData.legal_consent}
                                                     onCheckedChange={(checked) => setFormData({ ...formData, legal_consent: checked === true })}
+                                                    className="data-[state=checked]:bg-[#18448F] data-[state=checked]:border-[#18448F]"
                                                 />
                                                 <Label htmlFor="legal_consent" className="text-[10px] leading-relaxed text-slate-500 font-normal cursor-pointer select-none" style={{ textAlign: 'justify' }}>
                                                     En cochant cette case ou en utilisant le site web Bricareau.com, vous reconnaissez avoir lu les Conditions générales et la Politique de confidentialité, les comprendre et accepter d'y être lié.*
@@ -616,6 +674,7 @@ const WaterDiagnosticQuiz = () => {
                                                     id="marketing_consent" 
                                                     checked={formData.marketing_consent}
                                                     onCheckedChange={(checked) => setFormData({ ...formData, marketing_consent: checked === true })}
+                                                    className="data-[state=checked]:bg-[#18448F] data-[state=checked]:border-[#18448F]"
                                                 />
                                                 <Label htmlFor="marketing_consent" className="text-[10px] leading-relaxed text-slate-500 font-normal cursor-pointer select-none">
                                                     Je souhaite recevoir les prochaines communications de Bricareau. (Vous pouvez vous désabonner à tout moment.)
@@ -624,13 +683,28 @@ const WaterDiagnosticQuiz = () => {
                                         </div>
                                     </div>
 
-                                    <div className="flex flex-col-reverse sm:flex-row items-center justify-center gap-4 pt-4">
-                                        <Button variant="outline" type="button" onClick={() => setStep(8)} size="lg" className="rounded-full px-12 transition-all w-full sm:w-auto">
-                                            <ArrowLeft className="w-4 h-4 mr-2" /> Précédent
-                                        </Button>
-                                        <Button type="submit" disabled={isSubmitting} size="lg" className="rounded-full transition-all w-full sm:w-auto">
-                                            {isSubmitting ? "Envoi..." : "Obtenir mon rapport"}
-                                        </Button>
+                                    <div className="flex flex-col sm:flex-row items-center justify-center gap-8 pt-4">
+                                        <div className="relative group w-full sm:w-auto">
+                                            <div className="absolute inset-0 border border-[#18448F] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                                            <Button 
+                                                variant="outline" 
+                                                type="button" 
+                                                onClick={() => setStep(8)} 
+                                                className="relative w-full sm:w-auto bg-white hover:bg-[#18448F] text-[#18448F] hover:text-white rounded-[2rem] h-16 px-12 font-black uppercase tracking-widest text-xs transition-all border-none"
+                                            >
+                                                <ArrowLeft className="w-4 h-4 mr-2" /> Précédent
+                                            </Button>
+                                        </div>
+                                        <div className="relative group w-full sm:w-auto">
+                                            <div className="absolute inset-0 border border-[#18448F] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                                            <Button 
+                                                type="submit" 
+                                                disabled={isSubmitting} 
+                                                className="relative w-full sm:w-auto bg-[#18448F] hover:bg-white hover:text-[#18448F] text-white rounded-[2rem] h-16 px-12 font-black uppercase tracking-widest text-xs transition-all border-none"
+                                            >
+                                                {isSubmitting ? "Envoi..." : "Obtenir mon rapport"}
+                                            </Button>
+                                        </div>
                                     </div>
                                 </form>
                             )}
@@ -639,7 +713,7 @@ const WaterDiagnosticQuiz = () => {
                         /* Results - Compact */
                         <div className="w-full py-4 px-4 md:px-8 flex flex-col items-center">
                             <div className="text-center mb-8 w-full flex flex-col items-center">
-                                <ShieldCheck className="w-10 h-10 text-blue-600 mx-auto mb-4" />
+                                <ShieldCheck className="w-10 h-10 text-[#18448F] mx-auto mb-4" />
                                 <h2 className="mb-2" style={{
                                     fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
                                     fontSize: '24px',
@@ -655,27 +729,31 @@ const WaterDiagnosticQuiz = () => {
                                     <div key={idx} className="bg-slate-50 rounded-3xl p-6 border-2 border-transparent hover:border-blue-100 transition-all flex flex-col items-start">
                                         <h4 className="text-lg font-bold text-slate-900 mb-2">{rec.title}</h4>
                                         <p className="text-slate-500 text-sm font-light mb-4 line-clamp-2">{rec.desc}</p>
-                                        <Button variant="link" className="p-0 h-auto text-blue-600 font-bold text-xs" onClick={() => window.location.href = rec.link}>Voir le produit <ArrowRight className="ml-1 w-3 h-3" /></Button>
+                                        <Button variant="link" className="p-0 h-auto text-[#18448F] font-bold text-xs" onClick={() => window.location.href = rec.link}>Voir le produit <ArrowRight className="ml-1 w-3 h-3" /></Button>
                                     </div>
                                 ))}
                             </div>
 
-                            <div className="flex flex-col items-center gap-4 pt-6 border-t border-slate-100">
-                                <Button 
-                                    size="lg" 
-                                    className="w-full sm:w-auto"
-                                    onClick={() => window.location.href = '/contact'}
-                                >
-                                    Prendre rendez-vous avec un expert
-                                </Button>
-                                <Button 
-                                    variant="outline"
-                                    size="lg"
-                                    className="w-full sm:w-auto"
-                                    onClick={() => { setIsSubmitted(false); setStep(1); }}
-                                >
-                                    Relancer le diagnostic
-                                </Button>
+                            <div className="flex flex-col items-center gap-8 pt-6 border-t border-slate-100 w-full">
+                                <div className="relative group w-full sm:w-auto">
+                                    <div className="absolute inset-0 border border-[#18448F] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                                    <Button 
+                                        onClick={() => window.location.href = '/contact'}
+                                        className="relative w-full sm:w-auto bg-[#18448F] hover:bg-white hover:text-[#18448F] text-white rounded-[2rem] h-16 px-12 font-black uppercase tracking-widest text-xs transition-all border-none"
+                                    >
+                                        Prendre rendez-vous avec un expert
+                                    </Button>
+                                </div>
+                                <div className="relative group w-full sm:w-auto">
+                                    <div className="absolute inset-0 border border-[#18448F] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                                    <Button 
+                                        variant="outline"
+                                        onClick={() => { setIsSubmitted(false); setStep(1); }}
+                                        className="relative w-full sm:w-auto bg-white hover:bg-[#18448F] text-[#18448F] hover:text-white rounded-[2rem] h-16 px-12 font-black uppercase tracking-widest text-xs transition-all border-none"
+                                    >
+                                        Relancer le diagnostic
+                                    </Button>
+                                </div>
                             </div>
                         </div>
                     )}

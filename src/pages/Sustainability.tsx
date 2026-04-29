@@ -133,7 +133,7 @@ const Sustainability = () => {
                         title={
                             <div className="text-center space-y-3 mb-16 px-6">
                                 <span className="italic font-light text-[#0052ff] block text-2xl md:text-3xl">L'engagement durable récompensé.</span>
-                                <span className="font-bold text-[#3d6aab] block text-4xl md:text-6xl tracking-tighter uppercase leading-none">VOS AVIS NOUS MOTIVENT</span>
+                                <span className="font-bold text-[#18448F] block text-4xl md:text-6xl tracking-tighter uppercase leading-none">VOS AVIS NOUS MOTIVENT</span>
                             </div>
                         }
                     />

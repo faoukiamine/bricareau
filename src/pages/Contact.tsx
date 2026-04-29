@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import Header from "@/components/Header";
 import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 import Footer from "@/components/Footer";
+import { ProMaxButton } from "@/components/ui/ProMaxButton";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -48,7 +49,7 @@ const Contact = () => {
           <div className="container relative z-10 mx-auto px-4 h-full flex items-center lg:px-6">
             <div className="max-w-2xl text-left py-12 lg:py-0">
               <h1 
-                className="italic font-light tracking-tighter text-[#3d6aab] max-w-xl mb-4 lg:mb-8"
+                className="italic font-light tracking-tighter text-[#18448F] max-w-xl mb-4 lg:mb-8"
                 style={{ 
                     fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
                     fontSize: '50px',
@@ -56,19 +57,19 @@ const Contact = () => {
                     fontWeight: 300 
                 }}
               >
-                <span className="italic font-light text-[#3d6aab] block">Contactez-nous.</span>
-                <span className="font-bold text-[#3d6aab] block">Notre équipe est à votre écoute.</span>
+                <span className="italic font-light text-[#18448F] block">Contactez-nous.</span>
+                <span className="font-bold text-[#18448F] block">Notre équipe est à votre écoute.</span>
               </h1>
               <p className="font-light text-slate-600 mb-8 max-w-xl text-lg leading-relaxed">
                 Nous sommes là pour répondre à toutes vos questions sur le traitement de l'eau. Que ce soit pour un conseil technique ou une demande de soumission, nos experts vous accompagnent avec transparence.
               </p>
               <div className="flex flex-col sm:flex-row items-start lg:items-center gap-4 pt-4">
-                <Button asChild className="w-fit">
+                <ProMaxButton asChild className="w-fit">
                   <a href="tel:18552649328" className="flex items-center gap-2">
                     <Phone className="w-4 h-4" />
                     Appelez au 1 855 264 9328
                   </a>
-                </Button>
+                </ProMaxButton>
                 <div className="flex items-center gap-2 text-slate-500 text-sm font-light">
                   <div className="flex">
                     {[1, 2, 3, 4, 5].map((star) => (
@@ -100,16 +101,16 @@ const Contact = () => {
                   <img src="/images/FAQ.jpg" alt="Foire aux questions" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" />
                   <div className="absolute inset-0 bg-blue-600/5 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </div>
-                <h3 className="mb-4 text-xl font-bold text-[#3d6aab] group-hover:text-blue-600 transition-colors">
+                <h3 className="mb-4 text-xl font-bold text-[#18448F] group-hover:text-blue-600 transition-colors">
                   Foire aux questions
                 </h3>
                 <p className="body-pro-max text-sm mb-8 flex-grow text-slate-500 leading-relaxed font-light">
                   Vous n'avez pas envie de nous contacter, ou vous pensez que nous avons déjà répondu à votre question ? Consultez notre FAQ exhaustive.
                 </p>
                 <div className="pt-2">
-                  <Button variant="outline" className="rounded-full px-6 border-slate-200 group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-600 transition-all pointer-events-none">
+                  <ProMaxButton variant="outline" className="px-8 pointer-events-none">
                     Consultez la FAQ <ChevronRight className="w-4 h-4 ml-2" />
-                  </Button>
+                  </ProMaxButton>
                 </div>
               </NavLink>
 
@@ -122,16 +123,16 @@ const Contact = () => {
                   <img src="/images/40-AdobeStock_365603381.jpeg" alt="Consultation gratuite" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" />
                   <div className="absolute inset-0 bg-blue-600/5 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </div>
-                <h3 className="mb-4 text-xl font-bold text-[#3d6aab] group-hover:text-blue-600 transition-colors">
+                <h3 className="mb-4 text-xl font-bold text-[#18448F] group-hover:text-blue-600 transition-colors">
                   Demande de consultation
                 </h3>
                 <p className="body-pro-max text-sm mb-8 flex-grow text-slate-500 leading-relaxed font-light">
                   Pour obtenir une soumission personnalisée ou discuter d'un projet d'installation, nos experts sont à votre entière disposition.
                 </p>
                 <div className="pt-2">
-                  <Button variant="outline" className="rounded-full px-6 border-slate-200 group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-600 transition-all pointer-events-none">
+                  <ProMaxButton variant="outline" className="px-8 pointer-events-none">
                     Planifiez une consultation <ChevronRight className="w-4 h-4 ml-2" />
-                  </Button>
+                  </ProMaxButton>
                 </div>
               </NavLink>
 
@@ -151,16 +152,16 @@ const Contact = () => {
                   </span>
                   En ligne : Réponse &lt; 15 min
                 </div>
-                <h3 className="mb-4 text-xl font-bold text-[#3d6aab] group-hover:text-blue-600 transition-colors">
+                <h3 className="mb-4 text-xl font-bold text-[#18448F] group-hover:text-blue-600 transition-colors">
                   Support client & Entretien
                 </h3>
                 <p className="body-pro-max text-sm mb-8 flex-grow text-slate-500 leading-relaxed font-light">
                   Déjà client Bricareau ? Besoin d'aide technique ou de planifier un entretien de routine par nos techniciens certifiés.
                 </p>
                 <div className="pt-2">
-                  <Button variant="outline" className="rounded-full px-6 border-slate-200 group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-600 transition-all pointer-events-none">
+                  <ProMaxButton variant="outline" className="px-8 pointer-events-none">
                     Écrivez-nous <ChevronRight className="w-4 h-4 ml-2" />
-                  </Button>
+                  </ProMaxButton>
                 </div>
               </NavLink>
             </div>

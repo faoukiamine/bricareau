@@ -37,7 +37,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-[#3d6aab] text-white py-12 md:py-16">
+    <footer className="bg-[#18448F] text-white py-12 md:py-16">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 mb-12">
           {/* Logo and tagline */}
@@ -139,7 +139,7 @@ const Footer = () => {
                 <Button
                   type="submit"
                   size="icon"
-                  className="bg-white text-[#3d6aab] hover:bg-white/90 shrink-0"
+                  className="bg-white text-[#18448F] hover:bg-white/90 shrink-0"
                   disabled={isLoading}
                 >
                   {isLoading ? <Loader2 className="h-4 w-4 animate-spin" /> : <Mail className="h-4 w-4" />}

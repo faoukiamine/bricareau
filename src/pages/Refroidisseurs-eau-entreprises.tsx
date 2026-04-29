@@ -27,6 +27,7 @@ import {
     TrendingUp,
     Coffee
 } from "lucide-react";
+import { ProMaxButton } from "@/components/ui/ProMaxButton";
 import { Button } from "@/components/ui/button";
 import { NavLink } from "react-router-dom";
 
@@ -276,12 +277,18 @@ const RefroidisseursEauEntreprises = () => {
                             </p>
                             
                             <div className="flex flex-wrap gap-6 pt-4">
-                                <Button size="lg" className="h-16 px-10 text-lg rounded-full" asChild>
+                                <ProMaxButton 
+                                    asChild
+                                    variant="primary"
+                                >
                                     <NavLink to="/contact-entreprises">Essai Gratuit 7 Jours</NavLink>
-                                </Button>
-                                <Button variant="outline" size="lg" className="h-16 px-10 text-lg rounded-full border-white/20 text-white hover:bg-white/10">
-                                    Consulter un Expert Pro
-                                </Button>
+                                </ProMaxButton>
+                                <ProMaxButton 
+                                    variant="outline-white"
+                                    asChild
+                                >
+                                    <NavLink to="/contact-entreprises">Consulter un Expert Pro</NavLink>
+                                </ProMaxButton>
                             </div>
 
                             <div className="pt-8 flex items-center gap-8 border-t border-white/5">
@@ -380,7 +387,7 @@ const RefroidisseursEauEntreprises = () => {
                                             <div className="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center text-white">
                                                 <Award className="w-5 h-5" />
                                             </div>
-                                            <span className="font-black text-xs uppercase tracking-widest text-[#3d6aab]">Bricareau PRO Care</span>
+                                            <span className="font-black text-xs uppercase tracking-widest text-[#18448F]">Bricareau PRO Care</span>
                                         </div>
                                         <p className="text-slate-600 font-light italic">
                                             "Nous ne nous contentons pas d'installer une fontaine ; nous gérons votre hydratation. Notre service d'entretien sanitaire semestriel garantit une eau toujours conforme aux normes les plus strictes."
@@ -416,12 +423,15 @@ const RefroidisseursEauEntreprises = () => {
                                 </div>
 
                                 <div className="pt-8">
-                                    <Button size="lg" className="h-16 px-10 rounded-full group" asChild>
+                                    <ProMaxButton 
+                                        variant="primary"
+                                        asChild
+                                    >
                                         <NavLink to="/contact-entreprises">
                                             Demander une soumission PRO
                                             <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
                                         </NavLink>
-                                    </Button>
+                                    </ProMaxButton>
                                 </div>
                             </div>
                         </div>
@@ -510,15 +520,21 @@ const RefroidisseursEauEntreprises = () => {
                             </p>
                         </div>
                         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                            <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50 h-16 px-12 rounded-full font-bold text-lg" asChild>
+                            <ProMaxButton 
+                                variant="white"
+                                asChild
+                            >
                                 <NavLink to="/contact-entreprises">Réserver mon essai gratuit</NavLink>
-                            </Button>
-                            <Button variant="outline" size="lg" className="border-white/30 text-white hover:bg-white/10 h-16 px-12 rounded-full font-bold text-lg">
+                            </ProMaxButton>
+                            <ProMaxButton 
+                                variant="outline-white"
+                                asChild
+                            >
                                 <a href="tel:18552649328" className="flex items-center gap-3">
                                     <Phone className="w-5 h-5" />
                                     1-855-264-9328
                                 </a>
-                            </Button>
+                            </ProMaxButton>
                         </div>
                     </div>
                 </section>

@@ -233,8 +233,8 @@ const Industriel = () => {
                             <div className="space-y-6">
                                 <h1 className="mb-6 animate-in fade-in slide-in-from-left duration-1000 tracking-tighter"
                                     style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif', fontSize: '50px', lineHeight: '55px' }}>
-                                    <span className="italic font-light text-[#3d6aab] block">Solutions</span>
-                                    <span className="font-bold text-[#3d6aab] block">Industrielles.</span>
+                                    <span className="italic font-light text-[#18448F] block">Solutions</span>
+                                    <span className="font-bold text-[#18448F] block">Industrielles.</span>
                                 </h1>
                                 
                                 <p className="max-w-xl animate-in fade-in slide-in-from-left duration-1000 delay-100 text-left text-slate-600 text-lg md:text-xl font-light leading-relaxed">
@@ -243,9 +243,9 @@ const Industriel = () => {
 
                                 <div className="flex flex-col sm:flex-row items-center gap-8 pt-4">
                                     <div className="relative inline-block w-full sm:w-auto group">
-                                        <div className="absolute inset-0 border border-[#3d6aab] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                                        <div className="absolute inset-0 border border-[#18448F] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
                                         <Button
-                                            className="relative w-full sm:w-auto bg-[#3d6aab] hover:bg-white hover:text-[#3d6aab] text-white rounded-[2rem] h-[3.25rem] px-8 font-black uppercase tracking-[0.1em] text-[11px] transition-all border-none"
+                                            className="relative w-full sm:w-auto bg-[#18448F] hover:bg-white hover:text-[#18448F] text-white rounded-[2rem] h-[3.25rem] px-8 font-black uppercase tracking-[0.1em] text-[11px] transition-all border-none"
                                             onClick={() => navigate("/consultation")}
                                         >
                                             Planifiez une consultation gratuite
@@ -253,10 +253,10 @@ const Industriel = () => {
                                     </div>
                                     
                                     <div className="relative inline-block w-full sm:w-auto group">
-                                        <div className="absolute inset-0 border border-[#3d6aab] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                                        <div className="absolute inset-0 border border-[#18448F] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
                                         <Button
                                             asChild
-                                            className="relative w-full sm:w-auto bg-[#3d6aab] hover:bg-white hover:text-[#3d6aab] text-white rounded-[2rem] h-[3.25rem] px-8 font-black uppercase tracking-[0.1em] text-[11px] transition-all border-none"
+                                            className="relative w-full sm:w-auto bg-[#18448F] hover:bg-white hover:text-[#18448F] text-white rounded-[2rem] h-[3.25rem] px-8 font-black uppercase tracking-[0.1em] text-[11px] transition-all border-none"
                                         >
                                             <a href="tel:18552649328" className="flex items-center justify-center gap-2">
                                                 <Phone className="w-5 h-5 flex-shrink-0" />
@@ -276,11 +276,11 @@ const Industriel = () => {
                         <div className="flex items-center justify-center gap-2 text-[10px] text-slate-400 uppercase tracking-[0.4em] mb-12 font-bold">
                             <span>Accueil</span>
                             <ChevronRight className="w-3 h-3" />
-                            <span className="text-[#3d6aab]">Industriel</span>
+                            <span className="text-[#18448F]">Industriel</span>
                         </div>
                         <h2 className="text-4xl md:text-6xl font-bold mb-10 tracking-tight text-slate-900">Notre approche</h2>
                         <p className="text-lg md:text-[1.2rem] text-slate-500 font-normal leading-relaxed">
-                            Il n'y a jamais eu de meilleur moment pour optimiser votre <span className="text-slate-900 font-semibold italic">production industrielle</span>. Chez Bricareau, nous comprenons les exigences critiques de vos processus. Les installations industrielles méritent une eau de <span className="text-[#3d6aab] font-semibold">qualité supérieure</span> qui protégera vos équipements coûteux et maximisera votre efficacité opérationnelle.
+                            Il n'y a jamais eu de meilleur moment pour optimiser votre <span className="text-slate-900 font-semibold italic">production industrielle</span>. Chez Bricareau, nous comprenons les exigences critiques de vos processus. Les installations industrielles méritent une eau de <span className="text-[#18448F] font-semibold">qualité supérieure</span> qui protégera vos équipements coûteux et maximisera votre efficacité opérationnelle.
                         </p>
                     </div>
                 </section>
@@ -308,7 +308,7 @@ const Industriel = () => {
                                         <div className="relative flex items-center justify-center w-8 flex-shrink-0">
                                             {activeSection === idx ? (
                                                 <div className="w-10 h-10 rounded-full border-[2.5px] border-white flex items-center justify-center transition-all duration-500 bg-transparent">
-                                                    <div className="w-4 h-4 rounded-full bg-[#3d6aab] shadow-[0_0_10px_rgba(61,106,171,0.8)]" />
+                                                    <div className="w-4 h-4 rounded-full bg-[#18448F] shadow-[0_0_10px_rgba(61,106,171,0.8)]" />
                                                 </div>
                                             ) : (
                                                 <div className="w-2.5 h-2.5 rounded-full border-[1.5px] border-blue-400 opacity-60 group-hover:opacity-100 transition-all" />
@@ -388,9 +388,9 @@ const Industriel = () => {
                                     </ul>
 
                                     <div className="relative inline-block group">
-                                        <div className="absolute inset-0 border border-[#3d6aab] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                                        <div className="absolute inset-0 border border-[#18448F] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
                                         <Button 
-                                            className="relative bg-[#3d6aab] hover:bg-white hover:text-[#3d6aab] text-white rounded-[2rem] px-10 h-14 font-black uppercase tracking-widest text-[11px] transition-all border-none"
+                                            className="relative bg-[#18448F] hover:bg-white hover:text-[#18448F] text-white rounded-[2rem] px-10 h-14 font-black uppercase tracking-widest text-[11px] transition-all border-none"
                                             onClick={() => navigate(prog.link)}
                                         >
                                             APPRENDRE ENCORE PLUS
@@ -409,8 +409,8 @@ const Industriel = () => {
                             <div className="max-w-2xl">
                                 <span className="text-slate-600 font-bold text-[10px] sm:text-xs uppercase tracking-[0.2em] block mb-4">Témoignages de réussite de nos partenaires</span>
                                 <h2 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-black text-[#0f172a] leading-[1.1] tracking-tight">
-                                    <span className="italic font-light text-[#3d6aab] block">Votre confiance.</span>
-                                    <span className="font-bold text-[#3d6aab] block">Notre plus grande fierté.</span>
+                                    <span className="italic font-light text-[#18448F] block">Votre confiance.</span>
+                                    <span className="font-bold text-[#18448F] block">Notre plus grande fierté.</span>
                                 </h2>
                             </div>
                         </div>
@@ -472,7 +472,7 @@ const Industriel = () => {
                             {/* Circular Badge */}
                             <div className="absolute right-4 sm:right-12 lg:right-24 bottom-16 sm:bottom-12 z-20">
                                 <div className="relative w-32 h-32 flex items-center justify-center animate-[spin_15s_linear_infinite] bg-white/90 backdrop-blur-sm rounded-full p-2 shadow-2xl">
-                                    <svg viewBox="0 0 100 100" className="w-full h-full absolute inset-0 text-[#3d6aab] font-sans overflow-visible">
+                                    <svg viewBox="0 0 100 100" className="w-full h-full absolute inset-0 text-[#18448F] font-sans overflow-visible">
                                         <path id="circlePath" d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0" fill="none" />
                                         <text fontSize="8.5" fontWeight="900" letterSpacing="0.16em" fill="currentcolor">
                                             <textPath href="#circlePath" startOffset="0%" textAnchor="start">
@@ -496,7 +496,7 @@ const Industriel = () => {
                             </div>
                             <Button 
                                 variant="ghost" 
-                                className="text-slate-900 hover:text-[#3d6aab] font-bold p-0 group"
+                                className="text-slate-900 hover:text-[#18448F] font-bold p-0 group"
                                 onClick={() => navigate("/blog")}
                             >
                                 Tous les articles <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -509,11 +509,11 @@ const Industriel = () => {
                                     <div className="aspect-[4/3] overflow-hidden rounded-sm mb-8 shadow-2xl relative">
                                         <img src={article.image} alt={article.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[1.5s]" />
                                     </div>
-                                    <div className="text-[11px] text-[#3d6aab] uppercase tracking-widest mb-4 font-black flex items-center gap-2">
+                                    <div className="text-[11px] text-[#18448F] uppercase tracking-widest mb-4 font-black flex items-center gap-2">
                                         <div className="w-4 h-px bg-blue-200" />
                                         {article.category}
                                     </div>
-                                    <h4 className="text-2xl font-bold text-slate-900 mb-8 leading-tight group-hover:text-[#3d6aab] transition-colors">{article.title}</h4>
+                                    <h4 className="text-2xl font-bold text-slate-900 mb-8 leading-tight group-hover:text-[#18448F] transition-colors">{article.title}</h4>
                                     <div className="flex items-center gap-2 text-slate-400 text-[10px] font-black uppercase tracking-widest">
                                         Lire la suite <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                                     </div>
@@ -527,12 +527,12 @@ const Industriel = () => {
                 <section className="py-48 bg-[#0c1016] text-center relative overflow-hidden">
                     <div className="container mx-auto px-6 relative z-10 space-y-16">
                         <h2 className="text-4xl md:text-[5.5rem] font-black text-white leading-tight tracking-tighter">
-                            Trouvez <span className="text-[#3d6aab] italic font-light lowercase">la solution adaptée.</span>
+                            Trouvez <span className="text-[#18448F] italic font-light lowercase">la solution adaptée.</span>
                         </h2>
                         <div className="relative inline-block group">
-                            <div className="absolute inset-0 border border-[#3d6aab] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                            <div className="absolute inset-0 border border-[#18448F] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
                             <Button 
-                                className="relative bg-[#3d6aab] hover:bg-white hover:text-[#3d6aab] text-white rounded-[2rem] px-20 h-16 font-black uppercase tracking-widest text-xs transition-all border-none shadow-2xl"
+                                className="relative bg-[#18448F] hover:bg-white hover:text-[#18448F] text-white rounded-[2rem] px-20 h-16 font-black uppercase tracking-widest text-xs transition-all border-none shadow-2xl"
                                 onClick={() => navigate("/consultation")}
                             >
                                 Planifier une consultation

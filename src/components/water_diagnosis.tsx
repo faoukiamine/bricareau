@@ -1,3 +1,4 @@
+import { ProMaxButton } from "@/components/ui/ProMaxButton";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import guideExpertImg from "@/assets/discover_expert.jpg";
@@ -13,8 +14,8 @@ const WaterDiagnosis = () => {
                         <div className="space-y-10">
                             <div className="space-y-6">
                                 <h2 className="heading-pro-max text-left">
-                                    <span className="italic font-light text-[#3d6aab]">Votre solution d'eau personnalisée </span>
-                                    <span className="font-bold text-[#3d6aab]">en quelques clics.</span>
+                                    <span className="italic font-light text-[#18448F]">Votre solution d'eau personnalisée </span>
+                                    <span className="font-bold text-[#18448F]">en quelques clics.</span>
                                 </h2>
                                 <p 
                                     className="max-w-lg text-left lg:text-justify text-[16px] md:text-[18px] lg:text-[20px] leading-snug font-light text-slate-600"
@@ -28,12 +29,12 @@ const WaterDiagnosis = () => {
                             </div>
 
                             <div className="pt-4">
-                                <Button asChild>
+                                <ProMaxButton asChild>
                                     <a href="/diagnostic" className="flex items-center justify-center gap-3">
                                         Diagnostic gratuit en 2 min
                                         <ArrowRight className="w-5 h-5" />
                                     </a>
-                                </Button>
+                                </ProMaxButton>
                             </div>
                         </div>
                     </div>

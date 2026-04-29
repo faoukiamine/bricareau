@@ -59,8 +59,8 @@ const ProductsArray = () => {
                         id="solutions-title"
                         className="scroll-mt-[120px] mb-8 heading-pro-max"
                     >
-                        <span className="italic font-light text-[#3d6aab] block">Nos solutions résidentielles</span>
-                        <span className="font-bold text-[#3d6aab] block">de traitement de l'eau</span>
+                        <span className="italic font-light text-[#18448F] block">Nos solutions résidentielles</span>
+                        <span className="font-bold text-[#18448F] block">de traitement de l'eau</span>
                     </h2>
                     <p className="max-w-3xl mx-auto text-slate-600 font-light text-lg md:text-xl leading-relaxed mt-8 text-justify lg:text-center">
                         Découvrez une gamme complète de technologies de pointe conçues pour transformer la qualité de l'eau de votre foyer. De l'adoucissement haute efficacité à la purification par osmose inverse, nos solutions allient performance, durabilité et design pour offrir à votre famille une eau d'une pureté absolue, chaque jour.

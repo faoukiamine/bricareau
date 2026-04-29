@@ -177,7 +177,7 @@ const OurProcess = () => {
                         title={
                             <div className="text-center space-y-3 mb-16 px-6">
                                 <span className="italic font-light text-[#0052ff] block text-2xl md:text-3xl">La qualité de service avant tout.</span>
-                                <span className="font-bold text-[#3d6aab] block text-4xl md:text-6xl tracking-tighter uppercase leading-none">RÉSULTATS PROUVÉS</span>
+                                <span className="font-bold text-[#18448F] block text-4xl md:text-6xl tracking-tighter uppercase leading-none">RÉSULTATS PROUVÉS</span>
                             </div>
                         }
                     />

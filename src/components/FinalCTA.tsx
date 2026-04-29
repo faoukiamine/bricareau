@@ -10,7 +10,7 @@ const FinalCTA = () => {
                     {/* Left side - Stats */}
                     <div className="space-y-8">
                         <div className="space-y-4">
-                            <div className="text-5xl md:text-6xl font-bold text-[#3d6aab]">
+                            <div className="text-5xl md:text-6xl font-bold text-[#18448F]">
                                 140M
                             </div>
                             <p className="md:text-2xl font-semibold text-foreground">
@@ -22,7 +22,7 @@ const FinalCTA = () => {
                         </div>
 
                         <div className="space-y-4 pt-8 border-t border-border">
-                            <div className="text-5xl md:text-6xl font-bold text-[#3d6aab]">
+                            <div className="text-5xl md:text-6xl font-bold text-[#18448F]">
                                 36%
                             </div>
                             <p className="md:text-2xl font-semibold text-foreground">
@@ -35,7 +35,7 @@ const FinalCTA = () => {
                     </div>
 
                     {/* Right side - CTA Card */}
-                    <Card className="bg-[#3d6aab] border-none shadow-2xl">
+                    <Card className="bg-[#18448F] border-none shadow-2xl">
                         <CardContent className="p-8 md:p-12 space-y-6">
                             <h2 className="heading-pro-max text-white">
                                 <span className="italic font-light block leading-tight">Prêt à améliorer</span>
@@ -46,7 +46,7 @@ const FinalCTA = () => {
                             </p>
                             <Button
                                 size="lg"
-                                className="w-fit mx-auto flex bg-white text-[#3d6aab] hover:bg-white/90 font-semibold shadow-lg hover:shadow-xl transition-all group"
+                                className="w-fit mx-auto flex bg-white text-[#18448F] hover:bg-white/90 font-semibold shadow-lg hover:shadow-xl transition-all group"
                             >
                                 Commencer maintenant
                                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />

@@ -205,7 +205,7 @@ const FiltrationSousEvier = () => {
                                             </div>
                                             <div>
                                                 <p className="text-[10px] font-black uppercase tracking-widest text-[#164E63]">Pureté Absolue</p>
-                                                <p className="text-lg font-bold text-[#3d6aab]">Zéro Chlore, 100% Vie</p>
+                                                <p className="text-lg font-bold text-[#18448F]">Zéro Chlore, 100% Vie</p>
                                             </div>
                                         </div>
                                     </div>
@@ -274,8 +274,8 @@ const FiltrationSousEvier = () => {
                     <div className="container mx-auto px-6">
                         <div className="text-left mb-16">
                             <h2 className="mb-8 heading-pro-max text-left">
-                                <span className="italic font-light text-[#3d6aab] block">Nos systèmes de filtration</span>
-                                <span className="font-bold text-[#3d6aab] block">d'eau sous évier</span>
+                                <span className="italic font-light text-[#18448F] block">Nos systèmes de filtration</span>
+                                <span className="font-bold text-[#18448F] block">d'eau sous évier</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600 mb-8"></div>
                             <p className="body-pro-max mb-16 max-w-7xl mx-auto text-justify">
@@ -332,8 +332,8 @@ const FiltrationSousEvier = () => {
                                 L'EXCELLENCE DE L'EAU FILTRÉE AU QUOTIDIEN
                             </span>
                             <h2 className="mb-8 heading-pro-max text-center">
-                                <span className="italic font-light text-[#3d6aab] block">Pourquoi privilégier nos</span>
-                                <span className="font-bold text-[#3d6aab] block">systèmes de filtration d'eau sous l'évier ?</span>
+                                <span className="italic font-light text-[#18448F] block">Pourquoi privilégier nos</span>
+                                <span className="font-bold text-[#18448F] block">systèmes de filtration d'eau sous l'évier ?</span>
                             </h2>
                             <div className="w-16 h-0.5 bg-blue-600/20 mx-auto mb-10" />
                             <p className="font-light text-slate-500 text-lg max-w-2xl mx-auto leading-relaxed italic">
@@ -404,7 +404,7 @@ const FiltrationSousEvier = () => {
                                 alt="Installation experte d'un système de désinfection UV Bricareau" 
                                 className="w-full h-[450px] md:h-[550px] lg:h-[650px] object-cover group-hover:scale-105 transition-transform duration-[3000ms] brightness-[1.2] contrast-[1.05]"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-r from-[#3d6aab]/70 via-[#3d6aab]/30 to-transparent p-8 md:p-12 lg:p-20 flex items-center">
+                            <div className="absolute inset-0 bg-gradient-to-r from-[#18448F]/70 via-[#18448F]/30 to-transparent p-8 md:p-12 lg:p-20 flex items-center">
                                 <div className="max-w-lg">
                                     <div className="flex items-center gap-3 text-blue-400 font-bold text-xs tracking-widest uppercase mb-6">
                                         <CheckCircle className="w-5 h-5" />
@@ -424,8 +424,8 @@ const FiltrationSousEvier = () => {
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
                             <h2 className="mb-8 heading-pro-max text-left">
-                                <span className="italic font-light text-[#3d6aab] block">Comparez nos solutions</span>
-                                <span className="font-bold text-[#3d6aab] block">de filtration d'eau potable.</span>
+                                <span className="italic font-light text-[#18448F] block">Comparez nos solutions</span>
+                                <span className="font-bold text-[#18448F] block">de filtration d'eau potable.</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
@@ -486,7 +486,7 @@ const FiltrationSousEvier = () => {
                                                                 className="w-[140px] md:w-[160px] h-[100px] md:h-[130px] object-contain mx-auto mix-blend-multiply relative z-10 transition-transform duration-700 group-hover/img:scale-110"
                                                             />
                                                         </div>
-                                                        <div className="text-[13px] md:text-lg font-bold text-[#3d6aab] max-w-[150px] mx-auto leading-tight">{m.name}</div>
+                                                        <div className="text-[13px] md:text-lg font-bold text-[#18448F] max-w-[150px] mx-auto leading-tight">{m.name}</div>
                                                     </div>
                                                 </th>
                                             ))}
@@ -495,7 +495,7 @@ const FiltrationSousEvier = () => {
                                     <tbody className="divide-y divide-slate-100 relative z-10">
                                         {comparisonData.map((row, i) => (
                                             <tr key={i} className="hover:bg-blue-50/30 transition-colors group">
-                                                <td className="p-6 md:p-10 font-bold text-[#3d6aab] bg-white sticky left-0 z-30 border-r border-slate-50 drop-shadow-sm lg:drop-shadow-none text-[12px] md:text-sm italic group-hover:text-blue-600 transition-colors">
+                                                <td className="p-6 md:p-10 font-bold text-[#18448F] bg-white sticky left-0 z-30 border-r border-slate-50 drop-shadow-sm lg:drop-shadow-none text-[12px] md:text-sm italic group-hover:text-blue-600 transition-colors">
                                                     {row.feature}
                                                 </td>
                                                 {["essential", "plus", "elite"].map((model, idx) => (
@@ -551,8 +551,8 @@ const FiltrationSousEvier = () => {
                                 TESTS D'EAU PROFESSIONNELS
                             </span>
                             <h2 className="mb-8 heading-pro-max text-left">
-                                <span className="italic font-light text-[#3d6aab] lg:text-white block">Identifiez l'invisible,</span>
-                                <span className="text-[#3d6aab] lg:text-white italic font-bold font-serif">maîtrisez la pureté de votre eau.</span>
+                                <span className="italic font-light text-[#18448F] lg:text-white block">Identifiez l'invisible,</span>
+                                <span className="text-[#18448F] lg:text-white italic font-bold font-serif">maîtrisez la pureté de votre eau.</span>
                             </h2>
                             <p className="font-light text-black lg:text-white/95 mb-8 max-w-xl text-justify lg:text-left">
                                 Ne laissez plus le doute couler de votre robinet. Nos tests d'eau révèlent la composition réelle de votre eau pour vous offrir une solution de filtration sur mesure, garantissant santé et sérénité à toute votre famille.
@@ -573,8 +573,8 @@ const FiltrationSousEvier = () => {
                     filterProduct="/Systemes-de-filtration-deau-sous-evier"
                  title={
                     <h2 className="mb-8 heading-pro-max text-center">
-                        <span className="italic font-light text-[#3d6aab] block text-center">Adieu les bouteilles plastiques,</span>
-                        <span className="font-bold text-[#3d6aab] block text-center">Enfin la liberté au robinet.</span>
+                        <span className="italic font-light text-[#18448F] block text-center">Adieu les bouteilles plastiques,</span>
+                        <span className="font-bold text-[#18448F] block text-center">Enfin la liberté au robinet.</span>
                     </h2>
                  }
                 />
@@ -584,8 +584,8 @@ const FiltrationSousEvier = () => {
                     <div className="container mx-auto px-4 text-left">
                         <div className="text-left mb-16">
                             <h2 className="mb-8 heading-pro-max text-left">
-                                <span className="italic font-light text-[#3d6aab] block">Pour vous éclairer</span>
-                                <span className="font-bold text-[#3d6aab] block">Questions fréquentes</span>
+                                <span className="italic font-light text-[#18448F] block">Pour vous éclairer</span>
+                                <span className="font-bold text-[#18448F] block">Questions fréquentes</span>
                             </h2>
 
                             <div className="w-24 h-1 bg-blue-600"></div>
@@ -640,7 +640,7 @@ const FiltrationSousEvier = () => {
                 </section>
 
                 {/* 10. PREMIUM CTA SECTION - REBUILT FOR IMPACT */}
-                <section className="relative py-32 flex items-center overflow-hidden bg-[#3d6aab]">
+                <section className="relative py-32 flex items-center overflow-hidden bg-[#18448F]">
                     {/* Animated background elements */}
                     <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-blue-600/20 to-transparent skew-x-12 translate-x-1/4" />
                     <div className="absolute bottom-0 left-0 w-1/2 h-full bg-gradient-to-r from-cyan-400/10 to-transparent -skew-x-12 -translate-x-1/4" />
@@ -652,7 +652,7 @@ const FiltrationSousEvier = () => {
                             alt="Problématique d'eau dure sur la robinetterie - Solution Bricareau"
                             className="w-full h-full object-cover grayscale brightness-150"
                         />
-                        <div className="absolute inset-0 bg-[#3d6aab]/10 backdrop-blur-sm" />
+                        <div className="absolute inset-0 bg-[#18448F]/10 backdrop-blur-sm" />
                     </div>
 
                     <div className="container mx-auto px-6 relative z-10">
@@ -700,7 +700,7 @@ const FiltrationSousEvier = () => {
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
                              <h2 className="mb-8 heading-pro-max text-left">
-                                <span className="font-bold text-[#3d6aab] block text-left">Ressources</span>
+                                <span className="font-bold text-[#18448F] block text-left">Ressources</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
@@ -749,7 +749,7 @@ const FiltrationSousEvier = () => {
                                 <ChevronRight className="h-6 w-6" />
                             </Button>
 
-                            <div className="absolute right-2 text-sm font-black text-[#3d6aab] bg-blue-50/50 px-4 py-2 rounded-full border border-blue-100/50">
+                            <div className="absolute right-2 text-sm font-black text-[#18448F] bg-blue-50/50 px-4 py-2 rounded-full border border-blue-100/50">
                                 <span className="text-blue-600">{resourceIndex}</span>
                                 <span className="mx-1 text-slate-300">/</span>
                                 <span className="text-slate-400">{resources.length}</span>
@@ -773,7 +773,7 @@ const FiltrationSousEvier = () => {
                     <span className="font-bold text-sm tracking-wider text-blue-600 whitespace-nowrap text-center">
                       Réservez votre <br />consultation gratuite
                     </span>
-                    <div className="w-10 h-10 bg-[#3d6aab] rounded-full flex items-center justify-center text-white group-hover/sticky:rotate-[360deg] shadow-lg shadow-blue-200">
+                    <div className="w-10 h-10 bg-[#18448F] rounded-full flex items-center justify-center text-white group-hover/sticky:rotate-[360deg] shadow-lg shadow-blue-200">
                       <ArrowRight className="w-5 h-5" />
                     </div>
                   </a>

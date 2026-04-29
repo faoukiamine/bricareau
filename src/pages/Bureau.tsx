@@ -8,7 +8,7 @@ import {
     Star,
     Quote
 } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { ProMaxButton } from "@/components/ui/ProMaxButton";
 import { useNavigate } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -206,8 +206,8 @@ const Bureau = () => {
                             <div className="space-y-6">
                                 <h1 className="mb-6 animate-in fade-in slide-in-from-left duration-1000 tracking-tighter"
                                     style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif', fontSize: '50px', lineHeight: '55px' }}>
-                                    <span className="italic font-light text-[#3d6aab] block">Solutions pour</span>
-                                    <span className="font-bold text-[#3d6aab] block">Bureaux & Entreprises.</span>
+                                    <span className="italic font-light text-[#18448F] block">Solutions pour</span>
+                                    <span className="font-bold text-[#18448F] block">Bureaux & Entreprises.</span>
                                 </h1>
                                 
                                 <p className="max-w-xl animate-in fade-in slide-in-from-left duration-1000 delay-100 text-left text-slate-600 text-lg md:text-xl font-light leading-relaxed">
@@ -215,28 +215,24 @@ const Bureau = () => {
                                 </p>
 
                                 <div className="flex flex-col sm:flex-row items-start gap-8 pt-4">
-                                    <div className="relative inline-block w-full sm:w-auto group">
-                                        <div className="absolute inset-0 border border-[#3d6aab] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
-                                        <Button 
-                                            className="relative w-full sm:w-auto bg-[#3d6aab] hover:bg-white hover:text-[#3d6aab] text-white rounded-[2rem] h-16 px-12 font-black uppercase tracking-widest text-xs transition-all border-none"
-                                            onClick={() => navigate("/consultation")}
-                                        >
-                                            Planifiez une consultation gratuite
-                                        </Button>
-                                    </div>
+                                    <ProMaxButton 
+                                        variant="primary"
+                                        className="w-full sm:w-auto"
+                                        onClick={() => navigate("/consultation")}
+                                    >
+                                        Planifiez une consultation gratuite
+                                    </ProMaxButton>
                                     
-                                    <div className="relative inline-block w-full sm:w-auto group">
-                                        <div className="absolute inset-0 border border-[#3d6aab] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
-                                        <Button 
-                                            className="relative w-full sm:w-auto bg-[#3d6aab] hover:bg-white hover:text-[#3d6aab] text-white rounded-[2rem] h-16 px-12 font-black uppercase tracking-widest text-xs transition-all border-none"
-                                            asChild
-                                        >
-                                            <a href="tel:18552649328" className="flex items-center justify-center gap-2">
-                                                <Phone className="w-5 h-5 flex-shrink-0" />
-                                                1-855-264-9328
-                                            </a>
-                                        </Button>
-                                    </div>
+                                    <ProMaxButton 
+                                        variant="primary"
+                                        className="w-full sm:w-auto"
+                                        asChild
+                                    >
+                                        <a href="tel:18552649328" className="flex items-center justify-center gap-2">
+                                            <Phone className="w-5 h-5 flex-shrink-0" />
+                                            1-855-264-9328
+                                        </a>
+                                    </ProMaxButton>
                                 </div>
                             </div>
                         </div>
@@ -249,11 +245,11 @@ const Bureau = () => {
                         <div className="flex items-center justify-center gap-2 text-[10px] text-slate-400 uppercase tracking-[0.4em] mb-12 font-bold">
                             <span>Accueil</span>
                             <ChevronRight className="w-3 h-3" />
-                            <span className="text-[#3d6aab]">Bureau</span>
+                            <span className="text-[#18448F]">Bureau</span>
                         </div>
                         <h2 className="text-4xl md:text-6xl font-bold mb-10 tracking-tight text-slate-900">Notre approche</h2>
                         <p className="text-lg md:text-[1.2rem] text-slate-500 font-normal leading-relaxed">
-                            En milieu de travail, la qualité de l'eau est un levier de <span className="text-slate-900 font-semibold italic">productivité, de bien-être et de performance</span>. Chez Bricareau, nous proposons des solutions d'hydratation et de traitement d'eau spécialement conçues pour les environnements de bureau. De la fontaine sans bouteille aux machines à café protégées, offrez à vos équipes une eau <span className="text-[#3d6aab] font-semibold">pure, fraîche et accessible</span> tout au long de la journée.
+                            En milieu de travail, la qualité de l'eau est un levier de <span className="text-slate-900 font-semibold italic">productivité, de bien-être et de performance</span>. Chez Bricareau, nous proposons des solutions d'hydratation et de traitement d'eau spécialement conçues pour les environnements de bureau. De la fontaine sans bouteille aux machines à café protégées, offrez à vos équipes une eau <span className="text-[#18448F] font-semibold">pure, fraîche et accessible</span> tout au long de la journée.
                         </p>
                     </div>
                 </section>
@@ -279,7 +275,7 @@ const Bureau = () => {
                                         <div className="relative flex items-center justify-center w-8 flex-shrink-0">
                                             {activeSection === idx ? (
                                                 <div className="w-10 h-10 rounded-full border-[2.5px] border-white flex items-center justify-center transition-all duration-500 bg-transparent">
-                                                    <div className="w-4 h-4 rounded-full bg-[#3d6aab] shadow-[0_0_10px_rgba(61,106,171,0.8)]" />
+                                                    <div className="w-4 h-4 rounded-full bg-[#18448F] shadow-[0_0_10px_rgba(61,106,171,0.8)]" />
                                                 </div>
                                             ) : (
                                                 <div className="w-2.5 h-2.5 rounded-full border-[1.5px] border-blue-400 opacity-60 group-hover:opacity-100 transition-all" />
@@ -356,15 +352,12 @@ const Bureau = () => {
                                         ))}
                                     </ul>
 
-                                     <div className="relative inline-block group">
-                                        <div className="absolute inset-0 border border-[#3d6aab] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
-                                        <Button 
-                                            className="relative bg-[#3d6aab] hover:bg-white hover:text-[#3d6aab] text-white rounded-[2rem] px-12 h-16 font-black uppercase tracking-widest text-xs transition-all border-none"
-                                            onClick={() => navigate(prog.link)}
-                                        >
-                                            APPRENDRE ENCORE PLUS
-                                        </Button>
-                                    </div>
+                                    <ProMaxButton 
+                                        variant="primary"
+                                        onClick={() => navigate(prog.link)}
+                                    >
+                                        APPRENDRE ENCORE PLUS
+                                    </ProMaxButton>
                                 </div>
                             </div>
                         </div>
@@ -378,8 +371,8 @@ const Bureau = () => {
                             <div className="max-w-2xl">
                                 <span className="text-slate-600 font-bold text-[10px] sm:text-xs uppercase tracking-[0.2em] block mb-4">Témoignages de réussite de nos partenaires</span>
                                 <h2 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-black text-[#0f172a] leading-[1.1] tracking-tight">
-                                    <span className="italic font-light text-[#3d6aab] block">Votre confiance.</span>
-                                    <span className="font-bold text-[#3d6aab] block">Notre plus grande fierté.</span>
+                                    <span className="italic font-light text-[#18448F] block">Votre confiance.</span>
+                                    <span className="font-bold text-[#18448F] block">Notre plus grande fierté.</span>
                                 </h2>
                             </div>
                         </div>
@@ -441,7 +434,7 @@ const Bureau = () => {
                             {/* Circular Badge */}
                             <div className="absolute right-4 sm:right-12 lg:right-24 bottom-16 sm:bottom-12 z-20">
                                 <div className="relative w-32 h-32 flex items-center justify-center animate-[spin_15s_linear_infinite] bg-white/90 backdrop-blur-sm rounded-full p-2 shadow-2xl">
-                                    <svg viewBox="0 0 100 100" className="w-full h-full absolute inset-0 text-[#3d6aab] font-sans overflow-visible">
+                                    <svg viewBox="0 0 100 100" className="w-full h-full absolute inset-0 text-[#18448F] font-sans overflow-visible">
                                         <path id="circlePath" d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0" fill="none" />
                                         <text fontSize="8.5" fontWeight="900" letterSpacing="0.16em" fill="currentcolor">
                                             <textPath href="#circlePath" startOffset="0%" textAnchor="start">
@@ -463,13 +456,13 @@ const Bureau = () => {
                                 <div className="text-[10px] text-slate-400 uppercase tracking-[0.4em] mb-4 font-bold">Inspiration & Conseils</div>
                                 <h2 className="text-4xl md:text-6xl font-bold text-slate-900 tracking-tighter leading-none">Articles récents</h2>
                             </div>
-                            <Button 
-                                variant="ghost" 
-                                className="text-slate-900 hover:text-[#3d6aab] font-bold p-0 text-[11px] uppercase tracking-widest group"
+                            <ProMaxButton 
+                                variant="outline" 
+                                className="h-12 px-6"
                                 onClick={() => navigate("/blog")}
                             >
                                 Tous les articles <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                            </Button>
+                            </ProMaxButton>
                         </div>
 
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
@@ -478,11 +471,11 @@ const Bureau = () => {
                                     <div className="aspect-[4/3] overflow-hidden rounded-sm mb-8 shadow-2xl relative">
                                         <img src={article.image} alt={article.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[1.5s]" />
                                     </div>
-                                    <div className="text-[11px] text-[#3d6aab] uppercase tracking-widest mb-4 font-black flex items-center gap-2">
+                                    <div className="text-[11px] text-[#18448F] uppercase tracking-widest mb-4 font-black flex items-center gap-2">
                                         <div className="w-4 h-px bg-blue-200" />
                                         {article.category}
                                     </div>
-                                    <h4 className="text-2xl font-bold text-slate-900 mb-8 leading-tight group-hover:text-[#3d6aab] transition-colors">{article.title}</h4>
+                                    <h4 className="text-2xl font-bold text-slate-900 mb-8 leading-tight group-hover:text-[#18448F] transition-colors">{article.title}</h4>
                                     <div className="flex items-center gap-2 text-slate-400 text-[10px] font-black uppercase tracking-widest">
                                         Lire la suite <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                                     </div>
@@ -496,17 +489,14 @@ const Bureau = () => {
                 <section className="py-48 bg-[#0c1016] text-center relative overflow-hidden">
                     <div className="container mx-auto px-6 relative z-10 space-y-16">
                         <h2 className="text-4xl md:text-[5.5rem] font-black text-white leading-tight tracking-tighter">
-                            Trouvez <span className="text-[#3d6aab] italic font-light lowercase">la solution adaptée.</span>
+                            Trouvez <span className="text-[#18448F] italic font-light lowercase">la solution adaptée.</span>
                         </h2>
-                        <div className="relative inline-block group">
-                            <div className="absolute inset-0 border border-[#3d6aab] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
-                            <Button 
-                                className="relative bg-[#3d6aab] hover:bg-white hover:text-[#3d6aab] text-white rounded-[2rem] px-12 h-16 font-black uppercase tracking-widest text-xs transition-all border-none shadow-2xl"
-                                onClick={() => navigate("/consultation")}
-                            >
-                                Planifier une consultation
-                            </Button>
-                        </div>
+                        <ProMaxButton 
+                            variant="white"
+                            onClick={() => navigate("/consultation")}
+                        >
+                            Planifier une consultation
+                        </ProMaxButton>
                     </div>
                 </section>
             </main>

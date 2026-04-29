@@ -116,18 +116,18 @@ const Entreprises = () => {
                   </p>
                   <div className="flex flex-wrap gap-8 pt-4">
                       <div className="relative inline-block w-full sm:w-auto group">
-                          <div className="absolute inset-0 border border-[#3d6aab] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                          <div className="absolute inset-0 border border-[#18448F] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
                           <Button 
-                              className="relative w-full sm:w-auto bg-[#3d6aab] hover:bg-white hover:text-[#3d6aab] text-white rounded-[2rem] h-[3.25rem] px-8 font-black uppercase tracking-[0.1em] text-[11px] transition-all border-none"
+                              className="relative w-full sm:w-auto bg-[#18448F] hover:bg-white hover:text-[#18448F] text-white rounded-[2rem] h-[3.25rem] px-8 font-black uppercase tracking-[0.1em] text-[11px] transition-all border-none"
                               asChild
                           >
                               <a href="#solutions">Découvrir nos solutions</a>
                           </Button>
                       </div>
                       <div className="relative inline-block w-full sm:w-auto group">
-                          <div className="absolute inset-0 border border-[#3d6aab] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                          <div className="absolute inset-0 border border-[#18448F] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
                           <Button 
-                              className="relative w-full sm:w-auto bg-[#3d6aab] hover:bg-white hover:text-[#3d6aab] text-white rounded-[2rem] h-[3.25rem] px-8 font-black uppercase tracking-[0.1em] text-[11px] transition-all border-none"
+                              className="relative w-full sm:w-auto bg-[#18448F] hover:bg-white hover:text-[#18448F] text-white rounded-[2rem] h-[3.25rem] px-8 font-black uppercase tracking-[0.1em] text-[11px] transition-all border-none"
                               asChild
                           >
                               <a href="tel:18552649328" className="flex items-center gap-2">
@@ -251,9 +251,9 @@ const Entreprises = () => {
 
                         <div className="flex gap-4 pt-10">
                             <div className="relative inline-block group">
-                                <div className="absolute inset-0 border border-[#3d6aab] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                                <div className="absolute inset-0 border border-[#18448F] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
                                 <Button 
-                                    className="relative bg-[#3d6aab] hover:bg-white hover:text-[#3d6aab] text-white rounded-[2rem] h-14 px-10 font-black uppercase tracking-widest text-[11px] transition-all border-none"
+                                    className="relative bg-[#18448F] hover:bg-white hover:text-[#18448F] text-white rounded-[2rem] h-14 px-10 font-black uppercase tracking-widest text-[11px] transition-all border-none"
                                     asChild
                                 >
                                     <NavLink to="/contact-entreprises">Essayer nos fontaines gratuitement</NavLink>
@@ -285,7 +285,7 @@ const Entreprises = () => {
                     <div className="relative inline-block group">
                         <div className="absolute inset-0 border border-white rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
                         <Button 
-                            className="relative bg-white hover:bg-[#3d6aab] hover:text-white text-[#0c1016] rounded-[2rem] h-14 px-10 font-black uppercase tracking-widest text-[11px] transition-all border-none"
+                            className="relative bg-white hover:bg-[#18448F] hover:text-white text-[#0c1016] rounded-[2rem] h-14 px-10 font-black uppercase tracking-widest text-[11px] transition-all border-none"
                             asChild
                         >
                             <a href="/guides">Calculer votre impact</a>
@@ -326,9 +326,9 @@ const Entreprises = () => {
                         </ul>
                          <div className="pt-8 text-left">
                             <div className="relative inline-block group">
-                                <div className="absolute inset-0 border border-[#3d6aab] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                                <div className="absolute inset-0 border border-[#18448F] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
                                 <Button 
-                                    className="relative bg-[#3d6aab] hover:bg-white hover:text-[#3d6aab] text-white rounded-[2rem] px-12 h-16 font-black uppercase tracking-widest text-xs transition-all border-none shadow-lg"
+                                    className="relative bg-[#18448F] hover:bg-white hover:text-[#18448F] text-white rounded-[2rem] px-12 h-16 font-black uppercase tracking-widest text-xs transition-all border-none shadow-lg"
                                     asChild
                                 >
                                     <a href="/contact">Personnaliser votre fontaine</a>
@@ -397,9 +397,9 @@ const Entreprises = () => {
 
                         <div className="pt-8 text-left">
                             <div className="relative inline-block group">
-                                <div className="absolute inset-0 border border-[#3d6aab] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                                <div className="absolute inset-0 border border-[#18448F] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
                                 <Button 
-                                    className="relative bg-[#3d6aab] hover:bg-white hover:text-[#3d6aab] text-white rounded-[2rem] px-12 h-16 font-black uppercase tracking-widest text-xs transition-all border-none"
+                                    className="relative bg-[#18448F] hover:bg-white hover:text-[#18448F] text-white rounded-[2rem] px-12 h-16 font-black uppercase tracking-widest text-xs transition-all border-none"
                                     asChild
                                 >
                                     <a href="/contact" className="flex items-center gap-2">Découvrir les modèles <ArrowRight className="h-4 w-4" /></a>
@@ -437,7 +437,7 @@ const Entreprises = () => {
                         <div className="relative inline-block group">
                             <div className="absolute inset-0 border border-white rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
                             <Button 
-                                className="relative bg-white hover:bg-[#3d6aab] hover:text-white text-[#3d6aab] rounded-[2rem] px-10 h-16 font-black uppercase tracking-widest text-xs transition-all border-none"
+                                className="relative bg-white hover:bg-[#18448F] hover:text-white text-[#18448F] rounded-[2rem] px-10 h-16 font-black uppercase tracking-widest text-xs transition-all border-none"
                                 asChild
                             >
                                 <a href="/contact">Demander un essai gratuit</a>
@@ -448,7 +448,7 @@ const Entreprises = () => {
                             <div className="absolute inset-0 border border-white rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
                             <Button
                                 asChild
-                                className="relative bg-transparent border border-white/30 text-white hover:bg-white hover:text-[#3d6aab] px-10 h-16 rounded-[2rem] font-black uppercase tracking-widest text-xs transition-all"
+                                className="relative bg-transparent border border-white/30 text-white hover:bg-white hover:text-[#18448F] px-10 h-16 rounded-[2rem] font-black uppercase tracking-widest text-xs transition-all"
                             >
                                 <a href="tel:18552649328">Parler à un conseiller</a>
                             </Button>

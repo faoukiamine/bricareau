@@ -196,14 +196,14 @@ const WaterTestFormSection = ({ id }: { id?: string }) => {
                             Merci de nous avoir contactés pour votre test d'eau. Un expert de Bricareau confirmera votre rendez-vous sous peu.
                         </p>
                         <div className="relative inline-block group">
-                            <div className="absolute inset-0 border border-[#3d6aab] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                            <div className="absolute inset-0 border border-[#18448F] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
                             <Button
                                 onClick={() => {
                                     setIsSuccess(false);
                                     setStep(1);
                                     form.reset();
                                 }}
-                                className="relative bg-[#3d6aab] hover:bg-white hover:text-[#3d6aab] text-white rounded-[2rem] h-14 px-10 font-black uppercase tracking-widest text-[11px] transition-all border-none"
+                                className="relative bg-[#18448F] hover:bg-white hover:text-[#18448F] text-white rounded-[2rem] h-14 px-10 font-black uppercase tracking-widest text-[11px] transition-all border-none"
                             >
                                 Nouvelle demande
                             </Button>
@@ -219,8 +219,8 @@ const WaterTestFormSection = ({ id }: { id?: string }) => {
             <div className="container mx-auto px-4">
                 <div className="max-w-4xl mx-auto mb-16 text-center">
                     <h2 className="mb-8 heading-pro-max">
-                        <span className="italic font-light text-[#3d6aab]">Planifiez </span>
-                        <span className="font-bold text-[#3d6aab]">votre test d'eau.</span>
+                        <span className="italic font-light text-[#18448F]">Planifiez </span>
+                        <span className="font-bold text-[#18448F]">votre test d'eau.</span>
                     </h2>
                     <p className="body-pro-max max-w-4xl mx-auto" style={{ fontWeight: 300, color: 'rgb(71, 85, 105)', fontSize: '20px', lineHeight: '28px' }}>
                         Remplissez le formulaire pour planifier le prélèvement de votre échantillon d'eau.
@@ -576,23 +576,23 @@ const WaterTestFormSection = ({ id }: { id?: string }) => {
                                     <div className="flex sm:ml-auto w-full sm:w-auto">
                                         {step < 4 ? (
                                             <div className="relative inline-block w-full sm:w-auto group">
-                                                <div className="absolute inset-0 border border-[#3d6aab] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                                                <div className="absolute inset-0 border border-[#18448F] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
                                                 <Button
                                                     type="button"
                                                     onClick={nextStep}
                                                     disabled={isNavigating}
-                                                    className="relative bg-[#3d6aab] hover:bg-white hover:text-[#3d6aab] text-white rounded-[2rem] h-16 px-12 font-black uppercase tracking-widest text-xs transition-all border-none w-full sm:w-auto"
+                                                    className="relative bg-[#18448F] hover:bg-white hover:text-[#18448F] text-white rounded-[2rem] h-16 px-12 font-black uppercase tracking-widest text-xs transition-all border-none w-full sm:w-auto"
                                                 >
                                                     Continuer <ChevronRight className="w-4 h-4 ml-2" />
                                                 </Button>
                                             </div>
                                         ) : (
                                             <div className="relative inline-block w-full sm:w-auto group">
-                                                <div className="absolute inset-0 border border-[#3d6aab] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                                                <div className="absolute inset-0 border border-[#18448F] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
                                                 <Button
                                                     type="submit"
                                                     disabled={isSubmitting || isNavigating}
-                                                    className="relative bg-[#3d6aab] hover:bg-white hover:text-[#3d6aab] text-white rounded-[2rem] h-16 px-12 font-black uppercase tracking-widest text-xs transition-all border-none w-full sm:w-auto"
+                                                    className="relative bg-[#18448F] hover:bg-white hover:text-[#18448F] text-white rounded-[2rem] h-16 px-12 font-black uppercase tracking-widest text-xs transition-all border-none w-full sm:w-auto"
                                                 >
                                                     {isSubmitting ? (
                                                         <>

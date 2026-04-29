@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 const IdealBricareauCTA = () => {
     return (
-        <section className="bg-[#3d6aab] py-16 md:py-20">
+        <section className="bg-[#18448F] py-16 md:py-20">
             <div className="container mx-auto px-4">
                 <div className="max-w-3xl mx-auto text-center space-y-6">
                     <h2 className="font-light block leading-tight lg:leading-[52px] text-white">
@@ -14,7 +14,7 @@ const IdealBricareauCTA = () => {
                     </p>
                     <Button
                         size="lg"
-                        className="bg-white text-[#3d6aab] hover:bg-white/90 rounded-full px-8 h-14 shadow-lg hover:shadow-xl transition-all group"
+                        className="bg-white text-[#18448F] hover:bg-white/90 rounded-full px-8 h-14 shadow-lg hover:shadow-xl transition-all group"
                         style={{ }}
                     >
                         En savoir plus

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { ProMaxButton } from "@/components/ui/ProMaxButton";
 import { Button } from "@/components/ui/button";
 import { 
     CheckCircle2, 
@@ -87,15 +88,15 @@ const AdoucisseurSentinelle = () => {
                             </p>
 
                             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                                <Button asChild group>
+                                <ProMaxButton asChild variant="primary">
                                     <a href="#decouvrir">
                                         Voir les détails
                                         <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                                     </a>
-                                </Button>
-                                <Button asChild variant="outline">
+                                </ProMaxButton>
+                                <ProMaxButton asChild variant="outline">
                                     <a href="/consultation">Analyse gratuite</a>
-                                </Button>
+                                </ProMaxButton>
                             </div>
 
                             <div className="pt-10 flex items-center gap-6">
@@ -133,8 +134,8 @@ const AdoucisseurSentinelle = () => {
                             <div className="text-center space-y-6">
                                 <div className="inline-block py-1 px-3 rounded-md bg-blue-600 text-white font-bold text-[10px] uppercase tracking-[0.2em]">Fiche Technique</div>
                                 <h2 className="heading-pro-max text-center">
-                                    <span className="italic font-light text-[#3d6aab] block text-3xl">Spécifications</span>
-                                    <span className="font-bold text-[#3d6aab] block uppercase text-4xl">Série Sentinelle.</span>
+                                    <span className="italic font-light text-[#18448F] block text-3xl">Spécifications</span>
+                                    <span className="font-bold text-[#18448F] block uppercase text-4xl">Série Sentinelle.</span>
                                 </h2>
                                 
                                 <div className="flex flex-wrap justify-center gap-2 pt-4">
@@ -273,9 +274,9 @@ const AdoucisseurSentinelle = () => {
                                     ))}
                                 </div>
                                 
-                                <Button asChild>
+                                <ProMaxButton asChild variant="primary">
                                     <a href="/contact">Obtenir ma soumission</a>
-                                </Button>
+                                </ProMaxButton>
                             </div>
 
                             <div className="relative rounded-[3rem] overflow-hidden aspect-square lg:aspect-auto lg:h-[700px]">
@@ -439,7 +440,7 @@ const AdoucisseurSentinelle = () => {
                                 </div>
                                 <div className="text-slate-500 text-sm font-light">Basé sur 128 avis vérifiés</div>
                             </div>
-                            <Button>Laisser un avis</Button>
+                            <ProMaxButton variant="primary">Laisser un avis</ProMaxButton>
                         </div>
                         
                         <div className="lg:w-2/3 grid sm:grid-cols-2 gap-8">

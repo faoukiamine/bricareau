@@ -7,6 +7,7 @@ import ExpertAvatars from "@/components/ExpertAvatars";
 import ConsultationFormSection from "@/components/ConsultationFormSection";
 import Footer from "@/components/Footer";
 import TestimonialsSection from "@/components/TestimonialsSection";
+import { ProMaxButton } from "@/components/ui/ProMaxButton";
 import { Button } from "@/components/ui/button";
 import heroFilter from "@/assets/person-is-holding-a-glass-of-water-from-a-faucet.jpeg";
 import {
@@ -263,7 +264,7 @@ const FiltresPuits = () => {
                             <div className="w-full max-w-[750px] px-6 sm:px-12 lg:px-16 xl:px-24 py-24 lg:py-32">
                                 <div className="space-y-12">
                                     <div className="space-y-6">
-                                        <h2 className="mb-8 heading-pro-max text-left text-[#3d6aab]">
+                                        <h2 className="mb-8 heading-pro-max text-left text-[#18448F]">
                                             <span className="italic font-light block">Votre puits possède</span>
                                             <span className="font-bold block">son propre ADN.</span>
                                         </h2>
@@ -278,7 +279,7 @@ const FiltresPuits = () => {
                                             </p>
 
                                             <div className="pt-4 lg:pt-6 opacity-90">
-                                                <p className="text-lg lg:text-xl text-blue-600/90 font-light italic" style={{ fontFamily: '"Cormorant Garamond", serif', letterSpacing: '-0.01em' }}>
+                                                <p className="text-lg lg:text-xl text-[#18448F]/90 font-light italic" style={{ fontFamily: '"Cormorant Garamond", serif', letterSpacing: '-0.01em' }}>
                                                     "L'eau qui court sur la pierre s'oublie, l'eau qui passe par le filtre se purifie."
                                                 </p>
                                             </div>
@@ -299,7 +300,7 @@ const FiltresPuits = () => {
                             
                             {/* Feature Badge - Refined Inside positioning */}
                             <div className="absolute top-10 left-10 bg-white shadow-2xl p-8 rounded-[2.5rem] border border-slate-50 space-y-3 max-w-[220px] hidden xl:block animate-float">
-                                <span className="font-bold text-[10px] uppercase text-blue-600 tracking-widest">Expertise Puits</span>
+                                <span className="font-bold text-[10px] uppercase text-[#18448F] tracking-widest">Expertise Puits</span>
                                 <p className="text-sm font-light text-slate-500 leading-snug">
                                     Traitement ciblé basé sur <span className="font-bold text-slate-900">l'analyse de votre eau.</span> 
                                 </p>
@@ -313,12 +314,12 @@ const FiltresPuits = () => {
                 <section className="py-24 bg-white relative overflow-hidden">
                     <div className="container mx-auto px-6">
                         <div className="text-center mb-16">
-                            <span className="inline-block px-4 py-1.5 bg-blue-100 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-widest mb-6">
+                            <span className="inline-block px-4 py-1.5 bg-[#18448F]/10 text-[#18448F] rounded-full text-[10px] font-black uppercase tracking-widest mb-6">
                                 DIAGNOSTIC AUTOMATIQUE
                             </span>
                             <h2 className="heading-pro-max">
-                                <span className="italic font-light text-[#3d6aab] block">Quel problème d'eau</span>
-                                <span className="font-bold text-[#3d6aab] block text-center">de puits vivez-vous au quotidien ?</span>
+                                <span className="italic font-light text-[#18448F] block">Quel problème d'eau</span>
+                                <span className="font-bold text-[#18448F] block text-center">de puits vivez-vous au quotidien ?</span>
                             </h2>
                         </div>
 
@@ -401,12 +402,12 @@ const FiltresPuits = () => {
 
                                         <div className="flex-grow space-y-4">
                                             <div className="flex items-center gap-2">
-                                                <span className="w-2 h-2 rounded-full bg-blue-600 animate-pulse" />
+                                                <span className="w-2 h-2 rounded-full bg-[#18448F] animate-pulse" />
                                                 <span className="text-[10px] font-bold uppercase tracking-wider text-slate-500 italic">
                                                     Cause identifiée : {s.cause}
                                                 </span>
                                             </div>
-                                            <h3 className="text-3xl font-black text-[#3d6aab] leading-[1.1] tracking-tight">
+                                            <h3 className="text-3xl font-black text-[#18448F] leading-[1.1] tracking-tight">
                                                 {s.problem}
                                             </h3>
                                             <p className="text-sm font-light text-slate-600 leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-700 delay-100">
@@ -418,11 +419,11 @@ const FiltresPuits = () => {
                                             <div className="flex items-center justify-between">
                                                 <div className="space-y-1">
                                                     <span className="text-[10px] uppercase font-bold text-slate-400">Solution Bricareau</span>
-                                                    <p className="text-sm font-black text-blue-600">
+                                                    <p className="text-sm font-black text-[#18448F]">
                                                         {s.solution}
                                                     </p>
                                                 </div>
-                                                <div className="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center shadow-lg shadow-blue-200 transition-all duration-500 group-hover:translate-x-2">
+                                                <div className="w-10 h-10 rounded-full bg-[#18448F] text-white flex items-center justify-center shadow-lg shadow-[#18448F]/20 transition-all duration-500 group-hover:translate-x-2">
                                                     <ArrowRight className="w-5 h-5" />
                                                 </div>
                                             </div>
@@ -444,10 +445,10 @@ const FiltresPuits = () => {
                     <div className="container mx-auto px-6">
                         <div className="text-left mb-16">
                             <h2 className="mb-8 heading-pro-max text-left">
-                                <span className="italic font-light text-[#3d6aab] block text-left">Nos filtres d'eau</span>
-                                <span className="font-bold text-[#3d6aab] block text-left">spécialisés - Eau de puits</span>
+                                <span className="italic font-light text-[#18448F] block text-left">Nos filtres d'eau</span>
+                                <span className="font-bold text-[#18448F] block text-left">spécialisés - Eau de puits</span>
                             </h2>
-                            <div className="w-24 h-1 bg-blue-600"></div>
+                            <div className="w-24 h-1 bg-[#18448F]"></div>
                             <p className="body-pro-max mt-8 text-justify w-full">
                                 Découvrez notre gamme complète de filtres spécialisés, conçus pour répondre aux défis uniques des puits privés artésiens ou de surface. Que vous fassiez face à des taches de fer tenaces, des odeurs de soufre incommodantes, une eau acide corrosive ou la présence de contaminants invisibles comme l'arsenic, nos systèmes offrent une solution ciblée et performante. Chaque unité est dotée d'une technologie de pointe pour assurer une filtration maximale tout en préservant l'intégrité de votre plomberie et de vos appareils électroménagers. En investissant dans l'une de nos solutions Vortex, Iron Shield, Zen-pH, ou autres, vous choisissez une tranquillité d'esprit durable et une qualité d'eau irréprochable pour toute votre famille. Nos experts vous accompagnent dans le diagnostic et l'installation pour garantir que chaque goutte d'eau qui coule de votre robinet soit pure, sûre et limpide.
                             </p>
@@ -466,15 +467,15 @@ const FiltresPuits = () => {
                                             className="max-h-full object-contain group-hover:scale-110 transition-transform duration-700 mix-blend-multiply"
                                         />
                                     </div>
-                                    <div className="p-8 space-y-4 flex flex-col flex-grow border-t-2 border-transparent group-hover:border-blue-600 transition-colors">
-                                        <h3 className="card-title text-center group-hover:text-blue-600 transition-colors duration-500">
+                                    <div className="p-8 space-y-4 flex flex-col flex-grow border-t-2 border-transparent group-hover:border-[#18448F] transition-colors">
+                                        <h3 className="card-title text-center group-hover:text-[#18448F] transition-colors duration-500">
                                             {p.name}
                                         </h3>
                                          <p className="body-pro-max text-slate-600 text-justify">
                                              {p.desc}
                                          </p>
                                         <div
-                                            className="inline-flex items-center gap-2 text-blue-600 font-bold text-xs tracking-widest uppercase mt-4 group-hover:underline self-end"
+                                            className="inline-flex items-center gap-2 text-[#18448F] font-bold text-xs tracking-widest uppercase mt-4 group-hover:underline self-end"
                                             style={{}}
                                         >
                                             <span></span>
@@ -487,7 +488,7 @@ const FiltresPuits = () => {
 
                         <div className="mt-20 p-8 rounded-[2.5rem] bg-indigo-950 flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl animate-in fade-in slide-in-from-bottom-8">
                             <div className="flex items-center gap-6">
-                                <div className="w-16 h-16 rounded-2xl bg-blue-600 flex items-center justify-center text-white shadow-xl shadow-blue-500/20">
+                                <div className="w-16 h-16 rounded-2xl bg-[#18448F] flex items-center justify-center text-white shadow-xl shadow-[#18448F]/20">
                                     <CheckCircle2 className="w-8 h-8" />
                                 </div>
                                 <div className="text-left">
@@ -495,9 +496,9 @@ const FiltresPuits = () => {
                                     <p className="text-indigo-200/60 font-light text-sm">Laissez nos experts d'eau faire un diagnostic de votre eau gratuitement.</p>
                                 </div>
                             </div>
-                            <Button asChild className="h-14 px-8 rounded-full bg-white text-indigo-950 hover:bg-blue-50 font-black">
+                            <ProMaxButton asChild variant="white" className="w-full md:w-auto">
                                 <a href="/consultation">Démarrer le diagnostic gratuit</a>
-                            </Button>
+                            </ProMaxButton>
                         </div>
                     </div>
                 </section>
@@ -512,12 +513,12 @@ const FiltresPuits = () => {
 
                     <div className="container mx-auto px-6 relative z-10">
                         <div className="max-w-4xl mx-auto text-center mb-32">
-                            <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.3em] mb-8">
+                            <span className="inline-block px-4 py-1.5 bg-[#18448F]/10 text-[#18448F] rounded-full text-[10px] font-black uppercase tracking-[0.3em] mb-8">
                                 L'EXCELLENCE BRICAREAU
                             </span>
                             <h2 className="mb-12 heading-pro-max text-center">
-                                <span className="italic font-light text-[#3d6aab] block">Pourquoi choisir nos</span>
-                                <span className="font-bold text-[#3d6aab] block text-center">systèmes de filtration d'eau ?</span>
+                                <span className="italic font-light text-[#18448F] block">Pourquoi choisir nos</span>
+                                <span className="font-bold text-[#18448F] block text-center">systèmes de filtration d'eau ?</span>
                             </h2>
                              <p className="body-pro-max text-slate-500 text-center mx-auto">
                                  Plus qu'un simple système de filtration, c'est une protection avancée pour votre santé et un confort durable pour toute votre famille.
@@ -561,10 +562,10 @@ const FiltresPuits = () => {
                                         >
                                             <div className="flex items-start gap-8">
                                                 <div className="pt-2">
-                                                    <div className={`w-2.5 h-2.5 rounded-full bg-blue-600 shadow-[0_0_15px_rgba(37,99,235,0.4)] ${isTop ? 'scale-150 animate-pulse' : 'scale-100'} transition-all`} />
+                                                    <div className={`w-2.5 h-2.5 rounded-full bg-[#18448F] shadow-[0_0_15px_rgba(61,106,171,0.4)] ${isTop ? 'scale-150 animate-pulse' : 'scale-100'} transition-all`} />
                                                 </div>
                                                 <div className="space-y-4">
-                                                    <h3 className={`text-2xl font-bold transition-all duration-500 ${isTop ? 'text-blue-600' : 'text-[#3d6aab] group-hover:text-blue-400'}`}>
+                                                    <h3 className={`text-2xl font-bold transition-all duration-500 ${isTop ? 'text-[#18448F]' : 'text-[#18448F] group-hover:text-blue-400'}`}>
                                                         {feature.title}
                                                     </h3>
                                                      <p className="body-pro-max text-slate-500 text-justify max-w-md">
@@ -585,10 +586,10 @@ const FiltresPuits = () => {
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
                             <h2 className="mb-8 heading-pro-max text-left">
-                                <span className="italic font-light text-[#3d6aab] block">Comparez nos filtres d'eau</span>
-                                <span className="font-bold text-[#3d6aab] block">spécialisés pour l'eau de puits</span>
+                                <span className="italic font-light text-[#18448F] block">Comparez nos filtres d'eau</span>
+                                <span className="font-bold text-[#18448F] block">spécialisés pour l'eau de puits</span>
                             </h2>
-                            <div className="w-24 h-1 bg-blue-600"></div>
+                            <div className="w-24 h-1 bg-[#18448F]"></div>
                         </div>
                         <div className="overflow-x-visible relative">
                             {/* Navigation Arrows for Mobile/Tablet */}
@@ -596,7 +597,7 @@ const FiltresPuits = () => {
                                 <Button 
                                     size="icon" 
                                     variant="outline" 
-                                    className="w-10 h-10 rounded-full border-blue-100 hover:bg-blue-600 hover:text-white transition-all shadow-sm"
+                                    className="w-10 h-10 rounded-full border-blue-100 hover:bg-[#18448F] hover:text-white transition-all shadow-sm"
                                     onClick={() => setActiveCol(Math.max(0, activeCol - 1))}
                                     disabled={activeCol === 0}
                                 >
@@ -604,13 +605,13 @@ const FiltresPuits = () => {
                                 </Button>
                                 <div className="flex gap-1.5 px-2">
                                     {[0, 1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
-                                        <div key={i} className={`h-1.5 rounded-full transition-all duration-300 ${i === activeCol ? 'w-6 bg-blue-600' : 'w-1.5 bg-blue-100'}`} />
+                                        <div key={i} className={`h-1.5 rounded-full transition-all duration-300 ${i === activeCol ? 'w-6 bg-[#18448F]' : 'w-1.5 bg-blue-100'}`} />
                                     ))}
                                 </div>
                                 <Button 
                                     size="icon" 
                                     variant="outline" 
-                                    className="w-10 h-10 rounded-full border-blue-100 hover:bg-blue-600 hover:text-white transition-all shadow-sm"
+                                    className="w-10 h-10 rounded-full border-blue-100 hover:bg-[#18448F] hover:text-white transition-all shadow-sm"
                                     onClick={() => setActiveCol(Math.min(8, activeCol + 1))}
                                     disabled={activeCol === 8}
                                 >
@@ -649,7 +650,7 @@ const FiltresPuits = () => {
                                                                 {m.badge}
                                                             </span>
                                                         )}
-                                                        <div className="text-[10px] md:text-[12px] font-bold text-[#3d6aab] leading-tight uppercase tracking-wider min-h-[32px] flex items-center justify-center px-1">
+                                                        <div className="text-[10px] md:text-[12px] font-bold text-[#18448F] leading-tight uppercase tracking-wider min-h-[32px] flex items-center justify-center px-1">
                                                             {m.name}
                                                         </div>
                                                     </div>
@@ -660,7 +661,7 @@ const FiltresPuits = () => {
                                     <tbody className="divide-y divide-slate-100 relative z-10">
                                         {comparisonData.map((row, i) => (
                                             <tr key={i} className="hover:bg-blue-50/30 transition-colors group">
-                                                <td className="p-6 md:p-8 font-bold text-[#3d6aab] bg-white sticky left-0 z-30 border-r border-slate-50 drop-shadow-sm lg:drop-shadow-none text-[12px] md:text-sm italic group-hover:text-blue-600 transition-colors max-w-[200px]">
+                                                <td className="p-6 md:p-8 font-bold text-[#18448F] bg-white sticky left-0 z-30 border-r border-slate-50 drop-shadow-sm lg:drop-shadow-none text-[12px] md:text-sm italic group-hover:text-[#18448F] transition-colors max-w-[200px]">
                                                     {row.feature}
                                                 </td>
                                                 {["Vortex", "ZenPH", "ChlorStop", "IronShield", "OxyPure", "SulphurShield", "ZeroAs", "TannEx", "SerenitePure"].map((key, idx) => (
@@ -673,8 +674,8 @@ const FiltresPuits = () => {
                                                     >
                                                         {(() => {
                                                             const val = row[key as keyof typeof row];
-                                                            if (typeof val === 'string') return <span className="text-blue-600 font-bold bg-blue-50/50 px-3 py-1 rounded-full text-[9px] md:text-[10px] uppercase shadow-sm whitespace-nowrap">{val}</span>;
-                                                            if (val === true) return <CheckCircle2 className="h-5 w-5 md:h-6 md:w-6 text-blue-600 mx-auto" />;
+                                                            if (typeof val === 'string') return <span className="text-[#18448F] font-bold bg-blue-50/50 px-3 py-1 rounded-full text-[9px] md:text-[10px] uppercase shadow-sm whitespace-nowrap">{val}</span>;
+                                                            if (val === true) return <CheckCircle2 className="h-5 w-5 md:h-6 md:w-6 text-[#18448F] mx-auto" />;
                                                             return <div className="h-5 w-5 md:h-6 md:w-6 mx-auto opacity-10"><X className="h-5 w-5 md:h-6 md:w-6" /></div>;
                                                         })()}
                                                     </td>
@@ -706,26 +707,26 @@ const FiltresPuits = () => {
                             alt="Analyse d'eau de puits en laboratoire"
                             className="w-full h-full object-cover"
                         />
-                        <div className="absolute inset-0 bg-blue-900/40 lg:bg-gradient-to-r lg:from-blue-900/90 lg:to-blue-600/20 mix-blend-multiply" />
+                        <div className="absolute inset-0 bg-blue-900/40 lg:bg-gradient-to-r lg:from-blue-900/90 lg:to-[#18448F]/20 mix-blend-multiply" />
                         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-white via-white/10 to-transparent" />
                     </div>
 
                     <div className="container mx-auto px-4 relative z-10 flex items-center py-12 lg:py-0">
                         <div className="max-w-2xl text-slate-900 lg:text-white">
-                            <span className="text-blue-600 lg:text-blue-600 text-xs font-black uppercase tracking-[0.3em] mb-8 block">
+                            <span className="text-[#18448F] lg:text-[#18448F] text-xs font-black uppercase tracking-[0.3em] mb-8 block">
                                 Contrôle de la Qualité D'EAU
                             </span>
                              <h2 className="mb-8 heading-pro-max">
-                                <span className="italic font-light text-[#3d6aab] lg:text-white block">L'excellence commence</span>
-                                <span className="text-[#3d6aab] lg:text-white italic font-bold font-serif">par une eau parfaite.</span>
+                                <span className="italic font-light text-[#18448F] lg:text-white block">L'excellence commence</span>
+                                <span className="text-[#18448F] lg:text-white italic font-bold font-serif">par une eau parfaite.</span>
                             </h2>
                             <p className="font-light text-black lg:text-white/95 mb-8 max-w-xl text-justify lg:text-left">
                                 Le luxe, c'est de ne pas avoir à se soucier de la qualité de ce que l'on consomme. Offrez-vous la sérénité d'une eau analysée par des experts, pour une maison où tout brille, sans effort et sans compromis.
                             </p>
                             <div className="flex gap-4">
-                                <Button asChild>
+                                <ProMaxButton asChild variant="dark" className="w-full sm:w-auto">
                                     <a href="/tests-eau">Demandez une analyse d'eau</a>
-                                </Button>
+                                </ProMaxButton>
                             </div>
                         </div>
                     </div>
@@ -736,8 +737,8 @@ const FiltresPuits = () => {
                     filterProduct="/filtration"
                     title={
                         <h2 className="mb-8 heading-pro-max text-center">
-                            <span className="italic font-light text-[#3d6aab] block text-center">Buvez l'eau de votre puits sans crainte</span>
-                            <span className="font-bold text-[#3d6aab] block text-center">Ils ont fait le saut avec nous.</span>
+                            <span className="italic font-light text-[#18448F] block text-center">Buvez l'eau de votre puits sans crainte</span>
+                            <span className="font-bold text-[#18448F] block text-center">Ils ont fait le saut avec nous.</span>
                         </h2>
                     }
                 />
@@ -747,7 +748,7 @@ const FiltresPuits = () => {
                     <div className="container mx-auto px-4">
                         <div className="text-center mb-16">
                             <h2 className="mb-8 heading-pro-max text-center">
-                                <span className="font-bold text-[#3d6aab] block text-center">Découvrez les produits associés</span>
+                                <span className="font-bold text-[#18448F] block text-center">Découvrez les produits associés</span>
                             </h2>
                              <p className="body-pro-max text-gray-500 text-center mx-auto">
                                  Optimisez votre expérience de traitement d'eau avec nos solutions complémentaires.
@@ -788,15 +789,15 @@ const FiltresPuits = () => {
                                             className="max-h-full object-contain group-hover:scale-110 transition-transform duration-700 mix-blend-multiply"
                                         />
                                     </div>
-                                    <div className="p-8 space-y-4 flex flex-col flex-grow border-t-2 border-transparent group-hover:border-blue-600 transition-colors">
-                                        <h3 className="card-title text-center group-hover:text-blue-600 transition-colors duration-500">
+                                    <div className="p-8 space-y-4 flex flex-col flex-grow border-t-2 border-transparent group-hover:border-[#18448F] transition-colors">
+                                        <h3 className="card-title text-center group-hover:text-[#18448F] transition-colors duration-500">
                                             {prod.name}
                                         </h3>
                                          <p className="body-pro-max text-slate-500 text-justify">
                                              {prod.desc}
                                          </p>
                                         <div
-                                            className="inline-flex items-center gap-2 text-blue-600 font-bold text-xs tracking-widest uppercase mt-4 group-hover:underline self-end"
+                                            className="inline-flex items-center gap-2 text-[#18448F] font-bold text-xs tracking-widest uppercase mt-4 group-hover:underline self-end"
                                             style={{}}
                                         >
                                             <span></span>
@@ -810,9 +811,9 @@ const FiltresPuits = () => {
                 </section>
 
                 {/* 11. PREMIUM CTA SECTION - REBUILT FOR IMPACT */}
-                <section className="relative py-32 flex items-center overflow-hidden bg-[#3d6aab]">
+                <section className="relative py-32 flex items-center overflow-hidden bg-[#18448F]">
                   {/* Animated background elements */}
-                  <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-blue-600/20 to-transparent skew-x-12 translate-x-1/4" />
+                  <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-[#18448F]/20 to-transparent skew-x-12 translate-x-1/4" />
                   <div className="absolute bottom-0 left-0 w-1/2 h-full bg-gradient-to-r from-cyan-400/10 to-transparent -skew-x-12 -translate-x-1/4" />
                   
                   {/* Background Image with Overlay */}
@@ -822,13 +823,13 @@ const FiltresPuits = () => {
                       alt="Expert Bricareau analysant vos options de filtration"
                       className="w-full h-full object-cover grayscale brightness-150"
                     />
-                    <div className="absolute inset-0 bg-[#3d6aab]/10 backdrop-blur-sm" />
+                    <div className="absolute inset-0 bg-[#18448F]/10 backdrop-blur-sm" />
                   </div>
 
                   <div className="container mx-auto px-6 relative z-10">
                     <div className="max-w-5xl mx-auto text-center space-y-12">
                       <div className="space-y-6">
-                        <span className="inline-block px-4 py-1.5 bg-white text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.4em]">
+                        <span className="inline-block px-4 py-1.5 bg-white text-[#18448F] rounded-full text-[10px] font-black uppercase tracking-[0.4em]">
                           L'EXCELLENCE EN FILTRATION
                         </span>
                         <h2 className="font-light block leading-tight lg:leading-[52px] text-white">
@@ -839,19 +840,16 @@ const FiltresPuits = () => {
                           Prêt à éliminer définitivement le fer, le soufre ou le chlore de votre foyer ? Profitez de l'accompagnement d'un spécialiste pour choisir l'équipement parfaitement adapté à votre réalité. Demandez votre consultation gratuite dès aujourd'hui et redécouvrez le plaisir d'une eau saine à chaque robinet.                        </p>
                       </div>
 
-                      <div className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-4">
-                        <Button asChild>
+                      <div className="flex flex-col sm:flex-row gap-8 justify-center items-center pt-4">
+                        <ProMaxButton asChild variant="white" className="w-full sm:w-auto">
                           <a href="tel:18552649328" className="flex items-center gap-3">
                             <Phone className="h-5 w-5 animate-bounce" />
                             Parlez à un expert
                           </a>
-                        </Button>
-                        <Button
-                          variant="outline"
-                          asChild
-                        >
+                        </ProMaxButton>
+                        <ProMaxButton asChild variant="outline-white" className="w-full sm:w-auto">
                           <NavLink to="/consultation">Planifiez une consultation</NavLink>
-                        </Button>
+                        </ProMaxButton>
                       </div>
 
                       <div className="pt-8 flex flex-col items-center gap-4">
@@ -870,10 +868,10 @@ const FiltresPuits = () => {
                     <div className="container mx-auto px-6">
                         <div className="text-left mb-16">
                             <h2 className="mb-8 heading-pro-max text-left">
-                                <span className="italic font-light text-[#3d6aab] block">Pour vous éclairer</span>
-                                <span className="font-bold text-[#3d6aab] block">Questions fréquentes</span>
+                                <span className="italic font-light text-[#18448F] block">Pour vous éclairer</span>
+                                <span className="font-bold text-[#18448F] block">Questions fréquentes</span>
                             </h2>
-                            <div className="w-24 h-1 bg-blue-600"></div>
+                            <div className="w-24 h-1 bg-[#18448F]"></div>
                                                     </div>
 
                                                     <div className="max-w-4xl mx-auto">
@@ -889,12 +887,12 @@ const FiltresPuits = () => {
                                                                 </AccordionItem>
                                                             ))}
                                                         </Accordion>
-                                                        <div className="mt-12 text-center">
-                                                            <Button
-                                                                onClick={() => setShowAllFaqs(!showAllFaqs)}
-                                                            >
-                                                                {showAllFaqs ? "Voir moins de questions" : "Voir toutes les questions"}
-                                                            </Button>
+                                                        <div className="mt-12 flex justify-center">
+                                                        <ProMaxButton
+                                                            onClick={() => setShowAllFaqs(!showAllFaqs)}
+                                                        >
+                                                            {showAllFaqs ? "Voir moins de questions" : "Voir toutes les questions"}
+                                                        </ProMaxButton>
                                                         </div>
                         </div>
                     </div>
@@ -905,10 +903,10 @@ const FiltresPuits = () => {
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
                             <h2 className="mb-8 heading-pro-max text-left">
-                                <span className="font-bold text-[#3d6aab] block text-left">Ressources</span>
+                                <span className="font-bold text-[#18448F] block text-left">Ressources</span>
                             </h2>
 
-                            <div className="w-24 h-1 bg-blue-600"></div>
+                            <div className="w-24 h-1 bg-[#18448F]"></div>
                         </div>
                         <div 
                             ref={resourcesRef}
@@ -928,12 +926,12 @@ const FiltresPuits = () => {
                                             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                                         />
                                     </div>
-                                    <div className="p-8 text-left border-t-2 border-transparent group-hover:border-blue-600 transition-colors flex flex-col flex-grow">
-                                        <h4 className="mb-4 group-hover:text-blue-600 transition-colors tracking-tight font-medium text-base leading-6 text-[#0F1729]">{art.title}</h4>
+                                    <div className="p-8 text-left border-t-2 border-transparent group-hover:border-[#18448F] transition-colors flex flex-col flex-grow">
+                                        <h4 className="mb-4 group-hover:text-[#18448F] transition-colors tracking-tight font-medium text-base leading-6 text-[#0F1729]">{art.title}</h4>
                                         <div className="mt-auto">
                                             <NavLink
                                                 to={art.path}
-                                                className="text-blue-600 font-bold flex items-center gap-2 group-hover:underline text-sm"
+                                                className="text-[#18448F] font-bold flex items-center gap-2 group-hover:underline text-sm"
                                             >
                                                 Lire <ChevronRight className="h-4 w-4 transform group-hover:translate-x-1 transition-transform" />
                                             </NavLink>
@@ -947,21 +945,21 @@ const FiltresPuits = () => {
                         <div className="lg:hidden flex items-center justify-center gap-4 mt-6 relative z-30">
                             <Button 
                                 size="icon" 
-                                className="w-12 h-12 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-all shadow-md shadow-blue-100"
+                                className="w-12 h-12 rounded-full bg-[#18448F] text-white hover:bg-[#18448F]/90 transition-all shadow-md shadow-blue-100"
                                 onClick={() => scrollResources('left')}
                             >
                                 <ChevronLeft className="h-6 w-6" />
                             </Button>
                             <Button 
                                 size="icon" 
-                                className="w-12 h-12 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-all shadow-md shadow-blue-100"
+                                className="w-12 h-12 rounded-full bg-[#18448F] text-white hover:bg-[#18448F]/90 transition-all shadow-md shadow-blue-100"
                                 onClick={() => scrollResources('right')}
                             >
                                 <ChevronRight className="h-6 w-6" />
                             </Button>
 
-                            <div className="absolute right-2 text-sm font-black text-[#3d6aab] bg-blue-50/50 px-4 py-2 rounded-full border border-blue-100/50">
-                                <span className="text-blue-600">{resourceIndex}</span>
+                            <div className="absolute right-2 text-sm font-black text-[#18448F] bg-blue-50/50 px-4 py-2 rounded-full border border-blue-100/50">
+                                <span className="text-[#18448F]">{resourceIndex}</span>
                                 <span className="mx-1 text-slate-300">/</span>
                                 <span className="text-slate-400">{resources.length}</span>
                             </div>
@@ -973,22 +971,21 @@ const FiltresPuits = () => {
 
             {/* Floating Sticky CTA - Phase III Conversion Focus */}
             <div className="hidden md:block fixed bottom-8 right-8 z-[100] animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-[3s] pointer-events-none">
-              <div className="pointer-events-auto group/sticky">
-                <Button
+                <ProMaxButton
                   asChild
-                  className="bg-white hover:-translate-y-2 transition-all duration-10000 active:scale-95"
+                  variant="white"
+                  className="rounded-[2.5rem] h-16 px-8 shadow-2xl transition-all border-none"
                   style={{ backdropFilter: "blur(20px)" }}
                 >
-                  <a href="/consultation" className="flex items-center gap-4 animate-bounce" style={{ animationDuration: '3s' }}>
-                    <span className="font-bold text-sm tracking-wider text-blue-600 whitespace-nowrap text-center">
+                  <a href="/consultation" className="flex items-center gap-4">
+                    <span className="font-black text-[10px] uppercase tracking-[0.2em] text-[#18448F] whitespace-nowrap text-left leading-relaxed">
                       Réservez votre <br />consultation gratuite
                     </span>
-                    <div className="w-10 h-10 bg-[#3d6aab] rounded-full flex items-center justify-center text-white group-hover/sticky:rotate-[360deg] shadow-lg shadow-blue-200">
+                    <div className="w-10 h-10 bg-[#18448F] rounded-full flex items-center justify-center text-white group-hover:rotate-[360deg] transition-transform duration-700 shadow-lg shadow-blue-200">
                       <ArrowRight className="w-5 h-5" />
                     </div>
-                            </a>
-                </Button>
-              </div>
+                  </a>
+                </ProMaxButton>
             </div>
 
             <Footer />

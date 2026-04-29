@@ -88,12 +88,12 @@ const ImpactCalculator = () => {
             <div className="relative z-10 flex flex-col h-full">
                 {/* Header */}
                 <div className="flex items-center gap-4 mb-8">
-                    <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center text-white shadow-lg shadow-blue-200">
+                    <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#18448F] to-[#18448F]/80 flex items-center justify-center text-white shadow-lg shadow-[#18448F]/20">
                         <Leaf className="w-6 h-6" />
                     </div>
                     <div>
                         <h3 className="text-slate-900 tracking-tight leading-none mb-1.5">Eco-Bilan</h3>
-                        <p className="text-blue-500 text-[10px] font-black uppercase tracking-widest leading-none">Simulateur d'économie</p>
+                        <p className="text-[#18448F] text-[10px] font-black uppercase tracking-widest leading-none">Simulateur d'économie</p>
                     </div>
                 </div>
 
@@ -109,14 +109,14 @@ const ImpactCalculator = () => {
                                 <div className="flex items-center justify-between bg-white rounded-2xl p-1 shadow-sm border border-slate-100">
                                     <button
                                         onClick={() => input.setter(Math.max(0, input.value - 1))}
-                                        className="w-8 h-8 rounded-xl hover:bg-slate-50 flex items-center justify-center text-slate-400 hover:text-blue-600 transition-colors active:scale-90"
+                                        className="w-8 h-8 rounded-xl hover:bg-slate-50 flex items-center justify-center text-slate-400 hover:text-[#18448F] transition-colors active:scale-90"
                                     >
                                         <Minus className="w-4 h-4" />
                                     </button>
                                     <span className="text-xl font-bold text-slate-900">{input.value}</span>
                                     <button
                                         onClick={() => input.setter(Math.min(10, input.value + 1))}
-                                        className="w-8 h-8 rounded-xl hover:bg-slate-50 flex items-center justify-center text-slate-400 hover:text-blue-600 transition-colors active:scale-90"
+                                        className="w-8 h-8 rounded-xl hover:bg-slate-50 flex items-center justify-center text-slate-400 hover:text-[#18448F] transition-colors active:scale-90"
                                     >
                                         <Plus className="w-4 h-4" />
                                     </button>
@@ -130,7 +130,7 @@ const ImpactCalculator = () => {
                             <button
                                 key={y}
                                 onClick={() => setTimeframe(y)}
-                                className={`flex-1 py-2.5 text-xs font-bold rounded-xl transition-all duration-300 ${timeframe === y ? 'bg-white text-blue-600 shadow-sm transform scale-[1.02]' : 'text-slate-400 hover:text-slate-600'}`}
+                                className={`flex-1 py-2.5 text-xs font-bold rounded-xl transition-all duration-300 ${timeframe === y ? 'bg-white text-[#18448F] shadow-sm transform scale-[1.02]' : 'text-slate-400 hover:text-slate-600'}`}
                             >
                                 {y} {y === 1 ? 'AN' : 'ANS'}
                             </button>
@@ -153,7 +153,7 @@ const ImpactCalculator = () => {
                         </div>
                     </div>
 
-                    <div className="relative overflow-hidden p-6 rounded-[2.5rem] bg-blue-600 border border-blue-700 flex items-center justify-between group/res transition-all duration-500 shadow-xl shadow-blue-200">
+                    <div className="relative overflow-hidden p-6 rounded-[2.5rem] bg-[#18448F] border border-[#18448F]/80 flex items-center justify-between group/res transition-all duration-500 shadow-xl shadow-[#18448F]/20">
                         <div>
                             <span className="text-[10px] font-black text-blue-100 uppercase tracking-widest block mb-1">Économies Nettes</span>
                             <div className="flex items-baseline gap-1">
@@ -222,7 +222,7 @@ const SolutionCard = ({ item }: { item: SolutionItem }) => {
                     >
                         {item.title}
                     </h3>
-                    <div className="w-12 h-1 bg-blue-600/10 rounded-full mx-auto group-hover:w-20 group-hover:bg-blue-600 transition-all duration-700" />
+                    <div className="w-12 h-1 bg-[#18448F]/10 rounded-full mx-auto group-hover:w-20 group-hover:bg-[#18448F] transition-all duration-700" />
                     <p 
                         className="flex-grow text-justify"
                         style={{
@@ -240,9 +240,9 @@ const SolutionCard = ({ item }: { item: SolutionItem }) => {
 
                 <div className="mt-8 w-full flex items-center justify-between">
                     <div className="relative inline-block group/btn">
-                        <div className="absolute inset-0 border border-[#3d6aab] rounded-[2rem] -translate-x-[4px] translate-y-[4px] transition-transform group-hover/btn:-translate-x-[2px] group-hover/btn:translate-y-[2px]"></div>
+                        <div className="absolute inset-0 border border-[#18448F] rounded-[2rem] -translate-x-[4px] translate-y-[4px] transition-transform group-hover/btn:-translate-x-[2px] group-hover/btn:translate-y-[2px]"></div>
                         <Button 
-                            className="relative bg-[#3d6aab] hover:bg-white hover:text-[#3d6aab] text-white rounded-[2rem] h-14 px-8 font-black uppercase tracking-widest text-[10px] transition-all border-none"
+                            className="relative bg-[#18448F] hover:bg-white hover:text-[#18448F] text-white rounded-[2rem] h-14 px-8 font-black uppercase tracking-widest text-[10px] transition-all border-none"
                             onClick={() => setShowSpecs(true)}
                         >
                             Spécifications
@@ -259,13 +259,13 @@ const SolutionCard = ({ item }: { item: SolutionItem }) => {
             >
                 <div className="mb-10 text-left">
                     <h3 className="text-3xl font-bold text-slate-900 tracking-tight">Caractéristiques</h3>
-                    <div className="w-16 h-1.5 bg-blue-600 rounded-full mt-4" />
+                    <div className="w-16 h-1.5 bg-[#18448F] rounded-full mt-4" />
                 </div>
 
                 <ul className="space-y-6 flex-grow">
                     {item.features.map((feature: string, idx: number) => (
                         <li key={idx} className="flex items-start gap-4 group/item">
-                            <div className="mt-1.5 w-2 h-2 rounded-full bg-blue-600 shadow-[0_0_10px_rgba(37,99,235,0.4)] group-hover/item:scale-150 transition-transform" />
+                            <div className="mt-1.5 w-2 h-2 rounded-full bg-[#18448F] shadow-[0_0_10px_rgba(61,106,171,0.4)] group-hover/item:scale-150 transition-transform" />
                             <span className="text-base font-light text-slate-600 leading-tight">
                                 {feature}
                             </span>
@@ -328,12 +328,12 @@ const Fontaines = () => {
                                     { label: "Éco-Conçu", val: "Zéro Bouteilles", icon: <Leaf className="w-4 h-4" /> }
                                 ].map((item, i) => (
                                     <div key={i} className="bg-white/90 backdrop-blur-md p-2 rounded-xl border border-white/50 shadow-lg flex flex-col items-center text-center gap-1.5 transition-all duration-500">
-                                        <div className="w-7 h-7 bg-blue-600/10 rounded-full flex items-center justify-center text-blue-600 shrink-0">
+                                        <div className="w-10 h-10 bg-[#18448F]/10 rounded-full flex items-center justify-center text-[#18448F] shadow-sm shrink-0">
                                             {item.icon}
                                         </div>
                                         <div className="min-w-0">
                                             <p className="text-[7.5px] font-black text-slate-400 uppercase tracking-tight leading-none mb-1">{item.label}</p>
-                                            <p className="text-[9px] font-bold text-[#3d6aab] leading-tight break-words">{item.val}</p>
+                                            <p className="text-[9px] font-bold text-[#18448F] leading-tight break-words">{item.val}</p>
                                         </div>
                                     </div>
                                 ))}
@@ -357,8 +357,8 @@ const Fontaines = () => {
                                     fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
                                 }}
                             >
-                                <span className="italic font-light text-[#3d6aab] text-[32px] md:text-[46px] lg:text-[50px] block">Fontaines d'eau,</span>
-                                <span className="font-bold text-[#3d6aab] text-[32px] md:text-[46px] lg:text-[50px] block">l'art de l'eau pure.</span>
+                                <span className="italic font-light text-[#18448F] text-[32px] md:text-[46px] lg:text-[50px] block">Fontaines d'eau,</span>
+                                <span className="font-bold text-[#18448F] text-[32px] md:text-[46px] lg:text-[50px] block">l'art de l'eau pure.</span>
                             </h1>
 
                             <p className="body-pro-max text-slate-600 max-w-xl text-justify lg:text-left">
@@ -366,8 +366,8 @@ const Fontaines = () => {
                             </p>
                             <div className="flex flex-col sm:flex-row gap-6 pt-4">
                                 <div className="relative inline-block group">
-                                    <div className="absolute inset-0 border border-[#3d6aab] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
-                                    <Button asChild className="relative bg-[#3d6aab] hover:bg-white hover:text-[#3d6aab] text-white rounded-[2rem] h-16 px-12 font-black uppercase tracking-widest text-xs transition-all border-none">
+                                    <div className="absolute inset-0 border border-[#18448F] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                                    <Button asChild className="relative bg-[#18448F] hover:bg-white hover:text-[#18448F] text-white rounded-[2rem] h-16 px-12 font-black uppercase tracking-widest text-xs transition-all border-none">
                                         <a href="/consultation" className="inline-flex items-center gap-2">
                                             Planifiez une consultation
                                             <ArrowRight className="ml-1 w-5 h-5 transition-transform group-hover:translate-x-1" />
@@ -375,8 +375,8 @@ const Fontaines = () => {
                                     </Button>
                                 </div>
                                 <div className="relative inline-block group">
-                                    <div className="absolute inset-0 border border-[#3d6aab] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
-                                    <Button variant="outline" asChild className="relative bg-transparent border border-[#3d6aab]/30 hover:bg-[#3d6aab] hover:text-white text-[#3d6aab] rounded-[2rem] h-16 px-12 font-black uppercase tracking-widest text-xs transition-all">
+                                    <div className="absolute inset-0 border border-[#18448F] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                                    <Button variant="outline" asChild className="relative bg-transparent border border-[#18448F]/30 hover:bg-[#18448F] hover:text-white text-[#18448F] rounded-[2rem] h-16 px-12 font-black uppercase tracking-widest text-xs transition-all">
                                         <a href="tel:18552649328" className="inline-flex items-center gap-2">
                                             <Phone className="w-5 h-5" />
                                             1-855-264-9328
@@ -394,12 +394,12 @@ const Fontaines = () => {
                                         { label: "Éco-Conçu", val: "Zéro Bouteilles", icon: <Leaf className="w-5 h-5" /> }
                                     ].map((item, i) => (
                                         <div key={i} className="bg-white/60 backdrop-blur-md p-4 rounded-2xl border border-white/50 shadow-sm flex items-center gap-4 group cursor-default transition-all duration-500 hover:scale-105">
-                                            <div className="w-10 h-10 bg-blue-600/10 rounded-full flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all shadow-sm shrink-0">
+                                            <div className="w-10 h-10 bg-[#18448F]/10 rounded-full flex items-center justify-center text-[#18448F] group-hover:bg-[#18448F] group-hover:text-white transition-all shadow-sm shrink-0">
                                                 {item.icon}
                                             </div>
                                             <div className="min-w-0">
                                                 <p className="text-[9px] font-black text-slate-400 uppercase tracking-widest leading-none mb-1">{item.label}</p>
-                                                <p className="text-sm font-bold text-[#3d6aab] leading-tight">{item.val}</p>
+                                                <p className="text-sm font-bold text-[#18448F] leading-tight">{item.val}</p>
                                             </div>
                                         </div>
                                     ))}
@@ -423,12 +423,12 @@ const Fontaines = () => {
 
                     <div className="container mx-auto px-6 relative z-10">
                         <div className="text-center max-w-4xl mx-auto mb-24 animate-in fade-in slide-in-from-bottom-8 duration-1000">
-                            <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.2em] mb-6">
+                            <span className="inline-block px-4 py-1.5 bg-[#18448F]/10 text-[#18448F] rounded-full text-[10px] font-black uppercase tracking-[0.2em] mb-6">
                                 PURETÉ À DOMICILE
                             </span>
                             <h2 className="mb-6 heading-pro-max text-center">
-                                <span className="italic font-light text-[#3d6aab] block">L'hydratation pure à la maison,</span>
-                                <span className="font-bold text-[#3d6aab] block">l'eau fraîche à la portée de vos mains.</span>
+                                <span className="italic font-light text-[#18448F] block">L'hydratation pure à la maison,</span>
+                                <span className="font-bold text-[#18448F] block">l'eau fraîche à la portée de vos mains.</span>
                             </h2>
                             <p 
                                 className="max-w-3xl mx-auto"
@@ -481,8 +481,8 @@ const Fontaines = () => {
                                 TECHNOLOGIE & RESPONSABILITÉ
                             </span>
                             <h2 className="mb-6 heading-pro-max text-center">
-                                <span className="italic font-light text-[#3d6aab] block text-[32px] md:text-[40px] lg:text-[48px]">Plus qu'une fontaine d'eau,</span>
-                                <span className="font-bold text-[#3d6aab] block text-[32px] md:text-[40px] lg:text-[48px]">un choix intelligent & responsable.</span>
+                                <span className="italic font-light text-[#18448F] block text-[32px] md:text-[40px] lg:text-[48px]">Plus qu'une fontaine d'eau,</span>
+                                <span className="font-bold text-[#18448F] block text-[32px] md:text-[40px] lg:text-[48px]">un choix intelligent & responsable.</span>
                             </h2>
                             <p 
                                 className="max-w-3xl mx-auto"
@@ -521,7 +521,7 @@ const Fontaines = () => {
                                         <Star className="w-4 h-4 text-yellow-400 fill-yellow-400" />
                                         <span className="text-[10px] font-black text-white uppercase tracking-widest">Expérience Premium</span>
                                     </div>
-                                    <h3 className="text-3xl lg:text-4xl font-bold text-[#3d6aab] lg:text-white tracking-tight">Art de Vivre</h3>
+                                    <h3 className="text-3xl lg:text-4xl font-bold text-[#18448F] lg:text-white tracking-tight">Art de Vivre</h3>
                                     <p className="text-slate-700 lg:text-white text-[18px] lg:text-[20px] leading-relaxed italic border-l-2 border-blue-500 pl-6 text-justify lg:text-left">
                                         Une pureté incomparable qui s'intègre harmonieusement à votre quotidien. Découvrez l'équilibre parfait entre esthétique et santé, où chaque gorgée est une signature de qualité.
                                     </p>
@@ -543,8 +543,8 @@ const Fontaines = () => {
                     limit={5}
                 title={
                     <h2 className="mb-8 heading-pro-max text-center">
-                        <span className="italic font-light text-[#3d6aab] block">L’eau que vous méritez,</span>
-                        <span className="font-bold text-[#3d6aab] block">le service que vous n'oublierez pas.</span>
+                        <span className="italic font-light text-[#18448F] block">L’eau que vous méritez,</span>
+                        <span className="font-bold text-[#18448F] block">le service que vous n'oublierez pas.</span>
                     </h2>
                 }
                 />
@@ -563,8 +563,8 @@ const Fontaines = () => {
                                     NOTRE PORTFOLIO
                                 </span>
                                 <h2 className="heading-pro-max tracking-tight leading-[1.1]">
-                                    <span className="italic font-light text-[#3d6aab] block">Intégration</span>
-                                    <span className="font-bold text-[#3d6aab] block">parfaite & élégante.</span>
+                                    <span className="italic font-light text-[#18448F] block">Intégration</span>
+                                    <span className="font-bold text-[#18448F] block">parfaite & élégante.</span>
                                 </h2>
                             </div>
                             <div className="max-w-md pb-2">
@@ -618,7 +618,7 @@ const Fontaines = () => {
 
 
                 {/* 11. PREMIUM CTA SECTION - REBUILT FOR IMPACT */}
-                <section className="relative py-32 flex items-center overflow-hidden bg-[#3d6aab]">
+                <section className="relative py-32 flex items-center overflow-hidden bg-[#18448F]">
                   {/* Animated background elements */}
                   <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-blue-600/20 to-transparent skew-x-12 translate-x-1/4" />
                   <div className="absolute bottom-0 left-0 w-1/2 h-full bg-gradient-to-r from-cyan-400/10 to-transparent -skew-x-12 -translate-x-1/4" />
@@ -630,7 +630,7 @@ const Fontaines = () => {
                       alt="Expert Bricareau analysant vos options de filtration"
                       className="w-full h-full object-cover grayscale brightness-150"
                     />
-                    <div className="absolute inset-0 bg-[#3d6aab]/10 backdrop-blur-sm" />
+                    <div className="absolute inset-0 bg-[#18448F]/10 backdrop-blur-sm" />
                   </div>
 
                   <div className="container mx-auto px-6 relative z-10">
@@ -652,7 +652,7 @@ const Fontaines = () => {
                           <div className="absolute inset-0 border border-white rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
                           <Button 
                             asChild
-                            className="relative w-full sm:w-auto bg-white text-[#3d6aab] hover:bg-blue-600 hover:text-white rounded-[2rem] h-16 px-12 font-black uppercase tracking-widest text-xs transition-all border-none"
+                            className="relative w-full sm:w-auto bg-white text-[#18448F] hover:bg-blue-600 hover:text-white rounded-[2rem] h-16 px-12 font-black uppercase tracking-widest text-xs transition-all border-none"
                           >
                             <a href="tel:18552649328" className="flex items-center gap-3">
                               <Phone className="h-5 w-5 animate-bounce" />
@@ -665,7 +665,7 @@ const Fontaines = () => {
                           <Button
                             variant="outline"
                             asChild
-                            className="relative w-full sm:w-auto bg-transparent border border-white/30 text-white hover:bg-white hover:text-[#3d6aab] rounded-[2rem] h-16 px-12 font-black uppercase tracking-widest text-xs transition-all"
+                            className="relative w-full sm:w-auto bg-transparent border border-white/30 text-white hover:bg-white hover:text-[#18448F] rounded-[2rem] h-16 px-12 font-black uppercase tracking-widest text-xs transition-all"
                           >
                             <NavLink to="/consultation">Planifiez une consultation</NavLink>
                           </Button>
@@ -703,7 +703,7 @@ const Fontaines = () => {
                                     </div>
                                     <h2 className="heading-pro-max text-left !leading-[1.05] tracking-tight">
                                         <span className="italic font-light text-emerald-600 block text-[38px] md:text-[50px] lg:text-[64px]">Vers un monde</span>
-                                        <span className="font-bold text-[#3d6aab] block text-[38px] md:text-[50px] lg:text-[64px]">sans bouteilles en plastique.</span>
+                                        <span className="font-bold text-[#18448F] block text-[38px] md:text-[50px] lg:text-[64px]">sans bouteilles en plastique.</span>
                                     </h2>
                                 </div>
                                 <div className="lg:col-span-4 lg:pb-3">
@@ -738,13 +738,13 @@ const Fontaines = () => {
                                             alt="Pure water interaction"
                                             className="w-full h-full object-cover"
                                         />
-                                        <div className="absolute inset-0 bg-[#3d6aab]/10 mix-blend-overlay" />
+                                        <div className="absolute inset-0 bg-[#18448F]/10 mix-blend-overlay" />
                                     </div>
 
                                     {/* Floating Data Badge - The "WOW" Factor */}
                                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 bg-white/95 backdrop-blur-3xl w-44 h-44 rounded-full border border-white shadow-[0_32px_64px_rgba(0,0,0,0.15)] flex flex-col items-center justify-center text-center group-hover:scale-110 transition-transform duration-700 cursor-pointer">
                                         <div className="flex flex-col items-center">
-                                            <span className="text-4xl font-black text-[#3d6aab] leading-none tracking-tight underline decoration-emerald-400 decoration-4 underline-offset-4 mb-2">-2920</span>
+                                            <span className="text-4xl font-black text-[#18448F] leading-none tracking-tight underline decoration-emerald-400 decoration-4 underline-offset-4 mb-2">-2920</span>
                                             <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest leading-tight px-4">
                                                 Bouteilles par an<br/>pour un couple
                                             </span>
@@ -756,8 +756,11 @@ const Fontaines = () => {
 
                                 {/* Right Side: Dynamic Engagement Flow */}
                                 <div className="space-y-16">
-                                    <div className="space-y-6">
-                                        <h3 className="text-3xl font-bold text-[#3d6aab] tracking-tight">Que devons-nous faire ?</h3>
+                                    <div className="space-y-4">
+                                        <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center text-[#18448F] shadow-xl shadow-blue-900/20">
+                                            <Phone className="w-6 h-6" />
+                                        </div>
+                                        <h3 className="text-3xl font-bold text-[#18448F] tracking-tight">Que devons-nous faire ?</h3>
                                         <div className="h-1.5 w-16 bg-emerald-500 rounded-full" />
                                     </div>
 
@@ -785,7 +788,7 @@ const Fontaines = () => {
                                                 <div className="w-1.5 h-20 bg-emerald-500 rounded-full flex-shrink-0 transition-transform duration-500 group-hover:scale-y-110" />
                                                 
                                                 <div className="space-y-3">
-                                                    <h4 className="text-xl font-bold text-[#3d6aab] group-hover:text-emerald-600 transition-colors">
+                                                    <h4 className="text-xl font-bold text-[#18448F] group-hover:text-emerald-600 transition-colors">
                                                         {item.title}
                                                     </h4>
                                                     <p className="body-pro-max text-slate-500 max-w-lg leading-relaxed font-light">
@@ -799,10 +802,10 @@ const Fontaines = () => {
                                     {/* Action Call to Engagement */}
                                     <div className="pt-8 flex flex-col sm:flex-row items-center gap-8">
                                         <div className="relative inline-block group">
-                                            <div className="absolute inset-0 border border-emerald-600 rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                                            <div className="absolute inset-0 border border-[#18448F] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
                                             <Button 
                                                 asChild 
-                                                className="relative bg-emerald-600 hover:bg-white hover:text-emerald-600 text-white rounded-[2rem] h-16 px-12 font-black uppercase tracking-widest text-xs transition-all border-none"
+                                                className="relative bg-[#18448F] hover:bg-white hover:text-[#18448F] text-white rounded-[2rem] h-16 px-12 font-black uppercase tracking-widest text-xs transition-all border-none"
                                             >
                                                 <a href="/consultation" className="flex items-center gap-3">
                                                     Planifiez votre impact
@@ -814,7 +817,7 @@ const Fontaines = () => {
                                             <div className="w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center group-hover:border-emerald-500 group-hover:text-emerald-600 transition-all">
                                                 <Phone className="w-4 h-4" />
                                             </div>
-                                            <span className="text-sm font-bold group-hover:text-[#3d6aab] transition-colors">Discutez avec un expert</span>
+                                            <span className="text-sm font-bold group-hover:text-[#18448F] transition-colors">Discutez avec un expert</span>
                                         </div>
                                     </div>
                                 </div>
@@ -828,20 +831,20 @@ const Fontaines = () => {
             
             {/* Floating Sticky CTA - Phase III Conversion Focus */}
             <div className="hidden md:block fixed bottom-8 right-8 z-[100] animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-[3s] pointer-events-none">
-              <div className="pointer-events-auto group/sticky">
+              <div className="pointer-events-auto group/sticky relative">
+                <div className="absolute inset-0 border border-[#18448F] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover/sticky:-translate-x-[3px] group-hover/sticky:translate-y-[3px]"></div>
                 <Button
                   asChild
-                  className="bg-white hover:-translate-y-2 transition-all duration-300 active:scale-95 shadow-2xl"
-                  style={{ backdropFilter: "blur(20px)" }}
+                  className="relative bg-white hover:bg-white text-[#18448F] rounded-[2rem] h-20 px-8 transition-all duration-300 shadow-2xl border-none"
                 >
-                  <a href="/consultation" className="flex items-center gap-4 animate-bounce" style={{ animationDuration: '3s' }}>
-                    <span className="font-bold text-sm tracking-wider text-blue-600 whitespace-nowrap text-center">
+                  <a href="/consultation" className="flex items-center gap-4">
+                    <span className="font-black text-[11px] uppercase tracking-widest leading-tight text-center">
                       Réservez votre <br />consultation gratuite
                     </span>
-                    <div className="w-10 h-10 bg-[#3d6aab] rounded-full flex items-center justify-center text-white group-hover/sticky:rotate-[360deg] shadow-lg shadow-blue-200">
+                    <div className="w-10 h-10 bg-[#18448F] rounded-full flex items-center justify-center text-white group-hover/sticky:rotate-[360deg] transition-transform duration-700 shadow-lg shadow-blue-200 shrink-0">
                       <ArrowRight className="w-5 h-5" />
                     </div>
-                            </a>
+                  </a>
                 </Button>
               </div>
             </div>

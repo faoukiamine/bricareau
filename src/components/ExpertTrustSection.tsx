@@ -1,4 +1,5 @@
 
+import { ProMaxButton } from "@/components/ui/ProMaxButton";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Gem, Eye } from "lucide-react";
 import expertImg from "@/assets/water testing.jpeg";
@@ -34,8 +35,8 @@ const ExpertTrustSection = () => {
                         <div className="space-y-12">
                             <div className="space-y-6">
                                 <h2 className="heading-pro-max text-left">
-                                    <span className="italic font-light text-[#3d6aab]">Votre eau mérite un expert, </span>
-                                    <span className="font-bold text-[#3d6aab]">pas un doute.</span>
+                                    <span className="italic font-light text-[#18448F]">Votre eau mérite un expert, </span>
+                                    <span className="font-bold text-[#18448F]">pas un doute.</span>
                                 </h2>
                                 <p
                                     className="max-w-xl text-left lg:text-justify"
@@ -53,14 +54,14 @@ const ExpertTrustSection = () => {
                             </div>
 
                             <div className="pt-6">
-                                <Button
+                                <ProMaxButton
                                     asChild
                                 >
                                     <a href="/tests-eau#water-test" className="flex items-center justify-center gap-3">
                                         Réservez votre analyse d'eau
                                         <ArrowRight className="w-5 h-5" />
                                     </a>
-                                </Button>
+                                </ProMaxButton>
                             </div>
                         </div>
                     </div>
