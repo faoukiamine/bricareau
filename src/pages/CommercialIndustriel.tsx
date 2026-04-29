@@ -210,10 +210,10 @@ const CommercialIndustriel = () => {
                             </p>
                             
                             <div className="flex flex-wrap gap-4 pt-4">
-                                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 h-14 rounded-full font-bold" onClick={() => navigate("/consultation")}>
+                                <Button onClick={() => navigate("/consultation")}>
                                     Parler à un expert
                                 </Button>
-                                <Button variant="outline" size="lg" className="bg-white/10 backdrop-blur-md border-white/20 text-white hover:bg-white hover:text-blue-900 px-8 h-14 rounded-full font-bold">
+                                <Button variant="outline">
                                     Voir nos réalisations
                                 </Button>
                             </div>
@@ -233,7 +233,7 @@ const CommercialIndustriel = () => {
                         <div className="text-center max-w-4xl mx-auto mb-20 space-y-6">
                             <h2 className="heading-pro-max text-center">
                                 <span className="italic font-light text-blue-600 block">Expertise Technique</span>
-                                <span className="font-bold text-[#1e3a8a] block">Solutions de traitement de l'eau commerciales et industrielles</span>
+                                <span className="font-bold text-[#3d6aab] block">Solutions de traitement de l'eau commerciales et industrielles</span>
                             </h2>
                         </div>
 
@@ -250,7 +250,7 @@ const CommercialIndustriel = () => {
                                         </div>
                                     </div>
                                     <div className="p-10 space-y-4">
-                                        <h3 className="text-2xl font-bold text-[#1e3a8a] line-clamp-1">{sol.title}</h3>
+                                        <h3 className="text-2xl font-bold text-[#3d6aab] line-clamp-1">{sol.title}</h3>
                                         <p className="text-slate-500 font-light leading-relaxed line-clamp-2 italic">
                                             {sol.desc}
                                         </p>
@@ -372,7 +372,7 @@ const CommercialIndustriel = () => {
                         <div className="text-center max-w-4xl mx-auto mb-24 space-y-6">
                             <h2 className="heading-pro-max text-center">
                                 <span className="italic font-light text-blue-600 block">Verticales d’Excellence Métier</span>
-                                <span className="font-bold text-[#1e3a8a] block">Là où la pureté de l’eau dicte la performance de vos actifs.</span>
+                                <span className="font-bold text-[#3d6aab] block">Là où la pureté de l’eau dicte la performance de vos actifs.</span>
                             </h2>
                             <p className="body-pro-max text-center opacity-80">
                                 Nous combinons ingénierie de précision et conformité réglementaire pour répondre aux défis spécifiques de votre industrie.
@@ -393,12 +393,12 @@ const CommercialIndustriel = () => {
                                             </div>
                                             <span className="text-[10px] font-black uppercase tracking-widest text-blue-600">{sector.subtitle}</span>
                                         </div>
-                                        <h3 className="text-2xl font-bold text-[#1e3a8a]">{sector.title}</h3>
+                                        <h3 className="text-2xl font-bold text-[#3d6aab]">{sector.title}</h3>
                                         <p className="text-slate-500 font-light leading-relaxed">
                                             {sector.desc}
                                         </p>
                                         <div className="pt-6 flex justify-end">
-                                            <div className="w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center group-hover:bg-[#1e3a8a] group-hover:text-white transition-all">
+                                            <div className="w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center group-hover:bg-[#3d6aab] group-hover:text-white transition-all">
                                                 <ArrowRight className="w-5 h-5" />
                                             </div>
                                         </div>
@@ -421,9 +421,9 @@ const CommercialIndustriel = () => {
                                 <img src={consultationImg} alt="Consultation Bricareau" className="w-full h-full object-cover hover:scale-105 transition-transform duration-[3000ms]" />
                             </div>
                             <div className="w-full lg:w-2/5 p-12 lg:p-20 space-y-8 text-center lg:text-left">
-                                <h2 className="text-4xl font-bold text-[#1e3a8a] leading-tight">Commencez dès aujourd'hui.</h2>
+                                <h2 className="text-4xl font-bold text-[#3d6aab] leading-tight">Commencez dès aujourd'hui.</h2>
                                 <p className="text-slate-500 font-light text-lg">Nos experts sont prêts à auditer votre réseau et à concevoir une solution optimisée pour votre entreprise.</p>
-                                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-12 h-14 font-black uppercase tracking-widest text-xs" onClick={() => navigate("/contact")}>
+                                <Button onClick={() => navigate("/contact")}>
                                     Planifier un audit gratuit
                                 </Button>
                             </div>
@@ -437,7 +437,7 @@ const CommercialIndustriel = () => {
                         <div className="text-center max-w-4xl mx-auto mb-20 space-y-6">
                             <h2 className="heading-pro-max text-center">
                                 <span className="italic font-light text-blue-600 block">Retours d’Expérience</span>
-                                <span className="font-bold text-[#1e3a8a] block tracking-tight">Leur succès opérationnel est notre meilleure signature.</span>
+                                <span className="font-bold text-[#3d6aab] block tracking-tight">Leur succès opérationnel est notre meilleure signature.</span>
                             </h2>
                         </div>
                         
@@ -455,7 +455,7 @@ const CommercialIndustriel = () => {
                                         <p className="text-slate-600 font-light italic leading-relaxed">"{t.text}"</p>
                                     </div>
                                     <div className="pt-8 mt-8 border-t border-slate-50">
-                                        <h4 className="font-bold text-[#1e3a8a]">{t.name}</h4>
+                                        <h4 className="font-bold text-[#3d6aab]">{t.name}</h4>
                                         <p className="text-[10px] uppercase font-black tracking-widest text-blue-500 mt-1">{t.ref}</p>
                                     </div>
                                 </div>
@@ -472,13 +472,13 @@ const CommercialIndustriel = () => {
                                 <div className="w-20 h-2 bg-blue-600 rounded-full"></div>
                                 <h2 className="heading-pro-max text-left leading-tight">
                                     <span className="italic font-light text-blue-600 block">Expertise de Laboratoire</span>
-                                    <span className="font-bold text-[#1e3a8a] block">Décoder votre eau pour garantir l’intégrité de vos processus.</span>
+                                    <span className="font-bold text-[#3d6aab] block">Décoder votre eau pour garantir l’intégrité de vos processus.</span>
                                 </h2>
                                 <p className="body-pro-max text-left text-slate-500">
                                     Avant toute proposition technique, nous effectuons une caractérisation complète de votre eau en laboratoire. C'est la garantie d'un système dimensionné pour la réalité de vos opérations.
                                 </p>
                                 <div className="pt-6">
-                                    <Button size="lg" className="rounded-full px-12 h-16 bg-slate-950 hover:bg-slate-800 text-white shadow-xl shadow-slate-900/40" onClick={() => navigate("/tests-eau")}>
+                                    <Button onClick={() => navigate("/tests-eau")}>
                                         Explorer les services de test &rarr;
                                     </Button>
                                 </div>
@@ -509,7 +509,7 @@ const CommercialIndustriel = () => {
                                     <div className="w-12 h-12 rounded-xl bg-white shadow-md flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all duration-500">
                                         <v.icon className="w-6 h-6" />
                                     </div>
-                                    <h4 className="font-bold text-[#1e3a8a] group-hover:text-blue-600 transition-colors uppercase tracking-widest text-xs">{v.title}</h4>
+                                    <h4 className="font-bold text-[#3d6aab] group-hover:text-blue-600 transition-colors uppercase tracking-widest text-xs">{v.title}</h4>
                                     <p className="text-slate-500 text-[11px] leading-relaxed italic">{v.desc}</p>
                                 </div>
                             ))}
@@ -588,14 +588,14 @@ const CommercialIndustriel = () => {
               <div className="pointer-events-auto group/sticky">
                 <Button
                   asChild
-                  className="bg-white hover:-translate-y-2 transition-all duration-10000 active:scale-95 shadow-2xl"
+                  className="bg-white hover:-translate-y-2 transition-all duration-300 active:scale-95 shadow-2xl"
                   style={{ backdropFilter: "blur(20px)" }}
                 >
                   <a href="/consultation" className="flex items-center gap-4 animate-bounce" style={{ animationDuration: '3s' }}>
                     <span className="font-bold text-sm tracking-wider text-blue-600 whitespace-nowrap text-center">
                       Planifiez votre <br />audit industriel gratuit
                     </span>
-                    <div className="w-10 h-10 bg-[#2563eb] rounded-full flex items-center justify-center text-white group-hover/sticky:rotate-[360deg] shadow-lg shadow-blue-200">
+                    <div className="w-10 h-10 bg-[#3d6aab] rounded-full flex items-center justify-center text-white group-hover/sticky:rotate-[360deg] shadow-lg shadow-blue-200">
                       <ArrowRight className="w-5 h-5" />
                     </div>
                   </a>

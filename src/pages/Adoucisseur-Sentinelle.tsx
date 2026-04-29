@@ -87,13 +87,13 @@ const AdoucisseurSentinelle = () => {
                             </p>
 
                             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                                <Button asChild size="lg" className="h-14 px-10 rounded-full text-lg shadow-xl shadow-blue-200 hover:shadow-2xl transition-all group">
+                                <Button asChild group>
                                     <a href="#decouvrir">
                                         Voir les détails
                                         <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                                     </a>
                                 </Button>
-                                <Button asChild size="lg" className="h-14 px-10 rounded-full text-lg border-2 border-blue-600 text-blue-600 bg-transparent hover:bg-blue-600 hover:text-white transition-all">
+                                <Button asChild variant="outline">
                                     <a href="/consultation">Analyse gratuite</a>
                                 </Button>
                             </div>
@@ -133,8 +133,8 @@ const AdoucisseurSentinelle = () => {
                             <div className="text-center space-y-6">
                                 <div className="inline-block py-1 px-3 rounded-md bg-blue-600 text-white font-bold text-[10px] uppercase tracking-[0.2em]">Fiche Technique</div>
                                 <h2 className="heading-pro-max text-center">
-                                    <span className="italic font-light text-[#2563eb] block text-3xl">Spécifications</span>
-                                    <span className="font-bold text-[#1e3a8a] block uppercase text-4xl">Série Sentinelle.</span>
+                                    <span className="italic font-light text-[#3d6aab] block text-3xl">Spécifications</span>
+                                    <span className="font-bold text-[#3d6aab] block uppercase text-4xl">Série Sentinelle.</span>
                                 </h2>
                                 
                                 <div className="flex flex-wrap justify-center gap-2 pt-4">
@@ -273,7 +273,7 @@ const AdoucisseurSentinelle = () => {
                                     ))}
                                 </div>
                                 
-                                <Button asChild size="lg" className="rounded-full bg-blue-600 text-white hover:bg-blue-700 h-14 px-10 shadow-xl shadow-blue-200">
+                                <Button asChild>
                                     <a href="/contact">Obtenir ma soumission</a>
                                 </Button>
                             </div>
@@ -439,7 +439,7 @@ const AdoucisseurSentinelle = () => {
                                 </div>
                                 <div className="text-slate-500 text-sm font-light">Basé sur 128 avis vérifiés</div>
                             </div>
-                            <Button className="w-fit px-12 h-14 rounded-full bg-blue-600 text-white hover:bg-white hover:text-blue-600 hover:border-blue-600 border border-transparent font-bold uppercase tracking-widest text-xs shadow-lg shadow-blue-200 transition-all hover:scale-[1.02]">Laisser un avis</Button>
+                            <Button>Laisser un avis</Button>
                         </div>
                         
                         <div className="lg:w-2/3 grid sm:grid-cols-2 gap-8">

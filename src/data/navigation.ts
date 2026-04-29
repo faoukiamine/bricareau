@@ -77,9 +77,9 @@ export const mainNavMenuItems: MenuItem[] = [
                 href: "/bureau"
             },
             {
-                title: "COMMERCIAL ET INDUSTRIEL",
+                title: "INDUSTRIEL",
                 image: promoImage,
-                href: "/commercial-industriel"
+                href: "/industriel"
             }
         ]
     },
@@ -104,15 +104,15 @@ export const mainNavMenuItems: MenuItem[] = [
                         description: "Découvrez comment nos experts peuvent vous aider à trouver la solution qui vous convient.", 
                         href: "/notre-processus" 
                     },
+                    { 
+                        title: "Adoucissement Résidentiel", 
+                        description: "Découvrez notre nouveau modèle de page pour l'adoucissement d'eau.", 
+                        href: "/A1" 
+                    },
                 ]
             },
             {
                 items: [
-                    { 
-                        title: "Durabilité", 
-                        description: "Découvrez comment nous fournissons des systèmes de filtration d'eau économiques, efficaces et durables.", 
-                        href: "/durabilite" 
-                    },
                     { 
                         title: "Carrières", 
                         description: "Rejoignez une équipe passionnée et participez à l'avenir du traitement d'eau.", 
@@ -136,37 +136,44 @@ export const mainNavMenuItems: MenuItem[] = [
             {
                 items: [
                     { 
-                        title: "Blog", 
-                        description: "Restez informé des nouveautés dans le monde de l'eau.", 
-                        href: "/blog" 
-                    },
-                    { 
-                        title: "Contaminants courants", 
-                        description: "Consultez la liste complète des contaminants courants.", 
-                        href: "/contaminants" 
-                    },
-                    { 
-                        title: "FAQ", 
-                        description: "Trouvez rapidement des réponses aux questions les plus fréquemment posées sur nos produits et services.", 
-                        href: "/faq" 
-                    }
-                ]
-            },
-            {
-                items: [
-                    { 
                         title: "Tests d'eau", 
                         description: "Planifiez une analyse complète de votre eau pour garantir sa pureté et sa sécurité.", 
                         href: "/tests-eau" 
                     },
                     { 
+                        title: "Nos Services", 
+                        description: "Découvrez notre gamme complète de services d'installation et d'entretien.", 
+                        href: "/services-de-traitement-eau" 
+                    },
+                    { 
                         title: "Diagnostic", 
                         description: "Utilisez notre outil d'autodiagnostic pour identifier rapidement les solutions adaptées à vos besoins.", 
                         href: "/diagnostic" 
-                    }
+                    },
+                                    ]
+            },
+            {
+                items: [
+                    { 
+                        title: "Blog", 
+                        description: "Restez informé des nouveautés dans le monde de l'eau.", 
+                        href: "/blog" 
+                    },
+                    { 
+                        title: "FAQ", 
+                        description: "Trouvez rapidement des réponses aux questions les plus fréquemment posées sur nos produits et services.", 
+                        href: "/faq" 
+                    },
+                    { 
+                        title: "Durabilité", 
+                        description: "Découvrez comment nous fournissons des systèmes de filtration d'eau économiques, efficaces et durables.", 
+                        href: "/durabilite" 
+                    },
+                    
                 ]
             }
         ],
+
         promo: {
             title: "Élimination des PFAS",
             subtitle: "Les PFAS sont des substances chimiques de synthèse issues de divers produits toxiques qui se sont retrouvées dans les eaux souterraines et de surface.",

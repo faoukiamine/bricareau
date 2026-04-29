@@ -10,7 +10,7 @@ import { Button } from "@/components/ui/button";
 import { NavLink } from "react-router-dom";
 import { cn } from "@/lib/utils";
 
-import fountainImg from "@/assets/10341859.jpg";
+import fountainImg from "@/assets/20230add-4ce5-4ae6-a6dc-1f9a2c3aeb7b.jpg";
 import officeMeetingImg from "@/assets/Gallery_Extra_I-Tap_Images_4-1.png";
 import coffeeImg from "@/assets/vki-eccellenza-touch-keurigcollection-matrix.full.webp";
 import iceCubeImg from "@/assets/Manitowoc-NEO-120V-42-Air-Cooled-Countertop-Chewing-Ice-Nugget-Ice-Maker-and-20-lbs_-Bin-with-Lever-Dispensing-CNP0202A-161L_1100x971.jpg";
@@ -114,15 +114,27 @@ const Entreprises = () => {
                   <p className="body-pro-max text-left max-w-xl">
                       Transformez votre espace de travail avec nos systèmes d'hydratation haut de gamme. Pureté, design et durabilité pour une culture d'entreprise saine.
                   </p>
-                  <div className="flex flex-wrap gap-4 pt-4">
-                      <Button size="lg" className="rounded-full px-10 h-16 text-lg shadow-xl shadow-blue-600/20" asChild>
-                          <a href="#solutions">Découvrir nos solutions</a>
-                      </Button>
-                      <Button variant="outline" size="lg" className="rounded-full px-10 h-16 text-lg border-slate-200 bg-white/50 backdrop-blur-sm hover:bg-white" asChild>
-                          <a href="tel:18552649328" className="flex items-center gap-2">
-                              <Phone className="h-5 w-5" /> 1-855-264-9328
-                          </a>
-                      </Button>
+                  <div className="flex flex-wrap gap-8 pt-4">
+                      <div className="relative inline-block w-full sm:w-auto group">
+                          <div className="absolute inset-0 border border-[#3d6aab] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                          <Button 
+                              className="relative w-full sm:w-auto bg-[#3d6aab] hover:bg-white hover:text-[#3d6aab] text-white rounded-[2rem] h-[3.25rem] px-8 font-black uppercase tracking-[0.1em] text-[11px] transition-all border-none"
+                              asChild
+                          >
+                              <a href="#solutions">Découvrir nos solutions</a>
+                          </Button>
+                      </div>
+                      <div className="relative inline-block w-full sm:w-auto group">
+                          <div className="absolute inset-0 border border-[#3d6aab] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                          <Button 
+                              className="relative w-full sm:w-auto bg-[#3d6aab] hover:bg-white hover:text-[#3d6aab] text-white rounded-[2rem] h-[3.25rem] px-8 font-black uppercase tracking-[0.1em] text-[11px] transition-all border-none"
+                              asChild
+                          >
+                              <a href="tel:18552649328" className="flex items-center gap-2">
+                                  <Phone className="h-5 w-5" /> 1-855-264-9328
+                              </a>
+                          </Button>
+                      </div>
                   </div>
               </div>
           </div>
@@ -237,10 +249,16 @@ const Entreprises = () => {
                             ))}
                         </ul>
 
-                        <div className="flex gap-4 pt-10 animate-in fade-in slide-in-from-bottom duration-1000 delay-300">
-                            <Button size="lg" className="rounded-full h-14 px-10 text-base" asChild>
-                                <NavLink to="/contact-entreprises">Essayer nos fontaines gratuitement</NavLink>
-                            </Button>
+                        <div className="flex gap-4 pt-10">
+                            <div className="relative inline-block group">
+                                <div className="absolute inset-0 border border-[#3d6aab] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                                <Button 
+                                    className="relative bg-[#3d6aab] hover:bg-white hover:text-[#3d6aab] text-white rounded-[2rem] h-14 px-10 font-black uppercase tracking-widest text-[11px] transition-all border-none"
+                                    asChild
+                                >
+                                    <NavLink to="/contact-entreprises">Essayer nos fontaines gratuitement</NavLink>
+                                </Button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -264,9 +282,15 @@ const Entreprises = () => {
                     Un seul refroidisseur Bricareau élimine en moyenne 2 500 bouteilles de plastique par an. Rejoignez le mouvement vers un bureau sans déchets.
                 </p>
                 <div className="pt-4">
-                    <Button variant="outline" className="rounded-full px-10 h-14 border-white/20 text-white hover:bg-white hover:text-slate-950 transition-colors" asChild>
-                        <a href="/guides">Calculer votre impact</a>
-                    </Button>
+                    <div className="relative inline-block group">
+                        <div className="absolute inset-0 border border-white rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                        <Button 
+                            className="relative bg-white hover:bg-[#3d6aab] hover:text-white text-[#0c1016] rounded-[2rem] h-14 px-10 font-black uppercase tracking-widest text-[11px] transition-all border-none"
+                            asChild
+                        >
+                            <a href="/guides">Calculer votre impact</a>
+                        </Button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -301,9 +325,15 @@ const Entreprises = () => {
                             ))}
                         </ul>
                          <div className="pt-8 text-left">
-                            <Button size="lg" variant="outline" className="rounded-full px-12 h-16 text-lg border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white transition-all duration-300 shadow-lg shadow-blue-600/5" asChild>
-                                <a href="/contact">Personnaliser votre fontaine</a>
-                            </Button>
+                            <div className="relative inline-block group">
+                                <div className="absolute inset-0 border border-[#3d6aab] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                                <Button 
+                                    className="relative bg-[#3d6aab] hover:bg-white hover:text-[#3d6aab] text-white rounded-[2rem] px-12 h-16 font-black uppercase tracking-widest text-xs transition-all border-none shadow-lg"
+                                    asChild
+                                >
+                                    <a href="/contact">Personnaliser votre fontaine</a>
+                                </Button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -366,9 +396,15 @@ const Entreprises = () => {
                         </div>
 
                         <div className="pt-8 text-left">
-                            <Button size="lg" className="rounded-full px-12 h-16 text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 shadow-blue-600/20" asChild>
-                                <a href="/contact" className="flex items-center gap-2">Découvrir les modèles <ArrowRight className="h-4 w-4" /></a>
-                            </Button>
+                            <div className="relative inline-block group">
+                                <div className="absolute inset-0 border border-[#3d6aab] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                                <Button 
+                                    className="relative bg-[#3d6aab] hover:bg-white hover:text-[#3d6aab] text-white rounded-[2rem] px-12 h-16 font-black uppercase tracking-widest text-xs transition-all border-none"
+                                    asChild
+                                >
+                                    <a href="/contact" className="flex items-center gap-2">Découvrir les modèles <ArrowRight className="h-4 w-4" /></a>
+                                </Button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -384,7 +420,7 @@ const Entreprises = () => {
                 <img
                     src={fountainImg}
                     alt="Hydratation premium au bureau"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-left scale-110 -translate-x-20"
                 />
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-blue-900/80 to-blue-600/40" />
             </div>
@@ -397,19 +433,26 @@ const Entreprises = () => {
                     <p className="body-pro-max !text-white text-center mb-12 max-w-2xl mx-auto opacity-90 leading-relaxed">
                         Nos consultants sont spécialisés dans l'aménagement d'espaces d'hydratation haute performance. Profitez d'un essai gratuit de 7 jours pour votre équipe.
                     </p>
-                    <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                        <Button size="lg" className="bg-white text-blue-900 hover:bg-blue-50 px-10 h-16 text-xl rounded-full shadow-xl" asChild>
-                            <a href="/contact">Demander un essai gratuit</a>
-                        </Button>
+                    <div className="flex flex-col sm:flex-row gap-8 justify-center items-center">
+                        <div className="relative inline-block group">
+                            <div className="absolute inset-0 border border-white rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                            <Button 
+                                className="relative bg-white hover:bg-[#3d6aab] hover:text-white text-[#3d6aab] rounded-[2rem] px-10 h-16 font-black uppercase tracking-widest text-xs transition-all border-none"
+                                asChild
+                            >
+                                <a href="/contact">Demander un essai gratuit</a>
+                            </Button>
+                        </div>
                                                                     
-                        <Button
-                            variant="outline"
-                            size="lg"
-                            asChild
-                            className="bg-transparent border-white/30 text-white hover:bg-white hover:text-blue-900 px-10 h-16 text-xl rounded-full backdrop-blur-md"
-                        >
-                            <a href="tel:18552649328">Parler à un conseiller</a>
-                        </Button>
+                        <div className="relative inline-block group">
+                            <div className="absolute inset-0 border border-white rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                            <Button
+                                asChild
+                                className="relative bg-transparent border border-white/30 text-white hover:bg-white hover:text-[#3d6aab] px-10 h-16 rounded-[2rem] font-black uppercase tracking-widest text-xs transition-all"
+                            >
+                                <a href="tel:18552649328">Parler à un conseiller</a>
+                            </Button>
+                        </div>
                     </div>
                 </div>
             </div>

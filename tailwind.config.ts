@@ -26,6 +26,19 @@ export default {
         ],
       },
       colors: {
+        blue: {
+          50: '#f4f7fa',
+          100: '#e9eff5',
+          200: '#c8d7e6',
+          300: '#a7bfd7',
+          400: '#658fba',
+          500: '#3d6aab', // Brand Blue
+          600: '#375f9a',
+          700: '#2e4f80',
+          800: '#253f66',
+          900: '#1e3454',
+          950: '#142237',
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

@@ -5,7 +5,7 @@ const NewEraStats = () => {
             <div
                 className="absolute inset-0 opacity-10"
                 style={{
-                    backgroundImage: 'radial-gradient(circle, #2563EB 1px, transparent 1px)',
+                    backgroundImage: 'radial-gradient(circle, #3d6aab 1px, transparent 1px)',
                     backgroundSize: '30px 30px'
                 }}
             />
@@ -25,7 +25,7 @@ const NewEraStats = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-5xl mx-auto">
                     {/* Stat 1 */}
                     <div className="text-center space-y-3">
-                        <div className="text-6xl md:text-7xl font-bold text-[#2563EB]">
+                        <div className="text-6xl md:text-7xl font-bold text-[#3d6aab]">
                             #1
                         </div>
                         <p className="md:text-2xl font-semibold text-white">
@@ -38,7 +38,7 @@ const NewEraStats = () => {
 
                     {/* Stat 2 */}
                     <div className="text-center space-y-3">
-                        <div className="text-6xl md:text-7xl font-bold text-[#2563EB]">
+                        <div className="text-6xl md:text-7xl font-bold text-[#3d6aab]">
                             40M+
                         </div>
                         <p className="md:text-2xl font-semibold text-white">
@@ -51,7 +51,7 @@ const NewEraStats = () => {
 
                     {/* Stat 3 */}
                     <div className="text-center space-y-3">
-                        <div className="text-6xl md:text-7xl font-bold text-[#2563EB]">
+                        <div className="text-6xl md:text-7xl font-bold text-[#3d6aab]">
                             20K+
                         </div>
                         <p className="md:text-2xl font-semibold text-white">

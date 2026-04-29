@@ -153,7 +153,7 @@ const WhyChooseUs = () => {
                         title={
                             <div className="text-center space-y-3 mb-16">
                                 <span className="italic font-light text-[#0052ff] block text-2xl md:text-3xl">Nos clients parlent pour nous.</span>
-                                <span className="font-bold text-[#1e3a8a] block text-4xl md:text-6xl tracking-tighter uppercase">CE QUE NOS CLIENTS DISENT</span>
+                                <span className="font-bold text-[#3d6aab] block text-4xl md:text-6xl tracking-tighter uppercase">CE QUE NOS CLIENTS DISENT</span>
                             </div>
                         }
                     />

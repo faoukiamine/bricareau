@@ -239,10 +239,16 @@ const SolutionCard = ({ item }: { item: SolutionItem }) => {
                 </div>
 
                 <div className="mt-8 w-full flex items-center justify-between">
-                    <Button onClick={() => setShowSpecs(true)}>
-                        Spécifications
-                        <Plus className="ml-2 w-4 h-4 transition-transform group-hover/btn:rotate-90" />
-                    </Button>
+                    <div className="relative inline-block group/btn">
+                        <div className="absolute inset-0 border border-[#3d6aab] rounded-[2rem] -translate-x-[4px] translate-y-[4px] transition-transform group-hover/btn:-translate-x-[2px] group-hover/btn:translate-y-[2px]"></div>
+                        <Button 
+                            className="relative bg-[#3d6aab] hover:bg-white hover:text-[#3d6aab] text-white rounded-[2rem] h-14 px-8 font-black uppercase tracking-widest text-[10px] transition-all border-none"
+                            onClick={() => setShowSpecs(true)}
+                        >
+                            Spécifications
+                            <Plus className="ml-2 w-4 h-4 transition-transform group-hover/btn:rotate-90" />
+                        </Button>
+                    </div>
                 </div>
             </div>
 
@@ -267,12 +273,16 @@ const SolutionCard = ({ item }: { item: SolutionItem }) => {
                     ))}
                 </ul>
 
-                <Button
-                    onClick={() => setShowSpecs(false)}
-                    variant="outline"
-                >
-                    Retour
-                </Button>
+                <div className="relative inline-block group/back self-start">
+                    <div className="absolute inset-0 border border-slate-200 rounded-[2rem] -translate-x-[4px] translate-y-[4px] transition-transform group-hover/back:-translate-x-[2px] group-hover/back:translate-y-[2px]"></div>
+                    <Button
+                        onClick={() => setShowSpecs(false)}
+                        variant="outline"
+                        className="relative bg-white hover:bg-slate-50 text-slate-600 rounded-[2rem] h-12 px-8 font-black uppercase tracking-widest text-[10px] transition-all border border-slate-200"
+                    >
+                        Retour
+                    </Button>
+                </div>
             </div>
         </div>
     );
@@ -323,7 +333,7 @@ const Fontaines = () => {
                                         </div>
                                         <div className="min-w-0">
                                             <p className="text-[7.5px] font-black text-slate-400 uppercase tracking-tight leading-none mb-1">{item.label}</p>
-                                            <p className="text-[9px] font-bold text-[#1e3a8a] leading-tight break-words">{item.val}</p>
+                                            <p className="text-[9px] font-bold text-[#3d6aab] leading-tight break-words">{item.val}</p>
                                         </div>
                                     </div>
                                 ))}
@@ -347,27 +357,32 @@ const Fontaines = () => {
                                     fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
                                 }}
                             >
-                                <span className="italic font-light text-[#2563eb] text-[32px] md:text-[46px] lg:text-[50px] block">Fontaines d'eau,</span>
-                                <span className="font-bold text-[#1e3a8a] text-[32px] md:text-[46px] lg:text-[50px] block">l'art de l'eau pure.</span>
+                                <span className="italic font-light text-[#3d6aab] text-[32px] md:text-[46px] lg:text-[50px] block">Fontaines d'eau,</span>
+                                <span className="font-bold text-[#3d6aab] text-[32px] md:text-[46px] lg:text-[50px] block">l'art de l'eau pure.</span>
                             </h1>
 
                             <p className="body-pro-max text-slate-600 max-w-xl text-justify lg:text-left">
                                 Élevez votre expérience d'hydratation avec nos refroidisseurs d'eau haute performance. Un design élégant allié à une pureté absolue pour votre maison ou votre bureau.
                             </p>
-
-                            <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                                <Button asChild className="w-fit group">
-                                    <a href="/consultation" className="inline-flex items-center gap-2">
-                                        Planifiez une consultation
-                                        <ArrowRight className="ml-1 w-5 h-5 transition-transform group-hover:translate-x-1" />
-                                    </a>
-                                </Button>
-                                <Button variant="outline" asChild className="w-fit">
-                                    <a href="tel:18552649328" className="inline-flex items-center gap-2">
-                                        <Phone className="w-5 h-5" />
-                                        1-855-264-9328
-                                    </a>
-                                </Button>
+                            <div className="flex flex-col sm:flex-row gap-6 pt-4">
+                                <div className="relative inline-block group">
+                                    <div className="absolute inset-0 border border-[#3d6aab] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                                    <Button asChild className="relative bg-[#3d6aab] hover:bg-white hover:text-[#3d6aab] text-white rounded-[2rem] h-16 px-12 font-black uppercase tracking-widest text-xs transition-all border-none">
+                                        <a href="/consultation" className="inline-flex items-center gap-2">
+                                            Planifiez une consultation
+                                            <ArrowRight className="ml-1 w-5 h-5 transition-transform group-hover:translate-x-1" />
+                                        </a>
+                                    </Button>
+                                </div>
+                                <div className="relative inline-block group">
+                                    <div className="absolute inset-0 border border-[#3d6aab] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                                    <Button variant="outline" asChild className="relative bg-transparent border border-[#3d6aab]/30 hover:bg-[#3d6aab] hover:text-white text-[#3d6aab] rounded-[2rem] h-16 px-12 font-black uppercase tracking-widest text-xs transition-all">
+                                        <a href="tel:18552649328" className="inline-flex items-center gap-2">
+                                            <Phone className="w-5 h-5" />
+                                            1-855-264-9328
+                                        </a>
+                                    </Button>
+                                </div>
                             </div>
 
                             {/* Aligned Trust Row Section - Desktop Only */}
@@ -384,7 +399,7 @@ const Fontaines = () => {
                                             </div>
                                             <div className="min-w-0">
                                                 <p className="text-[9px] font-black text-slate-400 uppercase tracking-widest leading-none mb-1">{item.label}</p>
-                                                <p className="text-sm font-bold text-[#1e3a8a] leading-tight">{item.val}</p>
+                                                <p className="text-sm font-bold text-[#3d6aab] leading-tight">{item.val}</p>
                                             </div>
                                         </div>
                                     ))}
@@ -412,8 +427,8 @@ const Fontaines = () => {
                                 PURETÉ À DOMICILE
                             </span>
                             <h2 className="mb-6 heading-pro-max text-center">
-                                <span className="italic font-light text-[#2563eb] block">L'hydratation pure à la maison,</span>
-                                <span className="font-bold text-[#1e3a8a] block">l'eau fraîche à la portée de vos mains.</span>
+                                <span className="italic font-light text-[#3d6aab] block">L'hydratation pure à la maison,</span>
+                                <span className="font-bold text-[#3d6aab] block">l'eau fraîche à la portée de vos mains.</span>
                             </h2>
                             <p 
                                 className="max-w-3xl mx-auto"
@@ -466,8 +481,8 @@ const Fontaines = () => {
                                 TECHNOLOGIE & RESPONSABILITÉ
                             </span>
                             <h2 className="mb-6 heading-pro-max text-center">
-                                <span className="italic font-light text-[#2563eb] block text-[32px] md:text-[40px] lg:text-[48px]">Plus qu'une fontaine d'eau,</span>
-                                <span className="font-bold text-[#1e3a8a] block text-[32px] md:text-[40px] lg:text-[48px]">un choix intelligent & responsable.</span>
+                                <span className="italic font-light text-[#3d6aab] block text-[32px] md:text-[40px] lg:text-[48px]">Plus qu'une fontaine d'eau,</span>
+                                <span className="font-bold text-[#3d6aab] block text-[32px] md:text-[40px] lg:text-[48px]">un choix intelligent & responsable.</span>
                             </h2>
                             <p 
                                 className="max-w-3xl mx-auto"
@@ -506,7 +521,7 @@ const Fontaines = () => {
                                         <Star className="w-4 h-4 text-yellow-400 fill-yellow-400" />
                                         <span className="text-[10px] font-black text-white uppercase tracking-widest">Expérience Premium</span>
                                     </div>
-                                    <h3 className="text-3xl lg:text-4xl font-bold text-[#1e3a8a] lg:text-white tracking-tight">Art de Vivre</h3>
+                                    <h3 className="text-3xl lg:text-4xl font-bold text-[#3d6aab] lg:text-white tracking-tight">Art de Vivre</h3>
                                     <p className="text-slate-700 lg:text-white text-[18px] lg:text-[20px] leading-relaxed italic border-l-2 border-blue-500 pl-6 text-justify lg:text-left">
                                         Une pureté incomparable qui s'intègre harmonieusement à votre quotidien. Découvrez l'équilibre parfait entre esthétique et santé, où chaque gorgée est une signature de qualité.
                                     </p>
@@ -528,8 +543,8 @@ const Fontaines = () => {
                     limit={5}
                 title={
                     <h2 className="mb-8 heading-pro-max text-center">
-                        <span className="italic font-light text-[#2563eb] block">L’eau que vous méritez,</span>
-                        <span className="font-bold text-[#1e3a8a] block">le service que vous n'oublierez pas.</span>
+                        <span className="italic font-light text-[#3d6aab] block">L’eau que vous méritez,</span>
+                        <span className="font-bold text-[#3d6aab] block">le service que vous n'oublierez pas.</span>
                     </h2>
                 }
                 />
@@ -548,8 +563,8 @@ const Fontaines = () => {
                                     NOTRE PORTFOLIO
                                 </span>
                                 <h2 className="heading-pro-max tracking-tight leading-[1.1]">
-                                    <span className="italic font-light text-[#2563eb] block">Intégration</span>
-                                    <span className="font-bold text-[#1e3a8a] block">parfaite & élégante.</span>
+                                    <span className="italic font-light text-[#3d6aab] block">Intégration</span>
+                                    <span className="font-bold text-[#3d6aab] block">parfaite & élégante.</span>
                                 </h2>
                             </div>
                             <div className="max-w-md pb-2">
@@ -603,7 +618,7 @@ const Fontaines = () => {
 
 
                 {/* 11. PREMIUM CTA SECTION - REBUILT FOR IMPACT */}
-                <section className="relative py-32 flex items-center overflow-hidden bg-[#1e3a8a]">
+                <section className="relative py-32 flex items-center overflow-hidden bg-[#3d6aab]">
                   {/* Animated background elements */}
                   <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-blue-600/20 to-transparent skew-x-12 translate-x-1/4" />
                   <div className="absolute bottom-0 left-0 w-1/2 h-full bg-gradient-to-r from-cyan-400/10 to-transparent -skew-x-12 -translate-x-1/4" />
@@ -615,7 +630,7 @@ const Fontaines = () => {
                       alt="Expert Bricareau analysant vos options de filtration"
                       className="w-full h-full object-cover grayscale brightness-150"
                     />
-                    <div className="absolute inset-0 bg-[#1e3a8a]/10 backdrop-blur-sm" />
+                    <div className="absolute inset-0 bg-[#3d6aab]/10 backdrop-blur-sm" />
                   </div>
 
                   <div className="container mx-auto px-6 relative z-10">
@@ -632,19 +647,29 @@ const Fontaines = () => {
                           Dites adieu aux bouteilles de plastique encombrantes et profitez d'une source d'eau pure, fraîche ou chaude, instantanément. Que ce soit pour votre foyer ou votre espace de travail, nos distributeurs allient design moderne et filtration de pointe pour une hydratation saine et écologique.</p>
                       </div>
 
-                      <div className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-4">
-                        <Button asChild>
-                          <a href="tel:18552649328" className="flex items-center gap-3">
-                            <Phone className="h-5 w-5 animate-bounce" />
-                            Parlez à un expert
-                          </a>
-                        </Button>
-                        <Button
-                          variant="outline"
-                          asChild
-                        >
-                          <NavLink to="/consultation">Planifiez une consultation</NavLink>
-                        </Button>
+                      <div className="flex flex-col sm:flex-row gap-8 justify-center items-center pt-4">
+                        <div className="relative inline-block w-full sm:w-auto group">
+                          <div className="absolute inset-0 border border-white rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                          <Button 
+                            asChild
+                            className="relative w-full sm:w-auto bg-white text-[#3d6aab] hover:bg-blue-600 hover:text-white rounded-[2rem] h-16 px-12 font-black uppercase tracking-widest text-xs transition-all border-none"
+                          >
+                            <a href="tel:18552649328" className="flex items-center gap-3">
+                              <Phone className="h-5 w-5 animate-bounce" />
+                              Parlez à un expert
+                            </a>
+                          </Button>
+                        </div>
+                        <div className="relative inline-block w-full sm:w-auto group">
+                          <div className="absolute inset-0 border border-white rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                          <Button
+                            variant="outline"
+                            asChild
+                            className="relative w-full sm:w-auto bg-transparent border border-white/30 text-white hover:bg-white hover:text-[#3d6aab] rounded-[2rem] h-16 px-12 font-black uppercase tracking-widest text-xs transition-all"
+                          >
+                            <NavLink to="/consultation">Planifiez une consultation</NavLink>
+                          </Button>
+                        </div>
                       </div>
 
                       <div className="pt-8 flex flex-col items-center gap-4">
@@ -678,7 +703,7 @@ const Fontaines = () => {
                                     </div>
                                     <h2 className="heading-pro-max text-left !leading-[1.05] tracking-tight">
                                         <span className="italic font-light text-emerald-600 block text-[38px] md:text-[50px] lg:text-[64px]">Vers un monde</span>
-                                        <span className="font-bold text-[#1e3a8a] block text-[38px] md:text-[50px] lg:text-[64px]">sans bouteilles en plastique.</span>
+                                        <span className="font-bold text-[#3d6aab] block text-[38px] md:text-[50px] lg:text-[64px]">sans bouteilles en plastique.</span>
                                     </h2>
                                 </div>
                                 <div className="lg:col-span-4 lg:pb-3">
@@ -713,13 +738,13 @@ const Fontaines = () => {
                                             alt="Pure water interaction"
                                             className="w-full h-full object-cover"
                                         />
-                                        <div className="absolute inset-0 bg-[#2563eb]/10 mix-blend-overlay" />
+                                        <div className="absolute inset-0 bg-[#3d6aab]/10 mix-blend-overlay" />
                                     </div>
 
                                     {/* Floating Data Badge - The "WOW" Factor */}
                                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 bg-white/95 backdrop-blur-3xl w-44 h-44 rounded-full border border-white shadow-[0_32px_64px_rgba(0,0,0,0.15)] flex flex-col items-center justify-center text-center group-hover:scale-110 transition-transform duration-700 cursor-pointer">
                                         <div className="flex flex-col items-center">
-                                            <span className="text-4xl font-black text-[#1e3a8a] leading-none tracking-tight underline decoration-emerald-400 decoration-4 underline-offset-4 mb-2">-2920</span>
+                                            <span className="text-4xl font-black text-[#3d6aab] leading-none tracking-tight underline decoration-emerald-400 decoration-4 underline-offset-4 mb-2">-2920</span>
                                             <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest leading-tight px-4">
                                                 Bouteilles par an<br/>pour un couple
                                             </span>
@@ -732,7 +757,7 @@ const Fontaines = () => {
                                 {/* Right Side: Dynamic Engagement Flow */}
                                 <div className="space-y-16">
                                     <div className="space-y-6">
-                                        <h3 className="text-3xl font-bold text-[#1e3a8a] tracking-tight">Que devons-nous faire ?</h3>
+                                        <h3 className="text-3xl font-bold text-[#3d6aab] tracking-tight">Que devons-nous faire ?</h3>
                                         <div className="h-1.5 w-16 bg-emerald-500 rounded-full" />
                                     </div>
 
@@ -760,7 +785,7 @@ const Fontaines = () => {
                                                 <div className="w-1.5 h-20 bg-emerald-500 rounded-full flex-shrink-0 transition-transform duration-500 group-hover:scale-y-110" />
                                                 
                                                 <div className="space-y-3">
-                                                    <h4 className="text-xl font-bold text-[#1e3a8a] group-hover:text-emerald-600 transition-colors">
+                                                    <h4 className="text-xl font-bold text-[#3d6aab] group-hover:text-emerald-600 transition-colors">
                                                         {item.title}
                                                     </h4>
                                                     <p className="body-pro-max text-slate-500 max-w-lg leading-relaxed font-light">
@@ -772,21 +797,24 @@ const Fontaines = () => {
                                     </div>
 
                                     {/* Action Call to Engagement */}
-                                    <div className="pt-8 flex flex-col sm:flex-row items-center gap-6">
-                                        <Button 
-                                            asChild 
-                                            className="h-16 px-10 rounded-full border-2 border-transparent bg-emerald-600 text-white text-lg font-bold shadow-2xl shadow-emerald-500/30 hover:bg-white hover:text-emerald-600 hover:border-emerald-600 transition-all duration-300 group"
-                                        >
-                                            <a href="/consultation" className="flex items-center gap-3">
-                                                Planifiez votre impact
-                                                <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-2" />
-                                            </a>
-                                        </Button>
+                                    <div className="pt-8 flex flex-col sm:flex-row items-center gap-8">
+                                        <div className="relative inline-block group">
+                                            <div className="absolute inset-0 border border-emerald-600 rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                                            <Button 
+                                                asChild 
+                                                className="relative bg-emerald-600 hover:bg-white hover:text-emerald-600 text-white rounded-[2rem] h-16 px-12 font-black uppercase tracking-widest text-xs transition-all border-none"
+                                            >
+                                                <a href="/consultation" className="flex items-center gap-3">
+                                                    Planifiez votre impact
+                                                    <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-2" />
+                                                </a>
+                                            </Button>
+                                        </div>
                                         <div className="flex items-center gap-4 text-slate-400 group cursor-pointer">
                                             <div className="w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center group-hover:border-emerald-500 group-hover:text-emerald-600 transition-all">
                                                 <Phone className="w-4 h-4" />
                                             </div>
-                                            <span className="text-sm font-bold group-hover:text-[#1e3a8a] transition-colors">Discutez avec un expert</span>
+                                            <span className="text-sm font-bold group-hover:text-[#3d6aab] transition-colors">Discutez avec un expert</span>
                                         </div>
                                     </div>
                                 </div>
@@ -803,14 +831,14 @@ const Fontaines = () => {
               <div className="pointer-events-auto group/sticky">
                 <Button
                   asChild
-                  className="bg-white hover:-translate-y-2 transition-all duration-10000 active:scale-95"
+                  className="bg-white hover:-translate-y-2 transition-all duration-300 active:scale-95 shadow-2xl"
                   style={{ backdropFilter: "blur(20px)" }}
                 >
                   <a href="/consultation" className="flex items-center gap-4 animate-bounce" style={{ animationDuration: '3s' }}>
                     <span className="font-bold text-sm tracking-wider text-blue-600 whitespace-nowrap text-center">
                       Réservez votre <br />consultation gratuite
                     </span>
-                    <div className="w-10 h-10 bg-[#2563eb] rounded-full flex items-center justify-center text-white group-hover/sticky:rotate-[360deg] shadow-lg shadow-blue-200">
+                    <div className="w-10 h-10 bg-[#3d6aab] rounded-full flex items-center justify-center text-white group-hover/sticky:rotate-[360deg] shadow-lg shadow-blue-200">
                       <ArrowRight className="w-5 h-5" />
                     </div>
                             </a>

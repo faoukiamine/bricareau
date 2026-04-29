@@ -128,8 +128,8 @@ const ConditionneursSansSel = () => {
             <div className="flex flex-col lg:flex-row items-center gap-16">
               <div className="lg:w-1/2">
                 <h2 className="mb-8 heading-pro-max text-left">
-                    <span className="italic font-light text-[#2563eb] block">Comprendre le calcaire autrement</span>
-                    <span className="font-bold text-[#1e3a8a] block">Le problème n'est pas le minéral, c'est son cristal</span>
+                    <span className="italic font-light text-[#3d6aab] block">Comprendre le calcaire autrement</span>
+                    <span className="font-bold text-[#3d6aab] block">Le problème n'est pas le minéral, c'est son cristal</span>
                 </h2>
                 <div className="space-y-6 text-slate-600 font-light text-lg leading-snug">
                   <p className="text-justify">
@@ -150,7 +150,7 @@ const ConditionneursSansSel = () => {
                     </li>
                   </ul>
                   <p className="pt-4 border-t border-slate-100 text-justify">
-                    Une solution standard (adoucisseur au sel) retire ces minéraux. <span className="font-medium text-[#1e3a8a]">La technologie TAC, elle, change la structure du minéral</span> pour qu'il ne puisse plus se déposer.
+                    Une solution standard (adoucisseur au sel) retire ces minéraux. <span className="font-medium text-[#3d6aab]">La technologie TAC, elle, change la structure du minéral</span> pour qu'il ne puisse plus se déposer.
                   </p>
                 </div>
               </div>
@@ -177,11 +177,11 @@ const ConditionneursSansSel = () => {
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-4xl mx-auto text-center mb-24">
               <h2 className="mb-8 heading-pro-max text-center">
-                <span className="italic font-light text-[#2563eb] block">Ce que l'eau dure</span>
-                <span className="font-bold text-[#1e3a8a] block">coûte réellement.</span>
+                <span className="italic font-light text-[#3d6aab] block">Ce que l'eau dure</span>
+                <span className="font-bold text-[#3d6aab] block">coûte réellement.</span>
               </h2>
               <p className="text-slate-600 font-light text-xl max-w-3xl mx-auto leading-snug">
-                On la voit sur la paroi de la douche ou au fond de la bouilloire, mais le véritable coût se cache là où vous ne regardez pas <span className="text-[#2563eb] font-medium">une fuite financière invisible</span> dans votre maison.
+                On la voit sur la paroi de la douche ou au fond de la bouilloire, mais le véritable coût se cache là où vous ne regardez pas <span className="text-[#3d6aab] font-medium">une fuite financière invisible</span> dans votre maison.
               </p>
             </div>
 
@@ -190,13 +190,13 @@ const ConditionneursSansSel = () => {
               <div className="lg:col-span-12 xl:col-span-4 flex flex-col">
                 <div className="group bg-white/70 backdrop-blur-md rounded-[2.5rem] p-10 border border-white shadow-xl hover:shadow-2xl transition-all duration-300 flex-grow relative overflow-hidden">
                   <div className="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-90 transition-opacity">
-                    <TrendingUp className="w-32 h-32 text-blue-900 text-[#1e3a8a] group-hover:text-blue-600 transition-colors" />
+                    <TrendingUp className="w-32 h-32 text-blue-900 text-[#3d6aab] group-hover:text-blue-600 transition-colors" />
                   </div>
                   <div className="text-blue-600 font-bold text-sm tracking-widest uppercase mb-6 flex items-center gap-2">
                     Impact Énergétique
                   </div>
                   <div className="flex items-baseline gap-2 mb-4">
-                    <span className="text-7xl font-black text-[#1e3a8a] group-hover:text-blue-600 transition-colors">+15%</span>
+                    <span className="text-7xl font-black text-[#3d6aab] group-hover:text-blue-600 transition-colors">+15%</span>
                     <span className="text-slate-400 font-light italic">de conso</span>
                   </div>
                   <h3 className="text-2xl font-bold text-slate-800 mb-6 font-primary leading-tight">La "Taxe Énergétique" du calcaire</h3>
@@ -212,7 +212,7 @@ const ConditionneursSansSel = () => {
 
               {/* Point 2: Le Vol des électros - Split with visual cues */}
               <div className="lg:col-span-12 xl:col-span-8">
-                <div className="bg-[#1e3a8a] rounded-[2.5rem] p-1.5 shadow-2xl overflow-hidden group">
+                <div className="bg-[#3d6aab] rounded-[2.5rem] p-1.5 shadow-2xl overflow-hidden group">
                   <div className="bg-white rounded-[2rem] p-10 lg:p-12 flex flex-col md:flex-row gap-12">
                     <div className="md:w-3/5">
                       <div className="text-blue-600 font-bold text-sm tracking-widest uppercase mb-6 flex items-center gap-2">
@@ -225,13 +225,13 @@ const ConditionneursSansSel = () => {
                       
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                         <div className="p-6 bg-slate-50 rounded-3xl border border-slate-100 transition-colors group-hover:bg-slate-50/80">
-                          <span className="text-3xl font-black text-[#1e3a8a] group-hover:text-blue-600 transition-colors">-50%</span>
+                          <span className="text-3xl font-black text-[#3d6aab] group-hover:text-blue-600 transition-colors">-50%</span>
                           <p className="text-slate-500 text-sm font-light">
                             <span className="font-bold text-slate-700">Chauffe-eau :</span> 6 ans au lieu de 12 ans.
                           </p>
                         </div>
                         <div className="p-6 bg-slate-50 rounded-3xl border border-slate-100 transition-colors group-hover:bg-slate-50/80">
-                          <span className="text-3xl font-black text-[#1e3a8a] group-hover:text-blue-600 transition-colors">500$</span>
+                          <span className="text-3xl font-black text-[#3d6aab] group-hover:text-blue-600 transition-colors">500$</span>
                           <p className="text-slate-500 text-sm font-light">
                             <span className="font-bold text-slate-700">Réparations :</span> Coût moyen par visite de technicien.
                           </p>
@@ -275,8 +275,8 @@ const ConditionneursSansSel = () => {
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-4xl mx-auto text-center mb-24">
               <h2 className="mb-8 heading-pro-max text-center">
-                <span className="italic font-light text-[#2563eb] block">Pourquoi choisir le</span>
-                <span className="font-bold text-[#1e3a8a] block">conditionneur d'eau sans sel ?</span>
+                <span className="italic font-light text-[#3d6aab] block">Pourquoi choisir le</span>
+                <span className="font-bold text-[#3d6aab] block">conditionneur d'eau sans sel ?</span>
               </h2>
               <p className="text-slate-500 font-light text-xl">Une approche holistique : respect de votre corps, de votre maison et de la planète.</p>
             </div>
@@ -301,11 +301,11 @@ const ConditionneursSansSel = () => {
                       <HeartPulse className="w-8 h-8" />
                    </div>
                    <span className="text-blue-600 font-bold text-xs uppercase tracking-[0.3em] mb-4">SANTÉ & BIEN-ÊTRE</span>
-                   <h3 className="text-4xl font-bold text-[#1e3a8a] mb-6 leading-tight">Zéro sodium, 100% minéraux</h3>
+                   <h3 className="text-4xl font-bold text-[#3d6aab] mb-6 leading-tight">Zéro sodium, 100% minéraux</h3>
                    <p className="text-slate-500 font-light text-xl leading-relaxed mb-8 text-justify lg:text-left">
                      Contrairement au sel qui "vole" les bons minéraux de votre eau, notre technologie conserve le calcium et le magnésium essentiels tout en éliminant son pouvoir incrustant.
                    </p>
-                   <div className="flex items-center gap-4 text-[#1e3a8a] font-medium pt-8 border-t border-slate-50">
+                   <div className="flex items-center gap-4 text-[#3d6aab] font-medium pt-8 border-t border-slate-50">
                       <span className="w-12 h-[1px] bg-blue-600" />
                       <span>Eau potable parfaite sans additifs chimiques</span>
                    </div>
@@ -313,7 +313,7 @@ const ConditionneursSansSel = () => {
               </div>
 
               {/* Card 2: Environment (Bottom Left) */}
-              <div className="lg:col-span-12 xl:col-span-7 lg:row-span-3 group relative rounded-[3rem] p-12 overflow-hidden bg-[#1e3a8a] shadow-2xl transition-all duration-700 hover:-translate-y-2 min-h-[350px] flex flex-col">
+              <div className="lg:col-span-12 xl:col-span-7 lg:row-span-3 group relative rounded-[3rem] p-12 overflow-hidden bg-[#3d6aab] shadow-2xl transition-all duration-700 hover:-translate-y-2 min-h-[350px] flex flex-col">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/20 rounded-full -mr-32 -mt-32 blur-3xl group-hover:bg-blue-400/30 transition-colors" />
                 <div className="relative z-10 flex flex-col h-full">
                   <div className="w-14 h-14 rounded-2xl bg-white/10 backdrop-blur-xl flex items-center justify-center mb-8 border border-white/20 group-hover:rotate-12 transition-transform">
@@ -337,12 +337,12 @@ const ConditionneursSansSel = () => {
               <div className="lg:col-span-12 xl:col-span-5 lg:row-span-3 group relative rounded-[3rem] p-12 overflow-hidden bg-slate-50 shadow-xl transition-all duration-700 hover:-translate-y-2 border border-slate-100 min-h-[350px] flex flex-col">
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-transparent" />
                 <div className="relative z-10 flex flex-col h-full">
-                  <div className="w-14 h-14 rounded-2xl bg-[#1e3a8a] flex items-center justify-center mb-8 shadow-lg shadow-blue-200 group-hover:scale-110 transition-transform">
+                  <div className="w-14 h-14 rounded-2xl bg-[#3d6aab] flex items-center justify-center mb-8 shadow-lg shadow-blue-200 group-hover:scale-110 transition-transform">
                     <ShieldCheck className="w-7 h-7 text-white" />
                   </div>
                   <div className="mt-auto">
                     <span className="text-blue-600 font-bold text-xs uppercase tracking-[0.2em]">PROTECTION MATÉRIELLE</span>
-                    <h3 className="text-2xl font-bold text-[#1e3a8a] mt-4 mb-4">Zéro tartre incrusté</h3>
+                    <h3 className="text-2xl font-bold text-[#3d6aab] mt-4 mb-4">Zéro tartre incrusté</h3>
                     <p className="text-slate-500 font-light text-lg leading-relaxed mb-6 text-justify lg:text-left">
                       La technologie TAC agit en amont pour stopper la calcification avant qu'elle ne ronge vos chauffe-eaux et électroménagers de luxe.
                     </p>
@@ -370,8 +370,8 @@ const ConditionneursSansSel = () => {
                 <div className="space-y-10">
                   <div className="space-y-6">
                     <h2 className="mb-8 heading-pro-max text-left">
-                        <span className="italic font-light text-[#2563eb] block">Une protection</span>
-                        <span className="font-bold text-[#1e3a8a] block">100% écologique.</span>
+                        <span className="italic font-light text-[#3d6aab] block">Une protection</span>
+                        <span className="font-bold text-[#3d6aab] block">100% écologique.</span>
                     </h2>
                     <div className="space-y-8">
                       {[
@@ -417,7 +417,7 @@ const ConditionneursSansSel = () => {
 
 
         {/* 10. PREMIUM CTA SECTION - REBUILT FOR IMPACT */}
-        <section className="relative py-32 flex items-center overflow-hidden bg-[#1e3a8a]">
+        <section className="relative py-32 flex items-center overflow-hidden bg-[#3d6aab]">
             {/* Animated background elements */}
             <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-blue-600/20 to-transparent skew-x-12 translate-x-1/4" />
             <div className="absolute bottom-0 left-0 w-1/2 h-full bg-gradient-to-r from-cyan-400/10 to-transparent -skew-x-12 -translate-x-1/4" />
@@ -429,7 +429,7 @@ const ConditionneursSansSel = () => {
                     alt="Problématique d'eau dure sur la robinetterie - Solution Bricareau"
                     className="w-full h-full object-cover grayscale brightness-150"
                 />
-                <div className="absolute inset-0 bg-[#1e3a8a]/10 backdrop-blur-sm" />
+                <div className="absolute inset-0 bg-[#3d6aab]/10 backdrop-blur-sm" />
             </div>
 
             <div className="container mx-auto px-6 relative z-10">
@@ -477,7 +477,7 @@ const ConditionneursSansSel = () => {
           <div className="container mx-auto px-4">
             <div className="text-left mb-16">
               <h2 className="mb-8 heading-pro-max text-left">
-                                <span className="font-bold text-[#1e3a8a] block text-left">Ressources</span>
+                                <span className="font-bold text-[#3d6aab] block text-left">Ressources</span>
                             </h2>
               <div className="w-24 h-1 bg-blue-600"></div>
             </div>
@@ -516,7 +516,7 @@ const ConditionneursSansSel = () => {
                     <ChevronRight className="h-6 w-6" />
                 </Button>
 
-                <div className="absolute right-2 text-sm font-black text-[#1e3a8a] bg-blue-50/50 px-4 py-2 rounded-full border border-blue-100/50">
+                <div className="absolute right-2 text-sm font-black text-[#3d6aab] bg-blue-50/50 px-4 py-2 rounded-full border border-blue-100/50">
                     <span className="text-blue-600">{resourceIndex}</span>
                     <span className="mx-1 text-slate-300">/</span>
                     <span className="text-slate-400">{resources.length}</span>
@@ -536,7 +536,7 @@ const ConditionneursSansSel = () => {
               <span className="font-medium text-sm tracking-wider text-blue-600 whitespace-nowrap text-center">
                 Réservez votre <br />consultation gratuite
               </span>
-              <div className="w-10 h-10 bg-[#2563eb] rounded-full flex items-center justify-center text-white group-hover/sticky:rotate-[360deg] shadow-lg shadow-blue-200">
+              <div className="w-10 h-10 bg-[#3d6aab] rounded-full flex items-center justify-center text-white group-hover/sticky:rotate-[360deg] shadow-lg shadow-blue-200">
                   <ArrowRight className="w-5 h-5" />
                 </div>
             </a>

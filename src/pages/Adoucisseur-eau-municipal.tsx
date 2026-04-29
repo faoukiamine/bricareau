@@ -221,8 +221,8 @@ const AdoucisseurEauMunicipal = () => {
                                 GUIDE D'EXPERTISE MUNICIPALE
                             </span>
                             <h2 className="mb-8 heading-pro-max text-center">
-                                <span className="italic font-light text-[#2563eb] block">L'expertise anticalcaire</span>
-                                <span className="font-bold text-[#1e3a8a] block">adaptée à votre réseau municipal.</span>
+                                <span className="italic font-light text-[#3d6aab] block">L'expertise anticalcaire</span>
+                                <span className="font-bold text-[#3d6aab] block">adaptée à votre réseau municipal.</span>
                             </h2>
                             <p className="body-pro-max text-center max-w-4xl mx-auto px-4">
                                 Nos adoucisseurs d'eau pour réseaux municipaux sont spécifiquement calibrés pour neutraliser la dureté urbaine tout en préservant l'intégrité de vos installations. Une synergie parfaite entre <span className="text-blue-600 font-bold">économie de ressources</span> et <span className="text-blue-600 font-bold">confort absolu</span>.
@@ -262,7 +262,7 @@ const AdoucisseurEauMunicipal = () => {
                                     <div className="p-10 space-y-6 flex flex-col flex-grow relative">
                                         <div className="absolute top-0 left-10 right-10 h-1 bg-gradient-to-r from-transparent via-blue-100 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-700" />
                                         
-                                        <h3 className="text-2xl font-bold text-[#1e3a8a] text-center whitespace-pre-line group-hover:text-blue-600 transition-colors">
+                                        <h3 className="text-2xl font-bold text-[#3d6aab] text-center whitespace-pre-line group-hover:text-blue-600 transition-colors">
                                             {p.name}
                                         </h3>
                                         
@@ -276,14 +276,14 @@ const AdoucisseurEauMunicipal = () => {
                                                     <div className="w-6 h-6 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0 group-hover:bg-blue-600 transition-colors duration-500">
                                                         <CheckCircle2 className="w-3.5 h-3.5 text-blue-600 group-hover:text-white transition-colors" />
                                                     </div>
-                                                    <span className="text-sm text-slate-600 font-medium group-hover:text-[#1e3a8a] transition-colors">{f}</span>
+                                                    <span className="text-sm text-slate-600 font-medium group-hover:text-[#3d6aab] transition-colors">{f}</span>
                                                 </div>
                                             ))}
                                         </div>
 
                                         <div className="pt-8 mt-auto flex items-center justify-between">
                                             <div className="flex flex-col">
-                                                <span className="text-[10px] font-black uppercase tracking-widest text-[#1e3a8a]/40 group-hover:text-blue-600 transition-colors">Performance</span>
+                                                <span className="text-[10px] font-black uppercase tracking-widest text-[#3d6aab]/40 group-hover:text-blue-600 transition-colors">Performance</span>
                                                 <span className="text-[10px] font-bold text-slate-400 group-hover:text-slate-600 transition-colors">Certifiée CSA/NSF</span>
                                             </div>
                                             <div className="w-12 h-12 rounded-2xl bg-slate-50 flex items-center justify-center text-slate-400 group-hover:bg-blue-600 group-hover:text-white group-hover:shadow-lg group-hover:shadow-blue-500/30 transition-all duration-500">
@@ -305,8 +305,8 @@ const AdoucisseurEauMunicipal = () => {
                                 VOTRE EXPÉRIENCE CLIENT
                             </span>
                             <h2 className="mb-8 heading-pro-max text-center">
-                                <span className="italic font-light text-[#2563eb] block">Une transition fluide vers</span>
-                                <span className="font-bold text-[#1e3a8a] block">une eau douce d'exception.</span>
+                                <span className="italic font-light text-[#3d6aab] block">Une transition fluide vers</span>
+                                <span className="font-bold text-[#3d6aab] block">une eau douce d'exception.</span>
                             </h2>
                             <p className="body-pro-max text-center max-w-3xl mx-auto">
                                 Le Parcours Bricareau : une expertise d'élite, depuis votre première analyse jusqu'à la douceur éternelle de votre eau municipale.
@@ -353,7 +353,7 @@ const AdoucisseurEauMunicipal = () => {
                                             <div className={`w-32 h-32 rounded-[2.5rem] overflow-hidden border-2 ${item.color} shadow-xl shadow-slate-200/50 group-hover:scale-110 transition-transform duration-500 bg-white`}>
                                                 <img src={item.image} alt={item.title} className="w-full h-full object-cover" />
                                             </div>
-                                            <div className="absolute -top-2 -left-2 lg:-left-auto lg:-top-2 lg:-right-2 w-10 h-10 bg-blue-600 lg:bg-[#1e3a8a] text-white rounded-full flex items-center justify-center font-black text-xs shadow-lg border-2 border-white z-20">
+                                            <div className="absolute -top-2 -left-2 lg:-left-auto lg:-top-2 lg:-right-2 w-10 h-10 bg-blue-600 lg:bg-[#3d6aab] text-white rounded-full flex items-center justify-center font-black text-xs shadow-lg border-2 border-white z-20">
                                                 {item.step}
                                             </div>
                                         </div>
@@ -373,7 +373,7 @@ const AdoucisseurEauMunicipal = () => {
                                 alt="Installation professionnelle d'un adoucisseur d'eau Bricareau" 
                                 className="w-full h-[450px] md:h-[550px] lg:h-[650px] object-cover group-hover:scale-105 transition-transform duration-[3000ms] brightness-[1.2] contrast-[1.05]"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-r from-[#1e3a8a]/70 via-[#1e3a8a]/30 to-transparent p-8 md:p-12 lg:p-20 flex items-center">
+                            <div className="absolute inset-0 bg-gradient-to-r from-[#3d6aab]/70 via-[#3d6aab]/30 to-transparent p-8 md:p-12 lg:p-20 flex items-center">
                                 <div className="max-w-lg">
                                     <div className="flex items-center gap-3 text-blue-400 font-bold text-xs tracking-widest uppercase mb-6">
                                         <CheckCircle className="w-5 h-5" />
@@ -397,8 +397,8 @@ const AdoucisseurEauMunicipal = () => {
                                 ANALYSE COMPARATIVE
                             </span>
                             <h2 className="heading-pro-max">
-                                <span className="italic font-light text-[#2563eb] block text-center">Identifiez la performance</span>
-                                <span className="font-bold text-[#1e3a8a] block text-center">optimale pour votre foyer.</span>
+                                <span className="italic font-light text-[#3d6aab] block text-center">Identifiez la performance</span>
+                                <span className="font-bold text-[#3d6aab] block text-center">optimale pour votre foyer.</span>
                             </h2>
                         </div>
 
@@ -408,7 +408,6 @@ const AdoucisseurEauMunicipal = () => {
                                 <Button 
                                     size="icon" 
                                     variant="outline" 
-                                    className="w-10 h-10 rounded-full border-blue-100 hover:bg-blue-600 hover:text-white transition-all shadow-sm"
                                     onClick={() => setActiveCol(Math.max(0, activeCol - 1))}
                                     disabled={activeCol === 0}
                                 >
@@ -422,7 +421,6 @@ const AdoucisseurEauMunicipal = () => {
                                 <Button 
                                     size="icon" 
                                     variant="outline" 
-                                    className="w-10 h-10 rounded-full border-blue-100 hover:bg-blue-600 hover:text-white transition-all shadow-sm"
                                     onClick={() => setActiveCol(Math.min(2, activeCol + 1))}
                                     disabled={activeCol === 2}
                                 >
@@ -438,8 +436,8 @@ const AdoucisseurEauMunicipal = () => {
                                                 Critères Techniques
                                             </th>
                                             {[
-                                                { name: "Série Sentinelle", img: SentinelWaterSoftenerImg, badge: "Précision Économique", color: "bg-[#1e3a8a]", offset: "-right-20" },
-                                                { name: "Série Sérénité", img: SerenityWaterSoftenerImg, badge: "Hybride Ultime", color: "bg-[#2563eb]", offset: "-right-12" },
+                                                { name: "Série Sentinelle", img: SentinelWaterSoftenerImg, badge: "Précision Économique", color: "bg-[#3d6aab]", offset: "-right-20" },
+                                                { name: "Série Sérénité", img: SerenityWaterSoftenerImg, badge: "Hybride Ultime", color: "bg-[#3d6aab]", offset: "-right-12" },
                                                 { name: "Série Infiniti", img: TwinAlternatingWaterSoftenerImg, badge: "Puissance 24h/24", color: "bg-orange-500", offset: "-right-20" }
                                             ].map((m, i) => (
                                                 <th 
@@ -461,7 +459,7 @@ const AdoucisseurEauMunicipal = () => {
                                                                 className="w-[120px] md:w-[140px] h-[100px] md:h-[120px] object-contain mx-auto mix-blend-multiply relative z-10 transition-transform duration-700 group-hover/img:scale-110"
                                                             />
                                                         </div>
-                                                        <div className="text-sm md:text-lg font-bold text-[#1e3a8a]">{m.name}</div>
+                                                        <div className="text-sm md:text-lg font-bold text-[#3d6aab]">{m.name}</div>
                                                     </div>
                                                 </th>
                                             ))}
@@ -470,7 +468,7 @@ const AdoucisseurEauMunicipal = () => {
                                     <tbody className="divide-y divide-slate-100 relative z-10">
                                         {comparisonData.map((row, i) => (
                                             <tr key={i} className="hover:bg-blue-50/30 transition-colors group">
-                                                <td className="p-6 md:p-10 font-bold text-[#1e3a8a] bg-white sticky left-0 z-30 border-r border-slate-50 drop-shadow-sm lg:drop-shadow-none text-[12px] md:text-sm italic group-hover:text-blue-600 transition-colors">
+                                                <td className="p-6 md:p-10 font-bold text-[#3d6aab] bg-white sticky left-0 z-30 border-r border-slate-50 drop-shadow-sm lg:drop-shadow-none text-[12px] md:text-sm italic group-hover:text-blue-600 transition-colors">
                                                     {row.feature}
                                                 </td>
                                                 {["Sentinel", "Sérénité", "Infiniti"].map((model, idx) => (
@@ -499,8 +497,8 @@ const AdoucisseurEauMunicipal = () => {
                     limit={5}
                     title={
                         <>
-                            <span className="italic font-light text-[#2563eb] block text-center">Une eau soyeuse.</span>
-                            <span className="font-bold text-[#1e3a8a] block text-center">Un confort absolu.</span>
+                            <span className="italic font-light text-[#3d6aab] block text-center">Une eau soyeuse.</span>
+                            <span className="font-bold text-[#3d6aab] block text-center">Un confort absolu.</span>
                         </>
                     }
                 />
@@ -533,8 +531,8 @@ const AdoucisseurEauMunicipal = () => {
                                 Contrôle de la Qualité D'EAU
                             </span>
                             <h2 className="mb-8 heading-pro-max text-left">
-                                <span className="italic font-light text-[#1e3a8a] lg:text-white block">Des tests d'eau précis</span>
-                                <span className="text-[#1e3a8a] lg:text-white italic font-bold font-serif">pour une tranquillité d'esprit totale.</span>
+                                <span className="italic font-light text-[#3d6aab] lg:text-white block">Des tests d'eau précis</span>
+                                <span className="text-[#3d6aab] lg:text-white italic font-bold font-serif">pour une tranquillité d'esprit totale.</span>
                             </h2>
                             <p className="body-pro-max text-black lg:text-white/95 mb-8 max-w-xl text-justify lg:text-left">
                                 Ne devinez pas la qualité de votre eau. Nos analyses approfondies identifient les bactéries, les minéraux et les contaminants chimiques pour vous offrir une tranquillité d'esprit totale.
@@ -555,8 +553,8 @@ const AdoucisseurEauMunicipal = () => {
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
                             <h2 className="mb-8 heading-pro-max text-left">
-                                <span className="italic font-light text-[#2563eb] block">Pour vous éclairer</span>
-                                <span className="font-bold text-[#1e3a8a] block">Questions fréquentes</span>
+                                <span className="italic font-light text-[#3d6aab] block">Pour vous éclairer</span>
+                                <span className="font-bold text-[#3d6aab] block">Questions fréquentes</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
@@ -586,7 +584,7 @@ const AdoucisseurEauMunicipal = () => {
                 </section>
 
                 {/* 10. PREMIUM CTA SECTION */}
-                <section className="relative py-32 flex items-center overflow-hidden bg-[#1e3a8a]">
+                <section className="relative py-32 flex items-center overflow-hidden bg-[#3d6aab]">
                     {/* Animated background elements */}
                     <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-blue-600/20 to-transparent skew-x-12 translate-x-1/4" />
                     <div className="absolute bottom-0 left-0 w-1/2 h-full bg-gradient-to-r from-cyan-400/10 to-transparent -skew-x-12 -translate-x-1/4" />
@@ -598,7 +596,7 @@ const AdoucisseurEauMunicipal = () => {
                             alt="Problématique d'eau dure sur la robinetterie - Solution Bricareau"
                             className="w-full h-full object-cover grayscale brightness-150"
                         />
-                        <div className="absolute inset-0 bg-[#1e3a8a]/10 backdrop-blur-sm" />
+                        <div className="absolute inset-0 bg-[#3d6aab]/10 backdrop-blur-sm" />
                     </div>
 
                     <div className="container mx-auto px-6 relative z-10">
@@ -647,7 +645,7 @@ const AdoucisseurEauMunicipal = () => {
                     <div className="container mx-auto px-4 text-left">
                         <div className="text-left mb-16">
                             <h2 className="mb-8 heading-pro-max text-left">
-                                <span className="font-bold text-[#1e3a8a] block text-left">Ressources</span>
+                                <span className="font-bold text-[#3d6aab] block text-left">Ressources</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
@@ -686,20 +684,18 @@ const AdoucisseurEauMunicipal = () => {
                         <div className="lg:hidden flex items-center justify-center gap-4 mt-6 relative z-30">
                             <Button 
                                 size="icon" 
-                                className="w-12 h-12 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-all shadow-md shadow-blue-100"
                                 onClick={() => scrollResources('left')}
                             >
                                 <ChevronLeft className="h-6 w-6" />
                             </Button>
                             <Button 
                                 size="icon" 
-                                className="w-12 h-12 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-all shadow-md shadow-blue-100"
                                 onClick={() => scrollResources('right')}
                             >
                                 <ChevronRight className="h-6 w-6" />
                             </Button>
 
-                            <div className="absolute right-2 text-sm font-black text-[#1e3a8a] bg-blue-50/50 px-4 py-2 rounded-full border border-blue-100/50">
+                            <div className="absolute right-2 text-sm font-black text-[#3d6aab] bg-blue-50/50 px-4 py-2 rounded-full border border-blue-100/50">
                                 <span className="text-blue-600">{resourceIndex}</span>
                                 <span className="mx-1 text-slate-300">/</span>
                                 <span className="text-slate-400">{resources.length}</span>
@@ -713,14 +709,12 @@ const AdoucisseurEauMunicipal = () => {
                         <div className="pointer-events-auto group/sticky">
                           <Button
                             asChild
-                            className="bg-white hover:-translate-y-2 transition-all duration-10000 active:scale-95"
-                            style={{ backdropFilter: "blur(20px)" }}
                           >
-                            <a href="/consultation" className="flex items-center gap-4 animate-bounce" style={{ animationDuration: '3s' }}>
-                              <span className="font-bold text-sm tracking-wider text-blue-600 whitespace-nowrap text-center">
+                            <a href="/consultation" className="flex items-center gap-4">
+                              <span className="font-bold text-sm tracking-wider whitespace-nowrap text-center">
                                 Réservez votre <br />consultation gratuite
                               </span>
-                              <div className="w-10 h-10 bg-[#2563eb] rounded-full flex items-center justify-center text-white group-hover/sticky:rotate-[360deg] shadow-lg shadow-blue-200">
+                              <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center text-white group-hover/sticky:rotate-[360deg] transition-all">
                                   <ArrowRight className="w-5 h-5" />
                                 </div>
                             </a>

@@ -186,9 +186,9 @@ const Pieces = () => {
                                     fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
                                 }}
                             >
-                                <span className="italic font-light text-[#2563eb] text-[50px] block lg:inline-block">Maintenez la performance.</span>
+                                <span className="italic font-light text-[#3d6aab] text-[50px] block lg:inline-block">Maintenez la performance.</span>
                                 <br className="hidden lg:block" />
-                                <span className="font-bold text-[#1e3a8a] text-[50px] block lg:inline-block">Pièces de Remplacement</span>
+                                <span className="font-bold text-[#3d6aab] text-[50px] block lg:inline-block">Pièces de Remplacement</span>
                             </h1>
 
                             <p className="body-pro-max text-slate-600 max-w-xl text-left font-light leading-relaxed">
@@ -196,12 +196,12 @@ const Pieces = () => {
                             </p>
 
                             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                                <Button className="bg-[#2563eb] hover:bg-[#1e3a8a] text-white rounded-full h-16 px-10 text-lg font-bold transition-all hover:scale-105 active:scale-95 shadow-xl shadow-blue-200 group/btn">
+                                <Button className="bg-[#3d6aab] hover:bg-[#3d6aab] text-white rounded-full h-16 px-10 text-lg font-bold transition-all hover:scale-105 active:scale-95 shadow-xl shadow-blue-200 group/btn">
                                     Parler à un expert
                                     <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover/btn:translate-x-1" />
                                 </Button>
                                 <Button variant="outline" className="rounded-full h-16 px-10 text-lg font-bold border-2 border-slate-200 hover:bg-slate-50 transition-all group/call">
-                                    <Phone className="mr-2 w-5 h-5 text-[#2563eb]" />
+                                    <Phone className="mr-2 w-5 h-5 text-[#3d6aab]" />
                                     1 855 264 9328
                                 </Button>
                             </div>
@@ -215,7 +215,7 @@ const Pieces = () => {
                                         </div>
                                         <div className="text-left">
                                             <p className="text-[9px] font-black text-slate-400 uppercase tracking-widest leading-none mb-1">Stock</p>
-                                            <p className="text-[13px] font-bold text-[#1e3a8a]">Expédition 24/48h</p>
+                                            <p className="text-[13px] font-bold text-[#3d6aab]">Expédition 24/48h</p>
                                         </div>
                                     </div>
                                 </div>
@@ -228,7 +228,7 @@ const Pieces = () => {
                                         </div>
                                         <div className="text-left">
                                             <p className="text-[9px] font-black text-slate-400 uppercase tracking-widest leading-none mb-1">Origine</p>
-                                            <p className="text-[13px] font-bold text-[#1e3a8a]">Pièces Certifiées</p>
+                                            <p className="text-[13px] font-bold text-[#3d6aab]">Pièces Certifiées</p>
                                         </div>
                                     </div>
                                 </div>
@@ -241,7 +241,7 @@ const Pieces = () => {
                                         </div>
                                         <div className="text-left">
                                             <p className="text-[9px] font-black text-slate-400 uppercase tracking-widest leading-none mb-1">Expédition</p>
-                                            <p className="text-[13px] font-bold text-[#1e3a8a]">Partout au Canada</p>
+                                            <p className="text-[13px] font-bold text-[#3d6aab]">Partout au Canada</p>
                                         </div>
                                     </div>
                                 </div>
@@ -264,13 +264,13 @@ const Pieces = () => {
                                 <div className="lg:sticky lg:top-32 space-y-4">
                                     <div className="bg-slate-50/80 backdrop-blur-md p-6 rounded-[2.5rem] border border-slate-100 shadow-sm">
                                         <div className="mb-6 px-2">
-                                            <h4 className="text-xs font-black text-[#2563eb] uppercase tracking-widest mb-1">Sélecteur</h4>
-                                            <p className="text-lg font-bold text-[#1e3a8a]">Catégories</p>
+                                            <h4 className="text-xs font-black text-[#3d6aab] uppercase tracking-widest mb-1">Sélecteur</h4>
+                                            <p className="text-lg font-bold text-[#3d6aab]">Catégories</p>
                                         </div>
                                         <TabsList className="flex flex-col items-stretch h-auto w-full p-0 bg-transparent gap-2">
                                             <TabsTrigger
                                                 value="Tout"
-                                                className="w-full justify-start px-6 py-4 rounded-3xl text-[14px] font-black tracking-tight transition-all duration-300 data-[state=active]:bg-white data-[state=active]:text-[#2563eb] data-[state=active]:shadow-lg data-[state=active]:scale-[1.02] text-slate-400 hover:text-[#2563eb] hover:bg-white/50"
+                                                className="w-full justify-start px-6 py-4 rounded-3xl text-[14px] font-black tracking-tight transition-all duration-300 data-[state=active]:bg-white data-[state=active]:text-[#3d6aab] data-[state=active]:shadow-lg data-[state=active]:scale-[1.02] text-slate-400 hover:text-[#3d6aab] hover:bg-white/50"
                                             >
                                                 <div className="flex items-center gap-3">
                                                     <Package className="h-5 w-5" />
@@ -281,7 +281,7 @@ const Pieces = () => {
                                                 <TabsTrigger
                                                     key={category.name}
                                                     value={category.name}
-                                                    className="w-full justify-start px-6 py-4 rounded-3xl text-[14px] font-black tracking-tight transition-all duration-300 data-[state=active]:bg-white data-[state=active]:text-[#2563eb] data-[state=active]:shadow-lg data-[state=active]:scale-[1.02] text-slate-400 hover:text-[#2563eb] hover:bg-white/50 text-left"
+                                                    className="w-full justify-start px-6 py-4 rounded-3xl text-[14px] font-black tracking-tight transition-all duration-300 data-[state=active]:bg-white data-[state=active]:text-[#3d6aab] data-[state=active]:shadow-lg data-[state=active]:scale-[1.02] text-slate-400 hover:text-[#3d6aab] hover:bg-white/50 text-left"
                                                 >
                                                     <div className="flex items-center gap-3">
                                                         <div className="w-2 h-2 rounded-full bg-blue-400 opacity-40 group-data-[state=active]:opacity-100" />
@@ -293,7 +293,7 @@ const Pieces = () => {
                                     </div>
 
                                     {/* Sidebar CTA Badge */}
-                                    <div className="bg-[#1e3a8a] p-8 rounded-[2.5rem] shadow-2xl relative overflow-hidden group/sidebar-cta">
+                                    <div className="bg-[#3d6aab] p-8 rounded-[2.5rem] shadow-2xl relative overflow-hidden group/sidebar-cta">
                                         <div className="absolute -right-8 -bottom-8 w-24 h-24 bg-blue-600/20 rounded-full transition-transform group-hover/sidebar-cta:scale-150 duration-700" />
                                         <div className="relative z-10 space-y-4">
                                             <MessageSquare className="w-10 h-10 text-blue-400" />
@@ -311,8 +311,8 @@ const Pieces = () => {
                             <div className="lg:w-3/4 space-y-12">
                                 <div className="flex flex-col items-start gap-4 animate-in fade-in slide-in-from-bottom-4 duration-1000">
                                      <h2 className="heading-pro-max text-left">
-                                        <span className="italic font-light text-[#2563eb] block">Explorez nos</span>
-                                        <span className="font-bold text-[#1e3a8a] block uppercase">composantes d'origine.</span>
+                                        <span className="italic font-light text-[#3d6aab] block">Explorez nos</span>
+                                        <span className="font-bold text-[#3d6aab] block uppercase">composantes d'origine.</span>
                                     </h2>
                                     <p className="body-pro-max text-slate-500 max-w-2xl text-left font-light">
                                         Filtres, membranes, vannes et accessoires parfaitement compatibles avec vos systèmes. Qualité certifiée pour un rendement optimal.
@@ -354,8 +354,8 @@ const Pieces = () => {
                         <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-16">
                             <div className="lg:w-1/2 space-y-8 text-left animate-in fade-in slide-in-from-left duration-[1.2s]">
                                 <h2 className="heading-pro-max">
-                                    <span className="italic font-light text-[#2563eb] block font-sans">Ne perdez pas de temps,</span>
-                                    <span className="font-black text-[#1e3a8a] block uppercase">parlez à un technicien.</span>
+                                    <span className="italic font-light text-[#3d6aab] block font-sans">Ne perdez pas de temps,</span>
+                                    <span className="font-black text-[#3d6aab] block uppercase">parlez à un technicien.</span>
                                 </h2>
                                 <p className="body-pro-max text-slate-600 font-light leading-relaxed">
                                     Identifier la bonne pièce peut être complexe. Nos experts sont formés pour vous donner la référence exacte en quelques minutes. Un service gratuit pour vous assurer la bonne commande du premier coup.
@@ -368,7 +368,7 @@ const Pieces = () => {
                                         </div>
                                         <div>
                                             <p className="text-sm font-black text-slate-400 uppercase tracking-widest mb-1">Support Téléphonique</p>
-                                            <p className="text-2xl font-black text-[#1e3a8a]">1-855-264-9328</p>
+                                            <p className="text-2xl font-black text-[#3d6aab]">1-855-264-9328</p>
                                         </div>
                                     </div>
                                     <div className="flex items-center gap-6 bg-white p-8 rounded-[2.5rem] shadow-xl shadow-blue-900/5 group hover:shadow-2xl transition-all border border-slate-100">
@@ -377,7 +377,7 @@ const Pieces = () => {
                                         </div>
                                         <div>
                                             <p className="text-sm font-black text-slate-400 uppercase tracking-widest mb-1">Besoin d'installation ?</p>
-                                            <a href="/service#contact-form" className="text-2xl font-black text-[#2563eb] hover:underline flex items-center gap-2">
+                                            <a href="/service#contact-form" className="text-2xl font-black text-[#3d6aab] hover:underline flex items-center gap-2">
                                                 Prendre rendez-vous
                                                 <ArrowRight className="w-6 h-6" />
                                             </a>
@@ -391,11 +391,11 @@ const Pieces = () => {
                                      <div className="absolute -top-10 -right-10 w-40 h-40 bg-blue-600/5 rounded-full blur-3xl" />
                                      <div className="relative z-10 space-y-6">
                                         <div className="w-16 h-1 bg-blue-600 rounded-full mb-6" />
-                                        <h3 className="text-3xl font-black text-[#1e3a8a] uppercase leading-tight">Zone d'intervention</h3>
+                                        <h3 className="text-3xl font-black text-[#3d6aab] uppercase leading-tight">Zone d'intervention</h3>
                                         <p className="text-slate-500 font-light leading-relaxed">
                                             Nous livrons vos pièces partout au Canada. Pour les installations, nos techniciens mobiles se déplacent chez vous au **Grand Montréal et un périmètre de 300km**avec tout l'équipement nécessaire.
                                         </p>
-                                        <div className="flex items-center gap-3 text-[#2563eb] font-bold">
+                                        <div className="flex items-center gap-3 text-[#3d6aab] font-bold">
                                             <MapPin className="w-5 h-5" />
                                             <span>Livraison partout au Canada</span>
                                         </div>

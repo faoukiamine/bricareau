@@ -186,7 +186,7 @@ const ContactResidentiel = () => {
                   </div>
                 </div>
 
-                <Button type="submit" size="lg" className="w-fit px-8">
+                <Button type="submit">
                   Envoyez
                 </Button>
               </form>

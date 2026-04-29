@@ -184,7 +184,7 @@ const Filtration = () => {
                             </span>
                             <h2 className="heading-pro-max">
                                 <span className="italic font-light text-blue-600 block leading-tight">Identifier l'invisible :</span>
-                                <span className="font-bold text-[#1e3a8a] block leading-tight">Pourquoi filtrer votre eau ?</span>
+                                <span className="font-bold text-[#3d6aab] block leading-tight">Pourquoi filtrer votre eau ?</span>
                             </h2>
                             <p className="body-pro-max text-slate-500 mt-6 mx-auto max-w-2xl px-4">
                                 L'eau municipale traverse des kilomètres de tuyauteries vétustes avant d'arriver chez vous. Chaque verre peut contenir des traces de l'imparfait.
@@ -324,7 +324,7 @@ const Filtration = () => {
                                             PROTECTION & SANTÉ
                                         </span>
                                          <h2 id="solutions-title" className="heading-pro-max text-left mb-8 scroll-mt-[120px]">
-                                            <span className="italic font-light text-[#2563eb] block">Eau filtrée pour toute la maison</span>
+                                            <span className="italic font-light text-[#3d6aab] block">Eau filtrée pour toute la maison</span>
                                         </h2>
                                          
                                         <p className="body-pro-max text-justify max-w-xl">
@@ -354,14 +354,18 @@ const Filtration = () => {
                                     </div>
 
                                     <div className="pt-8 flex flex-col sm:flex-row gap-6">
-                                        <NavLink to="/filtres-deau-pour-toute-la-maison" className="w-full sm:w-auto">
-                                            <Button asChild>
+                                        <div className="relative inline-block group">
+                                            <div className="absolute inset-0 border border-[#3d6aab] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                                            <Button 
+                                                asChild
+                                                className="relative bg-[#3d6aab] hover:bg-white hover:text-[#3d6aab] text-white rounded-[2rem] h-14 px-10 font-black uppercase tracking-widest text-[11px] transition-all border-none"
+                                            >
                                                 <NavLink to="/filtres-deau-pour-toute-la-maison" className="flex items-center">
                                                     Voir nos filtres d'eau
                                                     <ChevronRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                                                 </NavLink>
                                             </Button>
-                                        </NavLink>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -413,7 +417,7 @@ const Filtration = () => {
                                             EAU PURE À VOLONTÉ
                                         </span>
                                          <h2 id="undersink-title" className="heading-pro-max text-left mb-8 scroll-mt-[120px]">
-                                            <span className="italic font-light text-[#2563eb] block">Votre source d'eau cristalline, sans compromis.</span>
+                                            <span className="italic font-light text-[#3d6aab] block">Votre source d'eau cristalline, sans compromis.</span>
                                         </h2>
                                         <p className="body-pro-max text-justify lg:text-left max-w-xl lg:ml-0">
                                             Découvrez comment notre système d'osmose inverse libère votre quotidien du goût de chlore et de la corvée des bouteilles plastique. Une eau légère et saine à portée de main.
@@ -443,14 +447,18 @@ const Filtration = () => {
                                     </div>
 
                                     <div className="pt-8 flex flex-col sm:flex-row lg:flex-row gap-6 justify-start">
-                                        <NavLink to="/systeme-de-filtration-deau-potable" className="w-full sm:w-fit">
-                                            <Button size="lg" className="rounded-full px-12 py-7 transition-all duration-300 hover:shadow-xl hover:shadow-blue-100" asChild>
-                                                <NavLink to="/systeme-de-filtration-deau-potable" className="flex items-center text-lg">
+                                        <div className="relative inline-block group">
+                                            <div className="absolute inset-0 border border-[#3d6aab] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                                            <Button 
+                                                asChild
+                                                className="relative bg-[#3d6aab] hover:bg-white hover:text-[#3d6aab] text-white rounded-[2rem] h-14 px-10 font-black uppercase tracking-widest text-[11px] transition-all border-none"
+                                            >
+                                                <NavLink to="/systeme-de-filtration-deau-potable" className="flex items-center">
                                                     Découvrir nos systèmes d'osmose inverse
                                                     <ChevronRight className="ml-2 h-6 w-6 transition-transform group-hover:translate-x-1" />
                                                 </NavLink>
                                             </Button>
-                                        </NavLink>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -507,7 +515,7 @@ const Filtration = () => {
                                             id="compact-filtration-title"
                                             className="heading-pro-max scroll-mt-[120px] mb-8"
                                         >
-                                            <span className="italic font-light text-[#2563eb] block">Systèmes de filtration d'eau sous l'évier</span>
+                                            <span className="italic font-light text-[#3d6aab] block">Systèmes de filtration d'eau sous l'évier</span>
                                         </h2>
                                         <p className="body-pro-max text-justify max-w-xl">
                                             Éliminez jusqu'à 99% des pathogènes, du plomb et du fluorure. Notre gamme Cristal Pro est la solution ultime pour une eau de boisson de qualité supérieure directement chez vous.
@@ -537,14 +545,18 @@ const Filtration = () => {
                                     </div>
 
                                     <div className="pt-8 flex flex-col sm:flex-row gap-6">
-                                        <NavLink to="/Systemes-de-filtration-deau-sous-evier" className="w-full sm:w-fit">
-                                            <Button size="lg" className="w-full rounded-full px-12 py-7 transition-all duration-300 hover:shadow-xl hover:shadow-blue-200" asChild>
-                                                <NavLink to="/Systemes-de-filtration-deau-sous-evier" className="flex items-center text-lg">
+                                        <div className="relative inline-block group">
+                                            <div className="absolute inset-0 border border-[#3d6aab] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                                            <Button 
+                                                asChild
+                                                className="relative bg-[#3d6aab] hover:bg-white hover:text-[#3d6aab] text-white rounded-[2rem] h-14 px-10 font-black uppercase tracking-widest text-[11px] transition-all border-none"
+                                            >
+                                                <NavLink to="/Systemes-de-filtration-deau-sous-evier" className="flex items-center">
                                                     Voir nos filtres sous-évier
                                                     <ChevronRight className="ml-2 h-6 w-6 transition-transform group-hover:translate-x-1" />
                                                 </NavLink>
                                             </Button>
-                                        </NavLink>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -581,19 +593,22 @@ const Filtration = () => {
                             </span>
 
                             <h2 className="heading-pro-max text-left mb-8">
-                                <span className="font-light italic text-[#1e3a8a] lg:text-white block">Votre eau est</span>
-                                <span className="text-[#1e3a8a] lg:text-white italic font-bold font-serif"> notre priorité.</span>
+                                <span className="font-light italic text-[#3d6aab] lg:text-white block">Votre eau est</span>
+                                <span className="text-[#3d6aab] lg:text-white italic font-bold font-serif"> notre priorité.</span>
                             </h2>
                             <p className="body-pro-max text-black lg:text-white/95 mb-8 max-w-xl text-justify lg:text-left">
                                 Ne laissez plus le doute couler de votre robinet. Demandez votre test d'eau dès aujourd'hui et obtenez un portrait clair de votre eau ainsi que des solutions adaptées à votre foyer.
                             </p>
                             <div className="flex gap-4">
-                                <Button
-                                    size="lg"
-                                    asChild
-                                >
-                                    <a href="/tests-eau">Demandez une analyse d'eau</a>
-                                </Button>
+                                <div className="relative inline-block group">
+                                    <div className="absolute inset-0 border border-[#3d6aab] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                                    <Button
+                                        asChild
+                                        className="relative bg-[#3d6aab] hover:bg-white hover:text-[#3d6aab] text-white rounded-[2rem] h-14 px-10 font-black uppercase tracking-widest text-[11px] transition-all border-none"
+                                    >
+                                        <a href="/tests-eau">Demandez une analyse d'eau</a>
+                                    </Button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -604,8 +619,8 @@ const Filtration = () => {
                     filterProduct="/filtration"
                     title={
                         <>
-                            <span className="italic font-light text-[#2563eb] block text-center">Honnêteté et passion :</span>
-                            <span className="font-bold text-[#1e3a8a] block text-center">la signature Bricareau vue par vous.</span>
+                            <span className="italic font-light text-[#3d6aab] block text-center">Honnêteté et passion :</span>
+                            <span className="font-bold text-[#3d6aab] block text-center">la signature Bricareau vue par vous.</span>
                         </>
                     }
                 />
@@ -616,8 +631,8 @@ const Filtration = () => {
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
                             <h2 className="heading-pro-max text-left mb-8">
-                                <span className="italic font-light text-[#2563eb] block">Comparez nos solutions</span>
-                                <span className="font-bold text-[#1e3a8a] block">de filtration d'eau</span>
+                                <span className="italic font-light text-[#3d6aab] block">Comparez nos solutions</span>
+                                <span className="font-bold text-[#3d6aab] block">de filtration d'eau</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
@@ -679,7 +694,7 @@ const Filtration = () => {
                                                                 className="w-[140px] md:w-[180px] h-[100px] md:h-[140px] object-contain mx-auto mix-blend-multiply relative z-10 transition-transform duration-700 group-hover/img:scale-110"
                                                             />
                                                         </div>
-                                                        <div className="text-[13px] md:text-lg font-bold text-[#1e3a8a] max-w-[150px] mx-auto leading-tight">{m.name}</div>
+                                                        <div className="text-[13px] md:text-lg font-bold text-[#3d6aab] max-w-[150px] mx-auto leading-tight">{m.name}</div>
                                                     </div>
                                                 </th>
                                             ))}
@@ -688,7 +703,7 @@ const Filtration = () => {
                                     <tbody className="divide-y divide-slate-100 relative z-10">
                                         {comparisonData.map((row, i) => (
                                             <tr key={i} className="hover:bg-blue-50/30 transition-colors group">
-                                                <td className="p-6 md:p-10 font-bold text-[#1e3a8a] bg-white sticky left-0 z-30 border-r border-slate-50 drop-shadow-sm lg:drop-shadow-none text-[12px] md:text-sm italic group-hover:text-blue-600 transition-colors">
+                                                <td className="p-6 md:p-10 font-bold text-[#3d6aab] bg-white sticky left-0 z-30 border-r border-slate-50 drop-shadow-sm lg:drop-shadow-none text-[12px] md:text-sm italic group-hover:text-blue-600 transition-colors">
                                                     {row.feature}
                                                 </td>
                                                 <td 
@@ -717,7 +732,7 @@ const Filtration = () => {
                 </section>
 
         {/* 10. PREMIUM CTA SECTION - REBUILT FOR IMPACT */}
-        <section className="relative py-32 flex items-center overflow-hidden bg-[#1e3a8a]">
+        <section className="relative py-32 flex items-center overflow-hidden bg-[#3d6aab]">
             {/* Animated background elements */}
             <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-blue-600/20 to-transparent skew-x-12 translate-x-1/4" />
             <div className="absolute bottom-0 left-0 w-1/2 h-full bg-gradient-to-r from-cyan-400/10 to-transparent -skew-x-12 -translate-x-1/4" />
@@ -729,7 +744,7 @@ const Filtration = () => {
                     alt="Problématique d'eau dure sur la robinetterie - Solution Bricareau"
                     className="w-full h-full object-cover grayscale brightness-150"
                 />
-                <div className="absolute inset-0 bg-[#1e3a8a]/10 backdrop-blur-sm" />
+                <div className="absolute inset-0 bg-[#3d6aab]/10 backdrop-blur-sm" />
             </div>
 
             <div className="container mx-auto px-6 relative z-10">
@@ -748,18 +763,27 @@ const Filtration = () => {
                     </div>
 
                     <div className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-4">
-                        <Button asChild>
-                            <a href="tel:18552649328" className="flex items-center gap-3">
-                                <Phone className="h-5 w-5 animate-bounce" />
-                                Parlez à un expert
-                            </a>
-                        </Button>
-                        <Button
-                            variant="outline"
-                            asChild
-                        >
-                            <NavLink to="/consultation">Planifiez une consultation</NavLink>
-                        </Button>
+                        <div className="relative inline-block group">
+                            <div className="absolute inset-0 border border-white rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                            <Button 
+                                asChild
+                                className="relative bg-white text-[#3d6aab] hover:bg-[#3d6aab] hover:text-white rounded-[2rem] h-14 px-10 font-black uppercase tracking-widest text-[11px] transition-all border-none"
+                            >
+                                <a href="tel:18552649328" className="flex items-center gap-3">
+                                    <Phone className="h-5 w-5 animate-bounce" />
+                                    Parlez à un expert
+                                </a>
+                            </Button>
+                        </div>
+                        <div className="relative inline-block group">
+                            <div className="absolute inset-0 border border-white rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                            <Button
+                                asChild
+                                className="relative bg-transparent border-2 border-white text-white hover:bg-white hover:text-[#3d6aab] rounded-[2rem] h-14 px-10 font-black uppercase tracking-widest text-[11px] transition-all"
+                            >
+                                <NavLink to="/consultation">Planifiez une consultation</NavLink>
+                            </Button>
+                        </div>
                     </div>
 
                     <div className="pt-8 flex flex-col items-center gap-4">
@@ -777,8 +801,8 @@ const Filtration = () => {
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
                             <h2 className="heading-pro-max text-left mb-8">
-                                <span className="italic font-light text-[#2563eb] block">Pour vous éclairer</span>
-                                <span className="font-bold text-[#1e3a8a] block">Questions fréquentes</span>
+                                <span className="italic font-light text-[#3d6aab] block">Pour vous éclairer</span>
+                                <span className="font-bold text-[#3d6aab] block">Questions fréquentes</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
@@ -857,9 +881,15 @@ const Filtration = () => {
                                 ))}
                             </Accordion>
                             <div className="mt-12 text-center">
-                                <Button onClick={() => setShowAllFaqs(!showAllFaqs)}>
-                                    {showAllFaqs ? "Voir moins de questions" : "Voir toutes les questions"}
-                                </Button>
+                                <div className="relative inline-block group">
+                                    <div className="absolute inset-0 border border-[#3d6aab] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                                    <Button 
+                                        onClick={() => setShowAllFaqs(!showAllFaqs)}
+                                        className="relative bg-[#3d6aab] hover:bg-white hover:text-[#3d6aab] text-white rounded-[2rem] h-12 px-8 font-black uppercase tracking-widest text-[11px] transition-all border-none"
+                                    >
+                                        {showAllFaqs ? "Voir moins de questions" : "Voir toutes les questions"}
+                                    </Button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -870,7 +900,7 @@ const Filtration = () => {
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
                             <h2 className="heading-pro-max text-left mb-8">
-                                <span className="font-bold text-[#1e3a8a] block">Ressources</span>
+                                <span className="font-bold text-[#3d6aab] block">Ressources</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
@@ -926,7 +956,7 @@ const Filtration = () => {
                                 </Button>
                             </div>
                             
-                            <div className="absolute right-2 text-sm font-black text-[#1e3a8a] bg-blue-50/50 px-4 py-2 rounded-full border border-blue-100/50">
+                            <div className="absolute right-2 text-sm font-black text-[#3d6aab] bg-blue-50/50 px-4 py-2 rounded-full border border-blue-100/50">
                                 <span className="text-blue-600">{resourceIndex}</span>
                                 <span className="mx-1 text-slate-300">/</span>
                                 <span className="text-slate-400">{resources.length}</span>
@@ -938,20 +968,22 @@ const Filtration = () => {
                 {/* Floating Sticky CTA - Phase III Conversion Focus */}
                 <div className="hidden md:block fixed bottom-8 right-8 z-[100] animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-[3s] pointer-events-none">
                   <div className="pointer-events-auto group/sticky">
-                    <Button
-                      asChild
-                      className="bg-white hover:-translate-y-2 transition-all duration-10000 active:scale-95"
-                      style={{ backdropFilter: "blur(20px)" }}
-                    >
-                        <a href="/consultation" className="flex items-center gap-4 animate-bounce" style={{ animationDuration: '3s' }}>
-                            <span className="font-bold text-sm tracking-wider text-blue-600 whitespace-nowrap text-center">
-                                Réservez votre <br />consultation gratuite
-                            </span>
-                            <div className="w-10 h-10 bg-[#2563eb] rounded-full flex items-center justify-center text-white group-hover/sticky:rotate-[360deg] shadow-lg shadow-blue-200">
-                                <ArrowRight className="w-5 h-5" />
-                            </div>
+                    <div className="relative inline-block group/sticky pointer-events-auto">
+                      <div className="absolute inset-0 border-2 border-white rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover/sticky:-translate-x-[3px] group-hover/sticky:translate-y-[3px]"></div>
+                      <Button
+                        asChild
+                        className="relative bg-white text-[#3d6aab] hover:bg-blue-600 hover:text-white rounded-[2rem] h-[4.5rem] px-8 font-black uppercase tracking-widest text-[11px] transition-all border-none shadow-2xl"
+                      >
+                        <a href="/consultation" className="flex items-center gap-4">
+                          <span className="text-center leading-tight">
+                            Réservez votre <br />consultation gratuite
+                          </span>
+                          <div className="w-10 h-10 bg-[#3d6aab] rounded-full flex items-center justify-center text-white group-hover/sticky:rotate-[360deg] transition-all duration-700 shadow-lg shadow-blue-200">
+                            <ArrowRight className="w-5 h-5" />
+                          </div>
                         </a>
-                    </Button>
+                      </Button>
+                    </div>
                   </div>
                 </div>
             </main>

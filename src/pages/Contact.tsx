@@ -48,7 +48,7 @@ const Contact = () => {
           <div className="container relative z-10 mx-auto px-4 h-full flex items-center lg:px-6">
             <div className="max-w-2xl text-left py-12 lg:py-0">
               <h1 
-                className="italic font-light tracking-tighter text-[#1e3a8a] max-w-xl mb-4 lg:mb-8"
+                className="italic font-light tracking-tighter text-[#3d6aab] max-w-xl mb-4 lg:mb-8"
                 style={{ 
                     fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
                     fontSize: '50px',
@@ -56,8 +56,8 @@ const Contact = () => {
                     fontWeight: 300 
                 }}
               >
-                <span className="italic font-light text-[#2563eb] block">Contactez-nous.</span>
-                <span className="font-bold text-[#1e3a8a] block">Notre équipe est à votre écoute.</span>
+                <span className="italic font-light text-[#3d6aab] block">Contactez-nous.</span>
+                <span className="font-bold text-[#3d6aab] block">Notre équipe est à votre écoute.</span>
               </h1>
               <p className="font-light text-slate-600 mb-8 max-w-xl text-lg leading-relaxed">
                 Nous sommes là pour répondre à toutes vos questions sur le traitement de l'eau. Que ce soit pour un conseil technique ou une demande de soumission, nos experts vous accompagnent avec transparence.
@@ -100,7 +100,7 @@ const Contact = () => {
                   <img src="/images/FAQ.jpg" alt="Foire aux questions" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" />
                   <div className="absolute inset-0 bg-blue-600/5 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </div>
-                <h3 className="mb-4 text-xl font-bold text-[#1e3a8a] group-hover:text-blue-600 transition-colors">
+                <h3 className="mb-4 text-xl font-bold text-[#3d6aab] group-hover:text-blue-600 transition-colors">
                   Foire aux questions
                 </h3>
                 <p className="body-pro-max text-sm mb-8 flex-grow text-slate-500 leading-relaxed font-light">
@@ -122,7 +122,7 @@ const Contact = () => {
                   <img src="/images/40-AdobeStock_365603381.jpeg" alt="Consultation gratuite" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" />
                   <div className="absolute inset-0 bg-blue-600/5 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </div>
-                <h3 className="mb-4 text-xl font-bold text-[#1e3a8a] group-hover:text-blue-600 transition-colors">
+                <h3 className="mb-4 text-xl font-bold text-[#3d6aab] group-hover:text-blue-600 transition-colors">
                   Demande de consultation
                 </h3>
                 <p className="body-pro-max text-sm mb-8 flex-grow text-slate-500 leading-relaxed font-light">
@@ -151,7 +151,7 @@ const Contact = () => {
                   </span>
                   En ligne : Réponse &lt; 15 min
                 </div>
-                <h3 className="mb-4 text-xl font-bold text-[#1e3a8a] group-hover:text-blue-600 transition-colors">
+                <h3 className="mb-4 text-xl font-bold text-[#3d6aab] group-hover:text-blue-600 transition-colors">
                   Support client & Entretien
                 </h3>
                 <p className="body-pro-max text-sm mb-8 flex-grow text-slate-500 leading-relaxed font-light">

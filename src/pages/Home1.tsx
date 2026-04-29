@@ -157,7 +157,7 @@ const Home1 = () => {
                             <h1 className="mb-6 animate-in fade-in slide-in-from-left duration-1000 tracking-tighter"
                                 style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif', fontSize: '50px', lineHeight: '55px' }}>
                                 <span className="italic font-light text-[#3d6aab] block">Bricareau,</span>
-                                <span className="font-bold text-[#1e3a8a] block">votre partenaire d'excellence.</span>
+                                <span className="font-bold text-[#3d6aab] block">votre partenaire d'excellence.</span>
                             </h1>
                             
                             <p className="max-w-xl animate-in fade-in slide-in-from-left duration-1000 delay-100 text-left text-slate-600 text-lg md:text-xl font-light leading-relaxed">
@@ -365,7 +365,7 @@ const Home1 = () => {
                         {/* Dot Pattern Background */}
                         <div
                             className="absolute top-0 left-0 w-80 h-80 opacity-50 -translate-x-12 -translate-y-12 z-0"
-                            style={{ backgroundImage: 'radial-gradient(#3b82f6 2px, transparent 2px)', backgroundSize: '12px 12px' }}
+                            style={{ backgroundImage: 'radial-gradient(#3d6aab 2px, transparent 2px)', backgroundSize: '12px 12px' }}
                         />
 
                         <div className="flex flex-col lg:flex-row relative">

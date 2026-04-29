@@ -279,9 +279,9 @@ const MachinesAGlaceEntreprises = () => {
                                     <thead>
                                         <tr className="bg-slate-50">
                                             <th className="p-10 text-xl font-bold text-slate-950 w-1/4">Caractéristiques</th>
-                                            <th className="p-10 text-center text-[#1e3a8a] text-lg font-bold">Élite Hydra</th>
-                                            <th className="p-10 text-center text-[#1e3a8a] text-lg font-bold">Atlas Cube</th>
-                                            <th className="p-10 text-center text-[#1e3a8a] text-lg font-bold">Zenith Bin</th>
+                                            <th className="p-10 text-center text-[#3d6aab] text-lg font-bold">Élite Hydra</th>
+                                            <th className="p-10 text-center text-[#3d6aab] text-lg font-bold">Atlas Cube</th>
+                                            <th className="p-10 text-center text-[#3d6aab] text-lg font-bold">Zenith Bin</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -325,7 +325,7 @@ const MachinesAGlaceEntreprises = () => {
                 <section className="py-32 bg-white relative">
                     <div className="container mx-auto px-6 text-center mb-20 space-y-6">
                         <h2 className="text-xs font-black uppercase tracking-[0.4em] text-blue-600 italic">Preuve Sociale</h2>
-                        <h3 className="heading-pro-max font-bold text-[#1e3a8a] block">Les leaders de l'industrie font confiance <br/>à l'expertise en eau de Bricareau.</h3>
+                        <h3 className="heading-pro-max font-bold text-[#3d6aab] block">Les leaders de l'industrie font confiance <br/>à l'expertise en eau de Bricareau.</h3>
                         <div className="flex flex-wrap items-center justify-center gap-12 opacity-40 grayscale pt-10">
                             {/* Placeholder Logos */}
                             <div className="font-serif text-3xl font-bold">CORPORATE</div>

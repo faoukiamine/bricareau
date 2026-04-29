@@ -469,47 +469,55 @@ const ConsultationFormSection = ({ id, isStandalone = false }: { id?: string, is
                             </div>
                         )}
 
-                        {/* Navigation Buttons */}
-                        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-6 border-t border-gray-100">
+                        <div className="flex flex-col sm:flex-row gap-6 sm:gap-4 pt-8 border-t border-gray-100">
                             <div className="flex gap-3 w-full sm:w-auto order-2 sm:order-1">
                                 {step > 1 && (
-                                    <Button
-                                        type="button"
-                                        variant="outline"
-                                        onClick={prevStep}
-                                        disabled={isNavigating || isSubmitting}
-                                        className="flex-1 sm:w-fit h-auto py-3.5 sm:py-4 rounded-full px-4 sm:px-8 border-gray-300 font-bold transition-all hover:bg-gray-50 active:scale-95 text-slate-600 text-sm sm:text-base"
-                                    >
-                                        <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5 mr-1 sm:mr-2" /> Retour
-                                    </Button>
+                                    <div className="relative inline-block w-full sm:w-auto group/back">
+                                        <div className="absolute inset-0 border border-slate-200 rounded-[2rem] -translate-x-[4px] translate-y-[4px] transition-transform group-hover/back:-translate-x-[2px] group-hover/back:translate-y-[2px]"></div>
+                                        <Button
+                                            type="button"
+                                            variant="outline"
+                                            onClick={prevStep}
+                                            disabled={isNavigating || isSubmitting}
+                                            className="relative w-full sm:w-fit h-14 px-8 bg-white hover:bg-slate-50 text-slate-600 rounded-[2rem] font-black uppercase tracking-widest text-[10px] transition-all border border-slate-200"
+                                        >
+                                            <ChevronLeft className="w-4 h-4 mr-2" /> Retour
+                                        </Button>
+                                    </div>
                                 )}
                             </div>
 
                             <div className="flex w-full sm:w-auto order-1 sm:order-2 sm:ml-auto">
                                 {step < 3 ? (
-                                    <Button
-                                        type="button"
-                                        onClick={nextStep}
-                                        disabled={isNavigating}
-                                        className="w-full sm:w-fit h-auto py-3.5 sm:py-4 rounded-full px-6 sm:px-10 bg-blue-600 text-white border-2 border-blue-600 text-sm sm:text-base font-bold transition-all hover:bg-white hover:text-blue-600 hover:shadow-lg hover:shadow-blue-200/50 hover:scale-105 active:scale-95"
-                                    >
-                                        Continuer <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 ml-1 sm:mr-2" />
-                                    </Button>
+                                    <div className="relative inline-block w-full sm:w-auto group">
+                                        <div className="absolute inset-0 border border-[#3d6aab] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                                        <Button
+                                            type="button"
+                                            onClick={nextStep}
+                                            disabled={isNavigating}
+                                            className="relative w-full sm:w-auto bg-[#3d6aab] hover:bg-white hover:text-[#3d6aab] text-white rounded-[2rem] h-14 px-10 font-black uppercase tracking-widest text-xs transition-all border-none"
+                                        >
+                                            Continuer <ChevronRight className="w-4 h-4 ml-2" />
+                                        </Button>
+                                    </div>
                                 ) : (
-                                    <Button
-                                        type="submit"
-                                        disabled={isSubmitting || isNavigating}
-                                        className="w-full sm:w-fit h-auto py-3.5 sm:py-4 rounded-full px-6 sm:px-10 bg-blue-600 text-white border-2 border-blue-600 text-sm sm:text-base font-bold transition-all hover:bg-white hover:text-blue-600 hover:shadow-lg hover:shadow-blue-200/50 hover:scale-105 active:scale-95"
-                                    >
-                                        {isSubmitting ? (
-                                            <>
-                                                <Loader2 className="mr-2 h-4 w-4 sm:h-5 sm:w-5 animate-spin" />
-                                                Envoi...
-                                            </>
-                                        ) : (
-                                            "Confirmer RDV"
-                                        )}
-                                    </Button>
+                                    <div className="relative inline-block w-full sm:w-auto group">
+                                        <div className="absolute inset-0 border border-[#3d6aab] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                                        <Button
+                                            type="submit"
+                                            disabled={isSubmitting || isNavigating}
+                                            className="relative w-full sm:w-auto bg-[#3d6aab] hover:bg-white hover:text-[#3d6aab] text-white rounded-[2rem] h-14 px-10 font-black uppercase tracking-widest text-xs transition-all border-none"
+                                        >
+                                            {isSubmitting ? (
+                                                <>
+                                                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                                                    Envoi...
+                                                </>
+                                            ) : (
+                                                "Confirmer RDV"
+                                            )}
+                                        </Button>
+                                    </div>
                                 )}
                             </div>
                         </div>

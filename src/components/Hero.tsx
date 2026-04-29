@@ -75,7 +75,7 @@ const Hero = ({
                 "inline-flex items-center gap-2 px-4 py-2 rounded-full border text-[10px] font-black uppercase tracking-[0.2em]",
                 liveStatus 
                   ? "bg-green-50 border-green-100 text-green-600" 
-                  : "bg-[#2563eb]/10 border-[#2563eb]/20 text-[#2563eb]"
+                  : "bg-[#3d6aab]/10 border-[#3d6aab]/20 text-[#3d6aab]"
               )}>
                 {liveStatus ? (
                   <span className="relative flex h-2 w-2">
@@ -83,7 +83,7 @@ const Hero = ({
                     <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
                   </span>
                 ) : (
-                  <span className="w-2 h-2 rounded-full bg-[#2563eb] animate-pulse" />
+                  <span className="w-2 h-2 rounded-full bg-[#3d6aab] animate-pulse" />
                 )}
                 {badge}
               </div>
@@ -98,8 +98,8 @@ const Hero = ({
                 fontStyle: 'normal'
               }}
             >
-              <span className={cn("italic font-light text-[#2563eb]", !singleLineTitle && "block")}>{highlightedTitle}</span>
-              <span className={cn("font-bold text-[#1e3a8a]", !singleLineTitle && "block")}>{singleLineTitle && " "}{mainTitle}</span>
+              <span className={cn("italic font-light text-[#3d6aab]", !singleLineTitle && "block")}>{highlightedTitle}</span>
+              <span className={cn("font-bold text-[#3d6aab]", !singleLineTitle && "block")}>{singleLineTitle && " "}{mainTitle}</span>
             </h1>
             
             <p 
@@ -124,25 +124,34 @@ const Hero = ({
               {subtitle}
             </p>
 
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-4 animate-in fade-in slide-in-from-left duration-1000 delay-200 w-full sm:w-auto">
-              <Button asChild className="w-full sm:w-fit h-auto py-4 px-8 rounded-full text-base font-bold whitespace-normal text-center leading-tight bg-[#2563eb] text-white hover:bg-white hover:text-[#2563eb] border-2 border-[#2563eb] group transition-all duration-300 shadow-lg shadow-blue-200 hover:shadow-blue-300">
-                <a href={ctaLink} className="inline-flex items-center justify-center gap-2">
-                  {ctaText}
-                  <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-                </a>
-              </Button>
-              
-              {showPhone && (
-                <Button
-                  variant="outline"
-                  asChild
-                  className="w-full sm:w-fit h-auto py-4 px-6 rounded-full text-base font-bold border-2 border-[#2563eb] text-[#2563eb] hover:bg-[#2563eb] hover:text-white transition-all transition-duration-300"
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-8 pt-6 animate-in fade-in slide-in-from-left duration-1000 delay-200 w-full sm:w-auto">
+              <div className="relative inline-block group w-full sm:w-auto">
+                <div className="absolute inset-0 border border-[#3d6aab] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                <Button 
+                  asChild 
+                  className="relative w-full sm:w-fit bg-[#3d6aab] hover:bg-white hover:text-[#3d6aab] text-white rounded-[2rem] h-16 px-12 font-black uppercase tracking-widest text-xs transition-all border-none"
                 >
-                  <a href="tel:18552649328" className="flex items-center justify-center gap-2">
-                    <Phone className="w-5 h-5 flex-shrink-0" />
-                    1-855-264-9328
+                  <a href={ctaLink} className="inline-flex items-center justify-center gap-2">
+                    {ctaText}
+                    <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-2" />
                   </a>
                 </Button>
+              </div>
+              
+              {showPhone && (
+                <div className="relative inline-block group w-full sm:w-auto">
+                  <div className="absolute inset-0 border border-[#3d6aab] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                  <Button
+                    variant="outline"
+                    asChild
+                    className="relative w-full sm:w-fit bg-white border-none text-[#3d6aab] hover:bg-[#3d6aab] hover:text-white rounded-[2rem] h-16 px-12 font-black uppercase tracking-widest text-xs transition-all"
+                  >
+                    <a href="tel:18552649328" className="flex items-center justify-center gap-2">
+                      <Phone className="w-5 h-5 flex-shrink-0" />
+                      1-855-264-9328
+                    </a>
+                  </Button>
+                </div>
               )}
             </div>
           </div>

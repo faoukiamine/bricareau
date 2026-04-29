@@ -90,8 +90,8 @@ const FiltreEauHauteEfficacite = () => {
                                     SYSTÈME DE FILTRATION D'EAU
                                 </span>
                                 <h1 className="leading-[1.1] md:leading-[1.2] mb-8 tracking-tighter text-slate-900 text-center">
-                                    <span className="italic font-light text-[#2563eb] block">Bricareau</span>
-                                    <span className="font-bold text-[#1e3a8a] block">High Efficiency (HE)</span>
+                                    <span className="italic font-light text-[#3d6aab] block">Bricareau</span>
+                                    <span className="font-bold text-[#3d6aab] block">High Efficiency (HE)</span>
                                 </h1>
                                 <p className="body-pro-max mb-8 text-center lg:text-justify max-w-xl mx-auto lg:mx-0">
                                     L'adoucisseur et filtre d'eau le plus efficace au monde. Profitez d'une eau d'une pureté absolue tout en réalisant des économies d'eau et de sel inégalées.
@@ -151,8 +151,8 @@ const FiltreEauHauteEfficacite = () => {
                         <div className="flex flex-col lg:flex-row items-center gap-16">
                             <div className="lg:w-1/2 order-2 lg:order-1">
                                 <h2 className="mb-8 heading-pro-max">
-                                    <span className="italic font-light text-[#2563eb] block text-left">Exclusivités</span>
-                                    <span className="font-bold text-[#1e3a8a] block text-left">technologiques de Bricareau</span>
+                                    <span className="italic font-light text-[#3d6aab] block text-left">Exclusivités</span>
+                                    <span className="font-bold text-[#3d6aab] block text-left">technologiques de Bricareau</span>
                                 </h2>
                                 <div className="space-y-8">
                                     <div className="p-8 bg-white rounded-3xl shadow-sm border border-slate-100">
@@ -190,8 +190,8 @@ const FiltreEauHauteEfficacite = () => {
                 <section className="py-24 bg-white">
                     <div className="container mx-auto px-6 text-center">
                         <h2 className="mb-8 heading-pro-max">
-                            <span className="italic font-light text-[#2563eb] block">Filtration intelligente qui</span>
-                            <span className="font-bold text-[#1e3a8a] block">améliore votre vie au quotidien</span>
+                            <span className="italic font-light text-[#3d6aab] block">Filtration intelligente qui</span>
+                            <span className="font-bold text-[#3d6aab] block">améliore votre vie au quotidien</span>
                         </h2>
                          <p className="body-pro-max text-slate-500 text-center mx-auto">
                              Plus qu'un simple filtre, c'est une protection complète pour votre santé et votre maison.
@@ -278,8 +278,8 @@ const FiltreEauHauteEfficacite = () => {
                             </div>
                             <div className="lg:w-1/2 text-left">
                                 <h2 className="mb-8 heading-pro-max">
-                                    <span className="italic font-light text-[#2563eb] block text-left">Le choix intelligent</span>
-                                    <span className="font-bold text-[#1e3a8a] block text-left">pour votre maison.</span>
+                                    <span className="italic font-light text-[#3d6aab] block text-left">Le choix intelligent</span>
+                                    <span className="font-bold text-[#3d6aab] block text-left">pour votre maison.</span>
                                 </h2>
                                 <div className="space-y-6">
                                     {[
@@ -313,8 +313,8 @@ const FiltreEauHauteEfficacite = () => {
                 <section className="py-24 bg-slate-50">
                     <div className="container mx-auto px-6 text-center">
                         <h2 className="mb-16 heading-pro-max text-center">
-                            <span className="italic font-light text-[#2563eb] block text-center">Plan d'entretien et</span>
-                            <span className="font-bold text-[#1e3a8a] block text-center">tranquillité d'esprit</span>
+                            <span className="italic font-light text-[#3d6aab] block text-center">Plan d'entretien et</span>
+                            <span className="font-bold text-[#3d6aab] block text-center">tranquillité d'esprit</span>
                         </h2>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
                             {[
@@ -344,8 +344,8 @@ const FiltreEauHauteEfficacite = () => {
                 <section className="py-24 bg-white">
                     <div className="container mx-auto px-6">
                         <h2 className="mb-16 heading-pro-max text-center">
-                            <span className="italic font-light text-[#2563eb] block">Pourquoi choisir le</span>
-                            <span className="font-bold text-[#1e3a8a] block">Bricareau HE ?</span>
+                            <span className="italic font-light text-[#3d6aab] block">Pourquoi choisir le</span>
+                            <span className="font-bold text-[#3d6aab] block">Bricareau HE ?</span>
                         </h2>
                         <div className="overflow-x-auto rounded-[3rem] border border-slate-100 shadow-xl bg-white">
                             <table className="w-full min-w-[800px]">
@@ -386,8 +386,8 @@ const FiltreEauHauteEfficacite = () => {
                     <div className="container mx-auto px-6">
                         <div className="max-w-4xl mx-auto text-center">
                             <h2 className="mb-8 heading-pro-max text-center">
-                                <span className="italic font-light text-[#2563eb] block text-center">Installation.</span>
-                                <span className="font-bold text-[#1e3a8a] block text-center">Tranquille.</span>
+                                <span className="italic font-light text-[#3d6aab] block text-center">Installation.</span>
+                                <span className="font-bold text-[#3d6aab] block text-center">Tranquille.</span>
                             </h2>
                              <p className="body-pro-max text-slate-600 text-justify mb-16 max-w-2xl mx-auto">
                                  Nos techniciens certifiés Bricareau ne se contentent pas d'installer votre système. Ils s'assurent qu'il fonctionne à son plein potentiel pour des années de service fiable.
@@ -414,8 +414,8 @@ const FiltreEauHauteEfficacite = () => {
                 <section className="py-24 bg-white">
                     <div className="container mx-auto px-6 max-w-4xl">
                         <h2 className="mb-16 heading-pro-max text-center">
-                            <span className="italic font-light text-[#2563eb] block text-center">Questions</span>
-                            <span className="font-bold text-[#1e3a8a] block text-center">fréquemment posées</span>
+                            <span className="italic font-light text-[#3d6aab] block text-center">Questions</span>
+                            <span className="font-bold text-[#3d6aab] block text-center">fréquemment posées</span>
                         </h2>
                         <Accordion type="single" collapsible className="w-full">
                             {[
@@ -450,8 +450,8 @@ const FiltreEauHauteEfficacite = () => {
                     title={
                         <>
                              <h2 className="mb-8 heading-pro-max text-center">
-                                <span className="italic font-light text-[#2563eb] block">L'eau pure,</span>
-                                <span className="font-bold text-[#1e3a8a] block">le témoignage de nos clients.</span>
+                                <span className="italic font-light text-[#3d6aab] block">L'eau pure,</span>
+                                <span className="font-bold text-[#3d6aab] block">le témoignage de nos clients.</span>
                             </h2>
                         </>
                     }
@@ -463,8 +463,8 @@ const FiltreEauHauteEfficacite = () => {
                         <div className="bg-white rounded-[4rem] shadow-2xl flex flex-col lg:flex-row items-center overflow-hidden">
                             <div className="lg:w-1/2 p-12 lg:p-24 text-left">
                                 <h2 className="mb-8 heading-pro-max text-left">
-                                    <span className="italic font-light text-[#2563eb] block text-left">Offrez-vous le confort</span>
-                                    <span className="font-bold text-[#1e3a8a] block text-left">que vous méritez.</span>
+                                    <span className="italic font-light text-[#3d6aab] block text-left">Offrez-vous le confort</span>
+                                    <span className="font-bold text-[#3d6aab] block text-left">que vous méritez.</span>
                                 </h2>
                                  <p className="body-pro-max text-slate-600 text-justify mb-12">
                                      Plus de 11 millions de familles font confiance à Bricareau. Rejoignez-les dès aujourd'hui et transformez votre quotidien.
@@ -488,8 +488,8 @@ const FiltreEauHauteEfficacite = () => {
                 <section className="py-24 bg-white border-t border-slate-100">
                     <div className="container mx-auto px-6">
                         <h2 className="mb-8 heading-pro-max text-center">
-                            <span className="italic font-light text-[#2563eb] block">Découvrez d'autres</span>
-                            <span className="font-bold text-[#1e3a8a] block">solutions</span>
+                            <span className="italic font-light text-[#3d6aab] block">Découvrez d'autres</span>
+                            <span className="font-bold text-[#3d6aab] block">solutions</span>
                         </h2>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {[

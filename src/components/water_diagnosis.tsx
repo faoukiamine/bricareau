@@ -13,8 +13,8 @@ const WaterDiagnosis = () => {
                         <div className="space-y-10">
                             <div className="space-y-6">
                                 <h2 className="heading-pro-max text-left">
-                                    <span className="italic font-light text-[#2563eb]">Votre solution d'eau personnalisée </span>
-                                    <span className="font-bold text-[#1e3a8a]">en quelques clics.</span>
+                                    <span className="italic font-light text-[#3d6aab]">Votre solution d'eau personnalisée </span>
+                                    <span className="font-bold text-[#3d6aab]">en quelques clics.</span>
                                 </h2>
                                 <p 
                                     className="max-w-lg text-left lg:text-justify text-[16px] md:text-[18px] lg:text-[20px] leading-snug font-light text-slate-600"

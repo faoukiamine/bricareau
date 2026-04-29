@@ -17,7 +17,7 @@ const ExpertAvatars = () => {
   return (
     <div className="flex -space-x-4">
       {avatars.map((avatar, i) => (
-        <div key={i} className="w-12 h-12 rounded-full border-4 border-[#1e3a8a] bg-blue-400 overflow-hidden shadow-xl">
+        <div key={i} className="w-12 h-12 rounded-full border-4 border-[#3d6aab] bg-blue-400 overflow-hidden shadow-xl">
           <img 
             src={avatar.src} 
             alt="Expert" 
@@ -25,7 +25,7 @@ const ExpertAvatars = () => {
           />
         </div>
       ))}
-      <div className="w-12 h-12 rounded-full border-4 border-[#1e3a8a] bg-white flex items-center justify-center text-blue-900 font-bold text-xs shadow-xl">
+      <div className="w-12 h-12 rounded-full border-4 border-[#3d6aab] bg-white flex items-center justify-center text-blue-900 font-bold text-xs shadow-xl">
         4.9/5
       </div>
     </div>

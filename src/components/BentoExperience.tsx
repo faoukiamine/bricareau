@@ -23,8 +23,8 @@ const BentoExperience = () => {
                             fontStyle: 'normal'
                         }}
                     >
-                        <span className="italic font-light text-[#2563eb] block text-center">La promesse d'une eau saine,</span>
-                        <span className="font-bold text-[#1e3a8a] block text-center">de notre rencontre à votre confort.</span>
+                        <span className="italic font-light text-[#3d6aab] block text-center">La promesse d'une eau saine,</span>
+                        <span className="font-bold text-[#3d6aab] block text-center">de notre rencontre à votre confort.</span>
                     </h2>
                     <p className="text-[14px] md:text-[16px] xl:text-[18px] leading-relaxed text-slate-400 max-w-2xl mx-auto mb-10 font-normal">
                         La promesse d'une eau saine, de notre rencontre à votre confort. Parce que la santé de votre foyer ne supporte aucune approximation, nous avons bâti un protocole rigoureux.

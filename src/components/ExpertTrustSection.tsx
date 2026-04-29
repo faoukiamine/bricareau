@@ -34,8 +34,8 @@ const ExpertTrustSection = () => {
                         <div className="space-y-12">
                             <div className="space-y-6">
                                 <h2 className="heading-pro-max text-left">
-                                    <span className="italic font-light text-[#2563eb]">Votre eau mérite un expert, </span>
-                                    <span className="font-bold text-[#1e3a8a]">pas un doute.</span>
+                                    <span className="italic font-light text-[#3d6aab]">Votre eau mérite un expert, </span>
+                                    <span className="font-bold text-[#3d6aab]">pas un doute.</span>
                                 </h2>
                                 <p
                                     className="max-w-xl text-left lg:text-justify"

@@ -104,8 +104,8 @@ const AdoucisseursPortables = () => {
                             L'Expérience Nomade Bricareau
                         </span>
                         <h2 className="heading-pro-max text-center mb-8">
-                            <span className="italic font-light text-[#2563eb] block">Une eau parfaite,</span>
-                            <span className="font-bold text-[#1e3a8a] block">kilomètre après kilomètre.</span>
+                            <span className="italic font-light text-[#3d6aab] block">Une eau parfaite,</span>
+                            <span className="font-bold text-[#3d6aab] block">kilomètre après kilomètre.</span>
                         </h2>
                         <p className="text-slate-500 font-light text-xl leading-relaxed max-w-2xl mx-auto">
                             Que vous exploriez les routes dans un VR de luxe ou que vous profitiez du calme d'un chalet isolé, nos solutions portables redéfinissent le confort en voyage.
@@ -132,7 +132,7 @@ const AdoucisseursPortables = () => {
                                 ))}
                             </div>
                             {/* Glassmorphic Overlay */}
-                            <div className="absolute inset-0 bg-gradient-to-t from-[#1e3a8a]/90 via-[#1e3a8a]/40 to-transparent" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-[#3d6aab]/90 via-[#3d6aab]/40 to-transparent" />
                             
                             {/* Floating intelligence chip */}
                             <div className="absolute top-8 left-8 z-20 backdrop-blur-md bg-white/10 border border-white/20 p-6 rounded-[2rem] max-w-[280px] hidden md:block">
@@ -180,7 +180,7 @@ const AdoucisseursPortables = () => {
                         {/* Right Stacked Column */}
                         <div className="md:col-span-12 lg:col-span-5 grid grid-cols-1 gap-8">
                             {/* Card 2: Plug & Play (Top Right) */}
-                            <div className="group relative bg-[#1e3a8a] rounded-[3rem] p-10 md:p-12 overflow-hidden shadow-2xl shadow-blue-900/20 transition-all duration-700 hover:-translate-y-2 min-h-[400px] flex flex-col">
+                            <div className="group relative bg-[#3d6aab] rounded-[3rem] p-10 md:p-12 overflow-hidden shadow-2xl shadow-blue-900/20 transition-all duration-700 hover:-translate-y-2 min-h-[400px] flex flex-col">
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 rounded-full -mr-16 -mt-16 blur-3xl group-hover:bg-blue-400/20 transition-colors" />
                                 <div className="relative z-10 flex flex-col h-full">
                                     <div className="w-14 h-14 rounded-2xl bg-white/10 backdrop-blur-xl flex items-center justify-center mb-8 border border-white/20 group-hover:scale-110 transition-transform">
@@ -214,7 +214,7 @@ const AdoucisseursPortables = () => {
                                         <img src={boatBusIcon} alt="Boat & Bus Icon" className="h-7 w-7 filter brightness-0 invert" />
                                     </div>
                                     <span className="text-blue-600 font-bold text-xs uppercase tracking-[0.2em]">Actifs Préservés</span>
-                                    <h3 className="text-2xl font-bold text-[#1e3a8a] mt-3 mb-4">Protection Maximale</h3>
+                                    <h3 className="text-2xl font-bold text-[#3d6aab] mt-3 mb-4">Protection Maximale</h3>
                                     <p className="text-slate-500 font-light text-lg leading-relaxed">
                                         Élimine le calcaire qui réduit l'efficacité de vos tuyauteries et appareils de voyage. Longue vie à votre confort.
                                     </p>
@@ -257,8 +257,8 @@ const AdoucisseursPortables = () => {
                             NOTRE FONCTIONNEMENT
                         </span>
                         <h2 className="mb-8 text-center heading-pro-max">
-                            <span className="italic font-light text-[#2563eb] block">Un service simple</span>
-                            <span className="font-bold text-[#1e3a8a] block">& sans souci.</span>
+                            <span className="italic font-light text-[#3d6aab] block">Un service simple</span>
+                            <span className="font-bold text-[#3d6aab] block">& sans souci.</span>
                         </h2>
                         
                         <p className="text-slate-500 font-light text-lg max-w-2xl mx-auto leading-relaxed">
@@ -332,8 +332,8 @@ const AdoucisseursPortables = () => {
             title={
                 <>
                 <h2 className="mb-8 heading-pro-max text-center">
-                    <span className="italic font-light text-[#2563eb] block">L’eau pure comme standard.</span>
-                    <span className="font-bold text-[#1e3a8a] block">Le service comme signature.</span>
+                    <span className="italic font-light text-[#3d6aab] block">L’eau pure comme standard.</span>
+                    <span className="font-bold text-[#3d6aab] block">Le service comme signature.</span>
                 </h2>
                 </>
             }
@@ -344,7 +344,7 @@ const AdoucisseursPortables = () => {
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-16">
                         <h2 className="mb-8 heading-pro-max text-center">                                
-                                <span className="font-bold text-[#1e3a8a] block">Découvrez les produits associés</span>
+                                <span className="font-bold text-[#3d6aab] block">Découvrez les produits associés</span>
                              </h2>
                         <p className="font-light text-gray-500 max-w-2xl mx-auto text-center">
                             Optimisez votre expérience de traitement d'eau avec nos solutions complémentaires.
@@ -414,16 +414,16 @@ const AdoucisseursPortables = () => {
                         <div className="pointer-events-auto group/sticky">
                           <Button
                             asChild
-                            className="bg-white hover:-translate-y-2 transition-all duration-10000 active:scale-95"
+                            className="bg-white hover:-translate-y-2 active:scale-95 transition-all duration-300 shadow-2xl"
                             style={{ backdropFilter: "blur(20px)" }}
                           >
                             <a href="/consultation" className="flex items-center gap-4 animate-bounce" style={{ animationDuration: '3s' }}>
                               <span className="font-bold text-sm tracking-wider text-blue-600 whitespace-nowrap text-center">
                                 Réservez votre <br />consultation gratuite
                               </span>
-                              <div className="w-10 h-10 bg-[#2563eb] rounded-full flex items-center justify-center text-white group-hover/sticky:rotate-[360deg] shadow-lg shadow-blue-200">
-                                  <ArrowRight className="w-5 h-5" />
-                                </div>
+                              <div className="w-10 h-10 bg-[#3d6aab] rounded-full flex items-center justify-center text-white group-hover/sticky:rotate-[360deg] shadow-lg shadow-blue-200">
+                                <ArrowRight className="w-5 h-5" />
+                              </div>
                             </a>
                           </Button>
                         </div>

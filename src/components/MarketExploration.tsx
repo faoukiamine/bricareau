@@ -10,8 +10,8 @@ const MarketExploration = () => {
                     <h2
                         className="heading-pro-max text-center"
                     >
-                        <span className="italic font-light text-[#2563eb] block">Explore More</span>
-                        <span className="font-bold text-[#1e3a8a] block">Solutions</span>
+                        <span className="italic font-light text-[#3d6aab] block">Explore More</span>
+                        <span className="font-bold text-[#3d6aab] block">Solutions</span>
                     </h2>
                 </div>
 

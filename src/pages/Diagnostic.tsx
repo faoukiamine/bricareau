@@ -36,8 +36,8 @@ const Diagnostic = () => {
                                 fontStyle: 'normal'
                             }}
                         >
-                            <span className="italic font-light text-[#2563eb] block">Découvrez la solution</span>
-                            <span className="font-bold text-[#1e3a8a] block text-center">parfaite pour votre eau.</span>
+                            <span className="italic font-light text-[#3d6aab] block">Découvrez la solution</span>
+                            <span className="font-bold text-[#3d6aab] block text-center">parfaite pour votre eau.</span>
                         </h1>
 
                         <p 

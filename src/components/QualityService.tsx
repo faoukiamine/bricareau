@@ -72,8 +72,8 @@ const QualityService = () => {
                                 className="border-border hover:shadow-lg transition-shadow bg-white"
                             >
                                 <CardContent className="p-8 space-y-4">
-                                    <div className="w-14 h-14 rounded-lg bg-[#2563EB]/10 flex items-center justify-center">
-                                        <Icon className="h-7 w-7 text-[#2563EB]" />
+                                    <div className="w-14 h-14 rounded-lg bg-[#3d6aab]/10 flex items-center justify-center">
+                                        <Icon className="h-7 w-7 text-[#3d6aab]" />
                                     </div>
                                     <h3 className="text-foreground">
                                         {feature.title}
@@ -84,7 +84,7 @@ const QualityService = () => {
                                     <ul className="space-y-2 pt-2">
                                         {feature.points.map((point, idx) => (
                                             <li key={idx} className="flex items-start gap-2 text-sm text-foreground">
-                                                <CheckCircle2 className="h-5 w-5 text-[#2563EB] shrink-0 mt-0.5" />
+                                                <CheckCircle2 className="h-5 w-5 text-[#3d6aab] shrink-0 mt-0.5" />
                                                 <span>{point}</span>
                                             </li>
                                         ))}

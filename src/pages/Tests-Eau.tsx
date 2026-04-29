@@ -220,7 +220,7 @@ const TestsEauPage = () => {
                           Priorité : {item.benefit}
                         </span>
                       </div>
-                      <h3 className="text-3xl font-bold text-[#1e3a8a] leading-[1.1] transition-all duration-500 group-hover:translate-x-2">
+                      <h3 className="text-3xl font-bold text-[#3d6aab] leading-[1.1] transition-all duration-500 group-hover:translate-x-2">
                         {item.title}
                       </h3>
                       <p className="body-pro-max text-sm leading-relaxed text-slate-600 opacity-80 group-hover:opacity-100 transition-opacity">
@@ -237,7 +237,7 @@ const TestsEauPage = () => {
                   </div>
 
                   {/* Hover Overlay CTA */}
-                  <div className="absolute inset-0 bg-[#1e3a8a]/95 z-20 opacity-0 group-hover:opacity-100 transition-all duration-700 flex flex-col items-center justify-center p-8 space-y-6 translate-y-full group-hover:translate-y-0 text-center">
+                  <div className="absolute inset-0 bg-[#3d6aab]/95 z-20 opacity-0 group-hover:opacity-100 transition-all duration-700 flex flex-col items-center justify-center p-8 space-y-6 translate-y-full group-hover:translate-y-0 text-center">
                     <div className="text-center">
                       <p className="text-white/60 text-[10px] font-black uppercase tracking-[0.2em] mb-2 italic">Diagnostic Rapide</p>
                       <h4 className="text-white text-2xl font-bold leading-tight px-6">Réserver cette analyse spécifique</h4>
@@ -262,8 +262,8 @@ const TestsEauPage = () => {
                  </span>
               </span>
               <h2 className="mb-8 heading-pro-max text-center">
-                <span className="italic font-light text-[#2563eb] block text-center">Quelle trousse d'analyse</span>
-                <span className="font-bold text-[#1e3a8a] block text-center">choisir pour votre eau ?</span>
+                <span className="italic font-light text-[#3d6aab] block text-center">Quelle trousse d'analyse</span>
+                <span className="font-bold text-[#3d6aab] block text-center">choisir pour votre eau ?</span>
               </h2>
               <p className="body-pro-max max-w-2xl mx-auto text-center">
                 Des solutions adaptées à vos besoins, de la vérification bactérienne de base au bilan complet pour une tranquillité d'esprit totale.
@@ -375,7 +375,7 @@ const TestsEauPage = () => {
 
 
         {/* 11. PREMIUM CTA SECTION - REBUILT FOR IMPACT */}
-        <section className="relative py-32 flex items-center overflow-hidden bg-[#1e3a8a]">
+        <section className="relative py-32 flex items-center overflow-hidden bg-[#3d6aab]">
           {/* Animated background elements */}
           <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-blue-600/20 to-transparent skew-x-12 translate-x-1/4" />
           <div className="absolute bottom-0 left-0 w-1/2 h-full bg-gradient-to-r from-cyan-400/10 to-transparent -skew-x-12 -translate-x-1/4" />
@@ -387,7 +387,7 @@ const TestsEauPage = () => {
               alt="Expert Bricareau analysant vos options de filtration"
               className="w-full h-full object-cover grayscale brightness-150"
             />
-            <div className="absolute inset-0 bg-[#1e3a8a]/10 backdrop-blur-sm" />
+            <div className="absolute inset-0 bg-[#3d6aab]/10 backdrop-blur-sm" />
           </div>
 
           <div className="container mx-auto px-6 relative z-10">
@@ -404,19 +404,30 @@ const TestsEauPage = () => {
                   Planifier une analyse d’eau professionnelle et recevoir un rapport clair avec recommandations. Un spécialiste vous contactera pour discuter des résultats et, au besoin, vous proposer un plan de traitement adapté à votre maison.                </p>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-4">
-                <Button asChild>
-                  <a href="tel:18552649328" className="flex items-center gap-3">
-                    <Phone className="h-5 w-5 animate-bounce" />
-                    Parlez à un expert
-                  </a>
-                </Button>
-                <Button
-                  variant="outline"
-                  asChild
-                >
-                  <NavLink to="/consultation">Planifiez une consultation</NavLink>
-                </Button>
+              <div className="flex flex-col sm:flex-row gap-8 justify-center items-center pt-4">
+                <div className="relative inline-block w-full sm:w-auto group">
+                  <div className="absolute inset-0 border border-white rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                  <Button 
+                    asChild
+                    className="relative bg-white text-[#3d6aab] hover:bg-white/90 hover:text-[#3d6aab] rounded-[2rem] h-16 px-12 font-black uppercase tracking-widest text-xs transition-all border-none w-full sm:w-auto"
+                  >
+                    <a href="tel:18552649328" className="flex items-center gap-3">
+                      <Phone className="h-5 w-5 animate-bounce" />
+                      Parlez à un expert
+                    </a>
+                  </Button>
+                </div>
+
+                <div className="relative inline-block w-full sm:w-auto group">
+                  <div className="absolute inset-0 border border-white/30 rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                  <Button
+                    variant="outline"
+                    asChild
+                    className="relative bg-transparent border border-white/50 text-white hover:bg-white hover:text-[#3d6aab] rounded-[2rem] h-16 px-12 font-black uppercase tracking-widest text-xs transition-all w-full sm:w-auto"
+                  >
+                    <NavLink to="/consultation">Planifiez une consultation</NavLink>
+                  </Button>
+                </div>
               </div>
 
               <div className="pt-8 flex flex-col items-center gap-4">
@@ -435,8 +446,8 @@ const TestsEauPage = () => {
           <div className="container mx-auto px-4 text-left">
             <div className="text-left mb-20">
                              <h2 className="mb-8 heading-pro-max text-left">
-                                <span className="italic font-light text-[#2563eb] block">Pour vous éclairer</span>
-                                <span className="font-bold text-[#1e3a8a] block">Questions fréquentes</span>
+                                <span className="italic font-light text-[#3d6aab] block">Pour vous éclairer</span>
+                                <span className="font-bold text-[#3d6aab] block">Questions fréquentes</span>
                             </h2>
               <div className="w-24 h-1 bg-blue-600"></div>
             </div>
@@ -499,12 +510,15 @@ const TestsEauPage = () => {
                 ))}
               </Accordion>
               <div className="mt-20 text-center">
-                <Button
-                  onClick={() => setShowAllFaqs(!showAllFaqs)}
-                  size="lg"
-                >
-                  {showAllFaqs ? "Voir moins de questions" : "Voir toutes les questions"}
-                </Button>
+                <div className="relative inline-block group">
+                  <div className="absolute inset-0 border border-[#3d6aab] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                  <Button
+                    onClick={() => setShowAllFaqs(!showAllFaqs)}
+                    className="relative bg-[#3d6aab] hover:bg-white hover:text-[#3d6aab] text-white rounded-[2rem] h-14 px-10 font-black uppercase tracking-widest text-[11px] transition-all border-none"
+                  >
+                    {showAllFaqs ? "Voir moins de questions" : "Voir toutes les questions"}
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
@@ -515,22 +529,22 @@ const TestsEauPage = () => {
           <WaterTestFormSection id="water-test" />
         </section>
 
-        {/* Floating Sticky CTA - Phase III Conversion Focus */}
             <div className="hidden md:block fixed bottom-8 right-8 z-[100] animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-[3s] pointer-events-none">
-              <div className="pointer-events-auto group/sticky">
+              <div className="pointer-events-auto group/sticky relative">
+                <div className="absolute inset-0 border border-[#3d6aab] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover/sticky:-translate-x-[3px] group-hover/sticky:translate-y-[3px]"></div>
                 <Button
                   asChild
-                  className="bg-white hover:-translate-y-2 transition-all duration-10000 active:scale-95"
+                  className="relative bg-white hover:bg-white text-[#3d6aab] rounded-[2rem] h-20 px-8 transition-all duration-300 shadow-2xl border-none"
                   style={{ backdropFilter: "blur(20px)" }}
                 >
                   <a href="/consultation" className="flex items-center gap-4 animate-bounce" style={{ animationDuration: '3s' }}>
-                    <span className="font-bold text-sm tracking-wider text-blue-600 whitespace-nowrap text-center">
+                    <span className="font-black text-xs uppercase tracking-[0.2em] text-[#3d6aab] whitespace-nowrap text-center leading-tight">
                       Réservez votre <br />consultation gratuite
                     </span>
-                    <div className="w-10 h-10 bg-[#2563eb] rounded-full flex items-center justify-center text-white group-hover/sticky:rotate-[360deg] shadow-lg shadow-blue-200">
+                    <div className="w-10 h-10 bg-[#3d6aab] rounded-full flex items-center justify-center text-white group-hover/sticky:rotate-[360deg] shadow-lg shadow-blue-200 transition-transform duration-700">
                       <ArrowRight className="w-5 h-5" />
                     </div>
-                            </a>
+                  </a>
                 </Button>
               </div>
             </div>

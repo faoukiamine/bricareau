@@ -75,13 +75,11 @@ const OurProcess = () => {
                             <h1 className="text-5xl md:text-[6rem] leading-[1] font-black text-white uppercase tracking-tighter">
                                 NOTRE PROCESSUS
                             </h1>
-                            <Button 
-                                size="lg" 
-                                className="bg-[#0052ff] hover:bg-blue-700 text-white px-12 h-14 rounded-full text-[11px] font-black transition-all shadow-2xl uppercase tracking-widest"
-                                onClick={() => navigate("/contact")}
-                            >
-                                DEMANDER UNE CONSULTATION
-                            </Button>
+                             <Button 
+                                 onClick={() => navigate("/contact")}
+                             >
+                                 DEMANDER UNE CONSULTATION
+                             </Button>
                         </div>
                     </div>
                 </section>
@@ -162,7 +160,8 @@ const OurProcess = () => {
                             Laissez-nous vous aider à trouver la solution adaptée.
                         </h2>
                         <Button 
-                            className="bg-white text-slate-900 hover:bg-[#0052ff] hover:text-white h-16 px-12 rounded-full font-black uppercase tracking-widest text-[11px] transition-all"
+                            variant="outline"
+                            className="bg-white text-slate-900"
                             onClick={() => navigate("/contact")}
                         >
                             PLANIFIER UNE CONSULTATION
@@ -178,7 +177,7 @@ const OurProcess = () => {
                         title={
                             <div className="text-center space-y-3 mb-16 px-6">
                                 <span className="italic font-light text-[#0052ff] block text-2xl md:text-3xl">La qualité de service avant tout.</span>
-                                <span className="font-bold text-[#1e3a8a] block text-4xl md:text-6xl tracking-tighter uppercase leading-none">RÉSULTATS PROUVÉS</span>
+                                <span className="font-bold text-[#3d6aab] block text-4xl md:text-6xl tracking-tighter uppercase leading-none">RÉSULTATS PROUVÉS</span>
                             </div>
                         }
                     />

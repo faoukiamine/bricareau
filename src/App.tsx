@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import CookieConsent from "./components/CookieConsent";
 import Home from "./pages/Home";
+import Industriel from "./pages/Industriel";
 import Services from "./pages/Adoucisseurs-portables";
 import ContactResidentiel from "./pages/ContactResidentiel";
 import ContactEntreprises from "./pages/ContactEntreprises";
@@ -97,6 +98,7 @@ import DesabonnementSucces from "./pages/DesabonnementSucces";
 
 import ResidentialServices from "./pages/ResidentialServices";
 import HotellerieRestauration from "./pages/HotellerieRestauration";
+import A1 from "./pages/A1";
 import Bureau from "./pages/Bureau";
 import WhyChooseUs from "./pages/WhyChooseUs";
 import Sustainability from "./pages/Sustainability";
@@ -177,6 +179,7 @@ const App = () => (
           <Route path="/contact-residentiel" element={<ContactResidentiel />} />
           <Route path="/contact-entreprises" element={<ContactEntreprises />} />
           <Route path="/service" element={<ServicesTraitementEau />} />
+          <Route path="/services-de-traitement-eau" element={<ServicesTraitementEau />} />
 
           <Route path="/pieces" element={<Pieces />} />
           <Route path="/manuels" element={<Manuels />} />
@@ -184,11 +187,13 @@ const App = () => (
           <Route path="/faq" element={<FAQ />} />
           <Route path="/entreprises" element={<Entreprises />} />
           <Route path="/commercial-industriel" element={<CommercialIndustriel />} />
+          <Route path="/industriel" element={<Industriel />} />
           <Route path="/promotions" element={<Promotions />} />
           <Route path="/politique-de-confidentialite" element={<PolitiqueConfidentialite />} />
           <Route path="/conditions-generales-utilisation" element={<ConditionsGeneralesUtilisation />} />
           <Route path="/desabonnement" element={<Desabonnement />} />
           <Route path="/desabonnement-succes" element={<DesabonnementSucces />} />
+          <Route path="/A1" element={<A1 />} />
 
 
           {/* Blog Routes */}

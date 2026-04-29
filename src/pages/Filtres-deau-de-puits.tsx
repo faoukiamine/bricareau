@@ -263,7 +263,7 @@ const FiltresPuits = () => {
                             <div className="w-full max-w-[750px] px-6 sm:px-12 lg:px-16 xl:px-24 py-24 lg:py-32">
                                 <div className="space-y-12">
                                     <div className="space-y-6">
-                                        <h2 className="mb-8 heading-pro-max text-left text-[#1e3a8a]">
+                                        <h2 className="mb-8 heading-pro-max text-left text-[#3d6aab]">
                                             <span className="italic font-light block">Votre puits possède</span>
                                             <span className="font-bold block">son propre ADN.</span>
                                         </h2>
@@ -317,8 +317,8 @@ const FiltresPuits = () => {
                                 DIAGNOSTIC AUTOMATIQUE
                             </span>
                             <h2 className="heading-pro-max">
-                                <span className="italic font-light text-[#2563eb] block">Quel problème d'eau</span>
-                                <span className="font-bold text-[#1e3a8a] block text-center">de puits vivez-vous au quotidien ?</span>
+                                <span className="italic font-light text-[#3d6aab] block">Quel problème d'eau</span>
+                                <span className="font-bold text-[#3d6aab] block text-center">de puits vivez-vous au quotidien ?</span>
                             </h2>
                         </div>
 
@@ -406,7 +406,7 @@ const FiltresPuits = () => {
                                                     Cause identifiée : {s.cause}
                                                 </span>
                                             </div>
-                                            <h3 className="text-3xl font-black text-[#1e3a8a] leading-[1.1] tracking-tight">
+                                            <h3 className="text-3xl font-black text-[#3d6aab] leading-[1.1] tracking-tight">
                                                 {s.problem}
                                             </h3>
                                             <p className="text-sm font-light text-slate-600 leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-700 delay-100">
@@ -444,8 +444,8 @@ const FiltresPuits = () => {
                     <div className="container mx-auto px-6">
                         <div className="text-left mb-16">
                             <h2 className="mb-8 heading-pro-max text-left">
-                                <span className="italic font-light text-[#2563eb] block text-left">Nos filtres d'eau</span>
-                                <span className="font-bold text-[#1e3a8a] block text-left">spécialisés - Eau de puits</span>
+                                <span className="italic font-light text-[#3d6aab] block text-left">Nos filtres d'eau</span>
+                                <span className="font-bold text-[#3d6aab] block text-left">spécialisés - Eau de puits</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                             <p className="body-pro-max mt-8 text-justify w-full">
@@ -516,8 +516,8 @@ const FiltresPuits = () => {
                                 L'EXCELLENCE BRICAREAU
                             </span>
                             <h2 className="mb-12 heading-pro-max text-center">
-                                <span className="italic font-light text-[#2563eb] block">Pourquoi choisir nos</span>
-                                <span className="font-bold text-[#1e3a8a] block text-center">systèmes de filtration d'eau ?</span>
+                                <span className="italic font-light text-[#3d6aab] block">Pourquoi choisir nos</span>
+                                <span className="font-bold text-[#3d6aab] block text-center">systèmes de filtration d'eau ?</span>
                             </h2>
                              <p className="body-pro-max text-slate-500 text-center mx-auto">
                                  Plus qu'un simple système de filtration, c'est une protection avancée pour votre santé et un confort durable pour toute votre famille.
@@ -564,7 +564,7 @@ const FiltresPuits = () => {
                                                     <div className={`w-2.5 h-2.5 rounded-full bg-blue-600 shadow-[0_0_15px_rgba(37,99,235,0.4)] ${isTop ? 'scale-150 animate-pulse' : 'scale-100'} transition-all`} />
                                                 </div>
                                                 <div className="space-y-4">
-                                                    <h3 className={`text-2xl font-bold transition-all duration-500 ${isTop ? 'text-blue-600' : 'text-[#1e3a8a] group-hover:text-blue-400'}`}>
+                                                    <h3 className={`text-2xl font-bold transition-all duration-500 ${isTop ? 'text-blue-600' : 'text-[#3d6aab] group-hover:text-blue-400'}`}>
                                                         {feature.title}
                                                     </h3>
                                                      <p className="body-pro-max text-slate-500 text-justify max-w-md">
@@ -585,8 +585,8 @@ const FiltresPuits = () => {
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
                             <h2 className="mb-8 heading-pro-max text-left">
-                                <span className="italic font-light text-[#2563eb] block">Comparez nos filtres d'eau</span>
-                                <span className="font-bold text-[#1e3a8a] block">spécialisés pour l'eau de puits</span>
+                                <span className="italic font-light text-[#3d6aab] block">Comparez nos filtres d'eau</span>
+                                <span className="font-bold text-[#3d6aab] block">spécialisés pour l'eau de puits</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                         </div>
@@ -649,7 +649,7 @@ const FiltresPuits = () => {
                                                                 {m.badge}
                                                             </span>
                                                         )}
-                                                        <div className="text-[10px] md:text-[12px] font-bold text-[#1e3a8a] leading-tight uppercase tracking-wider min-h-[32px] flex items-center justify-center px-1">
+                                                        <div className="text-[10px] md:text-[12px] font-bold text-[#3d6aab] leading-tight uppercase tracking-wider min-h-[32px] flex items-center justify-center px-1">
                                                             {m.name}
                                                         </div>
                                                     </div>
@@ -660,7 +660,7 @@ const FiltresPuits = () => {
                                     <tbody className="divide-y divide-slate-100 relative z-10">
                                         {comparisonData.map((row, i) => (
                                             <tr key={i} className="hover:bg-blue-50/30 transition-colors group">
-                                                <td className="p-6 md:p-8 font-bold text-[#1e3a8a] bg-white sticky left-0 z-30 border-r border-slate-50 drop-shadow-sm lg:drop-shadow-none text-[12px] md:text-sm italic group-hover:text-blue-600 transition-colors max-w-[200px]">
+                                                <td className="p-6 md:p-8 font-bold text-[#3d6aab] bg-white sticky left-0 z-30 border-r border-slate-50 drop-shadow-sm lg:drop-shadow-none text-[12px] md:text-sm italic group-hover:text-blue-600 transition-colors max-w-[200px]">
                                                     {row.feature}
                                                 </td>
                                                 {["Vortex", "ZenPH", "ChlorStop", "IronShield", "OxyPure", "SulphurShield", "ZeroAs", "TannEx", "SerenitePure"].map((key, idx) => (
@@ -716,8 +716,8 @@ const FiltresPuits = () => {
                                 Contrôle de la Qualité D'EAU
                             </span>
                              <h2 className="mb-8 heading-pro-max">
-                                <span className="italic font-light text-[#1e3a8a] lg:text-white block">L'excellence commence</span>
-                                <span className="text-[#1e3a8a] lg:text-white italic font-bold font-serif">par une eau parfaite.</span>
+                                <span className="italic font-light text-[#3d6aab] lg:text-white block">L'excellence commence</span>
+                                <span className="text-[#3d6aab] lg:text-white italic font-bold font-serif">par une eau parfaite.</span>
                             </h2>
                             <p className="font-light text-black lg:text-white/95 mb-8 max-w-xl text-justify lg:text-left">
                                 Le luxe, c'est de ne pas avoir à se soucier de la qualité de ce que l'on consomme. Offrez-vous la sérénité d'une eau analysée par des experts, pour une maison où tout brille, sans effort et sans compromis.
@@ -736,8 +736,8 @@ const FiltresPuits = () => {
                     filterProduct="/filtration"
                     title={
                         <h2 className="mb-8 heading-pro-max text-center">
-                            <span className="italic font-light text-[#2563eb] block text-center">Buvez l'eau de votre puits sans crainte</span>
-                            <span className="font-bold text-[#1e3a8a] block text-center">Ils ont fait le saut avec nous.</span>
+                            <span className="italic font-light text-[#3d6aab] block text-center">Buvez l'eau de votre puits sans crainte</span>
+                            <span className="font-bold text-[#3d6aab] block text-center">Ils ont fait le saut avec nous.</span>
                         </h2>
                     }
                 />
@@ -747,7 +747,7 @@ const FiltresPuits = () => {
                     <div className="container mx-auto px-4">
                         <div className="text-center mb-16">
                             <h2 className="mb-8 heading-pro-max text-center">
-                                <span className="font-bold text-[#1e3a8a] block text-center">Découvrez les produits associés</span>
+                                <span className="font-bold text-[#3d6aab] block text-center">Découvrez les produits associés</span>
                             </h2>
                              <p className="body-pro-max text-gray-500 text-center mx-auto">
                                  Optimisez votre expérience de traitement d'eau avec nos solutions complémentaires.
@@ -810,7 +810,7 @@ const FiltresPuits = () => {
                 </section>
 
                 {/* 11. PREMIUM CTA SECTION - REBUILT FOR IMPACT */}
-                <section className="relative py-32 flex items-center overflow-hidden bg-[#1e3a8a]">
+                <section className="relative py-32 flex items-center overflow-hidden bg-[#3d6aab]">
                   {/* Animated background elements */}
                   <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-blue-600/20 to-transparent skew-x-12 translate-x-1/4" />
                   <div className="absolute bottom-0 left-0 w-1/2 h-full bg-gradient-to-r from-cyan-400/10 to-transparent -skew-x-12 -translate-x-1/4" />
@@ -822,7 +822,7 @@ const FiltresPuits = () => {
                       alt="Expert Bricareau analysant vos options de filtration"
                       className="w-full h-full object-cover grayscale brightness-150"
                     />
-                    <div className="absolute inset-0 bg-[#1e3a8a]/10 backdrop-blur-sm" />
+                    <div className="absolute inset-0 bg-[#3d6aab]/10 backdrop-blur-sm" />
                   </div>
 
                   <div className="container mx-auto px-6 relative z-10">
@@ -870,8 +870,8 @@ const FiltresPuits = () => {
                     <div className="container mx-auto px-6">
                         <div className="text-left mb-16">
                             <h2 className="mb-8 heading-pro-max text-left">
-                                <span className="italic font-light text-[#2563eb] block">Pour vous éclairer</span>
-                                <span className="font-bold text-[#1e3a8a] block">Questions fréquentes</span>
+                                <span className="italic font-light text-[#3d6aab] block">Pour vous éclairer</span>
+                                <span className="font-bold text-[#3d6aab] block">Questions fréquentes</span>
                             </h2>
                             <div className="w-24 h-1 bg-blue-600"></div>
                                                     </div>
@@ -905,7 +905,7 @@ const FiltresPuits = () => {
                     <div className="container mx-auto px-4">
                         <div className="text-left mb-16">
                             <h2 className="mb-8 heading-pro-max text-left">
-                                <span className="font-bold text-[#1e3a8a] block text-left">Ressources</span>
+                                <span className="font-bold text-[#3d6aab] block text-left">Ressources</span>
                             </h2>
 
                             <div className="w-24 h-1 bg-blue-600"></div>
@@ -960,7 +960,7 @@ const FiltresPuits = () => {
                                 <ChevronRight className="h-6 w-6" />
                             </Button>
 
-                            <div className="absolute right-2 text-sm font-black text-[#1e3a8a] bg-blue-50/50 px-4 py-2 rounded-full border border-blue-100/50">
+                            <div className="absolute right-2 text-sm font-black text-[#3d6aab] bg-blue-50/50 px-4 py-2 rounded-full border border-blue-100/50">
                                 <span className="text-blue-600">{resourceIndex}</span>
                                 <span className="mx-1 text-slate-300">/</span>
                                 <span className="text-slate-400">{resources.length}</span>
@@ -983,7 +983,7 @@ const FiltresPuits = () => {
                     <span className="font-bold text-sm tracking-wider text-blue-600 whitespace-nowrap text-center">
                       Réservez votre <br />consultation gratuite
                     </span>
-                    <div className="w-10 h-10 bg-[#2563eb] rounded-full flex items-center justify-center text-white group-hover/sticky:rotate-[360deg] shadow-lg shadow-blue-200">
+                    <div className="w-10 h-10 bg-[#3d6aab] rounded-full flex items-center justify-center text-white group-hover/sticky:rotate-[360deg] shadow-lg shadow-blue-200">
                       <ArrowRight className="w-5 h-5" />
                     </div>
                             </a>

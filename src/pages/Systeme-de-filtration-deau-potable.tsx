@@ -171,8 +171,8 @@ const StationEauPotable = () => {
                     L'INGÉNIERIE DE LA PURETÉ
                   </span>
                             <h2 className="mb-8 heading-pro-max text-left">
-                                <span className="italic font-light text-[#2563eb] block">Plus qu’un filtre,</span>
-                                <span className="font-bold text-[#1e3a8a] block text-left">une métamorphose.</span>
+                                <span className="italic font-light text-[#3d6aab] block">Plus qu’un filtre,</span>
+                                <span className="font-bold text-[#3d6aab] block text-left">une métamorphose.</span>
                             </h2>
                 </div>
                 
@@ -250,8 +250,8 @@ const StationEauPotable = () => {
                 L'INVISIBLE DANS VOTRE VERRE
               </span>
                <h2 className="mb-8 heading-pro-max text-center">
-                  <span className="italic font-light text-[#2563eb] block">Ce que vos sens ne peuvent</span>
-                  <span className="font-bold text-[#1e3a8a] block text-center">pas détecter.</span>
+                  <span className="italic font-light text-[#3d6aab] block">Ce que vos sens ne peuvent</span>
+                  <span className="font-bold text-[#3d6aab] block text-center">pas détecter.</span>
               </h2>
               <p className="body-pro-max text-slate-500 text-center mx-auto">
                 Le chlore n'est que la pointe de l'iceberg. Votre eau municipale peut abriter des micro-polluants invisibles qui s'accumulent silencieusement dans votre organisme.
@@ -307,12 +307,16 @@ const StationEauPotable = () => {
                   <div className="px-4 pb-4 space-y-4">
                     <div className="space-y-1">
                       <span className="text-[10px] font-black text-red-600 uppercase tracking-widest">{item.threat}</span>
-                      <h3 className="text-xl font-bold text-[#1e3a8a] leading-tight group-hover:text-blue-600 transition-colors">{item.title}</h3>
+                      <h3 className="text-xl font-bold text-[#3d6aab] leading-tight group-hover:text-blue-600 transition-colors">{item.title}</h3>
                     </div>
                     <p className="text-slate-500 text-sm leading-relaxed font-light text-justify">{item.desc}</p>
-                    <button onClick={() => document.getElementById('nos-produits')?.scrollIntoView({ behavior: 'smooth' })} className="pt-4 flex items-center gap-2 text-blue-600 text-xs font-bold uppercase tracking-widest group-hover:gap-4 transition-all">
+                    <Button 
+                      variant="link"
+                      onClick={() => document.getElementById('nos-produits')?.scrollIntoView({ behavior: 'smooth' })} 
+                      className="pt-4 flex items-center gap-2 text-blue-600 text-xs font-bold uppercase tracking-widest group-hover:gap-4 transition-all h-auto p-0"
+                    >
                       La Barrière <ArrowRight className="w-4 h-4" />
-                    </button>
+                    </Button>
                   </div>
                 </div>
               ))}
@@ -330,8 +334,8 @@ const StationEauPotable = () => {
                 La Gamme Bricareau Pure
               </span>
               <h2 className="mb-8 heading-pro-max text-center">
-                <span className="italic font-light text-[#2563eb] block">Nos systèmes de</span>
-                <span className="font-bold text-[#1e3a8a] block text-center">purification d'eau.</span>
+                <span className="italic font-light text-[#3d6aab] block">Nos systèmes de</span>
+                <span className="font-bold text-[#3d6aab] block text-center">purification d'eau.</span>
               </h2>
               <p className="body-pro-max text-center mx-auto max-w-2xl px-4 lg:px-0">
                 Découvrez nos solutions de pointe, de la filtration compacte sous évier aux systèmes d'osmose inverse haute performance sans réservoir.
@@ -419,8 +423,8 @@ const StationEauPotable = () => {
                 L'EXCELLENCE D'UNE EAU SANTÉ AU QUOTIDIEN
               </span>
               <h2 className="mb-8 heading-pro-max text-center">
-                                <span className="italic font-light text-[#2563eb] block">Pourquoi choisir nos</span>
-                                <span className="font-bold text-[#1e3a8a] block text-center">systèmes de purification d'eau par osmose inverse ?</span>
+                                <span className="italic font-light text-[#3d6aab] block">Pourquoi choisir nos</span>
+                                <span className="font-bold text-[#3d6aab] block text-center">systèmes de purification d'eau par osmose inverse ?</span>
                             </h2>
               <div className="w-16 h-0.5 bg-blue-600/20 mx-auto mb-10" />
               <p className="body-pro-max text-slate-500 max-w-2xl mx-auto text-center italic">
@@ -486,7 +490,7 @@ const StationEauPotable = () => {
                                 alt="Installation professionnelle d'un adoucisseur d'eau Bricareau" 
                                 className="w-full h-[450px] md:h-[550px] lg:h-[650px] object-cover group-hover:scale-105 transition-transform duration-[3000ms] brightness-[1.1] contrast-[1.05]"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-r from-[#1e3a8a]/80 via-[#1e3a8a]/40 to-transparent p-8 md:p-12 lg:p-20 flex items-center lg:pt-32">
+                            <div className="absolute inset-0 bg-gradient-to-r from-[#3d6aab]/80 via-[#3d6aab]/40 to-transparent p-8 md:p-12 lg:p-20 flex items-center lg:pt-32">
                                 <div className="max-w-lg">
                                     <div className="flex items-center gap-3 text-blue-400 font-bold text-xs tracking-widest uppercase mb-6">
                                         <CheckCircle className="w-5 h-5" />
@@ -507,8 +511,8 @@ const StationEauPotable = () => {
           <div className="container mx-auto px-4">
             <div className="text-left mb-16">
               <h2 className="mb-8 heading-pro-max text-left">
-                                <span className="italic font-light text-[#2563eb] block">Comparez nos solutions</span>
-                                <span className="font-bold text-[#1e3a8a] block text-left">de filtration d'eau potable</span>
+                                <span className="italic font-light text-[#3d6aab] block">Comparez nos solutions</span>
+                                <span className="font-bold text-[#3d6aab] block text-left">de filtration d'eau potable</span>
                             </h2>
               <div className="w-24 h-1 bg-blue-600"></div>
             </div>
@@ -518,7 +522,6 @@ const StationEauPotable = () => {
                                 <Button 
                                     size="icon" 
                                     variant="outline" 
-                                    className="w-10 h-10 rounded-full border-blue-100 hover:bg-blue-600 hover:text-white transition-all shadow-sm"
                                     onClick={() => setActiveCol(Math.max(0, activeCol - 1))}
                                     disabled={activeCol === 0}
                                 >
@@ -532,7 +535,6 @@ const StationEauPotable = () => {
                                 <Button 
                                     size="icon" 
                                     variant="outline" 
-                                    className="w-10 h-10 rounded-full border-blue-100 hover:bg-blue-600 hover:text-white transition-all shadow-sm"
                                     onClick={() => setActiveCol(Math.min(2, activeCol + 1))}
                                     disabled={activeCol === 2}
                                 >
@@ -571,7 +573,7 @@ const StationEauPotable = () => {
                                                                 className="w-[140px] md:w-[140px] h-[100px] md:h-[120px] object-contain mx-auto mix-blend-multiply relative z-10 transition-transform duration-700 group-hover/img:scale-110"
                                                             />
                                                         </div>
-                                                        <div className="text-[13px] md:text-lg font-bold text-[#1e3a8a]">{m.name}</div>
+                                                        <div className="text-[13px] md:text-lg font-bold text-[#3d6aab]">{m.name}</div>
                                                     </div>
                                                 </th>
                                             ))}
@@ -580,7 +582,7 @@ const StationEauPotable = () => {
                                     <tbody className="divide-y divide-slate-100 relative z-10">
                                         {comparisonData.map((row, i) => (
                                             <tr key={i} className="hover:bg-blue-50/30 transition-colors group">
-                                                <td className="p-6 md:p-10 font-bold text-[#1e3a8a] bg-white sticky left-0 z-30 border-r border-slate-50 drop-shadow-sm lg:drop-shadow-none text-[12px] md:text-sm italic group-hover:text-blue-600 transition-colors">
+                                                <td className="p-6 md:p-10 font-bold text-[#3d6aab] bg-white sticky left-0 z-30 border-r border-slate-50 drop-shadow-sm lg:drop-shadow-none text-[12px] md:text-sm italic group-hover:text-blue-600 transition-colors">
                                                     {row.feature}
                                                 </td>
                                                 {["stage4", "stage5", "stage6"].map((model, idx) => (
@@ -611,9 +613,12 @@ const StationEauPotable = () => {
                                                             idx === activeCol ? "table-cell" : "hidden lg:table-cell"
                                                         )}
                                                     >
-                                                        <Button asChild className="w-full shadow-lg shadow-blue-100 transition-all active:scale-95">
-                                                            <NavLink to="/contact">Choisir ce système</NavLink>
-                                                        </Button>
+                                                        <div className="relative inline-block w-full group">
+                                                            <div className="absolute inset-0 border border-[#3d6aab] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                                                            <Button asChild className="relative w-full bg-[#3d6aab] hover:bg-white hover:text-[#3d6aab] text-white rounded-[2rem] h-16 px-12 font-black uppercase tracking-widest text-xs transition-all border-none">
+                                                                <NavLink to="/contact">Choisir ce système</NavLink>
+                                                            </Button>
+                                                        </div>
                                                     </td>
                                                 ))}
                                             </tr>
@@ -652,18 +657,22 @@ const StationEauPotable = () => {
                             <h2
                                 className="mb-8 heading-pro-max text-left"
                             >
-                                <span className="font-light italic text-[#1e3a8a] lg:text-white block">La vérité dans chaque</span>
-                                <span className="text-[#1e3a8a] lg:text-white italic font-bold font-serif">goutte d'eau.</span>
+                                <span className="font-light italic text-[#3d6aab] lg:text-white block">La vérité dans chaque</span>
+                                <span className="text-[#3d6aab] lg:text-white italic font-bold font-serif">goutte d'eau.</span>
                             </h2>
               <p className="body-pro-max text-black lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
                 Pourquoi deviner quand vous pouvez vérifier ? Un test d'eau simple pour une protection durable de l'eau de votre foyer.
               </p>
               <div className="flex gap-4">
-                <Button
-                  asChild
-                >
-                  <a href="/tests-eau">Demandez une analyse d'eau</a>
-                </Button>
+                <div className="relative inline-block w-full sm:w-auto group">
+                  <div className="absolute inset-0 border border-[#3d6aab] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                  <Button
+                    asChild
+                    className="relative w-full sm:w-auto bg-[#3d6aab] hover:bg-white hover:text-[#3d6aab] text-white rounded-[2rem] h-16 px-12 font-black uppercase tracking-widest text-xs transition-all border-none"
+                  >
+                    <a href="/tests-eau">Demandez une analyse d'eau</a>
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
@@ -674,14 +683,14 @@ const StationEauPotable = () => {
           filterProduct="/systeme-de-filtration-deau-potable"
           title={
                             <h2 className="mb-8 heading-pro-max text-center">
-                                <span className="italic font-light text-[#2563eb] block text-center">L'eau de source,</span>
-                                <span className="font-bold text-[#1e3a8a] block text-center">directement à votre robinet.</span>
+                                <span className="italic font-light text-[#3d6aab] block text-center">L'eau de source,</span>
+                                <span className="font-bold text-[#3d6aab] block text-center">directement à votre robinet.</span>
                             </h2>
           }
         />
 
                 {/* 10. PREMIUM CTA SECTION - REBUILT FOR IMPACT */}
-                <section className="relative py-32 flex items-center overflow-hidden bg-[#1e3a8a]">
+                <section className="relative py-32 flex items-center overflow-hidden bg-[#3d6aab]">
                     {/* Animated background elements */}
                     <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-blue-600/20 to-transparent skew-x-12 translate-x-1/4" />
                     <div className="absolute bottom-0 left-0 w-1/2 h-full bg-gradient-to-r from-cyan-400/10 to-transparent -skew-x-12 -translate-x-1/4" />
@@ -693,7 +702,7 @@ const StationEauPotable = () => {
                             alt="Problématique d'eau dure sur la robinetterie - Solution Bricareau"
                             className="w-full h-full object-cover grayscale brightness-150"
                         />
-                        <div className="absolute inset-0 bg-[#1e3a8a]/10 backdrop-blur-sm" />
+                        <div className="absolute inset-0 bg-[#3d6aab]/10 backdrop-blur-sm" />
                     </div>
 
                     <div className="container mx-auto px-6 relative z-10">
@@ -710,20 +719,30 @@ const StationEauPotable = () => {
                                     Pourquoi vous contenter d'une eau ordinaire quand vous pouvez offrir à votre foyer une source de pureté incomparable ? L'osmose inverse élimine les impuretés invisibles pour ne laisser que l'essentiel : une eau cristalline, un goût exceptionnel et une tranquillité d'esprit totale. Faites le choix de la technologie la plus avancée pour votre santé et votre confort.                                </p>
                             </div>
 
-                            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-4">
-                                <Button asChild>
-                                    <a href="tel:18552649328" className="flex items-center gap-3">
-                                        <Phone className="h-5 w-5 animate-bounce" />
-                                        Parlez à un expert
-                                    </a>
-                                </Button>
-                                <Button
-                                    variant="outline"
-                                    asChild
-                                >
-                                    <NavLink to="/consultation">Planifiez une consultation</NavLink>
-                                </Button>
-                            </div>
+                             <div className="flex flex-col sm:flex-row gap-8 justify-center items-center pt-8">
+                                 <div className="relative inline-block w-full sm:w-auto group">
+                                     <div className="absolute inset-0 border border-white rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                                     <Button 
+                                         asChild
+                                         className="relative w-full sm:w-auto bg-white text-[#3d6aab] hover:bg-blue-600 hover:text-white rounded-[2rem] h-16 px-12 font-black uppercase tracking-widest text-xs transition-all border-none"
+                                     >
+                                         <a href="tel:18552649328" className="flex items-center gap-3">
+                                             <Phone className="h-5 w-5 animate-bounce" />
+                                             Parlez à un expert
+                                         </a>
+                                     </Button>
+                                 </div>
+                                 <div className="relative inline-block w-full sm:w-auto group">
+                                     <div className="absolute inset-0 border border-white rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                                     <Button
+                                         variant="outline"
+                                         asChild
+                                         className="relative w-full sm:w-auto bg-transparent border-none text-white hover:bg-white hover:text-[#3d6aab] rounded-[2rem] h-16 px-12 font-black uppercase tracking-widest text-xs transition-all"
+                                     >
+                                         <NavLink to="/consultation">Planifiez une consultation</NavLink>
+                                     </Button>
+                                 </div>
+                             </div>
 
                             <div className="pt-8 flex flex-col items-center gap-4">
                                 <ExpertAvatars />
@@ -741,8 +760,8 @@ const StationEauPotable = () => {
           <div className="container mx-auto px-6">
             <div className="text-left mb-16">
               <h2 className="mb-8 heading-pro-max text-left">
-                                <span className="italic font-light text-[#2563eb] block">Pour vous éclairer</span>
-                                <span className="font-bold text-[#1e3a8a] block">Questions fréquentes</span>
+                                <span className="italic font-light text-[#3d6aab] block">Pour vous éclairer</span>
+                                <span className="font-bold text-[#3d6aab] block">Questions fréquentes</span>
                             </h2>
 
               <div className="w-24 h-1 bg-blue-600"></div>
@@ -823,11 +842,15 @@ const StationEauPotable = () => {
                 ))}
               </Accordion>
               <div className="mt-12 text-center">
-                <Button
-                  onClick={() => setShowAllFaqs(!showAllFaqs)}
-                >
-                  {showAllFaqs ? "Voir moins de questions" : "Voir toutes les questions"}
-                </Button>
+                <div className="relative inline-block group">
+                  <div className="absolute inset-0 border border-[#3d6aab] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                  <Button
+                    className="relative bg-[#3d6aab] hover:bg-white hover:text-[#3d6aab] text-white rounded-[2rem] h-16 px-12 font-black uppercase tracking-widest text-xs transition-all border-none"
+                    onClick={() => setShowAllFaqs(!showAllFaqs)}
+                  >
+                    {showAllFaqs ? "Voir moins de questions" : "Voir toutes les questions"}
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
@@ -838,7 +861,7 @@ const StationEauPotable = () => {
           <div className="container mx-auto px-6">
             <div className="text-left mb-16">
                <h2 className="mb-8 heading-pro-max text-left">
-                                <span className="font-bold text-[#1e3a8a] block">Ressources</span>
+                                <span className="font-bold text-[#3d6aab] block">Ressources</span>
                             </h2>
               <div className="w-24 h-1 bg-blue-600"></div>
             </div>
@@ -880,21 +903,19 @@ const StationEauPotable = () => {
               <div className="flex items-center gap-4">
                 <Button 
                     size="icon" 
-                    className="w-12 h-12 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-all shadow-md shadow-blue-100"
                     onClick={() => scrollResources('left')}
                 >
                     <ChevronLeft className="h-6 w-6" />
                 </Button>
                 <Button 
                     size="icon" 
-                    className="w-12 h-12 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-all shadow-md shadow-blue-100"
                     onClick={() => scrollResources('right')}
                 >
                     <ChevronRight className="h-6 w-6" />
                 </Button>
               </div>
                 
-                <div className="absolute right-2 text-sm font-black text-[#1e3a8a] bg-blue-50/50 px-4 py-2 rounded-full border border-blue-100/50">
+                <div className="absolute right-2 text-sm font-black text-[#3d6aab] bg-blue-50/50 px-4 py-2 rounded-full border border-blue-100/50">
                     <span className="text-blue-600">{resourceIndex}</span>
                     <span className="mx-1 text-slate-300">/</span>
                     <span className="text-slate-400">{resources.length}</span>
@@ -911,17 +932,17 @@ const StationEauPotable = () => {
               <div className="pointer-events-auto group/sticky">
                 <Button
                   asChild
-                  className="bg-white hover:-translate-y-2 transition-all duration-10000 active:scale-95"
+                  className="bg-white hover:-translate-y-2 active:scale-95 transition-all duration-300 shadow-2xl"
                   style={{ backdropFilter: "blur(20px)" }}
                 >
                   <a href="/consultation" className="flex items-center gap-4 animate-bounce" style={{ animationDuration: '3s' }}>
                     <span className="font-bold text-sm tracking-wider text-blue-600 whitespace-nowrap text-center">
                       Réservez votre <br />consultation gratuite
                     </span>
-                    <div className="w-10 h-10 bg-[#2563eb] rounded-full flex items-center justify-center text-white group-hover/sticky:rotate-[360deg] shadow-lg shadow-blue-200">
+                    <div className="w-10 h-10 bg-[#3d6aab] rounded-full flex items-center justify-center text-white group-hover/sticky:rotate-[360deg] shadow-lg shadow-blue-200">
                       <ArrowRight className="w-5 h-5" />
                     </div>
-                            </a>
+                  </a>
                 </Button>
               </div>
             </div>

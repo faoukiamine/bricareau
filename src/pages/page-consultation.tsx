@@ -88,7 +88,7 @@ const PageConsultation = () => {
                                             <item.icon className="w-5 h-5" />
                                         </div>
                                         <div>
-                                            <h4 className="font-bold text-[#1e3a8a] text-sm uppercase tracking-wider">{item.title}</h4>
+                                            <h4 className="font-bold text-[#3d6aab] text-sm uppercase tracking-wider">{item.title}</h4>
                                             <p className="text-slate-500 text-xs font-light">{item.text}</p>
                                         </div>
                                     </div>
@@ -103,7 +103,7 @@ const PageConsultation = () => {
                                  </p>
                                  <div className="flex items-center gap-4">
                                      <div>
-                                         <p className="font-bold text-[#1e3a8a] text-sm uppercase">Marc-Antoine D.</p>
+                                         <p className="font-bold text-[#3d6aab] text-sm uppercase">Marc-Antoine D.</p>
                                          <p className="text-slate-400 text-[10px] uppercase font-bold tracking-widest">Client Privé • Montréal</p>
                                      </div>
                                  </div>
@@ -131,8 +131,8 @@ const PageConsultation = () => {
                     <div className="container mx-auto px-4 lg:px-6">
                         <div className="text-center mb-16 max-w-2xl mx-auto">
                             <h3 className="heading-pro-max mb-6">
-                                <span className="italic font-light text-[#2563eb] block">Le parcours de</span>
-                                <span className="font-bold text-[#1e3a8a] block">votre consultation</span>
+                                <span className="italic font-light text-[#3d6aab] block">Le parcours de</span>
+                                <span className="font-bold text-[#3d6aab] block">votre consultation</span>
                             </h3>
                             <p className="text-slate-500 font-light">Simple, transparent et professionnel. Voici comment nous préparons votre solution.</p>
                         </div>
@@ -153,7 +153,7 @@ const PageConsultation = () => {
                                     </div>
                                     <div className="space-y-2">
                                         <span className="text-[10px] font-black text-blue-600 uppercase tracking-[0.2em]">{process.step}</span>
-                                        <h4 className="font-bold text-[#1e3a8a] text-base mb-1">{process.title}</h4>
+                                        <h4 className="font-bold text-[#3d6aab] text-base mb-1">{process.title}</h4>
                                         <p className="text-slate-500 text-xs leading-relaxed font-light">{process.desc}</p>
                                     </div>
                                 </div>
@@ -168,8 +168,8 @@ const PageConsultation = () => {
                 <div className="container mx-auto px-4 lg:px-6">
                     <div className="text-center mb-16 max-w-4xl mx-auto">
                         <h2 className="heading-pro-max mb-8">
-                            <span className="italic font-light text-[#2563eb] block">Comment se déroule</span>
-                            <span className="font-bold text-[#1e3a8a] block">notre consultation ?</span>
+                            <span className="italic font-light text-[#3d6aab] block">Comment se déroule</span>
+                            <span className="font-bold text-[#3d6aab] block">notre consultation ?</span>
                         </h2>
                         <p className="text-slate-600 font-light">
                             Voici les questions les plus fréquentes concernant notre processus d'évaluation gratuite.
@@ -198,12 +198,15 @@ const PageConsultation = () => {
                         </Accordion>
 
                         <div className="mt-12 text-center">
-                             <Button
-                                 onClick={() => setShowAllFaqs(!showAllFaqs)}
-                                 className="rounded-full px-8 h-auto py-4 bg-blue-600 text-white border-2 border-blue-600 font-bold transition-all hover:bg-white hover:text-blue-600 active:scale-95 shadow-lg shadow-blue-100/50 hover:shadow-xl"
-                            >
-                                {showAllFaqs ? "Voir moins de questions" : "Voir toutes les questions"}
-                            </Button>
+                            <div className="relative inline-block group">
+                                <div className="absolute inset-0 border border-[#3d6aab] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                                <Button
+                                    className="relative bg-[#3d6aab] hover:bg-white hover:text-[#3d6aab] text-white rounded-[2rem] h-16 px-12 font-black uppercase tracking-widest text-xs transition-all border-none"
+                                    onClick={() => setShowAllFaqs(!showAllFaqs)}
+                                >
+                                    {showAllFaqs ? "Voir moins de questions" : "Voir toutes les questions"}
+                                </Button>
+                            </div>
                         </div>
                     </div>
                 </div>

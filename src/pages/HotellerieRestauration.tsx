@@ -3,7 +3,10 @@ import {
     ChevronRight, 
     ArrowRight,
     CheckCircle2,
-    ArrowDown
+    ArrowDown,
+    Phone,
+    Star,
+    Quote
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
@@ -11,20 +14,26 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import { cn } from "@/lib/utils";
+import { allTestimonials } from "@/data/testimonials";
 
 // Assets
-import heroImg from "@/assets/WaterSoftenerInstallation.jpg";
+import heroImg from "@/assets/129871.jpg";
 import softenerImg from "@/assets/Water-Softener-installation.jpg";
 import filtrationImg from "@/assets/woman-and-kid-drink-glass-water.jpg";
 import wholeHouseImg from "@/assets/Filtration-eau-de-puits.webp";
 import drinkWaterImg from "@/assets/water-dispenser in kitchen.jpg";
 import uvImg from "@/assets/UV-system.jpg";
+import partnerImg from "@/assets/waterdrop-carafe-in-use.webp";
 
 const HotellerieRestauration = () => {
     const navigate = useNavigate();
     const [activeSection, setActiveSection] = useState(0);
     const [showNav, setShowNav] = useState(false);
     const [isNavVisible, setIsNavVisible] = useState(true);
+    
+    // Case Study Testimonials State
+    const caseStudyTestimonials = allTestimonials.slice(0, 8);
+    const [testiIndex, setTestiIndex] = useState(0);
     
     const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
     const containerRef = useRef<HTMLDivElement>(null);
@@ -179,32 +188,56 @@ const HotellerieRestauration = () => {
 
             <main>
                 {/* 1. Hero Section */}
-                <section className="relative h-[85vh] flex items-center overflow-hidden">
-                    <div className="absolute inset-0">
+                <section className="relative lg:h-[800px] flex flex-col overflow-hidden bg-white">
+                    {/* 1. Image Section - Overlay on Desktop */}
+                    <div className="relative lg:absolute lg:inset-0 w-full aspect-[4/3] sm:aspect-video lg:aspect-auto lg:h-full z-0 overflow-hidden">
+                        <div className="absolute inset-0 z-10 bg-gradient-to-b from-transparent to-white lg:bg-gradient-to-r lg:from-white lg:via-white/70 lg:to-transparent" />
                         <img
                             src={heroImg}
                             alt="Hôtellerie & Restauration Bricareau"
-                            className="w-full h-full object-cover brightness-[0.4]"
+                            className="w-full h-full object-cover object-center"
                         />
                     </div>
-                    <div className="container mx-auto px-6 relative z-10 text-center">
-                        <div className="max-w-4xl mx-auto">
-                            <h1 className="text-6xl md:text-[5.5rem] font-black text-white uppercase tracking-tighter mb-12">
-                                <span className="text-blue-400 italic font-light lowercase">Hôtellerie &</span><br />
-                                Restauration
-                            </h1>
-                            <Button 
-                                size="lg" 
-                                className="bg-[#3d6aab] hover:bg-[#32588c] text-white px-10 h-14 rounded-full text-xs font-black transition-all shadow-2xl uppercase tracking-widest"
-                                onClick={() => scrollToProgram(0)}
-                            >
-                                Solutions de traitement d'eau
-                            </Button>
-                        </div>
-                    </div>
-                    <div className="absolute bottom-12 right-12 z-20">
-                        <div className="w-12 h-12 rounded-full bg-[#3d6aab] flex items-center justify-center text-white cursor-pointer shadow-lg animate-bounce hover:bg-[#32588c] transition-colors">
-                            <ArrowDown className="w-6 h-6" />
+
+                    {/* 2. Content Section */}
+                    <div className="container relative z-10 mx-auto px-4 lg:px-12 lg:h-full flex flex-col items-start justify-center pt-20 pb-24 lg:pt-0 lg:pb-0">
+                        <div className="max-w-3xl space-y-8 text-left">
+                            <div className="space-y-6">
+                                <h1 className="mb-6 animate-in fade-in slide-in-from-left duration-1000 tracking-tighter"
+                                    style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif', fontSize: '50px', lineHeight: '55px' }}>
+                                    <span className="italic font-light text-[#3d6aab] block">Hôtellerie &</span>
+                                    <span className="font-bold text-[#3d6aab] block">Restauration.</span>
+                                </h1>
+                                
+                                <p className="max-w-xl animate-in fade-in slide-in-from-left duration-1000 delay-100 text-left text-slate-600 text-lg md:text-xl font-light leading-relaxed">
+                                    Offrez à vos clients une expérience d'exception avec une eau d'une pureté irréprochable. Valorisez votre établissement avec une gestion de l'eau intelligente et durable.
+                                </p>
+
+                                <div className="flex flex-col sm:flex-row items-start gap-8 pt-4">
+                                    <div className="relative inline-block w-full sm:w-auto group">
+                                        <div className="absolute inset-0 border border-[#3d6aab] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                                        <Button
+                                            className="relative w-full sm:w-auto bg-[#3d6aab] hover:bg-white hover:text-[#3d6aab] text-white rounded-[2rem] h-16 px-12 font-black uppercase tracking-widest text-xs transition-all border-none"
+                                            onClick={() => navigate("/consultation")}
+                                        >
+                                            Planifiez une consultation gratuite
+                                        </Button>
+                                    </div>
+                                    
+                                    <div className="relative inline-block w-full sm:w-auto group">
+                                        <div className="absolute inset-0 border border-[#3d6aab] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                                        <Button
+                                            asChild
+                                            className="relative w-full sm:w-auto bg-[#3d6aab] hover:bg-white hover:text-[#3d6aab] text-white rounded-[2rem] h-16 px-12 font-black uppercase tracking-widest text-xs transition-all border-none"
+                                        >
+                                            <a href="tel:18552649328" className="flex items-center justify-center gap-2">
+                                                <Phone className="w-5 h-5 flex-shrink-0" />
+                                                1-855-264-9328
+                                            </a>
+                                        </Button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -320,32 +353,104 @@ const HotellerieRestauration = () => {
                                         ))}
                                     </ul>
 
-                                    <Button 
-                                        variant="outline" 
-                                        className="border-slate-800 text-slate-900 hover:bg-slate-900 hover:text-white rounded-full px-14 h-14 font-black uppercase tracking-[0.2em] text-[11px] transition-all"
-                                        onClick={() => navigate(prog.link)}
-                                    >
-                                        APPRENDRE ENCORE PLUS
-                                    </Button>
+                                    <div className="relative inline-block group">
+                                        <div className="absolute inset-0 border border-[#3d6aab] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                                        <Button 
+                                            className="relative bg-[#3d6aab] hover:bg-white hover:text-[#3d6aab] text-white rounded-[2rem] px-12 h-16 font-black uppercase tracking-widest text-xs transition-all border-none"
+                                            onClick={() => navigate(prog.link)}
+                                        >
+                                            APPRENDRE ENCORE PLUS
+                                        </Button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     ))}
                 </section>
 
-                {/* 4. Testimonials */}
-                <div ref={testimonialsRef} className="bg-slate-50 py-32">
-                    <TestimonialsSection 
-                        filterProduct="/"
-                        limit={6}
-                        title={
-                            <div className="text-center space-y-3 mb-16">
-                                <span className="italic font-light text-[#3d6aab] block text-2xl md:text-3xl">Votre confiance.</span>
-                                <span className="font-bold text-[#1e3a8a] block text-4xl md:text-6xl tracking-tighter">Notre plus grande fierté.</span>
+                {/* 4. Case Study Section */}
+                <section className="py-24 bg-white relative overflow-hidden">
+                    <div className="container mx-auto px-4 max-w-7xl">
+                        <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 lg:mb-16 gap-8">
+                            <div className="max-w-2xl">
+                                <span className="text-slate-600 font-bold text-[10px] sm:text-xs uppercase tracking-[0.2em] block mb-4">Témoignages de réussite de nos partenaires</span>
+                                <h2 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-black text-[#0f172a] leading-[1.1] tracking-tight">
+                                    <span className="italic font-light text-[#3d6aab] block">Votre confiance.</span>
+                                    <span className="font-bold text-[#3d6aab] block">Notre plus grande fierté.</span>
+                                </h2>
                             </div>
-                        }
-                    />
-                </div>
+                        </div>
+
+                        <div className="relative">
+                            <div className="flex flex-col lg:flex-row relative">
+                                {/* White Focus Card */}
+                                <div className="relative z-10 w-full lg:w-[55%] pt-8 lg:pt-20 lg:pr-12">
+                                    <div className="bg-white px-8 py-12 sm:p-12 shadow-[0_20px_50px_rgba(0,0,0,0.05)] border border-slate-50 relative">
+                                        <div className="flex gap-4 font-black text-slate-400 mb-8 items-center text-sm">
+                                            <button
+                                                className="hover:text-slate-900 transition-colors disabled:opacity-30"
+                                                onClick={() => setTestiIndex(p => Math.max(0, p - 1))}
+                                                disabled={testiIndex === 0}
+                                            >
+                                                &lt;
+                                            </button>
+                                            <span key={`count-${testiIndex}`} className="text-slate-900 tracking-widest">{testiIndex + 1} / {caseStudyTestimonials.length}</span>
+                                            <button
+                                                className="hover:text-slate-900 transition-colors disabled:opacity-30"
+                                                onClick={() => setTestiIndex(p => Math.min(caseStudyTestimonials.length - 1, p + 1))}
+                                                disabled={testiIndex === caseStudyTestimonials.length - 1}
+                                            >
+                                                &gt;
+                                            </button>
+                                        </div>
+                                        <div className="min-h-[200px] sm:min-h-[160px] md:min-h-[180px] lg:min-h-[200px] flex items-center mb-12">
+                                            <p key={`text-${testiIndex}`} className="text-2xl sm:text-3xl font-light text-[#0f172a] italic leading-[1.6]">
+                                                "{caseStudyTestimonials[testiIndex].text}"
+                                            </p>
+                                        </div>
+                                        <div className="mb-12">
+                                            <p className="font-black text-[#0f172a] mb-2">{caseStudyTestimonials[testiIndex].name}</p>
+                                            <div className="flex gap-1">
+                                                {[...Array(caseStudyTestimonials[testiIndex].rating)].map((_, i) => (
+                                                    <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                                                ))}
+                                            </div>
+                                        </div>
+
+                                        <div className="flex flex-col sm:flex-row sm:items-center justify-between pt-10 border-t border-slate-200/60 gap-8">
+                                            <div className="flex flex-col items-start">
+                                                <span className="font-black tracking-[0.2em] text-[#0f172a] text-xs uppercase">CLIENTS SATISFAITS</span>
+                                                <span className="text-[9px] uppercase font-bold text-slate-400 tracking-widest mt-1">PARTOUT AU QUÉBEC</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* Image Background */}
+                                <div className="w-full lg:w-[65%] lg:absolute lg:top-0 lg:right-0 lg:h-[600px] z-0 mt-8 lg:mt-0">
+                                    <div className="w-full h-[400px] lg:h-full overflow-hidden bg-slate-100 flex relative">
+                                        <img src={partnerImg} alt="Water solution" className="w-full h-full object-cover" />
+                                        <div className="absolute inset-0 bg-blue-900/5 mix-blend-multiply" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Circular Badge */}
+                            <div className="absolute right-4 sm:right-12 lg:right-24 bottom-16 sm:bottom-12 z-20">
+                                <div className="relative w-32 h-32 flex items-center justify-center animate-[spin_15s_linear_infinite] bg-white/90 backdrop-blur-sm rounded-full p-2 shadow-2xl">
+                                    <svg viewBox="0 0 100 100" className="w-full h-full absolute inset-0 text-[#3d6aab] font-sans overflow-visible">
+                                        <path id="circlePath" d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0" fill="none" />
+                                        <text fontSize="8.5" fontWeight="900" letterSpacing="0.16em" fill="currentcolor">
+                                            <textPath href="#circlePath" startOffset="0%" textAnchor="start">
+                                                VOTRE PARTENAIRE VERS LE SUCCÈS •
+                                            </textPath>
+                                        </text>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
                 {/* 5. Blog Articles */}
                 <section className="py-32 bg-white">
@@ -390,13 +495,15 @@ const HotellerieRestauration = () => {
                         <h2 className="text-4xl md:text-[5.5rem] font-black text-white leading-tight tracking-tighter">
                             Trouvez <span className="text-[#3d6aab] italic font-light lowercase">la solution adaptée.</span>
                         </h2>
-                        <Button 
-                            size="lg" 
-                            className="bg-[#3d6aab] text-white hover:bg-[#32588c] px-20 h-16 rounded-full font-black uppercase tracking-[0.3em] text-[10px] transition-all shadow-2xl hover:scale-105 active:scale-95"
-                            onClick={() => navigate("/consultation")}
-                        >
-                            Planifier une consultation
-                        </Button>
+                        <div className="relative inline-block group">
+                            <div className="absolute inset-0 border border-[#3d6aab] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                            <Button 
+                                className="relative bg-[#3d6aab] hover:bg-white hover:text-[#3d6aab] text-white rounded-[2rem] px-12 h-16 font-black uppercase tracking-widest text-xs transition-all border-none shadow-2xl"
+                                onClick={() => navigate("/consultation")}
+                            >
+                                Planifier une consultation
+                            </Button>
+                        </div>
                     </div>
                 </section>
             </main>

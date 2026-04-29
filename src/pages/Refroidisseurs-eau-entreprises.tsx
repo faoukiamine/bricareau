@@ -380,7 +380,7 @@ const RefroidisseursEauEntreprises = () => {
                                             <div className="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center text-white">
                                                 <Award className="w-5 h-5" />
                                             </div>
-                                            <span className="font-black text-xs uppercase tracking-widest text-[#1e3a8a]">Bricareau PRO Care</span>
+                                            <span className="font-black text-xs uppercase tracking-widest text-[#3d6aab]">Bricareau PRO Care</span>
                                         </div>
                                         <p className="text-slate-600 font-light italic">
                                             "Nous ne nous contentons pas d'installer une fontaine ; nous gérons votre hydratation. Notre service d'entretien sanitaire semestriel garantit une eau toujours conforme aux normes les plus strictes."

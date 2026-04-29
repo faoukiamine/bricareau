@@ -42,8 +42,8 @@ const Home = () => {
           limit={6}
           title={
             <>
-              <span className="italic font-light text-[#2563eb] block">Votre confiance.</span>
-              <span className="font-bold text-[#1e3a8a] block">Notre plus grande fierté.</span>
+              <span className="italic font-light text-[#3d6aab] block">Votre confiance.</span>
+              <span className="font-bold text-[#3d6aab] block">Notre plus grande fierté.</span>
             </>
           }
         />

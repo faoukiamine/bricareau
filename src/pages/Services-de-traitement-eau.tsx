@@ -171,33 +171,35 @@ const ServicesTraitementEau = () => {
                     <div className="container relative z-20 mx-auto px-6 lg:h-full flex flex-col items-start justify-center pt-16 pb-24 lg:pt-0 lg:pb-0">
                         <div className="max-w-3xl text-left">
                             <h1 
-                                className="text-[32px] md:text-[46px] lg:text-[50px] leading-[1.1] tracking-tighter text-[#1e3a8a] mb-6 animate-in fade-in slide-in-from-left duration-1000"
+                                className="text-[32px] md:text-[46px] lg:text-[50px] leading-[1.1] tracking-tighter text-[#3d6aab] mb-6 animate-in fade-in slide-in-from-left duration-1000"
                                 style={{ 
                                     fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
                                     fontWeight: 300 
                                 }}
                             >
-                                <span className="italic text-[#2563eb] block mb-2 font-light">Expertise & Sérénité</span>
+                                <span className="italic text-[#3d6aab] block mb-2 font-light">Expertise & Sérénité</span>
                                 <span className="font-bold block">Des services dédiés à <br />votre tranquillité.</span>
                             </h1>
                             <p className="text-slate-600 mb-10 max-w-xl animate-in fade-in slide-in-from-left duration-1000 delay-100 text-lg">
                                 Bricareau s'engage à vos côtés pour simplifier le suivi, l'entretien et la performance de vos installations d'eau, partout au Québec.
                             </p>
-                            <div className="flex flex-col sm:flex-row items-start lg:items-center gap-8 animate-in fade-in slide-in-from-left duration-1000 delay-200">
-                                <Button 
-                                    size="lg"
-                                    asChild
-                                    className="w-fit group"
-                                >
-                                    <button onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}>
-                                        Planifier un service
-                                        <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-2" />
-                                    </button>
-                                </Button>
+                            <div className="flex flex-col sm:flex-row items-start lg:items-center gap-8 animate-in fade-in slide-in-from-left duration-1000 delay-200 pt-4">
+                                <div className="relative inline-block group">
+                                    <div className="absolute inset-0 border border-[#3d6aab] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                                    <Button 
+                                        className="relative bg-[#3d6aab] hover:bg-white hover:text-[#3d6aab] text-white rounded-[2rem] h-[3.25rem] px-8 font-black uppercase tracking-[0.1em] text-[11px] transition-all border-none"
+                                        asChild
+                                    >
+                                        <button onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}>
+                                            Planifier un service
+                                            <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-2" />
+                                        </button>
+                                    </Button>
+                                </div>
                                 
                                 <div className="flex items-center gap-4 text-slate-500 text-sm font-light border-l border-slate-200 pl-8 hidden md:flex">
                                     <div className="flex flex-col">
-                                        <span className="font-bold text-[#1e3a8a]">Intervention sous 24h</span>
+                                        <span className="font-bold text-[#3d6aab]">Intervention sous 24h</span>
                                         <span className="text-xs">Urgences prioritaires</span>
                                     </div>
                                 </div>
@@ -219,8 +221,8 @@ const ServicesTraitementEau = () => {
                     <div className="container mx-auto px-6 relative z-10">
                         <div className="max-w-4xl mx-auto text-center mb-24 space-y-6 animate-in fade-in slide-in-from-bottom duration-700">
                             <h2 className="heading-pro-max">
-                                <span className="italic font-light text-[#2563eb] block">Une expertise complète</span>
-                                <span className="font-bold text-[#1e3a8a] block">pour votre eau</span>
+                                <span className="italic font-light text-[#3d6aab] block">Une expertise complète</span>
+                                <span className="font-bold text-[#3d6aab] block">pour votre eau</span>
                             </h2>
                             <p className="body-pro-max max-w-2xl mx-auto text-slate-500">
                                 De l'installation à la maintenance préventive, nos techniciens certifiés assurent la pérennité de vos équipements de traitement d'eau à travers tout le Québec.
@@ -238,7 +240,7 @@ const ServicesTraitementEau = () => {
                                 <CarouselContent className="-ml-8">
                                     {/* Card 001: Mise en service - Navy Style */}
                                     <CarouselItem className="pl-8 md:basis-1/2 lg:basis-1/3">
-                                        <div className="group block relative bg-[#1e3a8a] rounded-[2.5rem] p-10 h-[720px] flex flex-col transition-all duration-700 hover:-translate-y-4 shadow-2xl overflow-hidden">
+                                        <div className="group block relative bg-[#3d6aab] rounded-[2.5rem] p-10 h-[720px] flex flex-col transition-all duration-700 hover:-translate-y-4 shadow-2xl overflow-hidden">
                                             <div className="space-y-0 relative z-10 flex flex-col h-full">
                                                 <div className="h-20"></div>
                                                 <div className="w-full h-48 overflow-hidden rounded-3xl shadow-lg relative">
@@ -270,7 +272,7 @@ const ServicesTraitementEau = () => {
 
                                     {/* Card 002: Entretien préventif - Royal Blue Style */}
                                     <CarouselItem className="pl-8 md:basis-1/2 lg:basis-1/3">
-                                        <div className="group block relative bg-[#2563eb] rounded-[2.5rem] p-10 h-[720px] flex flex-col transition-all duration-700 hover:-translate-y-4 shadow-2xl overflow-hidden">
+                                        <div className="group block relative bg-[#3d6aab] rounded-[2.5rem] p-10 h-[720px] flex flex-col transition-all duration-700 hover:-translate-y-4 shadow-2xl overflow-hidden">
                                             <div className="space-y-0 relative z-10 flex flex-col h-full">
                                                 <div className="h-20"></div>
                                                 <div className="space-y-6">
@@ -302,7 +304,7 @@ const ServicesTraitementEau = () => {
 
                                     {/* Card 003: Dépannage - Navy Patterned */}
                                     <CarouselItem className="pl-8 md:basis-1/2 lg:basis-1/3">
-                                        <div className="group block relative bg-[#1e3a8a] rounded-[2.5rem] p-10 h-[720px] flex flex-col transition-all duration-700 hover:-translate-y-4 shadow-2xl overflow-hidden">
+                                        <div className="group block relative bg-[#3d6aab] rounded-[2.5rem] p-10 h-[720px] flex flex-col transition-all duration-700 hover:-translate-y-4 shadow-2xl overflow-hidden">
                                             <div className="absolute inset-0 opacity-10 mix-blend-overlay">
                                                 <div className="w-full h-full bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:20px_20px]" />
                                             </div>
@@ -337,7 +339,7 @@ const ServicesTraitementEau = () => {
 
                                     {/* Card 004: Analyses d'eau - Royal Blue Style */}
                                     <CarouselItem className="pl-8 md:basis-1/2 lg:basis-1/3">
-                                        <div className="group block relative bg-[#2563eb] rounded-[2.5rem] p-10 h-[720px] flex flex-col transition-all duration-700 hover:-translate-y-4 shadow-2xl overflow-hidden">
+                                        <div className="group block relative bg-[#3d6aab] rounded-[2.5rem] p-10 h-[720px] flex flex-col transition-all duration-700 hover:-translate-y-4 shadow-2xl overflow-hidden">
                                             <div className="space-y-0 relative z-10 flex flex-col h-full">
                                                 <div className="h-20"></div>
                                                 <div className="space-y-6">
@@ -425,16 +427,18 @@ const ServicesTraitementEau = () => {
                                 </div>
 
                                 <div className="pt-6">
-                                    <Button
-                                        size="lg"
-                                        asChild
-                                        className="bg-white text-blue-600 hover:bg-blue-600 hover:text-white border-white border-2 font-bold transition-all duration-300 rounded-full group px-10 h-14"
-                                    >
-                                        <a href="tel:18552649328" className="flex items-center gap-2 font-bold">
-                                            <Phone className="w-5 h-5 transition-transform group-hover:rotate-12" />
-                                            Parlez avec un conseiller
-                                        </a>
-                                    </Button>
+                                    <div className="relative inline-block group">
+                                        <div className="absolute inset-0 border border-white rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                                        <Button
+                                            asChild
+                                            className="relative bg-white text-blue-600 hover:bg-blue-600 hover:text-white rounded-[2rem] px-10 h-14 font-black uppercase tracking-widest text-[11px] transition-all border-none"
+                                        >
+                                            <a href="tel:18552649328" className="flex items-center gap-2">
+                                                <Phone className="w-5 h-5 transition-transform group-hover:rotate-12" />
+                                                Parlez avec un conseiller
+                                            </a>
+                                        </Button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -457,7 +461,7 @@ const ServicesTraitementEau = () => {
                                         className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" 
                                         alt="Maintenance adoucisseur d'eau Bricareau"
                                     />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-[#1e3a8a]/40 to-transparent" />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-[#3d6aab]/40 to-transparent" />
                                      <div className="absolute bottom-10 left-10 right-10 p-8 bg-white/10 backdrop-blur-xl rounded-3xl border border-white/20">
                                         <p className="text-white font-medium italic">"Une valve bien réglée peut économiser jusqu'à 30% de sel par an."</p>
                                     </div>
@@ -467,7 +471,7 @@ const ServicesTraitementEau = () => {
                             <div className="lg:w-1/2 space-y-8">
                                 <h2 className="heading-pro-max text-left text-slate-900 mb-8">
                                     <span className="italic font-light text-blue-600 block">Performance & Protection</span>
-                                    <span className="font-bold text-[#1e3a8a] block">Une maintenance d'élite <br />pour vos systèmes d'eau.</span>
+                                    <span className="font-bold text-[#3d6aab] block">Une maintenance d'élite <br />pour vos systèmes d'eau.</span>
                                 </h2>
                                 <p className="body-pro-max text-slate-600 text-justify">
                                     Optimisez la performance et la longévité de vos adoucisseurs et filtres d'eau partout au Québec. Un entretien régulier par nos techniciens certifiés assure une élimination efficace du calcaire et des contaminants, protège vos installations de plomberie et garantit une eau d'une qualité exceptionnelle pour toute votre famille.
@@ -486,14 +490,16 @@ const ServicesTraitementEau = () => {
                                     ))}
                                 </div>
                                 <div className="pt-6">
-                                    <Button 
-                                        size="lg"
-                                        onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
-                                        className="w-fit group font-bold"
-                                    >
-                                        Planifiez un service
-                                        <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-2" />
-                                    </Button>
+                                    <div className="relative inline-block group">
+                                        <div className="absolute inset-0 border border-[#3d6aab] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                                        <Button 
+                                            onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
+                                            className="relative bg-[#3d6aab] hover:bg-white hover:text-[#3d6aab] text-white rounded-[2rem] h-14 px-10 font-black uppercase tracking-widest text-[11px] transition-all border-none"
+                                        >
+                                            Planifiez un service
+                                            <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-2" />
+                                        </Button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -523,7 +529,7 @@ const ServicesTraitementEau = () => {
                             <div className="lg:w-1/2 space-y-8">
                                 <h2 className="heading-pro-max text-left text-slate-900 mb-8">
                                     <span className="italic font-light text-blue-600 block">Pureté & Santé</span>
-                                    <span className="font-bold text-[#1e3a8a] block">Savourez une eau d'une <br />pureté exceptionnelle.</span>
+                                    <span className="font-bold text-[#3d6aab] block">Savourez une eau d'une <br />pureté exceptionnelle.</span>
                                 </h2>
                                 <p className="body-pro-max text-slate-600 text-justify">
                                     Assurez la pureté cristalline de votre eau potable municipale ou de puits. Le remplacement périodique des membranes et des filtres de votre système d'osmose inverse est essentiel pour éliminer 99% des contaminants et garantir une hygiène irréprochable.
@@ -542,14 +548,16 @@ const ServicesTraitementEau = () => {
                                     ))}
                                 </div>
                                 <div className="pt-6">
-                                    <Button 
-                                        size="lg"
-                                        onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
-                                        className="w-fit group font-bold"
-                                    >
-                                        Réservez votre entretien
-                                        <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-2" />
-                                    </Button>
+                                    <div className="relative inline-block group">
+                                        <div className="absolute inset-0 border border-[#3d6aab] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                                        <Button 
+                                            onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
+                                            className="relative bg-[#3d6aab] hover:bg-white hover:text-[#3d6aab] text-white rounded-[2rem] h-14 px-10 font-black uppercase tracking-widest text-[11px] transition-all border-none"
+                                        >
+                                            Réservez votre entretien
+                                            <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-2" />
+                                        </Button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -579,7 +587,7 @@ const ServicesTraitementEau = () => {
                             <div className="lg:w-1/2 space-y-8">
                                 <h2 className="heading-pro-max text-left text-slate-900 mb-8">
                                     <span className="italic font-light text-blue-600 block">Diagnostic & Précision</span>
-                                    <span className="font-bold text-[#1e3a8a] block">Révélez ce que <br />votre eau vous cache.</span>
+                                    <span className="font-bold text-[#3d6aab] block">Révélez ce que <br />votre eau vous cache.</span>
                                 </h2>
                                 <p className="body-pro-max text-slate-600 text-justify">
                                     L'apparence cristalline de votre eau ne garantit pas sa pureté. Bricareau déploie des protocoles d'analyse scientifique pour identifier les contaminants invisibles qui impactent votre santé et vos installations. Du calcaire aux métaux lourds, notre diagnostic cible la racine de vos problèmes d'eau pour déployer la solution de traitement parfaitement adaptée.
@@ -597,14 +605,16 @@ const ServicesTraitementEau = () => {
                                     ))}
                                 </div>
                                 <div className="pt-4">
-                                    <Button 
-                                        size="lg"
-                                        onClick={() => navigate('/tests-eau')}
-                                        className="w-fit group font-bold"
-                                    >
-                                        Voir toutes les analyses 
-                                        <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-2" />
-                                    </Button>
+                                    <div className="relative inline-block group">
+                                        <div className="absolute inset-0 border border-[#3d6aab] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                                        <Button 
+                                            onClick={() => navigate('/tests-eau')}
+                                            className="relative bg-[#3d6aab] hover:bg-white hover:text-[#3d6aab] text-white rounded-[2rem] h-14 px-10 font-black uppercase tracking-widest text-[11px] transition-all border-none"
+                                        >
+                                            Voir toutes les analyses 
+                                            <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-2" />
+                                        </Button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -642,8 +652,8 @@ const ServicesTraitementEau = () => {
                             <>
                                 <div className="max-w-4xl mx-auto text-center mb-16 space-y-6">
                                     <h2 className="heading-pro-max">
-                                        <span className="italic font-light text-[#2563eb] block">Planifiez votre</span>
-                                        <span className="font-bold text-[#1e3a8a] block">rendez-vous de service.</span>
+                                        <span className="italic font-light text-[#3d6aab] block">Planifiez votre</span>
+                                        <span className="font-bold text-[#3d6aab] block">rendez-vous de service.</span>
                                     </h2>
                                     <p className="body-pro-max max-w-2xl mx-auto">
                                         Besoin d'une installation, d'une réparation ou d'un simple changement de filtres ? Nos experts interviennent sur tous les types d'équipements, au Grand Montréal et ses environs.
@@ -684,9 +694,15 @@ const ServicesTraitementEau = () => {
                                         <div className="p-8 bg-blue-600 rounded-[2.5rem] text-white shadow-xl shadow-blue-200">
                                             <h4 className="font-bold text-lg mb-2">Besoin d'aide immédiate?</h4>
                                             <p className="text-white/80 text-sm font-light mb-6">Nos techniciens sont prêts à répondre à vos questions techniques complexes dès maintenant.</p>
-                                            <Button variant="outline" className="w-full rounded-full bg-white/10 border-white/20 text-white hover:bg-white hover:text-blue-600 border-none h-12 font-bold">
-                                                <MessageSquare className="w-4 h-4 mr-2" /> Clavardage en direct
-                                            </Button>
+                                            <div className="relative inline-block w-full group">
+                                                <div className="absolute inset-0 border border-white rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                                                <Button 
+                                                    variant="ghost" 
+                                                    className="relative w-full bg-white/10 border border-white/20 text-white hover:bg-white hover:text-blue-600 rounded-[2rem] h-12 font-black uppercase tracking-widest text-[11px] transition-all"
+                                                >
+                                                    <MessageSquare className="w-4 h-4 mr-2" /> Clavardage en direct
+                                                </Button>
+                                            </div>
                                         </div>
                                     </div>
 
@@ -767,18 +783,20 @@ const ServicesTraitementEau = () => {
                                                             </FormItem>
                                                         )} />
 
-                                                        <Button 
-                                                            type="submit"
-                                                            disabled={isSubmitting}
-                                                            size="lg"
-                                                            className="w-full md:w-auto rounded-full h-14 bg-blue-600 hover:bg-blue-700 text-white font-bold transition-all hover:scale-[1.02] active:scale-95 shadow-xl shadow-blue-200 px-12"
-                                                        >
-                                                            {isSubmitting ? (
-                                                                <><Loader2 className="mr-2 w-5 h-5 animate-spin" /> Envoi en cours...</>
-                                                            ) : (
-                                                                <><Send className="mr-2 w-5 h-5" /> Envoyer ma demande</>
-                                                            )}
-                                                        </Button>
+                                                        <div className="relative inline-block w-full md:w-auto group">
+                                                            <div className="absolute inset-0 border border-[#3d6aab] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                                                            <Button 
+                                                                type="submit"
+                                                                disabled={isSubmitting}
+                                                                className="relative w-full md:w-auto bg-[#3d6aab] hover:bg-white hover:text-[#3d6aab] text-white rounded-[2rem] h-14 px-12 font-black uppercase tracking-widest text-[11px] transition-all border-none shadow-xl"
+                                                            >
+                                                                {isSubmitting ? (
+                                                                    <><Loader2 className="mr-2 w-5 h-5 animate-spin" /> Envoi en cours...</>
+                                                                ) : (
+                                                                    <><Send className="mr-2 w-5 h-5" /> Envoyer ma demande</>
+                                                                )}
+                                                            </Button>
+                                                        </div>
                                                     </div>
                                                 </form>
                                             </Form>
