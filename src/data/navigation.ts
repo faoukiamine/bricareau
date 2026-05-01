@@ -67,17 +67,17 @@ export const mainNavMenuItems: MenuItem[] = [
                 href: "/residentiel"
             },
             {
-                title: "HÔTELLERIE ET RESTAURATION",
-                image: promoImage2,
-                href: "/hotellerie-restauration"
-            },
-            {
                 title: "BUREAU",
                 image: promoImage4, 
                 href: "/bureau"
             },
             {
-                title: "INDUSTRIEL",
+                title: "HÔTELLERIE ET RESTAURATION",
+                image: promoImage2,
+                href: "/hotellerie-restauration"
+            },
+            {
+                title: "COMMERCIAL & INDUSTRIEL",
                 image: promoImage,
                 href: "/industriel"
             }
@@ -107,7 +107,17 @@ export const mainNavMenuItems: MenuItem[] = [
                     { 
                         title: "Adoucissement Résidentiel", 
                         description: "Découvrez notre nouveau modèle de page pour l'adoucissement d'eau.", 
-                        href: "/A1" 
+                        href: "/A" 
+                    },
+                    { 
+                        title: "B", 
+                        description: "Page B - Duplication de filtres d'eau.", 
+                        href: "/B" 
+                    },
+                    { 
+                        title: "C", 
+                        description: "Page C - Duplication de la station d'eau potable.", 
+                        href: "/C" 
                     },
                 ]
             },
@@ -194,7 +204,7 @@ export const productMenuItems: MenuItem[] = [
         customIcon: WatersoftenericonImg,
         title: "Adoucisseurs d'eau",
         description: "Éliminez le calcaire, protégez vos électroménagers et profitez d'une peau et de cheveux plus sains avec une eau parfaitement douce.",
-        href: "/adoucisseur-eau-residentiel"
+        href: "/A"
       },
       {
         customIcon: saltfreeiconImg,

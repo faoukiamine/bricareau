@@ -99,10 +99,13 @@ import DesabonnementSucces from "./pages/DesabonnementSucces";
 import ResidentialServices from "./pages/ResidentialServices";
 import HotellerieRestauration from "./pages/HotellerieRestauration";
 import Bureau from "./pages/Bureau";
+import A from "./pages/A";
+import B from "./pages/B";
 import WhyChooseUs from "./pages/WhyChooseUs";
 import Sustainability from "./pages/Sustainability";
 import OurProcess from "./pages/OurProcess";
 import Home1 from "./pages/Home1";
+import C from "./pages/C";
 
 const queryClient = new QueryClient();
 
@@ -192,6 +195,9 @@ const App = () => (
           <Route path="/conditions-generales-utilisation" element={<ConditionsGeneralesUtilisation />} />
           <Route path="/desabonnement" element={<Desabonnement />} />
           <Route path="/desabonnement-succes" element={<DesabonnementSucces />} />
+          <Route path="/A" element={<A />} />
+          <Route path="/B" element={<B />} />
+          <Route path="/C" element={<C />} />
 
 
 
