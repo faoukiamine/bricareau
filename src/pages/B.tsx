@@ -10,6 +10,7 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import { ProMaxButton } from "@/components/ui/ProMaxButton";
 import { Button } from "@/components/ui/button";
 import heroFilter from "@/assets/person-is-holding-a-glass-of-water-from-a-faucet.jpeg";
+import heroFiltration from "@/assets/2149890905.jpg";
 import {
     ArrowRight,
     Droplets,
@@ -26,7 +27,9 @@ import {
     FlaskConical,
     Pipette,
     Coffee,
-    AlertTriangle
+    AlertTriangle,
+    Wrench,
+    Recycle
 } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import { useNavigate } from "react-router-dom";
@@ -57,6 +60,10 @@ import rouilleThumbUpdated from "@/assets/5a4674e7-575d-4cd9-b1f2-32522f8a7072.j
 import turbideWaterThumb from "@/assets/Turbide-Water.webp";
 import corrosiveWaterThumb from "@/assets/Corrosive-Water.webp";
 import taninWaterThumb from "@/assets/problemes-deau-tanin.jpg";
+import dechetbouteilleImg from "@/assets/20051.jpg";
+import oldpipesImg from "@/assets/Old Pipes.jpg";
+import newbornHealthImg from "@/assets/47A0F39600000578-5222035-image-a-1_1514911887749.jpg";
+import healthAndSafetyIcon from "@/assets/health_and_safety.svg";
 import mauvaisGoutThumb from "@/assets/blog3-1.jpg";
 
 const products = [
@@ -68,7 +75,6 @@ const products = [
     { name: "Filtre d'eau Sulphur Shield", desc: "Spécialisé pour l'eau contenant du sulfure d'hydrogène.", image: specializedFiltersImg },
     { name: "Filtre d'eau Zéro-As", desc: "Spécialisé pour l'eau contenant de l'arsenic.", image: specializedFiltersImg },
     { name: "Filtre d'eau Tann-Ex", desc: "Spécialisé pour l'eau contenant du tanin.", image: waterSoftenerImg },
-    { name: "Système d'osmose inverse Essentiel", desc: "Spécialisé pour l'eau contenant beaucoup de sels dissous.", image: drinkingWaterImg },
 ];
 
 const faqItems = [
@@ -221,7 +227,7 @@ const B = () => {
                 const remaining = prev.slice(1);
                 return [...remaining, nextCard]; // Move it to the top
             });
-        }, 5000);
+        }, 3000);
         return () => clearInterval(interval);
     }, []);
 
@@ -244,69 +250,115 @@ const B = () => {
              <Header />
              <main>
                 <Hero 
-                    image={heroFilter}
-                    highlightedTitle="Filtre d'eau de puits,"
-                    mainTitle="une eau filtrée sans compromis."
-                    subtitle="Nos solutions spécialisées traitent efficacement le fer, le soufre (odeurs d'œufs pourris), le manganèse et l'acidité. Protégez votre plomberie et profitez d'une eau saine et limpide partout dans votre maison."
-                    ctaText="Explorez nos filtres d'eau"
-                    ctaLink="#specialized-filters"
+                    image={heroFiltration}
+                    highlightedTitle="Filtration d'eau résidentielle"
+                    mainTitle="L'excellence pour votre santé."
+                    subtitle="Ne laissez plus les contaminants couler de vos robinets. Nos systèmes de filtration d'eau avancés constituent un bouclier durable pour votre maison, vous garantissant une eau d'une pureté irréprochable pour toute votre famille au Canada."
                     showPhone={true}
                     showBreadcrumbs={true}
-                    singleLineTitle={true}
                 />
 
-                {/* 2. Bridge Section */}
-                <section id="puits-adn" className="bg-white overflow-hidden border-y border-slate-100">
-                    <div className="flex flex-col lg:flex-row items-stretch min-h-[600px] lg:min-h-[800px]">
-                        
-                        {/* Left Side: Content - Aligned with logo/grid */}
-                        <div className="w-full lg:w-1/2 flex items-center bg-slate-50/5 justify-start lg:justify-end">
-                            <div className="w-full max-w-[750px] px-6 sm:px-12 lg:px-16 xl:px-24 py-24 lg:py-32">
-                                <div className="space-y-12">
-                                    <div className="space-y-6">
-                                        <h2 className="mb-8 heading-pro-max text-left text-[#18448F]">
-                                            <span className="italic font-light block">Votre puits possède</span>
-                                            <span className="font-bold block">son propre ADN.</span>
-                                        </h2>
-                                        
-                                        <div className="space-y-8">
-                                            <p className="text-lg lg:text-xl italic text-slate-700 font-light leading-relaxed text-justify lg:text-left">
-                                                "Une filtration d'eau classique est une réponse générique à un problème unique. Nous concevons la solution en respectant l'ADN de votre eau."
-                                            </p>
-                                            
-                                            <p className="text-base lg:text-lg text-slate-600 font-light leading-relaxed text-justify">
-                                                L'eau de votre puits est le fruit d'une géologie complexe. Là où d'autres voient simplement du fer ou du calcaire, Bricareau analyse la synergie des minéraux. Notre approche bridge l'écart entre une eau brute, parfois agressive, et une ressource précieuse, revitalisante et protectrice pour votre foyer. 
-                                            </p>
+                {/* 2. The Problem Section */}
+                <section id="problemes-eau" className="py-24 bg-white relative overflow-hidden">
+                    <div className="container mx-auto px-6 relative z-10">
+                        <div className="text-center max-w-4xl mx-auto mb-20">
+                            <span className="inline-block px-4 py-1 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black tracking-widest mb-6 uppercase">
+                                Diagnostic de Pureté
+                            </span>
+                            <h2 className="heading-pro-max">
+                                <span className="italic font-light text-blue-600 block leading-tight">Identifier l'invisible :</span>
+                                <span className="font-bold text-[#18448F] block leading-tight">Pourquoi filtrer votre eau ?</span>
+                            </h2>
+                            <p className="body-pro-max text-slate-500 mt-6 mx-auto max-w-2xl px-4">
+                                L'eau municipale traverse des kilomètres de tuyauteries vétustes avant d'arriver chez vous. Chaque verre peut contenir des traces de l'imparfait.
+                            </p>
+                        </div>
 
-                                            <div className="pt-4 lg:pt-6 opacity-90">
-                                                <p className="text-lg lg:text-xl text-[#18448F]/90 font-light italic" style={{ fontFamily: '"Cormorant Garamond", serif', letterSpacing: '-0.01em' }}>
-                                                    "L'eau qui court sur la pierre s'oublie, l'eau qui passe par le filtre se purifie."
-                                                </p>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                            {[
+                                {
+                                    title: "Réseaux Vétustes",
+                                    desc: "Des particules de rouille et de sédiments provenant de tuyauteries municipales centenaires se déposent dans vos verres.",
+                                    benefit: "Infrastructure",
+                                    color: "bg-amber-600",
+                                    icon: <Wrench className="w-6 h-6" />,
+                                    img: oldpipesImg
+                                },
+                                {
+                                    title: "Santé & Nouveau-nés",
+                                    desc: "Traces de plomb, micro-plastiques et hormones. Protégez les systèmes immunitaires fragiles de votre famille.",
+                                    benefit: "Sécurité Totale",
+                                    color: "bg-pink-500",
+                                    icon: <img src={healthAndSafetyIcon} className="w-6 h-6 brightness-0 invert" alt="Santé & Nouveau-nés icon" />,
+                                    img: newbornHealthImg
+                                },
+                                {
+                                    title: "Goût de Chlore",
+                                    desc: "Le chlore est nécessaire pour désinfecter, mais il altère le goût de vos boissons et dessèche votre peau sous la douche.",
+                                    benefit: "Confort Gustatif",
+                                    color: "bg-blue-600",
+                                    icon: <GlassWater className="w-6 h-6" />,
+                                    img: waterTasteImg
+                                },
+                                {
+                                    title: "L'impact Plastique",
+                                    desc: "Éliminez définitivement l'achat de 2000+ bouteilles de plastique par an. Une victoire écologique et financière.",
+                                    benefit: "Zéro Déchet",
+                                    color: "bg-emerald-500",
+                                    icon: <Recycle className="w-6 h-6" />,
+                                    img: dechetbouteilleImg
+                                },
+                            ].map((item, i) => (
+                                <div 
+                                    key={i} 
+                                    className="group relative h-[500px] rounded-[3rem] overflow-hidden border border-slate-100 bg-slate-50/50 cursor-pointer shadow-sm transition-all duration-700 hover:shadow-2xl hover:shadow-blue-200/50 hover:border-blue-100 hover:-translate-y-3"
+                                    onClick={() => {
+                                        let targetId = 'solutions-title';
+                                        if (i === 0) targetId = 'compact-filtration-title';
+                                        else if (i === 1) targetId = 'undersink-title';
+                                        
+                                        const el = document.getElementById(targetId);
+                                        el?.scrollIntoView({ behavior: 'smooth' });
+                                    }}
+                                >
+                                    {/* background with slight zoom on hover */}
+                                    <div className="absolute inset-0 z-0 scale-105 group-hover:scale-110 transition-transform duration-[2000ms]">
+                                        <img 
+                                            src={item.img} 
+                                            alt={item.title} 
+                                            className="w-full h-full object-cover opacity-1 group-hover:opacity-40 transition-opacity grayscale group-hover:grayscale-0" 
+                                        />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-transparent" />
+                                    </div>
+
+                                    <div className="relative z-10 p-10 flex flex-col h-full justify-between">
+                                        <div className="space-y-6">
+                                            <div className="flex items-center justify-between">
+                                                <div className={`w-14 h-14 rounded-2xl ${item.color} text-white flex items-center justify-center shadow-lg transition-transform duration-500 group-hover:rotate-12`}>
+                                                    {item.icon}
+                                                </div>
+                                                <span className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 group-hover:text-blue-600 transition-colors">
+                                                    {item.benefit}
+                                                </span>
                                             </div>
+                                            <h3 className="text-3xl font-bold text-slate-800 leading-[1.1] transition-all duration-500 group-hover:text-blue-700">
+                                                {item.title}
+                                            </h3>
+                                            <p className="body-pro-max text-sm leading-relaxed text-slate-600 opacity-80 group-hover:opacity-100 transition-all">
+                                                {item.desc}
+                                            </p>
+                                        </div>
+
+                                        <div className="flex items-center gap-2 text-blue-600 font-bold text-[10px] uppercase tracking-widest opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500">
+                                            Voir solutions <ChevronRight className="w-4 h-4" />
                                         </div>
                                     </div>
+
+                                    {/* Glow effect on hover */}
+                                    <div className="absolute -bottom-20 -right-20 w-40 h-40 bg-blue-400/20 rounded-full blur-[80px] opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
                                 </div>
-                            </div>
+                            ))}
                         </div>
-
-                        {/* Right Side: Visual Image - Edge to Edge */}
-                        <div className="w-full lg:w-1/2 relative min-h-[450px] lg:min-h-full border-l border-slate-100 transition-all duration-1000">
-                            <img 
-                                src={process1} 
-                                alt="Analyse d'eau de puits Bricareau" 
-                                className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000"
-                            />
-                            <div className="absolute inset-0 bg-blue-900/5" />
-                            
-                            {/* Feature Badge - Refined Inside positioning */}
-                            <div className="absolute top-10 left-10 bg-white shadow-2xl p-8 rounded-[2.5rem] border border-slate-50 space-y-3 max-w-[220px] hidden xl:block animate-float">
-                                <span className="font-bold text-[10px] uppercase text-[#18448F] tracking-widest">Expertise Puits</span>
-                                <p className="text-sm font-light text-slate-500 leading-snug">
-                                    Traitement ciblé basé sur <span className="font-bold text-slate-900">l'analyse de votre eau.</span> 
-                                </p>
-                            </div>
-                        </div>
-
                     </div>
                 </section>
 
@@ -326,12 +378,12 @@ const B = () => {
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10">
                             {[
                                 { 
-                                    problem: "Odeur d'œufs pourris", 
-                                    cause: "Gaz sulfure d'hydrogène", 
-                                    solution: "Sulphur Shield",
-                                    color: "from-amber-400 to-orange-600",
-                                    icon: <Wind className="w-8 h-8" />,
-                                    img: rottenEggsThumb
+                                    problem: "Sable & Sédiments", 
+                                    cause: "Eaux turbides", 
+                                    solution: "Vortex Filtration",
+                                    color: "from-slate-400 to-slate-700",
+                                    icon: <Filter className="w-8 h-8" />,
+                                    img: turbideWaterThumb
                                 },
                                 { 
                                     problem: "Taches de Rouille", 
@@ -342,20 +394,20 @@ const B = () => {
                                     img: rouilleThumbUpdated
                                 },
                                 { 
-                                    problem: "Sable & Sédiments", 
-                                    cause: "Eaux turbides", 
-                                    solution: "Vortex Filtration",
-                                    color: "from-slate-400 to-slate-700",
-                                    icon: <Filter className="w-8 h-8" />,
-                                    img: turbideWaterThumb
-                                },
-                                { 
                                     problem: "Eau Acide (pH bas)", 
                                     cause: "Corrosion du cuivre", 
                                     solution: "Zen-pH Neutralizer",
                                     color: "from-blue-400 to-indigo-600",
                                     icon: <FlaskConical className="w-8 h-8" />,
                                     img: corrosiveWaterThumb
+                                },
+                                { 
+                                    problem: "Odeur d'œufs pourris", 
+                                    cause: "Gaz sulfure d'hydrogène", 
+                                    solution: "Sulphur Shield",
+                                    color: "from-amber-400 to-orange-600",
+                                    icon: <Wind className="w-8 h-8" />,
+                                    img: rottenEggsThumb
                                 },
                                 { 
                                     problem: "Taches Noires", 
@@ -446,11 +498,11 @@ const B = () => {
                         <div className="text-left mb-16">
                             <h2 className="mb-8 heading-pro-max text-left">
                                 <span className="italic font-light text-[#18448F] block text-left">Nos filtres d'eau</span>
-                                <span className="font-bold text-[#18448F] block text-left">spécialisés - Eau de puits</span>
+                                <span className="font-bold text-[#18448F] block text-left">spécialisés</span>
                             </h2>
                             <div className="w-24 h-1 bg-[#18448F]"></div>
                             <p className="body-pro-max mt-8 text-justify w-full">
-                                Découvrez notre gamme complète de filtres spécialisés, conçus pour répondre aux défis uniques des puits privés artésiens ou de surface. Que vous fassiez face à des taches de fer tenaces, des odeurs de soufre incommodantes, une eau acide corrosive ou la présence de contaminants invisibles comme l'arsenic, nos systèmes offrent une solution ciblée et performante. Chaque unité est dotée d'une technologie de pointe pour assurer une filtration maximale tout en préservant l'intégrité de votre plomberie et de vos appareils électroménagers. En investissant dans l'une de nos solutions Vortex, Iron Shield, Zen-pH, ou autres, vous choisissez une tranquillité d'esprit durable et une qualité d'eau irréprochable pour toute votre famille. Nos experts vous accompagnent dans le diagnostic et l'installation pour garantir que chaque goutte d'eau qui coule de votre robinet soit pure, sûre et limpide.
+                                Découvrez notre gamme complète de filtres spécialisés, conçus pour répondre aux défis uniques du réseau d'eau municipale et des puits privés artésiens ou de surface. Que vous fassiez face à des taches de fer tenaces, des odeurs de soufre incommodantes, une eau acide corrosive ou la présence de contaminants invisibles comme l'arsenic, nos systèmes offrent une solution ciblée et performante. Chaque unité est dotée d'une technologie de pointe pour assurer une filtration maximale tout en préservant l'intégrité de votre plomberie et de vos appareils électroménagers. En investissant dans l'une de nos solutions Vortex, Iron Shield, Zen-pH, ou autres, vous choisissez une tranquillité d'esprit durable et une qualité d'eau irréprochable pour toute votre famille. Nos experts vous accompagnent dans le diagnostic et l'installation pour garantir que chaque goutte d'eau qui coule de votre robinet soit pure, sûre et limpide.
                             </p>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -497,7 +549,7 @@ const B = () => {
                                 </div>
                             </div>
                             <ProMaxButton asChild variant="white" className="w-full md:w-auto">
-                                <a href="/consultation">Démarrer le diagnostic gratuit</a>
+                                <a href="/diagnostic">Démarrer le diagnostic gratuit</a>
                             </ProMaxButton>
                         </div>
                     </div>
@@ -587,7 +639,7 @@ const B = () => {
                         <div className="text-left mb-16">
                             <h2 className="mb-8 heading-pro-max text-left">
                                 <span className="italic font-light text-[#18448F] block">Comparez nos filtres d'eau</span>
-                                <span className="font-bold text-[#18448F] block">spécialisés pour l'eau de puits</span>
+                                <span className="font-bold text-[#18448F] block">spécialisés</span>
                             </h2>
                             <div className="w-24 h-1 bg-[#18448F]"></div>
                         </div>

@@ -254,7 +254,8 @@ const A = () => {
     }, [emblaApi, setScrollSnaps, onSelect]);
     const [showAllFaqs, setShowAllFaqs] = useState(false);
     const [showAllHarms, setShowAllHarms] = useState(false);
-    const [activeCol, setActiveCol] = useState(0); 
+    const [activeCol, setActiveCol] = useState(0);
+    const [activeAdvantageImage, setActiveAdvantageImage] = useState(benefitsVisualImg);
     const navigate = useNavigate();
     const resourcesRef = React.useRef<HTMLDivElement>(null);
 
@@ -468,7 +469,22 @@ const A = () => {
                                 {/* Left: Benefits Accordion in a Card */}
                                 <div className="w-full lg:w-[45%] z-20 mb-12 lg:mb-0">
                                     <div className="bg-white rounded-2xl shadow-[0_30px_60px_rgba(0,0,0,0.12)] p-8 md:p-12 border border-slate-50 lg:-mr-32 relative">
-                                        <Accordion type="single" defaultValue="item-0" className="w-full space-y-2">
+                                        <Accordion 
+                                            type="single" 
+                                            defaultValue="item-0" 
+                                            className="w-full space-y-2"
+                                            onValueChange={(value) => {
+                                                const mapping: Record<string, string> = {
+                                                    "item-0": benefitsVisualImg,
+                                                    "item-1": applianceDamageImg,
+                                                    "item-2": laundryImg,
+                                                    "item-3": kitchenImg
+                                                };
+                                                if (value && mapping[value]) {
+                                                    setActiveAdvantageImage(mapping[value]);
+                                                }
+                                            }}
+                                        >
                                             {[
                                                 {
                                                     title: "Qualité supérieure",
@@ -513,9 +529,10 @@ const A = () => {
 
                                     <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3] lg:aspect-auto lg:h-[550px]">
                                         <img 
-                                            src={benefitsVisualImg} 
+                                            key={activeAdvantageImage}
+                                            src={activeAdvantageImage} 
                                             alt="Bienfaits de l'eau adoucie sur la santé et le foyer" 
-                                            className="w-full h-full object-cover"
+                                            className="w-full h-full object-cover animate-in fade-in zoom-in duration-500"
                                         />
                                         <div className="absolute inset-0 bg-gradient-to-tr from-blue-900/10 to-transparent" />
                                     </div>
