@@ -60,27 +60,27 @@ const Footer = () => {
             <h3 className="mb-6 text-white font-bold text-base uppercase tracking-wider">Résidentiel</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="/adoucissement" className="text-white/80 hover:text-white transition-colors">
+                <a href="/tests-eau" className="text-white/80 hover:text-white transition-colors">
                   Analyse d'eau
                 </a>
               </li>
               <li>
-                <a href="/filtration" className="text-white/80 hover:text-white transition-colors">
+                <a href="/B" className="text-white/80 hover:text-white transition-colors">
                   Systèmes de filtration d'eau pour toute la maison
                 </a>
               </li>
               <li>
-                <a href="/systeme-de-filtration-deau-potable" className="text-white/80 hover:text-white transition-colors">
+                <a href="/A" className="text-white/80 hover:text-white transition-colors">
                   Adoucisseurs d'eau
                 </a>
               </li>
               <li>
-                <a href="/traitement-eau-de-puits" className="text-white/80 hover:text-white transition-colors">
+                <a href="/C" className="text-white/80 hover:text-white transition-colors">
                   Systèmes de filtration d'eau sous évier
                 </a>
               </li>
                <li>
-                <a href="/fontaines" className="text-white/80 hover:text-white transition-colors">
+                <a href="/systemes-de-desinfection-uv" className="text-white/80 hover:text-white transition-colors">
                   Systèmes de désinfection UV
                 </a>
               </li><li>
@@ -144,7 +144,7 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="/contact" className="text-white/80 hover:text-white transition-colors">
+                <a href="/tests-eau" className="text-white/80 hover:text-white transition-colors">
                   Analyses d'eau
                 </a>
               </li>
