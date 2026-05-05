@@ -18,11 +18,11 @@ import { allTestimonials } from "@/data/testimonials";
 
 // Assets
 import heroImg from "@/assets/129871.jpg";
-import softenerImg from "@/assets/Water-Softener-installation.jpg";
+import TechnicalRoomHotelImg from "@/assets/203427810.jpeg";
 import filtrationImg from "@/assets/woman-and-kid-drink-glass-water.jpg";
-import wholeHouseImg from "@/assets/Filtration-eau-de-puits.webp";
-import drinkWaterImg from "@/assets/water-dispenser in kitchen.jpg";
-import uvImg from "@/assets/UV-system.jpg";
+import CommercialfiltrationImg from "@/assets/Commercial-Water-Softener.webp";
+import brasserieWaterImg from "@/assets/124521.jpg";
+import coffeeFilterImg from "@/assets/167206.jpg";
 import partnerImg from "@/assets/waterdrop-carafe-in-use.webp";
 
 const HotellerieRestauration = () => {
@@ -99,7 +99,7 @@ const HotellerieRestauration = () => {
                 "Élimine les dépôts calcaires et les taches sur la verrerie",
                 "Systèmes en duplex pour un débit continu sans interruption"
             ],
-            image: softenerImg,
+            image: TechnicalRoomHotelImg,
             link: "/adoucisseur-eau-residentiel"
         },
         {
@@ -111,7 +111,7 @@ const HotellerieRestauration = () => {
                 "Systèmes certifiés pour environnements commerciaux intensifs",
                 "Protection de vos équipements de cuisine contre le tartre"
             ],
-            image: wholeHouseImg,
+            image: CommercialfiltrationImg,
             link: "/filtres-deau"
         },
         {
@@ -123,7 +123,7 @@ const HotellerieRestauration = () => {
                 "Design premium adapté aux établissements haut de gamme",
                 "Réduction drastique des bouteilles plastique et des coûts logistiques"
             ],
-            image: drinkWaterImg,
+            image: brasserieWaterImg,
             link: "/fontaines"
         },
         {
@@ -135,7 +135,7 @@ const HotellerieRestauration = () => {
                 "Aucun produit chimique — conforme aux normes HACCP",
                 "Solution idéale pour les établissements avec eau de puits ou de source"
             ],
-            image: uvImg,
+            image: coffeeFilterImg,
             link: "/Systemes-de-desinfection-UV"
         }
     ];

@@ -18,14 +18,17 @@ import { allTestimonials } from "@/data/testimonials";
 
 // Assets
 import heroImg from "@/assets/1451506551.jpg";
+import commercialFiltrationImg from "@/assets/Commercial-Water-Softener.webp";
 import softenerImg from "@/assets/Water-Softener-installation.jpg";
-import filtrationImg from "@/assets/woman-and-kid-drink-glass-water.jpg";
+import DISystemsImg from "@/assets/DI-Water-System.jpg";
 import wholeHouseImg from "@/assets/Filtration-eau-de-puits.webp";
-import drinkWaterImg from "@/assets/water-dispenser in kitchen.jpg";
+import dosinggroupImg from "@/assets/Pulsafeeder dosing group.jpg";
 import uvImg from "@/assets/UV-system.jpg";
 import uvSystemImg from "@/assets/Aquaviva-Cannes-480x355.png";
 import partnerImg from "@/assets/waterdrop-carafe-in-use.webp";
 import multimediaImg from "@/assets/Multimedia filters.png";
+import IndustrialROSystemsImg from "@/assets/jpg100.jpg";
+import industrialSoftenerImg from "@/assets/Industrial Water Softeners.png"
 
 const Industriel = () => {
     const navigate = useNavigate();
@@ -103,7 +106,7 @@ const Industriel = () => {
                 "Systèmes pour éliminer le plomb, kystes et PFOA/PFOS",
                 "Élimination efficace du fer et du manganèse"
             ],
-            image: multimediaImg,
+            image: commercialFiltrationImg,
             imageClassName: "object-left scale-80 -translate-x-10",
             link: "/filtres-deau"
         },{
@@ -115,7 +118,7 @@ const Industriel = () => {
                 "Améliore l'efficacité des appareils électroménagers",
                 "Élimine l'accumulation de tartre et les taches d'eau dure"
             ],
-            image: softenerImg,
+            image: industrialSoftenerImg,
             link: "/adoucisseur-eau-residentiel"
         },
         {
@@ -127,7 +130,7 @@ const Industriel = () => {
                 "Servez vos invités dans les bouteilles en verre design",
                 "La même technologie que celle utilisée par vos restaurants !"
             ],
-            image: drinkWaterImg,
+            image: dosinggroupImg,
             link: "/fontaines"
         },
         {
@@ -139,7 +142,7 @@ const Industriel = () => {
                 "Niveau maximal de purification de l'eau",
                 "Procure une tranquillité d'esprit totale"
             ],
-            image: filtrationImg,
+            image: IndustrialROSystemsImg,
             link: "/systeme-de-filtration-deau-potable"
         },
           {
@@ -151,7 +154,7 @@ const Industriel = () => {
                 "Niveau maximal de purification de l'eau",
                 "Procure une tranquillité d'esprit totale"
             ],
-            image: filtrationImg,
+            image: DISystemsImg,
             link: "/systeme-de-filtration-deau-potable"
         },
         {

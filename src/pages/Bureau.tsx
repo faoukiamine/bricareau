@@ -20,7 +20,7 @@ import { allTestimonials } from "@/data/testimonials";
 import heroImg from "@/assets/hero-entreprise.jpg";
 import softenerImg from "@/assets/Water-Softener-installation.jpg";
 import filtrationImg from "@/assets/Sérénité Direct-Flow installation.png";
-import wholeHouseImg from "@/assets/Filtration-eau-de-puits.webp";
+import centralSystemImg from "@/assets/LZS8WSSP-PF.webp";
 import drinkWaterImg from "@/assets/20230add-4ce5-4ae6-a6dc-1f9a2c3aeb7b.jpg";
 import uvImg from "@/assets/UV-system.jpg";
 import sparklingImg from "@/assets/Slider_V3-204_1.png";
@@ -136,7 +136,7 @@ const Bureau = () => {
                 "Idéal pour les salles de réunion et les espaces communs",
                 "Zéro bouteille, zéro logistique, économies garanties"
             ],
-            image: wholeHouseImg,
+            image: centralSystemImg,
             link: "/eau-petillante-entreprises"
         }
     ];
@@ -206,8 +206,8 @@ const Bureau = () => {
                             <div className="space-y-6">
                                 <h1 className="mb-6 animate-in fade-in slide-in-from-left duration-1000 tracking-tighter"
                                     style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif', fontSize: '50px', lineHeight: '55px' }}>
-                                    <span className="italic font-light text-[#18448F] block">Solutions pour</span>
-                                    <span className="font-bold text-[#18448F] block">Bureaux & Entreprises.</span>
+                                    <span className="italic font-light text-[#3d6aab] block">Solutions pour</span>
+                                    <span className="font-bold text-[#3d6aab] block">Bureaux & Entreprises.</span>
                                 </h1>
                                 
                                 <p className="max-w-xl animate-in fade-in slide-in-from-left duration-1000 delay-100 text-left text-slate-600 text-lg md:text-xl font-light leading-relaxed">
@@ -245,11 +245,11 @@ const Bureau = () => {
                         <div className="flex items-center justify-center gap-2 text-[10px] text-slate-400 uppercase tracking-[0.4em] mb-12 font-bold">
                             <span>Accueil</span>
                             <ChevronRight className="w-3 h-3" />
-                            <span className="text-[#18448F]">Bureau</span>
+                            <span className="text-[#3d6aab]">Bureau</span>
                         </div>
                         <h2 className="text-4xl md:text-6xl font-bold mb-10 tracking-tight text-slate-900">Notre approche</h2>
                         <p className="text-lg md:text-[1.2rem] text-slate-500 font-normal leading-relaxed">
-                            En milieu de travail, la qualité de l'eau est un levier de <span className="text-slate-900 font-semibold italic">productivité, de bien-être et de performance</span>. Chez Bricareau, nous proposons des solutions d'hydratation et de traitement d'eau spécialement conçues pour les environnements de bureau. De la fontaine sans bouteille aux machines à café protégées, offrez à vos équipes une eau <span className="text-[#18448F] font-semibold">pure, fraîche et accessible</span> tout au long de la journée.
+                            En milieu de travail, la qualité de l'eau est un levier de <span className="text-slate-900 font-semibold italic">productivité, de bien-être et de performance</span>. Chez Bricareau, nous proposons des solutions d'hydratation et de traitement d'eau spécialement conçues pour les environnements de bureau. De la fontaine sans bouteille aux machines à café protégées, offrez à vos équipes une eau <span className="text-[#3d6aab] font-semibold">pure, fraîche et accessible</span> tout au long de la journée.
                         </p>
                     </div>
                 </section>
@@ -275,7 +275,7 @@ const Bureau = () => {
                                         <div className="relative flex items-center justify-center w-8 flex-shrink-0">
                                             {activeSection === idx ? (
                                                 <div className="w-10 h-10 rounded-full border-[2.5px] border-white flex items-center justify-center transition-all duration-500 bg-transparent">
-                                                    <div className="w-4 h-4 rounded-full bg-[#18448F] shadow-[0_0_10px_rgba(61,106,171,0.8)]" />
+                                                    <div className="w-4 h-4 rounded-full bg-[#3d6aab] shadow-[0_0_10px_rgba(61,106,171,0.8)]" />
                                                 </div>
                                             ) : (
                                                 <div className="w-2.5 h-2.5 rounded-full border-[1.5px] border-blue-400 opacity-60 group-hover:opacity-100 transition-all" />
@@ -371,8 +371,8 @@ const Bureau = () => {
                             <div className="max-w-2xl">
                                 <span className="text-slate-600 font-bold text-[10px] sm:text-xs uppercase tracking-[0.2em] block mb-4">Témoignages de réussite de nos partenaires</span>
                                 <h2 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-black text-[#0f172a] leading-[1.1] tracking-tight">
-                                    <span className="italic font-light text-[#18448F] block">Votre confiance.</span>
-                                    <span className="font-bold text-[#18448F] block">Notre plus grande fierté.</span>
+                                    <span className="italic font-light text-[#3d6aab] block">Votre confiance.</span>
+                                    <span className="font-bold text-[#3d6aab] block">Notre plus grande fierté.</span>
                                 </h2>
                             </div>
                         </div>
@@ -434,7 +434,7 @@ const Bureau = () => {
                             {/* Circular Badge */}
                             <div className="absolute right-4 sm:right-12 lg:right-24 bottom-16 sm:bottom-12 z-20">
                                 <div className="relative w-32 h-32 flex items-center justify-center animate-[spin_15s_linear_infinite] bg-white/90 backdrop-blur-sm rounded-full p-2 shadow-2xl">
-                                    <svg viewBox="0 0 100 100" className="w-full h-full absolute inset-0 text-[#18448F] font-sans overflow-visible">
+                                    <svg viewBox="0 0 100 100" className="w-full h-full absolute inset-0 text-[#3d6aab] font-sans overflow-visible">
                                         <path id="circlePath" d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0" fill="none" />
                                         <text fontSize="8.5" fontWeight="900" letterSpacing="0.16em" fill="currentcolor">
                                             <textPath href="#circlePath" startOffset="0%" textAnchor="start">
@@ -471,11 +471,11 @@ const Bureau = () => {
                                     <div className="aspect-[4/3] overflow-hidden rounded-sm mb-8 shadow-2xl relative">
                                         <img src={article.image} alt={article.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[1.5s]" />
                                     </div>
-                                    <div className="text-[11px] text-[#18448F] uppercase tracking-widest mb-4 font-black flex items-center gap-2">
+                                    <div className="text-[11px] text-[#3d6aab] uppercase tracking-widest mb-4 font-black flex items-center gap-2">
                                         <div className="w-4 h-px bg-blue-200" />
                                         {article.category}
                                     </div>
-                                    <h4 className="text-2xl font-bold text-slate-900 mb-8 leading-tight group-hover:text-[#18448F] transition-colors">{article.title}</h4>
+                                    <h4 className="text-2xl font-bold text-slate-900 mb-8 leading-tight group-hover:text-[#3d6aab] transition-colors">{article.title}</h4>
                                     <div className="flex items-center gap-2 text-slate-400 text-[10px] font-black uppercase tracking-widest">
                                         Lire la suite <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                                     </div>
@@ -489,7 +489,7 @@ const Bureau = () => {
                 <section className="py-48 bg-[#0c1016] text-center relative overflow-hidden">
                     <div className="container mx-auto px-6 relative z-10 space-y-16">
                         <h2 className="text-4xl md:text-[5.5rem] font-black text-white leading-tight tracking-tighter">
-                            Trouvez <span className="text-[#18448F] italic font-light lowercase">la solution adaptée.</span>
+                            Trouvez <span className="text-[#3d6aab] italic font-light lowercase">la solution adaptée.</span>
                         </h2>
                         <ProMaxButton 
                             variant="white"

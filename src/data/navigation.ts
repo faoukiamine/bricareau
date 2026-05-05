@@ -185,11 +185,11 @@ export const mainNavMenuItems: MenuItem[] = [
         ],
 
         promo: {
-            title: "Élimination des PFAS",
-            subtitle: "Les PFAS sont des substances chimiques de synthèse issues de divers produits toxiques qui se sont retrouvées dans les eaux souterraines et de surface.",
-            image: pfasImg,
-            link: "/pfas",
-            cta: "APPRENEZ-EN DAVANTAGE SUR LES PFAS"
+            title: "Analyse d'eau",
+            subtitle: "Une eau parfaite commence par une analyse rigoureuse.",
+            image: promoImage2,
+            link: "/tests-eau",
+            cta: "APPRENEZ-EN DAVANTAGE SUR LES TESTS D'EAU"
         }
     }
 ];

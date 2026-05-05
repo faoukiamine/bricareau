@@ -383,6 +383,8 @@ const ResidentialServices = () => {
                     ))}
                 </section>
 
+
+
                 {/* 4. Case Study Section */}
                 <section ref={testimonialsRef} className="py-24 bg-white relative overflow-hidden">
                     <div className="container mx-auto px-4 max-w-7xl">
