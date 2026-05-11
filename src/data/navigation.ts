@@ -94,11 +94,6 @@ export const mainNavMenuItems: MenuItem[] = [
                         description: "Découvrez pourquoi nous sommes le partenaire leader en filtration d'eau au Québec.", 
                         href: "/pourquoi-choisir-bricareau" 
                     },
-                  { 
-                        title: "Pourquoi nous choisir ?", 
-                        description: "Découvrez pourquoi nous sommes le partenaire leader en filtration d'eau au Québec.", 
-                        href: "/pourquoi-choisir-bricareau" 
-                    },
                     { 
                         title: "Notre processus", 
                         description: "Découvrez comment nos experts peuvent vous aider à trouver la solution qui vous convient.", 
