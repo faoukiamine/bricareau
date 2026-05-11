@@ -101,6 +101,7 @@ import HotellerieRestauration from "./pages/HotellerieRestauration";
 import Bureau from "./pages/Bureau";
 import A from "./pages/A";
 import B from "./pages/B";
+import B3 from "./pages/B3";
 import WhyChooseUs from "./pages/WhyChooseUs";
 import Sustainability from "./pages/Sustainability";
 import OurProcess from "./pages/OurProcess";
@@ -197,6 +198,7 @@ const App = () => (
           <Route path="/desabonnement-succes" element={<DesabonnementSucces />} />
           <Route path="/A" element={<A />} />
           <Route path="/B" element={<B />} />
+          <Route path="/B3" element={<B3 />} />
           <Route path="/C" element={<C />} />
 
 

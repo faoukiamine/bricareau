@@ -39,9 +39,9 @@ const Footer = () => {
   return (
     <footer className="bg-[#18448F] text-white py-12 md:py-16">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 mb-12">
-          {/* Logo and tagline */}
-          <div className="space-y-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:grid-rows-[auto_auto] gap-x-8 md:gap-x-12 gap-y-8 mb-12">
+          {/* Logo and tagline - spans both rows */}
+          <div className="space-y-4 lg:row-span-2">
             <div className="flex items-center gap-2">
               <img
                 src={logoBricareau}
@@ -49,13 +49,12 @@ const Footer = () => {
                 className="h-10 w-auto"
               />
             </div>
-            <p className="text-sm text-white/80">
-              Spécialiste du traitement d'eau au Canada depuis plus de 20 ans.
-              Votre partenaire de confiance pour une eau de qualité supérieure.
+            <p className="text-sm text-white/80 leading-relaxed">
+              Bricareau est votre expert en traitement d'eau et filtration au Québec depuis plus de 20 ans. Que ce soit pour l'installation d'un adoucisseur d'eau, d'un système d'osmose inverse, de la filtration de l'eau de puits ou de la désinfection UV, nous offrons des solutions complètes adaptées aux besoins résidentiels, commerciaux et industriels. Faites confiance à nos spécialistes certifiés pour une eau pure, saine et de qualité supérieure partout au Québec.
             </p>
           </div>
 
-          {/* Solutions-Résidentiel */}
+          {/* Résidentiel - Row 1 */}
           <div>
             <h3 className="mb-6 text-white font-bold text-base uppercase tracking-wider">Résidentiel</h3>
             <ul className="space-y-2 text-sm">
@@ -79,11 +78,12 @@ const Footer = () => {
                   Systèmes de filtration d'eau sous évier
                 </a>
               </li>
-               <li>
+              <li>
                 <a href="/systemes-de-desinfection-uv" className="text-white/80 hover:text-white transition-colors">
                   Systèmes de désinfection UV
                 </a>
-              </li><li>
+              </li>
+              <li>
                 <a href="/fontaines" className="text-white/80 hover:text-white transition-colors">
                   Fontaines d'eau
                 </a>
@@ -91,16 +91,10 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Solutions-Bureau */}
+          {/* Bureau - Row 1 */}
           <div>
             <h3 className="mb-6 text-white font-bold text-base uppercase tracking-wider">Bureau</h3>
             <ul className="space-y-2 text-sm">
-              
-              <li>
-                <a href="/tests-eau" className="text-white/80 hover:text-white transition-colors">
-                  Tests d'eau
-                </a>
-              </li>
               <li>
                 <a href="/" className="text-white/80 hover:text-white transition-colors">
                   Fontaines d'eau
@@ -119,8 +113,8 @@ const Footer = () => {
             </ul>
           </div>
 
-    {/* Solutions-Hotellerie et restauration */}
-          <div>
+          {/* Hôtellerie - spans both rows */}
+          <div className="lg:row-span-2">
             <h3 className="mb-6 text-white font-bold text-base uppercase tracking-wider">Hôtellerie et restauration</h3>
             <ul className="space-y-2 text-sm">
               <li>
@@ -133,7 +127,7 @@ const Footer = () => {
                   Adoucisseurs d'eau
                 </a>
               </li>
-                <li>
+              <li>
                 <a href="/tests-eau" className="text-white/80 hover:text-white transition-colors">
                   Systèmes de filtration d'eau pour brasseries
                 </a>
@@ -143,24 +137,13 @@ const Footer = () => {
                   Filtration d'eau pour cafetières
                 </a>
               </li>
-              <li>
-                <a href="/tests-eau" className="text-white/80 hover:text-white transition-colors">
-                  Analyses d'eau
-                </a>
-              </li>
             </ul>
           </div>
 
- 
- {/* Solutions-Commercial et Industriel */}
+          {/* Commercial & Industriel - Row 2, under Résidentiel */}
           <div>
             <h3 className="mb-6 text-white font-bold text-base uppercase tracking-wider">Commercial & Industriel</h3>
             <ul className="space-y-2 text-sm">
-              <li>
-                <a href="/" className="text-white/80 hover:text-white transition-colors">
-                  Tests d'eau
-                </a>
-              </li>
               <li>
                 <a href="/entreprises" className="text-white/80 hover:text-white transition-colors">
                   Systèmes de filtration industriels
@@ -168,7 +151,7 @@ const Footer = () => {
               </li>
               <li>
                 <a href="/commercial-industriel" className="text-white/80 hover:text-white transition-colors">
-                  Adoucisseurs d'eau indutriels
+                  Adoucisseurs d'eau industriels
                 </a>
               </li>
               <li>
@@ -184,7 +167,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Newsletter */}
+          {/* Restez informé - Row 2, under Bureau */}
           <div>
             <h3 className="mb-6 text-white font-bold text-base uppercase tracking-wider">Restez informé</h3>
             <p className="text-sm text-white/80 mb-4">

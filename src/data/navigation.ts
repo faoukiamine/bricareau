@@ -119,6 +119,11 @@ export const mainNavMenuItems: MenuItem[] = [
                         description: "Page C - Duplication de la station d'eau potable.", 
                         href: "/C" 
                     },
+                    { 
+                        title: "B3", 
+                        description: "Page B3 - Duplication de la page adoucissement.", 
+                        href: "/B3" 
+                    },
                 ]
             },
             {
