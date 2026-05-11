@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
-import { 
-    ChevronRight, 
+import {
+    ChevronRight,
     ArrowRight,
     CheckCircle2,
     ArrowDown,
@@ -17,7 +17,7 @@ import { cn } from "@/lib/utils";
 import { allTestimonials } from "@/data/testimonials";
 
 // Assets
-import heroImg from "@/assets/1451506551.jpg";
+import heroImg from "@/assets/1451506551.JPG";
 import commercialFiltrationImg from "@/assets/Commercial-Water-Softener.webp";
 import softenerImg from "@/assets/Water-Softener-installation.jpg";
 import DISystemsImg from "@/assets/DI-Water-System.jpg";
@@ -35,11 +35,11 @@ const Industriel = () => {
     const [activeSection, setActiveSection] = useState(0);
     const [showNav, setShowNav] = useState(false);
     const [isNavVisible, setIsNavVisible] = useState(true);
-    
+
     // Case Study Testimonials State
     const caseStudyTestimonials = allTestimonials.slice(0, 8);
     const [testiIndex, setTestiIndex] = useState(0);
-    
+
     const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
     const containerRef = useRef<HTMLDivElement>(null);
     const testimonialsRef = useRef<HTMLDivElement>(null);
@@ -59,7 +59,7 @@ const Industriel = () => {
                     const index = sectionRefs.current.findIndex(ref => ref === entry.target);
                     if (index !== -1) {
                         setActiveSection(index);
-                        
+
                         // Si c'est la dernière section, on lance le timer pour cacher la nav
                         if (index === programs.length - 1) {
                             setTimeout(() => {
@@ -75,7 +75,7 @@ const Industriel = () => {
         };
 
         const observer = new IntersectionObserver(observerCallback, observerOptions);
-        
+
         sectionRefs.current.forEach(ref => {
             if (ref) observer.observe(ref);
         });
@@ -89,7 +89,7 @@ const Industriel = () => {
         };
 
         window.addEventListener("scroll", handleGlobalScroll);
-        
+
         return () => {
             observer.disconnect();
             window.removeEventListener("scroll", handleGlobalScroll);
@@ -109,7 +109,7 @@ const Industriel = () => {
             image: commercialFiltrationImg,
             imageClassName: "object-left scale-80 -translate-x-10",
             link: "/filtres-deau"
-        },{
+        }, {
             title: "Adoucisseurs d'eau industriels",
             navTitle: "Adoucisseurs d'eau industriels",
             desc: "L'un des problèmes d'eau les plus courants rencontrés par les propriétaires est l'eau dure.",
@@ -145,7 +145,7 @@ const Industriel = () => {
             image: IndustrialROSystemsImg,
             link: "/systeme-de-filtration-deau-potable"
         },
-          {
+        {
             title: "Systèmes de déionisation",
             navTitle: "Systèmes de déionisation",
             desc: "L'osmose inverse, c'est comme avoir une usine de purification d'eau en bouteille sous son évier.",
@@ -239,7 +239,7 @@ const Industriel = () => {
                                     <span className="italic font-light text-[#18448F] block">Solutions</span>
                                     <span className="font-bold text-[#18448F] block">Industrielles.</span>
                                 </h1>
-                                
+
                                 <p className="max-w-xl animate-in fade-in slide-in-from-left duration-1000 delay-100 text-left text-slate-600 text-lg md:text-xl font-light leading-relaxed">
                                     Maîtrisez la qualité de votre eau pour optimiser vos processus industriels et garantir la pérennité de vos infrastructures. L'ingénierie Bricareau au service de votre performance.
                                 </p>
@@ -254,7 +254,7 @@ const Industriel = () => {
                                             Planifiez une consultation gratuite
                                         </Button>
                                     </div>
-                                    
+
                                     <div className="relative inline-block w-full sm:w-auto group">
                                         <div className="absolute inset-0 border border-[#18448F] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
                                         <Button
@@ -290,7 +290,7 @@ const Industriel = () => {
 
                 {/* 3. FULL SECTION PROGRAMS SLIDER */}
                 <section ref={containerRef} className="relative">
-                    
+
                     {/* Vertical Side Nav - ADJUSTED INDENT (RETRAIT) TO ALIGN WITH LOGO */}
                     <div className={cn(
                         "fixed left-0 top-0 bottom-0 z-50 hidden lg:block transition-all duration-700",
@@ -301,10 +301,10 @@ const Industriel = () => {
                             <div className="absolute left-6 md:left-24 top-1/2 -translate-y-1/2 flex flex-col gap-14">
                                 {/* Connecting Vertical Line */}
                                 <div className="absolute left-[15.5px] top-6 bottom-6 w-[2.5px] bg-white/20" />
-                                
+
                                 {programs.map((prog, idx) => (
-                                    <div 
-                                        key={idx} 
+                                    <div
+                                        key={idx}
                                         className="relative flex items-center gap-10 cursor-pointer group"
                                         onClick={() => scrollToProgram(idx)}
                                     >
@@ -320,8 +320,8 @@ const Industriel = () => {
 
                                         <span className={cn(
                                             "text-base transition-all duration-500 whitespace-nowrap leading-tight",
-                                            activeSection === idx 
-                                                ? "text-white font-bold opacity-100 scale-105" 
+                                            activeSection === idx
+                                                ? "text-white font-bold opacity-100 scale-105"
                                                 : "text-white/40 font-medium group-hover:text-white/60"
                                         )}>
                                             {prog.navTitle.split(' ').map((word, i) => (
@@ -338,7 +338,7 @@ const Industriel = () => {
                             <div className={cn(
                                 "absolute bottom-12 left-6 md:left-24 flex items-center gap-3 text-white/80 hover:text-white cursor-pointer transition-all uppercase text-[10px] font-bold tracking-widest group"
                             )}
-                                 onClick={handleSkip}>
+                                onClick={handleSkip}>
                                 <div className="w-10 h-10 rounded-full border border-white/40 flex items-center justify-center group-hover:border-white group-hover:bg-white group-hover:text-slate-900 transition-all">
                                     <ArrowDown className="w-5 h-5" />
                                 </div>
@@ -349,14 +349,14 @@ const Industriel = () => {
 
                     {/* The Sections */}
                     {programs.map((prog, idx) => (
-                        <div 
+                        <div
                             key={idx}
                             ref={el => sectionRefs.current[idx] = el}
                             className="relative h-screen w-full flex items-center justify-end px-6 md:px-24 lg:px-40 overflow-hidden"
                         >
                             <div className="absolute inset-0">
-                                <img 
-                                    src={prog.image} 
+                                <img
+                                    src={prog.image}
                                     alt={prog.title}
                                     className={cn(
                                         "w-full h-full object-cover transition-transform duration-[10s] scale-105",
@@ -369,16 +369,16 @@ const Industriel = () => {
 
                             <div className="relative z-10 w-full max-w-[700px] animate-in fade-in slide-in-from-right-16 duration-1000 px-4 md:px-0">
                                 <div className="absolute -bottom-10 -left-10 w-full h-full border-[10px] border-white/95 rounded-sm -z-10 translate-x-3 translate-y-3 lg:block hidden shadow-2xl" />
-                                
+
                                 <div className="bg-white/40 backdrop-blur-lg p-12 md:p-24 shadow-2xl rounded-sm border border-white/20">
                                     <h3 className="text-3xl md:text-[2.75rem] font-bold text-slate-900 mb-8 leading-[1.2] tracking-tight">
                                         {prog.title}
                                     </h3>
-                                    
+
                                     <p className="text-lg md:text-[1.15rem] text-slate-600 font-normal leading-relaxed mb-12">
                                         {prog.desc}
                                     </p>
-                                    
+
                                     <ul className="space-y-6 mb-16">
                                         {prog.points.map((pt, pIdx) => (
                                             <li key={pIdx} className="flex items-center gap-5 text-[1.05rem] text-slate-800 font-medium h-fit">
@@ -392,7 +392,7 @@ const Industriel = () => {
 
                                     <div className="relative inline-block group">
                                         <div className="absolute inset-0 border border-[#18448F] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
-                                        <Button 
+                                        <Button
                                             className="relative bg-[#18448F] hover:bg-white hover:text-[#18448F] text-white rounded-[2rem] px-10 h-14 font-black uppercase tracking-widest text-[11px] transition-all border-none"
                                             onClick={() => navigate(prog.link)}
                                         >
@@ -497,8 +497,8 @@ const Industriel = () => {
                                 <div className="text-[10px] text-slate-400 uppercase tracking-[0.4em] mb-4 font-bold">Inspiration & Conseils</div>
                                 <h2 className="text-4xl md:text-6xl font-bold text-slate-900 tracking-tighter leading-none">Articles récents</h2>
                             </div>
-                            <Button 
-                                variant="ghost" 
+                            <Button
+                                variant="ghost"
                                 className="text-slate-900 hover:text-[#18448F] font-bold p-0 group"
                                 onClick={() => navigate("/blog")}
                             >
@@ -534,7 +534,7 @@ const Industriel = () => {
                         </h2>
                         <div className="relative inline-block group">
                             <div className="absolute inset-0 border border-[#18448F] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
-                            <Button 
+                            <Button
                                 className="relative bg-[#18448F] hover:bg-white hover:text-[#18448F] text-white rounded-[2rem] px-20 h-16 font-black uppercase tracking-widest text-xs transition-all border-none shadow-2xl"
                                 onClick={() => navigate("/consultation")}
                             >
