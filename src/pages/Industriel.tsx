@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
-import { 
-    ChevronRight, 
+import {
+    ChevronRight,
     ArrowRight,
     CheckCircle2,
     ArrowDown,
@@ -24,7 +24,7 @@ import { ProMaxButton } from "@/components/ui/ProMaxButton";
 import TestimonialsSection from "@/components/TestimonialsSection";
 
 // Assets
-import heroImg from "@/assets/1451506551.jpg";
+import heroImg from "@/assets/1451506551.JPG";
 import commercialFiltrationImg from "@/assets/Commercial-Water-Softener.webp";
 import industrialSoftenerImg from "@/assets/Industrial Water Softeners.png";
 import dosinggroupImg from "@/assets/Pulsafeeder dosing group.jpg";
@@ -38,6 +38,7 @@ const Industriel = () => {
     const [showNav, setShowNav] = useState(false);
     const [isNavVisible, setIsNavVisible] = useState(true);
     
+
     const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
     const containerRef = useRef<HTMLDivElement>(null);
 
@@ -57,6 +58,7 @@ const Industriel = () => {
                     const index = sectionRefs.current.findIndex(ref => ref === entry.target);
                     if (index !== -1) {
                         setActiveSection(index);
+
                         if (index === programs.length - 1) {
                             setTimeout(() => setIsNavVisible(false), 1000);
                         } else {
@@ -70,6 +72,7 @@ const Industriel = () => {
         const observer = new IntersectionObserver(observerCallback, observerOptions);
         sectionRefs.current.forEach(ref => { if (ref) observer.observe(ref); });
 
+
         const handleGlobalScroll = () => {
             if (containerRef.current) {
                 const { offsetTop, offsetHeight } = containerRef.current;
@@ -79,6 +82,7 @@ const Industriel = () => {
         };
 
         window.addEventListener("scroll", handleGlobalScroll);
+
         return () => {
             observer.disconnect();
             window.removeEventListener("scroll", handleGlobalScroll);
@@ -174,7 +178,7 @@ const Industriel = () => {
                             
                             <p className="text-lg md:text-2xl text-slate-400 font-light max-w-2xl leading-relaxed">
                                 Optimisez vos processus, protégez vos infrastructures et garantissez la continuité de vos opérations avec nos solutions d'ingénierie de l'eau.
-                            </p> outreach
+                            </p>
 
                             <div className="flex flex-col sm:flex-row gap-6 pt-8">
                                 <ProMaxButton variant="primary" className="px-12 h-16 text-[11px]" onClick={() => navigate("/consultation")}>
@@ -213,9 +217,10 @@ const Industriel = () => {
                             </div>
                             <p className="text-slate-500 text-lg max-w-md italic border-l-2 border-blue-100 pl-8">
                                 "Une maîtrise totale de la qualité d'eau est le pilier d'une industrie performante et durable."
-                            </p> outreach
+                            </p>
                         </div>
 
+                        {/* Side Nav for Sections */}
                         <div className="relative">
                             <div className={cn(
                                 "fixed left-12 top-1/2 -translate-y-1/2 z-50 hidden xl:flex flex-col gap-10 transition-all duration-700",

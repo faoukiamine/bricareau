@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
-import { 
-    ChevronRight, 
+import {
+    ChevronRight,
     ArrowRight,
     CheckCircle2,
     ArrowDown,
@@ -23,6 +23,7 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 
 // Assets
 import heroImg from "@/assets/hero-entreprise.jpg";
+import softenerImg from "@/assets/Water-Softener-installation.jpg";
 import filtrationImg from "@/assets/Sérénité Direct-Flow installation.png";
 import drinkWaterImg from "@/assets/20230add-4ce5-4ae6-a6dc-1f9a2c3aeb7b.jpg";
 import sparklingImg from "@/assets/Slider_V3-204_1.png";
@@ -34,6 +35,7 @@ const Bureau = () => {
     const [showNav, setShowNav] = useState(false);
     const [isNavVisible, setIsNavVisible] = useState(true);
     
+
     const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
     const containerRef = useRef<HTMLDivElement>(null);
 
@@ -53,6 +55,8 @@ const Bureau = () => {
                     const index = sectionRefs.current.findIndex(ref => ref === entry.target);
                     if (index !== -1) {
                         setActiveSection(index);
+
+
                         if (index === programs.length - 1) {
                             setTimeout(() => setIsNavVisible(false), 1000);
                         } else {
@@ -66,6 +70,7 @@ const Bureau = () => {
         const observer = new IntersectionObserver(observerCallback, observerOptions);
         sectionRefs.current.forEach(ref => { if (ref) observer.observe(ref); });
 
+
         const handleGlobalScroll = () => {
             if (containerRef.current) {
                 const { offsetTop, offsetHeight } = containerRef.current;
@@ -75,6 +80,8 @@ const Bureau = () => {
         };
 
         window.addEventListener("scroll", handleGlobalScroll);
+
+
         return () => {
             observer.disconnect();
             window.removeEventListener("scroll", handleGlobalScroll);
