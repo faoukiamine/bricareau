@@ -84,25 +84,25 @@ const ResidentialServices = () => {
 
     const programs = [
         {
-            title: "Filtration Spécialisée",
+            title: "Filtres d'eau spécialisés",
             navTitle: "Filtration Toute Maison",
-            desc: "Éliminez le fer, le chlore et les contaminants pour une eau pure dès le robinet principal.",
-            points: ["Élimination du Fer & Soufre", "Protection des Canalisations", "Eau Cristalline"],
+            desc: "Libérez votre foyer du fer et du chlore : profitez d'une eau d'une pureté cristalline à chaque robinet, dès son entrée dans votre maison.",
+            points: ["Zéro Fer & Odeurs de Soufre", "Préservation de vos Canalisations", "Éclat et Pureté Cristalline"],
             image: wholeHouseImg,
             link: "/filtres-deau",
-            tag: "PURETÉ TOTALE"
+            tag: "FILTRATION INTÉGRALE"
         },
         {
-            title: "Adoucissement Intelligent",
+            title: "Adoucisseurs d'eau, éliminez le calcaire et l'eau dure.",
             navTitle: "Adoucisseurs d'eau",
-            desc: "Protégez vos électroménagers et profitez d'une peau plus douce avec nos systèmes connectés.",
+            desc: "Maximisez la durée de vie de vos appareils et offrez à votre peau la douceur d'une eau soyeuse grâce à notre technologie intelligente.",
             points: ["0% Calcaire", "Économies d'Énergie", "Protection Anticalcaire"],
             image: softenerImg,
             link: "/adoucisseur-eau-residentiel",
             tag: "PROTECTION"
         },
         {
-            title: "Osmose Inverse",
+            title: "Solutions d'eau potable",
             navTitle: "Eau Potable Premium",
             desc: "La pureté d'une eau de source directement dans votre cuisine. Plus besoin de bouteilles.",
             points: ["Filtration 5 Étapes", "Minéralisation Optimale", "Zéro Déchet"],
@@ -111,7 +111,7 @@ const ResidentialServices = () => {
             tag: "SANTÉ"
         },
         {
-            title: "Stérilisation UV",
+            title: "Systèmes de désinfection UV",
             navTitle: "Désinfection UV",
             desc: "Sécurité absolue contre les bactéries et virus, idéale pour les résidences sur puits privé.",
             points: ["Action Bactéricide 99.9%", "Sans Produits Chimiques", "Certifié NSF"],
@@ -147,8 +147,8 @@ const ResidentialServices = () => {
                             </div>
                             
                             <h1 className="text-4xl md:text-6xl lg:text-[72px] leading-[1.1] tracking-tight animate-in fade-in slide-in-from-left duration-1000">
-                                <span className="italic font-light text-[#18448F] block">L'eau pure,</span>
-                                <span className="font-bold text-[#18448F] block">que votre famille mérite.</span>
+                                <span className="italic font-light text-[#18448F]">L'eau pure, </span>
+                                <span className="font-bold text-[#18448F]">que votre famille mérite.</span>
                             </h1>
                             
                             <p className="text-lg md:text-2xl text-slate-500 font-light max-w-2xl leading-relaxed">
@@ -186,9 +186,9 @@ const ResidentialServices = () => {
                     <div className="container mx-auto px-6">
                         <div className="flex flex-col md:flex-row md:items-end justify-between mb-24 gap-8">
                             <div className="max-w-2xl space-y-6">
-                                <span className="text-[10px] font-black text-blue-600 uppercase tracking-[0.5em]">NOTRE APPROCHE</span>
+                                <span className="text-[10px] font-black text-blue-600 uppercase tracking-[0.5em]">L'EXPERTISE BRICAREAU</span>
                                 <h2 className="text-4xl md:text-7xl font-bold text-slate-900 tracking-tighter leading-none uppercase">
-                                    Une protection <span className="text-[#18448F]">multi-couches.</span>
+                                    Redécouvrez le goût <span className="text-[#18448F]">de l'eau vraie.</span>
                                 </h2>
                             </div>
                             <p className="text-slate-500 text-lg max-w-md italic border-l-2 border-blue-100 pl-8">

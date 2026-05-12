@@ -147,8 +147,8 @@ const HotellerieRestauration = () => {
                             </div>
                             
                             <h1 className="text-4xl md:text-6xl lg:text-[72px] leading-[1.1] tracking-tight animate-in fade-in slide-in-from-left duration-1000">
-                                <span className="italic font-light text-[#18448F] block">L'excellence,</span>
-                                <span className="font-bold text-[#18448F] block">dans chaque verre.</span>
+                                <span className="italic font-light text-[#18448F]">L'excellence, </span>
+                                <span className="font-bold text-[#18448F]">dans chaque verre.</span>
                             </h1>
                             
                             <p className="text-lg md:text-2xl text-slate-500 font-light max-w-2xl leading-relaxed">

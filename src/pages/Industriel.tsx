@@ -172,8 +172,8 @@ const Industriel = () => {
                             </div>
                             
                             <h1 className="text-4xl md:text-6xl lg:text-[72px] leading-[1.1] tracking-tight animate-in fade-in slide-in-from-left duration-1000">
-                                <span className="italic font-light text-white block">La puissance,</span>
-                                <span className="font-bold text-white block">de la précision industrielle.</span>
+                                <span className="italic font-light text-white">La puissance, </span>
+                                <span className="font-bold text-white">de la précision industrielle.</span>
                             </h1>
                             
                             <p className="text-lg md:text-2xl text-slate-400 font-light max-w-2xl leading-relaxed">

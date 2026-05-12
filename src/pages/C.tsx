@@ -92,6 +92,7 @@ const C = () => {
   const navigate = useNavigate();
   const [showAllFaqs, setShowAllFaqs] = React.useState(false);
   const [activeCol, setActiveCol] = React.useState(0);
+  const [desktopCol, setDesktopCol] = React.useState(3); // 3, 4, or 5 (Cristal Pro products)
   const resourcesRef = React.useRef<HTMLDivElement>(null);
 
   const scrollResources = (direction: 'left' | 'right') => {
@@ -163,6 +164,8 @@ const C = () => {
     { feature: "Aucun rejet d'eau au drain", essential: true, plus: true, elite: true, stage4: false, stage5: false, stage6: false },
     { feature: "Production (GPD)", essential: "Débit Direct", plus: "Débit Direct", elite: "Débit Direct", stage4: "75 GPD", stage5: "75 GPD", stage6: "600 GPD" },
   ];
+
+
 
   return (
     <div className="min-h-screen bg-background text-slate-900 font-sans">
@@ -388,7 +391,7 @@ const C = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 max-w-7xl mx-auto">
                         {[
                             { 
-                                name: "Cristal Pro I", 
+                                title: "Cristal Pro I", 
                                 desc: "La première ligne de défense pour votre eau. Ce filtre à sédiments haute performance élimine efficacement le sable, la rouille et les particules en suspension.", 
                                 img: essentialImg_filtration, 
                                 badge: "Sédiments", 
@@ -396,7 +399,7 @@ const C = () => {
                                 features: ["Filtration sédiments 5µ", "Élimine sable et rouille", "Installation ultra-simple"]
                             },
                             { 
-                                name: "Cristal Pro II", 
+                                title: "Cristal Pro II", 
                                 desc: "La combinaison parfaite pour une eau saine. Ce système duo associe la filtration des sédiments à un filtre charbon actif premium, éliminant chlore et goûts désagréables.", 
                                 img: plusROImg_filtration, 
                                 badge: "Duo Pur", 
@@ -404,13 +407,37 @@ const C = () => {
                                 features: ["Duo Sédiments + Charbon", "Élimine le goût de chlore", "Cartouches haute capacité"]
                             },
                             { 
-                                name: "Cristal Pro III", 
+                                title: "Cristal Pro III", 
                                 desc: "La technologie d'ultrafiltration avancée. Ce système offre une purification microscopique supérieure, filtrant virus et bactéries tout en conservant les minéraux.", 
                                 img: eliteROImg_filtration, 
                                 badge: "Ultrafiltration", 
                                 color: "bg-amber-600",
                                 features: ["Ultrafiltration 0.01 micron", "Barrière microbiologique", "Conserve les minéraux"]
                             },
+                            {
+                                title: "Vectapure NX",
+                                desc: "Un système à 4 étapes éprouvé, ultra-compact et efficace pour les budgets maîtrisés. Idéal pour les appartements et petits espaces.",
+                                img: vectapureROImg,
+                                badge: "Série NX",
+                                color: "bg-blue-600",
+                                features: ["4 étapes de filtration", "Membrane 75 GPD", "Changement de filtres rapide"]
+                            },
+                            {
+                                title: "Série Essentiel",
+                                desc: "Notre best-seller à 6 étapes avec polissage final pour une eau d'une douceur incomparable. Le choix numéro 1 des familles québécoises.",
+                                img: drinkingWaterImg,
+                                badge: "Populaire",
+                                color: "bg-emerald-600",
+                                features: ["6 étapes complètes", "Production 75 GPD", "Eau minérale balancée"]
+                            },
+                            {
+                                title: "Sérénité Direct-Flow",
+                                desc: "Débit instantané 600 GPD. Pas de réservoir encombrant, eau fraîche en continu à volonté. Technologie Direct-Flow sans stagnation.",
+                                img: freezelifeROImg,
+                                badge: "Vitesse XXL",
+                                color: "bg-amber-600",
+                                features: ["5 étapes Direct-Flow", "600 GPD (2L/min)", "Format ultra-compact"]
+                            }
                         ].map((product, i) => (
                             <div
                                 key={i}
@@ -420,7 +447,7 @@ const C = () => {
                                 <div className="w-full aspect-square bg-slate-50/50 rounded-[2.5rem] mb-8 overflow-hidden relative p-8 flex items-center justify-center">
                                     <img
                                         src={product.img}
-                                        alt={product.name}
+                                        alt={product.title}
                                         className="max-h-full object-contain mix-blend-multiply group-hover:scale-110 transition-transform duration-[2s]"
                                     />
                                     <div className="absolute top-4 right-4">
@@ -431,7 +458,7 @@ const C = () => {
                                 </div>
                                 <div className="flex-grow space-y-4">
                                     <h3 className="text-2xl font-bold text-slate-900 tracking-tight leading-tight group-hover:text-blue-600 transition-colors">
-                                        {product.name}
+                                        {product.title}
                                     </h3>
                                     <p className="text-slate-500 font-light text-sm leading-relaxed text-justify mb-6">
                                         {product.desc}
@@ -454,73 +481,6 @@ const C = () => {
                             </div>
                         ))}
                     </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 max-w-7xl mx-auto mt-12 md:mt-24">
-              {[
-                {
-                  title: "Vectapure NX",
-                  subtitle: "L'Essentiel de la Pureté",
-                  desc: "Un système à 4 étapes éprouvé, ultra-compact et efficace pour les budgets maîtrisés.",
-                  img: vectapureROImg,
-                  badge: "Série NX",
-                  color: "bg-blue-600",
-                  features: ["4 étapes", "75 GPD", "Changement des filtres facile "]
-                },
-                {
-                  title: "Essentiel",
-                  subtitle: "Le Choix des Familles",
-                  desc: "Notre best-seller à 6 étapes avec polissage final pour une eau d'une douceur incomparable.",
-                  img: drinkingWaterImg,
-                  badge: "Populaire",
-                  color: "bg-emerald-600",
-                  features: ["6 étapes", "Production 75 GPD", "Maintenance Facile"]
-                },
-                {
-                  title: "Sérénité Direct-Flow",
-                  subtitle: "Performance sans Réservoir",
-                  desc: "Débit instantané 600 GPD. Pas de réservoir encombrant, eau fraîche en continu à volonté.",
-                  img: freezelifeROImg,
-                  badge: "Vitesse XXL",
-                  color: "bg-amber-600",
-                  features: ["5 étapes", "600 GPD réels", "Compact"]
-                }
-              ].map((item, i) => (
-                <div key={i} className="group bg-white rounded-[3rem] p-8 border border-slate-100 shadow-[0_20px_50px_rgba(0,0,0,0.03)] hover:shadow-[0_45px_100px_rgba(0,0,0,0.1)] transition-all duration-700 hover:-translate-y-2 flex flex-col h-full">
-                  <div className="w-full aspect-square bg-slate-50/50 rounded-[2.5rem] mb-8 overflow-hidden relative p-4 flex items-center justify-center">
-                    <img src={item.img} alt={item.title} className="w-full h-full object-contain mix-blend-multiply group-hover:scale-110 transition-transform duration-[2s]" />
-                    <div className="absolute top-4 right-4">
-                      <div className={cn("px-4 py-1.5 rounded-full shadow-lg backdrop-blur-sm", item.color)}>
-                        <span className="text-[9px] font-black uppercase tracking-[0.2em] text-white italic">{item.badge}</span>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div className="flex-grow space-y-3">
-                    <div className="text-blue-600 font-bold text-[9px] uppercase tracking-[0.2em]">{item.subtitle}</div>
-                    <h3 className="text-2xl font-bold text-slate-900 tracking-tight leading-tight group-hover:text-blue-600 transition-colors">{item.title}</h3>
-                    <p className="text-slate-500 font-light text-sm leading-relaxed mb-6">{item.desc}</p>
-                    
-                    <div className="space-y-3 pt-4 border-t border-slate-50">
-                      {item.features.map((f, idx) => (
-                        <div key={idx} className="flex items-center gap-3">
-                          <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
-                          <span className="text-xs font-medium text-slate-600">{f}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="mt-10 pt-8 border-t border-slate-50 flex items-center justify-end">
-                    <div 
-                      onClick={() => navigate('/contact')}
-                      className="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center text-blue-600 hover:bg-blue-600 hover:text-white transition-all duration-500 cursor-pointer group/btn"
-                    >
-                      <ArrowRight className="w-5 h-5 transition-transform group-hover/btn:translate-x-1" />
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
         </section>
 
@@ -642,29 +602,56 @@ const C = () => {
               <div className="w-24 h-1 bg-blue-600"></div>
             </div>
                         <div className="overflow-x-visible relative">
-                            {/* Navigation Arrows for Mobile/Tablet */}
-                            <div className="lg:hidden flex items-center justify-end gap-3 mb-8 relative z-30">
-                                <Button 
-                                    size="icon" 
-                                    variant="outline" 
-                                    onClick={() => setActiveCol(Math.max(0, activeCol - 1))}
-                                    disabled={activeCol === 0}
-                                >
-                                    <ChevronLeft className="h-5 w-5" />
-                                </Button>
-                                <div className="flex gap-1.5 px-2">
+                            {/* Navigation Arrows for Mobile/Tablet & Desktop Carousel */}
+                            <div className="flex items-center justify-end gap-3 mb-8 relative z-30">
+                                {/* Mobile/Tablet Pagination Indicator */}
+                                <div className="lg:hidden flex gap-1.5 px-2 mr-auto">
                                     {[0, 1, 2, 3, 4, 5].map((i) => (
                                         <div key={i} className={`h-1.5 rounded-full transition-all duration-300 ${i === activeCol ? 'w-6 bg-blue-600' : 'w-1.5 bg-blue-100'}`} />
                                     ))}
                                 </div>
-                                <Button 
-                                    size="icon" 
-                                    variant="outline" 
-                                    onClick={() => setActiveCol(Math.min(5, activeCol + 1))}
-                                    disabled={activeCol === 5}
-                                >
-                                    <ChevronRight className="h-5 w-5" />
-                                </Button>
+
+                                {/* Desktop Carousel Label */}
+                                <div className="hidden lg:block mr-auto">
+                                    <span className="text-[10px] font-black text-blue-900/40 uppercase tracking-widest bg-slate-50 px-4 py-2 rounded-full border border-slate-100">
+                                        Modèles Cristal Pro (Carousel)
+                                    </span>
+                                </div>
+
+                                <div className="flex items-center gap-2">
+                                    <Button 
+                                        size="icon" 
+                                        variant="outline" 
+                                        onClick={() => {
+                                            setActiveCol(Math.max(0, activeCol - 1));
+                                            setDesktopCol(Math.max(3, desktopCol - 1));
+                                        }}
+                                        disabled={(window.innerWidth < 1024 && activeCol === 0) || (window.innerWidth >= 1024 && desktopCol === 3)}
+                                        className="rounded-full shadow-sm hover:shadow-md transition-all h-10 w-10 md:h-12 md:w-12 border-slate-200"
+                                    >
+                                        <ChevronLeft className="h-5 w-5 md:h-6 md:w-6" />
+                                    </Button>
+                                    
+                                    {/* Desktop Dot Indicator */}
+                                    <div className="hidden lg:flex gap-1.5 px-2">
+                                        {[3, 4, 5].map((i) => (
+                                            <div key={i} className={`h-1.5 rounded-full transition-all duration-300 ${i === desktopCol ? 'w-6 bg-blue-600' : 'w-1.5 bg-blue-100'}`} />
+                                        ))}
+                                    </div>
+
+                                    <Button 
+                                        size="icon" 
+                                        variant="outline" 
+                                        onClick={() => {
+                                            setActiveCol(Math.min(5, activeCol + 1));
+                                            setDesktopCol(Math.min(5, desktopCol + 1));
+                                        }}
+                                        disabled={(window.innerWidth < 1024 && activeCol === 5) || (window.innerWidth >= 1024 && desktopCol === 5)}
+                                        className="rounded-full shadow-sm hover:shadow-md transition-all h-10 w-10 md:h-12 md:w-12 border-slate-200"
+                                    >
+                                        <ChevronRight className="h-5 w-5 md:h-6 md:w-6" />
+                                    </Button>
+                                </div>
                             </div>
 
                             <div className="overflow-x-auto lg:overflow-x-visible no-scrollbar pb-8">
@@ -675,18 +662,19 @@ const C = () => {
                                                 Critères Techniques
                                             </th>
                                             {[
-                                                { name: "Cristal Pro I", img: essentialImg_filtration, badge: "Sédiments", color: "bg-blue-600" },
-                                                { name: "Cristal Pro II", img: plusROImg_filtration, badge: "Duo Pur", color: "bg-emerald-600" },
-                                                { name: "Cristal Pro III", img: eliteROImg_filtration, badge: "Ultrafiltration", color: "bg-amber-600" },
                                                 { name: "Vectapure NX", img: vectapureROImg, badge: "Osmose NX", color: "bg-blue-600" },
                                                 { name: "Série Essentiel", img: drinkingWaterImg, badge: "Osmose 6E", color: "bg-emerald-600" },
                                                 { name: "Sérénité Direct", img: freezelifeROImg, badge: "600 GPD", color: "bg-amber-600" },
+                                                { name: "Cristal Pro I", img: essentialImg_filtration, badge: "Sédiments", color: "bg-blue-600" },
+                                                { name: "Cristal Pro II", img: plusROImg_filtration, badge: "Duo Pur", color: "bg-emerald-600" },
+                                                { name: "Cristal Pro III", img: eliteROImg_filtration, badge: "Ultrafiltration", color: "bg-amber-600" },
                                             ].map((m, i) => (
-                                                <th 
+                                             <th 
                                                     key={i} 
-                                                    className={cn(
+                                                     className={cn(
                                                         "p-4 md:p-6 text-center transition-all duration-500 min-w-[220px]",
-                                                        i === activeCol ? "table-cell" : "hidden lg:table-cell"
+                                                        i === activeCol ? "table-cell" : "hidden",
+                                                        (i < 3 || i === desktopCol) ? "lg:table-cell" : "lg:hidden"
                                                     )}
                                                 >
                                                     <div className="flex flex-col items-center gap-6">
@@ -713,12 +701,13 @@ const C = () => {
                                                 <td className="p-6 md:p-10 font-bold text-[#18448F] bg-white sticky left-0 z-30 border-r border-slate-50 drop-shadow-sm lg:drop-shadow-none text-[12px] md:text-sm italic group-hover:text-blue-600 transition-colors">
                                                     {row.feature}
                                                 </td>
-                                                {["essential", "plus", "elite", "stage4", "stage5", "stage6"].map((model, idx) => (
-                                                    <td 
+                                                {["stage4", "stage5", "stage6", "essential", "plus", "elite"].map((model, idx) => (
+                                                     <td 
                                                         key={model} 
                                                         className={cn(
                                                             "p-6 md:p-10 text-center text-[13px] md:text-sm font-light leading-relaxed text-slate-600 transition-all duration-500",
-                                                            idx === activeCol ? "table-cell" : "hidden lg:table-cell"
+                                                            idx === activeCol ? "table-cell" : "hidden",
+                                                            (idx < 3 || idx === desktopCol) ? "lg:table-cell" : "lg:hidden"
                                                         )}
                                                     >
                                                         {(() => {
@@ -734,11 +723,12 @@ const C = () => {
                                             <tr className="bg-slate-50/50">
                                                 <td className="p-6 md:p-10 sticky left-0 z-30 bg-slate-50 border-r border-slate-100"></td>
                                                 {[0, 1, 2, 3, 4, 5].map((idx) => (
-                                                    <td 
+                                                     <td 
                                                         key={idx}
-                                                        className={cn(
+                                                         className={cn(
                                                             "p-6 md:p-10 text-center transition-all duration-500",
-                                                            idx === activeCol ? "table-cell" : "hidden lg:table-cell"
+                                                            idx === activeCol ? "table-cell" : "hidden",
+                                                            (idx < 3 || idx === desktopCol) ? "lg:table-cell" : "lg:hidden"
                                                         )}
                                                     >
                                                         <ProMaxButton asChild className="w-full h-16">
