@@ -153,7 +153,7 @@ const HotellerieRestauration = () => {
                             
                             <p className="text-lg md:text-2xl text-slate-500 font-light max-w-2xl leading-relaxed">
                                 Sublimez l'expérience de vos convives et optimisez vos opérations avec des solutions d'eau intelligentes conçues pour l'exigence du milieu HORECA.
-                            </p> outreach
+                            </p>
 
                             <div className="flex flex-col sm:flex-row gap-6 pt-8">
                                 <ProMaxButton variant="primary" className="px-12 h-16 text-[11px]" onClick={() => navigate("/consultation")}>

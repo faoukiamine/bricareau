@@ -181,41 +181,69 @@ const Header = () => {
                         </div>
                     </div>
 
-                    {/* The Grid of 4 Cards */}
-                    <div className="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                        {mainNavMenuItems.find(m => m.name === "Ce que nous faisons")?.megamenuCards?.map((card, idx) => (
-                            <NavLink 
-                                key={idx} 
-                                to={card.href}
-                                className="group block bg-white shadow-sm hover:shadow-xl transition-all duration-500 rounded-sm overflow-hidden"
-                                onClick={() => setActiveMegamenu(null)}
-                            >
-                                <div className="aspect-[4/3] overflow-hidden relative">
-                                    <img 
-                                        src={card.image} 
-                                        alt={card.title} 
-                                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[2s]"
-                                    />
-                                    <div className="absolute inset-0 bg-transparent group-hover:bg-blue-600/10 transition-colors duration-500" />
-                                </div>
-                                <div className="p-6 md:p-8 flex items-center justify-between border-t border-gray-50">
-                                    <h4 className="text-[11px] font-black text-slate-900 uppercase tracking-widest leading-tight">
-                                        {card.title.includes(' ET ') ? (
-                                            card.title.split(' ET ').map((word, i) => (
-                                                <span key={i} className="block">
-                                                    {word} {i === 0 && "ET"}
-                                                </span>
-                                            ))
-                                        ) : (
-                                            card.title
-                                        )}
-                                    </h4>
-                                    <div className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-[#18448F] group-hover:bg-[#18448F] group-hover:text-white transition-all duration-300">
-                                        <ArrowRight className="w-5 h-5" />
+                    <div className="flex-1 space-y-12">
+                        {/* The Grid of 4 Cards */}
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                            {mainNavMenuItems.find(m => m.name === "Ce que nous faisons")?.megamenuCards?.map((card, idx) => (
+                                <NavLink 
+                                    key={idx} 
+                                    to={card.href}
+                                    className="group block bg-white shadow-sm hover:shadow-xl transition-all duration-500 rounded-sm overflow-hidden"
+                                    onClick={() => setActiveMegamenu(null)}
+                                >
+                                    <div className="aspect-[4/3] overflow-hidden relative">
+                                        <img 
+                                            src={card.image} 
+                                            alt={card.title} 
+                                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[2s]"
+                                        />
+                                        <div className="absolute inset-0 bg-transparent group-hover:bg-blue-600/10 transition-colors duration-500" />
                                     </div>
-                                </div>
-                            </NavLink>
-                        ))}
+                                    <div className="p-6 md:p-8 flex items-center justify-between border-t border-gray-50">
+                                        <h4 className="text-[11px] font-black text-slate-900 uppercase tracking-widest leading-tight">
+                                            {card.title.includes(' ET ') ? (
+                                                card.title.split(' ET ').map((word, i) => (
+                                                    <span key={i} className="block">
+                                                        {word} {i === 0 && "ET"}
+                                                    </span>
+                                                ))
+                                            ) : (
+                                                card.title
+                                            )}
+                                        </h4>
+                                        <div className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-[#18448F] group-hover:bg-[#18448F] group-hover:text-white transition-all duration-300">
+                                            <ArrowRight className="w-5 h-5" />
+                                        </div>
+                                    </div>
+                                </NavLink>
+                            ))}
+                        </div>
+
+                        {/* Additional Groups (A, B, C, B3) */}
+                        {mainNavMenuItems.find(m => m.name === "Ce que nous faisons")?.megamenuGroups && (
+                            <div className="pt-8 border-t border-gray-100 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                                {mainNavMenuItems.find(m => m.name === "Ce que nous faisons")?.megamenuGroups?.map((group, gIdx) => (
+                                    <div key={gIdx} className="space-y-6">
+                                        {group.items.map((item, iIdx) => (
+                                            <NavLink 
+                                                key={iIdx} 
+                                                to={item.href}
+                                                className="group block space-y-2"
+                                                onClick={() => setActiveMegamenu(null)}
+                                            >
+                                                <div className="flex items-center gap-2">
+                                                    <h5 className="text-[10px] font-black text-slate-900 group-hover:text-[#18448F] transition-colors uppercase tracking-widest">{item.title}</h5>
+                                                    <ArrowRight className="w-3 h-3 text-[#18448F] opacity-0 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0" />
+                                                </div>
+                                                <p className="text-[11px] text-slate-500 font-medium leading-relaxed">
+                                                    {item.description}
+                                                </p>
+                                            </NavLink>
+                                        ))}
+                                    </div>
+                                ))}
+                            </div>
+                        )}
                     </div>
                 </div>
             </div>

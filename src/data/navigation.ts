@@ -81,6 +81,32 @@ export const mainNavMenuItems: MenuItem[] = [
                 image: promoImage,
                 href: "/industriel"
             }
+        ],
+        megamenuGroups: [
+            {
+                items: [
+                    { 
+                        title: "Adoucissement Résidentiel", 
+                        description: "Solutions avancées d'adoucissement d'eau.", 
+                        href: "/A" 
+                    },
+                    { 
+                        title: "Page B", 
+                        description: "Systèmes de filtration d'eau haute performance.", 
+                        href: "/B" 
+                    },
+                    { 
+                        title: "Page C", 
+                        description: "Stations d'eau potable ultra-pure.", 
+                        href: "/C" 
+                    },
+                    { 
+                        title: "Page B3", 
+                        description: "Variante spécialisée adoucissement.", 
+                        href: "/B3" 
+                    },
+                ]
+            }
         ]
     },
     {
@@ -98,27 +124,7 @@ export const mainNavMenuItems: MenuItem[] = [
                         title: "Notre processus", 
                         description: "Découvrez comment nos experts peuvent vous aider à trouver la solution qui vous convient.", 
                         href: "/notre-processus" 
-                    },
-                    { 
-                        title: "Adoucissement Résidentiel", 
-                        description: "Découvrez notre nouveau modèle de page pour l'adoucissement d'eau.", 
-                        href: "/A" 
-                    },
-                    { 
-                        title: "B", 
-                        description: "Page B - Duplication de filtres d'eau.", 
-                        href: "/B" 
-                    },
-                    { 
-                        title: "C", 
-                        description: "Page C - Duplication de la station d'eau potable.", 
-                        href: "/C" 
-                    },
-                    { 
-                        title: "B3", 
-                        description: "Page B3 - Duplication de la page adoucissement.", 
-                        href: "/B3" 
-                    },
+                    }
                 ]
             },
             {
