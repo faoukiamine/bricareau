@@ -86,6 +86,11 @@ export const mainNavMenuItems: MenuItem[] = [
             {
                 items: [
                     { 
+                        title: "Filtres pour Machines à Café", 
+                        description: "Extraction parfaite et protection antitartre.", 
+                        href: "/filtres-eau-machine-cafe" 
+                    },
+                    { 
                         title: "Adoucissement Résidentiel", 
                         description: "Solutions avancées d'adoucissement d'eau.", 
                         href: "/A" 
@@ -99,6 +104,11 @@ export const mainNavMenuItems: MenuItem[] = [
                         title: "Page C", 
                         description: "Stations d'eau potable ultra-pure.", 
                         href: "/C" 
+                    },
+                    { 
+                        title: "Adoucisseurs d'eau commerciaux", 
+                        description: "Performance et protection pour votre entreprise.", 
+                        href: "/adoucisseurs-eau-commerciaux" 
                     },
                     { 
                         title: "Page B3", 
@@ -223,6 +233,12 @@ export const productMenuItems: MenuItem[] = [
         title: "Adoucisseurs d'eau portables",
         description: "La solution flexible pour une eau douce sans installation permanente. Idéal pour les VR et résidences secondaires.",
         href: "/adoucisseurs-portables"
+      },
+      {
+        customIcon: WatersoftenericonImg,
+        title: "Adoucisseurs d'eau commerciaux",
+        description: "Solutions haute performance pour entreprises, hôtels et industries. Protection maximale des équipements.",
+        href: "/adoucisseurs-eau-commerciaux"
       },
     ],
     promo: {

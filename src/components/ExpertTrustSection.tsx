@@ -1,10 +1,24 @@
 
 import { ProMaxButton } from "@/components/ui/ProMaxButton";
-import { Button } from "@/components/ui/button";
-import { ArrowRight, Gem, Eye } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import expertImg from "@/assets/water testing.jpeg";
+interface ExpertTrustSectionProps {
+    title?: string;
+    highlight?: string;
+    description?: string;
+    buttonText?: string;
+    buttonLink?: string;
+    image?: string;
+}
 
-const ExpertTrustSection = () => {
+const ExpertTrustSection = ({ 
+    title = "La science de la pureté, ", 
+    highlight = "pour une sérénité totale.",
+    description = "Ne laissez pas l'incertitude couler de votre robinet. Chez Bricareau, nous transformons chaque analyse en une certitude scientifique pour la santé de votre foyer.",
+    buttonText = "Réservez votre analyse d'eau",
+    buttonLink = "/tests-eau#water-test",
+    image = expertImg
+}: ExpertTrustSectionProps) => {
     return (
         <section className="bg-white relative overflow-hidden border-y border-slate-100">
             <div className="flex flex-col lg:flex-row items-stretch min-h-[500px] lg:min-h-[750px]">
@@ -12,12 +26,12 @@ const ExpertTrustSection = () => {
                 {/* Image Side - 50% width on Desktop */}
                 <div className="w-full lg:w-1/2 relative group overflow-hidden h-[400px] md:h-[550px] lg:h-auto">
                     <img
-                        src={expertImg}
+                        src={image}
                         alt="Expert Bricareau lors d'une analyse d'eau rigoureuse"
-                        className="absolute inset-0 w-full h-full object-cover"
+                        className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
                     {/* Floating Stats Overlay */}
-                    <div className="absolute top-10 right-10 bg-white/90 backdrop-blur-md p-6 rounded-3xl shadow-xl border border-white/50 max-w-[200px] z-20">
+                    <div className="absolute top-10 right-10 bg-white/90 backdrop-blur-md p-6 rounded-3xl shadow-xl border border-white/50 max-w-[200px] z-20 animate-float">
                         <div className="text-3xl font-bold text-blue-600 mb-1">+25 ans</div>
                         <div className="text-sm font-semibold text-slate-900 leading-tight">d'expertise cumulée à votre service</div>
                     </div>
@@ -35,21 +49,13 @@ const ExpertTrustSection = () => {
                         <div className="space-y-12">
                             <div className="space-y-6">
                                 <h2 className="heading-pro-max text-left">
-                                    <span className="italic font-light text-[#18448F]">Votre eau mérite un expert, </span>
-                                    <span className="font-bold text-[#18448F]">pas un doute.</span>
+                                    <span className="italic font-light text-[#18448F]">{title}</span>
+                                    <span className="font-bold text-[#18448F]">{highlight}</span>
                                 </h2>
                                 <p
-                                    className="max-w-xl text-left lg:text-justify"
-                                    style={{
-                                        fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                        fontWeight: 300,
-                                        color: 'rgb(71, 85, 105)',
-                                        fontSize: '20px',
-                                        lineHeight: '28px',
-                                        fontStyle: 'normal'
-                                    }}
+                                    className="max-w-xl text-left lg:text-justify font-light text-slate-500 text-xl leading-relaxed"
                                 >
-                                    Ne laissez pas l'incertitude couler de votre robinet. Chez Bricareau, nous transformons chaque analyse en une certitude scientifique pour la santé de votre foyer.
+                                    {description}
                                 </p>
                             </div>
 
@@ -57,8 +63,8 @@ const ExpertTrustSection = () => {
                                 <ProMaxButton
                                     asChild
                                 >
-                                    <a href="/tests-eau#water-test" className="flex items-center justify-center gap-3">
-                                        Réservez votre analyse d'eau
+                                    <a href={buttonLink} className="flex items-center justify-center gap-3">
+                                        {buttonText}
                                         <ArrowRight className="w-5 h-5" />
                                     </a>
                                 </ProMaxButton>

@@ -19,7 +19,9 @@ import {
     Leaf,
     Utensils,
     Wine,
-    Droplets
+    Droplets,
+    Shield,
+    TrendingUp
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import Header from "@/components/Header";
@@ -37,6 +39,12 @@ import filtrationImg from "@/assets/Sérénité Direct-Flow installation.png";
 import drinkWaterImg from "@/assets/20230add-4ce5-4ae6-a6dc-1f9a2c3aeb7b.jpg";
 import sparklingImg from "@/assets/Slider_V3-204_1.png";
 import centralSystemImg from "@/assets/LZS8WSSP-PF.webp";
+import verifiedImg from "@/assets/verified.svg";
+import savingsImg from "@/assets/savings.svg";
+import healthSafeImg from "@/assets/health_and_safety.svg";
+import ecoImg from "@/assets/eco.svg";
+import pauseEauImg from "@/assets/Pause-eau.jpg";
+import corporateExpertImg from "@/assets/4428cdd0-67df-4075-b0ba-d69247eb98dc.jpg";
 
 const Bureau = () => {
     const navigate = useNavigate();
@@ -112,7 +120,10 @@ const Bureau = () => {
             link: "/systeme-de-filtration-deau-potable",
             tag: "PURETÉ",
             largeNumber: "01",
-            floatingCard: { title: "Bureau Pure", desc: "Eau osmosée, goût parfait.", icon: ShieldCheck },
+            floatingCard: { title: "Bureau Pure", desc: "Eau osmosée d'une pureté exceptionnelle.", icon: ShieldCheck },
+            floatingCard2: { title: "Sécurité Pro", desc: "Élimination des contaminants pour vos équipes.", icon: healthSafeImg },
+            floatingCard3: { title: "Goût Parfait", desc: "Une eau sans chlore pour des boissons sublimées.", icon: verifiedImg },
+            floatingCard4: { title: "Économies ROI", desc: "Rentabilité immédiate face aux bouteilles.", icon: savingsImg },
             bubbles: [
                 { icon: ShieldCheck, label: "Sécurité", value: "Haut", color: "text-blue-600" },
                 { icon: Zap, label: "Efficacité", value: "99%", color: "text-amber-400" }
@@ -132,7 +143,10 @@ const Bureau = () => {
             link: "/refroidisseurs-eau-entreprises",
             tag: "BIEN-ÊTRE",
             largeNumber: "02",
-            floatingCard: { title: "Zéro Bouteille", desc: "Impact écologique minimal.", icon: Leaf },
+            floatingCard: { title: "Zéro Bouteille", desc: "Éliminez la logistique des bonbonnes.", icon: Leaf },
+            floatingCard2: { title: "Hygiène Plus", desc: "Technologie sans contact pour une sécurité totale.", icon: healthSafeImg },
+            floatingCard3: { title: "Design Office", desc: "Esthétique épurée pour vos espaces collaboratifs.", icon: verifiedImg },
+            floatingCard4: { title: "Flux Continu", desc: "Une eau fraîche filtrée disponible en illimité.", icon: Droplets },
             bubbles: [
                 { icon: GlassWater, label: "Hydratation", value: "Illimitée", color: "text-sky-400" },
                 { icon: Sparkles, label: "Éclat", value: "Premium", color: "text-blue-500" }
@@ -152,7 +166,10 @@ const Bureau = () => {
             link: "/eau-petillante-entreprises",
             tag: "PREMIUM",
             largeNumber: "03",
-            floatingCard: { title: "Eau Gazeuse", desc: "Le plaisir au travail.", icon: Wine },
+            floatingCard: { title: "Effervescence", desc: "De l'eau pétillante filtrée à la demande.", icon: GlassWater },
+            floatingCard2: { title: "Engagement RSE", desc: "Valorisez votre image de marque durable.", icon: Leaf },
+            floatingCard3: { title: "Productivité", desc: "Hydratation optimale pour la concentration.", icon: Zap },
+            floatingCard4: { title: "Fraîcheur Pro", desc: "Une touche de luxe dans vos espaces communs.", icon: GlassWater },
             bubbles: [
                 { icon: Droplets, label: "Bulles", value: "Fines", color: "text-blue-600" },
                 { icon: Sparkles, label: "Luxe", value: "Au Quotidien", color: "text-amber-500" }
@@ -173,6 +190,9 @@ const Bureau = () => {
             tag: "INFRASTRUCTURE",
             largeNumber: "04",
             floatingCard: { title: "Bâtiment Intelligent", desc: "Gestion centralisée de l'eau.", icon: Settings },
+            floatingCard2: { title: "Protection Réseau", desc: "Sécurité pour toutes les installations.", icon: ShieldCheck },
+            floatingCard3: { title: "Volume Illimité", desc: "Adapté aux grands besoins collectifs.", icon: Activity },
+            floatingCard4: { title: "Gestion Totale", desc: "Contrôle global de votre infrastructure.", icon: Building2 },
             bubbles: [
                 { icon: Building2, label: "Réseau", value: "Global", color: "text-slate-600" },
                 { icon: Activity, label: "Flux", value: "Stable", color: "text-indigo-400" }
@@ -330,22 +350,23 @@ const Bureau = () => {
 
                                                     <div className="relative grid grid-cols-1 md:grid-cols-2 gap-10">
                                                         {[
-                                                            { title: prog.floatingCard.title, value: "Elite", desc: prog.floatingCard.desc, icon: prog.floatingCard.icon },
-                                                            { title: prog.points[0].title, value: "Top", desc: prog.points[0].desc, icon: ShieldCheck },
-                                                        ].map((feat, fIdx) => (
+                                                            { ...prog.floatingCard, value: "Elite", color: "bg-blue-600" },
+                                                            (prog as any).floatingCard2 ? { ...(prog as any).floatingCard2, value: "Max", color: "bg-indigo-600" } : null,
+                                                            (prog as any).floatingCard3 ? { ...(prog as any).floatingCard3, value: "Pro", color: "bg-sky-600" } : null,
+                                                            (prog as any).floatingCard4 ? { ...(prog as any).floatingCard4, value: "Ultra", color: "bg-blue-500" } : null,
+                                                        ].filter(Boolean).map((feat: any, fIdx) => (
                                                             <div key={fIdx} className="group relative p-10 rounded-[3rem] bg-white border border-slate-100 shadow-xl shadow-slate-100/50 hover:shadow-2xl hover:shadow-blue-100 transition-all duration-500 overflow-hidden">
-                                                                <div className="absolute top-0 right-0 w-32 h-32 opacity-5 translate-x-10 -translate-y-10 rounded-full bg-blue-600" />
+                                                                <div className={cn("absolute top-0 right-0 w-32 h-32 opacity-5 translate-x-10 -translate-y-10 rounded-full", feat.color)} />
                                                                 <div className="relative z-10 space-y-4">
-                                                                    <div className="flex items-center justify-between">
-                                                                        <div className="p-2 rounded-xl bg-blue-50 text-blue-600">
-                                                                            <feat.icon className="w-4 h-4" />
-                                                                        </div>
-                                                                        <span className="text-2xl font-black text-blue-600">{feat.value}</span>
+                                                                    <div className="flex items-center gap-3">
+                                                                        {feat.icon && typeof feat.icon === 'string' ? (
+                                                                            <img src={feat.icon} className="w-5 h-5 opacity-50" alt="" />
+                                                                        ) : feat.icon ? (
+                                                                            <feat.icon className="w-5 h-5 text-blue-600 opacity-50" />
+                                                                        ) : null}
+                                                                        <span className="text-[10px] font-black text-slate-500 uppercase tracking-wider">{feat.title}</span>
                                                                     </div>
-                                                                    <div className="space-y-1">
-                                                                        <span className="text-xs font-bold text-slate-500 block">{feat.title}</span>
-                                                                        <p className="text-slate-500 text-sm font-light leading-relaxed">{feat.desc}</p>
-                                                                    </div>
+                                                                    <p className="text-slate-500 text-xs font-light leading-relaxed">{feat.desc}</p>
                                                                 </div>
                                                             </div>
                                                         ))}
@@ -389,9 +410,9 @@ const Bureau = () => {
 
                                                             <div className={cn(
                                                                 "absolute top-1/2 -translate-y-1/2 vertical-text hidden xl:block",
-                                                                idx % 2 === 0 ? "-right-10" : "-left-10"
+                                                                idx % 2 === 0 ? "-right-12" : "-left-12"
                                                             )}>
-                                                                <span className="text-[10px] font-black text-slate-300 uppercase tracking-[1em] rotate-180">OFFICE EXCELLENCE</span>
+                                                                <span className="text-xs font-black text-blue-600/20 uppercase tracking-[1em] rotate-180">OFFICE EXCELLENCE</span>
                                                             </div>
                                                         </div>
 
@@ -408,55 +429,96 @@ const Bureau = () => {
                     </div>
                 </section>
 
-                {/* 3. TECHNICAL DNA / QUALITY FOR OFFICES */}
-                <section className="py-32 bg-slate-900 text-white overflow-hidden">
+                {/* 3. PERFORMANCE DURABLE - ALIGNED DESIGN */}
+                <section className="py-32 bg-white overflow-hidden relative">
                     <div className="container mx-auto px-6">
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
-                            <div className="space-y-12">
-                                <div className="space-y-6">
-                                    <span className="text-[10px] font-black text-blue-600 uppercase tracking-[0.5em] flex items-center gap-3">
-                                        <span className="w-8 h-[1px] bg-blue-600" />
-                                        AVANTAGE CORPORATIF
-                                    </span>
-                                    <h2 className="heading-pro-max text-left uppercase">
-                                        <span className="italic font-light text-[#18448F]">Performance </span>
-                                        <span className="font-bold text-[#18448F]">Durable.</span>
-                                    </h2>
-                                    <p className="text-slate-400 text-lg md:text-xl font-light leading-relaxed max-w-lg">
-                                        Nos solutions sont conçues pour un usage intensif en milieu professionnel, alliant robustesse, économies et simplicité de maintenance.
-                                    </p>
-                                </div>
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center lg:flex-row-reverse lg:flex">
+                            {/* Visual Side (Left for alternation) */}
+                            <div className="relative order-2 lg:order-1">
+                                <div className="relative">
+                                    <div className={cn(
+                                        "relative aspect-[4/5] bg-slate-50 rounded-[4rem] overflow-hidden group transition-all duration-700",
+                                        "hover:rounded-[2rem] shadow-2xl -rotate-2 origin-bottom-left"
+                                    )}>
+                                        <img 
+                                            src={pauseEauImg} 
+                                            alt="Performance Durable" 
+                                            className="w-full h-full object-contain object-center transition-transform duration-1000 group-hover:scale-105" 
+                                        />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-blue-900/60 via-transparent to-transparent opacity-60" />
+                                    </div>
 
-                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                                    {[
-                                        { title: "Service Prioritaire", desc: "Assistance technique 24/7 pour votre bureau.", icon: <Users2 className="w-6 h-6" /> },
-                                        { title: "Zéro Bouteilles", desc: "Réduisez vos déchets plastiques de 100%.", icon: <Droplets className="w-6 h-6" /> },
-                                        { title: "Économies ROI", desc: "Rentabilité immédiate par rapport à l'eau en bouteille.", icon: <Zap className="w-6 h-6" /> },
-                                        { title: "Qualité NSF", desc: "Systèmes certifiés pour une sécurité maximale.", icon: <ShieldCheck className="w-6 h-6" /> }
-                                    ].map((item, i) => (
-                                        <div key={i} className="space-y-4 p-6 rounded-[2rem] bg-white/5 border border-white/10 hover:bg-white/10 transition-colors group">
-                                            <div className="text-blue-400 group-hover:scale-110 transition-transform">
-                                                {item.icon}
-                                            </div>
-                                            <h4 className="text-lg font-bold">{item.title}</h4>
-                                            <p className="text-slate-500 text-xs leading-relaxed">{item.desc}</p>
+                                    {/* Floating Bubbles focused on Cold/Freshness */}
+                                    <div className="absolute -top-10 -right-10 w-48 h-48 bg-white/80 backdrop-blur-2xl rounded-[3rem] p-8 shadow-2xl border border-blue-50/50 flex flex-col items-center justify-center animate-bounce-slow">
+                                        <div className="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center mb-4">
+                                            <Zap className="w-6 h-6 text-blue-600" />
                                         </div>
-                                    ))}
+                                        <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest text-center italic">Fraîcheur<br />Instantanée</span>
+                                    </div>
+                                    <div className="absolute -bottom-12 -left-12 w-56 h-56 bg-gradient-to-br from-blue-600 to-sky-400 rounded-[4rem] p-10 text-white shadow-2xl rotate-6 animate-float">
+                                        <div className="text-4xl font-black italic tracking-tighter leading-none mb-4">PURETÉ<br />GLACIALE</div>
+                                        <p className="text-[10px] font-black uppercase tracking-widest opacity-80">Technologie Arctique</p>
+                                    </div>
                                 </div>
                             </div>
 
-                            <div className="relative">
-                                <div className="absolute -inset-20 bg-blue-600/20 blur-[120px] rounded-full" />
-                                <div className="relative aspect-square rounded-[3rem] border border-white/10 bg-white/5 p-8 backdrop-blur-3xl">
-                                    <div className="w-full h-full rounded-[2rem] overflow-hidden">
-                                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800" alt="Corporate Office" className="w-full h-full object-cover opacity-80" />
+                            {/* Text Side (Right for alternation) */}
+                            <div className="space-y-16 order-1 lg:order-2">
+                                <div className="relative">
+                                    <div className="absolute -left-12 top-0 text-[180px] font-black text-blue-50/50 select-none leading-none -z-10">
+                                        04
                                     </div>
-                                    <div className="absolute -bottom-10 -right-10 bg-white p-10 rounded-[2rem] shadow-2xl text-slate-900 hidden md:block">
-                                        <div className="flex items-center gap-4 mb-4">
-                                            <div className="text-3xl font-black italic tracking-tighter leading-none">BIEN-ÊTRE<br />AU TRAVAIL</div>
+                                    <div className="space-y-6">
+                                        <span className="text-[10px] font-black text-blue-600 uppercase tracking-[0.5em] flex items-center gap-3">
+                                            <span className="w-8 h-[1px] bg-blue-600" />
+                                            AVANTAGE CORPORATIF
+                                        </span>
+                                        <h2 className="text-6xl md:text-[80px] font-bold tracking-tighter leading-[0.9] text-slate-900 uppercase">
+                                            L'Excellence <br />
+                                            <span className="text-blue-600 italic font-light lowercase">à la source.</span>
+                                        </h2>
+                                        <p className="text-slate-500 text-xl font-light leading-relaxed max-w-lg">
+                                            Plus qu'une simple fontaine, un véritable pôle de bien-être pour vos collaborateurs, alliant technologie de purification avancée et design haut de gamme.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div className="relative grid grid-cols-1 md:grid-cols-2 gap-10">
+                                    {[
+                                        { title: "Pureté Absolue", desc: "Élimination de 99.9% des impuretés et bactéries.", icon: ShieldCheck, color: "bg-blue-600" },
+                                        { title: "Design Slim", desc: "Une intégration parfaite dans vos espaces de travail.", icon: Settings, color: "bg-indigo-600" },
+                                        { title: "Engagement RSE", desc: "Zéro plastique, une empreinte écologique minimale.", icon: Leaf, color: "bg-sky-600" },
+                                        { title: "Expérience Élite", desc: "Une eau fraîche et filtrée à volonté pour vos équipes.", icon: Star, color: "bg-blue-500" }
+                                    ].map((feat: any, fIdx) => (
+                                        <div key={fIdx} className="group relative py-8 border-b border-slate-100 last:border-0 hover:pl-4 transition-all duration-500">
+                                            <div className="flex flex-col gap-4">
+                                                {/* Number and Title Row */}
+                                                <div className="flex items-center gap-6">
+                                                    <div className={cn(
+                                                        "text-5xl font-black italic tracking-tighter leading-none transition-all duration-500 group-hover:scale-110",
+                                                        feat.color === "bg-blue-600" ? "text-blue-600/20 group-hover:text-blue-600" : 
+                                                        feat.color === "bg-indigo-600" ? "text-indigo-600/20 group-hover:text-indigo-600" : 
+                                                        feat.color === "bg-sky-600" ? "text-sky-600/20 group-hover:text-sky-600" : "text-blue-500/20 group-hover:text-blue-500"
+                                                    )}>
+                                                        {String(fIdx + 1).padStart(2, '0')}
+                                                    </div>
+                                                    <div className="space-y-1">
+                                                        <h4 className="text-xl font-bold text-slate-900 uppercase tracking-tight group-hover:text-blue-600 transition-colors">
+                                                            {feat.title}
+                                                        </h4>
+                                                        <div className={cn("w-12 h-1 rounded-full transition-all duration-500 group-hover:w-24", feat.color)} />
+                                                    </div>
+                                                </div>
+
+                                                {/* Description with indentation */}
+                                                <div className="pl-[76px]">
+                                                    <p className="text-slate-500 text-sm font-light leading-relaxed max-w-md opacity-80 group-hover:opacity-100 transition-opacity">
+                                                        {feat.desc}
+                                                    </p>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <p className="text-[10px] font-black uppercase tracking-widest text-slate-400">Standard de qualité élevé</p>
-                                    </div>
+                                    ))}
                                 </div>
                             </div>
                         </div>
@@ -464,7 +526,13 @@ const Bureau = () => {
                 </section>
 
                 {/* 4. EXPERT TRUST SECTION */}
-                <ExpertTrustSection />
+                <ExpertTrustSection 
+                    title="L'expertise au service du corporatif, "
+                    highlight="la performance dans chaque goutte."
+                    description="Garantissez le bien-être de vos collaborateurs et la longévité de vos infrastructures. Chez Bricareau, nous transformons chaque analyse en un levier stratégique pour la qualité de vie au travail et l'excellence opérationnelle de votre organisation."
+                    buttonText="Demander une consultation corporative"
+                    image={corporateExpertImg}
+                />
 
                 {/* 5. TESTIMONIALS */}
                 <div className="bg-slate-50 py-32 border-y border-gray-100">
@@ -483,8 +551,6 @@ const Bureau = () => {
                     />
                 </div>
 
-                {/* 6. WATER DIAGNOSIS */}
-                <WaterDiagnosis />
             </main>
 
             <Footer />

@@ -107,6 +107,8 @@ import Sustainability from "./pages/Sustainability";
 import OurProcess from "./pages/OurProcess";
 import Home1 from "./pages/Home1";
 import C from "./pages/C";
+import FiltreEauMachineCafe from "./pages/FiltreEauMachineCafe";
+import AdoucisseurEauCommercial from "./pages/AdoucisseurEauCommercial";
 
 const queryClient = new QueryClient();
 
@@ -222,6 +224,8 @@ const App = () => (
           <Route path="/eau-petillante-entreprises" element={<EauPetillanteEntreprises />} />
           <Route path="/machines-a-glace-entreprises" element={<MachinesAGlaceEntreprises />} />
           <Route path="/machines-a-cafe-entreprises" element={<MachinesACafeEntreprises />} />
+          <Route path="/filtres-eau-machine-cafe" element={<FiltreEauMachineCafe />} />
+          <Route path="/adoucisseurs-eau-commerciaux" element={<AdoucisseurEauCommercial />} />
           <Route path="/search" element={<SearchPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

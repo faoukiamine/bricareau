@@ -97,19 +97,22 @@ const ResidentialServices = () => {
     }, []);    const programs = [
         {
             title: "Filtres d'eau spécialisés pour toute la maison",
-            titlePart1: "Filtration",
-            titlePart2: "toute la maison",
+            titlePart1: "Filtration d'eau",
+            titlePart2: "pour toute la maison",
             navTitle: "Filtration Maison",
             desc: "Une protection intégrale dès l'entrée d'eau. Éliminez chlore, sédiments et métaux lourds de chaque robinet de votre résidence.",
             points: [
-                { title: "Pureté intégrale", desc: "Une eau cristalline pour la cuisine, la douche et même le jardin." },
-                { title: "Protection plomberie", desc: "Préservez vos tuyaux et robinetteries contre l'érosion et l'encrassement." },
+                { title: "Clarté de l'eau", desc: "Une eau limpide à chaque robinet, protégeant l'éclat de vos sanitaires et de votre linge." },
+                { title: "Protection de la plomberie", desc: "Préservez vos tuyaux et robinetteries contre l'érosion et l'encrassement." },
                 { title: "Peau & Cheveux", desc: "Réduisez l'agressivité du chlore pour une douche plus douce et naturelle." }
             ],
             image: wholeHouseImg,
             link: "/filtres-deau",
             tag: "INFRASTRUCTURE",
             floatingCard: { title: "Certifié NSF", desc: "Performance testée et validée par les plus hauts standards mondiaux.", icon: verifiedImg },
+            floatingCard2: { title: "Peau & Cheveux", desc: "Réduisez l'agressivité du chlore pour une douche plus douce et naturelle.", icon: verifiedImg },
+            floatingCard3: { title: "Performance Durable", desc: "Filtration efficace pendant 5 à 7 ans sans entretien lourd.", icon: savingsImg },
+            floatingCard4: { title: "Protection Plomberie", desc: "Dites adieu aux sédiments qui corrodent vos précieux appareils.", icon: healthSafeImg },
             largeNumber: "01",
             bubbles: [
                 { icon: ShieldCheck, label: "Sécurité", value: "A+", color: "text-blue-600" },
@@ -118,7 +121,7 @@ const ResidentialServices = () => {
         },
         {
             title: "Adoucisseurs d'eau résidentiels",
-            titlePart1: "Adoucisseurs",
+            titlePart1: "Adoucisseurs d'eau",
             titlePart2: "résidentiels",
             navTitle: "Adoucisseurs",
             desc: "Dites adieu au calcaire. Protégez vos appareils électroménagers et retrouvez la douceur d'une eau soyeuse au quotidien.",
@@ -131,6 +134,9 @@ const ResidentialServices = () => {
             link: "/adoucisseur-eau-residentiel",
             tag: "CONFORT",
             floatingCard: { title: "Éco-Énergie", desc: "Réduisez vos factures d'énergie en optimisant votre chauffe-eau.", icon: savingsImg },
+            floatingCard2: { title: "Zéro Calcaire", desc: "Élimination totale du tartre pour des surfaces toujours étincelantes.", icon: verifiedImg },
+            floatingCard3: { title: "Économies ROI", desc: "Réduisez votre consommation de savon et d'énergie jusqu'à 30%.", icon: savingsImg },
+            floatingCard4: { title: "Confort Textile", desc: "Un linge plus souple et des couleurs préservées lavage après lavage.", icon: verifiedImg },
             largeNumber: "02",
             bubbles: [
                 { icon: Sparkles, label: "Éclat", value: "100%", color: "text-amber-500" },
@@ -139,7 +145,7 @@ const ResidentialServices = () => {
         },
         {
             title: "Solutions d'eau potable premium",
-            titlePart1: "Eau potable",
+            titlePart1: "Stations d'eau potable",
             titlePart2: "premium",
             navTitle: "Eau Potable",
             desc: "La pureté d'une eau de source à votre robinet. L'osmose inverse haute technologie pour une hydratation sans compromis.",
@@ -152,6 +158,9 @@ const ResidentialServices = () => {
             link: "/systeme-de-filtration-deau-potable",
             tag: "SANTÉ",
             floatingCard: { title: "Standard Hôtel", desc: "La qualité des plus grands établissements dans votre cuisine.", icon: hotelClassImg },
+            floatingCard2: { title: "Pureté Totale", desc: "Élimination des métaux lourds et micro-plastiques invisibles.", icon: healthSafeImg },
+            floatingCard3: { title: "Goût de Source", desc: "Une eau cristalline parfaite pour sublimer vos cafés et thés.", icon: verifiedImg },
+            floatingCard4: { title: "Zéro Plastique", desc: "Éliminez l'achat et le transport de bouteilles d'eau lourdes.", icon: ecoImg },
             largeNumber: "03",
             bubbles: [
                 { icon: GlassWater, label: "Goût", value: "Pur", color: "text-blue-400" },
@@ -160,7 +169,7 @@ const ResidentialServices = () => {
         },
         {
             title: "Systèmes de désinfection UV",
-            titlePart1: "Désinfection",
+            titlePart1: "Systèmes de désinfection",
             titlePart2: "par UV",
             navTitle: "Protection UV",
             desc: "Une barrière impénétrable contre les micro-organismes. La solution ultime pour les eaux de puits et la sécurité bactériologique.",
@@ -173,6 +182,9 @@ const ResidentialServices = () => {
             link: "/Systemes-de-desinfection-UV",
             tag: "SÉCURITÉ",
             floatingCard: { title: "Santé 99.9%", desc: "Protection certifiée contre les pathogènes invisibles.", icon: healthSafeImg },
+            floatingCard2: { title: "Stérilisation", desc: "Neutralise bactéries et virus sans produits chimiques.", icon: ShieldCheck },
+            floatingCard3: { title: "Sécurité 24/7", desc: "Une barrière impénétrable active en permanence pour votre foyer.", icon: healthSafeImg },
+            floatingCard4: { title: "Entretien Simple", desc: "Technologie robuste ne nécessitant qu'un changement de lampe annuel.", icon: verifiedImg },
             largeNumber: "04",
             bubbles: [
                 { icon: Activity, label: "Contrôle", value: "Actif", color: "text-blue-600" },
@@ -194,6 +206,9 @@ const ResidentialServices = () => {
             link: "/fontaines",
             tag: "HYDRATATION",
             floatingCard: { title: "Confort Illimité", desc: "Oubliez les bonbonnes lourdes et encombrantes pour toujours.", icon: ecoImg },
+            floatingCard2: { title: "Multi-Température", desc: "Eau fraîche, tempérée ou chaude instantanément selon vos envies.", icon: verifiedImg },
+            floatingCard3: { title: "Design Premium", desc: "Une esthétique moderne qui s'intègre parfaitement à votre intérieur.", icon: verifiedImg },
+            floatingCard4: { title: "Option Pétillante", desc: "Dégustez une eau finement gazéifiée directement de votre fontaine.", icon: GlassWater },
             largeNumber: "05",
             bubbles: [
                 { icon: Droplets, label: "Pureté", value: "Top", color: "text-blue-600" },
@@ -352,15 +367,21 @@ const ResidentialServices = () => {
 
                                                     <div className="relative grid grid-cols-1 md:grid-cols-2 gap-10">
                                                         {[
-                                                            { title: prog.floatingCard.title, value: "Elite", desc: prog.floatingCard.desc, color: "bg-blue-600" },
-                                                            { title: prog.points[0].title, value: "Max", desc: prog.points[0].desc, color: "bg-indigo-600" },
-                                                        ].map((feat, fIdx) => (
+                                                            { ...prog.floatingCard, value: "Elite", color: "bg-blue-600" },
+                                                            (prog as any).floatingCard2 ? { ...(prog as any).floatingCard2, value: "Max", color: "bg-indigo-600" } : { ...prog.points[0], value: "Max", color: "bg-indigo-600" },
+                                                            (prog as any).floatingCard3 ? { ...(prog as any).floatingCard3, value: "Pro", color: "bg-sky-600" } : null,
+                                                            (prog as any).floatingCard4 ? { ...(prog as any).floatingCard4, value: "Ultra", color: "bg-blue-500" } : null,
+                                                        ].filter(Boolean).map((feat: any, fIdx) => (
                                                             <div key={fIdx} className="group relative p-10 rounded-[3rem] bg-white border border-slate-100 shadow-xl shadow-slate-100/50 hover:shadow-2xl hover:shadow-blue-100 transition-all duration-500 overflow-hidden">
                                                                 <div className={cn("absolute top-0 right-0 w-32 h-32 opacity-5 translate-x-10 -translate-y-10 rounded-full", feat.color)} />
                                                                 <div className="relative z-10 space-y-4">
-                                                                    <div className="flex items-center justify-between">
+                                                                    <div className="flex items-center gap-3">
+                                                                        {feat.icon && typeof feat.icon === 'string' ? (
+                                                                            <img src={feat.icon} className="w-5 h-5 opacity-50" alt="" />
+                                                                        ) : feat.icon ? (
+                                                                            <feat.icon className="w-5 h-5 opacity-50" />
+                                                                        ) : null}
                                                                         <span className="text-xs font-bold text-slate-500">{feat.title}</span>
-                                                                        <span className="text-2xl font-black text-blue-600">{feat.value}</span>
                                                                     </div>
                                                                     <p className="text-slate-500 text-sm font-light leading-relaxed">{feat.desc}</p>
                                                                 </div>
@@ -406,9 +427,9 @@ const ResidentialServices = () => {
 
                                                             <div className={cn(
                                                                 "absolute top-1/2 -translate-y-1/2 vertical-text hidden xl:block",
-                                                                idx % 2 === 0 ? "-right-10" : "-left-10"
+                                                                idx % 2 === 0 ? "-right-12" : "-left-12"
                                                             )}>
-                                                                <span className="text-[10px] font-black text-slate-300 uppercase tracking-[1em] rotate-180">DESIGNED IN QUEBEC</span>
+                                                                <span className="text-xs font-black text-blue-600/20 uppercase tracking-[1em] rotate-180">DESIGNED IN QUEBEC</span>
                                                             </div>
                                                         </div>
 

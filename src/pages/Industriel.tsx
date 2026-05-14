@@ -19,7 +19,9 @@ import {
     GlassWater,
     Heart,
     Leaf,
-    Wine
+    Wine,
+    TrendingUp,
+    Users2
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import Header from "@/components/Header";
@@ -38,6 +40,10 @@ import dosinggroupImg from "@/assets/Pulsafeeder dosing group.jpg";
 import IndustrialROSystemsImg from "@/assets/jpg100.jpg";
 import DISystemsImg from "@/assets/DI-Water-System.jpg";
 import uvSystemImg from "@/assets/Aquaviva-Cannes-480x355.png";
+import verifiedImg from "@/assets/verified.svg";
+import savingsImg from "@/assets/savings.svg";
+import healthSafeImg from "@/assets/health_and_safety.svg";
+import ecoImg from "@/assets/eco.svg";
 
 const Industriel = () => {
     const navigate = useNavigate();
@@ -111,7 +117,10 @@ const Industriel = () => {
             link: "/filtres-deau",
             tag: "INFRASTRUCTURE",
             largeNumber: "01",
-            floatingCard: { title: "Protection Réseau", desc: "Élimination totale sédiments.", icon: ShieldCheck },
+            floatingCard: { title: "Protection Réseau", desc: "Élimination totale des sédiments.", icon: ShieldCheck },
+            floatingCard2: { title: "Précision Pro", desc: "Contrôle millimétré de la composition de l'eau.", icon: Activity },
+            floatingCard3: { title: "Flux Constant", desc: "Débit ininterrompu même lors des pics d'activité.", icon: Zap },
+            floatingCard4: { title: "Conformité Normes", desc: "Respect des standards industriels et environnementaux.", icon: ShieldCheck },
             bubbles: [
                 { icon: Factory, label: "Capacité", value: "Haute", color: "text-slate-600" },
                 { icon: Zap, label: "Flux", value: "Constant", color: "text-amber-400" }
@@ -131,7 +140,10 @@ const Industriel = () => {
             link: "/adoucisseur-eau-residentiel",
             tag: "THERMIQUE",
             largeNumber: "02",
-            floatingCard: { title: "Efficacité Énergie", desc: "Zéro tartre, moins de coûts.", icon: Zap },
+            floatingCard: { title: "Efficacité Énergie", desc: "Zéro tartre, réduction des coûts opérationnels.", icon: Zap },
+            floatingCard2: { title: "Protection Actifs", desc: "Préservez vos chaudières et échangeurs du tartre.", icon: ShieldCheck },
+            floatingCard3: { title: "Maintenance ROI", desc: "Réduction drastique des coûts d'entretien machine.", icon: savingsImg },
+            floatingCard4: { title: "Volume Industriel", desc: "Traitement haute performance pour les gros débits.", icon: Factory },
             bubbles: [
                 { icon: Droplets, label: "Dureté", value: "0°f", color: "text-blue-600" },
                 { icon: Zap, label: "ROI", value: "+35%", color: "text-green-500" }
@@ -149,9 +161,12 @@ const Industriel = () => {
             ],
             image: dosinggroupImg,
             link: "/fontaines",
-            tag: "PRÉCISION",
+            tag: "PRECISION",
             largeNumber: "03",
-            floatingCard: { title: "Dosage Auto", desc: "Gestion chimique parfaite.", icon: Settings },
+            floatingCard: { title: "Dosage Précis", desc: "Injection chimique automatisée et contrôlée.", icon: Activity },
+            floatingCard2: { title: "Alerte Prédictive", desc: "Détection des anomalies avant l'arrêt de production.", icon: Activity },
+            floatingCard3: { title: "Sécurité Totale", desc: "Contrôle constant des paramètres critiques d'eau.", icon: ShieldCheck },
+            floatingCard4: { title: "Automatisation", desc: "Gestion intelligente sans intervention humaine.", icon: Settings },
             bubbles: [
                 { icon: Cpu, label: "IA", value: "Active", color: "text-indigo-400" },
                 { icon: Activity, label: "Précision", value: "99.9%", color: "text-red-400" }
@@ -171,7 +186,10 @@ const Industriel = () => {
             link: "/systeme-de-filtration-deau-potable",
             tag: "PURIFICATION",
             largeNumber: "04",
-            floatingCard: { title: "Eau Process", desc: "Le standard de pureté.", icon: ShieldCheck },
+            floatingCard: { title: "Eau Process", desc: "Le standard de pureté pour vos lignes de production.", icon: ShieldCheck },
+            floatingCard2: { title: "Pureté Critique", desc: "Élimination totale des TDS pour une qualité constante.", icon: healthSafeImg },
+            floatingCard3: { title: "Rendement Éco", desc: "Optimisation de la consommation d'eau et d'énergie.", icon: savingsImg },
+            floatingCard4: { title: "Scalabilité", desc: "Capacités modulaires s'adaptant à votre croissance.", icon: Factory },
             bubbles: [
                 { icon: GlassWater, label: "Pureté", value: "TDS < 1", color: "text-sky-400" },
                 { icon: Sparkles, label: "Grade", value: "Ultra-Pur", color: "text-blue-500" }
@@ -191,7 +209,10 @@ const Industriel = () => {
             link: "/systeme-de-filtration-deau-potable",
             tag: "LABORATOIRE",
             largeNumber: "05",
-            floatingCard: { title: "Laboratoire", desc: "Eau de type 1.", icon: Cpu },
+            floatingCard: { title: "Grade Labo", desc: "Eau de type 1 pour les analyses les plus sensibles.", icon: Activity },
+            floatingCard2: { title: "Conductivité Ω", desc: "Résistivité maximale pour l'industrie électronique.", icon: Zap },
+            floatingCard3: { title: "Résines High-Tech", desc: "Mélanges haute performance adaptés à vos polluants.", icon: Layers },
+            floatingCard4: { title: "Pureté Absolue", desc: "Une eau déionisée aux standards les plus élevés.", icon: ShieldCheck },
             bubbles: [
                 { icon: Layers, label: "Résines", value: "High-Grade", color: "text-indigo-500" },
                 { icon: Activity, label: "Ω", value: "18.2 MΩ", color: "text-slate-400" }
@@ -211,7 +232,10 @@ const Industriel = () => {
             link: "/Systemes-de-desinfection-UV",
             tag: "SÉCURITÉ",
             largeNumber: "06",
-            floatingCard: { title: "Désinfection", desc: "Neutralisation instantanée.", icon: Activity },
+            floatingCard: { title: "Sécurité Bio", desc: "Neutralisation à 99.99% des agents pathogènes.", icon: ShieldCheck },
+            floatingCard2: { title: "Action Ligne", desc: "Traitement en temps réel pour une sécurité constante.", icon: Activity },
+            floatingCard3: { title: "Zéro Chimique", desc: "Stérilisation pure sans modification de l'eau.", icon: healthSafeImg },
+            floatingCard4: { title: "Puissance UV", desc: "Haute intensité certifiée pour volumes industriels.", icon: Sparkles },
             bubbles: [
                 { icon: ShieldCheck, label: "Bio", value: "Log 4", color: "text-blue-600" },
                 { icon: Sparkles, label: "UV-C", value: "Intense", color: "text-purple-400" }
@@ -368,22 +392,23 @@ const Industriel = () => {
 
                                                     <div className="relative grid grid-cols-1 md:grid-cols-2 gap-10">
                                                         {[
-                                                            { title: prog.floatingCard.title, value: "Elite", desc: prog.floatingCard.desc, icon: prog.floatingCard.icon },
-                                                            { title: prog.points[0].title, value: "Top", desc: prog.points[0].desc, icon: ShieldCheck },
-                                                        ].map((feat, fIdx) => (
+                                                            { ...prog.floatingCard, value: "Elite", color: "bg-blue-600" },
+                                                            (prog as any).floatingCard2 ? { ...(prog as any).floatingCard2, value: "Max", color: "bg-indigo-600" } : null,
+                                                            (prog as any).floatingCard3 ? { ...(prog as any).floatingCard3, value: "Pro", color: "bg-sky-600" } : null,
+                                                            (prog as any).floatingCard4 ? { ...(prog as any).floatingCard4, value: "Ultra", color: "bg-blue-500" } : null,
+                                                        ].filter(Boolean).map((feat: any, fIdx) => (
                                                             <div key={fIdx} className="group relative p-10 rounded-[3rem] bg-white border border-slate-100 shadow-xl shadow-slate-100/50 hover:shadow-2xl hover:shadow-blue-100 transition-all duration-500 overflow-hidden">
-                                                                <div className="absolute top-0 right-0 w-32 h-32 opacity-5 translate-x-10 -translate-y-10 rounded-full bg-blue-600" />
+                                                                <div className={cn("absolute top-0 right-0 w-32 h-32 opacity-5 translate-x-10 -translate-y-10 rounded-full", feat.color)} />
                                                                 <div className="relative z-10 space-y-4">
-                                                                    <div className="flex items-center justify-between">
-                                                                        <div className="p-2 rounded-xl bg-blue-50 text-blue-600">
-                                                                            <feat.icon className="w-4 h-4" />
-                                                                        </div>
-                                                                        <span className="text-2xl font-black text-blue-600">{feat.value}</span>
+                                                                    <div className="flex items-center gap-3">
+                                                                        {feat.icon && typeof feat.icon === 'string' ? (
+                                                                            <img src={feat.icon} className="w-5 h-5 opacity-50" alt="" />
+                                                                        ) : feat.icon ? (
+                                                                            <feat.icon className="w-5 h-5 text-blue-600 opacity-50" />
+                                                                        ) : null}
+                                                                        <span className="text-[10px] font-black text-slate-500 uppercase tracking-wider">{feat.title}</span>
                                                                     </div>
-                                                                    <div className="space-y-1">
-                                                                        <span className="text-xs font-bold text-slate-500 block">{feat.title}</span>
-                                                                        <p className="text-slate-500 text-sm font-light leading-relaxed">{feat.desc}</p>
-                                                                    </div>
+                                                                    <p className="text-slate-500 text-xs font-light leading-relaxed">{feat.desc}</p>
                                                                 </div>
                                                             </div>
                                                         ))}
@@ -427,9 +452,9 @@ const Industriel = () => {
 
                                                             <div className={cn(
                                                                 "absolute top-1/2 -translate-y-1/2 vertical-text hidden xl:block",
-                                                                idx % 2 === 0 ? "-right-10" : "-left-10"
+                                                                idx % 2 === 0 ? "-right-12" : "-left-12"
                                                             )}>
-                                                                <span className="text-[10px] font-black text-slate-300 uppercase tracking-[1em] rotate-180">INDUSTRIAL DNA</span>
+                                                                <span className="text-xs font-black text-blue-600/20 uppercase tracking-[1em] rotate-180">INDUSTRIAL DNA</span>
                                                             </div>
                                                         </div>
 
