@@ -11,7 +11,13 @@ import {
     HeartPulse,
     Droplets,
     Settings,
-    Search
+    Search,
+    Leaf,
+    Sparkles,
+    Sun,
+    GlassWater,
+    Heart,
+    Activity
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import Header from "@/components/Header";
@@ -19,6 +25,8 @@ import Footer from "@/components/Footer";
 import { cn } from "@/lib/utils";
 import { ProMaxButton } from "@/components/ui/ProMaxButton";
 import TestimonialsSection from "@/components/TestimonialsSection";
+import ExpertTrustSection from "@/components/ExpertTrustSection";
+import WaterDiagnosis from "@/components/water_diagnosis";
 
 // Assets
 import heroImg from "@/assets/23568974.png";
@@ -27,7 +35,13 @@ import filtrationImg from "@/assets/Sérénité Direct-Flow installation.png";
 import wholeHouseImg from "@/assets/Filtration-eau-de-puits.webp";
 import drinkWaterImg from "@/assets/20230add-4ce5-4ae6-a6dc-1f9a2c3aeb7b.jpg";
 import uvImg from "@/assets/UV-system.jpg";
-import partnerImg from "@/assets/waterdrop-carafe-in-use.webp";
+import teenagerShowerImg from "@/assets/teenager-taking-shower-reduce-hangover-effect.jpg";
+import hotelClassImg from "@/assets/hotel_class.svg";
+import savingsImg from "@/assets/savings.svg";
+import verifiedImg from "@/assets/verified.svg";
+import healthSafeImg from "@/assets/health_and_safety.svg";
+import fountainImg from "@/assets/Fontaines d'eau.webp";
+import ecoImg from "@/assets/eco.svg";
 
 const ResidentialServices = () => {
     const navigate = useNavigate();
@@ -80,44 +94,111 @@ const ResidentialServices = () => {
             observer.disconnect();
             window.removeEventListener("scroll", handleGlobalScroll);
         };
-    }, []);
-
-    const programs = [
+    }, []);    const programs = [
         {
-            title: "Filtres d'eau spécialisés",
-            navTitle: "Filtration Toute Maison",
-            desc: "Libérez votre foyer du fer et du chlore : profitez d'une eau d'une pureté cristalline à chaque robinet, dès son entrée dans votre maison.",
-            points: ["Zéro Fer & Odeurs de Soufre", "Préservation de vos Canalisations", "Éclat et Pureté Cristalline"],
+            title: "Filtres d'eau spécialisés pour toute la maison",
+            titlePart1: "Filtration",
+            titlePart2: "toute la maison",
+            navTitle: "Filtration Maison",
+            desc: "Une protection intégrale dès l'entrée d'eau. Éliminez chlore, sédiments et métaux lourds de chaque robinet de votre résidence.",
+            points: [
+                { title: "Pureté intégrale", desc: "Une eau cristalline pour la cuisine, la douche et même le jardin." },
+                { title: "Protection plomberie", desc: "Préservez vos tuyaux et robinetteries contre l'érosion et l'encrassement." },
+                { title: "Peau & Cheveux", desc: "Réduisez l'agressivité du chlore pour une douche plus douce et naturelle." }
+            ],
             image: wholeHouseImg,
             link: "/filtres-deau",
-            tag: "FILTRATION INTÉGRALE"
+            tag: "INFRASTRUCTURE",
+            floatingCard: { title: "Certifié NSF", desc: "Performance testée et validée par les plus hauts standards mondiaux.", icon: verifiedImg },
+            largeNumber: "01",
+            bubbles: [
+                { icon: ShieldCheck, label: "Sécurité", value: "A+", color: "text-blue-600" },
+                { icon: Droplets, label: "Pureté", value: "99%", color: "text-sky-500" }
+            ]
         },
         {
-            title: "Adoucisseurs d'eau, éliminez le calcaire et l'eau dure.",
-            navTitle: "Adoucisseurs d'eau",
-            desc: "Maximisez la durée de vie de vos appareils et offrez à votre peau la douceur d'une eau soyeuse grâce à notre technologie intelligente.",
-            points: ["0% Calcaire", "Économies d'Énergie", "Protection Anticalcaire"],
+            title: "Adoucisseurs d'eau résidentiels",
+            titlePart1: "Adoucisseurs",
+            titlePart2: "résidentiels",
+            navTitle: "Adoucisseurs",
+            desc: "Dites adieu au calcaire. Protégez vos appareils électroménagers et retrouvez la douceur d'une eau soyeuse au quotidien.",
+            points: [
+                { title: "Zéro calcaire", desc: "Élimination totale du tartre pour des surfaces toujours étincelantes." },
+                { title: "Économies", desc: "Réduisez votre consommation de savon et d'énergie jusqu'à 30%." },
+                { title: "Confort textile", desc: "Un linge plus souple et des couleurs préservées lavage après lavage." }
+            ],
             image: softenerImg,
             link: "/adoucisseur-eau-residentiel",
-            tag: "PROTECTION"
+            tag: "CONFORT",
+            floatingCard: { title: "Éco-Énergie", desc: "Réduisez vos factures d'énergie en optimisant votre chauffe-eau.", icon: savingsImg },
+            largeNumber: "02",
+            bubbles: [
+                { icon: Sparkles, label: "Éclat", value: "100%", color: "text-amber-500" },
+                { icon: Zap, label: "Énergie", value: "-25%", color: "text-blue-600" }
+            ]
         },
         {
-            title: "Solutions d'eau potable",
-            navTitle: "Eau Potable Premium",
-            desc: "La pureté d'une eau de source directement dans votre cuisine. Plus besoin de bouteilles.",
-            points: ["Filtration 5 Étapes", "Minéralisation Optimale", "Zéro Déchet"],
+            title: "Solutions d'eau potable premium",
+            titlePart1: "Eau potable",
+            titlePart2: "premium",
+            navTitle: "Eau Potable",
+            desc: "La pureté d'une eau de source à votre robinet. L'osmose inverse haute technologie pour une hydratation sans compromis.",
+            points: [
+                { title: "Goût parfait", desc: "Une eau neutre et rafraîchissante, idéale pour le café, le thé et la cuisine." },
+                { title: "Santé optimale", desc: "Élimination des micro-plastiques, nitrates et résidus pharmaceutiques." },
+                { title: "Praticité", desc: "Plus besoin d'acheter ou de transporter des bouteilles d'eau lourdes." }
+            ],
             image: filtrationImg,
             link: "/systeme-de-filtration-deau-potable",
-            tag: "SANTÉ"
+            tag: "SANTÉ",
+            floatingCard: { title: "Standard Hôtel", desc: "La qualité des plus grands établissements dans votre cuisine.", icon: hotelClassImg },
+            largeNumber: "03",
+            bubbles: [
+                { icon: GlassWater, label: "Goût", value: "Pur", color: "text-blue-400" },
+                { icon: Heart, label: "Bien-être", value: "Vital", color: "text-rose-500" }
+            ]
         },
         {
             title: "Systèmes de désinfection UV",
-            navTitle: "Désinfection UV",
-            desc: "Sécurité absolue contre les bactéries et virus, idéale pour les résidences sur puits privé.",
-            points: ["Action Bactéricide 99.9%", "Sans Produits Chimiques", "Certifié NSF"],
+            titlePart1: "Désinfection",
+            titlePart2: "par UV",
+            navTitle: "Protection UV",
+            desc: "Une barrière impénétrable contre les micro-organismes. La solution ultime pour les eaux de puits et la sécurité bactériologique.",
+            points: [
+                { title: "Stérilisation", desc: "Neutralise 99,99% des bactéries, virus et kystes sans produits chimiques." },
+                { title: "Action continue", desc: "Une protection 24h/24 sans modifier le goût ou l'odeur de l'eau." },
+                { title: "Entretien simple", desc: "Une technologie robuste ne nécessitant qu'un changement de lampe annuel." }
+            ],
             image: uvImg,
             link: "/Systemes-de-desinfection-UV",
-            tag: "SÉCURITÉ"
+            tag: "SÉCURITÉ",
+            floatingCard: { title: "Santé 99.9%", desc: "Protection certifiée contre les pathogènes invisibles.", icon: healthSafeImg },
+            largeNumber: "04",
+            bubbles: [
+                { icon: Activity, label: "Contrôle", value: "Actif", color: "text-blue-600" },
+                { icon: Sun, label: "Rayonnement", value: "Max", color: "text-amber-400" }
+            ]
+        },
+        {
+            title: "Fontaines d'eau intelligentes",
+            titlePart1: "Fontaines d'eau",
+            titlePart2: "intelligentes",
+            navTitle: "Fontaines",
+            desc: "L'élégance au service de l'hydratation. Une source d'eau purifiée, fraîche ou pétillante, intégrée parfaitement à votre intérieur.",
+            points: [
+                { title: "Multi-température", desc: "Eau fraîche, tempérée ou chaude instantanément selon vos besoins." },
+                { title: "Filtration intégrée", desc: "Technologie de pointe éliminant tout résidu pour une eau pure." },
+                { title: "Éco-responsable", desc: "Dites adieu aux bouteilles jetables et réduisez vos déchets plastiques." }
+            ],
+            image: fountainImg,
+            link: "/fontaines",
+            tag: "HYDRATATION",
+            floatingCard: { title: "Confort Illimité", desc: "Oubliez les bonbonnes lourdes et encombrantes pour toujours.", icon: ecoImg },
+            largeNumber: "05",
+            bubbles: [
+                { icon: Droplets, label: "Pureté", value: "Top", color: "text-blue-600" },
+                { icon: Leaf, label: "Écologie", value: "Green", color: "text-green-500" }
+            ]
         }
     ];
 
@@ -181,18 +262,19 @@ const ResidentialServices = () => {
                     </div>
                 </section>
 
-                {/* 2. THE BENTO EXPERIENCE SECTION */}
-                <section id="solutions" className="py-32 bg-white">
+                {/* SERVICE SECTIONS - PREMIUM LIQUID DESIGN */}
+                <section id="solutions" className="py-20 bg-white">
                     <div className="container mx-auto px-6">
-                        <div className="flex flex-col md:flex-row md:items-end justify-between mb-24 gap-8">
+                        <div className="flex flex-col md:flex-row md:items-end justify-between mb-32 gap-8">
                             <div className="max-w-2xl space-y-6">
                                 <span className="text-[10px] font-black text-blue-600 uppercase tracking-[0.5em]">L'EXPERTISE BRICAREAU</span>
-                                <h2 className="text-4xl md:text-7xl font-bold text-slate-900 tracking-tighter leading-none uppercase">
-                                    Redécouvrez le goût <span className="text-[#18448F]">de l'eau vraie.</span>
+                                <h2 className="heading-pro-max text-left uppercase">
+                                    <span className="italic font-light text-[#18448F]">Redécouvrez le vrai</span><br />
+                                    <span className="font-bold text-[#18448F]"> goût de l'eau</span>
                                 </h2>
                             </div>
-                            <p className="text-slate-500 text-lg max-w-md italic border-l-2 border-blue-100 pl-8">
-                                "La santé de votre famille commence par la qualité de l'eau que vous consommez chaque jour."
+                            <p className="text-slate-400 text-sm font-light max-w-sm border-l border-blue-100 pl-6">
+                                La santé de votre famille commence par la qualité de l'eau que vous consommez chaque jour.
                             </p>
                         </div>
 
@@ -223,47 +305,116 @@ const ResidentialServices = () => {
                             </div>
 
                             {/* Service Sections Content */}
-                            <div ref={containerRef} className="space-y-32">
+                            <div ref={containerRef} className="space-y-48">
                                 {programs.map((prog, idx) => (
                                     <div 
                                         key={idx}
                                         ref={el => sectionRefs.current[idx] = el}
-                                        className="relative group min-h-[600px] flex items-center"
+                                        className="relative min-h-[80vh] flex items-center py-24 overflow-hidden"
                                     >
-                                        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center w-full">
+                                        {/* Background Orbs */}
+                                        <div className="absolute inset-0 z-0 pointer-events-none">
                                             <div className={cn(
-                                                "lg:col-span-7 rounded-[3rem] overflow-hidden aspect-video relative shadow-2xl",
-                                                idx % 2 === 0 ? "lg:order-1" : "lg:order-2"
-                                            )}>
-                                                <img src={prog.image} alt={prog.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[3s]" />
-                                                <div className="absolute inset-0 bg-blue-900/10 mix-blend-multiply" />
-                                            </div>
+                                                "absolute w-[40%] h-[40%] bg-blue-50 rounded-full blur-[100px] opacity-60",
+                                                idx % 2 === 0 ? "-top-[10%] -left-[10%]" : "-top-[10%] -right-[10%]"
+                                            )} />
+                                            <div className={cn(
+                                                "absolute w-[30%] h-[30%] bg-indigo-50 rounded-full blur-[80px] opacity-40",
+                                                idx % 2 === 0 ? "top-[20%] -right-[5%]" : "top-[20%] -left-[5%]"
+                                            )} />
+                                        </div>
 
+                                        <div className="container mx-auto px-6 relative z-10">
                                             <div className={cn(
-                                                "lg:col-span-5 space-y-8",
-                                                idx % 2 === 0 ? "lg:order-2 lg:pl-12" : "lg:order-1 lg:pr-12"
+                                                "flex flex-col items-center gap-20",
+                                                idx % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
                                             )}>
-                                                <span className="text-[10px] font-black text-blue-600 bg-blue-50 px-3 py-1 rounded-full uppercase tracking-widest">
-                                                    {prog.tag}
-                                                </span>
-                                                <h3 className="text-4xl md:text-5xl font-bold text-slate-900 tracking-tight leading-none uppercase">
-                                                    {prog.title}
-                                                </h3>
-                                                <p className="text-slate-500 text-lg leading-relaxed">
-                                                    {prog.desc}
-                                                </p>
-                                                <div className="space-y-4">
-                                                    {prog.points.map((pt, pIdx) => (
-                                                        <div key={pIdx} className="flex items-center gap-4 text-slate-800 font-medium">
-                                                            <CheckCircle2 className="w-5 h-5 text-blue-600" />
-                                                            <span>{pt}</span>
+                                                {/* Text Column */}
+                                                <div className="lg:w-1/2 space-y-16">
+                                                    <div className="relative">
+                                                        <div className="absolute -left-12 top-0 text-[180px] font-black text-blue-50/50 select-none leading-none -z-10">
+                                                            {(prog as any).largeNumber}
                                                         </div>
-                                                    ))}
+                                                        <div className="space-y-6">
+                                                            <span className="text-[10px] font-black text-blue-600 uppercase tracking-[0.5em] flex items-center gap-3">
+                                                                <span className="w-8 h-[1px] bg-blue-600" />
+                                                                {prog.tag}
+                                                            </span>
+                                                            <h2 className="text-6xl md:text-[80px] font-bold tracking-tighter leading-[0.9] text-slate-900 uppercase">
+                                                                {prog.titlePart1} <br />
+                                                                <span className="text-blue-600 italic font-light lowercase">{prog.titlePart2}</span>
+                                                            </h2>
+                                                            <p className="text-slate-500 text-xl font-light leading-relaxed max-w-lg">
+                                                                {prog.desc}
+                                                            </p>
+                                                        </div>
+                                                    </div>
+
+                                                    <div className="relative grid grid-cols-1 md:grid-cols-2 gap-10">
+                                                        {[
+                                                            { title: prog.floatingCard.title, value: "Elite", desc: prog.floatingCard.desc, color: "bg-blue-600" },
+                                                            { title: prog.points[0].title, value: "Max", desc: prog.points[0].desc, color: "bg-indigo-600" },
+                                                        ].map((feat, fIdx) => (
+                                                            <div key={fIdx} className="group relative p-10 rounded-[3rem] bg-white border border-slate-100 shadow-xl shadow-slate-100/50 hover:shadow-2xl hover:shadow-blue-100 transition-all duration-500 overflow-hidden">
+                                                                <div className={cn("absolute top-0 right-0 w-32 h-32 opacity-5 translate-x-10 -translate-y-10 rounded-full", feat.color)} />
+                                                                <div className="relative z-10 space-y-4">
+                                                                    <div className="flex items-center justify-between">
+                                                                        <span className="text-xs font-bold text-slate-500">{feat.title}</span>
+                                                                        <span className="text-2xl font-black text-blue-600">{feat.value}</span>
+                                                                    </div>
+                                                                    <p className="text-slate-500 text-sm font-light leading-relaxed">{feat.desc}</p>
+                                                                </div>
+                                                            </div>
+                                                        ))}
+                                                    </div>
+                                                    
+                                                    <div className="pt-4">
+                                                        <ProMaxButton variant="outline" className="px-12 h-16 text-[10px]" onClick={() => navigate(prog.link)}>
+                                                            DÉCOUVRIR LA SOLUTION
+                                                        </ProMaxButton>
+                                                    </div>
                                                 </div>
-                                                <div className="pt-6">
-                                                    <ProMaxButton variant="outline" className="px-10 h-14 text-[10px]" onClick={() => navigate(prog.link)}>
-                                                        EN SAVOIR PLUS
-                                                    </ProMaxButton>
+
+                                                {/* Liquid Visual Column */}
+                                                <div className="lg:w-1/2 relative">
+                                                    <div className="relative w-full aspect-square max-w-[600px] mx-auto">
+                                                        <div className="absolute inset-0 bg-blue-600/5 animate-morph" />
+                                                        
+                                                        <div className="absolute top-0 left-0 w-full h-full">
+                                                            {(prog as any).bubbles.map((bubble: any, bIdx: number) => (
+                                                                <div 
+                                                                    key={bIdx} 
+                                                                    className={cn(
+                                                                        "absolute z-30 bg-white/80 backdrop-blur-xl rounded-full shadow-2xl border border-white/50 flex flex-col items-center justify-center text-center animate-float",
+                                                                        bIdx === 0 ? "top-[10%] right-[10%] w-48 h-48 p-8" : "bottom-[10%] left-[5%] w-56 h-56 p-10 animation-delay-2000"
+                                                                    )}
+                                                                >
+                                                                    <bubble.icon className={cn("w-8 h-8 mb-3", bubble.color)} />
+                                                                    <span className="text-[10px] font-black uppercase tracking-widest text-slate-400">{bubble.label}</span>
+                                                                    <span className="text-lg font-bold text-slate-900 leading-none">{bubble.value}</span>
+                                                                </div>
+                                                            ))}
+
+                                                            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] rounded-full overflow-hidden border-[15px] border-white shadow-2xl animate-morph" style={{ animationDelay: '-2s' }}>
+                                                                <img 
+                                                                    src={prog.image} 
+                                                                    alt={prog.title} 
+                                                                    className="w-full h-full object-cover scale-110 hover:scale-125 transition-transform duration-[2s]"
+                                                                />
+                                                                <div className="absolute inset-0 bg-blue-900/10 mix-blend-overlay" />
+                                                            </div>
+
+                                                            <div className={cn(
+                                                                "absolute top-1/2 -translate-y-1/2 vertical-text hidden xl:block",
+                                                                idx % 2 === 0 ? "-right-10" : "-left-10"
+                                                            )}>
+                                                                <span className="text-[10px] font-black text-slate-300 uppercase tracking-[1em] rotate-180">DESIGNED IN QUEBEC</span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[110%] border border-blue-100 rounded-full animate-spin-slow opacity-20 -z-10" />
+                                                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[130%] h-[130%] border border-blue-50 rounded-full animate-spin-slow-reverse opacity-10 -z-10" />
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -274,58 +425,10 @@ const ResidentialServices = () => {
                     </div>
                 </section>
 
-                {/* 3. TECHNICAL DNA / QUALITY */}
-                <section className="py-32 bg-slate-900 text-white overflow-hidden">
-                    <div className="container mx-auto px-6">
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
-                            <div className="space-y-12">
-                                <div className="space-y-6">
-                                    <span className="text-[10px] font-black text-blue-400 uppercase tracking-[0.5em]">QUALITÉ CERTIFIÉE</span>
-                                    <h2 className="text-4xl md:text-6xl font-bold tracking-tighter leading-none uppercase">
-                                        Des standards <br /> <span className="text-blue-500">supérieurs.</span>
-                                    </h2>
-                                    <p className="text-slate-400 text-lg md:text-xl font-light leading-relaxed max-w-lg">
-                                        Nous ne sélectionnons que les meilleurs composants pour garantir une longévité dépassant les 15 ans pour chacun de nos systèmes résidentiels.
-                                    </p>
-                                </div>
+                {/* 4. EXPERT TRUST SECTION */}
+                <ExpertTrustSection />
 
-                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                                    {[
-                                        { title: "Composants NSF", desc: "Matériaux certifiés contact alimentaire.", icon: <ShieldCheck className="w-6 h-6" /> },
-                                        { title: "Service 24/7", desc: "Une assistance technique à tout moment.", icon: <Settings className="w-6 h-6" /> },
-                                        { title: "Santé Canada", desc: "Conforme aux normes les plus strictes.", icon: <HeartPulse className="w-6 h-6" /> },
-                                        { title: "Garantie 10 ans", desc: "Une tranquillité d'esprit sur le long terme.", icon: <Zap className="w-6 h-6" /> }
-                                    ].map((item, i) => (
-                                        <div key={i} className="space-y-4 p-6 rounded-[2rem] bg-white/5 border border-white/10 hover:bg-white/10 transition-colors group">
-                                            <div className="text-blue-400 group-hover:scale-110 transition-transform">
-                                                {item.icon}
-                                            </div>
-                                            <h4 className="text-lg font-bold">{item.title}</h4>
-                                            <p className="text-slate-500 text-xs leading-relaxed">{item.desc}</p>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-
-                            <div className="relative">
-                                <div className="absolute -inset-20 bg-blue-600/20 blur-[120px] rounded-full" />
-                                <div className="relative aspect-square rounded-[3rem] border border-white/10 bg-white/5 p-8 backdrop-blur-3xl">
-                                    <div className="w-full h-full rounded-[2rem] overflow-hidden">
-                                        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=800" alt="Technical" className="w-full h-full object-cover opacity-80" />
-                                    </div>
-                                    <div className="absolute -bottom-10 -right-10 bg-white p-10 rounded-[2rem] shadow-2xl text-slate-900 hidden md:block">
-                                        <div className="flex items-center gap-4 mb-4">
-                                            <div className="text-3xl font-black italic tracking-tighter leading-none">VRAIE<br />PURETÉ</div>
-                                        </div>
-                                        <p className="text-[10px] font-black uppercase tracking-widest text-slate-400">Certifié sans contaminants</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                {/* 4. TESTIMONIALS */}
+                {/* 5. TESTIMONIALS */}
                 <div className="bg-slate-50 py-32 border-y border-gray-100">
                     <TestimonialsSection 
                         filterProduct="/"
@@ -333,40 +436,16 @@ const ResidentialServices = () => {
                         title={
                             <div className="text-center space-y-3 mb-16">
                                 <span className="text-[10px] font-black text-blue-500 uppercase tracking-[0.5em] block mb-4">L'EXPÉRIENCE BRICAREAU</span>
-                                <span className="font-bold text-[#18448F] block text-4xl md:text-7xl tracking-tighter uppercase">Une famille satisfaite <br />après l'autre.</span>
+                                <h2 className="heading-pro-max text-center uppercase">
+                                    <span className="italic font-light text-[#18448F]">Une famille satisfaite </span>
+                                    <span className="font-bold text-[#18448F]">après l'autre.</span>
+                                </h2>
                             </div>
                         }
                     />
                 </div>
-
-                {/* 5. FINAL CALL TO ACTION */}
-                <section className="py-32 bg-white overflow-hidden">
-                    <div className="container mx-auto px-6">
-                        <div className="relative bg-[#18448F] rounded-[3.5rem] p-12 md:p-24 overflow-hidden text-center space-y-10 group">
-                            <div className="absolute top-0 left-0 w-96 h-96 bg-white/5 rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl group-hover:scale-110 transition-transform duration-[5s]" />
-                            <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-400/10 rounded-full translate-x-1/2 translate-y-1/2 blur-3xl group-hover:scale-110 transition-transform duration-[5s]" />
-
-                            <div className="relative z-10 space-y-6 max-w-3xl mx-auto">
-                                <h2 className="text-4xl md:text-7xl font-bold text-white tracking-tighter leading-none uppercase">
-                                    Offrez-vous le <br /><span className="text-blue-300 italic font-light lowercase">luxe d'une eau saine.</span>
-                                </h2>
-                                <p className="text-blue-100/70 text-lg md:text-xl font-light">
-                                    Une analyse d'eau gratuite à domicile pour identifier les contaminants et choisir la solution idéale. Sans engagement.
-                                </p>
-                            </div>
-
-                            <div className="relative z-10 flex flex-col md:flex-row items-center justify-center gap-8 pt-4">
-                                <ProMaxButton variant="white" className="px-16 h-20 text-[12px]" onClick={() => navigate("/consultation")}>
-                                    PLANIFIER MON ANALYSE GRATUITE
-                                </ProMaxButton>
-                                <div className="flex flex-col items-start gap-1">
-                                    <span className="text-[10px] font-black text-blue-300 uppercase tracking-widest">Conseiller expert direct</span>
-                                    <span className="text-2xl font-bold text-white">1-855-264-9328</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                {/* 6. WATER DIAGNOSIS */}
+                <WaterDiagnosis />
             </main>
 
             <Footer />
