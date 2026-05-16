@@ -22,6 +22,8 @@ interface HeroProps {
   className?: string;
   imagePosition?: string;
   liveStatus?: boolean;
+  customCTA?: React.ReactNode;
+  homeVariant?: boolean;
 }
 
 const Hero = ({
@@ -40,10 +42,12 @@ const Hero = ({
   gradualOpacity75 = true,
   className,
   imagePosition = "object-right",
-  liveStatus = false
+  liveStatus = false,
+  customCTA,
+  homeVariant = false,
 }: HeroProps) => {
   return (
-    <section className={cn("relative lg:h-[800px] flex flex-col overflow-hidden bg-white", className)}>
+    <section className={cn("relative min-h-[90vh] flex flex-col justify-center overflow-hidden bg-white", className)}>
       {showBreadcrumbs && (
         <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none hidden lg:block">
           <div className="container mx-auto px-4 lg:px-6 pointer-events-auto">
@@ -57,18 +61,19 @@ const Hero = ({
         <div className={cn(
           "absolute inset-0 z-10 transition-opacity duration-1000",
           gradualOpacity75 
-            ? "bg-gradient-to-b from-transparent to-white lg:bg-gradient-to-r lg:from-[#f0f9ff] lg:via-[#f0f9ff]/40 lg:to-transparent lg:35%" 
-            : "bg-gradient-to-b from-transparent to-white lg:bg-gradient-to-r lg:from-[#f0f9ff] lg:via-[#f0f9ff]/80 lg:to-transparent"
+            ? "bg-gradient-to-b from-transparent to-white lg:bg-gradient-to-r lg:from-white lg:via-white/40 lg:to-transparent" 
+            : "bg-gradient-to-b from-transparent to-white lg:bg-gradient-to-r lg:from-white lg:via-white/80 lg:to-transparent"
         )} />
+        <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent lg:hidden" />
         <img
           src={image || heroImage}
           alt={imageAlt}
-          className={cn("w-full h-full object-cover", imagePosition)}
+          className={cn("w-full h-full object-cover opacity-90", imagePosition)}
         />
       </div>
 
       {/* 2. Content Section */}
-      <div className="container relative z-10 mx-auto px-4 lg:h-full flex flex-col items-start justify-center pt-16 pb-24 lg:pt-0 lg:pb-0">
+      <div className="container relative z-10 mx-auto px-4 lg:px-12 lg:h-full flex flex-col items-start justify-center pt-24 pb-24 lg:pt-0 lg:pb-0">
         <div className="max-w-3xl space-y-8 text-left">
           <div className="space-y-6">
             {badge && (
@@ -91,10 +96,11 @@ const Hero = ({
             )}
             <h1 
               className={cn(
-                "text-[32px] md:text-[46px] lg:text-[50px] leading-[1.1] mb-6 animate-in fade-in slide-in-from-left duration-1000",
-                singleLineTitle ? "max-w-4xl" : "max-w-xl"
+                "mb-6 animate-in fade-in slide-in-from-left duration-1000",
+                homeVariant ? "tracking-tighter" : (singleLineTitle ? "max-w-4xl" : "max-w-xl"),
+                !homeVariant && "text-[32px] md:text-[46px] lg:text-[50px] leading-[1.1]"
               )}
-              style={{
+              style={homeVariant ? { fontFamily: 'ui-sans-serif, system-ui, sans-serif', fontSize: '50px', lineHeight: '55px' } : {
                 fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
                 fontStyle: 'normal'
               }}
@@ -104,51 +110,44 @@ const Hero = ({
             </h1>
             
             <p 
-              className="max-w-xl animate-in fade-in slide-in-from-left duration-1000 delay-100 text-justify lg:text-left"
-              style={{
-                fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                fontWeight: 300,
-                color: 'rgb(71, 85, 105)',
-                fontSize: 'var(--p-font-size, 18px)',
-                lineHeight: '1.5',
-                fontStyle: 'normal'
-              }}
+              className={cn(
+                "animate-in fade-in slide-in-from-left duration-1000 delay-100 text-justify lg:text-left",
+                homeVariant ? "max-w-xl text-lg md:text-xl font-light text-slate-600 leading-relaxed" : "max-w-xl text-slate-500 text-[15px] md:text-lg leading-relaxed"
+              )}
             >
-              <style dangerouslySetInnerHTML={{ __html: `
-                @media (min-width: 768px) {
-                  :root { --p-font-size: 20px; }
-                }
-                @media (max-width: 767px) {
-                  :root { --p-font-size: 18px; }
-                }
-              `}} />
               {subtitle}
             </p>
 
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-8 pt-6 animate-in fade-in slide-in-from-left duration-1000 delay-200 w-full sm:w-auto">
-              <ProMaxButton 
-                asChild 
-                className="w-full sm:w-fit"
-              >
-                <a href={ctaLink} className="inline-flex items-center justify-center gap-2">
-                  {ctaText}
-                  <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-2" />
-                </a>
-              </ProMaxButton>
-              
-              {showPhone && (
-                <ProMaxButton
-                  variant="white"
-                  asChild
+            {customCTA ? (
+              <div className="pt-4">
+                {customCTA}
+              </div>
+            ) : (
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-8 pt-6 animate-in fade-in slide-in-from-left duration-1000 delay-200 w-full sm:w-auto">
+                <ProMaxButton 
+                  asChild 
                   className="w-full sm:w-fit"
                 >
-                  <a href="tel:18552649328" className="flex items-center justify-center gap-2">
-                    <Phone className="w-5 h-5 flex-shrink-0" />
-                    1-855-264-9328
+                  <a href={ctaLink} className="inline-flex items-center justify-center gap-2">
+                    {ctaText}
+                    <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-2" />
                   </a>
                 </ProMaxButton>
-              )}
-            </div>
+                
+                {showPhone && (
+                  <ProMaxButton
+                    variant="white"
+                    asChild
+                    className="w-full sm:w-fit"
+                  >
+                    <a href="tel:18552649328" className="flex items-center justify-center gap-2">
+                      <Phone className="w-5 h-5 flex-shrink-0" />
+                      1-855-264-9328
+                    </a>
+                  </ProMaxButton>
+                )}
+              </div>
+            )}
           </div>
         </div>
       </div>

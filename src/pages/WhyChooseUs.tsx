@@ -25,6 +25,7 @@ import {
 import { useNavigate } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Hero from "@/components/Hero";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import { cn } from "@/lib/utils";
 import { ProMaxButton } from "@/components/ui/ProMaxButton";
@@ -73,69 +74,16 @@ const WhyChooseUs = () => {
             <Header />
 
             <main>
-                {/* 1. CINEMATIC HERO SECTION */}
-                <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-slate-900">
-                    <div className="absolute inset-0 z-0">
-                        <img
-                            src={heroImg}
-                            alt="Expertise Bricareau"
-                            className="w-full h-full object-cover opacity-30 mix-blend-luminosity scale-105"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/80 to-transparent" />
-                        <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent" />
-                        
-                        {/* Abstract light effects */}
-                        <div className="absolute top-1/4 -right-1/4 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[120px] animate-pulse" />
-                        <div className="absolute bottom-1/4 -left-1/4 w-[500px] h-[500px] bg-blue-400/5 rounded-full blur-[120px] animate-pulse delay-700" />
-                    </div>
+                {/* 1. HERO SECTION */}
+                <Hero 
+                    image={heroImg}
+                    highlightedTitle="Plus qu'une filtration,"
+                    mainTitle="Une renaissance hydrique."
+                    subtitle="Bricareau redéfinit la relation entre l'homme et l'eau. Depuis plus de deux décennies, nous fusionnons ingénierie de pointe et vision holistique pour transformer chaque goutte en une source de vitalité pure."
+                    showPhone={true}
+                    showBreadcrumbs={false}
+                />
 
-                    <div className="container mx-auto px-6 relative z-10">
-                        <div className="max-w-5xl space-y-12">
-                            <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 backdrop-blur-md animate-in fade-in slide-in-from-top duration-700">
-                                <Award className="w-4 h-4 text-blue-400" />
-                                <span className="text-[10px] font-black text-blue-400 uppercase tracking-[0.3em]">Standard d'Excellence Canadien</span>
-                            </div>
-                            
-                            <h1 className="text-4xl md:text-7xl lg:text-[84px] leading-[1] tracking-tight animate-in fade-in slide-in-from-left duration-1000">
-                                <span className="italic font-light text-white block opacity-80">Plus qu'une filtration,</span>
-                                <span className="font-bold text-white block uppercase tracking-tighter">Une renaissance hydrique.</span>
-                            </h1>
-                            
-                            <p className="text-lg md:text-2xl text-slate-300 font-light max-w-3xl leading-relaxed animate-in fade-in slide-in-from-left duration-1000 delay-200">
-                                Bricareau redéfinit la relation entre l'homme et l'eau. Depuis plus de deux décennies, nous fusionnons ingénierie de pointe et vision holistique pour transformer chaque goutte en une source de vitalité pure.
-                            </p>
-
-                            <div className="flex flex-col sm:flex-row gap-8 pt-8 animate-in fade-in slide-in-from-bottom duration-1000 delay-300">
-                                <ProMaxButton 
-                                    variant="primary" 
-                                    className="px-16 h-20 text-[12px]"
-                                    onClick={() => navigate("/contact")}
-                                >
-                                    COMMENCER L'EXPÉRIENCE
-                                </ProMaxButton>
-                                <button 
-                                    className="flex items-center gap-6 text-white hover:text-blue-400 transition-all group"
-                                    onClick={() => document.getElementById('manifeste')?.scrollIntoView({ behavior: 'smooth' })}
-                                >
-                                    <div className="w-16 h-16 rounded-full border border-white/10 flex items-center justify-center group-hover:border-blue-500/50 group-hover:bg-white/5 transition-all">
-                                        <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
-                                    </div>
-                                    <div className="text-left">
-                                        <div className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-500">Découvrir</div>
-                                        <div className="text-sm font-bold uppercase tracking-widest">Notre manifeste</div>
-                                    </div>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="absolute bottom-12 right-12 hidden lg:block opacity-30">
-                        <div className="flex items-center gap-4 text-slate-500">
-                            <span className="text-[10px] font-black uppercase tracking-widest rotate-90 origin-right translate-y-12">DEPUIS 2004</span>
-                            <div className="w-[1px] h-24 bg-white/20" />
-                        </div>
-                    </div>
-                </section>
 
                 {/* 2. THE MANIFESTO (Philosophy) */}
                 <section id="manifeste" className="py-32 bg-white relative">

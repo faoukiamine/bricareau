@@ -15,6 +15,7 @@ import { Button } from "@/components/ui/button";
 import { useNavigate, NavLink } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Hero from "@/components/Hero";
 import { cn } from "@/lib/utils";
 import { allTestimonials } from "@/data/testimonials";
 
@@ -96,8 +97,8 @@ const Home1 = () => {
 
     const sectors = [
         { title: "Résidentiel", image: residentielImg, href: "/residentiel" },
-        { title: "Hôtellerie et restauration", image: hotellerieImg, href: "/commercial-industriel" },
-        { title: "Bureau", image: bureauImg, href: "/commercial-industriel" },
+        { title: "Bureau", image: bureauImg, href: "/bureau" },
+        { title: "Hôtellerie et restauration", image: hotellerieImg, href: "/hotellerie-restauration" },
         { title: "Commercial et industriel", image: commercialImg, href: "/commercial-industriel" }
     ];
 
@@ -138,60 +139,39 @@ const Home1 = () => {
         <div className="min-h-screen bg-white">
             <Header />
 
-            {/* Hero Section */}
-            <section className="relative lg:h-[800px] flex flex-col overflow-hidden bg-white">
-                {/* 1. Image Section - Overlay on Desktop */}
-                <div className="relative lg:absolute lg:inset-0 w-full aspect-[4/3] sm:aspect-video lg:aspect-auto lg:h-full z-0 overflow-hidden">
-                    <div className="absolute inset-0 z-10 bg-gradient-to-b from-transparent to-white lg:bg-gradient-to-r lg:from-white lg:via-white/70 lg:to-transparent" />
-                    <img
-                        src={heroImg}
-                        alt="Bricareau Water Specialist"
-                        className="w-full h-full object-cover object-center"
-                    />
-                </div>
-
-                {/* 2. Content Section */}
-                <div className="container relative z-10 mx-auto px-4 lg:px-12 lg:h-full flex flex-col items-start justify-center pt-20 pb-24 lg:pt-0 lg:pb-0">
-                    <div className="max-w-3xl space-y-8 text-left">
-                        <div className="space-y-6">
-                            <h1 className="mb-6 animate-in fade-in slide-in-from-left duration-1000 tracking-tighter"
-                                style={{ fontFamily: 'ui-sans-serif, system-ui, sans-serif', fontSize: '50px', lineHeight: '55px' }}>
-                                <span className="italic font-light text-[#18448F] block">Bricareau,</span>
-                                <span className="font-bold text-[#18448F] block">votre partenaire d'excellence.</span>
-                            </h1>
-                            
-                            <p className="max-w-xl animate-in fade-in slide-in-from-left duration-1000 delay-100 text-left text-slate-600 text-lg md:text-xl font-light leading-relaxed">
-                                Plus de 20 ans d'engagement et 20 000 foyers protégés au Québec. Nous sommes votre allié stratégique pour une gestion de l'eau intelligente, durable et sans compromis.
-                            </p>
-
-                            <div className="flex flex-col sm:flex-row items-start gap-8 pt-4">
-                                <div className="relative inline-block w-full sm:w-auto group">
-                                    <div className="absolute inset-0 border border-[#18448F] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
-                                    <Button
-                                        className="relative w-full sm:w-auto bg-[#18448F] hover:bg-white hover:text-[#18448F] text-white rounded-[2rem] h-[3.25rem] px-8 font-black uppercase tracking-[0.1em] text-[11px] transition-all border-none"
-                                        onClick={() => navigate("/consultation")}
-                                    >
-                                        Planifiez une consultation gratuite
-                                    </Button>
-                                </div>
-                                
-                                <div className="relative inline-block w-full sm:w-auto group">
-                                    <div className="absolute inset-0 border border-[#18448F] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
-                                    <Button
-                                        asChild
-                                        className="relative w-full sm:w-auto bg-[#18448F] hover:bg-white hover:text-[#18448F] text-white rounded-[2rem] h-[3.25rem] px-8 font-black uppercase tracking-[0.1em] text-[11px] transition-all border-none"
-                                    >
-                                        <a href="tel:18552649328" className="flex items-center justify-center gap-2">
-                                            <Phone className="w-5 h-5 flex-shrink-0" />
-                                            1-855-264-9328
-                                        </a>
-                                    </Button>
-                                </div>
-                            </div>
+            <Hero 
+                homeVariant
+                image={heroImg}
+                highlightedTitle="Bricareau,"
+                mainTitle="votre partenaire d'excellence."
+                subtitle="Plus de 20 ans d'engagement et 20 000 foyers protégés au Québec. Nous sommes votre allié stratégique pour une gestion de l'eau intelligente, durable et sans compromis."
+                customCTA={
+                    <div className="flex flex-col sm:flex-row items-start gap-8">
+                        <div className="relative inline-block w-full sm:w-auto group">
+                            <div className="absolute inset-0 border border-[#18448F] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                            <Button
+                                className="relative w-full sm:w-auto bg-[#18448F] hover:bg-white hover:text-[#18448F] text-white rounded-[2rem] h-[3.25rem] px-8 font-black uppercase tracking-[0.1em] text-[11px] transition-all border-none"
+                                onClick={() => navigate("/consultation")}
+                            >
+                                Planifiez une consultation gratuite
+                            </Button>
+                        </div>
+                        
+                        <div className="relative inline-block w-full sm:w-auto group">
+                            <div className="absolute inset-0 border border-[#18448F] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                            <Button
+                                asChild
+                                className="relative w-full sm:w-auto bg-[#18448F] hover:bg-white hover:text-[#18448F] text-white rounded-[2rem] h-[3.25rem] px-8 font-black uppercase tracking-[0.1em] text-[11px] transition-all border-none"
+                            >
+                                <a href="tel:18552649328" className="flex items-center justify-center gap-2">
+                                    <Phone className="w-5 h-5 flex-shrink-0" />
+                                    1-855-264-9328
+                                </a>
+                            </Button>
                         </div>
                     </div>
-                </div>
-            </section>
+                }
+            />
 
             {/* Partner Ribbon */}
             <section className="bg-[#18448F] py-10 overflow-hidden border-y border-[#18448F]/20">

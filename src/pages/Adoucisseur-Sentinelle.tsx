@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Hero from "@/components/Hero";
+import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 import { ProMaxButton } from "@/components/ui/ProMaxButton";
 import { Button } from "@/components/ui/button";
 import { 
@@ -66,40 +68,22 @@ const AdoucisseurSentinelle = () => {
         <div className="min-h-screen bg-white font-sans text-slate-900 selection:bg-blue-100 selection:text-blue-900">
             <Header />
 
-            {/* 1. HERO & SPECS SECTION - MERGED */}
-            <section className="relative flex flex-col justify-center overflow-hidden bg-slate-50 py-24">
-                {/* Background Decor */}
-                <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-blue-50/50 to-transparent pointer-events-none" />
-                <div className="absolute -top-24 -right-24 w-[600px] h-[600px] bg-blue-100/30 rounded-full blur-[120px] pointer-events-none" />
+            {/* 1. HERO SECTION */}
+            <Hero 
+                image={heroBg}
+                highlightedTitle="L'Excellence de la,"
+                mainTitle="Douceur Intelligente."
+                subtitle="Une eau douce de qualité supérieure que vous ressentez à chaque douche et dans la douceur de votre serviette. La Série Sentinelle est votre bouclier technologique contre le calcaire."
+                showPhone={true}
+                showBreadcrumbs={true}
+            />
 
-                <div className="container mx-auto px-6 relative z-10">
+            {/* Product Feature Overlay (Optional/Move below) */}
+            <section className="py-12 bg-white relative">
+                <div className="container mx-auto px-6">
                     <div className="grid lg:grid-cols-2 gap-16 items-center">
-                        {/* Text Content */}
-                        <div className="space-y-8 max-w-2xl">
-
-                            
-                            <h1 className="text-[32px] md:text-[46px] lg:text-[50px] font-light leading-[1.1] tracking-tight text-slate-900">
-                                L'Excellence de la <br />
-                                <span className="font-bold italic font-serif text-blue-600">Douceur Intelligente.</span>
-                            </h1>
-
-                            <p className="text-xl text-slate-600 font-light leading-relaxed max-w-lg">
-                                Une eau douce de qualité supérieure que vous ressentez à chaque douche et dans la douceur de votre serviette. La Série Sentinelle est votre bouclier technologique contre le calcaire.
-                            </p>
-
-                            <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                                <ProMaxButton asChild variant="primary">
-                                    <a href="#decouvrir">
-                                        Voir les détails
-                                        <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                                    </a>
-                                </ProMaxButton>
-                                <ProMaxButton asChild variant="outline">
-                                    <a href="/consultation">Analyse gratuite</a>
-                                </ProMaxButton>
-                            </div>
-
-                            <div className="pt-10 flex items-center gap-6">
+                        <div className="space-y-6">
+                            <div className="pt-4 flex items-center gap-6">
                                 <ExpertAvatars />
                                 <div className="text-sm text-slate-500 font-medium">
                                     Recommandé par nos clients pour sa <br />
@@ -107,26 +91,24 @@ const AdoucisseurSentinelle = () => {
                                 </div>
                             </div>
                         </div>
-
-                        {/* Product Image */}
-                        <div className="relative group perspective-1000">
-                            <div className="absolute inset-0 bg-blue-400/10 blur-[100px] rounded-full group-hover:bg-blue-400/20 transition-all duration-1000" />
+                        <div className="relative group">
+                            <div className="absolute inset-0 bg-blue-400/10 blur-[100px] rounded-full" />
                             <motion.div 
-                                initial={{ opacity: 0, y: 50 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 1, ease: "easeOut" }}
+                                initial={{ opacity: 0, scale: 0.95 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                viewport={{ once: true }}
                                 className="relative z-10"
                             >
                                 <img 
                                     src={sentinelImg} 
-                                    alt="Adoucisseur Série Sentinelle - Design Premium Bricareau" 
-                                    className="w-full max-w-[500px] mx-auto filter drop-shadow-[0_50px_50px_rgba(0,0,0,0.1)] group-hover:scale-105 transition-transform duration-700"
+                                    alt="Adoucisseur Série Sentinelle" 
+                                    className="w-full max-w-[400px] mx-auto filter drop-shadow-2xl"
                                 />
-                                
-
                             </motion.div>
+                        </div>
                     </div>
-                    </div>
+                </div>
+            </section>
                 
                 {/* Integrated Specs Console */}
                     <div className="mt-24 pt-24 border-t border-slate-200/60">

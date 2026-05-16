@@ -12,8 +12,8 @@ interface ExpertTrustSectionProps {
 }
 
 const ExpertTrustSection = ({ 
-    title = "La science de la pureté, ", 
-    highlight = "pour une sérénité totale.",
+    title = "Votre eau a besoin d'un expert, ", 
+    highlight = "pas un doute. ",
     description = "Ne laissez pas l'incertitude couler de votre robinet. Chez Bricareau, nous transformons chaque analyse en une certitude scientifique pour la santé de votre foyer.",
     buttonText = "Réservez votre analyse d'eau",
     buttonLink = "/tests-eau#water-test",

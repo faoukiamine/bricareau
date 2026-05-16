@@ -8,7 +8,7 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import ExpertAvatars from "@/components/ExpertAvatars";
 import { ProMaxButton } from "@/components/ui/ProMaxButton";
 import { Button } from "@/components/ui/button";
-import heroBath from "@/assets/young-nude-woman-taking-relaxing-foamy-bath.jpeg";
+import heroImg from "@/assets/640320.jpg";
 import kitchenImg from "@/assets/9194.jpg";
 import untitledImg from "@/assets/2151469364.jpg";
 import mobileSoftenerImg from "@/assets/9-optimized.webp";
@@ -29,6 +29,9 @@ import savingsImg from "@/assets/savings.svg";
 import waterTestingImg from "@/assets/2147800429.jpg";
 import process1 from "@/assets/2148563485.jpg";
 import labTestImg from "@/assets/test-laboratoire-diligence-inspection-750x500.jpg";
+import equipmentProImg from "@/assets/2151949237.jpg";
+import tableArtImg from "@/assets/2150901946.jpg";
+import profitabilityImg from "@/assets/2077.jpg";
 import waterTestingBg from "@/assets/undersink_filtration_header.jpg";
 import adoucisseursImg from "@/assets/Adoucisseurs d'eau.webp";
 import specializedFiltersImg from "@/assets/Filtres d'eau spécialisés.webp";
@@ -36,8 +39,7 @@ import drinkingWaterImg from "@/assets/Solutions d'eau potable.webp";
 import undersinkSystemImg from "@/assets/Système+de+filtration+Serene+Lite.webp";
 import hardWaterSignsImg from "@/assets/Signs+of+hard+water+in+your+home-640w.webp";
 import hardWaterImg from "@/assets/58279.jpg";
-import applianceDamageImg from "@/assets/beautiful-shot-modern-house-kitchen.jpg";
-import benefitsVisualImg from "@/assets/2150084031.jpg";
+import benefitsVisualImg from "@/assets/2148003850.jpg";
 import { conditionneursImg } from "./Blog pages/Adoucisseur avec sel ou sans sel";
 import { softenerImg as residentialWaterSoftenerImg } from "./Blog pages/Comment régler la dureté de votre adoucisseur ";
 import { adoucisseurImg as adoucisseurFosseImg } from "./Blog pages/Adoucisseur-deau- et-fosse-septique--Mythes-et-réalités";
@@ -57,6 +59,8 @@ import diagnosticStepImg from "@/assets/step-diagnostic.png";
 import customStepImg from "@/assets/step-custom.png";
 import installationStepImg from "@/assets/step-installation.png";
 import serenityStepImg from "@/assets/step-serenity.png";
+import energyImg from "@/assets/detartrage-chauffe-eau-electrique.jpg";
+import coffeeImg from "@/assets/jura-x10-dark-inox.jpg";
 
 import {
     ArrowRight,
@@ -69,7 +73,8 @@ import {
     HandCoins,
     Phone,
     CheckCircle,
-    CheckCircle2
+    CheckCircle2,
+    Coffee
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import React, { useEffect } from "react";
@@ -251,9 +256,9 @@ const AdoucisseurEauCommercial = () => {
             <Header />
             <main>
                 <Hero 
-                    image={heroBath}
+                    image={heroImg}
                     highlightedTitle="L'excellence de l'eau douce,"
-                    mainTitle="le prestige de votre établissement."
+                    mainTitle="la signature de prestige des Hôtels & Restaurants."
                     subtitle="Sublimez votre service, protégez vos équipements de haute précision et offrez à vos clients une expérience sensorielle inégalée. L'expertise anticalcaire dédiée aux standards de l'hôtellerie d'exception."
                     showPhone={true}
                     showBreadcrumbs={true}
@@ -314,6 +319,24 @@ const AdoucisseurEauCommercial = () => {
                                     badge: "Optimisation",
                                     img: hardWaterImg,
                                     color: "bg-amber-500"
+                                },
+                                { 
+                                    title: "Facture Énergétique", 
+                                    impact: "+15% de Coûts", 
+                                    desc: "Le tartre agit comme un isolant thermique sur vos résistances. Une fine couche suffit pour faire grimper vos factures de gaz et d'électricité.",
+                                    icon: <Zap className="w-6 h-6 text-yellow-500" />,
+                                    badge: "Efficacité",
+                                    img: energyImg,
+                                    color: "bg-yellow-500"
+                                },
+                                { 
+                                    title: "Service Barista", 
+                                    impact: "Arômes Altérés", 
+                                    desc: "Le café est composé à 98% d'eau. Une eau dure dénature les arômes précieux et obstrue les composants internes de vos machines expresso.",
+                                    icon: <Coffee className="w-6 h-6 text-orange-700" />,
+                                    badge: "Art Culinaire",
+                                    img: coffeeImg,
+                                    color: "bg-orange-700"
                                 }
                             ].map((item, idx) => (
                                 <div 
@@ -405,9 +428,9 @@ const AdoucisseurEauCommercial = () => {
                                             onValueChange={(value) => {
                                                 const mapping: Record<string, string> = {
                                                     "item-0": benefitsVisualImg,
-                                                    "item-1": applianceDamageImg,
-                                                    "item-2": laundryImg,
-                                                    "item-3": kitchenImg
+                                                    "item-1": equipmentProImg,
+                                                    "item-2": tableArtImg,
+                                                    "item-3": profitabilityImg
                                                 };
                                                 if (value && mapping[value]) {
                                                     setActiveAdvantageImage(mapping[value]);
@@ -497,8 +520,8 @@ const AdoucisseurEauCommercial = () => {
                                 GUIDE D'EXPERTISE COMMERCIALE
                             </span>
                             <h2 className="mb-8 heading-pro-max text-center">
-                                <span className="italic font-light text-[#18448F] block">L'expertise anticalcaire</span>
-                                <span className="font-bold text-[#18448F] block">adaptée à votre établissement.</span>
+                                <span className="italic font-light text-[#18448F] block text-center">L'expertise anticalcaire dédiée</span>
+                                <span className="font-bold text-[#18448F] block text-center">aux Hôtels & Restaurants.</span>
                             </h2>
                             <p className="body-pro-max text-center max-w-4xl mx-auto px-4">
                                 Nos adoucisseurs d'eau commerciaux sont spécifiquement calibrés pour neutraliser la dureté tout en préservant l'intégrité de vos installations professionnelles. Une synergie parfaite entre <span className="text-blue-600 font-bold">économie de ressources</span> et <span className="text-blue-600 font-bold">performance opérationnelle</span>.
@@ -581,11 +604,11 @@ const AdoucisseurEauCommercial = () => {
                                 VOTRE EXPÉRIENCE CLIENT
                             </span>
                             <h2 className="mb-8 heading-pro-max text-center">
-                                <span className="italic font-light text-[#18448F] block">Une transition fluide vers</span>
-                                <span className="font-bold text-[#18448F] block">une eau douce d'exception.</span>
+                                <span className="italic font-light text-[#18448F] block">Une intégration invisible pour</span>
+                                <span className="font-bold text-[#18448F] block">une excellence d'eau sans compromis.</span>
                             </h2>
                             <p className="body-pro-max text-center max-w-3xl mx-auto">
-                                Le Parcours Bricareau : une expertise d'élite, depuis votre première analyse jusqu'à la douceur éternelle de votre eau.
+                                Le Parcours Bricareau : une ingénierie de précision, depuis le diagnostic initial jusqu'à l'optimisation continue de vos performances opérationnelles.
                             </p>
                         </div>
 
@@ -596,29 +619,29 @@ const AdoucisseurEauCommercial = () => {
                             {[
                                 { 
                                     step: "01",
-                                    title: "Diagnostic Précis", 
-                                    desc: "Analyse de la dureté et du chlore de votre eau.",
+                                    title: "Audit de Flux & Pureté", 
+                                    desc: "Analyse rigoureuse de vos débits et de la composition chimique de votre eau.",
                                     image: diagnosticStepImg,
                                     color: "border-blue-100"
                                 },
                                 { 
                                     step: "02",
-                                    title: "Solutions sur-mesure", 
-                                    desc: "Nous calibrons votre futur adoucisseur d'eau selon vos habitudes de consommation réelles.",
+                                    title: "Ingénierie sur-mesure", 
+                                    desc: "Nous calibrons vos systèmes selon vos pics d'activité et vos besoins en équipements critiques.",
                                     image: customStepImg,
                                     color: "border-indigo-100"
                                 },
                                 { 
                                     step: "03",
-                                    title: "Installation d'Élite", 
-                                    desc: "Mise en place rigoureuse par nos plombiers certifiés. Propreté et excellence garanties.",
+                                    title: "Déploiement Stratégique", 
+                                    desc: "Mise en service certifiée, planifiée pour minimiser toute interruption de vos opérations.",
                                     image: installationStepImg,
                                     color: "border-cyan-100"
                                 },
                                 { 
                                     step: "04",
-                                    title: "Sérénité Totale", 
-                                    desc: "Bénéficiez d'une eau parfaite 24h/24 et d'un suivi proactif de nos experts.",
+                                    title: "Continuité Opérationnelle", 
+                                    desc: "Une eau parfaite garantie 24/7 avec un support technique prioritaire pour votre établissement.",
                                     image: serenityStepImg,
                                     color: "border-emerald-100"
                                 }
@@ -674,7 +697,7 @@ const AdoucisseurEauCommercial = () => {
                             </span>
                             <h2 className="heading-pro-max">
                                 <span className="italic font-light text-[#18448F] block text-center">Identifiez la performance</span>
-                                <span className="font-bold text-[#18448F] block text-center">optimale pour votre foyer.</span>
+                                <span className="font-bold text-[#18448F] block text-center">optimale pour votre établissement.</span>
                             </h2>
                         </div>
 

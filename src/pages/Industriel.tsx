@@ -26,6 +26,7 @@ import {
 import { useNavigate } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Hero from "@/components/Hero";
 import { cn } from "@/lib/utils";
 import { ProMaxButton } from "@/components/ui/ProMaxButton";
 import TestimonialsSection from "@/components/TestimonialsSection";
@@ -33,7 +34,7 @@ import ExpertTrustSection from "@/components/ExpertTrustSection";
 import WaterDiagnosis from "@/components/water_diagnosis";
 
 // Assets
-import heroImg from "@/assets/1451506551.JPG";
+import heroImg from "@/assets/Filtres d'eau industriels.jpg";
 import commercialFiltrationImg from "@/assets/Commercial-Water-Softener.webp";
 import industrialSoftenerImg from "@/assets/Industrial Water Softeners.png";
 import dosinggroupImg from "@/assets/Pulsafeeder dosing group.jpg";
@@ -114,7 +115,7 @@ const Industriel = () => {
                 { title: "Protection de tuyauterie", desc: "Évitez l'érosion et l'encrassement de vos réseaux de distribution à long terme." }
             ],
             image: commercialFiltrationImg,
-            link: "/filtres-deau",
+            link: "/filtration-industrielle",
             tag: "INFRASTRUCTURE",
             largeNumber: "01",
             floatingCard: { title: "Protection Réseau", desc: "Élimination totale des sédiments.", icon: ShieldCheck },
@@ -137,7 +138,7 @@ const Industriel = () => {
                 { title: "Efficacité énergétique", desc: "Optimisez vos transferts thermiques et réduisez vos coûts de chauffage industriels." }
             ],
             image: industrialSoftenerImg,
-            link: "/adoucisseur-eau-residentiel",
+            link: "/adoucisseurs-eau-industriel",
             tag: "THERMIQUE",
             largeNumber: "02",
             floatingCard: { title: "Efficacité Énergie", desc: "Zéro tartre, réduction des coûts opérationnels.", icon: Zap },
@@ -183,7 +184,7 @@ const Industriel = () => {
                 { title: "Capacité sur mesure", desc: "Systèmes dimensionnés précisément selon vos besoins volumétriques quotidiens." }
             ],
             image: IndustrialROSystemsImg,
-            link: "/systeme-de-filtration-deau-potable",
+            link: "/osmose-inverse-industrielle",
             tag: "PURIFICATION",
             largeNumber: "04",
             floatingCard: { title: "Eau Process", desc: "Le standard de pureté pour vos lignes de production.", icon: ShieldCheck },
@@ -229,7 +230,7 @@ const Industriel = () => {
                 { title: "Action instantanée", desc: "Traitement en temps réel au passage de l'eau pour une sécurité de ligne constante." }
             ],
             image: uvSystemImg,
-            link: "/Systemes-de-desinfection-UV",
+            link: "/desinfection-uv-industrielle",
             tag: "SÉCURITÉ",
             largeNumber: "06",
             floatingCard: { title: "Sécurité Bio", desc: "Neutralisation à 99.99% des agents pathogènes.", icon: ShieldCheck },
@@ -254,53 +255,16 @@ const Industriel = () => {
 
             <main>
                 {/* 1. CINEMATIC HERO */}
-                <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-slate-900">
-                    <div className="absolute inset-0 z-0">
-                        <img src={heroImg} alt="Industrial Engineering" className="w-full h-full object-cover opacity-40 mix-blend-luminosity" />
-                        <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/80 to-transparent" />
-                        <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent" />
-                    </div>
-
-                    <div className="container mx-auto px-6 relative z-10">
-                        <div className="max-w-4xl space-y-12">
-                            <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 backdrop-blur-md">
-                                <Factory className="w-4 h-4 text-blue-400" />
-                                <span className="text-[10px] font-black text-blue-400 uppercase tracking-[0.3em]">Ingénierie Industrielle Bricareau</span>
-                            </div>
-                            
-                            <h1 className="text-4xl md:text-6xl lg:text-[72px] leading-[1.1] tracking-tight animate-in fade-in slide-in-from-left duration-1000">
-                                <span className="italic font-light text-white">La puissance, </span>
-                                <span className="font-bold text-white">de la précision industrielle.</span>
-                            </h1>
-                            
-                            <p className="text-lg md:text-2xl text-slate-400 font-light max-w-2xl leading-relaxed">
-                                Optimisez vos processus, protégez vos infrastructures et garantissez la continuité de vos opérations avec nos solutions d'ingénierie de l'eau.
-                            </p>
-
-                            <div className="flex flex-col sm:flex-row gap-6 pt-8">
-                                <ProMaxButton variant="primary" className="px-12 h-16 text-[11px]" onClick={() => navigate("/consultation")}>
-                                    CONSULTATION TECHNIQUE
-                                </ProMaxButton>
-                                <a href="tel:18552649328" className="flex items-center gap-4 group">
-                                    <div className="w-14 h-14 rounded-full bg-white/5 flex items-center justify-center border border-white/10 group-hover:border-blue-500/50 group-hover:bg-white/10 transition-all">
-                                        <Phone className="w-5 h-5 text-blue-400" />
-                                    </div>
-                                    <div className="text-left">
-                                        <div className="text-[10px] font-black text-slate-500 uppercase tracking-widest">Division Commerciale</div>
-                                        <div className="text-xl font-bold tracking-tight text-white">1-855-264-9328</div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="absolute bottom-12 right-12 hidden lg:block">
-                        <div className="flex items-center gap-4 text-slate-500">
-                            <span className="text-[10px] font-black uppercase tracking-widest rotate-90 origin-right translate-y-12">SYSTÈMES HAUTE CAPACITÉ</span>
-                            <div className="w-[1px] h-24 bg-white/10" />
-                        </div>
-                    </div>
-                </section>
+                <Hero 
+                    image={heroImg}
+                    highlightedTitle="La puissance, "
+                    mainTitle="de la précision industrielle."
+                    subtitle="Optimisez vos processus, protégez vos infrastructures et garantissez la continuité de vos opérations avec nos solutions d'ingénierie de l'eau."
+                    ctaText="CONSULTATION TECHNIQUE"
+                    ctaLink="/consultation"
+                    showPhone={true}
+                    badge="Ingénierie Industrielle Bricareau"
+                />
 
                 {/* SERVICE SECTIONS - PREMIUM LIQUID DESIGN */}
                 <section id="solutions" className="py-20 bg-white">

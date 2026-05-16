@@ -109,6 +109,16 @@ import Home1 from "./pages/Home1";
 import C from "./pages/C";
 import FiltreEauMachineCafe from "./pages/FiltreEauMachineCafe";
 import AdoucisseurEauCommercial from "./pages/AdoucisseurEauCommercial";
+import FiltrationDeauPotable from "./pages/FiltrationDeauPotable";
+import FontainesDeauModernes from "./pages/FontainesDeauModernes";
+import SolutionsEauPetillante from "./pages/SolutionsEauPetillante";
+import SystemesCentralises from "./pages/SystemesCentralises";
+import SolutionsBrasseries from "./pages/SolutionsBrasseries";
+import FiltrationIndustrielle from "./pages/FiltrationIndustrielle";
+import AdoucisseurIndustriel from "./pages/AdoucisseurIndustriel";
+import OsmoseInverseIndustrielle from "./pages/OsmoseInverseIndustrielle";
+import DesinfectionUVIndustrielle from "./pages/DesinfectionUVIndustrielle";
+
 
 const queryClient = new QueryClient();
 
@@ -121,8 +131,8 @@ const App = () => (
         <ScrollToTop />
         <CookieConsent />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/home1" element={<Home1 />} />
+          <Route path="/" element={<Home1 />} />
+          <Route path="/v1" element={<Home />} />
           <Route path="/adoucisseurs-portables" element={<Services />} />
           <Route path="/residentiel" element={<ResidentialServices />} />
           <Route path="/hotellerie-restauration" element={<HotellerieRestauration />} />
@@ -146,6 +156,10 @@ const App = () => (
           <Route path="/systemes-de-desinfection-uv" element={<DesinfectionUV />} />
           <Route path="/filtre-eau-haute-efficacite" element={<FiltreEauHauteEfficacite />} />
           <Route path="/fontaines" element={<Fontaines />} />
+          <Route path="/fontaines-deau-modernes" element={<FontainesDeauModernes />} />
+          <Route path="/solutions-eau-petillante" element={<SolutionsEauPetillante />} />
+          <Route path="/systemes-centralises" element={<SystemesCentralises />} />
+          <Route path="/solutions-brasseries" element={<SolutionsBrasseries />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/categorie/:categoryId" element={<BlogCategory />} />
           <Route path="/hivernisation-comment-proteger-vos-filtres-du-gel" element={<HivernisationProtegerFiltresDuGel />} />
@@ -226,6 +240,12 @@ const App = () => (
           <Route path="/machines-a-cafe-entreprises" element={<MachinesACafeEntreprises />} />
           <Route path="/filtres-eau-machine-cafe" element={<FiltreEauMachineCafe />} />
           <Route path="/adoucisseurs-eau-commerciaux" element={<AdoucisseurEauCommercial />} />
+          <Route path="/filtration-industrielle" element={<FiltrationIndustrielle />} />
+          <Route path="/adoucisseurs-eau-industriel" element={<AdoucisseurIndustriel />} />
+          <Route path="/osmose-inverse-industrielle" element={<OsmoseInverseIndustrielle />} />
+          <Route path="/desinfection-uv-industrielle" element={<DesinfectionUVIndustrielle />} />
+          <Route path="/filtration-eau-potable" element={<FiltrationDeauPotable />} />
+
           <Route path="/search" element={<SearchPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -26,6 +26,7 @@ import {
 import { useNavigate } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Hero from "@/components/Hero";
 import { cn } from "@/lib/utils";
 import { ProMaxButton } from "@/components/ui/ProMaxButton";
 import TestimonialsSection from "@/components/TestimonialsSection";
@@ -107,29 +108,6 @@ const Bureau = () => {
 
     const programs = [
         {
-            title: "Filtration d'Eau Potable",
-            titlePart1: "Filtration ",
-            titlePart2: "d'Eau Potable",
-            navTitle: "Filtration Potable",
-            desc: "L'osmose inverse au bureau : une eau d'une pureté exceptionnelle pour vos employés, directement sous l'évier de la salle de pause.",
-            points: [
-                { title: "Pureté totale", desc: "Une eau d'une qualité exceptionnelle, débarrassée des micro-contaminants pour vos équipes." },
-                { title: "Élimination des goûts & odeurs", desc: "Supprimez le goût de chlore pour une hydratation plaisir tout au long de la journée." }
-            ],
-            image: filtrationImg,
-            link: "/systeme-de-filtration-deau-potable",
-            tag: "PURETÉ",
-            largeNumber: "01",
-            floatingCard: { title: "Bureau Pure", desc: "Eau osmosée d'une pureté exceptionnelle.", icon: ShieldCheck },
-            floatingCard2: { title: "Sécurité Pro", desc: "Élimination des contaminants pour vos équipes.", icon: healthSafeImg },
-            floatingCard3: { title: "Goût Parfait", desc: "Une eau sans chlore pour des boissons sublimées.", icon: verifiedImg },
-            floatingCard4: { title: "Économies ROI", desc: "Rentabilité immédiate face aux bouteilles.", icon: savingsImg },
-            bubbles: [
-                { icon: ShieldCheck, label: "Sécurité", value: "Haut", color: "text-blue-600" },
-                { icon: Zap, label: "Efficacité", value: "99%", color: "text-amber-400" }
-            ]
-        },
-        {
             title: "Fontaines d'Eau Modernes",
             titlePart1: "Fontaines ",
             titlePart2: "d'Eau Modernes",
@@ -140,9 +118,9 @@ const Bureau = () => {
                 { title: "Design épuré", desc: "Des fontaines esthétiques qui s'intègrent parfaitement dans vos espaces collaboratifs." }
             ],
             image: drinkWaterImg,
-            link: "/refroidisseurs-eau-entreprises",
+            link: "/fontaines-deau-modernes",
             tag: "BIEN-ÊTRE",
-            largeNumber: "02",
+            largeNumber: "01",
             floatingCard: { title: "Zéro Bouteille", desc: "Éliminez la logistique des bonbonnes.", icon: Leaf },
             floatingCard2: { title: "Hygiène Plus", desc: "Technologie sans contact pour une sécurité totale.", icon: healthSafeImg },
             floatingCard3: { title: "Design Office", desc: "Esthétique épurée pour vos espaces collaboratifs.", icon: verifiedImg },
@@ -163,9 +141,9 @@ const Bureau = () => {
                 { title: "Zéro déchet plastique", desc: "Une solution 100% durable qui valorise votre engagement RSE auprès de vos employés." }
             ],
             image: sparklingImg,
-            link: "/eau-petillante-entreprises",
+            link: "/solutions-eau-petillante",
             tag: "PREMIUM",
-            largeNumber: "03",
+            largeNumber: "02",
             floatingCard: { title: "Effervescence", desc: "De l'eau pétillante filtrée à la demande.", icon: GlassWater },
             floatingCard2: { title: "Engagement RSE", desc: "Valorisez votre image de marque durable.", icon: Leaf },
             floatingCard3: { title: "Productivité", desc: "Hydratation optimale pour la concentration.", icon: Zap },
@@ -186,9 +164,9 @@ const Bureau = () => {
                 { title: "Filtration haute performance", desc: "Une barrière robuste contre les impuretés pour l'ensemble de votre réseau d'eau." }
             ],
             image: centralSystemImg,
-            link: "/eau-petillante-entreprises",
+            link: "/systemes-centralises",
             tag: "INFRASTRUCTURE",
-            largeNumber: "04",
+            largeNumber: "03",
             floatingCard: { title: "Bâtiment Intelligent", desc: "Gestion centralisée de l'eau.", icon: Settings },
             floatingCard2: { title: "Protection Réseau", desc: "Sécurité pour toutes les installations.", icon: ShieldCheck },
             floatingCard3: { title: "Volume Illimité", desc: "Adapté aux grands besoins collectifs.", icon: Activity },
@@ -211,70 +189,68 @@ const Bureau = () => {
 
             <main>
                 {/* 1. CINEMATIC HERO */}
-                <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-white">
-                    <div className="absolute inset-0 z-0">
-                        <img src={heroImg} alt="Office Water Solutions" className="w-full h-full object-cover opacity-90" />
-                        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent" />
-                        <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent" />
+                <Hero 
+                    image={heroImg}
+                    highlightedTitle="L'eau pure, "
+                    mainTitle="moteur de productivité."
+                    subtitle="Optimisez le bien-être de vos équipes avec des solutions d'hydratation premium, écologiques et sans logistique encombrante."
+                    ctaText="CONSULTATION CORPORATIVE GRATUITE"
+                    ctaLink="/consultation"
+                    showPhone={true}
+                    badge="Solutions Bureaux & Corporatives"
+                />
+
+                {/* 2. IMMERSIVE INTRODUCTION */}
+                <section id="solutions" className="relative py-40 overflow-hidden bg-white">
+                    <div className="absolute inset-0 z-0 pointer-events-none opacity-[0.03]">
+                        <svg className="w-full h-full" viewBox="0 0 100 100">
+                            <pattern id="grid-office" width="10" height="10" patternUnits="userSpaceOnUse">
+                                <path d="M 10 0 L 0 0 0 10" fill="none" stroke="black" strokeWidth="0.5"/>
+                            </pattern>
+                            <rect width="100%" height="100%" fill="url(#grid-office)" />
+                        </svg>
                     </div>
 
                     <div className="container mx-auto px-6 relative z-10">
-                        <div className="max-w-4xl space-y-12">
-                            <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-blue-50 border border-blue-100">
-                                <Building2 className="w-4 h-4 text-blue-600" />
-                                <span className="text-[10px] font-black text-blue-600 uppercase tracking-[0.3em]">Solutions Bureaux & Corporatives</span>
-                            </div>
-                            
-                            <h1 className="text-4xl md:text-6xl lg:text-[72px] leading-[1.1] tracking-tight animate-in fade-in slide-in-from-left duration-1000">
-                                <span className="italic font-light text-[#18448F]">L'eau pure, </span>
-                                <span className="font-bold text-[#18448F]">moteur de productivité.</span>
-                            </h1>
-                            
-                            <p className="text-lg md:text-2xl text-slate-500 font-light max-w-2xl leading-relaxed">
-                                Optimisez le bien-être de vos équipes avec des solutions d'hydratation premium, écologiques et sans logistique encombrante.
-                            </p>
-
-                            <div className="flex flex-col sm:flex-row gap-6 pt-8">
-                                <ProMaxButton variant="primary" className="px-12 h-16 text-[11px]" onClick={() => navigate("/consultation")}>
-                                    CONSULTATION CORPORATIVE GRATUITE
-                                </ProMaxButton>
-                                <a href="tel:18552649328" className="flex items-center gap-4 group">
-                                    <div className="w-14 h-14 rounded-full bg-slate-50 flex items-center justify-center border border-slate-200 group-hover:border-blue-500/50 group-hover:bg-white transition-all">
-                                        <Phone className="w-5 h-5 text-[#18448F]" />
+                        <div className="max-w-6xl mx-auto">
+                            <div className="flex flex-col lg:flex-row items-center gap-20">
+                                <div className="lg:w-1/2 space-y-10 text-center lg:text-left">
+                                    <div className="inline-flex items-center gap-3">
+                                        <span className="w-12 h-[1px] bg-blue-600" />
+                                        <span className="text-[10px] font-black text-blue-600 uppercase tracking-[0.5em]">NOTRE ENGAGEMENT</span>
                                     </div>
-                                    <div className="text-left">
-                                        <div className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Service Commercial</div>
-                                        <div className="text-xl font-bold tracking-tight text-[#18448F]">1-855-264-9328</div>
+                                    <h2 className="text-5xl md:text-8xl font-bold tracking-tighter leading-[0.85] text-slate-900 uppercase">
+                                        Une hydratation <br />
+                                        <span className="text-blue-600 italic font-light lowercase">sans compromis.</span>
+                                    </h2>
+                                    <p className="text-slate-500 text-2xl font-light leading-relaxed italic">
+                                        "Un collaborateur bien hydraté est un collaborateur concentré et performant au quotidien."
+                                    </p>
+                                </div>
+                                <div className="lg:w-1/2 grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div className="bg-slate-50 p-10 rounded-[3rem] space-y-6 hover:bg-blue-600 hover:text-white transition-all duration-500 group">
+                                        <Users2 className="w-10 h-10 text-blue-600 group-hover:text-white" />
+                                        <h3 className="text-xl font-bold uppercase tracking-tight">Bien-être Équipe</h3>
+                                        <p className="text-slate-500 text-sm group-hover:text-blue-100">Améliorez la QVT avec un accès illimité à une eau de qualité.</p>
                                     </div>
-                                </a>
+                                    <div className="bg-slate-900 p-10 rounded-[3rem] space-y-6 text-white hover:bg-slate-800 transition-all duration-500">
+                                        <Zap className="w-10 h-10 text-blue-400" />
+                                        <h3 className="text-xl font-bold uppercase tracking-tight">Performance</h3>
+                                        <p className="text-slate-400 text-sm">Maintenez le focus de vos talents tout au long de la journée.</p>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
 
-                    {/* Scroll Badge */}
-                    <div className="absolute bottom-12 right-12 hidden lg:block">
-                        <div className="flex items-center gap-4 text-slate-400">
-                            <span className="text-[10px] font-black uppercase tracking-widest rotate-90 origin-right translate-y-12">DÉCOUVRIR NOS SYSTÈMES</span>
-                            <div className="w-[1px] h-24 bg-slate-200" />
+                            <div className="mt-32 flex flex-col items-center gap-6">
+                                <div className="w-[1px] h-24 bg-gradient-to-b from-blue-600 to-transparent animate-pulse" />
+                                <span className="text-[10px] font-black text-blue-600 uppercase tracking-[0.5em]">DÉCOUVREZ NOS 3 PILIERS OFFICE</span>
+                            </div>
                         </div>
                     </div>
                 </section>
 
-                {/* SERVICE SECTIONS - PREMIUM LIQUID DESIGN */}
-                <section id="solutions" className="py-20 bg-white">
+                <section className="py-20 bg-white">
                     <div className="container mx-auto px-6">
-                        <div className="flex flex-col md:flex-row md:items-end justify-between mb-32 gap-8">
-                            <div className="max-w-2xl space-y-6">
-                                <span className="text-[10px] font-black text-blue-600 uppercase tracking-[0.5em]">NOTRE ENGAGEMENT</span>
-                                <h2 className="heading-pro-max text-left uppercase">
-                                    <span className="italic font-light text-[#18448F]">Une hydratation </span><br />
-                                    <span className="font-bold text-[#18448F]">sans compromis.</span>
-                                </h2>
-                            </div>
-                            <p className="text-slate-400 text-sm font-light max-w-sm border-l border-blue-100 pl-6">
-                                "Un collaborateur bien hydraté est un collaborateur concentré et performant au quotidien."
-                            </p>
-                        </div>
 
                         {/* Side Nav for Sections */}
                         <div className="relative">

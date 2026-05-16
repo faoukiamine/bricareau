@@ -22,6 +22,7 @@ import {
 import { useNavigate } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Hero from "@/components/Hero";
 import { cn } from "@/lib/utils";
 import { ProMaxButton } from "@/components/ui/ProMaxButton";
 import TestimonialsSection from "@/components/TestimonialsSection";
@@ -228,71 +229,35 @@ const ResidentialServices = () => {
 
             <main>
                 {/* 1. CINEMATIC HERO */}
-                <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-white">
-                    <div className="absolute inset-0 z-0">
-                        <img src={heroImg} alt="Water Pure" className="w-full h-full object-cover opacity-90" />
-                        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent" />
-                        <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent" />
-                    </div>
-
-                    <div className="container mx-auto px-6 relative z-10">
-                        <div className="max-w-4xl space-y-12">
-                            <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-blue-50 border border-blue-100">
-                                <Droplets className="w-4 h-4 text-blue-600" />
-                                <span className="text-[10px] font-black text-blue-600 uppercase tracking-[0.3em]">Excellence Résidentielle</span>
-                            </div>
-                            
-                            <h1 className="text-4xl md:text-6xl lg:text-[72px] leading-[1.1] tracking-tight animate-in fade-in slide-in-from-left duration-1000">
-                                <span className="italic font-light text-[#18448F]">L'eau pure, </span>
-                                <span className="font-bold text-[#18448F]">que votre famille mérite.</span>
-                            </h1>
-                            
-                            <p className="text-lg md:text-2xl text-slate-500 font-light max-w-2xl leading-relaxed">
-                                Transformez l'eau de votre maison en une ressource cristalline, saine et protectrice. Plus de 20 000 familles au Québec nous font confiance.
+                <Hero 
+                    image={heroImg}
+                    highlightedTitle="L'eau pure, "
+                    mainTitle="que votre famille mérite."
+                    subtitle="Transformez l'eau de votre maison en une ressource cristalline, saine et protectrice. Plus de 20 000 familles au Québec nous font confiance."
+                    ctaText="ANALYSE D'EAU GRATUITE"
+                    ctaLink="/consultation"
+                    showPhone={true}
+                    badge="Excellence Résidentielle"
+                />
+                
+                {/* 2. INTRO SOLUTIONS */}
+                <section className="py-24 bg-white relative">
+                    <div className="container mx-auto px-6 text-center">
+                        <div className="max-w-4xl mx-auto space-y-10 animate-in fade-in slide-in-from-bottom-8 duration-1000">
+                            <h2 className="text-4xl md:text-6xl font-bold tracking-tighter leading-[1.1] text-[#18448F] uppercase">
+                                Nos solutions résidentielles <br />
+                                <span className="text-slate-900">de traitement de l'eau</span>
+                            </h2>
+                            <p className="text-slate-500 text-xl font-light leading-relaxed max-w-2xl mx-auto">
+                                Découvrez une gamme complète de technologies de pointe conçues pour transformer la qualité de l'eau de votre foyer. De l'adoucissement haute efficacité à la purification par osmose inverse, nos solutions allient performance, durabilité et design pour offrir à votre famille une eau d'une pureté absolue, chaque jour.
                             </p>
-
-                            <div className="flex flex-col sm:flex-row gap-6 pt-8">
-                                <ProMaxButton variant="primary" className="px-12 h-16 text-[11px]" onClick={() => navigate("/consultation")}>
-                                    ANALYSE D'EAU GRATUITE
-                                </ProMaxButton>
-                                <a href="tel:18552649328" className="flex items-center gap-4 group">
-                                    <div className="w-14 h-14 rounded-full bg-slate-50 flex items-center justify-center border border-slate-200 group-hover:border-blue-500/50 group-hover:bg-white transition-all">
-                                        <Phone className="w-5 h-5 text-[#18448F]" />
-                                    </div>
-                                    <div className="text-left">
-                                        <div className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Urgence Technique</div>
-                                        <div className="text-xl font-bold tracking-tight text-[#18448F]">1-855-264-9328</div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Scroll Badge */}
-                    <div className="absolute bottom-12 right-12 hidden lg:block">
-                        <div className="flex items-center gap-4 text-slate-400">
-                            <span className="text-[10px] font-black uppercase tracking-widest rotate-90 origin-right translate-y-12">DÉCOUVRIR NOS SYSTÈMES</span>
-                            <div className="w-[1px] h-24 bg-slate-200" />
                         </div>
                     </div>
                 </section>
 
-                {/* SERVICE SECTIONS - PREMIUM LIQUID DESIGN */}
+                {/* 3. SERVICE SECTIONS - PREMIUM LIQUID DESIGN */}
                 <section id="solutions" className="py-20 bg-white">
                     <div className="container mx-auto px-6">
-                        <div className="flex flex-col md:flex-row md:items-end justify-between mb-32 gap-8">
-                            <div className="max-w-2xl space-y-6">
-                                <span className="text-[10px] font-black text-blue-600 uppercase tracking-[0.5em]">L'EXPERTISE BRICAREAU</span>
-                                <h2 className="heading-pro-max text-left uppercase">
-                                    <span className="italic font-light text-[#18448F]">Redécouvrez le vrai</span><br />
-                                    <span className="font-bold text-[#18448F]"> goût de l'eau</span>
-                                </h2>
-                            </div>
-                            <p className="text-slate-400 text-sm font-light max-w-sm border-l border-blue-100 pl-6">
-                                La santé de votre famille commence par la qualité de l'eau que vous consommez chaque jour.
-                            </p>
-                        </div>
-
                         {/* Side Nav for Sections */}
                         <div className="relative">
                             <div className={cn(
@@ -325,7 +290,7 @@ const ResidentialServices = () => {
                                     <div 
                                         key={idx}
                                         ref={el => sectionRefs.current[idx] = el}
-                                        className="relative min-h-[80vh] flex items-center py-24 overflow-hidden"
+                                        className="relative h-[80vh] flex items-center overflow-hidden"
                                     >
                                         {/* Background Orbs */}
                                         <div className="absolute inset-0 z-0 pointer-events-none">

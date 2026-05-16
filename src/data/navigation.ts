@@ -30,6 +30,7 @@ export interface MegamenuCard {
   description?: string;
   href: string;
   image?: string; 
+  links?: { title: string; description: string; href: string }[];
 }
 
 export interface MenuItem {
@@ -53,71 +54,124 @@ export interface MenuItem {
 // THE NEW MAIN MENU STRUCTURE (BASED ON BLUEDROP)
 export const mainNavMenuItems: MenuItem[] = [
     {
-        name: "Accueil 1",
-        href: "/home1",
-        hasMegamenu: false,
-    },
-    {
         name: "Ce que nous faisons",
         hasMegamenu: true,
         megamenuCards: [
             {
                 title: "RÉSIDENTIEL",
                 image: promoImage3,
-                href: "/residentiel"
-            },
-            {
-                title: "BUREAU",
-                image: promoImage4, 
-                href: "/bureau"
-            },
-            {
-                title: "HÔTELLERIE ET RESTAURATION",
-                image: promoImage2,
-                href: "/hotellerie-restauration"
-            },
-            {
-                title: "COMMERCIAL & INDUSTRIEL",
-                image: promoImage,
-                href: "/industriel"
-            }
-        ],
-        megamenuGroups: [
-            {
-                items: [
+                href: "/residentiel",
+                links: [
                     { 
-                        title: "Filtres pour Machines à Café", 
-                        description: "Extraction parfaite et protection antitartre.", 
-                        href: "/filtres-eau-machine-cafe" 
-                    },
+                        title: "Analyses & Tests d'eau", 
+                        description: "Systèmes de désinfection d'eau pour protéger votre famille contre les contaminants nocifs.", 
+                        href: "/tests-eau" 
+                    }, 
                     { 
-                        title: "Adoucissement Résidentiel", 
+                        title: "Adoucisseurs d'eau Résidentiels", 
                         description: "Solutions avancées d'adoucissement d'eau.", 
                         href: "/A" 
                     },
                     { 
-                        title: "Page B", 
-                        description: "Systèmes de filtration d'eau haute performance.", 
+                        title: "Filtres d'eau spécialisés", 
+                        description: "Systèmes de filtration d'eau haute performance pour besoins spécifiques.", 
                         href: "/B" 
                     },
                     { 
-                        title: "Page C", 
-                        description: "Stations d'eau potable ultra-pure.", 
+                        title: "Systèmes de filtration d'eau sous évier", 
+                        description: "Stations d'eau potable ultra-pure pour un confort quotidien.", 
                         href: "/C" 
                     },
                     { 
-                        title: "Adoucisseurs d'eau commerciaux", 
-                        description: "Performance et protection pour votre entreprise.", 
-                        href: "/adoucisseurs-eau-commerciaux" 
+                        title: "Systèmes de désinfection UV", 
+                        description: "Systèmes de désinfection d'eau pour protéger votre famille contre les contaminants nocifs.", 
+                        href: "/systemes-de-desinfection-uv" 
                     },
                     { 
-                        title: "Page B3", 
-                        description: "Variante spécialisée adoucissement.", 
-                        href: "/B3" 
+                        title: "Fontaines et refroidisseurs d'eau", 
+                        description: "Systèmes de désinfection d'eau pour protéger votre famille contre les contaminants nocifs.", 
+                        href: "/fontaines" 
+                    }
+                ]
+            },
+            {
+                title: "BUREAU",
+                image: promoImage4, 
+                href: "/bureau",
+                links: [
+                    { 
+                        title: "Fontaines d'Eau Modernes", 
+                        description: "Éliminez la logistique des bouteilles avec nos fontaines branchées.", 
+                        href: "/fontaines-deau-modernes" 
                     },
+                    { 
+                        title: "Solutions Eau Pétillante", 
+                        description: "Fraîcheur et effervescence à la demande pour vos espaces communs.", 
+                        href: "/solutions-eau-petillante" 
+                    },
+                    { 
+                        title: "Systèmes Centralisés", 
+                        description: "Gestion intelligente de l'eau pour les tours de bureaux et complexes.", 
+                        href: "/systemes-centralises" 
+                    }
+                ]
+            },
+            {
+                title: "HÔTELLERIE ET RESTAURATION",
+                image: promoImage2,
+                href: "/hotellerie-restauration",
+                links: [
+                    { 
+                        title: "Adoucisseur d'eau commercial", 
+                        description: "Protection antitartre pour vos équipements.", 
+                        href: "/adoucisseurs-eau-commerciaux" 
+                    }, 
+                    { 
+                        title: "Filtration d'eau", 
+                        description: "Qualité pure pour votre établissement.", 
+                        href: "/filtration" 
+                    },
+                    { 
+                        title: "Solutions pour Brasseries", 
+                        description: "Expertise brassicole et eau pure.", 
+                        href: "/solutions-brasseries" 
+                    },
+                    { 
+                        title: "Filtres pour Machines à Café", 
+                        description: "Extraction parfaite et protection antitartre.", 
+                        href: "/filtres-eau-machine-cafe" 
+                    }
+                ]
+            },
+            {
+                title: "COMMERCIAL & INDUSTRIEL",
+                image: promoImage,
+                href: "/industriel",
+                links: [
+                    { 
+                        title: "Systèmes de filtration industriels", 
+                        description: "Protection haute performance pour vos réseaux.", 
+                        href: "/filtration-industrielle" 
+                    },
+                    { 
+                        title: "Adoucisseurs d'eau industriel", 
+                        description: "Neutralisez le calcaire à grande échelle.", 
+                        href: "/adoucisseurs-eau-industriel" 
+                    },
+                    { 
+                        title: "Systèmes d'osmose inverse", 
+                        description: "Purification critique pour vos process.", 
+                        href: "/osmose-inverse-industrielle" 
+                    },
+                    { 
+                        title: "Systèmes de désinfection UV à haut débit", 
+                        description: "Biosécurité microbiologique à haut débit.", 
+                        href: "/desinfection-uv-industrielle" 
+                    }
                 ]
             }
-        ]
+        ],
+        megamenuGroups: []
     },
     {
         name: "Qui sommes-nous ?",
@@ -263,6 +317,12 @@ export const productMenuItems: MenuItem[] = [
         title: "Stations d'eau potable",
         description: "Profitez d'une eau pure et saine directement de votre robinet avec nos systèmes de filtration avancés.",
         href: "/systeme-de-filtration-deau-potable"
+      },
+      {
+        customIcon: pointofusefiltericonImg,
+        title: "Filtration d'eau Potable",
+        description: "Découvrez nos solutions de filtration par osmose inverse pour une pureté inégalée.",
+        href: "/filtration-eau-potable"
       },
       {
         customIcon: undersinkfiltericonImg,
@@ -501,21 +561,21 @@ export const commercialProductMenuItems: MenuItem[] = [
 
 export const entreprisesProductMenuItems: MenuItem[] = [
   {
-    name: "Refroidisseurs d’eau",
-    href: "/refroidisseurs-eau-entreprises",
+    name: "Fontaines d'Eau Modernes",
+    href: "/fontaines-deau-modernes",
     hasMegamenu: true,
     megamenuCards: [
       {
         customIcon: waterdispensericonImg,
         title: "Fontaines Sans Bouteille",
         description: "Reliées au réseau, filtration intégrée pour une eau fraîche continue au bureau sans logistique de bouteilles.",
-        href: "/refroidisseurs-eau-entreprises"
+        href: "/fontaines-deau-modernes"
       },
       {
         customIcon: drinkingwaterfountainiconImg,
         title: "Distributeurs Haute Capacité",
         description: "Solutions pour usines, cafétérias et grands lieux publics avec filtration UV optionnelle.",
-        href: "/refroidisseurs-eau-entreprises"
+        href: "/fontaines-deau-modernes"
       },
     ],
     promo: {
@@ -525,8 +585,8 @@ export const entreprisesProductMenuItems: MenuItem[] = [
     }
   },
   {
-    name: "Eau Pétillante",
-    href: "/eau-petillante-entreprises",
+    name: "Solutions Eau Pétillante",
+    href: "/solutions-eau-petillante",
     hasMegamenu: false
   },
   {

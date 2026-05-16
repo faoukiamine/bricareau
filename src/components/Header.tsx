@@ -18,6 +18,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeMegamenu, setActiveMegamenu] = useState<string | null>(null);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [hoveredCategory, setHoveredCategory] = useState<string | null>("RÉSIDENTIEL");
   const [isSearchFocused, setIsSearchFocused] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const location = useLocation();
@@ -55,8 +56,12 @@ const Header = () => {
       closeTimeoutRef.current = null;
     }
     if (hasMegamenu) {
-      setActiveMegamenu(itemName);
-      setActiveDropdown(null);
+      if (activeMegamenu !== itemName) {
+        setActiveMegamenu(itemName);
+        setActiveDropdown(null);
+        // Only reset if we are switching to a different megamenu
+        setHoveredCategory("RÉSIDENTIEL"); // Default to first category
+      }
     } else {
       setActiveDropdown(itemName);
       setActiveMegamenu(null);
@@ -67,12 +72,31 @@ const Header = () => {
     closeTimeoutRef.current = setTimeout(() => {
       setActiveMegamenu(null);
       setActiveDropdown(null);
-    }, 150);
+      setHoveredCategory("RÉSIDENTIEL");
+    }, 300);
   };
+
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <>
-      <header className="fixed top-0 z-50 w-full bg-white border-b border-gray-100 shadow-sm" ref={headerRef}>
+      <header 
+        className={cn(
+            "fixed top-0 z-50 w-full transition-all duration-500",
+            isScrolled 
+                ? "bg-[#18448F] shadow-lg py-0" 
+                : "bg-transparent py-3"
+        )} 
+        ref={headerRef}
+      >
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex h-20 items-center justify-between gap-4">
             
@@ -81,7 +105,10 @@ const Header = () => {
               <img
                 src={logoBricareau}
                 alt="Bricareau Water Specialist"
-                className="h-10 md:h-12 w-auto object-contain"
+                className={cn(
+                    "h-10 md:h-12 w-auto object-contain transition-all duration-500",
+                    isScrolled && "brightness-0 invert"
+                )}
               />
             </NavLink>
 
@@ -97,7 +124,9 @@ const Header = () => {
                   <button 
                     className={cn(
                         "text-[13px] font-bold uppercase tracking-wider flex items-center gap-1.5 transition-colors",
-                        (activeMegamenu === item.name || activeDropdown === item.name) ? "text-[#18448F]" : "text-slate-700 hover:text-[#18448F]"
+                        (activeMegamenu === item.name || activeDropdown === item.name) 
+                            ? (isScrolled ? "text-white/70" : "text-[#18448F]") 
+                            : (isScrolled ? "text-white hover:text-white/80" : "text-[#18448F] hover:text-blue-600")
                     )}
                     onClick={() => {
                         if (item.href) {
@@ -132,23 +161,29 @@ const Header = () => {
 
             {/* Right Utilities (Desktop) */}
             <div className="hidden lg:flex items-center gap-8">
-              <a href="tel:18552649328" className="text-[13px] font-medium text-slate-800 flex items-center gap-2 group">
-                <div className="w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center group-hover:bg-blue-50 transition-colors">
-                    <Phone className="w-4 h-4 text-[#18448F]" />
+              <a href="tel:18552649328" className={cn(
+                  "text-[13px] font-medium flex items-center gap-2 group transition-colors",
+                  isScrolled ? "text-white" : "text-[#18448F]"
+              )}>
+                <div className={cn(
+                    "w-8 h-8 rounded-full flex items-center justify-center transition-colors",
+                    isScrolled ? "bg-white/10 group-hover:bg-white/20" : "bg-[#18448F]/10 group-hover:bg-[#18448F]/20"
+                )}>
+                    <Phone className={cn("w-4 h-4", isScrolled ? "text-white" : "text-[#18448F]")} />
                 </div>
                 (855) 264-9328
               </a>
               
               <div className="flex items-center gap-6">
                 <ProMaxButton 
-                    variant="white" 
+                    variant={isScrolled ? "outline-white" : "primary"} 
                     className="px-8 h-12 text-[10px]"
                     onClick={() => navigate("/consultation")}
                 >
                     Contactez-nous
                 </ProMaxButton>
                 <ProMaxButton 
-                    variant="primary"
+                    variant="white" 
                     className="px-8 h-12 text-[10px]"
                     onClick={() => navigate("/contact-form")}
                 >
@@ -158,7 +193,13 @@ const Header = () => {
             </div>
 
             {/* Mobile Toggle */}
-            <button className="lg:hidden p-2 text-slate-700" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+            <button 
+                className={cn(
+                    "lg:hidden p-2 transition-colors",
+                    isScrolled ? "text-white" : "text-[#18448F]"
+                )} 
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
                 {isMenuOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
             </button>
           </div>
@@ -185,65 +226,88 @@ const Header = () => {
                         {/* The Grid of 4 Cards */}
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                             {mainNavMenuItems.find(m => m.name === "Ce que nous faisons")?.megamenuCards?.map((card, idx) => (
-                                <NavLink 
-                                    key={idx} 
-                                    to={card.href}
-                                    className="group block bg-white shadow-sm hover:shadow-xl transition-all duration-500 rounded-sm overflow-hidden"
-                                    onClick={() => setActiveMegamenu(null)}
+                                <div 
+                                    key={card.title}
+                                    className="relative group"
+                                    onMouseEnter={() => setHoveredCategory(card.title)}
                                 >
-                                    <div className="aspect-[4/3] overflow-hidden relative">
-                                        <img 
-                                            src={card.image} 
-                                            alt={card.title} 
-                                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[2s]"
-                                        />
-                                        <div className="absolute inset-0 bg-transparent group-hover:bg-blue-600/10 transition-colors duration-500" />
-                                    </div>
-                                    <div className="p-6 md:p-8 flex items-center justify-between border-t border-gray-50">
-                                        <h4 className="text-[11px] font-black text-slate-900 uppercase tracking-widest leading-tight">
-                                            {card.title.includes(' ET ') ? (
-                                                card.title.split(' ET ').map((word, i) => (
-                                                    <span key={i} className="block">
-                                                        {word} {i === 0 && "ET"}
-                                                    </span>
-                                                ))
-                                            ) : (
-                                                card.title
-                                            )}
-                                        </h4>
-                                        <div className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-[#18448F] group-hover:bg-[#18448F] group-hover:text-white transition-all duration-300">
-                                            <ArrowRight className="w-5 h-5" />
+                                    <NavLink 
+                                        to={card.href}
+                                        className={cn(
+                                            "group block bg-white shadow-sm hover:shadow-xl transition-all duration-500 rounded-sm overflow-hidden border-2",
+                                            hoveredCategory === card.title ? "border-[#18448F] shadow-lg" : "border-transparent"
+                                        )}
+                                        onClick={() => setActiveMegamenu(null)}
+                                    >
+                                        <div className="aspect-[4/3] overflow-hidden relative">
+                                            <img 
+                                                src={card.image} 
+                                                alt={card.title} 
+                                                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[2s]"
+                                            />
+                                            <div className="absolute inset-0 bg-transparent group-hover:bg-blue-600/10 transition-colors duration-500" />
                                         </div>
-                                    </div>
-                                </NavLink>
+                                        <div className="p-6 md:p-8 flex items-center justify-between border-t border-gray-50">
+                                            <h4 className="text-[11px] font-black text-slate-900 uppercase tracking-widest leading-tight">
+                                                {card.title.includes(' ET ') ? (
+                                                    card.title.split(' ET ').map((word, i) => (
+                                                        <span key={i} className="block">
+                                                            {word} {i === 0 && "ET"}
+                                                        </span>
+                                                    ))
+                                                ) : (
+                                                    card.title
+                                                )}
+                                            </h4>
+                                            <div className={cn(
+                                                "w-10 h-10 rounded-full border flex items-center justify-center transition-all duration-300",
+                                                hoveredCategory === card.title 
+                                                    ? "bg-[#18448F] text-white border-[#18448F]" 
+                                                    : "border-gray-200 text-[#18448F] group-hover:bg-[#18448F] group-hover:text-white"
+                                            )}>
+                                                <ArrowRight className="w-5 h-5" />
+                                            </div>
+                                        </div>
+                                    </NavLink>
+                                </div>
                             ))}
                         </div>
-
-                        {/* Additional Groups (A, B, C, B3) */}
-                        {mainNavMenuItems.find(m => m.name === "Ce que nous faisons")?.megamenuGroups && (
-                            <div className="pt-8 border-t border-gray-100 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                                {mainNavMenuItems.find(m => m.name === "Ce que nous faisons")?.megamenuGroups?.map((group, gIdx) => (
-                                    <div key={gIdx} className="space-y-6">
-                                        {group.items.map((item, iIdx) => (
-                                            <NavLink 
-                                                key={iIdx} 
-                                                to={item.href}
-                                                className="group block space-y-2"
-                                                onClick={() => setActiveMegamenu(null)}
-                                            >
-                                                <div className="flex items-center gap-2">
-                                                    <h5 className="text-[10px] font-black text-slate-900 group-hover:text-[#18448F] transition-colors uppercase tracking-widest">{item.title}</h5>
-                                                    <ArrowRight className="w-3 h-3 text-[#18448F] opacity-0 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0" />
-                                                </div>
-                                                <p className="text-[11px] text-slate-500 font-medium leading-relaxed">
-                                                    {item.description}
-                                                </p>
-                                            </NavLink>
-                                        ))}
+ 
+                        <div className="pt-8 border-t border-gray-100 min-h-[140px] flex items-center">
+                            {hoveredCategory !== null ? (
+                                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-8 w-full animate-in fade-in slide-in-from-bottom-2 duration-500">
+                                    {mainNavMenuItems
+                                        .find(m => m.name === "Ce que nous faisons")
+                                        ?.megamenuCards?.find(c => c.title === hoveredCategory)
+                                        ?.links?.map((link, lIdx) => (
+                                        <NavLink 
+                                            key={lIdx} 
+                                            to={link.href}
+                                            className="group block space-y-2"
+                                            onClick={() => setActiveMegamenu(null)}
+                                        >
+                                            <div className="flex items-center gap-2">
+                                                <h5 className="text-[10px] font-black text-slate-900 group-hover:text-[#18448F] transition-colors uppercase tracking-widest">{link.title}</h5>
+                                                <ArrowRight className="w-3 h-3 text-[#18448F] opacity-0 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0" />
+                                            </div>
+                                            <p className="text-[11px] text-slate-500 font-medium leading-relaxed">
+                                                {link.description}
+                                            </p>
+                                        </NavLink>
+                                    ))}
+                                </div>
+                            ) : (
+                                <div className="w-full flex items-center justify-center py-8">
+                                    <div className="flex flex-col items-center gap-4 opacity-40">
+                                        <div className="w-12 h-0.5 bg-[#18448F]" />
+                                        <span className="text-[10px] font-black text-[#18448F] uppercase tracking-[0.5em] text-center">
+                                            Survolez une catégorie pour explorer nos solutions
+                                        </span>
+                                        <div className="w-12 h-0.5 bg-[#18448F]" />
                                     </div>
-                                ))}
-                            </div>
-                        )}
+                                </div>
+                            )}
+                        </div>
                     </div>
                 </div>
             </div>
@@ -455,7 +519,7 @@ const Header = () => {
             </div>
         )}
       </header>
-      <div style={{ height: headerHeight }} />
+      <div className={cn("transition-all duration-500", isScrolled ? "h-[80px]" : "h-0")} />
     </>
   );
 };

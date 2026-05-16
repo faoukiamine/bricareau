@@ -79,7 +79,7 @@ const FiltreEauMachineCafe = () => {
 
             <main>
                 {/* 1. HERO SECTION (MIMICKING HOTELLERIERESTAURATION STYLE) */}
-                <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-white">
+                <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-white">
                     <div className="absolute inset-0 z-0">
                         <img 
                             src={heroImg} 

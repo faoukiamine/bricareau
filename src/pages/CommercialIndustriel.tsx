@@ -26,6 +26,7 @@ import { useNavigate, NavLink } from "react-router-dom";
 import ConsultationFormSection from "@/components/ConsultationFormSection";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Hero from "@/components/Hero";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import ExpertAvatars from "@/components/ExpertAvatars";
 import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
@@ -183,44 +184,17 @@ const CommercialIndustriel = () => {
 
             <main>
                 {/* 1. Hero Section - Redesigned with Inspiration */}
-                <section className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden bg-white">
-                    <div className="absolute inset-0 z-0">
-                        <img
-                            src={industrialHeroImg}
-                            alt="Traitement d'eau industriel Bricareau"
-                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[4000ms] brightness-[0.9]"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent" />
-                    </div>
-
-                    <div className="container mx-auto px-6 relative z-10">
-                        <div className="max-w-4xl space-y-8">
-                            <div className="inline-flex items-center gap-3 px-4 py-1.5 rounded-full bg-blue-600 text-white text-[10px] font-black uppercase tracking-[0.3em] shadow-xl">
-                                <div className="w-2 h-2 rounded-full bg-blue-200 animate-pulse" />
-                                SOLUTIONS INDUSTRIELLES
-                            </div>
-                            
-                            <h1 className="text-5xl lg:text-7xl font-bold text-white leading-tight">
-                                <span className="block font-light italic text-blue-400">Des solutions de</span>
-                                <span className="block">traitement de l'eau</span>
-                                <span className="block">pour chaque secteur.</span>
-                            </h1>
-                            
-                            <p className="text-xl text-slate-100 max-w-2xl font-light leading-relaxed">
-                                Bricareau déploie une expertise d'ingénierie avancée pour les leaders de l’industrie au Québec, garantissant performance et durabilité.
-                            </p>
-                            
-                            <div className="flex flex-wrap gap-8 pt-4">
-                                <ProMaxButton onClick={() => navigate("/consultation")}>
-                                    Parler à un expert
-                                </ProMaxButton>
-                                <ProMaxButton variant="outline-white" onClick={() => navigate("/realisations")}>
-                                    Voir nos réalisations
-                                </ProMaxButton>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                <Hero 
+                    image={industrialHeroImg}
+                    highlightedTitle="Des solutions de"
+                    mainTitle="traitement de l'eau pour chaque secteur."
+                    subtitle="Bricareau déploie une expertise d'ingénierie avancée pour les leaders de l’industrie au Québec, garantissant performance et durabilité."
+                    ctaText="Parler à un expert"
+                    ctaLink="/consultation"
+                    secondaryCtaText="Voir nos réalisations"
+                    secondaryCtaLink="/realisations"
+                    badge="SOLUTIONS INDUSTRIELLES"
+                />
 
                 <div className="bg-white py-4 shadow-sm border-b border-slate-50 relative z-20">
                     <div className="container mx-auto px-6">

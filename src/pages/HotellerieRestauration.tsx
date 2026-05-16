@@ -24,6 +24,7 @@ import {
 import { useNavigate } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Hero from "@/components/Hero";
 import { cn } from "@/lib/utils";
 import { ProMaxButton } from "@/components/ui/ProMaxButton";
 import TestimonialsSection from "@/components/TestimonialsSection";
@@ -154,7 +155,7 @@ const HotellerieRestauration = () => {
                 { title: "Réduction des coûts carafe", desc: "Éliminez les frais d'achat et de stockage d'eau embouteillée avec notre solution interne." }
             ],
             image: brasserieWaterImg,
-            link: "/fontaines",
+            link: "/solutions-brasseries",
             tag: "EXPÉRIENCE",
             largeNumber: "03",
             floatingCard: { title: "Design Luxe", desc: "Une fontaine qui valorise votre intérieur.", icon: Sparkles },
@@ -201,68 +202,76 @@ const HotellerieRestauration = () => {
             <Header />
 
             <main>
-                <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-white">
-                    <div className="absolute inset-0 z-0">
-                        <img src={heroImg} alt="Hospitality Water Solutions" className="w-full h-full object-cover opacity-90" />
-                        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent" />
-                        <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent" />
+                {/* 1. HERO SECTION */}
+                <Hero 
+                    image={heroImg}
+                    highlightedTitle="L'excellence pure,"
+                    mainTitle="à la table des plus grands."
+                    subtitle="Sublimez l'expérience de vos convives et optimisez vos opérations avec des solutions d'eau intelligentes conçues pour l'exigence du milieu HORECA."
+                    showPhone={true}
+                    showBreadcrumbs={false}
+                />
+
+                {/* 2. IMMERSIVE HORECA INTRO */}
+                <section id="solutions" className="relative py-40 overflow-hidden bg-white">
+                    <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none">
+                        <svg className="w-full h-full" viewBox="0 0 100 100">
+                            <pattern id="grid-horeca" width="20" height="20" patternUnits="userSpaceOnUse">
+                                <circle cx="1" cy="1" r="1" fill="black" />
+                            </pattern>
+                            <rect width="100%" height="100%" fill="url(#grid-horeca)" />
+                        </svg>
                     </div>
 
                     <div className="container mx-auto px-6 relative z-10">
-                        <div className="max-w-4xl space-y-12">
-                            <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-blue-50 border border-blue-100">
-                                <Utensils className="w-4 h-4 text-blue-600" />
-                                <span className="text-[10px] font-black text-blue-600 uppercase tracking-[0.3em]">Hôtellerie & Restauration de Luxe</span>
-                            </div>
-                            
-                            <h1 className="text-4xl md:text-6xl lg:text-[72px] leading-[1.1] tracking-tight animate-in fade-in slide-in-from-left duration-1000">
-                                <span className="italic font-light text-[#18448F]">L'excellence pure, </span>
-                                <span className="font-bold text-[#18448F]">à la table des plus grands.</span>
-                            </h1>
-                            
-                            <p className="text-lg md:text-2xl text-slate-500 font-light max-w-2xl leading-relaxed">
-                                Sublimez l'expérience de vos convives et optimisez vos opérations avec des solutions d'eau intelligentes conçues pour l'exigence du milieu HORECA.
-                            </p>
-
-                            <div className="flex flex-col sm:flex-row gap-6 pt-8">
-                                <ProMaxButton variant="primary" className="px-12 h-16 text-[11px]" onClick={() => navigate("/consultation")}>
-                                    ANALYSE DE BESOINS GRATUITE
-                                </ProMaxButton>
-                                <a href="tel:18552649328" className="flex items-center gap-4 group">
-                                    <div className="w-14 h-14 rounded-full bg-slate-50 flex items-center justify-center border border-slate-200 group-hover:border-blue-500/50 group-hover:bg-white transition-all">
-                                        <Phone className="w-5 h-5 text-[#18448F]" />
+                        <div className="max-w-7xl mx-auto">
+                            <div className="flex flex-col lg:flex-row items-center gap-24">
+                                <div className="lg:w-1/2 space-y-12">
+                                    <div className="space-y-6">
+                                        <div className="inline-flex items-center gap-3">
+                                            <span className="w-12 h-[1px] bg-blue-600" />
+                                            <span className="text-[10px] font-black text-blue-600 uppercase tracking-[0.5em]">L'EXCELLENCE EN TABLE</span>
+                                        </div>
+                                        <h2 className="text-6xl md:text-[110px] font-bold tracking-tighter leading-[0.85] text-slate-900 uppercase">
+                                            Performance <br />
+                                            <span className="text-blue-600 italic font-light lowercase">& raffinement.</span>
+                                        </h2>
                                     </div>
-                                    <div className="text-left">
-                                        <div className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Ligne Prioritaire</div>
-                                        <div className="text-xl font-bold tracking-tight text-[#18448F]">1-855-264-9328</div>
+                                    <div className="p-10 bg-slate-50 rounded-[3rem] border-l-8 border-blue-600 shadow-xl shadow-slate-100">
+                                        <p className="text-slate-500 text-2xl font-light leading-relaxed italic">
+                                            "La qualité de l'eau est l'ingrédient invisible qui définit la réputation d'une table d'exception."
+                                        </p>
                                     </div>
-                                </a>
+                                </div>
+                                
+                                <div className="lg:w-1/2 grid grid-cols-2 gap-6">
+                                    {programs.map((p, i) => (
+                                        <button 
+                                            key={i}
+                                            onClick={() => scrollToProgram(i)}
+                                            className="group relative p-10 rounded-[3rem] bg-white border border-slate-100 transition-all duration-700 hover:bg-blue-600 hover:border-blue-600 text-left shadow-xl shadow-slate-100/50"
+                                        >
+                                            <div className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-all text-white translate-x-2 group-hover:translate-x-0">
+                                                <ArrowRight className="w-5 h-5" />
+                                            </div>
+                                            <div className="space-y-4">
+                                                <div className="text-[10px] font-black text-blue-600 group-hover:text-white/50 uppercase tracking-widest">Pillier 0{i + 1}</div>
+                                                <h3 className="text-xl font-bold text-slate-900 group-hover:text-white uppercase tracking-tight leading-tight">
+                                                    {p.navTitle}
+                                                </h3>
+                                            </div>
+                                        </button>
+                                    ))}
+                                </div>
                             </div>
-                        </div>
-                    </div>
 
-                    <div className="absolute bottom-12 right-12 hidden lg:block">
-                        <div className="flex items-center gap-4 text-slate-400">
-                            <span className="text-[10px] font-black uppercase tracking-widest rotate-90 origin-right translate-y-12">DÉCOUVREZ L'EXPÉRIENCE</span>
-                            <div className="w-[1px] h-24 bg-slate-200" />
+                            <div className="mt-32 flex flex-col items-center gap-6">
+                                <div className="w-[1px] h-24 bg-gradient-to-b from-blue-600 to-transparent animate-bounce-slow" />
+                                <span className="text-[10px] font-black text-blue-600 uppercase tracking-[0.5em]">PLONGÉE TECHNIQUE</span>
+                            </div>
                         </div>
                     </div>
                 </section>
-
-                <section id="solutions" className="py-20 bg-white">
-                    <div className="container mx-auto px-6">
-                        <div className="flex flex-col md:flex-row md:items-end justify-between mb-32 gap-8">
-                            <div className="max-w-2xl space-y-6">
-                                <span className="text-[10px] font-black text-blue-600 uppercase tracking-[0.5em]">SERVICES DÉDIÉS</span>
-                                <h2 className="heading-pro-max text-left uppercase">
-                                    <span className="italic font-light text-[#18448F]">Performance & </span><br />
-                                    <span className="font-bold text-[#18448F]">Raffinement.</span>
-                                </h2>
-                            </div>
-                            <p className="text-slate-400 text-sm font-light max-w-sm border-l border-blue-100 pl-6">
-                                "La qualité de l'eau est l'ingrédient invisible qui définit la réputation d'une table d'exception."
-                            </p>
-                        </div>
 
                         <div className="relative">
                             <div className={cn(
@@ -413,8 +422,6 @@ const HotellerieRestauration = () => {
                                 ))}
                             </div>
                         </div>
-                    </div>
-                </section>
 
                 {/* 3. EXPERTISE CULINAIRE SECTION (Side-by-Side like Expert Section) */}
                 <section className="bg-white relative overflow-hidden border-y border-slate-100">

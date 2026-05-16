@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import Header from "@/components/Header";
 import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 import Footer from "@/components/Footer";
+import Hero from "@/components/Hero";
 import drinkWaterImg from "@/assets/boire-eau-robinet.jpg";
 import bathWomanImg from "@/assets/young-nude-woman-taking-relaxing-foamy-bath.jpg";
 import TestimonialsSection from "@/components/TestimonialsSection";
@@ -57,68 +58,49 @@ const FiltreEauHauteEfficacite = () => {
             <Header />
 
             <main>
-                {/* 1. Product Hero Section */}
-                <section className="relative lg:h-[850px] flex flex-col lg:items-center overflow-hidden bg-white">
-                    <div className="absolute top-[50px] left-0 right-0 z-30 pointer-events-none hidden lg:block">
-                        <div className="container mx-auto px-6 pointer-events-auto">
-                            <GlobalBreadcrumbs variant="light" />
-                        </div>
-                    </div>
-                    <div className="container mx-auto px-6 h-full flex items-center">
-                        <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12 w-full">
-                            {/* Mobile Image Layer */}
-                            <div className="lg:w-1/2 w-full flex flex-col items-center">
-                                <div className="relative w-full aspect-square md:aspect-video lg:aspect-auto lg:h-[600px] flex items-center justify-center">
+                {/* 1. HERO SECTION */}
+                <Hero 
+                    image={drinkWaterImg}
+                    highlightedTitle="Bricareau,"
+                    mainTitle="High Efficiency (HE)."
+                    subtitle="L'adoucisseur et filtre d'eau le plus efficace au monde. Profitez d'une eau d'une pureté absolue tout en réalisant des économies d'eau et de sel inégalées."
+                    showPhone={true}
+                    showBreadcrumbs={true}
+                />
+
+                {/* Product Feature Overlay Section */}
+                <section className="py-24 bg-white relative overflow-hidden">
+                    <div className="container mx-auto px-6">
+                        <div className="flex flex-col lg:flex-row items-center gap-12">
+                            <div className="lg:w-1/2 flex justify-center">
+                                <div className="relative group">
+                                    <div className="absolute inset-0 bg-blue-400/10 blur-[100px] rounded-full group-hover:bg-blue-400/20 transition-all duration-1000" />
                                     <img
                                         src={productImage}
-                                        alt="Filtre d'eau haute efficacité Bricareau HE - Performance et économie d'eau certifiée"
-                                        className="h-full object-contain drop-shadow-2xl z-10"
+                                        alt="Filtre d'eau Bricareau HE"
+                                        className="relative z-10 w-full max-w-[450px] object-contain drop-shadow-2xl"
                                     />
-                                    {/* Sublte background decor */}
-                                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-blue-100 rounded-full blur-3xl opacity-30 pointer-events-none" />
-                                </div>
-                                <div className="hidden lg:flex mt-8 gap-4 opacity-50">
-                                    <div className="w-12 h-12 border border-slate-200 rounded p-1"><img src={productImage} alt="Icône du filtre d'eau haute efficacité HE Bricareau" className="w-full h-full object-contain" /></div>
-                                    <div className="w-12 h-12 border border-slate-200 rounded p-1 opacity-50"><Smartphone className="w-full h-full p-2" /></div>
-                                    <div className="w-12 h-12 border border-slate-200 rounded p-1 opacity-50"><Settings className="w-full h-full p-2" /></div>
                                 </div>
                             </div>
-
-                            {/* Content Layer */}
-                            <div className="lg:w-1/2 w-full text-center lg:text-left pt-8 pb-16 lg:py-0 border-t lg:border-t-0 border-slate-100">
-                                <span className="text-blue-600 font-bold uppercase tracking-widest text-[10px] md:text-sm mb-4 block">
-                                    SYSTÈME DE FILTRATION D'EAU
+                            <div className="lg:w-1/2 space-y-8">
+                                <span className="text-blue-600 font-bold uppercase tracking-widest text-sm mb-4 block">
+                                    SYSTÈME DE FILTRATION D'EAU INTELLIGENT
                                 </span>
-                                <h1 className="leading-[1.1] md:leading-[1.2] mb-8 tracking-tighter text-slate-900 text-center">
-                                    <span className="italic font-light text-[#18448F] block">Bricareau</span>
-                                    <span className="font-bold text-[#18448F] block">High Efficiency (HE)</span>
-                                </h1>
-                                <p className="body-pro-max mb-8 text-center lg:text-justify max-w-xl mx-auto lg:mx-0">
-                                    L'adoucisseur et filtre d'eau le plus efficace au monde. Profitez d'une eau d'une pureté absolue tout en réalisant des économies d'eau et de sel inégalées.
+                                <h2 className="heading-pro-max text-left">
+                                    <span className="italic font-light text-[#18448F] block">Une performance,</span>
+                                    <span className="font-bold text-[#18448F] block">sans compromis.</span>
+                                </h2>
+                                <p className="body-pro-max text-slate-600 text-justify">
+                                    La technologie HE (Haute Efficacité) n'est pas seulement un nom, c'est une promesse technique. En optimisant chaque cycle de régénération, notre système réduit radicalement votre empreinte environnementale tout en vous offrant une eau d'une douceur exceptionnelle.
                                 </p>
-                                <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                                    <Button
-                                        asChild
-                                    >
-                                        <NavLink to="/contact" className="flex items-center gap-2">
-                                            Démarrer ici <ArrowRight className="h-5 w-5" />
-                                        </NavLink>
-                                    </Button>
-                                    <Button
-                                        variant="outline"
-                                        asChild
-                                    >
-                                        <a href="tel:18552649328">Appeler expert</a>
-                                    </Button>
-                                </div>
-                                <div className="hidden lg:block space-y-6 border-t border-slate-100 pt-8 mt-12">
+                                <div className="space-y-6 border-t border-slate-100 pt-8">
                                     <div className="flex gap-4 items-start">
                                         <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center shrink-0">
                                             <Zap className="w-5 h-5 text-blue-600" />
                                         </div>
                                         <div>
-                                            <h4 className="text-slate-900">Technologie HE (Haute Efficacité)</h4>
-                                            <p className="text-slate-500 text-sm">Réduit jusqu'à 46 % de votre consommation de sel et d'eau.</p>
+                                            <h4 className="text-slate-900 font-bold">Économie de 46%</h4>
+                                            <p className="text-slate-500 text-sm">Réduction massive de votre consommation de sel et d'eau par rapport aux systèmes standards.</p>
                                         </div>
                                     </div>
                                     <div className="flex gap-4 items-start">
@@ -126,17 +108,8 @@ const FiltreEauHauteEfficacite = () => {
                                             <Smartphone className="w-5 h-5 text-blue-600" />
                                         </div>
                                         <div>
-                                            <h4 className="text-slate-900">Application Bricareau Connect</h4>
-                                            <p className="text-slate-500 text-sm">Contrôlez votre consommation d'eau et recevez des alertes sur votre mobile.</p>
-                                        </div>
-                                    </div>
-                                    <div className="flex gap-4 items-start">
-                                        <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center shrink-0">
-                                            <Search className="w-5 h-5 text-blue-600" />
-                                        </div>
-                                        <div>
-                                            <h4 className="text-slate-900">Aqua-Sensor® Intelligent</h4>
-                                            <p className="text-slate-500 text-sm">Détecte automatiquement le besoin de régénération pour plus d'économies.</p>
+                                            <h4 className="text-slate-900 font-bold">Connectivité Totale</h4>
+                                            <p className="text-slate-500 text-sm">Suivez votre consommation en temps réel et recevez des alertes directement sur votre mobile.</p>
                                         </div>
                                     </div>
                                 </div>

@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { toast } from "sonner";
 import { supabase } from "@/lib/supabase";
-import logoBricareau from "@/assets/Logo Bricareau.jpg";
+import logoBricareau from "@/assets/Logo Bricareau.png";
 
 const Footer = () => {
   const [email, setEmail] = useState("");
@@ -46,7 +46,7 @@ const Footer = () => {
               <img
                 src={logoBricareau}
                 alt="Bricareau Water Specialist - Spécialiste du traitement d'eau au Canada"
-                className="h-10 w-auto"
+                className="h-10 md:h-12 w-auto brightness-0 invert"
               />
             </div>
             <p className="text-sm text-white/80 leading-relaxed">
