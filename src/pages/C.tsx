@@ -92,7 +92,7 @@ const C = () => {
   const navigate = useNavigate();
   const [showAllFaqs, setShowAllFaqs] = React.useState(false);
   const [activeCol, setActiveCol] = React.useState(0);
-  const [desktopCol, setDesktopCol] = React.useState(3); // 3, 4, or 5 (Cristal Pro products)
+  const [desktopPage, setDesktopPage] = React.useState(0); // 0 or 1
   const resourcesRef = React.useRef<HTMLDivElement>(null);
 
   const scrollResources = (direction: 'left' | 'right') => {
@@ -624,9 +624,9 @@ const C = () => {
                                         variant="outline" 
                                         onClick={() => {
                                             setActiveCol(Math.max(0, activeCol - 1));
-                                            setDesktopCol(Math.max(3, desktopCol - 1));
+                                            setDesktopPage(0);
                                         }}
-                                        disabled={(window.innerWidth < 1024 && activeCol === 0) || (window.innerWidth >= 1024 && desktopCol === 3)}
+                                        disabled={(window.innerWidth < 1024 && activeCol === 0) || (window.innerWidth >= 1024 && desktopPage === 0)}
                                         className="rounded-full shadow-sm hover:shadow-md transition-all h-10 w-10 md:h-12 md:w-12 border-slate-200"
                                     >
                                         <ChevronLeft className="h-5 w-5 md:h-6 md:w-6" />
@@ -634,8 +634,8 @@ const C = () => {
                                     
                                     {/* Desktop Dot Indicator */}
                                     <div className="hidden lg:flex gap-1.5 px-2">
-                                        {[3, 4, 5].map((i) => (
-                                            <div key={i} className={`h-1.5 rounded-full transition-all duration-300 ${i === desktopCol ? 'w-6 bg-blue-600' : 'w-1.5 bg-blue-100'}`} />
+                                        {[0, 1].map((i) => (
+                                            <div key={i} className={`h-1.5 rounded-full transition-all duration-300 ${i === desktopPage ? 'w-6 bg-blue-600' : 'w-1.5 bg-blue-100'}`} />
                                         ))}
                                     </div>
 
@@ -644,9 +644,9 @@ const C = () => {
                                         variant="outline" 
                                         onClick={() => {
                                             setActiveCol(Math.min(5, activeCol + 1));
-                                            setDesktopCol(Math.min(5, desktopCol + 1));
+                                            setDesktopPage(1);
                                         }}
-                                        disabled={(window.innerWidth < 1024 && activeCol === 5) || (window.innerWidth >= 1024 && desktopCol === 5)}
+                                        disabled={(window.innerWidth < 1024 && activeCol === 5) || (window.innerWidth >= 1024 && desktopPage === 1)}
                                         className="rounded-full shadow-sm hover:shadow-md transition-all h-10 w-10 md:h-12 md:w-12 border-slate-200"
                                     >
                                         <ChevronRight className="h-5 w-5 md:h-6 md:w-6" />
@@ -663,18 +663,18 @@ const C = () => {
                                             </th>
                                             {[
                                                 { name: "Vectapure NX", img: vectapureROImg, badge: "Osmose NX", color: "bg-blue-600" },
-                                                { name: "Série Essentiel", img: drinkingWaterImg, badge: "Osmose 6E", color: "bg-emerald-600" },
-                                                { name: "Sérénité Direct", img: freezelifeROImg, badge: "600 GPD", color: "bg-amber-600" },
                                                 { name: "Cristal Pro I", img: essentialImg_filtration, badge: "Sédiments", color: "bg-blue-600" },
                                                 { name: "Cristal Pro II", img: plusROImg_filtration, badge: "Duo Pur", color: "bg-emerald-600" },
                                                 { name: "Cristal Pro III", img: eliteROImg_filtration, badge: "Ultrafiltration", color: "bg-amber-600" },
+                                                { name: "Série Essentiel", img: drinkingWaterImg, badge: "Osmose 6E", color: "bg-emerald-600" },
+                                                { name: "Sérénité Direct", img: freezelifeROImg, badge: "600 GPD", color: "bg-amber-600" },
                                             ].map((m, i) => (
                                              <th 
                                                     key={i} 
                                                      className={cn(
                                                         "p-4 md:p-6 text-center transition-all duration-500 min-w-[220px]",
                                                         i === activeCol ? "table-cell" : "hidden",
-                                                        (i < 3 || i === desktopCol) ? "lg:table-cell" : "lg:hidden"
+                                                        ((desktopPage === 0 && (i === 1 || i === 2 || i === 3)) || (desktopPage === 1 && (i === 0 || i === 4 || i === 5))) ? "lg:table-cell" : "lg:hidden"
                                                     )}
                                                 >
                                                     <div className="flex flex-col items-center gap-6">
@@ -701,13 +701,13 @@ const C = () => {
                                                 <td className="p-6 md:p-10 font-bold text-[#18448F] bg-white sticky left-0 z-30 border-r border-slate-50 drop-shadow-sm lg:drop-shadow-none text-[12px] md:text-sm italic group-hover:text-blue-600 transition-colors">
                                                     {row.feature}
                                                 </td>
-                                                {["stage4", "stage5", "stage6", "essential", "plus", "elite"].map((model, idx) => (
+                                                {["stage4", "essential", "plus", "elite", "stage5", "stage6"].map((model, idx) => (
                                                      <td 
                                                         key={model} 
                                                         className={cn(
                                                             "p-6 md:p-10 text-center text-[13px] md:text-sm font-light leading-relaxed text-slate-600 transition-all duration-500",
                                                             idx === activeCol ? "table-cell" : "hidden",
-                                                            (idx < 3 || idx === desktopCol) ? "lg:table-cell" : "lg:hidden"
+                                                            ((desktopPage === 0 && (idx === 1 || idx === 2 || idx === 3)) || (desktopPage === 1 && (idx === 0 || idx === 4 || idx === 5))) ? "lg:table-cell" : "lg:hidden"
                                                         )}
                                                     >
                                                         {(() => {
@@ -728,7 +728,7 @@ const C = () => {
                                                          className={cn(
                                                             "p-6 md:p-10 text-center transition-all duration-500",
                                                             idx === activeCol ? "table-cell" : "hidden",
-                                                            (idx < 3 || idx === desktopCol) ? "lg:table-cell" : "lg:hidden"
+                                                            ((desktopPage === 0 && (idx === 1 || idx === 2 || idx === 3)) || (desktopPage === 1 && (idx === 0 || idx === 4 || idx === 5))) ? "lg:table-cell" : "lg:hidden"
                                                         )}
                                                     >
                                                         <ProMaxButton asChild className="w-full h-16">

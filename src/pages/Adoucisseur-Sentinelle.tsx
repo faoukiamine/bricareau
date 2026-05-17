@@ -107,8 +107,7 @@ const AdoucisseurSentinelle = () => {
                             </motion.div>
                         </div>
                     </div>
-                </div>
-            </section>
+                
                 
                 {/* Integrated Specs Console */}
                     <div className="mt-24 pt-24 border-t border-slate-200/60">

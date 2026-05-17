@@ -551,9 +551,9 @@ const FiltrationDeauPotable = () => {
                                                 Critères Techniques
                                             </th>
                                             {[
-                                                { name: "Série Vectapure", img: vectapureROImg, badge: "L'Essentiel", color: "bg-blue-600" },
-                                                { name: "Série Essentiel", img: drinkingWaterImg, badge: "Le Plus Populaire", color: "bg-emerald-600" },
-                                                { name: "Série Sérénité", img: freezelifeROImg, badge: "Débit Direct", color: "bg-amber-600" },
+                                                { name: "Cristal Pro I", img: vectapureROImg, badge: "L'Essentiel", color: "bg-blue-600" },
+                                                { name: "Cristal Pro II", img: drinkingWaterImg, badge: "Le Plus Populaire", color: "bg-emerald-600" },
+                                                { name: "Cristal Pro III", img: freezelifeROImg, badge: "Débit Direct", color: "bg-amber-600" },
                                             ].map((m, i) => (
                                                 <th 
                                                     key={i} 

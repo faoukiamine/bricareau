@@ -407,7 +407,7 @@ const DesinfectionUV = () => {
                             </span>
                             <h2 className="heading-pro-max">
                                 <span className="italic font-light text-[#18448F] block">Quelles menaces invisibles</span>
-                                <span className="font-bold text-[#18448F] block text-center uppercase tracking-tight">guettent votre puits ?</span>
+                                <span className="font-bold text-[#18448F] block text-center uppercase tracking-tight">s'infiltrent dans votre eau de puits ?</span>
                             </h2>
                         </div>
 
