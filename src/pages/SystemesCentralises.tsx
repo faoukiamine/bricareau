@@ -26,17 +26,21 @@ import {
     AccordionItem,
     AccordionTrigger
 } from "@/components/ui/accordion";
+import ExpertAvatars from "@/components/ExpertAvatars";
+import { ProMaxButton } from "@/components/ui/ProMaxButton";
 
 // High-fidelity generated assets
-import engineeringHeroImg from "@/assets/61TWBHPkOiL._AC_SX679_.jpg";
-import blueprintImg from "@/assets/water_system_blueprint_render_1778902045750.png";
-import filterHousingImg from "@/assets/high_flow_cartridge_filter_housing_render_1778897048455.png";
-import filtrationSkidImg from "@/assets/multimedia_filtration_skid_render_1778897031272.png";
+import engineeringHeroImg from "@/assets/2148836794.jpg";
+import protectionConduitsImg from "@/assets/70609919.jpg";
+import conformiteSanitaireImg from "@/assets/initial.jpg";
+import economiesEnergieImg from "@/assets/2149281314.jpg";
 import technicianInspectionImg from "@/assets/10271.jpg";
-import reverseOsmosisSkidImg from "@/assets/industrial_reverse_osmosis_hero_1778897309067.png";
+import reverseOsmosisSkidImg from "@/assets/144d1310-23fc-4cbd-92df-81d17d7a393c.jpg";
+import filtrationSkidImg from "@/assets/7kbp.png";
+import elkayBottleFillerImg from "@/assets/elkayv2-LZS8WSLK_image_vignette.webp";
 
 const SystemesCentralises = () => {
-    const [activeAdvantageImage, setActiveAdvantageImage] = useState(blueprintImg);
+    const [activeAdvantageImage, setActiveAdvantageImage] = useState(protectionConduitsImg);
 
     useEffect(() => {
         document.title = "Systèmes de Filtration Centralisés pour Bâtiments | Bricareau";
@@ -51,8 +55,8 @@ const SystemesCentralises = () => {
                 {/* SECTION 1: MODERN CINEMATIC HERO (Same style as /residentiel) */}
                 <Hero 
                     image={engineeringHeroImg}
-                    highlightedTitle="Systèmes de filtration "
-                    mainTitle="centralisés pour bâtiments."
+                    highlightedTitle="Solutions de filtration d'eau "
+                    mainTitle="centralisées pour bâtiments."
                     subtitle="Protégez l'ensemble des installations de votre bâtiment avec une filtration industrielle et commerciale centralisée de premier ordre. Une solution sur mesure pour éliminer le calcaire, le chlore et les contaminants."
                     ctaText="DEMANDER UNE ÉTUDE SUR MESURE"
                     ctaLink="/contact-entreprises"
@@ -96,8 +100,9 @@ const SystemesCentralises = () => {
                             <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.3em] mb-8">
                                 L'INGÉNIERIE DE L'INFRASTRUCTURE
                             </span>
-                            <h2 className="text-4xl md:text-5xl font-bold text-[#18448F] tracking-tight">
-                                Ce que nous apportons à votre campus
+                            <h2 className="text-3xl md:text-5xl font-light tracking-tight text-slate-950 leading-tight uppercase">
+                                Ce que nous apportons <br />
+                                <span className="text-blue-600 italic font-bold font-serif lowercase">à la performance de votre campus.</span>
                             </h2>
                         </div>
 
@@ -119,9 +124,9 @@ const SystemesCentralises = () => {
                                             className="w-full space-y-2"
                                             onValueChange={(value) => {
                                                 const mapping: Record<string, string> = {
-                                                    "item-0": blueprintImg,
-                                                    "item-1": filtrationSkidImg,
-                                                    "item-2": filterHousingImg,
+                                                    "item-0": protectionConduitsImg,
+                                                    "item-1": economiesEnergieImg,
+                                                    "item-2": conformiteSanitaireImg,
                                                     "item-3": reverseOsmosisSkidImg
                                                 };
                                                 if (value && mapping[value]) {
@@ -195,24 +200,6 @@ const SystemesCentralises = () => {
                     </div>
                 </section>
 
-                {/* SECTION 4: HORIZONTAL DUAL GALLERY */}
-                <section className="grid grid-cols-1 md:grid-cols-2 gap-6 p-6 bg-white max-w-7xl mx-auto">
-                    <div className="aspect-[16/10] rounded-[2.5rem] overflow-hidden shadow-md bg-slate-50 p-4 border border-slate-100 flex items-center justify-center">
-                        <img 
-                            src={filterHousingImg} 
-                            alt="Corps de filtre de cartouche haute pression" 
-                            className="max-h-full object-contain hover:scale-105 transition-transform duration-1000" 
-                        />
-                    </div>
-                    <div className="aspect-[16/10] rounded-[2.5rem] overflow-hidden shadow-md bg-slate-50 p-4 border border-slate-100 flex items-center justify-center">
-                        <img 
-                            src={filtrationSkidImg} 
-                            alt="Skid de filtration multimédia industriel" 
-                            className="max-h-full object-contain hover:scale-105 transition-transform duration-1000" 
-                        />
-                    </div>
-                </section>
-
                 {/* SECTION 5: COLUMN SPACE & SERVICE GRID */}
                 <section className="py-32 bg-white">
                     <div className="container mx-auto px-6 max-w-7xl">
@@ -221,46 +208,74 @@ const SystemesCentralises = () => {
                                 NOTRE SERVICE GLOBAL
                             </span>
                             <h2 className="heading-pro-max text-center">
-                                <span className="italic font-light text-blue-600">Ce que nous apportons</span> <br />
-                                <span className="font-bold text-slate-900">à votre bâtiment.</span>
+                                <span className="italic font-light text-blue-600">Valoriser & sécuriser</span> <br />
+                                <span className="font-bold text-slate-900">vos infrastructures.</span>
                             </h2>
                         </div>
 
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                             
-                            {/* Block 1: Innovative Solutions */}
-                            <div className="flex flex-col gap-8 bg-slate-50 p-10 rounded-[3rem] border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+                            {/* Block 1: Elkay Bottle Filling Stations */}
+                            <div className="flex flex-col gap-8 bg-slate-50 p-10 rounded-[3rem] border border-slate-100 shadow-sm hover:shadow-md transition-shadow justify-between">
                                 <div className="space-y-4">
-                                    <h3 className="text-3xl font-bold text-slate-900">
-                                        Des solutions innovantes pour votre entreprise
+                                    <span className="inline-block px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-[9px] font-black uppercase tracking-wider">
+                                        Remplissage Écoresponsable
+                                    </span>
+                                    <h3 className="text-3xl font-bold text-slate-900 leading-tight">
+                                        Stations de Remplissage Elkay
                                     </h3>
-                                    <p className="text-slate-500 font-light text-sm leading-relaxed max-w-xl">
-                                        Nos ingénieurs conçoivent des stations de filtration centralisées modulaires s'intégrant parfaitement dans vos locaux techniques, optimisant l'encombrement au sol et facilitant l'accès pour l'entretien.
+                                    <p className="text-slate-500 font-light text-sm leading-relaxed text-justify">
+                                        Intégrez nos stations de remplissage automatique Elkay intelligentes. Une solution robuste et hygiénique à activation sans contact, idéale pour réduire l'usage de plastique à usage unique et offrir une eau réfrigérée et purifiée de grand débit à vos usagers.
                                     </p>
                                 </div>
-                                <div className="aspect-[16/9] w-full rounded-2xl overflow-hidden shadow-inner">
+                                <div className="aspect-[16/10] w-full rounded-2xl overflow-hidden shadow-inner">
                                     <img 
-                                        src={technicianInspectionImg} 
-                                        alt="Techniciens Bricareau effectuant une inspection technique" 
+                                        src={elkayBottleFillerImg} 
+                                        alt="Station de remplissage automatique de bouteilles d'eau Elkay intégrée par Bricareau" 
                                         className="w-full h-full object-cover" 
                                     />
                                 </div>
                             </div>
 
-                            {/* Block 2: Maintenance and Support */}
-                            <div className="flex flex-col gap-8 bg-slate-50 p-10 rounded-[3rem] border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+                            {/* Block 2: Innovative Solutions */}
+                            <div className="flex flex-col gap-8 bg-slate-50 p-10 rounded-[3rem] border border-slate-100 shadow-sm hover:shadow-md transition-shadow justify-between">
                                 <div className="space-y-4">
-                                    <h3 className="text-3xl font-bold text-slate-900">
-                                        Maintenance des systèmes existants
+                                    <span className="inline-block px-3 py-1 bg-slate-200 text-slate-800 rounded-full text-[9px] font-black uppercase tracking-wider">
+                                        Conception & Planification
+                                    </span>
+                                    <h3 className="text-3xl font-bold text-slate-900 leading-tight">
+                                        Ingénierie & Solutions sur mesure
                                     </h3>
-                                    <p className="text-slate-500 font-light text-sm leading-relaxed max-w-xl">
-                                        Un service d'assistance technique disponible 24/7 et des contrats d'entretien préventif sur mesure pour garantir la performance continue de vos installations de filtration d'eau.
+                                    <p className="text-slate-500 font-light text-sm leading-relaxed text-justify">
+                                        Nous concevons des stations de filtration centralisées modulaires s'intégrant parfaitement dans vos locaux techniques, optimisant l'encombrement au sol tout en maximisant la performance globale.
                                     </p>
                                 </div>
-                                <div className="aspect-[16/9] w-full rounded-2xl overflow-hidden shadow-inner">
+                                <div className="aspect-[16/10] w-full rounded-2xl overflow-hidden shadow-inner">
+                                    <img 
+                                        src={filtrationSkidImg} 
+                                        alt="Station de filtration centralisée modulaire conçue par Bricareau" 
+                                        className="w-full h-full object-cover" 
+                                    />
+                                </div>
+                            </div>
+
+                            {/* Block 3: Maintenance and Support */}
+                            <div className="flex flex-col gap-8 bg-slate-50 p-10 rounded-[3rem] border border-slate-100 shadow-sm hover:shadow-md transition-shadow justify-between">
+                                <div className="space-y-4">
+                                    <span className="inline-block px-3 py-1 bg-slate-200 text-slate-800 rounded-full text-[9px] font-black uppercase tracking-wider">
+                                        Disponibilité & Opérabilité
+                                    </span>
+                                    <h3 className="text-3xl font-bold text-slate-900 leading-tight">
+                                        Maintenance & Support technique
+                                    </h3>
+                                    <p className="text-slate-500 font-light text-sm leading-relaxed text-justify">
+                                        Notre assistance technique disponible 24/7 et nos contrats d'entretien préventif sur mesure garantissent la continuité de vos opérations et la longévité de vos infrastructures hydrauliques.
+                                    </p>
+                                </div>
+                                <div className="aspect-[16/10] w-full rounded-2xl overflow-hidden shadow-inner">
                                     <img 
                                         src={reverseOsmosisSkidImg} 
-                                        alt="Système industriel d'osmose inverse et de traitement centralisé" 
+                                        alt="Équipement d'osmose inverse industriel et support technique Bricareau" 
                                         className="w-full h-full object-cover" 
                                     />
                                 </div>
@@ -270,12 +285,87 @@ const SystemesCentralises = () => {
                     </div>
                 </section>
 
-                {/* SECTION 6: RELATED RESOURCES / CASE STUDIES */}
-                <section className="py-32 bg-slate-50/50">
+                {/* SECTION 8: TESTIMONIALS SECTION (MOVED HERE) */}
+                <div className="bg-slate-50 py-32 border-y border-slate-100">
+                    <TestimonialsSection 
+                        filterProduct="Industriel"
+                        limit={6}
+                        title={
+                            <div className="text-center space-y-3 mb-16">
+                                <span className="text-[10px] font-black text-blue-500 uppercase tracking-[0.5em] block mb-4">AVIS CLIENTS</span>
+                                <h2 className="heading-pro-max text-center uppercase">
+                                    <span className="italic font-light text-[#18448F]">La satisfaction de nos </span>
+                                    <span className="font-bold text-[#18448F]">partenaires.</span>
+                                </h2>
+                            </div>
+                        }
+                    />
+                </div>
+
+                {/* SECTION 7: PREMIUM CTA SECTION */}
+                <section className="py-32 bg-[#18448F] relative overflow-hidden text-center">
+                    <div className="absolute inset-0 bg-radial-gradient opacity-20" />
+                    
+                    {/* Background Image with Overlay */}
+                    <div className="absolute inset-0 z-0 opacity-25">
+                        <img
+                            src={technicianInspectionImg}
+                            alt="Technicien inspectant les systèmes de filtration du bâtiment - Solution Bricareau"
+                            className="w-full h-full object-cover grayscale brightness-110"
+                        />
+                        <div className="absolute inset-0 bg-[#18448F]/30 backdrop-blur-sm" />
+                    </div>
+
+                    <div className="container mx-auto px-6 relative z-10">
+                        <div className="max-w-5xl mx-auto text-center space-y-12">
+                            <div className="space-y-6">
+                                <span className="inline-block px-4 py-1.5 bg-white text-[#18448F] rounded-full text-[10px] font-black uppercase tracking-[0.4em]">
+                                    PROTECTION & PERFORMANCE DES INFRASTRUCTURES
+                                </span>
+                                <h2 className="font-light block leading-tight lg:leading-[64px] text-white text-3xl md:text-6xl tracking-tight uppercase">
+                                    Garantissez une eau d'excellence <br />
+                                    <span className="text-white italic font-bold font-serif lowercase">à l'échelle de votre bâtiment.</span>
+                                </h2>
+                                <p className="text-lg md:text-xl text-blue-100/90 max-w-3xl mx-auto font-light leading-relaxed">
+                                    Des solutions de filtration centralisées sur mesure pour protéger vos canalisations, préserver vos équipements thermiques et garantir la conformité sanitaire absolue de tout votre réseau. <br className="hidden md:block" />
+                                    Sécurisez <span className="text-white font-bold border-b border-white">la longévité de vos installations</span> dès aujourd'hui.
+                                </p>
+                            </div>
+
+                            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-4">
+                                <ProMaxButton 
+                                    asChild
+                                    variant="white"
+                                >
+                                    <a href="tel:18552649328" className="flex items-center gap-3">
+                                        <Phone className="h-5 w-5 animate-bounce" />
+                                        Parlez à un ingénieur-conseil
+                                    </a>
+                                </ProMaxButton>
+                                <ProMaxButton
+                                    variant="outline-white"
+                                    asChild
+                                >
+                                    <NavLink to="/contact-entreprises">Demander une étude technique</NavLink>
+                                </ProMaxButton>
+                            </div>
+
+                            <div className="pt-8 flex flex-col items-center gap-4">
+                                <ExpertAvatars />
+                                <p className="text-blue-200/60 text-sm font-medium">
+                                    Déjà adopté par <span className="text-white">plus de 180 gestionnaires immobiliers</span> et sites d'envergure au Québec.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* SECTION 6: RELATED RESOURCES / CASE STUDIES (MOVED TO THE END) */}
+                <section className="py-32 bg-white">
                     <div className="container mx-auto px-6 max-w-7xl">
                         <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between mb-16 gap-6">
                             <div className="space-y-4">
-                                <span className="inline-block px-4 py-1 bg-blue-100 text-blue-700 rounded-full text-[10px] font-black uppercase tracking-widest">
+                                <span className="inline-block px-4 py-1 bg-blue-100 text-blue-750 rounded-full text-[10px] font-black uppercase tracking-widest">
                                     CAS D'EXCELLENCE
                                 </span>
                                 <h2 className="heading-pro-max text-left">
@@ -308,7 +398,7 @@ const SystemesCentralises = () => {
                                     desc: "Une eau douce et protectrice pour l'ensemble des installations de bien-être, préservant la robinetterie haut de gamme et les systèmes de spa."
                                 }
                             ].map((res, idx) => (
-                                <div key={idx} className="bg-white border border-slate-100 p-10 rounded-[2.5rem] shadow-[0_15px_40px_rgba(0,0,0,0.02)] flex flex-col justify-between h-[360px] hover:-translate-y-1.5 transition-transform duration-500">
+                                <div key={idx} className="bg-slate-50/50 border border-slate-100 p-10 rounded-[2.5rem] shadow-[0_15px_40px_rgba(0,0,0,0.02)] flex flex-col justify-between h-[360px] hover:-translate-y-1.5 transition-transform duration-500">
                                     <div className="space-y-4">
                                         <span className="text-[10px] font-black text-blue-600 uppercase tracking-widest leading-none block">
                                             {res.cat}
@@ -330,51 +420,6 @@ const SystemesCentralises = () => {
                         </div>
                     </div>
                 </section>
-
-                {/* SECTION 7: WATER WAVE CALL TO ACTION */}
-                <section className="relative py-32 bg-slate-900 text-white overflow-hidden text-center">
-                    {/* Deep Blue Water Wave Background Layer */}
-                    <div className="absolute inset-0 z-0 opacity-20 mix-blend-overlay">
-                        <img 
-                            src={engineeringHeroImg} 
-                            alt="Vagues d'eau pure" 
-                            className="w-full h-full object-cover" 
-                        />
-                    </div>
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/90 to-slate-900/40" />
-
-                    <div className="container mx-auto px-6 max-w-4xl relative z-10 space-y-10">
-                        <span className="inline-block px-4 py-1.5 bg-blue-500/20 border border-blue-500/30 text-blue-400 rounded-full text-[10px] font-black uppercase tracking-widest">
-                            EXPERTIS TECHNIQUE
-                        </span>
-                        <h2 className="text-3xl md:text-6xl font-bold tracking-tight text-white leading-tight uppercase">
-                            Laissez-nous vous aider à trouver <br />
-                            <span className="text-blue-400 italic font-light lowercase">la solution adaptée.</span>
-                        </h2>
-                        <div className="pt-4">
-                            <Button size="lg" className="h-16 px-12 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-bold uppercase tracking-widest text-xs transition-transform hover:scale-[1.02]" asChild>
-                                <NavLink to="/contact-entreprises">DEMANDER UNE ÉTUDE TECHNIQUE</NavLink>
-                            </Button>
-                        </div>
-                    </div>
-                </section>
-
-                {/* SECTION 8: TESTIMONIALS SECTION */}
-                <div className="bg-slate-50 py-32 border-y border-slate-100">
-                    <TestimonialsSection 
-                        filterProduct="Industriel"
-                        limit={6}
-                        title={
-                            <div className="text-center space-y-3 mb-16">
-                                <span className="text-[10px] font-black text-blue-500 uppercase tracking-[0.5em] block mb-4">AVIS CLIENTS</span>
-                                <h2 className="heading-pro-max text-center uppercase">
-                                    <span className="italic font-light text-[#18448F]">La satisfaction de nos </span>
-                                    <span className="font-bold text-[#18448F]">partenaires.</span>
-                                </h2>
-                            </div>
-                        }
-                    />
-                </div>
             </main>
 
             <Footer />

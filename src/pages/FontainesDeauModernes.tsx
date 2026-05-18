@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { cn } from "@/lib/utils";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
@@ -18,24 +19,39 @@ import {
     PiggyBank,
     Star,
     ChevronRight,
+    ChevronLeft,
     Sparkles,
     Settings,
     ChevronDown
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { NavLink } from "@/components/NavLink";
+import {
+    Accordion,
+    AccordionContent,
+    AccordionItem,
+    AccordionTrigger
+} from "@/components/ui/accordion";
+import ExpertAvatars from "@/components/ExpertAvatars";
+import { ProMaxButton } from "@/components/ui/ProMaxButton";
+import hardWaterFaucetImg from "@/assets/Hard Water-Faucet.jpg";
 
 // Existing high-fidelity assets
 import heroFountains from "@/assets/Fontaines d'eau.webp";
-import countertopFountainImg from "@/assets/A9.jpg";
-import bottlelessFountainImg from "@/assets/A13.jpg";
+import countertopFountainImg1 from "@/assets/A8.jpg";
+import countertopFountainImg2 from "@/assets/A9.jpg";
+import countertopFountainImg3 from "@/assets/A12.jpg";
+import bottlelessFountainImg1 from "@/assets/A13.jpg";
+import bottlelessFountainImg2 from "@/assets/A7.webp";
+import bottlelessFountainImg3 from "@/assets/4rlkbv4rlkbv4rlk.png";
 import iceMachineImg from "@/assets/Machine+à+glaçons+de+comptoir+auto-nettoyante+de+26+lb+R.W.FLAME-78609293.webp";
 import ecoImpactImg4 from "@/assets/water-dispenser in office.jpg";
 import ecoImpactImg5 from "@/assets/water-dispenser in kitchen.jpg";
-import eauFontaineImg from "@/assets/83658.jpg";
+import eauFontaineImg from "@/assets/1jp5k.png";
 
 const FontainesDeauModernes = () => {
     const [activeFeature, setActiveFeature] = useState(0);
+    const [activeFeatureImage, setActiveFeatureImage] = useState(eauFontaineImg);
     const [activeTab, setActiveTab] = useState("cold");
     const [activeFaq, setActiveFaq] = useState<number | null>(null);
 
@@ -140,90 +156,309 @@ const FontainesDeauModernes = () => {
                     </div>
                 </section>
 
-                {/* SECTION 3: ACCORDION FEATURE GRID ("Ce que nous apportons au bureau") */}
-                <section className="py-32 bg-slate-50/50">
-                    <div className="container mx-auto px-6">
-                        <div className="grid grid-cols-1 lg:grid-cols-12 gap-20 items-center">
-                            {/* Left Text & Accordion */}
-                            <div className="lg:col-span-6 space-y-12">
-                                <div className="space-y-6">
-                                    <span className="inline-block px-4 py-1 bg-blue-100 text-blue-700 rounded-full text-[10px] font-black uppercase tracking-widest">
-                                        VALEUR AJOUTÉE
-                                    </span>
-                                    <h2 className="heading-pro-max text-left">
-                                        <span className="italic font-light text-blue-600 block">Ce que nous apportons</span>
-                                        <span className="font-bold text-slate-950 block">au bureau.</span>
-                                    </h2>
-                                </div>
+                {/* SECTION 3: BENTO FLUID HUB ("Élevez le standard d'hydratation de vos bureaux") */}
+                <section id="office-benefits" className="py-32 bg-slate-50/50 relative overflow-hidden">
+                    <style>{`
+                        @keyframes shimmer {
+                            0% { transform: translateX(-150%) skewX(-12deg); }
+                            100% { transform: translateX(500%) skewX(-12deg); }
+                        }
+                        .animate-shimmer {
+                            animation: shimmer 3s infinite;
+                        }
+                    `}</style>
 
-                                <div className="space-y-4">
-                                    {features.map((feat, idx) => (
-                                        <div 
-                                            key={idx} 
-                                            onClick={() => setActiveFeature(idx)}
-                                            className={`p-8 rounded-[2rem] border transition-all duration-500 cursor-pointer ${
-                                                activeFeature === idx 
-                                                ? "bg-white border-blue-200 shadow-[0_20px_40px_-15px_rgba(0,0,0,0.03)]" 
-                                                : "bg-transparent border-transparent hover:border-slate-200"
-                                            }`}
-                                        >
-                                            <div className="flex items-center justify-between">
-                                                <h4 className={`text-xl font-bold transition-colors ${activeFeature === idx ? "text-blue-600" : "text-slate-800"}`}>
-                                                    {feat.title}
-                                                </h4>
-                                                <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-all ${
-                                                    activeFeature === idx ? "bg-blue-100 text-blue-600 rotate-180" : "bg-slate-100 text-slate-400"
-                                                }`}>
-                                                    <ChevronDown className="w-4 h-4" />
-                                                </div>
-                                            </div>
-                                            <div className={`transition-all duration-500 overflow-hidden ${
-                                                activeFeature === idx ? "max-h-40 mt-4 opacity-100" : "max-h-0 opacity-0"
-                                            }`}>
-                                                <p className="text-slate-500 font-light leading-relaxed text-sm">
-                                                    {feat.desc}
+                    {/* Background architectural vertical lines */}
+                    <div className="absolute left-[8%] top-0 bottom-0 w-px bg-slate-100 hidden xl:block z-0" />
+                    <div className="absolute right-[8%] top-0 bottom-0 w-px bg-slate-100 hidden xl:block z-0" />
+
+                    <div className="container mx-auto px-6 relative z-10 max-w-7xl">
+                        <div className="text-center mb-24 max-w-3xl mx-auto space-y-6">
+                            <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.3em]">
+                                VALEUR AJOUTÉE
+                            </span>
+                            <h2 className="text-4xl md:text-6xl font-light tracking-tight text-slate-900 leading-tight uppercase">
+                                Élevez le standard <br />
+                                <span className="text-blue-600 italic font-bold font-serif lowercase">d'hydratation de vos bureaux.</span>
+                            </h2>
+                        </div>
+
+                        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+                            
+                            {/* Left Column: Asymmetrical Bento Grid of Features */}
+                            <div className="col-span-1 lg:col-span-7 z-20">
+                                <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
+                                    
+                                    {/* Cell 1: Pureté absolue (Large 7-col) */}
+                                    <div 
+                                        onClick={() => {
+                                            setActiveFeature(0);
+                                            setActiveFeatureImage(eauFontaineImg);
+                                        }}
+                                        className={cn(
+                                            "md:col-span-7 p-8 rounded-[2.5rem] cursor-pointer transition-all duration-500 border relative overflow-hidden flex flex-col justify-between min-h-[280px]",
+                                            activeFeature === 0 
+                                                ? "bg-[#18448F] border-transparent text-white shadow-[0_20px_50px_rgba(24,68,143,0.15)] translate-x-1"
+                                                : "bg-white/80 backdrop-blur-md border-slate-100 hover:border-slate-200 text-slate-800 shadow-sm hover:shadow-md hover:translate-x-0.5"
+                                        )}
+                                    >
+                                        {/* Pure water bouncing laser scanner overlay */}
+                                        {activeFeature === 0 && (
+                                            <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-cyan-300 to-transparent opacity-60 animate-[bounce_4s_infinite]" />
+                                        )}
+                                        {activeFeature === 0 && (
+                                            <div className="absolute -top-16 -left-16 w-32 h-32 bg-blue-400/20 blur-2xl rounded-full pointer-events-none" />
+                                        )}
+
+                                        <div className="flex justify-between items-start">
+                                            <span className={cn(
+                                                "text-[9px] font-black uppercase tracking-widest",
+                                                activeFeature === 0 ? "text-blue-200" : "text-blue-600"
+                                            )}>
+                                                Purification Moléculaire
+                                            </span>
+                                            <span className={cn("text-3xl font-light font-serif tracking-tighter", activeFeature === 0 ? "text-blue-300/40" : "text-slate-250")}>
+                                                01
+                                            </span>
+                                        </div>
+                                        
+                                        <div className="space-y-3 mt-6">
+                                            <h3 className="text-xl font-bold tracking-tight">{features[0].title}</h3>
+                                            <p className={cn("text-sm font-light leading-relaxed text-justify", activeFeature === 0 ? "text-blue-100/90" : "text-slate-500")}>
+                                                {features[0].desc}
+                                            </p>
+                                        </div>
+                                    </div>
+                                    
+                                    {/* Cell 2: Température idéale (Compact 5-col) */}
+                                    <div 
+                                        onClick={() => {
+                                            setActiveFeature(1);
+                                            setActiveFeatureImage(countertopFountainImg3);
+                                        }}
+                                        className={cn(
+                                            "md:col-span-5 p-8 rounded-[2.5rem] cursor-pointer transition-all duration-500 border relative overflow-hidden flex flex-col justify-between min-h-[280px]",
+                                            activeFeature === 1 
+                                                ? "bg-[#18448F] border-transparent text-white shadow-[0_20px_50px_rgba(24,68,143,0.15)] translate-x-1"
+                                                : "bg-white/80 backdrop-blur-md border-slate-100 hover:border-slate-200 text-slate-800 shadow-sm hover:shadow-md hover:translate-x-0.5"
+                                        )}
+                                    >
+                                        {activeFeature === 1 && (
+                                            <div className="absolute -top-16 -left-16 w-32 h-32 bg-cyan-400/20 blur-2xl rounded-full pointer-events-none" />
+                                        )}
+
+                                        <div className="flex justify-between items-start">
+                                            <span className={cn(
+                                                "text-[9px] font-black uppercase tracking-widest",
+                                                activeFeature === 1 ? "text-cyan-200" : "text-[#18448F]"
+                                            )}>
+                                                Multi-Température
+                                            </span>
+                                            <span className={cn("text-3xl font-light font-serif tracking-tighter", activeFeature === 1 ? "text-cyan-300/40" : "text-slate-250")}>
+                                                02
+                                            </span>
+                                        </div>
+
+                                        <div className="space-y-3 mt-6">
+                                            <h3 className="text-xl font-bold tracking-tight">{features[1].title}</h3>
+                                            <p className={cn("text-sm font-light leading-relaxed text-justify", activeFeature === 1 ? "text-blue-100/90" : "text-slate-500")}>
+                                                {features[1].desc}
+                                            </p>
+                                        </div>
+
+                                        {/* Interactive thermal indicators at the bottom */}
+                                        <div className="flex gap-2 mt-4 pt-2">
+                                            <span className={cn(
+                                                "px-2.5 py-0.5 rounded-full text-[9px] font-bold tracking-wider uppercase border",
+                                                activeFeature === 1 ? "bg-cyan-500/20 border-cyan-300 text-cyan-200" : "bg-cyan-50 border-cyan-200 text-cyan-600"
+                                            )}>
+                                                Froid
+                                            </span>
+                                            <span className={cn(
+                                                "px-2.5 py-0.5 rounded-full text-[9px] font-bold tracking-wider uppercase border",
+                                                activeFeature === 1 ? "bg-slate-400/20 border-slate-350 text-slate-200" : "bg-slate-50 border-slate-200 text-slate-600"
+                                            )}>
+                                                Tempéré
+                                            </span>
+                                            <span className={cn(
+                                                "px-2.5 py-0.5 rounded-full text-[9px] font-bold tracking-wider uppercase border",
+                                                activeFeature === 1 ? "bg-amber-500/20 border-amber-300 text-amber-250" : "bg-amber-50 border-amber-200 text-amber-600"
+                                            )}>
+                                                Chaud
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    {/* Cell 3: Design élégant (Compact 5-col) */}
+                                    <div 
+                                        onClick={() => {
+                                            setActiveFeature(2);
+                                            setActiveFeatureImage(bottlelessFountainImg1);
+                                        }}
+                                        className={cn(
+                                            "md:col-span-5 p-8 rounded-[2.5rem] cursor-pointer transition-all duration-500 border relative overflow-hidden flex flex-col justify-between min-h-[280px]",
+                                            activeFeature === 2 
+                                                ? "bg-[#18448F] border-transparent text-white shadow-[0_20px_50px_rgba(24,68,143,0.15)] translate-x-1"
+                                                : "bg-white/80 backdrop-blur-md border-slate-100 hover:border-slate-200 text-slate-800 shadow-sm hover:shadow-md hover:translate-x-0.5"
+                                        )}
+                                    >
+                                        {activeFeature === 2 && (
+                                            <div className="absolute -top-16 -left-16 w-32 h-32 bg-indigo-400/20 blur-2xl rounded-full pointer-events-none" />
+                                        )}
+
+                                        <div className="flex justify-between items-start">
+                                            <span className={cn(
+                                                "text-[9px] font-black uppercase tracking-widest",
+                                                activeFeature === 2 ? "text-indigo-200" : "text-[#18448F]"
+                                            )}>
+                                                Esthétique Noble
+                                            </span>
+                                            <span className={cn("text-3xl font-light font-serif tracking-tighter", activeFeature === 2 ? "text-indigo-300/40" : "text-slate-250")}>
+                                                03
+                                            </span>
+                                        </div>
+
+                                        <div className="space-y-3 mt-6">
+                                            <h3 className="text-xl font-bold tracking-tight">{features[2].title}</h3>
+                                            <p className={cn("text-sm font-light leading-relaxed text-justify", activeFeature === 2 ? "text-blue-100/90" : "text-slate-500")}>
+                                                {features[2].desc}
+                                            </p>
+                                        </div>
+
+                                        {/* Glass glare shimmer effect */}
+                                        <div className={cn(
+                                            "absolute -inset-y-12 w-8 bg-white/20 blur-lg -skew-x-12 translate-x-[-150%] transition-transform duration-1000",
+                                            activeFeature === 2 ? "animate-shimmer" : ""
+                                        )} />
+                                    </div>
+
+                                    {/* Cell 4: Économies durables (Large 7-col) */}
+                                    <div 
+                                        onClick={() => {
+                                            setActiveFeature(3);
+                                            setActiveFeatureImage(ecoImpactImg4);
+                                        }}
+                                        className={cn(
+                                            "md:col-span-7 p-8 rounded-[2.5rem] cursor-pointer transition-all duration-500 border relative overflow-hidden flex flex-col justify-between min-h-[280px]",
+                                            activeFeature === 3 
+                                                ? "bg-[#18448F] border-transparent text-white shadow-[0_20px_50px_rgba(24,68,143,0.15)] translate-x-1"
+                                                : "bg-white/80 backdrop-blur-md border-slate-100 hover:border-slate-200 text-slate-800 shadow-sm hover:shadow-md hover:translate-x-0.5"
+                                        )}
+                                    >
+                                        {activeFeature === 3 && (
+                                            <div className="absolute -top-16 -left-16 w-32 h-32 bg-sky-400/20 blur-2xl rounded-full pointer-events-none" />
+                                        )}
+
+                                        <div className="flex justify-between items-start">
+                                            <span className={cn(
+                                                "text-[9px] font-black uppercase tracking-widest",
+                                                activeFeature === 3 ? "text-sky-200" : "text-[#18448F]"
+                                            )}>
+                                                Rendement ROI & Éco
+                                            </span>
+                                            <span className={cn("text-3xl font-light font-serif tracking-tighter", activeFeature === 3 ? "text-sky-300/40" : "text-slate-250")}>
+                                                04
+                                            </span>
+                                        </div>
+
+                                        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center mt-6">
+                                            <div className="md:col-span-8 space-y-2">
+                                                <h3 className="text-xl font-bold tracking-tight">{features[3].title}</h3>
+                                                <p className={cn("text-sm font-light leading-relaxed text-justify", activeFeature === 3 ? "text-blue-100/90" : "text-slate-500")}>
+                                                    {features[3].desc}
                                                 </p>
                                             </div>
+                                            <div className="md:col-span-4 flex justify-center pt-2 md:pt-0">
+                                                <div className={cn(
+                                                    "w-20 h-20 rounded-full border-4 flex flex-col items-center justify-center shadow-lg relative overflow-hidden transition-all duration-500",
+                                                    activeFeature === 3 
+                                                        ? "border-cyan-400 bg-cyan-950/20 text-white" 
+                                                        : "border-blue-100 bg-blue-50/50 text-[#18448F]"
+                                                )}>
+                                                    <div className={cn(
+                                                        "absolute bottom-0 left-0 right-0 h-[70%] transition-transform duration-1000 origin-bottom scale-y-100 opacity-20",
+                                                        activeFeature === 3 ? "bg-cyan-400" : "bg-blue-600"
+                                                    )} />
+                                                    <span className="text-xl font-black leading-none">-70%</span>
+                                                    <span className="text-[7px] font-black uppercase tracking-wider mt-1 opacity-80">Coûts</span>
+                                                </div>
+                                            </div>
                                         </div>
-                                    ))}
+                                    </div>
+
                                 </div>
                             </div>
 
-                            {/* Right Premium Visual Column */}
-                            <div className="lg:col-span-6 relative flex justify-center items-center">
-                                {/* Blue Dotted Grid Pattern Behind */}
-                                <div className="absolute w-[500px] h-[500px] opacity-15 -z-10 bg-radial-dots" />
+                            {/* Right Column: Liquid Glass Showcase Window */}
+                            <div className="col-span-1 lg:col-span-5 relative z-10 flex justify-center">
                                 
-                                <div className="relative w-full aspect-square max-w-[480px] rounded-[3.5rem] overflow-hidden border-[12px] border-white shadow-2xl">
-                                    <img 
-                                        src={eauFontaineImg} 
-                                        alt="Qualité d'hydratation pure" 
-                                        className="w-full h-full object-cover scale-105 hover:scale-110 transition-transform duration-1000" 
-                                    />
-                                    <div className="absolute inset-0 bg-blue-900/10 mix-blend-overlay" />
+                                {/* Ambient Shifting Glow */}
+                                <div className={cn(
+                                    "absolute -inset-12 blur-[120px] rounded-full transition-all duration-1000 opacity-60 z-0",
+                                    activeFeature === 0 && "bg-blue-500/20 translate-x-4 translate-y-4",
+                                    activeFeature === 1 && "bg-cyan-500/20 -translate-x-4 -translate-y-4",
+                                    activeFeature === 2 && "bg-indigo-500/20 translate-x-6 -translate-y-6",
+                                    activeFeature === 3 && "bg-sky-500/20 -translate-x-6 translate-y-6"
+                                )} />
+
+                                {/* Interactive Frame with Glassmorphic Overlay */}
+                                <div className="w-full relative max-w-[480px]">
+                                    
+                                    {/* Dot pattern decorative element */}
+                                    <div className="absolute -top-8 -left-8 w-32 h-32 opacity-30 pointer-events-none z-0">
+                                        <div className="grid grid-cols-8 gap-3">
+                                            {Array.from({ length: 64 }).map((_, i) => (
+                                                <div key={i} className="w-1 h-1 bg-blue-500 rounded-full" />
+                                            ))}
+                                        </div>
+                                    </div>
+
+                                    {/* Main Glass Frame Container */}
+                                    <div className="bg-white rounded-[2.5rem] p-6 sm:p-10 border border-slate-100/80 shadow-[0_45px_90px_-25px_rgba(0,0,0,0.08)] relative z-10 overflow-hidden flex items-center justify-center aspect-square sm:aspect-square">
+                                        
+                                        {/* Fluid background pattern */}
+                                        <div className="absolute inset-0 bg-gradient-to-tr from-slate-50 via-white to-blue-50/30 opacity-60" />
+                                        
+                                        {/* Pure water molecular circle overlay */}
+                                        <div className="absolute w-64 h-64 rounded-full border border-blue-500/5 animate-[spin_40s_linear_infinite] z-0" />
+                                        
+                                        <img 
+                                            key={activeFeatureImage}
+                                            src={activeFeatureImage} 
+                                            alt="Solutions d'hydratation écologiques et design pour le bureau Bricareau" 
+                                            className="relative z-10 max-h-full max-w-full object-contain drop-shadow-2xl animate-in fade-in zoom-in-95 duration-700"
+                                        />
+
+                                        {/* Floating Badge */}
+                                        <div className="absolute bottom-6 right-6 z-20 bg-white/70 backdrop-blur-md border border-slate-100 py-2 px-4 rounded-full shadow-sm flex items-center gap-2">
+                                            <Sparkles className="w-3.5 h-3.5 text-blue-600 animate-pulse" />
+                                            <span className="text-[9px] font-black uppercase tracking-widest text-[#18448F]">
+                                                Pureté & Design Bricareau
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    {/* Outer Decorative Rings */}
+                                    <div className="absolute -bottom-10 -right-10 w-24 h-24 border border-blue-500/10 rounded-full z-0 pointer-events-none" />
+                                    <div className="absolute -bottom-16 -right-16 w-36 h-36 border border-blue-600/5 rounded-full z-0 pointer-events-none" />
                                 </div>
+
                             </div>
                         </div>
                     </div>
                 </section>
 
                 {/* SECTION 4: DARK ECO CALLOUT BANNER */}
-                <section className="py-24 bg-slate-900 text-white overflow-hidden relative">
+                <section className="py-24 bg-[#18448F] text-white overflow-hidden relative">
                     <div className="absolute inset-0 bg-radial-gradient opacity-10" />
                     <div className="container mx-auto px-6 max-w-5xl text-center relative z-10 space-y-8">
-                        <div className="w-16 h-16 rounded-full bg-blue-600/20 border border-blue-500/30 flex items-center justify-center mx-auto text-blue-400">
+                        <div className="w-16 h-16 rounded-full bg-white/10 border border-white/20 flex items-center justify-center mx-auto text-blue-200">
                             <Leaf className="w-8 h-8" />
                         </div>
                         
-                        <blockquote className="text-xl md:text-3xl font-light leading-relaxed italic text-blue-100 max-w-4xl mx-auto">
-                            "Nos fontaines à eau de bureau ne se contentent pas de fournir une eau fraîche. Elles s'inscrivent dans une démarche écoresponsable en éliminant les bouteilles plastiques à usage unique de vos locaux. Grâce à leur système de filtration d'eau innovant, elles garantissent une eau sans impuretés, exempte de chlore et de contaminants microbiologiques. Offrir le meilleur de l'hydratation est un geste fort pour la santé de vos équipes et l'image de marque de votre entreprise."
+                        <blockquote className="text-xl md:text-3xl font-light leading-relaxed italic text-blue-50 max-w-4xl mx-auto">
+                            "Bien plus qu'un simple point d'eau, nos fontaines réseau redéfinissent l'expérience d'hydratation au bureau en éliminant définitivement les bouteilles plastiques de vos locaux. Grâce à une technologie de filtration de pointe, elles garantissent une eau d'une pureté absolue, débarrassée du chlore, des microplastiques et des contaminants microbiologiques. Investir dans une hydratation d'exception est un levier majeur pour la santé de vos collaborateurs et l'image écoresponsable de votre entreprise."
                         </blockquote>
-
-                        <div className="w-12 h-[1px] bg-blue-500/40 mx-auto" />
-                        
-                        <p className="text-[11px] font-black text-blue-400 uppercase tracking-[0.3em]">
-                            Essai gratuit et sans engagement - Installation et entretien inclus.
-                        </p>
                     </div>
                 </section>
 
@@ -231,252 +466,267 @@ const FontainesDeauModernes = () => {
                 <section className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 bg-white">
                     <div className="aspect-[16/10] rounded-[2.5rem] overflow-hidden shadow-md">
                         <img 
-                            src={ecoImpactImg4} 
-                            alt="Fontaine à eau dans un espace café corporatif" 
+                            src={eauFontaineImg} 
+                            alt="Remplissage d'une bouteille d'eau filtrée pure" 
                             className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000" 
                         />
                     </div>
-                    <div className="aspect-[16/10] rounded-[2.5rem] overflow-hidden shadow-md">
+                     <div className="aspect-[16/10] rounded-[2.5rem] overflow-hidden shadow-md">
                         <img 
-                            src={eauFontaineImg} 
+                            src={bottlelessFountainImg3} 
                             alt="Remplissage d'une bouteille d'eau filtrée pure" 
                             className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000" 
                         />
                     </div>
                 </section>
 
-                {/* SECTION 6: COLUMN SPACE & SERVICE GRID */}
-                <section className="py-32 bg-white">
-                    <div className="container mx-auto px-6 max-w-7xl">
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-                            
-                            {/* Block 1: Adaptability */}
-                            <div className="flex flex-col md:flex-row items-center gap-8 bg-slate-50 p-10 rounded-[3rem] border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
-                                <div className="space-y-4 flex-1">
-                                    <h3 className="text-2xl font-bold text-slate-900">
-                                        Conçu pour s'adapter à votre espace
-                                    </h3>
-                                    <p className="text-slate-500 font-light text-sm leading-relaxed">
-                                        Des formats ultra-compacts de comptoir ou autoportants au design prestigieux, s'intégrant parfaitement dans vos cafétérias, salles de conférence et halls d'accueil.
-                                    </p>
-                                </div>
-                                <div className="w-40 aspect-[1/2] relative flex justify-center items-center">
-                                    <div className="absolute w-24 h-24 bg-blue-100/40 rounded-full blur-xl -z-10" />
-                                    <img 
-                                        src={bottlelessFountainImg} 
-                                        alt="Format autoportant slim" 
-                                        className="h-full object-contain mix-blend-multiply" 
-                                    />
-                                </div>
-                            </div>
-
-                            {/* Block 2: Simplicity */}
-                            <div className="flex flex-col md:flex-row-reverse items-center gap-8 bg-slate-50 p-10 rounded-[3rem] border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
-                                <div className="space-y-4 flex-1">
-                                    <h3 className="text-2xl font-bold text-slate-900">
-                                        Simplicité dans le service
-                                    </h3>
-                                    <p className="text-slate-500 font-light text-sm leading-relaxed">
-                                        Une interface tactile moderne et initiative, avec commande mécanique ou sans contact pour une hygiène optimale et une utilisation facilitée au quotidien.
-                                    </p>
-                                </div>
-                                <div className="w-48 aspect-square rounded-full overflow-hidden border-[6px] border-white shadow-lg relative flex justify-center items-center">
-                                    <img 
-                                        src={eauFontaineImg} 
-                                        alt="Service d'eau filtrée" 
-                                        className="h-full w-full object-cover" 
-                                    />
-                                </div>
-                            </div>
-
-                        </div>
+                {/* SECTION 6: MODERN SLIDER SHOWCASE ("Des systèmes pour tous les environnements") */}
+                <section id="solutions-catalog" className="py-24 bg-white relative overflow-hidden border-y border-slate-100">
+                    
+                    {/* Centered Title */}
+                    <div className="container mx-auto px-6 max-w-7xl text-center mb-20">
+                        <h2 className="text-3xl md:text-5xl font-black text-slate-900 tracking-tight">
+                            Une polyvalence totale, peu importe l'environnement
+                        </h2>
                     </div>
-                </section>
 
-                {/* SECTION 7: INTERACTIVE TABS & PRODUCTS SHOWCASE */}
-                <section id="solutions-catalog" className="py-32 bg-slate-50/50">
-                    <div className="container mx-auto px-6 max-w-7xl">
+                    {/* Outer flex container spanning full viewport width */}
+                    <div className="w-full flex flex-col lg:flex-row items-center gap-12 select-none overflow-hidden pl-0">
                         
-                        {/* Title Grid */}
-                        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-20">
-                            <div className="lg:col-span-8 space-y-4">
-                                <span className="inline-block px-4 py-1 bg-blue-100 text-blue-700 rounded-full text-[10px] font-black uppercase tracking-widest">
-                                    CHOIX & MODULARITÉ
-                                </span>
-                                <h2 className="heading-pro-max text-left">
-                                    <span className="italic font-light text-blue-600 block">Des systèmes pour</span>
-                                    <span className="font-bold text-slate-950 block">tous les goûts.</span>
-                                </h2>
-                            </div>
-                            <div className="lg:col-span-4 text-slate-500 text-sm font-light leading-relaxed">
-                                Que ce soit pour un thé réconfortant à midi, un verre d'eau glacée après une réunion, ou une eau finement pétillante pour vos clients, nos fontaines répondent à toutes les envies en un instant.
-                            </div>
-                        </div>
+                        {/* Left Column: Scrollable Cards Container */}
+                        <div className="w-full lg:w-[73%] relative group pl-0">
+                            {/* Left Navigation Arrow (Prev Circle Button) */}
+                            <button 
+                                onClick={() => {
+                                    const el = document.getElementById("fountain-slider-track");
+                                    if (el) {
+                                        const cardWidth = el.firstElementChild ? el.firstElementChild.clientWidth + 24 : 360;
+                                        if (el.scrollLeft <= 15) {
+                                            const maxScrollLeft = el.scrollWidth - el.clientWidth;
+                                            el.scrollTo({ left: maxScrollLeft, behavior: "smooth" });
+                                        } else {
+                                            el.scrollBy({ left: -cardWidth, behavior: "smooth" });
+                                        }
+                                    }
+                                }}
+                                className="absolute -left-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-slate-900 hover:bg-blue-600 text-white flex items-center justify-center shadow-lg transition-all hover:scale-110 active:scale-95 opacity-0 group-hover:opacity-100 focus:opacity-100 transition-opacity duration-300"
+                                aria-label="Précédent"
+                            >
+                                <ChevronLeft className="w-5 h-5" />
+                            </button>
 
-                        {/* Interactive Tabs Header */}
-                        <div className="flex flex-wrap justify-center gap-3 mb-16 bg-white p-2.5 rounded-full border border-slate-200 max-w-3xl mx-auto shadow-sm">
-                            {[
-                                { key: "cold", label: "Eau froide" },
-                                { key: "ambient", label: "Eau tiède" },
-                                { key: "hot", label: "Eau chaude" },
-                                { key: "sparkling", label: "Eau pétillante" }
-                            ].map((tab) => (
-                                <button 
-                                    key={tab.key}
-                                    onClick={() => setActiveTab(tab.key)}
-                                    className={`px-8 py-3.5 text-xs font-black uppercase tracking-widest rounded-full transition-all duration-300 ${
-                                        activeTab === tab.key 
-                                        ? "bg-slate-900 text-white shadow-md transform scale-[1.02]" 
-                                        : "text-slate-500 hover:text-slate-950 hover:bg-slate-50"
-                                    }`}
-                                >
-                                    {tab.label}
-                                </button>
-                            ))}
-                        </div>
+                            {/* Right Navigation Arrow (Next Circle Button) */}
+                            <button 
+                                onClick={() => {
+                                    const el = document.getElementById("fountain-slider-track");
+                                    if (el) {
+                                        const cardWidth = el.firstElementChild ? el.firstElementChild.clientWidth + 24 : 360;
+                                        const maxScrollLeft = el.scrollWidth - el.clientWidth;
+                                        if (el.scrollLeft >= maxScrollLeft - 15) {
+                                            el.scrollTo({ left: 0, behavior: "smooth" });
+                                        } else {
+                                            el.scrollBy({ left: cardWidth, behavior: "smooth" });
+                                        }
+                                    }
+                                }}
+                                className="absolute -right-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-slate-900 hover:bg-blue-600 text-white flex items-center justify-center shadow-lg transition-all hover:scale-110 active:scale-95"
+                                aria-label="Suivant"
+                            >
+                                <ChevronRight className="w-5 h-5" />
+                            </button>
 
-                        {/* Dynamic Product Grid */}
-                        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-                            
-                            {/* Product Cards Column */}
-                            <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+                            {/* Scroll Track - Starts flush to screen's left edge */}
+                            <div 
+                                id="fountain-slider-track"
+                                className="flex gap-6 overflow-x-auto scroll-smooth pb-6 snap-x snap-mandatory no-scrollbar pl-0 pr-12"
+                                style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+                            >
                                 {[
                                     {
-                                        title: "Fontaine de Comptoir",
-                                        model: "Modèle A9",
-                                        desc: "Design ultra-compact idéal pour les comptoirs de cuisine d'entreprise et les salles de réunion restreintes.",
-                                        img: countertopFountainImg,
-                                        link: "/contact-entreprises"
+                                        title: "Bluedrop Ice",
+                                        desc: "La fontaine avec machine à glaçons intégrée Bluedrop Ice vous propose de l'eau filtrée et des glaçons purs au gré de vos envies. Son système de filtration en 5 étapes offre une barrière de protection totale et vous rafraîchit en continu. Cette plateforme d'hydratation tout-en-un s'intègre aussi bien dans les réceptions que dans les cafétérias.",
+                                        img: countertopFountainImg3
                                     },
                                     {
-                                        title: "Système Sous-Évier",
-                                        model: "Discrétion Absolue",
-                                        desc: "L'élégance minimaliste ultime avec un robinet design sur comptoir et un groupe de filtration caché.",
-                                        img: countertopFountainImg,
-                                        link: "/contact-entreprises"
+                                        title: "Ravello",
+                                        desc: "La fontaine à eau Bluedrop Ravello vous propose de l'eau filtrée plate, gazeuse, à température ambiante et chaude pour votre bureau. Grâce à ses dimensions incroyablement compactes, elle s'intègre harmonieusement à tous les environnements vous offrant toute l'eau dont vous avez besoin et répondant à vos besoins d'hydratation avec élégance et praticité.",
+                                        img: countertopFountainImg1
                                     },
                                     {
-                                        title: "Fontaine Autoportante",
-                                        model: "Modèle A13",
-                                        desc: "La solution sur pied robuste à haute capacité, idéale pour les halls de réception et zones de grand passage.",
-                                        img: bottlelessFountainImg,
-                                        link: "/contact-entreprises"
+                                        title: "B3",
+                                        desc: "La fontaine à eau de bureau Bluedrop B3 fournit de l'eau chaude et froide filtrée à la demande. Son système de filtration intégré en 3 étapes garantit un approvisionnement continu en eau savoureuse pour votre bureau. Disponible en version sur pied (B4) et à poser (B3), elle offre un design élégant et moderne qui s'intègre à tous les environnements.",
+                                        img: countertopFountainImg2 // B3 Countertop asset
+                                    },
+                                    {
+                                        title: "B4",
+                                        desc: "La fontaine à eau de bureau Bluedrop B4 fournit de l'eau chaude et froide filtrée à la demande. Son système de filtration intégré en 3 étapes garantit un approvisionnement continu en eau savoureuse pour votre bureau. Disponible en version sur pied ou à poser, elle offre un design élégant et moderne qui s'intègre à tous les environnements. Grâce à son débit rapide et à la stérilisation automatique du réservoir, s'hydrater n'a jamais été aussi simple.",
+                                        img: bottlelessFountainImg1
+                                    },
+                                     {
+                                        title: "B4",
+                                        desc: "La fontaine à eau de bureau Bluedrop B4 fournit de l'eau chaude et froide filtrée à la demande. Son système de filtration intégré en 3 étapes garantit un approvisionnement continu en eau savoureuse pour votre bureau. Disponible en version sur pied ou à poser, elle offre un design élégant et moderne qui s'intègre à tous les environnements. Grâce à son débit rapide et à la stérilisation automatique du réservoir, s'hydrater n'a jamais été aussi simple.",
+                                        img: bottlelessFountainImg2
                                     }
-                                ].map((prod, pIdx) => (
-                                    <div key={pIdx} className="bg-white border border-slate-100 p-8 rounded-[2.5rem] shadow-[0_15px_40px_rgba(0,0,0,0.02)] flex flex-col h-[520px] hover:-translate-y-1.5 transition-transform duration-500">
-                                        <div className="aspect-[4/3] bg-slate-50 rounded-2xl p-4 flex items-center justify-center mb-6 overflow-hidden">
-                                            <img src={prod.img} alt={prod.title} className="max-h-full object-contain mix-blend-multiply" />
+                                ].map((card, idx) => (
+                                    <div 
+                                        key={idx} 
+                                        className="w-[280px] md:w-[320px] lg:w-[calc((100%-4.5rem)/3.5)] shrink-0 bg-white border border-slate-100 rounded-[2rem] p-6 shadow-[0_15px_40px_rgba(0,0,0,0.02)] flex flex-col h-[520px] snap-start hover:shadow-md transition-shadow"
+                                    >
+                                        {/* Image container in light gray background */}
+                                        <div className="h-[240px] bg-slate-50 rounded-2xl p-6 flex items-center justify-center mb-6 overflow-hidden border border-slate-100/50">
+                                            <img 
+                                                src={card.img} 
+                                                alt={card.title} 
+                                                className="max-h-full object-contain hover:scale-105 transition-transform duration-700" 
+                                            />
                                         </div>
-                                        <div className="space-y-2 flex-grow">
-                                            <h4 className="text-lg font-bold text-slate-900">{prod.title}</h4>
-                                            <p className="text-[10px] font-black text-blue-600 uppercase tracking-widest leading-none">{prod.model}</p>
-                                            <p className="text-slate-500 text-xs font-light leading-relaxed pt-2">{prod.desc}</p>
+
+                                        {/* Card Info */}
+                                        <div className="space-y-3 flex-grow">
+                                            <h4 className="text-xl font-bold text-slate-900">{card.title}</h4>
+                                            <p className="text-slate-500 text-xs font-light leading-relaxed text-justify line-clamp-6">
+                                                {card.desc}
+                                            </p>
                                         </div>
-                                        <div className="pt-6 border-t border-slate-100">
-                                            <NavLink to={prod.link} className="inline-flex items-center gap-2 text-[10px] font-black text-slate-800 uppercase tracking-widest hover:text-blue-600 transition-colors group">
-                                                Spécifications <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+
+                                        {/* Details Button */}
+                                        <div className="pt-4 border-t border-slate-100 flex items-center justify-between">
+                                            <NavLink 
+                                                to="/contact-entreprises" 
+                                                className="inline-flex items-center gap-2 text-[10px] font-black text-slate-800 uppercase tracking-widest hover:text-blue-600 transition-colors group"
+                                            >
+                                                Voir les détails <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform text-blue-600" />
                                             </NavLink>
                                         </div>
                                     </div>
                                 ))}
                             </div>
-
-                            {/* Floating Sidebar Card Column */}
-                            <div className="lg:col-span-4 bg-gradient-to-br from-slate-900 to-slate-950 text-white p-10 rounded-[3rem] border border-slate-800 shadow-xl flex flex-col justify-between h-[520px] relative overflow-hidden group">
-                                <div className="absolute top-0 right-0 w-48 h-48 bg-blue-500/10 rounded-full blur-3xl" />
-                                <div className="space-y-6 relative z-10">
-                                    <div className="w-12 h-12 rounded-2xl bg-blue-600/30 border border-blue-500/30 flex items-center justify-center text-blue-400">
-                                        <Sparkles className="w-6 h-6 animate-pulse" />
-                                    </div>
-                                    <h3 className="text-3xl font-bold tracking-tight">
-                                        Trouvez la fontaine idéale pour votre équipe
-                                    </h3>
-                                    <p className="text-slate-400 font-light text-sm leading-relaxed">
-                                        Répondez à quelques questions simples pour identifyer le modèle parfaitement adapté à votre effectif et à la configuration de vos espaces de travail.
-                                    </p>
-                                </div>
-                                <div className="relative z-10 pt-6">
-                                    <Button size="lg" className="w-full h-14 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-bold uppercase tracking-widest text-xs transition-transform hover:scale-[1.02]" asChild>
-                                        <NavLink to="/contact-entreprises">COMMENCER LE QUIZ</NavLink>
-                                    </Button>
-                                </div>
-                            </div>
-
                         </div>
+
+                        {/* Right Column: Stationary CTA Column - Aligned to standard container's right edge */}
+                        <div className="w-full lg:w-[27%] flex flex-col justify-center items-center lg:items-start text-center lg:text-left pr-6 lg:pr-[calc((100vw-1232px)/2)] pl-6 lg:pl-12 space-y-6">
+                            <h3 className="text-xl md:text-2xl font-medium text-slate-800 leading-snug">
+                                Besoin d'aide pour trouver le système qui vous convient ?
+                            </h3>
+                            <div>
+                                <Button 
+                                    variant="outline" 
+                                    className="rounded-full border-slate-300 hover:border-slate-800 text-slate-800 hover:bg-slate-50 px-8 h-12 text-xs font-black uppercase tracking-widest transition-all"
+                                    asChild
+                                >
+                                    <NavLink to="/contact-entreprises">
+                                        Demander une consultation
+                                    </NavLink>
+                                </Button>
+                            </div>
+                        </div>
+
                     </div>
                 </section>
 
-                {/* SECTION 8: TECHNOLOGIES ACCORDION ("Découvrez comment...") */}
-                <section className="py-32 bg-white">
-                    <div className="container mx-auto px-6 max-w-4xl">
+                {/* ========================================================================= */}
+                {/* NOTRE SAVOIR-FAIRE - SENSORIEL & PRESTIGE GRID */}
+                {/* ========================================================================= */}
+                <section className="py-32 bg-[#FAF9F6] relative overflow-hidden border-y border-slate-100">
+                    <div className="container mx-auto px-6 max-w-6xl">
+                        
                         <div className="text-center space-y-4 mb-20">
-                            <span className="inline-block px-4 py-1 bg-blue-50 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-widest">
+                            <span className="inline-block px-4 py-1.5 bg-blue-50 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-widest">
                                 NOTRE SAVOIR-FAIRE
                             </span>
-                            <h2 className="text-3xl md:text-5xl font-bold text-slate-900 tracking-tight">
-                                Découvrez comment...
+                            <h2 className="text-3xl md:text-5xl font-black text-slate-900 tracking-tight leading-tight uppercase">
+                                L'art de raffiner <br />
+                                <span className="text-[#18448F] italic font-serif lowercase font-bold">l'eau au bureau.</span>
                             </h2>
-                            <p className="text-slate-500 font-light max-w-2xl mx-auto">
-                                Nos technologies exclusives garantissent la pureté microbiologique et le goût parfait de l'eau distribuée.
+                            <p className="text-slate-500 font-light max-w-2xl mx-auto text-base">
+                                Parce que chaque collaborateur mérite une eau d'une légèreté et d'une fraîcheur incomparables. Découvrez l'expérience gustative ultime.
                             </p>
                         </div>
 
-                        <div className="space-y-4 border-t border-slate-100 pt-6">
+                        {/* Prestige grid */}
+                        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                             {faqItems.map((item, idx) => (
                                 <div 
                                     key={idx}
-                                    className="border-b border-slate-100 pb-6"
+                                    className="bg-white rounded-[2rem] p-8 border border-amber-100/50 shadow-sm relative group hover:border-[#18448F]/20 transition-all duration-300"
                                 >
-                                    <button 
-                                        onClick={() => setActiveFaq(activeFaq === idx ? null : idx)}
-                                        className="w-full flex items-center justify-between text-left py-4 group"
-                                    >
-                                        <span className="text-xl font-bold text-slate-800 group-hover:text-blue-600 transition-colors">
-                                            {item.title}
-                                        </span>
-                                        <div className={`w-8 h-8 rounded-full flex items-center justify-center border border-slate-200 transition-all ${
-                                            activeFaq === idx ? "bg-slate-900 text-white border-slate-900 rotate-180" : "bg-transparent text-slate-400"
-                                        }`}>
-                                            <ChevronDown className="w-4.5 h-4.5" />
-                                        </div>
-                                    </button>
-                                    <div className={`transition-all duration-500 overflow-hidden ${
-                                        activeFaq === idx ? "max-h-60 opacity-100 mt-2" : "max-h-0 opacity-0"
-                                    }`}>
-                                        <p className="text-slate-500 font-light leading-relaxed text-sm">
-                                            {item.content}
-                                        </p>
+                                    <div className="absolute top-0 left-8 right-8 h-1 bg-[#18448F] rounded-b-full scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+                                    
+                                    <div className="text-5xl font-black text-[#18448F]/5 mb-6">
+                                        0{idx + 1}
                                     </div>
+                                    
+                                    <h3 className="text-xl font-bold text-slate-800 mb-4">
+                                        {item.title}
+                                    </h3>
+                                    
+                                    <p className="text-slate-500 font-light leading-relaxed text-sm">
+                                        {item.content}
+                                    </p>
                                 </div>
                             ))}
                         </div>
+
                     </div>
                 </section>
 
-                {/* SECTION 9: WATER WAVE CALL TO ACTION */}
-                <section className="relative py-32 bg-slate-900 text-white overflow-hidden text-center">
-                    {/* Deep Blue Water Wave Background Layer */}
-                    <div className="absolute inset-0 z-0 opacity-30 mix-blend-overlay">
-                        <img 
-                            src={heroFountains} 
-                            alt="Vagues d'eau pure" 
-                            className="w-full h-full object-cover" 
-                        />
-                    </div>
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/90 to-slate-900/40" />
 
-                    <div className="container mx-auto px-6 max-w-4xl relative z-10 space-y-10">
-                        <span className="inline-block px-4 py-1.5 bg-blue-500/20 border border-blue-500/30 text-blue-400 rounded-full text-[10px] font-black uppercase tracking-widest">
-                            ASSISTANCE EN LIGNE
-                        </span>
-                        <h2 className="text-3xl md:text-6xl font-bold tracking-tight text-white leading-tight uppercase">
-                            Laissez-nous vous aider à trouver <br />
-                            <span className="text-blue-400 italic font-light lowercase">la solution adaptée.</span>
-                        </h2>
-                        <div className="pt-4">
-                            <Button size="lg" className="h-16 px-12 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-bold uppercase tracking-widest text-xs transition-transform hover:scale-[1.02]" asChild>
-                                <NavLink to="/contact-entreprises">ME FAIRE RECOMMANDER UN MODÈLE</NavLink>
-                            </Button>
+                {/* 11. PREMIUM CTA SECTION */}
+                <section className="relative py-32 flex items-center overflow-hidden bg-[#18448F]">
+                    {/* Animated background elements */}
+                    <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-blue-600/20 to-transparent skew-x-12 translate-x-1/4" />
+                    <div className="absolute bottom-0 left-0 w-1/2 h-full bg-gradient-to-r from-cyan-400/10 to-transparent -skew-x-12 -translate-x-1/4" />
+                    
+                    {/* Background Image with Overlay */}
+                    <div className="absolute inset-0 z-0 opacity-25">
+                        <img
+                            src={ecoImpactImg4}
+                            alt="Fontaine d'eau moderne installée en entreprise - Solution Bricareau"
+                            className="w-full h-full object-cover grayscale brightness-110"
+                        />
+                        <div className="absolute inset-0 bg-[#18448F]/30 backdrop-blur-sm" />
+                    </div>
+
+                    <div className="container mx-auto px-6 relative z-10">
+                        <div className="max-w-5xl mx-auto text-center space-y-12">
+                            <div className="space-y-6">
+                                <span className="inline-block px-4 py-1.5 bg-white text-[#18448F] rounded-full text-[10px] font-black uppercase tracking-[0.4em]">
+                                    VITALITÉ & PERFORMANCE AU BUREAU
+                                </span>
+                                <h2 className="font-light block leading-tight lg:leading-[64px] text-white text-3xl md:text-6xl tracking-tight uppercase">
+                                    Offrez le meilleur de l'hydratation <br />
+                                    <span className="text-white italic font-bold font-serif lowercase">à votre entreprise.</span>
+                                </h2>
+                                <p className="text-lg md:text-xl text-blue-100/90 max-w-3xl mx-auto font-light leading-relaxed">
+                                    Des fontaines réseau ultra-modernes au design d'exception et sans bonbonne. <br className="hidden md:block" />
+                                    Activez <span className="text-white font-bold border-b border-white">le bien-être au travail</span> dès aujourd'hui.
+                                </p>
+                            </div>
+
+                            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-4">
+                                <ProMaxButton 
+                                    asChild
+                                    variant="white"
+                                >
+                                    <a href="tel:18552649328" className="flex items-center gap-3">
+                                        <Phone className="h-5 w-5 animate-bounce" />
+                                        Parlez à un conseiller pro
+                                    </a>
+                                </ProMaxButton>
+                                <ProMaxButton
+                                    variant="outline-white"
+                                    asChild
+                                >
+                                    <NavLink to="/contact-entreprises">Demandez un essai gratuit</NavLink>
+                                </ProMaxButton>
+                            </div>
+
+                            <div className="pt-8 flex flex-col items-center gap-4">
+                                <ExpertAvatars />
+                                <p className="text-blue-200/60 text-sm font-medium">
+                                    Déjà adopté par <span className="text-white">plus de 350 entreprises</span> de premier plan au Québec.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </section>

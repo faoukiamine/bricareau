@@ -30,70 +30,9 @@ import waterWaveImg from "@/assets/wave-banner.jpg";
 
 const Home1 = () => {
     const navigate = useNavigate();
-    const [selectedCategory, setSelectedCategory] = useState("Résidentiel");
-    const [selectedProduit, setSelectedProduit] = useState("Analyse d'eau");
-
     // Case Study Testimonials State
     const caseStudyTestimonials = allTestimonials.slice(0, 8);
     const [testiIndex, setTestiIndex] = useState(0);
-
-    const optionsParCategorie: Record<string, string[]> = {
-        "Résidentiel": [
-            "Analyse d'eau",
-            "Systèmes de filtration d'eau pour toute la maison",
-            "Adoucisseurs d'eau",
-            "Systèmes de filtration d'eau potable",
-            "Systèmes de désinfection UV",
-            "Fontaines à eau"
-        ],
-        "Hôtellerie et restauration": [
-            "Analyse d'eau",
-            "Adoucisseurs d'eau",
-            "Systèmes de filtration d'eau",
-            "Systèmes de filtration pour brasseries",
-            "Filtration d'eau pour cafetières"
-        ],
-        "Bureau": [
-            "Analyse d'eau",
-            "Systèmes de filtration centralisés pour bâtiments",
-            "Systèmes d'eau gazeuse",
-            "Fontaines à eau",
-        ],
-        "Commercial & Industriel": [
-            "Analyse d'eau",
-            "Systèmes de filtration industriels",
-            "Adoucisseurs d'eau industriels",
-            "Systèmes d'osmose inverse",
-            "Désinfection UV à haut débit"
-        ]
-    };
-
-    const productRouteMap: Record<string, string> = {
-        "Analyse d'eau": "/tests-eau",
-        "Systèmes de filtration d'eau pour toute la maison": "/filtres-deau",
-        "Adoucisseurs d'eau": "/adoucisseur-eau-residentiel",
-        "Systèmes de filtration d'eau potable": "/systeme-de-filtration-deau-potable",
-        "Systèmes de désinfection UV": "/systemes-de-desinfection-uv",
-        "Fontaines à eau": "/fontaines",
-        "Fontaines à eau pour entreprise": "/fontaines",
-        "Systèmes de filtration commerciaux": "/commercial-industriel",
-        "Osmose inverse commerciale": "/commercial-industriel",
-        "Machines à café entreprises": "/machines-a-cafe-entreprises",
-        "Systèmes de filtration centralisés pour bâtiments": "/commercial-industriel",
-        "Systèmes d'eau gazeuse": "/fontaines",
-        "Systèmes de filtration industriels": "/commercial-industriel",
-        "Adoucisseurs d'eau industriels": "/commercial-industriel",
-        "Systèmes d'osmose inverse": "/commercial-industriel",
-        "Désinfection UV à haut débit": "/commercial-industriel",
-        "Systèmes de filtration d'eau": "/filtration",
-        "Systèmes de filtration pour brasseries": "/commercial-industriel",
-        "Filtration d'eau pour cafetières": "/machines-a-cafe-entreprises"
-    };
-
-    // Update selectedProduit when category changes
-    useEffect(() => {
-        setSelectedProduit(optionsParCategorie[selectedCategory][0]);
-    }, [selectedCategory]);
 
     const sectors = [
         { title: "Résidentiel", image: residentielImg, href: "/residentiel" },
@@ -280,54 +219,7 @@ const Home1 = () => {
                 </div>
             </section>
 
-            {/* Solution Finder Section */}
-            <section className="py-16 sm:py-20 bg-[#18448F]">
-                <div className="container mx-auto px-4 max-w-5xl">
-                    <div className="flex flex-col gap-6">
-                        <div className="text-left mb-2">
-                            <h2 className="text-[1.7rem] font-bold text-white mb-2 leading-tight tracking-[0.02em]">Trouver une solution</h2>
-                            <p className="text-slate-300 text-[13px] font-normal tracking-wide">Vous savez ce que vous cherchez ? Laissez-nous vous aider à trouver la solution qui vous convient.</p>
-                        </div>
-                        <div className="flex flex-col md:flex-row gap-6 items-center w-full">
-                            <div className="flex-1 w-full">
-                                <select
-                                    className="w-full bg-white border-none rounded-sm h-[3.25rem] px-5 text-slate-700 text-sm font-medium appearance-none outline-none focus:ring-2 focus:ring-[#7595b3] cursor-pointer bg-[url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23131313%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E')] bg-[length:9px_9px] bg-[position:right_1.25rem_center] bg-no-repeat pr-10"
-                                    value={selectedCategory}
-                                    onChange={(e) => setSelectedCategory(e.target.value)}
-                                >
-                                    <option>Résidentiel</option>
-                                    <option>Hôtellerie et restauration</option>
-                                    <option>Bureau</option>
-                                    <option>Commercial & Industriel</option>
-                                </select>
-                            </div>
-                            <div className="flex-1 w-full">
-                                <select
-                                    className="w-full bg-white border-none rounded-sm h-[3.25rem] px-5 text-slate-700 text-sm font-medium appearance-none outline-none focus:ring-2 focus:ring-[#7595b3] cursor-pointer bg-[url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23131313%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E')] bg-[length:9px_9px] bg-[position:right_1.25rem_center] bg-no-repeat pr-10"
-                                    value={selectedProduit}
-                                    onChange={(e) => setSelectedProduit(e.target.value)}
-                                >
-                                    <option value="" disabled hidden>Sélectionner le programme</option>
-                                    {optionsParCategorie[selectedCategory]?.map((opt, idx) => (
-                                        <option key={idx} value={opt}>{opt}</option>
-                                    ))}
-                                </select>
-                            </div>
-                            <div className="flex-none w-full md:w-auto mt-2 md:mt-0 pl-1 pb-1 pt-1">
-                                <div className="relative inline-block w-full md:w-auto group">
-                                    <div className="absolute inset-0 border border-white rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
-                                    <Button
-                                        className="relative w-full md:w-auto bg-white hover:bg-[#18448F] text-[#18448F] hover:text-white rounded-[2rem] h-[3.25rem] px-8 font-black uppercase tracking-[0.1em] text-[11px] transition-all border-none"
-                                        onClick={() => navigate(productRouteMap[selectedProduit] || "/contact")}
-                                    >
-                                        PARCOURIR NOS SOLUTIONS
-                                    </Button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+
 
             {/* Case Study Section */}
             <section className="py-24 bg-white relative overflow-hidden">
