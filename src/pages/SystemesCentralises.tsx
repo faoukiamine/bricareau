@@ -20,6 +20,12 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { NavLink } from "@/components/NavLink";
+import {
+    Accordion,
+    AccordionContent,
+    AccordionItem,
+    AccordionTrigger
+} from "@/components/ui/accordion";
 
 // High-fidelity generated assets
 import engineeringHeroImg from "@/assets/61TWBHPkOiL._AC_SX679_.jpg";
@@ -30,31 +36,12 @@ import technicianInspectionImg from "@/assets/10271.jpg";
 import reverseOsmosisSkidImg from "@/assets/industrial_reverse_osmosis_hero_1778897309067.png";
 
 const SystemesCentralises = () => {
-    const [activeFeature, setActiveFeature] = useState(0);
+    const [activeAdvantageImage, setActiveAdvantageImage] = useState(blueprintImg);
 
     useEffect(() => {
         document.title = "Systèmes de Filtration Centralisés pour Bâtiments | Bricareau";
         window.scrollTo(0, 0);
     }, []);
-
-    const features = [
-        {
-            title: "Protection des conduits",
-            desc: "Élimination totale du calcaire et des sédiments pour préserver l'ensemble du réseau de tuyauteries et éviter l'entartrage prématuré.",
-        },
-        {
-            title: "Économies d'énergie",
-            desc: "Des échangeurs de chaleur et chauffe-eau propres consomment jusqu'à 30% d'énergie en moins, réduisant considérablement vos factures énergétiques.",
-        },
-        {
-            title: "Conformité sanitaire",
-            desc: "Barrière microbiologique complète empêchant la prolifération de bactéries nocives comme la légionelle dans l'ensemble du bâtiment.",
-        },
-        {
-            title: "Maintenance prédictive",
-            desc: "Des capteurs intelligents et une gestion technique centralisée (GTC) pour surveiller en temps réel la qualité de l'eau et anticiper les entretiens.",
-        }
-    ];
 
     return (
         <div className="min-h-screen bg-white font-sans text-slate-900 selection:bg-blue-100 selection:text-blue-900 overflow-x-hidden">
@@ -95,7 +82,11 @@ const SystemesCentralises = () => {
                                     En savoir plus <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                                 </a>
                             </div>
-                        <                {/* SECTION 3: ACCORDION FEATURE GRID ("Ce que nous apportons à votre campus" using the "Avantages de l'eau douce" layout) */}
+                        </div>
+                    </div>
+                </section>
+
+                {/* SECTION 3: ACCORDION FEATURE GRID ("Ce que nous apportons à votre campus" using the "Avantages de l'eau douce" layout) */}
                 <section id="campus-benefits" className="py-24 bg-white relative overflow-hidden">
                     {/* Background vertical line */}
                     <div className="absolute left-[10%] top-0 bottom-0 w-px bg-slate-200 hidden xl:block z-0" />
@@ -201,8 +192,6 @@ const SystemesCentralises = () => {
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </section>     </div>
                     </div>
                 </section>
 
