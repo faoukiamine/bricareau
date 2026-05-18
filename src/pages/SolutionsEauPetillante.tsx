@@ -114,8 +114,9 @@ const SolutionsEauPetillante = () => {
                             <h3 className="text-xs font-black text-blue-600 uppercase tracking-[0.2em] mb-4">
                                 L'EXCELLENCE DE L'EAU À LA SOURCE
                             </h3>
-                            <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-slate-900 leading-tight">
-                                Engagé à fournir des solutions de haute qualité.
+                            <h2 className="mb-8 heading-pro-max text-center">
+                                <span className="italic font-light text-[#18448F] block">Engagé à fournir des</span>
+                                <span className="font-bold text-[#18448F] block text-center">solutions de haute qualité.</span>
                             </h2>
                             <div className="w-16 h-1 bg-blue-600 mx-auto rounded-full" />
                             <p className="text-slate-500 text-lg font-light leading-relaxed max-w-3xl mx-auto pt-2">
@@ -151,9 +152,9 @@ const SolutionsEauPetillante = () => {
                             <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.3em]">
                                 VALEUR AJOUTÉE
                             </span>
-                            <h2 className="text-4xl md:text-6xl font-light tracking-tight text-slate-900 leading-tight uppercase">
-                                Élevez le standard <br />
-                                <span className="text-blue-600 italic font-bold font-serif lowercase">d'hydratation de vos bureaux.</span>
+                            <h2 className="mb-8 heading-pro-max text-center">
+                                <span className="italic font-light text-[#18448F] block">Élevez le standard</span>
+                                <span className="font-bold text-[#18448F] block text-center">d'hydratation de vos bureaux.</span>
                             </h2>
                         </div>
 
@@ -513,8 +514,9 @@ const SolutionsEauPetillante = () => {
                     
                     {/* Centered Title */}
                     <div className="container mx-auto px-6 max-w-7xl text-center mb-20">
-                        <h2 className="text-3xl md:text-5xl font-black text-slate-900 tracking-tight">
-                            Des systèmes pour tous les environnements
+                        <h2 className="mb-8 heading-pro-max text-center">
+                            <span className="italic font-light text-[#18448F] block">Des systèmes pour</span>
+                            <span className="font-bold text-[#18448F] block text-center">tous les environnements.</span>
                         </h2>
                     </div>
 
@@ -657,9 +659,9 @@ const SolutionsEauPetillante = () => {
                             <span className="inline-block px-4 py-1.5 bg-blue-50 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-widest">
                                 NOTRE SAVOIR-FAIRE
                             </span>
-                            <h2 className="text-3xl md:text-5xl font-black text-slate-900 tracking-tight leading-tight uppercase">
-                                L'art de raffiner <br />
-                                <span className="text-[#18448F] italic font-serif lowercase font-bold">l'eau au bureau.</span>
+                            <h2 className="mb-8 heading-pro-max text-center">
+                                <span className="italic font-light text-[#18448F] block">L'art de raffiner</span>
+                                <span className="font-bold text-[#18448F] block text-center">l'eau au bureau.</span>
                             </h2>
                             <p className="text-slate-500 font-light max-w-2xl mx-auto text-base">
                                 Parce que chaque collaborateur mérite une eau d'une légèreté et d'une fraîcheur incomparables. Découvrez l'expérience gustative ultime.
@@ -730,9 +732,9 @@ const SolutionsEauPetillante = () => {
                         title={
                             <div className="text-center space-y-3 mb-16">
                                 <span className="text-[10px] font-black text-blue-500 uppercase tracking-[0.5em] block mb-4">ILS NOUS FONT CONFIANCE</span>
-                                <h2 className="heading-pro-max text-center uppercase">
-                                    <span className="italic font-light text-[#18448F]">Le choix des </span>
-                                    <span className="font-bold text-[#18448F]">entreprises leaders.</span>
+                                <h2 className="mb-8 heading-pro-max text-center">
+                                    <span className="italic font-light text-[#18448F] block">Le choix des</span>
+                                    <span className="font-bold text-[#18448F] block text-center">entreprises leaders.</span>
                                 </h2>
                             </div>
                         }

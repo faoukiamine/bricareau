@@ -22,9 +22,16 @@ import Footer from "@/components/Footer";
 import { cn } from "@/lib/utils";
 import { ProMaxButton } from "@/components/ui/ProMaxButton";
 
-// Assets (Using existing ones or descriptive placeholders)
 import heroImg from "@/assets/4319.jpg";
 import filterImg from "@/assets/167206.jpg"; // Using a placeholder for the filter products
+import coffeeDifferenceImg from "@/assets/14331.jpg";
+import FilterImg1 from "@/assets/PURITY-C-Quell-ST-Advanced.webp";
+import FilterImg2 from "@/assets/PURITY-C-Steam-Advanced.webp";
+import FilterImg3 from "@/assets/PURITY-HCHF-Design-Center.webp";
+import FilterImg4 from "@/assets/PURITY-C1100-XtraSafe.webp";
+import FilterImg5 from "@/assets/PURITY-C1000-AC.webp";
+import FilterImg6 from "@/assets/PURITY-C-Finest.png.webp";
+
 
 const FiltreEauMachineCafe = () => {
     const navigate = useNavigate();
@@ -36,39 +43,39 @@ const FiltreEauMachineCafe = () => {
 
     const products = [
         {
-            title: "PURITY Quell ST Standard",
+            title: "PURITY C Quell ST Advanced",
             desc: "Le filtre classique pour espresso, idéal pour les eaux à dureté carbonatée élevée. Équilibre parfait des minéraux.",
-            image: filterImg,
+            image: FilterImg1,
             link: "#"
         },
         {
-            title: "PURITY C500 Minate",
+            title: "PURITY C Steam Advanced",
             desc: "Conçu pour la minéralisation et l'élimination des odeurs. Idéal pour les cafés de spécialité.",
-            image: filterImg,
+            image: FilterImg2,
             link: "#"
         },
         {
-            title: "PURITY 600 AC",
+            title: "PURITY HCHF",
             desc: "Filtre à charbon actif pour une eau sans chlore. Recommandé pour les machines à café automatiques.",
-            image: filterImg,
+            image: FilterImg3,
             link: "#"
         },
         {
-            title: "PURITY C1100 Quell ST",
+            title: "PURITY C1100 XtraSafe",
             desc: "Haute capacité pour les grands établissements. Protection maximale contre le tartre pour un débit continu.",
-            image: filterImg,
+            image: FilterImg4,
             link: "#"
         },
         {
-            title: "PURITY Steam",
+            title: "PURITY C1000 AC",
             desc: "Spécialement conçu pour les fours vapeur et les machines à haute demande. Évite les dépôts de calcaire tenaces.",
-            image: filterImg,
+            image: FilterImg5,
             link: "#"
         },
         {
-            title: "PURITY Finest",
-            desc: "Pour une expérience gustative ultime. Optimise la minéralisation pour révéler les arômes les plus subtils.",
-            image: filterImg,
+            title: "PURITY C-Finest",
+            desc: "Spécialement conçu pour les fours vapeur et les machines à haute demande. Évite les dépôts de calcaire tenaces.",
+            image: FilterImg6,
             link: "#"
         }
     ];
@@ -135,7 +142,7 @@ const FiltreEauMachineCafe = () => {
                 <section className="py-24 bg-white relative">
                     <div className="container mx-auto px-6 text-center space-y-8">
                         <div className="max-w-4xl mx-auto space-y-6">
-                            <h2 className="text-4xl md:text-6xl font-bold text-slate-900 tracking-tighter leading-none uppercase">
+                            <h2 className="text-4xl md:text-6xl font-bold text-[#18448F] tracking-tighter leading-none uppercase">
                                 Le café est 98% eau, <br />
                                 <span className="text-blue-600 italic font-light lowercase">choisissez le bon filtre</span>
                             </h2>
@@ -189,7 +196,7 @@ const FiltreEauMachineCafe = () => {
                             {/* Content Column */}
                             <div className="lg:w-1/2 space-y-12 order-2 lg:order-1">
                                 <div className="space-y-6">
-                                    <h2 className="text-5xl lg:text-7xl font-bold text-slate-900 tracking-tighter leading-[0.9] uppercase">
+                                    <h2 className="text-5xl lg:text-7xl font-bold text-[#18448F] tracking-tighter leading-[0.9] uppercase">
                                         Le bon filtre <br />
                                         <span className="text-blue-600 italic font-light lowercase">fait toute la différence</span>
                                     </h2>
@@ -213,25 +220,14 @@ const FiltreEauMachineCafe = () => {
                                     <div className="absolute -inset-20 bg-blue-100/50 blur-[120px] rounded-full group-hover:bg-blue-200/50 transition-colors duration-700" />
                                     <div className="relative aspect-square rounded-[4rem] overflow-hidden shadow-2xl border border-slate-100 group-hover:-rotate-1 transition-transform duration-700">
                                         <img 
-                                            src="https://images.unsplash.com/photo-1512428559087-560fa5ceab42?auto=format&fit=crop&q=80&w=1000" 
-                                            alt="Application de Surveillance" 
+                                            src={coffeeDifferenceImg} 
+                                            alt="Le bon filtre fait toute la différence" 
                                             className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" 
                                         />
                                         <div className="absolute inset-0 bg-gradient-to-tr from-blue-900/20 via-transparent to-transparent" />
                                     </div>
 
-                                    {/* Overlay Feature */}
-                                    <div className="absolute -bottom-10 -left-10 bg-white p-10 rounded-[3rem] shadow-2xl border border-slate-100 max-w-[280px] animate-float">
-                                        <div className="flex items-center gap-4 mb-4">
-                                            <div className="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-600">
-                                                <Smartphone className="w-6 h-6" />
-                                            </div>
-                                            <div className="text-sm font-bold uppercase tracking-tight">Contrôle Intelligent</div>
-                                        </div>
-                                        <p className="text-[11px] font-medium text-slate-500 leading-relaxed italic">
-                                            "Surveillez la durée de vie des filtres et la qualité de l'eau directement depuis votre smartphone."
-                                        </p>
-                                    </div>
+
                                 </div>
                             </div>
                         </div>

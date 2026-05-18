@@ -91,6 +91,11 @@ export const mainNavMenuItems: MenuItem[] = [
                         title: "Fontaines et refroidisseurs d'eau", 
                         description: "Systèmes de désinfection d'eau pour protéger votre famille contre les contaminants nocifs.", 
                         href: "/fontaines" 
+                    },
+                    { 
+                        title: "Filtres d'eau de remplacement", 
+                        description: "Systèmes de désinfection d'eau pour protéger votre famille contre les contaminants nocifs.", 
+                        href: "/filtres-de-remplacement" 
                     }
                 ]
             },

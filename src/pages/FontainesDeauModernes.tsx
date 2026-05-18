@@ -48,10 +48,12 @@ import iceMachineImg from "@/assets/Machine+à+glaçons+de+comptoir+auto-nettoya
 import ecoImpactImg4 from "@/assets/water-dispenser in office.jpg";
 import ecoImpactImg5 from "@/assets/water-dispenser in kitchen.jpg";
 import eauFontaineImg from "@/assets/1jp5k.png";
+import mandrinkingglassofwaterImg from "@/assets/6115.jpg";
+import officeHydrationImg from "@/assets/section-image-and-content-23.jpg";
 
 const FontainesDeauModernes = () => {
     const [activeFeature, setActiveFeature] = useState(0);
-    const [activeFeatureImage, setActiveFeatureImage] = useState(eauFontaineImg);
+    const [activeFeatureImage, setActiveFeatureImage] = useState(officeHydrationImg);
     const [activeTab, setActiveTab] = useState("cold");
     const [activeFaq, setActiveFaq] = useState<number | null>(null);
 
@@ -127,7 +129,6 @@ const FontainesDeauModernes = () => {
                     ctaText="OBTENIR MON ESSAI GRATUIT"
                     ctaLink="/contact-entreprises"
                     showPhone={true}
-                    badge="Solutions Bureaux & Corporatives"
                     showBreadcrumbs={true}
                     breadcrumbVariant="light"
                     homeVariant={false}
@@ -140,10 +141,11 @@ const FontainesDeauModernes = () => {
                             <h3 className="text-xs font-black text-blue-600 uppercase tracking-[0.2em] mb-4">
                                 L'EXCELLENCE DE L'EAU À LA SOURCE
                             </h3>
-                            <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-slate-900 leading-tight">
-                                Engagé à fournir des solutions de fontaines à eau de haute qualité.
+                            <h2 className="mb-8 heading-pro-max text-center">
+                                <span className="italic font-light text-[#18448F] block">Engagé à fournir des solutions de </span>
+                                <span className="font-bold text-[#18448F] block text-center">fontaines à eau de haute qualité.</span>
                             </h2>
-                            <div className="w-16 h-1 bg-blue-600 mx-auto rounded-full" />
+
                             <p className="text-slate-500 text-lg font-light leading-relaxed max-w-3xl mx-auto pt-2">
                                 Nos fontaines à eau sont conçues pour améliorer le bien-être de vos collaborateurs et de vos clients. Grâce à nos technologies de filtration d'eau avancées, profitez d'une eau d'une pureté absolue, d'un goût incomparable et d'une fraîcheur constante à chaque tasse.
                             </p>
@@ -177,10 +179,10 @@ const FontainesDeauModernes = () => {
                             <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.3em]">
                                 VALEUR AJOUTÉE
                             </span>
-                            <h2 className="text-4xl md:text-6xl font-light tracking-tight text-slate-900 leading-tight uppercase">
-                                Élevez le standard <br />
-                                <span className="text-blue-600 italic font-bold font-serif lowercase">d'hydratation de vos bureaux.</span>
-                            </h2>
+                            <h2 className="mb-8 heading-pro-max text-center">
+                                <span className="italic font-light text-[#18448F] block">Élevez le standard</span>
+                                <span className="font-bold text-[#18448F] block text-center">d'hydratation de vos bureaux.</span>
+                            </h2> 
                         </div>
 
                         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
@@ -193,7 +195,7 @@ const FontainesDeauModernes = () => {
                                     <div 
                                         onClick={() => {
                                             setActiveFeature(0);
-                                            setActiveFeatureImage(eauFontaineImg);
+                                            setActiveFeatureImage(officeHydrationImg);
                                         }}
                                         className={cn(
                                             "md:col-span-7 p-8 rounded-[2.5rem] cursor-pointer transition-all duration-500 border relative overflow-hidden flex flex-col justify-between min-h-[280px]",
@@ -234,7 +236,7 @@ const FontainesDeauModernes = () => {
                                     <div 
                                         onClick={() => {
                                             setActiveFeature(1);
-                                            setActiveFeatureImage(countertopFountainImg3);
+                                            setActiveFeatureImage(officeHydrationImg);
                                         }}
                                         className={cn(
                                             "md:col-span-5 p-8 rounded-[2.5rem] cursor-pointer transition-all duration-500 border relative overflow-hidden flex flex-col justify-between min-h-[280px]",
@@ -293,7 +295,7 @@ const FontainesDeauModernes = () => {
                                     <div 
                                         onClick={() => {
                                             setActiveFeature(2);
-                                            setActiveFeatureImage(bottlelessFountainImg1);
+                                            setActiveFeatureImage(officeHydrationImg);
                                         }}
                                         className={cn(
                                             "md:col-span-5 p-8 rounded-[2.5rem] cursor-pointer transition-all duration-500 border relative overflow-hidden flex flex-col justify-between min-h-[280px]",
@@ -336,7 +338,7 @@ const FontainesDeauModernes = () => {
                                     <div 
                                         onClick={() => {
                                             setActiveFeature(3);
-                                            setActiveFeatureImage(ecoImpactImg4);
+                                            setActiveFeatureImage(officeHydrationImg);
                                         }}
                                         className={cn(
                                             "md:col-span-7 p-8 rounded-[2.5rem] cursor-pointer transition-all duration-500 border relative overflow-hidden flex flex-col justify-between min-h-[280px]",
@@ -414,7 +416,7 @@ const FontainesDeauModernes = () => {
                                     </div>
 
                                     {/* Main Glass Frame Container */}
-                                    <div className="bg-white rounded-[2.5rem] p-6 sm:p-10 border border-slate-100/80 shadow-[0_45px_90px_-25px_rgba(0,0,0,0.08)] relative z-10 overflow-hidden flex items-center justify-center aspect-square sm:aspect-square">
+                                    <div className="bg-white rounded-[2.5rem] border border-slate-100/80 shadow-[0_45px_90px_-25px_rgba(0,0,0,0.08)] relative z-10 overflow-hidden flex items-center justify-center aspect-square sm:aspect-square">
                                         
                                         {/* Fluid background pattern */}
                                         <div className="absolute inset-0 bg-gradient-to-tr from-slate-50 via-white to-blue-50/30 opacity-60" />
@@ -426,7 +428,7 @@ const FontainesDeauModernes = () => {
                                             key={activeFeatureImage}
                                             src={activeFeatureImage} 
                                             alt="Solutions d'hydratation écologiques et design pour le bureau Bricareau" 
-                                            className="relative z-10 max-h-full max-w-full object-contain drop-shadow-2xl animate-in fade-in zoom-in-95 duration-700"
+                                            className="relative z-10 w-full h-full object-cover drop-shadow-2xl animate-in fade-in zoom-in-95 duration-700"
                                         />
 
                                         {/* Floating Badge */}
@@ -485,9 +487,11 @@ const FontainesDeauModernes = () => {
                     
                     {/* Centered Title */}
                     <div className="container mx-auto px-6 max-w-7xl text-center mb-20">
-                        <h2 className="text-3xl md:text-5xl font-black text-slate-900 tracking-tight">
-                            Une polyvalence totale, peu importe l'environnement
+                        
+                        <h2 className="mb-8 heading-pro-max text-center">
+                            <span className="font-bold text-[#18448F] block text-center">Une polyvalence totale, peu importe l'environnement</span>
                         </h2>
+
                     </div>
 
                     {/* Outer flex container spanning full viewport width */}
@@ -634,10 +638,12 @@ const FontainesDeauModernes = () => {
                             <span className="inline-block px-4 py-1.5 bg-blue-50 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-widest">
                                 NOTRE SAVOIR-FAIRE
                             </span>
-                            <h2 className="text-3xl md:text-5xl font-black text-slate-900 tracking-tight leading-tight uppercase">
-                                L'art de raffiner <br />
-                                <span className="text-[#18448F] italic font-serif lowercase font-bold">l'eau au bureau.</span>
-                            </h2>
+                             <h2 className="mb-8 heading-pro-max text-center">
+                                <span className="font-light italic text-[#18448F] block text-center">L'art de raffiner </span>
+                                <span className="font-bold text-[#18448F] block text-center">l'eau au bureau.</span>
+                            </h2> 
+                            
+                            
                             <p className="text-slate-500 font-light max-w-2xl mx-auto text-base">
                                 Parce que chaque collaborateur mérite une eau d'une légèreté et d'une fraîcheur incomparables. Découvrez l'expérience gustative ultime.
                             </p>
@@ -693,9 +699,9 @@ const FontainesDeauModernes = () => {
                                 <span className="inline-block px-4 py-1.5 bg-white text-[#18448F] rounded-full text-[10px] font-black uppercase tracking-[0.4em]">
                                     VITALITÉ & PERFORMANCE AU BUREAU
                                 </span>
-                                <h2 className="font-light block leading-tight lg:leading-[64px] text-white text-3xl md:text-6xl tracking-tight uppercase">
+                                <h2 className="font-light block leading-tight lg:leading-[52px] text-white">
                                     Offrez le meilleur de l'hydratation <br />
-                                    <span className="text-white italic font-bold font-serif lowercase">à votre entreprise.</span>
+                                    <span className="text-white italic font-bold font-serif">à votre entreprise.</span>
                                 </h2>
                                 <p className="text-lg md:text-xl text-blue-100/90 max-w-3xl mx-auto font-light leading-relaxed">
                                     Des fontaines réseau ultra-modernes au design d'exception et sans bonbonne. <br className="hidden md:block" />
@@ -713,14 +719,7 @@ const FontainesDeauModernes = () => {
                                         Parlez à un conseiller pro
                                     </a>
                                 </ProMaxButton>
-                                <ProMaxButton
-                                    variant="outline-white"
-                                    asChild
-                                >
-                                    <NavLink to="/contact-entreprises">Demandez un essai gratuit</NavLink>
-                                </ProMaxButton>
                             </div>
-
                             <div className="pt-8 flex flex-col items-center gap-4">
                                 <ExpertAvatars />
                                 <p className="text-blue-200/60 text-sm font-medium">

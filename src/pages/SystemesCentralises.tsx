@@ -61,7 +61,6 @@ const SystemesCentralises = () => {
                     ctaText="DEMANDER UNE ÉTUDE SUR MESURE"
                     ctaLink="/contact-entreprises"
                     showPhone={true}
-                    badge="Solutions Centralisées & Bâtiment"
                     showBreadcrumbs={true}
                     breadcrumbVariant="light"
                     homeVariant={false}
@@ -74,8 +73,9 @@ const SystemesCentralises = () => {
                             <h3 className="text-xs font-black text-blue-600 uppercase tracking-[0.2em] mb-4">
                                 DURABILITÉ & VALEUR PATRIMONIALE
                             </h3>
-                            <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-slate-900 leading-tight">
-                                Engagés à fournir des solutions de haute qualité
+                            <h2 className="mb-8 heading-pro-max text-center">
+                                <span className="italic font-light text-[#18448F] block">Engagé à fournir des solutions </span>
+                                <span className="font-bold text-[#18448F] block text-center">de haute qualité.</span>
                             </h2>
                             <div className="w-16 h-1 bg-blue-600 mx-auto rounded-full" />
                             <p className="text-slate-500 text-lg font-light leading-relaxed max-w-3xl mx-auto pt-2">
@@ -97,12 +97,12 @@ const SystemesCentralises = () => {
 
                     <div className="container mx-auto px-6 relative z-10">
                         <div className="text-center mb-24">
-                            <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.3em] mb-8">
+                            <span className="inline-block px-4 py-1.5 bg-[#18448F] text-white rounded-full text-[10px] font-black uppercase tracking-[0.3em] mb-8">
                                 L'INGÉNIERIE DE L'INFRASTRUCTURE
                             </span>
-                            <h2 className="text-3xl md:text-5xl font-light tracking-tight text-slate-950 leading-tight uppercase">
-                                Ce que nous apportons <br />
-                                <span className="text-blue-600 italic font-bold font-serif lowercase">à la performance de votre campus.</span>
+                            <h2 className="mb-8 heading-pro-max text-center">
+                                <span className="italic font-light text-[#18448F] block">Ce que nous apportons </span>
+                                <span className="font-bold text-[#18448F] block text-center">à la performance de votre campus.</span>
                             </h2>
                         </div>
 
@@ -204,12 +204,12 @@ const SystemesCentralises = () => {
                 <section className="py-32 bg-white">
                     <div className="container mx-auto px-6 max-w-7xl">
                         <div className="text-center space-y-4 mb-20">
-                            <span className="inline-block px-4 py-1 bg-blue-50 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-widest">
+                            <span className="inline-block px-4 py-1.5 bg-[#18448F] text-white rounded-full text-[10px] font-black uppercase tracking-widest">
                                 NOTRE SERVICE GLOBAL
                             </span>
-                            <h2 className="heading-pro-max text-center">
-                                <span className="italic font-light text-blue-600">Valoriser & sécuriser</span> <br />
-                                <span className="font-bold text-slate-900">vos infrastructures.</span>
+                            <h2 className="mb-8 heading-pro-max text-center">
+                                <span className="italic font-light text-[#18448F] block">Valoriser & sécuriser</span>
+                                <span className="font-bold text-[#18448F] block text-center">vos infrastructures.</span>
                             </h2>
                         </div>
 
@@ -218,7 +218,7 @@ const SystemesCentralises = () => {
                             {/* Block 1: Elkay Bottle Filling Stations */}
                             <div className="flex flex-col gap-8 bg-slate-50 p-10 rounded-[3rem] border border-slate-100 shadow-sm hover:shadow-md transition-shadow justify-between">
                                 <div className="space-y-4">
-                                    <span className="inline-block px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-[9px] font-black uppercase tracking-wider">
+                                    <span className="inline-block px-3 py-1 bg-[#18448F] text-white rounded-full text-[9px] font-black uppercase tracking-wider">
                                         Remplissage Écoresponsable
                                     </span>
                                     <h3 className="text-3xl font-bold text-slate-900 leading-tight">
@@ -240,7 +240,7 @@ const SystemesCentralises = () => {
                             {/* Block 2: Innovative Solutions */}
                             <div className="flex flex-col gap-8 bg-slate-50 p-10 rounded-[3rem] border border-slate-100 shadow-sm hover:shadow-md transition-shadow justify-between">
                                 <div className="space-y-4">
-                                    <span className="inline-block px-3 py-1 bg-slate-200 text-slate-800 rounded-full text-[9px] font-black uppercase tracking-wider">
+                                    <span className="inline-block px-3 py-1 bg-[#18448F] text-white rounded-full text-[9px] font-black uppercase tracking-wider">
                                         Conception & Planification
                                     </span>
                                     <h3 className="text-3xl font-bold text-slate-900 leading-tight">
@@ -262,7 +262,7 @@ const SystemesCentralises = () => {
                             {/* Block 3: Maintenance and Support */}
                             <div className="flex flex-col gap-8 bg-slate-50 p-10 rounded-[3rem] border border-slate-100 shadow-sm hover:shadow-md transition-shadow justify-between">
                                 <div className="space-y-4">
-                                    <span className="inline-block px-3 py-1 bg-slate-200 text-slate-800 rounded-full text-[9px] font-black uppercase tracking-wider">
+                                    <span className="inline-block px-3 py-1 bg-[#18448F] text-white rounded-full text-[9px] font-black uppercase tracking-wider">
                                         Disponibilité & Opérabilité
                                     </span>
                                     <h3 className="text-3xl font-bold text-slate-900 leading-tight">
@@ -322,9 +322,9 @@ const SystemesCentralises = () => {
                                 <span className="inline-block px-4 py-1.5 bg-white text-[#18448F] rounded-full text-[10px] font-black uppercase tracking-[0.4em]">
                                     PROTECTION & PERFORMANCE DES INFRASTRUCTURES
                                 </span>
-                                <h2 className="font-light block leading-tight lg:leading-[64px] text-white text-3xl md:text-6xl tracking-tight uppercase">
+                                <h2 className="font-light block leading-tight lg:leading-[52px] text-white">
                                     Garantissez une eau d'excellence <br />
-                                    <span className="text-white italic font-bold font-serif lowercase">à l'échelle de votre bâtiment.</span>
+                                    <span className="text-white italic font-bold font-serif">à l'échelle de votre bâtiment.</span>
                                 </h2>
                                 <p className="text-lg md:text-xl text-blue-100/90 max-w-3xl mx-auto font-light leading-relaxed">
                                     Des solutions de filtration centralisées sur mesure pour protéger vos canalisations, préserver vos équipements thermiques et garantir la conformité sanitaire absolue de tout votre réseau. <br className="hidden md:block" />
@@ -365,12 +365,12 @@ const SystemesCentralises = () => {
                     <div className="container mx-auto px-6 max-w-7xl">
                         <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between mb-16 gap-6">
                             <div className="space-y-4">
-                                <span className="inline-block px-4 py-1 bg-blue-100 text-blue-750 rounded-full text-[10px] font-black uppercase tracking-widest">
+                                <span className="inline-block px-4 py-1.5 bg-[#18448F] text-white rounded-full text-[10px] font-black uppercase tracking-widest">
                                     CAS D'EXCELLENCE
                                 </span>
-                                <h2 className="heading-pro-max text-left">
-                                    <span className="italic font-light text-blue-600 block">Ressources connexes</span>
-                                    <span className="font-bold text-slate-955 block">& Études de cas.</span>
+                                <h2 className="mb-8 heading-pro-max text-left">
+                                    <span className="italic font-light text-[#18448F] block">Ressources connexes</span>
+                                    <span className="font-bold text-[#18448F] block text-left">& Études de cas.</span>
                                 </h2>
                             </div>
                             <div>
