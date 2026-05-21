@@ -34,6 +34,7 @@ import heroImg from "@/assets/2150573931.jpg";
 import protectionConduitsImg from "@/assets/70609919.jpg";
 import conformiteSanitaireImg from "@/assets/initial.jpg";
 import economiesEnergieImg from "@/assets/2149281314.jpg";
+import beerImg from "@/assets/2149757160.jpg";
 import technicianInspectionImg from "@/assets/10271.jpg";
 import reverseOsmosisSkidImg from "@/assets/144d1310-23fc-4cbd-92df-81d17d7a393c.jpg";
 import uvSystemKillBacteriaImg from "@/assets/UV system installation to kill bacteria.png";
@@ -58,9 +59,9 @@ const SolutionsBrasseries = () => {
                     image={heroImg}
                     highlightedTitle="L'effervescence pure"
                     mainTitle="pour votre brasserie."
-                    subtitle="Transformez l'expérience de vos clients avec des solutions d'eau filtrée, plate ou pétillante, directement à la source. Alliez rentabilité, design et engagement écologique."
-                    ctaText="Essai gratuit 7 jours"
-                    ctaLink="/contact-entreprises"
+                    subtitle="Sublimez le profil de vos bières grâce à une eau parfaitement maîtrisée. Nos solutions de filtration de pointe vous permettent d'ajuster votre profil minéral avec une régularité absolue, tout en optimisant le rendement de vos brassins et en réduisant votre empreinte écologique."
+                    ctaText="Planifiez une consultation"
+                    ctaLink="/consultation"
                     showPhone={true}
                     showBreadcrumbs={true}
                     breadcrumbVariant="light"
@@ -70,7 +71,7 @@ const SolutionsBrasseries = () => {
                 {/* SECTION 2: HIGH-FIDELITY STATEMENT BANNER */}
                 <section className="py-24 bg-[#FAFBFD] border-y border-slate-100 relative overflow-hidden">
                     {/* Creative dissolved background image */}
-                    <div className="absolute inset-0 z-0 select-none pointer-events-none opacity-[0.12] mix-blend-multiply">
+                    <div className="absolute inset-0 z-0 select-none pointer-events-none opacity-[0.28] mix-blend-multiply">
                         <img 
                             src={breweryBgDetailImg} 
                             alt="" 
@@ -105,99 +106,91 @@ const SolutionsBrasseries = () => {
 
                 {/* SECTION 3: ACCORDION FEATURE GRID ("Ce que nous apportons à l'excellence de vos brassins") */}
                 <section id="brewery-benefits" className="py-24 bg-white relative overflow-hidden">
-                    {/* Background vertical line */}
-                    <div className="absolute left-[10%] top-0 bottom-0 w-px bg-slate-200 hidden xl:block z-0" />
-
-                    <div className="container mx-auto px-6 relative z-10">
-                        <div className="text-center mb-24">
-                            <span className="inline-block px-4 py-1.5 bg-[#18448F] text-white rounded-full text-[10px] font-black uppercase tracking-[0.3em] mb-8">
-                                L'INGÉNIERIE DU BRASSAGE
-                            </span>
-                            <h2 className="mb-8 heading-pro-max text-center">
-                                <span className="italic font-light text-[#18448F] block">Ce que nous apportons </span>
-                                <span className="font-bold text-[#18448F] block text-center">à l'excellence de vos brassins.</span>
-                            </h2>
-                        </div>
-
-                        <div className="relative max-w-6xl mx-auto">
-                            {/* Vertical text on the left */}
-                            <div className="absolute -left-16 top-1/2 -translate-y-1/2 hidden xl:block">
-                                <span className="inline-block [writing-mode:vertical-lr] rotate-180 text-[10px] font-black uppercase tracking-[0.4em] text-slate-400 h-fit">
-                                    SOLUTIONS BRASSICOLES
+                    <div className="container mx-auto px-6 relative z-10 max-w-7xl">
+                        
+                        {/* Top half split layout */}
+                        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                            
+                            {/* Left column: titles & description */}
+                            <div className="lg:col-span-5 space-y-6 text-left">
+                                <span className="inline-block px-4 py-1.5 bg-[#18448F] text-white rounded-full text-[10px] font-black uppercase tracking-[0.3em]">
+                                    L'INGÉNIERIE DU BRASSAGE
                                 </span>
+                                <h2 className="text-4xl lg:text-5xl leading-tight">
+                                    <span className="italic font-light text-[#18448F] block">Ce que nous apportons</span>
+                                    <span className="font-extrabold text-[#18448F] block">à l'excellence de vos brassins.</span>
+                                </h2>
+                                <p className="text-slate-500 font-light text-base leading-relaxed text-justify">
+                                    Pour les maîtres brasseurs, chaque détail moléculaire compte. Notre ingénierie de l'eau permet de calibrer les minéraux, d'éradiquer le chlore et de garantir une pureté microbiologique totale. Donnez à vos recettes la constance et la grandeur qu'elles méritent.
+                                </p>
                             </div>
 
-                            <div className="flex flex-col lg:flex-row items-center gap-0 relative">
-                                {/* Left: Benefits Accordion in a Card */}
-                                <div className="w-full lg:w-[45%] z-20 mb-12 lg:mb-0">
-                                    <div className="bg-white rounded-2xl shadow-[0_30px_60px_rgba(0,0,0,0.12)] p-8 md:p-12 border border-slate-50 lg:-mr-32 relative">
-                                        <Accordion 
-                                            type="single" 
-                                            defaultValue="item-0" 
-                                            className="w-full space-y-2"
-                                        >
-                                            {[
-                                                {
-                                                    title: "Ajustement du profil minéral",
-                                                    desc: "Équilibrez précisément le rapport sulfate/chlorure et la dureté pour accentuer l'amertume tranchante de vos IPA ou la rondeur veloutée de vos stouts. Un contrôle total du pH de votre eau d'empâtage."
-                                                },
-                                                {
-                                                    title: "Déchloration absolue",
-                                                    desc: "Élimination complète du chlore et des chloramines pour bannir les phénols et les goûts médicaux ou plastiques de vos bières, libérant ainsi des arômes de malt et de houblon d'une netteté parfaite."
-                                                },
-                                                {
-                                                    title: "Stérilité microbiologique",
-                                                    desc: "Intégration d'une protection UV-C et d'une ultrafiltration en amont pour éliminer tout risque de contamination par des bactéries sauvages ou des levures indésirables, préservant la stabilité de vos produits."
-                                                },
-                                                {
-                                                    title: "Préservation des équipements",
-                                                    desc: "Adoucissement et déminéralisation ciblés pour empêcher l'entartrage de vos chaudières à vapeur, échangeurs de chaleur à plaques et fermenteurs, réduisant considérablement vos cycles CIP."
-                                                }
-                                            ].map((item, idx) => (
-                                                <AccordionItem key={idx} value={`item-${idx}`} className="border-b border-slate-100 last:border-none">
-                                                    <AccordionTrigger className="text-[#18448F] font-bold text-left text-lg hover:no-underline py-5 data-[state=open]:text-blue-600 transition-colors">
-                                                        {item.title}
-                                                    </AccordionTrigger>
-                                                    <AccordionContent className="text-slate-600 text-[15px] leading-relaxed pb-6 text-justify">
-                                                        {item.desc}
-                                                    </AccordionContent>
-                                                </AccordionItem>
-                                            ))}
-                                        </Accordion>
-                                    </div>
-                                </div>
-
-                                {/* Right: Image Section with Dot Pattern */}
-                                <div className="w-full lg:w-[65%] relative">
-                                    {/* Dot pattern background */}
-                                    <div className="absolute -top-12 -left-12 w-48 h-48 opacity-40 pointer-events-none z-0">
-                                        <div className="grid grid-cols-12 gap-3">
-                                            {Array.from({ length: 144 }).map((_, i) => (
-                                                <div key={i} className="w-1 h-1 bg-blue-500 rounded-full" />
-                                            ))}
-                                        </div>
-                                    </div>
-
-                                    <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3] lg:aspect-auto lg:h-[550px] bg-white p-6 border border-slate-100 flex items-center justify-center">
-                                        <img 
-                                            src={brewerySingleImg} 
-                                            alt="Schéma technique de filtration et de profilage d'eau pour brasseries" 
-                                            className="max-h-full object-contain animate-in fade-in zoom-in duration-500"
-                                        />
-                                        <div className="absolute inset-0 bg-gradient-to-tr from-blue-900/10 to-transparent pointer-events-none" />
-                                    </div>
-
-                                    {/* Another Dot pattern bottom right */}
-                                    <div className="absolute -bottom-16 -right-16 w-64 h-64 opacity-30 pointer-events-none z-0">
-                                        <div className="grid grid-cols-12 gap-4">
-                                            {Array.from({ length: 144 }).map((_, i) => (
-                                                <div key={i} className="w-1.5 h-1.5 bg-blue-600 rounded-full" />
-                                            ))}
-                                        </div>
+                            {/* Right column: premium rounded video/diagram player */}
+                            <div className="lg:col-span-7">
+                                <div className="relative rounded-[2rem] overflow-hidden aspect-[16/10] bg-slate-950 group shadow-[0_20px_50px_rgba(0,0,0,0.12)] border border-slate-100 flex items-center justify-center cursor-pointer">
+                                    <img 
+                                        src={brewerySingleImg} 
+                                        alt="Schéma technique de filtration et de profilage d'eau pour brasseries" 
+                                        className="w-full h-full object-cover opacity-90 group-hover:scale-[1.03] transition-transform duration-700 ease-out"
+                                    />
+                                    {/* Glassmorphic Play Button overlay */}
+                                    <div className="absolute inset-0 bg-blue-900/5 group-hover:bg-blue-900/10 transition-colors" />
+                                    <div className="absolute w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform duration-300">
+                                        <svg className="w-8 h-8 text-[#18448F] fill-current ml-1" viewBox="0 0 24 24">
+                                            <path d="M8 5v14l11-7z" />
+                                        </svg>
                                     </div>
                                 </div>
                             </div>
+
                         </div>
+
+                        {/* Horizontal divider */}
+                        <div className="border-t border-slate-100 my-16 w-full" />
+
+                        {/* Bottom half: 4 feature columns */}
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-left">
+                            {[
+                                {
+                                    title: "Ajustement du profil minéral",
+                                    desc: "Équilibrez précisément le rapport sulfate/chlorure et la dureté pour accentuer l'amertume tranchante de vos IPA ou la rondeur veloutée de vos stouts. Un contrôle total du pH de votre eau d'empâtage.",
+                                    icon: Droplets
+                                },
+                                {
+                                    title: "Déchloration absolue",
+                                    desc: "Élimination complète du chlore et des chloramines pour bannir les phénols et les goûts médicaux ou plastiques de vos bières, libérant ainsi des arômes de malt et de houblon d'une netteté parfaite.",
+                                    icon: Leaf
+                                },
+                                {
+                                    title: "Stérilité microbiologique",
+                                    desc: "Intégration d'une protection UV-C et d'une ultrafiltration en amont pour éliminer tout risque de contamination par des bactéries sauvages ou des levures indésirables, préservant la stabilité de vos produits.",
+                                    icon: ShieldCheck
+                                },
+                                {
+                                    title: "Préservation des équipements",
+                                    desc: "Adoucissement et déminéralisation ciblés pour empêcher l'entartrage de vos chaudières à vapeur, échangeurs de chaleur à plaques et fermenteurs, réduisant considérablement vos cycles CIP.",
+                                    icon: Settings
+                                }
+                            ].map((item, idx) => {
+                                const IconComponent = item.icon;
+                                return (
+                                    <div key={idx} className="flex gap-4">
+                                        <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#E8F1FC] text-[#18448F] flex items-center justify-center">
+                                            <IconComponent className="w-6 h-6" />
+                                        </div>
+                                        <div className="space-y-2 flex-1">
+                                            <h4 className="text-lg font-bold text-slate-900 leading-snug lg:min-h-[3.5rem] flex items-start">
+                                                {item.title}
+                                            </h4>
+                                            <p className="text-slate-500 text-xs font-light leading-relaxed text-justify">
+                                                {item.desc}
+                                            </p>
+                                        </div>
+                                    </div>
+                                );
+                            })}
+                        </div>
+
                     </div>
                 </section>
 
@@ -223,10 +216,10 @@ const SolutionsBrasseries = () => {
                                         Répétabilité des Recettes
                                     </span>
                                     <h3 className="text-3xl font-bold text-slate-900 leading-tight">
-                                        Osmose Inverse & Profilage Minéral
+                                        Systèmes d'osmose inverse
                                     </h3>
                                     <p className="text-slate-500 font-light text-sm leading-relaxed text-justify">
-                                        Générez une eau de base parfaitement pure (0 ppm) grâce à nos systèmes d'osmose inverse industriels, puis réintroduisez avec précision les sels minéraux spécifiques à chaque style de bière, de la Pilsner traditionnelle à la NEIPA moderne.
+                                        Générez une eau de base parfaitement pure grâce à nos systèmes d'osmose inverse, puis réintroduisez avec précision les sels minéraux spécifiques à chaque style de bière, de la Pilsner traditionnelle à la NEIPA moderne.
                                     </p>
                                 </div>
                                 <div className="aspect-[16/10] w-full rounded-2xl overflow-hidden shadow-inner">
@@ -294,10 +287,10 @@ const SolutionsBrasseries = () => {
                         title={
                             <div className="text-center space-y-3 mb-16">
                                 <span className="text-[10px] font-black text-blue-500 uppercase tracking-[0.5em] block mb-4">AVIS CLIENTS</span>
-                                <h2 className="heading-pro-max text-center uppercase">
-                                    <span className="italic font-light text-[#18448F]">La satisfaction de nos </span>
-                                    <span className="font-bold text-[#18448F]">maîtres brasseurs.</span>
-                                </h2>
+                                 <h2 className="mb-8 heading-pro-max text-center">
+                                <span className="italic font-light text-[#18448F] block">La satisfaction de nos </span>
+                                <span className="font-bold text-[#18448F] block text-center">maîtres brasseurs.</span>
+                            </h2>
                             </div>
                         }
                     />
@@ -308,9 +301,9 @@ const SolutionsBrasseries = () => {
                     <div className="absolute inset-0 bg-radial-gradient opacity-20" />
                     
                     {/* Background Image with Overlay */}
-                    <div className="absolute inset-0 z-0 opacity-25">
+                    <div className="absolute inset-0 z-0 opacity-40">
                         <img
-                            src={technicianInspectionImg}
+                            src={beerImg}
                             alt="Technicien inspectant les systèmes de filtration de la brasserie - Solution Bricareau"
                             className="w-full h-full object-cover grayscale brightness-110"
                         />

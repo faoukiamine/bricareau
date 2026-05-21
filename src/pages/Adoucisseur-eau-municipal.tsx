@@ -621,15 +621,15 @@ const AdoucisseurEauMunicipal = () => {
                             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-4">
                                 <ProMaxButton 
                                     asChild
-                                    variant="white"
+                                    variant="outline-white"
                                 >
                                     <a href="tel:18552649328" className="flex items-center gap-3">
-                                        <Phone className="h-5 w-5 animate-bounce" />
+                                        <Phone className="h-5 w-5" />
                                         Parlez à un expert
                                     </a>
                                 </ProMaxButton>
                                 <ProMaxButton
-                                    variant="outline-white"
+                                    variant="white"
                                     asChild
                                 >
                                     <NavLink to="/consultation">Planifiez une consultation</NavLink>

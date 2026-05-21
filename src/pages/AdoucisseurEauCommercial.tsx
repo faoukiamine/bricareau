@@ -9,7 +9,7 @@ import ExpertAvatars from "@/components/ExpertAvatars";
 import { ProMaxButton } from "@/components/ui/ProMaxButton";
 import { Button } from "@/components/ui/button";
 import heroImg from "@/assets/640320.jpg";
-import kitchenImg from "@/assets/9194.jpg";
+import kitchen1Img from "@/assets/2149646223.jpg";
 import untitledImg from "@/assets/2151469364.jpg";
 import mobileSoftenerImg from "@/assets/9-optimized.webp";
 import portableWaterSoftenerImg from "@/assets/Portable_Water_Softener.jpg";
@@ -19,7 +19,7 @@ import financeModeImg from "@/assets/finance_mode.svg";
 import plumbingImg from "@/assets/plumbing.svg";
 import moneyBagImg from "@/assets/money_bag.svg";
 import healthMetricsImg from "@/assets/health_metrics.svg";
-import laundryImg from "@/assets/2151468669.jpg";
+import laundry1Img from "@/assets/d3f1.jpg";
 import laundryIcon from "@/assets/laundry.svg";
 import detergentsImg from "@/assets/Detergents.svg";
 import starsImg from "@/assets/stars.svg";
@@ -37,8 +37,8 @@ import adoucisseursImg from "@/assets/Adoucisseurs d'eau.webp";
 import specializedFiltersImg from "@/assets/Filtres d'eau spécialisés.webp";
 import drinkingWaterImg from "@/assets/Solutions d'eau potable.webp";
 import undersinkSystemImg from "@/assets/Système+de+filtration+Serene+Lite.webp";
-import hardWaterSignsImg from "@/assets/Signs+of+hard+water+in+your+home-640w.webp";
-import hardWaterImg from "@/assets/58279.jpg";
+import hardWaterSigns1Img from "@/assets/7655.jpg";
+import hardWater1Img from "@/assets/2149345543.jpg";
 import benefitsVisualImg from "@/assets/2148003850.jpg";
 import { conditionneursImg } from "./Blog pages/Adoucisseur avec sel ou sans sel";
 import { softenerImg as residentialWaterSoftenerImg } from "./Blog pages/Comment régler la dureté de votre adoucisseur ";
@@ -49,6 +49,7 @@ import womansufferingdryhairfromhardwaterImg from "@/assets/12163.jpg";
 import arrowDownIcon from "@/assets/keyboard_double_arrow_down.svg";
 import arrowUpIcon from "@/assets/keyboard_double_arrow_up.svg";
 import hardWaterFaucetImg from "@/assets/Hard Water-Faucet.jpg";
+import dishwasherCtaImg from "@/assets/18036672_SIE_2720_1530_21_04_30_SIE_CRM_Dishwasher_Hand_Taking_Out_Wine_Glass_Basket_Motiv_11_0017.webp";
 import panoramaBgImg from "@/assets/Rain.webp";
 import SentinellePDF from "@/assets/brochure-freshpoint-fr.pdf";
 import TwinAlternatingWaterSoftenerImg from "@/assets/Alternating Water Softener.png";
@@ -251,7 +252,7 @@ const AdoucisseurEauCommercial = () => {
                                     desc: "Protégez vos fours combinés, lave-vaisselle industriels et machines à glace des pannes coûteuses liées à l'accumulation de calcaire.",
                                     icon: <Shield className="w-6 h-6 text-emerald-600" />,
                                     badge: "Maintenance",
-                                    img: kitchenImg,
+                                    img: kitchen1Img,
                                     color: "bg-emerald-600"
                                 },
                                 { 
@@ -260,7 +261,7 @@ const AdoucisseurEauCommercial = () => {
                                     desc: "Dites adieu aux traces blanches sur les verres et les couverts. Garantissez une présentation étincelante sans polissage manuel excessif.",
                                     icon: <Sparkles className="w-6 h-6 text-cyan-500" />,
                                     badge: "Image de Marque",
-                                    img: hardWaterSignsImg,
+                                    img: hardWaterSigns1Img,
                                     color: "bg-cyan-500"
                                 },
                                 { 
@@ -269,7 +270,7 @@ const AdoucisseurEauCommercial = () => {
                                     desc: "Préservez la douceur des draps et le gonflant des serviettes. Réduisez l'usure des fibres causée par les minéraux agressifs.",
                                     icon: <Shirt className="w-6 h-6 text-indigo-500" />,
                                     badge: "Confort Client",
-                                    img: laundryImg,
+                                    img: laundry1Img,
                                     color: "bg-indigo-500"
                                 },
                                 { 
@@ -278,7 +279,7 @@ const AdoucisseurEauCommercial = () => {
                                     desc: "L'eau dure neutralise l'efficacité de vos détergents professionnels, vous obligeant à une surconsommation de produits de nettoyage.",
                                     icon: <HandCoins className="w-6 h-6 text-amber-500" />,
                                     badge: "Optimisation",
-                                    img: hardWaterImg,
+                                    img: hardWater1Img,
                                     color: "bg-amber-500"
                                 },
                                 { 
@@ -741,8 +742,8 @@ En restauration et en hôtellerie, chaque détail compte. Assurez la conformité
                     {/* Background Image with Overlay */}
                     <div className="absolute inset-0 z-0 opacity-40">
                         <img
-                            src={hardWaterFaucetImg}
-                            alt="Problématique d'eau dure sur la robinetterie - Solution Bricareau"
+                            src={dishwasherCtaImg}
+                            alt="L'excellence de la vaisselle étincelante en hôtellerie grâce à l'eau douce Bricareau"
                             className="w-full h-full object-cover grayscale brightness-150"
                         />
                         <div className="absolute inset-0 bg-[#18448F]/10 backdrop-blur-sm" />
@@ -755,12 +756,12 @@ En restauration et en hôtellerie, chaque détail compte. Assurez la conformité
                                     PRENEZ LE CONTRÔLE DE VOTRE EAU
                                 </span>
                                 <h2 className="font-light block leading-tight lg:leading-[52px] text-white">
-                                    Sublimez votre établissement <br />
-                                    <span className="text-white italic font-bold font-serif">par la pureté de l'eau.</span>
+                                    Sublimez l'expérience de vos hôtes <br />
+                                    <span className="text-white italic font-bold font-serif">par la signature de l'eau douce.</span>
                                 </h2>
-                                <p className="text-lg md:text-xl text-blue-100/80 max-w-2xl mx-auto font-light leading-relaxed">
-                                    Une protection intégrale pour vos infrastructures et une expérience client mémorable. <br className="hidden md:block" />
-                                    Activez <span className="text-white font-bold border-b border-white">l'excellence opérationnelle</span> dès aujourd'hui.
+                                <p className="text-lg md:text-xl text-blue-100/80 max-w-3xl mx-auto font-light leading-relaxed">
+                                    De la brillance irréprochable de votre verrerie à la douceur incomparable de votre linge, élevez chaque détail de votre accueil. Préservez durablement vos équipements critiques (fours vapeur, machines à café, chaudières) tout en garantissant un confort 5 étoiles. <br className="hidden md:block" />
+
                                 </p>
                             </div>
 
