@@ -26,7 +26,7 @@ import starsImg from "@/assets/stars.svg";
 import healthSafetyImg from "@/assets/health_and_safety.svg";
 import softImg from "@/assets/Soft.svg";
 import savingsImg from "@/assets/savings.svg";
-import waterTestingImg from "@/assets/2147800429.jpg";
+import waterTestingImg from "@/assets/2151812357.jpg";
 import process1 from "@/assets/2148563485.jpg";
 import labTestImg from "@/assets/test-laboratoire-diligence-inspection-750x500.jpg";
 import equipmentProImg from "@/assets/2151949237.jpg";
@@ -54,7 +54,7 @@ import SentinellePDF from "@/assets/brochure-freshpoint-fr.pdf";
 import TwinAlternatingWaterSoftenerImg from "@/assets/Alternating Water Softener.png";
 import SentinelWaterSoftenerImg from "@/assets/Sentinelle Water Softener.png";
 import SerenityWaterSoftenerImg from "@/assets/Serenity Water Softener.png";
-import installationSoftenerImg from "@/assets/WaterSoftenerInstallation.jpg";
+import installationSoftenerImg from "@/assets/4211.jpg";
 import diagnosticStepImg from "@/assets/step-diagnostic.png";
 import customStepImg from "@/assets/step-custom.png";
 import installationStepImg from "@/assets/step-installation.png";
@@ -113,45 +113,7 @@ const products = [
     },
 ];
 
-interface ComparisonItem {
-    feature: string;
-    Sentinel: string | boolean;
-    Sérénité: string | boolean;
-    Infiniti: string | boolean;
-}
 
-const comparisonData: ComparisonItem[] = [
-    { 
-        feature: "Cible principale", 
-        Sentinel: "Dureté (Calcaire)", 
-        Sérénité: "Dureté + Chlore + Goût", 
-        Infiniti: "Dureté (Haute Capacité)" 
-    },
-    { 
-        feature: "Technologie de Vanne", 
-        Sentinel: "Électronique Volumétrique", 
-        Sérénité: "Double Régulation Luxe", 
-        Infiniti: "Alternance Hydrométrique" 
-    },
-    { 
-        feature: "Média Filtrant", 
-        Sentinel: "Résine Haute Capacité", 
-        Sérénité: "Résine + Charbon KDF", 
-        Infiniti: "Résine Premium X2" 
-    },
-    { 
-        feature: "Garantie Structurelle", 
-        Sentinel: "10 ans", 
-        Sérénité: "À Vie (Limitée)", 
-        Infiniti: "À Vie (Limitée)" 
-    },
-    { 
-        feature: "Économie de Sel", 
-        Sentinel: "Standard", 
-        Sérénité: "Optimisée (+30%)", 
-        Infiniti: "Maximale (Contrôle Continu)" 
-    }
-];
 
 const faqItems = [
     { 
@@ -206,7 +168,6 @@ const AdoucisseurEauCommercial = () => {
     }, [emblaApi, setScrollSnaps, onSelect]);
     const [showAllFaqs, setShowAllFaqs] = useState(false);
     const [showAllHarms, setShowAllHarms] = useState(false);
-    const [activeCol, setActiveCol] = useState(0);
     const [activeAdvantageImage, setActiveAdvantageImage] = useState(benefitsVisualImg);
     const navigate = useNavigate();
     const resourcesRef = React.useRef<HTMLDivElement>(null);
@@ -528,143 +489,6 @@ const AdoucisseurEauCommercial = () => {
                             </p>
                         </div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                            {products.map((p, i) => (
-                                <div
-                                    key={i}
-                                    className="group relative bg-white rounded-[3rem] overflow-hidden border border-slate-100 hover:shadow-[0_40px_80px_-20px_rgba(37,99,235,0.15)] transition-all duration-700 hover:-translate-y-4 flex flex-col h-full cursor-pointer"
-                                    onClick={() => {
-                                        if (p.name.includes("Sentinelle")) {
-                                            window.open(SentinellePDF, '_blank');
-                                        } else {
-                                            navigate(p.path || "/adoucisseurs");
-                                        }
-                                    }}
-                                >
-                                    <div className="relative h-80 overflow-hidden bg-slate-50/30 flex items-center justify-center p-12 overflow-hidden">
-                                        {p.isRecommended && (
-                                            <div className="absolute top-8 right-8 z-10">
-                                                <span className="inline-block px-4 py-1.5 bg-blue-600 text-white rounded-full text-[10px] font-black uppercase tracking-[0.3em] shadow-xl shadow-blue-500/30 animate-pulse">
-                                                    LE CHOIX DES EXPERTS
-                                                </span>
-                                            </div>
-                                        )}
-                                        <img
-                                            src={p.image}
-                                            alt={`${p.name}`}
-                                            className="max-h-full object-contain group-hover:scale-110 transition-transform duration-1000 mix-blend-multiply relative z-10"
-                                        />
-                                        {/* Dynamic Background Circle */}
-                                        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(37,99,235,0.05)_0%,_transparent_70%)] group-hover:scale-150 transition-transform duration-1000" />
-                                    </div>
-
-                                    <div className="p-10 space-y-6 flex flex-col flex-grow relative">
-                                        <div className="absolute top-0 left-10 right-10 h-1 bg-gradient-to-r from-transparent via-blue-100 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-700" />
-                                        
-                                        <h3 className="text-2xl font-bold text-[#18448F] text-center whitespace-pre-line group-hover:text-blue-600 transition-colors">
-                                            {p.name}
-                                        </h3>
-                                        
-                                        <p className="text-slate-500 text-sm leading-relaxed text-center italic font-light px-4">
-                                            {p.desc}
-                                        </p>
-
-                                        <div className="space-y-4 pt-4 border-t border-slate-50">
-                                            {p.features?.map((f, idx) => (
-                                                <div key={idx} className="flex items-center gap-4 group/item">
-                                                    <div className="w-6 h-6 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0 group-hover:bg-blue-600 transition-colors duration-500">
-                                                        <CheckCircle2 className="w-3.5 h-3.5 text-blue-600 group-hover:text-white transition-colors" />
-                                                    </div>
-                                                    <span className="text-sm text-slate-600 font-medium group-hover:text-[#18448F] transition-colors">{f}</span>
-                                                </div>
-                                            ))}
-                                        </div>
-
-                                        <div className="pt-8 mt-auto flex items-center justify-between">
-                                            <div className="flex flex-col">
-                                                <span className="text-[10px] font-black uppercase tracking-widest text-[#18448F]/40 group-hover:text-blue-600 transition-colors">Performance</span>
-                                                <span className="text-[10px] font-bold text-slate-400 group-hover:text-slate-600 transition-colors">Certifiée CSA/NSF</span>
-                                            </div>
-                                            <div className="w-12 h-12 rounded-2xl bg-slate-50 flex items-center justify-center text-slate-400 group-hover:bg-blue-600 group-hover:text-white group-hover:shadow-lg group-hover:shadow-blue-500/30 transition-all duration-500">
-                                                <ArrowRight className="h-6 w-6" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </section>
-
-                {/* 3. TimeLine SÉRÉNITÉ */}
-                <section className="py-24 lg:py-32 bg-white relative overflow-hidden">
-                     <div className="container mx-auto px-6 relative z-10">
-                        <div className="text-center max-w-3xl mx-auto mb-20 lg:mb-24">
-                            <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.3em] mb-8">
-                                VOTRE EXPÉRIENCE CLIENT
-                            </span>
-                            <h2 className="mb-8 heading-pro-max text-center">
-                                <span className="italic font-light text-[#18448F] block">Une intégration invisible pour</span>
-                                <span className="font-bold text-[#18448F] block">une excellence d'eau sans compromis.</span>
-                            </h2>
-                            <p className="body-pro-max text-center max-w-3xl mx-auto">
-                                Le Parcours Bricareau : une ingénierie de précision, depuis le diagnostic initial jusqu'à l'optimisation continue de vos performances opérationnelles.
-                            </p>
-                        </div>
-
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 relative mb-24 lg:mb-32">
-                            {/* Connecting Line (Desktop) */}
-                            <div className="hidden lg:block absolute top-[48px] left-[10%] w-[80%] h-px bg-slate-100 z-0" />
-                            
-                            {[
-                                { 
-                                    step: "01",
-                                    title: "Audit de Flux & Pureté", 
-                                    desc: "Analyse rigoureuse de vos débits et de la composition chimique de votre eau.",
-                                    image: diagnosticStepImg,
-                                    color: "border-blue-100"
-                                },
-                                { 
-                                    step: "02",
-                                    title: "Ingénierie sur-mesure", 
-                                    desc: "Nous calibrons vos systèmes selon vos pics d'activité et vos besoins en équipements critiques.",
-                                    image: customStepImg,
-                                    color: "border-indigo-100"
-                                },
-                                { 
-                                    step: "03",
-                                    title: "Déploiement Stratégique", 
-                                    desc: "Mise en service certifiée, planifiée pour minimiser toute interruption de vos opérations.",
-                                    image: installationStepImg,
-                                    color: "border-cyan-100"
-                                },
-                                { 
-                                    step: "04",
-                                    title: "Continuité Opérationnelle", 
-                                    desc: "Une eau parfaite garantie 24/7 avec un support technique prioritaire pour votre établissement.",
-                                    image: serenityStepImg,
-                                    color: "border-emerald-100"
-                                }
-                            ].map((item, idx) => (
-                                <div key={idx} className="relative z-10 group text-center">
-                                    <div className="mb-8 relative flex items-center justify-center">
-                                        <div className="relative w-fit mx-auto">
-                                            <div className={`w-32 h-32 rounded-[2.5rem] overflow-hidden border-2 ${item.color} shadow-xl shadow-slate-200/50 group-hover:scale-110 transition-transform duration-500 bg-white`}>
-                                                <img src={item.image} alt={item.title} className="w-full h-full object-cover" />
-                                            </div>
-                                            <div className="absolute -top-2 -left-2 lg:-left-auto lg:-top-2 lg:-right-2 w-10 h-10 bg-blue-600 lg:bg-[#18448F] text-white rounded-full flex items-center justify-center font-black text-xs shadow-lg border-2 border-white z-20">
-                                                {item.step}
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <h4 className="text-xl font-bold text-slate-800 mb-4 group-hover:text-blue-600 transition-colors leading-tight">{item.title}</h4>
-                                    <p className="body-pro-max text-slate-500 text-center max-w-[220px] mx-auto">
-                                        {item.desc}
-                                    </p>
-                                </div>
-                            ))}
-                        </div>
-                        
                         {/* Featured Banner with generated image */}
                         <div className="rounded-none lg:rounded-[3rem] overflow-hidden shadow-none lg:shadow-2xl border-0 lg:border border-slate-100 group relative -mx-6 lg:mx-0">
                             <img 
@@ -674,120 +498,142 @@ const AdoucisseurEauCommercial = () => {
                             />
                             <div className="absolute inset-0 bg-gradient-to-r from-[#18448F]/70 via-[#18448F]/30 to-transparent p-8 md:p-12 lg:p-20 flex items-center">
                                 <div className="max-w-lg">
-                                    <div className="flex items-center gap-3 text-blue-400 font-bold text-xs tracking-widest uppercase mb-6">
+                                    <div className="flex items-center gap-3 text-white font-bold text-xs tracking-widest uppercase mb-6">
                                         <CheckCircle className="w-5 h-5" />
                                         Engagement Certifié
                                     </div>
-                                    <h3 className="text-white text-4xl font-bold mb-6 leading-tight">L'excellence Bricareau s'installe chez vous.</h3>
+                                    <h3 className="text-white text-4xl font-bold mb-6 leading-tight">Le confort absolu pour vos hôtes, l’excellence Bricareau pour votre hôtel.</h3>
                                     <p className="text-white text-lg mb-10 text-justify">
-                                        Chaque installation est une signature de qualité. Nos techniciens assurent une meilleure mise en place de vos systèmes, garantissant performance et esthétique.
+                                        Chaque installation est une signature de qualité. Nos techniciens optimisent le déploiement de vos systèmes pour garantir un rendement maximal de vos équipements et une qualité d'eau irréprochable au quotidien.
                                     </p>
                                 </div>
                             </div>
                         </div>
-                     </div>
+                    </div>
                 </section>
 
-                {/* 4. Comparative Analysis Section */}
-                <section className="py-24 bg-white relative overflow-hidden">
-                    <div className="container mx-auto px-6">
-                        <div className="text-center mb-16">
-                            <span className="inline-block px-4 py-1.5 bg-blue-100 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-widest mb-6">
-                                ANALYSE COMPARATIVE
+                {/* 3. TimeLine SÉRÉNITÉ */}
+                <section className="py-24 lg:py-36 bg-white relative overflow-hidden">
+                    <style dangerouslySetInnerHTML={{__html: `
+                        @keyframes flow {
+                            0% { stroke-dashoffset: 0; }
+                            100% { stroke-dashoffset: -300; }
+                        }
+                        .animate-flow {
+                            animation: flow 8s linear infinite;
+                        }
+                        .card-drop {
+                            border-radius: 4rem 1.5rem 4rem 1.5rem;
+                            transition: border-radius 0.7s cubic-bezier(0.4, 0, 0.2, 1), transform 0.7s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.7s;
+                        }
+                        .card-drop:hover {
+                            border-radius: 1.5rem 4rem 1.5rem 4rem;
+                        }
+                        .image-drop {
+                            border-radius: 2.5rem 1rem 2.5rem 1rem;
+                            transition: border-radius 0.7s cubic-bezier(0.4, 0, 0.2, 1), transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+                        }
+                        .group:hover .image-drop {
+                            border-radius: 1rem 2.5rem 1rem 2.5rem;
+                        }
+                    `}} />
+
+                    {/* Background Atmospheric Elements */}
+                    <div className="absolute top-1/4 left-[10%] w-96 h-96 bg-blue-50/40 rounded-full blur-3xl pointer-events-none -z-10" />
+                    <div className="absolute bottom-1/4 right-[10%] w-96 h-96 bg-indigo-50/30 rounded-full blur-3xl pointer-events-none -z-10" />
+
+                     <div className="container mx-auto px-6 relative z-10">
+                        <div className="text-center max-w-3xl mx-auto mb-24 lg:mb-32">
+                            <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.3em] mb-8">
+                                L'INGÉNIERIE D'EXCELLENCE BRICAREAU
                             </span>
-                            <h2 className="heading-pro-max">
-                                <span className="italic font-light text-[#18448F] block text-center">Identifiez la performance</span>
-                                <span className="font-bold text-[#18448F] block text-center">optimale pour votre établissement.</span>
+                            <h2 className="mb-8 heading-pro-max text-center">
+                                <span className="italic font-light text-[#18448F] block">L'ingénierie fluide au service de</span>
+                                <span className="font-bold text-[#18448F] block">votre excellence opérationnelle.</span>
                             </h2>
+                            <p className="body-pro-max text-center max-w-3xl mx-auto">
+                                De l’analyse initiale à la maintenance prédictive, le Parcours Bricareau garantit une intégration technique parfaite et une continuité totale de vos débits les plus exigeants.
+                            </p>
                         </div>
 
-                        <div className="overflow-x-visible relative">
-                            {/* Navigation Arrows for Mobile/Tablet */}
-                            <div className="lg:hidden flex items-center justify-end gap-3 mb-8 relative z-30">
-                                <Button 
-                                    size="icon" 
-                                    variant="outline" 
-                                    onClick={() => setActiveCol(Math.max(0, activeCol - 1))}
-                                    disabled={activeCol === 0}
-                                >
-                                    <ChevronLeft className="h-5 w-5" />
-                                </Button>
-                                <div className="flex gap-1.5 px-2">
-                                    {[0, 1, 2].map((i) => (
-                                        <div key={i} className={`h-1.5 rounded-full transition-all duration-300 ${i === activeCol ? 'w-6 bg-blue-600' : 'w-1.5 bg-blue-100'}`} />
-                                    ))}
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative items-stretch">
+                            {/* Organic Curved Pipeline Wave (Desktop Only) */}
+                            <svg className="hidden lg:block absolute top-[20px] left-[5%] w-[90%] h-[240px] z-0 pointer-events-none" viewBox="0 0 1000 200" fill="none">
+                                <path d="M 50 60 Q 175 220, 300 60 T 550 60 T 800 60" stroke="#f1f5f9" strokeWidth="4" strokeLinecap="round" />
+                                <path d="M 50 60 Q 175 220, 300 60 T 550 60 T 800 60" stroke="url(#organicGradient)" strokeWidth="4" strokeLinecap="round" strokeDasharray="40, 200" className="animate-flow" />
+                                <defs>
+                                    <linearGradient id="organicGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                        <stop offset="0%" stopColor="#3b82f6" stopOpacity="0" />
+                                        <stop offset="50%" stopColor="#06b6d4" stopOpacity="1" />
+                                        <stop offset="100%" stopColor="#6366f1" stopOpacity="0" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            
+                            {[
+                                { 
+                                    step: "01",
+                                    title: "Diagnostic & Analyse Moléculaire", 
+                                    desc: "Nos ingénieurs effectuent un audit physico-chimique exhaustif de votre ressource et de vos débits pour concevoir le schéma de traitement idéal.",
+                                    image: diagnosticStepImg,
+                                    color: "border-blue-100"
+                                },
+                                { 
+                                    step: "02",
+                                    title: "Modélisation & Calibration", 
+                                    desc: "Nous dimensionnons vos adoucisseurs sur-mesure en fonction de vos équipements critiques, de vos variations de charge et de vos exigences de conformité.",
+                                    image: customStepImg,
+                                    color: "border-indigo-100"
+                                },
+                                { 
+                                    step: "03",
+                                    title: "Intégration & Mise en Service", 
+                                    desc: "Une installation millimétrée par nos techniciens agréés, planifiée pour respecter vos contraintes opérationnelles et éliminer tout temps d'arrêt.",
+                                    image: installationStepImg,
+                                    color: "border-cyan-100"
+                                },
+                                { 
+                                    step: "04",
+                                    title: "Monitoring & Optimisation", 
+                                    desc: "Un suivi rigoureux et une maintenance proactive garantissant une eau de haute qualité 24/7, protégeant durablement vos investissements.",
+                                    image: serenityStepImg,
+                                    color: "border-emerald-100"
+                                }
+                            ].map((item, idx) => (
+                                <div key={idx} className={`relative z-10 group bg-gradient-to-b from-slate-50/30 to-white/95 backdrop-blur-sm border border-slate-100 hover:border-blue-500/20 card-drop p-8 text-center shadow-sm hover:shadow-2xl hover:shadow-blue-900/5 transition-all duration-500 flex flex-col justify-between min-h-[400px] overflow-hidden ${idx % 2 === 0 ? "lg:-translate-y-8" : "lg:translate-y-8"}`}>
+                                    {/* Watermark Step Number */}
+                                    <div className="absolute bottom-4 left-6 text-8xl font-black font-serif text-slate-100/40 select-none pointer-events-none group-hover:text-blue-50/40 transition-colors duration-700 z-0">
+                                        {item.step}
+                                    </div>
+                                    
+                                    <div className="relative z-10">
+                                        {/* Molecule Sphere Badge */}
+                                        <div className="absolute top-0 right-0 w-12 h-12 bg-gradient-to-tr from-blue-500/10 to-cyan-400/10 rounded-full flex items-center justify-center backdrop-blur-md border border-white/50 shadow-inner group-hover:scale-110 group-hover:rotate-12 transition-all duration-500 z-20">
+                                            <span className="font-serif italic text-blue-600 text-sm font-black">{item.step}</span>
+                                        </div>
+
+                                        <div className="relative w-24 h-24 mx-auto mb-8">
+                                            <div className="absolute inset-0 bg-blue-500/10 rounded-[2rem] blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                                            <div className={`relative w-24 h-24 overflow-hidden border-2 ${item.color} shadow-lg image-drop bg-white z-10`}>
+                                                <img src={item.image} alt={item.title} className="w-full h-full object-cover" />
+                                            </div>
+                                        </div>
+                                        
+                                        <h4 className="text-lg font-extrabold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors leading-tight">{item.title}</h4>
+                                        <p className="text-sm font-light text-slate-500 leading-relaxed text-justify px-2">
+                                            {item.desc}
+                                        </p>
+                                    </div>
+                                    
+                                    <div className="relative z-10 mt-6 flex justify-center opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+                                        <span className="text-[10px] font-bold text-blue-600 tracking-widest uppercase flex items-center gap-1.5">
+                                            DÉCOUVRIR LE SERVICE <ChevronRight className="w-3.5 h-3.5" />
+                                        </span>
+                                    </div>
                                 </div>
-                                <Button 
-                                    size="icon" 
-                                    variant="outline" 
-                                    onClick={() => setActiveCol(Math.min(2, activeCol + 1))}
-                                    disabled={activeCol === 2}
-                                >
-                                    <ChevronRight className="h-5 w-5" />
-                                </Button>
-                            </div>
-
-                            <div className="overflow-x-auto lg:overflow-x-visible no-scrollbar pb-8">
-                                <table className="w-full border-collapse bg-white rounded-3xl overflow-hidden shadow-2xl relative">
-                                    <thead>
-                                        <tr className="bg-slate-50 relative z-20">
-                                            <th className="p-6 md:p-10 text-left text-blue-900/40 font-black uppercase tracking-widest text-[10px] sticky left-0 bg-slate-50 z-30 border-r border-slate-100 drop-shadow-md lg:drop-shadow-none min-w-[160px] md:min-w-[200px]">
-                                                Critères Techniques
-                                            </th>
-                                            {[
-                                                { name: "Série Sentinelle", img: SentinelWaterSoftenerImg, badge: "Précision Économique", color: "bg-[#18448F]", offset: "-right-20" },
-                                                { name: "Série Sérénité", img: SerenityWaterSoftenerImg, badge: "Hybride Ultime", color: "bg-[#18448F]", offset: "-right-12" },
-                                                { name: "Série Infiniti", img: TwinAlternatingWaterSoftenerImg, badge: "Puissance 24h/24", color: "bg-orange-500", offset: "-right-20" }
-                                            ].map((m, i) => (
-                                                <th 
-                                                    key={i} 
-                                                    className={cn(
-                                                        "p-4 md:p-6 text-center transition-all duration-500 min-w-[220px]",
-                                                        i === activeCol ? "table-cell" : "hidden lg:table-cell"
-                                                    )}
-                                                >
-                                                    <div className="flex flex-col items-center gap-6">
-                                                        <div className="relative group/img">
-                                                            <div className={`absolute -top-3 ${m.offset} z-20 ${m.color} text-white text-[8px] font-black uppercase tracking-[0.4em] px-3 py-1 rounded-full shadow-2xl whitespace-nowrap scale-90 md:scale-100`}>
-                                                                {m.badge}
-                                                            </div>
-                                                            <div className="absolute inset-0 bg-blue-600 rounded-full blur-2xl opacity-0 group-hover/img:opacity-20 transition-opacity duration-700" />
-                                                            <img
-                                                                src={m.img}
-                                                                alt={m.name}
-                                                                className="w-[120px] md:w-[140px] h-[100px] md:h-[120px] object-contain mx-auto mix-blend-multiply relative z-10 transition-transform duration-700 group-hover/img:scale-110"
-                                                            />
-                                                        </div>
-                                                        <div className="text-sm md:text-lg font-bold text-[#18448F]">{m.name}</div>
-                                                    </div>
-                                                </th>
-                                            ))}
-                                        </tr>
-                                    </thead>
-                                    <tbody className="divide-y divide-slate-100 relative z-10">
-                                        {comparisonData.map((row, i) => (
-                                            <tr key={i} className="hover:bg-blue-50/30 transition-colors group">
-                                                <td className="p-6 md:p-10 font-bold text-[#18448F] bg-white sticky left-0 z-30 border-r border-slate-50 drop-shadow-sm lg:drop-shadow-none text-[12px] md:text-sm italic group-hover:text-blue-600 transition-colors">
-                                                    {row.feature}
-                                                </td>
-                                                {["Sentinel", "Sérénité", "Infiniti"].map((model, idx) => (
-                                                    <td 
-                                                        key={model} 
-                                                        className={cn(
-                                                            "p-6 md:p-10 text-center text-[13px] md:text-sm font-light leading-relaxed text-slate-600 transition-all duration-500",
-                                                            idx === activeCol ? "table-cell" : "hidden lg:table-cell"
-                                                        )}
-                                                    >
-                                                        {row[model as keyof ComparisonItem]}
-                                                    </td>
-                                                ))}
-                                            </tr>
-                                        ))}
-                                    </tbody>
-                                </table>
-                            </div>
+                            ))}
                         </div>
-                    </div>
+                     </div>
                 </section>
 
                 {/* 6.Testimonials Grid Section */}
@@ -830,12 +676,11 @@ const AdoucisseurEauCommercial = () => {
                                 Contrôle de la Qualité D'EAU
                             </span>
                             <h2 className="mb-8 heading-pro-max text-left">
-                                <span className="italic font-light text-[#18448F] lg:text-white block">Des tests d'eau précis</span>
-                                <span className="text-[#18448F] lg:text-white italic font-bold font-serif">pour une tranquillité d'esprit totale.</span>
+                                <span className="italic font-light text-[#18448F] lg:text-white block">Eau calcaire ? Risque sanitaire ?</span>
+                                <span className="text-[#18448F] lg:text-white italic font-bold font-serif">Prenez les devants.</span>
                             </h2>
                             <p className="body-pro-max text-black lg:text-white/95 mb-8 max-w-xl text-justify lg:text-left">
-                                Ne laissez pas la qualité de votre eau compromettre vos standards d'excellence. Nos analyses certifiées identifient les risques minéraux et bactériologiques pour assurer la conformité sanitaire et la protection de vos actifs critiques.
-                            </p>
+En restauration et en hôtellerie, chaque détail compte. Assurez la conformité de votre établissement, protégez vos équipements de cuisine et de blanchisserie, et offrez une eau irréprochable à vos hôtes grâce à nos analyses d'eau certifiées.                            </p>
                             <div className="flex gap-4">
                                 <ProMaxButton 
                                     asChild
