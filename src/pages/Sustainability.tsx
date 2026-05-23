@@ -36,7 +36,7 @@ const Sustainability = () => {
                 <section className="relative h-[70vh] flex items-center overflow-hidden">
                     <div className="absolute inset-0">
                         <img
-                            src="https://images.unsplash.com/photo-1556761175-4b46a572b186?q=80&w=2000&auto=format&fit=crop"
+                            src={waveImg}
                             alt="Durabilité Bricareau"
                             className="w-full h-full object-cover brightness-[0.4]"
                         />

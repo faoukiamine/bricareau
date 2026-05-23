@@ -35,8 +35,9 @@ import {
 import heroImg from "@/assets/Filtres d'eau industriels.jpg";
 import multimediaImg from "@/assets/7kbp.png";
 import charbonImg from "@/assets/Industrial Water Softeners.png";
-import catalytiqueImg from "@/assets/Brewery-Fiter-608x696.png.webp";
-import greensandImg from "@/assets/high_flow_cartridge_filter_housing_render_1778897048455.png";
+import catalytiqueImg from "@/assets/filtre-catalytique-new.jpg";
+import multiCartoucheImg from "@/assets/IMG_FILTRE_QFINOX.jpg";
+import skidsImg from "@/assets/skids-sur-mesure-nobg.png";
 
 const FiltrationIndustrielle = () => {
     const navigate = useNavigate();
@@ -51,43 +52,6 @@ const FiltrationIndustrielle = () => {
         window.scrollTo(0, 0);
     }, []);
 
-    const comparisonData = [
-        {
-            feature: "Application Principale",
-            multimedia: "Sédiments, turbidité lourde",
-            charbon: "Chlore, COV, odeurs, goûts",
-            catalytique: "Fer, manganèse, H2S élevés",
-            greensand: "Fer et manganèse (avec oxydant)"
-        },
-        {
-            feature: "Taille de filtration typique",
-            multimedia: "10 - 15 microns",
-            charbon: "Absorption chimique",
-            catalytique: "Précipitation physique",
-            greensand: "Précipitation physique"
-        },
-        {
-            feature: "Médias utilisés",
-            multimedia: "Anthracite, Sable, Grenat",
-            charbon: "Charbon actif granulaire (GAC)",
-            catalytique: "Katalox Light, Birm, Pyrolox",
-            greensand: "Manganèse Greensand Plus"
-        },
-        {
-            feature: "Lavage à contre-courant",
-            multimedia: "Nécessaire (Haute pression)",
-            charbon: "Nécessaire (Basse pression)",
-            catalytique: "Nécessaire (Moyenne pression)",
-            greensand: "Nécessaire + Régénération KMnO4"
-        },
-        {
-            feature: "Durée de vie du média",
-            multimedia: "5 à 7 ans",
-            charbon: "1 à 3 ans (selon saturation)",
-            catalytique: "5 à 10 ans",
-            greensand: "5 à 8 ans"
-        }
-    ];
 
     const faqs = [
         {
@@ -116,8 +80,8 @@ const FiltrationIndustrielle = () => {
                 {/* 1. HERO SECTION PRO MAX */}
                 <Hero 
                     image={heroImg}
-                    highlightedTitle="La pureté industrielle,"
-                    mainTitle="la performance sans compromis."
+                    highlightedTitle="L'excellence de la filtration,"
+                    mainTitle="le bouclier de vos opérations industrielles."
                     subtitle="Protégez vos équipements critiques et garantissez une eau de process irréprochable avec nos systèmes de filtration industriels lourds : Multimédia, Charbon Actif, Catalytique et Sable Vert."
                     showPhone={true}
                     showBreadcrumbs={true}
@@ -307,10 +271,10 @@ const FiltrationIndustrielle = () => {
                     </div>
 
                     {/* Outer flex container spanning full viewport width */}
-                    <div className="w-full flex flex-col lg:flex-row items-center gap-12 select-none overflow-hidden pl-0">
+                    <div className="w-full flex flex-col items-center gap-16 select-none overflow-hidden pl-0">
                         
-                        {/* Left Column: Scrollable Cards Container */}
-                        <div className="w-full lg:w-[73%] relative group pl-0">
+                        {/* Top Row: Scrollable Cards Container */}
+                        <div className="w-full relative group pl-0">
                             {/* Left Navigation Arrow */}
                             <button 
                                 onClick={() => {
@@ -325,7 +289,7 @@ const FiltrationIndustrielle = () => {
                                         }
                                     }
                                 }}
-                                className="absolute -left-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-[#1e3a8a] hover:bg-blue-600 text-white flex items-center justify-center shadow-lg transition-all hover:scale-110 active:scale-95 opacity-0 group-hover:opacity-100 focus:opacity-100 duration-300"
+                                className="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-[#1e3a8a] hover:bg-blue-600 text-white flex items-center justify-center shadow-lg transition-all hover:scale-110 active:scale-95 opacity-0 group-hover:opacity-100 focus:opacity-100 duration-300"
                                 aria-label="Précédent"
                             >
                                 <ChevronLeft className="w-5 h-5" />
@@ -345,7 +309,7 @@ const FiltrationIndustrielle = () => {
                                         }
                                     }
                                 }}
-                                className="absolute -right-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-[#1e3a8a] hover:bg-blue-600 text-white flex items-center justify-center shadow-lg transition-all hover:scale-110 active:scale-95"
+                                className="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-[#1e3a8a] hover:bg-blue-600 text-white flex items-center justify-center shadow-lg transition-all hover:scale-110 active:scale-95 opacity-0 group-hover:opacity-100 focus:opacity-100 duration-300"
                                 aria-label="Suivant"
                             >
                                 <ChevronRight className="w-5 h-5" />
@@ -377,15 +341,27 @@ const FiltrationIndustrielle = () => {
                                         applications: ["Forages chargés", "Métaux lourds", "Traitement anti-odeur"]
                                     },
                                     { 
-                                        name: "Sable Vert (Greensand)", 
-                                        desc: "La référence historique et robuste. Le sable vert recouvert de dioxyde de manganèse oxyde le fer et le manganèse solubles en précipités solides. Le lit est ensuite régénéré périodiquement avec un oxydant doux comme le permanganate de potassium.", 
-                                        img: greensandImg,
-                                        applications: ["Stations municipales", "Industrie lourde", "Eaux souterraines"]
+                                        name: "Filtres multi-cartouches", 
+                                        desc: "Systèmes de filtration haute capacité utilisant de multiples cartouches pour retenir efficacement les particules fines. Conception en acier inoxydable, idéale pour un polissage final ou en pré-traitement d'osmose inverse.", 
+                                        img: multiCartoucheImg,
+                                        applications: ["Polissage final", "Pré-traitement OI", "Haute pureté"]
+                                    },
+                                    { 
+                                        name: "Filtres Birm", 
+                                        desc: "Média filtrant économique et très efficace pour la réduction du fer et du manganèse. Le Birm agit comme un catalyseur insoluble pour accélérer la réaction entre l'oxygène dissous et le fer, ne nécessitant qu'un simple lavage à contre-courant sans produits chimiques.", 
+                                        img: catalytiqueImg,
+                                        applications: ["Eaux de puits", "Irrigation agricole", "Pré-traitement sans chimie"]
+                                    },
+                                    { 
+                                        name: "Skids de filtration d'eau sur mesure", 
+                                        desc: "Conception et assemblage de systèmes complets sur châssis (skids) parfaitement adaptés à votre cahier des charges. Intégration de tous les éléments (réservoirs, vannes, tuyauterie, automatisation) pour une installation 'plug-and-play'.", 
+                                        img: skidsImg,
+                                        applications: ["Projets industriels complets", "Intégration d'usine", "Déploiement rapide"]
                                     }
                                 ].map((product, idx) => (
                                     <div 
                                         key={idx} 
-                                        className="w-[300px] md:w-[350px] lg:w-[400px] shrink-0 bg-white border border-slate-100 rounded-[2rem] p-6 shadow-[0_15px_40px_rgba(0,0,0,0.02)] flex flex-col min-h-[580px] snap-start hover:shadow-md transition-shadow group"
+                                        className="w-[300px] md:w-[350px] lg:w-[calc((100vw-6rem)/4.5)] shrink-0 bg-white border border-slate-100 rounded-[2rem] p-6 shadow-[0_15px_40px_rgba(0,0,0,0.02)] flex flex-col min-h-[580px] snap-start hover:shadow-md transition-shadow group"
                                     >
                                         {/* Image container in light gray background */}
                                         <div className="h-[240px] bg-slate-50/50 rounded-2xl p-6 flex items-center justify-center mb-6 overflow-hidden border border-slate-100 relative">
@@ -426,8 +402,8 @@ const FiltrationIndustrielle = () => {
                             </div>
                         </div>
 
-                        {/* Right Column: Stationary CTA Column */}
-                        <div className="w-full lg:w-[27%] flex flex-col justify-center items-center lg:items-start text-center lg:text-left pr-6 lg:pr-[calc((100vw-1232px)/2)] pl-6 lg:pl-12 space-y-6">
+                        {/* Bottom Row: CTA Column */}
+                        <div className="w-full max-w-4xl mx-auto flex flex-col justify-center items-center text-center px-6 space-y-6 mb-8">
                             <h3 className="text-2xl md:text-3xl font-bold text-[#1e3a8a] leading-tight">
                                 Besoin d'aide pour dimensionner votre système ?
                             </h3>
@@ -446,58 +422,64 @@ const FiltrationIndustrielle = () => {
                     </div>
                 </section>
 
-                {/* 4. TABLEAU DE COMPARAISON PRO MAX */}
-                <section className="py-24 bg-slate-50">
-                    <div className="container mx-auto px-6">
+                {/* 4. PROCESSUS D'INGÉNIERIE (REPLACES TABLE) */}
+                <section className="py-24 bg-slate-50 relative overflow-hidden">
+                    <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_70%,_rgba(37,99,235,0.03)_0%,_transparent_50%)] pointer-events-none" />
+                    
+                    <div className="container mx-auto px-6 relative z-10">
                         <div className="text-center mb-16">
                             <span className="inline-block px-4 py-1.5 bg-blue-100 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-widest mb-6">
-                                MATRICE TECHNIQUE
+                                NOTRE EXPERTISE
                             </span>
                             <h2 className="heading-pro-max">
-                                <span className="italic font-light text-[#2563eb] block text-center">Spécifications techniques</span>
-                                <span className="font-bold text-[#1e3a8a] block text-center">des lits filtrants.</span>
+                                <span className="italic font-light text-[#2563eb] block text-center">Le processus Bricareau,</span>
+                                <span className="font-bold text-[#1e3a8a] block text-center">de l'analyse à l'exploitation.</span>
                             </h2>
+                            <p className="mt-6 text-slate-500 max-w-2xl mx-auto text-center font-light leading-relaxed">
+                                Nous ne vendons pas de simples filtres, nous concevons des solutions complètes. Découvrez notre approche d'ingénierie étape par étape pour sécuriser votre investissement.
+                            </p>
                         </div>
 
-                        <div className="overflow-x-auto pb-12">
-                            <table className="w-full min-w-[1200px] border-collapse bg-white rounded-[3rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.05)] border border-slate-100">
-                                <thead>
-                                    <tr className="bg-slate-50/50">
-                                        <th className="p-10 text-left text-blue-900/40 font-black uppercase tracking-widest text-[10px] w-1/5 border-b border-slate-100">Critères Techniques</th>
-                                        {[
-                                            { name: "Multimédia", icon: <Layers />, color: "text-blue-600" },
-                                            { name: "Charbon Actif", icon: <Factory />, color: "text-slate-800" },
-                                            { name: "Catalytique", icon: <Zap />, color: "text-cyan-600" },
-                                            { name: "Sable Vert", icon: <Activity />, color: "text-emerald-600" }
-                                        ].map((m, i) => (
-                                            <th key={i} className="p-8 text-center border-b border-slate-100">
-                                                <div className="flex flex-col items-center gap-4 group">
-                                                    <div className={`w-12 h-12 rounded-full bg-slate-50 flex items-center justify-center ${m.color} group-hover:scale-110 transition-transform duration-500 shadow-sm border border-slate-100`}>
-                                                        {m.icon}
-                                                    </div>
-                                                    <div className="text-lg font-bold text-[#1e3a8a]">{m.name}</div>
-                                                </div>
-                                            </th>
-                                        ))}
-                                    </tr>
-                                </thead>
-                                <tbody className="divide-y divide-slate-100">
-                                    {comparisonData.map((row, i) => (
-                                        <tr key={i} className="hover:bg-blue-50/30 transition-colors group">
-                                            <td className="p-10 font-bold text-[#1e3a8a] border-r border-slate-50 bg-slate-50/20 text-sm italic group-hover:text-blue-600 transition-colors">
-                                                {row.feature}
-                                            </td>
-                                            {["multimedia", "charbon", "catalytique", "greensand"].map((key) => (
-                                                <td key={key} className="p-10 text-center text-sm font-light leading-relaxed text-slate-600">
-                                                    <span className="bg-slate-50/50 px-4 py-2 rounded-full border border-slate-100/50 text-[#1e3a8a] font-medium shadow-sm block whitespace-nowrap">
-                                                        {row[key as keyof typeof row]}
-                                                    </span>
-                                                </td>
-                                            ))}
-                                        </tr>
-                                    ))}
-                                </tbody>
-                            </table>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                            {[
+                                {
+                                    step: "01",
+                                    title: "Audit & Analyse",
+                                    desc: "Évaluation complète de votre eau brute, de vos débits critiques et de vos contraintes d'espace. Nous ne laissons aucune place au hasard.",
+                                    icon: <Activity className="w-6 h-6 text-blue-600" />
+                                },
+                                {
+                                    step: "02",
+                                    title: "Ingénierie Sur-Mesure",
+                                    desc: "Conception du système, dimensionnement des vannes et sélection précise des médias filtrants pour cibler exactement vos contaminants.",
+                                    icon: <Layers className="w-6 h-6 text-blue-600" />
+                                },
+                                {
+                                    step: "03",
+                                    title: "Fabrication & Intégration",
+                                    desc: "Assemblage rigoureux des skids dans nos ateliers, suivi d'une installation sur votre site planifiée pour minimiser les arrêts de production.",
+                                    icon: <Cog className="w-6 h-6 text-blue-600" />
+                                },
+                                {
+                                    step: "04",
+                                    title: "Support & Maintenance",
+                                    desc: "Surveillance des performances, fourniture de consommables et interventions préventives pour garantir une longévité maximale des équipements.",
+                                    icon: <ShieldCheck className="w-6 h-6 text-blue-600" />
+                                }
+                            ].map((item, idx) => (
+                                <div key={idx} className="bg-white rounded-3xl p-8 border border-slate-100 shadow-[0_10px_30px_rgba(0,0,0,0.02)] relative group hover:-translate-y-2 transition-all duration-500">
+                                    <div className="absolute top-6 right-6 text-5xl font-black text-slate-50 group-hover:text-blue-50 transition-colors duration-500 select-none">
+                                        {item.step}
+                                    </div>
+                                    <div className="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center mb-8 relative z-10 group-hover:scale-110 transition-transform duration-500">
+                                        {item.icon}
+                                    </div>
+                                    <h4 className="text-xl font-bold text-[#1e3a8a] mb-4 relative z-10">{item.title}</h4>
+                                    <p className="text-slate-500 text-sm font-light leading-relaxed relative z-10">
+                                        {item.desc}
+                                    </p>
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </section>
