@@ -371,7 +371,7 @@ const B = () => {
                             </span>
                             <h2 className="heading-pro-max">
                                 <span className="italic font-light text-[#18448F] block">Quel problème d'eau</span>
-                                <span className="font-bold text-[#18448F] block text-center">de puits vivez-vous au quotidien ?</span>
+                                <span className="font-bold text-[#18448F] block text-center">vivez-vous au quotidien ?</span>
                             </h2>
                         </div>
 
@@ -538,14 +538,14 @@ const B = () => {
                             ))}
                         </div>
 
-                        <div className="mt-20 p-8 rounded-[2.5rem] bg-indigo-950 flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl animate-in fade-in slide-in-from-bottom-8">
+                        <div className="mt-20 p-8 rounded-[2.5rem] bg-[#18448F] flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl animate-in fade-in slide-in-from-bottom-8">
                             <div className="flex items-center gap-6">
-                                <div className="w-16 h-16 rounded-2xl bg-[#18448F] flex items-center justify-center text-white shadow-xl shadow-[#18448F]/20">
+                                <div className="w-16 h-16 rounded-2xl bg-indigo-950 flex items-center justify-center text-white shadow-xl shadow-indigo-950/20">
                                     <CheckCircle2 className="w-8 h-8" />
                                 </div>
                                 <div className="text-left">
                                     <h4 className="text-white font-bold text-xl">Vous ne savez pas quel filtre choisir ?</h4>
-                                    <p className="text-indigo-200/60 font-light text-sm">Laissez nos experts d'eau faire un diagnostic de votre eau gratuitement.</p>
+                                    <p className="text-blue-100/80 font-light text-sm">Laissez nos experts d'eau faire un diagnostic de votre eau gratuitement.</p>
                                 </div>
                             </div>
                             <ProMaxButton asChild variant="white" className="w-full md:w-auto">

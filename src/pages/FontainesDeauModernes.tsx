@@ -38,11 +38,11 @@ import hardWaterFaucetImg from "@/assets/Hard Water-Faucet.jpg";
 
 // Existing high-fidelity assets
 import heroFountains from "@/assets/2118.jpg";
-import countertopFountainImg1 from "@/assets/A8.jpg";
-import countertopFountainImg2 from "@/assets/A9.jpg";
-import countertopFountainImg3 from "@/assets/A12.jpg";
-import bottlelessFountainImg1 from "@/assets/A13.jpg";
-import bottlelessFountainImg2 from "@/assets/A7.webp";
+import countertopFountainImg1 from "@/assets/A8_no_bg.png";
+import countertopFountainImg2 from "@/assets/A9_no_bg.png";
+import countertopFountainImg3 from "@/assets/A12_no_bg.png";
+import bottlelessFountainImg1 from "@/assets/A13_no_bg.png";
+import bottlelessFountainImg2 from "@/assets/A7_no_bg.png";
 import bottlelessFountainImg3 from "@/assets/4rlkbv4rlkbv4rlk.png";
 import iceMachineImg from "@/assets/Machine+à+glaçons+de+comptoir+auto-nettoyante+de+26+lb+R.W.FLAME-78609293.webp";
 import ecoImpactImg4 from "@/assets/water-dispenser in office.jpg";
@@ -123,8 +123,8 @@ const FontainesDeauModernes = () => {
                 {/* SECTION 1: MODERN CINEMATIC HERO */}
                 <Hero 
                     image={heroFountains}
-                    highlightedTitle="Fontaines à eau "
-                    mainTitle="de bureau."
+                    highlightedTitle="Optez pour une hydratation "
+                    mainTitle="intelligente et durable."
                     subtitle="Offrez à vos collaborateurs une eau filtrée d'exception, fraîche, chaude ou pétillante, directement raccordée à votre réseau. Une solution écologique, économique et sans logistique de bonbonnes."
                     ctaText="OBTENIR MON ESSAI GRATUIT"
                     ctaLink="/contact-entreprises"
@@ -136,23 +136,36 @@ const FontainesDeauModernes = () => {
 
                 {/* SECTION 2: HIGH-FIDELITY STATEMENT BANNER */}
                 <section className="py-24 bg-white border-y border-slate-100">
-                    <div className="container mx-auto px-6 text-center max-w-4xl">
-                        <div className="space-y-6">
-                            <h3 className="text-xs font-black text-blue-600 uppercase tracking-[0.2em] mb-4">
-                                L'EXCELLENCE DE L'EAU À LA SOURCE
-                            </h3>
-                            <h2 className="mb-8 heading-pro-max text-center">
-                                <span className="italic font-light text-[#18448F] block">Engagé à fournir des solutions de </span>
-                                <span className="font-bold text-[#18448F] block text-center">fontaines à eau de haute qualité.</span>
-                            </h2>
+                    <div className="container mx-auto px-6 max-w-6xl">
+                        <div className="grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-16 items-center">
+                            {/* Text Content */}
+                            <div className="space-y-6 text-center lg:text-left">
+                                <h3 className="text-xs font-black text-blue-600 uppercase tracking-[0.2em] mb-4">
+                                    L'EXCELLENCE DE L'EAU À LA SOURCE
+                                </h3>
+                                <h2 className="mb-8 heading-pro-max">
+                                    <span className="italic font-light text-[#18448F] block">Engagé à fournir des solutions de </span>
+                                    <span className="font-bold text-[#18448F] block">fontaines à eau de haute qualité.</span>
+                                </h2>
 
-                            <p className="text-slate-500 text-lg font-light leading-relaxed max-w-3xl mx-auto pt-2">
-                                Nos fontaines à eau sont conçues pour améliorer le bien-être de vos collaborateurs et de vos clients. Grâce à nos technologies de filtration d'eau avancées, profitez d'une eau d'une pureté absolue, d'un goût incomparable et d'une fraîcheur constante à chaque tasse.
-                            </p>
-                            <div className="pt-4">
-                                <a href="#solutions-catalog" className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-bold uppercase tracking-widest text-xs transition-colors group">
-                                    En savoir plus <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                                </a>
+                                <p className="text-slate-500 text-lg font-light leading-relaxed pt-2">
+                                    Nos fontaines à eau sont conçues pour améliorer le bien-être de vos collaborateurs et de vos clients. Grâce à nos technologies de filtration d'eau avancées, profitez d'une eau d'une pureté absolue, d'un goût incomparable et d'une fraîcheur constante à chaque tasse.
+                                </p>
+                                <div className="pt-4 flex justify-center lg:justify-start">
+                                    <a href="#solutions-catalog" className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-bold uppercase tracking-widest text-xs transition-colors group">
+                                        En savoir plus <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            {/* Image */}
+                            <div className="relative rounded-[2rem] overflow-hidden shadow-xl aspect-square lg:aspect-[4/3] group">
+                                <img 
+                                    src={mandrinkingglassofwaterImg} 
+                                    alt="L'excellence de l'eau à la source" 
+                                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" 
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-[#18448F]/20 to-transparent mix-blend-multiply" />
                             </div>
                         </div>
                     </div>
@@ -188,7 +201,7 @@ const FontainesDeauModernes = () => {
                         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
                             
                             {/* Left Column: Asymmetrical Bento Grid of Features */}
-                            <div className="col-span-1 lg:col-span-7 z-20">
+                            <div className="col-span-1 lg:col-span-7 z-20 lg:order-2">
                                 <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
                                     
                                     {/* Cell 1: Pureté absolue (Large 7-col) */}
@@ -392,7 +405,7 @@ const FontainesDeauModernes = () => {
                             </div>
 
                             {/* Right Column: Liquid Glass Showcase Window */}
-                            <div className="col-span-1 lg:col-span-5 relative z-10 flex justify-center">
+                            <div className="col-span-1 lg:col-span-5 relative z-10 flex justify-center lg:order-1">
                                 
                                 {/* Ambient Shifting Glow */}
                                 <div className={cn(
@@ -482,6 +495,90 @@ const FontainesDeauModernes = () => {
                     </div>
                 </section>
 
+                {/* ========================================================================= */}
+                {/* NOUVELLE SECTION - LES 3 NIVEAUX DE PURETE ABSOLUE */}
+                {/* ========================================================================= */}
+                <section className="py-32 bg-white relative overflow-hidden border-y border-slate-100">
+                    {/* Abstract tech background elements */}
+                    <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+                        <div className="absolute -top-[20%] -right-[10%] w-[50%] h-[50%] rounded-full bg-blue-50/50 blur-[100px]" />
+                        <div className="absolute -bottom-[20%] -left-[10%] w-[50%] h-[50%] rounded-full bg-indigo-50/50 blur-[100px]" />
+                    </div>
+
+                    <div className="container mx-auto px-6 max-w-7xl relative z-10">
+                        <div className="text-center space-y-4 mb-24">
+                            <span className="inline-block px-4 py-1.5 bg-blue-50 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.2em]">
+                                TECHNOLOGIE DE FILTRATION
+                            </span>
+                            <h2 className="heading-pro-max text-center">
+                                <span className="font-bold text-[#18448F] block text-center">Les 3 niveaux de pureté absolue.</span>
+                            </h2> 
+                            <p className="text-slate-500 font-light max-w-2xl mx-auto text-base mt-6">
+                                Notre système de purification ne se contente pas de filtrer. Il sublime chaque goutte à travers un processus technologique en trois étapes distinctes pour une sécurité et un goût inégalés.
+                            </p>
+                        </div>
+
+                        {/* Interactive Steps Grid */}
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-10">
+                            {[
+                                {
+                                    icon: <Droplets className="w-8 h-8 text-blue-500" />,
+                                    title: "Charbon Actif Densifié",
+                                    subtitle: "ÉTAPE 01",
+                                    content: "Notre filtre à charbon actif de haute densité absorbe le chlore, retient les sédiments, neutralise les odeurs et améliore considérablement le goût de l'eau pour une expérience gustative d'exception à chaque tasse.",
+                                    color: "from-blue-400/20 to-blue-100/5"
+                                },
+                                {
+                                    icon: <ShieldCheck className="w-8 h-8 text-indigo-500" />,
+                                    title: "Osmose Inverse",
+                                    subtitle: "ÉTAPE 02",
+                                    content: "Pour une pureté moléculaire absolue, la membrane d'osmose inverse élimine les métaux lourds, le calcaire, les nitrates, les résidus chimiques de pesticides et toutes les impuretés microscopiques en suspension.",
+                                    color: "from-indigo-400/20 to-indigo-100/5"
+                                },
+                                {
+                                    icon: <Zap className="w-8 h-8 text-amber-500" />,
+                                    title: "Stérilisation UV-C",
+                                    subtitle: "ÉTAPE 03",
+                                    content: "Un rayonnement ultraviolet de type C puissant détruit l'ADN des micro-organismes, bactéries et virus directement au point de distribution, garantissant une eau stérile et d'une sécurité hygiénique absolue.",
+                                    color: "from-amber-400/20 to-amber-100/5"
+                                }
+                            ].map((step, idx) => (
+                                <div 
+                                    key={idx}
+                                    className="group relative rounded-[2.5rem] bg-white border border-slate-100 p-10 hover:shadow-2xl hover:shadow-blue-900/5 hover:-translate-y-2 transition-all duration-500 overflow-hidden flex flex-col h-full"
+                                >
+                                    {/* Hover gradient background */}
+                                    <div className={`absolute inset-0 bg-gradient-to-br ${step.color} opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none`} />
+                                    
+                                    {/* Content */}
+                                    <div className="relative z-10 flex-grow flex flex-col">
+                                        <div className="flex justify-between items-start mb-12">
+                                            <div className="w-16 h-16 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-center shadow-inner group-hover:scale-110 transition-transform duration-500 group-hover:bg-white">
+                                                {step.icon}
+                                            </div>
+                                            <span className="text-[10px] font-black tracking-[0.2em] text-slate-300 group-hover:text-slate-800 transition-colors duration-500">
+                                                {step.subtitle}
+                                            </span>
+                                        </div>
+                                        
+                                        <h3 className="text-2xl font-bold text-slate-800 mb-6 group-hover:text-[#18448F] transition-colors duration-300">
+                                            {step.title}
+                                        </h3>
+                                        
+                                        <p className="text-slate-500 font-light leading-relaxed flex-grow group-hover:text-slate-700 transition-colors duration-300">
+                                            {step.content}
+                                        </p>
+                                    </div>
+
+                                    {/* Progress line effect at bottom */}
+                                    <div className="absolute bottom-0 left-0 h-1 bg-[#18448F] w-0 group-hover:w-full transition-all duration-700 ease-out" />
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+
                 {/* SECTION 6: MODERN SLIDER SHOWCASE ("Des systèmes pour tous les environnements") */}
                 <section id="solutions-catalog" className="py-24 bg-white relative overflow-hidden border-y border-slate-100">
                     
@@ -495,7 +592,7 @@ const FontainesDeauModernes = () => {
                     </div>
 
                     {/* Outer flex container spanning full viewport width */}
-                    <div className="w-full flex flex-col lg:flex-row items-center gap-12 select-none overflow-hidden pl-0">
+                    <div className="w-full flex flex-col items-start gap-12 select-none overflow-hidden pl-0">
                         
                         {/* Left Column: Scrollable Cards Container */}
                         <div className="w-full lg:w-[73%] relative group pl-0">
@@ -607,8 +704,8 @@ const FontainesDeauModernes = () => {
                             </div>
                         </div>
 
-                        {/* Right Column: Stationary CTA Column - Aligned to standard container's right edge */}
-                        <div className="w-full lg:w-[27%] flex flex-col justify-center items-center lg:items-start text-center lg:text-left pr-6 lg:pr-[calc((100vw-1232px)/2)] pl-6 lg:pl-12 space-y-6">
+                        {/* Bottom Block: CTA */}
+                        <div className="w-full flex flex-col justify-center items-center text-center px-6 space-y-6">
                             <h3 className="text-xl md:text-2xl font-medium text-slate-800 leading-snug">
                                 Besoin d'aide pour trouver le système qui vous convient ?
                             </h3>
@@ -628,56 +725,23 @@ const FontainesDeauModernes = () => {
                     </div>
                 </section>
 
-                {/* ========================================================================= */}
-                {/* NOTRE SAVOIR-FAIRE - SENSORIEL & PRESTIGE GRID */}
-                {/* ========================================================================= */}
-                <section className="py-32 bg-[#FAF9F6] relative overflow-hidden border-y border-slate-100">
-                    <div className="container mx-auto px-6 max-w-6xl">
-                        
-                        <div className="text-center space-y-4 mb-20">
-                            <span className="inline-block px-4 py-1.5 bg-blue-50 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-widest">
-                                NOTRE SAVOIR-FAIRE
-                            </span>
-                             <h2 className="mb-8 heading-pro-max text-center">
-                                <span className="font-light italic text-[#18448F] block text-center">L'art de raffiner </span>
-                                <span className="font-bold text-[#18448F] block text-center">l'eau au bureau.</span>
-                            </h2> 
-                            
-                            
-                            <p className="text-slate-500 font-light max-w-2xl mx-auto text-base">
-                                Parce que chaque collaborateur mérite une eau d'une légèreté et d'une fraîcheur incomparables. Découvrez l'expérience gustative ultime.
-                            </p>
-                        </div>
-
-                        {/* Prestige grid */}
-                        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                            {faqItems.map((item, idx) => (
-                                <div 
-                                    key={idx}
-                                    className="bg-white rounded-[2rem] p-8 border border-amber-100/50 shadow-sm relative group hover:border-[#18448F]/20 transition-all duration-300"
-                                >
-                                    <div className="absolute top-0 left-8 right-8 h-1 bg-[#18448F] rounded-b-full scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
-                                    
-                                    <div className="text-5xl font-black text-[#18448F]/5 mb-6">
-                                        0{idx + 1}
-                                    </div>
-                                    
-                                    <h3 className="text-xl font-bold text-slate-800 mb-4">
-                                        {item.title}
-                                    </h3>
-                                    
-                                    <p className="text-slate-500 font-light leading-relaxed text-sm">
-                                        {item.content}
-                                    </p>
-                                </div>
-                            ))}
-                        </div>
-
-                    </div>
-                </section>
-
-
-                {/* 11. PREMIUM CTA SECTION */}
+                {/* SECTION 10: TESTIMONIALS SECTION */}
+                <div className="bg-slate-50 py-32 border-y border-slate-100">
+                    <TestimonialsSection 
+                        filterProduct="Bureau"
+                        limit={6}
+                        title={
+                            <div className="text-center space-y-3 mb-16">
+                                <span className="text-[10px] font-black text-blue-500 uppercase tracking-[0.5em] block mb-4">ILS NOUS FONT CONFIANCE</span>
+                                <h2 className="heading-pro-max text-center uppercase">
+                                    <span className="italic font-light text-[#18448F]">Le choix des </span>
+                                    <span className="font-bold text-[#18448F]">entreprises leaders.</span>
+                                </h2>
+                            </div>
+                        }
+                    />
+                </div>
+{/* 11. PREMIUM CTA SECTION */}
                 <section className="relative py-32 flex items-center overflow-hidden bg-[#18448F]">
                     {/* Animated background elements */}
                     <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-blue-600/20 to-transparent skew-x-12 translate-x-1/4" />
@@ -692,6 +756,9 @@ const FontainesDeauModernes = () => {
                         />
                         <div className="absolute inset-0 bg-[#18448F]/30 backdrop-blur-sm" />
                     </div>
+                    
+                    {/* Fade to light gradient at the bottom */}
+                    <div className="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-b from-transparent to-[#FAF9F6] z-0 pointer-events-none" />
 
                     <div className="container mx-auto px-6 relative z-10">
                         <div className="max-w-5xl mx-auto text-center space-y-12">
@@ -730,22 +797,6 @@ const FontainesDeauModernes = () => {
                     </div>
                 </section>
 
-                {/* SECTION 10: TESTIMONIALS SECTION */}
-                <div className="bg-slate-50 py-32 border-y border-slate-100">
-                    <TestimonialsSection 
-                        filterProduct="Bureau"
-                        limit={6}
-                        title={
-                            <div className="text-center space-y-3 mb-16">
-                                <span className="text-[10px] font-black text-blue-500 uppercase tracking-[0.5em] block mb-4">ILS NOUS FONT CONFIANCE</span>
-                                <h2 className="heading-pro-max text-center uppercase">
-                                    <span className="italic font-light text-[#18448F]">Le choix des </span>
-                                    <span className="font-bold text-[#18448F]">entreprises leaders.</span>
-                                </h2>
-                            </div>
-                        }
-                    />
-                </div>
             </main>
 
             <Footer />
