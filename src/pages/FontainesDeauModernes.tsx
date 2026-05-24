@@ -37,7 +37,7 @@ import { ProMaxButton } from "@/components/ui/ProMaxButton";
 import hardWaterFaucetImg from "@/assets/Hard Water-Faucet.jpg";
 
 // Existing high-fidelity assets
-import heroFountains from "@/assets/Fontaines d'eau.webp";
+import heroFountains from "@/assets/2118.jpg";
 import countertopFountainImg1 from "@/assets/A8.jpg";
 import countertopFountainImg2 from "@/assets/A9.jpg";
 import countertopFountainImg3 from "@/assets/A12.jpg";

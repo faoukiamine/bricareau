@@ -38,6 +38,9 @@ import technicianInspectionImg from "@/assets/10271.jpg";
 import reverseOsmosisSkidImg from "@/assets/144d1310-23fc-4cbd-92df-81d17d7a393c.jpg";
 import filtrationSkidImg from "@/assets/7kbp.png";
 import elkayBottleFillerImg from "@/assets/elkayv2-LZS8WSLK_image_vignette.webp";
+import laundryImg from "@/assets/2152006094.jpg";
+import campusImg from "@/assets/education_water_solution.png";
+import constructionImg from "@/assets/2148269294.jpg";
 
 const SystemesCentralises = () => {
     const [activeAdvantageImage, setActiveAdvantageImage] = useState(protectionConduitsImg);
@@ -67,24 +70,83 @@ const SystemesCentralises = () => {
                 />
 
                 {/* SECTION 2: HIGH-FIDELITY STATEMENT BANNER */}
-                <section className="py-24 bg-white border-y border-slate-100">
-                    <div className="container mx-auto px-6 text-center max-w-4xl">
-                        <div className="space-y-6">
-                            <h3 className="text-xs font-black text-blue-600 uppercase tracking-[0.2em] mb-4">
-                                DURABILITÉ & VALEUR PATRIMONIALE
-                            </h3>
-                            <h2 className="mb-8 heading-pro-max text-center">
-                                <span className="italic font-light text-[#18448F] block">Engagé à fournir des solutions </span>
-                                <span className="font-bold text-[#18448F] block text-center">de haute qualité.</span>
-                            </h2>
-                            <div className="w-16 h-1 bg-blue-600 mx-auto rounded-full" />
-                            <p className="text-slate-500 text-lg font-light leading-relaxed max-w-3xl mx-auto pt-2">
-                                Nos systèmes de filtration centralisés pour bâtiments sont conçus pour protéger les infrastructures, prolonger la durée de vie des équipements thermiques et garantir une eau de qualité supérieure à tous les points de tirage. Grâce à nos technologies industrielles éprouvées, assurez la continuité et la conformité de vos installations.
-                            </p>
-                            <div className="pt-4">
-                                <a href="#campus-benefits" className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-bold uppercase tracking-widest text-xs transition-colors group">
-                                    En savoir plus <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                                </a>
+                {/* SECTION 2: HIGH-FIDELITY STATEMENT BANNER & EXPERTISE SECTORIELLE MERGED */}
+                <section className="py-24 bg-slate-50 border-y border-slate-100 overflow-hidden">
+                    <div className="container mx-auto px-6 max-w-7xl">
+                        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+                            {/* Left Column: Text Content */}
+                            <div className="lg:col-span-5 space-y-6">
+                                <h3 className="text-xs font-black text-blue-600 uppercase tracking-[0.2em] mb-4">
+                                    DURABILITÉ & VALEUR PATRIMONIALE
+                                </h3>
+                                <h2 className="mb-6 heading-pro-max text-left">
+                                    <span className="italic font-light text-[#18448F] block">Engagé à fournir des solutions </span>
+                                    <span className="font-bold text-[#18448F] block">de haute qualité.</span>
+                                </h2>
+                                <div className="w-16 h-1 bg-blue-600 rounded-full" />
+                                <div className="text-slate-600 text-[15px] font-light leading-relaxed pt-2 space-y-4">
+                                    <p>L'eau est le flux vital de vos infrastructures. Qu'elle alimente vos réseaux de chauffage, de climatisation ou de distribution sanitaire, sa qualité conditionne directement la sécurité, le confort et la performance énergétique de votre bâtiment. Une eau mal maîtrisée expose vos installations à des risques critiques : corrosion accélérée, entartrage prématuré et prolifération bactérienne. Ces menaces compromettent non seulement l'intégrité de vos équipements, mais génèrent également d'importants surcoûts opérationnels et des enjeux de santé publique.</p>
+                                    <p>Pour pallier ces défis, Bricareau déploie des programmes de traitement d'eau sur mesure, pensés pour pérenniser vos actifs immobiliers et garantir une conformité absolue aux normes environnementales et sanitaires les plus strictes. Au-delà des approches chimiques traditionnelles, nous développons des stratégies d'ingénierie complètes, calibrées sur l'architecture unique de vos installations.</p>
+                                    <p>L'innovation et l'excellence du service sont au cœur de notre démarche. Nous intégrons des technologies de pointe — telles que le traitement solide et les protocoles avancés de maîtrise du risque légionelle — spécifiquement adaptées à vos tours de refroidissement, refroidisseurs et chaudières. Notre ambition : maximiser le rendement de vos systèmes thermiques tout en réduisant drastiquement votre empreinte hydrique, énergétique et vos coûts de maintenance.</p>
+                                    <p className="font-medium text-[#18448F] pt-2">Bricareau, c’est un partenaire qui prend à cœur la santé et l’efficacité de votre bâtiment.</p>
+                                </div>
+                                <div className="pt-6">
+                                    <a href="/consultation" className="inline-flex items-center gap-2 text-white bg-[#18448F] hover:bg-blue-700 px-6 py-3 rounded-full font-bold uppercase tracking-widest text-xs transition-all shadow-md hover:shadow-lg group">
+                                        Planifiez une consultation <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                                    </a>
+                                </div>
+                            </div>
+
+                            {/* Right Column: Industries Cards */}
+                            <div className="lg:col-span-7">
+                                <div className="flex items-center justify-between mb-8 border-b border-slate-200 pb-3">
+                                    <h3 className="text-sm font-bold text-slate-800 uppercase tracking-widest">
+                                        Industries commerciales desservies
+                                    </h3>
+                                    <div className="w-12 h-1 bg-blue-600 rounded-full"></div>
+                                </div>
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                    {/* Card 1 */}
+                                    <div className="group bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                                        <div className="aspect-[16/11] w-full overflow-hidden">
+                                            <img src={laundryImg} alt="Bâtiments commerciaux" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                                        </div>
+                                        <div className="p-5">
+                                            <h3 className="text-[#18448F] font-bold text-lg mb-2">Bâtiments commerciaux</h3>
+                                            <div className="w-8 h-1 bg-blue-500 rounded-full transition-all duration-300 group-hover:w-16"></div>
+                                        </div>
+                                    </div>
+                                    {/* Card 2 */}
+                                    <div className="group bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                                        <div className="aspect-[16/11] w-full overflow-hidden">
+                                            <img src={campusImg} alt="Campus universitaires" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                                        </div>
+                                        <div className="p-5">
+                                            <h3 className="text-[#18448F] font-bold text-lg mb-2">Campus universitaires</h3>
+                                            <div className="w-8 h-1 bg-blue-500 rounded-full transition-all duration-300 group-hover:w-16"></div>
+                                        </div>
+                                    </div>
+                                    {/* Card 3 */}
+                                    <div className="group bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                                        <div className="aspect-[16/11] w-full overflow-hidden">
+                                            <img src={engineeringHeroImg} alt="Gestion immobilière" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                                        </div>
+                                        <div className="p-5">
+                                            <h3 className="text-[#18448F] font-bold text-lg mb-2">Gestion immobilière</h3>
+                                            <div className="w-8 h-1 bg-blue-500 rounded-full transition-all duration-300 group-hover:w-16"></div>
+                                        </div>
+                                    </div>
+                                    {/* Card 4 */}
+                                    <div className="group bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                                        <div className="aspect-[16/11] w-full overflow-hidden">
+                                            <img src={constructionImg} alt="Constructions neuves" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                                        </div>
+                                        <div className="p-5">
+                                            <h3 className="text-[#18448F] font-bold text-lg mb-2">Constructions neuves</h3>
+                                            <div className="w-8 h-1 bg-blue-500 rounded-full transition-all duration-300 group-hover:w-16"></div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

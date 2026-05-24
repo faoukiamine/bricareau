@@ -143,7 +143,7 @@ const TestsEauPage = () => {
               </span>
               <h2 className="heading-pro-max">
                 <span className="italic font-light text-blue-600 block">Quand devriez-vous</span>
-                <span className="font-bold text-slate-800 block">tester votre eau ?</span>
+                <span className="font-bold text-[#18448F] block">tester votre eau ?</span>
               </h2>
               <p className="body-pro-max text-slate-500 mt-6 mx-auto">
                 L'invisible est souvent le plus dangereux. Identifiez la situation qui vous concerne pour choisir le test de laboratoire adéquat.

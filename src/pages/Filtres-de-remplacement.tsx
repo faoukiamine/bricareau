@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import Header from "@/components/Header";
 import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
+import Hero from "@/components/Hero";
+import heroFiltersImg from "@/assets/Big-Blue-Filter-Housing-banner.webp";
 import Footer from "@/components/Footer";
 import { Package, ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -81,14 +83,17 @@ const FiltresDeRemplacement = () => {
         <div className="min-h-screen bg-white font-sans selection:bg-blue-100 selection:text-blue-900 overflow-x-hidden">
             <Header />
             <main>
-                {/* Breadcrumbs Section - Matching Adoucissement positioning */}
-                <div className="relative h-[100px] bg-white hidden lg:block">
-                    <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none">
-                        <div className="container mx-auto px-4 lg:px-6 pointer-events-auto">
-                            <GlobalBreadcrumbs variant="light" />
-                        </div>
-                    </div>
-                </div>
+                <Hero 
+                    image={heroFiltersImg}
+                    highlightedTitle="Cartouches filtrantes"
+                    mainTitle="de remplacement"
+                    subtitle="Trouvez facilement le filtre d'eau de remplacement idéal pour votre système de filtration résidentiel, commercial ou industriel."
+                    ctaText="Trouver mon filtre"
+                    ctaLink="#solutions-catalog"
+                    showPhone={true}
+                    showBreadcrumbs={true}
+                    singleLineTitle={false}
+                />
 
                 {/* SLIDER SHOWCASE SECTION */}
                 <section id="solutions-catalog" className="py-24 bg-white relative overflow-hidden border-b border-slate-100">
@@ -104,12 +109,12 @@ const FiltresDeRemplacement = () => {
                         </p>
                     </div>
 
-                    {/* Outer flex container spanning full viewport width */}
-                    <div className="w-full flex flex-col lg:flex-row items-center gap-12 select-none overflow-hidden pl-0">
+                    {/* Outer layout container */}
+                    <div className="w-full flex flex-col select-none overflow-hidden">
                         
-                        {/* Left Column: Scrollable Cards Container */}
-                        <div className="w-full lg:w-[73%] relative group pl-0">
-                            {/* Left Navigation Arrow (Prev Circle Button) */}
+                        {/* Top: Scrollable Cards Container (Kept original width and alignment) */}
+                        <div className="w-full lg:w-[73%] relative group pl-0 mb-16 mx-auto lg:mx-0">
+                            {/* Left Navigation Arrow */}
                             <button 
                                 onClick={() => {
                                     const el = document.getElementById("filters-slider-track");
@@ -129,7 +134,7 @@ const FiltresDeRemplacement = () => {
                                 <ChevronLeft className="w-5 h-5" />
                             </button>
 
-                            {/* Right Navigation Arrow (Next Circle Button) */}
+                            {/* Right Navigation Arrow */}
                             <button 
                                 onClick={() => {
                                     const el = document.getElementById("filters-slider-track");
@@ -143,13 +148,13 @@ const FiltresDeRemplacement = () => {
                                         }
                                     }
                                 }}
-                                className="absolute -right-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-slate-900 hover:bg-[#18448F] text-white flex items-center justify-center shadow-lg transition-all hover:scale-110 active:scale-95"
+                                className="absolute -right-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-slate-900 hover:bg-[#18448F] text-white flex items-center justify-center shadow-lg transition-all hover:scale-110 active:scale-95 opacity-0 group-hover:opacity-100 focus:opacity-100 transition-opacity duration-300"
                                 aria-label="Suivant"
                             >
                                 <ChevronRight className="w-5 h-5" />
                             </button>
 
-                            {/* Scroll Track - Starts flush to screen's left edge */}
+                            {/* Scroll Track */}
                             <div 
                                 id="filters-slider-track"
                                 className="flex gap-6 overflow-x-auto scroll-smooth pb-6 snap-x snap-mandatory no-scrollbar pl-0 pr-12"
@@ -195,18 +200,17 @@ const FiltresDeRemplacement = () => {
                             </div>
                         </div>
 
-                        {/* Right Column: Stationary CTA Column - Aligned to standard container's right edge */}
-                        <div className="w-full lg:w-[27%] flex flex-col justify-center items-center lg:items-start text-center lg:text-left pr-6 lg:pr-[calc((100vw-1232px)/2)] pl-6 lg:pl-12 space-y-6">
+                        {/* Bottom: Stationary CTA Column */}
+                        <div className="container mx-auto max-w-3xl flex flex-col justify-center items-center text-center px-6 space-y-6">
                             <h3 className="text-xl md:text-2xl font-medium text-slate-800 leading-snug">
                                 Besoin d'aide pour choisir le bon filtre ?
                             </h3>
-                            <p className="text-slate-500 text-xs font-light leading-relaxed">
+                            <p className="text-slate-500 text-sm md:text-base font-light leading-relaxed">
                                 Nos experts en traitement d'eau sont à votre disposition pour vous guider vers le modèle exact adapté à votre équipement.
                             </p>
                             <div>
                                 <Button 
-                                    variant="outline" 
-                                    className="rounded-full border-slate-300 hover:border-slate-800 text-slate-800 hover:bg-slate-50 px-8 h-12 text-xs font-black uppercase tracking-widest transition-all"
+                                    className="rounded-full bg-[#18448F] hover:bg-blue-800 text-white shadow-md hover:shadow-lg px-8 h-12 text-xs font-black uppercase tracking-widest transition-all"
                                     asChild
                                 >
                                     <NavLink to="/contact">

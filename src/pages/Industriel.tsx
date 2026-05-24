@@ -1,517 +1,373 @@
-import React, { useEffect, useState, useRef } from "react";
-import {
-    ChevronRight,
-    ArrowRight,
-    CheckCircle2,
-    ArrowDown,
-    Star,
-    Phone,
-    ShieldCheck,
-    Zap,
-    Settings,
-    Activity,
-    Cpu,
-    Layers,
-    Droplets,
-    Wrench,
-    Factory,
-    Sparkles,
-    GlassWater,
-    Heart,
-    Leaf,
-    Wine,
-    TrendingUp,
-    Users2
-} from "lucide-react";
+import React, { useEffect, useState } from "react";
+import { ArrowRight, Download, ChevronRight, ChevronLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
-import { cn } from "@/lib/utils";
-import { ProMaxButton } from "@/components/ui/ProMaxButton";
-import TestimonialsSection from "@/components/TestimonialsSection";
-import ExpertTrustSection from "@/components/ExpertTrustSection";
-import WaterDiagnosis from "@/components/water_diagnosis";
 
-// Assets
-import heroImg from "@/assets/Filtres d'eau industriels.jpg";
-import commercialFiltrationImg from "@/assets/Commercial-Water-Softener.webp";
-import industrialSoftenerImg from "@/assets/Industrial Water Softeners.png";
-import dosinggroupImg from "@/assets/Pulsafeeder dosing group.jpg";
-import IndustrialROSystemsImg from "@/assets/jpg100.jpg";
-import DISystemsImg from "@/assets/DI-Water-System.jpg";
-import uvSystemImg from "@/assets/Aquaviva-Cannes-480x355.png";
-import verifiedImg from "@/assets/verified.svg";
-import savingsImg from "@/assets/savings.svg";
-import healthSafeImg from "@/assets/health_and_safety.svg";
-import ecoImg from "@/assets/eco.svg";
+// Assumed existing assets, mapping to the visual elements in the mockup
+import heroImg from "@/assets/industrial_filtration_facility_hero_1778897015657.png";
+import treatmentImg1 from "@/assets/skids-sur-mesure.jpg";
+import treatmentImg2 from "@/assets/Multimedia filters.png";
+import treatmentLarge from "@/assets/Filtres d'eau industriels.jpg";
+
+import sol1 from "@/assets/adoucissement-industriel.jpg";
+import sol2 from "@/assets/DI-Water-System.jpg";
+import sol3 from "@/assets/jpg100.jpg";
+import sol4 from "@/assets/Aquaviva-Cannes-480x355.png";
+import sol5 from "@/assets/Commercial-Water-Softener.webp";
+import sol6 from "@/assets/Pulsafeeder dosing group.jpg";
+
+import caseStudy1 from "@/assets/industrial_hero_pro_max.png";
+import caseStudy2 from "@/assets/water_system_blueprint_render_1778902045750.png";
+
+import eq1 from "@/assets/IMG_FILTRE_QFINOX.jpg";
+import eq2 from "@/assets/high_efficiency_commercial_softener_render_1778896510314.png";
+import eq3 from "@/assets/filtre-catalytique-new.jpg";
+
+import partnerBg from "@/assets/Hero-Entreprise.jpg";
 
 const Industriel = () => {
     const navigate = useNavigate();
-    const [activeSection, setActiveSection] = useState(0);
-    const [showNav, setShowNav] = useState(false);
-    const [isNavVisible, setIsNavVisible] = useState(true);
     
-
-    const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
-    const containerRef = useRef<HTMLDivElement>(null);
-
     useEffect(() => {
         document.title = "Solutions Industrielles | Bricareau";
         window.scrollTo(0, 0);
-
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.5
-        };
-
-        const observerCallback = (entries: IntersectionObserverEntry[]) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    const index = sectionRefs.current.findIndex(ref => ref === entry.target);
-                    if (index !== -1) {
-                        setActiveSection(index);
-
-                        if (index === programs.length - 1) {
-                            setTimeout(() => setIsNavVisible(false), 1000);
-                        } else {
-                            setIsNavVisible(true);
-                        }
-                    }
-                }
-            });
-        };
-
-        const observer = new IntersectionObserver(observerCallback, observerOptions);
-        sectionRefs.current.forEach(ref => { if (ref) observer.observe(ref); });
-
-
-        const handleGlobalScroll = () => {
-            if (containerRef.current) {
-                const { offsetTop, offsetHeight } = containerRef.current;
-                const isInside = window.scrollY >= offsetTop - 200 && window.scrollY < offsetTop + offsetHeight - 300;
-                setShowNav(isInside);
-            }
-        };
-
-        window.addEventListener("scroll", handleGlobalScroll);
-
-        return () => {
-            observer.disconnect();
-            window.removeEventListener("scroll", handleGlobalScroll);
-        };
     }, []);
 
-    const programs = [
-        {
-            title: "Filtration Multimédia",
-            titlePart1: "Filtration ",
-            titlePart2: "Multimédia",
-            navTitle: "Filtres Multimédia",
-            desc: "Systèmes haute capacité conçus pour éliminer les sédiments, le fer et le manganèse à grande échelle, protégeant l'ensemble de vos installations.",
-            points: [
-                { title: "Débit constant", desc: "Assurez un flux d'eau ininterrompu même lors des pics de consommation les plus élevés." },
-                { title: "Protection de tuyauterie", desc: "Évitez l'érosion et l'encrassement de vos réseaux de distribution à long terme." }
-            ],
-            image: commercialFiltrationImg,
-            link: "/filtration-industrielle",
-            tag: "INFRASTRUCTURE",
-            largeNumber: "01",
-            floatingCard: { title: "Protection Réseau", desc: "Élimination totale des sédiments.", icon: ShieldCheck },
-            floatingCard2: { title: "Précision Pro", desc: "Contrôle millimétré de la composition de l'eau.", icon: Activity },
-            floatingCard3: { title: "Flux Constant", desc: "Débit ininterrompu même lors des pics d'activité.", icon: Zap },
-            floatingCard4: { title: "Conformité Normes", desc: "Respect des standards industriels et environnementaux.", icon: ShieldCheck },
-            bubbles: [
-                { icon: Factory, label: "Capacité", value: "Haute", color: "text-slate-600" },
-                { icon: Zap, label: "Flux", value: "Constant", color: "text-amber-400" }
-            ]
-        },
-        {
-            title: "Adoucisseurs Industriels",
-            titlePart1: "Adoucisseurs ",
-            titlePart2: "Industriels",
-            navTitle: "Adoucisseurs",
-            desc: "Éliminez le calcaire de vos processus industriels. Augmentez l'efficacité thermique de vos chaudières et la durée de vie de vos échangeurs.",
-            points: [
-                { title: "Protection antitartre", desc: "Supprimez définitivement les dépôts de calcaire sur vos chaudières et échangeurs." },
-                { title: "Efficacité énergétique", desc: "Optimisez vos transferts thermiques et réduisez vos coûts de chauffage industriels." }
-            ],
-            image: industrialSoftenerImg,
-            link: "/adoucisseurs-eau-industriel",
-            tag: "THERMIQUE",
-            largeNumber: "02",
-            floatingCard: { title: "Efficacité Énergie", desc: "Zéro tartre, réduction des coûts opérationnels.", icon: Zap },
-            floatingCard2: { title: "Protection Actifs", desc: "Préservez vos chaudières et échangeurs du tartre.", icon: ShieldCheck },
-            floatingCard3: { title: "Maintenance ROI", desc: "Réduction drastique des coûts d'entretien machine.", icon: savingsImg },
-            floatingCard4: { title: "Volume Industriel", desc: "Traitement haute performance pour les gros débits.", icon: Factory },
-            bubbles: [
-                { icon: Droplets, label: "Dureté", value: "0°f", color: "text-blue-600" },
-                { icon: Zap, label: "ROI", value: "+35%", color: "text-green-500" }
-            ]
-        },
-        {
-            title: "Groupes de Dosage & Contrôle",
-            titlePart1: "Groupes de ",
-            titlePart2: "Dosage & Contrôle",
-            navTitle: "Dosage & Contrôle",
-            desc: "Précision chirurgicale pour l'injection chimique et le contrôle de la qualité d'eau. Automatisation complète de vos paramètres critiques.",
-            points: [
-                { title: "Précision de dosage", desc: "Injection ultra-précise de réactifs chimiques pour une conformité totale." },
-                { title: "Contrôle automatisé", desc: "Systèmes intelligents gérant vos paramètres d'eau sans intervention humaine constante." }
-            ],
-            image: dosinggroupImg,
-            link: "/fontaines",
-            tag: "PRECISION",
-            largeNumber: "03",
-            floatingCard: { title: "Dosage Précis", desc: "Injection chimique automatisée et contrôlée.", icon: Activity },
-            floatingCard2: { title: "Alerte Prédictive", desc: "Détection des anomalies avant l'arrêt de production.", icon: Activity },
-            floatingCard3: { title: "Sécurité Totale", desc: "Contrôle constant des paramètres critiques d'eau.", icon: ShieldCheck },
-            floatingCard4: { title: "Automatisation", desc: "Gestion intelligente sans intervention humaine.", icon: Settings },
-            bubbles: [
-                { icon: Cpu, label: "IA", value: "Active", color: "text-indigo-400" },
-                { icon: Activity, label: "Précision", value: "99.9%", color: "text-red-400" }
-            ]
-        },
-        {
-            title: "Osmose Inverse Industrielle",
-            titlePart1: "Osmose Inverse ",
-            titlePart2: "Industrielle",
-            navTitle: "Osmose Inverse",
-            desc: "Production d'eau ultra-pure pour les processus les plus exigeants. Élimination totale des TDS pour une qualité d'eau constante.",
-            points: [
-                { title: "Pureté moléculaire", desc: "Élimination totale des minéraux dissous pour les processus les plus sensibles." },
-                { title: "Capacité sur mesure", desc: "Systèmes dimensionnés précisément selon vos besoins volumétriques quotidiens." }
-            ],
-            image: IndustrialROSystemsImg,
-            link: "/osmose-inverse-industrielle",
-            tag: "PURIFICATION",
-            largeNumber: "04",
-            floatingCard: { title: "Eau Process", desc: "Le standard de pureté pour vos lignes de production.", icon: ShieldCheck },
-            floatingCard2: { title: "Pureté Critique", desc: "Élimination totale des TDS pour une qualité constante.", icon: healthSafeImg },
-            floatingCard3: { title: "Rendement Éco", desc: "Optimisation de la consommation d'eau et d'énergie.", icon: savingsImg },
-            floatingCard4: { title: "Scalabilité", desc: "Capacités modulaires s'adaptant à votre croissance.", icon: Factory },
-            bubbles: [
-                { icon: GlassWater, label: "Pureté", value: "TDS < 1", color: "text-sky-400" },
-                { icon: Sparkles, label: "Grade", value: "Ultra-Pur", color: "text-blue-500" }
-            ]
-        },
-        {
-            title: "Déionisation & Échange d'Ions",
-            titlePart1: "Déionisation & ",
-            titlePart2: "Échange d'Ions",
-            navTitle: "Déionisation",
-            desc: "Solutions spécialisées pour obtenir une conductivité minimale. Indispensable pour les laboratoires et l'industrie électronique.",
-            points: [
-                { title: "Conductivité ultra-basse", desc: "Atteignez les niveaux de résistivité nécessaires pour l'électronique de pointe." },
-                { title: "Lits de résine spécifiques", desc: "Mélanges de résines haute performance adaptés à vos polluants cibles." }
-            ],
-            image: DISystemsImg,
-            link: "/systeme-de-filtration-deau-potable",
-            tag: "LABORATOIRE",
-            largeNumber: "05",
-            floatingCard: { title: "Grade Labo", desc: "Eau de type 1 pour les analyses les plus sensibles.", icon: Activity },
-            floatingCard2: { title: "Conductivité Ω", desc: "Résistivité maximale pour l'industrie électronique.", icon: Zap },
-            floatingCard3: { title: "Résines High-Tech", desc: "Mélanges haute performance adaptés à vos polluants.", icon: Layers },
-            floatingCard4: { title: "Pureté Absolue", desc: "Une eau déionisée aux standards les plus élevés.", icon: ShieldCheck },
-            bubbles: [
-                { icon: Layers, label: "Résines", value: "High-Grade", color: "text-indigo-500" },
-                { icon: Activity, label: "Ω", value: "18.2 MΩ", color: "text-slate-400" }
-            ]
-        },
-        {
-            title: "Désinfection UV de Puissance",
-            titlePart1: "Désinfection ",
-            titlePart2: "UV de Puissance",
-            navTitle: "Systèmes UV",
-            desc: "Neutralisation bactériologique haute intensité sans produits chimiques. Sécurisez vos lignes de production contre les risques microbiens.",
-            points: [
-                { title: "Sécurité biologique", desc: "Neutralisation à 99.99% des pathogènes sans modification chimique de l'eau." },
-                { title: "Action instantanée", desc: "Traitement en temps réel au passage de l'eau pour une sécurité de ligne constante." }
-            ],
-            image: uvSystemImg,
-            link: "/desinfection-uv-industrielle",
-            tag: "SÉCURITÉ",
-            largeNumber: "06",
-            floatingCard: { title: "Sécurité Bio", desc: "Neutralisation à 99.99% des agents pathogènes.", icon: ShieldCheck },
-            floatingCard2: { title: "Action Ligne", desc: "Traitement en temps réel pour une sécurité constante.", icon: Activity },
-            floatingCard3: { title: "Zéro Chimique", desc: "Stérilisation pure sans modification de l'eau.", icon: healthSafeImg },
-            floatingCard4: { title: "Puissance UV", desc: "Haute intensité certifiée pour volumes industriels.", icon: Sparkles },
-            bubbles: [
-                { icon: ShieldCheck, label: "Bio", value: "Log 4", color: "text-blue-600" },
-                { icon: Sparkles, label: "UV-C", value: "Intense", color: "text-purple-400" }
-            ]
-        }
+    const solutions = [
+        { title: "Filtration sur média spécialisé", img: sol5 },
+        { title: "Adoucissement de l'eau industrielle", img: sol1, objectPosition: "object-top" },
+        { title: "Systèmes de dosage chimique", img: sol6 },
+        { title: "Osmose inverse et déminéralisation", img: sol3 },
+        { title: "Déminéralisation & Déionisation de l'eau", img: sol2 },
+        { title: "Désinfection par ultraviolets", img: sol4 }
     ];
 
-    const scrollToProgram = (idx: number) => {
-        const el = sectionRefs.current[idx];
-        if (el) window.scrollTo({ top: el.offsetTop, behavior: 'smooth' });
-    };
+    const downloads = [
+        "Brochure institutionnelle", "Fiche technique Adoucisseurs", "Guide traitement chaudières",
+        "Documentation Osmose", "Certifications ISO", "Normes sanitaires",
+        "Fiche technique Filtres", "Brochure UV", "Manuel de maintenance"
+    ];
 
     return (
-        <div className="min-h-screen bg-[#FDFDFD] font-sans text-slate-900 selection:bg-blue-100 selection:text-blue-900 overflow-x-hidden">
+        <div className="min-h-screen bg-white font-sans text-slate-900">
             <Header />
 
             <main>
                 {/* 1. CINEMATIC HERO */}
                 <Hero 
                     image={heroImg}
-                    highlightedTitle="La puissance, "
-                    mainTitle="de la précision industrielle."
-                    subtitle="Optimisez vos processus, protégez vos infrastructures et garantissez la continuité de vos opérations avec nos solutions d'ingénierie de l'eau."
-                    ctaText="CONSULTATION TECHNIQUE"
+                    highlightedTitle="Solutions "
+                    mainTitle="d'ingénierie de l'eau."
+                    subtitle="Que ce soit pour la production de vapeur, le refroidissement ou les processus de fabrication, nous offrons une gamme complète d'équipements pour garantir la qualité de l'eau industrielle."
+                    ctaText="CONTACTEZ NOUS"
                     ctaLink="/consultation"
                     showPhone={true}
-                    badge="Ingénierie Industrielle Bricareau"
+                    badge="Solutions Industrielles"
                 />
 
-                {/* SERVICE SECTIONS - PREMIUM LIQUID DESIGN */}
-                <section id="solutions" className="py-20 bg-white">
+                {/* 2. TRAITEMENT DE L'EAU INDUSTRIEL */}
+                <section className="py-20">
                     <div className="container mx-auto px-6">
-                        <div className="flex flex-col md:flex-row md:items-end justify-between mb-32 gap-8">
-                            <div className="max-w-2xl space-y-6">
-                                <span className="text-[10px] font-black text-blue-600 uppercase tracking-[0.5em]">SOLUTIONS TECHNIQUES</span>
-                                <h2 className="heading-pro-max text-left uppercase">
-                                    <span className="italic font-light text-[#18448F]">Performance </span><br />
-                                    <span className="font-bold text-[#18448F]">Opérationnelle.</span>
-                                </h2>
+                        <div className="flex flex-col lg:flex-row gap-16">
+                            <div className="lg:w-1/2 space-y-8">
+                                <div className="border-l-4 border-blue-600 pl-6">
+                                    <h2 className="text-3xl md:text-4xl font-bold text-blue-900">
+                                        Traitement de l'eau industriel
+                                    </h2>
+                                </div>
+                                <p className="text-slate-600 leading-relaxed">
+                                    L'optimisation des performances passe par un traitement de l'eau adapté. Notre expertise reconnue nous permet de concevoir et de déployer des solutions sur mesure qui répondent aux normes les plus exigeantes de votre secteur d'activité, tout en réduisant votre empreinte écologique.
+                                </p>
+                                <div className="flex gap-6 mt-10">
+                                    <img src={treatmentImg1} alt="System 1" className="w-1/2 h-48 object-cover rounded shadow-md" />
+                                    <img src={treatmentImg2} alt="System 2" className="w-1/2 h-48 object-cover rounded shadow-md" />
+                                </div>
                             </div>
-                            <p className="text-slate-400 text-sm font-light max-w-sm border-l border-blue-100 pl-6">
-                                "Une maîtrise totale de la qualité d'eau est le pilier d'une industrie performante et durable."
-                            </p>
-                        </div>
-
-                        {/* Side Nav for Sections */}
-                        <div className="relative">
-                            <div className={cn(
-                                "fixed left-12 top-1/2 -translate-y-1/2 z-50 hidden xl:flex flex-col gap-10 transition-all duration-700",
-                                showNav && isNavVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10 pointer-events-none"
-                            )}>
-                                {programs.map((prog, idx) => (
-                                    <button 
-                                        key={idx} 
-                                        className="relative flex items-center gap-6 group text-left"
-                                        onClick={() => scrollToProgram(idx)}
-                                    >
-                                        <div className={cn(
-                                            "w-2 h-2 rounded-full transition-all duration-500",
-                                            activeSection === idx ? "bg-[#18448F] scale-150 ring-4 ring-blue-100" : "bg-slate-300 scale-100"
-                                        )} />
-                                        <span className={cn(
-                                            "text-[10px] font-black uppercase tracking-widest transition-all",
-                                            activeSection === idx ? "text-[#18448F] opacity-100" : "text-slate-400 opacity-0 group-hover:opacity-50"
-                                        )}>
-                                            {prog.navTitle}
-                                        </span>
-                                    </button>
-                                ))}
-                            </div>
-
-                            {/* Service Sections Content */}
-                            <div ref={containerRef} className="space-y-48">
-                                {programs.map((prog, idx) => (
-                                    <div 
-                                        key={idx}
-                                        ref={el => sectionRefs.current[idx] = el}
-                                        className="relative min-h-[80vh] flex items-center py-24 overflow-hidden"
-                                    >
-                                        {/* Background Orbs */}
-                                        <div className="absolute inset-0 z-0 pointer-events-none">
-                                            <div className={cn(
-                                                "absolute w-[40%] h-[40%] bg-blue-50 rounded-full blur-[100px] opacity-60",
-                                                idx % 2 === 0 ? "-top-[10%] -left-[10%]" : "-top-[10%] -right-[10%]"
-                                            )} />
-                                            <div className={cn(
-                                                "absolute w-[30%] h-[30%] bg-indigo-50 rounded-full blur-[80px] opacity-40",
-                                                idx % 2 === 0 ? "top-[20%] -right-[5%]" : "top-[20%] -left-[5%]"
-                                            )} />
-                                        </div>
-
-                                        <div className="container mx-auto px-6 relative z-10">
-                                            <div className={cn(
-                                                "flex flex-col items-center gap-20",
-                                                idx % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
-                                            )}>
-                                                {/* Text Column */}
-                                                <div className="lg:w-1/2 space-y-16">
-                                                    <div className="relative">
-                                                        <div className="absolute -left-12 top-0 text-[180px] font-black text-blue-50/50 select-none leading-none -z-10">
-                                                            {(prog as any).largeNumber}
-                                                        </div>
-                                                        <div className="space-y-6">
-                                                            <span className="text-[10px] font-black text-blue-600 uppercase tracking-[0.5em] flex items-center gap-3">
-                                                                <span className="w-8 h-[1px] bg-blue-600" />
-                                                                {prog.tag}
-                                                            </span>
-                                                            <h2 className="text-6xl md:text-[80px] font-bold tracking-tighter leading-[0.9] text-slate-900 uppercase">
-                                                                {prog.titlePart1} <br />
-                                                                <span className="text-blue-600 italic font-light lowercase">{prog.titlePart2}</span>
-                                                            </h2>
-                                                            <p className="text-slate-500 text-xl font-light leading-relaxed max-w-lg">
-                                                                {prog.desc}
-                                                            </p>
-                                                        </div>
-                                                    </div>
-
-                                                    <div className="relative grid grid-cols-1 md:grid-cols-2 gap-10">
-                                                        {[
-                                                            { ...prog.floatingCard, value: "Elite", color: "bg-blue-600" },
-                                                            (prog as any).floatingCard2 ? { ...(prog as any).floatingCard2, value: "Max", color: "bg-indigo-600" } : null,
-                                                            (prog as any).floatingCard3 ? { ...(prog as any).floatingCard3, value: "Pro", color: "bg-sky-600" } : null,
-                                                            (prog as any).floatingCard4 ? { ...(prog as any).floatingCard4, value: "Ultra", color: "bg-blue-500" } : null,
-                                                        ].filter(Boolean).map((feat: any, fIdx) => (
-                                                            <div key={fIdx} className="group relative p-10 rounded-[3rem] bg-white border border-slate-100 shadow-xl shadow-slate-100/50 hover:shadow-2xl hover:shadow-blue-100 transition-all duration-500 overflow-hidden">
-                                                                <div className={cn("absolute top-0 right-0 w-32 h-32 opacity-5 translate-x-10 -translate-y-10 rounded-full", feat.color)} />
-                                                                <div className="relative z-10 space-y-4">
-                                                                    <div className="flex items-center gap-3">
-                                                                        {feat.icon && typeof feat.icon === 'string' ? (
-                                                                            <img src={feat.icon} className="w-5 h-5 opacity-50" alt="" />
-                                                                        ) : feat.icon ? (
-                                                                            <feat.icon className="w-5 h-5 text-blue-600 opacity-50" />
-                                                                        ) : null}
-                                                                        <span className="text-[10px] font-black text-slate-500 uppercase tracking-wider">{feat.title}</span>
-                                                                    </div>
-                                                                    <p className="text-slate-500 text-xs font-light leading-relaxed">{feat.desc}</p>
-                                                                </div>
-                                                            </div>
-                                                        ))}
-                                                    </div>
-                                                    
-                                                    <div className="pt-4">
-                                                        <ProMaxButton variant="outline" className="px-12 h-16 text-[10px]" onClick={() => navigate(prog.link)}>
-                                                            SPÉCIFICATIONS TECHNIQUES
-                                                        </ProMaxButton>
-                                                    </div>
-                                                </div>
-
-                                                {/* Liquid Visual Column */}
-                                                <div className="lg:w-1/2 relative">
-                                                    <div className="relative w-full aspect-square max-w-[600px] mx-auto">
-                                                        <div className="absolute inset-0 bg-blue-600/5 animate-morph" />
-                                                        
-                                                        <div className="absolute top-0 left-0 w-full h-full">
-                                                            {(prog as any).bubbles.map((bubble: any, bIdx: number) => (
-                                                                <div 
-                                                                    key={bIdx} 
-                                                                    className={cn(
-                                                                        "absolute z-30 bg-white/80 backdrop-blur-xl rounded-full shadow-2xl border border-white/50 flex flex-col items-center justify-center text-center animate-float",
-                                                                        bIdx === 0 ? "top-[10%] right-[10%] w-48 h-48 p-8" : "bottom-[10%] left-[5%] w-56 h-56 p-10 animation-delay-2000"
-                                                                    )}
-                                                                >
-                                                                    <bubble.icon className={cn("w-8 h-8 mb-3", bubble.color)} />
-                                                                    <span className="text-[10px] font-black uppercase tracking-widest text-slate-400">{bubble.label}</span>
-                                                                    <span className="text-lg font-bold text-slate-900 leading-none">{bubble.value}</span>
-                                                                </div>
-                                                            ))}
-
-                                                            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] rounded-full overflow-hidden border-[15px] border-white shadow-2xl animate-morph" style={{ animationDelay: '-2s' }}>
-                                                                <img 
-                                                                    src={prog.image} 
-                                                                    alt={prog.title} 
-                                                                    className="w-full h-full object-cover scale-110 hover:scale-125 transition-transform duration-[2s]"
-                                                                />
-                                                                <div className="absolute inset-0 bg-blue-900/10 mix-blend-overlay" />
-                                                            </div>
-
-                                                            <div className={cn(
-                                                                "absolute top-1/2 -translate-y-1/2 vertical-text hidden xl:block",
-                                                                idx % 2 === 0 ? "-right-12" : "-left-12"
-                                                            )}>
-                                                                <span className="text-xs font-black text-blue-600/20 uppercase tracking-[1em] rotate-180">INDUSTRIAL DNA</span>
-                                                            </div>
-                                                        </div>
-
-                                                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[110%] border border-blue-100 rounded-full animate-spin-slow opacity-20 -z-10" />
-                                                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[130%] h-[130%] border border-blue-50 rounded-full animate-spin-slow-reverse opacity-10 -z-10" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                ))}
+                            <div className="lg:w-1/2">
+                                <img src={treatmentLarge} alt="Ingénieur" className="w-full h-full min-h-[400px] object-cover rounded shadow-lg" />
                             </div>
                         </div>
                     </div>
                 </section>
 
-                {/* 3. INDUSTRIAL DNA GRID */}
-                <section className="py-32 bg-slate-900 text-white overflow-hidden">
+                {/* 3. BANDEAU BLEU CARACTÉRISTIQUES */}
+                <section className="bg-blue-600 text-white py-16">
                     <div className="container mx-auto px-6">
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
-                            <div className="space-y-12">
+                        <h3 className="text-2xl font-bold mb-10 border-l-4 border-white pl-4">
+                            Bénéfices Opérationnels
+                        </h3>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 text-blue-50">
+                            <ul className="space-y-4">
+                                <li className="flex gap-3"><ChevronRight className="shrink-0 w-5 h-5" /> Augmentation du rendement</li>
+                                <li className="flex gap-3"><ChevronRight className="shrink-0 w-5 h-5" /> Réduction des coûts d'énergie</li>
+                                <li className="flex gap-3"><ChevronRight className="shrink-0 w-5 h-5" /> Durée de vie prolongée des équipements</li>
+                            </ul>
+                            <ul className="space-y-4">
+                                <li className="flex gap-3"><ChevronRight className="shrink-0 w-5 h-5" /> Conformité environnementale</li>
+                                <li className="flex gap-3"><ChevronRight className="shrink-0 w-5 h-5" /> Sécurité des installations</li>
+                                <li className="flex gap-3"><ChevronRight className="shrink-0 w-5 h-5" /> Maintenance prédictive</li>
+                            </ul>
+                            <ul className="space-y-4">
+                                <li className="flex gap-3"><ChevronRight className="shrink-0 w-5 h-5" /> Contrôle qualité continu</li>
+                                <li className="flex gap-3"><ChevronRight className="shrink-0 w-5 h-5" /> Assistance technique 24/7</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                {/* 4. SOLUTIONS (BENTO GRID) */}
+                <section className="py-20 bg-slate-50">
+                    <div className="container mx-auto px-6">
+                        <h2 className="text-3xl font-bold text-center text-blue-900 mb-16 border-l-4 border-blue-600 pl-4 inline-block">
+                            Les solutions de traitement d'eau pour toutes les industries
+                        </h2>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            {solutions.map((sol, idx) => (
+                                <div key={idx} className="relative group h-72 md:h-80 overflow-hidden rounded shadow-md">
+                                    <img src={sol.img} alt={sol.title} className={`w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 ${sol.objectPosition || ''}`} />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-blue-900/90 via-blue-900/20 to-transparent" />
+                                    <div className="absolute bottom-0 left-0 w-full p-6 text-white">
+                                        <div className="border-l-2 border-white pl-4 mb-4">
+                                            <h3 className="text-xl font-bold">{sol.title}</h3>
+                                        </div>
+                                        <button className="flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm px-6 py-2 rounded-full text-sm font-medium transition-colors w-max">
+                                            En savoir plus <ArrowRight className="w-4 h-4" />
+                                        </button>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+                {/* 5. CERCLE DE PROCESSUS */}
+                <section className="py-24 bg-blue-600 text-white overflow-hidden">
+                    <div className="container mx-auto px-6">
+                        <div className="flex flex-col lg:flex-row items-center gap-16">
+                            {/* Graphical representation of the circle */}
+                            <div className="lg:w-1/2 flex justify-center">
+                                <div className="relative w-80 h-80 md:w-[500px] md:h-[500px] rounded-full border-8 border-white/20 p-4">
+                                    <div className="absolute inset-0 m-4 rounded-full border border-white/30 animate-spin-slow" />
+                                    {/* Pseudo-slices using absolute positioning */}
+                                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-1/2 overflow-hidden origin-bottom">
+                                        <img src={treatmentImg1} className="w-[200%] h-[200%] max-w-none object-cover opacity-80" alt="" />
+                                    </div>
+                                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-1/2 overflow-hidden origin-bottom rotate-60">
+                                        <img src={sol1} className="w-[200%] h-[200%] max-w-none object-cover opacity-80" alt="" />
+                                    </div>
+                                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-1/2 overflow-hidden origin-bottom rotate-120">
+                                        <img src={sol2} className="w-[200%] h-[200%] max-w-none object-cover opacity-80" alt="" />
+                                    </div>
+                                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-1/2 overflow-hidden origin-bottom rotate-180">
+                                        <img src={sol3} className="w-[200%] h-[200%] max-w-none object-cover opacity-80" alt="" />
+                                    </div>
+                                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-1/2 overflow-hidden origin-bottom rotate-240">
+                                        <img src={sol4} className="w-[200%] h-[200%] max-w-none object-cover opacity-80" alt="" />
+                                    </div>
+                                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-1/2 overflow-hidden origin-bottom rotate-300">
+                                        <img src={sol5} className="w-[200%] h-[200%] max-w-none object-cover opacity-80" alt="" />
+                                    </div>
+                                    {/* Center circle */}
+                                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 md:w-48 md:h-48 bg-blue-900 rounded-full flex flex-col items-center justify-center border-4 border-white shadow-2xl z-10">
+                                        <span className="text-2xl font-bold uppercase tracking-widest text-white">EAU</span>
+                                        <span className="text-sm text-blue-300 uppercase">Processus</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div className="lg:w-1/2 space-y-8">
                                 <div className="space-y-6">
-                                    <span className="text-[10px] font-black text-blue-600 uppercase tracking-[0.5em] flex items-center gap-3">
-                                        <span className="w-8 h-[1px] bg-blue-600" />
-                                        VALEUR AJOUTÉE
-                                    </span>
-                                    <h2 className="heading-pro-max text-left uppercase">
-                                        <span className="italic font-light text-white">Rigueur & </span>
-                                        <span className="font-bold text-white">Fiabilité.</span>
-                                    </h2>
-                                    <p className="text-slate-400 text-lg md:text-xl font-light leading-relaxed max-w-lg">
-                                        Nos ingénieurs conçoivent des systèmes robustes capables de supporter des cycles de production intensifs 24/7.
+                                    <h3 className="text-3xl font-bold border-l-4 border-white pl-4">
+                                        Étapes du traitement d'eau
+                                    </h3>
+                                    <p className="text-blue-100">
+                                        Nos systèmes intégrés couvrent l'ensemble du cycle de l'eau dans votre installation, assurant une purification étape par étape pour atteindre les spécifications exactes requises par vos procédés industriels.
                                     </p>
                                 </div>
+                                <div className="space-y-6 mt-8">
+                                    <h3 className="text-3xl font-bold border-l-4 border-white pl-4">
+                                        Un contrôle à 360°
+                                    </h3>
+                                    <p className="text-blue-100">
+                                        De la filtration primaire à la déminéralisation ultime, chaque étape est monitorée et optimisée. Nos technologies travaillent en synergie pour garantir une protection maximale de vos actifs.
+                                    </p>
+                                </div>
+                                <button className="mt-8 bg-white text-blue-600 px-8 py-3 rounded-full font-bold uppercase tracking-wider hover:bg-blue-50 transition-colors">
+                                    Voir toutes les solutions
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
-                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                                    {[
-                                        { title: "Sur Mesure", desc: "Conception adaptée à vos contraintes d'espace et de débit.", icon: <Cpu className="w-6 h-6" /> },
-                                        { title: "Support 24/7", desc: "Intervention d'urgence pour maintenir votre production.", icon: <Wrench className="w-6 h-6" /> },
-                                        { title: "Analytique", desc: "Suivi télémétrique des performances de vos systèmes.", icon: <Activity className="w-6 h-6" /> },
-                                        { title: "Évolutivité", desc: "Solutions modulaires accompagnant votre croissance.", icon: <Layers className="w-6 h-6" /> }
-                                    ].map((item, i) => (
-                                        <div key={i} className="space-y-4 p-6 rounded-[2rem] bg-white/5 border border-white/10 hover:bg-white/10 transition-colors group">
-                                            <div className="text-blue-400 group-hover:scale-110 transition-transform">
-                                                {item.icon}
-                                            </div>
-                                            <h4 className="text-lg font-bold">{item.title}</h4>
-                                            <p className="text-slate-500 text-xs leading-relaxed">{item.desc}</p>
-                                        </div>
-                                    ))}
+                {/* 6. ÉTUDES DE CAS */}
+                <section className="py-20 bg-white">
+                    <div className="container mx-auto px-6 max-w-6xl">
+                        {/* Header */}
+                        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
+                            <div className="space-y-4">
+                                <span className="inline-block bg-[#1a4a8d] text-white text-[10px] font-bold tracking-wider px-4 py-1.5 rounded-full uppercase">
+                                    Cas de réussite brassicole
+                                </span>
+                                <h2 className="text-4xl md:text-5xl text-[#1a4a8d]">
+                                    <span className="font-light italic">Ressources connexes</span><br/>
+                                    <span className="font-bold">& Études de cas.</span>
+                                </h2>
+                            </div>
+                            <button className="flex items-center gap-4 border border-slate-300 rounded-full px-6 py-3 text-sm font-bold text-[#1a4a8d] hover:bg-slate-50 transition-colors">
+                                Toutes les ressources <ArrowRight className="w-4 h-4" />
+                            </button>
+                        </div>
+
+                        {/* Grid */}
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                            {/* Card 1 */}
+                            <div className="bg-white rounded-2xl p-10 border border-slate-100 shadow-[0_4px_20px_-10px_rgba(0,0,0,0.1)] flex flex-col h-full hover:shadow-[0_8px_30px_-10px_rgba(0,0,0,0.15)] transition-shadow">
+                                <span className="text-[#1a4a8d] text-[10px] font-bold tracking-widest uppercase mb-4">Étude de cas : Microbrasserie</span>
+                                <h3 className="text-xl font-bold text-slate-900 mb-6 leading-tight">Profilage minéral complet d'une microbrasserie à Montréal.</h3>
+                                <p className="text-slate-500 text-sm leading-relaxed mb-12 flex-grow">Découvrez comment notre solution d'osmose inverse couplée à une minéralisation précise a stabilisé le goût des IPA et éliminé les variations saisonnières d'eau.</p>
+                                <div className="pt-6 border-t border-slate-100 flex items-center justify-between mt-auto">
+                                    <button className="text-[10px] font-bold tracking-widest uppercase text-slate-900 flex items-center gap-2 hover:text-[#1a4a8d] transition-colors">
+                                        Lire l'étude de cas <ChevronRight className="w-3 h-3" />
+                                    </button>
                                 </div>
                             </div>
 
-                            <div className="relative">
-                                <div className="absolute -inset-20 bg-blue-600/20 blur-[120px] rounded-full" />
-                                <div className="relative aspect-square rounded-[3rem] border border-white/10 bg-white/5 p-8 backdrop-blur-3xl">
-                                    <div className="w-full h-full rounded-[2rem] overflow-hidden">
-                                        <img src="https://images.unsplash.com/photo-1516937941344-00b4e0337589?auto=format&fit=crop&q=80&w=800" alt="Industrial Plant" className="w-full h-full object-cover opacity-80" />
-                                    </div>
-                                    <div className="absolute -bottom-10 -right-10 bg-white p-10 rounded-[2rem] shadow-2xl text-slate-900 hidden md:block">
-                                        <div className="flex items-center gap-4 mb-4">
-                                            <div className="text-3xl font-black italic tracking-tighter leading-none">PRÉCISION<br />INDUSTRIELLE</div>
-                                        </div>
-                                        <p className="text-[10px] font-black uppercase tracking-widest text-slate-400">Standard d'excellence</p>
-                                    </div>
+                            {/* Card 2 */}
+                            <div className="bg-white rounded-2xl p-10 border border-slate-100 shadow-[0_4px_20px_-10px_rgba(0,0,0,0.1)] flex flex-col h-full hover:shadow-[0_8px_30px_-10px_rgba(0,0,0,0.15)] transition-shadow">
+                                <span className="text-[#1a4a8d] text-[10px] font-bold tracking-widest uppercase mb-4">Étude de cas : Brasserie de débit</span>
+                                <h3 className="text-xl font-bold text-slate-900 mb-6 leading-tight">Déchloration complète et filtration à Sherbrooke.</h3>
+                                <p className="text-slate-500 text-sm leading-relaxed mb-12 flex-grow">Élimination absolue de tout composé phénolique et microbiologique grâce à un système d'ultrafiltration industrielle, assurant 50 000 hl/an de pureté.</p>
+                                <div className="pt-6 border-t border-slate-100 flex items-center justify-between mt-auto">
+                                    <button className="text-[10px] font-bold tracking-widest uppercase text-slate-900 flex items-center gap-2 hover:text-[#1a4a8d] transition-colors">
+                                        Lire l'étude de cas <ChevronRight className="w-3 h-3" />
+                                    </button>
+                                </div>
+                            </div>
+
+                            {/* Card 3 */}
+                            <div className="bg-white rounded-2xl p-10 border border-slate-100 shadow-[0_4px_20px_-10px_rgba(0,0,0,0.1)] flex flex-col h-full hover:shadow-[0_8px_30px_-10px_rgba(0,0,0,0.15)] transition-shadow">
+                                <span className="text-[#1a4a8d] text-[10px] font-bold tracking-widest uppercase mb-4">Étude de cas : Économie circulaire</span>
+                                <h3 className="text-xl font-bold text-slate-900 mb-6 leading-tight">Réutilisation d'eau et optimisation CIP pour brasserie verte.</h3>
+                                <p className="text-slate-500 text-sm leading-relaxed mb-12 flex-grow">Une solution de filtration innovante permettant de recycler plus de 30% de l'eau de lavage et de rinçage chaud des cuves sans aucun risque sanitaire.</p>
+                                <div className="pt-6 border-t border-slate-100 flex items-center justify-between mt-auto">
+                                    <button className="text-[10px] font-bold tracking-widest uppercase text-slate-900 flex items-center gap-2 hover:text-[#1a4a8d] transition-colors">
+                                        Lire l'étude de cas <ChevronRight className="w-3 h-3" />
+                                    </button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
 
-                {/* 4. EXPERT TRUST SECTION */}
-                <ExpertTrustSection />
+                {/* 7. ÉQUIPEMENTS */}
+                <section className="py-20 bg-slate-50">
+                    <div className="container mx-auto px-6">
+                        <div className="flex justify-between items-end mb-12">
+                            <h2 className="text-3xl font-bold text-blue-900 border-l-4 border-blue-600 pl-4">
+                                Équipements
+                            </h2>
+                            <button className="bg-blue-600 text-white px-6 py-2 rounded-full font-medium hover:bg-blue-700">
+                                Voir le catalogue
+                            </button>
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                            {[ 
+                                { img: eq1, title: "Filtres Acier Inoxydable", desc: "Haute capacité pour polissage final." },
+                                { img: eq2, title: "Filtres Haute Pression", desc: "Conçus pour les débits massifs." },
+                                { img: eq3, title: "Systèmes Catalytiques", desc: "Pour l'élimination du fer et manganèse." }
+                            ].map((eq, idx) => (
+                                <div key={idx} className="bg-white rounded-lg shadow-sm overflow-hidden border border-slate-100 group">
+                                    <div className="h-64 overflow-hidden p-6 bg-slate-100/50">
+                                        <img src={eq.img} alt={eq.title} className="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform" />
+                                    </div>
+                                    <div className="p-6 space-y-4">
+                                        <span className="inline-block bg-blue-100 text-blue-700 text-xs font-bold px-3 py-1 rounded-full">
+                                            Fiche technique
+                                        </span>
+                                        <h3 className="text-xl font-bold text-slate-900">{eq.title}</h3>
+                                        <p className="text-slate-500">{eq.desc}</p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
 
-                {/* 5. TESTIMONIALS */}
-                <div className="bg-slate-50 py-32 border-y border-gray-100">
-                    <TestimonialsSection 
-                        filterProduct="Industriel"
-                        limit={6}
-                        title={
-                            <div className="text-center space-y-3 mb-16">
-                                <span className="text-[10px] font-black text-blue-500 uppercase tracking-[0.5em] block mb-4">NOTRE RÉPUTATION</span>
-                                <h2 className="heading-pro-max text-center uppercase">
-                                    <span className="italic font-light text-[#18448F]">La confiance des </span>
-                                    <span className="font-bold text-[#18448F]">grands noms.</span>
-                                </h2>
+                {/* 8. RESSOURCES À TÉLÉCHARGER */}
+                <section className="py-20">
+                    <div className="container mx-auto px-6">
+                        <div className="flex justify-between items-end mb-12">
+                            <h2 className="text-3xl font-bold text-blue-900 border-l-4 border-blue-600 pl-4">
+                                Ressources à télécharger
+                            </h2>
+                            <button className="bg-blue-600 text-white px-6 py-2 rounded-full font-medium hover:bg-blue-700">
+                                Centre de ressources
+                            </button>
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            {downloads.map((doc, idx) => (
+                                <div key={idx} className="flex items-center gap-4 bg-[#e6f4fc] p-6 rounded-lg hover:shadow-md transition-shadow cursor-pointer group">
+                                    <div className="w-12 h-12 shrink-0 bg-blue-600 text-white rounded-full flex items-center justify-center group-hover:bg-blue-700 transition-colors">
+                                        <Download className="w-5 h-5" />
+                                    </div>
+                                    <div>
+                                        <span className="text-xs font-bold text-blue-600 uppercase tracking-wider block mb-1">
+                                            Document PDF
+                                        </span>
+                                        <h4 className="font-bold text-slate-900">
+                                            {doc}
+                                        </h4>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+                {/* 9. PARTENAIRE CHEM-AQUA */}
+                <section className="relative py-24 bg-slate-900 text-white overflow-hidden">
+                    <div className="absolute inset-0">
+                        <img src={partnerBg} alt="Partenaire" className="w-full h-full object-cover opacity-30 mix-blend-luminosity" />
+                        <div className="absolute inset-0 bg-gradient-to-r from-[#003875]/90 to-[#003875]/60" />
+                    </div>
+                    <div className="container mx-auto px-6 relative z-10">
+                        <div className="flex flex-col md:flex-row items-center justify-between gap-12">
+                            <div className="md:w-1/2 space-y-6">
+                                <div className="border-l-4 border-blue-400 pl-6">
+                                    <h2 className="text-4xl md:text-5xl font-bold">
+                                        Partenaire de<br />Chem-Aqua
+                                    </h2>
+                                </div>
+                                <p className="text-blue-100 max-w-md">
+                                    En tant que partenaire certifié, nous déployons les technologies et méthodologies de pointe pour garantir l'efficacité de vos installations de traitement d'eau.
+                                </p>
                             </div>
-                        }
-                    />
-                </div>
-
-                {/* 6. WATER DIAGNOSIS */}
-                <WaterDiagnosis />
+                            <div className="md:w-1/2 flex flex-col gap-6">
+                                <div className="flex items-center gap-6 border-b border-white/20 pb-6">
+                                    <div className="w-16 h-16 rounded-full border-2 border-white/30 flex items-center justify-center hover:bg-white hover:text-[#003875] transition-colors cursor-pointer">
+                                        <ArrowRight className="w-6 h-6" />
+                                    </div>
+                                    <div>
+                                        <h4 className="text-xl font-bold">Découvrez l'expertise</h4>
+                                        <span className="text-blue-200 text-sm">Méthodologie Chem-Aqua</span>
+                                    </div>
+                                </div>
+                                <div className="flex items-center gap-6">
+                                    <div className="w-16 h-16 rounded-full border-2 border-white/30 flex items-center justify-center hover:bg-white hover:text-[#003875] transition-colors cursor-pointer">
+                                        <ArrowRight className="w-6 h-6" />
+                                    </div>
+                                    <div>
+                                        <h4 className="text-xl font-bold">Contactez un ingénieur</h4>
+                                        <span className="text-blue-200 text-sm">Support technique direct</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </main>
 
             <Footer />
