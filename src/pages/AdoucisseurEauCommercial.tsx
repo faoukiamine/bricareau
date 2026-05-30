@@ -5,7 +5,6 @@ import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 import TestimonialsSection from "@/components/TestimonialsSection";
-import ExpertAvatars from "@/components/ExpertAvatars";
 import { ProMaxButton } from "@/components/ui/ProMaxButton";
 import { Button } from "@/components/ui/button";
 import heroImg from "@/assets/640320.jpg";
@@ -49,7 +48,7 @@ import womansufferingdryhairfromhardwaterImg from "@/assets/12163.jpg";
 import arrowDownIcon from "@/assets/keyboard_double_arrow_down.svg";
 import arrowUpIcon from "@/assets/keyboard_double_arrow_up.svg";
 import hardWaterFaucetImg from "@/assets/Hard Water-Faucet.jpg";
-import dishwasherCtaImg from "@/assets/18036672_SIE_2720_1530_21_04_30_SIE_CRM_Dishwasher_Hand_Taking_Out_Wine_Glass_Basket_Motiv_11_0017.webp";
+import bathCtaImg from "@/assets/close-up-handsom-man-taking-bath.jpg";
 import panoramaBgImg from "@/assets/Rain.webp";
 import SentinellePDF from "@/assets/brochure-freshpoint-fr.pdf";
 import TwinAlternatingWaterSoftenerImg from "@/assets/Alternating Water Softener.png";
@@ -734,19 +733,19 @@ En restauration et en hôtellerie, chaque détail compte. Assurez la conformité
 
 
                 {/* 11. PREMIUM CTA SECTION */}
-                <section className="relative py-32 flex items-center overflow-hidden bg-[#18448F]">
+                <section className="relative py-32 flex items-center overflow-hidden bg-[#142646]">
                     {/* Animated background elements */}
-                    <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-blue-600/20 to-transparent skew-x-12 translate-x-1/4" />
-                    <div className="absolute bottom-0 left-0 w-1/2 h-full bg-gradient-to-r from-cyan-400/10 to-transparent -skew-x-12 -translate-x-1/4" />
+                    <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-blue-500/10 to-transparent skew-x-12 translate-x-1/4" />
+                    <div className="absolute bottom-0 left-0 w-1/2 h-full bg-gradient-to-r from-cyan-500/5 to-transparent -skew-x-12 -translate-x-1/4" />
                     
                     {/* Background Image with Overlay */}
-                    <div className="absolute inset-0 z-0 opacity-40">
+                    <div className="absolute inset-0 z-0 opacity-50">
                         <img
-                            src={dishwasherCtaImg}
+                            src={bathCtaImg}
                             alt="L'excellence de la vaisselle étincelante en hôtellerie grâce à l'eau douce Bricareau"
-                            className="w-full h-full object-cover grayscale brightness-150"
+                            className="w-full h-full object-cover"
                         />
-                        <div className="absolute inset-0 bg-[#18448F]/10 backdrop-blur-sm" />
+                        <div className="absolute inset-0 bg-[#142646]/20 backdrop-blur-sm" />
                     </div>
 
                     <div className="container mx-auto px-6 relative z-10">
@@ -783,12 +782,6 @@ En restauration et en hôtellerie, chaque détail compte. Assurez la conformité
                                 </ProMaxButton>
                             </div>
 
-                            <div className="pt-8 flex flex-col items-center gap-4">
-                                <ExpertAvatars />
-                                <p className="text-blue-200/60 text-sm font-medium">
-                                    Rejoignez plus de <span className="text-white">1,500 entreprises</span> satisfaites au Québec cette année.
-                                </p>
-                            </div>
                         </div>
                     </div>
                 </section>

@@ -98,6 +98,7 @@ import DesabonnementSucces from "./pages/DesabonnementSucces";
 
 import ResidentialServices from "./pages/ResidentialServices";
 import HotellerieRestauration from "./pages/HotellerieRestauration";
+import FiltrationHotelsRestaurants from "./pages/FiltrationHotelsRestaurants";
 import Bureau from "./pages/Bureau";
 import A from "./pages/A";
 import B from "./pages/B";
@@ -136,6 +137,7 @@ const App = () => (
           <Route path="/adoucisseurs-portables" element={<Services />} />
           <Route path="/residentiel" element={<ResidentialServices />} />
           <Route path="/hotellerie-restauration" element={<HotellerieRestauration />} />
+          <Route path="/filtration-hotels-restaurants" element={<FiltrationHotelsRestaurants />} />
           <Route path="/bureau" element={<Bureau />} />
           <Route path="/pourquoi-choisir-bricareau" element={<WhyChooseUs />} />
           <Route path="/durabilite" element={<Sustainability />} />

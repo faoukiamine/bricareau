@@ -8,6 +8,9 @@ import WaterDiagnosis from "@/components/water_diagnosis";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import MarketExploration from "@/components/MarketExploration";
 import Footer from "@/components/Footer";
+import LogoFarm from "@/components/LogoFarm";
+import ProblemSolutionSection from "@/components/ProblemSolutionSection";
+import FAQSection from "@/components/FAQSection";
 
 const Home = () => {
   useEffect(() => {
@@ -34,6 +37,8 @@ const Home = () => {
       <Header />
       <main>
         <Hero />
+        <LogoFarm />
+        <ProblemSolutionSection />
         <ProductsArray />
         <CustomerJourney />
         <ExpertTrustSection />
@@ -48,6 +53,7 @@ const Home = () => {
           }
         />
 
+        <FAQSection />
         <WaterDiagnosis />
       </main>
       <Footer />

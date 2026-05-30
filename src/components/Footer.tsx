@@ -118,7 +118,7 @@ const Footer = () => {
             <h3 className="mb-6 text-white font-bold text-base uppercase tracking-wider">Hôtellerie et restauration</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="/entreprises" className="text-white/80 hover:text-white transition-colors">
+                <a href="/filtration-hotels-restaurants" className="text-white/80 hover:text-white transition-colors">
                   Systèmes de filtration pour restaurants et hôtels 
                 </a>
               </li>

@@ -64,37 +64,37 @@ export const mainNavMenuItems: MenuItem[] = [
                 links: [
                     { 
                         title: "Analyses & Tests d'eau", 
-                        description: "Systèmes de désinfection d'eau pour protéger votre famille contre les contaminants nocifs.", 
+                        description: "Analysez et purifiez : une barrière infaillible contre les contaminants pour la sécurité de votre famille.", 
                         href: "/tests-eau" 
                     }, 
                     { 
                         title: "Adoucisseurs d'eau Résidentiels", 
-                        description: "Solutions avancées d'adoucissement d'eau.", 
+                        description: "Éliminez le calcaire pour protéger vos électroménagers et retrouver une peau douce.", 
                         href: "/A" 
                     },
                     { 
                         title: "Filtres d'eau spécialisés", 
-                        description: "Systèmes de filtration d'eau haute performance pour besoins spécifiques.", 
+                        description: "Des solutions sur mesure pour neutraliser le fer, le soufre et les sédiments tenaces.", 
                         href: "/B" 
                     },
                     { 
                         title: "Systèmes de filtration d'eau sous évier", 
-                        description: "Stations d'eau potable ultra-pure pour un confort quotidien.", 
+                        description: "Une eau de qualité bouteille directement à votre robinet, sans les déchets plastiques.", 
                         href: "/C" 
                     },
                     { 
                         title: "Systèmes de désinfection UV", 
-                        description: "Systèmes de désinfection d'eau pour protéger votre famille contre les contaminants nocifs.", 
+                        description: "Stérilisez votre eau sans produits chimiques pour une tranquillité d'esprit absolue.", 
                         href: "/systemes-de-desinfection-uv" 
                     },
                     { 
                         title: "Fontaines et refroidisseurs d'eau", 
-                        description: "Systèmes de désinfection d'eau pour protéger votre famille contre les contaminants nocifs.", 
+                        description: "L'hydratation parfaite à portée de main avec nos distributeurs élégants et performants.", 
                         href: "/fontaines" 
                     },
                     { 
                         title: "Filtres d'eau de remplacement", 
-                        description: "Systèmes de désinfection d'eau pour protéger votre famille contre les contaminants nocifs.", 
+                        description: "Cartouches d'origine certifiées pour maintenir l'excellence de votre filtration.", 
                         href: "/filtres-de-remplacement" 
                     }
                 ]
@@ -106,17 +106,17 @@ export const mainNavMenuItems: MenuItem[] = [
                 links: [
                     { 
                         title: "Fontaines d'Eau Modernes", 
-                        description: "Éliminez la logistique des bouteilles avec nos fontaines branchées.", 
+                        description: "Design épuré et eau pure à volonté pour revitaliser vos équipes sans logistique de bouteilles.", 
                         href: "/fontaines-deau-modernes" 
                     },
                     { 
                         title: "Solutions Eau Pétillante", 
-                        description: "Fraîcheur et effervescence à la demande pour vos espaces communs.", 
+                        description: "Offrez à vos employés une eau gazéifiée rafraîchissante digne des plus grands cafés.", 
                         href: "/solutions-eau-petillante" 
                     },
                     { 
                         title: "Systèmes Centralisés", 
-                        description: "Gestion intelligente de l'eau pour les tours de bureaux et complexes.", 
+                        description: "Ingénierie sur mesure pour alimenter en eau pure des étages entiers de bureaux.", 
                         href: "/systemes-centralises" 
                     }
                 ]
@@ -128,22 +128,22 @@ export const mainNavMenuItems: MenuItem[] = [
                 links: [
                     { 
                         title: "Adoucisseur d'eau commercial", 
-                        description: "Protection antitartre pour vos équipements.", 
+                        description: "Éradiquez le tartre pour prolonger la vie de vos équipements de cuisine et de buanderie.", 
                         href: "/adoucisseurs-eau-commerciaux" 
                     }, 
                     { 
                         title: "Filtration d'eau", 
-                        description: "Qualité pure pour votre établissement.", 
-                        href: "/filtration" 
+                        description: "Une qualité irréprochable de l'accueil jusqu'aux chambres pour sublimer l'expérience client.", 
+                        href: "/filtration-hotels-restaurants" 
                     },
                     { 
                         title: "Solutions pour Brasseries", 
-                        description: "Expertise brassicole et eau pure.", 
+                        description: "L'eau parfaite, fondation d'une bière exceptionnelle et d'un processus de brassage constant.", 
                         href: "/solutions-brasseries" 
                     },
                     { 
                         title: "Filtres pour Machines à Café", 
-                        description: "Extraction parfaite et protection antitartre.", 
+                        description: "Révélez chaque arôme de vos grains et protégez vos machines espresso des pannes coûteuses.", 
                         href: "/filtres-eau-machine-cafe" 
                     }
                 ]
@@ -155,22 +155,22 @@ export const mainNavMenuItems: MenuItem[] = [
                 links: [
                     { 
                         title: "Systèmes de filtration industriels", 
-                        description: "Protection haute performance pour vos réseaux.", 
+                        description: "Architectures de traitement robustes pour répondre aux exigences des hauts débits.", 
                         href: "/filtration-industrielle" 
                     },
                     { 
                         title: "Adoucisseurs d'eau industriel", 
-                        description: "Neutralisez le calcaire à grande échelle.", 
+                        description: "Adoucissement continu 24/7 pour sécuriser vos chaudières et tours de refroidissement.", 
                         href: "/adoucisseurs-eau-industriel" 
                     },
                     { 
                         title: "Systèmes d'osmose inverse", 
-                        description: "Purification critique pour vos process.", 
+                        description: "Purification de grade moléculaire pour vos procédés de fabrication les plus stricts.", 
                         href: "/osmose-inverse-industrielle" 
                     },
                     { 
                         title: "Systèmes de désinfection UV à haut débit", 
-                        description: "Biosécurité microbiologique à haut débit.", 
+                        description: "Biocontrôle absolu et stérilisation massive pour les applications critiques.", 
                         href: "/desinfection-uv-industrielle" 
                     }
                 ]
@@ -186,12 +186,12 @@ export const mainNavMenuItems: MenuItem[] = [
                 items: [
                      { 
                         title: "Notre compagnie", 
-                        description: "Découvrez pourquoi nous sommes le partenaire leader en filtration d'eau au Québec.", 
+                        description: "Découvrez notre histoire, notre vision et pourquoi nous sommes la référence au Québec.", 
                         href: "/pourquoi-choisir-bricareau" 
                     },
                     { 
                         title: "Notre processus", 
-                        description: "Découvrez comment nos experts peuvent vous aider à trouver la solution qui vous convient.", 
+                        description: "De l'analyse à l'installation, explorez notre méthodologie d'ingénierie étape par étape.", 
                         href: "/notre-processus" 
                     }
                 ]
@@ -200,7 +200,7 @@ export const mainNavMenuItems: MenuItem[] = [
                 items: [
                     { 
                         title: "Carrières", 
-                        description: "Rejoignez une équipe passionnée et participez à l'avenir du traitement d'eau.", 
+                        description: "Rejoignez une équipe d'experts passionnés par l'innovation et l'excellence environnementale.", 
                         href: "/carrieres" 
                     }
                 ]
@@ -222,17 +222,17 @@ export const mainNavMenuItems: MenuItem[] = [
                 items: [
                     { 
                         title: "Tests d'eau", 
-                        description: "Planifiez une analyse complète de votre eau pour garantir sa pureté et sa sécurité.", 
+                        description: "Réservez votre audit de qualité d'eau et obtenez un rapport détaillé de nos ingénieurs.", 
                         href: "/tests-eau" 
                     },
                     { 
                         title: "Nos Services", 
-                        description: "Découvrez notre gamme complète de services d'installation et d'entretien.", 
+                        description: "Installation premium, entretien préventif et dépannage d'urgence par nos techniciens.", 
                         href: "/services-de-traitement-eau" 
                     },
                     { 
                         title: "Diagnostic", 
-                        description: "Utilisez notre outil d'autodiagnostic pour identifier rapidement les solutions adaptées à vos besoins.", 
+                        description: "Identifiez le système parfait pour votre besoin grâce à notre outil interactif en ligne.", 
                         href: "/diagnostic" 
                     },
                                     ]
@@ -241,20 +241,19 @@ export const mainNavMenuItems: MenuItem[] = [
                 items: [
                     { 
                         title: "Blog", 
-                        description: "Restez informé des nouveautés dans le monde de l'eau.", 
+                        description: "Guides pratiques, conseils d'experts et actualités pour tout savoir sur l'eau pure.", 
                         href: "/blog" 
                     },
                     { 
                         title: "FAQ", 
-                        description: "Trouvez rapidement des réponses aux questions les plus fréquemment posées sur nos produits et services.", 
+                        description: "Des réponses claires et rapides aux questions courantes sur nos technologies.", 
                         href: "/faq" 
                     },
                     { 
                         title: "Durabilité", 
-                        description: "Découvrez comment nous fournissons des systèmes de filtration d'eau économiques, efficaces et durables.", 
+                        description: "Découvrez nos engagements écologiques et notre mission pour réduire l'empreinte plastique.", 
                         href: "/durabilite" 
-                    },
-                    
+                    }
                 ]
             }
         ],

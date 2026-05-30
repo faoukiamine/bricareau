@@ -205,11 +205,8 @@ const FiltreEauMachineCafe = () => {
                                     </p>
                                 </div>
                                 <div className="flex flex-col sm:flex-row gap-6 pt-4">
-                                    <ProMaxButton className="bg-slate-900 text-white hover:bg-slate-800">
-                                        Sélecteur de Produit
-                                    </ProMaxButton>
-                                    <ProMaxButton className="bg-white text-slate-900 border border-slate-200 hover:bg-slate-50">
-                                        Comment Acheter
+                                    <ProMaxButton className="bg-slate-900 text-white hover:bg-slate-800" onClick={() => navigate("/consultation")}>
+                                        Demander une soumission
                                     </ProMaxButton>
                                 </div>
                             </div>
