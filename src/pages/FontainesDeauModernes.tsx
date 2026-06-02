@@ -715,8 +715,8 @@ const FontainesDeauModernes = () => {
                                     className="rounded-full border-slate-300 hover:border-slate-800 text-slate-800 hover:bg-slate-50 px-8 h-12 text-xs font-black uppercase tracking-widest transition-all"
                                     asChild
                                 >
-                                    <NavLink to="/contact-entreprises">
-                                        Demander une consultation
+                                    <NavLink to="/consultation">
+                                        Demandez une consultation
                                     </NavLink>
                                 </Button>
                             </div>

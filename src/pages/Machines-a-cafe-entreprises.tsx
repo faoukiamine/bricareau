@@ -246,10 +246,10 @@ const MachinesACafeEntreprises = () => {
                                 Solution Caféine Entreprise
                             </div>
                             
-                            <h1 className="text-6xl lg:text-[5.5rem] font-bold text-white leading-[0.9] tracking-tighter">
-                                Machines à café <br />
-                                <span className="text-blue-500 italic font-light">professionnelles.</span>
-                            </h1>
+                            <h1 className="text-[40px] md:text-[50px] lg:text-[64px] leading-[1.1] font-sans font-light italic text-white mb-6 tracking-tight">
+    Machines à café <br />
+                                <span className="text-[#8CC63F] font-sans font-bold not-italic drop-shadow-lg">professionnelles.</span>
+</h1>
                             
                             <p className="text-xl text-slate-400 max-w-2xl font-light leading-relaxed">
                                 Profitez d'une expérience Barista directement au bureau. Améliorez le moral et la productivité avec des équipements de pointe, une filtration d'eau supérieure et des grains d'exception.

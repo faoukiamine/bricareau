@@ -48,9 +48,9 @@ const SearchPage = () => {
                             <ChevronRight className="h-4 w-4" />
                             <span>Recherche</span>
                         </div>
-                        <h1 className="text-4xl font-black text-gray-900 mb-4">
-                            Résultats de recherche
-                        </h1>
+                        <h1 className="text-[40px] md:text-[50px] lg:text-[64px] leading-[1.1] font-sans font-light italic text-gray-900 mb-6 tracking-tight">
+    Résultats de <span className="text-[#8CC63F] font-sans font-bold not-italic drop-shadow-lg">recherche</span>
+</h1>
                         <p className="text-xl text-gray-600 font-light">
                             {results.length} résultats pour <span className="font-bold text-[#0052ff]">"{query}"</span>
                         </p>

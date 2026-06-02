@@ -61,10 +61,10 @@ const DesabonnementSucces = () => {
                             />
                         </div>
 
-                        <h1 className="text-4xl md:text-5xl font-black text-slate-900 mb-6 tracking-tight">
-                            C'est fait ! <br />
-                            <span className="text-blue-600">Vous nous manquerez.</span>
-                        </h1>
+                        <h1 className="text-[40px] md:text-[50px] lg:text-[64px] leading-[1.1] font-sans font-light italic text-slate-900 mb-6 tracking-tight">
+    C'est fait ! <br />
+                            <span className="text-[#8CC63F] font-sans font-bold not-italic drop-shadow-lg">Vous nous manquerez.</span>
+</h1>
 
                         <p className="text-lg text-slate-500 mb-12 max-w-xl mx-auto leading-relaxed">
                             Votre désabonnement a été confirmé avec succès. Vous ne recevrez plus nos courriels promotionnels, mais nous espérons vous revoir bientôt !

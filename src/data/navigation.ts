@@ -110,11 +110,6 @@ export const mainNavMenuItems: MenuItem[] = [
                         href: "/fontaines-deau-modernes" 
                     },
                     { 
-                        title: "Solutions Eau Pétillante", 
-                        description: "Offrez à vos employés une eau gazéifiée rafraîchissante digne des plus grands cafés.", 
-                        href: "/solutions-eau-petillante" 
-                    },
-                    { 
                         title: "Systèmes Centralisés", 
                         description: "Ingénierie sur mesure pour alimenter en eau pure des étages entiers de bureaux.", 
                         href: "/systemes-centralises" 
@@ -587,11 +582,6 @@ export const entreprisesProductMenuItems: MenuItem[] = [
       image: promoImage3,
       link: "/contact"
     }
-  },
-  {
-    name: "Solutions Eau Pétillante",
-    href: "/solutions-eau-petillante",
-    hasMegamenu: false
   },
   {
     name: "Machines à glace",

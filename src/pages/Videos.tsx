@@ -105,11 +105,9 @@ const Videos = () => {
                                 <div className="hidden lg:flex w-16 h-16 rounded-full bg-blue-50 items-center justify-center mx-auto mb-4">
                                     <Play className="h-8 w-8 text-[#0052ff] ml-1" fill="currentColor" />
                                 </div>
-                                <h1
-                                    className="leading-tight text-slate-900 tracking-tighter text-center max-w-xl mx-auto"
-                                >
-                                    Bibliothèque <span className="text-blue-600">Vidéo</span>
-                                </h1>
+                                <h1 className="text-[40px] md:text-[50px] lg:text-[64px] leading-[1.1] font-sans font-light italic text-slate-900 mb-6 tracking-tight">
+    Bibliothèque <span className="text-[#8CC63F] font-sans font-bold not-italic drop-shadow-lg">Vidéo</span>
+</h1>
                                 <p className="text-slate-600 font-light text-center max-w-xl mx-auto">
                                     Tutoriels et guides vidéo pour vous accompagner dans l'utilisation et l'entretien de vos équipements.
                                 </p>

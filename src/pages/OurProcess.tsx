@@ -102,10 +102,10 @@ const OurProcess = () => {
                                 <span className="text-[10px] font-black text-blue-600 uppercase tracking-[0.3em]">Ingénierie & Méthodologie Bricareau</span>
                             </div>
                             
-                            <h1 className="text-4xl md:text-6xl lg:text-[72px] leading-[1.1] tracking-tight animate-in fade-in slide-in-from-left duration-1000">
-                                <span className="italic font-light text-[#18448F]">La rigueur, </span>
+                            <h1 className="text-[40px] md:text-[50px] lg:text-[64px] leading-[1.1] font-sans font-light italic text-white mb-6 tracking-tight">
+    <span className="text-[#8CC63F] font-sans font-bold not-italic drop-shadow-lg">La rigueur, </span>
                                 <span className="font-bold text-[#18448F]">au service de la pureté.</span>
-                            </h1>
+</h1>
                             
                             <p className="text-lg md:text-2xl text-slate-500 font-light max-w-2xl leading-relaxed">
                                 Découvrez comment nous fusionnons science, technologie et expertise pour transformer la qualité de votre eau au quotidien.

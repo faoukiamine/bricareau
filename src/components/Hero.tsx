@@ -7,8 +7,8 @@ import { cn } from "@/lib/utils";
 
 interface HeroProps {
   image?: string;
-  highlightedTitle?: string;
-  mainTitle?: string;
+  highlightedTitle?: React.ReactNode;
+  mainTitle?: React.ReactNode;
   subtitle?: string;
   ctaText?: string;
   ctaLink?: string;
@@ -97,7 +97,7 @@ const Hero = ({
             <h1 
               className={cn(
                 "mb-6 animate-in fade-in slide-in-from-left duration-1000",
-                homeVariant ? "tracking-tighter" : (singleLineTitle ? "max-w-4xl" : "max-w-xl"),
+                homeVariant ? "tracking-tighter" : (singleLineTitle ? "max-w-4xl" : "max-w-[680px]"),
                 !homeVariant && "text-[32px] md:text-[46px] lg:text-[50px] leading-[1.1]"
               )}
               style={homeVariant ? { fontFamily: 'ui-sans-serif, system-ui, sans-serif', fontSize: '50px', lineHeight: '55px' } : {
@@ -112,7 +112,7 @@ const Hero = ({
             <p 
               className={cn(
                 "animate-in fade-in slide-in-from-left duration-1000 delay-100 text-justify lg:text-left",
-                homeVariant ? "max-w-xl text-lg md:text-xl font-light text-slate-600 leading-relaxed" : "max-w-xl text-slate-500 text-[15px] md:text-lg leading-relaxed"
+                homeVariant ? "max-w-[680px] text-lg md:text-xl font-light text-slate-600 leading-relaxed" : "max-w-[680px] text-slate-500 text-[15px] md:text-lg leading-relaxed"
               )}
             >
               {subtitle}

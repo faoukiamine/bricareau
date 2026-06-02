@@ -266,10 +266,10 @@ const RefroidisseursEauEntreprises = () => {
                                 Solutions Corporatives
                             </div>
                             
-                            <h1 className="text-5xl lg:text-7xl font-bold text-white leading-[0.95] tracking-tighter">
-                                <span className="block text-blue-400 font-light italic">L'excellence de l'eau</span>
+                            <h1 className="text-[40px] md:text-[50px] lg:text-[64px] leading-[1.1] font-sans font-light italic text-white mb-6 tracking-tight">
+    <span className="text-[#8CC63F] font-sans font-bold not-italic drop-shadow-lg">L'excellence de l'eau</span>
                                 <span className="block mt-2">pour vos talents.</span>
-                            </h1>
+</h1>
                             
                             <p className="text-xl text-slate-400 max-w-2xl font-light leading-relaxed">
                                 Transformez l'expérience d'hydratation de votre entreprise. 

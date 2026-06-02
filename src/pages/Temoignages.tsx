@@ -54,11 +54,9 @@ const Temoignages = () => {
 
                         <div className="container mx-auto px-6 h-full flex items-center">
                             <div className="max-w-3xl mx-auto text-center space-y-6 py-12 lg:py-0 w-full">
-                                <h1
-                                    className="leading-tight text-slate-900 tracking-tighter"
-                                >
-                                    <span className="text-blue-600">Témoignages</span> Clients
-                                </h1>
+                                <h1 className="text-[40px] md:text-[50px] lg:text-[64px] leading-[1.1] font-sans font-light italic text-slate-900 mb-6 tracking-tight">
+    <span className="text-[#8CC63F] font-sans font-bold not-italic drop-shadow-lg">Témoignages</span> Clients
+</h1>
                                 <p className="text-slate-600 font-light max-w-xl mx-auto">
                                     Découvrez ce que nos clients disent de leur expérience avec Bricareau. Leur satisfaction est notre plus grande fierté.
                                 </p>

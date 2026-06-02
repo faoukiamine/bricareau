@@ -113,12 +113,10 @@ const FAQ = () => {
 
                     <div className="container relative z-10 mx-auto px-4 h-full flex items-center lg:px-6">
                         <div className="max-w-2xl lg:text-white py-12 lg:py-0">
-                            <h1
-                                className="leading-[1.1] md:leading-[1.2] mb-4 lg:mb-8 tracking-tighter text-slate-900 lg:text-white text-left max-w-xl text-3xl md:text-5xl lg:text-6xl"
-                            >
-                                Foire aux questions <br />
-                                Obtenez des <span className="text-[#18448F] lg:text-blue-400">réponses</span> claires.
-                            </h1>
+                            <h1 className="text-[40px] md:text-[50px] lg:text-[64px] leading-[1.1] font-sans font-light italic text-slate-900 mb-6 tracking-tight">
+    Foire aux questions <br />
+                                Obtenez des <span className="text-[#8CC63F] font-sans font-bold not-italic drop-shadow-lg">réponses</span> claires.
+</h1>
                             <p className="font-light text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
                                 Vous trouverez ci-dessous les réponses aux questions les plus fréquentes sur le traitement de l'eau. Recherchez les sujets qui vous intéressent ou triez par catégorie pour trouver rapidement l'information dont vous avez besoin.
                             </p>

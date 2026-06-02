@@ -122,14 +122,14 @@ const TestsEauPage = () => {
        <main>
                 <Hero 
                     image={newHeroImg}
-                    highlightedTitle="Analyses d'eau professionnelles"
+                    highlightedTitle={<>Analyses d'eau <span className="text-amber-500 font-serif italic font-normal drop-shadow-sm">professionnelles</span></>}
                     mainTitle="& Tests de laboratoire"
                     subtitle="Besoin d'une analyse d'eau dans la région métropolitaine ? Que ce soit pour une vérification annuelle, une transaction hypothécaire ou un souci de qualité, Bricareau offre des tests complets de laboratoire partout dans le Grand Montréal, Laval et les couronnes."
                     ctaText="Planifiez un test d'eau"
                     ctaLink="#water-test"
                     showPhone={true}
                     showBreadcrumbs={true}
-                    singleLineTitle={true}
+                    singleLineTitle={false}
                 />
 
 

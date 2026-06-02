@@ -43,15 +43,15 @@ const Sustainability = () => {
                     </div>
                     <div className="container mx-auto px-6 relative z-10">
                         <div className="max-w-4xl space-y-12">
-                            <h1 className="text-5xl md:text-[6rem] leading-[1] font-black text-white uppercase tracking-tighter">
-                                DURABILITÉ
-                            </h1>
+                            <h1 className="text-[40px] md:text-[50px] lg:text-[64px] leading-[1.1] font-sans font-light italic text-white mb-6 tracking-tight">
+    <span className="text-[#8CC63F] font-sans font-bold not-italic drop-shadow-lg">DURABILITÉ</span>
+</h1>
                             <Button 
                                 size="lg" 
                                 className="bg-[#0052ff] hover:bg-blue-700 text-white px-12 h-14 rounded-full text-[11px] font-black transition-all shadow-2xl uppercase tracking-widest"
                                 onClick={() => navigate("/contact")}
                             >
-                                DEMANDER UNE CONSULTATION
+                                DEMANDEZ UNE CONSULTATION
                             </Button>
                         </div>
                     </div>
@@ -181,7 +181,7 @@ const Sustainability = () => {
                                 className="bg-[#0052ff] text-white hover:bg-blue-600 h-14 rounded-full font-black uppercase tracking-widest text-[11px] transition-all"
                                 onClick={() => navigate("/contact")}
                             >
-                                DEMANDER UNE ÉTUDE D'IMPACT
+                                DEMANDEZ UNE ÉTUDE D'IMPACT
                             </Button>
                         </div>
                     </div>

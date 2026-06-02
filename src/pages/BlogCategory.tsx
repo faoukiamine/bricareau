@@ -43,11 +43,9 @@ const BlogCategory = () => {
 
                 <div className="container mx-auto px-6 h-full flex items-center">
                     <div className="max-w-3xl py-12 lg:py-0 w-full text-left">
-                        <h1
-                            className="text-slate-900 mb-6 tracking-tight"
-                        >
-                            {category.title}
-                        </h1>
+                        <h1 className="text-[40px] md:text-[50px] lg:text-[64px] leading-[1.1] font-sans font-light italic text-slate-900 mb-6 tracking-tight">
+    {category.title}
+</h1>
                         <div className="w-24 h-1.5 bg-blue-600 rounded-full mb-6"></div>
                         <p className="text-slate-600 max-w-3xl">
                             Découvrez tous nos articles et guides complets concernant {category.title.toLowerCase()}.

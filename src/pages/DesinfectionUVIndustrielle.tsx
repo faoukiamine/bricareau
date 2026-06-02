@@ -68,10 +68,10 @@ const DesinfectionUVIndustrielle = () => {
                                 <span className="text-[10px] font-black text-purple-400 uppercase tracking-[0.4em]">Biosécurité Photonique</span>
                             </div>
                             
-                            <h1 className="text-6xl md:text-[120px] font-bold tracking-tighter leading-[0.8] text-white uppercase">
-                                Puissance <br />
-                                <span className="text-purple-500 italic font-light lowercase text-5xl md:text-[100px]">ultraviolette.</span>
-                            </h1>
+                            <h1 className="text-[40px] md:text-[50px] lg:text-[64px] leading-[1.1] font-sans font-light italic text-white mb-6 tracking-tight">
+    Puissance <br />
+                                <span className="text-[#8CC63F] font-sans font-bold not-italic drop-shadow-lg">ultraviolette.</span>
+</h1>
                             
                             <p className="text-xl md:text-3xl text-slate-400 font-light max-w-2xl leading-relaxed">
                                 Neutralisation microbiologique instantanée pour vos lignes de production. La sécurité par la lumière, sans aucun produit chimique.

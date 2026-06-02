@@ -37,9 +37,9 @@ const NotFound = () => {
           <div className="lg:col-span-6 space-y-8 order-2 lg:order-1">
             <div className="space-y-4">
               <span className="text-xs uppercase tracking-[0.2em] text-[#4059aa] font-bold inline-block border-l-4 border-[#004ac6] pl-4">Erreur 404</span>
-              <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-[#0d1c2e]">
-                Page introuvable <span className="text-[#004ac6]">dans le circuit</span>.
-              </h1>
+              <h1 className="text-[40px] md:text-[50px] lg:text-[64px] leading-[1.1] font-sans font-light italic text-[#0d1c2e] mb-6 tracking-tight">
+    Page introuvable <span className="text-[#8CC63F] font-sans font-bold not-italic drop-shadow-lg">dans le circuit</span>.
+</h1>
               <p className="text-lg text-[#434655] leading-relaxed max-w-xl">
                 Il semble que le flux d'information ait été interrompu. Cette page a peut-être été filtrée lors d'une mise à jour technique ou déplacée vers une nouvelle section de notre infrastructure.
               </p>

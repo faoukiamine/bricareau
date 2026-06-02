@@ -112,7 +112,7 @@ import FiltreEauMachineCafe from "./pages/FiltreEauMachineCafe";
 import AdoucisseurEauCommercial from "./pages/AdoucisseurEauCommercial";
 import FiltrationDeauPotable from "./pages/FiltrationDeauPotable";
 import FontainesDeauModernes from "./pages/FontainesDeauModernes";
-import SolutionsEauPetillante from "./pages/SolutionsEauPetillante";
+
 import SystemesCentralises from "./pages/SystemesCentralises";
 import SolutionsBrasseries from "./pages/SolutionsBrasseries";
 import FiltrationIndustrielle from "./pages/FiltrationIndustrielle";
@@ -159,7 +159,7 @@ const App = () => (
           <Route path="/filtre-eau-haute-efficacite" element={<FiltreEauHauteEfficacite />} />
           <Route path="/fontaines" element={<Fontaines />} />
           <Route path="/fontaines-deau-modernes" element={<FontainesDeauModernes />} />
-          <Route path="/solutions-eau-petillante" element={<SolutionsEauPetillante />} />
+
           <Route path="/systemes-centralises" element={<SystemesCentralises />} />
           <Route path="/solutions-brasseries" element={<SolutionsBrasseries />} />
           <Route path="/blog" element={<Blog />} />

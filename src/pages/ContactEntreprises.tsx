@@ -74,11 +74,9 @@ const ContactEntreprises = () => {
           </div>
           <div className="container mx-auto px-4 h-full flex items-center">
             <div className="max-w-3xl mx-auto text-center py-12 lg:py-0 w-full">
-              <h1
-                className="leading-[1.1] md:leading-[1.2] mb-8 tracking-tighter text-foreground max-w-xl mx-auto"
-              >
-                Contactez-nous pour des solutions de l'eau de bureau
-              </h1>
+              <h1 className="text-[40px] md:text-[50px] lg:text-[64px] leading-[1.1] font-sans font-light italic text-white mb-6 tracking-tight">
+    Contactez-nous pour des solutions de l'eau de <span className="text-[#8CC63F] font-sans font-bold not-italic drop-shadow-lg">bureau</span>
+</h1>
               <p className="text-muted-foreground font-light text-justify max-w-xl mx-auto">
                 Vous souhaitez une eau plus fraîche et plus savoureuse sur votre lieu de travail ? Remplissez le formulaire pour être contacté par notre expert et obtenir des solutions pratiques de fontaines à eau adaptées aux besoins de votre entreprise.
               </p>

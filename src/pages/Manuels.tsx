@@ -137,11 +137,9 @@ const Manuels = () => {
                                 <div className="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center mx-auto mb-4">
                                     <BookOpen className="h-8 w-8 text-[#0052ff]" />
                                 </div>
-                                <h1
-                                    className="leading-tight text-slate-900 tracking-tighter text-center max-w-xl mx-auto"
-                                >
-                                    Manuels et <span className="text-blue-600">Documentation</span>
-                                </h1>
+                                <h1 className="text-[40px] md:text-[50px] lg:text-[64px] leading-[1.1] font-sans font-light italic text-slate-900 mb-6 tracking-tight">
+    Manuels et <span className="text-[#8CC63F] font-sans font-bold not-italic drop-shadow-lg">Documentation</span>
+</h1>
                                 <p className="text-slate-600 font-light text-center max-w-xl mx-auto">
                                     Téléchargez les manuels d'utilisation et guides d'installation pour vos équipements de traitement d'eau.
                                 </p>

@@ -107,10 +107,10 @@ const Entreprises = () => {
                       <Building2 className="h-4 w-4" />
                       Solutions Hydratation Business
                   </div>
-                  <h1 className="leading-[1.1] tracking-tighter text-slate-900">
-                      <span className="block font-light italic text-blue-600">L'excellence de l'eau</span>
+                  <h1 className="text-[40px] md:text-[50px] lg:text-[64px] leading-[1.1] font-sans font-light italic text-slate-900 mb-6 tracking-tight">
+    <span className="text-[#8CC63F] font-sans font-bold not-italic drop-shadow-lg">L'excellence de l'eau</span>
                       <span className="block font-bold">pour vos collaborateurs.</span>
-                  </h1>
+</h1>
                   <p className="body-pro-max text-left max-w-xl">
                       Transformez votre espace de travail avec nos systèmes d'hydratation haut de gamme. Pureté, design et durabilité pour une culture d'entreprise saine.
                   </p>

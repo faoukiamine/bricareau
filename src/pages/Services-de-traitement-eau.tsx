@@ -171,16 +171,10 @@ const ServicesTraitementEau = () => {
 
                     <div className="container relative z-20 mx-auto px-6 lg:h-full flex flex-col items-start justify-center pt-16 pb-24 lg:pt-0 lg:pb-0">
                         <div className="max-w-3xl text-left">
-                            <h1 
-                                className="text-[32px] md:text-[46px] lg:text-[50px] leading-[1.1] tracking-tighter text-[#18448F] mb-6 animate-in fade-in slide-in-from-left duration-1000"
-                                style={{ 
-                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                    fontWeight: 300 
-                                }}
-                            >
-                                <span className="italic text-[#18448F] block mb-2 font-light">Expertise & Sérénité</span>
+                            <h1 className="text-[40px] md:text-[50px] lg:text-[64px] leading-[1.1] font-sans font-light italic text-[#18448F] mb-6 tracking-tight">
+    <span className="text-[#8CC63F] font-sans font-bold not-italic drop-shadow-lg">Expertise & Sérénité</span>
                                 <span className="font-bold block">Des services dédiés à <br />votre tranquillité.</span>
-                            </h1>
+</h1>
                             <p className="text-slate-600 mb-10 max-w-xl animate-in fade-in slide-in-from-left duration-1000 delay-100 text-lg">
                                 Bricareau s'engage à vos côtés pour simplifier le suivi, l'entretien et la performance de vos installations d'eau, partout au Québec.
                             </p>

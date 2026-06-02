@@ -29,9 +29,9 @@ const PolitiqueConfidentialite = () => {
 
                 <div className="container mx-auto px-4 py-12 max-w-4xl font-sans">
                     <div className="text-center mb-10">
-                        <h1 className="text-3xl font-bold uppercase tracking-wide text-[#1a5a8a] mb-2">
-                            Politique de confidentialité
-                        </h1>
+                        <h1 className="text-[40px] md:text-[50px] lg:text-[64px] leading-[1.1] font-sans font-light italic text-[#1a5a8a] mb-6 tracking-tight">
+    Politique de <span className="text-[#8CC63F] font-sans font-bold not-italic drop-shadow-lg">confidentialité</span>
+</h1>
                         <p className="text-xl font-bold text-[#1a5a8a]">Bricareau Water Specialist</p>
                         <p className="text-sm text-gray-500 mt-2">Dernière mise à jour : 24 mars 2026</p>
                         <p className="text-xs text-gray-500 italic mt-1 max-w-2xl mx-auto">

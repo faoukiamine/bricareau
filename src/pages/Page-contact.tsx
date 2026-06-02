@@ -177,10 +177,10 @@ const Contact = () => {
                                 </span>
                                 Support Technique en ligne • Temps de réponse &lt; 15 min
                             </div>
-                            <h1 className="leading-[1.1] md:leading-[1.2] tracking-tighter text-slate-900 max-w-2xl">
-                                <span className="italic font-light text-[#18448F] block mb-2">Comment pouvons-nous</span>
+                            <h1 className="text-[40px] md:text-[50px] lg:text-[64px] leading-[1.1] font-sans font-light italic text-slate-900 mb-6 tracking-tight">
+    <span className="text-[#8CC63F] font-sans font-bold not-italic drop-shadow-lg">Comment pouvons-nous</span>
                                 <span className="font-bold text-[#18448F] block">vous aider ?</span>
-                            </h1>
+</h1>
                             <p className="font-light text-slate-600 max-w-xl text-lg leading-relaxed">
                                 Besoin d'une installation, d'une réparation ou d'un simple changement de filtres ? 
                                 Nos experts interviennent partout au Grand Montréal et ses environs.

@@ -89,16 +89,10 @@ const Promotions = () => {
                                 <span className="text-xs font-black text-blue-600 uppercase tracking-widest">Offres Exclusives</span>
                             </div>
 
-                            <h1
-                                className="text-[32px] md:text-[50px] lg:text-[60px] leading-[1.1] text-slate-900 tracking-tighter text-center max-w-xl mx-auto"
-                                style={{ 
-                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                    fontStyle: 'normal'
-                                }}
-                            >
-                                <span className="italic font-light text-[#18448F] block mb-2">Nos Promotions</span>
+                            <h1 className="text-[40px] md:text-[50px] lg:text-[64px] leading-[1.1] font-sans font-light italic text-slate-900 mb-6 tracking-tight">
+    <span className="text-[#8CC63F] font-sans font-bold not-italic drop-shadow-lg">Nos Promotions</span>
                                 <span className="font-black text-[#18448F]">en Cours.</span>
-                            </h1>
+</h1>
                             <p className="text-slate-700 font-light text-center max-w-xl mx-auto text-[18px] md:text-[20px] leading-relaxed">
                                 Profitez de nos offres exceptionnelles sur nos systèmes de traitement d'eau pour transformer votre quotidien.
                             </p>

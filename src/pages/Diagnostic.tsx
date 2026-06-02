@@ -29,16 +29,10 @@ const Diagnostic = () => {
 
                 <div className="container mx-auto px-4 md:px-6 relative z-10 flex flex-col items-center">
                     <div className="max-w-3xl mx-auto text-center mb-10 w-full animate-in fade-in slide-in-from-top-4 duration-1000">
-                        <h1 
-                            className="text-[32px] md:text-[46px] lg:text-[54px] leading-[1.1] mb-10 tracking-tight"
-                            style={{
-                                fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                fontStyle: 'normal'
-                            }}
-                        >
-                            <span className="italic font-light text-[#18448F] block">Découvrez la solution</span>
+                        <h1 className="text-[40px] md:text-[50px] lg:text-[64px] leading-[1.1] font-sans font-light italic text-white mb-6 tracking-tight">
+    <span className="text-[#8CC63F] font-sans font-bold not-italic drop-shadow-lg">Découvrez la solution</span>
                             <span className="font-bold text-[#18448F] block text-center">parfaite pour votre eau.</span>
-                        </h1>
+</h1>
 
                         <p 
                             className="max-w-xl mx-auto text-slate-500 font-light text-[18px] md:text-[20px] leading-snug"

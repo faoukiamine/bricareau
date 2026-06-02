@@ -6,6 +6,7 @@ import heroFiltersImg from "@/assets/Big-Blue-Filter-Housing-banner.webp";
 import Footer from "@/components/Footer";
 import { Package, ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ProMaxButton } from "@/components/ui/ProMaxButton";
 import { NavLink } from "@/components/NavLink";
 import polypropyleneIcon from "@/assets/Polypropylene.svg";
 import pleatedWaterFilters from "@/assets/Pleated Water Filters.png";
@@ -100,9 +101,9 @@ const FiltresDeRemplacement = () => {
                     
                     {/* Centered Title */}
                     <div className="container mx-auto px-6 max-w-7xl text-center mb-20">
-                        <h2 className="text-3xl md:text-5xl font-black text-slate-900 tracking-tight leading-tight">
-                            <span className="italic font-light text-[#18448F] block text-2xl md:text-3xl mb-2">Filtres de remplacement :</span>
-                            <span className="font-bold text-slate-900">La pureté préservée, jour après jour.</span>
+                        <h2 className="mb-8 heading-pro-max text-center">
+                            <span className="italic font-light text-[#18448F] block">Filtres de remplacement :</span>
+                            <span className="font-bold text-[#18448F] block text-center">La pureté préservée, jour après jour.</span>
                         </h2>
                         <p className="mt-6 text-slate-500 max-w-2xl mx-auto text-sm md:text-base font-light leading-relaxed">
                             Identifiez facilement le filtre compatible avec votre système pour garantir une performance optimale.
@@ -209,14 +210,14 @@ const FiltresDeRemplacement = () => {
                                 Nos experts en traitement d'eau sont à votre disposition pour vous guider vers le modèle exact adapté à votre équipement.
                             </p>
                             <div>
-                                <Button 
-                                    className="rounded-full bg-[#18448F] hover:bg-blue-800 text-white shadow-md hover:shadow-lg px-8 h-12 text-xs font-black uppercase tracking-widest transition-all"
+                                <ProMaxButton 
+                                    className="w-full sm:w-auto"
                                     asChild
                                 >
-                                    <NavLink to="/contact">
+                                    <NavLink to="/contact" className="flex items-center justify-center">
                                         Consulter un expert
                                     </NavLink>
-                                </Button>
+                                </ProMaxButton>
                             </div>
                         </div>
 

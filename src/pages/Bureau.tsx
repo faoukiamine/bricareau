@@ -38,7 +38,7 @@ import heroImg from "@/assets/Hero-Entreprise.jpg";
 import softenerImg from "@/assets/Water-Softener-installation.jpg";
 import filtrationImg from "@/assets/Sérénité Direct-Flow installation.png";
 import drinkWaterImg from "@/assets/20230add-4ce5-4ae6-a6dc-1f9a2c3aeb7b.jpg";
-import sparklingImg from "@/assets/Slider_V3-204_1.png";
+
 import centralSystemImg from "@/assets/LZS8WSSP-PF.webp";
 import verifiedImg from "@/assets/verified.svg";
 import savingsImg from "@/assets/savings.svg";
@@ -130,29 +130,7 @@ const Bureau = () => {
                 { icon: Sparkles, label: "Éclat", value: "Premium", color: "text-blue-500" }
             ]
         },
-        {
-            title: "Solutions Eau Pétillante",
-            titlePart1: "Solutions ",
-            titlePart2: "Eau Pétillante",
-            navTitle: "Eau Pétillante",
-            desc: "Offrez une touche premium à vos espaces communs avec nos systèmes d'eau pétillante filtrée. Fraîcheur et effervescence à la demande.",
-            points: [
-                { title: "Effervescence ajustable", desc: "De l'eau plate à très pétillante pour satisfaire toutes les préférences." },
-                { title: "Zéro déchet plastique", desc: "Une solution 100% durable qui valorise votre engagement RSE auprès de vos employés." }
-            ],
-            image: sparklingImg,
-            link: "/solutions-eau-petillante",
-            tag: "PREMIUM",
-            largeNumber: "02",
-            floatingCard: { title: "Effervescence", desc: "De l'eau pétillante filtrée à la demande.", icon: GlassWater },
-            floatingCard2: { title: "Engagement RSE", desc: "Valorisez votre image de marque durable.", icon: Leaf },
-            floatingCard3: { title: "Productivité", desc: "Hydratation optimale pour la concentration.", icon: Zap },
-            floatingCard4: { title: "Fraîcheur Pro", desc: "Une touche de luxe dans vos espaces communs.", icon: GlassWater },
-            bubbles: [
-                { icon: Droplets, label: "Bulles", value: "Fines", color: "text-blue-600" },
-                { icon: Sparkles, label: "Luxe", value: "Au Quotidien", color: "text-amber-500" }
-            ]
-        },
+
         {
             title: "Systèmes Centralisés",
             titlePart1: "Systèmes ",
@@ -166,7 +144,7 @@ const Bureau = () => {
             image: centralSystemImg,
             link: "/systemes-centralises",
             tag: "INFRASTRUCTURE",
-            largeNumber: "03",
+            largeNumber: "02",
             floatingCard: { title: "Bâtiment Intelligent", desc: "Gestion centralisée de l'eau.", icon: Settings },
             floatingCard2: { title: "Protection Réseau", desc: "Sécurité pour toutes les installations.", icon: ShieldCheck },
             floatingCard3: { title: "Volume Illimité", desc: "Adapté aux grands besoins collectifs.", icon: Activity },
@@ -506,7 +484,9 @@ const Bureau = () => {
                     title="L'expertise au service du corporatif, "
                     highlight="la performance dans chaque goutte."
                     description="Garantissez le bien-être de vos collaborateurs et la longévité de vos infrastructures. Chez Bricareau, nous transformons chaque analyse en un levier stratégique pour la qualité de vie au travail et l'excellence opérationnelle de votre organisation."
-                    buttonText="Demander une consultation corporative"
+                    heading="Besoin d'une solution pour votre entreprise ?"
+                    buttonText="Demandez une consultation corporative"
+                    buttonLink="/consultation"
                     image={corporateExpertImg}
                 />
 

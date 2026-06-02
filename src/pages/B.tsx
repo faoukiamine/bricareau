@@ -349,9 +349,7 @@ const B = () => {
                                             </p>
                                         </div>
 
-                                        <div className="flex items-center gap-2 text-blue-600 font-bold text-[10px] uppercase tracking-widest opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500">
-                                            Voir solutions <ChevronRight className="w-4 h-4" />
-                                        </div>
+
                                     </div>
 
                                     {/* Glow effect on hover */}
@@ -813,7 +811,7 @@ const B = () => {
                                     name: "Adoucisseurs d'eau",
                                     desc: "Éliminez le calcaire pour une peau douce, un linge éclatant et une protection durable de vos installations.",
                                     img: waterSoftenerImg,
-                                    link: "/adoucisseurs-eau-de-puits"
+                                    link: "/A"
                                 },
                                 {
                                     name: "Systèmes de désinfection UV",
@@ -825,7 +823,7 @@ const B = () => {
                                     name: "Stations d'eau potable",
                                     desc: "Une eau de qualité minérale directement à votre évier, pour une hydratation pure et sans déchets plastiques.",
                                     img: drinkingWaterImg,
-                                    link: "/systeme-de-filtration-deau-potable"
+                                    link: "/C"
                                 }
 
                             ].map((prod, i) => (

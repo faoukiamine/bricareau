@@ -112,11 +112,9 @@ const Solutions = () => {
               <span className="lg:hidden text-blue-600 font-bold uppercase tracking-widest text-[10px] mb-4 block">
                 TRAITEMENT D'EAU
               </span>
-              <h1
-                className="leading-[1.1] md:leading-[1.2] mb-8 tracking-tighter text-slate-900 text-center max-w-2xl mx-auto"
-              >
-                <span>Nos Solutions de Traitement d'Eau</span>
-              </h1>
+              <h1 className="text-[40px] md:text-[50px] lg:text-[64px] leading-[1.1] font-sans font-light italic text-slate-900 mb-6 tracking-tight">
+    <span className="text-[#8CC63F] font-sans font-bold not-italic drop-shadow-lg">Nos Solutions de Traitement d'Eau</span>
+</h1>
               <p className="text-slate-600 font-light text-center lg:text-justify max-w-xl mx-auto">
                 Découvrez notre gamme complète de solutions pour améliorer la qualité de votre eau.
                 Que vous ayez besoin d'adoucir, filtrer ou purifier, nous avons la solution adaptée à vos besoins.

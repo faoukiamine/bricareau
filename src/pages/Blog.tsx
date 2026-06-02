@@ -81,11 +81,9 @@ const Blog = () => {
                         {/* Mobile Title Overlay (Hidden on Desktop) */}
                         <div className="lg:hidden absolute inset-0 z-30 flex flex-col justify-center px-4 md:px-12 pointer-events-none">
                             <div className="max-w-sm md:max-w-lg">
-                                <h1 
-                                    className="leading-[1.1] md:leading-[1.2] tracking-tighter text-slate-900 drop-shadow-sm text-left"
-                                >
-                                    Articles & <span className="text-[#18448F]">Ressources</span>
-                                </h1>
+                                <h1 className="text-[40px] md:text-[50px] lg:text-[64px] leading-[1.1] font-sans font-light italic text-slate-900 mb-6 tracking-tight">
+    Articles & <span className="text-[#8CC63F] font-sans font-bold not-italic drop-shadow-lg">Ressources</span>
+</h1>
                             </div>
                         </div>
 

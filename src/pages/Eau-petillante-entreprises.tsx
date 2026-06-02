@@ -51,10 +51,10 @@ const EauPetillanteEntreprises = () => {
                                 Prestige & Rafraîchissement
                             </div>
                             
-                            <h1 className="text-5xl lg:text-7xl font-bold text-white leading-[0.95] tracking-tighter">
-                                <span className="block text-blue-400 font-light italic opacity-90">L'effervescence de l'eau</span>
+                            <h1 className="text-[40px] md:text-[50px] lg:text-[64px] leading-[1.1] font-sans font-light italic text-white mb-6 tracking-tight">
+    <span className="text-[#8CC63F] font-sans font-bold not-italic drop-shadow-lg">L'effervescence de l'eau</span>
                                 <span className="block mt-2">pour vos réunions d'affaires.</span>
-                            </h1>
+</h1>
                             
                             <p className="text-xl text-slate-300 max-w-2xl font-light leading-relaxed">
                                 Offrez une expérience premium à vos clients et employés. Nos fontaines d'eau pétillante haut de gamme allient élégance et pureté pour un rafraîchissement d'exception au bureau.

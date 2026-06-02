@@ -101,11 +101,6 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="/solutions-eau-petillante" className="text-white/80 hover:text-white transition-colors">
-                  Solutions Eau Pétillante
-                </a>
-              </li>
-              <li>
                 <a href="/systemes-centralises" className="text-white/80 hover:text-white transition-colors">
                   Systèmes Centralisés
                 </a>

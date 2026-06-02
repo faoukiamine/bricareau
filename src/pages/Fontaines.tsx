@@ -97,7 +97,7 @@ const ImpactCalculator = () => {
             <div className="relative z-10 flex flex-col h-full">
                 {/* Header */}
                 <div className="flex items-center gap-4 mb-8">
-                    <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#18448F] to-[#18448F]/80 flex items-center justify-center text-white shadow-lg shadow-[#18448F]/20">
+                    <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#8CC63F] to-[#7BB52E] flex items-center justify-center text-white shadow-lg shadow-[#8CC63F]/30">
                         <Leaf className="w-6 h-6" />
                     </div>
                     <div>
@@ -149,12 +149,12 @@ const ImpactCalculator = () => {
 
                 {/* Dynamic Results */}
                 <div className="mt-auto space-y-3">
-                    <div className="relative overflow-hidden p-6 rounded-[2.5rem] bg-emerald-600 border border-emerald-700 flex items-center justify-between group/res transition-all duration-500 shadow-xl shadow-emerald-200">
+                    <div className="relative overflow-hidden p-6 rounded-[2.5rem] bg-[#8CC63F] border border-[#7BB52E] flex items-center justify-between group/res transition-all duration-500 shadow-xl shadow-[#8CC63F]/30">
                         <div>
-                            <span className="text-[10px] font-black text-emerald-100 uppercase tracking-widest block mb-1">Plastique Évité</span>
+                            <span className="text-[10px] font-black text-white/90 uppercase tracking-widest block mb-1">Plastique Évité</span>
                             <div className="flex items-baseline gap-2">
                                 <span className="text-4xl font-black text-white tracking-tighter tabular-nums">{bottlesSaved.toLocaleString()}</span>
-                                <span className="text-emerald-100/60 text-[10px] font-bold uppercase">Unités</span>
+                                <span className="text-white/70 text-[10px] font-bold uppercase">Unités</span>
                             </div>
                         </div>
                         <div className="w-12 h-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center border border-white/30 group-hover/res:scale-110 transition-transform">
@@ -204,7 +204,7 @@ const SolutionCard = ({ item }: { item: SolutionItem }) => {
                 <img 
                     src={item.img} 
                     alt={item.title} 
-                    className={`w-full h-full object-contain transition-transform duration-700 ${item.title === "Distributeur d'eau de comptoir - Avalanche" ? "scale-[1.65] group-hover:scale-[1.75]" : "scale-100 group-hover:scale-110"}`} 
+                    className="w-full h-full object-contain object-bottom transition-transform duration-700 scale-100 group-hover:scale-110" 
                 />
             </div>
 
@@ -307,8 +307,8 @@ const Fontaines = () => {
                                     { label: "Pureté", val: "Certifié NSF/ANSI", icon: <Award className="w-4 h-4" /> },
                                     { label: "Éco-Conçu", val: "Zéro Bouteilles", icon: <Leaf className="w-4 h-4" /> }
                                 ].map((item, i) => (
-                                    <div key={i} className="bg-white/90 backdrop-blur-md p-2 rounded-xl border border-white/50 shadow-lg flex flex-col items-center text-center gap-1.5 transition-all duration-500">
-                                        <div className="w-10 h-10 bg-[#18448F]/10 rounded-full flex items-center justify-center text-[#18448F] shadow-sm shrink-0">
+                                    <div key={i} className="group bg-white/90 backdrop-blur-md p-2 rounded-xl border border-white/50 shadow-lg flex flex-col items-center text-center gap-1.5 transition-all duration-500 hover:scale-105">
+                                        <div className={`w-10 h-10 bg-[#18448F]/10 rounded-full flex items-center justify-center text-[#18448F] shadow-sm shrink-0 transition-all duration-500 ${item.label === 'Éco-Conçu' ? 'group-hover:bg-[#8CC63F] group-hover:text-white' : 'group-hover:bg-[#18448F] group-hover:text-white'}`}>
                                             {item.icon}
                                         </div>
                                         <div className="min-w-0">
@@ -331,14 +331,8 @@ const Fontaines = () => {
                     {/* Content Section */}
                     <div className="container relative z-10 mx-auto px-6 py-12 lg:py-0 h-full flex items-center">
                         <div className="max-w-4xl text-left space-y-8 animate-in fade-in slide-in-from-left duration-1000">
-                            <h1 
-                                className="leading-tight lg:leading-[55px] tracking-tighter text-left max-w-4xl"
-                                style={{
-                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                }}
-                            >
-                                <span className="italic font-light text-[#18448F] text-[32px] md:text-[46px] lg:text-[50px] block">Fontaines d'eau,</span>
-                                <span className="font-bold text-[#18448F] text-[32px] md:text-[46px] lg:text-[50px] block">l'art de l'eau pure.</span>
+                            <h1 className="heading-pro-max font-sans font-light italic text-[#18448F] mb-6 text-left max-w-4xl">
+                                Fontaines d'eau, <br className="hidden md:block"/><span className="text-[#8CC63F] font-sans font-bold not-italic drop-shadow-sm">l'art de l'eau pure.</span>
                             </h1>
 
                             <p className="body-pro-max text-slate-600 max-w-xl text-justify lg:text-left">
@@ -374,7 +368,7 @@ const Fontaines = () => {
                                         { label: "Éco-Conçu", val: "Zéro Bouteilles", icon: <Leaf className="w-5 h-5" /> }
                                     ].map((item, i) => (
                                         <div key={i} className="bg-white/60 backdrop-blur-md p-4 rounded-2xl border border-white/50 shadow-sm flex items-center gap-4 group cursor-default transition-all duration-500 hover:scale-105">
-                                            <div className="w-10 h-10 bg-[#18448F]/10 rounded-full flex items-center justify-center text-[#18448F] group-hover:bg-[#18448F] group-hover:text-white transition-all shadow-sm shrink-0">
+                                            <div className={`w-10 h-10 bg-[#18448F]/10 rounded-full flex items-center justify-center text-[#18448F] transition-all duration-500 shadow-sm shrink-0 ${item.label === 'Éco-Conçu' ? 'group-hover:bg-[#8CC63F] group-hover:text-white' : 'group-hover:bg-[#18448F] group-hover:text-white'}`}>
                                                 {item.icon}
                                             </div>
                                             <div className="min-w-0">
@@ -406,9 +400,8 @@ const Fontaines = () => {
                             <span className="inline-block px-4 py-1.5 bg-[#18448F]/10 text-[#18448F] rounded-full text-[10px] font-black uppercase tracking-[0.2em] mb-6">
                                 PURETÉ À DOMICILE
                             </span>
-                            <h2 className="mb-6 heading-pro-max text-center">
-                                <span className="italic font-light text-[#18448F] block">L'hydratation pure à la maison,</span>
-                                <span className="font-bold text-[#18448F] block">l'eau fraîche à la portée de vos mains.</span>
+                            <h2 className="heading-pro-max font-sans font-light italic text-[#18448F] mb-6 text-center">
+                                L'hydratation pure à la maison, <br className="hidden md:block"/><span className="text-[#8CC63F] font-sans font-bold not-italic drop-shadow-sm">l'eau fraîche</span> à la portée de vos mains.
                             </h2>
                             <p 
                                 className="max-w-3xl mx-auto"
@@ -430,8 +423,8 @@ const Fontaines = () => {
                     {/* Outer layout container */}
                     <div className="w-full flex flex-col select-none overflow-hidden">
                         
-                        {/* Top: Scrollable Cards Container (Kept original width and alignment) */}
-                        <div className="w-full lg:w-[73%] relative group pl-0 mb-16 mx-auto lg:mx-0">
+                        {/* Top: Scrollable Cards Container */}
+                        <div className="w-full max-w-[1340px] relative group pl-0 mb-16 mx-auto">
                             {/* Left Navigation Arrow */}
                             <button 
                                 onClick={() => {
@@ -518,18 +511,18 @@ const Fontaines = () => {
                         </div>
 
                         {/* Bottom Row: CTA Column */}
-                        <div className="container mx-auto max-w-3xl flex flex-col justify-center items-center text-center px-6 space-y-6">
+                        <div className="container mx-auto max-w-3xl flex flex-col justify-center items-center text-center px-6 space-y-6 mt-24">
                             <h3 className="text-xl md:text-2xl font-medium text-slate-800 leading-snug">
                                 Besoin d'aide pour trouver le système qui vous convient ?
                             </h3>
-                            <div>
+                            <div className="relative inline-flex group">
+                                <div className="absolute inset-0 border border-[#18448F]/30 rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
                                 <Button 
-                                    variant="outline" 
-                                    className="rounded-full border-slate-300 hover:border-slate-800 text-slate-800 hover:bg-slate-50 px-8 h-12 text-xs font-black uppercase tracking-widest transition-all"
+                                    className="relative w-full sm:w-auto bg-[#18448F] text-white hover:bg-transparent hover:text-[#18448F] border border-[#18448F] rounded-[2rem] min-h-[3.25rem] px-8 font-black uppercase tracking-[0.1em] text-[11px] whitespace-normal break-words transition-all"
                                     asChild
                                 >
                                     <NavLink to="/consultation">
-                                        Demander une consultation
+                                        Demandez une consultation
                                     </NavLink>
                                 </Button>
                             </div>
@@ -544,9 +537,8 @@ const Fontaines = () => {
                             <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.2em] mb-6">
                                 TECHNOLOGIE & RESPONSABILITÉ
                             </span>
-                            <h2 className="mb-6 heading-pro-max text-center">
-                                <span className="italic font-light text-[#18448F] block text-[32px] md:text-[40px] lg:text-[48px]">Plus qu'une fontaine d'eau,</span>
-                                <span className="font-bold text-[#18448F] block text-[32px] md:text-[40px] lg:text-[48px]">un choix intelligent & responsable.</span>
+                            <h2 className="heading-pro-max font-sans font-light italic text-[#18448F] mb-6 text-center">
+                                Plus qu'une fontaine d'eau, <br className="hidden md:block"/>un choix <span className="text-[#8CC63F] font-sans font-bold not-italic drop-shadow-sm">intelligent & responsable.</span>
                             </h2>
                             <p 
                                 className="max-w-3xl mx-auto"
@@ -606,9 +598,8 @@ const Fontaines = () => {
                     filterProduct="/fontaines-d-eau"
                     limit={5}
                 title={
-                    <h2 className="mb-8 heading-pro-max text-center">
-                        <span className="italic font-light text-[#18448F] block">L’eau que vous méritez,</span>
-                        <span className="font-bold text-[#18448F] block">le service que vous n'oublierez pas.</span>
+                    <h2 className="heading-pro-max font-sans font-light italic text-[#18448F] mb-8 text-center">
+                        L’eau <span className="text-[#8CC63F] font-sans font-bold not-italic drop-shadow-sm">que vous méritez,</span><br className="hidden md:block"/> le service que vous n'oublierez pas.
                     </h2>
                 }
                 />
@@ -753,52 +744,36 @@ const Fontaines = () => {
                     <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-emerald-50/60 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2 z-0" />
                     <div className="absolute bottom-0 left-0 w-[800px] h-[800px] bg-cyan-50/60 blur-[120px] rounded-full translate-y-1/2 -translate-x-1/2 z-0" />
 
+                    <div className="container mx-auto px-6 relative z-10 mb-16">
+                        {/* Header */}
+                        <div className="flex flex-col items-center text-center space-y-4">
+                            <span className="inline-block px-4 py-1.5 bg-[#8CC63F] text-white rounded-full text-[10px] font-black uppercase tracking-[0.2em] shadow-sm">
+                                Notre Impact Écologique
+                            </span>
+                            <h2 className="heading-pro-max font-sans font-light italic text-[#18448F] mb-6 text-center">
+                                Vers un monde <br className="hidden md:block"/>
+                                <span className="text-[#8CC63F] font-sans font-bold not-italic drop-shadow-sm">sans bouteilles en plastique.</span>
+                            </h2>
+                            <p className="body-pro-max text-slate-500 text-lg max-w-2xl mx-auto leading-relaxed">
+                                Notre gamme offre une eau saine, fraîche et délicieuse, pour les professionnels et les particuliers. Ensemble, transformons notre consommation d'eau en un acte durable.
+                            </p>
+                        </div>
+                    </div>
+
+                    {/* Contained Image with Floating Cards */}
                     <div className="container mx-auto px-6 relative z-10">
-                        <div className="max-w-7xl mx-auto space-y-16">
+                        <div className="relative w-full max-w-7xl mx-auto h-[500px] lg:h-[600px] rounded-[2.5rem] overflow-hidden shadow-sm border border-slate-100">
+                            <img 
+                                src={ecoImpactImg7} 
+                                alt="Bricareau sustainable office"
+                                className="absolute inset-0 w-full h-full object-cover transition-transform duration-[10s] hover:scale-105"
+                            />
+                            <div className="absolute inset-0 bg-slate-900/30" />
                             
-                            {/* Header */}
-                            <div className="flex flex-col items-center text-center space-y-6">
-                                <div className="flex items-center gap-3">
-                                    <span className="w-12 h-[2px] bg-emerald-500 rounded-full" />
-                                    <span className="text-[10px] font-black uppercase tracking-[0.3em] text-emerald-600">
-                                        Notre Impact Écologique
-                                    </span>
-                                    <span className="w-12 h-[2px] bg-emerald-500 rounded-full" />
-                                </div>
-                                <h2 className="heading-pro-max !leading-[1.05] tracking-tight">
-                                    <span className="italic font-light text-emerald-600 block text-[38px] md:text-[50px] lg:text-[64px]">Vers un monde</span>
-                                    <span className="font-bold text-[#18448F] block text-[38px] md:text-[50px] lg:text-[64px]">sans bouteilles en plastique.</span>
-                                </h2>
-                                <p className="body-pro-max text-slate-500 text-lg max-w-2xl mx-auto leading-relaxed">
-                                    Notre gamme offre une eau saine, fraîche et délicieuse, pour les professionnels et les particuliers. Ensemble, transformons notre consommation d'eau en un acte durable.
-                                </p>
-                            </div>
-
-                            {/* Bento Grid */}
-                            <div className="grid grid-cols-1 md:grid-cols-12 gap-6 lg:gap-8 auto-rows-[minmax(250px,auto)]">
-                                
-                                {/* Card 1: Main Visual (Span 8 cols) */}
-                                <div className="md:col-span-12 lg:col-span-8 relative rounded-[2.5rem] overflow-hidden group shadow-sm bg-slate-50 border border-slate-100 p-8 flex flex-col justify-between min-h-[400px]">
-                                    <div className="absolute inset-0 z-0">
-                                        <img 
-                                            src={ecoImpactImg7} 
-                                            alt="Bricareau sustainable office"
-                                            className="w-full h-full object-cover opacity-90 transition-transform duration-[10s] group-hover:scale-105"
-                                        />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent" />
-                                    </div>
-                                    <div className="relative z-10 flex flex-col h-full justify-end">
-                                        <div className="bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-[2rem] max-w-sm">
-                                            <h3 className="text-2xl font-bold text-white mb-2">Une Eau Pure</h3>
-                                            <p className="text-slate-200 font-light text-sm leading-relaxed">
-                                                Fini les lourdes bouteilles et les déchets inutiles. Intégrez l'excellence directement dans vos espaces.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                {/* Card 2: Stats (Span 4 cols) */}
-                                <div className="md:col-span-6 lg:col-span-4 rounded-[2.5rem] bg-gradient-to-br from-emerald-500 to-cyan-600 p-8 flex flex-col items-center justify-center text-center relative overflow-hidden group shadow-lg shadow-emerald-500/20">
+                            <div className="h-full relative z-10 flex flex-col justify-center items-center lg:items-end p-8 lg:p-16">
+                                <div className="w-full max-w-[380px] flex flex-col gap-6">
+                                {/* Card 2: Stats */}
+                                <div className="rounded-[2.5rem] bg-gradient-to-br from-[#8CC63F] to-green-600 p-8 flex flex-col items-center justify-center text-center relative overflow-hidden group shadow-2xl shadow-[#8CC63F]/40">
                                     <div className="absolute top-0 right-0 -mt-10 -mr-10 w-40 h-40 bg-white/10 rounded-full blur-2xl" />
                                     <div className="absolute bottom-0 left-0 -mb-10 -ml-10 w-40 h-40 bg-white/10 rounded-full blur-2xl" />
                                     
@@ -814,57 +789,22 @@ const Fontaines = () => {
                                     </div>
                                 </div>
 
-                                {/* Card 3: Réduction Active */}
-                                <div className="md:col-span-6 lg:col-span-4 rounded-[2.5rem] bg-white border border-slate-100 p-8 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
-                                    <div className="w-12 h-12 rounded-2xl bg-blue-50 flex items-center justify-center text-[#18448F] mb-6 group-hover:bg-[#18448F] group-hover:text-white transition-colors">
-                                        <Droplets className="w-6 h-6" />
-                                    </div>
-                                    <h4 className="text-xl font-bold text-[#18448F] mb-3">Réduction Active</h4>
-                                    <p className="text-slate-500 text-sm leading-relaxed font-light">
-                                        S'engager à réduire l'usage de bouteilles en plastique à usage unique au quotidien.
-                                    </p>
-                                </div>
-
-                                {/* Card 4: Consommation Locale */}
-                                <div className="md:col-span-6 lg:col-span-4 rounded-[2.5rem] bg-white border border-slate-100 p-8 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
-                                    <div className="w-12 h-12 rounded-2xl bg-emerald-50 flex items-center justify-center text-emerald-600 mb-6 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
-                                        <Leaf className="w-6 h-6" />
-                                    </div>
-                                    <h4 className="text-xl font-bold text-[#18448F] mb-3">Consommation Locale</h4>
-                                    <p className="text-slate-500 text-sm leading-relaxed font-light">
-                                        Favoriser la consommation d'eau "locale", directement au robinet de votre résidence.
-                                    </p>
-                                </div>
-
-                                {/* Card 5: Accompagnement */}
-                                <div className="md:col-span-6 lg:col-span-4 rounded-[2.5rem] bg-white border border-slate-100 p-8 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
-                                    <div className="w-12 h-12 rounded-2xl bg-cyan-50 flex items-center justify-center text-cyan-600 mb-6 group-hover:bg-cyan-600 group-hover:text-white transition-colors">
-                                        <ShieldCheck className="w-6 h-6" />
-                                    </div>
-                                    <h4 className="text-xl font-bold text-[#18448F] mb-3">Accompagnement Expert</h4>
-                                    <p className="text-slate-500 text-sm leading-relaxed font-light">
-                                        Nous proposons des solutions performantes pour traiter l'eau de boisson en toute sécurité.
-                                    </p>
-                                </div>
-                            </div>
-
-                            {/* CTA Action Bar */}
-                            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-10">
-                                <div className="relative inline-block group">
-                                    <div className="absolute inset-0 border border-[#18448F] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                                {/* Floating CTA Action Bar */}
+                                <div className="relative inline-block group w-full">
+                                    <div className="absolute inset-0 border border-white/60 rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
                                     <Button 
                                         asChild 
-                                        className="relative bg-[#18448F] hover:bg-white hover:text-[#18448F] text-white rounded-[2rem] h-14 px-10 font-black uppercase tracking-widest text-xs transition-all border-none"
+                                        className="relative bg-white hover:bg-[#8CC63F] text-[#18448F] hover:text-white rounded-[2rem] h-14 w-full font-black uppercase tracking-widest text-xs transition-all border-none shadow-xl"
                                     >
-                                        <NavLink to="/consultation" className="flex items-center gap-3">
+                                        <NavLink to="/consultation" className="flex items-center justify-center gap-3">
                                             Planifiez votre impact
                                             <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-2" />
                                         </NavLink>
                                     </Button>
                                 </div>
                             </div>
-
                         </div>
+                    </div>
                     </div>
                 </section>
 

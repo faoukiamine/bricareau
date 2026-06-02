@@ -48,18 +48,10 @@ const Contact = () => {
 
           <div className="container relative z-10 mx-auto px-4 h-full flex items-center lg:px-6">
             <div className="max-w-2xl text-left py-12 lg:py-0">
-              <h1 
-                className="italic font-light tracking-tighter text-[#18448F] max-w-xl mb-4 lg:mb-8"
-                style={{ 
-                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                    fontSize: '50px',
-                    lineHeight: '55px',
-                    fontWeight: 300 
-                }}
-              >
-                <span className="italic font-light text-[#18448F] block">Contactez-nous.</span>
+              <h1 className="text-[40px] md:text-[50px] lg:text-[64px] leading-[1.1] font-sans font-light italic text-[#18448F] mb-6 tracking-tight">
+    <span className="text-[#8CC63F] font-sans font-bold not-italic drop-shadow-lg">Contactez-nous.</span>
                 <span className="font-bold text-[#18448F] block">Notre équipe est à votre écoute.</span>
-              </h1>
+</h1>
               <p className="font-light text-slate-600 mb-8 max-w-xl text-lg leading-relaxed">
                 Nous sommes là pour répondre à toutes vos questions sur le traitement de l'eau. Que ce soit pour un conseil technique ou une demande de soumission, nos experts vous accompagnent avec transparence.
               </p>

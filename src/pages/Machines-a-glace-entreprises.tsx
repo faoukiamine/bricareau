@@ -123,10 +123,10 @@ const MachinesAGlaceEntreprises = () => {
                                 Pureté & Fraîcheur Suprême
                             </div>
                             
-                            <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold text-white leading-[0.95] tracking-tighter">
-                                <span className="block text-blue-400 font-light italic opacity-90">La pureté absolue</span>
+                            <h1 className="text-[40px] md:text-[50px] lg:text-[64px] leading-[1.1] font-sans font-light italic text-white mb-6 tracking-tight">
+    <span className="text-[#8CC63F] font-sans font-bold not-italic drop-shadow-lg">La pureté absolue</span>
                                 <span className="block mt-2">au cœur de votre entreprise.</span>
-                            </h1>
+</h1>
                             
                             <p className="text-lg md:text-xl text-slate-300 max-w-2xl font-light leading-relaxed">
                                 Finissez-en avec la glace de qualité médiocre. Bricareau équipe vos espaces avec des solutions de production de glace haute précision, alliant esthétique premium et filtration AquaShield™.

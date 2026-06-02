@@ -358,12 +358,12 @@ const C = () => {
                                 </div>
 
                                 <div className="pt-8">
-                                    <Button asChild className="w-full sm:w-fit group">
-                                        <a href="tel:18552649328" className="flex items-center gap-3">
+                                    <ProMaxButton asChild className="w-full sm:w-fit group">
+                                        <a href="tel:18552649328" className="flex items-center justify-center gap-3">
                                             Passer à l'eau pure dès aujourd'hui
                                             <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                                         </a>
-                                    </Button>
+                                    </ProMaxButton>
                                 </div>
                             </div>
                         </div>
@@ -720,23 +720,7 @@ const C = () => {
                                                 ))}
                                             </tr>
                                         ))}
-                                            <tr className="bg-slate-50/50">
-                                                <td className="p-6 md:p-10 sticky left-0 z-30 bg-slate-50 border-r border-slate-100"></td>
-                                                {[0, 1, 2, 3, 4, 5].map((idx) => (
-                                                     <td 
-                                                        key={idx}
-                                                         className={cn(
-                                                            "p-6 md:p-10 text-center transition-all duration-500",
-                                                            idx === activeCol ? "table-cell" : "hidden",
-                                                            ((desktopPage === 0 && (idx === 1 || idx === 2 || idx === 3)) || (desktopPage === 1 && (idx === 0 || idx === 4 || idx === 5))) ? "lg:table-cell" : "lg:hidden"
-                                                        )}
-                                                    >
-                                                        <ProMaxButton asChild className="w-full h-16">
-                                                            <NavLink to="/contact">Choisir ce système</NavLink>
-                                                        </ProMaxButton>
-                                                    </td>
-                                                ))}
-                                            </tr>
+
                                     </tbody>
                                 </table>
                             </div>

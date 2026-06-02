@@ -180,16 +180,11 @@ const Pieces = () => {
                     {/* Content Layer */}
                     <div className="container relative z-20 mx-auto px-6 h-full flex flex-col items-start justify-center">
                         <div className="mt-12 max-w-3xl space-y-8 animate-in fade-in slide-in-from-bottom-12 duration-[1.2s]">
-                            <h1 
-                                className="leading-[55px] tracking-tighter text-left mb-8 max-w-4xl animate-in fade-in slide-in-from-bottom-12 duration-[1.2s]"
-                                style={{
-                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-                                }}
-                            >
-                                <span className="italic font-light text-[#18448F] text-[50px] block lg:inline-block">Maintenez la performance.</span>
+                            <h1 className="text-[40px] md:text-[50px] lg:text-[64px] leading-[1.1] font-sans font-light italic text-white mb-6 tracking-tight">
+    <span className="text-[#8CC63F] font-sans font-bold not-italic drop-shadow-lg">Maintenez la performance.</span>
                                 <br className="hidden lg:block" />
                                 <span className="font-bold text-[#18448F] text-[50px] block lg:inline-block">Pièces de Remplacement</span>
-                            </h1>
+</h1>
 
                             <p className="body-pro-max text-slate-600 max-w-xl text-left font-light leading-relaxed">
                                 Trouvez les composantes d'origine nécessaires pour assurer la pérennité et l'efficacité de vos systèmes de traitement d'eau. Une sélection rigoureuse pour une tranquillité d'esprit totale.

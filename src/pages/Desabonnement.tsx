@@ -106,9 +106,9 @@ const Desabonnement = () => {
 
                 <div className="container mx-auto px-4 py-12 max-w-2xl font-sans text-center">
                     <div className="mb-10">
-                        <h1 className="text-3xl font-bold uppercase tracking-wide text-[#1a5a8a] mb-4">
-                            Désabonnement
-                        </h1>
+                        <h1 className="text-[40px] md:text-[50px] lg:text-[64px] leading-[1.1] font-sans font-light italic text-[#1a5a8a] mb-6 tracking-tight">
+    <span className="text-[#8CC63F] font-sans font-bold not-italic drop-shadow-lg">Désabonnement</span>
+</h1>
                         <p className="text-gray-600">
                             Nous sommes désolés de vous voir partir. Aidez-nous à nous améliorer en nous indiquant la raison de votre départ.
                         </p>
