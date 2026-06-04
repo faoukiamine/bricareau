@@ -86,7 +86,7 @@ const FiltresDeRemplacement = () => {
             <main>
                 <Hero 
                     image={heroFiltersImg}
-                    highlightedTitle="Cartouches filtrantes"
+                    highlightedTitle={<>Cartouches <span className="text-amber-500 font-serif italic font-normal drop-shadow-sm">filtrantes</span></>}
                     mainTitle="de remplacement"
                     subtitle="Trouvez facilement le filtre d'eau de remplacement idéal pour votre système de filtration résidentiel, commercial ou industriel."
                     ctaText="Trouver mon filtre"
@@ -102,7 +102,7 @@ const FiltresDeRemplacement = () => {
                     {/* Centered Title */}
                     <div className="container mx-auto px-6 max-w-7xl text-center mb-20">
                         <h2 className="mb-8 heading-pro-max text-center">
-                            <span className="italic font-light text-[#18448F] block">Filtres de remplacement :</span>
+                            <span className="font-bold not-italic text-[#18448F] block">Filtres de remplacement :</span>
                             <span className="font-bold text-[#18448F] block text-center">La pureté préservée, jour après jour.</span>
                         </h2>
                         <p className="mt-6 text-slate-500 max-w-2xl mx-auto text-sm md:text-base font-light leading-relaxed">

@@ -314,7 +314,7 @@ const FiltresPuits = () => {
                 <section className="py-24 bg-white relative overflow-hidden">
                     <div className="container mx-auto px-6">
                         <div className="text-center mb-16">
-                            <span className="inline-block px-4 py-1.5 bg-[#18448F]/10 text-[#18448F] rounded-full text-[10px] font-black uppercase tracking-widest mb-6">
+                            <span className="inline-block px-4 py-1.5 bg-[#18448F] text-white rounded-full text-[10px] font-black uppercase tracking-widest mb-6">
                                 DIAGNOSTIC AUTOMATIQUE
                             </span>
                             <h2 className="heading-pro-max">
@@ -513,7 +513,7 @@ const FiltresPuits = () => {
 
                     <div className="container mx-auto px-6 relative z-10">
                         <div className="max-w-4xl mx-auto text-center mb-32">
-                            <span className="inline-block px-4 py-1.5 bg-[#18448F]/10 text-[#18448F] rounded-full text-[10px] font-black uppercase tracking-[0.3em] mb-8">
+                            <span className="inline-block px-4 py-1.5 bg-[#18448F] text-white rounded-full text-[10px] font-black uppercase tracking-[0.3em] mb-8">
                                 L'EXCELLENCE BRICAREAU
                             </span>
                             <h2 className="mb-12 heading-pro-max text-center">

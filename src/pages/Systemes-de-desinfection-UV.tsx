@@ -402,11 +402,11 @@ const DesinfectionUV = () => {
                 <section className="py-24 bg-white relative overflow-hidden">
                     <div className="container mx-auto px-6 font-sans">
                         <div className="text-center mb-16">
-                            <span className="inline-block px-4 py-1.5 bg-blue-100 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-widest mb-6">
+                            <span className="inline-block px-4 py-1.5 bg-[#18448F] text-white rounded-full text-[10px] font-black uppercase tracking-widest mb-6">
                                 DIAGNOSTIC DE SÉCURITÉ
                             </span>
                             <h2 className="heading-pro-max">
-                                <span className="italic font-light text-[#18448F] block uppercase tracking-widest text-lg md:text-xl">Quelles menaces invisibles</span>
+                                <span className="font-bold not-italic text-[#18448F] block uppercase tracking-widest text-lg md:text-xl">Quelles menaces invisibles</span>
                                 <span className="font-bold text-[#18448F] block text-center uppercase tracking-tight">s'infiltrent dans votre eau ?</span>
                             </h2>
                         </div>

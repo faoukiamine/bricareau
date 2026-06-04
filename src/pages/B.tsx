@@ -251,7 +251,7 @@ const B = () => {
              <main>
                 <Hero 
                     image={heroFiltration}
-                    highlightedTitle="Filtration d'eau résidentielle"
+                    highlightedTitle={<>Filtration d'eau <span className="text-amber-500 font-serif italic font-normal drop-shadow-sm">résidentielle</span></>}
                     mainTitle="L'excellence pour votre santé."
                     subtitle="Ne laissez plus les contaminants couler de vos robinets. Nos systèmes de filtration d'eau avancés constituent un bouclier durable pour votre maison, vous garantissant une eau d'une pureté irréprochable pour toute votre famille au Canada."
                     showPhone={true}

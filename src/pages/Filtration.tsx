@@ -169,7 +169,7 @@ const Filtration = () => {
             <main>
                 <Hero 
                     image={heroFiltration}
-                    highlightedTitle="Filtration d'eau résidentielle"
+                    highlightedTitle={<>Filtration d'eau <span className="text-amber-500 font-serif italic font-normal drop-shadow-sm">résidentielle</span></>}
                     mainTitle="L'excellence pour votre santé."
                     subtitle="Ne laissez plus les contaminants couler de vos robinets. Nos systèmes de filtration d'eau avancés constituent un bouclier durable pour votre maison, vous garantissant une eau d'une pureté irréprochable pour toute votre famille au Canada."
                     showPhone={true}
@@ -180,7 +180,7 @@ const Filtration = () => {
                 <section id="problemes-eau" className="py-24 bg-white relative overflow-hidden">
                     <div className="container mx-auto px-6 relative z-10">
                         <div className="text-center max-w-4xl mx-auto mb-20">
-                            <span className="inline-block px-4 py-1 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black tracking-widest mb-6 uppercase">
+                            <span className="inline-block px-4 py-1 bg-[#18448F] text-white rounded-full text-[10px] font-black tracking-widest mb-6 uppercase">
                                 Diagnostic de Pureté
                             </span>
                             <h2 className="heading-pro-max">

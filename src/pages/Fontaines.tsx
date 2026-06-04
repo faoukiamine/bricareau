@@ -331,8 +331,8 @@ const Fontaines = () => {
                     {/* Content Section */}
                     <div className="container relative z-10 mx-auto px-6 py-12 lg:py-0 h-full flex items-center">
                         <div className="max-w-4xl text-left space-y-8 animate-in fade-in slide-in-from-left duration-1000">
-                            <h1 className="heading-pro-max font-sans font-light italic text-[#18448F] mb-6 text-left max-w-4xl">
-                                Fontaines d'eau, <br className="hidden md:block"/><span className="text-[#8CC63F] font-sans font-bold not-italic drop-shadow-sm">l'art de l'eau pure.</span>
+                            <h1 className="heading-pro-max font-sans font-bold not-italic text-[#18448F] mb-6 text-left max-w-4xl">
+                                Nos fontaines d'eau, <span className="text-blue-600">l'art de</span><br className="hidden md:block"/> <span className="text-[#8CC63F] font-sans font-bold not-italic drop-shadow-sm">l'eau pure.</span>
                             </h1>
 
                             <p className="body-pro-max text-slate-600 max-w-xl text-justify lg:text-left">
@@ -397,10 +397,10 @@ const Fontaines = () => {
 
                     <div className="container mx-auto px-6 relative z-10">
                         <div className="text-center max-w-4xl mx-auto mb-20 animate-in fade-in slide-in-from-bottom-8 duration-1000">
-                            <span className="inline-block px-4 py-1.5 bg-[#18448F]/10 text-[#18448F] rounded-full text-[10px] font-black uppercase tracking-[0.2em] mb-6">
+                            <span className="inline-block px-4 py-1.5 bg-[#18448F] text-white rounded-full text-[10px] font-black uppercase tracking-[0.2em] mb-6">
                                 PURETÉ À DOMICILE
                             </span>
-                            <h2 className="heading-pro-max font-sans font-light italic text-[#18448F] mb-6 text-center">
+                            <h2 className="heading-pro-max font-sans font-bold not-italic text-[#18448F] mb-6 text-center">
                                 L'hydratation pure à la maison, <br className="hidden md:block"/><span className="text-[#8CC63F] font-sans font-bold not-italic drop-shadow-sm">l'eau fraîche</span> à la portée de vos mains.
                             </h2>
                             <p 
@@ -534,10 +534,10 @@ const Fontaines = () => {
                     {/* Centered technical header */}
                     <div className="container mx-auto px-6 relative z-10 mb-20">
                         <div className="text-center max-w-4xl mx-auto">
-                            <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.2em] mb-6">
+                            <span className="inline-block px-4 py-1.5 bg-[#18448F] text-white rounded-full text-[10px] font-black uppercase tracking-[0.2em] mb-6">
                                 TECHNOLOGIE & RESPONSABILITÉ
                             </span>
-                            <h2 className="heading-pro-max font-sans font-light italic text-[#18448F] mb-6 text-center">
+                            <h2 className="heading-pro-max font-sans font-bold not-italic text-[#18448F] mb-6 text-center">
                                 Plus qu'une fontaine d'eau, <br className="hidden md:block"/>un choix <span className="text-[#8CC63F] font-sans font-bold not-italic drop-shadow-sm">intelligent & responsable.</span>
                             </h2>
                             <p 
@@ -598,7 +598,7 @@ const Fontaines = () => {
                     filterProduct="/fontaines-d-eau"
                     limit={5}
                 title={
-                    <h2 className="heading-pro-max font-sans font-light italic text-[#18448F] mb-8 text-center">
+                    <h2 className="heading-pro-max font-sans font-bold not-italic text-[#18448F] mb-8 text-center">
                         L’eau <span className="text-[#8CC63F] font-sans font-bold not-italic drop-shadow-sm">que vous méritez,</span><br className="hidden md:block"/> le service que vous n'oublierez pas.
                     </h2>
                 }
@@ -614,7 +614,7 @@ const Fontaines = () => {
                     <div className="container mx-auto px-6 relative z-10">
                         <div className="text-center md:text-left mb-16 flex flex-col md:flex-row md:items-end justify-between gap-8 animate-in fade-in slide-in-from-bottom-8 duration-1000">
                             <div>
-                                <span className="inline-block px-4 py-1.5 bg-blue-50 text-blue-600 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] mb-6">
+                                <span className="inline-block px-4 py-1.5 bg-[#18448F] text-white rounded-full text-[10px] font-bold uppercase tracking-[0.2em] mb-6">
                                     NOTRE PORTFOLIO
                                 </span>
                                 <h2 className="heading-pro-max tracking-tight leading-[1.1]">
@@ -747,10 +747,10 @@ const Fontaines = () => {
                     <div className="container mx-auto px-6 relative z-10 mb-16">
                         {/* Header */}
                         <div className="flex flex-col items-center text-center space-y-4">
-                            <span className="inline-block px-4 py-1.5 bg-[#8CC63F] text-white rounded-full text-[10px] font-black uppercase tracking-[0.2em] shadow-sm">
+                            <span className="inline-block px-4 py-1.5 bg-[#18448F] text-white rounded-full text-[10px] font-black uppercase tracking-[0.2em] shadow-sm">
                                 Notre Impact Écologique
                             </span>
-                            <h2 className="heading-pro-max font-sans font-light italic text-[#18448F] mb-6 text-center">
+                            <h2 className="heading-pro-max font-sans font-bold not-italic text-[#18448F] mb-6 text-center">
                                 Vers un monde <br className="hidden md:block"/>
                                 <span className="text-[#8CC63F] font-sans font-bold not-italic drop-shadow-sm">sans bouteilles en plastique.</span>
                             </h2>

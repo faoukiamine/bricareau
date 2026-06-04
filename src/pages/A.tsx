@@ -310,7 +310,7 @@ const A = () => {
             <main>
                 <Hero 
                     image={heroBath}
-                    highlightedTitle="Adoucisseurs d'eau,"
+                    highlightedTitle={<>Adoucisseurs <span className="text-amber-500 font-serif italic font-normal drop-shadow-sm">d'eau</span></>}
                     mainTitle="éliminez le calcaire et l'eau dure."
                     subtitle="Redécouvrez l'expérience d'une eau soyeuse qui préserve votre peau, vos cheveux et vos investissements. Une technologie de pointe pour une protection durable de votre foyer."
                     showPhone={true}

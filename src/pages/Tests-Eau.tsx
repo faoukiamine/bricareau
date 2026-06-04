@@ -122,8 +122,8 @@ const TestsEauPage = () => {
        <main>
                 <Hero 
                     image={newHeroImg}
-                    highlightedTitle={<>Analyses d'eau <span className="text-amber-500 font-serif italic font-normal drop-shadow-sm">professionnelles</span></>}
-                    mainTitle="& Tests de laboratoire"
+                    highlightedTitle={<span className="font-bold not-italic">Analyses d'eau</span>}
+                    mainTitle={<> & tests de laboratoire <span className="text-[#8CC63F] font-bold not-italic">professionnels</span></>}
                     subtitle="Besoin d'une analyse d'eau dans la région métropolitaine ? Que ce soit pour une vérification annuelle, une transaction hypothécaire ou un souci de qualité, Bricareau offre des tests complets de laboratoire partout dans le Grand Montréal, Laval et les couronnes."
                     ctaText="Planifiez un test d'eau"
                     ctaLink="#water-test"
@@ -138,12 +138,12 @@ const TestsEauPage = () => {
         <section id="scenarios-analyse" className="py-24 bg-white relative overflow-hidden">
           <div className="container mx-auto px-6">
             <div className="text-center max-w-4xl mx-auto mb-16">
-              <span className="inline-block px-4 py-1 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black tracking-widest mb-4">
+              <span className="inline-block px-4 py-1 bg-[#18448F] text-white rounded-full text-[10px] font-black tracking-widest mb-4">
                 GUIDE DE PRÉVENTION
               </span>
               <h2 className="heading-pro-max">
-                <span className="italic font-light text-blue-600 block">Quand devriez-vous</span>
-                <span className="font-bold text-[#18448F] block">tester votre eau ?</span>
+                <span className="font-bold not-italic text-[#18448F] block">Quand devriez-vous</span>
+                <span className="font-bold text-[#8CC63F] block">tester votre eau ?</span>
               </h2>
               <p className="body-pro-max text-slate-500 mt-6 mx-auto">
                 L'invisible est souvent le plus dangereux. Identifiez la situation qui vous concerne pour choisir le test de laboratoire adéquat.
@@ -258,12 +258,12 @@ const TestsEauPage = () => {
           <div className="container mx-auto px-6">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <span className="text-sm font-bold uppercase tracking-widest text-blue-600 mb-4 block flex items-center justify-center gap-2">
-                 <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.2em] mb-6">
-                   NOS SOLUTIONS D'ANALYSE DE LA QUALITÉ D'EAU
+                 <span className="inline-block px-4 py-1.5 bg-[#18448F] text-white rounded-full text-[10px] font-black uppercase tracking-[0.2em] mb-6">
+                    ANALYSE COMPARATIVE
                  </span>
               </span>
-              <h2 className="mb-8 heading-pro-max text-center">
-                <span className="italic font-light text-[#18448F] block text-center">Quelle trousse d'analyse</span>
+              <h2 className="heading-pro-max mb-6">
+                <span className="font-bold not-italic text-[#18448F] block text-center">Quelle <span className="text-[#8CC63F]">trousse d'analyse</span></span>
                 <span className="font-bold text-[#18448F] block text-center">choisir pour votre eau ?</span>
               </h2>
               <p className="body-pro-max max-w-2xl mx-auto text-center">
@@ -440,7 +440,7 @@ const TestsEauPage = () => {
           <div className="container mx-auto px-4 text-left">
             <div className="text-left mb-20">
                              <h2 className="mb-8 heading-pro-max text-left">
-                                <span className="italic font-light text-[#18448F] block">Pour vous éclairer</span>
+                                <span className="font-bold not-italic text-[#18448F] block">Pour vous éclairer</span>
                                 <span className="font-bold text-[#18448F] block">Questions fréquentes</span>
                             </h2>
               <div className="w-24 h-1 bg-blue-600"></div>

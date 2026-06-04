@@ -227,7 +227,7 @@ const Header = () => {
                                         )}
                                         onClick={() => setActiveMegamenu(null)}
                                     >
-                                        <div className="aspect-[4/3] overflow-hidden relative">
+                                        <div className="aspect-video overflow-hidden relative">
                                             <img 
                                                 src={card.image} 
                                                 alt={card.title} 
@@ -235,7 +235,7 @@ const Header = () => {
                                             />
                                             <div className="absolute inset-0 bg-transparent group-hover:bg-blue-600/10 transition-colors duration-500" />
                                         </div>
-                                        <div className="p-6 md:p-8 flex items-center justify-between border-t border-gray-50">
+                                        <div className="py-3 px-5 md:py-3.5 md:px-6 flex items-center justify-between border-t border-gray-50">
                                             <h4 className="text-[11px] font-black text-slate-900 uppercase tracking-widest leading-tight">
                                                 {card.title.includes(' ET ') ? (
                                                     card.title.split(' ET ').map((word, i) => (
