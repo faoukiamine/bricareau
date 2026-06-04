@@ -82,6 +82,9 @@ import stormVisualImg from "@/assets/pourquoi-est-ce-que-les-orages-produisent-d
 import ourteamstudyyourwaterImg from "@/assets/10271.jpg";
 import sterileWaterImg from "@/assets/1713.jpg";
 import installationuvsystemImg from "@/assets/UV system installation to kill bacteria.png";
+import avisEbullitionImg from "@/assets/Avis_debullition.png";
+import puitsDeSurfaceImg from "@/assets/puits de surface.jpg";
+import virusEnteriqueImg from "@/assets/virus entérique.jpg";
 
 
 const HighEfficiencyIcon = ({ className }: { className?: string }) => (
@@ -172,8 +175,8 @@ const DesinfectionUV = () => {
             <main>
                 <Hero 
                     image={heroImg}
-                    highlightedTitle="Systèmes de désinfection UV,"
-                    mainTitle="zéro produit chimique, 100% de protection."
+                    highlightedTitle={<span className="font-bold not-italic">Systèmes de désinfection UV,</span>}
+                    mainTitle={<span className="text-[#8CC63F] font-bold not-italic">zéro produit chimique, 100% de protection.</span>}
                     subtitle="Éliminez 99,99% des bactéries, virus et kystes de votre eau de puits ou municipale sans aucun additif chimique. Assurez une pureté microbiologique totale pour la sécurité de votre famille à chaque robinet."
                     showPhone={true}
                     showBreadcrumbs={true}
@@ -198,12 +201,7 @@ const DesinfectionUV = () => {
 
                     <div className="container mx-auto px-6 max-w-7xl relative z-10">
                         <div className="max-w-4xl mb-24">
-                            <div className="flex items-center gap-4 mb-8">
-                                <div className="h-[1px] w-12 bg-slate-900"></div>
-                                <span className="text-slate-900 text-xs font-mono font-bold uppercase tracking-[0.2em]">
-                                    Analyse Technologique
-                                </span>
-                            </div>
+
                              <h2 className="mb-8 heading-pro-max text-left">
                                  <span className="italic font-light text-[#18448F] block">Pourquoi la</span>
                                  <span className="font-bold text-[#18448F] block">Désinfection UV ?</span>
@@ -317,7 +315,7 @@ const DesinfectionUV = () => {
                                 <div className="space-y-6">
                                     <h2 className="font-light block leading-tight lg:leading-[52px] text-white">
                                         Éliminez l'invisible : <br />
-                                        <span className="text-blue-400 italic font-bold font-serif whitespace-nowrap">Protection contre 99,99%.</span>
+                                        <span className="text-[#8CC63F] font-bold font-serif whitespace-nowrap">Protection contre 99,99%.</span>
                                     </h2>
                                     <p className="text-lg text-slate-300 font-light leading-relaxed max-w-xl text-justify lg:text-left">
                                         Votre eau peut sembler cristalline tout en abritant des micro-organismes nocifs. Nos rayons UV-C ciblent le cœur des contaminants pour les rendre inoffensifs en une fraction de seconde, sans produits chimiques.
@@ -405,9 +403,9 @@ const DesinfectionUV = () => {
                             <span className="inline-block px-4 py-1.5 bg-[#18448F] text-white rounded-full text-[10px] font-black uppercase tracking-widest mb-6">
                                 DIAGNOSTIC DE SÉCURITÉ
                             </span>
-                            <h2 className="heading-pro-max">
-                                <span className="font-bold not-italic text-[#18448F] block uppercase tracking-widest text-lg md:text-xl">Quelles menaces invisibles</span>
-                                <span className="font-bold text-[#18448F] block text-center uppercase tracking-tight">s'infiltrent dans votre eau ?</span>
+                            <h2 className="heading-pro-max mb-6">
+                                <span className="font-bold not-italic text-[#18448F] block text-center">Quelles <span className="text-[#8CC63F]">menaces invisibles</span></span>
+                                <span className="font-bold text-[#18448F] block text-center"><span className="text-[#8CC63F]">s'infiltrent</span> dans votre eau ?</span>
                             </h2>
                         </div>
 
@@ -427,7 +425,7 @@ const DesinfectionUV = () => {
                                     solution: "UV Haute-Performance",
                                     icon: <ShieldAlert className="w-8 h-8" />,
                                     color: "from-purple-500 to-indigo-700",
-                                    img: uvSpectrumAbstractImg
+                                    img: virusEnteriqueImg
                                 },
                                 { 
                                     problem: "Kystes & Parasites", 
@@ -451,7 +449,7 @@ const DesinfectionUV = () => {
                                     solution: "Série VH Bricareau",
                                     color: "from-emerald-500 to-teal-700",
                                     icon: <DropletsIcon className="w-8 h-8" />,
-                                    img: ourteamstudyyourwaterImg
+                                    img: puitsDeSurfaceImg
                                 },
                                 { 
                                     problem: "Avis d'Ébullition", 
@@ -459,7 +457,7 @@ const DesinfectionUV = () => {
                                     solution: "Protection 24/7 Bricareau",
                                     color: "from-blue-400 to-cyan-600",
                                     icon: <ShieldCheck className="w-8 h-8" />,
-                                    img: heroImg
+                                    img: avisEbullitionImg
                                 }
                             ].map((s, i) => (
                                 <div 

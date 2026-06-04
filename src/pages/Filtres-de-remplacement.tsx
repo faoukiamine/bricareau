@@ -86,8 +86,8 @@ const FiltresDeRemplacement = () => {
             <main>
                 <Hero 
                     image={heroFiltersImg}
-                    highlightedTitle={<>Cartouches <span className="text-amber-500 font-serif italic font-normal drop-shadow-sm">filtrantes</span></>}
-                    mainTitle="de remplacement"
+                    highlightedTitle={<span className="font-bold text-[#18448F]">Cartouches filtrantes</span>}
+                    mainTitle={<span className="font-bold text-[#18448F]">de remplacement</span>}
                     subtitle="Trouvez facilement le filtre d'eau de remplacement idéal pour votre système de filtration résidentiel, commercial ou industriel."
                     ctaText="Trouver mon filtre"
                     ctaLink="#solutions-catalog"
@@ -103,7 +103,7 @@ const FiltresDeRemplacement = () => {
                     <div className="container mx-auto px-6 max-w-7xl text-center mb-20">
                         <h2 className="mb-8 heading-pro-max text-center">
                             <span className="font-bold not-italic text-[#18448F] block">Filtres de remplacement :</span>
-                            <span className="font-bold text-[#18448F] block text-center">La pureté préservée, jour après jour.</span>
+                            <span className="font-bold text-[#18448F] block text-center"><span className="text-[#8CC63F]">La pureté préservée</span>, jour après jour.</span>
                         </h2>
                         <p className="mt-6 text-slate-500 max-w-2xl mx-auto text-sm md:text-base font-light leading-relaxed">
                             Identifiez facilement le filtre compatible avec votre système pour garantir une performance optimale.
@@ -113,8 +113,8 @@ const FiltresDeRemplacement = () => {
                     {/* Outer layout container */}
                     <div className="w-full flex flex-col select-none overflow-hidden">
                         
-                        {/* Top: Scrollable Cards Container (Kept original width and alignment) */}
-                        <div className="w-full lg:w-[73%] relative group pl-0 mb-16 mx-auto lg:mx-0">
+                        {/* Top: Scrollable Cards Container */}
+                        <div className="w-full lg:w-[73%] relative group pl-0 mb-16 mx-auto">
                             {/* Left Navigation Arrow */}
                             <button 
                                 onClick={() => {
