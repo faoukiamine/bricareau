@@ -262,6 +262,13 @@ const A = () => {
     const [activeAdvantageImage, setActiveAdvantageImage] = useState(benefitsVisualImg);
     const [activeTransitionStep, setActiveTransitionStep] = useState(0);
     const navigate = useNavigate();
+
+    React.useEffect(() => {
+        const timer = setInterval(() => {
+            setActiveTransitionStep(prev => (prev + 1) % 4);
+        }, 5000);
+        return () => clearInterval(timer);
+    }, []);
     const resourcesRef = React.useRef<HTMLDivElement>(null);
 
     const scrollResources = (direction: 'left' | 'right') => {
@@ -311,8 +318,8 @@ const A = () => {
                 <Hero 
                     className="min-h-[100vh]"
                     image={heroBath}
-                    highlightedTitle={<>Adoucisseurs <span className="text-amber-500 font-serif italic font-normal drop-shadow-sm">d'eau</span></>}
-                    mainTitle="éliminez le calcaire et l'eau dure."
+                    highlightedTitle={<span className="font-bold not-italic">Finis le calcaire et l'eau dure :</span>}
+                    mainTitle={<>offrez-vous le confort d'une <span className="text-[#8CC63F]">eau douce.</span></>}
                     subtitle="Redécouvrez l'expérience d'une eau soyeuse qui préserve votre peau, vos cheveux et vos investissements. Une technologie de pointe pour une protection durable de votre foyer."
                     showPhone={true}
                     showBreadcrumbs={true}
@@ -324,12 +331,12 @@ const A = () => {
                     
                     <div className="container mx-auto px-6 relative z-10">
                         <div className="max-w-4xl mx-auto text-center mb-24">
-                            <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.3em] mb-8">
+                            <span className="inline-block px-4 py-1.5 bg-[#18448F] text-white rounded-full text-[10px] font-black uppercase tracking-[0.3em] mb-8">
                                 DIAGNOSTIC L'EAU DURE
                             </span>
                             <h2 className="mb-8 heading-pro-max text-center">
-                                <span className="italic font-light text-[#18448F] block">L'impact silencieux du</span>
-                                <span className="font-bold text-[#18448F] block text-center">calcaire sur votre vie.</span>
+                                <span className="font-bold not-italic text-[#18448F] block">L'impact silencieux du</span>
+                                <span className="font-bold not-italic text-[#18448F] block text-center"><span className="text-[#8CC63F]">calcaire</span> sur votre vie.</span>
                             </h2>
                             <p className="body-pro-max text-slate-500 text-center mx-auto max-w-2xl">
                                 Le calcaire n'est pas qu'un dépôt blanc ; c'est un agent d'érosion invisible qui dégrade votre confort, votre santé et vos finances au quotidien.
@@ -462,12 +469,12 @@ const A = () => {
 
                     <div className="container mx-auto px-6 relative z-10">
                         <div className="text-center max-w-7xl mx-auto mb-20 lg:mb-24 px-6 md:px-0">
-                            <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.3em] mb-8">
+                            <span className="inline-block px-4 py-1.5 bg-[#18448F] text-white rounded-full text-[10px] font-black uppercase tracking-[0.3em] mb-8">
                                 GUIDE D'EXPERTISE RÉSIDENTIELLE
                             </span>
                             <h2 className="mb-8 heading-pro-max text-center">
-                                <span className="italic font-light text-[#18448F] block">L'expertise anticalcaire</span>
-                                <span className="font-bold text-[#18448F] block">adaptée à votre réseau domestique.</span>
+                                <span className="font-bold not-italic text-[#8CC63F] block">L'expertise anticalcaire</span>
+                                <span className="font-bold not-italic text-[#18448F] block text-center">adaptée à votre réseau domestique.</span>
                             </h2>
                             <p className="body-pro-max text-center max-w-4xl mx-auto px-4">
                                 Nos adoucisseurs d'eau résidentiels sont spécifiquement calibrés pour neutraliser la dureté de l'eau tout en préservant l'intégrité de vos installations. Une synergie parfaite entre <span className="text-blue-600 font-bold">économie de ressources</span> et <span className="text-blue-600 font-bold">confort absolu</span>.
@@ -490,7 +497,7 @@ const A = () => {
                                     <div className="relative h-80 overflow-hidden bg-slate-50/30 flex items-center justify-center p-12 overflow-hidden">
                                         {p.isRecommended && (
                                             <div className="absolute top-8 right-8 z-10">
-                                                <span className="inline-block px-4 py-1.5 bg-blue-600 text-white rounded-full text-[10px] font-black uppercase tracking-[0.3em] shadow-xl shadow-blue-500/30 animate-pulse">
+                                                <span className="inline-block px-4 py-1.5 bg-[#18448F] text-white rounded-full text-[10px] font-black uppercase tracking-[0.3em] shadow-xl shadow-blue-500/30 animate-pulse">
                                                     LE CHOIX DES EXPERTS
                                                 </span>
                                             </div>
@@ -626,12 +633,11 @@ const A = () => {
                                     
                                     {/* Title Block */}
                                     <div className="text-center lg:text-left mb-0">
-                                        <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.3em] mb-4">
+                                        <span className="inline-block px-4 py-1.5 bg-[#18448F] text-white rounded-full text-[10px] font-black uppercase tracking-[0.3em] mb-4">
                                             LE PARCOURS BRICAREAU
                                         </span>
                                         <h2 className="heading-pro-max text-center lg:text-left mb-4 text-[#18448F]">
-                                            Une transition fluide 360° vers<br />
-                                            <span className="font-light italic">une eau douce d'exception.</span>
+                                            <span className="font-bold not-italic">Une transition fluide 360° vers une <span className="text-[#8CC63F]">eau douce d'exception.</span></span>
                                         </h2>
                                         <p className="body-pro-max text-center lg:text-left max-w-3xl mx-auto lg:mx-0">
                                             Le Parcours Bricareau : une expertise d'élite, depuis votre première analyse jusqu'à la douceur éternelle de votre eau.
@@ -707,12 +713,12 @@ const A = () => {
                 <section className="py-24 bg-white relative overflow-hidden">
                     <div className="container mx-auto px-6">
                         <div className="text-center mb-16">
-                            <span className="inline-block px-4 py-1.5 bg-blue-100 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-widest mb-6">
+                            <span className="inline-block px-4 py-1.5 bg-[#18448F] text-white rounded-full text-[10px] font-black uppercase tracking-widest mb-6">
                                 ANALYSE COMPARATIVE
                             </span>
                             <h2 className="heading-pro-max">
-                                <span className="italic font-light text-[#18448F] block text-center">Identifiez la performance</span>
-                                <span className="font-bold text-[#18448F] block text-center">optimale pour votre foyer.</span>
+                                <span className="font-bold not-italic text-[#18448F] block text-center">Identifiez la performance</span>
+                                <span className="font-bold not-italic text-[#18448F] block text-center">optimale pour votre foyer.</span>
                             </h2>
                         </div>
 
