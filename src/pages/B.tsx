@@ -251,8 +251,8 @@ const B = () => {
              <main>
                 <Hero 
                     image={heroFiltration}
-                    highlightedTitle={<>Filtration d'eau <span className="text-amber-500 font-serif italic font-normal drop-shadow-sm">résidentielle</span></>}
-                    mainTitle="L'excellence pour votre santé."
+                    highlightedTitle={<span className="font-bold not-italic">Protégez votre santé</span>}
+                    mainTitle={<> avec une filtration d'eau <span className="text-[#8CC63F] font-bold not-italic">d'excellence.</span></>}
                     subtitle="Ne laissez plus les contaminants couler de vos robinets. Nos systèmes de filtration d'eau avancés constituent un bouclier durable pour votre maison, vous garantissant une eau d'une pureté irréprochable pour toute votre famille au Canada."
                     showPhone={true}
                     showBreadcrumbs={true}
@@ -262,12 +262,12 @@ const B = () => {
                 <section id="problemes-eau" className="py-24 bg-white relative overflow-hidden">
                     <div className="container mx-auto px-6 relative z-10">
                         <div className="text-center max-w-4xl mx-auto mb-20">
-                            <span className="inline-block px-4 py-1 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black tracking-widest mb-6 uppercase">
+                            <span className="inline-block px-4 py-1 bg-[#18448F] text-white rounded-full text-[10px] font-black tracking-widest mb-6 uppercase">
                                 Diagnostic de Pureté
                             </span>
                             <h2 className="heading-pro-max">
-                                <span className="italic font-light text-blue-600 block leading-tight">Identifier l'invisible :</span>
-                                <span className="font-bold text-[#18448F] block leading-tight">Pourquoi filtrer votre eau ?</span>
+                                <span className="font-bold not-italic text-[#18448F] block">Identifier l'invisible :</span>
+                                <span className="font-bold text-[#8CC63F] block"><span className="text-[#18448F]">Pourquoi</span> filtrer votre eau ?</span>
                             </h2>
                             <p className="body-pro-max text-slate-500 mt-6 mx-auto max-w-2xl px-4">
                                 L'eau municipale traverse des kilomètres de tuyauteries vétustes avant d'arriver chez vous. Chaque verre peut contenir des traces de l'imparfait.
@@ -364,11 +364,11 @@ const B = () => {
                 <section className="py-24 bg-white relative overflow-hidden">
                     <div className="container mx-auto px-6">
                         <div className="text-center mb-16">
-                            <span className="inline-block px-4 py-1.5 bg-[#18448F]/10 text-[#18448F] rounded-full text-[10px] font-black uppercase tracking-widest mb-6">
+                            <span className="inline-block px-4 py-1.5 bg-[#18448F] text-white rounded-full text-[10px] font-black uppercase tracking-widest mb-6">
                                 DIAGNOSTIC AUTOMATIQUE
                             </span>
                             <h2 className="heading-pro-max">
-                                <span className="italic font-light text-[#18448F] block">Quel problème d'eau</span>
+                                <span className="font-bold not-italic text-[#18448F] block">Quel <span className="text-[#8CC63F]">problème d'eau</span></span>
                                 <span className="font-bold text-[#18448F] block text-center">vivez-vous au quotidien ?</span>
                             </h2>
                         </div>
@@ -563,11 +563,11 @@ const B = () => {
 
                     <div className="container mx-auto px-6 relative z-10">
                         <div className="max-w-4xl mx-auto text-center mb-32">
-                            <span className="inline-block px-4 py-1.5 bg-[#18448F]/10 text-[#18448F] rounded-full text-[10px] font-black uppercase tracking-[0.3em] mb-8">
+                            <span className="inline-block px-4 py-1.5 bg-[#18448F] text-white rounded-full text-[10px] font-black uppercase tracking-[0.3em] mb-8">
                                 L'EXCELLENCE BRICAREAU
                             </span>
                             <h2 className="mb-12 heading-pro-max text-center">
-                                <span className="italic font-light text-[#18448F] block">Pourquoi choisir nos</span>
+                                <span className="font-bold not-italic text-[#18448F] block">Pourquoi choisir nos</span>
                                 <span className="font-bold text-[#18448F] block text-center">systèmes de filtration d'eau ?</span>
                             </h2>
                              <p className="body-pro-max text-slate-500 text-center mx-auto">
@@ -787,7 +787,7 @@ const B = () => {
                     filterProduct="/filtration"
                     title={
                         <h2 className="mb-8 heading-pro-max text-center">
-                            <span className="italic font-light text-[#18448F] block text-center">Buvez l'eau de votre puits sans crainte</span>
+                            <span className="font-bold not-italic text-[#18448F] block text-center">Buvez l'eau de votre robinet <span className="text-[#8CC63F]">sans crainte</span></span>
                             <span className="font-bold text-[#18448F] block text-center">Ils ont fait le saut avec nous.</span>
                         </h2>
                     }
