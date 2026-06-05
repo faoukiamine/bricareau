@@ -309,6 +309,7 @@ const A = () => {
             <Header />
             <main>
                 <Hero 
+                    className="min-h-[100vh]"
                     image={heroBath}
                     highlightedTitle={<>Adoucisseurs <span className="text-amber-500 font-serif italic font-normal drop-shadow-sm">d'eau</span></>}
                     mainTitle="éliminez le calcaire et l'eau dure."

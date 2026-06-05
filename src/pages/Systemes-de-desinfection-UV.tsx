@@ -174,13 +174,14 @@ const DesinfectionUV = () => {
             <Header />
             <main>
                 <Hero 
+                    className="min-h-[100vh]"
                     image={heroImg}
                     highlightedTitle={<span className="font-bold not-italic">Systèmes de désinfection UV,</span>}
                     mainTitle={<span className="text-[#8CC63F] font-bold not-italic">zéro produit chimique, 100% de protection.</span>}
                     subtitle="Éliminez 99,99% des bactéries, virus et kystes de votre eau de puits ou municipale sans aucun additif chimique. Assurez une pureté microbiologique totale pour la sécurité de votre famille à chaque robinet."
                     showPhone={true}
                     showBreadcrumbs={true}
-                    singleLineTitle={true}
+                    singleLineTitle={false}
                 />
 
                 {/* 3. Why choose UV disinfection? - Technical/Swiss Design Precision Grid with Integrated Background */}
@@ -765,10 +766,10 @@ const DesinfectionUV = () => {
                 <TestimonialsSection
                     filterProduct="/Systemes-de-desinfection-UV"
                     title={
-                        <>
-                            <span className="italic font-light text-[#18448F] block text-center">Zéro bactérie,</span>
-                            <span className="font-bold text-[#18448F] block text-center">100 % sérénité.</span>
-                        </>
+                        <h2 className="mb-8 heading-pro-max text-center">
+                            <span className="font-bold not-italic text-[#18448F]">Zéro bactérie, </span>
+                            <span className="font-bold text-[#8CC63F]">100 % sérénité.</span>
+                        </h2>
                     }
                 />
                 {/* 8. Section Associated Products */}

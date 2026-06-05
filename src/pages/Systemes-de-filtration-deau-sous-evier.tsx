@@ -175,12 +175,10 @@ const FiltrationSousEvier = () => {
                             {/* 1. Header Column (Mobile: 1st, Desktop: Top Right) */}
                             <div className="lg:col-span-7 lg:col-start-6 space-y-8">
                                 <div className="space-y-8">
-                                    <span className="inline-block px-4 py-1.5 bg-cyan-600/10 text-cyan-700 rounded-full text-[10px] font-black uppercase tracking-[0.3em]">
-                                        OPTIMISATION DU ROBINET
-                                    </span>
-                                    <h2 className="heading-pro-max text-left !leading-[1.1]">
-                                        <span className="italic font-light text-[#0891B2] block">L'eau de source,</span>
-                                        <span className="font-bold text-[#164E63] block">sans la bouteille.</span>
+
+                                    <h2 className="text-4xl md:text-[3rem] tracking-tight leading-[1.05] mb-6 relative">
+                                        <span className="font-bold not-italic text-[#18448F] block">L'eau de source,</span>
+                                        <span className="font-bold not-italic text-[#18448F] block"><span className="text-[#8CC63F]">sans</span> la bouteille.</span>
                                     </h2>
                                     <p className="body-pro-max text-slate-500 max-w-2xl text-justify">
                                         Ne faites plus aucun compromis. Transformez votre robinet en une source de pureté gastronomique. Nos systèmes filtrent l'indésirable pour ne laisser couler que l'essentiel : une eau fraîche, saine et libérée des contraintes du plastique.

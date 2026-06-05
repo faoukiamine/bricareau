@@ -122,6 +122,7 @@ const FontainesDeauModernes = () => {
             <main>
                 {/* SECTION 1: MODERN CINEMATIC HERO */}
                 <Hero 
+                    className="min-h-[100vh]"
                     image={heroFountains}
                     highlightedTitle="Optez pour une hydratation "
                     mainTitle="intelligente et durable."

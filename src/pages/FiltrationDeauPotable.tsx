@@ -251,7 +251,7 @@ const FiltrationDeauPotable = () => {
                 L'INVISIBLE DANS VOTRE VERRE
               </span>
                <h2 className="mb-8 heading-pro-max text-center">
-                  <span className="italic font-light text-[#18448F] block">Ce que vos sens ne peuvent</span>
+                  <span className="font-bold not-italic text-[#18448F] block">Ce que vos sens ne peuvent</span>
                   <span className="font-bold text-[#18448F] block text-center">pas détecter.</span>
               </h2>
               <p className="body-pro-max text-slate-500 text-center mx-auto">
@@ -678,9 +678,9 @@ const FiltrationDeauPotable = () => {
         <TestimonialsSection
           filterProduct="/filtration-eau-potable"
           title={
-                            <h2 className="mb-8 heading-pro-max text-center">
-                                <span className="italic font-light text-[#18448F] block text-center">L'eau de source,</span>
-                                <span className="font-bold text-[#18448F] block text-center">directement à votre robinet.</span>
+                            <h2 className="heading-pro-max tracking-tight leading-[1.1] mb-6 relative z-10">
+                                <span className="font-bold not-italic text-[#18448F] block text-center">L'eau de source,</span>
+                                <span className="font-bold not-italic text-[#18448F] block text-center"><span className="text-[#8CC63F]">sans</span> la bouteille.</span>
                             </h2>
           }
         />

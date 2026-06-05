@@ -172,14 +172,16 @@ const C = () => {
        <Header />
        <main>
                 <Hero 
+                    className="min-h-[100vh]"
                     image={heroDrink}
-                    highlightedTitle="Systèmes de filtration sous évier,"
-                    mainTitle="de l'eau pure à chaque goutte."
+                    highlightedTitle={<><span className="text-[#8CC63F] font-bold not-italic">La pureté</span> <span className="font-bold not-italic">sous l'évier.</span></>}
+                    mainTitle={<><span className="text-[#8CC63F] font-bold not-italic">L'excellence</span> dans chaque goutte.</>}
                     subtitle="Profitez d'une eau potable d'une qualité exceptionnelle directement de votre robinet. Nos systèmes de filtration sous comptoir et d'ultrafiltration éliminent 99% des contaminants pour la santé de votre famille."
                     ctaText="Explorer nos systèmes"
                     ctaLink="#purification-systems"
                     showPhone={true}
                     showBreadcrumbs={true}
+                    singleLineTitle={true}
                 />
 
         {/* 3. Menaces Invisibles - Symptom-Logic Bento Grid */}
@@ -190,7 +192,7 @@ const C = () => {
                 L'INVISIBLE DANS VOTRE VERRE
               </span>
                <h2 className="mb-8 heading-pro-max text-center">
-                  <span className="italic font-light text-[#18448F] block">Ce que vos sens ne peuvent</span>
+                  <span className="font-bold not-italic text-[#18448F] block">Ce que vos sens ne peuvent</span>
                   <span className="font-bold text-[#18448F] block text-center">pas détecter.</span>
               </h2>
               <p className="body-pro-max text-slate-500 text-center mx-auto">
@@ -276,12 +278,10 @@ const C = () => {
                             {/* 1. Header Column (Mobile: 1st, Desktop: Top Right) */}
                             <div className="lg:col-span-7 lg:col-start-6 space-y-8">
                                 <div className="space-y-8">
-                                    <span className="inline-block px-4 py-1.5 bg-cyan-600/10 text-cyan-700 rounded-full text-[10px] font-black uppercase tracking-[0.3em]">
-                                        OPTIMISATION DU ROBINET
-                                    </span>
+
                                     <h2 className="heading-pro-max text-left !leading-[1.1]">
-                                        <span className="italic font-light text-[#0891B2] block">L'eau de source,</span>
-                                        <span className="font-bold text-[#164E63] block">sans la bouteille.</span>
+                                        <span className="font-bold not-italic text-[#18448F] block">L'eau de source,</span>
+                                        <span className="font-bold not-italic text-[#18448F] block"><span className="text-[#8CC63F]">sans</span> la bouteille.</span>
                                     </h2>
                                     <p className="body-pro-max text-slate-500 max-w-2xl text-justify">
                                         Ne faites plus aucun compromis. Transformez votre robinet en une source de pureté gastronomique. Nos systèmes filtrent l'indésirable pour ne laisser couler que l'essentiel : une eau fraîche, saine et libérée des contraintes du plastique.
@@ -379,9 +379,9 @@ const C = () => {
                         <span className="inline-block px-4 py-1.5 bg-[#18448F] text-white rounded-full text-xs font-black uppercase tracking-widest mb-6">
                             La Gamme Bricareau Pure
                         </span>
-                        <h2 className="mb-8 heading-pro-max text-center">
-                            <span className="italic font-light text-[#18448F] block">Nos systèmes de</span>
-                            <span className="font-bold text-[#18448F] block text-center">filtration sous évier.</span>
+                        <h2 className="mb-8 heading-pro-max text-center whitespace-nowrap">
+                            <span className="font-bold not-italic text-[#18448F]">Nos systèmes de filtration d'eau </span>
+                            <span className="font-bold not-italic text-[#8CC63F]">sous évier.</span>
                         </h2>
                         <p className="body-pro-max text-center mx-auto max-w-2xl px-4 lg:px-0">
                             Découvrez nos solutions de pointe, de la filtration compacte sous évier aux systèmes d'osmose inverse haute performance sans réservoir.
@@ -496,8 +496,8 @@ const C = () => {
                 L'EXCELLENCE D'UNE EAU SANTÉ AU QUOTIDIEN
               </span>
               <h2 className="mb-8 heading-pro-max text-center">
-                                <span className="italic font-light text-[#18448F] block">Pourquoi installer l'un de  nos</span>
-                                <span className="font-bold text-[#18448F] block text-center">systèmes de purification d'eau sous l'évier de votre cuisine ?</span>
+                                <span className="font-bold not-italic text-[#18448F] block">Pourquoi installer l'un de  nos</span>
+                                <span className="font-bold text-[#18448F] block text-center"><span className="text-[#8CC63F]">systèmes de purification d'eau sous l'évier</span> de votre cuisine ?</span>
                             </h2>
               <div className="w-16 h-0.5 bg-blue-600/20 mx-auto mb-10" />
               <p className="body-pro-max text-slate-500 max-w-2xl mx-auto text-center italic">
@@ -779,9 +779,9 @@ const C = () => {
         <TestimonialsSection
           filterProduct="/systeme-de-filtration-deau-potable"
           title={
-                            <h2 className="mb-8 heading-pro-max text-center">
-                                <span className="italic font-light text-[#18448F] block text-center">L'eau de source,</span>
-                                <span className="font-bold text-[#18448F] block text-center">directement à votre robinet.</span>
+                            <h2 className="heading-pro-max tracking-tight leading-[1.1] mb-6 relative z-10">
+                                <span className="font-bold not-italic text-[#18448F] block text-center">L'eau de source,</span>
+                                <span className="font-bold not-italic text-[#18448F] block text-center"><span className="text-[#8CC63F]">sans</span> la bouteille.</span>
                             </h2>
           }
         />
