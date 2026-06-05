@@ -219,7 +219,7 @@ const WaterTestFormSection = ({ id }: { id?: string }) => {
             <div className="container mx-auto px-4">
                 <div className="max-w-4xl mx-auto mb-16 text-center">
                     <h2 className="mb-8 heading-pro-max">
-                        <span className="font-bold text-[#18448F]">Planifiez votre test d'eau.</span>
+                        <span className="font-bold text-[#18448F]">Planifiez votre <span className="text-[#8CC63F]">test d'eau.</span></span>
                     </h2>
                     <p className="body-pro-max max-w-4xl mx-auto" style={{ fontWeight: 300, color: 'rgb(71, 85, 105)', fontSize: '20px', lineHeight: '28px' }}>
                         Remplissez le formulaire pour planifier le prélèvement de votre échantillon d'eau.

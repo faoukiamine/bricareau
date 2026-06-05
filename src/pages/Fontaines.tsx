@@ -290,7 +290,7 @@ const Fontaines = () => {
             <Header />
             <main>
                 {/* 1. IMMERSIVE HERO - INDEX STYLE */}
-                <section className="relative min-h-[100vh] flex flex-col overflow-hidden bg-white lg:pt-32">
+                <section className="relative min-h-[100vh] flex flex-col justify-center overflow-hidden bg-white">
                     {/* Image Section - Stacked on Mobile/Tablet Portrait, Overlay on Desktop */}
                     <div className="relative lg:absolute lg:inset-0 w-full h-[400px] md:h-[550px] lg:h-full z-0 overflow-hidden">
                         <div className="absolute inset-0 z-10 bg-gradient-to-b from-transparent via-[#f0f9ff]/20 to-white lg:bg-gradient-to-r lg:from-[#f0f9ff] lg:via-[#f0f9ff]/40 35% lg:to-transparent" />
@@ -439,7 +439,7 @@ const Fontaines = () => {
                                         }
                                     }
                                 }}
-                                className="absolute -left-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-slate-900 hover:bg-[#18448F] text-white flex items-center justify-center shadow-lg transition-all hover:scale-110 active:scale-95 opacity-0 group-hover:opacity-100 focus:opacity-100 transition-opacity duration-300"
+                                className="absolute -left-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-[#18448F] hover:bg-blue-700 text-white flex items-center justify-center shadow-lg transition-all hover:scale-110 active:scale-95 opacity-0 group-hover:opacity-100 focus:opacity-100 transition-opacity duration-300"
                                 aria-label="Précédent"
                             >
                                 <ChevronLeft className="w-5 h-5" />
@@ -459,7 +459,7 @@ const Fontaines = () => {
                                         }
                                     }
                                 }}
-                                className="absolute -right-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-slate-900 hover:bg-[#18448F] text-white flex items-center justify-center shadow-lg transition-all hover:scale-110 active:scale-95 opacity-0 group-hover:opacity-100 focus:opacity-100 transition-opacity duration-300"
+                                className="absolute -right-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-[#18448F] hover:bg-blue-700 text-white flex items-center justify-center shadow-lg transition-all hover:scale-110 active:scale-95 opacity-0 group-hover:opacity-100 focus:opacity-100 transition-opacity duration-300"
                                 aria-label="Suivant"
                             >
                                 <ChevronRight className="w-5 h-5" />
@@ -618,7 +618,7 @@ const Fontaines = () => {
                                     NOTRE PORTFOLIO
                                 </span>
                                 <h2 className="heading-pro-max tracking-tight leading-[1.1]">
-                                    <span className="italic font-light text-[#18448F] block">Intégration</span>
+                                    <span className="font-bold not-italic text-[#18448F] block">Intégration</span>
                                     <span className="font-bold text-[#18448F] block">parfaite & élégante.</span>
                                 </h2>
                             </div>
