@@ -251,7 +251,7 @@ const Footer = () => {
                 Conditions d'utilisation
               </Link>
               <Link to="/desabonnement" className="hover:text-white transition-colors underline decoration-white/30 underline-offset-4">
-                Se désabonner
+                se désabonner
               </Link>
             </div>
           </div>
