@@ -124,8 +124,8 @@ const FontainesDeauModernes = () => {
                 <Hero 
                     className="min-h-[100vh]"
                     image={heroFountains}
-                    highlightedTitle="Optez pour une hydratation "
-                    mainTitle="intelligente et durable."
+                    highlightedTitle={<span className="font-bold not-italic">Optez pour <span className="text-[#8CC63F]">une hydratation</span> </span>}
+                    mainTitle={<span className="font-bold not-italic">intelligente et durable.</span>}
                     subtitle="Offrez à vos collaborateurs une eau filtrée d'exception, fraîche, chaude ou pétillante, directement raccordée à votre réseau. Une solution écologique, économique et sans logistique de bonbonnes."
                     ctaText="OBTENIR MON ESSAI GRATUIT"
                     ctaLink="/contact-entreprises"
@@ -141,12 +141,12 @@ const FontainesDeauModernes = () => {
                         <div className="grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-16 items-center">
                             {/* Text Content */}
                             <div className="space-y-6 text-center lg:text-left">
-                                <h3 className="text-xs font-black text-blue-600 uppercase tracking-[0.2em] mb-4">
+                                <h3 className="inline-block px-4 py-1.5 bg-[#18448F] text-white rounded-full text-[10px] font-black uppercase tracking-[0.3em] mb-4">
                                     L'EXCELLENCE DE L'EAU À LA SOURCE
                                 </h3>
                                 <h2 className="mb-8 heading-pro-max">
-                                    <span className="italic font-light text-[#18448F] block">Engagé à fournir des solutions de </span>
-                                    <span className="font-bold text-[#18448F] block">fontaines à eau de haute qualité.</span>
+                                    <span className="font-bold not-italic text-[#18448F] block">Engagé à fournir des solutions de </span>
+                                    <span className="font-bold not-italic text-[#18448F] block">fontaines à eau de <span className="text-[#8CC63F]">haute qualité.</span></span>
                                 </h2>
 
                                 <p className="text-slate-500 text-lg font-light leading-relaxed pt-2">
@@ -190,12 +190,12 @@ const FontainesDeauModernes = () => {
 
                     <div className="container mx-auto px-6 relative z-10 max-w-7xl">
                         <div className="text-center mb-24 max-w-3xl mx-auto space-y-6">
-                            <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.3em]">
+                            <span className="inline-block px-4 py-1.5 bg-[#18448F] text-white rounded-full text-[10px] font-black uppercase tracking-[0.3em]">
                                 VALEUR AJOUTÉE
                             </span>
                             <h2 className="mb-8 heading-pro-max text-center">
-                                <span className="italic font-light text-[#18448F] block">Élevez le standard</span>
-                                <span className="font-bold text-[#18448F] block text-center">d'hydratation de vos bureaux.</span>
+                                <span className="font-bold not-italic text-[#18448F] block">Élevez le standard</span>
+                                <span className="font-bold not-italic text-[#18448F] block text-center">d'hydratation de vos bureaux.</span>
                             </h2> 
                         </div>
 
@@ -497,87 +497,6 @@ const FontainesDeauModernes = () => {
                 </section>
 
                 {/* ========================================================================= */}
-                {/* NOUVELLE SECTION - LES 3 NIVEAUX DE PURETE ABSOLUE */}
-                {/* ========================================================================= */}
-                <section className="py-32 bg-white relative overflow-hidden border-y border-slate-100">
-                    {/* Abstract tech background elements */}
-                    <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-                        <div className="absolute -top-[20%] -right-[10%] w-[50%] h-[50%] rounded-full bg-blue-50/50 blur-[100px]" />
-                        <div className="absolute -bottom-[20%] -left-[10%] w-[50%] h-[50%] rounded-full bg-indigo-50/50 blur-[100px]" />
-                    </div>
-
-                    <div className="container mx-auto px-6 max-w-7xl relative z-10">
-                        <div className="text-center space-y-4 mb-24">
-                            <span className="inline-block px-4 py-1.5 bg-blue-50 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.2em]">
-                                TECHNOLOGIE DE FILTRATION
-                            </span>
-                            <h2 className="heading-pro-max text-center">
-                                <span className="font-bold text-[#18448F] block text-center">Les 3 niveaux de pureté absolue.</span>
-                            </h2> 
-                            <p className="text-slate-500 font-light max-w-2xl mx-auto text-base mt-6">
-                                Notre système de purification ne se contente pas de filtrer. Il sublime chaque goutte à travers un processus technologique en trois étapes distinctes pour une sécurité et un goût inégalés.
-                            </p>
-                        </div>
-
-                        {/* Interactive Steps Grid */}
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-10">
-                            {[
-                                {
-                                    icon: <Droplets className="w-8 h-8 text-blue-500" />,
-                                    title: "Charbon Actif Densifié",
-                                    subtitle: "ÉTAPE 01",
-                                    content: "Notre filtre à charbon actif de haute densité absorbe le chlore, retient les sédiments, neutralise les odeurs et améliore considérablement le goût de l'eau pour une expérience gustative d'exception à chaque tasse.",
-                                    color: "from-blue-400/20 to-blue-100/5"
-                                },
-                                {
-                                    icon: <ShieldCheck className="w-8 h-8 text-indigo-500" />,
-                                    title: "Osmose Inverse",
-                                    subtitle: "ÉTAPE 02",
-                                    content: "Pour une pureté moléculaire absolue, la membrane d'osmose inverse élimine les métaux lourds, le calcaire, les nitrates, les résidus chimiques de pesticides et toutes les impuretés microscopiques en suspension.",
-                                    color: "from-indigo-400/20 to-indigo-100/5"
-                                },
-                                {
-                                    icon: <Zap className="w-8 h-8 text-amber-500" />,
-                                    title: "Stérilisation UV-C",
-                                    subtitle: "ÉTAPE 03",
-                                    content: "Un rayonnement ultraviolet de type C puissant détruit l'ADN des micro-organismes, bactéries et virus directement au point de distribution, garantissant une eau stérile et d'une sécurité hygiénique absolue.",
-                                    color: "from-amber-400/20 to-amber-100/5"
-                                }
-                            ].map((step, idx) => (
-                                <div 
-                                    key={idx}
-                                    className="group relative rounded-[2.5rem] bg-white border border-slate-100 p-10 hover:shadow-2xl hover:shadow-blue-900/5 hover:-translate-y-2 transition-all duration-500 overflow-hidden flex flex-col h-full"
-                                >
-                                    {/* Hover gradient background */}
-                                    <div className={`absolute inset-0 bg-gradient-to-br ${step.color} opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none`} />
-                                    
-                                    {/* Content */}
-                                    <div className="relative z-10 flex-grow flex flex-col">
-                                        <div className="flex justify-between items-start mb-12">
-                                            <div className="w-16 h-16 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-center shadow-inner group-hover:scale-110 transition-transform duration-500 group-hover:bg-white">
-                                                {step.icon}
-                                            </div>
-                                            <span className="text-[10px] font-black tracking-[0.2em] text-slate-300 group-hover:text-slate-800 transition-colors duration-500">
-                                                {step.subtitle}
-                                            </span>
-                                        </div>
-                                        
-                                        <h3 className="text-2xl font-bold text-slate-800 mb-6 group-hover:text-[#18448F] transition-colors duration-300">
-                                            {step.title}
-                                        </h3>
-                                        
-                                        <p className="text-slate-500 font-light leading-relaxed flex-grow group-hover:text-slate-700 transition-colors duration-300">
-                                            {step.content}
-                                        </p>
-                                    </div>
-
-                                    {/* Progress line effect at bottom */}
-                                    <div className="absolute bottom-0 left-0 h-1 bg-[#18448F] w-0 group-hover:w-full transition-all duration-700 ease-out" />
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </section>
 
 
                 {/* SECTION 6: MODERN SLIDER SHOWCASE ("Des systèmes pour tous les environnements") */}
@@ -587,16 +506,16 @@ const FontainesDeauModernes = () => {
                     <div className="container mx-auto px-6 max-w-7xl text-center mb-20">
                         
                         <h2 className="mb-8 heading-pro-max text-center">
-                            <span className="font-bold text-[#18448F] block text-center">Une polyvalence totale, peu importe l'environnement</span>
+                            <span className="font-bold text-[#18448F] block text-center">Une <span className="text-[#8CC63F]">polyvalence totale</span>, peu importe l'environnement</span>
                         </h2>
 
                     </div>
 
                     {/* Outer flex container spanning full viewport width */}
-                    <div className="w-full flex flex-col items-start gap-12 select-none overflow-hidden pl-0">
+                    <div className="w-full flex flex-col items-center gap-12 select-none overflow-hidden">
                         
                         {/* Left Column: Scrollable Cards Container */}
-                        <div className="w-full lg:w-[73%] relative group pl-0">
+                        <div className="w-full max-w-7xl relative group px-8 mx-auto">
                             {/* Left Navigation Arrow (Prev Circle Button) */}
                             <button 
                                 onClick={() => {
@@ -611,7 +530,7 @@ const FontainesDeauModernes = () => {
                                         }
                                     }
                                 }}
-                                className="absolute -left-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-slate-900 hover:bg-blue-600 text-white flex items-center justify-center shadow-lg transition-all hover:scale-110 active:scale-95 opacity-0 group-hover:opacity-100 focus:opacity-100 transition-opacity duration-300"
+                                className="absolute -left-4 md:-left-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-[#18448F] hover:bg-blue-600 text-white flex items-center justify-center shadow-lg transition-all hover:scale-110 active:scale-95 opacity-0 group-hover:opacity-100 focus:opacity-100 transition-opacity duration-300"
                                 aria-label="Précédent"
                             >
                                 <ChevronLeft className="w-5 h-5" />
@@ -631,7 +550,7 @@ const FontainesDeauModernes = () => {
                                         }
                                     }
                                 }}
-                                className="absolute -right-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-slate-900 hover:bg-blue-600 text-white flex items-center justify-center shadow-lg transition-all hover:scale-110 active:scale-95"
+                                className="absolute -right-4 md:-right-8 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-[#18448F] hover:bg-blue-600 text-white flex items-center justify-center shadow-lg transition-all hover:scale-110 active:scale-95"
                                 aria-label="Suivant"
                             >
                                 <ChevronRight className="w-5 h-5" />
@@ -640,7 +559,7 @@ const FontainesDeauModernes = () => {
                             {/* Scroll Track - Starts flush to screen's left edge */}
                             <div 
                                 id="fountain-slider-track"
-                                className="flex gap-6 overflow-x-auto scroll-smooth pb-6 snap-x snap-mandatory no-scrollbar pl-0 pr-12"
+                                className="flex gap-6 overflow-x-auto scroll-smooth pb-6 snap-x snap-mandatory no-scrollbar lg:justify-center"
                                 style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
                             >
                                 {[
@@ -734,7 +653,7 @@ const FontainesDeauModernes = () => {
                         title={
                             <div className="text-center space-y-3 mb-16">
                                 <span className="text-[10px] font-black text-blue-500 uppercase tracking-[0.5em] block mb-4">ILS NOUS FONT CONFIANCE</span>
-                                <h2 className="heading-pro-max text-center uppercase">
+                                <h2 className="heading-pro-max text-center">
                                     <span className="italic font-light text-[#18448F]">Le choix des </span>
                                     <span className="font-bold text-[#18448F]">entreprises leaders.</span>
                                 </h2>
