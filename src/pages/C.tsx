@@ -177,8 +177,8 @@ const C = () => {
                     highlightedTitle={<><span className="text-[#8CC63F] font-bold not-italic">La pureté de l'eau</span> <span className="font-bold not-italic">sous l'évier,</span></>}
                     mainTitle={<><span className="text-[#8CC63F] font-bold not-italic">l'excellence</span> dans chaque goutte.</>}
                     subtitle="Profitez d'une eau potable d'une qualité exceptionnelle directement de votre robinet. Nos systèmes de filtration sous comptoir et d'ultrafiltration éliminent 99% des contaminants pour la santé de votre famille."
-                    ctaText="Explorer nos systèmes"
-                    ctaLink="#purification-systems"
+                    ctaText="Planifiez une consultation gratuite"
+                    ctaLink="/consultation"
                     showPhone={true}
                     showBreadcrumbs={true}
                     singleLineTitle={true}

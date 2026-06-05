@@ -441,15 +441,7 @@ const B = () => {
                                     </div>
 
                                     <div className="relative z-10 p-10 h-full flex flex-col">
-                                        {/* Icon & Category */}
-                                        <div className="flex justify-between items-start mb-8">
-                                            <div className={cn(
-                                                "w-16 h-16 rounded-2xl flex items-center justify-center text-white shadow-xl transition-all duration-500 group-hover:rotate-[10deg] group-hover:scale-110 bg-gradient-to-br",
-                                                s.color
-                                            )}>
-                                                {s.icon}
-                                            </div>
-                                        </div>
+
 
                                         <div className="flex-grow space-y-4">
                                             <div className="flex items-center gap-2">
@@ -458,7 +450,7 @@ const B = () => {
                                                     Cause identifiée : {s.cause}
                                                 </span>
                                             </div>
-                                            <h3 className="text-3xl font-black text-[#18448F] leading-[1.1] tracking-tight">
+                                            <h3 className="text-3xl font-medium text-[#18448F] leading-[1.1] tracking-tight">
                                                 {s.problem}
                                             </h3>
                                             <p className="text-sm font-light text-slate-600 leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-700 delay-100">
