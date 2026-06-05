@@ -171,16 +171,9 @@ const Home1 = () => {
                                     key={index}
                                     className={`col-start-1 row-start-1 transition-all duration-700 ease-in-out flex flex-col justify-start ${currentSlide === index ? 'opacity-100 translate-y-0 pointer-events-auto z-10' : 'opacity-0 translate-y-4 pointer-events-none z-0 invisible'}`}
                                 >
-                                    <div className="mb-8">
-                                        <div className="inline-flex items-center justify-center px-4 py-1.5 rounded-full border border-white bg-white/10 backdrop-blur-sm">
-                                            <span className="text-white font-bold text-[10px] sm:text-xs uppercase tracking-[0.2em]">
-                                                {slide.badge}
-                                            </span>
-                                        </div>
-                                    </div>
-                                    
-                                    <h1 className="text-[50px] leading-[55px] font-sans font-light italic text-white mb-6 tracking-tight">
-                                        {slide.title1} <span className={`${slide.titleAccentColor} font-sans font-bold not-italic drop-shadow-lg`}>{slide.titleAccent}</span><br/> {slide.title2}
+
+                                    <h1 className="text-[50px] leading-[55px] font-sans font-bold text-white mb-6 tracking-tight">
+                                        {slide.title1} <span className={`${slide.titleAccentColor} font-sans font-bold drop-shadow-lg`}>{slide.titleAccent}</span><br/> {slide.title2}
                                     </h1>
                                     
                                     <p className="text-blue-100 text-lg sm:text-xl font-light leading-relaxed max-w-xl drop-shadow-md">
@@ -242,10 +235,10 @@ const Home1 = () => {
             {/* Partner Ribbon */}
             <section className="bg-[#18448F] py-10 overflow-hidden border-y border-[#18448F]/20">
                 <div className="w-full relative">
-                    <div className="flex w-max animate-marquee gap-16 opacity-60 grayscale hover:opacity-100 transition-opacity duration-700">
+                    <div className="flex w-max animate-marquee gap-16 transition-opacity duration-700">
                         {/* First Set */}
                         <div className="flex gap-16 items-center px-8">
-                        <span className="text-white font-bold text-xl italic whitespace-nowrap">Coréalis Pharma</span>
+                            <span className="text-white font-bold text-xl italic whitespace-nowrap">Coréalis Pharma</span>
                             <span className="text-white font-bold text-xl italic whitespace-nowrap">Productions Zinda</span>
                             <span className="text-white font-bold text-xl italic whitespace-nowrap">Ils Pharma</span>
                             <span className="text-white font-bold text-xl italic whitespace-nowrap">Google</span>
@@ -256,6 +249,19 @@ const Home1 = () => {
                             <span className="text-white font-bold text-xl italic whitespace-nowrap">Imprimerie Stampa Media</span>
                             <span className="text-white font-bold text-xl italic whitespace-nowrap">UPS</span>
                             <span className="text-white font-bold text-xl italic whitespace-nowrap">Biovantek</span>
+                            <span className="text-white font-bold text-xl italic whitespace-nowrap">Garderie les poussins du monde</span>
+                            <span className="text-white font-bold text-xl italic whitespace-nowrap">Calo</span>
+                            <span className="text-white font-bold text-xl italic whitespace-nowrap">Fous de l'Ile Kombucha</span>
+                            <span className="text-white font-bold text-xl italic whitespace-nowrap">Garderie les petits carillons</span>
+                            <span className="text-white font-bold text-xl italic whitespace-nowrap">Fromagerie Marie-Kadé</span>
+                            <span className="text-white font-bold text-xl italic whitespace-nowrap">Gestion & Construction Métropolitain</span>
+                            <span className="text-white font-bold text-xl italic whitespace-nowrap">Gestion immobilière Wilkar</span>
+                            <span className="text-white font-bold text-xl italic whitespace-nowrap">Geep Canada</span>
+                            <span className="text-white font-bold text-xl italic whitespace-nowrap">Injectik</span>
+                            <span className="text-white font-bold text-xl italic whitespace-nowrap">Investment ERES</span>
+                            <span className="text-white font-bold text-xl italic whitespace-nowrap">I3 Biomedical</span>
+                            <span className="text-white font-bold text-xl italic whitespace-nowrap">Kruger</span>
+                            <span className="text-white font-bold text-xl italic whitespace-nowrap">Institut des communications graphiques</span>
                         </div>
                         {/* Second Set (Duplicate) */}
                         <div className="flex gap-16 items-center px-8">
@@ -270,7 +276,19 @@ const Home1 = () => {
                             <span className="text-white font-bold text-xl italic whitespace-nowrap">Imprimerie Stampa Media</span>
                             <span className="text-white font-bold text-xl italic whitespace-nowrap">UPS</span>
                             <span className="text-white font-bold text-xl italic whitespace-nowrap">Biovantek</span>
-
+                            <span className="text-white font-bold text-xl italic whitespace-nowrap">Garderie les poussins du monde</span>
+                            <span className="text-white font-bold text-xl italic whitespace-nowrap">Calo</span>
+                            <span className="text-white font-bold text-xl italic whitespace-nowrap">Fous de l'Ile Kombucha</span>
+                            <span className="text-white font-bold text-xl italic whitespace-nowrap">Garderie les petits carillons</span>
+                            <span className="text-white font-bold text-xl italic whitespace-nowrap">Fromagerie Marie-Kadé</span>
+                            <span className="text-white font-bold text-xl italic whitespace-nowrap">Gestion & Construction Métropolitain</span>
+                            <span className="text-white font-bold text-xl italic whitespace-nowrap">Gestion immobilière Wilkar</span>
+                            <span className="text-white font-bold text-xl italic whitespace-nowrap">Geep Canada</span>
+                            <span className="text-white font-bold text-xl italic whitespace-nowrap">Injectik</span>
+                            <span className="text-white font-bold text-xl italic whitespace-nowrap">Investment ERES</span>
+                            <span className="text-white font-bold text-xl italic whitespace-nowrap">I3 Biomedical</span>
+                            <span className="text-white font-bold text-xl italic whitespace-nowrap">Kruger</span>
+                            <span className="text-white font-bold text-xl italic whitespace-nowrap">Institut des communications graphiques</span>
                         </div>
                     </div>
                 </div>
@@ -286,8 +304,8 @@ const Home1 = () => {
                             <div className="inline-block px-4 py-1.5 bg-[#18448F] text-white rounded-full text-[11px] font-bold uppercase tracking-[0.2em] mb-6 shadow-sm">
                                 Traitement d'eau résidentiel
                             </div>
-                            <h2 className="text-[50px] leading-[55px] font-sans font-light italic text-slate-900 mb-8 tracking-tight">
-                                Votre eau de robinet <span className="font-medium text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-500 not-italic">mérite mieux.</span>
+                            <h2 className="text-[50px] leading-[55px] font-sans font-light italic text-[#18448F] mb-8 tracking-tight">
+                                Votre eau de robinet <span className="font-bold text-[#8CC63F]">mérite mieux.</span>
                             </h2>
                             <p className="text-lg md:text-xl text-slate-500 leading-relaxed font-light mb-10">
                                 Votre bien-être commence par la qualité de votre eau. Fini les désagréments liés au calcaire, au chlore ou au fer qui abîment votre électroménager et assèchent votre peau. Bricareau analyse votre eau avec précision et conçoit un système sur mesure pour garantir une pureté absolue à toute votre famille.
@@ -323,8 +341,8 @@ const Home1 = () => {
                             <div className="inline-block px-4 py-1.5 bg-[#18448F] text-white rounded-full text-[11px] font-bold uppercase tracking-[0.2em] mb-6 shadow-sm">
                                 Bureaux & commerces
                             </div>
-                            <h2 className="text-[50px] leading-[55px] font-sans font-light italic text-slate-900 mb-8 tracking-tight">
-                                L'eau traitée, un investissement <span className="font-medium text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-500 not-italic">rentable</span> pour votre entreprise.
+                            <h2 className="text-[50px] leading-[55px] font-sans font-light italic text-[#18448F] mb-8 tracking-tight">
+                                L'eau traitée, un investissement <span className="font-bold italic text-[#8CC63F]">rentable</span> pour votre entreprise.
                             </h2>
                             <p className="text-lg md:text-xl text-slate-500 leading-relaxed font-light mb-10">
                                 Offrez à vos collaborateurs une eau de boisson pure et revitalisante. En remplaçant l'achat récurrent de bouteilles ou de bonbonnes par nos fontaines filtrantes sur réseau, vous réalisez des économies drastiques, éliminez la gestion des stocks et améliorez le bien-être quotidien au travail.
@@ -352,8 +370,8 @@ const Home1 = () => {
                             <div className="inline-block px-4 py-1.5 bg-[#18448F] text-white rounded-full text-[11px] font-bold uppercase tracking-[0.2em] mb-6 shadow-sm">
                                 Hôtels & restaurants
                             </div>
-                            <h2 className="text-[50px] leading-[55px] font-sans font-light italic text-slate-900 mb-8 tracking-tight">
-                                Parce que <span className="font-medium text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-500 not-italic">l'expérience</span> de vos clients passe aussi par l'eau.
+                            <h2 className="text-[50px] leading-[55px] font-sans font-light italic text-[#18448F] mb-8 tracking-tight">
+                                Parce que <span className="font-bold italic text-[#8CC63F]">l'expérience</span> de vos clients passe aussi par l'eau.
                             </h2>
                             <p className="text-lg md:text-xl text-slate-500 leading-relaxed font-light mb-10">
                                 Dans l'hôtellerie et la restauration, l'eau intervient à chaque étape — cuisine, glace, linge, vaisselle, douches. Une eau mal traitée se traduit par des coûts cachés, des équipements fragilisés et une qualité de service en dessous de vos standards.
@@ -520,7 +538,7 @@ const Home1 = () => {
                         
                         {/* Interactive Map Markers positioned relative to the square map container */}
                         {[ 
-                            { id: 0, name: "Montréal & île", top: "50%", left: "50%" },
+                            { id: 0, name: "Ile de Montréal", top: "50%", left: "50%" },
                             { id: 1, name: "Rive-Nord", top: "38%", left: "44%" },
                             { id: 2, name: "Rive-Sud", top: "62%", left: "56%" },
                             { id: 3, name: "Laurentides", top: "25%", left: "32%" },
@@ -568,7 +586,7 @@ const Home1 = () => {
                     {/* Region Cards in a 3-column Grid */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto pointer-events-auto">
                         {[
-                            { name: "Montréal & île", desc: "Intervention rapide" },
+                            { name: "Ile de Montréal", desc: "Intervention rapide" },
                             { name: "Rive-Nord", desc: "Laval, Terrebonne..." },
                             { name: "Rive-Sud", desc: "Longueuil, Brossard..." },
                             { name: "Laurentides", desc: "Saint-Jérôme et environs" },
@@ -627,14 +645,8 @@ const Home1 = () => {
                             <div className="relative z-10">
 
                                 
-                                <h2 className="text-[50px] leading-[55px] font-sans font-light italic text-slate-900 mb-8 tracking-tight">
-                                    Laissez-nous vous aider à trouver <br/>
-                                    <span className="relative inline-block">
-                                        <span className="relative z-10 font-medium not-italic text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-500">la solution adaptée.</span>
-                                        <svg className="absolute -bottom-2 left-0 w-full h-4 text-[#8CC63F] -z-0" viewBox="0 0 200 20" preserveAspectRatio="none">
-                                            <path d="M0,10 C50,20 150,0 200,10" stroke="currentColor" strokeWidth="8" fill="none" strokeLinecap="round" />
-                                        </svg>
-                                    </span>
+                                <h2 className="text-[50px] leading-[55px] font-sans font-light italic text-[#18448F] mb-8 tracking-tight">
+                                    Laissez-nous vous aider à trouver <span className="font-bold italic text-[#8CC63F]">la solution adaptée.</span>
                                 </h2>
                                 
                                 <p className="text-xl text-slate-500 font-light mb-12 max-w-lg leading-relaxed">
