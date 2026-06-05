@@ -6,6 +6,12 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import { ProMaxButton } from "@/components/ui/ProMaxButton";
 import { NavLink } from "@/components/NavLink";
 import { Droplets, ShieldCheck, Zap, Coffee, Utensils, Hotel, ArrowRight, ChevronRight, ChevronLeft, Phone, Handshake } from "lucide-react";
+import {
+    Accordion,
+    AccordionContent,
+    AccordionItem,
+    AccordionTrigger
+} from "@/components/ui/accordion";
 
 // Import images
 import heroImage from "@/assets/2151081881.jpg";
@@ -87,7 +93,7 @@ const FiltrationHotelsRestaurants = () => {
                 {/* HERO SECTION */}
                 <Hero 
                     image={heroImage}
-                    highlightedTitle="L'excellence de l'eau "
+                    highlightedTitle={<span className="font-bold not-italic text-[#8CC63F] drop-shadow-[0_4px_8px_rgba(0,0,0,0.9)]">L'excellence de l'eau </span>}
                     mainTitle="au service de la gastronomie."
                     subtitle="Dans la restauration, l'eau est votre ingrédient principal et l'alliée silencieuse de vos équipements. De la perfection d'un espresso à l'éclat de votre verrerie, découvrez nos systèmes de filtration dédiés aux professionnels."
                     ctaText="PLANIFIER UNE CONSULTATION"
@@ -105,9 +111,9 @@ const FiltrationHotelsRestaurants = () => {
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:auto-rows-[250px]">
                             {/* Text (Row 1, Full Width) */}
                             <div className="md:col-span-3 md:row-span-1 flex flex-col justify-center px-8 pb-12 text-center bg-transparent">
-                                <h2 className="text-3xl md:text-4xl font-light text-[#18448F] mb-4">
-                                    L'eau pure n'est pas un détail, <br className="hidden md:block" />
-                                    <span className="font-bold">c'est le fondement de la cuisine de votre restaurant.</span>
+                                <h2 className="text-3xl md:text-4xl font-bold text-[#18448F] mb-4">
+                                    <span className="text-[#8CC63F]">L'eau filtrée</span> n'est pas un détail, <br className="hidden md:block" />
+                                    <span>c'est le fondement de la cuisine de votre restaurant.</span>
                                 </h2>
                                 <p className="text-slate-600 font-light leading-relaxed max-w-3xl mx-auto">
                                     Un calcaire excessif détruit vos fours mixtes professionnels et ternit votre verrerie. Un chlore persistant altère subtilement le goût de votre café et de vos créations culinaires. Bricareau conçoit des systèmes de filtration sur mesure qui protègent vos investissements et subliment l'expérience de vos clients en salle.
@@ -147,8 +153,8 @@ const FiltrationHotelsRestaurants = () => {
                     <div className="container mx-auto px-6 max-w-6xl">
                         <div className="text-center mb-16">
                             <h2 className="heading-pro-max">
-                                <span className="font-light italic text-[#18448F] block">Là où l'eau fait</span>
-                                <span className="font-bold text-[#18448F] block">toute la différence.</span>
+                                <span className="font-bold not-italic text-[#18448F] block">Là où l'eau fait</span>
+                                <span className="font-bold not-italic text-[#8CC63F] block">toute la différence.</span>
                             </h2>
                         </div>
                         <style>{`
@@ -229,8 +235,8 @@ const FiltrationHotelsRestaurants = () => {
                     <div className="container mx-auto px-6 max-w-7xl">
                         <div className="text-center mb-20">
                             <h2 className="heading-pro-max">
-                                <span className="font-light italic text-[#18448F] block">Les solutions de filtration d'eau</span>
-                                <span className="font-bold text-[#18448F] block">pour les professionnels de la restauration.</span>
+                                <span className="font-bold not-italic text-[#18448F] block">Les solutions de filtration d'eau</span>
+                                <span className="font-bold not-italic text-[#18448F] block">pour les <span className="text-[#8CC63F]">professionnels de la restauration.</span></span>
                             </h2>
                         </div>
 
@@ -324,52 +330,61 @@ const FiltrationHotelsRestaurants = () => {
                     <div className="container mx-auto px-6 max-w-7xl">
                         <div className="flex flex-col lg:flex-row items-center gap-16">
                             <div className="lg:w-1/2 space-y-8">
-                                <span className="text-[10px] font-black text-blue-500 uppercase tracking-[0.3em]">Rendement sur Investissement</span>
+                                <span className="inline-block px-4 py-1.5 bg-[#18448F] text-white rounded-full text-[10px] font-black uppercase tracking-[0.3em] mb-4 shadow-sm w-fit">Rendement sur Investissement</span>
                                 <h2 className="heading-pro-max">
-                                    <span className="font-light italic text-[#18448F] block">Transformez une dépense</span>
-                                    <span className="font-bold text-[#18448F] block">en avantage compétitif.</span>
+                                    <span className="font-bold not-italic text-[#18448F] block">Transformez une dépense</span>
+                                    <span className="font-bold not-italic text-[#18448F] block">en <span className="text-[#8CC63F]">avantage compétitif.</span></span>
                                 </h2>
                                 <p className="text-slate-600 text-lg font-light leading-relaxed">
                                     Au-delà de la qualité en tasse et dans l'assiette, nos systèmes de traitement d'eau s'autofinancent rapidement en réduisant drastiquement vos coûts opérationnels en cuisine.
                                 </p>
                                 
-                                <div className="space-y-6 pt-4">
-                                    <div className="flex gap-4">
-                                        <div className="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center shrink-0">
-                                            <span className="font-bold text-blue-600">1</span>
-                                        </div>
-                                        <div>
-                                            <h4 className="font-bold text-slate-900 text-lg">Élimination des achats d'eau embouteillée</h4>
-                                            <p className="text-sm text-slate-500 font-light mt-1">Servez votre propre eau filtrée et gazéifiée en salle, réduisez vos factures d'approvisionnement et proposez une boisson locale et éco-responsable.</p>
-                                        </div>
-                                    </div>
-                                    <div className="flex gap-4">
-                                        <div className="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center shrink-0">
-                                            <span className="font-bold text-blue-600">2</span>
-                                        </div>
-                                        <div>
-                                            <h4 className="font-bold text-slate-900 text-lg">Baisse drastique des frais de maintenance</h4>
-                                            <p className="text-sm text-slate-500 font-light mt-1">Une eau sans calcaire prévient les pannes des machines à café, lave-vaisselles et chaudières, vous faisant économiser des milliers de dollars en réparations.</p>
-                                        </div>
-                                    </div>
-                                    <div className="flex gap-4">
-                                        <div className="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center shrink-0">
-                                            <span className="font-bold text-blue-600">3</span>
-                                        </div>
-                                        <div>
-                                            <h4 className="font-bold text-slate-900 text-lg">Sublimation du goût et de l'expérience client</h4>
-                                            <p className="text-sm text-slate-500 font-light mt-1">L'eau représentant 98% de votre café, une filtration optimale révèle des arômes complexes, garantit des glaçons cristallins purs et fidélise votre clientèle par un goût constant.</p>
-                                        </div>
-                                    </div>
-                                    <div className="flex gap-4">
-                                        <div className="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center shrink-0">
-                                            <span className="font-bold text-blue-600">4</span>
-                                        </div>
-                                        <div>
-                                            <h4 className="font-bold text-slate-900 text-lg">Économies massives sur les produits d'entretien</h4>
-                                            <p className="text-sm text-slate-500 font-light mt-1">Une eau adoucie décuple l'efficacité des détergents. Réduisez vos doses de produits chimiques jusqu'à 30% tout en obtenant une verrerie impeccable sans essuyage.</p>
-                                        </div>
-                                    </div>
+                                <div className="pt-4">
+                                    <Accordion type="single" collapsible className="w-full">
+                                        <AccordionItem value="item-1" className="border-b border-slate-100 last:border-none">
+                                            <AccordionTrigger className="text-slate-900 font-semibold text-left text-lg hover:no-underline py-5 transition-colors">
+                                                <div className="text-left">
+                                                    Élimination des achats d'eau embouteillée
+                                                </div>
+                                            </AccordionTrigger>
+                                            <AccordionContent className="text-slate-600 text-[15px] leading-relaxed pb-6 text-justify">
+                                                Servez votre propre eau filtrée et gazéifiée en salle, réduisez vos factures d'approvisionnement et proposez une boisson locale et éco-responsable.
+                                            </AccordionContent>
+                                        </AccordionItem>
+
+                                        <AccordionItem value="item-2" className="border-b border-slate-100 last:border-none">
+                                            <AccordionTrigger className="text-slate-900 font-semibold text-left text-lg hover:no-underline py-5 transition-colors">
+                                                <div className="text-left">
+                                                    Baisse drastique des frais de maintenance
+                                                </div>
+                                            </AccordionTrigger>
+                                            <AccordionContent className="text-slate-600 text-[15px] leading-relaxed pb-6 text-justify">
+                                                Une eau sans calcaire prévient les pannes des machines à café, lave-vaisselles et chaudières, vous faisant économiser des milliers de dollars en réparations.
+                                            </AccordionContent>
+                                        </AccordionItem>
+
+                                        <AccordionItem value="item-3" className="border-b border-slate-100 last:border-none">
+                                            <AccordionTrigger className="text-slate-900 font-semibold text-left text-lg hover:no-underline py-5 transition-colors">
+                                                <div className="text-left">
+                                                    Sublimation du goût et de l'expérience client
+                                                </div>
+                                            </AccordionTrigger>
+                                            <AccordionContent className="text-slate-600 text-[15px] leading-relaxed pb-6 text-justify">
+                                                L'eau représentant 98% de votre café, une filtration optimale révèle des arômes complexes, garantit des glaçons cristallins purs et fidélise votre clientèle par un goût constant.
+                                            </AccordionContent>
+                                        </AccordionItem>
+
+                                        <AccordionItem value="item-4" className="border-b border-slate-100 last:border-none">
+                                            <AccordionTrigger className="text-slate-900 font-semibold text-left text-lg hover:no-underline py-5 transition-colors">
+                                                <div className="text-left">
+                                                    Économies massives sur les produits d'entretien
+                                                </div>
+                                            </AccordionTrigger>
+                                            <AccordionContent className="text-slate-600 text-[15px] leading-relaxed pb-6 text-justify">
+                                                Une eau adoucie décuple l'efficacité des détergents. Réduisez vos doses de produits chimiques jusqu'à 30% tout en obtenant une verrerie impeccable sans essuyage.
+                                            </AccordionContent>
+                                        </AccordionItem>
+                                    </Accordion>
                                 </div>
                             </div>
                             <div className="lg:w-1/2 w-full">
@@ -429,8 +444,8 @@ const FiltrationHotelsRestaurants = () => {
                     <div className="container mx-auto px-6 max-w-7xl">
                         <div className="text-center mb-20">
                             <h2 className="heading-pro-max">
-                                <span className="font-light italic text-[#18448F] block">Notre démarche sur-mesure pour</span>
-                                <span className="font-bold text-[#18448F] block">les professionnels de la restauration.</span>
+                                <span className="font-bold not-italic text-[#18448F] block">Notre <span className="text-[#8CC63F]">démarche sur-mesure</span> pour</span>
+                                <span className="font-bold not-italic text-[#18448F] block">les professionnels de la restauration.</span>
                             </h2>
                         </div>
                         <div className="space-y-24 md:space-y-32">

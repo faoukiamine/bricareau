@@ -57,9 +57,10 @@ const SystemesCentralises = () => {
             <main>
                 {/* SECTION 1: MODERN CINEMATIC HERO (Same style as /residentiel) */}
                 <Hero 
+                    className="min-h-[100vh]"
                     image={engineeringHeroImg}
-                    highlightedTitle="Solutions de filtration d'eau "
-                    mainTitle="centralisées pour bâtiments."
+                    highlightedTitle={<span className="font-bold not-italic">Solutions de filtration d'eau </span>}
+                    mainTitle={<><span className="text-[#8CC63F]">centralisées</span> pour bâtiments.</>}
                     subtitle="Protégez l'ensemble des installations de votre bâtiment avec une filtration industrielle et commerciale centralisée de premier ordre. Une solution sur mesure pour éliminer le calcaire, le chlore et les contaminants."
                     ctaText="DEMANDER UNE ÉTUDE SUR MESURE"
                     ctaLink="/contact-entreprises"
@@ -76,18 +77,18 @@ const SystemesCentralises = () => {
                         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
                             {/* Left Column: Text Content */}
                             <div className="lg:col-span-5 space-y-6">
-                                <h3 className="text-xs font-black text-blue-600 uppercase tracking-[0.2em] mb-4">
+                                <h3 className="inline-block px-4 py-1.5 bg-[#18448F] text-white rounded-full text-[10px] font-black uppercase tracking-[0.2em] mb-6 shadow-sm">
                                     DURABILITÉ & VALEUR PATRIMONIALE
                                 </h3>
                                 <h2 className="mb-6 heading-pro-max text-left">
-                                    <span className="italic font-light text-[#18448F] block">Engagé à fournir des solutions </span>
-                                    <span className="font-bold text-[#18448F] block">de haute qualité.</span>
+                                    <span className="font-bold not-italic text-[#18448F]">Engagé à fournir des solutions de </span>
+                                    <span className="font-bold not-italic text-[#8CC63F]">haute qualité.</span>
                                 </h2>
                                 <div className="w-16 h-1 bg-blue-600 rounded-full" />
                                 <div className="text-slate-600 text-[15px] font-light leading-relaxed pt-2 space-y-4">
                                     <p>L'eau est le flux vital de vos infrastructures. Une qualité non maîtrisée expose vos installations à des risques critiques (corrosion, entartrage, prolifération bactérienne), compromettant leur intégrité et générant des surcoûts importants.</p>
                                     <p>Pour pallier ces défis, Bricareau déploie des programmes de traitement d'eau sur mesure, garantissant la pérennité de vos actifs et la conformité sanitaire. Nous développons des stratégies d'ingénierie complètes et innovantes.</p>
-                                    <p>Grâce à nos technologies de pointe (traitement solide, maîtrise du risque légionelle), nous maximisons le rendement de vos systèmes thermiques tout en réduisant drastiquement votre empreinte environnementale et vos coûts de maintenance.</p>
+
                                     <p className="font-medium text-[#18448F] pt-2">Bricareau, c’est un partenaire qui prend à cœur la santé et l’efficacité de votre bâtiment.</p>
                                 </div>
                                 <div className="pt-6">
@@ -99,12 +100,7 @@ const SystemesCentralises = () => {
 
                             {/* Right Column: Industries Cards */}
                             <div className="lg:col-span-7">
-                                <div className="flex items-center justify-between mb-8 border-b border-slate-200 pb-3">
-                                    <h3 className="text-sm font-bold text-slate-800 uppercase tracking-widest">
-                                        Industries commerciales desservies
-                                    </h3>
-                                    <div className="w-12 h-1 bg-blue-600 rounded-full"></div>
-                                </div>
+
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                                     {/* Card 1 */}
                                     <div className="group bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
@@ -112,7 +108,7 @@ const SystemesCentralises = () => {
                                             <img src={laundryImg} alt="Bâtiments commerciaux" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                                         </div>
                                         <div className="p-5">
-                                            <h3 className="text-[#18448F] font-bold text-lg mb-2">Bâtiments commerciaux</h3>
+                                            <h3 className="text-[#18448F] font-light text-lg mb-2">Bâtiments commerciaux</h3>
                                             <div className="w-8 h-1 bg-blue-500 rounded-full transition-all duration-300 group-hover:w-16"></div>
                                         </div>
                                     </div>
@@ -122,27 +118,19 @@ const SystemesCentralises = () => {
                                             <img src={campusImg} alt="Campus universitaires" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                                         </div>
                                         <div className="p-5">
-                                            <h3 className="text-[#18448F] font-bold text-lg mb-2">Campus universitaires</h3>
+                                            <h3 className="text-[#18448F] font-light text-lg mb-2">Campus universitaires</h3>
                                             <div className="w-8 h-1 bg-blue-500 rounded-full transition-all duration-300 group-hover:w-16"></div>
                                         </div>
                                     </div>
-                                    {/* Card 3 */}
-                                    <div className="group bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                                        <div className="aspect-[16/11] w-full overflow-hidden">
-                                            <img src={engineeringHeroImg} alt="Gestion immobilière" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                                        </div>
-                                        <div className="p-5">
-                                            <h3 className="text-[#18448F] font-bold text-lg mb-2">Gestion immobilière</h3>
-                                            <div className="w-8 h-1 bg-blue-500 rounded-full transition-all duration-300 group-hover:w-16"></div>
-                                        </div>
-                                    </div>
+                                    {/* Card 3 - Espace vide */}
+                                    <div className="hidden sm:block pointer-events-none"></div>
                                     {/* Card 4 */}
                                     <div className="group bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                                         <div className="aspect-[16/11] w-full overflow-hidden">
                                             <img src={constructionImg} alt="Constructions neuves" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                                         </div>
                                         <div className="p-5">
-                                            <h3 className="text-[#18448F] font-bold text-lg mb-2">Constructions neuves</h3>
+                                            <h3 className="text-[#18448F] font-light text-lg mb-2">Constructions neuves</h3>
                                             <div className="w-8 h-1 bg-blue-500 rounded-full transition-all duration-300 group-hover:w-16"></div>
                                         </div>
                                     </div>
@@ -206,12 +194,12 @@ const SystemesCentralises = () => {
                                                     desc: "Des échangeurs de chaleur et chauffe-eau propres consomment jusqu'à 30% d'énergie en moins, réduisant considérablement vos factures énergétiques et l'empreinte carbone."
                                                 },
                                                 {
-                                                    title: "Conformité sanitaire",
-                                                    desc: "Barrière microbiologique complète empêchant la prolifération de bactéries nocives comme la légionelle dans l'ensemble du bâtiment, protégeant vos usagers."
+                                                    title: "Expérience usager améliorée",
+                                                    desc: "Fournissez une eau de qualité exceptionnelle, exempte de goûts et d'odeurs désagréables, améliorant ainsi l'expérience quotidienne de vos résidents ou employés."
                                                 },
                                                 {
                                                     title: "Maintenance prédictive",
-                                                    desc: "Des capteurs intelligents et une gestion technique centralisée (GTC) pour surveiller en temps réel la qualité de l'eau, anticiper les entretiens et sécuriser vos opérations."
+                                                    desc: "Une surveillance continue de vos systèmes de traitement d'eau pour anticiper les remplacements de pièces et l'entretien des filtres. Minimisez les temps d'arrêt et prolongez la durée de vie de vos équipements grâce à une maintenance proactive."
                                                 }
                                             ].map((item, idx) => (
                                                 <AccordionItem key={idx} value={`item-${idx}`} className="border-b border-slate-100 last:border-none">
@@ -284,10 +272,10 @@ const SystemesCentralises = () => {
                                         Remplissage Écoresponsable
                                     </span>
                                     <h3 className="text-3xl font-bold text-slate-900 leading-tight">
-                                        Stations de Remplissage Elkay
+                                        Stations de remplissage d'eau automatiques
                                     </h3>
                                     <p className="text-slate-500 font-light text-sm leading-relaxed text-justify">
-                                        Intégrez nos stations de remplissage automatique Elkay intelligentes. Une solution robuste et hygiénique à activation sans contact, idéale pour réduire l'usage de plastique à usage unique et offrir une eau réfrigérée et purifiée de grand débit à vos usagers.
+                                        Intégrez nos stations de remplissage automatique intelligentes. Une solution robuste et hygiénique à activation sans contact, idéale pour réduire l'usage de plastique à usage unique et offrir une eau réfrigérée et purifiée de grand débit à vos usagers.
                                     </p>
                                 </div>
                                 <div className="aspect-[16/10] w-full rounded-2xl overflow-hidden shadow-inner">

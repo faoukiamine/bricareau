@@ -174,8 +174,8 @@ const C = () => {
                 <Hero 
                     className="min-h-[100vh]"
                     image={heroDrink}
-                    highlightedTitle={<><span className="text-[#8CC63F] font-bold not-italic">La pureté</span> <span className="font-bold not-italic">sous l'évier.</span></>}
-                    mainTitle={<><span className="text-[#8CC63F] font-bold not-italic">L'excellence</span> dans chaque goutte.</>}
+                    highlightedTitle={<><span className="text-[#8CC63F] font-bold not-italic">La pureté de l'eau</span> <span className="font-bold not-italic">sous l'évier,</span></>}
+                    mainTitle={<><span className="text-[#8CC63F] font-bold not-italic">l'excellence</span> dans chaque goutte.</>}
                     subtitle="Profitez d'une eau potable d'une qualité exceptionnelle directement de votre robinet. Nos systèmes de filtration sous comptoir et d'ultrafiltration éliminent 99% des contaminants pour la santé de votre famille."
                     ctaText="Explorer nos systèmes"
                     ctaLink="#purification-systems"
@@ -611,12 +611,8 @@ const C = () => {
                                     ))}
                                 </div>
 
-                                {/* Desktop Carousel Label */}
-                                <div className="hidden lg:block mr-auto">
-                                    <span className="text-[10px] font-black text-blue-900/40 uppercase tracking-widest bg-slate-50 px-4 py-2 rounded-full border border-slate-100">
-                                        Modèles Cristal Pro (Carousel)
-                                    </span>
-                                </div>
+                                {/* Desktop Carousel Spacer */}
+                                <div className="hidden lg:block mr-auto"></div>
 
                                 <div className="flex items-center gap-2">
                                     <Button 
@@ -662,10 +658,10 @@ const C = () => {
                                                 Critères Techniques
                                             </th>
                                             {[
-                                                { name: "Vectapure NX", img: vectapureROImg, badge: "Osmose NX", color: "bg-blue-600" },
                                                 { name: "Cristal Pro I", img: essentialImg_filtration, badge: "Sédiments", color: "bg-blue-600" },
                                                 { name: "Cristal Pro II", img: plusROImg_filtration, badge: "Duo Pur", color: "bg-emerald-600" },
                                                 { name: "Cristal Pro III", img: eliteROImg_filtration, badge: "Ultrafiltration", color: "bg-amber-600" },
+                                                { name: "Vectapure NX", img: vectapureROImg, badge: "Osmose NX", color: "bg-blue-600" },
                                                 { name: "Série Essentiel", img: drinkingWaterImg, badge: "Osmose 6E", color: "bg-emerald-600" },
                                                 { name: "Sérénité Direct", img: freezelifeROImg, badge: "600 GPD", color: "bg-amber-600" },
                                             ].map((m, i) => (
@@ -674,7 +670,7 @@ const C = () => {
                                                      className={cn(
                                                         "p-4 md:p-6 text-center transition-all duration-500 min-w-[220px]",
                                                         i === activeCol ? "table-cell" : "hidden",
-                                                        ((desktopPage === 0 && (i === 1 || i === 2 || i === 3)) || (desktopPage === 1 && (i === 0 || i === 4 || i === 5))) ? "lg:table-cell" : "lg:hidden"
+                                                        ((desktopPage === 0 && (i === 0 || i === 1 || i === 2)) || (desktopPage === 1 && (i === 3 || i === 4 || i === 5))) ? "lg:table-cell" : "lg:hidden"
                                                     )}
                                                 >
                                                     <div className="flex flex-col items-center gap-6">
@@ -701,13 +697,13 @@ const C = () => {
                                                 <td className="p-6 md:p-10 font-bold text-[#18448F] bg-white sticky left-0 z-30 border-r border-slate-50 drop-shadow-sm lg:drop-shadow-none text-[12px] md:text-sm italic group-hover:text-blue-600 transition-colors">
                                                     {row.feature}
                                                 </td>
-                                                {["stage4", "essential", "plus", "elite", "stage5", "stage6"].map((model, idx) => (
+                                                {["essential", "plus", "elite", "stage4", "stage5", "stage6"].map((model, idx) => (
                                                      <td 
                                                         key={model} 
                                                         className={cn(
                                                             "p-6 md:p-10 text-center text-[13px] md:text-sm font-light leading-relaxed text-slate-600 transition-all duration-500",
                                                             idx === activeCol ? "table-cell" : "hidden",
-                                                            ((desktopPage === 0 && (idx === 1 || idx === 2 || idx === 3)) || (desktopPage === 1 && (idx === 0 || idx === 4 || idx === 5))) ? "lg:table-cell" : "lg:hidden"
+                                                            ((desktopPage === 0 && (idx === 0 || idx === 1 || idx === 2)) || (desktopPage === 1 && (idx === 3 || idx === 4 || idx === 5))) ? "lg:table-cell" : "lg:hidden"
                                                         )}
                                                     >
                                                         {(() => {

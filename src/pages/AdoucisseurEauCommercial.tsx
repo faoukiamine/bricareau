@@ -56,9 +56,9 @@ import SentinelWaterSoftenerImg from "@/assets/Sentinelle Water Softener.png";
 import SerenityWaterSoftenerImg from "@/assets/Serenity Water Softener.png";
 import installationSoftenerImg from "@/assets/4211.jpg";
 import diagnosticStepImg from "@/assets/step-diagnostic.png";
-import customStepImg from "@/assets/step-custom.png";
+import customStepImg from "@/assets/6545.jpg";
 import installationStepImg from "@/assets/step-installation.png";
-import serenityStepImg from "@/assets/step-serenity.png";
+import serenityStepImg from "@/assets/2151589543.jpg";
 import energyImg from "@/assets/detartrage-chauffe-eau-electrique.jpg";
 import coffeeImg from "@/assets/jura-x10-dark-inox.jpg";
 
@@ -218,7 +218,7 @@ const AdoucisseurEauCommercial = () => {
             <main>
                 <Hero 
                     image={heroImg}
-                    highlightedTitle="L'excellence de l'eau douce,"
+                    highlightedTitle={<span className="font-bold not-italic text-[#8CC63F]">L'excellence de l'eau douce, </span>}
                     mainTitle="la signature de prestige des Hôtels & Restaurants."
                     subtitle="Sublimez votre service, protégez vos équipements de haute précision et offrez à vos clients une expérience sensorielle inégalée. L'expertise anticalcaire dédiée aux standards de l'hôtellerie d'exception."
                     showPhone={true}
@@ -231,12 +231,12 @@ const AdoucisseurEauCommercial = () => {
                     
                     <div className="container mx-auto px-6 relative z-10">
                         <div className="max-w-4xl mx-auto text-center mb-24">
-                            <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.3em] mb-8">
+                            <span className="inline-block px-4 py-1.5 bg-[#18448F] text-white rounded-full text-[10px] font-black uppercase tracking-[0.3em] mb-8 shadow-sm">
                                 IMPACT OPÉRATIONNEL
                             </span>
                             <h2 className="mb-8 heading-pro-max text-center">
-                                <span className="italic font-light text-[#18448F] block">Le calcaire, l'ennemi silencieux</span>
-                                <span className="font-bold text-[#18448F] block text-center">de votre art de recevoir.</span>
+                                <span className="font-bold not-italic text-[#18448F] block">Le <span className="text-[#8CC63F]">calcaire</span>, l'ennemi silencieux</span>
+                                <span className="font-bold not-italic text-[#18448F] block text-center">de votre art de recevoir.</span>
                             </h2>
                             <p className="body-pro-max text-slate-500 text-center mx-auto max-w-2xl">
                                 Plus qu'un simple dépôt, le calcaire est un ennemi silencieux de votre rentabilité et de votre image de marque. Il altère la brillance de votre service et réduit la durée de vie de vos équipements critiques.
@@ -323,7 +323,7 @@ const AdoucisseurEauCommercial = () => {
                                                     {item.badge}
                                                 </span>
                                             </div>
-                                            <h3 className="text-3xl font-bold text-[#18448F] leading-[1.1] transition-all duration-500 group-hover:translate-x-2">
+                                            <h3 className="text-3xl font-medium text-[#18448F] leading-[1.1] transition-all duration-500 group-hover:translate-x-2">
                                                 {item.title}
                                             </h3>
                                             <p className="text-slate-600 text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-all duration-1000 translate-y-4 group-hover:translate-y-0 text-justify">
@@ -362,21 +362,16 @@ const AdoucisseurEauCommercial = () => {
 
                     <div className="container mx-auto px-6 relative z-10">
                         <div className="text-center mb-24">
-                            <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.3em] mb-8">
+                            <span className="inline-block px-4 py-1.5 bg-[#18448F] text-white rounded-full text-[10px] font-black uppercase tracking-[0.3em] mb-8 shadow-sm">
                                 L'INGÉNIERIE DU BIEN-ÊTRE
                             </span>
                              <h2 className="text-4xl md:text-5xl font-bold text-[#18448F] tracking-tight">
-                                Avantages de l'eau douce
+                                Avantages de <span className="text-[#8CC63F]">l'eau douce</span>
                             </h2>
                         </div>
 
                         <div className="relative max-w-6xl mx-auto">
-                            {/* Vertical text on the left */}
-                            <div className="absolute -left-16 top-1/2 -translate-y-1/2 hidden xl:block">
-                                <span className="inline-block [writing-mode:vertical-lr] rotate-180 text-[10px] font-black uppercase tracking-[0.4em] text-slate-400 h-fit">
-                                    VOTRE SOLUTION UNIQUE
-                                </span>
-                            </div>
+
 
                             <div className="flex flex-col lg:flex-row items-center gap-0 relative">
                                 {/* Left: Benefits Accordion in a Card */}
@@ -431,15 +426,6 @@ const AdoucisseurEauCommercial = () => {
 
                                 {/* Right: Image Section with Dot Pattern */}
                                 <div className="w-full lg:w-[65%] relative">
-                                    {/* Dot pattern background */}
-                                    <div className="absolute -top-12 -left-12 w-48 h-48 opacity-40 pointer-events-none z-0">
-                                        <div className="grid grid-cols-12 gap-3">
-                                            {Array.from({ length: 144 }).map((_, i) => (
-                                                <div key={i} className="w-1 h-1 bg-blue-500 rounded-full" />
-                                            ))}
-                                        </div>
-                                    </div>
-
                                     <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3] lg:aspect-auto lg:h-[550px]">
                                         <img 
                                             key={activeAdvantageImage}
@@ -448,15 +434,6 @@ const AdoucisseurEauCommercial = () => {
                                             className="w-full h-full object-cover animate-in fade-in zoom-in duration-500"
                                         />
                                         <div className="absolute inset-0 bg-gradient-to-tr from-blue-900/10 to-transparent" />
-                                    </div>
-
-                                    {/* Another Dot pattern bottom right */}
-                                    <div className="absolute -bottom-16 -right-16 w-64 h-64 opacity-30 pointer-events-none z-0">
-                                        <div className="grid grid-cols-12 gap-4">
-                                            {Array.from({ length: 144 }).map((_, i) => (
-                                                <div key={i} className="w-1.5 h-1.5 bg-blue-600 rounded-full" />
-                                            ))}
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -477,12 +454,12 @@ const AdoucisseurEauCommercial = () => {
 
                     <div className="container mx-auto px-6 relative z-10">
                         <div className="text-center max-w-7xl mx-auto mb-20 lg:mb-24 px-6 md:px-0">
-                            <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.3em] mb-8">
+                            <span className="inline-block px-4 py-1.5 bg-[#18448F] text-white rounded-full text-[10px] font-black uppercase tracking-[0.3em] mb-8 shadow-sm">
                                 GUIDE D'EXPERTISE COMMERCIALE
                             </span>
                             <h2 className="mb-8 heading-pro-max text-center">
-                                <span className="italic font-light text-[#18448F] block text-center">L'expertise anticalcaire dédiée</span>
-                                <span className="font-bold text-[#18448F] block text-center">aux Hôtels & Restaurants.</span>
+                                <span className="font-bold not-italic text-[#18448F] block text-center"><span className="text-[#8CC63F]">L'expertise anticalcaire</span> dédiée</span>
+                                <span className="font-bold not-italic text-[#18448F] block text-center">aux Hôtels & Restaurants.</span>
                             </h2>
                             <p className="body-pro-max text-center max-w-4xl mx-auto px-4">
                                 Nos adoucisseurs d'eau commerciaux sont spécifiquement calibrés pour neutraliser la dureté tout en préservant l'intégrité de vos installations professionnelles. Une synergie parfaite entre <span className="text-blue-600 font-bold">économie de ressources</span> et <span className="text-blue-600 font-bold">performance opérationnelle</span>.
@@ -506,135 +483,18 @@ const AdoucisseurEauCommercial = () => {
                                     <p className="text-white text-lg mb-10 text-justify">
                                         Chaque installation est une signature de qualité. Nos techniciens optimisent le déploiement de vos systèmes pour garantir un rendement maximal de vos équipements et une qualité d'eau irréprochable au quotidien.
                                     </p>
+                                    <ProMaxButton 
+                                        onClick={() => navigate("/consultation")}
+                                        className="bg-white text-[#18448F] hover:bg-[#18448F] hover:text-white"
+                                    >
+                                        Demandez une consultation gratuite.
+                                    </ProMaxButton>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
 
-                {/* 3. TimeLine SÉRÉNITÉ */}
-                <section className="py-24 lg:py-36 bg-white relative overflow-hidden">
-                    <style dangerouslySetInnerHTML={{__html: `
-                        @keyframes flow {
-                            0% { stroke-dashoffset: 0; }
-                            100% { stroke-dashoffset: -300; }
-                        }
-                        .animate-flow {
-                            animation: flow 8s linear infinite;
-                        }
-                        .card-drop {
-                            border-radius: 4rem 1.5rem 4rem 1.5rem;
-                            transition: border-radius 0.7s cubic-bezier(0.4, 0, 0.2, 1), transform 0.7s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.7s;
-                        }
-                        .card-drop:hover {
-                            border-radius: 1.5rem 4rem 1.5rem 4rem;
-                        }
-                        .image-drop {
-                            border-radius: 2.5rem 1rem 2.5rem 1rem;
-                            transition: border-radius 0.7s cubic-bezier(0.4, 0, 0.2, 1), transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
-                        }
-                        .group:hover .image-drop {
-                            border-radius: 1rem 2.5rem 1rem 2.5rem;
-                        }
-                    `}} />
-
-                    {/* Background Atmospheric Elements */}
-                    <div className="absolute top-1/4 left-[10%] w-96 h-96 bg-blue-50/40 rounded-full blur-3xl pointer-events-none -z-10" />
-                    <div className="absolute bottom-1/4 right-[10%] w-96 h-96 bg-indigo-50/30 rounded-full blur-3xl pointer-events-none -z-10" />
-
-                     <div className="container mx-auto px-6 relative z-10">
-                        <div className="text-center max-w-3xl mx-auto mb-24 lg:mb-32">
-                            <span className="inline-block px-4 py-1.5 bg-blue-600/10 text-blue-600 rounded-full text-[10px] font-black uppercase tracking-[0.3em] mb-8">
-                                L'INGÉNIERIE D'EXCELLENCE BRICAREAU
-                            </span>
-                            <h2 className="mb-8 heading-pro-max text-center">
-                                <span className="italic font-light text-[#18448F] block">L'ingénierie fluide au service de</span>
-                                <span className="font-bold text-[#18448F] block">votre excellence opérationnelle.</span>
-                            </h2>
-                            <p className="body-pro-max text-center max-w-3xl mx-auto">
-                                De l’analyse initiale à la maintenance prédictive, le Parcours Bricareau garantit une intégration technique parfaite et une continuité totale de vos débits les plus exigeants.
-                            </p>
-                        </div>
-
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative items-stretch">
-                            {/* Organic Curved Pipeline Wave (Desktop Only) */}
-                            <svg className="hidden lg:block absolute top-[20px] left-[5%] w-[90%] h-[240px] z-0 pointer-events-none" viewBox="0 0 1000 200" fill="none">
-                                <path d="M 50 60 Q 175 220, 300 60 T 550 60 T 800 60" stroke="#f1f5f9" strokeWidth="4" strokeLinecap="round" />
-                                <path d="M 50 60 Q 175 220, 300 60 T 550 60 T 800 60" stroke="url(#organicGradient)" strokeWidth="4" strokeLinecap="round" strokeDasharray="40, 200" className="animate-flow" />
-                                <defs>
-                                    <linearGradient id="organicGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                                        <stop offset="0%" stopColor="#3b82f6" stopOpacity="0" />
-                                        <stop offset="50%" stopColor="#06b6d4" stopOpacity="1" />
-                                        <stop offset="100%" stopColor="#6366f1" stopOpacity="0" />
-                                    </linearGradient>
-                                </defs>
-                            </svg>
-                            
-                            {[
-                                { 
-                                    step: "01",
-                                    title: "Diagnostic & Analyse Moléculaire", 
-                                    desc: "Nos ingénieurs effectuent un audit physico-chimique exhaustif de votre ressource et de vos débits pour concevoir le schéma de traitement idéal.",
-                                    image: diagnosticStepImg,
-                                    color: "border-blue-100"
-                                },
-                                { 
-                                    step: "02",
-                                    title: "Modélisation & Calibration", 
-                                    desc: "Nous dimensionnons vos adoucisseurs sur-mesure en fonction de vos équipements critiques, de vos variations de charge et de vos exigences de conformité.",
-                                    image: customStepImg,
-                                    color: "border-indigo-100"
-                                },
-                                { 
-                                    step: "03",
-                                    title: "Intégration & Mise en Service", 
-                                    desc: "Une installation millimétrée par nos techniciens agréés, planifiée pour respecter vos contraintes opérationnelles et éliminer tout temps d'arrêt.",
-                                    image: installationStepImg,
-                                    color: "border-cyan-100"
-                                },
-                                { 
-                                    step: "04",
-                                    title: "Monitoring & Optimisation", 
-                                    desc: "Un suivi rigoureux et une maintenance proactive garantissant une eau de haute qualité 24/7, protégeant durablement vos investissements.",
-                                    image: serenityStepImg,
-                                    color: "border-emerald-100"
-                                }
-                            ].map((item, idx) => (
-                                <div key={idx} className={`relative z-10 group bg-gradient-to-b from-slate-50/30 to-white/95 backdrop-blur-sm border border-slate-100 hover:border-blue-500/20 card-drop p-8 text-center shadow-sm hover:shadow-2xl hover:shadow-blue-900/5 transition-all duration-500 flex flex-col justify-between min-h-[400px] overflow-hidden ${idx % 2 === 0 ? "lg:-translate-y-8" : "lg:translate-y-8"}`}>
-                                    {/* Watermark Step Number */}
-                                    <div className="absolute bottom-4 left-6 text-8xl font-black font-serif text-slate-100/40 select-none pointer-events-none group-hover:text-blue-50/40 transition-colors duration-700 z-0">
-                                        {item.step}
-                                    </div>
-                                    
-                                    <div className="relative z-10">
-                                        {/* Molecule Sphere Badge */}
-                                        <div className="absolute top-0 right-0 w-12 h-12 bg-gradient-to-tr from-blue-500/10 to-cyan-400/10 rounded-full flex items-center justify-center backdrop-blur-md border border-white/50 shadow-inner group-hover:scale-110 group-hover:rotate-12 transition-all duration-500 z-20">
-                                            <span className="font-serif italic text-blue-600 text-sm font-black">{item.step}</span>
-                                        </div>
-
-                                        <div className="relative w-24 h-24 mx-auto mb-8">
-                                            <div className="absolute inset-0 bg-blue-500/10 rounded-[2rem] blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                                            <div className={`relative w-24 h-24 overflow-hidden border-2 ${item.color} shadow-lg image-drop bg-white z-10`}>
-                                                <img src={item.image} alt={item.title} className="w-full h-full object-cover" />
-                                            </div>
-                                        </div>
-                                        
-                                        <h4 className="text-lg font-extrabold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors leading-tight">{item.title}</h4>
-                                        <p className="text-sm font-light text-slate-500 leading-relaxed text-justify px-2">
-                                            {item.desc}
-                                        </p>
-                                    </div>
-                                    
-                                    <div className="relative z-10 mt-6 flex justify-center opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300">
-                                        <span className="text-[10px] font-bold text-blue-600 tracking-widest uppercase flex items-center gap-1.5">
-                                            DÉCOUVRIR LE SERVICE <ChevronRight className="w-3.5 h-3.5" />
-                                        </span>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                     </div>
-                </section>
 
                 {/* 6.Testimonials Grid Section */}
                 <TestimonialsSection

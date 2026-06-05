@@ -771,19 +771,19 @@ const Fontaines = () => {
                             <div className="absolute inset-0 bg-slate-900/30" />
                             
                             <div className="h-full relative z-10 flex flex-col justify-center items-center lg:items-end p-8 lg:p-16">
-                                <div className="w-full max-w-[380px] flex flex-col gap-6">
+                                <div className="w-full max-w-[300px] flex flex-col gap-6">
                                 {/* Card 2: Stats */}
-                                <div className="rounded-[2.5rem] bg-gradient-to-br from-[#8CC63F] to-green-600 p-8 flex flex-col items-center justify-center text-center relative overflow-hidden group shadow-2xl shadow-[#8CC63F]/40">
-                                    <div className="absolute top-0 right-0 -mt-10 -mr-10 w-40 h-40 bg-white/10 rounded-full blur-2xl" />
-                                    <div className="absolute bottom-0 left-0 -mb-10 -ml-10 w-40 h-40 bg-white/10 rounded-full blur-2xl" />
+                                <div className="rounded-[2rem] bg-gradient-to-br from-[#8CC63F] to-green-600 p-6 flex flex-col items-center justify-center text-center relative overflow-hidden group shadow-xl shadow-[#8CC63F]/30">
+                                    <div className="absolute top-0 right-0 -mt-10 -mr-10 w-32 h-32 bg-white/10 rounded-full blur-2xl" />
+                                    <div className="absolute bottom-0 left-0 -mb-10 -ml-10 w-32 h-32 bg-white/10 rounded-full blur-2xl" />
                                     
                                     <div className="relative z-10 flex flex-col items-center">
-                                        <Recycle className="w-12 h-12 text-white/80 mb-6" />
-                                        <span className="text-5xl lg:text-7xl font-black text-white leading-none tracking-tighter mb-2 group-hover:scale-110 transition-transform duration-500">
+                                        <Recycle className="w-8 h-8 text-white/80 mb-4" />
+                                        <span className="text-4xl lg:text-5xl font-black text-white leading-none tracking-tighter mb-2 group-hover:scale-110 transition-transform duration-500">
                                             -2920
                                         </span>
-                                        <div className="w-12 h-1 bg-white/30 rounded-full my-4" />
-                                        <span className="text-sm font-bold text-emerald-50 uppercase tracking-[0.2em] leading-relaxed">
+                                        <div className="w-10 h-1 bg-white/30 rounded-full my-3" />
+                                        <span className="text-xs font-bold text-emerald-50 uppercase tracking-[0.2em] leading-relaxed">
                                             Bouteilles évitées par an<br/>pour un couple
                                         </span>
                                     </div>

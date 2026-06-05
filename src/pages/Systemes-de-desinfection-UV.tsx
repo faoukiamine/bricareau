@@ -80,7 +80,7 @@ import resetWrenchSvg from "@/assets/reset_wrench.svg";
 import uvSpectrumAbstractImg from "@/assets/uv-spectrum-abstract.png";
 import stormVisualImg from "@/assets/pourquoi-est-ce-que-les-orages-produisent-des-eclairs-et-du-tonnerree28089-1-1690x1200.jpg";
 import ourteamstudyyourwaterImg from "@/assets/10271.jpg";
-import sterileWaterImg from "@/assets/1713.jpg";
+import sterileWaterImg from "@/assets/1254.webp";
 import installationuvsystemImg from "@/assets/UV system installation to kill bacteria.png";
 import avisEbullitionImg from "@/assets/Avis_debullition.png";
 import puitsDeSurfaceImg from "@/assets/puits de surface.jpg";
@@ -177,7 +177,7 @@ const DesinfectionUV = () => {
                     className="min-h-[100vh]"
                     image={heroImg}
                     highlightedTitle={<span className="font-bold not-italic">Systèmes de désinfection UV,</span>}
-                    mainTitle={<span className="text-[#8CC63F] font-bold not-italic">zéro produit chimique, 100% de protection.</span>}
+                    mainTitle={<span className="text-[#8CC63F] font-bold not-italic drop-shadow-[0_4px_8px_rgba(0,0,0,0.9)]">zéro produit chimique, 100% de protection.</span>}
                     subtitle="Éliminez 99,99% des bactéries, virus et kystes de votre eau de puits ou municipale sans aucun additif chimique. Assurez une pureté microbiologique totale pour la sécurité de votre famille à chaque robinet."
                     showPhone={true}
                     showBreadcrumbs={true}
@@ -477,14 +477,7 @@ const DesinfectionUV = () => {
                                     </div>
 
                                     <div className="relative z-10 p-10 h-full flex flex-col">
-                                        {/* Icon & Category */}
-                                        <div className="flex justify-between items-start mb-8">
-                                            <div className={cn(
-                                                "w-16 h-16 rounded-2xl flex items-center justify-center text-white shadow-xl transition-all duration-500 group-hover:rotate-[10deg] group-hover:scale-110 bg-gradient-to-br",
-                                                s.color
-                                            )}>
-                                                {s.icon}
-                                            </div>
+                                        <div className="flex justify-end items-start mb-8">
                                             <div className="bg-blue-600/10 backdrop-blur-md px-4 py-1.5 rounded-full border border-blue-200/50">
                                                 <span className="text-[9px] font-black uppercase tracking-widest text-blue-700">Alerte Sanitaire</span>
                                             </div>
@@ -497,7 +490,7 @@ const DesinfectionUV = () => {
                                                     Risque : {s.cause}
                                                 </span>
                                             </div>
-                                            <h3 className="text-3xl font-black text-[#18448F] leading-[1.1] tracking-tight">
+                                            <h3 className="text-3xl font-medium text-[#18448F] leading-[1.1] tracking-tight">
                                                 {s.problem}
                                             </h3>
                                             <p className="text-sm font-light text-slate-600 leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-700 delay-100">
@@ -594,7 +587,7 @@ const DesinfectionUV = () => {
                             />
                             <div className="absolute inset-0 bg-gradient-to-r from-[#18448F]/70 via-[#18448F]/30 to-transparent p-8 md:p-12 lg:p-20 flex items-center">
                                 <div className="max-w-lg">
-                                    <div className="flex items-center gap-3 text-blue-400 font-bold text-xs tracking-widest uppercase mb-6">
+                                    <div className="flex items-center gap-3 text-white font-bold text-xs tracking-widest uppercase mb-6">
                                         <CheckCircle className="w-5 h-5" />
                                         Une protection microbiologique sans faille
                                     </div>

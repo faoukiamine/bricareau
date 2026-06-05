@@ -441,7 +441,7 @@ const TestsEauPage = () => {
           <div className="container mx-auto px-4 text-left">
             <div className="text-left mb-20">
                              <h2 className="mb-8 heading-pro-max text-left">
-                                <span className="font-bold not-italic text-[#18448F] block">Pour vous éclairer</span>
+                                <span className="font-light italic text-[#18448F] block">Pour vous éclairer</span>
                                 <span className="font-bold text-[#18448F] block">Questions fréquentes</span>
                             </h2>
               <div className="w-24 h-1 bg-blue-600"></div>

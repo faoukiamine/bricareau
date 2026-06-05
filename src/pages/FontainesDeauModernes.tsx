@@ -49,7 +49,7 @@ import ecoImpactImg4 from "@/assets/water-dispenser in office.jpg";
 import ecoImpactImg5 from "@/assets/water-dispenser in kitchen.jpg";
 import eauFontaineImg from "@/assets/1jp5k.png";
 import mandrinkingglassofwaterImg from "@/assets/6115.jpg";
-import officeHydrationImg from "@/assets/section-image-and-content-23.jpg";
+import officeHydrationImg from "@/assets/2539.jpg";
 
 const FontainesDeauModernes = () => {
     const [activeFeature, setActiveFeature] = useState(0);
@@ -124,7 +124,7 @@ const FontainesDeauModernes = () => {
                 <Hero 
                     className="min-h-[100vh]"
                     image={heroFountains}
-                    highlightedTitle={<span className="font-bold not-italic">Optez pour <span className="text-[#8CC63F]">une hydratation</span> </span>}
+                    highlightedTitle={<span className="font-bold not-italic">Optez pour <span className="text-[#8CC63F] drop-shadow-[0_4px_8px_rgba(0,0,0,0.9)]">une hydratation</span> </span>}
                     mainTitle={<span className="font-bold not-italic">intelligente et durable.</span>}
                     subtitle="Offrez à vos collaborateurs une eau filtrée d'exception, fraîche, chaude ou pétillante, directement raccordée à votre réseau. Une solution écologique, économique et sans logistique de bonbonnes."
                     ctaText="OBTENIR MON ESSAI GRATUIT"

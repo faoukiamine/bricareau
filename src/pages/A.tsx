@@ -37,6 +37,11 @@ import undersinkSystemImg from "@/assets/Système+de+filtration+Serene+Lite.webp
 import hardWaterSignsImg from "@/assets/Signs+of+hard+water+in+your+home-640w.webp";
 import hardWaterImg from "@/assets/58279.jpg";
 import applianceDamageImg from "@/assets/beautiful-shot-modern-house-kitchen.jpg";
+import energyCostImg from "@/assets/2148386945.jpg";
+import compteurImg from "@/assets/compteur.avif";
+import entretienMenagerImg from "@/assets/2147916568.jpg";
+import textileLingeImg from "@/assets/2149117085.jpg";
+import consommationImg from "@/assets/23981.jpg";
 import benefitsVisualImg from "@/assets/2150084031.jpg";
 import { conditionneursImg } from "./Blog pages/Adoucisseur avec sel ou sans sel";
 import { softenerImg as residentialWaterSoftenerImg } from "./Blog pages/Comment régler la dureté de votre adoucisseur ";
@@ -319,7 +324,7 @@ const A = () => {
                     className="min-h-[100vh]"
                     image={heroBath}
                     highlightedTitle={<span className="font-bold not-italic">Finis le calcaire et l'eau dure :</span>}
-                    mainTitle={<>offrez-vous le confort d'une <span className="text-[#8CC63F]">eau douce.</span></>}
+                    mainTitle={<>offrez-vous le confort d'une <span className="text-[#8CC63F] drop-shadow-[0_4px_8px_rgba(0,0,0,0.9)]">eau douce.</span></>}
                     subtitle="Redécouvrez l'expérience d'une eau soyeuse qui préserve votre peau, vos cheveux et vos investissements. Une technologie de pointe pour une protection durable de votre foyer."
                     showPhone={true}
                     showBreadcrumbs={true}
@@ -351,7 +356,7 @@ const A = () => {
                                     desc: "Le tartre isole vos résistances, forçant vos appareils à consommer massivement plus d'électricité pour chauffer l'eau.",
                                     icon: <Zap className="w-6 h-6 text-blue-600" />,
                                     badge: "Impact Financier",
-                                    img: applianceDamageImg,
+                                    img: compteurImg,
                                     color: "bg-amber-500"
                                 },
                                 { 
@@ -369,7 +374,7 @@ const A = () => {
                                     desc: "Réduisez drastiquement la fréquence de remplacement de votre chauffe-eau, lave-linge et lave-vaisselle.",
                                     icon: <Shield className="w-6 h-6 text-emerald-600" />,
                                     badge: "Protection Actifs",
-                                    img: kitchenImg,
+                                    img: energyCostImg,
                                     color: "bg-emerald-600"
                                 },
                                 { 
@@ -378,7 +383,7 @@ const A = () => {
                                     desc: "Dites adieu aux traces de tartre sur la robinetterie et aux voiles blanchâtres sur votre vaisselle étincelante.",
                                     icon: <Sparkles className="w-6 h-6 text-cyan-500" />,
                                     badge: "Confort",
-                                    img: hardWaterSignsImg,
+                                    img: entretienMenagerImg,
                                     color: "bg-cyan-500"
                                 },
                                 { 
@@ -387,7 +392,7 @@ const A = () => {
                                     desc: "Les fibres deviennent rêches et les couleurs ternissent. Protégez la douceur de vos vêtements préférés.",
                                     icon: <Shirt className="w-6 h-6 text-indigo-500" />,
                                     badge: "Linge Doux",
-                                    img: laundryImg,
+                                    img: textileLingeImg,
                                     color: "bg-indigo-500"
                                 },
                                 { 
@@ -396,7 +401,7 @@ const A = () => {
                                     desc: "L'eau dure nécessite jusqu'à 50% de détergents et savons en plus pour obtenir une mousse efficace.",
                                     icon: <HandCoins className="w-6 h-6 text-amber-500" />,
                                     badge: "Économie",
-                                    img: hardWaterImg,
+                                    img: consommationImg,
                                     color: "bg-amber-500"
                                 }
                             ].map((item, idx) => (
@@ -423,7 +428,7 @@ const A = () => {
                                                     {item.badge}
                                                 </span>
                                             </div>
-                                            <h3 className="text-3xl font-bold text-[#18448F] leading-[1.1] transition-all duration-500 group-hover:translate-x-2">
+                                            <h3 className="text-3xl font-medium text-[#18448F] leading-[1.1] transition-all duration-500 group-hover:translate-x-2">
                                                 {item.title}
                                             </h3>
                                             <p className="text-slate-600 text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-all duration-1000 translate-y-4 group-hover:translate-y-0 text-justify">

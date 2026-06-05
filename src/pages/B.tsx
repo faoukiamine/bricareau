@@ -64,7 +64,7 @@ import dechetbouteilleImg from "@/assets/20051.jpg";
 import oldpipesImg from "@/assets/Old Pipes.jpg";
 import newbornHealthImg from "@/assets/47A0F39600000578-5222035-image-a-1_1514911887749.jpg";
 import healthAndSafetyIcon from "@/assets/health_and_safety.svg";
-import mauvaisGoutThumb from "@/assets/blog3-1.jpg";
+import mauvaisGoutThumb from "@/assets/1255.webp";
 
 const products = [
     { name: "Filtre d'eau Vortex", desc: "Spécialisé pour l'eau contenant des sédiments.", image: specializedFiltersImg },
