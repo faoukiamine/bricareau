@@ -99,23 +99,25 @@ const FiltreEauMachineCafe = () => {
 
                     <div className="container mx-auto px-6 relative z-10">
                         <div className="max-w-4xl space-y-12">
-                            <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-blue-50 border border-blue-100">
-                                <Coffee className="w-4 h-4 text-blue-600" />
-                                <span className="text-[10px] font-black text-blue-600 uppercase tracking-[0.3em]">Solutions de Filtration Professionnelle</span>
-                            </div>
+                            {/* Badge Removed */}
                             
-                            <h1 className="text-[40px] md:text-[50px] lg:text-[64px] leading-[1.1] font-sans font-light italic text-white mb-6 tracking-tight">
-    <span className="text-[#8CC63F] font-sans font-bold not-italic drop-shadow-lg">L'eau pure, </span>
-                                <span className="font-bold text-[#18448F]">l'âme de votre café.</span>
-</h1>
+                            <h1 
+                                className="mb-6 animate-in fade-in slide-in-from-left duration-1000 max-w-4xl text-[32px] md:text-[46px] lg:text-[50px] leading-[1.1]"
+                                style={{
+                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                    fontStyle: 'normal'
+                                }}
+                            >
+                                <span className="text-[#8CC63F] font-bold not-italic">L'eau pure,</span> <span className="font-bold not-italic text-[#18448F]">l'âme de votre café.</span>
+                            </h1>
                             
-                            <p className="text-lg md:text-2xl text-slate-500 font-light max-w-2xl leading-relaxed">
-                                Protégez vos équipements de haute précision et révélez le véritable profil aromatique de vos grains avec nos systèmes de filtration BRITA PURITY.
+                            <p className="animate-in fade-in slide-in-from-left duration-1000 delay-100 text-justify lg:text-left max-w-[680px] text-slate-500 text-[15px] md:text-lg leading-relaxed">
+                                Protégez vos équipements de haute précision et révélez le véritable profil aromatique de vos grains avec nos systèmes de filtration.
                             </p>
 
                             <div className="flex flex-col sm:flex-row gap-6 pt-8">
                                 <ProMaxButton variant="primary" className="px-12 h-16 text-[11px]" onClick={() => navigate("/consultation")}>
-                                    DEMANDER UN DEVIS
+                                    DEMANDEZ UN DEVIS
                                 </ProMaxButton>
                                 <a href="tel:18552649328" className="flex items-center gap-4 group">
                                     <div className="w-14 h-14 rounded-full bg-slate-50 flex items-center justify-center border border-slate-200 group-hover:border-blue-500/50 group-hover:bg-white transition-all">
@@ -130,21 +132,26 @@ const FiltreEauMachineCafe = () => {
                         </div>
                     </div>
 
-                    <div className="absolute bottom-12 right-12 hidden lg:block">
-                        <div className="flex items-center gap-4 text-slate-400">
-                            <span className="text-[10px] font-black uppercase tracking-widest rotate-90 origin-right translate-y-12">EXPLOREZ LA GAMME</span>
-                            <div className="w-[1px] h-24 bg-slate-200" />
-                        </div>
-                    </div>
+                    {/* EXPLOREZ LA GAMME Removed */}
                 </section>
 
                 {/* 2. STATEMENT SECTION */}
                 <section className="py-24 bg-white relative">
                     <div className="container mx-auto px-6 text-center space-y-8">
                         <div className="max-w-4xl mx-auto space-y-6">
-                            <h2 className="text-4xl md:text-6xl font-bold text-[#18448F] tracking-tighter leading-none uppercase">
-                                Le café est 98% eau, <br />
-                                <span className="text-blue-600 italic font-light lowercase">choisissez le bon filtre</span>
+                            <h2 
+                                className="mb-8 text-center"
+                                style={{
+                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                    fontStyle: 'normal',
+                                    fontWeight: 700,
+                                    fontSize: '48px',
+                                    lineHeight: '52px',
+                                    color: 'rgb(24, 68, 143)'
+                                }}
+                            >
+                                <span className="block">Le café est 98% eau,</span>
+                                <span className="block text-center">choisissez le bon <span className="text-[#8CC63F]">filtre.</span></span>
                             </h2>
                             <p className="text-slate-500 text-xl font-light leading-relaxed mx-auto max-w-2xl">
                                 Nous proposons une gamme équilibrée de filtres adaptés à votre eau et à vos besoins de performance.
@@ -196,17 +203,27 @@ const FiltreEauMachineCafe = () => {
                             {/* Content Column */}
                             <div className="lg:w-1/2 space-y-12 order-2 lg:order-1">
                                 <div className="space-y-6">
-                                    <h2 className="text-5xl lg:text-7xl font-bold text-[#18448F] tracking-tighter leading-[0.9] uppercase">
-                                        Le bon filtre <br />
-                                        <span className="text-blue-600 italic font-light lowercase">fait toute la différence</span>
+                                    <h2 
+                                        className="mb-6"
+                                        style={{
+                                            fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                            fontStyle: 'normal',
+                                            fontWeight: 700,
+                                            fontSize: '48px',
+                                            lineHeight: '52px',
+                                            color: 'rgb(24, 68, 143)'
+                                        }}
+                                    >
+                                        <span className="block">Le bon filtre</span>
+                                        <span className="block">fait toute la <span className="text-[#8CC63F]">différence</span></span>
                                     </h2>
                                     <p className="text-slate-500 text-xl font-light leading-relaxed max-w-lg">
                                         Que vous dirigiez un petit café ou un grand service de restauration à haut volume, nos filtres garantissent la constance de chaque tasse tout en prolongeant la durée de vie de vos machines.
                                     </p>
                                 </div>
                                 <div className="flex flex-col sm:flex-row gap-6 pt-4">
-                                    <ProMaxButton className="bg-slate-900 text-white hover:bg-slate-800" onClick={() => navigate("/consultation")}>
-                                        Demander une soumission
+                                    <ProMaxButton variant="primary" className="px-12 h-16 text-[11px]" onClick={() => navigate("/consultation")}>
+                                        DEMANDEZ UNE SOUMISSION
                                     </ProMaxButton>
                                 </div>
                             </div>
