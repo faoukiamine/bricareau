@@ -22,17 +22,27 @@ const Diagnostic = () => {
     return (
         <div className="min-h-screen bg-white flex flex-col">
             <Header />
-            <main className="relative flex-1 flex flex-col items-center justify-center py-20 lg:py-16">
+            <main className="relative flex-1 flex flex-col items-center justify-center pt-32 pb-20 lg:pt-40 lg:pb-16">
                 {/* Background Accents - Subtle & Minimalist */}
                 <div className="absolute top-0 inset-x-0 h-[600px] bg-gradient-to-b from-blue-50/50 to-transparent -z-10" />
                 <div className="absolute top-40 left-1/4 w-[300px] h-[300px] bg-blue-100/20 rounded-full blur-[100px] -z-10" />
 
                 <div className="container mx-auto px-4 md:px-6 relative z-10 flex flex-col items-center">
                     <div className="max-w-3xl mx-auto text-center mb-10 w-full animate-in fade-in slide-in-from-top-4 duration-1000">
-                        <h1 className="text-[40px] md:text-[50px] lg:text-[64px] leading-[1.1] font-sans font-light italic text-white mb-6 tracking-tight">
-    <span className="text-[#8CC63F] font-sans font-bold not-italic drop-shadow-lg">Découvrez la solution</span>
-                            <span className="font-bold text-[#18448F] block text-center">parfaite pour votre eau.</span>
-</h1>
+                        <h1 
+                            className="mb-6 tracking-tight text-center"
+                            style={{
+                                fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                fontStyle: 'normal',
+                                fontWeight: 700,
+                                color: '#18448F',
+                                fontSize: '50px',
+                                lineHeight: '55px'
+                            }}
+                        >
+                            Découvrez la <span style={{ color: '#8CC63F' }}>solution parfaite</span>
+                            <span className="block">pour votre eau.</span>
+                        </h1>
 
                         <p 
                             className="max-w-xl mx-auto text-slate-500 font-light text-[18px] md:text-[20px] leading-snug"
