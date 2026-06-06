@@ -299,14 +299,14 @@ const C = () => {
                                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
                                     />
                                     {/* Experience Label */}
-                                    <div className="absolute bottom-8 left-8 right-8 p-8 bg-white/70 backdrop-blur-xl rounded-3xl border border-white/20 shadow-xl group-hover:-translate-y-2 transition-all duration-500">
-                                        <div className="flex items-center gap-4">
-                                            <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white shadow-lg shadow-blue-200">
-                                                <Droplets className="w-6 h-6" />
+                                    <div className="absolute bottom-6 left-6 p-4 bg-white/10 backdrop-blur-md rounded-2xl group-hover:-translate-y-2 transition-all duration-500">
+                                        <div className="flex items-center gap-3">
+                                            <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white shadow-lg shadow-blue-200">
+                                                <Droplets className="w-5 h-5" />
                                             </div>
                                             <div>
-                                                <p className="text-[10px] font-black uppercase tracking-widest text-[#164E63]">Pureté Absolue</p>
-                                                <p className="text-lg font-bold text-[#18448F]">Zéro Chlore, 100% Vie</p>
+                                                <p className="text-[9px] font-black uppercase tracking-widest text-[#164E63]">Pureté Absolue</p>
+                                                <p className="text-base font-bold text-[#18448F]">Zéro Chlore, 100% Vie</p>
                                             </div>
                                         </div>
                                     </div>

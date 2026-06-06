@@ -35,7 +35,9 @@ import filterCoffeeImg from "@/assets/PURITY-C-Quell-ST-Advanced.webp";
 import filterSteamImg from "@/assets/1218.png";
 import filterSoftenerImg from "@/assets/Alternating Water Softener.png";
 import roiImg1 from "@/assets/1219.jpg";
+import roiImg3 from "@/assets/18036672_SIE_2720_1530_21_04_30_SIE_CRM_Dishwasher_Hand_Taking_Out_Wine_Glass_Basket_Motiv_11_0017.webp";
 import roiImg2 from "@/assets/1220.jpg";
+import roiImg4 from "@/assets/2148018784.jpg";
 import chefPouringImg from "@/assets/25380.jpg";
 import chefFridgeImg from "@/assets/3733.jpg";
 import callToActionBg from "@/assets/1996.jpg";
@@ -75,7 +77,7 @@ const FiltrationHotelsRestaurants = () => {
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setRoiImageIndex((prev) => (prev + 1) % 2);
+            setRoiImageIndex((prev) => (prev + 1) % 4);
         }, 4000);
         return () => clearInterval(interval);
     }, []);
@@ -92,6 +94,7 @@ const FiltrationHotelsRestaurants = () => {
             <main>
                 {/* HERO SECTION */}
                 <Hero 
+                    className="min-h-[100vh]"
                     image={heroImage}
                     highlightedTitle={<span className="font-bold not-italic text-[#8CC63F] drop-shadow-[0_4px_8px_rgba(0,0,0,0.9)]">L'excellence de l'eau </span>}
                     mainTitle="au service de la gastronomie."
@@ -111,7 +114,7 @@ const FiltrationHotelsRestaurants = () => {
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:auto-rows-[250px]">
                             {/* Text (Row 1, Full Width) */}
                             <div className="md:col-span-3 md:row-span-1 flex flex-col justify-center px-8 pb-12 text-center bg-transparent">
-                                <h2 className="text-3xl md:text-4xl font-bold text-[#18448F] mb-4">
+                                <h2 className="heading-pro-max text-[#18448F] mb-4">
                                     <span className="text-[#8CC63F]">L'eau filtrée</span> n'est pas un détail, <br className="hidden md:block" />
                                     <span>c'est le fondement de la cuisine de votre restaurant.</span>
                                 </h2>
@@ -141,9 +144,12 @@ const FiltrationHotelsRestaurants = () => {
                             </div>
                         </div>
                         <div className="mt-16 text-center">
-                            <a href="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-[#18448F] text-white text-lg font-medium rounded-xl hover:bg-blue-800 transition-colors shadow-lg shadow-blue-900/20">
-                                Contactez-nous
-                            </a>
+                            <ProMaxButton asChild>
+                                <a href="/contact" className="inline-flex items-center justify-center gap-2">
+                                    Contactez-nous
+                                    <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-2" />
+                                </a>
+                            </ProMaxButton>
                         </div>
                     </div>
                 </section>
@@ -162,7 +168,8 @@ const FiltrationHotelsRestaurants = () => {
                                 display: none;
                             }
                         `}</style>
-                        <div ref={carouselRef} className="flex overflow-x-auto gap-6 pb-8 pt-4 snap-x snap-mandatory scroll-smooth hide-scrollbar" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
+                        <div className="relative group px-4">
+                            <div ref={carouselRef} className="flex overflow-x-auto gap-6 pb-8 pt-4 snap-x snap-mandatory scroll-smooth hide-scrollbar" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
                             {/* Card 1: Coffee & Tea */}
                             <div className="group relative overflow-hidden rounded-2xl cursor-pointer shadow-sm hover:shadow-xl transition-all duration-300 h-96 w-[85vw] md:w-[400px] shrink-0 snap-center">
                                 <img src={coffeeTeaImg} alt="Machines à café et à thé" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
@@ -218,11 +225,10 @@ const FiltrationHotelsRestaurants = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="flex justify-end gap-4 mt-8">
-                            <button onClick={scrollLeft} aria-label="Précédent" className="w-14 h-14 rounded-full border-2 border-slate-200 flex items-center justify-center text-slate-400 hover:text-[#18448F] hover:border-[#18448F] transition-all duration-300 hover:shadow-md">
+                            <button onClick={scrollLeft} aria-label="Précédent" className="absolute top-1/2 -translate-y-1/2 -left-2 md:-left-6 w-14 h-14 rounded-full bg-[#18448F] border-2 border-[#18448F] flex items-center justify-center text-white hover:bg-blue-800 transition-all duration-300 shadow-xl z-10">
                                 <ChevronLeft className="w-6 h-6" />
                             </button>
-                            <button onClick={scrollRight} aria-label="Suivant" className="w-14 h-14 rounded-full border-2 border-slate-200 flex items-center justify-center text-slate-400 hover:text-[#18448F] hover:border-[#18448F] transition-all duration-300 hover:shadow-md">
+                            <button onClick={scrollRight} aria-label="Suivant" className="absolute top-1/2 -translate-y-1/2 -right-2 md:-right-6 w-14 h-14 rounded-full bg-[#18448F] border-2 border-[#18448F] flex items-center justify-center text-white hover:bg-blue-800 transition-all duration-300 shadow-xl z-10">
                                 <ChevronRight className="w-6 h-6" />
                             </button>
                         </div>
@@ -247,10 +253,8 @@ const FiltrationHotelsRestaurants = () => {
                                     <img src={filterCoffeeImg} alt="Filtre Boissons et Café" className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700" />
                                 </div>
                                 <div className="p-8 flex-1 flex flex-col">
-                                    <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-6 text-blue-600 shadow-sm">
-                                        <Coffee className="w-6 h-6" />
-                                    </div>
-                                    <h3 className="text-2xl font-bold text-slate-900 mb-4 group-hover:text-blue-600 transition-colors">Boissons & Café</h3>
+
+                                    <h3 className="text-2xl font-bold text-slate-900 mb-4 group-hover:text-blue-600 transition-colors">Filtres d'eau spécialisés</h3>
                                     <p className="text-slate-500 font-light text-[15px] leading-relaxed mb-6 flex-1">
                                         Systèmes de filtration de précision pour vos machines à espresso et distributeurs de boissons. Révélez les arômes complexes de votre café et offrez des sodas constants.
                                     </p>
@@ -274,22 +278,20 @@ const FiltrationHotelsRestaurants = () => {
                                     <img src={filterSoftenerImg} alt="Adoucisseur Commercial" className="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-700" />
                                 </div>
                                 <div className="p-8 flex-1 flex flex-col">
-                                    <div className="w-12 h-12 bg-amber-50 rounded-xl flex items-center justify-center mb-6 text-amber-600 shadow-sm">
-                                        <Droplets className="w-6 h-6" />
-                                    </div>
-                                    <h3 className="text-2xl font-bold text-slate-900 mb-4 group-hover:text-amber-600 transition-colors">Verrerie & Plonge</h3>
+
+                                    <h3 className="text-2xl font-bold text-slate-900 mb-4 group-hover:text-blue-600 transition-colors">Adoucisseurs d'eau</h3>
                                     <p className="text-slate-500 font-light text-[15px] leading-relaxed mb-6 flex-1">
                                         Adoucisseurs d'eau commerciaux pour des verres étincelants dès la sortie du lave-vaisselle, sans essuyage manuel. Réduisez considérablement vos coûts de détergents.
                                     </p>
                                     <ul className="space-y-3">
                                         <li className="flex items-center gap-3 text-sm text-slate-600 font-light">
-                                            <ShieldCheck className="w-4 h-4 text-amber-500" /> Zéro trace ni dépôt blanc
+                                            <ShieldCheck className="w-4 h-4 text-emerald-500" /> Zéro trace ni dépôt blanc
                                         </li>
                                         <li className="flex items-center gap-3 text-sm text-slate-600 font-light">
-                                            <Droplets className="w-4 h-4 text-amber-500" /> -30% de produits chimiques
+                                            <Droplets className="w-4 h-4 text-emerald-500" /> -30% de produits chimiques
                                         </li>
                                         <li className="flex items-center gap-3 text-sm text-slate-600 font-light">
-                                            <Zap className="w-4 h-4 text-amber-500" /> Gain de temps en plonge
+                                            <Zap className="w-4 h-4 text-emerald-500" /> Gain de temps en plonge
                                         </li>
                                     </ul>
                                 </div>
@@ -301,22 +303,20 @@ const FiltrationHotelsRestaurants = () => {
                                     <img src={filterSteamImg} alt="Filtre Cuisson et Vapeur" className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700" />
                                 </div>
                                 <div className="p-8 flex-1 flex flex-col">
-                                    <div className="w-12 h-12 bg-indigo-50 rounded-xl flex items-center justify-center mb-6 text-indigo-600 shadow-sm">
-                                        <Utensils className="w-6 h-6" />
-                                    </div>
-                                    <h3 className="text-2xl font-bold text-slate-900 mb-4 group-hover:text-indigo-600 transition-colors">Cuisson & Vapeur</h3>
+
+                                    <h3 className="text-2xl font-bold text-slate-900 mb-4 group-hover:text-blue-600 transition-colors">Systèmes d'osmose inverse</h3>
                                     <p className="text-slate-500 font-light text-[15px] leading-relaxed mb-6 flex-1">
                                         Systèmes d'osmose inverse et adoucisseurs pour vos fours mixtes et équipements à vapeur. Évitez les pannes coûteuses causées par la corrosion et le tartre.
                                     </p>
                                     <ul className="space-y-3">
                                         <li className="flex items-center gap-3 text-sm text-slate-600 font-light">
-                                            <Zap className="w-4 h-4 text-indigo-500" /> Fonctionnement ininterrompu
+                                            <Zap className="w-4 h-4 text-emerald-500" /> Fonctionnement ininterrompu
                                         </li>
                                         <li className="flex items-center gap-3 text-sm text-slate-600 font-light">
-                                            <ShieldCheck className="w-4 h-4 text-indigo-500" /> Cuisson à la vapeur parfaite
+                                            <ShieldCheck className="w-4 h-4 text-emerald-500" /> Cuisson à la vapeur parfaite
                                         </li>
                                         <li className="flex items-center gap-3 text-sm text-slate-600 font-light">
-                                            <Droplets className="w-4 h-4 text-indigo-500" /> Eau purifiée pour les sauces
+                                            <Droplets className="w-4 h-4 text-emerald-500" /> Eau purifiée pour les sauces
                                         </li>
                                     </ul>
                                 </div>
@@ -389,7 +389,7 @@ const FiltrationHotelsRestaurants = () => {
                             </div>
                             <div className="lg:w-1/2 w-full">
                                 <div className="rounded-3xl overflow-hidden shadow-2xl relative aspect-square md:aspect-[4/3]">
-                                    {[roiImg1, roiImg2].map((img, index) => (
+                                    {[roiImg4, roiImg1, roiImg2, roiImg3].map((img, index) => (
                                         <img 
                                             key={index}
                                             src={img} 
@@ -398,7 +398,7 @@ const FiltrationHotelsRestaurants = () => {
                                         />
                                     ))}
                                     <div className="absolute bottom-6 left-0 right-0 flex justify-center gap-3 z-10">
-                                        {[0, 1].map((index) => (
+                                        {[0, 1, 2, 3].map((index) => (
                                             <button 
                                                 key={index} 
                                                 onClick={() => setRoiImageIndex(index)}
@@ -479,7 +479,7 @@ const FiltrationHotelsRestaurants = () => {
                                     <div className="relative z-10">
                                         <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4 group-hover:text-blue-600 transition-colors duration-300">Conception sur mesure</h3>
                                         <p className="text-slate-600 leading-relaxed font-light">
-                                            Sur la base de notre analyse, nos ingénieurs conçoivent une architecture de filtration adaptée à votre volume de service. Que vous ayez besoin d'un simple filtre pour votre machine à espresso ou d'un système d'osmose inverse centralisé pour toute la cuisine.
+                                            Sur la base de notre analyse, notre équipe technique conçoit une architecture de filtration adaptée à votre volume de service. Que vous ayez besoin d'un simple filtre pour votre machine à espresso ou d'un système d'osmose inverse centralisé pour toute la cuisine.
                                         </p>
                                     </div>
                                 </div>

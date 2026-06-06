@@ -26,7 +26,7 @@ import { Button } from "@/components/ui/button";
 import { NavLink } from "react-router-dom";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { ProMaxButton } from "@/components/ui/ProMaxButton";
-import ExpertAvatars from "@/components/ExpertAvatars";
+
 
 // Assets
 import brasserieWaterImg from "@/assets/124521.jpg";
@@ -56,8 +56,9 @@ const SolutionsBrasseries = () => {
             <main>
                 {/* Hero Section */}
                 <Hero 
+                    className="min-h-[100vh]"
                     image={heroImg}
-                    highlightedTitle="L'effervescence pure"
+                    highlightedTitle={<span className="font-bold not-italic text-[#18448F]">L'effervescence <span className="text-[#8CC63F]">pure</span></span>}
                     mainTitle="pour votre brasserie."
                     subtitle="Sublimez le profil de vos bières grâce à une eau parfaitement maîtrisée. Nos solutions de filtration de pointe vous permettent d'ajuster votre profil minéral avec une régularité absolue, tout en optimisant le rendement de vos brassins et en réduisant votre empreinte écologique."
                     ctaText="Planifiez une consultation"
@@ -65,7 +66,7 @@ const SolutionsBrasseries = () => {
                     showPhone={true}
                     showBreadcrumbs={true}
                     breadcrumbVariant="light"
-                    badge="Espace Brasserie & Bar"
+                    singleLineTitle={true}
                 />
 
                 {/* SECTION 2: HIGH-FIDELITY STATEMENT BANNER */}
@@ -84,12 +85,12 @@ const SolutionsBrasseries = () => {
 
                     <div className="container mx-auto px-6 text-center max-w-4xl relative z-10">
                         <div className="space-y-6">
-                            <h3 className="text-xs font-black text-blue-600 uppercase tracking-[0.2em] mb-4">
+                            <span className="inline-block px-4 py-1.5 bg-[#18448F] text-white rounded-full text-[10px] font-black uppercase tracking-[0.3em] mb-4 shadow-sm">
                                 L'INGRÉDIENT LE PLUS CRITIQUE
-                            </h3>
+                            </span>
                             <h2 className="mb-8 heading-pro-max text-center">
-                                <span className="italic font-light text-[#18448F] block">Sublimez le profil de brassage </span>
-                                <span className="font-bold text-[#18448F] block text-center">de vos bières.</span>
+                                <span className="font-bold not-italic text-[#18448F] block">Sublimez le profil de brassage </span>
+                                <span className="font-bold not-italic text-[#18448F] block text-center">de vos <span className="text-[#8CC63F]">bières.</span></span>
                             </h2>
                             <div className="w-16 h-1 bg-blue-600 mx-auto rounded-full" />
                             <p className="text-slate-500 text-lg font-light leading-relaxed max-w-3xl mx-auto pt-2">
@@ -202,8 +203,8 @@ const SolutionsBrasseries = () => {
                                 NOTRE SERVICE BRASSICOLE
                             </span>
                             <h2 className="mb-8 heading-pro-max text-center">
-                                <span className="italic font-light text-[#18448F] block">Optimiser & sécuriser</span>
-                                <span className="font-bold text-[#18448F] block text-center">vos opérations de brassage.</span>
+                                <span className="font-bold not-italic text-[#18448F] block">Optimiser & sécuriser</span>
+                                <span className="font-bold not-italic text-[#18448F] block text-center">vos opérations de <span className="text-[#8CC63F]">brassage.</span></span>
                             </h2>
                         </div>
 
@@ -333,23 +334,18 @@ const SolutionsBrasseries = () => {
                                 >
                                     <a href="tel:18552649328" className="flex items-center gap-3">
                                         <Phone className="h-5 w-5 animate-bounce" />
-                                        Parlez à un ingénieur brasseur
+                                        Parlez à un expert
                                     </a>
                                 </ProMaxButton>
                                 <ProMaxButton
                                     variant="outline-white"
                                     asChild
                                 >
-                                    <NavLink to="/contact-entreprises">Demander une analyse d'eau gratuite</NavLink>
+                                    <NavLink to="/contact-entreprises">Planifiez une consultation gratuite</NavLink>
                                 </ProMaxButton>
                             </div>
 
-                            <div className="pt-8 flex flex-col items-center gap-4">
-                                <ExpertAvatars />
-                                <p className="text-blue-200/60 text-sm font-medium">
-                                    Déjà adopté par <span className="text-white">plus de 45 brasseries et microbrasseries d'exception</span> au Québec.
-                                </p>
-                            </div>
+
                         </div>
                     </div>
                 </section>

@@ -222,7 +222,7 @@ const TestsEauPage = () => {
                           Priorité : {item.benefit}
                         </span>
                       </div>
-                      <h3 className="text-3xl font-bold text-[#18448F] leading-[1.1] transition-all duration-500 group-hover:translate-x-2">
+                      <h3 className="text-3xl font-medium text-[#18448F] leading-[1.1] transition-all duration-500 group-hover:translate-x-2">
                         {item.title}
                       </h3>
                       <p className="body-pro-max text-sm leading-relaxed text-slate-600 opacity-80 group-hover:opacity-100 transition-opacity">
