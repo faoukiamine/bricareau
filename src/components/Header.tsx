@@ -93,7 +93,7 @@ const Header = () => {
             "fixed top-0 z-50 w-full transition-all duration-500",
             isScrolled 
                 ? "bg-[#18448F] shadow-lg py-0" 
-                : "bg-gradient-to-b from-[#0b1c3b]/90 via-[#0b1c3b]/50 to-transparent py-3"
+                : "bg-transparent py-3"
         )} 
         ref={headerRef}
       >
@@ -122,8 +122,8 @@ const Header = () => {
                     className={cn(
                         "text-[13px] font-bold uppercase tracking-wider flex items-center gap-1.5 transition-colors",
                         (activeMegamenu === item.name || activeDropdown === item.name) 
-                            ? "text-white/70" 
-                            : "text-white hover:text-white/80"
+                            ? (isScrolled ? "text-white/70" : "text-[#18448F]/70")
+                            : (isScrolled ? "text-white hover:text-white/80" : "text-[#18448F] hover:text-[#18448F]/80")
                     )}
                     onClick={() => {
                         if (item.href) {
@@ -158,23 +158,23 @@ const Header = () => {
 
             {/* Right Utilities (Desktop) */}
             <div className="hidden lg:flex items-center gap-8">
-              <a href="tel:18552649328" className="text-[13px] font-medium flex items-center gap-2 group transition-colors text-white">
-                <div className="w-8 h-8 rounded-full flex items-center justify-center transition-colors bg-white/10 group-hover:bg-white/20">
-                    <Phone className="w-4 h-4 text-white" />
+              <a href="tel:18552649328" className={cn("text-[13px] font-medium flex items-center gap-2 group transition-colors", isScrolled ? "text-white" : "text-[#18448F]")}>
+                <div className={cn("w-8 h-8 rounded-full flex items-center justify-center transition-colors", isScrolled ? "bg-white/10 group-hover:bg-white/20" : "bg-[#18448F]/10 group-hover:bg-[#18448F]/20")}>
+                    <Phone className={cn("w-4 h-4", isScrolled ? "text-white" : "text-[#18448F]")} />
                 </div>
                 (855) 264-9328
               </a>
               
               <div className="flex items-center gap-6">
                 <ProMaxButton 
-                    variant="outline-white" 
+                    variant={isScrolled ? "outline-white" : "outline"} 
                     className="px-8 h-12 text-[10px]"
                     onClick={() => navigate("/consultation")}
                 >
                     Contactez-nous
                 </ProMaxButton>
                 <ProMaxButton 
-                    variant="white" 
+                    variant={isScrolled ? "white" : "primary"} 
                     className="px-8 h-12 text-[10px]"
                     onClick={() => navigate("/contact-form")}
                 >
@@ -185,7 +185,7 @@ const Header = () => {
 
             {/* Mobile Toggle */}
             <button 
-                className="lg:hidden p-2 transition-colors text-white" 
+                className={cn("lg:hidden p-2 transition-colors", isScrolled ? "text-white" : "text-[#18448F]")} 
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
                 {isMenuOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
