@@ -56,7 +56,7 @@ const Footer = () => {
 
           {/* Résidentiel - Row 1 */}
           <div>
-            <h3 className="mb-6 text-white font-bold text-base uppercase tracking-wider">Résidentiel</h3>
+            <h3 className="mb-6 text-white font-bold text-base uppercase tracking-wider relative after:content-[''] after:block after:w-8 after:h-1 after:bg-[#8CC63F] after:mt-3">Résidentiel</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <a href="/tests-eau" className="text-white/80 hover:text-white transition-colors">
@@ -93,7 +93,7 @@ const Footer = () => {
 
           {/* Bureau - Row 1 */}
           <div>
-            <h3 className="mb-6 text-white font-bold text-base uppercase tracking-wider">Bureau</h3>
+            <h3 className="mb-6 text-white font-bold text-base uppercase tracking-wider relative after:content-[''] after:block after:w-8 after:h-1 after:bg-[#8CC63F] after:mt-3">Bureau</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <a href="/fontaines-deau-modernes" className="text-white/80 hover:text-white transition-colors">
@@ -110,7 +110,7 @@ const Footer = () => {
 
           {/* Hôtellerie - spans both rows */}
           <div className="lg:row-span-2">
-            <h3 className="mb-6 text-white font-bold text-base uppercase tracking-wider">Hôtellerie et restauration</h3>
+            <h3 className="mb-6 text-white font-bold text-base uppercase tracking-wider relative after:content-[''] after:block after:w-8 after:h-1 after:bg-[#8CC63F] after:mt-3">Hôtellerie et restauration</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <a href="/adoucisseurs-eau-commerciaux" className="text-white/80 hover:text-white transition-colors">
@@ -137,7 +137,7 @@ const Footer = () => {
 
           {/* Commercial & Industriel - Row 2, under Résidentiel */}
           <div>
-            <h3 className="mb-6 text-white font-bold text-base uppercase tracking-wider">Commercial & Industriel</h3>
+            <h3 className="mb-6 text-white font-bold text-base uppercase tracking-wider relative after:content-[''] after:block after:w-8 after:h-1 after:bg-[#8CC63F] after:mt-3">Commercial & Industriel</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <a href="/filtration-industrielle" className="text-white/80 hover:text-white transition-colors">
@@ -164,34 +164,37 @@ const Footer = () => {
 
           {/* Restez informé - Row 2, under Bureau */}
           <div>
-            <h3 className="mb-6 text-white font-bold text-base uppercase tracking-wider">Restez informé</h3>
-            <p className="text-sm text-white/80 mb-4">
-              Inscrivez-vous à notre infolettre pour recevoir des conseils et offres exclusives
-            </p>
-            <form onSubmit={handleSubscribe} className="flex flex-col gap-2">
-              <div className="flex gap-2">
-                <Input
-                  type="email"
-                  placeholder="Votre email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="bg-white/10 border-white/20 text-white placeholder:text-white/60 focus-visible:ring-white/50"
-                  disabled={isLoading}
-                  required
-                />
-                <Button
-                  type="submit"
-                  size="icon"
-                  className="bg-white text-[#18448F] hover:bg-white/90 shrink-0"
-                  disabled={isLoading}
-                >
-                  {isLoading ? <Loader2 className="h-4 w-4 animate-spin" /> : <Mail className="h-4 w-4" />}
-                </Button>
-              </div>
-              <p className="text-[10px] text-white/50 leading-tight">
-                En m'inscrivant, j'accepte la <Link to="/politique-de-confidentialite" className="underline">politique de confidentialité</Link>.
+            <h3 className="mb-6 text-white font-bold text-base uppercase tracking-wider relative after:content-[''] after:block after:w-8 after:h-1 after:bg-[#8CC63F] after:mt-3">Restez informé</h3>
+            <div className="h-fit">
+              <p className="text-sm text-white/80 mb-6 leading-relaxed">
+                Inscrivez-vous à notre infolettre pour recevoir des<br className="hidden lg:block" />
+                conseils et offres exclusives
               </p>
-            </form>
+              <form onSubmit={handleSubscribe} className="flex flex-col gap-4">
+                <div className="flex flex-col sm:flex-row items-center gap-3">
+                  <Input
+                    type="email"
+                    placeholder="Votre email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    className="bg-white/20 border-white/30 text-white placeholder:text-white/60 focus-visible:ring-white/50 h-12 rounded-lg flex-1 w-full"
+                    disabled={isLoading}
+                    required
+                  />
+                  <Button
+                    type="submit"
+                    size="icon"
+                    className="bg-white text-[#18448F] hover:bg-slate-100 shrink-0 h-12 w-12 rounded-full shadow-lg shadow-black/20"
+                    disabled={isLoading}
+                  >
+                    {isLoading ? <Loader2 className="h-5 w-5 animate-spin" /> : <Mail className="h-5 w-5" />}
+                  </Button>
+                </div>
+                <p className="text-[11px] text-white/50 leading-tight">
+                  En m'inscrivant, j'accepte la <Link to="/politique-de-confidentialite" className="underline hover:text-white">politique de confidentialité</Link>.
+                </p>
+              </form>
+            </div>
           </div>
         </div>
 

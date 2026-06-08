@@ -30,6 +30,7 @@ import { useNavigate, NavLink } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
+import Territoire from "@/components/Territoire";
 
 import { cn } from "@/lib/utils";
 import { allTestimonials } from "@/data/testimonials";
@@ -46,6 +47,28 @@ import commercialImg from "@/assets/industrial_hero_pro_max.png";
 import waterWaveImg from "@/assets/wave-banner.jpg";
 import montrealMapImg from "@/assets/montreal_dark_map.png";
 import waterTestingImg from "@/assets/water testing.jpeg";
+
+const SupportAgentIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg 
+    xmlns="http://www.w3.org/2000/svg" 
+    viewBox="0 -960 960 960" 
+    fill="currentColor"
+    {...props}
+  >
+    <path d="M440-120v-80h320v-284q0-117-81.5-198.5T480-764q-117 0-198.5 81.5T200-484v244h-40q-33 0-56.5-23.5T80-320v-80q0-21 10.5-39.5T120-469l3-53q8-68 39.5-126t79-101q47.5-43 109-67T480-840q68 0 129 24t109 66.5Q766-707 797-649t40 126l3 52q19 9 29.5 27t10.5 38v92q0 20-10.5 38T840-249v49q0 33-23.5 56.5T760-120H440ZM331.5-411.5Q320-423 320-440t11.5-28.5Q343-480 360-480t28.5 11.5Q400-457 400-440t-11.5 28.5Q377-400 360-400t-28.5-11.5Zm240 0Q560-423 560-440t11.5-28.5Q583-480 600-480t28.5 11.5Q640-457 640-440t-11.5 28.5Q617-400 600-400t-28.5-11.5ZM241-462q-7-106 64-182t177-76q89 0 156.5 56.5T720-519q-91-1-167.5-49T435-698q-16 80-67.5 142.5T241-462Z"/>
+  </svg>
+);
+
+const TeamIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg 
+    xmlns="http://www.w3.org/2000/svg" 
+    viewBox="0 -960 960 960" 
+    fill="currentColor"
+    {...props}
+  >
+    <path d="M40-160v-160q0-34 23.5-57t56.5-23h131q20 0 38 10t29 27q29 39 71.5 61t90.5 22q49 0 91.5-22t70.5-61q13-17 30.5-27t36.5-10h131q34 0 57 23t23 57v160H640v-91q-35 25-75.5 38T480-200q-43 0-84-13.5T320-252v92H40Zm440-160q-38 0-72-17.5T351-386q-17-25-42.5-39.5T253-440q22-37 93-58.5T480-520q63 0 134 21.5t93 58.5q-29 0-55 14.5T609-386q-22 32-56 49t-73 17ZM160-440q-50 0-85-35t-35-85q0-51 35-85.5t85-34.5q51 0 85.5 34.5T280-560q0 50-34.5 85T160-440Zm640 0q-50 0-85-35t-35-85q0-51 35-85.5t85-34.5q51 0 85.5 34.5T920-560q0 50-34.5 85T800-440ZM480-560q-50 0-85-35t-35-85q0-51 35-85.5t85-34.5q51 0 85.5 34.5T600-680q0 50-34.5 85T480-560Z"/>
+  </svg>
+);
 
 const Home1 = () => {
     const navigate = useNavigate();
@@ -67,31 +90,31 @@ const Home1 = () => {
         {
             icon: ShieldCheck,
             title: "Fournisseur de confiance",
-            description: "Forts d'un héritage d'excellence, nous protégeons la santé de plus de 20 000 foyers canadiens grâce à nos standards de sécurité rigoureux."
+            description: "Plus de 20 000 foyers canadiens nous font confiance chaque jour pour garantir la pureté de leur eau grâce à nos solutions éprouvées."
         },
         {
             icon: Settings,
             title: "Solutions multiples",
-            description: "De l'ingénierie résidentielle précise aux déploiements industriels complexes, nos architectures sur mesure s'adaptent à chaque défi technique."
+            description: "Du simple système résidentiel aux grandes installations industrielles, nous concevons des solutions sur mesure qui répondent parfaitement à vos besoins."
         },
         {
-            icon: Zap,
+            icon: TeamIcon,
             title: "Équipe hautement qualifiée",
-            description: "Nos maîtres techniciens certifiés déploient une expertise de pointe pour garantir une installation millimétrée et une performance durable."
+            description: "Nos techniciens certifiés mettent leur expertise à votre service pour vous garantir une installation impeccable et des équipements performants."
         },
         {
-            icon: Droplets,
-            title: "Service pratique",
-            description: "Bénéficiez d'une continuité opérationnelle totale grâce à notre conciergerie technique réactive et nos protocoles de maintenance prédictive."
+            icon: SupportAgentIcon,
+            title: "Support Premium & Réactif",
+            description: "Profitez d'une tranquillité d'esprit absolue grâce à notre assistance ultra-réactive et nos programmes d'entretien préventif."
         },
         {
             icon: TrendingUp,
             title: "Rentable",
-            description: "Optimisez vos actifs avec nos technologies à haut rendement, conçues pour maximiser votre retour sur investissement et réduire vos coûts énergétiques."
+            description: "Rentabilisez votre investissement grâce à nos équipements haute performance, spécialement conçus pour réduire vos coûts d'entretien et votre facture énergétique."
         },
         {
             icon: Leaf,
-            title: "Engagés en faveur du développement durable",
+            title: "Engagement écologique",
             description: "Nous intégrons des systèmes éco-responsables de nouvelle génération pour préserver les ressources hydriques et minimiser l'empreinte écologique."
         }
     ];
@@ -543,7 +566,7 @@ const Home1 = () => {
                     </div>
                     <div className="flex flex-col lg:flex-row divide-y lg:divide-y-0 lg:divide-x divide-slate-200">
                         <div className="lg:w-1/3 py-16 lg:py-24 lg:pr-16 flex flex-col justify-center">
-                            <h2 className="text-6xl font-bold text-[#18448F] mb-4">20 000+</h2>
+                            <h2 className="text-6xl font-bold text-[#18448F] mb-4">+20 000</h2>
                             <p className="text-xl font-bold text-slate-800 mb-4">Installations réussies</p>
                             <p className="text-slate-500">Des foyers et entreprises nous font confiance au quotidien pour leur eau.</p>
                         </div>
@@ -569,41 +592,7 @@ const Home1 = () => {
             </section>
 
             {/* Section Territoire de Service */}
-            <section className="relative flex flex-col lg:flex-row border-b border-slate-200">
-                <div className="lg:w-1/2 bg-[#18448F] py-24 px-8 lg:px-16 relative overflow-hidden flex flex-col justify-center">
-                    <div className="absolute inset-0 opacity-10">
-                        <img src={montrealMapImg} className="w-full h-full object-cover mix-blend-screen" alt="Carte de fond" />
-                    </div>
-                    <div className="relative z-10 text-white max-w-lg">
-                        <div className="flex items-center gap-4 mb-6">
-                            <div className="w-12 h-0.5 bg-[#8CC63F]"></div>
-                            <span className="text-[#8CC63F] text-xs font-bold uppercase tracking-[0.15em]">Territoire</span>
-                        </div>
-                        <h2 className="text-5xl font-bold mb-6">Partout où vous avez besoin d'une <span className="text-[#8CC63F]">eau pure.</span></h2>
-                        <p className="text-blue-100 text-lg">Nos équipes couvrent l'ensemble de la région métropolitaine pour des installations, de la maintenance et des dépannages rapides.</p>
-                    </div>
-                </div>
-                <div className="lg:w-1/2 bg-white py-24 px-8 lg:px-16 flex items-center justify-center">
-                    <div className="w-full max-w-lg divide-y divide-slate-200">
-                        {[
-                            { name: "Ile de Montréal", desc: "Intervention rapide en milieu urbain" },
-                            { name: "Rive-Nord", desc: "Laval, Terrebonne, Blainville" },
-                            { name: "Rive-Sud", desc: "Longueuil, Brossard, Boucherville" },
-                            { name: "Laurentides", desc: "Saint-Jérôme et ses environs" },
-                            { name: "Lanaudière", desc: "Repentigny, Mascouche" },
-                            { name: "Montérégie", desc: "Vaudreuil, Saint-Hyacinthe" }
-                        ].map((region, idx) => (
-                            <div key={idx} className="py-4 flex items-center justify-between group hover:pl-4 transition-all cursor-default">
-                                <div>
-                                    <h4 className="font-bold text-[#18448F] text-lg">{region.name}</h4>
-                                    <p className="text-slate-500 text-sm">{region.desc}</p>
-                                </div>
-                                <MapPin className="w-6 h-6 text-[#8CC63F] opacity-0 group-hover:opacity-100 transition-opacity" />
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
+            <Territoire />
 
             {/* CTA Section (Institutionnel & Professionnel) */}
             <section className="py-24 bg-white relative border-t border-slate-200 overflow-hidden">

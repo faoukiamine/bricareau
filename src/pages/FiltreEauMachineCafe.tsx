@@ -43,13 +43,13 @@ const FiltreEauMachineCafe = () => {
 
     const products = [
         {
-            title: "PURITY C Quell ST Advanced",
+            title: "PURITY C Quell ST",
             desc: "Le filtre classique pour espresso, idéal pour les eaux à dureté carbonatée élevée. Équilibre parfait des minéraux.",
             image: FilterImg1,
             link: "#"
         },
         {
-            title: "PURITY C Steam Advanced",
+            title: "PURITY C Steam",
             desc: "Conçu pour la minéralisation et l'élimination des odeurs. Idéal pour les cafés de spécialité.",
             image: FilterImg2,
             link: "#"
@@ -116,8 +116,8 @@ const FiltreEauMachineCafe = () => {
                             </p>
 
                             <div className="flex flex-col sm:flex-row gap-6 pt-8">
-                                <ProMaxButton variant="primary" className="px-12 h-16 text-[11px]" onClick={() => navigate("/consultation")}>
-                                    DEMANDEZ UN DEVIS
+                                <ProMaxButton variant="primary" className="px-12 h-16 text-[11px]" onClick={() => { document.getElementById('explore-filters')?.scrollIntoView({ behavior: 'smooth' }) }}>
+                                    Explorez nos filtres
                                 </ProMaxButton>
                                 <a href="tel:18552649328" className="flex items-center gap-4 group">
                                     <div className="w-14 h-14 rounded-full bg-slate-50 flex items-center justify-center border border-slate-200 group-hover:border-blue-500/50 group-hover:bg-white transition-all">
@@ -136,7 +136,7 @@ const FiltreEauMachineCafe = () => {
                 </section>
 
                 {/* 2. STATEMENT SECTION */}
-                <section className="py-24 bg-white relative">
+                <section id="explore-filters" className="py-24 bg-white relative">
                     <div className="container mx-auto px-6 text-center space-y-8">
                         <div className="max-w-4xl mx-auto space-y-6">
                             <h2 
@@ -181,15 +181,7 @@ const FiltreEauMachineCafe = () => {
                                             {product.desc}
                                         </p>
                                     </div>
-                                    <div className="pt-4 flex items-center gap-4">
-                                        <button className="text-xs font-black uppercase tracking-widest text-slate-400 hover:text-blue-600 transition-colors">
-                                            En savoir plus
-                                        </button>
-                                        <div className="w-1 h-1 rounded-full bg-slate-200" />
-                                        <button className="text-xs font-black uppercase tracking-widest text-blue-600 hover:opacity-70 transition-opacity">
-                                            Voir le produit
-                                        </button>
-                                    </div>
+
                                 </div>
                             ))}
                         </div>
