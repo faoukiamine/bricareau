@@ -120,7 +120,6 @@ import AdoucisseurIndustriel from "./pages/AdoucisseurIndustriel";
 import OsmoseInverseIndustrielle from "./pages/OsmoseInverseIndustrielle";
 import DesinfectionUVIndustrielle from "./pages/DesinfectionUVIndustrielle";
 
-
 const queryClient = new QueryClient();
 
 const App = () => (

@@ -17,6 +17,8 @@ import Footer from "@/components/Footer";
 import { cn } from "@/lib/utils";
 import { ProMaxButton } from "@/components/ui/ProMaxButton";
 import image2230 from '../assets/2230.jpg';
+import image2119 from '../assets/2119.jpg';
+import image2120 from '../assets/2120.jpg';
 
 // Assets
 import heroImg from "@/assets/10341859.jpg"; 
@@ -43,34 +45,45 @@ const WhyChooseUs = () => {
             <Header />
 
             <main>
-                {/* 1. CUSTOM HERO SECTION */}
-                <section className="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
-                    {/* Background Image with Parallax & Gradient */}
-                    <div className="absolute inset-0">
-                        <img 
-                            src={heroImg} 
-                            alt="Eau Pure Bricareau" 
-                            className="w-full h-full object-cover animate-in fade-in duration-[2000ms]"
-                            style={{ transform: `translateY(${scrollProgress * 200}px)` }}
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-b from-slate-900/60 via-slate-900/40 to-[#0f172a]" />
+                {/* 1. CUSTOM HERO SECTION (Style Home1) */}
+                <section className="relative bg-white overflow-hidden min-h-screen flex flex-col justify-center pt-24 pb-16 lg:pt-28 lg:pb-16 border-b border-slate-200">
+                    <div className="absolute inset-0 w-full h-full opacity-40 lg:opacity-100">
+                        {/* Mobile Gradient */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-white via-white/90 to-transparent z-10 lg:hidden"></div>
+                        {/* Desktop Gradient: 1/3 solid white, fading to transparent */}
+                        <div className="absolute inset-0 bg-[linear-gradient(to_right,white_0%,white_50%,rgba(255,255,255,0)_90%)] z-10 hidden lg:block"></div>
+                        
+                        {/* Image Container */}
+                        <div className="absolute right-0 top-0 w-full lg:w-[80%] h-full">
+                            <img 
+                                src={heroImg} 
+                                alt="Eau Pure Bricareau" 
+                                className="absolute inset-0 w-full h-full object-cover object-center animate-in fade-in duration-1000"
+                            />
+                        </div>
                     </div>
+                    <div className="absolute right-0 top-0 w-full h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/20 via-transparent to-transparent pointer-events-none z-20"></div>
 
-                    <div className="relative z-10 container mx-auto px-6 text-center mt-20 animate-in fade-in slide-in-from-bottom-10 duration-1000 delay-300 fill-mode-both">
-                        <span className="inline-block py-1.5 px-4 bg-white/10 backdrop-blur-md rounded-full text-cyan-300 font-bold tracking-[0.2em] uppercase text-xs mb-8 border border-white/20">
-                            La Référence Québécoise
-                        </span>
-                        <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white tracking-tighter leading-[1.1] mb-8">
-                            Plus qu'une filtration.<br />
-                            <span className="font-light italic text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-blue-300">Une renaissance hydrique.</span>
-                        </h1>
-                        <p className="text-blue-100/80 text-lg md:text-2xl font-light leading-relaxed max-w-3xl mx-auto mb-12">
-                            Bricareau redéfinit la relation entre l'homme et l'eau. Depuis plus de deux décennies, nous fusionnons ingénierie de pointe et vision holistique pour transformer chaque goutte en une source de vitalité pure.
-                        </p>
-                        <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-                            <ProMaxButton variant="white" className="px-10 h-16 text-xs" onClick={() => document.getElementById('notre-vision')?.scrollIntoView({ behavior: 'smooth' })}>
-                                DÉCOUVRIR NOTRE VISION
-                            </ProMaxButton>
+                    <div className="container mx-auto px-6 relative z-30">
+                        <div className="max-w-3xl flex flex-col justify-center animate-in fade-in slide-in-from-left-10 duration-1000 delay-300 fill-mode-both">
+                            <div className="inline-block py-1.5 px-4 bg-slate-50 rounded-full text-[#18448F] font-bold tracking-[0.2em] uppercase text-xs mb-8 w-fit border border-slate-200 shadow-sm">
+                                La Référence Québécoise
+                            </div>
+
+                            <h1 className="text-[50px] leading-[55px] font-sans font-bold text-[#18448F] mb-6 tracking-tight">
+                                Bricareau : 25 ans d'Excellence.<br />
+                                <span className="text-[#8CC63F] font-sans font-bold drop-shadow-sm italic">Votre eau, notre chef-d'œuvre.</span>
+                            </h1>
+                            
+                            <p className="text-slate-600 text-lg sm:text-xl font-light leading-relaxed max-w-xl mb-12">
+                                Bricareau redéfinit la relation entre l'homme et l'eau. Depuis plus de deux décennies, nous fusionnons ingénierie de pointe et vision holistique pour transformer chaque goutte en une source de vitalité pure.
+                            </p>
+
+                            <div className="flex flex-col sm:flex-row items-start gap-6">
+                                <ProMaxButton variant="primary" className="px-10 h-16 shadow-lg" onClick={() => document.getElementById('notre-vision')?.scrollIntoView({ behavior: 'smooth' })}>
+                                    DÉCOUVRIR NOTRE VISION
+                                </ProMaxButton>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -79,9 +92,9 @@ const WhyChooseUs = () => {
                 <section className="py-32 bg-[#F8FAFC] relative" id="notre-histoire">
                     <div className="container mx-auto px-6">
                         <div className="max-w-4xl mx-auto">
-                            <div className="text-center mb-24 space-y-4">
-                                <span className="text-blue-600 font-bold tracking-widest uppercase text-xs">Notre Histoire</span>
-                                <h2 className="text-4xl md:text-6xl font-bold text-slate-900 tracking-tight">Plus de 20 ans <br/><span className="text-[#18448F] italic font-light">d'engagement.</span></h2>
+                            <div className="text-center mb-24 space-y-6">
+                                <span className="inline-block py-1 px-4 border border-[#18448F]/20 rounded-full text-[#18448F] font-bold tracking-[0.2em] uppercase text-xs">Notre Histoire</span>
+                                <h2 className="text-3xl lg:text-5xl font-bold text-[#18448F] leading-tight">Plus de 25 ans <br/><span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8CC63F] to-blue-500 italic font-light">d'engagement.</span></h2>
                             </div>
 
                             {/* Timeline */}
@@ -115,7 +128,7 @@ const WhyChooseUs = () => {
                                 </div>
 
                                 {/* Absolute line for desktop center */}
-                                <div className="hidden md:block absolute top-0 bottom-0 left-1/2 -ml-[1px] w-0.5 bg-gradient-to-b from-blue-600 via-cyan-400 to-transparent" />
+                                <div className="hidden md:block absolute top-0 bottom-0 left-1/2 -ml-[1px] w-0.5 bg-gradient-to-b from-blue-600 via-[#8CC63F] to-transparent" />
                             </div>
                         </div>
                     </div>
@@ -125,16 +138,16 @@ const WhyChooseUs = () => {
                 <section className="relative min-h-screen py-32 flex items-center bg-slate-900 overflow-hidden" id="notre-vision">
                     <div className="absolute inset-0 z-0">
                         {/* Motif abstrait / Halos */}
-                        <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-cyan-900/40 rounded-full blur-[150px] animate-[pulse_10s_ease-in-out_infinite]" />
+                        <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-[#8CC63F]/40 rounded-full blur-[150px] animate-[pulse_10s_ease-in-out_infinite]" />
                         <div className="absolute bottom-0 left-1/4 w-[800px] h-[800px] bg-[#18448F]/30 rounded-full blur-[150px] animate-[pulse_12s_ease-in-out_infinite_reverse]" />
                         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-20" />
                     </div>
 
                     <div className="relative z-10 container mx-auto px-6 text-center">
-                        <span className="inline-block py-1 px-4 border border-cyan-800 rounded-full text-cyan-400 font-bold tracking-[0.2em] uppercase text-xs mb-10">Notre Vision</span>
+                        <span className="inline-block py-1 px-4 border border-[#8CC63F] rounded-full text-[#8CC63F] font-bold tracking-[0.2em] uppercase text-xs mb-10">Notre Vision</span>
                         <h2 className="text-4xl md:text-7xl lg:text-8xl font-bold text-white tracking-tighter leading-tight mb-12">
                             Redéfinir le <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-blue-500 italic font-light">standard de pureté.</span>
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8CC63F] to-blue-500 italic font-light">standard de pureté.</span>
                         </h2>
                         <p className="text-slate-300 text-xl md:text-3xl font-light leading-relaxed max-w-4xl mx-auto">
                             Nous croyons que chaque foyer et entreprise québécoise mérite un accès inconditionnel à une eau parfaite, alliant santé humaine et préservation écologique. L'eau n'est pas qu'une ressource, c'est le fondement de notre avenir.
@@ -144,67 +157,52 @@ const WhyChooseUs = () => {
 
                 {/* 3. NOTRE MISSION: Le Contraste Lumineux (Éditorial) */}
                 <section className="min-h-screen flex items-center py-40 bg-white relative overflow-hidden" id="notre-mission">
-                    <div className="absolute left-1/2 top-0 bottom-0 w-[1px] bg-slate-100 -translate-x-1/2 hidden lg:block" />
-                    
-                    <div className="container mx-auto px-6 relative z-10">
-                        <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-16 items-start">
-                            <div className="md:w-1/4">
-                                <span className="text-[#18448F] font-black tracking-[0.3em] uppercase text-xs">Notre Mission</span>
-                                <div className="w-12 h-1 bg-cyan-400 mt-6" />
-                            </div>
-                            <div className="md:w-3/4">
-                                <h2 className="text-4xl md:text-5xl lg:text-7xl font-light text-slate-900 leading-[1.1] md:leading-[1.2] tracking-tighter">
-                                    Protéger la santé des <span className="font-bold text-[#18448F]">foyers</span> et optimiser la performance des <span className="font-bold text-[#18448F]">entreprises</span> en offrant des solutions d'eau d'une <span className="italic font-serif text-cyan-600">pureté absolue</span>.
-                                </h2>
-                            </div>
-                        </div>
+                    <div className="container mx-auto px-6 relative z-10 text-center">
+                        <span className="inline-block py-1 px-4 border border-[#18448F]/20 rounded-full text-[#18448F] font-bold tracking-[0.2em] uppercase text-xs mb-10">Notre Mission</span>
+                        <h2 className="text-4xl md:text-5xl lg:text-7xl font-light text-slate-900 leading-[1.1] md:leading-[1.2] tracking-tighter max-w-5xl mx-auto">
+                            Protéger la santé des <span className="font-bold text-[#18448F]">foyers</span> et optimiser la performance des <span className="font-bold text-[#18448F]">entreprises</span> en offrant des solutions d'eau d'une <span className="italic font-serif text-[#8CC63F]">pureté absolue</span>.
+                        </h2>
                     </div>
                 </section>
 
                 {/* 4. NOS VALEURS: Le Layout Asymétrique (Split-Screen) */}
                 <section className="py-32 bg-slate-50 border-t border-slate-200 overflow-hidden" id="nos-valeurs">
                     <div className="container mx-auto px-6 mb-24 text-center">
-                        <span className="text-cyan-600 font-bold tracking-[0.2em] uppercase text-xs">Nos Valeurs Fondamentales</span>
+                        <span className="inline-block py-1 px-4 border border-[#8CC63F]/30 rounded-full text-[#8CC63F] font-bold tracking-[0.2em] uppercase text-xs">Nos Valeurs Fondamentales</span>
                     </div>
 
                     {/* Valeur 1 : Texte à gauche, Déco à droite */}
                     <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16 mb-32 px-6">
                         <div className="lg:w-1/2 space-y-8">
                             <h3 className="text-3xl lg:text-5xl font-light text-slate-900 leading-tight">
-                                Utiliser de nouvelles <br/><span className="font-bold text-cyan-600">technologies au quotidien</span>
+                                Utiliser de nouvelles <br/><span className="font-bold text-[#8CC63F]">technologies au quotidien</span>
                             </h3>
                             <ul className="space-y-6 text-slate-600 font-light text-lg">
                                 <li className="flex gap-4 items-start">
-                                    <div className="w-2 h-2 rounded-full bg-cyan-400 mt-2 shrink-0" />
+                                    <div className="w-2 h-2 rounded-full bg-[#8CC63F] mt-2 shrink-0" />
                                     <span>Nous maximisons nos efforts en recherche et développement pour offrir des solutions de purification d'eau toujours plus performantes et durables.</span>
                                 </li>
                                 <li className="flex gap-4 items-start">
-                                    <div className="w-2 h-2 rounded-full bg-cyan-400 mt-2 shrink-0" />
-                                    <span>Nous jumelons plus de 20 ans d'expertise avec des méthodologies d'ingénierie de pointe pour garantir à nos clients une eau d'une pureté absolue.</span>
+                                    <div className="w-2 h-2 rounded-full bg-[#8CC63F] mt-2 shrink-0" />
+                                    <span>Nous jumelons plus de 25 ans d'expertise avec des méthodologies d'ingénierie de pointe pour garantir à nos clients une eau d'une pureté absolue.</span>
                                 </li>
                                 <li className="flex gap-4 items-start">
-                                    <div className="w-2 h-2 rounded-full bg-cyan-400 mt-2 shrink-0" />
+                                    <div className="w-2 h-2 rounded-full bg-[#8CC63F] mt-2 shrink-0" />
                                     <span>Nous nous engageons à sourcer les meilleures technologies de filtration mondiales pour vous offrir des procédés optimaux, sans jamais sacrifier la qualité de votre eau.</span>
                                 </li>
                             </ul>
                         </div>
-                        <div className="lg:w-1/2 w-full aspect-square md:aspect-video lg:aspect-square relative rounded-[3rem] overflow-hidden group">
-                            <div className="absolute inset-0 bg-gradient-to-br from-cyan-600 to-blue-900 transition-transform duration-1000 group-hover:scale-105" />
-                            <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-30 mix-blend-overlay" />
-                            <div className="absolute inset-0 flex items-center justify-center">
-                                <Activity className="w-48 h-48 text-white/20 stroke-[1]" />
-                            </div>
+                        <div className="lg:w-1/2 w-full aspect-square md:aspect-video lg:aspect-square relative rounded-[3rem] overflow-hidden group shadow-2xl">
+                            <div className="absolute inset-0 bg-[#18448F]/20 mix-blend-multiply z-10 group-hover:opacity-0 transition-opacity duration-700" />
+                            <img src={image2119} alt="Technologies de pointe" className="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000" />
                         </div>
                     </div>
 
                     {/* Valeur 2 : Déco à gauche, Texte à droite */}
                     <div className="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-16 px-6">
-                        <div className="lg:w-1/2 w-full aspect-square md:aspect-video lg:aspect-square relative rounded-[3rem] overflow-hidden group">
-                            <div className="absolute inset-0 bg-gradient-to-br from-[#18448F] to-slate-900 transition-transform duration-1000 group-hover:scale-105" />
-                            <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10 mix-blend-overlay" />
-                            <div className="absolute inset-0 flex items-center justify-center">
-                                <Leaf className="w-48 h-48 text-white/10 stroke-[1]" />
-                            </div>
+                        <div className="lg:w-1/2 w-full aspect-square md:aspect-video lg:aspect-square relative rounded-[3rem] overflow-hidden group shadow-2xl">
+                            <div className="absolute inset-0 bg-[#8CC63F]/20 mix-blend-multiply z-10 group-hover:opacity-0 transition-opacity duration-700" />
+                            <img src={image2120} alt="Entreprise socialement responsable" className="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000" />
                         </div>
                         <div className="lg:w-1/2 space-y-8">
                             <h3 className="text-3xl lg:text-5xl font-light text-slate-900 leading-tight">
@@ -238,72 +236,49 @@ const WhyChooseUs = () => {
                 <section className="py-32 bg-white relative" id="pourquoi-reference">
                     <div className="container mx-auto px-6">
                         <div className="text-center mb-24 space-y-4">
-                            <span className="text-cyan-600 font-bold tracking-widest uppercase text-xs">L'ADN BRICAREAU</span>
-                            <h2 className="text-4xl md:text-6xl font-bold text-slate-900 tracking-tight">Pourquoi nous sommes <br className="md:hidden" /><span className="text-[#18448F]">la référence au Québec.</span></h2>
+                            <h2 className="text-3xl lg:text-5xl font-bold text-[#18448F] leading-tight">
+                                Pourquoi nous sommes <br className="md:hidden" /><span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8CC63F] to-blue-500 italic font-light">la référence au Québec.</span>
+                            </h2>
                         </div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 auto-rows-[300px]">
-                            {/* Tech Card */}
-                            <div className="md:col-span-8 bg-slate-50 border border-slate-100 shadow-lg rounded-[2.5rem] p-10 flex flex-col justify-between group hover:-translate-y-2 hover:shadow-2xl transition-all duration-500 overflow-hidden relative">
-                                <div className="absolute -right-20 -top-20 w-80 h-80 bg-blue-100 rounded-full blur-[80px] opacity-50 group-hover:bg-blue-200 transition-colors" />
-                                <div className="relative z-10 space-y-6">
-                                    <div className="w-16 h-16 rounded-2xl bg-[#18448F] flex items-center justify-center text-white shadow-lg">
-                                        <Activity className="w-8 h-8" />
-                                    </div>
-                                    <h3 className="text-3xl font-bold text-slate-900">Calibrage Scientifique</h3>
-                                    <p className="text-slate-500 text-lg max-w-lg leading-relaxed">
-                                        Analyse physico-chimique moléculaire de votre eau pour concevoir un système entièrement sur-mesure. Nous ne laissons rien au hasard.
+                        <div className="mt-20 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+                            {/* Pilier 01 */}
+                            <div className="group flex flex-col gap-8 items-start p-10 lg:p-12 border border-slate-200/60 hover:bg-slate-50/50 transition-colors duration-500 rounded-3xl h-full">
+                                <div className="text-5xl md:text-6xl font-light text-[#18448F]/20 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#8CC63F] group-hover:to-blue-500 transition-all duration-500 tracking-tighter mb-4">
+                                    01.
+                                </div>
+                                <div className="flex-1 space-y-4 pt-2">
+                                    <h3 className="text-3xl font-semibold text-slate-900 group-hover:text-[#18448F] transition-colors duration-300 tracking-tight">Expertise technique avancée</h3>
+                                    <p className="text-slate-500 text-lg md:text-xl leading-relaxed font-light max-w-2xl">
+                                        Nous procédons à une analyse physico-chimique rigoureuse de votre eau afin de concevoir un système de traitement entièrement sur mesure, garantissant une efficacité et une fiabilité de pointe.
                                     </p>
                                 </div>
                             </div>
 
-                            {/* Guarantee Card */}
-                            <div className="md:col-span-4 bg-gradient-to-br from-[#164E63] to-[#083344] border border-cyan-800 shadow-lg rounded-[2.5rem] p-10 text-white flex flex-col justify-between group hover:-translate-y-2 hover:shadow-2xl hover:shadow-cyan-900/20 transition-all duration-500">
-                                <div className="space-y-6">
-                                    <div className="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center backdrop-blur-md">
-                                        <ShieldCheck className="w-7 h-7 text-cyan-300" />
-                                    </div>
-                                    <h3 className="text-3xl font-bold">Protection<br />Patrimoniale</h3>
-                                    <p className="text-cyan-100/70 leading-relaxed font-light">
-                                        Une garantie exceptionnelle. Nous protégeons votre famille et la valeur de votre investissement à très long terme.
+                            {/* Pilier 02 */}
+                            <div className="group flex flex-col gap-8 items-start p-10 lg:p-12 border border-slate-200/60 hover:bg-slate-50/50 transition-colors duration-500 rounded-3xl h-full">
+                                <div className="text-5xl md:text-6xl font-light text-[#18448F]/20 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#8CC63F] group-hover:to-blue-500 transition-all duration-500 tracking-tighter mb-4">
+                                    02.
+                                </div>
+                                <div className="flex-1 space-y-4 pt-2">
+                                    <h3 className="text-3xl font-semibold text-slate-900 group-hover:text-[#18448F] transition-colors duration-300 tracking-tight">Installation de qualité supérieure</h3>
+                                    <p className="text-slate-500 text-lg md:text-xl leading-relaxed font-light max-w-2xl">
+                                        Nos techniciens spécialisés assurent une exécution impeccable de chaque projet. L'installation est conçue pour optimiser l'espace tout en respectant scrupuleusement les normes de l'industrie et l'intégrité de votre propriété.
                                     </p>
                                 </div>
                             </div>
 
-                            {/* Eco Card */}
-                            <div className="md:col-span-8 bg-slate-50 border border-slate-100 shadow-lg rounded-[2.5rem] p-10 flex flex-col justify-between group hover:-translate-y-2 hover:shadow-2xl transition-all duration-500 overflow-hidden relative">
-                                <div className="absolute bottom-0 right-0 p-8 opacity-5">
-                                    <Leaf className="w-64 h-64 rotate-12" />
+                            {/* Pilier 03 */}
+                            <div className="group flex flex-col gap-8 items-start p-10 lg:p-12 border border-slate-200/60 hover:bg-slate-50/50 transition-colors duration-500 rounded-3xl h-full">
+                                <div className="text-5xl md:text-6xl font-light text-[#18448F]/20 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#8CC63F] group-hover:to-blue-500 transition-all duration-500 tracking-tighter mb-4">
+                                    03.
                                 </div>
-                                <div className="relative z-10 flex flex-col md:flex-row gap-8 items-center h-full">
-                                    <div className="flex-1 space-y-4">
-                                        <div className="w-14 h-14 rounded-2xl bg-emerald-100 flex items-center justify-center text-emerald-600">
-                                            <Leaf className="w-7 h-7" />
-                                        </div>
-                                        <h3 className="text-3xl font-bold text-slate-900">Empreinte Zéro</h3>
-                                        <p className="text-slate-500 text-lg leading-relaxed">
-                                            Réduction de 50% de la consommation de sel de rinçage et élimination de plus de 2500 bouteilles de plastique par an pour une famille moyenne.
-                                        </p>
-                                    </div>
-                                    <div className="w-40 h-40 rounded-full bg-emerald-50 border-8 border-emerald-100 flex flex-col items-center justify-center shrink-0">
-                                        <span className="text-4xl font-black text-emerald-600">-50%</span>
-                                        <span className="text-[10px] font-bold text-emerald-800 uppercase tracking-widest mt-1">De Sel</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/* Support Card */}
-                            <div className="md:col-span-4 bg-slate-50 border border-slate-100 shadow-lg rounded-[2.5rem] p-10 flex flex-col justify-between group hover:-translate-y-2 hover:shadow-2xl transition-all duration-500">
-                                <div className="space-y-4">
-                                    <Phone className="w-10 h-10 text-blue-600" />
-                                    <h3 className="text-2xl font-bold text-slate-900">Ligne Prioritaire</h3>
-                                    <p className="text-slate-500 leading-relaxed">
-                                        Service technique d'élite 24/7. Une réactivité absolue partout au Québec.
+                                <div className="flex-1 space-y-4 pt-2">
+                                    <h3 className="text-3xl font-semibold text-slate-900 group-hover:text-[#18448F] transition-colors duration-300 tracking-tight">Service client dédié</h3>
+                                    <p className="text-slate-500 text-lg md:text-xl leading-relaxed font-light max-w-2xl">
+                                        Nous nous engageons à offrir un suivi technique continu. Notre équipe assure un service après-vente rapide, une maintenance rigoureuse et vous fait bénéficier de garanties solides sur l'ensemble de nos équipements.
                                     </p>
                                 </div>
-                                <a href="tel:18552649328" className="inline-flex items-center gap-2 text-sm font-bold text-blue-600 uppercase tracking-widest group-hover:gap-4 transition-all">
-                                    Appeler <ArrowRight className="w-4 h-4" />
-                                </a>
                             </div>
                         </div>
                     </div>
@@ -318,19 +293,18 @@ const WhyChooseUs = () => {
                     </div>
                     
                     <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-12 relative z-10">
-                        {/* Texte à droite sans fond blanc */}
-                        <div className="md:col-span-6 md:col-start-7 space-y-10 md:pl-12 border-l border-white/20">
-                            <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/10 backdrop-blur-md rounded-full border border-white/20 text-xs font-black text-cyan-300 uppercase tracking-[0.2em] shadow-sm">
-                                <div className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse" />
+                        <div className="md:col-span-6 md:col-start-7 space-y-10 md:pl-12">
+                            <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/10 backdrop-blur-md rounded-full border border-white/20 text-xs font-black text-[#8CC63F] uppercase tracking-[0.2em] shadow-sm">
+                                <div className="w-1.5 h-1.5 rounded-full bg-[#8CC63F] animate-pulse" />
                                 Le Moment est Venu
                             </div>
                             <h2 className="text-5xl md:text-7xl font-bold text-white leading-tight">
-                                L'Excellence <br /><span className="text-cyan-400 italic font-light">n'attend pas.</span>
+                                L'Excellence <br /><span className="text-[#8CC63F] italic font-light">n'attend pas.</span>
                             </h2>
                             <p className="text-slate-300 text-lg max-w-xl leading-relaxed">
-                                Réservez votre analyse technique offerte et rejoignez le cercle très fermé de ceux qui ne font aucun compromis sur la qualité de leur eau.
+                                Passez à l'étape supérieure et ne faites plus aucun compromis sur la qualité de votre eau. Échangez avec nos spécialistes pour analyser vos besoins et entamer votre transition vers la pureté absolue.
                             </p>
-                            <ProMaxButton variant="white" className="px-12 h-16 shadow-[0_0_40px_rgba(255,255,255,0.2)] text-[#18448F] font-bold" onClick={() => navigate("/consultation")}>RÉSERVER MON ANALYSE</ProMaxButton>
+                            <ProMaxButton variant="white" className="px-12 h-16 shadow-[0_0_40px_rgba(255,255,255,0.2)] text-[#18448F] font-bold" onClick={() => navigate("/consultation")}>Contactez-nous</ProMaxButton>
                         </div>
                     </div>
                 </section>
