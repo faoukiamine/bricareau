@@ -12,7 +12,7 @@ interface ExpertTrustSectionProps {
 }
 
 const ExpertTrustSection = ({ 
-    title = "Votre eau a besoin d'un expert, ", 
+    title = "Votre eau a besoin d'un expert d'eau, ", 
     highlight = "pas un doute. ",
     description = "Ne laissez pas l'incertitude couler de votre robinet. Chez Bricareau, nous transformons chaque analyse en une certitude scientifique pour la santé de votre foyer.",
     buttonText = "Réservez votre analyse d'eau",
@@ -48,9 +48,18 @@ const ExpertTrustSection = ({
                     <div className="w-full max-w-[700px] px-6 sm:px-12 lg:px-10 xl:px-12 py-20 lg:py-32">
                         <div className="space-y-12">
                             <div className="space-y-6">
-                                <h2 className="heading-pro-max text-left">
-                                    <span className="italic font-light text-[#18448F]">{title}</span>
-                                    <span className="font-bold text-[#18448F]">{highlight}</span>
+                                <h2 
+                                    className="text-4xl md:text-5xl font-bold tracking-tight text-left mb-6"
+                                    style={{
+                                        fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                        fontStyle: 'normal',
+                                        fontWeight: 700,
+                                        fontSize: '48px',
+                                        lineHeight: '52px'
+                                    }}
+                                >
+                                    <span className="text-blue-600">{title}</span>
+                                    <span className="text-[#8CC63F]">{highlight}</span>
                                 </h2>
                                 <p
                                     className="max-w-xl text-left lg:text-justify font-light text-slate-500 text-xl leading-relaxed"

@@ -13,9 +13,18 @@ const WaterDiagnosis = () => {
                     <div className="w-full max-w-[700px] px-6 sm:px-12 lg:px-10 xl:px-12 py-20 lg:py-32">
                         <div className="space-y-10">
                             <div className="space-y-6">
-                                <h2 className="heading-pro-max text-left">
-                                    <span className="italic font-light text-[#18448F]">Votre solution d'eau personnalisée </span>
-                                    <span className="font-bold text-[#18448F]">en quelques clics.</span>
+                                <h2 
+                                    className="text-4xl md:text-5xl font-bold tracking-tight text-left mb-6"
+                                    style={{
+                                        fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                        fontStyle: 'normal',
+                                        fontWeight: 700,
+                                        fontSize: '48px',
+                                        lineHeight: '52px'
+                                    }}
+                                >
+                                    <span className="block text-blue-600">Votre solution d'eau personnalisée</span>
+                                    <span className="block text-[#8CC63F]">en quelques clics.</span>
                                 </h2>
                                 <p 
                                     className="max-w-lg text-left lg:text-justify text-[16px] md:text-[18px] lg:text-[20px] leading-snug font-light text-slate-600"

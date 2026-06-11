@@ -1,436 +1,439 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect } from "react";
 import { 
-    ChevronRight, 
-    ArrowRight,
-    CheckCircle2,
-    ArrowDown,
-    Star,
     Phone,
     ShieldCheck,
-    Zap,
-    HeartPulse,
     Droplets,
-    Settings,
-    Search,
     Leaf,
-    Sparkles,
-    Sun,
-    GlassWater,
     Heart,
-    Activity
+    Activity,
+    Wallet,
+    GlassWater
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Hero from "@/components/Hero";
-import { cn } from "@/lib/utils";
-import { ProMaxButton } from "@/components/ui/ProMaxButton";
-import TestimonialsSection from "@/components/TestimonialsSection";
 import ExpertTrustSection from "@/components/ExpertTrustSection";
 import WaterDiagnosis from "@/components/water_diagnosis";
+import TestimonialsSection from "@/components/TestimonialsSection";
 
 // Assets
 import heroImg from "@/assets/23568974.png";
-import softenerImg from "@/assets/Water-Softener-installation.jpg";
+import drinkWaterImg from "@/assets/20230add-4ce5-4ae6-a6dc-1f9a2c3aeb7b.jpg";
+import softenerImg from "@/assets/Adoucisseur_d_eau.png";
+import familyWellbeingImg from "@/assets/1713.jpg";
 import filtrationImg from "@/assets/Sérénité Direct-Flow installation.png";
 import wholeHouseImg from "@/assets/Filtration-eau-de-puits.webp";
-import drinkWaterImg from "@/assets/20230add-4ce5-4ae6-a6dc-1f9a2c3aeb7b.jpg";
-import uvImg from "@/assets/UV-system.jpg";
-import teenagerShowerImg from "@/assets/teenager-taking-shower-reduce-hangover-effect.jpg";
-import hotelClassImg from "@/assets/hotel_class.svg";
-import savingsImg from "@/assets/savings.svg";
-import verifiedImg from "@/assets/verified.svg";
-import healthSafeImg from "@/assets/health_and_safety.svg";
+import uvImg from "@/assets/VH200-F10-265x300.jpg";
 import fountainImg from "@/assets/Fontaines d'eau.webp";
-import ecoImg from "@/assets/eco.svg";
+import waterTestImg from "@/assets/water-test.jpg";
+import replacementFilterImg from "@/assets/2148728698.jpg";
+import freeSaltImg from "@/assets/free salt conditionner.webp";
+import underSinkImg from "@/assets/RO undersink system.jpg";
+import economiesImg from "@/assets/Untitled23.png";
+import santeImg from "@/assets/kid-playing-bathtub.jpg";
+import autoSystemImg from "@/assets/clack-water-softener.webp";
 
 const ResidentialServices = () => {
     const navigate = useNavigate();
-    const [activeSection, setActiveSection] = useState(0);
-    const [showNav, setShowNav] = useState(false);
-    const [isNavVisible, setIsNavVisible] = useState(true);
-    
-    const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
-    const containerRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
         document.title = "Solutions d'eau résidentielles | Bricareau";
         window.scrollTo(0, 0);
-
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.5
-        };
-
-        const observerCallback = (entries: IntersectionObserverEntry[]) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    const index = sectionRefs.current.findIndex(ref => ref === entry.target);
-                    if (index !== -1) {
-                        setActiveSection(index);
-                        if (index === programs.length - 1) {
-                            setTimeout(() => setIsNavVisible(false), 1000);
-                        } else {
-                            setIsNavVisible(true);
-                        }
-                    }
-                }
-            });
-        };
-
-        const observer = new IntersectionObserver(observerCallback, observerOptions);
-        sectionRefs.current.forEach(ref => { if (ref) observer.observe(ref); });
-
-        const handleGlobalScroll = () => {
-            if (containerRef.current) {
-                const { offsetTop, offsetHeight } = containerRef.current;
-                const isInside = window.scrollY >= offsetTop - 200 && window.scrollY < offsetTop + offsetHeight - 300;
-                setShowNav(isInside);
-            }
-        };
-
-        window.addEventListener("scroll", handleGlobalScroll);
-        return () => {
-            observer.disconnect();
-            window.removeEventListener("scroll", handleGlobalScroll);
-        };
-    }, []);    const programs = [
-        {
-            title: "Filtres d'eau spécialisés pour toute la maison",
-            titlePart1: "Filtration d'eau",
-            titlePart2: "pour toute la maison",
-            navTitle: "Filtration Maison",
-            desc: "Une protection intégrale dès l'entrée d'eau. Éliminez chlore, sédiments et métaux lourds de chaque robinet de votre résidence.",
-            points: [
-                { title: "Clarté de l'eau", desc: "Une eau limpide à chaque robinet, protégeant l'éclat de vos sanitaires et de votre linge." },
-                { title: "Protection de la plomberie", desc: "Préservez vos tuyaux et robinetteries contre l'érosion et l'encrassement." },
-                { title: "Peau & Cheveux", desc: "Réduisez l'agressivité du chlore pour une douche plus douce et naturelle." }
-            ],
-            image: wholeHouseImg,
-            link: "/filtres-deau",
-            tag: "INFRASTRUCTURE",
-            floatingCard: { title: "Certifié NSF", desc: "Performance testée et validée par les plus hauts standards mondiaux.", icon: verifiedImg },
-            floatingCard2: { title: "Peau & Cheveux", desc: "Réduisez l'agressivité du chlore pour une douche plus douce et naturelle.", icon: verifiedImg },
-            floatingCard3: { title: "Performance Durable", desc: "Filtration efficace pendant 5 à 7 ans sans entretien lourd.", icon: savingsImg },
-            floatingCard4: { title: "Protection Plomberie", desc: "Dites adieu aux sédiments qui corrodent vos précieux appareils.", icon: healthSafeImg },
-            largeNumber: "01",
-            bubbles: [
-                { icon: ShieldCheck, label: "Sécurité", value: "A+", color: "text-blue-600" },
-                { icon: Droplets, label: "Pureté", value: "99%", color: "text-sky-500" }
-            ]
-        },
-        {
-            title: "Adoucisseurs d'eau résidentiels",
-            titlePart1: "Adoucisseurs d'eau",
-            titlePart2: "résidentiels",
-            navTitle: "Adoucisseurs",
-            desc: "Dites adieu au calcaire. Protégez vos appareils électroménagers et retrouvez la douceur d'une eau soyeuse au quotidien.",
-            points: [
-                { title: "Zéro calcaire", desc: "Élimination totale du tartre pour des surfaces toujours étincelantes." },
-                { title: "Économies", desc: "Réduisez votre consommation de savon et d'énergie jusqu'à 30%." },
-                { title: "Confort textile", desc: "Un linge plus souple et des couleurs préservées lavage après lavage." }
-            ],
-            image: softenerImg,
-            link: "/adoucisseur-eau-residentiel",
-            tag: "CONFORT",
-            floatingCard: { title: "Éco-Énergie", desc: "Réduisez vos factures d'énergie en optimisant votre chauffe-eau.", icon: savingsImg },
-            floatingCard2: { title: "Zéro Calcaire", desc: "Élimination totale du tartre pour des surfaces toujours étincelantes.", icon: verifiedImg },
-            floatingCard3: { title: "Économies ROI", desc: "Réduisez votre consommation de savon et d'énergie jusqu'à 30%.", icon: savingsImg },
-            floatingCard4: { title: "Confort Textile", desc: "Un linge plus souple et des couleurs préservées lavage après lavage.", icon: verifiedImg },
-            largeNumber: "02",
-            bubbles: [
-                { icon: Sparkles, label: "Éclat", value: "100%", color: "text-amber-500" },
-                { icon: Zap, label: "Énergie", value: "-25%", color: "text-blue-600" }
-            ]
-        },
-        {
-            title: "Solutions d'eau potable premium",
-            titlePart1: "Stations d'eau potable",
-            titlePart2: "premium",
-            navTitle: "Eau Potable",
-            desc: "La pureté d'une eau de source à votre robinet. L'osmose inverse haute technologie pour une hydratation sans compromis.",
-            points: [
-                { title: "Goût parfait", desc: "Une eau neutre et rafraîchissante, idéale pour le café, le thé et la cuisine." },
-                { title: "Santé optimale", desc: "Élimination des micro-plastiques, nitrates et résidus pharmaceutiques." },
-                { title: "Praticité", desc: "Plus besoin d'acheter ou de transporter des bouteilles d'eau lourdes." }
-            ],
-            image: filtrationImg,
-            link: "/systeme-de-filtration-deau-potable",
-            tag: "SANTÉ",
-            floatingCard: { title: "Standard Hôtel", desc: "La qualité des plus grands établissements dans votre cuisine.", icon: hotelClassImg },
-            floatingCard2: { title: "Pureté Totale", desc: "Élimination des métaux lourds et micro-plastiques invisibles.", icon: healthSafeImg },
-            floatingCard3: { title: "Goût de Source", desc: "Une eau cristalline parfaite pour sublimer vos cafés et thés.", icon: verifiedImg },
-            floatingCard4: { title: "Zéro Plastique", desc: "Éliminez l'achat et le transport de bouteilles d'eau lourdes.", icon: ecoImg },
-            largeNumber: "03",
-            bubbles: [
-                { icon: GlassWater, label: "Goût", value: "Pur", color: "text-blue-400" },
-                { icon: Heart, label: "Bien-être", value: "Vital", color: "text-rose-500" }
-            ]
-        },
-        {
-            title: "Systèmes de désinfection UV",
-            titlePart1: "Systèmes de désinfection",
-            titlePart2: "par UV",
-            navTitle: "Protection UV",
-            desc: "Une barrière impénétrable contre les micro-organismes. La solution ultime pour les eaux de puits et la sécurité bactériologique.",
-            points: [
-                { title: "Stérilisation", desc: "Neutralise 99,99% des bactéries, virus et kystes sans produits chimiques." },
-                { title: "Action continue", desc: "Une protection 24h/24 sans modifier le goût ou l'odeur de l'eau." },
-                { title: "Entretien simple", desc: "Une technologie robuste ne nécessitant qu'un changement de lampe annuel." }
-            ],
-            image: uvImg,
-            link: "/Systemes-de-desinfection-UV",
-            tag: "SÉCURITÉ",
-            floatingCard: { title: "Santé 99.9%", desc: "Protection certifiée contre les pathogènes invisibles.", icon: healthSafeImg },
-            floatingCard2: { title: "Stérilisation", desc: "Neutralise bactéries et virus sans produits chimiques.", icon: ShieldCheck },
-            floatingCard3: { title: "Sécurité 24/7", desc: "Une barrière impénétrable active en permanence pour votre foyer.", icon: healthSafeImg },
-            floatingCard4: { title: "Entretien Simple", desc: "Technologie robuste ne nécessitant qu'un changement de lampe annuel.", icon: verifiedImg },
-            largeNumber: "04",
-            bubbles: [
-                { icon: Activity, label: "Contrôle", value: "Actif", color: "text-blue-600" },
-                { icon: Sun, label: "Rayonnement", value: "Max", color: "text-amber-400" }
-            ]
-        },
-        {
-            title: "Fontaines d'eau intelligentes",
-            titlePart1: "Fontaines d'eau",
-            titlePart2: "intelligentes",
-            navTitle: "Fontaines",
-            desc: "L'élégance au service de l'hydratation. Une source d'eau purifiée, fraîche ou pétillante, intégrée parfaitement à votre intérieur.",
-            points: [
-                { title: "Multi-température", desc: "Eau fraîche, tempérée ou chaude instantanément selon vos besoins." },
-                { title: "Filtration intégrée", desc: "Technologie de pointe éliminant tout résidu pour une eau pure." },
-                { title: "Éco-responsable", desc: "Dites adieu aux bouteilles jetables et réduisez vos déchets plastiques." }
-            ],
-            image: fountainImg,
-            link: "/fontaines",
-            tag: "HYDRATATION",
-            floatingCard: { title: "Confort Illimité", desc: "Oubliez les bonbonnes lourdes et encombrantes pour toujours.", icon: ecoImg },
-            floatingCard2: { title: "Multi-Température", desc: "Eau fraîche, tempérée ou chaude instantanément selon vos envies.", icon: verifiedImg },
-            floatingCard3: { title: "Design Premium", desc: "Une esthétique moderne qui s'intègre parfaitement à votre intérieur.", icon: verifiedImg },
-            floatingCard4: { title: "Option Pétillante", desc: "Dégustez une eau finement gazéifiée directement de votre fontaine.", icon: GlassWater },
-            largeNumber: "05",
-            bubbles: [
-                { icon: Droplets, label: "Pureté", value: "Top", color: "text-blue-600" },
-                { icon: Leaf, label: "Écologie", value: "Green", color: "text-green-500" }
-            ]
-        }
-    ];
-
-    const scrollToProgram = (idx: number) => {
-        const el = sectionRefs.current[idx];
-        if (el) window.scrollTo({ top: el.offsetTop, behavior: 'smooth' });
-    };
+    }, []);
 
     return (
         <div className="min-h-screen bg-[#FDFDFD] font-sans text-slate-900 selection:bg-blue-100 selection:text-blue-900 overflow-x-hidden">
             <Header />
 
             <main>
-                {/* 1. CINEMATIC HERO */}
-                <Hero 
-                    image={heroImg}
-                    highlightedTitle="L'eau pure, "
-                    mainTitle="que votre famille mérite."
-                    subtitle="Transformez l'eau de votre maison en une ressource cristalline, saine et protectrice. Plus de 20 000 familles au Québec nous font confiance."
-                    ctaText="ANALYSE D'EAU GRATUITE"
-                    ctaLink="/consultation"
-                    showPhone={true}
-                    badge="Excellence Résidentielle"
-                />
-                
-                {/* 2. INTRO SOLUTIONS */}
-                <section className="py-24 bg-white relative">
-                    <div className="container mx-auto px-6 text-center">
-                        <div className="max-w-4xl mx-auto space-y-10 animate-in fade-in slide-in-from-bottom-8 duration-1000">
-                            <h2 className="text-4xl md:text-6xl font-bold tracking-tighter leading-[1.1] text-[#18448F] uppercase">
-                                Nos solutions résidentielles <br />
-                                <span className="text-slate-900">de traitement de l'eau</span>
+                {/* 1. HERO SECTION */}
+                <section className="relative bg-white overflow-hidden min-h-screen flex flex-col justify-center pt-24 pb-16 lg:pt-28 lg:pb-16 border-b border-slate-200">
+                    <div className="absolute inset-0 w-full h-full opacity-40 lg:opacity-100">
+                        {/* Mobile Gradient */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-white via-white/90 to-transparent z-10 lg:hidden"></div>
+                        {/* Desktop Gradient: 1/3 solid white, fading to transparent */}
+                        <div className="absolute inset-0 bg-[linear-gradient(to_right,white_0%,white_33.33%,rgba(255,255,255,0)_85%)] z-10 hidden lg:block"></div>
+                        
+                        <div className="absolute right-0 top-0 w-full lg:w-[80%] h-full">
+                            <img 
+                                src={heroImg} 
+                                alt="Résidentiel Excellence" 
+                                className="absolute inset-0 w-full h-full object-cover object-center"
+                            />
+                        </div>
+                    </div>
+                    <div className="absolute right-0 top-0 w-full h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/20 via-transparent to-transparent pointer-events-none z-20"></div>
+                    
+                    <div className="container mx-auto px-6 relative z-30">
+                        <div className="max-w-3xl flex flex-col justify-center">
+                            <div className="mb-8">
+                                <h1 className="text-[50px] leading-[55px] font-sans font-bold mb-6 tracking-tight">
+                                    <span className="text-[#18448F]">L'excellence d'</span>
+                                    <span className="text-[#8CC63F]">une eau parfaite,</span><br/>
+                                    <span className="text-[#18448F]">au cœur de votre foyer.</span>
+                                </h1>
+                                
+                                <p className="text-slate-600 text-lg sm:text-xl font-light leading-relaxed max-w-xl">
+                                    Transformez l'eau de votre maison en une ressource cristalline, saine et protectrice. Plus de 20 000 familles au Québec nous font confiance.
+                                </p>
+                            </div>
+                            
+                            <div className="flex flex-col sm:flex-row items-start gap-6 mb-16">
+                                <div className="relative inline-block w-full sm:w-auto group">
+                                    <div className="absolute inset-0 border border-[#18448F] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                                    <button
+                                        className="relative flex items-center justify-center w-full sm:w-auto bg-[#18448F] text-white hover:bg-transparent hover:text-[#18448F] border border-[#18448F] rounded-[2rem] h-[3.25rem] px-8 font-black uppercase tracking-[0.1em] text-[11px] transition-all"
+                                        onClick={() => navigate("/consultation")}
+                                    >
+                                        Planifiez une consultation gratuite
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* 2. EDITORIAL INTRO */}
+                <section className="relative py-24 md:py-32 bg-white overflow-hidden">
+                    <div className="container mx-auto px-6 max-w-7xl">
+                        <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-center">
+                            <div className="lg:w-1/2 space-y-10">
+                                <div className="inline-flex items-center gap-4">
+                                    <span className="w-12 h-[1px] bg-slate-900" />
+                                    <span className="text-[10px] font-black text-slate-500 uppercase tracking-[0.4em]">L'ESSENCE DU FOYER</span>
+                                </div>
+                                <h2 
+                                    className="text-slate-900"
+                                    style={{
+                                        fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                        fontStyle: 'normal',
+                                        fontWeight: 700,
+                                        fontSize: '48px',
+                                        lineHeight: '52px'
+                                    }}
+                                >
+                                    <span className="block text-[#8CC63F]">Le bien-être de</span>
+                                    <span className="block">
+                                        <span className="text-[#8CC63F]">votre famille</span>
+                                        <span className="text-blue-600"> avant tout.</span>
+                                    </span>
+                                </h2>
+                                <p className="text-slate-500 text-lg md:text-xl font-light leading-relaxed max-w-lg">
+                                    L'eau est le cœur de votre foyer. Que ce soit pour boire, cuisiner, ou vous laver, sa pureté a un impact direct sur votre confort quotidien et la santé de ceux que vous aimez. Ne laissez plus la qualité de votre eau au hasard.
+                                </p>
+                            </div>
+                            <div className="lg:w-1/2 relative">
+                                <div className="aspect-[4/3] w-full max-w-2xl mx-auto relative group overflow-hidden rounded-2xl">
+                                    <div className="absolute inset-0 bg-slate-100 translate-x-4 translate-y-4 transition-transform group-hover:translate-x-2 group-hover:translate-y-2 rounded-2xl" />
+                                    <img 
+                                        src={familyWellbeingImg} 
+                                        alt="Le bien-être de votre famille" 
+                                        className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 hover:scale-105"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* 3. BENTO GRID PORTFOLIO */}
+                <section className="relative py-24 bg-slate-50 border-t border-slate-100">
+                    <div className="container mx-auto px-6 max-w-7xl">
+                        <div className="mb-16 text-center flex flex-col items-center mx-auto">
+                            <h2 
+                                className="text-4xl md:text-5xl font-bold tracking-tight text-slate-900 mb-8 max-w-4xl text-center"
+                                style={{
+                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                    fontStyle: 'normal',
+                                    fontWeight: 700,
+                                    fontSize: '48px',
+                                    lineHeight: '52px'
+                                }}
+                            >
+                                <span className="block">
+                                    <span className="text-blue-600">Nos solutions de </span>
+                                    <span className="text-[#8CC63F]">filtration d'eau</span>
+                                </span>
+                                <span className="block text-blue-600">
+                                    pour votre résidence.
+                                </span>
                             </h2>
-                            <p className="text-slate-500 text-xl font-light leading-relaxed max-w-2xl mx-auto">
-                                Découvrez une gamme complète de technologies de pointe conçues pour transformer la qualité de l'eau de votre foyer. De l'adoucissement haute efficacité à la purification par osmose inverse, nos solutions allient performance, durabilité et design pour offrir à votre famille une eau d'une pureté absolue, chaque jour.
+                            <p className="mt-6 text-slate-500 text-lg font-light leading-relaxed w-full max-w-3xl text-center">
+                                Découvrez nos systèmes avancés conçus spécifiquement pour la maison. De l'adoucisseur protégeant votre plomberie à la station d'eau potable ultra-pure pour votre cuisine, Bricareau garantit une qualité irréprochable à chaque robinet.
                             </p>
                         </div>
-                    </div>
-                </section>
-
-                {/* 3. SERVICE SECTIONS - PREMIUM LIQUID DESIGN */}
-                <section id="solutions" className="py-20 bg-white">
-                    <div className="container mx-auto px-6">
-                        {/* Side Nav for Sections */}
-                        <div className="relative">
-                            <div className={cn(
-                                "fixed left-12 top-1/2 -translate-y-1/2 z-50 hidden xl:flex flex-col gap-10 transition-all duration-700",
-                                showNav && isNavVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10 pointer-events-none"
-                            )}>
-                                {programs.map((prog, idx) => (
-                                    <button 
-                                        key={idx} 
-                                        className="relative flex items-center gap-6 group text-left"
-                                        onClick={() => scrollToProgram(idx)}
-                                    >
-                                        <div className={cn(
-                                            "w-2 h-2 rounded-full transition-all duration-500",
-                                            activeSection === idx ? "bg-[#18448F] scale-150 ring-4 ring-blue-100" : "bg-slate-300 scale-100"
-                                        )} />
-                                        <span className={cn(
-                                            "text-[10px] font-black uppercase tracking-widest transition-all",
-                                            activeSection === idx ? "text-[#18448F] opacity-100" : "text-slate-400 opacity-0 group-hover:opacity-50"
-                                        )}>
-                                            {prog.navTitle}
-                                        </span>
-                                    </button>
-                                ))}
+                        
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[300px]">
+                            {/* Card 1: Adoucissement (Tall) */}
+                            <div 
+                                className="group relative bg-white lg:row-span-2 rounded-[2rem] overflow-hidden border border-slate-100 hover:shadow-xl hover:shadow-blue-900/5 transition-all duration-500 cursor-pointer flex flex-col justify-end p-8 lg:p-12"
+                                onClick={() => navigate("/A")}
+                            >
+                                <div className="absolute inset-0 overflow-hidden rounded-[2rem]">
+                                    <img src={softenerImg} alt="Adoucissement Résidentiel" className="w-full h-full object-cover opacity-60 mix-blend-multiply transition-transform duration-700 group-hover:scale-105" />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-white via-white/90 to-transparent" />
+                                </div>
+                                <div className="relative z-10 space-y-4 mt-auto">
+                                    <span className="text-[10px] font-black text-blue-600 uppercase tracking-widest">ZÉRO CALCAIRE</span>
+                                    <h3 className="text-3xl font-bold text-slate-900 uppercase tracking-tight">Adoucisseurs<br/>d'eau</h3>
+                                    <p className="text-slate-500 text-sm font-light leading-relaxed">
+                                        Protégez vos électroménagers et profitez d'un linge plus doux et d'une peau moins asséchée.
+                                    </p>
+                                </div>
                             </div>
 
-                            {/* Service Sections Content */}
-                            <div ref={containerRef} className="space-y-48">
-                                {programs.map((prog, idx) => (
-                                    <div 
-                                        key={idx}
-                                        ref={el => sectionRefs.current[idx] = el}
-                                        className="relative h-[80vh] flex items-center overflow-hidden"
-                                    >
-                                        {/* Background Orbs */}
-                                        <div className="absolute inset-0 z-0 pointer-events-none">
-                                            <div className={cn(
-                                                "absolute w-[40%] h-[40%] bg-blue-50 rounded-full blur-[100px] opacity-60",
-                                                idx % 2 === 0 ? "-top-[10%] -left-[10%]" : "-top-[10%] -right-[10%]"
-                                            )} />
-                                            <div className={cn(
-                                                "absolute w-[30%] h-[30%] bg-indigo-50 rounded-full blur-[80px] opacity-40",
-                                                idx % 2 === 0 ? "top-[20%] -right-[5%]" : "top-[20%] -left-[5%]"
-                                            )} />
-                                        </div>
+                            {/* Card 2: Filtration Maison (Wide) */}
+                            <div 
+                                className="group relative bg-white md:col-span-2 rounded-[2rem] overflow-hidden border border-slate-100 hover:shadow-xl hover:shadow-blue-900/5 transition-all duration-500 cursor-pointer flex flex-col justify-center p-8 lg:p-12"
+                                onClick={() => navigate("/B")}
+                            >
+                                <div className="absolute inset-0 overflow-hidden rounded-[2rem]">
+                                    <img src={autoSystemImg} alt="Filtres Maison Automatiques" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                                    <div className="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-transparent" />
+                                </div>
+                                <div className="relative z-10 max-w-md space-y-4">
+                                    <span className="text-[10px] font-black text-blue-600 uppercase tracking-widest">SÉCURITÉ GLOBALE</span>
+                                    <h3 className="text-3xl font-bold text-slate-900 uppercase tracking-tight">Filtres d'eau spécialisés<br/>pour toute la maison</h3>
+                                    <p className="text-slate-500 text-sm font-light leading-relaxed">
+                                        Une barrière protectrice dès l'entrée d'eau. Éliminez chlore, sédiments et métaux lourds de chaque robinet.
+                                    </p>
+                                </div>
+                            </div>
 
-                                        <div className="container mx-auto px-6 relative z-10">
-                                            <div className={cn(
-                                                "flex flex-col items-center gap-20",
-                                                idx % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
-                                            )}>
-                                                {/* Text Column */}
-                                                <div className="lg:w-1/2 space-y-16">
-                                                    <div className="relative">
-                                                        <div className="absolute -left-12 top-0 text-[180px] font-black text-blue-50/50 select-none leading-none -z-10">
-                                                            {(prog as any).largeNumber}
-                                                        </div>
-                                                        <div className="space-y-6">
-                                                            <span className="text-[10px] font-black text-blue-600 uppercase tracking-[0.5em] flex items-center gap-3">
-                                                                <span className="w-8 h-[1px] bg-blue-600" />
-                                                                {prog.tag}
-                                                            </span>
-                                                            <h2 className="text-6xl md:text-[80px] font-bold tracking-tighter leading-[0.9] text-slate-900 uppercase">
-                                                                {prog.titlePart1} <br />
-                                                                <span className="text-blue-600 italic font-light lowercase">{prog.titlePart2}</span>
-                                                            </h2>
-                                                            <p className="text-slate-500 text-xl font-light leading-relaxed max-w-lg">
-                                                                {prog.desc}
-                                                            </p>
-                                                        </div>
-                                                    </div>
+                            {/* Card 3: Osmose (Square) */}
+                            <div 
+                                className="group relative bg-white rounded-[2rem] overflow-hidden border border-slate-100 hover:shadow-xl hover:shadow-blue-900/5 transition-all duration-500 cursor-pointer flex flex-col justify-end p-8"
+                                onClick={() => navigate("/C")}
+                            >
+                                <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                                <div className="relative z-10 space-y-2 mt-auto w-[65%]">
+                                    <span className="text-[10px] font-black text-blue-600 uppercase tracking-widest">EAU POTABLE</span>
+                                    <h3 className="text-xl font-bold text-slate-900 uppercase tracking-tight">Stations d'eau potable<br/>sous l'évier</h3>
+                                    <p className="text-slate-500 text-xs font-light leading-relaxed">
+                                        Une eau cristalline à 99% pure pour la boisson et la cuisine.
+                                    </p>
+                                </div>
+                                <img src={filtrationImg} alt="Osmose" className="absolute right-0 bottom-0 h-[70%] object-contain transition-transform duration-500 group-hover:scale-105 mix-blend-multiply z-0" />
+                            </div>
 
-                                                    <div className="relative grid grid-cols-1 md:grid-cols-2 gap-10">
-                                                        {[
-                                                            { ...prog.floatingCard, value: "Elite", color: "bg-blue-600" },
-                                                            (prog as any).floatingCard2 ? { ...(prog as any).floatingCard2, value: "Max", color: "bg-indigo-600" } : { ...prog.points[0], value: "Max", color: "bg-indigo-600" },
-                                                            (prog as any).floatingCard3 ? { ...(prog as any).floatingCard3, value: "Pro", color: "bg-sky-600" } : null,
-                                                            (prog as any).floatingCard4 ? { ...(prog as any).floatingCard4, value: "Ultra", color: "bg-blue-500" } : null,
-                                                        ].filter(Boolean).map((feat: any, fIdx) => (
-                                                            <div key={fIdx} className="group relative p-10 rounded-[3rem] bg-white border border-slate-100 shadow-xl shadow-slate-100/50 hover:shadow-2xl hover:shadow-blue-100 transition-all duration-500 overflow-hidden">
-                                                                <div className={cn("absolute top-0 right-0 w-32 h-32 opacity-5 translate-x-10 -translate-y-10 rounded-full", feat.color)} />
-                                                                <div className="relative z-10 space-y-4">
-                                                                    <div className="flex items-center gap-3">
-                                                                        {feat.icon && typeof feat.icon === 'string' ? (
-                                                                            <img src={feat.icon} className="w-5 h-5 opacity-50" alt="" />
-                                                                        ) : feat.icon ? (
-                                                                            <feat.icon className="w-5 h-5 opacity-50" />
-                                                                        ) : null}
-                                                                        <span className="text-xs font-bold text-slate-500">{feat.title}</span>
-                                                                    </div>
-                                                                    <p className="text-slate-500 text-sm font-light leading-relaxed">{feat.desc}</p>
-                                                                </div>
-                                                            </div>
-                                                        ))}
-                                                    </div>
-                                                    
-                                                    <div className="pt-4">
-                                                        <ProMaxButton variant="outline" className="px-12 h-16 text-[10px]" onClick={() => navigate(prog.link)}>
-                                                            DÉCOUVRIR LA SOLUTION
-                                                        </ProMaxButton>
-                                                    </div>
-                                                </div>
+                            {/* Card 4: UV (Square) */}
+                            <div 
+                                className="group relative bg-white rounded-[2rem] overflow-hidden border border-slate-100 hover:shadow-xl hover:shadow-blue-900/5 transition-all duration-500 cursor-pointer flex flex-col justify-end p-8"
+                                onClick={() => navigate("/systemes-de-desinfection-uv")}
+                            >
+                                <div className="absolute inset-0 overflow-hidden rounded-[2rem]">
+                                    <img src={uvImg} alt="UV" className="w-full h-full object-contain p-12 mix-blend-multiply transition-transform duration-700 group-hover:scale-105" />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-transparent" />
+                                </div>
+                                <div className="flex justify-between items-start relative z-10">
+                                    <span className="text-[10px] font-black text-blue-600 uppercase tracking-widest">STÉRILISATION</span>
+                                </div>
+                                <div className="space-y-2 relative z-10">
+                                    <h3 className="text-xl font-bold text-slate-900 uppercase tracking-tight">Systèmes de désinfection<br/>UV</h3>
+                                    <p className="text-slate-500 text-xs font-light leading-relaxed">
+                                        Neutralise 99,9% des bactéries et virus. Idéal pour l'eau de puits.
+                                    </p>
+                                </div>
+                            </div>
 
-                                                {/* Liquid Visual Column */}
-                                                <div className="lg:w-1/2 relative">
-                                                    <div className="relative w-full aspect-square max-w-[600px] mx-auto">
-                                                        <div className="absolute inset-0 bg-blue-600/5 animate-morph" />
-                                                        
-                                                        <div className="absolute top-0 left-0 w-full h-full">
-                                                            {(prog as any).bubbles.map((bubble: any, bIdx: number) => (
-                                                                <div 
-                                                                    key={bIdx} 
-                                                                    className={cn(
-                                                                        "absolute z-30 bg-white/80 backdrop-blur-xl rounded-full shadow-2xl border border-white/50 flex flex-col items-center justify-center text-center animate-float",
-                                                                        bIdx === 0 ? "top-[10%] right-[10%] w-48 h-48 p-8" : "bottom-[10%] left-[5%] w-56 h-56 p-10 animation-delay-2000"
-                                                                    )}
-                                                                >
-                                                                    <bubble.icon className={cn("w-8 h-8 mb-3", bubble.color)} />
-                                                                    <span className="text-[10px] font-black uppercase tracking-widest text-slate-400">{bubble.label}</span>
-                                                                    <span className="text-lg font-bold text-slate-900 leading-none">{bubble.value}</span>
-                                                                </div>
-                                                            ))}
+                            {/* Card 5: Fontaines (Square) */}
+                            <div 
+                                className="group relative bg-white lg:col-span-1 rounded-[2rem] overflow-hidden border border-slate-100 hover:shadow-xl hover:shadow-blue-900/5 transition-all duration-500 cursor-pointer flex flex-col justify-end p-8"
+                                onClick={() => navigate("/fontaines")}
+                            >
+                                <div className="absolute inset-0 overflow-hidden rounded-[2rem]">
+                                    <img src={fountainImg} alt="Fontaines" className="w-full h-full object-cover opacity-80 mix-blend-multiply transition-transform duration-700 group-hover:scale-105" />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-white/80 to-transparent" />
+                                </div>
+                                <div className="relative z-10 space-y-4">
+                                    <span className="text-[10px] font-black text-blue-600 uppercase tracking-widest">ÉLÉGANCE</span>
+                                    <h3 className="text-2xl font-bold text-slate-900 uppercase tracking-tight">Fontaines<br/>d'Eau</h3>
+                                    <p className="text-slate-600 font-medium text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 -translate-y-4 group-hover:translate-y-0">
+                                        Eau fraîche, tempérée ou pétillante, avec un design intégré.
+                                    </p>
+                                </div>
+                            </div>
 
-                                                            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] rounded-full overflow-hidden border-[15px] border-white shadow-2xl animate-morph" style={{ animationDelay: '-2s' }}>
-                                                                <img 
-                                                                    src={prog.image} 
-                                                                    alt={prog.title} 
-                                                                    className="w-full h-full object-cover scale-110 hover:scale-125 transition-transform duration-[2s]"
-                                                                />
-                                                                <div className="absolute inset-0 bg-blue-900/10 mix-blend-overlay" />
-                                                            </div>
+                            {/* Card 6: Filtres de remplacement (Square) */}
+                            <div 
+                                className="group relative bg-white lg:col-span-1 rounded-[2rem] overflow-hidden border border-slate-100 hover:shadow-xl hover:shadow-blue-900/5 transition-all duration-500 cursor-pointer flex flex-col justify-end p-8"
+                                onClick={() => navigate("/cartouches-de-filtres-a-eau")}
+                            >
+                                <div className="absolute inset-0 overflow-hidden rounded-[2rem]">
+                                    <img src={replacementFilterImg} alt="Filtres remplacement" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent" />
+                                </div>
+                                <div className="relative z-10 space-y-4">
+                                    <span className="text-[10px] font-black text-white uppercase tracking-widest">MAINTENANCE</span>
+                                    <h3 className="text-2xl font-bold text-white uppercase tracking-tight">Filtres de<br/>Remplacement</h3>
+                                    <p className="text-white/80 font-medium text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 -translate-y-4 group-hover:translate-y-0">
+                                        Cartouches et pièces pour assurer la longévité de vos systèmes.
+                                    </p>
+                                </div>
+                            </div>
 
-                                                            <div className={cn(
-                                                                "absolute top-1/2 -translate-y-1/2 vertical-text hidden xl:block",
-                                                                idx % 2 === 0 ? "-right-12" : "-left-12"
-                                                            )}>
-                                                                <span className="text-xs font-black text-blue-600/20 uppercase tracking-[1em] rotate-180">DESIGNED IN QUEBEC</span>
-                                                            </div>
-                                                        </div>
-
-                                                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[110%] border border-blue-100 rounded-full animate-spin-slow opacity-20 -z-10" />
-                                                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[130%] h-[130%] border border-blue-50 rounded-full animate-spin-slow-reverse opacity-10 -z-10" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                ))}
+                            {/* Card 7: Tests d'eau (Square) */}
+                            <div 
+                                className="group relative bg-white lg:col-span-1 rounded-[2rem] overflow-hidden border border-slate-100 hover:shadow-xl hover:shadow-blue-900/5 transition-all duration-500 cursor-pointer flex flex-col justify-end p-8"
+                                onClick={() => navigate("/test-de-la-qualite-de-leau")}
+                            >
+                                <div className="absolute inset-0 overflow-hidden rounded-[2rem]">
+                                    <img src={waterTestImg} alt="Tests d'eau" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-transparent" />
+                                </div>
+                                <div className="relative z-10 space-y-4">
+                                    <span className="text-[10px] font-black text-blue-600 uppercase tracking-widest">DIAGNOSTIC</span>
+                                    <h3 className="text-2xl font-bold text-slate-900 uppercase tracking-tight">Tests<br/>d'Eau</h3>
+                                    <p className="text-slate-600 font-medium text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 -translate-y-4 group-hover:translate-y-0">
+                                        Analyse professionnelle pour comprendre et résoudre vos problèmes d'eau.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </section>
 
-                {/* 4. EXPERT TRUST SECTION */}
-                <ExpertTrustSection />
+                {/* 4. LES 3 PILIERS (Z-PATTERN) */}
+                <section className="relative py-32 bg-white text-slate-900 overflow-hidden border-t border-slate-100">
+                    <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-50/50 via-white to-white pointer-events-none" />
+                    
+                    <div className="container mx-auto px-6 max-w-7xl relative z-10">
+                        {/* Section Header */}
+                        <div className="text-center max-w-4xl mx-auto mb-32">
+                            <div className="inline-flex items-center justify-center gap-4 mb-8">
+                                <span className="w-12 h-[1px] bg-slate-900" />
+                                <span className="text-[10px] font-black text-slate-500 uppercase tracking-[0.4em]">LES AVANTAGES BRICAREAU</span>
+                                <span className="w-12 h-[1px] bg-slate-900" />
+                            </div>
+                            <h2 
+                                className="text-4xl md:text-5xl font-bold tracking-tight text-slate-900 mb-8 mx-auto"
+                                style={{
+                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                    fontStyle: 'normal',
+                                    fontWeight: 700,
+                                    fontSize: '48px',
+                                    lineHeight: '52px'
+                                }}
+                            >
+                                <span className="block text-blue-600">Pourquoi investir dans</span>
+                                <span className="block">
+                                    <span className="text-blue-600">un </span>
+                                    <span className="text-[#8CC63F]">système de traitement d'eau ?</span>
+                                </span>
+                            </h2>
+                        </div>
 
-                {/* 5. TESTIMONIALS */}
+                        <div className="space-y-32">
+                            {/* Pilier 1 : Image Left, Text Right */}
+                            <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+                                <div className="lg:w-1/2 relative aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
+                                    <img src={economiesImg} alt="Économies" className="absolute inset-0 w-full h-full object-cover" />
+                                </div>
+                                <div className="lg:w-1/2 w-full space-y-8">
+                                    <div className="flex items-center gap-6">
+                                        <div className="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center shrink-0">
+                                            <Wallet className="w-8 h-8 text-blue-600" />
+                                        </div>
+                                        <h3 className="text-3xl font-medium tracking-tight text-slate-900">Des économies durables.</h3>
+                                    </div>
+                                    <div className="space-y-6 text-lg text-slate-500 font-light leading-relaxed">
+                                        <div className="flex items-start gap-4">
+                                            <div className="w-1.5 h-1.5 rounded-full bg-[#8CC63F] mt-3 shrink-0" />
+                                            <p>Réduisez l'utilisation de savons et détergents jusqu'à 50% grâce à une eau adoucie.</p>
+                                        </div>
+                                        <div className="flex items-start gap-4">
+                                            <div className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-3 shrink-0" />
+                                            <p>Allongez la durée de vie de vos électroménagers et chauffe-eau en empêchant le tartre.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Pilier 2 : Text Left, Image Right */}
+                            <div className="flex flex-col-reverse lg:flex-row items-center gap-16 lg:gap-24">
+                                <div className="lg:w-1/2 w-full space-y-8">
+                                    <div className="flex items-center gap-6">
+                                        <div className="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center shrink-0">
+                                            <Heart className="w-8 h-8 text-blue-600" />
+                                        </div>
+                                        <h3 className="text-3xl font-medium tracking-tight text-slate-900">Santé et bien-être.</h3>
+                                    </div>
+                                    <div className="space-y-6 text-lg text-slate-500 font-light leading-relaxed">
+                                        <div className="flex items-start gap-4">
+                                            <div className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-3 shrink-0" />
+                                            <p>Fini la peau sèche et les cheveux ternes après la douche.</p>
+                                        </div>
+                                        <div className="flex items-start gap-4">
+                                            <div className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-3 shrink-0" />
+                                            <p>Une eau de boisson sans chlore, plomb, et autres contaminants pour toute la famille.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="lg:w-1/2 relative aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
+                                    <img src={santeImg} alt="Santé" className="absolute inset-0 w-full h-full object-cover" />
+                                </div>
+                            </div>
+
+                            {/* Pilier 3 : Image Left, Text Right */}
+                            <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+                                <div className="lg:w-1/2 relative aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
+                                    <img src={fountainImg} alt="Écologie" className="absolute inset-0 w-full h-full object-cover" />
+                                </div>
+                                <div className="lg:w-1/2 w-full space-y-8">
+                                    <div className="flex items-center gap-6">
+                                        <div className="w-16 h-16 rounded-full bg-[#8CC63F]/10 flex items-center justify-center shrink-0">
+                                            <Leaf className="w-8 h-8 text-[#8CC63F]" />
+                                        </div>
+                                        <h3 className="text-3xl font-medium tracking-tight text-slate-900">Un choix écologique.</h3>
+                                    </div>
+                                    <div className="space-y-6 text-lg text-slate-500 font-light leading-relaxed">
+                                        <div className="flex items-start gap-4">
+                                            <div className="w-1.5 h-1.5 rounded-full bg-[#8CC63F] mt-3 shrink-0" />
+                                            <p>Dites adieu aux bouteilles en plastique et réduisez considérablement vos déchets domestiques.</p>
+                                        </div>
+                                        <div className="flex items-start gap-4">
+                                            <div className="w-1.5 h-1.5 rounded-full bg-[#8CC63F] mt-3 shrink-0" />
+                                            <p>Des systèmes conçus pour être ultra-efficaces et réduire le gaspillage d'eau.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* 5. EXPERT TRUST SECTION */}
+                <div className="border-t border-slate-100">
+                    <ExpertTrustSection />
+                </div>
+
+                {/* 6. TESTIMONIALS */}
                 <div className="bg-slate-50 py-32 border-y border-gray-100">
                     <TestimonialsSection 
                         filterProduct="/"
                         limit={6}
                         title={
                             <div className="text-center space-y-3 mb-16">
-                                <span className="text-[10px] font-black text-blue-500 uppercase tracking-[0.5em] block mb-4">L'EXPÉRIENCE BRICAREAU</span>
-                                <h2 className="heading-pro-max text-center uppercase">
-                                    <span className="italic font-light text-[#18448F]">Une famille satisfaite </span>
-                                    <span className="font-bold text-[#18448F]">après l'autre.</span>
+                                <div className="inline-flex items-center justify-center gap-4 mb-4">
+                                    <span className="text-[10px] font-black text-slate-500 uppercase tracking-[0.4em]">L'EXPÉRIENCE BRICAREAU</span>
+                                </div>
+                                <h2 
+                                    className="text-4xl md:text-5xl font-bold tracking-tight text-slate-900 mb-8 mx-auto"
+                                    style={{
+                                        fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                        fontStyle: 'normal',
+                                        fontWeight: 700,
+                                        fontSize: '48px',
+                                    }}
+                                >
+                                    <span className="block text-blue-600">Une famille satisfaite</span>
+                                    <span className="block text-[#8CC63F]">après l'autre.</span>
                                 </h2>
                             </div>
                         }
                     />
                 </div>
-                {/* 6. WATER DIAGNOSIS */}
+                {/* 7. WATER DIAGNOSIS */}
                 <WaterDiagnosis />
             </main>
 
