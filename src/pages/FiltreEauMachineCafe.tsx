@@ -214,7 +214,7 @@ const FiltreEauMachineCafe = () => {
                                     </p>
                                 </div>
                                 <div className="flex flex-col sm:flex-row gap-6 pt-4">
-                                    <ProMaxButton variant="primary" className="px-12 h-16 text-[11px]" onClick={() => navigate("/consultation")}>
+                                    <ProMaxButton variant="primary" className="px-12 h-16 text-[11px]" onClick={() => navigate("/contact-form")}>
                                         DEMANDEZ UNE SOUMISSION
                                     </ProMaxButton>
                                 </div>

@@ -279,6 +279,7 @@ const Contact = () => {
                                                                 <SelectItem value="Entretien">Entretien & Maintenance</SelectItem>
                                                                 <SelectItem value="Installation">Installation & Mise en service</SelectItem>
                                                                 <SelectItem value="Réparation">Réparations d'urgence</SelectItem>
+                                                                <SelectItem value="Soumission">Demande de soumission</SelectItem>
                                                             </SelectContent>
                                                         </Select>
                                                         <FormMessage />

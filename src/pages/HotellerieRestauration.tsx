@@ -21,7 +21,10 @@ import {
     Activity as SparklesIcon,
     Leaf,
     HandPlatter,
-    Timer
+    Timer,
+    ChevronDown,
+    TrendingDown,
+    Wallet
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import Header from "@/components/Header";
@@ -44,11 +47,14 @@ import healthSafeImg from "@/assets/health_and_safety.svg";
 import ecoImg from "@/assets/eco.svg";
 import industrialHospitalityImg from "@/assets/industrial_hospitality.png";
 import FilterImg1 from "@/assets/PURITY-C-Quell-ST-Advanced.webp";
+import maitriseImg from "@/assets/2226.jpeg";
 import hospitalityImg2 from "@/assets/2121.png";
 import brasserieBgImg from "@/assets/2122.jpg";
+import reputationImg from "@/assets/132626.jpg";
 
 const HotellerieRestauration = () => {
     const navigate = useNavigate();
+
     useEffect(() => {
         document.title = "Hôtellerie & Restauration | Bricareau";
         window.scrollTo(0, 0);
@@ -152,7 +158,7 @@ const HotellerieRestauration = () => {
                     <div className="container mx-auto px-6 max-w-7xl">
                         <div className="mb-16">
                             <h2 
-                                className="text-[#18448F]"
+                                className="text-4xl md:text-5xl font-bold tracking-tight text-slate-900 mb-8 max-w-4xl"
                                 style={{
                                     fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
                                     fontStyle: 'normal',
@@ -161,7 +167,11 @@ const HotellerieRestauration = () => {
                                     lineHeight: '52px'
                                 }}
                             >
-                                Nos solutions de <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8CC63F] to-blue-500 italic font-light lowercase">filtration d'eau</span> <br className="hidden lg:block"/> pour les professionnels de l'hôtellerie et la restauration
+                                <span className="block text-blue-600">Nos solutions de filtration d'eau</span>
+                                <span className="block">
+                                    <span className="text-blue-600">pour les professionnels de </span>
+                                    <span className="text-[#8CC63F]">l'hôtellerie et la restauration.</span>
+                                </span>
                             </h2>
                             <p className="mt-6 text-slate-500 text-lg font-light leading-relaxed w-full text-justify">
                                 Découvrez nos systèmes avancés de <strong>traitement et d'adoucissement d'eau</strong> conçus sur mesure pour le secteur <strong>HORECA (Hôtellerie, Restauration, Cafés)</strong>. De la protection anticalcaire de vos machines à espresso professionnelles jusqu'à la filtration gastronomique pour vos cuisines étoilées, Bricareau garantit une qualité d'eau irréprochable. Préservez la durée de vie de votre équipement CHR, sublimez les arômes de vos préparations culinaires et offrez à votre clientèle une eau purifiée au service exclusif de l'excellence.
@@ -190,7 +200,7 @@ const HotellerieRestauration = () => {
                             {/* Card 2: Filtration (Wide) */}
                             <div 
                                 className="group relative bg-white md:col-span-2 rounded-[2rem] overflow-hidden border border-slate-100 hover:shadow-xl hover:shadow-blue-900/5 transition-all duration-500 cursor-pointer flex flex-col justify-center p-8 lg:p-12"
-                                onClick={() => navigate("/filtres-deau")}
+                                onClick={() => navigate("/filtration-hotels-restaurants")}
                             >
                                 <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                                 <div className="relative z-10 max-w-md space-y-4">
@@ -295,45 +305,129 @@ const HotellerieRestauration = () => {
 
 
 
-                {/* ========================================================= */}
-                {/* 5. IMPACT CHIFFRÉ */}
-                {/* ========================================================= */}
-                <section className="py-24 bg-slate-900 text-white border-b border-white/10">
+
+                {/* 6. PILIERS DE LA RENTABILITÉ (Z-PATTERN / ÉDITORIAL) */}
+                <section className="py-32 bg-white text-slate-900 relative overflow-hidden">
                     <div className="container mx-auto px-6 max-w-7xl">
-                        <div className="flex flex-col lg:flex-row gap-16 items-center">
-                            <div className="lg:w-1/2 relative aspect-[4/5] w-full rounded-2xl overflow-hidden">
-                                <img src={hospitalityImg2} alt="Service Luxe" className="absolute inset-0 w-full h-full object-cover opacity-80" />
-                                <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent" />
+                        
+                        {/* Section Header */}
+                        <div className="text-center max-w-4xl mx-auto mb-32">
+                            <div className="inline-flex items-center justify-center gap-4 mb-8">
+                                <span className="w-12 h-[1px] bg-slate-900" />
+                                <span className="text-[10px] font-black text-slate-500 uppercase tracking-[0.4em]">INVESTISSEMENT STRATÉGIQUE</span>
                             </div>
-                            <div className="lg:w-1/2 space-y-12">
-                                <div>
-                                    <h2 className="text-4xl md:text-5xl font-bold tracking-tighter leading-[1.1] mb-6">
-                                        L'impact de l'eau pure sur votre <span className="text-[#8CC63F]">rentabilité.</span>
-                                    </h2>
+                            <h2 
+                                className="text-4xl md:text-5xl font-bold tracking-tight text-slate-900 mb-8 mx-auto"
+                                style={{
+                                    fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                    fontStyle: 'normal',
+                                    fontWeight: 700,
+                                    fontSize: '48px',
+                                    lineHeight: '52px'
+                                }}
+                            >
+                                <span className="block text-blue-600">Les 3 piliers</span>
+                                <span className="block">
+                                    <span className="text-blue-600">de la</span>
+                                    <span className="text-[#8CC63F]"> rentabilité.</span>
+                                </span>
+                            </h2>
+                            <p className="text-slate-500 text-xl font-light leading-relaxed">
+                                L'eau pure n'est pas qu'une question d'hygiène. L'impact de nos systèmes se fait sentir à tous les niveaux de votre établissement, de la réduction des coûts jusqu'à l'augmentation de votre chiffre d'affaires.
+                            </p>
+                        </div>
+
+                        <div className="space-y-40">
+                            {/* Pilier 1 : Image Left, Text Right */}
+                            <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+                                <div className="lg:w-1/2 w-full aspect-[4/3] rounded-3xl overflow-hidden relative shadow-xl">
+                                    <img src={maitriseImg} alt="Salle technique" className="absolute inset-0 w-full h-full object-cover" />
                                 </div>
-                                <div className="flex flex-col space-y-8">
-                                    <div className="border-t border-white/10 pt-8">
-                                        <div className="text-6xl font-black text-blue-400 mb-2">-40%</div>
-                                        <h3 className="text-xl font-bold mb-2">De pannes matérielles</h3>
-                                        <p className="text-slate-400 font-light leading-relaxed">Protégez vos fours vapeurs, machines à espresso et lave-vaisselle professionnels contre l'usure prématurée liée au tartre.</p>
+                                <div className="lg:w-1/2 w-full space-y-8">
+                                    <div className="flex items-center gap-6">
+                                        <div className="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center shrink-0">
+                                            <Wallet className="w-8 h-8 text-blue-600" />
+                                        </div>
+                                        <h3 className="text-3xl font-medium tracking-tight text-slate-900">Maîtrise absolue des coûts.</h3>
                                     </div>
-                                    <div className="border-t border-white/10 pt-8">
-                                        <div className="text-6xl font-black text-[#8CC63F] mb-2">100%</div>
-                                        <h3 className="text-xl font-bold mb-2">De pureté gustative</h3>
-                                        <p className="text-slate-400 font-light leading-relaxed">Une eau neutre et parfaitement équilibrée qui sublime sans les altérer les arômes de vos cafés, thés et créations culinaires.</p>
+                                    <div className="space-y-6 text-lg text-slate-500 font-light leading-relaxed">
+                                        <div className="flex items-start gap-4">
+                                            <div className="w-1.5 h-1.5 rounded-full bg-[#8CC63F] mt-3 shrink-0" />
+                                            <div><strong className="text-slate-900 font-medium">Longévité de l'équipement :</strong> Protection contre l'entartrage et la corrosion (fours, machines à espresso, lave-vaisselle). Fini les remplacements prématurés.</div>
+                                        </div>
+                                        <div className="flex items-start gap-4">
+                                            <div className="w-1.5 h-1.5 rounded-full bg-[#8CC63F] mt-3 shrink-0" />
+                                            <div><strong className="text-slate-900 font-medium">Économies de produits :</strong> Réduction de 30% à 50% de l'utilisation de détergents grâce à une eau douce qui mousse mieux.</div>
+                                        </div>
+                                        <div className="flex items-start gap-4">
+                                            <div className="w-1.5 h-1.5 rounded-full bg-[#8CC63F] mt-3 shrink-0" />
+                                            <div><strong className="text-slate-900 font-medium">Efficacité énergétique :</strong> Vos machines fonctionnent sans la barrière thermique du calcaire, réduisant vos factures d'énergie.</div>
+                                        </div>
+                                        <div className="flex items-start gap-4">
+                                            <div className="w-1.5 h-1.5 rounded-full bg-[#8CC63F] mt-3 shrink-0" />
+                                            <div><strong className="text-slate-900 font-medium">Efficacité opérationnelle :</strong> Moins de traces sur la verrerie équivaut à moins de temps passé à polir et relaver.</div>
+                                        </div>
                                     </div>
-                                    <div className="border-y border-white/10 py-8">
-                                        <div className="text-6xl font-black text-white mb-2">24/7</div>
-                                        <h3 className="text-xl font-bold mb-2">De disponibilité technique</h3>
-                                        <p className="text-slate-400 font-light leading-relaxed">Un service d'assistance VIP et une maintenance préventive dédiés aux professionnels. Aucune panne ne coupera votre service.</p>
+                                </div>
+                            </div>
+
+                            {/* Pilier 2 : Text Left, Image Right */}
+                            <div className="flex flex-col-reverse lg:flex-row items-center gap-16 lg:gap-24">
+                                <div className="lg:w-1/2 w-full space-y-8">
+                                    <div className="flex items-center gap-6">
+                                        <div className="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center shrink-0">
+                                            <Utensils className="w-8 h-8 text-blue-600" />
+                                        </div>
+                                        <h3 className="text-3xl font-medium tracking-tight text-slate-900">L'excellence au service des revenus.</h3>
+                                    </div>
+                                    <div className="space-y-6 text-lg text-slate-500 font-light leading-relaxed">
+                                        <div className="flex items-start gap-4">
+                                            <div className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-3 shrink-0" />
+                                            <div><strong className="text-slate-900 font-medium">Révélation des saveurs :</strong> Une eau neutre sans chlore qui sublime vos thés, cafés et créations culinaires.</div>
+                                        </div>
+                                        <div className="flex items-start gap-4">
+                                            <div className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-3 shrink-0" />
+                                            <div><strong className="text-slate-900 font-medium">Esthétique parfaite :</strong> Des glaçons cristallins et une verrerie étincelante pour une première impression irréprochable.</div>
+                                        </div>
+                                        <div className="flex items-start gap-4">
+                                            <div className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-3 shrink-0" />
+                                            <div><strong className="text-slate-900 font-medium">Nouvelles marges :</strong> Transformez l'eau en source de revenus avec une offre d'eau filtrée embouteillée sur place à votre marque.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="lg:w-1/2 w-full aspect-[4/3] rounded-3xl overflow-hidden relative shadow-xl">
+                                    <img src={coffeeFilterImg} alt="Café parfait" className="absolute inset-0 w-full h-full object-cover" />
+                                </div>
+                            </div>
+
+                            {/* Pilier 3 : Image Left, Text Right */}
+                            <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+                                <div className="lg:w-1/2 w-full aspect-[4/3] rounded-3xl overflow-hidden relative shadow-xl">
+                                    <img src={reputationImg} alt="Verrerie de luxe" className="absolute inset-0 w-full h-full object-cover" />
+                                </div>
+                                <div className="lg:w-1/2 w-full space-y-8">
+                                    <div className="flex items-center gap-6">
+                                        <div className="w-16 h-16 rounded-full bg-[#8CC63F]/10 flex items-center justify-center shrink-0">
+                                            <Leaf className="w-8 h-8 text-[#8CC63F]" />
+                                        </div>
+                                        <h3 className="text-3xl font-medium tracking-tight text-slate-900">Une réputation bâtie sur l'engagement.</h3>
+                                    </div>
+                                    <div className="space-y-6 text-lg text-slate-500 font-light leading-relaxed">
+                                        <div className="flex items-start gap-4">
+                                            <div className="w-1.5 h-1.5 rounded-full bg-[#8CC63F] mt-3 shrink-0" />
+                                            <div><strong className="text-slate-900 font-medium">Engagement écologique :</strong> Élimination de la dépendance aux bouteilles en plastique à usage unique grâce aux systèmes sur place.</div>
+                                        </div>
+                                        <div className="flex items-start gap-4">
+                                            <div className="w-1.5 h-1.5 rounded-full bg-[#8CC63F] mt-3 shrink-0" />
+                                            <div><strong className="text-slate-900 font-medium">Réputation :</strong> La satisfaction globale (goût, propreté, écologie) génère de meilleurs avis en ligne et fidélise votre clientèle.</div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </section>
-
-
 
             </main>
 

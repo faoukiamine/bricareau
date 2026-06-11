@@ -97,31 +97,30 @@ const WhyChooseUs = () => {
                                 <h2 className="text-3xl lg:text-5xl font-bold text-[#18448F] leading-tight">Plus de 25 ans <br/><span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8CC63F] to-blue-500 italic font-light">d'engagement.</span></h2>
                             </div>
 
-                            {/* Timeline */}
-                            <div className="relative border-l-2 border-blue-200 ml-6 md:ml-0 md:pl-0 pl-10 space-y-24 mb-16">
+                            <div className="relative space-y-24 mb-16">
                                 
                                 <div className="relative md:w-1/2 md:pr-16 md:ml-0 md:text-right">
-                                    <div className="absolute top-0 -left-[45px] md:-right-[9px] md:left-auto w-4 h-4 rounded-full bg-blue-600 shadow-[0_0_20px_rgba(37,99,235,0.5)] ring-4 ring-blue-100" />
+                                    <div className="hidden md:block absolute top-0 -right-[9px] w-4 h-4 rounded-full bg-blue-600 shadow-[0_0_20px_rgba(37,99,235,0.5)] ring-4 ring-blue-100" />
                                     <div className="text-sm font-bold text-blue-600 tracking-widest uppercase mb-2">Les Fondations</div>
-                                    <h3 className="text-3xl font-bold text-slate-900 mb-4">L'obsession de la qualité</h3>
+                                    <h3 className="text-3xl font-semibold text-slate-900 mb-4">L'obsession de la qualité</h3>
                                     <p className="text-slate-500 text-lg font-light leading-relaxed">
                                         Bricareau est né d'un constat simple : la qualité de l'eau municipale et de puits n'était pas à la hauteur des besoins en santé et en confort des familles. Nous avons commencé avec une mission claire : sourcer les meilleures technologies de filtration mondiales.
                                     </p>
                                 </div>
 
                                 <div className="relative md:w-1/2 md:pl-16 md:ml-auto">
-                                    <div className="absolute top-0 -left-[45px] md:-left-[9px] w-4 h-4 rounded-full bg-blue-600 shadow-[0_0_20px_rgba(37,99,235,0.5)] ring-4 ring-blue-100" />
+                                    <div className="hidden md:block absolute top-0 -left-[9px] w-4 h-4 rounded-full bg-blue-600 shadow-[0_0_20px_rgba(37,99,235,0.5)] ring-4 ring-blue-100" />
                                     <div className="text-sm font-bold text-blue-600 tracking-widest uppercase mb-2">L'Expansion</div>
-                                    <h3 className="text-3xl font-bold text-slate-900 mb-4">Expertise Multi-Sectorielle</h3>
+                                    <h3 className="text-3xl font-semibold text-slate-900 mb-4">Expertise Multi-Sectorielle</h3>
                                     <p className="text-slate-500 text-lg font-light leading-relaxed">
                                         Face à la demande croissante, nous avons étendu notre expertise au secteur industriel et commercial, développant des solutions d'ingénierie sur-mesure capables de répondre aux réalités complexes de l'eau au Québec.
                                     </p>
                                 </div>
 
                                 <div className="relative md:w-1/2 md:pr-16 md:ml-0 md:text-right">
-                                    <div className="absolute top-0 -left-[45px] md:-right-[9px] md:left-auto w-4 h-4 rounded-full bg-blue-600 shadow-[0_0_20px_rgba(37,99,235,0.5)] ring-4 ring-blue-100" />
+                                    <div className="hidden md:block absolute top-0 -right-[9px] w-4 h-4 rounded-full bg-blue-600 shadow-[0_0_20px_rgba(37,99,235,0.5)] ring-4 ring-blue-100" />
                                     <div className="text-sm font-bold text-blue-600 tracking-widest uppercase mb-2">Aujourd'hui</div>
-                                    <h3 className="text-3xl font-bold text-slate-900 mb-4">La Référence Québécoise</h3>
+                                    <h3 className="text-3xl font-semibold text-slate-900 mb-4">La Référence Québécoise</h3>
                                     <p className="text-slate-500 text-lg font-light leading-relaxed">
                                         Avec plus de 20 000 foyers et entreprises protégés, Bricareau est devenu l'incontournable du traitement de l'eau. Une équipe de maîtres techniciens dédiés et une réputation bâtie sur la confiance absolue de nos clients.
                                     </p>
