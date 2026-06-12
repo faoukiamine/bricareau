@@ -113,62 +113,8 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Hôtellerie - spans both rows */}
+          {/* Restez informé - spans both rows */}
           <div className="lg:row-span-2">
-            <h3 className="mb-6 text-white font-bold text-base uppercase tracking-wider relative after:content-[''] after:block after:w-8 after:h-1 after:bg-[#8CC63F] after:mt-3">Hôtellerie et restauration</h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <a href="/adoucisseurs-eau-commerciaux" className="text-white/80 hover:text-white transition-colors">
-                  Adoucisseur d'eau commercial
-                </a>
-              </li>
-              <li>
-                <a href="/filtration-hotels-restaurants" className="text-white/80 hover:text-white transition-colors">
-                  Filtration d'eau pour hôtels et restaurants
-                </a>
-              </li>
-              <li>
-                <a href="/solutions-brasseries" className="text-white/80 hover:text-white transition-colors">
-                  Solutions pour Brasseries
-                </a>
-              </li>
-              <li>
-                <a href="/filtres-eau-machine-cafe" className="text-white/80 hover:text-white transition-colors">
-                  Filtres pour Machines à Café
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Commercial & Industriel - Row 2, under Résidentiel */}
-          <div>
-            <h3 className="mb-6 text-white font-bold text-base uppercase tracking-wider relative after:content-[''] after:block after:w-8 after:h-1 after:bg-[#8CC63F] after:mt-3">Commercial & Industriel</h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <a href="/filtration-industrielle" className="text-white/80 hover:text-white transition-colors">
-                  Systèmes de filtration industriels
-                </a>
-              </li>
-              <li>
-                <a href="/adoucisseurs-eau-industriel" className="text-white/80 hover:text-white transition-colors">
-                  Adoucisseurs d'eau industriels
-                </a>
-              </li>
-              <li>
-                <a href="/osmose-inverse-industrielle" className="text-white/80 hover:text-white transition-colors">
-                  Systèmes d'osmose inverse
-                </a>
-              </li>
-              <li>
-                <a href="/desinfection-uv-industrielle" className="text-white/80 hover:text-white transition-colors">
-                  Systèmes de désinfection UV à haut débit
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Restez informé - Row 2, under Bureau */}
-          <div>
             <h3 className="mb-6 text-white font-bold text-base uppercase tracking-wider relative after:content-[''] after:block after:w-8 after:h-1 after:bg-[#8CC63F] after:mt-3">Restez informé</h3>
             <div className="h-fit">
               <p className="text-sm text-white/80 mb-6 leading-relaxed">
@@ -200,6 +146,60 @@ const Footer = () => {
                 </p>
               </form>
             </div>
+          </div>
+
+          {/* Hôtellerie et restauration - Row 2, under Résidentiel */}
+          <div>
+            <h3 className="mb-6 text-white font-bold text-base uppercase tracking-wider relative after:content-[''] after:block after:w-8 after:h-1 after:bg-[#8CC63F] after:mt-3">Hôtellerie et restauration</h3>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <a href="/adoucisseurs-eau-commerciaux" className="text-white/80 hover:text-white transition-colors">
+                  Adoucisseur d'eau commercial
+                </a>
+              </li>
+              <li>
+                <a href="/filtration-hotels-restaurants" className="text-white/80 hover:text-white transition-colors">
+                  Filtration d'eau pour hôtels et restaurants
+                </a>
+              </li>
+              <li>
+                <a href="/solutions-brasseries" className="text-white/80 hover:text-white transition-colors">
+                  Solutions pour Brasseries
+                </a>
+              </li>
+              <li>
+                <a href="/filtres-eau-machine-cafe" className="text-white/80 hover:text-white transition-colors">
+                  Filtres pour Machines à Café
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Commercial & Industriel - Row 2, under Bureau */}
+          <div>
+            <h3 className="mb-6 text-white font-bold text-base uppercase tracking-wider relative after:content-[''] after:block after:w-8 after:h-1 after:bg-[#8CC63F] after:mt-3">Commercial & Industriel</h3>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <a href="/filtration-industrielle" className="text-white/80 hover:text-white transition-colors">
+                  Systèmes de filtration industriels
+                </a>
+              </li>
+              <li>
+                <a href="/adoucisseurs-eau-industriel" className="text-white/80 hover:text-white transition-colors">
+                  Adoucisseurs d'eau industriels
+                </a>
+              </li>
+              <li>
+                <a href="/osmose-inverse-industrielle" className="text-white/80 hover:text-white transition-colors">
+                  Systèmes d'osmose inverse
+                </a>
+              </li>
+              <li>
+                <a href="/desinfection-uv-industrielle" className="text-white/80 hover:text-white transition-colors">
+                  Systèmes de désinfection UV à haut débit
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
 
