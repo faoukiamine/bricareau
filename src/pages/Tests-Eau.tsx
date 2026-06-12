@@ -121,7 +121,7 @@ const TestsEauPage = () => {
        <Header />
        <main>
                 <Hero 
-                    className="min-h-[100vh]"
+                    className="min-h-0 justify-start lg:min-h-[100vh] lg:justify-center"
                     image={newHeroImg}
                     highlightedTitle={<span className="font-bold not-italic">Analyses d'eau</span>}
                     mainTitle={<> & tests de laboratoire <span className="text-[#8CC63F] font-bold not-italic">professionnels</span></>}

@@ -410,7 +410,6 @@ const Adoucissement = () => {
                             alt="Cuisine moderne protégée par un adoucisseur d'eau résidentiel Bricareau - Vaisselle sans taches"
                             className="w-full h-full object-cover"
                         />
-                        <div className="absolute inset-0 bg-black/10" />
                     </div>
 
                     <div className="container mx-auto px-6 py-12 lg:py-0">
@@ -491,7 +490,6 @@ const Adoucissement = () => {
                             alt="Adoucisseur d'eau portable pour VR et bateau - Solution mobile Bricareau contre l'eau dure"
                             className="w-full h-full object-cover"
                         />
-                        <div className="absolute inset-0 bg-black/10" />
                     </div>
 
                     <div className="container mx-auto px-6 py-12 lg:py-0">
@@ -569,7 +567,6 @@ const Adoucissement = () => {
                             alt="Conditionneur d'eau sans sel écologique Bricareau - Protection contre le tartre sans saumure"
                             className="w-full h-full object-cover"
                         />
-                        <div className="absolute inset-0 bg-black/10" />
                     </div>
 
                     <div className="container mx-auto px-6 py-12 lg:py-0">
