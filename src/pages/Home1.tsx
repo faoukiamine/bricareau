@@ -245,9 +245,8 @@ const Home1 = () => {
                                 </div>
                             </div>
                         </div>
-                        
                         {/* Slide Indicators */}
-                        <div className="absolute bottom-8 right-8 flex gap-3">
+                        <div className="flex gap-3 mt-12">
                             {slides.map((_, index) => (
                                 <button
                                     key={index}
@@ -329,7 +328,7 @@ const Home1 = () => {
                     <div className="flex flex-col lg:flex-row items-stretch gap-12 lg:gap-20">
                         
                         {/* Content Column */}
-                        <div className="w-full lg:w-1/2 flex flex-col justify-center py-8">
+                        <div className="w-full lg:w-1/2 flex flex-col justify-center py-8 order-2 lg:order-1">
                             {/* Accent Line & Category */}
                             <div className="flex items-center gap-4 mb-8">
                                 <div className="w-12 h-0.5 bg-[#8CC63F]"></div>
@@ -361,7 +360,7 @@ const Home1 = () => {
                         </div>
 
                         {/* Image Column */}
-                        <div className="w-full lg:w-1/2 relative min-h-[400px]">
+                        <div className="w-full lg:w-1/2 relative min-h-[400px] order-1 lg:order-2">
                             {/* Sharp rectangular image */}
                             <div className="absolute inset-0 z-10 shadow-md">
                                 <img src={resImg} alt="Système de traitement d'eau résidentiel" className="w-full h-full object-cover rounded-none" />
@@ -391,7 +390,7 @@ const Home1 = () => {
                     <div className="flex flex-col lg:flex-row items-stretch gap-12 lg:gap-20">
                         
                         {/* Image Column */}
-                        <div className="w-full lg:w-1/2 relative min-h-[400px] order-2 lg:order-1">
+                        <div className="w-full lg:w-1/2 relative min-h-[400px] order-1 lg:order-1">
                             {/* Sharp rectangular image */}
                             <div className="absolute inset-0 z-10 shadow-md">
                                 <img src={comImg} alt="Système de traitement d'eau pour bureaux" className="w-full h-full object-cover rounded-none" />
@@ -412,7 +411,7 @@ const Home1 = () => {
                         </div>
 
                         {/* Content Column */}
-                        <div className="w-full lg:w-1/2 flex flex-col justify-center py-8 order-1 lg:order-2">
+                        <div className="w-full lg:w-1/2 flex flex-col justify-center py-8 order-2 lg:order-2">
                             {/* Accent Line & Category */}
                             <div className="flex items-center gap-4 mb-8">
                                 <div className="w-12 h-0.5 bg-[#8CC63F]"></div>
@@ -453,7 +452,7 @@ const Home1 = () => {
                     <div className="flex flex-col lg:flex-row items-stretch gap-12 lg:gap-20">
                         
                         {/* Content Column */}
-                        <div className="w-full lg:w-1/2 flex flex-col justify-center py-8">
+                        <div className="w-full lg:w-1/2 flex flex-col justify-center py-8 order-2 lg:order-1">
                             {/* Accent Line & Category */}
                             <div className="flex items-center gap-4 mb-8">
                                 <div className="w-12 h-0.5 bg-[#8CC63F]"></div>
@@ -485,7 +484,7 @@ const Home1 = () => {
                         </div>
 
                         {/* Image Column */}
-                        <div className="w-full lg:w-1/2 relative min-h-[400px]">
+                        <div className="w-full lg:w-1/2 relative min-h-[400px] order-1 lg:order-2">
                             {/* Sharp rectangular image */}
                             <div className="absolute inset-0 z-10 shadow-md">
                                 <img src={horecaImg} alt="Système de traitement d'eau HORECA" className="w-full h-full object-cover rounded-none" />
@@ -600,7 +599,7 @@ const Home1 = () => {
                     <div className="flex flex-col lg:flex-row items-stretch gap-12 lg:gap-20">
                         
                         {/* Image Column */}
-                        <div className="w-full lg:w-1/2 relative min-h-[400px] order-2 lg:order-1">
+                        <div className="w-full lg:w-1/2 relative min-h-[400px] order-1 lg:order-1">
                             {/* Sharp rectangular image */}
                             <div className="absolute inset-0 z-10 shadow-md">
                                 <img src={waterTestingImg} alt="Analyse d'eau" className="w-full h-full object-cover rounded-none" />
@@ -621,7 +620,7 @@ const Home1 = () => {
                         </div>
 
                         {/* Content Column */}
-                        <div className="w-full lg:w-1/2 flex flex-col justify-center py-8 order-1 lg:order-2">
+                        <div className="w-full lg:w-1/2 flex flex-col justify-center py-8 order-2 lg:order-2">
                             {/* Accent Line & Category */}
                             <div className="flex items-center gap-4 mb-8">
                                 <div className="w-12 h-0.5 bg-[#8CC63F]"></div>
