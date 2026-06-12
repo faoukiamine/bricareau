@@ -5,12 +5,17 @@ import {
     Cpu,
     CheckCircle2,
     Zap,
-    FlaskConical,
     Settings,
     Star,
     ArrowRight,
     ChevronLeft,
-    ChevronRight
+    ChevronRight,
+    Leaf,
+    FlaskConical,
+    Clock,
+    Award,
+    Gem,
+    Crown
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import Header from "@/components/Header";
@@ -19,13 +24,13 @@ import { ProMaxButton } from "@/components/ui/ProMaxButton";
 import { cn } from "@/lib/utils";
 
 // Assets
-import heroImg from "@/assets/bricareau_process_hero_engineering_1778902027858.png";
+import heroImg from "@/assets/2241.jpg";
 import designImg from "@/assets/water_system_blueprint_render_1778902045750.png";
 import waterTestImg from "@/assets/Water-test_15395190.png";
 import installationImg from "@/assets/Water-Softener-installation.jpg";
 import serviceImg from "@/assets/RO service.png";
 import ctaImg from "@/assets/2148858959.jpg";
-import waterTestLabImg from "@/assets/test-laboratoire-diligence-inspection-750x500.jpg";
+import waterTestLabImg from "@/assets/2242.jpg";
 import serviceNewImg from "@/assets/cae3c0a4-5b4d-4b0e-8bc3-3550a714f7bb.jpg";
 import installationNewImg from "@/assets/2235.jpg";
 
@@ -62,7 +67,7 @@ const processSteps = [
         icon: Settings,
         image: installationNewImg,
         gallery: [installationNewImg, gal1, gal2, gal3, gal4, gal5],
-        details: ["Installation sans tracas", "Calibration électronique", "Tests de pression", "Mise en service certifiée"]
+        details: ["Installation sans tracas", "Calibration des instruments", "Paramétrage personnalisé", "Essais et mise en service"]
     },
     {
         id: "04",
@@ -136,13 +141,12 @@ const OurProcess = () => {
 
                     <div className="container mx-auto px-6 relative z-30">
                         <div className="max-w-3xl flex flex-col justify-center animate-in fade-in slide-in-from-left-10 duration-1000 delay-300 fill-mode-both">
-                            <span className="inline-block py-1 px-4 bg-[#18448F] text-white rounded-full font-bold tracking-[0.2em] uppercase text-xs mb-8 w-fit">La Méthode Bricareau</span>
                             <h1 className="text-[50px] leading-[55px] font-sans font-bold text-[#18448F] mb-6 tracking-tight">
-                                L'Art de la Pureté.<br/> <span className="text-[#8CC63F] font-sans font-bold drop-shadow-sm">L'Ingénierie de l'Excellence.</span>
+                                Notre savoir-faire d'expert.<br/> <span className="text-[#8CC63F] font-sans font-bold drop-shadow-sm">Pour une eau absolument parfaite.</span>
                             </h1>
                             
                             <p className="text-slate-600 text-lg sm:text-xl font-light leading-relaxed max-w-xl mb-12">
-                                Découvrez un processus rigoureux en quatre étapes. De l'analyse moléculaire au suivi perpétuel, nous ne laissons aucune place au hasard pour garantir la perfection de votre eau.
+                                Découvrez un processus rigoureux en quatre étapes. De l'analyse de la qualité de l'eau à l'entretien et suivi régulier, nous ne laissons aucune place au hasard pour garantir la perfection de votre eau.
                             </p>
 
                             <div className="flex flex-col sm:flex-row items-start gap-6">
@@ -231,7 +235,7 @@ const OurProcess = () => {
                             {/* Engagement 1 */}
                             <div className="space-y-6">
                                 <div className="mx-auto lg:mx-0 w-16 h-16 rounded-full bg-white/10 flex items-center justify-center">
-                                    <Zap className="w-8 h-8 text-[#8CC63F]" strokeWidth={1.5} />
+                                    <Clock className="w-8 h-8 text-[#8CC63F]" strokeWidth={1.5} />
                                 </div>
                                 <h3 className="text-2xl font-bold text-white">Réactivité absolue</h3>
                                 <p className="text-slate-400 leading-relaxed font-light">Intervention sous 48h. Votre confort ne peut attendre, nos équipes sont mobilisées pour agir avec célérité.</p>
@@ -240,7 +244,7 @@ const OurProcess = () => {
                             {/* Engagement 2 */}
                             <div className="space-y-6">
                                 <div className="mx-auto lg:mx-0 w-16 h-16 rounded-full bg-white/10 flex items-center justify-center">
-                                    <ShieldCheck className="w-8 h-8 text-[#8CC63F]" strokeWidth={1.5} />
+                                    <Award className="w-8 h-8 text-[#8CC63F]" strokeWidth={1.5} />
                                 </div>
                                 <h3 className="text-2xl font-bold text-white">Garantie intégrale</h3>
                                 <p className="text-slate-400 leading-relaxed font-light">Une couverture complète sur nos systèmes. Zéro compromis sur votre tranquillité d'esprit à long terme.</p>
@@ -249,7 +253,7 @@ const OurProcess = () => {
                             {/* Engagement 3 */}
                             <div className="space-y-6">
                                 <div className="mx-auto lg:mx-0 w-16 h-16 rounded-full bg-white/10 flex items-center justify-center">
-                                    <Star className="w-8 h-8 text-[#8CC63F]" strokeWidth={1.5} />
+                                    <Crown className="w-8 h-8 text-[#8CC63F]" strokeWidth={1.5} />
                                 </div>
                                 <h3 className="text-2xl font-bold text-white">Composants premium</h3>
                                 <p className="text-slate-400 leading-relaxed font-light">Nous n'utilisons que des matériaux nobles et des valves de grade industriel pour une durabilité inégalée.</p>
@@ -258,7 +262,7 @@ const OurProcess = () => {
                             {/* Engagement 4 */}
                             <div className="space-y-6">
                                 <div className="mx-auto lg:mx-0 w-16 h-16 rounded-full bg-white/10 flex items-center justify-center">
-                                    <FlaskConical className="w-8 h-8 text-[#8CC63F]" strokeWidth={1.5} />
+                                    <Leaf className="w-8 h-8 text-[#8CC63F]" strokeWidth={1.5} />
                                 </div>
                                 <h3 className="text-2xl font-bold text-white">Éco-responsabilité</h3>
                                 <p className="text-slate-400 leading-relaxed font-light">Nos solutions sont minutieusement calibrées pour minimiser le gaspillage d'eau et d'énergie au quotidien.</p>
@@ -277,15 +281,15 @@ const OurProcess = () => {
                     
                     <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-12 relative z-10">
                         <div className="md:col-span-6 md:col-start-7 space-y-10 md:pl-12">
-                            <h2 className="text-5xl md:text-7xl font-bold text-[#18448F] leading-tight">
-                                Passez à l'ultime <br /><span className="text-[#8CC63F] italic font-light">standard de pureté.</span>
+                            <h2 className="text-[50px] leading-[55px] font-sans font-bold text-[#18448F] mb-6 tracking-tight">
+                                Passez à l'ultime <br /><span className="text-[#8CC63F] font-sans font-bold drop-shadow-sm">standard de pureté.</span>
                             </h2>
                             <p className="text-slate-600 text-lg max-w-xl leading-relaxed">
                                 Sollicitez nos experts techniques pour un diagnostic approfondi et personnalisé de votre qualité d'eau. L'expertise absolue au service de votre sérénité.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-6 items-center">
                                 <ProMaxButton variant="primary" className="px-12 h-16 shadow-xl text-white font-bold" onClick={() => navigate("/consultation")}>
-                                    PLANIFIEZ UNE ANALYSE
+                                    PLANIFIEZ UNE ANALYSE d'eau
                                 </ProMaxButton>
                             </div>
                         </div>
