@@ -106,6 +106,7 @@ import B3 from "./pages/B3";
 import WhyChooseUs from "./pages/WhyChooseUs";
 import Sustainability from "./pages/Sustainability";
 import OurProcess from "./pages/OurProcess";
+import Carrieres from "./pages/Carrieres";
 import Home1 from "./pages/Home1";
 import C from "./pages/C";
 import FiltreEauMachineCafe from "./pages/FiltreEauMachineCafe";
@@ -141,6 +142,7 @@ const App = () => (
           <Route path="/pourquoi-choisir-bricareau" element={<WhyChooseUs />} />
           <Route path="/durabilite" element={<Sustainability />} />
           <Route path="/notre-processus" element={<OurProcess />} />
+          <Route path="/carrieres" element={<Carrieres />} />
           <Route path="/solutions" element={<Solutions />} />
           <Route path="/adoucissement" element={<Adoucisseurs />} />
           <Route path="/adoucisseurs" element={<Adoucisseurs />} />
