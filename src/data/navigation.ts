@@ -54,6 +54,47 @@ export interface MenuItem {
 // THE NEW MAIN MENU STRUCTURE (BASED ON BLUEDROP)
 export const mainNavMenuItems: MenuItem[] = [
     {
+        name: "Qui sommes-nous ?",
+        hasMegamenu: true,
+        megamenuGroups: [
+            {
+                items: [
+                     { 
+                        title: "Notre compagnie", 
+                        description: "Découvrez notre histoire, notre vision et pourquoi nous sommes la référence au Québec ?", 
+                        href: "/pourquoi-choisir-bricareau" 
+                    },
+                    { 
+                        title: "Notre processus", 
+                        description: "De l'analyse à l'installation, explorez notre méthodologie d'ingénierie étape par étape.", 
+                        href: "/notre-processus" 
+                    },
+                    { 
+                        title: "Durabilité", 
+                        description: "Découvrez nos engagements écologiques et notre mission pour réduire l'empreinte plastique.", 
+                        href: "/durabilite" 
+                    }
+                ]
+            },
+            {
+                items: [
+                    { 
+                        title: "Carrières", 
+                        description: "Rejoignez une équipe d'experts passionnés par l'innovation et l'excellence environnementale.", 
+                        href: "/carrieres" 
+                    }
+                ]
+            }
+        ],
+        promo: {
+            title: "Découvrez la différence Bricareau Water",
+            subtitle: "Nous préférons travailler en nous basant sur tous les faits. Pour commencer, planifiez une analyse d'eau complète.",
+            image: watertestImg,
+            link: "/tests-eau",
+            cta: "PLANIFIEZ UN TEST D'EAU"
+        }
+    },
+    {
         name: "Ce que nous faisons",
         hasMegamenu: true,
         megamenuCards: [
@@ -172,47 +213,6 @@ export const mainNavMenuItems: MenuItem[] = [
             }
         ],
         megamenuGroups: []
-    },
-    {
-        name: "Qui sommes-nous ?",
-        hasMegamenu: true,
-        megamenuGroups: [
-            {
-                items: [
-                     { 
-                        title: "Notre compagnie", 
-                        description: "Découvrez notre histoire, notre vision et pourquoi nous sommes la référence au Québec ?", 
-                        href: "/pourquoi-choisir-bricareau" 
-                    },
-                    { 
-                        title: "Notre processus", 
-                        description: "De l'analyse à l'installation, explorez notre méthodologie d'ingénierie étape par étape.", 
-                        href: "/notre-processus" 
-                    },
-                    { 
-                        title: "Durabilité", 
-                        description: "Découvrez nos engagements écologiques et notre mission pour réduire l'empreinte plastique.", 
-                        href: "/durabilite" 
-                    }
-                ]
-            },
-            {
-                items: [
-                    { 
-                        title: "Carrières", 
-                        description: "Rejoignez une équipe d'experts passionnés par l'innovation et l'excellence environnementale.", 
-                        href: "/carrieres" 
-                    }
-                ]
-            }
-        ],
-        promo: {
-            title: "Découvrez la différence Bricareau Water",
-            subtitle: "Nous préférons travailler en nous basant sur tous les faits. Pour commencer, planifiez une analyse d'eau complète.",
-            image: watertestImg,
-            link: "/tests-eau",
-            cta: "PLANIFIEZ UN TEST D'EAU"
-        }
     },
     {
         name: "Ressources",

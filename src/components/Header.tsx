@@ -158,9 +158,9 @@ const Header = () => {
 
             {/* Right Utilities (Desktop) */}
             <div className="hidden lg:flex items-center gap-8">
-              <a href="tel:18552649328" className={cn("text-[13px] font-medium flex items-center gap-2 group transition-colors", isScrolled ? "text-white" : "text-[#18448F]")}>
+              <a href="tel:18552649328" className={cn("text-[13px] font-bold flex items-center gap-2 group transition-colors", isScrolled ? "text-white" : "text-[#18448F]")}>
                 <div className={cn("w-8 h-8 rounded-full flex items-center justify-center transition-colors", isScrolled ? "bg-white/10 group-hover:bg-white/20" : "bg-[#18448F]/10 group-hover:bg-[#18448F]/20")}>
-                    <Phone className={cn("w-4 h-4", isScrolled ? "text-white" : "text-[#18448F]")} />
+                    <Phone className={cn("w-4 h-4", isScrolled ? "text-white" : "text-[#18448F]")} strokeWidth={2.5} />
                 </div>
                 (855) 264-9328
               </a>
@@ -499,7 +499,7 @@ const Header = () => {
                             Contactez-nous
                         </ProMaxButton>
                         <a href="tel:18552649328" className="flex items-center justify-center gap-2 font-black text-slate-800 py-4">
-                            <Phone className="w-5 h-5 text-[#0052ff]" />
+                            <Phone className="w-5 h-5 text-[#0052ff]" strokeWidth={2.5} />
                             (855) 264-9328
                         </a>
                     </div>

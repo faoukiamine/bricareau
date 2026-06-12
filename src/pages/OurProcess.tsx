@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { 
     Phone,
     ShieldCheck, 
@@ -8,7 +8,9 @@ import {
     FlaskConical,
     Settings,
     Star,
-    ArrowRight
+    ArrowRight,
+    ChevronLeft,
+    ChevronRight
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import Header from "@/components/Header";
@@ -22,45 +24,83 @@ import designImg from "@/assets/water_system_blueprint_render_1778902045750.png"
 import waterTestImg from "@/assets/Water-test_15395190.png";
 import installationImg from "@/assets/Water-Softener-installation.jpg";
 import serviceImg from "@/assets/RO service.png";
+import ctaImg from "@/assets/2148858959.jpg";
+import waterTestLabImg from "@/assets/test-laboratoire-diligence-inspection-750x500.jpg";
+import serviceNewImg from "@/assets/cae3c0a4-5b4d-4b0e-8bc3-3550a714f7bb.jpg";
+import installationNewImg from "@/assets/2235.jpg";
+
+import gal1 from "@/assets/2236.jpeg";
+import gal2 from "@/assets/2240.jpeg";
+import gal3 from "@/assets/2237.jpeg";
+import gal4 from "@/assets/2239.jpeg";
+import gal5 from "@/assets/2238.jpeg";
 
 const processSteps = [
     {
         id: "01",
-        title: "L'Analyse Moléculaire",
+        title: "Les analyses de la qualité de l'eau",
         subtitle: "Le fondement de toute perfection.",
-        desc: "Nous plongeons au cœur de votre eau. Nos diagnostics de précision révèlent l'invisible : contaminants, profil minéral, et équilibre chimique. C'est sur ces données irréfutables que nous bâtissons votre solution.",
+        desc: "Nous réalisons une analyse exhaustive de votre eau. Nos protocoles de diagnostic identifient avec précision les contaminants, le profil minéral et l'équilibre microbiologique. Ces données scientifiques rigoureuses constituent le socle de notre proposition technique.",
         icon: FlaskConical,
-        image: waterTestImg,
-        details: ["Évaluation de dureté", "Spectrométrie des métaux", "Profil microbiologique", "Analyse TDS"]
+        image: waterTestLabImg,
+        details: ["Profil minéral", "Spectrométrie des métaux", "Profil microbiologique", "Analyse TDS"]
     },
     {
         id: "02",
-        title: "L'Ingénierie Architecturale",
+        title: "Proposition de solutions adaptées",
         subtitle: "La science au service du sur-mesure.",
-        desc: "Chaque goutte compte. Nos ingénieurs conçoivent une architecture de filtration parfaitement calibrée pour votre profil hydrique unique, sélectionnant des technologies de pointe pour une durabilité maximale.",
+        desc: "Chaque goutte compte. Nos experts techniques conçoivent une architecture de filtration parfaitement calibrée pour votre profil hydrique unique, sélectionnant des technologies de pointe pour une durabilité maximale.",
         icon: Cpu,
         image: designImg,
-        details: ["Dimensionnement hydraulique", "Sélection des médias", "Intégration technologique", "Rendement optimisé"]
+        details: ["Conception sur mesure", "Matériaux de pointe", "Écosystème intelligent", "Performance absolue"]
     },
     {
         id: "03",
-        title: "Le Déploiement Maîtrisé",
+        title: "Installation professionnelle",
         subtitle: "L'exécution avec une précision horlogère.",
         desc: "Nos techniciens certifiés orchestrent l'installation avec une rigueur absolue. De l'intégration mécanique à la calibration électronique, chaque composant est testé pour garantir une performance sans faille.",
         icon: Settings,
-        image: installationImg,
-        details: ["Calibration systémique", "Tests de pression", "Configuration intelligente", "Transfert de compétences"]
+        image: installationNewImg,
+        gallery: [installationNewImg, gal1, gal2, gal3, gal4, gal5],
+        details: ["Installation sans tracas", "Calibration électronique", "Tests de pression", "Mise en service certifiée"]
     },
     {
         id: "04",
-        title: "Le Suivi Perpétuel",
+        title: "Entretien et suivi régulier",
         subtitle: "Une tranquillité d'esprit inébranlable.",
         desc: "L'excellence s'entretient. Notre engagement s'étend bien au-delà de l'installation, avec un programme de maintenance proactive assurant que votre système opère à son apogée technologique, jour après jour.",
         icon: ShieldCheck,
-        image: serviceImg,
-        details: ["Entretien préventif", "Analyses de contrôle", "Réapprovisionnement", "Assistance VIP"]
+        image: serviceNewImg,
+        details: ["Programme de maintenance", "Analyses de contrôle", "Remplacement préventif", "Assistance prioritaire"]
     }
 ];
+
+const ImageGallery = ({ images }: { images: string[] }) => {
+    // Un découpage bento "arbitraire" pour 6 images dans une grille 3x3
+    const bentoClasses = [
+        "col-span-2 row-span-2",
+        "col-span-1 row-span-1",
+        "col-span-1 row-span-1",
+        "col-span-1 row-span-1",
+        "col-span-1 row-span-1",
+        "col-span-1 row-span-1",
+    ];
+
+    return (
+        <div className="w-full h-full grid grid-cols-3 grid-rows-3 gap-2">
+            {images.slice(0, 6).map((img, idx) => (
+                <div key={idx} className={cn("relative overflow-hidden rounded-xl group/item shadow-sm hover:shadow-md transition-shadow", bentoClasses[idx])}>
+                    <div className="absolute inset-0 bg-[#18448F]/20 mix-blend-multiply z-10 group-hover/item:opacity-0 transition-opacity duration-500" />
+                    <img 
+                        src={img} 
+                        alt={`Gallery ${idx}`} 
+                        className="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-700" 
+                    />
+                </div>
+            ))}
+        </div>
+    );
+};
 
 const OurProcess = () => {
     const navigate = useNavigate();
@@ -71,171 +111,183 @@ const OurProcess = () => {
     }, []);
 
     return (
-        <div className="min-h-screen bg-white font-sans selection:bg-[#18448F] selection:text-white overflow-x-hidden">
+        <div className="min-h-screen bg-[#FDFDFD] font-sans text-slate-900 overflow-x-hidden">
             <Header />
-            
-            <main>
-                {/* 1. HERO SECTION ÉDITORIALE (Typographie massive, fond pur) */}
-                <section className="pt-40 pb-20 bg-slate-50 relative overflow-hidden">
-                    <div className="container mx-auto px-6 relative z-10 flex flex-col items-center text-center">
-                        <div className="inline-flex items-center gap-4 px-6 py-2 rounded-full border border-slate-200 bg-white mb-16 shadow-sm">
-                            <span className="w-1.5 h-1.5 rounded-full bg-[#18448F]"></span>
-                            <span className="text-xs font-bold text-slate-500 uppercase tracking-[0.2em]">La Méthode Bricareau</span>
-                        </div>
-                        
-                        <h1 className="text-6xl md:text-8xl lg:text-[110px] font-black text-slate-900 leading-[0.85] tracking-tighter mb-12 max-w-6xl">
-                            L'Art de la Pureté.<br/>
-                            <span className="font-light italic text-transparent bg-clip-text bg-gradient-to-r from-[#18448F] to-blue-400">L'Ingénierie de l'Excellence.</span>
-                        </h1>
-                        
-                        <p className="text-xl md:text-3xl text-slate-500 font-light max-w-4xl leading-relaxed mb-20">
-                            Découvrez un processus rigoureux en quatre étapes. De l'analyse moléculaire au suivi perpétuel, nous ne laissons aucune place au hasard.
-                        </p>
-                    </div>
 
-                    {/* Image panoramique d'introduction (style magazine) */}
-                    <div className="container mx-auto px-6">
-                        <div className="w-full h-[40vh] md:h-[60vh] rounded-[2rem] overflow-hidden shadow-2xl relative">
-                            <img src={heroImg} alt="Engineering" className="w-full h-full object-cover" />
-                            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent" />
+            <main>
+                {/* 1. HERO SECTION */}
+                <section className="relative bg-white overflow-hidden min-h-screen flex flex-col justify-center pt-24 pb-16 lg:pt-28 lg:pb-16 border-b border-slate-200">
+                    <div className="absolute inset-0 w-full h-full opacity-40 lg:opacity-100">
+                        {/* Mobile Gradient */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-white via-white/90 to-transparent z-10 lg:hidden"></div>
+                        {/* Desktop Gradient */}
+                        <div className="absolute inset-0 bg-[linear-gradient(to_right,white_0%,white_33.33%,rgba(255,255,255,0)_85%)] z-10 hidden lg:block"></div>
+                        
+                        {/* Image Container */}
+                        <div className="absolute right-0 top-0 w-full lg:w-[80%] h-full">
+                            <img 
+                                src={heroImg} 
+                                alt="Notre Processus" 
+                                className="absolute inset-0 w-full h-full object-cover object-center animate-in fade-in duration-1000"
+                            />
+                        </div>
+                    </div>
+                    <div className="absolute right-0 top-0 w-full h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/20 via-transparent to-transparent pointer-events-none z-20"></div>
+
+                    <div className="container mx-auto px-6 relative z-30">
+                        <div className="max-w-3xl flex flex-col justify-center animate-in fade-in slide-in-from-left-10 duration-1000 delay-300 fill-mode-both">
+                            <span className="inline-block py-1 px-4 bg-[#18448F] text-white rounded-full font-bold tracking-[0.2em] uppercase text-xs mb-8 w-fit">La Méthode Bricareau</span>
+                            <h1 className="text-[50px] leading-[55px] font-sans font-bold text-[#18448F] mb-6 tracking-tight">
+                                L'Art de la Pureté.<br/> <span className="text-[#8CC63F] font-sans font-bold drop-shadow-sm">L'Ingénierie de l'Excellence.</span>
+                            </h1>
+                            
+                            <p className="text-slate-600 text-lg sm:text-xl font-light leading-relaxed max-w-xl mb-12">
+                                Découvrez un processus rigoureux en quatre étapes. De l'analyse moléculaire au suivi perpétuel, nous ne laissons aucune place au hasard pour garantir la perfection de votre eau.
+                            </p>
+
+                            <div className="flex flex-col sm:flex-row items-start gap-6">
+                                <ProMaxButton variant="primary" className="px-10 h-16 shadow-lg" onClick={() => document.getElementById('les-etapes')?.scrollIntoView({ behavior: 'smooth' })}>
+                                    DÉCOUVRIR LES ÉTAPES
+                                </ProMaxButton>
+                            </div>
                         </div>
                     </div>
                 </section>
 
-                {/* 2. LE CŒUR DU PROCESSUS (Z-Pattern Alterné) */}
-                <section className="py-32 bg-white">
-                    <div className="container mx-auto px-6 space-y-32 md:space-y-48">
+                {/* 2. LE CŒUR DU PROCESSUS (Style Durabilité) */}
+                <section className="py-32 bg-slate-50 relative overflow-hidden" id="les-etapes">
+                    <div className="container mx-auto px-6 mb-24 text-center">
+                        <span className="inline-block py-1 px-4 bg-[#18448F] text-white rounded-full font-bold tracking-[0.2em] uppercase text-xs mb-6">Notre Processus</span>
+                        <h2 className="heading-pro-max">
+                            <span className="font-bold not-italic text-[#18448F] block">La rigueur de</span>
+                            <span className="font-bold text-[#8CC63F] block">notre méthodologie.</span>
+                        </h2>
+                        <p className="max-w-3xl mx-auto mt-8 text-slate-600 text-lg md:text-xl leading-relaxed">
+                            Découvrez notre approche d'expert en <strong>traitement de l'eau</strong>. De l'<strong>analyse de la qualité de l'eau</strong> à l'installation d'<strong>adoucisseurs d'eau</strong> et de systèmes de <strong>filtration par osmose inverse</strong>, notre processus élimine rigoureusement le calcaire, le fer et les contaminants. Assurez à votre résidence, commerce ou industrie une <strong>eau pure et adoucie</strong> pour un confort absolu, une performance accrue et une protection optimale de vos installations.
+                        </p>
+                    </div>
+
+                    <div className="max-w-7xl mx-auto space-y-32">
                         {processSteps.map((step, idx) => {
                             const isEven = idx % 2 === 0;
                             return (
-                                <div key={step.id} className={cn(
-                                    "flex flex-col gap-12 md:gap-24 items-center",
-                                    isEven ? "md:flex-row" : "md:flex-row-reverse"
-                                )}>
-                                    
-                                    {/* Bloc Image */}
-                                    <div className="w-full md:w-1/2 relative group">
-                                        <div className="absolute inset-0 bg-[#18448F]/5 -translate-x-4 translate-y-4 rounded-[2rem] transition-transform duration-500 group-hover:translate-x-0 group-hover:translate-y-0" />
-                                        <div className={cn(
-                                            "relative overflow-hidden rounded-[2rem] shadow-xl",
-                                            isEven ? "aspect-[4/5]" : "aspect-[16/10]"
-                                        )}>
-                                            <img src={step.image} alt={step.title} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
-                                        </div>
+                                <div key={step.id} className={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} items-center gap-16 px-6`}>
+                                    <div className="lg:w-1/2 space-y-6">
+                                        <div className="text-5xl md:text-6xl font-light text-[#18448F]/20 mb-2">{step.id}.</div>
+                                        <h3 className="text-3xl lg:text-5xl font-light text-slate-900 leading-tight">
+                                            {step.title.split(' ')[0]} <span className="font-bold text-[#18448F]">{step.title.split(' ').slice(1).join(' ')}</span>
+                                        </h3>
+                                        <p className="text-[#18448F] font-light italic text-xl mb-4">{step.subtitle}</p>
+                                        <p className="text-slate-500 text-lg leading-relaxed font-light">
+                                            {step.desc}
+                                        </p>
+                                        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-6">
+                                            {step.details.map((detail, dIdx) => (
+                                                <li key={dIdx} className="flex items-center gap-3">
+                                                    <CheckCircle2 className="w-5 h-5 text-[#8CC63F] shrink-0" />
+                                                    <span className="text-slate-700 font-medium">{detail}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
                                     </div>
-
-                                    {/* Bloc Texte */}
-                                    <div className="w-full md:w-1/2 relative">
-                                        {/* Grand chiffre en filigrane */}
-                                        <div className={cn(
-                                            "absolute -top-32 md:-top-40 text-[200px] md:text-[280px] font-black text-slate-50/80 -z-10 select-none leading-none tracking-tighter",
-                                            isEven ? "-left-10" : "-right-10"
-                                        )}>
-                                            {step.id}
-                                        </div>
-
-                                        <div className="space-y-8 relative z-10">
-                                            <div className="flex items-center gap-4 text-[#8CC63F] font-bold tracking-[0.2em] uppercase text-sm">
-                                                <step.icon className="w-5 h-5" />
-                                                Étape {step.id}
-                                            </div>
-                                            
-                                            <h2 className="text-4xl md:text-6xl font-bold text-slate-900 tracking-tight leading-tight">
-                                                {step.title}
-                                            </h2>
-                                            
-                                            <h3 className="text-2xl md:text-3xl font-light italic text-[#18448F]">
-                                                {step.subtitle}
-                                            </h3>
-
-                                            <p className="text-slate-500 text-lg md:text-xl font-light leading-relaxed max-w-xl">
-                                                {step.desc}
-                                            </p>
-
-                                            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-6">
-                                                {step.details.map((detail, dIdx) => (
-                                                    <li key={dIdx} className="flex items-center gap-3">
-                                                        <CheckCircle2 className="w-5 h-5 text-slate-300 shrink-0" />
-                                                        <span className="text-slate-700 font-medium">{detail}</span>
-                                                    </li>
-                                                ))}
-                                            </ul>
-                                        </div>
+                                    <div className="lg:w-1/2 w-full aspect-square md:aspect-video lg:aspect-square relative rounded-[3rem] overflow-hidden shadow-2xl group">
+                                        {step.gallery ? (
+                                            <ImageGallery images={step.gallery} />
+                                        ) : (
+                                            <>
+                                                <div className="absolute inset-0 bg-[#18448F]/10 mix-blend-multiply z-10 group-hover:opacity-0 transition-opacity duration-700" />
+                                                <img src={step.image} alt={step.title} className="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000" />
+                                            </>
+                                        )}
                                     </div>
-
                                 </div>
                             );
                         })}
                     </div>
                 </section>
 
-                {/* 3. LES ENGAGEMENTS (Colonnes Minimalistes) */}
-                <section className="py-40 bg-slate-50 border-t border-slate-200">
-                    <div className="container mx-auto px-6">
-                        <div className="max-w-3xl mb-24">
-                            <h2 className="text-5xl md:text-7xl font-bold text-slate-900 tracking-tighter mb-8">
-                                L'Exigence <span className="italic font-light text-[#18448F]">Bricareau.</span>
+                {/* 3. LES ENGAGEMENTS (Style Dark Mode immersif) */}
+                <section className="relative min-h-screen py-32 flex items-center bg-slate-900 overflow-hidden" id="nos-engagements">
+                    <div className="absolute inset-0 z-0">
+                        {/* Motif abstrait / Halos */}
+                        <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-[#8CC63F]/40 rounded-full blur-[150px] animate-[pulse_10s_ease-in-out_infinite]" />
+                        <div className="absolute bottom-0 left-1/4 w-[800px] h-[800px] bg-[#18448F]/30 rounded-full blur-[150px] animate-[pulse_12s_ease-in-out_infinite_reverse]" />
+                        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-20" />
+                    </div>
+
+                    <div className="relative z-10 container mx-auto px-6">
+                        <div className="text-center mb-24">
+                            <span className="inline-block py-1 px-4 bg-[#18448F] text-white rounded-full font-bold tracking-[0.2em] uppercase text-xs mb-10">L'Exigence Bricareau</span>
+                            <h2 className="text-4xl md:text-7xl lg:text-8xl font-bold text-white tracking-tighter leading-tight mb-12">
+                                Redéfinir le <br />
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8CC63F] to-blue-500 italic font-light">standard de qualité.</span>
                             </h2>
-                            <p className="text-2xl text-slate-500 font-light">Des promesses claires qui redéfinissent les standards de l'industrie du traitement de l'eau au Québec.</p>
+                            <p className="text-slate-300 text-xl md:text-2xl font-light leading-relaxed max-w-4xl mx-auto">
+                                Des promesses claires qui redéfinissent les standards de l'industrie du traitement de l'eau au Québec.
+                            </p>
                         </div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-12 gap-y-16">
-                            
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-12 gap-y-16 max-w-7xl mx-auto text-center lg:text-left">
                             {/* Engagement 1 */}
-                            <div className="lg:border-l border-slate-200 lg:pl-8 space-y-6">
-                                <Zap className="w-10 h-10 text-[#18448F]" strokeWidth={1.5} />
-                                <h3 className="text-2xl font-bold text-slate-900">Réactivité Absolue</h3>
-                                <p className="text-slate-500 leading-relaxed font-light">Intervention sous 48h. Votre confort ne peut attendre, nos équipes sont mobilisées pour agir avec célérité.</p>
+                            <div className="space-y-6">
+                                <div className="mx-auto lg:mx-0 w-16 h-16 rounded-full bg-white/10 flex items-center justify-center">
+                                    <Zap className="w-8 h-8 text-[#8CC63F]" strokeWidth={1.5} />
+                                </div>
+                                <h3 className="text-2xl font-bold text-white">Réactivité absolue</h3>
+                                <p className="text-slate-400 leading-relaxed font-light">Intervention sous 48h. Votre confort ne peut attendre, nos équipes sont mobilisées pour agir avec célérité.</p>
                             </div>
 
                             {/* Engagement 2 */}
-                            <div className="lg:border-l border-slate-200 lg:pl-8 space-y-6">
-                                <ShieldCheck className="w-10 h-10 text-[#18448F]" strokeWidth={1.5} />
-                                <h3 className="text-2xl font-bold text-slate-900">Garantie Intégrale</h3>
-                                <p className="text-slate-500 leading-relaxed font-light">Une couverture complète sur nos systèmes. Zéro compromis sur votre tranquillité d'esprit à long terme.</p>
+                            <div className="space-y-6">
+                                <div className="mx-auto lg:mx-0 w-16 h-16 rounded-full bg-white/10 flex items-center justify-center">
+                                    <ShieldCheck className="w-8 h-8 text-[#8CC63F]" strokeWidth={1.5} />
+                                </div>
+                                <h3 className="text-2xl font-bold text-white">Garantie intégrale</h3>
+                                <p className="text-slate-400 leading-relaxed font-light">Une couverture complète sur nos systèmes. Zéro compromis sur votre tranquillité d'esprit à long terme.</p>
                             </div>
 
                             {/* Engagement 3 */}
-                            <div className="lg:border-l border-slate-200 lg:pl-8 space-y-6">
-                                <Star className="w-10 h-10 text-[#18448F]" strokeWidth={1.5} />
-                                <h3 className="text-2xl font-bold text-slate-900">Composants Premium</h3>
-                                <p className="text-slate-500 leading-relaxed font-light">Nous n'utilisons que des matériaux nobles et des valves de grade industriel pour une durabilité inégalée.</p>
+                            <div className="space-y-6">
+                                <div className="mx-auto lg:mx-0 w-16 h-16 rounded-full bg-white/10 flex items-center justify-center">
+                                    <Star className="w-8 h-8 text-[#8CC63F]" strokeWidth={1.5} />
+                                </div>
+                                <h3 className="text-2xl font-bold text-white">Composants premium</h3>
+                                <p className="text-slate-400 leading-relaxed font-light">Nous n'utilisons que des matériaux nobles et des valves de grade industriel pour une durabilité inégalée.</p>
                             </div>
 
                             {/* Engagement 4 */}
-                            <div className="lg:border-l border-slate-200 lg:pl-8 space-y-6">
-                                <FlaskConical className="w-10 h-10 text-[#18448F]" strokeWidth={1.5} />
-                                <h3 className="text-2xl font-bold text-slate-900">Éco-Responsabilité</h3>
-                                <p className="text-slate-500 leading-relaxed font-light">Nos solutions sont minutieusement calibrées pour minimiser le gaspillage d'eau et d'énergie au quotidien.</p>
+                            <div className="space-y-6">
+                                <div className="mx-auto lg:mx-0 w-16 h-16 rounded-full bg-white/10 flex items-center justify-center">
+                                    <FlaskConical className="w-8 h-8 text-[#8CC63F]" strokeWidth={1.5} />
+                                </div>
+                                <h3 className="text-2xl font-bold text-white">Éco-responsabilité</h3>
+                                <p className="text-slate-400 leading-relaxed font-light">Nos solutions sont minutieusement calibrées pour minimiser le gaspillage d'eau et d'énergie au quotidien.</p>
                             </div>
-
                         </div>
                     </div>
                 </section>
 
-                {/* 4. LE "PRESTIGE" CTA */}
-                <section className="py-40 bg-white">
-                    <div className="container mx-auto px-6 text-center max-w-4xl">
-                        <h2 className="text-5xl md:text-7xl lg:text-8xl font-black text-slate-900 mb-8 tracking-tighter uppercase leading-[0.9]">
-                            Passez à l'ultime <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#18448F] to-blue-400 italic font-light lowercase">standard de pureté.</span>
-                        </h2>
-                        
-                        <p className="text-slate-500 text-xl md:text-2xl font-light mb-16 leading-relaxed">
-                            Contactez notre division ingénierie pour une analyse privée et confidentielle de votre eau. L'excellence n'attend pas.
-                        </p>
-                        
-                        <div className="flex flex-col sm:flex-row items-center justify-center gap-8">
-                            <ProMaxButton variant="primary" className="px-12 h-16 shadow-xl shadow-blue-900/10 text-white font-bold" onClick={() => navigate("/consultation")}>
-                                PLANIFIER UNE ANALYSE
-                            </ProMaxButton>
-                            
-                            <a href="tel:18552649328" className="group flex items-center gap-4 text-slate-900 hover:text-[#18448F] transition-colors">
-                                <div className="w-12 h-12 rounded-full border border-slate-200 flex items-center justify-center group-hover:border-[#18448F]/30 group-hover:bg-slate-50 transition-all">
-                                    <Phone className="w-5 h-5" />
-                                </div>
-                                <span className="font-bold tracking-widest text-lg">1-855-264-9328</span>
-                            </a>
+                {/* 4. LE CTA (Style Durabilité) */}
+                <section className="relative overflow-hidden min-h-[80vh] flex items-center py-32">
+                    {/* Background Image Full Width */}
+                    <div className="absolute inset-0 z-0">
+                        <img src={ctaImg} alt="Contactez Bricareau" className="w-full h-full object-cover object-center" />
+                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/80 to-white/95" />
+                    </div>
+                    
+                    <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-12 relative z-10">
+                        <div className="md:col-span-6 md:col-start-7 space-y-10 md:pl-12">
+                            <h2 className="text-5xl md:text-7xl font-bold text-[#18448F] leading-tight">
+                                Passez à l'ultime <br /><span className="text-[#8CC63F] italic font-light">standard de pureté.</span>
+                            </h2>
+                            <p className="text-slate-600 text-lg max-w-xl leading-relaxed">
+                                Sollicitez nos experts techniques pour un diagnostic approfondi et personnalisé de votre qualité d'eau. L'expertise absolue au service de votre sérénité.
+                            </p>
+                            <div className="flex flex-col sm:flex-row gap-6 items-center">
+                                <ProMaxButton variant="primary" className="px-12 h-16 shadow-xl text-white font-bold" onClick={() => navigate("/consultation")}>
+                                    PLANIFIEZ UNE ANALYSE
+                                </ProMaxButton>
+                            </div>
                         </div>
                     </div>
                 </section>
