@@ -172,7 +172,6 @@ const C = () => {
        <Header />
        <main>
                 <Hero 
-                    className="min-h-[100vh]"
                     image={heroDrink}
                     highlightedTitle={<><span className="text-[#8CC63F] font-bold not-italic">La pureté de l'eau</span> <span className="font-bold not-italic">sous l'évier,</span></>}
                     mainTitle={<><span className="text-[#8CC63F] font-bold not-italic">l'excellence</span> dans chaque goutte.</>}

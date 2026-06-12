@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ExpertAvatars from "@/components/ExpertAvatars";
 import Hero from "@/components/Hero";
+import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import { ProMaxButton } from "@/components/ui/ProMaxButton";
 import { Button } from "@/components/ui/button";
@@ -120,18 +121,64 @@ const TestsEauPage = () => {
     <div className="min-h-screen bg-white">
        <Header />
        <main>
-                <Hero 
-                    className="min-h-0 justify-start lg:min-h-[100vh] lg:justify-center"
-                    image={newHeroImg}
-                    highlightedTitle={<span className="font-bold not-italic">Analyses d'eau</span>}
-                    mainTitle={<> & tests de laboratoire <span className="text-[#8CC63F] font-bold not-italic">professionnels</span></>}
-                    subtitle="Besoin d'une analyse d'eau dans la région métropolitaine ? Que ce soit pour une vérification annuelle, une transaction hypothécaire ou un souci de qualité, Bricareau offre des tests complets de laboratoire partout dans le Grand Montréal, Laval et les couronnes."
-                    ctaText="Planifiez un test d'eau"
-                    ctaLink="#water-test"
-                    showPhone={true}
-                    showBreadcrumbs={true}
-                    singleLineTitle={false}
-                />
+                {/* 1. HERO SECTION (STYLED LIKE RESIDENTIAL) */}
+                <section className="relative bg-white overflow-hidden min-h-screen flex flex-col justify-center pt-24 pb-16 lg:pt-28 lg:pb-16 border-b border-slate-200">
+                    <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none hidden lg:block">
+                        <div className="container mx-auto px-4 lg:px-6 pointer-events-auto">
+                            <GlobalBreadcrumbs variant="on-light" />
+                        </div>
+                    </div>
+                    <div className="absolute inset-0 w-full h-full opacity-40 lg:opacity-100">
+                        {/* Mobile Gradient */}
+                        <div className="absolute inset-0 bg-gradient-to-br from-white/80 via-white/40 to-transparent z-10 lg:hidden"></div>
+                        {/* Desktop Gradient: 1/3 solid white, fading to transparent */}
+                        <div className="absolute inset-0 bg-[linear-gradient(to_right,white_0%,white_33.33%,rgba(255,255,255,0)_85%)] z-10 hidden lg:block"></div>
+                        
+                        <div className="absolute right-0 top-0 w-full lg:w-[80%] h-full">
+                            <img 
+                                src={newHeroImg} 
+                                alt="Analyses d'eau" 
+                                className="absolute inset-0 w-full h-full object-cover object-center"
+                            />
+                        </div>
+                    </div>
+                    <div className="absolute right-0 top-0 w-full h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/20 via-transparent to-transparent pointer-events-none z-20"></div>
+                    
+                    <div className="container mx-auto px-6 relative z-30">
+                        <div className="max-w-3xl flex flex-col justify-center mt-12 lg:mt-0">
+                            <div className="mb-8">
+                                <h1 className="text-[40px] lg:text-[50px] leading-[45px] lg:leading-[55px] font-sans font-bold mb-6 tracking-tight">
+                                    <span className="font-bold not-italic text-[#18448F]">Analyses d'eau</span><br className="hidden lg:block"/>
+                                    <span className="text-[#18448F]"> & tests de laboratoire </span>
+                                    <span className="text-[#8CC63F]">professionnels</span>
+                                </h1>
+                                
+                                <p className="text-slate-600 text-lg sm:text-xl font-light leading-relaxed max-w-xl">
+                                    Besoin d'une analyse d'eau dans la région métropolitaine ? Que ce soit pour une vérification annuelle, une transaction hypothécaire ou un souci de qualité, Bricareau offre des tests complets de laboratoire partout dans le Grand Montréal, Laval et les couronnes.
+                                </p>
+                            </div>
+                            
+                            <div className="flex flex-col sm:flex-row items-start gap-6 mb-16">
+                                <div className="relative inline-block w-full sm:w-auto group">
+                                    <div className="absolute inset-0 border border-[#18448F] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                                    <button
+                                        className="relative flex items-center justify-center w-full sm:w-auto bg-[#18448F] text-white hover:bg-transparent hover:text-[#18448F] border border-[#18448F] rounded-[2rem] h-[3.25rem] px-8 font-black uppercase tracking-[0.1em] text-[11px] transition-all"
+                                        onClick={() => { document.getElementById('water-test')?.scrollIntoView({ behavior: 'smooth' }) }}
+                                    >
+                                        Planifiez un test d'eau
+                                    </button>
+                                </div>
+                                <div className="relative inline-block w-full sm:w-auto group">
+                                    <div className="absolute inset-0 border border-slate-200 rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                                    <a href="tel:18552649328" className="relative flex items-center justify-center w-full sm:w-auto bg-white text-[#18448F] border border-slate-200 rounded-[2rem] h-[3.25rem] px-8 font-black uppercase tracking-[0.1em] text-[11px] transition-all gap-2">
+                                        <Phone className="w-4 h-4" />
+                                        1-855-264-9328
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
 
 

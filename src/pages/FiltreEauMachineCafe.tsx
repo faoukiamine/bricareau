@@ -2,6 +2,7 @@
 import React, { useEffect } from "react";
 import { 
     ChevronRight, 
+    ChevronLeft,
     ArrowRight,
     ShieldCheck,
     Droplets,
@@ -163,9 +164,9 @@ const FiltreEauMachineCafe = () => {
                 {/* 3. PRODUCT GRID */}
                 <section className="py-24 bg-slate-50/50">
                     <div className="container mx-auto px-6">
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+                        <div id="coffee-filters-carousel" className="flex gap-6 lg:grid lg:grid-cols-3 lg:gap-12 overflow-x-auto snap-x snap-mandatory no-scrollbar pb-8 -mx-6 px-6 lg:mx-0 lg:px-0 lg:pb-0">
                             {products.map((product, idx) => (
-                                <div key={idx} className="group bg-white rounded-[3rem] p-10 shadow-xl border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col items-center text-center space-y-8">
+                                <div key={idx} className="w-[85vw] sm:w-[350px] shrink-0 snap-center lg:w-auto group bg-white rounded-[3rem] p-10 shadow-xl border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col items-center text-center space-y-8">
                                     <div className="relative w-full aspect-square rounded-[2rem] overflow-hidden bg-slate-50 border border-slate-100 flex items-center justify-center p-8">
                                         <img 
                                             src={product.image} 
@@ -184,6 +185,46 @@ const FiltreEauMachineCafe = () => {
 
                                 </div>
                             ))}
+                        </div>
+
+                        {/* Navigation Buttons (Mobile/Tablet Only) */}
+                        <div className="flex justify-center gap-4 mt-4 lg:hidden">
+                            <button 
+                                onClick={() => {
+                                    const el = document.getElementById("coffee-filters-carousel");
+                                    if (el) {
+                                        const cardWidth = el.firstElementChild ? el.firstElementChild.clientWidth + 24 : 350;
+                                        if (el.scrollLeft <= 15) {
+                                            const maxScrollLeft = el.scrollWidth - el.clientWidth;
+                                            el.scrollTo({ left: maxScrollLeft, behavior: "smooth" });
+                                        } else {
+                                            el.scrollBy({ left: -cardWidth, behavior: "smooth" });
+                                        }
+                                    }
+                                }}
+                                className="w-12 h-12 rounded-full bg-[#18448F] hover:bg-blue-700 text-white flex items-center justify-center shadow-lg transition-all hover:scale-110 active:scale-95"
+                                aria-label="Précédent"
+                            >
+                                <ChevronLeft className="w-5 h-5" />
+                            </button>
+                            <button 
+                                onClick={() => {
+                                    const el = document.getElementById("coffee-filters-carousel");
+                                    if (el) {
+                                        const cardWidth = el.firstElementChild ? el.firstElementChild.clientWidth + 24 : 350;
+                                        const maxScrollLeft = el.scrollWidth - el.clientWidth;
+                                        if (el.scrollLeft >= maxScrollLeft - 15) {
+                                            el.scrollTo({ left: 0, behavior: "smooth" });
+                                        } else {
+                                            el.scrollBy({ left: cardWidth, behavior: "smooth" });
+                                        }
+                                    }
+                                }}
+                                className="w-12 h-12 rounded-full bg-[#18448F] hover:bg-blue-700 text-white flex items-center justify-center shadow-lg transition-all hover:scale-110 active:scale-95"
+                                aria-label="Suivant"
+                            >
+                                <ChevronRight className="w-5 h-5" />
+                            </button>
                         </div>
                     </div>
                 </section>

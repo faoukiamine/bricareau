@@ -47,7 +47,7 @@ const Hero = ({
   homeVariant = false,
 }: HeroProps) => {
   return (
-    <section className={cn("relative min-h-[90vh] flex flex-col justify-center overflow-hidden bg-white", className)}>
+    <section className={cn("relative bg-white overflow-hidden min-h-screen flex flex-col justify-center pt-24 pb-16 lg:pt-28 lg:pb-16 border-b border-slate-200", className)}>
       {showBreadcrumbs && (
         <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none hidden lg:block">
           <div className="container mx-auto px-4 lg:px-6 pointer-events-auto">
@@ -56,21 +56,22 @@ const Hero = ({
         </div>
       )}
 
-      {/* 1. Image Section - Stacked on Mobile/Tablet Portrait, Overlay on Desktop */}
-      <div className="relative lg:absolute lg:inset-0 w-full aspect-[4/3] sm:aspect-video lg:aspect-auto lg:h-full z-0 overflow-hidden">
-        <div className={cn(
-          "absolute inset-0 z-10 transition-opacity duration-1000",
-          gradualOpacity75 
-            ? "bg-gradient-to-b from-transparent to-white lg:bg-gradient-to-r lg:from-white lg:via-white/40 lg:to-transparent" 
-            : "bg-gradient-to-b from-transparent to-white lg:bg-gradient-to-r lg:from-white lg:via-white/80 lg:to-transparent"
-        )} />
-        <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent lg:hidden" />
-        <img
-          src={image || heroImage}
-          alt={imageAlt}
-          className={cn("w-full h-full object-cover opacity-90", imagePosition)}
-        />
+      {/* 1. Image Section - Overlay on all screens (Residential Style) */}
+      <div className="absolute inset-0 w-full h-full opacity-40 lg:opacity-100 z-0">
+        {/* Mobile Gradient */}
+        <div className="absolute inset-0 bg-gradient-to-br from-white/80 via-white/40 to-transparent z-10 lg:hidden"></div>
+        {/* Desktop Gradient: 1/3 solid white, fading to transparent */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,white_0%,white_33.33%,rgba(255,255,255,0)_85%)] z-10 hidden lg:block"></div>
+        
+        <div className="absolute right-0 top-0 w-full lg:w-[80%] h-full">
+            <img
+            src={image || heroImage}
+            alt={imageAlt}
+            className={cn("absolute inset-0 w-full h-full object-cover object-center", imagePosition)}
+            />
+        </div>
       </div>
+      <div className="absolute right-0 top-0 w-full h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/20 via-transparent to-transparent pointer-events-none z-0"></div>
 
       {/* 2. Content Section */}
       <div className="container relative z-10 mx-auto px-4 lg:px-12 lg:h-full flex flex-col items-start justify-center pt-24 pb-24 lg:pt-0 lg:pb-0">

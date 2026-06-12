@@ -290,14 +290,15 @@ const Fontaines = () => {
             <Header />
             <main>
                 {/* 1. IMMERSIVE HERO - INDEX STYLE */}
-                <section className="relative min-h-[100vh] flex flex-col justify-center overflow-hidden bg-white">
-                    {/* Image Section - Stacked on Mobile/Tablet Portrait, Overlay on Desktop */}
-                    <div className="relative lg:absolute lg:inset-0 w-full h-[400px] md:h-[550px] lg:h-full z-0 overflow-hidden">
-                        <div className="absolute inset-0 z-10 bg-gradient-to-b from-transparent via-[#f0f9ff]/20 to-white lg:bg-gradient-to-r lg:from-[#f0f9ff] lg:via-[#f0f9ff]/40 35% lg:to-transparent" />
+                <section className="relative min-h-screen flex flex-col justify-center overflow-hidden bg-white">
+                    {/* Image Section - Overlay on all screens */}
+                    <div className="absolute inset-0 w-full h-full z-0 overflow-hidden">
+                        <div className="absolute inset-0 bg-gradient-to-br from-white/80 via-white/40 to-transparent z-10 lg:hidden" />
+                        <div className="absolute inset-0 bg-[linear-gradient(to_right,white_0%,white_33.33%,rgba(255,255,255,0)_85%)] z-10 hidden lg:block" />
                         <img 
                             src={heroFountains} 
                             alt="Fontaines d'eau Bricareau"
-                            className="w-full h-full object-cover object-center scale-105 group-hover:scale-100 transition-transform duration-[3s] ease-out"
+                            className="absolute inset-0 w-full h-full object-cover object-center scale-105 group-hover:scale-100 transition-transform duration-[3s] ease-out"
                         />
                         {/* Floating Trust Row - Mobile/Tablet Only */}
                         <div className="absolute bottom-4 left-4 right-4 z-20 lg:hidden">
@@ -770,20 +771,20 @@ const Fontaines = () => {
                             />
                             <div className="absolute inset-0 bg-slate-900/30" />
                             
-                            <div className="h-full relative z-10 flex flex-col justify-center items-center lg:items-end p-8 lg:p-16">
-                                <div className="w-full max-w-[300px] flex flex-col gap-6">
+                            <div className="h-full relative z-10 flex flex-col justify-center items-end p-6 lg:p-16">
+                                <div className="w-full max-w-[200px] lg:max-w-[300px] flex flex-col gap-4 lg:gap-6">
                                 {/* Card 2: Stats */}
-                                <div className="rounded-[2rem] bg-gradient-to-br from-[#8CC63F] to-green-600 p-6 flex flex-col items-center justify-center text-center relative overflow-hidden group shadow-xl shadow-[#8CC63F]/30">
+                                <div className="rounded-[1.5rem] lg:rounded-[2rem] bg-gradient-to-br from-[#8CC63F] to-green-600 p-4 lg:p-6 flex flex-col items-center justify-center text-center relative overflow-hidden group shadow-xl shadow-[#8CC63F]/30">
                                     <div className="absolute top-0 right-0 -mt-10 -mr-10 w-32 h-32 bg-white/10 rounded-full blur-2xl" />
                                     <div className="absolute bottom-0 left-0 -mb-10 -ml-10 w-32 h-32 bg-white/10 rounded-full blur-2xl" />
                                     
                                     <div className="relative z-10 flex flex-col items-center">
-                                        <Recycle className="w-8 h-8 text-white/80 mb-4" />
-                                        <span className="text-4xl lg:text-5xl font-black text-white leading-none tracking-tighter mb-2 group-hover:scale-110 transition-transform duration-500">
+                                        <Recycle className="w-6 h-6 lg:w-8 lg:h-8 text-white/80 mb-2 lg:mb-4" />
+                                        <span className="text-3xl lg:text-5xl font-black text-white leading-none tracking-tighter mb-1 lg:mb-2 group-hover:scale-110 transition-transform duration-500">
                                             -2920
                                         </span>
-                                        <div className="w-10 h-1 bg-white/30 rounded-full my-3" />
-                                        <span className="text-xs font-bold text-emerald-50 uppercase tracking-[0.2em] leading-relaxed">
+                                        <div className="w-8 lg:w-10 h-1 bg-white/30 rounded-full my-2 lg:my-3" />
+                                        <span className="text-[9px] lg:text-xs font-bold text-emerald-50 uppercase tracking-[0.2em] leading-relaxed">
                                             Bouteilles évitées par an<br/>pour un couple
                                         </span>
                                     </div>
@@ -791,10 +792,10 @@ const Fontaines = () => {
 
                                 {/* Floating CTA Action Bar */}
                                 <div className="relative inline-block group w-full">
-                                    <div className="absolute inset-0 border border-white/60 rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                                    <div className="absolute inset-0 border border-white/60 rounded-[1.5rem] lg:rounded-[2rem] -translate-x-[4px] translate-y-[4px] transition-transform group-hover:-translate-x-[2px] group-hover:translate-y-[2px]"></div>
                                     <Button 
                                         asChild 
-                                        className="relative bg-white hover:bg-[#8CC63F] text-[#18448F] hover:text-white rounded-[2rem] h-14 w-full font-black uppercase tracking-widest text-xs transition-all border-none shadow-xl"
+                                        className="relative bg-white hover:bg-[#8CC63F] text-[#18448F] hover:text-white rounded-[1.5rem] lg:rounded-[2rem] h-12 lg:h-14 w-full font-black uppercase tracking-widest text-[9px] lg:text-xs transition-all border-none shadow-xl px-2"
                                     >
                                         <NavLink to="/consultation" className="flex items-center justify-center gap-3">
                                             Planifiez votre impact

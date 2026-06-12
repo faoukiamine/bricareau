@@ -174,7 +174,6 @@ const DesinfectionUV = () => {
             <Header />
             <main>
                 <Hero 
-                    className="min-h-[100vh]"
                     image={heroImg}
                     highlightedTitle={<span className="font-bold not-italic">Systèmes de désinfection UV,</span>}
                     mainTitle={<span className="text-[#8CC63F] font-bold not-italic lg:drop-shadow-[0_4px_8px_rgba(0,0,0,0.9)]">zéro produit chimique, 100% de protection.</span>}

@@ -250,7 +250,6 @@ const B = () => {
              <Header />
              <main>
                 <Hero 
-                    className="min-h-[100vh]"
                     image={heroFiltration}
                     highlightedTitle={<span className="font-bold not-italic">Protégez votre santé</span>}
                     mainTitle={<> avec une filtration d'eau <span className="text-[#8CC63F] font-bold not-italic">d'excellence.</span></>}

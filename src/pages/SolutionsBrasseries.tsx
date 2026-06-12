@@ -56,7 +56,7 @@ const SolutionsBrasseries = () => {
             <main>
                 {/* Hero Section */}
                 <Hero 
-                    className="min-h-[100vh]"
+                    className="min-h-0 justify-start lg:min-h-[100vh] lg:justify-center"
                     image={heroImg}
                     highlightedTitle={<span className="font-bold not-italic text-[#18448F]">L'effervescence <span className="text-[#8CC63F]">pure</span></span>}
                     mainTitle="pour votre brasserie."

@@ -50,7 +50,7 @@ const ResidentialServices = () => {
                 <section className="relative bg-white overflow-hidden min-h-screen flex flex-col justify-center pt-24 pb-16 lg:pt-28 lg:pb-16 border-b border-slate-200">
                     <div className="absolute inset-0 w-full h-full opacity-40 lg:opacity-100">
                         {/* Mobile Gradient */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-white via-white/90 to-transparent z-10 lg:hidden"></div>
+                        <div className="absolute inset-0 bg-gradient-to-br from-white/80 via-white/40 to-transparent z-10 lg:hidden"></div>
                         {/* Desktop Gradient: 1/3 solid white, fading to transparent */}
                         <div className="absolute inset-0 bg-[linear-gradient(to_right,white_0%,white_33.33%,rgba(255,255,255,0)_85%)] z-10 hidden lg:block"></div>
                         
@@ -257,7 +257,7 @@ const ResidentialServices = () => {
                             {/* Card 6: Filtres de remplacement (Square) */}
                             <div 
                                 className="group relative bg-white lg:col-span-1 rounded-[2rem] overflow-hidden border border-slate-100 hover:shadow-xl hover:shadow-blue-900/5 transition-all duration-500 cursor-pointer flex flex-col justify-end p-8"
-                                onClick={() => navigate("/cartouches-de-filtres-a-eau")}
+                                onClick={() => navigate("/filtres-de-remplacement")}
                             >
                                 <div className="absolute inset-0 overflow-hidden rounded-[2rem]">
                                     <img src={replacementFilterImg} alt="Filtres remplacement" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
@@ -275,7 +275,7 @@ const ResidentialServices = () => {
                             {/* Card 7: Tests d'eau (Square) */}
                             <div 
                                 className="group relative bg-white lg:col-span-1 rounded-[2rem] overflow-hidden border border-slate-100 hover:shadow-xl hover:shadow-blue-900/5 transition-all duration-500 cursor-pointer flex flex-col justify-end p-8"
-                                onClick={() => navigate("/test-de-la-qualite-de-leau")}
+                                onClick={() => navigate("/tests-eau")}
                             >
                                 <div className="absolute inset-0 overflow-hidden rounded-[2rem]">
                                     <img src={waterTestImg} alt="Tests d'eau" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
