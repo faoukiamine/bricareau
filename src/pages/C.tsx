@@ -280,7 +280,7 @@ const C = () => {
 
                                     <h2 className="heading-pro-max text-left !leading-[1.1]">
                                         <span className="font-bold not-italic text-[#18448F] block">L'eau de source,</span>
-                                        <span className="font-bold not-italic text-[#18448F] block"><span className="text-[#8CC63F]">sans</span> la bouteille.</span>
+                                        <span className="font-bold not-italic text-[#18448F] block"><span className="text-[#8CC63F]">sans</span> la bouteille de plastique.</span>
                                     </h2>
                                     <p className="body-pro-max text-slate-500 max-w-2xl text-justify">
                                         Ne faites plus aucun compromis. Transformez votre robinet en une source de pureté gastronomique. Nos systèmes filtrent l'indésirable pour ne laisser couler que l'essentiel : une eau fraîche, saine et libérée des contraintes du plastique.
@@ -776,7 +776,7 @@ const C = () => {
           title={
                             <h2 className="heading-pro-max tracking-tight leading-[1.1] mb-6 relative z-10">
                                 <span className="font-bold not-italic text-[#18448F] block text-center">L'eau de source,</span>
-                                <span className="font-bold not-italic text-[#18448F] block text-center"><span className="text-[#8CC63F]">sans</span> la bouteille.</span>
+                                <span className="font-bold not-italic text-[#18448F] block text-center"><span className="text-[#8CC63F]">sans</span> la bouteille de plastique.</span>
                             </h2>
           }
         />
