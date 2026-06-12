@@ -323,7 +323,7 @@ const A = () => {
                 <Hero 
                     image={heroBath}
                     highlightedTitle={<span className="font-bold not-italic">Finis le calcaire et l'eau dure :</span>}
-                    mainTitle={<>offrez-vous le confort d'une <span className="text-[#8CC63F] lg:drop-shadow-[0_4px_8px_rgba(0,0,0,0.9)]">eau douce.</span></>}
+                    mainTitle={<>offrez-vous le confort d'une <span className="text-[#8CC63F]">eau douce.</span></>}
                     subtitle="Redécouvrez l'expérience d'une eau soyeuse qui préserve votre peau, vos cheveux et vos investissements. Une technologie de pointe pour une protection durable de votre foyer."
                     showPhone={true}
                     showBreadcrumbs={true}

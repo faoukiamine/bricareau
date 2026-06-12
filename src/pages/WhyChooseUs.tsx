@@ -236,7 +236,7 @@ const WhyChooseUs = () => {
                     <div className="container mx-auto px-6">
                         <div className="text-center mb-24 space-y-4">
                             <h2 className="text-3xl lg:text-5xl font-bold text-[#18448F] leading-tight">
-                                Pourquoi nous sommes <br className="md:hidden" /><span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8CC63F] to-blue-500 italic font-light">la référence au Québec.</span>
+                                Pourquoi nous sommes <br className="md:hidden" /><span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8CC63F] to-blue-500 italic font-light">la référence au Québec ?</span>
                             </h2>
                         </div>
 

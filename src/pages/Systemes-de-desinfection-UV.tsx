@@ -176,7 +176,7 @@ const DesinfectionUV = () => {
                 <Hero 
                     image={heroImg}
                     highlightedTitle={<span className="font-bold not-italic">Systèmes de désinfection UV,</span>}
-                    mainTitle={<span className="text-[#8CC63F] font-bold not-italic lg:drop-shadow-[0_4px_8px_rgba(0,0,0,0.9)]">zéro produit chimique, 100% de protection.</span>}
+                    mainTitle={<span className="text-[#8CC63F] font-bold not-italic">zéro produit chimique, 100% de protection.</span>}
                     subtitle="Éliminez 99,99% des bactéries, virus et kystes de votre eau de puits ou municipale sans aucun additif chimique. Assurez une pureté microbiologique totale pour la sécurité de votre famille à chaque robinet."
                     showPhone={true}
                     showBreadcrumbs={true}

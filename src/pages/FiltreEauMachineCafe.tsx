@@ -152,7 +152,7 @@ const FiltreEauMachineCafe = () => {
                                 }}
                             >
                                 <span className="block">Le café est 98% eau,</span>
-                                <span className="block text-center">choisissez le bon <span className="text-[#8CC63F]">filtre.</span></span>
+                                <span className="block text-center">choisissez le <span className="text-[#8CC63F]">bon filtre.</span></span>
                             </h2>
                             <p className="text-slate-500 text-xl font-light leading-relaxed mx-auto max-w-2xl">
                                 Nous proposons une gamme équilibrée de filtres adaptés à votre eau et à vos besoins de performance.

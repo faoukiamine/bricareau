@@ -181,13 +181,18 @@ export const mainNavMenuItems: MenuItem[] = [
                 items: [
                      { 
                         title: "Notre compagnie", 
-                        description: "Découvrez notre histoire, notre vision et pourquoi nous sommes la référence au Québec.", 
+                        description: "Découvrez notre histoire, notre vision et pourquoi nous sommes la référence au Québec ?", 
                         href: "/pourquoi-choisir-bricareau" 
                     },
                     { 
                         title: "Notre processus", 
                         description: "De l'analyse à l'installation, explorez notre méthodologie d'ingénierie étape par étape.", 
                         href: "/notre-processus" 
+                    },
+                    { 
+                        title: "Durabilité", 
+                        description: "Découvrez nos engagements écologiques et notre mission pour réduire l'empreinte plastique.", 
+                        href: "/durabilite" 
                     }
                 ]
             },
@@ -243,11 +248,6 @@ export const mainNavMenuItems: MenuItem[] = [
                         title: "FAQ", 
                         description: "Des réponses claires et rapides aux questions courantes sur nos technologies.", 
                         href: "/faq" 
-                    },
-                    { 
-                        title: "Durabilité", 
-                        description: "Découvrez nos engagements écologiques et notre mission pour réduire l'empreinte plastique.", 
-                        href: "/durabilite" 
                     }
                 ]
             }

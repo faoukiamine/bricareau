@@ -8,16 +8,19 @@ import {
     ArrowRight,
     Phone
 } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import { cn } from "@/lib/utils";
+import { ProMaxButton } from "@/components/ui/ProMaxButton";
 
 // Assets
-import heroImg from "@/assets/7031878.jpg"; // Using a bottle or modern interior image
-import waveImg from "@/assets/pure_water_lifestyle.png"; 
+import heroImg from "@/assets/2233.jpg"; 
+import imgMovement from "@/assets/2232.jpg"; 
+import imgGaspillage from "@/assets/bouteilles-plastiques.jpg";
+import imgCO2 from "@/assets/2229.jpg";
+import imgLifestyle from "@/assets/2234.jpg";
 
 const Sustainability = () => {
     const navigate = useNavigate();
@@ -28,179 +31,180 @@ const Sustainability = () => {
     }, []);
 
     return (
-        <div className="min-h-screen bg-white font-sans text-slate-900 selection:bg-teal-100 selection:text-teal-900 overflow-x-hidden">
+        <div className="min-h-screen bg-[#FDFDFD] font-sans text-slate-900 overflow-x-hidden">
             <Header />
 
             <main>
-                {/* 1. Hero Section */}
-                <section className="relative h-[70vh] flex items-center overflow-hidden">
-                    <div className="absolute inset-0">
-                        <img
-                            src={waveImg}
-                            alt="Durabilité Bricareau"
-                            className="w-full h-full object-cover brightness-[0.4]"
-                        />
+                {/* 1. CUSTOM HERO SECTION */}
+                <section className="relative bg-white overflow-hidden min-h-screen flex flex-col justify-center pt-24 pb-16 lg:pt-28 lg:pb-16 border-b border-slate-200">
+                    <div className="absolute inset-0 w-full h-full opacity-40 lg:opacity-100">
+                        {/* Mobile Gradient */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-white via-white/90 to-transparent z-10 lg:hidden"></div>
+                        {/* Desktop Gradient: 1/3 solid white, fading to transparent */}
+                        <div className="absolute inset-0 bg-[linear-gradient(to_right,white_0%,white_33.33%,rgba(255,255,255,0)_85%)] z-10 hidden lg:block"></div>
+                        
+                        {/* Image Container */}
+                        <div className="absolute right-0 top-0 w-full lg:w-[80%] h-full">
+                            <img 
+                                src={heroImg} 
+                                alt="Durabilité Bricareau" 
+                                className="absolute inset-0 w-full h-full object-cover object-center animate-in fade-in duration-1000"
+                            />
+                        </div>
                     </div>
-                    <div className="container mx-auto px-6 relative z-10">
-                        <div className="max-w-4xl space-y-12">
-                            <h1 className="text-[40px] md:text-[50px] lg:text-[64px] leading-[1.1] font-sans font-light italic text-white mb-6 tracking-tight">
-    <span className="text-[#8CC63F] font-sans font-bold not-italic drop-shadow-lg">DURABILITÉ</span>
-</h1>
-                            <Button 
-                                size="lg" 
-                                className="bg-[#0052ff] hover:bg-blue-700 text-white px-12 h-14 rounded-full text-[11px] font-black transition-all shadow-2xl uppercase tracking-widest"
-                                onClick={() => navigate("/contact")}
-                            >
-                                DEMANDEZ UNE CONSULTATION
-                            </Button>
+                    <div className="absolute right-0 top-0 w-full h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/20 via-transparent to-transparent pointer-events-none z-20"></div>
+
+                    <div className="container mx-auto px-6 relative z-30">
+                        <div className="max-w-3xl flex flex-col justify-center animate-in fade-in slide-in-from-left-10 duration-1000 delay-300 fill-mode-both">
+
+                            <h1 className="text-[50px] leading-[55px] font-sans font-bold text-[#18448F] mb-6 tracking-tight">
+                                La Pureté engagée : <span className="text-[#8CC63F] font-sans font-bold drop-shadow-sm">Pour vous &amp; pour l'environnement.</span>
+                            </h1>
+                            
+                            <p className="text-slate-600 text-lg sm:text-xl font-light leading-relaxed max-w-xl mb-12">
+                                Parce que l'excellence doit être responsable, nous avons conçu une approche qui libère votre foyer de la dépendance aux bouteilles en plastique. Avec Bricareau, vous choisissez une hydratation d'une pureté absolue qui respecte à la fois votre santé et l'avenir de notre environnement.
+                            </p>
+
+                            <div className="flex flex-col sm:flex-row items-start gap-6">
+                                <ProMaxButton variant="primary" className="px-10 h-16 shadow-lg" onClick={() => document.getElementById('notre-engagement')?.scrollIntoView({ behavior: 'smooth' })}>
+                                    DÉCOUVRIR NOTRE ENGAGEMENT
+                                </ProMaxButton>
+                            </div>
                         </div>
                     </div>
                 </section>
 
-                {/* 2. Intro Section */}
-                <section className="py-24 bg-white">
-                    <div className="container mx-auto px-6 max-w-4xl">
-                        <div className="space-y-12 text-lg md:text-xl text-slate-500 font-light leading-relaxed">
-                            <p>
-                                L'industrie de l'eau en bouteille a de bonnes raisons de détester Bricareau. Nous bouleversons leur modèle économique obsolète qui redonne du pouvoir d'achat à nos clients tout en réduisant les déchets et l'impact environnemental.
-                            </p>
-                            <p>
-                                Alors que nous commençons à réfléchir à ce que nous voulons faire pour notre planète, il est important que nous envisagions toutes les options pour préserver les ressources naturelles et minimiser les déchets inutiles.
-                            </p>
-                            <p>
-                                Bricareau a été fondée sur le principe d'éliminer le besoin d'eau en bouteille plastique en proposant des <span className="text-[#0052ff] font-bold">solutions durables</span> pour une eau pure et savoureuse, quel que soit l'environnement. Notre priorité est d'offrir aux consommateurs une alternative viable à l'eau en bouteille, plus que jamais utile, durable et saine.
-                            </p>
-                        </div>
-                    </div>
-                </section>
-
-                {/* 3. Pillars Section */}
-                <section className="py-24 space-y-32">
-                    {/* Pillar 1 */}
-                    <div className="container mx-auto px-6 max-w-4xl">
-                        <div className="space-y-8">
-                            <div className="flex items-center gap-4 text-[#0052ff]">
-                                <Droplets className="w-10 h-10" />
-                                <div className="h-px bg-blue-100 flex-1" />
-                            </div>
-                            <h2 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tight">
-                                Réduire le gaspillage d'eau et d'énergie
-                            </h2>
-                            <p className="text-xl text-slate-500 leading-relaxed font-light">
-                                La fabrication d'une seule bouteille d'eau nécessite environ trois litres d'eau gaspillée. À cela s'ajoute une quantité considérable d'énergie pour la production de bouteilles et de canettes en plastique. Autant de gaspillage qu'il est possible d'éviter en optant pour les solutions de filtration d'eau durables de Bricareau.
-                            </p>
-                        </div>
+                {/* 2. NOTRE ENGAGEMENT: L'Immersion Sombre */}
+                <section className="relative min-h-screen py-32 flex items-center bg-slate-900 overflow-hidden" id="notre-engagement">
+                    <div className="absolute inset-0 z-0">
+                        {/* Motif abstrait / Halos */}
+                        <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-[#8CC63F]/40 rounded-full blur-[150px] animate-[pulse_10s_ease-in-out_infinite]" />
+                        <div className="absolute bottom-0 left-1/4 w-[800px] h-[800px] bg-[#18448F]/30 rounded-full blur-[150px] animate-[pulse_12s_ease-in-out_infinite_reverse]" />
+                        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-20" />
                     </div>
 
-                    {/* Pillar 2 */}
-                    <div className="container mx-auto px-6 max-w-4xl">
-                        <div className="space-y-8">
-                            <div className="flex items-center gap-4 text-emerald-500">
-                                <Zap className="w-10 h-10" />
-                                <div className="h-px bg-emerald-100 flex-1" />
-                            </div>
-                            <h2 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tight">
-                                Réduire les émissions de gaz à effet de serre
-                            </h2>
-                            <p className="text-xl text-slate-500 leading-relaxed font-light">
-                                Non seulement la production de bouteilles à usage unique engendre un gaspillage considérable d'eau et d'énergie, mais le transport et la distribution de l'eau conditionnée génèrent également une empreinte carbone inutile. Opter pour des solutions de filtration d'eau durables permet de réduire considérablement ces coûts.
+                    <div className="relative z-10 container mx-auto px-6 text-center">
+                        <span className="inline-block py-1 px-4 bg-[#18448F] text-white rounded-full font-bold tracking-[0.2em] uppercase text-xs mb-10">Notre Engagement</span>
+                        <h2 className="text-4xl md:text-7xl lg:text-8xl font-bold text-white tracking-tighter leading-tight mb-12">
+                            Redéfinir le <br />
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8CC63F] to-blue-500 italic font-light">standard écologique.</span>
+                        </h2>
+                        <div className="text-slate-300 text-xl md:text-3xl font-light leading-relaxed max-w-4xl mx-auto space-y-6">
+                            <p>
+                                Face à l'urgence environnementale, chaque décision compte. Préserver nos ressources naturelles et réduire drastiquement notre empreinte écologique n'est plus une option, mais une responsabilité collective absolue.
                             </p>
-                        </div>
-                    </div>
-
-                    {/* Pillar 3 */}
-                    <div className="container mx-auto px-6 max-w-4xl">
-                        <div className="space-y-8">
-                            <div className="flex items-center gap-4 text-orange-500">
-                                <Globe className="w-10 h-10" />
-                                <div className="h-px bg-orange-100 flex-1" />
-                            </div>
-                            <h2 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tight">
-                                Promouvoir les changements de mode de vie
-                            </h2>
-                            <p className="text-xl text-slate-500 leading-relaxed font-light">
-                                En optant pour nos solutions durables, vous donnez un véritable modèle en matière de développement durable. Vos invités, clients, amis et voisins découvriront tous les avantages d'un mode de vie plus écologique et constateront à quel point l'utilisation d'eau filtrée est simple et pratique.
+                            <p>
+                                C'est avec cette vision que Bricareau a vu le jour. Nous avons repensé le cycle de l'eau pour éradiquer définitivement les plastiques à usage unique, en concevant des systèmes de purification d'avant-garde qui garantissent une eau d'une pureté inégalée, directement à votre robinet.
                             </p>
                         </div>
                     </div>
                 </section>
 
-                {/* 4. Testimonials (Matching model) */}
-                <div className="bg-slate-50 py-32 border-y border-gray-100">
+                {/* 3. NOS PILIERS: Split Screen */}
+                <section className="py-32 bg-slate-50 relative overflow-hidden" id="nos-piliers">
+                    <div className="container mx-auto px-6 mb-24 text-center">
+                        <span className="inline-block py-1 px-4 bg-[#18448F] text-white rounded-full font-bold tracking-[0.2em] uppercase text-xs mb-6">Un Futur Plus Vert</span>
+                        <h2 className="heading-pro-max">
+                            <span className="font-bold not-italic text-[#18448F] block">Pourquoi choisir</span>
+                            <span className="font-bold text-[#8CC63F] block">le traitement durable ?</span>
+                        </h2>
+                    </div>
+
+                    <div className="max-w-7xl mx-auto space-y-32">
+                        {/* Pilier 01 */}
+                        <div className="flex flex-col lg:flex-row items-center gap-16 px-6">
+                            <div className="lg:w-1/2 space-y-6">
+                                <div className="text-5xl md:text-6xl font-light text-[#18448F]/20 mb-2">01.</div>
+                                <h3 className="text-3xl lg:text-5xl font-light text-slate-900 leading-tight">
+                                    Réduire le <span className="font-bold text-[#18448F]">gaspillage</span>
+                                </h3>
+                                <p className="text-slate-500 text-lg leading-relaxed font-light">
+                                    La fabrication d'une seule bouteille d'eau nécessite environ trois litres d'eau gaspillée, plus une quantité considérable d'énergie. Autant de gaspillage qu'il est possible d'éviter en optant pour nos solutions de filtration.
+                                </p>
+                            </div>
+                            <div className="lg:w-1/2 w-full aspect-square md:aspect-video lg:aspect-square relative rounded-[3rem] overflow-hidden shadow-2xl group">
+                                <div className="absolute inset-0 bg-[#18448F]/10 mix-blend-multiply z-10 group-hover:opacity-0 transition-opacity duration-700" />
+                                <img src={imgGaspillage} alt="Réduire le gaspillage" className="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000" />
+                            </div>
+                        </div>
+
+                        {/* Pilier 02 */}
+                        <div className="flex flex-col-reverse lg:flex-row items-center gap-16 px-6">
+                            <div className="lg:w-1/2 w-full aspect-square md:aspect-video lg:aspect-square relative rounded-[3rem] overflow-hidden shadow-2xl group">
+                                <div className="absolute inset-0 bg-[#8CC63F]/10 mix-blend-multiply z-10 group-hover:opacity-0 transition-opacity duration-700" />
+                                <img src={imgCO2} alt="Moins de CO2" className="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000" />
+                            </div>
+                            <div className="lg:w-1/2 space-y-6">
+                                <div className="text-5xl md:text-6xl font-light text-[#18448F]/20 mb-2">02.</div>
+                                <h3 className="text-3xl lg:text-5xl font-light text-slate-900 leading-tight">
+                                    Moins de <span className="font-bold text-[#8CC63F]">CO<sub>2</sub></span>
+                                </h3>
+                                <p className="text-slate-500 text-lg leading-relaxed font-light">
+                                    Non seulement la production de bouteilles à usage unique engendre un gaspillage considérable, mais le transport et la distribution génèrent également une empreinte carbone inutile.
+                                </p>
+                            </div>
+                        </div>
+
+                        {/* Pilier 03 */}
+                        <div className="flex flex-col lg:flex-row items-center gap-16 px-6">
+                            <div className="lg:w-1/2 space-y-6">
+                                <div className="text-5xl md:text-6xl font-light text-[#18448F]/20 mb-2">03.</div>
+                                <h3 className="text-3xl lg:text-5xl font-light text-slate-900 leading-tight">
+                                    Mode de vie <span className="font-bold text-[#18448F]">sain</span>
+                                </h3>
+                                <p className="text-slate-500 text-lg leading-relaxed font-light">
+                                    En optant pour nos solutions durables, vous donnez un véritable modèle en matière de développement durable. Découvrez à quel point l'utilisation d'eau filtrée est simple et pratique.
+                                </p>
+                            </div>
+                            <div className="lg:w-1/2 w-full aspect-square md:aspect-video lg:aspect-square relative rounded-[3rem] overflow-hidden shadow-2xl group">
+                                <div className="absolute inset-0 bg-[#18448F]/10 mix-blend-multiply z-10 group-hover:opacity-0 transition-opacity duration-700" />
+                                <img src={imgLifestyle} alt="Mode de vie sain" className="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000" />
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* 4. CTA: Éditorial Aligné à Droite avec Image Full Width (Dark Mode) */}
+                <section className="relative overflow-hidden min-h-[80vh] flex items-center py-32">
+                    {/* Background Image Full Width */}
+                    <div className="absolute inset-0 z-0">
+                        <img src={imgMovement} alt="Durabilité Bricareau" className="w-full h-full object-cover object-center" />
+                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-slate-900/60 to-slate-900/95" />
+                    </div>
+                    
+                    <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-12 relative z-10">
+                        <div className="md:col-span-6 md:col-start-7 space-y-10 md:pl-12">
+
+                            <h2 className="text-5xl md:text-7xl font-bold text-white leading-tight">
+                                Rejoignez <br /><span className="text-[#8CC63F] italic font-light">le mouvement.</span>
+                            </h2>
+                            <p className="text-slate-300 text-lg max-w-xl leading-relaxed">
+                                Rejoignez les milliers de Québécois qui ont dit non aux bouteilles en plastique. Nos experts en durabilité sont à votre disposition pour vous conseiller sur les meilleures pratiques de gestion de l'eau.
+                            </p>
+                            <div className="flex flex-col sm:flex-row gap-6 items-center">
+                                <ProMaxButton variant="white" className="px-12 h-16 shadow-[0_0_40px_rgba(255,255,255,0.2)] text-[#18448F] font-bold" onClick={() => navigate("/consultation")}>PASSER AU DURABLE</ProMaxButton>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* 5. Testimonials */}
+                <div className="bg-slate-50 py-32 border-t border-slate-200">
                     <TestimonialsSection 
                         filterProduct="/"
                         limit={6}
                         title={
                             <div className="text-center space-y-3 mb-16 px-6">
-                                <span className="italic font-light text-[#0052ff] block text-2xl md:text-3xl">L'engagement durable récompensé.</span>
-                                <span className="font-bold text-[#18448F] block text-4xl md:text-6xl tracking-tighter uppercase leading-none">VOS AVIS NOUS MOTIVENT</span>
+                                <span className="inline-block py-1 px-4 bg-[#18448F] text-white rounded-full font-bold tracking-[0.2em] uppercase text-xs mb-4">Avis Clients</span>
+                                <h2 className="heading-pro-max">
+                                    <span className="font-bold not-italic text-[#18448F] block">L'engagement durable</span>
+                                    <span className="font-bold text-[#8CC63F] block">récompensé.</span>
+                                </h2>
                             </div>
                         }
                     />
                 </div>
 
-                {/* 5. Wave Cinematic Transition */}
-                <section className="relative h-[40vh] overflow-hidden flex items-end">
-                    <img 
-                        src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=2000&auto=format&fit=crop" 
-                        alt="Teal Ocean" 
-                        className="absolute inset-0 w-full h-full object-cover"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent" />
-                </section>
-
-                {/* 6. Solution Finder Form */}
-                <section className="py-32 bg-slate-900 text-white">
-                    <div className="container mx-auto px-6 max-w-5xl text-center space-y-16">
-                        <div className="space-y-4">
-                            <h2 className="text-4xl md:text-6xl font-black tracking-tighter uppercase">Passer au durable</h2>
-                            <p className="text-slate-400 text-lg md:text-xl font-light">
-                                Rejoignez les milliers de Québécois qui ont dit non aux bouteilles plastique.
-                            </p>
-                        </div>
-                        
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-end">
-                            <div className="space-y-3 text-left">
-                                <label className="text-[10px] font-black uppercase tracking-widest text-slate-500">Secteur d'activité</label>
-                                <select className="w-full h-14 bg-white/5 border border-white/10 rounded-sm px-6 text-sm focus:ring-2 focus:ring-[#0052ff] outline-none transition-all">
-                                    <option className="bg-slate-900">Résidentiel</option>
-                                    <option className="bg-slate-900">Bureaux</option>
-                                    <option className="bg-slate-900">Restauration</option>
-                                    <option className="bg-slate-900">Industriel</option>
-                                </select>
-                            </div>
-                            <div className="space-y-3 text-left">
-                                <label className="text-[10px] font-black uppercase tracking-widest text-slate-500">Votre objectif principal</label>
-                                <select className="w-full h-14 bg-white/5 border border-white/10 rounded-sm px-6 text-sm focus:ring-2 focus:ring-[#0052ff] outline-none transition-all">
-                                    <option className="bg-slate-900">Réduire le plastique</option>
-                                    <option className="bg-slate-900">Économiser de l'argent</option>
-                                    <option className="bg-slate-900">Meilleur goût de l'eau</option>
-                                </select>
-                            </div>
-                            <Button 
-                                className="bg-[#0052ff] text-white hover:bg-blue-600 h-14 rounded-full font-black uppercase tracking-widest text-[11px] transition-all"
-                                onClick={() => navigate("/contact")}
-                            >
-                                DEMANDEZ UNE ÉTUDE D'IMPACT
-                            </Button>
-                        </div>
-                    </div>
-                </section>
-
-                {/* 7. Contact CTA */}
-                <section className="py-24 bg-white text-center">
-                    <div className="container mx-auto px-6 max-w-4xl space-y-8">
-                        <Leaf className="w-16 h-16 text-[#0052ff] mx-auto mb-4 animate-bounce" />
-                        <h3 className="text-3xl font-bold text-slate-900 tracking-tight">Ensemble pour un futur plus vert.</h3>
-                        <p className="text-slate-500 text-lg">Nos experts en durabilité sont à votre disposition pour vous conseiller sur les meilleures pratiques de gestion de l'eau.</p>
-                        <div className="flex flex-col md:flex-row items-center justify-center gap-6">
-                            <a href="tel:18552649328" className="text-2xl font-black text-[#0052ff] hover:scale-105 transition-transform flex items-center gap-3">
-                                <Phone className="w-6 h-6" />
-                                (855) 264-9328
-                            </a>
-                        </div>
-                    </div>
-                </section>
             </main>
 
             <Footer />
