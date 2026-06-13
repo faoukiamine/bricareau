@@ -124,7 +124,7 @@ const FontainesDeauModernes = () => {
                 <Hero 
                     className="min-h-[100vh]"
                     image={heroFountains}
-                    highlightedTitle={<span className="font-bold not-italic">Optez pour <span className="text-[#8CC63F] drop-shadow-[0_4px_8px_rgba(0,0,0,0.9)]">une hydratation</span> </span>}
+                    highlightedTitle={<span className="font-bold not-italic">Optez pour <span className="text-[#8CC63F]">une hydratation</span> </span>}
                     mainTitle={<span className="font-bold not-italic">intelligente et durable.</span>}
                     subtitle="Offrez à vos collaborateurs une eau filtrée d'exception, fraîche, chaude ou pétillante, directement raccordée à votre réseau. Une solution écologique, économique et sans logistique de bonbonnes."
                     ctaText="OBTENIR MON ESSAI GRATUIT"
@@ -652,10 +652,21 @@ const FontainesDeauModernes = () => {
                         limit={6}
                         title={
                             <div className="text-center space-y-3 mb-16">
-                                <span className="text-[10px] font-black text-blue-500 uppercase tracking-[0.5em] block mb-4">ILS NOUS FONT CONFIANCE</span>
-                                <h2 className="heading-pro-max text-center">
-                                    <span className="italic font-light text-[#18448F]">Le choix des </span>
-                                    <span className="font-bold text-[#18448F]">entreprises leaders.</span>
+                                <div className="inline-flex items-center justify-center gap-4 mb-4">
+                                    <span className="text-[10px] font-black text-slate-500 uppercase tracking-[0.4em]">ILS NOUS FONT CONFIANCE</span>
+                                </div>
+                                <h2 
+                                    className="text-4xl md:text-5xl font-bold tracking-tight text-slate-900 mb-8 mx-auto"
+                                    style={{
+                                        fontFamily: 'ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                                        fontStyle: 'normal',
+                                        fontWeight: 700,
+                                        fontSize: '48px',
+                                        lineHeight: '52px'
+                                    }}
+                                >
+                                    <span className="block text-blue-600">Le choix des</span>
+                                    <span className="block text-[#8CC63F]">entreprises leaders.</span>
                                 </h2>
                             </div>
                         }
