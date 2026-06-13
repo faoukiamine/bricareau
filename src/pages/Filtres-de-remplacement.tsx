@@ -190,7 +190,7 @@ const FiltresDeRemplacement = () => {
                                         {/* Details Button */}
                                         <div className="pt-4 border-t border-slate-100 flex items-center justify-between">
                                             <NavLink 
-                                                to="/contact" 
+                                                to="/contact-form" 
                                                 className="inline-flex items-center gap-2 text-[10px] font-black text-slate-800 uppercase tracking-widest hover:text-[#18448F] transition-colors group"
                                             >
                                                 Demander un prix <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform text-[#18448F]" />
