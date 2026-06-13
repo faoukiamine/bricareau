@@ -34,7 +34,7 @@ import engineeringHeroImg from "@/assets/2148836794.jpg";
 import protectionConduitsImg from "@/assets/70609919.jpg";
 import conformiteSanitaireImg from "@/assets/initial.jpg";
 import economiesEnergieImg from "@/assets/2149281314.jpg";
-import technicianInspectionImg from "@/assets/10271.jpg";
+import technicianInspectionImg from "@/assets/2149394950.jpg";
 import reverseOsmosisSkidImg from "@/assets/144d1310-23fc-4cbd-92df-81d17d7a393c.jpg";
 import filtrationSkidImg from "@/assets/7kbp.png";
 import elkayBottleFillerImg from "@/assets/elkayv2-LZS8WSLK_image_vignette.webp";
@@ -147,12 +147,7 @@ const SystemesCentralises = () => {
                         </div>
 
                         <div className="relative max-w-6xl mx-auto">
-                            {/* Vertical text on the left */}
-                            <div className="absolute -left-16 top-1/2 -translate-y-1/2 hidden xl:block">
-                                <span className="inline-block [writing-mode:vertical-lr] rotate-180 text-[10px] font-black uppercase tracking-[0.4em] text-slate-400 h-fit">
-                                    SOLUTIONS IMMOBILIÈRES
-                                </span>
-                            </div>
+
 
                             <div className="flex flex-col lg:flex-row items-center gap-0 relative">
                                 {/* Left: Benefits Accordion in a Card */}
@@ -343,17 +338,17 @@ const SystemesCentralises = () => {
                 </div>
 
                 {/* SECTION 7: PREMIUM CTA SECTION */}
-                <section className="py-32 bg-[#18448F] relative overflow-hidden text-center">
+                <section className="py-32 bg-slate-900 relative overflow-hidden text-center">
                     <div className="absolute inset-0 bg-radial-gradient opacity-20" />
                     
                     {/* Background Image with Overlay */}
-                    <div className="absolute inset-0 z-0 opacity-25">
+                    <div className="absolute inset-0 z-0 opacity-40">
                         <img
                             src={technicianInspectionImg}
                             alt="Technicien inspectant les systèmes de filtration du bâtiment - Solution Bricareau"
-                            className="w-full h-full object-cover grayscale brightness-110"
+                            className="w-full h-full object-cover brightness-110"
                         />
-                        <div className="absolute inset-0 bg-[#18448F]/30 backdrop-blur-sm" />
+                        <div className="absolute inset-0 bg-slate-900/30 backdrop-blur-[2px]" />
                     </div>
 
                     <div className="container mx-auto px-6 relative z-10">
