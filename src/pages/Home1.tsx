@@ -175,11 +175,11 @@ const Home1 = () => {
                 <div className="absolute inset-0 w-full h-full opacity-40 lg:opacity-100">
                     {/* Mobile Gradient */}
                     <div className="absolute inset-0 bg-gradient-to-t from-white via-white/90 to-transparent z-10 lg:hidden"></div>
-                    {/* Desktop Gradient: 1/3 solid white, fading to transparent */}
-                    <div className="absolute inset-0 bg-[linear-gradient(to_right,white_0%,white_33.33%,rgba(255,255,255,0)_85%)] z-10 hidden lg:block"></div>
+                    {/* Desktop Gradient: 1/8 solid white, fading to transparent */}
+                    <div className="absolute inset-0 bg-[linear-gradient(to_right,white_0%,white_12.5%,rgba(255,255,255,0)_100%)] z-10 hidden lg:block"></div>
                     
-                    {/* Container d'image réduit à 80% pour ne pas perdre le contenu sous le blanc */}
-                    <div className="absolute right-0 top-0 w-full lg:w-[80%] h-full">
+                    {/* Container d'image sur toute la largeur */}
+                    <div className="absolute right-0 top-0 w-full h-full">
                         {slides.map((slide, index) => (
                             <img 
                                 key={index}

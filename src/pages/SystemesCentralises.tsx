@@ -44,10 +44,18 @@ import constructionImg from "@/assets/2148269294.jpg";
 
 const SystemesCentralises = () => {
     const [activeAdvantageImage, setActiveAdvantageImage] = useState(protectionConduitsImg);
+    const [currentIndustryIndex, setCurrentIndustryIndex] = useState(0);
 
     useEffect(() => {
         document.title = "Systèmes de Filtration Centralisés pour Bâtiments | Bricareau";
         window.scrollTo(0, 0);
+    }, []);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentIndustryIndex((prev) => (prev + 1) % 3);
+        }, 3500);
+        return () => clearInterval(interval);
     }, []);
 
     return (
@@ -98,43 +106,25 @@ const SystemesCentralises = () => {
                                 </div>
                             </div>
 
-                            {/* Right Column: Industries Cards */}
+                            {/* Right Column: Industries Cards Slider */}
                             <div className="lg:col-span-7">
-
-                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                                    {/* Card 1 */}
-                                    <div className="group bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                                        <div className="aspect-[16/11] w-full overflow-hidden">
-                                            <img src={laundryImg} alt="Bâtiments commerciaux" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                                {[
+                                    { img: laundryImg, title: "Bâtiments commerciaux" },
+                                    { img: campusImg, title: "Campus universitaires" },
+                                    { img: constructionImg, title: "Constructions neuves" }
+                                ].map((industry, index) => (
+                                    index === currentIndustryIndex && (
+                                        <div key={index} className="w-[85%] mx-auto group relative rounded-2xl overflow-hidden shadow-lg transition-all duration-1000 animate-in fade-in slide-in-from-right-4 zoom-in-95">
+                                            <div className="aspect-[3/4] w-full overflow-hidden">
+                                                <img src={industry.img} alt={industry.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[2s]" />
+                                            </div>
+                                            <div className="absolute inset-0 bg-gradient-to-t from-[#18448F]/90 via-[#18448F]/20 to-transparent flex flex-col justify-end p-8">
+                                                <h3 className="text-white font-bold text-2xl md:text-3xl mb-3 drop-shadow-lg">{industry.title}</h3>
+                                                <div className="w-16 h-1.5 bg-[#8CC63F] rounded-full shadow-sm"></div>
+                                            </div>
                                         </div>
-                                        <div className="p-5">
-                                            <h3 className="text-[#18448F] font-light text-lg mb-2">Bâtiments commerciaux</h3>
-                                            <div className="w-8 h-1 bg-blue-500 rounded-full transition-all duration-300 group-hover:w-16"></div>
-                                        </div>
-                                    </div>
-                                    {/* Card 2 */}
-                                    <div className="group bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                                        <div className="aspect-[16/11] w-full overflow-hidden">
-                                            <img src={campusImg} alt="Campus universitaires" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                                        </div>
-                                        <div className="p-5">
-                                            <h3 className="text-[#18448F] font-light text-lg mb-2">Campus universitaires</h3>
-                                            <div className="w-8 h-1 bg-blue-500 rounded-full transition-all duration-300 group-hover:w-16"></div>
-                                        </div>
-                                    </div>
-                                    {/* Card 3 - Espace vide */}
-                                    <div className="hidden sm:block pointer-events-none"></div>
-                                    {/* Card 4 */}
-                                    <div className="group bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                                        <div className="aspect-[16/11] w-full overflow-hidden">
-                                            <img src={constructionImg} alt="Constructions neuves" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                                        </div>
-                                        <div className="p-5">
-                                            <h3 className="text-[#18448F] font-light text-lg mb-2">Constructions neuves</h3>
-                                            <div className="w-8 h-1 bg-blue-500 rounded-full transition-all duration-300 group-hover:w-16"></div>
-                                        </div>
-                                    </div>
-                                </div>
+                                    )
+                                ))}
                             </div>
                         </div>
                     </div>
@@ -271,7 +261,7 @@ const SystemesCentralises = () => {
                                     <span className="inline-block px-3 py-1 bg-[#18448F] text-white rounded-full text-[9px] font-black uppercase tracking-wider">
                                         Remplissage Écoresponsable
                                     </span>
-                                    <h3 className="text-3xl font-bold text-slate-900 leading-tight">
+                                    <h3 className="text-2xl font-medium text-slate-900 leading-tight">
                                         Stations de remplissage d'eau automatiques
                                     </h3>
                                     <p className="text-slate-500 font-light text-sm leading-relaxed text-justify">
@@ -293,7 +283,7 @@ const SystemesCentralises = () => {
                                     <span className="inline-block px-3 py-1 bg-[#18448F] text-white rounded-full text-[9px] font-black uppercase tracking-wider">
                                         Conception & Planification
                                     </span>
-                                    <h3 className="text-3xl font-bold text-slate-900 leading-tight">
+                                    <h3 className="text-2xl font-medium text-slate-900 leading-tight">
                                         Ingénierie & Solutions sur mesure
                                     </h3>
                                     <p className="text-slate-500 font-light text-sm leading-relaxed text-justify">
@@ -315,7 +305,7 @@ const SystemesCentralises = () => {
                                     <span className="inline-block px-3 py-1 bg-[#18448F] text-white rounded-full text-[9px] font-black uppercase tracking-wider">
                                         Disponibilité & Opérabilité
                                     </span>
-                                    <h3 className="text-3xl font-bold text-slate-900 leading-tight">
+                                    <h3 className="text-2xl font-medium text-slate-900 leading-tight">
                                         Maintenance & Support technique
                                     </h3>
                                     <p className="text-slate-500 font-light text-sm leading-relaxed text-justify">

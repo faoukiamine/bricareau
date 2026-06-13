@@ -57,9 +57,9 @@ const Industriel = () => {
                         {/* Mobile Gradient */}
                         <div className="absolute inset-0 bg-gradient-to-br from-white/80 via-white/40 to-transparent z-10 lg:hidden"></div>
                         {/* Desktop Gradient: 1/3 solid white, fading to transparent */}
-                        <div className="absolute inset-0 bg-[linear-gradient(to_right,white_0%,white_33.33%,rgba(255,255,255,0)_85%)] z-10 hidden lg:block"></div>
+                        <div className="absolute inset-0 bg-[linear-gradient(to_right,white_0%,white_12.5%,rgba(255,255,255,0)_100%)] z-10 hidden lg:block"></div>
                         
-                        <div className="absolute right-0 top-0 w-full lg:w-[80%] h-full">
+                        <div className="absolute right-0 top-0 w-full h-full">
                             <img 
                                 src={heroImg} 
                                 alt="Solutions Industrielles Bricareau" 
