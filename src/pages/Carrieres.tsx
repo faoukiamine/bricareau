@@ -7,11 +7,11 @@ import { ProMaxButton } from "@/components/ui/ProMaxButton";
 import { MapPin, Briefcase, ArrowRight } from "lucide-react";
 
 // Assets
-import heroImg from "@/assets/2241.jpg"; 
+import heroImg from "@/assets/2148192458.jpg"; 
 import imgTeam from "@/assets/2148826999.jpg"; 
-import imgFormation from "@/assets/cae3c0a4-5b4d-4b0e-8bc3-3550a714f7bb.jpg";
+import imgFormation from "@/assets/2243.jpg";
 import imgImpact from "@/assets/2232.jpg";
-import imgCTA from "@/assets/2148858959.jpg";
+import imgCTA from "@/assets/2149008937.jpg";
 
 const jobs = [
     {
