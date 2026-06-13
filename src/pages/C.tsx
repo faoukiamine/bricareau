@@ -199,7 +199,7 @@ const C = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
               {[
                 { 
                   title: "PFAS 'Polluants Éternels'", 
@@ -240,14 +240,13 @@ const C = () => {
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     <div className="absolute top-4 left-4 z-20">
                       <div className="bg-white/90 backdrop-blur-xl px-4 py-1.5 rounded-full flex items-center gap-2 shadow-sm">
-                        {item.icon}
                         <span className="text-[10px] font-black text-slate-900 uppercase tracking-widest">{item.badge}</span>
                       </div>
                     </div>
                   </div>
                   <div className="px-4 pb-4 space-y-4">
                     <div className="space-y-1">
-                      <span className="text-[10px] font-black text-red-600 uppercase tracking-widest">{item.threat}</span>
+                      <span className="text-[10px] font-black text-[#8CC63F] uppercase tracking-widest">{item.threat}</span>
                       <h3 className="text-xl font-bold text-[#18448F] leading-tight group-hover:text-blue-600 transition-colors">{item.title}</h3>
                     </div>
                     <p className="text-slate-500 text-sm leading-relaxed font-light text-justify">{item.desc}</p>
@@ -387,98 +386,148 @@ const C = () => {
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 max-w-7xl mx-auto">
-                        {[
-                            { 
-                                title: "Cristal Pro I", 
-                                desc: "La première ligne de défense pour votre eau. Ce filtre à sédiments haute performance élimine efficacement le sable, la rouille et les particules en suspension.", 
-                                img: essentialImg_filtration, 
-                                badge: "Sédiments", 
-                                color: "bg-blue-600",
-                                features: ["Filtration sédiments 5µ", "Élimine sable et rouille", "Installation ultra-simple"]
-                            },
-                            { 
-                                title: "Cristal Pro II", 
-                                desc: "La combinaison parfaite pour une eau saine. Ce système duo associe la filtration des sédiments à un filtre charbon actif premium, éliminant chlore et goûts désagréables.", 
-                                img: plusROImg_filtration, 
-                                badge: "Duo Pur", 
-                                color: "bg-emerald-600",
-                                features: ["Duo Sédiments + Charbon", "Élimine le goût de chlore", "Cartouches haute capacité"]
-                            },
-                            { 
-                                title: "Cristal Pro III", 
-                                desc: "La technologie d'ultrafiltration avancée. Ce système offre une purification microscopique supérieure, filtrant virus et bactéries tout en conservant les minéraux.", 
-                                img: eliteROImg_filtration, 
-                                badge: "Ultrafiltration", 
-                                color: "bg-amber-600",
-                                features: ["Ultrafiltration 0.01 micron", "Barrière microbiologique", "Conserve les minéraux"]
-                            },
-                            {
-                                title: "Vectapure NX",
-                                desc: "Un système à 4 étapes éprouvé, ultra-compact et efficace pour les budgets maîtrisés. Idéal pour les appartements et petits espaces.",
-                                img: vectapureROImg,
-                                badge: "Série NX",
-                                color: "bg-blue-600",
-                                features: ["4 étapes de filtration", "Membrane 75 GPD", "Changement de filtres rapide"]
-                            },
-                            {
-                                title: "Série Essentiel",
-                                desc: "Notre best-seller à 6 étapes avec polissage final pour une eau d'une douceur incomparable. Le choix numéro 1 des familles québécoises.",
-                                img: drinkingWaterImg,
-                                badge: "Populaire",
-                                color: "bg-emerald-600",
-                                features: ["6 étapes complètes", "Production 75 GPD", "Eau minérale balancée"]
-                            },
-                            {
-                                title: "Sérénité Direct-Flow",
-                                desc: "Débit instantané 600 GPD. Pas de réservoir encombrant, eau fraîche en continu à volonté. Technologie Direct-Flow sans stagnation.",
-                                img: freezelifeROImg,
-                                badge: "Vitesse XXL",
-                                color: "bg-amber-600",
-                                features: ["5 étapes Direct-Flow", "600 GPD (2L/min)", "Format ultra-compact"]
-                            }
-                        ].map((product, i) => (
-                            <div
-                                key={i}
-                                className="group bg-white rounded-[3rem] p-8 border border-slate-100 shadow-[0_20px_50px_rgba(0,0,0,0.03)] hover:shadow-[0_45px_100px_rgba(0,0,0,0.1)] transition-all duration-700 hover:-translate-y-2 flex flex-col h-full cursor-pointer"
-                                onClick={() => navigate("/contact")}
+                    {/* Carousel layout container */}
+                    <div className="w-full flex flex-col select-none overflow-hidden">
+                        <div className="w-full max-w-7xl relative group px-4 lg:px-12 mb-16 mx-auto">
+                            {/* Left Navigation Arrow */}
+                            <button 
+                                onClick={() => {
+                                    const el = document.getElementById("c-systemes-slider-track");
+                                    if (el) {
+                                        const cardWidth = el.firstElementChild ? el.firstElementChild.clientWidth + 24 : 360;
+                                        if (el.scrollLeft <= 15) {
+                                            const maxScrollLeft = el.scrollWidth - el.clientWidth;
+                                            el.scrollTo({ left: maxScrollLeft, behavior: "smooth" });
+                                        } else {
+                                            el.scrollBy({ left: -cardWidth, behavior: "smooth" });
+                                        }
+                                    }
+                                }}
+                                className="absolute left-0 lg:-left-2 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-slate-900 hover:bg-[#18448F] text-white flex items-center justify-center shadow-lg transition-all hover:scale-110 active:scale-95"
+                                aria-label="Précédent"
                             >
-                                <div className="w-full aspect-square bg-slate-50/50 rounded-[2.5rem] mb-8 overflow-hidden relative p-8 flex items-center justify-center">
-                                    <img
-                                        src={product.img}
-                                        alt={product.title}
-                                        className="max-h-full object-contain mix-blend-multiply group-hover:scale-110 transition-transform duration-[2s]"
-                                    />
-                                    <div className="absolute top-4 right-4">
-                                        <div className={cn("px-4 py-1.5 rounded-full shadow-lg backdrop-blur-sm", product.color)}>
-                                            <span className="text-[9px] font-black uppercase tracking-[0.2em] text-white italic">{product.badge}</span>
+                                <ChevronLeft className="w-5 h-5" />
+                            </button>
+
+                            {/* Right Navigation Arrow */}
+                            <button 
+                                onClick={() => {
+                                    const el = document.getElementById("c-systemes-slider-track");
+                                    if (el) {
+                                        const cardWidth = el.firstElementChild ? el.firstElementChild.clientWidth + 24 : 360;
+                                        const maxScrollLeft = el.scrollWidth - el.clientWidth;
+                                        if (el.scrollLeft >= maxScrollLeft - 15) {
+                                            el.scrollTo({ left: 0, behavior: "smooth" });
+                                        } else {
+                                            el.scrollBy({ left: cardWidth, behavior: "smooth" });
+                                        }
+                                    }
+                                }}
+                                className="absolute right-0 lg:-right-2 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-slate-900 hover:bg-[#18448F] text-white flex items-center justify-center shadow-lg transition-all hover:scale-110 active:scale-95"
+                                aria-label="Suivant"
+                            >
+                                <ChevronRight className="w-5 h-5" />
+                            </button>
+
+                            {/* Scroll Track */}
+                            <div 
+                                id="c-systemes-slider-track"
+                                className="flex gap-6 overflow-x-auto scroll-smooth pb-6 snap-x snap-mandatory no-scrollbar pl-0 pr-0"
+                                style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+                            >
+                                {[
+                                    { 
+                                        title: "Cristal Pro I", 
+                                        desc: "La première ligne de défense pour votre eau. Ce filtre à sédiments haute performance élimine efficacement le sable, la rouille et les particules en suspension.", 
+                                        img: essentialImg_filtration, 
+                                        badge: "Sédiments", 
+                                        color: "bg-blue-600",
+                                        features: ["Filtration sédiments 5µ", "Élimine sable et rouille", "Installation ultra-simple"]
+                                    },
+                                    { 
+                                        title: "Cristal Pro II", 
+                                        desc: "La combinaison parfaite pour une eau saine. Ce système duo associe la filtration des sédiments à un filtre charbon actif premium, éliminant chlore et goûts désagréables.", 
+                                        img: plusROImg_filtration, 
+                                        badge: "Duo Pur", 
+                                        color: "bg-emerald-600",
+                                        features: ["Duo Sédiments + Charbon", "Élimine le goût de chlore", "Cartouches haute capacité"]
+                                    },
+                                    { 
+                                        title: "Cristal Pro III", 
+                                        desc: "La technologie d'ultrafiltration avancée. Ce système offre une purification microscopique supérieure, filtrant virus et bactéries tout en conservant les minéraux.", 
+                                        img: eliteROImg_filtration, 
+                                        badge: "Ultrafiltration", 
+                                        color: "bg-amber-600",
+                                        features: ["Ultrafiltration 0.01 micron", "Barrière microbiologique", "Conserve les minéraux"]
+                                    },
+                                    {
+                                        title: "Vectapure NX",
+                                        desc: "Un système à 4 étapes éprouvé, ultra-compact et efficace pour les budgets maîtrisés. Idéal pour les appartements et petits espaces.",
+                                        img: vectapureROImg,
+                                        badge: "Série NX",
+                                        color: "bg-blue-600",
+                                        features: ["4 étapes de filtration", "Membrane 75 GPD", "Changement de filtres rapide"]
+                                    },
+                                    {
+                                        title: "Série Essentiel",
+                                        desc: "Notre best-seller à 6 étapes avec polissage final pour une eau d'une douceur incomparable. Le choix numéro 1 des familles québécoises.",
+                                        img: drinkingWaterImg,
+                                        badge: "Populaire",
+                                        color: "bg-emerald-600",
+                                        features: ["6 étapes complètes", "Production 75 GPD", "Eau minérale balancée"]
+                                    },
+                                    {
+                                        title: "Sérénité Direct-Flow",
+                                        desc: "Débit instantané 600 GPD. Pas de réservoir encombrant, eau fraîche en continu à volonté. Technologie Direct-Flow sans stagnation.",
+                                        img: freezelifeROImg,
+                                        badge: "Vitesse XXL",
+                                        color: "bg-amber-600",
+                                        features: ["5 étapes Direct-Flow", "600 GPD (2L/min)", "Format ultra-compact"]
+                                    }
+                                ].map((product, i) => (
+                                    <div
+                                        key={i}
+                                        className="w-[320px] md:w-[350px] lg:w-[calc((100%-3rem)/3)] shrink-0 group bg-white rounded-[3rem] p-8 border border-slate-100 shadow-[0_20px_50px_rgba(0,0,0,0.03)] hover:shadow-[0_45px_100px_rgba(0,0,0,0.1)] transition-all duration-700 hover:-translate-y-2 flex flex-col snap-start cursor-pointer"
+                                        onClick={() => navigate("/contact")}
+                                    >
+                                        <div className="w-full aspect-square bg-slate-50/50 rounded-[2.5rem] mb-8 overflow-hidden relative p-8 flex items-center justify-center">
+                                            <img
+                                                src={product.img}
+                                                alt={product.title}
+                                                className="max-h-full object-contain mix-blend-multiply group-hover:scale-110 transition-transform duration-[2s]"
+                                            />
+                                            <div className="absolute top-4 right-4">
+                                                <div className={cn("px-4 py-1.5 rounded-full shadow-lg backdrop-blur-sm", product.color)}>
+                                                    <span className="text-[9px] font-black uppercase tracking-[0.2em] text-white italic">{product.badge}</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="flex-grow space-y-4">
+                                            <h3 className="text-2xl font-bold text-slate-900 tracking-tight leading-tight group-hover:text-blue-600 transition-colors">
+                                                {product.title}
+                                            </h3>
+                                            <p className="text-slate-500 font-light text-sm leading-relaxed text-justify mb-6">
+                                                {product.desc}
+                                            </p>
+                                            
+                                            <div className="space-y-3 pt-4 border-t border-slate-50">
+                                                {product.features.map((f, idx) => (
+                                                    <div key={idx} className="flex items-center gap-3">
+                                                        <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
+                                                        <span className="text-xs font-medium text-slate-600">{f}</span>
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        </div>
+                                        <div className="mt-10 pt-8 border-t border-slate-50 flex items-center justify-end">
+                                            <div className="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center text-blue-600 hover:bg-blue-600 hover:text-white transition-all duration-500">
+                                                <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div className="flex-grow space-y-4">
-                                    <h3 className="text-2xl font-bold text-slate-900 tracking-tight leading-tight group-hover:text-blue-600 transition-colors">
-                                        {product.title}
-                                    </h3>
-                                    <p className="text-slate-500 font-light text-sm leading-relaxed text-justify mb-6">
-                                        {product.desc}
-                                    </p>
-                                    
-                                    <div className="space-y-3 pt-4 border-t border-slate-50">
-                                        {product.features.map((f, idx) => (
-                                            <div key={idx} className="flex items-center gap-3">
-                                                <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
-                                                <span className="text-xs font-medium text-slate-600">{f}</span>
-                                            </div>
-                                        ))}
-                                    </div>
-                                </div>
-                                <div className="mt-10 pt-8 border-t border-slate-50 flex items-center justify-end">
-                                    <div className="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center text-blue-600 hover:bg-blue-600 hover:text-white transition-all duration-500">
-                                        <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-                                    </div>
-                                </div>
+                                ))}
                             </div>
-                        ))}
+                        </div>
                     </div>
           </div>
         </section>

@@ -280,40 +280,89 @@ const FiltrationSousEvier = () => {
                                 Nos systèmes de filtration d'eau sous évier représentent la solution ultime pour transformer votre cuisine en une source de pureté inépuisable. Conçus pour s'intégrer discrètement sous votre comptoir, ces systèmes utilisent des technologies de pointe pour éliminer jusqu'à 99 % des contaminants, incluant le chlore, le plomb et les sédiments. Contrairement aux pichets filtrants, ils offrent un débit constant et une filtration beaucoup plus rigoureuse, garantissant une eau de boisson cristalline et un goût irréprochable pour vos cafés et vos repas. Avec un entretien simplifié, vous reprenez le contrôle total sur la qualité de l’eau que votre famille consomme au quotidien.
                             </p>
                         </div>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto">
-                            {[
-                                { name: "Cristal Pro I", desc: "La première ligne de défense pour votre eau. Ce filtre à sédiments haute performance élimine efficacement le sable, la rouille et les particules en suspension, en clarifiant instantanément votre eau, jour après jour, en toute simplicité.", img: essentialImg },
-                                { name: "Cristal Pro II", desc: "La combinaison parfaite pour une eau saine. Ce système duo associe la filtration des sédiments à un filtre charbon actif premium, éliminant non seulement les particules mais aussi le chlore, les COV et les goûts désagréables.", img: plusROImg },
-                                { name: "Cristal Pro III", desc: "La technologie d'ultrafiltration avancée. Ce système offre une purification microscopique supérieure, filtrant virus, bactéries et kystes tout en conservant les minéraux bénéfiques pour une eau d'une pureté absolue, rafraîchissante et inégalée.", img: eliteROImg },
-                            ].map((product, i) => (
-                                <div
-                                    key={i}
-                                    className="group bg-white rounded-3xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full cursor-pointer"
-                                    onClick={() => navigate("/contact")}
+                        {/* Carousel layout container */}
+                        <div className="w-full flex flex-col select-none overflow-hidden">
+                            <div className="w-full lg:w-[73%] relative group pl-0 mb-16 mx-auto">
+                                {/* Left Navigation Arrow */}
+                                <button 
+                                    onClick={() => {
+                                        const el = document.getElementById("systemes-slider-track");
+                                        if (el) {
+                                            const cardWidth = el.firstElementChild ? el.firstElementChild.clientWidth + 24 : 360;
+                                            if (el.scrollLeft <= 15) {
+                                                const maxScrollLeft = el.scrollWidth - el.clientWidth;
+                                                el.scrollTo({ left: maxScrollLeft, behavior: "smooth" });
+                                            } else {
+                                                el.scrollBy({ left: -cardWidth, behavior: "smooth" });
+                                            }
+                                        }
+                                    }}
+                                    className="absolute -left-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-slate-900 hover:bg-[#18448F] text-white flex items-center justify-center shadow-lg transition-all hover:scale-110 active:scale-95 opacity-0 group-hover:opacity-100 focus:opacity-100 transition-opacity duration-300"
+                                    aria-label="Précédent"
                                 >
-                                    <div className="relative h-80 overflow-hidden bg-slate-50 flex items-center justify-center p-12">
-                                        <img
-                                            src={product.img}
-                                            alt={`${product.name} - Système de filtration d'eau sous évier haute performance Bricareau`}
-                                            className="max-h-full object-contain group-hover:scale-110 transition-transform duration-700 mix-blend-multiply"
-                                        />
-                                    </div>
-                                    <div className="p-8 space-y-4 flex flex-col flex-grow border-t-2 border-transparent group-hover:border-blue-600 transition-colors">
-                                        <h3 className="card-title text-center group-hover:text-blue-600 transition-colors duration-500">
-                                            {product.name}
-                                        </h3>
-                                        <p className="body-pro-max text-slate-500 flex-grow text-justify">
-                                            {product.desc}
-                                        </p>
-                                        <div
-                                            className="inline-flex items-center gap-2 text-blue-600 font-bold text-xs tracking-widest uppercase mt-4 group-hover:underline self-end"
-                                            style={{}}
+                                    <ChevronLeft className="w-5 h-5" />
+                                </button>
+
+                                {/* Right Navigation Arrow */}
+                                <button 
+                                    onClick={() => {
+                                        const el = document.getElementById("systemes-slider-track");
+                                        if (el) {
+                                            const cardWidth = el.firstElementChild ? el.firstElementChild.clientWidth + 24 : 360;
+                                            const maxScrollLeft = el.scrollWidth - el.clientWidth;
+                                            if (el.scrollLeft >= maxScrollLeft - 15) {
+                                                el.scrollTo({ left: 0, behavior: "smooth" });
+                                            } else {
+                                                el.scrollBy({ left: cardWidth, behavior: "smooth" });
+                                            }
+                                        }
+                                    }}
+                                    className="absolute -right-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-slate-900 hover:bg-[#18448F] text-white flex items-center justify-center shadow-lg transition-all hover:scale-110 active:scale-95 opacity-0 group-hover:opacity-100 focus:opacity-100 transition-opacity duration-300"
+                                    aria-label="Suivant"
+                                >
+                                    <ChevronRight className="w-5 h-5" />
+                                </button>
+
+                                {/* Scroll Track */}
+                                <div 
+                                    id="systemes-slider-track"
+                                    className="flex gap-6 overflow-x-auto scroll-smooth pb-6 snap-x snap-mandatory no-scrollbar pl-0 pr-12"
+                                    style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+                                >
+                                    {[
+                                        { name: "Cristal Pro I", desc: "La première ligne de défense pour votre eau. Ce filtre à sédiments haute performance élimine efficacement le sable, la rouille et les particules en suspension, en clarifiant instantanément votre eau, jour après jour, en toute simplicité.", img: essentialImg },
+                                        { name: "Cristal Pro II", desc: "La combinaison parfaite pour une eau saine. Ce système duo associe la filtration des sédiments à un filtre charbon actif premium, éliminant non seulement les particules mais aussi le chlore, les COV et les goûts désagréables.", img: plusROImg },
+                                        { name: "Cristal Pro III", desc: "La technologie d'ultrafiltration avancée. Ce système offre une purification microscopique supérieure, filtrant virus, bactéries et kystes tout en conservant les minéraux bénéfiques pour une eau d'une pureté absolue, rafraîchissante et inégalée.", img: eliteROImg },
+                                    ].map((product, i) => (
+                                        <div 
+                                            key={i} 
+                                            className="w-[280px] md:w-[320px] lg:w-[calc((100%-4.5rem)/3.5)] shrink-0 bg-white border border-slate-100 rounded-[2rem] p-6 shadow-[0_15px_40px_rgba(0,0,0,0.02)] flex flex-col h-[520px] snap-start hover:shadow-md transition-shadow cursor-pointer"
+                                            onClick={() => navigate("/contact")}
                                         >
-                                            <ArrowRight className="h-6 w-6 transform group-hover:translate-x-1 transition-transform" />
+                                            <div className="h-[240px] bg-slate-50 rounded-2xl p-6 flex items-center justify-center mb-6 overflow-hidden border border-slate-100/50">
+                                                <img 
+                                                    src={product.img} 
+                                                    alt={product.name} 
+                                                    className="max-h-full object-contain hover:scale-105 transition-transform duration-700 mix-blend-multiply" 
+                                                />
+                                            </div>
+
+                                            <div className="space-y-3 flex-grow">
+                                                <h4 className="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors">{product.name}</h4>
+                                                <p className="text-slate-500 text-xs font-light leading-relaxed text-justify line-clamp-6">
+                                                    {product.desc}
+                                                </p>
+                                            </div>
+
+                                            <div className="pt-4 border-t border-slate-100 flex items-center justify-between mt-auto">
+                                                <span className="inline-flex items-center gap-2 text-[10px] font-black text-slate-800 uppercase tracking-widest group-hover:text-[#18448F] transition-colors">
+                                                    Découvrir <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform text-[#18448F]" />
+                                                </span>
+                                            </div>
                                         </div>
-                                    </div>
+                                    ))}
                                 </div>
-                            ))}
+                            </div>
                         </div>
                     </div>
                 </section>
