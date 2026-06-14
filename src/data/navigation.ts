@@ -22,7 +22,8 @@ import documenticonImg from "@/assets/documentation_17862483.png";
 import contacticonImg from "@/assets/telephone_3095610.png";
 import serviceiconImg from "@/assets/services_5062832.png";
 import pfasImg from "@/assets/PFAS.jpg.jpg";
-
+import resourcesPromoImg from "@/assets/2151812357.jpg";
+import promoQuiSommesNousImg from "@/assets/8786.jpg";
 export interface MegamenuCard {
   customIcon?: string;
   svgIcon?: React.ReactNode; 
@@ -68,16 +69,16 @@ export const mainNavMenuItems: MenuItem[] = [
                         title: "Notre processus", 
                         description: "De l'analyse à l'installation, explorez notre méthodologie d'ingénierie étape par étape.", 
                         href: "/notre-processus" 
-                    },
-                    { 
-                        title: "Durabilité", 
-                        description: "Découvrez nos engagements écologiques et notre mission pour réduire l'empreinte plastique.", 
-                        href: "/durabilite" 
                     }
                 ]
             },
             {
                 items: [
+                    { 
+                        title: "Durabilité", 
+                        description: "Découvrez nos engagements écologiques et notre mission pour réduire l'empreinte plastique.", 
+                        href: "/durabilite" 
+                    },
                     { 
                         title: "Carrières", 
                         description: "Rejoignez une équipe d'experts passionnés par l'innovation et l'excellence environnementale.", 
@@ -87,11 +88,11 @@ export const mainNavMenuItems: MenuItem[] = [
             }
         ],
         promo: {
-            title: "Découvrez la différence Bricareau Water",
-            subtitle: "Nous préférons travailler en nous basant sur tous les faits. Pour commencer, planifiez une analyse d'eau complète.",
-            image: watertestImg,
-            link: "/tests-eau",
-            cta: "PLANIFIEZ UN TEST D'EAU"
+            title: "Prêt à aimer votre eau?",
+            subtitle: "Communiquez dès aujourd’hui avec l'un de nos experts en eau ou appelez-nous au 855-264-9328.",
+            image: promoQuiSommesNousImg,
+            link: "/contact-form",
+            cta: "CONTACTEZ-NOUS"
         }
     },
     {
@@ -256,7 +257,7 @@ export const mainNavMenuItems: MenuItem[] = [
         promo: {
             title: "Analyse d'eau",
             subtitle: "Une eau parfaite commence par une analyse rigoureuse.",
-            image: promoImage2,
+            image: resourcesPromoImg,
             link: "/tests-eau",
             cta: "APPRENEZ-EN DAVANTAGE SUR LES TESTS D'EAU"
         }

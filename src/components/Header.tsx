@@ -343,33 +343,34 @@ const Header = () => {
 
                     {/* Right Promo Box (MATCHING IMAGE) */}
                     {mainNavMenuItems.find(m => m.name === "Qui sommes-nous ?")?.promo && (
-                        <div className="hidden lg:flex w-[450px] bg-slate-50 rounded-sm p-10 relative overflow-hidden group/promo">
-                            <div className="relative z-10 space-y-6 max-w-[240px]">
-                                <h3 className="text-xl font-black text-slate-900 leading-tight tracking-tight">
+                        <div className="hidden lg:flex flex-col justify-center w-[450px] rounded-sm p-10 relative overflow-hidden group/promo">
+                            {/* Background Image */}
+                            <div className="absolute inset-0 w-full h-full pointer-events-none group-hover/promo:scale-110 transition-transform duration-1000">
+                                <img 
+                                    src={mainNavMenuItems.find(m => m.name === "Qui sommes-nous ?")?.promo?.image}
+                                    alt="Promo Kit"
+                                    className="w-full h-full object-cover"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-r from-[#18448F]/95 to-[#18448F]/40"></div>
+                            </div>
+                            
+                            <div className="relative z-10 space-y-6 max-w-[280px]">
+                                <h3 className="text-xl font-black text-white leading-tight tracking-tight">
                                     {mainNavMenuItems.find(m => m.name === "Qui sommes-nous ?")?.promo?.title}
                                 </h3>
-                                <p className="text-[13px] text-slate-500 font-light leading-relaxed">
+                                <p className="text-[13px] text-white/80 font-light leading-relaxed">
                                     {mainNavMenuItems.find(m => m.name === "Qui sommes-nous ?")?.promo?.subtitle}
                                 </p>
                                 <NavLink 
                                     to={mainNavMenuItems.find(m => m.name === "Qui sommes-nous ?")?.promo?.link || "#"}
-                                    className="flex items-center gap-3 text-[10px] font-black text-slate-900 uppercase tracking-widest pt-4 group-hover/promo:text-[#18448F] transition-colors"
+                                    className="flex items-center gap-3 text-[10px] font-black text-white uppercase tracking-widest pt-4 transition-colors"
                                     onClick={() => setActiveMegamenu(null)}
                                 >
                                     {mainNavMenuItems.find(m => m.name === "Qui sommes-nous ?")?.promo?.cta}
-                                    <div className="w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center bg-white group-hover/promo:bg-[#18448F] group-hover/promo:text-white transition-all">
+                                    <div className="w-8 h-8 rounded-full border border-white/30 flex items-center justify-center bg-white/10 group-hover/promo:bg-white group-hover/promo:text-[#18448F] transition-all">
                                         <ArrowRight className="w-4 h-4" />
                                     </div>
                                 </NavLink>
-                            </div>
-                            
-                            {/* Product Image on Right */}
-                            <div className="absolute right-[-20px] bottom-[-20px] w-64 h-64 pointer-events-none group-hover/promo:scale-110 transition-transform duration-700">
-                                <img 
-                                    src={mainNavMenuItems.find(m => m.name === "Qui sommes-nous ?")?.promo?.image}
-                                    alt="Promo Kit"
-                                    className="w-full h-full object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.1)]"
-                                />
                             </div>
                         </div>
                     )}
@@ -420,33 +421,34 @@ const Header = () => {
 
                     {/* Right Promo Box (MATCHING IMAGE) */}
                     {mainNavMenuItems.find(m => m.name === "Ressources")?.promo && (
-                        <div className="hidden lg:flex w-[450px] bg-slate-50 rounded-sm p-10 relative overflow-hidden group/promo">
-                            <div className="relative z-10 space-y-6 max-w-[240px]">
-                                <h3 className="text-xl font-black text-slate-900 leading-tight tracking-tight">
+                        <div className="hidden lg:flex flex-col justify-center w-[450px] rounded-sm p-10 relative overflow-hidden group/promo">
+                            {/* Background Image */}
+                            <div className="absolute inset-0 w-full h-full pointer-events-none group-hover/promo:scale-110 transition-transform duration-1000">
+                                <img 
+                                    src={mainNavMenuItems.find(m => m.name === "Ressources")?.promo?.image}
+                                    alt="Technical Resource"
+                                    className="w-full h-full object-cover"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-r from-[#18448F]/95 to-[#18448F]/40"></div>
+                            </div>
+                            
+                            <div className="relative z-10 space-y-6 max-w-[280px]">
+                                <h3 className="text-xl font-black text-white leading-tight tracking-tight">
                                     {mainNavMenuItems.find(m => m.name === "Ressources")?.promo?.title}
                                 </h3>
-                                <p className="text-[13px] text-slate-500 font-light leading-relaxed">
+                                <p className="text-[13px] text-white/80 font-light leading-relaxed">
                                     {mainNavMenuItems.find(m => m.name === "Ressources")?.promo?.subtitle}
                                 </p>
                                 <NavLink 
                                     to={mainNavMenuItems.find(m => m.name === "Ressources")?.promo?.link || "#"}
-                                    className="flex items-center gap-3 text-[10px] font-black text-slate-900 uppercase tracking-widest pt-4 group-hover/promo:text-[#0052ff] transition-colors"
+                                    className="flex items-center gap-3 text-[10px] font-black text-white uppercase tracking-widest pt-4 transition-colors"
                                     onClick={() => setActiveMegamenu(null)}
                                 >
                                     {mainNavMenuItems.find(m => m.name === "Ressources")?.promo?.cta}
-                                    <div className="w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center bg-white group-hover/promo:bg-[#0052ff] group-hover/promo:text-white transition-all">
+                                    <div className="w-8 h-8 rounded-full border border-white/30 flex items-center justify-center bg-white/10 group-hover/promo:bg-white group-hover/promo:text-[#18448F] transition-all">
                                         <ArrowRight className="w-4 h-4" />
                                     </div>
                                 </NavLink>
-                            </div>
-                            
-                            {/* Technical Product Image on Right */}
-                            <div className="absolute right-[-20px] bottom-[-20px] w-64 h-64 pointer-events-none group-hover/promo:scale-110 transition-transform duration-700">
-                                <img 
-                                    src={mainNavMenuItems.find(m => m.name === "Ressources")?.promo?.image}
-                                    alt="Technical Resource"
-                                    className="w-full h-full object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.1)]"
-                                />
                             </div>
                         </div>
                     )}
