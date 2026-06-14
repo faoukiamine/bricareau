@@ -279,7 +279,7 @@ const Home1 = () => {
                             {partners.map((partner, i) => (
                                 <span 
                                     key={i} 
-                                    className="text-blue-200/50 font-bold text-xl italic whitespace-nowrap cursor-default animate-logo-light-up"
+                                    className="font-bold text-xl italic whitespace-nowrap cursor-default animate-logo-light-up"
                                     style={{ animationDelay: `${(i * 1.25) - 30}s` }}
                                 >
                                     {partner}
@@ -291,7 +291,7 @@ const Home1 = () => {
                             {partners.map((partner, i) => (
                                 <span 
                                     key={`dup-${i}`} 
-                                    className="text-blue-200/50 font-bold text-xl italic whitespace-nowrap cursor-default animate-logo-light-up"
+                                    className="font-bold text-xl italic whitespace-nowrap cursor-default animate-logo-light-up"
                                     style={{ animationDelay: `${(i * 1.25) - 30}s` }}
                                 >
                                     {partner}
