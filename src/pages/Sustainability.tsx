@@ -122,17 +122,17 @@ const Sustainability = () => {
                                     La fabrication d'une seule bouteille d'eau nécessite environ trois litres d'eau gaspillée, plus une quantité considérable d'énergie. Autant de gaspillage qu'il est possible d'éviter en optant pour nos solutions de filtration.
                                 </p>
                             </div>
-                            <div className="lg:w-1/2 w-full aspect-square md:aspect-video lg:aspect-square relative rounded-[3rem] overflow-hidden shadow-2xl group">
+                            <div className="lg:w-1/2 w-full min-h-[500px] md:min-h-[600px] lg:min-h-0 lg:aspect-square relative rounded-[3rem] overflow-hidden shadow-2xl group">
                                 <div className="absolute inset-0 bg-[#18448F]/10 mix-blend-multiply z-10 group-hover:opacity-0 transition-opacity duration-700" />
-                                <img src={imgGaspillage} alt="Réduire le gaspillage" className="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000" />
+                                <img src={imgGaspillage} alt="Réduire le gaspillage" className="absolute inset-0 w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000" />
                             </div>
                         </div>
 
                         {/* Pilier 02 */}
                         <div className="flex flex-col-reverse lg:flex-row items-center gap-16 px-6">
-                            <div className="lg:w-1/2 w-full aspect-square md:aspect-video lg:aspect-square relative rounded-[3rem] overflow-hidden shadow-2xl group">
+                            <div className="lg:w-1/2 w-full min-h-[500px] md:min-h-[600px] lg:min-h-0 lg:aspect-square relative rounded-[3rem] overflow-hidden shadow-2xl group">
                                 <div className="absolute inset-0 bg-[#8CC63F]/10 mix-blend-multiply z-10 group-hover:opacity-0 transition-opacity duration-700" />
-                                <img src={imgCO2} alt="Moins de CO2" className="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000" />
+                                <img src={imgCO2} alt="Moins de CO2" className="absolute inset-0 w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000" />
                             </div>
                             <div className="lg:w-1/2 space-y-6">
                                 <div className="text-5xl md:text-6xl font-light text-[#18448F]/20 mb-2">02.</div>
@@ -156,16 +156,16 @@ const Sustainability = () => {
                                     En optant pour nos solutions durables, vous donnez un véritable modèle en matière de développement durable. Découvrez à quel point l'utilisation d'eau filtrée est simple et pratique.
                                 </p>
                             </div>
-                            <div className="lg:w-1/2 w-full aspect-square md:aspect-video lg:aspect-square relative rounded-[3rem] overflow-hidden shadow-2xl group">
+                            <div className="lg:w-1/2 w-full min-h-[500px] md:min-h-[600px] lg:min-h-0 lg:aspect-square relative rounded-[3rem] overflow-hidden shadow-2xl group">
                                 <div className="absolute inset-0 bg-[#18448F]/10 mix-blend-multiply z-10 group-hover:opacity-0 transition-opacity duration-700" />
-                                <img src={imgLifestyle} alt="Mode de vie sain" className="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000" />
+                                <img src={imgLifestyle} alt="Mode de vie sain" className="absolute inset-0 w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000" />
                             </div>
                         </div>
                     </div>
                 </section>
 
                 {/* 4. CTA: Éditorial Aligné à Droite avec Image Full Width (Dark Mode) */}
-                <section className="relative overflow-hidden min-h-[80vh] flex items-center py-32">
+                <section className="relative overflow-hidden min-h-[50vh] md:min-h-screen lg:min-h-[80vh] flex items-center py-16 md:py-32">
                     {/* Background Image Full Width */}
                     <div className="absolute inset-0 z-0">
                         <img src={imgMovement} alt="Durabilité Bricareau" className="w-full h-full object-cover object-center" />
@@ -173,15 +173,15 @@ const Sustainability = () => {
                     </div>
                     
                     <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-12 relative z-10">
-                        <div className="md:col-span-6 md:col-start-7 space-y-10 md:pl-12">
+                        <div className="md:col-span-10 md:col-start-2 lg:col-span-6 lg:col-start-7 space-y-8 lg:space-y-10 text-center lg:text-left md:px-0 lg:pl-12">
 
-                            <h2 className="text-5xl md:text-7xl font-bold text-white leading-tight">
+                            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
                                 Rejoignez <br /><span className="text-[#8CC63F] italic font-light">le mouvement.</span>
                             </h2>
-                            <p className="text-slate-300 text-lg max-w-xl leading-relaxed">
+                            <p className="text-slate-300 text-lg max-w-xl mx-auto lg:mx-0 leading-relaxed">
                                 Rejoignez les milliers de Québécois qui ont dit non aux bouteilles en plastique. Nos experts en durabilité sont à votre disposition pour vous conseiller sur les meilleures pratiques de gestion de l'eau.
                             </p>
-                            <div className="flex flex-col sm:flex-row gap-6 items-center">
+                            <div className="flex flex-col sm:flex-row gap-6 items-center justify-center lg:justify-start">
                                 <ProMaxButton variant="white" className="px-12 h-16 shadow-[0_0_40px_rgba(255,255,255,0.2)] text-[#18448F] font-bold" onClick={() => navigate("/consultation")}>PASSER AU DURABLE</ProMaxButton>
                             </div>
                         </div>
