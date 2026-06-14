@@ -232,6 +232,13 @@ const Bureau = () => {
                 {/* 4. AVANTAGES CORPORATIFS (PILIERS) */}
                 <section className="py-24 bg-white relative overflow-hidden">
                     <div className="container mx-auto px-6 max-w-7xl">
+                        <div className="mb-20 text-center flex flex-col items-center mx-auto">
+                            <span className="inline-block py-1 px-4 bg-[#18448F] text-white rounded-full font-bold tracking-[0.2em] uppercase text-xs mb-6">Avantages Corporatifs</span>
+                            <h2 className="heading-pro-max">
+                                <span className="font-bold not-italic text-[#18448F] block">Pourquoi adopter nos solutions</span>
+                                <span className="font-bold text-[#8CC63F] block">pour vos bureaux ?</span>
+                            </h2>
+                        </div>
                         <div className="space-y-32">
                             {/* Pilier 1 : Image Left, Text Right */}
                             <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
