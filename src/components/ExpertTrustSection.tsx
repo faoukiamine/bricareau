@@ -9,6 +9,7 @@ interface ExpertTrustSectionProps {
     buttonText?: string;
     buttonLink?: string;
     image?: string;
+    imageRight?: boolean;
 }
 
 const ExpertTrustSection = ({ 
@@ -17,11 +18,12 @@ const ExpertTrustSection = ({
     description = "Ne laissez pas l'incertitude couler de votre robinet. Chez Bricareau, nous transformons chaque analyse en une certitude scientifique pour la santé de votre foyer.",
     buttonText = "Réservez votre analyse d'eau",
     buttonLink = "/tests-eau#water-test",
-    image = expertImg
+    image = expertImg,
+    imageRight = false
 }: ExpertTrustSectionProps) => {
     return (
         <section className="bg-white relative overflow-hidden border-y border-slate-100">
-            <div className="flex flex-col lg:flex-row items-stretch min-h-[500px] lg:min-h-[750px]">
+            <div className={`flex flex-col items-stretch min-h-[500px] lg:min-h-[750px] ${imageRight ? 'lg:flex-row-reverse' : 'lg:flex-row'}`}>
                 
                 {/* Image Side - 50% width on Desktop */}
                 <div className="w-full lg:w-1/2 relative group overflow-hidden h-[400px] md:h-[550px] lg:h-auto">

@@ -440,6 +440,7 @@ const HotellerieRestauration = () => {
                         buttonText="Rentabiliser mon business"
                         buttonLink="/consultation"
                         image={hospitalityImg2}
+                        imageRight={true}
                     />
                 </div>
 
