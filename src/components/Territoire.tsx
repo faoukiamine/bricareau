@@ -26,7 +26,7 @@ const Territoire = () => {
                         <span className="text-[#8CC63F] text-xs font-bold uppercase tracking-[0.15em]">Territoire</span>
                         <div className="w-12 h-0.5 bg-[#8CC63F]"></div>
                     </div>
-                    <h2 className="text-4xl md:text-5xl font-bold mb-6 text-[#18448F]">Partout où vous avez besoin d'une <span className="text-[#8CC63F]">eau pure.</span></h2>
+                    <h2 className="text-4xl md:text-5xl font-bold mb-6 text-[#18448F]">Partout où vous avez besoin d'une <span className="text-[#8CC63F]">eau filtrée de meilleure qualité.</span></h2>
                     <p className="text-slate-500 text-lg">Nos équipes couvrent l'ensemble de la région métropolitaine pour des installations, de la maintenance et des dépannages rapides.</p>
                 </div>
 

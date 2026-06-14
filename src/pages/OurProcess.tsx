@@ -287,7 +287,7 @@ const OurProcess = () => {
                                 Sollicitez nos experts techniques pour un diagnostic approfondi et personnalisé de votre qualité d'eau. L'expertise absolue au service de votre sérénité.
                             </p>
                             <div className="flex justify-center lg:justify-start">
-                                <ProMaxButton variant="primary" className="px-12 h-16 shadow-xl text-white font-bold" onClick={() => navigate("/consultation")}>
+                                <ProMaxButton variant="primary" className="px-12 h-16 shadow-xl text-white font-bold" onClick={() => navigate("/tests-eau")}>
                                     PLANIFIEZ UNE ANALYSE d'eau
                                 </ProMaxButton>
                             </div>

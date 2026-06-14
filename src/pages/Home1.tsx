@@ -611,7 +611,7 @@ const Home1 = () => {
                             
                             <h2 className="heading-pro-max mb-8">
                                 <span className="font-bold not-italic text-[#18448F] block">Laissez-nous vous aider</span>
-                                <span className="font-bold not-italic text-[#8CC63F] block">à trouver <span className="text-[#18448F]">la solution adaptée.</span></span>
+                                <span className="font-bold not-italic text-[#18448F] block">à trouver <span className="text-[#8CC63F]">la solution adaptée.</span></span>
                             </h2>
                             
                             <p className="text-lg text-slate-600 leading-relaxed mb-10">
