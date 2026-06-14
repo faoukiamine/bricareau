@@ -46,8 +46,8 @@ const ExpertTrustSection = ({
                 </div>
 
                 {/* Content Side - Aligned with grid */}
-                <div className="w-full lg:w-1/2 flex items-center bg-slate-50/10 justify-start">
-                    <div className="w-full max-w-[700px] px-6 sm:px-12 lg:px-10 xl:px-12 py-20 lg:py-32">
+                <div className={`w-full lg:w-1/2 flex items-center bg-slate-50/10 justify-center ${imageRight ? 'lg:justify-end' : 'lg:justify-start'}`}>
+                    <div className={`w-full max-w-[640px] px-6 py-20 lg:py-32 ${imageRight ? 'lg:pr-12 xl:pr-24' : 'lg:pl-12 xl:pl-24'}`}>
                         <div className="space-y-12">
                             <div className="space-y-6">
                                 <h2 
