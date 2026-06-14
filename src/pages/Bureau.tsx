@@ -295,18 +295,6 @@ const Bureau = () => {
                     </div>
                 </section>
 
-                {/* 5. EXPERT TRUST SECTION */}
-                <div className="border-t border-slate-100">
-                    <ExpertTrustSection 
-                        title="L'expertise au service du corporatif, "
-                        highlight="la performance dans chaque goutte."
-                        description="Garantissez le bien-être de vos collaborateurs et la longévité de vos infrastructures. Chez Bricareau, nous transformons chaque analyse en un levier stratégique pour la qualité de vie au travail et l'excellence opérationnelle de votre organisation."
-                        buttonText="Demandez une consultation corporative"
-                        buttonLink="/consultation"
-                        image={corporateExpertImg}
-                    />
-                </div>
-
                 {/* 6. TESTIMONIALS */}
                 <div className="bg-slate-50 py-32 border-y border-gray-100">
                     <TestimonialsSection 
@@ -332,6 +320,18 @@ const Bureau = () => {
                                 </h2>
                             </div>
                         }
+                    />
+                </div>
+
+                {/* 5. EXPERT TRUST SECTION */}
+                <div className="border-t border-slate-100">
+                    <ExpertTrustSection 
+                        title="L'expertise au service du corporatif, "
+                        highlight="la performance dans chaque goutte."
+                        description="Garantissez le bien-être de vos collaborateurs et la longévité de vos infrastructures. Chez Bricareau, nous transformons chaque analyse en un levier stratégique pour la qualité de vie au travail et l'excellence opérationnelle de votre organisation."
+                        buttonText="Demandez une consultation corporative"
+                        buttonLink="/consultation"
+                        image={corporateExpertImg}
                     />
                 </div>
             </main>
