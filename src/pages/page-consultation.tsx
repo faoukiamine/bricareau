@@ -135,8 +135,8 @@ const PageConsultation = () => {
                     <div className="container mx-auto px-4 lg:px-6">
                         <div className="text-center mb-16 max-w-2xl mx-auto">
                             <h3 className="heading-pro-max mb-6">
-                                <span className="italic font-light text-[#18448F] block">Le parcours de</span>
-                                <span className="font-bold text-[#18448F] block">votre consultation</span>
+                                <span className="font-bold not-italic text-[#18448F] block">Le parcours de</span>
+                                <span className="font-bold text-[#8CC63F] block">votre consultation</span>
                             </h3>
                             <p className="text-slate-500 font-light">Simple, transparent et professionnel. Voici comment nous préparons votre solution.</p>
                         </div>
@@ -172,8 +172,8 @@ const PageConsultation = () => {
                 <div className="container mx-auto px-4 lg:px-6">
                     <div className="text-center mb-16 max-w-4xl mx-auto">
                         <h2 className="heading-pro-max mb-8">
-                            <span className="italic font-light text-[#18448F] block">Comment se déroule</span>
-                            <span className="font-bold text-[#18448F] block">notre consultation ?</span>
+                            <span className="font-bold not-italic text-[#18448F] block">Comment se déroule</span>
+                            <span className="font-bold text-[#8CC63F] block">notre consultation ?</span>
                         </h2>
                         <p className="text-slate-600 font-light">
                             Voici les questions les plus fréquentes concernant notre processus d'évaluation gratuite.
