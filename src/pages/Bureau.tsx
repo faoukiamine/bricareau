@@ -233,7 +233,7 @@ const Bureau = () => {
                         <div className="space-y-32">
                             {/* Pilier 1 : Image Left, Text Right */}
                             <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
-                                <div className="lg:w-1/2 relative aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
+                                <div className="lg:w-1/2 w-full min-h-[300px] md:min-h-[400px] relative aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
                                     <div className="absolute inset-0 bg-blue-900/5 mix-blend-overlay z-10" />
                                     <img src={pauseEauImg} alt="Technologie Avancée" className="absolute inset-0 w-full h-full object-cover" />
                                 </div>
@@ -277,7 +277,7 @@ const Bureau = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="lg:w-1/2 relative aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
+                                <div className="lg:w-1/2 w-full min-h-[300px] md:min-h-[400px] relative aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
                                     <img src={ecoCorporateImg} alt="Écologie et RSE" className="absolute inset-0 w-full h-full object-cover" />
                                 </div>
                             </div>
