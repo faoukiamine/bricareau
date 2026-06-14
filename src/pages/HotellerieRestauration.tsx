@@ -431,6 +431,18 @@ const HotellerieRestauration = () => {
                     </div>
                 </section>
 
+                {/* 5. EXPERT TRUST SECTION */}
+                <div className="border-t border-slate-100">
+                    <ExpertTrustSection 
+                        title="Une consultation gratuite pour "
+                        highlight="rentabiliser votre établissement."
+                        description="Découvrez comment nos systèmes de filtration peuvent réduire vos coûts opérationnels, éliminer les plastiques à usage unique et créer de nouvelles sources de revenus avec l'embouteillage sur place."
+                        buttonText="Rentabiliser mon business"
+                        buttonLink="/consultation"
+                        image={hospitalityImg2}
+                    />
+                </div>
+
             </main>
 
             <Footer />
