@@ -96,8 +96,8 @@ const ResidentialServices = () => {
                 {/* 2. EDITORIAL INTRO */}
                 <section className="relative py-24 md:py-32 bg-white overflow-hidden">
                     <div className="container mx-auto px-6 max-w-7xl">
-                        <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-center">
-                            <div className="lg:w-1/2 space-y-10">
+                        <div className="flex flex-col xl:flex-row gap-16 xl:gap-24 items-center">
+                            <div className="xl:w-1/2 space-y-10">
                                 <div className="inline-flex items-center gap-4">
                                     <span className="w-12 h-[1px] bg-slate-900" />
                                     <span className="text-[10px] font-black text-slate-500 uppercase tracking-[0.4em]">L'ESSENCE DU FOYER</span>
@@ -122,8 +122,8 @@ const ResidentialServices = () => {
                                     L'eau est le cœur de votre foyer. Que ce soit pour boire, cuisiner, ou vous laver, sa pureté a un impact direct sur votre confort quotidien et la santé de ceux que vous aimez. Ne laissez plus la qualité de votre eau au hasard.
                                 </p>
                             </div>
-                            <div className="lg:w-1/2 relative">
-                                <div className="aspect-[4/3] w-full max-w-2xl mx-auto relative group overflow-hidden rounded-2xl">
+                            <div className="xl:w-1/2 w-full relative">
+                                <div className="aspect-[4/3] min-h-[300px] md:min-h-[400px] w-full max-w-2xl mx-auto relative group overflow-hidden rounded-2xl">
                                     <div className="absolute inset-0 bg-slate-100 translate-x-4 translate-y-4 transition-transform group-hover:translate-x-2 group-hover:translate-y-2 rounded-2xl" />
                                     <img 
                                         src={familyWellbeingImg} 
@@ -184,7 +184,7 @@ const ResidentialServices = () => {
 
                             {/* Card 2: Filtration Maison (Wide) */}
                             <div 
-                                className="group relative bg-white md:col-span-2 rounded-[2rem] overflow-hidden border border-slate-100 hover:shadow-xl hover:shadow-blue-900/5 transition-all duration-500 cursor-pointer flex flex-col justify-center p-8 lg:p-12"
+                                className="group relative bg-white lg:col-span-2 rounded-[2rem] overflow-hidden border border-slate-100 hover:shadow-xl hover:shadow-blue-900/5 transition-all duration-500 cursor-pointer flex flex-col justify-center p-8 lg:p-12"
                                 onClick={() => navigate("/B")}
                             >
                                 <div className="absolute inset-0 overflow-hidden rounded-[2rem]">
@@ -238,7 +238,7 @@ const ResidentialServices = () => {
 
                             {/* Card 5: Fontaines (Square) */}
                             <div 
-                                className="group relative bg-white lg:col-span-1 rounded-[2rem] overflow-hidden border border-slate-100 hover:shadow-xl hover:shadow-blue-900/5 transition-all duration-500 cursor-pointer flex flex-col justify-end p-8"
+                                className="group relative bg-white md:col-span-2 lg:col-span-1 rounded-[2rem] overflow-hidden border border-slate-100 hover:shadow-xl hover:shadow-blue-900/5 transition-all duration-500 cursor-pointer flex flex-col justify-end p-8"
                                 onClick={() => navigate("/fontaines")}
                             >
                                 <div className="absolute inset-0 overflow-hidden rounded-[2rem]">
@@ -325,12 +325,18 @@ const ResidentialServices = () => {
 
                         <div className="space-y-32">
                             {/* Pilier 1 : Image Left, Text Right */}
-                            <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
-                                <div className="lg:w-1/2 relative aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
+                            <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-24">
+                                <div className="flex lg:hidden items-center gap-6 w-full">
+                                    <div className="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center shrink-0">
+                                        <Wallet className="w-8 h-8 text-blue-600" />
+                                    </div>
+                                    <h3 className="text-3xl font-medium tracking-tight text-slate-900">Des économies durables.</h3>
+                                </div>
+                                <div className="lg:w-1/2 w-full min-h-[300px] md:min-h-[400px] relative aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
                                     <img src={economiesImg} alt="Économies" className="absolute inset-0 w-full h-full object-cover" />
                                 </div>
                                 <div className="lg:w-1/2 w-full space-y-8">
-                                    <div className="flex items-center gap-6">
+                                    <div className="hidden lg:flex items-center gap-6">
                                         <div className="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center shrink-0">
                                             <Wallet className="w-8 h-8 text-blue-600" />
                                         </div>
@@ -350,9 +356,18 @@ const ResidentialServices = () => {
                             </div>
 
                             {/* Pilier 2 : Text Left, Image Right */}
-                            <div className="flex flex-col-reverse lg:flex-row items-center gap-16 lg:gap-24">
+                            <div className="flex flex-col lg:flex-row-reverse items-center gap-8 lg:gap-24">
+                                <div className="flex lg:hidden items-center gap-6 w-full">
+                                    <div className="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center shrink-0">
+                                        <Heart className="w-8 h-8 text-blue-600" />
+                                    </div>
+                                    <h3 className="text-3xl font-medium tracking-tight text-slate-900">Santé et bien-être.</h3>
+                                </div>
+                                <div className="lg:w-1/2 w-full min-h-[300px] md:min-h-[400px] relative aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
+                                    <img src={santeImg} alt="Santé" className="absolute inset-0 w-full h-full object-cover" />
+                                </div>
                                 <div className="lg:w-1/2 w-full space-y-8">
-                                    <div className="flex items-center gap-6">
+                                    <div className="hidden lg:flex items-center gap-6">
                                         <div className="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center shrink-0">
                                             <Heart className="w-8 h-8 text-blue-600" />
                                         </div>
@@ -369,18 +384,21 @@ const ResidentialServices = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="lg:w-1/2 relative aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
-                                    <img src={santeImg} alt="Santé" className="absolute inset-0 w-full h-full object-cover" />
-                                </div>
                             </div>
 
                             {/* Pilier 3 : Image Left, Text Right */}
-                            <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
-                                <div className="lg:w-1/2 relative aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
+                            <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-24">
+                                <div className="flex lg:hidden items-center gap-6 w-full">
+                                    <div className="w-16 h-16 rounded-full bg-[#8CC63F]/10 flex items-center justify-center shrink-0">
+                                        <Leaf className="w-8 h-8 text-[#8CC63F]" />
+                                    </div>
+                                    <h3 className="text-3xl font-medium tracking-tight text-slate-900">Un choix écologique.</h3>
+                                </div>
+                                <div className="lg:w-1/2 w-full min-h-[300px] md:min-h-[400px] relative aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
                                     <img src={fountainImg} alt="Écologie" className="absolute inset-0 w-full h-full object-cover" />
                                 </div>
                                 <div className="lg:w-1/2 w-full space-y-8">
-                                    <div className="flex items-center gap-6">
+                                    <div className="hidden lg:flex items-center gap-6">
                                         <div className="w-16 h-16 rounded-full bg-[#8CC63F]/10 flex items-center justify-center shrink-0">
                                             <Leaf className="w-8 h-8 text-[#8CC63F]" />
                                         </div>
