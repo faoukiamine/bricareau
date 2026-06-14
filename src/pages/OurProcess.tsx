@@ -272,7 +272,7 @@ const OurProcess = () => {
                 </section>
 
                 {/* 4. LE CTA (Style Durabilité) */}
-                <section className="relative overflow-hidden min-h-[80vh] flex items-center py-32">
+                <section className="relative overflow-hidden min-h-[80vh] md:min-h-screen lg:min-h-[80vh] flex items-center py-32">
                     {/* Background Image Full Width */}
                     <div className="absolute inset-0 z-0">
                         <img src={ctaImg} alt="Contactez Bricareau" className="w-full h-full object-cover object-center" />
@@ -280,14 +280,14 @@ const OurProcess = () => {
                     </div>
                     
                     <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-12 relative z-10">
-                        <div className="md:col-span-6 md:col-start-7 space-y-10 md:pl-12">
-                            <h2 className="text-[50px] leading-[55px] font-sans font-bold text-[#18448F] mb-6 tracking-tight">
+                        <div className="md:col-span-10 md:col-start-2 lg:col-span-6 lg:col-start-7 space-y-8 lg:space-y-10 text-center lg:text-left md:px-0 lg:pl-12">
+                            <h2 className="text-[50px] leading-[55px] font-sans font-bold text-[#18448F] mb-6 tracking-tight mx-auto lg:mx-0">
                                 Passez à l'ultime <br /><span className="text-[#8CC63F] font-sans font-bold drop-shadow-sm">standard de pureté.</span>
                             </h2>
-                            <p className="text-slate-600 text-lg max-w-xl leading-relaxed">
+                            <p className="text-slate-600 text-lg max-w-xl mx-auto lg:mx-0 leading-relaxed">
                                 Sollicitez nos experts techniques pour un diagnostic approfondi et personnalisé de votre qualité d'eau. L'expertise absolue au service de votre sérénité.
                             </p>
-                            <div className="flex flex-col sm:flex-row gap-6 items-center">
+                            <div className="flex justify-center lg:justify-start">
                                 <ProMaxButton variant="primary" className="px-12 h-16 shadow-xl text-white font-bold" onClick={() => navigate("/consultation")}>
                                     PLANIFIEZ UNE ANALYSE d'eau
                                 </ProMaxButton>
