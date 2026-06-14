@@ -874,25 +874,7 @@ const Fontaines = () => {
                 </section>
             </main>
             
-            {/* Floating Sticky CTA - Phase III Conversion Focus */}
-            <div className="hidden md:block fixed bottom-8 right-8 z-[100] animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-[3s] pointer-events-none">
-              <div className="pointer-events-auto group/sticky relative">
-                <div className="absolute inset-0 border border-[#18448F] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover/sticky:-translate-x-[3px] group-hover/sticky:translate-y-[3px]"></div>
-                <Button
-                  asChild
-                  className="relative bg-white hover:bg-white text-[#18448F] rounded-[2rem] h-20 px-8 transition-all duration-300 shadow-2xl border-none"
-                >
-                  <a href="/consultation" className="flex items-center gap-4">
-                    <span className="font-black text-[11px] uppercase tracking-widest leading-tight text-center">
-                      Réservez votre <br />consultation gratuite
-                    </span>
-                    <div className="w-10 h-10 bg-[#18448F] rounded-full flex items-center justify-center text-white group-hover/sticky:rotate-[360deg] transition-transform duration-700 shadow-lg shadow-blue-200 shrink-0">
-                      <ArrowRight className="w-5 h-5" />
-                    </div>
-                  </a>
-                </Button>
-              </div>
-            </div>
+
 
             <Footer />
         </div>

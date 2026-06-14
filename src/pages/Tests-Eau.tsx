@@ -566,24 +566,7 @@ const TestsEauPage = () => {
           <WaterTestFormSection id="water-test" />
         </section>
 
-            <div className="hidden md:block fixed bottom-8 right-8 z-[100] animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-[3s] pointer-events-none">
-              <div className="pointer-events-auto">
-                <ProMaxButton
-                  asChild
-                  variant="white"
-                  className="h-20 shadow-2xl"
-                >
-                  <a href="/consultation" className="flex items-center gap-4 animate-bounce" style={{ animationDuration: '3s' }}>
-                    <span className="font-black text-xs uppercase tracking-[0.2em] text-[#18448F] whitespace-nowrap text-center leading-tight">
-                      Réservez votre <br />consultation gratuite
-                    </span>
-                    <div className="w-10 h-10 bg-[#18448F] rounded-full flex items-center justify-center text-white shadow-lg shadow-blue-200 transition-transform duration-700">
-                      <ArrowRight className="w-5 h-5" />
-                    </div>
-                  </a>
-                </ProMaxButton>
-              </div>
-            </div>
+
 
       </main >
       <Footer />

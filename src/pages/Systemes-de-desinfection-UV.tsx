@@ -1104,25 +1104,7 @@ const DesinfectionUV = () => {
 
             </main>
 
-            {/* Floating Sticky CTA - Phase III Conversion Focus */}
-            <div className="hidden md:block fixed bottom-8 right-8 z-[100] animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-[3s] pointer-events-none">
-              <div className="pointer-events-auto group/sticky">
-                <Button
-                  asChild
-                  className="bg-white hover:-translate-y-2 active:scale-95 transition-all duration-300 shadow-2xl"
-                  style={{ backdropFilter: "blur(20px)" }}
-                >
-                  <a href="/consultation" className="flex items-center gap-4 animate-bounce" style={{ animationDuration: '3s' }}>
-                    <span className="font-bold text-sm tracking-wider text-blue-600 whitespace-nowrap text-center">
-                      Réservez votre <br />consultation gratuite
-                    </span>
-                    <div className="w-10 h-10 bg-[#18448F] rounded-full flex items-center justify-center text-white group-hover/sticky:rotate-[360deg] shadow-lg shadow-blue-200">
-                      <ArrowRight className="w-5 h-5" />
-                    </div>
-                  </a>
-                </Button>
-              </div>
-            </div>
+
 
             <Footer />
         </div>

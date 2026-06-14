@@ -1008,24 +1008,7 @@ const B = () => {
 
             </main>
 
-            {/* Floating Sticky CTA - Phase III Conversion Focus */}
-            <div className="hidden md:block fixed bottom-8 right-8 z-[100] animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-[3s] pointer-events-none">
-                <ProMaxButton
-                  asChild
-                  variant="white"
-                  className="rounded-[2.5rem] h-16 px-8 shadow-2xl transition-all border-none"
-                  style={{ backdropFilter: "blur(20px)" }}
-                >
-                  <a href="/consultation" className="flex items-center gap-4">
-                    <span className="font-black text-[10px] uppercase tracking-[0.2em] text-[#18448F] whitespace-nowrap text-left leading-relaxed">
-                      Réservez votre <br />consultation gratuite
-                    </span>
-                    <div className="w-10 h-10 bg-[#18448F] rounded-full flex items-center justify-center text-white group-hover:rotate-[360deg] transition-transform duration-700 shadow-lg shadow-blue-200">
-                      <ArrowRight className="w-5 h-5" />
-                    </div>
-                  </a>
-                </ProMaxButton>
-            </div>
+
 
             <Footer />
         </div>
