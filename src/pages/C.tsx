@@ -357,10 +357,10 @@ const C = () => {
 
                                 <div className="pt-8">
                                     <ProMaxButton asChild className="w-full sm:w-fit group">
-                                        <a href="tel:18552649328" className="flex items-center justify-center gap-3">
+                                        <button onClick={() => document.getElementById('nos-produits')?.scrollIntoView({ behavior: 'smooth' })} className="flex items-center justify-center gap-3">
                                             Passer à l'eau pure dès aujourd'hui
                                             <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                                        </a>
+                                        </button>
                                     </ProMaxButton>
                                 </div>
                             </div>
