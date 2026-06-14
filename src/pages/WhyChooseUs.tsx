@@ -82,12 +82,12 @@ const WhyChooseUs = () => {
                             </div>
 
                             <h1 className="text-[50px] leading-[55px] font-sans font-bold text-[#18448F] mb-6 tracking-tight">
-                                Bricareau : 25 ans d'Excellence.<br />
-                                <span className="text-[#8CC63F] font-sans font-bold drop-shadow-sm italic">Votre eau, notre chef-d'œuvre.</span>
+                                25 ans d'excellence,<br />
+                                <span className="text-[#8CC63F] font-sans font-bold drop-shadow-sm italic">votre eau est notre métier.</span>
                             </h1>
                             
                             <p className="text-slate-600 text-lg sm:text-xl font-light leading-relaxed max-w-xl mb-12">
-                                Bricareau redéfinit la relation entre l'homme et l'eau. Depuis plus de deux décennies, nous fusionnons ingénierie de pointe et vision holistique pour transformer chaque goutte en une source de vitalité pure.
+                                Forts de 25 années d'expertise dans le traitement de l'eau, nous concevons des systèmes de filtration répondant aux standards de qualité les plus exigeants. Notre savoir-faire technique assure à votre foyer ou votre entreprise une eau pure, saine et sécuritaire en tout temps.
                             </p>
 
                             <div className="flex flex-col sm:flex-row items-start gap-6">

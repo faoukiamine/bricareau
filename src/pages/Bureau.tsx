@@ -189,7 +189,7 @@ const Bureau = () => {
                         </div>
 
                         {/* Bento Grid */}
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 h-auto lg:h-[600px]">
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 auto-rows-[400px] lg:auto-rows-[600px]">
                             {/* Card 1: Fontaines d'Eau Modernes */}
                             <div 
                                 className="group relative bg-white rounded-[2rem] overflow-hidden border border-slate-100 hover:shadow-xl hover:shadow-blue-900/5 transition-all duration-500 cursor-pointer flex flex-col justify-end p-8 lg:p-12"
