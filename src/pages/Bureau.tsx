@@ -214,7 +214,7 @@ const Bureau = () => {
                                 onClick={() => navigate("/systemes-centralises")}
                             >
                                 <div className="absolute inset-0 overflow-hidden rounded-[2rem]">
-                                    <img src={centralSystemImg} alt="Systèmes Centralisés" className="w-full h-full object-contain p-12 mix-blend-multiply transition-transform duration-700 group-hover:scale-105" />
+                                    <img src={centralSystemImg} alt="Systèmes Centralisés" className="w-full h-full object-cover opacity-80 mix-blend-multiply transition-transform duration-700 group-hover:scale-105" />
                                     <div className="absolute inset-0 bg-gradient-to-t from-white via-white/90 to-transparent" />
                                 </div>
                                 <div className="relative z-10 space-y-4 mt-auto">
