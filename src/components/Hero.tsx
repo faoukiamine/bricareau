@@ -47,7 +47,7 @@ const Hero = ({
   homeVariant = false,
 }: HeroProps) => {
   return (
-    <section className={cn("relative bg-white overflow-hidden min-h-screen flex flex-col justify-center pt-24 pb-16 lg:pt-28 lg:pb-16 border-b border-slate-200", className)}>
+    <section className={cn("relative bg-white overflow-hidden min-h-[85vh] lg:min-h-screen flex flex-col justify-center pt-24 pb-8 lg:pt-28 lg:pb-16 border-b border-slate-200", className)}>
       {showBreadcrumbs && (
         <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none hidden lg:block">
           <div className="container mx-auto px-4 lg:px-6 pointer-events-auto">
@@ -56,10 +56,8 @@ const Hero = ({
         </div>
       )}
 
-      {/* 1. Image Section - Overlay on all screens (Residential Style) */}
-      <div className="absolute inset-0 w-full h-full opacity-40 lg:opacity-100 z-0">
-        {/* Mobile Gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-white/80 via-white/40 to-transparent z-10 lg:hidden"></div>
+      {/* 1. Image Section */}
+      <div className="absolute inset-0 w-full h-full z-0">
         {/* Desktop Gradient: 1/4 solid white, fading to transparent */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,white_0%,white_25%,rgba(255,255,255,0)_75%)] z-10 hidden lg:block"></div>
         
@@ -67,14 +65,17 @@ const Hero = ({
             <img
             src={image || heroImage}
             alt={imageAlt}
-            className={cn("absolute inset-0 w-full h-full object-cover object-center", imagePosition)}
+            className={cn(
+              "absolute inset-0 w-full h-full object-cover object-bottom lg:object-center", 
+              imagePosition
+            )}
             />
         </div>
       </div>
-      <div className="absolute right-0 top-0 w-full h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/20 via-transparent to-transparent pointer-events-none z-0"></div>
+      <div className="absolute right-0 top-0 w-full h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/20 via-transparent to-transparent pointer-events-none z-0 hidden lg:block"></div>
 
       {/* 2. Content Section */}
-      <div className="container relative z-10 mx-auto px-4 lg:px-12 lg:h-full flex flex-col items-start justify-center pt-24 pb-24 lg:pt-0 lg:pb-0">
+      <div className="container relative z-10 mx-auto px-4 lg:px-12 lg:h-full flex flex-col items-start justify-center pt-24 pb-12 lg:pt-0 lg:pb-0">
         <div className="max-w-3xl space-y-8 text-left">
           <div className="space-y-6">
             {badge && (

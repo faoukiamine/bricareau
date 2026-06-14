@@ -46,10 +46,10 @@ const WhyChooseUs = () => {
 
             <main>
                 {/* 1. CUSTOM HERO SECTION (Style Home1) */}
-                <section className="relative bg-white overflow-hidden min-h-screen flex flex-col justify-center pt-24 pb-16 lg:pt-28 lg:pb-16 border-b border-slate-200">
+                <section className="relative bg-white overflow-hidden min-h-[85vh] lg:min-h-screen flex flex-col justify-center pt-24 pb-8 lg:pt-28 lg:pb-16 border-b border-slate-200">
                     <div className="absolute inset-0 w-full h-full opacity-40 lg:opacity-100">
-                        {/* Mobile Gradient */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-white via-white/90 to-transparent z-10 lg:hidden"></div>
+                        {/* Mobile Gradient (Style Residentiel/Home1) */}
+                        <div className="absolute inset-0 bg-gradient-to-br from-white/80 via-white/40 to-transparent z-10 lg:hidden"></div>
                         {/* Desktop Gradient: 1/3 solid white, fading to transparent */}
                         <div className="absolute inset-0 bg-[linear-gradient(to_right,white_0%,white_50%,rgba(255,255,255,0)_90%)] z-10 hidden lg:block"></div>
                         
@@ -58,7 +58,7 @@ const WhyChooseUs = () => {
                             <img 
                                 src={heroImg} 
                                 alt="Eau Pure Bricareau" 
-                                className="absolute inset-0 w-full h-full object-cover object-center animate-in fade-in duration-1000"
+                                className="absolute inset-0 w-full h-full object-cover object-bottom lg:object-center animate-in fade-in duration-1000"
                             />
                         </div>
                     </div>

@@ -171,11 +171,11 @@ const Home1 = () => {
         <div className="min-h-screen bg-white">
             <Header />
 
-            <section className="relative bg-white overflow-hidden min-h-screen flex flex-col justify-center pt-24 pb-16 lg:pt-28 lg:pb-16 border-b border-slate-200">
+            <section className="relative bg-white overflow-hidden min-h-[85vh] lg:min-h-screen flex flex-col justify-center pt-24 pb-8 lg:pt-28 lg:pb-16 border-b border-slate-200">
                 <div className="absolute inset-0 w-full h-full opacity-40 lg:opacity-100">
-                    {/* Mobile Gradient */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-white via-white/90 to-transparent z-10 lg:hidden"></div>
-                    {/* Desktop Gradient: 1/8 solid white, fading to transparent */}
+                    {/* Mobile Gradient (Style Residentiel) */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-white/80 via-white/40 to-transparent z-10 lg:hidden"></div>
+                    {/* Desktop Gradient */}
                     <div className="absolute inset-0 bg-[linear-gradient(to_right,white_0%,white_12.5%,rgba(255,255,255,0)_100%)] z-10 hidden lg:block"></div>
                     
                     {/* Container d'image sur toute la largeur */}
@@ -185,7 +185,7 @@ const Home1 = () => {
                                 key={index}
                                 src={slide.image} 
                                 alt={slide.category} 
-                                className={`absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-1000 ${currentSlide === index ? 'opacity-100' : 'opacity-0'}`}
+                                className={`absolute inset-0 w-full h-full object-cover object-bottom lg:object-center transition-opacity duration-1000 ${currentSlide === index ? 'opacity-100' : 'opacity-0'}`}
                             />
                         ))}
                     </div>
@@ -360,7 +360,7 @@ const Home1 = () => {
                         </div>
 
                         {/* Image Column */}
-                        <div className="w-full lg:w-1/2 relative min-h-[400px] order-1 lg:order-2">
+                        <div className="w-full lg:w-1/2 relative min-h-[500px] md:min-h-[600px] lg:min-h-[400px] order-1 lg:order-2">
                             {/* Sharp rectangular image */}
                             <div className="absolute inset-0 z-10 shadow-md">
                                 <img src={resImg} alt="Système de traitement d'eau résidentiel" className="w-full h-full object-cover rounded-none" />
@@ -390,7 +390,7 @@ const Home1 = () => {
                     <div className="flex flex-col lg:flex-row items-stretch gap-12 lg:gap-20">
                         
                         {/* Image Column */}
-                        <div className="w-full lg:w-1/2 relative min-h-[400px] order-1 lg:order-1">
+                        <div className="w-full lg:w-1/2 relative min-h-[500px] md:min-h-[600px] lg:min-h-[400px] order-1 lg:order-1">
                             {/* Sharp rectangular image */}
                             <div className="absolute inset-0 z-10 shadow-md">
                                 <img src={comImg} alt="Système de traitement d'eau pour bureaux" className="w-full h-full object-cover rounded-none" />
@@ -484,7 +484,7 @@ const Home1 = () => {
                         </div>
 
                         {/* Image Column */}
-                        <div className="w-full lg:w-1/2 relative min-h-[400px] order-1 lg:order-2">
+                        <div className="w-full lg:w-1/2 relative min-h-[500px] md:min-h-[600px] lg:min-h-[400px] order-1 lg:order-2">
                             {/* Sharp rectangular image */}
                             <div className="absolute inset-0 z-10 shadow-md">
                                 <img src={horecaImg} alt="Système de traitement d'eau HORECA" className="w-full h-full object-cover rounded-none" />
@@ -599,7 +599,7 @@ const Home1 = () => {
                     <div className="flex flex-col lg:flex-row items-stretch gap-12 lg:gap-20">
                         
                         {/* Image Column */}
-                        <div className="w-full lg:w-1/2 relative min-h-[400px] order-1 lg:order-1">
+                        <div className="w-full lg:w-1/2 relative min-h-[500px] md:min-h-[600px] lg:min-h-[400px] order-1 lg:order-1">
                             {/* Sharp rectangular image */}
                             <div className="absolute inset-0 z-10 shadow-md">
                                 <img src={waterTestingImg} alt="Analyse d'eau" className="w-full h-full object-cover rounded-none" />
