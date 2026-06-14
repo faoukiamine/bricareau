@@ -53,8 +53,12 @@ const PageConsultation = () => {
             <Header />
             <Hero 
                 image={heroConsultation}
-                highlightedTitle="Prenez le contrôle de"
-                mainTitle="la qualité de votre eau."
+                highlightedTitle=""
+                mainTitle={
+                    <>
+                        Prenez le contrôle de <span className="text-[#8CC63F] font-sans font-bold drop-shadow-sm">la qualité</span><br/> de votre eau.
+                    </>
+                }
                 subtitle="Organisez une consultation téléphonique gratuite avec l'un de nos experts d'eau. Nous analyserons vos besoins, répondrons à vos questions et vous guiderons vers la meilleure solution d'adoucissement ou de filtration, sans aucune vente à pression."
                 showBreadcrumbs={true}
                 showPhone={false}
