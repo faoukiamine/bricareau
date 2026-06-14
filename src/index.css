@@ -265,4 +265,13 @@ All colors MUST be HSL.
   .vertical-text {
     writing-mode: vertical-rl;
   }
+
+  @keyframes logo-light-up {
+    0%, 10%, 100% { color: rgb(191 219 254 / 0.5); text-shadow: none; }
+    5% { color: white; text-shadow: 0 0 15px rgba(255,255,255,0.8); }
+  }
+
+  .animate-logo-light-up {
+    animation: logo-light-up 30s linear infinite;
+  }
 }

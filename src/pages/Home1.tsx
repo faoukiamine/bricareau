@@ -70,6 +70,16 @@ const TeamIcon = (props: React.SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
+const partners = [
+    "Coréalis Pharma", "Productions Zinda", "Ils Pharma", "Google", "Kinton Ramen",
+    "Marriott", "IKEA", "Les peintres multicouleurs", "Imprimerie Stampa Media",
+    "UPS", "Biovantek", "Garderie les poussins du monde", "Calo",
+    "Fous de l'Ile Kombucha", "Garderie les petits carillons", "Fromagerie Marie-Kadé",
+    "Gestion & Construction Métropolitain", "Gestion immobilière Wilkar",
+    "Geep Canada", "Injectik", "Investment ERES", "I3 Biomedical", "Kruger",
+    "Institut des communications graphiques"
+];
+
 const Home1 = () => {
     const navigate = useNavigate();
     // Case Study Testimonials State
@@ -266,57 +276,27 @@ const Home1 = () => {
                     <div className="flex w-max animate-marquee gap-16 transition-opacity duration-700">
                         {/* First Set */}
                         <div className="flex gap-16 items-center px-8">
-                            <span className="text-blue-200/50 font-bold text-xl italic whitespace-nowrap hover:text-white transition-colors cursor-default">Coréalis Pharma</span>
-                            <span className="text-blue-200/50 font-bold text-xl italic whitespace-nowrap hover:text-white transition-colors cursor-default">Productions Zinda</span>
-                            <span className="text-blue-200/50 font-bold text-xl italic whitespace-nowrap hover:text-white transition-colors cursor-default">Ils Pharma</span>
-                            <span className="text-blue-200/50 font-bold text-xl italic whitespace-nowrap hover:text-white transition-colors cursor-default">Google</span>
-                            <span className="text-blue-200/50 font-bold text-xl italic whitespace-nowrap hover:text-white transition-colors cursor-default">Kinton Ramen</span>
-                            <span className="text-blue-200/50 font-bold text-xl italic whitespace-nowrap hover:text-white transition-colors cursor-default">Marriott</span>
-                            <span className="text-blue-200/50 font-bold text-xl italic whitespace-nowrap hover:text-white transition-colors cursor-default">IKEA</span>
-                            <span className="text-blue-200/50 font-bold text-xl italic whitespace-nowrap hover:text-white transition-colors cursor-default">Les peintres multicouleurs</span>
-                            <span className="text-blue-200/50 font-bold text-xl italic whitespace-nowrap hover:text-white transition-colors cursor-default">Imprimerie Stampa Media</span>
-                            <span className="text-blue-200/50 font-bold text-xl italic whitespace-nowrap hover:text-white transition-colors cursor-default">UPS</span>
-                            <span className="text-blue-200/50 font-bold text-xl italic whitespace-nowrap hover:text-white transition-colors cursor-default">Biovantek</span>
-                            <span className="text-blue-200/50 font-bold text-xl italic whitespace-nowrap hover:text-white transition-colors cursor-default">Garderie les poussins du monde</span>
-                            <span className="text-blue-200/50 font-bold text-xl italic whitespace-nowrap hover:text-white transition-colors cursor-default">Calo</span>
-                            <span className="text-blue-200/50 font-bold text-xl italic whitespace-nowrap hover:text-white transition-colors cursor-default">Fous de l'Ile Kombucha</span>
-                            <span className="text-blue-200/50 font-bold text-xl italic whitespace-nowrap hover:text-white transition-colors cursor-default">Garderie les petits carillons</span>
-                            <span className="text-blue-200/50 font-bold text-xl italic whitespace-nowrap hover:text-white transition-colors cursor-default">Fromagerie Marie-Kadé</span>
-                            <span className="text-blue-200/50 font-bold text-xl italic whitespace-nowrap hover:text-white transition-colors cursor-default">Gestion & Construction Métropolitain</span>
-                            <span className="text-blue-200/50 font-bold text-xl italic whitespace-nowrap hover:text-white transition-colors cursor-default">Gestion immobilière Wilkar</span>
-                            <span className="text-blue-200/50 font-bold text-xl italic whitespace-nowrap hover:text-white transition-colors cursor-default">Geep Canada</span>
-                            <span className="text-blue-200/50 font-bold text-xl italic whitespace-nowrap hover:text-white transition-colors cursor-default">Injectik</span>
-                            <span className="text-blue-200/50 font-bold text-xl italic whitespace-nowrap hover:text-white transition-colors cursor-default">Investment ERES</span>
-                            <span className="text-blue-200/50 font-bold text-xl italic whitespace-nowrap hover:text-white transition-colors cursor-default">I3 Biomedical</span>
-                            <span className="text-blue-200/50 font-bold text-xl italic whitespace-nowrap hover:text-white transition-colors cursor-default">Kruger</span>
-                            <span className="text-blue-200/50 font-bold text-xl italic whitespace-nowrap hover:text-white transition-colors cursor-default">Institut des communications graphiques</span>
+                            {partners.map((partner, i) => (
+                                <span 
+                                    key={i} 
+                                    className="text-blue-200/50 font-bold text-xl italic whitespace-nowrap cursor-default animate-logo-light-up"
+                                    style={{ animationDelay: `${(i * 1.25) - 30}s` }}
+                                >
+                                    {partner}
+                                </span>
+                            ))}
                         </div>
                         {/* Second Set (Duplicate) */}
                         <div className="flex gap-16 items-center px-8">
-                            <span className="text-blue-200/50 font-bold text-xl italic whitespace-nowrap hover:text-white transition-colors cursor-default">Coréalis Pharma</span>
-                            <span className="text-blue-200/50 font-bold text-xl italic whitespace-nowrap hover:text-white transition-colors cursor-default">Productions Zinda</span>
-                            <span className="text-blue-200/50 font-bold text-xl italic whitespace-nowrap hover:text-white transition-colors cursor-default">Ils Pharma</span>
-                            <span className="text-blue-200/50 font-bold text-xl italic whitespace-nowrap hover:text-white transition-colors cursor-default">Google</span>
-                            <span className="text-blue-200/50 font-bold text-xl italic whitespace-nowrap hover:text-white transition-colors cursor-default">Kinton Ramen</span>
-                            <span className="text-blue-200/50 font-bold text-xl italic whitespace-nowrap hover:text-white transition-colors cursor-default">Marriott</span>
-                            <span className="text-blue-200/50 font-bold text-xl italic whitespace-nowrap hover:text-white transition-colors cursor-default">IKEA</span>
-                            <span className="text-blue-200/50 font-bold text-xl italic whitespace-nowrap hover:text-white transition-colors cursor-default">Les peintres multicouleurs</span>
-                            <span className="text-blue-200/50 font-bold text-xl italic whitespace-nowrap hover:text-white transition-colors cursor-default">Imprimerie Stampa Media</span>
-                            <span className="text-blue-200/50 font-bold text-xl italic whitespace-nowrap hover:text-white transition-colors cursor-default">UPS</span>
-                            <span className="text-blue-200/50 font-bold text-xl italic whitespace-nowrap hover:text-white transition-colors cursor-default">Biovantek</span>
-                            <span className="text-blue-200/50 font-bold text-xl italic whitespace-nowrap hover:text-white transition-colors cursor-default">Garderie les poussins du monde</span>
-                            <span className="text-blue-200/50 font-bold text-xl italic whitespace-nowrap hover:text-white transition-colors cursor-default">Calo</span>
-                            <span className="text-blue-200/50 font-bold text-xl italic whitespace-nowrap hover:text-white transition-colors cursor-default">Fous de l'Ile Kombucha</span>
-                            <span className="text-blue-200/50 font-bold text-xl italic whitespace-nowrap hover:text-white transition-colors cursor-default">Garderie les petits carillons</span>
-                            <span className="text-blue-200/50 font-bold text-xl italic whitespace-nowrap hover:text-white transition-colors cursor-default">Fromagerie Marie-Kadé</span>
-                            <span className="text-blue-200/50 font-bold text-xl italic whitespace-nowrap hover:text-white transition-colors cursor-default">Gestion & Construction Métropolitain</span>
-                            <span className="text-blue-200/50 font-bold text-xl italic whitespace-nowrap hover:text-white transition-colors cursor-default">Gestion immobilière Wilkar</span>
-                            <span className="text-blue-200/50 font-bold text-xl italic whitespace-nowrap hover:text-white transition-colors cursor-default">Geep Canada</span>
-                            <span className="text-blue-200/50 font-bold text-xl italic whitespace-nowrap hover:text-white transition-colors cursor-default">Injectik</span>
-                            <span className="text-blue-200/50 font-bold text-xl italic whitespace-nowrap hover:text-white transition-colors cursor-default">Investment ERES</span>
-                            <span className="text-blue-200/50 font-bold text-xl italic whitespace-nowrap hover:text-white transition-colors cursor-default">I3 Biomedical</span>
-                            <span className="text-blue-200/50 font-bold text-xl italic whitespace-nowrap hover:text-white transition-colors cursor-default">Kruger</span>
-                            <span className="text-blue-200/50 font-bold text-xl italic whitespace-nowrap hover:text-white transition-colors cursor-default">Institut des communications graphiques</span>
+                            {partners.map((partner, i) => (
+                                <span 
+                                    key={`dup-${i}`} 
+                                    className="text-blue-200/50 font-bold text-xl italic whitespace-nowrap cursor-default animate-logo-light-up"
+                                    style={{ animationDelay: `${(i * 1.25) - 30}s` }}
+                                >
+                                    {partner}
+                                </span>
+                            ))}
                         </div>
                     </div>
                 </div>

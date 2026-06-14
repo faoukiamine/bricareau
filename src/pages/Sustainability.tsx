@@ -89,7 +89,7 @@ const Sustainability = () => {
                             Redéfinir le <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8CC63F] to-blue-500 italic font-light">standard écologique.</span>
                         </h2>
-                        <div className="text-slate-300 text-xl md:text-3xl font-light leading-relaxed max-w-4xl mx-auto space-y-6">
+                        <div className="text-white text-xl md:text-3xl font-light leading-relaxed max-w-4xl mx-auto space-y-6">
                             <p>
                                 Face à l'urgence environnementale, chaque décision compte. Préserver nos ressources naturelles et réduire drastiquement notre empreinte écologique n'est plus une option, mais une responsabilité collective absolue.
                             </p>
@@ -164,6 +164,23 @@ const Sustainability = () => {
                     </div>
                 </section>
 
+                {/* 5. Testimonials */}
+                <div className="bg-slate-50 py-32 border-t border-slate-200">
+                    <TestimonialsSection 
+                        filterProduct="/"
+                        limit={6}
+                        title={
+                            <div className="text-center space-y-3 mb-16 px-6">
+                                <span className="inline-block py-1 px-4 bg-[#18448F] text-white rounded-full font-bold tracking-[0.2em] uppercase text-xs mb-4">Avis Clients</span>
+                                <h2 className="heading-pro-max">
+                                    <span className="font-bold not-italic text-[#18448F] block">L'engagement durable</span>
+                                    <span className="font-bold text-[#8CC63F] block">récompensé.</span>
+                                </h2>
+                            </div>
+                        }
+                    />
+                </div>
+
                 {/* 4. CTA: Éditorial Aligné à Droite avec Image Full Width (Dark Mode) */}
                 <section className="relative overflow-hidden min-h-[50vh] md:min-h-screen lg:min-h-[80vh] flex items-center py-16 md:py-32">
                     {/* Background Image Full Width */}
@@ -187,23 +204,6 @@ const Sustainability = () => {
                         </div>
                     </div>
                 </section>
-
-                {/* 5. Testimonials */}
-                <div className="bg-slate-50 py-32 border-t border-slate-200">
-                    <TestimonialsSection 
-                        filterProduct="/"
-                        limit={6}
-                        title={
-                            <div className="text-center space-y-3 mb-16 px-6">
-                                <span className="inline-block py-1 px-4 bg-[#18448F] text-white rounded-full font-bold tracking-[0.2em] uppercase text-xs mb-4">Avis Clients</span>
-                                <h2 className="heading-pro-max">
-                                    <span className="font-bold not-italic text-[#18448F] block">L'engagement durable</span>
-                                    <span className="font-bold text-[#8CC63F] block">récompensé.</span>
-                                </h2>
-                            </div>
-                        }
-                    />
-                </div>
 
             </main>
 
