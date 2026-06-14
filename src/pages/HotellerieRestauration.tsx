@@ -437,7 +437,7 @@ const HotellerieRestauration = () => {
                     <ExpertTrustSection 
                         title="Une consultation gratuite pour "
                         highlight="rentabiliser votre établissement."
-                        description="Découvrez comment nos systèmes de filtration peuvent réduire vos coûts opérationnels, éliminer les plastiques à usage unique et créer de nouvelles sources de revenus."
+                        description="Découvrez comment nos systèmes de filtration d'eau peuvent réduire vos coûts opérationnels, éliminer les plastiques à usage unique et créer de nouvelles sources de revenus."
                         buttonText="Rentabiliser mon business"
                         buttonLink="/consultation"
                         image={rentabiliteImg}
