@@ -51,6 +51,7 @@ import maitriseImg from "@/assets/2226.jpeg";
 import hospitalityImg2 from "@/assets/2121.png";
 import brasserieBgImg from "@/assets/2122.jpg";
 import reputationImg from "@/assets/132626.jpg";
+import rentabiliteImg from "@/assets/7860.jpg";
 
 const HotellerieRestauration = () => {
     const navigate = useNavigate();
@@ -439,7 +440,7 @@ const HotellerieRestauration = () => {
                         description="Découvrez comment nos systèmes de filtration peuvent réduire vos coûts opérationnels, éliminer les plastiques à usage unique et créer de nouvelles sources de revenus."
                         buttonText="Rentabiliser mon business"
                         buttonLink="/consultation"
-                        image={hospitalityImg2}
+                        image={rentabiliteImg}
                         imageRight={true}
                     />
                 </div>
