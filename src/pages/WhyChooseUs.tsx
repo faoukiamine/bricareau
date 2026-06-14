@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { 
     ChevronRight, 
     ArrowRight,
@@ -25,6 +25,17 @@ import heroImg from "@/assets/10341859.jpg";
 
 const WhyChooseUs = () => {
     const navigate = useNavigate();
+    const carouselRef = useRef<HTMLDivElement>(null);
+
+    const scrollCarousel = (direction: 'left' | 'right') => {
+        if (carouselRef.current) {
+            const scrollAmount = carouselRef.current.clientWidth * 0.6;
+            carouselRef.current.scrollBy({
+                left: direction === 'left' ? -scrollAmount : scrollAmount,
+                behavior: 'smooth'
+            });
+        }
+    };
     const [scrollProgress, setScrollProgress] = useState(0);
 
     useEffect(() => {
@@ -191,17 +202,17 @@ const WhyChooseUs = () => {
                                 </li>
                             </ul>
                         </div>
-                        <div className="lg:w-1/2 w-full aspect-square md:aspect-video lg:aspect-square relative rounded-[3rem] overflow-hidden group shadow-2xl">
+                        <div className="lg:w-1/2 w-full min-h-[500px] md:min-h-[600px] lg:min-h-0 lg:aspect-square relative rounded-[3rem] overflow-hidden group shadow-2xl">
                             <div className="absolute inset-0 bg-[#18448F]/20 mix-blend-multiply z-10 group-hover:opacity-0 transition-opacity duration-700" />
-                            <img src={image2119} alt="Technologies de pointe" className="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000" />
+                            <img src={image2119} alt="Technologies de pointe" className="absolute inset-0 w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000" />
                         </div>
                     </div>
 
                     {/* Valeur 2 : Déco à gauche, Texte à droite */}
                     <div className="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-16 px-6">
-                        <div className="lg:w-1/2 w-full aspect-square md:aspect-video lg:aspect-square relative rounded-[3rem] overflow-hidden group shadow-2xl">
+                        <div className="lg:w-1/2 w-full min-h-[500px] md:min-h-[600px] lg:min-h-0 lg:aspect-square relative rounded-[3rem] overflow-hidden group shadow-2xl">
                             <div className="absolute inset-0 bg-[#8CC63F]/20 mix-blend-multiply z-10 group-hover:opacity-0 transition-opacity duration-700" />
-                            <img src={image2120} alt="Entreprise socialement responsable" className="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000" />
+                            <img src={image2120} alt="Entreprise socialement responsable" className="absolute inset-0 w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000" />
                         </div>
                         <div className="lg:w-1/2 space-y-8">
                             <h3 className="text-3xl lg:text-5xl font-light text-slate-900 leading-tight">
@@ -240,43 +251,62 @@ const WhyChooseUs = () => {
                             </h2>
                         </div>
 
-                        <div className="mt-20 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-                            {/* Pilier 01 */}
-                            <div className="group flex flex-col gap-8 items-start p-10 lg:p-12 border border-slate-200/60 hover:bg-slate-50/50 transition-colors duration-500 rounded-3xl h-full">
-                                <div className="text-5xl md:text-6xl font-light text-[#18448F]/20 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#8CC63F] group-hover:to-blue-500 transition-all duration-500 tracking-tighter mb-4">
-                                    01.
-                                </div>
-                                <div className="flex-1 space-y-4 pt-2">
-                                    <h3 className="text-3xl font-semibold text-slate-900 group-hover:text-[#18448F] transition-colors duration-300 tracking-tight">Expertise technique avancée</h3>
-                                    <p className="text-slate-500 text-lg md:text-xl leading-relaxed font-light max-w-2xl">
-                                        Nous procédons à une analyse physico-chimique rigoureuse de votre eau afin de concevoir un système de traitement entièrement sur mesure, garantissant une efficacité et une fiabilité de pointe.
-                                    </p>
-                                </div>
-                            </div>
+                        <div className="relative mt-20 max-w-7xl mx-auto">
+                            {/* Navigation Arrows (Tablet only) */}
+                            <button 
+                                onClick={() => scrollCarousel('left')}
+                                className="hidden md:flex lg:hidden absolute -left-6 top-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-xl border border-slate-200 items-center justify-center z-10 text-[#18448F] hover:bg-slate-50 transition-colors"
+                            >
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+                            </button>
+                            <button 
+                                onClick={() => scrollCarousel('right')}
+                                className="hidden md:flex lg:hidden absolute -right-6 top-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-xl border border-slate-200 items-center justify-center z-10 text-[#18448F] hover:bg-slate-50 transition-colors"
+                            >
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                            </button>
 
-                            {/* Pilier 02 */}
-                            <div className="group flex flex-col gap-8 items-start p-10 lg:p-12 border border-slate-200/60 hover:bg-slate-50/50 transition-colors duration-500 rounded-3xl h-full">
-                                <div className="text-5xl md:text-6xl font-light text-[#18448F]/20 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#8CC63F] group-hover:to-blue-500 transition-all duration-500 tracking-tighter mb-4">
-                                    02.
+                            <div 
+                                ref={carouselRef}
+                                className="flex flex-col md:flex-row md:items-stretch lg:grid grid-cols-1 lg:grid-cols-3 gap-8 md:overflow-x-auto lg:overflow-visible snap-x snap-mandatory scrollbar-hide pb-8 lg:pb-0"
+                            >
+                                {/* Pilier 01 */}
+                                <div className="md:min-w-[60vw] lg:min-w-0 snap-center group flex flex-col gap-8 items-start p-10 lg:p-12 border border-slate-200/60 hover:bg-slate-50/50 transition-colors duration-500 rounded-3xl h-auto md:h-auto lg:h-full self-stretch">
+                                    <div className="text-5xl md:text-6xl font-light text-[#18448F]/20 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#8CC63F] group-hover:to-blue-500 transition-all duration-500 tracking-tighter mb-4">
+                                        01.
+                                    </div>
+                                    <div className="flex-1 space-y-4 pt-2">
+                                        <h3 className="text-3xl font-semibold text-slate-900 group-hover:text-[#18448F] transition-colors duration-300 tracking-tight">Expertise technique avancée</h3>
+                                        <p className="text-slate-500 text-lg md:text-xl leading-relaxed font-light max-w-2xl">
+                                            Nous procédons à une analyse physico-chimique rigoureuse de votre eau afin de concevoir un système de traitement entièrement sur mesure, garantissant une efficacité et une fiabilité de pointe.
+                                        </p>
+                                    </div>
                                 </div>
-                                <div className="flex-1 space-y-4 pt-2">
-                                    <h3 className="text-3xl font-semibold text-slate-900 group-hover:text-[#18448F] transition-colors duration-300 tracking-tight">Installation de qualité supérieure</h3>
-                                    <p className="text-slate-500 text-lg md:text-xl leading-relaxed font-light max-w-2xl">
-                                        Nos techniciens spécialisés assurent une exécution impeccable de chaque projet. L'installation est conçue pour optimiser l'espace tout en respectant scrupuleusement les normes de l'industrie et l'intégrité de votre propriété.
-                                    </p>
-                                </div>
-                            </div>
 
-                            {/* Pilier 03 */}
-                            <div className="group flex flex-col gap-8 items-start p-10 lg:p-12 border border-slate-200/60 hover:bg-slate-50/50 transition-colors duration-500 rounded-3xl h-full">
-                                <div className="text-5xl md:text-6xl font-light text-[#18448F]/20 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#8CC63F] group-hover:to-blue-500 transition-all duration-500 tracking-tighter mb-4">
-                                    03.
+                                {/* Pilier 02 */}
+                                <div className="md:min-w-[60vw] lg:min-w-0 snap-center group flex flex-col gap-8 items-start p-10 lg:p-12 border border-slate-200/60 hover:bg-slate-50/50 transition-colors duration-500 rounded-3xl h-auto md:h-auto lg:h-full self-stretch">
+                                    <div className="text-5xl md:text-6xl font-light text-[#18448F]/20 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#8CC63F] group-hover:to-blue-500 transition-all duration-500 tracking-tighter mb-4">
+                                        02.
+                                    </div>
+                                    <div className="flex-1 space-y-4 pt-2">
+                                        <h3 className="text-3xl font-semibold text-slate-900 group-hover:text-[#18448F] transition-colors duration-300 tracking-tight">Installation de qualité supérieure</h3>
+                                        <p className="text-slate-500 text-lg md:text-xl leading-relaxed font-light max-w-2xl">
+                                            Nos techniciens spécialisés assurent une exécution impeccable de chaque projet. L'installation est conçue pour optimiser l'espace tout en respectant scrupuleusement les normes de l'industrie et l'intégrité de votre propriété.
+                                        </p>
+                                    </div>
                                 </div>
-                                <div className="flex-1 space-y-4 pt-2">
-                                    <h3 className="text-3xl font-semibold text-slate-900 group-hover:text-[#18448F] transition-colors duration-300 tracking-tight">Service client dédié</h3>
-                                    <p className="text-slate-500 text-lg md:text-xl leading-relaxed font-light max-w-2xl">
-                                        Nous nous engageons à offrir un suivi technique continu. Notre équipe assure un service après-vente rapide, une maintenance rigoureuse et vous fait bénéficier de garanties solides sur l'ensemble de nos équipements.
-                                    </p>
+
+                                {/* Pilier 03 */}
+                                <div className="md:min-w-[60vw] lg:min-w-0 snap-center group flex flex-col gap-8 items-start p-10 lg:p-12 border border-slate-200/60 hover:bg-slate-50/50 transition-colors duration-500 rounded-3xl h-auto md:h-auto lg:h-full self-stretch">
+                                    <div className="text-5xl md:text-6xl font-light text-[#18448F]/20 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#8CC63F] group-hover:to-blue-500 transition-all duration-500 tracking-tighter mb-4">
+                                        03.
+                                    </div>
+                                    <div className="flex-1 space-y-4 pt-2">
+                                        <h3 className="text-3xl font-semibold text-slate-900 group-hover:text-[#18448F] transition-colors duration-300 tracking-tight">Service client dédié</h3>
+                                        <p className="text-slate-500 text-lg md:text-xl leading-relaxed font-light max-w-2xl">
+                                            Nous nous engageons à offrir un suivi technique continu. Notre équipe assure un service après-vente rapide, une maintenance rigoureuse et vous fait bénéficier de garanties solides sur l'ensemble de nos équipements.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -292,18 +322,20 @@ const WhyChooseUs = () => {
                     </div>
                     
                     <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-12 relative z-10">
-                        <div className="md:col-span-6 md:col-start-7 space-y-10 md:pl-12">
-                            <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/10 backdrop-blur-md rounded-full border border-white/20 text-xs font-black text-[#8CC63F] uppercase tracking-[0.2em] shadow-sm">
+                        <div className="md:col-span-10 md:col-start-2 lg:col-span-6 lg:col-start-7 space-y-8 lg:space-y-10 text-center lg:text-left md:px-0 lg:pl-12">
+                            <div className="inline-flex mx-auto lg:mx-0 items-center gap-2 px-4 py-1.5 bg-white/10 backdrop-blur-md rounded-full border border-white/20 text-xs font-black text-[#8CC63F] uppercase tracking-[0.2em] shadow-sm">
                                 <div className="w-1.5 h-1.5 rounded-full bg-[#8CC63F] animate-pulse" />
                                 Le Moment est Venu
                             </div>
-                            <h2 className="text-5xl md:text-7xl font-bold text-white leading-tight">
+                            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
                                 L'Excellence <br /><span className="text-[#8CC63F] italic font-light">n'attend pas.</span>
                             </h2>
-                            <p className="text-slate-300 text-lg max-w-xl leading-relaxed">
+                            <p className="text-slate-300 text-lg max-w-xl mx-auto lg:mx-0 leading-relaxed">
                                 Passez à l'étape supérieure et ne faites plus aucun compromis sur la qualité de votre eau. Échangez avec nos spécialistes pour analyser vos besoins et entamer votre transition vers la pureté absolue.
                             </p>
-                            <ProMaxButton variant="white" className="px-12 h-16 shadow-[0_0_40px_rgba(255,255,255,0.2)] text-[#18448F] font-bold" onClick={() => navigate("/consultation")}>Contactez-nous</ProMaxButton>
+                            <div className="flex justify-center lg:justify-start">
+                                <ProMaxButton variant="white" className="px-12 h-16 shadow-[0_0_40px_rgba(255,255,255,0.2)] text-[#18448F] font-bold" onClick={() => navigate("/consultation")}>Contactez-nous</ProMaxButton>
+                            </div>
                         </div>
                     </div>
                 </section>
