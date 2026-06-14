@@ -137,17 +137,17 @@ export default function Carrieres() {
                                     Donnez du sens à votre travail. Chaque système que vous installez ou vendez contribue directement à réduire la pollution plastique et à améliorer la santé des Québécois.
                                 </p>
                             </div>
-                            <div className="lg:w-1/2 w-full aspect-square md:aspect-video lg:aspect-square relative rounded-[3rem] overflow-hidden shadow-2xl group">
+                            <div className="lg:w-1/2 w-full min-h-[500px] md:min-h-[600px] lg:min-h-0 lg:aspect-square relative rounded-[3rem] overflow-hidden shadow-2xl group">
                                 <div className="absolute inset-0 bg-[#18448F]/10 mix-blend-multiply z-10 group-hover:opacity-0 transition-opacity duration-700" />
-                                <img src={imgImpact} alt="Impact Environnemental" className="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000" />
+                                <img src={imgImpact} alt="Impact Environnemental" className="absolute inset-0 w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000" />
                             </div>
                         </div>
 
                         {/* Pilier 02 */}
                         <div className="flex flex-col-reverse lg:flex-row items-center gap-16 px-6">
-                            <div className="lg:w-1/2 w-full aspect-square md:aspect-video lg:aspect-square relative rounded-[3rem] overflow-hidden shadow-2xl group">
+                            <div className="lg:w-1/2 w-full min-h-[500px] md:min-h-[600px] lg:min-h-0 lg:aspect-square relative rounded-[3rem] overflow-hidden shadow-2xl group">
                                 <div className="absolute inset-0 bg-[#8CC63F]/10 mix-blend-multiply z-10 group-hover:opacity-0 transition-opacity duration-700" />
-                                <img src={imgFormation} alt="Développement Continu" className="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000" />
+                                <img src={imgFormation} alt="Développement Continu" className="absolute inset-0 w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000" />
                             </div>
                             <div className="lg:w-1/2 space-y-6">
                                 <div className="text-5xl md:text-6xl font-light text-[#18448F]/20 mb-2">02.</div>
@@ -171,9 +171,9 @@ export default function Carrieres() {
                                     Évoluez aux côtés des meilleurs. Notre culture d'entreprise valorise le mentorat, le partage de connaissances et la rigueur technique dans un environnement convivial.
                                 </p>
                             </div>
-                            <div className="lg:w-1/2 w-full aspect-square md:aspect-video lg:aspect-square relative rounded-[3rem] overflow-hidden shadow-2xl group">
+                            <div className="lg:w-1/2 w-full min-h-[500px] md:min-h-[600px] lg:min-h-0 lg:aspect-square relative rounded-[3rem] overflow-hidden shadow-2xl group">
                                 <div className="absolute inset-0 bg-[#18448F]/10 mix-blend-multiply z-10 group-hover:opacity-0 transition-opacity duration-700" />
-                                <img src={imgTeam} alt="Équipe d'Experts" className="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000" />
+                                <img src={imgTeam} alt="Équipe d'Experts" className="absolute inset-0 w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000" />
                             </div>
                         </div>
                     </div>
@@ -230,7 +230,7 @@ export default function Carrieres() {
                 </section>
 
                 {/* 4. CTA: Éditorial Aligné à Droite avec Image Full Width (Dark Mode) */}
-                <section className="relative overflow-hidden min-h-[80vh] flex items-center py-32">
+                <section className="relative overflow-hidden min-h-[50vh] md:min-h-[40vh] lg:min-h-[80vh] flex items-center py-16 lg:py-32">
                     {/* Background Image Full Width */}
                     <div className="absolute inset-0 z-0">
                         <img src={imgCTA} alt="Candidature Bricareau" className="w-full h-full object-cover object-center" />
