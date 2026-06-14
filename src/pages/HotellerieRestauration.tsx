@@ -116,7 +116,7 @@ const HotellerieRestauration = () => {
                 <section className="relative py-24 md:py-32 bg-white overflow-hidden">
                     <div className="container mx-auto px-6 max-w-7xl">
                         <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-center">
-                            <div className="lg:w-1/2 space-y-10">
+                            <div className="w-full lg:w-1/2 space-y-10">
                                 <div className="inline-flex items-center gap-4">
                                     <span className="w-12 h-[1px] bg-slate-900" />
                                     <span className="text-[10px] font-black text-slate-500 uppercase tracking-[0.4em]">L'ESSENCE DU SERVICE</span>
@@ -141,7 +141,7 @@ const HotellerieRestauration = () => {
                                     Dans l'univers de la haute gastronomie et de l'hôtellerie de prestige, chaque détail définit l'expérience. La qualité de votre eau n'est pas une simple commodité : c'est la signature silencieuse de votre raffinement et le protecteur de votre excellence.
                                 </p>
                             </div>
-                            <div className="lg:w-1/2 relative">
+                            <div className="w-full lg:w-1/2 relative mt-8 lg:mt-0">
                                 <div className="aspect-[4/3] w-full max-w-2xl mx-auto relative group overflow-hidden rounded-2xl">
                                     <div className="absolute inset-0 bg-slate-100 translate-x-4 translate-y-4 transition-transform group-hover:translate-x-2 group-hover:translate-y-2 rounded-2xl" />
                                     <img 
