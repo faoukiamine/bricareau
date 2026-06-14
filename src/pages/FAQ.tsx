@@ -94,31 +94,38 @@ const FAQ = () => {
             <Header />
             <main>
                 {/* 1. Hero Section */}
-                <section className="relative lg:h-[650px] flex flex-col lg:items-center overflow-hidden bg-white">
-                    <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none hidden lg:block">
-                        <div className="container mx-auto px-4 lg:px-6 pointer-events-auto">
-                            <GlobalBreadcrumbs variant="dark" />
+                <section className="relative bg-white overflow-hidden min-h-screen flex flex-col justify-center pt-24 pb-16 lg:pt-28 lg:pb-16 border-b border-slate-200">
+                    <div className="absolute inset-0 w-full h-full opacity-40 lg:opacity-100">
+                        <div className="absolute inset-0 bg-gradient-to-br from-white/80 via-white/40 to-transparent z-10 lg:hidden"></div>
+                        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent z-10 hidden lg:block w-[50%]"></div>
+                        <div className="absolute right-0 top-0 w-full h-full lg:w-[65%]">
+                            <div className="absolute inset-0 bg-gradient-to-r from-white via-white/40 to-transparent z-10 hidden lg:block w-1/3"></div>
+                            <img 
+                                src={faqHero} 
+                                className="absolute inset-0 w-full h-full object-cover object-center lg:object-right"
+                             alt="Support et Foire aux questions Bricareau - Réponses à vos besoins en traitement d'eau" title="Systèmes d'eau sur mesure par Bricareau" />
                         </div>
                     </div>
-                    <div className="relative lg:absolute lg:inset-0 h-[350px] sm:h-[450px] lg:h-full w-full lg:z-0 overflow-hidden">
-                        <img
-                            src={faqHero}
-                            className="w-full h-full object-cover object-[center_35%]"
-                         alt="Support et Foire aux questions Bricareau - Réponses à vos besoins en traitement d'eau" title="Systèmes d'eau sur mesure par Bricareau" />
-                        <div className="hidden lg:block absolute inset-0 bg-black/40 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
-                        <div className="hidden lg:block absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-white via-white/10 to-transparent" />
-                        <div className="hidden lg:block absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white/90 via-white/40 to-transparent" />
+                    <div className="absolute right-0 top-0 w-full h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/20 via-transparent to-transparent pointer-events-none z-20"></div>
+                    
+                    <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none hidden lg:block">
+                        <div className="container mx-auto px-4 lg:px-6 pointer-events-auto">
+                            <GlobalBreadcrumbs variant="light" />
+                        </div>
                     </div>
 
-                    <div className="container relative z-10 mx-auto px-4 h-full flex items-center lg:px-6">
-                        <div className="max-w-2xl lg:text-white py-12 lg:py-0">
-                            <h1 className="text-[40px] md:text-[50px] lg:text-[64px] leading-[1.1] font-sans font-light italic text-slate-900 mb-6 tracking-tight">
-    Foire aux questions <br />
-                                Obtenez des <span className="text-[#8CC63F] font-sans font-bold not-italic drop-shadow-lg">réponses</span> claires.
-</h1>
-                            <p className="font-light text-slate-600 lg:text-white/95 mb-8 max-w-xl text-left lg:text-justify">
-                                Vous trouverez ci-dessous les réponses aux questions les plus fréquentes sur le traitement de l'eau. Recherchez les sujets qui vous intéressent ou triez par catégorie pour trouver rapidement l'information dont vous avez besoin.
-                            </p>
+                    <div className="container mx-auto px-6 relative z-30">
+                        <div className="max-w-3xl flex flex-col justify-center">
+                            <div className="mb-8">
+                                <h1 className="text-[50px] leading-[55px] font-sans font-bold mb-6 tracking-tight">
+                                    <span className="text-[#18448F]">Foire aux questions,</span><br/>
+                                    <span className="text-[#8CC63F]">obtenez des réponses claires.</span>
+                                </h1>
+                                
+                                <p className="text-slate-600 text-lg sm:text-xl font-light leading-relaxed max-w-xl">
+                                    Vous trouverez ci-dessous les réponses aux questions les plus fréquentes sur le traitement de l'eau. Recherchez les sujets qui vous intéressent ou triez par catégorie pour trouver rapidement l'information dont vous avez besoin.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </section>

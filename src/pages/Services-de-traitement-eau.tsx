@@ -151,16 +151,24 @@ const ServicesTraitementEau = () => {
             <Header />
             
             <main>
-                {/* 1. IMMERSIVE HERO - INDEX STYLE */}
-                <section className="relative lg:h-[800px] flex flex-col overflow-hidden bg-white lg:pt-32">
-                    {/* Image Section - Stacked on Mobile/Tablet Portrait, Overlay on Desktop */}
-                    <div className="relative lg:absolute lg:inset-0 w-full h-[400px] md:h-[550px] lg:h-full z-0 overflow-hidden">
-                        <div className="absolute inset-0 z-10 bg-gradient-to-b from-transparent via-[#f0f9ff]/20 to-white lg:bg-gradient-to-r lg:from-[#f0f9ff] lg:via-[#f0f9ff]/40 35% lg:to-transparent" />
-                        <img 
-                            src={servicesHero} 
-                            className="w-full h-full object-cover"
-                         alt="Services Bricareau - Expertise technique" title="Analyse d'eau professionnelle par Bricareau" />
+                {/* 1. HERO SECTION */}
+                <section className="relative bg-white overflow-hidden min-h-screen flex flex-col justify-center pt-24 pb-16 lg:pt-28 lg:pb-16 border-b border-slate-200">
+                    <div className="absolute inset-0 w-full h-full opacity-40 lg:opacity-100">
+                        {/* Mobile Gradient */}
+                        <div className="absolute inset-0 bg-gradient-to-br from-white/80 via-white/40 to-transparent z-10 lg:hidden"></div>
+                        {/* Desktop Gradient: fade over the text area */}
+                        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent z-10 hidden lg:block w-[50%]"></div>
+                        
+                        <div className="absolute right-0 top-0 w-full h-full lg:w-[65%]">
+                            {/* Inner gradient to blend the hard edge on desktop */}
+                            <div className="absolute inset-0 bg-gradient-to-r from-white via-white/40 to-transparent z-10 hidden lg:block w-1/3"></div>
+                            <img 
+                                src={servicesHero} 
+                                className="absolute inset-0 w-full h-full object-cover object-center lg:object-right"
+                             alt="Services Bricareau - Expertise technique" title="Analyse d'eau professionnelle par Bricareau" />
+                        </div>
                     </div>
+                    <div className="absolute right-0 top-0 w-full h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/20 via-transparent to-transparent pointer-events-none z-20"></div>
                     
                     <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none hidden lg:block">
                         <div className="container mx-auto px-6 pointer-events-auto">
@@ -168,27 +176,31 @@ const ServicesTraitementEau = () => {
                         </div>
                     </div>
 
-                    <div className="container relative z-20 mx-auto px-6 lg:h-full flex flex-col items-start justify-center pt-16 pb-24 lg:pt-0 lg:pb-0">
-                        <div className="max-w-3xl text-left">
-                            <h1 className="text-[40px] md:text-[50px] lg:text-[64px] leading-[1.1] font-sans font-light italic text-[#18448F] mb-6 tracking-tight">
-    <span className="text-[#8CC63F] font-sans font-bold not-italic drop-shadow-lg">Expertise & Sérénité</span>
-                                <span className="font-bold block">Des services dédiés à <br />votre tranquillité.</span>
-</h1>
-                            <p className="text-slate-600 mb-10 max-w-xl animate-in fade-in slide-in-from-left duration-1000 delay-100 text-lg">
-                                Bricareau s'engage à vos côtés pour simplifier le suivi, l'entretien et la performance de vos installations d'eau, partout au Québec.
-                            </p>
-                            <div className="flex flex-col sm:flex-row items-start lg:items-center gap-8 animate-in fade-in slide-in-from-left duration-1000 delay-200 pt-4">
-                                    <ProMaxButton 
-                                        variant="primary"
-                                        asChild
-                                    >
-                                        <button onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}>
-                                            Planifier un service
-                                            <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-2" />
-                                        </button>
-                                    </ProMaxButton>
+                    <div className="container mx-auto px-6 relative z-30">
+                        <div className="max-w-3xl flex flex-col justify-center">
+                            <div className="mb-8">
+                                <h1 className="text-[50px] leading-[55px] font-sans font-bold mb-6 tracking-tight">
+                                    <span className="text-[#8CC63F]">Expertise & sérénité,</span><br/>
+                                    <span className="text-[#18448F]">des services dédiés à</span><br/>
+                                    <span className="text-[#18448F]">votre tranquillité.</span>
+                                </h1>
                                 
-                                <div className="flex items-center gap-4 text-slate-500 text-sm font-light border-l border-slate-200 pl-8 hidden md:flex">
+                                <p className="text-slate-600 text-lg sm:text-xl font-light leading-relaxed max-w-xl">
+                                    Bricareau s'engage à vos côtés pour simplifier le suivi, l'entretien et la performance de vos installations d'eau, partout au Québec.
+                                </p>
+                            </div>
+                            
+                            <div className="flex flex-col sm:flex-row items-start gap-6 mb-16">
+                                <div className="relative inline-block w-full sm:w-auto group">
+                                    <div className="absolute inset-0 border border-[#18448F] rounded-[2rem] -translate-x-[5px] translate-y-[5px] transition-transform group-hover:-translate-x-[3px] group-hover:translate-y-[3px]"></div>
+                                    <button
+                                        className="relative flex items-center justify-center w-full sm:w-auto bg-[#18448F] text-white hover:bg-transparent hover:text-[#18448F] border border-[#18448F] rounded-[2rem] h-[3.25rem] px-8 font-black uppercase tracking-[0.1em] text-[11px] transition-all"
+                                        onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
+                                    >
+                                        Planifier un service
+                                    </button>
+                                </div>
+                                <div className="flex items-center gap-4 text-slate-500 text-sm font-light border-l border-slate-200 pl-6 hidden md:flex h-[3.25rem]">
                                     <div className="flex flex-col">
                                         <span className="font-bold text-[#18448F]">Intervention sous 24h</span>
                                         <span className="text-xs">Urgences prioritaires</span>
@@ -197,9 +209,6 @@ const ServicesTraitementEau = () => {
                             </div>
                         </div>
                     </div>
-
-                    {/* Architectural Accent */}
-                    <div className="absolute bottom-0 right-0 w-1/3 h-24 bg-white rounded-tl-[5rem] hidden md:block z-10" />
                 </section>
 
                 {/* 2. SERVICES CAROUSEL - WITH WATERMARK */}
@@ -212,8 +221,8 @@ const ServicesTraitementEau = () => {
                     <div className="container mx-auto px-6 relative z-10">
                         <div className="max-w-4xl mx-auto text-center mb-24 space-y-6 animate-in fade-in slide-in-from-bottom duration-700">
                             <h2 className="heading-pro-max">
-                                <span className="italic font-light text-[#18448F] block">Une expertise complète</span>
-                                <span className="font-bold text-[#18448F] block">pour votre eau</span>
+                                <span className="font-bold not-italic text-[#18448F] block">Une expertise complète</span>
+                                <span className="font-bold text-[#8CC63F] block">pour votre eau</span>
                             </h2>
                             <p className="body-pro-max max-w-2xl mx-auto text-slate-500">
                                 De l'installation à la maintenance préventive, nos techniciens certifiés assurent la pérennité de vos équipements de traitement d'eau à travers tout le Québec.
@@ -623,8 +632,8 @@ const ServicesTraitementEau = () => {
                             <>
                                 <div className="max-w-4xl mx-auto text-center mb-16 space-y-6">
                                     <h2 className="heading-pro-max">
-                                        <span className="italic font-light text-[#18448F] block">Planifiez votre</span>
-                                        <span className="font-bold text-[#18448F] block">rendez-vous de service.</span>
+                                        <span className="font-bold not-italic text-[#18448F] block">Planifiez votre</span>
+                                        <span className="font-bold text-[#8CC63F] block">rendez-vous de service.</span>
                                     </h2>
                                     <p className="body-pro-max max-w-2xl mx-auto">
                                         Besoin d'une installation, d'une réparation ou d'un simple changement de filtres ? Nos experts interviennent sur tous les types d'équipements, au Grand Montréal et ses environs.
