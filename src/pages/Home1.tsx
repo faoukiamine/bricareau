@@ -280,7 +280,7 @@ const Home1 = () => {
                                 <span 
                                     key={i} 
                                     className="text-blue-200/50 font-bold text-xl italic whitespace-nowrap cursor-default animate-logo-light-up"
-                                    style={{ animationDelay: `${(i * 1.25) - 3.5}s` }}
+                                    style={{ animationDelay: `${(i * 1.25) - 6.5}s` }}
                                 >
                                     {partner}
                                 </span>
@@ -292,7 +292,7 @@ const Home1 = () => {
                                 <span 
                                     key={`dup-${i}`} 
                                     className="text-blue-200/50 font-bold text-xl italic whitespace-nowrap cursor-default animate-logo-light-up"
-                                    style={{ animationDelay: `${(i * 1.25) - 3.5}s` }}
+                                    style={{ animationDelay: `${(i * 1.25) - 6.5}s` }}
                                 >
                                     {partner}
                                 </span>
