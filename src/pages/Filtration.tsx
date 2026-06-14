@@ -207,7 +207,7 @@ const Filtration = () => {
                                     desc: "Traces de plomb, micro-plastiques et hormones. Protégez les systèmes immunitaires fragiles de votre famille.",
                                     benefit: "Sécurité Totale",
                                     color: "bg-pink-500",
-                                    icon: <img src={healthAndSafetyIcon} className="w-6 h-6 brightness-0 invert" alt="Santé & Nouveau-nés icon" />,
+                                    icon: <img src={healthAndSafetyIcon} className="w-6 h-6 brightness-0 invert"  alt="Santé & Nouveau-nés icon" title="Filtration Bricareau par Bricareau" />,
                                     img: newbornHealthImg
                                 },
                                 {
@@ -295,16 +295,15 @@ const Filtration = () => {
                                     <div className="relative z-10 rounded-none lg:rounded-[3rem] overflow-hidden aspect-square shadow-none lg:shadow-2xl transition-transform duration-700 group-hover:scale-[1.01]">
                                         <img
                                             src={teenagerShowerImg}
-                                            alt="Douche sous eau filtrée Bricareau - Protection de la peau et des cheveux"
                                             className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
-                                        />
+                                         alt="Douche sous eau filtrée Bricareau - Protection de la peau et des cheveux" title="Filtration Bricareau par Bricareau" />
                                         <div className="absolute inset-0 bg-blue-900/10 mix-blend-multiply" />
                                     </div>
 
                                     {/* Floating Detail Card */}
                                     <div className="absolute -bottom-10 -right-6 md:-right-10 z-20 bg-white/90 backdrop-blur-xl p-8 rounded-[2.5rem] shadow-2xl border border-white/50 max-w-[280px] hidden md:block animate-float">
                                         <div className="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center mb-4 shadow-lg shadow-blue-200">
-                                            <img src={hotelClassImg} className="h-6 w-6 brightness-0 invert" alt="Qualité Hôtelière" />
+                                            <img src={hotelClassImg} className="h-6 w-6 brightness-0 invert"  alt="Qualité Hôtelière - fontaine à eau bureau" title="Fontaine à eau bureau par Bricareau" />
                                         </div>
                                         <h4 className="text-xl font-bold text-slate-900 mb-2">Qualité Hôtelière</h4>
                                         <p className="text-sm text-slate-500 font-light leading-relaxed">
@@ -386,15 +385,14 @@ const Filtration = () => {
                                     <div className="relative z-10 rounded-none lg:rounded-[3rem] overflow-hidden aspect-square shadow-none lg:shadow-2xl transition-transform duration-700 group-hover:scale-[1.01]">
                                         <img
                                             src={glassOfWaterImg}
-                                            alt="Verre d'eau pure provenant d'un système d'osmose inverse Bricareau"
                                             className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
-                                        />
+                                         alt="Verre d'eau pure provenant d'un système d'osmose inverse Bricareau" title="Filtration Bricareau par Bricareau" />
                                     </div>
 
                                     {/* Floating Detail Card */}
                                     <div className="absolute -bottom-10 -left-6 md:-left-10 z-20 bg-white/90 backdrop-blur-xl p-8 rounded-[2.5rem] shadow-2xl border border-white/50 max-w-[280px] hidden md:block animate-float">
                                         <div className="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center mb-4 shadow-lg shadow-blue-200">
-                                            <img src={verifiedImg} className="h-6 w-6 brightness-0 invert" alt="Pureté Certifiée" />
+                                            <img src={verifiedImg} className="h-6 w-6 brightness-0 invert"  alt="Pureté Certifiée - systèmes d'eau sur mesure" title="Systèmes d'eau sur mesure par Bricareau" />
                                         </div>
                                         <h4 className="text-xl font-bold text-slate-900 mb-2">Pureté Certifiée</h4>
                                         <p className="text-sm text-slate-500 font-light leading-relaxed">
@@ -477,16 +475,15 @@ const Filtration = () => {
                                     <div className="relative z-10 rounded-none lg:rounded-[3rem] overflow-hidden aspect-square shadow-none lg:shadow-2xl transition-transform duration-700 group-hover:scale-[1.01]">
                                         <img
                                             src={africanGirlImg}
-                                            alt="Enfant buvant de l'eau saine filtrée sous l'évier Bricareau"
                                             className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
-                                        />
+                                         alt="Enfant buvant de l'eau saine filtrée sous l'évier Bricareau" title="Analyse d'eau professionnelle par Bricareau" />
                                         <div className="absolute inset-0 bg-blue-900/10 mix-blend-multiply" />
                                     </div>
 
                                     {/* Floating Detail Card */}
                                     <div className="absolute -bottom-10 -right-6 md:-right-10 z-20 bg-white/90 backdrop-blur-xl p-8 rounded-[2.5rem] shadow-2xl border border-white/50 max-w-[280px] hidden md:block animate-float">
                                         <div className="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center mb-4 shadow-lg shadow-blue-200">
-                                            <img src={countertopsImg} className="h-6 w-6 brightness-0 invert" alt="Solution Compacte" />
+                                            <img src={countertopsImg} className="h-6 w-6 brightness-0 invert"  alt="Solution Compacte - analyse d'eau professionnelle" title="Analyse d'eau professionnelle par Bricareau" />
                                         </div>
                                         <h4 className="text-xl font-bold text-slate-900 mb-2">Solution Compacte</h4>
                                         <p className="text-sm text-slate-500 font-light leading-relaxed">
@@ -562,9 +559,8 @@ const Filtration = () => {
                     <div className="lg:hidden w-full relative bg-[#F8FAFC]">
                         <img
                             src={waterTestingImg}
-                            alt="Analyse d'eau en laboratoire - Bricareau"
                             className="w-full h-auto object-contain block mx-auto"
-                        />
+                         alt="Analyse d'eau en laboratoire - Bricareau" title="Filtration Bricareau par Bricareau" />
                         <div className="absolute inset-0 bg-blue-950/5 pointer-events-none" />
                     </div>
 
@@ -572,9 +568,8 @@ const Filtration = () => {
                     <div className="hidden lg:block absolute inset-0 z-0 bg-slate-50">
                         <img
                             src={waterTestingImg}
-                            alt="Analyse d'eau en laboratoire"
                             className="w-full h-full object-cover"
-                        />
+                         alt="Analyse d'eau en laboratoire" title="Traitement d'eau Québec par Bricareau" />
                         <div className="absolute inset-0 bg-black/30 lg:bg-gradient-to-r lg:from-black/50 lg:to-transparent" />
                     </div>
 
@@ -731,9 +726,8 @@ const Filtration = () => {
             <div className="absolute inset-0 z-0 opacity-40">
                 <img
                     src={ourteamstudyyourwaterImg}
-                    alt="Problématique d'eau dure sur la robinetterie - Solution Bricareau"
                     className="w-full h-full object-cover grayscale brightness-150"
-                />
+                 alt="Problématique d'eau dure sur la robinetterie - Solution Bricareau" title="Systèmes d'eau sur mesure par Bricareau" />
                 <div className="absolute inset-0 bg-[#18448F]/10 backdrop-blur-sm" />
             </div>
 

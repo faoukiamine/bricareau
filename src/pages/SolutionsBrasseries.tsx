@@ -75,9 +75,8 @@ const SolutionsBrasseries = () => {
                     <div className="absolute inset-0 z-0 select-none pointer-events-none opacity-[0.28] mix-blend-multiply">
                         <img 
                             src={breweryBgDetailImg} 
-                            alt="" 
                             className="w-full h-full object-cover grayscale scale-105" 
-                        />
+                         alt="Image illustrant nos solutions - systèmes d'eau sur mesure | traitement d'eau Québec" title="Systèmes d'eau sur mesure par Bricareau" />
                         <div className="absolute inset-0 bg-gradient-to-t from-[#FAFBFD] via-transparent to-[#FAFBFD]" />
                         <div className="absolute inset-0 bg-gradient-to-r from-[#FAFBFD] via-transparent to-[#FAFBFD]" />
                         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_20%,#FAFBFD_75%)]" />
@@ -131,9 +130,8 @@ const SolutionsBrasseries = () => {
                                 <div className="relative rounded-[2rem] overflow-hidden aspect-[16/10] bg-slate-950 group shadow-[0_20px_50px_rgba(0,0,0,0.12)] border border-slate-100 flex items-center justify-center cursor-pointer">
                                     <img 
                                         src={brewerySingleImg} 
-                                        alt="Schéma technique de filtration et de profilage d'eau pour brasseries" 
                                         className="w-full h-full object-cover opacity-90 group-hover:scale-[1.03] transition-transform duration-700 ease-out"
-                                    />
+                                     alt="Schéma technique de filtration et de profilage d'eau pour brasseries" title="Filtration Bricareau par Bricareau" />
                                     {/* Glassmorphic Play Button overlay */}
                                     <div className="absolute inset-0 bg-blue-900/5 group-hover:bg-blue-900/10 transition-colors" />
                                     <div className="absolute w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform duration-300">
@@ -226,9 +224,8 @@ const SolutionsBrasseries = () => {
                                 <div className="aspect-[16/10] w-full rounded-2xl overflow-hidden shadow-inner">
                                     <img 
                                         src={uvSystemKillBacteriaImg} 
-                                        alt="Équipement d'osmose inverse industriel de haute technologie conçu par Bricareau" 
                                         className="w-full h-full object-cover" 
-                                    />
+                                     alt="Équipement d'osmose inverse industriel de haute technologie conçu par Bricareau" title="Traitement d'eau Québec par Bricareau" />
                                 </div>
                             </div>
 
@@ -248,9 +245,8 @@ const SolutionsBrasseries = () => {
                                 <div className="aspect-[16/10] w-full rounded-2xl overflow-hidden shadow-inner">
                                     <img 
                                         src={skid0454Img} 
-                                        alt="Station modulaire de filtration et skid de traitement pour microbrasseries" 
                                         className="w-full h-full object-cover" 
-                                    />
+                                     alt="Station modulaire de filtration et skid de traitement pour microbrasseries" title="Filtration Bricareau par Bricareau" />
                                 </div>
                             </div>
 
@@ -270,9 +266,8 @@ const SolutionsBrasseries = () => {
                                 <div className="aspect-[16/10] w-full rounded-2xl overflow-hidden shadow-inner">
                                     <img 
                                         src={technicianInspectionImg} 
-                                        alt="Technicien Bricareau effectuant la maintenance préventive d'une station de traitement" 
                                         className="w-full h-full object-cover" 
-                                    />
+                                     alt="Technicien Bricareau effectuant la maintenance préventive d'une station de traitement" title="Traitement d'eau Québec par Bricareau" />
                                 </div>
                             </div>
 
@@ -305,9 +300,8 @@ const SolutionsBrasseries = () => {
                     <div className="absolute inset-0 z-0 opacity-40">
                         <img
                             src={beerImg}
-                            alt="Technicien inspectant les systèmes de filtration de la brasserie - Solution Bricareau"
                             className="w-full h-full object-cover grayscale brightness-110"
-                        />
+                         alt="Technicien inspectant les systèmes de filtration de la brasserie - Solution Bricareau" title="Filtration Bricareau par Bricareau" />
                         <div className="absolute inset-0 bg-[#18448F]/30 backdrop-blur-sm" />
                     </div>
 

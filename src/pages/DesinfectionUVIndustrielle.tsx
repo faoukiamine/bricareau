@@ -52,9 +52,8 @@ const DesinfectionUVIndustrielle = () => {
                     <div className="absolute inset-0 z-0">
                         <img 
                             src={heroImg} 
-                            alt="Industrial Sterilization Room" 
                             className="w-full h-full object-cover opacity-20 scale-110 blur-sm" 
-                        />
+                         alt="Industrial Sterilization Room - système de filtration usine" title="Système de filtration usine par Bricareau" />
                         {/* Purple/Blue Glow Overlays */}
                         <div className="absolute inset-0 bg-gradient-to-r from-[#05050a] via-[#05050a]/90 to-transparent" />
                         <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[800px] h-[800px] bg-purple-600/10 rounded-full blur-[120px]" />
@@ -117,7 +116,7 @@ const DesinfectionUVIndustrielle = () => {
                                     <div className="absolute inset-0 overflow-hidden rounded-[4rem]">
                                         <div className="absolute -top-1/2 -left-1/2 w-full h-full bg-gradient-to-br from-purple-500/10 to-transparent animate-pulse" />
                                     </div>
-                                    <img src={mainImg} alt="UV Reactor Unit" className="w-full h-auto drop-shadow-2xl relative z-10 transition-transform duration-1000 hover:scale-105" />
+                                    <img src={mainImg} className="w-full h-auto drop-shadow-2xl relative z-10 transition-transform duration-1000 hover:scale-105"  alt="UV Reactor Unit - osmose inverse industrielle" title="Osmose inverse industrielle par Bricareau" />
                                     
                                     {/* Tech Callout */}
                                     <div className="absolute -bottom-10 -right-10 bg-[#05050a] text-white p-10 rounded-[3rem] shadow-2xl border border-white/10 z-20">

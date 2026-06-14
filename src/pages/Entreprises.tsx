@@ -94,9 +94,8 @@ const Entreprises = () => {
           <div className="absolute inset-0 z-0">
             <img 
               src={heroImage} 
-              alt="Solutions Hydratation Business Bricareau" 
               className="absolute inset-0 w-full h-full object-cover opacity-95 brightness-110" 
-            />
+             alt="Solutions Hydratation Business Bricareau" title="Fontaine à eau bureau par Bricareau" />
             <div className="absolute inset-0 bg-blue-900/20 mix-blend-multiply" />
             <div className="absolute inset-0 bg-gradient-to-t from-white via-white/20 to-transparent" />
           </div>
@@ -210,9 +209,8 @@ const Entreprises = () => {
                 <div className="w-full lg:w-1/2 relative group overflow-hidden h-[400px] md:h-[550px] lg:h-auto border-r border-slate-100">
                     <img
                         src={corporateLifeImg}
-                        alt="Expérience d'hydratation urbaine Bricareau"
                         className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
-                    />
+                     alt="Expérience d'hydratation urbaine Bricareau" title="Fontaine à eau bureau par Bricareau" />
                     {/* Floating Badge */}
                     <div className="absolute bottom-10 left-10 right-10 md:right-auto md:w-80 bg-blue-600/95 backdrop-blur-xl p-8 rounded-[2rem] shadow-2xl border border-white/20 z-20">
                          <div className="text-4xl font-bold mb-2 text-white italic tracking-tighter">10k+</div>
@@ -342,9 +340,8 @@ const Entreprises = () => {
                 <div className="w-full lg:w-1/2 relative group overflow-hidden h-[400px] md:h-[550px] lg:h-auto border-l border-slate-100">
                     <img
                         src={officeMeetingImg}
-                        alt="Collaboration au bureau"
                         className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
-                    />
+                     alt="Collaboration au bureau" title="Adoucisseur d'eau pour restaurant par Bricareau" />
                     {/* Floating Badge */}
                     <div className="absolute top-10 left-10 right-10 md:right-auto md:w-80 bg-white/95 backdrop-blur-xl p-8 rounded-[2rem] shadow-2xl border border-white/20 z-20">
                          <Sparkles className="h-10 w-10 text-indigo-500 mb-4" />
@@ -361,9 +358,8 @@ const Entreprises = () => {
                 <div className="w-full lg:w-1/2 relative group overflow-hidden h-[400px] md:h-[550px] lg:h-auto border-r border-slate-200 bg-white shadow-inner">
                     <img
                         src={iceCubeImg}
-                        alt="Machine à glaçons Manitowoc"
                         className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
-                    />
+                     alt="Machine à glaçons Manitowoc - adoucisseur d'eau pour restaurant" title="Adoucisseur d'eau pour restaurant par Bricareau" />
                     {/* Floating Badge */}
                     <div className="absolute bottom-10 left-10 right-10 md:right-auto md:w-80 bg-blue-600/95 backdrop-blur-xl p-8 rounded-[2rem] shadow-2xl border border-white/20 z-20">
                          <Snowflake className="h-8 w-8 text-blue-200 mb-4" />
@@ -419,9 +415,8 @@ const Entreprises = () => {
             <div className="absolute inset-0 z-0">
                 <img
                     src={fountainImg}
-                    alt="Hydratation premium au bureau"
                     className="w-full h-full object-cover object-left scale-110 -translate-x-20"
-                />
+                 alt="Hydratation premium au bureau" title="Système d'eau hôtel par Bricareau" />
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-blue-900/80 to-blue-600/40" />
             </div>
             <div className="container mx-auto px-6 relative z-10 text-center">

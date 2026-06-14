@@ -89,9 +89,8 @@ const Blog = () => {
 
                         <img
                             src={blogHero}
-                            alt="Articles et Ressources Bricareau - Conseils d'experts en traitement d'eau"
                             className="w-full h-full object-cover object-[center_35%]"
-                        />
+                         alt="Articles et Ressources Bricareau - Conseils d'experts en traitement d'eau" title="Systèmes d'eau sur mesure par Bricareau" />
                         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/50 to-white lg:bg-none lg:z-10" />
                         <div className="hidden lg:block absolute inset-0 bg-black/40 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
                         <div className="hidden lg:block absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-white via-white/10 to-transparent" />

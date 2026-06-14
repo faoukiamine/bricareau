@@ -40,7 +40,7 @@ const EauPetillanteEntreprises = () => {
             <main>
                 <section className="relative min-h-[75vh] flex items-center pt-24 overflow-hidden bg-slate-900 font-sans">
                     <div className="absolute inset-0 z-0 opacity-40">
-                        <img src={heroFountains} alt="Eau Pétillante Bricareau" className="w-full h-full object-cover grayscale brightness-50" />
+                        <img src={heroFountains} className="w-full h-full object-cover grayscale brightness-50"  alt="Eau Pétillante Bricareau" title="Système d'eau hôtel par Bricareau" />
                         <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/40 to-transparent" />
                     </div>
 
@@ -105,7 +105,7 @@ const EauPetillanteEntreprises = () => {
                             </div>
                             <div className="relative">
                                 <div className="absolute -inset-4 bg-blue-100/50 rounded-[4rem] blur-2xl -z-10" />
-                                <img src={bottlelessFountainImg} alt="Fontaine eau pétillante" className="rounded-[4rem] shadow-2xl w-full h-[600px] object-cover" />
+                                <img src={bottlelessFountainImg} className="rounded-[4rem] shadow-2xl w-full h-[600px] object-cover"  alt="Fontaine eau pétillante" title="Filtration d'eau commerciale par Bricareau" />
                             </div>
                         </div>
                     </div>

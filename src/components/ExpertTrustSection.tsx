@@ -29,9 +29,8 @@ const ExpertTrustSection = ({
                 <div className="w-full lg:w-1/2 relative group overflow-hidden h-[400px] md:h-[550px] lg:h-auto">
                     <img
                         src={image}
-                        alt="Expert Bricareau lors d'une analyse d'eau rigoureuse"
                         className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    />
+                     alt="Expert Bricareau lors d'une analyse d'eau rigoureuse" title="Traitement d'eau Québec par Bricareau" />
                     {/* Floating Stats Overlay */}
                     <div className="absolute top-10 right-10 bg-white/90 backdrop-blur-md p-6 rounded-3xl shadow-xl border border-white/50 max-w-[200px] z-20 animate-float">
                         <div className="text-3xl font-bold text-blue-600 mb-1">+25 ans</div>

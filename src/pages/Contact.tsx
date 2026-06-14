@@ -40,9 +40,8 @@ const Contact = () => {
           <div className="relative lg:absolute lg:inset-0 h-[350px] sm:h-[450px] lg:h-full w-full lg:z-0 overflow-hidden">
             <img
               src={contactHero}
-              alt="Contact Bricareau"
               className="w-full h-full object-cover object-[center_35%] opacity-80"
-            />
+             alt="Contact Bricareau" title="Expert en eau par Bricareau" />
             <div className="absolute inset-0 bg-gradient-to-r from-[#f0f9ff] via-[#f0f9ff]/40 35% to-transparent z-10" />
           </div>
 
@@ -90,7 +89,7 @@ const Contact = () => {
                 className="flex flex-col h-full group bg-white border border-slate-100 rounded-[2.5rem] p-6 transition-all duration-500 hover:shadow-[0_20px_50px_rgba(37,99,235,0.08)] hover:border-blue-200 hover:-translate-y-2 animate-in fade-in slide-in-from-bottom duration-700 delay-0"
               >
                 <div className="overflow-hidden mb-8 rounded-3xl aspect-[16/10] bg-slate-50 relative">
-                  <img src="/images/FAQ.jpg" alt="Foire aux questions" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" />
+                  <img src="/images/FAQ.jpg" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"  alt="Foire aux questions - filtration Bricareau" title="Filtration Bricareau par Bricareau" />
                   <div className="absolute inset-0 bg-blue-600/5 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </div>
                 <h3 className="mb-4 text-xl font-bold text-[#18448F] group-hover:text-blue-600 transition-colors">
@@ -112,7 +111,7 @@ const Contact = () => {
                 className="flex flex-col h-full group bg-white border border-slate-100 rounded-[2.5rem] p-6 transition-all duration-500 hover:shadow-[0_20px_50px_rgba(37,99,235,0.08)] hover:border-blue-200 hover:-translate-y-2 animate-in fade-in slide-in-from-bottom duration-700 delay-200"
               >
                 <div className="overflow-hidden mb-8 rounded-3xl aspect-[16/10] bg-slate-50 relative">
-                  <img src="/images/40-AdobeStock_365603381.jpeg" alt="Consultation gratuite" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" />
+                  <img src="/images/40-AdobeStock_365603381.jpeg" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"  alt="Consultation gratuite - analyse d'eau professionnelle" title="Analyse d'eau professionnelle par Bricareau" />
                   <div className="absolute inset-0 bg-blue-600/5 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </div>
                 <h3 className="mb-4 text-xl font-bold text-[#18448F] group-hover:text-blue-600 transition-colors">
@@ -134,7 +133,7 @@ const Contact = () => {
                 className="flex flex-col h-full group bg-white border border-slate-100 rounded-[2.5rem] p-6 transition-all duration-500 hover:shadow-[0_20px_50px_rgba(37,99,235,0.08)] hover:border-blue-200 hover:-translate-y-2 animate-in fade-in slide-in-from-bottom duration-700 delay-400"
               >
                 <div className="overflow-hidden mb-8 rounded-3xl aspect-[16/10] bg-slate-50 relative">
-                  <img src="/images/SERVICES.jpg" alt="Support client & Entretien" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" />
+                  <img src="/images/SERVICES.jpg" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"  alt="Support client & Entretien - expert en eau" title="Expert en eau par Bricareau" />
                   <div className="absolute inset-0 bg-blue-600/5 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </div>
                 <div className="flex items-center gap-2 mb-3 bg-green-50 text-green-600 px-3 py-1 rounded-full w-fit text-[10px] font-bold uppercase tracking-wider">

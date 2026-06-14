@@ -163,9 +163,8 @@ const FontainesDeauModernes = () => {
                             <div className="relative rounded-[2rem] overflow-hidden shadow-xl aspect-square lg:aspect-[4/3] group">
                                 <img 
                                     src={mandrinkingglassofwaterImg} 
-                                    alt="L'excellence de l'eau à la source" 
                                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" 
-                                />
+                                 alt="L'excellence de l'eau à la source" title="Filtration Bricareau par Bricareau" />
                                 <div className="absolute inset-0 bg-gradient-to-t from-[#18448F]/20 to-transparent mix-blend-multiply" />
                             </div>
                         </div>
@@ -441,9 +440,8 @@ const FontainesDeauModernes = () => {
                                         <img 
                                             key={activeFeatureImage}
                                             src={activeFeatureImage} 
-                                            alt="Solutions d'hydratation écologiques et design pour le bureau Bricareau" 
                                             className="relative z-10 w-full h-full object-cover drop-shadow-2xl animate-in fade-in zoom-in-95 duration-700"
-                                        />
+                                         alt="Solutions d'hydratation écologiques et design pour le bureau Bricareau" title="Analyse d'eau professionnelle par Bricareau" />
 
                                         {/* Floating Badge */}
                                         <div className="absolute bottom-6 right-6 z-20 bg-white/70 backdrop-blur-md border border-slate-100 py-2 px-4 rounded-full shadow-sm flex items-center gap-2">
@@ -483,16 +481,14 @@ const FontainesDeauModernes = () => {
                     <div className="aspect-[16/10] rounded-[2.5rem] overflow-hidden shadow-md">
                         <img 
                             src={eauFontaineImg} 
-                            alt="Remplissage d'une bouteille d'eau filtrée pure" 
                             className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000" 
-                        />
+                         alt="Remplissage d'une bouteille d'eau filtrée pure" title="Analyse d'eau professionnelle par Bricareau" />
                     </div>
                      <div className="aspect-[16/10] rounded-[2.5rem] overflow-hidden shadow-md">
                         <img 
                             src={bottlelessFountainImg3} 
-                            alt="Remplissage d'une bouteille d'eau filtrée pure" 
                             className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000" 
-                        />
+                         alt="Remplissage d'une bouteille d'eau filtrée pure" title="Systèmes d'eau sur mesure par Bricareau" />
                     </div>
                 </section>
 
@@ -682,9 +678,8 @@ const FontainesDeauModernes = () => {
                     <div className="absolute inset-0 z-0 opacity-25">
                         <img
                             src={ecoImpactImg4}
-                            alt="Fontaine d'eau moderne installée en entreprise - Solution Bricareau"
                             className="w-full h-full object-cover grayscale brightness-110"
-                        />
+                         alt="Fontaine d'eau moderne installée en entreprise - Solution Bricareau" title="Expert en eau par Bricareau" />
                         <div className="absolute inset-0 bg-[#18448F]/30 backdrop-blur-sm" />
                     </div>
                     

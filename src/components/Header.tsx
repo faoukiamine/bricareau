@@ -104,9 +104,8 @@ const Header = () => {
             <NavLink to="/" className="flex items-center flex-shrink-0">
               <img
                 src={logoBricareau}
-                alt="Bricareau Water Specialist"
                 className="h-10 md:h-12 w-auto object-contain transition-all duration-500"
-              />
+               alt="Bricareau Water Specialist" title="Équipement de expert en eau par Bricareau" />
             </NavLink>
 
             {/* Main Nav (Desktop) */}

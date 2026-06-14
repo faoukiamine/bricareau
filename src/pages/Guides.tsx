@@ -77,9 +77,8 @@ const Guides = () => {
                         <div className="lg:hidden w-full h-[300px] relative">
                             <img
                                 src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?q=80&w=1200&auto=format&fit=crop"
-                                alt="Guides et Documentation Bricareau"
                                 className="w-full h-full object-cover"
-                            />
+                             alt="Guides et Documentation Bricareau" title="Expert en eau par Bricareau" />
                             <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-transparent"></div>
                         </div>
 

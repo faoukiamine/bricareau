@@ -53,10 +53,9 @@ const WaterDiagnosis = () => {
                 <div className="w-full lg:w-1/2 relative group overflow-hidden h-[400px] md:h-[550px] lg:h-auto border-l border-slate-100">
                     <img
                         src={guideExpertImg}
-                        alt="Expert Bricareau effectuant une analyse d'eau à domicile pour un diagnostic personnalisé"
                         className="absolute inset-0 w-full h-full object-cover object-top"
                         style={{ filter: 'contrast(1.05) saturate(1.1) brightness(1.02)' }}
-                    />
+                     alt="Expert Bricareau effectuant une analyse d'eau à domicile pour un diagnostic personnalisé" title="Systèmes d'eau sur mesure par Bricareau" />
                     
                     {/* Glassmorphism Badge */}
                     <div className="absolute bottom-8 left-8 right-8 md:right-auto md:w-80 bg-white/90 backdrop-blur-xl p-6 rounded-3xl shadow-xl border border-white/50 z-20">

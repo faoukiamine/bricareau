@@ -91,9 +91,8 @@ const FiltreEauMachineCafe = () => {
                     <div className="absolute inset-0 z-0">
                         <img 
                             src={heroImg} 
-                            alt="Solutions de Filtration Café" 
                             className="w-full h-full object-cover opacity-90" 
-                        />
+                         alt="Solutions de Filtration Café - traitement d'eau Québec" title="Traitement d'eau Québec par Bricareau" />
                         <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent" />
                         <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent" />
                     </div>
@@ -268,9 +267,8 @@ const FiltreEauMachineCafe = () => {
                                     <div className="relative aspect-square rounded-[4rem] overflow-hidden shadow-2xl border border-slate-100 group-hover:-rotate-1 transition-transform duration-700">
                                         <img 
                                             src={coffeeDifferenceImg} 
-                                            alt="Le bon filtre fait toute la différence" 
                                             className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" 
-                                        />
+                                         alt="Le bon filtre fait toute la différence - analyse d'eau professionnelle" title="Analyse d'eau professionnelle par Bricareau" />
                                         <div className="absolute inset-0 bg-gradient-to-tr from-blue-900/20 via-transparent to-transparent" />
                                     </div>
 

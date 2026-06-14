@@ -45,9 +45,8 @@ const Footer = () => {
             <div className="flex items-center gap-2">
               <img
                 src={logoBricareau}
-                alt="Bricareau Water Specialist - Spécialiste du traitement d'eau au Canada"
                 className="h-10 md:h-12 w-auto brightness-0 invert"
-              />
+               alt="Bricareau Water Specialist - Spécialiste du traitement d'eau au Canada" title="Équipement de filtration Bricareau par Bricareau" />
             </div>
             <p className="text-sm text-white/80 leading-relaxed">
               Bricareau est votre expert en traitement d'eau et filtration au Québec depuis plus de 20 ans. Que ce soit pour l'installation d'un adoucisseur d'eau, d'un système d'osmose inverse, de la filtration de l'eau de puits ou de la désinfection UV, nous offrons des solutions complètes adaptées aux besoins résidentiels, commerciaux et industriels. Faites confiance à nos spécialistes certifiés pour une eau pure, saine et de qualité supérieure partout au Québec.

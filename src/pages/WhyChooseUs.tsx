@@ -68,9 +68,8 @@ const WhyChooseUs = () => {
                         <div className="absolute right-0 top-0 w-full lg:w-[80%] h-full">
                             <img 
                                 src={heroImg} 
-                                alt="Eau Pure Bricareau" 
                                 className="absolute inset-0 w-full h-full object-cover object-bottom lg:object-center animate-in fade-in duration-1000"
-                            />
+                             alt="Eau Pure Bricareau" title="Systèmes d'eau sur mesure par Bricareau" />
                         </div>
                     </div>
                     <div className="absolute right-0 top-0 w-full h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/20 via-transparent to-transparent pointer-events-none z-20"></div>
@@ -204,7 +203,7 @@ const WhyChooseUs = () => {
                         </div>
                         <div className="lg:w-1/2 w-full min-h-[500px] md:min-h-[600px] lg:min-h-0 lg:aspect-square relative rounded-[3rem] overflow-hidden group shadow-2xl">
                             <div className="absolute inset-0 bg-[#18448F]/20 mix-blend-multiply z-10 group-hover:opacity-0 transition-opacity duration-700" />
-                            <img src={image2119} alt="Technologies de pointe" className="absolute inset-0 w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000" />
+                            <img src={image2119} className="absolute inset-0 w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000"  alt="Technologies de pointe - expert en eau" title="Expert en eau par Bricareau" />
                         </div>
                     </div>
 
@@ -212,7 +211,7 @@ const WhyChooseUs = () => {
                     <div className="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-16 px-6">
                         <div className="lg:w-1/2 w-full min-h-[500px] md:min-h-[600px] lg:min-h-0 lg:aspect-square relative rounded-[3rem] overflow-hidden group shadow-2xl">
                             <div className="absolute inset-0 bg-[#8CC63F]/20 mix-blend-multiply z-10 group-hover:opacity-0 transition-opacity duration-700" />
-                            <img src={image2120} alt="Entreprise socialement responsable" className="absolute inset-0 w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000" />
+                            <img src={image2120} className="absolute inset-0 w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000"  alt="Entreprise socialement responsable - traitement d'eau Québec" title="Traitement d'eau Québec par Bricareau" />
                         </div>
                         <div className="lg:w-1/2 space-y-8">
                             <h3 className="text-3xl lg:text-5xl font-light text-slate-900 leading-tight">
@@ -317,7 +316,7 @@ const WhyChooseUs = () => {
                 <section className="relative overflow-hidden min-h-[80vh] flex items-center py-32">
                     {/* Background Image Full Width */}
                     <div className="absolute inset-0 z-0">
-                        <img src={image2230} alt="Excellence Bricareau" className="w-full h-full object-cover object-center" />
+                        <img src={image2230} className="w-full h-full object-cover object-center"  alt="Excellence Bricareau" title="Filtration Bricareau par Bricareau" />
                         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-slate-900/60 to-slate-900/95" />
                     </div>
                     

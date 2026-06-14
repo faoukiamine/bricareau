@@ -343,7 +343,7 @@ const Home1 = () => {
                         <div className="w-full lg:w-1/2 relative min-h-[500px] md:min-h-[600px] lg:min-h-[400px] order-1 lg:order-2">
                             {/* Sharp rectangular image */}
                             <div className="absolute inset-0 z-10 shadow-md">
-                                <img src={resImg} alt="Système de traitement d'eau résidentiel" className="w-full h-full object-cover rounded-none" />
+                                <img src={resImg} className="w-full h-full object-cover rounded-none"  alt="Système de traitement d'eau résidentiel" title="Traitement d'eau Québec par Bricareau" />
                             </div>
                             
                             {/* Overlapping Info Block (Corporate style) */}
@@ -373,7 +373,7 @@ const Home1 = () => {
                         <div className="w-full lg:w-1/2 relative min-h-[500px] md:min-h-[600px] lg:min-h-[400px] order-1 lg:order-1">
                             {/* Sharp rectangular image */}
                             <div className="absolute inset-0 z-10 shadow-md">
-                                <img src={comImg} alt="Système de traitement d'eau pour bureaux" className="w-full h-full object-cover rounded-none" />
+                                <img src={comImg} className="w-full h-full object-cover rounded-none"  alt="Système de traitement d'eau pour bureaux" title="Analyse d'eau professionnelle par Bricareau" />
                             </div>
                             
                             {/* Overlapping Info Block (Corporate style) */}
@@ -467,7 +467,7 @@ const Home1 = () => {
                         <div className="w-full lg:w-1/2 relative min-h-[500px] md:min-h-[600px] lg:min-h-[400px] order-1 lg:order-2">
                             {/* Sharp rectangular image */}
                             <div className="absolute inset-0 z-10 shadow-md">
-                                <img src={horecaImg} alt="Système de traitement d'eau HORECA" className="w-full h-full object-cover rounded-none" />
+                                <img src={horecaImg} className="w-full h-full object-cover rounded-none"  alt="Système de traitement d'eau HORECA" title="Expert en eau par Bricareau" />
                             </div>
                             
                             {/* Overlapping Info Block (Corporate style) */}
@@ -582,7 +582,7 @@ const Home1 = () => {
                         <div className="w-full lg:w-1/2 relative min-h-[500px] md:min-h-[600px] lg:min-h-[400px] order-1 lg:order-1">
                             {/* Sharp rectangular image */}
                             <div className="absolute inset-0 z-10 shadow-md">
-                                <img src={waterTestingImg} alt="Analyse d'eau" className="w-full h-full object-cover rounded-none" />
+                                <img src={waterTestingImg} className="w-full h-full object-cover rounded-none"  alt="Analyse d'eau" title="Systèmes d'eau sur mesure par Bricareau" />
                             </div>
                             
                             {/* Overlapping Info Block (Corporate style) */}

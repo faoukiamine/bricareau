@@ -43,7 +43,7 @@ const BentoExperience = () => {
                     
                     {/* Column 1: Left Square - Diagnostic */}
                     <div className="w-full md:w-[18%] h-80 relative overflow-hidden rounded-[2.5rem] bg-[#1a1a1a] group cursor-pointer border border-white/5 flex-shrink-0">
-                        <img src={diagnosticStepImg} className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-1000" alt="" />
+                        <img src={diagnosticStepImg} className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-1000"  alt="Image illustrant nos solutions - analyse d'eau professionnelle | systèmes d'eau sur mesure" title="Analyse d'eau professionnelle par Bricareau" />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20" />
                         <div className="absolute inset-0 p-10 flex flex-col justify-end z-10">
                             <span className="text-4xl font-black text-white/20 mb-4 block leading-none">01</span>
@@ -57,7 +57,7 @@ const BentoExperience = () => {
                     {/* Column 2: Middle-Left Tall/Split */}
                     <div className="flex flex-col gap-6 w-full md:w-[20%] flex-shrink-0">
                         <div className="w-full h-80 relative overflow-hidden rounded-[2.5rem] bg-[#1a1a1a] group border border-white/5">
-                             <img src={customStepImg} className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" alt="" />
+                             <img src={customStepImg} className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"  alt="Image illustrant nos solutions - traitement d'eau Québec | traitement d'eau Québec" title="Traitement d'eau Québec par Bricareau" />
                              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20" />
                              <div className="absolute inset-0 p-10 flex flex-col justify-end z-10">
                                  <span className="text-4xl font-black text-white/10 mb-4 block leading-none">02</span>
@@ -68,24 +68,24 @@ const BentoExperience = () => {
                              </div>
                         </div>
                         <div className="w-full h-48 relative overflow-hidden rounded-[2.5rem] bg-slate-100 border border-slate-100 overflow-hidden group">
-                             <img src={officeImg} className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" alt="" />
+                             <img src={officeImg} className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"  alt="Image illustrant nos solutions - filtration Bricareau | expert en eau" title="Filtration Bricareau par Bricareau" />
                         </div>
                     </div>
 
                     {/* Column 3: Center Center */}
                     <div className="flex flex-col gap-6 w-full md:w-[22%] flex-shrink-0">
                         <div className="w-full h-44 relative overflow-hidden rounded-[2.5rem] bg-[#1a1a1a] group border border-white/5">
-                            <img src={customStepImg} className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000 opacity-60" alt="" />
+                            <img src={customStepImg} className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000 opacity-60"  alt="Image illustrant nos solutions - expert en eau | expert en eau" title="Expert en eau par Bricareau" />
                         </div>
                         <div className="w-full h-64 relative overflow-hidden rounded-[2.5rem] bg-slate-100 border border-slate-100 overflow-hidden group">
-                            <img src={bathroomImg} className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" alt="" />
+                            <img src={bathroomImg} className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"  alt="Image illustrant nos solutions - analyse d'eau professionnelle | filtration Bricareau" title="Analyse d'eau professionnelle par Bricareau" />
                         </div>
                     </div>
 
                     {/* Column 4: Middle-Right Tall/Split */}
                     <div className="flex flex-col gap-6 w-full md:w-[20%] flex-shrink-0">
                         <div className="w-full h-[420px] relative overflow-hidden rounded-[2.5rem] bg-[#1a1a1a] group border border-white/5">
-                            <img src={installationStepImg} className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-1000" alt="" />
+                            <img src={installationStepImg} className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-1000"  alt="Image illustrant nos solutions - systèmes d'eau sur mesure | expert en eau" title="Systèmes d'eau sur mesure par Bricareau" />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20" />
                             <div className="absolute inset-0 p-10 flex flex-col justify-end z-10">
                                 <span className="text-4xl font-black text-white/10 mb-4 block leading-none">03</span>
@@ -96,13 +96,13 @@ const BentoExperience = () => {
                             </div>
                         </div>
                         <div className="w-full h-44 relative overflow-hidden rounded-[2.5rem] bg-slate-100 border border-slate-100 overflow-hidden group">
-                             <img src={familyImg} className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" alt="" />
+                             <img src={familyImg} className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000"  alt="Image illustrant nos solutions - traitement d'eau Québec | systèmes d'eau sur mesure" title="Traitement d'eau Québec par Bricareau" />
                         </div>
                     </div>
 
                     {/* Column 5: Right Square */}
                     <div className="w-full md:w-[18%] h-64 relative overflow-hidden rounded-[2.5rem] bg-[#1a1a1a] group flex-shrink-0 border border-white/5">
-                        <img src={serenityStepImg} className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-1000" alt="" />
+                        <img src={serenityStepImg} className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-1000"  alt="Image illustrant nos solutions - filtration Bricareau | systèmes d'eau sur mesure" title="Filtration Bricareau par Bricareau" />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20" />
                         <div className="absolute inset-0 p-10 flex flex-col justify-end z-10">
                             <span className="text-4xl font-black text-white/10 mb-2 block leading-none">04</span>

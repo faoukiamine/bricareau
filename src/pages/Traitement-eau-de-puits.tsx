@@ -304,7 +304,7 @@ const TraitementEauDePuits = () => {
               {/* STEP 1: Full-Height Vertical (Diagnostic) */}
               <div className="md:col-span-3 lg:col-span-4 lg:row-span-2 group relative rounded-[3rem] overflow-hidden border border-slate-100 bg-white shadow-sm hover:shadow-2xl transition-all duration-700">
                 <div className="absolute inset-0 z-0">
-                  <img src={laboratoryImg} alt="Analyse" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-30 grayscale group-hover:grayscale-0" />
+                  <img src={laboratoryImg} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-30 grayscale group-hover:grayscale-0"  alt="Analyse - analyse d'eau professionnelle" title="Analyse d'eau professionnelle par Bricareau" />
                   <div className="absolute inset-0 bg-gradient-to-b from-white via-white/80 to-blue-50/40" />
                 </div>
                 <div className="relative z-10 p-10 h-full flex flex-col">
@@ -322,7 +322,7 @@ const TraitementEauDePuits = () => {
               {/* STEP 2: Wide Horizontal (Engineering) */}
               <div className="md:col-span-3 lg:col-span-8 group relative rounded-[3rem] overflow-hidden border border-slate-100 bg-white shadow-sm hover:shadow-2xl transition-all duration-700">
                 <div className="absolute inset-0 z-0">
-                  <img src={pidImg} alt="Conception" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-40 grayscale group-hover:grayscale-0" />
+                  <img src={pidImg} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-40 grayscale group-hover:grayscale-0"  alt="Conception - analyse d'eau professionnelle" title="Analyse d'eau professionnelle par Bricareau" />
                   <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 to-transparent" />
                 </div>
                 <div className="relative z-10 p-10 h-full flex flex-col justify-center max-w-xl">
@@ -340,7 +340,7 @@ const TraitementEauDePuits = () => {
               {/* STEP 3: Square (Installation) */}
               <div className="md:col-span-3 lg:col-span-4 group relative rounded-[3rem] overflow-hidden border border-slate-100 bg-slate-900 shadow-xl hover:shadow-blue-900/20 transition-all duration-700">
                  <div className="absolute inset-0 z-0 opacity-40">
-                  <img src={process3} alt="Installation" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
+                  <img src={process3} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"  alt="Installation - filtration Bricareau" title="Filtration Bricareau par Bricareau" />
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-blue-900/40 to-transparent" />
                 <div className="relative z-10 p-10 h-full flex flex-col">
@@ -355,7 +355,7 @@ const TraitementEauDePuits = () => {
               {/* STEP 4: Horizontal (Support) */}
               <div className="md:col-span-3 lg:col-span-4 group relative rounded-[3rem] overflow-hidden border border-blue-100 bg-white shadow-sm hover:shadow-blue-200 transition-all duration-700">
                 <div className="absolute inset-0 z-0">
-                  <img src={supportImg} alt="Suivi" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-30 grayscale group-hover:grayscale-0" />
+                  <img src={supportImg} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-30 grayscale group-hover:grayscale-0"  alt="Suivi - systèmes d'eau sur mesure" title="Systèmes d'eau sur mesure par Bricareau" />
                   <div className="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-blue-50/20" />
                 </div>
                 <div className="relative z-10 p-10 h-full flex flex-col justify-between">
@@ -396,18 +396,16 @@ const TraitementEauDePuits = () => {
           <div className="lg:hidden w-full h-auto relative bg-slate-50">
             <img
               src={waterTestingImg}
-              alt="Analyse d'eau de puits - Service Bricareau"
               className="w-full h-auto object-contain"
-            />
+             alt="Analyse d'eau de puits - Service Bricareau" title="Systèmes d'eau sur mesure par Bricareau" />
           </div>
 
           {/* Desktop Background */}
           <div className="hidden lg:block absolute inset-0 z-0">
             <img
               src={labTestImg}
-              alt="Analyse d'eau de puits en laboratoire certifié"
               className="w-full h-full object-cover"
-            />
+             alt="Analyse d'eau de puits en laboratoire certifié" title="Systèmes d'eau sur mesure par Bricareau" />
             <div className="absolute inset-0 bg-blue-900/40 lg:bg-gradient-to-r lg:from-blue-900/90 lg:to-blue-600/20 mix-blend-multiply" />
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-white via-white/10 to-transparent" />
           </div>
@@ -559,7 +557,7 @@ const TraitementEauDePuits = () => {
                   {/* Before */}
                   <div className="space-y-4">
                     <div className="relative aspect-square rounded-[2rem] overflow-hidden">
-                      <img src={WCwithIronImg} alt="Eau de puits ferreuse avant traitement" className="w-full h-full object-cover grayscale-[0.3]" />
+                      <img src={WCwithIronImg} className="w-full h-full object-cover grayscale-[0.3]"  alt="Eau de puits ferreuse avant traitement - analyse d'eau professionnelle" title="Analyse d'eau professionnelle par Bricareau" />
                       <div className="absolute inset-0 bg-orange-900/20" />
                       <span className="absolute top-4 left-4 bg-red-600 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest">Avant</span>
                     </div>
@@ -568,7 +566,7 @@ const TraitementEauDePuits = () => {
                   {/* After */}
                   <div className="space-y-4">
                     <div className="relative aspect-square rounded-[2rem] overflow-hidden border-4 border-blue-600/20">
-                      <img src={WCwithoutIronImg} alt="Eau pure après traitement Bricareau" className="w-full h-full object-cover opacity-90" />
+                      <img src={WCwithoutIronImg} className="w-full h-full object-cover opacity-90"  alt="Eau pure après traitement Bricareau" title="Systèmes d'eau sur mesure par Bricareau" />
                       <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/10 to-transparent" />
                       <span className="absolute top-4 left-4 bg-blue-600 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest">Après</span>
                     </div>
@@ -597,7 +595,7 @@ const TraitementEauDePuits = () => {
                   {/* Before */}
                   <div className="space-y-4">
                     <div className="relative aspect-square rounded-[2rem] overflow-hidden">
-                      <img src={turbideWaterThumb} alt="Eau de puits trouble avant filtration" className="w-full h-full object-cover" />
+                      <img src={turbideWaterThumb} className="w-full h-full object-cover"  alt="Eau de puits trouble avant filtration - traitement d'eau Québec" title="Traitement d'eau Québec par Bricareau" />
                       <div className="absolute inset-0 bg-slate-900/20" />
                       <span className="absolute top-4 left-4 bg-red-600 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest">Avant</span>
                     </div>
@@ -606,7 +604,7 @@ const TraitementEauDePuits = () => {
                   {/* After */}
                   <div className="space-y-4">
                     <div className="relative aspect-square rounded-[2rem] overflow-hidden border-4 border-blue-600/20">
-                        <img src={eauCristallineImg} alt="Eau pure Bricareau" className="absolute inset-0 w-full h-full object-cover" />
+                        <img src={eauCristallineImg} className="absolute inset-0 w-full h-full object-cover"  alt="Eau pure Bricareau" title="Traitement d'eau Québec par Bricareau" />
                       <span className="absolute top-4 left-4 bg-blue-600 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest">Après</span>
                     </div>
                     <p className="text-xs font-bold text-blue-600 text-center">Eau 100% limpide et inodore</p>
@@ -760,9 +758,8 @@ const TraitementEauDePuits = () => {
           <div className="absolute inset-0 z-0 opacity-40">
             <img
               src={happyFamilyImg}
-              alt="Expert Bricareau analysant l'eau de puits"
               className="w-full h-full object-cover grayscale brightness-150"
-            />
+             alt="Expert Bricareau analysant l'eau de puits" title="Expert en eau par Bricareau" />
             <div className="absolute inset-0 bg-[#18448F]/10 backdrop-blur-sm" />
           </div>
 

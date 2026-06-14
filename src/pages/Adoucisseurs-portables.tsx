@@ -145,7 +145,7 @@ const AdoucisseursPortables = () => {
                             <div className="absolute inset-x-0 bottom-0 p-10 md:p-14 z-20">
                                 <div className="flex flex-col gap-6">
                                     <div className="w-16 h-16 rounded-2xl bg-white/20 backdrop-blur-xl flex items-center justify-center text-white border border-white/30 mb-2 group-hover:scale-110 transition-transform">
-                                        <img src={carryOnBagIcon} alt="Carry On Bag Icon" className="h-8 w-8 filter brightness-0 invert" />
+                                        <img src={carryOnBagIcon} className="h-8 w-8 filter brightness-0 invert"  alt="Carry On Bag Icon - analyse d'eau professionnelle" title="Analyse d'eau professionnelle par Bricareau" />
                                     </div>
                                     <div>
                                         <span className="text-blue-300 font-bold text-xs uppercase tracking-[0.2em]">Liberté Totale</span>
@@ -184,7 +184,7 @@ const AdoucisseursPortables = () => {
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 rounded-full -mr-16 -mt-16 blur-3xl group-hover:bg-blue-400/20 transition-colors" />
                                 <div className="relative z-10 flex flex-col h-full">
                                     <div className="w-14 h-14 rounded-2xl bg-white/10 backdrop-blur-xl flex items-center justify-center mb-8 border border-white/20 group-hover:scale-110 transition-transform">
-                                        <img src={cableIcon} alt="Cable Icon" className="h-7 w-7 filter brightness-0 invert opacity-80 group-hover:opacity-100 transition-all" />
+                                        <img src={cableIcon} className="h-7 w-7 filter brightness-0 invert opacity-80 group-hover:opacity-100 transition-all"  alt="Cable Icon - expert en eau" title="Expert en eau par Bricareau" />
                                     </div>
                                     <div className="mt-auto">
                                         <span className="text-blue-100 font-bold text-xs uppercase tracking-[0.2em]">Plug & Play</span>
@@ -204,14 +204,13 @@ const AdoucisseursPortables = () => {
                             <div className="group relative bg-white rounded-[3rem] overflow-hidden shadow-xl shadow-blue-900/5 hover:shadow-2xl transition-all duration-700 border border-slate-100 flex flex-col">
                                 <div className="relative h-48 md:h-64 overflow-hidden bg-slate-50">
                                     <img 
-                                        src={waterGlassImg} 
-                                        alt="Pureté de l'eau adoucie Bricareau"
+                                        src={waterGlassImg}
                                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                                    />
+                                     alt="Pureté de l'eau adoucie Bricareau" title="Systèmes d'eau sur mesure par Bricareau" />
                                 </div>
                                 <div className="p-10 relative z-10 -mt-12 bg-white rounded-t-[3rem] flex-1 flex flex-col">
                                     <div className="w-14 h-14 rounded-2xl bg-blue-600 flex items-center justify-center mb-6 shadow-lg shadow-blue-200 group-hover:scale-110 transition-transform">
-                                        <img src={boatBusIcon} alt="Boat & Bus Icon" className="h-7 w-7 filter brightness-0 invert" />
+                                        <img src={boatBusIcon} className="h-7 w-7 filter brightness-0 invert"  alt="Boat & Bus Icon - analyse d'eau professionnelle" title="Analyse d'eau professionnelle par Bricareau" />
                                     </div>
                                     <span className="text-blue-600 font-bold text-xs uppercase tracking-[0.2em]">Actifs Préservés</span>
                                     <h3 className="text-2xl font-bold text-[#18448F] mt-3 mb-4">Protection Maximale</h3>
@@ -234,9 +233,8 @@ const AdoucisseursPortables = () => {
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60%] h-full opacity-10 md:opacity-[0.22] pointer-events-none z-0">
                         <img 
                             src={portableSoftenerProdImg} 
-                            alt="" 
                             className="w-full h-full object-contain scale-110"
-                        />
+                         alt="Image illustrant nos solutions - expert en eau | systèmes d'eau sur mesure" title="Expert en eau par Bricareau" />
                          {/* Soft Gradient Fade for diffusion */}
                         <div className="absolute inset-0 bg-gradient-to-b from-slate-50 via-transparent to-slate-50" />
                         <div className="absolute inset-0 bg-gradient-to-r from-slate-50 via-transparent to-slate-50" />

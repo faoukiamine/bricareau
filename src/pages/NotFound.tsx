@@ -68,9 +68,8 @@ const NotFound = () => {
             <div className="relative z-10 rounded-2xl overflow-hidden aspect-square lg:aspect-auto lg:h-[600px] shadow-2xl outline outline-1 outline-[#c3c6d7]/15">
               <img
                 className="w-full h-full object-cover grayscale-[0.3] hover:grayscale-0 transition-all duration-700"
-                alt="High-tech industrial water filtration system"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8zKsH683zkUlc99xrqsjgqf-zJlCsedlQFmnea1DrpYodWXOK3m7zTwKD5nfuLV93bFBTH84l3x9-vNSqz7y_PdMkAu7RT_2etn5IpGfDelVJ1cdU0hAfJMtOQT0xvweS73JG8w_SjwoFhV6GIvqe0Pa7PKONriA55SZBrhwelSPAKr6Eo8M3EPk8Aw1FuG1VMLxIj8BZx4oEQCnAKl5B8CYX2Oa9KnG58mCZHzG0d73PCCAJrWqHjjyNNM5-PcRfpuXkcwZaCCB1"
-              />
+               alt="High-tech industrial water filtration system - traitement d'eau Québec" title="Traitement d'eau Québec par Bricareau" />
 
               {/* Measurement Overlay Component */}
               <div className="absolute top-10 left-10 p-4 bg-white/80 backdrop-blur-md rounded-lg outline outline-1 outline-[#c3c6d7]/15">

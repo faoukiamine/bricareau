@@ -393,7 +393,7 @@ const CommercialIndustriel = () => {
                     <div className="container mx-auto px-6">
                         <div className="bg-[#f8fafc] rounded-[3rem] overflow-hidden flex flex-col lg:flex-row items-center border border-slate-100 shadow-2xl shadow-slate-200/50">
                             <div className="w-full lg:w-3/5 h-[400px] lg:h-[550px] overflow-hidden">
-                                <img src={consultationImg} alt="Consultation Bricareau" className="w-full h-full object-cover hover:scale-105 transition-transform duration-[3000ms]" />
+                                <img src={consultationImg} className="w-full h-full object-cover hover:scale-105 transition-transform duration-[3000ms]"  alt="Consultation Bricareau" title="Osmose inverse industrielle par Bricareau" />
                             </div>
                             <div className="w-full lg:w-2/5 p-12 lg:p-20 space-y-8 text-center lg:text-left">
                                 <h2 className="text-4xl font-bold text-[#18448F] leading-tight">Commencez dès aujourd'hui.</h2>
@@ -459,7 +459,7 @@ const CommercialIndustriel = () => {
                                 </div>
                             </div>
                             <div className="order-1 lg:order-2 rounded-[4rem] overflow-hidden shadow-2xl relative group">
-                                <img src={labTestImg} alt="Laboratoire Bricareau" className="w-full h-[600px] object-cover hover:scale-105 transition-transform duration-[4000ms]" />
+                                <img src={labTestImg} className="w-full h-[600px] object-cover hover:scale-105 transition-transform duration-[4000ms]"  alt="Laboratoire Bricareau" title="Traitement des eaux procédés par Bricareau" />
                                 <div className="absolute inset-0 bg-blue-900/10 mix-blend-overlay" />
                             </div>
                         </div>
@@ -526,9 +526,8 @@ const CommercialIndustriel = () => {
                         <div className="rounded-[3.5rem] overflow-hidden shadow-2xl border border-slate-100 group relative">
                             <img 
                                 src={hospitalityImg} 
-                                alt="Excellence opérationnelle Bricareau" 
                                 className="w-full h-[500px] md:h-[600px] object-cover group-hover:scale-105 transition-transform duration-[4000ms] brightness-[0.7] contrast-[1.1]"
-                            />
+                             alt="Excellence opérationnelle Bricareau" title="Adoucisseur d'eau industriel par Bricareau" />
                             <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 via-blue-900/40 to-transparent p-12 md:p-20 flex items-center">
                                 <div className="max-w-2xl space-y-8">
                                     <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-[#18448F] text-white text-[10px] font-black uppercase tracking-[0.3em]">

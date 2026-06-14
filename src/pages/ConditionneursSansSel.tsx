@@ -158,9 +158,8 @@ const ConditionneursSansSel = () => {
               <div className="lg:w-1/2">
                 <img 
                     src={tacComparisonImg} 
-                    alt="Comparaison entre eau dure et technologie TAC" 
                     className="w-full h-auto mix-blend-multiply"
-                />
+                 alt="Comparaison entre eau dure et technologie TAC" title="Expert en eau par Bricareau" />
                 <p className="mt-6 text-center text-slate-400 text-sm italic">
                     Dépôts de tartre vs minéraux neutralisés par la technologie TAC.
                 </p>
@@ -288,9 +287,8 @@ const ConditionneursSansSel = () => {
                 <div className="w-full xl:w-7/12 relative overflow-hidden h-[300px] xl:h-auto">
                   <img 
                     src={pureWaterImg} 
-                    alt="Mode de vie sain et eau pure Bricareau" 
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" 
-                  />
+                   alt="Mode de vie sain et eau pure Bricareau" title="Analyse d'eau professionnelle par Bricareau" />
                   <div className="absolute inset-0 bg-gradient-to-r from-white/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                 </div>
                 
@@ -404,9 +402,8 @@ const ConditionneursSansSel = () => {
               
               <img 
                 src={conditionneurImg} 
-                alt="Conditionneur Bricareau haute performance" 
                 className="absolute inset-0 w-full h-full object-cover drop-shadow-[0_20px_50px_rgba(0,0,0,0.12)]" 
-              />
+               alt="Conditionneur Bricareau haute performance" title="Systèmes d'eau sur mesure par Bricareau" />
               
               {/* Decorative branding anchor */}
               <div className="absolute bottom-10 right-10 opacity-30 select-none">
@@ -427,9 +424,8 @@ const ConditionneursSansSel = () => {
             <div className="absolute inset-0 z-0 opacity-40">
                 <img
                     src={helpKitchenImg}
-                    alt="Problématique d'eau dure sur la robinetterie - Solution Bricareau"
                     className="w-full h-full object-cover grayscale brightness-150"
-                />
+                 alt="Problématique d'eau dure sur la robinetterie - Solution Bricareau" title="Analyse d'eau professionnelle par Bricareau" />
                 <div className="absolute inset-0 bg-[#18448F]/10 backdrop-blur-sm" />
             </div>
 

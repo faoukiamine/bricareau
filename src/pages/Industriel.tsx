@@ -64,9 +64,8 @@ const Industriel = () => {
                             <div className="absolute inset-0 bg-gradient-to-r from-white via-white/40 to-transparent z-10 hidden lg:block w-1/3"></div>
                             <img 
                                 src={heroImg} 
-                                alt="Solutions Industrielles Bricareau" 
                                 className="absolute inset-0 w-full h-full object-cover object-center lg:object-right"
-                            />
+                             alt="Solutions Industrielles Bricareau" title="Désinfection UV industrielle par Bricareau" />
                         </div>
                     </div>
                     <div className="absolute right-0 top-0 w-full h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/20 via-transparent to-transparent pointer-events-none z-20"></div>
@@ -145,9 +144,8 @@ const Industriel = () => {
                                 <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl">
                                     <img 
                                         src={treatmentLarge} 
-                                        alt="Ingénierie Bricareau" 
                                         className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 hover:scale-105"
-                                    />
+                                     alt="Ingénierie Bricareau" title="Désinfection UV industrielle par Bricareau" />
                                     <div className="absolute inset-0 bg-blue-900/10 mix-blend-overlay" />
                                 </div>
                             </div>
@@ -231,7 +229,7 @@ const Industriel = () => {
                             <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
                                 <div className="lg:w-1/2 relative aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
                                     <div className="absolute inset-0 bg-blue-900/5 mix-blend-overlay z-10" />
-                                    <img src={treatmentImg1} alt="Rendement et Énergie" className="absolute inset-0 w-full h-full object-cover" />
+                                    <img src={treatmentImg1} className="absolute inset-0 w-full h-full object-cover"  alt="Rendement et Énergie - désinfection UV industrielle" title="Désinfection UV industrielle par Bricareau" />
                                 </div>
                                 <div className="lg:w-1/2 w-full space-y-8">
                                     <div className="flex items-center gap-6">
@@ -274,7 +272,7 @@ const Industriel = () => {
                                     </div>
                                 </div>
                                 <div className="lg:w-1/2 relative aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
-                                    <img src={longeviteImg} alt="Durée de vie des équipements" className="absolute inset-0 w-full h-full object-cover" />
+                                    <img src={longeviteImg} className="absolute inset-0 w-full h-full object-cover"  alt="Durée de vie des équipements - traitement des eaux procédés" title="Traitement des eaux procédés par Bricareau" />
                                 </div>
                             </div>
 

@@ -47,9 +47,8 @@ const Sustainability = () => {
                         <div className="absolute right-0 top-0 w-full lg:w-[80%] h-full">
                             <img 
                                 src={heroImg} 
-                                alt="Durabilité Bricareau" 
                                 className="absolute inset-0 w-full h-full object-cover object-bottom lg:object-center animate-in fade-in duration-1000"
-                            />
+                             alt="Durabilité Bricareau" title="Filtration Bricareau par Bricareau" />
                         </div>
                     </div>
                     <div className="absolute right-0 top-0 w-full h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/20 via-transparent to-transparent pointer-events-none z-20"></div>
@@ -124,7 +123,7 @@ const Sustainability = () => {
                             </div>
                             <div className="lg:w-1/2 w-full min-h-[500px] md:min-h-[600px] lg:min-h-0 lg:aspect-square relative rounded-[3rem] overflow-hidden shadow-2xl group">
                                 <div className="absolute inset-0 bg-[#18448F]/10 mix-blend-multiply z-10 group-hover:opacity-0 transition-opacity duration-700" />
-                                <img src={imgGaspillage} alt="Réduire le gaspillage" className="absolute inset-0 w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000" />
+                                <img src={imgGaspillage} className="absolute inset-0 w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000"  alt="Réduire le gaspillage - filtration Bricareau" title="Filtration Bricareau par Bricareau" />
                             </div>
                         </div>
 
@@ -132,7 +131,7 @@ const Sustainability = () => {
                         <div className="flex flex-col-reverse lg:flex-row items-center gap-16 px-6">
                             <div className="lg:w-1/2 w-full min-h-[500px] md:min-h-[600px] lg:min-h-0 lg:aspect-square relative rounded-[3rem] overflow-hidden shadow-2xl group">
                                 <div className="absolute inset-0 bg-[#8CC63F]/10 mix-blend-multiply z-10 group-hover:opacity-0 transition-opacity duration-700" />
-                                <img src={imgCO2} alt="Moins de CO2" className="absolute inset-0 w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000" />
+                                <img src={imgCO2} className="absolute inset-0 w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000"  alt="Moins de CO2 - filtration Bricareau" title="Filtration Bricareau par Bricareau" />
                             </div>
                             <div className="lg:w-1/2 space-y-6">
                                 <div className="text-5xl md:text-6xl font-light text-[#18448F]/20 mb-2">02.</div>
@@ -158,7 +157,7 @@ const Sustainability = () => {
                             </div>
                             <div className="lg:w-1/2 w-full min-h-[500px] md:min-h-[600px] lg:min-h-0 lg:aspect-square relative rounded-[3rem] overflow-hidden shadow-2xl group">
                                 <div className="absolute inset-0 bg-[#18448F]/10 mix-blend-multiply z-10 group-hover:opacity-0 transition-opacity duration-700" />
-                                <img src={imgLifestyle} alt="Mode de vie sain" className="absolute inset-0 w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000" />
+                                <img src={imgLifestyle} className="absolute inset-0 w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000"  alt="Mode de vie sain - analyse d'eau professionnelle" title="Analyse d'eau professionnelle par Bricareau" />
                             </div>
                         </div>
                     </div>
@@ -185,7 +184,7 @@ const Sustainability = () => {
                 <section className="relative overflow-hidden min-h-[50vh] md:min-h-screen lg:min-h-[80vh] flex items-center py-16 md:py-32">
                     {/* Background Image Full Width */}
                     <div className="absolute inset-0 z-0">
-                        <img src={imgMovement} alt="Durabilité Bricareau" className="w-full h-full object-cover object-center" />
+                        <img src={imgMovement} className="w-full h-full object-cover object-center"  alt="Durabilité Bricareau" title="Traitement d'eau Québec par Bricareau" />
                         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-slate-900/60 to-slate-900/95" />
                     </div>
                     

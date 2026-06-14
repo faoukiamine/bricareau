@@ -325,9 +325,8 @@ const Adoucissement = () => {
                                     <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl transition-all duration-700">
                                         <img 
                                             src={benefitsVisualImg} 
-                                            alt="Visualisation des bénéfices de l'eau adoucie Bricareau mobile" 
                                             className="w-full h-auto rounded-[2.5rem] opacity-90"
-                                        />
+                                         alt="Visualisation des bénéfices de l'eau adoucie Bricareau mobile" title="Systèmes d'eau sur mesure par Bricareau" />
                                         
                                         {/* Floating Label for Mobile/Tablet overlaying the image bottom */}
                                         <div className="absolute bottom-6 left-4 right-4 bg-white/90 backdrop-blur-md rounded-[2rem] p-5 shadow-2xl border border-white/50 flex items-center gap-4 z-20">
@@ -381,9 +380,8 @@ const Adoucissement = () => {
                                     <div className="relative rounded-[3rem] overflow-hidden shadow-2xl transition-all duration-700">
                                         <img 
                                             src={benefitsVisualImg} 
-                                            alt="Visualisation des bénéfices de l'eau adoucie Bricareau" 
                                             className="w-full h-auto rounded-[3rem] group-hover:scale-105 transition-transform duration-700 opacity-90"
-                                        />
+                                         alt="Visualisation des bénéfices de l'eau adoucie Bricareau" title="Expert en eau par Bricareau" />
                                     </div>
                                     
                                     {/* Desktop Floating Quote Box */}
@@ -407,9 +405,8 @@ const Adoucissement = () => {
                     <div className="lg:hidden w-full h-[350px] sm:h-[450px] relative">
                         <img
                             src={kitchenImg}
-                            alt="Cuisine moderne protégée par un adoucisseur d'eau résidentiel Bricareau - Vaisselle sans taches"
                             className="w-full h-full object-cover"
-                        />
+                         alt="Cuisine moderne protégée par un adoucisseur d'eau résidentiel Bricareau - Vaisselle sans taches" title="Systèmes d'eau sur mesure par Bricareau" />
                     </div>
 
                     <div className="container mx-auto px-6 py-12 lg:py-0">
@@ -419,9 +416,8 @@ const Adoucissement = () => {
                                 <div className="rounded-[2.5rem] overflow-hidden shadow-2xl relative h-[600px] w-full group">
                                     <img
                                         src={kitchenImg}
-                                        alt="Cuisine moderne protégée par un adoucisseur d'eau résidentiel Bricareau - Vaisselle sans taches"
                                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                                    />
+                                     alt="Cuisine moderne protégée par un adoucisseur d'eau résidentiel Bricareau - Vaisselle sans taches" title="Expert en eau par Bricareau" />
                                     <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors duration-500" />
 
 
@@ -487,9 +483,8 @@ const Adoucissement = () => {
                     <div className="lg:hidden w-full h-[350px] sm:h-[450px] relative">
                         <img
                             src={designImg}
-                            alt="Adoucisseur d'eau portable pour VR et bateau - Solution mobile Bricareau contre l'eau dure"
                             className="w-full h-full object-cover"
-                        />
+                         alt="Adoucisseur d'eau portable pour VR et bateau - Solution mobile Bricareau contre l'eau dure" title="Analyse d'eau professionnelle par Bricareau" />
                     </div>
 
                     <div className="container mx-auto px-6 py-12 lg:py-0">
@@ -499,9 +494,8 @@ const Adoucissement = () => {
                                 <div className="rounded-[2.5rem] overflow-hidden shadow-2xl relative h-[600px] w-full group">
                                     <img
                                         src={designImg}
-                                        alt="Adoucisseur d'eau portable pour VR et bateau - Solution mobile Bricareau contre l'eau dure"
                                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                                    />
+                                     alt="Adoucisseur d'eau portable pour VR et bateau - Solution mobile Bricareau contre l'eau dure" title="Traitement d'eau Québec par Bricareau" />
                                     <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors duration-500" />
 
 
@@ -564,9 +558,8 @@ const Adoucissement = () => {
                     <div className="lg:hidden w-full h-[350px] sm:h-[450px] relative">
                         <img
                             src={untitledImg}
-                            alt="Conditionneur d'eau sans sel écologique Bricareau - Protection contre le tartre sans saumure"
                             className="w-full h-full object-cover"
-                        />
+                         alt="Conditionneur d'eau sans sel écologique Bricareau - Protection contre le tartre sans saumure" title="Traitement d'eau Québec par Bricareau" />
                     </div>
 
                     <div className="container mx-auto px-6 py-12 lg:py-0">
@@ -576,9 +569,8 @@ const Adoucissement = () => {
                                 <div className="rounded-[2.5rem] overflow-hidden shadow-2xl relative h-[600px] w-full group">
                                     <img
                                         src={untitledImg}
-                                        alt="Conditionneur d'eau sans sel écologique Bricareau - Protection contre le tartre sans saumure"
                                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                                    />
+                                     alt="Conditionneur d'eau sans sel écologique Bricareau - Protection contre le tartre sans saumure" title="Expert en eau par Bricareau" />
                                     <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors duration-500" />
 
 
@@ -769,9 +761,8 @@ const Adoucissement = () => {
                     <div className="lg:hidden w-full relative bg-[#F8FAFC]">
                         <img
                             src={waterTestingImg}
-                            alt="Analyse d'eau à domicile et test de dureté - Bricareau"
                             className="w-full h-auto object-contain block mx-auto"
-                        />
+                         alt="Analyse d'eau à domicile et test de dureté - Bricareau" title="Expert en eau par Bricareau" />
                         <div className="absolute inset-0 bg-blue-900/5" />
                     </div>
 
@@ -779,9 +770,8 @@ const Adoucissement = () => {
                     <div className="hidden lg:block absolute inset-0 z-0 bg-slate-50">
                         <img
                             src={waterTestingImg}
-                            alt="Analyse d'eau à domicile et test de dureté"
                             className="w-full h-full object-cover"
-                        />
+                         alt="Analyse d'eau à domicile et test de dureté" title="Expert en eau par Bricareau" />
                         <div className="absolute inset-0 bg-black/30 lg:bg-gradient-to-r lg:from-black/50 lg:to-transparent" />
                     </div>
 
@@ -873,9 +863,8 @@ const Adoucissement = () => {
                     <div className="absolute inset-0 z-0 opacity-40">
                         <img
                             src={bathroomImg}
-                            alt="Problématique d'eau dure sur la robinetterie - Solution Bricareau"
                             className="w-full h-full object-cover grayscale brightness-150"
-                        />
+                         alt="Problématique d'eau dure sur la robinetterie - Solution Bricareau" title="Expert en eau par Bricareau" />
                         <div className="absolute inset-0 bg-[#18448F]/10 backdrop-blur-sm" />
                     </div>
 

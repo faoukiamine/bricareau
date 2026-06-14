@@ -37,9 +37,8 @@ const Temoignages = () => {
                         <div className="lg:hidden w-full h-[350px] relative">
                             <img
                                 src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=1200&auto=format&fit=crop"
-                                alt="Clients satisfaits Bricareau"
                                 className="w-full h-full object-cover"
-                            />
+                             alt="Clients satisfaits Bricareau" title="Systèmes d'eau sur mesure par Bricareau" />
                             <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-transparent text-white p-6 flex items-end">
                                 <div className="flex items-center gap-2 bg-white/20 backdrop-blur-md px-4 py-2 rounded-full">
                                     <div className="flex text-yellow-400">

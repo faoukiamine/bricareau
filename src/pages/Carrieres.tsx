@@ -57,9 +57,8 @@ export default function Carrieres() {
                         <div className="absolute right-0 top-0 w-full lg:w-[80%] h-full">
                             <img 
                                 src={heroImg} 
-                                alt="Carrières Bricareau" 
                                 className="absolute inset-0 w-full h-full object-cover object-bottom lg:object-center animate-in fade-in duration-1000"
-                            />
+                             alt="Carrières Bricareau" title="Expert en eau par Bricareau" />
                         </div>
                     </div>
                     <div className="absolute right-0 top-0 w-full h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/20 via-transparent to-transparent pointer-events-none z-20"></div>
@@ -139,7 +138,7 @@ export default function Carrieres() {
                             </div>
                             <div className="lg:w-1/2 w-full min-h-[500px] md:min-h-[600px] lg:min-h-0 lg:aspect-square relative rounded-[3rem] overflow-hidden shadow-2xl group">
                                 <div className="absolute inset-0 bg-[#18448F]/10 mix-blend-multiply z-10 group-hover:opacity-0 transition-opacity duration-700" />
-                                <img src={imgImpact} alt="Impact Environnemental" className="absolute inset-0 w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000" />
+                                <img src={imgImpact} className="absolute inset-0 w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000"  alt="Impact Environnemental - analyse d'eau professionnelle" title="Analyse d'eau professionnelle par Bricareau" />
                             </div>
                         </div>
 
@@ -147,7 +146,7 @@ export default function Carrieres() {
                         <div className="flex flex-col-reverse lg:flex-row items-center gap-16 px-6">
                             <div className="lg:w-1/2 w-full min-h-[500px] md:min-h-[600px] lg:min-h-0 lg:aspect-square relative rounded-[3rem] overflow-hidden shadow-2xl group">
                                 <div className="absolute inset-0 bg-[#8CC63F]/10 mix-blend-multiply z-10 group-hover:opacity-0 transition-opacity duration-700" />
-                                <img src={imgFormation} alt="Développement Continu" className="absolute inset-0 w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000" />
+                                <img src={imgFormation} className="absolute inset-0 w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000"  alt="Développement Continu - systèmes d'eau sur mesure" title="Systèmes d'eau sur mesure par Bricareau" />
                             </div>
                             <div className="lg:w-1/2 space-y-6">
                                 <div className="text-5xl md:text-6xl font-light text-[#18448F]/20 mb-2">02.</div>
@@ -173,7 +172,7 @@ export default function Carrieres() {
                             </div>
                             <div className="lg:w-1/2 w-full min-h-[500px] md:min-h-[600px] lg:min-h-0 lg:aspect-square relative rounded-[3rem] overflow-hidden shadow-2xl group">
                                 <div className="absolute inset-0 bg-[#18448F]/10 mix-blend-multiply z-10 group-hover:opacity-0 transition-opacity duration-700" />
-                                <img src={imgTeam} alt="Équipe d'Experts" className="absolute inset-0 w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000" />
+                                <img src={imgTeam} className="absolute inset-0 w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000"  alt="Équipe d'Experts - expert en eau" title="Expert en eau par Bricareau" />
                             </div>
                         </div>
                     </div>
@@ -233,7 +232,7 @@ export default function Carrieres() {
                 <section className="relative overflow-hidden min-h-[50vh] md:min-h-screen lg:min-h-[80vh] flex items-center py-16 md:py-32">
                     {/* Background Image Full Width */}
                     <div className="absolute inset-0 z-0">
-                        <img src={imgCTA} alt="Candidature Bricareau" className="w-full h-full object-cover object-center" />
+                        <img src={imgCTA} className="w-full h-full object-cover object-center"  alt="Candidature Bricareau" title="Traitement d'eau Québec par Bricareau" />
                         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-slate-900/60 to-slate-900/95" />
                     </div>
                     

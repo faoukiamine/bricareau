@@ -466,9 +466,8 @@ const A = () => {
                     <div className="absolute inset-0 opacity-5 pointer-events-none">
                         <img 
                             src={panoramaBgImg} 
-                            alt="" 
                             className="w-full h-full object-cover grayscale"
-                        />
+                         alt="Image illustrant nos solutions - analyse d'eau professionnelle | traitement d'eau Québec" title="Analyse d'eau professionnelle par Bricareau" />
                     </div>
 
                     <div className="container mx-auto px-6 relative z-10">
@@ -596,9 +595,8 @@ const A = () => {
                                                 laundryImg,
                                                 kitchenImg
                                             ][activeTransitionStep]} 
-                                            className="w-full h-full object-cover" 
-                                            alt="Étape de transition"
-                                        />
+                                            className="w-full h-full object-cover"
+                                         alt="Étape de transition - analyse d'eau professionnelle" title="Analyse d'eau professionnelle par Bricareau" />
                                     </div>
 
                                     {/* Icons positioned on the edge */}
@@ -821,9 +819,8 @@ const A = () => {
                         <div className="rounded-none lg:rounded-[3rem] overflow-hidden shadow-none lg:shadow-2xl border-0 lg:border border-white/20 group relative -mx-6 lg:mx-0">
                             <img 
                                 src={installationSoftenerImg} 
-                                alt="Installation professionnelle d'un adoucisseur d'eau Bricareau" 
                                 className="w-full h-[450px] md:h-[550px] lg:h-[650px] object-cover group-hover:scale-105 transition-transform duration-[3000ms] brightness-[1.1] contrast-[1.05]"
-                            />
+                             alt="Installation professionnelle d'un adoucisseur d'eau Bricareau" title="Expert en eau par Bricareau" />
                             <div className="absolute inset-0 bg-gradient-to-r from-[#18448F]/90 via-[#18448F]/60 to-transparent p-8 md:p-12 lg:p-20 flex items-center lg:pt-32">
                                 <div className="max-w-xl">
                                     <div className="flex items-center gap-3 text-blue-200 font-bold text-xs tracking-widest uppercase mb-6">
@@ -858,18 +855,16 @@ const A = () => {
                     <div className="lg:hidden w-full h-auto relative bg-slate-50">
                         <img
                             src={waterTestingImg}
-                            alt="Analyse d'eau à domicile pour détecter le calcaire et le chlore - Service Bricareau"
                             className="w-full h-auto object-contain"
-                        />
+                         alt="Analyse d'eau à domicile pour détecter le calcaire et le chlore - Service Bricareau" title="Traitement d'eau Québec par Bricareau" />
                     </div>
 
                     {/* Desktop Background */}
                     <div className="hidden lg:block absolute inset-0 z-0">
                         <img
                             src={waterTestingImg}
-                            alt="Analyse d'eau à domicile pour détecter le calcaire et le chlore"
                             className="w-full h-full object-cover object-[75%_15%]"
-                        />
+                         alt="Analyse d'eau à domicile pour détecter le calcaire et le chlore" title="Traitement d'eau Québec par Bricareau" />
                         <div className="absolute inset-0 bg-black/30 lg:bg-gradient-to-r lg:from-black/50 lg:to-transparent" />
                         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-white via-white/10 to-transparent" />
                     </div>
@@ -947,9 +942,8 @@ const A = () => {
                     <div className="absolute inset-0 z-0 opacity-40">
                         <img
                             src={hardWaterFaucetImg}
-                            alt="Problématique d'eau dure sur la robinetterie - Solution Bricareau"
                             className="w-full h-full object-cover grayscale brightness-150"
-                        />
+                         alt="Problématique d'eau dure sur la robinetterie - Solution Bricareau" title="Analyse d'eau professionnelle par Bricareau" />
                         <div className="absolute inset-0 bg-[#18448F]/10 backdrop-blur-sm" />
                     </div>
 

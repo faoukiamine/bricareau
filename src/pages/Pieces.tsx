@@ -169,9 +169,8 @@ const Pieces = () => {
                     <div className="absolute inset-0 w-full h-full overflow-hidden">
                         <img
                             src={piecesHero}
-                            alt="Pièces de Remplacement Bricareau"
                             className="w-full h-full object-cover object-[center_35%] scale-105 group-hover:scale-100 transition-transform duration-[3s] ease-out"
-                        />
+                         alt="Pièces de Remplacement Bricareau" title="Systèmes d'eau sur mesure par Bricareau" />
                         {/* Gradient Signature Bricareau - Exactly like Index Hero */}
                         <div className="absolute inset-0 z-10 bg-gradient-to-r from-[#f0f9ff] via-[#f0f9ff]/40 35% to-transparent" />
                         <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white to-transparent" />

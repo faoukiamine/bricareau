@@ -226,9 +226,8 @@ const MachinesACafeEntreprises = () => {
                     <div className="absolute inset-0 z-0">
                         <img 
                             src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?q=80&w=1920&auto=format&fit=crop" 
-                            alt="Equipe bureau café" 
                             className="w-full h-full object-cover opacity-30 scale-105" 
-                        />
+                         alt="Equipe bureau café" title="Filtration d'eau commerciale par Bricareau" />
                         <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent" />
                         <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/60 to-transparent" />
                     </div>
@@ -323,9 +322,8 @@ const MachinesACafeEntreprises = () => {
                                     <div className="absolute -inset-6 bg-blue-600/5 rounded-[4rem] blur-3xl scale-95 group-hover:scale-100 transition-transform duration-1000" />
                                     <img 
                                         src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop" 
-                                        alt="Culligan style collaboration" 
                                         className="relative rounded-[3.5rem] shadow-2xl w-full aspect-[4/3] object-cover grayscale-[0.2] group-hover:grayscale-0 transition-all duration-1000"
-                                    />
+                                     alt="Culligan style collaboration - fontaine à eau bureau" title="Fontaine à eau bureau par Bricareau" />
                                     <div className="absolute -bottom-8 -left-8 p-10 bg-white shadow-2xl rounded-[3rem] border border-slate-100 hidden sm:block animate-bounce-slow">
                                         <div className="flex items-center gap-4">
                                             <div className="w-12 h-12 rounded-2xl bg-blue-600 flex items-center justify-center text-white">
@@ -401,9 +399,8 @@ const MachinesACafeEntreprises = () => {
                             <div className="w-full lg:w-1/2 relative group">
                                 <img 
                                     src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1200&auto=format&fit=crop" 
-                                    alt="Coffee & Filtered Water" 
                                     className="rounded-[4rem] shadow-2xl w-full h-[600px] object-cover brightness-90 group-hover:brightness-100 transition-all duration-1000"
-                                />
+                                 alt="Coffee & Filtered Water - système d'eau hôtel" title="Système d'eau hôtel par Bricareau" />
                                 <div className="absolute inset-0 bg-blue-900/10 rounded-[4rem]" />
                                 <div className="absolute top-10 left-10 right-10 p-8 bg-white/10 backdrop-blur-md rounded-3xl border border-white/20">
                                     <div className="flex items-center gap-4 text-white">
@@ -441,7 +438,7 @@ const MachinesACafeEntreprises = () => {
                 {/* 5. FINAL CTA SECTION */}
                 <section className="py-32 bg-blue-600 relative overflow-hidden">
                     <div className="absolute inset-0 z-0 opacity-10">
-                        <img src="https://images.unsplash.com/photo-1541167760496-1628856ab752?q=80&w=1920&auto=format&fit=crop" alt="Coffee beans" className="w-full h-full object-cover" />
+                        <img src="https://images.unsplash.com/photo-1541167760496-1628856ab752?q=80&w=1920&auto=format&fit=crop" className="w-full h-full object-cover"  alt="Coffee beans - fontaine à eau bureau" title="Fontaine à eau bureau par Bricareau" />
                     </div>
                     <div className="container mx-auto px-6 relative z-10 text-center space-y-12">
                         <div className="max-w-4xl mx-auto space-y-6">

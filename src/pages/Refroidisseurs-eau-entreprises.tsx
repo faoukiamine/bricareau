@@ -255,7 +255,7 @@ const RefroidisseursEauEntreprises = () => {
                 {/* 1. HERO PRO */}
                 <section className="relative min-h-[85vh] flex items-center pt-24 overflow-hidden bg-slate-900">
                     <div className="absolute inset-0 z-0 opacity-40">
-                        <img src={heroFountains} alt="Bricareau Business Solutions" className="w-full h-full object-cover scale-105" />
+                        <img src={heroFountains} className="w-full h-full object-cover scale-105"  alt="Bricareau Business Solutions" title="Traitement d'eau entreprise par Bricareau" />
                         <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/80 to-transparent" />
                     </div>
 
@@ -379,9 +379,8 @@ const RefroidisseursEauEntreprises = () => {
                                 <div className="relative rounded-[3.5rem] overflow-hidden shadow-2xl border border-slate-100 group">
                                     <img 
                                         src={ourteamstudyyourwaterImg} 
-                                        alt="Technicien Bricareau en entreprise" 
                                         className="w-full h-[600px] object-cover group-hover:scale-105 transition-transform duration-[4s]"
-                                    />
+                                     alt="Technicien Bricareau en entreprise" title="Adoucisseur d'eau pour restaurant par Bricareau" />
                                     <div className="absolute bottom-8 left-8 right-8 p-8 bg-white/90 backdrop-blur-xl rounded-[2.5rem] shadow-xl">
                                         <div className="flex items-center gap-4 mb-3">
                                             <div className="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center text-white">
@@ -506,7 +505,7 @@ const RefroidisseursEauEntreprises = () => {
                 {/* 6. FINAL CTA */}
                 <section className="py-32 bg-blue-600 relative overflow-hidden">
                     <div className="absolute inset-0 z-0 opacity-10">
-                        <img src={heroFountains} alt="Bricareau PRO" className="w-full h-full object-cover" />
+                        <img src={heroFountains} className="w-full h-full object-cover"  alt="Bricareau PRO" title="Filtration d'eau commerciale par Bricareau" />
                     </div>
                     <div className="container mx-auto px-6 relative z-10 text-center space-y-12">
                         <div className="max-w-4xl mx-auto space-y-6">

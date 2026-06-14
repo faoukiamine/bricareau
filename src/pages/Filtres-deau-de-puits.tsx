@@ -293,9 +293,8 @@ const FiltresPuits = () => {
                         <div className="w-full lg:w-1/2 relative min-h-[450px] lg:min-h-full border-l border-slate-100 transition-all duration-1000">
                             <img 
                                 src={process1} 
-                                alt="Analyse d'eau de puits Bricareau" 
                                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000"
-                            />
+                             alt="Analyse d'eau de puits Bricareau" title="Traitement d'eau Québec par Bricareau" />
                             <div className="absolute inset-0 bg-blue-900/5" />
                             
                             {/* Feature Badge - Refined Inside positioning */}
@@ -695,18 +694,16 @@ const FiltresPuits = () => {
                     <div className="lg:hidden w-full h-auto relative bg-slate-50">
                         <img
                             src={waterTestingImg1}
-                            alt="Analyse d'eau à domicile pour détecter le calcaire et le chlore - Service Bricareau"
                             className="w-full h-auto object-contain"
-                        />
+                         alt="Analyse d'eau à domicile pour détecter le calcaire et le chlore - Service Bricareau" title="Traitement d'eau Québec par Bricareau" />
                     </div>
 
                     {/* Desktop Background */}
                     <div className="hidden lg:block absolute inset-0 z-0">
                         <img
                             src={waterTestingImg1}
-                            alt="Analyse d'eau de puits en laboratoire"
                             className="w-full h-full object-cover"
-                        />
+                         alt="Analyse d'eau de puits en laboratoire" title="Filtration Bricareau par Bricareau" />
                         <div className="absolute inset-0 bg-blue-900/40 lg:bg-gradient-to-r lg:from-blue-900/90 lg:to-[#18448F]/20 mix-blend-multiply" />
                         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-white via-white/10 to-transparent" />
                     </div>
@@ -820,9 +817,8 @@ const FiltresPuits = () => {
                   <div className="absolute inset-0 z-0 opacity-40">
                     <img
                       src={crystalClearWaterImg}
-                      alt="Expert Bricareau analysant vos options de filtration"
                       className="w-full h-full object-cover grayscale brightness-150"
-                    />
+                     alt="Expert Bricareau analysant vos options de filtration" title="Systèmes d'eau sur mesure par Bricareau" />
                     <div className="absolute inset-0 bg-[#18448F]/10 backdrop-blur-sm" />
                   </div>
 

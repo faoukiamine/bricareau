@@ -16,7 +16,7 @@ const Territoire = () => {
         <section className="relative py-24 bg-white overflow-hidden border-b border-slate-200">
             {/* Background map faint overlay */}
             <div className="absolute inset-0 opacity-[0.03] pointer-events-none">
-                <img src={montrealMapImg} className="w-full h-full object-cover invert" alt="Carte de fond" />
+                <img src={montrealMapImg} className="w-full h-full object-cover invert"  alt="Carte de fond - filtration Bricareau" title="Filtration Bricareau par Bricareau" />
             </div>
 
             <div className="container mx-auto px-4 lg:px-8 relative z-10 max-w-7xl">

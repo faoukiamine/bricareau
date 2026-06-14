@@ -125,22 +125,22 @@ const FiltrationHotelsRestaurants = () => {
 
                             {/* Image 1 (Col 1, Row 2-3) */}
                             <div className="md:col-span-1 md:row-span-2 overflow-hidden bg-white shadow-sm hover:shadow-md transition-shadow duration-300 min-h-[400px] md:min-h-0">
-                                <img src={lobbyImg} alt="Buffet restaurant" className="w-full h-full object-cover" />
+                                <img src={lobbyImg} className="w-full h-full object-cover"  alt="Buffet restaurant - adoucisseur d'eau pour restaurant" title="Adoucisseur d'eau pour restaurant par Bricareau" />
                             </div>
 
                             {/* Image 2 (Col 2, Row 2) */}
                             <div className="md:col-span-1 md:row-span-1 overflow-hidden bg-white shadow-sm hover:shadow-md transition-shadow duration-300 min-h-[250px] md:min-h-0">
-                                <img src={glasswareImg} alt="Verres et vaisselle éclatants" className="w-full h-full object-cover" />
+                                <img src={glasswareImg} className="w-full h-full object-cover"  alt="Verres et vaisselle éclatants - fontaine à eau bureau" title="Fontaine à eau bureau par Bricareau" />
                             </div>
 
                             {/* Image 3 (Col 3, Row 2-3) */}
                             <div className="md:col-span-1 md:row-span-2 overflow-hidden bg-white shadow-sm hover:shadow-md transition-shadow duration-300 min-h-[400px] md:min-h-0">
-                                <img src={chefPouringImg} alt="Chef cuisinier en préparation" className="w-full h-full object-cover" />
+                                <img src={chefPouringImg} className="w-full h-full object-cover"  alt="Chef cuisinier en préparation - adoucisseur d'eau pour restaurant" title="Adoucisseur d'eau pour restaurant par Bricareau" />
                             </div>
 
                             {/* Image 4 (Col 2, Row 3) */}
                             <div className="md:col-span-1 md:row-span-1 overflow-hidden bg-white shadow-sm hover:shadow-md transition-shadow duration-300 min-h-[250px] md:min-h-0">
-                                <img src={steamedVegImg} alt="Légumes vapeur" className="w-full h-full object-cover" />
+                                <img src={steamedVegImg} className="w-full h-full object-cover"  alt="Légumes vapeur - fontaine à eau bureau" title="Fontaine à eau bureau par Bricareau" />
                             </div>
                         </div>
                         <div className="mt-16 text-center">
@@ -172,7 +172,7 @@ const FiltrationHotelsRestaurants = () => {
                             <div ref={carouselRef} className="flex overflow-x-auto gap-6 pb-8 pt-4 snap-x snap-mandatory scroll-smooth hide-scrollbar" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
                             {/* Card 1: Coffee & Tea */}
                             <div className="group relative overflow-hidden rounded-2xl cursor-pointer shadow-sm hover:shadow-xl transition-all duration-300 h-96 w-[85vw] md:w-[400px] shrink-0 snap-center">
-                                <img src={coffeeTeaImg} alt="Machines à café et à thé" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                                <img src={coffeeTeaImg} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"  alt="Machines à café et à thé - système d'eau hôtel" title="Système d'eau hôtel par Bricareau" />
                                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent"></div>
                                 <div className="absolute inset-0 p-8 flex flex-col justify-end text-center">
                                     <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-300">Café & infusions</h3>
@@ -181,7 +181,7 @@ const FiltrationHotelsRestaurants = () => {
                             </div>
                             {/* Card 2: Espresso */}
                             <div className="group relative overflow-hidden rounded-2xl cursor-pointer shadow-sm hover:shadow-xl transition-all duration-300 h-96 w-[85vw] md:w-[400px] shrink-0 snap-center">
-                                <img src={espressoImg} alt="Équipement pour machine à expresso" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                                <img src={espressoImg} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"  alt="Équipement pour machine à expresso - système d'eau hôtel" title="Système d'eau hôtel par Bricareau" />
                                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent"></div>
                                 <div className="absolute inset-0 p-8 flex flex-col justify-end text-center">
                                     <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-300">Machines à expresso</h3>
@@ -190,7 +190,7 @@ const FiltrationHotelsRestaurants = () => {
                             </div>
                             {/* Card 3: Fountain Drinks */}
                             <div className="group relative overflow-hidden rounded-2xl cursor-pointer shadow-sm hover:shadow-xl transition-all duration-300 h-96 w-[85vw] md:w-[400px] shrink-0 snap-center">
-                                <img src={fountainDrinksImg} alt="Boissons à la fontaine" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                                <img src={fountainDrinksImg} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"  alt="Boissons à la fontaine - système d'eau hôtel" title="Système d'eau hôtel par Bricareau" />
                                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent"></div>
                                 <div className="absolute inset-0 p-8 flex flex-col justify-end text-center">
                                     <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-300">Boissons en fontaine</h3>
@@ -199,7 +199,7 @@ const FiltrationHotelsRestaurants = () => {
                             </div>
                             {/* Card 4: Ice Machines */}
                             <div className="group relative overflow-hidden rounded-2xl cursor-pointer shadow-sm hover:shadow-xl transition-all duration-300 h-96 w-[85vw] md:w-[400px] shrink-0 snap-center">
-                                <img src={iceMachineImg} alt="Machines à glaçons" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                                <img src={iceMachineImg} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"  alt="Machines à glaçons - traitement d'eau entreprise" title="Traitement d'eau entreprise par Bricareau" />
                                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent"></div>
                                 <div className="absolute inset-0 p-8 flex flex-col justify-end text-center">
                                     <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-300">Machines à glaçons</h3>
@@ -208,7 +208,7 @@ const FiltrationHotelsRestaurants = () => {
                             </div>
                             {/* Card 5: Ingredient Water */}
                             <div className="group relative overflow-hidden rounded-2xl cursor-pointer shadow-sm hover:shadow-xl transition-all duration-300 h-96 w-[85vw] md:w-[400px] shrink-0 snap-center">
-                                <img src={ingredientWaterImg} alt="Ingrédient Eau" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                                <img src={ingredientWaterImg} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"  alt="Ingrédient Eau - fontaine à eau bureau" title="Fontaine à eau bureau par Bricareau" />
                                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent"></div>
                                 <div className="absolute inset-0 p-8 flex flex-col justify-end text-center">
                                     <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-300">L'eau comme ingrédient</h3>
@@ -217,7 +217,7 @@ const FiltrationHotelsRestaurants = () => {
                             </div>
                             {/* Card 6: Steam Equipment */}
                             <div className="group relative overflow-hidden rounded-2xl cursor-pointer shadow-sm hover:shadow-xl transition-all duration-300 h-96 w-[85vw] md:w-[400px] shrink-0 snap-center">
-                                <img src={steamEquipmentImg} alt="Équipement à vapeur" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                                <img src={steamEquipmentImg} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"  alt="Équipement à vapeur - adoucisseur d'eau pour restaurant" title="Adoucisseur d'eau pour restaurant par Bricareau" />
                                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent"></div>
                                 <div className="absolute inset-0 p-8 flex flex-col justify-end text-center">
                                     <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-300">Fours & équipements à vapeur</h3>
@@ -250,7 +250,7 @@ const FiltrationHotelsRestaurants = () => {
                             {/* Card 1: Boissons & Café */}
                             <div className="group bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2 flex flex-col">
                                 <div className="h-56 w-full bg-slate-50 relative overflow-hidden flex items-center justify-center p-6 border-b border-slate-100">
-                                    <img src={filterCoffeeImg} alt="Filtre Boissons et Café" className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700" />
+                                    <img src={filterCoffeeImg} className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700"  alt="Filtre Boissons et Café - filtration d'eau commerciale" title="Filtration d'eau commerciale par Bricareau" />
                                 </div>
                                 <div className="p-8 flex-1 flex flex-col">
 
@@ -275,7 +275,7 @@ const FiltrationHotelsRestaurants = () => {
                             {/* Card 2: Verrerie & Plonge */}
                             <div className="group bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2 flex flex-col">
                                 <div className="h-56 w-full bg-slate-50 relative overflow-hidden flex items-center justify-center p-6 border-b border-slate-100">
-                                    <img src={filterSoftenerImg} alt="Adoucisseur Commercial" className="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-700" />
+                                    <img src={filterSoftenerImg} className="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-700"  alt="Adoucisseur Commercial - système d'eau hôtel" title="Système d'eau hôtel par Bricareau" />
                                 </div>
                                 <div className="p-8 flex-1 flex flex-col">
 
@@ -300,7 +300,7 @@ const FiltrationHotelsRestaurants = () => {
                             {/* Card 3: Cuisson & Arrière-cuisine */}
                             <div className="group bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2 flex flex-col">
                                 <div className="h-56 w-full bg-slate-50 relative overflow-hidden flex items-center justify-center p-6 border-b border-slate-100">
-                                    <img src={filterSteamImg} alt="Filtre Cuisson et Vapeur" className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700" />
+                                    <img src={filterSteamImg} className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700"  alt="Filtre Cuisson et Vapeur - fontaine à eau bureau" title="Fontaine à eau bureau par Bricareau" />
                                 </div>
                                 <div className="p-8 flex-1 flex flex-col">
 
@@ -427,7 +427,7 @@ const FiltrationHotelsRestaurants = () => {
                         </h2>
                         <div className="flex items-center justify-center gap-4">
                             <div className="w-12 h-12 rounded-full overflow-hidden">
-                                <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?q=80&w=200&auto=format&fit=crop" alt="Chef" className="w-full h-full object-cover" />
+                                <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?q=80&w=200&auto=format&fit=crop" className="w-full h-full object-cover"  alt="Image illustrant nos solutions - traitement d'eau entreprise | expert en eau" title="Traitement d'eau entreprise par Bricareau" />
                             </div>
                             <div className="text-left">
                                 <p className="text-white font-bold">C. Louis</p>
@@ -452,7 +452,7 @@ const FiltrationHotelsRestaurants = () => {
                             {/* Step 1 */}
                             <div className="relative max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-0 group">
                                 <div className="w-full md:w-7/12 relative rounded-3xl overflow-hidden shadow-2xl">
-                                    <img src={analysisImg} alt="Analyse de l'eau" className="w-full h-[350px] md:h-[450px] object-cover transition-transform duration-1000 group-hover:scale-110" />
+                                    <img src={analysisImg} className="w-full h-[350px] md:h-[450px] object-cover transition-transform duration-1000 group-hover:scale-110"  alt="Analyse de l'eau" title="Adoucisseur d'eau pour restaurant par Bricareau" />
                                     <div className="absolute inset-0 bg-blue-900/10 group-hover:bg-transparent transition-colors duration-500"></div>
                                 </div>
                                 
@@ -470,7 +470,7 @@ const FiltrationHotelsRestaurants = () => {
                             {/* Step 2 */}
                             <div className="relative max-w-5xl mx-auto flex flex-col md:flex-row-reverse items-center gap-0 group">
                                 <div className="w-full md:w-7/12 relative rounded-3xl overflow-hidden shadow-2xl">
-                                    <img src={pidImg} alt="Schéma système" className="w-full h-[350px] md:h-[450px] object-cover transition-transform duration-1000 group-hover:scale-110" />
+                                    <img src={pidImg} className="w-full h-[350px] md:h-[450px] object-cover transition-transform duration-1000 group-hover:scale-110"  alt="Schéma système - filtration d'eau commerciale" title="Filtration d'eau commerciale par Bricareau" />
                                     <div className="absolute inset-0 bg-blue-900/10 group-hover:bg-transparent transition-colors duration-500"></div>
                                 </div>
                                 
@@ -489,9 +489,9 @@ const FiltrationHotelsRestaurants = () => {
                             <div className="relative max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-0 group">
                                 <div className="w-full md:w-7/12 relative rounded-3xl overflow-hidden shadow-2xl">
                                     <div className="grid grid-cols-2 gap-2 h-[350px] md:h-[450px] group-hover:scale-105 transition-transform duration-1000">
-                                        <img src={inst3Img} alt="Installation" className="w-full h-full object-cover col-span-1 row-span-2" />
-                                        <img src={inst2Img} alt="Installation" className="w-full h-full object-cover" />
-                                        <img src={inst1Img} alt="Installation" className="w-full h-full object-contain bg-slate-50" />
+                                        <img src={inst3Img} className="w-full h-full object-cover col-span-1 row-span-2"  alt="Installation - système d'eau hôtel" title="Système d'eau hôtel par Bricareau" />
+                                        <img src={inst2Img} className="w-full h-full object-cover"  alt="Installation - adoucisseur d'eau pour restaurant" title="Adoucisseur d'eau pour restaurant par Bricareau" />
+                                        <img src={inst1Img} className="w-full h-full object-contain bg-slate-50"  alt="Installation - adoucisseur d'eau pour restaurant" title="Adoucisseur d'eau pour restaurant par Bricareau" />
                                     </div>
                                     <div className="absolute inset-0 bg-blue-900/10 group-hover:bg-transparent transition-colors duration-500 pointer-events-none"></div>
                                 </div>
@@ -520,9 +520,8 @@ const FiltrationHotelsRestaurants = () => {
                     <div className="absolute inset-0 z-0 opacity-40">
                         <img
                             src={callToActionBg}
-                            alt="Problématique d'eau dure sur la robinetterie - Solution Bricareau"
                             className="w-full h-full object-cover"
-                        />
+                         alt="Problématique d'eau dure sur la robinetterie - Solution Bricareau" title="Traitement d'eau entreprise par Bricareau" />
                         <div className="absolute inset-0 bg-[#18448F]/10 backdrop-blur-sm" />
                     </div>
 
@@ -580,7 +579,7 @@ const FiltrationHotelsRestaurants = () => {
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             <a href="#" className="group block bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all">
                                 <div className="aspect-[4/3] bg-gray-200 overflow-hidden">
-                                    <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?q=80&w=600&auto=format&fit=crop" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Guide Café" />
+                                    <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?q=80&w=600&auto=format&fit=crop" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"  alt="Guide Café - filtration d'eau commerciale" title="Filtration d'eau commerciale par Bricareau" />
                                 </div>
                                 <div className="p-6">
                                     <span className="text-xs font-bold text-blue-600 uppercase tracking-wider mb-2 block">Guide Pratique</span>
@@ -592,7 +591,7 @@ const FiltrationHotelsRestaurants = () => {
                             </a>
                             <a href="#" className="group block bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all">
                                 <div className="aspect-[4/3] bg-gray-200 overflow-hidden">
-                                    <img src="https://images.unsplash.com/photo-1590846406792-0adc7f938f1d?q=80&w=600&auto=format&fit=crop" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Guide Cuisson" />
+                                    <img src="https://images.unsplash.com/photo-1590846406792-0adc7f938f1d?q=80&w=600&auto=format&fit=crop" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"  alt="Guide Cuisson - fontaine à eau bureau" title="Fontaine à eau bureau par Bricareau" />
                                 </div>
                                 <div className="p-6">
                                     <span className="text-xs font-bold text-blue-600 uppercase tracking-wider mb-2 block">Étude de cas</span>
@@ -604,7 +603,7 @@ const FiltrationHotelsRestaurants = () => {
                             </a>
                             <a href="#" className="group block bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all">
                                 <div className="aspect-[4/3] bg-gray-200 overflow-hidden">
-                                    <img src="https://images.unsplash.com/photo-1580982327559-c1202864eb11?q=80&w=600&auto=format&fit=crop" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Guide Plonge" />
+                                    <img src="https://images.unsplash.com/photo-1580982327559-c1202864eb11?q=80&w=600&auto=format&fit=crop" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"  alt="Guide Plonge - filtration d'eau commerciale" title="Filtration d'eau commerciale par Bricareau" />
                                 </div>
                                 <div className="p-6">
                                     <span className="text-xs font-bold text-blue-600 uppercase tracking-wider mb-2 block">{"Conseil d'expert"}</span>

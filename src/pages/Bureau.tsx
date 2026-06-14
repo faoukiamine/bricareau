@@ -57,9 +57,8 @@ const Bureau = () => {
                             <div className="absolute inset-0 bg-gradient-to-r from-white via-white/40 to-transparent z-10 hidden lg:block w-1/3"></div>
                             <img 
                                 src={heroImg} 
-                                alt="Solutions Bureaux & Corporatives" 
                                 className="absolute inset-0 w-full h-full object-cover object-center lg:object-right"
-                            />
+                             alt="Solutions Bureaux & Corporatives" title="Fontaine à eau bureau par Bricareau" />
                         </div>
                     </div>
                     <div className="absolute right-0 top-0 w-full h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/20 via-transparent to-transparent pointer-events-none z-20"></div>
@@ -139,9 +138,8 @@ const Bureau = () => {
                                 <div className="relative aspect-[4/3] rounded-[2.5rem] overflow-hidden shadow-2xl">
                                     <img 
                                         src={hydratationImg} 
-                                        alt="Une hydratation sans compromis" 
                                         className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 hover:scale-105"
-                                    />
+                                     alt="Une hydratation sans compromis - système d'eau hôtel" title="Système d'eau hôtel par Bricareau" />
                                     <div className="absolute inset-0 bg-blue-900/10 mix-blend-overlay" />
                                 </div>
                                 {/* Floating Badge */}
@@ -196,7 +194,7 @@ const Bureau = () => {
                                 onClick={() => navigate("/fontaines-deau-modernes")}
                             >
                                 <div className="absolute inset-0 overflow-hidden rounded-[2rem]">
-                                    <img src={drinkWaterImg} alt="Fontaines d'Eau Modernes" className="w-full h-full object-cover opacity-80 mix-blend-multiply transition-transform duration-700 group-hover:scale-105" />
+                                    <img src={drinkWaterImg} className="w-full h-full object-cover opacity-80 mix-blend-multiply transition-transform duration-700 group-hover:scale-105"  alt="Fontaines d'Eau Modernes - adoucisseur d'eau pour restaurant" title="Adoucisseur d'eau pour restaurant par Bricareau" />
                                     <div className="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-transparent" />
                                 </div>
                                 <div className="relative z-10 space-y-4 mt-auto">
@@ -214,7 +212,7 @@ const Bureau = () => {
                                 onClick={() => navigate("/systemes-centralises")}
                             >
                                 <div className="absolute inset-0 overflow-hidden rounded-[2rem]">
-                                    <img src={centralSystemImg} alt="Systèmes Centralisés" className="w-full h-full object-cover opacity-80 mix-blend-multiply transition-transform duration-700 group-hover:scale-105" />
+                                    <img src={centralSystemImg} className="w-full h-full object-cover opacity-80 mix-blend-multiply transition-transform duration-700 group-hover:scale-105"  alt="Systèmes Centralisés - système d'eau hôtel" title="Système d'eau hôtel par Bricareau" />
                                     <div className="absolute inset-0 bg-gradient-to-t from-white via-white/90 to-transparent" />
                                 </div>
                                 <div className="relative z-10 space-y-4 mt-auto">
@@ -244,7 +242,7 @@ const Bureau = () => {
                             <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
                                 <div className="lg:w-1/2 w-full min-h-[300px] md:min-h-[400px] relative aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
                                     <div className="absolute inset-0 bg-blue-900/5 mix-blend-overlay z-10" />
-                                    <img src={pauseEauImg} alt="Technologie Avancée" className="absolute inset-0 w-full h-full object-cover" />
+                                    <img src={pauseEauImg} className="absolute inset-0 w-full h-full object-cover"  alt="Technologie Avancée - adoucisseur d'eau pour restaurant" title="Adoucisseur d'eau pour restaurant par Bricareau" />
                                 </div>
                                 <div className="lg:w-1/2 w-full space-y-8">
                                     <div className="flex items-center gap-6">
@@ -287,7 +285,7 @@ const Bureau = () => {
                                     </div>
                                 </div>
                                 <div className="lg:w-1/2 w-full min-h-[300px] md:min-h-[400px] relative aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
-                                    <img src={ecoCorporateImg} alt="Écologie et RSE" className="absolute inset-0 w-full h-full object-cover" />
+                                    <img src={ecoCorporateImg} className="absolute inset-0 w-full h-full object-cover"  alt="Écologie et RSE - traitement d'eau entreprise" title="Traitement d'eau entreprise par Bricareau" />
                                 </div>
                             </div>
 

@@ -59,9 +59,8 @@ const ResidentialServices = () => {
                             <div className="absolute inset-0 bg-gradient-to-r from-white via-white/40 to-transparent z-10 hidden lg:block w-1/3"></div>
                             <img 
                                 src={heroImg} 
-                                alt="Résidentiel Excellence" 
                                 className="absolute inset-0 w-full h-full object-cover object-center lg:object-right"
-                            />
+                             alt="Résidentiel Excellence - expert en eau" title="Expert en eau par Bricareau" />
                         </div>
                     </div>
                     <div className="absolute right-0 top-0 w-full h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/20 via-transparent to-transparent pointer-events-none z-20"></div>
@@ -129,9 +128,8 @@ const ResidentialServices = () => {
                                     <div className="absolute inset-0 bg-slate-100 translate-x-4 translate-y-4 transition-transform group-hover:translate-x-2 group-hover:translate-y-2 rounded-2xl" />
                                     <img 
                                         src={familyWellbeingImg} 
-                                        alt="Le bien-être de votre famille" 
                                         className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 hover:scale-105"
-                                    />
+                                     alt="Le bien-être de votre famille - traitement d'eau Québec" title="Traitement d'eau Québec par Bricareau" />
                                 </div>
                             </div>
                         </div>
@@ -172,7 +170,7 @@ const ResidentialServices = () => {
                                 onClick={() => navigate("/A")}
                             >
                                 <div className="absolute inset-0 overflow-hidden rounded-[2rem]">
-                                    <img src={softenerImg} alt="Adoucissement Résidentiel" className="w-full h-full object-cover opacity-60 mix-blend-multiply transition-transform duration-700 group-hover:scale-105" />
+                                    <img src={softenerImg} className="w-full h-full object-cover opacity-60 mix-blend-multiply transition-transform duration-700 group-hover:scale-105"  alt="Adoucissement Résidentiel - analyse d'eau professionnelle" title="Analyse d'eau professionnelle par Bricareau" />
                                     <div className="absolute inset-0 bg-gradient-to-t from-white via-white/90 to-transparent" />
                                 </div>
                                 <div className="relative z-10 space-y-4 mt-auto">
@@ -190,7 +188,7 @@ const ResidentialServices = () => {
                                 onClick={() => navigate("/B")}
                             >
                                 <div className="absolute inset-0 overflow-hidden rounded-[2rem]">
-                                    <img src={autoSystemImg} alt="Filtres Maison Automatiques" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                                    <img src={autoSystemImg} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"  alt="Filtres Maison Automatiques - systèmes d'eau sur mesure" title="Systèmes d'eau sur mesure par Bricareau" />
                                     <div className="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-transparent" />
                                 </div>
                                 <div className="relative z-10 max-w-md space-y-4">
@@ -215,7 +213,7 @@ const ResidentialServices = () => {
                                         Une eau cristalline à 99% pure pour la boisson et la cuisine.
                                     </p>
                                 </div>
-                                <img src={filtrationImg} alt="Osmose" className="absolute right-0 bottom-0 h-[70%] object-contain transition-transform duration-500 group-hover:scale-105 mix-blend-multiply z-0" />
+                                <img src={filtrationImg} className="absolute right-0 bottom-0 h-[70%] object-contain transition-transform duration-500 group-hover:scale-105 mix-blend-multiply z-0"  alt="Osmose - systèmes d'eau sur mesure" title="Systèmes d'eau sur mesure par Bricareau" />
                             </div>
 
                             {/* Card 4: UV (Square) */}
@@ -224,7 +222,7 @@ const ResidentialServices = () => {
                                 onClick={() => navigate("/systemes-de-desinfection-uv")}
                             >
                                 <div className="absolute inset-0 overflow-hidden rounded-[2rem]">
-                                    <img src={uvImg} alt="UV" className="w-full h-full object-contain p-12 mix-blend-multiply transition-transform duration-700 group-hover:scale-105" />
+                                    <img src={uvImg} className="w-full h-full object-contain p-12 mix-blend-multiply transition-transform duration-700 group-hover:scale-105"  alt="Image illustrant nos solutions - filtration Bricareau | traitement d'eau Québec" title="Filtration Bricareau par Bricareau" />
                                     <div className="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-transparent" />
                                 </div>
                                 <div className="flex justify-between items-start relative z-10">
@@ -244,7 +242,7 @@ const ResidentialServices = () => {
                                 onClick={() => navigate("/fontaines")}
                             >
                                 <div className="absolute inset-0 overflow-hidden rounded-[2rem]">
-                                    <img src={fountainImg} alt="Fontaines" className="w-full h-full object-cover opacity-80 mix-blend-multiply transition-transform duration-700 group-hover:scale-105" />
+                                    <img src={fountainImg} className="w-full h-full object-cover opacity-80 mix-blend-multiply transition-transform duration-700 group-hover:scale-105"  alt="Fontaines - traitement d'eau Québec" title="Traitement d'eau Québec par Bricareau" />
                                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-white/80 to-transparent" />
                                 </div>
                                 <div className="relative z-10 space-y-4">
@@ -262,7 +260,7 @@ const ResidentialServices = () => {
                                 onClick={() => navigate("/filtres-de-remplacement")}
                             >
                                 <div className="absolute inset-0 overflow-hidden rounded-[2rem]">
-                                    <img src={replacementFilterImg} alt="Filtres remplacement" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                                    <img src={replacementFilterImg} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"  alt="Filtres remplacement - analyse d'eau professionnelle" title="Analyse d'eau professionnelle par Bricareau" />
                                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent" />
                                 </div>
                                 <div className="relative z-10 space-y-4">
@@ -280,7 +278,7 @@ const ResidentialServices = () => {
                                 onClick={() => navigate("/tests-eau")}
                             >
                                 <div className="absolute inset-0 overflow-hidden rounded-[2rem]">
-                                    <img src={waterTestImg} alt="Tests d'eau" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                                    <img src={waterTestImg} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"  alt="Tests d'eau" title="Filtration Bricareau par Bricareau" />
                                     <div className="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-transparent" />
                                 </div>
                                 <div className="relative z-10 space-y-4">
@@ -335,7 +333,7 @@ const ResidentialServices = () => {
                                     <h3 className="text-3xl font-medium tracking-tight text-slate-900">Des économies durables.</h3>
                                 </div>
                                 <div className="lg:w-1/2 w-full min-h-[300px] md:min-h-[400px] relative aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
-                                    <img src={economiesImg} alt="Économies" className="absolute inset-0 w-full h-full object-cover" />
+                                    <img src={economiesImg} className="absolute inset-0 w-full h-full object-cover"  alt="Économies - systèmes d'eau sur mesure" title="Systèmes d'eau sur mesure par Bricareau" />
                                 </div>
                                 <div className="lg:w-1/2 w-full space-y-8">
                                     <div className="hidden lg:flex items-center gap-6">
@@ -366,7 +364,7 @@ const ResidentialServices = () => {
                                     <h3 className="text-3xl font-medium tracking-tight text-slate-900">Santé et bien-être.</h3>
                                 </div>
                                 <div className="lg:w-1/2 w-full min-h-[300px] md:min-h-[400px] relative aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
-                                    <img src={santeImg} alt="Santé" className="absolute inset-0 w-full h-full object-cover" />
+                                    <img src={santeImg} className="absolute inset-0 w-full h-full object-cover"  alt="Santé - filtration Bricareau" title="Filtration Bricareau par Bricareau" />
                                 </div>
                                 <div className="lg:w-1/2 w-full space-y-8">
                                     <div className="hidden lg:flex items-center gap-6">
@@ -397,7 +395,7 @@ const ResidentialServices = () => {
                                     <h3 className="text-3xl font-medium tracking-tight text-slate-900">Un choix écologique.</h3>
                                 </div>
                                 <div className="lg:w-1/2 w-full min-h-[300px] md:min-h-[400px] relative aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
-                                    <img src={fountainImg} alt="Écologie" className="absolute inset-0 w-full h-full object-cover" />
+                                    <img src={fountainImg} className="absolute inset-0 w-full h-full object-cover"  alt="Écologie - traitement d'eau Québec" title="Traitement d'eau Québec par Bricareau" />
                                 </div>
                                 <div className="lg:w-1/2 w-full space-y-8">
                                     <div className="hidden lg:flex items-center gap-6">

@@ -110,8 +110,7 @@ const MachinesAGlaceEntreprises = () => {
                         <img 
                             src={iceHeroImg} 
                             className="w-full h-full object-cover opacity-60 scale-105"
-                            alt="Glace cristalline Bricareau Pro"
-                        />
+                         alt="Glace cristalline Bricareau Pro" title="Système d'eau hôtel par Bricareau" />
                         <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/40 to-transparent" />
                         <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent" />
                     </div>
@@ -199,9 +198,8 @@ const MachinesAGlaceEntreprises = () => {
                                 <div className="relative aspect-square rounded-[5rem] overflow-hidden shadow-2xl group">
                                     <img 
                                         src={iceHeroImg} 
-                                        alt="Détail glace cristalline" 
                                         className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" 
-                                    />
+                                     alt="Détail glace cristalline - filtration d'eau commerciale" title="Filtration d'eau commerciale par Bricareau" />
                                     <div className="absolute inset-0 bg-blue-900/10 mix-blend-multiply transition-opacity opacity-0 group-hover:opacity-100 duration-700" />
                                 </div>
                                 {/* Digital Accent */}

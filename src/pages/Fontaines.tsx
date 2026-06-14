@@ -296,10 +296,9 @@ const Fontaines = () => {
                         <div className="absolute inset-0 bg-gradient-to-br from-white/80 via-white/40 to-transparent z-10 lg:hidden" />
                         <div className="absolute inset-0 bg-[linear-gradient(to_right,white_0%,white_33.33%,rgba(255,255,255,0)_85%)] z-10 hidden lg:block" />
                         <img 
-                            src={heroFountains} 
-                            alt="Fontaines d'eau Bricareau"
+                            src={heroFountains}
                             className="absolute inset-0 w-full h-full object-cover object-center scale-105 group-hover:scale-100 transition-transform duration-[3s] ease-out"
-                        />
+                         alt="Fontaines d'eau Bricareau" title="Systèmes d'eau sur mesure par Bricareau" />
                         {/* Floating Trust Row - Mobile/Tablet Only */}
                         <div className="absolute bottom-4 left-4 right-4 z-20 lg:hidden">
                             <div className="grid grid-cols-3 gap-2">
@@ -565,9 +564,8 @@ const Fontaines = () => {
                             <div className="relative lg:absolute lg:inset-0 h-[450px] md:h-[600px] lg:h-full overflow-hidden">
                                 <img
                                     src={ecoImpactImg6}
-                                    alt="L'expérience d'eau pure Bricareau"
                                     className="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-105"
-                                />
+                                 alt="L'expérience d'eau pure Bricareau" title="Systèmes d'eau sur mesure par Bricareau" />
                                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/10 to-transparent hidden lg:block" />
                             </div>
                             
@@ -644,13 +642,13 @@ const Fontaines = () => {
                             {/* Image 1: Main (left side) */}
                             <div className="sm:col-span-2 md:col-span-6 md:row-span-2 relative group overflow-hidden rounded-[2rem] shadow-sm min-h-[350px] md:min-h-0">
                                 <div className="absolute inset-0 bg-slate-900/10 group-hover:bg-transparent transition-colors duration-500 z-10" />
-                                <img src={ecoImpactImg3} alt="Fontaine de comptoir Bricareau" className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700" />
+                                <img src={ecoImpactImg3} className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"  alt="Fontaine de comptoir Bricareau" title="Systèmes d'eau sur mesure par Bricareau" />
                             </div>
 
                             {/* Image 2: Center Top */}
                             <div className="sm:col-span-1 md:col-span-3 md:row-span-1 relative group overflow-hidden rounded-[2rem] shadow-sm min-h-[250px] md:min-h-0">
                                 <div className="absolute inset-0 bg-slate-900/10 group-hover:bg-transparent transition-colors duration-500 z-10" />
-                                <img src={ecoImpactImg5} alt="Robinet d'eau pure" className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700" />
+                                <img src={ecoImpactImg5} className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"  alt="Robinet d'eau pure" title="Systèmes d'eau sur mesure par Bricareau" />
                             </div>
 
                             {/* Image 3: Right Top - Empty Slot */}
@@ -659,13 +657,13 @@ const Fontaines = () => {
                             {/* Image 4: Center Bottom */}
                             <div className="sm:col-span-1 md:col-span-3 md:row-span-1 relative group overflow-hidden rounded-[2rem] shadow-sm min-h-[250px] md:min-h-0">
                                 <div className="absolute inset-0 bg-slate-900/10 group-hover:bg-transparent transition-colors duration-500 z-10" />
-                                <img src={ecoImpactImg2} alt="Art de vivre Bricareau" className="w-full h-full object-cover object-right group-hover:scale-105 transition-transform duration-700" />
+                                <img src={ecoImpactImg2} className="w-full h-full object-cover object-right group-hover:scale-105 transition-transform duration-700"  alt="Art de vivre Bricareau" title="Filtration Bricareau par Bricareau" />
                             </div>
 
                             {/* Image 5: Right Bottom */}
                             <div className="sm:col-span-1 md:col-span-3 md:row-span-1 relative group overflow-hidden rounded-[2rem] shadow-sm min-h-[250px] md:min-h-0">
                                 <div className="absolute inset-0 bg-slate-900/10 group-hover:bg-transparent transition-colors duration-500 z-10" />
-                                <img src={ecoImpactImg4} alt="Eau fraîche et pure" className="w-full h-full object-cover object-left group-hover:scale-105 transition-transform duration-700" />
+                                <img src={ecoImpactImg4} className="w-full h-full object-cover object-left group-hover:scale-105 transition-transform duration-700"  alt="Eau fraîche et pure - systèmes d'eau sur mesure" title="Systèmes d'eau sur mesure par Bricareau" />
                             </div>
                         </div>
                     </div>
@@ -683,9 +681,8 @@ const Fontaines = () => {
                   <div className="absolute inset-0 z-0 opacity-40">
                     <img
                       src={eauFontaineImg}
-                      alt="Expert Bricareau analysant vos options de filtration"
                       className="w-full h-full object-cover grayscale brightness-150"
-                    />
+                     alt="Expert Bricareau analysant vos options de filtration" title="Systèmes d'eau sur mesure par Bricareau" />
                     <div className="absolute inset-0 bg-[#18448F]/10 backdrop-blur-sm" />
                   </div>
 
@@ -765,10 +762,9 @@ const Fontaines = () => {
                     <div className="container mx-auto px-6 relative z-10">
                         <div className="relative w-full max-w-7xl mx-auto h-[500px] lg:h-[600px] rounded-[2.5rem] overflow-hidden shadow-sm border border-slate-100">
                             <img 
-                                src={ecoImpactImg7} 
-                                alt="Bricareau sustainable office"
+                                src={ecoImpactImg7}
                                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-[10s] hover:scale-105"
-                            />
+                             alt="Bricareau sustainable office" title="Analyse d'eau professionnelle par Bricareau" />
                             <div className="absolute inset-0 bg-slate-900/30" />
                             
                             <div className="h-full relative z-10 flex flex-col justify-center items-end p-6 lg:p-16">

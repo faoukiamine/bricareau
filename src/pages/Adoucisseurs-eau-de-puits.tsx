@@ -273,9 +273,8 @@ const AdoucisseursEauDePuits = () => {
                     <div className="absolute top-0 right-0 w-full h-full opacity-[0.1] pointer-events-none">
                         <img 
                             src={waterRipples} 
-                            alt="" 
                             className="w-full h-full object-cover scale-150 rotate-12"
-                        />
+                         alt="Image illustrant nos solutions - traitement d'eau Québec | analyse d'eau professionnelle" title="Traitement d'eau Québec par Bricareau" />
                     </div>
                     
                     <div className="container mx-auto px-6 relative z-10">
@@ -295,9 +294,8 @@ const AdoucisseursEauDePuits = () => {
                             <div className="md:w-1/3 flex justify-center md:justify-end">
                                 <img 
                                     src={residentialSoftenerAsset} 
-                                    alt="Adoucisseur d'eau résidentiel" 
                                     className="h-auto max-h-[500px] object-contain drop-shadow-2xl"
-                                />
+                                 alt="Adoucisseur d'eau résidentiel" title="Systèmes d'eau sur mesure par Bricareau" />
                             </div>
                         </div>
 
@@ -312,7 +310,7 @@ const AdoucisseursEauDePuits = () => {
                                         <p className="body-pro-max text-justify text-[15px] leading-relaxed max-w-xs text-slate-600 font-light">Un équilibre parfait entre minéralité et douceur. Notre système transforme la structure du calcaire, protégeant vos installations.</p>
                                     </div>
                                     <div className="mt-12 -mx-10 lg:-mx-14 -mb-10 lg:-mb-14 h-64 overflow-hidden border-t border-slate-50">
-                                        <img src={softwaterImg} alt="Pureté de l'eau" className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-[4000ms]" />
+                                        <img src={softwaterImg} className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-[4000ms]"  alt="Pureté de l'eau" title="Analyse d'eau professionnelle par Bricareau" />
                                     </div>
                                 </div>
                             </div>
@@ -326,7 +324,7 @@ const AdoucisseursEauDePuits = () => {
                                         <p className="body-pro-max text-justify text-[15px] leading-relaxed max-w-xs text-slate-600 font-light">Offrez à votre famille le luxe d'une eau soyeuse qui hydrate profondément. Une sensation de douceur sur la peau.</p>
                                     </div>
                                     <div className="mt-12 -mx-10 lg:-mx-14 -mb-10 lg:-mb-14 h-64 overflow-hidden border-t border-slate-50">
-                                        <img src={spaRelaxationImg} alt="Douceur sensorielle" className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-[4000ms]" />
+                                        <img src={spaRelaxationImg} className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-[4000ms]"  alt="Douceur sensorielle - analyse d'eau professionnelle" title="Analyse d'eau professionnelle par Bricareau" />
                                     </div>
                                 </div>
                             </div>
@@ -347,7 +345,7 @@ const AdoucisseursEauDePuits = () => {
                                         </div>
                                     </div>
                                     <div className="relative overflow-hidden h-[400px] lg:h-auto">
-                                        <img src={luxuryBathroomImg} alt="Protection" className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-[6000ms]" />
+                                        <img src={luxuryBathroomImg} className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-[6000ms]"  alt="Protection - traitement d'eau Québec" title="Traitement d'eau Québec par Bricareau" />
                                         <div className="absolute inset-0 bg-gradient-to-r from-white via-transparent to-transparent hidden lg:block opacity-50"></div>
                                     </div>
                                 </div>
@@ -596,9 +594,8 @@ const AdoucisseursEauDePuits = () => {
                         <div className="rounded-none lg:rounded-[3rem] overflow-hidden shadow-none lg:shadow-2xl border-0 lg:border border-slate-100 group relative -mx-6 lg:mx-0">
                             <img 
                                 src={installationSoftenerImg} 
-                                alt="Installation professionnelle d'un adoucisseur d'eau Bricareau" 
                                 className="w-full h-[450px] md:h-[550px] lg:h-[650px] object-cover group-hover:scale-105 transition-transform duration-[3000ms] brightness-[1.2] contrast-[1.05]"
-                            />
+                             alt="Installation professionnelle d'un adoucisseur d'eau Bricareau" title="Systèmes d'eau sur mesure par Bricareau" />
                             <div className="absolute inset-0 bg-gradient-to-r from-[#18448F]/70 via-[#18448F]/30 to-transparent p-8 md:p-12 lg:p-20 flex items-center">
                                 <div className="max-w-lg">
                                     <div className="flex items-center gap-3 text-blue-400 font-bold text-xs tracking-widest uppercase mb-6">
@@ -724,12 +721,11 @@ const AdoucisseursEauDePuits = () => {
                     <div className="lg:hidden w-full h-[400px] relative bg-slate-50">
                         <img
                             src={waterTestingImg}
-                            alt="Analyse d'eau à domicile pour détecter le calcaire et le chlore - Service Bricareau"
                             className="w-full h-full object-cover object-[center_25%]"
-                        />
+                         alt="Analyse d'eau à domicile pour détecter le calcaire et le chlore - Service Bricareau" title="Systèmes d'eau sur mesure par Bricareau" />
                     </div>
                     <div className="hidden lg:block absolute inset-0 z-0">
-                        <img src={waterTestingImg} alt="Test de dureté" className="w-full h-full object-cover object-[center_25%]" />
+                        <img src={waterTestingImg} className="w-full h-full object-cover object-[center_25%]"  alt="Test de dureté - systèmes d'eau sur mesure" title="Systèmes d'eau sur mesure par Bricareau" />
                         <div className="absolute inset-0 bg-black/30 lg:bg-gradient-to-r lg:from-black/50 lg:to-transparent" />
                     </div>
                     <div className="container mx-auto px-4 relative z-10 flex items-center py-12 lg:py-0">
@@ -846,9 +842,8 @@ const AdoucisseursEauDePuits = () => {
                   <div className="absolute inset-0 z-0 opacity-40">
                     <img
                       src={mantakesbathImg}
-                      alt="Expert Bricareau analysant vos options d'adoucissement"
                       className="w-full h-full object-cover grayscale brightness-150"
-                    />
+                     alt="Expert Bricareau analysant vos options d'adoucissement" title="Expert en eau par Bricareau" />
                     <div className="absolute inset-0 bg-[#18448F]/10 backdrop-blur-sm" />
                   </div>
 

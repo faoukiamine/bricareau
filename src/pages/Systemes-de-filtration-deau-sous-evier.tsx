@@ -192,9 +192,8 @@ const FiltrationSousEvier = () => {
                                 <div className="relative aspect-[4/5] overflow-hidden rounded-[3rem] shadow-2xl border border-white/50">
                                     <img 
                                         src={springWaterImg} 
-                                        alt="Eau de source pure Bricareau" 
                                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
-                                    />
+                                     alt="Eau de source pure Bricareau" title="Filtration Bricareau par Bricareau" />
                                     {/* Experience Label */}
                                     <div className="absolute bottom-8 left-8 right-8 p-8 bg-white/70 backdrop-blur-xl rounded-3xl border border-white/20 shadow-xl group-hover:-translate-y-2 transition-all duration-500">
                                         <div className="flex items-center gap-4">
@@ -448,9 +447,8 @@ const FiltrationSousEvier = () => {
                         <div className="rounded-none lg:rounded-[3rem] overflow-hidden shadow-none lg:shadow-2xl border-0 lg:border border-slate-100 group relative -mx-6 lg:mx-0">
                             <img 
                                 src={installationUnderSinkWaterFiltrationSystemImg} 
-                                alt="Installation experte d'un système de désinfection UV Bricareau" 
                                 className="w-full h-[450px] md:h-[550px] lg:h-[650px] object-cover group-hover:scale-105 transition-transform duration-[3000ms] brightness-[1.2] contrast-[1.05]"
-                            />
+                             alt="Installation experte d'un système de désinfection UV Bricareau" title="Analyse d'eau professionnelle par Bricareau" />
                             <div className="absolute inset-0 bg-gradient-to-r from-[#18448F]/70 via-[#18448F]/30 to-transparent p-8 md:p-12 lg:p-20 flex items-center">
                                 <div className="max-w-lg">
                                     <div className="flex items-center gap-3 text-blue-400 font-bold text-xs tracking-widest uppercase mb-6">
@@ -576,18 +574,16 @@ const FiltrationSousEvier = () => {
                     <div className="lg:hidden w-full h-auto relative bg-slate-50">
                         <img
                             src={waterTestingImg}
-                            alt="Analyse d'eau à domicile pour détecter le calcaire et le chlore - Service Bricareau"
                             className="w-full h-auto object-contain"
-                        />
+                         alt="Analyse d'eau à domicile pour détecter le calcaire et le chlore - Service Bricareau" title="Filtration Bricareau par Bricareau" />
                     </div>
 
                     {/* Desktop Background */}
                     <div className="hidden lg:block absolute inset-0 z-0">
                         <img
                             src={waterTestingImg}
-                            alt="Analyse professionnelle"
                             className="w-full h-full object-cover"
-                        />
+                         alt="Analyse professionnelle - expert en eau" title="Expert en eau par Bricareau" />
                         <div className="absolute inset-0 bg-black/30 lg:bg-gradient-to-r lg:from-black/50 lg:to-transparent" />
                         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-white via-white/10 to-transparent" />
                     </div>
@@ -696,9 +692,8 @@ const FiltrationSousEvier = () => {
                     <div className="absolute inset-0 z-0 opacity-40">
                         <img
                             src={womandrinkingwaterImg}
-                            alt="Problématique d'eau dure sur la robinetterie - Solution Bricareau"
                             className="w-full h-full object-cover grayscale brightness-150"
-                        />
+                         alt="Problématique d'eau dure sur la robinetterie - Solution Bricareau" title="Expert en eau par Bricareau" />
                         <div className="absolute inset-0 bg-[#18448F]/10 backdrop-blur-sm" />
                     </div>
 

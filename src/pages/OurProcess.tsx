@@ -132,9 +132,8 @@ const OurProcess = () => {
                         <div className="absolute right-0 top-0 w-full lg:w-[80%] h-full">
                             <img 
                                 src={heroImg} 
-                                alt="Notre Processus" 
                                 className="absolute inset-0 w-full h-full object-cover object-bottom lg:object-center animate-in fade-in duration-1000"
-                            />
+                             alt="Notre Processus - systèmes d'eau sur mesure" title="Systèmes d'eau sur mesure par Bricareau" />
                         </div>
                     </div>
                     <div className="absolute right-0 top-0 w-full h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/20 via-transparent to-transparent pointer-events-none z-20"></div>
@@ -275,7 +274,7 @@ const OurProcess = () => {
                 <section className="relative overflow-hidden min-h-[80vh] md:min-h-screen lg:min-h-[80vh] flex items-center py-32">
                     {/* Background Image Full Width */}
                     <div className="absolute inset-0 z-0">
-                        <img src={ctaImg} alt="Contactez Bricareau" className="w-full h-full object-cover object-center" />
+                        <img src={ctaImg} className="w-full h-full object-cover object-center"  alt="Contactez Bricareau" title="Traitement d'eau Québec par Bricareau" />
                         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/80 to-white/95" />
                     </div>
                     

@@ -77,9 +77,8 @@ const FiltreEauHauteEfficacite = () => {
                                     <div className="absolute inset-0 bg-blue-400/10 blur-[100px] rounded-full group-hover:bg-blue-400/20 transition-all duration-1000" />
                                     <img
                                         src={productImage}
-                                        alt="Filtre d'eau Bricareau HE"
                                         className="relative z-10 w-full max-w-[450px] object-contain drop-shadow-2xl"
-                                    />
+                                     alt="Filtre d'eau Bricareau HE" title="Analyse d'eau professionnelle par Bricareau" />
                                 </div>
                             </div>
                             <div className="lg:w-1/2 space-y-8">
@@ -151,9 +150,8 @@ const FiltreEauHauteEfficacite = () => {
                             <div className="lg:w-1/2 order-1 lg:order-2">
                                 <img
                                     src={productImage}
-                                    alt="Technologie intelligente Aqua-Sensor et Bricareau Connect pour filtre HE"
                                     className="w-full max-w-md mx-auto"
-                                />
+                                 alt="Technologie intelligente Aqua-Sensor et Bricareau Connect pour filtre HE" title="Expert en eau par Bricareau" />
                             </div>
                         </div>
                     </div>
@@ -200,9 +198,8 @@ const FiltreEauHauteEfficacite = () => {
                     <div className="absolute inset-0 z-0">
                         <img
                             src={drinkWaterImg}
-                            alt="Pureté absolue Bricareau HE"
                             className="w-full h-full object-cover"
-                        />
+                         alt="Pureté absolue Bricareau HE" title="Analyse d'eau professionnelle par Bricareau" />
                         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 via-blue-800/60 to-blue-500/30 backdrop-blur-[2px]" />
                     </div>
                     <div className="container mx-auto px-6 relative z-10 text-center">
@@ -244,9 +241,8 @@ const FiltreEauHauteEfficacite = () => {
                                 <div className="rounded-[3rem] overflow-hidden shadow-2xl">
                                     <img
                                         src={drinkWaterImg}
-                                        alt="Enfant buvant une eau pure et saine filtrée par un système Bricareau HE"
                                         className="w-full h-full object-cover aspect-[4/3]"
-                                    />
+                                     alt="Enfant buvant une eau pure et saine filtrée par un système Bricareau HE" title="Systèmes d'eau sur mesure par Bricareau" />
                                 </div>
                             </div>
                             <div className="lg:w-1/2 text-left">
@@ -449,9 +445,8 @@ const FiltreEauHauteEfficacite = () => {
                             <div className="lg:w-1/2 self-stretch">
                                 <img
                                     src={bathWomanImg}
-                                    alt="Détente dans un bain moussant d'eau douce traitée par un adoucisseur Bricareau"
                                     className="w-full h-full object-cover min-h-[400px]"
-                                />
+                                 alt="Détente dans un bain moussant d'eau douce traitée par un adoucisseur Bricareau" title="Expert en eau par Bricareau" />
                             </div>
                         </div>
                     </div>

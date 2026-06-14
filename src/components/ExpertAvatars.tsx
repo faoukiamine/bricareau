@@ -20,9 +20,8 @@ const ExpertAvatars = () => {
         <div key={i} className="w-12 h-12 rounded-full border-4 border-[#18448F] bg-blue-400 overflow-hidden shadow-xl">
           <img 
             src={avatar.src} 
-            alt="Expert" 
             className={`w-full h-full object-cover ${avatar.pos}`} 
-          />
+           alt="Expert - systèmes d'eau sur mesure" title="Systèmes d'eau sur mesure par Bricareau" />
         </div>
       ))}
       <div className="w-12 h-12 rounded-full border-4 border-[#18448F] bg-white flex items-center justify-center text-blue-900 font-bold text-xs shadow-xl">

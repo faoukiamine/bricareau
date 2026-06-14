@@ -21,9 +21,8 @@ const MarketExploration = () => {
                         <div className="absolute inset-0">
                             <img
                                 src={imgEntreprise}
-                                alt="Workplace Water Solutions"
                                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                            />
+                             alt="Workplace Water Solutions - système d'eau hôtel" title="Système d'eau hôtel par Bricareau" />
                             <div className="absolute inset-0 bg-gradient-to-t from-[#18448F]/90 to-[#18448F]/40 mix-blend-multiply opacity-90 transition-opacity duration-300 group-hover:opacity-100" />
                         </div>
 
@@ -50,9 +49,8 @@ const MarketExploration = () => {
                         <div className="absolute inset-0">
                             <img
                                 src={imgCommercial}
-                                alt="Commercial & Industrial Solutions"
                                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                            />
+                             alt="Commercial & Industrial Solutions - système d'eau hôtel" title="Système d'eau hôtel par Bricareau" />
                             <div className="absolute inset-0 bg-gradient-to-t from-gray-900/95 to-gray-800/50 mix-blend-multiply opacity-90 transition-opacity duration-300 group-hover:opacity-100" />
                         </div>
 

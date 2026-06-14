@@ -101,9 +101,8 @@ const AdoucisseurSentinelle = () => {
                             >
                                 <img 
                                     src={sentinelImg} 
-                                    alt="Adoucisseur Série Sentinelle" 
                                     className="w-full max-w-[400px] mx-auto filter drop-shadow-2xl"
-                                />
+                                 alt="Adoucisseur Série Sentinelle - traitement d'eau Québec" title="Traitement d'eau Québec par Bricareau" />
                             </motion.div>
                         </div>
                     </div>
@@ -263,9 +262,8 @@ const AdoucisseurSentinelle = () => {
                             <div className="relative rounded-[3rem] overflow-hidden aspect-square lg:aspect-auto lg:h-[700px]">
                                 <img 
                                     src={heroBg} 
-                                    alt="Confort de l'eau adoucie" 
                                     className="absolute inset-0 w-full h-full object-cover"
-                                />
+                                 alt="Confort de l'eau adoucie" title="Analyse d'eau professionnelle par Bricareau" />
                                 <div className="absolute inset-0 bg-gradient-to-t from-blue-900/60 to-transparent" />
                                 <div className="absolute bottom-12 left-12 right-12 p-8 rounded-3xl bg-white/10 backdrop-blur-xl border border-white/20 text-white">
                                     <p className="text-lg font-light italic leading-relaxed">

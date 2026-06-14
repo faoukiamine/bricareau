@@ -90,9 +90,8 @@ const Videos = () => {
                         <div className="lg:hidden w-full h-[300px] relative">
                             <img
                                 src={filtrationVideoImg}
-                                alt="Tutoriels Vidéo Bricareau"
                                 className="w-full h-full object-cover"
-                            />
+                             alt="Tutoriels Vidéo Bricareau" title="Systèmes d'eau sur mesure par Bricareau" />
                             <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
                                 <div className="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center">
                                     <Play className="h-8 w-8 text-[#0052ff] ml-1" fill="currentColor" />

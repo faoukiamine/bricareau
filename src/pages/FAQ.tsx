@@ -103,9 +103,8 @@ const FAQ = () => {
                     <div className="relative lg:absolute lg:inset-0 h-[350px] sm:h-[450px] lg:h-full w-full lg:z-0 overflow-hidden">
                         <img
                             src={faqHero}
-                            alt="Support et Foire aux questions Bricareau - Réponses à vos besoins en traitement d'eau"
                             className="w-full h-full object-cover object-[center_35%]"
-                        />
+                         alt="Support et Foire aux questions Bricareau - Réponses à vos besoins en traitement d'eau" title="Systèmes d'eau sur mesure par Bricareau" />
                         <div className="hidden lg:block absolute inset-0 bg-black/40 lg:bg-gradient-to-r lg:from-black/60 lg:to-transparent" />
                         <div className="hidden lg:block absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-white via-white/10 to-transparent" />
                         <div className="hidden lg:block absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white/90 via-white/40 to-transparent" />

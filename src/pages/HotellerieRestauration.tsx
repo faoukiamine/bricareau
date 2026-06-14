@@ -79,9 +79,8 @@ const HotellerieRestauration = () => {
                             <div className="absolute inset-0 bg-gradient-to-r from-white via-white/40 to-transparent z-10 hidden lg:block w-1/3"></div>
                             <img 
                                 src={heroImg} 
-                                alt="Horeca Excellence" 
                                 className="absolute inset-0 w-full h-full object-cover object-center lg:object-right"
-                            />
+                             alt="Horeca Excellence - fontaine à eau bureau" title="Fontaine à eau bureau par Bricareau" />
                         </div>
                     </div>
                     <div className="absolute right-0 top-0 w-full h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/20 via-transparent to-transparent pointer-events-none z-20"></div>
@@ -147,9 +146,8 @@ const HotellerieRestauration = () => {
                                     <div className="absolute inset-0 bg-slate-100 translate-x-4 translate-y-4 transition-transform group-hover:translate-x-2 group-hover:translate-y-2 rounded-2xl" />
                                     <img 
                                         src={hospitalityImg2} 
-                                        alt="Service d'excellence" 
                                         className="absolute inset-0 w-full h-full object-cover object-[center_30%] z-10 transition-transform duration-700 group-hover:scale-105 rounded-2xl"
-                                    />
+                                     alt="Service d'excellence - système d'eau hôtel" title="Système d'eau hôtel par Bricareau" />
                                 </div>
                             </div>
                         </div>
@@ -188,7 +186,7 @@ const HotellerieRestauration = () => {
                                 onClick={() => navigate("/adoucisseurs-eau-commerciaux")}
                             >
                                 <div className="absolute inset-0 overflow-hidden rounded-[2rem]">
-                                    <img src={TechnicalRoomHotelImg} alt="Adoucissement Commercial" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                                    <img src={TechnicalRoomHotelImg} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"  alt="Adoucissement Commercial - adoucisseur d'eau pour restaurant" title="Adoucisseur d'eau pour restaurant par Bricareau" />
                                     <div className="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-transparent" />
                                 </div>
                                 <div className="relative z-10 space-y-4">
@@ -213,7 +211,7 @@ const HotellerieRestauration = () => {
                                         Une eau cristalline, sans goût ni odeur, pour sublimer la saveur authentique de vos créations culinaires et surprendre vos convives.
                                     </p>
                                 </div>
-                                <img src={CommercialfiltrationImg} alt="Filtration" className="absolute right-0 bottom-0 h-[80%] object-contain transition-transform duration-500 group-hover:scale-105 mix-blend-multiply z-0" />
+                                <img src={CommercialfiltrationImg} className="absolute right-0 bottom-0 h-[80%] object-contain transition-transform duration-500 group-hover:scale-105 mix-blend-multiply z-0"  alt="Filtration - filtration d'eau commerciale" title="Filtration d'eau commerciale par Bricareau" />
                             </div>
 
                             {/* Card 3: Brasserie (Square) */}
@@ -222,7 +220,7 @@ const HotellerieRestauration = () => {
                                 onClick={() => navigate("/solutions-brasseries")}
                             >
                                 <div className="absolute inset-0 overflow-hidden rounded-[2rem]">
-                                    <img src={brasserieBgImg} alt="Espace Brasserie" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                                    <img src={brasserieBgImg} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"  alt="Espace Brasserie - fontaine à eau bureau" title="Fontaine à eau bureau par Bricareau" />
                                     <div className="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-transparent" />
                                 </div>
                                 <div className="relative z-10 space-y-2 mt-auto">
@@ -249,7 +247,7 @@ const HotellerieRestauration = () => {
                                         L'eau secrète des baristas pour révéler les arômes les plus subtils de vos grains.
                                     </p>
                                 </div>
-                                <img src={FilterImg1} alt="Filtre Café" className="absolute right-0 top-0 h-[65%] object-contain transition-all duration-500 group-hover:scale-105 mix-blend-multiply z-0" />
+                                <img src={FilterImg1} className="absolute right-0 top-0 h-[65%] object-contain transition-all duration-500 group-hover:scale-105 mix-blend-multiply z-0"  alt="Filtre Café - système d'eau hôtel" title="Système d'eau hôtel par Bricareau" />
                             </div>
                         </div>
                     </div>
@@ -344,7 +342,7 @@ const HotellerieRestauration = () => {
                             {/* Pilier 1 : Image Left, Text Right */}
                             <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
                                 <div className="lg:w-1/2 w-full aspect-[4/3] rounded-3xl overflow-hidden relative shadow-xl">
-                                    <img src={maitriseImg} alt="Salle technique" className="absolute inset-0 w-full h-full object-cover" />
+                                    <img src={maitriseImg} className="absolute inset-0 w-full h-full object-cover"  alt="Salle technique - traitement d'eau entreprise" title="Traitement d'eau entreprise par Bricareau" />
                                 </div>
                                 <div className="lg:w-1/2 w-full space-y-8">
                                     <div className="flex items-center gap-6">
@@ -399,14 +397,14 @@ const HotellerieRestauration = () => {
                                     </div>
                                 </div>
                                 <div className="lg:w-1/2 w-full aspect-[4/3] rounded-3xl overflow-hidden relative shadow-xl">
-                                    <img src={coffeeFilterImg} alt="Café parfait" className="absolute inset-0 w-full h-full object-cover" />
+                                    <img src={coffeeFilterImg} className="absolute inset-0 w-full h-full object-cover"  alt="Café parfait - adoucisseur d'eau pour restaurant" title="Adoucisseur d'eau pour restaurant par Bricareau" />
                                 </div>
                             </div>
 
                             {/* Pilier 3 : Image Left, Text Right */}
                             <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
                                 <div className="lg:w-1/2 w-full aspect-[4/3] rounded-3xl overflow-hidden relative shadow-xl">
-                                    <img src={reputationImg} alt="Verrerie de luxe" className="absolute inset-0 w-full h-full object-cover" />
+                                    <img src={reputationImg} className="absolute inset-0 w-full h-full object-cover"  alt="Verrerie de luxe - traitement d'eau entreprise" title="Traitement d'eau entreprise par Bricareau" />
                                 </div>
                                 <div className="lg:w-1/2 w-full space-y-8">
                                     <div className="flex items-center gap-6">

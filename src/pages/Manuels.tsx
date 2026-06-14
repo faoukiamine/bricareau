@@ -126,9 +126,8 @@ const Manuels = () => {
                         <div className="lg:hidden w-full h-[300px] relative">
                             <img
                                 src="https://images.unsplash.com/photo-1586769852836-bc069f19e1b6?q=80&w=1200&auto=format&fit=crop"
-                                alt="Manuels et Documentation Bricareau"
                                 className="w-full h-full object-cover"
-                            />
+                             alt="Manuels et Documentation Bricareau" title="Analyse d'eau professionnelle par Bricareau" />
                             <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-transparent"></div>
                         </div>
 

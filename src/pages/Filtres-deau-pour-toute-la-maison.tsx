@@ -336,9 +336,8 @@ const FiltresTouteMaison = () => {
                         <div className="rounded-none lg:rounded-[3rem] overflow-hidden shadow-none lg:shadow-2xl border-0 lg:border border-slate-100 group relative -mx-6 lg:mx-0 mt-24 lg:mt-32">
                             <img 
                                 src={installationSoftenerImg} 
-                                alt="Installation professionnelle d'un adoucisseur d'eau Bricareau" 
                                 className="w-full h-[450px] md:h-[550px] lg:h-[650px] object-cover group-hover:scale-105 transition-transform duration-[3000ms] brightness-[1.1] contrast-[1.05]"
-                            />
+                             alt="Installation professionnelle d'un adoucisseur d'eau Bricareau" title="Système d'osmose inverse maison par Bricareau" />
                             <div className="absolute inset-0 bg-gradient-to-r from-[#18448F]/80 via-[#18448F]/40 to-transparent p-8 md:p-12 lg:p-20 flex items-center lg:pt-32">
                                 <div className="max-w-lg">
                                     <div className="flex items-center gap-3 text-blue-400 font-bold text-xs tracking-widest uppercase mb-6">
@@ -463,18 +462,16 @@ const FiltresTouteMaison = () => {
                     <div className="lg:hidden w-full h-auto relative bg-slate-50">
                         <img
                             src={excellenceWaterImg}
-                            alt="Analyse d'eau à domicile pour détecter le calcaire et le chlore - Service Bricareau"
                             className="w-full h-auto object-contain"
-                        />
+                         alt="Analyse d'eau à domicile pour détecter le calcaire et le chlore - Service Bricareau" title="Eau pure maison par Bricareau" />
                     </div>
 
                     {/* Desktop Background */}
                     <div className="hidden lg:block absolute inset-0 z-0">
                         <img
                             src={excellenceWaterImg}
-                            alt="Analyse d'eau à domicile"
                             className="w-full h-full object-cover"
-                        />
+                         alt="Analyse d'eau à domicile" title="Filtration d'eau potable par Bricareau" />
                         <div className="absolute inset-0 bg-blue-900/40 lg:bg-gradient-to-r lg:from-blue-900/90 lg:to-blue-600/20 mix-blend-multiply" />
                         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-white via-white/10 to-transparent" />
                     </div>
@@ -560,9 +557,8 @@ const FiltresTouteMaison = () => {
                     <div className="absolute inset-0 z-0 opacity-40">
                         <img
                             src={FilteredcitywaterImg}
-                            alt="Problématique d'eau dure sur la robinetterie - Solution Bricareau"
                             className="w-full h-full object-cover grayscale brightness-150"
-                        />
+                         alt="Problématique d'eau dure sur la robinetterie - Solution Bricareau" title="Filtration d'eau potable par Bricareau" />
                         <div className="absolute inset-0 bg-[#18448F]/10 backdrop-blur-sm" />
                     </div>
 

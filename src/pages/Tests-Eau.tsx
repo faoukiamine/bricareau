@@ -137,9 +137,8 @@ const TestsEauPage = () => {
                         <div className="absolute right-0 top-0 w-full lg:w-[80%] h-full">
                             <img 
                                 src={newHeroImg} 
-                                alt="Analyses d'eau" 
                                 className="absolute inset-0 w-full h-full object-cover object-center"
-                            />
+                             alt="Analyses d'eau" title="Filtration Bricareau par Bricareau" />
                         </div>
                     </div>
                     <div className="absolute right-0 top-0 w-full h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/20 via-transparent to-transparent pointer-events-none z-20"></div>
@@ -433,9 +432,8 @@ const TestsEauPage = () => {
           <div className="absolute inset-0 z-0 opacity-40">
             <img
               src={glasspurewaterImg}
-              alt="Expert Bricareau analysant vos options de filtration"
               className="w-full h-full object-cover grayscale brightness-150"
-            />
+             alt="Expert Bricareau analysant vos options de filtration" title="Filtration Bricareau par Bricareau" />
             <div className="absolute inset-0 bg-[#18448F]/10 backdrop-blur-sm" />
           </div>
 

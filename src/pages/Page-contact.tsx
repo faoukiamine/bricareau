@@ -162,9 +162,8 @@ const Contact = () => {
                     <div className="relative lg:absolute lg:inset-0 h-[350px] sm:h-[450px] lg:h-full w-full lg:z-0 overflow-hidden">
                         <img
                             src={contactHero}
-                            alt="Service client Bricareau"
                             className="w-full h-full object-cover object-[center_35%] opacity-80"
-                        />
+                         alt="Service client Bricareau" title="Expert en eau par Bricareau" />
                         <div className="absolute inset-0 bg-gradient-to-r from-[#f0f9ff] via-[#f0f9ff]/40 35% to-transparent z-10" />
                     </div>
 

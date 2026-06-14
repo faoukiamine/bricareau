@@ -215,9 +215,8 @@ const SystemesCentralises = () => {
                                         <img 
                                             key={activeAdvantageImage}
                                             src={activeAdvantageImage} 
-                                            alt="Schéma technique et infrastructures de filtration centralisées" 
                                             className="max-h-full object-contain animate-in fade-in zoom-in duration-500"
-                                        />
+                                         alt="Schéma technique et infrastructures de filtration centralisées" title="Expert en eau par Bricareau" />
                                         <div className="absolute inset-0 bg-gradient-to-tr from-blue-900/10 to-transparent pointer-events-none" />
                                     </div>
 
@@ -266,9 +265,8 @@ const SystemesCentralises = () => {
                                 <div className="aspect-[16/10] w-full rounded-2xl overflow-hidden shadow-inner">
                                     <img 
                                         src={elkayBottleFillerImg} 
-                                        alt="Station de remplissage automatique de bouteilles d'eau Elkay intégrée par Bricareau" 
                                         className="w-full h-full object-cover" 
-                                    />
+                                     alt="Station de remplissage automatique de bouteilles d'eau Elkay intégrée par Bricareau" title="Expert en eau par Bricareau" />
                                 </div>
                             </div>
 
@@ -288,9 +286,8 @@ const SystemesCentralises = () => {
                                 <div className="aspect-[16/10] w-full rounded-2xl overflow-hidden shadow-inner">
                                     <img 
                                         src={filtrationSkidImg} 
-                                        alt="Station de filtration centralisée modulaire conçue par Bricareau" 
                                         className="w-full h-full object-cover" 
-                                    />
+                                     alt="Station de filtration centralisée modulaire conçue par Bricareau" title="Analyse d'eau professionnelle par Bricareau" />
                                 </div>
                             </div>
 
@@ -310,9 +307,8 @@ const SystemesCentralises = () => {
                                 <div className="aspect-[16/10] w-full rounded-2xl overflow-hidden shadow-inner">
                                     <img 
                                         src={reverseOsmosisSkidImg} 
-                                        alt="Équipement d'osmose inverse industriel et support technique Bricareau" 
                                         className="w-full h-full object-cover" 
-                                    />
+                                     alt="Équipement d'osmose inverse industriel et support technique Bricareau" title="Analyse d'eau professionnelle par Bricareau" />
                                 </div>
                             </div>
 
@@ -345,9 +341,8 @@ const SystemesCentralises = () => {
                     <div className="absolute inset-0 z-0 opacity-40">
                         <img
                             src={technicianInspectionImg}
-                            alt="Technicien inspectant les systèmes de filtration du bâtiment - Solution Bricareau"
                             className="w-full h-full object-cover brightness-110"
-                        />
+                         alt="Technicien inspectant les systèmes de filtration du bâtiment - Solution Bricareau" title="Expert en eau par Bricareau" />
                         <div className="absolute inset-0 bg-slate-900/30 backdrop-blur-[2px]" />
                     </div>
 

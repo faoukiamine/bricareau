@@ -289,7 +289,7 @@ const B = () => {
                                     desc: "Traces de plomb, micro-plastiques et hormones. Protégez les systèmes immunitaires fragiles de votre famille.",
                                     benefit: "Sécurité Totale",
                                     color: "bg-pink-500",
-                                    icon: <img src={healthAndSafetyIcon} className="w-6 h-6 brightness-0 invert" alt="Santé & Nouveau-nés icon" />,
+                                    icon: <img src={healthAndSafetyIcon} className="w-6 h-6 brightness-0 invert"  alt="Santé & Nouveau-nés icon" title="Systèmes d'eau sur mesure par Bricareau" />,
                                     img: newbornHealthImg
                                 },
                                 {
@@ -737,18 +737,16 @@ const B = () => {
                     <div className="lg:hidden w-full h-auto relative bg-slate-50">
                         <img
                             src={waterTestingImg1}
-                            alt="Analyse d'eau à domicile pour détecter le calcaire et le chlore - Service Bricareau"
                             className="w-full h-auto object-contain"
-                        />
+                         alt="Analyse d'eau à domicile pour détecter le calcaire et le chlore - Service Bricareau" title="Expert en eau par Bricareau" />
                     </div>
 
                     {/* Desktop Background */}
                     <div className="hidden lg:block absolute inset-0 z-0">
                         <img
                             src={waterTestingImg1}
-                            alt="Analyse d'eau de puits en laboratoire"
                             className="w-full h-full object-cover"
-                        />
+                         alt="Analyse d'eau de puits en laboratoire" title="Systèmes d'eau sur mesure par Bricareau" />
                         <div className="absolute inset-0 bg-blue-900/40 lg:bg-gradient-to-r lg:from-blue-900/90 lg:to-[#18448F]/20 mix-blend-multiply" />
                         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-white via-white/10 to-transparent" />
                     </div>
@@ -862,9 +860,8 @@ const B = () => {
                   <div className="absolute inset-0 z-0 opacity-40">
                     <img
                       src={crystalClearWaterImg}
-                      alt="Expert Bricareau analysant vos options de filtration"
                       className="w-full h-full object-cover grayscale brightness-150"
-                    />
+                     alt="Expert Bricareau analysant vos options de filtration" title="Systèmes d'eau sur mesure par Bricareau" />
                     <div className="absolute inset-0 bg-[#18448F]/10 backdrop-blur-sm" />
                   </div>
 

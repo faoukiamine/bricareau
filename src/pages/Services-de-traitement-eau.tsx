@@ -159,8 +159,7 @@ const ServicesTraitementEau = () => {
                         <img 
                             src={servicesHero} 
                             className="w-full h-full object-cover"
-                            alt="Services Bricareau - Expertise technique"
-                        />
+                         alt="Services Bricareau - Expertise technique" title="Analyse d'eau professionnelle par Bricareau" />
                     </div>
                     
                     <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none hidden lg:block">
@@ -238,9 +237,8 @@ const ServicesTraitementEau = () => {
                                                 <div className="w-full h-48 overflow-hidden rounded-3xl shadow-lg relative">
                                                     <img 
                                                         src={bricareauCareImg} 
-                                                        alt="Expertise technique certifiée Bricareau" 
                                                         className="w-full h-full object-cover object-[50%_30%]"
-                                                    />
+                                                     alt="Expertise technique certifiée Bricareau" title="Systèmes d'eau sur mesure par Bricareau" />
                                                 </div>
                                                 <div className="space-y-6 pt-8">
                                                     <h3 className="text-3xl font-bold text-white leading-[1.1] group-hover:text-blue-200 transition-colors">
@@ -286,9 +284,8 @@ const ServicesTraitementEau = () => {
                                                 <div className="w-full h-48 overflow-hidden rounded-3xl shadow-lg mt-12 relative">
                                                     <img 
                                                         src={waterSoftenerInstallImg} 
-                                                        alt="Entretien de système d'eau" 
                                                         className="w-full h-full object-cover"
-                                                    />
+                                                     alt="Entretien de système d'eau" title="Traitement d'eau Québec par Bricareau" />
                                                 </div>
                                             </div>
                                         </div>
@@ -305,9 +302,8 @@ const ServicesTraitementEau = () => {
                                                 <div className="w-full h-48 overflow-hidden rounded-3xl shadow-lg relative">
                                                     <img 
                                                         src={servicesHero} 
-                                                        alt="Dépannage expert Bricareau" 
                                                         className="w-full h-full object-cover"
-                                                    />
+                                                     alt="Dépannage expert Bricareau" title="Filtration Bricareau par Bricareau" />
                                                 </div>
                                                 <div className="space-y-6 pt-8">
                                                     <h3 className="text-3xl font-bold text-white leading-[1.1] group-hover:text-blue-200 transition-colors">
@@ -353,9 +349,8 @@ const ServicesTraitementEau = () => {
                                                 <div className="w-full h-48 overflow-hidden rounded-3xl shadow-lg mt-12 relative">
                                                     <img 
                                                         src={labTestImg} 
-                                                        alt="Analyses de laboratoire certifiées" 
                                                         className="w-full h-full object-cover"
-                                                    />
+                                                     alt="Analyses de laboratoire certifiées - expert en eau" title="Expert en eau par Bricareau" />
                                                 </div>
                                             </div>
                                         </div>
@@ -384,9 +379,8 @@ const ServicesTraitementEau = () => {
                                 <div className="relative z-10 rounded-[4rem] overflow-hidden aspect-square shadow-2xl">
                                     <img 
                                         src={bricareauCareImg} 
-                                        className="w-full h-full object-cover object-top transition-transform duration-1000 group-hover:scale-110" 
-                                        alt="Service Bricareau Care"
-                                    />
+                                        className="w-full h-full object-cover object-top transition-transform duration-1000 group-hover:scale-110"
+                                     alt="Service Bricareau Care" title="Analyse d'eau professionnelle par Bricareau" />
                                     <div className="absolute inset-0 bg-blue-900/10 mix-blend-multiply" />
                                 </div>
                                 <div className="absolute -bottom-10 -right-10 w-48 h-48 bg-blue-600 rounded-full flex flex-col items-center justify-center text-center p-6 shadow-2xl z-20 border-8 border-slate-900">
@@ -447,9 +441,8 @@ const ServicesTraitementEau = () => {
                                 <div className="relative rounded-[4rem] overflow-hidden aspect-[4/5] shadow-2xl group">
                                     <img 
                                         src={waterSoftenerInstallImg} 
-                                        className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" 
-                                        alt="Maintenance adoucisseur d'eau Bricareau"
-                                    />
+                                        className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                                     alt="Maintenance adoucisseur d'eau Bricareau" title="Systèmes d'eau sur mesure par Bricareau" />
                                     <div className="absolute inset-0 bg-gradient-to-t from-[#18448F]/40 to-transparent" />
                                      <div className="absolute bottom-10 left-10 right-10 p-8 bg-white/10 backdrop-blur-xl rounded-3xl border border-white/20">
                                         <p className="text-white font-medium italic">"Une valve bien réglée peut économiser jusqu'à 30% de sel par an."</p>
@@ -506,9 +499,8 @@ const ServicesTraitementEau = () => {
                                     <div className="absolute inset-0 bg-blue-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                                     <img 
                                         src={roServiceImg} 
-                                        className="w-full h-full object-cover drop-shadow-2xl transition-transform duration-1000 group-hover:scale-110" 
-                                        alt="Maintenance système d'osmose inverse"
-                                    />
+                                        className="w-full h-full object-cover drop-shadow-2xl transition-transform duration-1000 group-hover:scale-110"
+                                     alt="Maintenance système d'osmose inverse - traitement d'eau Québec" title="Traitement d'eau Québec par Bricareau" />
                                 </div>
                             </div>
 
@@ -560,9 +552,8 @@ const ServicesTraitementEau = () => {
                                 <div className="relative rounded-[4rem] overflow-hidden aspect-[4/5] shadow-2xl group">
                                     <img 
                                         src={diagnosticImg} 
-                                        className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" 
-                                        alt="Diagnostic digital d'eau Bricareau"
-                                    />
+                                        className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                                     alt="Diagnostic digital d'eau Bricareau" title="Traitement d'eau Québec par Bricareau" />
                                     <div className="absolute inset-0 bg-gradient-to-t from-blue-900/40 to-transparent" />
                                 </div>
                             </div>

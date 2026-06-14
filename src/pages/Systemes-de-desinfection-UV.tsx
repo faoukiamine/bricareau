@@ -189,9 +189,8 @@ const DesinfectionUV = () => {
                     <div className="absolute inset-0 z-0 pointer-events-none select-none overflow-hidden">
                         <img 
                             src={sterileWaterImg} 
-                            alt="Eau stérile sous rayon UV" 
                             className="w-full h-full object-cover opacity-50 grayscale mix-blend-multiply" 
-                        />
+                         alt="Eau stérile sous rayon UV - analyse d'eau professionnelle" title="Analyse d'eau professionnelle par Bricareau" />
                         {/* Soft white overlay to ensure perfect text readability and preserve the "sterile" technical look */}
                         <div className="absolute inset-0 bg-white/85 backdrop-blur-[1px]"></div>
                         
@@ -295,9 +294,8 @@ const DesinfectionUV = () => {
                     <div className="absolute inset-0 z-0">
                         <img 
                             src={stormVisualImg} 
-                            alt="Force énergétique UV - Bricareau" 
                             className="w-full h-full object-cover opacity-40 animate-pulse-slow"
-                        />
+                         alt="Force énergétique UV - Bricareau" title="Systèmes d'eau sur mesure par Bricareau" />
                         <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/60 to-transparent" />
                         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(37,99,235,0.05)_0%,transparent_50%)]" />
                         
@@ -581,9 +579,8 @@ const DesinfectionUV = () => {
                         <div className="rounded-none lg:rounded-[3rem] overflow-hidden shadow-none lg:shadow-2xl border-0 lg:border border-slate-100 group relative -mx-6 lg:mx-0">
                             <img 
                                 src={installationuvsystemImg} 
-                                alt="Installation experte d'un système de désinfection UV Bricareau" 
                                 className="w-full h-[450px] md:h-[550px] lg:h-[650px] object-cover group-hover:scale-105 transition-transform duration-[3000ms] brightness-[1.2] contrast-[1.05]"
-                            />
+                             alt="Installation experte d'un système de désinfection UV Bricareau" title="Systèmes d'eau sur mesure par Bricareau" />
                             <div className="absolute inset-0 bg-gradient-to-r from-[#18448F]/70 via-[#18448F]/30 to-transparent p-8 md:p-12 lg:p-20 flex items-center">
                                 <div className="max-w-lg">
                                     <div className="flex items-center gap-3 text-white font-bold text-xs tracking-widest uppercase mb-6">
@@ -711,18 +708,16 @@ const DesinfectionUV = () => {
                     <div className="lg:hidden w-full h-auto relative bg-slate-50">
                         <img
                             src={waterTestingImg}
-                            alt="Analyse d'eau à domicile pour détecter le calcaire et le chlore - Service Bricareau"
                             className="w-full h-auto object-contain"
-                        />
+                         alt="Analyse d'eau à domicile pour détecter le calcaire et le chlore - Service Bricareau" title="Expert en eau par Bricareau" />
                     </div>
 
                     {/* Desktop Background */}
                     <div className="hidden lg:block absolute inset-0 z-0">
                         <img
                             src={waterTestingImg}
-                            alt="Analyse microbiologique"
                             className="w-full h-full object-cover"
-                        />
+                         alt="Analyse microbiologique - traitement d'eau Québec" title="Traitement d'eau Québec par Bricareau" />
                         <div className="absolute inset-0 bg-black/30 lg:bg-gradient-to-r lg:from-black/50 lg:to-transparent" />
                         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-white via-white/10 to-transparent" />
                     </div>
@@ -991,9 +986,8 @@ const DesinfectionUV = () => {
                   <div className="absolute inset-0 z-0 opacity-40">
                     <img
                       src={sterileWaterImg}
-                      alt="Expert Bricareau analysant vos options de filtration"
                       className="w-full h-full object-cover grayscale brightness-150"
-                    />
+                     alt="Expert Bricareau analysant vos options de filtration" title="Systèmes d'eau sur mesure par Bricareau" />
                     <div className="absolute inset-0 bg-[#18448F]/10 backdrop-blur-sm" />
                   </div>
 
