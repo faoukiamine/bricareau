@@ -46,7 +46,7 @@ export default function Carrieres() {
 
             <main>
                 {/* 1. CUSTOM HERO SECTION */}
-                <section className="relative bg-white overflow-hidden min-h-[85vh] lg:min-h-screen flex flex-col justify-center pt-24 pb-8 lg:pt-28 lg:pb-16 border-b border-slate-200">
+                <section className="relative bg-white overflow-hidden min-h-[85vh] md:min-h-screen flex flex-col justify-center pt-24 pb-8 lg:pt-28 lg:pb-16 border-b border-slate-200">
                     <div className="absolute inset-0 w-full h-full opacity-40 lg:opacity-100">
                         {/* Mobile Gradient (Style Residentiel/Home1) */}
                         <div className="absolute inset-0 bg-gradient-to-br from-white/80 via-white/40 to-transparent z-10 lg:hidden"></div>
