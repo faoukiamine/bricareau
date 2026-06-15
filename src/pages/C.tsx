@@ -191,8 +191,8 @@ const C = () => {
                 L'INVISIBLE DANS VOTRE VERRE
               </span>
                <h2 className="mb-8 heading-pro-max text-center">
-                  <span className="font-bold not-italic text-[#18448F] block">Ce que vos sens ne peuvent</span>
-                  <span className="font-bold text-[#18448F] block text-center">pas détecter.</span>
+                  <span className="font-bold not-italic text-[#18448F] block">L'eau de source sans les</span>
+                  <span className="font-bold text-[#18448F] block text-center">nanoparticules plastique.</span>
               </h2>
               <p className="body-pro-max text-slate-500 text-center mx-auto">
                 Le chlore n'est que la pointe de l'iceberg. Votre eau municipale peut abriter des micro-polluants invisibles qui s'accumulent silencieusement dans votre organisme.
