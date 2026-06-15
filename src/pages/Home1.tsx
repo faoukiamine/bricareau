@@ -401,7 +401,7 @@ const Home1 = () => {
                             </div>
                             
                             <h2 className="heading-pro-max mb-8">
-                                <span className="font-bold not-italic text-[#18448F] block">L'eau traitée, un investissement</span>
+                                <span className="font-bold not-italic text-[#18448F] block">L'eau filtrée, un investissement</span>
                                 <span className="font-bold not-italic text-[#8CC63F] block">rentable <span className="text-[#18448F]">pour votre entreprise.</span></span>
                             </h2>
                             
