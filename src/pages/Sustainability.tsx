@@ -57,11 +57,11 @@ const Sustainability = () => {
                         <div className="max-w-3xl flex flex-col justify-center animate-in fade-in slide-in-from-left-10 duration-1000 delay-300 fill-mode-both">
 
                             <h1 className="text-[50px] leading-[55px] font-sans font-bold text-[#18448F] mb-6 tracking-tight">
-                                L'engagement pureté <span className="text-[#8CC63F] font-sans font-bold drop-shadow-sm">pour vous et l'environnement.</span>
+                                L'engagement durable <span className="text-[#8CC63F] font-sans font-bold drop-shadow-sm">pour vous et l'environnement.</span>
                             </h1>
                             
                             <p className="text-slate-600 text-lg sm:text-xl font-light leading-relaxed max-w-xl mb-12">
-                                Parce que l'excellence doit être responsable, nous avons conçu une approche qui libère votre foyer de la dépendance aux bouteilles en plastique. Avec Bricareau, vous choisissez une hydratation d'une pureté absolue qui respecte à la fois votre santé et l'avenir de notre environnement.
+                                Parce que la durabilité est au cœur de notre démarche, nos systèmes sont conçus pour allier performance et respect de l'écologie. Pour votre domicile comme pour votre entreprise, Bricareau élimine votre dépendance aux bouteilles en plastique et vous offre une eau d'une qualité exceptionnelle, protégeant durablement la santé de tous et l'avenir de notre planète.
                             </p>
 
                             <div className="flex flex-col sm:flex-row items-start gap-6">
