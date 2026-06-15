@@ -8,7 +8,7 @@ import { ArrowRight, Droplets, Waves, Phone, ChevronRight, Search, SlidersHorizo
 import { NavLink } from "react-router-dom";
 import { faqCategories } from "@/data/faqs";
 import React, { useState, useEffect } from "react";
-import faqHero from "@/assets/wave-banner.jpg";
+import faqHero from "@/assets/Foire aux Questions.jpg";
 
 const FAQCard = ({ item }: { item: { q: string, a: string } }) => {
     const [isExpanded, setIsExpanded] = useState(false);
