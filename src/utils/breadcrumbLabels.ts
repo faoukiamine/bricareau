@@ -106,6 +106,8 @@ export const breadcrumbParents: Record<string, string> = {
     "machines-a-glace": "fontaines",
     "faq": "ressources",
     "blog": "ressources",
+    "analyses-et-tests-d-eau": "ressources",
+    "contaminants-de-l-eau": "ressources",
     "guides": "ressources",
     "videos": "ressources",
     "manuels": "ressources",

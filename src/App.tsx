@@ -90,6 +90,7 @@ import FontainesDeauModernes from "./pages/FontainesDeauModernes";
 import SystemesCentralises from "./pages/SystemesCentralises";
 import SolutionsBrasseries from "./pages/SolutionsBrasseries";
 import FiltrationIndustrielle from "./pages/FiltrationIndustrielle";
+import ContaminantsEau from "./pages/ContaminantsEau";
 
 const queryClient = new QueryClient();
 
@@ -118,6 +119,7 @@ const App = () => (
 
           <Route path="/systemes-de-filtration-d-eau-centralises" element={<SystemesCentralises />} />
           <Route path="/solutions-brasseries" element={<SolutionsBrasseries />} />
+          <Route path="/contaminants-de-l-eau" element={<ContaminantsEau />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/categorie/:categoryId" element={<BlogCategory />} />
           <Route path="/hivernisation-comment-proteger-vos-filtres-du-gel" element={<HivernisationProtegerFiltresDuGel />} />

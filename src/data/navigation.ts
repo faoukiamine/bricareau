@@ -241,6 +241,11 @@ export const mainNavMenuItems: MenuItem[] = [
             {
                 items: [
                     { 
+                        title: "Contaminants de l'eau", 
+                        description: "Découvrez les principaux polluants de l'eau et comment nos systèmes vous en protègent.", 
+                        href: "/contaminants-de-l-eau" 
+                    },
+                    { 
                         title: "Blog", 
                         description: "Guides pratiques, conseils d'experts et actualités pour tout savoir sur l'eau pure.", 
                         href: "/blog" 
