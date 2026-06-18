@@ -107,7 +107,7 @@ export const mainNavMenuItems: MenuItem[] = [
                     { 
                         title: "Analyses & Tests d'eau", 
                         description: "Analysez et purifiez : une barrière infaillible contre les contaminants pour la sécurité de votre famille.", 
-                        href: "/Analyses-et-Tests-d-eau" 
+                        href: "/Analyses-et-Tests-d-eau?ref=residentiel" 
                     }, 
                     { 
                         title: "Adoucisseurs d'eau Résidentiels", 
@@ -224,7 +224,7 @@ export const mainNavMenuItems: MenuItem[] = [
                     { 
                         title: "Analyses & Tests d'eau", 
                         description: "Réservez votre audit de qualité d'eau et obtenez un rapport détaillé de nos ingénieurs.", 
-                        href: "/Analyses-et-Tests-d-eau" 
+                        href: "/Analyses-et-Tests-d-eau?ref=ressources" 
                     },
                     { 
                         title: "Nos Services", 

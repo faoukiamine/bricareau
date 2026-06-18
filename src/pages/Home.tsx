@@ -138,7 +138,7 @@ const Home1 = () => {
             titleAccent: "saine et pure,",
             titleAccentColor: "text-[#8CC63F]",
             title2: "pour votre foyer.",
-            desc: "Protégez votre famille et vos électroménagers avec nos systèmes de filtration et d'adoucissement résidentiels sur-mesure.",
+            desc: "Protégez votre famille et vos appareils électroménagers avec nos systèmes de filtration d'eau et d'adoucissement résidentiels sur-mesure.",
             image: heroImg
         },
         {
@@ -156,17 +156,8 @@ const Home1 = () => {
             titleAccent: "cristalline,",
             titleAccentColor: "text-[#8CC63F]",
             title2: "pour la gastronomie.",
-            desc: "Une eau parfaite pour révéler le goût de vos cafés, protéger vos fours vapeur et offrir des glaçons impeccables.",
+            desc: "Une eau parfaite pour révéler le goût de vos cafés, protéger vos fours à vapeur et offrir des glaçons impeccables grâce à nos systèmes de traitement d'eau.",
             image: "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&q=80"
-        },
-        {
-            badge: "Industriel — Procédés & Usines",
-            title1: "Une performance",
-            titleAccent: "inégalée,",
-            titleAccentColor: "text-[#8CC63F]",
-            title2: "pour votre production.",
-            desc: "Des solutions de traitement d'eau à haut volume pour optimiser vos procédés industriels et réduire vos coûts opérationnels.",
-            image: industrialSlideImg
         }
     ];
 
@@ -323,7 +314,7 @@ const Home1 = () => {
                             </h2>
                             
                             <p className="text-lg text-slate-600 leading-relaxed mb-10">
-                                Votre bien-être commence par la qualité de votre eau. Fini les désagréments liés au calcaire, au chlore ou au fer qui abîment votre électroménager et assèchent votre peau. Bricareau analyse votre eau avec précision et conçoit un système sur mesure pour garantir une pureté absolue à toute votre famille.
+                                Votre bien-être commence par la qualité de votre eau. Fini les désagréments liés au calcaire, au chlore ou au fer qui abîment votre plomberie, vos électroménagers et assèchent votre peau et vos cheveux. Bricareau analyse votre eau avec précision et conçoit un système sur mesure pour garantir une pureté absolue à toute votre famille.
                             </p>
                             
                             <div>

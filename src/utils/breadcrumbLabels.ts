@@ -126,5 +126,4 @@ export const breadcrumbParents: Record<string, string> = {
     "solutions-d-adoucissement-de-filtration-et-de-purification-d-eau-residentielles": "ce-que-nous-faisons",
     "solutions-de-traitement-d-eau-pour-offices-et-bureaux": "ce-que-nous-faisons",
     "solutions-de-traitement-et-filtration-d-eau-pour-hotels-et-restaurants": "ce-que-nous-faisons",
-    "ressources": "ce-que-nous-faisons",
 };

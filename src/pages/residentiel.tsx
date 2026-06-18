@@ -163,133 +163,110 @@ const ResidentialServices = () => {
                             </p>
                         </div>
                         
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[300px]">
-                            {/* Card 1: Adoucissement (Tall) */}
-                            <div 
-                                className="group relative bg-white lg:row-span-2 rounded-[2rem] overflow-hidden border border-slate-100 hover:shadow-xl hover:shadow-blue-900/5 transition-all duration-500 cursor-pointer flex flex-col justify-end p-8 lg:p-12"
-                                onClick={() => navigate("/A")}
-                            >
-                                <div className="absolute inset-0 overflow-hidden rounded-[2rem]">
-                                    <img src={softenerImg} className="w-full h-full object-cover opacity-60 mix-blend-multiply transition-transform duration-700 group-hover:scale-105"  alt="Adoucissement Résidentiel - analyse d'eau professionnelle" title="Analyse d'eau professionnelle par Bricareau" />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-white via-white/90 to-transparent" />
-                                </div>
-                                <div className="relative z-10 space-y-4 mt-auto">
-                                    <span className="text-[10px] font-black text-blue-600 uppercase tracking-widest">ZÉRO CALCAIRE</span>
-                                    <h3 className="text-3xl font-bold text-slate-900 uppercase tracking-tight">Adoucisseurs<br/>d'eau</h3>
-                                    <p className="text-slate-500 text-sm font-light leading-relaxed">
-                                        Protégez vos électroménagers et profitez d'un linge plus doux et d'une peau moins asséchée.
-                                    </p>
-                                </div>
-                            </div>
+                        {(() => {
+                            const solutionsCards = [
+                                {
+                                    title: "Adoucisseurs\nd'eau",
+                                    subtitle: "ZÉRO CALCAIRE",
+                                    desc: "Protégez vos électroménagers et profitez d'un linge plus doux et d'une peau moins asséchée.",
+                                    img: softenerImg,
+                                    link: "/adoucisseurs-d-eau-residentiels-pour-une-eau-sans-calcaire",
+                                    className: "lg:row-span-2 min-h-[400px]",
+                                    imgClass: "object-cover"
+                                },
+                                {
+                                    title: "Filtres d'eau spécialisés\npour toute la maison",
+                                    subtitle: "SÉCURITÉ GLOBALE",
+                                    desc: "Une barrière protectrice dès l'entrée d'eau. Éliminez chlore, sédiments et métaux lourds de chaque robinet.",
+                                    img: autoSystemImg,
+                                    link: "/Systemes-de-filtration-d-eau-specialises-pour-toute-la-maison",
+                                    className: "lg:col-span-2",
+                                    imgClass: "object-cover"
+                                },
+                                {
+                                    title: "Stations d'eau potable\nsous l'évier",
+                                    subtitle: "EAU POTABLE",
+                                    desc: "Une eau cristalline à 99% pure pour la boisson et la cuisine.",
+                                    img: filtrationImg,
+                                    link: "/Stations-d-eau-potables-sous-l-evier-de-la-cuisine",
+                                    className: "",
+                                    imgClass: "object-contain p-6 mix-blend-multiply bg-blue-50/30"
+                                },
+                                {
+                                    title: "Systèmes de désinfection\nUV",
+                                    subtitle: "STÉRILISATION",
+                                    desc: "Neutralise 99,9% des bactéries et virus. Idéal pour l'eau de puits.",
+                                    img: uvImg,
+                                    link: "/systemes-de-desinfection-uv",
+                                    className: "",
+                                    imgClass: "object-contain p-10 mix-blend-multiply bg-slate-50"
+                                },
+                                {
+                                    title: "Fontaines\nd'Eau",
+                                    subtitle: "ÉLÉGANCE",
+                                    desc: "Eau fraîche, tempérée ou pétillante, avec un design intégré.",
+                                    img: fountainImg,
+                                    link: "/fontaines-et-refroidisseurs-d-eau-pour-une-eau-fraiche",
+                                    className: "md:col-span-2 lg:col-span-1",
+                                    imgClass: "object-cover opacity-90"
+                                },
+                                {
+                                    title: "Filtres de\nRemplacement",
+                                    subtitle: "MAINTENANCE",
+                                    desc: "Cartouches et pièces pour assurer la longévité de vos systèmes.",
+                                    img: replacementFilterImg,
+                                    link: "/filtres-d-eau-de-remplacement",
+                                    className: "lg:col-span-1",
+                                    imgClass: "object-cover"
+                                },
+                                {
+                                    title: "Tests\nd'Eau",
+                                    subtitle: "DIAGNOSTIC",
+                                    desc: "Analyse professionnelle pour comprendre et résoudre vos problèmes d'eau.",
+                                    img: waterTestImg,
+                                    link: "/tests-eau",
+                                    className: "lg:col-span-1",
+                                    imgClass: "object-cover"
+                                }
+                            ];
 
-                            {/* Card 2: Filtration Maison (Wide) */}
-                            <div 
-                                className="group relative bg-white lg:col-span-2 rounded-[2rem] overflow-hidden border border-slate-100 hover:shadow-xl hover:shadow-blue-900/5 transition-all duration-500 cursor-pointer flex flex-col justify-center p-8 lg:p-12"
-                                onClick={() => navigate("/B")}
-                            >
-                                <div className="absolute inset-0 overflow-hidden rounded-[2rem]">
-                                    <img src={autoSystemImg} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"  alt="Filtres Maison Automatiques - systèmes d'eau sur mesure" title="Systèmes d'eau sur mesure par Bricareau" />
-                                    <div className="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-transparent" />
+                            return (
+                                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[350px]">
+                                    {solutionsCards.map((card, index) => (
+                                        <div 
+                                            key={index}
+                                            className={`group relative rounded-[2rem] overflow-hidden cursor-pointer flex flex-col justify-end p-8 ${card.className}`}
+                                            onClick={() => navigate(card.link)}
+                                        >
+                                            {/* Image Background */}
+                                            <div className="absolute inset-0 bg-slate-900">
+                                                <img 
+                                                    src={card.img} 
+                                                    className={`w-full h-full transition-transform duration-700 group-hover:scale-105 ${card.imgClass || 'object-cover'}`} 
+                                                    alt={card.title.replace('\n', ' ')} 
+                                                />
+                                                {/* Gradient Overlay for Text Readability */}
+                                                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent opacity-70 group-hover:opacity-80 transition-opacity duration-500" />
+                                            </div>
+                                            
+                                            {/* Content Panel */}
+                                            <div className="relative z-10 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                                                <div className="flex justify-between items-start mb-4">
+                                                    <span className="text-[10px] font-black text-blue-400 uppercase tracking-widest">{card.subtitle}</span>
+                                                    <div className="w-8 h-8 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 -translate-x-4 group-hover:translate-x-0 border border-white/20">
+                                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                                                    </div>
+                                                </div>
+                                                <h3 className="text-2xl md:text-3xl font-bold text-white uppercase tracking-tight mb-3 whitespace-pre-line leading-tight">{card.title}</h3>
+                                                <p className="text-slate-300 text-sm font-light leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                                    {card.desc}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    ))}
                                 </div>
-                                <div className="relative z-10 max-w-md space-y-4">
-                                    <span className="text-[10px] font-black text-blue-600 uppercase tracking-widest">SÉCURITÉ GLOBALE</span>
-                                    <h3 className="text-3xl font-bold text-slate-900 uppercase tracking-tight">Filtres d'eau spécialisés<br/>pour toute la maison</h3>
-                                    <p className="text-slate-500 text-sm font-light leading-relaxed">
-                                        Une barrière protectrice dès l'entrée d'eau. Éliminez chlore, sédiments et métaux lourds de chaque robinet.
-                                    </p>
-                                </div>
-                            </div>
-
-                            {/* Card 3: Osmose (Square) */}
-                            <div 
-                                className="group relative bg-white rounded-[2rem] overflow-hidden border border-slate-100 hover:shadow-xl hover:shadow-blue-900/5 transition-all duration-500 cursor-pointer flex flex-col justify-end p-8"
-                                onClick={() => navigate("/C")}
-                            >
-                                <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                                <div className="relative z-10 space-y-2 mt-auto w-[65%]">
-                                    <span className="text-[10px] font-black text-blue-600 uppercase tracking-widest">EAU POTABLE</span>
-                                    <h3 className="text-xl font-bold text-slate-900 uppercase tracking-tight">Stations d'eau potable<br/>sous l'évier</h3>
-                                    <p className="text-slate-500 text-xs font-light leading-relaxed">
-                                        Une eau cristalline à 99% pure pour la boisson et la cuisine.
-                                    </p>
-                                </div>
-                                <img src={filtrationImg} className="absolute right-0 bottom-0 h-[70%] object-contain transition-transform duration-500 group-hover:scale-105 mix-blend-multiply z-0"  alt="Osmose - systèmes d'eau sur mesure" title="Systèmes d'eau sur mesure par Bricareau" />
-                            </div>
-
-                            {/* Card 4: UV (Square) */}
-                            <div 
-                                className="group relative bg-white rounded-[2rem] overflow-hidden border border-slate-100 hover:shadow-xl hover:shadow-blue-900/5 transition-all duration-500 cursor-pointer flex flex-col justify-end p-8"
-                                onClick={() => navigate("/systemes-de-desinfection-uv")}
-                            >
-                                <div className="absolute inset-0 overflow-hidden rounded-[2rem]">
-                                    <img src={uvImg} className="w-full h-full object-contain p-12 mix-blend-multiply transition-transform duration-700 group-hover:scale-105"  alt="Image illustrant nos solutions - filtration Bricareau | traitement d'eau Québec" title="Filtration Bricareau par Bricareau" />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-transparent" />
-                                </div>
-                                <div className="flex justify-between items-start relative z-10">
-                                    <span className="text-[10px] font-black text-blue-600 uppercase tracking-widest">STÉRILISATION</span>
-                                </div>
-                                <div className="space-y-2 relative z-10">
-                                    <h3 className="text-xl font-bold text-slate-900 uppercase tracking-tight">Systèmes de désinfection<br/>UV</h3>
-                                    <p className="text-slate-500 text-xs font-light leading-relaxed">
-                                        Neutralise 99,9% des bactéries et virus. Idéal pour l'eau de puits.
-                                    </p>
-                                </div>
-                            </div>
-
-                            {/* Card 5: Fontaines (Square) */}
-                            <div 
-                                className="group relative bg-white md:col-span-2 lg:col-span-1 rounded-[2rem] overflow-hidden border border-slate-100 hover:shadow-xl hover:shadow-blue-900/5 transition-all duration-500 cursor-pointer flex flex-col justify-end p-8"
-                                onClick={() => navigate("/fontaines-et-refroidisseurs-d-eau-pour-une-eau-fraiche")}
-                            >
-                                <div className="absolute inset-0 overflow-hidden rounded-[2rem]">
-                                    <img src={fountainImg} className="w-full h-full object-cover opacity-80 mix-blend-multiply transition-transform duration-700 group-hover:scale-105"  alt="Fontaines - traitement d'eau Québec" title="Traitement d'eau Québec par Bricareau" />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-white/80 to-transparent" />
-                                </div>
-                                <div className="relative z-10 space-y-4">
-                                    <span className="text-[10px] font-black text-blue-600 uppercase tracking-widest">ÉLÉGANCE</span>
-                                    <h3 className="text-2xl font-bold text-slate-900 uppercase tracking-tight">Fontaines<br/>d'Eau</h3>
-                                    <p className="text-slate-600 font-medium text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 -translate-y-4 group-hover:translate-y-0">
-                                        Eau fraîche, tempérée ou pétillante, avec un design intégré.
-                                    </p>
-                                </div>
-                            </div>
-
-                            {/* Card 6: Filtres de remplacement (Square) */}
-                            <div 
-                                className="group relative bg-white lg:col-span-1 rounded-[2rem] overflow-hidden border border-slate-100 hover:shadow-xl hover:shadow-blue-900/5 transition-all duration-500 cursor-pointer flex flex-col justify-end p-8"
-                                onClick={() => navigate("/filtres-d-eau-de-remplacement")}
-                            >
-                                <div className="absolute inset-0 overflow-hidden rounded-[2rem]">
-                                    <img src={replacementFilterImg} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"  alt="Filtres remplacement - analyse d'eau professionnelle" title="Analyse d'eau professionnelle par Bricareau" />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent" />
-                                </div>
-                                <div className="relative z-10 space-y-4">
-                                    <span className="text-[10px] font-black text-white uppercase tracking-widest">MAINTENANCE</span>
-                                    <h3 className="text-2xl font-bold text-white uppercase tracking-tight">Filtres de<br/>Remplacement</h3>
-                                    <p className="text-white/80 font-medium text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 -translate-y-4 group-hover:translate-y-0">
-                                        Cartouches et pièces pour assurer la longévité de vos systèmes.
-                                    </p>
-                                </div>
-                            </div>
-
-                            {/* Card 7: Tests d'eau (Square) */}
-                            <div 
-                                className="group relative bg-white lg:col-span-1 rounded-[2rem] overflow-hidden border border-slate-100 hover:shadow-xl hover:shadow-blue-900/5 transition-all duration-500 cursor-pointer flex flex-col justify-end p-8"
-                                onClick={() => navigate("/tests-eau")}
-                            >
-                                <div className="absolute inset-0 overflow-hidden rounded-[2rem]">
-                                    <img src={waterTestImg} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"  alt="Tests d'eau" title="Filtration Bricareau par Bricareau" />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-transparent" />
-                                </div>
-                                <div className="relative z-10 space-y-4">
-                                    <span className="text-[10px] font-black text-blue-600 uppercase tracking-widest">DIAGNOSTIC</span>
-                                    <h3 className="text-2xl font-bold text-slate-900 uppercase tracking-tight">Tests<br/>d'Eau</h3>
-                                    <p className="text-slate-600 font-medium text-sm leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 -translate-y-4 group-hover:translate-y-0">
-                                        Analyse professionnelle pour comprendre et résoudre vos problèmes d'eau.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+                            );
+                        })()}
                     </div>
                 </section>
 

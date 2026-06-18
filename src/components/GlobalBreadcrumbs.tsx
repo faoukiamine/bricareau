@@ -59,7 +59,18 @@ const GlobalBreadcrumbs: React.FC<GlobalBreadcrumbsProps> = ({
         if (value === "categorie") return;
 
         const last = index === pathnames.length - 1;
-        const parentSlug = breadcrumbParents[value];
+        let parentSlug = breadcrumbParents[value];
+
+        // Override based on query string for Analyses-et-Tests-d-eau
+        if (value === "Analyses-et-Tests-d-eau") {
+            const queryParams = new URLSearchParams(location.search);
+            const ref = queryParams.get("ref");
+            if (ref === "residentiel") {
+                parentSlug = "solutions-d-adoucissement-de-filtration-et-de-purification-d-eau-residentielles";
+            } else if (ref === "ressources") {
+                parentSlug = "ressources";
+            }
+        }
 
         // If it's a leaf node and has a logical parent not present in the URL, inject it
         if (last && parentSlug && !pathnames.includes(parentSlug)) {
