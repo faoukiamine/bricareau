@@ -115,7 +115,7 @@ export const mainNavMenuItems: MenuItem[] = [
                         href: "/adoucisseurs-d-eau-residentiels-pour-une-eau-sans-calcaire" 
                     },
                     { 
-                        title: "Filtres d'eau spécialisés", 
+                        title: "Filtres d'eau spécialisés pour toute la maison", 
                         description: "Des solutions sur mesure pour neutraliser le fer, le soufre et les sédiments tenaces.", 
                         href: "/Systemes-de-filtration-d-eau-specialises-pour-toute-la-maison" 
                     },
@@ -142,19 +142,19 @@ export const mainNavMenuItems: MenuItem[] = [
                 ]
             },
             {
-                title: "BUREAU",
+                title: "BUREAUX & ENTREPRISES",
                 image: promoImage4, 
                 href: "/solutions-de-traitement-d-eau-pour-offices-et-bureaux",
                 links: [
                     { 
-                        title: "Fontaines d'Eau Modernes", 
+                        title: "Fontaines d'eau modernes", 
                         description: "Design épuré et eau pure à  volonté pour revitaliser vos équipes sans logistique de bouteilles.", 
-                        href: "/fontaines-deau-modernes" 
+                        href: "/fontaines-et-refroidisseurs-d-eau-modernes-pour-entreprises" 
                     },
                     { 
-                        title: "Systèmes Centralisés", 
+                        title: "Systèmes de traitement d'eau centralisés", 
                         description: "Ingénierie sur mesure pour alimenter en eau pure des étages entiers de bureaux.", 
-                        href: "/systemes-centralises" 
+                        href: "/systemes-de-filtration-d-eau-centralises" 
                     }
                 ]
             },
@@ -166,7 +166,7 @@ export const mainNavMenuItems: MenuItem[] = [
                     { 
                         title: "Adoucisseur d'eau commercial", 
                         description: "Éradiquez le tartre pour prolonger la vie de vos équipements de cuisine et de buanderie.", 
-                        href: "/adoucisseurs-d-eau-residentiels-pour-une-eau-sans-calcaire" 
+                        href: "/adoucisseurs-eau-commerciaux" 
                     }, 
                     { 
                         title: "Filtration d'eau", 
@@ -185,7 +185,7 @@ export const mainNavMenuItems: MenuItem[] = [
                     }
                 ]
             },
-            {
+            /*{
                 title: "COMMERCIAL & INDUSTRIEL",
                 image: promoImage,
                 href: "/industriel",
@@ -211,7 +211,7 @@ export const mainNavMenuItems: MenuItem[] = [
                         href: "/systemes-de-desinfection-uv" 
                     }
                 ]
-            }
+            }*/
         ],
         megamenuGroups: []
     },
@@ -222,7 +222,7 @@ export const mainNavMenuItems: MenuItem[] = [
             {
                 items: [
                     { 
-                        title: "Tests d'eau", 
+                        title: "Analyses & Tests d'eau", 
                         description: "Réservez votre audit de qualité d'eau et obtenez un rapport détaillé de nos ingénieurs.", 
                         href: "/Analyses-et-Tests-d-eau" 
                     },
@@ -562,20 +562,20 @@ export const commercialProductMenuItems: MenuItem[] = [
 export const entreprisesProductMenuItems: MenuItem[] = [
   {
     name: "Fontaines d'Eau Modernes",
-    href: "/fontaines-deau-modernes",
+    href: "/fontaines-et-refroidisseurs-d-eau-modernes-pour-entreprises",
     hasMegamenu: true,
     megamenuCards: [
       {
         customIcon: waterdispensericonImg,
         title: "Fontaines Sans Bouteille",
         description: "Reliées au réseau, filtration intégrée pour une eau fraîche continue au bureau sans logistique de bouteilles.",
-        href: "/fontaines-deau-modernes"
+        href: "/fontaines-et-refroidisseurs-d-eau-modernes-pour-entreprises"
       },
       {
         customIcon: drinkingwaterfountainiconImg,
         title: "Distributeurs Haute Capacité",
         description: "Solutions pour usines, cafétérias et grands lieux publics avec filtration UV optionnelle.",
-        href: "/fontaines-deau-modernes"
+        href: "/fontaines-et-refroidisseurs-d-eau-modernes-pour-entreprises"
       },
     ],
     promo: {

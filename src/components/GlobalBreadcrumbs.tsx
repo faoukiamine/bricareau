@@ -63,10 +63,23 @@ const GlobalBreadcrumbs: React.FC<GlobalBreadcrumbsProps> = ({
 
         // If it's a leaf node and has a logical parent not present in the URL, inject it
         if (last && parentSlug && !pathnames.includes(parentSlug)) {
-            breadcrumbItems.push({
-                label: getLabel(parentSlug, false),
-                to: `/${parentSlug}`,
-                isLast: false,
+            // Traverse up to find all ancestors
+            const ancestors = [];
+            let currentParent = parentSlug;
+            while (currentParent) {
+                ancestors.unshift(currentParent);
+                currentParent = breadcrumbParents[currentParent];
+            }
+
+            // Push all ancestors
+            ancestors.forEach((ancestor) => {
+                if (!pathnames.includes(ancestor)) {
+                    breadcrumbItems.push({
+                        label: getLabel(ancestor, false),
+                        to: `/${ancestor}`,
+                        isLast: false,
+                    });
+                }
             });
         }
 
@@ -82,7 +95,7 @@ const GlobalBreadcrumbs: React.FC<GlobalBreadcrumbsProps> = ({
     const isDark = variant === "dark";
 
     return (
-        <div className="hidden lg:block">
+        <div className="hidden lg:block mt-[90px]">
             <Breadcrumb className={cn("mb-6 relative z-20", className)}>
                 <BreadcrumbList className={cn(
                     isOnDark ? "text-slate-500 lg:text-white/60" : "text-slate-500"
@@ -107,11 +120,11 @@ const GlobalBreadcrumbs: React.FC<GlobalBreadcrumbsProps> = ({
                                 <ChevronRight className="w-3.5 h-3.5" />
                             </BreadcrumbSeparator>
                             <BreadcrumbItem>
-                                {item.isLast || item.label === "Ressources" || item.label === "Support" ? (
+                                {item.isLast || item.label === "Ressources" || item.label === "Support" || item.label === "Qui sommes-nous ?" || item.label === "Ce que nous faisons" ? (
                                     <BreadcrumbPage className={cn(
                                         "font-medium line-clamp-1 max-w-[200px] md:max-w-md",
                                         isOnDark ? "text-slate-900 lg:text-white" : "text-slate-900",
-                                        (item.label === "Ressources" || item.label === "Support") && (isOnDark ? "lg:text-white/60" : "text-slate-500")
+                                        (item.label === "Ressources" || item.label === "Support" || item.label === "Qui sommes-nous ?" || item.label === "Ce que nous faisons") && (isOnDark ? "lg:text-white/60" : "text-slate-500")
                                     )}>
                                         {item.label}
                                     </BreadcrumbPage>

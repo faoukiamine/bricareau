@@ -43,20 +43,64 @@ export const breadcrumbLabels: Record<string, string> = {
     "filtres-deau": "Systèmes de filtration d'eau spécialisés",
     "ressources": "Ressources",
     "support": "Support",
+    // Nouvelles routes liées au mégamenu
+    "adoucisseurs-d-eau-residentiels-pour-une-eau-sans-calcaire": "Adoucisseurs d'eau résidentiels",
+    "Systemes-de-filtration-d-eau-specialises-pour-toute-la-maison": "Filtres d'eau spécialisés",
+    "filtres-d-eau-de-remplacement": "Filtres de remplacement",
+    "Stations-d-eau-potables-sous-l-evier-de-la-cuisine": "Systèmes de filtration d'eau sous-évier",
+    "fontaines-et-refroidisseurs-d-eau-pour-une-eau-fraiche": "Fontaines et refroidisseurs d'eau",
+    "filtration-hotels-restaurants": "Filtration d'eau",
+    "solutions-brasseries": "Solutions pour Brasseries",
+    "filtres-eau-machine-cafe": "Filtres pour Machines à Café",
+    "fontaines-et-refroidisseurs-d-eau-modernes-pour-entreprises": "Fontaines d'eau modernes",
+    "systemes-de-filtration-d-eau-centralises": "Systèmes de traitement d'eau centralisés",
+    "adoucisseurs-eau-commerciaux": "Adoucisseur d'eau commercial",
+    "A-propos": "Notre entreprise",
+    "ce-que-nous-faisons": "Ce que nous faisons",
+    "qui-sommes-nous": "Qui sommes-nous ?",
+    "pourquoi-choisir-bricareau": "Notre compagnie",
+    "notre-processus": "Notre processus",
+    "durabilite": "Durabilité",
+    "carrieres": "Carrières",
+    "pourquoi-bricareau": "Pourquoi Bricareau",
+    "Temoignages": "Témoignages",
+    "services-de-traitement-eau": "Nos Services",
+    "page-consultation": "Diagnostic",
+    "contact-form": "Contactez-nous",
+    "solutions-d-adoucissement-de-filtration-et-de-purification-d-eau-residentielles": "Résidentiel",
+    "solutions-de-traitement-et-filtration-d-eau-pour-hotels-et-restaurants": "Hôtellerie et restauration",
+    "solutions-de-traitement-d-eau-pour-offices-et-bureaux": "Bureaux & Entreprises"
 };
 
 export const breadcrumbParents: Record<string, string> = {
+    // Résidentiel
+    "adoucisseurs-d-eau-residentiels-pour-une-eau-sans-calcaire": "solutions-d-adoucissement-de-filtration-et-de-purification-d-eau-residentielles",
+    "Systemes-de-filtration-d-eau-specialises-pour-toute-la-maison": "solutions-d-adoucissement-de-filtration-et-de-purification-d-eau-residentielles",
+    "filtres-d-eau-de-remplacement": "solutions-d-adoucissement-de-filtration-et-de-purification-d-eau-residentielles",
+    "Stations-d-eau-potables-sous-l-evier-de-la-cuisine": "solutions-d-adoucissement-de-filtration-et-de-purification-d-eau-residentielles",
+    "fontaines-et-refroidisseurs-d-eau-pour-une-eau-fraiche": "solutions-d-adoucissement-de-filtration-et-de-purification-d-eau-residentielles",
+    "systemes-de-desinfection-uv": "solutions-d-adoucissement-de-filtration-et-de-purification-d-eau-residentielles",
+    "Analyses-et-Tests-d-eau": "ressources",
+
+    // Hôtellerie et restauration
+    "filtration-hotels-restaurants": "solutions-de-traitement-et-filtration-d-eau-pour-hotels-et-restaurants",
+    "solutions-brasseries": "solutions-de-traitement-et-filtration-d-eau-pour-hotels-et-restaurants",
+    "filtres-eau-machine-cafe": "solutions-de-traitement-et-filtration-d-eau-pour-hotels-et-restaurants",
+    "adoucisseurs-eau-commerciaux": "solutions-de-traitement-et-filtration-d-eau-pour-hotels-et-restaurants",
+
+    // Bureau
+    "fontaines-et-refroidisseurs-d-eau-modernes-pour-entreprises": "solutions-de-traitement-d-eau-pour-offices-et-bureaux",
+    "systemes-de-filtration-d-eau-centralises": "solutions-de-traitement-d-eau-pour-offices-et-bureaux",
+
+    // Ancestraux (pour garder la compatibilité si besoin)
     "adoucisseur-eau-residentiel": "adoucissement",
     "conditionneurs-sans-sel": "adoucissement",
     "adoucisseurs-portables": "adoucissement",
     "filtres-deau-pour-toute-la-maison": "filtration",
     "systeme-de-filtration-deau-potable": "filtration",
     "systemes-de-filtration-deau-sous-evier": "filtration",
-    "filtres-de-remplacement": "filtration",
-    "Analyses-et-Tests-d-eau": "traitement-eau-de-puits",
     "filtres-deau": "traitement-eau-de-puits",
     "adoucisseurs-eau-de-puits": "traitement-eau-de-puits",
-    "systemes-de-desinfection-uv": "traitement-eau-de-puits",
     "distributeurs-eau-comptoir": "fontaines",
     "refroidisseurs": "fontaines",
     "machines-a-glace": "fontaines",
@@ -70,4 +114,17 @@ export const breadcrumbParents: Record<string, string> = {
     "garantie": "support",
     "pieces": "support",
     "diagnostic": "support",
+    "services-de-traitement-eau": "ressources",
+
+    // Qui sommes-nous ?
+    "pourquoi-choisir-bricareau": "qui-sommes-nous",
+    "notre-processus": "qui-sommes-nous",
+    "durabilite": "qui-sommes-nous",
+    "carrieres": "qui-sommes-nous",
+
+    // Ce que nous faisons
+    "solutions-d-adoucissement-de-filtration-et-de-purification-d-eau-residentielles": "ce-que-nous-faisons",
+    "solutions-de-traitement-d-eau-pour-offices-et-bureaux": "ce-que-nous-faisons",
+    "solutions-de-traitement-et-filtration-d-eau-pour-hotels-et-restaurants": "ce-que-nous-faisons",
+    "ressources": "ce-que-nous-faisons",
 };

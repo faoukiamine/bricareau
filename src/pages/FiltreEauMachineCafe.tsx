@@ -22,6 +22,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { cn } from "@/lib/utils";
 import { ProMaxButton } from "@/components/ui/ProMaxButton";
+import GlobalBreadcrumbs from "@/components/GlobalBreadcrumbs";
 
 import heroImg from "@/assets/4319.jpg";
 import filterImg from "@/assets/167206.jpg"; // Using a placeholder for the filter products
@@ -88,6 +89,11 @@ const FiltreEauMachineCafe = () => {
             <main>
                 {/* 1. HERO SECTION (MIMICKING HOTELLERIERESTAURATION STYLE) */}
                 <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-white">
+                    <div className="absolute top-[30px] left-0 right-0 z-30 pointer-events-none hidden lg:block">
+                        <div className="container mx-auto px-4 lg:px-6 pointer-events-auto">
+                            <GlobalBreadcrumbs variant="on-light" />
+                        </div>
+                    </div>
                     <div className="absolute inset-0 z-0">
                         <img 
                             src={heroImg} 

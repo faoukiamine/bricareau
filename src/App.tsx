@@ -14,6 +14,7 @@ import FAQ from "./pages/FAQ";
 import Entreprises from "./pages/Entreprises";
 import Filtration from "./pages/Filtration";
 import Fontaines from "./pages/fontaines-d-eau-residentielles";
+import AdoucisseurEauCommercial from "./pages/AdoucisseurEauCommercial";
 import Blog from "./pages/Blog";
 import BlogCategory from "./pages/BlogCategory";
 import HivernisationProtegerFiltresDuGel from "./pages/Blog pages/Hivernisation-comment-proteger-vos-filtres-du-gel";
@@ -113,9 +114,9 @@ const App = () => (
           <Route path="/filtration" element={<Filtration />} />
           <Route path="/systemes-de-desinfection-uv" element={<DesinfectionUV />} />
           <Route path="/fontaines-et-refroidisseurs-d-eau-pour-une-eau-fraiche" element={<Fontaines />} />
-          <Route path="/fontaines-deau-modernes" element={<FontainesDeauModernes />} />
+          <Route path="/fontaines-et-refroidisseurs-d-eau-modernes-pour-entreprises" element={<FontainesDeauModernes />} />
 
-          <Route path="/systemes-centralises" element={<SystemesCentralises />} />
+          <Route path="/systemes-de-filtration-d-eau-centralises" element={<SystemesCentralises />} />
           <Route path="/solutions-brasseries" element={<SolutionsBrasseries />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/categorie/:categoryId" element={<BlogCategory />} />
@@ -160,6 +161,7 @@ const App = () => (
           <Route path="/faq" element={<FAQ />} />
           <Route path="/entreprises" element={<Entreprises />} />
           <Route path="/industriel" element={<Industriel />} />
+          <Route path="/adoucisseurs-eau-commerciaux" element={<AdoucisseurEauCommercial />} />
           <Route path="/promotions" element={<Promotions />} />
           <Route path="/politique-de-confidentialite" element={<PolitiqueConfidentialite />} />
           <Route path="/conditions-generales-utilisation" element={<ConditionsGeneralesUtilisation />} />

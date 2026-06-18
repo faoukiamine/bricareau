@@ -104,7 +104,7 @@ const Header = () => {
             <NavLink to="/" className="flex items-center flex-shrink-0">
               <img
                 src={logoBricareau}
-                className="h-10 md:h-12 w-auto object-contain transition-all duration-500"
+                className={cn("h-10 md:h-12 w-auto object-contain transition-all duration-500", isScrolled && "brightness-0 invert")}
                alt="Bricareau Water Specialist" title="Équipement de expert en eau par Bricareau" />
             </NavLink>
 
@@ -201,8 +201,8 @@ const Header = () => {
             >
                 <div className="container mx-auto px-4 md:px-6 py-16 flex gap-12">
                     {/* Left Vertical Label */}
-                    <div className="hidden xl:flex flex-col items-center justify-end w-12 border-r border-gray-100 self-stretch mr-12 pb-8">
-                        <div className="whitespace-nowrap -rotate-90 origin-center mb-24">
+                    <div className="hidden xl:flex flex-col items-center justify-center w-12 border-r border-gray-100 self-stretch mr-12">
+                        <div className="whitespace-nowrap -rotate-90 origin-center">
                             <span className="text-[10px] font-black text-slate-900 uppercase tracking-[0.5em]">
                                 CE QUE NOUS FAISONS
                             </span>
@@ -309,8 +309,8 @@ const Header = () => {
             >
                 <div className="container mx-auto px-4 md:px-6 py-16 flex gap-12">
                     {/* Left Vertical Label */}
-                    <div className="hidden xl:flex flex-col items-center justify-end w-12 border-r border-gray-100 self-stretch mr-12 pb-8">
-                        <div className="whitespace-nowrap -rotate-90 origin-center mb-24">
+                    <div className="hidden xl:flex flex-col items-center justify-center w-12 border-r border-gray-100 self-stretch mr-12">
+                        <div className="whitespace-nowrap -rotate-90 origin-center">
                             <span className="text-[10px] font-black text-slate-900 uppercase tracking-[0.5em]">
                                 QUI SOMMES-NOUS ?
                             </span>
@@ -387,8 +387,8 @@ const Header = () => {
             >
                 <div className="container mx-auto px-4 md:px-6 py-16 flex gap-12">
                     {/* Left Vertical Label */}
-                    <div className="hidden xl:flex flex-col items-center justify-end w-12 border-r border-gray-100 self-stretch mr-12 pb-8">
-                        <div className="whitespace-nowrap -rotate-90 origin-center mb-24">
+                    <div className="hidden xl:flex flex-col items-center justify-center w-12 border-r border-gray-100 self-stretch mr-12">
+                        <div className="whitespace-nowrap -rotate-90 origin-center">
                             <span className="text-[10px] font-black text-slate-900 uppercase tracking-[0.5em]">
                                 RESSOURCES
                             </span>

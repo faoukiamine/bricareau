@@ -96,7 +96,7 @@ const FiltrationHotelsRestaurants = () => {
                 <Hero 
                     className="min-h-0 justify-start lg:min-h-[100vh] lg:justify-center"
                     image={heroImage}
-                    highlightedTitle={<span className="font-bold not-italic text-[#8CC63F] lg:drop-shadow-[0_4px_8px_rgba(0,0,0,0.9)]">L'excellence de l'eau </span>}
+                    highlightedTitle={<span className="font-bold not-italic text-[#8CC63F]">L'excellence de l'eau </span>}
                     mainTitle="au service de la gastronomie."
                     subtitle="Dans la restauration, l'eau est votre ingrédient principal et l'alliée silencieuse de vos équipements. De la perfection d'un espresso à l'éclat de votre verrerie, découvrez nos systèmes de filtration dédiés aux professionnels."
                     ctaText="PLANIFIER UNE CONSULTATION"

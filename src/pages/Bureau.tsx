@@ -191,7 +191,7 @@ const Bureau = () => {
                             {/* Card 1: Fontaines d'Eau Modernes */}
                             <div 
                                 className="group relative bg-white rounded-[2rem] overflow-hidden border border-slate-100 hover:shadow-xl hover:shadow-blue-900/5 transition-all duration-500 cursor-pointer flex flex-col justify-end p-8 lg:p-12"
-                                onClick={() => navigate("/fontaines-deau-modernes")}
+                                onClick={() => navigate("/fontaines-et-refroidisseurs-d-eau-modernes-pour-entreprises")}
                             >
                                 <div className="absolute inset-0 overflow-hidden rounded-[2rem]">
                                     <img src={drinkWaterImg} className="w-full h-full object-cover opacity-80 mix-blend-multiply transition-transform duration-700 group-hover:scale-105"  alt="Fontaines d'Eau Modernes - adoucisseur d'eau pour restaurant" title="Adoucisseur d'eau pour restaurant par Bricareau" />
@@ -209,7 +209,7 @@ const Bureau = () => {
                             {/* Card 2: Systèmes Centralisés */}
                             <div 
                                 className="group relative bg-white rounded-[2rem] overflow-hidden border border-slate-100 hover:shadow-xl hover:shadow-blue-900/5 transition-all duration-500 cursor-pointer flex flex-col justify-end p-8 lg:p-12"
-                                onClick={() => navigate("/systemes-centralises")}
+                                onClick={() => navigate("/systemes-de-filtration-d-eau-centralises")}
                             >
                                 <div className="absolute inset-0 overflow-hidden rounded-[2rem]">
                                     <img src={centralSystemImg} className="w-full h-full object-cover opacity-80 mix-blend-multiply transition-transform duration-700 group-hover:scale-105"  alt="Systèmes Centralisés - système d'eau hôtel" title="Système d'eau hôtel par Bricareau" />
